@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_hMenu
 - CMFCMenuButton [MFC], m_nMenuResult
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
-ms.openlocfilehash: 4e29fd64540b52a8e6b70ee4d520b14a5a7d712b
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: bacd8726fd4c833f956f763cca81a88d41d1f167
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178314"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298201"
 ---
 # <a name="cmfcmenubutton-class"></a>Cmfcmenubutton – třída
 
@@ -87,9 +87,9 @@ Následující příklad ukazuje, jak nastavit popisovač nabídky připojeno k 
 
 [CButton](../../mfc/reference/cbutton-class.md)
 
-[Cmfcbutton –](../../mfc/reference/cmfcbutton-class.md)
+[CMFCButton](../../mfc/reference/cmfcbutton-class.md)
 
-[Cmfcmenubutton –](../../mfc/reference/cmfcmenubutton-class.md)
+[CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -207,7 +207,7 @@ Při volání této funkce a *bCalcOnly* má hodnotu TRUE, `SizeToContent` bude 
 
 Nová velikost tlačítka se počítá podle textu tlačítka, image a šipky. Rozhraní framework přidává předdefinované okrajů 10 pixelů pro vodorovné edge a 5 pixelů pro vertikální edge.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

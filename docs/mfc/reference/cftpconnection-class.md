@@ -1,5 +1,5 @@
 ---
-title: Cftpconnection – třída
+title: CFtpConnection Class
 ms.date: 11/04/2016
 f1_keywords:
 - CFtpConnection
@@ -30,14 +30,14 @@ helpviewer_keywords:
 - CFtpConnection [MFC], Rename
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
-ms.openlocfilehash: 71e5c8629a1aa1c489cc51224f9d008c4cdd3397
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12ef4de16279c5c2033a95df5928a6dfb7a2a652
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504244"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295120"
 ---
-# <a name="cftpconnection-class"></a>Cftpconnection – třída
+# <a name="cftpconnection-class"></a>CFtpConnection Class
 
 Spravuje FTP připojení k internetovému serveru a umožňuje přímou manipulaci s adresářů a souborů na tomto serveru.
 
@@ -87,7 +87,7 @@ Další informace o tom, `CFtpConnection` funguje s jinými třídami MFC Intern
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cinternetconnection –](../../mfc/reference/cinternetconnection-class.md)
+[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)
 
 `CFtpConnection`
 
@@ -354,7 +354,7 @@ Pokud *dwFlags* je FILE_TRANSFER_TYPE_ASCII překladu dat souboru platí také p
 
 Obě *pstrRemoteFile* a *pstrLocalFile* může být buď částečně kvalifikované názvy souborů, vzhledem k aktuálnímu adresáři nebo plně kvalifikovaný. Zpětné lomítko (\\) nebo lomítkem (/) lze použít jako oddělovač adresářů pro buď název. `GetFile` předtím, než se používají se přeloží název oddělovač do příslušných znaků.
 
-Přepsat *dwContext* výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu souvisí s tuto konkrétní operaci `CFtpConnection` objekt vytvořený pomocí jeho [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objektu. Hodnota se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) kvůli stavu na operaci, se kterým je identifikován. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.
+Přepsat *dwContext* výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu souvisí s tuto konkrétní operaci `CFtpConnection` objekt vytvořený pomocí jeho [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objektu. Hodnota se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) kvůli stavu na operaci, se kterým je identifikován. Přečtěte si článek [Internet první kroky: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.
 
 ##  <a name="openfile"></a>  CFtpConnection::OpenFile
 
@@ -404,7 +404,7 @@ Po volání `OpenFile` a až do volání `CInternetConnection::Close`, aplikace 
 
 *PstrFileName* parametr může být buď částečně kvalifikované název souboru úplnou nebo relativní k aktuálnímu adresáři. Zpětné lomítko (\\) nebo lomítkem (/) lze použít jako oddělovač adresářů pro buď název. `OpenFile` Přeloží název oddělovač do příslušných znaků před jeho použitím.
 
-Přepsat *dwContext* výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu souvisí s tuto konkrétní operaci `CFtpConnection` objekt vytvořený pomocí jeho [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objektu. Hodnota se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) kvůli stavu na operaci, se kterým je identifikován. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.
+Přepsat *dwContext* výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu souvisí s tuto konkrétní operaci `CFtpConnection` objekt vytvořený pomocí jeho [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objektu. Hodnota se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) kvůli stavu na operaci, se kterým je identifikován. Přečtěte si článek [Internet první kroky: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.
 
 ##  <a name="putfile"></a>  CFtpConnection::PutFile
 
@@ -440,7 +440,7 @@ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [G
 
 `PutFile` je základní rutinu, která zpracovává všechny operace spojené s ukládáním souboru na serveru FTP. Aplikace, která odesílala jen data, nebo, které vyžadují kontrolu nad přenosy souborů, by měly používat [OpenFile](#openfile) a [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write).
 
-Přepsat `dwContext` výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu souvisí s tuto konkrétní operaci `CFtpConnection` objekt vytvořený pomocí jeho [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objektu. Hodnota se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) kvůli stavu na operaci, se kterým je identifikován. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.
+Přepsat `dwContext` výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu souvisí s tuto konkrétní operaci `CFtpConnection` objekt vytvořený pomocí jeho [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objektu. Hodnota se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) kvůli stavu na operaci, se kterým je identifikován. Přečtěte si článek [Internet první kroky: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.
 
 ##  <a name="remove"></a>  CFtpConnection::Remove
 
@@ -535,7 +535,7 @@ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [G
 
 Použití [GetCurrentDirectory](#getcurrentdirectory) určit aktuální pracovní adresář serveru FTP. Nepředpokládejte, že vzdálený systém, můžete se připojil do kořenového adresáře.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CInternetConnection – třída](../../mfc/reference/cinternetconnection-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

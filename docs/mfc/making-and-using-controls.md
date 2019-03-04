@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows common controls [MFC], about common controls
 - common controls [MFC], about common controls
 ms.assetid: a252acad-3cc0-440e-bbc6-43eaaf8cb7bb
-ms.openlocfilehash: 7a526c56c15d3e61f63b0def6d462d22b3560169
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a31c783e19603eadb90fd0e6be99ff55f4eaeb7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498346"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293508"
 ---
 # <a name="making-and-using-controls"></a>Příprava a použití ovládacích prvků
 
@@ -41,7 +41,6 @@ Provedete většina ovládacích prvků pro dialogová okna v jazyku Visual C++ 
 
 - [Dialogové pruhy](../mfc/dialog-bars.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ovládací prvky](../mfc/controls-mfc.md)
-

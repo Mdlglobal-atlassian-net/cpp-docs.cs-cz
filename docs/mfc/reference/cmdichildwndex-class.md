@@ -112,12 +112,12 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: 9b92c9689749dca1ab4eebcade1c4f7e71d25a76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 625104ecddd9e14ac77aa05ac54cb578c4d62f85
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541541"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293418"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx – třída
 
@@ -201,7 +201,7 @@ Využívat rozšířenou dokovací funkcí v aplikace MDI, jsou odvozeny podří
 
 ## <a name="example"></a>Příklad
 
-V následujícím příkladu je odvozena z třídy `CMDIChildWndEx`. Tento fragment kódu se segmenty Convenience [VisualStudioDemo vzorku: Visual Studio aplikace knihovny MFC](../../visual-cpp-samples.md).
+V následujícím příkladu je odvozena z třídy `CMDIChildWndEx`. Tento fragment kódu se segmenty Convenience [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#3](../../mfc/codesnippet/cpp/cmdichildwndex-class_1.h)]
 
@@ -215,9 +215,9 @@ V následujícím příkladu je odvozena z třídy `CMDIChildWndEx`. Tento fragm
 
 [CFrameWnd](../../mfc/reference/cframewnd-class.md)
 
-[CMDIChildWnd –](../../mfc/reference/cmdichildwnd-class.md)
+[CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)
 
-[CMDIChildWndEx –](../../mfc/reference/cmdichildwndex-class.md)
+[CMDIChildWndEx](../../mfc/reference/cmdichildwndex-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -316,7 +316,7 @@ void DockPane(
 *nDockBarID*<br/>
 [in] ID v podokně.
 
-*lprect –*<br/>
+*lpRect*<br/>
 [in] Ukazatel na obdélník.
 
 ### <a name="remarks"></a>Poznámky
@@ -431,7 +431,7 @@ Když rozhraní framework je obnovení novější stavu, název dokumentu je čt
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje použití `GetDocumentName` metody. Tento fragment kódu se segmenty Convenience [VisualStudioDemo vzorku: Visual Studio aplikace knihovny MFC](../../visual-cpp-samples.md).
+Následující příklad ukazuje použití `GetDocumentName` metody. Tento fragment kódu se segmenty Convenience [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#17](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]
 
@@ -567,7 +567,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Zadaný bod.
 
 *dwBarAlignment*<br/>
@@ -602,7 +602,7 @@ Tato funkce umožňuje zabránit ukládání dokumentů jen pro čtení.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje přepsání `IsReadOnly` metody. Tento fragment kódu se segmenty Convenience [VisualStudioDemo vzorku: Visual Studio aplikace knihovny MFC](../../visual-cpp-samples.md).
+Následující příklad ukazuje přepsání `IsReadOnly` metody. Tento fragment kódu se segmenty Convenience [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#2](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]
 
@@ -686,7 +686,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Určuje bod, v souřadnicovém systému obrazovky, chcete-li zkontrolovat.
 
 *nSensitivity*<br/>
@@ -961,7 +961,7 @@ virtual void OnTaskbarTabThumbnailActivate(
 
 ### <a name="parameters"></a>Parametry
 
-*nInformace*<br/>
+*nState*<br/>
 Určuje, zda `CWnd` je se aktivuje nebo deaktivuje.
 
 *pWndOther*<br/>
@@ -1183,7 +1183,7 @@ virtual void ActivateTopLevelFrame();
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

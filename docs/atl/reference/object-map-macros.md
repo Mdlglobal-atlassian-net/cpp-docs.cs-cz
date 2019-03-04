@@ -6,12 +6,12 @@ f1_keywords:
 - atlcom/ATL::OBJECT_ENTRY_AUTO
 - atlcom/ATL::OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO
 ms.assetid: 680087f4-9894-41dd-a79c-6f337e1f13c1
-ms.openlocfilehash: f750b9b21a2d44a160380acb11f10864a07782e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73dc924527bac8499adefab3d0d6b51afa500a5a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594412"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298604"
 ---
 # <a name="object-map-macros"></a>Makra Map objektů
 
@@ -64,7 +64,7 @@ OBJECT_ENTRY_AUTO( clsid, class )
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor CLSID*<br/>
+*clsid*<br/>
 [in] Identifikátor CLSID implementované třídy C++ s názvem třídy modelu COM *třídy*.
 
 *class*<br/>
@@ -96,7 +96,7 @@ OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO( clsid, class )
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor CLSID*<br/>
+*clsid*<br/>
 [in] Identifikátor CLSID implementované třídy C++ s názvem třídy modelu COM *třídy*.
 
 *class*<br/>
@@ -108,6 +108,6 @@ Makra položky objektu jsou umístěny v globálním oboru v projektu k poskytov
 
 OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO umožňuje určit, že objekt zaregistrované a inicializován (naleznete v tématu [OBJECT_ENTRY_AUTO](#object_entry_auto) Další informace), ale neměly by být vytvořitelný prostřednictvím `CoCreateInstance`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Makra](../../atl/reference/atl-macros.md)

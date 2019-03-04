@@ -1,5 +1,5 @@
 ---
-title: Cdrawingmanager – třída
+title: CDrawingManager Class
 ms.date: 11/04/2016
 f1_keywords:
 - CDrawingManager
@@ -56,14 +56,14 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: c7295d8003b364b36a84fcb5b2c5921ae9899b51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a729c8d32c851c4401a0af7dd7323912a476530f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465985"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293443"
 ---
-# <a name="cdrawingmanager-class"></a>Cdrawingmanager – třída
+# <a name="cdrawingmanager-class"></a>CDrawingManager Class
 
 `CDrawingManager` Třída implementuje složité algoritmy kreslení.
 
@@ -91,7 +91,7 @@ class CDrawingManager : public CObject
 |[CDrawingManager::DrawRotated](#drawrotated)|Otočí zdrojový řadič domény obsah uvnitř daného obdélník podle +/-90 stupňů|
 |[CDrawingManager::DrawEllipse](#drawellipse)|Nakreslí elipsu s zadané barvy výplně a ohraničení.|
 |[CDrawingManager::DrawGradientRing](#drawgradientring)|Nakreslí okruhu a vyplní barev přechodu.|
-|[CDrawingManager::DrawLine CDrawingManager::DrawLineA](#drawline_cdrawingmanager__drawlinea)|Nakreslí čáru.|
+|[CDrawingManager::DrawLine, CDrawingManager::DrawLineA](#drawline_cdrawingmanager__drawlinea)|Nakreslí čáru.|
 |[CDrawingManager::DrawRect](#drawrect)|Kreslení obdélníku zadaného barvy výplně a ohraničení.|
 |[CDrawingManager::DrawShadow](#drawshadow)|Vykreslí stín pro obdélníkovou oblast.|
 |[CDrawingManager::Fill4ColorsGradient](#fill4colorsgradient)|Vyplní obdélníkovou oblast dva barevné přechody.|
@@ -135,7 +135,7 @@ CDrawingManager(CDC& dc);
 
 ### <a name="parameters"></a>Parametry
 
-*řadič domény*<br/>
+*dc*<br/>
 [in] Odkaz na kontext zařízení. `CDrawingManager` Používá tento kontext pro kreslení.
 
 ##  <a name="createbitmap_32"></a>  CDrawingManager::CreateBitmap_32
@@ -159,7 +159,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 |Parametr|Popis|
 |*Velikost*|[in] A [CSize](../../atl-mfc-shared/reference/csize-class.md) parametr, který označuje velikost rastrového obrázku.|
 |*pBits*|[out] Ukazatel na ukazatel na data, která přijímá umístění DIB bitové hodnoty.|
-|*Rastrový obrázek*|Popisovač pro původní rastrový obrázek|
+|*bitmap*|Popisovač pro původní rastrový obrázek|
 |*clrTransparent*|Hodnota RGB zadání průhlednou barvu původní rastrového obrázku.|
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -272,7 +272,7 @@ Nenulové, pokud je úspěšná. jinak 0.
 
 Obdélníku definovaném *rect* musí být alespoň 5 pixelů široký a 5 pixelů.
 
-##  <a name="drawline_cdrawingmanager__drawlinea"></a>  CDrawingManager::DrawLine CDrawingManager::DrawLineA
+##  <a name="drawline_cdrawingmanager__drawlinea"></a>  CDrawingManager::DrawLine, CDrawingManager::DrawLineA
 
 Nakreslí čáru.
 
@@ -298,7 +298,7 @@ void DrawLineA(
 |-|-|
 |Parametr|Popis|
 |*x1*|[in] Souřadnice x, kde začíná na řádku.|
-|*Y1*|[in] Souřadnice y, kde začíná na řádku.|
+|*y1*|[in] Souřadnice y, kde začíná na řádku.|
 |*x2*|[in] Souřadnice x ukončení řádku.|
 |*y2*|[in] Souřadnice y ukončení řádku.|
 |*clrLine*|[in] Barva čáry.|
@@ -699,7 +699,7 @@ static BYTE __stdcall HueToRGB(
 
 ### <a name="parameters"></a>Parametry
 
-*M1.*<br/>
+*m1*<br/>
 [in] Viz poznámky.
 
 *m2*<br/>
@@ -714,7 +714,7 @@ static BYTE __stdcall HueToRGB(
 *rm2*<br/>
 [in] Viz poznámky.
 
-*Rh*<br/>
+*rh*<br/>
 [in] Viz poznámky.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -781,7 +781,7 @@ static COLORREF __stdcall PixelAlpha(
 *srcPixel*<br/>
 [in] Počáteční barva je pixel.
 
-*Procent*<br/>
+*percent*<br/>
 [in] Číslo mezi 0 a 100, které představuje procento průhlednost. Hodnota 100 značí, že je počáteční barva zcela transparentní.
 
 *percentR*<br/>
@@ -857,7 +857,7 @@ static void __stdcall RGBtoHSL(
 |||
 |-|-|
 |Parametr|Popis|
-|*RGB*|[in] Barva RGB hodnoty.|
+|*rgb*|[in] Barva RGB hodnoty.|
 |*H*|[out] Ukazatel na hodnotu double, kde Metoda ukládá odstín barvy.|
 |*S*|[out] Ukazatel na hodnotu double, kde Metoda ukládá sytost pro barvu.|
 |*L*|[out] Ukazatel na hodnotu double, kde Metoda ukládá světlosti barvy.|
@@ -882,7 +882,7 @@ static void __stdcall RGBtoHSV(
 
 ### <a name="parameters"></a>Parametry
 
-*RGB*<br/>
+*rgb*<br/>
 [in] Barva pro převod v reprezentaci RGB.
 
 *H*<br/>
@@ -930,7 +930,7 @@ static void __stdcall SetAlphaPixel(
 *y*<br/>
 [in] Svislé souřadnice barvu pixelu.
 
-*Procent*<br/>
+*percent*<br/>
 [in] Procento průhlednost.
 
 *iShadowSize*<br/>
@@ -968,11 +968,11 @@ static void __stdcall SetPixel(
 |-|-|
 |Parametr|Popis|
 |*pBits*|[in] Ukazatel na bitové hodnoty rastrového obrázku.|
-|*CX*|[in] Celková šířka rastrového obrázku.|
-|*CY*|[in] Celkový počet výšku rastrového obrázku.|
+|*cx*|[in] Celková šířka rastrového obrázku.|
+|*cy*|[in] Celkový počet výšku rastrového obrázku.|
 |*x*|[in] Souřadnice x pixelu rastrového obrázku nastaven, chcete-li změnit.|
 |*y*|[in] Souřadnice y pixelu rastrového obrázku nastaven, chcete-li změnit.|
-|*Barva*|[in] Nová barva pixel identifikovaný zadané souřadnice.|
+|*color*|[in] Nová barva pixel identifikovaný zadané souřadnice.|
 
 ##  <a name="smartmixcolors"></a>  CDrawingManager::SmartMixColors
 
@@ -992,8 +992,8 @@ static COLORREF __stdcall SmartMixColors(
 |||
 |-|-|
 |Parametr|Popis|
-|*barvou1*|[in] První barva kombinovat.|
-|*barva2*|[in] Druhá barva kombinovat.|
+|*color1*|[in] První barva kombinovat.|
+|*color2*|[in] Druhá barva kombinovat.|
 |*dblLumRatio*|[in] Poměr světelnost novou barvu. `SmartMixColors` Vynásobí světelnost smíšené barvy tento poměr před určení konečné barvy.|
 |*k1*|[in] Vážený poměr první barvou.|
 |*k2*|[in] Vážený poměr pro druhou barvou.|
@@ -1032,7 +1032,7 @@ Hodnota TRUE označuje otočit + 90 stupňů; Hodnota FALSE označuje otočit-90
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)

@@ -1,5 +1,5 @@
 ---
-title: Cpen – třída
+title: CPen Class
 ms.date: 11/04/2016
 f1_keywords:
 - CPen
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - CPen [MFC], GetExtLogPen
 - CPen [MFC], GetLogPen
 ms.assetid: 93175a3a-d46c-4768-be8d-863254f97a5f
-ms.openlocfilehash: ba85a811e0ea8c6d1658be3403ca466bb6877914
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 8510c29571e6a370c7948ebe49e53b2c22dbfb9c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178561"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293716"
 ---
-# <a name="cpen-class"></a>Cpen – třída
+# <a name="cpen-class"></a>CPen Class
 
 Zapouzdřuje pero rozhraní GDI systému Windows grafiky zařízení.
 
@@ -67,7 +67,7 @@ Další informace o používání `CPen`, naleznete v tématu [grafické objekty
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cgdiobject –](../../mfc/reference/cgdiobject-class.md)
+[CGdiObject](../../mfc/reference/cgdiobject-class.md)
 
 `CPen`
 
@@ -385,7 +385,7 @@ Další informace o použití grafických objektů najdete v článku [objektů 
 
 [!code-cpp[NVC_MFCDocView#104](../../mfc/codesnippet/cpp/cpen-class_7.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CGdiObject – třída](../../mfc/reference/cgdiobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

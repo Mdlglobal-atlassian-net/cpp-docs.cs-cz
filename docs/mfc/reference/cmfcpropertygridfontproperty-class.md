@@ -1,5 +1,5 @@
 ---
-title: Cmfcpropertygridfontproperty – třída
+title: CMFCPropertyGridFontProperty Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCPropertyGridFontProperty
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - CMFCPropertyGridFontProperty [MFC], GetColor
 - CMFCPropertyGridFontProperty [MFC], GetLogFont
 ms.assetid: 83693f33-bbd3-4fcb-a9ad-fa79fcf2ca24
-ms.openlocfilehash: 40f49e7e22b3e1c81e69b9b1f6b02789165dc5eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ab4f43b2b12dff88148097e2961f235669aaa62
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631710"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295666"
 ---
-# <a name="cmfcpropertygridfontproperty-class"></a>Cmfcpropertygridfontproperty – třída
+# <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty Class
 
 `CMFCPropertyGridFileProperty` Třída podporuje položku ovládacího prvku seznamu s, která se otevře dialogové okno Výběr písma.
 
@@ -42,11 +42,11 @@ class CMFCPropertyGridFontProperty : public CMFCPropertyGridProperty
 
 |Název|Popis|
 |----------|-----------------|
-|`CMFCPropertyGridFontProperty::FormatProperty`|Formátuje textovou reprezentaci hodnoty vlastnosti. (Přepíše [CMFCPropertyGridProperty::FormatProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|
+|`CMFCPropertyGridFontProperty::FormatProperty`|Formátuje textovou reprezentaci hodnoty vlastnosti. (Overrides [CMFCPropertyGridProperty::FormatProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|
 |[CMFCPropertyGridFontProperty::GetColor](#getcolor)|Načte barvu písma, kterou uživatel vybere z rozevíracího seznamu písmo dialogového okna.|
 |[CMFCPropertyGridFontProperty::GetLogFont](#getlogfont)|Načte písma, kterou uživatel vybere z rozevíracího seznamu písmo dialogového okna.|
 |`CMFCPropertyGridFontProperty::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|
-|`CMFCPropertyGridFontProperty::OnClickButton`|Volá se rozhraním, když uživatel klikne na tlačítko, který je obsažen ve vlastnosti. (Přepíše [CMFCPropertyGridProperty::OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|
+|`CMFCPropertyGridFontProperty::OnClickButton`|Volá se rozhraním, když uživatel klikne na tlačítko, který je obsažen ve vlastnosti. (Overrides [CMFCPropertyGridProperty::OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -54,13 +54,13 @@ class CMFCPropertyGridFontProperty : public CMFCPropertyGridProperty
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cmfcpropertygridproperty –](../../mfc/reference/cmfcpropertygridproperty-class.md)
+[CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)
 
-[Cmfcpropertygridfontproperty –](../../mfc/reference/cmfcpropertygridfontproperty-class.md)
+[CMFCPropertyGridFontProperty](../../mfc/reference/cmfcpropertygridfontproperty-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxpropertygridctrl.h
+**Header:** afxpropertygridctrl.h
 
 ##  <a name="cmfcpropertygridfontproperty"></a>  CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty
 
@@ -78,7 +78,7 @@ CMFCPropertyGridFontProperty(
 
 ### <a name="parameters"></a>Parametry
 
-*%{strName/*<br/>
+*strName*<br/>
 [in] Název vlastnosti.
 
 *LF*<br/>
@@ -93,7 +93,7 @@ CMFCPropertyGridFontProperty(
 *dwData*<br/>
 [in] Specifická data, jako je například celé číslo nebo ukazatel na další data, která souvisí s vlastností. Výchozí hodnota je 0.
 
-*Barva*<br/>
+*color*<br/>
 [in] Barva písma. Výchozí hodnota je výchozí barvy.
 
 ### <a name="remarks"></a>Poznámky
@@ -134,7 +134,7 @@ Ukazatel [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struktura,
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

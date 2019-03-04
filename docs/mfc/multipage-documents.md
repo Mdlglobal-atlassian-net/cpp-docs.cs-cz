@@ -25,12 +25,12 @@ helpviewer_keywords:
 - printing [MFC], pagination
 - documents [MFC], paginating
 ms.assetid: 69626b86-73ac-4b74-b126-9955034835ef
-ms.openlocfilehash: b4ec9f456443b9cd180f1558946829281bc10a36
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 81e03657977d31827c5c7c3d3272e3d4255a4a8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176377"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295003"
 ---
 # <a name="multipage-documents"></a>Vícestránkové dokumenty
 
@@ -58,10 +58,10 @@ Tisk vícestránkového dokumentu, rozhraní framework a zobrazení interakce n�
 
 |Název|Důvod přepsání|
 |----------|---------------------------|
-|[OnPreparePrinting –](../mfc/reference/cview-class.md#onprepareprinting)|Chcete-li vložit hodnoty v dialogovém okně tisku, zejména délka dokumentu|
-|[OnBeginPrinting –](../mfc/reference/cview-class.md#onbeginprinting)|Přidělit, písem nebo jiných prostředků GDI|
+|[OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)|Chcete-li vložit hodnoty v dialogovém okně tisku, zejména délka dokumentu|
+|[OnBeginPrinting](../mfc/reference/cview-class.md#onbeginprinting)|Přidělit, písem nebo jiných prostředků GDI|
 |[OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc)|Aby se upravily atributy kontextu zařízení pro danou stránku nebo provádět stránkování čas tisku|
-|[Při tisku](../mfc/reference/cview-class.md#onprint)|Chcete-li vytisknout danou stránku|
+|[OnPrint](../mfc/reference/cview-class.md#onprint)|Chcete-li vytisknout danou stránku|
 |[OnEndPrinting –](../mfc/reference/cview-class.md#onendprinting)|K uvolnění prostředků GDI|
 
 Můžete provést zpracování i jiné funkce související s tiskem, ale tyto funkce jsou ty, které řídí proces tisku.
@@ -123,7 +123,7 @@ Výchozí implementace `OnPrepareDC` nastaví *m_bContinuePrinting* k **FALSE** 
 
 - [Přidělování prostředků GDI](../mfc/allocating-gdi-resources.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Tisk](../mfc/printing.md)<br/>
 [CView – třída](../mfc/reference/cview-class.md)<br/>

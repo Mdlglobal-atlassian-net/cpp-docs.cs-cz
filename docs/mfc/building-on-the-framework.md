@@ -7,12 +7,12 @@ helpviewer_keywords:
 - applications [MFC]
 - MFC, application development
 ms.assetid: 883f0f19-866f-4221-8a3d-5607941dc8d0
-ms.openlocfilehash: 511d66821bf23c149fafb0bfd397929077f020ac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 989aecdfafc0d57bfb28874ee84dbf40f8fefc30
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496236"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298331"
 ---
 # <a name="building-on-the-framework"></a>Sestavení na základě rozhraní .NET Framework
 
@@ -30,7 +30,6 @@ Následující tabulky popisují v souvisejících tématech obecného operace, 
 
 Ve většině případů můžete postupovat podle těchto tabulek jako řadu kroků pro vytvoření aplikace knihovny MFC, i když některé z kroků alternativní způsoby. Například většina aplikací používá jeden typ třídy zobrazení z několika typů, které jsou k dispozici.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Obecná témata MFC](../mfc/general-mfc-topics.md)
-

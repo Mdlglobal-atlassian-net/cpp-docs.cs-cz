@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Příprava typově bezpečné kolekce'
+title: 'Postupy: Typově bezpečné kolekce'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - type-safe collections [MFC]
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-ms.openlocfilehash: 12ecec7562a9241fab30b859727a22e467e6eeb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4241a77184458f5253b6d8987c310604310683c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581789"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295185"
 ---
-# <a name="how-to-make-a-type-safe-collection"></a>Postupy: Příprava typově bezpečné kolekce
+# <a name="how-to-make-a-type-safe-collection"></a>Postupy: Typově bezpečné kolekce
 
 Tento článek vysvětluje, jak vytvořit kolekce bezpečného typu pro vlastní datové typy. Mezi témata patří:
 
@@ -97,7 +97,6 @@ Existují dva způsoby vytvoření typově bezpečné kolekce s kolekcemi objekt
 
    Můžete také přidat nové funkce definováním nových funkcí, které rozšiřují možnosti kolekce, spíše než pouhé obtečení stávajících funkcí v obálky typově bezpečné. Například článek [odstraňování všech objektů v kolekcích CObject](../mfc/deleting-all-objects-in-a-cobject-collection.md) popisuje funkci, kterou chcete odstranit všechny objekty obsažené v seznamu. Tato funkce může být přidán do odvozené třídy jako členskou funkci.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Kolekce](../mfc/collections.md)
-

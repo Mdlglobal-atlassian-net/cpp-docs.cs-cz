@@ -14,12 +14,12 @@ helpviewer_keywords:
 - frame window classes [MFC], created by application wizards
 - CMainFrame class [MFC]
 ms.assetid: 9947df73-4470-49a0-ac61-7b6ee401a74e
-ms.openlocfilehash: 581ceb25e675da6506d06bca3798fb22ca8fd389
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a0610ae901b817a1c8f7707d9ba87c15d634e134
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629251"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298058"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>Třídy oken s rámečkem vytvořené průvodcem aplikací
 
@@ -33,8 +33,7 @@ Pokud se rozhodnete pro podporu nástrojů, má také třída členské proměnn
 
 Tyto třídy oken s rámečkem práci při vytváření, ale k rozšíření svých funkcí, je nutné přidat členské proměnné a členské funkce. Také můžete chtít mít třídy okna zpracovávat dalších zpráv Windows. Další informace najdete v tématu [změna stylů okna vytvořeného rozhraním MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy oken s rámečkem](../mfc/frame-window-classes.md)<br/>
 [Program knihovny MFC nebo zdroj ovládacího prvku a soubory hlaviček](../ide/mfc-program-or-control-source-and-header-files.md)
-

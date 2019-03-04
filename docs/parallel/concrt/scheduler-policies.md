@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-ms.openlocfilehash: df045f7df9d0640b96ae1227c65c65aa7e432350
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2acfc199e7ad9edf3965dc8ccb4103eb615a66b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668738"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298127"
 ---
 # <a name="scheduler-policies"></a>Zásady plánovače
 
@@ -29,7 +29,7 @@ Při použití [concurrency::CurrentScheduler::Create](reference/currentschedule
 |Klíč zásad|Popis|Výchozí hodnota|
 |----------------|-----------------|-------------------|
 |`SchedulerKind`|A [concurrency::SchedulerType](reference/concurrency-namespace-enums.md#schedulertype) hodnotu, která určuje typ vlákna používat k plánování úloh.|`ThreadScheduler` (použijte normální vláken). Toto je jediná platná hodnota pro tento klíč.|
-|`MaxConcurrency`|`unsigned int` Hodnota, která určuje maximální počet prostředků souběžnosti Plánovač používá.|[Concurrency::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|
+|`MaxConcurrency`|`unsigned int` Hodnota, která určuje maximální počet prostředků souběžnosti Plánovač používá.|[concurrency::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|
 |`MinConcurrency`|`unsigned int` Hodnotu, která určuje minimální počet souběžnosti prostředky, které používá plánovače.|`1`|
 |`TargetOversubscriptionFactor`|`unsigned int` Hodnota, která určuje, kolik vlákna přidělit do jednotlivých prostředků zpracování.|`1`|
 |`LocalContextCacheSize`|`unsigned int` Hodnotu, která určuje maximální počet kontextů, které lze uložit do mezipaměti v místní fronty každý virtuální procesor.|`8`|
@@ -49,11 +49,10 @@ Použití [concurrency::CurrentScheduler::GetPolicy](reference/currentscheduler-
 
 ## <a name="example"></a>Příklad
 
-Prozkoumat příklady, které používají specifických zásad plánovače pro řízení chování plánovače, naleznete v tématu [jak: Zadejte specifické zásady plánovače](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md) a [postupy: vytváření agentů tohoto použít specifické zásady plánovače](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
+Prozkoumat příklady, které používají specifických zásad plánovače pro řízení chování plánovače, naleznete v tématu [jak: Určení specifických zásad plánovače](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md) a [jak: Vytváření agentů využívajících specifické zásady plánovače](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Postupy: Určení specifických zásad plánovače](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)<br/>
 [Postupy: Vytváření agentů využívajících specifické zásady plánovače](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
-

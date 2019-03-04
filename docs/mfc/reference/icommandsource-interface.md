@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandSource interface [MFC]
 ms.assetid: a4b1f698-c09f-4ba8-9b13-0e74a0a4967e
-ms.openlocfilehash: 4fca5a2ffef7e8da4f6dd79fcd99c72e92cfdf6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21c4f4544a6ccf2342580bc5859739fc1f50d0c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538434"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296017"
 ---
 # <a name="icommandsource-interface"></a>Icommandsource – rozhraní
 
@@ -55,7 +55,7 @@ interface class ICommandSource
 
 Když hostujete uživatelského ovládacího prvku v zobrazení knihovny MFC [CWinFormsView – třída](../../mfc/reference/cwinformsview-class.md) trasy příkazy a aktualizace příkazů zpráv uživatelského rozhraní do uživatelského ovládacího prvku, aby mohla zpracovávat příkazy knihovny MFC (například rámec nabídky položek a tlačítka panelu nástrojů). Implementací [icommandtarget – rozhraní](../../mfc/reference/icommandtarget-interface.md), poskytnout odkaz na uživatelský ovládací prvek `ICommandSource` objektu.
 
-Zobrazit [postupy: přidání směrování příkazů do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) příklad, jak používat `ICommandTarget`.
+Zobrazit [jak: Přidání směrování příkazů do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) příklad, jak používat `ICommandTarget`.
 
 Další informace o používání formulářů Windows, naleznete v tématu [použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -82,7 +82,7 @@ Popisovač metody obslužné rutiny příkazu.
 ### <a name="remarks"></a>Poznámky
 
 Tato metoda přidá cmdHandler obslužná rutina příkazu do zdrojového objektu příkazu a mapuje cmdID obslužné rutiny.
-Zobrazit [postupy: přidání směrování příkazů do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) příklad, jak používat AddCommandHandler.
+Zobrazit [jak: Přidání směrování příkazů do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) příklad, jak používat AddCommandHandler.
 
 ## <a name="addcommandrangehandler"></a> ICommandSource::AddCommandRangeHandler
 
@@ -246,7 +246,7 @@ Identifikátor příkazu zprávy k odeslání.
 ### <a name="remarks"></a>Poznámky
 
 Tato metoda synchronně odešle zprávu mapovat na ID příkaz. Volá CWnd::SendMessage umístí zprávu ve frontě zpráv v okně a počká, až tuto proceduru okna zpracovala zpráva před vrácením.
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Postupy: Přidání směrování příkazů do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
+[Postupy: Přidání směrování příkazů do ovládacího prvku modelu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
 [ICommandTarget – rozhraní](../../mfc/reference/icommandtarget-interface.md)

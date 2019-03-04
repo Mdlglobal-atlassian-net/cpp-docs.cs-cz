@@ -16,12 +16,12 @@ helpviewer_keywords:
 - run-time class [MFC]
 - RUNTIME_CLASS macro, using
 ms.assetid: 3445a9af-0bd6-4496-95c3-aa59b964570b
-ms.openlocfilehash: 061cc04857b0d1763fb4ee975912bcca1b9d014f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2e4f8685033fc7a8a2f49dafa7ef4e4e019d8989
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455272"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298825"
 ---
 # <a name="accessing-run-time-class-information"></a>Přístup k běhovým informacím o třídě
 
@@ -61,7 +61,6 @@ Jedno použití informací o třídě za běhu spočívá ve vytvoření dynamic
 
 Další podrobné informace o serializaci a informace o třídě za běhu, najdete v článcích [soubory v prostředí MFC](../mfc/files-in-mfc.md) a [serializace](../mfc/serialization-in-mfc.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití objektů CObject](../mfc/using-cobject.md)
-

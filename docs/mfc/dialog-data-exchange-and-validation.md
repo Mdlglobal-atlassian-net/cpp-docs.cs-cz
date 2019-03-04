@@ -1,5 +1,5 @@
 ---
-title: Výměna a ověřování dat dialogových oken
+title: Výměna a ověření dat dialogových oken
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data validation [MFC], dialog boxes
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - dialog boxes [MFC], retrieving data
 - retrieving dialog box data
 ms.assetid: 7d373554-7330-43ae-abf1-4bb14e437b4a
-ms.openlocfilehash: a68f3bf3af3d7c782e0d3414ffa90871ef5bd3a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a52af898c844cce05a138b8bc0e608681d13a491
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437177"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297421"
 ---
-# <a name="dialog-data-exchange-and-validation"></a>Výměna a ověřování dat dialogových oken
+# <a name="dialog-data-exchange-and-validation"></a>Výměna a ověření dat dialogových oken
 
 Výměna dat dialogových oken (DDX) je snadný způsob, inicializovat ovládací prvky ve vašem dialogovém okně a shromažďovat datový vstup uživatele. Ověřování dat dialogového okna (DDV) je snadný způsob, jak ověřit datové položky v dialogovém okně. Chcete-li využít výhod DDX a DDV v dialogových oknech, použijte [Průvodce přidáním členské proměnné](../ide/add-member-variable-wizard.md) vytvářet datové členy a nastavte jejich datové typy a zadat ověřovací pravidla.
 
@@ -32,8 +32,7 @@ Výměna dat dialogových oken (DDX) je snadný způsob, inicializovat ovládac�
 
 - [Ověřování dat dialogového okna](../mfc/dialog-data-validation.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Dialogová okna](../mfc/dialog-boxes.md)<br/>
 [Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Ccacheddatapathproperty – třída
+title: CCachedDataPathProperty Class
 ms.date: 11/04/2016
 f1_keywords:
 - CCachedDataPathProperty
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - CCachedDataPathProperty [MFC], CCachedDataPathProperty
 - CCachedDataPathProperty [MFC], m_Cache
 ms.assetid: 0d81356b-4fe5-43f6-aed2-2eb5a5485706
-ms.openlocfilehash: 1605d5fe1549ba5172f61583cce586a353c2ab56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7394250c93bcc718d50f2ea9b3522256df7c820
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485654"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296707"
 ---
-# <a name="ccacheddatapathproperty-class"></a>Ccacheddatapathproperty – třída
+# <a name="ccacheddatapathproperty-class"></a>CCachedDataPathProperty Class
 
 Implementuje ovládacího prvku OLE asynchronně převedený a uložili do mezipaměti v paměti souboru vlastnost.
 
@@ -51,23 +51,23 @@ Třída `CCachedDataPathProperty` je odvozen z `CDataPathProperty`.
 
 Další informace o tom, jak použít asynchronní monikery a ovládací prvky ActiveX v internetových aplikací naleznete v následujících tématech:
 
-- [Internet první kroky: Ovládací prvky ActiveX](../../mfc/activex-controls-on-the-internet.md)
+- [První kroky Internetu: Ovládací prvky ActiveX](../../mfc/activex-controls-on-the-internet.md)
 
-- [Internetu první kroky: Asynchronní Monikery](../../mfc/asynchronous-monikers-on-the-internet.md)
+- [První kroky Internetu: Asynchronní Monikery](../../mfc/asynchronous-monikers-on-the-internet.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cfile –](../../mfc/reference/cfile-class.md)
+[CFile](../../mfc/reference/cfile-class.md)
 
-[Colestreamfile –](../../mfc/reference/colestreamfile-class.md)
+[COleStreamFile](../../mfc/reference/colestreamfile-class.md)
 
-[Cmonikerfile –](../../mfc/reference/cmonikerfile-class.md)
+[CMonikerFile](../../mfc/reference/cmonikerfile-class.md)
 
-[Casyncmonikerfile –](../../mfc/reference/casyncmonikerfile-class.md)
+[CAsyncMonikerFile](../../mfc/reference/casyncmonikerfile-class.md)
 
-[Cdatapathproperty –](../../mfc/reference/cdatapathproperty-class.md)
+[CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md)
 
 `CCachedDataPathProperty`
 
@@ -111,7 +111,7 @@ CMemFile m_Cache;
 
 Paměťového souboru je uložené v paměti RAM, nikoli na disku.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CDataPathProperty – třída](../../mfc/reference/cdatapathproperty-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

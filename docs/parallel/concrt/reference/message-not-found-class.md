@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - message_not_found class
 ms.assetid: a96b9995-5ad7-4600-83c8-c15e329ff10e
-ms.openlocfilehash: 7b6bd33e69d24e452414b2537ad70bf31e6b722f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da0a44b90346959756c1ef7c685bef234fe6e46a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458471"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296680"
 ---
 # <a name="messagenotfound-class"></a>message_not_found – třída
 
@@ -31,7 +31,7 @@ class message_not_found : public std::exception;
 
 |Název|Popis|
 |----------|-----------------|
-|[message_not_found –](#ctor)|Přetíženo. Vytvoří `message_not_found` objektu.|
+|[message_not_found](#ctor)|Přetíženo. Vytvoří `message_not_found` objektu.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -57,11 +57,10 @@ message_not_found() throw();
 
 ### <a name="parameters"></a>Parametry
 
-*_TEXT*<br/>
+*_Message*<br/>
 Popisná zpráva chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [Asynchronní bloky zpráv](../../../parallel/concrt/asynchronous-message-blocks.md)
-

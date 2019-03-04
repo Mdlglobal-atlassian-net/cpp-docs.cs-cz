@@ -1,5 +1,5 @@
 ---
-title: Cmfcspinbuttonctrl – třída
+title: CMFCSpinButtonCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCSpinButtonCtrl
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCSpinButtonCtrl [MFC], OnDraw
 ms.assetid: 8773f259-4d3f-4bca-a71c-09e0c71bc843
-ms.openlocfilehash: ecc8a010b534515850752f7d83c9a9976f14ddfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60808359c11604368493031e1b6f4573b3b2026f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567515"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292139"
 ---
-# <a name="cmfcspinbuttonctrl-class"></a>Cmfcspinbuttonctrl – třída
+# <a name="cmfcspinbuttonctrl-class"></a>CMFCSpinButtonCtrl Class
 
 `CMFCSpinButtonCtrl` Třída podporuje vizuálního správce, který vykreslí ovládací prvek číselníku.
 
@@ -58,13 +58,13 @@ Následující příklad ukazuje, jak vytvořit objekt `CMFCSpinButtonCtrl` tř�
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[Cspinbuttonctrl –](../../mfc/reference/cspinbuttonctrl-class.md)
+[CSpinButtonCtrl](../../mfc/reference/cspinbuttonctrl-class.md)
 
-[Cmfcspinbuttonctrl –](../../mfc/reference/cmfcspinbuttonctrl-class.md)
+[CMFCSpinButtonCtrl](../../mfc/reference/cmfcspinbuttonctrl-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxspinbuttonctrl.h
+**Header:** afxspinbuttonctrl.h
 
 ##  <a name="ondraw"></a>  CMFCSpinButtonCtrl::OnDraw
 
@@ -76,14 +76,14 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 ### <a name="remarks"></a>Poznámky
 
 Rámec volá `CMFCSpinButtonCtrl::OnPaint` metodu ke zpracování [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) zprávu, a že metoda volá to `CMFCSpinButtonCtrl::OnDraw` metody. Přepsáním této metody můžete přizpůsobit tak, jak rozhraní nakreslí otočný ovládací prvek tlačítko.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

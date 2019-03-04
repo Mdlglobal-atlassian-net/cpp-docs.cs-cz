@@ -1,5 +1,5 @@
 ---
-title: Canimationvariableintegerchangehandler – třída
+title: CAnimationVariableIntegerChangeHandler Class
 ms.date: 11/04/2016
 f1_keywords:
 - CAnimationVariableIntegerChangeHandler
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CAnimationVariableIntegerChangeHandler [MFC], OnIntegerValueChanged
 - CAnimationVariableIntegerChangeHandler [MFC], SetAnimationController
 ms.assetid: 6ac8e91b-e514-4ff6-babd-33f77c4b2b61
-ms.openlocfilehash: 66d740d7042ed2e19b6fe3a87345d7abb096f12c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1c3dc080c23ba4ac05539674047a66059ce52d0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449631"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296576"
 ---
-# <a name="canimationvariableintegerchangehandler-class"></a>Canimationvariableintegerchangehandler – třída
+# <a name="canimationvariableintegerchangehandler-class"></a>CAnimationVariableIntegerChangeHandler Class
 
 Implementuje zpětné volání, které je voláno rozhraním API animace při změně hodnoty proměnné animace.
 
@@ -108,7 +108,7 @@ IFACEMETHOD(OnIntegerValueChanged) (
 
 ### <a name="parameters"></a>Parametry
 
-*scénáře*<br/>
+*storyboard*<br/>
 Scénář, který je proměnné animace.
 
 *Proměnná*<br/>
@@ -137,6 +137,6 @@ void SetAnimationController(CAnimationController* pAnimationController);
 *pAnimationController*<br/>
 Ukazatel na řadič animace, který se zobrazí události.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

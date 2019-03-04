@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITarget class
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
-ms.openlocfilehash: fed6f6c9b93869602eb43dabfef4743fbce3a3d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59a0f66a0ba3b10c3307a835ff6ccaa216596538
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430001"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295321"
 ---
 # <a name="itarget-class"></a>ITarget – třída
 
@@ -49,7 +49,7 @@ Datový typ datové části v rámci přijal cílový blok zpráv.
 
 |Název|Popis|
 |----------|-----------------|
-|[~ ITarget – destruktor](#dtor)|Odstraní `ITarget` objektu.|
+|[~ITarget Destructor](#dtor)|Odstraní `ITarget` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -57,15 +57,15 @@ Datový typ datové části v rámci přijal cílový blok zpráv.
 |----------|-----------------|
 |[propagate](#propagate)|Při přepisu v odvozené třídě, asynchronně předává zprávy z zdrojový blok pro tento cílový blok.|
 |[Odeslat](#send)|Při přepisu v odvozené třídě, synchronně předává zprávy na cílový blok.|
-|[supports_anonymous_source –](#supports_anonymous_source)|Při přepisu v odvozené třídě vrátí hodnotu PRAVDA nebo NEPRAVDA v závislosti na tom, zda blok zpráv přijímá zprávy nabízí zdrojem, který není přidružený k němu. Přepsané metody vrátí-li **true**, cílem nelze odložit nabízené zprávy, jako využití odloženou zprávu později vyžaduje zdroj musí identifikovat jeho sourse odkaz registru.|
+|[supports_anonymous_source](#supports_anonymous_source)|Při přepisu v odvozené třídě vrátí hodnotu PRAVDA nebo NEPRAVDA v závislosti na tom, zda blok zpráv přijímá zprávy nabízí zdrojem, který není přidružený k němu. Přepsané metody vrátí-li **true**, cílem nelze odložit nabízené zprávy, jako využití odloženou zprávu později vyžaduje zdroj musí identifikovat jeho sourse odkaz registru.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[link_source –](#link_source)|Při přepisu v odvozené třídě, odkazuje na tento blok zadaný zdroj `ITarget` bloku.|
+|[link_source](#link_source)|Při přepisu v odvozené třídě, odkazuje na tento blok zadaný zdroj `ITarget` bloku.|
 |[unlink_source](#unlink_source)|Při přepisu v odvozené třídě, nebude odpojen blok zadaný zdroj z tohoto `ITarget` bloku.|
-|[unlink_sources –](#unlink_sources)|Při přepisu v odvozené třídě, nebude odpojen všechny zdrojové bloky z tohoto `ITarget` bloku.|
+|[unlink_sources](#unlink_sources)|Při přepisu v odvozené třídě, nebude odpojen všechny zdrojové bloky z tohoto `ITarget` bloku.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -199,7 +199,7 @@ Při přepisu v odvozené třídě, nebude odpojen všechny zdrojové bloky z to
 virtual void unlink_sources() = 0;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [ISource – třída](isource-class.md)

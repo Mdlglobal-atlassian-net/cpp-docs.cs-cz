@@ -1,5 +1,5 @@
 ---
-title: Cpanecontainermanager – třída
+title: CPaneContainerManager Class
 ms.date: 11/04/2016
 f1_keywords:
 - CPaneContainerManager
@@ -106,14 +106,14 @@ helpviewer_keywords:
 - CPaneContainerManager [MFC], SetResizeMode
 - CPaneContainerManager [MFC], StoreRecentDockSiteInfo
 ms.assetid: 3d974c15-a62f-4648-bb5b-cc31ab7950af
-ms.openlocfilehash: 598ad7fd3573928d1915d01d889910c13d9cb00c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e0c55981b895540d490e2e38f43eb68abf48e32
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530010"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294652"
 ---
-# <a name="cpanecontainermanager-class"></a>Cpanecontainermanager – třída
+# <a name="cpanecontainermanager-class"></a>CPaneContainerManager Class
 
 `CPaneContainerManager` Třída spravuje úložiště a zobrazení aktuálního dokovacího rozložení.
 Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
@@ -197,7 +197,7 @@ Následující příklad ukazuje, jak získat odkaz na `CPaneContainerManager` o
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cpanecontainermanager –](../../mfc/reference/cpanecontainermanager-class.md)
+[CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -619,7 +619,7 @@ virtual BOOL InsertPane(
 [in] *pControlBarToInsert*<br/>
 [in] *pTargetControlBar*<br/>
 [in] *dwAlignment*<br/>
-[in] *lprect –*<br/>
+[in] *lpRect*<br/>
 [in] *dockMethod*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -876,7 +876,7 @@ virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
-ms.openlocfilehash: ed1dfd1dc8767b4f198ec6cc8dd626a04800bffd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b9b6ac6dc265378f617e053bc48ac6030425cef4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596765"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297915"
 ---
 # <a name="iatlmemmgr-class"></a>Iatlmemmgr – třída
 
@@ -37,7 +37,7 @@ __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 |||
 |-|-|
 |[přidělení](#allocate)|Volejte tuto metodu za účelem přidělení bloku paměti.|
-|[Zdarma](#free)|Volejte tuto metodu pro uvolnění bloku paměti.|
+|[Free](#free)|Volejte tuto metodu pro uvolnění bloku paměti.|
 |[GetSize](#getsize)|Volejte tuto metodu, aby se načetla velikost přidělené paměti bloku.|
 |[Přidělit jinému uživateli](#reallocate)|Volejte tuto metodu za účelem přidělení bloku paměti.|
 
@@ -967,6 +967,6 @@ Zobrazit [IAxWinHostWindow::CreateControlEx](#createcontrolex) popis zbývajíc�
 
 Zobrazit [hostování ActiveX ovládacích prvků pomocí knihovny ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) ukázku, která používá `IAxWinHostWindowLic::CreateControlLicEx`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../../atl/atl-class-overview.md)

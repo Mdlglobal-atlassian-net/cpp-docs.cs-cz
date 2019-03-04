@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [C++], hosting
 - controls [ATL]
 ms.assetid: d4bdfbe0-82ca-4f2f-bb95-cb89bdcc9b53
-ms.openlocfilehash: ef175ff83fd641852b27fea8408f1bb7de69f839
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42f9b41b99e13fcfe2fb003acb348c9464e0fd05
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630808"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296563"
 ---
 # <a name="atl-control-containment-faq"></a>Nejčastější dotazy k používání kontejnerů ovládacích prvků v knihovně ATL
 
@@ -25,7 +25,7 @@ Hostování ovládacího prvku kódu ATL nevyžaduje, můžete použít libovoln
 |-----------|-----------------|
 |[CAxWindow](../atl/reference/caxwindow-class.md)|Zabalí **"AtlAxWin80"** okna, poskytuje metody pro vytvoření okna, vytvoření ovládacího prvku a/nebo připojení ovládacího prvku do okna a načítají ukazatele rozhraní na objekt hostitele.|
 |[CAxWindow2T](../atl/reference/caxwindow2t-class.md)|Zabalí **"AtlAxWinLic80"** okna, poskytuje metody pro vytvoření okna, vytvoření ovládacího prvku a/nebo připojení licencovaného ovládacího prvku do okna a načítají ukazatele rozhraní na objekt hostitele.|
-|[Ccomcompositecontrol –](../atl/reference/ccomcompositecontrol-class.md)|Slouží jako základní třída pro třídy ovládacích prvků ActiveX podle prostředku dialogového okna. Tyto ovládací prvky mohou obsahovat další ovládací prvky ActiveX.|
+|[CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md)|Slouží jako základní třída pro třídy ovládacích prvků ActiveX podle prostředku dialogového okna. Tyto ovládací prvky mohou obsahovat další ovládací prvky ActiveX.|
 |[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)|Slouží jako základní třída pro třídy dialogových oken podle prostředku dialogového okna. Takové dialogová okna může obsahovat ovládací prvky ActiveX.|
 |[CWindow](../atl/reference/cwindow-class.md)|Poskytuje metodu, [GetDlgControl](../atl/reference/cwindow-class.md#getdlgcontrol), který vrátí ukazatel rozhraní ovládacího prvku, zadané ID jeho hostitelské okno. Kromě toho obálek rozhraní Windows API vystavené `CWindow` obecně usnadnit správu okna.|
 
@@ -105,7 +105,7 @@ Toto je souhrn:
 
 [!code-cpp[NVC_ATL_AxHost#1](../atl/codesnippet/cpp/hosting-activex-controls-using-atl-axhost_1.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nejčastější dotazy k používání kontejnerů ovládacích prvků](../atl/atl-control-containment-faq.md)<br/>
 [AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)<br/>

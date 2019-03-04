@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CBitmapButton [MFC], LoadBitmaps
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
-ms.openlocfilehash: 6bff87cd7648e1e5f4e0391a0a7fc1a1455a51f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c800b40fcf2bb3008b35614390e4aafcb43a54f5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599651"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296758"
 ---
 # <a name="cbitmapbutton-class"></a>Cbitmapbutton – třída
 
@@ -57,7 +57,7 @@ Tyto bitmapy může mít libovolnou velikost, ale všechny zacházeno, jako by b
 
 Různé aplikace vyžadují různé kombinace bitmapové obrázky:
 
-|Nahoru|Dolů|Fokus|Zakázané|Aplikace|
+|Nahoru|Dolů|Fokus|Zakázáno|Aplikace|
 |--------|----------|-------------|--------------|-----------------|
 |×||||Rastrový obrázek|
 |×|×|||Tlačítka bez textu WS_TABSTOP styl|
@@ -179,7 +179,7 @@ BOOL LoadBitmaps(
 ### <a name="parameters"></a>Parametry
 
 *lpszBitmapResource*<br/>
-Odkazuje na řetězec zakončený hodnotou null, který obsahuje název rastrový obrázek pro normální rastrového obrázku tlačítka nebo "do" stavu. Požadováno.
+Odkazuje na řetězec zakončený hodnotou null, který obsahuje název rastrový obrázek pro normální rastrového obrázku tlačítka nebo "do" stavu. Povinný parametr.
 
 *lpszBitmapResourceSel*<br/>
 Odkazuje na řetězec zakončený hodnotou null, která obsahuje název rastrový obrázek pro tlačítko s rastrovým vybraných nebo "dolů" stavu. Může mít hodnotu NULL.
@@ -191,7 +191,7 @@ Odkazuje na řetězec zakončený hodnotou null, který obsahuje název rastrov�
 Odkazuje na řetězec zakončený hodnotou null, který obsahuje název rastrový obrázek pro tlačítko rastrový obrázek zakázaném stavu. Může mít hodnotu NULL.
 
 *nIDBitmapResource*<br/>
-Určuje identifikační číslo prostředku rastrového obrázku tlačítka normální nebo "do" stavu prostředku rastrového obrázku. Požadováno.
+Určuje identifikační číslo prostředku rastrového obrázku tlačítka normální nebo "do" stavu prostředku rastrového obrázku. Povinný parametr.
 
 *nIDBitmapResourceSel*<br/>
 Určuje identifikační číslo prostředku prostředku rastrového obrázku pro tlačítko s rastrovým vybraných nebo "dolů" stavu. Může být 0.
@@ -222,9 +222,8 @@ void SizeToContent();
 
 [!code-cpp[NVC_MFCControlLadenDialog#59](../../mfc/codesnippet/cpp/cbitmapbutton-class_4.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC CTRLTEST](../../visual-cpp-samples.md)<br/>
 [CButton – třída](../../mfc/reference/cbutton-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-

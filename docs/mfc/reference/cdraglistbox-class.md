@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDragListBox [MFC], Dropped
 - CDragListBox [MFC], ItemFromPt
 ms.assetid: fee20b42-60ae-4aa9-83f9-5a3d9b96e33b
-ms.openlocfilehash: 739bf08139c56992af883b5cefa5c235bf08f551
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6574ffaf8c4b8c0414c00ef2f4a31f6ed74ebe9e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623649"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294938"
 ---
 # <a name="cdraglistbox-class"></a>Cdraglistbox – třída
 
@@ -74,7 +74,7 @@ Další informace o přiřazování k proměnné členů ovládacích prvků nal
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[Clistbox –](../../mfc/reference/clistbox-class.md)
+[CListBox](../../mfc/reference/clistbox-class.md)
 
 `CDragListBox`
 
@@ -92,7 +92,7 @@ virtual BOOL BeginDrag(CPoint pt);
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pt*<br/>
 A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který obsahuje souřadnice položky právě přetáhli.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -113,7 +113,7 @@ virtual void CancelDrag(CPoint pt);
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pt*<br/>
 A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který obsahuje souřadnice položky právě přetáhli.
 
 ### <a name="remarks"></a>Poznámky
@@ -138,7 +138,7 @@ virtual UINT Dragging(CPoint pt);
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pt*<br/>
 A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který obsahuje x a y obrazovky souřadnice kurzoru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -187,7 +187,7 @@ virtual void Dropped(
 *nSrcIndex*<br/>
 Určuje index založený na nule vynechaných řetězec.
 
-*PT*<br/>
+*pt*<br/>
 A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který obsahuje souřadnice místa přetažení.
 
 ### <a name="remarks"></a>Poznámky
@@ -206,7 +206,7 @@ int ItemFromPt(
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pt*<br/>
 A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který obsahuje souřadnice bodu v rámci tohoto pole se seznamem.
 
 *bAutoScroll*<br/>
@@ -216,7 +216,7 @@ Nenulové, pokud posouvání je povoleno, jinak 0.
 
 Z nuly vycházející index položky seznamu přetažení.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC lze kontejner TSTCON](../../visual-cpp-samples.md)<br/>
 [CListBox – třída](../../mfc/reference/clistbox-class.md)<br/>

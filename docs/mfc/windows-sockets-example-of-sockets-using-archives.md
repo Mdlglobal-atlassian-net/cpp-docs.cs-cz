@@ -6,12 +6,12 @@ helpviewer_keywords:
 - examples [MFC], Windows Sockets
 - Windows Sockets [MFC], with archives
 ms.assetid: 2e3c9bb2-7e7b-4f28-8dc5-6cb7a484edac
-ms.openlocfilehash: 285053c79b13ebea23aedc7dae52eabe85f55a12
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ea1e2911b156066360da09993fa7302db79f12b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436267"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295252"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: Příklady soketů využívajících archivy
 
@@ -43,17 +43,17 @@ Pro příjem, funkce funguje podobně, s tím rozdílem, že používá operáto
 V tomto modelu komunikace, slovo "Přijaté" zprávu odeslat *strText* proměnná, je pro zobrazení na druhém konci komunikace, takže určuje přijímající uživateli, byly pro určitý počet paketů dat přijata. Příjemce odpovědi podobně jako řetězec, který říká: odesláno, zobrazí na obrazovce původního odesilatele. Přijetí obou řetězců označuje, že došlo k chybě komunikace úspěšná.
 
 > [!CAUTION]
->  Při psaní aplikace knihovny MFC klienta ke komunikaci se servery zavedené (non-MFC) objektů jazyka C++ prostřednictvím archivu neodesílají. Pokud je server aplikace knihovny MFC, která analyzuje typy objektů, které chcete odeslat, nebude moci přijímat a deserializaci objektů. Příklad v tomto článku [rozhraní Windows Sockets: pořadí bajtů](../mfc/windows-sockets-byte-ordering.md) ukazuje sdělení tohoto typu.
+>  Při psaní aplikace knihovny MFC klienta ke komunikaci se servery zavedené (non-MFC) objektů jazyka C++ prostřednictvím archivu neodesílají. Pokud je server aplikace knihovny MFC, která analyzuje typy objektů, které chcete odeslat, nebude moci přijímat a deserializaci objektů. Příklad v tomto článku [rozhraní Windows Sockets: Řazení bajtů](../mfc/windows-sockets-byte-ordering.md) ukazuje sdělení tohoto typu.
 
 Další informace najdete v tématu Specifikace Windows Sockets: **htonl**, **htons**, **ntohl**, **ntohs**. Další informace viz také:
 
-- [Windows Sockets: Odvozování z tříd soketů](../mfc/windows-sockets-deriving-from-socket-classes.md)
+- [Windows Sockets: Odvozování z tříd soketů](../mfc/windows-sockets-deriving-from-socket-classes.md)
 
-- [Windows Sockets: Jak pracují sokety s archivy](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows Sockets: Jak pracují sokety s archivy](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Windows Sockets: Pozadí](../mfc/windows-sockets-background.md)
+- [Windows Sockets: Background](../mfc/windows-sockets-background.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)<br/>
 [CArchive::IsStoring](../mfc/reference/carchive-class.md#isstoring)<br/>
@@ -61,4 +61,3 @@ Další informace najdete v tématu Specifikace Windows Sockets: **htonl**, **ht
 [CArchive::operator >>](../mfc/reference/carchive-class.md#operator_lt_lt)<br/>
 [CArchive::Flush](../mfc/reference/carchive-class.md#flush)<br/>
 [CObject::Serialize](../mfc/reference/cobject-class.md#serialize)
-

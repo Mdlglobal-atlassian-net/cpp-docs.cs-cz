@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - transformer class
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
-ms.openlocfilehash: cc35a4e2de2b29bb6d437dfcbf48ef361fefdfa3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c07017539bc0125e9e8c27e208480a50ccc7a719
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618280"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299176"
 ---
 # <a name="transformer-class"></a>Třída transformer
 
@@ -42,7 +42,7 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
 *_Input*<br/>
 Typ datové části zprávy přijal vyrovnávací paměti.
 
-*_Výstup*<br/>
+*_Output*<br/>
 Typ datové části zprávy, uloženy a šířen mimo ve vyrovnávací paměti.
 
 ## <a name="members"></a>Členové
@@ -51,7 +51,7 @@ Typ datové části zprávy, uloženy a šířen mimo ve vyrovnávací paměti.
 
 |Název|Popis|
 |----------|-----------------|
-|[Transformer](#ctor)|Přetíženo. Vytvoří `transformer` blok zpráv.|
+|[transformer](#ctor)|Přetíženo. Vytvoří `transformer` blok zpráv.|
 |[~transformer Destructor](#dtor)|Odstraní `transformer` blok zpráv.|
 
 ### <a name="protected-methods"></a>Chráněné metody
@@ -67,7 +67,7 @@ Typ datové části zprávy, uloženy a šířen mimo ve vyrovnávací paměti.
 |[reserve_message](#reserve_message)|Vyhradí zprávu nabízely dříve v tomto `transformer` blok zpráv. (Přepíše [source_block::reserve_message –](source-block-class.md#reserve_message).)|
 |[resume_propagation](#resume_propagation)|Obnoví šíření po rezervaci byla uvolněna. (Přepíše [source_block::resume_propagation –](source-block-class.md#resume_propagation).)|
 |[send_message](#send_message)|Synchronně předává zprávy ze `ISource` bloku k tomuto `transformer` blok zpráv. Je vyvolán `send` metodu, když se zavolá pomocí zdrojového bloku.|
-|[supports_anonymous_source –](#supports_anonymous_source)|Přepsání `supports_anonymous_source` indikace, že tento blok můžete přijímat zprávy, které jsou nabízeny zdrojem, který není spojený. (Přepíše [itarget::supports_anonymous_source –](itarget-class.md#supports_anonymous_source).)|
+|[supports_anonymous_source](#supports_anonymous_source)|Přepsání `supports_anonymous_source` indikace, že tento blok můžete přijímat zprávy, které jsou nabízeny zdrojem, který není spojený. (Přepíše [itarget::supports_anonymous_source –](itarget-class.md#supports_anonymous_source).)|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -75,11 +75,11 @@ Další informace najdete v tématu [asynchronní bloky zpráv](../../../paralle
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Isource –](isource-class.md)
+[ISource](isource-class.md)
 
-[Itarget –](itarget-class.md)
+[ITarget](itarget-class.md)
 
-[source_block –](source-block-class.md)
+[source_block](source-block-class.md)
 
 [propagator_block](propagator-block-class.md)
 
@@ -288,7 +288,7 @@ Funkce, která bude volána pro každé přijaté zprávy.
 *_PTarget*<br/>
 Ukazatel na cílový blok pro propojení transformátoru.
 
-*_Filtrovat*<br/>
+*_Filter*<br/>
 Funkce filtru, která určuje, zda by měl být přijat nabízené zprávy.
 
 *_PScheduler*<br/>
@@ -313,7 +313,7 @@ Odstraní `transformer` blok zpráv.
 ~transformer();
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [call – třída](call-class.md)

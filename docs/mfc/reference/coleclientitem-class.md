@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: 80d28aa6a71adb72b8a3e0f5cd997577d61d0a52
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: ec3048e7bd033e5c296b558dd2083c648bc377e7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678584"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295354"
 ---
 # <a name="coleclientitem-class"></a>Coleclientitem – třída
 
@@ -287,7 +287,7 @@ Položka OLE. lze vložené nebo propojené. Pokud je vložen, jeho data se ukl�
 
 `COleClientItem` je možné buď [coledocument –](../../mfc/reference/coledocument-class.md), [colelinkingdoc –](../../mfc/reference/colelinkingdoc-class.md), nebo [coleserverdoc –](../../mfc/reference/coleserverdoc-class.md) třídy. Použití `COleClientItem`odvodit třídu z něj a implementovat [OnChange](#onchange) členskou funkci, která definuje, jak kontejneru reaguje na změny provedené u položky. Kvůli podpoře aktivace na místě, přepsat [OnGetItemPosition](#ongetitemposition) členskou funkci. Tato funkce poskytuje informace o zobrazené pozici položky OLE.
 
-Další informace o použití rozhraní kontejneru, najdete v článcích [kontejnery: Implementace kontejneru](../../mfc/containers-implementing-a-container.md) a [aktivace](../../mfc/activation-cpp.md).
+Další informace o použití rozhraní kontejneru, najdete v článcích [kontejnerů: Implementace kontejneru](../../mfc/containers-implementing-a-container.md) a [aktivace](../../mfc/activation-cpp.md).
 
 > [!NOTE]
 >  Sada Windows SDK odkazuje na vložené a propojené položky jako "objekty" a odkazuje na typy položek jako "třídy." Tento odkaz používá termín "item" pro odlišení od odpovídající objekt jazyka C++ a termín "typ" pro rozlišení OLE kategorie ze třídy C++ OLE entity.
@@ -298,7 +298,7 @@ Další informace o použití rozhraní kontejneru, najdete v článcích [konte
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[Cdocitem –](../../mfc/reference/cdocitem-class.md)
+[CDocItem](../../mfc/reference/cdocitem-class.md)
 
 `COleClientItem`
 
@@ -627,7 +627,7 @@ BOOL CreateFromClipboard(
 
 ### <a name="parameters"></a>Parametry
 
-*Vykreslení*<br/>
+*render*<br/>
 Příznak určující, jak server bude vykreslení položky OLE. Možné hodnoty najdete v části [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) v sadě Windows SDK.
 
 *cfFormat*<br/>
@@ -663,7 +663,7 @@ BOOL CreateFromData(
 *pDataObject*<br/>
 Ukazatel [coledataobject –](../../mfc/reference/coledataobject-class.md) objektu, ze kterého se má vytvořit položky OLE.
 
-*Vykreslení*<br/>
+*render*<br/>
 Příznak určující, jak server bude vykreslení položky OLE. Možné hodnoty najdete v části [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) v sadě Windows SDK.
 
 *cfFormat*<br/>
@@ -700,10 +700,10 @@ BOOL CreateFromFile(
 *lpszFileName*<br/>
 Ukazatel na název souboru, ze kterého se má vytvořit položky OLE.
 
-*identifikátor CLSID*<br/>
+*clsid*<br/>
 Vyhrazeno pro budoucí použití.
 
-*Vykreslení*<br/>
+*render*<br/>
 Příznak určující, jak server bude vykreslení položky OLE. Možné hodnoty najdete v části [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) v sadě Windows SDK.
 
 *cfFormat*<br/>
@@ -735,7 +735,7 @@ BOOL CreateLinkFromClipboard(
 
 ### <a name="parameters"></a>Parametry
 
-*Vykreslení*<br/>
+*render*<br/>
 Příznak určující, jak server bude vykreslení položky OLE. Možné hodnoty najdete v části [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) v sadě Windows SDK.
 
 *cfFormat*<br/>
@@ -771,7 +771,7 @@ BOOL CreateLinkFromData(
 *pDataObject*<br/>
 Ukazatel [coledataobject –](../../mfc/reference/coledataobject-class.md) objektu, ze kterého se má vytvořit položky OLE.
 
-*Vykreslení*<br/>
+*render*<br/>
 Příznak určující, jak server bude vykreslení položky OLE. Možné hodnoty najdete v části [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) v sadě Windows SDK.
 
 *cfFormat*<br/>
@@ -807,7 +807,7 @@ BOOL CreateLinkFromFile(
 *lpszFileName*<br/>
 Ukazatel na název souboru, ze kterého se má vytvořit položky OLE.
 
-*Vykreslení*<br/>
+*render*<br/>
 Příznak určující, jak server bude vykreslení položky OLE. Možné hodnoty najdete v části [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) v sadě Windows SDK.
 
 *cfFormat*<br/>
@@ -840,10 +840,10 @@ BOOL CreateNewItem(
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor CLSID*<br/>
+*clsid*<br/>
 ID, které jednoznačně identifikuje typ položky OLE. Chcete-li vytvořit.
 
-*Vykreslení*<br/>
+*render*<br/>
 Příznak určující, jak server bude vykreslení položky OLE. Možné hodnoty najdete v části [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) v sadě Windows SDK.
 
 *cfFormat*<br/>
@@ -875,7 +875,7 @@ BOOL CreateStaticFromClipboard(
 
 ### <a name="parameters"></a>Parametry
 
-*Vykreslení*<br/>
+*render*<br/>
 Příznak určující, jak server bude vykreslení položky OLE. Možné hodnoty najdete v části [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) v sadě Windows SDK.
 
 *cfFormat*<br/>
@@ -911,7 +911,7 @@ BOOL CreateStaticFromData(
 *pDataObject*<br/>
 Ukazatel [coledataobject –](../../mfc/reference/coledataobject-class.md) objektu, ze kterého se má vytvořit položky OLE.
 
-*Vykreslení*<br/>
+*render*<br/>
 Příznak určující, jak server bude vykreslení položky OLE. Možné hodnoty najdete v části [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) v sadě Windows SDK.
 
 *cfFormat*<br/>
@@ -1084,7 +1084,7 @@ BOOL Draw(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel [CDC](../../mfc/reference/cdc-class.md) objektu použitém pro vykreslení položky OLE.
 
 *lpBounds*<br/>
@@ -1159,7 +1159,7 @@ void GetClassID(CLSID* pClassID) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pClassID má*<br/>
+*pClassID*<br/>
 Ukazatel na identifikátor typu [CLSID](/windows/desktop/com/clsid-key-hklm) načíst ID třídy. Informace o identifikátoru CLSID naleznete v tématu Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
@@ -1273,7 +1273,7 @@ static HICON GetIconFromRegistry(CLSID& clsid);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor CLSID*<br/>
+*clsid*<br/>
 Odkaz na identifikátor CLSID pro server spojený s ikonou.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1328,13 +1328,13 @@ UINT GetItemState() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `COleClientItem::ItemState` výčtu hodnotu, která může být jedna z následujících akcí: `emptyState`, `loadedState`, `openState`, `activeState`, `activeUIState`. Informace o tyto stavy, najdete v článku [kontejnery: stavy klientských položek](../../mfc/containers-client-item-states.md).
+A `COleClientItem::ItemState` výčtu hodnotu, která může být jedna z následujících akcí: `emptyState`, `loadedState`, `openState`, `activeState`, `activeUIState`. Informace o tyto stavy, najdete v článku [kontejnerů: Stavy klientských položek](../../mfc/containers-client-item-states.md).
 
 ### <a name="remarks"></a>Poznámky
 
 Upozornění při změně stavu položky OLE. použijte [OnChange](#onchange) členskou funkci.
 
-Další informace najdete v článku [kontejnery: stavy klientských položek](../../mfc/containers-client-item-states.md).
+Další informace najdete v článku [kontejnerů: Stavy klientských položek](../../mfc/containers-client-item-states.md).
 
 ##  <a name="getlaststatus"></a>  COleClientItem::GetLastStatus
 
@@ -1780,7 +1780,7 @@ virtual void OnInsertMenus(
 Odkazuje na prázdné nabídky.
 
 *lpMenuWidths*<br/>
-Odkazuje na pole šest dlouhé hodnoty indikující, kolik nabídky jsou v každé z těchto skupin nabídky: soubor, upravit, kontejner, objekt okna nápovědy. Aplikace typu kontejner je zodpovědná za soubor, kontejner a okno nabídky skupiny, odpovídající prvky 0, 2 a 4 tohoto pole.
+Odkazuje na pole šest dlouhé hodnoty indikující, kolik nabídky jsou v každé z těchto skupin nabídky: Soubor, upravit, kontejner, objekt okna nápovědy. Aplikace typu kontejner je zodpovědná za soubor, kontejner a okno nabídky skupiny, odpovídající prvky 0, 2 a 4 tohoto pole.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2150,7 +2150,7 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
 *ptd*<br/>
 Ukazatel [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) datová struktura, která obsahuje informace o nové tiskové cílové zařízení. Může mít hodnotu NULL.
 
-*PPD*<br/>
+*ppd*<br/>
 Ukazatel [PRINTDLG](https://msdn.microsoft.com/library/windows/desktop/ms646940) datová struktura, která obsahuje informace o nové tiskové cílové zařízení. Může mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2185,7 +2185,7 @@ Propojené položky vyhledá funkce zdroj odkazu k získání nového prezentaci
 
 Další informace najdete v tématu [IOleLink::Update](/windows/desktop/api/oleidl/nf-oleidl-iolelink-update) v sadě Windows SDK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC MFCBIND](../../visual-cpp-samples.md)<br/>
 [Ukázky knihovny MFC OCLIENT](../../visual-cpp-samples.md)<br/>

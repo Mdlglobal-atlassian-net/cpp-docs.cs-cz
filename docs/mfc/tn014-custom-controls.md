@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-ms.openlocfilehash: 1f04029e47ee7d262cdc5e2eab463799acd7d943
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: d529b235daa1c6aa889b69e8d6bb2f02a58436bb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178405"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297486"
 ---
 # <a name="tn014-custom-controls"></a>TN014: Vlastní ovládací prvky
 
@@ -132,7 +132,7 @@ Obě rutiny připojit `CWnd` objektu do existujícího `HWND`. `SubclassWindow` 
 
 Zobrazit [CTRLTEST](../visual-cpp-samples.md) příklad pro několik příkladů použití `SubclassWindow` a `SubclassDlgItem`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)

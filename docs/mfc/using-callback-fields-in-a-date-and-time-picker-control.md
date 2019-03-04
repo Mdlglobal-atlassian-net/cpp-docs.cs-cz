@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DTN_FORMAT notification [MFC]
 - DateTimePicker control [MFC]
 ms.assetid: 404f4ba9-cba7-4718-9faa-bc6b274a723f
-ms.openlocfilehash: 82dd4bac53b419b531f512aff859510d6603d462
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 874f73df3dda3a720d4346ae3fb0136c662221db
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564239"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299397"
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>Použití polí zpětného volání v ovládacím prvku pro výběr data a času
 
@@ -67,8 +67,7 @@ Dtn_format – oznámení aplikací slouží k vyžádání řetězec znaků, kt
 > [!NOTE]
 >  Ukazatel **NMDATETIMEFORMAT** je přetypováním první parametr obslužné rutiny oznámení na správný typ. nalezena.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CDateTimeCtrl](../mfc/using-cdatetimectrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

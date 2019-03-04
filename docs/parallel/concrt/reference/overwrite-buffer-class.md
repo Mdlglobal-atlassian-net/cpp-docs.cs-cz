@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - overwrite_buffer class
 ms.assetid: 5cc428fe-3697-419c-9fb2-78f6181c9293
-ms.openlocfilehash: 680c07015538a2eacc9480d3cd22da9a36071e32
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: adac6e220a60a49a2b9bfa9463f16f8956b08d2e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455996"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299306"
 ---
 # <a name="overwritebuffer-class"></a>Třída overwrite_buffer
 
@@ -72,7 +72,7 @@ Typ datové části zprávy, uloženy a následně vyrovnávací paměti.
 |[reserve_message](#reserve_message)|Vyhradí zprávu nabízely dříve v tomto `overwrite_buffer` blok zpráv. (Přepíše [source_block::reserve_message –](source-block-class.md#reserve_message).)|
 |[resume_propagation](#resume_propagation)|Obnoví šíření po rezervaci byla uvolněna. (Přepíše [source_block::resume_propagation –](source-block-class.md#resume_propagation).)|
 |[send_message](#send_message)|Synchronně předává zprávy ze `ISource` bloku k tomuto `overwrite_buffer` blok zpráv. Je vyvolán `send` metodu, když se zavolá pomocí zdrojového bloku.|
-|[supports_anonymous_source –](#supports_anonymous_source)|Přepsání `supports_anonymous_source` indikace, že tento blok můžete přijímat zprávy, které jsou nabízeny zdrojem, který není spojený. (Přepíše [itarget::supports_anonymous_source –](itarget-class.md#supports_anonymous_source).)|
+|[supports_anonymous_source](#supports_anonymous_source)|Přepsání `supports_anonymous_source` indikace, že tento blok můžete přijímat zprávy, které jsou nabízeny zdrojem, který není spojený. (Přepíše [itarget::supports_anonymous_source –](itarget-class.md#supports_anonymous_source).)|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -82,11 +82,11 @@ Další informace najdete v tématu [asynchronní bloky zpráv](../../../paralle
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Isource –](isource-class.md)
+[ISource](isource-class.md)
 
-[Itarget –](itarget-class.md)
+[ITarget](itarget-class.md)
 
-[source_block –](source-block-class.md)
+[source_block](source-block-class.md)
 
 [propagator_block](propagator-block-class.md)
 
@@ -200,7 +200,7 @@ overwrite_buffer(
 
 ### <a name="parameters"></a>Parametry
 
-*_Filtrovat*<br/>
+*_Filter*<br/>
 Funkce filtru, která určuje, zda by měl být přijat nabízené zprávy.
 
 *_PScheduler*<br/>
@@ -346,8 +346,8 @@ Datová část aktuálně uložené zprávy.
 
 Hodnota uložená v `overwrite_buffer` změnit hned po návratu tato metoda. Tato metoda budou čekat na přijetí e-mailu Pokud žádná zpráva je aktuálně uloženo v `overwrite_buffer`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
-[Třída unbounded_buffer](unbounded-buffer-class.md)<br/>
+[unbounded_buffer – třída](unbounded-buffer-class.md)<br/>
 [single_assignment – třída](single-assignment-class.md)

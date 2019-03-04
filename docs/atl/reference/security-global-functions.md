@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ACL object global functions
 - security IDs [C++]
 ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
-ms.openlocfilehash: 95074860c5fc5bef02852600b51751e9a028465a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c9a6fd31850ed137167b6987ddf2f83f34c64a1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555230"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295874"
 ---
 # <a name="security-global-functions"></a>Globální funkce zabezpečení
 
@@ -141,7 +141,7 @@ Popisovač objektu, ze kterého se má načíst informace o zabezpečení.
 *ObjectType*<br/>
 Určuje hodnotu z [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) výčet, který určuje typ objektu identifikován *hObject* parametru.
 
-*psid má*<br/>
+*pSid*<br/>
 Ukazatel `CSid` objekt, který bude obsahovat nové informace o zabezpečení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -207,7 +207,7 @@ Popisovač objektu, ze kterého se má načíst informace o zabezpečení.
 *ObjectType*<br/>
 Určuje hodnotu z [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) výčet, který určuje typ objektu identifikován *hObject* parametru.
 
-*psid má*<br/>
+*pSid*<br/>
 Ukazatel `CSid` objekt, který bude obsahovat nové informace o zabezpečení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -386,6 +386,6 @@ Pokud `AtlGetSecurityDescriptor` má být volána v mnoha případech na mnoho r
 
 **Záhlaví:** atlsecurity.h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Funkce](../../atl/reference/atl-functions.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ActiveX control containers [MFC]
 - OLE controls [MFC], containers
 ms.assetid: 0eb1a713-e607-4c79-a0c7-67c5f1fd5fab
-ms.openlocfilehash: 3356c5d94eaf4cef0b44c509144d0de4a5d42abf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8340acafc81447052fcb8d90df8997e81dc4117
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549108"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296498"
 ---
 # <a name="activex-control-containers"></a>ActiveX – kontejnery ovládacích prvků
 
@@ -33,25 +33,24 @@ Další články popisují několik témat, od vytvoření projektu kontejneru o
 
 - [Kontejnery pro ovládací prvky ActiveX](../mfc/containers-for-activex-controls.md)
 
-- [ActiveX – kontejnery ovládacích prvků: Ruční povolení uzavření ovládacího prvku ActiveX](../mfc/activex-control-containers-manually-enabling-activex-control-containment.md)
+- [Kontejnery ovládacích prvků ActiveX: Ruční povolení uzavření ovládacího prvku ActiveX](../mfc/activex-control-containers-manually-enabling-activex-control-containment.md)
 
-- [ActiveX – kontejnery ovládacích prvků: Vložení ovládacího prvku do kontejnerové aplikace ovládacího prvku](../mfc/inserting-a-control-into-a-control-container-application.md)
+- [Kontejnery ovládacích prvků ActiveX: Vložení ovládacího prvku do kontejnerové aplikace ovládacího prvku](../mfc/inserting-a-control-into-a-control-container-application.md)
 
-- [Kontejnery ovládacích prvků ActiveX: Připojení ovládacího prvku ActiveX k členské proměnné](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)
+- [Kontejnery ovládacích prvků ActiveX: Připojení ovládacího prvku ActiveX k členské proměnné](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)
 
-- [– Kontejnery ovládacích prvků ActiveX: Ovládací prvek zpracování událostí z prvku ActiveX](../mfc/activex-control-containers-handling-events-from-an-activex-control.md)
+- [Kontejnery ovládacích prvků ActiveX: Zpracování událostí z ovládacího prvku ActiveX](../mfc/activex-control-containers-handling-events-from-an-activex-control.md)
 
-- [ActiveX – kontejnery ovládacích prvků: Zobrazení a úpravy vlastností ovládacích prvků](../mfc/activex-control-containers-viewing-and-modifying-control-properties.md)
+- [Kontejnery ovládacích prvků ActiveX: Zobrazení a úpravy vlastností ovládacích prvků](../mfc/activex-control-containers-viewing-and-modifying-control-properties.md)
 
-- [ActiveX – kontejnery ovládacích prvků: Programování ovládacích prvků ActiveX v kontejneru ovládacího prvku ActiveX](../mfc/programming-activex-controls-in-a-activex-control-container.md)
+- [Kontejnery ovládacích prvků ActiveX: Programování ovládacích prvků ActiveX v kontejneru ovládacího prvku ActiveX](../mfc/programming-activex-controls-in-a-activex-control-container.md)
 
-- [ActiveX – kontejnery ovládacích prvků: Použití ovládacích prvků v jiném kontejneru než dialogovém okně](../mfc/activex-control-containers-using-controls-in-a-non-dialog-container.md)
+- [Kontejnery ovládacích prvků ActiveX: Použití ovládacích prvků v kontejneru než dialogovém okně](../mfc/activex-control-containers-using-controls-in-a-non-dialog-container.md)
 
 Další informace o používání ovládacích prvků ActiveX v dialogovém okně najdete v tématu [editoru dialogového okna](../windows/dialog-editor.md) témata.
 
 Seznam článků, které vysvětlují, podrobnosti o vývoji ovládacích prvků ActiveX pomocí jazyka Visual C++ a třídy ovládacích prvků ActiveX knihovny MFC naleznete v tématu [ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md). Články jsou seskupené podle funkčních kategorií.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)
-

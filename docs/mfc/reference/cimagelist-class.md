@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: 5bcf815fce4123ca1014e1679fd810c1ce321be4
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 3e8c524a95730282d0e35e5f791ebf229725e282
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178587"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298916"
 ---
 # <a name="cimagelist-class"></a>Cimagelist – třída
 
@@ -241,7 +241,7 @@ BOOL BeginDrag(
 
 ### <a name="parameters"></a>Parametry
 
-*nvybrán Nobrázek*<br/>
+*nImage*<br/>
 Z nuly vycházející index bitové kopie a přetažením.
 
 *ptHotSpot*<br/>
@@ -289,7 +289,7 @@ BOOL Copy(
 *iDst*<br/>
 Index založený na nule obrázek, který se použije jako cíl operace kopírování.
 
-*Kód*<br/>
+*iSrc*<br/>
 Index založený na nule obrázek, který se použije jako zdroj kopírování.
 
 *uFlags*<br/>
@@ -348,10 +348,10 @@ BOOL Create(CImageList* pImageList);
 
 ### <a name="parameters"></a>Parametry
 
-*CX*<br/>
+*cx*<br/>
 Dimenze každého obrázku v pixelech.
 
-*CY*<br/>
+*cy*<br/>
 Dimenze každého obrázku v pixelech.
 
 *nFlags*<br/>
@@ -395,7 +395,7 @@ Odkaz na `CImageList` objektu.
 *nImage2*<br/>
 Index druhého stávající bitovou kopii.
 
-*DX*<br/>
+*dx*<br/>
 Posun osy x druhý obrázek ve vztahu k první obrázku v pixelech.
 
 *dy*<br/>
@@ -479,7 +479,7 @@ static BOOL PASCAL DragEnter(
 *pWndLock*<br/>
 Ukazatel na okno vlastní obrázek přetažení.
 
-*Bod*<br/>
+*point*<br/>
 Pozice, na který chcete zobrazit přetáhnout obrázek. Souřadnice jsou relativní vzhledem k levém horním rohu okna (ne klientské oblasti).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -529,7 +529,7 @@ static BOOL PASCAL DragMove(CPoint pt);
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pt*<br/>
 Nové umístění přetažení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -579,13 +579,13 @@ BOOL Draw(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel na kontextu cílového zařízení.
 
-*nvybrán Nobrázek*<br/>
+*nImage*<br/>
 Z nuly vycházející index obrázku pro kreslení.
 
-*PT*<br/>
+*pt*<br/>
 Umístění, kam chcete-li nakreslit v rámci zadané zařízení.
 
 *nStyle*<br/>
@@ -594,7 +594,7 @@ Příznak určující styl vykreslování. Může být jeden nebo více z těcht
 |Hodnota|Význam|
 |-----------|-------------|
 |ILD_BLEND25 ILD_FOCUS|Nakreslí obrázek, prolnutí 25 procent barvou zvýraznění systému. Tato hodnota nemá žádný vliv, pokud seznam obrázků neobsahuje masky.|
-|ILD_BLEND50 ILD_SELECTED, ILD_BLEND|Nakreslí obrázek, prolnutí 50 procent barvou zvýraznění systému. Tato hodnota nemá žádný vliv, pokud seznam obrázků neobsahuje masky.|
+|ILD_BLEND50, ILD_SELECTED, ILD_BLEND|Nakreslí obrázek, prolnutí 50 procent barvou zvýraznění systému. Tato hodnota nemá žádný vliv, pokud seznam obrázků neobsahuje masky.|
 |ILD_MASK|Nakreslí masce.|
 |ILD_NORMAL|Nakreslí obrázek barvou pozadí pro seznam obrázků. Pokud je barva pozadí CLR_NONE hodnotu, na obrázku je vykreslen transparentně masce.|
 |ILD_TRANSPARENT|Nakreslí obrázek transparentně pomocí masky, bez ohledu na barvu pozadí.|
@@ -624,16 +624,16 @@ BOOL DrawEx(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel na kontextu cílového zařízení.
 
-*nvybrán Nobrázek*<br/>
+*nImage*<br/>
 Z nuly vycházející index obrázku pro kreslení.
 
-*PT*<br/>
+*pt*<br/>
 Umístění, kam chcete-li nakreslit v rámci zadané zařízení.
 
-*Sz*<br/>
+*sz*<br/>
 Velikost část obrázku, nakreslete vzhledem k levého horního rohu obrázku. Zobrazit *dx* a *dy* v [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) v sadě Windows SDK.
 
 *clrBk*<br/>
@@ -684,16 +684,16 @@ BOOL DrawIndirect(
 *pimldp*<br/>
 Ukazatel [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-_imagelistdrawparams) strukturu, která obsahuje informace o operaci příkazu pro vykreslení.
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel na kontextu cílového zařízení. Je to nutné odstranit [CDC](../../mfc/reference/cdc-class.md) objektu, jakmile budete hotovi s ním.
 
-*nvybrán Nobrázek*<br/>
+*nImage*<br/>
 Z nuly vycházející index image, které chcete kreslit.
 
-*PT*<br/>
+*pt*<br/>
 A [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktury obsahující souřadnic x a y – kde bude vykreslen na obrázku.
 
-*Sz*<br/>
+*sz*<br/>
 A [velikost](/windows/desktop/api/windef/ns-windef-tagsize) struktura určující velikost bitové kopie, které chcete kreslit.
 
 *ptOrigin*<br/>
@@ -780,7 +780,7 @@ HICON ExtractIcon(int nImage);
 
 ### <a name="parameters"></a>Parametry
 
-*nvybrán Nobrázek*<br/>
+*nImage*<br/>
 Z nuly vycházející index bitové kopie.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -873,7 +873,7 @@ static CImageList* PASCAL GetDragImage(
 
 ### <a name="parameters"></a>Parametry
 
-*lppoint –*<br/>
+*lpPoint*<br/>
 Adresa [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) přetáhněte struktura, která přijímá aktuální pozici.
 
 *lpPointHotSpot*<br/>
@@ -911,7 +911,7 @@ BOOL GetImageInfo(
 
 ### <a name="parameters"></a>Parametry
 
-*nvybrán Nobrázek*<br/>
+*nImage*<br/>
 Z nuly vycházející index bitové kopie.
 
 *pImageInfo*<br/>
@@ -1006,7 +1006,7 @@ BOOL Remove(int nImage);
 
 ### <a name="parameters"></a>Parametry
 
-*nvybrán Nobrázek*<br/>
+*nImage*<br/>
 Z nuly vycházející index Image, který chcete odebrat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1038,7 +1038,7 @@ int Replace(
 
 ### <a name="parameters"></a>Parametry
 
-*nvybrán Nobrázek*<br/>
+*nImage*<br/>
 Z nuly vycházející index obrázku pro nahrazení.
 
 *pbmImage*<br/>
@@ -1074,7 +1074,7 @@ COLORREF SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parametry
 
-*znak CR*<br/>
+*cr*<br/>
 Nastavit barvu pozadí. Může být CLR_NONE. V takovém případě bitové kopie jsou vykreslovány transparentně pomocí masky.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1097,7 +1097,7 @@ BOOL SetDragCursorImage(
 
 ### <a name="parameters"></a>Parametry
 
-*nPokud*<br/>
+*nDrag*<br/>
 Index novou bitovou kopii a nelze jej zkombinovat s přetáhnout obrázek.
 
 *ptHotSpot*<br/>
@@ -1150,7 +1150,7 @@ BOOL SetOverlayImage(
 
 ### <a name="parameters"></a>Parametry
 
-*nvybrán Nobrázek*<br/>
+*nImage*<br/>
 Z nuly vycházející index Image, který se použije jako masku překrytí.
 
 *nOverlay*<br/>
@@ -1191,7 +1191,7 @@ Nenulové, pokud je úspěšná. jinak 0.
 
 [!code-cpp[NVC_MFC_CImageList#17](../../mfc/reference/codesnippet/cpp/cimagelist-class_23.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

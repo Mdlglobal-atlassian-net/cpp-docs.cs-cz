@@ -10,12 +10,12 @@ helpviewer_keywords:
 - notifications [MFC], handlers for control
 - handlers [MFC], command
 ms.assetid: 20f57f4a-f577-4c09-80a2-43faf32a1c2e
-ms.openlocfilehash: 28bed2937409cd1df5ee8d295e466609232e0e91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c92660c67fa91c27bb094111cebfef57904cdc7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622050"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296693"
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>Obslužné rutiny pro příkazy a oznámení ovládacích prvků
 
@@ -35,6 +35,6 @@ Tento příkaz může přiřadit ID **IDC_MY_BUTTON** vzhledem k tomu, že je ek
 
 Obě kategorie zpráv, které nepřebírají žádné argumenty a vracet žádnou hodnotu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Deklarace funkcí obslužných rutin zpráv](../mfc/declaring-message-handler-functions.md)

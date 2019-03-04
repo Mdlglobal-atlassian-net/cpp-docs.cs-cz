@@ -8,12 +8,12 @@ helpviewer_keywords:
 - _Copy class
 - _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
-ms.openlocfilehash: 535bd1a3129bab15f546f6a82d77cf4e152fc605
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 24d81506f1518f980576899a4a104bbfdc0a1438
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452751"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296342"
 ---
 # <a name="atl-copy-policy-classes"></a>Třídy zásady kopírování ATL
 
@@ -21,11 +21,11 @@ Třídy zásady kopírování jsou [užitkové třídy](../atl/utility-classes.m
 
 Použití třídy zásady kopírování ATL v jeho implementace z následujících šablon:
 
-- [Ccomenumimpl –](../atl/reference/ccomenumimpl-class.md)
+- [CComEnumImpl](../atl/reference/ccomenumimpl-class.md)
 
-- [Ienumonstlimpl –](../atl/reference/ienumonstlimpl-class.md)
+- [IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md)
 
-- [Icollectiononstlimpl –](../atl/reference/icollectiononstlimpl-class.md)
+- [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md)
 
 Zapouzdřením informací potřebných ke kopírování nebo převést data v, který lze předat jako argument šablony třídy zásady kopírování ATL vývojáři zadali pro extrémní opětovné použití těchto tříd. Například pokud potřebujete implementovat kolekce pomocí libovolného libovolného datového typu, vše, co je potřeba zadat jsou kopie příslušné zásady; si už nikdy nemusíte dotýkat kódu, který implementuje kolekci.
 
@@ -78,8 +78,7 @@ VCUE_Copy.h také obsahuje následující specializace této třídy: `GenericCo
 
 [!code-cpp[NVC_ATL_COM#31](../atl/codesnippet/cpp/atl-copy-policy-classes_2.h)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Implementace kolekce založené na standardní knihovně C++](../atl/implementing-an-stl-based-collection.md)<br/>
 [Ukázka ATLCollections](../visual-cpp-samples.md)
-

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows messages [MFC], routing
 - message handling [MFC], noncommand messages
 ms.assetid: e7df8aef-9fae-41f4-9c11-881d8465f602
-ms.openlocfilehash: f64eb97315b41a314c791e1a4c5bc7721b329fca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b9fb0a72b330380f0207db9968199a7e4c3d9b3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545454"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295055"
 ---
 # <a name="how-noncommand-messages-reach-their-handlers"></a>Jak se nepříkazové zprávy dostanou k svým obslužným rutinám
 
@@ -20,7 +20,6 @@ Na rozdíl od příkazů standardní zprávy Windows získat nebyl směrován p�
 
 V době běhu, každé okno Windows připojené k objekt window (odvozený přímo nebo nepřímo z `CWnd`), který má svou vlastní mapy a obslužné rutiny funkce přidružené zprávy. Rozhraní používá mapu zpráv, jako u příkazu – k mapování příchozích zpráv pro obslužné rutiny.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Jakým způsobem volá framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md)
-

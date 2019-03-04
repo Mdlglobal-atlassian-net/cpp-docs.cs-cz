@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonMainPanel [MFC], AddToRight
 - CMFCRibbonMainPanel [MFC], GetCommandsFrame
 ms.assetid: 1af78798-5e75-4365-9c81-a54aa5679602
-ms.openlocfilehash: 101c718d25a2e06461156045deea5f42d85e2f4d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4bd1ab8cffc87d5079518cf9a1d6e430ca40fd9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638214"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294440"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>Cmfcribbonmainpanel – třída
 
@@ -68,9 +68,9 @@ Zobrazí rozhraní `CMFCRibbonMainPanel` při otevření panelu aplikací. Obsah
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cmfcribbonpanel –](../../mfc/reference/cmfcribbonpanel-class.md)
+[CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)
 
-[Cmfcribbonmainpanel –](../../mfc/reference/cmfcribbonmainpanel-class.md)
+[CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -162,7 +162,7 @@ CRect GetCommandsFrame() const;
 
 Obdélník, který představuje oblasti na hlavním panelu pásu karet.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

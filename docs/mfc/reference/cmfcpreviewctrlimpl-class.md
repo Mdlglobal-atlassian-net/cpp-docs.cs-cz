@@ -1,5 +1,5 @@
 ---
-title: Cmfcpreviewctrlimpl – třída
+title: CMFCPreviewCtrlImpl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCPreviewCtrlImpl
@@ -36,14 +36,14 @@ helpviewer_keywords:
 - CMFCPreviewCtrlImpl [MFC], m_font
 - CMFCPreviewCtrlImpl [MFC], m_pDocument
 ms.assetid: 06257fa0-54c9-478d-9d68-c9698c3f93ed
-ms.openlocfilehash: 3ec1acd1872bc0e51117602ef723116170458afd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f66ed8478023bd42e185da4f21740d1de2536140
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636732"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295744"
 ---
-# <a name="cmfcpreviewctrlimpl-class"></a>Cmfcpreviewctrlimpl – třída
+# <a name="cmfcpreviewctrlimpl-class"></a>CMFCPreviewCtrlImpl Class
 
 Tato třída implementuje okno, které se umístí do hostitelského okna poskytnutého shellem pro náhled ve formátu RTF.
 
@@ -59,7 +59,7 @@ class CMFCPreviewCtrlImpl : public CWnd;
 
 |Název|Popis|
 |----------|-----------------|
-|[Cmfcpreviewctrlimpl –:: ~ cmfcpreviewctrlimpl –](#dtor)|Destructs objekt ovládacího prvku ve verzi preview.|
+|[CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl](#dtor)|Destructs objekt ovládacího prvku ve verzi preview.|
 |[CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl](#cmfcpreviewctrlimpl)|Vytvoří objekt ovládacího prvku ve verzi preview.|
 
 ### <a name="public-methods"></a>Veřejné metody
@@ -103,7 +103,7 @@ class CMFCPreviewCtrlImpl : public CWnd;
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[Cmfcpreviewctrlimpl –](../../mfc/reference/cmfcpreviewctrlimpl-class.md)
+[CMFCPreviewCtrlImpl](../../mfc/reference/cmfcpreviewctrlimpl-class.md)
 
 ## <a name="cmfcpreviewctrlimpl"></a> CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
 
@@ -136,7 +136,7 @@ virtual BOOL Create(
 *hWndParent*<br/>
 Popisovač okna hostitele zadaný shellem pro náhled ve formátu RTF.
 
-*Čínská lidová republika*<br/>
+*prc*<br/>
 Určuje počáteční velikost a pozice okna.
 
 *pContext*<br/>
@@ -170,7 +170,7 @@ virtual void DoPaint(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel na kontext zařízení pro kreslení.
 
 ## <a name="focus"></a> CMFCPreviewCtrlImpl::Focus
@@ -319,7 +319,7 @@ virtual void SetRect(
 
 ### <a name="parameters"></a>Parametry
 
-*Čínská lidová republika*<br/>
+*prc*<br/>
 Určuje novou velikost a pozice ovládacího prvku ve verzi preview.
 
 *bRedraw*<br/>
@@ -329,7 +329,7 @@ Určuje, zda by měl překreslit ovládací prvek.
 
 Při změně velikosti hostitelský ovládací prvek je obvykle nastavena nové ohraničující obdélník.
 
-## <a name="dtor"></a> Cmfcpreviewctrlimpl –:: ~ cmfcpreviewctrlimpl –
+## <a name="dtor"></a> CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl
 
 Destructs objekt ovládacího prvku ve verzi preview.
 
@@ -338,4 +338,3 @@ Destructs objekt ovládacího prvku ve verzi preview.
 ```
 virtual ~CMFCPreviewCtrlImpl();
 ```
-

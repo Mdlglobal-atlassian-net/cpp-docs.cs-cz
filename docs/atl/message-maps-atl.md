@@ -6,12 +6,12 @@ helpviewer_keywords:
 - message maps, ATL
 - ATL, message handlers
 ms.assetid: 9e100400-65c7-4a85-8857-4e6cb6dd7340
-ms.openlocfilehash: 92d0b4887127e1803d1d3209a6a1dd51e9a98d15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1b8b3fcb2f10f975ebdf68a285c7d5e364b9e1b4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496106"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292572"
 ---
 # <a name="message-maps-atl"></a>Mapy zpráv (ATL)
 
@@ -31,7 +31,6 @@ Můžete zřetězit na jakoukoli třídu, která deklaruje mapy zpráv, pokud t�
 
 Nakonec ATL podporuje alternativní zprávy maps, deklarované s [ALT_MSG_MAP](reference/message-map-macros-atl.md#alt_msg_map) – makro. Každý mapování alternativních zprávy je identifikován jedinečný číslo, které můžete předat ALT_MSG_MAP. Pomocí alternativní zprávy maps, můžete zpracovávat zprávy více oken v jednu mapu. Všimněte si, že ve výchozím nastavení, `CWindowImpl` nepoužívá mapy alternativní zpráv. Na přidání této podpory, přepsat `WindowProc` metoda ve vaší `CWindowImpl`-odvozené třídy a volání `ProcessWindowMessage` s identifikátorem mapy zpráv.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Implementace okna](../atl/implementing-a-window.md)
-

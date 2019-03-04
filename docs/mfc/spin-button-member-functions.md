@@ -5,12 +5,12 @@ helpviewer_keywords:
 - spin button control, methods
 - CSpinButtonCtrl class [MFC], methods
 ms.assetid: a08a26fd-b803-4cbe-a509-395fa357d057
-ms.openlocfilehash: ffd07377d54fcfff93ab4ab3771515a90ccf2785
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ad6f529762e77e1cf1c00f41eea0add5d196fbb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542594"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298396"
 ---
 # <a name="spin-button-member-functions"></a>Členské funkce číselníku
 
@@ -26,8 +26,7 @@ Nejsou k dispozici pro ovládací prvek typu číselník několik členské funk
 
 - **Rozsah** můžete změnit maximální a minimální pozici číselníku. Ve výchozím nastavení maximální délka je nastavena na hodnotu 0 a minimum je nastavena na hodnotu 100. Protože výchozí maximum je menší než výchozí minimální, je counter-intuitive akce tlačítka se šipkami. Obvykle se nastavit rozsah pomocí [SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) členskou funkci. K dotazování použít rozsah [getrange –](../mfc/reference/cspinbuttonctrl-class.md#getrange).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

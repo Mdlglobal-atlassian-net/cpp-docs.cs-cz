@@ -1,5 +1,5 @@
 ---
-title: Cmfcacceleratorkeyassignctrl – třída
+title: CMFCAcceleratorKeyAssignCtrl Class
 ms.date: 10/18/2018
 f1_keywords:
 - CMFCAcceleratorKeyAssignCtrl
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - CMFCAcceleratorKeyAssignCtrl [MFC], PreTranslateMessage
 - CMFCAcceleratorKeyAssignCtrl [MFC], ResetKey
 ms.assetid: 89fb8e62-596e-4e71-8c9a-32740347aaab
-ms.openlocfilehash: bd096657de56c0b6daa07004a927b92f1293ddf3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6ce8c75b1b764d1d2b66b86147035f069805d25
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454415"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298231"
 ---
-# <a name="cmfcacceleratorkeyassignctrl-class"></a>Cmfcacceleratorkeyassignctrl – třída
+# <a name="cmfcacceleratorkeyassignctrl-class"></a>CMFCAcceleratorKeyAssignCtrl Class
 
 `CMFCAcceleratorKeyAssignCtrl` Třída rozšiřuje [cedit – třída](../../mfc/reference/cedit-class.md) k podpoře dalších systémových tlačítek, jako například ALT, SHIFT a CONTROL.
 
@@ -73,13 +73,13 @@ Následující příklad ukazuje, jak vytvořit `CMFCAcceleratorKeyAssignCtrl` o
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[Cedit –](../../mfc/reference/cedit-class.md)
+[CEdit](../../mfc/reference/cedit-class.md)
 
 `CMFCAcceleratorKeyAssignCtrl`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxacceleratorkeyassignctrl.h
+**Header:** afxacceleratorkeyassignctrl.h
 
 ##  <a name="cmfcacceleratorkeyassignctrl"></a>  CMFCAcceleratorKeyAssignCtrl::CMFCAcceleratorKeyAssignCtrl
 
@@ -161,7 +161,7 @@ void ResetKey();
 
 Funkce vymaže úpravy textu ovládacího prvku. To zahrnuje všechny klávesové zkratky, které uživatel stiskl.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

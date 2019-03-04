@@ -1,5 +1,5 @@
 ---
-title: 'Výjimky: Výjimky OLE'
+title: 'Výjimky: OLE – výjimky'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, exceptions
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - exception handling [MFC], OLE
 - OLE exceptions [MFC], classes for handling
 ms.assetid: 2f8e0161-b94f-48bb-a5a2-6f644b192527
-ms.openlocfilehash: 2732f571d305fda2b739be02661ab9558f8bc653
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e404005a88398ec909e3043cfa55c7e8fbe2f594
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515412"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297902"
 ---
-# <a name="exceptions-ole-exceptions"></a>Výjimky: Výjimky OLE
+# <a name="exceptions-ole-exceptions"></a>Výjimky: OLE – výjimky
 
 Techniky a funkce pro zpracování výjimek v prostředí OLE jsou stejné jako pro zpracování jiných výjimek. Další informace o zpracování výjimek, najdete v článku [zpracování výjimek jazyka C++](../cpp/cpp-exception-handling.md).
 
@@ -39,9 +39,8 @@ Rozdíl mezi těmito dvěma třídami je množství informací poskytují, a kde
 
 `COleDispatchException` poskytuje další informace, takže je možné s produkty, jako je Microsoft Visual Basicu. Popis slovní chyby lze použít v okně se zprávou nebo jiné oznámení; informace nápovědy je možné umožňující uživateli reagovat na podmínky, které způsobil výjimku.
 
-Dvě globální funkce, které odpovídají dvě třídy výjimky OLE: [afxthrowoleexception –](../mfc/reference/exception-processing.md#afxthrowoleexception) a [afxthrowoledispatchexception –](../mfc/reference/exception-processing.md#afxthrowoledispatchexception). Je použijte k vyvolání obecné OLE výjimky a výjimky odbavení OLE, v uvedeném pořadí.
+Dvě globální funkce odpovídají dvěma OLE – třídy výjimky: [Afxthrowoleexception –](../mfc/reference/exception-processing.md#afxthrowoleexception) a [afxthrowoledispatchexception –](../mfc/reference/exception-processing.md#afxthrowoledispatchexception). Je použijte k vyvolání obecné OLE výjimky a výjimky odbavení OLE, v uvedeném pořadí.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zpracování výjimek](../mfc/exception-handling-in-mfc.md)
-

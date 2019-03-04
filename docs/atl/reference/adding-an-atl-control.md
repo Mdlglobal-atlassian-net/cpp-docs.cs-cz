@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ATL projects, adding controls
 - controls [ATL], adding to projects
 ms.assetid: 10223e7e-fdb7-4163-80c6-44aeafa8e6ce
-ms.openlocfilehash: 26667c2ad3bb2cedb42767fe42ff0ad358fa6d66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 836b19cef38549bcdf6cddeeda5bbb7fee08a1c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487682"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298435"
 ---
 # <a name="adding-an-atl-control"></a>Přidání ovládacího prvku ATL
 
@@ -34,7 +34,7 @@ Použití **Průvodce ovládacími prvky ATL**, můžete vytvořit jeden ze tř�
 
 Kromě toho může snížit velikost ovládacího prvku a odebrání rozhraní, které nejsou používány nástrojem většina kontejnery tak, že vyberete **minimální ovládací prvek** na **možnosti** stránky průvodce.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přidání funkcí do složeného ovládacího prvku](../../atl/adding-functionality-to-the-composite-control.md)<br/>
 [Základy ATL – objekty COM](../../atl/fundamentals-of-atl-com-objects.md)

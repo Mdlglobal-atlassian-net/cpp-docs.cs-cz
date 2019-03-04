@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
-ms.openlocfilehash: bced900cd7bac666daf415d91a4540828c769025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e05d6a47ea67138e8d1d456077526dd3178cc44
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660379"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292911"
 ---
 # <a name="registry-macros"></a>Makra registru
 
@@ -61,7 +61,7 @@ DECLARE_LIBID( libid )
 
 ### <a name="parameters"></a>Parametry
 
-*ID knihovny*<br/>
+*libid*<br/>
 Identifikátor GUID knihovny typů.
 
 ### <a name="remarks"></a>Poznámky
@@ -98,7 +98,7 @@ DECLARE_REGISTRY(
 *class*<br/>
 [in] Zahrnuto z důvodu zpětné kompatibility.
 
-*Identifikátor PID*<br/>
+*pid*<br/>
 [in] LPCTSTR, který je identifikátor specifické pro verzi programu.
 
 *vpid*<br/>
@@ -108,7 +108,7 @@ DECLARE_REGISTRY(
 [in] UINT, který je index řetězec prostředku v registru, který se použije jako popis programu.
 
 *příznaky*<br/>
-[in] Hodnota DWORD obsahující model vláken programu v registru. Musí být jedna z následujících hodnot: THREADFLAGS_APARTMENT, THREADFLAGS_BOTH nebo AUTPRXFLAG.
+[in] Hodnota DWORD obsahující model vláken programu v registru. Musí být jedna z následujících hodnot: THREADFLAGS_APARTMENT THREADFLAGS_BOTH či AUTPRXFLAG.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -131,8 +131,8 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 *resid*<br/>
 Id prostředku, který obsahuje informace o souboru .rgs *appid*.
 
-*ID aplikace*<br/>
-IDENTIFIKÁTOR GUID.
+*appid*<br/>
+A GUID.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -192,6 +192,6 @@ Pokud chcete knihovny ATL pro nahrazení nahrazujícími hodnotami v době běhu
 
 Další informace o nahraditelné parametry a skriptů, najdete v článku [The komponenta knihovny ATL registru (Registrar)](../../atl/atl-registry-component-registrar.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Makra](../../atl/reference/atl-macros.md)

@@ -1,5 +1,5 @@
 ---
-title: Úložiště Thread Local (TLS)
+title: Lokální úložiště vláken (TLS)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - multithreading [C++], Thread Local Storage
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-ms.openlocfilehash: 02c699ec64fe03a1f892fc3c7e8bf9f6b9c05dfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f5a75f7964b0291a980b22d36e7ce6a0a87d3dc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507585"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293456"
 ---
-# <a name="thread-local-storage-tls"></a>Úložiště Thread Local (TLS)
+# <a name="thread-local-storage-tls"></a>Lokální úložiště vláken (TLS)
 
 Místní úložiště vláken (TLS) je metoda, podle kterého všechna vlákna daného procesu můžete přidělit umístění, ve kterých se mají ukládat data určitého vlákna. Dynamicky datové vazby (za běhu) specifické pro vlákno je podporováno prostřednictvím rozhraní API pro protokol TLS ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc).  Win32 a kompilátor Visual C++ teď podporují staticky vazbou (během načítání) dat pro vlákno kromě stávající implementaci rozhraní API.
 
 ##  <a name="_core_compiler_implementation_for_tls"></a> Implementace kompilátoru TLS
 
-**C ++ 11:** `thread_local` specifikátor třídy úložiště je doporučeným způsobem, jak určit úložiště thread-local se pro objekty a členy třídy. Další informace najdete v tématu [třídy úložiště (C++)](../cpp/storage-classes-cpp.md).
+**C++11:**  `thread_local` Specifikátor třídy úložiště je doporučeným způsobem, jak určit úložiště thread-local se pro objekty a členy třídy. Další informace najdete v tématu [třídy úložiště (C++)](../cpp/storage-classes-cpp.md).
 
 Atribut specifické pro společnost Microsoft poskytuje jazyk Visual C++ [vlákno](../cpp/thread.md), jako modifikátor třídy rozšířené úložiště. Použití **__declspec** – klíčové slovo k deklaraci **vlákno** proměnné. Například následující kód deklaruje místní proměnnou vlákna integer a inicializuje ji hodnotou:
 
@@ -106,6 +106,6 @@ Při deklarování staticky vázaného místními objekty vlákna a proměnné, 
 
 - V operačních systémech Windows než Windows Vista `__declspec`(vlákno) má určitá omezení. Pokud knihovna DLL deklaruje data ani jako objekt `__declspec`(vlákno), může to způsobit selhání ochrany Pokud dynamicky načíst. Po načtení knihovny DLL s [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya), dojde k selhání systému pokaždé, když se kód odkazuje `__declspec`data (vlákno). Vzhledem k tomu, že v době běhu je přiděleno globální proměnné místo pro vlákno, velikost toto místo je založená na výpočtu požadavkům aplikace a všechny knihovny DLL staticky propojené požadavky. Při použití `LoadLibrary`, nelze rozšířit tento prostor pro místní proměnné vlákna deklarované pomocí `__declspec`(vlákno). Použít rozhraní API pro protokol TLS, například [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc), v knihovně DLL přidělit TLS, pokud knihovna DLL může být načten s `LoadLibrary`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Multithreading s použitím jazyka C a prostředí Win32](multithreading-with-c-and-win32.md)

@@ -1,17 +1,17 @@
 ---
-title: ATL – operátory
+title: ATL Operators
 ms.date: 11/04/2016
 helpviewer_keywords:
 - operators [ATL]
 ms.assetid: 58ccd252-2869-45ee-8a5c-3ca40ee7f8a2
-ms.openlocfilehash: 361b0316e27ee06c64b3ed5e11c6aab10210596f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f1bd4f88b8d3a37f051a208a887c5264f61955a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476255"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293495"
 ---
-# <a name="atl-operators"></a>ATL – operátory
+# <a name="atl-operators"></a>ATL Operators
 
 Tato část obsahuje referenční témata pro globální operátory ATL.
 
@@ -163,4 +163,3 @@ Vrátí TRUE, pokud adresa *lhs* je větší než nebo rovna hodnotě adresu *za
 ### <a name="remarks"></a>Poznámky
 
 Tento operátor funguje na adrese `CSid` objektu nebo `SID` struktury a je implementována pro zajištění kompatibility s C++ standardní knihovna tříd kolekcí.
-

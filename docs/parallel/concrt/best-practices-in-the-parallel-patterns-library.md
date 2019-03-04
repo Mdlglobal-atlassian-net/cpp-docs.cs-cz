@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices, Parallel Patterns Library
 - Parallel Patterns Library, best practices
 ms.assetid: e43e0304-4d54-4bd8-a3b3-b8673559a9d7
-ms.openlocfilehash: 153dbf461176ee62f42dbe41a1c426a8c34ae716
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc120ecc122678b54c7dd27b95445f523bc114a6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503291"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293612"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Osvědčené postupy v knihovně PPL (Parallel Patterns Library)
 
@@ -76,7 +76,7 @@ Ke snížení množství plánování režijní náklady v tomto příkladu mů�
 
 [!code-cpp[concrt-image-processing-filter#22](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_5.cpp)]
 
-Podobný příklad, který používá kanál pro paralelní provádění pro zpracování obrázků, naleznete v tématu [návod: vytvoření sítě pro zpracování obrázků](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Podobný příklad, který používá kanál pro paralelní provádění pro zpracování obrázků, naleznete v tématu [názorný postup: Vytvoření sítě pro zpracování obrázků](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 [[Horní](#top)]
 
@@ -90,7 +90,7 @@ Následující příklad ukazuje použití `parallel_invoke` algoritmus k prová
 
 Aby se snížila režie, `parallel_invoke` algoritmus provádí poslední řadu úloh na kontext volání.
 
-Kompletní verze tohoto příkladu naleznete v tématu [postupy: použití algoritmu parallel_invoke k zápisu rutiny paralelního třídění](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md). Další informace o `parallel_invoke` algoritmus, najdete v článku [paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md).
+Kompletní verze tohoto příkladu naleznete v tématu [jak: Použití algoritmu parallel_invoke k zápisu rutiny paralelního třídění](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md). Další informace o `parallel_invoke` algoritmus, najdete v článku [paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md).
 
 [[Horní](#top)]
 
@@ -102,7 +102,7 @@ Při práci přímo s objektem skupiny úloh, použijte [concurrency::task_group
 
 [!code-cpp[concrt-parallel-array-search#2](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_7.cpp)]
 
-Protože paralelní algoritmy použijte skupiny úloh, pokud jeden z paralelní iterace zruší skupinu nadřazeného úkolu, celkový úloha se zruší. Kompletní verze tohoto příkladu naleznete v tématu [postupy: použití zrušení přerušení paralelní smyčky](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md).
+Protože paralelní algoritmy použijte skupiny úloh, pokud jeden z paralelní iterace zruší skupinu nadřazeného úkolu, celkový úloha se zruší. Kompletní verze tohoto příkladu naleznete v tématu [jak: Přerušení paralelní smyčky pomocí zrušení](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md).
 
 I když je méně efektivní způsob, jak zrušení paralelně prováděných úloh než zrušení mechanismus zpracování výjimek, existují případech, kdy je vhodné zpracování výjimek. Například následující metodu, `for_all`, rekurzivně provádí pracovní funkce na každý uzel `tree` struktury. V tomto příkladu `_children` datový člen je [std::list](../../standard-library/list-class.md) obsahující `tree` objekty.
 
@@ -112,7 +112,7 @@ Volající `tree::for_all` metoda může vyvolat výjimku, pokud to nevyžaduje 
 
 [!code-cpp[concrt-task-tree-search#3](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_9.cpp)]
 
-Kompletní verze tohoto příkladu naleznete v tématu [postupy: používání zpracování výjimek, přerušení paralelní smyčky](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
+Kompletní verze tohoto příkladu naleznete v tématu [jak: Použijte zpracování výjimek pro přerušení paralelní smyčky](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
 
 Další obecné informace o zrušení a mechanismus zpracování výjimek, které jsou k dispozici v knihovně PPL naleznete v tématu [zrušení v knihovně PPL](cancellation-in-the-ppl.md) a [zpracování výjimek](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
 
@@ -198,7 +198,7 @@ Následující příklad upravuje předchozí pomocí `combinable` místo objekt
 
 [!code-cpp[concrt-parallel-sum-of-primes#3](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_16.cpp)]
 
-Kompletní verze tohoto příkladu naleznete v tématu [postupy: použití objektu combinable ke zlepšení výkonu](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md). Další informace o `combinable` najdete v tématu [paralelní kontejnery a objekty](../../parallel/concrt/parallel-containers-and-objects.md).
+Kompletní verze tohoto příkladu naleznete v tématu [jak: Použití objektu combinable ke zlepšení výkonu](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md). Další informace o `combinable` najdete v tématu [paralelní kontejnery a objekty](../../parallel/concrt/parallel-containers-and-objects.md).
 
 [[Horní](#top)]
 
@@ -256,7 +256,7 @@ Další informace o výrazech lambda naleznete v tématu [výrazy Lambda](../../
 
 [[Horní](#top)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Osvědčené postupy v Concurrency Runtime](../../parallel/concrt/concurrency-runtime-best-practices.md)<br/>
 [Knihovna PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
@@ -270,4 +270,3 @@ Další informace o výrazech lambda naleznete v tématu [výrazy Lambda](../../
 [Postupy: Použití objektu combinable ke zlepšení výkonu](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br/>
 [Osvědčené postupy v knihovně asynchronních agentů](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)<br/>
 [Obecné osvědčené postupy v Concurrency Runtime](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)
-

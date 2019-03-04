@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-ms.openlocfilehash: 6ae0ebb94952408aa2576d4320ce4e00308c458f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8a5195d4d2a3662d79d515c28dc66d1b0a27b24
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549510"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295016"
 ---
 # <a name="cdbexception-class"></a>CDBException – třída
 
@@ -44,13 +44,13 @@ class CDBException : public CException
 Třída zahrnuje dvě veřejné datové členy, která vám pomůže určit příčinu výjimky nebo zobrazení textová zpráva popisující výjimku. `CDBException` objekty jsou vytvořena a vyvolané členské funkce tříd databáze.
 
 > [!NOTE]
->  Tato třída je jedním z třídy knihovny MFC připojení ODBC (Open Database). Pokud raději používáte novější třídy objektů DAO (Data Access), použijte [cdaoexception –](../../mfc/reference/cdaoexception-class.md) místo. Všechny názvy tříd DAO mají "CDao" jako předponu. Další informace najdete v článku [přehled: databáze programování](../../data/data-access-programming-mfc-atl.md).
+>  Tato třída je jedním z třídy knihovny MFC připojení ODBC (Open Database). Pokud raději používáte novější třídy objektů DAO (Data Access), použijte [cdaoexception –](../../mfc/reference/cdaoexception-class.md) místo. Všechny názvy tříd DAO mají "CDao" jako předponu. Další informace najdete v článku [přehled: Databáze programování](../../data/data-access-programming-mfc-atl.md).
 
 Výjimky jsou případy abnormální provádění zahrnující podmínek mimo řízení programu, jako je zdroj dat nebo vstupně-výstupní chyby sítě. Chyby, které by se dalo očekávat v běžném průběhu provádění programu nejsou obvykle považovány za výjimky.
 
 Můžete přístup k těmto objektům v rámci oboru **CATCH** výrazu. Můžete také vyvolat `CDBException` objekty z vlastního kódu s využitím `AfxThrowDBException` globální funkce.
 
-Další informace o zpracování výjimek v obecné, nebo o `CDBException` objekty, najdete v článcích [zpracování výjimek (MFC)](../../mfc/exception-handling-in-mfc.md) a [výjimky: výjimky databáze](../../mfc/exceptions-database-exceptions.md).
+Další informace o zpracování výjimek v obecné, nebo o `CDBException` objekty, najdete v článcích [zpracování výjimek (MFC)](../../mfc/exception-handling-in-mfc.md) a [výjimky: Výjimky databáze](../../mfc/exceptions-database-exceptions.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -144,13 +144,13 @@ Další informace o kódech použité k vytvoření tohoto řetězce najdete v t
 
 ### <a name="example"></a>Příklad
 
-  Z rozhraní ODBC: "Stav: S0022, nativní: 207, původu: [Microsoft] [ovladač ODBC SQL Server] [SQL Server] neplatný název sloupce '%{colname/."
+  Z rozhraní ODBC: "Stav: S0022, nativní: 207, původu: [Microsoft] [SQL Server ovladače ODBC] [SQL Server] neplatný název sloupce '%{colname/."
 
-V `m_strStateNativeOrigin`: "stav: S0022, nativní: 207, původu: [Microsoft] [ovladač ODBC SQL Server] [SQL Server]"
+V `m_strStateNativeOrigin`: "Stav: S0022, nativní: 207, původu: [Microsoft] [ovladač ODBC SQL Server] [SQL Server]"
 
 V `m_strError`: "Neplatný název sloupce '%{colname/."
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CException – třída](../../mfc/reference/cexception-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

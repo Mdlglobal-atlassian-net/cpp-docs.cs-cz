@@ -1,5 +1,5 @@
 ---
-title: Cricheditdoc – třída
+title: CRichEditDoc Class
 ms.date: 11/04/2016
 f1_keywords:
 - CRichEditDoc
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CRichEditDoc [MFC], GetView
 - CRichEditDoc [MFC], m_bRTF
 ms.assetid: c936ec18-d516-49d4-b7fb-c9aa0229eddc
-ms.openlocfilehash: 8e97b17a3620d75660a5ac2109bc440f8ad27b16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c2021128dcc06a76cf3b68c0ec49b72a5860046
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453454"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295133"
 ---
-# <a name="cricheditdoc-class"></a>Cricheditdoc – třída
+# <a name="cricheditdoc-class"></a>CRichEditDoc Class
 
 S [cricheditview –](../../mfc/reference/cricheditview-class.md) a [cricheditcntritem –](../../mfc/reference/cricheditcntritem-class.md), poskytuje funkce pro ovládací prvek RTF v rámci kontextu architektury zobrazení dokumentu MFC.
 
@@ -65,11 +65,11 @@ Příklad použití RichEdit dokumentu v aplikaci knihovny MFC, najdete v člán
 
 [CDocument](../../mfc/reference/cdocument-class.md)
 
-[Coledocument –](../../mfc/reference/coledocument-class.md)
+[COleDocument](../../mfc/reference/coledocument-class.md)
 
-[Colelinkingdoc –](../../mfc/reference/colelinkingdoc-class.md)
+[COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)
 
-[Coleserverdoc –](../../mfc/reference/coleserverdoc-class.md)
+[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)
 
 `CRichEditDoc`
 
@@ -144,7 +144,7 @@ V případě hodnoty TRUE označuje, že [CRichEditCtrl::StreamIn](../../mfc/ref
 BOOL m_bRTF;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC WORDPAD](../../visual-cpp-samples.md)<br/>
 [COleServerDoc – třída](../../mfc/reference/coleserverdoc-class.md)<br/>

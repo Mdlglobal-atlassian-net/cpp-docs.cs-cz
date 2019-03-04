@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting types [MFC]
 - macros [MFC], casting pointers
 ms.assetid: e138465e-c35f-4e84-b788-bd200ccf2f0e
-ms.openlocfilehash: 42b668287905fc5f6e05a09949d53acc51c79026
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3107b860747bc2434ae9afca39b517d8dcc9eb01
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584142"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299358"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>Přetypování objektů tříd MFC
 
@@ -43,7 +43,7 @@ DYNAMIC_DOWNCAST(class, pointer)
 *class*<br/>
 Název třídy.
 
-*Ukazatel*<br/>
+*pointer*<br/>
 Ukazatel přetypovat na ukazatel na objekt typu *třídy*.
 
 ### <a name="remarks"></a>Poznámky
@@ -62,17 +62,17 @@ STATIC_DOWNCAST(class_name, pobject)
 
 ### <a name="parameters"></a>Parametry
 
-*$class_name*<br/>
+*class_name*<br/>
 Název třídy přetypován na.
 
-*odstraněný objekt*<br/>
+*pobject*<br/>
 Převést na ukazatel na ukazatel *$class_name* objektu.
 
 ### <a name="remarks"></a>Poznámky
 
 *odstraněný objekt* musí být buď NULL, nebo přejděte na objekt třídy, která je odvozena přímo nebo nepřímo ze *$class_name*. V sestavení vaší aplikace pomocí symbol preprocesoru _DEBUG definované makro VYHODNOCENA Pokud *odstraněný objekt* nemá hodnotu NULL, nebo pokud odkazuje na objekt, který není "druh" Třída zadaná v *class_name*parametr (viz [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)). V jinou hodnotu než **_DEBUG** sestavení, makro provede bez kontroly typu přetypování.
 
-Třída zadaná v *class_name* parametr musí být odvozen od `CObject` a musí používat DECLARE_DYNAMIC a IMPLEMENT_DYNAMIC, DECLARE_DYNCREATE a IMPLEMENT_DYNCREATE, nebo DECLARE_SERIAL a IMPLEMENT_ Sériového portu makra, jako je popsáno v článku [CObject – třída: odvození třídy z objektu CObject](../../mfc/deriving-a-class-from-cobject.md).
+Třída zadaná v *class_name* parametr musí být odvozen od `CObject` a musí používat DECLARE_DYNAMIC a IMPLEMENT_DYNAMIC, DECLARE_DYNCREATE a IMPLEMENT_DYNCREATE, nebo DECLARE_SERIAL a IMPLEMENT_ Sériového portu makra, jako je popsáno v článku [CObject – třída: Odvození třídy z objektu CObject](../../mfc/deriving-a-class-from-cobject.md).
 
 Například může být přetypovat ukazatel na `CMyDoc`, označované jako `pMyDoc`, na ukazatel na `CDocument` pomocí tento výraz:
 
@@ -80,6 +80,6 @@ Například může být přetypovat ukazatel na `CMyDoc`, označované jako `pMy
 
 Pokud `pMyDoc` neukazuje na objekt odvozený přímo nebo nepřímo ze `CDocument`, bude vyhodnocení makra.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CD2DBitmapBrush [MFC], m_pBitmapBrush
 - CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
-ms.openlocfilehash: 59c4e5f4e55947a4eab7a5258d8fe2b943bab3ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1569039db8c1f85d3091282b55d7eda253444deb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501566"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294405"
 ---
 # <a name="cd2dbitmapbrush-class"></a>Cd2dbitmapbrush – třída
 
@@ -66,7 +66,7 @@ class CD2DBitmapBrush : public CD2DBrush;
 |Název|Popis|
 |----------|-----------------|
 |[CD2DBitmapBrush::CD2DBitmapBrush](#cd2dbitmapbrush)|Přetíženo. Vytvoří objekt cd2dbitmapbrush – ze souboru.|
-|[Cd2dbitmapbrush –:: ~ cd2dbitmapbrush –](#dtor)|Destruktor. Volá se, když se likviduje štětce objektu D2D rastrového obrázku.|
+|[CD2DBitmapBrush::~CD2DBitmapBrush](#dtor)|Destruktor. Volá se, když se likviduje štětce objektu D2D rastrového obrázku.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -75,7 +75,7 @@ class CD2DBitmapBrush : public CD2DBrush;
 |[CD2DBitmapBrush::Attach](#attach)|Bude k obrazci existujících prostředků rozhraní pro objekt|
 |[CD2DBitmapBrush::Create](#create)|Vytvoří cd2dbitmapbrush –. (Přepíše [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
 |[CD2DBitmapBrush::Destroy](#destroy)|Odstraní objekt cd2dbitmapbrush –. (Přepíše [CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|
-|[CD2DBitmapBrush::detach](#detach)|Odpojí prostředků rozhraní z objektu|
+|[CD2DBitmapBrush::Detach](#detach)|Odpojí prostředků rozhraní z objektu|
 |[CD2DBitmapBrush::Get](#get)|Vrátí ID2D1BitmapBrush rozhraní|
 |[CD2DBitmapBrush::GetBitmap](#getbitmap)|Získá zdroj rastrového obrázku, který používá tento štětce k vykreslení|
 |[CD2DBitmapBrush::GetExtendModeX](#getextendmodex)|Získá metodu, pomocí kterého štětec vodorovně dlaždice těchto oblastí, které přesahují za jeho rastrový obrázek|
@@ -110,9 +110,9 @@ class CD2DBitmapBrush : public CD2DBrush;
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cd2dresource –](../../mfc/reference/cd2dresource-class.md)
+[CD2DResource](../../mfc/reference/cd2dresource-class.md)
 
-[Cd2dbrush –](../../mfc/reference/cd2dbrush-class.md)
+[CD2DBrush](../../mfc/reference/cd2dbrush-class.md)
 
 `CD2DBitmapBrush`
 
@@ -394,6 +394,6 @@ void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 *interpolationMode*<br/>
 Režim interpolace použita, pokud je škálovat nebo otočit rastrový obrázek štětec
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

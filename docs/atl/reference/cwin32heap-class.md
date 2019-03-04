@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWin32Heap class
 ms.assetid: 69176022-ed98-4e3b-96d8-116b0c58ac95
-ms.openlocfilehash: 8ab0d7b8a0eda44adc900884ef5337b22e621806
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35c12a58adc846e0db6d7ee23f19984acbcfa861
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508311"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297252"
 ---
 # <a name="cwin32heap-class"></a>Cwin32heap – třída
 
@@ -43,7 +43,7 @@ class CWin32Heap : public IAtlMemMgr
 |Název|Popis|
 |----------|-----------------|
 |[CWin32Heap::CWin32Heap](#cwin32heap)|Konstruktor|
-|[CWin32Heap:: ~ CWin32Heap](#dtor)|Destruktor.|
+|[CWin32Heap::~CWin32Heap](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -267,7 +267,7 @@ Vrací ukazatel na nově přidělenou paměť bloku.
 
 Pokud *p* má hodnotu NULL, předpokládá se, že blok paměti dosud nebyl přidělen a [CWin32Heap::Allocate](#allocate) je volána s argumentem *nBytes*.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [IAtlMemMgr – třída](../../atl/reference/iatlmemmgr-class.md)<br/>

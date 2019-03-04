@@ -1,5 +1,5 @@
 ---
-title: Catlservicemodulet::servicemain – funkce
+title: CAtlServiceModuleT::ServiceMain Function
 ms.date: 11/04/2016
 f1_keywords:
 - ServiceMain
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - ServiceMain method
 ms.assetid: f21408c1-1919-4dec-88d8-bf5b39ac9808
-ms.openlocfilehash: 3aad67d58ccd4d1d35572542d899c17e0f42902b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32bdea1eb39c91ddb58def72bd16acc2f16ab936
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471211"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295419"
 ---
-# <a name="catlservicemoduletservicemain-function"></a>Catlservicemodulet::servicemain – funkce
+# <a name="catlservicemoduletservicemain-function"></a>CAtlServiceModuleT::ServiceMain Function
 
 Volá správce řízení služeb (SCM) `ServiceMain` při otevření aplikace ovládacím panelu služby, vyberte službu a klikněte na **Start**.
 
@@ -27,8 +27,7 @@ Při spuštění služby by měl také informovat SCM jeho aktuální stav. Děl
 
 Nyní `CAtlServiceModuleT::Run` je volána k provedení hlavní služby. `Run` pokračuje v provádění, dokud se tato služba zastavená.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Služby](../atl/atl-services.md)<br/>
-[Catlservicemodulet::servicemain –](../atl/reference/catlservicemodulet-class.md#servicemain)
-
+[CAtlServiceModuleT::ServiceMain](../atl/reference/catlservicemodulet-class.md#servicemain)

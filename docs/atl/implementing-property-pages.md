@@ -6,12 +6,12 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: 415dae4a54b71a901a7976bda92361690c150e5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e335c20464d8ea71fd75ce2e67f67ca14edacb0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543309"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299319"
 ---
 # <a name="implementing-property-pages"></a>Implementace stránek vlastností
 
@@ -40,12 +40,12 @@ Chcete-li vytvořit pomocí knihovny ATL stránky vlastností:
    |[Použít](../atl/reference/ipropertypageimpl-class.md#apply)|Ověřte nastavení vlastností a aktualizovat objekty.|Není nutné volat implementaci základní třídy, protože nedělá nic kromě trasování volání.|
    |[Deaktivace](../atl/reference/ipropertypageimpl-class.md#deactivate)|Odstraňte položky týkající se oken.|Zničí implementaci základní třídy dialogových oken představující stránku vlastností. Pokud budete potřebovat k vyčištění před jeho zničení dialogových oken, měli byste přidat kódu před voláním metody základní třídy.|
 
-Implementace stránky vlastností příklad naleznete v tématu [příklad: implementace stránky vlastností](../atl/example-implementing-a-property-page.md).
+Implementace stránky vlastností příklad naleznete v tématu [příkladu: Implementace stránky vlastností](../atl/example-implementing-a-property-page.md).
 
 > [!NOTE]
 > Pokud chcete na stránce vlastností hostitelské ovládací prvky ActiveX, bude nutné změnit odvození třídy generované v průvodci. Nahraďte **CDialogImpl\<CYourClass >** s **CAxDialogImpl\<CYourClass >** v seznamu základních tříd.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Stránky vlastností](../atl/atl-com-property-pages.md)<br/>
 [Ukázka ATLPages](../visual-cpp-samples.md)

@@ -1,5 +1,5 @@
 ---
-title: Cmfckeymapdialog – třída
+title: CMFCKeyMapDialog Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCKeyMapDialog
@@ -26,14 +26,14 @@ helpviewer_keywords:
 - CMFCKeyMapDialog [MFC], PrintKeyMap
 - CMFCKeyMapDialog [MFC], SetColumnsWidth
 ms.assetid: 5feb4942-d636-462d-a162-0104dd320f4e
-ms.openlocfilehash: e1ed48c851243611b052c79d13721076d27dcf8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94c6968d2f534ed0b6d247420e67910ecf906b05
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452673"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294600"
 ---
-# <a name="cmfckeymapdialog-class"></a>Cmfckeymapdialog – třída
+# <a name="cmfckeymapdialog-class"></a>CMFCKeyMapDialog Class
 
 `CMFCKeyMapDialog` Třída podporuje ovládací prvek, který mapuje příkazy kláves na klávesnici.
 
@@ -86,9 +86,9 @@ Použít `CMFCKeyMapDialog` třídy v aplikaci, předat ukazatel do okna hlavní
 
 [CDialog](../../mfc/reference/cdialog-class.md)
 
-[Cdialogex –](../../mfc/reference/cdialogex-class.md)
+[CDialogEx](../../mfc/reference/cdialogex-class.md)
 
-[Cmfckeymapdialog –](../../mfc/reference/cmfckeymapdialog-class.md)
+[CMFCKeyMapDialog](../../mfc/reference/cmfckeymapdialog-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -207,13 +207,13 @@ virtual int OnPrintHeader(
 
 ### <a name="parameters"></a>Parametry
 
-*řadič domény*<br/>
+*dc*<br/>
 [in] Kontext zařízení pro tiskárny.
 
 *nPage*<br/>
 [in] Číslo stránky k tisku.
 
-*CX*<br/>
+*cx*<br/>
 [in] Vodorovný posun záhlaví v pixelech.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -239,7 +239,7 @@ virtual int OnPrintItem(
 
 ### <a name="parameters"></a>Parametry
 
-*řadič domény*<br/>
+*dc*<br/>
 [in] Kontext zařízení tiskárny.
 
 *nItem*<br/>
@@ -248,7 +248,7 @@ virtual int OnPrintItem(
 *y*<br/>
 [in] Svislý posun mezi horní části stránky a pozici položky.
 
-*CX*<br/>
+*cx*<br/>
 [in] Vodorovný posun mezi levé části stránky a pozici položky.
 
 *bCalcHeight*<br/>
@@ -298,7 +298,7 @@ virtual void SetColumnsWidth();
 
 Tato metoda nastaví vnitřní seznam sloupců ovládacího prvku na výchozí šířky. Nejprve se vypočítá šířku sloupce klíče zástupce. Pak jednu třetinu zbývající šířky je přidělená k příkazový sloupec a zbývající dvě třetiny je přidělená k sloupci Popis.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

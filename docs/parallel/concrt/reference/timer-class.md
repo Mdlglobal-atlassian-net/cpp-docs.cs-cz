@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - timer class
 ms.assetid: 4f4dea51-de9f-40f9-93f5-dd724c567b49
-ms.openlocfilehash: beb374efe26c25fed490b7407e087e2cc46043c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e36441f53c9b53c9826ee92b2892142a522d7243
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659833"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298149"
 ---
 # <a name="timer-class"></a>Třída timer
 
@@ -47,16 +47,16 @@ Typ datové části výstupní zprávy z tohoto bloku.
 
 |Název|Popis|
 |----------|-----------------|
-|[Časovač](#ctor)|Přetíženo. Vytvoří `timer` blok zpráv, který se aktivuje danou zprávu po uplynutí zadaného intervalu.|
+|[timer](#ctor)|Přetíženo. Vytvoří `timer` blok zpráv, který se aktivuje danou zprávu po uplynutí zadaného intervalu.|
 |[~timer Destructor](#dtor)|Odstraní `timer` blok zpráv.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[Pozastavení](#pause)|Zastaví `timer` blok zpráv. Pokud se jedná s opakováním `timer` bloku pro zasílání zpráv, může být restartován následné `start()` volání. Pro neopakujícími časovače, tato akce nemá stejný účinek jako `stop` volání.|
-|[Spuštění](#start)|Spustí `timer` blok zpráv. Zadaný počet milisekund, po této je volána, se rozšíří zadanou hodnotu jako podřízený `message`.|
-|[Stop](#stop)|Zastaví `timer` blok zpráv.|
+|[pause](#pause)|Zastaví `timer` blok zpráv. Pokud se jedná s opakováním `timer` bloku pro zasílání zpráv, může být restartován následné `start()` volání. Pro neopakujícími časovače, tato akce nemá stejný účinek jako `stop` volání.|
+|[start](#start)|Spustí `timer` blok zpráv. Zadaný počet milisekund, po této je volána, se rozšíří zadanou hodnotu jako podřízený `message`.|
+|[stop](#stop)|Zastaví `timer` blok zpráv.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
@@ -76,9 +76,9 @@ Další informace najdete v tématu [asynchronní bloky zpráv](../../../paralle
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Isource –](isource-class.md)
+[ISource](isource-class.md)
 
-[source_block –](source-block-class.md)
+[source_block](source-block-class.md)
 
 `timer`
 
@@ -271,6 +271,6 @@ Odstraní `timer` blok zpráv.
 ~timer();
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)

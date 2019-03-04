@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CFontHolder [MFC], SetFont
 - CFontHolder [MFC], m_pFont
 ms.assetid: 728ab472-0c97-440d-889f-1324c6e1b6b8
-ms.openlocfilehash: 24a33aafa279f47bcfabd1ac3f3ee8d4abd4c731
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 623ce5da46716e3f9a562862fc0375fb8704bb21
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659639"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297876"
 ---
 # <a name="cfontholder-class"></a>Cfontholder – třída
 
@@ -74,7 +74,7 @@ class CFontHolder
 
 `CFontHolder` nemá základní třídu.
 
-Tato třída slouží k implementaci vlastnosti vlastní písma pro ovládací prvek. Informace o vytvoření těchto vlastností najdete v článku [ovládací prvky ActiveX: použití písem](../../mfc/mfc-activex-controls-using-fonts.md).
+Tato třída slouží k implementaci vlastnosti vlastní písma pro ovládací prvek. Informace o vytvoření těchto vlastností najdete v článku [ovládací prvky ActiveX: Použití písem](../../mfc/mfc-activex-controls-using-fonts.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -234,7 +234,7 @@ CFont* Select(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Kontext zařízení, do které je vybrané písmo.
 
 *cyLogical*<br/>
@@ -264,7 +264,7 @@ void SetFont(LPFONT pNewFont);
 *pNewFont*<br/>
 Ukazatel na novou `IFont` rozhraní.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CPropExchange – třída](../../mfc/reference/cpropexchange-class.md)

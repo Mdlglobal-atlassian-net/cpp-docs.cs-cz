@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-ms.openlocfilehash: a6fdef34ba5873718caed509100cbe7e905d880d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 70f090e2d9830ccfdd98640b54ff07440064d542
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693520"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293261"
 ---
 # <a name="cminiframewnd-class"></a>Cminiframewnd – třída
 
@@ -204,7 +204,7 @@ WS_VISIBLE style je směru, je-li Windows odešle všechny zprávy, které jsou 
 
 Okna nástrojů palety starý styl již nejsou podporovány. Starý styl, který nemá na tlačítko Zavřít "X", se nepodporuje při spouštění aplikace knihovny MFC v předchozích verzích Windows, ale už není podporovaná ve Visual C++ .NET. Nově se podporuje jenom nový styl WS_EX_TOOLWINDOW; Popis tohoto stylu najdete v tématu [rozšířené styly oken](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CFrameWnd – třída](../../mfc/reference/cframewnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

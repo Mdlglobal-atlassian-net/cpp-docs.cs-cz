@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
-ms.openlocfilehash: c6b219eabd008114f40401c64465e44607c2ee9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9074dad572a3a74a5b456e9790dc359ddf8b7c60
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555074"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293950"
 ---
 # <a name="context-class"></a>Context – třída
 
@@ -55,8 +55,8 @@ class Context;
 |[GetScheduleGroupId](#getschedulegroupid)|Vrátí identifikátor plánu skupiny, kontext aktuálně pracuje.|
 |[GetVirtualProcessorId](#getvirtualprocessorid)|Vrátí identifikátor virtuálního procesoru, je kontext aktuálně spuštěn.|
 |[ID](#id)|Vrátí identifikátor aktuálního kontextu, který je jedinečný v rámci plánovače, do kterého aktuální kontext patří.|
-|[Iscurrenttaskcollectioncanceling –](#iscurrenttaskcollectioncanceling)|Vrátí informace o tom, zda kolekce úkolu, který je právě probíhá vloženě v aktuálním kontextu je uprostřed aktivního rušení (nebo bude za chvíli).|
-|[Issynchronouslyblocked –](#issynchronouslyblocked)|Určuje, zda je kontext synchronně blokován. Kontext je považován za synchronně blokovaný, pokud výslovně provedl akci, která vedla k blokování.|
+|[IsCurrentTaskCollectionCanceling](#iscurrenttaskcollectioncanceling)|Vrátí informace o tom, zda kolekce úkolu, který je právě probíhá vloženě v aktuálním kontextu je uprostřed aktivního rušení (nebo bude za chvíli).|
+|[IsSynchronouslyBlocked](#issynchronouslyblocked)|Určuje, zda je kontext synchronně blokován. Kontext je považován za synchronně blokovaný, pokud výslovně provedl akci, která vedla k blokování.|
 |[Přidělit nadměrnému počtu procesů](#oversubscribe)|Vloží další virtuální procesor do plánovače pro dobu trvání bloku kódu při vyvolání v kontextu spuštění v jednom z virtuálních procesorů v tomto plánovači.|
 |[ScheduleGroupId](#schedulegroupid)|Vrátí identifikátor plánu skupiny, aktuální kontext pracuje.|
 |[Odblokování](#unblock)|Odblokuje kontext a způsobí, že se stane spustitelným.|
@@ -99,7 +99,7 @@ Po `Block` byla volána metoda nebo bude volána, musíte ji spárovat volání 
 
 Tato metoda může vyvolat výjimky, včetně různých [scheduler_resource_allocation_error –](scheduler-resource-allocation-error-class.md).
 
-##  <a name="dtor"></a> ~ Kontextu
+##  <a name="dtor"></a> ~Context
 
 ```
 virtual ~Context();
@@ -133,7 +133,7 @@ virtual unsigned int GetId() const = 0;
 
 Identifikátor kontextu, který je jedinečný v rámci plánovače, do kterého kontext patří.
 
-##  <a name="getschedulegroupid"></a> Getschedulegroupid –
+##  <a name="getschedulegroupid"></a> GetScheduleGroupId
 
 Vrátí identifikátor plánu skupiny, kontext aktuálně pracuje.
 
@@ -165,7 +165,7 @@ Pokud je kontext aktuálně spuštěn na virtuální procesor, identifikátor vi
 
 Vrácená hodnota z této metody je okamžité vzorkování virtuálního procesoru, který je spuštěn kontextu. Tato hodnota může být zastaralá chvíli se vrátí a nelze spoléhat. Tato metoda se obvykle používá pro ladění nebo pouze pro účely sledování.
 
-##  <a name="id"></a> ID
+##  <a name="id"></a> Id
 
 Vrátí identifikátor aktuálního kontextu, který je jedinečný v rámci plánovače, do kterého aktuální kontext patří.
 
@@ -177,7 +177,7 @@ static unsigned int __cdecl Id();
 
 Pokud aktuální kontext je připojena k plánovače, identifikátor pro aktuální kontext, který je jedinečný v rámci plánovače, do kterého patří aktuální kontext; v opačném případě hodnota `-1`.
 
-##  <a name="iscurrenttaskcollectioncanceling"></a> Iscurrenttaskcollectioncanceling –
+##  <a name="iscurrenttaskcollectioncanceling"></a> IsCurrentTaskCollectionCanceling
 
 Vrátí informace o tom, zda kolekce úkolu, který je právě probíhá vloženě v aktuálním kontextu je uprostřed aktivního rušení (nebo bude za chvíli).
 
@@ -261,7 +261,7 @@ Existuje několik výjimek, které mohou být vyvolány z této metody. Pokud se
 
 Mějte na paměti, že je mezi bodem, kde váš kód publikuje jeho kontextu pro jiné vlákno, abyste mohli volat kritické době `Unblock` metoda a bodu, kdy Skutečná metoda volání `Block` tvoří. Během tohoto období se nesmějí volat žádné metody, která můžete zase blokovat nebo odblokovat vlastní důvodů (například získání zámku). Volání `Block` a `Unblock` metoda do not track Důvod blokování a odblokování. Vlastnictví by měl mít pouze jeden objekt `Block` a `Unblock` pár.
 
-##  <a name="virtualprocessorid"></a> Virtualprocessorid –
+##  <a name="virtualprocessorid"></a> VirtualProcessorId
 
 Vrátí identifikátor virtuálního procesoru, je aktuální kontext spuštěn.
 
@@ -303,9 +303,8 @@ Tato metoda způsobí procesu výchozím plánovačem se vytvoří a/nebo připo
 
 Tato funkce je nového v sadě Visual Studio 2015 a je stejný jako [Yield](#yield) fungovat, ale není v konfliktu s Yield – makro v Windows.h.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [Scheduler – třída](scheduler-class.md)<br/>
 [Plánovač úloh](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

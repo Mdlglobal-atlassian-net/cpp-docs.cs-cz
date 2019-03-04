@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data classes [MFC]
 - simple data type classes [MFC]
 ms.assetid: 0d591d68-0a33-49e9-8a6d-90c90de5c16a
-ms.openlocfilehash: 9288ed3104d2cdf4c6938b171166de7cffd32ccf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e415805301d7d12bd418a3b55509a7732851492
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531650"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298474"
 ---
 # <a name="simple-data-type-classes"></a>Třídy jednoduchého datového typu
 
@@ -27,13 +27,13 @@ Obsahuje znak řetězce.
 [CTime –](../atl-mfc-shared/reference/ctime-class.md)<br/>
 Obsahuje absolutní hodnoty data a času.
 
-[COleDateTime –](../atl-mfc-shared/reference/coledatetime-class.md)<br/>
+[COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)<br/>
 Obálka pro typ automatizace OLE **datum**. Představuje hodnoty data a času.
 
-[Ctimespan –](../atl-mfc-shared/reference/ctimespan-class.md)<br/>
+[CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md)<br/>
 Obsahuje relativní hodnoty data a času.
 
-[Coledatetimespan –](../atl-mfc-shared/reference/coledatetimespan-class.md)<br/>
+[COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md)<br/>
 Obsahuje relativní `COleDateTime` hodnoty, jako je rozdíl mezi dvěma `COleDateTime` hodnoty.
 
 [CPoint](../atl-mfc-shared/reference/cpoint-class.md)<br/>
@@ -45,7 +45,7 @@ Obsahuje vzdálenost, relativní pozice nebo dvojice hodnot.
 [Crect –](../atl-mfc-shared/reference/crect-class.md)<br/>
 Obsahuje souřadnice obdélníkového oblastí.
 
-[Cimagelist –](../mfc/reference/cimagelist-class.md)<br/>
+[CImageList](../mfc/reference/cimagelist-class.md)<br/>
 Poskytuje funkce pro seznam obrázků Windows. Seznamy obrázků se používají s ovládacími prvky seznam a stromu ovládacích prvků. Můžete také používají k ukládání a archivovat sadu rastrové obrázky stejné velikosti.
 
 [COleVariant](../mfc/reference/colevariant-class.md)<br/>
@@ -57,7 +57,6 @@ Obálka pro typ automatizace OLE **měny**, s pevnou desetinnou čárkou aritmet
 > [!NOTE]
 >  `CRect`, `CSize`, a `CPoint` lze použít v aplikacích knihovny ATL nebo MFC. Kromě toho `CStringT` poskytuje nezávislou MFC `CString`-, jako jsou třídy. Další informace o sdílených užitkové třídy, naleznete v tématu [sdílené třídy](../atl-mfc-shared/atl-mfc-shared-classes.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../mfc/class-library-overview.md)
-

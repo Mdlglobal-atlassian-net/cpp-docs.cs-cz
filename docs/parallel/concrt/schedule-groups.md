@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - schedule groups
 ms.assetid: 03523572-5891-4d17-89ce-fa795605f28b
-ms.openlocfilehash: 60d6bdaf863e60fa9923f7d7447309338c5dbed2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: febcc0a9c7af75801962ea6be687ce87cc5501d4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453518"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295968"
 ---
 # <a name="schedule-groups"></a>Skupiny plánů
 
@@ -20,7 +20,7 @@ Tento dokument popisuje roli skupiny plánu v modulu Runtime souběžnosti. A *s
 
 Každý `Scheduler` objekt nemá výchozí skupiny plánu pro každý uzel plánování. A *plánování uzel* mapuje na základní topologie systému. Modul runtime vytvoří jeden uzel plánování pro každý balíček procesoru nebo uzel Non-Uniform k paměti (NUMA), podle toho, která počet je větší. Pokud jste nepřidružujte explicitně úkol k plánu skupiny, Plánovač zvolí která skupina úkol má přidat.
 
-`SchedulingProtocol` Zásadu plánovače ovlivňuje pořadí, ve kterém plánovače spouští úlohy v každé skupině plánu. Když `SchedulingProtocol` je nastavena na `EnhanceScheduleGroupLocality` (což je výchozí hodnota), Plánovač úloh zvolí další úkol z plánu skupiny, která funguje na aktuální úloha dokončí nebo kooperativně provede. Plánovač úloh vyhledá aktuální skupinu plánu pro pracovní předtím, než se přesune na další skupinu k dispozici. Naopak když `SchedulingProtocol` je nastavena na `EnhanceForwardProgress`, Plánovač přesune na další skupinu plánu poté, co každý úkol dokončí nebo provede. Příklad, který porovnává tyto zásady, najdete v části [postupy: použití skupin plánů vliv pořadí spouštění](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
+`SchedulingProtocol` Zásadu plánovače ovlivňuje pořadí, ve kterém plánovače spouští úlohy v každé skupině plánu. Když `SchedulingProtocol` je nastavena na `EnhanceScheduleGroupLocality` (což je výchozí hodnota), Plánovač úloh zvolí další úkol z plánu skupiny, která funguje na aktuální úloha dokončí nebo kooperativně provede. Plánovač úloh vyhledá aktuální skupinu plánu pro pracovní předtím, než se přesune na další skupinu k dispozici. Naopak když `SchedulingProtocol` je nastavena na `EnhanceForwardProgress`, Plánovač přesune na další skupinu plánu poté, co každý úkol dokončí nebo provede. Příklad, který porovnává tyto zásady, najdete v části [jak: Použití skupin plánů k ovlivnění pořadí provádění](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
 
 Modul runtime používá [concurrency::ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) třídy k reprezentování skupiny plánu. Chcete-li vytvořit `ScheduleGroup` objektu, volejte [concurrency::CurrentScheduler::CreateScheduleGroup](reference/currentscheduler-class.md#createschedulegroup) nebo [concurrency::Scheduler::CreateScheduleGroup](reference/scheduler-class.md#createschedulegroup) metoda. Modul runtime používá mechanismus pro počítání odkazů k řízení životnosti `ScheduleGroup` objekty, stejně jako s `Scheduler` objekty. Když vytvoříte `ScheduleGroup` objektu, modul runtime nastaví odkaz na jeden čítač. [Concurrency::ScheduleGroup::Reference](reference/schedulegroup-class.md#reference) metoda zvýší čítač odkaz o jednu. [Concurrency::ScheduleGroup::Release](reference/schedulegroup-class.md#release) metoda dekrementuje čítače reference o jednu.
 
@@ -30,11 +30,10 @@ Můžete také použít [concurrency::ScheduleGroup::ScheduleTask](reference/sch
 
 ## <a name="example"></a>Příklad
 
-Například, že používá naplánovat skupiny k řízení pořadí provádění úloh, naleznete v tématu [postupy: použití skupin plánů vliv pořadí spouštění](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
+Například, že používá naplánovat skupiny k řízení pořadí provádění úloh, naleznete v tématu [jak: Použití skupin plánů k ovlivnění pořadí provádění](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Instance plánovače](../../parallel/concrt/scheduler-instances.md)<br/>
 [Postupy: Použití skupin plánů k ovlivnění pořadí provádění](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)
-

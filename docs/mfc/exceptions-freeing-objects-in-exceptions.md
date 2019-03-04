@@ -11,12 +11,12 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-ms.openlocfilehash: 6e03d46a2600458f3107efa6e0b6b0d643c9b160
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23fe85018d1bc2c41371afec2ad6931755e4e682
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442468"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298126"
 ---
 # <a name="exceptions-freeing-objects-in-exceptions"></a>Výjimky: Uvolnění objektů ve výjimkách
 
@@ -62,9 +62,8 @@ Mechanismus výjimek automaticky zruší přidělení rámce objekty. také je v
 
 Při volání funkce, které můžou vyvolat výjimku, můžete použít **bloku try/catch** bloky, abyste měli jistotu, že zachycovat výjimky a mít možnost zničit všechny objekty, které jste vytvořili. Zejména mějte na paměti, že mnoho funkcí knihovny MFC může vyvolat výjimky.
 
-Další informace najdete v tématu [výjimky: výjimky zachycení a odstraňování](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Další informace najdete v tématu [výjimky: Zachytávání a mazání](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zpracování výjimek](../mfc/exception-handling-in-mfc.md)
-

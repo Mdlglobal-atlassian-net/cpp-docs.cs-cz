@@ -1,5 +1,5 @@
 ---
-title: 'ActiveX – kontejnery ovládacích prvků: Ošetření událostí v ovládacím prvku ActiveX'
+title: 'Kontejnery ovládacích prvků ActiveX: Ošetření událostí ovládacího prvku ActiveX'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - event handlers [MFC], ActiveX controls
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
-ms.openlocfilehash: 5deff0a50de813cc5faa43a86e591d3003a3c03e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8087d84d2203e4f910200acdd1b00e58d14f920e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659625"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293560"
 ---
-# <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX – kontejnery ovládacích prvků: Ošetření událostí v ovládacím prvku ActiveX
+# <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Kontejnery ovládacích prvků ActiveX: Ošetření událostí ovládacího prvku ActiveX
 
 Tento článek popisuje, v okně Vlastnosti instalace obslužné rutiny událostí pro ovládací prvky ActiveX v kontejneru ovládacího prvku ActiveX. Obslužné rutiny událostí slouží k přijímání oznámení (z ovládacího prvku) o určité události a provést některé akce v odpovědi. Toto oznámení se nazývá "vyvoláním" události.
 
@@ -67,7 +67,6 @@ Další informace o makra jímky událostí, naleznete v tématu [mapy jímek ud
 
 1. Dvakrát klikněte na novou funkci obslužné rutiny ze zobrazení tříd pro přechod na kód obslužné rutiny událostí v implementaci (. Soubor CPP) `CContainerDlg`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [ActiveX – kontejnery ovládacích prvků](../mfc/activex-control-containers.md)
-

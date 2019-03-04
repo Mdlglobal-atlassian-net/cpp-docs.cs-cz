@@ -1,5 +1,5 @@
 ---
-title: 'TN017: Zničení objektů oken'
+title: 'TN017: Likvidace objektů oken'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.objects
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - TN017
 - PostNcDestroy method [MFC]
 ms.assetid: 5bf208a5-5683-439b-92a1-547c5ded26cd
-ms.openlocfilehash: 06553677e67a4314116077e7942381bd847c64d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e52112bed0f583a3f5652f9213bd5049d543a80
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502229"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294107"
 ---
-# <a name="tn017-destroying-window-objects"></a>TN017: Zničení objektů oken
+# <a name="tn017-destroying-window-objects"></a>TN017: Likvidace objektů oken
 
 Tato poznámka popisuje použití [CWnd::PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) metody. Tuto metodu použijte, pokud chcete provést vlastní přidělení `CWnd`-odvozené objekty. Tato poznámka také vysvětluje, proč byste měli používat [CWnd::DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) ke zničení objektu jazyka C++ Windows namísto **odstranit** operátor.
 
@@ -93,8 +93,7 @@ V případě Windows C++ objekty, které provádějí automatické čištění, 
 
 Po volání `DestroyWindow` na automatické vyčištění objektu, objekt jazyka C++ bude i nadále, ale *m_hWnd* budou mít hodnotu NULL. Po volání `DestroyWindow` na automatické vyčištění objektu, objekt jazyka C++ zmizí, uvolnění operátor delete C++ při provádění automatické čištění `PostNcDestroy`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
-

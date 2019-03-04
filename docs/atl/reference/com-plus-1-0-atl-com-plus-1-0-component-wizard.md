@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - vc.codewiz.class.atl.mts.options
 ms.assetid: 2fbe259c-6be1-4d0e-9cfe-721c75c97cb1
-ms.openlocfilehash: 014193f4017aa47b819558cbd4753e6abcffcaaf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0fa649ba41a684be6ed18bd05d48954503c5db16
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562055"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295969"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM + 1.0, Průvodce komponentami ATL COM + 1.0
 
@@ -37,7 +37,7 @@ Další informace o projekty knihovny ATL a třídy knihovny ATL modelu COM, nal
    |Možnost|Popis|
    |------------|-----------------|
    |**ISupportErrorInfo**|Vytvoří podpora [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) rozhraní objektu lze klientovi vrátit informace o chybě.|
-   |**IObjectControl v jazyce**|Poskytuje objekt přístup k tři [IObjectControl v jazyce](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol) metody: [aktivovat](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate), [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled), a [deaktivovat](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate).|
+   |**IObjectControl**|Poskytuje objekt přístup k tři [IObjectControl v jazyce](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol) metody: [Aktivovat](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate), [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled), a [deaktivovat](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate).|
    |**IObjectConstruct**|Vytvoří podpora [IObjectConstruct](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectconstruct) rozhraní pro správu předáním hodnoty parametrů z jiných metod nebo objekty.|
 
 - **Transakce**
@@ -46,13 +46,12 @@ Další informace o projekty knihovny ATL a třídy knihovny ATL modelu COM, nal
 
    |Možnost|Popis|
    |------------|-----------------|
-   |**Podporované**|Určuje, zda objekt nikdy kořenové datového proudu transakce přidáním custom(TLBATTR_TRANS_SUPPORTED,0) komponenty atribut – makro do souboru .h (s atributy projekty) nebo do souboru IDL (bez atributové projekty).|
-   |**Vyžaduje**|Určuje, že objekt může nebo nemusí být kořenový datového proudu transakce přidáním custom(TLBATTR_TRANS_REQUIRED,0) komponenty atribut – makro do souboru .h (s atributy projekty) nebo do souboru IDL (bez atributové projekty).|
+   |**Podporuje se**|Určuje, zda objekt nikdy kořenové datového proudu transakce přidáním custom(TLBATTR_TRANS_SUPPORTED,0) komponenty atribut – makro do souboru .h (s atributy projekty) nebo do souboru IDL (bez atributové projekty).|
+   |**Požadováno**|Určuje, že objekt může nebo nemusí být kořenový datového proudu transakce přidáním custom(TLBATTR_TRANS_REQUIRED,0) komponenty atribut – makro do souboru .h (s atributy projekty) nebo do souboru IDL (bez atributové projekty).|
    |**Nepodporuje se**|Určuje, že objekt nezahrnuje transakce. Přidá custom(TLBATTR_TRANS_NOTSUPP,0) komponenty atribut – makro do souboru .h (s atributy projekty) nebo do souboru IDL (bez atributové projekty).|
    |**Požaduje novou**|Určuje, že objekt je vždy kořenový datového proudu transakce přidáním custom(TLBATTR_TRANS_REQNEW,0) komponenty atribut – makro do souboru .h (s atributy projekty) nebo do souboru IDL (bez atributové projekty).|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Průvodce komponentami ATL COM+ 1.0](../../atl/reference/atl-com-plus-1-0-component-wizard.md)<br/>
 [Komponenta knihovny ATL modelu COM + 1.0](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)
-

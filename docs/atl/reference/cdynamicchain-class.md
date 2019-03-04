@@ -1,5 +1,5 @@
 ---
-title: Cdynamicchain – třída
+title: CDynamicChain Class
 ms.date: 11/04/2016
 f1_keywords:
 - CDynamicChain
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - chaining message maps
 - CDynamicChain class
 ms.assetid: f084b2be-0e77-4836-973d-ae278a1e9da8
-ms.openlocfilehash: 57bbd009bbcbe0ea3352ab27c5d6fbb630b7d050
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b68198c17d7bd030b88bc78ad4de1367c914703
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668010"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299151"
 ---
-# <a name="cdynamicchain-class"></a>Cdynamicchain – třída
+# <a name="cdynamicchain-class"></a>CDynamicChain Class
 
 Tato třída poskytuje metody, které podporuje dynamické řetězení mapy zpráv.
 
@@ -40,7 +40,7 @@ class CDynamicChain
 |Název|Popis|
 |----------|-----------------|
 |[CDynamicChain::CDynamicChain](#cdynamicchain)|Konstruktor|
-|[Cdynamicchain –:: ~ cdynamicchain –](#dtor)|Destruktor.|
+|[CDynamicChain::~CDynamicChain](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -175,7 +175,7 @@ BOOL SetChainEntry(
 *dwChainID*<br/>
 [in] Jedinečný identifikátor přidružený k zřetězené objektu a jeho mapování zprávy.
 
-*odstraněný objekt*<br/>
+*pObject*<br/>
 [in] Ukazatel na objekt zřetězené deklarace mapování zprávy. Tento objekt musí být odvozen od [cmessagemap –](../../atl/reference/cmessagemap-class.md).
 
 *dwMsgMapID*<br/>
@@ -189,7 +189,7 @@ Hodnota TRUE, pokud mapu zpráv je úspěšně přidaný do kolekce. V opačném
 
 Pokud *dwChainID* hodnota již existuje v kolekci, jeho přidruženého objektu a mapování zpráv se nahrazují *odstraněný objekt* a *dwMsgMapID*v uvedeném pořadí. V opačném případě se přidá nová položka.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CWindowImpl – třída](../../atl/reference/cwindowimpl-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

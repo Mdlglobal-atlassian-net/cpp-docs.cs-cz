@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
-ms.openlocfilehash: 57c054915ce98dd8cff6bb772cdd40f4b0f2b768
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 045292e4d06b1e86e991a755b267660b72a178da
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660470"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299553"
 ---
 # <a name="ccomobject-class"></a>CComObject – třída
 
@@ -42,7 +42,7 @@ Vaše třída odvozena od [ccomobjectroot –](../../atl/reference/ccomobjectroo
 |Název|Popis|
 |----------|-----------------|
 |[CComObject::CComObject](#ccomobject)|Konstruktor|
-|[CComObject:: ~ CComObject](#dtor)|Destruktor.|
+|[CComObject::~CComObject](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -100,7 +100,7 @@ Sníží destruktor ho.
 
 Pokud `CComObject`-odvozeného objektu je úspěšně vytvořený **nové** operátor, počet počáteční odkazů je 0. Pokud chcete nastavit počet odkazů na správnou hodnotu (1), ujistěte se, volání [AddRef](#addref) funkce.
 
-##  <a name="dtor"></a>  CComObject:: ~ CComObject
+##  <a name="dtor"></a>  CComObject::~CComObject
 
 Destruktor.
 
@@ -122,7 +122,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*pp*<br/>
 [out] Ukazatel **CComObject <** `Base` **>** ukazatele. Pokud `CreateInstance` neproběhne úspěšně, *pp* nastaven na hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -153,13 +153,13 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*<br/>
+*iid*<br/>
 [in] Identifikátor se požadované rozhraní.
 
 *ppvObject*<br/>
 [out] Ukazatel na ukazatel rozhraní, který je identifikován *iid*. Pokud objekt nepodporuje toto rozhraní *ppvObject* nastaven na hodnotu NULL.
 
-*str*<br/>
+*pp*<br/>
 [out] Ukazatel na ukazatel rozhraní, které jsou určeny podle typu `Q`. Pokud objekt nepodporuje toto rozhraní *pp* nastaven na hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -178,7 +178,7 @@ STDMETHOD_(ULONG, Release)();
 
 Tato funkce vrací nový počet odkazů sníží na objekt. V sestavení pro ladění může být vrácenou hodnotu užitečné pro diagnostiku a testování. V sestaveních bez ladění `Release` vždy vrátí hodnotu 0.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CComAggObject – třída](../../atl/reference/ccomaggobject-class.md)<br/>
 [CComPolyObject – třída](../../atl/reference/ccompolyobject-class.md)<br/>

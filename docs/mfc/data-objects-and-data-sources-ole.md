@@ -10,12 +10,12 @@ helpviewer_keywords:
 - OLE [MFC], data objects
 - OLE [MFC], data sources
 ms.assetid: 8f68eed8-0ce8-4489-a4cc-f95554f89090
-ms.openlocfilehash: 09e328171657c3c6557a5d77acae0f034e517955
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 485fa5c62aafa4c116a76547238325d2979bfdc4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612482"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298266"
 ---
 # <a name="data-objects-and-data-sources-ole"></a>Datové objekty a zdroje dat (OLE)
 
@@ -29,7 +29,7 @@ Následující články popisují, jak používat datové objekty a zdroje dat v
 
 - [Datové objekty a zdroje dat: Vytváření a likvidace](../mfc/data-objects-and-data-sources-creation-and-destruction.md)
 
-- [Datové objekty a zdroje dat: Manipulace](../mfc/data-objects-and-data-sources-manipulation.md)
+- [Datové objekty a zdroje dat: Manipulace s](../mfc/data-objects-and-data-sources-manipulation.md)
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
@@ -37,7 +37,7 @@ Následující články popisují, jak používat datové objekty a zdroje dat v
 
 [Schránka](../mfc/clipboard.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [COleDataObject – třída](../mfc/reference/coledataobject-class.md)<br/>

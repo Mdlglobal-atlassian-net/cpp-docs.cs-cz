@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [MFC], worker threads
 - threading [C++], user input not required
 ms.assetid: 670adbfe-041c-4450-a3ed-be14aab15234
-ms.openlocfilehash: 54bea7b42018637bf868dfdd923b94dd75aa2307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f36e02d1ba6074a7ec8203bea761b3528a120162
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559481"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293235"
 ---
 # <a name="multithreading-creating-worker-threads-in-mfc"></a>Multithreading: Vytváření pracovních vláken v prostředí MFC
 
@@ -55,11 +55,11 @@ Existují dvě přetížené verze `AfxBeginThread`: ten, který lze vytvořit p
 UINT MyControllingFunction( LPVOID pParam );
 ```
 
-Parametr je jednoduchá hodnota. Hodnota, kterou funkce přijímá v tomto parametru je hodnota, která byla předána konstruktoru při vytvoření objektu vlákna. Řídicí funkce může interpretovat tuto hodnotu, jakýmkoli způsobem si vybere. Lze považovat za skalární hodnotu nebo ukazatel na strukturu obsahující více parametrů, nebo se to dá ignorovat. Pokud parametr odkazuje na strukturu, struktura slouží pouze k předání dat od volajícího vláknu, ale také k předání dat z vlákna zpět volajícímu. Používáte-li takovouto strukturu k předání dat zpět volajícímu, musí vlákno oznámit volajícímu, že jsou výsledky připraveny. Informace o komunikaci z pracovního vlákna k volajícímu naleznete v tématu [Multithreading: Programovací tipy](multithreading-programming-tips.md).
+Parametr je jednoduchá hodnota. Hodnota, kterou funkce přijímá v tomto parametru je hodnota, která byla předána konstruktoru při vytvoření objektu vlákna. Řídicí funkce může interpretovat tuto hodnotu, jakýmkoli způsobem si vybere. Lze považovat za skalární hodnotu nebo ukazatel na strukturu obsahující více parametrů, nebo se to dá ignorovat. Pokud parametr odkazuje na strukturu, struktura slouží pouze k předání dat od volajícího vláknu, ale také k předání dat z vlákna zpět volajícímu. Používáte-li takovouto strukturu k předání dat zpět volajícímu, musí vlákno oznámit volajícímu, že jsou výsledky připraveny. Informace o komunikaci z pracovního vlákna k volajícímu naleznete v tématu [Multithreading: Tipy pro programování](multithreading-programming-tips.md).
 
-Když funkce skončí, měla by vrátit hodnotu UINT označující důvod ukončení. Obvykle je tento kód ukončení 0 označující úspěšné provedení s jinými hodnotami označení různých typů chyb. To se čistě závisí na konkrétní implementaci. Některá vlákna mohou udržovat počty využití objektů a vracet aktuální počet využití daného objektu. Jak můžou aplikace načíst tuto hodnotu najdete v tématu [Multithreading: ukončení vláken](multithreading-terminating-threads.md).
+Když funkce skončí, měla by vrátit hodnotu UINT označující důvod ukončení. Obvykle je tento kód ukončení 0 označující úspěšné provedení s jinými hodnotami označení různých typů chyb. To se čistě závisí na konkrétní implementaci. Některá vlákna mohou udržovat počty využití objektů a vracet aktuální počet využití daného objektu. Jak můžou aplikace načíst tuto hodnotu najdete v tématu [Multithreading: Ukončení vláken](multithreading-terminating-threads.md).
 
-Existují některá omezení, co můžete dělat ve vícevláknovém programu, vytvořeném pomocí knihovny MFC. Popisy těchto omezení a další tipy pro používání vláken naleznete v tématu [Multithreading: Programovací tipy](multithreading-programming-tips.md).
+Existují některá omezení, co můžete dělat ve vícevláknovém programu, vytvořeném pomocí knihovny MFC. Popisy těchto omezení a další tipy pro používání vláken naleznete v tématu [Multithreading: Tipy pro programování](multithreading-programming-tips.md).
 
 ##  <a name="_core_controlling_function_example"></a> Příklad řídicí funkce
 
@@ -94,6 +94,6 @@ AfxBeginThread(MyThreadProc, pNewObject);
 
 - [Multithreading: Vytváření vláken uživatelského rozhraní](multithreading-creating-user-interface-threads.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Multithreading s použitím jazyka C++ a prostředí MFC](multithreading-with-cpp-and-mfc.md)

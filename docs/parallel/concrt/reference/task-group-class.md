@@ -7,12 +7,12 @@ f1_keywords:
 - PPL/concurrency::task_group::task_group
 helpviewer_keywords:
 - task_group class
-ms.openlocfilehash: 1ba7251afca80c561bd8861968c35e3242c1507a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 545b368b3042da74a42db5a6ea30e97054d5fd03
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588848"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294132"
 ---
 # <a name="taskgroup-class"></a>task_group – třída
 
@@ -31,14 +31,14 @@ class task_group;
 |Název|Popis|
 |----------|-----------------|
 |[task_group](#ctor)|Přetíženo. Sestaví nový `task_group` objektu.|
-|[~ task_group – destruktor](#dtor)|Odstraní `task_group` objektu. Očekává se, že volání buď `wait` nebo `run_and_wait` metodu na objekt před destruktor prováděný, pokud je destruktor se provádí v důsledku uvolnění z důvodu výjimky zásobníku.|
+|[~task_group Destructor](#dtor)|Odstraní `task_group` objektu. Očekává se, že volání buď `wait` nebo `run_and_wait` metodu na objekt před destruktor prováděný, pokud je destruktor se provádí v důsledku uvolnění z důvodu výjimky zásobníku.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
 |[Zrušit](#cancel)|Díky nezaručené pokus o zrušení podstromě pracovní kořenovým adresářem v této skupině úloh. Každá úloha naplánována na skupinu úloh bude zrušena přechodně Pokud je to možné.|
-|[is_canceling –](#is_canceling)|Určuje, jestli je skupina úloh aktuálně uprostřed zrušením informuje volající. Neznamená to nutně, který `cancel` byla volána metoda `task_group` objektu (i když například jistě kvalifikuje tuto metodu za účelem vrácení `true`). To může být případ, který `task_group` objektu je probíhá vloženě a další skupinu úloh nahoru ve stromové struktuře práce byla zrušena. V případech, jako jsou tyto kde můžete určit modul runtime zrušení budou směrovat přes to předem `task_group` objektu, `true` vrátí se také.|
+|[is_canceling](#is_canceling)|Určuje, jestli je skupina úloh aktuálně uprostřed zrušením informuje volající. Neznamená to nutně, který `cancel` byla volána metoda `task_group` objektu (i když například jistě kvalifikuje tuto metodu za účelem vrácení `true`). To může být případ, který `task_group` objektu je probíhá vloženě a další skupinu úloh nahoru ve stromové struktuře práce byla zrušena. V případech, jako jsou tyto kde můžete určit modul runtime zrušení budou směrovat přes to předem `task_group` objektu, `true` vrátí se také.|
 |[Spuštění](#run)|Přetíženo. Naplánuje úlohy na `task_group` objektu. Pokud `task_handle` objekt je předán jako parametr `run`, volající zodpovídá za správu životnosti `task_handle` objektu. Provést menší a od používání verze, která přebírá odkaz na verzi metody, která přebírá odkaz na objekt funkce, jako parametr zahrnuje přidělení haldy uvnitř modulu runtime, který může být `task_handle` objektu. Verze, která přebírá parametr `_Placement` způsobí, že na tendenční směrem k provádění v místě určeném v parametru úlohy.|
 |[run_and_wait](#run_and_wait)|Přetíženo. Naplánuje úlohy spustit vložené na kontext volání za pomoci `task_group` objekt pro zrušení plnou podporu. Funkce vyčká, dokud všechny práce na `task_group` objekt buď dokončí nebo byla zrušena. Pokud `task_handle` objekt je předán jako parametr `run_and_wait`, volající zodpovídá za správu životnosti `task_handle` objektu.|
 |[Počkej](#wait)|Počká, dokud nebudou všechny práce na `task_group` objekt buď dokončí nebo byla zrušena.|
@@ -190,7 +190,7 @@ Po návratu z `run_and_wait` metoda `task_group` objektu, modul runtime obnoví 
 
 V ostatním cesta spuštění, je nutné pověření k buď tuto metodu volat nebo `wait` metody před destruktor `task_group` spustí.
 
-##  <a name="ctor"></a> task_group –
+##  <a name="ctor"></a> task_group
 
 Sestaví nový `task_group` objektu.
 
@@ -211,7 +211,7 @@ Token zrušení pro přidružení k této skupině úloh. Skupiny úloh se zruš
 
 Vytvoří konstruktor, který přijímá token zrušení `task_group` , která budou zrušeny při zrušení zdroje přidružené k tokenu. Také poskytuje explicitní rušícího tokenu izoluje této skupiny úloh ze implicitní zrušení z nadřazené skupiny s tokenem jiný nebo žádný token.
 
-##  <a name="dtor"></a> ~ task_group –
+##  <a name="dtor"></a> ~task_group
 
 Odstraní `task_group` objektu. Očekává se, že volání buď `wait` nebo `run_and_wait` metodu na objekt před destruktor prováděný, pokud je destruktor se provádí v důsledku uvolnění z důvodu výjimky zásobníku.
 
@@ -245,7 +245,7 @@ Volání `wait` na `task_group` objekt se obnoví do čistého stavu, kde ho mů
 
 V ostatním cesta spuštění, je nutné pověření k buď tuto metodu volat nebo `run_and_wait` metody před destruktor `task_group` spustí.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [structured_task_group – třída](structured-task-group-class.md)<br/>

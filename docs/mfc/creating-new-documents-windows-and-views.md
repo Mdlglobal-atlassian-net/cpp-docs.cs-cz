@@ -24,12 +24,12 @@ helpviewer_keywords:
 - views [MFC], overriding default behavior
 - initializing views [MFC]
 ms.assetid: 88aa1f5f-2078-4603-b16b-a2b4c7b4a2a3
-ms.openlocfilehash: 57e558848ce76a7c74b5715529661ad24c9cbb8e
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3d4ca55a9bff6ec42643db745896a2cea96dcefb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175389"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297801"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>Vytváření nových dokumentů, oken a zobrazení
 
@@ -54,10 +54,9 @@ Na předchozích obrázcích také navrhnout body, na které můžete přepsat �
 
 Ve většině případů by měly volat přepsání verze základní třídy. Další informace najdete v tématu s názvem členské funkce tříd [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), a [CWinApp](../mfc/reference/cwinapp-class.md) v MFC Referenční dokumentace ke knihovně.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Šablony dokumentů a proces vytváření dokumentů/zobrazení](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
 [Vytváření šablon dokumentů](../mfc/document-template-creation.md)<br/>
 [Vytváření dokumentů/zobrazení](../mfc/document-view-creation.md)<br/>
 [Vztahy mezi objekty MFC](../mfc/relationships-among-mfc-objects.md)
-

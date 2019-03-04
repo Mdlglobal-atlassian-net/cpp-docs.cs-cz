@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoRevertImpersonation class
 ms.assetid: 43732849-1940-4bd4-9d52-7a5698bb8838
-ms.openlocfilehash: 799ec11fd8542a8b30ef3aa95f1a20700c5c9796
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8ab7fed8f1560054eb023cbd4e47c43c4c6f0cc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444912"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299098"
 ---
 # <a name="cautorevertimpersonation-class"></a>Cautorevertimpersonation – třída
 
@@ -35,7 +35,7 @@ class CAutoRevertImpersonation
 |Název|Popis|
 |----------|-----------------|
 |[CAutoRevertImpersonation::CAutoRevertImpersonation](#cautorevertimpersonation)|Vytvoří `CAutoRevertImpersonation` objektu|
-|[Cautorevertimpersonation –:: ~ cautorevertimpersonation –](#dtor)|Odstraní objekt a vrátí token zosobnění přístup.|
+|[CAutoRevertImpersonation::~CAutoRevertImpersonation](#dtor)|Odstraní objekt a vrátí token zosobnění přístup.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -67,7 +67,7 @@ void Attach(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Token pAT*<br/>
+*pAT*<br/>
 Adresa [caccesstoken –](../../atl/reference/caccesstoken-class.md) objektu se mají zrušit změny automaticky
 
 ### <a name="remarks"></a>Poznámky
@@ -84,7 +84,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Token pAT*<br/>
+*pAT*<br/>
 Adresa [caccesstoken –](../../atl/reference/caccesstoken-class.md) objektu se automaticky vrátí zpátky.
 
 ### <a name="remarks"></a>Poznámky
@@ -135,7 +135,7 @@ Adresa dříve přidružené [caccesstoken –](../../atl/reference/caccesstoken
 
 Pokud tato metoda je volána pro účely, které patří k obnovení zosobnění `CAccessToken` objektu, [odpojit](#detach) metoda by místo toho používá.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázka ATLSecurity](../../visual-cpp-samples.md)<br/>
 [Přístupové tokeny](/windows/desktop/SecAuthZ/access-tokens)<br/>

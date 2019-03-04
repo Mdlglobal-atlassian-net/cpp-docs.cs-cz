@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleDispatchException [MFC], m_strSource
 - COleDispatchException [MFC], m_wCode
 ms.assetid: 0e95c8be-e21a-490c-99ec-181c6a9a26d0
-ms.openlocfilehash: 06f8d8abd8ea337369ceed62a9944e867d355768
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6440ef202d0eafc4730b1e63ca4627d5dab61bc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456235"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299956"
 ---
 # <a name="coledispatchexception-class"></a>Coledispatchexception – třída
 
@@ -51,7 +51,7 @@ Stejně jako ostatní výjimky třídy odvozené z `CException` základní tří
 
 Obecně byste měli volat [afxthrowoledispatchexception –](exception-processing.md#afxthrowoledispatchexception) a vytvořte výjimku `COleDispatchException` objektu.
 
-Další informace o výjimkách, najdete v článcích [zpracování výjimek (MFC)](../../mfc/exception-handling-in-mfc.md) a [výjimky: výjimky OLE](../../mfc/exceptions-ole-exceptions.md).
+Další informace o výjimkách, najdete v článcích [zpracování výjimek (MFC)](../../mfc/exception-handling-in-mfc.md) a [výjimky: OLE – výjimky](../../mfc/exceptions-ole-exceptions.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -63,7 +63,7 @@ Další informace o výjimkách, najdete v článcích [zpracování výjimek (M
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdisp.h
+**Header:** afxdisp.h
 
 ##  <a name="m_dwhelpcontext"></a>  COleDispatchException::m_dwHelpContext
 
@@ -129,7 +129,7 @@ WORD m_wCode;
 
 Tento člen je nastavený podle funkce [afxthrowoledispatchexception –](exception-processing.md#afxthrowoledispatchexception) když dojde k výjimce.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC CALCDRIV](../../visual-cpp-samples.md)<br/>
 [CException – třída](../../mfc/reference/cexception-class.md)<br/>

@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_4::set_zyx
 - amp_short_vectors/Concurrency::graphics::norm_4::wy
 ms.assetid: d628b2bf-2cdb-4dbb-95c6-cd778f5e991f
-ms.openlocfilehash: ec71019e64046d693aaf96adb81762bfd536ac2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06e08c24a92259e34be59a9f021ae13f38e974a5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677224"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297395"
 ---
 # <a name="norm4-class"></a>norm_4 – třída
 
@@ -448,9 +448,9 @@ class norm_4;
 |norm_4::operator--||
 |norm_4::operator*=||
 |norm_4::Operator / =||
-|norm_4::Operator ++||
+|norm_4::operator++||
 |norm_4::operator+=||
-|norm_4::Operator =||
+|norm_4::operator=||
 |norm_4::operator-=||
 
 ### <a name="public-constants"></a>Veřejné konstanty
@@ -488,7 +488,7 @@ class norm_4;
 |norm_4::BG||
 |norm_4::bga||
 |norm_4::bgar||
-|norm_4::BGR||
+|norm_4::bgr||
 |norm_4::bgra||
 |norm_4::br||
 |norm_4::bra||
@@ -502,13 +502,13 @@ class norm_4;
 |norm_4::gar||
 |norm_4::garb||
 |norm_4::GB||
-|norm_4::GBA||
+|norm_4::gba||
 |norm_4::gbar||
 |norm_4::GBR||
 |norm_4::GBRA||
 |norm_4::GR||
 |norm_4::gra||
-|norm_4::Grab||
+|norm_4::grab||
 |norm_4::grb||
 |norm_4::grba||
 |norm_4::r||
@@ -528,8 +528,8 @@ class norm_4;
 |norm_4::RGB||
 |norm_4::rgba||
 |norm_4::w||
-|norm_4::WX||
-|norm_4::WXY||
+|norm_4::wx||
+|norm_4::wxy||
 |norm_4::wxyz||
 |norm_4::wxz||
 |norm_4::wxzy||
@@ -549,7 +549,7 @@ class norm_4;
 |norm_4::xwyz||
 |norm_4::xwz||
 |norm_4::xwzy||
-|norm_4::XY||
+|norm_4::xy||
 |norm_4::xyw||
 |norm_4::xywz||
 |norm_4::xyz||
@@ -576,7 +576,7 @@ class norm_4;
 |norm_4::yzx||
 |norm_4::yzxw||
 |norm_4::z||
-|norm_4::Zw||
+|norm_4::zw||
 |norm_4::zwx||
 |norm_4::zwxy||
 |norm_4::zwy||
@@ -600,7 +600,7 @@ class norm_4;
 
 **Záhlaví:** amp_short_vectors.h
 
-**Namespace:** Concurrency::graphics
+**Namespace:** Concurrency::Graphics
 
 ##  <a name="ctor"></a> norm_4 –
 
@@ -690,6 +690,6 @@ Objekt použitý k inicializaci.
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

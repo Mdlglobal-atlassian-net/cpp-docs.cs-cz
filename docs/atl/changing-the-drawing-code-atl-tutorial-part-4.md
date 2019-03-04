@@ -5,12 +5,12 @@ ms.date: 09/26/2018
 helpviewer_keywords:
 - _ATL_MIN_CRT macro
 ms.assetid: 08ff14e8-aa49-4139-a110-5d071939cf1e
-ms.openlocfilehash: ce6492eb2e4da04b261c7a88154674d036bb578a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ea7a0ae0c0a9be87fe507e6b934bd046c9ffe4e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481416"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295861"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>Změna kódu kreslení (ATL – tutoriál, část 4)
 
@@ -106,7 +106,7 @@ Znovu sestavte ovládací prvek. Ujistěte se, že soubor PolyCtl.htm zavřená,
 
 ### <a name="to-use-the-activex-control-test-container"></a>Chcete-li použít kontejner testů ovládacích prvků ActiveX
 
-1. Sestavte a spusťte kontejner testů ovládacích prvků ActiveX. [Lze kontejner TSTCON vzorku: kontejner testů ovládacích prvků ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole/TstCon) najdete na Githubu.
+1. Sestavte a spusťte kontejner testů ovládacích prvků ActiveX. [Lze kontejner TSTCON vzorku: Kontejner testů ovládacích prvků ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole/TstCon) najdete na Githubu.
 
     > [!NOTE]
     > Chyby zahrnující `ATL::CW2AEX`, v Script.Cpp, nahraďte řádek `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT );` s `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT.m_psz );`a řádek `TRACE( "Source Text: %s\n", COLE2CT( bstrSourceLineText ) );` s `TRACE( "Source Text: %s\n", bstrSourceLineText );`.<br/>
@@ -156,7 +156,7 @@ V dalším kroku přidejte událost.
 
 [Zpátky ke kroku 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md) &#124; [ke kroku 5](../atl/adding-an-event-atl-tutorial-part-5.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Kurz](../atl/active-template-library-atl-tutorial.md)<br/>
 [Testování vlastností a událostí pomocí testovacího kontejneru](../mfc/testing-properties-and-events-with-test-container.md)

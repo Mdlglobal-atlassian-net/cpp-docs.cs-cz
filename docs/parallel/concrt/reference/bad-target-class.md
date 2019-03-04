@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - bad_target class
 ms.assetid: e6dcddbf-9217-4fac-ac7f-7b8b4781d2f5
-ms.openlocfilehash: 0440955718bee3b426f5e4625b5eb3fc559a5d28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04489151cedf1a47aeebd883e76b8d26b51031ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434480"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298617"
 ---
 # <a name="badtarget-class"></a>bad_target – třída
 
@@ -49,7 +49,7 @@ Toto se obvykle výjimka z důvodů, jako je například cíl pokusu o zpracová
 
 **Namespace:** souběžnosti
 
-##  <a name="ctor"></a> bad_target –
+##  <a name="ctor"></a> bad_target
 
 Vytvoří `bad_target` objektu.
 
@@ -61,11 +61,10 @@ bad_target() throw();
 
 ### <a name="parameters"></a>Parametry
 
-*_TEXT*<br/>
+*_Message*<br/>
 Popisná zpráva chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [Asynchronní bloky zpráv](../../../parallel/concrt/asynchronous-message-blocks.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Cautoptrarray – třída
+title: CAutoPtrArray Class
 ms.date: 11/04/2016
 f1_keywords:
 - CAutoPtrArray
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrArray class
 ms.assetid: 880a70da-8c81-4427-8ac6-49aa8d424244
-ms.openlocfilehash: c7a2a7e9592b120204582334f69e27e72cd7364f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: beb0184a9945990b8d92efe03d4f54baa76ca380
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677939"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298903"
 ---
-# <a name="cautoptrarray-class"></a>Cautoptrarray – třída
+# <a name="cautoptrarray-class"></a>CAutoPtrArray Class
 
 Tato třída poskytuje metody, které jsou užitečné při vytváření pole inteligentních ukazatelů.
 
@@ -72,7 +72,7 @@ CAutoPtrArray() throw();
 
 Inicializuje pole inteligentního ukazatele.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CAtlArray – třída](../../atl/reference/catlarray-class.md)<br/>
 [CAutoPtrElementTraits – třída](../../atl/reference/cautoptrelementtraits-class.md)<br/>

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CCubicTransition [MFC], m_dblFinalVelocity
 - CCubicTransition [MFC], m_duration
 ms.assetid: 4fc30e9c-160c-45e1-bdbe-51adf8fee9c5
-ms.openlocfilehash: d2064a94bb0524eb589f54e84c7bbe00ce89954b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f4d5898172c0544064fad82856e404f4fb12b561
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520221"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294450"
 ---
 # <a name="ccubictransition-class"></a>Ccubictransition – třída
 
@@ -63,7 +63,7 @@ Během kubický přechod hodnotu proměnné animace změní z její počátečn�
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cbasetransition –](../../mfc/reference/cbasetransition-class.md)
+[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
 
 `CCubicTransition`
 
@@ -136,6 +136,6 @@ Doba trvání přechodu.
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

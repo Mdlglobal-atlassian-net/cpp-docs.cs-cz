@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: b37cff8bd3eb3bd05bc7030c4cc12b9b84568b1f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 69a04b49cf82c2b30ece3a32f76fbb2bc9a65f01
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333638"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295991"
 ---
 # <a name="chtmlview-class"></a>CHtmlView – třída
 
@@ -353,7 +353,7 @@ Odvození třídy zobrazení aplikace na `CHtmlView` poskytuje zobrazení pomoc�
 
 [CView](../../mfc/reference/cview-class.md)
 
-[Cscrollview –](../../mfc/reference/cscrollview-class.md)
+[CScrollView](../../mfc/reference/cscrollview-class.md)
 
 [CFormView](../../mfc/reference/cformview-class.md)
 
@@ -361,7 +361,7 @@ Odvození třídy zobrazení aplikace na `CHtmlView` poskytuje zobrazení pomoc�
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxhtml.h
+**Header:** afxhtml.h
 
 ##  <a name="create"></a>  CHtmlView::Create
 
@@ -424,7 +424,7 @@ Ukazatel na ukazatel [colecontrolsite –](../../mfc/reference/colecontrolsite-c
 *nID*<br/>
 Identifikátor ovládacího prvku zajistit také jejich hostování.
 
-*identifikátor CLSID*<br/>
+*clsid*<br/>
 Identifikátor CLSID ovládacího prvku zajistit také jejich hostování
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1041,7 +1041,7 @@ void Navigate(
 
 ### <a name="parameters"></a>Parametry
 
-*ADRESA URL*<br/>
+*Adresa URL*<br/>
 Volající – přidělené řetězec, který obsahuje adresu URL pro navigaci na, nebo úplnou cestu souboru, který se zobrazí.
 
 *dwFlags*<br/>
@@ -1451,7 +1451,7 @@ virtual void OnNavigateComplete2(LPCTSTR strURL);
 
 ### <a name="parameters"></a>Parametry
 
-*%{strurl/*<br/>
+*strURL*<br/>
 Výraz řetězce, který se vyhodnotí na adresu URL ve formátu UNC název souboru, nebo PIDL (ukazatel na seznam položek identifier), na kterou se přejde.
 
 ### <a name="remarks"></a>Poznámky
@@ -1861,13 +1861,13 @@ Ukazatel na řetězec obsahující název vlastnosti, které chcete nastavit.
 *dValue*<br/>
 Nová hodnota vlastnosti.
 
-*l-hodnoty.*<br/>
+*lValue*<br/>
 Nová hodnota vlastnosti.
 
 *lpszValue*<br/>
 Ukazatel na řetězec, který obsahuje novou hodnotu vlastnosti.
 
-*nHodnota*<br/>
+*nValue*<br/>
 Nová hodnota vlastnosti.
 
 ### <a name="remarks"></a>Poznámky
@@ -2231,10 +2231,9 @@ void Stop();
 
 Platí pro aplikaci Internet Explorer a WebBrowser.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC MFCIE](../../visual-cpp-samples.md)<br/>
 [CFormView – třída](../../mfc/reference/cformview-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[Rozhraní IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx)
-
+[IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx)

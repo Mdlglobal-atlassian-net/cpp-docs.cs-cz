@@ -5,12 +5,12 @@ helpviewer_keywords:
 - combinable class, example
 - combining sets with combinable [Concurrency Runtime]
 ms.assetid: 66ffe8e3-6bbb-4e9f-b790-b612922a68a7
-ms.openlocfilehash: c4d245688dd000ea61b538c4f3957246b9852ec5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf8a5bee65ea0ba1718c1d4d436b6af3e0b95961
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571805"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296095"
 ---
 # <a name="how-to-use-combinable-to-combine-sets"></a>Postupy: Použití objektu combinable ke slučování množin
 
@@ -36,11 +36,10 @@ parallel time: 78 ms
 
 Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `parallel-combine-primes.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
 
-**cl.exe/EHsc paralelní sloučení primes.cpp**
+**cl.exe /EHsc parallel-combine-primes.cpp**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Paralelní kontejnery a objekty](../../parallel/concrt/parallel-containers-and-objects.md)<br/>
 [combinable – třída](../../parallel/concrt/reference/combinable-class.md)<br/>
 [combinable::combine_each – metoda](reference/combinable-class.md#combine_each)
-

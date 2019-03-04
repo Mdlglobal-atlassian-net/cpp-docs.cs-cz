@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 1168375606ef86061269454aa361a076efa331a4
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 7e5b553e6a10bee0e5b05bb32b9af3069269ca91
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176403"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294561"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet – třída
 
@@ -132,11 +132,11 @@ Následující obrázek znázorňuje seznam vlastností, která je ve stylu ovl�
 
 [CPropertySheet](../../mfc/reference/cpropertysheet-class.md)
 
-[CMFCPropertySheet –](../../mfc/reference/cmfcpropertysheet-class.md)
+[CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxpropertysheet.h
+**Header:** afxpropertysheet.h
 
 ##  <a name="addpage"></a>  CMFCPropertySheet::AddPage
 
@@ -148,7 +148,7 @@ void AddPage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parametry
 
-*Fyzická_stránka*<br/>
+*pPage*<br/>
 [in] Ukazatel na objekt stránky. Tento parametr nemůže mít hodnotu NULL.
 
 ### <a name="remarks"></a>Poznámky
@@ -174,7 +174,7 @@ void AddPageToTree(
 *pCategory*<br/>
 [in] Ukazatel na nadřazený uzel stromu, nebo hodnota NULL pro zadanou stránku přidružit uzel nejvyšší úrovně. Volání [CMFCPropertySheet::AddTreeCategory](#addtreecategory) metodu k získání tohoto ukazatele.
 
-*Fyzická_stránka*<br/>
+*pPage*<br/>
 [in] Ukazatel na objekt stránky vlastností.
 
 *nIconNum*<br/>
@@ -360,7 +360,7 @@ virtual void OnActivatePage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parametry
 
-*Fyzická_stránka*<br/>
+*pPage*<br/>
 [in] Ukazatel na objekt stránky vlastností, který představuje stránku vlastnost enabled.
 
 ### <a name="remarks"></a>Poznámky
@@ -380,7 +380,7 @@ virtual void OnDrawPageHeader(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *nPage*<br/>
@@ -403,7 +403,7 @@ virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parametry
 
-*Fyzická_stránka*<br/>
+*pPage*<br/>
 [in] Ukazatel na objekt stránky vlastností, který představuje stránky vlastností k odebrání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -438,7 +438,7 @@ void RemovePage(int nPage);
 
 ### <a name="parameters"></a>Parametry
 
-*Fyzická_stránka*<br/>
+*pPage*<br/>
 [in] Ukazatel na objekt stránky vlastností, představující stránky vlastností k odebrání. Nemůže mít hodnotu NULL.
 
 *nPage*<br/>
@@ -465,7 +465,7 @@ void SetIconsList(HIMAGELIST hIcons);
 *uiImageListResID*<br/>
 [in] ID prostředku ze seznamu obrázků.
 
-*CX*<br/>
+*cx*<br/>
 [in] Šířka v pixelech ikony v seznamu obrázků.
 
 *clrTransparent*<br/>
@@ -516,7 +516,7 @@ V následující tabulce jsou uvedeny hodnoty výčtu, které lze zadat v *vypad
 |`CMFCPropertySheet::PropSheetLook_OneNoteTabs`|Na kartě se zobrazí ve stylu Microsoft OneNote pro každou stránku vlastností. Rozhraní zobrazí karty v horní části stránky vlastností a šipky posuvníku Pokud existují další záložky, než se vejde na jednom řádku.|
 |`CMFCPropertySheet::PropSheetLook_List`|Zobrazí seznam v levé části seznamu vlastností. Každá položka seznamu odpovídá stránky vlastností. Pokud existují další položky seznamu, než pojme viditelná oblast v seznamu zobrazí rozhraní šipky.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

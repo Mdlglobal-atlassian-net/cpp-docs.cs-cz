@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 6722011bf343a391fcc7180558eead5c039afc59
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 97d4561da12492c158673c4cc79c2baefd973c75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178171"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296721"
 ---
 # <a name="cbitmap-class"></a>Cbitmap – třída
 
@@ -93,7 +93,7 @@ Další informace o použití grafických objektů, jako jsou `CBitmap`, nalezne
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cgdiobject –](../../mfc/reference/cgdiobject-class.md)
+[CGdiObject](../../mfc/reference/cgdiobject-class.md)
 
 `CBitmap`
 
@@ -195,7 +195,7 @@ BOOL CreateCompatibleBitmap(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Určuje kontext zařízení.
 
 *nWidth*<br/>
@@ -233,7 +233,7 @@ BOOL CreateDiscardableBitmap(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Určuje kontext zařízení.
 
 *nWidth*<br/>
@@ -519,9 +519,8 @@ Předchozí dimenze rastrového obrázku. Výška bude v `cy` členské proměnn
 
 Rozhraní GDI nepoužívá tyto hodnoty s výjimkou a vracet je aplikace zavolá [GetBitmapDimension](#getbitmapdimension) členskou funkci.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC MDI](../../visual-cpp-samples.md)<br/>
 [CGdiObject – třída](../../mfc/reference/cgdiobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-

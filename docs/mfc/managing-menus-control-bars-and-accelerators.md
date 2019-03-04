@@ -12,12 +12,12 @@ helpviewer_keywords:
 - frame windows [MFC], updating
 - status bars [MFC], updating
 ms.assetid: 97ca1997-06df-4373-b023-4f7ecd81047b
-ms.openlocfilehash: 905a015de6a675de80c49991750f72eccf06afaa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a089829658265cd835a8c7344aa5bc45fbc109a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559626"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293807"
 ---
 # <a name="managing-menus-control-bars-and-accelerators"></a>Správa nabídek, ovládacích pruhů a akcelerátorů
 
@@ -41,7 +41,6 @@ Také umístí na stavovém řádku v rámci klientské oblasti okna rámce a sp
 
 Každé okno rámce udržuje tabulky akcelerátorů volitelné, který automaticky klávesnice překlad akcelerátor za vás. Tento mechanismus umožňuje snadno definovat klávesy akcelerátoru (také nazývané klávesové zkratky), které vyvolají příkazů nabídky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití oken s rámečkem](../mfc/using-frame-windows.md)
-

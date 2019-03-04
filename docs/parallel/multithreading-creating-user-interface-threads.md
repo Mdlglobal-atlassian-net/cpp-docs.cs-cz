@@ -11,12 +11,12 @@ helpviewer_keywords:
 - user interface threads [C++]
 - threading [MFC], user interface threads
 ms.assetid: 446925c1-db59-46ea-ae5b-d5ae5d5b91d8
-ms.openlocfilehash: e618f11e3c574e5f53dff150beeb313d26fd4a6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac22fad95041b07e132d31a2d246e58c3b40d30c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566826"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293313"
 ---
 # <a name="multithreading-creating-mfc-user-interface-threads"></a>Multithreading: Vytváření vláken uživatelského rozhraní MFC
 
@@ -28,10 +28,10 @@ První věc, kterou je třeba provést při vytváření vlákna uživatelského
 
 |Funkce|Účel|
 |--------------|-------------|
-|[ExitInstance –](../mfc/reference/cwinthread-class.md#exitinstance)|Proveďte vyčištění při ukončení vlákna. Obvykle přepsána.|
-|[InitInstance –](../mfc/reference/cwinthread-class.md#initinstance)|Provede inicializaci instance vlákna. Musí být přepsána.|
+|[ExitInstance](../mfc/reference/cwinthread-class.md#exitinstance)|Proveďte vyčištění při ukončení vlákna. Obvykle přepsána.|
+|[InitInstance](../mfc/reference/cwinthread-class.md#initinstance)|Provede inicializaci instance vlákna. Musí být přepsána.|
 |[ONIDLE –](../mfc/reference/cwinthread-class.md#onidle)|Proveďte zpracování specifické pro vlákno doby nečinnosti. Obvykle není přepsána.|
-|[PreTranslateMessage –](../mfc/reference/cwinthread-class.md#pretranslatemessage)|Filtrovat zprávy před odesláním do `TranslateMessage` a `DispatchMessage`. Obvykle není přepsána.|
+|[PreTranslateMessage](../mfc/reference/cwinthread-class.md#pretranslatemessage)|Filtrovat zprávy před odesláním do `TranslateMessage` a `DispatchMessage`. Obvykle není přepsána.|
 |[ProcessWndProcException](../mfc/reference/cwinthread-class.md#processwndprocexception)|Zachytily neošetřené výjimky vyvolané obslužnými rutinami vlákna zpráv a příkazů. Obvykle není přepsána.|
 |[Spuštění](../mfc/reference/cwinthread-class.md#run)|Řídící funkce pro vlákno. Obsahuje pumpu zpráv. Přepsat jen zřídka.|
 
@@ -57,6 +57,6 @@ Knihovna MFC poskytuje dvě verze funkce `AfxBeginThread` prostřednictvím pře
 
 - [Procesy a vlákna](/windows/desktop/ProcThread/processes-and-threads)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Multithreading s použitím jazyka C++ a prostředí MFC](multithreading-with-cpp-and-mfc.md)

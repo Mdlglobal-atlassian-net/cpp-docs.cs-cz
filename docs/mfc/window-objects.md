@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Visual C++, window objects [MFC]
 - HWND, window objects [MFC]
 ms.assetid: 28b33ce2-af05-4617-9d03-1cb9a02be687
-ms.openlocfilehash: 3e20ef1f3643b9e802c7cdc399d3436ceadeae79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b62f43aa0d37c5e614636b3d7543bc927d41039b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566696"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299865"
 ---
 # <a name="window-objects"></a>Objekty oken
 
@@ -57,7 +57,6 @@ Jedním z primárních účelů `CWnd` je poskytnout rozhraní pro zpracování 
 
 - [Grafické objekty](../mfc/graphic-objects.md): pera, štětce, písma, rastrové obrázky, palety, oblastí
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Windows](../mfc/windows.md)
-

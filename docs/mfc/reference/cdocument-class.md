@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-ms.openlocfilehash: e84ceb11ad789ef3bd6933292030ef2af6f1d817
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7358c2206c15660b9ffb283802283ee71e57f03
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609310"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299072"
 ---
 # <a name="cdocument-class"></a>CDocument – třída
 
@@ -375,7 +375,7 @@ virtual POSITION FindChunk(
 *identifikátor GUID*<br/>
 Určuje identifikátor GUID blok, který se má najít.
 
-*Identifikátor PID*<br/>
+*pid*<br/>
 Určuje identifikátor PID blok k vyhledání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -506,7 +506,7 @@ virtual BOOL GetThumbnail(
 
 ### <a name="parameters"></a>Parametry
 
-*CX*<br/>
+*cx*<br/>
 Určuje šířku a výšku rastrového obrázku.
 
 *phbmp*<br/>
@@ -753,7 +753,7 @@ virtual void OnDrawThumbnail(
 
 ### <a name="parameters"></a>Parametry
 
-*řadič domény*<br/>
+*dc*<br/>
 Odkaz na kontext zařízení.
 
 *lprcBounds*<br/>
@@ -1073,7 +1073,7 @@ virtual void RemoveChunk(
 *identifikátor GUID*<br/>
 Určuje identifikátor GUID blok, který se má odebrat.
 
-*Identifikátor PID*<br/>
+*Pid*<br/>
 Určuje identifikátor PID blok má být odebrán.
 
 ### <a name="remarks"></a>Poznámky
@@ -1252,7 +1252,7 @@ Tato funkce volá [CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate)
 
 [!code-cpp[NVC_MFCDocView#64](../../mfc/codesnippet/cpp/cdocument-class_9.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
 [Ukázky knihovny MFC SNAPVW](../../visual-cpp-samples.md)<br/>

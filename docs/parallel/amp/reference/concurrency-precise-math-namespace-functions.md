@@ -90,62 +90,62 @@ f1_keywords:
 - amp_math/Concurrency::precise_math::trunc
 - amp_math/Concurrency::precise_math::truncf
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-ms.openlocfilehash: ccbb9bdda3132626a6bf76161104c9716a9b5c89
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7690c0629e7035d0130f0a7dbdcabf3e959ae7b6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469352"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297343"
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Funkce oboru názvů Concurrency::precise_math
 
 ||||
 |-|-|-|
-|[Funkce ACOS](#acos)|[acosf](#acosf)|[acosh –](#acosh)|
-|[acoshf](#acoshf)|[ASIN](#asin)|[asinf –](#asinf)|
-|[asinh –](#asinh)|[asinhf –](#asinhf)|[Atan](#atan)|
+|[acos](#acos)|[acosf](#acosf)|[acosh](#acosh)|
+|[acoshf](#acoshf)|[asin](#asin)|[asinf –](#asinf)|
+|[asinh](#asinh)|[asinhf](#asinhf)|[atan](#atan)|
 |[atan2](#atan2)|[atan2f](#atan2f)|[atanf –](#atanf)|
-|[atanh –](#atanh)|[atanhf –](#atanhf)|[cbrt](#cbrt)|
-|[cbrtf](#cbrtf)|[Ceil –](#ceil)|[ceilf –](#ceilf)|
-|[copysign –](#copysign)|[copysignf –](#copysignf)|[Cos](#cos)|
-|[cosf](#cosf)|[COSH –](#cosh)|[coshf](#coshf)|
-|[cospi](#cospi)|[cospif –](#cospif)|[erf](#erf)|
-|[erfc](#erfc)|[erfcf](#erfcf)|[erfcinv –](#erfcinv)|
-|[erfcinvf](#erfcinvf)|[erff](#erff)|[erfinv –](#erfinv)|
-|[erfinvf –](#erfinvf)|[exp](#exp)|[exp10](#exp10)|
-|[exp10f –](#exp10f)|[exp2](#exp2)|[exp2f](#exp2f)|
+|[atanh](#atanh)|[atanhf](#atanhf)|[cbrt](#cbrt)|
+|[cbrtf](#cbrtf)|[ceil](#ceil)|[ceilf –](#ceilf)|
+|[copysign –](#copysign)|[copysignf](#copysignf)|[cos](#cos)|
+|[cosf](#cosf)|[cosh](#cosh)|[coshf](#coshf)|
+|[cospi](#cospi)|[cospif](#cospif)|[erf](#erf)|
+|[erfc](#erfc)|[erfcf](#erfcf)|[erfcinv](#erfcinv)|
+|[erfcinvf](#erfcinvf)|[erff](#erff)|[erfinv](#erfinv)|
+|[erfinvf](#erfinvf)|[exp](#exp)|[exp10](#exp10)|
+|[exp10f](#exp10f)|[exp2](#exp2)|[exp2f](#exp2f)|
 |[expf](#expf)|[expm1](#expm1)|[expm1f](#expm1f)|
 |[fabs –](#fabs)|[fabsf –](#fabsf)|[Dolní mez](#floor)|
-|[fdim –](#fdim)|[fdimf –](#fdimf)||
-|[floorf](#floorf)|[fma](#fma)|[fmaf –](#fmaf)|
+|[fdim](#fdim)|[fdimf](#fdimf)||
+|[floorf](#floorf)|[fma](#fma)|[fmaf](#fmaf)|
 [fmax](#fmax)|[fmaxf](#fmaxf)||
 |[Fmin –](#fmin)|[fminf –](#fminf)|[Fmod –](#fmod)|
 |[fmodf](#fmodf)|[fpclassify](#fpclassify)|[frexp](#frexp)|
-|[frexpf](#frexpf)|[hypot –](#hypot)|[hypotf –](#hypotf)|
-|[ilogb –](#ilogb)|[ilogbf](#ilogbf)|[isfinite](#isfinite)|
-|[isinf –](#isinf)|[isNaN –](#isnan)|[isnormal –](#isnormal)|
+|[frexpf](#frexpf)|[hypot](#hypot)|[hypotf](#hypotf)|
+|[ilogb](#ilogb)|[ilogbf](#ilogbf)|[isfinite](#isfinite)|
+|[isinf](#isinf)|[isnan](#isnan)|[isnormal](#isnormal)|
 |[ldexp](#ldexp)|[ldexpf](#ldexpf)|[lgamma](#lgamma)|
-|[lgammaf](#lgammaf)|[protokol](#log)|[log10](#log10)|
-|[log10f](#log10f)|[log1p –](#log1p)|[log1pf](#log1pf)|
-|[log2](#log2)|[log2f](#log2f)|[logb –](#logb)|
-|[logbf –](#logbf)|[logf –](#logf)|[modf –](#modf)|
+|[lgammaf](#lgammaf)|[log](#log)|[log10](#log10)|
+|[log10f](#log10f)|[log1p](#log1p)|[log1pf](#log1pf)|
+|[log2](#log2)|[log2f](#log2f)|[logb](#logb)|
+|[logbf](#logbf)|[logf](#logf)|[modf](#modf)|
 |[modff](#modff)|[NaN](#nan)|[nanf –](#nanf)|
-|[nearbyint –](#nearbyint)|[nearbyintf](#nearbyintf)|[nextafter –](#nextafter)|
-|[nextafterf](#nextafterf)|[(Phi)](#phi)|[phif –](#phif)|
-|[Pow](#pow)|[powf –](#powf)|[probit –](#probit)|
+|[nearbyint –](#nearbyint)|[nearbyintf](#nearbyintf)|[nextafter](#nextafter)|
+|[nextafterf](#nextafterf)|[phi](#phi)|[phif](#phif)|
+|[Pow](#pow)|[powf](#powf)|[probit](#probit)|
 |[probitf](#probitf)|[rcbrt](#rcbrt)|[rcbrtf](#rcbrtf)|
 |[Zbývající](#remainder)|[remainderf](#remainderf)|[remquo](#remquo)|
 |[remquof](#remquof)|[Zaokrouhlit](#round)|[roundf –](#roundf)|
-|[rsqrt –](#rsqrt)|[rsqrtf](#rsqrtf)|[scalb –](#scalb)|
+|[rsqrt](#rsqrt)|[rsqrtf](#rsqrtf)|[scalb –](#scalb)|
 |[scalbf](#scalbf)|[scalbn](#scalbn)|[scalbnf](#scalbnf)|
-|[signbit –](#signbit)|[signbitf –](#signbitf)|[Sin](#sin)|
+|[signbit](#signbit)|[signbitf](#signbitf)|[sin](#sin)|
 |[sincos –](#sincos)|[sincosf](#sincosf)|[sinf –](#sinf)|
-|[SINH –](#sinh)|[sinhf](#sinhf)|[sinpi –](#sinpi)|
-|[sinpif –](#sinpif)|[sqrt](#sqrt)|[sqrtf](#sqrtf)|
-|[Tan](#tan)|[tanf –](#tanf)|[TANH –](#tanh)|
-|[tanhf](#tanhf)|[tanpi –](#tanpi)|[tanpif –](#tanpif)|
-|[tgamma](#tgamma)|[tgammaf](#tgammaf)|[TRUNC –](#trunc)|
-|[truncf –](#truncf)|
+|[sinh](#sinh)|[sinhf](#sinhf)|[sinpi](#sinpi)|
+|[sinpif](#sinpif)|[sqrt](#sqrt)|[sqrtf](#sqrtf)|
+|[Tan](#tan)|[tanf –](#tanf)|[tanh](#tanh)|
+|[tanhf](#tanhf)|[tanpi](#tanpi)|[tanpif –](#tanpif)|
+|[tgamma](#tgamma)|[tgammaf](#tgammaf)|[trunc](#trunc)|
+|[truncf](#truncf)|
 
 ##  <a name="acos"></a>  Funkce ACOS
 
@@ -159,14 +159,14 @@ inline double acos(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí hodnotu Arkus kosinus argumentu
 
-##  <a name="acosf"></a>  acosf –
+##  <a name="acosf"></a>  acosf
 
 Vypočítá arkuskosinus argumentu
 
@@ -176,7 +176,7 @@ inline float acosf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -195,7 +195,7 @@ inline double acosh(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -212,7 +212,7 @@ inline float acoshf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -231,7 +231,7 @@ inline double asin(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -248,7 +248,7 @@ inline float asinf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -267,7 +267,7 @@ inline double asinh(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -284,7 +284,7 @@ inline float asinhf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -303,7 +303,7 @@ inline double atan(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -329,7 +329,7 @@ inline double atan2(
 *_Y*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -351,7 +351,7 @@ inline float atan2f(
 *_Y*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -368,7 +368,7 @@ inline float atanf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -387,7 +387,7 @@ inline double atanh(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -404,14 +404,14 @@ inline float atanhf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí inverzní hodnotu hyperbolického tangentu argumentu
 
-##  <a name="cbrt"></a>  cbrt –
+##  <a name="cbrt"></a>  cbrt
 
 Vypočítá reálné kořenové datové krychle argumentu
 
@@ -423,14 +423,14 @@ inline double cbrt(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí skutečný datové krychle odmocninu argumentu
 
-##  <a name="cbrtf"></a>  cbrtf –
+##  <a name="cbrtf"></a>  cbrtf
 
 Vypočítá reálné kořenové datové krychle argumentu
 
@@ -440,14 +440,14 @@ inline float cbrtf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí skutečný datové krychle odmocninu argumentu
 
-##  <a name="ceil"></a>  Ceil –
+##  <a name="ceil"></a>  ceil
 
 Vypočítá horní mez argumentu
 
@@ -459,7 +459,7 @@ inline double ceil(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -476,7 +476,7 @@ inline float ceilf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -499,7 +499,7 @@ inline double copysign(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 *_Y*<br/>
@@ -521,7 +521,7 @@ inline float copysignf(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 *_Y*<br/>
@@ -531,7 +531,7 @@ Hodnota s plovoucí desetinnou čárkou
 
 Vrátí hodnotu s velikost proměnné _X a _y znaménko
 
-##  <a name="cos"></a>  Cos
+##  <a name="cos"></a>  cos
 
 Vypočítá kosinus argumentu
 
@@ -543,14 +543,14 @@ inline double cos(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí hodnotu kosinus argumentu
 
-##  <a name="cosf"></a>  cosf –
+##  <a name="cosf"></a>  cosf
 
 Vypočítá kosinus argumentu
 
@@ -560,7 +560,7 @@ inline float cosf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -579,7 +579,7 @@ inline double cosh(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -596,14 +596,14 @@ inline float coshf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí hodnotu hyperbolického kosinu argumentu
 
-##  <a name="cospi"></a>  cospi –
+##  <a name="cospi"></a>  cospi
 
 Vypočítá hodnotu kosinus pro číslo pí \* proměnné _X
 
@@ -615,14 +615,14 @@ inline double cospi(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí hodnotu kosinus pro číslo pí \* proměnné _X
 
-##  <a name="cospif"></a>  cospif –
+##  <a name="cospif"></a>  cospif
 
 Vypočítá hodnotu kosinus pro číslo pí \* proměnné _X
 
@@ -632,7 +632,7 @@ inline float cospif(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -651,7 +651,7 @@ inline double erf(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -670,7 +670,7 @@ inline double erfc(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -687,7 +687,7 @@ inline float erfcf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -706,7 +706,7 @@ inline double erfcinv(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -723,7 +723,7 @@ inline float erfcinvf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -740,7 +740,7 @@ inline float erff(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -759,7 +759,7 @@ inline double erfinv(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -776,14 +776,14 @@ inline float erfinvf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí inverzní chybovou funkci proměnné _X
 
-##  <a name="exp10"></a>  exp10 –
+##  <a name="exp10"></a>  exp10
 
 Vypočítá základní-10 exponenciálním argumentu
 
@@ -795,14 +795,14 @@ inline double exp10(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí základní-10 exponenciálním argumentu
 
-##  <a name="exp10f"></a>  exp10f –
+##  <a name="exp10f"></a>  exp10f
 
 Vypočítá základní-10 exponenciálním argumentu
 
@@ -812,7 +812,7 @@ inline float exp10f(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -831,7 +831,7 @@ inline double expm1(double exponent) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*Exponent*<br/>
+*exponent*<br/>
 Exponenciální termín *n* matematického výrazu `e` <sup>n</sup>, kde `e` je základ přirozeného logaritmu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -848,7 +848,7 @@ inline float expm1f(float exponent) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*Exponent*<br/>
+*exponent*<br/>
 Exponenciální termín *n* matematického výrazu `e` <sup>n</sup>, kde `e` je základ přirozeného logaritmu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -867,14 +867,14 @@ inline double exp(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí hodnotu exponenciální funkci argumentu e base
 
-##  <a name="expf"></a>  expf –
+##  <a name="expf"></a>  expf
 
 Vypočítá exponenciální funkci argumentu base-e
 
@@ -884,7 +884,7 @@ inline float expf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -903,14 +903,14 @@ inline double exp2(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí hodnotu exponenciální argumentu base-2
 
-##  <a name="exp2f"></a>  exp2f –
+##  <a name="exp2f"></a>  exp2f
 
 Vypočítá exponenciální argumentu base-2
 
@@ -920,7 +920,7 @@ inline float exp2f(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -939,7 +939,7 @@ inline double fabs(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -956,7 +956,7 @@ inline float fabsf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -979,7 +979,7 @@ inline double fdim(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou *_Y*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
@@ -999,7 +999,7 @@ inline float fdimf(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou *_Y*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
@@ -1019,7 +1019,7 @@ inline double floor(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1036,14 +1036,14 @@ inline float floorf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí dolní mez argumentu
 
-## <a name="a-namefma-fma"></a><a name="fma"> FMA
+## <a name="a-namefma-fma"></a><a name="fma"> fma
 
 Vypočítá součin prvního a druhého zadaného argumentu, poté přičte třetí zadaný argument na malá. celý výpočet se provádí jako jediná operace.
 ```
@@ -1062,7 +1062,7 @@ inline double fma(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 První argument s plovoucí desetinnou čárkou.
 *_Y*<br/>
 Druhý argument s plovoucí desetinnou čárkou.
@@ -1073,7 +1073,7 @@ Třetí argument s plovoucí desetinnou čárkou.
 
 Výsledek výrazu (_X \* _Y) + _Z. Celý výpočet se provádí jako jediná operace; To znamená že dílčí výrazy se počítají s nekonečnou přesností a pouze konečný výsledek zaokrouhlen.
 
-## <a name="fmaf"></a> fmaf –
+## <a name="fmaf"></a> fmaf
 
 Vypočítá součin prvního a druhého zadaného argumentu, poté přičte třetí zadaný argument na malá. celý výpočet se provádí jako jediná operace.
 ```
@@ -1086,7 +1086,7 @@ inline float fmaf(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 První argument s plovoucí desetinnou čárkou.
 *_Y*<br/>
 Druhý argument s plovoucí desetinnou čárkou.
@@ -1097,7 +1097,7 @@ Třetí argument s plovoucí desetinnou čárkou.
 
 Výsledek výrazu (_X \* _Y) + _Z. Celý výpočet se provádí jako jediná operace; To znamená že dílčí výrazy se počítají s nekonečnou přesností a pouze konečný výsledek zaokrouhlen.
 
-##  <a name="fmax"></a>  Fmax –
+##  <a name="fmax"></a>  fmax
 
 Určí maximální číselnou hodnotu argumentů
 
@@ -1113,7 +1113,7 @@ inline double fmax(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 *_Y*<br/>
@@ -1123,7 +1123,7 @@ Hodnota s plovoucí desetinnou čárkou
 
 Vrátit maximální číselnou hodnotu argumentů
 
-##  <a name="fmaxf"></a>  fmaxf –
+##  <a name="fmaxf"></a>  fmaxf
 
 Určí maximální číselnou hodnotu argumentů
 
@@ -1135,7 +1135,7 @@ inline float fmaxf(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 *_Y*<br/>
@@ -1161,7 +1161,7 @@ inline double fmin(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 *_Y*<br/>
@@ -1183,7 +1183,7 @@ inline float fminf(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 *_Y*<br/>
@@ -1209,7 +1209,7 @@ inline double fmod(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 První argument s plovoucí desetinnou čárkou.
 
 *_Y*<br/>
@@ -1219,7 +1219,7 @@ Druhý argument s plovoucí desetinnou čárkou.
 
 Zbývající část `_X` dělený `_Y`; to znamená, že hodnota `_X`  -  `_Y` *n*, kde *n* je celé číslo tak, aby velikost `_X`  -  `_Y` *n* je menší než velikost `_Y`.
 
-##  <a name="fmodf"></a>  fmodf –
+##  <a name="fmodf"></a>  fmodf
 
 Vypočítá zbytek z prvního zadaného argumentu děleného podle druhého zadaného argumentu.
 
@@ -1231,7 +1231,7 @@ inline float fmodf(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 První argument s plovoucí desetinnou čárkou.
 
 *_Y*<br/>
@@ -1253,7 +1253,7 @@ inline int fpclassify(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1276,7 +1276,7 @@ inline double frexp(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 *_Exp*<br/>
@@ -1286,7 +1286,7 @@ Vrátí exponent proměnné _X celé číslo s plovoucí desetinnou čárkou
 
 Vrátí hodnotu proměnné _X mantisa
 
-##  <a name="frexpf"></a>  frexpf –
+##  <a name="frexpf"></a>  frexpf
 
 Načte mantisu a exponent proměnné _X
 
@@ -1298,7 +1298,7 @@ inline float frexpf(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 *_Exp*<br/>
@@ -1324,7 +1324,7 @@ inline double hypot(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 *_Y*<br/>
@@ -1346,7 +1346,7 @@ inline float hypotf(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 *_Y*<br/>
@@ -1368,7 +1368,7 @@ inline int ilogb(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1385,7 +1385,7 @@ inline int ilogbf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1404,7 +1404,7 @@ inline int isfinite(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1423,7 +1423,7 @@ inline int isinf(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1442,7 +1442,7 @@ inline int isnan(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1461,7 +1461,7 @@ inline int isnormal(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1484,7 +1484,7 @@ inline double ldexp(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou, mantisa
 
 *_Exp*<br/>
@@ -1492,7 +1492,7 @@ Celočíselná hodnota, exponent
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu proměnné _X \* 2 ^ _Exp
+Returns _X \* 2^_Exp
 
 ##  <a name="ldexpf"></a>  ldexpf –
 
@@ -1506,7 +1506,7 @@ inline float ldexpf(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou, mantisa
 
 *_Exp*<br/>
@@ -1514,9 +1514,9 @@ Celočíselná hodnota, exponent
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu proměnné _X \* 2 ^ _Exp
+Returns _X \* 2^_Exp
 
-##  <a name="lgamma"></a>  lgamma –
+##  <a name="lgamma"></a>  lgamma
 
 Vypočítá absolutní hodnotu argumentu gama přirozený logaritmus
 
@@ -1532,7 +1532,7 @@ inline double lgamma(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 *_Přihlásit*<br/>
@@ -1542,7 +1542,7 @@ Vrátí znaménko
 
 Vrátí přirozený logaritmus absolutní hodnotu argumentu gama
 
-##  <a name="lgammaf"></a>  lgammaf –
+##  <a name="lgammaf"></a>  lgammaf
 
 Vypočítá absolutní hodnotu argumentu gama přirozený logaritmus
 
@@ -1554,7 +1554,7 @@ inline float lgammaf(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 *_Přihlásit*<br/>
@@ -1576,7 +1576,7 @@ inline double log(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1595,7 +1595,7 @@ inline double log10(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1612,7 +1612,7 @@ inline float log10f(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1631,7 +1631,7 @@ inline double log1p(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1648,7 +1648,7 @@ inline float log1pf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1667,7 +1667,7 @@ inline double log2(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1684,7 +1684,7 @@ inline float log2f(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1703,7 +1703,7 @@ inline double logb(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1720,7 +1720,7 @@ inline float logbf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1737,14 +1737,14 @@ inline float logf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí logaritmus argumentu o základu e
 
-##  <a name="modf"></a>  modf –
+##  <a name="modf"></a>  modf
 
 Rozdělí zadaný argument na frakce a celá čísla.
 
@@ -1760,7 +1760,7 @@ inline double modf(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 *_Iptr*<br/>
@@ -1770,7 +1770,7 @@ Hodnota s plovoucí desetinnou čárkou
 
 Podepsaná desetinná část čísla `_X`.
 
-##  <a name="modff"></a>  modff –
+##  <a name="modff"></a>  modff
 
 Rozdělí zadaný argument na frakce a celá čísla.
 
@@ -1782,7 +1782,7 @@ inline float modff(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 *_Iptr*<br/>
@@ -1802,7 +1802,7 @@ inline double nan(int _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Celočíselná hodnota
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1819,7 +1819,7 @@ inline float nanf(int _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Celočíselná hodnota
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1838,7 +1838,7 @@ inline double nearbyint(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1855,7 +1855,7 @@ inline float nearbyintf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1878,7 +1878,7 @@ inline double nextafter(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 *_Y*<br/>
@@ -1900,7 +1900,7 @@ inline float nextafterf(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 *_Y*<br/>
@@ -1910,7 +1910,7 @@ Hodnota s plovoucí desetinnou čárkou
 
 Vrátí následující reprezentovatelnou hodnotu v typu funkce po _X ve směru _y
 
-##  <a name="phi"></a>  (Phi)
+##  <a name="phi"></a>  phi
 
 Vrátí kumulativní distribuční funkci argumentu
 
@@ -1922,14 +1922,14 @@ inline double phi(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí kumulativní distribuční funkci argumentu
 
-##  <a name="phif"></a>  phif –
+##  <a name="phif"></a>  phif
 
 Vrátí kumulativní distribuční funkci argumentu
 
@@ -1939,7 +1939,7 @@ inline float phif(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1962,7 +1962,7 @@ inline double pow(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou, základní
 
 *_Y*<br/>
@@ -1982,7 +1982,7 @@ inline float powf(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou, základní
 
 *_Y*<br/>
@@ -2002,14 +2002,14 @@ inline double probit(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí inverzní kumulativní distribuční funkci argumentu
 
-##  <a name="probitf"></a>  probitf –
+##  <a name="probitf"></a>  probitf
 
 Vrátí inverzní kumulativní distribuční funkci argumentu
 
@@ -2019,14 +2019,14 @@ inline float probitf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí inverzní kumulativní distribuční funkci argumentu
 
-##  <a name="rcbrt"></a>  rcbrt –
+##  <a name="rcbrt"></a>  rcbrt
 
 Vrátí převrácenou hodnotu argumentu kořenové datové krychle
 
@@ -2038,14 +2038,14 @@ inline double rcbrt(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí převrácenou hodnotu argumentu kořenové datové krychle
 
-##  <a name="rcbrtf"></a>  rcbrtf –
+##  <a name="rcbrtf"></a>  rcbrtf
 
 Vrátí převrácenou hodnotu argumentu kořenové datové krychle
 
@@ -2055,7 +2055,7 @@ inline float rcbrtf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2078,7 +2078,7 @@ inline double remainder(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 *_Y*<br/>
@@ -2100,7 +2100,7 @@ inline float remainderf(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 *_Y*<br/>
@@ -2110,7 +2110,7 @@ Hodnota s plovoucí desetinnou čárkou
 
 Vrátí hodnotu proměnné _X REM _Y
 
-##  <a name="remquo"></a>  remquo –
+##  <a name="remquo"></a>  remquo
 
 Vypočítá zbytek z prvního zadaného argumentu děleného podle druhého zadaného argumentu. Také vypočítá podíl mantisy prvního zadaného argumentu děleného mantisou druhého zadaného argumentu a vrátí podíl pomocí umístění zadaného ve třetím argumentu.
 
@@ -2128,20 +2128,20 @@ inline double remquo(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 První argument s plovoucí desetinnou čárkou.
 
 *_Y*<br/>
 Druhý argument s plovoucí desetinnou čárkou.
 
-*Hodnoty _Quo*<br/>
+*_Quo*<br/>
 [out] Adresa celého čísla, který se používá k vrácení podílu zlomkových bitů `_X` dělený dělené desetinnými bity `_Y`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí zbytek `_X` dělený `_Y`.
 
-##  <a name="remquof"></a>  remquof –
+##  <a name="remquof"></a>  remquof
 
 Vypočítá zbytek z prvního zadaného argumentu děleného podle druhého zadaného argumentu. Také vypočítá podíl mantisy prvního zadaného argumentu děleného mantisou druhého zadaného argumentu a vrátí podíl pomocí umístění zadaného ve třetím argumentu.
 
@@ -2154,13 +2154,13 @@ inline float remquof(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 První argument s plovoucí desetinnou čárkou.
 
 *_Y*<br/>
 Druhý argument s plovoucí desetinnou čárkou.
 
-*Hodnoty _Quo*<br/>
+*_Quo*<br/>
 [out] Adresa celého čísla, který se používá k vrácení podílu zlomkových bitů `_X` dělený dělené desetinnými bity `_Y`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2179,7 +2179,7 @@ inline double round(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2196,7 +2196,7 @@ inline float roundf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2215,14 +2215,14 @@ inline double rsqrt(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí převrácenou hodnotu druhé odmocniny argumentu
 
-##  <a name="rsqrtf"></a>  rsqrtf –
+##  <a name="rsqrtf"></a>  rsqrtf
 
 Vrátí převrácenou hodnotu druhé odmocniny argumentu
 
@@ -2232,7 +2232,7 @@ inline float rsqrtf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2255,7 +2255,7 @@ inline double scalb(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 *_Y*<br/>
@@ -2263,7 +2263,7 @@ Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu proměnné _X \* (FLT_RADIX ^ _Y)
+Returns _X \* (FLT_RADIX ^ _Y)
 
 ##  <a name="scalbf"></a>  scalbf –
 
@@ -2277,7 +2277,7 @@ inline float scalbf(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 *_Y*<br/>
@@ -2285,7 +2285,7 @@ Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu proměnné _X \* (FLT_RADIX ^ _Y)
+Returns _X \* (FLT_RADIX ^ _Y)
 
 ##  <a name="scalbn"></a>  scalbn –
 
@@ -2303,7 +2303,7 @@ inline double scalbn(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 *_Y*<br/>
@@ -2311,7 +2311,7 @@ Celočíselná hodnota
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu proměnné _X \* (FLT_RADIX ^ _Y)
+Returns _X \* (FLT_RADIX ^ _Y)
 
 ##  <a name="scalbnf"></a>  scalbnf –
 
@@ -2325,7 +2325,7 @@ inline float scalbnf(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 *_Y*<br/>
@@ -2333,7 +2333,7 @@ Celočíselná hodnota
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu proměnné _X \* (FLT_RADIX ^ _Y)
+Returns _X \* (FLT_RADIX ^ _Y)
 
 ##  <a name="signbit"></a>  signbit –
 
@@ -2347,7 +2347,7 @@ inline int signbit(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2364,7 +2364,7 @@ inline int signbitf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2383,7 +2383,7 @@ inline double sin(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2400,7 +2400,7 @@ inline float sinf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2425,13 +2425,13 @@ inline void sincos(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
-*_MALÁ*<br/>
+*_S*<br/>
 Vrátí sinus hodnotu proměnné _X
 
-*_V*<br/>
+*_C*<br/>
 Vrátí kosinus hodnotu proměnné _X
 
 ##  <a name="sincosf"></a>  sincosf –
@@ -2447,13 +2447,13 @@ inline void sincosf(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
-*_MALÁ*<br/>
+*_S*<br/>
 Vrátí sinus hodnotu proměnné _X
 
-*_V*<br/>
+*_C*<br/>
 Vrátí kosinus hodnotu proměnné _X
 
 ##  <a name="sinh"></a>  SINH –
@@ -2468,7 +2468,7 @@ inline double sinh(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2485,7 +2485,7 @@ inline float sinhf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2504,7 +2504,7 @@ inline double sinpi(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2521,7 +2521,7 @@ inline float sinpif(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2540,7 +2540,7 @@ inline double sqrt(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2557,7 +2557,7 @@ inline float sqrtf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2576,14 +2576,14 @@ inline double tan(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí hodnotu tangentu argumentu
 
-##  <a name="tanf"></a>  tanf –
+##  <a name="tanf"></a>  tanf
 
 Vypočítá hodnotu tangentu argumentu
 
@@ -2593,7 +2593,7 @@ inline float tanf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2612,7 +2612,7 @@ inline double tanh(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2629,14 +2629,14 @@ inline float tanhf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí hodnotu hyperbolického tangentu argumentu
 
-##  <a name="tanpi"></a>  tanpi –
+##  <a name="tanpi"></a>  tanpi
 
 Vypočítá hodnotu tangentu pí \* proměnné _X
 
@@ -2648,7 +2648,7 @@ inline double tanpi(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2665,14 +2665,14 @@ inline float tanpif(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí hodnotu tangens pro číslo pí \* proměnné _X
 
-##  <a name="tgamma"></a>  tgamma –
+##  <a name="tgamma"></a>  tgamma
 
 Vypočítá funkce gamma proměnné _x
 
@@ -2684,14 +2684,14 @@ inline double tgamma(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí výsledek funkce gamma proměnné _x
 
-##  <a name="tgammaf"></a>  tgammaf –
+##  <a name="tgammaf"></a>  tgammaf
 
 Vypočítá funkce gamma proměnné _x
 
@@ -2701,7 +2701,7 @@ inline float tgammaf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2720,7 +2720,7 @@ inline double trunc(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2737,13 +2737,13 @@ inline float truncf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí komponentu celé číslo argumentu
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Concurrency::precise_math – obor názvů](concurrency-precise-math-namespace.md)

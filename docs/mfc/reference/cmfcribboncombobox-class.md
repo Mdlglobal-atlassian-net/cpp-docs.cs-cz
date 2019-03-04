@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCRibbonComboBox [MFC], SelectItem
 - CMFCRibbonComboBox [MFC], SetDropDownHeight
 ms.assetid: 9b29a6a4-cf17-4152-9b13-0bf90784b30d
-ms.openlocfilehash: 5c9e6c43c4e87508dc9ab66976309f80cdf09adc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89007ea3eb7fd0aef28caadf439195b4090a05d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541424"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294432"
 ---
 # <a name="cmfcribboncombobox-class"></a>Cmfcribboncombobox – třída
 
@@ -102,11 +102,11 @@ Následující příklad ukazuje, jak vytvořit objekt `CMFCRibbonComboBox` tř�
 
 [Cmfcribbonbaseelement –](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
-[Cmfcribbonbutton –](../../mfc/reference/cmfcribbonbutton-class.md)
+[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
 
-[Cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md)
+[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)
 
-[Cmfcribboncombobox –](../../mfc/reference/cmfcribboncombobox-class.md)
+[CMFCRibbonComboBox](../../mfc/reference/cmfcribboncombobox-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -165,7 +165,7 @@ CMFCRibbonComboBox();
 *lpszLabel*<br/>
 [in] Zobrazit popisek pole se seznamem.
 
-*nvybrán Nobrázek*<br/>
+*nImage*<br/>
 [in] Malý obrázek indexu pole se seznamem.
 
 ### <a name="remarks"></a>Poznámky
@@ -286,7 +286,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení pro pole se seznamem.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -435,7 +435,7 @@ void SetDropDownHeight(int nHeight);
 
 Výchozí výška je 150 pixelů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

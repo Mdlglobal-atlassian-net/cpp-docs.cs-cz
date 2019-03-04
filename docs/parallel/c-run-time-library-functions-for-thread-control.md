@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - _endthreadex function
 ms.assetid: 39d0529c-c392-4c6f-94f5-105d1e8054e4
-ms.openlocfilehash: ea04e42730b0e7d1f0fafe5d3139d2b1a6aed970
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 392fc8e842d86a17013502ffc68c89eb65ba23db
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572156"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299978"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>Funkce běhové knihovny jazyka C pro řízení vláken
 
@@ -43,6 +43,6 @@ Knihovny runtime LIBCMT a MSVCRT jazyka C poskytují následující funkce pro v
 
 [_Endthread](../c-runtime-library/reference/endthread-endthreadex.md) funkce ukončí vlákno vytvořil `_beginthread` (a naopak `_endthreadex` ukončí vlákno vytvořil `_beginthreadex`). Vlákna automaticky ukončit, když jsou dokončeny. `_endthread` a `_endthreadex` jsou užitečné pro podmíněné ukončení v rámci vlákno. Vlákno vyhrazený pro zpracování, komunikace například můžete skončit, pokud nelze získat kontrolu nad komunikační port.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Multithreading s použitím jazyka C a prostředí Win32](multithreading-with-c-and-win32.md)

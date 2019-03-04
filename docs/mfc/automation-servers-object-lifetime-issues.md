@@ -1,5 +1,5 @@
 ---
-title: 'Automatizační servery: Problematika životnosti objektů'
+title: 'Automatizační servery: Problémy životnosti objektů'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - objects [MFC], lifetime
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Automation servers, object lifetime
 - servers, lifetime of Automation
 ms.assetid: 342baacf-4015-4a0e-be2f-321424f1cb43
-ms.openlocfilehash: 904c3023d7f27bd144c306d9d92810a91a48ecfa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f9dbc6e4f321ba10fdffa013c158d53b84331e30
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637642"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293573"
 ---
-# <a name="automation-servers-object-lifetime-issues"></a>Automatizační servery: Problematika životnosti objektů
+# <a name="automation-servers-object-lifetime-issues"></a>Automatizační servery: Problémy životnosti objektů
 
 Pokud klienta automatizace vytvoří nebo položky OLE se aktivuje, odešle server klienta ukazatel na tento objekt. Klient vytvoří odkaz na objekt pomocí volání funkce OLE [IUnknown::AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref). Tento odkaz je v platnosti až do volání klienta [IUnknown::Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release). (Klientských aplikací napsaných pomocí knihovny serveru Microsoft Foundation Class OLE – třídy nemusí provádět tyto volání; provádí se rozhraní framework.) Odkazy na objekt může zřídit systém technologie OLE a samotný server. Server by neměla zničit objekt tak dlouho, dokud externí odkazy na objekt zůstávají v platnosti.
 
@@ -28,8 +28,7 @@ Někdy okolností vynutit server ukončit, když je klient stále obsahuje odkaz
 
 V sadě Windows SDK, naleznete v tématu `IUnknown::AddRef` a `IUnknown::Release`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Automatizační servery](../mfc/automation-servers.md)<br/>
-[Afxolecanexitapp –](../mfc/reference/application-control.md#afxolecanexitapp)
-
+[AfxOleCanExitApp](../mfc/reference/application-control.md#afxolecanexitapp)

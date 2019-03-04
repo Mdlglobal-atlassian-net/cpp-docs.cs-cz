@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - message_processor class
 ms.assetid: 23afb052-daa7-44ed-bf24-d2513db748da
-ms.openlocfilehash: d6e45613e0b412b6b94dba3c4a435115e32c7d6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be6cb1c614a41919663a4cc063da66679556e498
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438217"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295237"
 ---
 # <a name="messageprocessor-class"></a>message_processor – třída
 
@@ -54,7 +54,7 @@ Datový typ datové části v rámci zprávy zpracovává situace `message_proce
 
 |Název|Popis|
 |----------|-----------------|
-|[process_incoming_message –](#process_incoming_message)|Při přepisu v odvozené třídě, provádí dopředu zpracování zpráv do bloku. Volá se jednou pokaždé, když se přidá nová zpráva a fronta je nalezena prázdný.|
+|[process_incoming_message](#process_incoming_message)|Při přepisu v odvozené třídě, provádí dopředu zpracování zpráv do bloku. Volá se jednou pokaždé, když se přidá nová zpráva a fronta je nalezena prázdný.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -124,7 +124,7 @@ virtual void wait() = 0;
 
 Implementace by měly přepsat tuto metodu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [ordered_message_processor – třída](ordered-message-processor-class.md)

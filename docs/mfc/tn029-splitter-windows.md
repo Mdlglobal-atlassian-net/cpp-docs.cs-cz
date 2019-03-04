@@ -1,5 +1,5 @@
 ---
-title: 'TN029: Dělená okna'
+title: 'TN029: Rozdělovač Windows'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.windows.splitter
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - TN029
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
-ms.openlocfilehash: 245ad33dd7bc7d3b6365463d4d2ae9538a12bfdc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c27545c6f425eda952e87c80ed1d37de9e1093a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501982"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294990"
 ---
-# <a name="tn029-splitter-windows"></a>TN029: Dělená okna
+# <a name="tn029-splitter-windows"></a>TN029: Rozdělovač Windows
 
 Tato poznámka popisuje MFC [CSplitterWnd – třída](../mfc/reference/csplitterwnd-class.md), která poskytuje okno rozdělí a spravuje, změna velikosti další podokno okna.
 
@@ -54,17 +54,17 @@ K vytvoření nového více dokumentu rozhraní (MDI) třída podřízeného rá
 
 Tady je seznam termínů, které jsou specifické pro rozdělovače oken:
 
-`CSplitterWnd`: Zobrazení okna obsahujícího podokně rozdělování ovládací prvky a posuvníků, které jsou sdíleny mezi všechny podokna na řádek nebo sloupec. Zadejte řádků a sloupců s nulovým základem čísla (je podokno první řádek = 0 and sloupec = 0).
+`CSplitterWnd`: Okno, které poskytuje podokně rozdělování ovládací prvky a posuvníků, které jsou sdíleny mezi všechny podokna na řádek nebo sloupec. Zadejte řádků a sloupců s nulovým základem čísla (je podokno první řádek = 0 and sloupec = 0).
 
-Podokno: Oknem specifické pro aplikaci, která `CSplitterWnd` spravuje. Podokno je obvykle objekt, který je odvozen z [CView Class](../mfc/reference/cview-class.md), ale může být kterýkoli [CWnd](../mfc/reference/cwnd-class.md) objekt, který má ID odpovídající podřízené okno.
+Podokno: Okno aplikace specifické pro aplikaci, která `CSplitterWnd` spravuje. Podokno je obvykle objekt, který je odvozen z [CView Class](../mfc/reference/cview-class.md), ale může být kterýkoli [CWnd](../mfc/reference/cwnd-class.md) objekt, který má ID odpovídající podřízené okno.
 
 Použití `CWnd`-odvozené objektu, předejte RUNTIME_CLASS objekt, který má `CreateView` fungovat stejně jako v případě, že jste používali `CView`-odvozené třídy. Vaše třída musíte použít DECLARE_DYNCREATE a IMPLEMENT_DYNCREATE, protože rozhraní používá dynamické vytváření za běhu. I když existuje velké množství kódu v `CSplitterWnd` , která je specifická pro `CView` třídy [CObject::IsKindOf](../mfc/reference/cobject-class.md#iskindof) vždy použita dříve, než se provádí tyto akce.
 
 Rozdělovač: Ovládací prvek, který je umístěn mezi řádky a sloupce podoken. Slouží k úpravě velikosti řádků nebo sloupců podoken.
 
-Rozdělovač pole: Ovládacího prvku v dynamické `CSplitterWnd` , můžete použít k vytvoření nových řádků nebo sloupců podoken. Je umístěný v horní části stránky svislé posuvníky nebo nalevo od vodorovné posuvníky.
+Rozdělovač pole: Ovládací prvek v dynamické `CSplitterWnd` , můžete použít k vytvoření nových řádků nebo sloupců podoken. Je umístěný v horní části stránky svislé posuvníky nebo nalevo od vodorovné posuvníky.
 
-Rozdělovač průnik: Je určena průsečíkem svislé příčky a vodorovný rozdělovač. Můžete přetáhnout pro nastavení velikosti řádků a sloupců podoken současně.
+Rozdělovač průniku: Je určena průsečíkem svislé příčky a vodorovný rozdělovač. Můžete přetáhnout pro nastavení velikosti řádků a sloupců podoken současně.
 
 ## <a name="shared-scroll-bars"></a>Posuvníky sdílené
 
@@ -136,8 +136,7 @@ Tyto funkce implementovat logiku dynamický rozdělovač okna. Toto nastavení m
 
    Spouští příkaz rozdělení klávesnice, obvykle "Window Split".
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
-

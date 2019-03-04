@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, document template strings
 ms.assetid: 8109f662-3182-4682-977a-2503321c678a
-ms.openlocfilehash: 24a5fcaea272924e20c55b8c1f5d58111e4eba13
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 563cdf51c8104035fe29cb2e11d6c2bc8155d97b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622226"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297460"
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>Řetězce šablon dokumentů, Průvodce aplikací MFC
 
@@ -39,7 +39,6 @@ Na této stránce Průvodce aplikací knihovny MFC poskytují nebo upřesněte n
    |**Nový krátký název souboru**|Nastaví název zobrazovaný v standardní Windows **nový** dialogové okno, pokud existuje více než jednu šablonu dokumentu. Pokud je vaše aplikace [automatizační server](../../mfc/automation-servers.md), tento název se používá jako krátký název objektu automatizace. Ve výchozím nastavení název projektu.|
    |**Dlouhý název typu souboru**|Nastaví název typu souboru v systémovém registru. Pokud vaše aplikace je automatizační server, tento název se používá jako dlouhý název objektu automatizace. Ve výchozím nastavení název projektu a. Dokument.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – průvodce aplikací](../../mfc/reference/mfc-application-wizard.md)
-

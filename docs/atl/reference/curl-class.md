@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CUrl class
 ms.assetid: b3894d34-47b9-4961-9719-4197153793da
-ms.openlocfilehash: ed42461af50fa83ca142127587d334cc7e75d914
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 913365e2b20015b22480dfd364d75b2be3c6355b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471510"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295653"
 ---
 # <a name="curl-class"></a>CUrl – třída
 
@@ -62,7 +62,7 @@ class CUrl
 |Název|Popis|
 |----------|-----------------|
 |[CUrl::CUrl](#curl)|Konstruktor|
-|[CUrl:: ~ CUrl](#dtor)|Destruktor.|
+|[CUrl::~CUrl](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -106,7 +106,7 @@ class CUrl
 
 `CUrl` umožňuje manipulaci s poli Adresa URL, jako je například cesta nebo port číslo. `CUrl` rozumí adresy URL v následujícím formátu:
 
-\<Schéma > ://\<uživatelské jméno >:\<heslo >\@\<název_hostitele >:\<číslo_portu > /\<UrlPath >\<ExtraInfo >
+\<Scheme>://\<UserName>:\<Password>\@\<HostName>:\<PortNumber>/\<UrlPath>\<ExtraInfo>
 
 (Některá pole jsou volitelná.) Zvažte například tuto adresu URL:
 
@@ -149,15 +149,15 @@ Příznaky, které řídí převodu do kanonického tvaru. Pokud nejsou zadány 
 
 - ATL_URL_BROWSER_MODE: Kódování nebo dekódování znaků za "#" nebo "" a neodebere prázdný znak po "". Pokud tato hodnota není zadaná, je zakódovaný celou adresu URL a odebrat koncové prázdné znaky.
 
-- ATL_URL _DECODE: převede všechny % XX sekvence znaků, včetně řídicí sekvence, než adresa URL se zpracuje.
+- ATL_URL _DECODE: Převede všechny % XX sekvence znaků, včetně řídicí sekvence, než adresa URL se zpracuje.
 
-- ATL_URL _ENCODE_PERCENT: kóduje došlo k procenta. Ve výchozím nastavení nejsou kódovaný procenta.
+- ATL_URL _ENCODE_PERCENT: Zakóduje došlo k procenta. Ve výchozím nastavení nejsou kódovaný procenta.
 
-- ATL_URL _ENCODE_SPACES_ONLY: zakóduje pouze mezery.
+- ATL_URL _ENCODE_SPACES_ONLY: Zakóduje pouze mezery.
 
-- ATL_URL _NO_ENCODE: nejde převést problematické znaky na řídicí sekvence.
+- ATL_URL _NO_ENCODE: Nelze převést problematické znaky na řídicí sekvence.
 
-- ATL_URL _NO_META: neodebere meta pořadí (jako například "."a"..") z adresy URL.
+- ATL_URL _NO_META: Neodebere meta pořadí (jako například "."a"..") z adresy URL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -225,7 +225,7 @@ Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
 
 Tato metoda přidá jeho jednotlivých polí. aby bylo možné vytvořit kompletního řetězce adresy URL v následujícím formátu:
 
-**\<schéma > ://\<uživatele >:\<předat >\@\<domény >:\<port >\<cesta >\<Další >**
+**\<scheme>://\<user>:\<pass>\@\<domain>:\<port>\<path>\<extra>**
 
 Při volání této metody *pdwMaxLength* parametr by měl obsahovat zpočátku maximální délka vyrovnávací paměti pro řetězec odkazuje *lpszUrl* parametru. Hodnota *pdwMaxLength* parametr aktualizuje skutečnou délku řetězce adresy URL.
 
@@ -249,7 +249,7 @@ CUrl(const CUrl& urlThat) throw();
 *urlThat*<br/>
 `CUrl` Objektu, který chcete zkopírovat do vytvořit adresu URL.
 
-##  <a name="dtor"></a>  CUrl:: ~ CUrl
+##  <a name="dtor"></a>  CUrl::~CUrl
 
 Destruktor.
 
@@ -598,6 +598,6 @@ Uživatelské jméno
 
 Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../atl/reference/atl-classes.md)

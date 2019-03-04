@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
-ms.openlocfilehash: 5006a648729e1fc561855fcb8cba1d658a9c82cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2501373c2ff5904343a6522e4fb18663f5de3843
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619047"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294418"
 ---
 # <a name="ole-background"></a>OLE – pozadí
 
@@ -26,7 +26,7 @@ OLE – zahrnuje mnoho různých koncepty všechny pracovní směrem k cíli bez
 
 - Propojování a vkládání
 
-   Propojování a vkládání jsou dvě metody pro ukládání položek vytvořený v dokumentu OLE, které byly vytvořeny v jiné aplikaci. Obecné informace o rozdílech mezi těmito dvěma, najdete v článku [OLE pozadí: propojování a vkládání](../mfc/ole-background-linking-and-embedding.md). Podrobnější informace najdete v článcích [kontejnery](../mfc/containers.md) a [servery](../mfc/servers.md).
+   Propojování a vkládání jsou dvě metody pro ukládání položek vytvořený v dokumentu OLE, které byly vytvořeny v jiné aplikaci. Obecné informace o rozdílech mezi těmito dvěma, najdete v článku [OLE pozadí: Propojování a vkládání](../mfc/ole-background-linking-and-embedding.md). Podrobnější informace najdete v článcích [kontejnery](../mfc/containers.md) a [servery](../mfc/servers.md).
 
 - Aktivace na místě (vizuální úpravy)
 
@@ -42,7 +42,7 @@ OLE – zahrnuje mnoho různých koncepty všechny pracovní směrem k cíli bez
 
 - Složené soubory
 
-   Složené soubory poskytovat standardní formát souboru, který zjednodušuje ukládání strukturovaných složených dokumentů pro aplikací OLE. V rámci souboru složené úložných mají mnoho funkcí adresáře a datové proudy mají mnoho funkcí souborů. Tato technologie se také nazývá strukturované úložiště. Další informace o složené soubory, najdete v článku [kontejnery: složené soubory](../mfc/containers-compound-files.md).
+   Složené soubory poskytovat standardní formát souboru, který zjednodušuje ukládání strukturovaných složených dokumentů pro aplikací OLE. V rámci souboru složené úložných mají mnoho funkcí adresáře a datové proudy mají mnoho funkcí souborů. Tato technologie se také nazývá strukturované úložiště. Další informace o složené soubory, najdete v článku [kontejnerů: Složené soubory](../mfc/containers-compound-files.md).
 
 - Jednotný přenos dat
 
@@ -64,11 +64,10 @@ Některé další důležitá témata OLE jsou popsané v následujících člá
 
 - [OLE – pozadí: Strategie implementace](../mfc/ole-background-implementation-strategies.md)
 
-- [OLE – pozadí: Implementace MFC](../mfc/ole-background-mfc-implementation.md)
+- [OLE – pozadí: Implementace v prostředí MFC](../mfc/ole-background-mfc-implementation.md)
 
 Obecné informace OLE nebyl nalezen ve výše uvedených článcích vyhledejte OLE na webu MSDN.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [OLE](../mfc/ole-in-mfc.md)
-

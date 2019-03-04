@@ -1,5 +1,5 @@
 ---
-title: Cmfcpopupmenu – třída
+title: CMFCPopupMenu Class
 ms.date: 10/18/2018
 f1_keywords:
 - CMFCPopupMenu
@@ -160,14 +160,14 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: b52ae91b7ce0111725e5ba21a7f8ca8aaa6779e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b45ac09ff87c191e55e403951fdff18cae33256d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517673"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292273"
 ---
-# <a name="cmfcpopupmenu-class"></a>Cmfcpopupmenu – třída
+# <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu Class
 
 Implementuje funkce rozbalovací nabídky Windows a rozšiřuje jej přidáním funkce, jako je odtrhnout nabídky a popisy tlačítek.
 Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
@@ -435,7 +435,7 @@ virtual BOOL Create(
 *hMenu*<br/>
 [in] Popisovač pro prostředek nabídky.
 
-*Blokováno*<br/>
+*bLocked*<br/>
 [in] Parametr logické hodnoty označující, zda je v nabídce přizpůsobitelné. Hodnota FALSE označuje, že je přizpůsobitelný rozbalovací nabídky.
 
 *bOwnMessage*<br/>
@@ -1250,7 +1250,7 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*<br/>
+*type*<br/>
 [in] Výčtový datový typ, který určuje typ animace.
 
 ### <a name="remarks"></a>Poznámky
@@ -1469,7 +1469,7 @@ void UpdateShadow(LPRECT lprectScreen = NULL);
 
 Tuto metodu volejte, když místní nabídka, která má stín překrývá animovaný obrázek.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

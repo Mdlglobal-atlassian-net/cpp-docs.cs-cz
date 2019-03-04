@@ -1,5 +1,5 @@
 ---
-title: 'Výjimky: Použití výjimek v makrech MFC a jazyce C++'
+title: 'Výjimky: Použití maker MFC a výjimek jazyka C++'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exception objects [MFC]
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - heap corruption [MFC]
 - nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
-ms.openlocfilehash: 021f80f71a3921ed10b07f481ff7b7ce934d9f7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 00e88ddabf3a8e8b591bebae7ebc8ced0e1dc637
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443378"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297707"
 ---
-# <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Výjimky: Použití výjimek v makrech MFC a jazyce C++
+# <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Výjimky: Použití maker MFC a výjimek jazyka C++
 
 Tento článek popisuje důležité informace k zápisu kódu, který používá makra zpracování výjimek knihovny MFC a klíčových slov zpracování výjimek jazyka C++.
 
@@ -35,7 +35,7 @@ Tento článek obsahuje následující témata:
 
 ##  <a name="_core_mixing_exception_keywords_and_macros"></a> Kombinování klíčová slova výjimek a makra
 
-Můžete kombinovat maker výjimek prostředí MFC a klíčová slova výjimek jazyka C++ ve stejném programu. Nemůžete ale kombinovat maker knihovny MFC s klíčová slova výjimek jazyka C++ ve stejném bloku protože makra objektů výjimek automaticky odstranit při mizení z rozsahu, zatímco kód pomocí klíčových slov zpracování výjimek ne. Další informace najdete v článku [výjimky: výjimky zachycení a odstraňování](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Můžete kombinovat maker výjimek prostředí MFC a klíčová slova výjimek jazyka C++ ve stejném programu. Nemůžete ale kombinovat maker knihovny MFC s klíčová slova výjimek jazyka C++ ve stejném bloku protože makra objektů výjimek automaticky odstranit při mizení z rozsahu, zatímco kód pomocí klíčových slov zpracování výjimek ne. Další informace najdete v článku [výjimky: Zachytávání a mazání](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
 Hlavní rozdíl mezi makra a klíčová slova je, že makra "automatické" odstranit zachycené výjimky, když výjimky dostane mimo rozsah. Kód pomocí klíčových slov není; výjimky zachyceny v bloku catch se musí explicitně odstranit. Kombinování maker a klíčová slova výjimek jazyka C++ může způsobit nevracení paměti při objektu výjimky není odstranění nebo poškození haldy výjimku při odstranění dvakrát.
 
@@ -53,9 +53,8 @@ Nelze znovu vyvolat na aktuální výjimku v rámci **zkuste** blok, který se n
 
 [!code-cpp[NVC_MFCExceptions#12](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_3.cpp)]
 
-Další informace najdete v tématu [výjimky: zkoumání obsahu výjimek](../mfc/exceptions-examining-exception-contents.md).
+Další informace najdete v tématu [výjimky: Zkoumání obsahu výjimek](../mfc/exceptions-examining-exception-contents.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zpracování výjimek](../mfc/exception-handling-in-mfc.md)
-

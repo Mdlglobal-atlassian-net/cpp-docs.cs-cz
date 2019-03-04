@@ -1,5 +1,5 @@
 ---
-title: Cmfcbasevisualmanager – třída
+title: CMFCBaseVisualManager Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCBaseVisualManager
@@ -28,14 +28,14 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: a9d3be75331004529ca1bd71a0d9422f45cac40b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c26c0c9c9026f8312218b2ac15f83a50a67be79
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440193"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292208"
 ---
-# <a name="cmfcbasevisualmanager-class"></a>Cmfcbasevisualmanager – třída
+# <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager Class
 
 Vrstva mezi odvozené vizuální vedoucí a rozhraní API Windows motiv.
 
@@ -91,11 +91,11 @@ Protože je základní třída pro všechny vizuální vedoucí, ho prostě zavo
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cmfcbasevisualmanager –](../../mfc/reference/cmfcbasevisualmanager-class.md)
+[CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxvisualmanager.h
+**Header:** afxvisualmanager.h
 
 ##  <a name="cleanupthemes"></a>  CMFCBaseVisualManager::CleanUpThemes
 
@@ -135,7 +135,7 @@ virtual BOOL DrawCheckBox(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení
 
 *Rect*<br/>
@@ -144,7 +144,7 @@ virtual BOOL DrawCheckBox(
 *bHighlighted*<br/>
 [in] Určuje, zda je zvýrazněn zaškrtávací políčko.
 
-*nInformace*<br/>
+*nState*<br/>
 [in], 0 pro není zaškrtnuto, 1 pro normální zaškrtnuté,
 
 2 pro smíšený normální.
@@ -184,7 +184,7 @@ virtual BOOL DrawComboBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *Rect*<br/>
@@ -220,7 +220,7 @@ virtual BOOL DrawComboDropButton(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*primární řadič domény*|[in] Ukazatel na kontext zařízení.|
+|*pDC*|[in] Ukazatel na kontext zařízení.|
 |*Rect*|[in] Ohraničující obdélník tlačítko rozevíracího pole se seznamem.|
 |*bDisabled*|[in] Určuje, zda je zakázaný tlačítko rozevíracího pole se seznamem.|
 |*bIsDropped*|[in] Určuje, zda se rozbalil tlačítko rozevíracího pole se seznamem.|
@@ -244,7 +244,7 @@ virtual BOOL DrawPushButton(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *Rect*<br/>
@@ -276,7 +276,7 @@ virtual BOOL DrawRadioButton(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *Rect*<br/>
@@ -317,7 +317,7 @@ virtual BOOL DrawStatusBarProgress(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *pStatusBar*<br/>
@@ -361,7 +361,7 @@ virtual void FillReBarPane(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *pBar*<br/>
@@ -408,7 +408,7 @@ void UpdateSystemColors();
 
 Pouze pro interní použití.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)

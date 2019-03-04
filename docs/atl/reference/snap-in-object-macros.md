@@ -11,12 +11,12 @@ f1_keywords:
 - atlsnap/ATL::SNAPINMENUID
 - atlsnap/ATL::SNAPINTOOLBARID_ENTRY
 ms.assetid: 4e9850c0-e395-4929-86c9-584a81828053
-ms.openlocfilehash: e3eec62e2bea92f1f308b149046b83be1b9085b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b75dd04bed4895d722939d1bf9c0a6dfff2126e0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656934"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292590"
 ---
 # <a name="snap-in-object-macros"></a>Makra objektů modulu snap-In
 
@@ -47,7 +47,7 @@ BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP(classname)
 
 ### <a name="parameters"></a>Parametry
 
-*Název třídy*<br/>
+*classname*<br/>
 [in] Název třídy datového rozšíření modulu snap-in.
 
 ### <a name="remarks"></a>Poznámky
@@ -68,7 +68,7 @@ BEGIN_SNAPINTOOLBARID_MAP(_class)
 
 ### <a name="parameters"></a>Parametry
 
-*_třídy*<br/>
+*_class*<br/>
 [in] Určuje třídu objektu modulu Snap-In.
 
 ### <a name="example"></a>Příklad
@@ -101,7 +101,7 @@ END_SNAPINTOOLBARID_MAP( _class )
 
 ### <a name="parameters"></a>Parametry
 
-*_třídy*<br/>
+*_class*<br/>
 [in] Určuje třídu objektu modulu Snap-In.
 
 ### <a name="example"></a>Příklad
@@ -184,6 +184,6 @@ SNAPINTOOLBARID_ENTRY( id )
 
 Podívejte se na příklad pro [BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Makra](../../atl/reference/atl-macros.md)

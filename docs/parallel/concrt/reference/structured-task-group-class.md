@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
-ms.openlocfilehash: 486829b7d990aab7860059feed78b26207d0074d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27610539ab500a113ea41021744c55425fe9cd9b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600665"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299289"
 ---
 # <a name="structuredtaskgroup-class"></a>structured_task_group – třída
 
@@ -37,14 +37,14 @@ class structured_task_group;
 |Název|Popis|
 |----------|-----------------|
 |[structured_task_group](#ctor)|Přetíženo. Sestaví nový `structured_task_group` objektu.|
-|[~ structured_task_group – destruktor](#dtor)|Odstraní `structured_task_group` objektu. Očekává se, že volání buď `wait` nebo `run_and_wait` metodu na objekt před spuštěním destruktor, pokud je spuštěn destruktor kvůli odvíjení zásobníku z důvodu výjimky.|
+|[~structured_task_group Destructor](#dtor)|Odstraní `structured_task_group` objektu. Očekává se, že volání buď `wait` nebo `run_and_wait` metodu na objekt před spuštěním destruktor, pokud je spuštěn destruktor kvůli odvíjení zásobníku z důvodu výjimky.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
 |[Zrušit](#cancel)|Díky nezaručené pokus o zrušení podstromě pracovní kořenovým adresářem v této skupině úloh. Každá úloha naplánována na skupinu úloh bude zrušena přechodně Pokud je to možné.|
-|[is_canceling –](#is_canceling)|Určuje, jestli je skupina úloh aktuálně uprostřed zrušením informuje volající. Neznamená to nutně, který `cancel` byla volána metoda `structured_task_group` objektu (i když například jistě kvalifikuje tuto metodu za účelem vrácení **true**). To může být případ, který `structured_task_group` objektu je probíhá vloženě a další skupinu úloh nahoru ve stromové struktuře práce byla zrušena. V případech, jako jsou tyto kde můžete určit modul runtime zrušení budou směrovat přes to předem `structured_task_group` objektu, **true** se také vrátit.|
+|[is_canceling](#is_canceling)|Určuje, jestli je skupina úloh aktuálně uprostřed zrušením informuje volající. Neznamená to nutně, který `cancel` byla volána metoda `structured_task_group` objektu (i když například jistě kvalifikuje tuto metodu za účelem vrácení **true**). To může být případ, který `structured_task_group` objektu je probíhá vloženě a další skupinu úloh nahoru ve stromové struktuře práce byla zrušena. V případech, jako jsou tyto kde můžete určit modul runtime zrušení budou směrovat přes to předem `structured_task_group` objektu, **true** se také vrátit.|
 |[Spuštění](#run)|Přetíženo. Naplánuje úlohy na `structured_task_group` objektu. Volající spravuje životnost `task_handle` objekt předaný `_Task_handle` parametru. Verze, která přebírá parametr `_Placement` způsobí, že na tendenční směrem k provádění v místě určeném v parametru úlohy.|
 |[run_and_wait](#run_and_wait)|Přetíženo. Naplánuje úlohy spustit vložené na kontext volání za pomoci `structured_task_group` objekt pro zrušení plnou podporu. Pokud `task_handle` objekt je předán jako parametr `run_and_wait`, volající zodpovídá za správu životnosti `task_handle` objektu. Funkce vyčká, dokud všechny práce na `structured_task_group` objekt buď dokončí nebo byla zrušena.|
 |[Počkej](#wait)|Počká, dokud nebudou všechny práce na `structured_task_group` již byla dokončena nebo zrušena.|
@@ -191,7 +191,7 @@ Token zrušení pro přidružení k této skupiny strukturovaných úloh. Skupin
 
 Vytvoří konstruktor, který přijímá token zrušení `structured_task_group` , která budou zrušeny při zrušení zdroje přidružené k tokenu. Také poskytuje explicitní rušícího tokenu izoluje této skupiny strukturovaných úloh ze implicitní zrušení z nadřazené skupiny s tokenem jiný nebo žádný token.
 
-##  <a name="dtor"></a> ~ structured_task_group
+##  <a name="dtor"></a> ~structured_task_group
 
 Odstraní `structured_task_group` objektu. Očekává se, že volání buď `wait` nebo `run_and_wait` metodu na objekt před spuštěním destruktor, pokud je spuštěn destruktor kvůli odvíjení zásobníku z důvodu výjimky.
 
@@ -225,7 +225,7 @@ Po návratu tato funkce `structured_task_group` objekt považován za konečný 
 
 V ostatním cesta spuštění, je nutné pověření k buď tuto metodu volat nebo `run_and_wait` metody před destruktor `structured_task_group` spustí.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [task_group – třída](task-group-class.md)<br/>

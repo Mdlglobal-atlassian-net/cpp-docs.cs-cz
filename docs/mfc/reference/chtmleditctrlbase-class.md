@@ -1,5 +1,5 @@
 ---
-title: Chtmleditctrlbase – třída
+title: CHtmlEditCtrlBase Class
 ms.date: 11/04/2016
 f1_keywords:
 - CHtmlEditCtrlBase
@@ -220,14 +220,14 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: 11bfa8304b51ed25b934a97109db7da7bb39f49a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebc296c66ee818e5c72207e0ca7b436f386fb68d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590135"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293937"
 ---
-# <a name="chtmleditctrlbase-class"></a>Chtmleditctrlbase – třída
+# <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase Class
 
 Představuje součást úprav jazyka HTML.
 
@@ -368,7 +368,7 @@ Název odvozené třídy.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxhtml.h
+**Header:** afxhtml.h
 
 ##  <a name="addtoglyphtable"></a>  CHtmlEditCtrlBase::AddToGlyphTable
 
@@ -395,10 +395,10 @@ Název značky (například "P" nebo "table").
 Adresa URL obrázku.
 
 *nTagType*<br/>
-Označte typ: 0 znamená, že na obrázku je pro počáteční značka pouze. 1 znamená, že na obrázku je pro pouze ukončovací značku. 2 znamená, že na obrázku je pro počátečními a ukončovacími značkami. Jeden značek, například br a komentář musí být přidán s typem značka nastavena na hodnotu 0.
+Typ značky: 0 znamená, že na obrázku je pro počáteční značka pouze. 1 znamená, že na obrázku je pro pouze ukončovací značku. 2 znamená, že na obrázku je pro počátečními a ukončovacími značkami. Jeden značek, například br a komentář musí být přidán s typem značka nastavena na hodnotu 0.
 
 *nAlignment*<br/>
-Zarovnání (pouze obdélníkovou elementy): Tento parametr určuje, že na obrázku je pro daný element s atributem zarovnání. Zbyva = 0, center = 1, vpravo = 2 a undefined = 3. Vlevo, vpravo nebo System center atributy musí být explicitně nastaven pro element.
+Zarovnání (pouze obdélníkovou elementy): Tento parametr znamená, že na obrázku pro daný element s atributem zarovnání. Zbyva = 0, center = 1, vpravo = 2 a undefined = 3. Vlevo, vpravo nebo System center atributy musí být explicitně nastaven pro element.
 
 *nPosInfo*<br/>
 Informace o umístění. Určuje, jaké stylu CSS seznamy (CSS) umístění hodnotu šifra se vztahuje na, kde statické umisťování = 0, absolutní umístění = 1, relativní umístění = 2 a všechny = 3. Toto pole umožňuje určit jednu piktogramu značky, pokud není umístěn a jiné piktogram chcete zobrazit kotevní bod, když je umístěn na značku.
@@ -714,7 +714,7 @@ HRESULT GetBlockFormatNames(CStringArray& sa) const;
 
 ### <a name="parameters"></a>Parametry
 
-*SA*<br/>
+*sa*<br/>
 Dostupné blokové značky o formátu, jako pole řetězců.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2562,8 +2562,7 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 Tato metoda odesílá [ID příkazu IDM UNORDERLIST](https://msdn.microsoft.com/library/aa769987.aspx) do ovládacího prvku WebBrowser.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Ukázka HTMLEdit](../../visual-cpp-samples.md)
-

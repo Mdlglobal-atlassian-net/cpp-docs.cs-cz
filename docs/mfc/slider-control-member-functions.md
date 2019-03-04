@@ -5,12 +5,12 @@ helpviewer_keywords:
 - CSliderCtrl class [MFC], methods
 - slider controls [MFC], member functions
 ms.assetid: dbde49ee-7306-4d14-a6ce-d09aa198178f
-ms.openlocfilehash: 25414b1d98c87c67c1dc8e13bb44bdc25869db94
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a88dd1a49eb928261393a4473ee7eb53628c607a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472642"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296901"
 ---
 # <a name="slider-control-member-functions"></a>Členské funkce ovládacího prvku jezdec
 
@@ -34,8 +34,7 @@ Aplikace můžete členské funkce použít k načtení rozměrů posuvníku. [G
 
 Pokud má ovládací prvek posuvník TBS_ENABLESELRANGE styl, může uživatel vybrat rozsah souvislých hodnot z něj. Počet členských funkcí, které umožňují výběr rozsahu upraví dynamicky. [SetSelection](../mfc/reference/csliderctrl-class.md#setselection) členská funkce nastaví počáteční a koncová pozice výběru. Po dokončení nastavení oblast výběru uživatel aplikace můžete načíst nastavení pomocí [GetSelection](../mfc/reference/csliderctrl-class.md#getselection) členskou funkci. Chcete-li zrušit výběr uživatele, použijte [ClearSel](../mfc/reference/csliderctrl-class.md#clearsel) členskou funkci.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CSliderCtrl](../mfc/using-csliderctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

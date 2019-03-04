@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 97012e1d8cdc36f080245243c5f099b340225fc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05a4ad17feea20c67069e65c5c5df43d543e2377
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533858"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293482"
 ---
 # <a name="cmfccolorbutton-class"></a>Cmfccolorbutton – třída
 
@@ -159,7 +159,7 @@ void EnableAutomaticButton(
 *lpszLabel*<br/>
 [in] Určuje text, bude automatické tlačítka.
 
-*barvaAutomatická*<br/>
+*colorAutomatic*<br/>
 [in] Hodnota RGB, která určuje výchozí barvu automatického tlačítka.
 
 *bEnable*<br/>
@@ -260,7 +260,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Odkazuje na kontext zařízení, která se použije k vykreslení obrázku tlačítku.
 
 *Rect*<br/>
@@ -286,7 +286,7 @@ virtual void OnDrawBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Odkazuje na zařízení kontext použitý k vykreslení ohraničení.
 
 *rectClient*<br/>
@@ -311,7 +311,7 @@ virtual void OnDrawFocusRect(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Odkazuje na kontext zařízení pro kreslení obdélníku fokusu.
 
 *rectClient*<br/>
@@ -355,7 +355,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*Barva*<br/>
+*color*<br/>
 [in] Hodnota RGB.
 
 ### <a name="remarks"></a>Poznámky
@@ -372,10 +372,10 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Parametry
 
-*Barva*<br/>
+*color*<br/>
 [in] Hodnota barvy RGB.
 
-*%{strName/*<br/>
+*strName*<br/>
 [in] Název barvy.
 
 ### <a name="remarks"></a>Poznámky
@@ -465,14 +465,14 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*Barva*<br/>
+*color*<br/>
 [in] Barva vybraná uživatelem.
 
 ### <a name="remarks"></a>Poznámky
 
 `UpdateColor` Funkce změní barvu vybraného tlačítka a odesláním wm_command – zprávy s oznámením standardní BN_CLICKED upozorní svého nadřazeného objektu. Použití [CMFCColorButton::GetColor](#getcolor) metodu pro načtení vybraných barev.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Clipboard, programming
 - transferring data
 ms.assetid: a71b2824-1f14-4914-8816-54578d73ad4e
-ms.openlocfilehash: b17268c78fb5e82cbe75cbe0647b931d06934ef1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4fcf53f1d861a85d830d0fb4244e8af9c11af163
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440791"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293287"
 ---
 # <a name="clipboard"></a>Schránka
 
@@ -43,6 +43,6 @@ Schránka je systémová služba sdílí celou relaci Windows, takže není nutn
 
 - [Provádění operace přetažení (OLE)](../mfc/drag-and-drop-ole.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Prvky uživatelského rozhraní](../mfc/user-interface-elements-mfc.md)

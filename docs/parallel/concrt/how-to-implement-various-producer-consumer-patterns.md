@@ -1,18 +1,18 @@
 ---
-title: 'Postupy: Implementace různých vzorů typu výrobce-spotřebitel'
+title: 'Postupy: Implementace různých vzorů producent – příjemce'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - producer-consumer patterns, implementing [Concurrency Runtime]
 - implementing producer-consumer patterns [Concurrency Runtime]
 ms.assetid: 75f2c7cc-5399-49ea-98eb-847fe6747169
-ms.openlocfilehash: 1c543e2c80ff9edea417fe8c1254bf9aa5aa37fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 113518e97b6715384b5e7b84b0d0eab63dfcfcc7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658286"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296277"
 ---
-# <a name="how-to-implement-various-producer-consumer-patterns"></a>Postupy: Implementace různých vzorů typu výrobce-spotřebitel
+# <a name="how-to-implement-various-producer-consumer-patterns"></a>Postupy: Implementace různých vzorů producent – příjemce
 
 Toto téma popisuje způsob implementace vzoru producent – příjemce ve vaší aplikaci. V tomto modelu *producent* posílání zpráv do bloku zprávy a *příjemce* čte zprávy z tohoto bloku.
 
@@ -62,9 +62,9 @@ Na rozdíl od s `unbounded_buffer` objektu, `receive` funkce neodebere zprávu `
 
 Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `producer-consumer.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
 
-**cl.exe/EHsc výrobce consumer.cpp**
+**cl.exe /EHsc producer-consumer.cpp**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Asynchronní agenti](../../parallel/concrt/asynchronous-agents.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Cdwordarray – třída
+title: CDWordArray Class
 ms.date: 11/04/2016
 f1_keywords:
 - CDWordArray
@@ -42,14 +42,14 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 581be11e-ced6-47d1-8679-e0b8e7d99494
-ms.openlocfilehash: ffd4ddc94bbf35da1241b9c32069e80315e144d8
-ms.sourcegitcommit: 185b8ee6dd4e10045df730c5b957b9729813da2d
+ms.openlocfilehash: 8cc67e62d905710ba5d63bf93c7b8aa1bf50f69c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53411933"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298568"
 ---
-# <a name="cdwordarray-class"></a>Cdwordarray – třída
+# <a name="cdwordarray-class"></a>CDWordArray Class
 
 Podporuje pole s 32bitovými dvojitými slovy.
 
@@ -118,7 +118,7 @@ Další informace o používání `CDWordArray`, najdete v článku [kolekce](..
 
 **Záhlaví:** afxcoll.h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Cd2dtextformat – třída
+title: CD2DTextFormat Class
 ms.date: 11/04/2016
 f1_keywords:
 - CD2DTextFormat
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - CD2DTextFormat [MFC], ReCreate
 - CD2DTextFormat [MFC], m_pTextFormat
 ms.assetid: db194cec-9dae-4644-ab84-7c43b7164117
-ms.openlocfilehash: 092ffff91113b42cd106fe7079b06b9482400c63
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d796ac39ba29e6d286926f4975f8f6d2054e7ac
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557154"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297889"
 ---
-# <a name="cd2dtextformat-class"></a>Cd2dtextformat – třída
+# <a name="cd2dtextformat-class"></a>CD2DTextFormat Class
 
 Obálka pro IDWriteTextFormat.
 
@@ -48,7 +48,7 @@ class CD2DTextFormat : public CD2DResource;
 |Název|Popis|
 |----------|-----------------|
 |[CD2DTextFormat::CD2DTextFormat](#cd2dtextformat)|Vytvoří objekt cd2dtextformat –.|
-|[Cd2dtextformat –:: ~ cd2dtextformat –](#cd2dtextformat__~cd2dtextformat)|Destruktor. Volá se, když se likviduje objektu D2D textového formátu.|
+|[CD2DTextFormat::~CD2DTextFormat](#cd2dtextformat__~cd2dtextformat)|Destruktor. Volá se, když se likviduje objektu D2D textového formátu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -66,7 +66,7 @@ class CD2DTextFormat : public CD2DResource;
 
 |Název|Popis|
 |----------|-----------------|
-|[CD2DTextFormat::Operator IDWriteTextFormat *](#operator_idwritetextformat_star)|Vrátí IDWriteTextFormat rozhraní|
+|[CD2DTextFormat::operator IDWriteTextFormat*](#operator_idwritetextformat_star)|Vrátí IDWriteTextFormat rozhraní|
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
@@ -78,15 +78,15 @@ class CD2DTextFormat : public CD2DResource;
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cd2dresource –](../../mfc/reference/cd2dresource-class.md)
+[CD2DResource](../../mfc/reference/cd2dresource-class.md)
 
-[Cd2dtextformat –](../../mfc/reference/cd2dtextformat-class.md)
+[CD2DTextFormat](../../mfc/reference/cd2dtextformat-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxrendertarget.h
 
-##  <a name="_dtorcd2dtextformat"></a>  Cd2dtextformat –:: ~ cd2dtextformat –
+##  <a name="_dtorcd2dtextformat"></a>  CD2DTextFormat::~CD2DTextFormat
 
 Destruktor. Volá se, když se likviduje objektu D2D textového formátu.
 
@@ -119,10 +119,10 @@ Ukazatel na cíl vykreslování.
 *strFontFamilyName*<br/>
 CString – objekt, který obsahuje název rodiny písem.
 
-*Velikost písma*<br/>
+*fontSize*<br/>
 Logická velikost písma v jednotkách vyhrazené IP adresy ("pixelech nezávislých na zařízení"). DIPequals 1/96 palce.
 
-*Tloušťka písma*<br/>
+*fontWeight*<br/>
 Hodnota, která určuje tloušťku písma pro objekt textu.
 
 *fontStyle*<br/>
@@ -240,6 +240,6 @@ virtual HRESULT ReCreate(CRenderTarget* */);
 
 Pokud metoda uspěje, vrátí hodnotu S_OK. V opačném případě vrátí kód chyby HRESULT.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

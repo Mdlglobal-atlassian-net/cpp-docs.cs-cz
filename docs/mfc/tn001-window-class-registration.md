@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WNDCLASS [MFC]
 - AfxRegisterClass function
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
-ms.openlocfilehash: 4ae94d1c9c57f6c315ae482e44576ae25194c00f
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 68c851ae6a6b1b8578df90e2618f257122797aa5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894260"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294145"
 ---
 # <a name="tn001-window-class-registration"></a>TN001: Registrace tříd oken
 
@@ -106,8 +106,7 @@ Pokud chcete udělat nic víc propracovaných než co `AfxRegisterWndClass` posk
 
 Je důležité používat `AfxRegisterClass` (nebo `AfxRegisterWndClass`) v knihovně DLL v systému Win32. Win32 nelze zrušit registraci automaticky třídy registrovaných knihovny DLL, proto musí explicitně zrušit registraci třídy při ukončení knihovny DLL. S použitím `AfxRegisterClass` místo `RegisterClass` to se automaticky udělá za vás. `AfxRegisterClass` udržuje seznam jedinečných tříd registrovaných vaši knihovnu DLL a automaticky zruší registraci je při ukončení knihovny DLL. Při použití `RegisterClass` v knihovně DLL, ujistěte se, že jsou všechny třídy odregistrovat při ukončení knihovny DLL (ve vaší [DllMain](/windows/desktop/Dlls/dllmain) funkce). Pokud tak neučiníte, může způsobit `RegisterClass` k neočekávanému selhání při další klientská aplikace pokouší použít vaši knihovnu DLL.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
-

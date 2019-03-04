@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_multimap class
 ms.assetid: 4dada5d7-15df-4382-b9c9-348e75b2f3c1
-ms.openlocfilehash: e1a477e278de2e8ba0f1af43dfdb6081206d86e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 446060656a79380f85d3faac560bd48910bfb2db
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450905"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294353"
 ---
 # <a name="concurrentunorderedmultimap-class"></a>concurrent_unordered_multimap – třída
 
@@ -98,7 +98,7 @@ Typ představující uložený objekt alokátoru, který zapouzdřuje informace 
 |[hash_function –](#hash_function)|Vrátí uložený objekt hashovací funkce.|
 |[Vložit](#insert)|Přetíženo. Přidá prvky do `concurrent_unordered_multimap` objektu.|
 |[key_eq](#key_eq)|Vrátí uložené rovnosti objektu funkce porovnání.|
-|[Prohození](#swap)|Zamění obsah dvou `concurrent_unordered_multimap` objekty. Tato metoda není bezpečná pro souběžnost.|
+|[swap](#swap)|Zamění obsah dvou `concurrent_unordered_multimap` objekty. Tato metoda není bezpečná pro souběžnost.|
 |[unsafe_erase](#unsafe_erase)|Přetíženo. Odebere prvky z `concurrent_unordered_multimap` v určených pozicích. Tato metoda není bezpečná pro souběžnost.|
 
 ### <a name="public-operators"></a>Veřejné operátory
@@ -121,7 +121,7 @@ Podrobné informace o `concurrent_unordered_multimap` najdete v tématu [paralel
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concurrent_unordered_map.h
+**Header:** concurrent_unordered_map.h
 
 **Namespace:** souběžnosti
 
@@ -171,7 +171,7 @@ Vymaže všechny prvky v kontejneru souběžných. Tato funkce není bezpečné 
 void clear();
 ```
 
-##  <a name="ctor"></a> concurrent_unordered_multimap –
+##  <a name="ctor"></a> concurrent_unordered_multimap
 
 Sestaví souběžnou neuspořádanou multimapu.
 
@@ -224,7 +224,7 @@ Alokátor pro tento neuspořádanou multimapu.
 *_Zahájit*<br/>
 Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.
 
-*_Ukončit*<br/>
+*_End*<br/>
 Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.
 
 *_Umap*<br/>
@@ -406,7 +406,7 @@ Výchozí umístění pro vyhledávání pro kurzor.
 *první*<br/>
 Začátek rozsahu, který chcete vložit.
 
-*poslední*<br/>
+*last*<br/>
 Konec rozsahu, který chcete vložit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -423,7 +423,7 @@ Třetí členská funkce vloží sekvenci hodnot prvku v rozsahu [ `first`, `las
 
 Poslední dva členské funkce se chovají stejně jako první dva, s výjimkou, že `value` se používá ke konstrukci Vložená hodnota.
 
-##  <a name="key_eq"></a> key_eq –
+##  <a name="key_eq"></a> key_eq
 
 Vrátí uložené rovnosti objektu funkce porovnání.
 
@@ -588,7 +588,7 @@ Klíč elementu, vyhledaly.
 
 Index kontejneru klíče v tomto kontejneru.
 
-##  <a name="unsafe_bucket_count"></a> unsafe_bucket_count –
+##  <a name="unsafe_bucket_count"></a> unsafe_bucket_count
 
 Vrátí aktuální počet kbelíků v tomto kontejneru.
 
@@ -600,7 +600,7 @@ size_type unsafe_bucket_count() const;
 
 Aktuální počet kbelíků, v tomto kontejneru.
 
-##  <a name="unsafe_bucket_size"></a> unsafe_bucket_size –
+##  <a name="unsafe_bucket_size"></a> unsafe_bucket_size
 
 Vrátí počet položek v konkrétním intervalu tohoto kontejneru.
 
@@ -695,7 +695,7 @@ Pozice iterátoru, který chcete smazat.
 Hodnota klíče vymazat.
 
 *první*<br/>
-*poslední*<br/>
+*last*<br/>
 Iterátory.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -708,7 +708,7 @@ První členská funkce odstraní prvek řízené sekvence, na které odkazuje `
 
 Třetí členská funkce odebere prvky v rozsahu odděleny `concurrent_unordered_multimap::equal_range`(KVal).
 
-##  <a name="unsafe_max_bucket_count"></a> unsafe_max_bucket_count –
+##  <a name="unsafe_max_bucket_count"></a> unsafe_max_bucket_count
 
 Vrátí maximální počet kbelíků v tomto kontejneru.
 
@@ -720,8 +720,7 @@ size_type unsafe_max_bucket_count() const;
 
 Maximální počet kbelíků, v tomto kontejneru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [Paralelní kontejnery a objekty](../../../parallel/concrt/parallel-containers-and-objects.md)
-

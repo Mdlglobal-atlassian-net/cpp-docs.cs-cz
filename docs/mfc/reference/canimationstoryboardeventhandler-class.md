@@ -1,5 +1,5 @@
 ---
-title: Canimationstoryboardeventhandler – třída
+title: CAnimationStoryboardEventHandler Class
 ms.date: 11/04/2016
 f1_keywords:
 - CAnimationStoryboardEventHandler
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - CAnimationStoryboardEventHandler [MFC], OnStoryboardUpdated
 - CAnimationStoryboardEventHandler [MFC], SetAnimationController
 ms.assetid: 10a7e86b-c02d-4124-9a2e-61ecf8ac62fc
-ms.openlocfilehash: b5dbe10f0fd80956b395ec385969750c3ee0c05b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d12f38491cf3aafca41756ce97e1cad44deb67d5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632866"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296394"
 ---
-# <a name="canimationstoryboardeventhandler-class"></a>Canimationstoryboardeventhandler – třída
+# <a name="canimationstoryboardeventhandler-class"></a>CAnimationStoryboardEventHandler Class
 
 Implementuje zpětné volání, které je voláno rozhraním API animace při změně stavu objektu storyboard nebo aktualizaci scénáře.
 
@@ -108,7 +108,7 @@ IFACEMETHOD(OnStoryboardStatusChanged) (
 
 ### <a name="parameters"></a>Parametry
 
-*scénáře*<br/>
+*storyboard*<br/>
 Ukazatel na scénáře, jehož stav se změnil.
 
 *newStatus*<br/>
@@ -131,7 +131,7 @@ IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
 
 ### <a name="parameters"></a>Parametry
 
-*scénáře*<br/>
+*storyboard*<br/>
 Ukazatel na scénáře, který byl aktualizován.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -151,6 +151,6 @@ void SetAnimationController(CAnimationController* pAnimationController);
 *pAnimationController*<br/>
 Ukazatel na řadič animace, který se zobrazí události.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

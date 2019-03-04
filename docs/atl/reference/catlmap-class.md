@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 83ac810538bf189d026c0cb9b2a76ded49fdd86c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80975047b300f270c0ac58c8b8abfc59ff2b17ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499674"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293781"
 ---
 # <a name="catlmap-class"></a>Catlmap – třída
 
@@ -87,7 +87,7 @@ Kód použitý má zkopírovat nebo přesunout elementy hodnotu.
 
 |Název|Popis|
 |----------|-----------------|
-|[Třída CAtlMap::CPair](#cpair_class)|Třída obsahující prvky klíč a hodnotu.|
+|[CAtlMap::CPair Class](#cpair_class)|Třída obsahující prvky klíč a hodnotu.|
 
 ### <a name="cpair-data-members"></a>CPair datové členy
 
@@ -101,7 +101,7 @@ Kód použitý má zkopírovat nebo přesunout elementy hodnotu.
 |Název|Popis|
 |----------|-----------------|
 |[CAtlMap::CAtlMap](#catlmap)|Konstruktor|
-|[Catlmap –:: ~ catlmap –](#dtor)|Destruktor.|
+|[CAtlMap::~CAtlMap](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -221,7 +221,7 @@ Předtím, než mohou být uloženy žádná data, je potřeba inicializovat zat
 
 [!code-cpp[NVC_ATL_Utilities#72](../../atl/codesnippet/cpp/catlmap-class_1.cpp)]
 
-##  <a name="dtor"></a>  Catlmap –:: ~ catlmap –
+##  <a name="dtor"></a>  CAtlMap::~CAtlMap
 
 Destruktor.
 
@@ -288,10 +288,10 @@ CPair* GetAt(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Čítač pozice vrácené z předchozího volání [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
 
-*Klíč*<br/>
+*key*<br/>
 Parametr šablony určující typ klíče na mapě.
 
 *value*<br/>
@@ -343,7 +343,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Čítač pozice vrácené z předchozího volání [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -365,7 +365,7 @@ const CPair* GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Čítač pozice vrácené z předchozího volání [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -385,10 +385,10 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Čítač pozice vrácené z předchozího volání [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
 
-*Klíč*<br/>
+*key*<br/>
 Parametr šablony určující typ klíče na mapě.
 
 *value*<br/>
@@ -408,7 +408,7 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Čítač pozice vrácené z předchozího volání [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -430,7 +430,7 @@ const V& GetNextValue(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Čítač pozice vrácené z předchozího volání [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -479,7 +479,7 @@ const V& GetValueAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Čítač pozice vrácené z předchozího volání [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -558,7 +558,7 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Určuje klíč, který identifikuje elementu, který chcete vyhledávat.
 
 *value*<br/>
@@ -582,7 +582,7 @@ V& operator[](kinargtype key) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč elementu, který chcete přidat nebo nahradit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -632,7 +632,7 @@ void RemoveAtPos(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Čítač pozice vrácené z předchozího volání [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="remarks"></a>Poznámky
@@ -649,7 +649,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč odpovídající dvojice elementů chcete odebrat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -672,7 +672,7 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnotu klíče pro přidání do `CAtlMap` objektu.
 
 *value*<br/>
@@ -728,7 +728,7 @@ void SetValueAt(
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Čítač pozice vrácené z předchozího volání [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
 
 *value*<br/>
@@ -780,7 +780,7 @@ V  m_value;
 *V*<br/>
 Typ elementu hodnota.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Výběr ukázky](../../visual-cpp-samples.md)<br/>
 [Příklad UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>

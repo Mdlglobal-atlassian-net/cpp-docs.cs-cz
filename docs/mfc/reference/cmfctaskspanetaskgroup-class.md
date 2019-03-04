@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCTasksPaneTaskGroup [MFC], m_rectGroup
 - CMFCTasksPaneTaskGroup [MFC], m_strName
 ms.assetid: 2111640b-a46e-4b27-b033-29e88632b86a
-ms.openlocfilehash: 2ed50950bc62a0c2f382e42782c58a0d7354116f
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: a28f00fb732727ec1334946a9e752679307cd3a0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176585"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295224"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>Cmfctaskspanetaskgroup – třída
 
@@ -90,7 +90,7 @@ Následující obrázek znázorňuje dvě skupiny úloh. První skupiny úloh, k
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cmfctaskspanetaskgroup –](../../mfc/reference/cmfctaskspanetaskgroup-class.md)
+[CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -124,7 +124,7 @@ Určuje, jestli skupiny je určený jako *speciální* a díky tomu se určuje, 
 *bIsCollapsed*<br/>
 Určuje, zda je skupina sbalena.
 
-*Fyzická_stránka*<br/>
+*pPage*<br/>
 Určuje stránku vlastností patřící do této skupiny úloh.
 
 *hIcon*<br/>
@@ -238,7 +238,7 @@ virtual BOOL SetACCData(
 
 Hodnota TRUE, pokud *data* parametr byl úspěšně naplněný daty usnadnění aktuální skupiny úlohy; v opačném případě hodnota FALSE.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

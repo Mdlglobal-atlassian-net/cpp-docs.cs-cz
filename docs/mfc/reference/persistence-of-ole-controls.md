@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE controls [MFC], persistence
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
-ms.openlocfilehash: e510cdb2ae64b5b3ed5f8b69bc8ad9c22800a167
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8bcba63c8e09873fe7f30e4fd07d652850be1f3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609415"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299644"
 ---
 # <a name="persistence-of-ole-controls"></a>Trvalost ovládacích prvků OLE
 
@@ -22,26 +22,26 @@ Jeden funkční ovládací prvky OLE je vlastnost trvalost (nebo serializace), k
 
 |||
 |-|-|
-|[Px_blob –](#px_blob)|Vymění vlastností ovládacího prvku, který ukládá data binárního rozsáhlého objektu (BLOB).|
-|[Px_bool –](#px_bool)|Vymění vlastnosti ovládacího prvku typu **BOOL**.|
-|[Px_color –](#px_color)|Vymění vlastnost barvu ovládacího prvku.|
-|[Px_currency –](#px_currency)|Vymění vlastnosti ovládacího prvku typu **CY**.|
-|[Px_datapath –](#px_datapath)|Vymění vlastnosti ovládacího prvku typu `CDataPathProperty`.|
-|[Px_double –](#px_double)|Vymění vlastnosti ovládacího prvku typu **double**.|
-|[Px_font –](#px_font)|Vymění vlastnosti font ovládacího prvku.|
-|[Px_float –](#px_float)|Vymění vlastnosti ovládacího prvku typu **float**.|
-|[Px_iunknown –](#px_iunknown)|Vymění vlastnosti ovládacího prvku nedefinovaného typu.|
-|[Px_long –](#px_long)|Vymění vlastnosti ovládacího prvku typu **dlouhé**.|
-|[Px_picture –](#px_picture)|Vymění vlastnost obrázek ovládacího prvku.|
-|[Px_short –](#px_short)|Vymění vlastnosti ovládacího prvku typu **krátký**.|
-|[Px_ulong –](#px_ulong)|Vymění vlastnosti ovládacího prvku typu **ULONG**.|
-|[Px_ushort –](#px_ushort)|Vymění vlastnosti ovládacího prvku typu **USHORT**.|
+|[PX_Blob](#px_blob)|Vymění vlastností ovládacího prvku, který ukládá data binárního rozsáhlého objektu (BLOB).|
+|[PX_Bool](#px_bool)|Vymění vlastnosti ovládacího prvku typu **BOOL**.|
+|[PX_Color](#px_color)|Vymění vlastnost barvu ovládacího prvku.|
+|[PX_Currency](#px_currency)|Vymění vlastnosti ovládacího prvku typu **CY**.|
+|[PX_DataPath](#px_datapath)|Vymění vlastnosti ovládacího prvku typu `CDataPathProperty`.|
+|[PX_Double](#px_double)|Vymění vlastnosti ovládacího prvku typu **double**.|
+|[PX_Font](#px_font)|Vymění vlastnosti font ovládacího prvku.|
+|[PX_Float](#px_float)|Vymění vlastnosti ovládacího prvku typu **float**.|
+|[PX_IUnknown](#px_iunknown)|Vymění vlastnosti ovládacího prvku nedefinovaného typu.|
+|[PX_Long](#px_long)|Vymění vlastnosti ovládacího prvku typu **dlouhé**.|
+|[PX_Picture](#px_picture)|Vymění vlastnost obrázek ovládacího prvku.|
+|[PX_Short](#px_short)|Vymění vlastnosti ovládacího prvku typu **krátký**.|
+|[PX_ULong](#px_ulong)|Vymění vlastnosti ovládacího prvku typu **ULONG**.|
+|[PX_UShort](#px_ushort)|Vymění vlastnosti ovládacího prvku typu **USHORT**.|
 |[PXstring](#px_string)|Vymění vlastností ovládacího prvku řetězec znaků.|
-|[Px_vbxfontconvert –](#px_vbxfontconvert)|Vymění vlastností písma související VBX ovládacího prvku do vlastnosti font ovládacího prvku OLE.|
+|[PX_VBXFontConvert](#px_vbxfontconvert)|Vymění vlastností písma související VBX ovládacího prvku do vlastnosti font ovládacího prvku OLE.|
 
 Kromě toho `AfxOleTypeMatchGuid` globální funkce je k dispozici pro testování shodují TYPEDESC a daný identifikátor GUID.
 
-##  <a name="px_blob"></a>  Px_blob –
+##  <a name="px_blob"></a>  PX_Blob
 
 Voláním této funkce v rámci ovládacího prvku `DoPropExchange` členskou funkci k serializaci nebo inicializovat vlastnost, která ukládá data binárního rozsáhlého objektu (BLOB).
 
@@ -83,7 +83,7 @@ Hodnota vlastnosti se číst nebo zapisovat do proměnná odkazuje *hBlob*podle 
 
 Všimněte si, že `PX_Blob` přidělí paměť v Windows [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) rozhraní API, při načítání vlastností typ objektu BLOB. Zodpovídáte za uvolnění tuto paměť. Proto by měly volat destruktor ovládacího prvku [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree) jakékoli vlastnosti typu BLOB až obslužné rutiny pro uvolnění paměti přidělené do ovládacího prvku.
 
-##  <a name="px_bool"></a>  Px_bool –
+##  <a name="px_bool"></a>  PX_Bool
 
 Voláním této funkce v rámci ovládacího prvku `DoPropExchange` členskou funkci k serializaci nebo inicializovat vlastnost typu BOOL.
 
@@ -122,7 +122,7 @@ Nenulové, pokud bylo úspěšné; exchange 0, pokud není úspěšné.
 
 Hodnota vlastnosti se číst nebo zapisovat do proměnná odkazuje *bValue*podle potřeby. Pokud *bDefault* je zadán, použije se jako výchozí hodnota vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže procesu serializace ovládacího prvku.
 
-##  <a name="px_color"></a>  Px_color –
+##  <a name="px_color"></a>  PX_Color
 
 Voláním této funkce v rámci ovládacího prvku `DoPropExchange` k serializaci nebo inicializovat vlastnost typu OLE_COLOR členskou funkci.
 
@@ -161,7 +161,7 @@ Nenulové, pokud bylo úspěšné; exchange 0, pokud není úspěšné.
 
 Hodnota vlastnosti se číst nebo zapisovat do proměnná odkazuje *clrValue*podle potřeby. Pokud *clrDefault* je zadán, použije se jako výchozí hodnota vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže procesu serializace ovládacího prvku.
 
-##  <a name="px_currency"></a>  Px_currency –
+##  <a name="px_currency"></a>  PX_Currency
 
 Voláním této funkce v rámci ovládacího prvku `DoPropExchange` členskou funkci k serializaci nebo inicializovat vlastnost typu **měny**.
 
@@ -200,7 +200,7 @@ Nenulové, pokud bylo úspěšné; exchange 0, pokud není úspěšné.
 
 Hodnota vlastnosti se číst nebo zapisovat do proměnná odkazuje *cyValue*podle potřeby. Pokud *cyDefault* je zadán, použije se jako výchozí hodnota vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže procesu serializace ovládacího prvku.
 
-##  <a name="px_datapath"></a>  Px_datapath –
+##  <a name="px_datapath"></a>  PX_DataPath
 
 Voláním této funkce v rámci ovládacího prvku `DoPropExchange` členskou funkci k serializaci nebo inicializaci data cesty vlastnost typu [cdatapathproperty –](../../mfc/reference/cdatapathproperty-class.md).
 
@@ -234,7 +234,7 @@ Nenulové, pokud bylo úspěšné; exchange 0, pokud není úspěšné.
 
 Vlastnosti cesty dat implementovat asynchronní ovládacího prvku vlastnosti. Hodnota vlastnosti se číst nebo zapisovat do proměnná odkazuje *dataPathProperty*podle potřeby.
 
-##  <a name="px_double"></a>  Px_double –
+##  <a name="px_double"></a>  PX_Double
 
 Voláním této funkce v rámci ovládacího prvku `DoPropExchange` členskou funkci k serializaci nebo inicializovat vlastnost typu **double**.
 
@@ -273,7 +273,7 @@ Nenulové, pokud bylo úspěšné; exchange 0, pokud není úspěšné.
 
 Hodnota vlastnosti je číst nebo do proměnné odkazuje *doubleValue*podle potřeby. Pokud *doubleDefault* je zadán, použije se jako výchozí hodnota vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže procesu serializace ovládacího prvku.
 
-##  <a name="px_font"></a>  Px_font –
+##  <a name="px_font"></a>  PX_Font
 
 Voláním této funkce v rámci ovládacího prvku `DoPropExchange` členskou funkci k serializaci nebo inicializovat vlastnost typ písma.
 
@@ -311,7 +311,7 @@ Nenulové, pokud bylo úspěšné; exchange 0, pokud není úspěšné.
 
 Hodnota vlastnosti je číst nebo zapisovat do `font`, `CFontHolder` odkazovat, pokud je to vhodné. Pokud *pFontDesc* a *pFontDispAmbient* nejsou zadány, používají se pro inicializaci výchozí hodnotu vlastnosti, pokud je nepotřebujete. Tyto hodnoty se použijí, pokud z nějakého důvodu selže procesu serializace ovládacího prvku. Obvykle předat hodnotu NULL pro *pFontDesc* a okolí hodnoty vrácené `COleControl::AmbientFont` pro *pFontDispAmbient*. Všimněte si, že vrácený objekt písmo `COleControl::AmbientFont` musí uvolnit voláním `IFontDisp::Release` členskou funkci.
 
-##  <a name="px_float"></a>  Px_float –
+##  <a name="px_float"></a>  PX_Float
 
 Voláním této funkce v rámci ovládacího prvku `DoPropExchange` členskou funkci k serializaci nebo inicializovat vlastnost typu **float**.
 
@@ -374,7 +374,7 @@ Název vlastnosti se vyměňují.
 *pUnk*<br/>
 Odkaz na proměnnou obsahující rozhraní objektu, který představuje hodnotu vlastnosti.
 
-*identifikátor IID*<br/>
+*iid*<br/>
 ID rozhraní určující, které rozhraní objekt vlastnost se používá ovládacím prvkem.
 
 *pUnkDefault*<br/>
@@ -413,7 +413,7 @@ Ukazatel [cpropexchange –](../../mfc/reference/cpropexchange-class.md) objektu
 *pszPropName*<br/>
 Název vlastnosti se vyměňují.
 
-*l-hodnoty.*<br/>
+*lValue*<br/>
 Odkaz na proměnnou, kde je uložen vlastnosti (obvykle proměnné člena vaší třídy).
 
 *lDefault*<br/>
@@ -466,7 +466,7 @@ Nenulové, pokud bylo úspěšné; exchange 0, pokud není úspěšné.
 
 Hodnota vlastnosti je číst nebo do proměnné odkazuje *pict*podle potřeby. Pokud *pictDefault* je zadán, použije se jako výchozí hodnota vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže procesu serializace ovládacího prvku.
 
-##  <a name="px_short"></a>  Px_short –
+##  <a name="px_short"></a>  PX_Short
 
 Voláním této funkce v rámci ovládacího prvku `DoPropExchange` členskou funkci k serializaci nebo inicializovat vlastnost typu **krátký**.
 
@@ -505,7 +505,7 @@ Nenulové, pokud bylo úspěšné; exchange 0, pokud není úspěšné.
 
 Hodnota vlastnosti je číst nebo do proměnné odkazuje *sValue*podle potřeby. Pokud *sDefault* je zadán, použije se jako výchozí hodnota vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže procesu serializace ovládacího prvku.
 
-##  <a name="px_ulong"></a>  Px_ulong –
+##  <a name="px_ulong"></a>  PX_ULong
 
 Voláním této funkce v rámci ovládacího prvku `DoPropExchange` členskou funkci k serializaci nebo inicializovat vlastnost typu **ULONG**.
 
@@ -544,7 +544,7 @@ Nenulové, pokud bylo úspěšné; exchange 0, pokud není úspěšné.
 
 Hodnota vlastnosti je číst nebo do proměnné odkazuje *ulValue*podle potřeby. Pokud *ulDefault* je zadán, použije se jako výchozí hodnota vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže procesu serializace ovládacího prvku.
 
-##  <a name="px_ushort"></a>  Px_ushort –
+##  <a name="px_ushort"></a>  PX_UShort
 
 Voláním této funkce v rámci ovládacího prvku `DoPropExchange` členskou funkci k serializaci nebo inicializovat vlastnost typu **unsigned short**.
 
@@ -653,6 +653,6 @@ Tato funkce by měly být používány pouze ovládací prvek OLE, který je nav
 [!code-cpp[NVC_MFCActiveXControl#14](../../mfc/codesnippet/cpp/persistence-of-ole-controls_1.cpp)]
 [!code-cpp[NVC_MFCActiveXControl#15](../../mfc/codesnippet/cpp/persistence-of-ole-controls_2.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)

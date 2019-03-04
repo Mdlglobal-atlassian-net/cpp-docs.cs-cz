@@ -1,5 +1,5 @@
 ---
-title: Caxwindow – třída
+title: CAxWindow Class
 ms.date: 11/04/2016
 f1_keywords:
 - CAxWindow
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-ms.openlocfilehash: f1a1e7fe00218efe7514fe59ea78ea30b33b878f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 3cf1c773c96a2bf1bc6c67420d72052e68ee2a53
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329563"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297590"
 ---
-# <a name="caxwindow-class"></a>Caxwindow – třída
+# <a name="caxwindow-class"></a>CAxWindow Class
 
 Tato třída poskytuje metody pro práci s okno hostování ovládacího prvku ActiveX.
 
@@ -285,7 +285,7 @@ HRESULT QueryControl(Q** ppUnk);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*<br/>
+*iid*<br/>
 [in] Určuje identifikátor IID rozhraní ovládacího prvku.
 
 *ppUnk*<br/>
@@ -310,7 +310,7 @@ HRESULT QueryHost(Q** ppUnk);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*<br/>
+*iid*<br/>
 [in] Určuje identifikátor IID rozhraní ovládacího prvku.
 
 *ppUnk*<br/>
@@ -365,11 +365,10 @@ Standardní hodnoty HRESULT.
 
 Externí `IDocHostUIHandlerDispatch` rozhraní používá ovládací prvky, které se dotazují hostitelský server pro `IDocHostUIHandlerDispatch` rozhraní. Jeden ovládací prvek, který to je ovládací prvek WebBrowser.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázka ATLCON](../../visual-cpp-samples.md)<br/>
 [CWindow – třída](../../atl/reference/cwindow-class.md)<br/>
 [Principy vytváření složených prvků](../../atl/atl-composite-control-fundamentals.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [Nejčastější dotazy k používání kontejnerů ovládacích prvků](../../atl/atl-control-containment-faq.md)
-

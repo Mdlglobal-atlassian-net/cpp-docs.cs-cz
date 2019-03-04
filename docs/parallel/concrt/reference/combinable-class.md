@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-ms.openlocfilehash: b392a46c3aafac9ab5f3ca2b626f5f78daebc85d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05256516c0a693a282b8d0de56d6c9e7465f2740
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630747"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299970"
 ---
 # <a name="combinable-class"></a>combinable – třída
 
@@ -41,15 +41,15 @@ Datový typ konečný výsledek sloučení. Typ musí mít konstruktor kopie a v
 
 |Název|Popis|
 |----------|-----------------|
-|[combinable –](#ctor)|Přetíženo. Sestaví nový `combinable` objektu.|
+|[combinable](#ctor)|Přetíženo. Sestaví nový `combinable` objektu.|
 |[~ combinable – destruktor](#dtor)|Odstraní `combinable` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[Vymazat](#clear)|Vymaže všechny výpočetní mezivýsledků z předchozí spotřeby.|
-|[kombinování](#combine)|Vypočítá konečnou hodnotu ze sady dílčích výpočty místního vlákna voláním Zadaná kombinace funktor.|
+|[clear](#clear)|Vymaže všechny výpočetní mezivýsledků z předchozí spotřeby.|
+|[combine](#combine)|Vypočítá konečnou hodnotu ze sady dílčích výpočty místního vlákna voláním Zadaná kombinace funktor.|
 |[combine_each](#combine_each)|Vypočítá konečnou hodnotu ze sady dílčích výpočty místního vlákna voláním funktor Zadaná kombinace jednou za dílčí výpočtu místního vlákna. Konečný výsledek je shromážděných řešením objektu funkce.|
 |[local](#local)|Přetíženo. Vrátí odkaz na dílčí výpočtu privátní vlákna.|
 
@@ -102,7 +102,7 @@ Typ objektu inicializace funktor.
 *_FnInitialize*<br/>
 Funkce, která bude volána k inicializaci každé nové vlákno privátní hodnotu typu `T`. Operátor volání funkce s podpisem musí podporovat `T ()`.
 
-*_Kopírovat*<br/>
+*_Copy*<br/>
 Existující `combinable` objektu, které se mají zkopírovat do tohoto objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -188,13 +188,13 @@ combinable& operator= (const combinable& _Copy);
 
 ### <a name="parameters"></a>Parametry
 
-*_Kopírovat*<br/>
+*_Copy*<br/>
 Existující `combinable` objektu, které se mají zkopírovat do tohoto objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Odkaz na tento `combinable` objektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)

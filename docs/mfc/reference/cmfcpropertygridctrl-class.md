@@ -1,5 +1,5 @@
 ---
-title: Cmfcpropertygridctrl – třída
+title: CMFCPropertyGridCtrl Class
 ms.date: 11/19/2018
 f1_keywords:
 - CMFCPropertyGridCtrl
@@ -150,14 +150,14 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: 8fe22924039cc0e2547df2cc07b0c4387ad908bd
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f194879cf4a1388fc156fa4e92f4f9bea5056191
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177053"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296004"
 ---
-# <a name="cmfcpropertygridctrl-class"></a>Cmfcpropertygridctrl – třída
+# <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl Class
 
 Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
 
@@ -313,11 +313,11 @@ Následující příklad ukazuje, jak nakonfigurovat pomocí různých metod v o
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[Cmfcpropertygridctrl –](../../mfc/reference/cmfcpropertygridctrl-class.md)
+[CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxpropertygridctrl.h
+**Header:** afxpropertygridctrl.h
 
 ##  <a name="accselect"></a>  CMFCPropertyGridCtrl::accSelect
 
@@ -1053,7 +1053,7 @@ CMFCPropertyGridProperty* HitTest(
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pt*<br/>
 [in] Bod, v souřadnicích klienta.
 
 *pnArea*<br/>
@@ -1272,7 +1272,7 @@ virtual void OnClickButton(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Bod, v souřadnicích klienta.
 
 ### <a name="remarks"></a>Poznámky
@@ -1289,7 +1289,7 @@ virtual void OnDrawBorder(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 ### <a name="remarks"></a>Poznámky
@@ -1306,7 +1306,7 @@ virtual void OnDrawDescription(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *Rect*<br/>
@@ -1326,7 +1326,7 @@ virtual void OnDrawList(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 ### <a name="remarks"></a>Poznámky
@@ -1343,7 +1343,7 @@ virtual int OnDrawProperty(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *pProp*<br/>
@@ -1608,7 +1608,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*Barva*<br/>
+*color*<br/>
 [in] Hodnota barvy RGB.
 
 ### <a name="remarks"></a>Poznámky
@@ -1639,7 +1639,7 @@ Vždy TRUE.
 
 Pokud tuto metodu přepíšete, vrací TRUE, pokud data zadaná vlastnost je platný. V opačném případě vrátí hodnotu FALSE, v takovém případě aktualizujte rozhraní není vlastnost.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)

@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 80699c93-33d8-4f8b-b8cf-7b58aeab64ca
-ms.openlocfilehash: 66cc4d28e20ced498e4a434efbe41c3f5db59370
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2fc3a3643c675394de555f1411030e278bcee775
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605202"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293729"
 ---
 # <a name="coblist-class"></a>Coblist – třída
 
@@ -157,8 +157,8 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**POZICE AddHead (void** <strong>\*</strong> `newElement` **);**<br /><br /> **void AddHead (cptrlist –** <strong>\*</strong> `pNewList` **);**|
-|[CStringList –](../../mfc/reference/cstringlist-class.md)|**POZICE AddHead (const CString &** `newElement` **);**<br /><br /> **POZICE AddHead (LPCTSTR** `newElement` **);**<br /><br /> **void AddHead (CStringList** <strong>\*</strong> `pNewList` **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POZICE AddHead (void** <strong>\*</strong> `newElement` **);**<br /><br /> **void AddHead( CPtrList** <strong>\*</strong> `pNewList` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POZICE AddHead (const CString &** `newElement` **);**<br /><br /> **POZICE AddHead (LPCTSTR** `newElement` **);**<br /><br /> **void AddHead (CStringList** <strong>\*</strong> `pNewList` **);**|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -207,8 +207,8 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**Addtail – pozice (void** <strong>\*</strong> `newElement` **);**<br /><br /> **addtail – void (cptrlist –** <strong>\*</strong> `pNewList` **);**|
-|[CStringList –](../../mfc/reference/cstringlist-class.md)|**Addtail – pozice (const CString &** `newElement` **);**<br /><br /> **Addtail – pozice (LPCTSTR** `newElement` **);**<br /><br /> **addtail – void (CStringList** <strong>\*</strong> `pNewList` **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Addtail – pozice (void** <strong>\*</strong> `newElement` **);**<br /><br /> **addtail – void (cptrlist –** <strong>\*</strong> `pNewList` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**Addtail – pozice (const CString &** `newElement` **);**<br /><br /> **Addtail – pozice (LPCTSTR** `newElement` **);**<br /><br /> **addtail – void (CStringList** <strong>\*</strong> `pNewList` **);**|
 
 ### <a name="example"></a>Příklad
 
@@ -245,8 +245,8 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**Cptrlist – (INT_PTR** `nBlockSize` **= 10);**|
-|[CStringList –](../../mfc/reference/cstringlist-class.md)|**CStringList (INT_PTR** `nBlockSize` **= 10);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**CPtrList( INT_PTR** `nBlockSize` **= 10 );**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**CStringList( INT_PTR** `nBlockSize` **= 10 );**|
 
 ### <a name="example"></a>Příklad
 
@@ -288,8 +288,8 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**Hledání pozice (void** <strong>\*</strong> `searchValue` **, pozice** `startAfter` **= NULL) const;**|
-|[CStringList –](../../mfc/reference/cstringlist-class.md)|**Hledání pozice (LPCTSTR** `searchValue` **, pozice** `startAfter` **= NULL) const;**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Hledání pozice (void** <strong>\*</strong> `searchValue` **, pozice** `startAfter` **= NULL) const;**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**Hledání pozice (LPCTSTR** `searchValue` **, pozice** `startAfter` **= NULL) const;**|
 
 ### <a name="example"></a>Příklad
 
@@ -322,8 +322,8 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**Findindex – pozice (INT_PTR** `nIndex` **) const;**|
-|[CStringList –](../../mfc/reference/cstringlist-class.md)|**Findindex – pozice (INT_PTR** `nIndex` **) const;**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Findindex – pozice (INT_PTR** `nIndex` **) const;**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**Findindex – pozice (INT_PTR** `nIndex` **) const;**|
 
 ### <a name="example"></a>Příklad
 
@@ -359,8 +359,8 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**Const void\*& GetAt (pozice** *pozice* **) const;**<br /><br /> **void\*& GetAt (pozice** *pozice* **);**|
-|[CStringList –](../../mfc/reference/cstringlist-class.md)|**Const CString & GetAt (pozice** *pozice* **) const;**<br /><br /> **CString – & GetAt (pozice** *pozice* **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Const void\*& GetAt (pozice** *pozice* **) const;**<br /><br /> **void\*& GetAt (pozice** *pozice* **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**Const CString & GetAt (pozice** *pozice* **) const;**<br /><br /> **CString – & GetAt (pozice** *pozice* **);**|
 
 ### <a name="example"></a>Příklad
 
@@ -382,8 +382,8 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**INT_PTR GetCount (const;)**|
-|[CStringList –](../../mfc/reference/cstringlist-class.md)|**INT_PTR GetCount (const;)**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**INT_PTR GetCount (const;)**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**INT_PTR GetCount (const;)**|
 
 ### <a name="example"></a>Příklad
 
@@ -414,8 +414,8 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**Const void\*& () GetHead const; void\*& GetHead ();**|
-|[CStringList –](../../mfc/reference/cstringlist-class.md)|**Const CString & GetHead () const; CString – & GetHead ();**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Const void\*& () GetHead const; void\*& GetHead ();**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**Const CString & GetHead () const; CString – & GetHead ();**|
 
 ### <a name="example"></a>Příklad
 
@@ -441,8 +441,8 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**POZICE GetHeadPosition (const;)**|
-|[CStringList –](../../mfc/reference/cstringlist-class.md)|**POZICE GetHeadPosition (const;)**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POZICE GetHeadPosition (const;)**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POZICE GetHeadPosition (const;)**|
 
 ### <a name="example"></a>Příklad
 
@@ -485,8 +485,8 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|`void*& GetNext( POSITION&` `rPosition` `);`<br /><br /> `const void* GetNext( POSITION&` `rPosition` `) const;`|
-|[CStringList –](../../mfc/reference/cstringlist-class.md)|`CString& GetNext( POSITION&` `rPosition` `);`<br /><br /> `const CString& GetNext( POSITION&` `rPosition` `) const;`|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|`void*& GetNext( POSITION&` `rPosition` `);`<br /><br /> `const void* GetNext( POSITION&` `rPosition` `) const;`|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|`CString& GetNext( POSITION&` `rPosition` `);`<br /><br /> `const CString& GetNext( POSITION&` `rPosition` `) const;`|
 
 ### <a name="example"></a>Příklad
 
@@ -534,8 +534,8 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|`void*& GetPrev( POSITION&` `rPosition` `);`<br /><br /> `const void* GetPrev( POSITION&` `rPosition` `) const;`|
-|[CStringList –](../../mfc/reference/cstringlist-class.md)|`CString& GetPrev( POSITION&` `rPosition` `);`<br /><br /> `const CString& GetPrev( POSITION&` `rPosition` `) const;`|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|`void*& GetPrev( POSITION&` `rPosition` `);`<br /><br /> `const void* GetPrev( POSITION&` `rPosition` `) const;`|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|`CString& GetPrev( POSITION&` `rPosition` `);`<br /><br /> `const CString& GetPrev( POSITION&` `rPosition` `) const;`|
 
 ### <a name="example"></a>Příklad
 
@@ -570,8 +570,8 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**INT_PTR getsize – (const;)**|
-|[CStringList –](../../mfc/reference/cstringlist-class.md)|**INT_PTR getsize – (const;)**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**INT_PTR getsize – (const;)**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**INT_PTR getsize – (const;)**|
 
 ### <a name="example"></a>Příklad
 
@@ -600,8 +600,8 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**Const void\*& () GetTail const; void\*& GetTail ();**|
-|[CStringList –](../../mfc/reference/cstringlist-class.md)|**Const CString & GetTail () const; CString – & GetTail ();**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Const void\*& () GetTail const; void\*& GetTail ();**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**Const CString & GetTail () const; CString – & GetTail ();**|
 
 ### <a name="example"></a>Příklad
 
@@ -625,8 +625,8 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**POZICE GetTailPosition (const;)**|
-|[CStringList –](../../mfc/reference/cstringlist-class.md)|**POZICE GetTailPosition (const;)**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POZICE GetTailPosition (const;)**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POZICE GetTailPosition (const;)**|
 
 ### <a name="example"></a>Příklad
 
@@ -656,8 +656,8 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**POZICE InsertAfter (pozice** *pozice* **, void** <strong>\*</strong> `newElement` **);**|
-|[CStringList –](../../mfc/reference/cstringlist-class.md)|**POZICE InsertAfter (pozice** *pozice* **, const CString &** `newElement` **);**<br /><br /> **POZICE InsertAfter (pozice** *pozice* **, LPCTSTR** `newElement` **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POZICE InsertAfter (pozice** *pozice* **, void** <strong>\*</strong> `newElement` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POZICE InsertAfter (pozice** *pozice* **, const CString &** `newElement` **);**<br /><br /> **POZICE InsertAfter (pozice** *pozice* **, LPCTSTR** `newElement` **);**|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -704,8 +704,8 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**POZICE InsertBefore (pozice** *pozice* **, void** <strong>\*</strong> `newElement` **);**|
-|[CStringList –](../../mfc/reference/cstringlist-class.md)|**POZICE InsertBefore (pozice** *pozice* **, const CString &** `newElement` **);**<br /><br /> **POZICE InsertBefore (pozice** *pozice* **, LPCTSTR** `newElement` **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POZICE InsertBefore (pozice** *pozice* **, void** <strong>\*</strong> `newElement` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POZICE InsertBefore (pozice** *pozice* **, const CString &** `newElement` **);**<br /><br /> **POZICE InsertBefore (pozice** *pozice* **, LPCTSTR** `newElement` **);**|
 
 ### <a name="example"></a>Příklad
 
@@ -738,8 +738,8 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**BOOL IsEmpty (const;)**|
-|[CStringList –](../../mfc/reference/cstringlist-class.md)|**BOOL IsEmpty (const;)**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**BOOL IsEmpty (const;)**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**BOOL IsEmpty (const;)**|
 
 ### <a name="example"></a>Příklad
 
@@ -763,8 +763,8 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**void (RemoveAll);**|
-|[CStringList –](../../mfc/reference/cstringlist-class.md)|**void (RemoveAll);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void (RemoveAll);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**void (RemoveAll);**|
 
 ### <a name="example"></a>Příklad
 
@@ -795,8 +795,8 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**void RemoveAt (pozice** *pozice* **);**|
-|[CStringList –](../../mfc/reference/cstringlist-class.md)|**void RemoveAt (pozice** *pozice* **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void RemoveAt (pozice** *pozice* **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**void RemoveAt (pozice** *pozice* **);**|
 
 ### <a name="example"></a>Příklad
 
@@ -834,8 +834,8 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**void\* RemoveHead ();**|
-|[CStringList –](../../mfc/reference/cstringlist-class.md)|**CString – RemoveHead ();**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* RemoveHead( );**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**CString RemoveHead( );**|
 
 ### <a name="example"></a>Příklad
 
@@ -863,8 +863,8 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**void\* RemoveTail ();**|
-|[CStringList –](../../mfc/reference/cstringlist-class.md)|**CString – RemoveTail ();**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* RemoveTail ();**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**CString – RemoveTail ();**|
 
 ### <a name="example"></a>Příklad
 
@@ -884,7 +884,7 @@ void SetAt(
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Pozice prvku, který chcete nastavit.
 
 *newElement*<br/>
@@ -900,8 +900,8 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**void SetAt (pozice** `pos` **, const CString &** `newElement` **);**|
-|[CStringList –](../../mfc/reference/cstringlist-class.md)|**void SetAt (pozice** `pos` **, LPCTSTR** `newElement` **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void SetAt (pozice** `pos` **, const CString &** `newElement` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**void SetAt( POSITION** `pos` **, LPCTSTR** `newElement` **);**|
 
 ### <a name="example"></a>Příklad
 
@@ -917,7 +917,7 @@ a CAge at $4D98 40
 a CAge at $4DB8 65
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

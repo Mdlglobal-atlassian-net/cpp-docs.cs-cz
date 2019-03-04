@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - nested_scheduler_missing_detach class
 ms.assetid: 65d3f277-6d43-4160-97ef-caf8b26c1641
-ms.openlocfilehash: ff60c5d9486f4c82bd48971c1a511df9a3372e9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: db51f7b083cc0cbd9337fbbe5c672d190208f328
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536796"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292444"
 ---
 # <a name="nestedschedulermissingdetach-class"></a>nested_scheduler_missing_detach – třída
 
@@ -49,7 +49,7 @@ Tato výjimka je vyvolána pouze v případě, že byste vnořit jeden Plánova�
 
 **Namespace:** souběžnosti
 
-##  <a name="ctor"></a> nested_scheduler_missing_detach –
+##  <a name="ctor"></a> nested_scheduler_missing_detach
 
 Vytvoří `nested_scheduler_missing_detach` objektu.
 
@@ -61,10 +61,10 @@ nested_scheduler_missing_detach() throw();
 
 ### <a name="parameters"></a>Parametry
 
-*_TEXT*<br/>
+*_Message*<br/>
 Popisná zpráva chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [Scheduler – třída](scheduler-class.md)

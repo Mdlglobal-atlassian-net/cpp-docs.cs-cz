@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: 026c7392c3eb93b37a712059939683e3e0ab852c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4aaede3eb2d5c922c196e2bdfbbe533c4e65e47
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628992"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295029"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>Cmfctoolbarscustomizedialog – třída
 
 Dialogové okno nemodální karty ( [cpropertysheet – třída](../../mfc/reference/cpropertysheet-class.md)), která umožňuje uživateli přizpůsobovat panely nástrojů, nabídky, klávesové zkratky, uživatelské nástroje a vizuální styl v aplikaci. Obvykle uživatel přistupuje k dialogovému oknu výběrem **vlastní** z **nástroje** nabídky.
 
-**Vlastní** dialogové okno obsahuje šest karet: **příkazy**, **panely nástrojů**, **nástroje**, **klávesnice**,  **Nabídka**, a **možnosti**.
+**Vlastní** dialogové okno obsahuje šest karet: **Příkazy**, **panely nástrojů**, **nástroje**, **klávesnice**, **nabídky**, a **možnosti**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -586,7 +586,7 @@ virtual BOOL OnEditToolbarMenuImage(
 *pWndParent*<br/>
 [in] Ukazatel do nadřazeného okna.
 
-*Rastrový obrázek*<br/>
+*bitmap*<br/>
 [in] Odkaz na objekt bitmap upravit.
 
 *nBitsPerPixel*<br/>
@@ -750,7 +750,7 @@ Hodnota TRUE, pokud je metoda úspěšná. v opačném případě FALSE.
 
 Kategorie nastavení hlavního názvu uživatele není aktuálně používané rozhraním.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

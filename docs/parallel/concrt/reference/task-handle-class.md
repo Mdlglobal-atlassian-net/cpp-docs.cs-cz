@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-ms.openlocfilehash: 060be8614fc3a0a93d446c747b65de82b863ab3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 4193c2d1e08c1b5a43dc728edd24efd19be87268
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518876"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298084"
 ---
 # <a name="taskhandle-class"></a>task_handle – třída
 
@@ -46,7 +46,7 @@ Typ objektu funkce, která bude volána k provedení práce reprezentována `tas
 
 |Název|Popis|
 |----------|-----------------|
-|[Operator()](#task_handle__operator_call)|Operátor volání funkce, která volá modul runtime pro provedení úlohy popisovače.|
+|[operator()](#task_handle__operator_call)|Operátor volání funkce, která volá modul runtime pro provedení úlohy popisovače.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -93,7 +93,7 @@ Funkce, která bude volána k provedení práce reprezentována `task_handle` ob
 
 Modul runtime vytvoří kopii pracovní funkce, které můžete předat konstruktoru. Proto objekt změny stavu, ke kterým dochází ve funkci předání `task_handle` objektu se nezobrazí v kopii tohoto objektu funkce.
 
-##  <a name="dtor"></a> ~ task_handle –
+##  <a name="dtor"></a> ~task_handle
 
 Odstraní `task_handle` objektu.
 
@@ -101,7 +101,7 @@ Odstraní `task_handle` objektu.
 ~task_handle();
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [task_group – třída](task-group-class.md)<br/>

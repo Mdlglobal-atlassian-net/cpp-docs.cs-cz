@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TN043
 - RFX (record field exchange)
 ms.assetid: f552d0c1-2c83-4389-b472-42c9940aa713
-ms.openlocfilehash: 278351ad1cf81215f4c6033f4cff0b100adedf23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18820c7d17ddea355490ee32679d5d690ec3533e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658858"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294483"
 ---
 # <a name="tn043-rfx-routines"></a>TN043: Rutiny RFX
 
@@ -146,9 +146,9 @@ Zápis funkce RFX vlastní, doporučujeme zkopírovat existující funkce RFX a 
 
 `RFX_Long` a `RFX_Int`: Jedná se o nejjednodušší funkcí RFX. Hodnota dat není nutné žádné speciální interpretaci a velikost dat je pevná.
 
-`RFX_Single` a `RFX_Double`: jako rfx_long – rfx_int – výše, tyto funkce jsou jednoduché a můžete provést pomocí výchozí implementace často. Ukládají se v dbflt.cpp místo dbrfx.cpp, ale povolit načtení modulu runtime s plovoucí desetinnou čárkou bodu knihovny, pouze pokud nejsou explicitně odkaz.
+`RFX_Single` a `RFX_Double`: Stejně jako rfx_long – a rfx_int – výše, tyto funkce jsou jednoduché a můžete provést pomocí výchozí implementace často. Ukládají se v dbflt.cpp místo dbrfx.cpp, ale povolit načtení modulu runtime s plovoucí desetinnou čárkou bodu knihovny, pouze pokud nejsou explicitně odkaz.
 
-`RFX_Text` a `RFX_Binary`: tyto dvě funkce předběžné přidělení statické vyrovnávací paměť pro uložení řetězce nebo binární informace a zaregistrujte vyrovnávací paměti s ODBC SQLBindCol místo registrace & vá hodnota. Z tohoto důvodu mají tyto dvě funkce velké množství kódu zvláštní případy.
+`RFX_Text` a `RFX_Binary`: Tyto dvě funkce předběžné přidělení statické vyrovnávací paměť pro uložení řetězce nebo binární informace a zaregistrujte vyrovnávací paměti s ODBC SQLBindCol místo registrace & vá hodnota. Z tohoto důvodu mají tyto dvě funkce velké množství kódu zvláštní případy.
 
 `RFX_Date`: ODBC vrátí informace o datu a času jejich vlastní TIMESTAMP_STRUCT z datové struktury. Tato funkce dynamicky přiděluje TIMESTAMP_STRUCT z jako proxy "server" pro odesílání a přijímání dat Datum čas. Různé operace musí přenášet informace o datu a času mezi C++ `CTime` objektu a TIMESTAMP_STRUCT z proxy serveru. To komplikuje tato funkce výrazně, ale je dobrým příkladem toho, jak používat proxy server pro přenos dat.
 
@@ -158,7 +158,7 @@ Při sestavování vlastních **RFX_** funkce, často budete moct používat `CF
 
 Je potřeba volat `IsFieldType` na začátku funkce RFX a vrátit okamžitě, pokud vrátí hodnotu FALSE. Tento mechanismus udržuje parametr operace prováděné na *outputColumns*a naopak (jako je volání `BindParam` na *outputColumn*). Kromě toho `IsFieldType` automaticky uchovává informace o počet *outputColumns* (*m_nFields*) a params (*m_nParams*).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)

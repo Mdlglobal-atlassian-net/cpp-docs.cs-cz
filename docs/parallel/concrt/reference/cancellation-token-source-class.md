@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - cancellation_token_source class
 ms.assetid: 3548b1a0-12b0-4334-95db-4bf57141c066
-ms.openlocfilehash: e0b636d22eede9eb6a9d9268241f912bb80fcbf9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 330473db1011af661e2cfa2c5861987bce786e40
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446745"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296784"
 ---
 # <a name="cancellationtokensource-class"></a>cancellation_token_source – třída
 
@@ -34,15 +34,15 @@ class cancellation_token_source;
 
 |Název|Popis|
 |----------|-----------------|
-|[cancellation_token_source –](#ctor)|Přetíženo. Sestaví nový `cancellation_token_source`. Zdroj lze použít k nastavení příznaku zrušení některých zrušitelných operací.|
-|[~ cancellation_token_source – destruktor](#dtor)||
+|[cancellation_token_source](#ctor)|Přetíženo. Sestaví nový `cancellation_token_source`. Zdroj lze použít k nastavení příznaku zrušení některých zrušitelných operací.|
+|[~cancellation_token_source Destructor](#dtor)||
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
 |[Zrušit](#cancel)|Zruší token. Žádné `task_group`, `structured_task_group`, nebo `task` používající token budou zrušeny při tomto volání a vyvolají výjimku v dalším bodě přerušení.|
-|[create_linked_source –](#create_linked_source)|Přetíženo. Vytvoří `cancellation_token_source` který se zruší po zrušení poskytnutého tokenu.|
+|[create_linked_source](#create_linked_source)|Přetíženo. Vytvoří `cancellation_token_source` který se zruší po zrušení poskytnutého tokenu.|
 |[get_token](#get_token)|Vrátí token zrušení spojený s tímto zdrojem. Vrácený token lze testovat na zrušení nebo poskytovat zpětné volání, pokud dojde k zrušení.|
 
 ### <a name="public-operators"></a>Veřejné operátory
@@ -63,7 +63,7 @@ class cancellation_token_source;
 
 **Namespace:** souběžnosti
 
-##  <a name="dtor"></a> ~ cancellation_token_source –
+##  <a name="dtor"></a> ~cancellation_token_source
 
 ```
 ~cancellation_token_source();
@@ -77,7 +77,7 @@ Zruší token. Žádné `task_group`, `structured_task_group`, nebo `task` použ
 void cancel() const;
 ```
 
-##  <a name="ctor"></a> cancellation_token_source –
+##  <a name="ctor"></a> cancellation_token_source
 
 Sestaví nový `cancellation_token_source`. Zdroj lze použít k nastavení příznaku zrušení některých zrušitelných operací.
 
@@ -94,7 +94,7 @@ cancellation_token_source(cancellation_token_source&& _Src);
 *_Src*<br/>
 Objekt má zkopírovat nebo přesunout.
 
-##  <a name="create_linked_source"></a> create_linked_source –
+##  <a name="create_linked_source"></a> create_linked_source
 
 Vytvoří `cancellation_token_source` který se zruší po zrušení poskytnutého tokenu.
 
@@ -117,14 +117,14 @@ Token jehož zrušení bude mít za následek zrušení zdroje vráceného token
 *_Zahájit*<br/>
 Standardní knihovny C++ iterátor, který odpovídá začátku rozsahu tokenů má naslouchá jejich zrušení.
 
-*_Ukončit*<br/>
+*_End*<br/>
 Standardní knihovny C++ iterátor, který odpovídá konci rozsahu tokenů má naslouchá jejich zrušení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 A `cancellation_token_source` který se zruší po token poskytnutý parametrem `_Src` parametr se zruší.
 
-##  <a name="get_token"></a> get_token –
+##  <a name="get_token"></a> get_token
 
 Vrátí token zrušení spojený s tímto zdrojem. Vrácený token lze testovat na zrušení nebo poskytovat zpětné volání, pokud dojde k zrušení.
 
@@ -177,6 +177,6 @@ Operand.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DAO (Data Access Objects), termination
 - DAO (Data Access Objects), initialization
 ms.assetid: a7edf31c-e7c2-4f3e-aada-63c3e48781da
-ms.openlocfilehash: ff924f0e0d599d447ef7dea0039de788d388d759
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ad0c1df2f5b6a7b1b48d2db119b04e4b3234f10
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589628"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297630"
 ---
 # <a name="dao-database-engine-initialization-and-termination"></a>Inicializace a ukončování databázového stroje v rozhraní DAO
 
@@ -22,10 +22,10 @@ Při použití objektů DAO knihovny MFC rozhraní DAO databázový stroj musí 
 
 |||
 |-|-|
-|[Afxdaoinit –](#afxdaoinit)|Inicializuje DAO databázového stroje.|
-|[Afxdaoterm –](#afxdaoterm)|Ukončí rozhraní DAO databázového stroje.|
+|[AfxDaoInit](#afxdaoinit)|Inicializuje DAO databázového stroje.|
+|[AfxDaoTerm](#afxdaoterm)|Ukončí rozhraní DAO databázového stroje.|
 
-##  <a name="afxdaoinit"></a>  Afxdaoinit –
+##  <a name="afxdaoinit"></a>  AfxDaoInit
 
 Tato funkce inicializuje DAO databázového stroje.
 
@@ -46,7 +46,7 @@ Související informace a příklad volání `AfxDaoInit`, naleznete v tématu [
 
   **Hlavička** afxdao.h
 
-##  <a name="afxdaoterm"></a>  Afxdaoterm –
+##  <a name="afxdaoterm"></a>  AfxDaoTerm
 
 Tato funkce je ukončeno DAO databázový stroj.
 
@@ -67,6 +67,6 @@ Související informace naleznete v tématu [Technická poznámka 54](../../mfc/
 
   **Hlavička** afxdao.h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)

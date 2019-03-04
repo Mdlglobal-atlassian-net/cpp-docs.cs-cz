@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: aaf0e68391dd1273c3f973315ac58fe0d6bd1c24
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 137f30262ce01ad82c075302b6e85bf67ae7b9be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176806"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293768"
 ---
 # <a name="cmfctaskspane-class"></a>Cmfctaskspane – třída
 
@@ -366,7 +366,7 @@ Následující příklad ukazuje, jak vytvořit `CMFCTasksPane` objektu a použ�
 
 [CObject –](../../mfc/reference/cobject-class.md) [CCmdTarget –](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)
 
-[Cbasepane –](../../mfc/reference/cbasepane-class.md) [cpane –](../../mfc/reference/cpane-class.md) [CDockablePane –](../../mfc/reference/cdockablepane-class.md)
+[CBasePane](../../mfc/reference/cbasepane-class.md) [CPane](../../mfc/reference/cpane-class.md) [CDockablePane](../../mfc/reference/cdockablepane-class.md)
 
 `CMFCTasksPane`
 
@@ -434,7 +434,7 @@ int AddLabel(
 
 ### <a name="parameters"></a>Parametry
 
-*Zrušit seskupení*<br/>
+*nGroup*<br/>
 [in] Určuje index skupiny, ve kterém je přidat popisek.
 
 *lpszLabelName*<br/>
@@ -466,7 +466,7 @@ int AddMRUFilesList(
 
 ### <a name="parameters"></a>Parametry
 
-*Zrušit seskupení*<br/>
+*nGroup*<br/>
 [in] Určuje index skupiny. Tato metoda přidá do seznamu naposledy použitých souborů do skupiny zadána tímto parametrem.
 
 *nMaxFiles*<br/>
@@ -522,7 +522,7 @@ int AddTask(
 
 ### <a name="parameters"></a>Parametry
 
-*Zrušit seskupení*<br/>
+*nGroup*<br/>
 [in] Určuje index skupiny, ve kterém se úkol přidá.
 
 *lpszTaskName*<br/>
@@ -556,7 +556,7 @@ int AddWindow(
 
 ### <a name="parameters"></a>Parametry
 
-*Zrušit seskupení*<br/>
+*nGroup*<br/>
 [in] Určuje index skupiny, ve kterém se přidá v okně.
 
 *hwndTask*<br/>
@@ -626,7 +626,7 @@ BOOL CollapseGroup(
 *bCollapse*<br/>
 [in] TRUE, pokud chcete sbalit skupiny; FALSE, rozbalte skupinu.
 
-*Zrušit seskupení*<br/>
+*nGroup*<br/>
 [in] Určuje skupinu, kterou chcete sbalit ve vnitřním seznamu skupin index založený na nule.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -898,7 +898,7 @@ BOOL GetGroupLocation(
 *pGroup*<br/>
 [in] Určuje skupiny úloh, jejichž umístění se načítají.
 
-*Zrušit seskupení*<br/>
+*nGroup*<br/>
 [out] Obsahuje index založený na nule skupiny úloh.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -957,7 +957,7 @@ BOOL GetPageByGroup(
 
 ### <a name="parameters"></a>Parametry
 
-*Zrušit seskupení*<br/>
+*nGroup*<br/>
 [in] Určuje index založený na nule skupiny úloh.
 
 *nPage*<br/>
@@ -1017,7 +1017,7 @@ CMFCTasksPaneTask* GetTask(
 
 ### <a name="parameters"></a>Parametry
 
-*Zrušit seskupení*<br/>
+*nGroup*<br/>
 [in] Určuje index založený na nule skupiny, která obsahuje úlohu.
 
 *nTask*<br/>
@@ -1037,7 +1037,7 @@ int GetTaskCount(int nGroup) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Zrušit seskupení*<br/>
+*nGroup*<br/>
 [in] Určuje index skupiny úloh.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1054,7 +1054,7 @@ CMFCTasksPaneTaskGroup* GetTaskGroup(int nGroup) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Zrušit seskupení*<br/>
+*nGroup*<br/>
 [in] Určuje index založený na nule skupinu, kterou chcete načíst.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1087,7 +1087,7 @@ BOOL GetTaskLocation(
 *uiCommandID*<br/>
 [in] Určuje ID příkazu úkolu se má najít.
 
-*Zrušit seskupení*<br/>
+*nGroup*<br/>
 [out] Obsahuje index skupiny úloh.
 
 *nTask*<br/>
@@ -1511,7 +1511,7 @@ void RemoveAllTasks(int nGroup);
 
 ### <a name="parameters"></a>Parametry
 
-*Zrušit seskupení*<br/>
+*nGroup*<br/>
 [in] Určuje index založený na nule skupiny.
 
 ##  <a name="removegroup"></a>  CMFCTasksPane::RemoveGroup
@@ -1524,7 +1524,7 @@ void RemoveGroup(int nGroup);
 
 ### <a name="parameters"></a>Parametry
 
-*Zrušit seskupení*<br/>
+*nGroup*<br/>
 [in] Určuje index založený na nule skupinu, kterou chcete odebrat.
 
 ### <a name="remarks"></a>Poznámky
@@ -1559,7 +1559,7 @@ BOOL RemoveTask(
 
 ### <a name="parameters"></a>Parametry
 
-*Zrušit seskupení*<br/>
+*nGroup*<br/>
 [in] Určuje index založený na nule, který obsahuje úlohu k odebrání skupiny úloh.
 
 *nTask*<br/>
@@ -1694,7 +1694,7 @@ BOOL SetGroupName(
 
 ### <a name="parameters"></a>Parametry
 
-*Zrušit seskupení*<br/>
+*nGroup*<br/>
 [in] Určuje index založený na nule skupiny.
 
 *lpszGroupName*<br/>
@@ -1717,10 +1717,10 @@ BOOL SetGroupTextColor(
 
 ### <a name="parameters"></a>Parametry
 
-*Zrušit seskupení*<br/>
+*nGroup*<br/>
 [in] Určuje index založený na nule skupiny.
 
-*Barva*<br/>
+*color*<br/>
 [in] Určuje barvu textu.
 
 *colorHot*<br/>
@@ -1786,7 +1786,7 @@ void SetIconsList(HIMAGELIST hIcons);
 *uiImageListResID*<br/>
 [in] Určuje ID prostředku ze seznamu obrázků.
 
-*CX*<br/>
+*cx*<br/>
 [in] Určuje velikost ikony v seznamu obrázků.
 
 *clrTransparent*<br/>
@@ -1836,7 +1836,7 @@ BOOL SetTaskName(
 
 ### <a name="parameters"></a>Parametry
 
-*Zrušit seskupení*<br/>
+*nGroup*<br/>
 [in] Určuje index založený na nule skupiny úloh.
 
 *nTask*<br/>
@@ -1908,13 +1908,13 @@ BOOL SetTaskTextColor(
 
 ### <a name="parameters"></a>Parametry
 
-*Zrušit seskupení*<br/>
+*nGroup*<br/>
 [in] Určuje index založený na nule, která obsahuje úlohu skupiny úloh.
 
 *nTask*<br/>
 [in] Určuje index založený na nule úkolu.
 
-*Barva*<br/>
+*color*<br/>
 [in] Určuje barvu textu pro úlohu.
 
 *colorHot*<br/>
@@ -1960,7 +1960,7 @@ BOOL SetWindowHeight(
 
 ### <a name="parameters"></a>Parametry
 
-*Zrušit seskupení*<br/>
+*nGroup*<br/>
 [in] Určuje index založený na nule skupiny, která obsahuje ovládací prvek okna.
 
 *hwndTask*<br/>
@@ -2003,7 +2003,7 @@ BOOL ShowTask(
 
 ### <a name="parameters"></a>Parametry
 
-*Zrušit seskupení*<br/>
+*nGroup*<br/>
 [in] Určuje index založený na nule skupiny.
 
 *nTask*<br/>
@@ -2067,7 +2067,7 @@ Tato metoda aktualizuje Titulek podokna úloh, upraví posuvníku, přemístí v
 
 Potlačí tuto metodu v odvozené třídě ke spuštění vlastního kódu, když systém aktualizuje podokna úloh.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

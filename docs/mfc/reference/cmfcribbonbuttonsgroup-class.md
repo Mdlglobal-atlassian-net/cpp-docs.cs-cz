@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCRibbonButtonsGroup [MFC], SetImages
 - CMFCRibbonButtonsGroup [MFC], SetParentCategory
 ms.assetid: b993d93e-fc1a-472f-a87f-1d7b7b499845
-ms.openlocfilehash: 0babda16ee29671a584599699b459062c22406e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a0806d5c45f429f975b7b8ef0085252fe2b2528
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592735"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295887"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>Cmfcribbonbuttonsgroup – třída
 
@@ -87,7 +87,7 @@ Následující příklad ukazuje, jak použít různé metody v `CMFCRibbonButto
 
 [Cmfcribbonbaseelement –](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
-[Cmfcribbonbuttonsgroup –](../../mfc/reference/cmfcribbonbuttonsgroup-class.md)
+[CMFCRibbonButtonsGroup](../../mfc/reference/cmfcribbonbuttonsgroup-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -193,7 +193,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení ze skupiny pásu karet.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -228,7 +228,7 @@ virtual void OnDrawImage(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení `CMFCRibbonButtonsGroup` objektu.
 
 *rectImage*<br/>
@@ -296,7 +296,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)

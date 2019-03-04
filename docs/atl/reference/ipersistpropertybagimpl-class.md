@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IPersistPropertyBagImpl class
 ms.assetid: 712af24d-99f8-40f2-9811-53b3ff6e5b19
-ms.openlocfilehash: 644f26ffbfb29003780eb2fc7acf3471d101ec57
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 800c38c15e4ec8028fba9188d75e49be7ca51146
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549068"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297174"
 ---
 # <a name="ipersistpropertybagimpl-class"></a>Ipersistpropertybagimpl – třída
 
@@ -125,7 +125,7 @@ Mapy vlastností objektu ATL používá k ukládání příslušných informací
 
 Zobrazit [IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) ve Windows SDK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [BEGIN_PROP_MAP](property-map-macros.md#begin_prop_map)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

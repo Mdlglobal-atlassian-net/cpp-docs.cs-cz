@@ -1,5 +1,5 @@
 ---
-title: Cmfclistctrl – třída
+title: CMFCListCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCListCtrl
@@ -28,14 +28,14 @@ helpviewer_keywords:
 - CMFCListCtrl [MFC], SetSortColumn
 - CMFCListCtrl [MFC], Sort
 ms.assetid: 50d16aee-138c-4f34-8690-cb75d544ef2e
-ms.openlocfilehash: 7d289dc25dfdb07ae581c4669154517882867f2a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2434671ecdca4e68f3a83c21f1916b42928ffcd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642261"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294226"
 ---
-# <a name="cmfclistctrl-class"></a>Cmfclistctrl – třída
+# <a name="cmfclistctrl-class"></a>CMFCListCtrl Class
 
 `CMFCListCtrl` Třída rozšiřuje funkce [třídě CListCtrl](../../mfc/reference/clistctrl-class.md) třídy díky podpoře funkcionality kontroly rozšířené hlavičky z [cmfcheaderctrl – třída](../../mfc/reference/cmfcheaderctrl-class.md).
 
@@ -84,11 +84,11 @@ Následující příklad ukazuje, jak použít různé metody v `CMFCListCtrl` t
 
 [CListCtrl](../../mfc/reference/clistctrl-class.md)
 
-[Cmfclistctrl –](../../mfc/reference/cmfclistctrl-class.md)
+[CMFCListCtrl](../../mfc/reference/cmfclistctrl-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxlistctrl.h
+**Header:** afxlistctrl.h
 
 ##  <a name="enablemarksortedcolumn"></a>  CMFCListCtrl::EnableMarkSortedColumn
 
@@ -338,7 +338,7 @@ virtual void Sort(
 *bAdd*<br/>
 [in] Logická hodnota, která určuje, zda tato metoda přidá sloupec označen *iColumn* do seznamu sloupců seřadit.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

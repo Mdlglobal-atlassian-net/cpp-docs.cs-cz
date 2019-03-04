@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Internet client applications [MFC], HTTP table
 - WinInet classes [MFC], HTTP
 ms.assetid: f86552e8-8acd-4b23-bdc5-0c3a247ebd74
-ms.openlocfilehash: a73d220f4ab7f58960ccfe4b09f98f0cd0956406
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59b585d3e6b8c9f13c585f5a712d33abd6123f67
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630786"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296472"
 ---
 # <a name="steps-in-a-typical-http-client-application"></a>Postup v typické aplikaci klienta HTTP
 
@@ -30,7 +30,7 @@ Následující tabulka uvádí kroky, že které může provádět v typické ap
 |Zpracování výjimek.|Použití [cinternetexception –](../mfc/reference/cinternetexception-class.md) třídy.|Zpracovává všechny typy výjimek common Internet.|
 |Ukončit relaci protokolu HTTP.|Vyřazení [cinternetsession –](../mfc/reference/cinternetsession-class.md) objektu.|Automaticky vyčistí otevřené popisovače souborů a připojení.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Win32 – internetová rozšíření (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
 [Požadavky na třídy internetových klientů](../mfc/prerequisites-for-internet-client-classes.md)<br/>

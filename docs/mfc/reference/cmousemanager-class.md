@@ -1,5 +1,5 @@
 ---
-title: Cmousemanager – třída
+title: CMouseManager Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMouseManager
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - CMouseManager [MFC], SaveState
 - CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
-ms.openlocfilehash: b3c5104038e6d715977a211af5a535cc9a5d916f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d58293b94eeaf499c48f750972b15256e9c19794
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498147"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293183"
 ---
-# <a name="cmousemanager-class"></a>Cmousemanager – třída
+# <a name="cmousemanager-class"></a>CMouseManager Class
 
 Umožňuje uživateli přidružit různé příkazy ke konkrétním [CView](../../mfc/reference/cview-class.md) objektu při poklepání uvnitř daného zobrazení.
 
@@ -97,7 +97,7 @@ BOOL AddView(
 *uiIconId*<br/>
 [in] ID ikony zobrazení
 
-*identifikátor iId*<br/>
+*iId*<br/>
 [in] ID zobrazení
 
 *lpszViewName*<br/>
@@ -131,7 +131,7 @@ UINT GetViewDblClickCommand(int iId) const;
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor iId*<br/>
+*iId*<br/>
 [in] ID zobrazení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -267,10 +267,9 @@ Aby bylo možné přidružit k zobrazení vlastního příkazu, musíte se nejpr
 
 Pokud *uiCmd* je nastavena na hodnotu 0, zadané zobrazení je už přidružený příkaz.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
 [CWinAppEx – třída](../../mfc/reference/cwinappex-class.md)<br/>
 [Přizpůsobení klávesnice a myši](../../mfc/keyboard-and-mouse-customization.md)
-

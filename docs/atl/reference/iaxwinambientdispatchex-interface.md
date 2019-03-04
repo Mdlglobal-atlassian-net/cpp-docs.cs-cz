@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
-ms.openlocfilehash: 5b4afabe2c12dff048bc6a6fb904a82b3cea4d01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae91921ecd5f53f4551e46e1d03cf027ce3e1f3b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539435"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292396"
 ---
 # <a name="iaxwinambientdispatchex-interface"></a>Iaxwinambientdispatchex – rozhraní
 
@@ -55,7 +55,7 @@ Definice toto rozhraní není k dispozici v různých formách, jak je znázorn�
 |Typ definice|Soubor|
 |---------------------|----------|
 |IDL|atliface.IDL|
-|Knihovny typů|ATL.|
+|Knihovny typů|ATL.dll|
 |C++|atliface.h (také součástí ATLBase.h)|
 
 ##  <a name="setambientdispatch"></a>  IAxWinAmbientDispatchEx::SetAmbientDispatch
@@ -79,6 +79,6 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 Když `SetAmbientDispatch` se volá s ukazatelem na nové rozhraní, bude toto nové rozhraní použít k vyvolání žádné vlastnosti nebo metody požádán o hostovaného ovládacího prvku, pokud tyto vlastnosti nejsou ještě součástí [iaxwinambientdispatch –](../../atl/reference/iaxwinambientdispatch-interface.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IAxWinAmbientDispatch – rozhraní](../../atl/reference/iaxwinambientdispatch-interface.md)

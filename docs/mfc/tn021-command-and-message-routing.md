@@ -1,5 +1,5 @@
 ---
-title: 'TN021: Směrování příkazů a zpráv'
+title: 'TN021: Příkaz a směrování zpráv'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.routing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - command routing [MFC], technical note TN021
 - Windows messages [MFC], routing
 ms.assetid: b5952c8b-123e-406c-a36d-a6ac7c6df307
-ms.openlocfilehash: 4a0774234e6314ff6811bbeafa11403f19cf568e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ce8aa2013c8f2f351ca1028f0d6103135ba5ecd8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635705"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294392"
 ---
-# <a name="tn021-command-and-message-routing"></a>TN021: Směrování příkazů a zpráv
+# <a name="tn021-command-and-message-routing"></a>TN021: Příkaz a směrování zpráv
 
 > [!NOTE]
 >  Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
@@ -163,7 +163,7 @@ Výchozí **CWnd** implementace zpracovává následující zprávy a používá
 
 - **WM_HSCROLL** a **WM_VSCROLL**
 
-- **WM_CTLCOLOR –**
+- **WM_CTLCOLOR**
 
 - **WM_PARENTNOTIFY**
 
@@ -203,7 +203,7 @@ Pro **CMDIFrameWnd** styly posuvníku panelu předáním **vytvořit** nebo **lo
 
 Pro **CSplitterWnd** styly posuvníku panelu použít lze na speciální sdílené posuvníky v oblasti rozdělovač. Pro statické rozdělovače oken bude obvykle není nastavena buď styl panelu přejděte. Dynamické rozdělovače oken, obvykle využívá posuvník sadu stylů pro směr rozdělíte, tedy **WS_HSCROLL** rozdělit řádky, **WS_VSCROLL** rozdělit sloupce.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
