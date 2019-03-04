@@ -1,27 +1,26 @@
 ---
-title: 'Výjimky: Výjimky v konstruktorech'
+title: 'Výjimky: Výjimky v konstruktorech'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - constructors [MFC], exceptions
 - throwing exceptions [MFC], in constructors
 - exceptions [MFC], in constructors
 ms.assetid: a78eae5a-5821-4b27-9478-1436320ed1e1
-ms.openlocfilehash: 23d1f6a9a3c76cc9c0c1d4aebd5c0b0ea45c3154
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b11f5be18879d5ad4b9e204bb02e18b4617c6b7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472265"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271005"
 ---
-# <a name="exceptions-exceptions-in-constructors"></a>Výjimky: Výjimky v konstruktorech
+# <a name="exceptions-exceptions-in-constructors"></a>Výjimky: Výjimky v konstruktorech
 
-Při vyvolání výjimky v konstruktoru, vyčistit libovolné objekty a přidělení paměti provedené před vyvolání výjimky, jak je vysvětleno v [výjimky: generování výjimek z vaše vlastní funkce](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md).
+Při vyvolání výjimky v konstruktoru, vyčistit libovolné objekty a přidělení paměti provedené před vyvolání výjimky, jak je vysvětleno v [výjimky: Generování výjimek ve vašich vlastních funkcích](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md).
 
 Při vyvolání výjimky v konstruktoru, paměť pro samotný objekt již byl vytvořen v době, kdy je konstruktor volán. Proto kompilátor bude automaticky přidělení paměti obsazena objektu poté, co je vyvolána výjimka.
 
-Další informace najdete v tématu [výjimky: uvolnění objektů ve výjimkách](../mfc/exceptions-freeing-objects-in-exceptions.md).
+Další informace najdete v tématu [výjimky: Uvolnění objektů ve výjimkách](../mfc/exceptions-freeing-objects-in-exceptions.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zpracování výjimek](../mfc/exception-handling-in-mfc.md)
-

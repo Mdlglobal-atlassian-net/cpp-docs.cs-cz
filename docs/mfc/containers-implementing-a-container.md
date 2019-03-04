@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-ms.openlocfilehash: 89bb8b483dba6e635eef5d9857bb558eca8e8fec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ab91316c9ee07296fbc46f9f17b3c46c71ee96f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546702"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271421"
 ---
 # <a name="containers-implementing-a-container"></a>Kontejnery: Implementace kontejneru
 
@@ -46,7 +46,7 @@ Protože implementaci těchto funkcí se výrazně liší od jedné aplikace na 
 
 Průvodce aplikace odvodí třídy za vás, ale bude pravděpodobně nutné přepsat `OnChange` a další funkce uvedené s ním v kroku 2 v předchozím postupu. Kostru implementace muset lze přizpůsobit pro většinu aplikací, protože tyto funkce jsou implementované jinak z jedné aplikace na další. Příklady, najdete v ukázkách MFC [DRAWCLI](../visual-cpp-samples.md) a [KONTEJNERU](../visual-cpp-samples.md).
 
-Počet položek, které je třeba přidat do nabídky struktury aplikace typu kontejner pro podporu technologie OLE. Další informace naleznete v tématu [nabídky a prostředky: kontejnerové doplňky](../mfc/menus-and-resources-container-additions.md).
+Počet položek, které je třeba přidat do nabídky struktury aplikace typu kontejner pro podporu technologie OLE. Další informace naleznete v tématu [nabídky a prostředky: Kontejnerové doplňky](../mfc/menus-and-resources-container-additions.md).
 
 Můžete také podporovat některé z následujících funkcí v kontejneru aplikace:
 
@@ -60,10 +60,9 @@ Můžete také podporovat některé z následujících funkcí v kontejneru apli
 
 - Obsahuje odkazy na vložené objekty nebo kombinaci typu server/kontejner aplikace.
 
-   Další informace najdete v tématu [kontejnery: pokročilé funkce](../mfc/containers-advanced-features.md).
+   Další informace najdete v tématu [kontejnerů: Pokročilé funkce](../mfc/containers-advanced-features.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Kontejnery](../mfc/containers.md)<br/>
 [Kontejnery: Klientské položky](../mfc/containers-client-items.md)
-

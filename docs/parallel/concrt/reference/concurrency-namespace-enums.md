@@ -12,22 +12,22 @@ f1_keywords:
 - CONCRT/concurrency::join_type
 - CONCRT/concurrency::message_status Enumeration
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-ms.openlocfilehash: 342655e290167315b7f10caba979804461e10658
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d3eb49cd1555f23cc83efb0d8d912998295b3c55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521073"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271187"
 ---
 # <a name="concurrency-namespace-enums"></a>výčty oboru názvů Concurrency
 
 ||||
 |-|-|-|
-|[Agents_eventtype –](#agents_eventtype)|[Concrt_eventtype –](#concrt_eventtype)|[Concrt_traceflags –](#concrt_traceflags)|
-|[Criticalregiontype –](#criticalregiontype)|[DynamicProgressFeedbackType](#dynamicprogressfeedbacktype)|[Policyelementkey –](#policyelementkey)|
-|[SchedulerType](#schedulertype)|[Schedulingprotocoltype –](#schedulingprotocoltype)|[Switchingproxystate –](#switchingproxystate)|
-|[Winrtinitializationtype –](#winrtinitializationtype)|[agent_status](#agent_status)|[join_type](#join_type)|
-|[message_status –](#message_status)|[task_group_status](#task_group_status)|
+|[Agents_EventType](#agents_eventtype)|[ConcRT_EventType](#concrt_eventtype)|[Concrt_TraceFlags](#concrt_traceflags)|
+|[CriticalRegionType](#criticalregiontype)|[DynamicProgressFeedbackType](#dynamicprogressfeedbacktype)|[PolicyElementKey](#policyelementkey)|
+|[SchedulerType](#schedulertype)|[SchedulingProtocolType](#schedulingprotocoltype)|[SwitchingProxyState](#switchingproxystate)|
+|[WinRTInitializationType](#winrtinitializationtype)|[agent_status](#agent_status)|[join_type](#join_type)|
+|[message_status](#message_status)|[task_group_status](#task_group_status)|
 
 ##  <a name="agent_status"></a>  agent_status – výčet
 
@@ -217,16 +217,16 @@ enum PolicyElementKey;
 
 |Název|Popis|
 |----------|-----------------|
-|`ContextPriority`|Priorita vlákna operačního systému z jednotlivých kontextech v plánovači. Pokud tento klíč nastavený na hodnotu `INHERIT_THREAD_PRIORITY` kontextech v Plánovači zdědí priorita vlákna, které vytvořili plánovače.<br /><br /> Platné hodnoty: žádné platné hodnoty pro Windows `SetThreadPriority` funkce a zvláštní hodnota `INHERIT_THREAD_PRIORITY`<br /><br /> Výchozí hodnota: `THREAD_PRIORITY_NORMAL`|
-|`ContextStackSize`|Velikost zásobníku vyhrazené každý kontext v Plánovači v kilobajtech.<br /><br /> Platné hodnoty: kladná celá čísla<br /><br /> Výchozí hodnota: `0`, označující, že použita výchozí hodnota proces pro velikost zásobníku.|
-|`DynamicProgressFeedback`|Určuje, zda bude znovu vyrovnána zdrojů pro Plánovač podle statistické informace shromážděné z plánovače nebo pouze podle úrovně předplatného základní hardwarových vláken. Další informace najdete v tématu [dynamicprogressfeedbacktype –](#dynamicprogressfeedbacktype).<br /><br /> Platné hodnoty:, členem `DynamicProgressFeedbackType` výčet, buď `ProgressFeedbackEnabled` nebo `ProgressFeedbackDisabled`<br /><br /> Výchozí hodnota: `ProgressFeedbackEnabled`|
-|`LocalContextCacheSize`|Když `SchedulingProtocol` je nastavena na hodnotu klíče zásad `EnhanceScheduleGroupLocality`, určuje maximální počet spustitelných kontextů povolené ukládat do mezipaměti v na místní fronty virtuálního procesoru. Takové kontexty obvykle poběží v pořadí last-in-first-out (LIFO) na virtuální procesor, který je na spustitelnost způsobily. Všimněte si, že má tento klíč zásady nemají smysl, kdy `SchedulingProtocol` klíč nastavený na hodnotu `EnhanceForwardProgress`.<br /><br /> Platné hodnoty: nezáporná celá čísla<br /><br /> Výchozí hodnota: `8`|
-|`MaxConcurrency`|Souběžnost maximální úroveň požadovaného plánovačem. Správce prostředků se pokusí nejprve přidělit uvedený počet virtuálních procesorů. Zvláštní hodnota [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) znamená, že je stejný jako počet podprocesů hardwaru na počítači na úrovni požadované souběžnosti. Pokud je hodnota zadaná u `MinConcurrency` je větší než počet podprocesů hardwaru na počítači a `MaxConcurrency` je zadán jako `MaxExecutionResources`, hodnota `MaxConcurrency` je vyvolávána s cílem odpovídat, jaký je nastavený pro `MinConcurrency`.<br /><br /> Platné hodnoty: kladná celá čísla a zvláštní hodnota `MaxExecutionResources`<br /><br /> Výchozí hodnota: `MaxExecutionResources`|
+|`ContextPriority`|Priorita vlákna operačního systému z jednotlivých kontextech v plánovači. Pokud tento klíč nastavený na hodnotu `INHERIT_THREAD_PRIORITY` kontextech v Plánovači zdědí priorita vlákna, které vytvořili plánovače.<br /><br /> Platné hodnoty: Žádné platné hodnoty pro Windows `SetThreadPriority` funkce a zvláštní hodnota `INHERIT_THREAD_PRIORITY`<br /><br /> Výchozí hodnota: `THREAD_PRIORITY_NORMAL`|
+|`ContextStackSize`|Velikost zásobníku vyhrazené každý kontext v Plánovači v kilobajtech.<br /><br /> Platné hodnoty: Kladná celá čísla<br /><br /> Výchozí hodnota: `0`, označující, že použita výchozí hodnota proces pro velikost zásobníku.|
+|`DynamicProgressFeedback`|Určuje, zda bude znovu vyrovnána zdrojů pro Plánovač podle statistické informace shromážděné z plánovače nebo pouze podle úrovně předplatného základní hardwarových vláken. Další informace najdete v tématu [dynamicprogressfeedbacktype –](#dynamicprogressfeedbacktype).<br /><br /> Platné hodnoty: Člen `DynamicProgressFeedbackType` výčet, buď `ProgressFeedbackEnabled` nebo `ProgressFeedbackDisabled`<br /><br /> Výchozí hodnota: `ProgressFeedbackEnabled`|
+|`LocalContextCacheSize`|Když `SchedulingProtocol` je nastavena na hodnotu klíče zásad `EnhanceScheduleGroupLocality`, určuje maximální počet spustitelných kontextů povolené ukládat do mezipaměti v na místní fronty virtuálního procesoru. Takové kontexty obvykle poběží v pořadí last-in-first-out (LIFO) na virtuální procesor, který je na spustitelnost způsobily. Všimněte si, že má tento klíč zásady nemají smysl, kdy `SchedulingProtocol` klíč nastavený na hodnotu `EnhanceForwardProgress`.<br /><br /> Platné hodnoty: Nezáporná celá čísla<br /><br /> Výchozí hodnota: `8`|
+|`MaxConcurrency`|Souběžnost maximální úroveň požadovaného plánovačem. Správce prostředků se pokusí nejprve přidělit uvedený počet virtuálních procesorů. Zvláštní hodnota [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) znamená, že je stejný jako počet podprocesů hardwaru na počítači na úrovni požadované souběžnosti. Pokud je hodnota zadaná u `MinConcurrency` je větší než počet podprocesů hardwaru na počítači a `MaxConcurrency` je zadán jako `MaxExecutionResources`, hodnota `MaxConcurrency` je vyvolávána s cílem odpovídat, jaký je nastavený pro `MinConcurrency`.<br /><br /> Platné hodnoty: Kladná celá čísla a zvláštní hodnota `MaxExecutionResources`<br /><br /> Výchozí hodnota: `MaxExecutionResources`|
 |`MaxPolicyElementKey`|Klíč elementu maximální zásad. Není platný element key.|
-|`MinConcurrency`|Úroveň minimální souběžnosti, který se musí poskytnout plánovači resource Manageru. Počet virtuálních procesorů, které jsou přiřazeny do fronty plánovače půjdou nikdy pod požadované minimum. Zvláštní hodnota [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) znamená, že úroveň souběžnosti minimální je stejný jako počet podprocesů hardwaru v počítači. Pokud je hodnota zadaná u `MaxConcurrency` je menší než počet podprocesů hardwaru na počítači a `MinConcurrency` je zadán jako `MaxExecutionResources`, hodnota `MinConcurrency` klesnou tak, aby odpovídaly, jaký je nastavený pro `MaxConcurrency`.<br /><br /> Platné hodnoty: nezáporná celá čísla a zvláštní hodnota `MaxExecutionResources`. Všimněte si, že zásady plánovače použít pro tvorbu plánovači Concurrency Runtime, hodnota `0` je neplatný.<br /><br /> Výchozí hodnota: `1`|
-|`SchedulerKind`|Typ vlákna, která Plánovač budou využívat pro základní spuštění kontexty. Další informace najdete v tématu [schedulertype –](#schedulertype).<br /><br /> Platné hodnoty:, členem `SchedulerType` výčtu, například `ThreadScheduler`<br /><br /> Výchozí hodnota: `ThreadScheduler`. To se přeloží na Win32 vlákna ve všech operačních systémech.|
-|`SchedulingProtocol`|Popisuje, jaké plánování algoritmus se použije plánovačem. Další informace najdete v tématu [schedulingprotocoltype –](#schedulingprotocoltype).<br /><br /> Platné hodnoty:, členem `SchedulingProtocolType` výčet, buď `EnhanceScheduleGroupLocality` nebo `EnhanceForwardProgress`<br /><br /> Výchozí hodnota: `EnhanceScheduleGroupLocality`|
-|`TargetOversubscriptionFactor`|Předběžná počet virtuálních procesorů na vlákno hardwaru. Cílový překryvného odběru faktor je možné zvýšit Resource Manageru, pokud je to nezbytné pro splnění `MaxConcurrency` s vlákny hardwaru v počítači.<br /><br /> Platné hodnoty: kladná celá čísla<br /><br /> Výchozí hodnota: `1`|
+|`MinConcurrency`|Úroveň minimální souběžnosti, který se musí poskytnout plánovači resource Manageru. Počet virtuálních procesorů, které jsou přiřazeny do fronty plánovače půjdou nikdy pod požadované minimum. Zvláštní hodnota [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) znamená, že úroveň souběžnosti minimální je stejný jako počet podprocesů hardwaru v počítači. Pokud je hodnota zadaná u `MaxConcurrency` je menší než počet podprocesů hardwaru na počítači a `MinConcurrency` je zadán jako `MaxExecutionResources`, hodnota `MinConcurrency` klesnou tak, aby odpovídaly, jaký je nastavený pro `MaxConcurrency`.<br /><br /> Platné hodnoty: Nezáporná celá čísla a zvláštní hodnota `MaxExecutionResources`. Všimněte si, že zásady plánovače použít pro tvorbu plánovači Concurrency Runtime, hodnota `0` je neplatný.<br /><br /> Výchozí hodnota: `1`|
+|`SchedulerKind`|Typ vlákna, která Plánovač budou využívat pro základní spuštění kontexty. Další informace najdete v tématu [schedulertype –](#schedulertype).<br /><br /> Platné hodnoty: Člen `SchedulerType` výčtu, například `ThreadScheduler`<br /><br /> Výchozí hodnota: `ThreadScheduler`. To se přeloží na Win32 vlákna ve všech operačních systémech.|
+|`SchedulingProtocol`|Popisuje, jaké plánování algoritmus se použije plánovačem. Další informace najdete v tématu [schedulingprotocoltype –](#schedulingprotocoltype).<br /><br /> Platné hodnoty: Člen `SchedulingProtocolType` výčet, buď `EnhanceScheduleGroupLocality` nebo `EnhanceForwardProgress`<br /><br /> Výchozí hodnota: `EnhanceScheduleGroupLocality`|
+|`TargetOversubscriptionFactor`|Předběžná počet virtuálních procesorů na vlákno hardwaru. Cílový překryvného odběru faktor je možné zvýšit Resource Manageru, pokud je to nezbytné pro splnění `MaxConcurrency` s vlákny hardwaru v počítači.<br /><br /> Platné hodnoty: Kladná celá čísla<br /><br /> Výchozí hodnota: `1`|
 |`WinRTInitialization`||
 
 ### <a name="requirements"></a>Požadavky
@@ -332,6 +332,6 @@ enum WinRTInitializationType;
 
 **Záhlaví:** concrt.h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)

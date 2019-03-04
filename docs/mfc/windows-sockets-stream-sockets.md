@@ -1,19 +1,19 @@
 ---
-title: 'Windows Sockets: Sokety datového proudu'
+title: 'Windows Sockets: Stream Sockets'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Windows Sockets [MFC], stream sockets
 - sockets [MFC], stream sockets
 - stream sockets [MFC]
 ms.assetid: 31faaa34-a995-493f-a30b-b8115293d619
-ms.openlocfilehash: 298428bd5e81d11eb62907dfbac39acda24524f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91f06c4a36e76638708edf085987e51418913fd6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560222"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271291"
 ---
-# <a name="windows-sockets-stream-sockets"></a>Windows Sockets: Sokety datového proudu
+# <a name="windows-sockets-stream-sockets"></a>Windows Sockets: Stream Sockets
 
 Tento článek popisuje sokety datového proudu, jeden ze dvou typů Windows Socket, která je k dispozici. (Je typ [datagram soketu](../mfc/windows-sockets-datagram-sockets.md).)
 
@@ -40,8 +40,7 @@ Použití sokety datového proudu, může být vyšší než aplikace navržena 
     > [!NOTE]
     >  Pokud použijete třídu `CSocket`, je nutné použít datový proud. MFC kontrolní výraz selže, pokud zadáte typ soketu jako **SOCK_DGRAM**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)<br/>
-[Windows Sockets: Pozadí](../mfc/windows-sockets-background.md)
-
+[Windows Sockets: Background](../mfc/windows-sockets-background.md)

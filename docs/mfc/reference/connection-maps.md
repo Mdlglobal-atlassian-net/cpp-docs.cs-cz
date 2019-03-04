@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-ms.openlocfilehash: 388b3d1961f9c7cf3598db08a986c2205ac34bc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cbd993e7172ca9a25f25db18d5d0fa042db847b3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624806"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271148"
 ---
 # <a name="connection-maps"></a>Mapy připojení
 
@@ -39,8 +39,8 @@ Následující funkce pomáhají jímka při navazování a odpojí připojení 
 
 |||
 |-|-|
-|[Afxconnectionadvise –](#afxconnectionadvise)|Naváže připojení mezi zdroj a jímku.|
-|[Afxconnectionunadvise –](#afxconnectionunadvise)|Zruší připojení mezi zdroj a jímku.|
+|[AfxConnectionAdvise](#afxconnectionadvise)|Naváže připojení mezi zdroj a jímku.|
+|[AfxConnectionUnadvise](#afxconnectionunadvise)|Zruší připojení mezi zdroj a jímku.|
 
 ##  <a name="begin_connection_part"></a>  BEGIN_CONNECTION_PART
 
@@ -64,7 +64,7 @@ V deklaraci (.h) souboru, který definuje členské funkce třídy je spojovací
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="end_connection_part"></a>  END_CONNECTION_PART
 
@@ -81,7 +81,7 @@ Určuje název místní třídy, která implementuje bod připojení.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="connection_iid"></a>  CONNECTION_IID
 
@@ -93,7 +93,7 @@ CONNECTION_IID(iid)
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*<br/>
+*iid*<br/>
 ID rozhraní rozhraní s názvem podle spojovací bod.
 
 ### <a name="remarks"></a>Poznámky
@@ -106,7 +106,7 @@ Určuje bod připojení, která volá `ISinkInterface` rozhraní.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="declare_connection_map"></a>  DECLARE_CONNECTION_MAP
 
@@ -122,7 +122,7 @@ Pokud váš ovládací prvek podporuje další body, použijte DECLARE_CONNECTIO
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="begin_connection_map"></a>  BEGIN_CONNECTION_MAP
 
@@ -146,7 +146,7 @@ V implementaci (. Soubor CPP), který definuje člena funkce pro třídu, začí
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="end_connection_map"></a>  END_CONNECTION_MAP
 
@@ -158,7 +158,7 @@ END_CONNECTION_MAP()
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="connection_part"></a>  CONNECTION_PART
 
@@ -173,7 +173,7 @@ CONNECTION_PART(theClass, iid, localClass)
 *theClass*<br/>
 Určuje, že je název třídy ovládacího prvku, jehož přípojný bod to.
 
-*identifikátor IID*<br/>
+*iid*<br/>
 ID rozhraní rozhraní s názvem podle spojovací bod.
 
 *localClass*<br/>
@@ -189,9 +189,9 @@ implementuje mapu připojení se spojovacím bodem, který volá `IID_ISinkInter
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdisp.h
+  **Header** afxdisp.h
 
-##  <a name="afxconnectionadvise"></a>  Afxconnectionadvise –
+##  <a name="afxconnectionadvise"></a>  AfxConnectionAdvise
 
 Voláním této funkce k navázání připojení mezi zdrojem určená *pUnkSrc*a jímky, určené *pUnkSink*.
 
@@ -212,7 +212,7 @@ Ukazatel na objekt, který volá rozhraní.
 *pUnkSink*<br/>
 Ukazatel na objekt, který implementuje rozhraní.
 
-*identifikátor IID*<br/>
+*iid*<br/>
 ID rozhraní připojení.
 
 *bRefCount*<br/>
@@ -233,7 +233,7 @@ Nenulové, pokud bylo vytvořeno připojení; jinak 0.
 
 **Záhlaví:** afxctl.h
 
-##  <a name="afxconnectionunadvise"></a>  Afxconnectionunadvise –
+##  <a name="afxconnectionunadvise"></a>  AfxConnectionUnadvise
 
 Voláním této funkce se odpojit připojení mezi zdrojem určená *pUnkSrc*a jímky, určené *pUnkSink*.
 
@@ -254,7 +254,7 @@ Ukazatel na objekt, který volá rozhraní.
 *pUnkSink*<br/>
 Ukazatel na objekt, který implementuje rozhraní.
 
-*identifikátor IID*<br/>
+*iid*<br/>
 Rozhraní ID bodu rozhraní připojení.
 
 *bRefCount*<br/>
@@ -275,6 +275,6 @@ Nenulové, pokud bylo ukončeno připojení; jinak 0.
 
 **Záhlaví:** afxctl.h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)

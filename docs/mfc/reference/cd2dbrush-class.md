@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CD2DBrush [MFC], m_pBrush
 - CD2DBrush [MFC], m_pBrushProperties
 ms.assetid: 0d2c0857-2261-48a8-8ee0-a88cbf08499a
-ms.openlocfilehash: 9e0be4b3b4f39d8fcf32f713bc8765d1f344babe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d079ec6c96f96919fde39b73297580ed2a0ac75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517881"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270979"
 ---
 # <a name="cd2dbrush-class"></a>Cd2dbrush – třída
 
@@ -54,7 +54,7 @@ class CD2DBrush : public CD2DResource;
 |Název|Popis|
 |----------|-----------------|
 |[CD2DBrush::CD2DBrush](#cd2dbrush)|Vytvoří objekt cd2dbrush –.|
-|[Cd2dbrush –:: ~ cd2dbrush –](#_dtorcd2dbrush)|Destruktor. Volá se, když se likviduje štětce objektu D2D.|
+|[CD2DBrush::~CD2DBrush](#_dtorcd2dbrush)|Destruktor. Volá se, když se likviduje štětce objektu D2D.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -87,7 +87,7 @@ class CD2DBrush : public CD2DResource;
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cd2dresource –](../../mfc/reference/cd2dresource-class.md)
+[CD2DResource](../../mfc/reference/cd2dresource-class.md)
 
 `CD2DBrush`
 
@@ -192,7 +192,7 @@ void GetTransform(D2D1_MATRIX_3X2_F* transform) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Transformace*<br/>
+*transform*<br/>
 Když to vrátí, obsahuje aktuální transformace cíl vykreslování. Tento parametr je předán bez inicializace.
 
 ##  <a name="isvalid"></a>  CD2DBrush::IsValid
@@ -258,9 +258,9 @@ void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 
 ### <a name="parameters"></a>Parametry
 
-*Transformace*<br/>
+*transform*<br/>
 Transformací, která se má použít pro cíl vykreslování
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

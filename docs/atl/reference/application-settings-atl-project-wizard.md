@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Project Wizard, application settings
 ms.assetid: d48c9fc5-f439-49fd-884c-8bcfa7d52991
-ms.openlocfilehash: e026db8c1d2caacd9af15fb923d194750c9d8217
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd9d5c6ef1ccb86f2968b1e2d2706092b6db45e9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622128"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271811"
 ---
 # <a name="application-settings-atl-project-wizard"></a>Nastavení aplikace, Průvodce projektem ATL
 
@@ -56,9 +56,8 @@ Vyberte jednu ze tří typů serveru:
 
    Pokud váš projekt knihovny ATL obsahuje podporu pro komponenty modelu COM + 1.0, můžete nastavit tuto možnost. Registrátora komponent umožňuje váš objekt modelu COM + 1.0 mohl získat seznam součástí, zaregistrovat součásti nebo zrušit registraci součásti (jednotlivě nebo celou najednou).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Průvodce projektem ATL](../../atl/reference/atl-project-wizard.md)<br/>
 [Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)<br/>
 [Výchozí konfigurace projektu ATL](../../atl/reference/default-atl-project-configurations.md)
-

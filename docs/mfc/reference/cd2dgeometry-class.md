@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CD2DGeometry [MFC], Widen
 - CD2DGeometry [MFC], m_pGeometry
 ms.assetid: 3f95054b-fdb8-4e87-87f2-9fc3df7279ec
-ms.openlocfilehash: 929926129ddee0efdee4f1b02494b503755811d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4549b2e7981d5f8493ddf9f24477e75a94ddde8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610688"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271226"
 ---
 # <a name="cd2dgeometry-class"></a>Cd2dgeometry – třída
 
@@ -70,7 +70,7 @@ class CD2DGeometry : public CD2DResource;
 |Název|Popis|
 |----------|-----------------|
 |[CD2DGeometry::CD2DGeometry](#cd2dgeometry)|Vytvoří objekt cd2dgeometry –.|
-|[Cd2dgeometry –:: ~ cd2dgeometry –](#_dtorcd2dgeometry)|Destruktor. Volá se, když se likviduje geometrie objektu D2D.|
+|[CD2DGeometry::~CD2DGeometry](#_dtorcd2dgeometry)|Destruktor. Volá se, když se likviduje geometrie objektu D2D.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -83,7 +83,7 @@ class CD2DGeometry : public CD2DResource;
 |[CD2DGeometry::ComputeLength](#computelength)|Vypočítá délku geometrie, jako by byl každý segment rozbaleno do řádku.|
 |[CD2DGeometry::ComputePointAtLength](#computepointatlength)|Vypočítá vektoru bodu a tangens v zadané vzdálenosti podél geometrii byla určená matrix transformovat a sloučí pomocí zadanou toleranci.|
 |[CD2DGeometry::Destroy](#destroy)|Odstraní objekt cd2dgeometry –. (Přepíše [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
-|[CD2DGeometry::detach](#detach)|Odpojí prostředků rozhraní z objektu|
+|[CD2DGeometry::Detach](#detach)|Odpojí prostředků rozhraní z objektu|
 |[CD2DGeometry::FillContainsPoint](#fillcontainspoint)|Označuje, zda oblasti sestavil geometrii bude obsahovat zadaný bodu zadanou toleranci sloučení.|
 |[CD2DGeometry::Get](#get)|Vrátí ID2D1Geometry rozhraní|
 |[CD2DGeometry::GetBounds](#getbounds)||
@@ -93,13 +93,13 @@ class CD2DGeometry : public CD2DResource;
 |[CD2DGeometry::Simplify](#simplify)|Vytvoří zjednodušenou verzi geometrii, která obsahuje pouze řádky a (volitelně) kubické Bézierovy křivky a zapíše výsledek do ID2D1SimplifiedGeometrySink.|
 |[CD2DGeometry::StrokeContainsPoint](#strokecontainspoint)|Určuje, zda geometrie stroke obsahuje zadaný bod vzhledem k zadané tloušťka čáry, styl a transformace.|
 |[CD2DGeometry::Tessellate](#tessellate)|Vytvoří sadu po směru hodinových ručiček vinutým trojúhelníků, které zahrnují geometrii po byly transformovány, pomocí zadané matice a sloučí pomocí zadanou toleranci.|
-|[CD2DGeometry::widen](#widen)|Rozšiřuje geometrie pomocí zadaného tahů a zapíše výsledek do ID2D1SimplifiedGeometrySink byla určená matrix transformovat a sloučí pomocí zadanou toleranci.|
+|[CD2DGeometry::Widen](#widen)|Rozšiřuje geometrie pomocí zadaného tahů a zapíše výsledek do ID2D1SimplifiedGeometrySink byla určená matrix transformovat a sloučí pomocí zadanou toleranci.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Název|Popis|
 |----------|-----------------|
-|[CD2DGeometry::Operator ID2D1Geometry *](#operator_id2d1geometry_star)|Vrátí ID2D1Geometry rozhraní|
+|[CD2DGeometry::operator ID2D1Geometry*](#operator_id2d1geometry_star)|Vrátí ID2D1Geometry rozhraní|
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
@@ -111,7 +111,7 @@ class CD2DGeometry : public CD2DResource;
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cd2dresource –](../../mfc/reference/cd2dresource-class.md)
+[CD2DResource](../../mfc/reference/cd2dresource-class.md)
 
 `CD2DGeometry`
 
@@ -234,7 +234,7 @@ BOOL ComputeArea(
 *worldTransform*<br/>
 Transformací, která se má použít pro tento geometrie před jeho oblasti computingu.
 
-*Oblast*<br/>
+*area*<br/>
 Po návratu metody obsahuje ukazatel na oblast transformovaná plochá verzi této geometry. Pro tento parametr, musíte přidělit úložiště.
 
 *flatteningTolerance*<br/>
@@ -291,7 +291,7 @@ Vzdálenost podél geometrie bodu a tangens najít. Pokud tato vzdálenost je m�
 *worldTransform*<br/>
 Transformací, která se má použít pro geometrii před výpočtem Zadaný bod a tangens.
 
-*Bod*<br/>
+*point*<br/>
 Umístění v zadané vzdálenosti podél geometrii. Pokud geometrii je prázdný, obsahuje tento bod NaN jako jeho x a y hodnoty.
 
 *unitTangentVector*<br/>
@@ -312,7 +312,7 @@ Odstraní objekt cd2dgeometry –.
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DGeometry::detach
+##  <a name="detach"></a>  CD2DGeometry::Detach
 
 Odpojí prostředků rozhraní z objektu
 
@@ -338,7 +338,7 @@ BOOL FillContainsPoint(
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 Bod k testování.
 
 *worldTransform*<br/>
@@ -519,7 +519,7 @@ BOOL StrokeContainsPoint(
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 Bod tak, aby test pro členství ve skupině.
 
 *strokeWidth*<br/>
@@ -601,6 +601,6 @@ Maximální rozsah vzdálenosti mezi body v mnohoúhelníkové aproximace geomet
 
 Pokud metoda uspěje, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

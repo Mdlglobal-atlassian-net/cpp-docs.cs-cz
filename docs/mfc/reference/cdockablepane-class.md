@@ -1,5 +1,5 @@
 ---
-title: CDockablePane – třída
+title: CDockablePane Class
 ms.date: 10/18/2018
 f1_keywords:
 - CDockablePane
@@ -132,14 +132,14 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: 657f71e5d89f7d91d8b44836b4d478b41d041f88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c78634c93bda94940b2834a61d276f63522e4aeb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623012"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271903"
 ---
-# <a name="cdockablepane-class"></a>CDockablePane – třída
+# <a name="cdockablepane-class"></a>CDockablePane Class
 
 Implementuje podokno, které mohou být ukotveno na dokovacím místě nebo součástí podokna s kartami.
 
@@ -842,7 +842,7 @@ virtual BOOL DockToWindow(
 *dwAlignment*<br/>
 [in] Určuje zarovnání ukotvení panelu. Může být jedna z CBRS_ALIGN_LEFT, CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT, CBRS_ALIGN_BOTTOM nebo CBRS_ALIGN_ANY. (Definované v souboru afxres.h.)
 
-*lprect –*<br/>
+*lpRect*<br/>
 [in] Určuje dokovací obdélník podokna.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -865,7 +865,7 @@ virtual void DrawCaption(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Představuje kontext zařízení pro kreslení.
 
 *rectCaption*<br/>
@@ -987,7 +987,7 @@ virtual AFX_CS_STATUS GetDockingStatus(
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pt*<br/>
 [in] Umístění ukazatele myši v souřadnicovém systému obrazovky.
 
 *nSensitivity*<br/>
@@ -1108,7 +1108,7 @@ virtual int HitTest(
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Určuje bod k testování.
 
 *bDetectCaption*<br/>
@@ -1682,7 +1682,7 @@ Před provedením jakékoli externí operace, které se provádí pomocí musí 
 
 Rozhraní automaticky předchozího podokna předtím, než jsou zničeny.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

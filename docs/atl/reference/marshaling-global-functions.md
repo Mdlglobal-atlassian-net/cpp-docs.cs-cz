@@ -6,12 +6,12 @@ f1_keywords:
 - atlbase/ATL::AtlMarshalPtrInProc
 - atlbase/ATL::AtlUnmarshalPtr
 ms.assetid: 877100b5-6ad9-44c5-a2e0-09414f1720d0
-ms.openlocfilehash: dadaf119f8f1d0aefb4f5b4b740747a2794d271e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cac6e316ad6b5d3f49c171c940d9129060744aee
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554408"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271909"
 ---
 # <a name="marshaling-global-functions"></a>Zařazení globálních funkcí
 
@@ -63,7 +63,7 @@ HRESULT AtlMarshalPtrInProc(
 *pUnk*<br/>
 [in] Ukazatel rozhraní k zařadit.
 
-*identifikátor IID*<br/>
+*iid*<br/>
 [in] Identifikátor GUID rozhraní se zařadit.
 
 *ppStream*<br/>
@@ -101,7 +101,7 @@ HRESULT AtlUnmarshalPtr(
 *pStream*<br/>
 [in] Ukazatel na datový proud se zařazeny.
 
-*identifikátor IID*<br/>
+*iid*<br/>
 [in] Identifikátor GUID rozhraní jsou zařazeny.
 
 *ppUnk*<br/>
@@ -115,6 +115,6 @@ Standardní hodnoty HRESULT.
 
 Podívejte se na příklad pro [AtlMarshalPtrInProc](#atlmarshalptrinproc).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Funkce](../../atl/reference/atl-functions.md)

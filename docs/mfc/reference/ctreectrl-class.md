@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: cc98a2e24fbb3eaff94e4c941986080d0bdbd7ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9bc31cc9cff12146e6f5fe227e0e191d1c555063
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477945"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271395"
 ---
 # <a name="ctreectrl-class"></a>Ctreectrl – třída
 
@@ -850,7 +850,7 @@ BOOL GetItemImage(
 *: hItem*<br/>
 Popisovač položky, jejichž bitové kopie má být načtena.
 
-*nvybrán Nobrázek*<br/>
+*nImage*<br/>
 Celé číslo, které přijímá index obrázku položky v seznamu obrázků ovládací prvek zobrazení stromové struktury.
 
 *nSelectedImage*<br/>
@@ -887,7 +887,7 @@ BOOL GetItemPartRect(
 |---------------|-----------------|
 |*: hItem*|[in] Zpracování na položku Ovládací prvek stromového zobrazení.|
 |*nPart*|[in] Identifikátor pro část. Musí být nastavena na TVGIPR_BUTTON.|
-|*lprect –*|[out] Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Pokud tato metoda je úspěšná, struktura obdrží souřadnice obdélník části určené *: hItem* a *nPart*.|
+|*lpRect*|[out] Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Pokud tato metoda je úspěšná, struktura obdrží souřadnice obdélník části určené *: hItem* a *nPart*.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -927,7 +927,7 @@ BOOL GetItemRect(
 *: hItem*<br/>
 Popisovač předmětu ovládací prvek zobrazení stromové struktury.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá ohraničující obdélník. Souřadnice jsou relativní vzhledem k levého horního rohu ovládacího prvku stromu zobrazení.
 
 *bTextOnly*<br/>
@@ -1347,7 +1347,7 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pt*<br/>
 Souřadnice klienta bodu k testování.
 
 *pFlags*<br/>
@@ -1427,13 +1427,13 @@ Celé číslo určující atributy, které chcete nastavit. Zobrazit `TVITEM` st
 *lpszItem*<br/>
 Adresa řetězec obsahující text položky.
 
-*nvybrán Nobrázek*<br/>
+*nImage*<br/>
 Index obrázku položky v seznamu obrázků ovládací prvek zobrazení stromové struktury.
 
 *nSelectedImage*<br/>
 Index obrázku vybrané položky v seznamu obrázků ovládací prvek zobrazení stromové struktury.
 
-*nInformace*<br/>
+*nState*<br/>
 Určuje hodnoty pro položky stavy. Viz Zobrazení stavů ovládacího prvku strom položek v sadě Windows SDK pro seznam příslušné stavy.
 
 *nStateMask*<br/>
@@ -1739,7 +1739,7 @@ BOOL SetCheck(
 *: hItem*<br/>
 HTREEITEM přijímat změny stavu zaškrtnutí.
 
-*Podívejte se*<br/>
+*fCheck*<br/>
 Označuje, zda je položka ovládací prvek stromu bude zaškrtnuto nebo nezaškrtnuto. Ve výchozím nastavení `SetCheck` nastaví položku, která se má zkontrolovat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1925,13 +1925,13 @@ Celé číslo určující atributy, které chcete nastavit. Najdete v článku `
 *lpszItem*<br/>
 Adresa řetězec obsahující text položky.
 
-*nvybrán Nobrázek*<br/>
+*nImage*<br/>
 Index obrázku položky v seznamu obrázků ovládací prvek zobrazení stromové struktury. Najdete v článku `iImage` člena `TVITEM` struktury.
 
 *nSelectedImage*<br/>
 Index obrázku vybrané položky v seznamu obrázků ovládací prvek zobrazení stromové struktury. Najdete v článku `iSelectedImage` člena `TVITEM` struktury.
 
-*nInformace*<br/>
+*nState*<br/>
 Určuje hodnoty pro položky stavy. Najdete v článku `State` člena `TVITEM` struktury.
 
 *nStateMask*<br/>
@@ -2054,7 +2054,7 @@ BOOL SetItemImage(
 *: hItem*<br/>
 Popisovač položky, jejichž bitové kopie má být nastavena.
 
-*nvybrán Nobrázek*<br/>
+*nImage*<br/>
 Index obrázku položky v seznamu obrázků ovládací prvek zobrazení stromové struktury.
 
 *nSelectedImage*<br/>
@@ -2092,7 +2092,7 @@ BOOL SetItemState(
 *: hItem*<br/>
 Popisovač položky, jejichž stav je nastavit.
 
-*nInformace*<br/>
+*nState*<br/>
 Určuje nové stavy položky.
 
 *nStateMask*<br/>
@@ -2339,7 +2339,7 @@ Funkce porovnání struktura, `lpfnCompare`, musí vracet zápornou hodnotu. Pok
 
 [!code-cpp[NVC_MFC_CTreeCtrl#39](../../mfc/reference/codesnippet/cpp/ctreectrl-class_47.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázka CMNCTRL1 knihovny MFC](../../visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-ms.openlocfilehash: 1cb5404ff8c18492b940f7396ab4c8f4154d69e6
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: fae45e04d8b573cca29cc31403a39fc7ee53cc6a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177014"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271733"
 ---
 # <a name="cancellation-in-the-ppl"></a>Zrušení v knihovně PPL
 
 Tento dokument popisuje roli zrušení v knihovna paralelních vzorů (PPL), jak zrušení paralelně prováděných úloh a jak určit, kdy zrušení paralelně prováděných úloh.
 
 > [!NOTE]
->  Modul runtime používá k implementaci zrušení zpracování výjimek. Catch nebo zpracování těchto výjimek v kódu. Kromě toho doporučujeme psát kód bezpečnost výjimek v těla funkcí pro své úkoly. Například můžete použít *získání prostředků je inicializace* vzorek (RAII), ujistěte se, že prostředky jsou správně zpracují, když dojde k výjimce v těle úlohy. Kompletní příklad, který používá vzor RAII pro vyčištění prostředků v zrušitelný úkol, naleznete v tématu [návod: odebrání práce z uživatelského rozhraní vlákna](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md).
+>  Modul runtime používá k implementaci zrušení zpracování výjimek. Catch nebo zpracování těchto výjimek v kódu. Kromě toho doporučujeme psát kód bezpečnost výjimek v těla funkcí pro své úkoly. Například můžete použít *získání prostředků je inicializace* vzorek (RAII), ujistěte se, že prostředky jsou správně zpracují, když dojde k výjimce v těle úlohy. Kompletní příklad, který používá vzor RAII pro vyčištění prostředků v zrušitelný úkol, naleznete v tématu [názorný postup: Odstranění práce z vlákna uživatelského rozhraní](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md).
 
 ## <a name="key-points"></a>Klíčové body
 
@@ -71,7 +71,7 @@ Můžete také použít [concurrency::task_group](reference/task-group-class.md)
 
 Zrušení paralelně prováděných úloh několika způsoby. Upřednostňovaným způsobem je použít token zrušení. Skupiny úloh také podporu [concurrency::task_group::cancel](reference/task-group-class.md#cancel) metoda a [Concurrency::structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) metody. Posledním způsobem je vyvolat výjimku v těle funkce pracovních úkolů. Bez ohledu na to, jakou metodu zvolíte pochopit, že zrušení nedojde okamžitě. I když nových neběží, pokud se zrušila, úkolu nebo skupiny úkolů, aktivních pracovních musí vyhledat a reagovat na zrušení.
 
-Další příklady, které zrušení paralelních úloh, naleznete v tématu [návod: připojení pomocí úloh a žádostí XML HTTP](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md), [postupy: použití zrušení přerušení paralelní smyčky](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md), a [postupy: použití Zpracování výjimek pro přerušení paralelní smyčky](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
+Další příklady, které zrušení paralelních úloh, naleznete v tématu [názorný postup: Připojení pomocí úloh a žádostí XML HTTP](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md), [jak: Přerušení paralelní smyčky pomocí zrušení](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md), a [jak: Použijte zpracování výjimek pro přerušení paralelní smyčky](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
 
 ###  <a name="tokens"></a> Zrušení paralelně prováděných úloh pomocí tokenu zrušení
 
@@ -264,4 +264,3 @@ Použití zrušení je vhodné, když každého člena skupiny souvisejících �
 [structured_task_group – třída](../../parallel/concrt/reference/structured-task-group-class.md)
 
 [parallel_for – funkce](reference/concurrency-namespace-functions.md#parallel_for)
-

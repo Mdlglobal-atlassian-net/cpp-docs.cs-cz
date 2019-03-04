@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CFont [MFC], FromHandle
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
-ms.openlocfilehash: f925940f0813e1912be9f2382b676e80db8240c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60a717136f69b29df48dd8f449ddaffe5c15ccbf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607893"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271863"
 ---
 # <a name="cfont-class"></a>Cfont – třída
 
@@ -74,7 +74,7 @@ Další informace o `CFont`, naleznete v tématu [grafické objekty](../../mfc/g
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cgdiobject –](../../mfc/reference/cgdiobject-class.md)
+[CGdiObject](../../mfc/reference/cgdiobject-class.md)
 
 `CFont`
 
@@ -240,7 +240,7 @@ Požadovaná výška písma v desetiny bod. (Například předejte 120 požádat
 *lpszFaceName*<br/>
 A `CString` nebo ukazatel na řetězec zakončený hodnotou null, který určuje název řez písma. Délka tohoto řetězce nesmí být delší než 30 znaků. Windows "EnumFontFamilies funkce je možné vytvořit výčet všech aktuálně dostupných písma. Pokud *lpszFaceName* má hodnotu NULL, používá rozhraní GDI řez písma nezávislých na zařízení.
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel [CDC](../../mfc/reference/cdc-class.md) objekt, který se má použít k převodu výšku v *nPointSize* do logických jednotek. Pokud má hodnotu NULL, kontext zařízení obrazovky se používá pro převod.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -272,7 +272,7 @@ BOOL CreatePointFontIndirect(
 *lpLogFont*<br/>
 Odkazuje [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) strukturu, která definuje vlastnosti logické písma. `lfHeight` Člena `LOGFONT` struktura se měří v desetiny bod spíše než logické jednotky. (Například nastavit `lfHeight` 120 požádat o 12 bodů písma.)
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel [CDC](../../mfc/reference/cdc-class.md) objekt, který se má použít k převodu výšku v `lfHeight` do logických jednotek. Pokud má hodnotu NULL, kontext zařízení obrazovky se používá pro převod.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -357,9 +357,8 @@ Další informace o použití grafických objektů najdete v tématu [objektů g
 
 [!code-cpp[NVC_MFCDocView#77](../../mfc/codesnippet/cpp/cfont-class_8.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC HIERSVR](../../visual-cpp-samples.md)<br/>
 [CGdiObject – třída](../../mfc/reference/cgdiobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-

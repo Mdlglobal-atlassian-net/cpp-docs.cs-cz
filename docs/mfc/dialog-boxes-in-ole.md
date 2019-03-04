@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], OLE
 - Insert object
 ms.assetid: 73c41eb8-738a-4d02-9212-d3395bb09a3a
-ms.openlocfilehash: 53e802e973ca78619252fcc4100a7cc50009f2ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1081a831cc2b9fc0ab22e2c80a4f657466534d86
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618504"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270888"
 ---
 # <a name="dialog-boxes-in-ole"></a>Dialogová okna v prostředí OLE
 
@@ -39,9 +39,8 @@ Dialogové okno Upravit propojení umožňuje uživatelům změnit informace o z
 *Server je zaneprázdněn nebo Server neodpovídá*<br/>
 Když se uživatel pokusí o aktivaci položky a server je v současnosti nemůže žádost zpracovat, obvykle, protože server je používáno jiným uživatelem nebo úloh, zobrazí se dialogové okno Server je zaneprázdněn. Pokud server nereaguje na požadavek na aktivaci vůbec, zobrazí se dialogové okno Server neodpovídá. Tyto dialogy se zobrazují prostřednictvím `COleMessageFilter`závislosti na implementaci rozhraní OLE `IMessageFilter`, a může se rozhodnout, jestli se má opakovat žádost o aktivaci. Použití [colebusydialog –](../mfc/reference/colebusydialog-class.md) třídu dialogovému oknu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Dialogová okna](../mfc/dialog-boxes.md)<br/>
 [Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [OLE](../mfc/ole-in-mfc.md)
-

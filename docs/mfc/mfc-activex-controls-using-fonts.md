@@ -19,12 +19,12 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 9fb7668f65b04372b87059034c3ec6cd20abc48d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ce1e913bb3bd1c3b74db43dc02d9d360b9cfd00c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175818"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271304"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC – ovládací prvky ActiveX: Použití písem
 
@@ -42,7 +42,7 @@ Uložené vlastnosti písma jsou preimplemented třídou [COleControl](../mfc/re
 
 Přístup k objektu písma prostřednictvím [getfont –](../mfc/reference/colecontrol-class.md#getfont), [setfont –](../mfc/reference/colecontrol-class.md#setfont), a [InternalGetFont](../mfc/reference/colecontrol-class.md#internalgetfont) funkce `COleControl`. Ovládací prvek uživatele bude přístup k objektu písma prostřednictvím `GetFont` a `SetFont` funkce stejně jako jakoukoli jinou vlastnosti Get/Set. Při přístupu k objektu písma je zapotřebí ve směru z v rámci ovládacího prvku, použijte `InternalGetFont` funkce.
 
-Jak je popsáno v [knihovny MFC – ovládací prvky ActiveX: vlastnosti](../mfc/mfc-activex-controls-properties.md), přidání uložených vlastností je snadné se [Průvodce přidáním vlastnosti](../ide/names-add-property-wizard.md). Zvolte vlastnost písma a Průvodce přidáním vlastnosti automaticky vloží uložených písma položku do mapy odbavení ovládacího prvku.
+Jak je popsáno v [knihovny MFC – ovládací prvky ActiveX: Vlastnosti](../mfc/mfc-activex-controls-properties.md), přidání uložených vlastností je snadné se [Průvodce přidáním vlastnosti](../ide/names-add-property-wizard.md). Zvolte vlastnost písma a Průvodce přidáním vlastnosti automaticky vloží uložených písma položku do mapy odbavení ovládacího prvku.
 
 #### <a name="to-add-the-stock-font-property-using-the-add-property-wizard"></a>Chcete-li přidat vlastnost běžného písma pomocí Průvodce přidáním vlastnosti
 
@@ -233,9 +233,8 @@ V kódu, který inicializuje písmo záhlaví (v konstruktoru ovládací prvek),
 
 Po provedení těchto změn do vašeho projektu, sestavte projekt znovu a použít kontejner testování pro testování rozhraní. Zobrazit [testování vlastností a událostí pomocí testování kontejneru](../mfc/testing-properties-and-events-with-test-container.md) informace o tom, jak získat přístup ke kontejneru testů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)<br/>
-[MFC – ovládací prvky ActiveX: Použití obrázků v ovládacím prvku ActiveX](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
+[MFC – ovládací prvky ActiveX: Použití obrázků v ovládacím prvku ActiveX](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
 [MFC – ovládací prvky ActiveX: Použití stránek uložených vlastností](../mfc/mfc-activex-controls-using-stock-property-pages.md)
-

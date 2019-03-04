@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_xValue
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
-ms.openlocfilehash: 15f18a43fcda76bb5531434de84d97a349cb7f39
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15f06d2fa3478570d2f784879a13e7b68515e746
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497194"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271265"
 ---
 # <a name="canimationpoint-class"></a>Canimationpoint – třída
 
@@ -90,7 +90,7 @@ Canimationpoint – třída zapouzdří dva objekty canimationvariable – a mů
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Canimationbaseobject –](../../mfc/reference/canimationbaseobject-class.md)
+[CAnimationBaseObject](../../mfc/reference/canimationbaseobject-class.md)
 
 `CAnimationPoint`
 
@@ -162,7 +162,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*, CAnimationVaria
 
 ### <a name="parameters"></a>Parametry
 
-*obrázků*<br/>
+*lst*<br/>
 Pokud funkce vrátí, obsahuje odkazy na dva objekty canimationvariable – představující souřadnice X a Y.
 
 ##  <a name="getdefaultvalue"></a>  CAnimationPoint::GetDefaultValue
@@ -300,6 +300,6 @@ Určuje výchozí hodnotu bodu.
 
 Tuto funkci použijte k nastavení výchozí hodnoty na objekt animace. Této metody přiřadí výchozí hodnoty pro souřadnice X a Y bodu animace. Také obnoví základní objekty modelu COM, pokud byl vytvořen. Pokud odebíráte tento objekt animace na události (ValueChanged nebo IntegerValueChanged), musíte znovu zapnout. Tyto události.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

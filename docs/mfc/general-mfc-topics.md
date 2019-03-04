@@ -6,12 +6,12 @@ helpviewer_keywords:
 - class libraries [MFC], MFC
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
-ms.openlocfilehash: ceedf5c02d92059058bc72942a74852eb8146d38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a55bfae8599e2b221cb853cb17bd4113839fb9c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564720"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270966"
 ---
 # <a name="general-mfc-topics"></a>Obecná témata MFC
 
@@ -33,7 +33,7 @@ Rozhraní MFC je přístupem, který umožňuje využít jako základ práci odb
 
 [Sestavení na základě rozhraní .NET Framework](../mfc/building-on-the-framework.md)
 
-[CWinApp – třída aplikace](../mfc/cwinapp-the-application-class.md)
+[CWinApp Třída aplikace](../mfc/cwinapp-the-application-class.md)
 
 [Šablony dokumentů a proces vytváření dokumentů/zobrazení](../mfc/document-templates-and-the-document-view-creation-process.md)
 
@@ -55,7 +55,6 @@ Přehled referenční dokumentace knihovny MFC, naleznete v tématu [knihovny Mi
 
 Informace o poskytovateli ATL naleznete v tématu [referenční dokumentace ke knihovně Active šablony](../atl/atl-class-overview.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Práce s objekty oken](../mfc/working-with-window-objects.md)
-

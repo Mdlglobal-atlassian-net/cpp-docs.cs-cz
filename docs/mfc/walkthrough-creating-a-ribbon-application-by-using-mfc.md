@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ribbon application, creating (MFC)
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: 16413b6027a36ec550ae2bf3e04604b32a8454c9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a74e8863c32199d1c0309f70bceae867993ce721
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557486"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271330"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Návod: Vytvoření jednoduché aplikace pásu karet pomocí knihovny MFC
 
@@ -89,7 +89,7 @@ Tento názorný průvodce předpokládá, že jste nastavili Visual Studio použ
 
 Koncové ukázky, naleznete v tématu [ukázky (balík funkcí MFC)](../visual-cpp-samples.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Návody](../mfc/walkthroughs-mfc.md)<br/>
 [Ukázky (balík funkcí MFC)](../visual-cpp-samples.md)

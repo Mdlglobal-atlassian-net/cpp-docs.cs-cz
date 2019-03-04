@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
-ms.openlocfilehash: 5164d2787c86e6c909418f353c15c876d1397afe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9651a74fdb07ad96d6f01edb6818ea48d697c37c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566098"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271954"
 ---
 # <a name="call-class"></a>Třída call
 
@@ -53,10 +53,10 @@ Signatura funkce, které může přijmout tento blok.
 |Název|Popis|
 |----------|-----------------|
 |[process_input_messages](#process_input_messages)|Provede volání funkce na vstupní zprávy.|
-|[process_message –](#process_message)|Zpracuje zprávu, která byla přijata situace `call` blok zpráv.|
+|[process_message](#process_message)|Zpracuje zprávu, která byla přijata situace `call` blok zpráv.|
 |[propagate_message](#propagate_message)|Asynchronně předává zprávy ze `ISource` bloku k tomuto `call` blok zpráv. Je vyvolán `propagate` metodu, když se zavolá pomocí zdrojového bloku.|
 |[send_message](#send_message)|Synchronně předává zprávy ze `ISource` bloku k tomuto `call` blok zpráv. Je vyvolán `send` metodu, když se zavolá pomocí zdrojového bloku.|
-|[supports_anonymous_source –](#supports_anonymous_source)|Přepsání `supports_anonymous_source` indikace, že tento blok můžete přijímat zprávy, které jsou nabízeny zdrojem, který není spojený. (Přepíše [itarget::supports_anonymous_source –](itarget-class.md#supports_anonymous_source).)|
+|[supports_anonymous_source](#supports_anonymous_source)|Přepsání `supports_anonymous_source` indikace, že tento blok můžete přijímat zprávy, které jsou nabízeny zdrojem, který není spojený. (Přepíše [itarget::supports_anonymous_source –](itarget-class.md#supports_anonymous_source).)|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -64,9 +64,9 @@ Další informace najdete v tématu [asynchronní bloky zpráv](../../../paralle
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Itarget –](itarget-class.md)
+[ITarget](itarget-class.md)
 
-[target_block –](target-block-class.md)
+[target_block](target-block-class.md)
 
 `call`
 
@@ -112,7 +112,7 @@ call(
 *_Func*<br/>
 Funkce, která bude volána pro každé přijaté zprávy.
 
-*_Filtrovat*<br/>
+*_Filter*<br/>
 Funkce filtru, která určuje, zda by měl být přijat nabízené zprávy.
 
 *_PScheduler*<br/>
@@ -129,7 +129,7 @@ Typ `_Call_method` je funktor s podpisem `void (T const &)` která je vyvolána 
 
 Typ `filter_method` je funktor s podpisem `bool (T const &)` která je vyvolána situace `call` blok zpráv k určení, zda by měla přijímat nabízená zpráva.
 
-##  <a name="dtor"></a> ~ volání
+##  <a name="dtor"></a> ~call
 
 Odstraní `call` blok zpráv.
 
@@ -219,7 +219,7 @@ virtual bool supports_anonymous_source();
 
 **Hodnota TRUE** protože bloku není odložit nabízené zprávy.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [transformer – třída](transformer-class.md)

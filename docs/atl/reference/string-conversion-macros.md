@@ -11,12 +11,12 @@ f1_keywords:
 - atlconv/ATL::DEVMODEW2A
 - atlconv/ATL::TEXTMETRICW2A
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-ms.openlocfilehash: 1cad89fe065c0827169a22cc9699b677323d8594
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 889f8459e81418197420bc2efd410225d4f220bc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544518"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271759"
 ---
 # <a name="string-conversion-macros"></a>Makra převodu řetězců
 
@@ -24,7 +24,7 @@ Tato makra poskytují funkce pro převod řetězce.
 
 ##  <a name="atl_and_mfc_string_conversion_macros"></a>  ATL a MFC – makra převodu řetězců
 
-Makra převodů řetězec popsaném jsou platné pro knihovny ATL a MFC. Další informace o převodu řetězce knihovny MFC naleznete v tématu [TN059: použití převodních maker MBCS/Unicode MFC](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) a [v makrech MFC a Globals](../../mfc/reference/mfc-macros-and-globals.md).
+Makra převodů řetězec popsaném jsou platné pro knihovny ATL a MFC. Další informace o převodu řetězce knihovny MFC naleznete v tématu [TN059: Použití knihovny MFC znakové sady MBCS/Unicode převodních maker](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) a [v makrech MFC a Globals](../../mfc/reference/mfc-macros-and-globals.md).
 
 ##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  DEVMODE a makra převodů TEXTMETRIC řetězec
 
@@ -70,6 +70,6 @@ Následující tabulce jsou uvedeny `DEVMODE` a `TEXTMETRIC` makra převodu řet
 |DEVMODET2OLE|TEXTMETRICT2OLE|
 |DEVMODEW2A|TEXTMETRICW2A|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Makra](../../atl/reference/atl-macros.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - frame window classes [MFC], reference
 ms.assetid: 6342ec5f-f922-4da8-a78e-2f5f994c7142
-ms.openlocfilehash: 93df9ce745fc907425f1a840ffb7d16a696831fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e56bd0f449992118db75a44c39b6e0e15cb0d86
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514332"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270992"
 ---
 # <a name="frame-window-classes-windows"></a>Třídy oken s rámečkem (Windows)
 
@@ -23,13 +23,13 @@ Základní třída pro okna hlavního rámce aplikace SDI. Také základní tř�
 [CMDIFrameWnd –](../mfc/reference/cmdiframewnd-class.md)<br/>
 Základní třída pro aplikace MDI hlavní okno rámce.
 
-[CMDIChildWnd –](../mfc/reference/cmdichildwnd-class.md)<br/>
+[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)<br/>
 Základní třída pro aplikace MDI oken s rámečkem v dokumentu.
 
 [Cminiframewnd –](../mfc/reference/cminiframewnd-class.md)<br/>
 Okno rámce poloviční výšky obvykle viděné okolo plovoucích panelů nástrojů.
 
-[Coleipframewnd –](../mfc/reference/coleipframewnd-class.md)<br/>
+[COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)<br/>
 Pokud dokument na serveru je upravována v místě, poskytuje okno rámce pro zobrazení.
 
 ## <a name="related-class"></a>Související třídy
@@ -39,7 +39,6 @@ Třída `CMenu` poskytuje rozhraní, pomocí kterého je možné přistupovat k 
 [Cmenu –](../mfc/reference/cmenu-class.md)<br/>
 Zapouzdřuje `HMENU` popisovač na řádku nabídek a místní nabídky aplikace.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../mfc/class-library-overview.md)
-
