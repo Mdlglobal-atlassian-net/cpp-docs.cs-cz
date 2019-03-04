@@ -7,12 +7,12 @@ helpviewer_keywords:
 - database applications [MFC], creating
 - MFC, database applications
 ms.assetid: 9371da59-8536-43cd-8314-706ad320e2ec
-ms.openlocfilehash: 0f512408b54d6aa9cc5c2b44dbd359e31e8bc57f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: efd6b12b186ce0ef1c0caf57f313f6aa50425fec
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624897"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283667"
 ---
 # <a name="sequence-of-operations-for-creating-database-applications"></a>Posloupnost operací při vytváření databázových aplikací
 
@@ -31,9 +31,9 @@ Následující tabulka uvádí vaši roli a roli v rámci při psaní databázov
 |Podle potřeby vytvořte další záznam třídy zobrazení a sady záznamů.|Vytvoření třídy a dialogové okno k zobrazení návrhu editoru pomocí zobrazení tříd.|Zobrazení tříd vytvoří další soubory pro nové třídy.|
 |Vytvořte sadu záznamů objekty podle potřeby ve vašem kódu. Každá sada záznamů slouží k manipulaci s záznamů...|Vaše sady záznamů jsou založeny na třídy odvozené od [CRecordset](../mfc/reference/crecordset-class.md) pomocí průvodců.|ODBC používá výměna pole záznamu (RFX) k výměně dat mezi databází a sady záznamů pole datových členů. Pokud používáte zobrazení záznamů, výměna dat dialogových oken (DDX) vyměňuje data mezi ovládacími prvky pro zobrazení záznamů a záznamů.|
 |.. .nebo vytvořit explicitní [CDatabase](../mfc/reference/cdatabase-class.md) ve vašem kódu pro každou databázi, kterou chcete otevřít.|Základní sada záznamů objekty na databázových objektů.|Databázový objekt poskytuje rozhraní ke zdroji dat.|
-|Vytvoření vazby datových sloupců do sady záznamů dynamicky.|V rozhraní ODBC přidejte kód do vaší třídy odvozené sady záznamů ke správě vazby. Přečtěte si článek [sada záznamů: dynamické vazby dat sloupců (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).||
+|Vytvoření vazby datových sloupců do sady záznamů dynamicky.|V rozhraní ODBC přidejte kód do vaší třídy odvozené sady záznamů ke správě vazby. Přečtěte si článek [sada záznamů: Dynamické vazby datových sloupců (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).||
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Sestavení na základě rozhraní .NET Framework](../mfc/building-on-the-framework.md)<br/>
 [Posloupnost operací při sestavování aplikací MFC](../mfc/sequence-of-operations-for-building-mfc-applications.md)<br/>

@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: ef44c917411efefeb6719af95185ddf7993fbab1
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 8587eb76f38c07d54234c810dfd6ab79f487e740
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179016"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283420"
 ---
 # <a name="colecontrol-class"></a>COleControl – třída
 
@@ -787,7 +787,7 @@ void BoundPropertyChanged(DISPID dispid);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor DISPID*<br/>
+*dispid*<br/>
 ID odbavení vázané vlastnosti ovládacího prvku.
 
 ### <a name="remarks"></a>Poznámky
@@ -804,7 +804,7 @@ BOOL BoundPropertyRequestEdit(DISPID dispid);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor DISPID*<br/>
+*dispid*<br/>
 ID odbavení vázané vlastnosti ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -847,7 +847,7 @@ BOOL ClipCaretRect(LPRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Na vstupní ukazatel [RECT](/windows/desktop/api/windef/ns-windef-tagrect) strukturu, která obsahuje blikající kurzor oblasti, kterou chcete upravit. Na výstupní oblasti upravené blikajícího kurzoru nebo hodnota NULL, pokud je zcela zahrnutých obdélník blikající kurzor o.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -901,7 +901,7 @@ virtual void DisplayError(
 
 ### <a name="parameters"></a>Parametry
 
-*SCODE*<br/>
+*scode*<br/>
 Hodnota kódu stavu hlášeny. Úplný seznam možných kódů, najdete v článku [ovládací prvky ActiveX: Pokročilá témata](../../mfc/mfc-activex-controls-advanced-topics.md).
 
 *lpszDescription*<br/>
@@ -967,7 +967,7 @@ void DoSuperclassPaint(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel na kontext zařízení kontejnerem ovládacího prvku.
 
 *rcBounds*<br/>
@@ -991,10 +991,10 @@ void DrawContent(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel na kontext zařízení.
 
-*RC*<br/>
+*rc*<br/>
 Chcete-li být vykreslen v obdélníkovou oblast.
 
 ### <a name="remarks"></a>Poznámky
@@ -1013,10 +1013,10 @@ void DrawMetafile(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel na kontextu zařízení metasouboru.
 
-*RC*<br/>
+*rc*<br/>
 Chcete-li být vykreslen v obdélníkovou oblast.
 
 ##  <a name="enablesimpleframe"></a>  COleControl::EnableSimpleFrame
@@ -1142,7 +1142,7 @@ void FireError(
 
 ### <a name="parameters"></a>Parametry
 
-*SCODE*<br/>
+*scode*<br/>
 Hodnota kódu stavu hlášeny. Úplný seznam možných kódů, najdete v článku [ovládací prvky ActiveX: Pokročilá témata](../../mfc/mfc-activex-controls-advanced-topics.md).
 
 *lpszDescription*<br/>
@@ -1174,7 +1174,7 @@ void AFX_CDECL FireEvent(
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor DISPID*<br/>
+*dispid*<br/>
 ID odbavení událost, která má být aktivována.
 
 *pbParams*<br/>
@@ -1192,7 +1192,7 @@ Obvykle tato funkce by neměla být volána přímo. Místo toho bude volat funk
 |VTS_FONT|`IFontDisp*`|
 |VTS_HANDLE|HWND|
 |VTS_PICTURE|`IPictureDisp*`|
-|VTS_OPTEXCLUSIVE|OLE_OPTEXCLUSIVE *|
+|VTS_OPTEXCLUSIVE|OLE_OPTEXCLUSIVE*|
 |VTS_TRISTATE|OLE_TRISTATE|
 |VTS_XPOS_HIMETRIC|OLE_XPOS_HIMETRIC|
 |VTS_YPOS_HIMETRIC|OLE_YPOS_HIMETRIC|
@@ -1635,7 +1635,7 @@ virtual void GetClientRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Ukazatel `RECT` struktury obsahující rozměry klientské oblasti ovládacího prvku bez oken, což znamená, velikost ovládacího prvku bez ohraničení okna, snímky, posuvníky a tak dále. *Lprect –* parametr označuje velikost ovládacího prvku obdélníku klienta, nikoli jeho pozice.
 
 ##  <a name="getclientsite"></a>  COleControl::GetClientSite
@@ -1926,7 +1926,7 @@ BOOL GetRectInContainer(LPRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Ukazatel na strukturu obdélník, do které budou zkopírovány souřadnice ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2076,7 +2076,7 @@ void InvalidateControl(
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Ukazatel do oblasti ovládacího prvku, aby byla zneplatněna.
 
 *bErase*<br/>
@@ -2211,7 +2211,7 @@ void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
 *strNewPath*<br/>
 Ukazatel na řetězec obsahující cestu, která odkazuje na absolutní umístění vlastnosti asynchronní ovládacího prvku.
 
-*Prop*<br/>
+*prop*<br/>
 A [cdatapathproperty –](../../mfc/reference/cdatapathproperty-class.md) objekt implementace vlastnosti asynchronní ovládacího prvku.
 
 ##  <a name="lockinplaceactive"></a>  COleControl::LockInPlaceActive
@@ -2224,7 +2224,7 @@ BOOL LockInPlaceActive(BOOL bLock);
 
 ### <a name="parameters"></a>Parametry
 
-*Blok*<br/>
+*bLock*<br/>
 Hodnota TRUE, pokud přímo v aktivním stavu ovládacího prvku má být uzamčen. FALSE, pokud je k odemknutí.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2357,7 +2357,7 @@ Ukazatel na Windows zprávu, která způsobila příkaz, který má být vyvolá
 *hWndParent*<br/>
 Popisovač nadřazené okno ovládacího prvku. Pokud spuštění příkaz vytvoří okno (nebo windows), *hWndParent* by měla sloužit jako nadřazený.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Rect – struktura, do které budou zkopírovány souřadnice ovládacího prvku vzhledem ke kontejneru, ukazatel.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2383,7 +2383,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Kontext zařízení, ve kterém dochází výkresu.
 
 *rcBounds*<br/>
@@ -2408,7 +2408,7 @@ virtual void OnDrawMetafile(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Kontext zařízení, ve kterém dochází výkresu.
 
 *rcBounds*<br/>
@@ -2437,7 +2437,7 @@ Ukazatel na Windows zprávu, která vyvolá příkaz.
 *hWndParent*<br/>
 Popisovač pro nadřazené okno ovládacího prvku.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Ukazatel na obdélník, který používá ovládací prvek v kontejneru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2614,7 +2614,7 @@ virtual BOOL OnGetDisplayString(
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor DISPID*<br/>
+*dispid*<br/>
 ID odbavení vlastnost ovládacího prvku.
 
 *strValue*<br/>
@@ -2663,7 +2663,7 @@ virtual BOOL OnGetNaturalExtent(
 *dwAspect*<br/>
 Určuje, jak je objekt a nelze je reprezentovat. Reprezentace zahrnují obsah, ikony, miniaturu nebo tisk dokumentu. Platné hodnoty pocházejí z výčtu [DVASPECT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect) nebo DVASPECT2.
 
-*index*<br/>
+*lindex*<br/>
 Část objektu, který je relevantní. Momentálně se podporuje jenom -1 je platný.
 
 *ptd*<br/>
@@ -2714,7 +2714,7 @@ virtual BOOL OnGetPredefinedStrings(
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor DISPID*<br/>
+*dispid*<br/>
 ID odbavení vlastnost ovládacího prvku.
 
 *pStringArray*<br/>
@@ -2744,7 +2744,7 @@ virtual BOOL OnGetPredefinedValue(
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor DISPID*<br/>
+*dispid*<br/>
 ID odbavení vlastnost ovládacího prvku.
 
 *dwCookie*<br/>
@@ -2774,7 +2774,7 @@ virtual BOOL OnGetViewExtent(
 *dwDrawAspect*<br/>
 DWORD popisující, které tvoří nebo aspektu objektu je zobrazený. Platné hodnoty pocházejí z výčtu [DVASPECT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect) nebo DVASPECT2.
 
-*index*<br/>
+*lindex*<br/>
 Část objektu, který je relevantní. Momentálně se podporuje jenom -1 je platný.
 
 *ptd*<br/>
@@ -3012,7 +3012,7 @@ virtual BOOL OnMapPropertyToPage(
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor DISPID*<br/>
+*dispid*<br/>
 ID odbavení vlastnost ovládacího prvku.
 
 *lpclsid*<br/>
@@ -3061,7 +3061,7 @@ Ukazatel na Windows zprávu, která vyvolá příkaz.
 *hWndParent*<br/>
 Popisovač pro nadřazené okno ovládacího prvku.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Ukazatel na obdélník, který používá ovládací prvek v kontejneru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3409,7 +3409,7 @@ virtual BOOL OnWindowlessMessage(
 
 ### <a name="parameters"></a>Parametry
 
-*zpráva*<br/>
+*msg*<br/>
 Identifikátor zprávy jako úspěšný ve Windows.
 
 *wParam*<br/>
@@ -3593,7 +3593,7 @@ int ReleaseDC(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Určuje kontext zařízení kontejneru uvolnit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3681,7 +3681,7 @@ Určuje velikost v jednotkách, zařízení, které vodorovného posouvání. Te
 *yAmount*<br/>
 Určuje velikost v jednotkách, zařízení, které svislé posouvání. Tento parametr musí být záporná hodnota posunout nahoru.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo Rect – struktura, která určuje část oblasti klienta objekt OLE posunout, aby v souřadnicích klienta nadřazeného okna. Pokud *lprect –* má hodnotu NULL, přešli celý objekt OLE klientské oblasti.
 
 *lpClipRect*<br/>
@@ -3699,7 +3699,7 @@ CFont* SelectFontObject(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel na objekt kontextu zařízení.
 
 *fontHolder*<br/>
@@ -3719,7 +3719,7 @@ CFont* SelectStockFont(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Kontext zařízení, do kterého bude vybrána písma.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3873,10 +3873,10 @@ BOOL SetControlSize(int cx, int cy);
 
 ### <a name="parameters"></a>Parametry
 
-*CX*<br/>
+*cx*<br/>
 Určuje novou šířku ovládacího prvku v pixelech.
 
-*CY*<br/>
+*cy*<br/>
 Určuje novou výšku ovládacího prvku v pixelech.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3978,10 +3978,10 @@ void SetInitialSize(
 
 ### <a name="parameters"></a>Parametry
 
-*CX*<br/>
+*cx*<br/>
 Počáteční šířka ovládacího prvku OLE v pixelech.
 
-*CY*<br/>
+*cy*<br/>
 Počáteční výška ovládacího prvku OLE v pixelech.
 
 ### <a name="remarks"></a>Poznámky
@@ -4039,7 +4039,7 @@ BOOL SetRectInContainer(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Ukazatel na obdélník obsahují nové souřadnice ovládacího prvku vzhledem ke kontejneru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4207,7 +4207,7 @@ Návratová hodnota odeslaných zpráv.
 
 Voláním této funkce odesílají konkrétní zprávy přes mapu zpráv ovládacího prvku.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC Circ3 –](../../visual-cpp-samples.md)<br/>
 [Ukázky knihovny MFC TESTHELP](../../visual-cpp-samples.md)<br/>

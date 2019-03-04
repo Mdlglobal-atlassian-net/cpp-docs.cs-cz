@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: 6e6ce3f48e2b0a7b0aa8396047eb4a52015f364d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f1f7610fc315da65145798058fdcf9752e7873d0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694839"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283251"
 ---
 # <a name="cmfccolorbar-class"></a>Cmfccolorbar – třída
 
@@ -219,13 +219,13 @@ Následující příklad ukazuje, jak nakonfigurovat pomocí různých metod v p
 
 [CPane](../../mfc/reference/cpane-class.md)
 
-[Cmfcbasetoolbar –](../../mfc/reference/cmfcbasetoolbar-class.md)
+[CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)
 
-[Cmfctoolbar –](../../mfc/reference/cmfctoolbar-class.md)
+[CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)
 
-[Cmfcpopupmenubar –](../../mfc/reference/cmfcpopupmenubar-class.md)
+[CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md)
 
-[Cmfccolorbar –](../../mfc/reference/cmfccolorbar-class.md)
+[CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -333,7 +333,7 @@ CMFCColorBar(
 *Barvy*<br/>
 [in] Pole barvy, které zobrazí rozhraní na ovládací prvek pruhu barev.
 
-*Barva*<br/>
+*color*<br/>
 [in] Původně Vybraní barvu.
 
 *lpszAutoColor*<br/>
@@ -361,7 +361,7 @@ Standardní popisek pro jiné tlačítko je **Další barvy...** .
 *nColDockVert*<br/>
 [in] Počet sloupců, které nemá pruhu barev, pokud je ukotven svisle.
 
-*barvaAutomatická*<br/>
+*colorAutomatic*<br/>
 [in] Výchozí barva, která se použije rozhraní po kliknutí na tlačítko Automatické.
 
 *nCommandID*<br/>
@@ -494,7 +494,7 @@ static BOOL CreatePalette(
 |Parametr|Popis|
 |---------------|-----------------|
 |*arColors*|[in] Pole barvy.|
-|*Paleta*|[in] Palety barev.|
+|*palette*|[in] Palety barev.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -518,7 +518,7 @@ void EnableAutomaticButton(
 
 Standardní popisek bude automatické tlačítka je **automatické**.
 
-*barvaAutomatická*<br/>
+*colorAutomatic*<br/>
 [in] Výchozí barva, která se použije rozhraní po kliknutí na tlačítko Automatické.
 
 *bEnable*<br/>
@@ -792,7 +792,7 @@ CPalette* SelectPalette(CDC* pDC);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*primární řadič domény*|[in] Ukazatel na kontext zařízení tlačítka nadřazeného ovládacího prvku aktuální pruhu barev.|
+|*pDC*|[in] Ukazatel na kontext zařízení tlačítka nadřazeného ovládacího prvku aktuální pruhu barev.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -808,7 +808,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*Barva*<br/>
+*color*<br/>
 [in] Hodnota barvy RGB.
 
 ##  <a name="setcolorname"></a>  CMFCColorBar::SetColorName
@@ -823,10 +823,10 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Parametry
 
-*Barva*<br/>
+*color*<br/>
 [in] Hodnota RGB barvu.
 
-*%{strName/*<br/>
+*strName*<br/>
 [in] Nový název pro zadanou barvu.
 
 ### <a name="remarks"></a>Poznámky
@@ -941,7 +941,7 @@ virtual void ShowCommandMessageString(UINT uiCmdId);
 
 Tato metoda odešle zprávu WM_SETMESSAGESTRING vlastníkovi ovládacího prvku pruhu barev.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)

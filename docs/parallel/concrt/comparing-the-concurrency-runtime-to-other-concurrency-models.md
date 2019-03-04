@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 82e1dca1345b909919320b911c4c107e965c9850
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 885cce09707e1c067efdeb0bdc8b7d8a40841c02
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332670"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285097"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Porovnání modelu Concurrency Runtime s jinými modely souběžného zpracování
 
@@ -77,7 +77,7 @@ Na Windows XP a Windows Vista aplikace, které používají modulu Runtime soub�
 
 Ve Windows 7 a Windows Server 2008 R2 operační systém dále podporuje souběžnost a škálovatelnost. Například tyto operační systémy podporovat počítače, které mají více než 64 hardwarových vláken. Abyste mohli využívat tyto nové funkce musí být upravena existující aplikaci, která používá rozhraní Windows API. Ale aplikace, která automaticky používá Concurrency Runtime používá tyto funkce a nevyžaduje změny.
 
-[Base.User mode_scheduling](https://msdn.microsoft.com/library/windows/desktop/dd627187)
+[base.user-mode_scheduling](https://msdn.microsoft.com/library/windows/desktop/dd627187)
 
 [[Horní](#top)]
 
@@ -95,7 +95,7 @@ Další informace o tom, porovná Concurrency Runtime OpenMP a jak migrovat exis
 
 [[Horní](#top)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Concurrency Runtime](../../parallel/concrt/concurrency-runtime.md)<br/>
 [Přehled](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

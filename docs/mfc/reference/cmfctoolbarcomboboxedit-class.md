@@ -1,5 +1,5 @@
 ---
-title: Cmfctoolbarcomboboxedit – třída
+title: CMFCToolBarComboBoxEdit Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCToolBarComboBoxEdit
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCToolBarComboBoxEdit [MFC], CMFCToolBarComboBoxEdit
 ms.assetid: 4789c34a-ce58-48ba-a26f-38748b601352
-ms.openlocfilehash: 317fe870c9a56a8b79307212225dbb0a0eb50324
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fcf89623fcde2067f2def83f1e491db015375e02
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658403"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280534"
 ---
-# <a name="cmfctoolbarcomboboxedit-class"></a>Cmfctoolbarcomboboxedit – třída
+# <a name="cmfctoolbarcomboboxedit-class"></a>CMFCToolBarComboBoxEdit Class
 
 Rozhraní používá `CMFCToolBarComboBoxEdit` třídy za účelem vytvoření tlačítka panelu nástrojů, který se chová jako ovládací prvek upravovat pole se seznamem.
 
@@ -52,13 +52,13 @@ Odvodit třídu z `CMFCToolBarComboBoxEdit` třídy přizpůsobit jeho operace �
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[Cedit –](../../mfc/reference/cedit-class.md)
+[CEdit](../../mfc/reference/cedit-class.md)
 
-[Cmfctoolbarcomboboxedit –](../../mfc/reference/cmfctoolbarcomboboxedit-class.md)
+[CMFCToolBarComboBoxEdit](../../mfc/reference/cmfctoolbarcomboboxedit-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxtoolbarcomboboxbutton.h
+**Header:** afxtoolbarcomboboxbutton.h
 
 ##  <a name="cmfctoolbarcomboboxedit"></a>  CMFCToolBarComboBoxEdit::CMFCToolBarComboBoxEdit
 
@@ -70,7 +70,7 @@ CMFCToolBarComboBoxEdit(CMFCToolBarComboBoxButton& combo);
 
 ### <a name="parameters"></a>Parametry
 
-*Pole se seznamem*<br/>
+*combo*<br/>
 [in] Odkaz na [cmfctoolbarcomboboxbutton –](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) objekt, který je tlačítko panelu nástrojů obsahující ovládací prvek pole se seznamem.
 
 ### <a name="example"></a>Příklad
@@ -79,7 +79,7 @@ Následující příklad ukazuje, jak vytvořit objekt `CMFCToolBarComboBoxEdit`
 
 [!code-cpp[NVC_MFC_IEDemo#5](../../mfc/reference/codesnippet/cpp/cmfctoolbarcomboboxedit-class_1.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

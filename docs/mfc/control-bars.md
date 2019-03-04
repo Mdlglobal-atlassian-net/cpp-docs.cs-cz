@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CToolBar class [MFC], control bars
 - CStatusBar class [MFC], control bars
 ms.assetid: 31831910-3d23-4d70-9e71-03cc02f01ec4
-ms.openlocfilehash: 13d457350a6a75357752556bb08a582e8a59f333
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b75d9a96f091d0424592f34bdb1ed7ce76c2372
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519704"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283576"
 ---
 # <a name="control-bars"></a>Ovládací pruhy
 
@@ -66,6 +66,6 @@ Panel dialogového okna se ovládací panel, založené na prostředek šablony 
 
 A [matrice](../mfc/using-crebarctrl.md) se ovládací panel, který poskytuje informace o ukotvení, rozložení, stavu a trvalosti pro prvky matrice. Matrice objekt může obsahovat řadu podřízených oken, obvykle další ovládací prvky, včetně textových polí, panely nástrojů a pole se seznamem. Objekt matrice můžete zobrazit jeho podřízených oken přes zadané rastrový obrázek. To může automaticky nebo ručně změnit velikost můžete také kliknout nebo přetažením jeho úchytu panelu. Viz třída [crebar –](../mfc/reference/crebar-class.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Prvky uživatelského rozhraní](../mfc/user-interface-elements-mfc.md)

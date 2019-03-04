@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: c8c8971e467b2b8063bb5bb5d8e953fc48bcc42e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3fcdddd27437f57ba800a602873d9bb3ae26e82f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666099"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283602"
 ---
 # <a name="csliderctrl-class"></a>Csliderctrl – třída
 
@@ -385,10 +385,10 @@ void GetRange(
 
 ### <a name="parameters"></a>Parametry
 
-*Nminimum*<br/>
+*nMin*<br/>
 Odkaz na celé číslo, které přijímá minimální pozici.
 
-*Nmaximum*<br/>
+*nMax*<br/>
 Odkaz na celé číslo, které přijímá maximální pozici.
 
 ### <a name="remarks"></a>Poznámky
@@ -431,10 +431,10 @@ void GetSelection(
 
 ### <a name="parameters"></a>Parametry
 
-*Nminimum*<br/>
+*nMin*<br/>
 Odkaz na celé číslo, které přijímá počáteční pozici aktuálního výběru.
 
-*Nmaximum*<br/>
+*nMax*<br/>
 Odkaz na celé číslo, které přijímá koncovou pozici aktuálního výběru.
 
 ##  <a name="getthumblength"></a>  CSliderCtrl::GetThumbLength
@@ -614,7 +614,7 @@ void SetPos(int nPos);
 
 ### <a name="parameters"></a>Parametry
 
-*nPos –*<br/>
+*nPos*<br/>
 Určuje nové pozice posuvníku.
 
 ##  <a name="setrange"></a>  CSliderCtrl::SetRange
@@ -630,10 +630,10 @@ void SetRange(
 
 ### <a name="parameters"></a>Parametry
 
-*Nminimum*<br/>
+*nMin*<br/>
 Minimální pozice pro posuvník.
 
-*Nmaximum*<br/>
+*nMax*<br/>
 Maximální pozici pro posuvník.
 
 *bRedraw*<br/>
@@ -651,7 +651,7 @@ void SetRangeMax(
 
 ### <a name="parameters"></a>Parametry
 
-*Nmaximum*<br/>
+*nMax*<br/>
 Maximální pozici pro posuvník.
 
 *bRedraw*<br/>
@@ -669,7 +669,7 @@ void SetRangeMin(
 
 ### <a name="parameters"></a>Parametry
 
-*Nminimum*<br/>
+*nMin*<br/>
 Minimální pozice pro posuvník.
 
 *bRedraw*<br/>
@@ -687,10 +687,10 @@ void SetSelection(
 
 ### <a name="parameters"></a>Parametry
 
-*Nminimum*<br/>
+*nMin*<br/>
 Počáteční pozice pro posuvník.
 
-*Nmaximum*<br/>
+*nMax*<br/>
 Koncová pozice posuvníku.
 
 ##  <a name="setthumblength"></a>  CSliderCtrl::SetThumbLength
@@ -771,7 +771,7 @@ int SetTipSide(int nLocation);
 
 ### <a name="parameters"></a>Parametry
 
-*Numístění*<br/>
+*nLocation*<br/>
 Hodnota představující umístění, kam chcete-li zobrazit ovládací prvek tooltip. Seznam možných hodnot, zobrazí zpráva Win32 [TBM_SETTIPSIDE](/windows/desktop/Controls/tbm-settipside), jak je popsáno v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -799,7 +799,7 @@ Ukazatel [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) objekt, kter�
 
 Tato členská funkce implementuje chování zprávy Win32 [TBM_SETTOOLTIPS](/windows/desktop/Controls/tbm-settooltips), jak je popsáno v sadě Windows SDK. Když se stylem TBS_TOOLTIPS ovládacím prvku posuvník, vytvoří ovládací prvek výchozí popisek, který se zobrazí vedle jezdce, zobrazení aktuální pozice posuvníku. Popis posuvník – styly ovládacího prvku, naleznete v tématu [– styly ovládacího prvku Trackbar](/windows/desktop/Controls/trackbar-control-styles) v sadě Windows SDK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázka CMNCTRL2 knihovny MFC](../../visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>

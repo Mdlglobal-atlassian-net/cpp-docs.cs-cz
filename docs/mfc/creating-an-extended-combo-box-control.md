@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CComboBoxEx class [MFC], creating extended combo box controls
 - extended combo boxes [MFC], creating
 ms.assetid: a964267e-97b6-4e77-9f89-55bb5c68913f
-ms.openlocfilehash: d1e81664403f45a0a35cd24ceea16e1425b03403
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bfc201fbb10c3caa3eaabd0e81206b9493ff7196
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668764"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281613"
 ---
 # <a name="creating-an-extended-combo-box-control"></a>Vytvoření ovládacího prvku rozšířené pole se seznamem
 
@@ -35,8 +35,7 @@ Vytvoření ovládacího prvku rozšířené pole se seznamem pole závisí na, 
 
 1. Volání ovládacího prvku [vytvořit](../mfc/reference/ctabctrl-class.md#create) členské funkce, případně v [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), může být co nejdříve jako nadřazené okno [OnCreate](../mfc/reference/cwnd-class.md#oncreate) funkci obslužné rutiny. Nastavení stylů pro ovládací prvek.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CComboBoxEx](../mfc/using-ccomboboxex.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

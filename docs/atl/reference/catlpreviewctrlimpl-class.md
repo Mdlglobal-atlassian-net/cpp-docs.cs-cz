@@ -1,5 +1,5 @@
 ---
-title: Catlpreviewctrlimpl – třída
+title: CAtlPreviewCtrlImpl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlPreviewCtrlImpl
@@ -20,14 +20,14 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlPreviewCtrlImpl class
 ms.assetid: 39b3299e-07e4-4abc-9b6e-b54bfa3b0802
-ms.openlocfilehash: ffa2613909145bffaf901b2d5bae4129e6d434c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71c50771889381ad2288637c23930103b5925a2c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505050"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283266"
 ---
-# <a name="catlpreviewctrlimpl-class"></a>Catlpreviewctrlimpl – třída
+# <a name="catlpreviewctrlimpl-class"></a>CAtlPreviewCtrlImpl Class
 
 Tato třída je implementace knihovny ATL okna, které se umístí do hostitelského okna poskytnutého shellem pro náhled ve formátu RTF.
 
@@ -46,7 +46,7 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 
 |Název|Popis|
 |----------|-----------------|
-|[Catlpreviewctrlimpl –:: ~ catlpreviewctrlimpl –](#dtor)|Destructs objekt ovládacího prvku ve verzi preview.|
+|[CAtlPreviewCtrlImpl::~CAtlPreviewCtrlImpl](#dtor)|Destructs objekt ovládacího prvku ve verzi preview.|
 |[CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl](#catlpreviewctrlimpl)|Vytvoří objekt ovládacího prvku ve verzi preview.|
 
 ### <a name="public-methods"></a>Veřejné metody
@@ -93,7 +93,7 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 
 `ATL::CWindowImplBaseT<TBase,TWinTraits>`
 
-[ATL::CWindowImpl\<catlpreviewctrlimpl – >](../../atl/reference/cwindowimpl-class.md)
+[ATL::CWindowImpl\<CAtlPreviewCtrlImpl>](../../atl/reference/cwindowimpl-class.md)
 
 `IPreviewCtrl`
 
@@ -114,7 +114,7 @@ CAtlPreviewCtrlImpl(void) : m_clrText(0),
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="dtor"></a>  Catlpreviewctrlimpl –:: ~ catlpreviewctrlimpl –
+##  <a name="dtor"></a>  CAtlPreviewCtrlImpl::~CAtlPreviewCtrlImpl
 
 Destructs objekt ovládacího prvku ve verzi preview.
 
@@ -137,7 +137,7 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
 *hWndParent*<br/>
 Popisovač okna hostitele zadaný shellem pro náhled ve formátu RTF.
 
-*Čínská lidová republika*<br/>
+*prc*<br/>
 Určuje počáteční velikost a pozice okna.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -166,7 +166,7 @@ virtual void DoPaint(HDC hdc);
 
 ### <a name="parameters"></a>Parametry
 
-*hDC*<br/>
+*hdc*<br/>
 Popisovač pro kontext zařízení pro kreslení.
 
 ### <a name="remarks"></a>Poznámky
@@ -302,7 +302,7 @@ virtual void SetRect(const RECT* prc, BOOL bRedraw);
 
 ### <a name="parameters"></a>Parametry
 
-*Čínská lidová republika*<br/>
+*prc*<br/>
 Určuje novou velikost a pozice ovládacího prvku ve verzi preview.
 
 *bRedraw*<br/>
@@ -310,6 +310,6 @@ Určuje, zda by měl překreslit ovládací prvek.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Desktopové komponenty ATL objektů COM](../../atl/atl-com-desktop-components.md)

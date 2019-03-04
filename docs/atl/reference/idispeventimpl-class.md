@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - IDispEventImpl class
 ms.assetid: a64b5288-35cb-4638-aad6-2d15b1c7cf7b
-ms.openlocfilehash: 75946005acc22874b17ee806cd89ec99095f9c35
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8de620cd6e2433375284f6493b5117c40a356603
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524297"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283199"
 ---
 # <a name="idispeventimpl-class"></a>Idispeventimpl – třída
 
@@ -111,7 +111,7 @@ Další informace najdete v tématu [podpora IDispEventImpl](../../atl/supportin
 
 `_IDispEventLocator`
 
-[Idispeventsimpleimpl –](../../atl/reference/idispeventsimpleimpl-class.md)
+[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)
 
 `IDispEventImpl`
 
@@ -133,7 +133,7 @@ HRESULT GetFuncInfoFromId(
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*<br/>
+*iid*<br/>
 [in] Odkaz na ID funkce.
 
 *dispidMember*<br/>
@@ -142,7 +142,7 @@ HRESULT GetFuncInfoFromId(
 *lcid*<br/>
 [in] Kontext národního prostředí ID funkce.
 
-*Informace o*<br/>
+*info*<br/>
 [in] Struktura označující, jak je funkce volána.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -237,7 +237,7 @@ typedef tihclass _tihclass;
 
 Ve výchozím nastavení, je třída `CComTypeInfoHolder`. `CComTypeInfoHolder` spravuje informace o typu pro třídu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [_ATL_FUNC_INFO – struktura](../../atl/reference/atl-func-info-structure.md)<br/>
 [IDispatchImpl – třída](../../atl/reference/idispatchimpl-class.md)<br/>

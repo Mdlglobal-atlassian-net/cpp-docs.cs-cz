@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, application settings
 ms.assetid: 48475194-cc63-467f-8499-f142269a4c1c
-ms.openlocfilehash: 17d8ad581640611a5b517edd15609aa8052ecae4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3201b5882a1de4064d924fbb28ee1c575ab8ccbe
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677133"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281158"
 ---
 # <a name="application-settings-mfc-activex-control-wizard"></a>Nastavení aplikace, průvodce ovládacím prvkem ActiveX v prostředí MFC
 
@@ -38,9 +38,8 @@ Na této stránce průvodce pro ovládací prvek ActiveX knihovny MFC k navrhov�
 
    - Projekt obsahuje adresář HLP tak, aby obsahovala rastrové soubory nápovědy projektu a souboru tématu nápovědy (*název_projektu*RTF). Tento soubor téma nápovědy obsahuje standardní témata nápovědy pro běžné vlastnosti, události a metody podporuje mnoho ovládacích prvků ActiveX. Můžete upravit soubor RTF, které chcete přidat nebo odebrat konkrétní témata nápovědy.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Průvodce ovládacím prvkem ActiveX v prostředí MFC](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
 [Názvy ovládacích prvků, Průvodce ovládacím prvkem ActiveX v prostředí MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)<br/>
 [Nastavení ovládacího prvku, Průvodce ovládacím prvkem ActiveX v prostředí MFC](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)
-

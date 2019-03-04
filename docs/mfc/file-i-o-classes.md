@@ -15,12 +15,12 @@ helpviewer_keywords:
 - stream classes [MFC]
 - memory file classes [MFC]
 ms.assetid: 92821c3f-d9e1-47f6-98c9-3b632d86e811
-ms.openlocfilehash: a6a47372e77ca8b6adee44125705dc3f4d6b267b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 914325ec56f0cae30c7293305496d65f358f2731
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443105"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281652"
 ---
 # <a name="file-io-classes"></a>Třídy I/O souborů
 
@@ -28,22 +28,22 @@ Tyto třídy poskytuje rozhraní pro tradiční disku souborů v paměti, aktivn
 
 Použijte následující třídy, zejména `CArchive` a `CFile`, můžete psát vlastní zpracování vstupu a výstupu. Není obvykle nutné odvozovat z těchto tříd. Pokud používáte rozhraní framework aplikace výchozí implementace **otevřít** a **Uložit** příkazy na **souboru** nabídky bude zpracovávat vstup a výstup souborů (horizontálních oddílů pomocí třídy `CArchive`), tak dlouho, dokud je přepsat váš dokument `Serialize` funkce k zadání podrobností o jak dokumentu serializuje jeho obsah. Další informace o souboru třídy a serializaci, najdete v článku [soubory v prostředí MFC](../mfc/files-in-mfc.md) a článek [serializace](../mfc/serialization-in-mfc.md).
 
-[Cfile –](../mfc/reference/cfile-class.md)<br/>
+[CFile](../mfc/reference/cfile-class.md)<br/>
 Poskytuje rozhraní souborů na disku binární soubory.
 
-[Cstdiofile –](../mfc/reference/cstdiofile-class.md)<br/>
+[CStdioFile](../mfc/reference/cstdiofile-class.md)<br/>
 Poskytuje `CFile` rozhraní do souborů disku uložené do vyrovnávací paměti datového proudu, obvykle v textovém režimu.
 
-[Cmemfile –](../mfc/reference/cmemfile-class.md)<br/>
+[CMemFile](../mfc/reference/cmemfile-class.md)<br/>
 Poskytuje `CFile` rozhraní do souborů v paměti.
 
-[Csharedfile –](../mfc/reference/csharedfile-class.md)<br/>
+[CSharedFile](../mfc/reference/csharedfile-class.md)<br/>
 Poskytuje `CFile` rozhraní sdílené soubory v paměti.
 
-[Colestreamfile –](../mfc/reference/colestreamfile-class.md)<br/>
+[COleStreamFile](../mfc/reference/colestreamfile-class.md)<br/>
 Používá COM `IStream` rozhraní k poskytování `CFile` přístup k složené soubory.
 
-[Csocketfile –](../mfc/reference/csocketfile-class.md)<br/>
+[CSocketFile](../mfc/reference/csocketfile-class.md)<br/>
 Poskytuje `CFile` rozhraní Windows Socket.
 
 ## <a name="related-classes"></a>Související třídy
@@ -54,16 +54,15 @@ Spolupracuje s `CFile` objektu pro implementaci trvalého úložiště pro objek
 [Carchiveexception –](../mfc/reference/carchiveexception-class.md)<br/>
 Výjimku archivu.
 
-[Cfileexception –](../mfc/reference/cfileexception-class.md)<br/>
+[CFileException](../mfc/reference/cfileexception-class.md)<br/>
 Soubor objektově orientovaný výjimky.
 
 [CFileDialog](../mfc/reference/cfiledialog-class.md)<br/>
 Poskytuje standardní dialogové okno pro otevření nebo uložení souboru.
 
-[Crecentfilelist –](../mfc/reference/crecentfilelist-class.md)<br/>
+[CRecentFileList](../mfc/reference/crecentfilelist-class.md)<br/>
 Uchovává poslední použitou seznam souborů (MRU).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../mfc/class-library-overview.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Csinusoidaltransitionfromrange – třída
+title: CSinusoidalTransitionFromRange Class
 ms.date: 11/04/2016
 f1_keywords:
 - CSinusoidalTransitionFromRange
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - CSinusoidalTransitionFromRange [MFC], m_period
 - CSinusoidalTransitionFromRange [MFC], m_slope
 ms.assetid: 8b66a729-5f10-431a-b055-e3600d0065da
-ms.openlocfilehash: 20e910dfa34e90af2c8a2765947ad85a2465c596
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df360493413e850f4c0fcee41c925cd256c16dad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477581"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283810"
 ---
-# <a name="csinusoidaltransitionfromrange-class"></a>Csinusoidaltransitionfromrange – třída
+# <a name="csinusoidaltransitionfromrange-class"></a>CSinusoidalTransitionFromRange Class
 
 Zapouzdřuje přechod se sinusovým rozsahem, který má daný rozsah oscilace.
 
@@ -69,9 +69,9 @@ Hodnota proměnné animace kolísá mezi zadaný minimální a maximální hodno
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cbasetransition –](../../mfc/reference/cbasetransition-class.md)
+[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
 
-[Csinusoidaltransitionfromrange –](../../mfc/reference/csinusoidaltransitionfromrange-class.md)
+[CSinusoidalTransitionFromRange](../../mfc/reference/csinusoidaltransitionfromrange-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -166,6 +166,6 @@ Křivka na začátku přechod.
 UI_ANIMATION_SLOPE m_slope;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

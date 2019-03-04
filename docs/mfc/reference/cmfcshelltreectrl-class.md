@@ -1,5 +1,5 @@
 ---
-title: CMFCShellTreeCtrl – třída
+title: CMFCShellTreeCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCShellTreeCtrl
@@ -28,14 +28,14 @@ helpviewer_keywords:
 - CMFCShellTreeCtrl [MFC], SetFlags
 - CMFCShellTreeCtrl [MFC], SetRelatedList
 ms.assetid: 3d1da715-9554-4ed7-968c-055c48146267
-ms.openlocfilehash: cf7e5f9c9b44524491737b27098bc91bb472cb32
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 3fa829c5333a87d908d36438fe8ffcd253f9fb5a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694280"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279988"
 ---
-# <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl – třída
+# <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl Class
 
 `CMFCShellTreeCtrl` Třída rozšiřuje [ctreectrl – třída](../../mfc/reference/ctreectrl-class.md) funkce zobrazením hierarchie položek prostředí.
 
@@ -82,7 +82,7 @@ Tato třída rozšiřuje `CTreeCtrl` třídy tím, že váš program zahrnout pr
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxshelltreeCtrl.h
+**Header:** afxshelltreeCtrl.h
 
 ## <a name="example"></a>Příklad
 
@@ -290,7 +290,7 @@ Tato metoda přidruží `CMFCShellListCtrl` s `CMFCShellTreeCtrl`. Tyto objekty 
 
 Pomocí této metody [CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist) načíst `CMFCShellListCtrl` přidružené `CMFCShellTreeCtrl`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

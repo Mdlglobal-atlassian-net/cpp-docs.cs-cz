@@ -1,5 +1,5 @@
 ---
-title: Cmfcdropdownframe – třída
+title: CMFCDropDownFrame Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCDropDownFrame
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], RecalcLayout
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
-ms.openlocfilehash: ebab76653066d6162c8068d9205cd12f3d945cab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 534dc90443371c8440e0cb317540f2cf80f6eacc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429134"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284746"
 ---
-# <a name="cmfcdropdownframe-class"></a>Cmfcdropdownframe – třída
+# <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame Class
 
 Poskytuje funkce okna rámce rozevíracího seznamu na panely nástrojů v rozevíracím seznamu a rozevírací tlačítka.
 
@@ -80,7 +80,7 @@ Následující příklad ukazuje, jak se načítají ukazatel na `CMFCDropDownFr
 
 [Cminiframewnd –](../../mfc/reference/cminiframewnd-class.md)
 
-[Cmfcdropdownframe –](../../mfc/reference/cmfcdropdownframe-class.md)
+[CMFCDropDownFrame](../../mfc/reference/cmfcdropdownframe-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -186,7 +186,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 
 Pokud *bAutoDestroy* má hodnotu TRUE, pak bude `CMFCDropDownFrame` destruktor odstraní přidružené rozevírací seznam nástrojů okno. Výchozí hodnota je TRUE.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

@@ -1,18 +1,18 @@
 ---
-title: 'Postupy: Použití skupin plánů k ovlivnění pořadí provádění'
+title: 'Postupy: Použití skupin plánů k ovlivnění pořadí provádění'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - schedule groups, using [Concurrency Runtime]
 - using schedule groups [Concurrency Runtime]
 ms.assetid: 73124194-fc3a-491e-a23f-fbd7b5a4455c
-ms.openlocfilehash: 1117e0d24aae023fbb4dec4fbb9721e6da2ad768
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99e0383fc8d16f3eeb6e43e59424ab0984ee5c14
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642298"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284356"
 ---
-# <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>Postupy: Použití skupin plánů k ovlivnění pořadí provádění
+# <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>Postupy: Použití skupin plánů k ovlivnění pořadí provádění
 
 V modulu Runtime souběžnosti je Nedeterministický pořadí, ve kterém úkoly jsou naplánovány. Plánování zásad můžete však použít k ovlivnění pořadí, ve kterém je spuštěný úkoly. Toto téma ukazuje způsob použití skupin plánů spolu s [concurrency::SchedulingProtocol](reference/concurrency-namespace-enums.md#policyelementkey) zásadu plánovače k ovlivnění pořadí, ve kterém je spuštěný úkoly.
 
@@ -106,10 +106,9 @@ Obě zásady vytvořit stejnou posloupnost událostí. Nicméně jsou zásady, k
 
 Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `scheduling-protocol.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
 
-**plánování/EHsc cl.exe-protocol.cpp**
+**cl.exe /EHsc scheduling-protocol.cpp**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Skupiny plánů](../../parallel/concrt/schedule-groups.md)<br/>
 [Asynchronní agenti](../../parallel/concrt/asynchronous-agents.md)
-

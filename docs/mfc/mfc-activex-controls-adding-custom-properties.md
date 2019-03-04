@@ -1,18 +1,18 @@
 ---
-title: 'MFC – ovládací prvky ActiveX: Přidání přizpůsobených vlastností'
+title: 'MFC – ovládací prvky ActiveX: Přidání vlastních vlastností'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-ms.openlocfilehash: 2cc9cfa1886c6ba8e714736e0192b56bf3b154f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e02d5523b894f89aa93c8d2765a128920afa2353
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496418"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284200"
 ---
-# <a name="mfc-activex-controls-adding-custom-properties"></a>MFC – ovládací prvky ActiveX: Přidání přizpůsobených vlastností
+# <a name="mfc-activex-controls-adding-custom-properties"></a>MFC – ovládací prvky ActiveX: Přidání vlastních vlastností
 
 Vlastní vlastnosti se liší od uložených vlastností v tom, že vlastní vlastnosti nejsou již implementováno prostřednictvím `COleControl` třídy. Vlastní vlastnost se používá k vystavení stavu nebo vzhled ovládacího prvku ActiveX na programátorovi, pomocí ovládacího prvku.
 
@@ -22,7 +22,7 @@ Tento článek popisuje, jak přidat vlastní vlastnost do ovládacího prvku Ac
 
 - [Přidat Průvodce vlastností změny provedené u vlastní vlastnosti](#_core_classwizard_changes_for_custom_properties)
 
-Vlastní vlastnosti se dělí na čtyři typy implementace: členskou proměnnou, členské proměnné s parametrizované, oznámení a metody Get/Set.
+Vlastní vlastnosti dostaneme v čtyři typy implementace: Členské proměnné, členské proměnné s oznámením, metody Get/Set a parametry.
 
 - Implementace členské proměnné
 
@@ -38,7 +38,7 @@ Vlastní vlastnosti se dělí na čtyři typy implementace: členskou proměnnou
 
 - Parametrizované implementace
 
-   Parametrizované implementace podporuje Průvodce přidáním vlastnosti. Parametrizovaná vlastnost (říká se jim vlastnost pole) lze použít pro přístup k sadě hodnot prostřednictvím jedné vlastnosti ovládacího prvku. DISP_PROPERTY_PARAM je makro položky mapy odeslání pro tuto implementaci. Další informace o implementaci tohoto typu, najdete v části [implementace Parametrizovaná vlastnost](../mfc/mfc-activex-controls-advanced-topics.md) v následujícím článku – ovládací prvky ActiveX: Advanced témata.
+   Parametrizované implementace podporuje Průvodce přidáním vlastnosti. Parametrizovaná vlastnost (říká se jim vlastnost pole) lze použít pro přístup k sadě hodnot prostřednictvím jedné vlastnosti ovládacího prvku. DISP_PROPERTY_PARAM je makro položky mapy odeslání pro tuto implementaci. Další informace o implementaci tohoto typu, najdete v části [implementace Parametrizovaná vlastnost](../mfc/mfc-activex-controls-advanced-topics.md) v následujícím článku – ovládací prvky ActiveX: Pokročilá témata.
 
 ##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> Použití přidat průvodce vlastností můžete přidat vlastní vlastnost
 
@@ -92,7 +92,7 @@ Nakonec implementace `GetCircleOffset` a `SetCircleOffset` funkce jsou přidány
 
 Všimněte si, že Průvodce přidáním vlastnosti automaticky přidá volání do [SetModifiedFlag](../mfc/reference/colecontrol-class.md#setmodifiedflag), do těla funkce Set. Volání této funkce označuje ovládací prvek, jako jsou změny. Pokud ovládací prvek byl změněn, při uložení kontejneru se uloží jeho nového stavu. Při změně hodnoty vlastnosti, uložit jako součást trvalý stav ovládacího prvku, lze volat tuto funkci.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)<br/>
 [MFC – ovládací prvky ActiveX: Vlastnosti](../mfc/mfc-activex-controls-properties.md)<br/>

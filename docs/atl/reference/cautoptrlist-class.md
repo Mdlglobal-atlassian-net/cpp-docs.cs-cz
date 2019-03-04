@@ -1,5 +1,5 @@
 ---
-title: Cautoptrlist – třída
+title: CAutoPtrList Class
 ms.date: 11/04/2016
 f1_keywords:
 - CAutoPtrList
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrList class
 ms.assetid: 11de4aca-28b0-4ff2-a74a-cb602312ffbd
-ms.openlocfilehash: a7e5c2db31100da8901deaae61527c65655faa7e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2558c522f7903e8d59363cd77d1a86027f6a7511
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551408"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285409"
 ---
-# <a name="cautoptrlist-class"></a>Cautoptrlist – třída
+# <a name="cautoptrlist-class"></a>CAutoPtrList Class
 
 Tato třída poskytuje metody, které jsou užitečné při vytváření seznamu inteligentní ukazatele.
 
@@ -51,7 +51,7 @@ Další informace najdete v tématu [ATL – třídy kolekce](../../atl/atl-coll
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Catllist –](../../atl/reference/catllist-class.md)
+[CAtlList](../../atl/reference/catllist-class.md)
 
 `CAutoPtrList`
 
@@ -76,7 +76,7 @@ Velikost bloku, výchozí hodnota je 10.
 
 Velikost bloku je míra množství paměti přidělené, pokud je nutné použít nový prvek. Bloky o větší velikosti snížit volání rutiny přidělení paměti, ale spotřebovávají více prostředků.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CAtlList – třída](../../atl/reference/catllist-class.md)<br/>
 [CAutoPtrElementTraits – třída](../../atl/reference/cautoptrelementtraits-class.md)<br/>

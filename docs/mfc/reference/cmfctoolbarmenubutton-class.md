@@ -1,5 +1,5 @@
 ---
-title: Cmfctoolbarmenubutton – třída
+title: CMFCToolBarMenuButton Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCToolBarMenuButton
@@ -92,14 +92,14 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], DrawDocumentIcon
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
-ms.openlocfilehash: ed786f3449f172f1aa4255a4ca677a400b767e83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 775d977fa1c995c42cc85660b1c9d13aea40a01e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429364"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281518"
 ---
-# <a name="cmfctoolbarmenubutton-class"></a>Cmfctoolbarmenubutton – třída
+# <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton Class
 
 Tlačítka panelu nástrojů, který obsahuje místní nabídku.
 Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
@@ -191,9 +191,9 @@ Následující příklad ukazuje, jak nakonfigurovat `CMFCToolBarMenuButton` obj
 
 [Třídy CObject](cobject-class.md)
 
-[Cmfctoolbarbutton –](../../mfc/reference/cmfctoolbarbutton-class.md)
+[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)
 
-[Cmfctoolbarmenubutton –](../../mfc/reference/cmfctoolbarmenubutton-class.md)
+[CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -337,7 +337,7 @@ void DrawDocumentIcon(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *rectImage*<br/>
@@ -590,7 +590,7 @@ virtual SIZE OnCalculateSize(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *sizeDefault*<br/>
 [in] *bHorz*<br/>
 
@@ -683,7 +683,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *pImages*<br/>
 [in] *bHorz*<br/>
@@ -705,7 +705,7 @@ virtual int OnDrawOnCustomizeList(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *bSelected*<br/>
 
@@ -874,7 +874,7 @@ Voláním této metody lze zadat ID přemístitelný panel, který je vytvořen,
 
 Volání [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) k povolení této funkce odnímatelnou nabídku v aplikaci.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

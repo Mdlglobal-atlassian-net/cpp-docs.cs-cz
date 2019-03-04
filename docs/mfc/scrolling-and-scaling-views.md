@@ -8,12 +8,12 @@ helpviewer_keywords:
 - scroll bars [MFC], messages
 - scrolling views [MFC]
 ms.assetid: f98a3421-c336-407e-97ee-dbb2ffd76fbd
-ms.openlocfilehash: acef79a89da88773da564fc965a607e2fd5b53f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2baa89f233eb6df93cde3adbde35ba1e6d35c093
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626093"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283706"
 ---
 # <a name="scrolling-and-scaling-views"></a>Posouvání a změna měřítka zobrazení
 
@@ -47,7 +47,6 @@ Kolik můžete zadat posun "stránky" (když uživatel klikne na posuvníku šac
 
 Pokud chcete zobrazit automaticky přizpůsobit velikost okna rámce, můžete použít `CScrollView` pro škálování místo posouvání. Logické zobrazení je vyčerpávat nebo zmenšit přesně podle klientské oblasti okna. Dokončeno škálování zobrazení nemá žádné posuvníky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití zobrazení](../mfc/using-views.md)
-

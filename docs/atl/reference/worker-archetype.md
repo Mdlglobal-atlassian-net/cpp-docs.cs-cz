@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-ms.openlocfilehash: bbfe75ad996841cd4ea78adab56c7cf91ac55f3c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 790cf064fcffe1f0cd3c191c28ed0a0614062406
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565552"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283446"
 ---
 # <a name="worker-archetype"></a>Archetyp pracovního procesu
 
@@ -39,7 +39,7 @@ Tyto třídy splňovat toto archetype:
 
 |Třída|Popis|
 |-----------|-----------------|
-|[Cnonstatelessworker –](../../atl/reference/cnonstatelessworker-class.md)|Přijímá požadavky od fondu vláken a předává je do objektu pracovního procesu, který je vytvořeno a zničeno pro každý požadavek.|
+|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|Přijímá požadavky od fondu vláken a předává je do objektu pracovního procesu, který je vytvořeno a zničeno pro každý požadavek.|
 
 **Použití**
 
@@ -47,8 +47,8 @@ Tyto parametry šablony by měl třídy tak, aby odpovídal na tomto archetype:
 
 |Název parametru|Používá|
 |--------------------|-------------|
-|*Pracovního procesu*|[Cthreadpool –](../../atl/reference/cthreadpool-class.md)|
-|*Pracovního procesu*|[Cnonstatelessworker –](../../atl/reference/cnonstatelessworker-class.md)|
+|*Pracovního procesu*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|
+|*Pracovního procesu*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|
 
 ### <a name="requirements"></a>Požadavky
 
@@ -117,8 +117,7 @@ void Terminate(void* pvParam) throw();
 *pvParam*<br/>
 Vlastní parametr srozumitelné pro třídu pracovního procesu. Také předat `WorkerArchetype::Initialize` a `WorkerArchetype::Execute`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Koncepty](../../atl/active-template-library-atl-concepts.md)<br/>
 [Desktopové komponenty ATL objektů COM](../../atl/atl-com-desktop-components.md)
-

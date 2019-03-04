@@ -11,12 +11,12 @@ helpviewer_keywords:
 - threading [C++], synchronization
 - multithreading [C++], synchronization classes
 ms.assetid: 4914f54e-68ac-438f-93c9-c013455a657e
-ms.openlocfilehash: 63555236ec41ce0a28d82aa676318b53a24169c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 72cf5310704c1ae959cc012146a03dd32cff4068
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502840"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284369"
 ---
 # <a name="multithreading-when-to-use-the-mfc-synchronization-classes"></a>Multithreading: Kdy použít synchronizační třídy knihovny MFC
 
@@ -42,7 +42,7 @@ Pokud chcete zjistit, jakou synchronizační třídu byste měli použít, pož�
 
 `CSyncObject` nikdy slouží přímo. Je základní třída pro jiné třídy čtyři synchronizace.
 
-## <a name="example-1-using-three-synchronization-classes"></a>Příklad 1: Použití tří synchronizační třídy
+## <a name="example-1-using-three-synchronization-classes"></a>Příklad 1: Pomocí tří synchronizační třídy
 
 Jako příklad trvat, než aplikace, která udržuje odkazovaného seznamu účtů. Tato aplikace umožňuje až tři účty mají být prověřeny v samostatném systému windows, ale pouze jeden je aktualizovat v určitém čase. Při aktualizaci účtu aktualizovaná data se odesílají přes síť do archivní data.
 
@@ -52,8 +52,8 @@ Tato ukázková aplikace používá všechny tři typy synchronizační třídy.
 
 Zvolíte, jakou synchronizační třídu přístup k použití je ještě jednodušší. Pokud se týká pouze na jeden prostředek řízený přístup k vaší aplikace, použijte `CSingleLock`. Pokud nepotřebuje přístup k libovolnému počtu kontrolovaných prostředků, použijte `CMultiLock`. V příkladu 1 `CSingleLock` by byla použita, protože v každém případě je potřeba jenom jeden prostředek v určitém čase.
 
-Informace o tom, jak použít synchronizační třídy naleznete v tématu [Multithreading: jak používat synchronizační třídy](multithreading-how-to-use-the-synchronization-classes.md). Informace o synchronizaci najdete v tématu [synchronizace](/windows/desktop/Sync/synchronization) v sadě Windows SDK. Informace o podpoře multithreadingu v knihovně MFC, naleznete v tématu [Multithreading s C++ a knihovnou MFC](multithreading-with-cpp-and-mfc.md).
+Informace o tom, jak použít synchronizační třídy naleznete v tématu [Multithreading: Jak používat synchronizační třídy](multithreading-how-to-use-the-synchronization-classes.md). Informace o synchronizaci najdete v tématu [synchronizace](/windows/desktop/Sync/synchronization) v sadě Windows SDK. Informace o podpoře multithreadingu v knihovně MFC, naleznete v tématu [Multithreading s C++ a knihovnou MFC](multithreading-with-cpp-and-mfc.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Multithreading s použitím jazyka C++ a prostředí MFC](multithreading-with-cpp-and-mfc.md)

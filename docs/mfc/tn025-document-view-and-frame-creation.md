@@ -1,5 +1,5 @@
 ---
-title: 'TN025: Vytvoření dokumentu, zobrazení a rámečku'
+title: 'TN025: Dokumentu, zobrazení a vytváření snímků'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.creation
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - documents [MFC], view and frame creation
 - TN025
 ms.assetid: 09254d72-6e1d-43db-80e9-693887dbeda2
-ms.openlocfilehash: aa8bc305848ce95e0b5bfef1ac6785b18bc84015
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4958e7c4ca2c3cf9eed6420d72d0399fa112098d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50634756"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284681"
 ---
-# <a name="tn025-document-view-and-frame-creation"></a>TN025: Vytvoření dokumentu, zobrazení a rámečku
+# <a name="tn025-document-view-and-frame-creation"></a>TN025: Dokumentu, zobrazení a vytváření snímků
 
 > [!NOTE]
 >  Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
@@ -67,8 +67,7 @@ A `CFrameWnd` (také označované jako rámce) hraje roli stejné jako v MFC 1.0
 
 Pro oknem rámce MDI klientské oblasti je vyplněna MDICLIENT ovládacího prvku, které se pak nadřazené všechna okna rámce MDI – podřízená. Pro oknem rámce SDI nebo oknem rámce MDI – podřízená je klientské oblasti obvykle vyplněna `CView`-odvozené objekt okna. V případě třídy `CSplitterWnd`, je vyplněna klientské oblasti zobrazení `CSplitterWnd` objekt okna a `CView`-okno odvozené objekty (jeden na podokno) jsou vytvořeny jako podřízeného okna `CSplitterWnd`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
-

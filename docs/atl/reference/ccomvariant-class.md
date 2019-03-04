@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CComVariant class
 - VARIANT macro, ATL
 ms.assetid: 4d31149c-d005-44b5-a509-10f84afa2b61
-ms.openlocfilehash: 6a6ad49533028dbcb8c45b63c55a51090533137e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6be05b52b96ada7871f955c687036a83b4e0b493
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522481"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281093"
 ---
 # <a name="ccomvariant-class"></a>CComVariant – třída
 
@@ -44,7 +44,7 @@ class CComVariant : public tagVARIANT
 |Název|Popis|
 |----------|-----------------|
 |[CComVariant::CComVariant](#ccomvariant)|Konstruktor|
-|[CComVariant:: ~ CComVariant](#dtor)|Destruktor.|
+|[CComVariant::~CComVariant](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -460,7 +460,7 @@ void SetByRef(T* pT) throw();
 *T*<br/>
 Typ VARIANT, například BSTR **int**, nebo **char**.
 
-*PT*<br/>
+*pT*<br/>
 Použitý k inicializaci ukazatele `CComVariant` objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -486,6 +486,6 @@ HRESULT WriteToStream(IStream* pStream);
 
 Standardní hodnoty HRESULT.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../../atl/atl-class-overview.md)

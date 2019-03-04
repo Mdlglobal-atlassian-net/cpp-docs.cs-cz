@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - static libraries, MFC
 ms.assetid: c3f62b0e-3f13-42c5-9859-d3890d0c3e1d
-ms.openlocfilehash: 79f620766e8d0888e606fcb45a0fd02c9de58fc9
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: de23c59fdb59f6f40e256589c5450a8118bb8e5c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522587"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281249"
 ---
 # <a name="application-type-mfc-application-wizard"></a>Typ aplikace, Průvodce aplikací knihovny MFC
 
@@ -98,7 +98,7 @@ Pomocí této stránky [Průvodce aplikací knihovny MFC](../../mfc/reference/mf
   |**Použít knihovnu MFC ve sdílené knihovně DLL**|Odkazy na aplikace jako sdílenou knihovnu DLL knihovny MFC. Aplikace provádí volání na knihovně MFC v době běhu. Tato možnost snižuje požadavky na disku a paměti aplikací, které se skládají z několika spustitelnými soubory, které používají knihovnu MFC. Aplikace Win32 a knihovny MFC můžete volat funkce v knihovně DLL (výchozí)|
   |**Použít knihovnu MFC ve statické knihovně**|Propojení aplikace se statickou knihovnou MFC v okamžiku sestavení.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – průvodce aplikací](../../mfc/reference/mfc-application-wizard.md)<br/>
 [Typy souborů vytvořených pro projekty Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md)

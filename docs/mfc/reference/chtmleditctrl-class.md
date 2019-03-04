@@ -1,5 +1,5 @@
 ---
-title: Chtmleditctrl – třída
+title: CHtmlEditCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CHtmlEditCtrl
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CHtmlEditCtrl [MFC], GetDHtmlDocument
 - CHtmlEditCtrl [MFC], GetStartDocument
 ms.assetid: 0fc4a238-b05f-4874-9edc-6a6701f064d9
-ms.openlocfilehash: ce2db15b801d84ed0315345f5ab8084c437ef8ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c1447c3157bceb4540007eca5c3eb85e8269bd2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563641"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285305"
 ---
-# <a name="chtmleditctrl-class"></a>Chtmleditctrl – třída
+# <a name="chtmleditctrl-class"></a>CHtmlEditCtrl Class
 
 Poskytuje funkce pro ovládací prvek WebBrowser ActiveX v okně MFC.
 
@@ -58,7 +58,7 @@ Hostované ovládací prvek WebBrowser, které ovládací prvek automaticky pře
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[Chtmleditctrlbase –](../../mfc/reference/chtmleditctrlbase-class.md)
+[CHtmlEditCtrlBase](../../mfc/reference/chtmleditctrlbase-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -66,7 +66,7 @@ Hostované ovládací prvek WebBrowser, které ovládací prvek automaticky pře
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxhtml.h
+**Header:** afxhtml.h
 
 ##  <a name="chtmleditctrl"></a>  CHtmlEditCtrl::CHtmlEditCtrl
 
@@ -135,7 +135,6 @@ Načte adresu URL pro výchozí dokument k načtení v obsažený ovládací prv
 virtual LPCTSTR GetStartDocument();
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-

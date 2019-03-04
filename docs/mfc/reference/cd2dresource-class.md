@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CD2DResource [MFC], m_bIsAutoDestroy
 - CD2DResource [MFC], m_pParentTarget
 ms.assetid: 34e3ee18-aab6-4c39-9294-de869e1f7820
-ms.openlocfilehash: a4846fb8ea34a3d6a83ae892eabee74f4a48cd6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04d1fa57e34528f96f505fa20abb9b1131f80689
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586374"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284863"
 ---
 # <a name="cd2dresource-class"></a>Cd2dresource – třída
 
@@ -46,7 +46,7 @@ class CD2DResource : public CObject;
 |Název|Popis|
 |----------|-----------------|
 |[CD2DResource::CD2DResource](#cd2dresource)|Vytvoří objekt cd2dresource –.|
-|[Cd2dresource –:: ~ cd2dresource –](#cd2dresource__~cd2dresource)|Destruktor. Volá se, když se likviduje prostředků objektu D2D.|
+|[CD2DResource::~CD2DResource](#cd2dresource__~cd2dresource)|Destruktor. Volá se, když se likviduje prostředků objektu D2D.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -188,6 +188,6 @@ Ukazatel na cíl vykreslování.
 
 Pokud metoda uspěje, vrátí hodnotu S_OK. V opačném případě vrátí kód chyby HRESULT.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

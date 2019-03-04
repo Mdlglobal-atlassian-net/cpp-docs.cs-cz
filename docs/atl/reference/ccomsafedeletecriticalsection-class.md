@@ -1,5 +1,5 @@
 ---
-title: Ccomsafedeletecriticalsection – třída
+title: CComSafeDeleteCriticalSection Class
 ms.date: 11/04/2016
 f1_keywords:
 - CComSafeDeleteCriticalSection
@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeDeleteCriticalSection class
 ms.assetid: 4d2932c4-ba8f-48ec-8664-1db8bed01314
-ms.openlocfilehash: c6d7965b0f5801ed956333950e11e6b9b3eb5a0c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0269079db97e2ff91767c9c0c74a9336fce81ade
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429949"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284629"
 ---
-# <a name="ccomsafedeletecriticalsection-class"></a>Ccomsafedeletecriticalsection – třída
+# <a name="ccomsafedeletecriticalsection-class"></a>CComSafeDeleteCriticalSection Class
 
 Tato třída poskytuje metody pro získání a uvolnění vlastnictví objektu kritický oddíl.
 
@@ -36,7 +36,7 @@ class CComSafeDeleteCriticalSection : public CComCriticalSection
 |Název|Popis|
 |----------|-----------------|
 |[CComSafeDeleteCriticalSection::CComSafeDeleteCriticalSection](#ccomsafedeletecriticalsection)|Konstruktor|
-|[Ccomsafedeletecriticalsection –:: ~ ccomsafedeletecriticalsection –](#dtor)|Destruktor.|
+|[CComSafeDeleteCriticalSection::~CComSafeDeleteCriticalSection](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -62,7 +62,7 @@ Zobrazit [ccomautocriticalsection –](../../atl/reference/ccomcriticalsection-c
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Ccomautocriticalsection –](../../atl/reference/ccomcriticalsection-class.md)
+[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)
 
 `CComSafeDeleteCriticalSection`
 
@@ -82,7 +82,7 @@ CComSafeDeleteCriticalSection();
 
 Nastaví [m_bInitialized](#m_binitialized) datový člen na hodnotu FALSE.
 
-##  <a name="dtor"></a>  Ccomsafedeletecriticalsection –:: ~ ccomsafedeletecriticalsection –
+##  <a name="dtor"></a>  CComSafeDeleteCriticalSection::~CComSafeDeleteCriticalSection
 
 Destruktor.
 
@@ -152,7 +152,7 @@ Vrátí výsledek [CComCriticalSection::Term](../../atl/reference/ccomcriticalse
 
 Je bezpečné volat tuto metodu i v případě interní `CRITICAL_SECTION` objekt není platný. Destruktor tuto třídu volá tuto metodu, pokud [m_bInitialized](#m_binitialized) datový člen je nastavena na hodnotu TRUE.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CComAutoCriticalSection – třída](../../atl/reference/ccomcriticalsection-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

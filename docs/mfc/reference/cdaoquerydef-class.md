@@ -1,5 +1,5 @@
 ---
-title: Cdaoquerydef – třída
+title: CDaoQueryDef Class
 ms.date: 11/04/2016
 f1_keywords:
 - CDaoQueryDef
@@ -66,14 +66,14 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDAOQueryDef
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
-ms.openlocfilehash: 07c508dcf4bd57855d09be5a305847d0b2981305
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08fb2909a4fd2e5bda3dfc63d19224a515c7c699
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664526"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283641"
 ---
-# <a name="cdaoquerydef-class"></a>Cdaoquerydef – třída
+# <a name="cdaoquerydef-class"></a>CDaoQueryDef Class
 
 Představuje definici dotazu, nebo "querydef", obvykle jeden uložený v databázi.
 
@@ -281,7 +281,7 @@ virtual void Create(
 *lpszName*<br/>
 Jedinečný název dotazu uloženo v databázi. Podrobnosti o řetězce naleznete v tématu "CreateQueryDef metodu" v nápovědě k DAO. Pokud přijměte výchozí hodnotu, prázdný řetězec, je vytvořen dočasný querydef. Takový dotaz není uložen v querydefs – kolekce.
 
-*Ipszsql*<br/>
+*lpszSQL*<br/>
 Řetězec SQL, který definuje dotaz. Pokud přijmete výchozí hodnotu NULL, musíte později volat [SetSQL](#setsql) nastavit řetězec. Dokud to neuděláte dotaz není definováno. Ale můžete nedefinované dotaz otevřít sadu záznamů; Podrobnosti najdete v části poznámky. Příkaz jazyka SQL musí být definovány před querydef můžete připojit k querydefs – kolekce.
 
 ### <a name="remarks"></a>Poznámky
@@ -427,7 +427,7 @@ void GetFieldInfo(
 *nIndex*<br/>
 Index založený na nule požadované pole v kolekci querydef pole pro vyhledávání podle indexu.
 
-*FieldInfo*<br/>
+*fieldinfo*<br/>
 Odkaz na `CDaoFieldInfo` objektu, který vrací požadované informace.
 
 *dwInfoOptions*<br/>
@@ -435,9 +435,9 @@ Možnosti, které určují, jaké informace o pole, které chcete načíst. Tady
 
 - AFX_DAO_PRIMARY_INFO (výchozí) název, typ, velikosti, atributy
 
-- Informace o primárním AFX_DAO_SECONDARY_INFO plus: ordinální číslo pozice, vyžaduje, Povolit nulovou délku, zdrojové pole, cizí název, zdrojová tabulka, pořadí řazení
+- Primární AFX_DAO_SECONDARY_INFO informace plus: Pořadí, povinné, umožňují nulovou délku, zdrojové pole, cizí název, zdrojová tabulka, pořadí řazení
 
-- AFX_DAO_ALL_INFO primární a sekundární informace plus: výchozí hodnota ověření textu ověřovacího pravidla
+- AFX_DAO_ALL_INFO primární a sekundární informace plus: Výchozí hodnota, Text pro ověření, ověřovacího pravidla
 
 *lpszName*<br/>
 Řetězec obsahující název požadované pole pro vyhledávání podle názvu. Můžete použít [CString](../../atl-mfc-shared/reference/cstringt-class.md).
@@ -638,7 +638,7 @@ Typ dotazu je nastavena podle co zadáte řetězec SQL querydef při vytvářen�
 
 - `dbQAction` Akce
 
-- `dbQCrosstab` Křížové tabulky
+- `dbQCrosstab` Crosstab
 
 - `dbQDelete` Odstranit
 
@@ -828,14 +828,14 @@ void SetSQL(LPCTSTR lpszSQL);
 
 ### <a name="parameters"></a>Parametry
 
-*Ipszsql*<br/>
+*lpszSQL*<br/>
 Řetězec obsahující úplný příkaz SQL, vhodný pro spuštění. Syntaxe tohoto řetězce závisí na správce databáze, který cílí váš dotaz. Informace o syntaxi používá v databázovém stroji Microsoft Jet naleznete v tématu "Vytváření SQL příkazy v kódu" v nápovědě rozhraní DAO.
 
 ### <a name="remarks"></a>Poznámky
 
 Typické použití `SetSQL` je nastavení querydef objekt pro použití v předávací dotaz SQL. (Syntaxe předávací dotazy SQL v cílovém systému DBMS, najdete v dokumentaci k systému DBMS.)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Cbitmaprendertarget – třída
+title: CBitmapRenderTarget Class
 ms.date: 11/04/2016
 f1_keywords:
 - CBitmapRenderTarget
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - CBitmapRenderTarget [MFC], GetBitmapRenderTarget
 - CBitmapRenderTarget [MFC], m_pBitmapRenderTarget
 ms.assetid: c89a4437-812e-4943-acb2-b429a04cc4d2
-ms.openlocfilehash: ffead8d1f4a903fba79e4b22eefbf0a2955f56fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c110ec8f7c232180bf054e8e4ba90a18f1902c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562237"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283550"
 ---
-# <a name="cbitmaprendertarget-class"></a>Cbitmaprendertarget – třída
+# <a name="cbitmaprendertarget-class"></a>CBitmapRenderTarget Class
 
 Obálka pro ID2D1BitmapRenderTarget.
 
@@ -56,7 +56,7 @@ class CBitmapRenderTarget : public CRenderTarget;
 
 |Název|Popis|
 |----------|-----------------|
-|[CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *](#operator_id2d1bitmaprendertarget_star)|Vrátí ID2D1BitmapRenderTarget rozhraní|
+|[CBitmapRenderTarget::operator ID2D1BitmapRenderTarget*](#operator_id2d1bitmaprendertarget_star)|Vrátí ID2D1BitmapRenderTarget rozhraní|
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
@@ -68,7 +68,7 @@ class CBitmapRenderTarget : public CRenderTarget;
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Crendertarget –](../../mfc/reference/crendertarget-class.md)
+[CRenderTarget](../../mfc/reference/crendertarget-class.md)
 
 `CBitmapRenderTarget`
 
@@ -119,7 +119,7 @@ BOOL GetBitmap(CD2DBitmap& bitmap);
 
 ### <a name="parameters"></a>Parametry
 
-*Rastrový obrázek*<br/>
+*bitmap*<br/>
 Po návratu metody obsahuje platný rastrový obrázek pro tento cíl vykreslování. Tento rastrový obrázek slouží pro vykreslení operace.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -158,6 +158,6 @@ operator ID2D1BitmapRenderTarget*();
 
 Ukazatel na rozhraní ID2D1BitmapRenderTarget nebo hodnota NULL, pokud objekt ještě není inicializován.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

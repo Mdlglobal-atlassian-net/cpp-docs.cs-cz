@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleUpdateDialog [MFC], COleUpdateDialog
 - COleUpdateDialog [MFC], DoModal
 ms.assetid: 699ca980-52b1-4cf8-9ab1-ac6767ad5b0e
-ms.openlocfilehash: 454d6686a389b1578bb777e8573e9281b2a5e6c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74607a2a145025533c660ae68f20ffb8e59d3fad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642950"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281730"
 ---
 # <a name="coleupdatedialog-class"></a>Coleupdatedialog – třída
 
@@ -55,11 +55,11 @@ Další informace o dialogových oken OLE konkrétní, najdete v článku [dialo
 
 [CDialog](../../mfc/reference/cdialog-class.md)
 
-[Ccommondialog –](../../mfc/reference/ccommondialog-class.md)
+[CCommonDialog](../../mfc/reference/ccommondialog-class.md)
 
-[Coledialog –](../../mfc/reference/coledialog-class.md)
+[COleDialog](../../mfc/reference/coledialog-class.md)
 
-[Colelinksdialog –](../../mfc/reference/colelinksdialog-class.md)
+[COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)
 
 `COleUpdateDialog`
 
@@ -119,7 +119,7 @@ Stav dokončení pro dialogové okno. Jeden z následujících hodnot:
 
 Pokud uživatel vybere tlačítko Storno, se aktualizují všechny odkazy a/nebo vložené části.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC OCLIENT](../../visual-cpp-samples.md)<br/>
 [COleLinksDialog – třída](../../mfc/reference/colelinksdialog-class.md)<br/>

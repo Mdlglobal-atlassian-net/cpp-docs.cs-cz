@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CFrameWinTraits class
 - CControlWinTraits class
 ms.assetid: f78f486e-6d9c-42c6-8e86-371e05aa7e59
-ms.openlocfilehash: 9e60eb773573142d0a4498c42a98f6e9c4c49a7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 840433ffb325a4f181848371306607b62373e75a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532597"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280459"
 ---
 # <a name="cwintraits-class"></a>Cwintraits – třída
 
@@ -60,15 +60,15 @@ Knihovna ATL poskytuje tři předdefinované specializace této šablony pro bě
 
 - `CControlWinTraits`
 
-   Navržené pro standardní ovládací prvek okno. Jsou použity následující standardní styly: WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN a WS_CLIPSIBLINGS. Neexistují žádné rozšířené styly.
+   Navržené pro standardní ovládací prvek okno. Jsou použity následující standardní styly: WS_CHILD WS_VISIBLE, WS_CLIPCHILDREN a WS_CLIPSIBLINGS. Neexistují žádné rozšířené styly.
 
 - `CFrameWinTraits`
 
-   Navržené pro standardní rámce okna. Zahrnují standardní stylů použitých: WS_OVERLAPPEDWINDOW WS_CLIPCHILDREN a WS_CLIPSIBLINGS. Rozšířené styly využívané zahrnují: WS_EX_APPWINDOW a WS_EX_WINDOWEDGE.
+   Navržené pro standardní rámce okna. Standardní stylů použitých patří: WS_OVERLAPPEDWINDOW WS_CLIPCHILDREN a WS_CLIPSIBLINGS. Rozšířené styly využívané patří: WS_EX_APPWINDOW a WS_EX_WINDOWEDGE.
 
 - `CMDIChildWinTraits`
 
-   Navržené pro standardní podřízené okno MDI. Zahrnují standardní stylů použitých: WS_OVERLAPPEDWINDOW WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN a WS_CLIPSIBLINGS. Rozšířené styly využívané zahrnují: WS_EX_MDICHILD.
+   Navržené pro standardní podřízené okno MDI. Standardní stylů použitých patří: WS_OVERLAPPEDWINDOW WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN a WS_CLIPSIBLINGS. Rozšířené styly využívané patří: WS_EX_MDICHILD.
 
 Pokud chcete mít jistotu, že určité styly jsou nastavené pro všechny instance třídy okna při umožňující nastavit na základě jednotlivé instance i jiné styly použijte [cwintraitsor –](../../atl/reference/cwintraitsor-class.md) místo.
 
@@ -110,7 +110,7 @@ Rozšířené stylů použitých pro vytvoření okna. Pokud *dwExStyle* je 0, h
 
 Rozšířené styly oken objektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [Principy vlastností okna](../../atl/understanding-window-traits.md)

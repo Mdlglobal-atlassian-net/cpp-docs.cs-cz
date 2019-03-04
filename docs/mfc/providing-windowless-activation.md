@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], activate options
 - activation [MFC], windowless
 ms.assetid: 094903b5-c344-42fa-96ff-ce01e16891c5
-ms.openlocfilehash: 1e962584faa826ce87533806edc2bed1d1248286
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d60c309d5644c106e6c85a0c7b3988916be7193
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475631"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284707"
 ---
 # <a name="providing-windowless-activation"></a>Zajišťování aktivace bez oken
 
@@ -36,7 +36,7 @@ Pokud je povolená aktivace bez oken, kontejner delegují vstupní zprávy do ov
 
 `COleControl` Poskytuje členské funkce, které vyvolají zachycení myši, fokus klávesnice, posouvání a jiné služby okna ze kontejneru podle potřeby, včetně:
 
-- [Hodnotu GetFocus](../mfc/reference/colecontrol-class.md#getfocus), [SetFocus](../mfc/reference/colecontrol-class.md#setfocus)
+- [GetFocus](../mfc/reference/colecontrol-class.md#getfocus), [SetFocus](../mfc/reference/colecontrol-class.md#setfocus)
 
 - [GetCapture](../mfc/reference/colecontrol-class.md#getcapture), [SetCapture](../mfc/reference/colecontrol-class.md#setcapture), [ReleaseCapture](../mfc/reference/colecontrol-class.md#releasecapture)
 
@@ -54,7 +54,6 @@ Můžete chtít ovládací prvek bez oken cíl operace přetažení myší OLE. 
 
 [!code-cpp[NVC_MFC_AxOpt#8](../mfc/codesnippet/cpp/providing-windowless-activation_4.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – ovládací prvky ActiveX: Optimalizace](../mfc/mfc-activex-controls-optimization.md)
-

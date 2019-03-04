@@ -1,5 +1,5 @@
 ---
-title: Cmfccolorpopupmenu – třída
+title: CMFCColorPopupMenu Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCColorPopupMenu
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CMFCColorPopupMenu [MFC], GetMenuBar
 - CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
-ms.openlocfilehash: a3bb6f4d2926f07f61891656613c06e5690c9099
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c2fed4aa239faa96abf692a46a27102ce9820a1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491452"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283394"
 ---
-# <a name="cmfccolorpopupmenu-class"></a>Cmfccolorpopupmenu – třída
+# <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu Class
 
 Představuje místní nabídka, která uživatelům umožňuje vybírat barvy v dokumentu nebo aplikace.
 
@@ -46,7 +46,7 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 |||
 |-|-|
 |Název|Popis|
-|[CMFCColorPopupMenu::CreateTearOffBar](#createtearoffbar)|Vytvoří panel barev ukotvitelné odnímatelnými nabídkami. (Přepíše [CMFCPopupMenu::CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar).)|
+|[CMFCColorPopupMenu::CreateTearOffBar](#createtearoffbar)|Vytvoří panel barev ukotvitelné odnímatelnými nabídkami. (Overrides [CMFCPopupMenu::CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar).)|
 |[CMFCColorPopupMenu::GetMenuBar](#getmenubar)|Vrátí [cmfcpopupmenubar –](../../mfc/reference/cmfcpopupmenubar-class.md) , který je vložená do místní nabídky. (Přepíše [CMFCPopupMenu::GetMenuBar](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar).)|
 |`CMFCColorPopupMenu::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|
 |[CMFCColorPopupMenu::SetPropList](#setproplist)|Nastaví objekt ovládacího prvku mřížky vlastností Embedded `CMFCColorBar` objektu.|
@@ -77,9 +77,9 @@ Další informace o `CMFCColorBar`, naleznete v tématu [cmfccolorbar – tříd
 
 [Cminiframewnd –](../../mfc/reference/cminiframewnd-class.md)
 
-[Cmfcpopupmenu –](../../mfc/reference/cmfcpopupmenu-class.md)
+[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)
 
-[Cmfccolorpopupmenu –](../../mfc/reference/cmfccolorpopupmenu-class.md)
+[CMFCColorPopupMenu](../../mfc/reference/cmfccolorpopupmenu-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -130,7 +130,7 @@ CMFCColorPopupMenu(
 *Barvy*<br/>
 [in] Pole barvy, které zobrazí rozhraní v místní nabídce.
 
-*Barva*<br/>
+*color*<br/>
 [in] Výchozí vybraná barva.
 
 *lpszAutoColor*<br/>
@@ -158,7 +158,7 @@ Standardní popisek pro jiné tlačítko je **Další barvy...** .
 *nVertDockColumns*<br/>
 [in] Počet sloupců, které nemá pruhu barev, pokud je ukotven svisle.
 
-*barvaAutomatická*<br/>
+*colorAutomatic*<br/>
 [in] Výchozí barva, která se použije rozhraní po kliknutí na tlačítko Automatické.
 
 *uiCommandID*<br/>
@@ -240,7 +240,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 *pWndList*<br/>
 [in] Ukazatel na objekt ovládacího prvku mřížky vlastností.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)

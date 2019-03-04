@@ -1,5 +1,5 @@
 ---
-title: COleDBRecordView – třída
+title: COleDBRecordView Class
 ms.date: 11/04/2016
 f1_keywords:
 - COleDBRecordView
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - COleDBRecordView [MFC], OnGetRowset
 - COleDBRecordView [MFC], OnMove
 ms.assetid: 98612427-c4c9-4760-b7e1-85b17448add9
-ms.openlocfilehash: fbbaaae72c7b58f898735d768c019a02cdb7d7e5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1b09599479010f87e396e6f576c9524651923f9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518577"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280366"
 ---
-# <a name="coledbrecordview-class"></a>COleDBRecordView – třída
+# <a name="coledbrecordview-class"></a>COleDBRecordView Class
 
 Zobrazení, které zobrazuje záznamy databáze v ovládacích prvcích.
 
@@ -51,7 +51,7 @@ Zobrazení je připojený přímo k zobrazení formuláře `CRowset` objektu. To
 Můžete použít funkce DDX s `COleDbRecordView` získat data přímo ze sady záznamů databáze a zobrazit je v ovládacím prvku dialogu. Byste měli použít `DDX_*` metody (například `DDX_Text`), nikoli `DDX_Field*` funkce (například `DDX_FieldText`) s `COleDbRecordView`. `DDX_FieldText` nebude fungovat s `COleDbRecordView` protože `DDX_FieldText` přijímá další argument typu `CRecordset*` (pro `CRecordView`) nebo `CDaoRecordset*` (pro `CDaoRecordView`).
 
 > [!NOTE]
->  Pokud pracujete s třídami objektů DAO (Data Access), a ne třídy šablona příjemce technologie OLE DB, použijte třídu [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) místo. Další informace najdete v článku [přehled: databáze programování](../../data/data-access-programming-mfc-atl.md).
+>  Pokud pracujete s třídami objektů DAO (Data Access), a ne třídy šablona příjemce technologie OLE DB, použijte třídu [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) místo. Další informace najdete v článku [přehled: Databáze programování](../../data/data-access-programming-mfc-atl.md).
 
 `COleDBRecordView` uchovává informace o poloze uživatele v dané sadě řádků tak, aby zobrazení záznamů můžete aktualizovat uživatelské rozhraní. Když uživatel přesune na oba konce řádků, zobrazení záznamů zakáže objektů uživatelského rozhraní, jako je například položky nabídky nebo tlačítka na panelu nástrojů – pro přesun dále ve stejném směru.
 
@@ -67,7 +67,7 @@ Další informace o třídy sady řádků, najdete v článku [pomocí OLE DB �
 
 [CView](../../mfc/reference/cview-class.md)
 
-[Cscrollview –](../../mfc/reference/cscrollview-class.md)
+[CScrollView](../../mfc/reference/cscrollview-class.md)
 
 [CFormView](../../mfc/reference/cformview-class.md)
 
@@ -124,7 +124,7 @@ Je nutné přepsat tuto členskou funkci sestavit nebo získání objektu sady �
 
 [!code-cpp[NVC_MFCDatabase#38](../../mfc/codesnippet/cpp/coledbrecordview-class_1.cpp)]
 
-Další informace a příklady najdete v článku [zobrazení záznamu: použití zobrazení záznamů](../../data/using-a-record-view-mfc-data-access.md).
+Další informace a příklady najdete v článku [zobrazení záznamů: Použití zobrazení záznamů](../../data/using-a-record-view-mfc-data-access.md).
 
 ##  <a name="onmove"></a>  COleDBRecordView::OnMove
 
@@ -161,7 +161,6 @@ Průvodce aplikace vytvoří prostředek nabídky s první záznam, poslední z�
 
 Pokud přesunete za poslední záznam v sadě záznamů, zobrazení záznamů stále zobrazuje poslední záznam. Pokud přejdete zpět za první záznam, zobrazení záznamů nepřestává zobrazovat první záznam.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-

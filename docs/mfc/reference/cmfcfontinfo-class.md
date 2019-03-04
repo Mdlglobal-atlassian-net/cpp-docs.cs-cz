@@ -1,5 +1,5 @@
 ---
-title: Cmfcfontinfo – třída
+title: CMFCFontInfo Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCFontInfo
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - CMFCFontInfo [MFC], m_strName
 - CMFCFontInfo [MFC], m_strScript
 ms.assetid: f88329b2-d74e-4921-9441-a3bb6536a049
-ms.openlocfilehash: 606d70176e93de6f5526c30f182cee6f8c05499f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2377b7f6afdf78a0e8b7c8ac97a36a4920c06bb8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522366"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281184"
 ---
-# <a name="cmfcfontinfo-class"></a>Cmfcfontinfo – třída
+# <a name="cmfcfontinfo-class"></a>CMFCFontInfo Class
 
 `CMFCFontInfo` Třída popisuje název a další atributy písma.
 
@@ -102,7 +102,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 *nPitchAndFamily*<br/>
 [in] Hodnota, která určuje rozteč a rodiny písma. Další informace najdete v tématu `lfPitchAndFamily` člena [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struktury.
 
-*nTyp*<br/>
+*nType*<br/>
 [in] Hodnota, která určuje typ písma. Tento parametr může být bitová kombinace (nebo) DEVICE_FONTTYPE, RASTER_FONTTYPE a TRUETYPE_FONTTYPE.
 
 *src*<br/>
@@ -190,7 +190,7 @@ const CString m_strScript;
 
 Další informace najdete v tématu *lpszScript* parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktoru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

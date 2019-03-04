@@ -5,12 +5,12 @@ helpviewer_keywords:
 - message-block filters, using [Concurrency Runtime]
 - using message-block filters [Concurrency Runtime]
 ms.assetid: db6b99fb-288d-4477-96dc-b9751772ebb2
-ms.openlocfilehash: 512dda6503d5980dbdcc20a55ca0ee836d4d08e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1bfa11953d27dc7e013e715b3f58111f124caeaf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660132"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284291"
 ---
 # <a name="how-to-use-a-message-block-filter"></a>Postupy: Použití filtru bloku zpráv
 
@@ -20,7 +20,7 @@ Při vytváření objektu blok zpráv, jako [concurrency::unbounded_buffer](refe
 
 Funkce filtru jsou důležité, protože umožňují připojit blokům zpráv do formuláře *toku dat sítě*. Bloky zpráv v síti toku dat, řízení toku dat zpracováním pouze zprávy, které splňují určitá kritéria. Porovnejte to s modelem tok řízení, kde je řídit tok dat pomocí ovládacího prvku struktury, jako jsou podmíněné příkazy a smyčky a tak dále.
 
-Tento dokument poskytuje základní příklad použití filtru zpráv. Další příklady, které používají filtry zpráv a model toku dat pro připojení blokům zpráv, najdete v článku [návod: vytvoření agenta toku dat](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md) a [návod: vytvoření sítě pro zpracování obrázků](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md) .
+Tento dokument poskytuje základní příklad použití filtru zpráv. Další příklady, které používají filtry zpráv a model toku dat pro připojení blokům zpráv, najdete v článku [názorný postup: Vytvoření agenta toku dat](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md) a [názorný postup: Vytvoření sítě pro zpracování obrázků](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 ## <a name="example"></a>Příklad
 
@@ -50,7 +50,7 @@ Následující kód ukazuje kompletní příklad. Příklad volá i `count_prime
 
 Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `primes-filter.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
 
-**cl.exe/EHsc základen filter.cpp**
+**cl.exe /EHsc primes-filter.cpp**
 
 ## <a name="robust-programming"></a>Robustní programování
 
@@ -63,9 +63,9 @@ bool (T const &)
 
 Chcete-li odstranit zbytečnému kopírování dat, používejte druhý formulář, pokud máte požadovaný typ agregace, která se přenášejí podle hodnoty.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md)<br/>
-[Postupy: Vytvoření agenta toku dat](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
+[Návod: Vytvoření agenta toku dat](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
 [Návod: Vytvoření sítě pro zpracování obrázků](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
 [transformer – třída](../../parallel/concrt/reference/transformer-class.md)

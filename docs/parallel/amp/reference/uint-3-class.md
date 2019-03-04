@@ -72,12 +72,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_3::set_xzy
 - amp_short_vectors/Concurrency::graphics::uint_3::operator-=
 ms.assetid: 5e22c277-9d4f-4a3a-b38c-a83d5fcab33c
-ms.openlocfilehash: 5faf2789c89e492d74851cb94d270b6fac2972c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4f3c7e299c998989de24a07db3d607d21c958cf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553371"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283901"
 ---
 # <a name="uint3-class"></a>uint_3 – třída
 
@@ -180,7 +180,7 @@ class uint_3;
 |uint_3::brg||
 |uint_3::g||
 |uint_3::GB||
-|uint_3::GBR||
+|uint_3::gbr||
 |uint_3::GR||
 |uint_3::grb||
 |uint_3::r||
@@ -201,7 +201,7 @@ class uint_3;
 |uint_3::z||
 |uint_3::zx||
 |uint_3::zxy||
-|uint_3::Zy||
+|uint_3::zy||
 |uint_3::zyx||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
@@ -212,9 +212,9 @@ class uint_3;
 
 **Záhlaví:** amp_short_vectors.h
 
-**Namespace:** Concurrency::graphics
+**Namespace:** Concurrency::Graphics
 
-##  <a name="ctor"></a> uint_3 –
+##  <a name="ctor"></a> uint_3
 
 Výchozí konstruktor, inicializuje všechny prvky na 0.
 
@@ -280,6 +280,6 @@ Objekt použitý k inicializaci.
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

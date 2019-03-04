@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CDocument class [MFC], space requirements
 - views [MFC], applications without
 ms.assetid: 2c22f352-a137-45ce-9971-c142173496fb
-ms.openlocfilehash: 7b4da7df691837b47daa35c4b474711062d4e5c7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 98bb4de2f6d1a43fc1958a0fcbaafa1ac0af82a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523166"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282549"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternativy k architektuře dokument/zobrazení
 
@@ -62,9 +62,8 @@ Důrazně doporučujeme použít Průvodce aplikací knihovny MFC k vytváření
 
 - Přepište částí rozhraní MFC, které vytvoří dokument a zobrazení k odstranění všech jejich vytváření. Proces vytvoření dokumentu začíná volání `CWinApp::AddDocTemplate`. Odstranit toto volání z třídy aplikace `InitInstance` členské funkce a místo toho vytvořit v okně s rámečkem `InitInstance` sami. Ukládejte kód data správy vaší třídy oken s rámečkem. V procesu vytváření dokumentů/zobrazení je znázorněn v [vytváření dokumentů/zobrazení](../mfc/document-view-creation.md). To představuje víc práce a vyžaduje hlubší porozumění rozhraní framework, ale umožní vám zcela z dokumentů/zobrazení režii.
 
-Článek [knihovny MFC: použití třídy databáze bez dokumentů a zobrazení](../data/mfc-using-database-classes-without-documents-and-views.md) konkrétnější příklady alternativy dokument/zobrazení v rámci databázové aplikace.
+Tento článek [knihovny MFC: Pomocí databáze tříd bez dokumentů a zobrazení](../data/mfc-using-database-classes-without-documents-and-views.md) konkrétnější příklady alternativy dokument/zobrazení v rámci databázové aplikace.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Document/View – architektura](../mfc/document-view-architecture.md)
-

@@ -3,12 +3,12 @@ title: Přidání ovládacího prvku (ATL – tutoriál, část 2)
 ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-ms.openlocfilehash: b59d8f05e151e1d543f6aa6bb2b62ae0f59dc36a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 45841c33ad30ff427f9b792a779d135b4f6e7eca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428649"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283225"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Přidání ovládacího prvku (ATL – tutoriál, část 2)
 
@@ -22,11 +22,11 @@ V tomto kroku přidat ovládací prvek do projektu, jejich vytváření a testov
 
 1. Přejděte na **přidat** na místní nabídku a klikněte na **nová položka** v podnabídce.
 
-    **Přidat novou položku** zobrazí se dialogové okno. Ve stromové struktuře na levé straně jsou uvedeny různé kategorie objektů.
+    Zobrazí se dialogové okno **Přidat novou položku**. Ve stromové struktuře na levé straně jsou uvedeny různé kategorie objektů.
 
 1. Klikněte na tlačítko **ATL** složky.
 
-1. V seznamu šablon na pravé straně vyberte **ovládací prvek ATL**. Klikněte na tlačítko **přidat**. **Ovládací prvek ATL** průvodce se otevře a nakonfigurujete ovládací prvek.
+1. V seznamu šablon na pravé straně vyberte **ovládací prvek ATL**. Klikněte na **Přidat**. **Ovládací prvek ATL** průvodce se otevře a nakonfigurujete ovládací prvek.
 
 1. Typ `PolyCtl` jako krátký název a Všimněte si, že ostatní pole jsou automaticky vyplněna. Neklikejte na **Dokončit** ještě, protože je potřeba udělat nějaké změny.
 
@@ -36,7 +36,7 @@ V tomto kroku přidat ovládací prvek do projektu, jejich vytváření a testov
 |-----------|--------------|
 |**Krátký název**|Název, který jste zadali pro ovládací prvek.|
 |**Třída**|Název třídy C++ vytvořený pro implementaci ovládacího prvku.|
-|**soubor .h**|Soubor vytvořen tak, aby obsahovala definice třídy jazyka C++.|
+|**.h file**|Soubor vytvořen tak, aby obsahovala definice třídy jazyka C++.|
 |**soubor .cpp**|Soubor vytvořen tak, aby obsahovala implementaci třídy C++.|
 |**CoClass**|Název třídy komponenty pro tento ovládací prvek.|
 |**Rozhraní**|Název rozhraní, ve kterém ovládací prvek implementuje své vlastní metody a vlastnosti.|
@@ -116,6 +116,6 @@ V dalším kroku přidáte vlastní vlastnost do ovládacího prvku.
 
 [Zpátky ke kroku 1](../atl/creating-the-project-atl-tutorial-part-1.md) &#124; [ke kroku 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Kurz](../atl/active-template-library-atl-tutorial.md)

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - template-based collection classes [MFC]
 - simple list collection classes [MFC]
 ms.assetid: c69fc95b-c8f6-4a99-abed-517c9898ef0c
-ms.openlocfilehash: 8bd64e1c5efd1f80f43cb3460719326f30d5416c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40633c8b2b09d27e97443364ed3ce711ee217e18
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557856"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284655"
 ---
 # <a name="template-based-classes"></a>Třídy založené na šablonách
 
@@ -53,7 +53,7 @@ Pokud chcete použít jednoduché kolekce šablon, budete muset vědět, jaká d
 
 ###  <a name="_core_simple_array_and_list_usage"></a> Jednoduchých polí a seznam využití
 
-Jednoduchých polí a seznam tříd [carray –](../mfc/reference/carray-class.md) a [CList –](../mfc/reference/clist-class.md), přebírají dva parametry: *typ* a `ARG_TYPE`. Tyto třídy můžete ukládat libovolného datového typu, který zadáte *typ* parametr:
+Jednoduchých polí a seznam tříd [carray –](../mfc/reference/carray-class.md) a [CList –](../mfc/reference/clist-class.md), přebírají dva parametry: *TYP* a `ARG_TYPE`. Tyto třídy můžete ukládat libovolného datového typu, který zadáte *typ* parametr:
 
 - Základní C++ datové typy, jako například **int**, **char**, a **plovoucí desetinnou čárkou**
 
@@ -71,7 +71,7 @@ První příklad deklaruje kolekci pole `myArray`, který obsahuje **int**s. Dru
 
 ###  <a name="_core_simple_map_usage"></a> Využití jednoduché mapy
 
-Třída jednoduchých map [CMap](../mfc/reference/cmap-class.md), přebírá čtyři parametry: *klíč*, *ARG_KEY*, *hodnotu*, a *ARG_VALUE*. Stejně jako pole a seznamu třídy může ukládat třídy map libovolného datového typu. Na rozdíl od pole a seznamy, které indexování a řazení dat jsou v nich uložené, mapy přidružení klíče a hodnoty: přistupovat k hodnotě zadáním hodnoty přidružený klíč uložený v objektu map. *Klíč* parametr určuje datový typ klíče používané pro přístup k datům uloženým v objektu map. Pokud typ *klíč* je struktury nebo třídy, *ARG_KEY* parametr je obvykle odkaz na typ určený v *klíč*. *Hodnotu* parametr určuje typ položky uložené v objektu map. Pokud typ *ARG_VALUE* je struktury nebo třídy, *ARG_VALUE* parametr je obvykle odkaz na typ určený v *hodnota*. Příklad:
+Třída jednoduchých map [CMap](../mfc/reference/cmap-class.md), přebírá čtyři parametry: *KLÍČ*, *ARG_KEY*, *hodnotu*, a *ARG_VALUE*. Stejně jako pole a seznamu třídy může ukládat třídy map libovolného datového typu. Na rozdíl od pole a seznamy, které indexování a řazení dat, která jsou v nich uložené, přidružte k mapování klíčů a hodnot: Můžete přistupovat k hodnotě zadáním hodnoty přidružený klíč uložený v objektu map. *Klíč* parametr určuje datový typ klíče používané pro přístup k datům uloženým v objektu map. Pokud typ *klíč* je struktury nebo třídy, *ARG_KEY* parametr je obvykle odkaz na typ určený v *klíč*. *Hodnotu* parametr určuje typ položky uložené v objektu map. Pokud typ *ARG_VALUE* je struktury nebo třídy, *ARG_VALUE* parametr je obvykle odkaz na typ určený v *hodnota*. Příklad:
 
 [!code-cpp[NVC_MFCCollections#3](../mfc/codesnippet/cpp/template-based-classes_3.cpp)]
 
@@ -87,7 +87,7 @@ Použití šablon zadán ukazatel kolekce, je potřeba vědět, jaký druh dat, 
 
 ###  <a name="_core_typed.2d.pointer_array_and_list_usage"></a> Zadán ukazatel pole a používání seznamu
 
-Třídy seznamu, pole zadán ukazatel a [ctypedptrarray –](../mfc/reference/ctypedptrarray-class.md) a [ctypedptrlist –](../mfc/reference/ctypedptrlist-class.md), přebírají dva parametry: *$base_class* a *typ*. Tyto třídy můžete ukládat libovolného datového typu, který zadáte *typ* parametru. Jsou odvozeny z jednoho objektu bez šablony tříd kolekcí, které ukládá ukazatele; Zadejte tento základní třídy v *$base_class*. Pro pole, použijte buď `CObArray` nebo `CPtrArray`. Pro seznamy, použijte buď `CObList` nebo `CPtrList`.
+Třídy seznamu, pole zadán ukazatel a [ctypedptrarray –](../mfc/reference/ctypedptrarray-class.md) a [ctypedptrlist –](../mfc/reference/ctypedptrlist-class.md), přebírají dva parametry: *$Base_class* a *typ*. Tyto třídy můžete ukládat libovolného datového typu, který zadáte *typ* parametru. Jsou odvozeny z jednoho objektu bez šablony tříd kolekcí, které ukládá ukazatele; Zadejte tento základní třídy v *$base_class*. Pro pole, použijte buď `CObArray` nebo `CPtrArray`. Pro seznamy, použijte buď `CObList` nebo `CPtrList`.
 
 V důsledku toho při deklaraci na základě kolekce, Řekněme, že `CObList`, nová třída nejen dědí členy své základní třídy, ale také deklaruje řadu dalšího člena typově bezpečné funkce a operátory, které vám pomůžou zajistit bezpečnost typů zapouzdřením volání na členy základní třídy. Tyto encapsulations spravovat všechny nezbytné převodů. Příklad:
 
@@ -99,7 +99,7 @@ Druhý příklad deklaruje seznam zadán ukazatel `myList`odvozenou z `CPtrList`
 
 ###  <a name="_core_typed.2d.pointer_map_usage"></a> Využití zadán ukazatel mapy
 
-Třída map zadán ukazatel [ctypedptrmap –](../mfc/reference/ctypedptrmap-class.md), přijímá tři parametry: *$base_class*, *klíč*, a *hodnota*. *$Base_class* parametr určuje třídu, ze kterého se má odvodit novou třídu: `CMapPtrToWord`, `CMapPtrToPtr`, `CMapStringToPtr`, `CMapWordToPtr`, `CMapStringToOb`, a tak dále. *KLÍČ* je obdobou *klíč* v `CMap`: Určuje typ klíče, použít pro vyhledávání. *Hodnota* je obdobou *hodnotu* v `CMap`: Určuje typ objektu uložená v objektu map. Příklad:
+Třída map zadán ukazatel [ctypedptrmap –](../mfc/reference/ctypedptrmap-class.md), přijímá tři parametry: *$Base_class*, *klíč*, a *hodnota*. *$Base_class* parametr určuje třídu, ze kterého se má odvodit novou třídu: `CMapPtrToWord`, `CMapPtrToPtr`, `CMapStringToPtr`, `CMapWordToPtr`, `CMapStringToOb`, a tak dále. *KLÍČ* je obdobou *klíč* v `CMap`: Určuje typ klíče, použít pro vyhledávání. *Hodnota* je obdobou *hodnotu* v `CMap`: Určuje typ objektu uložená v objektu map. Příklad:
 
 [!code-cpp[NVC_MFCCollections#6](../mfc/codesnippet/cpp/template-based-classes_6.cpp)]
 
@@ -112,7 +112,6 @@ Druhý příklad je do mapy na základě `CMapStringToOb` – používá řetěz
 
 Další informace najdete v tématu [jak typově bezpečné kolekce](../mfc/how-to-make-a-type-safe-collection.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Kolekce](../mfc/collections.md)
-

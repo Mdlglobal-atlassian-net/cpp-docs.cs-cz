@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCRibbonCheckBox [MFC], OnDrawOnList
 - CMFCRibbonCheckBox [MFC], SetACCData
 ms.assetid: 3a6c3891-c8d1-4af0-b954-7b9ab048782a
-ms.openlocfilehash: 067f38522c1be112d6e12200c2c10e1d439e5057
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34af1ae818125abd51b9eaf04cd98f9ac24addb3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612417"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281431"
 ---
 # <a name="cmfcribboncheckbox-class"></a>Cmfcribboncheckbox – třída
 
@@ -79,9 +79,9 @@ Zaškrtávací políčko můžete přidat do panelu pásu karet pomocí [CMFCRib
 
 [Cmfcribbonbaseelement –](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
-[Cmfcribbonbutton –](../../mfc/reference/cmfcribbonbutton-class.md)
+[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
 
-[Cmfcribboncheckbox –](../../mfc/reference/cmfcribboncheckbox-class.md)
+[CMFCRibbonCheckBox](../../mfc/reference/cmfcribboncheckbox-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -125,7 +125,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na funkci CDC přidružené k zaškrtnutí políčka.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -146,7 +146,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na funkci CDC přidružené toto zaškrtávací políčko.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -167,7 +167,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na funkci CDC objekt přidružený k toto zaškrtávací políčko.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -202,7 +202,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na funkci CDC, ve kterém chcete-li nakreslit zaškrtávací políčko.
 
 ### <a name="remarks"></a>Poznámky
@@ -247,7 +247,7 @@ virtual void OnDrawOnList(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení, ve kterém chcete-li nakreslit zaškrtávací políčko.
 
 *strText*<br/>
@@ -293,7 +293,7 @@ Vždy vrátí hodnotu TRUE.
 
 Ve výchozím nastavení tato metoda nastaví data pro usnadnění pro zaškrtávací políčko a vždy vrátí hodnotu TRUE. Potlačí tuto metodu za účelem usnadnění dat a vrátí hodnotu udávající úspěch nebo neúspěch.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

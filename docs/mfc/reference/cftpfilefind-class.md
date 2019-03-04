@@ -1,5 +1,5 @@
 ---
-title: Cftpfilefind – třída
+title: CFtpFileFind Class
 ms.date: 11/04/2016
 f1_keywords:
 - CFtpFileFind
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], FindNextFile
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
-ms.openlocfilehash: 72d1eb147f8d7387a04f25cc008cc4d4638ba691
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5da739cac1ab852ce64526b24ee2b4f66d40d570
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548223"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284824"
 ---
-# <a name="cftpfilefind-class"></a>Cftpfilefind – třída
+# <a name="cftpfilefind-class"></a>CFtpFileFind Class
 
 Pomáhá při hledání internetových souborů na serverech FTP.
 
@@ -65,7 +65,7 @@ Následující kód ukazuje, jak vytvořit výčet všech souborů v aktuálním
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cfilefind –](../../mfc/reference/cfilefind-class.md)
+[CFileFind](../../mfc/reference/cfilefind-class.md)
 
 `CFtpFileFind`
 
@@ -93,7 +93,7 @@ Identifikátor kontextu `CFtpFileFind` objektu. Zobrazit **poznámky** Další i
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí hodnota pro *dwContext* odesílají knihovny MFC pro `CFtpFileFind` objektu z [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objekt vytvořený `CFtpFileFind` objektu. Můžete přepsat výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytnout stav objektu, pomocí kterého je identifikován. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.
+Výchozí hodnota pro *dwContext* odesílají knihovny MFC pro `CFtpFileFind` objektu z [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objekt vytvořený `CFtpFileFind` objektu. Můžete přepsat výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytnout stav objektu, pomocí kterého je identifikován. Přečtěte si článek [Internet první kroky: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.
 
 ### <a name="example"></a>Příklad
 
@@ -177,7 +177,7 @@ Souboru a cesty Universal Resource Locator (URL).
 
 `GetFileURL` se podobá na členskou funkci [CFileFind::GetFilePath](../../mfc/reference/cfilefind-class.md#getfilepath), s tím rozdílem, že vrátí adresu URL ve formě `ftp://moose/dir/file.txt`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CFileFind – třída](../../mfc/reference/cfilefind-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

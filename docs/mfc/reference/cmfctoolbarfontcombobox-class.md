@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMFCToolBarFontComboBox [MFC], GetFontDesc
 - CMFCToolBarFontComboBox [MFC], SetFont
 ms.assetid: 25f8e08c-aadd-4cb5-9581-a99d49d444b1
-ms.openlocfilehash: 28b2b77ed28453f148786ba7109743a0b7baf598
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ab4eece67406b1c5a52669beafc9bfd8acd32e6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429256"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283719"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>Cmfctoolbarfontcombobox – třída
 
@@ -69,11 +69,11 @@ Tlačítko pole se seznamem písma volá funkci Win32 [EnumFontFamiliesEx](/wind
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cmfctoolbarbutton –](../../mfc/reference/cmfctoolbarbutton-class.md)
+[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)
 
-[Cmfctoolbarcomboboxbutton –](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)
+[CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)
 
-[Cmfctoolbarfontcombobox –](../../mfc/reference/cmfctoolbarfontcombobox-class.md)
+[CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -205,7 +205,7 @@ Nenulové, pokud byl úspěšně; vybrán písma jinak 0.
 
 Pokud *bExact* má hodnotu TRUE, tato metoda vybere písmo, který přesně odpovídá názvu, který jste zadali jako *lpszName*. Pokud *bExact* má hodnotu FALSE, tato metoda vybere písma, která začíná textem zadaný jako *lpszName* a, která používá znakovou sadu, která jste zadali jako *nCharSet*. Pokud *nCharSet* nastavený pro DEFAULT_CHARSET, znakové sady bude ignorována a pouze *lpszName* se použije k vyberte písmo.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
@@ -214,5 +214,4 @@ Pokud *bExact* má hodnotu TRUE, tato metoda vybere písmo, který přesně odpo
 [CMFCToolBarComboBoxButton – třída](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)<br/>
 [CMFCFontInfo – třída](../../mfc/reference/cmfcfontinfo-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[Návod: Umístění ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Návod: Vkládání ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md)

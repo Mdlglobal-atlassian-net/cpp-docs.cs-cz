@@ -1,5 +1,5 @@
 ---
-title: 'Kontejnery ovládacích prvků ActiveX: Připojení ovládacího prvku ActiveX k členské proměnné'
+title: 'Kontejnery ovládacích prvků ActiveX: Připojení ovládacího prvku ActiveX k členské proměnné'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ActiveX control containers [MFC], accessing ActiveX controls
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - member variables [MFC], ActiveX controls in project
 - ActiveX control containers [MFC], ActiveX controls as member variables
 ms.assetid: 7898a336-440d-4a60-be43-cb062b807aee
-ms.openlocfilehash: 2234647e933e37ff82845c4b40dc93cefeb55575
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6bc063875f2a31c582c9de32e24e7dfbc7826c9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446459"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279931"
 ---
-# <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>Kontejnery ovládacích prvků ActiveX: Připojení ovládacího prvku ActiveX k členské proměnné
+# <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>Kontejnery ovládacích prvků ActiveX: Připojení ovládacího prvku ActiveX k členské proměnné
 
 Nejjednodušší způsob, jak přistupovat k ovládacího prvku ActiveX v rámci jeho kontejnerové aplikace ovládacího prvku je přidružení ovládacího prvku ActiveX k členské proměnné této třídy dialogového okna, která bude obsahovat ovládací prvek.
 
@@ -25,13 +25,13 @@ Nejjednodušší způsob, jak přistupovat k ovládacího prvku ActiveX v rámci
 
 ### <a name="adding-a-member-variable-to-the-dialog-class"></a>Přidání členské proměnné třídy dialogového okna
 
-1. Ze zobrazení tříd klikněte pravým tlačítkem na třídu hlavní dialogové okno otevřete místní nabídku. Například `CContainerDlg`.
+1. Ze zobrazení tříd klikněte pravým tlačítkem na třídu hlavní dialogové okno otevřete místní nabídku. Například, `CContainerDlg`.
 
 1. V místní nabídce klikněte na tlačítko **přidat** a potom **přidat proměnnou**.
 
 1. V Průvodce přidáním členské proměnné, klikněte na tlačítko **řídicí proměnná**.
 
-1. V **ID ovládacího prvku** seznamu, vyberte ID ovládacího prvku vloženému ovládacímu prvku ActiveX. Například `IDC_CIRCCTRL1`.
+1. V **ID ovládacího prvku** seznamu, vyberte ID ovládacího prvku vloženému ovládacímu prvku ActiveX. Například, `IDC_CIRCCTRL1`.
 
 1. V **název proměnné** pole, zadejte název.
 
@@ -39,7 +39,6 @@ Nejjednodušší způsob, jak přistupovat k ovládacího prvku ActiveX v rámci
 
 1. Klikněte na tlačítko **Dokončit** potvrďte zvolené volby a ukončete Průvodce přidáním členské proměnné.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [ActiveX – kontejnery ovládacích prvků](../mfc/activex-control-containers.md)
-

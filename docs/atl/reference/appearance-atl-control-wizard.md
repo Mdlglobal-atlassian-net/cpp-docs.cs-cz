@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, appearance
 ms.assetid: cc16d7ff-74d7-4c15-9ebd-4b19201ff457
-ms.openlocfilehash: 34c72fa8a2c5108a20065041c5cb7ea461e501a8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 4d3b0519951636fad4175dc35261ba35b3694ffa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330590"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280404"
 ---
 # <a name="appearance-atl-control-wizard"></a>Vzhled, Průvodce ovládacím prvkem ATL
 
@@ -23,7 +23,7 @@ Na této stránce průvodce k identifikaci další uživatelské možnosti eleme
 
    Nastaví vzhled ovládacího prvku v rámci kontejneru.
 
-   - **Neprůhledný**: Nastaví bit v VIEWSTATUS_OPAQUE [které](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) výčet a nakreslí obdélník celý ovládací prvek předán [CComControlBase::OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw) metoda. Ovládací prvek zobrazí se stane zcela neprůhledný, a žádný z kontejneru za hranice ovládacího prvku.
+   - **Opaque**: Nastaví bit v VIEWSTATUS_OPAQUE [které](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) výčet a nakreslí obdélník celý ovládací prvek předán [CComControlBase::OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw) metody. Ovládací prvek zobrazí se stane zcela neprůhledný, a žádný z kontejneru za hranice ovládacího prvku.
 
       Toto nastavení pomůže rychleji nakreslete ovládací prvek kontejneru. Pokud tato možnost není vybraná, může obsahovat ovládací prvek průhledné části.
 
@@ -85,12 +85,11 @@ Na této stránce průvodce k identifikaci další uživatelské možnosti eleme
 
    - **Normalizované DC**: Nastaví ovládacího prvku k vytvoření normalizovaný kontext zařízení, když je volána k nakreslení sebe sama. Tím se standardizuje vzhled ovládacího prvku, ale je méně efektivní kreslení.
 
-   - **Okno pouze**: Určuje, že váš ovládací prvek nemůže být bez oken. Pokud tuto možnost nevyberete, je váš ovládací prvek automaticky bez oken v kontejnerech, které podporují bez oken objekty a je automaticky oddílové v kontejnerech, které nepodporují objekty bez oken. Výběrem této možnosti způsobí, že ovládací prvek se zobrazením, dokonce i v kontejnerech, které podporují objekty bez oken.
+   - **Okno pouze**: Určuje, zda ovládací prvek nemůže být bez oken. Pokud tuto možnost nevyberete, je váš ovládací prvek automaticky bez oken v kontejnerech, které podporují bez oken objekty a je automaticky oddílové v kontejnerech, které nepodporují objekty bez oken. Výběrem této možnosti způsobí, že ovládací prvek se zobrazením, dokonce i v kontejnerech, které podporují objekty bez oken.
 
-   - **Vložitelný**: tuto možnost mít ovládací prvek se zobrazí v **vložit objekt** dialogového okna aplikace, jako je Word a Excel. Ovládací prvek pak může být vložen aplikací, která podporuje vložené objekty prostřednictvím tohoto dialogového okna.
+   - **Vložitelný**: Vyberte tuto možnost, chcete-li ovládací prvek se zobrazí v **vložit objekt** dialogového okna aplikace, jako je Word a Excel. Ovládací prvek pak může být vložen aplikací, která podporuje vložené objekty prostřednictvím tohoto dialogového okna.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Průvodce ovládacími prvky ATL](../../atl/reference/atl-control-wizard.md)<br/>
-[SUBEDIT vzorku: Nadřazených tříd ovládacího prvku standardní Windows](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit)
-
+[SUBEDIT vzorku: Nadřazené třídy ovládacího prvku standardní Windows](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit)

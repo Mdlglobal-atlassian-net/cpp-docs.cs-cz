@@ -1,5 +1,5 @@
 ---
-title: Cmapstringtoob – třída
+title: CMapStringToOb Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMapStringToOb
@@ -34,14 +34,14 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 09653980-b885-4f3a-8594-0aeb7f94c601
-ms.openlocfilehash: 75e9b49bca6b94595186e69a900a28fe5e38522c
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: b56e9052533269ba62d248312f07ac16db71bf4a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657614"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280508"
 ---
-# <a name="cmapstringtoob-class"></a>Cmapstringtoob – třída
+# <a name="cmapstringtoob-class"></a>CMapStringToOb Class
 
 Třída kolekce slovníku, která mapuje jedinečné `CString` objektů `CObject` ukazatele.
 
@@ -216,7 +216,7 @@ Určuje referenci na POZICI hodnotu vrácenou předchozím `GetNextAssoc` nebo `
 *rKey*<br/>
 Určuje vrácené klíč načtený elementu (řetězec).
 
-*r-hodnoty*<br/>
+*rValue*<br/>
 Určuje vrácené hodnoty načtené prvek ( `CObject` ukazatele). Další informace o tomto parametru najdete v poznámky.
 
 ### <a name="remarks"></a>Poznámky
@@ -426,7 +426,7 @@ BOOL Lookup(
 *key*<br/>
 Určuje klíč řetězec, který identifikuje elementu, který chcete vyhledávat.
 
-*r-hodnoty*<br/>
+*rValue*<br/>
 Určuje vrácenou hodnotu z prvku vyhledaných.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -487,7 +487,7 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**BOOL LookupKey (LPCTSTR** `key` **, LPCTSTR &** `rKey` **) const;**|
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**BOOL LookupKey (LPCTSTR** `key` **, LPCTSTR &** `rKey` **) const;**|
 
-##  <a name="operator_at"></a>  [] Č. CMapStringToOb::operator
+##  <a name="operator_at"></a>  CMapStringToOb::operator [ ]
 
 Pohodlné náhradou za `SetAt` členskou funkci.
 
@@ -637,7 +637,7 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void SetAt (void** <strong>\*</strong> `key` **, void** <strong>\*</strong> `newValue` **);**|
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void SetAt (void** <strong>\*</strong> `key` **, WORD** `newValue` **);**|
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void SetAt (LPCTSTR** `key` **, void** <strong>\*</strong> `newValue` **);**|
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void SetAt (LPCTSTR** `key` **, LPCTSTR** `newValue` **);**|
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void SetAt( LPCTSTR** `key` **, LPCTSTR** `newValue` **);**|
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void SetAt (slovo** `key` **, CObject** <strong>\*</strong> `newValue` **);**|
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void SetAt (slovo** `key` **, void** <strong>\*</strong> `newValue` **);**|
 
@@ -658,7 +658,7 @@ after Lisa's birthday: A CMapStringToOb with 2 elements
 [Bart] = a CAge at $4654 13
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - embedded objects [MFC]
 - OLE items [MFC], types
 ms.assetid: 11107711-eb96-4099-8f5c-7910bb3ecb75
-ms.openlocfilehash: 7595d87ce54b0a34dd4e5f3489dd36e3918fd8a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02607df2a8fa086c5751f2b446e349a3efdbcd20
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465478"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280963"
 ---
 # <a name="ole-background-linking-and-embedding"></a>OLE – pozadí: Propojování a vkládání
 
@@ -27,10 +27,9 @@ Například pokud pracujete v textovém dokumentu procesoru a vytvoření propoj
 
 Každá položka OLE, zda vložený nebo připojený, má typ přidruženo podle aplikace, která ho vytvořila. Například Microsoft Paintbrush položka je jeden typ položky a položku Microsoft Excel je jiného typu. Některé aplikace, ale můžete vytvořit více než jeden typ položky. Aplikace Microsoft Excel můžete například vytvořit list položek, graf položek a položek makra aplikace. Každá z těchto položek mohou být jednoznačně identifikují pomocí systému pomocí identifikátoru třídy nebo **CLSID**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [OLE – pozadí](../mfc/ole-background.md)<br/>
 [OLE – pozadí: Kontejnery a servery](../mfc/ole-background-containers-and-servers.md)<br/>
 [Kontejnery: Klientské položky](../mfc/containers-client-items.md)<br/>
 [Servery: Serverové položky](../mfc/servers-server-items.md)
-

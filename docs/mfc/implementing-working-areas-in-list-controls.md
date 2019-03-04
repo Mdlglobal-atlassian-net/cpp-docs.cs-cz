@@ -5,12 +5,12 @@ helpviewer_keywords:
 - list controls [MFC], working areas
 - working areas in list control [MFC]
 ms.assetid: fbbb356b-3359-4348-8603-f1cb114cadde
-ms.openlocfilehash: eac4c28497f4a00a333f5396fa71cdb2176106c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01b166243c9032a113d46ff297b9f6e53429da21
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525188"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281600"
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>Implementace pracovních oblastí v ovládacích prvcích seznam
 
@@ -37,8 +37,7 @@ Následující příklad přiřadí existující položky seznamu pro každou sk
 
 [!code-cpp[NVC_MFCControlLadenDialog#21](../mfc/codesnippet/cpp/implementing-working-areas-in-list-controls_2.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CListCtrl](../mfc/using-clistctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

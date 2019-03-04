@@ -1,5 +1,5 @@
 ---
-title: Coleserverdoc – třída
+title: COleServerDoc Class
 ms.date: 11/04/2016
 f1_keywords:
 - COleServerDoc
@@ -82,14 +82,14 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: b9d339b11b3e1fa8452c845cfa8a8f41c5194f8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3069c5f53b37984cbeae8bee1379bb8b0c36ccc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604942"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285279"
 ---
-# <a name="coleserverdoc-class"></a>Coleserverdoc – třída
+# <a name="coleserverdoc-class"></a>COleServerDoc Class
 
 Základní třída pro dokumenty OLE na serveru.
 
@@ -168,7 +168,7 @@ Pro podporu propojené položky `COleServerDoc` poskytuje [OnGetLinkedItem](../.
 
 Budete potřebovat `COleServerDoc`-odvozené třídy pro každý typ serveru dokumentů vaše aplikace podporuje. Například pokud vaše serverová aplikace podporuje listů a grafy, potřebujete dva `COleServerDoc`-odvozené třídy.
 
-Další informace o serverech, najdete v článku [servery: implementace serveru](../../mfc/servers-implementing-a-server.md).
+Další informace o serverech, najdete v článku [serverů: Implementace serveru](../../mfc/servers-implementing-a-server.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -178,9 +178,9 @@ Další informace o serverech, najdete v článku [servery: implementace serveru
 
 [CDocument](../../mfc/reference/cdocument-class.md)
 
-[Coledocument –](../../mfc/reference/coledocument-class.md)
+[COleDocument](../../mfc/reference/coledocument-class.md)
 
-[Colelinkingdoc –](../../mfc/reference/colelinkingdoc-class.md)
+[COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)
 
 `COleServerDoc`
 
@@ -941,7 +941,7 @@ Obvykle tuto funkci zavolat poté, co uživatel změní dokumentu na serveru. Po
 
 Tato funkce volá `OnUpdate` členskou funkci pro všechny položky dokumentu s výjimkou odesílání položky, předají *pHint*, *lHint*, a *nDrawAspect*. Použijte tyto parametry k předání informací na informace o tom, změny provedené v dokumentu. Můžete kódovat informací pomocí *lHint* nebo můžete definovat `CObject`-odvozené třídy k ukládání informací o změny a předejte objekt této třídy pomocí *pHint*. Přepsat `OnUpdate` členské funkce ve vaší `COleServerItem`-odvozené třídy optimalizovat, aktualizuje se každou položku v závislosti na tom, zda došlo ke změně jeho prezentaci.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC HIERSVR](../../visual-cpp-samples.md)<br/>
 [COleLinkingDoc – třída](../../mfc/reference/colelinkingdoc-class.md)<br/>

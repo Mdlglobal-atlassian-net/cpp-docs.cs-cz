@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSScheduler structure
 ms.assetid: 3a500225-4e02-4849-bb56-d744865f5870
-ms.openlocfilehash: 0fd1ed90ca30c9c9e6815bb05b516f24b4f9a164
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f377d6079017266630434ce71602a7e70e58ae21
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513786"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282302"
 ---
 # <a name="iumsscheduler-structure"></a>Struktura rozhraní IUMSScheduler
 
@@ -43,7 +43,7 @@ Správce prostředků se předá UMS vlákna pouze v operačních systémech, kt
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Ischeduler –](ischeduler-structure.md)
+[IScheduler](ischeduler-structure.md)
 
 `IUMSScheduler`
 
@@ -70,10 +70,10 @@ Rozhraní seznamu dokončení pro Plánovač. Existuje jeden seznam za scheduler
 
 Správce prostředků se vyvolat tuto metodu na plánovače, která určuje, že chce UMS vlákna po Plánovač požádal o počáteční přidělení prostředků. Můžete použít Plánovač `IUMSCompletionList` rozhraní k určení, kdy mají odblokováno UMS proxy vlákna. Je platný jenom pro přístup k tomuto rozhraní z proxy vlákno spuštěné na kořenovém adresáři virtuálního procesoru přiřazená plánovače UMS.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
-[Policyelementkey –](concurrency-namespace-enums.md)<br/>
+[PolicyElementKey](concurrency-namespace-enums.md)<br/>
 [IScheduler – struktura](ischeduler-structure.md)<br/>
 [IUMSCompletionList – struktura](iumscompletionlist-structure.md)<br/>
 [IResourceManager – struktura](iresourcemanager-structure.md)

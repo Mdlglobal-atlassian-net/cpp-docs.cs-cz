@@ -16,12 +16,12 @@ helpviewer_keywords:
 - serialization [MFC], serializable classes
 - no default constructor
 ms.assetid: 59a14d32-1cc8-4275-9829-99639beee27c
-ms.openlocfilehash: aa9a7f6cb1cb28c701e3954cad27e60cf9f7df4f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 995744381c8f82dc637e4aa0452e37af170b168b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486967"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281457"
 ---
 # <a name="serialization-making-a-serializable-class"></a>Serializace: Příprava serializovatelné třídy
 
@@ -92,9 +92,8 @@ Následující příklad ukazuje způsob použití třídy IMPLEMENT_SERIAL `CPe
 
 [!code-cpp[NVC_MFCSerialization#4](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_4.cpp)]
 
-Jakmile budete mít serializovatelné třídy, může serializovat objekty třídy, jak je popsáno v článku [serializace: serializace objektu](../mfc/serialization-serializing-an-object.md).
+Jakmile budete mít serializovatelné třídy, může serializovat objekty třídy, jak je popsáno v článku [serializace: Serializace objektu](../mfc/serialization-serializing-an-object.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Serializace](../mfc/serialization-in-mfc.md)
-

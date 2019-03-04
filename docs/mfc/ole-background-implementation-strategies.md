@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE applications [MFC], implementing OLE
 - applications [OLE], implementing OLE
 ms.assetid: 0875ddae-99df-488c-82c6-164074a81058
-ms.openlocfilehash: a9bcbc16b08f16953df92efe5a83db39f9a33cc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40c74d48b76921f770740602a39d28804a7e3c09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624390"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284811"
 ---
 # <a name="ole-background-implementation-strategies"></a>OLE – pozadí: Strategie implementace
 
@@ -35,10 +35,9 @@ V závislosti na vaší aplikace jsou čtyři možnou implementaci strategie pro
 
 Jakmile jste se rozhodli strategii, měli byste buď čtení [kontejnery](../mfc/containers.md) nebo [servery](../mfc/servers.md) články (v závislosti na typu aplikace, kterou píšete) nebo prozkoumat ukázkové aplikace, nebo obojí. Ukázky knihovny MFC OLE [OCLIENT](../visual-cpp-samples.md) a [HIERSVR](../visual-cpp-samples.md) ukazují, jak provádět různé aspekty kontejnery a servery, v uvedeném pořadí. V různých okamžicích v těchto článcích bude odkazovat na určité funkce v těchto ukázkách jako příklady techniky diskutovány.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [OLE – pozadí](../mfc/ole-background.md)<br/>
 [Kontejnery: Implementace kontejneru](../mfc/containers-implementing-a-container.md)<br/>
 [Servery: Implementace serveru](../mfc/servers-implementing-a-server.md)<br/>
 [MFC – průvodce aplikací](../mfc/reference/mfc-application-wizard.md)
-

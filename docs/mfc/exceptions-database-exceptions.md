@@ -11,12 +11,12 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 17a52787462301e839cb2e960fad8b480380ba49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f7f3bff9f28968361ecfa7374a235a727443004
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492794"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285552"
 ---
 # <a name="exceptions-database-exceptions"></a>Výjimky: Výjimky databáze
 
@@ -74,7 +74,6 @@ Informace o vrácené informace o chybě `CDaoException` objektu, naleznete v t�
 
 Při práci s databázemi Microsoft Jet (MDB) a ve většině případů při práci s rozhraním ODBC, bude obsahovat pouze jeden objekt chyby. Ve výjimečných případech, když používáte zdroji dat rozhraní ODBC a existuje více chyb, můžete můžete projít na základě počtu chyby vrácené systémem kolekce chyb pro rozhraní DAO [CDaoException::GetErrorCount](../mfc/reference/cdaoexception-class.md#geterrorcount). Pokaždé, když pomocí smyčky, volání [CDaoException::GetErrorInfo](../mfc/reference/cdaoexception-class.md#geterrorinfo) pro doplňování `m_pErrorInfo` datový člen.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zpracování výjimek](../mfc/exception-handling-in-mfc.md)
-

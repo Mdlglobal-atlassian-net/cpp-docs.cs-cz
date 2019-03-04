@@ -9,16 +9,16 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-ms.openlocfilehash: 991736714d52b4b5fb1a001fb17f1daefed5ddb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16e949973ff621b1e4e36475d95763ac47b4a00d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560560"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280215"
 ---
 # <a name="clipboard-adding-other-formats"></a>Schránka: Přidání dalších formátů
 
-Toto téma vysvětluje, jak rozšířit seznam podporovaných formátů, zejména pro podporu technologie OLE. Téma [schránka: kopírování a vkládání dat](../mfc/clipboard-copying-and-pasting-data.md) popisuje minimální implementaci potřebných k podpoře zkopírováním a vložením ze schránky. Pokud je toto vše můžete implementovat, jsou pouze formáty umístili do schránky **CF_METAFILEPICT**, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**a případně **CF_LINKSOURCE**. Většina aplikací bude potřebovat další formáty do schránky. než tyto tři.
+Toto téma vysvětluje, jak rozšířit seznam podporovaných formátů, zejména pro podporu technologie OLE. Téma [schránky: Kopírování a vkládání dat](../mfc/clipboard-copying-and-pasting-data.md) popisuje minimální implementaci potřebných k podpoře zkopírováním a vložením ze schránky. Pokud je toto vše můžete implementovat, jsou pouze formáty umístili do schránky **CF_METAFILEPICT**, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**a případně **CF_LINKSOURCE**. Většina aplikací bude potřebovat další formáty do schránky. než tyto tři.
 
 ##  <a name="_core_registering_custom_formats"></a> Registrace vlastních formátů
 
@@ -46,7 +46,6 @@ Tento postup se používá v MFC OLE ukázkový program [HIERSVR](../visual-cpp-
 
 - [OLE](../mfc/ole-background.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Schránka: Použití mechanismu schránky OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
-

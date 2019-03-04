@@ -21,32 +21,32 @@ f1_keywords:
 - amp/Concurrency::direct3d::step
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
-ms.openlocfilehash: b721d19cd51a9eb1d07de8898b18728854decb4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0a2977faf094aafb6290063e39e062ffaeaaec81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519730"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281327"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Funkce oboru názvů Concurrency::Direct3D (AMP)
 
 ||||
 |-|-|-|
-|[Abs](#abs)|[Stažení](#clamp)|[countbits –](#countbits)|
+|[abs](#abs)|[Stažení](#clamp)|[countbits –](#countbits)|
 |[create_accelerator_view](#create_accelerator_view)|[d3d_access_lock](#d3d_access_lock)||
 |[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|[firstbithigh –](#firstbithigh)|
-|[firstbitlow –](#firstbitlow)|[get_buffer](#get_buffer)|[get_device –](#get_device)|
+|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|[get_device](#get_device)|
 |[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|
 |[MAD –](#mad)|[make_array](#make_array)|[šumu](#noise)|
 |[RADIANS](#radians)|[rcp](#rcp)|[reversebits –](#reversebits)|
-|[Saturate](#saturate)|[sign](#sign)|[smoothstep –](#smoothstep)|
-|[Krok](#step)|[umax](#umax)|[umin –](#umin)|
+|[Saturate](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|
+|[Krok](#step)|[umax](#umax)|[umin](#umin)|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amp.h **Namespace:** souběžnosti
+**Záhlaví:** amp.h **Namespace:** Souběžnost
 
-##  <a name="abs"></a>  Abs
+##  <a name="abs"></a>  abs
 
 Vrátí absolutní hodnotu argumentu
 
@@ -56,7 +56,7 @@ inline int abs(int _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Celočíselná hodnota
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -81,13 +81,13 @@ inline int clamp(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota, která má být přichycena
 
 *_Min*<br/>
 Dolní mez rozsahu upnutí.
 
-*_Maximální*<br/>
+*_Max*<br/>
 Horní mez rozsahu upnutí.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -104,7 +104,7 @@ inline unsigned int countbits(unsigned int _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota celé číslo bez znaménka
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -154,9 +154,9 @@ Tato funkce vytvoří nový `accelerator_view` objekt ze stávajícího ukazatel
 
 Modul runtime C++ AMP poskytuje podrobné informace o chybě v režimu ladění pomocí vrstvy rozhraní D3D ladění, pokud použijete `D3D11_CREATE_DEVICE_DEBUG` příznak.
 
-##  <a name="d3d_access_lock"></a>  d3d_access_lock –
+##  <a name="d3d_access_lock"></a>  d3d_access_lock
 
-Získejte zámek na accelerator_view pro účely bezpečného provádění operací D3D na prostředcích sdílených s accelerator_view. Prostředky accelerator_view a všechny prostředky C++ AMP, vnitřně přidružené s tímto prostředkem accelerator_view přijmou toto uzamčení při provádění operací a budou blokovat, zatímco jiné vlákno drží zámek přístupu D3D. Tento zámek je nerekurzivní: zavolat tuto funkci z vlákna již obsahujícího zámek vyvolá nedefinované chování. To je nedefinované chování k provádění operací na objektu accelerator_view nebo jakémkoli kontejneru dat spojeném s objektem accelerator_view z vlákna, které drží zámek přístupu D3D. Další informace naleznete v tématu scoped_d3d_access_lock, třídě stylu RAII pro obor zámku přístupu D3D.
+Získejte zámek na accelerator_view pro účely bezpečného provádění operací D3D na prostředcích sdílených s accelerator_view. Prostředky accelerator_view a všechny prostředky C++ AMP, vnitřně přidružené s tímto prostředkem accelerator_view přijmou toto uzamčení při provádění operací a budou blokovat, zatímco jiné vlákno drží zámek přístupu D3D. Tento zámek je nerekurzivní: Voláním této funkce z vlákna již obsahujícího zámek vyvolá nedefinované chování je. To je nedefinované chování k provádění operací na objektu accelerator_view nebo jakémkoli kontejneru dat spojeném s objektem accelerator_view z vlákna, které drží zámek přístupu D3D. Další informace naleznete v tématu scoped_d3d_access_lock, třídě stylu RAII pro obor zámku přístupu D3D.
 
 ```
 void __cdecl d3d_access_lock(accelerator_view& _Av);
@@ -184,7 +184,7 @@ Accelerator_view pro uzamčení.
 
 Hodnota TRUE, pokud byl získán zámek, nebo hodnotu NEPRAVDA, pokud je právě načtený v jiném vlákně.
 
-##  <a name="d3d_access_unlock"></a>  d3d_access_unlock –
+##  <a name="d3d_access_unlock"></a>  d3d_access_unlock
 
 Uvolněte zámek přístupu D3D na daný objekt accelerator_view. Pokud volající vlákno není držitelem zámku objektu accelerator_view nejsou výsledky definovány.
 
@@ -207,7 +207,7 @@ inline int firstbithigh(int _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Celočíselná hodnota
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -224,7 +224,7 @@ inline int firstbitlow(int _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Celočíselná hodnota
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -269,14 +269,14 @@ IUnknown* get_device(const accelerator_view Av);
 
 ### <a name="parameters"></a>Parametry
 
-*Antivirová ochrana v programu*<br/>
+*Av*<br/>
 Accelerator_view rozhraní D3D, pro které je vráceno základní rozhraní D3D zařízení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 `IUnknown` Ukazatele na rozhraní zařízení D3D základní accelerator_view.
 
-##  <a name="imax"></a>  Imax –
+##  <a name="imax"></a>  imax
 
 Určí maximální číselnou hodnotu argumentů
 
@@ -288,7 +288,7 @@ inline int imax(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Celočíselná hodnota
 
 *_Y*<br/>
@@ -310,7 +310,7 @@ inline int imin(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Celočíselná hodnota
 
 *_Y*<br/>
@@ -365,7 +365,7 @@ inline unsigned int mad(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Prvního zadaného argumentu.
 
 *_Y*<br/>
@@ -424,7 +424,7 @@ inline float noise(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 S plovoucí desetinnou čárkou, ze kterého se má generovat Perlinova šumu
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -441,7 +441,7 @@ inline float radians(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -460,7 +460,7 @@ inline double rcp(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota, pro které chcete vypočítat převrácenou hodnotu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -477,7 +477,7 @@ inline unsigned int reversebits(unsigned int _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota celé číslo bez znaménka
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -494,7 +494,7 @@ inline float saturate(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -511,7 +511,7 @@ inline int sign(int _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Celočíselná hodnota
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -534,10 +534,10 @@ inline float smoothstep(
 *_Min*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
-*_Maximální*<br/>
+*_Max*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -559,7 +559,7 @@ inline float step(
 *_Y*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -578,7 +578,7 @@ inline unsigned int umax(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Celočíselná hodnota
 
 *_Y*<br/>
@@ -600,7 +600,7 @@ inline unsigned int umin(
 
 ### <a name="parameters"></a>Parametry
 
-*PROMĚNNÉ _X*<br/>
+*_X*<br/>
 Celočíselná hodnota
 
 *_Y*<br/>
@@ -610,6 +610,6 @@ Celočíselná hodnota
 
 Vrátit minimální číselnou hodnotu argumentů
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Concurrency::direct3d – obor názvů](concurrency-direct3d-namespace.md)

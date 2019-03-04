@@ -9,12 +9,12 @@ helpviewer_keywords:
 - progress controls [MFC], CProgressCtrl
 - progress controls [MFC], using
 ms.assetid: 61473270-196b-41ab-bf2b-467f46673539
-ms.openlocfilehash: 796eeb13a210bfbfd859e20dcdd001c502560483
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb332d0c6eb55dddcd20d6d4f07fe6f666c015ab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528776"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283108"
 ---
 # <a name="using-cprogressctrl"></a>Používání atributu CProgressCtrl
 
@@ -32,7 +32,6 @@ Při počátečním vytvoření ovládacím prvkem průběh, zadejte jeho veliko
 
 - [Manipulace s ovládacím prvkem průběh](../mfc/manipulating-the-progress-control.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ovládací prvky](../mfc/controls-mfc.md)
-

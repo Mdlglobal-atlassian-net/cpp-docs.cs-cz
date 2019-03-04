@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-ms.openlocfilehash: 63eaa9fe21b9d920aa3615f76be5822194d19b66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: edfa7a47fa94e659d6529706d04021dfc800c269
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462891"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280118"
 ---
 # <a name="cdacl-class"></a>Cdacl – třída
 
@@ -70,7 +70,7 @@ Použití metod třídy zadaná k vytvoření, přidat, odebrat nebo odstranit p
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Cacl –](../../atl/reference/cacl-class.md)
+[CAcl](../../atl/reference/cacl-class.md)
 
 `CDacl`
 
@@ -186,7 +186,7 @@ Existující `ACL` struktury (seznamu řízení přístupu).
 
 `CDacl` Objekt můžete případně vytvořit pomocí existující `ACL` struktury. Je důležité si uvědomit pouze DACL (seznam volitelných řízení přístupu), a ne SACL (seznam řízení přístupu systému), by měly být předány jako tento parametr. V ladicím buildu předávání SACL způsobí vyhodnocení. V sestaveních pro vydání předávání SACL způsobí, že položky řízení přístupu (položky řízení přístupu) v seznamu ACL k ignorovat a dojde k žádné chybě.
 
-##  <a name="dtor"></a>  Cdacl –:: ~ cdacl –
+##  <a name="dtor"></a>  CDacl::~CDacl
 
 Destruktor.
 
@@ -260,7 +260,7 @@ void RemoveAllAces() throw();
 
 Odebere všechny `ACE` strukturu (položky řízení přístupu) (pokud existuje) v `CDacl` objektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázka zabezpečení](../../visual-cpp-samples.md)<br/>
 [CAcl – třída](../../atl/reference/cacl-class.md)<br/>

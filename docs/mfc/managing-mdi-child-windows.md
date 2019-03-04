@@ -12,12 +12,12 @@ helpviewer_keywords:
 - child windows [MFC]
 - MDI [MFC], frame windows
 ms.assetid: 1828d96e-a561-48ae-a661-ba9701de6bee
-ms.openlocfilehash: d4b6ccf8a75cc7679f78fba48314073bc53b66a5
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: d4b4a4876f47452361b13837b0279f5bf98f8658
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176793"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283680"
 ---
 # <a name="managing-mdi-child-windows"></a>Správa podřízených oken MDI
 
@@ -36,7 +36,6 @@ Okna rámce MDI je také funguje ve spojení s aktuální podřízené okno MDI,
 
 - [Styly oken s rámečkem](../mfc/frame-window-styles-cpp.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití oken s rámečkem](../mfc/using-frame-windows.md)
-

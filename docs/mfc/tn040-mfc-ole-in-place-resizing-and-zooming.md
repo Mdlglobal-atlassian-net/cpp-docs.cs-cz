@@ -1,5 +1,5 @@
 ---
-title: ': MFC-OLE Tn040 v změny velikosti a měřítka'
+title: 'TN040: Knihovny MFC-OLE místní změny velikosti a měřítka'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.ole
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - zooming and in-place activation
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
-ms.openlocfilehash: 072ebe0180bb44145cef694e2283e91a0cacf602
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2f6c6acfefaae877790fd2cc0926bc2474c79b8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477204"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283758"
 ---
-# <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040: změny velikosti a měřítka na místě v prostředích MFC/OLE
+# <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040: MFC/OLE – místní změny velikosti a měřítka
 
 > [!NOTE]
 >  Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
@@ -84,8 +84,7 @@ Server můžete řídit (do určité míry), co se stane, že během tohoto vyje
 
 Můžete implementovat vlastní změny velikosti a využít uživatelské rozhraní poskytované `COleResizeBar` tak, že přepíšete WM_SIZECHILD zprávu ve vašich `COleIPFrameWnd` třídy. Další informace na konkrétních podrobnostech WM_SIZECHILD najdete v tématu [Technická poznámka 24](../mfc/tn024-mfc-defined-messages-and-resources.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
-

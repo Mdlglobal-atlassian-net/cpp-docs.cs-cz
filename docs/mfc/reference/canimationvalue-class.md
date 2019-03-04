@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CAnimationValue [MFC], GetAnimationVariableList
 - CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
-ms.openlocfilehash: 9a43536e3f9f90b70d5d68eb5ce5d277f9b42e00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86a2caa8946bcafeabf85687a24b2430ecefe790
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613795"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283537"
 ---
 # <a name="canimationvalue-class"></a>Canimationvalue – třída
 
@@ -82,7 +82,7 @@ Canimationvalue – třída zapouzdří jeden objekt canimationvariable – a m�
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Canimationbaseobject –](../../mfc/reference/canimationbaseobject-class.md)
+[CAnimationBaseObject](../../mfc/reference/canimationbaseobject-class.md)
 
 `CAnimationValue`
 
@@ -151,7 +151,7 @@ virtual void GetAnimationVariableList(
 
 ### <a name="parameters"></a>Parametry
 
-*obrázků*<br/>
+*lst*<br/>
 Po návratu funkce obsahuje ukazatel na canimationvariable – představující animovaný hodnotu.
 
 ##  <a name="getvalue"></a>  CAnimationValue::GetValue
@@ -168,7 +168,7 @@ BOOL GetValue(INT32& nValue);
 *dblValue*<br/>
 Výstup. Po návratu funkce obsahuje aktuální hodnotu proměnné animace.
 
-*nHodnota*<br/>
+*nValue*<br/>
 Výstup. Po návratu funkce obsahuje aktuální hodnotu proměnné animace.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -273,6 +273,6 @@ Určuje výchozí hodnotu.
 
 Tuto metodu použijte k nastavení výchozí hodnoty. Výchozí hodnota se vrátí do aplikace při animaci nebyl spuštěn a/nebo základní objekt modelu COM není vytvořená. Pokud už je vytvořený na základní objekt modelu COM zapouzdřena v CAnimationVarible, znovu vytvoří tuto metodu, proto možná budete muset volat metody EnableValueChanged/EnableIntegerValueChanged znovu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

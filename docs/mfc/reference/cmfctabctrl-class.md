@@ -1,5 +1,5 @@
 ---
-title: Cmfctabctrl – třída
+title: CMFCTabCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCTabCtrl
@@ -104,14 +104,14 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 8388a79bf7c85f3d603bd4ef234947e872534cba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8dc8c51cc1847d29b76e2017db4c1368b35b9a9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505118"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281678"
 ---
-# <a name="cmfctabctrl-class"></a>Cmfctabctrl – třída
+# <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
 `CMFCTabCtrl` Třída poskytuje funkce pro ovládací prvek karty. Ovládací prvek karty zobrazí okno ukotvitelné s plochými nebo trojrozměrnými kartami v jeho horní nebo dolní. Karty mohou zobrazit text a obrázek a mohou změnit barvu, pokud je aktivní.
 
@@ -175,9 +175,9 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::ModifyTabStyle](#modifytabstyle)|Určuje vzhled karty v aktuální ovládací prvek karty.|
 |`CMFCTabCtrl::MoveTab`|Na kartě přesune na jinou pracovní pozici karty. (Přepíše [CMFCBaseTabCtrl::MoveTab](../../mfc/reference/cmfcbasetabctrl-class.md#movetab).)|
 |[CMFCTabCtrl::OnDragEnter](#ondragenter)|Volá se rozhraním, když je kurzor nejprve přetáhnout do okna ovládacího prvku karta.|
-|[CMFCTabCtrl::OnDragOver](#ondragover)|Po přesunutí v okně cíl přetažení myší, volá se rozhraním při operaci přetažení. (Přepíše [CMFCBaseTabCtrl::OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|
+|[CMFCTabCtrl::OnDragOver](#ondragover)|Po přesunutí v okně cíl přetažení myší, volá se rozhraním při operaci přetažení. (Overrides [CMFCBaseTabCtrl::OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|
 |[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|Zobrazí místní nabídka okna s kartami, počká, až uživatel vybere na kartě a je vybraná karta na aktivní kartě.|
-|`CMFCTabCtrl::PreTranslateMessage`|Přeloží okno zprávy před odesláním do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkce Windows. (Přepíše [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|
+|`CMFCTabCtrl::PreTranslateMessage`|Přeloží okno zprávy před odesláním do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkce Windows. (Overrides [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|
 |`CMFCTabCtrl::RecalcLayout`|Přepočítá rozložení vnitřní ovládací prvek karty. (Přepíše [CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|
 |[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|Aktuální karta ovládacím prvkem karta nastaví jako aktivní karty ve skupině karta rozhraní více dokumentů.|
 |[CMFCTabCtrl::SetActiveTab](#setactivetab)|Aktivuje na kartě. (Přepíše [CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|
@@ -237,9 +237,9 @@ Příklad toho, jak vytvořit okno s kartami jako dokovací panel ovládacího p
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[Cmfcbasetabctrl –](../../mfc/reference/cmfcbasetabctrl-class.md)
+[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)
 
-[Cmfctabctrl –](../../mfc/reference/cmfctabctrl-class.md)
+[CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md)
 
 ## <a name="example"></a>Příklad
 
@@ -250,7 +250,7 @@ Následující příklad ukazuje, jak použít různé metody v `CMFCTabCtrl` t�
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxtabctrl.h
+**Header:** afxtabctrl.h
 
 ##  <a name="activatemditab"></a>  CMFCTabCtrl::ActivateMDITab
 
@@ -310,7 +310,7 @@ BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-*Styl*<br/>
+*style*<br/>
 [in] Styl ovládacího prvku karta. Další informace najdete v části poznámky.
 
 *Rect*<br/>
@@ -322,7 +322,7 @@ BOOL Create(
 *nID*<br/>
 [in] ID ovládacího prvku karta.
 
-*umístění*<br/>
+*location*<br/>
 [in] Umístění karty. Výchozí hodnota je LOCATION_BOTTOM. Další informace najdete v části poznámky.
 
 *bCloseBtn*<br/>
@@ -835,7 +835,7 @@ BOOL ModifyTabStyle(Style style);
 
 ### <a name="parameters"></a>Parametry
 
-*Styl*<br/>
+*style*<br/>
 [in] Jedna z hodnot výčtu, která určuje vzhled ovládacího prvku karta. Další informace najdete v tabulce v poznámky.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -876,7 +876,7 @@ virtual DROPEFFECT OnDragEnter(
 *dwKeyState*<br/>
 [in] Obsahuje informace o stavu modifikační klávesy. Tento parametr je bitová kombinace (nebo) z následujících hodnot: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON. Další informace najdete v tématu **parametry zpráv** část [o vstup z myši](/windows/desktop/inputdev/about-mouse-input).
 
-*Bod*<br/>
+*point*<br/>
 [in] Obsahuje aktuální umístění kurzoru v souřadnicích klienta.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -908,7 +908,7 @@ virtual DROPEFFECT OnDragOver(
 *dwKeyState*<br/>
 [in] Stav modifikační klávesy, která je bitová kombinace (nebo) MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON. Další informace najdete v tématu "Parametry zpráv" [o vstup z myši](/windows/desktop/inputdev/about-mouse-input).
 
-*Bod*<br/>
+*point*<br/>
 [in] Aktuální pozice myši.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -929,7 +929,7 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Souřadnice místa zobrazení místní nabídky.
 
 ### <a name="remarks"></a>Poznámky
@@ -1042,7 +1042,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 *uiID*<br/>
 [in] ID prostředku rastrového obrázku, který obsahuje seznam obrázků.
 
-*CX*<br/>
+*cx*<br/>
 [in] Šířka jednotlivých obrázků v pixelech. Výchozí hodnota je 15.
 
 *clrTransp*<br/>
@@ -1135,7 +1135,7 @@ Hodnota TRUE, pokud metoda uspěje; v opačném případě hodnota FALSE.
 
 Tato metoda má vliv pouze ovládacího prvku karta, která zobrazuje plochý karty. Posuvník ovlivňuje všechny karty ve stejnou dobu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

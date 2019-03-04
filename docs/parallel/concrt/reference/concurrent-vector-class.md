@@ -33,12 +33,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
-ms.openlocfilehash: e8036b0942600e5d47254583e2675c525010a5c1
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 7c2ca35239dfb3ce4c0f710259f54005ff9f3c94
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657562"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283173"
 ---
 # <a name="concurrentvector-class"></a>concurrent_vector – třída
 
@@ -84,38 +84,38 @@ Typ představující uložený objekt alokátoru, který zapouzdřuje informace 
 
 |Název|Popis|
 |----------|-----------------|
-|[concurrent_vector –](#ctor)|Přetíženo. Konstrukce souběžného vektoru.|
-|[~ concurrent_vector – destruktor](#dtor)|Vymaže všechny prvky a odstraní tento souběžného vektoru.|
+|[concurrent_vector](#ctor)|Přetíženo. Konstrukce souběžného vektoru.|
+|[~concurrent_vector Destructor](#dtor)|Vymaže všechny prvky a odstraní tento souběžného vektoru.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[přiřazení](#assign)|Přetíženo. Odstraní prvky souběžného vektoru a přiřadí ji buď `_N` kopie `_Item`, nebo hodnoty zadané rozsahem iterátoru [ `_Begin`, `_End`). Tato metoda není bezpečná pro souběžnost.|
+|[assign](#assign)|Přetíženo. Odstraní prvky souběžného vektoru a přiřadí ji buď `_N` kopie `_Item`, nebo hodnoty zadané rozsahem iterátoru [ `_Begin`, `_End`). Tato metoda není bezpečná pro souběžnost.|
 |[at](#at)|Přetíženo. Poskytuje přístup k prvku na daném indexu v souběžného vektoru. Tato metoda je bezpečná pro souběžnost pro operace čtení a také při rostoucí vektoru, za předpokladu, zajistíte, hodnota `_Index` je menší než velikost souběžného vektoru.|
 |[Zpět](#back)|Přetíženo. Vrátí odkaz nebo `const` odkazovat na poslední prvek v souběžného vektoru. Pokud souběžného vektoru je prázdný, návratová hodnota není definována. Tato metoda je bezpečná pro souběžnost.|
 |[začít](#begin)|Přetíženo. Vrátí iterátor typu `iterator` nebo `const_iterator` začátek souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
 |[Kapacita](#capacity)|Vrátí maximální velikost, ke kterému můžou růst souběžného vektoru bez nutnosti přidělení více paměti. Tato metoda je bezpečná pro souběžnost.|
 |[cbegin](#cbegin)|Vrátí iterátor typu `const_iterator` začátek souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
 |[cend](#cend)|Vrátí iterátor typu `const_iterator` za účelem souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
-|[Vymazat](#clear)|Vymaže všechny prvky v souběžného vektoru. Tato metoda není bezpečná pro souběžnost.|
+|[clear](#clear)|Vymaže všechny prvky v souběžného vektoru. Tato metoda není bezpečná pro souběžnost.|
 |[crbegin](#crbegin)|Vrátí iterátor typu `const_reverse_iterator` začátek souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
-|[crend –](#crend)|Vrátí iterátor typu `const_reverse_iterator` za účelem souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
+|[crend](#crend)|Vrátí iterátor typu `const_reverse_iterator` za účelem souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
 |[prázdný](#empty)|Testuje, zda je souběžného vektoru je prázdný v době tato metoda je volána. Tato metoda je bezpečná pro souběžnost.|
 |[ukončení](#end)|Přetíženo. Vrátí iterátor typu `iterator` nebo `const_iterator` za účelem souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
 |[Přední](#front)|Přetíženo. Vrátí odkaz nebo `const` odkaz na první prvek v souběžného vektoru. Pokud souběžného vektoru je prázdný, návratová hodnota není definována. Tato metoda je bezpečná pro souběžnost.|
 |[get_allocator](#get_allocator)|Vrátí kopii objektu Alokátor použitý k vytvoření souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
-|[grow_by –](#grow_by)|Přetíženo. Roste tento souběžného vektoru pomocí `_Delta` elementy. Tato metoda je bezpečná pro souběžnost.|
+|[grow_by](#grow_by)|Přetíženo. Roste tento souběžného vektoru pomocí `_Delta` elementy. Tato metoda je bezpečná pro souběžnost.|
 |[grow_to_at_least](#grow_to_at_least)|Roste tento souběžného vektoru, dokud je nejméně `_N` elementy. Tato metoda je bezpečná pro souběžnost.|
 |[max_size](#max_size)|Vrátí maximální počet prvků, které může obsahovat souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
 |[push_back](#push_back)|Přetíženo. Daná položka se připojí na konec souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
-|[rbegin –](#rbegin)|Přetíženo. Vrátí iterátor typu `reverse_iterator` nebo `const_reverse_iterator` začátek souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
+|[rbegin](#rbegin)|Přetíženo. Vrátí iterátor typu `reverse_iterator` nebo `const_reverse_iterator` začátek souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
 |[rend –](#rend)|Přetíženo. Vrátí iterátor typu `reverse_iterator` nebo `const_reverse_iterator` za účelem souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
-|[Rezervovat](#reserve)|Přidělí dostatek místa pro souběžného vektoru zvětšení velikosti `_N` bez nutnosti přidělit víc paměti později. Tato metoda není bezpečná pro souběžnost.|
-|[Změna velikosti](#resize)|Přetíženo. Změní velikost souběžného vektoru na požadovanou velikost, odstranění nebo přidání prvků podle potřeby. Tato metoda není bezpečná pro souběžnost.|
+|[reserve](#reserve)|Přidělí dostatek místa pro souběžného vektoru zvětšení velikosti `_N` bez nutnosti přidělit víc paměti později. Tato metoda není bezpečná pro souběžnost.|
+|[resize](#resize)|Přetíženo. Změní velikost souběžného vektoru na požadovanou velikost, odstranění nebo přidání prvků podle potřeby. Tato metoda není bezpečná pro souběžnost.|
 |[shrink_to_fit](#shrink_to_fit)|Zkomprimuje vnitřní reprezentaci souběžného vektoru snížit fragmentaci a optimalizovat využití paměti. Tato metoda není bezpečná pro souběžnost.|
 |[Velikost](#size)|Vrátí počet prvků v souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
-|[Prohození](#swap)|Zamění obsah dvou souběžných vektorů. Tato metoda není bezpečná pro souběžnost.|
+|[swap](#swap)|Zamění obsah dvou souběžných vektorů. Tato metoda není bezpečná pro souběžnost.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
@@ -170,7 +170,7 @@ Odkaz na hodnotu použitou k vyplnění souběžného vektoru.
 *_Zahájit*<br/>
 Iterátor na první prvek zdrojové oblasti.
 
-*_Ukončit*<br/>
+*_End*<br/>
 Iterátor na jedno místo za posledním prvkem zdrojové oblasti.
 
 ### <a name="remarks"></a>Poznámky
@@ -339,7 +339,7 @@ Hodnota prvků ve vytvořeném objektu.
 *_Zahájit*<br/>
 Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.
 
-*_Ukončit*<br/>
+*_End*<br/>
 Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.
 
 ### <a name="remarks"></a>Poznámky
@@ -685,8 +685,7 @@ void swap(concurrent_vector& _Vector);
 *_Vector*<br/>
 `concurrent_vector` Objektu k výměně obsahu s.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [Paralelní kontejnery a objekty](../../../parallel/concrt/parallel-containers-and-objects.md)
-

@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-ms.openlocfilehash: e492ada977527d5c8709dd3afbf390bc678f789e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80302d59d081b7cdf6f29960c3d8f4859b4ecbf4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519792"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280443"
 ---
 # <a name="ctokenprivileges-class"></a>Ctokenprivileges – třída
 
@@ -45,7 +45,7 @@ class CTokenPrivileges
 |Název|Popis|
 |----------|-----------------|
 |[CTokenPrivileges::CTokenPrivileges](#ctokenprivileges)|Konstruktor|
-|[Ctokenprivileges –:: ~ ctokenprivileges –](#dtor)|Destruktor.|
+|[CTokenPrivileges::~CTokenPrivileges](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -330,7 +330,7 @@ operator const TOKEN_PRIVILEGES *() const throw(...);
 
 Přetypování na ukazatel na hodnotu [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) struktury.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázka zabezpečení](../../visual-cpp-samples.md)<br/>
 [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)<br/>

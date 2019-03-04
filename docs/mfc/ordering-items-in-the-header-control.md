@@ -12,12 +12,12 @@ helpviewer_keywords:
 - SetOrderArray method [MFC]
 - header controls [MFC], ordering items
 ms.assetid: 5aaef872-75b5-49c5-8fed-6f9a81fca812
-ms.openlocfilehash: 5c4fef821efa697d41bf02ef1891efcf0fa21d4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bae351d921c25993d6b7029f9052e1938179673b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583506"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282017"
 ---
 # <a name="ordering-items-in-the-header-control"></a>Objednávání položek v ovládacím prvku záhlaví
 
@@ -33,7 +33,6 @@ Jakmile [přidání položek do ovládacího prvku záhlaví](../mfc/adding-item
 
 Kromě předchozích členské funkce hds_dragdrop – styl umožňuje uživateli přetažení položek záhlaví v ovládacím prvku záhlaví. Další informace najdete v tématu [poskytování podpory a přetažení u položek záhlaví](../mfc/providing-drag-and-drop-support-for-header-items.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CHeaderCtrl](../mfc/using-cheaderctrl.md)
-

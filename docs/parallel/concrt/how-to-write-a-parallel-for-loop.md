@@ -1,18 +1,18 @@
 ---
-title: 'Postupy: Programování smyčky parallel_for'
+title: 'Postupy: Smyčky parallel_for'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - writing a parallel_for loop [Concurrency Runtime]
 - parallel_for function, example
 ms.assetid: adb4d64e-5514-4b70-8dcb-b9210e6b5a1c
-ms.openlocfilehash: 5caba385304e97bf2e1008a44724c792d56124f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6ac30a5de0ff45adad1064aeab708e6a84f5e9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592706"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283589"
 ---
-# <a name="how-to-write-a-parallelfor-loop"></a>Postupy: Programování smyčky parallel_for
+# <a name="how-to-write-a-parallelfor-loop"></a>Postupy: Smyčky parallel_for
 
 Tento příklad ukazuje, jak používat [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) vypočítat součin dvou matice.
 
@@ -47,10 +47,9 @@ parallel: 1311
 
 Chcete-li kód zkompilovat, ho zkopírujte a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `parallel-matrix-multiply.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
 
-**cl.exe/EHsc paralelní matice multiply.cpp**
+**cl.exe /EHsc parallel-matrix-multiply.cpp**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md)<br/>
 [parallel_for – funkce](reference/concurrency-namespace-functions.md#parallel_for)
-

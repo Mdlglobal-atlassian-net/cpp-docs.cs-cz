@@ -1,5 +1,5 @@
 ---
-title: Cinternetfile – třída
+title: CInternetFile Class
 ms.date: 11/04/2016
 f1_keywords:
 - CInternetFile
@@ -32,14 +32,14 @@ helpviewer_keywords:
 - CInternetFile [MFC], WriteString
 - CInternetFile [MFC], m_hFile
 ms.assetid: 96935681-ee71-4a8d-9783-5abc7b3e6f10
-ms.openlocfilehash: 309d4210f72f7ecd83ed6a8eb79874a1c8170d59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65bc36856e253d086cc430a600daa9255e21ea75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586872"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279975"
 ---
-# <a name="cinternetfile-class"></a>Cinternetfile – třída
+# <a name="cinternetfile-class"></a>CInternetFile Class
 
 Umožňuje přístup k souborům ve vzdálených systémech, které používají protokoly sítě Internet.
 
@@ -97,9 +97,9 @@ Další informace o tom, `CInternetFile` funguje s jinými třídami MFC Interne
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cfile –](../../mfc/reference/cfile-class.md)
+[CFile](../../mfc/reference/cfile-class.md)
 
-[Cstdiofile –](../../mfc/reference/cstdiofile-class.md)
+[CStdioFile](../../mfc/reference/cstdiofile-class.md)
 
 `CInternetFile`
 
@@ -143,7 +143,7 @@ CInternetFile(
 
 ### <a name="parameters"></a>Parametry
 
-*hfile –*<br/>
+*hFile*<br/>
 Popisovač souboru k Internetu.
 
 *pstrFileName*<br/>
@@ -261,7 +261,7 @@ virtual LPTSTR ReadString(
 *pstr*<br/>
 Ukazatel na řetězec, který se zobrazí na řádku, který je čten.
 
-*Nmaximum*<br/>
+*nMax*<br/>
 Maximální počet znaků pro čtení.
 
 *rString*<br/>
@@ -294,7 +294,7 @@ virtual ULONGLONG Seek(
 *lOffset*<br/>
 Posun v bajtech přesunout ukazatel čtení/zápisu v souboru.
 
-*Nze*<br/>
+*nFrom*<br/>
 Relativní odkaz na posunu. Musí být jedna z následujících hodnot:
 
 - `CFile::begin` Přesuňte ukazatel na soubor *lOff* vpřed bajtů od začátku souboru.
@@ -409,7 +409,7 @@ Ukazatel na řetězec obsahující obsah má být proveden zápis.
 
 Pokud dojde k chybě při zápisu dat, funkce vyvolá [cinternetexception –](../../mfc/reference/cinternetexception-class.md) objekt popisující chybu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CStdioFile – třída](../../mfc/reference/cstdiofile-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

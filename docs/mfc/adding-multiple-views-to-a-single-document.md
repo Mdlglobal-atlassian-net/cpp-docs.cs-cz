@@ -7,12 +7,12 @@ helpviewer_keywords:
 - single document interface (SDI), adding views
 - views [MFC], SDI applications
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
-ms.openlocfilehash: d76f5796bb8588cae26b17c4f6cf7aae90b354ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b665f090fc680221be70f170452d756dd5f68dc5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579371"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284278"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Přidání více zobrazení do jednoho dokumentu
 
@@ -97,7 +97,6 @@ Poslední krok zahrnuje přidání kódu, který volá `SwitchView` metodu, kdy�
 
 Další informace o přidání nových položek nabídky a funkce obslužné rutiny příkazů najdete v tématu [obslužné rutiny pro příkazy a oznámení ovládacích prvků](../mfc/handlers-for-commands-and-control-notifications.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Document/View – architektura](../mfc/document-view-architecture.md)
-

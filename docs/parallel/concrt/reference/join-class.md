@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - join class
 ms.assetid: d2217119-70a1-40b6-809f-c1c13a571c3f
-ms.openlocfilehash: 23fc005a0c679576507c3a39ae37ce6c4545036b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d04ef90750c609d77fc8bf963bb996a90444f079
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668248"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281587"
 ---
 # <a name="join-class"></a>join – třída
 
@@ -50,7 +50,7 @@ Druh nástroje `join` bloku jedná buď `greedy` nebo `non_greedy`
 
 |Název|Popis|
 |----------|-----------------|
-|[Připojte se k](#ctor)|Přetíženo. Vytvoří `join` blok zpráv.|
+|[join](#ctor)|Přetíženo. Vytvoří `join` blok zpráv.|
 |[~join Destructor](#dtor)|Odstraní `join` bloku.|
 
 ### <a name="protected-methods"></a>Chráněné metody
@@ -72,11 +72,11 @@ Další informace najdete v tématu [asynchronní bloky zpráv](../../../paralle
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Isource –](isource-class.md)
+[ISource](isource-class.md)
 
-[Itarget –](itarget-class.md)
+[ITarget](itarget-class.md)
 
-[source_block –](source-block-class.md)
+[source_block](source-block-class.md)
 
 [propagator_block](propagator-block-class.md)
 
@@ -162,7 +162,7 @@ join(
 *_NumInputs*<br/>
 Počet vstupů to `join` bude možné blokovat.
 
-*_Filtrovat*<br/>
+*_Filter*<br/>
 Funkce filtru, která určuje, zda by měl být přijat nabízené zprávy.
 
 *_PScheduler*<br/>
@@ -265,7 +265,7 @@ Obnoví šíření po rezervaci byla uvolněna.
 virtual void resume_propagation();
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [choice – třída](choice-class.md)<br/>

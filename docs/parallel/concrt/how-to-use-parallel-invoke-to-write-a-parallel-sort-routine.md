@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Použití algoritmu parallel_invoke k zápisu rutiny paralelního třídění'
+title: 'Postupy: Použití algoritmu parallel_invoke k zápisu rutiny paralelního třídění'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - task_handle class, example
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - structured_task_group class, example
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
-ms.openlocfilehash: e72d99cb1b9168e3de1e109d93c163e21cb7fad7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 329cf275f283ba7b57276d06e909905c9a900697
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440154"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284174"
 ---
-# <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Postupy: Použití algoritmu parallel_invoke k zápisu rutiny paralelního třídění
+# <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Postupy: Použití algoritmu parallel_invoke k zápisu rutiny paralelního třídění
 
 Tento dokument popisuje způsob použití [algoritmu parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) algoritmus pro zlepšení výkonu bitonického algoritmu řazení. Rekurzivně algoritmu bitonického řazení rozdělí vstupní sekvence do menších oddílů seřazená. Algoritmu bitonického řazení můžou běžet paralelně, protože každý oddíl operace nezávislé na všechny ostatní operace.
 
@@ -89,7 +89,7 @@ parallel time: 1248
 
 Chcete-li kód zkompilovat, ho zkopírujte a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `parallel-bitonic-sort.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
 
-**cl.exe/EHsc paralelní bitonického sort.cpp**
+**cl.exe /EHsc parallel-bitonic-sort.cpp**
 
 ## <a name="robust-programming"></a>Robustní programování
 
@@ -101,8 +101,7 @@ Paralelní verze některé algoritmy líp fungovat pouze v případě, že je do
 
 Stejně jako u jakékoli paralelního algoritmu, doporučujeme, abyste profilování a ladění kódu podle potřeby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Funkční paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [parallel_invoke – funkce](reference/concurrency-namespace-functions.md#parallel_invoke)
-

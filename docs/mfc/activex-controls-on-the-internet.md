@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-ms.openlocfilehash: 7becf4d4f579fa4b9b954935f55a06b2fed78593
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c019c922a5690d4ead861c40bed3c0c1c76cea28
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603707"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283001"
 ---
 # <a name="activex-controls-on-the-internet"></a>Ovládací prvky ActiveXna Internetu
 
@@ -49,7 +49,7 @@ Návrh ovládacího prvku, který bude fungovat i v prostředí Internetu vyžad
 
 Chcete-li zvýšit výkon své ovládací prvky, postupujte podle těchto pokynů na efektivitu aspekty:
 
-- Provádění technik popsaných v článku [ovládací prvky ActiveX: optimalizace](../mfc/mfc-activex-controls-optimization.md).
+- Provádění technik popsaných v článku [ovládací prvky ActiveX: Optimalizace](../mfc/mfc-activex-controls-optimization.md).
 
 - Zvažte, jak vytvořit instanci ovládacího prvku.
 
@@ -89,7 +89,7 @@ Při vytváření nového ovládacího prvku pomocí Průvodce aplikací, může
 
 1. Na **nastavení** stránce **asynchronně načte vlastnosti**. Výběrem této možnosti nastavíte vlastnost připraveném stavu a událostí změny stavu připraveno za vás.
 
-   Můžete také vybrat další optimalizace, jako například **aktivace bez oken**, který je popsaný v [ovládací prvky ActiveX: optimalizace](../mfc/mfc-activex-controls-optimization.md).
+   Můžete také vybrat další optimalizace, jako například **aktivace bez oken**, který je popsaný v [ovládací prvky ActiveX: Optimalizace](../mfc/mfc-activex-controls-optimization.md).
 
 1. Zvolte **Dokončit** pro vytvoření projektu.
 
@@ -183,7 +183,7 @@ Tady je příklad značka objektu a atributů pro vložení ovládacího prvku n
 
 ## <a name="updating-an-existing-ole-control-to-use-new-activex-control-features"></a>Aktualizace existujícího ovládacího prvku OLE používat nové funkce ovládacího prvku ActiveX
 
-Pokud váš ovládací prvek OLE byl vytvořen s verzí jazyka Visual C++ před 4.2, existují kroky, které můžete provést při jeho výkon a zvýšit jeho funkce. Podrobné informace o těchto změnách najdete v části [ovládací prvky ActiveX: optimalizace](../mfc/mfc-activex-controls-optimization.md).
+Pokud váš ovládací prvek OLE byl vytvořen s verzí jazyka Visual C++ před 4.2, existují kroky, které můžete provést při jeho výkon a zvýšit jeho funkce. Podrobné informace o těchto změnách najdete v části [ovládací prvky ActiveX: Optimalizace](../mfc/mfc-activex-controls-optimization.md).
 
 Pokud přidáváte podporu asynchronního vlastnost do existujícího ovládacího prvku, je potřeba přidat vlastnost připraveném stavu a `ReadyStateChange` události sami. V konstruktoru pro ovládací prvek přidejte:
 
@@ -191,8 +191,7 @@ Pokud přidáváte podporu asynchronního vlastnost do existujícího ovládací
 
 Budete připraveni aktualizovat váš kód je stažené voláním [COleControl::InternalSetReadyState](../mfc/reference/colecontrol-class.md#internalsetreadystate). Jedno místo, které lze volat `InternalSetReadyState` z `OnProgress` přepsání `CDataPathProperty`-odvozené třídy.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Úlohy internetového programování MFC](../mfc/mfc-internet-programming-tasks.md)<br/>
 [Základy internetového programování v prostředí MFC](../mfc/mfc-internet-programming-basics.md)
-

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - COleDialog [MFC], GetLastError
 ms.assetid: b1ed0aca-3914-4b00-af34-4a4fb491aec7
-ms.openlocfilehash: c798c1ad81395465e7aa5405ab786ddfb67b71d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 353e2ed312fa7dbb9ef7bdfabc2b174abf8e1e1d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494702"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283615"
 ---
 # <a name="coledialog-class"></a>Coledialog – třída
 
@@ -37,23 +37,23 @@ class COleDialog : public CCommonDialog
 
 Knihovny Microsoft Foundation Class poskytuje několik tříd odvozených z `COleDialog`:
 
-- [Coleinsertdialog –](../../mfc/reference/coleinsertdialog-class.md)
+- [COleInsertDialog](../../mfc/reference/coleinsertdialog-class.md)
 
-- [Coleconvertdialog –](../../mfc/reference/coleconvertdialog-class.md)
+- [COleConvertDialog](../../mfc/reference/coleconvertdialog-class.md)
 
-- [Colechangeicondialog –](../../mfc/reference/colechangeicondialog-class.md)
+- [COleChangeIconDialog](../../mfc/reference/colechangeicondialog-class.md)
 
-- [Colelinksdialog –](../../mfc/reference/colelinksdialog-class.md)
+- [COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)
 
-- [Colebusydialog –](../../mfc/reference/colebusydialog-class.md)
+- [COleBusyDialog](../../mfc/reference/colebusydialog-class.md)
 
-- [Coleupdatedialog –](../../mfc/reference/coleupdatedialog-class.md)
+- [COleUpdateDialog](../../mfc/reference/coleupdatedialog-class.md)
 
-- [Colepastespecialdialog –](../../mfc/reference/colepastespecialdialog-class.md)
+- [COlePasteSpecialDialog](../../mfc/reference/colepastespecialdialog-class.md)
 
-- [Colepropertiesdialog –](../../mfc/reference/colepropertiesdialog-class.md)
+- [COlePropertiesDialog](../../mfc/reference/colepropertiesdialog-class.md)
 
-- [Colechangesourcedialog –](../../mfc/reference/colechangesourcedialog-class.md)
+- [COleChangeSourceDialog](../../mfc/reference/colechangesourcedialog-class.md)
 
 Další informace o dialogových oknech OLE konkrétní, najdete v článku [dialogová okna v prostředí OLE](../../mfc/dialog-boxes-in-ole.md).
 
@@ -67,7 +67,7 @@ Další informace o dialogových oknech OLE konkrétní, najdete v článku [dia
 
 [CDialog](../../mfc/reference/cdialog-class.md)
 
-[Ccommondialog –](../../mfc/reference/ccommondialog-class.md)
+[CCommonDialog](../../mfc/reference/ccommondialog-class.md)
 
 `COleDialog`
 
@@ -91,8 +91,7 @@ Kódů chyb vrácených nástrojem `GetLastError` závisí na konkrétní dialog
 
 Zobrazit `DoModal` členské funkce v odvozených třídách informace o určité chybové zprávy.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CCommonDialog – třída](../../mfc/reference/ccommondialog-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-

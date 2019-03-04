@@ -5,12 +5,12 @@ helpviewer_keywords:
 - exception handling, converting from OpenMP to the Concurrency Runtime
 - converting from OpenMP to the Concurrency Runtime, exception handling
 ms.assetid: 03c28196-21ba-439e-8641-afab1c283e1a
-ms.openlocfilehash: 9fa5ff2bcdfa6680dde6e9316d143089bf586671
-ms.sourcegitcommit: ee0103752884425843556a19cf418a504dc3cd02
+ms.openlocfilehash: 118cf3e485fa78ae3eaa5efe34708924b89d6588
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53738096"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285149"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-exception-handling-to-use-the-concurrency-runtime"></a>Postupy: Převedení smyčky OpenMP využívající zpracování výjimek na využití modulu Concurrency Runtime
 
@@ -56,11 +56,10 @@ Další informace o `parallel_for` a jiné paralelní algoritmy, naleznete v té
 
 Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `concrt-omp-exceptions.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
 
-**cl.exe/EHsc/OpenMP concrt-omp – exceptions.cpp**
+**cl.exe /EHsc /openmp concrt-omp-exceptions.cpp**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Migrace z OpenMP do Concurrency Runtime](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [Zpracování výjimek](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
 [Paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md)
-

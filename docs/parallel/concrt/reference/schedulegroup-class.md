@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-ms.openlocfilehash: 6132ec6623a009c09a37b7d704ce683a58956a04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ce7734a1330f2d6e495565338879764482439d09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518713"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283849"
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup – třída
 
@@ -55,7 +55,7 @@ class ScheduleGroup;
 
 **Namespace:** souběžnosti
 
-##  <a name="id"></a> ID
+##  <a name="id"></a> Id
 
 Vrátí identifikátor plánu skupiny, který je jedinečný v rámci plánovače, do kterého skupina patří.
 
@@ -121,7 +121,7 @@ To se obvykle používá ke správě životnosti skupiny plánu složení. Když
 
 Skupinu plánování souvisí s instance určitého plánovače. Ujistěte se, že všechny odkazy na skupinu plánu se vydávají před jsou všechny odkazy na Plánovač, protože může dojít v Plánovači rušení. Provádí se jinak za následek nedefinované chování.
 
-##  <a name="dtor"></a> ~ Schedulegroup –
+##  <a name="dtor"></a> ~ScheduleGroup
 
 ```
 virtual ~ScheduleGroup();
@@ -149,10 +149,9 @@ Ukazatel void data, která se předá jako parametr do těla úkolu.
 
 Volání `ScheduleTask` metoda implicitně umístí počet odkazů skupiny plánu, který bude odebrán modulem runtime v příslušnou dobu, po spuštění úlohy.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [CurrentScheduler – třída](currentscheduler-class.md)<br/>
 [Scheduler – třída](scheduler-class.md)<br/>
 [Plánovač úloh](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

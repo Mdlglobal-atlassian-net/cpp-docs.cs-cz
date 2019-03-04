@@ -1,5 +1,5 @@
 ---
-title: Cd2dtextlayout – třída
+title: CD2DTextLayout Class
 ms.date: 11/04/2016
 f1_keywords:
 - CD2DTextLayout
@@ -28,14 +28,14 @@ helpviewer_keywords:
 - CD2DTextLayout [MFC], SetLocaleName
 - CD2DTextLayout [MFC], m_pTextLayout
 ms.assetid: 724bd13c-f2ef-4e55-a775-8cb04b7b7908
-ms.openlocfilehash: 378c96622144a4acac27785cef844f0c1d21b98b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa51b050543b6a027e354afa18b5e9c002c6bca1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630942"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283966"
 ---
-# <a name="cd2dtextlayout-class"></a>Cd2dtextlayout – třída
+# <a name="cd2dtextlayout-class"></a>CD2DTextLayout Class
 
 Obálka pro IDWriteTextLayout.
 
@@ -52,7 +52,7 @@ class CD2DTextLayout : public CD2DResource;
 |Název|Popis|
 |----------|-----------------|
 |[CD2DTextLayout::CD2DTextLayout](#cd2dtextlayout)|Vytvoří objekt cd2dtextlayout –.|
-|[Cd2dtextlayout –:: ~ cd2dtextlayout –](#cd2dtextlayout__~cd2dtextlayout)|Destruktor. Volá se, když se likviduje rozložení objektu D2D text.|
+|[CD2DTextLayout::~CD2DTextLayout](#cd2dtextlayout__~cd2dtextlayout)|Destruktor. Volá se, když se likviduje rozložení objektu D2D text.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -72,7 +72,7 @@ class CD2DTextLayout : public CD2DResource;
 
 |Název|Popis|
 |----------|-----------------|
-|[CD2DTextLayout::Operator IDWriteTextLayout *](#operator_idwritetextlayout_star)|Vrátí IDWriteTextLayout rozhraní|
+|[CD2DTextLayout::operator IDWriteTextLayout*](#operator_idwritetextlayout_star)|Vrátí IDWriteTextLayout rozhraní|
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
@@ -84,15 +84,15 @@ class CD2DTextLayout : public CD2DResource;
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cd2dresource –](../../mfc/reference/cd2dresource-class.md)
+[CD2DResource](../../mfc/reference/cd2dresource-class.md)
 
-[Cd2dtextlayout –](../../mfc/reference/cd2dtextlayout-class.md)
+[CD2DTextLayout](../../mfc/reference/cd2dtextlayout-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxrendertarget.h
 
-##  <a name="_dtorcd2dtextlayout"></a>  Cd2dtextlayout –:: ~ cd2dtextlayout –
+##  <a name="_dtorcd2dtextlayout"></a>  CD2DTextLayout::~CD2DTextLayout
 
 Destruktor. Volá se, když se likviduje rozložení objektu D2D text.
 
@@ -177,7 +177,7 @@ CString GetFontFamilyName(
 *currentPosition*<br/>
 Umístění textu k prozkoumání.
 
-*TextRange*<br/>
+*textRange*<br/>
 Rozsah textu, který má stejný formát jako text na pozici určené currentPosition. To znamená, že nemá přesné formátování jako pozice zadána, včetně, ale nikoli výhradně název rodiny písem.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -199,7 +199,7 @@ CString GetLocaleName(
 *currentPosition*<br/>
 Umístění textu ke kontrole.
 
-*TextRange*<br/>
+*textRange*<br/>
 Rozsah textu, který má stejný formát jako text na pozici určené currentPosition. To znamená, že nemá přesné formátování jako pozice zadána, včetně, ale nikoli výhradně na název národního prostředí.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -265,7 +265,7 @@ BOOL SetFontFamilyName(
 *pwzFontFamilyName*<br/>
 Název rodiny písem, které platí pro celého textového řetězce v rozsahu určeném textRange
 
-*TextRange*<br/>
+*textRange*<br/>
 Rozsah textu, do které tato změna se vztahuje
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -287,13 +287,13 @@ BOOL SetLocaleName(
 *pwzLocaleName*<br/>
 Řetězec názvu národního prostředí zakončený hodnotou null
 
-*TextRange*<br/>
+*textRange*<br/>
 Rozsah textu, do které tato změna se vztahuje
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Pokud metoda uspěje, vrátí hodnotu TRUE. V opačném případě vrací FALSE
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

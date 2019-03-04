@@ -1,5 +1,5 @@
 ---
-title: Cmfcribbonundobutton – třída
+title: CMFCRibbonUndoButton Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonUndoButton
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - CMFCRibbonUndoButton [MFC], GetActionNumber
 - CMFCRibbonUndoButton [MFC], HasMenu
 ms.assetid: 5c42adf7-871d-4239-901e-47ae7fb816fc
-ms.openlocfilehash: 78d6b3423f19fe0cf3caf3aa0184fbe779a6c029
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e78cf26b32d424bc9cc9441787192cda6f7aeb54
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512889"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280374"
 ---
-# <a name="cmfcribbonundobutton-class"></a>Cmfcribbonundobutton – třída
+# <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton Class
 
 `CMFCRibbonUndoButton` Třída implementuje tlačítko rozevíracího seznamu, který obsahuje nejnovější uživatelských příkazů. Uživatelé mohou vybrat jednu nebo více příkazů nejnovější z rozevíracího seznamu znovu, nebo je zrušit.
 
@@ -66,11 +66,11 @@ Následující příklad ukazuje, jak vytvořit objekt `CMFCRibbonUndoButton` t�
 
 [Cmfcribbonbaseelement –](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
-[Cmfcribbonbutton –](../../mfc/reference/cmfcribbonbutton-class.md)
+[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
 
 [Cmfcribbongallery –](../../mfc/reference/cmfcribbongallery-class.md)
 
-[Cmfcribbonundobutton –](../../mfc/reference/cmfcribbonundobutton-class.md)
+[CMFCRibbonUndoButton](../../mfc/reference/cmfcribbonundobutton-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -157,7 +157,7 @@ Vždy vrátí hodnotu TRUE.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

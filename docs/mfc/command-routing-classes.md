@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC, command routing
 - command routing [MFC], classes
 ms.assetid: 4b50e689-2c54-4e6c-90f0-37333e22b2a1
-ms.openlocfilehash: 637f2056b76b7d55933b43a8e0822ec00212301a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 264e931ba0468cdc44f27c55e5d259948c5392b5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574756"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281966"
 ---
 # <a name="command-routing-classes"></a>Třídy směrování příkazů
 
@@ -23,10 +23,9 @@ Objekt třídy `CCmdUI` je předán příkazu pro aktualizaci cíle příkazů u
 [CCmdTarget](../mfc/reference/ccmdtarget-class.md)<br/>
 Slouží jako základní třída pro všechny třídy objektů, které může přijímat a reagovat na zprávy.
 
-[Ccmdui –](../mfc/reference/ccmdui-class.md)<br/>
+[CCmdUI](../mfc/reference/ccmdui-class.md)<br/>
 Poskytuje programové rozhraní pro aktualizace objektů uživatelského rozhraní, jako je například položky nabídky nebo tlačítka ovládacích panelů. Cílový objekt příkazu umožňuje, zakáže, zkontroluje nebo vymaže objekt uživatelského rozhraní s tímto objektem.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../mfc/class-library-overview.md)
-

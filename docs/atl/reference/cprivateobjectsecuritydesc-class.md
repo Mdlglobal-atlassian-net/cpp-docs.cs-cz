@@ -1,5 +1,5 @@
 ---
-title: Cprivateobjectsecuritydesc – třída
+title: CPrivateObjectSecurityDesc Class
 ms.date: 11/04/2016
 f1_keywords:
 - CPrivateObjectSecurityDesc
@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: 2617113f2805f8d1c56e7fa6cbebfe669709c100
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 99b47c15af4cdb87fb35d5c7342ea2719d341868
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694033"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284382"
 ---
-# <a name="cprivateobjectsecuritydesc-class"></a>Cprivateobjectsecuritydesc – třída
+# <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc Class
 
 Tato třída reprezentuje objekt popisovače zabezpečení privátní objekt.
 
@@ -61,7 +61,7 @@ Tato třída odvozená z [csecuritydesc –](../../atl/reference/csecuritydesc-c
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Csecuritydesc –](../../atl/reference/csecuritydesc-class.md)
+[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)
 
 `CPrivateObjectSecurityDesc`
 
@@ -115,7 +115,7 @@ CPrivateObjectSecurityDesc() throw();
 
 Inicializuje `CPrivateObjectSecurityDesc` objektu.
 
-##  <a name="dtor"></a>  Cprivateobjectsecuritydesc –:: ~ cprivateobjectsecuritydesc –
+##  <a name="dtor"></a>  CPrivateObjectSecurityDesc::~CPrivateObjectSecurityDesc
 
 Destruktor.
 
@@ -275,7 +275,7 @@ Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.
 
 Druhá metoda umožňuje určit typ objektu identifikátor GUID objektu nebo řízení, jak jsou zděděné položky řízení přístupu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)<br/>

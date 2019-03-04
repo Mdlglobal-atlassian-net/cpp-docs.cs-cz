@@ -7,12 +7,12 @@ helpviewer_keywords:
 - overriding, Overridables comment in MFC source files
 - comments, MFC
 ms.assetid: 8968dea5-0d94-451f-bcb2-991580e65ba2
-ms.openlocfilehash: 9efba74676ba118659601522fc915bf25f607116
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90d6a585f62de589299147edce87332d96c6dbb8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554156"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282042"
 ---
 # <a name="-overridables-comment"></a>// Komentář k přepisovatelným
 
@@ -29,7 +29,7 @@ V některých tříd, může se zobrazit také komentáře `// Advanced Overrida
 > [!NOTE]
 >  Konvence popsaných v tomto článku je možné použít také, obecně pro Automation (dříve označované jako automatizace OLE) metody a vlastnosti. Automatizace metody jsou podobné operacím knihovny MFC. Vlastnosti automatizace se podobají atributy knihovny MFC. Přepisovatelné členské funkce MFC podobají událostí automatizace (podporovaných pro ovládací prvky ActiveX, dřív označované jako ovládací prvky OLE).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití zdrojových souborů MFC](../mfc/using-the-mfc-source-files.md)<br/>
 [Příklad komentářů](../mfc/an-example-of-the-comments.md)<br/>
@@ -37,4 +37,3 @@ V některých tříd, může se zobrazit také komentáře `// Advanced Overrida
 [/ Komentář ke konstruktorům](../mfc/decrement-constructors-comment.md)<br/>
 [Komentář k atributům](../mfc/decrement-attributes-comment.md)<br/>
 [Komentář k operacím](../mfc/decrement-operations-comment.md)
-

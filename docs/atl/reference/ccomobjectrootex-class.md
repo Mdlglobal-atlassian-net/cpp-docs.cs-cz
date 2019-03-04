@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-ms.openlocfilehash: 63547405791f7f0391138dd2d23020c62c8a4a28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06a0c0e4b650945e10015c3220b926399ec9c6fd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655803"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280638"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx – třída
 
@@ -201,7 +201,7 @@ static HRESULT InternalQueryInterface(
 *pEntries*<br/>
 [in] Ukazatel `_ATL_INTMAP_ENTRY` struktura, která přistupuje k mapě dostupné rozhraní.
 
-*identifikátor IID*<br/>
+*iid*<br/>
 [in] Identifikátor GUID se požadované rozhraní.
 
 *ppvObject*<br/>
@@ -333,7 +333,7 @@ HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*<br/>
+*iid*<br/>
 [in] Identifikátor GUID se požadované rozhraní.
 
 *ppvObject*<br/>
@@ -369,7 +369,7 @@ Získání vlastnictví, musí volat vlákno `Lock`. Každé volání `Lock` vy�
 
 Pokud je model vláken s jedním vláknem, tato metoda nemá žádný účinek.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CComAggObject – třída](../../atl/reference/ccomaggobject-class.md)<br/>
 [CComObject – třída](../../atl/reference/ccomobject-class.md)<br/>

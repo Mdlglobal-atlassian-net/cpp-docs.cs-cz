@@ -1,17 +1,17 @@
 ---
-title: 'Postupy: Implementace sledování v kódu'
+title: 'Postupy: Implementace sledování v kódu'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CRectTracker class [MFC], implementing trackers
 ms.assetid: baaeca2c-5114-485f-bf58-8807db1bc973
-ms.openlocfilehash: 0a6a8313c02566c4d1cde82b288b42e150651b02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af8e1b72bde268a15012515065853daa617936e4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428684"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283979"
 ---
-# <a name="how-to-implement-tracking-in-your-code"></a>Postupy: Implementace sledování v kódu
+# <a name="how-to-implement-tracking-in-your-code"></a>Postupy: Implementace sledování v kódu
 
 Ke sledování položky OLE, musí zpracovat určité události související s položkou, například klepnutím na příslušnou položku nebo aktualizuje zobrazení dokumentu. Ve všech případech stačí deklarovat dočasný [crecttracker –](../mfc/reference/crecttracker-class.md) objektu a manipulaci s položkou prostřednictvím tohoto objektu.
 
@@ -53,7 +53,6 @@ Ve vaší aplikaci dojde k události, které vyžadují sledování kódu, jako 
 
 [!code-cpp[NVC_MFCOClient#5](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_5.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Snímače: Implementace snímačů ve vašich aplikacích OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
-

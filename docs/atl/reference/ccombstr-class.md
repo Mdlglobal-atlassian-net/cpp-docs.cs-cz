@@ -29,12 +29,12 @@ helpviewer_keywords:
 - CComBSTR class
 - CComBSTR
 ms.assetid: 8fea1879-a05e-47a5-a803-8dec60eaa534
-ms.openlocfilehash: 52e8472e315932978af38d405c753b0a62fcbe45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48447b9e6a211927d8e729dd761d2e14ecd89615
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475644"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282354"
 ---
 # <a name="ccombstr-class"></a>CComBSTR – třída
 
@@ -53,7 +53,7 @@ class CComBSTR
 |Název|Popis|
 |----------|-----------------|
 |[CComBSTR::CComBSTR](#ccombstr)|Konstruktor|
-|[CComBSTR:: ~ CComBSTR](#dtor)|Destruktor.|
+|[CComBSTR::~CComBSTR](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -320,7 +320,7 @@ CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
 *nSize*<br/>
 [in] Počet znaků pro kopírování z *sz* nebo počáteční velikost ve znacích `CComBSTR`.
 
-*Sz*<br/>
+*sz*<br/>
 [in] Řetězec zkopírujte. Verze Unicode určuje LPCOLESTR; verze ANSI určuje LPCSTR.
 
 *pSrc*<br/>
@@ -761,7 +761,7 @@ Můžete znovu vytvořit BSTR z obsahu pomocí datového proudu [ReadFromStream]
 
 [!code-cpp[NVC_ATL_Utilities#45](../../atl/codesnippet/cpp/ccombstr-class_18.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [ATL a MFC – makra převodu řetězců](string-conversion-macros.md)

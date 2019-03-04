@@ -1,5 +1,5 @@
 ---
-title: 'Nabídky a prostředky: Serverové doplňky'
+title: 'Nabídky a prostředky: Serverové doplňky'
 ms.date: 11/04/2016
 f1_keywords:
 - IDP_OLE_INIT_FAILED
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - server applications [MFC], OLE menus and resources
 - OLE initialization failure [MFC]
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
-ms.openlocfilehash: 8b4e7787029fc9401ece02860f09b8159f086afe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0cf5b495ca1e3f6e7b0ae434c09e014a29eadb00
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592587"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281946"
 ---
-# <a name="menus-and-resources-server-additions"></a>Nabídky a prostředky: Serverové doplňky
+# <a name="menus-and-resources-server-additions"></a>Nabídky a prostředky: Serverové doplňky
 
 Tento článek vysvětluje změny, které je třeba provést, nabídky a jiné prostředky ve vizuální úpravy aplikace (součást). Serverová aplikace požaduje mnoha funkcemi struktura nabídky a jiné prostředky, protože může být spuštěný v jednom ze tří režimů: stát samostatně, embedded, nebo na místě. Jak je popsáno v [nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md) článek, jsou maximálně čtyři sady nabídek. Všechny čtyři se používají pro aplikace MDI úplný server, jsou pro miniserver využít pouze tři. Průvodce aplikace vytvoří rozložení nabídky nezbytné pro typ serveru, který chcete. Určité přizpůsobení, může být nutné.
 
@@ -44,7 +44,7 @@ V tomto článku probíraná témata zahrnují:
 
 Aplikace serveru (součást) musí mít prostředky nabídky přidaná kvůli podpoře úpravy s náhledem OLE. Nabídky při spuštění aplikace v samostatném režimu není potřeba změnit, ale musíte přidat dva nové nabídce prostředky před sestavením aplikace: jednu pro podporu aktivace na místě a jednu pro podporu serveru plně otevřený. Úplné a miniserver aplikace používají oba prostředky nabídky.
 
-- Kvůli podpoře aktivace na místě, musíte vytvořit prostředek nabídky, který je velmi podobný nabídce prostředků používá při spuštění v samostatném režimu. Rozdíl v této nabídce je, že chybí soubor a okno položky (a všechny ostatní položky nabídky, které se zabývají aplikace a ne na data). Aplikace typu kontejner poskytne tyto položky nabídky. Další informace o a příklad, tento postup slučování nabídek, najdete v článku [nabídky a prostředky: sloučení nabídky](../mfc/menus-and-resources-menu-merging.md).
+- Kvůli podpoře aktivace na místě, musíte vytvořit prostředek nabídky, který je velmi podobný nabídce prostředků používá při spuštění v samostatném režimu. Rozdíl v této nabídce je, že chybí soubor a okno položky (a všechny ostatní položky nabídky, které se zabývají aplikace a ne na data). Aplikace typu kontejner poskytne tyto položky nabídky. Další informace o a příklad, tento postup slučování nabídek, najdete v článku [nabídky a prostředky: Slučování nabídek](../mfc/menus-and-resources-menu-merging.md).
 
 - Kvůli podpoře aktivace zcela otevřená, je potřeba vytvořit téměř stejný jako prostředek nabídky, který používá prostředek nabídky při spuštění v samostatném režimu. Pouze změny k tomuto prostředku nabídky je, že některé položky se mění tak, aby odrážely skutečnost, že server pracuje na položku vložený ve složeném dokumentu.
 
@@ -70,8 +70,7 @@ Přidání tabulky pouze jeden řetězec je nezbytné v serverové aplikaci – 
 
 Stejné dodatky požádat o miniservers jako ty uvedené výše pro úplné servery. Protože miniserver nelze spustit v samostatném režimu, je mnohem menší jeho hlavní nabídky. V hlavní nabídce vytvořené průvodcem aplikací má pouze nabídku souborů, obsahuje pouze položky, ukončení a o. Vložené a místní nabídky a akcelerátory pro miniservers jsou stejné jako u celé servery.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md)<br/>
-[Nabídky a prostředky: Sloučení nabídky](../mfc/menus-and-resources-menu-merging.md)
-
+[Nabídky a prostředky: Slučováním nabídek](../mfc/menus-and-resources-menu-merging.md)

@@ -1,5 +1,5 @@
 ---
-title: Cpictureholder – třída
+title: CPictureHolder Class
 ms.date: 11/04/2016
 f1_keywords:
 - CPictureHolder
@@ -28,14 +28,14 @@ helpviewer_keywords:
 - CPictureHolder [MFC], SetPictureDispatch
 - CPictureHolder [MFC], m_pPict
 ms.assetid: a4f59775-704a-41dd-b5bd-2e531c95127a
-ms.openlocfilehash: 14ffcbc043d80bfd296bcf52d125d288039f0501
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5386240114550826e4bf557b63310a91590afb55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509567"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284213"
 ---
-# <a name="cpictureholder-class"></a>Cpictureholder – třída
+# <a name="cpictureholder-class"></a>CPictureHolder Class
 
 Implementuje vlastnost obrázku, který umožňuje uživateli zobrazit obrázek v ovládacím prvku.
 
@@ -79,7 +79,7 @@ class CPictureHolder
 
 Pomocí uložených vlastností obrázků vývojář může určit rastrový obrázek, ikona nebo metasoubor pro zobrazení.
 
-Informace o vytvoření vlastnosti vlastního obrázku, najdete v článku [knihovny MFC – ovládací prvky ActiveX: použití obrázků v ovládacím prvku ActiveX](../../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md).
+Informace o vytvoření vlastnosti vlastního obrázku, najdete v článku [knihovny MFC – ovládací prvky ActiveX: Použití obrázků v ovládacím prvku ActiveX](../../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -296,7 +296,7 @@ void Render(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel na kontextu zobrazení, ve kterém má být vykreslen na obrázku.
 
 *rcRender*<br/>
@@ -318,7 +318,7 @@ void SetPictureDispatch(LPPICTUREDISP pDisp);
 *pDisp*<br/>
 Ukazatel na novou `IPictureDisp` rozhraní.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CFontHolder – třída](../../mfc/reference/cfontholder-class.md)

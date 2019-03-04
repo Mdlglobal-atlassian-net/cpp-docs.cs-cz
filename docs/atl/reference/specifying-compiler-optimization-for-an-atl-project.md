@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ATL projects, compiler optimization
 - ATL_NO_VTABLE macro
 ms.assetid: 7f379318-66d5-43dd-a53d-530758d3a228
-ms.openlocfilehash: 18c1f404576a7e011698f0b553a2436bab8089a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e6fe09aaa0726a39aae8b85cb6581c5d0cd24e1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522291"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280014"
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>Zadání optimalizace kompilátoru pro projekt knihovny ATL
 
@@ -51,7 +51,7 @@ Pokud si nejste jisti, zda byste měli použít `declspec(novtable)` modifikáto
 
 Ve stdafx.h před všechny ostatní knihovny ATL hlavičkové soubory jsou zahrnuty.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Průvodce projektem ATL](../../atl/reference/atl-project-wizard.md)<br/>
 [Typy projektů Visual C++](../../ide/visual-cpp-project-types.md)<br/>
@@ -60,4 +60,3 @@ Ve stdafx.h před všechny ostatní knihovny ATL hlavičkové soubory jsou zahrn
 [Základy ATL – objekty COM](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [novtable](../../cpp/novtable.md)<br/>
 [Výchozí konfigurace projektu ATL](../../atl/reference/default-atl-project-configurations.md)
-

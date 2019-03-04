@@ -1,5 +1,5 @@
 ---
-title: Cmultipagedhtmldialog – třída
+title: CMultiPageDHtmlDialog Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMultiPageDHtmlDialog
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CMultiPageDHtmlDialog [MFC], CMultiPageDHtmlDialog
 ms.assetid: 971accc1-824d-4df4-b4c1-b1a20e0f7e4f
-ms.openlocfilehash: 680c485241b7a377d1c6f0ec2785dbbade01ed3f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 66ab996a810c7409d689d600758828130d4237f1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443548"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283745"
 ---
-# <a name="cmultipagedhtmldialog-class"></a>Cmultipagedhtmldialog – třída
+# <a name="cmultipagedhtmldialog-class"></a>CMultiPageDHtmlDialog Class
 
 Vícestránkové dialogové okno zobrazí postupně několik stránek HTML a zpracovává události z každé stránky.
 
@@ -32,7 +32,7 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 |Název|Popis|
 |----------|-----------------|
 |[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Vytvoří vícestránkové dialogové okno objekt DHTML (Průvodce style).|
-|[Cmultipagedhtmldialog –:: ~ cmultipagedhtmldialog –](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|Odstraní objekt vícestránkové dialogové okno DHTML.|
+|[CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|Odstraní objekt vícestránkové dialogové okno DHTML.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -74,7 +74,7 @@ Relevantní části implementace třídy (v CMyMultipageDlg.cpp):
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdhtml.h
+**Header:** afxdhtml.h
 
 ##  <a name="cmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog::CMultiPageDHtmlDialog
 
@@ -111,7 +111,7 @@ Obsahuje identifikační číslo prostředku šablony dialogového okna.
 *nHtmlResID*<br/>
 Obsahuje identifikační číslo prostředku HTML.
 
-##  <a name="_dtorcmultipagedhtmldialog"></a>  Cmultipagedhtmldialog –:: ~ cmultipagedhtmldialog –
+##  <a name="_dtorcmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog
 
 Odstraní objekt vícestránkové dialogové okno DHTML.
 
@@ -119,6 +119,6 @@ Odstraní objekt vícestránkové dialogové okno DHTML.
 virtual ~CMultiPageDHtmlDialog();
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CDHtmlDialog – třída](../../mfc/reference/cdhtmldialog-class.md)

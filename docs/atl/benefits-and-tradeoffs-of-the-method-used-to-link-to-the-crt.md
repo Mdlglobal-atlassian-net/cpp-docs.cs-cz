@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - _ATL_MIN_CRT macro
 ms.assetid: 49b485f7-9487-49e4-b12a-0f710b620e2b
-ms.openlocfilehash: b4c91b7fe5182c8457d16de57792ba1b5ab7b3be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc322c704374374d6e7c075dbf466fc2b038b0ba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496980"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283212"
 ---
 # <a name="benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt"></a>Výhody a nevýhody metody použité k připojení k CRT
 
@@ -22,9 +22,8 @@ Váš projekt můžete propojit s CRT dynamicky nebo staticky. Následující ta
 
 Téma [připojení k CRT v projektu knihovny ATL](../atl/linking-to-the-crt-in-your-atl-project.md) popisuje, jak vybrat způsob, ve které chcete propojit s CRT.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Programování s použitím knihovny ATL a běhového kódu jazyka C](../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Knihovny DLL a chování běhové knihovny v jazyce Visual C++](../build/run-time-library-behavior.md)<br/>
 [Funkce knihovny CRT](../c-runtime-library/crt-library-features.md)
-

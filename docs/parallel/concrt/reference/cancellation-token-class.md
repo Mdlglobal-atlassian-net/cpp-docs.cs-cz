@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
-ms.openlocfilehash: 60028ce439dc344696bb3814efb74e0daa21f6ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23821c91cd4158f6ec3989cdf537a5d8067e8225
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522197"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282289"
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token – třída
 
@@ -36,7 +36,7 @@ class cancellation_token;
 
 |Název|Popis|
 |----------|-----------------|
-|[cancellation_token –](#ctor)||
+|[cancellation_token](#ctor)||
 |[~ cancellation_token – destruktor](#dtor)||
 
 ### <a name="public-methods"></a>Veřejné metody
@@ -44,7 +44,7 @@ class cancellation_token;
 |Název|Popis|
 |----------|-----------------|
 |[deregister_callback](#deregister_callback)|Odebere zpětné volání dříve registrované `register` metoda na základě `cancellation_token_registration` vrácen objekt v době registrace.|
-|[is_cancelable –](#is_cancelable)|Vrací údaj o Určuje, zda tento token může být zrušený nebo nikoliv.|
+|[is_cancelable](#is_cancelable)|Vrací údaj o Určuje, zda tento token může být zrušený nebo nikoliv.|
 |[is_canceled](#is_canceled)|Vrátí **true** Pokud token byl zrušen.|
 |[None](#none)|Vrátí token zrušení, který nemůže být nikdy předmětem zrušení.|
 |[register_callback](#register_callback)|Zaregistruje funkci zpětného volání s tokenem. Pokud je token zrušen, bude proveden zpětného volání. Všimněte si, že pokud je token již zrušen v místě, kde tato metoda je volána, zpětné volání bude provedeno, okamžitě a synchronně.|
@@ -197,6 +197,6 @@ Objekt funkce, která bude volána zpět, když to `cancellation_token` se zruš
 
 A `cancellation_token_registration` objekt, který lze využít v `deregister` metodu zrušení registrace již registrovaného zpětného volání a zabránit prováděné. Metoda vyvolá výjimku [invalid_operation –](invalid-operation-class.md) výjimku, pokud je volán na `cancellation_token` objekt, který byl vytvořen pomocí [cancellation_token::none](#none) metoda.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)

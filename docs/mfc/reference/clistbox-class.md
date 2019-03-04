@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: ad9f945a91a96c40afe614240a847a028ba5b5d9
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 17ff89fde3ef893c2cfcd8beeb8482722af60358
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178613"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280313"
 ---
 # <a name="clistbox-class"></a>Clistbox – třída
 
@@ -769,7 +769,7 @@ int GetItemRect(
 *nIndex*<br/>
 Určuje index založený na nule položky.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Určuje dlouhým ukazatelem na [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) , který přijímá pole se seznamem klienta souřadnice položky.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1039,7 +1039,7 @@ UINT ItemFromPoint(
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pt*<br/>
 Bod, pro kterou se má vyhledat nejbližší položky určen ve vztahu k levého horního rohu klientské oblasti pole se seznamem.
 
 *bOutside*<br/>
@@ -1242,7 +1242,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>Parametry
 
-*nVyberte*<br/>
+*nSelect*<br/>
 Určuje řetězec, který má být vybrán index založený na nule. Pokud *nVyberte* se -1, pole se seznamem je nastavena na mít žádný výběr.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1536,7 +1536,7 @@ Vrácená hodnota 0 nebo větší Určuje index položky v seznamu a označuje, 
 
 [!code-cpp[NVC_MFC_CListBox#41](../../mfc/codesnippet/cpp/clistbox-class_41.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC CTRLTEST](../../visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>

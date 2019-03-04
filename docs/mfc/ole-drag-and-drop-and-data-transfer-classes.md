@@ -10,30 +10,29 @@ helpviewer_keywords:
 - data transfer [MFC], OLE
 - data transfer classes [MFC]
 ms.assetid: c8ab2825-ed69-4b88-8ae6-f368b94726b8
-ms.openlocfilehash: 7520881314da9568f6130f5fe2ccf0a3e0e88e2a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e30a358da55b29f9519bc1ab8ee5c93ada308d98
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475178"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284421"
 ---
 # <a name="ole-drag-and-drop-and-data-transfer-classes"></a>Přetahování v rozhraní OLE a třídy přenosu dat
 
 Tyto třídy jsou používáno v přenosech dat OLE. Nechají data přenesená mezi aplikacemi s využitím schránky nebo pomocí přetažení a přetažení.
 
-[Coledropsource –](../mfc/reference/coledropsource-class.md)<br/>
+[COleDropSource](../mfc/reference/coledropsource-class.md)<br/>
 Určuje operaci přetažení myší od začátku do konce. Tato třída určuje při operaci přetažení spuštění a ukončení. Zobrazí také kurzor zpětnou vazbu během operace přetažení myší.
 
-[Coledatasource –](../mfc/reference/coledatasource-class.md)<br/>
+[COleDataSource](../mfc/reference/coledatasource-class.md)<br/>
 Použít, pokud aplikace poskytuje data pro přenos dat. `COleDataSource` může zobrazit jako objekt schránky objektově orientovaný.
 
-[Coledroptarget –](../mfc/reference/coledroptarget-class.md)<br/>
+[COleDropTarget](../mfc/reference/coledroptarget-class.md)<br/>
 Představuje cíl operace přetažení myší. A `COleDropTarget` objekt odpovídá okna na obrazovce. Určuje, jestli se má přijmout žádná data vyřadit problém napravit a implementuje operace skutečné vyřazení.
 
-[Coledataobject –](../mfc/reference/coledataobject-class.md)<br/>
+[COleDataObject](../mfc/reference/coledataobject-class.md)<br/>
 Použít jako straně příjemce `COleDataSource`. `COleDataObject` objekty poskytují přístup k datům uloženým ve `COleDataSource` objektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../mfc/class-library-overview.md)
-

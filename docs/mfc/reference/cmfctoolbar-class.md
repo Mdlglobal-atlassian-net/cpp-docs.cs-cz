@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: 98de92a9473d64a87b9b7a9f2891adf4263e1951
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 1f92afa4f40a5a37f32e1bc86418056c8591625f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178964"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283134"
 ---
 # <a name="cmfctoolbar-class"></a>Cmfctoolbar – třída
 
@@ -546,7 +546,7 @@ Následující příklad ukazuje, jak použít různé metody v `CMFCToolBar` t�
 
 [CPane](../../mfc/reference/cpane-class.md)
 
-[Cmfcbasetoolbar –](../../mfc/reference/cmfcbasetoolbar-class.md)
+[CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)
 
 `CMFCToolBar`
 
@@ -1058,7 +1058,7 @@ virtual void DoPaint(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 ### <a name="remarks"></a>Poznámky
@@ -1082,7 +1082,7 @@ virtual BOOL DrawButton(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *pButton*<br/>
@@ -1120,7 +1120,7 @@ virtual void DrawSeparator(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *Rect*<br/>
@@ -1751,7 +1751,7 @@ virtual void GetInvalidateItemRect(
 *nIndex*<br/>
 [in] Index tlačítko, pro které se mají načíst klientské oblasti.
 
-*lprect –*<br/>
+*lpRect*<br/>
 [out] Ukazatel na objekt OBD, který přijímá oblasti od klientské oblasti.
 
 ### <a name="remarks"></a>Poznámky
@@ -1790,7 +1790,7 @@ virtual void GetItemRect(
 *nIndex*<br/>
 [in] Určuje index tlačítka panelu nástrojů.
 
-*lprect –*<br/>
+*lpRect*<br/>
 [out] Ukazatel na `CRect` objekt, který přijme souřadnice image ohraničující obdélník.
 
 ### <a name="remarks"></a>Poznámky
@@ -2146,7 +2146,7 @@ virtual int HitTest(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Bod, který má být testována, v souřadnicích klienta.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2586,7 +2586,7 @@ virtual BOOL LoadBitmap(
 *uiMenuResID*<br/>
 [in] ID prostředku rastrového obrázku, který odkazuje na regulární nabídky Image.
 
-*Blokováno*<br/>
+*bLocked*<br/>
 [in] TRUE, pokud chcete zamknout nástrojů; v opačném případě FALSE.
 
 *uiDisabledResID*<br/>
@@ -2715,7 +2715,7 @@ virtual BOOL LoadToolBar(
 *uiMenuResID*<br/>
 [in] ID prostředku rastrového obrázku, který odkazuje na regulární nabídky Image.
 
-*Blokováno*<br/>
+*bLocked*<br/>
 [in] Logická hodnota, která určuje, zda je nebo není uzamčen panelu nástrojů. Pokud je tento parametr *TRUE*, panelu nástrojů je uzamčen. V opačném případě není uzamčen panelu nástrojů.
 
 *uiDisabledResID*<br/>
@@ -2761,7 +2761,7 @@ virtual BOOL LoadToolBarEx(
 *params*<br/>
 [in] Odkaz na `CMFCToolBarInfo` objekt, který obsahuje ID prostředků obrázků panelu nástrojů.
 
-*Blokováno*<br/>
+*bLocked*<br/>
 [in] Logická hodnota, která určuje, zda je nebo není uzamčen panelu nástrojů. Pokud tento parametr má hodnotu TRUE, je uzamčené panelu nástrojů. V opačném případě není uzamčen panelu nástrojů.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2851,7 +2851,7 @@ virtual void OnFillBackground(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 ### <a name="remarks"></a>Poznámky
@@ -3872,7 +3872,7 @@ int WrapToolBar(
 *nHeight*<br/>
 [in] Maximální výška panelu nástrojů. Není použito, pokud je plovoucí panel nástrojů.
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení. Pokud má hodnotu NULL, použije se kontext zařízení pro panel nástrojů.
 
 *nColumnWidth*<br/>
@@ -3898,7 +3898,7 @@ AFX_IMPORT_DATA static BOOL m_bDontScaleImages;
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
@@ -3906,4 +3906,3 @@ AFX_IMPORT_DATA static BOOL m_bDontScaleImages;
 [CMFCPopupMenuBar – třída](../../mfc/reference/cmfcpopupmenubar-class.md)<br/>
 [CMFCDropDownToolBar – třída](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
 [Návod: Vkládání ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-

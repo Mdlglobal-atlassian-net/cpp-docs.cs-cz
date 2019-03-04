@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: cf2f97c1c3b389d0ee2b3d4bcdd2d9da2dbb3c8d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 56a3289d5546db21c42d22b5e8544913bdaa78cf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694852"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283654"
 ---
 # <a name="cregkey-class"></a>Cregkey – třída
 
@@ -69,7 +69,7 @@ class CRegKey
 |Název|Popis|
 |----------|-----------------|
 |[CRegKey::CRegKey](#cregkey)|Konstruktor|
-|[Cregkey –:: ~ cregkey –](#dtor)|Destruktor.|
+|[CRegKey::~CRegKey](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -143,7 +143,7 @@ void Attach(HKEY hKey) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*podstrom hKey*<br/>
+*hKey*<br/>
 Popisovač klíče registru.
 
 ### <a name="remarks"></a>Poznámky
@@ -221,20 +221,20 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Odkaz na `CRegKey` objektu.
 
-*podstrom hKey*<br/>
+*hKey*<br/>
 Popisovač klíče registru.
 
-*Druh*<br/>
+*pTM*<br/>
 Ukazatel na catltransactionmanager – objekt
 
 ### <a name="remarks"></a>Poznámky
 
 Vytvoří novou `CRegKey` objektu. Objekt můžete vytvořit ze stávajícího `CRegKey` objektu, nebo z popisovač klíče registru.
 
-##  <a name="dtor"></a>  Cregkey –:: ~ cregkey –
+##  <a name="dtor"></a>  CRegKey::~CRegKey
 
 Destruktor.
 
@@ -362,7 +362,7 @@ LONG GetKeySecurity(
 *si*<br/>
 [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) hodnotu, která určuje požadované informace zabezpečení.
 
-*PSD*<br/>
+*psd*<br/>
 Ukazatel do vyrovnávací paměti, která obdrží kopii popisovače požadované zabezpečení.
 
 *pnBytes*<br/>
@@ -488,7 +488,7 @@ CRegKey& operator= (CRegKey& key) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč zkopírujte.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -894,7 +894,7 @@ Určuje součásti nastavit popisovač zabezpečení. Hodnota může být kombin
 |OWNER_SECURITY_INFORMATION|Nastaví SID vlastníka klíče. Klíč musí mít přístup zápis_vlastníka, nebo musí být vlastníka objektu nebo mít povolené oprávnění SE_TAKE_OWNERSHIP_NAME volající proces.|
 |SACL_SECURITY_INFORMATION|Nastaví seznam klíče systému řízení přístupu (SACL). Klíč musí mít ACCESS_SYSTEM_SECURITY přístup. Správný způsob, jak získat tento přístup je povolit SE_SECURITY_NAME [oprávnění](/windows/desktop/secauthz/privileges) v přístupovém tokenu aktuální volajícího otevřít popisovač pro ACCESS_SYSTEM_SECURITY přístup a potom zakažte oprávnění.|
 
-*PSD*<br/>
+*psd*<br/>
 Ukazatel [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) struktura, která určuje atributy zabezpečení k nastavení pro zadaný klíč.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1056,7 +1056,7 @@ Dvě původní verze `SetValue` jsou označeny jako ATL_DEPRECATED a by měl bý
 
 Třetí volání metody [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázkový model DCOM](../../visual-cpp-samples.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

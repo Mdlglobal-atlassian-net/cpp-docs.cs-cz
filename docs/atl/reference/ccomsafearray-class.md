@@ -28,12 +28,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: 861fdefe19a0c5b78a7874be3386873d6c253a3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 0262764c950b01acdb610873a995a9a6fd912997
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521411"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280677"
 ---
 # <a name="ccomsafearray-class"></a>Ccomsafearray – třída
 
@@ -58,7 +58,7 @@ Typ dat uložených v poli.
 |Název|Popis|
 |----------|-----------------|
 |[CComSafeArray::CComSafeArray](#ccomsafearray)|Konstruktor|
-|[Ccomsafearray –:: ~ ccomsafearray –](#dtor)|Destruktor.|
+|[CComSafeArray::~CComSafeArray](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -121,7 +121,7 @@ A `CComSafeArray` může obsahovat následující dílčí typ VARIANT datové t
 |VT_UI2|ushort|
 |VT_UI4|uint|
 |VT_UI4|ulong|
-|VT_UI8|ULONGLONG|
+|VT_UI8|ulonglong|
 |VT_R4|float|
 |VT_R8|double|
 |VT_DECIMAL|desetinné ukazatele|
@@ -154,7 +154,7 @@ Ukazatel `SAFEARRAY` objektu.
 *ulCount*<br/>
 Počet objektů, které chcete přidat do pole.
 
-*PT*<br/>
+*pT*<br/>
 Ukazatel na jeden nebo více objektů, které mají být přidány do pole.
 
 *t*<br/>
@@ -235,7 +235,7 @@ Ukazatel `SAFEARRAY` struktury. Konstruktor používá tuto adresu k vytvoření
 
 Vytvoří `CComSafeArray` objektu.
 
-##  <a name="dtor"></a>  Ccomsafearray –:: ~ ccomsafearray –
+##  <a name="dtor"></a>  CComSafeArray::~CComSafeArray
 
 Destruktor.
 
@@ -362,7 +362,7 @@ T& GetAt(LONG lIndex) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Index*<br/>
+*lIndex*<br/>
 Indexové číslo hodnotu jako pole k vrácení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -458,7 +458,7 @@ Vrátí typ dat uložených v poli, které může být jedno z následujících 
 |VT_UI2|ushort|
 |VT_UI4|uint|
 |VT_UI4|ulong|
-|VT_UI8|ULONGLONG|
+|VT_UI8|ulonglong|
 |VT_R4|float|
 |VT_R8|double|
 |VT_DECIMAL|desetinné ukazatele|
@@ -561,7 +561,7 @@ T& operator[]int nindex) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Index, nIndex*<br/>
+*lIndex, nIndex*<br/>
 Indexové číslo požadovaný element v poli.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -643,7 +643,7 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*Index*<br/>
+*lIndex*<br/>
 Číslo indexu elementu pole pro nastavení.
 
 *t*<br/>
@@ -660,7 +660,7 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 *BCopy* příznak je vzít v úvahu při prvky typu BSTR nebo VARIANTU jsou přidány do pole. Výchozí hodnota true zajistí, že nová kopie je provedeno dat, když bude prvek přidán do pole.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Datový typ SAFEARRAY](/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)<br/>
 [CComSafeArray::Create](#create)<br/>

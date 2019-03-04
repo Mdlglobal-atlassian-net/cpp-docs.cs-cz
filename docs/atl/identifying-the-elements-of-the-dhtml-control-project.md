@@ -5,12 +5,12 @@ helpviewer_keywords:
 - HTML controls, ATL support
 - DHTML controls, ATL support
 ms.assetid: b627547a-3768-4346-9900-4b7a21fb8e27
-ms.openlocfilehash: e38b94e200754ce9dd37df2bfb17dfaa32cafe49
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3cb250c68d5ba36dc3cf502b871f62eec8f1861c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175703"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283875"
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>Identifikace prvků projektu ovládací prvek DHTML
 
@@ -51,7 +51,6 @@ Průvodce ovládacími prvky ATL generuje ve zdroji HTML a soubor .cpp ovládac�
 
 Zobrazit [vytvoření ovládacího prvku ATL DHTML](../atl/creating-an-atl-dhtml-control.md) začít sestavovat ovládací prvek DHTML. Zobrazit [testování vlastností a událostí pomocí testovacího kontejneru](../mfc/testing-properties-and-events-with-test-container.md) informace o tom, jak získat přístup ke kontejneru testů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora pro ovládací prvek DHTML](../atl/atl-support-for-dhtml-controls.md)
-

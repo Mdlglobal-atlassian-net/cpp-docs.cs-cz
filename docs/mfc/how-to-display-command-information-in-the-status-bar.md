@@ -7,12 +7,12 @@ helpviewer_keywords:
 - status bars [MFC], message area
 - status bars [MFC], displaying command information
 ms.assetid: de895cbe-61ee-46bf-9787-76b247527d6d
-ms.openlocfilehash: 6da45edf611d70920340d8f9a9c2fd8de5cc0307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c93787b3799306d6008299e7c1be6e429bc4c2d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654100"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282315"
 ---
 # <a name="how-to-display-command-information-in-the-status-bar"></a>Postupy: Zobrazení informací o příkazu ve stavovém řádku
 
@@ -22,7 +22,6 @@ Můžete přidat tuto nápovědu stavový řádek tak, že definujete řetězce 
 
 Ve výchozím nastavení, Průvodce aplikací přidá **AFX_IDS_IDLEMESSAGE**, ID pro standardní zprávy "Připraveno", které se zobrazí, když program čeká na nové zprávy. Pokud zadáte možnost Context-Sensitive Help v Průvodci aplikací, zprávy se změní na "Nápovědy, stiskněte klávesu F1."
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zpracování a mapování zpráv](../mfc/message-handling-and-mapping.md)
-

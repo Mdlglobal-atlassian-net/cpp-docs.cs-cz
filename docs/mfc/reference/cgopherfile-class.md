@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CGopherFile [MFC], CGopherFile
 ms.assetid: 3ca9898f-8cdb-4495-bbde-46d40100feda
-ms.openlocfilehash: 9e5fbdcd14c0f988e894718f357d40e4b238c7c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9bb242cb53593862cb51e0c193eb739625127adc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658195"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285188"
 ---
 # <a name="cgopherfile-class"></a>Cgopherfile – třída
 
@@ -46,11 +46,11 @@ Další informace o tom, `CGopherFile` funguje s jinými třídami MFC Internetu
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cfile –](../../mfc/reference/cfile-class.md)
+[CFile](../../mfc/reference/cfile-class.md)
 
-[Cstdiofile –](../../mfc/reference/cstdiofile-class.md)
+[CStdioFile](../../mfc/reference/cstdiofile-class.md)
 
-[Cinternetfile –](../../mfc/reference/cinternetfile-class.md)
+[CInternetFile](../../mfc/reference/cinternetfile-class.md)
 
 `CGopherFile`
 
@@ -78,7 +78,7 @@ CGopherFile(
 
 ### <a name="parameters"></a>Parametry
 
-*hfile –*<br/>
+*hFile*<br/>
 Popisovač souboru HINTERNET.
 
 *refLocator*<br/>
@@ -105,7 +105,7 @@ Je nutné `CGopherFile` objektu určeného ke čtení ze souboru během relace g
 
 Nikdy nevytvářejte `CGopherFile` objektu přímo. Namísto toho zavolejte metodu [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) otevřít soubor na gopher serveru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CInternetFile – třída](../../mfc/reference/cinternetfile-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

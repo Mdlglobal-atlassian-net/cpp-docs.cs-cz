@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-ms.openlocfilehash: 921d87de72c13e1971d9b40474bf3d91033c0580
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 054db83e4d8e140af37dcff9a7664ffdf7902325
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529308"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284642"
 ---
 # <a name="index-class"></a>index – třída
 
@@ -43,15 +43,15 @@ class index;
 
 |Název|Popis|
 |----------|-----------------|
-|[Operator--](#operator--)|Sníží každý prvek `index` objektu.|
-|[Operator(MOD) =](#operator_mod_eq)|Vypočítá modulo (zbytek) každého prvku `index` objektu při dělení podle čísla.|
+|[operator--](#operator--)|Sníží každý prvek `index` objektu.|
+|[operator(mod)=](#operator_mod_eq)|Vypočítá modulo (zbytek) každého prvku `index` objektu při dělení podle čísla.|
 |[Operator * =](#operator_star_eq)|Vynásobí každý prvek `index` číslem.|
 |[/ = – operátor](#operator_div_eq)|Vydělí každý prvek `index` číslem.|
-|[index::Operator\[\]](#operator_at)|Vrátí prvek, který je v zadaném indexu.|
+|[index::operator\[\]](#operator_at)|Vrátí prvek, který je v zadaném indexu.|
 |[Operator ++](#operator_add_add)|Zvýší všechny prvky objektu `index` objektu.|
 |[operator+=](#operator_add_eq)|Přičte zadané číslo ke každému prvku objektu `index` objektu.|
 |[operátor =](#operator_eq)|Zkopíruje obsah zadaného `index` do tohoto objektu.|
-|[operátor-=](#operator_-_eq)|Odečte zadané číslo od každého prvku objektu `index` objektu.|
+|[operator-=](#operator_-_eq)|Odečte zadané číslo od každého prvku objektu `index` objektu.|
 
 ### <a name="public-constants"></a>Veřejné konstanty
 
@@ -71,7 +71,7 @@ class index;
 
 **Záhlaví:** amp.h
 
-**Namespace:** souběžnosti
+**Namespace:** Souběžnost
 
 ## <a name="index_ctor"></a> index konstruktor
 
@@ -303,6 +303,6 @@ Index objektu.
 static const int rank = _Rank;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

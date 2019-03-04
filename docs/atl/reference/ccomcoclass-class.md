@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CComCoClass class
 - aggregation [C++], aggregation models
 ms.assetid: 67cfefa4-8df9-47fa-ad58-2d1a1ae25762
-ms.openlocfilehash: 51da70cc1972e6a69e28d7699703f803b6fa8701
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c52e1a95483807f9c842b0b904cd2314258f0e26
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630695"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282640"
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass – třída
 
@@ -87,7 +87,7 @@ Rozhraní modelu COM, která má být vrácena prostřednictvím *pp*.
 *punkOuter*<br/>
 [in] Vnější neznámá nebo řídící neznámou agregace.
 
-*str*<br/>
+*pp*<br/>
 [out] Adresa proměnné ukazatele, která přijímá ukazatel požadovaná rozhraní, pokud bude úspěšné vytvoření.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -159,7 +159,7 @@ static HRESULT Error(
 *lpszDesc*<br/>
 [in] Řetězec popisující chybu. Verze Unicode `Error` Určuje, že *lpszDesc* je typ LPCOLESTR; verze ANSI Určuje typ LPCSTR.
 
-*identifikátor IID*<br/>
+*iid*<br/>
 [in] Identifikátor IID rozhraní definování chyb nebo GUID_NULL (výchozí hodnota), pokud chyba není definován v operačním systému.
 
 *hRes*<br/>
@@ -221,6 +221,6 @@ Výchozí implementace vrací hodnotu NULL. Mohou přepsat tuto metodu s [DECLAR
 
 Další informace o Průvodce projektem ATL naleznete v článku [vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../../atl/atl-class-overview.md)

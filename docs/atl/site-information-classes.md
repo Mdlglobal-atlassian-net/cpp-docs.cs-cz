@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - site information classes
 ms.assetid: 102eae20-7953-4efb-b27b-409885c9c064
-ms.openlocfilehash: 0e6430d5b45c94ec9fb031d89b1af57df23233b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f4483c9f35e2a9380bc52f60fc2fe78a28047db
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594971"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280391"
 ---
 # <a name="site-information-classes"></a>Třídy informací o webu
 
@@ -22,7 +22,6 @@ Následující třídy povolit komunikaci se svou lokalitou objektu:
 
 - [Ioleobjectimpl –](../atl/reference/ioleobjectimpl-class.md) načítá a nastavuje ukazatel objektu lokality. Používá se pro ovládací prvky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../atl/atl-class-overview.md)
-

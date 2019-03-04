@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - improper_scheduler_detach class
 ms.assetid: 30132102-c900-4951-a470-b63b4e3aa2d2
-ms.openlocfilehash: b2fc90656051be62528d0aac600fad67485c81f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e85ff8ea7ffb817c141094649cd39b8becccf53
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643284"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285032"
 ---
 # <a name="improperschedulerdetach-class"></a>improper_scheduler_detach – třída
 
@@ -45,7 +45,7 @@ class improper_scheduler_detach : public std::exception;
 
 **Namespace:** souběžnosti
 
-##  <a name="ctor"></a> improper_scheduler_detach –
+##  <a name="ctor"></a> improper_scheduler_detach
 
 Vytvoří `improper_scheduler_detach` objektu.
 
@@ -57,10 +57,10 @@ improper_scheduler_detach() throw();
 
 ### <a name="parameters"></a>Parametry
 
-*_TEXT*<br/>
+*_Message*<br/>
 Popisná zpráva chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [Scheduler – třída](scheduler-class.md)
