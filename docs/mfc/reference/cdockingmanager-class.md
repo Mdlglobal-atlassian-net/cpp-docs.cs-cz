@@ -1,5 +1,5 @@
 ---
-title: Cdockingmanager – třída
+title: CDockingManager Class
 ms.date: 11/04/2016
 f1_keywords:
 - CDockingManager
@@ -160,14 +160,14 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: e1cc4a4a0d6841523aaafcc1865173ba5402948c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 268a46e1bdecc1ea468c152fd0ed480873c36591
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519974"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260384"
 ---
-# <a name="cdockingmanager-class"></a>Cdockingmanager – třída
+# <a name="cdockingmanager-class"></a>CDockingManager Class
 
 Implementuje základní funkce, které řídí dokovací rozložení v rámci hlavního okna.
 
@@ -300,7 +300,7 @@ Následující příklad ukazuje, jak použít různé metody v `CDockingManager
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cdockingmanager –](../../mfc/reference/cdockingmanager-class.md)
+[CDockingManager](../../mfc/reference/cdockingmanager-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -318,7 +318,7 @@ BOOL AddDockSite(
 
 ### <a name="parameters"></a>Parametry
 
-*Informace o*<br/>
+*info*<br/>
 [in] Odkaz na informace o struktuře, která obsahuje ukotvit podokně zarovnání.
 
 *ppDockBar*<br/>
@@ -594,7 +594,7 @@ virtual AFX_CS_STATUS DeterminePaneAndStatus(
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pt*<br/>
 [in] Umístění v podokně zkontrolovat.
 
 *nSensitivity*<br/>
@@ -663,7 +663,7 @@ void DockPane(
 *nDockBarID*<br/>
 [in] Id ukotvení panelu.
 
-*lprect –*<br/>
+*lpRect*<br/>
 [in] Cílového obdélníku.
 
 ##  <a name="dockpaneleftof"></a>  CDockingManager::DockPaneLeftOf
@@ -863,7 +863,7 @@ virtual CPaneFrameWnd* FrameFromPoint(
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pt*<br/>
 [in] Určuje bod, v souřadnicovém systému obrazovky, chcete-li zkontrolovat.
 
 *pFrameToExclude*<br/>
@@ -1070,7 +1070,7 @@ BOOL InsertDockSite(
 
 ### <a name="parameters"></a>Parametry
 
-*Informace o*<br/>
+*info*<br/>
 [in] Struktura, která obsahuje informace o zarovnání podokno ukotvení.
 
 *dwAlignToInsertAfter*<br/>
@@ -1170,7 +1170,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Zadaný bod.
 
 *dwBarAlignment*<br/>
@@ -1227,7 +1227,7 @@ void LockUpdate(BOOL bLock);
 
 ### <a name="parameters"></a>Parametry
 
-*Blok*<br/>
+*bLock*<br/>
 [in] Hodnota TRUE, pokud je uzamčen v okně; FALSE v opačném případě.
 
 ### <a name="remarks"></a>Poznámky
@@ -1346,7 +1346,7 @@ void OnPaneContextMenu(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Určuje umístění v nabídce.
 
 ##  <a name="panefrompoint"></a>  CDockingManager::PaneFromPoint
@@ -1372,7 +1372,7 @@ virtual CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Určuje bod, v souřadnicovém systému obrazovky, chcete-li zkontrolovat.
 
 *nSensitivity*<br/>
@@ -1640,7 +1640,7 @@ static void SetDockingMode(
 Určuje nový režim ukotvení. Další informace najdete v části poznámky.
 
 *Motiv*<br/>
-Určuje motivu, který se použije pro značek inteligentního dokování. Může být jedna z následujících hodnot výčtu: AFX_SDT_DEFAULT AFX_SDT_VS2005, AFX_SDT_VS2008.
+Určuje motivu, který se použije pro značek inteligentního dokování. Může být jeden z následujících hodnot výčtu: AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1760,11 +1760,11 @@ static AFX_SMARTDOCK_THEME __stdcall GetSmartDockingTheme();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí jednu z následujících hodnot výčtu: AFX_SDT_DEFAULT AFX_SDT_VS2005, AFX_SDT_VS2008.
+Vrátí jednu z následujících hodnot výčtu: AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

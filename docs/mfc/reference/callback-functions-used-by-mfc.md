@@ -9,12 +9,12 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-ms.openlocfilehash: acb7b6c677d03ef1320e24373671a7577c2ccda8
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: e3440530dfe30b6667012c76b2904dbb2786c199
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178431"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262295"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funkce zpětného volání používané v prostředí MFC
 
@@ -107,7 +107,7 @@ BOOL CALLBACK EXPORT AbortFunc(
 *hPr*<br/>
 Určuje kontext zařízení.
 
-*kód*<br/>
+*code*<br/>
 Určuje, zda došlo k chybě. To je 0, pokud nedojde k žádné chybě. Je SP_OUTOFDISK Pokud správce tisku právě volné místo na disku a bude k dispozici více místa na disku aplikace čeká. Pokud *kód* je SP_OUTOFDISK, aplikace nemusí přerušit tiskové úlohy. Pokud tomu tak není, musí poskytovat správce tisku pomocí volání `PeekMessage` nebo `GetMessage` funkce Windows.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -118,10 +118,9 @@ Návratová hodnota funkce obslužné rutiny přerušení je nenulová, pokud je
 
 Skutečný název musí být exportován, jak je popsáno v části poznámky [metodu CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Struktury, styly, zpětná volání a mapy zpráv](structures-styles-callbacks-and-message-maps.md)<br/>
 [Metodu CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects)<br/>
 [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)<br/>
 [Metodu CDC::GrayString](../../mfc/reference/cdc-class.md#graystring)
-

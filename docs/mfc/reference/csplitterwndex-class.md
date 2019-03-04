@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSplitterWndEx [MFC], OnDrawSplitter
 ms.assetid: 33e5eef3-05e1-4a07-a968-bf9207ce8598
-ms.openlocfilehash: fa58dbffc3e6416c18b8124f8e5edfe1ce987815
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8dedad4e99a37b13dc618859c8e6d8a83a65ea76
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538993"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265142"
 ---
 # <a name="csplitterwndex-class"></a>Třída CSplitterWndEx
 
@@ -74,10 +74,10 @@ virtual void OnDrawSplitter(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení. Pokud má parametr hodnotu NULL, rozhraní překreslí aktivní okno.
 
-*nTyp*<br/>
+*nType*<br/>
 [in] Jeden z `CSplitterWnd::ESplitType` hodnot výčtu, která určuje prvku rozdělovač okna pro kreslení. Platné hodnoty jsou `splitBox`, `splitBar`, `splitIntersection`, a `splitBorder`.
 
 *Rect*<br/>
@@ -85,7 +85,7 @@ virtual void OnDrawSplitter(
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../hierarchy-chart.md)<br/>
 [Třídy](mfc-classes.md)<br/>

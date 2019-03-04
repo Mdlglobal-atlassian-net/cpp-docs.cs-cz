@@ -8,12 +8,12 @@ helpviewer_keywords:
 - initializing objects [MFC], document objects
 - initializing views [MFC]
 ms.assetid: 33cb8643-8a16-478c-bc26-eccc734e3661
-ms.openlocfilehash: 2fb557d55576678d8c1199bec20e1fa4c849e1b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0cf9faecbb7e0d74c2199a1a829aa68241e1c019
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612248"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264089"
 ---
 # <a name="initializing-documents-and-views"></a>Inicializace dokumentů a zobrazení
 
@@ -21,7 +21,6 @@ Dokumenty jsou vytvořeny dvěma různými způsoby, takže dokumentové třídy
 
 Zobrazení vytvořené po vytvoření své dokumenty. Nejvhodnější čas k inicializaci zobrazení se po dokončení vytváření dokumentů, okno rámce a zobrazení rozhraní framework. Zobrazení můžete inicializovat tak, že přepíšete [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) členskou funkci [CView](../mfc/reference/cview-class.md). Pokud je potřeba znovu inicializovat nebo úpravě pokaždé, když dokumentovat změny, můžete přepsat [OnUpdate](../mfc/reference/cview-class.md#onupdate).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Inicializace a uklízení dokumentů a zobrazení](../mfc/initializing-and-cleaning-up-documents-and-views.md)
-

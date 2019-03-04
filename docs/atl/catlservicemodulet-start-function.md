@@ -1,5 +1,5 @@
 ---
-title: Catlservicemodulet::Start – funkce
+title: CAtlServiceModuleT::Start Function
 ms.date: 11/04/2016
 f1_keywords:
 - CServiceModule.Start
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - Start method
 ms.assetid: b5193a23-41bc-42d2-8d55-3eb43dc62238
-ms.openlocfilehash: 0730bad600190ed06c6f40a4a7cf396f0924a5fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 806cd8ec353e2111d249472fb9aa885e7548baab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476625"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265155"
 ---
-# <a name="catlservicemoduletstart-function"></a>Catlservicemodulet::Start – funkce
+# <a name="catlservicemoduletstart-function"></a>CAtlServiceModuleT::Start Function
 
 Když je služba spuštěna, `_tWinMain` volání `CAtlServiceModuleT::WinMain`, která pak volá `CAtlServiceModuleT::Start`.
 
@@ -23,8 +23,7 @@ Když je služba spuštěna, `_tWinMain` volání `CAtlServiceModuleT::WinMain`,
 > [!NOTE]
 >  Selhání `StartServiceCtrlDispatcher` pro připojení k řízení služeb manager (SCM) pravděpodobně znamená, že není program spuštěn jako služba. V tomto případě, že program volá `CAtlServiceModuleT::Run` přímo tak, aby se program může spustit jako místního serveru. Další informace o spuštění programu jako místního serveru najdete v tématu [tipy k ladění](../atl/debugging-tips.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Služby](../atl/atl-services.md)<br/>
-[Catlservicemodulet::Start –](../atl/reference/catlservicemodulet-class.md#start)
-
+[CAtlServiceModuleT::Start](../atl/reference/catlservicemodulet-class.md#start)

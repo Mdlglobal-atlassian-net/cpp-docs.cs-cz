@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property sheets, MFC
 - tab dialog boxes
 ms.assetid: e1bede2b-0285-4b88-a052-0f8a372807a2
-ms.openlocfilehash: fa5e48459b4d53ff6e5a80e7b315826f266de29f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fa8ee3518ad2b32e0eace77f0961eb86ccde1822
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654386"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261190"
 ---
 # <a name="property-sheets-and-property-pages-in-mfc"></a>Seznamy vlastností a stránky vlastností v prostředí MFC
 
@@ -27,7 +27,6 @@ Seznam vlastností je zvláštní druh dialogové okno, které se obecně použ�
 > [!NOTE]
 >  Když se snažíte zobrazit seznam vlastností s použitím `CPropertySheet::DoModal`, systém může vygenerovat první odpovídající výjimce. Touto výjimkou způsobeno systém se pokouší změnit [styly oken](../mfc/reference/styles-used-by-mfc.md#window-styles) objektu předtím, než byl vytvořen objekt. Další informace o této výjimky a také jak jí předcházet, nebo ji zpracovat, naleznete v tématu [CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Seznamy vlastností](../mfc/property-sheets-mfc.md)
-

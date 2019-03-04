@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: c82b06903f0705a79a15b263b1dbdfc6aee4c8ca
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 1834c378246835314002cdf05fe9a294b609c4e4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176507"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259578"
 ---
 # <a name="crecttracker-class"></a>Crecttracker – třída
 
@@ -123,7 +123,7 @@ virtual void AdjustRect(
 *nHandle*<br/>
 Index popisovač použitý.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Ukazatel na aktuální velikost pravoúhelníku. (Velikost obdélníku je dán jeho výška a šířka.)
 
 ### <a name="remarks"></a>Poznámky
@@ -180,7 +180,7 @@ void Draw(CDC* pDC) const;
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel na kontext zařízení na základě které chcete kreslit.
 
 ### <a name="remarks"></a>Poznámky
@@ -201,13 +201,13 @@ virtual void DrawTrackerRect(
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Ukazatel `RECT` nakreslit obdélník, který obsahuje.
 
 *pWndClipTo*<br/>
 Ukazatel na okno pro použití v obdélníku oříznutí.
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel na kontext zařízení na základě které chcete kreslit.
 
 *pWnd*<br/>
@@ -270,7 +270,7 @@ int HitTest(CPoint point) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 Bod, v souřadnicích zařízení pro testování.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -424,7 +424,7 @@ BOOL Track(
 *pWnd*<br/>
 Okno objekt, který obsahuje obdélníku.
 
-*Bod*<br/>
+*point*<br/>
 Souřadnice zařízení aktuální pozice myši vzhledem ke klientské oblasti.
 
 *bAllowInvert*<br/>
@@ -461,7 +461,7 @@ BOOL TrackRubberBand(
 *pWnd*<br/>
 Okno objekt, který obsahuje obdélníku.
 
-*Bod*<br/>
+*point*<br/>
 Souřadnice zařízení aktuální pozice myši vzhledem ke klientské oblasti.
 
 *bAllowInvert*<br/>
@@ -479,7 +479,7 @@ Tuto funkci bude zachycení myši, dokud uživatel uvolní levé tlačítko myš
 
 Sledování probíhá s typ pružné pásma výběr z pravého dolního popisovače. Pokud převrácení je povolený, můžou mít velikost obdélník přetažením buď nahoru a vlevo nebo dolů a doprava.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC sledovací modul](../../visual-cpp-samples.md)<br/>
 [Ukázky knihovny MFC DRAWCLI](../../visual-cpp-samples.md)<br/>

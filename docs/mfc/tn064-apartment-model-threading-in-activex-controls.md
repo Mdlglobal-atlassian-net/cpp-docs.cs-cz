@@ -1,5 +1,5 @@
 ---
-title: 'TN064: Model apartment práce s vlákny v ovládacích prvcích ActiveX'
+title: 'TN064: Model Apartment práce s vlákny v ovládacích prvcích ActiveX'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.controls.activex
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - multithread container [MFC]
 - apartment model threading [MFC]
 ms.assetid: b2ab4c88-6954-48e2-9a74-01d4a60df073
-ms.openlocfilehash: 37f8af1e4bd0fedf0b1ab14a90afdda3916c5391
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6f02b2106693226f6380e935a54e04e10d5b4f8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665554"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261164"
 ---
-# <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064: Model apartment práce s vlákny v ovládacích prvcích ActiveX
+# <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064: Model Apartment práce s vlákny v ovládacích prvcích ActiveX
 
 > [!NOTE]
 >  Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
@@ -107,8 +107,7 @@ Pokud váš projekt byl vytvořen starší verzi ControlWizard, svůj existujíc
 
 Pokud váš ovládací prvek není postupujte z pravidel pro apartment model práce s vlákny, nesmí předat *afxRegApartmentThreading* v tomto parametru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
-

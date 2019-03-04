@@ -1,5 +1,5 @@
 ---
-title: Cdocksite – třída
+title: CDockSite Class
 ms.date: 10/18/2018
 f1_keywords:
 - CDockSite
@@ -86,14 +86,14 @@ helpviewer_keywords:
 - CDockSite [MFC], ShowRow
 - CDockSite [MFC], SwapRows
 ms.assetid: 0fcfff79-5f50-4281-b2de-a55653bbea40
-ms.openlocfilehash: 08acf9e47a26d4cbc5bcb96cbff086b19768e972
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccd1bc115f92e0c2605fe5f587a0567f672c6c09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486304"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259799"
 ---
-# <a name="cdocksite-class"></a>Cdocksite – třída
+# <a name="cdocksite-class"></a>CDockSite Class
 
 Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
 
@@ -168,11 +168,11 @@ Následující příklad ukazuje, jak vytvořit objekt `CDockSite` třídy.
 
 [CObject –](../../mfc/reference/cobject-class.md) [CCmdTarget –](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)
 
-[Cbasepane –](../../mfc/reference/cbasepane-class.md) [cdocksite –](../../mfc/reference/cdocksite-class.md)
+[CBasePane](../../mfc/reference/cbasepane-class.md) [CDockSite](../../mfc/reference/cdocksite-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxDockSite.h
+**Header:** afxDockSite.h
 
 ##  <a name="addrow"></a>  CDockSite::AddRow
 
@@ -325,7 +325,7 @@ virtual void DockPane(
 
 [in] *dockMethod*<br/>
 
-[in] *lprect –*<br/>
+[in] *lpRect*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
@@ -634,7 +634,7 @@ virtual CPane* PaneFromPoint(CPoint pt);
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pt*<br/>
 [in] Bod, v souřadnicovém systému obrazovky, podokna pro načtení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -825,7 +825,7 @@ void SwapRows(
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

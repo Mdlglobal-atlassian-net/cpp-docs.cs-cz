@@ -13,12 +13,12 @@ helpviewer_keywords:
 - threading [MFC]
 - user interface threads [C++]
 ms.assetid: 979605f8-3988-44b5-ac9c-b8cce7fcce14
-ms.openlocfilehash: c707c1c117bbc0005b2b3da4ed39f083ae407b27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcffc2964d8e15fd47f437366863748175e12622
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643414"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258343"
 ---
 # <a name="multithreading-with-c-and-mfc"></a>Multithreading s použitím jazyka C++ a prostředí MFC
 
@@ -32,7 +32,7 @@ Pokud chcete, můžete vytvořit další vlákna ve vaší aplikaci. Můžete ch
 
 Knihovna MFC rozlišuje dva typy vláken: vlákna uživatelského rozhraní a pracovních vláken. Vlákna uživatelského rozhraní se běžně používají ke zpracování vstupu uživatele a reagují na události a zprávy generované uživatelem. Pracovní vlákna se běžně používají k dokončení úlohy, jako je například přepočet, které nevyžadují, aby uživatelský vstup. Rozhraní API Win32 nerozlišuje mezi typy vláken; potřebuje pouze znát počáteční adresu vlákna a mohli začít ke spuštění vlákna. Knihovna MFC zpracovává vlákna uživatelského rozhraní speciálně poskytnutím zprávy odeslané pro události v uživatelském rozhraní. `CWinApp` je příkladem objektu vlákna uživatelského rozhraní, protože se odvozuje od `CWinThread` a zpracovává události a zprávy generované uživatelem.
 
-Zvláštní pozornost by měla být věnována situacím, kdy více než jedno vlákno může vyžadovat přístup ke stejnému objektu. [Multithreading: Programovací tipy](multithreading-programming-tips.md) popisuje techniky, které můžete použít k vyřešení problémů, které mohou nastat v těchto situacích. [Multithreading: Jak používat synchronizační třídy](multithreading-how-to-use-the-synchronization-classes.md) popisuje způsob použití třídy, které jsou k dispozici pro synchronizaci přístupu z více vláken na jeden objekt.
+Zvláštní pozornost by měla být věnována situacím, kdy více než jedno vlákno může vyžadovat přístup ke stejnému objektu. [Multithreading: Tipy pro programování](multithreading-programming-tips.md) popisuje techniky, které můžete použít k vyřešení problémů, které mohou nastat v těchto situacích. [Multithreading: Jak používat synchronizační třídy](multithreading-how-to-use-the-synchronization-classes.md) popisuje způsob použití třídy, které jsou k dispozici pro synchronizaci přístupu z více vláken na jeden objekt.
 
 Psaní a ladění programování s je ve své podstatě složitým a záludným, protože musíte zajistit, že současně objekty přístupné více než jedno vlákno. Témata multithreadingu neučí základy vícevláknové programování, pouze jak použít knihovnu MFC ve vašem vícevláknovém programu. Vícevláknové knihovny MFC vzorků zahrnutých v jazyce Visual C++ ukazují několik vícevláknových funkcí přidání a rozhraní Win32 API, která nejsou zahrnuta knihovnou MFC; ale že jsou určeny pouze pro jako výchozí bod.
 
@@ -52,6 +52,6 @@ Další informace o podpoře multithreadingu knihovnou MFC naleznete v následuj
 
 - [Multithreading: Kdy použít synchronizační třídy](multithreading-when-to-use-the-synchronization-classes.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora multithreadingu ve starším kódu (Visual C++)](multithreading-support-for-older-code-visual-cpp.md)

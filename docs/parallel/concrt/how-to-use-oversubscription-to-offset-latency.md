@@ -1,18 +1,18 @@
 ---
-title: 'Postupy: Kompenzace latence vytvořením nadbytečného počtu vláken'
+title: 'Postupy: Latence vytvořením nadbytečného'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - oversubscription, using [Concurrency Runtime]
 - using oversubscription [Concurrency Runtime]
 ms.assetid: a1011329-2f0a-4afb-b599-dd4043009a10
-ms.openlocfilehash: fc16fa5cfeddf82b9fcb0164796fb7f4c90aef15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d74a081f71f044cab90a8e6fdc64530eaaf87ed8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653073"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257940"
 ---
-# <a name="how-to-use-oversubscription-to-offset-latency"></a>Postupy: Kompenzace latence vytvořením nadbytečného počtu vláken
+# <a name="how-to-use-oversubscription-to-offset-latency"></a>Postupy: Latence vytvořením nadbytečného
 
 Překryvný odběr můžete zlepšit celkové efektivity některé aplikace, které obsahují úloh, které mají vysoké množství latence. Toto téma ukazuje, jak nadbytečného latenci, které je způsobeno tím, že čtení dat z připojení k síti.
 
@@ -78,8 +78,7 @@ Následující příklad upravuje text `download` metoda použijte vzor RAII zaj
 
 [!code-cpp[concrt-download-oversubscription#3](../../parallel/concrt/codesnippet/cpp/how-to-use-oversubscription-to-offset-latency_3.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Kontexty](../../parallel/concrt/contexts.md)<br/>
 [Context::oversubscribe – metoda](reference/context-class.md#oversubscribe)
-

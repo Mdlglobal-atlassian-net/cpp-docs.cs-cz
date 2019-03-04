@@ -10,12 +10,12 @@ helpviewer_keywords:
 - type-safe access to dialog box controls
 - MFC dialog boxes [MFC], type-safe access to controls
 ms.assetid: 67021025-dd93-4d6a-8bed-a1348fe50685
-ms.openlocfilehash: 61a4df25ccc310ff65e1789b5405fcf395213a3a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b8e5aef61d1a7c7277f2a6bd37b81bd156bb837
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612300"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264154"
 ---
 # <a name="type-safe-access-to-controls-in-a-dialog-box"></a>Typově bezpečný přístup k ovládacím prvkům v dialogovém okně
 
@@ -27,7 +27,6 @@ Existují dva přístupy k propojení mezi ovládacím prvkem v dialogovém okn�
 
 - [S použitím průvodců kódem](../mfc/type-safe-access-to-controls-with-code-wizards.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Dialogová okna](../mfc/dialog-boxes.md)
-

@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 8cfaef2c8b064cb9faa8c0f6bf65a8868eed7cc7
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 9cedcfbfb662d7d4d635a02b82ea45828c54b958
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178737"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259513"
 ---
 # <a name="cricheditview-class"></a>Cricheditview – třída
 
@@ -206,7 +206,7 @@ Příklad použití zobrazení RichEdit v aplikaci knihovny MFC, najdete v člá
 
 [CView](../../mfc/reference/cview-class.md)
 
-[Cctrlview –](../../mfc/reference/cctrlview-class.md)
+[CCtrlView](../../mfc/reference/cctrlview-class.md)
 
 `CRichEditView`
 
@@ -263,7 +263,7 @@ void DoPaste(
 *dataobj*<br/>
 [Coledataobject –](../../mfc/reference/coledataobject-class.md) obsahující dat vložte.
 
-*CF*<br/>
+*cf*<br/>
 Požadovaný formát schránky.
 
 *hMetaPict*<br/>
@@ -683,7 +683,7 @@ static BOOL AFX_CDECL IsRichEditFormat(CLIPFORMAT cf);
 
 ### <a name="parameters"></a>Parametry
 
-*CF*<br/>
+*cf*<br/>
 Formát schránky, které vás zajímají.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1046,7 +1046,7 @@ long PrintInsideRect(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel na kontext zařízení pro výstupní oblasti.
 
 *rectLayout*<br/>
@@ -1086,7 +1086,7 @@ long PrintPage(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel na kontext zařízení pro výstup stránky.
 
 *nIndexStart*<br/>
@@ -1159,7 +1159,7 @@ void SetCharFormat(CHARFORMAT2 cf);
 
 ### <a name="parameters"></a>Parametry
 
-*CF*<br/>
+*cf*<br/>
 [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) struktury obsahující nové výchozí formátování atributy.
 
 ### <a name="remarks"></a>Poznámky
@@ -1226,7 +1226,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 
 ### <a name="parameters"></a>Parametry
 
-*PF*<br/>
+*pf*<br/>
 [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) atributů formátování odstavce struktury obsahující nové výchozí nastavení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1282,7 +1282,7 @@ Přepsání této funkce můžete upravit způsob zobrazení pro úpravy s form�
 
 [!code-cpp[NVC_MFCDocView#163](../../mfc/codesnippet/cpp/cricheditview-class_13.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC WORDPAD](../../visual-cpp-samples.md)<br/>
 [CCtrlView – třída](../../mfc/reference/cctrlview-class.md)<br/>

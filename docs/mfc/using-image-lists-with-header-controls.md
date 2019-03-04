@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], image lists
 - image lists [MFC], header controls
 ms.assetid: d5e9b310-6278-406c-909c-eefa09549a47
-ms.openlocfilehash: 5c623024ef64f49e3379ef02154cda72d445a197
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d9a4a0c655fa46c15d8c4d9b2b4e90cd34c2937
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545246"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264284"
 ---
 # <a name="using-image-lists-with-header-controls"></a>Použití seznamů obrázků s ovládacími prvky záhlaví
 
@@ -42,7 +42,6 @@ Podrobné informace o používá hodnoty parametrů naleznete v příslušné [C
 > [!NOTE]
 >  Je možné mít více ovládacích prvků pomocí stejného seznamu obrázků. Například v ovládacím prvku seznamu standardní zobrazení, může dojít obrázek seznamu (16 × 16 pixelů imagí) používaných zobrazení malou ikonu ovládacího prvku zobrazení seznamu a položky záhlaví ovládacího prvku zobrazení seznamu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CHeaderCtrl](../mfc/using-cheaderctrl.md)
-

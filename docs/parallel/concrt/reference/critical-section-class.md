@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-ms.openlocfilehash: a08cb5049d742a9740361595bd931a2f7a48bd16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f334b159ae39f48006a135c6e36d413b737a7344
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498761"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260943"
 ---
 # <a name="criticalsection-class"></a>critical_section – třída
 
@@ -43,7 +43,7 @@ class critical_section;
 
 |Název|Popis|
 |----------|-----------------|
-|[critical_section::scoped_lock – třída](#critical_section__scoped_lock_class)|Výjimka Obálka bezpečné RAII pro `critical_section` objektu.|
+|[critical_section::scoped_lock Class](#critical_section__scoped_lock_class)|Výjimka Obálka bezpečné RAII pro `critical_section` objektu.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
@@ -57,10 +57,10 @@ class critical_section;
 |Název|Popis|
 |----------|-----------------|
 |[lock](#lock)|Získá tento kritický oddíl.|
-|[native_handle –](#native_handle)|Pokud takové existuje, vrátí platformu konkrétní nativní popisovač.|
+|[native_handle](#native_handle)|Pokud takové existuje, vrátí platformu konkrétní nativní popisovač.|
 |[try_lock](#try_lock)|Pokusí se získat zámek bez blokování.|
 |[try_lock_for](#try_lock_for)|Pokusí se získat zámek bez blokování pro určitý počet milisekund.|
-|[Odemknutí](#unlock)|Odemkne důležité části.|
+|[unlock](#unlock)|Odemkne důležité části.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -147,7 +147,7 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
 *_Critical_section*<br/>
 Kritická sekce uzamknout.
 
-##  <a name="critical_section__scoped_lock_dtor"></a> scoped_lock:: ~ scoped_lock
+##  <a name="critical_section__scoped_lock_dtor"></a> scoped_lock::~scoped_lock
 
 Odstraní `scoped_lock` objektu a uvolní kritický oddíl zadaný v konstruktoru.
 
@@ -192,7 +192,7 @@ Odemkne důležité části.
 void unlock();
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [reader_writer_lock – třída](reader-writer-lock-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Cscrollview – třída
+title: CScrollView Class
 ms.date: 11/04/2016
 f1_keywords:
 - CScrollView
@@ -28,14 +28,14 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: 9ec6177b1f2cb071a6aa284c2936f3af4dbe4634
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea95de2bceab290f94bb7c0e7bbc94a90048ee13
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468273"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259253"
 ---
-# <a name="cscrollview-class"></a>Cscrollview – třída
+# <a name="cscrollview-class"></a>CScrollView Class
 
 A [CView](../../mfc/reference/cview-class.md) s možností posouvání.
 
@@ -162,7 +162,7 @@ void FillOutsideRect(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Kontext zařízení, ve kterém má být provedeno naplnění.
 
 *pBrush*<br/>
@@ -285,7 +285,7 @@ void ScrollToPosition(POINT pt);
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pt*<br/>
 Bod tak, aby přejděte v logických jednotkách. `x` Člena musí být kladné číslo (větší než nebo rovna 0 až do celkové velikosti zobrazení). Totéž platí pro `y` člen MM_TEXT po režim mapování. `y` Člen je v režimech mapování než MM_TEXT záporné.
 
 ### <a name="remarks"></a>Poznámky
@@ -374,7 +374,7 @@ Režim mapování musí nastavit na některou z mapování režimy Windows s vý
 
 [!code-cpp[NVC_MFCDocView#169](../../mfc/codesnippet/cpp/cscrollview-class_6.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC DIBLOOK](../../visual-cpp-samples.md)<br/>
 [CView – třída](../../mfc/reference/cview-class.md)<br/>

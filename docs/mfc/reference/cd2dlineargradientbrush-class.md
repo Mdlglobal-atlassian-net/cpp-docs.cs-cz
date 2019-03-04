@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CD2DLinearGradientBrush [MFC], m_LinearGradientBrushProperties
 - CD2DLinearGradientBrush [MFC], m_pLinearGradientBrush
 ms.assetid: d4be9ff9-0ea8-45e6-9b8d-f3bc5673cbac
-ms.openlocfilehash: 03c370be5bcfc61e1dd398604f27313d3de15f8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d86235893d1f238f4cba9c927fad17f29060e591
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635821"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258721"
 ---
 # <a name="cd2dlineargradientbrush-class"></a>Cd2dlineargradientbrush – třída
 
@@ -54,7 +54,7 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 |Název|Popis|
 |----------|-----------------|
 |[CD2DLinearGradientBrush::CD2DLinearGradientBrush](#cd2dlineargradientbrush)|Vytvoří objekt cd2dlineargradientbrush –.|
-|[Cd2dlineargradientbrush –:: ~ cd2dlineargradientbrush –](#_dtorcd2dlineargradientbrush)|Destruktor. Volá se, když se likviduje objektu D2D štětec lineárního přechodu.|
+|[CD2DLinearGradientBrush::~CD2DLinearGradientBrush](#_dtorcd2dlineargradientbrush)|Destruktor. Volá se, když se likviduje objektu D2D štětec lineárního přechodu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -63,7 +63,7 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 |[CD2DLinearGradientBrush::Attach](#attach)|Bude k obrazci existujících prostředků rozhraní pro objekt|
 |[CD2DLinearGradientBrush::Create](#create)|Vytvoří cd2dlineargradientbrush –. (Přepíše [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
 |[CD2DLinearGradientBrush::Destroy](#destroy)|Odstraní objekt cd2dlineargradientbrush –. (Přepíše [CD2DGradientBrush::Destroy](../../mfc/reference/cd2dgradientbrush-class.md#destroy).)|
-|[CD2DLinearGradientBrush::detach](#detach)|Odpojí prostředků rozhraní z objektu|
+|[CD2DLinearGradientBrush::Detach](#detach)|Odpojí prostředků rozhraní z objektu|
 |[CD2DLinearGradientBrush::Get](#get)|Vrátí ID2D1LinearGradientBrush rozhraní|
 |[CD2DLinearGradientBrush::GetEndPoint](#getendpoint)|Načte poslední souřadnice lineárního přechodu|
 |[CD2DLinearGradientBrush::GetStartPoint](#getstartpoint)|Načte výchozí souřadnice lineárního přechodu|
@@ -87,11 +87,11 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cd2dresource –](../../mfc/reference/cd2dresource-class.md)
+[CD2DResource](../../mfc/reference/cd2dresource-class.md)
 
-[Cd2dbrush –](../../mfc/reference/cd2dbrush-class.md)
+[CD2DBrush](../../mfc/reference/cd2dbrush-class.md)
 
-[Cd2dgradientbrush –](../../mfc/reference/cd2dgradientbrush-class.md)
+[CD2DGradientBrush](../../mfc/reference/cd2dgradientbrush-class.md)
 
 `CD2DLinearGradientBrush`
 
@@ -99,7 +99,7 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 
 **Záhlaví:** afxrendertarget.h
 
-##  <a name="_dtorcd2dlineargradientbrush"></a>  Cd2dlineargradientbrush –:: ~ cd2dlineargradientbrush –
+##  <a name="_dtorcd2dlineargradientbrush"></a>  CD2DLinearGradientBrush::~CD2DLinearGradientBrush
 
 Destruktor. Volá se, když se likviduje objektu D2D štětec lineárního přechodu.
 
@@ -187,7 +187,7 @@ Odstraní objekt cd2dlineargradientbrush –.
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DLinearGradientBrush::detach
+##  <a name="detach"></a>  CD2DLinearGradientBrush::Detach
 
 Odpojí prostředků rozhraní z objektu
 
@@ -273,7 +273,7 @@ void SetEndPoint(CD2DPointF point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 Koncové dvojrozměrné souřadnice lineárního přechodu v souřadnicového prostoru štětec
 
 ##  <a name="setstartpoint"></a>  CD2DLinearGradientBrush::SetStartPoint
@@ -286,9 +286,9 @@ void SetStartPoint(CD2DPointF point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 Počáteční dvojrozměrné souřadnice lineárního přechodu v souřadnicového prostoru štětec
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

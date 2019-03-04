@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-ms.openlocfilehash: 0d1c28501abc86d09b683b0ed91f831fe8697306
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2eff40b11e4e9a5981ad85c37c8345abefb13fed
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462048"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265532"
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy – třída
 
@@ -34,16 +34,16 @@ class SchedulerPolicy;
 
 |Název|Popis|
 |----------|-----------------|
-|[Schedulerpolicy –](#ctor)|Přetíženo. Vytvoří novou zásadu plánovače a naplní ji hodnotami pro [klíče zásad](concurrency-namespace-enums.md) podporované plánovači Concurrency Runtime a správce prostředků.|
+|[SchedulerPolicy](#ctor)|Přetíženo. Vytvoří novou zásadu plánovače a naplní ji hodnotami pro [klíče zásad](concurrency-namespace-enums.md) podporované plánovači Concurrency Runtime a správce prostředků.|
 |[~SchedulerPolicy Destructor](#dtor)|Odstraní zásadu plánovače.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[Getpolicyvalue –](#getpolicyvalue)|Načte hodnotu klíče zásad zadaný jako `key` parametru.|
+|[GetPolicyValue](#getpolicyvalue)|Načte hodnotu klíče zásad zadaný jako `key` parametru.|
 |[Setconcurrencylimits –](#setconcurrencylimits)|Zároveň nastaví `MinConcurrency` a `MaxConcurrency` zásady `SchedulerPolicy` objektu.|
-|[Setpolicyvalue –](#setpolicyvalue)|Nastaví hodnotu klíče zásad zadaný jako `key` parametr a vrátí původní hodnotu.|
+|[SetPolicyValue](#setpolicyvalue)|Nastaví hodnotu klíče zásad zadaný jako `key` parametr a vrátí původní hodnotu.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
@@ -75,7 +75,7 @@ unsigned int GetPolicyValue(PolicyElementKey key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč zásad načíst hodnotu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -182,7 +182,7 @@ unsigned int SetPolicyValue(
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč zásad a nastavit hodnotu pro.
 
 *value*<br/>
@@ -200,11 +200,10 @@ Metoda vyvolá výjimku [invalid_scheduler_policy_value –](invalid-scheduler-p
 
 Všimněte si, že tato metoda není možné nastavit `MinConcurrency` nebo `MaxConcurrency` zásady. Chcete-li nastavit tyto hodnoty, použijte [setconcurrencylimits –](#setconcurrencylimits) metody.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
-[Policyelementkey –](concurrency-namespace-enums.md)<br/>
+[PolicyElementKey](concurrency-namespace-enums.md)<br/>
 [CurrentScheduler – třída](currentscheduler-class.md)<br/>
 [Scheduler – třída](scheduler-class.md)<br/>
 [Plánovač úloh](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

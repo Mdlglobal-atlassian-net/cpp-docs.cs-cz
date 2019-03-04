@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: Použití soketů s archivy'
+title: 'Windows Sockets: Použití soketů s archivy'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Windows Sockets [MFC], archives
@@ -7,24 +7,24 @@ helpviewer_keywords:
 - archives [MFC], and Windows Sockets
 - CSocket class [MFC], programming model
 ms.assetid: 17e71a99-a09e-4e1a-9fda-13d62805c824
-ms.openlocfilehash: 64c5c058404b977254ca54d5595193654b3f4479
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71a7ed1f1b67bed157805328679a18ceabf201d3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615384"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261502"
 ---
-# <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets: Použití soketů s archivy
+# <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets: Použití soketů s archivy
 
 Tento článek popisuje [csocket – programovací model](#_core_the_csocket_programming_model). Třída [csocket –](../mfc/reference/csocket-class.md) poskytuje podporu soketu na vyšší úrovni abstrakce než třída [CAsyncSocket](../mfc/reference/casyncsocket-class.md). `CSocket` používá verzi protokolu MFC serializace k předání dat do a z objekt soketu pomocí knihovny MFC [CArchive](../mfc/reference/carchive-class.md) objektu. `CSocket` poskytuje blokování (při správě zpracování na pozadí zpráv Windows) a umožňuje vám přístup k `CArchive`, která spravuje mnoho aspektů komunikaci, která budete muset provést sami pomocí nezpracované rozhraní API nebo třída `CAsyncSocket`.
 
 > [!TIP]
 >  Třídu lze použít `CSocket` samostatně jako pohodlnější verzi `CAsyncSocket`, ale je nejjednodušší programovací model použití `CSocket` s `CArchive` objektu.
 
-Další informace o tom, jak implementaci soketů s archivy funguje, najdete v části [rozhraní Windows Sockets: jak sokety s archivy pracovní](../mfc/windows-sockets-how-sockets-with-archives-work.md). Příklad kódu naleznete v tématu [rozhraní Windows Sockets: posloupnost operací](../mfc/windows-sockets-sequence-of-operations.md) a [rozhraní Windows Sockets: příklad z Sockets pomocí archivy](../mfc/windows-sockets-example-of-sockets-using-archives.md). Informace o některých funkcí můžete získat vaše vlastní třídy odvozené z tříd soketů, naleznete v tématu [rozhraní Windows Sockets: odvozování z tříd soketů](../mfc/windows-sockets-deriving-from-socket-classes.md).
+Další informace o tom, jak implementaci soketů s archivy funguje, najdete v části [rozhraní Windows Sockets: Jak pracují sokety s archivy](../mfc/windows-sockets-how-sockets-with-archives-work.md). Příklad kódu naleznete v tématu [rozhraní Windows Sockets: Posloupnost operací](../mfc/windows-sockets-sequence-of-operations.md) a [rozhraní Windows Sockets: Příklady soketů využívajících archivy](../mfc/windows-sockets-example-of-sockets-using-archives.md). Informace o některých funkcí můžete získat vaše vlastní třídy odvozené z tříd soketů, naleznete v tématu [rozhraní Windows Sockets: Odvozování z tříd soketů](../mfc/windows-sockets-deriving-from-socket-classes.md).
 
 > [!NOTE]
->  Při psaní aplikace knihovny MFC klienta ke komunikaci se servery zavedené (non-MFC) objektů jazyka C++ prostřednictvím archivu neodesílají. Pokud je server aplikace knihovny MFC, která analyzuje typy objektů, které chcete odeslat, nebude moci přijímat a deserializaci objektů. Související materiál o komunikaci s aplikacemi non-MFC také najdete v článku [rozhraní Windows Sockets: pořadí bajtů](../mfc/windows-sockets-byte-ordering.md).
+>  Při psaní aplikace knihovny MFC klienta ke komunikaci se servery zavedené (non-MFC) objektů jazyka C++ prostřednictvím archivu neodesílají. Pokud je server aplikace knihovny MFC, která analyzuje typy objektů, které chcete odeslat, nebude moci přijímat a deserializaci objektů. Související materiál o komunikaci s aplikacemi non-MFC také najdete v článku [rozhraní Windows Sockets: Pořadí bajtů](../mfc/windows-sockets-byte-ordering.md).
 
 ##  <a name="_core_the_csocket_programming_model"></a> Csocket – programovací Model
 
@@ -70,16 +70,15 @@ Použití `CSocket` objekt zahrnuje vytvoření a přiřazení několik objektů
     > [!NOTE]
     >  Třída `CArchive` poskytuje `IsBufferEmpty` členskou funkci speciálně pro použití s třídou `CSocket`. Pokud vyrovnávací paměť obsahuje více dat zpráv, například budete muset opakovat, dokud všechny z nich se čtou a vyrovnávací paměť je zrušeno. V opačném případě další oznámení, že jsou data pro další přijetí může být jsou odložené na neurčito. Použití `IsBufferEmpty` , aby zajistil, že můžete načíst všechna data.
 
-Tento článek [rozhraní Windows Sockets: posloupnost operací](../mfc/windows-sockets-sequence-of-operations.md) ukazuje obě strany tohoto procesu s ukázkovým kódem.
+Tento článek [rozhraní Windows Sockets: Posloupnost operací](../mfc/windows-sockets-sequence-of-operations.md) ukazuje obě strany tohoto procesu s ukázkovým kódem.
 
 Další informace naleznete v tématu:
 
-- [Windows Sockets: Sokety streamu](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets: Sokety datagramů](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: Sokety datagramu](../mfc/windows-sockets-datagram-sockets.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)<br/>
 [CSocket::Create](../mfc/reference/csocket-class.md#create)
-

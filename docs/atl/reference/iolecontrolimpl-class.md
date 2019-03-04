@@ -1,5 +1,5 @@
 ---
-title: Iolecontrolimpl – třída
+title: IOleControlImpl Class
 ms.date: 11/04/2016
 f1_keywords:
 - IOleControlImpl
@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - IOleControlImpl class
 ms.assetid: 5a4255ad-ede4-49ca-ba9a-07c2e919fa85
-ms.openlocfilehash: 8b84f982d06547dd162da530d326d4cdb92e254a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50119d21b041f37f03ca416a9a56ca9e29ae3344
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442156"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263530"
 ---
-# <a name="iolecontrolimpl-class"></a>Iolecontrolimpl – třída
+# <a name="iolecontrolimpl-class"></a>IOleControlImpl Class
 
 Tato třída poskytuje výchozí implementaci třídy `IOleControl` rozhraní a implementuje `IUnknown`.
 
@@ -126,7 +126,7 @@ Vrátí E_NOTIMPL.
 
 Zobrazit [IOleControl::OnMnemonic](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-onmnemonic) ve Windows SDK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IOleObjectImpl – třída](../../atl/reference/ioleobjectimpl-class.md)<br/>
 [Rozhraní – ovládací prvky ActiveX](/windows/desktop/com/activex-controls-interfaces)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Windows Sockets – použití třídy CAsyncSocket
+title: 'Windows Sockets: Použití třídy CAsyncSocket'
 ms.date: 11/04/2016
 f1_keywords:
 - CAsyncSocket
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - sockets [MFC], asynchronous operation
 - Windows Sockets [MFC], converting Unicode and MBCS strings
 ms.assetid: 825dae17-7c1b-4b86-8d6c-da7f1afb5d8d
-ms.openlocfilehash: abce497f49347719af08e71a75afa12cb99507f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51274791393d95517bd8de5ae7248dc634018037
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459290"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263102"
 ---
-# <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets – použití třídy CAsyncSocket
+# <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets: Použití třídy CAsyncSocket
 
 Tento článek vysvětluje, jak použít třídu [CAsyncSocket](../mfc/reference/casyncsocket-class.md). Mějte na paměti, že tato třída zapouzdří rozhraní Windows Sockets API na velmi nízké úrovni. `CAsyncSocket` je určena pro programátory, kteří vědět síťovou komunikaci podrobně ale chcete pohodlí zpětná volání pro oznámení o událostech sítě. Podle tento předpoklad, tento článek obsahuje pouze základní instrukce. Pravděpodobně byste zvážit použití `CAsyncSocket` Pokud má Windows Sockets usnadnění řešení problémů s několika síťových protokolů v aplikaci knihovny MFC, ale nechtějí obětovat flexibilitu. Může také pocit, že můžete získat lepší efektivity tím, že další komunikace přímo sami než na kolik máte může pomocí modelu obecnější alternativní třídy `CSocket`.
 
 `CAsyncSocket` dokumentovány v článku *odkaz knihovny MFC*. Visual C++ poskytuje také specifikace rozhraní Windows Sockets, nachází v sadě Windows SDK. Podrobnosti jsou ponechána na vás. Jazyk Visual C++ neposkytuje ukázkovou aplikaci pro `CAsyncSocket`.
 
-Pokud nejsou vysoce informovanosti ohledně síťovou komunikaci a chcete jednoduché řešení, použijte třídu [csocket –](../mfc/reference/csocket-class.md) s `CArchive` objektu. Zobrazit [rozhraní Windows Sockets: použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md) Další informace.
+Pokud nejsou vysoce informovanosti ohledně síťovou komunikaci a chcete jednoduché řešení, použijte třídu [csocket –](../mfc/reference/csocket-class.md) s `CArchive` objektu. Zobrazit [rozhraní Windows Sockets: Použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md) Další informace.
 
 Tento článek se týká:
 
@@ -62,7 +62,7 @@ Tento článek se týká:
 
          This is your Internet Protocol (IP) address on the network. You will probably always rely on the default value for this parameter.
 
-   Podmínky "portu" a "adresa soketu" je podrobně popsaný v [rozhraní Windows Sockets: porty a adresy soketů](../mfc/windows-sockets-ports-and-socket-addresses.md).
+   Podmínky "portu" a "adresa soketu" je podrobně popsaný v [rozhraní Windows Sockets: Porty a adresy soketů](../mfc/windows-sockets-ports-and-socket-addresses.md).
 
 1. Pokud soketu je klient, připojení k serveru pro objekt soketu soketu, pomocí [CAsyncSocket::Connect](../mfc/reference/casyncsocket-class.md#connect).
 
@@ -73,7 +73,7 @@ Tento článek se týká:
    Po přijetí připojení, můžete provádět úkoly, jako je ověřování hesla.
 
     > [!NOTE]
-    >  `Accept` Členská funkce používá odkaz na nový, prázdný `CSocket` objektu jako svůj parametr. Je nutné vytvořit tento objekt před voláním `Accept`. Pokud tento objekt dostane mimo rozsah, připojení se ukončí. Nevolejte `Create` pro tento nový objekt soketu. Příklad najdete v článku [rozhraní Windows Sockets: posloupnost operací](../mfc/windows-sockets-sequence-of-operations.md).
+    >  `Accept` Členská funkce používá odkaz na nový, prázdný `CSocket` objektu jako svůj parametr. Je nutné vytvořit tento objekt před voláním `Accept`. Pokud tento objekt dostane mimo rozsah, připojení se ukončí. Nevolejte `Create` pro tento nový objekt soketu. Příklad najdete v článku [rozhraní Windows Sockets: Posloupnost operací](../mfc/windows-sockets-sequence-of-operations.md).
 
 1. Provádění komunikaci s jinými sokety voláním `CAsyncSocket` členské funkce objektu, které zapouzdřují funkce rozhraní Windows Sockets API.
 
@@ -85,7 +85,7 @@ Tento článek se týká:
 
    Volá destruktor objektu [Zavřít](../mfc/reference/casyncsocket-class.md#close) členskou funkci před zničení objektu.
 
-Příklad této sekvence v kódu (ve skutečnosti pro `CSocket` objektu), naleznete v tématu [rozhraní Windows Sockets: posloupnost operací](../mfc/windows-sockets-sequence-of-operations.md).
+Příklad této sekvence v kódu (ve skutečnosti pro `CSocket` objektu), najdete v článku [rozhraní Windows Sockets: Posloupnost operací](../mfc/windows-sockets-sequence-of-operations.md).
 
 ##  <a name="_core_your_responsibilities_with_casyncsocket"></a> Vaše odpovědnosti s CAsyncSocket
 
@@ -97,19 +97,18 @@ Při vytváření objektu třídy [CAsyncSocket](../mfc/reference/casyncsocket-c
 
 - Převod mezi kódování Unicode a vícebajtových znaků sady (MBCS) řetězce.
 
-Definice těchto podmínek a další informace naleznete v tématu [rozhraní Windows Sockets: blokování](../mfc/windows-sockets-blocking.md), [rozhraní Windows Sockets: pořadí bajtů](../mfc/windows-sockets-byte-ordering.md), [rozhraní Windows Sockets: převádění řetězců](../mfc/windows-sockets-converting-strings.md) .
+Definice těchto podmínek a další informace naleznete v tématu [rozhraní Windows Sockets: Blokování](../mfc/windows-sockets-blocking.md), [rozhraní Windows Sockets: Pořadí bajtů](../mfc/windows-sockets-byte-ordering.md), [rozhraní Windows Sockets: Převádění řetězců](../mfc/windows-sockets-converting-strings.md).
 
 Bez ohledu na tyto problémy třídy `CAsycnSocket` může být správnou volbou pro vás, pokud vaše aplikace vyžaduje všechny flexibility a kontroly můžete získat. Pokud ne, měli byste zvážit použití třídy `CSocket` místo. `CSocket` Skryje velké množství podrobností, které od vás: it čerpadel Windows zprávy během neblokují volání a získáte přístup k `CArchive`, která spravuje rozdíly pořadí bajtů a převodu řetězce za vás.
 
 Další informace naleznete v tématu:
 
-- [Windows Sockets: Pozadí](../mfc/windows-sockets-background.md)
+- [Windows Sockets: Background](../mfc/windows-sockets-background.md)
 
-- [Windows Sockets: Sokety streamu](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets: Sokety datagramů](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: Sokety datagramu](../mfc/windows-sockets-datagram-sockets.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)
-

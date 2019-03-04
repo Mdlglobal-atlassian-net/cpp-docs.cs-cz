@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MCN_GETDAYSTATE notification [MFC]
 - month calendar controls [MFC], day state info
 ms.assetid: 435d1b11-ec0e-4121-9e25-aaa6af812a3c
-ms.openlocfilehash: a07808819e1cb049de7438c9e7964436e8c83802
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c75b560509738e071accdc3dba31dfdea35a14aa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464763"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262360"
 ---
 # <a name="setting-the-day-state-of-a-month-calendar-control"></a>Nastavení stavu dne v ovládacím prvku měsíční kalendář
 
@@ -45,8 +45,7 @@ Správně zpracovat tuto zprávu, musíte určit, kolik měsíců se informace o
 
    Tento příklad převede *pNMHDR* ukazatel na správný typ, pak určuje, kolik měsíců informace jsou požadovány (`pDayState->cDayState`). Pro každý měsíc, aktuální bitového pole (`pDayState->prgDayState[i]`) je inicializován na nulu a potom potřeba data jsou nastaveny (v tomto případě 15. dne každého měsíce).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

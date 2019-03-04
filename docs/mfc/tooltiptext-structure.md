@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TOOLTIPTEXT structure [MFC]
 - tool tips [MFC], notifications
 ms.assetid: 547591bf-80f5-400e-a2a7-0708cfffbb5d
-ms.openlocfilehash: d184b1d507579309051cd6c70ea6525463c44881
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d77ca7dc55273e6084e919323ed71e55fa68a2c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676509"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260592"
 ---
 # <a name="tooltiptext-structure"></a>TOOLTIPTEXT – struktura
 
@@ -30,7 +30,7 @@ typedef struct {
 } TOOLTIPTEXT, FAR *LPTOOLTIPTEXT;
 ```
 
-*HDR*<br/>
+*hdr*<br/>
 Určuje nástroj, který potřebuje text. Jediným členem této struktury, které je třeba je ID ovládacího prvku příkazu. ID příkazu ovládacího prvku bude v *idFrom* člena **NMHDR** strukturu, k němu přistupovat pomocí syntaxe `hdr.idFrom`. Zobrazit [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) diskuzi o členy **NMHDR** struktury.
 
 *lpszText*<br/>
@@ -50,7 +50,6 @@ Při zpracování `TTN_NEEDTEXT` oznámení zprávu, zadejte řetězec, který s
 
 - Zkopírujte identifikátor řetězce prostředku k *lpszText* člen a kopírování popisovač instance, která obsahuje prostředek, který má *hinst* člena.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Popisy tlačítek v oknech neodvozených ze třídy CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
-

@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAcl class
 ms.assetid: 20bcb9af-dc1c-4737-b923-3864776680d6
-ms.openlocfilehash: a9653225f3057d6c5ba9fd49cf64487e766ca8d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05d9d5fe9cc344be3f903f247f34003056404c9d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491543"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258564"
 ---
 # <a name="cacl-class"></a>Cacl – třída
 
@@ -57,7 +57,7 @@ class CAcl
 |Název|Popis|
 |----------|-----------------|
 |[CAcl::CAcl](#cacl)|Konstruktor|
-|[Cacl –:: ~ cacl –](#dtor)|Destruktor.|
+|[CAcl::~CAcl](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -158,7 +158,7 @@ Existující objekt `CAcl`.
 
 `CAcl` Objekt můžete případně vytvořit pomocí existující `CAcl` objektu.
 
-##  <a name="dtor"></a>  Cacl –:: ~ cacl –
+##  <a name="dtor"></a>  CAcl::~CAcl
 
 Destruktor.
 
@@ -236,7 +236,7 @@ void GetAclEntry(
 *nIndex*<br/>
 Index k položce seznamu ACL k načtení.
 
-*psid má*<br/>
+*pSid*<br/>
 [Identifikační číslo volané stanice](../../atl/reference/csid-class.md) objektu, pro kterou platí položce seznamu ACL.
 
 *pMask*<br/>
@@ -391,7 +391,7 @@ void SetNull() throw();
 
 `CAcl` Lze nastavit na prázdnou nebo na hodnotu NULL: dva stavy se liší.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)

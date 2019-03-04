@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSyncObject [MFC], Unlock
 - CSyncObject [MFC], m_hObject
 ms.assetid: c62ea6eb-a17b-4e01-aed4-321fc435a5f4
-ms.openlocfilehash: d72d167be874d0776ce8da02784c2e0c267c9175
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 842ff5f98f05425fbbb511d112ae3e4fd65ff076
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547430"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263706"
 ---
 # <a name="csyncobject-class"></a>CSyncObject – třída
 
@@ -62,7 +62,7 @@ class CSyncObject : public CObject
 
 Knihovny Microsoft Foundation Class poskytuje několik tříd odvozených z `CSyncObject`. Jedná se o [CEvent](../../mfc/reference/cevent-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [CCriticalSection](../../mfc/reference/ccriticalsection-class.md), a [CSemaphore](../../mfc/reference/csemaphore-class.md).
 
-Informace o tom, jak používat objekty synchronizace, najdete v článku [Multithreading: jak používat synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Informace o tom, jak používat objekty synchronizace, najdete v článku [Multithreading: Jak používat synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -159,8 +159,7 @@ Výchozí implementace vždy vrátí hodnotu TRUE.
 
 Výchozí implementace deklarace se dvěma parametry vždy vrátí hodnotu TRUE. Tato funkce je volána k uvolnění přístup k synchronizační objekt ve vlastnictví volajícího vlákna. Druhý deklarace se poskytuje pro synchronizaci objektů například semafory, která umožňují více než jeden přístup řízené prostředku.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-

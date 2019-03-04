@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 3f9afdf18fcaff0d3613b4204d8690f915079e7d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 6366638ebfd5e78ad517a8913e4276d5cd820670
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178938"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264670"
 ---
 # <a name="cwinapp-class"></a>CWinApp – třída
 
@@ -469,7 +469,7 @@ BOOL CreatePrinterDC(CDC& dc);
 
 ### <a name="parameters"></a>Parametry
 
-*řadič domény*<br/>
+*dc*<br/>
 Odkaz na kontext zařízení tiskárny.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -522,7 +522,7 @@ Popisovač klíče registru.
 *strKeyName*<br/>
 Název klíče registru, která se má odstranit.
 
-*Druh*<br/>
+*pTM*<br/>
 Ukazatel na objekt catltransactionmanager –.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -549,7 +549,7 @@ virtual int DoMessageBox(
 *lpszPrompt*<br/>
 Adresa textu v okně se zprávou.
 
-*nTyp*<br/>
+*nType*<br/>
 Okno se zprávou [styl](../../mfc/reference/styles-used-by-mfc.md#message-box-styles).
 
 *nIDPrompt*<br/>
@@ -757,7 +757,7 @@ HKEY GetAppRegistryKey(CAtlTransactionManager* pTM = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*Druh*<br/>
+*pTM*<br/>
 Ukazatel `CAtlTransactionManager` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -824,7 +824,7 @@ CDocTemplate* GetNextDocTemplate(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Odkaz na POZICI hodnotu vrácenou příkazem předchozí volání `GetNextDocTemplate` nebo [GetFirstDocTemplatePosition](#getfirstdoctemplateposition). Hodnota je aktualizovat na další pozici tohoto volání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1003,7 +1003,7 @@ HKEY GetSectionKey(
 *lpszSection*<br/>
 Název klíče získána.
 
-*Druh*<br/>
+*pTM*<br/>
 Ukazatel `CAtlTransactionManager` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1308,12 +1308,12 @@ Chcete-li povolit správce restartování, nastavte `m_dwRestartManagerSupportFl
 |Příznak|Popis|
 |AFX_RESTART_MANAGER_SUPPORT_RESTART|Aplikace je registrován pomocí [CWinApp::RegisterWithRestartManager](#registerwithrestartmanager). Správce restartování je zodpovědná za restartování aplikace, pokud se neočekávaně ukončí.|
 |-AFX_RESTART_MANAGER_SUPPORT_RECOVERY|Aplikace je zaregistrován správce restartování a správce restartování volá funkci zpětného volání pro zotavení po restartování aplikace. Výchozí funkce zpětného volání pro obnovení je [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
-|-AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|Je povoleno automatické ukládání a automaticky ukládá správce restartování žádné otevírat dokumenty, když se aplikace restartuje.|
-|-AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL|Je povoleno automatické ukládání a automaticky ukládá správce restartování otevřít všechny dokumenty v pravidelných intervalech. Interval je definován [CWinApp::m_nAutosaveInterval](#m_nautosaveinterval).|
-|-AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES|Správce restartování otevře po restartování aplikace z neočekávané ukončení dřív otevřených dokumentů. [Cdatarecoveryhandler – třída](../../mfc/reference/cdatarecoveryhandler-class.md) zpracovává seznam otevřených dokumentů ukládání a obnovení databází.|
-|-AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES|Správce restartování se zobrazí výzva k obnovení automaticky uložené soubory po restartování aplikace. `CDataRecoveryHandler` Třída dotazuje uživatele.|
-|-AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE|Sjednocení AFX_RESTART_MANAGER_SUPPORT_RESTART AFX_RESTART_MANAGER_SUPPORT_RECOVER a AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES.|
-|-AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS|Sjednocení AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL a AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
+|- AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|Je povoleno automatické ukládání a automaticky ukládá správce restartování žádné otevírat dokumenty, když se aplikace restartuje.|
+|- AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL|Je povoleno automatické ukládání a automaticky ukládá správce restartování otevřít všechny dokumenty v pravidelných intervalech. Interval je definován [CWinApp::m_nAutosaveInterval](#m_nautosaveinterval).|
+|- AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES|Správce restartování otevře po restartování aplikace z neočekávané ukončení dřív otevřených dokumentů. [Cdatarecoveryhandler – třída](../../mfc/reference/cdatarecoveryhandler-class.md) zpracovává seznam otevřených dokumentů ukládání a obnovení databází.|
+|- AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES|Správce restartování se zobrazí výzva k obnovení automaticky uložené soubory po restartování aplikace. `CDataRecoveryHandler` Třída dotazuje uživatele.|
+|- AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE|Sjednocení AFX_RESTART_MANAGER_SUPPORT_RESTART AFX_RESTART_MANAGER_SUPPORT_RECOVER a AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES.|
+|- AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS|Sjednocení AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL a AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
 |-AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS|Sjednocení AFX_RESTART_MANAGER_SUPPORT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES a AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
 |-AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS|Sjednocení ofAFX_RESTART_MANAGER_SUPPORT_RECOVERY, AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES a AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
 
@@ -1508,7 +1508,7 @@ LPCTSTR m_pszRegistryKey;
 
 Za normálních okolností tomuto datovému členu je zpracováván jako jen pro čtení.
 
-- Hodnota je uložena v klíči registru. Název profilu nastavení aplikace se připojí k následující klíč registru: HKEY_CURRENT_USER/Software/LocalAppWizard – vygeneruje /.
+- Hodnota je uložena v klíči registru. Název profilu nastavení aplikace se připojí k následující klíč registru: HKEY_CURRENT_USER/Software/LocalAppWizard-Generated/.
 
 Pokud přiřadíte hodnotu `m_pszRegistryKey`, musí být dynamicky přidělené na haldě. `CWinApp` Volání destruktoru **bezplatné**() se tento ukazatel. Můžete zkusit použít `_tcsdup`funkce knihovny run-time () provedete přidělení. Také uvolněte paměť spojené s aktuálním ukazatele před přiřazením novou hodnotu. Příklad:
 
@@ -1811,7 +1811,7 @@ virtual BOOL ProcessMessageFilter(
 
 ### <a name="parameters"></a>Parametry
 
-*kód*<br/>
+*code*<br/>
 Určuje kód zavěšení. Tato členská funkce kód používá k určení způsobu zpracování *lpMsg.*
 
 *lpMsg*<br/>
@@ -2117,7 +2117,7 @@ void SelectPrinter(
 
 ### <a name="parameters"></a>Parametry
 
-*hDevNames je*<br/>
+*hDevNames*<br/>
 Popisovač [DEVNAMES –](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) strukturu, která identifikuje ovladač, zařízení a výstupní port názvy konkrétní tiskárnu.
 
 *hDevMode*<br/>
@@ -2329,7 +2329,7 @@ Odkazuje na řetězec zakončený hodnotou null, který určuje oddíl obsahují
 *lpszEntry*<br/>
 Odkazuje na řetězec zakončený hodnotou null, který obsahuje položku, do kterého je hodnota má být proveden zápis. Pokud položka v zadaném oddílu neexistuje, vytvoří se.
 
-*nHodnota*<br/>
+*nValue*<br/>
 Obsahuje hodnotu, která má být proveden zápis.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2391,8 +2391,8 @@ Určuje ID modelu uživatele aplikace.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CWinThread – třída](../../mfc/reference/cwinthread-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[Jak: Přidání podpory správce restartování](../../mfc/how-to-add-restart-manager-support.md)
+[Postupy: Přidání podpory správce restartování](../../mfc/how-to-add-restart-manager-support.md)

@@ -1,5 +1,5 @@
 ---
-title: 'TN045: Podpora prostředí MFC a databáze pro Long Varchar a Varbinary'
+title: 'TN045: Podpora MFC a databáze pro Long Varchar a Varbinary'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.data
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Varbinary data type
 - Varchar data type
 ms.assetid: cf572c35-5275-45b5-83df-5f0e36114f40
-ms.openlocfilehash: 286ef403ec4bd51b035945f3ca268b59fee4d9d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d356f094759775f709838de149769b1671fdf9ba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567034"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260111"
 ---
-# <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045: Podpora prostředí MFC a databáze pro typy Long Varchar/Varbinary
+# <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045: Podpora knihovny MFC a databáze pro typy Long Varchar/Varbinary
 
 > [!NOTE]
 >  Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
@@ -101,7 +101,7 @@ Není nutné pochopit, jak aktualizovat `CLongBinary` funguje, ale může být u
 
 Při aktualizaci `CLongBinary` pole, ODBC pro databázové třídy použít **DATA_AT_EXEC** mechanismus (na najdete v dokumentaci k rozhraní ODBC `SQLSetPos`společnosti rgbValue argument). Když rozhraní připraví příkazu insert nebo update místo přejdete `HGLOBAL` obsahující data, *adresu* z `CLongBinary` je nastaven jako *hodnotu* sloupce Místo toho a délka indikátor nastavena na **SQL_DATA_AT_EXEC**. Později, při odesílání příkazu update ke zdroji dat `SQLExecDirect` vrátí **SQL_NEED_DATA**. Toto upozornění rozhraní framework, že hodnota parametru pro tento sloupec je ve skutečnosti adresu `CLongBinary`. Rámec volá `SQLGetData` jednou očekává ovladač vrátit skutečná délka dat s malou vyrovnávací pamětí. Pokud ovladač vrátí skutečná délka binární velkých objektů (BLOB), znovu alokuje MFC tolik místa potřebného k načtení objektu BLOB. Pokud zdroj dat vrátí **SQL_NO_TOTAL**, označující, že nelze určit velikost objektu BLOB, budou knihovny MFC vytvořte menší bloky. Výchozí počáteční velikost je 64 kB a následné bloky bude dvojnásobek velikosti; například druhá bude 128 kb / s, třetí je 256 kB a tak dále. Počáteční velikost je možné konfigurovat.
 
-## <a name="not-binding-retrievingsending-data-directly-from-odbc-with-sqlgetdata"></a>Vazba není: Načítání/odesílat Data přímo z rozhraní ODBC s SQLGetData
+## <a name="not-binding-retrievingsending-data-directly-from-odbc-with-sqlgetdata"></a>Vazba není: Načítání/odesílání dat přímo z rozhraní ODBC s SQLGetData
 
 Pomocí této metody můžete úplně obejít databázové třídy a řešil long – datový sloupec.
 
@@ -118,8 +118,7 @@ Long – datový sloupec v tomto případě musí být v seznamu pro výběr sad
 > [!NOTE]
 >  Protože dlouhý datový sloupec není vázán v rámci rozhraní, změny k němu nebude zpracován s `CRecordset::Update` volání. Musíte vytvořit a odeslat vyžaduje SQL **vložit** a **aktualizace** příkazy sami.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
-

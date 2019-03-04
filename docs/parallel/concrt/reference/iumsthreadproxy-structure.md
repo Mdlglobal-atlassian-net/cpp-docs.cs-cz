@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSThreadProxy structure
 ms.assetid: 61c69b7e-5c37-4048-bcb4-e75c536afd86
-ms.openlocfilehash: 9a0fca40f353f64799c4df9001952cb668cd0678
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 258f249aa178b73da2080cca888409dc07f63dbb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657120"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263028"
 ---
 # <a name="iumsthreadproxy-structure"></a>IUMSThreadProxy – struktura
 
@@ -35,11 +35,11 @@ struct IUMSThreadProxy : public IThreadProxy;
 
 |Název|Popis|
 |----------|-----------------|
-|[Iumsthreadproxy::entercriticalregion –](#entercriticalregion)|Volá se, aby bylo možné zadat důležité oblasti. Když uvnitř důležité oblasti, nebudou sledovat Plánovač asynchronní blokující operace, ke kterým dochází při oblast. To znamená, že nebude znovu zadat Plánovač pro stránkování, pozastavení vlákna, volá asynchronní procedury jádra (APCs) a tak dále, UMS vlákna.|
-|[Iumsthreadproxy::enterhypercriticalregion –](#enterhypercriticalregion)|Volá se, aby bylo možné zadat hyper důležité oblasti. Když uvnitř hyper důležité oblasti, nebude Plánovač sledovat všechny blokující operace, ke kterým dochází při oblast. To znamená, že plánovač nebude znovu zadat pro blokování volání funkcí, pokusy o získání zámku vlákna pozastavení, volání asynchronní procedury jádra (APCs), který blok, stránkování a tak dále, pro UMS vlákna.|
-|[Iumsthreadproxy::exitcriticalregion –](#exitcriticalregion)|Volá se, aby bylo možné ukončit důležité oblasti.|
-|[Iumsthreadproxy::exithypercriticalregion –](#exithypercriticalregion)|Volá se, aby bylo možné ukončit hyper důležité oblasti.|
-|[Iumsthreadproxy::getcriticalregiontype –](#getcriticalregiontype)|Vrátí druhu kritických proxy vlákna je v rámci oblasti. Protože hyper důležité oblasti jsou nadmnožina o důležitých oblastech, pokud je zadán kód důležité oblasti a pak hyper důležité oblasti, `InsideHyperCriticalRegion` bude vrácen.|
+|[IUMSThreadProxy::EnterCriticalRegion](#entercriticalregion)|Volá se, aby bylo možné zadat důležité oblasti. Když uvnitř důležité oblasti, nebudou sledovat Plánovač asynchronní blokující operace, ke kterým dochází při oblast. To znamená, že nebude znovu zadat Plánovač pro stránkování, pozastavení vlákna, volá asynchronní procedury jádra (APCs) a tak dále, UMS vlákna.|
+|[IUMSThreadProxy::EnterHyperCriticalRegion](#enterhypercriticalregion)|Volá se, aby bylo možné zadat hyper důležité oblasti. Když uvnitř hyper důležité oblasti, nebude Plánovač sledovat všechny blokující operace, ke kterým dochází při oblast. To znamená, že plánovač nebude znovu zadat pro blokování volání funkcí, pokusy o získání zámku vlákna pozastavení, volání asynchronní procedury jádra (APCs), který blok, stránkování a tak dále, pro UMS vlákna.|
+|[IUMSThreadProxy::ExitCriticalRegion](#exitcriticalregion)|Volá se, aby bylo možné ukončit důležité oblasti.|
+|[IUMSThreadProxy::ExitHyperCriticalRegion](#exithypercriticalregion)|Volá se, aby bylo možné ukončit hyper důležité oblasti.|
+|[IUMSThreadProxy::GetCriticalRegionType](#getcriticalregiontype)|Vrátí druhu kritických proxy vlákna je v rámci oblasti. Protože hyper důležité oblasti jsou nadmnožina o důležitých oblastech, pokud je zadán kód důležité oblasti a pak hyper důležité oblasti, `InsideHyperCriticalRegion` bude vrácen.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -117,7 +117,7 @@ virtual CriticalRegionType GetCriticalRegionType() const = 0;
 
 Typ důležité oblasti proxy vlákna je v rámci.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [IUMSScheduler – struktura](iumsscheduler-structure.md)

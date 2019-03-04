@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - DispatchState structure
 ms.assetid: 8c52546e-1650-48a0-985f-7e4a0fc26a90
-ms.openlocfilehash: 4c15fc0ba9c78d8b6416cd88480c8ada6e3febf1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c755675a69ce86bc03a3fdb59fa7d43a20676495
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603560"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265051"
 ---
 # <a name="dispatchstate-structure"></a>DispatchState – struktura
 
@@ -40,7 +40,7 @@ struct DispatchState;
 
 |Název|Popis|
 |----------|-----------------|
-|[Dispatchstate::m_dispatchstatesize –](#m_dispatchstatesize)|Velikost struktury, který se používá pro správu verzí.|
+|[DispatchState::m_dispatchStateSize](#m_dispatchstatesize)|Velikost struktury, který se používá pro správu verzí.|
 |[DispatchState::m_fIsPreviousContextAsynchronouslyBlocked](#m_fispreviouscontextasynchronouslyblocked)|Určuje, zda má zadaný kontext `Dispatch` metoda vzhledem k tomu, že předchozí kontext asynchronně blokované. To se používá pouze v rámci plánování UMS a je nastaveno na hodnotu `0` u všech ostatních kontextech spuštění.|
 |[DispatchState::m_reserved](#m_reserved)|Služba BITS vyhrazené pro budoucí informace o předávání.|
 
@@ -86,6 +86,6 @@ Služba BITS vyhrazené pro budoucí informace o předávání.
 unsigned int m_reserved : 31;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)

@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-ms.openlocfilehash: 92b2827d556583524b46f88f8bd9efeb57a5d83a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6aa404c5eb543db198043dba68d55a4b925739c8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472862"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263452"
 ---
 # <a name="cdaoworkspace-class"></a>Cdaoworkspace – třída
 
@@ -454,7 +454,7 @@ void GetDatabaseInfo(
 *nIndex*<br/>
 Index založený na nule databázový objekt v pracovním prostoru databází kolekci, pro vyhledávání podle indexu.
 
-*informace o databázi*<br/>
+*dbinfo*<br/>
 Odkaz na [cdaodatabaseinfo –](../../mfc/reference/cdaodatabaseinfo-structure.md) objektu, který vrací požadované informace.
 
 *dwInfoOptions*<br/>
@@ -462,9 +462,9 @@ Možnosti, které určují, které informace o databázi k načtení. Tady jsou 
 
 - Název AFX_DAO_PRIMARY_INFO (výchozí), aktualizovat, transakce
 
-- Informace o primárním AFX_DAO_SECONDARY_INFO plus: časový limit dotazu verze, pořadí řazení
+- Primární AFX_DAO_SECONDARY_INFO informace plus: Verze, pořadí, řazení, časový limit dotazu
 
-- AFX_DAO_ALL_INFO primární a sekundární informace plus: připojení
+- AFX_DAO_ALL_INFO primární a sekundární informace plus: Připojení
 
 *lpszName*<br/>
 Název databázového objektu, pro vyhledávání podle názvu. Název je řetězec s až 14 znaků, který jednoznačně pojmenuje objekt nového pracovního prostoru.
@@ -632,9 +632,9 @@ Možnosti, které určují, jaké informace o pracovním prostoru pro načtení.
 
 - Název AFX_DAO_PRIMARY_INFO (výchozí)
 
-- Informace o primárním AFX_DAO_SECONDARY_INFO plus: uživatelské jméno
+- Primární AFX_DAO_SECONDARY_INFO informace plus: Uživatelské jméno
 
-- AFX_DAO_ALL_INFO primární a sekundární informace plus: izolovat ODBCTrans
+- AFX_DAO_ALL_INFO primární a sekundární informace plus: Izolování ODBCTrans
 
 *lpszName*<br/>
 Název objektu pracovního prostoru pro vyhledávání podle názvu. Název je řetězec s až 14 znaků, který jednoznačně pojmenuje objekt nového pracovního prostoru.
@@ -877,7 +877,7 @@ static void PASCAL SetLoginTimeout(short nSeconds);
 
 ### <a name="parameters"></a>Parametry
 
-*Počet_sekund*<br/>
+*nSeconds*<br/>
 Počet sekund, než dojde k chybě při pokusu o přihlášení k databázi pro ODBC.
 
 ### <a name="remarks"></a>Poznámky
@@ -888,7 +888,7 @@ Když se pokoušíte přihlásit ke službě database ODBC, jako je například 
 
 Související informace naleznete v tématu "LoginTimeout vlastnost" v nápovědě k DAO.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

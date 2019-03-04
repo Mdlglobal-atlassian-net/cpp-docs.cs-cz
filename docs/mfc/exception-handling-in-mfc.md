@@ -33,12 +33,12 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: 4b520072bd0c07e261f2cf4baf51d7ea3d14a5ab
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: cb11a74932e44f94f481a2fdc48b8d6ee359f9e8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694553"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260540"
 ---
 # <a name="exception-handling-in-mfc"></a>Zpracování výjimek v prostředí MFC
 
@@ -50,9 +50,9 @@ Tento článek vysvětluje mechanismus zpracování výjimek, který je k dispoz
 
 Pokud píšete nové aplikace pomocí knihovny MFC, měli byste použít mechanismus C++. Pokud už vaše stávající aplikace často používá tento mechanismus, můžete použít mechanismus založený na – makro.
 
-Můžete snadno převést existující kód nahrazujícím maker výjimek prostředí MFC výjimky jazyka C++. K výhodám tohoto převodu vašeho kódu a pokyny pro to jsou popsané v článku [výjimky: převádění z maker výjimek prostředí MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).
+Můžete snadno převést existující kód nahrazujícím maker výjimek prostředí MFC výjimky jazyka C++. K výhodám tohoto převodu vašeho kódu a pokyny pro to jsou popsané v článku [výjimky: Převádění z maker výjimek prostředí MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).
 
-Pokud již jste vytvořili aplikaci pomocí maker výjimek prostředí MFC, můžete pokračovat v používání těchto maker v existujícím kódu při použití výjimek jazyka C++ v váš nový kód. Tento článek [výjimky: změny maker pro výjimky ve verzi 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) poskytuje pokyny pro to udělat.
+Pokud již jste vytvořili aplikaci pomocí maker výjimek prostředí MFC, můžete pokračovat v používání těchto maker v existujícím kódu při použití výjimek jazyka C++ v váš nový kód. Tento článek [výjimky: Změny maker pro výjimky ve verzi 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) poskytuje pokyny pro to udělat.
 
 > [!NOTE]
 >  Pokud chcete povolit ve vašem kódu zpracování výjimek jazyka C++, vyberte na stránce vytváření kódu ve složce projektu na C/C++ povolit výjimky jazyka C++ [stránky vlastností](../ide/property-pages-visual-cpp.md) dialogového okna, nebo použijte [/EHsc](../build/reference/eh-exception-handling-model.md) – možnost kompilátoru.
@@ -119,18 +119,17 @@ Tyto články vysvětlují použití knihovny MFC pro zpracování výjimek:
 
 - [Výjimky: Výjimky databáze](../mfc/exceptions-database-exceptions.md)
 
-- [Výjimky: Výjimky OLE](../mfc/exceptions-ole-exceptions.md)
+- [Výjimky: OLE – výjimky](../mfc/exceptions-ole-exceptions.md)
 
 V následujících článcích porovnat maker výjimek prostředí MFC s klíčová slova výjimek jazyka C++ a popisují, jak je možné převést kódu:
 
 - [Výjimky: Změny maker pro výjimky ve verzi 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)
 
-- [Výjimky: Převádění z maker výjimek prostředí MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md)
+- [Výjimky: Převádění z maker výjimek prostředí MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md)
 
-- [Výjimky: Použití výjimek v makrech MFC a jazyce C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)
+- [Výjimky: Použití maker MFC a výjimek jazyka C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zpracovávání výjimek v jazyce C++](../cpp/cpp-exception-handling.md)<br/>
-[Jak mohu: vytvořit vlastní třídy vlastní výjimky](http://go.microsoft.com/fwlink/p/?linkid=128045)
-
+[Postup: Vytvoření vlastní třídy vlastních výjimek](http://go.microsoft.com/fwlink/p/?linkid=128045)

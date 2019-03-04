@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Internet applications [MFC], security
 - Web application security [MFC], Internet security approaches
 ms.assetid: bf0da697-81bc-41f0-83fa-d7f82ed83df8
-ms.openlocfilehash: e7892793a82f2b030a99465a712e33e1b9ef4673
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 184c8edf3e4a81be1f8b2a282a0db9758a75253f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486096"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259526"
 ---
 # <a name="internet-security-c"></a>Internetové zabezpečení (C++)
 
@@ -28,8 +28,7 @@ Existují dva základní přístupy k zabezpečení při vývoji pro Internet. P
 
 V prvním případě důvěřovat, že aplikace nebude provádět žádné a původu aplikace důvěřujete. V druhém digitální podpisy se používají k ověření pravosti. Digitální podpis je oborový standard lze identifikovat a zadat další informace o vydavateli kód. Technologie je založena na standardech, včetně RSA a X.509. Prohlížeče obvykle umožňují uživatelům si vybrat, zda chtějí stáhnout a spustit kód neznámého původu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Úlohy internetového programování MFC](../mfc/mfc-internet-programming-tasks.md)<br/>
 [Základy internetového programování v prostředí MFC](../mfc/mfc-internet-programming-basics.md)
-

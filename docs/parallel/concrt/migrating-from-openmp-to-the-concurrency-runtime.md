@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: 78fa83c30bc55d82ffa5d2ba1e7d65472643f86b
-ms.sourcegitcommit: ee0103752884425843556a19cf418a504dc3cd02
+ms.openlocfilehash: 16b0f175867e18e127997749098cce998674b3d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53737621"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259500"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migrace z OpenMP do Concurrency Runtime
 
@@ -48,7 +48,7 @@ Následujících případech popsat, ale nemusí být vhodné k migraci existuj�
 
 ## <a name="related-topics"></a>Související témata
 
-[Postupy: Převedení OpenMP paralelní smyčky na využití modulu Concurrency Runtime](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
+[Postupy: Převedení paralelní smyčky for v OpenMP na využití modulu Concurrency Runtime](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
 
 Zadaný základní smyčku, která se používá OpenMP [paralelní](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) a [pro](../../parallel/openmp/reference/for-openmp.md) direktivy, ukazuje, jak převést jej na využití modulu Concurrency Runtime [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmus.
 
@@ -61,10 +61,9 @@ Zadaný OpenMP [paralelní](../../parallel/concrt/how-to-use-parallel-invoke-to-
 [Postupy: Převedení smyčky OpenMP využívající redukční proměnnou na využití modulu Concurrency Runtime](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
 Zadaný OpenMP [paralelní](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[pro](../../parallel/openmp/reference/for-openmp.md) smyčku, která se používá [snížení](../../parallel/openmp/reference/reduction.md) klauzule, ukazuje, jak převést jej na využití modulu Concurrency Runtime.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Concurrency Runtime](../../parallel/concrt/concurrency-runtime.md)<br/>
 [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)<br/>
 [Knihovna PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 [Knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md)
-

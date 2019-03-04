@@ -7,12 +7,12 @@ helpviewer_keywords:
 - servers, server documents
 - server documents [MFC], implementing
 ms.assetid: cca1451a-ad09-47ed-b56e-bccd78fc86d1
-ms.openlocfilehash: 17c90eb6350a2bf3cd5b695a99dea954dd89a033
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17ced1cdb0b40b13fbda68150030efde5735ba7b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436488"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261866"
 ---
 # <a name="servers-implementing-server-documents"></a>Servery: Implementace dokumentů serveru
 
@@ -28,16 +28,15 @@ Tento článek popisuje kroky, které je třeba provést při úspěšně implem
 
    `OnGetEmbeddedItem` je volána, když uživatel aplikace typu kontejner vytvoří nebo upraví vloženou položku. Měla by vrátit položku představující celý dokument. Měl by to být objekt vaše `COleServerItem`-odvozené třídy.
 
-1. Přepsat `Serialize` členskou funkci k serializaci obsahu dokumentu. Není nutné k serializaci seznam položek serveru, pokud je používáte k reprezentaci nativní data v dokumentu. Další informace najdete v tématu *implementace položky serveru* v článku [servery: serverové položky](../mfc/servers-server-items.md).
+1. Přepsat `Serialize` členskou funkci k serializaci obsahu dokumentu. Není nutné k serializaci seznam položek serveru, pokud je používáte k reprezentaci nativní data v dokumentu. Další informace najdete v tématu *implementace položky serveru* v článku [serverů: Serverové položky](../mfc/servers-server-items.md).
 
 Když se dokument na serveru, rozhraní automaticky zaregistruje dokumentu OLE systémové knihovny DLL. To umožňuje identifikovat dokumenty na serveru knihoven DLL.
 
 Další informace najdete v tématu [odvozenou třídu COleServerItem](../mfc/reference/coleserveritem-class.md) a [coleserverdoc –](../mfc/reference/coleserverdoc-class.md) v *knihovny tříd*.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Servery](../mfc/servers.md)<br/>
 [Servery: Serverové položky](../mfc/servers-server-items.md)<br/>
 [Servery: Implementace serveru](../mfc/servers-implementing-a-server.md)<br/>
-[Servery: Implementace oken s rámečkem na místě](../mfc/servers-implementing-in-place-frame-windows.md)
-
+[Servery: Implementace Windows rámečkem na místě](../mfc/servers-implementing-in-place-frame-windows.md)

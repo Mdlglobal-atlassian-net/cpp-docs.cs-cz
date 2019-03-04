@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: ba97dd27fbf70c34461d45755fd008e6ad9099b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6d5d3becfd1c1ee4a032c74eb116ede82c42bc4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585897"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260267"
 ---
 # <a name="cprogressctrl-class"></a>Cprogressctrl – třída
 
@@ -359,7 +359,7 @@ int OffsetPos(int nPos);
 
 ### <a name="parameters"></a>Parametry
 
-*nPos –*<br/>
+*nPos*<br/>
 Velikost přejdete pozice.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -476,7 +476,7 @@ int SetPos(int nPos);
 
 ### <a name="parameters"></a>Parametry
 
-*nPos –*<br/>
+*nPos*<br/>
 Nové pozice ovládací prvek indikátoru průběhu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -533,7 +533,7 @@ int SetState(int iState);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*iState*|[in] Stav nastavení indikátor průběhu. Použijte jednu z následujících hodnot:<br /><br /> -PBST_NORMAL – probíhá<br />-PBST_ERROR – chyba<br />-PBST_PAUSED – pozastaveno|
+|*iState*|[in] Stav nastavení indikátor průběhu. Použijte jednu z následujících hodnot:<br /><br /> -PBST_NORMAL – probíhá<br />- PBST_ERROR - Error<br />-PBST_PAUSED – pozastaveno|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -602,9 +602,8 @@ Přírůstek krok nastavuje `CProgressCtrl::SetStep` členskou funkci.
 
 [!code-cpp[NVC_MFC_CProgressCtrl#10](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_16.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázka CMNCTRL2 knihovny MFC](../../visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-

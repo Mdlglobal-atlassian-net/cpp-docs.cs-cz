@@ -5,18 +5,18 @@ f1_keywords:
 - amp_graphics/concurrency::graphics::address_mode
 - amp_graphics/concurrency::graphics::filter_mode
 ms.assetid: 1d2e1859-a3d7-4d3d-8e03-1a877a86b3e0
-ms.openlocfilehash: 9676f87a5eefd36eaf165d10eb66b60d955feffe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15499de29c70a4015f1412cab8e803d0a7fb043c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583219"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264311"
 ---
 # <a name="concurrencygraphics-namespace-enums"></a>Výčty oboru názvů Concurrency::Graphics
 
 |||
 |-|-|
-|[reži_m výčet](#address_mode)|[filter_mode – výčet](#filter_mode)|
+|[reži_m výčet](#address_mode)|[filter_mode Enumeration](#filter_mode)|
 
 ##  <a name="address_mode"></a>  address_mode – výčet
 
@@ -36,8 +36,8 @@ enum filter_mode;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amp_graphics.h **Namespace:** Concurrency::graphics
+**Záhlaví:** amp_graphics.h **Namespace:** Concurrency::Graphics
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

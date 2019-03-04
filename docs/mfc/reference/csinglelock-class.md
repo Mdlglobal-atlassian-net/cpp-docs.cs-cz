@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSingleLock [MFC], Lock
 - CSingleLock [MFC], Unlock
 ms.assetid: 7dae7288-8066-4a3e-85e0-78d28bfc6bc8
-ms.openlocfilehash: 2d65af79971aab88884efe1f92d1090194b737d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31bd43f7f7a6fbccd4680db013ac5c654123061e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459563"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259890"
 ---
 # <a name="csinglelock-class"></a>CSingleLock – třída
 
@@ -55,7 +55,7 @@ Chcete-li použít synchronizační třídy [CSemaphore](../../mfc/reference/cse
 
 Použití `CSingleLock` objektu, volání konstruktoru uvnitř členské funkce ve třídě řízené prostředků. Zavolejte [uzamčeno](#islocked) členskou funkci k určení, jestli je prostředek k dispozici. Pokud se jedná, pokračujte zbytek členskou funkci. Pokud prostředek není k dispozici, počkejte určenou dobu pro prostředek, který má být všeobecně dostupné nebo vrátí hodnotu neúspěch. Po dokončení použití zdroje buď volat [odemknout](#unlock) fungovat, pokud `CSingleLock` je znovu použít, nebo povolíte `CSingleLock` objekt, který se má zničit.
 
-`CSingleLock` objekty vyžadují existenci objektu odvozeného od [CSyncObject](../../mfc/reference/csyncobject-class.md). To je obvykle datový člen třídy řízené prostředků. Další informace o tom, jak používat `CSingleLock` objekty, najdete v článku [Multithreading: jak používat synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+`CSingleLock` objekty vyžadují existenci objektu odvozeného od [CSyncObject](../../mfc/reference/csyncobject-class.md). To je obvykle datový člen třídy řízené prostředků. Další informace o tom, jak používat `CSingleLock` objekty, najdete v článku [Multithreading: Jak používat synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -77,7 +77,7 @@ explicit CSingleLock(
 
 ### <a name="parameters"></a>Parametry
 
-*odstraněný objekt*<br/>
+*pObject*<br/>
 Odkazuje na objekt synchronizace přístup. Nemůže mít hodnotu NULL.
 
 *bInitialLock*<br/>
@@ -166,7 +166,7 @@ Pokud potřebujete více než jeden přístup počet semafor verzi, použijte te
 
 [!code-cpp[NVC_MFC_Utilities#21](../../mfc/codesnippet/cpp/csinglelock-class_3.h)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CMultiLock – třída](../../mfc/reference/cmultilock-class.md)

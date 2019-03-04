@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interfaces, availability
 - QueryInterface method
 ms.assetid: 62fce95e-aafa-4187-b50b-e6611b74c3b3
-ms.openlocfilehash: 552d0a0f5cbc93bd0d8fc6eb4a77eecee851add6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3ec3c6e0d2b534c3af49000202461a43a65dae9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477932"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261459"
 ---
 # <a name="queryinterface"></a>QueryInterface
 
@@ -24,8 +24,7 @@ Každé rozhraní je odvozena od `IUnknown`, takže každý rozhraní obsahuje i
 
 Všimněte si, že musí dodržovat [počítání odkazů](../atl/reference-counting.md) pravidla za všech okolností. Při volání `Release` na ukazatel rozhraní k snížen počet odkazů na nulu, neměli byste používat tento ukazatel znovu. Občas budete muset získat nestálý odkaz na objekt (to znamená, které staví na získání ukazatele na jedno z jeho rozhraní bez zvyšování počtu odkazů), ale není přijatelné pro toto provést zavoláním `QueryInterface` následovaný `Release`. Ukazatele získaného takovým způsobem, není platný a neměl by se používat. To méně zřejmé, kdy [_ATL_DEBUG_INTERFACES](reference/debugging-and-error-reporting-macros.md#_atl_debug_interfaces) je definován, takže definování toto makro je užitečný způsob počítání chyby hledání referencí.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Úvod do modelu COM](../atl/introduction-to-com.md)<br/>
 [QueryInterface: Navigace v objektu](/windows/desktop/com/queryinterface--navigating-in-an-object)
-

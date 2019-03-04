@@ -1,5 +1,5 @@
 ---
-title: Cstdiofile – třída
+title: CStdioFile Class
 ms.date: 11/04/2016
 f1_keywords:
 - CStdioFile
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - CStdioFile [MFC], WriteString
 - CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
-ms.openlocfilehash: dd1a13e7cef066350f8409782b0efeba11b9d11e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd42934107591905a1bbc273ee9eec4b37e58ea7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456209"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258785"
 ---
-# <a name="cstdiofile-class"></a>Cstdiofile – třída
+# <a name="cstdiofile-class"></a>CStdioFile Class
 
 Představuje běhový streamový soubor C jako otevřený pomocí běhové funkce [fopen](../../c-runtime-library/reference/fopen-wfopen.md).
 
@@ -74,7 +74,7 @@ Další informace o používání `CStdioFile`, najdete v článcích [soubory v
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cfile –](../../mfc/reference/cfile-class.md)
+[CFile](../../mfc/reference/cfile-class.md)
 
 `CStdioFile`
 
@@ -114,7 +114,7 @@ Určuje možnosti pro vytvoření souboru, sdílení souborů a režimy přístu
 
 Jedna možnost režim přístupu k souboru se vyžaduje; jiné režimy jsou volitelné. Zobrazit [CFile::CFile](../../mfc/reference/cfile-class.md#cfile) seznam možností režimu a další příznaky. V prostředí MFC verze 3.0 nebo novější jsou povoleny příznaky sdílené složky.
 
-*Druh*<br/>
+*pTM*<br/>
 Ukazatel na objekt catltransactionmanager –.
 
 ### <a name="remarks"></a>Poznámky
@@ -173,7 +173,7 @@ Režim sdílení a přístup. Určuje akci, která má provést při otevírán�
 *pError*<br/>
 Ukazatel na existující objekt výjimky souborů, který se zobrazí stav operace, která selhala.
 
-*Druh*<br/>
+*pTM*<br/>
 Ukazatel `CAtlTransactionManager` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -199,7 +199,7 @@ virtual BOOL ReadString(CString& rString);
 *lpsz*<br/>
 Určuje ukazatel do vyrovnávací paměti, zadané uživatele, který bude příjemcem řetězec zakončený hodnotou null text.
 
-*Nmaximum*<br/>
+*nMax*<br/>
 Určuje maximální počet znaků pro čtení, výčtu nebudou započteny ukončující znak null.
 
 *rString*<br/>
@@ -237,7 +237,7 @@ virtual ULONGLONG Seek(
 *lOff*<br/>
 Počet bajtů k přesunutí ukazatele.
 
-*Nze*<br/>
+*nFrom*<br/>
 Režim pohyb ukazatele. Musí být jedna z následujících hodnot:
 
 - `CFile::begin`: Přesuňte ukazatel na soubor *lOff* vpřed bajtů od začátku souboru.
@@ -291,7 +291,7 @@ Tato metoda vyvolá `CFileException*` v reakci na chyby.
 
 [!code-cpp[NVC_MFCFiles#40](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_4.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CFile – třída](../../mfc/reference/cfile-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

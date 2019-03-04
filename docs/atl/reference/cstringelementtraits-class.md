@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - CStringElementTraits class
 ms.assetid: 74d7134b-099d-4455-bf91-3e68ccbf95bc
-ms.openlocfilehash: f3e0bd447d2ff7c04ecf3c4a72b7dd2340c6bb4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80efd4dbc4ff0541e083ed61bed872d5e69c7a74
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534222"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261879"
 ---
 # <a name="cstringelementtraits-class"></a>Cstringelementtraits – třída
 
@@ -76,10 +76,10 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
 
 ### <a name="parameters"></a>Parametry
 
-*Str1*<br/>
+*str1*<br/>
 První řetězec elementu.
 
-*řetězci Str2*<br/>
+*str2*<br/>
 Druhý řetězec elementu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -96,10 +96,10 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
 
 ### <a name="parameters"></a>Parametry
 
-*Str1*<br/>
+*str1*<br/>
 První řetězec elementu.
 
-*řetězci Str2*<br/>
+*str2*<br/>
 Druhý řetězec elementu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -191,7 +191,7 @@ Počet prvků, které mají přemístění.
 
 Tato statická funkce volá [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), který stačí pro většinu datových typů. Pokud objekty přesouvaných obsahují ukazatele a jejich členy, Tato statická funkce bude nutné přepsat.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CElementTraitsBase – třída](../../atl/reference/celementtraitsbase-class.md)<br/>
 [CStringElementTraitsI – třída](../../atl/reference/cstringelementtraitsi-class.md)<br/>

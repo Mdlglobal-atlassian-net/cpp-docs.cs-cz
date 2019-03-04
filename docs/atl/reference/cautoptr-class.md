@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtr class
 ms.assetid: 08988d53-4fb0-4711-bdfc-8ac29c63f410
-ms.openlocfilehash: b328d58116d3b26645a2b3a3981c11fa705878ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f4f446aa97f2bf3843b830bd7fb4c4a5d74ffdb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615251"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259786"
 ---
 # <a name="cautoptr-class"></a>Cautoptr – třída
 
@@ -45,7 +45,7 @@ Typ ukazatele.
 |Název|Popis|
 |----------|-----------------|
 |[CAutoPtr::CAutoPtr](#cautoptr)|Konstruktor|
-|[CAutoPtr:: ~ CAutoPtr](#dtor)|Destruktor.|
+|[CAutoPtr::~CAutoPtr](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -143,7 +143,7 @@ Typ spravované jiným `CAutoPtr`, která slouží k inicializaci aktuální obj
 
 Podívejte se na příklad v [CAutoPtr přehled](../../atl/reference/cautoptr-class.md).
 
-##  <a name="dtor"></a>  CAutoPtr:: ~ CAutoPtr
+##  <a name="dtor"></a>  CAutoPtr::~CAutoPtr
 
 Destruktor.
 
@@ -267,7 +267,7 @@ Vrací ukazatel na objekt typu dat definovanému v šabloně třídy.
 
 Podívejte se na příklad v [CAutoPtr přehled](../../atl/reference/cautoptr-class.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CHeapPtr – třída](../../atl/reference/cheapptr-class.md)<br/>
 [CAutoVectorPtr – třída](../../atl/reference/cautovectorptr-class.md)<br/>

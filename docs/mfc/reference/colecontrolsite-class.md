@@ -106,12 +106,12 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: 26d0f5e875c4f3982705a2cf571b15cd5bfac985
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 31502f2ecda1c14cb68c83da98cf2b764baba461
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178915"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264128"
 ---
 # <a name="colecontrolsite-class"></a>Colecontrolsite – třída
 
@@ -316,7 +316,7 @@ virtual HRESULT CreateControl(
 *pWndCtrl*<br/>
 Ukazatel na objekt window představující ovládací prvek.
 
-*identifikátor CLSID*<br/>
+*clsid*<br/>
 Třída jedinečné ID ovládacího prvku.
 
 *lpszWindowName*<br/>
@@ -674,7 +674,7 @@ Adresa proměnné, která bude přijímat hodnoty vlastnosti nebo návratovou ho
 *pbParamInfo*<br/>
 Ukazatel na řetězec zakončený hodnotou null bajtů určující typy parametrů za *pbParamInfo*. Možné hodnoty najdete v části poznámky [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
-*Seznam_argumentů*<br/>
+*argList*<br/>
 Ukazatel na seznam argumentů s proměnnou délkou.
 
 ### <a name="remarks"></a>Poznámky
@@ -1114,7 +1114,7 @@ Určuje hodnotu dispatch ID vlastnosti nebo metody v ovládacího prvku `IDispat
 *vtProp*<br/>
 Určuje typ vlastnosti. Možné hodnoty najdete v části poznámky [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
-*Seznam_argumentů*<br/>
+*argList*<br/>
 Ukazatel na seznam argumentů.
 
 ### <a name="remarks"></a>Poznámky
@@ -1148,10 +1148,10 @@ Nové umístění levé části okna.
 *y*<br/>
 Novou pozici horní části okna.
 
-*CX*<br/>
+*cx*<br/>
 Nové šířku okna
 
-*CY*<br/>
+*cy*<br/>
 Nové výšku okna.
 
 *nFlags*<br/>
@@ -1215,7 +1215,7 @@ Určuje, jak má být zobrazen ovládací prvek webu. Musí být jeden z násled
 
 Nenulové, pokud bylo dříve vidět; okna 0, pokud byla dříve skrytá okna.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CCmdTarget – třída](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

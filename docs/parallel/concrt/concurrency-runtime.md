@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: bed1d7680d9bc6615476c7d5d4b700d729026c66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 245984d9702c997f16601bf5e2a9bd049ae5fed9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495950"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258330"
 ---
 # <a name="concurrency-runtime"></a>Concurrency Runtime
 
@@ -70,7 +70,7 @@ Odkaz na dokumentaci najdete v tématu [odkaz](../../parallel/concrt/reference/r
 |||
 |-|-|
 |[Asynchronní agenti](../../parallel/concrt/asynchronous-agents.md)<br /><br /> [Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)<br /><br /> [Funkce pro předávání zpráv](../../parallel/concrt/message-passing-functions.md)<br /><br /> [Postupy: Implementace různých vzorů producent–příjemce](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)<br /><br /> [Postupy: Poskytování pracovních funkcí třídám call a transformer](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)<br /><br /> [Postupy: Použití transformace v datovém kanálu](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)<br /><br /> [Postupy: Výběr z dokončených úloh](../../parallel/concrt/how-to-select-among-completed-tasks.md)<br /><br /> [Postupy: Odesílání zpráv v pravidelných intervalech](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)<br /><br /> [Postupy: Použití filtru bloku zpráv](../../parallel/concrt/how-to-use-a-message-block-filter.md)|Popisuje funkce předávání zpráv, které jsou stavební bloky pro provádění operací toku dat v modulu Runtime souběžnosti, asynchronních agentů a bloky zpráv.|
-|[Návod: Vytvoření aplikace založené na agentovi](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br /><br /> [Postupy: Vytvoření agenta toku dat](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)|Ukazuje, jak vytvořit základní aplikace založené na agentovi.|
+|[Návod: Vytvoření aplikace založené na agentovi](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br /><br /> [Návod: Vytvoření agenta toku dat](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)|Ukazuje, jak vytvořit základní aplikace založené na agentovi.|
 |[Návod: Vytvoření sítě pro zpracování obrázků](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)|Ukazuje, jak vytvořit síť asynchronní bloky zpráv, které provádějí zpracování obrázků.|
 |[Návod: Použití metody join k zabránění vzájemnému zablokování](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)|Problém obědvajících filozofů využívá pro ilustraci použití Concurrency Runtime zabránit zablokování ve vaší aplikaci.|
 |[Návod: Vytvoření vlastního bloku zpráv](../../parallel/concrt/walkthrough-creating-a-custom-message-block.md)|Ukazuje, jak vytvořit typ bloku vlastní zprávy, který řadí příchozích zprávy podle priority.|
@@ -104,7 +104,6 @@ Odkaz na dokumentaci najdete v tématu [odkaz](../../parallel/concrt/reference/r
 |[V C++ a nativním kódu fórum pro paralelní výpočty](http://go.microsoft.com/fwlink/p/?linkid=183874)|Umožňuje účast v komunitě diskuse o modulu Runtime souběžnosti.|
 |[Paralelní programování](/dotnet/standard/parallel-programming/index)|Naučíte se o paralelní programovací model, který je k dispozici v rozhraní .NET Framework.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Referenční informace](../../parallel/concrt/reference/reference-concurrency-runtime.md)
-

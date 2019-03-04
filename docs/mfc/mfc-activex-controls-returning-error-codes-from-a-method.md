@@ -1,5 +1,5 @@
 ---
-title: 'MFC –ovládací prvky ActiveX: Vrácení chybových kódů z metody'
+title: 'MFC – ovládací prvky ActiveX: Vrácení chybových kódů z metody'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - SCODE, MFC ActiveX controls
 - ThrowError method [MFC]
 ms.assetid: 771fb9c9-2413-4dcc-b386-7bc4c4adeafd
-ms.openlocfilehash: 8c5fe88cf952337a7d070eae7a5da149a8e905bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0800c1827c636dd81e2928e33c0ee2afde4c94ac
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676483"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259136"
 ---
-# <a name="mfc-activex-controls-returning-error-codes-from-a-method"></a>MFC –ovládací prvky ActiveX: Vrácení chybových kódů z metody
+# <a name="mfc-activex-controls-returning-error-codes-from-a-method"></a>MFC – ovládací prvky ActiveX: Vrácení chybových kódů z metody
 
 Tento článek popisuje, jak vrátit kódy chyb z metody ovládacího prvku ActiveX.
 
@@ -28,11 +28,10 @@ K označení, že v rámci metody došlo k chybě, byste měli použít [COleCon
 
 Neexistuje pomocné funkce, nejběžnější předdefinované SCODEs, jako například [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), a [COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).
 
-Seznam předdefinovaných SCODEs a pokyny k definování vlastní SCODEs, najdete v části [zpracování chyb v svůj ovládací prvek ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) v ovládacích prvcích ActiveX: Advanced témata.
+Seznam předdefinovaných SCODEs a pokyny k definování vlastní SCODEs, najdete v části [zpracování chyb v svůj ovládací prvek ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) v ovládacích prvcích ActiveX: Pokročilá témata.
 
-Další informace o vytváření sestav výjimky v jiných oblastech, které váš kód, naleznete v tématu [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) a v části [zpracování chyb v svůj ovládací prvek ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) v ovládacích prvcích ActiveX: Advanced témata.
+Další informace o vytváření sestav výjimky v jiných oblastech, které váš kód, naleznete v tématu [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) a v části [zpracování chyb v svůj ovládací prvek ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) v ovládacích prvcích ActiveX: Pokročilá témata.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)
-

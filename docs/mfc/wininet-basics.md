@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WinInet classes [MFC], displaying progress
 - WinInet classes [MFC], about WinInet classes
 ms.assetid: 665de5ac-e80d-427d-8d91-2ae466885940
-ms.openlocfilehash: f56d2bb6e6a0b49b3d69dbcc0bf6346b72e9f7b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79ec102aa27440c64f03c6e22b9f2fe959cac6b9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519181"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264453"
 ---
 # <a name="wininet-basics"></a>WinInet – základy
 
@@ -63,8 +63,7 @@ Když vytvoříte `CInternetSession` objektu, můžete zadat *dwContext* paramet
 
 Například, když zapíšete aplikaci, která vytvoří připojení k serveru FTP ke čtení souboru a také připojuje k serveru HTTP se získat na webové stránce, budete mít `CInternetSession` objektu, dvěma `CInternetConnection` objekty (jeden by `CFtpSession` a druhá bude `CHttpSession`) a dvě `CInternetFile` objekty (jeden pro každé připojení). Pokud jste použili výchozí hodnoty pro *dwContext* parametry, nebude možné rozlišit `OnStatusCallback` volání, které označují průběh připojení FTP a volání, které označují průběh Připojení HTTP. Pokud zadáte *dwContext* ID, které můžete později otestovat pro `OnStatusCallback`, budete vědět, jaké operace vytvořila zpětného volání.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Základy internetového programování v prostředí MFC](../mfc/mfc-internet-programming-basics.md)<br/>
 [Win32 – internetová rozšíření (WinInet)](../mfc/win32-internet-extensions-wininet.md)
-

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - frame window classes [MFC], toolbar embedded in
 - LoadToolBar method [MFC]
 ms.assetid: cc00aaff-8a56-433b-b0c0-b857d76b4ffd
-ms.openlocfilehash: 965842dd42033910366ec4686e7c0abf775f2d5c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39e790e5152dd07ab40901140ecdd8f8791a446e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530790"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258395"
 ---
 # <a name="toolbar-fundamentals"></a>Principy panelů nástrojů
 
@@ -102,7 +102,6 @@ Pokud chcete zobrazit panel nástrojů jako výsledek příkazu, bude potřeba:
 
 - [Použití starých panelů nástrojů](../mfc/using-your-old-toolbars.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Implementace panelu nástrojů v prostředí MFC](../mfc/mfc-toolbar-implementation.md)
-

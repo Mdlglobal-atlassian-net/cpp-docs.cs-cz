@@ -7,12 +7,12 @@ helpviewer_keywords:
 - status bar controls [MFC], creating
 - CStatusBarCtrl class [MFC], creating
 ms.assetid: 365c2b65-12de-49e6-9a2e-416c6ee10d60
-ms.openlocfilehash: 05baf212f53956095af89377c0877db79b6e25ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3242986d66de7d423b8ab744a691ca1904328de8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552760"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264206"
 ---
 # <a name="using-cstatusbarctrl-to-create-a-cstatusbarctrl-object"></a>Použití třídy CStatusBarCtrl k vytvoření objektu CStatusBarCtrl
 
@@ -32,8 +32,7 @@ Tady je příklad typické použití [CStatusBarCtrl](../mfc/reference/cstatusba
 
 V některých případech se stavový řádek stačí k zobrazení řádku textu. V takovém případě uskutečnit volání [setsimple –](../mfc/reference/cstatusbarctrl-class.md#setsimple). Tento ovládací prvek panelu stavu umístí do režimu "simple", který zobrazuje jeden řádek textu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

@@ -2,12 +2,12 @@
 title: Grafické prvky (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: fcc1f11ff716654aadef91d86137b97e93b0a80f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a40575d84c9a0efedcb3c7c9717fc310870b530
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570306"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260878"
 ---
 # <a name="graphics-c-amp"></a>Grafické prvky (C++ AMP)
 
@@ -30,10 +30,10 @@ Krátká vektorová knihovna poskytuje některé funkce [typ vektoru](http://go.
 ||Délka 2|Délka 3|Délka 4|
 |-|--------------|--------------|--------------|
 |double|double_2 –<br /><br /> double2|double_3 –<br /><br /> double3|double_4 –<br /><br /> double4|
-|float|float_2 –<br /><br /> float2|float_3 –<br /><br /> float3|float_4 –<br /><br /> FLOAT4|
-|int|int_2 –<br /><br /> int2|int_3 –<br /><br /> int3|int_4 –<br /><br /> int4|
+|float|float_2<br /><br /> float2|float_3<br /><br /> float3|float_4 –<br /><br /> FLOAT4|
+|int|int_2<br /><br /> int2|int_3<br /><br /> int3|int_4<br /><br /> int4|
 |norm|norm_2 –<br /><br /> norm2|norm_3 –<br /><br /> norm3|norm_4 –<br /><br /> norm4|
-|uint|uint_2 –<br /><br /> uint2|uint_3 –<br /><br /> uint3|uint_4 –<br /><br /> uint4|
+|uint|uint_2<br /><br /> uint2|uint_3<br /><br /> uint3|uint_4<br /><br /> uint4|
 |unorm|unorm_2 –<br /><br /> unorm2|unorm_3 –<br /><br /> unorm3|unorm_4 –<br /><br /> unorm4|
 
 ### <a name="operators"></a>Operátory
@@ -136,8 +136,8 @@ Existují omezení velikosti jednotlivých rozměrů `texture` objektu, jak je z
 |Textura|Omezení velikosti na dimenzi|
 |-------------|---------------------|
 |Textura\<T, 1 >|16384|
-|Textura\<T, 2 >|16384|
-|Textura\<T, 3 >|2048|
+|texture\<T,2>|16384|
+|texture\<T,3>|2048|
 
 ### <a name="reading-from-texture-objects"></a>Čtení z objektů textury
 
@@ -204,7 +204,7 @@ V následující tabulce jsou uvedeny platné bity na kanál pro každý typ vek
 |int, int_2 –, int_4 –<br /><br /> uint, uint_2 –, uint_4 –|8, 16, 32|
 |int_3 – uint_3 –|32|
 |float, float_2 –, float_4|16, 32|
-|float_3 –|32|
+|float_3|32|
 |double_2 – Double|64|
 |Norm a norm_2 –, norm_4 –<br /><br /> unorm, unorm_2 –, unorm, 4|8, 16|
 
@@ -342,10 +342,10 @@ Všimněte si, jak zobrazení textury jejíž typ elementu je nekonstantní a m�
 
 Typ elementu `texture_view`– jeho const-ness a také počet komponent, které má, také hraje roli při určování, zda zobrazení podporuje vzorkování textury a jak je přístupný úrovní mipmap:
 
-|Typ|Součásti|Číst|Write|Vzorkování|Přístup Mipmap|
+|Typ|Komponenty|Číst|Write|Vzorkování|Přístup Mipmap|
 |----------|----------------|----------|-----------|--------------|-------------------|
 |texture_view\<const T, N >|1, 2, 4|Ano|Ne (1)|Ano|Ano, indexovatelné. Rozsah je určena při instanci.|
-|Texture_view\<T, N >|1<br /><br /> 2, 4|Ano<br /><br /> Ne (2)|Ano<br /><br /> Ano|Ne (1)<br /><br /> Ne (1)|Ano, jedna úroveň. Úroveň je určena při instanci.<br /><br /> Ano, jedna úroveň. Úroveň je určena při instanci.|
+|Texture_view\<T, N>|1<br /><br /> 2, 4|Ano<br /><br /> Ne (2)|Ano<br /><br /> Ano|Ne (1)<br /><br /> Ne (1)|Ano, jedna úroveň. Úroveň je určena při instanci.<br /><br /> Ano, jedna úroveň. Úroveň je určena při instanci.|
 
 Z této tabulky uvidíte, že zobrazení textur jen pro čtení plně podporují nové možnosti výměnou nemůže zapisovat do zobrazení. Zapisovatelné zobrazení textur jsou omezeny v tom, že jsou přístup pouze k jedné úrovni mipmap. Zobrazení textur pro čtení a zápis jsou ještě více specializované než ty výhradně zapisovatelné, protože přidávají požadavek, aby typ prvku zobrazení textury měl pouze jednu komponentu. Všimněte si, že vzorkování není podporováno pro zobrazení textury s možností zápisu, protože se jedná operaci čtení.
 
@@ -406,7 +406,7 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
 
 Runtime C++ AMP podporuje interoperabilitu mezi `texture<T,1>` a [ID3D11Texture1D rozhraním](http://go.microsoft.com/fwlink/p/?linkId=248503), mezi `texture<T,2>` a [ID3D11Texture2D rozhraním](http://go.microsoft.com/fwlink/p/?linkId=255317)a mezi `texture<T,3>`a [ID3D11Texture3D rozhraním](http://go.microsoft.com/fwlink/p/?linkId=255377). [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) přijímá metodu `texture` objekt a vrátí `IUnknown` rozhraní. [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) přijímá metodu `IUnknown` rozhraní a `accelerator_view` objekt a vrátí `texture` objektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [double_2 – třída](../../parallel/amp/reference/double-2-class.md)<br/>
 [double_3 – třída](../../parallel/amp/reference/double-3-class.md)<br/>

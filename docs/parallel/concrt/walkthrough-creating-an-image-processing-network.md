@@ -5,12 +5,12 @@ helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-ms.openlocfilehash: 93a20ca9967c8730e1563a653c8f4546d94161fb
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 035d73190f3596044a35cbc45681807801385eab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176169"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262804"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Návod: Vytvoření sítě pro zpracování obrázků
 
@@ -28,7 +28,7 @@ Před zahájením tohoto návodu, přečtěte si následující dokumenty:
 
 - [Postupy: Použití filtru bloku zpráv](../../parallel/concrt/how-to-use-a-message-block-filter.md)
 
-- [Postupy: Vytvoření agenta toku dat](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)
+- [Návod: Vytvoření agenta toku dat](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)
 
 Doporučujeme také, že chápete základy rozhraní GDI + před zahájením tohoto návodu.
 
@@ -164,6 +164,6 @@ Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vlo
 
 **cl.exe /DUNICODE/EHsc/Link bitové kopie. zpracování network.cpp gdiplus.lib**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Návody pro Concurrency Runtime](../../parallel/concrt/concurrency-runtime-walkthroughs.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - MFC, wizards
 - Class View tool, managing Windows messages
 ms.assetid: f5dd4d13-9dc1-4a49-b6bf-5b3cb45fa8ba
-ms.openlocfilehash: fe55336d38393787988eac3a6f57394f3923260e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5316899b7eb8828847af6d7db95edf3d8ba3822a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472745"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265519"
 ---
 # <a name="wizards-and-the-resource-editors"></a>Průvodci a editory prostředků
 
@@ -50,6 +50,6 @@ To vám pomůže i, poskytuje knihovny Microsoft Foundation Class soubor s názv
 
 Průvodce aplikací MFC, průvodců aplikace Visual C++, editory prostředků a rozhraní MFC dělat spoustu práce za vás a ujistěte se, správa kódu mnohem jednodušší. Hromadné kódu specifické pro aplikaci se dokument a zobrazení tříd.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití tříd pro psaní aplikací pro Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)

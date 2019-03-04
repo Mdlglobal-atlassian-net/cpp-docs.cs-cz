@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IPrint interface
 - printing [MFC]
 ms.assetid: 3db0945b-5e13-4be4-86a0-6aecdae565bd
-ms.openlocfilehash: d01dcd901425fb3957201dca754a01042e629ebb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb8804610832f91f4b24487fddfe9c24a3799117
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630656"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263998"
 ---
 # <a name="programmatic-printing"></a>Tisk prostřednictvím kódu programu
 
@@ -69,7 +69,6 @@ V nejvíce obecný případech `IContinueCallback::FContinue` funkce pravidelně
 
 `FContinue`, ale není použit v rámci `IPrint::Print`; místo toho používá tisk `IContinueCallback::FContinuePrint`. Libovolný objekt pro tisk pravidelně by měly volat `FContinuePrinting` předávání počet stránek, které mají tisk přes, číslo stránky, tisku a další řetězec popisující stav tisku na klienta můžete zobrazit uživateli (například "stránka 5 19").
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Kontejnery pro aktivní dokument](../mfc/active-document-containers.md)
-

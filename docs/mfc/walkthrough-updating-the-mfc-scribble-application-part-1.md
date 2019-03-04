@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: 85ff0c17f8ec523fc5cb52101fb44cfc37dd9b50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 213bc8087b58eac232cc8fcfccc88e13785a807e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481845"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258759"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Návod: Aktualizace aplikace MFC Scribble (část 1)
 
@@ -81,9 +81,9 @@ Převést aplikaci, která podporuje nabídky k aplikaci, která podporuje pás 
 
     V souboru mainfrm.h:
 
-    1. Nahraďte `CToolBar` s `CMFCToolBar`.
+    1. Nahraďte `CToolBar` za `CMFCToolBar` (Jak velká může být moje znalostní báze?).
 
-    1. Nahraďte `CStatusBar` s `CMFCStatusBar`.
+    1. Nahraďte `CStatusBar` za `CMFCStatusBar` (Jak velká může být moje znalostní báze?).
 
 1. V souboru mainfrm.cpp:
 
@@ -113,7 +113,7 @@ Další čtyři kroky tohoto názorného postupu vyžadovat prostředky rastrov�
 
 - Zkopírujte si soubor odpovídající prostředek z jiné aplikace do projektu a poté importovat bitmapy z tohoto souboru.
 
-Tento podrobný postup kopíruje soubory prostředků z příkladu, vytvoří v [návod: vytváření pásu karet aplikace podle pomocí knihovny MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
+Tento podrobný postup kopíruje soubory prostředků z příkladu, vytvoří v [názorný postup: Vytvoření jednoduché aplikace pásu karet pomocí knihovny MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
 
 ### <a name="to-add-bitmaps-to-the-project"></a>Chcete-li přidat rastrové obrázky do projektu
 
@@ -169,7 +169,7 @@ Se skládá z pásu karet **aplikace** tlačítko, které je velké tlačítko v
 
 1. Můžete přizpůsobit **aplikace** tlačítko úpravou jeho vlastností. ID zprávy, které se používají v tomto kódu jsou již definovány v nabídce Scribble 1.0.
 
-1. V návrhovém zobrazení, klikněte na tlačítko **aplikace** tlačítko a zobrazte její vlastnosti. Změňte hodnoty vlastností následujícím způsobem: **Image** k `IDB_RIBBON_MAIN`, **výzvy** k `File`, **klíče** k `f`, **Large Images** k `IDB_RIBBON_FILELARGE`, a **Small Images** k `IDB_RIBBON_FILESMALL`.
+1. V návrhovém zobrazení, klikněte na tlačítko **aplikace** tlačítko a zobrazte její vlastnosti. Změňte hodnoty vlastností následujícím způsobem: **Image** k `IDB_RIBBON_MAIN`, **výzvy** k `File`, **klíče** k `f`, **Large Images** k `IDB_RIBBON_FILELARGE`a **Small Images** k `IDB_RIBBON_FILESMALL`.
 
 1. Vytvořit následující změny v nabídce, která se zobrazí, když uživatel klikne **aplikace** tlačítko. Klikněte na tlačítko se třemi tečkami (**...** ) vedle položky **položky hlavní** otevřít **Editor položek**.
 
@@ -238,7 +238,7 @@ Teď, když jste vytvořili **aplikace** tlačítko, můžete přidat prvky na p
 
 ### <a name="to-add-a-home-category-and-edit-panel"></a>Přidat kategorii domovské a upravit panel
 
-1. Scribble program vyžaduje pouze jednu kategorii. V okně návrhu v **nástrojů**, dvakrát klikněte na panel **kategorie** ho přidejte a zobrazit její vlastnosti. Změňte hodnoty vlastností následujícím způsobem: **titulek** k `&Home`, **Large Images** k `IDB_RIBBON_HOMELARGE`, **Small Images** k `IDB_RIBBON_HOMESMALL`.
+1. Scribble program vyžaduje pouze jednu kategorii. V okně návrhu v **nástrojů**, dvakrát klikněte na panel **kategorie** ho přidejte a zobrazit její vlastnosti. Změňte hodnoty vlastností následujícím způsobem: **Titulek** k `&Home`, **Large Images** k `IDB_RIBBON_HOMELARGE`, **Small Images** k `IDB_RIBBON_HOMESMALL`.
 
 1. Každá kategorie pásu karet je uspořádaný do pojmenované panelů. Každý panel obsahuje sadu ovládacích prvků tohoto dokončení souvisejících operací. Tato kategorie obsahuje jeden panel. Klikněte na tlačítko **Panel**a potom změňte **titulek** k `Edit`.
 
@@ -266,7 +266,7 @@ A *správce vzhledu* je globální objekt, který určuje všechny vykreslován�
 
 Změnili jste classic vzorek Scribble 1.0 MFC používat **Návrháře pásu karet**. Teď přejděte na [2. část](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Návody](../mfc/walkthroughs-mfc.md)<br/>
 [Návod: Aktualizace aplikace MFC Scribble (část 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)

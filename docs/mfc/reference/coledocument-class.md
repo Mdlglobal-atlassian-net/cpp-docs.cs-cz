@@ -52,12 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-ms.openlocfilehash: 2f28178240f7d17e124970d91ec7eb338ef110e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f36557a4a993e8abd3004dc59372cc5a089e044
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452144"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259747"
 ---
 # <a name="coledocument-class"></a>Coledocument – třída
 
@@ -117,7 +117,7 @@ class COleDocument : public CDocument
 
 Pokud píšete kontejneru na jednoduchou aplikaci, jsou odvozeny vaše dokumentové třídy z `COleDocument`. Při psaní aplikace typu kontejner, který podporuje propojování vložené položky obsažené v jeho dokumenty, odvodit vaše dokumentové třídy z [colelinkingdoc –](../../mfc/reference/colelinkingdoc-class.md). Pokud vytváříte server aplikace nebo kombinaci typu server/kontejner odvodit vaše dokumentové třídy z [coleserverdoc –](../../mfc/reference/coleserverdoc-class.md). `COleLinkingDoc` a `COleServerDoc` jsou odvozeny z `COleDocument`, takže tyto třídy dědí všechny služby, které jsou k dispozici v `COleDocument` a `CDocument`.
 
-Chcete-li použít `COleDocument`, odvodit třídu z něj a přidávat funkce pro správu aplikace jiných než OLE a také vložené nebo propojené položky. Pokud definujete `CDocItem`-odvozené třídy pro uložení data nativní aplikace, můžete použít výchozí implementace určené `COleDocument` k uložení OLE a data jiných než OLE. Také si můžete navrhovat vlastní datové struktury pro ukládání dat jiných než OLE odděleně od položky OLE. Další informace najdete v článku [kontejnery: složené soubory](../../mfc/containers-compound-files.md)...
+Chcete-li použít `COleDocument`, odvodit třídu z něj a přidávat funkce pro správu aplikace jiných než OLE a také vložené nebo propojené položky. Pokud definujete `CDocItem`-odvozené třídy pro uložení data nativní aplikace, můžete použít výchozí implementace určené `COleDocument` k uložení OLE a data jiných než OLE. Také si můžete navrhovat vlastní datové struktury pro ukládání dat jiných než OLE odděleně od položky OLE. Další informace najdete v článku [kontejnerů: Složené soubory](../../mfc/containers-compound-files.md)...
 
 `CDocument` zajišťuje podporu pro odesílání dokumentu e-mailem. Pokud je k dispozici podpora e-mailu (MAPI). `COleDocument` byl aktualizován [onfilesendmail –](#onfilesendmail) zpracování složených dokumentů správně. Další informace najdete v článcích [MAPI](../../mfc/mapi.md) a [Podpora MAPI v MFC](../../mfc/mapi-support-in-mfc.md)...
 
@@ -166,7 +166,7 @@ BOOL ApplyPrintDevice(const PRINTDLG* ppd);
 *ptd*<br/>
 Ukazatel `DVTARGETDEVICE` datová struktura, která obsahuje informace o nové tiskové cílové zařízení. Může mít hodnotu NULL.
 
-*PPD*<br/>
+*ppd*<br/>
 Ukazatel `PRINTDLG` datová struktura, která obsahuje informace o nové tiskové cílové zařízení. Může mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -206,7 +206,7 @@ Určuje, zda je povolena podpora složených souborů.
 
 ### <a name="remarks"></a>Poznámky
 
-To se také nazývá strukturované úložiště. Obvykle voláním této funkce z konstruktoru vaše `COleDocument`-odvozené třídy. Další informace o složených dokumentů, najdete v článku [kontejnery: složené soubory](../../mfc/containers-compound-files.md)...
+To se také nazývá strukturované úložiště. Obvykle voláním této funkce z konstruktoru vaše `COleDocument`-odvozené třídy. Další informace o složených dokumentů, najdete v článku [kontejnerů: Složené soubory](../../mfc/containers-compound-files.md)...
 
 Pokud není tato členská funkce volána, dokumenty se uloží v nestrukturovaném ("ploché") formátu.
 
@@ -239,7 +239,7 @@ COleClientItem* GetNextClientItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Odkaz na POZICI hodnota sady předchozí volání `GetNextClientItem`; počáteční hodnota je vrácený `GetStartPosition` členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -264,7 +264,7 @@ virtual CDocItem* GetNextItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Odkaz na POZICI hodnota sady předchozí volání `GetNextItem`; počáteční hodnota je vrácený `GetStartPosition` členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -289,7 +289,7 @@ COleServerItem* GetNextServerItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Odkaz na POZICI hodnota sady předchozí volání `GetNextServerItem`; počáteční hodnota je vrácený `GetStartPosition` členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -542,10 +542,9 @@ virtual void UpdateModifiedFlag();
 
 To umožňuje rozhraní pro výzvu uživateli uložit dokument před jeho zavřením, i v případě, že byl změněn nativní data v dokumentu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC KONTEJNERU](../../visual-cpp-samples.md)<br/>
 [Ukázky knihovny MFC MFCBIND](../../visual-cpp-samples.md)<br/>
 [CDocument – třída](../../mfc/reference/cdocument-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - CHotKeyCtrl class [MFC], using
 - hot key controls
 ms.assetid: cdd6524b-cc43-447f-b151-164273559685
-ms.openlocfilehash: 335489011076b1e30a9c36720a3bf2e94c7918b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9178fe989e476111a3da55861642e9aa6311872
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542191"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260574"
 ---
 # <a name="using-a-hot-key-control"></a>Použití ovládacího prvku klávesová zkratka
 
@@ -28,8 +28,7 @@ Typické použití ovládacího prvku horké má následující formát, níže:
 
 - Při výměně klíče ovládacího prvku v dialogovém okně ho a `CHotKeyCtrl` bude objekt zničen. automaticky. Pokud ne, musíte zajistit, aby oba ovládací prvek a `CHotKeyCtrl` objektu jsou správně zničeny.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CHotKeyCtrl](../mfc/using-chotkeyctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

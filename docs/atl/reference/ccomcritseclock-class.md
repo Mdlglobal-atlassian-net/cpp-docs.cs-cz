@@ -1,5 +1,5 @@
 ---
-title: Ccomcritseclock – třída
+title: CComCritSecLock Class
 ms.date: 11/04/2016
 f1_keywords:
 - CComCritSecLock
@@ -10,14 +10,14 @@ f1_keywords:
 helpviewer_keywords:
 - CComCritSecLock class
 ms.assetid: 223152a1-86c3-4ef9-89a7-f455fe791b0e
-ms.openlocfilehash: e0f68f48867510c270c7c69e325a796f274198d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 045e64504707fa8978c8236b376037d9f57bf12c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606996"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261229"
 ---
-# <a name="ccomcritseclock-class"></a>Ccomcritseclock – třída
+# <a name="ccomcritseclock-class"></a>CComCritSecLock Class
 
 Tato třída poskytuje metody pro zamknutí a odemknutí objektu kritický oddíl.
 
@@ -39,7 +39,7 @@ Objekt k uzamčení a odemknutí.
 |Název|Popis|
 |----------|-----------------|
 |[CComCritSecLock::CComCritSecLock](#ctor)|Konstruktor|
-|[Ccomcritseclock –:: ~ ccomcritseclock –](#dtor)|Destruktor.|
+|[CComCritSecLock::~CComCritSecLock](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -76,7 +76,7 @@ Stav zámku počáteční: **true** znamená, že uzamčen.
 
 Inicializuje objekt kritický oddíl.
 
-##  <a name="dtor"></a>  Ccomcritseclock –:: ~ ccomcritseclock –
+##  <a name="dtor"></a>  CComCritSecLock::~CComCritSecLock
 
 Destruktor.
 
@@ -116,7 +116,7 @@ void Unlock() throw();
 
 Pokud už je odemknuté objektu, dojde k chybě vyhodnocení v sestaveních ladění.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CComAutoCriticalSection – třída](../../atl/reference/ccomcriticalsection-class.md)<br/>
 [CComAutoCriticalSection – třída](../../atl/reference/ccomautocriticalsection-class.md)

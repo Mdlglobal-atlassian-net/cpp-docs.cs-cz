@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, vs. MFC
 ms.assetid: 269325bb-11a8-4330-ad2b-a14a2458679e
-ms.openlocfilehash: b3c01a54c1250ae97d5377cb0b1ff49a17c3f7c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4e51f81bbdc54ff09980acfba22037df77abac9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468247"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259773"
 ---
 # <a name="recommendations-for-choosing-between-atl-and-mfc"></a>Doporučení k výběru mezi ATL a MFC
 
@@ -28,7 +28,6 @@ Knihovny MFC můžete vytvářet celých aplikací, ovládací prvky ActiveX a a
 
 Můžete přidat podporu pro použití knihovny ATL v existujícím projektu knihovny MFC pomocí průvodce. Podrobnosti najdete v tématu [přidání podpory knihovny ATL do projektu knihovny MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Úvod do ATL](../atl/introduction-to-atl.md)
-

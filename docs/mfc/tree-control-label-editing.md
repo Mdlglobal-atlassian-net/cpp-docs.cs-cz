@@ -7,12 +7,12 @@ helpviewer_keywords:
 - label editing in CTreeCtrl class [MFC]
 - tree controls [MFC], label editing
 ms.assetid: 6cde2ac3-43ee-468f-bac2-cf1a228ad32d
-ms.openlocfilehash: 80d4f37ef8b67c2902e5d34cb4ec8aa4cf35a616
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 446db94ec49859e2213f00d205df57e332c85af2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647990"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264141"
 ---
 # <a name="tree-control-label-editing"></a>Úpravy štítků ovládacích prvků strom
 
@@ -24,8 +24,7 @@ Při úpravách popisek je zrušena nebo dokončeno, odešle ovládacím prvkem 
 
 Během úpravy štítků, obvykle v reakci [TVN_BEGINLABELEDIT](/windows/desktop/Controls/tvn-beginlabeledit) zpráva s oznámením, můžete získat ukazatel na textové pole pro úpravy štítků s použitím [GetEditControl](../mfc/reference/ctreectrl-class.md#geteditcontrol) člena funkce. Můžete volat textovém poli [SetLimitText](../mfc/reference/cedit-class.md#setlimittext) členské funkce a omezit tak množství může uživatel zadat text nebo podtřídy ovládacího prvku pro úpravy a zachytit a zahodit neplatné znaky. Upozorňujeme, že ovládací prvek pro úpravy se zobrazí pouze *po* **TVN_BEGINLABELEDIT** se odesílají.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

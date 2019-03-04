@@ -5,12 +5,12 @@ helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-ms.openlocfilehash: 9cf38d3d469da181d15a10434525b3aca63969f0
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: fa6dc78c95717f9201e18346f1cbe573fa3c48d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175896"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262880"
 ---
 # <a name="interface-elements"></a>Prvky rozhraní
 
@@ -46,7 +46,7 @@ Každý ukotvit panel je rozdělen do docku řádků. Ukotvit řádky jsou repre
 
 ## <a name="mini-frame-windows"></a>Okna s minirámcem Windows
 
-Plovoucí podokno se nachází v okno s minirámcem. Okna s minirámcem windows jsou reprezentované pomocí dvou tříd: [cmditabinfo – třída](../mfc/reference/cmditabinfo-class.md) (která může obsahovat pouze jedno podokno) a [cmultipaneframewnd – třída](../mfc/reference/cmultipaneframewnd-class.md) (která může obsahovat několik podokna). Chcete-li uvolnit podokno ve vašem kódu, zavolejte [CBasePane::FloatPane](../mfc/reference/cbasepane-class.md#floatpane). Po podokno čísel s plovoucí čárkou, rozhraní automaticky vytvoří okno s minirámcem a okna s minirámcem okno stane plovoucí podokno nadřazené. Po ukotvené podokno s plovoucí desetinnou čárkou, rozhraní restartuje svého nadřazeného objektu a podokna s plovoucí desetinnou čárkou se stane ukotvení panelu (pro panely nástrojů) nebo dokovacího webu (pro umožňující změnu velikosti podoken).
+Plovoucí podokno se nachází v okno s minirámcem. Okna s minirámcem windows jsou reprezentované pomocí dvou tříd: [Cmditabinfo – třída](../mfc/reference/cmditabinfo-class.md) (která může obsahovat pouze jedno podokno) a [cmultipaneframewnd – třída](../mfc/reference/cmultipaneframewnd-class.md) (která může obsahovat několik podokna). Chcete-li uvolnit podokno ve vašem kódu, zavolejte [CBasePane::FloatPane](../mfc/reference/cbasepane-class.md#floatpane). Po podokno čísel s plovoucí čárkou, rozhraní automaticky vytvoří okno s minirámcem a okna s minirámcem okno stane plovoucí podokno nadřazené. Po ukotvené podokno s plovoucí desetinnou čárkou, rozhraní restartuje svého nadřazeného objektu a podokna s plovoucí desetinnou čárkou se stane ukotvení panelu (pro panely nástrojů) nebo dokovacího webu (pro umožňující změnu velikosti podoken).
 
 ## <a name="pane-dividers"></a>Podokno oddělovače
 
@@ -66,7 +66,6 @@ Ve výchozím nastavení každý `CDockablePane` podporuje funkce automatického
 
 Ovládací prvek panel aplikace Outlook se odvíjí také s kartami pruhy. [CMFCOutlookBar – třída](../mfc/reference/cmfcoutlookbar-class.md) je odvozen z `CBaseTabbedPane`. Další informace o tom, jak použít panel aplikace Outlook, naleznete v tématu [CMFCOutlookBar – třída](../mfc/reference/cmfcoutlookbar-class.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Koncepty](../mfc/mfc-concepts.md)
-

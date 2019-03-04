@@ -8,12 +8,12 @@ helpviewer_keywords:
 - status bars [MFC], tool tips
 - CStatusBarCtrl class [MFC], tool tips
 ms.assetid: a77597a7-43ef-4b8f-87bc-a8ea1dc63dc3
-ms.openlocfilehash: a5ebefe3d5daab9917cdb1db7eface09c78b456a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f9a1fec7eb951fa76c542e09df751b4c58ddb16
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438789"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265081"
 ---
 # <a name="using-tooltips-in-a-cstatusbarctrl-object"></a>Použití popisů tlačítek v objektu CStatusBarCtrl
 
@@ -26,8 +26,7 @@ Jednou `CStatusBarCtrl` objekt byl úspěšně vytvořen, použijte [CStatusBarC
 
 Po nastavení Popis tlačítka, se zobrazí jenom v případě, že část obsahuje ikonu a žádný text nebo pokud veškerý text nelze zobrazit v této části. Popisy tlačítek v stručném režimu nepodporují.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

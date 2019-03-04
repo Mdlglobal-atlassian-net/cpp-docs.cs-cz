@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CD2DPathGeometry [MFC], Stream
 - CD2DPathGeometry [MFC], m_pPathGeometry
 ms.assetid: 686216eb-5080-4242-ace5-8fa1ce96307c
-ms.openlocfilehash: 35e9a8c9d32cba53c9ea8a3b7f4644e20b01ef77
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8657421e67239cdeb782cffbbd42e0c50f6c0e96
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588744"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258876"
 ---
 # <a name="cd2dpathgeometry-class"></a>Cd2dpathgeometry – třída
 
@@ -58,7 +58,7 @@ class CD2DPathGeometry : public CD2DGeometry;
 |[CD2DPathGeometry::Attach](#attach)|Bude k obrazci existujících prostředků rozhraní pro objekt|
 |[CD2DPathGeometry::Create](#create)|Vytvoří cd2dpathgeometry –. (Přepíše [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
 |[CD2DPathGeometry::Destroy](#destroy)|Odstraní objekt cd2dpathgeometry –. (Přepíše [CD2DGeometry::Destroy](../../mfc/reference/cd2dgeometry-class.md#destroy).)|
-|[CD2DPathGeometry::detach](#detach)|Odpojí prostředků rozhraní z objektu|
+|[CD2DPathGeometry::Detach](#detach)|Odpojí prostředků rozhraní z objektu|
 |[CD2DPathGeometry::GetFigureCount](#getfigurecount)|Získá počet číslic v geometrické cesty.|
 |[CD2DPathGeometry::GetSegmentCount](#getsegmentcount)|Získá počet segmentů v cestě geometrii.|
 |[CD2DPathGeometry::Open](#open)|Načte jímka geometrii, která se používá k naplnění geometrie cestu s obrázky a segmentů.|
@@ -74,7 +74,7 @@ class CD2DPathGeometry : public CD2DGeometry;
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cd2dresource –](../../mfc/reference/cd2dresource-class.md)
+[CD2DResource](../../mfc/reference/cd2dresource-class.md)
 
 [Cd2dgeometry –](../../mfc/reference/cd2dgeometry-class.md)
 
@@ -140,7 +140,7 @@ Odstraní objekt cd2dpathgeometry –.
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DPathGeometry::detach
+##  <a name="detach"></a>  CD2DPathGeometry::Detach
 
 Odpojí prostředků rozhraní z objektu
 
@@ -213,6 +213,6 @@ Jímky, ke které se zkopírují geometrie Cesta obsahu. Úprava této jímky ne
 
 Pokud metoda uspěje, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

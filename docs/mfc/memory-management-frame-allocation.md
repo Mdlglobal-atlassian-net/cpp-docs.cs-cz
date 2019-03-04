@@ -1,5 +1,5 @@
 ---
-title: 'Správa paměti: Přidělení rámců'
+title: 'Správa paměti: Přidělení rámce'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - memory leaks [MFC], frame allocation
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - frame variables [MFC]
 ms.assetid: 945a211a-6f4f-4679-bb6a-b0f2a0d4a6c1
-ms.openlocfilehash: 45b0242ec8acafa2345482893d14decb02c4a3f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcd691f8e99b558fcadfc1cf51990b673c5b760c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447993"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262204"
 ---
-# <a name="memory-management-frame-allocation"></a>Správa paměti: Přidělení rámců
+# <a name="memory-management-frame-allocation"></a>Správa paměti: Přidělení rámce
 
 Přidělení v rámci přebírá její název ze "rámce zásobníku", který je nastaven při každém volání funkce. Rámec zásobníku je oblast paměti, která se dočasně uchovává argumenty pro funkci, stejně jako jakékoli proměnné, které jsou definovány místní funkci. Proměnné rámce jsou často nazývány "automatické" proměnné, protože kompilátor automaticky přiděluje místo pro ně.
 
@@ -39,7 +39,6 @@ Když je objekt definován jako proměnné rámce, jeho konstruktor je automatic
 
 Hlavní výhodou přidělování objektů na rámci je, že automaticky odebrány. Při přidělování objektů v rámci nemusíte starat o zapomenuté objekty způsobí nevracení paměti. (Podrobnosti o nevracení paměti, najdete v článku [zjištění nevracení paměti v knihovně MFC](/previous-versions/visualstudio/visual-studio-2010/c99kz476).) Přidělení rámce nevýhodou je, že rámec proměnné nelze použít mimo jejich rozsah. Dalším faktorem při výběru rámec přidělení a přidělení haldy je, že velké struktury a objekty, často je lepší použít haldy namísto zásobníku pro úložiště, protože je často omezené místo v zásobníku.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Správa paměti](../mfc/memory-management.md)
-

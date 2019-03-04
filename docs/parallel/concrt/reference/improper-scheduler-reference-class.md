@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - improper_scheduler_reference class
 ms.assetid: 434a7512-7796-4255-92a7-f3bf71c6a7a7
-ms.openlocfilehash: 9bb62fbf5048766d2d11f344a401979e107ec702
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 121e61447775cdcb5d7f5f1187c5d4cc6b7d68b7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597181"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265649"
 ---
 # <a name="improperschedulerreference-class"></a>improper_scheduler_reference – třída
 
@@ -45,7 +45,7 @@ class improper_scheduler_reference : public std::exception;
 
 **Namespace:** souběžnosti
 
-##  <a name="ctor"></a> improper_scheduler_reference –
+##  <a name="ctor"></a> improper_scheduler_reference
 
 Vytvoří `improper_scheduler_reference` objektu.
 
@@ -57,10 +57,10 @@ improper_scheduler_reference() throw();
 
 ### <a name="parameters"></a>Parametry
 
-*_TEXT*<br/>
+*_Message*<br/>
 Popisná zpráva chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [Scheduler – třída](scheduler-class.md)

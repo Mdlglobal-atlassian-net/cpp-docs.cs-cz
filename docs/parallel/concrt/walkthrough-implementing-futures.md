@@ -1,18 +1,18 @@
 ---
-title: 'Návod: Implementace tříd future'
+title: 'Návod: Implementace tříd Future'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - implementing futures [Concurrency Runtime]
 - futures, implementing [Concurrency Runtime]
 ms.assetid: 82ea75cc-aaec-4452-b10d-8abce0a87e5b
-ms.openlocfilehash: 4c43719199ef4009433ec65d54fcc238d82ac305
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7164919d649751ac11fefa5be3cb2e5b7798ee4f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525653"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262126"
 ---
-# <a name="walkthrough-implementing-futures"></a>Návod: Implementace tříd future
+# <a name="walkthrough-implementing-futures"></a>Návod: Implementace tříd Future
 
 Toto téma popisuje způsob implementace tříd Future ve vaší aplikaci. Téma ukazuje, jak sloučit existující funkce v modulu Runtime souběžnosti do něco jiného s více.
 
@@ -89,7 +89,7 @@ Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vlo
 
 **cl.exe/EHsc futures.cpp**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Návody pro Concurrency Runtime](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [Zpracování výjimek](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>

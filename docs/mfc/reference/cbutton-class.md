@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 26dcf50cc3dc48fec5d6e4957ffd1ef340ad1dbf
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: b1a02d995594f5e079359151167ac970a3d1ab37
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178640"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260137"
 ---
 # <a name="cbutton-class"></a>CButton – třída
 
@@ -1114,7 +1114,7 @@ Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
 
 Tato členská funkce emuluje funkčnost BCM_SETTEXTMARGIN zprávu, jak je popsáno v [tlačítka](/windows/desktop/controls/buttons) část sady Windows SDK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

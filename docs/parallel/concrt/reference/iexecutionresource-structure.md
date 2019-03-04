@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
-ms.openlocfilehash: 56042c799f22b0e35bbd0d03d96d649e508f6e51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f8f5c5629e9794ca8ee2cc6bedbc4ba6bfdb24d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578942"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264934"
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource – struktura
 
@@ -35,8 +35,8 @@ struct IExecutionResource;
 |Název|Popis|
 |----------|-----------------|
 |[Iexecutionresource::currentsubscriptionlevel –](#currentsubscriptionlevel)|Vrátí počet aktivovaných virtuálního procesoru kořeny a odběru externí aktuálně přiřazen k podkladové vlákno hardwaru, kterou představuje tento prostředek spuštění vlákna.|
-|[Iexecutionresource::getexecutionresourceid –](#getexecutionresourceid)|Vrací jedinečný identifikátor pro vlákno hardwaru, který představuje tento prostředek spuštění.|
-|[Iexecutionresource::getnodeid –](#getnodeid)|Vrátí jedinečný identifikátor pro uzel procesoru, které patří tento prostředek spuštění.|
+|[IExecutionResource::GetExecutionResourceId](#getexecutionresourceid)|Vrací jedinečný identifikátor pro vlákno hardwaru, který představuje tento prostředek spuštění.|
+|[IExecutionResource::GetNodeId](#getnodeid)|Vrátí jedinečný identifikátor pro uzel procesoru, které patří tento prostředek spuštění.|
 |[Iexecutionresource::Remove –](#remove)|Vrátí toto spuštění prostředků Resource Manageru.|
 
 ## <a name="remarks"></a>Poznámky
@@ -134,7 +134,7 @@ Kořenových adresářů virtuálního procesoru, mohou být vráceny do Správc
 
 `invalid_operation` je vyvolána, pokud parametr `pScheduler` se liší od plánovači, že tento prostředek provádění vytvořil pro, nebo pomocí samostatné spuštění zdroje, pokud aktuální vlákno se liší od vlákna, které vlákno předplatné vytvořili.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [IVirtualProcessorRoot – struktura](ivirtualprocessorroot-structure.md)

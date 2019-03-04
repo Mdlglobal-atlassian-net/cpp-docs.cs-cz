@@ -238,12 +238,12 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
-ms.openlocfilehash: d12c7a8c9363e93baf56d53ad7b8d81401984228
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 889bb9c48899691554a22435ffee71d6f68a6409
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51330395"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261853"
 ---
 # <a name="cmfcbasetabctrl-class"></a>Cmfcbasetabctrl – třída
 
@@ -415,11 +415,11 @@ Následující tipy, na které se týkají `CMFCBaseTabCtrl Class` a všechny t�
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[Cmfcbasetabctrl –](../../mfc/reference/cmfcbasetabctrl-class.md)
+[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxbasetabctrl.h
+**Header:** afxbasetabctrl.h
 
 ##  <a name="addicon"></a>  CMFCBaseTabCtrl::AddIcon
 
@@ -749,7 +749,7 @@ virtual CWnd* FindTargetWnd(const CPoint& pt) = 0;
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pt*<br/>
 [in] Bod, který je definován pomocí klientské oblasti souřadnice [cmfcbasetabctrl –](../../mfc/reference/cmfcbasetabctrl-class.md) objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1085,7 +1085,7 @@ virtual int GetTabFromPoint(CPoint& pt) const;
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pt*<br/>
 [in] Bod v souřadnicích klienta ovládacího prvku karta.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1611,7 +1611,7 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Bod k testování.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2091,7 +2091,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 *uiID*<br/>
 [in] ID prostředku rastrového obrázku `SetImageList` načte seznam obrázků z tohoto prostředku.
 
-*CX*<br/>
+*cx*<br/>
 [in] Šířka jednotlivých obrázků v pixelech.
 
 *clrTransp*<br/>
@@ -2139,7 +2139,7 @@ virtual BOOL SetTabBkColor(
 *iTab*<br/>
 [in] Index založený na nule kartě.
 
-*Barva*<br/>
+*color*<br/>
 [in] Barvu k nastavení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2304,7 +2304,7 @@ virtual BOOL SetTabTextColor(
 *iTab*<br/>
 [in] Index založený na nule kartě.
 
-*Barva*<br/>
+*color*<br/>
 [in] A [COLORREF](/windows/desktop/gdi/colorref) parametr, který určuje barvu nového textu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2375,7 +2375,7 @@ virtual void SwapTabs(
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

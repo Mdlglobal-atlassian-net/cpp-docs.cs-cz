@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Win32 [MFC], Internet classes
 - Windows API [MFC], Internet classes
 ms.assetid: b49601d5-3025-4068-9408-316b54ee4375
-ms.openlocfilehash: a655759e8e1ffdcfe422305cd39623b9d7a6ca4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c067d0c0067ee13b0e6ce6d84fd97135274c88b5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486434"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260553"
 ---
 # <a name="win32-internet-classes"></a>Win32 – internetové třídy
 
@@ -23,46 +23,45 @@ MFC zabaluje internetové Win32 (WinInet) a technologii ActiveX pro usnadnění 
 >[!IMPORTANT]
 > ActiveX je starší technologie, která by neměla být používána při novém vývoji. Další informace o moderních technologií, které nahrazují ActiveX naleznete v tématu [ovládací prvky ActiveX](activex-controls.md).
 
-[Cinternetsession –](../mfc/reference/cinternetsession-class.md)<br/>
+[CInternetSession](../mfc/reference/cinternetsession-class.md)<br/>
 Vytvoří a inicializuje jednu relaci Internet nebo několik souběžných relací Internetu a v případě potřeby popisuje připojení k proxy serveru.
 
-[Cinternetconnection –](../mfc/reference/cinternetconnection-class.md)<br/>
+[CInternetConnection](../mfc/reference/cinternetconnection-class.md)<br/>
 Spravuje připojení k internetovému serveru.
 
-[Cinternetfile –](../mfc/reference/cinternetfile-class.md)<br/>
+[CInternetFile](../mfc/reference/cinternetfile-class.md)<br/>
 Tato třída a odvozené třídy povolit přístup k souborům ve vzdálených systémech, které používají protokoly sítě Internet.
 
-[Chttpconnection –](../mfc/reference/chttpconnection-class.md)<br/>
+[CHttpConnection](../mfc/reference/chttpconnection-class.md)<br/>
 Spravuje připojení k serveru HTTP.
 
-[Chttpfile –](../mfc/reference/chttpfile-class.md)<br/>
+[CHttpFile](../mfc/reference/chttpfile-class.md)<br/>
 Poskytuje funkce pro hledání a čtení souborů na HTTP server.
 
-[Cgopherfile –](../mfc/reference/cgopherfile-class.md)<br/>
+[CGopherFile](../mfc/reference/cgopherfile-class.md)<br/>
 Poskytuje funkce pro hledání a čtení souborů na gopher serveru.
 
-[Cftpconnection –](../mfc/reference/cftpconnection-class.md)<br/>
+[CFtpConnection](../mfc/reference/cftpconnection-class.md)<br/>
 Spravuje připojení k serveru FTP.
 
-[Cgopherconnection –](../mfc/reference/cgopherconnection-class.md)<br/>
+[CGopherConnection](../mfc/reference/cgopherconnection-class.md)<br/>
 Spravuje připojení ke gopher serveru.
 
-[Cfilefind –](../mfc/reference/cfilefind-class.md)<br/>
+[CFileFind](../mfc/reference/cfilefind-class.md)<br/>
 Provádí místní a hledání internetových souborů.
 
-[Cftpfilefind –](../mfc/reference/cftpfilefind-class.md)<br/>
+[CFtpFileFind](../mfc/reference/cftpfilefind-class.md)<br/>
 Pomáhá při hledání internetových souborů na serverech FTP.
 
-[Cgopherfilefind –](../mfc/reference/cgopherfilefind-class.md)<br/>
+[CGopherFileFind](../mfc/reference/cgopherfilefind-class.md)<br/>
 Pomáhá při hledání internetových souborů na serverech gopher.
 
-[Cgopherlocator –](../mfc/reference/cgopherlocator-class.md)<br/>
+[CGopherLocator](../mfc/reference/cgopherlocator-class.md)<br/>
 Získá gopher "Lokátor" ze serveru gopher, určí typ lokátoru a zpřístupní Lokátor `CGopherFileFind`.
 
-[Cinternetexception –](../mfc/reference/cinternetexception-class.md)<br/>
+[CInternetException](../mfc/reference/cinternetexception-class.md)<br/>
 Představuje podmínku výjimky vztahující se k Internetu operaci.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../mfc/class-library-overview.md)
-

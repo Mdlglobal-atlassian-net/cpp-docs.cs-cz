@@ -7,12 +7,12 @@ helpviewer_keywords:
 - tool tips [MFC], creating
 - CToolTipCtrl class [MFC], using
 ms.assetid: 0a34583f-f66d-46a1-a239-31b80ea395ad
-ms.openlocfilehash: cc5ea515aa132bb390fa5e273cedc5f125bb3046
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b0f008c70eeb43455408e5b0ad302df6b923608e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561249"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261203"
 ---
 # <a name="using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object"></a>Použití objektu CToolTipCtrl k vytvoření objektu CToolTipCtrl a manipulaci s ním
 
@@ -34,8 +34,7 @@ Tady je příklad [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) využit
 
 1. Volání [GetToolCount](../mfc/reference/ctooltipctrl-class.md#gettoolcount) načíst počet nástrojů pro registrovaný s ovládacím prvkem popis tlačítka nástroj.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CToolTipCtrl](../mfc/using-ctooltipctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

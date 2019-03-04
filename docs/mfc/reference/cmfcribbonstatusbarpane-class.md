@@ -1,5 +1,5 @@
 ---
-title: Cmfcribbonstatusbarpane – třída
+title: CMFCRibbonStatusBarPane Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonStatusBarPane
@@ -32,14 +32,14 @@ helpviewer_keywords:
 - CMFCRibbonStatusBarPane [MFC], StopAnimation
 - CMFCRibbonStatusBarPane [MFC], OnFinishAnimation
 ms.assetid: 5d034c3c-ecca-4267-b88c-0f55a2884dd0
-ms.openlocfilehash: 183fd879b09595dda1dcd6caa8a8299debb20b30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9911672ec139ab1598db8005e9b7b909e85dd33d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449332"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265727"
 ---
-# <a name="cmfcribbonstatusbarpane-class"></a>Cmfcribbonstatusbarpane – třída
+# <a name="cmfcribbonstatusbarpane-class"></a>CMFCRibbonStatusBarPane Class
 
 `CMFCRibbonStatusBarPane` Třída implementuje prvek pásu karet, který lze přidat na stavový panel pásu karet.
 
@@ -91,9 +91,9 @@ Následující příklad ukazuje, jak použít různé metody v `CMFCRibbonStatu
 
 [Cmfcribbonbaseelement –](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
-[Cmfcribbonbutton –](../../mfc/reference/cmfcribbonbutton-class.md)
+[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
 
-[Cmfcribbonstatusbarpane –](../../mfc/reference/cmfcribbonstatusbarpane-class.md)
+[CMFCRibbonStatusBarPane](../../mfc/reference/cmfcribbonstatusbarpane-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -237,7 +237,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -359,7 +359,7 @@ Zastaví animace, který jste přiřadili do podokna stav řádku.
 void StopAnimation();
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

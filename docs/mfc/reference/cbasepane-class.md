@@ -1,5 +1,5 @@
 ---
-title: Cbasepane – třída
+title: CBasePane Class
 ms.date: 11/06/2018
 f1_keywords:
 - CBasePane
@@ -166,14 +166,14 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: 1de59e4404960ed99dedaadfa576168bc31da444
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 30a5eff8b18df8372c23b5f400c90ff85bdad0eb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694787"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259808"
 ---
-# <a name="cbasepane-class"></a>Cbasepane – třída
+# <a name="cbasepane-class"></a>CBasePane Class
 
 Základní třída pro všechna podokna v knihovně MFC.
 
@@ -730,7 +730,7 @@ Knihovny přidá několik nových stylů pro podokna. Následující tabulka pop
 |-----------|-----------------|
 |AFX_CBRS_FLOAT|V podokně můžete uvolnit.|
 |AFX_CBRS_AUTOHIDE|V podokně podporuje režim automatického schovávání|
-|AFX_CBRS_RESIZE|V podokně můžete změnit velikost. **Důležité:** tento styl není implementována.|
+|AFX_CBRS_RESIZE|V podokně můžete změnit velikost. **Důležité:**  Tento styl není implementována.|
 |AFX_CBRS_CLOSE|V podokně můžete zavřít.|
 |AFX_CBRS_AUTO_ROLLUP|V podokně může být zahrnuty při jeho čísel s plovoucí čárkou.|
 |AFX_CBRS_REGULAR_TABS|Když jedno podokno ukotvené na další podokno, který má tento styl, vytvoří se pravidelné okno s kartami. (Další informace najdete v tématu [ctabbedpane – třída](../../mfc/reference/ctabbedpane-class.md).)|
@@ -754,7 +754,7 @@ virtual BOOL DockPane(
 *pDockBar*<br/>
 [in] Ukazatel na další podokno.
 
-*lprect –*<br/>
+*lpRect*<br/>
 [in] Určuje cílového obdélníku.
 
 *dockMethod*<br/>
@@ -802,7 +802,7 @@ virtual BOOL DockToFrameWindow(
 *dwAlignment*<br/>
 [in] Na straně, který chcete ukotvit podokně nadřazeného rámce.
 
-*lprect –*<br/>
+*lpRect*<br/>
 [in] Požadovaná velikost.
 
 *dwDockFlags*<br/>
@@ -857,7 +857,7 @@ virtual void DoPaint(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 ### <a name="remarks"></a>Poznámky
@@ -1427,7 +1427,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Zadaný bod.
 
 *dwBarAlignment*<br/>
@@ -1651,7 +1651,7 @@ virtual void OnPaneContextMenu(
 *pParentFrame*<br/>
 [in] Ukazatel na nadřazeného rámce.
 
-*Bod*<br/>
+*point*<br/>
 [in] Určuje umístění v místní nabídce.
 
 ### <a name="remarks"></a>Poznámky
@@ -1712,7 +1712,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Určuje bod, v souřadnicovém systému obrazovky, chcete-li zkontrolovat.
 
 *nSensitivity*<br/>
@@ -1806,7 +1806,7 @@ CFont* SelectDefaultFont(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Kontext zařízení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1925,10 +1925,10 @@ virtual HDWP SetWindowPos(
 *y*<br/>
 [in] Určuje pozici horní části okna.
 
-*CX*<br/>
+*cx*<br/>
 [in] Určuje šířku okna.
 
-*CY*<br/>
+*cy*<br/>
 [in] Určuje výšku okna.
 
 *nFlags*<br/>
@@ -2014,7 +2014,7 @@ Voláním této metody lze manipulovat s podokno stavu nebo vyloučit z dokovac�
 
 Pokud chcete dál používat v tomto podokně, volání buď [CBasePane::DockPane](#dockpane) nebo [CBasePane::FloatPane](#floatpane) před voláním této metody.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

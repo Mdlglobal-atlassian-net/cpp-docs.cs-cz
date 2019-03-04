@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSUnblockNotification structure
 ms.assetid: eaca9529-c1cc-472b-8ec6-722a1ff0fa2a
-ms.openlocfilehash: 219e32cedb02d4ecab73390e33601de32f9b0992
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bdf083e2ad418269e49e53dc164f2a60f693d5d6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677965"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261385"
 ---
 # <a name="iumsunblocknotification-structure"></a>IUMSUnblockNotification – struktura
 
@@ -69,7 +69,7 @@ virtual IUMSUnblockNotification* GetNextUnblockNotification() = 0;
 
 Další `IUMSUnblockNotification` rozhraní v řetězu certifikátů, metoda vrátí `IUMSCompletionList::GetUnblockNotifications`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [IUMSScheduler – struktura](iumsscheduler-structure.md)<br/>

@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-ms.openlocfilehash: 11faec19160ccc6028bdb294f37a51d7fe26dc15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cea1ac1d500a9cf3bcbdc1f5dde33a0002cbd363
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619827"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257901"
 ---
 # <a name="tiledindex-class"></a>tiled_index – třída
 
@@ -69,7 +69,7 @@ Velikost nejméně významného rozměru.
 
 |Název|Popis|
 |----------|-----------------|
-|[tiled_index – konstruktor](#ctor)|Inicializuje novou instanci třídy `tile_index` třídy.|
+|[tiled_index Constructor](#ctor)|Inicializuje novou instanci třídy `tile_index` třídy.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -87,9 +87,9 @@ Velikost nejméně významného rozměru.
 |[lokální konstanta](#tiled_index__local)|Úložiště `index` řádu 1, 2 nebo 3, který představuje relativní index v rámci aktuální dlaždice objektu [tiled_extent](tiled-extent-class.md) objektu.|
 |[RANK – konstanta](#tiled_index__rank)|Udržuje řád objektu `tiled_index` objektu.|
 |[Tile – konstanta](#tiled_index__tile)|Úložiště `index` řádu 1, 2 nebo 3, který představuje souřadnice aktuální dlaždice objektu `tiled_extent` objektu.|
-|[tile_dim0 – konstanta](#tiled_index__tile_dim0)|Ukládá velikost nejvýznamnějšího rozměru.|
-|[tile_dim1 – konstanta](#tiled_index__tile_dim1)|Ukládá délku druhé nejvýznamnější dimenze další úplně.|
-|[tile_dim2 – konstanta](#tiled_index__tile_dim2)|Ukládá velikost nejméně významného rozměru.|
+|[tile_dim0 Constant](#tiled_index__tile_dim0)|Ukládá velikost nejvýznamnějšího rozměru.|
+|[tile_dim1 Constant](#tiled_index__tile_dim1)|Ukládá délku druhé nejvýznamnější dimenze další úplně.|
+|[tile_dim2 Constant](#tiled_index__tile_dim2)|Ukládá velikost nejméně významného rozměru.|
 |[tile_origin – konstanta](#tiled_index__tile_origin)|Úložiště `index` objekt řádu 1, 2 nebo 3, který představuje globální souřadnice původu aktuální dlaždice v `tiled_extent` objektu.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
@@ -108,7 +108,7 @@ Velikost nejméně významného rozměru.
 
 **Záhlaví:** amp.h
 
-**Namespace:** souběžnosti
+**Namespace:** Souběžnost
 
 ## <a name="tiled_index__ctor"></a>  tiled_index – konstruktor
 
@@ -133,7 +133,7 @@ tiled_index(
 *_Global*<br/>
 Globální [index](index-class.md) vytvořeného `tiled_index`.
 
-*_Místní*<br/>
+*_Local*<br/>
 Místní [index](index-class.md) vytvořeného `tiled_index`
 
 *_Tile*<br/>
@@ -156,7 +156,7 @@ Původu dlaždice [index](index-class.md) vytvořeného `tiled_index`
 |`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|Inicializuje novou instanci třídy `tile_index` třídy z indexu dlaždice v globálních souřadnicích a relativní pozice v dlaždici v místních souřadnicích. `_Global` a `_Tile_origin` parametry jsou vypočítány.|
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|Inicializuje novou instanci třídy `tile_index` zkopírováním zadaného `tiled_index` objektu.|
 
-## <a name="tiled_index__get_tile_extent"></a>  get_tile_extent –
+## <a name="tiled_index__get_tile_extent"></a>  get_tile_extent
 
 Vrátí [rozsahu](extent-class.md) objekt, který obsahuje hodnoty `tiled_index` argumenty šablony `_Dim0`, `_Dim1`, a `_Dim2`.
 
@@ -170,7 +170,7 @@ extent<rank> get_tile_extent()restrict(amp,cpu);
 
 `extent` Objekt, který obsahuje hodnoty `tiled_index` argumenty šablony `_Dim0`, `_Dim1`, a `_Dim2`.
 
-## <a name="tiled_index__barrier"></a>  Barrier
+## <a name="tiled_index__barrier"></a>  barrier
 
 Úložiště [tile_barrier](tile-barrier-class.md) objekt představující překážku v aktuálním bloku vláken.
 
@@ -269,6 +269,6 @@ const index<rank> tile_origin
 __declspec(property(get= get_tile_extent)) extent<rank> tile_extent;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

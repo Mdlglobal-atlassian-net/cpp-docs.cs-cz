@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleInsertDialog [MFC], GetSelectionType
 - COleInsertDialog [MFC], m_io
 ms.assetid: a9ec610b-abde-431e-bd01-c40159a66dbb
-ms.openlocfilehash: c99344c71d3f9789905516d661749b3668b57d50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 750243ddf6494ecc4a6a28c0cb47b05ca7089c33
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546301"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260683"
 ---
 # <a name="coleinsertdialog-class"></a>Coleinsertdialog – třída
 
@@ -88,9 +88,9 @@ Další informace o dialogových oken OLE konkrétní, najdete v článku [dialo
 
 [CDialog](../../mfc/reference/cdialog-class.md)
 
-[Ccommondialog –](../../mfc/reference/ccommondialog-class.md)
+[CCommonDialog](../../mfc/reference/ccommondialog-class.md)
 
-[Coledialog –](../../mfc/reference/coledialog-class.md)
+[COleDialog](../../mfc/reference/coledialog-class.md)
 
 `COleInsertDialog`
 
@@ -302,7 +302,7 @@ Přímo nebo prostřednictvím členské funkce, lze upravit členy této strukt
 
 Další informace najdete v tématu [OLEUIINSERTOBJECT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiinsertobjecta) struktura v sadě Windows SDK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC OCLIENT](../../visual-cpp-samples.md)<br/>
 [COleDialog – třída](../../mfc/reference/coledialog-class.md)<br/>

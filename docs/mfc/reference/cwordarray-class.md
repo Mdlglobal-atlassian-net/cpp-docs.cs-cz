@@ -1,5 +1,5 @@
 ---
-title: Cwordarray – třída
+title: CWordArray Class
 ms.date: 11/04/2016
 f1_keywords:
 - CWordArray
@@ -42,14 +42,14 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 2ba2c194-2c6c-40ff-9db4-e9dbe57e1f57
-ms.openlocfilehash: 7c8915b8d82f96ed0bd1fad11e1a4f0687b40493
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c21f89215e08523188eb32490d7b1d5506299fb5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530166"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259448"
 ---
-# <a name="cwordarray-class"></a>Cwordarray – třída
+# <a name="cwordarray-class"></a>CWordArray Class
 
 Podporuje pole s 16bitovými slovy.
 
@@ -136,7 +136,7 @@ interface class ICommandSource
 
 Když hostujete uživatelského ovládacího prvku v zobrazení knihovny MFC [CWinFormsView – třída](../../mfc/reference/cwinformsview-class.md) trasy příkazy a aktualizace příkazů zpráv uživatelského rozhraní do uživatelského ovládacího prvku, aby mohla zpracovávat příkazy knihovny MFC (například rámec nabídky položek a tlačítka panelu nástrojů). Implementací, můžete poskytnout uživatelský ovládací prvek odkazu na `ICommandSource` objektu.
 
-Zobrazit [postupy: přidání směrování příkazů do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) příklad, jak používat `ICommandTarget`.
+Zobrazit [jak: Přidání směrování příkazů do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) příklad, jak používat `ICommandTarget`.
 
 Další informace o používání formulářů Windows, naleznete v tématu [použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -162,7 +162,7 @@ Popisovač metody obslužné rutiny příkazu.
 
 Tato metoda přidá obslužnou rutinu příkazu *cmdHandler* do zdrojového objektu příkazu a mapuje obslužná rutina *cmdID*.
 
-Zobrazit [postupy: přidání směrování příkazů do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) příklad, jak používat `AddCommandHandler`.
+Zobrazit [jak: Přidání směrování příkazů do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) příklad, jak používat `AddCommandHandler`.
 
 ##  <a name="addcommandrangehandler"></a>  ICommandSource::AddCommandRangeHandler
 
@@ -362,7 +362,7 @@ interface class ICommandTarget
 
 Když hostujete uživatelského ovládacího prvku v zobrazení knihovny MFC [CWinFormsView](../../mfc/reference/cwinformsview-class.md) trasy příkazy a aktualizace příkazů zpráv uživatelského rozhraní do uživatelského ovládacího prvku, aby mohla zpracovávat příkazy knihovny MFC (například rámec nabídky položek a tlačítka panelu nástrojů). Implementací `ICommandTarget`, poskytnout uživatelský ovládací prvek odkazu na objekt.
 
-Zobrazit [postupy: přidání směrování příkazů do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) příklad, jak používat `ICommandTarget`.
+Zobrazit [jak: Přidání směrování příkazů do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) příklad, jak používat `ICommandTarget`.
 
 Další informace o používání formulářů Windows, naleznete v tématu [použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -383,7 +383,7 @@ Popisovač do zdrojového objektu příkazu.
 
 Když hostujete uživatelského ovládacího prvku v zobrazení knihovny MFC [CWinFormsView](../../mfc/reference/cwinformsview-class.md) trasy příkazy a aktualizace příkazů zpráv uživatelského rozhraní do uživatelského ovládacího prvku, aby mohla zpracovávat příkazy knihovny MFC.
 
-Tato metoda inicializuje cílový objekt příkazu a přidruží ji k objektu zdroje zadaného příkazu *cmdSource*. By měla být volána v implementaci třídy uživatelského ovládacího prvku. Při inicializaci, byste měli zaregistrovat obslužné rutiny příkazů s zdrojového objektu příkazu voláním [ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md) v `Initialize` implementace. V tématu [postupy: přidání směrování příkazů do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) příklad, jak používat `Initialize` provedete to tak.
+Tato metoda inicializuje cílový objekt příkazu a přidruží ji k objektu zdroje zadaného příkazu *cmdSource*. By měla být volána v implementaci třídy uživatelského ovládacího prvku. Při inicializaci, byste měli zaregistrovat obslužné rutiny příkazů s zdrojového objektu příkazu voláním [ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md) v `Initialize` implementace. Zobrazit [jak: Přidání směrování příkazů do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) příklad, jak používat `Initialize` provedete to tak.
 
 ##  <a name="icommandui_interface"></a>  Icommandui – rozhraní
 
@@ -399,7 +399,7 @@ Toto rozhraní poskytuje metody a vlastnosti, které spravují uživatelských r
 
 `ICommandUI` se používá v rámci `ON_UPDATE_COMMAND_UI` obslužná rutina-odvozené třídy. Když uživatel aplikace aktivuje (zaškrtne nebo kliknutí) nabídka, každá položka nabídky se zobrazí jako povolené nebo zakázané. Cíl každý příkaz nabídky poskytuje tyto informace implementací `ON_UPDATE_COMMAND_UI` obslužné rutiny. Pro každý z objektů příkaz uživatelského rozhraní v aplikaci použijte okno Vlastnosti vytvořit položku mapování zpráv a prototyp funkce pro každou obslužnou rutinu.
 
-Další informace o tom, jak `ICommandUI` rozhraní se používá v směrování příkazů, naleznete v tématu [postupy: přidání směrování příkazů do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
+Další informace o tom, jak `ICommandUI` rozhraní se používá v směrování příkazů, naleznete v tématu [jak: Příkaz přidat ovládací prvek směrování Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
 
 Další informace o používání formulářů Windows, naleznete v tématu [použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -433,7 +433,7 @@ void ContinueRouting();
 
 ### <a name="remarks"></a>Poznámky
 
-To je funkce členů s pokročilým členstvím, které byste měli použít ve spojení s [ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex) obslužná rutina, která vrátí hodnotu FALSE. Další informace viz technická Poznámka [TN006: mapy zpráv](../../mfc/tn006-message-maps.md).
+To je funkce členů s pokročilým členstvím, které byste měli použít ve spojení s [ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex) obslužná rutina, která vrátí hodnotu FALSE. Další informace viz technická Poznámka [TN006: Zprávy Maps](../../mfc/tn006-message-maps.md).
 
 ##  <a name="enabled"></a>  ICommandUI::Enabled
 
@@ -544,9 +544,8 @@ void OnUpdate();
 
 Tato funkce umožňuje zobrazení aktualizovat zobrazení tak, aby odrážely změny.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC shromažďování](../../visual-cpp-samples.md)<br/>
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-

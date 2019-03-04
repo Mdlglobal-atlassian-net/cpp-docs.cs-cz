@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rich edit controls [MFC], printing
 - CRichEditCtrl class [MFC], printing
 ms.assetid: dbda0e40-018f-424e-b5d8-7b489aaf27af
-ms.openlocfilehash: bf402f5495ad85eb0c5067d60fcedfe29e6350bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ddc52e43da2e409117ccc5169442002ac27a315
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641204"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263495"
 ---
 # <a name="printing-in-rich-edit-controls"></a>Tisk v ovládacích prvcích pro úpravy s formátováním
 
@@ -23,8 +23,7 @@ Po naformátování textu pro výstup zařízení, můžete výstup odeslat do z
 
 Můžete použít [SetTargetDevice](../mfc/reference/cricheditctrl-class.md#settargetdevice) členskou funkci k určení cílového zařízení, pro kterou bohaté ovládacích prvků pro úpravy formátuje text. Tato funkce je užitečná pro WYSIWYG (zobrazené získáte) formátování, ve které aplikace umístí textu s použitím výchozí tiskárna metriky písma místo na obrazovce.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-ms.openlocfilehash: e17284ef8652e5d08b2305dc07d27f080ec64239
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f95efb17b95dc55cb6f6977439760fa7ea1afe9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568044"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264844"
 ---
 # <a name="acceleratorview-class"></a>accelerator_view – třída
 
@@ -44,7 +44,7 @@ class accelerator_view;
 
 |Název|Popis|
 |----------|-----------------|
-|[accelerator_view – konstruktor](#ctor)|Inicializuje novou instanci třídy `accelerator_view` třídy.|
+|[accelerator_view Constructor](#ctor)|Inicializuje novou instanci třídy `accelerator_view` třídy.|
 |[~ accelerator_view – destruktor](#dtor)|Odstraní `accelerator_view` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
@@ -56,8 +56,8 @@ class accelerator_view;
 |[get_accelerator](#get_accelerator)|Vrátí `accelerator` objekt pro `accelerator_view` objektu.|
 |[get_is_auto_selection](#get_is_auto_selection)|Vrátí logickou hodnotu, která určuje, zda modul runtime automaticky vybere odpovídající akcelerátor při `accelerator_view` objekt je předán [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).|
 |[get_is_debug](#get_is_debug)|Vrátí logickou hodnotu, která určuje, zda `accelerator_view` objekt má povolenu vrstvu DEBUG pro rozsáhlé hlášení chyb.|
-|[get_queuing_mode –](#get_queuing_mode)|Vrátí režim zařazování do fronty pro `accelerator_view` objektu.|
-|[get_version –](#get_version)|Vrátí verzi `accelerator_view`.|
+|[get_queuing_mode](#get_queuing_mode)|Vrátí režim zařazování do fronty pro `accelerator_view` objektu.|
+|[get_version](#get_version)|Vrátí verzi `accelerator_view`.|
 |[Počkej](#wait)|Čeká na všech příkazů zaslaných `accelerator_view` objektu na dokončení.|
 
 ### <a name="public-operators"></a>Veřejné operátory
@@ -72,10 +72,10 @@ class accelerator_view;
 
 |Název|Popis|
 |----------|-----------------|
-|[akcelerátor](#accelerator)|Získá `accelerator` objekt pro `accelerator_view` objektu.|
+|[accelerator](#accelerator)|Získá `accelerator` objekt pro `accelerator_view` objektu.|
 |[is_auto_selection](#is_auto_selection)|Získá logickou hodnotu, která určuje, zda modul runtime automaticky vybere odpovídající akcelerátor při `accelerator_view` objekt je předán [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).|
 |[is_debug](#is_debug)|Získá logickou hodnotu, která určuje, zda `accelerator_view` objekt má povolenu vrstvu DEBUG pro rozsáhlé hlášení chyb.|
-|[queuing_mode –](#queuing_mode)|Načte režim zařazování do fronty pro `accelerator_view` objektu.|
+|[queuing_mode](#queuing_mode)|Načte režim zařazování do fronty pro `accelerator_view` objektu.|
 |[version](#version)|Získá verzi accelerator.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
@@ -94,7 +94,7 @@ Fyzická zařízení lze sdílet mezi mnoha vlákny klienta. Vlákna klienta mů
 
 **Záhlaví:** amprt.h
 
-**Namespace:** souběžnosti
+**Namespace:** Souběžnost
 
 ## <a name="accelerator"></a> akcelerátor
 
@@ -176,7 +176,7 @@ bool get_is_auto_selection() const;
 
 **Hodnota TRUE** Pokud modul runtime automaticky vybere odpovídající akcelerátor; v opačném případě **false**.
 
-## <a name="accelerator_view__get_is_debug"></a> get_is_debug –
+## <a name="accelerator_view__get_is_debug"></a> get_is_debug
 
 Vrátí logickou hodnotu, která určuje, zda má objekt accelerator_view povolenu vrstvu DEBUG pro rozsáhlé hlášení chyb.
 
@@ -345,6 +345,6 @@ Odstraní objekt accelerator_view.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

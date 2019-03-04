@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: 7b95252c830e27a0602f149f880258511ec24e64
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 04c8a60f546700be8eeb2ec8a948e0ea321d12f8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177066"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265012"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog – třída
 
@@ -489,7 +489,7 @@ int GetCommonButtonId(int nFlag);
 
 ### <a name="parameters"></a>Parametry
 
-*načit*<br/>
+*nFlag*<br/>
 [in] Společný typ tlačítko přidružené `CTaskDialog` třídy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1399,7 +1399,7 @@ void SetProgressBarState(int nState = PBST_NORMAL);
 
 ### <a name="parameters"></a>Parametry
 
-*nInformace*<br/>
+*nState*<br/>
 [in] Stav indikátor průběhu. Možné hodnoty v části poznámky.
 
 ### <a name="remarks"></a>Poznámky
@@ -1618,7 +1618,7 @@ Hodnoty pro *wParam* a *lParam* závisí na konkrétní generovanou zprávu. Je 
 |TDN_HELP|Nepoužívá se.|Nepoužívá se.|
 |TDN_EXPANDO_BUTTON_CLICKED|0, pokud je sbalené oblast rozšíření; nenulové, pokud se zobrazí text rozšíření.|Nepoužívá se.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>

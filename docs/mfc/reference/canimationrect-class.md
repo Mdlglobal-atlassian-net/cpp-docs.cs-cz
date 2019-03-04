@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CAnimationRect [MFC], m_szInitial
 - CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
-ms.openlocfilehash: 4e782a9325360b69e33dfaf6a3b0649d9368b32b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 84c4cf92894a9ece2021417445c9d7ab94ee6bdf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540176"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259487"
 ---
 # <a name="canimationrect-class"></a>Canimationrect – třída
 
@@ -87,7 +87,7 @@ class CAnimationRect : public CAnimationBaseObject;
 |Název|Popis|
 |----------|-----------------|
 |[CAnimationRect::operator RECT](#operator_rect)|Převede canimationrect – obdélníkový|
-|[CAnimationRect::operator =](#operator_eq)|Rect – přiřadí canimationrect –.|
+|[CAnimationRect::operator=](#operator_eq)|Rect – přiřadí canimationrect –.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
@@ -113,7 +113,7 @@ Canimationrect – třída zapouzdří čtyři canimationvariable – objekty a 
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Canimationbaseobject –](../../mfc/reference/canimationbaseobject-class.md)
+[CAnimationBaseObject](../../mfc/reference/canimationbaseobject-class.md)
 
 `CAnimationRect`
 
@@ -195,16 +195,16 @@ Určuje ID objektu.
 *dwUserData*<br/>
 Určuje data definovaná uživatelem.
 
-*PT*<br/>
+*pt*<br/>
 Souřadnice levého horního rohu.
 
-*Sz*<br/>
+*sz*<br/>
 Velikost obdélník.
 
 *nLeft*<br/>
 Určuje souřadnice levého mez.
 
-*sady Windows NT*<br/>
+*nTop*<br/>
 Určuje souřadnici horní vázána.
 
 *nRight*<br/>
@@ -229,7 +229,7 @@ virtual void GetAnimationVariableList(
 
 ### <a name="parameters"></a>Parametry
 
-*obrázků*<br/>
+*lst*<br/>
 Pokud funkce vrátí, obsahuje odkazy na čtyři canimationvariable – objekty představující souřadnice obdélník.
 
 ##  <a name="getbottom"></a>  CAnimationRect::GetBottom
@@ -435,6 +435,6 @@ Určuje nové výchozí hodnoty pro vlevo, nahoře, vpravo a dole.
 
 Tuto funkci použijte k nastavení výchozí hodnoty na objekt animace. Tyto metody přiřadí výchozí hodnoty hranice obdélníku. Také obnoví základní objekty modelu COM, pokud byl vytvořen. Pokud odebíráte tento objekt animace na události (ValueChanged nebo IntegerValueChanged), musíte znovu zapnout. Tyto události.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

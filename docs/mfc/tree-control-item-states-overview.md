@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tree controls [MFC], item states overview
 - CTreeCtrl class [MFC], item states
 ms.assetid: 2db11ae0-0d87-499d-8c1f-5e0dbe9e94c8
-ms.openlocfilehash: 389c273f7c8727ecbb4ed5455987126e21e26a63
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57c6714073f4939ffb791a78454e9eac6342309b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467948"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264596"
 ---
 # <a name="tree-control-item-states-overview"></a>Přehled stavů položek ovládacího prvku strom
 
@@ -27,8 +27,7 @@ Nastavit obrázek položky překrytí je další příklad změnu stavu. K tomu 
 
 Nastavit stav obrázku položky *nStateMask* musí zahrnovat `TVIS_STATEIMAGEMASK` hodnotu, a *nInformace* musí obsahovat založen na jedničce index obrázku stavu posunuta doleva 12 bitů s použitím [ INDEXTOSTATEIMAGEMASK](/windows/desktop/api/commctrl/nf-commctrl-indextostateimagemask) – makro. Index může být 0 pro žádné obrázku stavu. Další informace o imagích překrytí a stavu najdete v tématu [seznamy obrázků ovládací prvek stromu](../mfc/tree-control-image-lists.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

@@ -1,5 +1,5 @@
 ---
-title: CRecordView – třída
+title: CRecordView Class
 ms.date: 11/04/2016
 f1_keywords:
 - CRecordView
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - CRecordView [MFC], OnMove
 - CRecordView [MFC], OnMove
 ms.assetid: 9b4b0897-bd50-4d48-a0b4-f3323f5ccc55
-ms.openlocfilehash: c7013fb53562fd76744bff19d1d37ce972a52d52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a91a9e320b4221b04bbcf996ffa60f1de4b35ec5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643859"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262464"
 ---
-# <a name="crecordview-class"></a>CRecordView – třída
+# <a name="crecordview-class"></a>CRecordView Class
 
 Zobrazení, které zobrazuje záznamy databáze v ovládacích prvcích.
 
@@ -62,7 +62,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 Zobrazení je připojený přímo k zobrazení formuláře `CRecordset` objektu. Toto zobrazení je vytvořen z prostředků šablony dialogového okna a zobrazí pole `CRecordset` objektu v ovládacích prvcích šablony dialogového okna. `CRecordView` Objektu používá k automatizaci přesouvání dat mezi ovládacími prvky ve formuláři a polí záznamů výměna dat dialogových oken (DDX) a výměna pole záznamu (RFX). `CRecordView` také poskytuje výchozí implementaci pro přechod na první další, předchozí nebo poslední záznam a rozhraní pro aktualizace záznamu aktuálně pro zobrazení.
 
 > [!NOTE]
->  Pokud pracujete s třídami objektů DAO (Data Access), a ne třídy připojení ODBC (Open Database), použijte třídu [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) místo. Další informace najdete v článku [přehled: databáze programování](../../data/data-access-programming-mfc-atl.md).
+>  Pokud pracujete s třídami objektů DAO (Data Access), a ne třídy připojení ODBC (Open Database), použijte třídu [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) místo. Další informace najdete v článku [přehled: Databáze programování](../../data/data-access-programming-mfc-atl.md).
 
 Nejběžnější způsob, jak vytvořit zobrazení záznamu je pomocí Průvodce aplikací. Třídy zobrazení záznamu a jeho přidružené třídy sady záznamů jako součást kostru Startovní aplikace vytvoří Tge Application Wizard. Pokud nevytvoříte tříd zobrazení záznamu pomocí Průvodce aplikací, můžete je vytvořit později s ClassWizard. Pokud potřebujete pouze jeden formulář, Průvodce aplikací přístup je jednodušší. ClassWizard vám umožňuje určit použití zobrazení záznamů později v procesu vývoje. Použití ClassWizard při vytváření zobrazení záznamů a záznamů samostatně a pak je připojení je nejflexibilnějším přístupem, protože nabízí větší kontrolu v názvu třídy sady záznamů a vlastnost. H /. Soubory CPP. Tento přístup také umožňuje mít více zobrazení záznamů u stejné třídy sady záznamů.
 
@@ -84,7 +84,7 @@ Další informace o deklarování a použití zobrazení záznamů a záznamů t
 
 [CView](../../mfc/reference/cview-class.md)
 
-[Cscrollview –](../../mfc/reference/cscrollview-class.md)
+[CScrollView](../../mfc/reference/cscrollview-class.md)
 
 [CFormView](../../mfc/reference/cformview-class.md)
 
@@ -180,7 +180,7 @@ Ukazatel `CRecordset`-odvozenému objektu, pokud objekt byl úspěšně vytvoře
 
 Je nutné přepsat tuto členskou funkci sestavit nebo získání objektu sady záznamů a vrátí ukazatel na ni. Pokud deklarujete vaší třídy zobrazení záznamu s ClassWizard, zapíše průvodce přepsáním výchozího nastavení. ClassWizard výchozí implementace vrací ukazatel záznamů uložené v zobrazení záznamů, pokud existuje. Pokud ne, vytvoří objekt sady záznamů typu zadán s ClassWizard a volání jeho `Open` členské funkce Otevřít v tabulce nebo spustit dotaz a pak vrací ukazatel na objekt.
 
-Další informace a příklady najdete v článku [zobrazení záznamu: použití zobrazení záznamů](../../data/using-a-record-view-mfc-data-access.md).
+Další informace a příklady najdete v článku [zobrazení záznamů: Použití zobrazení záznamů](../../data/using-a-record-view-mfc-data-access.md).
 
 ##  <a name="onmove"></a>  CRecordView::OnMove
 
@@ -220,7 +220,7 @@ Pokud přesunete za poslední záznam v sadě záznamů, zobrazení záznamů st
 > [!CAUTION]
 >  Volání `OnMove` vyvolá výjimku, pokud sada záznamů neobsahuje žádné záznamy. Volání funkce obslužné rutiny aktualizace příslušných uživatelských rozhraní – `OnUpdateRecordFirst`, `OnUpdateRecordLast`, `OnUpdateRecordNext`, nebo `OnUpdateRecordPrev` – před odpovídajícími operace k určení, zda sada záznamů obsahuje záznamy, které přesunutí.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CFormView – třída](../../mfc/reference/cformview-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

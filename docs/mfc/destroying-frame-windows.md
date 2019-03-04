@@ -1,5 +1,5 @@
 ---
-title: Zničení oken s rámečkem
+title: Likvidace oken s rámečkem
 ms.date: 11/04/2016
 f1_keywords:
 - PostNcDestroy
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - OnClose method [MFC]
 - PostNcDestroy method [MFC]
 ms.assetid: 5affca77-1999-4507-a2b2-9aa226611b4b
-ms.openlocfilehash: f3b3e022f869a3019f80ba5ee082ce5a959853a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b64298bd2b0f14c30c824d78947a17628adec8b5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645399"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258200"
 ---
-# <a name="destroying-frame-windows"></a>Zničení oken s rámečkem
+# <a name="destroying-frame-windows"></a>Likvidace oken s rámečkem
 
 Rozhraní MFC framework spravuje odstraňování oken, jakož i vytváření pro tato okna přidružené framework dokumentů a zobrazení. Pokud vytvoříte další okna, zodpovídáte za jejich zničení.
 
@@ -34,7 +34,6 @@ Když hlavní okno se zavře, aplikace se zavře. Pokud upravované neuložené 
 
 - [Vytváření oken s rámečkem v dokumentu](../mfc/creating-document-frame-windows.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití oken s rámečkem](../mfc/using-frame-windows.md)
-

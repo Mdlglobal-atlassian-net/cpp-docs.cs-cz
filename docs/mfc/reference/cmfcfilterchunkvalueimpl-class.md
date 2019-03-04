@@ -1,5 +1,5 @@
 ---
-title: Cmfcfilterchunkvalueimpl – třída
+title: CMFCFilterChunkValueImpl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCFilterChunkValueImpl
@@ -46,14 +46,14 @@ helpviewer_keywords:
 - CMFCFilterChunkValueImpl [MFC], SetTextValue
 - CMFCFilterChunkValueImpl [MFC], SetChunk
 ms.assetid: 3c833f23-5b88-4d08-9e09-ca6a8aec88bf
-ms.openlocfilehash: a59cf087a52bd7b6a2eaa00d3091047e93e14d4d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b883d442342dd9fbbd074d9f8fcab76f81ef9864
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666840"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264440"
 ---
-# <a name="cmfcfilterchunkvalueimpl-class"></a>Cmfcfilterchunkvalueimpl – třída
+# <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl Class
 
 Toto je třída, která zjednodušuje logiku párování hodnot bloku dat a vlastnosti.
 
@@ -69,7 +69,7 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 
 |Název|Popis|
 |----------|-----------------|
-|[Cmfcfilterchunkvalueimpl –:: ~ cmfcfilterchunkvalueimpl –](#_dtorcmfcfilterchunkvalueimpl)|Destructs objektu.|
+|[CMFCFilterChunkValueImpl::~CMFCFilterChunkValueImpl](#_dtorcmfcfilterchunkvalueimpl)|Destructs objektu.|
 |[CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl](#cmfcfilterchunkvalueimpl)|Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
@@ -119,7 +119,7 @@ hr = bloku. SetFileTimeValue (PKEY_ItemDate, ftLastModified);
 
 `ATL::IFilterChunkValue`
 
-[Cmfcfilterchunkvalueimpl –](../../mfc/reference/cmfcfilterchunkvalueimpl-class.md)
+[CMFCFilterChunkValueImpl](../../mfc/reference/cmfcfilterchunkvalueimpl-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -145,7 +145,7 @@ CMFCFilterChunkValueImpl();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>  Cmfcfilterchunkvalueimpl –:: ~ cmfcfilterchunkvalueimpl –
+##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl::~CMFCFilterChunkValueImpl
 
 Destructs objektu.
 
@@ -625,7 +625,7 @@ HRESULT SetSystemTimeValue(
 *pkey*<br/>
 Určuje klíč vlastnosti.
 
-*SYSTEMTIME –*<br/>
+*systemTime*<br/>
 Určuje hodnotu bloků dat pro nastavení.
 
 *chunkType*<br/>
@@ -693,6 +693,6 @@ S_OK v případě úspěchu; jinak kód chyby.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

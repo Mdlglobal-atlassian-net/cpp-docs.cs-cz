@@ -8,12 +8,12 @@ helpviewer_keywords:
 - sockets [MFC], operations
 - stream sockets [MFC]
 ms.assetid: 43ce76f5-aad3-4247-b8a6-16cc7d012796
-ms.openlocfilehash: 98d06e005a09825d53f22330d6b0b58ccb2069fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f9fd339fdbdfee9381ea693568f40473c2397e9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578633"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265545"
 ---
 # <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets: Posloupnost operací
 
@@ -36,7 +36,7 @@ Až do okamžiku vytváření `CSocketFile` objekt, je přesné (s několika roz
 |`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> -nebo-<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - i -|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> -nebo-<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - i -|
 |`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> -nebo-<br /><br /> `arOut << dwValue;`6|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> -nebo-<br /><br /> `arOut << dwValue;`6|
 
-1. Kde *nPort* je číslo portu. Zobrazit [rozhraní Windows Sockets: porty a adresy soketů](../mfc/windows-sockets-ports-and-socket-addresses.md) podrobnosti o portech.
+1. Kde *nPort* je číslo portu. Zobrazit [rozhraní Windows Sockets: Porty a adresy soketů](../mfc/windows-sockets-ports-and-socket-addresses.md) podrobnosti o portech.
 
 2. Server musí vždy zadejte port, klienti můžou připojit. `Create` Volání někdy také určuje adresu. Na straně klienta použijte výchozí parametry, které požádejte MFC používat jakýkoli dostupný port.
 
@@ -56,20 +56,19 @@ Sekvence volání je uvedeno v předchozí tabulce je pro datový proud soketu. 
 
 Další informace naleznete v tématu:
 
-- [Windows Sockets: Použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets: Použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets – Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
 - [Windows Sockets: Porty a adresy soketů](../mfc/windows-sockets-ports-and-socket-addresses.md)
 
-- [Windows Sockets: Sokety streamu](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets: Sokety datagramů](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: Sokety datagramu](../mfc/windows-sockets-datagram-sockets.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)<br/>
 [CSocket – třída](../mfc/reference/csocket-class.md)<br/>
 [CAsyncSocket::Create](../mfc/reference/casyncsocket-class.md#create)<br/>
 [CAsyncSocket::Close](../mfc/reference/casyncsocket-class.md#close)
-

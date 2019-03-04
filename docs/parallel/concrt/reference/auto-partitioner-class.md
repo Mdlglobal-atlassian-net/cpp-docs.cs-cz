@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - auto_partitioner class
 ms.assetid: 7cc08e5d-20b4-47a4-b4b5-c214a78f5a9e
-ms.openlocfilehash: 9e4701c39512613bd7525c2cc0e3d24a57e7689d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d8bbb8e8af17dd19953487c47e5fd40343fe349
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644922"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264817"
 ---
 # <a name="autopartitioner-class"></a>auto_partitioner – třída
 
@@ -44,7 +44,7 @@ class auto_partitioner;
 
 **Namespace:** souběžnosti
 
-##  <a name="dtor"></a> ~ auto_partitioner –
+##  <a name="dtor"></a> ~auto_partitioner
 
 Odstraní `auto_partitioner` objektu.
 
@@ -60,6 +60,6 @@ Vytvoří `auto_partitioner` objektu.
 auto_partitioner();
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)

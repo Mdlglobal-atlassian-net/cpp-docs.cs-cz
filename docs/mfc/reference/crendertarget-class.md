@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 3066f3308d0c7e5c9a04f7746585be9a9dd5bc9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 112bd4422a1fa6b9b97239228dc586a0555ddc96
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588638"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259877"
 ---
 # <a name="crendertarget-class"></a>Crendertarget – třída
 
@@ -138,7 +138,7 @@ class CRenderTarget : public CObject;
 |Název|Popis|
 |----------|-----------------|
 |[CRenderTarget::CRenderTarget](#crendertarget)|Vytvoří objekt crendertarget –.|
-|[Crendertarget –:: ~ crendertarget –](#crendertarget__~crendertarget)|Destruktor. Volá se při vykreslení cílový objekt je zničen.|
+|[CRenderTarget::~CRenderTarget](#crendertarget__~crendertarget)|Destruktor. Volá se při vykreslení cílový objekt je zničen.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -204,7 +204,7 @@ class CRenderTarget : public CObject;
 
 |Název|Popis|
 |----------|-----------------|
-|[CRenderTarget::operator ID2D1RenderTarget *](#operator_id2d1rendertarget_star)|Vrátí ID2D1RenderTarget rozhraní|
+|[CRenderTarget::operator ID2D1RenderTarget*](#operator_id2d1rendertarget_star)|Vrátí ID2D1RenderTarget rozhraní|
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
@@ -218,13 +218,13 @@ class CRenderTarget : public CObject;
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Crendertarget –](../../mfc/reference/crendertarget-class.md)
+[CRenderTarget](../../mfc/reference/crendertarget-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxrendertarget.h
 
-##  <a name="_dtorcrendertarget"></a>  Crendertarget –:: ~ crendertarget –
+##  <a name="_dtorcrendertarget"></a>  CRenderTarget::~CRenderTarget
 
 Destruktor. Volá se při vykreslení cílový objekt je zničen.
 
@@ -263,7 +263,7 @@ void Clear(D2D1_COLOR_F color);
 
 ### <a name="parameters"></a>Parametry
 
-*Barva*<br/>
+*color*<br/>
 Barva, ke kterému se vymaže oblasti pro kreslení.
 
 ##  <a name="colorref_to_d2dcolor"></a>  CRenderTarget::COLORREF_TO_D2DCOLOR
@@ -278,7 +278,7 @@ static D2D1_COLOR_F COLORREF_TO_D2DCOLOR(
 
 ### <a name="parameters"></a>Parametry
 
-*Barva*<br/>
+*color*<br/>
 Hodnota RGB.
 
 *nAlpha*
@@ -699,7 +699,7 @@ Pozice a protokolu radius v pixelech nezávislých na zařízení k vykreslení 
 *pBrush*<br/>
 Štětec použita k vyplnění oblasti určené destinationRectangle cíle vykreslování.
 
-*Obsah*<br/>
+*content*<br/>
 Typ obsahu, který obsahuje masku neprůhlednosti. Hodnota slouží k určení barevný prostor, ve kterém jsou prolnuty masku neprůhlednosti.
 
 *rectDest*<br/>
@@ -756,10 +756,10 @@ void Flush(
 
 ### <a name="parameters"></a>Parametry
 
-*značky 1*<br/>
+*tag1*<br/>
 Obsahuje značku pro kreslicí operace, které způsobily chyby nebo 0, pokud nebyly zjištěny žádné chyby. Tento parametr je předán bez inicializace.
 
-*značky 2*<br/>
+*tag2*<br/>
 Obsahuje značku pro kreslicí operace, které způsobily chyby nebo 0, pokud nebyly zjištěny žádné chyby. Tento parametr je předán bez inicializace.
 
 ##  <a name="getantialiasmode"></a>  CRenderTarget::GetAntialiasMode
@@ -858,10 +858,10 @@ void GetTags(
 
 ### <a name="parameters"></a>Parametry
 
-*značky 1*<br/>
+*tag1*<br/>
 Obsahuje prvního popisku pro následné operace kreslení. Tento parametr je předán bez inicializace. Pokud je zadána hodnota NULL, je načten žádnou hodnotu tohoto parametru.
 
-*značky 2*<br/>
+*tag2*<br/>
 Obsahuje druhý popisek pro následné operace kreslení. Tento parametr je předán bez inicializace. Pokud je zadána hodnota NULL, je načten žádnou hodnotu tohoto parametru.
 
 ##  <a name="gettextantialiasmode"></a>  CRenderTarget::GetTextAntialiasMode
@@ -899,7 +899,7 @@ void GetTransform(D2D1_MATRIX_3X2_F* transform);
 
 ### <a name="parameters"></a>Parametry
 
-*Transformace*<br/>
+*transform*<br/>
 Transformací, která se má použít pro cíl vykreslování.
 
 ##  <a name="issupported"></a>  CRenderTarget::IsSupported
@@ -1016,7 +1016,7 @@ void PushLayer(
 *layerParameters*<br/>
 Obsahu hranice, geometrické maska, krytí, masky krytí a vyhlazení možnosti pro vrstvu.
 
-*Vrstvy*<br/>
+*layer*<br/>
 Vrstva, která přijímá následné operace kreslení.
 
 ##  <a name="restoredrawingstate"></a>  CRenderTarget::RestoreDrawingState
@@ -1083,10 +1083,10 @@ void SetTags(
 
 ### <a name="parameters"></a>Parametry
 
-*značky 1*<br/>
+*tag1*<br/>
 Popisek pro použití pro následné operace kreslení.
 
-*značky 2*<br/>
+*tag2*<br/>
 Popisek pro použití pro následné operace kreslení.
 
 ##  <a name="settextantialiasmode"></a>  CRenderTarget::SetTextAntialiasMode
@@ -1126,7 +1126,7 @@ void SetTransform(const D2D1_MATRIX_3X2_F& transform);
 
 ### <a name="parameters"></a>Parametry
 
-*Transformace*<br/>
+*transform*<br/>
 Transformací, která se má použít pro cíl vykreslování.
 
 ##  <a name="verifyresource"></a>  CRenderTarget::VerifyResource
@@ -1146,6 +1146,6 @@ Ukazatel na objekt cd2dresource –.
 
 TRUE, je objekt, pokud je platná. v opačném případě FALSE.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

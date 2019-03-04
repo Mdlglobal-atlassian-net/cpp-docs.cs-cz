@@ -1,5 +1,5 @@
 ---
-title: Colemessagefilter – třída
+title: COleMessageFilter Class
 ms.date: 11/04/2016
 f1_keywords:
 - COleMessageFilter
@@ -28,14 +28,14 @@ helpviewer_keywords:
 - COleMessageFilter [MFC], SetMessagePendingDelay
 - COleMessageFilter [MFC], SetRetryReply
 ms.assetid: b1fd1639-fac4-4fd0-bf17-15172deba13c
-ms.openlocfilehash: 4e12b4dc41c0e384025a2af567cb118d066aaa72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a06891f9413979895175808e109cc4abb7d75e09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478244"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259097"
 ---
-# <a name="colemessagefilter-class"></a>Colemessagefilter – třída
+# <a name="colemessagefilter-class"></a>COleMessageFilter Class
 
 Spravují souběžnost vyžadovanou pro interakci aplikací OLE.
 
@@ -78,7 +78,7 @@ Ve výchozím nastavení `COleMessageFilter` objektu je přiřazen, když je apl
 
 Jedná se o pokročilé třídu; zřídka potřebujete pracovat s ním přímo.
 
-Další informace najdete v článku [servery: implementace serveru](../../mfc/servers-implementing-a-server.md).
+Další informace najdete v článku [serverů: Implementace serveru](../../mfc/servers-implementing-a-server.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -284,7 +284,7 @@ Když klávesnice nebo myši zpráva čeká na vyřízení během volání a vol
 
 Když dialogová okna jsou zakázané, aktuální "pokus o odpověď" je vždy použít pro volání zaneprázdněný aplikacím.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CCmdTarget – třída](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

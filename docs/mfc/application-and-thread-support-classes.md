@@ -11,12 +11,12 @@ helpviewer_keywords:
 - synchronization classes [MFC], multithreading
 - application support classes [MFC]
 ms.assetid: 3c1d14fd-c35c-48f1-86ce-1e0f9a32c36d
-ms.openlocfilehash: 5f69ea6a87d0e1ae16a6079a414d623af6dd88fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 667725a60fb0c907a9c2d017674f9d097d1f4946
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496255"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262035"
 ---
 # <a name="application-and-thread-support-classes"></a>Třídy pro podporu aplikací a vláken
 
@@ -42,7 +42,7 @@ Základní třída synchronizační objekt třídy.
 [CCriticalSection](../mfc/reference/ccriticalsection-class.md)<br/>
 Synchronizační třídu, která umožňuje pouze jedno vlákno v rámci jediného procesu, aby přístup k objektu.
 
-[CSemaphore –](../mfc/reference/csemaphore-class.md)<br/>
+[CSemaphore](../mfc/reference/csemaphore-class.md)<br/>
 Synchronizační třídu, která umožňuje od jedné do zadané maximální počet souběžných přístupů na objekt.
 
 [CMutex](../mfc/reference/cmutex-class.md)<br/>
@@ -59,19 +59,18 @@ Použít v členské funkce třídy bezpečné pro vlákna k uzamčení na jeden
 
 ## <a name="related-classes"></a>Související třídy
 
-[Ccommandlineinfo –](../mfc/reference/ccommandlineinfo-class.md)<br/>
+[CCommandLineInfo](../mfc/reference/ccommandlineinfo-class.md)<br/>
 Analyzuje příkazového řádku, se kterým byl program spuštěn.
 
-[Cwaitcursor –](../mfc/reference/cwaitcursor-class.md)<br/>
+[CWaitCursor](../mfc/reference/cwaitcursor-class.md)<br/>
 Umístí kurzor pro čekání na obrazovce. Používá se při dlouhé operace.
 
-[Cdockstate –](../mfc/reference/cdockstate-class.md)<br/>
+[CDockState](../mfc/reference/cdockstate-class.md)<br/>
 Zpracovává ukotvení data o stavu pro ovládacích pruhů trvalého úložiště.
 
-[Crecentfilelist –](../mfc/reference/crecentfilelist-class.md)<br/>
+[CRecentFileList](../mfc/reference/crecentfilelist-class.md)<br/>
 Uchovává poslední použitou seznam souborů (MRU).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../mfc/class-library-overview.md)
-

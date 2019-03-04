@@ -5,12 +5,12 @@ helpviewer_keywords:
 - using lightweight tasks [Concurrency Runtime]
 - lightweight tasks, using [Concurrency Runtime]
 ms.assetid: 1edfe818-d274-46de-bdd3-e92967c9bbe0
-ms.openlocfilehash: a0e724ff6f43dc0c888e787350f4841f14383f14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43e928e7d82b41b83fde5e8a7abaeeeb8d6fefa9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654499"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261216"
 ---
 # <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>Návod: Přizpůsobení stávajícího kódu pro použití prostých úloh
 
@@ -92,7 +92,7 @@ Dokončené následující příklad zobrazuje kód, který používá lehký ú
 
 ### <a name="comments"></a>Komentáře
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Scheduler – třída](../../parallel/concrt/reference/scheduler-class.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Postupy: Paralelní provádění operací mapování a redukce'
+title: 'Postupy: Proveďte mapování a redukční operace paralelně'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - parallel_transform function, example
 - parallel map and reduce, example
 - parallel_reduce function, example
 ms.assetid: 9d19fac0-4ab6-4380-a375-3b18eeb87720
-ms.openlocfilehash: b73e46e63fc1b320a84322bf2b0efd7adf244ccb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba3ffb5cdae7dcc6f108f005fab33f9a1fee6a6f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651850"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258655"
 ---
-# <a name="how-to-perform-map-and-reduce-operations-in-parallel"></a>Postupy: Paralelní provádění operací mapování a redukce
+# <a name="how-to-perform-map-and-reduce-operations-in-parallel"></a>Postupy: Proveďte mapování a redukční operace paralelně
 
 Tento příklad ukazuje způsob použití [concurrency::parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform) a [concurrency::parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce) algoritmy a [concurrency::concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md)třídy počítání výskytů slova v souborech.
 
@@ -29,7 +29,7 @@ Následující příklad počítá výskyty slov v souborech. Používá [std::v
 
 Chcete-li kód zkompilovat, ho zkopírujte a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `parallel-map-reduce.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
 
-**cl.exe/EHsc paralelní map – reduce.cpp**
+**cl.exe /EHsc parallel-map-reduce.cpp**
 
 ## <a name="robust-programming"></a>Robustní programování
 
@@ -39,7 +39,7 @@ V tomto příkladu můžete použít `concurrent_unordered_map` třída, která 
 
 Obvykle paralelizovat zůstal jenom vnější nebo vnitřní smyčku. Paralelní zpracování vnitřní smyčky, pokud máte relativně malý počet souborů a každý soubor obsahuje mnoho slova. Paralelní zpracování vnější smyčky, pokud máte relativně velkým množstvím souborů a každý soubor obsahuje několik slov.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md)<br/>
 [parallel_transform Function](reference/concurrency-namespace-functions.md#parallel_transform)<br/>

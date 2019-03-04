@@ -7,12 +7,12 @@ helpviewer_keywords:
 - optimization, ActiveX controls
 - optimizing performance, ActiveX controls
 ms.assetid: e821e19e-b9eb-49ab-b719-0743420ba80b
-ms.openlocfilehash: 6f0d888f49cf27505882e89e3cdbb469ea9e8684
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 294d9c43f5f767329c04932c574485d7dca704e9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472693"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261938"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>Optimalizace trvalosti a inicializace
 
@@ -44,7 +44,6 @@ Pro stejný ovládací prvek, lze optimalizovat inicializace ovládacího prvku 
 
 I když `Serialize` a `OnResetState` přepsány, `DoPropExchange` funkce by měly být neustále beze změny vzhledem k tomu, že je stále používané pro trvalost ve formátu kontejneru objektů a dat. Je důležité zachovat všechny tři z těchto funkcí k zajištění, že ovládací prvek spravuje její vlastnosti, bez ohledu na to, které trvalost používá mechanismus kontejneru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – ovládací prvky ActiveX: Optimalizace](../mfc/mfc-activex-controls-optimization.md)
-

@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CLongBinary class [MFC]
 ms.assetid: f4320059-aeb4-4ee5-bc2b-25f19d898ef5
-ms.openlocfilehash: a7dbb7e38ec01743d994dafd6c7945e306de51ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed3a153ec89785a9c9da43037d20f7d88b5661ff
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656030"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260709"
 ---
 # <a name="clongbinary-class"></a>CLongBinary – třída
 
@@ -53,7 +53,7 @@ Použití `CLongBinary` objektu, deklarujte datový člen pole typu `CLongBinary
 
 Při zrušení sady záznamů, vložený `CLongBinary` také zničení objektu a jeho destruktor uvolní `HGLOBAL` popisovač data.
 
-Další informace o velké objekty a použití `CLongBinary`, najdete v článcích [sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md) a [sada záznamů: práce se velké datové položky (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md).
+Další informace o velké objekty a použití `CLongBinary`, najdete v článcích [sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md) a [sada záznamů: Práce s velkými datovými položkami (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -93,7 +93,7 @@ Uloží popisovač Windows HGLOBAL data skutečné binárního rozsáhlého obje
 HGLOBAL m_hData;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Catldllmodulet – třída
+title: CAtlDllModuleT Class
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlDllModuleT
@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlDllModuleT class
 ms.assetid: 351d5767-8257-4878-94be-45a85e31a72d
-ms.openlocfilehash: 37f57240322c6f69fe25416866cb1b356f3c9909
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be42915c6c2e941bc5fc1de78c5c7ac26ccca6e2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515866"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259214"
 ---
-# <a name="catldllmodulet-class"></a>Catldllmodulet – třída
+# <a name="catldllmodulet-class"></a>CAtlDllModuleT Class
 
 Tato třída reprezentuje modulu pro knihovnu DLL.
 
@@ -44,7 +44,7 @@ Vaše třída odvozena od `CAtlDllModuleT`.
 |Název|Popis|
 |----------|-----------------|
 |[CAtlDllModuleT::CAtlDllModuleT](#catldllmodulet)|Konstruktor|
-|[Catldllmodulet –:: ~ catldllmodulet –](#dtor)|Destruktor.|
+|[CAtlDllModuleT::~CAtlDllModuleT](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -67,7 +67,7 @@ Další informace o modulech v ATL naleznete v tématu [ATL – třídy modulů]
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)
 
-[Catlmodule –](../../atl/reference/catlmodule-class.md)
+[CAtlModule](../../atl/reference/catlmodule-class.md)
 
 [CAtlModuleT](../../atl/reference/catlmodulet-class.md)
 
@@ -85,7 +85,7 @@ Konstruktor
 CAtlDllModuleT() throw();
 ```
 
-##  <a name="dtor"></a>  Catldllmodulet –:: ~ catldllmodulet –
+##  <a name="dtor"></a>  CAtlDllModuleT::~CAtlDllModuleT
 
 Destruktor.
 
@@ -141,7 +141,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Parametr dwReason*<br/>
+*dwReason*<br/>
 Pokud je nastavený na DLL_PROCESS_ATTACH, DLL_THREAD_ATTACH a DLL_THREAD_DETACH případně oznámení volání jsou zakázána.
 
 *lpReserved*<br/>
@@ -219,7 +219,7 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 Tato metoda je volána metodou [CAtlDllModuleT::DllGetClassObject](#dllgetclassobject) a je součástí zpětné kompatibility.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CAtlModuleT – třída](../../atl/reference/catlmodulet-class.md)<br/>
 [CAtlExeModuleT – třída](../../atl/reference/catlexemodulet-class.md)<br/>

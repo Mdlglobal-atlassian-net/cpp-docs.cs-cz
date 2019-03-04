@@ -22,12 +22,12 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-ms.openlocfilehash: 96e279e8ab3080c0239f1e41895142ba23c5a7c9
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 7fd9a941210407edc3424454b3375040717a05a2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693970"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261658"
 ---
 # <a name="ccontainedwindowt-class"></a>Ccontainedwindowt – třída
 
@@ -45,7 +45,7 @@ class CContainedWindowT : public TBase
 
 #### <a name="parameters"></a>Parametry
 
-*Tčíslice*<br/>
+*TBase*<br/>
 Základní třídy novou třídu. Výchozí základní třída je `CWindow`.
 
 *TWinTraits*<br/>
@@ -141,7 +141,7 @@ CContainedWindowT(
 *lpszClassName*<br/>
 [in] Název existující třídy okna, na které bude založená obsaženého okna.
 
-*odstraněný objekt*<br/>
+*pObject*<br/>
 [in] Ukazatel na nadřazený objekt, který deklaruje mapování zprávy. Tento objekt třídy musí být odvozen od [cmessagemap –](../../atl/reference/cmessagemap-class.md).
 
 *dwMsgMapID*<br/>
@@ -204,7 +204,7 @@ HWND Create(
 *lpszClassName*<br/>
 [in] Název existující třídy okna, na které bude založená obsaženého okna.
 
-*odstraněný objekt*<br/>
+*pObject*<br/>
 [in] Ukazatel na nadřazený objekt, který deklaruje mapování zprávy. Tento objekt třídy musí být odvozen od [cmessagemap –](../../atl/reference/cmessagemap-class.md).
 
 *dwMsgMapID*<br/>
@@ -460,7 +460,7 @@ Výsledek zpracování zprávy.
 
 `WindowProc` přesměruje zprávy do mapy zpráv, který je identifikován [m_dwMsgMapID](#m_dwmsgmapid). V případě potřeby `WindowProc` volání [DefWindowProc](#defwindowproc) pro zpracování další zprávy.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CWindow – třída](../../atl/reference/cwindow-class.md)<br/>
 [CWindowImpl – třída](../../atl/reference/cwindowimpl-class.md)<br/>

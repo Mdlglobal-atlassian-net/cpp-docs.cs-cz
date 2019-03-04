@@ -1,5 +1,5 @@
 ---
-title: Cscrollbar – třída
+title: CScrollBar Class
 ms.date: 11/04/2016
 f1_keywords:
 - CScrollBar
@@ -30,14 +30,14 @@ helpviewer_keywords:
 - CScrollBar [MFC], SetScrollRange
 - CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
-ms.openlocfilehash: 3b8e7dc78ddfa22097c97fb4e97fff92f0984c07
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d677d72b7e758fcdaa7df0e2918e9bbec3e18ee9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571259"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263107"
 ---
-# <a name="cscrollbar-class"></a>Cscrollbar – třída
+# <a name="cscrollbar-class"></a>CScrollBar Class
 
 Poskytuje funkce pro ovládací prvek posuvníku Windows.
 
@@ -353,7 +353,7 @@ int SetScrollPos(
 
 ### <a name="parameters"></a>Parametry
 
-*nPos –*<br/>
+*nPos*<br/>
 Určuje novou pozici pro posuvníku. Musí být v rozsahu posouvání.
 
 *bRedraw*<br/>
@@ -428,7 +428,7 @@ Aplikace by neměl voláním této funkce skrýt posuvníku při zpracování zp
 
   Podívejte se na příklad pro [CScrollBar::Create](#create).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

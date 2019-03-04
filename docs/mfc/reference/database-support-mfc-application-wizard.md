@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, database support
 ms.assetid: 9ddf4558-fd41-4ac7-8d9b-c93d9c68ab59
-ms.openlocfilehash: 9635b7e045812cc90c5d6e9662b8475e411a0b48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1e0519e1351a48bbd969168d62f163c9dde7e7e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654204"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259955"
 ---
 # <a name="database-support-mfc-application-wizard"></a>Podpora databáze, Průvodce aplikací knihovny MFC
 
@@ -23,7 +23,7 @@ Tato stránka obsahuje možnosti, které vám umožňují určit úroveň datab�
 
    |Možnost|Popis|
    |------------|-----------------|
-   |**None**|Poskytuje podporu žádné databáze. Toto je výchozí možnost.|
+   |**Žádné**|Poskytuje podporu žádné databáze. Toto je výchozí možnost.|
    |**Jenom hlavičkové soubory**|Poskytuje základní úroveň podpory databáze pro vaši aplikaci. Pokud vyberete ODBC podporu v rámci **typ klienta**, Průvodce aplikací knihovny MFC zahrnuje v projektu soubor hlaviček AFXDB. H. Přidá knihoven, ale nevytvoří všechny třídy specifické pro databázi. Můžete vytvořit později sady záznamů a použít k prozkoumání a aktualizaci záznamů. Pokud vyberete OLE DB – podpora pod **typ klienta**, jsou zahrnuty následující soubory hlaviček: ATLBASE. H AFXOLEDB. H ATLPLUS. H|
    |**Zobrazení databází bez podpory souborů**|Obsahuje databázové soubory hlaviček, knihovnách, zobrazení záznamů a záznamů. (K dispozici pouze pro aplikace s **podpora architektury Document/view** možnosti vybrané v [typ aplikace](../../mfc/reference/application-type-mfc-application-wizard.md) stránky.) Tato možnost zahrnuje podporu dokumentu, ale nepodporuje serializaci. Pokud budete chtít zahrnout zobrazení databáze, musíte zadat zdroj dat.|
    |**Zobrazení databází s podporou souborů**|Obsahuje databázové soubory hlaviček, knihovnách, zobrazení záznamů a záznamů. (K dispozici pouze pro aplikace s **podpora architektury Document/view** možnosti vybrané v **typ aplikace** stránky.) Tato volba podporuje serializaci dokumentu, který můžete použít, například k aktualizaci souboru profilu uživatele. Databázové aplikace je obvykle fungují na základě jednotlivé záznamy, nikoli na jednotlivé – soubor základ a proto není nutné serializace. Však mohou mít zvláštní použití pro serializaci. Pokud budete chtít zahrnout zobrazení databáze, musíte zadat zdroj dat.|
@@ -73,6 +73,6 @@ Tato stránka obsahuje možnosti, které vám umožňují určit úroveň datab�
    |**Dynamická sada**|Určuje, že je dynamická sada záznamů. Dynamická sada je výsledek dotazu, který poskytuje indexovaném pohledu na data dotazované databázi. Dynamická sada pouze celočíselný index tak, aby původní data ukládá do mezipaměti, a proto nabízí výkon získat snímek. Index odkazuje přímo na každý záznam najít jako výsledek dotazu a označuje, pokud záznam se odebere. Máte také přístup k aktualizované informace v záznamech poslal dotaz.|
    |**Snímek**|Určuje, že je sada záznamů snímku. Snímek je výsledek dotazu a je tak představu o databázi v jednom bodě v čase. Všechny záznamy nalezen jako výsledek dotazu jsou uložené v mezipaměti, takže se nezobrazí žádné změny původních záznamů.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – průvodce aplikací](../../mfc/reference/mfc-application-wizard.md)

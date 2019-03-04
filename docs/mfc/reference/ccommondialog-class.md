@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CCommonDialog [MFC], CCommonDialog
 ms.assetid: 1f68d65f-a0fd-4778-be22-ebbe51a95f95
-ms.openlocfilehash: 47ef6591a69196ea93048e2ce3a77603b12ab4c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4fa7aa51d1ce482e00f68365045cd35c3fb7939b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432732"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264869"
 ---
 # <a name="ccommondialog-class"></a>Ccommondialog – třída
 
@@ -39,19 +39,19 @@ Následující třídy zapouzdřují funkce běžných dialogových oken Windows
 
 - [CFileDialog](../../mfc/reference/cfiledialog-class.md)
 
-- [Cfontdialog –](../../mfc/reference/cfontdialog-class.md)
+- [CFontDialog](../../mfc/reference/cfontdialog-class.md)
 
-- [Ccolordialog –](../../mfc/reference/ccolordialog-class.md)
+- [CColorDialog](../../mfc/reference/ccolordialog-class.md)
 
-- [Cpagesetupdialog –](../../mfc/reference/cpagesetupdialog-class.md)
+- [CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md)
 
-- [Cprintdialog –](../../mfc/reference/cprintdialog-class.md)
+- [CPrintDialog](../../mfc/reference/cprintdialog-class.md)
 
 - [CPrintDialogEx](../../mfc/reference/cprintdialogex-class.md)
 
 - [CFindReplaceDialog.](../../mfc/reference/cfindreplacedialog-class.md)
 
-- [Coledialog –](../../mfc/reference/coledialog-class.md)
+- [COleDialog](../../mfc/reference/coledialog-class.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -86,7 +86,7 @@ Odkazuje na objekt okna nadřazené nebo vlastník (typu [CWnd](../../mfc/refere
 
 Zobrazit [CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog) podrobnější informace.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CDialog – třída](../../mfc/reference/cdialog-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

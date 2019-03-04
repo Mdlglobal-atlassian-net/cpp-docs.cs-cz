@@ -1,5 +1,5 @@
 ---
-title: 'MFC – ovládací prvky ActiveX: Použití obrázků v ovládacím prvku ActiveX'
+title: 'MFC – ovládací prvky ActiveX: Použití obrázků v ovládacím prvku ActiveX'
 ms.date: 11/04/2016
 f1_keywords:
 - LPPICTUREDISP
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - OnResetState method [MFC]
 - CLSID_CPicturePropPage [MFC]
 ms.assetid: 2e49735c-21b9-4442-bb3d-c82ef258eec9
-ms.openlocfilehash: fe239f864f4b7730d28372ee3fc9d298131d28d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86e9bd220d06e714030f7d44888b210ba35fd345
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462098"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264557"
 ---
-# <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC – ovládací prvky ActiveX: Použití obrázků v ovládacím prvku ActiveX
+# <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC – ovládací prvky ActiveX: Použití obrázků v ovládacím prvku ActiveX
 
 Tento článek popisuje běžné typ obrázku a jak implementovat v ovládacím prvku ActiveX. Mezi témata patří:
 
@@ -31,7 +31,7 @@ Tento článek popisuje běžné typ obrázku a jak implementovat v ovládacím 
 
 Typ obrázku je součástí skupiny typů, které jsou společné pro některé ovládací prvky ActiveX. Typ obrázku zpracovává metasoubory, rastrové obrázky a ikony a umožňuje uživateli zadat obrázek, který se má zobrazit v ovládacím prvku ActiveX. Vlastní vlastnosti obrázku jsou implementovány pomocí objektu obrázek a funkce Get/Set, které umožňují řízení přístupu uživatelů k vlastnosti obrázku. Ovládací prvek uživatelé přístup k vlastní vlastnost obrázek pomocí akcie stránka vlastností obrázku.
 
-Kromě standardní typ obrázku, písma a barvy typy jsou také k dispozici. Další informace o použití standardní typ písma v ovládacím prvku ActiveX, najdete v článku [knihovny MFC – ovládací prvky ActiveX: použití písem](../mfc/mfc-activex-controls-using-fonts.md).
+Kromě standardní typ obrázku, písma a barvy typy jsou také k dispozici. Další informace o použití standardní typ písma v ovládacím prvku ActiveX, najdete v článku [knihovny MFC – ovládací prvky ActiveX: Použití písem](../mfc/mfc-activex-controls-using-fonts.md).
 
 Třídy ovládacích prvků ActiveX poskytují několik komponent, které můžete použít k implementaci vlastnost obrázek v ovládacím prvku. Mezi tyto komponenty patří:
 
@@ -41,11 +41,11 @@ Třídy ovládacích prvků ActiveX poskytují několik komponent, které může
 
 - Podpora pro vlastnosti typu **LPPICTUREDISP**, implementovaný pomocí funkce Get/Set.
 
-   Pomocí zobrazení tříd můžete rychle přidat vlastní vlastnost nebo vlastnosti, která podporuje typ obrázku. Další informace o přidání vlastnosti ovládacích prvků ActiveX pomocí zobrazení tříd, najdete v článku [knihovny MFC – ovládací prvky ActiveX: vlastnosti](../mfc/mfc-activex-controls-properties.md).
+   Pomocí zobrazení tříd můžete rychle přidat vlastní vlastnost nebo vlastnosti, která podporuje typ obrázku. Další informace o přidání vlastnosti ovládacích prvků ActiveX pomocí zobrazení tříd, najdete v článku [knihovny MFC – ovládací prvky ActiveX: Vlastnosti](../mfc/mfc-activex-controls-properties.md).
 
 - Stránky vlastností, která zpracovává ovládacího prvku obrázek vlastnost nebo vlastnosti.
 
-   Tuto stránku vlastností je součástí skupiny stránky uložených vlastností, které jsou k dispozici pro ovládací prvky ActiveX. Další informace na stránkách vlastností ovládacího prvku ActiveX, najdete v článku [knihovny MFC – ovládací prvky ActiveX: pomocí stránky vlastností akcií](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+   Tuto stránku vlastností je součástí skupiny stránky uložených vlastností, které jsou k dispozici pro ovládací prvky ActiveX. Další informace na stránkách vlastností ovládacího prvku ActiveX, najdete v článku [knihovny MFC – ovládací prvky ActiveX: Použití stránek uložených vlastností](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
 ##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> Implementace vlastnosti vlastní obrázek v ovládacím prvku ActiveX
 
@@ -147,9 +147,8 @@ Vlastnost obrázek se musí provádět trvalé tak, aby se zobrazí informace o 
 
 Po dokončení změny znovu sestavte projekt nové funkce vlastnost vlastní obrázek začlenění a používání kontejner testu otestovat novou vlastnost. Zobrazit [testování vlastností a událostí pomocí testování kontejneru](../mfc/testing-properties-and-events-with-test-container.md) informace o tom, jak získat přístup ke kontejneru testů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)<br/>
 [MFC – ovládací prvky ActiveX: Použití písem](../mfc/mfc-activex-controls-using-fonts.md)<br/>
 [MFC – ovládací prvky ActiveX: Stránky vlastností](../mfc/mfc-activex-controls-property-pages.md)
-

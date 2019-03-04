@@ -1,5 +1,5 @@
 ---
-title: Cdatapathproperty – třída
+title: CDataPathProperty Class
 ms.date: 11/04/2016
 f1_keywords:
 - CDataPathProperty
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetControl
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
-ms.openlocfilehash: 1d17b121854623e9919f434a44b6ab40c2db2691
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61c8dfa85363509ee09eaaccdb6d45d70390c344
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608180"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262763"
 ---
-# <a name="cdatapathproperty-class"></a>Cdatapathproperty – třída
+# <a name="cdatapathproperty-class"></a>CDataPathProperty Class
 
 Implementuje ovládacího prvku OLE vlastnost, která lze načíst asynchronně.
 
@@ -64,21 +64,21 @@ Třída `CDataPathProperty` je odvozen z `CAysncMonikerFile`. K implementaci asy
 
 Další informace o tom, jak použít asynchronní monikery a ovládací prvky ActiveX v internetových aplikací najdete v následujících článcích:
 
-- [Internet první kroky: Ovládací prvky ActiveX](../../mfc/activex-controls-on-the-internet.md)
+- [První kroky Internetu: Ovládací prvky ActiveX](../../mfc/activex-controls-on-the-internet.md)
 
-- [Internetu první kroky: Asynchronní Monikery](../../mfc/asynchronous-monikers-on-the-internet.md)
+- [První kroky Internetu: Asynchronní Monikery](../../mfc/asynchronous-monikers-on-the-internet.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cfile –](../../mfc/reference/cfile-class.md)
+[CFile](../../mfc/reference/cfile-class.md)
 
-[Colestreamfile –](../../mfc/reference/colestreamfile-class.md)
+[COleStreamFile](../../mfc/reference/colestreamfile-class.md)
 
-[Cmonikerfile –](../../mfc/reference/cmonikerfile-class.md)
+[CMonikerFile](../../mfc/reference/cmonikerfile-class.md)
 
-[Casyncmonikerfile –](../../mfc/reference/casyncmonikerfile-class.md)
+[CAsyncMonikerFile](../../mfc/reference/casyncmonikerfile-class.md)
 
 `CDataPathProperty`
 
@@ -215,7 +215,7 @@ void SetPath(LPCTSTR lpszPath);
 *lpszPath*<br/>
 Cesta, která může být absolutní nebo relativní k vlastnosti načítán asynchronně. `CDataPathProperty` pomocí adresy URL, ne názvy souborů. Pokud chcete, aby `CDataPathProperty` objektu pro soubor, předřaďte `file://` k cestě.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Obrázek ukázky knihovny MFC](../../visual-cpp-samples.md)<br/>
 [CAsyncMonikerFile – třída](../../mfc/reference/casyncmonikerfile-class.md)<br/>

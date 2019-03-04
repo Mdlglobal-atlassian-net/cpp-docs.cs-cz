@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: b138c4f84a10823d9c340218baefd530c016027a
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ef486e653eaf78914ea25663e0c1ab744ab30cd4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179029"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260007"
 ---
 # <a name="casyncsocket-class"></a>Casyncsocket – třída
 
@@ -819,7 +819,7 @@ Tyto možnosti jsou podporovány pro `GetSockOpt`. Typ určuje typ dat řešený
 |SO_KEEPALIVE|BOOL|Udržování otevřených připojení jsou odesílány.|
 |SO_LINGER|`struct LINGER`|Vrátí aktuální linger – možnosti.|
 |SO_OOBINLINE|BOOL|Se přijetí dat Out-of-band v normální datového proudu.|
-|ASYNCHRONNÍ|int|Velikost vyrovnávací paměti pro obdrží.|
+|SO_RCVBUF|int|Velikost vyrovnávací paměti pro obdrží.|
 |SO_REUSEADDR|BOOL|Soket mohou být vázány na adresu, která se už používá.|
 |SO_SNDBUF|**int**|Velikost vyrovnávací paměti pro odešle.|
 |SO_TYPE|**int**|Typ soketu (například SOCK_STREAM).|
@@ -1724,7 +1724,7 @@ Tyto možnosti jsou podporovány pro `SetSockOpt`. Typ určuje typ dat řešený
 |SO_KEEPALIVE|BOOL|Odešlete udržování otevřených připojení.|
 |SO_LINGER|`struct LINGER`|Linger – `Close` Pokud unsent data jsou k dispozici.|
 |SO_OOBINLINE|BOOL|Příjem dat out-of-band v normální datového proudu.|
-|ASYNCHRONNÍ|**int**|Zadejte velikost vyrovnávací paměti pro obdrží.|
+|SO_RCVBUF|**int**|Zadejte velikost vyrovnávací paměti pro obdrží.|
 |SO_REUSEADDR|BOOL|Povolte soketu bylo vázané na adresu, která se už používá. (Viz [svázat](#bind).)|
 |SO_SNDBUF|**int**|Zadejte velikost vyrovnávací paměti pro odesílání.|
 |TCP_NODELAY|BOOL|Zakáže algoritmus Nagle pro odeslání, sloučení.|
@@ -1759,7 +1759,7 @@ Příznak, který popisuje, jaké typy operací se už nebude mít, pomocí nás
 
 - **Odešle = 1**
 
-- **jak = 2**
+- **both = 2**
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1835,7 +1835,7 @@ Vrátí `TRUE` v případě úspěchu, `FALSE` při selhání.
 
 Tato metoda přidělí popisovač soketu. Nevolá [CAsyncSocket::Bind](#bind) svázat soketu k zadané adrese, proto musíte volat `Bind` později na připojení soketu k zadané adrese. Můžete použít [CAsyncSocket::SetSockOpt](#setsockopt) nastavit možnost soketu předtím, než je vázán.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

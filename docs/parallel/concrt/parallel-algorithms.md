@@ -4,12 +4,12 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
-ms.openlocfilehash: b8a08919ce6792babb9b8b1b809e242465a200f9
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 75491130e8e5fc426116685332490efd2c5fe60b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176442"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262867"
 ---
 # <a name="parallel-algorithms"></a>Paralelní algoritmy
 
@@ -78,7 +78,7 @@ Tento příklad vytvoří následující ukázkový výstup:
 
 Vzhledem k tomu, `parallel_for` algoritmus funguje pro každou položku paralelně, pořadí, ve kterém jsou vypsány hodnoty do konzoly se bude lišit.
 
-Úplný příklad používající `parallel_for` algoritmus, najdete v článku [jak: smyčky Parallel_for](../../parallel/concrt/how-to-write-a-parallel-for-loop.md).
+Úplný příklad používající `parallel_for` algoritmus, najdete v článku [jak: Smyčky parallel_for](../../parallel/concrt/how-to-write-a-parallel-for-loop.md).
 
 [[Horní](#top)]
 
@@ -104,7 +104,7 @@ Tento příklad vytvoří následující ukázkový výstup:
 
 Vzhledem k tomu, `parallel_for_each` algoritmus funguje pro každou položku paralelně, pořadí, ve kterém jsou vypsány hodnoty do konzoly se bude lišit.
 
-Úplný příklad používající `parallel_for_each` algoritmus, najdete v článku [jak: smyčky Parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md).
+Úplný příklad používající `parallel_for_each` algoritmus, najdete v článku [jak: Smyčky parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md).
 
 [[Horní](#top)]
 
@@ -128,7 +128,7 @@ Tento příklad vytvoří následující výstup:
 108 11.2 HelloHello
 ```
 
-Kompletní příklady, které používají `parallel_invoke` algoritmus, najdete v článku [postupy: použití algoritmu parallel_invoke k zápisu rutiny paralelního třídění](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) a [postupy: použití algoritmu parallel_invoke k provádění paralelních operací](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md).
+Kompletní příklady, které používají `parallel_invoke` algoritmus, najdete v článku [jak: Použití algoritmu parallel_invoke k zápisu rutiny paralelního třídění](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) a [jak: Použití algoritmu parallel_invoke k provádění paralelních operací](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md).
 
 [[Horní](#top)]
 
@@ -189,7 +189,7 @@ Následující příklad porovnává času potřebného k nalezení součtu prvo
 
 [!code-cpp[concrt-parallel-map-reduce-sum-of-primes#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_7.cpp)]
 
-Další příklad, který provede mapování a snížit operace paralelně, naleznete v tématu [postupy: provádění mapování a snížit operace paralelně](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
+Další příklad, který provede mapování a snížit operace paralelně, naleznete v tématu [jak: Proveďte mapování a redukční operace paralelně](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
 
 [[Horní](#top)]
 
@@ -199,16 +199,16 @@ Pro paralelní zpracování operace na zdroji dat, je základním krokem *oddíl
 
 `parallel_for`, `parallel_for_each`, A `parallel_transform` algoritmy poskytuje přetížené verze, které může další parametr, `_Partitioner`. Tento parametr definuje typ dělicí metody, který rozděluje práci. Tady jsou typy dělicí metody, které definuje PPL:
 
-[Concurrency::affinity_partitioner](../../parallel/concrt/reference/affinity-partitioner-class.md)<br/>
+[concurrency::affinity_partitioner](../../parallel/concrt/reference/affinity-partitioner-class.md)<br/>
 Rozdělí práce do pevný počet rozsahů (obvykle počet pracovních vláken, které jsou k dispozici pro práci na smyčky). Vypadá podobně jako tento typ rozdělovač `static_partitioner`, ale zlepší se tím, jak mapuje rozsahy pracovních vláken mezipaměti spřažení. Tento typ dělicí metody může zlepšit výkon, při smyčky je spouštěné přes stejné datové sady více než jednou (například smyčka v rámci smyčky) a vyhovuje data v mezipaměti. Tato dělicí metoda není součástí plně zrušení. Také nepoužívá sémantiku spolupráce blokování a proto jej nelze použít s paralelních smyček, které mají dopředné závislost.
 
-[Concurrency::auto_partitioner](../../parallel/concrt/reference/auto-partitioner-class.md)<br/>
+[concurrency::auto_partitioner](../../parallel/concrt/reference/auto-partitioner-class.md)<br/>
 Rozdělí práce do počáteční počet rozsahů (obvykle počet pracovních vláken, které jsou k dispozici pro práci na smyčky). Modul runtime používá tento typ ve výchozím nastavení, když není volána přetížená paralelního algoritmu, který přijímá `_Partitioner` parametru. Každý rozsah je možné rozdělit do dílčí rozsahy a tím povolí Vyrovnávání zatížení na výskyt. Po dokončení se širokou škálou práce, modul runtime přerozděluje dílčí rozsahy práce z jiných vláken pro toto vlákno. Tato dělicí metoda použijte, pokud vaše úloha nespadá pod jednu z jiných kategorií nebo vyžadovat plnou podporu pro zrušení nebo spolupráce blokování.
 
-[Concurrency::simple_partitioner](../../parallel/concrt/reference/simple-partitioner-class.md)<br/>
+[concurrency::simple_partitioner](../../parallel/concrt/reference/simple-partitioner-class.md)<br/>
 Rozdělí práce do oblasti tak, aby každá oblast má alespoň počet iterací, které jsou určeny velikost daného bloku. Tato dělicí metoda typ se účastní Vyrovnávání zatížení; modul runtime však nedělí rozsahů do dílčí rozsahy. Pro každý zaměstnanec, modul runtime vyhledává zrušení a provede Vyrovnávání zatížení po `_Chunk_size` dokončení iterace.
 
-[Concurrency::static_partitioner](../../parallel/concrt/reference/static-partitioner-class.md)<br/>
+[concurrency::static_partitioner](../../parallel/concrt/reference/static-partitioner-class.md)<br/>
 Rozdělí práce do pevný počet rozsahů (obvykle počet pracovních vláken, které jsou k dispozici pro práci na smyčky). Tento typ dělicí metody může zlepšit výkon, protože nepoužívá přebírající práci a proto má nižší režijní náklady. Pomocí tohoto typu rozdělovač po jednotlivých iteracích paralelní smyčky provádí pevné a jednotné množství práce a nepožadujete podporu pro zrušení nebo z nich dál spolupráce blokování.
 
 > [!WARNING]
@@ -241,9 +241,9 @@ Následující tabulka shrnuje důležité vlastnosti tři paralelní algoritmy 
 
 |algoritmus|Popis|Mechanismus řazení|Řazení Stability|Požadavky na paměť|Čas složitost|Přístup k iterátoru|
 |---------------|-----------------|-----------------------|--------------------|-------------------------|---------------------|---------------------|
-|`parallel_sort`|Pro obecné účely na základě porovnání řazení.|Na základě porovnání (vzestupně)|Nestabilní|Žádné|O((N/P)log(N/P) + 2N((P-1)/P))|náhodné|
+|`parallel_sort`|Pro obecné účely na základě porovnání řazení.|Na základě porovnání (vzestupně)|Nestabilní|Žádná|O((N/P)log(N/P) + 2N((P-1)/P))|náhodné|
 |`parallel_buffered_sort`|Rychlejší pro obecné účely na základě porovnání řazení, která vyžaduje O(N) místa.|Na základě porovnání (vzestupně)|Nestabilní|Vyžaduje další prostor O(N)|O((N/P)log(N))|náhodné|
-|`parallel_radixsort`|Celé číslo na základě klíčů řazení, která vyžaduje O(N) místa.|Na základě hodnoty hash|Stabilní verze|Vyžaduje další prostor O(N)|O(N/P)|náhodné|
+|`parallel_radixsort`|Celé číslo na základě klíčů řazení, která vyžaduje O(N) místa.|Na základě hodnoty hash|Stable|Vyžaduje další prostor O(N)|O(N/P)|náhodné|
 
 Následující obrázek znázorňuje důležité vlastnosti tři paralelní algoritmy řazení více graficky.
 
@@ -338,9 +338,8 @@ V tomto příkladu se předpokládá, že je přijatelné k přidělení místa 
 
 [static_partitioner – třída](../../parallel/concrt/reference/static-partitioner-class.md)
 
-[parallel_sort – funkce](reference/concurrency-namespace-functions.md#parallel_sort)
+[parallel_sort Function](reference/concurrency-namespace-functions.md#parallel_sort)
 
-[parallel_buffered_sort – funkce](reference/concurrency-namespace-functions.md#parallel_buffered_sort)
+[parallel_buffered_sort Function](reference/concurrency-namespace-functions.md#parallel_buffered_sort)
 
 [parallel_radixsort Function](reference/concurrency-namespace-functions.md#parallel_radixsort)
-

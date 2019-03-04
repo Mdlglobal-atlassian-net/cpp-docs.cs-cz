@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dialog templates [MFC], MFC framework
 - MFC dialog boxes [MFC], dialog resource
 ms.assetid: 592db160-0a8a-49be-ac72-ead278aca53f
-ms.openlocfilehash: cf01e7b881b8f5c9c5ba9847ccf4e15dee3e18d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88027df7433267925e91db2d368b744cee8a9e75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518583"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262737"
 ---
 # <a name="dialog-box-components-in-the-framework"></a>Komponenty dialogového okna v rozhraní .NET Framework
 
@@ -27,8 +27,7 @@ V rámci MFC dialogového okna má dvě součásti:
 
    Dialogové okno je okno a připojí do okna Windows, když je viditelné. Při vytvoření dialogového okna, prostředku šablony dialogového okna slouží jako šablony pro vytváření podřízených ovládacích prvků okno pro dialogové okno.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Dialogová okna](../mfc/dialog-boxes.md)<br/>
 [Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
-

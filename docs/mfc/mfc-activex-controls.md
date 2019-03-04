@@ -15,12 +15,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
-ms.openlocfilehash: 10ad0645e873a1a745168be9b839bbf97a1c05a6
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: a33273c46562e8beba12910702d9ddc1a092575d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174865"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262607"
 ---
 # <a name="mfc-activex-controls"></a>MFC – ovládací prvky ActiveX
 
@@ -42,7 +42,7 @@ Ovládací prvek ActiveX je implementován jako server uvnitř procesu (obvykle 
 ![Mezi kontejnerem ovládacího prvku ActiveX a ovládací prvek](../mfc/media/vc37221.gif "kontejneru ovládacího prvku ActiveX souhra grafů a ovládací prvek") <br/>
 Interakce mezi kontejnerem ovládacího prvku ActiveX a ovládacím prvkem ActiveX v okně
 
-Některé aktuální informace o optimalizaci ovládacích prvků ActiveX naleznete v tématu [knihovny MFC – ovládací prvky ActiveX: optimalizace](../mfc/mfc-activex-controls-optimization.md).
+Některé aktuální informace o optimalizaci ovládacích prvků ActiveX naleznete v tématu [knihovny MFC – ovládací prvky ActiveX: Optimalizace](../mfc/mfc-activex-controls-optimization.md).
 
 Chcete-li vytvořit ovládací prvek ActiveX knihovny MFC, naleznete v tématu [vytvoření projektu ovládacího prvku ActiveX](../mfc/reference/mfc-activex-control-wizard.md).
 
@@ -62,9 +62,9 @@ Ovládací prvek ActiveX používá několik programových prvků, kterými efek
 
 Každý vyvinutý objekt ovládacího prvku ActiveX dědí výkonnou sadu funkcí ze své základní třídy knihovny MFC, třídy `COleControl`. Mezi tyto funkce patří aktivace na místě a automatizační logika. Třída `COleControl` může objektu ovládacího prvku poskytnout stejné funkce jako objekt okna MFC a navíc schopnost vyvolat události. `COleControl` Můžete také zadat [ovládací prvky bez oken](../mfc/providing-windowless-activation.md), které spoléhají na své kontejnery pro pomoc s funkcí okno nabízí (například zachycení myši, fokus klávesnice, posouvání), ale nabízí mnohem rychlejší zobrazení.
 
-Jelikož třída ovládacího prvku je odvozena z třídy `COleControl`, dědí schopnost posílat (tzv. „vyvolat“) kontejneru ovládacího prvku zprávy (tzv. události) v případě, že jsou splněny určité podmínky. Tyto události se používají pro oznámení kontejneru ovládacího prvku, že se v ovládacím prvku stalo něco důležitého. Přidáním parametrů k události lze kontejneru ovládacího prvku zaslat dodatečné informace o události. Další informace o události ovládacích prvků ActiveX naleznete v článku [knihovny MFC – ovládací prvky ActiveX: události](../mfc/mfc-activex-controls-events.md).
+Jelikož třída ovládacího prvku je odvozena z třídy `COleControl`, dědí schopnost posílat (tzv. „vyvolat“) kontejneru ovládacího prvku zprávy (tzv. události) v případě, že jsou splněny určité podmínky. Tyto události se používají pro oznámení kontejneru ovládacího prvku, že se v ovládacím prvku stalo něco důležitého. Přidáním parametrů k události lze kontejneru ovládacího prvku zaslat dodatečné informace o události. Další informace o události ovládacích prvků ActiveX naleznete v článku [knihovny MFC – ovládací prvky ActiveX: Události](../mfc/mfc-activex-controls-events.md).
 
-Posledním prvkem je mapa odeslání, která se používá k vystavení sady funkcí (zvaných metody) a atributů (zvaných vlastnosti) uživateli ovládacího prvku. Vlastnosti umožňují kontejneru ovládacího prvku nebo uživateli manipulovat s prvkem různými způsoby. Uživatel může změnit vzhled ovládacího prvku, změnit určité jeho hodnoty nebo vznést na prvek požadavky, například na přístup k určitým datům, které ovládací prvek udržuje. Toto rozhraní je určeno vývojářem ovládacího prvku a je definován pomocí **zobrazení tříd**. Další informace o vlastnosti a metody ovládacího prvku ActiveX, najdete v článcích [knihovny MFC – ovládací prvky ActiveX: metody](../mfc/mfc-activex-controls-methods.md) a [vlastnosti](../mfc/mfc-activex-controls-properties.md).
+Posledním prvkem je mapa odeslání, která se používá k vystavení sady funkcí (zvaných metody) a atributů (zvaných vlastnosti) uživateli ovládacího prvku. Vlastnosti umožňují kontejneru ovládacího prvku nebo uživateli manipulovat s prvkem různými způsoby. Uživatel může změnit vzhled ovládacího prvku, změnit určité jeho hodnoty nebo vznést na prvek požadavky, například na přístup k určitým datům, které ovládací prvek udržuje. Toto rozhraní je určeno vývojářem ovládacího prvku a je definován pomocí **zobrazení tříd**. Další informace o vlastnosti a metody ovládacího prvku ActiveX, najdete v článcích [knihovny MFC – ovládací prvky ActiveX: Metody](../mfc/mfc-activex-controls-methods.md) a [vlastnosti](../mfc/mfc-activex-controls-properties.md).
 
 ##  <a name="_core_interaction_between_controls_with_windows_and_activex_control_containers"></a> Interakce mezi ovládacími prvky s Windows a kontejnery ovládacích prvků ActiveX
 
@@ -92,7 +92,7 @@ Zpracování zpráv systému Windows v ovládacím prvku ActiveX s oknem (je-li 
 
 Schopnost serializovat data, někdy označovaná také jako trvalost, umožňuje ovládacímu prvku zapisovat hodnoty svých vlastností do trvalého úložiště. Ovládací prvky lze znovu vytvořit přečtením stavu objektu z úložiště.
 
-Ovládací prvek není odpovědný za získání přístupu k paměťovému médiu. Namísto toho je kontejner ovládacího prvku odpovědný za poskytnutí paměťových médií ovládacímu prvku ve vhodných chvílích. Další informace o serializaci naleznete v článku [knihovny MFC – ovládací prvky ActiveX: serializace](../mfc/mfc-activex-controls-serializing.md). Informace o optimalizaci serializace naleznete v tématu [optimalizace trvalosti a inicializace](../mfc/optimizing-persistence-and-initialization.md) v ovládacích prvcích ActiveX: optimalizace.
+Ovládací prvek není odpovědný za získání přístupu k paměťovému médiu. Namísto toho je kontejner ovládacího prvku odpovědný za poskytnutí paměťových médií ovládacímu prvku ve vhodných chvílích. Další informace o serializaci naleznete v článku [knihovny MFC – ovládací prvky ActiveX: Serializace](../mfc/mfc-activex-controls-serializing.md). Informace o optimalizaci serializace naleznete v tématu [optimalizace trvalosti a inicializace](../mfc/optimizing-persistence-and-initialization.md) v ovládacích prvcích ActiveX: Optimalizace.
 
 ##  <a name="_core_installing_activex_control_classes_and_tools"></a> Instalace nástroje a třídy ovládacích prvků ActiveX
 
@@ -116,8 +116,8 @@ Ve výchozím nastavení třídy ovládacích prvků ActiveX a nástroje jsou na
 
    Obsahuje knihovny potřebné k vývoji ovládacích prvků ActiveX pomocí knihovny MFC
 
-Obsahuje také ukázky ovládacích prvků ActiveX knihovny MFC. Další informace o těchto ukázkách najdete v tématu [ukázky ovládacích prvků: ovládací prvky ActiveX](../visual-cpp-samples.md)
+Obsahuje také ukázky ovládacích prvků ActiveX knihovny MFC. Další informace o těchto ukázkách najdete v tématu [ukázky ovládacích prvků: Ovládací prvky ActiveX založené na knihovně MFC](../visual-cpp-samples.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Prvky uživatelského rozhraní](../mfc/user-interface-elements-mfc.md)

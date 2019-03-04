@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMFCBaseToolBar [MFC], GetMinSize
 - CMFCBaseToolBar [MFC], OnAfterChangeParent
 ms.assetid: 5d79206d-55e4-46f8-b1b8-042e34d7f9da
-ms.openlocfilehash: 84756eb177fcec1981f3f2ed018d57eb27df9823
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a6ccdaf3d78b9973505dd4e90ca76f671fce889
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523696"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265376"
 ---
 # <a name="cmfcbasetoolbar-class"></a>Cmfcbasetoolbar – třída
 
@@ -59,11 +59,11 @@ class CMFCBaseToolBar : public CPane
 
 [CPane](../../mfc/reference/cpane-class.md)
 
-[Cmfcbasetoolbar –](../../mfc/reference/cmfcbasetoolbar-class.md)
+[CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxbasetoolbar.h
+**Header:** afxbasetoolbar.h
 
 ##  <a name="getdockingmode"></a>  CMFCBaseToolBar::GetDockingMode
 
@@ -103,7 +103,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 *pWndOldParent*<br/>
 [in] Ukazatel na předchozí nadřazené okno.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)

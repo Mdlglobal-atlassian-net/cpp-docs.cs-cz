@@ -10,12 +10,12 @@ helpviewer_keywords:
 - IDispatchImpl class, multiple dual interfaces
 - COM_INTERFACE_ENTRY_IID macro
 ms.assetid: 7fea86e6-247f-4063-be6e-85588a9e3719
-ms.openlocfilehash: c2ec6c89ab6f54dbcd7433a0f7fedcebd7962b6e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ed0e9e8c74e02917e852b8f95ebff1b048afaef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434733"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257355"
 ---
 # <a name="multiple-dual-interfaces"></a>Více duálních rozhraní
 
@@ -37,7 +37,6 @@ ATL neposkytuje žádné podporu pro sloučení více duálních rozhraní do je
 
 Tyto přístupy máte problémy s potenciální kolize názvů, jakož i kód složitosti a udržovatelnosti. Nedoporučuje se, že vytvoříte více duálních rozhraní.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Duální rozhraní a ATL](../atl/dual-interfaces-and-atl.md)
-

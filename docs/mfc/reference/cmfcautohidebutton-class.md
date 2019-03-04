@@ -1,5 +1,5 @@
 ---
-title: Cmfcautohidebutton – třída
+title: CMFCAutoHideButton Class
 ms.date: 10/18/2018
 f1_keywords:
 - CMFCAutoHideButton
@@ -50,14 +50,14 @@ helpviewer_keywords:
 - CMFCAutoHideButton [MFC], ShowButton
 - CMFCAutoHideButton [MFC], UnSetAutoHideMode
 ms.assetid: c80e6b8b-25ca-4d12-9d27-457731028ab0
-ms.openlocfilehash: 454db8578fd061147948538b8d993205181edcdc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15b449b4b9f9074966ac269787b1b3ca6f977f48
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638006"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264583"
 ---
-# <a name="cmfcautohidebutton-class"></a>Cmfcautohidebutton – třída
+# <a name="cmfcautohidebutton-class"></a>CMFCAutoHideButton Class
 
 Tlačítko, které zobrazí nebo skryje odkaz [CDockablePane – třída](../../mfc/reference/cdockablepane-class.md) , který je nakonfigurovaný pro skrytí.
 
@@ -320,7 +320,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 ### <a name="remarks"></a>Poznámky
@@ -340,7 +340,7 @@ virtual void OnDrawBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *rectBounds*<br/>
@@ -365,7 +365,7 @@ virtual void OnFillBackground(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *Rect*<br/>
@@ -469,7 +469,7 @@ Vrátí hodnotu TRUE, pokud automaticky skrýt tlačítko bude zvýrazněný. v 
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

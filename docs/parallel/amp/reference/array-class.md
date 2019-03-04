@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-ms.openlocfilehash: 93ef654bb71a342a6215ce5cd60786f36cadedf7
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 16d18d23c370a8a603ab6150fcee18455ae47c48
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657549"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259019"
 ---
 # <a name="array-class"></a>array – třída
 
@@ -76,7 +76,7 @@ Typ elementu data.
 |Název|Popis|
 |----------|-----------------|
 |[operátor std::vector&lt;value_type&gt;](#operator_vec)|Používá `copy(*this, vector)` implicitně převést pole std::[vektoru](../../../standard-library/vector-class.md) objektu.|
-|[Operator()](#operator_call)|Vrátí hodnotu prvku určeného parametry.|
+|[operator()](#operator_call)|Vrátí hodnotu prvku určeného parametry.|
 |[– Operátor\[\]](#operator_at)|Vrátí prvek, který je v zadaném indexu.|
 |[operátor =](#operator_eq)|Zkopíruje obsah zadaného `array` do tohoto objektu.|
 
@@ -509,7 +509,7 @@ Concurrency::accelerator_view get_accelerator_view() const;
 
 `accelerator_view` Objekt, který představuje umístění ve kterém `array` objektu je přiřazen.
 
-##  <a name="get_associated_accelerator_view"></a> get_associated_accelerator_view –
+##  <a name="get_associated_accelerator_view"></a> get_associated_accelerator_view
 
 Získá druhý [accelerator_view](accelerator-view-class.md) objekt, který je předán jako parametr při zavolání pracovního konstruktoru pro vytvoření instance `array` objektu.
 
@@ -663,7 +663,7 @@ Udržuje řád objektu `array`.
 static const int rank = _Rank;
 ```
 
-## <a name="reinterpret_as"></a> reinterpret_as –
+## <a name="reinterpret_as"></a> reinterpret_as
 
 Opětovně interpretuje objekt array skrze jednorozměrný prvek array_view, který volitelně může mít typ jinou hodnotu než zdrojového pole.
 
@@ -835,6 +835,6 @@ Datový typ prvků v původním `array` objektu a ve vráceném `array_view` obj
 
 [Array_view](array-view-class.md) , který je vytvořen.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

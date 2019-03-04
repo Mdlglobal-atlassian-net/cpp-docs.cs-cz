@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CAnimationSize [MFC], m_cxValue
 - CAnimationSize [MFC], m_cyValue
 ms.assetid: ea06d1b5-502c-44a3-82ca-8bd6ba6a9364
-ms.openlocfilehash: ad7200ca53aa99104270209ca253b93d2393d8a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f52016afe39da900dca4847d29beccb97d829b60
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448643"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258252"
 ---
 # <a name="canimationsize-class"></a>Canimationsize – třída
 
@@ -90,7 +90,7 @@ Canimationsize – třída zapouzdří dva objekty canimationvariable – a mů�
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Canimationbaseobject –](../../mfc/reference/canimationbaseobject-class.md)
+[CAnimationBaseObject](../../mfc/reference/canimationbaseobject-class.md)
 
 `CAnimationSize`
 
@@ -164,7 +164,7 @@ virtual void GetAnimationVariableList(
 
 ### <a name="parameters"></a>Parametry
 
-*obrázků*<br/>
+*lst*<br/>
 Pokud funkce vrátí, obsahuje odkazy na dva objekty canimationvariable – reprezentující šířku a výšku.
 
 ##  <a name="getcx"></a>  CAnimationSize::GetCX
@@ -302,6 +302,6 @@ Určuje novou velikost výchozí.
 
 Tuto funkci použijte k nastavení výchozí hodnoty na objekt animace. Tyto metody přiřadí výchozí hodnoty pro šířku a výšku animace velikosti. Také obnoví základní objekty modelu COM, pokud byl vytvořen. Pokud odebíráte tento objekt animace na události (ValueChanged nebo IntegerValueChanged), musíte znovu zapnout. Tyto události.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCRibbonCustomizeDialog [MFC], CMFCRibbonCustomizeDialog
 ms.assetid: ce67de7f-5eaa-4c75-9b94-f290f36df073
-ms.openlocfilehash: 2931bdc06f98f7031692a0e00fa9cbfb4136a657
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d73fd05a775ac26f5d289a5233341102f40e9af3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542253"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259994"
 ---
 # <a name="cmfcribboncustomizedialog-class"></a>Cmfcribboncustomizedialog – třída
 
@@ -58,7 +58,7 @@ Protože tato třída je odvozena z [CMFCPropertySheet – třída](../../mfc/re
 
 [CPropertySheet](../../mfc/reference/cpropertysheet-class.md)
 
-[CMFCPropertySheet –](../../mfc/reference/cmfcpropertysheet-class.md)
+[CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)
 
 [Cmfcribboncustomizedialog –](../../mfc/reference/cmfcribboncustomizedialog-class.md)
 
@@ -94,7 +94,7 @@ Následující příklad ukazuje, jak vytvořit `CMFCRibbonCustomizeDialog` obje
 
 Vytvoří instanci konstruktoru [cmfcribboncustomizepropertypage – třída](../../mfc/reference/cmfcribboncustomizepropertypage-class.md) objektu a přidá jej do kolekce stránky vlastností.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)

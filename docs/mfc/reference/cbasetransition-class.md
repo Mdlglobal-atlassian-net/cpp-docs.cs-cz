@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-ms.openlocfilehash: b4c15be574700730e847bce06aaa4a6f82aed4b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f9bc3708974511506741a35c11676df2b0be592
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539123"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258369"
 ---
 # <a name="cbasetransition-class"></a>Cbasetransition – třída
 
@@ -74,7 +74,7 @@ class CBaseTransition : public CObject;
 |Název|Popis|
 |----------|-----------------|
 |[CBaseTransition::CBaseTransition](#cbasetransition)|Vytvoří základní transtion objekt.|
-|[Cbasetransition –:: ~ cbasetransition –](#cbasetransition__~cbasetransition)|Destruktor. Volá se při přechodu objekt je zničen.|
+|[CBaseTransition::~CBaseTransition](#cbasetransition__~cbasetransition)|Destruktor. Volá se při přechodu objekt je zničen.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -118,7 +118,7 @@ Tato třída zapouzdří IUIAnimationTransition rozhraní a slouží jako zákla
 
 **Záhlaví:** afxanimationcontroller.h
 
-##  <a name="_dtorcbasetransition"></a>  Cbasetransition –:: ~ cbasetransition –
+##  <a name="_dtorcbasetransition"></a>  CBaseTransition::~CBaseTransition
 
 Destruktor. Volá se při přechodu objekt je zničen.
 
@@ -385,7 +385,7 @@ void SetKeyframes(
 *pStart*<br/>
 Klíčový snímek, který určuje začátek přechodu.
 
-*Čekání*<br/>
+*pEnd*<br/>
 Klíčový snímek, který určuje konci přechodu.
 
 ### <a name="remarks"></a>Poznámky
@@ -421,6 +421,6 @@ enum TRANSITION_TYPE;
 
 Typ přechodu je nastavena v konstruktoru konkrétní přechod. Csinusoidaltransitionfromrange – například nastaví jeho typ SINUSOIDAL_FROM_RANGE.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

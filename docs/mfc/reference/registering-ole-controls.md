@@ -7,12 +7,12 @@ helpviewer_keywords:
 - registering OLE controls
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
-ms.openlocfilehash: 08ed3771edbc0ebebfe98643a2651ff10c85d41e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c480696bdec3591f0509cbad04051a2b3af4070
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544791"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262152"
 ---
 # <a name="registering-ole-controls"></a>Registrace ovládacích prvků OLE
 
@@ -24,15 +24,15 @@ Tyto funkce umožňují přidávat a odebírat ovládacího prvku třídy strán
 
 |||
 |-|-|
-|[Afxoleregistercontrolclass –](#afxoleregistercontrolclass)|Přidá třídu ovládacího prvku do registrační databázi.|
-|[Afxoleregisterpropertypageclass –](#afxoleregisterpropertypageclass)|Stránka vlastností ovládacího prvku přidá do registrační databázi.|
-|[Afxoleregistertypelib –](#afxoleregistertypelib)|Přidá knihovnu typů ovládacího prvku do registrační databázi.|
-|[Afxoleunregisterclass –](#afxoleunregisterclass)|Odebere z registrační databáze třídy ovládacího prvku nebo třídy stránky vlastností.|
-|[Afxoleunregistertypelib –](#afxoleunregistertypelib)|Odebere knihovny typů ovládacího prvku z registrační databázi.|
+|[AfxOleRegisterControlClass](#afxoleregistercontrolclass)|Přidá třídu ovládacího prvku do registrační databázi.|
+|[AfxOleRegisterPropertyPageClass](#afxoleregisterpropertypageclass)|Stránka vlastností ovládacího prvku přidá do registrační databázi.|
+|[AfxOleRegisterTypeLib](#afxoleregistertypelib)|Přidá knihovnu typů ovládacího prvku do registrační databázi.|
+|[AfxOleUnregisterClass](#afxoleunregisterclass)|Odebere z registrační databáze třídy ovládacího prvku nebo třídy stránky vlastností.|
+|[AfxOleUnregisterTypeLib](#afxoleunregistertypelib)|Odebere knihovny typů ovládacího prvku z registrační databázi.|
 
 `AfxOleRegisterTypeLib` je obvykle volána v implementaci ovládacího prvku DLL `DllRegisterServer`. Obdobně `AfxOleUnregisterTypeLib` je volán `DllUnregisterServer`. `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass`, a `AfxOleUnregisterClass` jsou obvykle volány `UpdateRegistry` členskou funkci třídy ovládacího prvku objekt pro vytváření nebo vlastnosti stránky.
 
-##  <a name="afxoleregistercontrolclass"></a>  Afxoleregistercontrolclass –
+##  <a name="afxoleregistercontrolclass"></a>  AfxOleRegisterControlClass
 
 Zaregistruje třídu ovládacího prvku se registrační databázi Windows.
 
@@ -55,7 +55,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 *hInstance*<br/>
 Popisovač instance modulu přidružené k třídě ovládacího prvku.
 
-*identifikátor CLSID*<br/>
+*clsid*<br/>
 Třída jedinečné ID ovládacího prvku.
 
 *pszProgID*<br/>
@@ -125,10 +125,10 @@ Obsahuje jeden nebo více z následujících příznaků stav (pro popis přízn
 *tlid*<br/>
 Jedinečné ID třídy ovládacího prvku.
 
-*wvermajor –*<br/>
+*wVerMajor*<br/>
 Číslo hlavní verze třídy ovládacího prvku.
 
-*wverminor –*<br/>
+*wVerMinor*<br/>
 Číslo podverze třídy ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -151,9 +151,9 @@ Ovládací prvek se zobrazí v dialogovém okně Vložit objekt povolené kontej
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxctl.h
+  **Header** afxctl.h
 
-##  <a name="afxoleregisterpropertypageclass"></a>  Afxoleregisterpropertypageclass –
+##  <a name="afxoleregisterpropertypageclass"></a>  AfxOleRegisterPropertyPageClass
 
 Zaregistruje Windows registrační databáze třídy stránky vlastností.
 
@@ -170,7 +170,7 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
 *hInstance*<br/>
 Popisovač instance modulu přidružené třídy stránky vlastností.
 
-*identifikátor CLSID*<br/>
+*clsid*<br/>
 ID jedinečné třídy stránky vlastností.
 
 *idTypeName*<br/>
@@ -194,9 +194,9 @@ To umožňuje používat kontejnery, které jsou OLE-control na stránce vlastno
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxctl.h
+  **Header** afxctl.h
 
-##  <a name="afxoleregistertypelib"></a>  Afxoleregistertypelib –
+##  <a name="afxoleregistertypelib"></a>  AfxOleRegisterTypeLib
 
 Zaregistruje knihovnu typů s registrační databáze Windows a umožňuje používat další kontejnery, které jsou OLE-control knihovnu typů.
 
@@ -238,9 +238,9 @@ Tato funkce aktualizuje registr název knihovny typů a jeho umístění v syst�
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdisp.h
+  **Header** afxdisp.h
 
-##  <a name="afxoleunregisterclass"></a>  Afxoleunregisterclass –
+##  <a name="afxoleunregisterclass"></a>  AfxOleUnregisterClass
 
 Odebere položku Ovládací prvek nebo vlastnost třídy stránky z registrační databázi Windows.
 
@@ -250,7 +250,7 @@ BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor clsID*<br/>
+*clsID*<br/>
 ID jedinečné třídy stránky, ovládací prvek nebo vlastnost.
 
 *pszProgID*<br/>
@@ -262,9 +262,9 @@ Nenulové, pokud ovládací prvek nebo vlastnost třídy stránky byl úspěšn�
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxctl.h
+  **Header** afxctl.h
 
-##  <a name="afxoleunregistertypelib"></a>  Afxoleunregistertypelib –
+##  <a name="afxoleunregistertypelib"></a>  AfxOleUnregisterTypeLib
 
 Voláním této funkce odeberte záznam knihovny typů z registrační databázi Windows.
 
@@ -287,8 +287,8 @@ Nenulové, pokud byl úspěšně odregistrován; knihovny typů jinak 0.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdisp.h
+  **Header** afxdisp.h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)

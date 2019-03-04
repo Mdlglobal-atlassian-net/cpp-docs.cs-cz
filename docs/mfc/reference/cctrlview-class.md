@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CCtrlView [MFC], m_dwDefaultStyle
 - CCtrlView [MFC], m_strClass
 ms.assetid: ff488596-1e71-451f-8fec-b0831a7b44e0
-ms.openlocfilehash: bc202afa357dcb9d75a0dd73a3128b7b3f0cc14e
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 5cb68ab46e2cac8b2f1dcc13989077e32480a2c7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693396"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259565"
 ---
 # <a name="cctrlview-class"></a>Cctrlview – třída
 
@@ -127,7 +127,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel na kontext zařízení, ve kterém dochází výkresu.
 
 ### <a name="remarks"></a>Poznámky
@@ -161,7 +161,7 @@ Každá třída odvozena z `CCtrlView` přidá vlastní funkce k jeho přepsán�
 
 Další informace o změně styly oken, najdete v článku [změna stylů okna vytvořeného rozhraním MFC](../../mfc/changing-the-styles-of-a-window-created-by-mfc.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CView – třída](../../mfc/reference/cview-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

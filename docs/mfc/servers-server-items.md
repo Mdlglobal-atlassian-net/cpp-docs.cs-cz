@@ -8,12 +8,12 @@ helpviewer_keywords:
 - server items
 - OLE server applications [MFC], server items
 ms.assetid: 28ba81a1-726a-4728-a52d-68bc7efd5a3c
-ms.openlocfilehash: ea04a3eefff0f127873ffbf67ea39ade3a6b9b85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0adaea1c4f1dd0525ead82dfffdf267326ac865c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453687"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262282"
 ---
 # <a name="servers-server-items"></a>Servery: Serverové položky
 
@@ -35,7 +35,7 @@ Pokud používáte Průvodce aplikací pro vytvoření "počáteční" kódu pro
 
    Rámec volá `OnDraw` k vykreslení položky OLE do metasouboru. Aplikace typu kontejner používá tento metasoubor k vykreslení položky. Třídy zobrazení vaší aplikace má také `OnDraw` členskou funkci, která se použije k vykreslení položky, když je aktivní serverová aplikace.
 
-1. Implementace přepsání `OnGetEmbeddedItem` pro třídu dokument na serveru. Další informace najdete v článku [servery: implementace dokumentů serveru](../mfc/servers-implementing-server-documents.md) ukázka MFC OLE a [HIERSVR](../visual-cpp-samples.md).
+1. Implementace přepsání `OnGetEmbeddedItem` pro třídu dokument na serveru. Další informace najdete v článku [serverů: Implementace dokumentů serveru](../mfc/servers-implementing-server-documents.md) ukázka MFC OLE a [HIERSVR](../visual-cpp-samples.md).
 
 1. Implementace třídy položka serveru `OnGetExtent` členskou funkci. Rozhraní volá tuto funkci, aby se načetla velikost položky. Výchozí implementace nemá žádný účinek.
 
@@ -49,7 +49,6 @@ Zobrazení a položky mají `OnDraw` členské funkce, protože nakreslí v růz
 
 Další informace najdete v tématu [CView::OnDraw](../mfc/reference/cview-class.md#ondraw), [odvozenou třídu COleServerItem](../mfc/reference/coleserveritem-class.md), [COleServerItem::OnDraw](../mfc/reference/coleserveritem-class.md#ondraw), a [COleServerDoc::OnGetEmbeddedItem](../mfc/reference/coleserverdoc-class.md#ongetembeddeditem)v *tříd – referenční dokumentace ke knihovně*.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Servery](../mfc/servers.md)
-

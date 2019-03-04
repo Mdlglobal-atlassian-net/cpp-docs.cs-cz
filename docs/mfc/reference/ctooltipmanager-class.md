@@ -1,5 +1,5 @@
 ---
-title: Ctooltipmanager – třída
+title: CTooltipManager Class
 ms.date: 11/04/2016
 f1_keywords:
 - CTooltipManager
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-ms.openlocfilehash: 79589cb631635f4ed8b85f4399a86e8fadf61dda
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ca0c657872bb2a3c56c9406a88f8c674cb46938
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431651"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260631"
 ---
-# <a name="ctooltipmanager-class"></a>Ctooltipmanager – třída
+# <a name="ctooltipmanager-class"></a>CTooltipManager Class
 
 Udržuje běhové informace o popiscích. `CTooltipManager` Třída je instance jednou za každou aplikaci.
 
@@ -53,7 +53,7 @@ Použití [cmfctooltipctrl – třída](../../mfc/reference/cmfctooltipctrl-clas
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Ctooltipmanager –](../../mfc/reference/ctooltipmanager-class.md)
+[CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -78,7 +78,7 @@ static BOOL CreateToolTip(
 *pWndParent*<br/>
 [in] Nadřazený popisek.
 
-*nTyp*<br/>
+*nType*<br/>
 [in] Typ ovládacího prvku tooltip.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -95,16 +95,16 @@ Neplatný popis typy jsou uvedeny v následující tabulce:
 
 |Popis typu|Kategorie ovládacího prvku|Vzorové typy|
 |------------------|----------------------|-------------------|
-|AFX_TOOLTIP_TYPE_BUTTON|Tlačítko.|Cmfcbutton –|
-|AFX_TOOLTIP_TYPE_CAPTIONBAR|Záhlaví.|CMFCCaptionBar –|
+|AFX_TOOLTIP_TYPE_BUTTON|Tlačítko.|CMFCButton|
+|AFX_TOOLTIP_TYPE_CAPTIONBAR|Záhlaví.|CMFCCaptionBar|
 |AFX_TOOLTIP_TYPE_DEFAULT|Libovolný ovládací prvek, který není vhodná pro jinou kategorii.|Žádné|
-|AFX_TOOLTIP_TYPE_DOCKBAR|Ukotvit panel.|CDockablePane –|
+|AFX_TOOLTIP_TYPE_DOCKBAR|Ukotvit panel.|CDockablePane|
 |AFX_TOOLTIP_TYPE_EDIT|Textové pole.|Žádné|
-|AFX_TOOLTIP_TYPE_MINIFRAME|Miniframe.|Cpaneframewnd –|
+|AFX_TOOLTIP_TYPE_MINIFRAME|Miniframe.|CPaneFrameWnd|
 |AFX_TOOLTIP_TYPE_PLANNER|Plánovač.|Žádné|
-|AFX_TOOLTIP_TYPE_RIBBON|Panel pásu karet.|CMFCRibbonBar cmfcribbonpanelmenubar –|
-|AFX_TOOLTIP_TYPE_TAB|Ovládací prvek karty.|Cmfctabctrl –|
-|AFX_TOOLTIP_TYPE_TOOLBAR|Panel nástrojů.|Cmfctoolbar – cmfcpopupmenubar –|
+|AFX_TOOLTIP_TYPE_RIBBON|Panel pásu karet.|CMFCRibbonBar, CMFCRibbonPanelMenuBar|
+|AFX_TOOLTIP_TYPE_TAB|Ovládací prvek karty.|CMFCTabCtrl|
+|AFX_TOOLTIP_TYPE_TOOLBAR|Panel nástrojů.|CMFCToolBar, CMFCPopupMenuBar|
 |AFX_TOOLTIP_TYPE_TOOLBOX|Panelu nástrojů.|Žádné|
 
 ##  <a name="deletetooltip"></a>  CTooltipManager::DeleteToolTip
@@ -181,7 +181,7 @@ static void SetTooltipText(
 *pToolTip*<br/>
 [out v] Ukazatel na ovládací prvek tooltip, pro kterou chcete nastavit text a popis.
 
-*nTyp*<br/>
+*nType*<br/>
 [in] Určuje typ ovládacího prvku, ke kterému je přidružené tento popisek.
 
 *strText*<br/>
@@ -204,7 +204,7 @@ void UpdateTooltips();
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [MFC], tool tips
 - handler functions [MFC], tool tips
 ms.assetid: cad5ef0f-02e3-4151-ad0d-3d42e6932b0e
-ms.openlocfilehash: 2545bda725428835c256ad81edc9070bd004d474
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d44f2c503b689360f040e6804d319c331d5c0ca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620295"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260657"
 ---
 # <a name="tool-tips-in-windows-not-derived-from-cframewnd"></a>Popisy tlačítek v oknech neodvozených ze třídy CFrameWnd
 
@@ -34,7 +34,6 @@ Nicméně, tato výchozí obslužná rutina není voláno, když **TTN_NEEDTEXT*
 
 Popisy tlačítek výchozí k dispozici pro windows pomocí [CWnd::EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips) nemají text související s nimi. Načíst text tlačítka, který se zobrazí, **TTN_NEEDTEXT** oznámení se posílá ovládacím prvkem popis tlačítka nástroj nadřazenému oknu, těsně před plánovaným se zobrazí okno tipů nástrojů. Pokud neexistuje žádná obslužná rutina pro přiřazení nějakou hodnotu pro tuto zprávu *pszText* členem **TOOLTIPTEXT** struktury, nebude žádný text pro popis tlačítka zobrazen.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Popisy tlačítek](../mfc/tool-tips.md)
-

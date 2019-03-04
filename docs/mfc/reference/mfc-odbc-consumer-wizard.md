@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: 8b2d554cb6b4eaeb7ee1ddd884aefb3ab6da0f2e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 75d62eb5ce3d24322d7af5030fb8d723ffa8fedb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523413"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259929"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>Průvodce příjemcem knihovny MFC ODBC
 
@@ -48,13 +48,13 @@ Tento průvodce nastavuje třídu sady záznamů rozhraní ODBC a datové vazby 
 
      Další informace o zdroji dat rozhraní ODBC, naleznete v tématu [zdroje dat](/previous-versions/windows/desktop/ms711688) v sadě SDK rozhraní ODBC.
 
-  Klikněte na tlačítko **OK** na dokončení. **Vyberte databázový objekt** zobrazí se dialogové okno. V tomto dialogovém okně vyberte tabulku nebo zobrazení, že uživatel použije. Mějte na paměti, podržte klávesu CTRL a kliknutím na položky můžete vybrat víc zobrazení a tabulky. Klikněte na tlačítko **OK** na dokončení.
+  Kliknutím na **OK** vytváření dokončete. **Vyberte databázový objekt** zobrazí se dialogové okno. V tomto dialogovém okně vyberte tabulku nebo zobrazení, že uživatel použije. Mějte na paměti, podržte klávesu CTRL a kliknutím na položky můžete vybrat víc zobrazení a tabulky. Kliknutím na **OK** vytváření dokončete.
 
 - **Třída**
 
       The name of the consumer class, based by default on the name of the file or machine data source that you selected.
 
-- **soubor .h**
+- **.h file**
 
    Název souboru hlaviček třídy příjemce ve výchozím nastavení na základě názvu souboru nebo počítače zdroje dat, který jste vybrali.
 
@@ -66,7 +66,7 @@ Tento průvodce nastavuje třídu sady záznamů rozhraní ODBC a datové vazby 
 
    Určuje, zda je záznamů dynamická sada (výchozí) nebo snímku.
 
-   - **Dynamická sada**: Určuje, že je dynamická sada záznamů. Dynamická sada je výsledek dotazu, který poskytuje indexovaném pohledu na data dotazované databázi. Dynamická sada pouze celočíselný index tak, aby původní data ukládá do mezipaměti, a proto nabízí výkon získat snímek. Index odkazuje přímo na každý záznam najít jako výsledek dotazu a označuje, pokud záznam se odebere. Máte také přístup k aktualizované informace v záznamech poslal dotaz. Toto nastavení je výchozí.
+   - **Dynaset**: Určuje, že je dynamická sada záznamů. Dynamická sada je výsledek dotazu, který poskytuje indexovaném pohledu na data dotazované databázi. Dynamická sada pouze celočíselný index tak, aby původní data ukládá do mezipaměti, a proto nabízí výkon získat snímek. Index odkazuje přímo na každý záznam najít jako výsledek dotazu a označuje, pokud záznam se odebere. Máte také přístup k aktualizované informace v záznamech poslal dotaz. Toto nastavení je výchozí.
 
    - **Snímek**: Určuje, že je sada záznamů snímku. Snímek je výsledek dotazu a je tak představu o databázi v jednom bodě v čase. Všechny záznamy nalezen jako výsledek dotazu jsou uložené v mezipaměti, takže se nezobrazí žádné změny původních záznamů.
 
@@ -74,8 +74,7 @@ Tento průvodce nastavuje třídu sady záznamů rozhraní ODBC a datové vazby 
 
    Určuje, zda jsou všechny sloupce v tabulce vybrané vázány. Pokud vyberete toto pole (výchozí), jsou všechny sloupce vázány; Pokud toto políčko nezaškrtnete, nejsou vázány žádné sloupce a je třeba svázat ručně ve třídě sady záznamů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Knihovny MFC rozhraní ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)
-

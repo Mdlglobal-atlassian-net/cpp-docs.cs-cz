@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CInvalidArgException [MFC], CInvalidArgException
 ms.assetid: e43d7c67-1157-47f8-817a-804083e8186e
-ms.openlocfilehash: d532698b19a6652feb6e42fdb429d89d49e6ac7b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2df9b482fe95ad0a13a85a51037a4cbbc28d057
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445419"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260189"
 ---
 # <a name="cinvalidargexception-class"></a>Cinvalidargexception – třída
 
@@ -45,7 +45,7 @@ Další informace o zpracování výjimek, najdete v článku [cexception – t�
 
 [Cexception –](../../mfc/reference/cexception-class.md)
 
-[Csimpleexception –](../../mfc/reference/csimpleexception-class.md)
+[CSimpleException](../../mfc/reference/csimpleexception-class.md)
 
 `CInvalidArgException`
 
@@ -65,7 +65,7 @@ CInvalidArgException();
 
 Nepoužívejte tento konstruktor přímo. volání funkce globální **AfxThrowInvalidArgException**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CSimpleException – třída](../../mfc/reference/csimpleexception-class.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: b4844ed2246b5e700d9dc1895c3292cdde4efe8b
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: f44b7df7f1e4051f3cb07445952620861965f1d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178145"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263413"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl – třída
 
@@ -44,7 +44,7 @@ template <class T,
 *T*<br/>
 Vaše třída odvozena od `CDialogImpl`.
 
-*Tčíslice*<br/>
+*TBase*<br/>
 Základní třídy novou třídu. Výchozí základní třída je [cwindow –](../../atl/reference/cwindow-class.md).
 
 ## <a name="members"></a>Členové
@@ -54,7 +54,7 @@ Základní třídy novou třídu. Výchozí základní třída je [cwindow –](
 |||
 |-|-|
 |[Vytvoření](#create)|Vytvoří nemodální dialogové okno.|
-|[Destroywindow –](#destroywindow)|Zničí nemodální dialogové okno.|
+|[DestroyWindow](#destroywindow)|Zničí nemodální dialogové okno.|
 |[DoModal](#domodal)|Vytvoří modální dialogové okno.|
 |[EndDialog](#enddialog)|Zničí modální dialogové okno.|
 
@@ -262,7 +262,7 @@ BOOL MapDialogRect(LPRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje na `CRect` objektu nebo [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktura, která má obdržet souřadnice klienta, který obklopuje oblast aktualizace aktualizace.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -324,7 +324,7 @@ Proceduru okna.
 
 Po počáteční volání `StartDialogProc`, `DialogProc` není nastaven jako proceduru dialogového okna a další volání tam.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

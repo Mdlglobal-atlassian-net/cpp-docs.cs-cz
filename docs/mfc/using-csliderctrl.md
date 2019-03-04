@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CSliderCtrl class [MFC], using
 - slider controls [MFC], using
 ms.assetid: 242c7bcd-126e-4b9b-8f76-8082ad06fe73
-ms.openlocfilehash: 40e941afc6560447a22017712e24ef861e2ddc17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f133d25ddab76f42b4bf7b133bb988def9f0f01a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428546"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257680"
 ---
 # <a name="using-csliderctrl"></a>Používání atributu CSliderCtrl
 
@@ -32,7 +32,6 @@ Posuvník v ovládacím prvku posuvník posune v krocích, které určíte při 
 
 - [Zprávy s oznámením pro posuvník](../mfc/slider-notification-messages.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ovládací prvky](../mfc/controls-mfc.md)
-

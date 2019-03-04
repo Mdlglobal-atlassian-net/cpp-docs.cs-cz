@@ -7,20 +7,20 @@ helpviewer_keywords:
 - objects [MFC], graphic objects
 - one-stage and two-stage construction of objects [MFC]
 ms.assetid: 5a1c410c-4a4b-4dd9-a2ec-ced831aa7f21
-ms.openlocfilehash: bdfb7879bc926435bdcd72d6776646c449ffef80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 871db7abd2682d557bf2e80e9cb97624f0dc53a6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623311"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263634"
 ---
 # <a name="one-stage-and-two-stage-construction-of-objects"></a>Jednofázová a dvoufázová konstrukce objektů
 
 Máte možnost volby mezi dvěma techniky pro vytváření grafických objektů, jako je například pera a štětce:
 
-- *Jednofázová konstrukce*: konstrukce a inicializovat objekt v jediném kroku, a to vše pomocí konstruktoru.
+- *Jednofázová konstrukce*: Můžete vytvářet a inicializovat objekt v jediném kroku, všechny pomocí konstruktoru.
 
-- *Dvoufázová konstrukce*: konstrukce a inicializovat objekt ve dvou samostatných fází. Konstruktor vytvoří objekt a inicializační funkce inicializuje ji.
+- *Dvoufázová konstrukce*: Můžete vytvářet a inicializovat objekt ve dvou samostatných fází. Konstruktor vytvoří objekt a inicializační funkce inicializuje ji.
 
 Dvoufázová konstrukce je vždy bezpečnější. V konstrukci jednofázová konstruktor může vyvolat výjimku, pokud zadáte nesprávné argumenty nebo selhání přidělení paměti. Tento problém je zabránit dvoufázová konstrukce, i když mají zkontrolovat chyby. V obou případech je zničení objektu stejného procesu.
 
@@ -43,7 +43,6 @@ Následující příklad (BRIEF) ukazuje oba způsoby vytváření objekt pen:
 
 - [Kreslení v zobrazení](../mfc/drawing-in-a-view.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Grafické objekty](../mfc/graphic-objects.md)
-

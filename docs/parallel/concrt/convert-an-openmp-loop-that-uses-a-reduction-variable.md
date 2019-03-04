@@ -5,12 +5,12 @@ helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, reduction variables
 - reduction variables, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 96623f36-5e57-4d3f-8c13-669e6cd535b1
-ms.openlocfilehash: b58f6025c41091b39375c566d2c1d4b4798437b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d75e115bdb1d13c9e8f45ed67d0f3993eac1b387
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633074"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257316"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-a-reduction-variable-to-use-the-concurrency-runtime"></a>Postupy: Převedení smyčky OpenMP využívající redukční proměnnou na využití modulu Concurrency Runtime
 
@@ -41,10 +41,9 @@ Další informace o `combinable` najdete v tématu [paralelní kontejnery a obje
 
 Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `concrt-omp-fibonacci-reduction.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
 
-**concrt modulu cl.exe/EHsc/OpenMP – omp – Fibonacciho reduction.cpp**
+**cl.exe /EHsc /openmp concrt-omp-fibonacci-reduction.cpp**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Migrace z OpenMP do Concurrency Runtime](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [Paralelní kontejnery a objekty](../../parallel/concrt/parallel-containers-and-objects.md)
-

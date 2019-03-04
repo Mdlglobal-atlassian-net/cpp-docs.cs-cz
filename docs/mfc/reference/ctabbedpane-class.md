@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CTabbedPane [MFC], m_bTabsAlwaysTop
 - CTabbedPane [MFC], m_pTabWndRTC
 ms.assetid: f4dc5215-b789-4f2d-8c62-477aceda3578
-ms.openlocfilehash: d345d7a5aef53ac7975564a580f1353157a01376
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af9c65e51f7230b0fc6a59d0eed42eca08d24837
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645715"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263348"
 ---
 # <a name="ctabbedpane-class"></a>Ctabbedpane – třída
 
@@ -155,9 +155,9 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
 
 [CDockablePane](../../mfc/reference/cdockablepane-class.md)
 
-[Cbasetabbedpane –](../../mfc/reference/cbasetabbedpane-class.md)
+[CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md)
 
-[Ctabbedpane –](../../mfc/reference/ctabbedpane-class.md)
+[CTabbedPane](../../mfc/reference/ctabbedpane-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -340,7 +340,7 @@ Tuto metodu použijte k přizpůsobení seznamu barev, které se používají, k
 
 Použití [CTabbedPane::EnableTabAutoColor](#enabletabautocolor) povolit nebo zakázat funkci Automatické barvu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

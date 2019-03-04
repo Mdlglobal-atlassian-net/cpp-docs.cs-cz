@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: 857427c12dd0f763bf88c99a65d5f9cf3eca1270
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a18e235c9f5875a977f740c26b917a3567a678d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429351"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264986"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar – třída
 
@@ -165,7 +165,7 @@ Následující příklad ukazuje, jak použít různé metody v `CMFCCaptionBar`
 
 [CPane](../../mfc/reference/cpane-class.md)
 
-[CMFCCaptionBar –](../../mfc/reference/cmfccaptionbar-class.md)
+[CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -353,7 +353,7 @@ virtual void OnDrawBackground(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení záhlaví.
 
 *Rect*<br/>
@@ -377,7 +377,7 @@ virtual void OnDrawBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Kontext zařízení, která se používá k zobrazení ohraničení.
 
 *Rect*<br/>
@@ -403,7 +403,7 @@ virtual void OnDrawButton(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení, který se používá k zobrazení tlačítka.
 
 *Rect*<br/>
@@ -431,7 +431,7 @@ virtual void OnDrawImage(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení, který se používá k zobrazení obrázku.
 
 *Rect*<br/>
@@ -454,7 +454,7 @@ virtual void OnDrawText(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení, který se používá k zobrazení tlačítka.
 
 *Rect*<br/>
@@ -729,7 +729,7 @@ Textový popisek je zarovnán podle *textAlignment* parametru. Může být jeden
 
 - ALIGN_CENTER
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)

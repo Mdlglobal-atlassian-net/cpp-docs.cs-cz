@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CBaseTabbedPane [MFC], SetAutoHideMode
 - CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
-ms.openlocfilehash: 51344a8cd0e5671f81e608b74363ed06c9200324
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7ffaa7274a8ed12944cdbc5dcbbdcb8fd3fd2b9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640892"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259292"
 ---
 # <a name="cbasetabbedpane-class"></a>Cbasetabbedpane – třída
 
@@ -129,7 +129,7 @@ class CBaseTabbedPane : public CDockablePane
 
 Tato třída je abstraktní třída a nelze vytvořit instanci. Implementuje služby, které jsou společné pro všechny druhy podokně s kartami.
 
-V současné době knihovny obsahuje dvě třídy odvozené podokna s kartami: [ctabbedpane – třída](../../mfc/reference/ctabbedpane-class.md) a [CMFCOutlookBar – třída](../../mfc/reference/cmfcoutlookbar-class.md).
+V současné době knihovny obsahuje dvě třídy odvozené podokna s kartami: [Ctabbedpane – třída](../../mfc/reference/ctabbedpane-class.md) a [CMFCOutlookBar – třída](../../mfc/reference/cmfcoutlookbar-class.md).
 
 A `CBaseTabbedPane` zabalí ukazatel na objekt [cmfcbasetabctrl – třída](../../mfc/reference/cmfcbasetabctrl-class.md) objektu. [Cmfcbasetabctrl – třída](../../mfc/reference/cmfcbasetabctrl-class.md) se pak stane podřízené okno podokna s kartami.
 
@@ -153,7 +153,7 @@ Další informace o tom, jak vytvořit podokně s kartami, naleznete v tématu [
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxBaseTabbedPane.h
+**Header:** afxBaseTabbedPane.h
 
 ##  <a name="addtab"></a>  CBaseTabbedPane::AddTab
 
@@ -476,7 +476,7 @@ virtual void GetPaneList(
 
 ### <a name="parameters"></a>Parametry
 
-*obrázků*<br/>
+*lst*<br/>
 [out] A `CObList` , který je vyplněna podoken, které jsou obsaženy v podokně s kartami.
 
 *pRTCFilter*<br/>
@@ -700,7 +700,7 @@ Automaticky skrýt režim je nastaven pro každý odpojitelných podokno v podok
 
 Voláním této metody lze přepnout podokno s kartami na režim automatického schovávání prostřednictvím kódu programu. V podokně musí být ukotveno, do okna hlavního rámce ( [CDockablePane::GetDefaultPaneDivider](../../mfc/reference/cdockablepane-class.md#getdefaultpanedivider) musí vrátit platný ukazatel [cpanedivider –](../../mfc/reference/cpanedivider-class.md)).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

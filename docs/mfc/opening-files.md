@@ -16,12 +16,12 @@ helpviewer_keywords:
 - opening files [MFC]
 - exception handling [MFC], opening files
 ms.assetid: a991b8ec-b04a-4766-b47e-7485b5dd0b01
-ms.openlocfilehash: a29485b8258503682d59abb51dcfa72e383f0b8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dab7a680d9b33a6e334da99a045b709fe00f215c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577708"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261151"
 ---
 # <a name="opening-files"></a>Otevírání souborů
 
@@ -48,9 +48,8 @@ Následující příklad ukazuje, jak vytvořit nový soubor s oprávněním pro
 > [!NOTE]
 >  Tento příklad vytvoří a otevře soubor. Pokud dojde k problémům, se `Open` volání můžete vrátit `CFileException` objektu v jeho posledního parametru, jak je znázorněno zde. TRACE – makro vytiskne název souboru a kódem, který označuje důvod selhání. Můžete volat `AfxThrowFileException` fungovat, pokud požadujete podrobnější zpráv o chybách.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CFile – třída](../mfc/reference/cfile-class.md)<br/>
 [CFile::Open](../mfc/reference/cfile-class.md#open)<br/>
 [Soubory](../mfc/files-in-mfc.md)
-

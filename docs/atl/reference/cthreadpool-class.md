@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: b1cf1dfc623edbb2b6e71aa6476a2fe0cccbc20b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d363de0d787ecc5015093005b39a379acd82e71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677185"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262698"
 ---
 # <a name="cthreadpool-class"></a>Cthreadpool – třída
 
@@ -53,7 +53,7 @@ Třída poskytující funkce použitá k vytvoření vláken ve fondu.
 |Název|Popis|
 |----------|-----------------|
 |[CThreadPool::CThreadPool](#cthreadpool)|Konstruktor pro fond vláken.|
-|[Cthreadpool –:: ~ cthreadpool –](#dtor)|Destruktor pro fond vláken.|
+|[CThreadPool::~CThreadPool](#dtor)|Destruktor pro fond vláken.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -88,7 +88,7 @@ Příklad *pracovního procesu* třída je [cnonstatelessworker – třída](../
 
 `IUnknown`
 
-[Ithreadpoolconfig –](../../atl/reference/ithreadpoolconfig-interface.md)
+[IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md)
 
 `CThreadPool`
 
@@ -124,7 +124,7 @@ CThreadPool() throw();
 
 Hodnota časového limitu pro ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT inicializuje. Výchozí doba je 36 sekund. V případě potřeby můžete definovat vlastní kladnou celočíselnou hodnotu pro tento symbol před zahrnutím atlutil.h.
 
-##  <a name="dtor"></a>  Cthreadpool –:: ~ cthreadpool –
+##  <a name="dtor"></a>  CThreadPool::~CThreadPool
 
 Destruktor pro fond vláken.
 
@@ -346,7 +346,7 @@ Maximální požadovaný čas v milisekundách, fondu vláken bude čekání na 
 
 Tato metoda odešle žádost o vypnutí na všechna vlákna ve fondu. Pokud vyprší časový limit bude volat tuto metodu [TerminateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread) v libovolném vlákně, které se neukončil. Tato metoda je volána automaticky z destruktoru třídy.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IThreadPoolConfig – rozhraní](../../atl/reference/ithreadpoolconfig-interface.md)<br/>
 [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>

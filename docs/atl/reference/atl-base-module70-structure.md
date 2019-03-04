@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ATL_BASE_MODULE70 structure
 - _ATL_BASE_MODULE70 structure
 ms.assetid: 4539282f-15b8-4d7c-aafa-a85dc56f4980
-ms.openlocfilehash: 806ed86076d8b27662bcd9a328d43cabf5df5c86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4fddd4b3af6155d0663b9c01edfab4fcf4a60426
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667542"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261451"
 ---
 # <a name="atlbasemodule70-structure"></a>_Atl_base_module70 – struktura
 
@@ -69,7 +69,6 @@ Pole použitá k vyhledání prostředků ve všech instancích prostředků, kt
 
 **Záhlaví:** atlcore.h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy a struktury](../../atl/reference/atl-classes.md)
-

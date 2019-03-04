@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
-ms.openlocfilehash: 606adf0e6984ebe93951c80620407f9f1c8775f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 906b05800711e89592e5230bec7fa0fe1640379f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533975"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265714"
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy – struktura
 
@@ -136,7 +136,7 @@ Když se zavolá pomocí proxy vlákna se opírá o pravidelných Windows vlákn
 
 `YieldToSystem` musí být volána na `IThreadProxy` rozhraní, které představuje aktuálně spuštěné vlákno nebo výsledky nejsou definovány.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [IExecutionContext – struktura](iexecutioncontext-structure.md)<br/>

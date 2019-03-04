@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - connection points [C++], global functions
 ms.assetid: bcb4bf50-2155-4e20-b8bb-f2908b03a6e7
-ms.openlocfilehash: 200300eaea2bc98f1d87e2c1859610df8d0cb03b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0313e93ee82bb96f3bfe08e45f70ccfee30dbee6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628927"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263881"
 ---
 # <a name="connection-point-global-functions"></a>Globální funkce bodů připojení
 
@@ -55,7 +55,7 @@ HRESULT    AtlAdvise(
 *pUnk*<br/>
 [in] Ukazatel na straně klienta `IUnknown`.
 
-*identifikátor IID*<br/>
+*iid*<br/>
 [in] Identifikátor GUID je spojovací bod. Obvykle je to stejné jako odchozí rozhraní spravuje spojovací bod.
 
 *pdw*<br/>
@@ -92,10 +92,10 @@ HRESULT    AtlUnadvise(
 *pUnkCP*<br/>
 [in] Ukazatel `IUnknown` objektu, který je klient připojen s.
 
-*identifikátor IID*<br/>
+*iid*<br/>
 [in] Identifikátor GUID je spojovací bod. Obvykle je to stejné jako odchozí rozhraní spravuje spojovací bod.
 
-*datový sklad*<br/>
+*dw*<br/>
 [in] Soubor cookie, který jednoznačně identifikuje připojení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -119,7 +119,7 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pT*<br/>
 [in] Ukazatel na objekt obsahující mapování jímky.
 
 *bAdvise*<br/>
@@ -133,7 +133,7 @@ Standardní hodnoty HRESULT.
 
 [!code-cpp[NVC_ATL_Windowing#92](../../atl/codesnippet/cpp/connection-point-global-functions_3.h)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Funkce](../../atl/reference/atl-functions.md)<br/>
 [Makra bodů připojení](../../atl/reference/connection-point-macros.md)

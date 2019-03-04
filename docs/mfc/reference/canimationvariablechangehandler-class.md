@@ -1,5 +1,5 @@
 ---
-title: Canimationvariablechangehandler – třída
+title: CAnimationVariableChangeHandler Class
 ms.date: 11/04/2016
 f1_keywords:
 - CAnimationVariableChangeHandler
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - CAnimationVariableChangeHandler [MFC], OnValueChanged
 - CAnimationVariableChangeHandler [MFC], SetAnimationController
 ms.assetid: 2ea4996d-5c04-4dfc-be79-d42d55050795
-ms.openlocfilehash: 589691f8bb2bc14eba46245082ff972ca6b97fcc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 92189ce5ea76811496d4462aa4254bbd03ebb219
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604371"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257602"
 ---
-# <a name="canimationvariablechangehandler-class"></a>Canimationvariablechangehandler – třída
+# <a name="canimationvariablechangehandler-class"></a>CAnimationVariableChangeHandler Class
 
 Implementuje zpětné volání, které je voláno rozhraním API animace při změně hodnoty proměnné animace.
 
@@ -73,7 +73,7 @@ IFACEMETHOD(OnValueChanged) (
 
 ### <a name="parameters"></a>Parametry
 
-*scénáře*<br/>
+*storyboard*<br/>
 Scénář, který je proměnné animace.
 
 *Proměnná*<br/>
@@ -102,6 +102,6 @@ void SetAnimationController(CAnimationController* pAnimationController);
 *pAnimationController*<br/>
 Ukazatel na řadič animace, který se zobrazí události.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

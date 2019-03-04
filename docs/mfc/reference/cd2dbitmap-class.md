@@ -51,12 +51,12 @@ helpviewer_keywords:
 - CD2DBitmap [MFC], m_strPath
 - CD2DBitmap [MFC], m_uiResID
 ms.assetid: 2b3686f1-812c-462b-b449-9f0cb6949bf6
-ms.openlocfilehash: 869d8c9cffae1a257de04cf82446025be33ef7de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 288ba5e1503a4e3eefe83624cf9a489274a10823
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605865"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264713"
 ---
 # <a name="cd2dbitmap-class"></a>Cd2dbitmap – třída
 
@@ -75,7 +75,7 @@ class CD2DBitmap : public CD2DResource;
 |Název|Popis|
 |----------|-----------------|
 |[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|Přetíženo. Vytvoří objekt cd2dbitmap – od HBITMAP.|
-|[Cd2dbitmap –:: ~ cd2dbitmap –](#_dtorcd2dbitmap)|Destruktor. Volá se, když se likviduje objektu D2D rastrového obrázku.|
+|[CD2DBitmap::~CD2DBitmap](#_dtorcd2dbitmap)|Destruktor. Volá se, když se likviduje objektu D2D rastrového obrázku.|
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
@@ -93,7 +93,7 @@ class CD2DBitmap : public CD2DResource;
 |[CD2DBitmap::CopyFromRenderTarget](#copyfromrendertarget)|Zkopíruje zadanou oblast ze zadaného cíl vykreslování do aktuální rastrový obrázek|
 |[CD2DBitmap::Create](#create)|Vytvoří cd2dbitmap –. (Přepíše [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
 |[CD2DBitmap::Destroy](#destroy)|Odstraní objekt cd2dbitmap –. (Přepíše [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
-|[CD2DBitmap::detach](#detach)|Odpojí prostředků rozhraní z objektu|
+|[CD2DBitmap::Detach](#detach)|Odpojí prostředků rozhraní z objektu|
 |[CD2DBitmap::Get](#get)|Vrátí ID2D1Bitmap rozhraní|
 |[CD2DBitmap::GetDPI](#getdpi)|Vrátí bodů na palec (DPI) rastrového obrázku|
 |[CD2DBitmap::GetPixelFormat](#getpixelformat)|Načte režim pixel formátu a alfa rastrového obrázku|
@@ -129,7 +129,7 @@ class CD2DBitmap : public CD2DResource;
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cd2dresource –](../../mfc/reference/cd2dresource-class.md)
+[CD2DResource](../../mfc/reference/cd2dresource-class.md)
 
 `CD2DBitmap`
 
@@ -137,7 +137,7 @@ class CD2DBitmap : public CD2DResource;
 
 **Záhlaví:** afxrendertarget.h
 
-##  <a name="_dtorcd2dbitmap"></a>  Cd2dbitmap –:: ~ cd2dbitmap –
+##  <a name="_dtorcd2dbitmap"></a>  CD2DBitmap::~CD2DBitmap
 
 Destruktor. Volá se, když se likviduje objektu D2D rastrového obrázku.
 
@@ -260,7 +260,7 @@ HRESULT CopyFromMemory(
 *srcData*<br/>
 Data ke kopírování.
 
-*Výška*<br/>
+*pitch*<br/>
 Stride nebo výšku zdrojovou bitmapu uložené v srcData. Stride je počet bajtů řádkového rozkladu (jeden řádek v paměti v pixelech). Nelze vypočítat stride z následujícího vzorce: šířka v pixelech \* pixel + odsazení paměti v bajtech.
 
 *destRect*<br/>
@@ -321,7 +321,7 @@ Odstraní objekt cd2dbitmap –.
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DBitmap::detach
+##  <a name="detach"></a>  CD2DBitmap::Detach
 
 Odpojí prostředků rozhraní z objektu.
 
@@ -473,6 +473,6 @@ operator ID2D1Bitmap*();
 
 Ukazatel na rozhraní ID2D1Bitmap nebo hodnota NULL, pokud objekt ještě není inicializován.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

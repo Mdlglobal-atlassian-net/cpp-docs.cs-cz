@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: ae3daff2582b9e58cc325304fac449423fb673a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 62d42995a3d1b4a61dbd3ff38c48d9b300177798
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621426"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259539"
 ---
 # <a name="ctabctrl-class"></a>Ctabctrl – třída
 
@@ -169,7 +169,7 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 *bLarger*<br/>
 Označuje, kterou operaci má provést. Pokud tento parametr má hodnotu TRUE, *lprect –* určuje zobrazovací obdélník a přijímat odpovídající rámeček okna. Pokud tento parametr má hodnotu FALSE, *lprect –* určuje rámeček okna a přijímat odpovídající zobrazovací obdélník.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která určuje danou obdélník a přijímá počítaný obdélník.
 
 ### <a name="example"></a>Příklad
@@ -484,7 +484,7 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 *nItem*<br/>
 Z nuly vycházející index položky karty.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá ohraničující obdélník na kartě. Tyto souřadnice režim zobrazení na aktuální mapování.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -645,7 +645,7 @@ Ukazatel [TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema) struktur
 *lpszItem*<br/>
 Adresa řetězec zakončený hodnotou null, který obsahuje text na kartě.
 
-*nvybrán Nobrázek*<br/>
+*nImage*<br/>
 Z nuly vycházející index obrázku pro vložení ze seznamu obrázků.
 
 *nMask*<br/>
@@ -688,7 +688,7 @@ void RemoveImage(int nImage);
 
 ### <a name="parameters"></a>Parametry
 
-*nvybrán Nobrázek*<br/>
+*nImage*<br/>
 Z nuly vycházející index Image, který chcete odebrat.
 
 ### <a name="remarks"></a>Poznámky
@@ -877,7 +877,7 @@ int SetMinTabWidth(int cx);
 
 ### <a name="parameters"></a>Parametry
 
-*CX*<br/>
+*cx*<br/>
 Minimální šířka nastavení pro položku ovládacího prvku karty. Pokud tento parametr je nastaven na hodnotu -1, bude ovládací prvek používat výchozí šířku karty.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -922,7 +922,7 @@ Můžete získat ovládacím prvkem popis tlačítka nástroj spojené s ovláda
 
   Podívejte se na příklad pro [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

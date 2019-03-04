@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
-ms.openlocfilehash: 370581effcd7233d0f1f474c80a273809be58551
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7c5993d1b96daaa73e7fc9509c93e66daed77f3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551486"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262451"
 ---
 # <a name="cdebugreporthook-class"></a>Cdebugreporthook – třída
 
@@ -37,7 +37,7 @@ class CDebugReportHook
 |Název|Popis|
 |----------|-----------------|
 |[CDebugReportHook::CDebugReportHook](#cdebugreporthook)|Volání [SetPipeName](#setpipename), [SetTimeout](#settimeout), a [SetHook](#sethook).|
-|[Cdebugreporthook –:: ~ cdebugreporthook –](#dtor)|Volání [CDebugReportHook::RemoveHook](#removehook).|
+|[CDebugReportHook::~CDebugReportHook](#dtor)|Volání [CDebugReportHook::RemoveHook](#removehook).|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -83,7 +83,7 @@ Název pojmenovaného kanálu, které mají posílat výstup ladění.
 *dwTimeout*<br/>
 Doba v milisekundách, že tato třída bude čekat pojmenovaný kanál k dispozici.
 
-##  <a name="dtor"></a>  Cdebugreporthook –:: ~ cdebugreporthook –
+##  <a name="dtor"></a>  CDebugReportHook::~CDebugReportHook
 
 Volání [CDebugReportHook::RemoveHook](#removehook).
 
@@ -182,6 +182,6 @@ void SetTimeout(DWORD dwTimeout);
 *dwTimeout*<br/>
 Doba v milisekundách, že tato třída bude čekat pojmenovaný kanál k dispozici.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../atl/reference/atl-classes.md)

@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CAnimationBaseObject [MFC], m_nObjectID
 - CAnimationBaseObject [MFC], m_pParentController
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
-ms.openlocfilehash: 6527abf5c91cf440bbbe76d0d5fe49ce2c5dbef7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18b2319ea3c51edf79b6a90095b8363db830d66c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430443"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258915"
 ---
 # <a name="canimationbaseobject-class"></a>Canimationbaseobject – třída
 
@@ -74,7 +74,7 @@ class CAnimationBaseObject : public CObject;
 |Název|Popis|
 |----------|-----------------|
 |[CAnimationBaseObject::CAnimationBaseObject](#canimationbaseobject)|Přetíženo. Vytvoří objekt animace.|
-|[Canimationbaseobject –:: ~ canimationbaseobject –](#canimationbaseobject__~canimationbaseobject)|Destruktor. Volá se, když se likviduje objekt animace.|
+|[CAnimationBaseObject::~CAnimationBaseObject](#canimationbaseobject__~canimationbaseobject)|Destruktor. Volá se, když se likviduje objekt animace.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -310,12 +310,12 @@ virtual void GetAnimationVariableList(
 
 ### <a name="parameters"></a>Parametry
 
-*obrázků*<br/>
+*lst*<br/>
 Seznam, který musí být vyplněn proměnné animace obsažená v objektu animace.
 
 ### <a name="remarks"></a>Poznámky
 
-To se čistě virtuální metody, které se musí přepsat v odvozené třídě. Objekt animace, v závislosti na jeho typu, obsahuje jeden nebo více proměnné animace. Canimationpoint – například obsahuje dvě proměnné, pro souřadnice v uvedeném pořadí X a Y. Canimationbaseobject – základní třída implementuje některé obecné metody, které fungují na seznam proměnné animace: ApplyTransitions ClearTransitions, EnableValueChangedEvent, EnableIntegerValueChangedEvent. Tyto metody volat GetAnimationVariableList, což je vyplněna v odvozené třídě skutečné animace proměnné obsažené v objektu konkrétní animace, pak v seznamu ve smyčce a provádět potřebné akce. Pokud vytvoříte vlastní animace objektu, musíte přidat do obrázků všechny proměnné animace obsažené v tomto objektu.
+To se čistě virtuální metody, které se musí přepsat v odvozené třídě. Objekt animace, v závislosti na jeho typu, obsahuje jeden nebo více proměnné animace. Canimationpoint – například obsahuje dvě proměnné, pro souřadnice v uvedeném pořadí X a Y. Canimationbaseobject – základní třída implementuje některé obecné metody, které mohly reagovat na seznam animace proměnné: ApplyTransitions, ClearTransitions EnableValueChangedEvent, EnableIntegerValueChangedEvent. Tyto metody volat GetAnimationVariableList, což je vyplněna v odvozené třídě skutečné animace proměnné obsažené v objektu konkrétní animace, pak v seznamu ve smyčce a provádět potřebné akce. Pokud vytvoříte vlastní animace objektu, musíte přidat do obrázků všechny proměnné animace obsažené v tomto objektu.
 
 ##  <a name="getautodestroytransitions"></a>  CAnimationBaseObject::GetAutodestroyTransitions
 
@@ -489,6 +489,6 @@ Určuje vlastní data.
 
 Tuto metodu použijte k přidružení vlastních dat k objektu animace. Tato data mohou být později načíst za běhu pomocí metody GetUserData.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

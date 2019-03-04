@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: 216f3bf0ce62eb6e69ad0650289c4c2d91f95159
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 5ad1a1a0dde32358828d58a8f237337c4f62f3e5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178158"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261294"
 ---
 # <a name="cinternetsession-class"></a>Cinternetsession – třída
 
@@ -410,7 +410,7 @@ Ukazatel na řetězec obsahující uživatelské jméno.
 *pstrPassword*<br/>
 Ukazatel na řetězec obsahující přístupové heslo.
 
-*dwFlags*<br/>
+*dwflags*<br/>
 Libovolnou kombinaci `INTERNET_FLAG_*` příznaky. Viz tabulka **poznámky** část [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) popis *dwFlags* hodnoty.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -532,7 +532,7 @@ Ukazatel, který `OpenURL` vrátí závisí na *pstrURL*typ služby. Následují
 |File://|`CStdioFile*`|
 |http://|`CHttpFile*`|
 |Gopher://|`CGopherFile*`|
-|FTP: / /|`CInternetFile*`|
+|ftp://|`CInternetFile*`|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -602,7 +602,7 @@ BOOL SetOption(
 *dwOption*<br/>
 Internet možnost nastavit. Zobrazit [možnost příznaky](/windows/desktop/WinInet/option-flags) ve Windows SDKfor seznam dostupných možností.
 
-*lpBuffer.*<br/>
+*lpBuffer*<br/>
 Vyrovnávací paměť, která obsahuje nastavení možnosti.
 
 *dwBufferLength*<br/>
@@ -622,7 +622,7 @@ Určuje různé možnosti ukládání do mezipaměti. Výchozí hodnota je nasta
 
 Pokud byla operace úspěšná, vrátí hodnotu true. Pokud došlo k chybě, vrátí se hodnota FALSE. Pokud volání selže, funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArray class
 ms.assetid: ee0c9f39-b61c-4c18-bc43-4eada21dca3a
-ms.openlocfilehash: 6395e324d5efdba208a7f77d86ca466fb7cdbb5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c050002549fc6b7a18acb34f0e4f9a2f278db82
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460460"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263400"
 ---
 # <a name="csimplearray-class"></a>Csimplearray – třída
 
@@ -49,7 +49,7 @@ Objekt vlastností definující test rovnosti pro prvky typu *T*.
 |Název|Popis|
 |----------|-----------------|
 |[CSimpleArray::CSimpleArray](#csimplearray)|Konstruktor pro jednoduché pole.|
-|[Csimplearray –:: ~ csimplearray –](#dtor)|Destruktor pro jednoduché pole.|
+|[CSimpleArray::~CSimpleArray](#dtor)|Destruktor pro jednoduché pole.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -126,7 +126,7 @@ Existující objekt `CSimpleArray`.
 
 Inicializuje datové členy, vytváří se nová prázdná `CSimpleArray` objektu nebo kopii existující `CSimpleArray` objektu.
 
-##  <a name="dtor"></a>  Csimplearray –:: ~ csimplearray –
+##  <a name="dtor"></a>  CSimpleArray::~CSimpleArray
 
 Destruktor.
 
@@ -307,6 +307,6 @@ Hodnota pro přiřazení k zadanému prvku.
 
 Vrací TRUE, pokud úspěšné, FALSE, pokud index nebyl platný.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../../atl/atl-class-overview.md)

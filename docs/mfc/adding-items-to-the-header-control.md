@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], adding items
 - header controls [MFC], adding items to
 ms.assetid: 2e9a28b1-7302-4a93-8037-c5a4183e589a
-ms.openlocfilehash: c751458a3a2e7e049364ef22a161a3dc9f81df13
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 897612c6d5ac96704cc0a945df65146e6a01480a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483561"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264375"
 ---
 # <a name="adding-items-to-the-header-control"></a>Přidávání položek do ovládacího prvku záhlaví
 
@@ -27,8 +27,7 @@ Po vytvoření ovládacího prvku záhlaví ([CHeaderCtrl](../mfc/reference/chea
 
 Další informace najdete v tématu [přidání položky do ovládacího prvku záhlaví](/windows/desktop/Controls/header-controls) v sadě Windows SDK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding objects
 - ATL Simple Object Wizard
 ms.assetid: f7f85741-9aad-4543-a917-a29b996364da
-ms.openlocfilehash: 7b1d83e74c08f8cb0109c6e5db19ba0e4ebeda6e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e18c1848c55208b02026aba7684db928e0d6fc0a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522475"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258512"
 ---
 # <a name="atl-simple-object-wizard"></a>Průvodce jednoduchým objektem ATL
 
@@ -39,7 +39,7 @@ Poskytuje informace pro třídu C++ vytvořené pro objekt.
 
    Nastaví zkrácený název pro objekt. Název, který zadáte, určuje `Class` a `Coclass` názvy, **soubor .cpp** a **souboru .h** názvy, **rozhraní** název, **Typ** názvy a **ProgID**, pokud nezměníte těchto polí samostatně.
 
-- **soubor .h**
+- **.h file**
 
    Nastaví název hlavičkového souboru pro nový objekt třídy. Ve výchozím nastavení, tento název je založen na název, který jste zadali v **krátký název**. Klikněte na tlačítko se třemi tečkami uložení názvu souboru do umístění podle vaší volby, nebo připojit k existujícímu souboru deklaraci třídy. Pokud vyberete existující soubor, Průvodce neuloží se do vybraného umístění dokud kliknutím **Dokončit** v průvodci.
 
@@ -88,7 +88,6 @@ Poskytuje informace o funkcích, které modelu COM pro objekt.
 
    Nastaví název, který kontejnery lze použít místo identifikátor CLSID objektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Jednoduchý objekt knihovny ATL](../../atl/reference/adding-an-atl-simple-object.md)
-

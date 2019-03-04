@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbar controls [MFC], creating
 - CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: a4f6bf0c-0195-4dbf-a09e-aee503e19dc3
-ms.openlocfilehash: ad75f346e21262b894d01efd351e6bb0a3ede3a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0f41731e3a4db7b15d4f2a7ebaac94135d5350d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564668"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265103"
 ---
 # <a name="creating-a-ctoolbarctrl-object"></a>Vytvoření objektu CToolBarCtrl
 
@@ -32,8 +32,7 @@ Použití `CToolBarCtrl` objektu, obvykle postupujte podle těchto kroků:
 
 1. Pokud chcete, aby vaši uživatelé nepotřebují k přizpůsobení panelu nástrojů, zpracování zpráv s oznámením přizpůsobení v nadřazenému oknu, jak je popsáno v [zpracování oznámení o přizpůsobení](../mfc/handling-customization-notifications.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

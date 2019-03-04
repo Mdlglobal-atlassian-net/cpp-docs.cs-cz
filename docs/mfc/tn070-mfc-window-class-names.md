@@ -7,12 +7,12 @@ helpviewer_keywords:
 - window class names [MFC]
 - TN070 [MFC]
 ms.assetid: 90617912-dd58-4a7c-9082-ced71736d7cd
-ms.openlocfilehash: 609cfade60b1b7b51fb2fd5597c4d491d3eb861c
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 8b06f7b3656284de18632185877fdbe382343f95
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692658"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260567"
 ---
 # <a name="tn070-mfc-window-class-names"></a>TN070: MFC – názvy tříd oken
 
@@ -42,9 +42,8 @@ Afx:%x:%x:%x:%x:%x
 
 První formulář (`Afx:%x:%x`) se používá při **hCursor**, **hbrBackground**, a **hIcon** jsou všechny **NULL**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)<br/>
-[TN020: Konvence pojmenování a číslování pro identifikátory](../mfc/tn020-id-naming-and-numbering-conventions.md)
-
+[TN020: ID pojmenování a číslování pro vytváření názvů](../mfc/tn020-id-naming-and-numbering-conventions.md)

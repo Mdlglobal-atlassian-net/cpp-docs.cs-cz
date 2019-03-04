@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 56c694283c5143174b0ce7370d98a244c056bc1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a683c877b67f4eae1a7411f5916987c9789b6817
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496015"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261346"
 ---
 # <a name="cheaderctrl-class"></a>Cheaderctrl – třída
 
@@ -350,7 +350,7 @@ BOOL DeleteItem(int nPos);
 
 ### <a name="parameters"></a>Parametry
 
-*nPos –*<br/>
+*nPos*<br/>
 Určuje z nuly vycházející index položky k odstranění.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -498,7 +498,7 @@ BOOL GetItem(
 
 ### <a name="parameters"></a>Parametry
 
-*nPos –*<br/>
+*nPos*<br/>
 Určuje index založený na nule položka, která má načíst.
 
 *pHeaderItem*<br/>
@@ -543,7 +543,7 @@ BOOL GetItemDropDownRect(
 |Parametr|Popis|
 |---------------|-----------------|
 |*Položky*|[in] Z nuly vycházející index položky záhlaví, jehož styl je HDF_SPLITBUTTON. Další informace najdete v tématu `fmt` člena [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) struktury.|
-|*lprect –*|[out] Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktuře získávat informace ohraničující obdélník.|
+|*lpRect*|[out] Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktuře získávat informace ohraničující obdélník.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -580,7 +580,7 @@ BOOL GetItemRect(
 *nIndex*<br/>
 Index založený na nule položky ovládacího prvku záhlaví
 
-*lprect –*<br/>
+*lpRect*<br/>
 Ukazatel na adresu [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá informace ohraničující obdélník.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -633,7 +633,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*lprect –*|[out] Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá informace ohraničující obdélník.|
+|*lpRect*|[out] Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá informace ohraničující obdélník.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -703,7 +703,7 @@ int InsertItem(
 
 ### <a name="parameters"></a>Parametry
 
-*nPos –*<br/>
+*nPos*<br/>
 Index založený na nule položka, která má být vložen. Pokud je hodnota nula, na začátek ovládacího prvku záhlaví vložení položky. Pokud je hodnota větší než maximální hodnota, na konci ovládacího prvku záhlaví vložení položky.
 
 *phdi*<br/>
@@ -858,7 +858,7 @@ int SetHotDivider(int nIndex);
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pt*<br/>
 Pozice ukazatele. Ovládací prvek hlavičky zvýrazní příslušné oddělovače na základě pozice ukazatele.
 
 *nIndex*<br/>
@@ -913,7 +913,7 @@ BOOL SetItem(
 
 ### <a name="parameters"></a>Parametry
 
-*nPos –*<br/>
+*nPos*<br/>
 Index založený na nule položka, která má být manipulovat.
 
 *pHeaderItem*<br/>
@@ -957,7 +957,7 @@ Tato členská funkce implementuje chování – makro Win32 [HDM_SETORDERARRAY]
 
   Podívejte se na příklad pro [CHeaderCtrl::GetOrderArray](#getorderarray).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

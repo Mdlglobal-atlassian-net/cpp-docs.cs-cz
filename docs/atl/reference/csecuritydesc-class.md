@@ -34,12 +34,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-ms.openlocfilehash: 615c9a409b66ca0f515b15fbb55fd794102524fd
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 3673b7ae8630a344e640df70a23698247b0ff8ec
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694072"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262633"
 ---
 # <a name="csecuritydesc-class"></a>Csecuritydesc – třída
 
@@ -132,7 +132,7 @@ CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
 
 `CSecurityDesc` Objektu je volitelně možné vytvořit `SECURITY_DESCRIPTOR` struktury nebo dříve definované `CSecurityDesc` objektu.
 
-##  <a name="dtor"></a>  Csecuritydesc –:: ~ csecuritydesc –
+##  <a name="dtor"></a>  CSecurityDesc::~CSecurityDesc
 
 Destruktor.
 
@@ -226,7 +226,7 @@ bool GetGroup(
 
 ### <a name="parameters"></a>Parametry
 
-*psid má*<br/>
+*pSid*<br/>
 Ukazatel [identifikační číslo volané stanice](../../atl/reference/csid-class.md) (security identifier), která obdrží kopii skupiny uložená v cdacl –.
 
 *pbDefaulted*<br/>
@@ -248,7 +248,7 @@ bool GetOwner(
 
 ### <a name="parameters"></a>Parametry
 
-*psid má*<br/>
+*pSid*<br/>
 Ukazatel [identifikační číslo volané stanice](../../atl/reference/csid-class.md) (security identifier), která obdrží kopii skupiny uložená v cdacl –.
 
 *pbDefaulted*<br/>
@@ -582,7 +582,7 @@ inline void SetDacl(
 
 ### <a name="parameters"></a>Parametry
 
-*Seznam DACL*<br/>
+*Dacl*<br/>
 Odkaz `CDacl` určující seznam DACL pro popisovač zabezpečení. Tento parametr nesmí mít hodnotu NULL. Nastavení DACL hodnoty NULL v popisovači zabezpečení, by měl použít první formulář metody s *bPresent* nastavena na hodnotu false.
 
 *bPresent*<br/>
@@ -701,7 +701,7 @@ Pokud je DACL hodnoty NULL a bit SE_DACL_PRESENT ovládací prvek kódu není na
 
 Tato metoda volá [funkce ConvertStringSecurityDescriptorToSecurityDescriptor](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázka zabezpečení](../../visual-cpp-samples.md)<br/>
 [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>

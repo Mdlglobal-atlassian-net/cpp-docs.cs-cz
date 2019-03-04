@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 08db42929fb3c6a7feb79abae5110bd88169f11b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cf01f16fe21d0c5bea34bf168c6ea6bff04c195
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594958"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263608"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog – třída
 
@@ -140,7 +140,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |Název|Popis|
 |----------|-----------------|
 |[CDHtmlDialog::CDHtmlDialog](#cdhtmldialog)|Vytvoří objekt CDHtmlDialog.|
-|[CDHtmlDialog –:: ~ CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|Odstraní objekt CDHtmlDialog.|
+|[CDHtmlDialog::~CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|Odstraní objekt CDHtmlDialog.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -234,7 +234,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdhtml.h
+**Header:** afxdhtml.h
 
 ##  <a name="ddx_dhtml_helper_macros"></a>  Pomocné rutiny Ddx_dhtml
 
@@ -304,7 +304,7 @@ Obsahuje identifikační číslo prostředku HTML.
 
 Tedy o druhou podobu konstruktor poskytuje přístup k prostředku dialogového okna pomocí názvu šablony. Třetí forma konstruktor poskytuje přístup k prostředku dialogového okna pomocí ID prostředku šablony. Obvykle ID začíná **IDD_** předponu.
 
-##  <a name="_dtorcdhtmldialog"></a>  CDHtmlDialog –:: ~ CDHtmlDialog
+##  <a name="_dtorcdhtmldialog"></a>  CDHtmlDialog::~CDHtmlDialog
 
 Odstraní objekt CDHtmlDialog.
 
@@ -365,12 +365,12 @@ void DDX_DHtml_AxControl(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [cdataexchange –](../../mfc/reference/cdataexchange-class.md) objektu.
+Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.
 
 *szId*<br/>
 Hodnota parametru ID značky object ve zdroji HTML pro ovládací prvek ActiveX.
 
-*identifikátor DISPID*<br/>
+*dispid*<br/>
 ID odbavení vlastnosti, se kterým se má pro výměnu dat.
 
 *szPropName*<br/>
@@ -397,7 +397,7 @@ void DDX_DHtml_CheckBox(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [cdataexchange –](../../mfc/reference/cdataexchange-class.md) objektu.
+Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.
 
 *szId*<br/>
 Hodnota zadaná pro parametr ID ovládacího prvku HTML.
@@ -460,12 +460,12 @@ void DDX_DHtml_ElementText(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [cdataexchange –](../../mfc/reference/cdataexchange-class.md) objektu.
+Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.
 
 *szId*<br/>
 Hodnota zadaná pro parametr ID ovládacího prvku HTML.
 
-*identifikátor DISPID*<br/>
+*dispid*<br/>
 Dispatch ID elementu HTML, který chcete pro výměnu dat.
 
 *value*<br/>
@@ -485,7 +485,7 @@ void DDX_DHtml_Radio(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [cdataexchange –](../../mfc/reference/cdataexchange-class.md) objektu.
+Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.
 
 *szId*<br/>
 Hodnota zadaná pro parametr ID ovládacího prvku HTML.
@@ -507,7 +507,7 @@ void DDX_DHtml_SelectIndex(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [cdataexchange –](../../mfc/reference/cdataexchange-class.md) objektu.
+Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.
 
 *szId*<br/>
 Hodnota zadaná pro parametr id ovládacího prvku HTML.
@@ -529,7 +529,7 @@ void DDX_DHtml_SelectString(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [cdataexchange –](../../mfc/reference/cdataexchange-class.md) objektu.
+Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.
 
 *szId*<br/>
 Hodnota zadaná pro parametr ID ovládacího prvku HTML.
@@ -551,7 +551,7 @@ void DDX_DHtml_SelectValue(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [cdataexchange –](../../mfc/reference/cdataexchange-class.md) objektu.
+Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.
 
 *szId*<br/>
 Hodnota zadaná pro parametr ID ovládacího prvku HTML.
@@ -669,7 +669,7 @@ Název vlastnosti ve výchozím nastavení národního prostředí aktuálního 
 *pdispControl*<br/>
 `IDispatch` Ukazatel ovládacího prvku ActiveX.
 
-*identifikátor DISPID*<br/>
+*dispid*<br/>
 ID odbavení vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -840,7 +840,7 @@ VARIANT GetElementProperty(
 *szElementId*<br/>
 ID elementu HTML.
 
-*identifikátor DISPID*<br/>
+*dispid*<br/>
 ID odbavení vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -942,7 +942,7 @@ STDMETHOD(GetOptionKeyPath)(
 *pchKey*<br/>
 Zobrazit *pchKey* v [IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx) v sadě Windows SDK.
 
-*datový sklad*<br/>
+*dw*<br/>
 Zobrazit *dw* v `IDocHostUIHandler::GetOptionKeyPath` ve Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1264,7 +1264,7 @@ void SetControlProperty(
 *szElementId*<br/>
 ID HTML ovládacího prvku ActiveX.
 
-*identifikátor DISPID*<br/>
+*dispid*<br/>
 ID odbavení vlastnosti chcete nastavit.
 
 *pVar*<br/>
@@ -1317,7 +1317,7 @@ void SetElementProperty(
 *szElementId*<br/>
 ID elementu HTML.
 
-*identifikátor DISPID*<br/>
+*dispid*<br/>
 ID odbavení vlastnosti chcete nastavit.
 
 *pVar*<br/>
@@ -1522,9 +1522,8 @@ Vrátí E_NOTIMPL.
 
 Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::UpdateUI](https://msdn.microsoft.com/library/aa753268.aspx), jak je popsáno v sadě Windows SDK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázka DHtmlExplore knihovny MFC](../../visual-cpp-samples.md)<br/>
 [Makra pomocné rutiny DDX_DHtml](#ddx_dhtml_helper_macros)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-

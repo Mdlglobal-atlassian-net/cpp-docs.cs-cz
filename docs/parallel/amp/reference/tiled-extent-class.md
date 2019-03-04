@@ -13,12 +13,12 @@ f1_keywords:
 - AMP/Concurrency::tiled_extent::tile_dim2
 - AMP/Concurrency::tiled_extent::tile_extent
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-ms.openlocfilehash: 77d16eefa61fb30614cb6527792014cc8655abe0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51e7696b8103e81d42beec0987a49f26fe041643
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476892"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264319"
 ---
 # <a name="tiledextent-class"></a>tiled_extent – třída
 
@@ -63,14 +63,14 @@ Velikost nejméně významného rozměru.
 
 |Název|Popis|
 |----------|-----------------|
-|[tiled_extent – konstruktor](#ctor)|Inicializuje novou instanci třídy `tiled_extent` třídy.|
+|[tiled_extent Constructor](#ctor)|Inicializuje novou instanci třídy `tiled_extent` třídy.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
 |[get_tile_extent](#get_tile_extent)|Vrátí `extent` , který zachycuje hodnoty `tiled_extent` argumenty šablony `_Dim0`, `_Dim1`, a `_Dim2`.|
-|[panel](#pad)|Vrátí nový `tiled_extent` objektu s rozsahy upraví, až se rovnoměrně dělitelné podle dimenzí dlaždice.|
+|[pad](#pad)|Vrátí nový `tiled_extent` objektu s rozsahy upraví, až se rovnoměrně dělitelné podle dimenzí dlaždice.|
 |[zkrátit](#truncate)|Vrátí nový `tiled_extent` objektu s rozsahy sníženými tak byly rovnoměrně dělitelné podle dimenzí dlaždice.|
 
 ### <a name="public-operators"></a>Veřejné operátory
@@ -83,9 +83,9 @@ Velikost nejméně významného rozměru.
 
 |Název|Popis|
 |----------|-----------------|
-|[tile_dim0 – konstanta](#tile_dim0)|Ukládá velikost nejvýznamnějšího rozměru.|
-|[tile_dim1 – konstanta](#tile_dim1)|Ukládá délku druhé nejvýznamnější dimenze další úplně.|
-|[tile_dim2 – konstanta](#tile_dim2)|Ukládá velikost nejméně významného rozměru.|
+|[tile_dim0 Constant](#tile_dim0)|Ukládá velikost nejvýznamnějšího rozměru.|
+|[tile_dim1 Constant](#tile_dim1)|Ukládá délku druhé nejvýznamnější dimenze další úplně.|
+|[tile_dim2 Constant](#tile_dim2)|Ukládá velikost nejméně významného rozměru.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
@@ -103,7 +103,7 @@ Velikost nejméně významného rozměru.
 
 **Záhlaví:** amp.h
 
-**Namespace:** souběžnosti
+**Namespace:** Souběžnost
 
 ## <a name="ctor"> </a>  tiled_extent – konstruktor
 
@@ -126,7 +126,7 @@ tiled_extent(
 *Ji_né*<br/>
 `extent` Nebo `tiled_extent` objektu, který chcete zkopírovat.
 
-## <a name="get_tile_extent"> </a>  get_tile_extent –
+## <a name="get_tile_extent"> </a>  get_tile_extent
 
 Vrátí `extent` , který zachycuje hodnoty `tiled_extent` argumenty šablony `_Dim0`, `_Dim1`, a `_Dim2`.
 
@@ -140,7 +140,7 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
 
 `extent` , Který zachycuje rozměry této `tiled_extent` instance.
 
-## <a name="pad"> </a>  panel
+## <a name="pad"> </a>  pad
 
 Vrátí nový `tiled_extent` objektu s rozsahy upraví, až se rovnoměrně dělitelné podle dimenzí dlaždice.
 
@@ -226,6 +226,6 @@ static const int tile_dim2 = _Dim2;
 __declspec(property(get= get_tile_extent)) Concurrency::extent<rank> tile_extent;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

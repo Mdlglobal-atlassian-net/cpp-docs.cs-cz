@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-ms.openlocfilehash: 6f4e6db693a5839fd3add503bfb9697679a98dd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 388cc0082f69041368d1a444179855451d552ce6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635402"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264756"
 ---
 # <a name="multilinkregistry-class"></a>multi_link_registry – třída
 
@@ -34,7 +34,7 @@ class multi_link_registry : public network_link_registry<_Block>;
 
 #### <a name="parameters"></a>Parametry
 
-*_Blok při znaku*<br/>
+*_Block*<br/>
 Zadejte bloku dat ukládají do `multi_link_registry` objektu.
 
 ## <a name="members"></a>Členové
@@ -51,7 +51,7 @@ Zadejte bloku dat ukládají do `multi_link_registry` objektu.
 |Název|Popis|
 |----------|-----------------|
 |[add](#add)|Přidá odkaz `multi_link_registry` objektu. (Přepíše [network_link_registry::Add –](network-link-registry-class.md#add).)|
-|[začít](#begin)|Vrátí iterátor na první prvek `multi_link_registry` objektu. (Přepíše [network_link_registry::BEGIN –](network-link-registry-class.md#begin).)|
+|[začít](#begin)|Vrátí iterátor na první prvek `multi_link_registry` objektu. (Overrides [network_link_registry::begin](network-link-registry-class.md#begin).)|
 |[Obsahuje](#contains)|Hledání `multi_link_registry` objekt pro zadaný blok. (Přepíše [network_link_registry::contains –](network-link-registry-class.md#contains).)|
 |[Počet](#count)|Vrátí počet položek v `multi_link_registry` objektu. (Přepíše [network_link_registry::Count –](network-link-registry-class.md#count).)|
 |[remove](#remove)|Odebere odkaz `multi_link_registry` objektu. (Přepíše [network_link_registry::Remove –](network-link-registry-class.md#remove).)|
@@ -185,7 +185,7 @@ Maximální počet, který odkazuje `multi_link_registry` objekt může obsahova
 
 Po nastavení vazbu způsobí odpojení položku `multi_link_registry` objektu zadejte neměnného stavu kde další volání `add` vyvolá výjimku `invalid_link_target` výjimky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [single_link_registry – třída](single-link-registry-class.md)

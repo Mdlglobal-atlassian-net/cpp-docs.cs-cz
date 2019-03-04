@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-ms.openlocfilehash: 323b9a6e2c46bea8d82f0f589d1174041c1f0780
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa9d46b868c1a31729a9590db3b3f67179903881
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480103"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264662"
 ---
 # <a name="event-class"></a>event – třída
 
@@ -41,7 +41,7 @@ class event;
 
 |Název|Popis|
 |----------|-----------------|
-|[Resetovat](#reset)|Obnoví událost do nesignálového stavu.|
+|[reset](#reset)|Obnoví událost do nesignálového stavu.|
 |[set](#set)|Signalizuje událost.|
 |[Počkej](#wait)|Čeká na signálování události.|
 |[wait_for_multiple](#wait_for_multiple)|Čeká na signálování více událostí.|
@@ -173,6 +173,6 @@ Pokud parametr `_FWaitAll` je nastaveno na hodnotu `true` k označení, že vše
 > [!IMPORTANT]
 > V aplikaci pro univerzální platformu Windows (UPW), nevolejte `wait_for_multiple` na ASTA vlákno, protože toto volání může blokovat aktuální vlákno a může způsobit, že aplikace přestane reagovat.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)

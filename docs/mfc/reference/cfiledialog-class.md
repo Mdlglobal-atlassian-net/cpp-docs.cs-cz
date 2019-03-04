@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: 87f99b4f037c8cc881b33e1d07b4f07596ee9a1b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: aaa05fc3e97fe690e8d6a0cd9eba826c482b410d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694540"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262100"
 ---
 # <a name="cfiledialog-class"></a>Cfiledialog – třída
 
@@ -251,7 +251,7 @@ Některé `CFileDialog` metody nejsou podporovány v rámci Windows Vista nebo n
 
 - [CDialog::OnSetFont](../../mfc/reference/cdialog-class.md#onsetfont)
 
-Zprávy windows `CFileDialog` třídy se liší v závislosti na který operační systém používáte. Například Windows XP není podporováno [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) a [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) pro `CFileDialog` třídy. Nicméně Windows Vista a novějších operačních systémech je podporují. Další informace o různých zpráv, které jsou generovány a pořadí, ve kterém jsou přijímány, naleznete v tématu [CFileDialog vzorku: protokolování pořadí událostí](../../visual-cpp-samples.md).
+Zprávy windows `CFileDialog` třídy se liší v závislosti na který operační systém používáte. Například Windows XP není podporováno [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) a [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) pro `CFileDialog` třídy. Nicméně Windows Vista a novějších operačních systémech je podporují. Další informace o různých zpráv, které jsou generovány a pořadí, ve kterém jsou přijímány, naleznete v tématu [CFileDialog vzorku: Protokolování pořadí událostí](../../visual-cpp-samples.md).
 
 Použití `CFileDialog` objektu, nejprve vytvořte objekt s použitím `CFileDialog` konstruktoru. Poté, co byl vytvořen dialogových oken, můžete nastavit nebo změnit všechny hodnoty v [CFileDialog::m_ofn](#m_ofn) struktury k inicializaci hodnoty nebo stavy ovládací prvky dialogového okna. `m_ofn` Struktury je typu `OPENFILENAME`. Další informace najdete v tématu [LPSTRFILE](/windows/desktop/api/commdlg/ns-commdlg-tagofna) struktura v sadě Windows SDK.
 
@@ -294,7 +294,7 @@ Další informace o tom, jak používat `CFileDialog`, naleznete v tématu [spol
 
 [CDialog](../../mfc/reference/cdialog-class.md)
 
-[Ccommondialog –](../../mfc/reference/ccommondialog-class.md)
+[CCommonDialog](../../mfc/reference/ccommondialog-class.md)
 
 `CFileDialog`
 
@@ -893,7 +893,7 @@ CString GetNextPathName(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Odkaz na POZICI hodnotu vrácenou předchozím `GetNextPathName` nebo `GetStartPosition` volání funkce. Hodnota NULL, pokud bylo dosaženo konce seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1638,8 +1638,7 @@ Tento příklad aktualizuje `CFileDialog` před zobrazením. Před aktualizací 
 
 [!code-cpp[NVC_MFC_CFileDialog#1](../../mfc/reference/codesnippet/cpp/cfiledialog-class_7.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CCommonDialog – třída](../../mfc/reference/ccommondialog-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-

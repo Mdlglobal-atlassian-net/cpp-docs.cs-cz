@@ -11,12 +11,12 @@ helpviewer_keywords:
 - document data [MFC]
 - member variables [MFC], document class [MFC]
 ms.assetid: e70b87f4-8c30-49e5-8986-521c2ff91704
-ms.openlocfilehash: 756f0a3870f4b211cbc7bb40449733cf70610247
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc21bd4b3dbe7609a33af4b4f93f15a3f5c9a64e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630018"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259968"
 ---
 # <a name="managing-data-with-document-data-variables"></a>Správa dat s použitím datových proměnných dokumentu
 
@@ -30,7 +30,6 @@ Zobrazení přístup k dokumentu objektu pomocí ukazatele zobrazení v dokument
 
 Pokud přenos dat často vyžaduje přímý přístup, nebo chcete použít neveřejné členy třídy dokumentu, můžete vytvořit zobrazení tříd – přátelská třída dokumentu (v C++ podmínky).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití dokumentů](../mfc/using-documents.md)
-
