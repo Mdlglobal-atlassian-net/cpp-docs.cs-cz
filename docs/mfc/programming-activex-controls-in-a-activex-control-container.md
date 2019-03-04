@@ -1,5 +1,5 @@
 ---
-title: 'ActiveX – kontejnery ovládacích prvků: Programování ovládacích prvků ActiveX v kontejneru ovládacího prvku ActiveX'
+title: 'Kontejnery ovládacích prvků ActiveX: Programování ovládacích prvků ActiveX v kontejneru ovládacího prvku ActiveX'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - ActiveX control containers [MFC], accessing ActiveX controls
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - wrapper classes [MFC], using
 - ActiveX controls [MFC], wrapper classes
 ms.assetid: ef9b2480-92d6-4191-b16e-8055c4fd7b73
-ms.openlocfilehash: c9a0c51d090b1c62309f27bf6587ea02e0fe1152
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eaeb5275ce825272e1c605e7ceeefa24db7a32ab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636888"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278350"
 ---
-# <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>ActiveX – kontejnery ovládacích prvků: Programování ovládacích prvků ActiveX v kontejneru ovládacího prvku ActiveX
+# <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>Kontejnery ovládacích prvků ActiveX: Programování ovládacích prvků ActiveX v kontejneru ovládacího prvku ActiveX
 
 Tento článek popisuje proces pro přístup k zveřejněné [metody](../mfc/mfc-activex-controls-methods.md) a [vlastnosti](../mfc/mfc-activex-controls-properties.md) vložený ovládacích prvků ActiveX.
 
@@ -96,7 +96,6 @@ Následující příklad kódu používá *m_circctl* členské proměnné k úp
 
 [!code-cpp[NVC_MFC_AxCont#7](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_7.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [ActiveX – kontejnery ovládacích prvků](../mfc/activex-control-containers.md)
-

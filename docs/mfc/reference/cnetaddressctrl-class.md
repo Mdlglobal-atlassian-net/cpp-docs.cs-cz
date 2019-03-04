@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: ee44c05fa6417aaca367798d7a94a900d521b896
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 51198b44346785369771f63b80164c1a131f6950
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176235"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279679"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl – třída
 
@@ -86,7 +86,7 @@ Následující příklad kódu ze souboru záhlaví dialogového okna definuje [
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[Cedit –](../../mfc/reference/cedit-class.md)
+[CEdit](../../mfc/reference/cedit-class.md)
 
 `CNetAddressCtrl`
 
@@ -245,7 +245,7 @@ Použití [CNetAddressCtrl::SetAllowType](#setallowtype) metodu pro určení typ
 
 Vyvolá tuto zprávu [NetAddr_SetAllowType](/windows/desktop/api/shellapi/nf-shellapi-netaddr_setallowtype) makra, která je popsána v sadě Windows SDK. Toto makro odešle zprávu NCM_SETALLOWTYPE.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CNetAddressCtrl – třída](../../mfc/reference/cnetaddressctrl-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

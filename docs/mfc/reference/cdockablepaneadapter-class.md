@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CDockablePaneAdapter [MFC], SaveState
 - CDockablePaneAdapter [MFC], SetWrappedWnd
 ms.assetid: 6ed6cf82-f39c-4d0c-bf7c-8641495cf8f3
-ms.openlocfilehash: 6088d7ed9f4d8f54bfe5ea7f7b77cdabfd11768f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f184bab564b4867138608b735c67b328e1a21cc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522951"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278974"
 ---
 # <a name="cdockablepaneadapter-class"></a>Cdockablepaneadapter – třída
 
@@ -52,9 +52,9 @@ Pokud chcete přizpůsobit `CDockablePaneAdapter` chování, stačí odvozovat n
 
 [CObject –](../../mfc/reference/cobject-class.md) [CCmdTarget –](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)
 
-[Cbasepane –](../../mfc/reference/cbasepane-class.md) [cpane –](../../mfc/reference/cpane-class.md) [CDockablePane –](../../mfc/reference/cdockablepane-class.md)
+[CBasePane](../../mfc/reference/cbasepane-class.md) [CPane](../../mfc/reference/cpane-class.md) [CDockablePane](../../mfc/reference/cdockablepane-class.md)
 
-[Cdockablepaneadapter –](../../mfc/reference/cdockablepaneadapter-class.md)
+[CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -145,7 +145,7 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

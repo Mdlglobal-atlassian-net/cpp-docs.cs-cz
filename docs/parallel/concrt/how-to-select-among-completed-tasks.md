@@ -1,18 +1,18 @@
 ---
-title: 'Postupy: Výběr z dokončených úloh'
+title: 'Postupy: Výběr z dokončených úloh'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - selecting among completed tasks [Concurrency Runtime]
 - completed tasks, selecting among [Concurrency Runtime]
 ms.assetid: c8ccc160-043f-4599-847b-32ed270bb257
-ms.openlocfilehash: c9137c3d1e354a5e3f50f0d281ecbbd247642597
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d31f9bd16aaa70cc773e60e4f1193e66ec520f0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551629"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278025"
 ---
-# <a name="how-to-select-among-completed-tasks"></a>Postupy: Výběr z dokončených úloh
+# <a name="how-to-select-among-completed-tasks"></a>Postupy: Výběr z dokončených úloh
 
 Tento příklad ukazuje způsob použití [concurrency::choice](../../parallel/concrt/reference/choice-class.md) a [concurrency::join](../../parallel/concrt/reference/join-class.md) tříd vyberte první úkol k dokončení vyhledávacího algoritmu.
 
@@ -49,9 +49,9 @@ V tomto příkladu [concurrency::make_choice](reference/concurrency-namespace-fu
 
 Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `find-employee.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
 
-**cl.exe/EHsc find-employee.cpp**
+**cl.exe /EHsc find-employee.cpp**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

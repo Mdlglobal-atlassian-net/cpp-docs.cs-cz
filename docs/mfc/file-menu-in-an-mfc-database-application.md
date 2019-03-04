@@ -5,12 +5,12 @@ helpviewer_keywords:
 - File menu
 - database applications [MFC], File menu commands
 ms.assetid: 92dafb75-c1b3-4860-80a0-87a83bfc36f2
-ms.openlocfilehash: ce56dd5f04312ae9e7b7f747ce81cb704f3d085d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c9a195a81423417809b65b5edce32027071ad2e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629200"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279117"
 ---
 # <a name="file-menu-in-an-mfc-database-application"></a>Nabídka Soubor v databázových aplikacích MFC
 
@@ -32,7 +32,6 @@ Interpretace příkazu v nabídce Soubor ve zvláštním způsobem, je nutné p�
 
 - Protože databázových aplikací obvykle není uložit celý dokument, budete pravděpodobně chtít odebrat uložení a uložení jako implementace, pokud nechcete použít Serializovaný dokument k ukládání informací o profilu. V opačném případě může implementovat příkazu Uložit jako, například "potvrzení transakce." Zobrazit [Technická poznámka 22](../mfc/tn022-standard-commands-implementation.md) Další informace o přepsání těchto příkazů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Serializace: Porovnání serializace a Databázový vstup/výstup](../mfc/serialization-serialization-vs-database-input-output.md)
-
+[Serializace: Serializace vs. Databázový vstup/výstup](../mfc/serialization-serialization-vs-database-input-output.md)

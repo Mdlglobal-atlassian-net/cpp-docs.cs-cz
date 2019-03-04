@@ -2,12 +2,12 @@
 title: Mapy příkazů DHTML pro úpravy
 ms.date: 11/04/2016
 ms.assetid: c1b49876-039e-4a26-bb24-ea98ccf254a1
-ms.openlocfilehash: 6c03e8e4a7d84776c3657994c57a72a906046f37
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f84a56876f1108e9b02d44f6ef0dec50f065c57
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558454"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278259"
 ---
 # <a name="dhtml-editing-command-maps"></a>Mapy příkazů DHTML pro úpravy
 
@@ -35,7 +35,7 @@ DECLARE_DHTMLEDITING_CMDMAP(className)
 
 ### <a name="parameters"></a>Parametry
 
-*Název třídy*<br/>
+*className*<br/>
 Název třídy.
 
 ### <a name="remarks"></a>Poznámky
@@ -50,7 +50,7 @@ Zobrazit [HTMLEdit ukázka](../../visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxhtml.h
+  **Header** afxhtml.h
 
 ##  <a name="begin_dhtmlediting_cmdmap"></a>  BEGIN_DHTMLEDITING_CMDMAP
 
@@ -62,7 +62,7 @@ BEGIN_DHTMLEDITING_CMDMAP(className)
 
 ### <a name="parameters"></a>Parametry
 
-*Název třídy*<br/>
+*className*<br/>
 Název třídy obsahující mapování DHTML pro úpravy příkazu. Tato třída musí být odvozený přímo nebo nepřímo z: [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) a zahrnout [DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap) – makro v rámci dané definice třídy.
 
 ### <a name="remarks"></a>Poznámky
@@ -73,7 +73,7 @@ Umístit BEGIN_DHTMLEDITING_CMDMAP – makro v souboru implementace (.cpp) tří
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxhtml.h
+  **Header** afxhtml.h
 
 ##  <a name="end_dhtmlediting_cmdmap"></a>  END_DHTMLEDITING_CMDMAP
 
@@ -93,7 +93,7 @@ Zobrazit [HTMLEdit ukázka](../../visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxhtml.h
+  **Header** afxhtml.h
 
 ##  <a name="dhtmlediting_cmd_entry"></a>  DHTMLEDITING_CMD_ENTRY
 
@@ -117,7 +117,7 @@ Zobrazit [HTMLEdit ukázka](../../visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxhtml.h
+  **Header** afxhtml.h
 
 ##  <a name="dhtmlediting_cmd_entry_func"></a>  DHTMLEDITING_CMD_ENTRY_FUNC
 
@@ -144,7 +144,7 @@ Zobrazit [HTMLEdit ukázka](../../visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxhtml.h
+  **Header** afxhtml.h
 
 ##  <a name="dhtmlediting_cmd_entry_type"></a>  DHTMLEDITING_CMD_ENTRY_TYPE
 
@@ -171,7 +171,7 @@ Zobrazit [HTMLEdit ukázka](../../visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxhtml.h
+  **Header** afxhtml.h
 
 ##  <a name="dhtmlediting_cmd_entry_func_type"></a>  DHTMLEDITING_CMD_ENTRY_FUNC_TYPE
 
@@ -201,8 +201,8 @@ Zobrazit [HTMLEdit ukázka](../../visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxhtml.h
+  **Header** afxhtml.h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)

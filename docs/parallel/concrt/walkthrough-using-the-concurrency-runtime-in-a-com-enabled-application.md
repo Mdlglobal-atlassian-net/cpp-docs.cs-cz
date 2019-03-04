@@ -1,18 +1,18 @@
 ---
-title: 'Návod: Použití Concurrency Runtime v aplikaci s podporou modelu COM'
+title: 'Návod: Použití modulu Runtime souběžnosti v aplikaci s podporou modelu COM'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, use with COM
 - COM, use with the Concurrency Runtime
 ms.assetid: a7c798b8-0fc8-4bee-972f-22ef158f7f48
-ms.openlocfilehash: 227d06c74826b8936909b774d1a7e3a222ac8023
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d306377be4a000c54fb5556b15263a15b2d4618
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554931"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278194"
 ---
-# <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>Návod: Použití Concurrency Runtime v aplikaci s podporou modelu COM
+# <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>Návod: Použití modulu Runtime souběžnosti v aplikaci s podporou modelu COM
 
 Tento dokument popisuje způsob použití Concurrency Runtime v aplikaci, která se používá modelu COM (Component Object).
 
@@ -151,9 +151,9 @@ fib(12) = 144
 
 Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `parallel-scripts.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
 
-**cl.exe/EHsc/Link paralelní scripts.cpp knihovnou ole32.lib**
+**cl.exe /EHsc parallel-scripts.cpp /link ole32.lib**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Návody pro Concurrency Runtime](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [Funkční paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
@@ -162,4 +162,3 @@ Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vlo
 [Zpracování výjimek](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
 [Zrušení v knihovně PPL](cancellation-in-the-ppl.md)<br/>
 [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

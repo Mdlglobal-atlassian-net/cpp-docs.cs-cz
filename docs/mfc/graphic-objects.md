@@ -41,12 +41,12 @@ helpviewer_keywords:
 - painting and device context [MFC]
 - CPalette class [MFC], HPALETTE handle type
 ms.assetid: 41963b25-34b7-4343-8446-34ba516b83ca
-ms.openlocfilehash: 4c4f9a96725e76ff25e21f7923e1b45a6e380ac5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 58ecf680d64f39ab61589a0ad668c15d1a9cd68c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612755"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279572"
 ---
 # <a name="graphic-objects"></a>Grafické objekty
 
@@ -62,8 +62,8 @@ Tento článek vysvětluje použití těchto tříd grafických objektů:
 |Třída|Typ popisovače Windows|
 |-----------|-------------------------|
 |[CPen](../mfc/reference/cpen-class.md)|`HPEN`|
-|[Cbrush –](../mfc/reference/cbrush-class.md)|`HBRUSH`|
-|[Cfont –](../mfc/reference/cfont-class.md)|**HFONT**|
+|[CBrush](../mfc/reference/cbrush-class.md)|`HBRUSH`|
+|[CFont](../mfc/reference/cfont-class.md)|**HFONT**|
 |[CBitmap](../mfc/reference/cbitmap-class.md)|`HBITMAP`|
 |[CPalette](../mfc/reference/cpalette-class.md)|`HPALETTE`|
 |[CRgn](../mfc/reference/crgn-class.md)|**HRGN**|
@@ -102,7 +102,6 @@ Následující kód přetypování `CPen` objektu na popisovač Windows:
 
 - [Kontexty zařízení](../mfc/device-contexts.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Objekty oken](../mfc/window-objects.md)
-

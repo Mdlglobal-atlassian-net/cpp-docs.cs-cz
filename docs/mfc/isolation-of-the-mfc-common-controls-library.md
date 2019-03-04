@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC, Common Controls library
 ms.assetid: 7471e6f0-49b0-47f7-86e7-8d6bc3541694
-ms.openlocfilehash: fd47854c7073565fbe0c15ca6be7a9843af5f387
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94700f850be62404f22974a1d5e76acad711555c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583609"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278740"
 ---
 # <a name="isolation-of-the-mfc-common-controls-library"></a>Izolace knihovny běžných ovládacích prvků MFC
 
@@ -22,4 +22,3 @@ Můžete použít [AFX_COMCTL32_IF_EXISTS](reference/run-time-object-model-servi
 Technicky vzato provádět volání do rozhraní API pro běžné ovládací prvky knihovny prostřednictvím obálkovou třídu `CComCtlWrapper` (definováno v afxcomctl32.h). `CComCtlWrapper` je také zodpovědná za načítání a uvolňování souboru Comctl32.dll. Stavu modulu MFC obsahuje ukazatel na instanci `CComCtlWrapper`. Můžete přistupovat pomocí třídy obálky `afxComCtlWrapper` – makro.
 
 Všimněte si, že volání rozhraní API přímo běžných ovládacích prvků (bez použití MFC – funkce obálky) z knihovny MFC aplikaci nebo uživatele knihovny DLL bude fungovat ve většině případů, protože aplikace knihovny MFC nebo uživatelské knihovny DLL je vázán na knihovny běžných ovládacích prvků požadovaný v jeho manifestu). Samotný kód knihovny MFC má však použít obálky, protože kód knihovny MFC může být volána z knihovny DLL uživatele s různými verzemi knihovny běžných ovládacích prvků.
-

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DSizeU [MFC], CD2DSizeU
 - CD2DSizeU [MFC], IsNull
 ms.assetid: 6e679ba8-2112-43c3-8275-70b660856f02
-ms.openlocfilehash: bad73a53eabe0a4c75483e9871a4fdc4a361449b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6b0bc12933100c6f2401f4f4cb9e1fae52dda65
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512473"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278649"
 ---
 # <a name="cd2dsizeu-class"></a>Cd2dsizeu – třída
 
@@ -51,7 +51,7 @@ class CD2DSizeU : public D2D1_SIZE_U;
 
 `D2D1_SIZE_U`
 
-[Cd2dsizeu –](../../mfc/reference/cd2dsizeu-class.md)
+[CD2DSizeU](../../mfc/reference/cd2dsizeu-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -76,10 +76,10 @@ CD2DSizeU(
 *Velikost*<br/>
 velikost zdroje
 
-*CX*<br/>
+*cx*<br/>
 Šířka zdroje
 
-*CY*<br/>
+*cy*<br/>
 výška zdroje
 
 ##  <a name="isnull"></a>  CD2DSizeU::IsNull
@@ -106,6 +106,6 @@ operator CSize();
 
 Aktuální hodnota velikosti D2D.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Apply button in property sheet
 - property sheets, Apply button
 ms.assetid: 7e977015-59b8-406f-b545-aad0bfd8d55b
-ms.openlocfilehash: 7402f99148f20be4ce56c44b5ce7f66f0c24bd36
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb438351d273c872def8c98a67b7010cec0b4d76
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591259"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279442"
 ---
 # <a name="handling-the-apply-button"></a>Ošetření tlačítka Použít
 
-Seznamy vlastností mají funkce, která standardní dialogová okna nepodporují: umožňují uživatelům použít změny byly provedeny před jeho zavřením seznam vlastností. To se provádí pomocí tlačítko použít. Tento článek popisuje metody, které můžete použít k implementaci této funkce správně.
+Seznamy vlastností mají funkce, která standardní dialogová okna nepodporují: Povolit uživateli nastavit změny provedené před jeho zavřením seznam vlastností. To se provádí pomocí tlačítko použít. Tento článek popisuje metody, které můžete použít k implementaci této funkce správně.
 
-Modálních dialogových oken obvykle použití nastavení na externí objekt, když uživatel klikne na tlačítko OK zavřete dialogové okno. Totéž platí pro seznam vlastností: když uživatel klikne na tlačítko OK, nové nastavení v seznamu vlastností se projeví.
+Modálních dialogových oken obvykle použití nastavení na externí objekt, když uživatel klikne na tlačítko OK zavřete dialogové okno. Totéž platí pro seznam vlastností: Když uživatel klikne na tlačítko OK, nové nastavení v seznamu vlastností se projeví.
 
 Můžete však uživateli umožňují uložit nastavení bez nutnosti zavřít dialogové okno seznam vlastností. Toto je funkce tlačítko použít. Tlačítko použít aktuální nastavení ve všech stránek vlastností platí pro externí objekt, na rozdíl od použití pouze aktuální nastavení aktuálně aktivní stránkou.
 
@@ -32,7 +32,6 @@ K implementaci vliv na tlačítko použít, seznam vlastností zjistit její vla
 
 Příklad tohoto procesu, najdete v ukázce MFC Obecné [PROPDLG](../visual-cpp-samples.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Seznamy vlastností](../mfc/property-sheets-mfc.md)
-

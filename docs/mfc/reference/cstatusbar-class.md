@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-ms.openlocfilehash: 70d700197e3d249812e8b09a2cba744a0fbc9803
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7aa577d237c1800ca9df3f0af4c44acdaae9ae2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649277"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279494"
 ---
 # <a name="cstatusbar-class"></a>Cstatusbar – třída
 
@@ -108,7 +108,7 @@ Existují tři způsoby, jak aktualizovat textu panelu stavového řádku:
 
 Volání [SetPaneStyle](#setpanestyle) k aktualizaci stylu panelu stavového řádku.
 
-Další informace o používání `CStatusBar`, najdete v článku [stav panelu implementace v prostředí MFC](../../mfc/status-bar-implementation-in-mfc.md) a [Technická poznámka 31: ovládací pruhy](../../mfc/tn031-control-bars.md).
+Další informace o používání `CStatusBar`, najdete v článku [stav panelu implementace v prostředí MFC](../../mfc/status-bar-implementation-in-mfc.md) a [Technická poznámka 31: Ovládací pruhy](../../mfc/tn031-control-bars.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -118,7 +118,7 @@ Další informace o používání `CStatusBar`, najdete v článku [stav panelu 
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[Ccontrolbar –](../../mfc/reference/ccontrolbar-class.md)
+[CControlBar](../../mfc/reference/ccontrolbar-class.md)
 
 `CStatusBar`
 
@@ -282,7 +282,7 @@ void GetItemRect(
 *nIndex*<br/>
 Index ukazatel, jehož souřadnice obdélník se mají načíst.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který bude příjemcem souřadnic ukazatele určené *nIndex*.
 
 ### <a name="remarks"></a>Poznámky
@@ -504,7 +504,7 @@ Po zavolání `SetPaneText`, je nutné přidat obslužnou rutinu aktualizace už
 
 [!code-cpp[NVC_MFCDocView#178](../../mfc/codesnippet/cpp/cstatusbar-class_3.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC CTRLBARS](../../visual-cpp-samples.md)<br/>
 [Ukázka DLGCBR32 knihovny MFC](../../visual-cpp-samples.md)<br/>

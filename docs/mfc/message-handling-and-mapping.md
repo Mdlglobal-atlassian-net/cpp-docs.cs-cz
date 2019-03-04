@@ -6,12 +6,12 @@ helpviewer_keywords:
 - message handling [MFC]
 - message maps [MFC]
 ms.assetid: 62fe2a1b-944c-449d-a0f0-63c11ee0a3cb
-ms.openlocfilehash: f76e9b2ef25c8a6c046cb6c47f0f5761854453c9
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 41f3432b3741019a787ee24b0f508fe8e65e0470
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694709"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279663"
 ---
 # <a name="message-handling-and-mapping"></a>Zpracování a mapování zpráv
 
@@ -43,7 +43,7 @@ Obecné informace o zprávy a fronty zpráv ve Windows najdete v tématu [zpráv
 
 - [Postupy: Vytvoření mapy zpráv pro třídu šablony](../mfc/how-to-create-a-message-map-for-a-template-class.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Koncepty](../mfc/mfc-concepts.md)<br/>
 [Obecná témata MFC](../mfc/general-mfc-topics.md)<br/>

@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-ms.openlocfilehash: 96a3351656807fa841661ec9f082bb4255d5136a
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 14ce057c141f22c14361bafd55fce3ccd345d4dd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176611"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279468"
 ---
 # <a name="cmfcribboncategory-class"></a>Cmfcribboncategory – třída
 
@@ -649,7 +649,7 @@ int GetMaxHeight(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení pro panely pásu karet.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -717,7 +717,7 @@ CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Souřadnice x a y ukazatele myši relativně vzhledem k levém horním rohu okna.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -909,7 +909,7 @@ CMFCRibbonPanel* HighlightPanel(
 *pHLPanel*<br/>
 [in] Ukazatel na panel pásu karet, abyste měli na očích.
 
-*Bod*<br/>
+*point*<br/>
 [in] Souřadnice x a y ukazatele myši relativně vzhledem k levém horním rohu okna.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -932,7 +932,7 @@ CMFCRibbonBaseElement* HitTest(
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Souřadnice x a y ukazatele myši relativně vzhledem k levém horním rohu okna.
 
 *bCheckPanelCaption*<br/>
@@ -956,7 +956,7 @@ int HitTestEx(CPoint point) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Souřadnice x a y ukazatele myši relativně vzhledem k levém horním rohu okna.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -977,7 +977,7 @@ CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Bod k testování.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1084,7 +1084,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení pro kategorie pásu karet.
 
 ### <a name="remarks"></a>Poznámky
@@ -1105,7 +1105,7 @@ virtual BOOL OnDrawImage(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení pro bitovou kopii.
 
 *Rect*<br/>
@@ -1141,7 +1141,7 @@ virtual void OnDrawMenuBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Tento parametr se nepoužívá.
 
 *pMenuBar*<br/>
@@ -1176,7 +1176,7 @@ virtual CMFCRibbonBaseElement* OnLButtonDown(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Souřadnice x a y ukazatele myši relativně vzhledem k levém horním rohu okna.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1195,7 +1195,7 @@ virtual void OnLButtonUp(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Souřadnice x a y ukazatele myši relativně vzhledem k levém horním rohu okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -1210,7 +1210,7 @@ virtual void OnMouseMove(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Souřadnice x a y ukazatele myši relativně vzhledem k levém horním rohu okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -1290,7 +1290,7 @@ virtual void RecalcLayout(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení pro kategorie pásu karet.
 
 ### <a name="remarks"></a>Poznámky
@@ -1327,7 +1327,7 @@ virtual void ReposPanels(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení pro panely pásu karet, které jsou obsaženy v kategorii pásu karet.
 
 ### <a name="remarks"></a>Poznámky
@@ -1351,7 +1351,7 @@ Knihovny definuje pořadí sbalit. Toto chování ale můžete přizpůsobit zad
 
 Když kategorii zjistí, že má sbalit panel pásu karet, hledá další prvek v zadaném seznamu. Pokud je seznam prázdný, nebo nebyly určeny dostatečný počet elementů, kategorii používá interní algoritmus.
 
-Například kategorie má tři panely pásu karet a mohou být sbalena několikrát, dokud nejsou všechny panely v plně sbaleném stavu. Můžete nastavit následujícím pořadí Sbalit: 0, 0, 2, 2. V tomto případě kategorie se sbalí panel 0 dvakrát, panel 2 dvakrát. Na panelu, který má index 1 zůstane rozbalen.
+Například kategorie má tři panely pásu karet a mohou být sbalena několikrát, dokud nejsou všechny panely v plně sbaleném stavu. Můžete nastavit následujícím sbalit pořadí: 0, 0, 2, 2. V tomto případě kategorie se sbalí panel 0 dvakrát, panel 2 dvakrát. Na panelu, který má index 1 zůstane rozbalen.
 
 ### <a name="example"></a>Příklad
 
@@ -1416,7 +1416,7 @@ void SetTabColor(AFX_RibbonCategoryColor color);
 
 ### <a name="parameters"></a>Parametry
 
-*Barva*<br/>
+*color*<br/>
 [in] Určuje barvu nové kategorie pásu karet.
 
 ### <a name="remarks"></a>Poznámky
@@ -1439,7 +1439,7 @@ Barva může být jedna z následujících hodnot:
 
 - AFX_CategoryColor_Violet
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

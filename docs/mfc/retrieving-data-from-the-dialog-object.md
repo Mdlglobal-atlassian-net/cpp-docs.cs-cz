@@ -21,12 +21,12 @@ helpviewer_keywords:
 - DDX (dialog data exchange) [MFC], retrieving data from Dialog object
 - GetWindowText method [MFC]
 ms.assetid: bdca2b61-6b53-4c2e-b426-8712c7a38ec0
-ms.openlocfilehash: 345a2894693eace5aa464ca3940c785b2da08784
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b376edc3ee7d8abbca43da6d823e71abad99bc5d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615124"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279026"
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>Načítání dat z objektu dialogového okna
 
@@ -40,7 +40,6 @@ DDX a DDV jsou vysvětlené podrobněji [výměna dat dialogových oken a ověř
 
 Pro modální dialogové okno, můžete načíst žádná data, kdy uživatel zadal `DoModal` vrátí IDOK, ale před dialogové okno je objekt zničen. Pro nemodální dialogové okno, můžete načíst data z objektu dialogového okna kdykoli po zavolání `UpdateData` s argumentem **TRUE** a následný přístup k proměnné členů třídy dialogového okna. Tomuto tématu je popsáno podrobněji v [výměna dat dialogových oken a ověření](../mfc/dialog-data-exchange-and-validation.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
-

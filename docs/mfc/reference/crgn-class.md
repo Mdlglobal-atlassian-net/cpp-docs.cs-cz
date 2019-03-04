@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 74ee046e81e0f55e5550220166c957317c2bf6cd
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 54018c3d59fe3d7e3d7a5062cda9b40da4f5d586
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178548"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279356"
 ---
 # <a name="crgn-class"></a>Crgn – třída
 
@@ -113,7 +113,7 @@ Další informace o používání `CRgn`, naleznete v tématu [grafické objekty
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cgdiobject –](../../mfc/reference/cgdiobject-class.md)
+[CGdiObject](../../mfc/reference/cgdiobject-class.md)
 
 `CRgn`
 
@@ -229,7 +229,7 @@ BOOL CreateEllipticRgn(
 *x1*<br/>
 Určuje logickou souřadnici x levého horního rohu ohraničující obdélník na tři tečky.
 
-*Y1*<br/>
+*y1*<br/>
 Určuje logickou souřadnici y levého horního rohu ohraničující obdélník na tři tečky.
 
 *x2*<br/>
@@ -264,7 +264,7 @@ BOOL CreateEllipticRgnIndirect(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje `RECT` struktury nebo `CRect` objekt, který obsahuje logické souřadnice levého a pravého dolního rohu ohraničující obdélník na tři tečky.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -323,7 +323,7 @@ BOOL CreateFromPath(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Určuje kontext zařízení, který obsahuje uzavřené cestu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -451,7 +451,7 @@ BOOL CreateRectRgn(
 *x1*<br/>
 Určuje logickou souřadnici x levého horního rohu oblasti.
 
-*Y1*<br/>
+*y1*<br/>
 Určuje logickou souřadnici y levého horního rohu oblasti.
 
 *x2*<br/>
@@ -486,7 +486,7 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje `RECT` struktury nebo `CRect` objekt, který obsahuje logické souřadnice levého a pravého dolního rohu oblasti. `RECT` Struktura má následující formát:
 
 ```cpp
@@ -531,7 +531,7 @@ BOOL CreateRoundRectRgn(
 *x1*<br/>
 Určuje logickou souřadnici x levého horního rohu oblasti.
 
-*Y1*<br/>
+*y1*<br/>
 Určuje logickou souřadnici y levého horního rohu oblasti.
 
 *x2*<br/>
@@ -543,7 +543,7 @@ Určuje logickou souřadnici y pravého dolního rohu oblasti.
 *x3*<br/>
 Určuje šířku použitý k vytvoření oblých rohů elipsy.
 
-*Y3*<br/>
+*y3*<br/>
 Určuje výšku elipsy použitý k vytvoření zaoblené rohy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -654,7 +654,7 @@ int GetRgnBox(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje na `RECT` struktury nebo `CRect` objektu získat souřadnice ohraničujícího rámečku. `RECT` Struktura má následující formát:
 
 `typedef struct tagRECT {`
@@ -705,7 +705,7 @@ Určuje počet jednotek na doleva nebo doprava.
 *y*<br/>
 Určuje počet jednotek, aby se přesuňte směrem nahoru nebo dolů.
 
-*Bod*<br/>
+*point*<br/>
 Souřadnici x *bodu* určuje počet jednotek na doleva nebo doprava. Souřadnici y *bodu* určuje počet jednotek, aby se přesuňte směrem nahoru nebo dolů. *Bodu* parametr může být buď `POINT` struktury nebo `CPoint` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -768,7 +768,7 @@ Určuje logickou souřadnici x bodu k testování.
 *y*<br/>
 Určuje logickou souřadnici y bodu k testování.
 
-*Bod*<br/>
+*point*<br/>
 X-y souřadnice a *bodu* zadejte x - a souřadnice y bodu pro testování hodnot. *Bodu* parametr může být buď `POINT` struktury nebo `CPoint` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -785,7 +785,7 @@ BOOL RectInRegion(LPCRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje `RECT` struktury nebo `CRect` objektu. `RECT` Struktura má následující formát:
 
 ```cpp
@@ -820,7 +820,7 @@ void SetRectRgn(LPCRECT lpRect);
 *x1*<br/>
 Určuje souřadnice x levého horního rohu oblasti obdélníkový.
 
-*Y1*<br/>
+*y1*<br/>
 Určuje souřadnici y levého horního rohu oblasti obdélníkový.
 
 *x2*<br/>
@@ -829,7 +829,7 @@ Určuje souřadnici x v pravém dolním rohu oblasti obdélníkový.
 *y2*<br/>
 Určuje souřadnici y pravého dolního rohu oblasti obdélníkový.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Určuje obdélníkovou oblast. Může být buď ukazatel `RECT` struktury nebo `CRect` objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -838,8 +838,7 @@ Na rozdíl od [CreateRectRgn](#createrectrgn), ale ho nepřidělí další pamě
 
 Pomocí této funkce místo `CreateRectRgn` členskou funkci, aby se zabránilo volání do paměti místního správce.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-

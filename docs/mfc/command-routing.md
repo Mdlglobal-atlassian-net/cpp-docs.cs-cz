@@ -8,12 +8,12 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-ms.openlocfilehash: add047984f5a32e505e8a739922daa137b5e671d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae9741a66e944b60dc38c1366353e43977e1ee7a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541697"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278392"
 ---
 # <a name="command-routing"></a>Směrování příkazů
 
@@ -43,7 +43,6 @@ Jak nákladné je tento mechanismus směrování porovnání vaše obslužná ru
 
 Pokud zmíníte číslované položky ve druhém sloupci v předchozí tabulce jiné objekty, jako je například dokument, najdete v odpovídající položku v prvním sloupci. Například při čtení v druhém sloupci, že zobrazení předá příkazu, který bude jeho dokumentu, naleznete v příspěvku "Dokumentů" v prvním sloupci sledovat další směrování.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Jakým způsobem volá framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md)
-

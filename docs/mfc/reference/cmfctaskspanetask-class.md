@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCTasksPaneTask [MFC], m_strName
 - CMFCTasksPaneTask [MFC], m_uiCommandID
 ms.assetid: c5a7513b-cd8f-4e2e-b16f-650e1fe30954
-ms.openlocfilehash: 7d7f5a87dc005ee67f9ce65f4ad686cb27d007c2
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 95a2e4f2a1f2e3344936af33fb2258b496b1be93
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176546"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279247"
 ---
 # <a name="cmfctaskspanetask-class"></a>Cmfctaskspanetask – třída
 
@@ -90,7 +90,7 @@ Následující obrázek ukazuje skupiny úloh, která obsahuje tři úkoly:
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cmfctaskspanetask –](../../mfc/reference/cmfctaskspanetask-class.md)
+[CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -276,7 +276,7 @@ virtual BOOL SetACCData(
 
 Hodnota TRUE, pokud *data* parametr byl úspěšně naplněný daty usnadnění aktuálního úkolu; v opačném případě hodnota FALSE.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

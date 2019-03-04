@@ -5,12 +5,12 @@ f1_keywords:
 - amp_graphics/Concurrency::fast_math::copy_async
 - amp_graphics/Concurrency::fast_math::copy
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
-ms.openlocfilehash: 30503ffa7e5c3845af6c9f61f4e8fc2f64b74e5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ef181da43bb947230aaafe82b178938c85b9a8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467129"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278233"
 ---
 # <a name="concurrencygraphics-namespace-functions"></a>Funkce oboru názvů Concurrency::Graphics
 
@@ -154,7 +154,7 @@ Posun do zdroje, ze kterého chcete začít kopírovat.
 *první*<br/>
 Počáteční iterátor do zdrojového kontejneru.
 
-*poslední*<br/>
+*last*<br/>
 Koncový iterátor do zdrojového kontejneru.
 
 ##  <a name="copy_async"></a>  copy_async – funkce (Namespace Concurrency::graphics)
@@ -289,15 +289,15 @@ Posun do zdroje, ze kterého chcete začít kopírovat.
 *první*<br/>
 Počáteční iterátor do zdrojového kontejneru.
 
-*poslední*<br/>
+*last*<br/>
 Koncový iterátor do zdrojového kontejneru.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** amp_graphics.h
 
-**Namespace:** Concurrency::graphics
+**Namespace:** Concurrency::Graphics
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CWinApp class [MFC], ExitInstance
 - ExitInstance method [MFC]
 ms.assetid: 5bb597bd-8dab-4d49-8bcf-9c45aa8be4a2
-ms.openlocfilehash: b1c5b3a20f25f909188023ab1650bc41316d7a9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c76f588b22ad8ffd1d3dae954c5113feffb62a3f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637733"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279429"
 ---
 # <a name="exitinstance-member-function"></a>ExitInstance – členská funkce
 
@@ -20,6 +20,6 @@ ms.locfileid: "50637733"
 
 Přepsat `ExitInstance` potřebujete zpracování zvláštního vyčištění, jako jsou například uvolnění prostředků grafiky zařízení (GDI) rozhraní nebo rušení přidělení paměti používá při provádění programu. Vyčištění standardních položek, jako jsou dokumenty a zobrazeními, ale poskytuje rozhraní, pomocí jiných přepisovatelné funkce pro provádění zvláštního vyčištění, které jsou specifické pro tyto objekty.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[CWinApp – třída aplikace](../mfc/cwinapp-the-application-class.md)
+[CWinApp Třída aplikace](../mfc/cwinapp-the-application-class.md)

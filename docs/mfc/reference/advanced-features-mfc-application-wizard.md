@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, advanced features
 ms.assetid: 8a6681c5-6576-4b12-841a-6862beee76fa
-ms.openlocfilehash: 1af16f7009ceb97ea86d641f47cf56ea5a398c26
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 5643e1e9f4f558163c1c2a3b65070f90afdc7dba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694293"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278220"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>Pokročilé funkce, Průvodce aplikací knihovny MFC
 
@@ -21,7 +21,7 @@ Toto téma obsahuje seznam doplňkových funkcí pro vaše aplikace, jako je nap
 
    Generuje sadu souborů pro kontextovou nápovědu, která je k dispozici po stisknutí klávesy F1 nebo v nabídce Nápověda nebo kliknutím **pomáhají** tlačítko v dialogovém okně. Podpora nápovědy vyžaduje kompilátor nápovědy. Pokud nemáte kompilátor nápovědy, můžete jej nainstalovat opětovným spuštěním instalace.
 
-   Zobrazit [Nápověda HTML: Kontextová nápověda pro vaše programy](../../mfc/html-help-context-sensitive-help-for-your-programs.md)[soubory nápovědy (Nápověda jazyka HTML)](../../ide/help-files-html-help.md) Další informace.
+   Zobrazit [Nápověda HTML: Kontextová nápověda pro vaše programy](../../mfc/html-help-context-sensitive-help-for-your-programs.md) a [soubory nápovědy (Nápověda jazyka HTML)](../../ide/help-files-html-help.md) Další informace.
 
 - **Náhled tisku a tisk**
 
@@ -47,7 +47,7 @@ Toto téma obsahuje seznam doplňkových funkcí pro vaše aplikace, jako je nap
 
    Přidává podporu pro [IAccessible](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) k [CWnd](../../mfc/reference/cwnd-class.md)-odvozené třídy, které můžete použít k přizpůsobení uživatelského rozhraní pro lepší interakci s klienty usnadnění.
 
-- **Manifest běžných ovládacích prvků**
+- **Common Control Manifest**
 
    Ve výchozím nastavení povoleno. Generuje manifest aplikace pro povolení knihovny DLL běžných ovládacích prvků, která je součástí systému Microsoft Windows XP a novějších operačních systémů.
 
@@ -57,7 +57,7 @@ Toto téma obsahuje seznam doplňkových funkcí pro vaše aplikace, jako je nap
 
 - **Podpora správce restartování**
 
-   Přidává podporu pro [správce restartování Windows](/windows/desktop/RstMgr/using-restart-manager). Toto video ukazuje, jak použít správce restartování z knihovny MFC: [návody: použití nového správce restartování](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100)).
+   Přidává podporu pro [správce restartování Windows](/windows/desktop/RstMgr/using-restart-manager). Toto video ukazuje, jak použít správce restartování z knihovny MFC: [Postup: Pomocí nového správce restartování](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100)).
 
 - **Rozšířená podokna rámců**
 
@@ -73,7 +73,6 @@ Toto téma obsahuje seznam doplňkových funkcí pro vaše aplikace, jako je nap
 
    Určuje počet souborů, které se mají zobrazit v seznamu naposledy použitých souborů. Výchozí hodnota tohoto pole je 4.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – průvodce aplikací](../../mfc/reference/mfc-application-wizard.md)
-

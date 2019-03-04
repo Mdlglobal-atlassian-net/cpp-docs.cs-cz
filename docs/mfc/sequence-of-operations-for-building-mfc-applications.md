@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [MFC], developing
 ms.assetid: 6973c714-fe20-48c6-926b-de88356b3a3d
-ms.openlocfilehash: b99a6b0e9f9728d74057d05f7ad9082017e31005
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3c165a0bf495da4e6cda05c7e109b338b0a364f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623545"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278675"
 ---
 # <a name="sequence-of-operations-for-building-mfc-applications"></a>Posloupnost operací při sestavování aplikací MFC
 
@@ -41,10 +41,9 @@ Následující tabulka popisuje obecné pořadí, které může být obvykle pos
 |Přidáte rozdělovače oken.|Pokud chcete zajistit podporu rozdělení okna, přidejte [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) objekt okna rámce aplikace SDI nebo podřízené okno MDI a zapojit ji do okna [OnCreateClient](../mfc/reference/cframewnd-class.md#oncreateclient) členskou funkci.|Rozhraní poskytuje rozdělovač – ovládací prvky vedle posuvníky a spravuje rozdělení zobrazení do více podoken. Pokud uživatel rozdělí časové období, rozhraní vytvoří a připojí další zobrazení objektů v dokumentu.|
 |Sestavení, testování a ladění vaší aplikace.|Použití zařízení Visual C++ pro sestavení, testování a ladění aplikace.|Visual C++ umožňuje nastavit kompilace, propojení a dalších možností. Můžete ho taky procházet zdrojový kód a třída strukturu.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Posloupnost operací při vytváření aplikací OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)<br/>
 [Posloupnost operací při vytváření ovládacích prvků ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)<br/>
 [Posloupnost operací při vytváření databázových aplikací](../mfc/sequence-of-operations-for-creating-database-applications.md)<br/>
 [Sestavení na základě rozhraní .NET Framework](../mfc/building-on-the-framework.md)
-

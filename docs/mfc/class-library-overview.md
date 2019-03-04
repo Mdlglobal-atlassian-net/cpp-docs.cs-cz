@@ -10,12 +10,12 @@ helpviewer_keywords:
 - class libraries, MFC
 - class libraries
 ms.assetid: 9b0e3152-ac39-4f52-91b4-f20aa3a674aa
-ms.openlocfilehash: 9e2bf534abcacbbb4997971376d3831705ab2310
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aec295ea93868ff1fe6e0d3d1d2370a344e47c73
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468615"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278757"
 ---
 # <a name="class-library-overview"></a>Přehled knihovny tříd
 
@@ -23,7 +23,7 @@ Tento přehled rozděluje a popisuje třídy v třídy knihovny MFC (Microsoft F
 
 Třídy knihovny jsou uvedeny zde v následujících kategoriích:
 
-- [Kořenová třída: CObject](../mfc/root-class-cobject.md)
+- [Kořenová třída: Třídy CObject](../mfc/root-class-cobject.md)
 
 - [Třídy architektury aplikace MFC](../mfc/mfc-application-architecture-classes.md)
 
@@ -117,7 +117,6 @@ Dědičnost třídy zobrazíte pomocí [grafu hierarchie třídy](../mfc/hierarc
 
 Kromě tříd uvedených v tomto přehledu knihovna MFC obsahuje počet globálních funkcí, globálních proměnných a maker. Přehled a podrobné zobrazení těchto v tomto tématu je [v makrech MFC a Globals](../mfc/reference/mfc-macros-and-globals.md), který následuje poskytuje abecední reference k třídám MFC.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Desktopové aplikace knihovny MFC](../mfc/mfc-desktop-applications.md)
-

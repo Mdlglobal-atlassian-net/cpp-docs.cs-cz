@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CPropertySheet class [MFC], property sheets and pages
 - property sheets, propert pages
 ms.assetid: de8fea12-6c35-4cef-8625-b8073a379446
-ms.openlocfilehash: 971b8cde1560e54f87269e8b85a41cdec55c091d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ff2851cc4ed04a64f1a49d68b6e3143b5edccd8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445393"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278756"
 ---
 # <a name="property-sheets-and-property-pages-mfc"></a>Seznamy vlastností a stránky vlastností (MFC)
 
@@ -25,7 +25,7 @@ Seznamy vlastností jsou implementovány s třídami [cpropertysheet –](../mfc
 
 Informace o vytváření a práci se seznamy vlastností, naleznete v tématu [vlastností](../mfc/property-sheets-mfc.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Dialogová okna](../mfc/dialog-boxes.md)<br/>
 [Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)<br/>
@@ -33,4 +33,3 @@ Informace o vytváření a práci se seznamy vlastností, naleznete v tématu [v
 [Výměna dat](../mfc/exchanging-data.md)<br/>
 [Vytvoření nemodálního seznamu vlastností](../mfc/creating-a-modeless-property-sheet.md)<br/>
 [Ošetření tlačítka Použít](../mfc/handling-the-apply-button.md)
-

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-ms.openlocfilehash: 95606818cf5673ef5d4a70361a8e79a9ed28d11b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d83ba601766f4b6fb84576571239a250169abb1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506077"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278701"
 ---
 # <a name="containers-advanced-features"></a>Kontejnery: Pokročilé funkce
 
@@ -31,7 +31,7 @@ Tento článek popisuje kroky potřebné k začlenit volitelné pokročilé funk
 
 Aplikace typu server/kontejner je aplikace, která funguje jako kontejner a serverem. Aplikace Microsoft Word pro Windows je příkladem. V jiných aplikacích můžete vložit dokumenty aplikace Word pro Windows a položky můžete také vložit do dokumentů aplikace Word pro Windows. Proces pro úpravu svou aplikaci typu kontejner kontejneru a plnou instalaci systému server (nelze vytvořit aplikace typu kontejner/miniserver kombinaci) je podobný procesu pro vytváření plnou instalaci systému server.
 
-Tento článek [servery: implementace serveru](../mfc/servers-implementing-a-server.md) uvádí počet úloh potřebných k implementaci serverové aplikace. Pokud převedete aplikace typu kontejner pro aplikace typu server/kontejner, musíte provést některé z těchto stejných úkolů, přidání kódu do kontejneru. Následující seznam obsahuje důležité věci k uvážení:
+Tento článek [serverů: Implementace serveru](../mfc/servers-implementing-a-server.md) uvádí počet úloh potřebných k implementaci serverové aplikace. Pokud převedete aplikace typu kontejner pro aplikace typu server/kontejner, musíte provést některé z těchto stejných úkolů, přidání kódu do kontejneru. Následující seznam obsahuje důležité věci k uvážení:
 
 - Kód kontejneru už vytvořené průvodcem aplikací inicializuje subsystému OLE. Nemusíte změnit nebo přidat cokoli pro, které podporují.
 
@@ -41,7 +41,7 @@ Tento článek [servery: implementace serveru](../mfc/servers-implementing-a-ser
 
    Například MFC OLE ukázky [OCLIENT](../visual-cpp-samples.md) obsahuje vložené položky vytvořené aplikace typu server/kontejner. Otevřete aplikaci OCLIENT a místní úpravy položky vytvořené aplikace typu server/kontejner. Při úpravách položky vaší aplikace, rozhodnete chcete vložit položky vytvořené v rámci MFC OLE ukázky [HIERSVR](../visual-cpp-samples.md). Chcete-li to provést, nelze použít aktivace na místě. Je nutné otevřít plně HIERSVR k aktivaci této položky. Protože knihovny Microsoft Foundation Class nepodporuje tuto funkci OLE, přepisování `COleClientItem::CanActivate` můžete zkontrolovat v této situaci a zabránit možných chyb za běhu ve vaší aplikaci.
 
-Pokud vytváříte novou aplikaci a chcete, aby fungovala jako aplikace typu server/kontejner, zvolte možnost v dialogovém okně Možnosti OLE v Průvodci aplikací a tato podpora se vytvoří automaticky. Další informace najdete v článku [přehled: vytvoření kontejneru ovládacího prvku ActiveX](../mfc/reference/creating-an-mfc-activex-control-container.md). Informace o ukázky knihovny MFC naleznete v tématu ukázky knihovny MFC.
+Pokud vytváříte novou aplikaci a chcete, aby fungovala jako aplikace typu server/kontejner, zvolte možnost v dialogovém okně Možnosti OLE v Průvodci aplikací a tato podpora se vytvoří automaticky. Další informace najdete v článku [přehled: Vytvoření kontejneru ovládacího prvku ActiveX](../mfc/reference/creating-an-mfc-activex-control-container.md). Informace o ukázky knihovny MFC naleznete v tématu ukázky knihovny MFC.
 
 Všimněte si, že aplikace MDI nelze vložit do sebe sama. Aplikace, která je server/kontejner nelze vložit do sebe sama, pokud je aplikace SDI.
 
@@ -71,8 +71,7 @@ Odkazy na vložené objekty funkce umožňuje uživateli vytvoření dokumentu p
 
 Ukázky knihovny MFC OLE [OCLIENT](../visual-cpp-samples.md) implementuje tuto funkci. Příklad, jak to lze provést, najdete v článku `InitInstance` fungovat v *OCLIENT. CPP* souboru této ukázkové aplikaci.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Kontejnery](../mfc/containers.md)<br/>
 [Servery](../mfc/servers.md)
-

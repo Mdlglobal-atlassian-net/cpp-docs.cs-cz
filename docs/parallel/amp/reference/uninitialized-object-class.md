@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - uninitialized_object class
 ms.assetid: 6ae3c4e8-64a6-4511-a158-03be197b63af
-ms.openlocfilehash: 5dc03964e8ddef0cd1aab785316eabd98c39e59e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1c431364aee0f1d1e75059abdb023ae52cf92155
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544531"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279326"
 ---
 # <a name="uninitializedobject-class"></a>uninitialized_object – třída
 
@@ -31,7 +31,7 @@ class uninitialized_object : public runtime_exception;
 
 |Název|Popis|
 |----------|-----------------|
-|[uninitialized_object – konstruktor](#ctor)|Inicializuje novou instanci třídy `uninitialized_object` třídy.|
+|[uninitialized_object Constructor](#ctor)|Inicializuje novou instanci třídy `uninitialized_object` třídy.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -45,7 +45,7 @@ class uninitialized_object : public runtime_exception;
 
 **Záhlaví:** amprt.h
 
-**Namespace:** souběžnosti
+**Namespace:** Souběžnost
 ## <a name="uninitialized_object__ctor"></a> unsupported_feature –
 
 Sestaví novou instanci výjimky unsupported_feature.
@@ -61,13 +61,13 @@ unsupported_feature() throw();
 
 ### <a name="parameters"></a>Parametry
 
-*_TEXT*<br/>
+*_Message*<br/>
 Popis chyby.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 `unsupported_feature` Objektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

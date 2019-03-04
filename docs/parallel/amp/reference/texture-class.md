@@ -17,12 +17,12 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-ms.openlocfilehash: 8e427206379f1e7d094362411f074ad9cafb43fd
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: cfcb65fa23fe4593e7dcf11da3b5da4b1785ce71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657536"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279741"
 ---
 # <a name="texture-class"></a>texture – třída
 
@@ -56,7 +56,7 @@ Typ prvků v textuře.
 
 |Název|Popis|
 |----------|-----------------|
-|[Texture – konstruktor](#ctor)|Inicializuje novou instanci třídy `texture` třídy.|
+|[texture Constructor](#ctor)|Inicializuje novou instanci třídy `texture` třídy.|
 |[~ texture – destruktor](#ctor)|Odstraní `texture` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
@@ -75,7 +75,7 @@ Typ prvků v textuře.
 
 |Název|Popis|
 |----------|-----------------|
-|[Operator()](#operator_call)|Vrátí hodnotu prvku určeného parametry.|
+|[operator()](#operator_call)|Vrátí hodnotu prvku určeného parametry.|
 |[– Operátor\[\]](#operator_at)|Vrátí prvek, který je v zadaném indexu.|
 |[operátor =](#operator_eq)|Zkopíruje zadaný [textury](texture-class.md) do tohoto objektu.|
 
@@ -180,7 +180,7 @@ Index prvku.
 
 Hodnotu prvku na zadaném indexu.
 
-##  <a name="get_associated_accelerator_view"></a> get_associated_accelerator_view –
+##  <a name="get_associated_accelerator_view"></a> get_associated_accelerator_view
 
 Vrátí accelerator_view, který je upřednostňovaným cílem, do kterého má být zkopírován do tato textura.
 
@@ -573,7 +573,7 @@ Počet úrovní mipmap u podkladové textury. Pokud zadáte hodnotu 0, bude mít
 *_Rank*<br/>
 Řád rozsahu.
 
-*_Zdroj*<br/>
+*_Source*<br/>
 Ukazatel do vyrovnávací paměti hostitele.
 
 *_Src*<br/>
@@ -594,6 +594,6 @@ Jiný zdroj dat.
 *_Rank*<br/>
 Řád oddílu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

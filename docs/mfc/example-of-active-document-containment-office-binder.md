@@ -1,5 +1,5 @@
 ---
-title: 'Příklad zahrnutí aktivního dokumentu: modul vazby sady Office'
+title: 'Příklad zahrnutí aktivního dokumentu: Office Binder'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - active documents [MFC], containers
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Office Binder [MFC]
 - MFC COM, active document containment
 ms.assetid: 70dd8568-e8bc-44ac-bf5e-678767efe8e3
-ms.openlocfilehash: 032b2cb39d75c108239d882039f7c797a357a6bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b06bc0f22ee71c8afbbc8feadca68895fc24a50b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616647"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279182"
 ---
-# <a name="example-of-active-document-containment-office-binder"></a>Příklad zahrnutí aktivního dokumentu: modul vazby sady Office
+# <a name="example-of-active-document-containment-office-binder"></a>Příklad zahrnutí aktivního dokumentu: Office Binder
 
 Modul vazby sady Office Microsoft je příkladem kontejner pro aktivní dokument. Modul vazby sady Office zahrnuje dvě primární podokna, jako jsou kontejnery to obvykle děláte. Levé podokno obsahuje ikonami, které odpovídají aktivní dokumenty v vazače. Je volána každý dokument *části* v rámci vazače. Vazač může například obsahovat dokumentů aplikace Word, PowerPoint soubory, tabulky aplikace Excel a tak dále.
 
@@ -28,7 +28,6 @@ Když vyberete aktivní dokument jiného typu aplikace, má vazač rozhraní zm�
 
 Existují, samozřejmě, další možné typy kontejnerů vedle vazače. Průzkumník souborů používá rozhraní typické duální podokně ve kterém v levém podokně používá ovládací prvek stromu k zobrazení hierarchického seznamu adresářů v disku nebo sítě, v pravém podokně zobrazuje soubory obsažené v aktuálně vybraném adresáři. Internetové prohlížeče – typ kontejneru (např. Microsoft Internet Explorer), a ne pomocí podokna duální rozhraní, obvykle obsahuje jeden snímek a poskytuje navigace pomocí hypertextových odkazů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zahrnutí aktivního dokumentu](../mfc/active-document-containment.md)
-

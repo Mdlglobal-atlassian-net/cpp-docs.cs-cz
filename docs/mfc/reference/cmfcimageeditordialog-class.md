@@ -1,5 +1,5 @@
 ---
-title: CMFCImageEditorDialog – třída
+title: CMFCImageEditorDialog Class
 ms.date: 11/19/2018
 f1_keywords:
 - CMFCImageEditorDialog
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCImageEditorDialog [MFC], CMFCImageEditorDialog
 ms.assetid: 6a7d08f3-1ec2-4062-9b79-a0c2776b58d1
-ms.openlocfilehash: 68cfa663f9be9f190a6d3425a2ebf6ceb73e2007
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 57b1df49616967841a433a36a504beed0b900cde
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175070"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278532"
 ---
-# <a name="cmfcimageeditordialog-class"></a>CMFCImageEditorDialog – třída
+# <a name="cmfcimageeditordialog-class"></a>CMFCImageEditorDialog Class
 
 `CMFCImageEditorDialog` Třída podporuje dialogové okno editor s bitové kopie.
 
@@ -61,9 +61,9 @@ Jeden ze způsobů použití `CMFCImageEditorDialog` objekt je komunikace `CBitm
 
 [CDialog](../../mfc/reference/cdialog-class.md)
 
-[Cdialogex –](../../mfc/reference/cdialogex-class.md)
+[CDialogEx](../../mfc/reference/cdialogex-class.md)
 
-[CMFCImageEditorDialog –](../../mfc/reference/cmfcimageeditordialog-class.md)
+[CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -104,7 +104,7 @@ Následující příklad ukazuje, jak vytvořit objekt `CMFCImageEditorDialog` t
 [!code-cpp[NVC_MFC_NewControls#8](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_1.cpp)]
 [!code-cpp[NVC_MFC_NewControls#40](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_2.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

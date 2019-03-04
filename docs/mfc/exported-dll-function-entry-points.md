@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, managing state data
 - state management [MFC], exported DLLs
 ms.assetid: 3268666e-d24b-44f2-80e8-7c80f73b93ca
-ms.openlocfilehash: 8b84209833fee42ec8ebdd1fdea7a9229decad9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 129defe39a79fd38211a539a4a85d79d9a3c0998
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463320"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279520"
 ---
 # <a name="exported-dll-function-entry-points"></a>Vstupní body exportované funkce DLL
 
@@ -31,7 +31,6 @@ Problémy s prostředky v knihovnách DLL dojde, pokud `AFX_MANAGE_STATE` – ma
 
 `AFX_MANAGE_STATE` není nutné převést do každé funkce v knihovně DLL. Například `InitInstance` je možné vyvolat v kódu knihovny MFC v aplikaci bez `AFX_MANAGE_STATE` protože MFC automaticky nastaven stav modulu před `InitInstance` a pak přepínače ji zpět po `InitInstance` vrátí. Totéž platí pro všechny obslužné rutiny mapování zprávy. Regulární knihovny DLL MFC ve skutečnosti mít speciální hlavní okno procedury, která automaticky přepne před směrováním jakákoliv zpráva o stavu modulu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Správa údajů o stavu modulů knihovny MFC](../mfc/managing-the-state-data-of-mfc-modules.md)
-

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [MFC], creating
 - DLLs [MFC], creating
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
-ms.openlocfilehash: 6a24fb136570d1b5984582cab3593a29d843a54c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21173582f68b1d50fefbe22250546fcce63730b4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608114"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278831"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Vytvoření projektu knihovny MFC DLL
 
@@ -38,9 +38,8 @@ Knihovna MFC DLL je binární soubor, který funguje jako sdílená knihovna fun
 
 Po vytvoření projektu lze zobrazit vytvořené soubory v **Průzkumníka řešení**. Další informace o souborech Průvodce vytvoří pro váš projekt, naleznete v generovaném souboru ReadMe.txt. Další informace o typech souborů naleznete v tématu [typy souborů vytvořené pro projekty Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Typy projektů Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
 [Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Stránky vlastností](../../ide/property-pages-visual-cpp.md)
-

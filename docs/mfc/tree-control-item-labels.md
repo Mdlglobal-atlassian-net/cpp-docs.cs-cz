@@ -8,12 +8,12 @@ helpviewer_keywords:
 - item labels, tree controls
 - item labels
 ms.assetid: fe834107-1a25-4280-aced-774c11565805
-ms.openlocfilehash: 0abfeee170dbc9cbb4639e896e7a22d7184b35a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c945556ff9236db1ca61b15f1072efdc2f49541f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438191"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278883"
 ---
 # <a name="tree-control-item-labels"></a>Popisky položek ovládacího prvku strom
 
@@ -23,8 +23,7 @@ Ovládací prvek stromu přiděluje paměť pro ukládání každé položky; te
 
 Ovládací prvek stromu používá paměti přidělené z haldy procesu, který vytvoří ovládací prvek stromu. Maximální počet položek v ovládacím prvku stromu je podle množství paměti v haldě k dispozici. Každá položka má 64 bajtů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Porovnání atributů CReBar a. CReBarCtrl
+title: CReBar vs. CReBarCtrl
 ms.date: 11/04/2016
 f1_keywords:
 - CReBar
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - rebar controls [MFC], CReBarCtrl class [MFC]
 - GetReBarCtrl class [MFC]
 ms.assetid: 7f9c1d7e-5d5f-4956-843c-69ed3df688d0
-ms.openlocfilehash: 49a1528e52d140a673d4035c55394ded3656652f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1b5cda729e760246449bf197fdc9b32752b96e8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641408"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279208"
 ---
-# <a name="crebar-vs-crebarctrl"></a>Porovnání atributů CReBar a. CReBarCtrl
+# <a name="crebar-vs-crebarctrl"></a>CReBar vs. CReBarCtrl
 
-Knihovna MFC poskytuje dvě třídy k vytvoření rebars: [crebar –](../mfc/reference/crebar-class.md) a [atributu CReBarCtrl](../mfc/reference/crebarctrl-class.md) (která zabalí Windows běžný ovládací prvek rozhraní API). `CReBar` obsahuje všechny funkce běžný ovládací prvek matrice, a zpracovává mnoho vyžaduje obecná nastavení ovládacího prvku a struktur za vás.
+Knihovna MFC poskytuje dvě třídy k vytvoření rebars: [Crebar –](../mfc/reference/crebar-class.md) a [atributu CReBarCtrl](../mfc/reference/crebarctrl-class.md) (která zabalí Windows běžný ovládací prvek rozhraní API). `CReBar` obsahuje všechny funkce běžný ovládací prvek matrice, a zpracovává mnoho vyžaduje obecná nastavení ovládacího prvku a struktur za vás.
 
 `CReBarCtrl` je třídou obálky ovládacího prvku matrice Win32 a proto může být snadnější implementovat, pokud nechcete matrice integrovat architektury MFC. Pokud budete chtít použít `CReBarCtrl` a integrovat architektury MFC matrice, je nutné provést dodatečnou pozornost komunikovat manipulace ovládacího prvku matrice ke knihovně MFC. Tato zpráva není složité. je však další práce, nebude potřeba při použití `CReBar`.
 
@@ -33,8 +33,7 @@ Visual C++ poskytuje dva způsoby, jak využít výhod běžný ovládací prvek
 
 Některé z metod získáte přístup na členské funkce ovládacího prvku rebar. Při volání `CReBar::GetReBarCtrl`, vrátí odkaz na `CReBarCtrl` objektu, můžete použít buď sadu členské funkce. Zobrazit [crebar –](../mfc/reference/crebar-class.md) informace o vytváření a vytvořit matrici pomocí `CReBar`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-
