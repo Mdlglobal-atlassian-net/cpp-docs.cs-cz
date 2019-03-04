@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsDialog [MFC], GetControlHandle
 - CWinFormsDialog [MFC], OnInitDialog
 ms.assetid: e3cec000-a578-448e-b06a-8af256312f61
-ms.openlocfilehash: 3baa9f99a5a1ecefc0ad9bc9f0c56f0f67dc2e80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d0731e40a622f0d360cabc03b68b0fe74c1ebc9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573493"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277115"
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog – třída
 
@@ -59,7 +59,7 @@ Rozhraní .NET Framework uživatelský ovládací prvek zobrazený v aplikaci kn
 |Název||
 |----------|-|
 |[CWinFormsDialog::operator-&gt;](#operator_-_gt)|Nahradí [CWinFormsDialog::GetControl](#getcontrol) ve výrazech.|
-|[CWinFormsDialog::operator TManagedControl ^](#operator_tmanagedcontrol)|Přetypování typu jako odkaz na uživatelský ovládací prvek Windows Forms.|
+|[CWinFormsDialog::operator TManagedControl^](#operator_tmanagedcontrol)|Přetypování typu jako odkaz na uživatelský ovládací prvek Windows Forms.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -152,7 +152,7 @@ inline operator TManagedControl^() const throw();
 
 Tento operátor přetypování typu jako odkaz na ovládacím prvku Windows Forms. Slouží k předání `CWinFormsDialog<TManagedControl>` dialogové okno funkce, které přijímají ukazatel na objekt ovládacího prvku Windows Forms uživatele.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [CWinFormsView – třída](../../mfc/reference/cwinformsview-class.md)<br/>

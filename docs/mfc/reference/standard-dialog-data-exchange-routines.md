@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-ms.openlocfilehash: 374618aba297fb2c055ce02f93d0c7c93b38dc06
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 05eaa86133bb55cfbf62ec68f81e7ca7d9ab169b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850174"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274927"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Rutiny výměny dat standardního dialogového okna
 
@@ -649,7 +649,7 @@ Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových o
 
   **Header** afxdd_.h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Rutiny ověřování dat standardního dialogového okna](standard-dialog-data-validation-routines.md)<br/>
 [Makra a globální prvky](mfc-macros-and-globals.md)<br/>

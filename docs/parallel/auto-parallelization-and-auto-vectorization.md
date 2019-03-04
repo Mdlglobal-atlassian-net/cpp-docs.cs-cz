@@ -2,12 +2,12 @@
 title: Automatická paralelizace a automatická vektorizace
 ms.date: 11/04/2016
 ms.assetid: ec71583a-287b-4599-8767-1d255e080fe3
-ms.openlocfilehash: 06ab255e7769bfa56d5a8d22cdbe19d415ce6b31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 018289bc9499aee8d1739ebeed0c1cb847769a08
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618339"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276621"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>Automatická paralelizace a automatická vektorizace
 
@@ -107,9 +107,9 @@ Podobně jako u na automatický Paralelizér, můžete zadat [/Qvec-report (úro
 
 Další informace o kódech příčiny a zprávy v tématu [zprávy nástrojů pro vektorizaci a](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).
 
-Příklad znázorňující, jak automatickou vektorizací funguje v praxi, najdete v části [projektu Austin část 2 ze 6: kulmy stránky](http://blogs.msdn.com/b/vcblog/archive/2012/09/27/10348494.aspx)
+Příklad znázorňující, jak automatickou vektorizací funguje v praxi, najdete v části [projektu Austin část 2 ze 6: Stránka kulmy](http://blogs.msdn.com/b/vcblog/archive/2012/09/27/10348494.aspx)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [loop](../preprocessor/loop.md)<br/>
 [Paralelní programování v nativním kódu](http://go.microsoft.com/fwlink/p/?linkid=263662)<br/>

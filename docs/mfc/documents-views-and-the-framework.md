@@ -16,12 +16,12 @@ helpviewer_keywords:
 - MFC object relationships
 - thread objects [MFC]
 ms.assetid: 409ddd9b-66ad-4625-84f7-bf55a41d697b
-ms.openlocfilehash: e59e8b69dcdf0bf3b22d4286ba4692558a11e096
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 799035976ea55988a635f7dc9b667e87c48d8f7e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175753"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273501"
 ---
 # <a name="documents-views-and-the-framework"></a>Dokumenty, zobrazení a framework
 
@@ -64,6 +64,6 @@ Objekty v běžící aplikaci SDI
 
 Zbývající část Tato řada článků vysvětluje, jak rozhraní framework nástroje, Průvodce aplikací knihovny MFC a editory prostředků vytvořit tyto objekty, jak spolu fungují a jak využít váš programování v. Dokumenty, zobrazení a oken s rámečkem jsou popsány podrobněji [objekty oken](../mfc/window-objects.md) a [architekturu Document/View](../mfc/document-view-architecture.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití tříd pro psaní aplikací pro Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)

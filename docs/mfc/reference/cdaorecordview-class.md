@@ -1,5 +1,5 @@
 ---
-title: CDaoRecordView – třída
+title: CDaoRecordView Class
 ms.date: 11/04/2016
 f1_keywords:
 - CDaoRecordView
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - CDaoRecordView [MFC], OnGetRecordset
 - CDaoRecordView [MFC], OnMove
 ms.assetid: 5aa7d0e2-bd05-413e-b216-80c404ce18ac
-ms.openlocfilehash: db1636bebd0cc29124018b5fad2c0535079706d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f63aa8ed17619a9eef36e36bcc9243a3b973889a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541203"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277768"
 ---
-# <a name="cdaorecordview-class"></a>CDaoRecordView – třída
+# <a name="cdaorecordview-class"></a>CDaoRecordView Class
 
 Zobrazení, které zobrazuje záznamy databáze v ovládacích prvcích.
 
@@ -79,7 +79,7 @@ Další informace o deklarování a použití zobrazení záznamů a záznamů t
 
 [CView](../../mfc/reference/cview-class.md)
 
-[Cscrollview –](../../mfc/reference/cscrollview-class.md)
+[CScrollView](../../mfc/reference/cscrollview-class.md)
 
 [CFormView](../../mfc/reference/cformview-class.md)
 
@@ -173,7 +173,7 @@ Ukazatel `CDaoRecordset`-odvozenému objektu, pokud objekt byl úspěšně vytvo
 
 Je nutné přepsat tuto členskou funkci sestavit nebo získání objektu sady záznamů a vrátí ukazatel na ni. Pokud deklarujete vaší třídy zobrazení záznamu s ClassWizard, zapíše průvodce přepsáním výchozího nastavení. ClassWizard výchozí implementace vrací ukazatel záznamů uložené v zobrazení záznamů, pokud existuje. Pokud ne, vytvoří objekt sady záznamů typu zadán s ClassWizard a volání jeho `Open` členské funkce Otevřít v tabulce nebo spustit dotaz a pak vrací ukazatel na objekt.
 
-Další informace a příklady najdete v článku [zobrazení záznamu: použití zobrazení záznamů](../../data/using-a-record-view-mfc-data-access.md).
+Další informace a příklady najdete v článku [zobrazení záznamů: Použití zobrazení záznamů](../../data/using-a-record-view-mfc-data-access.md).
 
 ##  <a name="onmove"></a>  CDaoRecordView::OnMove
 
@@ -213,7 +213,7 @@ Pokud přesunete za poslední záznam v sadě záznamů, zobrazení záznamů st
 > [!CAUTION]
 >  Volání `OnMove` vyvolá výjimku, pokud sada záznamů neobsahuje žádné záznamy. Volání funkce obslužné rutiny aktualizace příslušných uživatelských rozhraní – `OnUpdateRecordFirst`, `OnUpdateRecordLast`, `OnUpdateRecordNext`, nebo `OnUpdateRecordPrev` – před odpovídajícími operace k určení, zda sada záznamů obsahuje záznamy, které přesunutí.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CFormView – třída](../../mfc/reference/cformview-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

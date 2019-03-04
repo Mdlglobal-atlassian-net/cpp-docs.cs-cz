@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_scheduler_policy_key class
 ms.assetid: 6a7c42fe-9bc4-4a02-bebb-99fe9ef9817d
-ms.openlocfilehash: 775b98d2394dce04b362e92927db1a408b8e1656
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1bc2f1cffdeba5f81bd96932ecef23a563fac351
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677406"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274060"
 ---
 # <a name="invalidschedulerpolicykey-class"></a>invalid_scheduler_policy_key – třída
 
@@ -57,10 +57,10 @@ invalid_scheduler_policy_key() throw();
 
 ### <a name="parameters"></a>Parametry
 
-*_TEXT*<br/>
+*_Message*<br/>
 Popisná zpráva chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [SchedulerPolicy – třída](schedulerpolicy-class.md)

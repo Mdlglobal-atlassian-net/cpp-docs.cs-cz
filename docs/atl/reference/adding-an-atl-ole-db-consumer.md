@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB, adding ATL OLE DB consumer to projects
 - ATL OLE DB consumers
 ms.assetid: f940a513-4e42-4148-b521-dd0d7dc89fa2
-ms.openlocfilehash: 467d83413de2666416cc6354bc75c114d178ffb7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d93bf715f8fd8a03c75b1d1bf2e44f12c1d1b9c0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676912"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277648"
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>Přidání příjemce ATL OLE DB
 
@@ -32,6 +32,6 @@ Tohoto průvodce použijte k přidání příjemce technologie OLE DB knihovny A
 
 1. Klikněte na tlačítko **Dokončit** zavřete průvodce. Nově vytvořený kód příjemce technologie OLE DB bude vložen do vašeho projektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)

@@ -49,12 +49,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: cf845d04c008e83d0e9851718c995036bc810b55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36d8710bd7bb055d8629dec57ec4d8c3602c8f79
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449345"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273020"
 ---
 # <a name="cpatht-class"></a>Cpatht – třída
 
@@ -907,7 +907,7 @@ typedef StringType::XCHAR XCHAR;
 
 `StringType` je parametr šablony `CPathT`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../atl/reference/atl-classes.md)<br/>
 [CStringT – třída](../../atl-mfc-shared/reference/cstringt-class.md)

@@ -1,17 +1,17 @@
 ---
-title: Makra zpráv Windows
+title: Windows Messages Macros
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::WM_FORWARDMSG
 ms.assetid: 63abd22c-372d-4148-bb04-c605950ae64f
-ms.openlocfilehash: 3ab102ec486af0c7119e8ed28da4898c8beeb293
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7bb5e2fa265c3a5dcabcc16d8343d5b86a4aaf42
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582509"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273908"
 ---
-# <a name="windows-messages-macros"></a>Makra zpráv Windows
+# <a name="windows-messages-macros"></a>Windows Messages Macros
 
 Toto makro předává zprávy okna.
 
@@ -50,6 +50,6 @@ V následujícím příkladu `m_hWndOther` představuje ostatní okna, která ob
 
 [!code-cpp[NVC_ATL_Windowing#137](../../atl/codesnippet/cpp/windows-messages-macros_1.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Makra](../../atl/reference/atl-macros.md)

@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-ms.openlocfilehash: 8341061ba6365beb97f4413aab8bfbbfdc25e035
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: ed2b8445a0f13b82338d2904d43fd17688d05b9e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693917"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276374"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY – makra
 
@@ -118,7 +118,7 @@ COM_INTERFACE_ENTRY_IID(iid, x)
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*<br/>
+*iid*<br/>
 [in] Identifikátor GUID rozhraní vystavené.
 
 *x*<br/>
@@ -138,7 +138,7 @@ COM_INTERFACE_ENTRY2_IID(iid, x, x2)
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*<br/>
+*iid*<br/>
 [in] Identifikátor GUID, které zadáváte pro rozhraní.
 
 *x*<br/>
@@ -157,7 +157,7 @@ COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*<br/>
+*iid*<br/>
 [in] Identifikátor GUID rozhraní pro dotazování.
 
 *punk*<br/>
@@ -202,13 +202,13 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*<br/>
+*iid*<br/>
 [in] Identifikátor GUID rozhraní pro dotazování.
 
 *punk*<br/>
 [in] Název `IUnknown` ukazatele. Musíte být členem třídy obsahující mapy modelu COM.
 
-*identifikátor CLSID*<br/>
+*clsid*<br/>
 [in] Identifikátor agregace, který se vytvoří, pokud *punk* má hodnotu NULL.
 
 ### <a name="remarks"></a>Poznámky
@@ -230,7 +230,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 *punk*<br/>
 [in] Název `IUnknown` ukazatele. Musíte být členem třídy obsahující mapy modelu COM.
 
-*identifikátor CLSID*<br/>
+*clsid*<br/>
 [in] Identifikátor agregace, který se vytvoří, pokud *punk* má hodnotu NULL.
 
 ### <a name="remarks"></a>Poznámky
@@ -268,7 +268,7 @@ COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*<br/>
+*iid*<br/>
 [in] Identifikátor GUID odtržených rozhraní.
 
 *x*<br/>
@@ -295,7 +295,7 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*<br/>
+*iid*<br/>
 [in] Identifikátor GUID odtržených rozhraní.
 
 *x*<br/>
@@ -319,7 +319,7 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
 
 ### <a name="parameters"></a>Parametry
 
-*Název třídy*<br/>
+*classname*<br/>
 [in] Základní třída aktuálního objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -342,10 +342,10 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*<br/>
+*iid*<br/>
 [in] Identifikátor GUID rozhraní vystavené.
 
-*datový sklad*<br/>
+*dw*<br/>
 [in] Parametr předaný prostřednictvím *func*.
 
 *Func*<br/>
@@ -369,7 +369,7 @@ COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
 
 ### <a name="parameters"></a>Parametry
 
-*datový sklad*<br/>
+*dw*<br/>
 [in] Parametr předaný prostřednictvím *func*.
 
 *Func*<br/>
@@ -397,4 +397,3 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 Aby se zabránilo rozhraní z používání v konkrétním případě můžete použít toto makro. Například můžete vložit toto makro do mapy modelu COM. bezprostředně před COM_INTERFACE_ENTRY_AGGREGATE_BLIND zabránit předávaná neznámé vnitřní agregační dotaz na rozhraní.
 
 Rozhraní IID částka se vypočte připojením *x* k `IID_`. Například pokud *x* je `IPersistStorage`, bude IID `IID_IPersistStorage`.
-

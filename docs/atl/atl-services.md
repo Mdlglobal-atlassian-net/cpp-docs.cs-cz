@@ -9,12 +9,12 @@ helpviewer_keywords:
 - services, ATL
 - ATL services
 ms.assetid: 8c09d1a8-7548-4d2c-947c-9d795a81659b
-ms.openlocfilehash: 50a3eecf210cacc35cd80ad82da079b18c998c8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3308e7fb38dfaab13c2570f216772e2af459a7f2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456105"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273657"
 ---
 # <a name="atl-services"></a>ATL Services
 
@@ -46,7 +46,6 @@ Poslední tři témata se zabývají koncepty související s vývojem služby:
 
 - [Tipy pro ladění](../atl/debugging-tips.md) služby ATL
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Koncepty](../atl/active-template-library-atl-concepts.md)
-

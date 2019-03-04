@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - scheduler_resource_allocation_error class
 ms.assetid: 8b40449a-7abb-4d0a-bb85-c0e9a495ae97
-ms.openlocfilehash: d8b94a17c4d842e97901e97dd2197692252eed43
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f7254306253aabc33f46694f3da16734e6efccf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613158"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276491"
 ---
 # <a name="schedulerresourceallocationerror-class"></a>scheduler_resource_allocation_error – třída
 
@@ -56,7 +56,7 @@ Toto se obvykle výjimka při volání do operačního systému z v rámci modul
 
 **Namespace:** souběžnosti
 
-##  <a name="get_error_code"></a> get_error_code –
+##  <a name="get_error_code"></a> get_error_code
 
 Vrátí kód chyby, který způsobil výjimku.
 
@@ -83,12 +83,12 @@ explicit _CRTIMP scheduler_resource_allocation_error(
 
 ### <a name="parameters"></a>Parametry
 
-*_TEXT*<br/>
+*_Message*<br/>
 Popisná zpráva chyby.
 
 *_Hresult*<br/>
 `HRESULT` Hodnotou chyby, který způsobil výjimku.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)

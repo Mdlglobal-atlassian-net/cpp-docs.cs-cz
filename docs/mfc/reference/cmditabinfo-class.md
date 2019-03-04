@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMDITabInfo [MFC], m_style
 - CMDITabInfo [MFC], m_tabLocation
 ms.assetid: 988ae1b7-4f7f-4239-b88f-7e28b3291c5e
-ms.openlocfilehash: b9b45142d0fb1d53ccecad31ace7ad1a6dd4ee40
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a42128d097c9d63d82243090e2e215a250ff432b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524706"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276335"
 ---
 # <a name="cmditabinfo-class"></a>Cmditabinfo – třída
 
@@ -87,7 +87,7 @@ Následující příklad ukazuje, jak nastavit hodnoty různých členské prom�
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Cmditabinfo –](../../mfc/reference/cmditabinfo-class.md)
+[CMDITabInfo](../../mfc/reference/cmditabinfo-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -247,7 +247,7 @@ void Serialize(CArchive& ar);
 *ar*<br/>
 [in] A [CArchive – třída](../../mfc/reference/carchive-class.md) objektu určeného k serializaci.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CMDIFrameWndEx – třída](../../mfc/reference/cmdiframewndex-class.md)<br/>
 [MDI – skupiny se záložkami](../../mfc/mdi-tabbed-groups.md)<br/>

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSocketFile [MFC], CSocketFile
 ms.assetid: 7924c098-5f72-40d6-989d-42800a47958f
-ms.openlocfilehash: f31bbda1bb6428b6bcca25d6eddce98156fac1d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3fa73320ae34283b0cdac559111a53a879c031c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588835"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274268"
 ---
 # <a name="csocketfile-class"></a>Csocketfile – třída
 
@@ -50,13 +50,13 @@ V následujícím příkladu `m_dwExpected` je přibližný počet bajtů, kter�
 
 [!code-cpp[NVC_MFCSocketThread#4](../../mfc/reference/codesnippet/cpp/csocketfile-class_1.cpp)]
 
-Další informace najdete v tématu [Windows Sockets v prostředí MFC](../../mfc/windows-sockets-in-mfc.md), [rozhraní Windows Sockets: použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md), stejně jako [rozhraní Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2).
+Další informace najdete v tématu [Windows Sockets v prostředí MFC](../../mfc/windows-sockets-in-mfc.md), [rozhraní Windows Sockets: Použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md), stejně jako [rozhraní Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cfile –](../../mfc/reference/cfile-class.md)
+[CFile](../../mfc/reference/cfile-class.md)
 
 `CSocketFile`
 
@@ -93,9 +93,9 @@ V režimu "archivu compatible" `CSocketFile` objekt poskytuje lepší výkon a s
 
 S `CSocketFile`, ale data jsou zprávy na základě; vyrovnávací paměti může obsahovat více zpráv, tak přijímá méně než počet bajtů neznamená konec souboru. Aplikace není v tomto případě blokování, jak se může stát, že se `CFile`, a můžete pokračovat, přečte zprávy z vyrovnávací paměti, dokud vyrovnávací paměť je prázdná. [CArchive::IsBufferEmpty](../../mfc/reference/carchive-class.md#isbufferempty) funkce je užitečná pro sledování stavu archivu vyrovnávací paměti v takovém případě.
 
-Další informace týkající se použití `CSocketFile`, najdete v článcích [rozhraní Windows Sockets: použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md) a [rozhraní Windows Sockets: příklad z Sockets pomocí archivy](../../mfc/windows-sockets-example-of-sockets-using-archives.md).
+Další informace týkající se použití `CSocketFile`, najdete v článcích [rozhraní Windows Sockets: Použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md) a [rozhraní Windows Sockets: Příklady soketů využívajících archivy](../../mfc/windows-sockets-example-of-sockets-using-archives.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CFile – třída](../../mfc/reference/cfile-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Csettingsstoresp – třída
+title: CSettingsStoreSP Class
 ms.date: 11/04/2016
 f1_keywords:
 - CSettingsStoreSP
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - CSettingsStoreSP [MFC], Create
 - CSettingsStoreSP [MFC], SetRuntimeClass
 ms.assetid: bcd37f40-cfd4-4d17-a5ce-3bfabe995dcc
-ms.openlocfilehash: f6bcbce291aec1941359504518e26ca936edb9e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c7a992b983552340ebe21e59d2ee9a667841ec0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604474"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275191"
 ---
-# <a name="csettingsstoresp-class"></a>Csettingsstoresp – třída
+# <a name="csettingsstoresp-class"></a>CSettingsStoreSP Class
 
 `CSettingsStoreSP` Třída je pomocná třída, která můžete použít k vytvoření instance [csettingsstore – třída](../../mfc/reference/csettingsstore-class.md).
 
@@ -145,7 +145,7 @@ Hodnota TRUE v případě úspěchu; FALSE, pokud třída identifikována *pRTI*
 
 Můžete použít [csettingsstoresp – třída](../../mfc/reference/csettingsstoresp-class.md) odvozovat z `CSettingsStore`. Pomocí této metody `SetRuntimeClass` Pokud budete chtít vytvořit objekty tohoto vlastní třídu, která je odvozena od `CSettingsStore`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

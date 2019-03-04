@@ -8,12 +8,12 @@ helpviewer_keywords:
 - agents, exception handling [Concurrency Runtime]
 - task groups, exception handling [Concurrency Runtime]
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
-ms.openlocfilehash: 7611e9d3f0bbf961784c9fed23117750a101486f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8239913c369605503134a9ea4c99789528911868
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437866"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272630"
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>Zpracování výjimek v Concurrency Runtime
 
@@ -102,7 +102,7 @@ Tento příklad vytvoří následující výstup.
 X = 15, Y = 30Caught exception: point is NULL.
 ```
 
-Úplný příklad používající zpracování výjimek v skupiny úloh, naleznete v tématu [postupy: používání zpracování výjimek, přerušení paralelní smyčky](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
+Úplný příklad používající zpracování výjimek v skupiny úloh, naleznete v tématu [jak: Použijte zpracování výjimek pro přerušení paralelní smyčky](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
 
 [[Horní](#top)]
 
@@ -185,7 +185,7 @@ Další informace o asynchronních agentů najdete v tématu [asynchronních age
 
 [[Horní](#top)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Concurrency Runtime](../../parallel/concrt/concurrency-runtime.md)<br/>
 [Funkční paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
@@ -193,4 +193,3 @@ Další informace o asynchronních agentů najdete v tématu [asynchronních age
 [Zrušení v knihovně PPL](cancellation-in-the-ppl.md)<br/>
 [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Asynchronní agenti](../../parallel/concrt/asynchronous-agents.md)
-

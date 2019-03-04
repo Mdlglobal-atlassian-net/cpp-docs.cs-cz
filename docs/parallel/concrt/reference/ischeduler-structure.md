@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
-ms.openlocfilehash: dd280884ab106bcf878b06c94e2ea3d0d99be2e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54db5d664a48f95a952eb1b409839d8ac3421e30
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603213"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274073"
 ---
 # <a name="ischeduler-structure"></a>Struktura rozhraní IScheduler
 
@@ -37,10 +37,10 @@ struct IScheduler;
 
 |Název|Popis|
 |----------|-----------------|
-|[Ischeduler::addvirtualprocessors –](#addvirtualprocessors)|Poskytuje plánovače sadu kořenových adresářů virtuálního procesoru pro jeho použití. Každý `IVirtualProcessorRoot` rozhraní představuje oprávnění ke spuštění jedno vlákno, které provádí práci jménem plánovače.|
+|[IScheduler::AddVirtualProcessors](#addvirtualprocessors)|Poskytuje plánovače sadu kořenových adresářů virtuálního procesoru pro jeho použití. Každý `IVirtualProcessorRoot` rozhraní představuje oprávnění ke spuštění jedno vlákno, které provádí práci jménem plánovače.|
 |[Ischeduler::getid –](#getid)|Vrací jedinečný identifikátor pro Plánovač.|
 |[Ischeduler::getpolicy –](#getpolicy)|Vrátí kopii objektu zásad plánovače. Další informace o zásadách plánovače naleznete v tématu [schedulerpolicy –](schedulerpolicy-class.md).|
-|[Ischeduler::notifyresourcesexternallybusy –](#notifyresourcesexternallybusy)|Upozorní tento plánovač, která hardwarových vláken reprezentována sadu kořenových adresářů virtuálního procesoru v poli `ppVirtualProcessorRoots` nyní používá jiné plánovače.|
+|[IScheduler::NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|Upozorní tento plánovač, která hardwarových vláken reprezentována sadu kořenových adresářů virtuálního procesoru v poli `ppVirtualProcessorRoots` nyní používá jiné plánovače.|
 |[IScheduler::NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|Upozorní tento plánovač, která hardwarových vláken reprezentována sadu kořenových adresářů virtuálního procesoru v poli `ppVirtualProcessorRoots` nejsou používány jiné plánovače.|
 |[Ischeduler::removevirtualprocessors –](#removevirtualprocessors)|Inicializuje odstranění kořenových adresářů virtuálního procesoru, které byly dříve přiděleny na Plánovač.|
 |[Ischeduler::Statistics –](#statistics)|Obsahuje informace související s míry přijetí a dokončení úlohy a změna v délka fronty plánovače.|
@@ -221,10 +221,10 @@ Tato metoda by měly implementovat, pokud chcete, aby správce prostředků pou�
 
 Chybí statistické údaje Resource Manageru pomocí úrovní předplatného vlákno hardwaru rozhodování prostředků přidělení a migrace. Další informace na úrovni předplatného najdete v tématu [iexecutionresource::currentsubscriptionlevel –](iexecutionresource-structure.md#currentsubscriptionlevel).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
-[Policyelementkey –](concurrency-namespace-enums.md)<br/>
+[PolicyElementKey](concurrency-namespace-enums.md)<br/>
 [SchedulerPolicy – třída](schedulerpolicy-class.md)<br/>
 [IExecutionContext – struktura](iexecutioncontext-structure.md)<br/>
 [IThreadProxy – struktura](ithreadproxy-structure.md)<br/>

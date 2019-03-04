@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: a16d7508f273fc444be65c1e6cc176911fd28e03
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d1f603f8439815c92360af40ccb807446d0e84a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643297"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273280"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Cmfceditbrowsectrl – třída
 
@@ -88,7 +88,7 @@ Použití ovládacího prvku úprav Procházet a vyberte název souboru nebo slo
 
    Když uživatel klikne na tlačítko Procházet, zobrazí se dialogové okno Výběr standardní složku.
 
-## <a name="how-to-specify-an-edit-browse-control"></a>Postupy: Určení procházet ovládacího prvku pro úpravy
+## <a name="how-to-specify-an-edit-browse-control"></a>Postupy: Zadejte textové pole procházení
 
 Proveďte následující kroky a začlenit procházet ovládacího prvku pro úpravy ve vaší aplikaci:
 
@@ -114,9 +114,9 @@ Proveďte následující kroky a začlenit procházet ovládacího prvku pro úp
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[Cedit –](../../mfc/reference/cedit-class.md)
+[CEdit](../../mfc/reference/cedit-class.md)
 
-[Cmfceditbrowsectrl –](../../mfc/reference/cmfceditbrowsectrl-class.md)
+[CMFCEditBrowseCtrl](../../mfc/reference/cmfceditbrowsectrl-class.md)
 
 ## <a name="example"></a>Příklad
 
@@ -268,7 +268,7 @@ virtual void OnDrawBrowseButton(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel na kontext zařízení.
 
 *Rect*<br/>
@@ -328,7 +328,7 @@ virtual BOOL OnIllegalFileName(CString& strFileName);
 
 ### <a name="parameters"></a>Parametry
 
-*%{strFileName/*<br/>
+*strFileName*<br/>
 Určuje název souboru neplatné.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -337,7 +337,7 @@ By měl vrátit hodnotu FALSE, pokud tento název souboru nelze předat dál dia
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)

@@ -1,5 +1,5 @@
 ---
-title: Csnapinpropertypageimpl – třída
+title: CSnapInPropertyPageImpl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CSnapInPropertyPageImpl
@@ -25,14 +25,14 @@ helpviewer_keywords:
 - property pages, ATL
 - CSnapInPropertyPageImpl class
 ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
-ms.openlocfilehash: ea79a5624937b27fe69be2c15bac3a0c40592252
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4e363f7de46de6f875a28a62d4ecdf929decdc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575744"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272169"
 ---
-# <a name="csnapinpropertypageimpl-class"></a>Csnapinpropertypageimpl – třída
+# <a name="csnapinpropertypageimpl-class"></a>CSnapInPropertyPageImpl Class
 
 Tato třída poskytuje metody pro implementaci objektu page vlastnost modul snap-in.
 
@@ -347,6 +347,6 @@ void SetModified(BOOL bChanged = TRUE);
 
 Seznam vlastností udržuje sledování, které stránky jsou "nečisté", to znamená, u kterých jste volali stránky vlastností `SetModified( TRUE )`. **Použít** tlačítko bude vždy povolen při volání `SetModified( TRUE )` pro jednu ze stránek. **Použít** tlačítka se deaktivuje při volání `SetModified( FALSE )` pro jednu ze stránek, ale pouze pokud žádná z ostatních stránek není "dirty."
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../../atl/atl-class-overview.md)

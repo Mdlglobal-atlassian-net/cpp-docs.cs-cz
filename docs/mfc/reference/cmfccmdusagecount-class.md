@@ -1,5 +1,5 @@
 ---
-title: Cmfccmdusagecount – třída
+title: CMFCCmdUsageCount Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCCmdUsageCount
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-ms.openlocfilehash: af48451bcba9bf0d5f07cd96da99be4c2a6ae99b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4ad9a60831feb6fa1147ea3f8bcfd5c6badd06c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549393"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275360"
 ---
-# <a name="cmfccmdusagecount-class"></a>Cmfccmdusagecount – třída
+# <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount Class
 
 Sleduje počet použití zpráv Windows, například když uživatel vybere položku z nabídky.
 
@@ -80,7 +80,7 @@ Je možné zachovat `CMFCCmdUsageCount` třídy dat jednotlivá spuštění toho
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cmfccmdusagecount –](../../mfc/reference/cmfccmdusagecount-class.md)
+[CMFCCmdUsageCount](../../mfc/reference/cmfccmdusagecount-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -206,7 +206,7 @@ virtual void Serialize(CArchive& ar);
 
 Tato metoda serializuje strukturu mapy příkaz počty `m_CmdUsage`a použití celkový příkazu `m_nTotalUsage`, čítač z nebo do zadaného archivu.
 
-Příklady serializace naleznete v tématu [serializace: serializace objektu](../../mfc/serialization-serializing-an-object.md).
+Příklady serializace naleznete v tématu [serializace: Serializace objektu](../../mfc/serialization-serializing-an-object.md).
 
 ##  <a name="setoptions"></a>  CMFCCmdUsageCount::SetOptions
 
@@ -236,7 +236,7 @@ Tato metoda nastaví sdílený `CMFCCmdUsageCount` datové členy třídy `m_nSt
 
 V sestavení ladění, tato metoda generuje selhání kontrolního výrazu, pokud *nMinUsagePercentage* parametr je větší než nebo rovna 100.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

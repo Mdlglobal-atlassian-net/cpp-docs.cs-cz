@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnumImpl class
 ms.assetid: cc0d8e76-e608-46db-87cd-4c7161fe32d2
-ms.openlocfilehash: 2104d98cbc068eb5d8f1408cdda0898fd55c9473
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccd083f3bfd9ae694c97e466fcb40b348fec0c27
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467142"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273769"
 ---
 # <a name="ccomenumimpl-class"></a>Ccomenumimpl – třída
 
@@ -58,7 +58,7 @@ Homogenní [třídy zásady kopírování](../../atl/atl-copy-policy-classes.md)
 |Název|Popis|
 |----------|-----------------|
 |[CComEnumImpl::CComEnumImpl](#ccomenumimpl)|Konstruktor|
-|[Ccomenumimpl –:: ~ ccomenumimpl –](#dtor)|Destruktor.|
+|[CComEnumImpl::~CComEnumImpl](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -111,7 +111,7 @@ Konstruktor
 CComEnumImpl();
 ```
 
-##  <a name="dtor"></a>  Ccomenumimpl –:: ~ ccomenumimpl –
+##  <a name="dtor"></a>  CComEnumImpl::~CComEnumImpl
 
 Destruktor.
 
@@ -292,7 +292,7 @@ Standardní hodnoty HRESULT.
 
 Pokud vrátí E_INVALIDARG *celt* je nula, vrátí S_FALSE, je-li menší než *celt* prvky jsou vráceny, v opačném případě vrátí hodnotu S_OK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IEnumOnSTLImpl – třída](../../atl/reference/ienumonstlimpl-class.md)<br/>
 [CComEnum – třída](../../atl/reference/ccomenum-class.md)<br/>

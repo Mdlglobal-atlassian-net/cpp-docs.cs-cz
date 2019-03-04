@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
-ms.openlocfilehash: b22eea0a20623bb6dfbbf60703b3db25ac4065d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fee8ba89605e6425b511407dab62be1f32e94a9d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487929"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272643"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>Formátování dat CString a zobrazení oken zpráv
 
@@ -23,7 +23,7 @@ Tato skupina funkce také globální rutina pro zobrazení okna se zprávou.
 
 |||
 |-|-|
-|[Afxextractsubstring –](#afxextractsubstring)|Extrahuje dílčích řetězců oddělených jeden znak z daného zdroje řetězce.|
+|[AfxExtractSubString](#afxextractsubstring)|Extrahuje dílčích řetězců oddělených jeden znak z daného zdroje řetězce.|
 |[AfxFormatString1](#afxformatstring1)|Nahradí zadaného řetězce pro formátování znaků "%1" v řetězci obsažené v tabulce řetězců.|
 |[AfxFormatString2](#afxformatstring2)|Nahradí dva řetězce formátu znaky "%1" a "%2" v řetězci obsažené v tabulce řetězců.|
 |[AfxMessageBox](#afxmessagebox)|Zobrazí okno se zprávou.|
@@ -173,7 +173,7 @@ int AFXAPI AfxMessageBox(
 *lpszText*<br/>
 Odkazuje `CString` objektu nebo řetězec zakončený hodnotou null obsahující zprávu, která se zobrazí v okně se zprávou.
 
-*nTyp*<br/>
+*nType*<br/>
 Styl okna se zprávou. Některý [styly oken zpráv](../../mfc/reference/styles-used-by-mfc.md#message-box-styles) do pole.
 
 *nIDHelp*<br/>
@@ -214,7 +214,7 @@ Druhý tvar funkce používá řetězec prostředku s ID *nIDPrompt* pro zobraze
 
 [!code-cpp[NVC_MFCWindowing#133](../../mfc/reference/codesnippet/cpp/cstring-formatting-and-message-box-display_4.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [CStringT – třída](../../atl-mfc-shared/reference/cstringt-class.md)

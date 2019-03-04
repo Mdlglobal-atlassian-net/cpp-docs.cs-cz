@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-ms.openlocfilehash: ffb469ec5f5542b5037d31bfdb5fd1eaab47ed38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e90dd3b23b33f6699f2df4ce0df9178f95816b8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596532"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273244"
 ---
 # <a name="location-class"></a>location – třída
 
@@ -33,7 +33,7 @@ class location;
 
 |Název|Popis|
 |----------|-----------------|
-|[umístění](#ctor)|Přetíženo. Vytvoří `location` objektu.|
+|[location](#ctor)|Přetíženo. Vytvoří `location` objektu.|
 |[~ location – destruktor](#dtor)|Odstraní `location` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
@@ -181,6 +181,6 @@ Operand `location`.
 
 **Hodnota TRUE** Pokud dvou míst je stejné, a **false** jinak.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)

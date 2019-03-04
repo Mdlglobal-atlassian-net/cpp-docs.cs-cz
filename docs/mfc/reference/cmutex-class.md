@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMutex [MFC], CMutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
-ms.openlocfilehash: 823f38a6292152774f72c97963b9add5d429d2f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f85e562af9d048503be20d1ab5d219fe8d2d039f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508781"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273293"
 ---
 # <a name="cmutex-class"></a>CMutex – třída
 
@@ -43,7 +43,7 @@ Alternativní způsob pro použití `CMutex` objekty, je přidat proměnnou typu
 
 Pro přístup k prostředkům řídí `CMutex` objekty tímto způsobem, nejprve vytvořte proměnnou jednoho z těchto typů [CSingleLock](../../mfc/reference/csinglelock-class.md) nebo typ [CMultiLock](../../mfc/reference/cmultilock-class.md) v členské funkci přístup váš prostředek. Poté zavolejte zamknout objekt `Lock` členskou funkci (například [CSingleLock::Lock](../../mfc/reference/csinglelock-class.md#lock)). V tomto okamžiku vašeho vlákna budou buď získat přístup k prostředku, počkejte prostředek, který má být všeobecně dostupné a získat přístup nebo počkejte prostředek uvolnit a vypršení časového limitu, selhání získat přístup k prostředku. V každém případě váš prostředek má byla přístupná takovým způsobem bezpečným pro vlákno. K uvolnění prostředku, použijte zámek objektu `Unlock` členskou funkci (například [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)), nebo povolíte zámek objektu spadá mimo rozsah.
 
-Další informace o používání `CMutex` objekty, najdete v článku [Multithreading: jak používat synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Další informace o používání `CMutex` objekty, najdete v článku [Multithreading: Jak používat synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -86,8 +86,7 @@ Přístup nebo vydání `CMutex` objektu, vytvořit [CMultiLock](../../mfc/refer
 > [!IMPORTANT]
 >  Po vytvoření `CMutex` objektu, použijte [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) zajistit, že mutex již neexistuje. Pokud mutex neočekávaně neexistuje, může to znamenat podvodný procesu je obsazení a může být úmyslem použít mutex závadně. Doporučený postup zabezpečení v tomto případě je zavřít popisovač a pokračovat, jako při vytváření objektu došlo k chybě.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CSyncObject – třída](../../mfc/reference/csyncobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-

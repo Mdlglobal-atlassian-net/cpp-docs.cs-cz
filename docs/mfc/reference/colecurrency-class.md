@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: e3b0a369071571fb343d1b5030eebbf7c471bc81
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 64f2b00c8a5aefe8a39c24d26af2a97625225059
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519188"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273176"
 ---
 # <a name="colecurrency-class"></a>COleCurrency – třída
 
@@ -92,7 +92,7 @@ MĚNY je implementovaný jako 8 bajtů, celé číslo dvojkového doplňku měř
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdisp.h
+**Header:** afxdisp.h
 
 ##  <a name="colecurrency"></a>  COleCurrency::COleCurrency
 
@@ -548,7 +548,7 @@ void SetStatus(CurrencyStatus  status  );
 
 ### <a name="parameters"></a>Parametry
 
-*Stav*<br/>
+*status*<br/>
 Nový stav `COleCurrency` objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -574,7 +574,7 @@ Stručný popis tyto hodnoty stavu najdete v následujícím seznamu:
 > [!CAUTION]
 >  Tato funkce je pro pokročilé situacích programování. Tato funkce nezmění data v tomto objektu. Bude se nejčastěji používají k nastavení stavu na null nebo neplatná. Všimněte si, že operátor přiřazení ( [operátoru =](#operator_eq)) a [SetCurrency](#setcurrency) nastavit stav na objektu podle hodnoty, které zdroj.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [COleVariant – třída](../../mfc/reference/colevariant-class.md)

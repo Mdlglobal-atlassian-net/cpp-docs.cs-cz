@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - IResourceManager structure
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
-ms.openlocfilehash: 7c6ed48c8896b54faa8418719f0ab7c7fa1df7c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f8f5992d9ce55100d193196a3c0f94b468ef892
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657195"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275262"
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager – struktura
 
@@ -37,17 +37,17 @@ struct IResourceManager;
 
 |Název|Popis|
 |----------|-----------------|
-|[Iresourcemanager::osversion –](#osversion)|Výčtový typ, který představuje verzi operačního systému.|
+|[IResourceManager::OSVersion](#osversion)|Výčtový typ, který představuje verzi operačního systému.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[Iresourcemanager::createnodetopology –](#createnodetopology)|K dispozici jenom v ladění sestavení modulu runtime, tato metoda je zkušebnímu zavěšení navrženým k usnadnění testování výhod Resource Manageru na různé topologie hardwaru, bez nutnosti skutečné hardwarové odpovídající konfiguraci. Prodejní buildy modulu runtime tato metoda vrátí bez provedení jakékoli akce.|
-|[Iresourcemanager::getavailablenodecount –](#getavailablenodecount)|Vrátí počet uzlů, které jsou k dispozici na Resource Manager.|
-|[Iresourcemanager::getfirstnode –](#getfirstnode)|Vrátí první uzel v pořadí výčtu definovanými správcem prostředků.|
+|[IResourceManager::CreateNodeTopology](#createnodetopology)|K dispozici jenom v ladění sestavení modulu runtime, tato metoda je zkušebnímu zavěšení navrženým k usnadnění testování výhod Resource Manageru na různé topologie hardwaru, bez nutnosti skutečné hardwarové odpovídající konfiguraci. Prodejní buildy modulu runtime tato metoda vrátí bez provedení jakékoli akce.|
+|[IResourceManager::GetAvailableNodeCount](#getavailablenodecount)|Vrátí počet uzlů, které jsou k dispozici na Resource Manager.|
+|[IResourceManager::GetFirstNode](#getfirstnode)|Vrátí první uzel v pořadí výčtu definovanými správcem prostředků.|
 |[Iresourcemanager::Reference –](#reference)|Zvýší počet odkazů na instanci Resource Manageru.|
-|[Iresourcemanager::registerscheduler –](#registerscheduler)|Zaregistruje plánovače pomocí Resource Manageru. Po registraci Plánovač byste komunikovat s využitím Resource Manageru `ISchedulerProxy` rozhraní, která je vrácena.|
+|[IResourceManager::RegisterScheduler](#registerscheduler)|Zaregistruje plánovače pomocí Resource Manageru. Po registraci Plánovač byste komunikovat s využitím Resource Manageru `ISchedulerProxy` rozhraní, která je vrácena.|
 |[IResourceManager::Release](#release)|Sníží počet odkaz na instanci Resource Manageru. Resource Manager je zničen při jeho počet odkazů dosáhne `0`.|
 
 ## <a name="remarks"></a>Poznámky
@@ -78,7 +78,7 @@ virtual void CreateNodeTopology(
 
 ### <a name="parameters"></a>Parametry
 
-*NodeCount*<br/>
+*nodeCount*<br/>
 Počet uzlů procesoru se simulované.
 
 *pCoreCount*<br/>
@@ -180,7 +180,7 @@ virtual unsigned int Release() = 0;
 
 Výsledný počet odkazů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [ISchedulerProxy – struktura](ischedulerproxy-structure.md)<br/>

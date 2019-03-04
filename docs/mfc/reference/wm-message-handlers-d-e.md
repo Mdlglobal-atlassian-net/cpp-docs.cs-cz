@@ -1,5 +1,5 @@
 ---
-title: 'WM_ – obslužné rutiny zpráv: D–E'
+title: 'Wm_ – obslužné rutiny zpráv: D - E'
 ms.date: 11/04/2016
 f1_keywords:
 - ON_WM_ERASEBKGND
@@ -31,14 +31,14 @@ helpviewer_keywords:
 - ON_WM_DEVICECHANGE [MFC]
 - WM_ messages [MFC]
 ms.assetid: 56fb89c8-68a8-4adf-883e-a9f63bf677e9
-ms.openlocfilehash: 90076e991667e829a97cb805a32763b6acbfe6d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ae9ff828f342bc4270c3701ced3e670988c7d54
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491049"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277702"
 ---
-# <a name="wm-message-handlers-d---e"></a>WM_ – obslužné rutiny zpráv: D–E
+# <a name="wm-message-handlers-d---e"></a>Wm_ – obslužné rutiny zpráv: D - E
 
 Následující položky mapování na levé straně odpovídají prototypy na pravé straně:
 
@@ -61,11 +61,10 @@ Následující položky mapování na levé straně odpovídají prototypy na pr
 |ON_WM_ENDSESSION()|afx_msg void [OnEndSession](../../mfc/reference/cwnd-class.md#onendsession)(BOOL);|
 |ON_WM_ENTERIDLE()|afx_msg void [OnEnterIdle](../../mfc/reference/cwnd-class.md#onenteridle)(UINT, CWnd *);|
 |ON_WM_ENTERSIZEMOVE()|afx_msg void [OnEnterSizeMove](../../mfc/reference/cwnd-class.md#onentersizemove)();|
-|ON_WM_ERASEBKGND()|afx_msg BOOL [onerasebkgnd –](../../mfc/reference/cwnd-class.md#onerasebkgnd)(CDC *);|
+|ON_WM_ERASEBKGND()|afx_msg BOOL [OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd)(CDC*);|
 |ON_WM_EXITSIZEMOVE()|afx_msg void [OnExitSizeMove](../../mfc/reference/cwnd-class.md#onexitsizemove)();|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Mapy zpráv](../../mfc/reference/message-maps-mfc.md)<br/>
 [Obslužné rutiny pro zprávy WM_](../../mfc/reference/handlers-for-wm-messages.md)
-

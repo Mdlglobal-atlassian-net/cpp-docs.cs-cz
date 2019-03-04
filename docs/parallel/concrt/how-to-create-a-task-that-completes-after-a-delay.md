@@ -1,18 +1,18 @@
 ---
-title: 'Postupy: Vytvoření úlohy, která je dokončena po prodlevě'
+title: 'Postupy: Vytvořte úlohu, která se dokončí po prodlevě'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - task_completion_event class, example
 - create a task that completes after a delay, example [C++]
 ms.assetid: 3fc0a194-3fdb-4eba-8b8a-b890981a985d
-ms.openlocfilehash: 89564a00dbfde078ef98cd53110853e30e33ad6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3292043d7900d5dc2bfba0afa5fdc237853a5be0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616334"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272255"
 ---
-# <a name="how-to-create-a-task-that-completes-after-a-delay"></a>Postupy: Vytvoření úlohy, která je dokončena po prodlevě
+# <a name="how-to-create-a-task-that-completes-after-a-delay"></a>Postupy: Vytvořte úlohu, která se dokončí po prodlevě
 
 Tento příklad ukazuje způsob použití [concurrency::task](../../parallel/concrt/reference/task-class.md), [concurrency::cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md), [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md), [ Concurrency::task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), [concurrency::timer](../../parallel/concrt/reference/timer-class.md), a [concurrency::call](../../parallel/concrt/reference/call-class.md) třídy k vytvoření úlohy, která se dokončí po prodlevě. Tuto metodu můžete použít k vytvoření cyklů, které příležitostně dotazovat na data, představují vypršení časových limitů, zpracování vstupu uživatele na předem stanovenou dobu zpoždění a tak dále.
 
@@ -45,9 +45,9 @@ Tady je kompletní kód v tomto příkladu:
 
 Chcete-li kód zkompilovat, ho zkopírujte a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `task-delay.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
 
-**cl.exe/EHsc úloh delay.cpp**
+**cl.exe /EHsc task-delay.cpp**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Funkční paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [task – třída (Concurrency Runtime)](../../parallel/concrt/reference/task-class.md)<br/>
@@ -58,4 +58,3 @@ Chcete-li kód zkompilovat, ho zkopírujte a vložte ho do projektu sady Visual 
 [call – třída](../../parallel/concrt/reference/call-class.md)<br/>
 [Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [Zrušení v knihovně PPL](cancellation-in-the-ppl.md)
-

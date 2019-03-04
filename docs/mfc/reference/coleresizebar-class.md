@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleResizeBar [MFC], COleResizeBar
 - COleResizeBar [MFC], Create
 ms.assetid: 56a708d9-28c5-4eb0-9404-77b688d91c63
-ms.openlocfilehash: c4b7ce80762cdb49b6007eac7f6b26019b108795
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 631276a065652ec991c4c1b5264e87b7244fb7b9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445107"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275945"
 ---
 # <a name="coleresizebar-class"></a>Coleresizebar – třída
 
@@ -57,7 +57,7 @@ Další informace najdete v článku [aktivace](../../mfc/activation-cpp.md).
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[Ccontrolbar –](../../mfc/reference/ccontrolbar-class.md)
+[CControlBar](../../mfc/reference/ccontrolbar-class.md)
 
 `COleResizeBar`
 
@@ -103,7 +103,7 @@ ID podřízené okno na změnu velikosti panelu.
 
 Nenulové, pokud byl vytvořen příčku; jinak 0.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC SUPERPAD](../../visual-cpp-samples.md)<br/>
 [CControlBar – třída](../../mfc/reference/ccontrolbar-class.md)<br/>

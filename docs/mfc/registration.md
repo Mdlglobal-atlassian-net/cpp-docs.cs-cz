@@ -11,12 +11,12 @@ helpviewer_keywords:
 - servers [MFC], installing
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
-ms.openlocfilehash: 1c8c0d32db202b8ba26afec708bcc8bab8e3282c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0bc606acfba26d27d0ab36045e4772593e760e98
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461955"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272163"
 ---
 # <a name="registration"></a>Registrace
 
@@ -46,7 +46,7 @@ Příkaz RegEdit sloučí obsah textový soubor .reg registrační databázi. Ch
 
 Při vytvoření serverové aplikace pomocí Průvodce aplikací, průvodce dokončí všechny úlohy inicializace pro vás automaticky. Tato část popisuje, co musíte udělat, když zapíšete aplikaci server ručně.
 
-Když je aplikace typu kontejner pro spouštěn serverové aplikace, OLE systémové knihovny DLL přidejte přepínač "/ vkládání" na serveru příkazový řádek. Serverová aplikace chování se liší v závislosti na tom, jestli ho spustila kontejner, tedy první věc, kterou by aplikace měla provést při jeho spuštění vyhledat "/ vkládání" nebo "-obsažení" možnost na příkazovém řádku. Pokud tento přepínač existuje, načíst jinou sadu prostředků, které ukazují server jako aktivní buď místní nebo plně otevřete. Další informace najdete v tématu [nabídky a prostředky: serverové doplňky](../mfc/menus-and-resources-server-additions.md).
+Když je aplikace typu kontejner pro spouštěn serverové aplikace, OLE systémové knihovny DLL přidejte přepínač "/ vkládání" na serveru příkazový řádek. Serverová aplikace chování se liší v závislosti na tom, jestli ho spustila kontejner, tedy první věc, kterou by aplikace měla provést při jeho spuštění vyhledat "/ vkládání" nebo "-obsažení" možnost na příkazovém řádku. Pokud tento přepínač existuje, načíst jinou sadu prostředků, které ukazují server jako aktivní buď místní nebo plně otevřete. Další informace najdete v tématu [nabídky a prostředky: Serverové doplňky](../mfc/menus-and-resources-server-additions.md).
 
 Serverová aplikace byste také zavolat jeho `CWinApp::RunEmbedded` funkci parsování příkazového řádku. Pokud vrátí nenulovou hodnotu, aplikace by neměl zobrazit její okno, protože byl spuštěn z aplikace typu kontejner, ne jako samostatné aplikace. Tato funkce aktualizuje položku serveru v systému registrační databázi a volání `RegisterAll` členskou funkci za vás provádí registraci instance.
 
@@ -56,7 +56,7 @@ Při spuštění vaší serverové aplikace, musíte zajistit, že můžete prov
 
 Pokud píšete miniserver, podle definice, které se spustí vždy kontejnerem. By se měly stále analyzovat příkazový řádek ke kontrole možnost "/ vkládání". Neexistence tuto možnost na příkazovém řádku znamená, že uživatel nepokusí spustit miniserver jako samostatné aplikace. Pokud k tomu dojde, server zaregistrujte registrační databázi systému a pak zobrazí okno se zprávou informující uživatele ke spuštění miniserver z aplikace typu kontejner.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [Servery](../mfc/servers.md)<br/>

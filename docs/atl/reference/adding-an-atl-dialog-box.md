@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC dialog boxes, ATL dialogs
 - dialog boxes, ATL
 ms.assetid: 152a378f-7b24-4f66-aeba-c740973f03a6
-ms.openlocfilehash: ee6f6b1b83c625b30b601275084550309e0e7c68
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebbb610debe5d480cd1161149f89c4d357f9cd02
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495365"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275793"
 ---
 # <a name="adding-an-atl-dialog-box"></a>Přidání dialogového okna ATL
 
@@ -32,7 +32,7 @@ Ve výchozím nastavení, Průvodce dialogem ATL implementuje dialog odvozený o
 
 Další informace najdete v tématu [implementace dialogového okna](../../atl/implementing-a-dialog-box.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přidání třídy](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Třídy oken](../../atl/atl-window-classes.md)<br/>

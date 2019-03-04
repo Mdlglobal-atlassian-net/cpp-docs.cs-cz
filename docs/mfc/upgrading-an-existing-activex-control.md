@@ -12,12 +12,12 @@ helpviewer_keywords:
 - upgrading ActiveX controls
 - licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
-ms.openlocfilehash: 18641c6e25aaccd6b5d0bcbbddbf8fc73b2a3c52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc7313c862d3536326894c947fa371d833e8fab8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525798"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276977"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Upgradování existujícího ovládacího prvku ActiveX
 
@@ -42,7 +42,7 @@ Tento článek popisuje v následujících tématech:
 
 - [Úrovně zabezpečení prohlížeče Internet Explorer a chování ovládacího prvku](#_core_internet_explorer_browser_safety_levels_and_control_behavior)
 
-Můžete také přidat optimalizace, jak je popsáno v [ovládací prvky ActiveX: optimalizace](../mfc/mfc-activex-controls-optimization.md). Monikery je možné stáhnout vlastnosti a velké objekty BLOB asynchronně, jak je popsáno v [ovládací prvky Activexna Internetu](../mfc/activex-controls-on-the-internet.md).
+Můžete také přidat optimalizace, jak je popsáno v [ovládací prvky ActiveX: Optimalizace](../mfc/mfc-activex-controls-optimization.md). Monikery je možné stáhnout vlastnosti a velké objekty BLOB asynchronně, jak je popsáno v [ovládací prvky Activexna Internetu](../mfc/activex-controls-on-the-internet.md).
 
 ##  <a name="_core_packaging_code_for_downloading"></a> Balení kódu pro stahování
 
@@ -220,7 +220,7 @@ Použití licencovaného ovládacího prvku na stránce HTML na nonlicensed poč
 </OBJECT>
 ```
 
-Další informace o licencování ovládacích prvků naleznete v tématu [ovládací prvky ActiveX: licencování ovládacího prvku ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md).
+Další informace o licencování ovládacích prvků naleznete v tématu [ovládací prvky ActiveX: Licencování ovládacího prvku ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md).
 
 ##  <a name="_core_signing_code"></a> Podepisování kódu
 
@@ -270,9 +270,8 @@ Prohlížeč obsahuje možnosti pro úroveň zabezpečení, konfigurovatelná u�
 
 - Skriptování a stálost dojít bez upozornění.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Úlohy internetového programování MFC](../mfc/mfc-internet-programming-tasks.md)<br/>
 [Základy internetového programování v prostředí MFC](../mfc/mfc-internet-programming-basics.md)<br/>
-[MFC – ovládací prvky ActiveX: Licencování ovládacích prvků ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md)
-
+[MFC – ovládací prvky ActiveX: Licencování ovládacího prvku ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - collection classes [MFC], lists
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
-ms.openlocfilehash: f7ded70431b80257433058cc9af89bcb137c4247
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b74ee8a779ad2fffa801749d9818f985bc8c352
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490854"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273306"
 ---
 # <a name="collections"></a>Kolekce
 
@@ -98,7 +98,7 @@ Vlastnosti z třídy kolekcí MFC tabulku v [doporučení pro výběr třídy ko
 
 - [Doporučení pro výběr třídy kolekce](../mfc/recommendations-for-choosing-a-collection-class.md)
 
-- [Postupy: Příprava typově bezpečné kolekce](../mfc/how-to-make-a-type-safe-collection.md)
+- [Postupy: Typově bezpečné kolekce](../mfc/how-to-make-a-type-safe-collection.md)
 
 - [Vytváření kolekcí zásobníků a front](../mfc/creating-stack-and-queue-collections.md)
 
@@ -114,8 +114,7 @@ Vlastnosti z třídy kolekcí MFC tabulku v [doporučení pro výběr třídy ko
 
 - [Smazání všech objektů v kolekci CObject](../mfc/deleting-all-objects-in-a-cobject-collection.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Koncepty](../mfc/mfc-concepts.md)<br/>
 [Obecná témata MFC](../mfc/general-mfc-topics.md)
-

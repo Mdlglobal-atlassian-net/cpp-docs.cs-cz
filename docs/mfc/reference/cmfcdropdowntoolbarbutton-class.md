@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMFCDropDownToolbarButton [MFC], SetDefaultCommand
 - CMFCDropDownToolbarButton [MFC], m_uiShowBarDelay
 ms.assetid: bc9d69e6-bd3e-4c15-9368-e80a504a0ba7
-ms.openlocfilehash: 3544bbd65b5e0c754552f93b45263f768b73fe69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b33e50328fd3c8997774515f248780edda6bcc75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625313"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275490"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>Cmfcdropdowntoolbarbutton – třída
 
@@ -110,9 +110,9 @@ Informace o tom, jak implementovat rozevírací seznam nástrojů, naleznete v t
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cmfctoolbarbutton –](../../mfc/reference/cmfctoolbarbutton-class.md)
+[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)
 
-[Cmfcdropdowntoolbarbutton –](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)
+[CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -288,7 +288,7 @@ virtual SIZE OnCalculateSize(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Kontext zařízení, která se zobrazí tlačítko.
 
 *sizeDefault*<br/>
@@ -391,7 +391,7 @@ Nenulové, pokud tlačítko zpracovává zprávy nápovědy. jinak 0.
 
 Tato metoda rozšiřuje implementaci základní třídy ( [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)) voláním [CMFCDropDownToolbarButton::OnClick](#onclick) metodu s *bDelay*nastavena na hodnotu FALSE. Tato metoda vrátí hodnotu, která je vrácena [CMFCDropDownToolbarButton::OnClick](#onclick).
 
-Další informace o zprávě WM_HELPHITTEST najdete v tématu [TN028: podpora pomůže Context-Sensitive](../../mfc/tn028-context-sensitive-help-support.md).
+Další informace o zprávě WM_HELPHITTEST najdete v tématu [TN028: Podpora kontextové nápovědy](../../mfc/tn028-context-sensitive-help-support.md).
 
 ##  <a name="oncustomizemenu"></a>  CMFCDropDownToolbarButton::OnCustomizeMenu
 
@@ -444,7 +444,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Kontext zařízení, která se zobrazí tlačítko.
 
 *Rect*<br/>
@@ -485,7 +485,7 @@ virtual int OnDrawOnCustomizeList(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Kontext zařízení, která se zobrazí tlačítko.
 
 *Rect*<br/>
@@ -538,12 +538,11 @@ void SetDefaultCommand(UINT uiCmd);
 
 Voláním této metody lze zadat výchozí příkaz, který rozhraní provede, když uživatel klikne na tlačítko. Položku s Identifikátorem příkazu určené *uiCmd* se musí nacházet v rozevíracím seznamu nadřazeného panelu nástrojů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCDropDownToolBar – třída](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
 [CMFCToolBar – třída](../../mfc/reference/cmfctoolbar-class.md)<br/>
 [CMFCToolBarMenuButton – třída](../../mfc/reference/cmfctoolbarmenubutton-class.md)<br/>
-[Návod: Umístění ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Návod: Vkládání ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md)

@@ -1,5 +1,5 @@
 ---
-title: Cpanecontainer – třída
+title: CPaneContainer Class
 ms.date: 11/04/2016
 f1_keywords:
 - CPaneContainer
@@ -120,14 +120,14 @@ helpviewer_keywords:
 - CPaneContainer [MFC], StoreRecentDockSiteInfo
 - CPaneContainer [MFC], StretchPaneContainer
 ms.assetid: beb79e08-f611-4d66-ba04-053baa79bf86
-ms.openlocfilehash: bd0e238dd936dfff0677e41831c72229171cb656
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 099f1cccd178068f9b96bda6193b5ee9df3b66c3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504374"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274957"
 ---
-# <a name="cpanecontainer-class"></a>Cpanecontainer – třída
+# <a name="cpanecontainer-class"></a>CPaneContainer Class
 
 `CPaneContainer` Třída je základní komponenta dokovacího modelu implementovaná pomocí knihovny MFC. Objekt této třídy ukládá ukazatele do dvou ukotvitelných podoken nebo dvou instancí `CPaneContainer.` také ukládá ukazatel k oddělovači, který odděluje podokna (nebo kontejnery). Díky vnořování kontejnerů uvnitř kontejnerů umožňuje rozhraní vytvořit binární strom, který představuje komplexní dokovací rozložení. Kořen binárního stromu je uložen v [cpanecontainermanager –](../../mfc/reference/cpanecontainermanager-class.md) objektu.
 
@@ -223,7 +223,7 @@ Následující příklad ukazuje, jak vytvořit instanci `CPaneContainer` tříd
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cpanecontainer –](../../mfc/reference/cpanecontainer-class.md)
+[CPaneContainer](../../mfc/reference/cpanecontainer-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -962,7 +962,7 @@ virtual int StretchPaneContainer(
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

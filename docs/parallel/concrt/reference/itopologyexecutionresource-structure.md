@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITopologyExecutionResource structure
 ms.assetid: e36756f7-4cd9-4fa6-ba60-23fea58ef2bf
-ms.openlocfilehash: fa4d8978cbdb5cab36367138ffb607a722b6b91a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4bfb614d5ffd6a399fae33d38a50cee62f17c208
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631072"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272851"
 ---
 # <a name="itopologyexecutionresource-structure"></a>ITopologyExecutionResource – struktura
 
@@ -73,6 +73,6 @@ virtual ITopologyExecutionResource *GetNext() const = 0;
 
 Rozhraní pro další spuštění prostředku v pořadí výčtu. Pokud v pořadí výčtu uzlu, ke kterému patří tento prostředek spuštění nejsou žádné další uzly, tato metoda vrátí hodnotu `NULL`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)

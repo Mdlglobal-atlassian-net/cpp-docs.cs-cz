@@ -1,5 +1,5 @@
 ---
-title: ISpecifyPropertyPagesImpl – třída
+title: ISpecifyPropertyPagesImpl Class
 ms.date: 11/04/2016
 f1_keywords:
 - ISpecifyPropertyPagesImpl
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ISpecifyPropertyPages
 - ISpecifyPropertyPagesImpl class
 ms.assetid: 4e4b9795-b656-4d56-9b8c-85941e7731f9
-ms.openlocfilehash: fcabbcd2d5977a28f46b3d8ebfc47e8fd978f3cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f5db65d1c318677a630307f44533e51d63ec44d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470778"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272006"
 ---
-# <a name="ispecifypropertypagesimpl-class"></a>ISpecifyPropertyPagesImpl – třída
+# <a name="ispecifypropertypagesimpl-class"></a>ISpecifyPropertyPagesImpl Class
 
 Tato třída implementuje `IUnknown` a poskytuje výchozí implementaci třídy [ISpecifyPropertyPages](/windows/desktop/api/ocidl/nn-ocidl-ispecifypropertypages) rozhraní.
 
@@ -78,7 +78,7 @@ ATL – používá k načtení každý identifikátor CLSID mapy vlastností obj
 
 Zobrazit [ISpecifyPropertyPages::GetPages](/windows/desktop/api/ocidl/nf-ocidl-ispecifypropertypages-getpages) ve Windows SDK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IPropertyPageImpl – třída](../../atl/reference/ipropertypageimpl-class.md)<br/>
 [IPerPropertyBrowsingImpl – třída](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>

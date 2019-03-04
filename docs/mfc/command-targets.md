@@ -7,12 +7,12 @@ helpviewer_keywords:
 - messages, command [MFC]
 - command routing [MFC], command targets
 ms.assetid: b0f784e5-c6dc-4391-9e71-aa7b7dcbe9f0
-ms.openlocfilehash: 3f3305e7b67f4c001861c79c76c3b43a0c5a8ef0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed3d6a68967dc7f4244f887ae34760fdb99fa7f5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506875"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274439"
 ---
 # <a name="command-targets"></a>Cíle příkazů
 
@@ -20,7 +20,6 @@ Na obrázku [příkazy v rámci](../mfc/user-interface-objects-and-command-ids.m
 
 Windows odešle zprávy, které nejsou příkaz zprávy přímo do okna je pak volá jehož obslužné rutiny pro zprávy. Však rozhraní směrovat příkazy na počet objektů Release candidate – nazývá "cíle příkazů", z nichž jeden obvykle vyvolá obslužnou rutinu pro příkaz. Funkce obslužných rutin fungovat i pro příkazy a standardní zprávy Windows, ale mechanismy, které se nazývají se liší, jak je vysvětleno v [jakým způsobem volá Framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zprávy a příkazy v prostředí .NET Framework](../mfc/messages-and-commands-in-the-framework.md)
-

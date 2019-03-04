@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CDaoParameterInfo structure [MFC]
 - DAO (Data Access Objects), Parameters collection
 ms.assetid: 45fd53cd-cb84-4e12-b48d-7f2979f898ad
-ms.openlocfilehash: 29248f04833662750d99b112fe2386c6ff4d97fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 62addd44f8aa8fceafef6a27244994a2ec6b766b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545909"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273943"
 ---
 # <a name="cdaoparameterinfo-structure"></a>CDaoParameterInfo – struktura
 
@@ -57,7 +57,7 @@ Načte informace [CDaoQueryDef::GetParameterInfo](../../mfc/reference/cdaoqueryd
 
 **Záhlaví:** afxdao.h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Struktury, styly, zpětná volání a mapy zpráv](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDaoQueryDef – třída](../../mfc/reference/cdaoquerydef-class.md)

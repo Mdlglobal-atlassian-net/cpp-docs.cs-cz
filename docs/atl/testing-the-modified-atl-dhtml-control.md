@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing controls
 - DHTML controls, testing
 ms.assetid: 42316118-9433-410f-9d8a-0efcc1eff824
-ms.openlocfilehash: 99f55807a7da647af0961f73c600ae0e31166cdc
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 55cdaba64ccb95ee5695c082a5e146b1e7dc2cf3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330967"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277233"
 ---
 # <a name="testing-the-modified-atl-dhtml-control"></a>Testování ovládacího prvku ATL DHTML upravené
 
@@ -23,7 +23,7 @@ Vyzkoušejte si nového ovládacího prvku abyste viděli, jak funguje teď.
 
    Změnit velikost ovládacího prvku a zobrazit všechny tlačítek, které jste přidali.
 
-1. Zkontrolujte dvě tlačítka, které jste vložili změnou kódu HTML. Každé tlačítko nese popisek, který jste určili v [úprav ovládacího prvku ATL DHTML](../atl/modifying-the-atl-dhtml-control.md): **aktualizovat** a **HelloHTML**.
+1. Zkontrolujte dvě tlačítka, které jste vložili změnou kódu HTML. Každé tlačítko nese popisek, který jste určili v [úprav ovládacího prvku ATL DHTML](../atl/modifying-the-atl-dhtml-control.md): **Aktualizovat** a **HelloHTML**.
 
 1. Testování dvě nová tlačítka, které chcete zobrazit, jak fungují.
 
@@ -41,6 +41,6 @@ Teď otestujte metody, které nejsou součástí uživatelského rozhraní.
 
 Další informace o různých prvků a soubory, které tvoří ovládacího prvku ATL DHTML, naleznete v tématu [identifikace prvků projektu ovládací prvek DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora pro ovládací prvek DHTML](../atl/atl-support-for-dhtml-controls.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Postupy: Programování smyčky parallel_for_each'
+title: 'Postupy: Smyčky parallel_for_each'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - writing a parallel_for_each loop [Concurrency Runtime]
 - parallel_for_each function, example
 ms.assetid: fa9c0ba6-ace0-4f88-8681-c7c1f52aff20
-ms.openlocfilehash: e3b19ec180f9f4e75a2f280a0ecd159e5b932565
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19af9be8ef6d9c38a0942e7c85caa0a8bc4e6813
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610506"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272214"
 ---
-# <a name="how-to-write-a-parallelforeach-loop"></a>Postupy: Programování smyčky parallel_for_each
+# <a name="how-to-write-a-parallelforeach-loop"></a>Postupy: Smyčky parallel_for_each
 
 Tento příklad ukazuje způsob použití [: concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmus, který se Vypočítat hodnotu count prvočísel v [std::array](../../standard-library/array-class-stl.md) objekt paralelně.
 
@@ -38,14 +38,13 @@ took 1653 ms
 
 Chcete-li kód zkompilovat, ho zkopírujte a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `parallel-count-primes.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
 
-**cl.exe/EHsc paralelní počet primes.cpp**
+**cl.exe /EHsc parallel-count-primes.cpp**
 
 ## <a name="robust-programming"></a>Robustní programování
 
-Výraz lambda, který příklad předá `parallel_for_each` algoritmus používá `InterlockedIncrement` funkce Povolit paralelní iterace smyčky se zvýší čítač současně. Pokud například používáte funkce `InterlockedIncrement` k synchronizaci přístupu ke sdíleným prostředkům, můžete představovat problémových míst výkonu ve vašem kódu. Mechanismus uvolnění zámku synchronizace můžete použít například, [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) třídy, chcete-li odstranit mělo současně přístup ke sdíleným prostředkům. Příklad, který se používá `combinable` tímto způsobem najdete v tématu [postupy: použití objektu combinable ke zlepšení výkonu](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md).
+Výraz lambda, který příklad předá `parallel_for_each` algoritmus používá `InterlockedIncrement` funkce Povolit paralelní iterace smyčky se zvýší čítač současně. Pokud například používáte funkce `InterlockedIncrement` k synchronizaci přístupu ke sdíleným prostředkům, můžete představovat problémových míst výkonu ve vašem kódu. Mechanismus uvolnění zámku synchronizace můžete použít například, [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) třídy, chcete-li odstranit mělo současně přístup ke sdíleným prostředkům. Příklad, který se používá `combinable` tímto způsobem najdete v tématu [jak: Použití objektu combinable ke zlepšení výkonu](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md)<br/>
 [parallel_for_each Function](reference/concurrency-namespace-functions.md#parallel_for_each)
-

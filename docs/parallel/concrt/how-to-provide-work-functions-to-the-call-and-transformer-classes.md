@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using the transformer class [Concurrency Runtime]
 - using the call class [Concurrency Runtime]
 ms.assetid: df715ce4-8507-41ca-b204-636d11707a73
-ms.openlocfilehash: d9d472ddd8d5c7baf3cb16e1df33a2bdb74c5381
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c41c29dae277105f268171503e662e2a02e3857e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500997"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277686"
 ---
 # <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>Postupy: Poskytování pracovních funkcí třídám call a transformer
 
@@ -19,7 +19,7 @@ Toto téma ukazuje několik způsobů, jak poskytování pracovních funkcí k [
 
 První příklad ukazuje, jak předat výraz lambda, který má `call` objektu. Druhý příklad ukazuje, jak předat objekt a funkce `call` objektu. Třetí příklad ukazuje, jak metody třídy pro vytvoření vazby `call` objektu.
 
-Pro ilustraci, každý příklad v tomto tématu používá `call` třídy. Příklad, který se používá `transformer` najdete v tématu [postupy: použití transformace v datovém kanálu](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md).
+Pro ilustraci, každý příklad v tomto tématu používá `call` třídy. Příklad, který se používá `transformer` najdete v tématu [jak: Použití transformace v datovém kanálu](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md).
 
 ## <a name="example"></a>Příklad
 
@@ -55,9 +55,9 @@ Můžete také přiřadit výsledek `bind1st` funkce [std::function](../../stand
 
 Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `call.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
 
-**cl.exe/EHsc call.cpp**
+**cl.exe /EHsc call.cpp**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

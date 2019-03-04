@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - event handling, about event handling
 ms.assetid: e4812b0d-6fdd-4e8c-bdb8-378a25c7bde2
-ms.openlocfilehash: 8634765bcfdc483e014b8552c67a57a11236f426
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e939c693f3f474cce9d2ca118bc86d163d6146dc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667724"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277466"
 ---
 # <a name="event-handling-and-atl"></a>Zpracování událostí a ATL
 
@@ -39,7 +39,6 @@ Shrnuje, pomocí tabulek, hlavní způsoby implementace událostí rozhraní a n
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Obsahuje odkazy na koncepční témata o tom, jak programovat pomocí knihovnu Active Template Library.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Koncepty](../atl/active-template-library-atl-concepts.md)
-

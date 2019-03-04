@@ -1,5 +1,5 @@
 ---
-title: Cpagesetupdialog – třída
+title: CPageSetupDialog Class
 ms.date: 11/04/2016
 f1_keywords:
 - CPageSetupDialog
@@ -30,14 +30,14 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: d3fdcfa664de93f62b8b4dbcbc6184d08fdf591c
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 9a8940aa23b23281a6de6ce7e75bb1e43341b14a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178079"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277882"
 ---
-# <a name="cpagesetupdialog-class"></a>Cpagesetupdialog – třída
+# <a name="cpagesetupdialog-class"></a>CPageSetupDialog Class
 
 Zapouzdřuje služby poskytované dialogovým oknem běžných nastavení stránky OLE Windows s další podporou nastavení a úprav okrajů tisku.
 
@@ -99,7 +99,7 @@ Pokud `DoModal` vrátí IDOK, můžete použít několik `CPageSetupDialog`pro �
 
 [CDialog](../../mfc/reference/cdialog-class.md)
 
-[Ccommondialog –](../../mfc/reference/ccommondialog-class.md)
+[CCommonDialog](../../mfc/reference/ccommondialog-class.md)
 
 `CPageSetupDialog`
 
@@ -322,10 +322,10 @@ virtual UINT OnDrawPage(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel na kontext zařízení tiskárny.
 
-*nZpráva*<br/>
+*nMessage*<br/>
 Určuje zprávu, s upozorněním oblasti na stránce se vykreslí. Může být jedna z následujících akcí:
 
 - WM_PSD_FULLPAGERECT oblasti celou stránku.
@@ -340,7 +340,7 @@ Určuje zprávu, s upozorněním oblasti na stránce se vykreslí. Může být j
 
 - WM_PSD_YAFULLPAGERECT oblast pro reprezentaci návratovou hodnotu. Tato oblast se rozšiřuje na okraji oblasti ukázkové stránky.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Ukazatel [crect –](../../atl-mfc-shared/reference/crect-class.md) nebo [RECT](/windows/desktop/api/windef/ns-windef-tagrect) objekt, který obsahuje souřadnice oblasti pro kreslení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -403,9 +403,8 @@ Nenulová hodnota, pokud zpracovává; jinak 0.
 
 Přepsání této funkce můžete přizpůsobit kreslení obrázku. Je-li přepsat tuto funkci a vrátí hodnotu TRUE, musí vykreslení celého obrázku. Je-li přepsat tuto funkci a vrátí hodnotu FALSE, je celý výchozí image vykreslené rozhraní framework.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC WORDPAD](../../visual-cpp-samples.md)<br/>
 [CCommonDialog – třída](../../mfc/reference/ccommondialog-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-

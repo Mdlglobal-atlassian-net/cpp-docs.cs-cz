@@ -2,12 +2,12 @@
 title: Používání akcelerátoru a objektů accelerator_view
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
-ms.openlocfilehash: 4144adf288ddefd7f7dd00ada91f97aea94e6bce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05ca53d075867fefa43f7471bb795040d075274e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668595"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272894"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Používání akcelerátoru a objektů accelerator_view
 
@@ -170,15 +170,15 @@ Umístění zařízení tří speciálních akcelerátorů jsou dostupná jako v
 
 - [Accelerator::direct3d_ref – datový člen](reference/accelerator-class.md#direct3d_ref): Tento jednovláknový akcelerátor používá software na procesoru pro emulaci obecné grafické karty. Používá se ve výchozím nastavení pro ladění, ale není užitečné ve výrobě, protože je pomalejší než hardwarové akcelerátory. Kromě toho je k dispozici pouze v rozhraní DirectX SDK a sady Windows SDK a je nepravděpodobné, že by být nainstalovaný na počítači zákazníka. Další informace najdete v tématu [ladění kódu GPU](/visualstudio/debugger/debugging-gpu-code).
 
-- [Accelerator::direct3d_warp – datový člen](reference/accelerator-class.md#direct3d_warp): tento akcelerátor poskytuje záložní řešení pro provádění kódu jazyka C++ AMP na vícejádrových procesorech pomocí Streaming SIMD Extensions (SSE).
+- [Accelerator::direct3d_warp – datový člen](reference/accelerator-class.md#direct3d_warp): Tento akcelerátor poskytuje záložní řešení pro provádění kódu jazyka C++ AMP na vícejádrových procesorech pomocí Streaming SIMD Extensions (SSE).
 
-- [Accelerator::cpu_accelerator – datový člen](reference/accelerator-class.md#cpu_accelerator): pomocí tohoto akcelerátoru nastavíte pracovní pole. Nedokáže spustit kód jazyka C++ AMP. Další informace najdete v tématu [pracovní pole v jazyce C++ AMP](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/11/09/staging-arrays-in-c-amp/) Zveřejněte na paralelní programování v blogu nativního kódu.
+- [Accelerator::cpu_accelerator – datový člen](reference/accelerator-class.md#cpu_accelerator): Pomocí tohoto akcelerátoru nastavíte pracovní pole. Nedokáže spustit kód jazyka C++ AMP. Další informace najdete v tématu [pracovní pole v jazyce C++ AMP](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/11/09/staging-arrays-in-c-amp/) Zveřejněte na paralelní programování v blogu nativního kódu.
 
 ## <a name="interoperability"></a>Interoperabilita
 
 Runtime C++ AMP podporuje interoperabilitu mezi `accelerator_view` třídou a rozhraním Direct3D [rozhraní ID3D11Device](/windows/desktop/api/d3d11/nn-d3d11-id3d11device). [Create_accelerator_view –](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) přijímá metodu `IUnknown` rozhraní a vrátí `accelerator_view` objektu. [Get_device –](reference/concurrency-direct3d-namespace-functions-amp.md#get_device) přijímá metodu `accelerator_view` objekt a vrátí `IUnknown` rozhraní.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Ladění kódu GPU](/visualstudio/debugger/debugging-gpu-code)<br/>

@@ -1,5 +1,5 @@
 ---
-title: CMFCColorPickerCtrl – třída
+title: CMFCColorPickerCtrl Class
 ms.date: 11/19/2018
 f1_keywords:
 - CMFCColorPickerCtrl
@@ -40,14 +40,14 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: 38fe09b5fdde85dad485e126f6c094196fe68ff4
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 048430c78dfed4158f6fb84eacc07972b79d8a51
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176923"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276006"
 ---
-# <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl – třída
+# <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl Class
 
 `CMFCColorPickerCtrl` Třída poskytuje funkce pro ovládací prvek, který se používá pro výběr barvy.
 
@@ -126,7 +126,7 @@ Následující příklad ukazuje, jak nakonfigurovat `CMFCColorPickerCtrl` pomoc
 
 [CButton](../../mfc/reference/cbutton-class.md)
 
-[CMFCColorPickerCtrl –](../../mfc/reference/cmfccolorpickerctrl-class.md)
+[CMFCColorPickerCtrl](../../mfc/reference/cmfccolorpickerctrl-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -156,7 +156,7 @@ virtual void DrawCursor(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *Rect*<br/>
@@ -446,7 +446,7 @@ Typy jsou definovány `CMFCColorPickerCtrl::COLORTYPE` výčtu. Možné typy jso
 
 Chcete-li určit typ ovládacího prvku pro výběr barev, volejte tuto metodu, před vytvořením ovládacím prvku Windows.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CD2DMesh [MFC], Open
 - CD2DMesh [MFC], m_pMesh
 ms.assetid: 11a2c78a-1367-40e8-a34f-44aa0509a4c9
-ms.openlocfilehash: 1cc1769f66b54f2a9a23ef9ad94298687fe4d925
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f4ad6fd054eeb8576c2fdb2dc924f70034b3abad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445640"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275108"
 ---
 # <a name="cd2dmesh-class"></a>Cd2dmesh – třída
 
@@ -48,7 +48,7 @@ class CD2DMesh : public CD2DResource;
 |Název|Popis|
 |----------|-----------------|
 |[CD2DMesh::CD2DMesh](#cd2dmesh)|Vytvoří objekt cd2dmesh –.|
-|[Cd2dmesh –:: ~ cd2dmesh –](#_dtorcd2dmesh)|Destruktor. Volá se, když se likviduje objektu D2D mřížky.|
+|[CD2DMesh::~CD2DMesh](#_dtorcd2dmesh)|Destruktor. Volá se, když se likviduje objektu D2D mřížky.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -57,7 +57,7 @@ class CD2DMesh : public CD2DResource;
 |[CD2DMesh::Attach](#attach)|Bude k obrazci existujících prostředků rozhraní pro objekt|
 |[CD2DMesh::Create](#create)|Vytvoří cd2dmesh –. (Přepíše [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
 |[CD2DMesh::Destroy](#destroy)|Odstraní objekt cd2dmesh –. (Přepíše [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
-|[CD2DMesh::detach](#detach)|Odpojí prostředků rozhraní z objektu|
+|[CD2DMesh::Detach](#detach)|Odpojí prostředků rozhraní z objektu|
 |[CD2DMesh::Get](#get)|Vrátí ID2D1Mesh rozhraní|
 |[CD2DMesh::IsValid](#isvalid)|Zkontroluje platnost prostředku (přepíše [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
 |[CD2DMesh::Open](#open)|Otevře se síť pro naplnění.|
@@ -78,7 +78,7 @@ class CD2DMesh : public CD2DResource;
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cd2dresource –](../../mfc/reference/cd2dresource-class.md)
+[CD2DResource](../../mfc/reference/cd2dresource-class.md)
 
 `CD2DMesh`
 
@@ -86,7 +86,7 @@ class CD2DMesh : public CD2DResource;
 
 **Záhlaví:** afxrendertarget.h
 
-##  <a name="_dtorcd2dmesh"></a>  Cd2dmesh –:: ~ cd2dmesh –
+##  <a name="_dtorcd2dmesh"></a>  CD2DMesh::~CD2DMesh
 
 Destruktor. Volá se, když se likviduje objektu D2D mřížky.
 
@@ -218,6 +218,6 @@ operator ID2D1Mesh*();
 
 Ukazatel na rozhraní ID2D1Mesh nebo hodnota NULL, pokud objekt ještě není inicializován.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

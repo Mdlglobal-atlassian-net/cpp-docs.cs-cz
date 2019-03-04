@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: 56c006eaa9b0c9860a973727602fd29a33d7ec43
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: b73e27097a64722afd6bad5b9bc2157655bd9aad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176625"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274502"
 ---
 # <a name="csplitbutton-class"></a>Csplitbutton – třída
 
@@ -196,7 +196,7 @@ První příkaz v následujícím příkladu kódu ukazuje, [CSplitButton::SetDr
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/csplitbutton-class_1.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CSplitButton – třída](../../mfc/reference/csplitbutton-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

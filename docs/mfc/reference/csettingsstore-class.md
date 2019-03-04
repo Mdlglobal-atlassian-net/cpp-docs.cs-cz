@@ -1,5 +1,5 @@
 ---
-title: Csettingsstore – třída
+title: CSettingsStore Class
 ms.date: 11/04/2016
 f1_keywords:
 - CSettingsStore
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - CSettingsStore [MFC], Read
 - CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
-ms.openlocfilehash: 7f1ca94423cb1ef269c7556be25b1926fa42d2a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1de26ceedfd29f276693be512bd41f169fb44b94
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614679"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274541"
 ---
-# <a name="csettingsstore-class"></a>Csettingsstore – třída
+# <a name="csettingsstore-class"></a>CSettingsStore Class
 
 Zalomí funkce rozhraní API Windows, poskytuje objektově orientovaného rozhraní, které používáte pro přístup k registru.
 
@@ -296,7 +296,7 @@ virtual BOOL Read(
 *bcArray*<br/>
 [out] Odkaz na proměnnou pole bajtů, který přijímá hodnotu čtení z klíče registru.
 
-*lppoint –*<br/>
+*lpPoint*<br/>
 [out] Odkaz na ukazatel `POINT` struktura, která přijímá hodnotu čtení z klíče registru.
 
 *Rect*<br/>
@@ -420,7 +420,7 @@ virtual BOOL Write(
 *Rect*<br/>
 [in] Odkaz [crect –](../../atl-mfc-shared/reference/crect-class.md) proměnnou, která obsahuje data k uložení.
 
-*lppoint –*<br/>
+*lpPoint*<br/>
 [in] Odkaz na ukazatel `POINT` proměnnou, která obsahuje data k uložení.
 
 *pData*<br/>
@@ -446,7 +446,7 @@ Hodnota TRUE v případě úspěchu; v opačném případě FALSE.
 
 Aby bylo možné zapsat do registru, je nutné nastavit *bReadOnly* na nenulovou hodnotu, když vytvoříte [csettingsstore –](../../mfc/reference/csettingsstore-class.md) objektu. Další informace najdete v tématu [CSettingsStore::CSettingsStore](#csettingsstore).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

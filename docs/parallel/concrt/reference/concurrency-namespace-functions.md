@@ -33,22 +33,22 @@ f1_keywords:
 - ppltasks/concurrency::when_all
 - ppltasks/concurrency::when_any
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-ms.openlocfilehash: 7550e6f0ef44abd19b3fab89127ff898c72738f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cb726ccc475d6d08e036229d0d06089e3fac31c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436176"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278207"
 ---
 # <a name="concurrency-namespace-functions"></a>Funkce oboru názvů Concurrency
 
 ||||
 |-|-|-|
-|[ALLOC](#alloc)|[Createresourcemanager –](#createresourcemanager)|[Disabletracing –](#disabletracing)|
-|[Enabletracing –](#enabletracing)|[Zdarma](#free)|[GetExecutionContextId](#getexecutioncontextid)|
-|[Getosversion –](#getosversion)|[Getprocessorcount –](#getprocessorcount)|[Getprocessornodecount –](#getprocessornodecount)|
+|[ALLOC](#alloc)|[CreateResourceManager](#createresourcemanager)|[DisableTracing](#disabletracing)|
+|[Enabletracing –](#enabletracing)|[Free](#free)|[GetExecutionContextId](#getexecutioncontextid)|
+|[GetOSVersion](#getosversion)|[GetProcessorCount](#getprocessorcount)|[GetProcessorNodeCount](#getprocessornodecount)|
 |[GetSchedulerId](#getschedulerid)|[Trace_agents_register_name](#trace_agents_register_name)|[asend –](#asend)|
-|[cancel_current_task](#cancel_current_task)|[Vymazat](#clear)|[create_async](#create_async)|
+|[cancel_current_task](#cancel_current_task)|[clear](#clear)|[create_async](#create_async)|
 |[create_task](#create_task)|[get_ambient_scheduler](#get_ambient_scheduler)|[internal_assign_iterators](#internal_assign_iterators)|
 |[interruption_point](#interruption_point)|[is_current_task_group_canceling](#is_current_task_group_canceling)|[make_choice](#make_choice)|
 |[make_greedy_join](#make_greedy_join)|[make_join](#make_join)|[make_task](#make_task)|
@@ -56,11 +56,11 @@ ms.locfileid: "50436176"
 |[parallel_invoke](#parallel_invoke)|[parallel_radixsort](#parallel_radixsort)|[parallel_reduce](#parallel_reduce)|
 |[parallel_sort](#parallel_sort)|[parallel_transform](#parallel_transform)|[receive](#receive)|
 |[run_with_cancellation_token](#run_with_cancellation_token)|[Odeslat](#send)|[set_ambient_scheduler](#set_ambient_scheduler)|
-|[set_task_execution_resources](#set_task_execution_resources)|[Prohození](#swap)|[task_from_exception](#task_from_exception)|
+|[set_task_execution_resources](#set_task_execution_resources)|[swap](#swap)|[task_from_exception](#task_from_exception)|
 |[task_from_result](#task_from_result)|[try_receive](#try_receive)|[Počkej](#wait)|
 |[when_all](#when_all)|[when_any –](#when_any)|
 
-##  <a name="alloc"></a>  ALLOC
+##  <a name="alloc"></a>  Alloc
 
 Přiděluje blok paměti zadaná velikost ze služby Concurrency Runtime Caching Suballocator.
 
@@ -141,7 +141,7 @@ void concurrent_queue<T, _Ax>::clear();
 
 *_Ax*<br/>
 
-##  <a name="create_async"></a>  create_async –
+##  <a name="create_async"></a>  create_async
 
 Vytvoří asynchronní konstrukt Windows Runtime založený na uživatelem zadaný výraz lambda nebo funkce objektu. Návratový typ `create_async` je buď `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^`, nebo `IAsyncOperationWithProgress<TResult, TProgress>^` založené na signatuře lambdy předané metodě.
 
@@ -179,7 +179,7 @@ Pokud tělo výrazu lambda vrátí úkol, lambda, který provede vložené a dek
 
 Tato funkce je pouze k dispozici pro aplikace Windows Runtime.
 
-##  <a name="createresourcemanager"></a>  Createresourcemanager –
+##  <a name="createresourcemanager"></a>  CreateResourceManager
 
 Vrátí rozhraní, které představuje instanci singletonu ze Správce prostředků modulu Runtime souběžnosti. Správce prostředků zodpovídá za přiřazení zdrojů plánovačům, které chtějí vzájemně spolupracovat.
 
@@ -290,7 +290,7 @@ inline std::shared_ptr<::Concurrency::scheduler_interface> get_ambient_scheduler
 
 ### <a name="return-value"></a>Návratová hodnota
 
-##  <a name="getexecutioncontextid"></a>  Getexecutioncontextid –
+##  <a name="getexecutioncontextid"></a>  GetExecutionContextId
 
 Vrací jedinečný identifikátor, který je možné přiřadit ke kontextu spuštění, který implementuje `IExecutionContext` rozhraní.
 
@@ -372,7 +372,7 @@ Jedinečný identifikátor pro Plánovač.
 
 Pomocí této metody můžete získat identifikátor pro váš Plánovač, předtím, než je předáte `IScheduler` rozhraní jako parametr pro některou z metod nabízí Resource Manageru.
 
-##  <a name="internal_assign_iterators"></a>  internal_assign_iterators –
+##  <a name="internal_assign_iterators"></a>  internal_assign_iterators
 
 ```
 template<typename T, class _Ax>
@@ -392,7 +392,7 @@ void concurrent_vector<T, _Ax>::internal_assign_iterators(
 
 *první*<br/>
 
-*poslední*<br/>
+*last*<br/>
 
 ##  <a name="interruption_point"></a>  interruption_point –
 
@@ -475,7 +475,7 @@ Další zdroje.
 
 A `choice` bloku zpráv s dvěma nebo více vstupními zdroji.
 
-##  <a name="make_greedy_join"></a>  make_greedy_join –
+##  <a name="make_greedy_join"></a>  make_greedy_join
 
 Vytvoří `greedy multitype_join` blok zpráv z volitelného `Scheduler` nebo `ScheduleGroup` a dva nebo více vstupními zdroji.
 
@@ -672,7 +672,7 @@ Typ binární porovnání.
 *_Zahájit*<br/>
 Iterátor s náhodným přístupem adresuje umístění prvního prvku v rozsahu který se má seřadit.
 
-*_Ukončit*<br/>
+*_End*<br/>
 Iterátor s náhodným přístupem adresuje umístění jedno místo za poslední prvek v rozsahu který se má seřadit.
 
 *_Alloc*<br/>
@@ -757,7 +757,7 @@ Typ dělicí metodou, která se používá při vytváření oddílů zadaný ro
 *první*<br/>
 První index mají být zahrnuty v iteraci.
 
-*poslední*<br/>
+*last*<br/>
 Index jeden za poslední index mají být zahrnuty v iteraci.
 
 *_Step*<br/>
@@ -804,7 +804,7 @@ Typ funkce, která se použije na každý prvek v rozsahu.
 *první*<br/>
 Iterátor adresuje umístění prvního prvku mají být zahrnuty v paralelní iterace.
 
-*poslední*<br/>
+*last*<br/>
 Iterátor adresuje umístění jedno místo za posledním prvkem mají být zahrnuty v paralelní iterace.
 
 *_Func*<br/>
@@ -1020,7 +1020,7 @@ Pokud jeden nebo více objektů funkce předány jako parametry této funkce doj
 
 Další informace najdete v tématu [paralelní algoritmy](../../../parallel/concrt/parallel-algorithms.md).
 
-##  <a name="parallel_radixsort"></a>  parallel_radixsort –
+##  <a name="parallel_radixsort"></a>  parallel_radixsort
 
 Uspořádá prvky v zadaném rozsahu do bez sestupném pořadí pomocí základ algoritmu řazení. Toto je funkce stabilní řazení, která vyžaduje projekce funkci, která můžete promítnout prvků, které se dají seřadit podle nepodepsaných klíčů jako celé číslo. Výchozí inicializace je požadovaná pro se setříděnými prvky.
 
@@ -1081,7 +1081,7 @@ Typ funkce projekce.
 *_Zahájit*<br/>
 Iterátor s náhodným přístupem adresuje umístění prvního prvku v rozsahu který se má seřadit.
 
-*_Ukončit*<br/>
+*_End*<br/>
 Iterátor s náhodným přístupem adresuje umístění jedno místo za poslední prvek v rozsahu který se má seřadit.
 
 *_Alloc*<br/>
@@ -1150,7 +1150,7 @@ Typ funkce omezení rozsahu. Toto musí být typu funkce s podpisem `_Reduce_typ
 *_Zahájit*<br/>
 Vstupní iterátor adresující první prvek v rozsahu sníží.
 
-*_Ukončit*<br/>
+*_End*<br/>
 Vstupní iterátor adresující prvek, který je o jednu pozici za posledním prvkem v rozsahu, který chcete zmenšit.
 
 *_Identity*<br/>
@@ -1205,7 +1205,7 @@ Typ funktor binární porovnání.
 *_Zahájit*<br/>
 Iterátor s náhodným přístupem adresuje umístění prvního prvku v rozsahu který se má seřadit.
 
-*_Ukončit*<br/>
+*_End*<br/>
 Iterátor s náhodným přístupem adresuje umístění jedno místo za poslední prvek v rozsahu který se má seřadit.
 
 *_Func*<br/>
@@ -1315,7 +1315,7 @@ Typ binární funktor ukládání spuštěné na prvky ze dvou zdrojových rozsa
 *first1*<br/>
 Vstupní iterátor, který adresuje umístění prvního prvku v první nebo pouze zdrojového rozsahu do ho zpracovat.
 
-*Příjmení1*<br/>
+*last1*<br/>
 Vstupní iterátor, který adresuje umístění jedno místo za posledním prvkem v prvním nebo pouze zdrojového rozsahu do ho zpracovat.
 
 *_Result*<br/>
@@ -1532,11 +1532,11 @@ Souběžného vektoru poskytující prvky pro záměnu nebo vektor, jehož prvky
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablon je algoritmus specializované třídy kontejneru `concurrent_vector` ke spuštění funkce člena `_A`. [concurrent_vector::swap –](concurrent-vector-class.md#swap)( `_B`). Toto jsou instance částečné řazení šablon funkcí v kompilátoru. Pokud funkce šablony jsou přetížené tak, že shoda šablony pomocí volání funkce není jedinečný, pak kompilátor zvolit nejvíce specializovanou verzi šablony funkce. Obecné verzi funkce šablony `template <class T> void swap(T&, T&)`, v algoritmu třída pracuje podle přiřazení a je pomalá operace. Specializované verze v jednotlivých kontejnerech je mnohem rychlejší, jak můžete pracovat s vnitřní reprezentaci třídy kontejneru.
+Funkce šablon je algoritmus specializované třídy kontejneru `concurrent_vector` ke spuštění funkce člena `_A`. [concurrent_vector::swap](concurrent-vector-class.md#swap)( `_B`). Toto jsou instance částečné řazení šablon funkcí v kompilátoru. Pokud funkce šablony jsou přetížené tak, že shoda šablony pomocí volání funkce není jedinečný, pak kompilátor zvolit nejvíce specializovanou verzi šablony funkce. Obecné verzi funkce šablony `template <class T> void swap(T&, T&)`, v algoritmu třída pracuje podle přiřazení a je pomalá operace. Specializované verze v jednotlivých kontejnerech je mnohem rychlejší, jak můžete pracovat s vnitřní reprezentaci třídy kontejneru.
 
 Tato metoda není bezpečná pro souběžnost. Ujistěte se, že nejsou žádná jiná vlákna provádění operací v jedné ze souběžných vektory při volání této metody.
 
-##  <a name="task_from_exception"></a>  task_from_exception –
+##  <a name="task_from_exception"></a>  task_from_exception
 
 ```
 template<typename _TaskType, typename _ExType>
@@ -1551,7 +1551,7 @@ task<_TaskType> task_from_exception(
 
 *_ExType*<br/>
 
-*_Exception –*<br/>
+*_Exception*<br/>
 
 *_TaskOptions*<br/>
 
@@ -1688,7 +1688,7 @@ Typ vstupního iterátoru.
 *_Zahájit*<br/>
 Pozice prvního prvku v rozsahu prvků se zkombinuje do výsledného úkolu.
 
-*_Ukončit*<br/>
+*_End*<br/>
 Pozice prvního prvku mimo rozsah prvků se zkombinuje do výsledného úkolu.
 
 *_TaskOptions*<br/>
@@ -1740,7 +1740,7 @@ Typ vstupního iterátoru.
 *_Zahájit*<br/>
 Pozice prvního prvku v rozsahu prvků se zkombinuje do výsledného úkolu.
 
-*_Ukončit*<br/>
+*_End*<br/>
 Pozice prvního prvku mimo rozsah prvků se zkombinuje do výsledného úkolu.
 
 *_TaskOptions*<br/>
@@ -1757,6 +1757,6 @@ Token zrušení, který řídí zrušení vrácených úloh. Pokud nezadáte tok
 
 Další informace najdete v tématu [paralelismus](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)

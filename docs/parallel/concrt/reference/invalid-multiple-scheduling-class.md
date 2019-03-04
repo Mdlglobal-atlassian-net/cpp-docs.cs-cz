@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_multiple_scheduling class
 ms.assetid: e9a47cb7-a778-4df7-92b0-3752119fd4c7
-ms.openlocfilehash: aa22c9b218b88a8834e8ba474c2aa2c203ea89dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c8ce0aefc12097a71e79933d34a116997c8105f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517114"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276357"
 ---
 # <a name="invalidmultiplescheduling-class"></a>invalid_multiple_scheduling – třída
 
@@ -45,7 +45,7 @@ class invalid_multiple_scheduling : public std::exception;
 
 **Namespace:** souběžnosti
 
-##  <a name="ctor"></a> invalid_multiple_scheduling –
+##  <a name="ctor"></a> invalid_multiple_scheduling
 
 Vytvoří `invalid_multiple_scheduling` objektu.
 
@@ -57,10 +57,10 @@ invalid_multiple_scheduling() throw();
 
 ### <a name="parameters"></a>Parametry
 
-*_TEXT*<br/>
+*_Message*<br/>
 Popisná zpráva chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [task_handle – třída](task-handle-class.md)<br/>

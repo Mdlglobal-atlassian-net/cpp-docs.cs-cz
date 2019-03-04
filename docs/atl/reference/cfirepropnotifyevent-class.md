@@ -1,5 +1,5 @@
 ---
-title: Cfirepropnotifyevent – třída
+title: CFirePropNotifyEvent Class
 ms.date: 11/04/2016
 f1_keywords:
 - CFirePropNotifyEvent
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - CFirePropNotifyEvent class
 - connection points [C++], notifying of events
 ms.assetid: eb7a563e-6bce-4cdf-8d20-8c6a5307781b
-ms.openlocfilehash: b25fa156c4576783ebc275a160a850e364066f96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 493bc00708d031f1bf7a4eb74d56e927a9c3f1dd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621036"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277154"
 ---
-# <a name="cfirepropnotifyevent-class"></a>Cfirepropnotifyevent – třída
+# <a name="cfirepropnotifyevent-class"></a>CFirePropNotifyEvent Class
 
 Tato třída poskytuje metody pro oznámení kontejneru jímky týkající se změny vlastností ovládacího prvku.
 
@@ -100,6 +100,6 @@ Jeden standardní hodnoty HRESULT.
 
 Tato funkce je bezpečné volat i v případě, že ovládací prvek nepodporuje spojovací body.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../../atl/atl-class-overview.md)

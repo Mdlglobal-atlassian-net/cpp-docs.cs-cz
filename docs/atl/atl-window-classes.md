@@ -10,12 +10,12 @@ helpviewer_keywords:
 - superclassing
 - superclassing, ATL
 ms.assetid: 1d12b708-de3e-49d5-9e41-42fe4769fa62
-ms.openlocfilehash: 3c9188cedda35d8ba9e265edbb333ae8bdd79f37
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15c59f964e6b6794f64ed8da64cba6f569879fac
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641165"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274489"
 ---
 # <a name="atl-window-classes"></a>ATL – třídy oken
 
@@ -50,4 +50,3 @@ Obsahuje odkazy na koncepční témata o tom, jak programovat pomocí knihovnu A
 
 [Třídy podpory oken](../atl/windows-support-classes.md)<br/>
 Uvádí další ATL – třídy, které podporují windows a mapy zpráv v knihovně ATL
-

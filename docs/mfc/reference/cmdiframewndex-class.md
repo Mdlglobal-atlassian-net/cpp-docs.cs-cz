@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: 7ed2d1de2a91f90cd4e7efecac728e66f86d95a6
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 81d227c241adf0ce72ccd4a554134d7d858b4a6d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178627"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275425"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx – třída
 
@@ -496,7 +496,7 @@ void DockPane(
 *nDockBarID*<br/>
 [in] Určuje, které strany okna rámce chcete ukotvit.
 
-*lprect –*<br/>
+*lpRect*<br/>
 [in] Nepoužívá se.
 
 ### <a name="remarks"></a>Poznámky
@@ -719,7 +719,7 @@ Určuje umístění popisků kartu.
 *bTabCloseButton*<br/>
 Určuje, jestli se má zobrazovat karta tlačítka Zavřít.
 
-*Styl*<br/>
+*style*<br/>
 Určuje styl karty. Použijte STYLE_3D_SCROLLED pro běžné karty nebo STYLE_3D_ONENOTE pro aplikaci Microsoft OneNote karty.
 
 *bTabCustomTooltips*<br/>
@@ -1132,7 +1132,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Zadaný bod v souřadnicovém systému obrazovky.
 
 *dwBarAlignment*<br/>
@@ -1438,7 +1438,7 @@ virtual BOOL OnDrawMenuImage(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *pMenuButton*<br/>
@@ -1592,7 +1592,7 @@ virtual BOOL OnShowMDITabContextMenu(
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Umístění v nabídce v souřadnicovém systému obrazovky.
 
 *dwAllowedItems*<br/>
@@ -1745,7 +1745,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Bod (v souřadnicovém systému obrazovky).
 
 *nSensitivity*<br/>
@@ -2024,7 +2024,7 @@ virtual void WinHelp(
 
 Tato metoda přepisuje [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

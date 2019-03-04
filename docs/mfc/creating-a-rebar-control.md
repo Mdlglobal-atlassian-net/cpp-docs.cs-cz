@@ -5,12 +5,12 @@ helpviewer_keywords:
 - rebar controls [MFC], creating
 - CReBarCtrl class [MFC], creating
 ms.assetid: 0a012e08-772b-4f6a-af86-7cb651d11d3e
-ms.openlocfilehash: 3cc4795a0d4500a53c775ba6f44c3dce520e5110
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0fb651aef599b64b787d96a668e2e1496c1dff8e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644675"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274448"
 ---
 # <a name="creating-a-rebar-control"></a>Vytvoření ovládacího prvku matrice
 
@@ -34,8 +34,7 @@ Použití `CReBarCtrl` objektu, obvykle postupujte podle těchto kroků:
 
 1. Volání [InsertBand](../mfc/reference/crebarctrl-class.md#insertband) vložit existující podřízených oken (například `m_wndReToolBar`) do nového ovládacího prvku rebar. Další informace o vkládání pruhy do existujícího ovládacího prvku matrice, naleznete v tématu [matrice ovládací prvky a pruhy](../mfc/rebar-controls-and-bands.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

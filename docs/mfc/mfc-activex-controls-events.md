@@ -13,12 +13,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - OLE events [MFC]
 ms.assetid: e1e57e0c-206b-4923-a0b5-682c26564f74
-ms.openlocfilehash: 76557e64b5b53c32a7d7f63134085e86bf0138df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d8a881d07a3e48673c6dc3298816d165273be0d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540670"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276764"
 ---
 # <a name="mfc-activex-controls-events"></a>MFC – ovládací prvky ActiveX: Události
 
@@ -26,7 +26,7 @@ Ovládací prvky ActiveX do kontejneru, který se něco stalo do ovládacího pr
 
 Události jsou nazývány také zprávy.
 
-MFC podporuje dva typy událostí: uložených a vlastních. Uložených událostí jsou události, které třídy [COleControl](../mfc/reference/colecontrol-class.md) zpracovává automaticky. Úplný seznam uložených událostí, najdete v článku [knihovny MFC – ovládací prvky ActiveX: přidání události akcie](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md). Vlastní události umožnit ovládací prvek kontejneru upozornit, když dojde k akci specifické pro tento ovládací prvek. Některé příklady by změna vnitřní stav ovládacího prvku nebo přijetí určité zprávy okna.
+MFC podporuje dva typy událostí: uložených a vlastních. Uložených událostí jsou události, které třídy [COleControl](../mfc/reference/colecontrol-class.md) zpracovává automaticky. Úplný seznam uložených událostí, najdete v článku [knihovny MFC – ovládací prvky ActiveX: Přidání uložených událostí](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md). Vlastní události umožnit ovládací prvek kontejneru upozornit, když dojde k akci specifické pro tento ovládací prvek. Některé příklady by změna vnitřní stav ovládacího prvku nebo přijetí určité zprávy okna.
 
 Pro ovládací prvek k vyvolání události správně musí třídy vašeho ovládacího prvku mapy každou událost ovládacího prvku na členskou funkci, která by měla být volána, když dojde k související události. Tento mechanismus mapování (označované jako mapu událostí) centralizuje informace o události a umožňuje sadě Visual Studio snadno přístup k a manipulaci s události ovládacího prvku. Tato mapa událostí je deklarována pomocí následující makra, umístěn v záhlaví (. H) file deklarace třídy ovládacího prvku:
 
@@ -47,7 +47,7 @@ Dva další články popisují události podrobně:
 
 - [MFC – ovládací prvky ActiveX: Přidání vlastních událostí](../mfc/mfc-activex-controls-adding-custom-events.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)<br/>
 [MFC – ovládací prvky ActiveX: Metody](../mfc/mfc-activex-controls-methods.md)<br/>

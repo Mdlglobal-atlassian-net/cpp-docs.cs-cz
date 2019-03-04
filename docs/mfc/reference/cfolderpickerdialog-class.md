@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CFolderPickerDialog [MFC], CFolderPickerDialog
 ms.assetid: 8db01684-dd1d-4e9c-989e-07a2318a8156
-ms.openlocfilehash: ba189badaa9b1605e3467526e7b92a18a1bb5a73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1718919a4fe9019ef591d83473c118eba966900
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561301"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276179"
 ---
 # <a name="cfolderpickerdialog-class"></a>Cfolderpickerdialog – třída
 
@@ -31,7 +31,7 @@ class CFolderPickerDialog : public CFileDialog;
 
 |Název|Popis|
 |----------|-----------------|
-|[Cfolderpickerdialog –:: ~ cfolderpickerdialog –](#cfolderpickerdialog__~cfolderpickerdialog)|Destruktor.|
+|[CFolderPickerDialog::~CFolderPickerDialog](#cfolderpickerdialog__~cfolderpickerdialog)|Destruktor.|
 |[CFolderPickerDialog::CFolderPickerDialog](#cfolderpickerdialog)|Konstruktor|
 
 ## <a name="remarks"></a>Poznámky
@@ -46,7 +46,7 @@ class CFolderPickerDialog : public CFileDialog;
 
 [CDialog](../../mfc/reference/cdialog-class.md)
 
-[Ccommondialog –](../../mfc/reference/ccommondialog-class.md)
+[CCommonDialog](../../mfc/reference/ccommondialog-class.md)
 
 [CFileDialog](../../mfc/reference/cfiledialog-class.md)
 
@@ -84,7 +84,7 @@ Velikost LPSTRFILE struktury.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="_dtorcfolderpickerdialog"></a>  Cfolderpickerdialog –:: ~ cfolderpickerdialog –
+##  <a name="_dtorcfolderpickerdialog"></a>  CFolderPickerDialog::~CFolderPickerDialog
 
 Destruktor.
 
@@ -94,6 +94,6 @@ virtual ~CFolderPickerDialog();
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

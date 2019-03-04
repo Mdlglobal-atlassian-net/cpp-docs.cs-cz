@@ -7,12 +7,12 @@ helpviewer_keywords:
 - relationships, MFC objects
 - MFC object relationships
 ms.assetid: 6e8f3b51-e80f-4d88-94c8-4c1e4ee163ad
-ms.openlocfilehash: c02cf723ee7711ec1bfe00841c90bbde8c260ac1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb8d1fcd9737b33d52038746a26f4e1bd1043e95
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585507"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276965"
 ---
 # <a name="relationships-among-mfc-objects"></a>Vztahy mezi objekty MFC
 
@@ -46,10 +46,9 @@ Obvykle má okno rámce jedno zobrazení, ale v některých případech jako roz
 > [!NOTE]
 >  Ukazatel na hlavní okno rámce je uložen v [m_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd) členské proměnné objektu aplikace. Volání `OnFileNew` v přepsání metody `InitInstance` členskou funkci `CWinApp` nastaví *m_pMainWnd* za vás. Pokud není volána `OnFileNew`, je nutné nastavit hodnotu proměnné v `InitInstance` sami. (Aplikace SDI COM součástí (server) se nemusí nastavte proměnnou, je-li/Embedding na příkazovém řádku.) Všimněte si, že *m_pMainWnd* je teď členem třídy `CWinThread` spíše než `CWinApp`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Šablony dokumentů a proces vytváření dokumentů/zobrazení](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
 [Vytváření šablon dokumentů](../mfc/document-template-creation.md)<br/>
 [Vytváření dokumentů/zobrazení](../mfc/document-view-creation.md)<br/>
 [Vytváření nových dokumentů, oken a zobrazení](../mfc/creating-new-documents-windows-and-views.md)
-

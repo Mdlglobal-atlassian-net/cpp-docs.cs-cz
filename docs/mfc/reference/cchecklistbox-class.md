@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: b1e64e947f798becef32fa4d99f21e61133cc8fc
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: b34891c4f46679e43aea36a9b52d6399e020ef71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177833"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273059"
 ---
 # <a name="cchecklistbox-class"></a>Cchecklistbox – třída
 
@@ -104,7 +104,7 @@ Políčko kontrolního seznamu můžete vytvořit z šablony dialogového okna n
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[Clistbox –](../../mfc/reference/clistbox-class.md)
+[CListBox](../../mfc/reference/clistbox-class.md)
 
 `CCheckListBox`
 
@@ -377,7 +377,7 @@ Platný styly jsou:
 
 Informace o těchto stylů, najdete v části [styly](../../mfc/reference/styles-used-by-mfc.md#button-styles).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC lze kontejner TSTCON](../../visual-cpp-samples.md)<br/>
 [CListBox – třída](../../mfc/reference/clistbox-class.md)<br/>

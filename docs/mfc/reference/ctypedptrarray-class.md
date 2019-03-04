@@ -1,5 +1,5 @@
 ---
-title: Ctypedptrarray – třída
+title: CTypedPtrArray Class
 ms.date: 11/04/2016
 f1_keywords:
 - CTypedPtrArray
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-ms.openlocfilehash: 767d4782ec637a0404051e6871d584f73cefdcd2
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 8a6fc0786a169f9c1e73eb8acadfc51d063334c9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657471"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275334"
 ---
-# <a name="ctypedptrarray-class"></a>Ctypedptrarray – třída
+# <a name="ctypedptrarray-class"></a>CTypedPtrArray Class
 
 Poskytuje typově "zabezpečenou obálku" pro objekty třídy `CPtrArray` nebo `CObArray`.
 
@@ -42,7 +42,7 @@ class CTypedPtrArray : public BASE_CLASS
 
 #### <a name="parameters"></a>Parametry
 
-*$BASE_CLASS*<br/>
+*BASE_CLASS*<br/>
 Základní třída typované ukazatele pole třídy; musí být třída pole ( `CObArray` nebo `CPtrArray`).
 
 *TYP*<br/>
@@ -123,7 +123,7 @@ INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 
 ### <a name="parameters"></a>Parametry
 
-*$BASE_CLASS*<br/>
+*BASE_CLASS*<br/>
 Základní třída typované ukazatele pole třídy; musí být třída pole ( [cobarray –](../../mfc/reference/cobarray-class.md) nebo [cptrarray –](../../mfc/reference/cptrarray-class.md)).
 
 *TYP*<br/>
@@ -150,7 +150,7 @@ void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 
 ### <a name="parameters"></a>Parametry
 
-*$BASE_CLASS*<br/>
+*BASE_CLASS*<br/>
 Základní třída typované ukazatele pole třídy; musí být třída pole ( [cobarray –](../../mfc/reference/cobarray-class.md) nebo [cptrarray –](../../mfc/reference/cptrarray-class.md)).
 
 *TYP*<br/>
@@ -243,7 +243,7 @@ Počet pokusů, které tento prvek by měl být vložen (výchozí nastavení: 1
 *nStartIndex*<br/>
 Celočíselný index, který může být větší než hodnota vrácená `CObArray::GetUpperBound`.
 
-*$BASE_CLASS*<br/>
+*BASE_CLASS*<br/>
 Základní třída typované ukazatele pole třídy; musí být třída pole ( [cobarray –](../../mfc/reference/cobarray-class.md) nebo [cptrarray –](../../mfc/reference/cptrarray-class.md)).
 
 *pNewArray*<br/>
@@ -253,7 +253,7 @@ Další pole obsahující prvky, které mají být přidány do tohoto pole.
 
 Podrobné poznámky, naleznete v tématu [CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat).
 
-##  <a name="operator_at"></a>  [] Č. CTypedPtrArray::operator
+##  <a name="operator_at"></a>  CTypedPtrArray::operator [ ]
 
 Tyto vložené operátory volání `BASE_CLASS` **:: operator []**.
 
@@ -326,7 +326,7 @@ Ukazatel objektu, který chcete přidat do tohoto pole. A **NULL** povolená hod
 
 Podrobné poznámky, naleznete v tématu [CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC shromažďování](../../visual-cpp-samples.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

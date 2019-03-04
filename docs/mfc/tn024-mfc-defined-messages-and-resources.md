@@ -9,12 +9,12 @@ helpviewer_keywords:
 - messages [MFC], MFC
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
-ms.openlocfilehash: 26f6effbafd8136661f0b1dc9a6b22138a23e547
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 029177821d37d5d26abe0b39ea1581e8a5ad602b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639631"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278129"
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024: Zprávy a prostředky definované knihovnou MFC
 
@@ -162,7 +162,7 @@ Tyto zprávy se používají v implementaci kontextové nápovědy. Najdete [Tec
 
 ## <a name="mfc-private-resource-formats"></a>Formáty prostředku privátní knihovny MFC
 
-V současné době MFC definuje dva formáty privátnímu prostředku: rt_toolbar – a RT_DLGINIT.
+V současné době MFC definuje dva formáty privátnímu prostředku: Rt_toolbar – a RT_DLGINIT.
 
 ## <a name="rttoolbar-resource-format"></a>Rt_toolbar – prostředek formátu
 
@@ -199,8 +199,7 @@ SendDlgItemMessage(<Control ID>, <Message #>, 0, &<Data>);
 
 To je velmi obecného formátu, všechny zprávy Windows a data obsahu. Editor prostředků Visual C++ a knihovnou MFC podporují jenom omezenou podmnožinou zpráv Windows: CB_ADDSTRING pro počáteční seznam voleb pro pole se seznamem (data je textový řetězec).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
-

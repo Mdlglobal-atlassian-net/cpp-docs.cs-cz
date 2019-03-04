@@ -9,12 +9,12 @@ helpviewer_keywords:
 - containers [MFC], creating
 - OLE controls [MFC], containers
 ms.assetid: ec70e137-7c14-4940-bd0e-fd4edcc63ea5
-ms.openlocfilehash: 04c271db18bc8d8ba273f16f7493bbbb1da96421
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0d5fe419375535ab8c52378b9005df88634e99a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544986"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275893"
 ---
 # <a name="creating-an-mfc-activex-control-container"></a>Vytvoření kontejneru ovládacího prvku ActiveX prostředí MFC
 
@@ -27,7 +27,7 @@ Vytvoření kontejneru program knihovny MFC pomocí [Průvodce aplikací knihovn
 
 - **Nová aplikace knihovny MFC**. K vytvoření nové aplikace knihovny MFC, která obsahuje automatizace, úpravy s náhledem, složené soubory nebo řízení podpory, pomocí Průvodce aplikací knihovny MFC a vyberte příslušné možnosti automatizace.
 
-- **Existující aplikaci MFC**. Pokud přidáváte používání kontejnerů ovládacích prvků do existující aplikaci MFC, přečtěte si téma [OLE – kontejnery ovládacích prvků: Ruční povolení OLE používání kontejnerů ovládacích prvků](../../mfc/activex-control-containers-manually-enabling-activex-control-containment.md).
+- **Existující aplikaci MFC**. Pokud přidáváte používání kontejnerů ovládacích prvků do existující aplikaci MFC, přečtěte si téma [OLE – kontejnery ovládacích prvků: Ruční povolení uzavření ovládacího prvku OLE](../../mfc/activex-control-containers-manually-enabling-activex-control-containment.md).
 
 ### <a name="to-create-an-activex-container-for-any-of-the-following-types-of-applications"></a>Chcete-li vytvořit kontejner ActiveX pro některý z následujících typů aplikací
 
@@ -37,7 +37,6 @@ Vytvoření kontejneru program knihovny MFC pomocí [Průvodce aplikací knihovn
 
 1. [Ovládací prvky MFC ActiveX](../../mfc/mfc-activex-controls.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Typy projektů Visual C++](../../ide/visual-cpp-project-types.md)
-

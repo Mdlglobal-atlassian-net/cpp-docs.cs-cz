@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_z
 - amp_short_vectors/Concurrency::graphics::float_4::set_xyzw
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-ms.openlocfilehash: 97302504303a540eb691f7af15f7d346d0d50ce3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63dbc38fd4c5c6d668dda525416ec4ff2f05b50f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459771"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275204"
 ---
 # <a name="float4-class"></a>float_4 – třída
 
@@ -444,7 +444,7 @@ class float_4;
 
 |Název|Popis|
 |----------|-----------------|
-|float_4::Operator-||
+|float_4::operator-||
 |float_4::operator--||
 |float_4::operator*=||
 |float_4::Operator / =||
@@ -469,7 +469,7 @@ class float_4;
 |float_4::abgr||
 |float_4::abr||
 |float_4::abrg||
-|float_4::AG||
+|float_4::ag||
 |float_4::agb||
 |float_4::agbr||
 |float_4::AGR||
@@ -480,18 +480,18 @@ class float_4;
 |float_4::arg||
 |float_4::argb||
 |float_4::b||
-|float_4::BA||
+|float_4::ba||
 |float_4::bag||
 |float_4::bagr||
 |float_4::bar||
 |float_4::barg||
-|float_4::BG||
+|float_4::bg||
 |float_4::bga||
 |float_4::bgar||
-|float_4::BGR||
+|float_4::bgr||
 |float_4::bgra||
 |float_4::br||
-|float_4::BRA||
+|float_4::bra||
 |float_4::brag||
 |float_4::brg||
 |float_4::brga||
@@ -505,10 +505,10 @@ class float_4;
 |float_4::GBA||
 |float_4::gbar||
 |float_4::GBR||
-|float_4::GBRA||
+|float_4::gbra||
 |float_4::GR||
 |float_4::gra||
-|float_4::Grab||
+|float_4::grab||
 |float_4::grb||
 |float_4::grba||
 |float_4::r||
@@ -576,7 +576,7 @@ class float_4;
 |float_4::yzx||
 |float_4::yzxw||
 |float_4::z||
-|float_4::Zw||
+|float_4::zw||
 |float_4::zwx||
 |float_4::zwxy||
 |float_4::zwy||
@@ -586,7 +586,7 @@ class float_4;
 |float_4::zxwy||
 |float_4::zxy||
 |float_4::zxyw||
-|float_4::Zy||
+|float_4::zy||
 |float_4::zyw||
 |float_4::zywx||
 |float_4::zyx||
@@ -600,9 +600,9 @@ class float_4;
 
 **Záhlaví:** amp_short_vectors.h
 
-**Namespace:** Concurrency::graphics
+**Namespace:** Concurrency::Graphics
 
-##  <a name="ctor"></a> float_4 –
+##  <a name="ctor"></a> float_4
 
 Výchozí konstruktor, inicializuje všechny prvky na 0.
 
@@ -672,6 +672,6 @@ Objekt použitý k inicializaci.
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

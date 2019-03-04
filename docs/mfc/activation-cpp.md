@@ -18,12 +18,12 @@ helpviewer_keywords:
 - activation [MFC], embedded OLE items
 - OLE activation [MFC]
 ms.assetid: ed8357d9-e487-4aaa-aa6b-2edc4de25dfa
-ms.openlocfilehash: ba3c705227e6ca189527d29d4f3ae0f21c71eb72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6009e5209ce71c6eed28faff2f55792a64de408
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493506"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276946"
 ---
 # <a name="activation-c"></a>Aktivace (C++)
 
@@ -40,11 +40,10 @@ Aktivace na místě podporuje zaměřené na dokument přístup k vytváření d
 
 MFC nepodporuje vnořené místní aktivace. Pokud vytvoříte aplikaci typu server/kontejner a, server/kontejner je vložen do jiného kontejneru a aktivaci, se nemůže místní aktivace objektů vložen dovnitř.
 
-Co se stane vloženou položku, když uživatel poklepe to závisí na příkazy, které jsou definovány pro položku. Informace najdete v tématu [aktivace: příkazy](../mfc/activation-verbs.md).
+Co se stane vloženou položku, když uživatel poklepe to závisí na příkazy, které jsou definovány pro položku. Informace najdete v tématu [aktivace: Příkazy](../mfc/activation-verbs.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [Kontejnery](../mfc/containers.md)<br/>
 [Servery](../mfc/servers.md)
-

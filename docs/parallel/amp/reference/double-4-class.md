@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_4::bag
 - amp_short_vectors/Concurrency::graphics::double_4::zwy
 ms.assetid: a81c1595-24c6-4b3f-9574-d5942275e5e8
-ms.openlocfilehash: 3de59c57c1303fec06e5926f445cdbbb21e13c55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 14e85a2c9ff21ed451cc6141ab7940f9c614c662
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631748"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275399"
 ---
 # <a name="double4-class"></a>double_4 – třída
 
@@ -467,7 +467,7 @@ class double_4;
 |double_4::ab||
 |double_4::abg||
 |double_4::abgr||
-|double_4::ABR||
+|double_4::abr||
 |double_4::abrg||
 |double_4::AG||
 |double_4::agb||
@@ -480,18 +480,18 @@ class double_4;
 |double_4::arg||
 |double_4::ARGB||
 |double_4::b||
-|double_4::BA||
+|double_4::ba||
 |double_4::bag||
 |double_4::bagr||
 |double_4::bar||
 |double_4::barg||
-|double_4::BG||
+|double_4::bg||
 |double_4::bga||
 |double_4::bgar||
-|double_4::BGR||
+|double_4::bgr||
 |double_4::bgra||
 |double_4::br||
-|double_4::BRA||
+|double_4::bra||
 |double_4::brag||
 |double_4::brg||
 |double_4::brga||
@@ -502,13 +502,13 @@ class double_4;
 |double_4::gar||
 |double_4::garb||
 |double_4::GB||
-|double_4::GBA||
+|double_4::gba||
 |double_4::gbar||
 |double_4::GBR||
-|double_4::GBRA||
+|double_4::gbra||
 |double_4::GR||
 |double_4::gra||
-|double_4::Grab||
+|double_4::grab||
 |double_4::grb||
 |double_4::grba||
 |double_4::r||
@@ -528,8 +528,8 @@ class double_4;
 |double_4::RGB||
 |double_4::rgba||
 |double_4::w||
-|double_4::WX||
-|double_4::WXY||
+|double_4::wx||
+|double_4::wxy||
 |double_4::wxyz||
 |double_4::wxz||
 |double_4::wxzy||
@@ -538,7 +538,7 @@ class double_4;
 |double_4::wyxz||
 |double_4::wyz||
 |double_4::wyzx||
-|double_4::wZ||
+|double_4::wz||
 |double_4::wzx||
 |double_4::wzxy||
 |double_4::wzy||
@@ -549,7 +549,7 @@ class double_4;
 |double_4::xwyz||
 |double_4::xwz||
 |double_4::xwzy||
-|double_4::XY||
+|double_4::xy||
 |double_4::xyw||
 |double_4::xywz||
 |double_4::xyz||
@@ -576,7 +576,7 @@ class double_4;
 |double_4::yzx||
 |double_4::yzxw||
 |double_4::z||
-|double_4::Zw||
+|double_4::zw||
 |double_4::zwx||
 |double_4::zwxy||
 |double_4::zwy||
@@ -586,10 +586,10 @@ class double_4;
 |double_4::zxwy||
 |double_4::zxy||
 |double_4::zxyw||
-|double_4::Zy||
+|double_4::zy||
 |double_4::zyw||
 |double_4::zywx||
-|double_4::Zyx||
+|double_4::zyx||
 |double_4::zyxw||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
@@ -600,7 +600,7 @@ class double_4;
 
 **Záhlaví:** amp_short_vectors.h
 
-**Namespace:** Concurrency::graphics
+**Namespace:** Concurrency::Graphics
 
 ##  <a name="ctor"></a> double_4 –
 
@@ -672,6 +672,6 @@ Objekt použitý k inicializaci.
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - tear-off interfaces
 - CComTearOffObject class
 ms.assetid: d974b598-c6b2-42b1-8360-9190d9d0fbf3
-ms.openlocfilehash: 78e9bda9c21ce53fa5b775b83be5c978c3fa1431
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd35b1e9e69c97402dd1ec357fd25fa1dcd5dd49
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555256"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274606"
 ---
 # <a name="ccomtearoffobject-class"></a>Ccomtearoffobject – třída
 
@@ -47,7 +47,7 @@ ATL – implementuje jeho odtržených rozhraní ve dvou fázích – `CComTearO
 |Název|Popis|
 |----------|-----------------|
 |[CComTearOffObject::CComTearOffObject](#ccomtearoffobject)|Konstruktor|
-|[Ccomtearoffobject –:: ~ ccomtearoffobject –](#dtor)|Destruktor.|
+|[CComTearOffObject::~CComTearOffObject](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -113,14 +113,14 @@ CComTearOffObject(void* pv);
 
 ### <a name="parameters"></a>Parametry
 
-*PV*<br/>
+*pv*<br/>
 [in] Ukazatel, který bude převeden na ukazatel `CComObject<Owner>` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
 Zvýší počet odkazů vlastníka o jednu.
 
-##  <a name="dtor"></a>  Ccomtearoffobject –:: ~ ccomtearoffobject –
+##  <a name="dtor"></a>  CComTearOffObject::~CComTearOffObject
 
 Destruktor.
 
@@ -154,7 +154,7 @@ CComObject<Owner>* m_pOwner;
 
 ### <a name="parameters"></a>Parametry
 
-*Vlastník*<br/>
+*Owner*<br/>
 [in] Třída, pro kterou odnímatelnými nabídkami se implementuje.
 
 ### <a name="remarks"></a>Poznámky
@@ -171,7 +171,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*<br/>
+*iid*<br/>
 [in] Identifikátor IID rozhraní žádá.
 
 *ppvObject*<br/>
@@ -197,7 +197,7 @@ STDMETHOD_ULONG Release();
 
 V sestaveních bez ladění vždy vrátí hodnotu 0. V sestavení ladění vrátí hodnotu, která může být užitečné pro diagnostiku a testování.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CComCachedTearOffObject – třída](../../atl/reference/ccomcachedtearoffobject-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

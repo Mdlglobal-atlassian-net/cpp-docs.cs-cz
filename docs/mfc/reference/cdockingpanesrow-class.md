@@ -1,5 +1,5 @@
 ---
-title: Cdockingpanesrow – třída
+title: CDockingPanesRow Class
 ms.date: 10/18/2018
 f1_keywords:
 - CDockingPanesRow
@@ -90,14 +90,14 @@ helpviewer_keywords:
 - CDockingPanesRow [MFC], ShowPane
 - CDockingPanesRow [MFC], UpdateVisibleState
 ms.assetid: e7a17832-0ebb-4bce-b799-cec9b60f76fe
-ms.openlocfilehash: a2d9c7894327a66c24fae3890856dbb95a6d10e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5720fa2ff8e85092b246002b7961ce3830ee7e3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450125"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277986"
 ---
-# <a name="cdockingpanesrow-class"></a>Cdockingpanesrow – třída
+# <a name="cdockingpanesrow-class"></a>CDockingPanesRow Class
 
 Spravuje seznam podoken, které se nacházejí ve stejném vodorovném nebo svislém řádku (sloupec) dokovacího webu.
 
@@ -178,11 +178,11 @@ Následující příklad ukazuje, jak získat `CDockingPanesRow` objektu z `CMFC
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cdockingpanesrow –](../../mfc/reference/cdockingpanesrow-class.md)
+[CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxDockingPanesRow.h
+**Header:** afxDockingPanesRow.h
 
 ##  <a name="addpane"></a>  CDockingPanesRow::AddPane
 
@@ -200,7 +200,7 @@ virtual void AddPane(
 
 [in] *dockMethod*<br/>
 
-[in] *lprect –*<br/>
+[in] *lpRect*<br/>
 
 [in] *bAddLast*<br/>
 
@@ -782,7 +782,7 @@ virtual void UpdateVisibleState(BOOL bDelay);
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

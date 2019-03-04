@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - memory management functions [Concurrency Runtime]
 ms.assetid: d303dd2a-dfa4-4d90-a508-f6aa290bb9ea
-ms.openlocfilehash: d8dfc8bbb200258818c38e931e978cc3be292525
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a7810267c3eaa11ad7592774440365620e7e8f4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454078"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276933"
 ---
 # <a name="memory-management-functions"></a>Funkce správy paměti
 
@@ -30,10 +30,9 @@ Použití `Alloc` a `Free` funkce při přidělují a uvolňují pevná sada př
 
 ## <a name="example"></a>Příklad
 
-Příklad, který se používá `Alloc` a `Free` funkce ke zlepšení výkonu paměti naleznete v tématu [postupy: použití Alloc a Free ke zlepšení výkonu paměti](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
+Příklad, který se používá `Alloc` a `Free` funkce ke zlepšení výkonu paměti naleznete v tématu [jak: Použití funkcí Alloc a Free ke zlepšení výkonu paměti](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Postupy: Použití funkcí Alloc a Free ke zlepšení výkonu paměti](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)
-

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - command handling [MFC], routing commands
 - overriding, standard command routing
 ms.assetid: 872b698a-7432-40c4-9008-68721e8effa5
-ms.openlocfilehash: 132831939c05f7e8f84c306f5d08bba9cd5e8ea4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5383c1053894d44e23baf51b19ac3df4e60158e5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648436"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277947"
 ---
 # <a name="overriding-the-standard-command-routing"></a>Přepsání standardního směrování příkazů
 
@@ -24,7 +24,6 @@ Ve výjimečných případech při musí implementovat několik variant standard
 
 Je-li vložit některé nového objektu do směrování, jeho třída musí být příkaz cílovou třídu. V přepsání verze `OnCmdMsg`, nezapomeňte volat verzi, která jste přepsání. Najdete v článku [oncmdmsg –](../mfc/reference/ccmdtarget-class.md#oncmdmsg) členské funkce třídy `CCmdTarget` v *odkaz knihovny MFC* a verzí v těchto tříd jako `CView` a `CDocument` v zadaný zdrojový kód pro příklady.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Jakým způsobem volá framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md)
-

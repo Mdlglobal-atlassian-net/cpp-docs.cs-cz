@@ -6,16 +6,16 @@ helpviewer_keywords:
 - sockets [MFC], byte order issues
 - Windows Sockets [MFC], byte order issues
 ms.assetid: 8a787a65-f9f4-4002-a02f-ac25a5dace5d
-ms.openlocfilehash: 74d3b53ae3ab476ef1224caed91f31929fcce1ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca572ad32a9a46756cacf0221d80b2953b710723
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453948"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278090"
 ---
 # <a name="windows-sockets-byte-ordering"></a>Windows Sockets: Pořadí bajtů
 
-V tomto článku a dva doprovodné články popisují několik problémů v programování v rozhraní Windows Sockets. Tento článek se týká pořadí bajtů. Tyto problémy jsou popsané v článcích: [rozhraní Windows Sockets: blokování](../mfc/windows-sockets-blocking.md) a [rozhraní Windows Sockets: převádění řetězců](../mfc/windows-sockets-converting-strings.md).
+V tomto článku a dva doprovodné články popisují několik problémů v programování v rozhraní Windows Sockets. Tento článek se týká pořadí bajtů. Tyto problémy jsou popsané v článcích: [Windows Sockets: Blokování](../mfc/windows-sockets-blocking.md) a [rozhraní Windows Sockets: Převádění řetězců](../mfc/windows-sockets-converting-strings.md).
 
 Pokud používáte nebo odvozen od třídy [CAsyncSocket](../mfc/reference/casyncsocket-class.md), budete muset spravovat tyto problémy sami. Pokud používáte nebo odvozen od třídy [csocket –](../mfc/reference/csocket-class.md), knihovna MFC je spravuje za vás.
 
@@ -57,7 +57,7 @@ Práce s [CAsyncSocket](../mfc/reference/casyncsocket-class.md), musí všechny 
 Ideálním případem použití soketů knihovny MFC je, když vytváříte obě strany komunikace: používáte knihovnu MFC na obou koncích. Pokud vytváříte aplikaci, která bude komunikovat s non-MFC aplikací, jako je například FTP server, bude pravděpodobně nutné spravovat vzájemná záměna bajtů sami před předat data do archivu objektu pomocí rozhraní Windows Sockets převodní rutiny **ntohs**, **ntohl**, **htons**, a **htonl**. Příkladem těchto funkcí používaných v komunikaci s aplikací non-MFC se zobrazí později v tomto článku.
 
 > [!NOTE]
->  Při druhém konci komunikace není aplikace knihovny MFC, je také třeba se vyvarovat objektů C++ odvozena z datového proudu `CObject` do archivu vzhledem k tomu, že příjemci nebudou moct jejich zpracování. Přečtěte si poznámku v [rozhraní Windows Sockets: použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md).
+>  Při druhém konci komunikace není aplikace knihovny MFC, je také třeba se vyvarovat objektů C++ odvozena z datového proudu `CObject` do archivu vzhledem k tomu, že příjemci nebudou moct jejich zpracování. Přečtěte si poznámku v [rozhraní Windows Sockets: Použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md).
 
 Další informace o objednávkách bajt naleznete v tématu Specifikace rozhraní Windows Sockets k dispozici v sadě Windows SDK.
 
@@ -98,15 +98,14 @@ kde `pMsg` je ukazatel na objekt jazyka C++, který je odvozen od třídy `CObje
 
 Další informace naleznete v tématu:
 
-- [Windows Sockets – Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets: Pozadí](../mfc/windows-sockets-background.md)
+- [Windows Sockets: Background](../mfc/windows-sockets-background.md)
 
-- [Windows Sockets: Sokety streamu](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets: Sokety datagramů](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: Sokety datagramu](../mfc/windows-sockets-datagram-sockets.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)
-

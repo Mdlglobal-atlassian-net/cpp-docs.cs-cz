@@ -18,12 +18,12 @@ helpviewer_keywords:
 - connection points [C++], managing
 - CComDynamicUnkArray class
 ms.assetid: 202470d7-9a1b-498f-b96d-659d681acd65
-ms.openlocfilehash: c18f28cac89288096b812635e77194bfb5dd224b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39f137f199db1d7519801c19375baea6cd08db93
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448682"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274151"
 ---
 # <a name="ccomdynamicunkarray-class"></a>Ccomdynamicunkarray – třída
 
@@ -42,7 +42,7 @@ class CComDynamicUnkArray
 |Název|Popis|
 |----------|-----------------|
 |[CComDynamicUnkArray::CComDynamicUnkArray](#ccomdynamicunkarray)|Konstruktor Inicializuje kolekci hodnoty, které mají hodnotu NULL a velikosti kolekce na nulu.|
-|[Ccomdynamicunkarray –:: ~ ccomdynamicunkarray –](#dtor)|Destruktor.|
+|[CComDynamicUnkArray::~CComDynamicUnkArray](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -129,7 +129,7 @@ CComDynamicUnkArray();
 
 Nastaví velikost kolekce na nulu a inicializuje hodnoty, které mají hodnotu NULL. Destruktor uvolní kolekce, v případě potřeby.
 
-##  <a name="dtor"></a>  Ccomdynamicunkarray –:: ~ ccomdynamicunkarray –
+##  <a name="dtor"></a>  CComDynamicUnkArray::~CComDynamicUnkArray
 
 Destruktor.
 
@@ -238,7 +238,7 @@ Odkazování na soubor cookie `IUnknown` ukazatel na odebrat z pole.
 
 Vrátí hodnotu TRUE, pokud se odebere ukazatele; v opačném případě FALSE.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CComUnkArray – třída](../../atl/reference/ccomunkarray-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

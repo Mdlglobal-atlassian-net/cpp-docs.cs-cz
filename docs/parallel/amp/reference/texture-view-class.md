@@ -14,12 +14,12 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-ms.openlocfilehash: c76f1f9b00ea6e44f69f98286b83d4a84f12cac1
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 0f2b627afa216f03592fe913afece1a80f5bd5a6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657497"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275659"
 ---
 # <a name="textureview-class"></a>texture_view – třída
 
@@ -62,7 +62,7 @@ Typ prvků v agregátu textury.
 
 |Název|Popis|
 |----------|-----------------|
-|[texture_view – konstruktor](#ctor)|Přetíženo. Vytvoří `texture_view` instance.|
+|[texture_view Constructor](#ctor)|Přetíženo. Vytvoří `texture_view` instance.|
 |[~texture_view Destructor](#ctor)|Odstraní `texture_view` instance.|
 
 ### <a name="public-methods"></a>Veřejné metody
@@ -81,7 +81,7 @@ Typ prvků v agregátu textury.
 
 |Název|Popis|
 |----------|-----------------|
-|[Operator()](#operator_call)|Přetíženo. Získá hodnotu prvku podle indexu.|
+|[operator()](#operator_call)|Přetíženo. Získá hodnotu prvku podle indexu.|
 |[– Operátor\[\]](#operator_at)|Přetíženo. Získá hodnotu prvku podle indexu.|
 |[operátor =](#operator_eq)|Přetíženo. Operátor přiřazení.|
 
@@ -484,6 +484,6 @@ Typ hodnoty elementů texture_view.
 typedef typename const value_type value_type;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

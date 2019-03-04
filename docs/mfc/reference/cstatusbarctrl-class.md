@@ -1,5 +1,5 @@
 ---
-title: Cstatusbarctrl – třída
+title: CStatusBarCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CStatusBarCtrl
@@ -44,14 +44,14 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 71ae39cb62da7938880973dc48b65ed69b9c8b92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a5adc5ae6b1981d7f8260d684a33d8bd7918e40
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569728"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272838"
 ---
-# <a name="cstatusbarctrl-class"></a>Cstatusbarctrl – třída
+# <a name="cstatusbarctrl-class"></a>CStatusBarCtrl Class
 
 Poskytuje funkce pro Windows běžné stav panelu ovládacího prvku.
 
@@ -244,7 +244,7 @@ Adresa celočíselné pole s tři elementy. První prvek dostane šířka vodoro
 *nHorz*<br/>
 Odkaz na celé číslo, které přijímá šířka vodorovného ohraničení.
 
-*Převeďte*<br/>
+*nVert*<br/>
 Odkaz na celé číslo, které přijímá šířku ohraničení svislý.
 
 *nSpacing*<br/>
@@ -343,7 +343,7 @@ BOOL GetRect(
 *nPane*<br/>
 Z nuly vycházející index části, jehož ohraničující obdélník má být načtena.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Adresa [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá ohraničující obdélník.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -481,7 +481,7 @@ COLORREF SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parametry
 
-*znak CR*<br/>
+*cr*<br/>
 COLORREF hodnota, která určuje novou barvou pozadí. Zadejte hodnotu CLR_DEFAULT způsobit stavový řádek používat jeho výchozí barvu pozadí.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -536,7 +536,7 @@ void SetMinHeight(int nMin);
 
 ### <a name="parameters"></a>Parametry
 
-*Nminimum*<br/>
+*nMin*<br/>
 Minimální výška v pixelech, ovládacího prvku.
 
 ### <a name="remarks"></a>Poznámky
@@ -613,7 +613,7 @@ Adresa řetězec zakončený hodnotou null zadáte text, který má nastavit. Po
 *nPane*<br/>
 Z nuly vycházející index části nastavit. Pokud je tato hodnota 255, ovládací prvek panelu stavu je považován za jednoduché ovládací prvek s pouze jednu část.
 
-*nTyp*<br/>
+*nType*<br/>
 Typ operace kreslení. Zobrazit [SB_SETTEXT zpráva](/windows/desktop/Controls/sb-settext) seznam možných hodnot.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -654,7 +654,7 @@ Tato členská funkce implementuje chování zprávy Win32 [SB_SETTIPTEXT](/wind
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#12](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_14.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

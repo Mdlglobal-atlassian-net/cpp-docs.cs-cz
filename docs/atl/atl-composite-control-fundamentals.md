@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - composite controls, about composite controls
 ms.assetid: 2ac78cdd-1ec4-4d78-871c-1bcc23b5253e
-ms.openlocfilehash: 18190f4d35d69f167be075130c8332baf7b459ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96a7b84b40dd74f42944e61cfd219638907502c7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556712"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272227"
 ---
 # <a name="atl-composite-control-fundamentals"></a>ATL – principy vytváření složených prvků
 
@@ -27,9 +27,8 @@ Průvodce projektem ATL a **přidat třídu** dialogové okno automatizovat proc
 
 - [Vytváření a testování projektu ATL](../atl/building-and-testing-the-atl-project.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Koncepty](../atl/active-template-library-atl-concepts.md)<br/>
 [Globální funkce složených ovládacích prvků](../atl/reference/composite-control-global-functions.md)<br/>
 [Makra složených ovládacích prvků](../atl/reference/composite-control-macros.md)
-

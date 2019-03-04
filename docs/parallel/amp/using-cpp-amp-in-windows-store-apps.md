@@ -2,12 +2,12 @@
 title: Používání modelu C++ AMP v aplikacích pro UWP
 ms.date: 11/04/2016
 ms.assetid: 85577298-2c28-4209-9470-eb21048615db
-ms.openlocfilehash: 9e17cb8691408d664f403b53e9cd8ad70fe6e5e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31fede0a2419e56d53cb16521b08067dac5facc6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447749"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272656"
 ---
 # <a name="using-c-amp-in-uwp-apps"></a>Používání modelu C++ AMP v aplikacích pro UWP
 
@@ -113,7 +113,7 @@ concurrency::parallel_for_each(av_red.extent, [=](index<1> idx) restrict(amp)
     });
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vytvoření první aplikace pro UPW pomocí jazyka C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)<br/>
 [Vytváření komponent Windows Runtime v jazyce C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

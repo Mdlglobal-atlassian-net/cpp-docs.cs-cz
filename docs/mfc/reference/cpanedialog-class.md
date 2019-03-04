@@ -1,5 +1,5 @@
 ---
-title: Cpanedialog – třída
+title: CPaneDialog Class
 ms.date: 11/04/2016
 f1_keywords:
 - CPaneDialog
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - CPaneDialog [MFC], HandleInitDialog
 - CPaneDialog [MFC], SetOccDialogInfo
 ms.assetid: 48a6bb91-4b92-40f5-8907-b3270b146cf6
-ms.openlocfilehash: 95fc66ba55734c415cb41151cdc9b83d1b154898
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16aa707792cc1289ced380e54abef3f15289e7cf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431926"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274554"
 ---
-# <a name="cpanedialog-class"></a>Cpanedialog – třída
+# <a name="cpanedialog-class"></a>CPaneDialog Class
 
 `CPaneDialog` Podporuje nemodální ukotvitelné dialogové třídy.
 
@@ -71,7 +71,7 @@ Vytvoření `CPaneDialog` objektu ve dvou krocích. Nejprve se vytvoří objekt 
 
 [CDockablePane](../../mfc/reference/cdockablepane-class.md)
 
-[Cpanedialog –](../../mfc/reference/cpanedialog-class.md)
+[CPaneDialog](../../mfc/reference/cpanedialog-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -202,10 +202,9 @@ Vždy TRUE.
 
 Tato metoda podporuje [coccmanager –](../../mfc/reference/coccmanager-class.md) třídu, která spravuje OLE ovládací prvky stránky a ovládací prvky ActiveX. Struktura _AFX_OCC_DIALOG_INFO je definována v hlavičkovém souboru afxocc.h.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
 [CDockablePane – třída](../../mfc/reference/cdockablepane-class.md)<br/>
 [Styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles)
-

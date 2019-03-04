@@ -1,5 +1,5 @@
 ---
-title: CMFCVisualManagerWindows – třída
+title: CMFCVisualManagerWindows Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCVisualManagerWindows
@@ -140,14 +140,14 @@ helpviewer_keywords:
 - CMFCVisualManagerWindows [MFC], SetOfficeStyleMenus
 - CMFCVisualManagerWindows [MFC], m_b3DTabsXPTheme
 ms.assetid: 568b6e9e-8e67-4477-9a3d-2981cbd09861
-ms.openlocfilehash: e9f083f37c2e92172b05b907d733f9dbdb27ce45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3219de7f90d76e18b52efab8d8601b848427fca7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559741"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275958"
 ---
-# <a name="cmfcvisualmanagerwindows-class"></a>CMFCVisualManagerWindows – třída
+# <a name="cmfcvisualmanagerwindows-class"></a>CMFCVisualManagerWindows Class
 
 `CMFCVisualManagerWindows` Napodobuje vzhled systému Microsoft Windows XP nebo Microsoft Vista, když uživatel vybere na Windows XP nebo Vista motiv.
 
@@ -173,8 +173,8 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 |----------|-----------------|
 |[CMFCVisualManagerWindows::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)|Rozhraní volá tuto metodu za účelem určení, zda 3D karty by měl vždy být zvýrazněn aplikace. (Přepíše [CMFCVisualManager::AlwaysHighlight3DTabs](../../mfc/reference/cmfcvisualmanager-class.md#alwayshighlight3dtabs).)|
 |[CMFCVisualManagerWindows::DrawComboBorderWinXP](#drawcomboborderwinxp)|(Přepíše `CMFCVisualManager::DrawComboBorderWinXP`.)|
-|[CMFCVisualManagerWindows::DrawComboDropButtonWinXP](#drawcombodropbuttonwinxp)|(Přepíše [CMFCVisualManager::DrawComboDropButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawcombodropbuttonwinxp).)|
-|[CMFCVisualManagerWindows::DrawPushButtonWinXP](#drawpushbuttonwinxp)|(Přepíše [CMFCVisualManager::DrawPushButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawpushbuttonwinxp).)|
+|[CMFCVisualManagerWindows::DrawComboDropButtonWinXP](#drawcombodropbuttonwinxp)|(Overrides [CMFCVisualManager::DrawComboDropButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawcombodropbuttonwinxp).)|
+|[CMFCVisualManagerWindows::DrawPushButtonWinXP](#drawpushbuttonwinxp)|(Overrides [CMFCVisualManager::DrawPushButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawpushbuttonwinxp).)|
 |[CMFCVisualManagerWindows::GetButtonExtraBorder](#getbuttonextraborder)|Rozhraní volá tuto metodu při kreslení tlačítka panelu nástrojů. (Přepíše [CMFCVisualManager::GetButtonExtraBorder](../../mfc/reference/cmfcvisualmanager-class.md#getbuttonextraborder).)|
 |[CMFCVisualManagerWindows::GetCaptionButtonExtraBorder](#getcaptionbuttonextraborder)|(Přepíše [CMFCVisualManager::GetCaptionButtonExtraBorder](../../mfc/reference/cmfcvisualmanager-class.md#getcaptionbuttonextraborder).)|
 |[CMFCVisualManagerWindows::GetDockingPaneCaptionExtraHeight](#getdockingpanecaptionextraheight)|(Přepíše `CMFCVisualManager::GetDockingPaneCaptionExtraHeight`.)|
@@ -193,19 +193,19 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerWindows::OnDrawButtonSeparator](#ondrawbuttonseparator)|(Přepíše `CMFCVisualManagerOfficeXP::OnDrawButtonSeparator`.)|
 |[CMFCVisualManagerWindows::OnDrawCaptionButton](#ondrawcaptionbutton)|(Přepíše `CMFCVisualManagerOfficeXP::OnDrawCaptionButton`.)|
 |[CMFCVisualManagerWindows::OnDrawCaptionButtonIcon](#ondrawcaptionbuttonicon)|(Přepíše `CMFCVisualManagerOfficeXP::OnDrawCaptionButtonIcon`.)|
-|[CMFCVisualManagerWindows::OnDrawCheckBoxEx](#ondrawcheckboxex)|(Přepíše [CMFCVisualManager::OnDrawCheckBoxEx](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcheckboxex).)|
+|[CMFCVisualManagerWindows::OnDrawCheckBoxEx](#ondrawcheckboxex)|(Overrides [CMFCVisualManager::OnDrawCheckBoxEx](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcheckboxex).)|
 |[CMFCVisualManagerWindows::OnDrawComboBorder](#ondrawcomboborder)|(Přepíše `CMFCVisualManagerOfficeXP::OnDrawComboBorder`.)|
 |[CMFCVisualManagerWindows::OnDrawComboDropButton](#ondrawcombodropbutton)|(Přepíše `CMFCVisualManagerOfficeXP::OnDrawComboDropButton`.)|
 |[CMFCVisualManagerWindows::OnDrawControlBorder](#ondrawcontrolborder)|(Přepíše [CMFCVisualManager::OnDrawControlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcontrolborder).)|
 |[CMFCVisualManagerWindows::OnDrawEditBorder](#ondraweditborder)|(Přepíše `CMFCVisualManagerOfficeXP::OnDrawEditBorder`.)|
-|[CMFCVisualManagerWindows::OnDrawExpandingBox](#ondrawexpandingbox)|(Přepíše [CMFCVisualManager::OnDrawExpandingBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawexpandingbox).)|
+|[CMFCVisualManagerWindows::OnDrawExpandingBox](#ondrawexpandingbox)|(Overrides [CMFCVisualManager::OnDrawExpandingBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawexpandingbox).)|
 |[CMFCVisualManagerWindows::OnDrawFloatingToolbarBorder](#ondrawfloatingtoolbarborder)|(Přepíše `CMFCVisualManagerOfficeXP::OnDrawFloatingToolbarBorder`.)|
-|[CMFCVisualManagerWindows::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|Rozhraní volá tuto metodu po ohraničení kolem instance [cmfcheaderctrl – třída](../../mfc/reference/cmfcheaderctrl-class.md). (Přepíše [CMFCVisualManager::OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder).)|
-|[CMFCVisualManagerWindows::OnDrawHeaderCtrlSortArrow](#ondrawheaderctrlsortarrow)|Rozhraní volá tuto funkci při kreslení šipku řazení ovládacího prvku záhlaví. (Přepíše [CMFCVisualManager::OnDrawHeaderCtrlSortArrow](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlsortarrow).)|
+|[CMFCVisualManagerWindows::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|Rozhraní volá tuto metodu po ohraničení kolem instance [cmfcheaderctrl – třída](../../mfc/reference/cmfcheaderctrl-class.md). (Overrides [CMFCVisualManager::OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder).)|
+|[CMFCVisualManagerWindows::OnDrawHeaderCtrlSortArrow](#ondrawheaderctrlsortarrow)|Rozhraní volá tuto funkci při kreslení šipku řazení ovládacího prvku záhlaví. (Overrides [CMFCVisualManager::OnDrawHeaderCtrlSortArrow](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlsortarrow).)|
 |[CMFCVisualManagerWindows::OnDrawMenuBorder](#ondrawmenuborder)|(Přepíše `CMFCVisualManagerOfficeXP::OnDrawMenuBorder`.)|
 |[CMFCVisualManagerWindows::OnDrawMenuSystemButton](#ondrawmenusystembutton)|(Přepíše `CMFCVisualManagerOfficeXP::OnDrawMenuSystemButton`.)|
 |[CMFCVisualManagerWindows::OnDrawMiniFrameBorder](#ondrawminiframeborder)|(Přepíše `CMFCVisualManagerOfficeXP::OnDrawMiniFrameBorder`.)|
-|[CMFCVisualManagerWindows::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Volá se rozhraním, když ho ohraničení tlačítka stránky aplikace Outlook. (Přepíše [CMFCVisualManager::OnDrawOutlookPageButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookpagebuttonborder).)|
+|[CMFCVisualManagerWindows::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Volá se rozhraním, když ho ohraničení tlačítka stránky aplikace Outlook. (Overrides [CMFCVisualManager::OnDrawOutlookPageButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookpagebuttonborder).)|
 |[CMFCVisualManagerWindows::OnDrawPaneBorder](#ondrawpaneborder)|(Přepíše `CMFCVisualManagerOfficeXP::OnDrawPaneBorder`.)|
 |[CMFCVisualManagerWindows::OnDrawPaneCaption](#ondrawpanecaption)|(Přepíše `CMFCVisualManagerOfficeXP::OnDrawPaneCaption`.)|
 |[CMFCVisualManagerWindows::OnDrawPopupWindowButtonBorder](#ondrawpopupwindowbuttonborder)|(Přepíše `CMFCVisualManagerOfficeXP::OnDrawPopupWindowButtonBorder`.)|
@@ -230,7 +230,7 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerWindows::OnFillButtonInterior](#onfillbuttoninterior)|(Přepíše `CMFCVisualManagerOfficeXP::OnFillButtonInterior`.)|
 |[CMFCVisualManagerWindows::OnFillCommandsListBackground](#onfillcommandslistbackground)|(Přepíše `CMFCVisualManagerOfficeXP::OnFillCommandsListBackground`.)|
 |[CMFCVisualManagerWindows::OnFillMiniFrameCaption](#onfillminiframecaption)|(Přepíše `CMFCVisualManagerOfficeXP::OnFillMiniFrameCaption`.)|
-|[CMFCVisualManagerWindows::OnFillOutlookPageButton](#onfilloutlookpagebutton)|Rozhraní volá tuto metodu při vyplní vnitřní tlačítka stránky aplikace Outlook. (Přepíše [CMFCVisualManager::OnFillOutlookPageButton](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookpagebutton).)|
+|[CMFCVisualManagerWindows::OnFillOutlookPageButton](#onfilloutlookpagebutton)|Rozhraní volá tuto metodu při vyplní vnitřní tlačítka stránky aplikace Outlook. (Overrides [CMFCVisualManager::OnFillOutlookPageButton](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookpagebutton).)|
 |[CMFCVisualManagerWindows::OnFillTasksGroupInterior](#onfilltasksgroupinterior)|(Přepíše `CMFCVisualManagerOfficeXP::OnFillTasksGroupInterior`.)|
 |[CMFCVisualManagerWindows::OnFillTasksPaneBackground](#onfilltaskspanebackground)|Rozhraní volá tuto metodu při vyplní na pozadí [cmfctaskspane –](../../mfc/reference/cmfctaskspane-class.md) ovládacího prvku. (Přepíše [CMFCVisualManager::OnFillTasksPaneBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfilltaskspanebackground).)|
 |[CMFCVisualManagerWindows::OnHighlightMenuItem](#onhighlightmenuitem)|(Přepíše `CMFCVisualManagerOfficeXP::OnHighlightMenuItem`.)|
@@ -260,17 +260,17 @@ Následující příklad ukazuje, jak používat `CMFCVisualManagerWindows`. Ten
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cmfcbasevisualmanager –](../../mfc/reference/cmfcbasevisualmanager-class.md)
+[CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
 
-[Cmfcvisualmanager –](../../mfc/reference/cmfcvisualmanager-class.md)
+[CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)
 
-[CMFCVisualManagerOfficeXP –](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)
+[CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)
 
-[CMFCVisualManagerWindows –](../../mfc/reference/cmfcvisualmanagerwindows-class.md)
+[CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxvisualmanagerwindows.h
+**Header:** afxvisualmanagerwindows.h
 
 ##  <a name="alwayshighlight3dtabs"></a>  CMFCVisualManagerWindows::AlwaysHighlight3DTabs
 
@@ -307,7 +307,7 @@ virtual BOOL DrawComboBorderWinXP(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *bDisabled*<br/>
 [in] *bIsDropped*<br/>
@@ -330,7 +330,7 @@ virtual BOOL DrawComboDropButtonWinXP(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *bDisabled*<br/>
 [in] *bIsDropped*<br/>
@@ -352,7 +352,7 @@ virtual BOOL DrawPushButtonWinXP(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *pButton*<br/>
 [in] *uiState*<br/>
@@ -526,7 +526,7 @@ virtual void OnDrawBarGripper(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rectGripper*<br/>
 [in] *bHorz*<br/>
 [in] *pBar*<br/>
@@ -546,7 +546,7 @@ virtual BOOL OnDrawBrowseButton(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *pEdit*<br/>
 [in] *stavu*<br/>
@@ -568,7 +568,7 @@ virtual void OnDrawButtonBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *pButton*<br/>
 [in] *rect*<br/>
 [in] *stavu*<br/>
@@ -588,7 +588,7 @@ virtual void OnDrawButtonSeparator(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *pButton*<br/>
 [in] *rect*<br/>
 [in] *stavu*<br/>
@@ -611,7 +611,7 @@ virtual void OnDrawCaptionButton(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *pButton*<br/>
 [in] *bActive*<br/>
 [in] *bHorz*<br/>
@@ -635,7 +635,7 @@ virtual void OnDrawCaptionButtonIcon(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *pButton*<br/>
 [in] *id*<br/>
 [in] *bActive*<br/>
@@ -658,7 +658,7 @@ virtual void OnDrawCheckBoxEx(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *nInformace*<br/>
 [in] *bHighlighted*<br/>
@@ -681,7 +681,7 @@ virtual void OnDrawComboBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *bDisabled*<br/>
 [in] *bIsDropped*<br/>
@@ -704,7 +704,7 @@ virtual void OnDrawComboDropButton(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *bDisabled*<br/>
 [in] *bIsDropped*<br/>
@@ -738,7 +738,7 @@ virtual void OnDrawEditBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *bDisabled*<br/>
 [in] *bIsHighlighted*<br/>
@@ -758,7 +758,7 @@ virtual void OnDrawExpandingBox(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *bIsOpened*<br/>
 [in] *colorBox*<br/>
@@ -777,7 +777,7 @@ virtual void OnDrawFloatingToolbarBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *pToolBar*<br/>
 [in] *rectBorder*<br/>
 [in] *rectBorderSize*<br/>
@@ -798,7 +798,7 @@ virtual void OnDrawHeaderCtrlBorder(
 ### <a name="parameters"></a>Parametry
 
 [in] *pCtrl*<br/>
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *bIsPressed*<br/>
 [in] *bIsHighlighted*<br/>
@@ -818,7 +818,7 @@ virtual void OnDrawHeaderCtrlSortArrow(
 ### <a name="parameters"></a>Parametry
 
 [in] *pCtrl*<br/>
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *bIsUp*<br/>
 
@@ -835,7 +835,7 @@ virtual void OnDrawMenuBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *pMenu*<br/>
 [in] *rect*<br/>
 
@@ -854,7 +854,7 @@ virtual void OnDrawMenuSystemButton(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *uiSystemCommand*<br/>
 [in] *nStyle*<br/>
@@ -874,7 +874,7 @@ virtual void OnDrawMiniFrameBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *pFrameWnd*<br/>
 [in] *rectBorder*<br/>
 [in] *rectBorderSize*<br/>
@@ -893,7 +893,7 @@ virtual void OnDrawOutlookPageButtonBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rectBtn*<br/>
 [in] *bIsHighlighted*<br/>
 [in] *bIsPressed*<br/>
@@ -911,7 +911,7 @@ virtual void OnDrawPaneBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *pBar*<br/>
 [in] *rect*<br/>
 
@@ -930,7 +930,7 @@ virtual COLORREF OnDrawPaneCaption(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *pBar*<br/>
 [in] *bActive*<br/>
 [in] *rectCaption*<br/>
@@ -951,7 +951,7 @@ virtual void OnDrawPopupWindowButtonBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rectClient*<br/>
 [in] *pButton*<br/>
 
@@ -970,7 +970,7 @@ virtual void OnDrawScrollButtons(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *nBorderSize*<br/>
 [in] *iImage*<br/>
@@ -990,7 +990,7 @@ virtual void OnDrawSeparator(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *pBar*<br/>
 [in] *rect*<br/>
 [in] *bIsHoriz*<br/>
@@ -1010,7 +1010,7 @@ virtual void OnDrawSpinButtons(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rectSpin*<br/>
 [in] *nInformace*<br/>
 [in] *bOrientation*<br/>
@@ -1031,7 +1031,7 @@ virtual void OnDrawStatusBarPaneBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *pBar*<br/>
 [in] *rectPane*<br/>
 [in] *uiID*<br/>
@@ -1056,7 +1056,7 @@ virtual void OnDrawStatusBarProgress(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *pStatusBar*<br/>
 [in] *rectProgress*<br/>
 [in] *nProgressTotal*<br/>
@@ -1079,7 +1079,7 @@ virtual void OnDrawStatusBarSizeBox(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *pStatBar*<br/>
 [in] *rectSizeBox*<br/>
 
@@ -1098,7 +1098,7 @@ virtual void OnDrawTab(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rectTab*<br/>
 [in] *iTab*<br/>
 [in] *bIsActive*<br/>
@@ -1120,7 +1120,7 @@ virtual void OnDrawTabCloseButton(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *pTabWnd*<br/>
 [in] *bIsHighlighted*<br/>
@@ -1142,7 +1142,7 @@ virtual void OnDrawTabsButtonBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *pButton*<br/>
 [in] *uiState*<br/>
@@ -1163,7 +1163,7 @@ virtual void OnDrawTask(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *pTask*<br/>
 [in] *pIcons*<br/>
 [in] *bIsHighlighted*<br/>
@@ -1183,7 +1183,7 @@ virtual void OnDrawTasksGroupAreaBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *bSpecial*<br/>
 [in] *bNoTitle*<br/>
@@ -1203,7 +1203,7 @@ virtual void OnDrawTasksGroupCaption(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *pGroup*<br/>
 [in] *bIsHighlighted*<br/>
 [in] *bIsSelected*<br/>
@@ -1222,7 +1222,7 @@ virtual void OnDrawTearOffCaption(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *bIsActive*<br/>
 
@@ -1239,7 +1239,7 @@ virtual void OnErasePopupWindowButton(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rectClient*<br/>
 [in] *pButton*<br/>
 
@@ -1256,7 +1256,7 @@ virtual void OnEraseTabsArea(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *pTabWnd*<br/>
 
@@ -1274,7 +1274,7 @@ virtual void OnEraseTabsButton(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *pButton*<br/>
 [in] *pWndTab*<br/>
@@ -1292,7 +1292,7 @@ virtual BOOL OnEraseTabsFrame(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *pTabWnd*<br/>
 
@@ -1313,7 +1313,7 @@ virtual void OnFillBarBackground(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *pBar*<br/>
 [in] *rectClient*<br/>
 [in] *rectClip*<br/>
@@ -1333,7 +1333,7 @@ virtual void OnFillButtonInterior(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *pButton*<br/>
 [in] *rect*<br/>
 [in] *stavu*<br/>
@@ -1351,7 +1351,7 @@ virtual COLORREF OnFillCommandsListBackground(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *bIsSelected*<br/>
 
@@ -1371,7 +1371,7 @@ virtual COLORREF OnFillMiniFrameCaption(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rectCaption*<br/>
 [in] *pFrameWnd*<br/>
 [in] *bActive*<br/>
@@ -1393,7 +1393,7 @@ virtual void OnFillOutlookPageButton(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *bIsHighlighted*<br/>
 [in] *bIsPressed*<br/>
@@ -1412,7 +1412,7 @@ virtual void OnFillTasksGroupInterior(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *bSpecial*<br/>
 
@@ -1428,7 +1428,7 @@ virtual void OnFillTasksPaneBackground(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rectWorkArea*<br/>
 
 ### <a name="remarks"></a>Poznámky
@@ -1445,7 +1445,7 @@ virtual void OnHighlightMenuItem(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *pButton*<br/>
 [in] *rect*<br/>
 [in] *clrText*<br/>
@@ -1462,7 +1462,7 @@ virtual void OnHighlightRarelyUsedMenuItems(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rectRarelyUsed*<br/>
 
 ### <a name="remarks"></a>Poznámky
@@ -1487,7 +1487,7 @@ void SetOfficeStyleMenus(BOOL bOn = TRUE);
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

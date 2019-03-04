@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComHeapPtr class
 ms.assetid: bd08b53d-da2b-43ab-a79c-e7c8dbbc5994
-ms.openlocfilehash: eaa21700f63ae07565dba4b8b3b5dabac69e0168
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ace8dbb174bd6585e61bd941a60dad28296af72a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553731"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273245"
 ---
 # <a name="ccomheapptr-class"></a>Ccomheapptr – třída
 
@@ -45,9 +45,9 @@ Typ objektu ukládaly na haldě.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Cheapptrbase –](../../atl/reference/cheapptrbase-class.md)
+[CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)
 
-[Cheapptr –](../../atl/reference/cheapptr-class.md)
+[CHeapPtr](../../atl/reference/cheapptr-class.md)
 
 `CComHeapPtr`
 
@@ -73,7 +73,7 @@ Existující objekt `CComHeapPtr`.
 
 Ukazatel haldy lze vytvořit volitelně pomocí existující `CComHeapPtr` objektu. Pokud ano, nové `CComHeapPtr` objekt zodpovědnost za správu nový ukazatel a prostředky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CHeapPtr – třída](../../atl/reference/cheapptr-class.md)<br/>
 [CHeapPtrBase – třída](../../atl/reference/cheapptrbase-class.md)<br/>

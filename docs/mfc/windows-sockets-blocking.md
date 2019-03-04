@@ -8,16 +8,16 @@ helpviewer_keywords:
 - sockets [MFC], behavior on different Windows platforms
 - blocking mode sockets
 ms.assetid: 10aca9b1-bfba-41a8-9c55-ea8082181e63
-ms.openlocfilehash: 7b41f034e08570e418bf24d9d720795eafc37932
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26a361bc63da5f6e75144cc91fe837498a7f656b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610571"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272344"
 ---
 # <a name="windows-sockets-blocking"></a>Windows Sockets: Blokování
 
-V tomto článku a dva doprovodné články popisují několik problémů v programování v rozhraní Windows Sockets. Tento článek se týká blokování. Tyto problémy jsou popsané v článcích: [rozhraní Windows Sockets: pořadí bajtů](../mfc/windows-sockets-byte-ordering.md) a [rozhraní Windows Sockets: převádění řetězců](../mfc/windows-sockets-converting-strings.md).
+V tomto článku a dva doprovodné články popisují několik problémů v programování v rozhraní Windows Sockets. Tento článek se týká blokování. Tyto problémy jsou popsané v článcích: [Windows Sockets: Pořadí bajtů](../mfc/windows-sockets-byte-ordering.md) a [rozhraní Windows Sockets: Převádění řetězců](../mfc/windows-sockets-converting-strings.md).
 
 Pokud používáte nebo odvozen od třídy [CAsyncSocket](../mfc/reference/casyncsocket-class.md), budete muset spravovat tyto problémy sami. Pokud používáte nebo odvozen od třídy [csocket –](../mfc/reference/csocket-class.md), knihovna MFC je spravuje za vás.
 
@@ -36,22 +36,21 @@ Za normálních okolností používáte `CAsyncSocket`, byste měli vyhnout blok
 
 V části Windows se považují blokování volání chybný postup. Ve výchozím nastavení [CAsyncSocket](../mfc/reference/casyncsocket-class.md) podporuje asynchronní volání a vy musíte spravovat blokování sami pomocí zpětné volání oznámení. Třída [csocket –](../mfc/reference/csocket-class.md), na druhé straně je synchronní. Čerpadla zpráv Windows a spravuje blokování za vás.
 
-Další informace o blokování najdete v tématu Specifikace rozhraní Windows Sockets. Další informace o "U" funkcí najdete v tématu [rozhraní Windows Sockets: oznámení soketů](../mfc/windows-sockets-socket-notifications.md) a [rozhraní Windows Sockets: odvozování z tříd soketů](../mfc/windows-sockets-deriving-from-socket-classes.md).
+Další informace o blokování najdete v tématu Specifikace rozhraní Windows Sockets. Další informace o "U" funkcí najdete v tématu [rozhraní Windows Sockets: Soketu oznámení](../mfc/windows-sockets-socket-notifications.md) a [rozhraní Windows Sockets: Odvozování z tříd soketů](../mfc/windows-sockets-deriving-from-socket-classes.md).
 
 Další informace naleznete v tématu:
 
-- [Windows Sockets – Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets: Použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets: Použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets: Pozadí](../mfc/windows-sockets-background.md)
+- [Windows Sockets: Background](../mfc/windows-sockets-background.md)
 
-- [Windows Sockets: Sokety streamu](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets: Sokety datagramů](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: Sokety datagramu](../mfc/windows-sockets-datagram-sockets.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)<br/>
 [CAsyncSocket::OnSend](../mfc/reference/casyncsocket-class.md#onsend)
-

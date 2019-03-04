@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CSharedFile [MFC], Detach
 - CSharedFile [MFC], SetHandle
 ms.assetid: 5d000422-9ede-4318-a8c9-f7412b674f39
-ms.openlocfilehash: 188330317a8d65060d0aad0e1617365723f4f928
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e86e64c1de232aba0c17a0fdfb3600e480567a57
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476489"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273072"
 ---
 # <a name="csharedfile-class"></a>Csharedfile – třída
 
@@ -62,15 +62,15 @@ Další informace najdete v článku [soubory v prostředí MFC](../../mfc/files
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cfile –](../../mfc/reference/cfile-class.md)
+[CFile](../../mfc/reference/cfile-class.md)
 
-[Cmemfile –](../../mfc/reference/cmemfile-class.md)
+[CMemFile](../../mfc/reference/cmemfile-class.md)
 
 `CSharedFile`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxadv.h
+**Header:** afxadv.h
 
 ##  <a name="csharedfile"></a>  CSharedFile::CSharedFile
 
@@ -128,7 +128,7 @@ Určuje, zda blok paměti může růst.
 
 Pokud *bAllowGrow* nenulovou velikost bloku paměti mění podle potřeby, například pokud se pokus o provedené zapsat počet bajtů k souboru, než byly přiděleny bloku paměti.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CMemFile – třída](../../mfc/reference/cmemfile-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

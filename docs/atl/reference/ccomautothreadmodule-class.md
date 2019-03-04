@@ -17,12 +17,12 @@ helpviewer_keywords:
 - CComAutoThreadModule class
 - apartment model modules
 ms.assetid: 13063ea5-a57e-4aac-97d3-227137262811
-ms.openlocfilehash: 805227144887b29d85b1948f62060ffe9eb2d0e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b0fa685bf9a7de94b158bd62b00161c1b58562d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435685"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271993"
 ---
 # <a name="ccomautothreadmodule-class"></a>Ccomautothreadmodule – třída
 
@@ -49,7 +49,7 @@ class CComAutoThreadModule : public CComModule
 
 |||
 |-|-|
-|[Funkci CreateInstance](#createinstance)|Vybere vlákna a poté vytvoří objekt v přidružené objektu apartment.|
+|[CreateInstance](#createinstance)|Vybere vlákna a poté vytvoří objekt v přidružené objektu apartment.|
 |[GetDefaultThreads](#getdefaultthreads)|(Statické) Dynamicky vypočítá počet vláken pro modul na základě počtu procesorů.|
 |[Init](#init)|Vytvoří vlákna modulu.|
 |[Zámek](#lock)|Pak inkrementuje počet na modul a u aktuálního vlákna.|
@@ -83,15 +83,15 @@ Standardně průvodcem AppWizard knihovny ATL modelu COM (Průvodce projektu kni
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)
 
-[Catlmodule –](../../atl/reference/catlmodule-class.md)
+[CAtlModule](../../atl/reference/catlmodule-class.md)
 
 `IAtlAutoThreadModule`
 
 [CAtlModuleT](../../atl/reference/catlmodulet-class.md)
 
-[Catlautothreadmodulet –](../../atl/reference/catlautothreadmodulet-class.md)
+[CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md)
 
-[Ccommodule –](../../atl/reference/ccommodule-class.md)
+[CComModule](../../atl/reference/ccommodule-class.md)
 
 `CComAutoThreadModule`
 
@@ -257,7 +257,7 @@ Provádí atomické snížení počet zámků pro modul a pro aktuální vlákno
 
 Když počet zámků modulů dosáhne nuly, může být uvolněna modulu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [Třídy modulů](../../atl/atl-module-classes.md)

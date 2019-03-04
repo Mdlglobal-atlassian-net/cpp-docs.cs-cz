@@ -17,12 +17,12 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComPolyObject class
 ms.assetid: eaf67c18-e855-48ca-9b15-f1df3106121b
-ms.openlocfilehash: 9f84c022ac1dee34b6dca2931abb349eefb7d690
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a8dbbc06d35d2606cc76e89cc555ba7f8577daa9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495885"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277927"
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject – třída
 
@@ -48,7 +48,7 @@ Vaše třída odvozena od [ccomobjectroot –](../../atl/reference/ccomobjectroo
 |Název|Popis|
 |----------|-----------------|
 |[CComPolyObject::CComPolyObject](#ccompolyobject)|Konstruktor|
-|[CComPolyObject:: ~ CComPolyObject](#dtor)|Destruktor.|
+|[CComPolyObject::~CComPolyObject](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -117,7 +117,7 @@ CComPolyObject(void* pv);
 
 ### <a name="parameters"></a>Parametry
 
-*PV*<br/>
+*pv*<br/>
 [in] Ukazatel na vnější neznámá, pokud objekt má být agregován, nebo hodnota NULL, pokud objekt, pokud není agregovaný objekt.
 
 ### <a name="remarks"></a>Poznámky
@@ -150,7 +150,7 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*pp*<br/>
 [out] Ukazatel **CComPolyObject <** `contained` **>** ukazatele. Pokud `CreateInstance` neproběhne úspěšně, *pp* nastaven na hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -215,13 +215,13 @@ HRESULT QueryInterface(Q** pp);
 *Q*<br/>
 Rozhraní COM.
 
-*identifikátor IID*<br/>
+*iid*<br/>
 [in] Identifikátor se požadované rozhraní.
 
 *ppvObject*<br/>
 [out] Ukazatel na ukazatel rozhraní, který je identifikován *iid*. Pokud objekt nepodporuje toto rozhraní *ppvObject* nastaven na hodnotu NULL.
 
-*str*<br/>
+*pp*<br/>
 [out] Ukazatel na rozhraní identifikovaný `__uuidof(Q)`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -244,7 +244,7 @@ STDMETHOD_(ULONG, Release)();
 
 V ladicím buildu `Release` vrátí hodnotu, která může být užitečné pro diagnostiku a testování. V sestaveních nondebug `Release` vždy vrátí hodnotu 0.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CComObjectRootEx – třída](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)<br/>

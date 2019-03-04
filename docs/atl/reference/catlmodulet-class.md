@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlModuleT class
 ms.assetid: 9b74d02f-9117-47b1-a05e-c5945f83dd2b
-ms.openlocfilehash: 0d7673d634bad2d20dae63e4293f12e5530c4acd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2cd207038a92b944bf95575f0e0c820b8f09d615
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534898"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272045"
 ---
 # <a name="catlmodulet-class"></a>Catlmodulet – třída
 
@@ -66,7 +66,7 @@ Vaše třída odvozena od `CAtlModuleT`.
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)
 
-[Catlmodule –](../../atl/reference/catlmodule-class.md)
+[CAtlModule](../../atl/reference/catlmodule-class.md)
 
 `CAtlModuleT`
 
@@ -183,7 +183,7 @@ Vyhrazená.
 
 Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CAtlModule – třída](../../atl/reference/catlmodule-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)<br/>

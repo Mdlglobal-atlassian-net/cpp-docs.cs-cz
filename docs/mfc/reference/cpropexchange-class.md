@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CPropExchange [MFC], IsAsynchronous
 - CPropExchange [MFC], IsLoading
 ms.assetid: ed872180-e770-4942-892a-92139d501fab
-ms.openlocfilehash: 772388d069bdec274bd396b776d404711b694771
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4210399e32c2bb39008afa75b787c19e3338a7d5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560367"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276348"
 ---
 # <a name="cpropexchange-class"></a>Cpropexchange – třída
 
@@ -68,7 +68,7 @@ Rozhraní framework předává ukazatel na tuto `CPropExchange` objekt ovládac�
 
 `CPropExchange` slouží k serializaci vlastností ovládacího prvku nebo inicializace vlastností ovládacího prvku při načtení nebo vytvoření ovládacího prvku. `ExchangeProp` a `ExchangeFontProp` členské funkce `CPropExchange` vlastnosti, které chcete ukládat a načítat různá média.
 
-Další informace o používání `CPropExchange`, najdete v článku [knihovny MFC – ovládací prvky ActiveX: stránky vlastností](../../mfc/mfc-activex-controls-property-pages.md).
+Další informace o používání `CPropExchange`, najdete v článku [knihovny MFC – ovládací prvky ActiveX: Stránky vlastností](../../mfc/mfc-activex-controls-property-pages.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -166,7 +166,7 @@ Název vlastnosti se vyměňují.
 *ppUnk*<br/>
 Ukazatel na proměnnou obsahující ukazatel na vlastnost `IUnknown` rozhraní (Tato proměnná je obvykle člen třídy).
 
-*identifikátor IID*<br/>
+*iid*<br/>
 ID rozhraní na vlastnost, která bude používat ovládací prvek rozhraní.
 
 *pUnkDefault*<br/>
@@ -290,8 +290,7 @@ BOOL IsLoading();
 
 Nenulové, pokud vlastnosti jsou načítány; jinak 0.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [COleControl::DoPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)
-

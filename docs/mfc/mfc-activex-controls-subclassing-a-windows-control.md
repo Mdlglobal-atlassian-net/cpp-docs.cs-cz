@@ -1,5 +1,5 @@
 ---
-title: 'MFC – ovládací prvky ActiveX: Vytvoření podtřídy ovládacího prvku systému Windows'
+title: 'MFC – ovládací prvky ActiveX: Vytvoření podtřídy ovládacího prvku Windows'
 ms.date: 09/12/2018
 f1_keywords:
 - precreatewindow
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
-ms.openlocfilehash: 24284af7766f0fd968ca08724440509bc171fba6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08cdb90537dd50855a5bf223fbe54d58dfd6c365
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576641"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277050"
 ---
-# <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC – ovládací prvky ActiveX: Vytvoření podtřídy ovládacího prvku systému Windows
+# <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC – ovládací prvky ActiveX: Vytvoření podtřídy ovládacího prvku Windows
 
 Tento článek popisuje postup pro vytvoření podtřídy ovládacího prvku běžné Windows k vytvoření ovládacího prvku ActiveX. Existující Windows vytvoření podtřídy ovládacího prvku je rychlý způsob, jak vyvinout ovládací prvek ActiveX. Nový ovládací prvek bude mít na schopnosti rozčleněné ovládací prvek Windows, jako je vykreslování a reakce na kliknutí myší. Ukázka ovládací prvky MFC ActiveX [tlačítko](../visual-cpp-samples.md) je příklad vytvoření podtřídy ovládacího prvku Windows.
 
@@ -95,7 +95,6 @@ Chcete-li přidat obslužné rutiny zpráv pro zprávu reflektovaný okna ručn�
 
 Pro příklad, jak projeví zpracování zpráv, najdete ukázky ovládacích prvků ActiveX knihovny MFC [tlačítko](../visual-cpp-samples.md). Ukazuje `OnOcmCommand` obslužná rutina, která kód upozornění BN_CLICKED detekuje hrozby a reaguje tak ohlásí (odesílání) `Click` událostí.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)
-

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - asynchronous message blocks
 - greedy join [Concurrency Runtime]
 ms.assetid: 79c456c0-1692-480c-bb67-98f2434c1252
-ms.openlocfilehash: b78b4db4dda33e0a94da3624ea1ffd8748a601f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de6a433ab733207d5c56b46e693837056a0cd8b1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586118"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274160"
 ---
 # <a name="asynchronous-message-blocks"></a>Asynchronní bloky zpráv
 
@@ -27,7 +27,7 @@ Toto téma obsahuje následující oddíly:
 
 - [Přehled typů bloků zpráv](#overview)
 
-- [Třída unbounded_buffer](#unbounded_buffer)
+- [unbounded_buffer – třída](#unbounded_buffer)
 
 - [overwrite_buffer – třída](#overwrite_buffer)
 
@@ -83,16 +83,16 @@ Uloží jednu zprávu, která může být zapsána do a čtení z více než jed
 [Volání](#call)<br/>
 Provede práci, když přijme zprávu.
 
-[Transformer](#transformer)<br/>
+[transformer](#transformer)<br/>
 Provede práci při přijetí dat a odesílá výsledky, které pracují na jiný cílový blok. `transformer` Třídy můžete reagovat na různé vstupní a výstupní typy.
 
-[podle výběru](#choice)<br/>
+[choice](#choice)<br/>
 Vybírá první dostupnou zprávu ze skupiny zdrojů.
 
 [spojení a multitype spojení](#join)<br/>
 Počkejte, všechny zprávy přijaté ze skupiny zdrojů a pak sloučí zprávy do jedné zprávy pro jiného bloku zpráv.
 
-[Časovač](#timer)<br/>
+[timer](#timer)<br/>
 Odešle zprávu do cílový blok v pravidelných intervalech.
 
 Tyto typy bloku zpráv mají jiné charakteristiky, které je provést užitečné pro různé situace. Toto jsou některé vlastnosti:
@@ -101,9 +101,9 @@ Tyto typy bloku zpráv mají jiné charakteristiky, které je provést užitečn
 
 - *Pořadí zpráv*: Určuje, zda blok zpráv udržuje původní pořadí, ve kterém jsou zprávy odeslat ani přijmout. Každý typ bloku předem definovanou zprávu udržuje původní pořadí, ve kterém odesílá nebo přijímá zprávy.
 
-- *Zdroj počet*: maximální počet zdrojů, které bloku zpráv můžete číst z.
+- *Zdroj počet*: Maximální počet zdrojů, které bloku zpráv můžete číst z.
 
-- *Počtu cílových*: maximální počet cílů, jež zapisovat do bloku zpráv.
+- *Počtu cílových*: Maximální počet cílů, jež zapisovat do bloku zpráv.
 
 Následující tabulka ukazuje, jak tyto vlastnosti se vztahují na různé typy bloku zpráv.
 
@@ -112,7 +112,7 @@ Následující tabulka ukazuje, jak tyto vlastnosti se vztahují na různé typy
 |`unbounded_buffer`|Obojí|Řazení|bez vazby|bez vazby|
 |`overwrite_buffer`|Obojí|Řazení|bez vazby|bez vazby|
 |`single_assignment`|Obojí|Řazení|bez vazby|bez vazby|
-|`call`|Cíl|Řazení|bez vazby|Není k dispozici|
+|`call`|Target|Řazení|bez vazby|Není k dispozici|
 |`transformer`|Obojí|Řazení|bez vazby|1|
 |`choice`|Obojí|Řazení|10|1|
 |`join`|Obojí|Řazení|bez vazby|1|
@@ -139,7 +139,7 @@ Tento příklad vytvoří následující výstup:
 334455
 ```
 
-Úplný příklad, který ukazuje způsob použití `unbounded_buffer` najdete v tématu [postupy: implementace různých vzorů producent – příjemce](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md).
+Úplný příklad, který ukazuje způsob použití `unbounded_buffer` najdete v tématu [jak: Implementace různých vzorů producent – příjemce](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md).
 
 [[Horní](#top)]
 
@@ -161,7 +161,7 @@ Tento příklad vytvoří následující výstup:
 555555
 ```
 
-Úplný příklad, který ukazuje způsob použití `overwrite_buffer` najdete v tématu [postupy: implementace různých vzorů producent – příjemce](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md).
+Úplný příklad, který ukazuje způsob použití `overwrite_buffer` najdete v tématu [jak: Implementace různých vzorů producent – příjemce](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md).
 
 [[Horní](#top)]
 
@@ -181,7 +181,7 @@ Tento příklad vytvoří následující výstup:
 333333
 ```
 
-Úplný příklad, který ukazuje způsob použití `single_assignment` najdete v tématu [návod: implementace tříd Future](../../parallel/concrt/walkthrough-implementing-futures.md).
+Úplný příklad, který ukazuje způsob použití `single_assignment` najdete v tématu [názorný postup: Implementace tříd Future](../../parallel/concrt/walkthrough-implementing-futures.md).
 
 [[Horní](#top)]
 
@@ -201,7 +201,7 @@ Tento příklad vytvoří následující výstup:
 334455
 ```
 
-Úplný příklad, který ukazuje způsob použití `call` najdete v tématu [jak: Zadejte pracovních funkcí třídám call a transformer](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md).
+Úplný příklad, který ukazuje způsob použití `call` najdete v tématu [jak: Poskytování pracovních funkcí třídám call a transformer](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md).
 
 [[Horní](#top)]
 
@@ -225,7 +225,7 @@ Tento příklad vytvoří následující výstup:
 10.8914.5218.15
 ```
 
-Úplný příklad, který ukazuje způsob použití `transformer` najdete v tématu [postupy: použití transformace v datovém kanálu](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md).
+Úplný příklad, který ukazuje způsob použití `transformer` najdete v tématu [jak: Použití transformace v datovém kanálu](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md).
 
 [[Horní](#top)]
 
@@ -255,7 +255,7 @@ Protože úloha, která vypočítá 35<sup>th</sup> Fibonacciho číslo není za
 
 V tomto příkladu [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmus pro výpočet čísla Fibonacciho paralelně. Další informace o `parallel_invoke`, naleznete v tématu [paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md).
 
-Úplný příklad, který ukazuje způsob použití `choice` najdete v tématu [postupy: výběr mezi dokončené úkoly](../../parallel/concrt/how-to-select-among-completed-tasks.md).
+Úplný příklad, který ukazuje způsob použití `choice` najdete v tématu [jak: Výběr z dokončených úloh](../../parallel/concrt/how-to-select-among-completed-tasks.md).
 
 [[Horní](#top)]
 
@@ -287,7 +287,7 @@ fib35 = 9227465fib37 = 24157817half_of_fib42 = 1.33957e+008
 
 V tomto příkladu [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmus pro výpočet čísla Fibonacciho paralelně. Další informace o `parallel_invoke`, naleznete v tématu [paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md).
 
-Kompletní příklady, které ukazují, jak používat `join` najdete v tématu [postupy: výběr mezi dokončené úkoly](../../parallel/concrt/how-to-select-among-completed-tasks.md) a [návod: použití metody join k zabránění vzájemnému zablokování](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
+Kompletní příklady, které ukazují, jak používat `join` najdete v tématu [jak: Výběr z dokončených úloh](../../parallel/concrt/how-to-select-among-completed-tasks.md) a [názorný postup: Použití metody join k zabránění vzájemnému zablokování](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
 
 [[Horní](#top)]
 
@@ -313,7 +313,7 @@ Tento příklad vytvoří následující ukázkový výstup:
 Computing fib(42)..................................................result is 267914296
 ```
 
-Úplný příklad, který ukazuje způsob použití `timer` najdete v tématu [postupy: odesílání zpráv v pravidelných intervalech](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md).
+Úplný příklad, který ukazuje způsob použití `timer` najdete v tématu [jak: Odesílání zpráv v pravidelných intervalech](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md).
 
 [[Horní](#top)]
 
@@ -340,7 +340,7 @@ bool (T const &)
 
 Chcete-li odstranit zbytečnému kopírování dat, používejte druhý formulář, pokud máte agregační typ, který se šíří podle hodnoty.
 
-Podporuje filtrování zpráv *toku dat* programovací model, ve kterém součásti provádí výpočty při jejich přijímat data. Příklady, které používají funkce filtru pro řízení toku dat v síti předávání zpráv, najdete v článku [postupy: použití filtru bloku zpráv](../../parallel/concrt/how-to-use-a-message-block-filter.md), [návod: vytvoření agenta toku dat](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md), a [ Návod: Vytvoření sítě pro zpracování obrázků](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Podporuje filtrování zpráv *toku dat* programovací model, ve kterém součásti provádí výpočty při jejich přijímat data. Příklady, které používají funkce filtru pro řízení toku dat v síti předávání zpráv, najdete v článku [jak: Použití filtru bloku zpráv](../../parallel/concrt/how-to-use-a-message-block-filter.md), [názorný postup: Vytvoření agenta toku dat](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md), a [názorný postup: Vytvoření sítě pro zpracování obrázků](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 [[Horní](#top)]
 
@@ -352,11 +352,10 @@ Vezměte v úvahu spojení typu non-greedy a metodou greedy. Obě tyto rezervace
 
 Číst další zprávy počká na příjem zprávy z každého zdroje pomocí greedy spojení, které také přečte vstupní zprávy z mnoha různých zdrojů, rezervace zprávy. Představte si třeba greedy spojení, která přijímá zprávy z blokům zpráv `A` a `B`. Pokud greedy spojení obdrží dvě zprávy z B, ale nebyl dosud obdržel zprávu od `A`, greedy spojení uloží zpráva jedinečný identifikátor pro druhé zprávy z `B`. Po spojení greedy přijme zprávu z `A` a rozšíří na tyto zprávy používá identifikátor uložené zprávy zobrazíte, pokud druhá zpráva z `B` je stále k dispozici.
 
-Rezervace zprávy můžete použít, Pokud implementujete vlastní typy bloků zpráv vlastní. Příklad, jak vytvořit typ bloku vlastní zprávy, naleznete v tématu [návod: vytvoření vlastního bloku zpráv](../../parallel/concrt/walkthrough-creating-a-custom-message-block.md).
+Rezervace zprávy můžete použít, Pokud implementujete vlastní typy bloků zpráv vlastní. Příklad, jak vytvořit typ bloku vlastní zprávy, naleznete v tématu [názorný postup: Vytvoření vlastního bloku zpráv](../../parallel/concrt/walkthrough-creating-a-custom-message-block.md).
 
 [[Horní](#top)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md)
-

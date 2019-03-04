@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_link_target class
 ms.assetid: 33b64885-34d8-4d4e-a893-02e9f19c958e
-ms.openlocfilehash: 6748ea64f7be20dd5ce4573cd65b6e1084148b48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ef34ab7607c444044b6dde17f3db3f73d0d7086
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449111"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276751"
 ---
 # <a name="invalidlinktarget-class"></a>invalid_link_target – třída
 
@@ -45,7 +45,7 @@ class invalid_link_target : public std::exception;
 
 **Namespace:** souběžnosti
 
-##  <a name="ctor"></a> invalid_link_target –
+##  <a name="ctor"></a> invalid_link_target
 
 Vytvoří `invalid_link_target` objektu.
 
@@ -57,11 +57,10 @@ invalid_link_target() throw();
 
 ### <a name="parameters"></a>Parametry
 
-*_TEXT*<br/>
+*_Message*<br/>
 Popisná zpráva chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [Asynchronní bloky zpráv](../../../parallel/concrt/asynchronous-message-blocks.md)
-

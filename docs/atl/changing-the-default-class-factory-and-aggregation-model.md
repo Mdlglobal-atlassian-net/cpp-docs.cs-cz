@@ -12,12 +12,12 @@ helpviewer_keywords:
 - default class factory, ATL
 - defaults [C++], class factory
 ms.assetid: 6e040e95-0f38-4839-8a8b-c9800dd47e8c
-ms.openlocfilehash: 34e838eea201f96acd7dcc647c4410fb244c8424
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94f9ecd85e09cb3916b518d71b904961042142e8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485540"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277375"
 ---
 # <a name="changing-the-default-class-factory-and-aggregation-model"></a>Změna výchozí objekt pro vytváření tříd a agregačního modelu
 
@@ -35,8 +35,7 @@ Jsou dvě makra, které definují objekt pro vytváření tříd [DECLARE_CLASSF
 
 ATL také používá **typedef** mechanismus pro implementaci výchozí chování. Například používá makro DECLARE_AGGREGATABLE **typedef** definovat typ s názvem `_CreatorClass`, který je pak odkazovat v rámci ATL. Všimněte si, že v odvozené třídě, **– typedef** pomocí stejného názvu jako základní třída **typedef** výsledkem knihovny ATL pomocí vaší definice a přepisuje výchozí chování.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Základy ATL – objekty COM](../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Agregační makra a makra objektu pro vytváření tříd](../atl/reference/aggregation-and-class-factory-macros.md)
-

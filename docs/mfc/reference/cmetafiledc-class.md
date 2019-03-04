@@ -1,5 +1,5 @@
 ---
-title: Cmetafiledc – třída
+title: CMetaFileDC Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMetaFileDC
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - CMetaFileDC [MFC], Create
 - CMetaFileDC [MFC], CreateEnhanced
 ms.assetid: ffce60fa-4181-4d46-9832-25e46fad4db4
-ms.openlocfilehash: bfbe03c5c81b2c7d6517dff7ce4e5f88b7c076bc
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 95f54f50d7a87e9a2ad4689c14f3b7f8d42ff71e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178301"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276786"
 ---
-# <a name="cmetafiledc-class"></a>Cmetafiledc – třída
+# <a name="cmetafiledc-class"></a>CMetaFileDC Class
 
 Implementuje metasoubor systému Windows, který obsahuje posloupnost grafiky zařízení (GDI) příkazy, které můžete zopakovat pro vytvoření požadovaného obrázku nebo textu.
 
@@ -213,8 +213,7 @@ Aplikace musí používat Win32 `GetWinMetaFileBits` funkce pro převod rozší�
 
 Název souboru pro rozšířený metasoubor používejte. EMF rozšíření.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CDC – třída](../../mfc/reference/cdc-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-

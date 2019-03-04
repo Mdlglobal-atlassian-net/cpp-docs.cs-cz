@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CA2WEX class
 ms.assetid: 317d9ffb-e84f-47e8-beda-57e28fb19124
-ms.openlocfilehash: 96769c0012b1271263d2217fe9b5ea1a36ec8446
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7bfce54253ffcd217bb98345893724a509879abc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629941"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274451"
 ---
 # <a name="ca2wex-class"></a>Ca2wex – třída
 
@@ -43,7 +43,7 @@ Velikost vyrovnávací paměti používané při překladu. Výchozí délka je 
 |Název|Popis|
 |----------|-----------------|
 |[CA2WEX::CA2WEX](#ca2wex)|Konstruktor|
-|[CA2WEX –:: ~ CA2WEX –](#dtor)|Destruktor.|
+|[CA2WEX::~CA2WEX](#dtor)|Destruktor.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
@@ -113,7 +113,7 @@ Znaková stránka používá k provedení převodu. Viz diskuze parametr stránk
 
 Přidělí vyrovnávací paměti používané při překladu.
 
-##  <a name="dtor"></a>  CA2WEX –:: ~ CA2WEX –
+##  <a name="dtor"></a>  CA2WEX::~CA2WEX
 
 Destruktor.
 
@@ -153,7 +153,7 @@ operator LPWSTR() const throw();
 
 Vrátí textový řetězec psaní LPWSTR.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CA2AEX – třída](../../atl/reference/ca2aex-class.md)<br/>
 [CA2CAEX – třída](../../atl/reference/ca2caex-class.md)<br/>

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [MFC], handler
 - messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
-ms.openlocfilehash: 84e12a8f4ca0ce6384bc60b2fa01bfaf7824c864
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d60ae52225ddd993c1768d0b5ce1989ab0192e45
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585416"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275386"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>Obslužné rutiny pro standardní zprávy Windows
 
@@ -38,6 +38,6 @@ Jak se určují správný způsob, jak přepsat danou zprávu, když v okně Vla
 
 Podle úmluvy názvy tyto obslužné rutiny začínají předponou "Na". Některé z těchto obslužných rutin nepřebírají žádné argumenty, zatímco jiné přijímají několik. Některé také mít návratový typ jiný než **void**. Výchozích obslužných rutin pro všechny **WM_** zprávy jsou dokumentovány v článku *odkaz knihovny MFC* jako členské funkce třídy `CWnd` jejichž názvy začínají řetězcem "Na". V deklaraci členské funkce `CWnd` mají předponu **afx_msg**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Deklarace funkcí obslužných rutin zpráv](../mfc/declaring-message-handler-functions.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CHttpConnection [MFC], CHttpConnection
 - CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
-ms.openlocfilehash: 7d11420ca48bfcecbd2534123a36364314b9651c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7a91454b9a8619cda155f33391e5d02ae7653b5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611000"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273605"
 ---
 # <a name="chttpconnection-class"></a>Chttpconnection – třída
 
@@ -55,7 +55,7 @@ Další informace o tom, `CHttpConnection` funguje s jinými třídami MFC Inter
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cinternetconnection –](../../mfc/reference/cinternetconnection-class.md)
+[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)
 
 `CHttpConnection`
 
@@ -179,7 +179,7 @@ Jakékoli kombinace příznaků INTERNET_ FLAG_ *. V části poznámky popis mo�
 *nVerb*<br/>
 Číslo přidružené k typu požadavku HTTP. Může být jedna z následujících akcí:
 
-|Typ požadavku HTTP|*nVerb* hodnota|
+|Typ požadavku HTTP|*nVerb* value|
 |-----------------------|-------------------|
 |HTTP_VERB_POST|0|
 |HTTP_VERB_GET|1|
@@ -205,11 +205,11 @@ Ukazatel [chttpfile –](../../mfc/reference/chttpfile-class.md) požadovaný ob
 |INTERNET_FLAG_SECURE|Používá sémantiku zabezpečené transakce. To se přeloží na používání protokolu SSL a PCT a pouze má smysl v požadavcích HTTP|
 |INTERNET_FLAG_NO_AUTO_REDIRECT|Použít pouze s protokolem HTTP, určuje, že přesměrování by neměl být zpracovány automaticky v [CHttpFile::SendRequest](../../mfc/reference/chttpfile-class.md#sendrequest).|
 
-Přepsat `dwContext` výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu souvisí s tuto konkrétní operaci `CHttpConnection` objekt vytvořený pomocí jeho [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objektu. Hodnota se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) kvůli stavu na operaci, se kterým je identifikován. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.
+Přepsat `dwContext` výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu souvisí s tuto konkrétní operaci `CHttpConnection` objekt vytvořený pomocí jeho [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objektu. Hodnota se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) kvůli stavu na operaci, se kterým je identifikován. Přečtěte si článek [Internet první kroky: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.
 
 Pomocí této funkce může být vyvoláno výjimek.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CInternetConnection – třída](../../mfc/reference/cinternetconnection-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

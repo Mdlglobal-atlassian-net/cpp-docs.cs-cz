@@ -18,12 +18,12 @@ helpviewer_keywords:
 - sequenced data flow
 - stream sockets [MFC]
 ms.assetid: f60d4ed2-bf23-4a0e-98d2-fee77e8473dd
-ms.openlocfilehash: 93342f734d1e475cbae1b7e3025c59e6e6f73284
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ab866609d0b75aaf9d06a01c204433d80e7e3d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468026"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274918"
 ---
 # <a name="windows-sockets-background"></a>Windows Sockets: Pozadí
 
@@ -44,7 +44,7 @@ Mnoho výrobců síťového softwaru podporuje rozhraní Windows Sockets pomocí
 
 Knihovna MFC (Microsoft Foundation Class Library) pro podporu programování pomocí rozhraní Windows Sockets API poskytuje dvě třídy. Jedna z těchto tříd, `CSocket`, přináší vysokou úroveň abstrakce pro zjednodušení programování síťové komunikace.
 
-Specifikace rozhraní Windows Sockets, Rozhraní Windows Sockets: Otevřené rozhraní pro síťovou komunikaci v systému Microsoft Windows, nyní ve verzi 1.1, bylo vyvinuto jako otevřený síťový standard velkou skupinou jednotlivců a podniků komunity protokolu TCP/IP a je volně k dispozici. Programovací model soketů podporuje aktuálně jednu „doménu komunikace“ pomocí sady protokolů sítě Internet. Specifikace je k dispozici v sadě Windows SDK.
+Specifikace rozhraní Windows Sockets, rozhraní Windows Sockets: Otevřené rozhraní pro sítě výpočetního prostředí v rámci Microsoft Windows, nyní ve verzi 1.1, byla vyvinuta jako otevřený síťový standard velkou skupinou jednotlivců a podniků komunity protokolu TCP/IP a je volně k dispozici pro použití. Programovací model soketů podporuje aktuálně jednu „doménu komunikace“ pomocí sady protokolů sítě Internet. Specifikace je k dispozici v sadě Windows SDK.
 
 > [!TIP]
 >  Protože sokety používají sadu protokolů sítě Internet, jsou upřednostňovanou trasou pro aplikace, které podporují komunikaci na Internetu prostřednictvím „informační dálnice“.
@@ -70,7 +70,7 @@ K dispozici jsou dva typy soketu:
 > [!NOTE]
 >  V některých síťových protokolech, například XNS, mohou být datové proudy orientované na záznamy a nikoli na proudy bajtů. V rámci běžnějšího protokolu TCP/IP však datové proudy představují proudy bajtů. Rozhraní Windows Sockets poskytuje úroveň abstrakce, která je nezávislá na základním protokolu.
 
-Informace o těchto typech a jaký typ soketu použít v jakých situacích, přečtěte si téma [rozhraní Windows Sockets: sokety Stream](../mfc/windows-sockets-stream-sockets.md) a [rozhraní Windows Sockets: sokety datagramů](../mfc/windows-sockets-datagram-sockets.md).
+Informace o těchto typech a jaký typ soketu použít v jakých situacích, přečtěte si téma [rozhraní Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md) a [rozhraní Windows Sockets: Sokety datagramu](../mfc/windows-sockets-datagram-sockets.md).
 
 ##  <a name="_core_the_socket_data_type"></a> Datový typ SOCKET
 
@@ -89,17 +89,16 @@ Sokety jsou velmi užitečné v nejméně třech kontextech komunikace:
 - Volání vzdálených procedur (RPC) tím, že umožňují přijímající aplikaci zprávu interpretovat jako volání funkce.
 
 > [!TIP]
->  Ideálním případem použití soketů knihovny MFC je, když vytváříte obě strany komunikace: používáte knihovnu MFC na obou koncích. Další informace o tomto tématu, včetně případu při při komunikaci s aplikacemi, non-MFC, naleznete v tématu [rozhraní Windows Sockets: pořadí bajtů](../mfc/windows-sockets-byte-ordering.md).
+>  Ideálním případem použití soketů knihovny MFC je, když vytváříte obě strany komunikace: používáte knihovnu MFC na obou koncích. Další informace o tomto tématu, včetně případu při při komunikaci s aplikacemi, non-MFC, naleznete v tématu [rozhraní Windows Sockets: Pořadí bajtů](../mfc/windows-sockets-byte-ordering.md).
 
 Další informace najdete v tématu Specifikace Windows Sockets: **ntohs**, **ntohl**, **htons**, **htonl**. Také si přečtěte následující témata:
 
-- [Windows Sockets: Použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets: Použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md)
 
 - [Windows Sockets: Příklady soketů využívajících archivy](../mfc/windows-sockets-example-of-sockets-using-archives.md)
 
-- [Windows Sockets – Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)
-

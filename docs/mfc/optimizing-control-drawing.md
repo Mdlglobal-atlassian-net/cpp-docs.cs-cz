@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 29ff985d-9bf5-4678-b62d-aad12def75fb
-ms.openlocfilehash: 9096c43088c89ceef9e57d0e3a994340f9115d6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d0037ebdfe56690be2f18a2790b2b13967e337c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487344"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274177"
 ---
 # <a name="optimizing-control-drawing"></a>Optimalizace vykreslování ovládacích prvků
 
@@ -42,7 +42,7 @@ Nakonec eliminovat zbytečné `SelectObject` volání, upravte `OnDraw` následu
 
 [!code-cpp[NVC_MFC_AxOpt#20](../mfc/codesnippet/cpp/optimizing-control-drawing_6.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – ovládací prvky ActiveX: Optimalizace](../mfc/mfc-activex-controls-optimization.md)<br/>
 [COleControl – třída](../mfc/reference/colecontrol-class.md)<br/>
@@ -50,4 +50,3 @@ Nakonec eliminovat zbytečné `SelectObject` volání, upravte `OnDraw` následu
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)<br/>
 [Průvodce ovládacím prvkem ActiveX v prostředí MFC](../mfc/reference/mfc-activex-control-wizard.md)<br/>
 [MFC – ovládací prvky ActiveX: Vykreslování ovládacího prvku ActiveX](../mfc/mfc-activex-controls-painting-an-activex-control.md)
-

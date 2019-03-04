@@ -9,12 +9,12 @@ helpviewer_keywords:
 - runtime [MFC], class information
 - run-time class [MFC], CRuntimeClass structure
 ms.assetid: de62b6ef-90d4-420f-8c70-f58b36976a2b
-ms.openlocfilehash: 83c10d5a87c7d5782505fcd93e46c678a97b8b5d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 92979a10c18d9759e0ecc9f0785e56a97c0f0642
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521955"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274294"
 ---
 # <a name="cruntimeclass-structure"></a>CRuntimeClass – struktura
 
@@ -88,7 +88,7 @@ Ukazatel na nově vytvořený objekt nebo hodnota NULL, pokud název třídy neb
 
 ### <a name="remarks"></a>Poznámky
 
-Třídy odvozené z `CObject` může podporovat dynamické vytváření, což je schopnost vytvářet objekt z dané třídy v době běhu. Dokumentu, zobrazení a rámečku třídy, například by měla podporovat dynamické vytváření. Další informace o dynamické vytváření a `CreateObject` člen, naleznete v tématu [CObject – třída](../../mfc/using-cobject.md) a [CObject – třída: určení úrovní funkčnosti](../../mfc/specifying-levels-of-functionality.md).
+Třídy odvozené z `CObject` může podporovat dynamické vytváření, což je schopnost vytvářet objekt z dané třídy v době běhu. Dokumentu, zobrazení a rámečku třídy, například by měla podporovat dynamické vytváření. Další informace o dynamické vytváření a `CreateObject` člen, naleznete v tématu [CObject – třída](../../mfc/using-cobject.md) a [CObject – třída: Určení úrovní funkčnosti](../../mfc/specifying-levels-of-functionality.md).
 
 ### <a name="example"></a>Příklad
 
@@ -141,7 +141,7 @@ Určuje vztah "walking" ze člena třídy řetězem odvozených tříd až po ho
 > [!NOTE]
 >  Použít `CRuntimeClass` struktury, musí obsahovat IMPLEMENT_DYNAMIC IMPLEMENT_DYNCREATE a IMPLEMENT_SERIAL – makro v implementaci třídy, pro který chcete načíst informace o objektu za běhu.
 
-Další informace o používání `CRuntimeClass`, najdete v článku [CObject – třída: přístup k informacím o třídě Run-Time](../../mfc/accessing-run-time-class-information.md).
+Další informace o používání `CRuntimeClass`, najdete v článku [CObject – třída: Přístup k informacím o Run-Time třída](../../mfc/accessing-run-time-class-information.md).
 
 ### <a name="example"></a>Příklad
 
@@ -215,7 +215,7 @@ Další informace o schématu čísla, najdete v článku [IMPLEMENT_SERIAL](run
 
   Podívejte se na příklad pro [IsDerivedFrom](#isderivedfrom).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CObject::GetRuntimeClass](../../mfc/reference/cobject-class.md#getruntimeclass)<br/>
@@ -224,4 +224,3 @@ Další informace o schématu čísla, najdete v článku [IMPLEMENT_SERIAL](run
 [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)<br/>
 [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate)<br/>
 [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)
-

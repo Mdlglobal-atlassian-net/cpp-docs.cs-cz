@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonButton [MFC], SetText
 - CMFCRibbonButton [MFC], OnClick
 ms.assetid: 732e941c-9504-4b83-a691-d18075965d53
-ms.openlocfilehash: 743390955c583a130b53b9e80acd2b01d9742e1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d0d16062f6808cbeb2d3e73fac9f4bbdfd7e69c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550375"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278155"
 ---
 # <a name="cmfcribbonbutton-class"></a>Cmfcribbonbutton – třída
 
@@ -240,7 +240,7 @@ pPanel->Add (new CMFCRibbonButton (ID_EDIT_PAINT, _T("Paint"), 9));
 
 [Cmfcribbonbaseelement –](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
-[Cmfcribbonbutton –](../../mfc/reference/cmfcribbonbutton-class.md)
+[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -345,7 +345,7 @@ CSize DrawBottomText(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *bCalcOnly*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -363,7 +363,7 @@ virtual void DrawImage(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *typu*<br/>
 [in] *rectImage*<br/>
 
@@ -382,7 +382,7 @@ virtual int DrawRibbonText(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *strText*<br/>
 [in] *rectText*<br/>
 [in] *uiDTFlags*<br/>
@@ -427,7 +427,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -486,7 +486,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -522,7 +522,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -740,7 +740,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
@@ -754,7 +754,7 @@ virtual void OnClick(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Určuje pozici kliknutí myší.
 
 ### <a name="remarks"></a>Poznámky
@@ -769,7 +769,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
@@ -781,7 +781,7 @@ virtual void OnDrawBorder(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
@@ -793,7 +793,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -979,7 +979,7 @@ virtual void SetText(LPCTSTR lpszText);
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)

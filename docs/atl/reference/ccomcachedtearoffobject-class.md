@@ -1,5 +1,5 @@
 ---
-title: Ccomcachedtearoffobject – třída
+title: CComCachedTearOffObject Class
 ms.date: 11/04/2016
 f1_keywords:
 - CComCachedTearOffObject
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - cache, ATL cached tear-off objects
 - CComCachedTearOffObject class
 ms.assetid: ae19507d-a1de-4dbc-a988-da9f75a50c95
-ms.openlocfilehash: 009bc1e20693a9e45490c58ea29ff9d28b6aa6ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb7821da03e1ca69c850fa1a295851faf4af4c5b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582722"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277531"
 ---
-# <a name="ccomcachedtearoffobject-class"></a>Ccomcachedtearoffobject – třída
+# <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject Class
 
 Tato třída implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) pro rozhraní s odnímatelnými nabídkami.
 
@@ -49,7 +49,7 @@ Vaše odtržených třída odvozena od `CComTearOffObjectBase` a rozhraní chcet
 |Název|Popis|
 |----------|-----------------|
 |[CComCachedTearOffObject::CComCachedTearOffObject](#ccomcachedtearoffobject)|Konstruktor|
-|[Ccomcachedtearoffobject –:: ~ ccomcachedtearoffobject –](#dtor)|Destruktor.|
+|[CComCachedTearOffObject::~CComCachedTearOffObject](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -111,14 +111,14 @@ CComCachedTearOffObject(void* pv);
 
 ### <a name="parameters"></a>Parametry
 
-*PV*<br/>
+*pv*<br/>
 [in] Ukazatel `IUnknown` z `CComCachedTearOffObject`.
 
 ### <a name="remarks"></a>Poznámky
 
 Inicializuje `CComContainedObject` člen [m_contained](#m_contained).
 
-##  <a name="dtor"></a>  Ccomcachedtearoffobject –:: ~ ccomcachedtearoffobject –
+##  <a name="dtor"></a>  CComCachedTearOffObject::~CComCachedTearOffObject
 
 Destruktor.
 
@@ -177,7 +177,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*<br/>
+*iid*<br/>
 [in] Identifikátor GUID se požadované rozhraní.
 
 *ppvObject*<br/>
@@ -203,7 +203,7 @@ STDMETHOD_(ULONG, Release)();
 
 V sestaveních bez ladění vždy vrátí hodnotu 0. V sestavení ladění vrátí hodnotu, která může být užitečné pro diagnostiku a testování.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CComTearOffObject – třída](../../atl/reference/ccomtearoffobject-class.md)<br/>
 [CComObjectRootEx – třída](../../atl/reference/ccomobjectrootex-class.md)<br/>

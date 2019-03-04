@@ -1,5 +1,5 @@
 ---
-title: Coccmanager – třída
+title: COccManager Class
 ms.date: 11/04/2016
 f1_keywords:
 - COccManager
@@ -30,14 +30,14 @@ helpviewer_keywords:
 - COccManager [MFC], SetDefaultButton
 - COccManager [MFC], SplitDialogTemplate
 ms.assetid: 7d47aeed-d1ab-48e3-b4cf-d429718e370a
-ms.openlocfilehash: 804db7be4ba796a67042e6772ae4cb631c0c232b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a83f58b8de2411577d9fc025f7a8f8dc535ea8b3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440180"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276647"
 ---
-# <a name="coccmanager-class"></a>Coccmanager – třída
+# <a name="coccmanager-class"></a>COccManager Class
 
 Spravuje různé vlastní ovládací prvky stránky; implementované `COleControlContainer` a `COleControlSite` objekty.
 
@@ -400,7 +400,7 @@ Pokud v šabloně nejsou žádné ovládací prvky ActiveX, je vrácena hodnota 
 
 Potlačí tuto funkci k přizpůsobení tohoto procesu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [COleControlSite – třída](../../mfc/reference/colecontrolsite-class.md)<br/>

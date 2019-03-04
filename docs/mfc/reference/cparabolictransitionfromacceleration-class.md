@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CParabolicTransitionFromAcceleration [MFC], m_dblFinalValue
 - CParabolicTransitionFromAcceleration [MFC], m_dblFinalVelocity
 ms.assetid: 1e59b86f-358b-4da0-a4fd-8eaf5e85e00f
-ms.openlocfilehash: 0b0ded2e2e8e84d265a0ccaee57af671421b6d47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d4a073a0fd74f7564d9183779acfd66b41a9540
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502866"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274411"
 ---
 # <a name="cparabolictransitionfromacceleration-class"></a>Cparabolictransitionfromacceleration – třída
 
@@ -63,9 +63,9 @@ Během parabolickým zrychlením hodnoty proměnné animace změní z počáteč
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cbasetransition –](../../mfc/reference/cbasetransition-class.md)
+[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
 
-[Cparabolictransitionfromacceleration –](../../mfc/reference/cparabolictransitionfromacceleration-class.md)
+[CParabolicTransitionFromAcceleration](../../mfc/reference/cparabolictransitionfromacceleration-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -136,6 +136,6 @@ Rychlost animace proměnné na konci přechodu.
 DOUBLE m_dblFinalVelocity;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

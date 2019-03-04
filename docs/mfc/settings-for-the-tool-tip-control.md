@@ -5,12 +5,12 @@ helpviewer_keywords:
 - tool tips [MFC], activating
 - CToolTipCtrl class [MFC], settings
 ms.assetid: ff8c5c46-2047-403a-bd98-ffec3d21ee3a
-ms.openlocfilehash: 99ad8b30599b4399e4574dea611991b4c8e1a8e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5cc72401da95e63520b544865ea509a8ad219bda
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532667"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271928"
 ---
 # <a name="settings-for-the-tool-tip-control"></a>Nastavení pro ovládací prvek popis tlačítka
 
@@ -20,8 +20,7 @@ Můžete nastavit aktivní popis tlačítka, který zobrazí popis tlačítka, k
 
 Většina aplikací obsahují panely nástrojů s nástroji, které odpovídají nabídce příkazů. Pro takové nástroje je vhodné pro ovládacím prvkem popis tlačítka nástroj zobrazit stejný text jako příslušnou položku. Systém automaticky odstraní ampersand (&) akcelerátoru znaků z řetězců všechny předán ovládacím prvkem popis tlačítka nástroj, pokud ovládací prvek nemá TTS_NOPREFIX style.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CToolTipCtrl](../mfc/using-ctooltipctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

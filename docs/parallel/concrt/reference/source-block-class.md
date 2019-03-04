@@ -33,12 +33,12 @@ f1_keywords:
 helpviewer_keywords:
 - source_block class
 ms.assetid: fbdd4146-e8d0-42e8-b714-fe633f69ffbf
-ms.openlocfilehash: 609c7d78bdf2f16be4d82add454ef9546ea22588
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ddfd5e139171c7097a793f12ac82767b8773107
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468689"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277362"
 ---
 # <a name="sourceblock-class"></a>source_block – třída
 
@@ -71,7 +71,7 @@ Typ procesoru pro zpracování zpráv.
 
 |Název|Popis|
 |----------|-----------------|
-|[source_block –](#ctor)|Vytvoří `source_block` objektu.|
+|[source_block](#ctor)|Vytvoří `source_block` objektu.|
 |[~ source_block – destruktor](#dtor)|Odstraní `source_block` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
@@ -84,7 +84,7 @@ Typ procesoru pro zpracování zpráv.
 |[link_target](#link_target)|K této propojuje cílový blok `source_block` objektu.|
 |[Vydání verze](#release)|Uvolní předchozí vyhrazení úspěšné zprávy.|
 |[release_ref](#release_ref)|Počet odkazů v tomto vydání `source_block` objektu.|
-|[Rezervovat](#reserve)|Vyhradí zprávu nabízely dříve v tomto `source_block` objektu.|
+|[reserve](#reserve)|Vyhradí zprávu nabízely dříve v tomto `source_block` objektu.|
 |[unlink_target](#unlink_target)|Cílový blok z tohoto nebude odpojen `source_block` objektu.|
 |[unlink_targets](#unlink_targets)|Zruší všechny cílové bloky z tohoto propojení `source_block` objektu. (Přepíše [isource::unlink_targets –](isource-class.md#unlink_targets).)|
 
@@ -95,14 +95,14 @@ Typ procesoru pro zpracování zpráv.
 |[accept_message](#accept_message)|Při přepisu v odvozené třídě, přijímá nabízená zpráva zdrojem. Bloky zpráv by měly přepsat tuto metodu za účelem ověření `_MsgId` a vrátit zprávu.|
 |[async_send](#async_send)|Asynchronně vloží do fronty zpráv a spustí úlohu šíření hodnoty, pokud to není již bylo provedeno|
 |[consume_message](#consume_message)|Při přepisu v odvozené třídě, využívá zprávu, která byla dříve vyhrazena.|
-|[enable_batched_processing –](#enable_batched_processing)|Umožňuje dávce zpracování pro tento blok.|
-|[initialize_source –](#initialize_source)|Inicializuje `message_propagator` v rámci této `source_block`.|
+|[enable_batched_processing](#enable_batched_processing)|Umožňuje dávce zpracování pro tento blok.|
+|[initialize_source](#initialize_source)|Inicializuje `message_propagator` v rámci této `source_block`.|
 |[link_target_notification](#link_target_notification)|Zpětné volání, která upozorňuje, že nový cíl je propojená s tím `source_block` objektu.|
 |[process_input_messages](#process_input_messages)|Zprávy o zadávání procesu. Tím se zajistí Šiřitel bloků, které jsou odvozeny z source_block –|
 |[propagate_output_messages](#propagate_output_messages)|Šíření zpráv do cíle.|
 |[propagate_to_any_targets](#propagate_to_any_targets)|Při přepisu v odvozené třídě, rozšíří danou zprávu na některých nebo všech propojených cíle. Toto je hlavní šíření rutina pro bloky zpráv.|
 |[release_message](#release_message)|Při přepisu v odvozené třídě, uvolní předchozí rezervace zprávy.|
-|[remove_targets –](#remove_targets)|Odebere všechny cílové odkazy pro tento blok zdroje. To lze volat z destruktoru.|
+|[remove_targets](#remove_targets)|Odebere všechny cílové odkazy pro tento blok zdroje. To lze volat z destruktoru.|
 |[reserve_message](#reserve_message)|Při přepisu v odvozené třídě, vyhradí zprávu nabízely dříve v tomto `source_block` objektu.|
 |[resume_propagation](#resume_propagation)|Při přepisu v odvozené třídě, pokračuje v šíření po rezervaci byla uvolněna.|
 |[sync_send](#sync_send)|Synchronně zařadí do fronty zpráv a spustí úlohu šíření hodnoty, pokud to není již bylo provedeno.|
@@ -115,7 +115,7 @@ Bloky zpráv by měl být odvozen z tohoto bloku výhod správy odkaz a synchron
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Isource –](isource-class.md)
+[ISource](isource-class.md)
 
 `source_block`
 
@@ -314,7 +314,7 @@ virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
 *_PMessage*<br/>
 Ukazatel na zprávu, která má být zpracována.
 
-##  <a name="propagate_output_messages"></a> propagate_output_messages –
+##  <a name="propagate_output_messages"></a> propagate_output_messages
 
 Šíření zpráv do cíle.
 
@@ -462,7 +462,7 @@ Vytvoří `source_block` objektu.
 source_block();
 ```
 
-##  <a name="dtor"></a> ~ source_block –
+##  <a name="dtor"></a> ~source_block
 
 Odstraní `source_block` objektu.
 
@@ -521,7 +521,7 @@ Zruší všechny cílové bloky z tohoto propojení `source_block` objektu.
 virtual void unlink_targets();
 ```
 
-##  <a name="wait_for_outstanding_async_sends"></a> wait_for_outstanding_async_sends –
+##  <a name="wait_for_outstanding_async_sends"></a> wait_for_outstanding_async_sends
 
 Čeká na všechny asynchronní šíření dokončete. Tento konkrétní Šiřitel otočný čekání se používá v destruktory blokům zpráv abyste měli jistotu, že všechny asynchronní šíření dostatek času k dokončení a zničení bloku.
 
@@ -529,7 +529,7 @@ virtual void unlink_targets();
 void wait_for_outstanding_async_sends();
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [ISource – třída](isource-class.md)

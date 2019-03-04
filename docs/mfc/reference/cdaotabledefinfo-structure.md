@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CDaoTableDefInfo structure [MFC]
 - DAO (Data Access Objects), TableDefs collection
 ms.assetid: c01ccebb-5615-434e-883c-4f60eac943dd
-ms.openlocfilehash: 10ff07ebcd9c6877d9bafc0b7c8724acb0bc45b9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5785ed19c6929e19c7d376efa012dd1c059611c7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542971"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273704"
 ---
 # <a name="cdaotabledefinfo-structure"></a>CDaoTableDefInfo – struktura
 
@@ -92,7 +92,7 @@ Nastavení data a času jsou odvozeny z počítače, na kterém byla vytvořena 
 
 **Záhlaví:** afxdao.h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Struktury, styly, zpětná volání a mapy zpráv](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDaoTableDef – třída](../../mfc/reference/cdaotabledef-class.md)<br/>

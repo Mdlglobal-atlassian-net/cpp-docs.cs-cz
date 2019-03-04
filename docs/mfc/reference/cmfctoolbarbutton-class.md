@@ -1,5 +1,5 @@
 ---
-title: Cmfctoolbarbutton – třída
+title: CMFCToolBarButton Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCToolBarButton
@@ -160,14 +160,14 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: ec5b6692197dc224f503be050a537e6fa265f6d5
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 94d7ba14e01b2965a0fe788162726d1019e847de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694657"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275230"
 ---
-# <a name="cmfctoolbarbutton-class"></a>Cmfctoolbarbutton – třída
+# <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton Class
 
 Poskytuje funkce tlačítko na panely nástrojů.
 
@@ -296,7 +296,7 @@ Následující příklad ukazuje, jak nakonfigurovat `CMFCToolBarButton` pomocí
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cmfctoolbarbutton –](../../mfc/reference/cmfctoolbarbutton-class.md)
+[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -390,7 +390,7 @@ CMFCToolBarButton(
 *bUserButton*<br/>
 [in] Logická hodnota, která určuje, zda tlačítko je definovaný uživatelem. Pokud tento parametr má hodnotu TRUE, je tlačítko definovaný uživatelem. V opačném případě bude tlačítko obrázek načten z prostředku.
 
-*Blokováno*<br/>
+*bLocked*<br/>
 [in] Logická hodnota, která určuje, zda je možné na tlačítko Přizpůsobit. Pokud tento parametr má hodnotu TRUE, nemůže na tlačítko Přizpůsobit. V opačném případě je možné na tlačítko Přizpůsobit.
 
 ##  <a name="comparewith"></a>  CMFCToolBarButton::CompareWith
@@ -1082,7 +1082,7 @@ virtual SIZE OnCalculateSize(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Kontext zařízení, která se zobrazí tlačítko.
 
 *sizeDefault*<br/>
@@ -1201,7 +1201,7 @@ Tato metoda vrátí hodnotu FALSE.
 
 Výchozí implementace této metody nemá žádný účinek a vrátí hodnotu FALSE. Potlačí tuto metodu za účelem vrátí nenulovou hodnotu, pokud tlačítko zpracovává zprávu nápovědy.
 
-Další informace o zprávě WM_HELPHITTEST najdete v tématu [TN028: podpora pomůže Context-Sensitive](../../mfc/tn028-context-sensitive-help-support.md).
+Další informace o zprávě WM_HELPHITTEST najdete v tématu [TN028: Podpora kontextové nápovědy](../../mfc/tn028-context-sensitive-help-support.md).
 
 ##  <a name="onctlcolor"></a>  CMFCToolBarButton::OnCtlColor
 
@@ -1215,7 +1215,7 @@ virtual HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Kontext zařízení, která se zobrazí tlačítko.
 
 *nCtlColor*<br/>
@@ -1291,7 +1291,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Kontext zařízení, která se zobrazí tlačítko.
 
 *Rect*<br/>
@@ -1332,7 +1332,7 @@ virtual int OnDrawOnCustomizeList(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Kontext zařízení, která se zobrazí tlačítko.
 
 *Rect*<br/>
@@ -1582,7 +1582,7 @@ virtual void Serialize(CArchive& ar);
 
 Tato metoda podporuje procesy přenosu dat, jako jsou schránky nebo operace přetažení myší. Čte nebo zapisuje vlastností tlačítka, jako je například ID, textový popisek a ID bitové kopie z nebo do zadané `CArchive` objektu.
 
-Příklady serializace naleznete v tématu [serializace: serializace objektu](../../mfc/serialization-serializing-an-object.md).
+Příklady serializace naleznete v tématu [serializace: Serializace objektu](../../mfc/serialization-serializing-an-object.md).
 
 ##  <a name="setaccdata"></a>  CMFCToolBarButton::SetACCData
 
@@ -1751,7 +1751,7 @@ Použití [CMFCToolBarButton::SetVisible](#setvisible) metody nastavte obecné v
 
 Tato metoda volá [CMFCToolBarButton::OnShow](#onshow) metoda po dokončení aktualizace stav viditelnosti tlačítka.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

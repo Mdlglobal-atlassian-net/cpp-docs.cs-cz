@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Fields collection
 - CDaoFieldInfo structure [MFC]
 ms.assetid: 91b13e3f-bdb8-440c-86fc-ba4181ea0182
-ms.openlocfilehash: 80a541028a6ba7daf60a8d1afbd6cf7ba3557202
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5c4013a323c85ad19a3fade20f76852e053362a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629421"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275139"
 ---
 # <a name="cdaofieldinfo-structure"></a>CDaoFieldInfo – struktura
 
@@ -83,7 +83,7 @@ Hodnota, která určuje maximální velikost v bajtech DAO pole objektu, který 
 |`dbBoolean`|1 bajt|Ano/Ne (stejné jako True/False)|
 |`dbByte`|1|Byte|
 |`dbInteger`|2|Integer|
-|`dbLong`|4|Long|
+|`dbLong`|4|Dlouhé|
 |`dbCurrency`|8|Měny ([COleCurrency](../../mfc/reference/colecurrency-class.md))|
 |`dbSingle`|4|Single|
 |`dbDouble`|8|Double|
@@ -144,7 +144,7 @@ Výchozí hodnota objektu pole DAO. Když se vytvoří nový záznam, nastavení
 
 Odkazy na primární, sekundární a všechny výše určit, jak vrácené informace `GetFieldInfo` členskou funkci třídy [cdaotabledef –](../../mfc/reference/cdaotabledef-class.md#getfieldinfo), [cdaoquerydef –](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo), a [ CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getfieldinfo).
 
-Pole objektů nejsou reprezentovány třídy knihovny MFC. Místo toho základní objekty následující třídy knihovny MFC rozhraní DAO objekty obsahují kolekce pole objektů: [cdaotabledef –](../../mfc/reference/cdaotabledef-class.md), [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md), a [cdaoquerydef –](../../mfc/reference/cdaoquerydef-class.md). Tyto třídy zadat členské funkce pro přístup k některé jednotlivých položek informací o poli, nebo je všechny najednou se dostanete `CDaoFieldInfo` objektu voláním `GetFieldInfo` členské funkce nadřazeného objektu.
+Pole objektů nejsou reprezentovány třídy knihovny MFC. Místo toho základní objekty následující třídy knihovny MFC rozhraní DAO objekty obsahují kolekce pole objektů: [Cdaotabledef –](../../mfc/reference/cdaotabledef-class.md), [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md), a [cdaoquerydef –](../../mfc/reference/cdaoquerydef-class.md). Tyto třídy zadat členské funkce pro přístup k některé jednotlivých položek informací o poli, nebo je všechny najednou se dostanete `CDaoFieldInfo` objektu voláním `GetFieldInfo` členské funkce nadřazeného objektu.
 
 Kromě jeho použití pro zkoumání vlastností objektu můžete také použít `CDaoFieldInfo` vytvořit vstupní parametr pro vytvoření nových polí v tabledef. Jednodušší možnosti jsou k dispozici pro tuto úlohu, ale pokud chcete lepší kontrolu, můžete použít verzi [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield) , která přijímá `CDaoFieldInfo` parametru.
 
@@ -154,10 +154,9 @@ Načte informace `GetFieldInfo` členská funkce (třídy, která obsahuje pole)
 
 **Záhlaví:** afxdao.h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Struktury, styly, zpětná volání a mapy zpráv](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDaoTableDef::GetFieldInfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)<br/>
 [CDaoRecordset::GetFieldInfo](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)<br/>
 [CDaoQueryDef::GetFieldInfo](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)
-

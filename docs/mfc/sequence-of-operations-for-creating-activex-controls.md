@@ -8,12 +8,12 @@ helpviewer_keywords:
 - OLE controls [MFC], MFC
 - sequence [MFC]
 ms.assetid: 7d868c53-a0af-4ef6-a89c-e1c03c583a53
-ms.openlocfilehash: d9025c2a4192b5a2c08d1af9dc925378cff9f504
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fdfa2333681c988c0e7bceab01eab24b118f1a5a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632788"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275984"
 ---
 # <a name="sequence-of-operations-for-creating-activex-controls"></a>Posloupnost operací při vytváření ovládacích prvků ActiveX
 
@@ -29,10 +29,9 @@ V následující tabulce jsou uvedeny vaši roli a roli v rámci při vytvářen
 |Vytvoření ovládacího prvku stránku nebo stránky vlastností.|Pomocí editory prostředků Visual C++ lze upravit vizuálně rozhraní stránky vlastností ovládacího prvku:<br /><br />-Vytvořte další stránky vlastností.<br />– Vytvoření a úprava rastrové obrázky, ikony a kurzory.<br /><br /> V editoru dialogového okna můžete také testovat stránky vlastností.|Výchozí soubor prostředků vytvořený pomocí Průvodce aplikací knihovny MFC poskytuje mnoho prostředků, které potřebujete. Visual C++ umožňuje upravovat existující prostředky a snadno a vizuálně přidat nové prostředky.|
 |Otestujte události, metody a vlastnosti ovládacího prvku.|Znovu sestavte ovládací prvek a použít kontejner testu k otestování vaší obslužné rutiny fungovat správně.|Můžete volat metody ovládacího prvku a manipulaci s jeho vlastnosti prostřednictvím rozhraní stránky vlastností nebo pomocí testovacího kontejneru. Kromě toho pomocí testovacího kontejneru sledování událostí vyvolaných z ovládacího prvku a oznámení přijímaná kontejneru ovládacího prvku.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Sestavení na základě rozhraní .NET Framework](../mfc/building-on-the-framework.md)<br/>
 [Posloupnost operací při sestavování aplikací MFC](../mfc/sequence-of-operations-for-building-mfc-applications.md)<br/>
 [Posloupnost operací při vytváření aplikací OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)<br/>
 [Posloupnost operací při vytváření databázových aplikací](../mfc/sequence-of-operations-for-creating-database-applications.md)
-

@@ -1,5 +1,5 @@
 ---
-title: CDaoDatabase – třída
+title: CDaoDatabase Class
 ms.date: 11/04/2016
 f1_keywords:
 - CDaoDatabase
@@ -58,14 +58,14 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-ms.openlocfilehash: 6bdabafc905b1ae5d6ed9a1fcd83ab1982871c3b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1e9db1ddebe05d42cbb8c4ba242938d6d86cc81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439274"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272893"
 ---
-# <a name="cdaodatabase-class"></a>CDaoDatabase – třída
+# <a name="cdaodatabase-class"></a>CDaoDatabase Class
 
 Představuje připojení k databázi, pomocí které můžete pracovat s daty.
 
@@ -451,7 +451,7 @@ void Execute(
 
 ### <a name="parameters"></a>Parametry
 
-*Ipszsql*<br/>
+*lpszSQL*<br/>
 Ukazatel na řetězec zakončený hodnotou null obsahující platný příkaz SQL pro spuštění.
 
 *nOptions*<br/>
@@ -587,9 +587,9 @@ Možnosti, které určují, jaké informace o sadě záznamů pro načtení. Tad
 
 - Název AFX_DAO_PRIMARY_INFO (výchozí), zadejte
 
-- Informace o primárním AFX_DAO_SECONDARY_INFO plus: datum vytvoření, datum poslední aktualizace, vrátí záznamy, možností aktualizace
+- Primární AFX_DAO_SECONDARY_INFO informace plus: Datum vytvoření, datum poslední aktualizace, vrátí záznamy, aktualizovat
 
-- AFX_DAO_ALL_INFO primární a sekundární informace plus: SQL připojit a odezvy
+- AFX_DAO_ALL_INFO primární a sekundární informace plus: SQL, připojit, odezvy
 
 *lpszName*<br/>
 Řetězec obsahující název dotaz definovaný v databázi pro vyhledávání podle názvu.
@@ -744,9 +744,9 @@ Možnosti, které určují, jaké informace o tabulce k načtení. Tady jsou uve
 
 - Atributy název AFX_DAO_PRIMARY_INFO (výchozí), aktualizovat,
 
-- Informace o primárním AFX_DAO_SECONDARY_INFO plus: datum vytvoření, datum poslední aktualizace název zdrojové tabulky, připojit
+- Primární AFX_DAO_SECONDARY_INFO informace plus: Datum vytvoření, datum poslední aktualizace, název tabulky zdroje připojení
 
-- AFX_DAO_ALL_INFO primární a sekundární informace plus: ověřovací pravidlo, Text pro ověření, počet záznamů
+- AFX_DAO_ALL_INFO primární a sekundární informace plus: Validation Rule, Validation Text, Record Count
 
 *lpszName*<br/>
 Název objektu tabledef pro vyhledávání podle názvu.
@@ -882,7 +882,7 @@ void SetQueryTimeout(short nSeconds);
 
 ### <a name="parameters"></a>Parametry
 
-*Počet_sekund*<br/>
+*nSeconds*<br/>
 Počet sekund před pokusu o dotaz vyprší časový limit.
 
 ### <a name="remarks"></a>Poznámky
@@ -893,7 +893,7 @@ Výchozí hodnota pro vypršení časového limitu dotazu je 60 sekund. Ne všec
 
 Související informace naleznete v tématu "QueryTimeout vlastnost" v nápovědě k DAO.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrintInfo structure [MFC]
 ms.assetid: 0b3de849-d050-4386-9a14-f4c1a25684f7
-ms.openlocfilehash: 259dfd6808a5e975fb22d11d0a8c569237733eae
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: e08885fc9893d175e819c0acbf571d96d425a2c4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524511"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273358"
 ---
 # <a name="cprintinfo-structure"></a>Cprintinfo – struktura
 
@@ -67,7 +67,7 @@ A `CPrintInfo` objekt je předán mezi rozhraní framework a zobrazit třídu b�
 
 Dalším příkladem je případ nezná délka dokumentu, dokud je vytištěna. V takovém případě testuje třídu zobrazení na konci dokumentu pokaždé, když se vytiskne stránka. Když je dosaženo konce, nastaví zobrazení třídy `m_bContinuePrinting` členem `CPrintInfo` na hodnotu FALSE; tento příkaz informuje framework zastavit smyčka tisku.
 
-`CPrintInfo` Členské funkce používá `CView` uvedené v části "Viz také." Další informace o architektura pro tisk poskytované knihovny Microsoft Foundation Class, naleznete v tématu [rámce Windows](../../mfc/frame-windows.md) a [architekturu Document/View](../../mfc/document-view-architecture.md) a články [ Tisk](../../mfc/printing.md) a [tisku: vícestránkové dokumenty](../../mfc/multipage-documents.md).
+`CPrintInfo` Členské funkce používá `CView` uvedené v části "Viz také." Další informace o architektura pro tisk poskytované knihovny Microsoft Foundation Class, naleznete v tématu [rámce Windows](../../mfc/frame-windows.md) a [architekturu Document/View](../../mfc/document-view-architecture.md) a články [ Tisk](../../mfc/printing.md) a [tisku: Vícestránkové dokumenty](../../mfc/multipage-documents.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -315,7 +315,7 @@ void SetMinPage(UINT nMinPage);
 
 Čísla stránek obvykle začínají znakem 1. Tato hodnota bude uložena v `CPrintDialog` objekt odkazovaný zadaným parametrem `m_pPD` člena.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC DIBLOOK](../../visual-cpp-samples.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
@@ -325,4 +325,3 @@ void SetMinPage(UINT nMinPage);
 [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)<br/>
 [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting)<br/>
 [CView::OnPrint](../../mfc/reference/cview-class.md#onprint)
-

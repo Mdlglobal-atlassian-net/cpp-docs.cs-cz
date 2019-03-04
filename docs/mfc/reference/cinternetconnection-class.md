@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CInternetConnection [MFC], GetServerName
 - CInternetConnection [MFC], GetSession
 ms.assetid: 62a5d1c3-8471-4e36-a064-48831829b2a7
-ms.openlocfilehash: da11f62cfb453e31d3cacc1d4bc5b8a26f5b3764
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f17c3ade53ec45ddde654e83c77fe1d817d8495
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564798"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275347"
 ---
 # <a name="cinternetconnection-class"></a>Cinternetconnection – třída
 
@@ -107,7 +107,7 @@ Nikdy neměl volat `CInternetConnection` sami; namísto toho zavolejte metodu [c
 
 - [CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)
 
-Výchozí hodnota pro *dwContext* odesílají knihovny MFC pro `CInternetConnection`-odvozenému objektu z [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objekt vytvořený **InternetConnection**- odvozeného objektu. Výchozí hodnota je nastavená na 1; ale můžete explicitně přiřadit konkrétní kontextu identifikátoru v [cinternetsession –](../../mfc/reference/cinternetsession-class.md#cinternetsession) konstruktor pro připojení. Objekt a veškerou práci, kterou provádí bude spojená s ID tohoto kontextu. Identifikátor kontextu se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytnout stav objektu, pomocí kterého je identifikován. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.
+Výchozí hodnota pro *dwContext* odesílají knihovny MFC pro `CInternetConnection`-odvozenému objektu z [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objekt vytvořený **InternetConnection**- odvozeného objektu. Výchozí hodnota je nastavená na 1; ale můžete explicitně přiřadit konkrétní kontextu identifikátoru v [cinternetsession –](../../mfc/reference/cinternetsession-class.md#cinternetsession) konstruktor pro připojení. Objekt a veškerou práci, kterou provádí bude spojená s ID tohoto kontextu. Identifikátor kontextu se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytnout stav objektu, pomocí kterého je identifikován. Přečtěte si článek [Internet první kroky: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.
 
 ##  <a name="getcontext"></a>  CInternetConnection::GetContext
 
@@ -125,7 +125,7 @@ ID aplikace přiřazené kontextu.
 
 ID kontextu je původně určeno [cinternetsession –](../../mfc/reference/cinternetsession-class.md) a rozšíří na `CInternetConnection`– a [cinternetfile –](../../mfc/reference/cinternetfile-class.md)-odvozené třídy, pokud není uvedeno jinak ve volání funkce, které se otevře připojení. ID kontextu je spojen s jakoukoli operaci daného objektu a určuje informace o stavu operace vracené [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).
 
-Další informace o tom, `GetContext` funguje s jinými třídami WinInet poskytnout informace o stavu uživatele najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.
+Další informace o tom, `GetContext` funguje s jinými třídami WinInet poskytnout informace o stavu uživatele najdete v článku [Internet první kroky: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.
 
 ##  <a name="getservername"></a>  CInternetConnection::GetServerName
 
@@ -159,8 +159,7 @@ Tento operátor se získat popisovač úroveň rozhraní API pro aktuální rela
 operator HINTERNET() const;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Ccomcontainedobject – třída
+title: CComContainedObject Class
 ms.date: 11/04/2016
 f1_keywords:
 - CComContainedObject
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComContainedObject class
 ms.assetid: e8616b41-c200-47b8-bf2c-fb9f713ebdad
-ms.openlocfilehash: 289174fbfc61b0bbca65233fe24d93537627e17d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15ea9be2a3576081901c9e744d89d33688fe838a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492570"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273579"
 ---
-# <a name="ccomcontainedobject-class"></a>Ccomcontainedobject – třída
+# <a name="ccomcontainedobject-class"></a>CComContainedObject Class
 
 Tato třída implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) delegováním objekt vlastníka `IUnknown`.
 
@@ -47,7 +47,7 @@ Vaše třída odvozena od [ccomobjectroot –](../../atl/reference/ccomobjectroo
 |Název|Popis|
 |----------|-----------------|
 |[CComContainedObject::CComContainedObject](#ccomcontainedobject)|Konstruktor Inicializuje člen ukazatel na objekt vlastníka `IUnknown`.|
-|[Ccomcontainedobject –:: ~ ccomcontainedobject –](#dtor)|Destruktor.|
+|[CComContainedObject::~CComContainedObject](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -94,14 +94,14 @@ CComContainedObject(void* pv);
 
 ### <a name="parameters"></a>Parametry
 
-*PV*<br/>
+*pv*<br/>
 [in] Objekt vlastníka `IUnknown`.
 
 ### <a name="remarks"></a>Poznámky
 
 Nastaví `m_pOuterUnknown` ukazatel na člen (zděděné z `Base` třídy) k *pv*.
 
-##  <a name="dtor"></a>  Ccomcontainedobject –:: ~ ccomcontainedobject –
+##  <a name="dtor"></a>  CComContainedObject::~CComContainedObject
 
 Destruktor.
 
@@ -141,13 +141,13 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*<br/>
+*iid*<br/>
 [in] Identifikátor se požadované rozhraní.
 
 *ppvObject*<br/>
 [out] Ukazatel na ukazatel rozhraní, který je identifikován *iid*. Pokud objekt nepodporuje toto rozhraní *ppvObject* nastaven na hodnotu NULL.
 
-*str*<br/>
+*pp*<br/>
 [out] Ukazatel na ukazatel rozhraní, které jsou určeny podle typu `Q`. Pokud objekt nepodporuje toto rozhraní *pp* nastaven na hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -166,6 +166,6 @@ STDMETHOD_(ULONG, Release)();
 
 V ladicím buildu `Release` vrátí hodnotu, která může být užitečné pro diagnostiku a testování. V sestaveních bez ladění `Release` vždy vrátí hodnotu 0.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../../atl/atl-class-overview.md)

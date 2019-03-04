@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC, messages
 - messages [MFC], sending
 ms.assetid: 9ce189cb-b259-4c3b-b6f2-9cfbed18b98b
-ms.openlocfilehash: 95a54f3a518be19c7ae6f001e3096b825e64c0c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bda261f4141a7ceb4e678535d9012650818fabce
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447395"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274905"
 ---
 # <a name="message-sending-and-receiving"></a>Odesílání a příjem zpráv
 
@@ -32,7 +32,6 @@ Každý objekt schopná přijmout zprávy nebo příkazů má svůj vlastní zpr
 
 Pokud cíl příkazu objekt obdrží zprávu nebo příkaz, hledá jeho mapy zpráv pro shody. Pokud najde obslužné rutiny pro zprávy, volá obslužná rutina. Další informace o tom, jak jsou prohledávány mapy zpráv, najdete v části [jak rámci vyhledávání mapy zpráv](../mfc/how-the-framework-searches-message-maps.md). Znovu najdete na obrázku [příkazy v rámci](../mfc/user-interface-objects-and-command-ids.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Jakým způsobem volá framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md)
-

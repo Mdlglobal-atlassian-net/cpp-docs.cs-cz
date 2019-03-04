@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CAnimateCtrl class [MFC], animation controls
 - animation controls [MFC]
 ms.assetid: a009a464-e12d-4112-bf52-04a09b28dd88
-ms.openlocfilehash: fa5ce6cc30d4bc31dbe52c0e559ce97e40acacba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 10bd8c0c26f92ce5de2261d6aca6fc7cc3a37365
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630994"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274632"
 ---
 # <a name="using-an-animation-control"></a>Použití ovládacího prvku animace
 
@@ -29,8 +29,7 @@ Typické použití ovládacího prvku animace má následující formát, níže
 
 - Pokud je ovládací prvek animace v dialogovém okně ho a `CAnimateCtrl` bude objekt zničen. automaticky. Pokud ne, musíte zajistit, aby oba ovládací prvek a `CAnimateCtrl` objektu jsou správně zničeny. Zničení ovládacího prvku automaticky zavře klip AVI.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CAnimateCtrl](../mfc/using-canimatectrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

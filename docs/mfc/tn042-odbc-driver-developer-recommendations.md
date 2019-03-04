@@ -8,12 +8,12 @@ helpviewer_keywords:
 - databases [MFC], ODBC
 - TN042
 ms.assetid: ecc6b5d9-f480-4582-9e22-8309fe561dad
-ms.openlocfilehash: 2140261c2e90eaee7930d4be3282ec31bda29759
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 462f8229d995add79f48f34b7f81257710b4a8b8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502038"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276608"
 ---
 # <a name="tn042-odbc-driver-developer-recommendations"></a>TN042: Doporučení pro vývojáře ovladačů ODBC
 
@@ -116,8 +116,7 @@ Níže je minimální podporu k otevření dynamická sada vyžaduje:
 
 Kromě toho, pokud o to požádá pesimistické zamykání volání `SQLSetPos` irow 1, fRefresh FALSE a hejna **SQL_LCK_EXCLUSIVE** bude proveden.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
-

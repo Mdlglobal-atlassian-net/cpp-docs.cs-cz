@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data storage [MFC], CArchive class
 - CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
-ms.openlocfilehash: a97223602e9994647a8af16cc68de5394494c1ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80e3e73840bce53691c3f5fdafb62c60bdb8f832
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659924"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273800"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>Dva způsoby vytvoření objektu CArchive
 
@@ -60,7 +60,7 @@ Kromě serializaci do dokumentu prostřednictvím rozhraní framework, jsou jin�
 
    Druhý argument `CArchive` konstruktor je Výčtová hodnota, která určuje, zda archivu se použije pro ukládání nebo načítání dat do nebo ze souboru. `Serialize` Funkce objektu voláním zkontroluje tento stav `IsStoring` funkce pro objekt archivu.
 
-Po dokončení, ukládání nebo načítání dat do nebo z `CArchive` objektu, zavřete ho. I když `CArchive` (a `CFile`) objekty se automaticky zavře archivu (a soubor), je vhodné to provést explicitně, protože je jednodušší zotavení z chyb. Další informace o zpracování chyb, naleznete v článku [výjimky: výjimky zachycení a odstraňování](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Po dokončení, ukládání nebo načítání dat do nebo z `CArchive` objektu, zavřete ho. I když `CArchive` (a `CFile`) objekty se automaticky zavře archivu (a soubor), je vhodné to provést explicitně, protože je jednodušší zotavení z chyb. Další informace o zpracování chyb, naleznete v článku [výjimky: Zachytávání a mazání](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
 #### <a name="to-close-the-carchive-object"></a>Zavřete objekt CArchive
 
@@ -68,7 +68,6 @@ Po dokončení, ukládání nebo načítání dat do nebo z `CArchive` objektu, 
 
    [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Serializace: Serializace objektu](../mfc/serialization-serializing-an-object.md)
-

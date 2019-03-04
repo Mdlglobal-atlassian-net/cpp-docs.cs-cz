@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - unsupported_feature class
 ms.assetid: 6b1ab917-df13-48c7-9648-7cb2465a0ff5
-ms.openlocfilehash: 155e96762d47b340ac078fad791f3078dba9a871
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a742c3fd1965882c3fa72cb1fab985cd4d981d1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497136"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272539"
 ---
 # <a name="unsupportedfeature-class"></a>unsupported_feature – třída
 
@@ -31,7 +31,7 @@ class unsupported_feature : public runtime_exception;
 
 |Název|Popis|
 |----------|-----------------|
-|[unsupported_feature – konstruktor](#ctor)|Vytvoří novou instanci třídy `unsupported_feature` výjimky.|
+|[unsupported_feature Constructor](#ctor)|Vytvoří novou instanci třídy `unsupported_feature` výjimky.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -56,7 +56,7 @@ unsupported_feature() throw();
 
 ### <a name="parameters"></a>Parametry
 
-*_TEXT*<br/>
+*_Message*<br/>
 Popis chyby.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -67,8 +67,8 @@ Popis chyby.
 
 **Záhlaví:** amprt.h
 
-**Namespace:** souběžnosti
+**Namespace:** Souběžnost
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

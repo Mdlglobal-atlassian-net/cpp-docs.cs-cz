@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TN023
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
-ms.openlocfilehash: 04789ba85a9f7c193a88ba1a0d097b3671808e9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4edc00f77152b8d677f3113e0ed6386569b0988
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559910"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277674"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023: Standardní prostředky MFC
 
@@ -37,9 +37,9 @@ Klipart prostředky jsou další prostředky, které nezávisí na rozhraní, al
 
 - Indicate.rc: Obsahuje prostředky řetězců pro indikátory stavu klíče stavového řádku, jako je například "Limit" pro Caps Lock.
 
-- Prompts.rc: Obsahuje id_file_new – řádku nabídky řetězcové prostředky pro každou přednastaveného příkazu, jako je například "Vytvořit nový dokument".
+- Prompts.rc: Id_file_new – obsahuje řádku nabídky řetězcové prostředky pro každou přednastaveného příkazu, jako je například "Vytvořit nový dokument".
 
-- COMMDLG.rc: Kompatibilní .rc soubor jazyka Visual C++, který obsahuje standardní šablony COMMDLG dialogového okna.
+- COMMDLG.rc: Soubor .rc kompatibilní Visual C++, který obsahuje standardní šablony COMMDLG dialogového okna.
 
 Standardních prostředcích rozhraní jsou prostředky s afx – definované identifikátory, které rozhraní závisí na interní implementace. Zřídka bude nutné změnit tyto afx – definované prostředky. Pokud tak učiníte, postupujte podle pokynů uvedených dále v tomto tématu.
 
@@ -59,7 +59,7 @@ Následující prostředky architektury jsou obsaženy v adresáři MFC\INCLUDE:
 
 1. Otevřete soubor prostředků vaší aplikace v jazyce Visual C++.
 
-1. Otevřete Common.rc. Tento soubor obsahuje všechny binární klipart prostředky. Protože Common.rc soubor je zkompilován. to může chvíli trvat.
+1. Open Common.rc. Tento soubor obsahuje všechny binární klipart prostředky. Protože Common.rc soubor je zkompilován. to může chvíli trvat.
 
 1. Podržte klávesu CTRL při přetahování prostředky, které chcete použít z Common.rc do souboru prostředků vaší aplikace.
 
@@ -99,8 +99,7 @@ Ve výjimečných případech může být vhodné přizpůsobit obsah standardn�
 > [!NOTE]
 >  Neprovádějte žádné změny přímo do souborů .rc standardní prostředky. Tím se upravit prostředky, které jsou k dispozici v každé aplikaci, ne jenom v ta, kterou právě pracujete.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
-

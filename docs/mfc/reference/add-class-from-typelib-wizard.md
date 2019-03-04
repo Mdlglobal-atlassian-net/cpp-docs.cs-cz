@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add Class from TypeLib Wizard [MFC]
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-ms.openlocfilehash: c0423ac06aa46b65c1fb0ffb3935d4bb54821ee9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a2c291e1c9e78d288bdb2d15f224520d764dfa1b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654334"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273878"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Přidání třídy z průvodce knihovnou typů
 
@@ -28,13 +28,13 @@ Tohoto průvodce použijte k přidání třídy knihovny MFC z knihovny typů k 
    |Možnost|Popis|
    |------------|-----------------|
    |**Registru**|Knihovna typů je registrován v systému. Zaregistrované knihovny typů jsou uvedeny v **dostupné knihovny typů**.|
-   |**Soubor**|Knihovna typů není nutně registrován v systému, ale je obsažena v souboru. Je nutné zadat umístění souborů v **umístění**.|
+   |**File**|Knihovna typů není nutně registrován v systému, ale je obsažena v souboru. Je nutné zadat umístění souborů v **umístění**.|
 
 - **Dostupné knihovny typů**
 
    Obsahuje knihovny typů, které jsou aktuálně registrované v systému. Vyberte knihovnu typů z tohoto seznamu zobrazíte jeho rozhraní **rozhraní** seznamu.
 
-   Viz "Uvnitř Distributed COM: typ a jazyk integrace knihoven" v knihovně MSDN pro další informace o registraci knihovny typů.
+   Viz "uvnitř Distributed COM: Knihovny typů a jazyk integrace "v knihovně MSDN pro další informace o registraci knihovny typů.
 
 - **Poloha**
 
@@ -61,14 +61,13 @@ Tohoto průvodce použijte k přidání třídy knihovny MFC z knihovny typů k 
 
    Určuje název třídy vybraný v **generované třídy** pole, které průvodce přidá po kliknutí na **Dokončit**. Můžete upravit název v **třídy** pole.
 
-- **Soubor**
+- **File**
 
    Nastaví název souboru hlaviček pro novou třídu. Ve výchozím nastavení, tento název je založen na názvu je zadat v **generované třídy**. Klikněte na tlačítko se třemi tečkami uložení názvu souboru do umístění podle vaší volby, nebo připojit k existujícímu souboru deklaraci třídy. Pokud zvolíte existující soubor, Průvodce neuloží se do vybraného umístění dokud kliknutím **Dokončit** v průvodci.
 
    Průvodce nepřepisuje soubor. Pokud jste vybrali název existujícího souboru, po kliknutí na **Dokončit**, Průvodce vás vyzve k označení, zda by měla být k obsah souboru připojen deklaraci třídy. Klikněte na tlačítko **Ano** pro připojení k souboru, klikněte na tlačítko **ne** pro návrat do průvodce a zadejte jiný název souboru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třída knihovny MFC z knihovny typů](../../mfc/reference/adding-an-mfc-class-from-a-type-library.md)<br/>
 [Klienti automatizace: Použití knihoven typů](../../mfc/automation-clients-using-type-libraries.md)
-

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Help [MFC], menus
 - programmer-defined IDs [MFC]
 ms.assetid: 88cf3ab4-79b3-4ac6-9365-8ac561036fbf
-ms.openlocfilehash: fa98a250e6f9de3005cf4978fe66689363865879
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 987023322e38584d10901c1ab1fe20ac46926bd2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485693"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272084"
 ---
 # <a name="standard-commands"></a>Standardní příkazy
 
@@ -54,7 +54,6 @@ Rozhraní poskytuje různé úrovně podpory pro tyto příkazy. Některé pří
 
 Další informace o příkazech podporovány a úroveň implementace, které jsou k dispozici, najdete v části [Technická poznámka 22](../mfc/tn022-standard-commands-implementation.md). Standardní příkazy jsou definovány v souboru AFXRES. H.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Identifikátory objektů uživatelského rozhraní a příkazů](../mfc/user-interface-objects-and-command-ids.md)
-

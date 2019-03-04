@@ -1,5 +1,5 @@
 ---
-title: Cdocobjectserveritem – třída
+title: CDocObjectServerItem Class
 ms.date: 09/12/2018
 f1_keywords:
 - CDocObjectServerItem
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CDocObjectServerItem [MFC], OnHide
 - CDocObjectServerItem [MFC], OnShow
 ms.assetid: 530f7156-50c8-4806-9328-602c9133f622
-ms.openlocfilehash: cecbab366b64c85b39131a13233598abec83d5ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f11c202e85453897f6ebf04d8dc165d2b733a406
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536523"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275261"
 ---
-# <a name="cdocobjectserveritem-class"></a>Cdocobjectserveritem – třída
+# <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem Class
 
 Příkazy Implements OLE servere speciálně pro servery DocObject.
 
@@ -55,7 +55,7 @@ class CDocObjectServerItem : public COleServerItem
 
 ## <a name="remarks"></a>Poznámky
 
-`CDocObjectServerItem` Definuje přepisovatelné členské funkce: [skrytí](#onhide), [OnDoVerb](#ondoverb), a [viditelnost](#onshow).
+`CDocObjectServerItem` Definuje přepisovatelné členské funkce: [Skrytí](#onhide), [OnDoVerb](#ondoverb), a [viditelnost](#onshow).
 
 Použití `CDocObjectServerItem`, bylo zaručeno, že [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) přepsat v vaše `COleServerDoc`-odvozené třídě vrátí nový `CDocObjectServerItem` objektu. Pokud potřebujete změnit všechny funkce v vaši položku, můžete vytvořit novou instanci třídy vlastní `CDocObjectServerItem`-odvozené třídy.
 
@@ -67,9 +67,9 @@ Další informace o DocObjects najdete v tématu [cdocobjectserver –](../../mf
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[Cdocitem –](../../mfc/reference/cdocitem-class.md)
+[CDocItem](../../mfc/reference/cdocitem-class.md)
 
-[Coleserveritem –](../../mfc/reference/coleserveritem-class.md)
+[COleServerItem](../../mfc/reference/coleserveritem-class.md)
 
 `CDocObjectServerItem`
 
@@ -133,7 +133,7 @@ virtual void OnShow();
 
 Pokud položka není DocObject, výchozí implementace volá [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onopen). Tato funkce přepište, pokud chcete provést zvláštní zpracování při otevření položky DocObject.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [COleServerItem – třída](../../mfc/reference/coleserveritem-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
