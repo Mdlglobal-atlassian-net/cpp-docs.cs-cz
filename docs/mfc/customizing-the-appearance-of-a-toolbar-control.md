@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], object styles
 - toolbar controls [MFC], style
 ms.assetid: fd0a73db-7ad1-4fe4-889b-02c3980f49e8
-ms.openlocfilehash: ba1ff18d9b9a4d98b60cf7c30e21c56976325403
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a0db3299ebb54d226edc1434dedbc6a04eb9b00
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565184"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302335"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>Přizpůsobení vzhledu ovládacího prvku panel nástrojů
 
@@ -52,8 +52,7 @@ Zbývající styly ovlivní visual nevizuální aspektů a objekt panelu nástro
 
 Úplný seznam všech toolbar – styly a styly rozšířené, naleznete v tématu [ovládací prvek panelu nástrojů a styly](/windows/desktop/Controls/toolbar-control-and-button-styles) a [Toolbar – styly rozšířené](/windows/desktop/Controls/toolbar-extended-styles) v sadě Windows SDK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

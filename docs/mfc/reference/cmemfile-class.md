@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMemFile [MFC], Memcpy
 - CMemFile [MFC], Realloc
 ms.assetid: 20e86515-e465-4f73-b2ea-e49789d63165
-ms.openlocfilehash: a7bc54d30df80ec8d56b6a403582ebe4c48858f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a57f4e245ca1e93ec0edd454a7f407aeda5beca4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50634886"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304935"
 ---
 # <a name="cmemfile-class"></a>Cmemfile – třída
 
@@ -86,7 +86,7 @@ Další informace o `CMemFile`, najdete v článcích [soubory v prostředí MFC
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cfile –](../../mfc/reference/cfile-class.md)
+[CFile](../../mfc/reference/cfile-class.md)
 
 `CMemFile`
 
@@ -130,7 +130,7 @@ void Attach(
 
 ### <a name="parameters"></a>Parametry
 
-*lpBuffer.*<br/>
+*lpBuffer*<br/>
 Ukazatel do vyrovnávací paměti, který má být přiřazena k `CMemFile`.
 
 *nBufferSize*<br/>
@@ -288,8 +288,7 @@ Ukazatele na blok paměti, který byl a nevyčerpané prostředky (pravděpodobn
 
 Tuto funkci implementovat vlastní paměti realokace přepište. Pokud přepíšete tuto funkci, budete pravděpodobně chtít přepsat [alokační](#alloc) a [Free](#free) také.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CFile – třída](../../mfc/reference/cfile-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-

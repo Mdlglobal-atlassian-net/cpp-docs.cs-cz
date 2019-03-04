@@ -13,12 +13,12 @@ helpviewer_keywords:
 - multithreading [C++], synchronization classes
 - threading [C++], thread-safe class design
 ms.assetid: f266d4c6-0454-4bda-9758-26157ef74cc5
-ms.openlocfilehash: 0f8304c3b45f87dadc2317de95a0b30b54baffa0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6115d942abc61fbfc9d60ca1ccf97d4b423ff7c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604162"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304649"
 ---
 # <a name="multithreading-how-to-use-the-mfc-synchronization-classes"></a>Multithreading: Jak používat synchronizační třídy knihovny MFC
 
@@ -54,8 +54,8 @@ singleLock.Unlock();
 
 Nevýhody tohoto přístupu je, že třídy se o něco pomalejší než stejné třídy bez přidání objektů synchronizace. Také pokud je pravděpodobné, že více než jedno vlákno může odstranit objekt, sloučené přístup nemusí vždy fungovat. V takovém případě je lepší zachovat objekty samostatní synchronizace.
 
-Informace o určení, jakou synchronizační třídu použít v různých situacích, naleznete v tématu [Multithreading: kdy použít synchronizační třídy](multithreading-when-to-use-the-synchronization-classes.md). Další informace o synchronizaci najdete v tématu [synchronizace](/windows/desktop/Sync/synchronization) v sadě Windows SDK. Další informace o podpoře multithreadingu v knihovně MFC, naleznete v tématu [Multithreading s C++ a knihovnou MFC](multithreading-with-cpp-and-mfc.md).
+Informace o určení, jakou synchronizační třídu použít v různých situacích, naleznete v tématu [Multithreading: Kdy použít synchronizační třídy](multithreading-when-to-use-the-synchronization-classes.md). Další informace o synchronizaci najdete v tématu [synchronizace](/windows/desktop/Sync/synchronization) v sadě Windows SDK. Další informace o podpoře multithreadingu v knihovně MFC, naleznete v tématu [Multithreading s C++ a knihovnou MFC](multithreading-with-cpp-and-mfc.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Multithreading s použitím jazyka C++ a prostředí MFC](multithreading-with-cpp-and-mfc.md)

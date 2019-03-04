@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CEvent [MFC], SetEvent
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
-ms.openlocfilehash: 883f3065c9d15ad793e6c0d548b911f10d166c0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7731c87c6d6b0ebdec9a0c72c24b04334aa0662
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667894"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300268"
 ---
 # <a name="cevent-class"></a>CEvent – třída
 
@@ -66,7 +66,7 @@ Alternativní způsob pro použití `CEvent` objekty, je přidat proměnnou typu
 
 Pro přístup k prostředku, řídí `CEvent` objektu tímto způsobem, musíte nejprve vytvořit proměnnou buď typu [CSingleLock](../../mfc/reference/csinglelock-class.md) nebo typ [CMultiLock](../../mfc/reference/cmultilock-class.md) v metodě přístup k prostředku. Zavolejte `Lock` metodu zámek objektu (například [CMultiLock::Lock](../../mfc/reference/cmultilock-class.md#lock)). V tomto okamžiku vašeho vlákna budou buď získat přístup k prostředku, čekat na prostředek, který chcete uvolnit a získat přístup nebo počkejte prostředek, který má být uvolněna, vypršení časového limitu a nepovedlo se získat přístup k prostředku. V každém případě váš prostředek má byla přístupná takovým způsobem bezpečným pro vlákno. K uvolnění prostředku, volání `SetEvent` signalizuje, že objekt události, a pak použít `Unlock` metodu zámek objektu (například [CMultiLock::Unlock](../../mfc/reference/cmultilock-class.md#unlock)), nebo nechat zámek objektu spadá mimo rozsah.
 
-Další informace o tom, jak používat `CEvent` objekty, najdete [Multithreading: jak používat synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Další informace o tom, jak používat `CEvent` objekty, najdete [Multithreading: Jak používat synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="example"></a>Příklad
 
@@ -191,8 +191,7 @@ Nenulové, pokud vlákno vlastní objekt události a události se událost autom
 
 Tato členská funkce je volána vlákna, které aktuálně vlastní událost automatické pro uvolnění poté, co to je všechno, pokud jejich zamknout objekt je možné znovu použít. Pokud zámek objektu není možné znovu použít, tato funkce bude volat zamknout objekt destruktor.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CSyncObject – třída](../../mfc/reference/csyncobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-

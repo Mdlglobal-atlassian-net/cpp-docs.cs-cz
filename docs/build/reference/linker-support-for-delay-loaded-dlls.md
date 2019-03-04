@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, linker support
 ms.assetid: b2d7e449-2809-42b1-9c90-2c0ca5e31a14
-ms.openlocfilehash: 248a559735750f912030a37aea85a2cb34156887
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ff5143b8c3850386f73ff713e7986fdc3b59fd1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664539"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301386"
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>Podpora linkeru pro knihovny DLL s odloženým načtením
 
@@ -17,7 +17,7 @@ Linker Visual C++ teď podporuje opožděné načtení knihoven DLL. To která v
 
 Před Visual C++ 6.0, byl jediný způsob, jak načíst knihovny DLL v době běhu pomocí **LoadLibrary** a **GetProcAddress**; operační systém by načíst knihovnu DLL při spustitelný soubor nebo knihovny DLL pomocí byl načten.
 
-Od verze Visual C++ 6.0, když statického propojení s knihovnou DLL, linker zajišťuje možnosti zpoždění načíst knihovnu DLL, dokud je program volá funkci v této knihovně DLL.
+Od verze Visual C++ 6.0, když implicitně propojení s knihovnou DLL, linker zajišťuje možnosti zpoždění načíst knihovnu DLL, dokud je program volá funkci v této knihovně DLL.
 
 Aplikace může zpozdit načtení knihovny DLL pomocí [/delayload (Import načtení odloženého)](../../build/reference/delayload-delay-load-import.md) – možnost linkeru s funkcí pomocné rutiny (Visual C++ poskytuje výchozí implementaci). Pomocná funkce se načíst knihovnu DLL v době běhu voláním **LoadLibrary** a **GetProcAddress** za vás.
 

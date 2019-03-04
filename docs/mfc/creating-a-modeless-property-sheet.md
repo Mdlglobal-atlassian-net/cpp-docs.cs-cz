@@ -6,12 +6,12 @@ helpviewer_keywords:
 - property sheets, modeless
 - Create method [MFC], property sheets
 ms.assetid: eafd8a92-cc67-4a69-a5fb-742c920d1ae8
-ms.openlocfilehash: 9012700ef145079cf01ee1eac1cee58449ab5b79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39285927b67091f5b8762dab56009712d806d259
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524897"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302257"
 ---
 # <a name="creating-a-modeless-property-sheet"></a>Vytvoření nemodálního seznamu vlastností
 
@@ -27,9 +27,8 @@ Nejpohodlnější způsob, jak pro poskytnutí přístupu k stránky vlastností
 
 Existuje mnoho alternativy uživatelského rozhraní pro určení, kdy bude použito nastavení nemodálního seznamu vlastností do externího objektu. Jeden alternativou je k aplikování nastavení na aktuální stránce vlastností pokaždé, když uživatel změní jakákoli hodnota. Další možností je použít tlačítko, což mu umožní accumulate změny na stránkách vlastností před jejich potvrzením do externího objektu. Další informace o způsobech ke zpracování na tlačítko použít, najdete v článku [ošetření tlačítka použít](../mfc/handling-the-apply-button.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Seznamy vlastností](../mfc/property-sheets-mfc.md)<br/>
 [Výměna dat](../mfc/exchanging-data.md)<br/>
 [Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
-

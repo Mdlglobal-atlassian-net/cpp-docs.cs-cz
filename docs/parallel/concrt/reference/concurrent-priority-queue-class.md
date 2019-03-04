@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-ms.openlocfilehash: a75d413874056d57f0d474f44e514cf93f273626
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5804675ffdaf6de2e73327103398316566b41627
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492288"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304779"
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue – třída
 
@@ -69,12 +69,12 @@ Typ představující uložený objekt alokátoru, který zapouzdřuje informace 
 
 |Název|Popis|
 |----------|-----------------|
-|[Vymazat](#clear)|Vymaže všechny prvky v souběžné prioritu. Tato metoda není bezpečná pro souběžnost.|
+|[clear](#clear)|Vymaže všechny prvky v souběžné prioritu. Tato metoda není bezpečná pro souběžnost.|
 |[prázdný](#empty)|Testuje, zda je souběžných prioritní fronty je prázdný v době tato metoda je volána. Tato metoda je bezpečná pro souběžnost.|
 |[get_allocator](#get_allocator)|Vrátí kopii objektu Alokátor použitý k vytvoření souběžných prioritní fronty. Tato metoda je bezpečná pro souběžnost.|
 |[push](#push)|Přetíženo. Přidá prvek na souběžné prioritní fronty. Tato metoda je bezpečná pro souběžnost.|
 |[Velikost](#size)|Vrátí počet prvků v souběžné prioritní fronty. Tato metoda je bezpečná pro souběžnost.|
-|[Prohození](#swap)|Zamění obsah dvou souběžných prioritní fronty. Tato metoda není bezpečná pro souběžnost.|
+|[swap](#swap)|Zamění obsah dvou souběžných prioritní fronty. Tato metoda není bezpečná pro souběžnost.|
 |[try_pop](#try_pop)|Odebere a vrátí nejvyšší prvek prioritu z fronty, pokud fronta je prázdný. Tato metoda je bezpečná pro souběžnost.|
 
 ### <a name="public-operators"></a>Veřejné operátory
@@ -109,7 +109,7 @@ void clear();
 
 `clear` není bezpečná pro souběžnost. Ujistěte se, že nejsou žádná jiná vlákna jsou volání metod na souběžné prioritní fronty, při volání této metody. `clear` Nelze uvolnit paměť.
 
-##  <a name="ctor"></a> concurrent_priority_queue –
+##  <a name="ctor"></a> concurrent_priority_queue
 
 Sestaví souběžných prioritní fronty.
 
@@ -155,7 +155,7 @@ Počáteční kapacita objektu `concurrent_priority_queue` objektu.
 *_Zahájit*<br/>
 Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.
 
-*_Ukončit*<br/>
+*_End*<br/>
 Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.
 
 *_Src*<br/>
@@ -259,10 +259,10 @@ void swap(concurrent_priority_queue& _Queue);
 
 ### <a name="parameters"></a>Parametry
 
-*_Fronty*<br/>
+*_Queue*<br/>
 `concurrent_priority_queue` Objektu k výměně obsahu s.
 
-##  <a name="try_pop"></a> try_pop –
+##  <a name="try_pop"></a> try_pop
 
 Odebere a vrátí nejvyšší prvek prioritu z fronty, pokud fronta je prázdný. Tato metoda je bezpečná pro souběžnost.
 
@@ -279,8 +279,7 @@ Odkaz na proměnnou, která naplní prvku nejvyšší prioritou, pokud fronta je
 
 **Hodnota TRUE** Pokud hodnotu byl odebrán, **false** jinak.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [Paralelní kontejnery a objekty](../../../parallel/concrt/parallel-containers-and-objects.md)
-

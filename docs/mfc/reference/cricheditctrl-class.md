@@ -1,5 +1,5 @@
 ---
-title: Cricheditctrl – třída
+title: CRichEditCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CRichEditCtrl
@@ -152,14 +152,14 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: c42f7b77c04b2c94923908fa8b9542bea313b154
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ca6185e7ee41726c7bf583056cb66eeb1be7021c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178990"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303431"
 ---
-# <a name="cricheditctrl-class"></a>Cricheditctrl – třída
+# <a name="cricheditctrl-class"></a>CRichEditCtrl Class
 
 Poskytuje funkce pro ovládací prvek RichEdit.
 
@@ -360,7 +360,7 @@ int CharFromPos(CPoint pt) const;
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pt*<br/>
 A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který obsahuje souřadnice Zadaný bod.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -635,7 +635,7 @@ DWORD FindWordBreak(
 *nCode*<br/>
 Určuje akce má být provedena. Seznam možných hodnot, viz popis parametru *kód* v EM_FINDWORDBREAK v sadě Windows SDK.
 
-*Nzačínat*<br/>
+*nStart*<br/>
 Pozice znaku od nuly ze kterého se má spustit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -658,7 +658,7 @@ long FormatRange(
 
 ### <a name="parameters"></a>Parametry
 
-*PFR*<br/>
+*pfr*<br/>
 Ukazatel [FORMATRANGE](/windows/desktop/api/richedit/ns-richedit-_formatrange) struktura, která obsahuje informace o výstupní zařízení. NULL označuje, že může být uvolněna informace uložené v mezipaměti v rámci ovládacího prvku RichEdit.
 
 *bDisplay*<br/>
@@ -711,7 +711,7 @@ DWORD GetDefaultCharFormat(CHARFORMAT& cf) const;  DWORD GetDefaultCharFormat(CH
 
 ### <a name="parameters"></a>Parametry
 
-*CF*<br/>
+*cf*<br/>
 V první verzi, ukazatel `CHARFORMAT` struktura obsahující výchozí formátování atributy.
 
 V druhém verzi, ukazatel na `CHARFORMAT2` strukturu, která je rozšířením bohaté upravit 2.0 k `CHARFORMAT` struktura obsahující výchozí formátování atributy.
@@ -917,7 +917,7 @@ DWORD GetParaFormat(PARAFORMAT& pf) const;  DWORD GetParaFormat(PARAFORMAT2& pf)
 
 ### <a name="parameters"></a>Parametry
 
-*PF*<br/>
+*pf*<br/>
 V první verzi, ukazatel [PARAFORMAT](/windows/desktop/api/richedit/ns-richedit-_paraformat) struktura pro uložení atributy aktuálního výběru formátování odstavce.
 
 V druhém verzi, ukazatel na [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) strukturu, která je rozšířením bohaté upravit 2.0 k `PARAFORMAT` struktura obsahující výchozí formátování atributy.
@@ -972,7 +972,7 @@ void GetRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 [Crect –](../../atl-mfc-shared/reference/crect-class.md) nebo ukazatel [RECT](/windows/desktop/api/windef/ns-windef-tagrect) přijímat formátování obdélník tohoto `CRichEditCtrl` objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -1015,7 +1015,7 @@ void GetSel(
 
 ### <a name="parameters"></a>Parametry
 
-*znak CR*<br/>
+*cr*<br/>
 Odkaz [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) strukturu pro příjem rozsah aktuálního výběru.
 
 *nStartChar*<br/>
@@ -1050,7 +1050,7 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
 
 ### <a name="parameters"></a>Parametry
 
-*CF*<br/>
+*cf*<br/>
 V první verzi, ukazatel [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) strukturu pro příjem formátování atributy aktuálního výběru.
 
 V druhém verzi, ukazatel na [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) strukturu, která je rozšířením bohaté upravit 2.0 k `CHARFORMAT` strukturu pro příjem formátování atributy aktuálního výběru.
@@ -1201,7 +1201,7 @@ int GetTextRange(
 
 ### <a name="parameters"></a>Parametry
 
-*Nprvní*<br/>
+*nFirst*<br/>
 Znakový index pozice bezprostředně před první znak v rozsahu.
 
 *Nposlední*<br/>
@@ -1589,7 +1589,7 @@ COLORREF SetBackgroundColor(
 *bSysColor*<br/>
 Označuje, pokud je třeba nastavit barvu pozadí na systém hodnotou. Pokud je tato hodnota TRUE, *cr* se ignoruje.
 
-*znak CR*<br/>
+*cr*<br/>
 Barva pozadí požadovaný. Používá pouze tehdy, pokud *bSysColor* je FALSE.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1617,7 +1617,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 
 ### <a name="parameters"></a>Parametry
 
-*CF*<br/>
+*cf*<br/>
 V první verzi, ukazatel [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) struktury obsahující nové výchozí formátování atributy.
 
 V druhém verzi, ukazatel na [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) strukturu, která je rozšířením bohaté upravit 2.0 k `CHARFORMAT` struktury obsahující výchozí formátování atributy.
@@ -1772,7 +1772,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 
 ### <a name="parameters"></a>Parametry
 
-*PF*<br/>
+*pf*<br/>
 V první verzi, ukazatel [PARAFORMAT](/windows/desktop/api/richedit/ns-richedit-_paraformat) atributů formátování odstavce struktury obsahující nové výchozí nastavení.
 
 V druhém verzi, ukazatel na [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) strukturu, která je rozšířením bohaté upravit 2.0 k `PARAFORMAT` struktura obsahující výchozí formátování atributy.
@@ -1854,7 +1854,7 @@ void SetRect(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 [Crect –](../../atl-mfc-shared/reference/crect-class.md) nebo ukazatel [RECT](/windows/desktop/api/windef/ns-windef-tagrect) , která označuje nové hranice pro formátování obdélník.
 
 ### <a name="remarks"></a>Poznámky
@@ -1887,7 +1887,7 @@ Z nuly vycházející index prvního znaku pro výběr.
 *nEndChar*<br/>
 Index založený na nule poslední znak pro výběr.
 
-*znak CR*<br/>
+*cr*<br/>
 [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) struktura, která obsahuje hranice aktuálního výběru.
 
 ### <a name="remarks"></a>Poznámky
@@ -1919,7 +1919,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 
 ### <a name="parameters"></a>Parametry
 
-*CF*<br/>
+*cf*<br/>
 V první verzi, ukazatel [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) struktury obsahující nové formátování znaků atributy pro aktuální výběr.
 
 V druhou verzi, ukazatel na [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) strukturu, která je rozšířením bohaté upravit 2.0 k `CHARFORMAT` struktury obsahující nové formátování atributy pro aktuální výběr.
@@ -1960,7 +1960,7 @@ Popisovač kontextu zařízení pro nové cílové zařízení.
 *lLineWidth*<br/>
 Šířka čáry pro formátování.
 
-*řadič domény*<br/>
+*dc*<br/>
 [CDC](../../mfc/reference/cdc-class.md) pro nové cílové zařízení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1987,7 +1987,7 @@ BOOL SetTextMode(UINT fMode);
 
 ### <a name="parameters"></a>Parametry
 
-*fmode –*<br/>
+*fMode*<br/>
 Určuje nová nastavení pro ovládací prvek text režim a vrátit zpět úrovně parametry. Seznam možných hodnot najdete v tématu parametr režimu [EM_SETTEXTMODE](/windows/desktop/Controls/em-settextmode) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2032,7 +2032,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 
 ### <a name="parameters"></a>Parametry
 
-*CF*<br/>
+*cf*<br/>
 V první verzi, ukazatel [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) struktury obsahující nové formátování znaků atributů pro aktuálně vybrané aplikace word.
 
 V druhém verzi, ukazatel na [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) strukturu, která je rozšířením bohaté upravit 2.0 k `CHARFORMAT` struktury obsahující nové atributy pro aktuálně vybrané slovo formátování.
@@ -2196,7 +2196,7 @@ Další informace najdete v tématu [EM_UNDO](/windows/desktop/Controls/em-undo)
 
   Podívejte se na příklad pro [CanUndo](#canundo).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC WORDPAD](../../visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>

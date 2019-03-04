@@ -1,5 +1,5 @@
 ---
-title: Colebusydialog – třída
+title: COleBusyDialog Class
 ms.date: 11/04/2016
 f1_keywords:
 - COleBusyDialog
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - COleBusyDialog [MFC], GetSelectionType
 - COleBusyDialog [MFC], m_bz
 ms.assetid: c881a532-9672-4c41-b51b-5ce4a7246a6b
-ms.openlocfilehash: 1b8c5522d0e1f223c31cd53e8995c962c7095d46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08e482e6900e96f1d02c34efddc7635bb8e0120e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664136"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304662"
 ---
-# <a name="colebusydialog-class"></a>Colebusydialog – třída
+# <a name="colebusydialog-class"></a>COleBusyDialog Class
 
 Používá se pro dialogová okna Server OLE neodpovídá nebo Server je zaneprázdněn.
 
@@ -73,9 +73,9 @@ Další informace o dialogových oken OLE konkrétní, najdete v článku [dialo
 
 [CDialog](../../mfc/reference/cdialog-class.md)
 
-[Ccommondialog –](../../mfc/reference/ccommondialog-class.md)
+[CCommonDialog](../../mfc/reference/ccommondialog-class.md)
 
-[Coledialog –](../../mfc/reference/coledialog-class.md)
+[COleDialog](../../mfc/reference/coledialog-class.md)
 
 `COleBusyDialog`
 
@@ -191,7 +191,7 @@ Přímo nebo prostřednictvím členské funkce, lze upravit členy této strukt
 
 Další informace najdete v tématu [OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) struktura v sadě Windows SDK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [COleDialog – třída](../../mfc/reference/coledialog-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

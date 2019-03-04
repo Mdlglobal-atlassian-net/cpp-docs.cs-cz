@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::rb
 - amp_short_vectors/Concurrency::graphics::unorm_4::get_wzyx
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
-ms.openlocfilehash: f8a76e09adf606d9f366e8ed5657791fae497a2a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4996f65f4b7f707f6b86e05571cacd6987c83a4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619359"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302506"
 ---
 # <a name="unorm4-class"></a>unorm_4 – třída
 
@@ -444,13 +444,13 @@ class unorm_4;
 
 |Název|Popis|
 |----------|-----------------|
-|unorm_4::Operator-||
+|unorm_4::operator-||
 |unorm_4::operator--||
 |unorm_4::operator*=||
 |unorm_4::Operator / =||
-|unorm_4::Operator ++||
+|unorm_4::operator++||
 |unorm_4::operator+=||
-|unorm_4::Operator =||
+|unorm_4::operator=||
 |unorm_4::operator-=||
 
 ### <a name="public-constants"></a>Veřejné konstanty
@@ -469,46 +469,46 @@ class unorm_4;
 |unorm_4::abgr||
 |unorm_4::abr||
 |unorm_4::abrg||
-|unorm_4::AG||
+|unorm_4::ag||
 |unorm_4::agb||
 |unorm_4::agbr||
-|unorm_4::AGR||
+|unorm_4::agr||
 |unorm_4::agrb||
 |unorm_4::ar||
 |unorm_4::arb||
 |unorm_4::arbg||
 |unorm_4::arg||
-|unorm_4::ARGB||
+|unorm_4::argb||
 |unorm_4::b||
-|unorm_4::BA||
+|unorm_4::ba||
 |unorm_4::bag||
 |unorm_4::bagr||
 |unorm_4::bar||
 |unorm_4::barg||
-|unorm_4::BG||
+|unorm_4::bg||
 |unorm_4::bga||
 |unorm_4::bgar||
-|unorm_4::BGR||
+|unorm_4::bgr||
 |unorm_4::bgra||
 |unorm_4::br||
-|unorm_4::BRA||
+|unorm_4::bra||
 |unorm_4::brag||
 |unorm_4::brg||
 |unorm_4::brga||
 |unorm_4::g||
 |unorm_4::GA||
-|unorm_4::GAB||
+|unorm_4::gab||
 |unorm_4::gabr||
 |unorm_4::gar||
 |unorm_4::garb||
 |unorm_4::GB||
-|unorm_4::GBA||
+|unorm_4::gba||
 |unorm_4::gbar||
-|unorm_4::GBR||
-|unorm_4::GBRA||
+|unorm_4::gbr||
+|unorm_4::gbra||
 |unorm_4::GR||
 |unorm_4::gra||
-|unorm_4::Grab||
+|unorm_4::grab||
 |unorm_4::grb||
 |unorm_4::grba||
 |unorm_4::r||
@@ -528,8 +528,8 @@ class unorm_4;
 |unorm_4::RGB||
 |unorm_4::rgba||
 |unorm_4::w||
-|unorm_4::WX||
-|unorm_4::WXY||
+|unorm_4::wx||
+|unorm_4::wxy||
 |unorm_4::wxyz||
 |unorm_4::wxz||
 |unorm_4::wxzy||
@@ -538,7 +538,7 @@ class unorm_4;
 |unorm_4::wyxz||
 |unorm_4::wyz||
 |unorm_4::wyzx||
-|unorm_4::wZ||
+|unorm_4::wz||
 |unorm_4::wzx||
 |unorm_4::wzxy||
 |unorm_4::wzy||
@@ -549,7 +549,7 @@ class unorm_4;
 |unorm_4::xwyz||
 |unorm_4::xwz||
 |unorm_4::xwzy||
-|unorm_4::XY||
+|unorm_4::xy||
 |unorm_4::xyw||
 |unorm_4::xywz||
 |unorm_4::xyz||
@@ -557,7 +557,7 @@ class unorm_4;
 |unorm_4::xz||
 |unorm_4::xzw||
 |unorm_4::xzwy||
-|unorm_4::xyz||
+|unorm_4::xzy||
 |unorm_4::xzyw||
 |unorm_4::y||
 |unorm_4::yw||
@@ -576,7 +576,7 @@ class unorm_4;
 |unorm_4::yzx||
 |unorm_4::yzxw||
 |unorm_4::z||
-|unorm_4::Zw||
+|unorm_4::zw||
 |unorm_4::zwx||
 |unorm_4::zwxy||
 |unorm_4::zwy||
@@ -586,10 +586,10 @@ class unorm_4;
 |unorm_4::zxwy||
 |unorm_4::zxy||
 |unorm_4::zxyw||
-|unorm_4::Zy||
+|unorm_4::zy||
 |unorm_4::zyw||
 |unorm_4::zywx||
-|unorm_4::Zyx||
+|unorm_4::zyx||
 |unorm_4::zyxw||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
@@ -600,7 +600,7 @@ class unorm_4;
 
 **Záhlaví:** amp_short_vectors.h
 
-**Namespace:** Concurrency::graphics
+**Namespace:** Concurrency::Graphics
 
 ##  <a name="ctor"></a> unorm_4 –
 
@@ -683,6 +683,6 @@ Objekt použitý k inicializaci.
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

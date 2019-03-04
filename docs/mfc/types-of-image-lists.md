@@ -6,12 +6,12 @@ helpviewer_keywords:
 - image lists [MFC], types of
 - CImageList class [MFC], types
 ms.assetid: bee5e7c3-78f5-4037-a136-9c50d67cdee5
-ms.openlocfilehash: 5f5843f25faed90c195f7f2c605027858f089fb6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 939aad78b7cf8cca9c940bae11892d23dbb659cb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498884"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304753"
 ---
 # <a name="types-of-image-lists"></a>Typy seznamů obrázků
 
@@ -21,8 +21,7 @@ Jeden z přetížení `Create` členské funkce má příznak označující, zda
 
 Při vykreslení nonmasked image je jednoduše zkopírovat do kontextu cílového zařízení; To znamená je vykreslen přes existující barvu pozadí kontextu zařízení. Při vykreslení maskované image bitů bitové kopie spolu se bity maska, kde se zobrazuje barva pozadí kontextu cílového zařízení prostřednictvím obvykle vytváří průhledné oblasti v rastrového obrázku. Při vykreslování maskované image, můžete zadat několik vykreslování stylů. Například můžete určit, že se image tónovaná označuje vybraný objekt.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CImageList](../mfc/using-cimagelist.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

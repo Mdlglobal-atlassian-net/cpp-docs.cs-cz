@@ -6,12 +6,12 @@ helpviewer_keywords:
 - command handling [MFC], routing commands
 - command routing [MFC], OnCmdMsg handler
 ms.assetid: 4b7b4741-565f-4878-b076-fd85c670f87f
-ms.openlocfilehash: 3bc7c33762ab1868b29732d17e1a2e9700d11cf7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56d131151f2284f12a3b46a9acd3cfbd3c8b0f47
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584558"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304636"
 ---
 # <a name="command-routing-illustration"></a>Znázornění směrování příkazů
 
@@ -29,7 +29,6 @@ Pro ilustraci, vezměte v úvahu zprávou příkazu z vymazat všechny položky 
 
 Pokud dokument neměl obslužnou rutinu, ho by příkaz Další směrování do šablony dokumentu. Příkaz by vrátíte se do zobrazení a pak okno rámce. Okno rámce by nakonec zkontrolujte jeho mapování zprávy. Pokud tento kontrola selhala stejně, by se směroval příkaz zpět na hlavní okno rámce MDI a potom na objekt aplikace – ultimate cílové neošetřené příkazy.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Jakým způsobem volá framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md)
-

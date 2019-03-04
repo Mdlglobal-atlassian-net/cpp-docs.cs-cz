@@ -7,12 +7,12 @@ helpviewer_keywords:
 - styles [MFC], spin button control
 - spin button control, styles
 ms.assetid: fb4a7f6f-9182-47be-bccf-0728fdc5332f
-ms.openlocfilehash: 73042dbbdc28819ecc736c282599189ee074ce77
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d955ba1d76ee4d5648613ddaf6c5f6a652f3d3af
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457106"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304861"
 ---
 # <a name="spin-button-styles"></a>Styly číselníků
 
@@ -35,8 +35,7 @@ Mnoho nastavení typu číselník ([atributu CSpinButtonCtrl](../mfc/reference/c
 
 - **Klávesy se šipkami** způsobí, že typu číselník tlačítko přičtena nebo odečtena pozice při stisknutí kláves Šipka nahoru a Šipka dolů. Související se stylem UDS_ARROWKEYS.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

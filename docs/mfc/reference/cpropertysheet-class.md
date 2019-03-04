@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 8ea466abe153bd31ef15c41b277b57f90cd2b50b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5fd3a682aa649091712a09a9131081c06d29ca6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450931"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300619"
 ---
 # <a name="cpropertysheet-class"></a>Cpropertysheet – třída
 
@@ -171,7 +171,7 @@ void AddPage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parametry
 
-*Fyzická_stránka*<br/>
+*pPage*<br/>
 Odkazuje na stránku chcete přidat do seznamu vlastností. Nemůže mít hodnotu NULL.
 
 ### <a name="remarks"></a>Poznámky
@@ -547,7 +547,7 @@ int GetPageIndex(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parametry
 
-*Fyzická_stránka*<br/>
+*pPage*<br/>
 Odkazuje na stránku s indexem nalezen. Nemůže mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -606,7 +606,7 @@ void MapDialogRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který obsahuje – dialogové okno koordinuje má být převeden.
 
 ### <a name="remarks"></a>Poznámky
@@ -648,7 +648,7 @@ void PressButton(int nButton);
 ### <a name="parameters"></a>Parametry
 
 *nButton*<br/>
-nButton: identifikuje tlačítko, aby se aktivovala. Tento parametr může být jeden z následujících hodnot:
+nButton: Určuje tlačítko, aby se aktivovala. Tento parametr může být jeden z následujících hodnot:
 
 - PSBTN_BACK klikne na tlačítko Zpět.
 
@@ -685,7 +685,7 @@ void RemovePage(int nPage);
 
 ### <a name="parameters"></a>Parametry
 
-*Fyzická_stránka*<br/>
+*pPage*<br/>
 Odkazuje na stránku, kde odeberou ze seznamu vlastností. Nemůže mít hodnotu NULL.
 
 *nPage*<br/>
@@ -709,7 +709,7 @@ BOOL SetActivePage(CPropertyPage* pPage);
 *nPage*<br/>
 Index stránky lze nastavit. Musí být mezi 0 a menší než počet stránek v seznamu vlastností (včetně).
 
-*Fyzická_stránka*<br/>
+*pPage*<br/>
 Odkazuje na stránku nastavení v seznamu vlastností. Nemůže být NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -828,7 +828,7 @@ Volání `SetWizardMode` před voláním [DoModal](#domodal). Po zavolání `Set
 
 [!code-cpp[NVC_MFCDocView#142](../../mfc/codesnippet/cpp/cpropertysheet-class_15.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázka CMNCTRL1 knihovny MFC](../../visual-cpp-samples.md)<br/>
 [Ukázka CMNCTRL2 knihovny MFC](../../visual-cpp-samples.md)<br/>

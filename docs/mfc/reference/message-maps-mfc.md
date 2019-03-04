@@ -9,12 +9,12 @@ helpviewer_keywords:
 - messages [MFC], Windows
 - MFC, messages
 ms.assetid: 3f9855e4-9d7d-4b64-8f3f-a19ea3cf79ba
-ms.openlocfilehash: dda989318d6c6915ef8bc4e668fd238e8167de08
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91b7f21d92b2f899895b008b3fab8b541aec9963
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599183"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300099"
 ---
 # <a name="message-maps-mfc"></a>Mapy zpráv (MFC)
 
@@ -64,7 +64,6 @@ Makra map zpráv jsou důležité, obvykle není nutné používat přímo. Je t
 
 Mapy zpráv, ale jsou důležitou součástí knihovny Microsoft Foundation Class. Měli byste pochopit, co dělají a dokumentace, kterou pro ně.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Struktury, styly, zpětná volání a mapy zpráv](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
-

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCDropDownToolBar [MFC], OnSendCommand
 - CMFCDropDownToolBar [MFC], OnUpdateCmdUI
 ms.assetid: 78818ec5-83ce-42fa-a0d4-2d9d5ecc8770
-ms.openlocfilehash: 9c5115d2453f21d83eda39950ac45a0290e9bfa8
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 704d48cc546943d818ae8b898060fe0f7e203c53
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176936"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303550"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolbar – třída
 
@@ -72,7 +72,7 @@ Chcete-li vložit rozevírací seznam nástrojů do nadřazeného panelu nástro
 
 3. Nahraďte zástupné tlačítko s `CMFCDropDownToolBarButton` s použitím [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).
 
-Další informace o tlačítka na panelu nástrojů najdete v tématu [návod: vložení ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md). Příklad rozevírací seznam nástrojů naleznete v tématu ukázkový projekt VisualStudioDemo.
+Další informace o tlačítka na panelu nástrojů najdete v tématu [názorný postup: Vkládání ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md). Příklad rozevírací seznam nástrojů naleznete v tématu ukázkový projekt VisualStudioDemo.
 
 ## <a name="example"></a>Příklad
 
@@ -93,11 +93,11 @@ Následující příklad ukazuje způsob použití `Create` metodu `CMFCDropDown
 
 [CPane](../../mfc/reference/cpane-class.md)
 
-[Cmfcbasetoolbar –](../../mfc/reference/cmfcbasetoolbar-class.md)
+[CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)
 
-[Cmfctoolbar –](../../mfc/reference/cmfctoolbar-class.md)
+[CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)
 
-[CMFCDropDownToolbar –](../../mfc/reference/cmfcdropdowntoolbar-class.md)
+[CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -138,7 +138,7 @@ virtual BOOL LoadBitmap(
 *uiMenuResID*<br/>
 [in] ID prostředku rastrového obrázku, který odkazuje na regulární nabídky Image.
 
-*Blokováno*<br/>
+*bLocked*<br/>
 [in] TRUE, pokud chcete zamknout nástrojů; v opačném případě FALSE.
 
 *uiDisabledResID*<br/>
@@ -252,7 +252,7 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
@@ -260,5 +260,4 @@ virtual void OnUpdateCmdUI(
 [CMFCToolBar::Create](../../mfc/reference/cmfctoolbar-class.md#create)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [CMFCDropDownToolbarButton – třída](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)<br/>
-[Návod: Umístění ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Návod: Vkládání ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md)

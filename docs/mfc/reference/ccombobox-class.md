@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: e7472b808d8b5d743d884d9e3806df7ffe499836
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 847927a36bac8540dd95307ae3c0259d0adba12a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178776"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304467"
 ---
 # <a name="ccombobox-class"></a>CComboBox – třída
 
@@ -214,7 +214,7 @@ kde `id` Určuje ID podřízeného okna ovládacího prvku pole se seznamem zas�
 
 Prototyp funkce nadřazeného objektu je následujícím způsobem:
 
-**afx_msg** `void` `memberFxn` **();**
+**afx_msg** `void` `memberFxn` **( );**
 
 Pořadí, ve kterém se budou odesílat určité oznámení nemůže být předpovězen. Zejména CBN_SELCHANGE oznámení může dojít před nebo po CBN_CLOSEUP oznámení.
 
@@ -714,7 +714,7 @@ void GetDroppedControlRect(LPRECT lprect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lprect*<br/>
 Odkazuje [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) , která má obdržet souřadnice.
 
 ### <a name="example"></a>Příklad
@@ -1227,7 +1227,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>Parametry
 
-*nVyberte*<br/>
+*nSelect*<br/>
 Určuje řetězec, který má vyberte index založený na nule. -1, pokud se odebere všechny aktuální výběr v seznamu a vymaže ovládací prvek pro úpravy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1555,7 +1555,7 @@ Tato členská funkce nemá žádný vliv na vytvořené pomocí pole se sezname
 
   Podívejte se na příklad pro [CComboBox::GetDroppedState](#getdroppedstate).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC CTRLBARS](../../visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>

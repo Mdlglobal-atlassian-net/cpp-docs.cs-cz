@@ -1,19 +1,19 @@
 ---
-title: Cmfcdragframeimpl – třída
+title: CMFCDragFrameImpl Class
 ms.date: 10/18/2018
 f1_keywords:
 - CMFCDragFrameImpl
 helpviewer_keywords:
 - CMFCDragFrameImpl class [MFC]
 ms.assetid: 500cd824-8188-43c2-8754-b7bb46b5648a
-ms.openlocfilehash: 2769b52e03d8d3de14fdbf431279dd9226323b0c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05b4426da6bee0443a407cff583f47bee60262e4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640697"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301204"
 ---
-# <a name="cmfcdragframeimpl-class"></a>Cmfcdragframeimpl – třída
+# <a name="cmfcdragframeimpl-class"></a>CMFCDragFrameImpl Class
 
 `CMFCDragFrameImpl` Třídy vykresluje obdélník, který se zobrazí, když uživatel přetáhne podokno v režimu standardního ukotvení.
 Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
@@ -32,7 +32,7 @@ Tloušťka obdélník můžete řídit pomocí [AFX_GLOBAL_DATA::m_nDragFrameThi
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Cmfcdragframeimpl –](../../mfc/reference/cmfcdragframeimpl-class.md)
+[CMFCDragFrameImpl](../../mfc/reference/cmfcdragframeimpl-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -114,7 +114,7 @@ void ResetState();
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

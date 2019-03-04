@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type libraries, Automation clients
 - clients
 ms.assetid: 84e34a79-06f6-4752-a33b-ae0ede1d8ecf
-ms.openlocfilehash: 30511ec6c9f0e00f4cec51e00f85ea5e32453327
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 098c41ea981d9d0069130d5439632aa7b0d6cbbd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465491"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304493"
 ---
 # <a name="automation-clients"></a>Klienti automatizace
 
@@ -38,9 +38,8 @@ Pak zadejte soubor knihovny typů popisující vlastnosti a funkce serveru aplik
 
 Pokud chcete zpracovávat události v klientovi služby automation, musíte přidat rozhraní jímky. Knihovna MFC poskytuje podporu průvodce přidat rozhraní jímky pro ovládací prvky ActiveX, ale není podporován pro ostatní servery COM.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Klienti automatizace: Použití knihoven typů](../mfc/automation-clients-using-type-libraries.md)<br/>
 [Automatizace](../mfc/automation.md)<br/>
 [MFC – průvodce aplikací](../mfc/reference/mfc-application-wizard.md)
-

@@ -1,19 +1,19 @@
 ---
-title: 'ActiveX – kontejnery ovládacích prvků: Ruční povolení uzavření ovládacího prvku ActiveX'
+title: 'Kontejnery ovládacích prvků ActiveX: Ruční povolení uzavření ovládacího prvku ActiveX'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - AfxEnableControlContainer method [MFC]
 - ActiveX control containers [MFC], enabling
 - ActiveX controls [MFC], enabling containers
 ms.assetid: 833bcde9-c9ad-4709-ad12-2fc2150fb6a5
-ms.openlocfilehash: 1fdf27975516715ea350af1f917eb43179f3e6d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80ca25192f3dbda711b0398917cfa68571cd2c55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510116"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302718"
 ---
-# <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>ActiveX – kontejnery ovládacích prvků: Ruční povolení uzavření ovládacího prvku ActiveX
+# <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>Kontejnery ovládacích prvků ActiveX: Ruční povolení uzavření ovládacího prvku ActiveX
 
 Pokud jste nepovolili podporu ovládacích prvků ActiveX při generování aplikace pomocí Průvodce aplikací MFC, budete muset ručně přidat tuto podporu. Tento článek popisuje postup pro ruční přidání používání kontejnerů ovládacích prvků ActiveX do stávající aplikace kontejneru OLE. Pokud víte předem, který má podporu ovládacích prvků ActiveX v kontejneru OLE, najdete v článku [vytvoření kontejneru ovládacího prvku ActiveX prostředí MFC](../mfc/reference/creating-an-mfc-activex-control-container.md).
 
@@ -36,7 +36,6 @@ Podpora ovládacích prvků ActiveX, je nutné přidat jeden řádek kódu do dv
 
 Po dokončení těchto kroků znovu sestavit projekt kliknutím **sestavení** na **sestavení** nabídky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [ActiveX – kontejnery ovládacích prvků](../mfc/activex-control-containers.md)
-

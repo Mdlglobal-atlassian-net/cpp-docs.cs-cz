@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drag and drop [MFC], about OLE drag and drop
 - OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
-ms.openlocfilehash: 956c746d6eef84edd7be3ab9b6c6d15107269b1c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 277f82874426a008f598c052966ad81f46c45732
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450346"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305039"
 ---
 # <a name="drag-and-drop-ole"></a>Přetažení (OLE)
 
@@ -26,7 +26,7 @@ Při použití OLE – přetažení, odeberete z procesu dva kroky. Vyberte data
 
 Použití OLE – přetažení, může být přenesená data z jednoho umístění do jiného v rámci dokumentu, mezi různými dokumenty nebo mezi aplikacemi. Se dá implementovat v kontejneru nebo serverové aplikace, a jakékoli aplikace může být zdroje přemístění nebo cíl přetažení. Pokud aplikace podporuje rozevírací zdroj a cíl přetažení implementované, je povoleno přetažení mezi podřízená okna nebo v rámci jednoho okna. Tato funkce může vaše aplikace značně zjednodušují použít.
 
-Pokud chcete používat funkce a přetahování OLE, přečtěte si téma [přetažení: přizpůsobení](../mfc/drag-and-drop-customizing.md). Technik popsaných v tomto článku můžete použít tak, aby aplikace OLE – přetažení zdroje. Tento článek [přetažení: implementace cíle přetažení](../mfc/drag-and-drop-implementing-a-drop-target.md) popisuje způsob implementace cíle přetažení podporu technologie OLE a aplikacích jiných než OLE. To se hodí i prozkoumat ukázky MFC OLE [OCLIENT](../visual-cpp-samples.md) a [HIERSVR](../visual-cpp-samples.md).
+Pokud chcete používat funkce a přetahování OLE, přečtěte si téma [přetažení: Přizpůsobení](../mfc/drag-and-drop-customizing.md). Technik popsaných v tomto článku můžete použít tak, aby aplikace OLE – přetažení zdroje. Tento článek [přetažení: Implementace cíle přetažení](../mfc/drag-and-drop-implementing-a-drop-target.md) popisuje způsob implementace cíle přetažení podporu technologie OLE a aplikacích jiných než OLE. To se hodí i prozkoumat ukázky MFC OLE [OCLIENT](../visual-cpp-samples.md) a [HIERSVR](../visual-cpp-samples.md).
 
 Pokud jste čtení [datové objekty a zdroje dat (OLE)](../mfc/data-objects-and-data-sources-ole.md) řady článků, můžete chtít provést nyní. Tyto články vysvětlují základní informace o přenosu dat a jak implementovat ve svých aplikacích.
 
@@ -38,8 +38,7 @@ Další informace o přetahování naleznete v tématu:
 
 - [Přetažení: Přizpůsobení](../mfc/drag-and-drop-customizing.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [Datové objekty a zdroje dat (OLE)](../mfc/data-objects-and-data-sources-ole.md)
-

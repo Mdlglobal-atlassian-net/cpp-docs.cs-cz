@@ -9,12 +9,12 @@ helpviewer_keywords:
 - resources [MFC], creating dialog boxes
 - MFC dialog boxes [MFC], dialog resource
 ms.assetid: 0b83bd33-14d3-4611-8129-fccdae18053e
-ms.openlocfilehash: 8f9371ebfe352f0ab7dbed2e201ce212387b85a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0df76c506d4e6f2267e3a7628825e7b47a56c8c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517699"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303037"
 ---
 # <a name="creating-the-dialog-resource"></a>Vytvoření prostředku dialogového okna
 
@@ -32,8 +32,7 @@ Po dokončení, uloží se prostředek vaší šablony dialogového okna souboru
 
 Když v dialogovém okně Vzhled vám vyhovuje, vytvoření třídy dialogového okna a namapujte jeho zprávy, jak je popsáno v [vytvoření třídy dialogového okna s použitím průvodců kódem](../mfc/creating-a-dialog-class-with-code-wizards.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Dialogová okna](../mfc/dialog-boxes.md)<br/>
 [Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
-

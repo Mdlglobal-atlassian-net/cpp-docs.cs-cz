@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CRecentFileList [MFC], UpdateMenu
 - CRecentFileList [MFC], WriteList
 ms.assetid: a77f0524-7584-4582-849a-7e97b76d186e
-ms.openlocfilehash: e38f63090e3de2a73c60618a36d25a397d595dac
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 30536d91d057de4e551b5a28200dd903e12713b3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657419"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304831"
 ---
 # <a name="crecentfilelist-class"></a>Crecentfilelist – třída
 
@@ -75,7 +75,7 @@ Soubory můžete přidána nebo odstraněna ze seznamu naposledy použitých sou
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxadv.h
+**Header:** afxadv.h
 
 ##  <a name="add"></a>  CRecentFileList::Add
 
@@ -115,7 +115,7 @@ Určuje ukazatel na prostředí položky, které chcete přidat do seznamu.
 *pLink*<br/>
 Určuje ukazatel na odkaz prostředí má být přidán do seznamu.
 
-*PIDL*<br/>
+*pidl*<br/>
 Určuje IDLIST pro položku prostředí, který by měl být přidán do poslední složku s dokumentací.
 
 ### <a name="remarks"></a>Poznámky
@@ -137,7 +137,7 @@ CRecentFileList(
 
 ### <a name="parameters"></a>Parametry
 
-*Nzačínat*<br/>
+*nStart*<br/>
 Posun číslování v nabídky zobrazení seznamu souborů (naposledy použité) seznamu naposledy použitých položek.
 
 *lpszSection*<br/>
@@ -171,7 +171,7 @@ virtual BOOL GetDisplayName(
 
 ### <a name="parameters"></a>Parametry
 
-*%{strName/*<br/>
+*strName*<br/>
 Úplná cesta souboru, jehož název má být zobrazen v nabídce seznamu naposledy použitých souborů.
 
 *nIndex*<br/>
@@ -261,7 +261,6 @@ Zapíše poslední použitou seznam souborů (MRU) do registru nebo aplikace. So
 virtual void WriteList();
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-

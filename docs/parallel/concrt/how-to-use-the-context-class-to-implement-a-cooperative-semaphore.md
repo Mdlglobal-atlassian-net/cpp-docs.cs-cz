@@ -5,12 +5,12 @@ helpviewer_keywords:
 - cooperative semaphore implementing
 - context class
 ms.assetid: 22f4b9c0-ca22-4a68-90ba-39e99ea76696
-ms.openlocfilehash: 460a1de03f34cb8ef9753e761aaef37470cd6d0e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 92f77fade972bff1528bc9a22416670354c70f34
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467756"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300762"
 ---
 # <a name="how-to-use-the-context-class-to-implement-a-cooperative-semaphore"></a>Postupy: Použití třídy kontextu pro implementaci semaforu pro spolupráci
 
@@ -73,7 +73,7 @@ Další informace o `concurrent_queue` najdete v tématu [paralelní kontejnery 
 
 Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `cooperative-semaphore.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
 
-**cl.exe/EHsc kooperativní semaphore.cpp**
+**cl.exe /EHsc cooperative-semaphore.cpp**
 
 ## <a name="robust-programming"></a>Robustní programování
 
@@ -86,8 +86,7 @@ Následující příklad upravuje text, který je předán do funkce práce `par
 
 [!code-cpp[concrt-cooperative-semaphore#8](../../parallel/concrt/codesnippet/cpp/how-to-use-the-context-class-to-implement-a-cooperative-semaphore_8.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Kontexty](../../parallel/concrt/contexts.md)<br/>
 [Paralelní kontejnery a objekty](../../parallel/concrt/parallel-containers-and-objects.md)
-

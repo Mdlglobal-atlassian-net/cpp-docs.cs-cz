@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCCaptionButton [MFC], OnDraw
 - CMFCCaptionButton [MFC], SetMiniFrameButton
 ms.assetid: c5774b38-c0dd-414a-9ede-3b2f78f233ec
-ms.openlocfilehash: 4fa9d6a57cb2ee70e9da7853954241955d724a5c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2020f6cb2f0feec28996f69791899c648600b600
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604282"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301048"
 ---
 # <a name="cmfccaptionbutton-class"></a>Cmfccaptionbutton – třída
 
@@ -82,7 +82,7 @@ Následující příklad ukazuje, jak vytvořit `CMFCCaptionButton` objektu a na
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cmfccaptionbutton –](../../mfc/reference/cmfccaptionbutton-class.md)
+[CMFCCaptionButton](../../mfc/reference/cmfccaptionbutton-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -255,7 +255,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení pro tlačítko.
 
 *bActive*<br/>
@@ -287,7 +287,7 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
 *bSet*<br/>
 [in] Hodnota TRUE pro Výška pruhu mini názvu; FALSE pro Výška pruhu výchozí název.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

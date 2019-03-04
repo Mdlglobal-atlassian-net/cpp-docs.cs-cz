@@ -1,5 +1,5 @@
 ---
-title: Cmfcpropertygridfileproperty – třída
+title: CMFCPropertyGridFileProperty Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCPropertyGridFileProperty
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCPropertyGridFileProperty [MFC], CMFCPropertyGridFileProperty
 ms.assetid: 2bb8b8b4-47fc-4798-bd5e-dc8ea0b4cd9d
-ms.openlocfilehash: 659b2cf4cf563450e51b1d6f407414273a5109aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5022063fe7eb8242f01684438e2fdeeeedc80616
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487357"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302894"
 ---
-# <a name="cmfcpropertygridfileproperty-class"></a>Cmfcpropertygridfileproperty – třída
+# <a name="cmfcpropertygridfileproperty-class"></a>CMFCPropertyGridFileProperty Class
 
 `CMFCPropertyGridFileProperty` Třída podporuje položku ovládacího prvku seznamu s, která se otevře dialogové okno Výběr souboru.
 
@@ -39,7 +39,7 @@ class CMFCPropertyGridFileProperty : public CMFCPropertyGridProperty
 |Název|Popis|
 |----------|-----------------|
 |`CMFCPropertyGridFileProperty::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|
-|`CMFCPropertyGridFileProperty::OnClickButton`|(Přepíše [CMFCPropertyGridProperty::OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|
+|`CMFCPropertyGridFileProperty::OnClickButton`|(Overrides [CMFCPropertyGridProperty::OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -47,13 +47,13 @@ class CMFCPropertyGridFileProperty : public CMFCPropertyGridProperty
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cmfcpropertygridproperty –](../../mfc/reference/cmfcpropertygridproperty-class.md)
+[CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)
 
-[Cmfcpropertygridfileproperty –](../../mfc/reference/cmfcpropertygridfileproperty-class.md)
+[CMFCPropertyGridFileProperty](../../mfc/reference/cmfcpropertygridfileproperty-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxpropertygridctrl.h
+**Header:** afxpropertygridctrl.h
 
 ##  <a name="cmfcpropertygridfileproperty"></a>  CMFCPropertyGridFileProperty::CMFCPropertyGridFileProperty
 
@@ -73,13 +73,13 @@ CMFCPropertyGridFileProperty(
 
 ### <a name="parameters"></a>Parametry
 
-*%{strName/*<br/>
+*strName*<br/>
 [in] Název vlastnosti.
 
 *bOpenFileDialog*<br/>
 [in] True pro otevření **otevřít soubor** dialogové okno; FALSE, pokud chcete otevřít **uložit soubor** dialogové okno.
 
-*%{strFileName/*<br/>
+*strFileName*<br/>
 [in] Je původní název souboru.
 
 *lpszDefExt*<br/>
@@ -109,7 +109,7 @@ Následující příklad ukazuje, jak vytvořit objekt pomocí konstruktoru `CMF
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#22](../../mfc/codesnippet/cpp/cmfcpropertygridfileproperty-class_1.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

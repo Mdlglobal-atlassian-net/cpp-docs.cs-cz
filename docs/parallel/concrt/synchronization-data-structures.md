@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - synchronization data structures
 ms.assetid: d612757d-e4b7-4019-a627-f853af085b8b
-ms.openlocfilehash: 8c91de87bb5d579916743051d06c15f6df6921bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f9b949e7782c4b9ca302e9e623ce5f09061c39ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495924"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301880"
 ---
 # <a name="synchronization-data-structures"></a>Synchronizační datové struktury
 
@@ -41,7 +41,7 @@ V následující tabulce jsou uvedeny důležité metody, které jsou definován
 |------------|-----------------|
 |[lock](reference/critical-section-class.md#lock)|Získá kritický oddíl. Volání kontextu blokuje, dokud získá zámek.|
 |[try_lock](reference/critical-section-class.md#try_lock)|Pokusí se získat kritický oddíl, ale neblokuje.|
-|[Odemknutí](reference/critical-section-class.md#unlock)|Uvolní kritický oddíl.|
+|[unlock](reference/critical-section-class.md#unlock)|Uvolní kritický oddíl.|
 
 [[Horní](#top)]
 
@@ -70,7 +70,7 @@ V následující tabulce jsou uvedeny důležité metody, které jsou definován
 |[try_lock](reference/reader-writer-lock-class.md#try_lock)|Pokusí se získat přístup pro čtení a zápis k zámku, ale neblokuje.|
 |[lock_read](reference/reader-writer-lock-class.md#lock_read)|Získá přístup jen pro čtení k zámku.|
 |[try_lock_read](reference/reader-writer-lock-class.md#try_lock_read)|Pokusí se získat přístup jen pro čtení k zámku, ale neblokuje.|
-|[Odemknutí](reference/reader-writer-lock-class.md#unlock)|Uvolní zámek.|
+|[unlock](reference/reader-writer-lock-class.md#unlock)|Uvolní zámek.|
 
 [[Horní](#top)]
 
@@ -99,7 +99,7 @@ Následující tabulka uvádí některé důležité metody, které jsou definov
 |------------|-----------------|
 |[Počkej](reference/event-class.md#wait)|Čeká na signálování události.|
 |[set](reference/event-class.md#set)|Nastaví událost do signalizovaného stavu.|
-|[Resetovat](reference/event-class.md#reset)|Nastaví událost do nesignálového stavu.|
+|[reset](reference/event-class.md#reset)|Nastaví událost do nesignálového stavu.|
 |[wait_for_multiple](reference/event-class.md#wait_for_multiple)|Čeká na signálování více událostí.|
 
 ### <a name="example"></a>Příklad
@@ -115,4 +115,3 @@ Porovná chování synchronizačních datových struktur s poskytovaným rozhran
 
 [Concurrency Runtime](../../parallel/concrt/concurrency-runtime.md)<br/>
 Popisuje modulu Runtime souběžnosti, který zjednodušuje paralelní programování a obsahuje odkazy na související témata.
-

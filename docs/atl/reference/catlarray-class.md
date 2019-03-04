@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: c6a4d522a05885468a0dfec3889fb950b16b847f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca4b0f4c8ffc3382984660caec7ae04107c8797a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442676"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301845"
 ---
 # <a name="catlarray-class"></a>Catlarray – třída
 
@@ -61,7 +61,7 @@ Kód použitý má zkopírovat nebo přesunout prvky.
 |[Připojení](#append)|Voláním této metody lze přidat na konec jiné obsah jednoho pole.|
 |[AssertValid](#assertvalid)|Volejte tuto metodu za účelem potvrzení, že objekt pole je platný.|
 |[CAtlArray](#catlarray)|Konstruktor|
-|[~ Catlarray –](#dtor)|Destruktor.|
+|[~CAtlArray](#dtor)|Destruktor.|
 |[kopírování](#copy)|Volejte tuto metodu pro zkopírování prvků z jednoho pole do jiného.|
 |[FreeExtra](#freeextra)|Voláním této metody lze odebrat všechny prázdné prvky z pole.|
 |[GetAt](#getat)|Volejte tuto metodu za účelem načtení jeden element z objektu array.|
@@ -190,7 +190,7 @@ Inicializuje objekt array.
 
 [!code-cpp[NVC_ATL_Utilities#4](../../atl/codesnippet/cpp/catlarray-class_4.cpp)]
 
-##  <a name="dtor"></a>  Catlarray –:: ~ catlarray –
+##  <a name="dtor"></a>  CAtlArray::~CAtlArray
 
 Destruktor.
 
@@ -547,9 +547,9 @@ Nahradí hodnota elementu, na které odkazuje index. Pokud *iElement* je větš�
 
 [!code-cpp[NVC_ATL_Utilities#12](../../atl/codesnippet/cpp/catlarray-class_12.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Ukázka MMXSwarm](../../visual-cpp-samples.md)<br/>
+[MMXSwarm Sample](../../visual-cpp-samples.md)<br/>
 [Příklad DynamicConsumer](../../visual-cpp-samples.md)<br/>
 [Příklad UpdatePV](../../visual-cpp-samples.md)<br/>
 [Výběr ukázky](../../visual-cpp-samples.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: 'MFC – ovládací prvky ActiveX: Licencování ovládacích prvků ActiveX'
+title: 'MFC – ovládací prvky ActiveX: Licencování ovládacího prvku ActiveX'
 ms.date: 11/19/2018
 f1_keywords:
 - COleObjectFactory
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - GetLicenseKey method [MFC]
 - licensing ActiveX controls
 ms.assetid: cacd9e45-701a-4a1f-8f1f-b0b39f6ac303
-ms.openlocfilehash: 35ca5d410f642f2557d9ee797eda2d9529f7f4d1
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: eda2ea08c6bd3526befb71c704aa20eba6935b04
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176354"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304623"
 ---
-# <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC – ovládací prvky ActiveX: Licencování ovládacích prvků ActiveX
+# <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC – ovládací prvky ActiveX: Licencování ovládacího prvku ActiveX
 
 Licencování podpory, volitelná funkce ovládacích prvků ActiveX, vám umožní řídit, kdo může pro používání nebo distribuci ovládacího prvku. (Další informace o licencování problémy, podívejte se na licencování problémy v [upgrade existujícího ovládacího prvku ActiveX](../mfc/upgrading-an-existing-activex-control.md).)
 
@@ -74,15 +74,15 @@ Při použití Průvodce ovládacím prvkem ActiveX pro přidání do ovládací
 
 Tyto členské funkce jsou:
 
-- [Verifyuserlicense –](../mfc/reference/coleobjectfactory-class.md#verifyuserlicense)
+- [VerifyUserLicense](../mfc/reference/coleobjectfactory-class.md#verifyuserlicense)
 
    Ověřuje, že ovládací prvek umožňuje využití návrhu kontrolou systému přítomnost licenční soubor ovládacího prvku. Tato funkce se volá se rozhraním při zpracování `IClassFactory2::GetLicInfo` a `IClassFactory::CreateInstanceLic`.
 
-- [Getlicensekey –](../mfc/reference/coleobjectfactory-class.md#getlicensekey)
+- [GetLicenseKey](../mfc/reference/coleobjectfactory-class.md#getlicensekey)
 
    Požádá o jedinečný klíč z ovládacího prvku knihovny DLL. Tento klíč je součástí aplikace typu kontejner a později, použít ve spojení s `VerifyLicenseKey`, chcete-li vytvořit instanci ovládacího prvku. Tato funkce se volá se rozhraním při zpracování `IClassFactory2::RequestLicKey`.
 
-- [Verifylicensekey –](../mfc/reference/coleobjectfactory-class.md#verifylicensekey)
+- [VerifyLicenseKey](../mfc/reference/coleobjectfactory-class.md#verifylicensekey)
 
    Ověří, zda vložený klíč a jedinečný klíč ovládacího prvku jsou stejné. To umožňuje kontejneru pro vytvoření instance ovládacího prvku pro jeho použití. Tato funkce se volá se rozhraním při zpracování `IClassFactory2::CreateInstanceLic` a může být potlačena za účelem poskytovat vlastní ověření licenční klíč. Výchozí implementace provádí porovnání řetězců. Další informace najdete v tématu [přizpůsobení Licensing ovládacího prvku ActiveX](#_core_customizing_the_licensing_of_an_activex_control)dále v tomto článku.
 
@@ -122,8 +122,7 @@ Můžete také přidat kód, který `VerifyLicenseKey` funkce, která poskytuje 
 
 Další informace o licencování problémy, podívejte se na licencování problémy v [upgrade existujícího ovládacího prvku ActiveX](../mfc/upgrading-an-existing-activex-control.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)<br/>
 [Průvodce ovládacím prvkem ActiveX v prostředí MFC](../mfc/reference/mfc-activex-control-wizard.md)
-

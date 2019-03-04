@@ -6,12 +6,12 @@ helpviewer_keywords:
 - lists [MFC], image
 - CImageList class [MFC], manipulating
 ms.assetid: 043418f8-077e-4dce-b8bb-2b7b0d7b5156
-ms.openlocfilehash: 7ec641f1e7090e27edd367203b430b932ede52a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e86961980c91ade47a3d6510dec5c04ac36cffb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643765"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304844"
 ---
 # <a name="manipulating-image-lists"></a>Manipulace se seznamy obrázků
 
@@ -27,8 +27,7 @@ Informace o bitové kopii můžete napsat do archivu voláním [zápisu](../mfc/
 
 [GetSafeHandle](../mfc/reference/cimagelist-class.md#getsafehandle), [připojit](../mfc/reference/cimagelist-class.md#attach), a [odpojit](../mfc/reference/cimagelist-class.md#detach) členských funkcí umožňuje manipulaci s popisovačem seznam obrázků, které jsou připojené k `CImageList` objektu, zatímco [DeleteImageList](../mfc/reference/cimagelist-class.md#deleteimagelist) členská funkce odstraní seznam obrázků, aniž by zlikvidoval `CImageList` objektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CImageList](../mfc/using-cimagelist.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

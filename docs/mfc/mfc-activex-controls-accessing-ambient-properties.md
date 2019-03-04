@@ -1,18 +1,18 @@
 ---
-title: 'MFC – ovládací prvky ActiveX: Přístup k vedlejším vlastnostem'
+title: 'MFC – ovládací prvky ActiveX: Přístup k vedlejším vlastnostem'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], accessing ambient properties
 - properties [MFC], accessing ambient
 ms.assetid: fdc9db29-e6b0-45d2-a879-8bd60e2058a7
-ms.openlocfilehash: f6daff09969e82daa4e8f76c8b1eb4972ddd6eeb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 585ec8720a654bbcb728330d70ddb914f2543e41
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585624"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305221"
 ---
-# <a name="mfc-activex-controls-accessing-ambient-properties"></a>MFC – ovládací prvky ActiveX: Přístup k vedlejším vlastnostem
+# <a name="mfc-activex-controls-accessing-ambient-properties"></a>MFC – ovládací prvky ActiveX: Přístup k vedlejším vlastnostem
 
 Tento článek popisuje, jak ovládací prvek ActiveX lze získat přístup k vedlejším vlastnostem jeho kontejneru ovládacího prvku.
 
@@ -55,7 +55,6 @@ Pro usnadnění práce `COleControl` poskytuje pomocné funkce, které přístup
 
 Pokud se změní hodnotu k vlastnosti ambient. (přes určitou akci kontejneru), `OnAmbientPropertyChanged` volat členské funkce ovládacího prvku. Potlačí tuto členskou funkci pro zpracování takové oznámení. Parametr `OnAmbientPropertyChanged` je ID odbavení ovlivněné vedlejší vlastnost. Hodnota tuto hodnotu dispatch ID může být DISPID_UNKNOWN, což znamená, že došlo ke změně vlastnosti jednoho nebo více prostředí, ale není k dispozici informace o tom, které měla vliv na vlastnosti.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)
-

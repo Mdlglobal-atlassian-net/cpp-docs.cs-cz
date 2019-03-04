@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Create method [MFC], property sheets
 - CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
-ms.openlocfilehash: ac6315d1b450fa41158f1393471d723627ecec24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76acbfa9625fe6cb9a575244b0ed6954eeaaf3f2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509381"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301685"
 ---
 # <a name="using-property-sheets-in-your-application"></a>Použití seznamů vlastností v aplikaci
 
@@ -42,7 +42,7 @@ Pokud chcete použít seznam vlastností ve vaší aplikaci, proveďte následuj
 
 1. Vytvořte členské proměnné pro uložení hodnoty pro tuto stránku vlastností. Proces pro přidání členské proměnné stránky vlastností je přesně stejné jako přidání členské proměnné do dialogového okna, protože je specializované dialogové okno stránky vlastností. Další informace najdete v tématu [definování členských proměnných pro ovládací prvky dialogového okna](../windows/defining-member-variables-for-dialog-controls.md).
 
-1. Vytvoření [cpropertysheet –](../mfc/reference/cpropertysheet-class.md) objektu ve zdrojovém kódu. Obvykle vytvoříte `CPropertySheet` objektu v obslužnou rutinu pro příkaz, který zobrazí stránku vlastností. Tento objekt představuje celou vlastností. Pokud vytvoříte modální seznam vlastností s [DoModal](../mfc/reference/cpropertysheet-class.md#domodal) – funkce rozhraní framework poskytuje tři příkazová tlačítka ve výchozím nastavení: OK, zrušit a použít. Rozhraní vytvoří žádné příkazová tlačítka pro vytvoření modeless – seznam vlastností s [vytvořit](../mfc/reference/cpropertysheet-class.md#create) funkce. Není nutné odvozovat třídu z `CPropertySheet` Pokud chcete přidat další ovládací prvky (například okno náhledu) nebo zobrazit nemodálního seznamu vlastností. Tento krok je nezbytný pro modeless – seznam vlastností, protože neobsahují žádné výchozí ovládací prvky, které lze použít k zavření seznamu vlastností.
+1. Vytvoření [cpropertysheet –](../mfc/reference/cpropertysheet-class.md) objektu ve zdrojovém kódu. Obvykle vytvoříte `CPropertySheet` objektu v obslužnou rutinu pro příkaz, který zobrazí stránku vlastností. Tento objekt představuje celou vlastností. Pokud vytvoříte modální seznam vlastností s [DoModal](../mfc/reference/cpropertysheet-class.md#domodal) – funkce rozhraní framework poskytuje tři příkazová tlačítka ve výchozím nastavení: Tak dobře zrušit a použít. Rozhraní vytvoří žádné příkazová tlačítka pro vytvoření modeless – seznam vlastností s [vytvořit](../mfc/reference/cpropertysheet-class.md#create) funkce. Není nutné odvozovat třídu z `CPropertySheet` Pokud chcete přidat další ovládací prvky (například okno náhledu) nebo zobrazit nemodálního seznamu vlastností. Tento krok je nezbytný pro modeless – seznam vlastností, protože neobsahují žádné výchozí ovládací prvky, které lze použít k zavření seznamu vlastností.
 
 1. Pro každou stránku přidat do seznamu vlastností postupujte takto:
 
@@ -60,7 +60,6 @@ Pokud chcete použít seznam vlastností ve vaší aplikaci, proveďte následuj
 
 Příklad použití seznamů vlastností, najdete v ukázce MFC Obecné [PROPDLG](../visual-cpp-samples.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Seznamy vlastností](../mfc/property-sheets-mfc.md)
-

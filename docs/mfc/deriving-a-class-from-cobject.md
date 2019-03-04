@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CObject class [MFC], deriving serializable classes
 - CObject class [MFC], deriving from
 ms.assetid: 5ea4ea41-08b5-4bd8-b247-c5de8c152a27
-ms.openlocfilehash: afaddfcb0a75b7e753897768d993df7ab5d876c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2c759dfd308beed0f04b8d8c2868abeeb1cfb45
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566228"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301243"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Odvození třídy z objektu CObject
 
@@ -28,7 +28,7 @@ V diskuzích o `CObject`, často používají soubor podmínky"rozhraní" a "imp
 
 Můžete zvolit ze čtyř úrovní funkčnosti při odvození třídy z `CObject`:
 
-- Základní funkce: žádná podpora pro informace o třídě za běhu nebo serializace ale zahrnuje správu diagnostiky paměti.
+- Základní funkce: Žádná podpora pro informace o třídě za běhu nebo serializace ale zahrnuje správu diagnostiky paměti.
 
 - Základní funkce plus podporu pro informace o třídě za běhu.
 
@@ -59,11 +59,10 @@ Následující tabulka ukazuje vztah mezi makra použitá pro podporu serializac
 
    [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
 
-Za normálních okolností však můžete chtít potlačit některé `CObject`pro členské funkce pro zpracování podrobností o nové třídy. Například může obvykle chcete přepsat `Dump` funkce `CObject` zajištění výstupu ladění pro obsah vaší třídy. Podrobnosti ohledně postupu přepsání `Dump`, najdete v článku [diagnostiky: výpis obsah objektu](/previous-versions/visualstudio/visual-studio-2010/sc15kz85). Můžete také přepsat `AssertValid` funkce `CObject` poskytnout vlastní testování k ověření konzistence datové členy třídy objektů. Popis toho, jak přepsat `AssertValid`, naleznete v tématu [MFC ASSERT_VALID a CObject::AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa).
+Za normálních okolností však můžete chtít potlačit některé `CObject`pro členské funkce pro zpracování podrobností o nové třídy. Například může obvykle chcete přepsat `Dump` funkce `CObject` zajištění výstupu ladění pro obsah vaší třídy. Podrobnosti ohledně postupu přepsání `Dump`, najdete v článku [diagnostiky: Výpis obsahu objektu](/previous-versions/visualstudio/visual-studio-2010/sc15kz85). Můžete také přepsat `AssertValid` funkce `CObject` poskytnout vlastní testování k ověření konzistence datové členy třídy objektů. Popis toho, jak přepsat `AssertValid`, naleznete v tématu [MFC ASSERT_VALID a CObject::AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa).
 
 Tento článek [určení úrovní funkčnosti](../mfc/specifying-levels-of-functionality.md) popisuje, jak určit jiných úrovních funkčnosti, včetně informací o třídě za běhu, vytváření dynamických objektů a serializace.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití objektů CObject](../mfc/using-cobject.md)
-

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-ms.openlocfilehash: 37a7a6fc443e172f80cc7c30c462ec4d69b3e8de
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: dd11f5db646e172d7ea2c2cc646841249d95ef31
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693292"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303628"
 ---
 # <a name="multithreading-terminating-threads-in-mfc"></a>Multithreading: Ukončení vláken v prostředí MFC
 
@@ -38,7 +38,7 @@ Pro vlákno uživatelského rozhraní je proces stejně tak jednoduchý: prostř
 
 ##  <a name="_core_premature_thread_termination"></a> Předčasné ukončení vlákna
 
-Předčasné ukončení vlákna je téměř stejně jednoduché: volání [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) z vlákna. Předejte požadovaný ukončovací kód jako jediný parametr. To zastaví provádění vlákna, zruší přidělení zásobníku vlákna, odpojí všechny k vláknu připojené DLL a odstraní objekt vlákna z paměti.
+Předčasné ukončení vlákna je téměř stejně jednoduché: Volání [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) z vlákna. Předejte požadovaný ukončovací kód jako jediný parametr. To zastaví provádění vlákna, zruší přidělení zásobníku vlákna, odpojí všechny k vláknu připojené DLL a odstraní objekt vlákna z paměti.
 
 `AfxEndThread` Musí být volána z v rámci vlákno ukončeno. Pokud chcete ukončit vlákno z jiného vlákna, musíte nastavit metodu komunikace mezi těmito dvěma vlákny.
 
@@ -56,7 +56,7 @@ Získání ukončovacího kódu z [CWinThread](../mfc/reference/cwinthread-class
 
 Některé z metod umožňuje zjistit, proč `CWinThread` byl ukončen objekt.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Multithreading s použitím jazyka C++ a prostředí MFC](multithreading-with-cpp-and-mfc.md)<br/>
 [_endthread, _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)<br/>

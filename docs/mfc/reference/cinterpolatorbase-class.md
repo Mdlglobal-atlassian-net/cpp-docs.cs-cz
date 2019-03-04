@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetDuration
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
-ms.openlocfilehash: e428478f2f437654ea2f0890993245afc53c01f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 379aa5607e459ad8acfd99c5899315afb84ac4a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541463"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302283"
 ---
 # <a name="cinterpolatorbase-class"></a>Cinterpolatorbase – třída
 
@@ -206,7 +206,7 @@ IFACEMETHOD(InterpolateVelocity)(
 *Posun*<br/>
 Posun od začátku přechod. Posun je vždy větší nebo rovna nule a menší než doba trvání přechodu. Tato metoda není volána, pokud doba trvání přechodu je nula.
 
-*Rychlost*<br/>
+*velocity*<br/>
 Výstup. Rychlost proměnnou na posunu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -255,7 +255,7 @@ IFACEMETHOD(SetInitialValueAndVelocity)(
 
 ### <a name="parameters"></a>Parametry
 
-*Počáteční hodnota*<br/>
+*initialValue*<br/>
 Hodnota proměnné na začátku přechod.
 
 *initialVelocity*<br/>
@@ -265,6 +265,6 @@ Rychlost proměnnou na začátku přechod.
 
 Pokud metoda uspěje, vrátí hodnotu S_OK. Pokud není nastaven ccustominterpolator – nebo vlastní implementace vrací hodnotu FALSE z metody SetInitialValueAndVelocity vrátí E_FAIL.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

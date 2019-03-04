@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - DoClick method [MFC]
 ms.assetid: bc4fad78-cabd-4cc0-a798-464b1a682f0b
-ms.openlocfilehash: 1e47e45efe27c9562cf8500f8941bcf0e259448a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29cb0d6f53d4e8fbbce12a83b2eecb8658c82697
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585026"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305208"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>MFC – ovládací prvky ActiveX: Přidání uložených metod
 
@@ -24,8 +24,8 @@ Základní metoda se liší od vlastní metodu v tom, že je již implementován
 
 |Metoda|Zápis do mapy odbavení|Komentář|
 |------------|------------------------|-------------|
-|`DoClick`|**(DISP_STOCKPROP_DOCLICK)**|Vyvolá událost Click.|
-|`Refresh`|**(DISP_STOCKPROP_REFRESH)**|Aktualizuje se okamžitě vzhled ovládacího prvku.|
+|`DoClick`|**DISP_STOCKPROP_DOCLICK( )**|Vyvolá událost Click.|
+|`Refresh`|**DISP_STOCKPROP_REFRESH( )**|Aktualizuje se okamžitě vzhled ovládacího prvku.|
 
 ##  <a name="_core_adding_a_stock_method_using_classwizard"></a> Přidání pomocí vyvolá integrovaná metoda Průvodce přidáním metody
 
@@ -61,7 +61,6 @@ Následující řádek je přidán do ovládacího prvku. Soubor IDL:
 
 Tento řádek přiřadí způsob aktualizace na konkrétní číslo ID.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)
-

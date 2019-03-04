@@ -1,5 +1,5 @@
 ---
-title: Colelinkingdoc – třída
+title: COleLinkingDoc Class
 ms.date: 11/04/2016
 f1_keywords:
 - COleLinkingDoc
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-ms.openlocfilehash: ed96d0a88755827bff27255326db8262698fcfb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 275119b2343c4d13b6a32f939fc8c3b2b5d5890c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544310"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300401"
 ---
-# <a name="colelinkingdoc-class"></a>Colelinkingdoc – třída
+# <a name="colelinkingdoc-class"></a>COleLinkingDoc Class
 
 Základní třída pro kontejnerové dokumenty OLE, které podporují propojování na vložené položky, které obsahují.
 
@@ -77,7 +77,7 @@ Připojení vaší `COleTemplateServer` objektu do dokumentu šablon voláním o
 
 Pro ukázku `CWinApp`-odvozené třídy definice a `InitInstance` funkce naleznete v tématu OCLIENT. H a OCLIENT. CPP v ukázce MFC [OCLIENT](../../visual-cpp-samples.md).
 
-Další informace o používání `COleLinkingDoc`, najdete v článcích [kontejnery: Implementace kontejneru](../../mfc/containers-implementing-a-container.md) a [kontejnery: pokročilé funkce](../../mfc/containers-advanced-features.md).
+Další informace o používání `COleLinkingDoc`, najdete v článcích [kontejnerů: Implementace kontejneru](../../mfc/containers-implementing-a-container.md) a [kontejnerů: Pokročilé funkce](../../mfc/containers-advanced-features.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -87,7 +87,7 @@ Další informace o používání `COleLinkingDoc`, najdete v článcích [konte
 
 [CDocument](../../mfc/reference/cdocument-class.md)
 
-[Coledocument –](../../mfc/reference/coledocument-class.md)
+[COleDocument](../../mfc/reference/coledocument-class.md)
 
 `COleLinkingDoc`
 
@@ -191,7 +191,7 @@ Voláním této funkce zrušení registrace dokumentu OLE systémové knihovny D
 
 Při zavírání souboru s názvem byste měli volat tuto funkci, ale obvykle není potřeba volat přímo. `Revoke` volá se pro vás od `COleLinkingDoc`vaší implementace `OnCloseDocument`, `OnNewDocument`, `OnOpenDocument`, a `OnSaveDocument`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC OCLIENT](../../visual-cpp-samples.md)<br/>
 [COleDocument – třída](../../mfc/reference/coledocument-class.md)<br/>

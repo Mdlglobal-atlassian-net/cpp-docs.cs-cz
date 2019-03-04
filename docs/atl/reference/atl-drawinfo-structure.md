@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
-ms.openlocfilehash: 3e332213ad8b2697445b13aded6bef605dab32de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70329d3b2c18c8cd8e94854f40ff971c0b39a8f4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442624"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301815"
 ---
 # <a name="atldrawinfo-structure"></a>Atl_drawinfo – struktura
 
@@ -90,7 +90,7 @@ Tato struktura ukládá relevantní informace, které se použije k vykreslení 
 
 **Záhlaví:** atlctl.h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy a struktury](../../atl/reference/atl-classes.md)<br/>
 [IViewObject::Draw](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-draw)<br/>

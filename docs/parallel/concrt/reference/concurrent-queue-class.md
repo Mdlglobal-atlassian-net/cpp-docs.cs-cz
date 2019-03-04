@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-ms.openlocfilehash: 36e4b5956e0739b44481fbabe6114c9648e7b229
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d5bbd361dc2dedc24c2a59050ffa680517186494
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477087"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304688"
 ---
 # <a name="concurrentqueue-class"></a>concurrent_queue – třída
 
@@ -68,7 +68,7 @@ Typ představující uložený objekt alokátoru, který zapouzdřuje informace 
 
 |Název|Popis|
 |----------|-----------------|
-|[Vymazat](#clear)|Vymaže souběžná fronta zničení všechny aktuálně zařazených do fronty elementy. Tato metoda není bezpečná pro souběžnost.|
+|[clear](#clear)|Vymaže souběžná fronta zničení všechny aktuálně zařazených do fronty elementy. Tato metoda není bezpečná pro souběžnost.|
 |[prázdný](#empty)|Testuje, zda je v tuto chvíli je prázdný souběžná fronta tato metoda je volána. Tato metoda je bezpečná pro souběžnost.|
 |[get_allocator](#get_allocator)|Vrátí kopii objektu Alokátor použitý k vytvoření souběžná fronta. Tato metoda je bezpečná pro souběžnost.|
 |[push](#push)|Přetíženo. Zařadí položku na konci ocáskem souběžná fronta. Tato metoda je bezpečná pro souběžnost.|
@@ -134,7 +134,7 @@ Zdroj `concurrent_queue` objektu, který chcete zkopírovat nebo přesunout elem
 *_Zahájit*<br/>
 Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.
 
-*_Ukončit*<br/>
+*_End*<br/>
 Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.
 
 ### <a name="remarks"></a>Poznámky
@@ -149,7 +149,7 @@ Třetí konstruktor určuje pohyb souběžná fronta `_OtherQ`.
 
 Čtvrtý konstruktor určuje hodnoty poskytnuté rozsahem iterátoru [ `_Begin`, `_End`).
 
-##  <a name="dtor"></a> ~ concurrent_queue –
+##  <a name="dtor"></a> ~concurrent_queue
 
 Zničí souběžná fronta.
 
@@ -204,7 +204,7 @@ Položky, které chcete přidat do fronty.
 
 `push` je bezpečné na souběžnosti s ohledem na volání metody `push`, `try_pop`, a `empty`.
 
-##  <a name="try_pop"></a> try_pop –
+##  <a name="try_pop"></a> try_pop
 
 Dequeues položky z fronty, pokud je k dispozici. Tato metoda je bezpečná pro souběžnost.
 
@@ -279,6 +279,6 @@ Velikost souběžná fronta.
 
 `unsafe_size` není bezpečná pro souběžnost a může poskytovat nesprávné výsledky, pokud současně volání metod volá `push`, `try_pop`, a `empty`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)

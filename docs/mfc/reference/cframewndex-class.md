@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: a0e6861ecf3a6704ddb31c39f7bb2c44cb75ccd8
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 6ba0c2b5449cb0058c1b274d9d9c0d7ae33bcd7f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179003"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302977"
 ---
 # <a name="cframewndex-class"></a>Cframewndex – třída
 
@@ -306,7 +306,7 @@ Následující příklad ukazuje, jak dědit z třídy `CFrameWndEx` třídy. P�
 
 [CFrameWnd](../../mfc/reference/cframewnd-class.md)
 
-[Cframewndex –](../../mfc/reference/cframewndex-class.md)
+[CFrameWndEx](../../mfc/reference/cframewndex-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -395,7 +395,7 @@ void DockPane(
 *nDockBarID*<br/>
 [in] ID na straně okna rámce chcete ukotvit.
 
-*lprect –*<br/>
+*lpRect*<br/>
 [in] Ukazatel na konstantní Rect – struktura, která určuje umístění obrazovky a velikosti okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -767,7 +767,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Pozice bodu.
 
 *dwBarAlignment*<br/>
@@ -885,7 +885,7 @@ afx_msg void OnActivate(
 
 ### <a name="parameters"></a>Parametry
 
-*nInformace*<br/>
+*nState*<br/>
 [in] Určuje, zda rámec je příkaz aktivní nebo neaktivní. V tabulce v části poznámky o možných hodnot.
 
 *pWndOther*<br/>
@@ -1095,7 +1095,7 @@ virtual BOOL OnDrawMenuImage(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *pMenuButton*<br/>
@@ -1125,7 +1125,7 @@ virtual void OnDrawMenuLogo(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *pMenu*<br/>
@@ -1150,10 +1150,10 @@ afx_msg LRESULT OnDWMCompositionChanged(
 
 ### <a name="parameters"></a>Parametry
 
-*webové části*<br/>
+*wp*<br/>
 [in] Tento parametr se nepoužívá.
 
-*LP*<br/>
+*lp*<br/>
 [in] Tento parametr se nepoužívá.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1174,10 +1174,10 @@ LRESULT OnExitSizeMove(
 
 ### <a name="parameters"></a>Parametry
 
-*webové části*<br/>
+*wp*<br/>
 [in] Tento parametr se nepoužívá.
 
-*LP*<br/>
+*lp*<br/>
 [in] Tento parametr se nepoužívá.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1240,7 +1240,7 @@ afx_msg void OnLButtonDown(
 *nFlags*<br/>
 [in] Určuje, zda uživatel stiskl modifikační klávesy. Možné hodnoty najdete v tématu parametr *wParam* v [WM_LBUTTONDOWN oznámení](/windows/desktop/inputdev/wm-lbuttondown).
 
-*Bod*<br/>
+*point*<br/>
 [in] Určuje x a y souřadnic ukazatele, relativní do levého horního rohu okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -1260,7 +1260,7 @@ afx_msg void OnLButtonUp(
 *nFlags*<br/>
 [in] Určuje, zda uživatel stiskl modifikační klávesy. Možné hodnoty najdete v tématu parametr *wParam* v [WM_LBUTTONUP oznámení](/windows/desktop/inputdev/wm-lbuttonup).
 
-*Bod*<br/>
+*point*<br/>
 [in] Určuje x a y souřadnic ukazatele, relativní do levého horního rohu okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -1338,7 +1338,7 @@ afx_msg void OnMouseMove(
 *nFlags*<br/>
 [in] Určuje, zda uživatel stisknuta modifikační klávesy. Možné hodnoty najdete v tématu parametr *wParam* v [wm_mousemove a oznámení](/windows/desktop/inputdev/wm-mousemove).
 
-*Bod*<br/>
+*point*<br/>
 [in] Určuje x a y souřadnic ukazatele myši relativně vzhledem k levém horním rohu okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -1411,7 +1411,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Umístění ukazatele myši v souřadnicovém systému obrazovky.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1435,7 +1435,7 @@ afx_msg void OnNcMouseMove(
 *nHitTest*<br/>
 [in] Výčtová hodnota přístupů na ukazatel. Seznam možných hodnot najdete v části [WM_NCHITTEST oznámení](/windows/desktop/inputdev/wm-nchittest).
 
-*Bod*<br/>
+*point*<br/>
 [in] Umístění ukazatele myši v souřadnicovém systému obrazovky.
 
 ### <a name="remarks"></a>Poznámky
@@ -1505,10 +1505,10 @@ afx_msg LRESULT OnPowerBroadcast(
 
 ### <a name="parameters"></a>Parametry
 
-*webové části*<br/>
+*wp*<br/>
 [in] Událost správy napájení. Seznam možných hodnot najdete v části [WM_POWERBROADCAST zpráva](/windows/desktop/Power/wm-powerbroadcast).
 
-*LP*<br/>
+*lp*<br/>
 [in] Tento parametr se nepoužívá.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1531,13 +1531,13 @@ BOOL OnSetMenu(HMENU hmenu);
 
 ### <a name="parameters"></a>Parametry
 
-*webové části*<br/>
+*wp*<br/>
 [in] Zpracování do nové nabídky okna rámce.
 
-*LP*<br/>
+*lp*<br/>
 [in] Zpracování na nové nabídce okno.
 
-*HMENU*<br/>
+*hmenu*<br/>
 [in] Zpracování do nové nabídky okna rámce.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1677,13 +1677,13 @@ afx_msg void OnSize(
 
 ### <a name="parameters"></a>Parametry
 
-*nTyp*<br/>
+*nType*<br/>
 [in] Typ změny velikosti. Možné hodnoty najdete v tématu parametr *wParam* v [WM_SIZE oznámení](/windows/desktop/winmsg/wm-size).
 
-*CX*<br/>
+*cx*<br/>
 [in] Nové šířka rámce v pixelech.
 
-*CY*<br/>
+*cy*<br/>
 [in] Novou výškou rámce v pixelech.
 
 ### <a name="remarks"></a>Poznámky
@@ -1758,10 +1758,10 @@ afx_msg LRESULT OnToolbarContextMenu(
 
 ### <a name="parameters"></a>Parametry
 
-*webové části*<br/>
+*wp*<br/>
 [in] Tento parametr se nepoužívá.
 
-*LP*<br/>
+*lp*<br/>
 [in] Tento parametr se nepoužívá.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1782,10 +1782,10 @@ afx_msg LRESULT OnToolbarCreateNew(
 
 ### <a name="parameters"></a>Parametry
 
-*webové části*<br/>
+*wp*<br/>
 [in] Tento parametr se nepoužívá.
 
-*LP*<br/>
+*lp*<br/>
 [in] Ukazatel na text záhlaví panelu nástrojů.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1809,7 +1809,7 @@ afx_msg LRESULT OnToolbarDelete(
 *Nepoužívané*<br/>
 [in] Tento parametr se nepoužívá.
 
-*LP*<br/>
+*lp*<br/>
 [in] Ukazatel na panelu nástrojů.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1898,7 +1898,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Souřadnice obrazovky bodu ke kontrole.
 
 *nSensitivity*<br/>
@@ -2005,7 +2005,7 @@ void SetDockState(const CDockState& state);
 
 ### <a name="parameters"></a>Parametry
 
-*Stav*<br/>
+*state*<br/>
 Ukotvení stavu. Tento parametr je ignorován.
 
 ##  <a name="setprintpreviewframe"></a>  CFrameWndEx::SetPrintPreviewFrame
@@ -2113,7 +2113,7 @@ Příkaz help. Seznam možných hodnot najdete v části [WinHelp](/windows/desk
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

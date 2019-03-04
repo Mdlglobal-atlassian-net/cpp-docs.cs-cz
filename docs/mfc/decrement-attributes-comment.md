@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC source files, Attributes comment
 - public attributes comment
 ms.assetid: 96388e11-42df-4994-aedf-decd152961a7
-ms.openlocfilehash: 33ee18400e03b55a26c4ad17e8d1ba6853ccda88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a74d0f9d6ffb0bd2d057cf46f7308d8b6a81f98c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486070"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303232"
 ---
 # <a name="-attributes-comment"></a>// Komentář k atributům
 
@@ -23,7 +23,7 @@ V ukázce výpis z třídy `CStdioFile`v části [příklad, komentáře](../mfc
 > [!NOTE]
 >  Velké třídy, jako například `CDC` a `CWnd`, může mít mnoho členů, které jednoduše výpis všechny atributy v jedné skupině nepřispěl k vyšší moc k nejasnostem. V takových případech knihovny tříd pomocí jiných komentáře jako záhlaví další od sebe odděluje členy. Například `CDC` používá `// Device-Context Functions`, `// Drawing Tool Functions`, `// Drawing Attribute Functions`a provádění dalších akcí. Skupiny, které reprezentují atributy bude následovat běžné syntaxi popsané výše. Mnoho OLE – třídy mají implementaci části `// Interface Maps`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití zdrojových souborů MFC](../mfc/using-the-mfc-source-files.md)<br/>
 [Příklad komentářů](../mfc/an-example-of-the-comments.md)<br/>
@@ -31,4 +31,3 @@ V ukázce výpis z třídy `CStdioFile`v části [příklad, komentáře](../mfc
 [/ Komentář ke konstruktorům](../mfc/decrement-constructors-comment.md)<br/>
 [Komentář k operacím](../mfc/decrement-operations-comment.md)<br/>
 [Komentář k Přepisovatelným](../mfc/decrement-overridables-comment.md)
-

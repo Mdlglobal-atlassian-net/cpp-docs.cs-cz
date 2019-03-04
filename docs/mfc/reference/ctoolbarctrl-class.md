@@ -1,5 +1,5 @@
 ---
-title: Ctoolbarctrl – třída
+title: CToolBarCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CToolBarCtrl
@@ -182,14 +182,14 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: 9e2df5117f6cbb96c69f54fe9e21f85b45218d6d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 61cbcbd2a64e8648c6467ebbc0d86d6f89953442
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178977"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302493"
 ---
-# <a name="ctoolbarctrl-class"></a>Ctoolbarctrl – třída
+# <a name="ctoolbarctrl-class"></a>CToolBarCtrl Class
 
 Poskytuje funkce pro Windows nástrojů běžný ovládací prvek.
 
@@ -1084,7 +1084,7 @@ BOOL GetItemRect(
 *nIndex*<br/>
 Tlačítko, pro které chcete načíst informace o index založený na nule.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Adresa [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který přijme souřadnice ohraničujícího rámečku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1201,7 +1201,7 @@ BOOL GetRect(
 *nID*<br/>
 Identifikátor tlačítka.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktuře získávat informace ohraničující obdélník.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1266,7 +1266,7 @@ int GetString(
 
 ### <a name="parameters"></a>Parametry
 
-*Nřetězce*<br/>
+*nString*<br/>
 Index řetězce.
 
 *lpstrString*<br/>
@@ -2294,7 +2294,7 @@ Požadovaný počet řádků.
 *bLarger*<br/>
 Určuje, jestli se má použít další řádky nebo méně řádků, pokud panelu nelze změnit velikost na požadovaný počet řádků.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která bude dostávat nové ohraničující obdélník panelu nástrojů.
 
 ### <a name="remarks"></a>Poznámky
@@ -2326,7 +2326,7 @@ BOOL SetState(
 *nID*<br/>
 Identifikátor příkazu tlačítka.
 
-*nInformace*<br/>
+*nState*<br/>
 Příznaky stavu. Může být kombinací hodnot pro stavy tlačítka v uvedené [CToolBarCtrl::AddButtons](#addbuttons).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2384,7 +2384,7 @@ Návratová hodnota se nepoužívá.
 
 Tato členská funkce emuluje funkčnost [TB_SETWINDOWTHEME](/windows/desktop/Controls/tb-setwindowtheme) zprávu, jak je popsáno v sadě Windows SDK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázka CMNCTRL1 knihovny MFC](../../visual-cpp-samples.md)<br/>
 [Ukázky knihovny MFC MFCIE](../../visual-cpp-samples.md)<br/>

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDraw
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
-ms.openlocfilehash: 05ac8b26cb6b6e7d8e622ecbaac1d4a81bfd35e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4806582a226590459a104f64499ab6ae541570e7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565929"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302764"
 ---
 # <a name="cmfcribbonseparator-class"></a>Cmfcribbonseparator – třída
 
@@ -91,7 +91,7 @@ Volání [CMFCRibbonPanel::AddSeparator](../../mfc/reference/cmfcribbonpanel-cla
 
 [Cmfcribbonbaseelement –](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
-[Cmfcribbonseparator –](../../mfc/reference/cmfcribbonseparator-class.md)
+[CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -165,7 +165,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na obsah zařízení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -210,7 +210,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 ##  <a name="ondrawonlist"></a>  CMFCRibbonSeparator::OnDrawOnList
@@ -232,14 +232,14 @@ virtual void OnDrawOnList(
 |||
 |-|-|
 |Parametr|Popis|
-|*primární řadič domény*|[in] Ukazatel na kontext zařízení.|
+|*pDC*|[in] Ukazatel na kontext zařízení.|
 |*strText*|[in] Text zobrazený v seznamu.|
 |*nTextOffset*|[in] Vzdálenost mezi textem a levé straně ohraničující obdélník.|
 |*Rect*|[in] Určuje ohraničující obdélník.|
 |*bIsSelected*|[in] Ignorovat.|
 |*bHighlighted*|[in] Ignorovat.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)

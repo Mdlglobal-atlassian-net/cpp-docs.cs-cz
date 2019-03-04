@@ -1,5 +1,5 @@
 ---
-title: Cmfctoolbarcomboboxbutton – třída
+title: CMFCToolBarComboBoxButton Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCToolBarComboBoxButton
@@ -64,14 +64,14 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: 2dd300e4bbf63ed59554d5722c716f8a3f795570
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fae70e44657023b7a7b93f72599bef4ba6faf307
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561418"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303167"
 ---
-# <a name="cmfctoolbarcomboboxbutton-class"></a>Cmfctoolbarcomboboxbutton – třída
+# <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton Class
 
 Tlačítka panelu nástrojů obsahující ovládací prvek pole se seznamem ( [CComboBox – třída](../../mfc/reference/ccombobox-class.md)).
 
@@ -132,7 +132,7 @@ Chcete-li přidat tlačítko pole se seznamem na panel nástrojů, postupujte ta
 
 3. V popisovači zpráv, která zpracovává zprávu AFX_WM_RESETTOOLBAR, nahraďte zástupné tlačítko Nová tlačítka pole se seznamem pomocí [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).
 
-Další informace najdete v tématu [návod: vložení ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md). Příklad tlačítka pole se seznamem viz příklad projektu VisualStudioDemo.
+Další informace najdete v tématu [názorný postup: Vkládání ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md). Příklad tlačítka pole se seznamem viz příklad projektu VisualStudioDemo.
 
 ## <a name="example"></a>Příklad
 
@@ -145,13 +145,13 @@ Následující příklad ukazuje, jak použít různé metody v `CMFCToolBarComb
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cmfctoolbarbutton –](../../mfc/reference/cmfctoolbarbutton-class.md)
+[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)
 
-[Cmfctoolbarcomboboxbutton –](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)
+[CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxtoolbarcomboboxbutton.h
+**Header:** afxtoolbarcomboboxbutton.h
 
 ##  <a name="additem"></a>  CMFCToolBarComboBoxButton::AddItem
 
@@ -898,7 +898,7 @@ virtual SIZE OnCalculateSize(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Kontext zařízení, která zobrazuje tlačítko pole se seznamem.
 
 *sizeDefault*<br/>
@@ -958,7 +958,7 @@ virtual HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Kontext zařízení, která zobrazuje tlačítko pole se seznamem.
 
 *nCtlColor*<br/>
@@ -990,7 +990,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Parametry
 
-*Primární řadič domény*<br/>
+*Pdc*<br/>
 [in] Kontext zařízení, která se zobrazí tlačítko.
 
 *Rect*<br/>
@@ -1027,7 +1027,7 @@ virtual int OnDrawOnCustomizeList(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Kontext zařízení, která zobrazuje tlačítko pole se seznamem.
 
 *Rect*<br/>
@@ -1328,12 +1328,11 @@ void SetText(LPCTSTR lpszText);
 *lpszText*<br/>
 [in] Ukazatel na řetězec, který obsahuje text pro textové pole.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCToolBarButton – třída](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [CComboBox – třída](../../mfc/reference/ccombobox-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[Návod: Umístění ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Návod: Vkládání ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md)

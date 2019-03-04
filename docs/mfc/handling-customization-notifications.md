@@ -47,12 +47,12 @@ helpviewer_keywords:
 - NM_RDBLCLK notification [MFC]
 - TBN_GETBUTTONINFO notification [MFC]
 ms.assetid: 219ea08e-7515-4b98-85cb-47120f08c0a2
-ms.openlocfilehash: f73e6ef070177f39bdf2e0736660f8eb963727ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc34f3eaa4b085b9d8acbaf47b21cf1825627100
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462731"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303647"
 ---
 # <a name="handling-customization-notifications"></a>Zpracování oznámení o přizpůsobení
 
@@ -80,7 +80,7 @@ Tyto zprávy jsou všechny **WM_NOTIFY** zprávy a mohou být zpracovány v nad�
 ON_NOTIFY( wNotifyCode, idControl, memberFxn )
 ```
 
-- **funkci wNotifyCode**
+- **wNotifyCode**
 
    Identifikátor kód, zprávy oznámení, jako **tbn_beginadjust –**.
 
@@ -120,7 +120,7 @@ typedef struct tagNMHDR {
 
    Identifikátor ovládacího prvku odesílání oznámení.
 
-- **kód**
+- **code**
 
    Kód upozornění. Tento člen může být hodnota specifické pro typ ovládacího prvku, jako například **tbn_beginadjust –** nebo **TTN_NEEDTEXT**, nebo může být jedna z běžných notification hodnot uvedených níže:
 
@@ -152,7 +152,7 @@ typedef struct {
 } TBNOTIFY, FAR* LPTBNOTIFY;
 ```
 
-- **HDR**
+- **hdr**
 
    Informace, které jsou společné pro všechny **WM_NOTIFY** zprávy.
 
@@ -174,19 +174,19 @@ typedef struct {
 
 Oznámení, která odešle panelu nástrojů jsou následující:
 
-- **TBN_BEGINADJUST –**
+- **TBN_BEGINADJUST**
 
    Odesílá se, když uživatel začne přizpůsobení ovládacího prvku toolbar. Ukazatel odkazuje na **NMHDR** strukturu, která obsahuje informace o oznámení. Obslužná rutina nemusí vracet žádné konkrétní hodnotu.
 
-- **TBN_BEGINDRAG –**
+- **TBN_BEGINDRAG**
 
    Odesílá se, když uživatel zahájí přetahování tlačítka v ovládacím prvku panel nástrojů. Ukazatel odkazuje **tbnotify –** struktury. **Položky** člena obsahuje index založený na nule tlačítko právě přetáhli. Obslužná rutina nemusí vracet žádné konkrétní hodnotu.
 
-- **TBN_CUSTHELP –**
+- **TBN_CUSTHELP**
 
    Odesílá se, když uživatel klikne na tlačítko Nápověda v dialogovém okně Upravit panel nástrojů. Žádnou návratovou hodnotu. Ukazatel odkazuje na **NMHDR** strukturu, která obsahuje informace o oznámení. Obslužná rutina nemusí vracet žádné konkrétní hodnotu.
 
-- **TBN_ENDADJUST –**
+- **TBN_ENDADJUST**
 
    Odesílá se, když uživatel zastaví přizpůsobení ovládacího prvku toolbar. Ukazatel odkazuje na **NMHDR** strukturu, která obsahuje informace o oznámení. Obslužná rutina nemusí vracet žádné konkrétní hodnotu.
 
@@ -194,28 +194,27 @@ Oznámení, která odešle panelu nástrojů jsou následující:
 
    Odesílá se, když uživatel přestane přetahovat tlačítka v ovládacím prvku panel nástrojů. Ukazatel odkazuje **tbnotify –** struktury. **Položky** člena obsahuje index založený na nule tlačítko právě přetáhli. Obslužná rutina nemusí vracet žádné konkrétní hodnotu.
 
-- **TBN_GETBUTTONINFO –**
+- **TBN_GETBUTTONINFO**
 
    Odesílá se, když uživatel přizpůsobuje ovládacím prvku panel nástrojů. Panelu nástrojů používá k načtení informací potřebných v dialogovém okně Upravit panel nástrojů. Tato oznámení. Ukazatel odkazuje **tbnotify –** struktury. **Položky** člen Určuje index založený na nule tlačítko. **PszText** a **cchText** členy zadejte adresu a délka ve znacích, aktuální text tlačítka. Aplikace by měla zaplnit struktura s informacemi o tlačítka. Vrátí **TRUE** Pokud informace o tlačítku byl zkopírován do struktury, nebo **FALSE** jinak.
 
-- **TBN_QUERYDELETE –**
+- **TBN_QUERYDELETE**
 
    Odešle, když uživatel přizpůsobuje panel nástrojů k určení, zda tlačítko mohou být odstraněny z ovládacího prvku toolbar. Ukazatel odkazuje **tbnotify –** struktury. **Položky** člena obsahuje index založený na nule tlačítko Odstranit. Vrátí **TRUE** povolit tlačítko Odstranit nebo **FALSE** zabránit na tlačítko Odstranit.
 
-- **TBN_QUERYINSERT –**
+- **TBN_QUERYINSERT**
 
    Odešle, když uživatel přizpůsobuje ovládacím prvku panel nástrojů k určení, zda se dá tlačítko Vložit vlevo od daného tlačítko. Ukazatel odkazuje **tbnotify –** struktury. **Položky** člena obsahuje index založený na nule tlačítko Vložit. Vrátí **TRUE** povolit tlačítko má být vložen před dané tlačítko nebo **FALSE** zabránit vloženého na tlačítko.
 
-- **TBN_RESET –**
+- **TBN_RESET**
 
    Odesílá se, když uživatel obnoví obsah dialogového okna Upravit panel nástrojů. Ukazatel odkazuje na **NMHDR** strukturu, která obsahuje informace o oznámení. Obslužná rutina nemusí vracet žádné konkrétní hodnotu.
 
-- **TBN_TOOLBARCHANGE –**
+- **TBN_TOOLBARCHANGE**
 
    Odesílá poté, co uživatel přizpůsobil ovládacím prvku panel nástrojů. Ukazatel odkazuje na **NMHDR** strukturu, která obsahuje informace o oznámení. Obslužná rutina nemusí vracet žádné konkrétní hodnotu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

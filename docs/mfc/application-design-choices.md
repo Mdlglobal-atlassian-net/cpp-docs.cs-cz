@@ -11,12 +11,12 @@ helpviewer_keywords:
 - server applications [MFC], vs. client applications on Internet
 - client applications [MFC], vs. server applications on Internet
 ms.assetid: 9b96172c-b4d4-4c69-bfb2-226ce0de6d08
-ms.openlocfilehash: b9b794070d1c4ff4f05f33895a7af5532a524ad1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cdb294e4ab808a7e4cbcec457f6e744eff9f12cb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602927"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302806"
 ---
 # <a name="application-design-choices"></a>Volby při návrhu aplikací
 
@@ -24,7 +24,7 @@ Tento článek popisuje některé faktory vzít v úvahu při programování pro
 
 V tomto článku probíraná témata zahrnují:
 
-- [Intranet a Internet](#_core_intranet_versus_internet)
+- [Intranet Versus Internet](#_core_intranet_versus_internet)
 
 - [Klientské nebo serverové aplikace](#_core_client_or_server_application)
 
@@ -38,7 +38,7 @@ V tomto článku probíraná témata zahrnují:
 
 Pokud jste připravení začít psát aplikace nyní naleznete v tématu [psaní aplikací MFC](../mfc/writing-mfc-applications.md).
 
-##  <a name="_core_intranet_versus_internet"></a> Intranet a Internet
+##  <a name="_core_intranet_versus_internet"></a> Intranet Versus Internet
 
 Mnoho aplikací spusťte na Internetu a jsou přístupné všem uživatelům s prohlížeči a přístup k Internetu. Firmám také implementují sítě intranet, které jsou pořádaného microsoftem sítě pomocí protokolů TCP/IP a webové prohlížeče. Intranety nabízejí zdroj je možné snadno upgradovat, centrální informace pořádaného microsoftem. Můžete použít pro upgrade softwaru, týkající se doručování a sestavování tabulek zjišťování, pro zákaznickou podporu a pro doručení informací. Následující tabulka obsahuje porovnání funkcí z Internetu a intranetu.
 
@@ -52,7 +52,7 @@ Mnoho aplikací spusťte na Internetu a jsou přístupné všem uživatelům s p
 
 Aplikace může být v klientském počítači nebo na počítači serveru. Vaše aplikace může také uloženy na serveru a potom stažení přes Internet a spuštění v klientském počítači. Tříd WinInet knihovny MFC se používají pro klientské aplikace ke stažení souborů. Asynchronní zástupný název třídy knihovny MFC a slouží k stažení souborů a vlastnosti ovládacího prvku. Třídy pro ovládací prvky ActiveX a aktivních dokumentů se používají pro klientské aplikace a aplikace, které jsou staženy ze serveru pro spuštění v klientském počítači.
 
-##  <a name="_core_the_web_page"></a> Webové stránky: Ovládací prvky ActiveX HTML, aktivní dokumenty,
+##  <a name="_core_the_web_page"></a> Webové stránky: Ovládací prvky ActiveX HTML, aktivní dokumenty
 
 Společnost Microsoft nabízí několik způsobů, jak zajistit obsah na webové stránce. Webové stránky můžete použít standardní HTML nebo HTML rozšíření, jako je například objekt značky poskytují dynamický obsah, jako je například ovládací prvky ActiveX.
 
@@ -82,14 +82,13 @@ Následující tabulka shrnuje několik možností, jak pomocí knihovny MFC pro
 
 |Pomocí tohoto protokolu|Za těchto podmínek|Použití těchto tříd|
 |-----------------------|----------------------------|-------------------------|
-|[Internet stahování pomocí asynchronní Monikery](../mfc/asynchronous-monikers-on-the-internet.md)|Pro asynchronní přenos používání modelu COM, ovládací prvky ActiveX a jakékoli Internet protocol.|[Casyncmonikerfile –](../mfc/reference/casyncmonikerfile-class.md), [cdatapathproperty –](../mfc/reference/cdatapathproperty-class.md)|
-|[Wininet –](../mfc/win32-internet-extensions-wininet.md)|Pro internetové protokoly HTTP, FTP a gopher. Data lze přenést synchronně nebo asynchronně a uložená v mezipaměti na celý systém.|[Cinternetsession –](../mfc/reference/cinternetsession-class.md), [cftpfilefind –](../mfc/reference/cftpfilefind-class.md), [cgopherfilefind –](../mfc/reference/cgopherfilefind-class.md)a mnoho dalších.|
-|[Rozhraní WinSock](../mfc/windows-sockets-in-mfc.md)|Pro dosažení maximální efektivity a ovládací prvek. Vyžaduje pochopení soketů a protokolů TCP/IP.|[Csocket –](../mfc/reference/csocket-class.md), [CAsyncSocket](../mfc/reference/casyncsocket-class.md)|
+|[Internet stahování pomocí asynchronní Monikery](../mfc/asynchronous-monikers-on-the-internet.md)|Pro asynchronní přenos používání modelu COM, ovládací prvky ActiveX a jakékoli Internet protocol.|[CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md), [CDataPathProperty](../mfc/reference/cdatapathproperty-class.md)|
+|[WinInet](../mfc/win32-internet-extensions-wininet.md)|Pro internetové protokoly HTTP, FTP a gopher. Data lze přenést synchronně nebo asynchronně a uložená v mezipaměti na celý systém.|[Cinternetsession –](../mfc/reference/cinternetsession-class.md), [cftpfilefind –](../mfc/reference/cftpfilefind-class.md), [cgopherfilefind –](../mfc/reference/cgopherfilefind-class.md)a mnoho dalších.|
+|[WinSock](../mfc/windows-sockets-in-mfc.md)|Pro dosažení maximální efektivity a ovládací prvek. Vyžaduje pochopení soketů a protokolů TCP/IP.|[CSocket](../mfc/reference/csocket-class.md), [CAsyncSocket](../mfc/reference/casyncsocket-class.md)|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Úlohy internetového programování MFC](../mfc/mfc-internet-programming-tasks.md)<br/>
 [Základy internetového programování v prostředí MFC](../mfc/mfc-internet-programming-basics.md)<br/>
 [Win32 – internetová rozšíření (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
 [Asynchronní monikery na internetu](../mfc/asynchronous-monikers-on-the-internet.md)
-

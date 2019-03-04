@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: 072fcec4944088ab087a6a39c7d8b916c3bc80e2
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f1e9c6e4505c67b881d479817ec8b45e4ae5dc8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177027"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304548"
 ---
 # <a name="crebarctrl-class"></a>Crebarctrl – třída
 
@@ -388,7 +388,7 @@ void GetBandBorders(
 *uBand*<br/>
 Index založený na nule pásmo, pro kterou budou načteny ohraničení.
 
-*Čínská lidová republika*<br/>
+*prc*<br/>
 Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která se zobrazí ohraničení obsluhy vzdálené správy. Pokud ovládacího prvku rebar. má RBS_BANDBORDERS styl, dostane každý člen této struktury počet pixelů na straně odpovídajícího pásmu, které tvoří ohraničení. Pokud ovládacího prvku rebar. nemá žádné RBS_BANDBORDERS styl, obdrží jenom levé člen této struktury platné informace. Popis – styly ovládacího prvku matrice, naleznete v tématu [– styly ovládacího prvku matrice](/windows/desktop/Controls/rebar-control-styles) v sadě Windows SDK.
 
 ##  <a name="getbandcount"></a>  CReBarCtrl::GetBandCount
@@ -583,7 +583,7 @@ BOOL GetRect(
 *uBand*<br/>
 Index založený na nule vzdálené správy v rámci ovládacího prvku rebar.
 
-*Čínská lidová republika*<br/>
+*prc*<br/>
 Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která bude dostávat hranice vzdálené matrice.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -776,7 +776,7 @@ BOOL MoveBand(
 *uFrom*<br/>
 Index založený na nule vzdálené přesunout.
 
-*utomatická*<br/>
+*uTo*<br/>
 Index založený na nule na nové pozici obsluhy vzdálené správy. Hodnota tohoto parametru musí být nikdy větší než počet pásem mínus jedna. Chcete-li získat číslo pruhy, zavolejte [GetBandCount](#getbandcount).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -958,7 +958,7 @@ DWORD SetExtendedStyle(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*dwMask*|[in] Bitová kombinace (OR) mezi příznaky, které určují, které příznaky v *dwStyleEx* použít parametr. Použijte jednu nebo více z následujících hodnot:<br /><br /> RBS_EX_SPLITTER: Ve výchozím nastavení, Zobrazit příčky v dolní části ve vodorovném režimu a na pravé straně ve svislém režimu.<br /><br /> RBS_EX_TRANSPARENT: Předávání [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) zprávu nadřazenému oknu.|
+|*dwMask*|[in] Bitová kombinace (OR) mezi příznaky, které určují, které příznaky v *dwStyleEx* použít parametr. Použijte jednu nebo více z následujících hodnot:<br /><br /> RBS_EX_SPLITTER: Ve výchozím nastavení Zobrazit příčky v dolní části ve vodorovném režimu a na pravé straně ve svislém režimu.<br /><br /> RBS_EX_TRANSPARENT: Vpřed [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) zprávu nadřazenému oknu.|
 |*dwStyleEx*|[in] Bitová kombinace (nebo) příznaků, které určují, styly, které chcete použít. Pokud chcete nastavit styl, zadejte stejný příznak, který se používá v *dwMask* parametru. Pokud chcete resetovat styl, zadejte binární nulu.|
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1133,8 +1133,7 @@ Nenulové, pokud je úspěšná. jinak nula.
 
 Všimněte si, že tato členská funkce používá `CRect` objektu jako parametr, spíše než `RECT` struktury.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-

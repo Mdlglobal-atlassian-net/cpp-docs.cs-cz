@@ -1,5 +1,5 @@
 ---
-title: Cmfclinkctrl – třída
+title: CMFCLinkCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCLinkCtrl
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CMFCLinkCtrl [MFC], SizeToContent
 - CMFCLinkCtrl [MFC], OnDrawFocusRect
 ms.assetid: 80f3874d-7cc8-410e-9ff1-62a225f5034b
-ms.openlocfilehash: bc43dcaf077bc97e3ff589a12bee6a8eac6aeed1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a4324fad7668907600cbaebeb5c9de4ad0e7c1e4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608582"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302715"
 ---
-# <a name="cmfclinkctrl-class"></a>Cmfclinkctrl – třída
+# <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl Class
 
 `CMFCLinkCtrl` Třídy zobrazí tlačítko jako hypertextový odkaz a po kliknutí na tlačítko vyvolá cíl odkazu.
 
@@ -68,13 +68,13 @@ Následující příklad ukazuje, jak nastavit velikost `CMFCLinkCtrl` objekt a 
 
 [CButton](../../mfc/reference/cbutton-class.md)
 
-[Cmfcbutton –](../../mfc/reference/cmfcbutton-class.md)
+[CMFCButton](../../mfc/reference/cmfcbutton-class.md)
 
-[Cmfclinkctrl –](../../mfc/reference/cmfclinkctrl-class.md)
+[CMFCLinkCtrl](../../mfc/reference/cmfclinkctrl-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxlinkctrl.h
+**Header:** afxlinkctrl.h
 
 ##  <a name="ondrawfocusrect"></a>  CMFCLinkCtrl::OnDrawFocusRect
 
@@ -88,7 +88,7 @@ virtual void OnDrawFocusRect(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *rectClient*<br/>
@@ -154,7 +154,7 @@ A [CSize](../../atl-mfc-shared/reference/csize-class.md) objekt, který obsahuje
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

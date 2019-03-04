@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 3259780d73004c9d1654c26434b55627923cfe23
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 7bdb681754a500ab86538f3397b4c07284b850d0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178789"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300882"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd – třída
 
@@ -409,7 +409,7 @@ Určuje, které strany okna rámce, které je potřeba zvážit ukotvení. Můž
 
 Pokud je 0, ovládacím panelu lze ukotvit stran povoleno pro ukotvení v rámci okna cílové.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Určuje, v souřadnicovém systému obrazovky, ve kterém se ovládací panel ukotvit myši v neklientské oblasti okna rámce cílové.
 
 ### <a name="remarks"></a>Poznámky
@@ -475,7 +475,7 @@ void FloatControlBar(
 *pBar*<br/>
 Odkazuje na ovládacím panelu k být ponechán v neurčitém stavu.
 
-*Bod*<br/>
+*point*<br/>
 Umístění, v souřadnicovém systému obrazovky, kde budou umístěné levého horního rohu ovládacího panelu.
 
 *dwStyle*<br/>
@@ -576,7 +576,7 @@ void GetDockState(CDockState& state) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Stav*<br/>
+*state*<br/>
 Obsahuje informace o aktuálním stavu okno rámce ovládací pruhy po návratu.
 
 ### <a name="remarks"></a>Poznámky
@@ -1074,7 +1074,7 @@ void SetDockState(const CDockState& state);
 
 ### <a name="parameters"></a>Parametry
 
-*Stav*<br/>
+*state*<br/>
 Platí pro okno rámce ovládacích panelů uloženého stavu.
 
 ### <a name="remarks"></a>Poznámky
@@ -1093,7 +1093,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*nInformace*|[in] Určuje, jestli se má zobrazit nebo skrýt v nabídce. *NInformace* parametr může mít následující hodnoty:<br /><br />-AFX_MBS_VISIBLE (0x01) - zobrazí nabídku, pokud je skrytý, ale nemá žádný vliv, pokud je zobrazen.<br />-AFX_MBS_HIDDEN (0x02) – skryje v nabídce, pokud je zobrazen, ale nemá žádný vliv, pokud je skrytá.|
+|*nState*|[in] Určuje, jestli se má zobrazit nebo skrýt v nabídce. *NInformace* parametr může mít následující hodnoty:<br /><br />-AFX_MBS_VISIBLE (0x01) - zobrazí nabídku, pokud je skrytý, ale nemá žádný vliv, pokud je zobrazen.<br />-AFX_MBS_HIDDEN (0x02) – skryje v nabídce, pokud je zobrazen, ale nemá žádný vliv, pokud je skrytá.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1115,7 +1115,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*nStyle*|[in] Určuje, zda v nabídce je standardně skrytý, nebo je viditelná a má fokus. *NStyle* parametr může mít následující hodnoty:<br /><br />-AFX_MBV_KEEPVISIBLE (0X01)-<br />     V nabídce se zobrazí po celou dobu a ve výchozím nastavení nemá fokus.<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     V nabídce je ve výchozím nastavení skrytá. Pokud je skrytý nabídky, stiskněte klávesu ALT k zobrazení nabídky a přiřaďte mu fokus. Pokud se zobrazí v nabídce, stiskněte klávesu ALT nebo ESC, chcete-li skrýt nabídku.<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (bitová kombinace (nebo)) – v nabídce je ve výchozím nastavení skrytá. Když je skrytý nabídky, stiskněte klávesu F10 zobrazení nabídky a přiřaďte jí fokus. Pokud se zobrazí v nabídce, stiskněte klávesu F10 Chcete-li přepnout fokus zapnout nebo vypnout v nabídce. V nabídce se zobrazí, dokud nestisknete klávesu ALT nebo ESC ho chcete skrýt.|
+|*nStyle*|[in] Určuje, zda v nabídce je standardně skrytý, nebo je viditelná a má fokus. *NStyle* parametr může mít následující hodnoty:<br /><br />- AFX_MBV_KEEPVISIBLE (0x01) -<br />     V nabídce se zobrazí po celou dobu a ve výchozím nastavení nemá fokus.<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     V nabídce je ve výchozím nastavení skrytá. Pokud je skrytý nabídky, stiskněte klávesu ALT k zobrazení nabídky a přiřaďte mu fokus. Pokud se zobrazí v nabídce, stiskněte klávesu ALT nebo ESC, chcete-li skrýt nabídku.<br />- AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (bitová kombinace (nebo)) – v nabídce je ve výchozím nastavení skrytá. Když je skrytý nabídky, stiskněte klávesu F10 zobrazení nabídky a přiřaďte jí fokus. Pokud se zobrazí v nabídce, stiskněte klávesu F10 Chcete-li přepnout fokus zapnout nebo vypnout v nabídce. V nabídce se zobrazí, dokud nestisknete klávesu ALT nebo ESC ho chcete skrýt.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1190,7 +1190,7 @@ void SetProgressBarState(TBPFLAG tbpFlags);
 ### <a name="parameters"></a>Parametry
 
 *tbpFlags*<br/>
-Příznaky, které řídí aktuální stav tlačítka průběh. Zadejte pouze jednu z následujících příznaků, protože všechny stavy se vzájemně vylučují: TBPF_NOPROGRESS TBPF_INDETERMINATE, TBPF_NORMAL, TBPF_ERROR, TBPF_PAUSED.
+Příznaky, které řídí aktuální stav tlačítka průběh. Zadejte pouze jednu z následujících příznaků, protože všechny stavy se vzájemně vylučují: TBPF_NOPROGRESS, TBPF_INDETERMINATE, TBPF_NORMAL, TBPF_ERROR, TBPF_PAUSED.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1273,7 +1273,7 @@ void ShowOwnedWindows(BOOL bShow);
 *bShow*<br/>
 Určuje, zda jsou vlastněné windows na zobrazený nebo skrytý.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

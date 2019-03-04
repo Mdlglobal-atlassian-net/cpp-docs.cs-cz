@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CTreeCtrl class [MFC], parent and child items
 - tree controls [MFC], parent and child items
 ms.assetid: abcea1e4-fe9b-40d9-86dc-1db235f8f103
-ms.openlocfilehash: ca74f85228a7b428d277395dfdd1d7172f8247f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2961009e3f1b21c3caacec001c53f5e52740dd67
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544973"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304571"
 ---
 # <a name="tree-control-parent-and-child-items"></a>Nadřízené a podřízené položky ovládacího prvku strom
 
@@ -26,8 +26,7 @@ Odesílá se ovládacím prvkem strom [TVN_ITEMEXPANDING](/windows/desktop/Contr
 
 Po rozbalení seznamu podřízených položek odsadí relativně k nadřazené položky. Můžete nastavit velikost odsazení pomocí [SetIndent](../mfc/reference/ctreectrl-class.md#setindent) členská funkce nebo načíst aktuální velikost pomocí [GetIndent](../mfc/reference/ctreectrl-class.md#getindent) členskou funkci.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

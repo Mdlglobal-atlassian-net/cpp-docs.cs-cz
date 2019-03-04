@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCRibbonSlider [MFC], SetZoomButtons
 - CMFCRibbonSlider [MFC], SetZoomIncrement
 ms.assetid: 9351ac34-f234-4e42-91e2-763f1989c8ff
-ms.openlocfilehash: 8db8165325c7bcd1e626b6707c35b69ebd211073
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85c646e2fa524268e4559b587f90c5e06971b765
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585104"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300322"
 ---
 # <a name="cmfcribbonslider-class"></a>Cmfcribbonslider – třída
 
@@ -91,7 +91,7 @@ Následující příklad ukazuje, jak použít různé metody v `CMFCRibbonSlide
 
 [Cmfcribbonbaseelement –](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
-[Cmfcribbonslider –](../../mfc/reference/cmfcribbonslider-class.md)
+[CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -164,7 +164,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -204,7 +204,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
@@ -220,7 +220,7 @@ void SetPos(
 
 ### <a name="parameters"></a>Parametry
 
-*nPos –*<br/>
+*nPos*<br/>
 [in] Určuje pozici pro posuvník. Pozice je relativní vzhledem k začátku posuvníku.
 
 *bRedraw*<br/>
@@ -238,10 +238,10 @@ void SetRange(
 
 ### <a name="parameters"></a>Parametry
 
-*Nminimum*<br/>
+*nMin*<br/>
 [in] Určuje minimální hodnotu v ovládacím prvku posuvník.
 
-*Nmaximum*<br/>
+*nMax*<br/>
 [in] Určuje maximální hodnotu v ovládacím prvku posuvník.
 
 ### <a name="remarks"></a>Poznámky
@@ -273,7 +273,7 @@ void SetZoomIncrement(int nZoomIncrement);
 *nZoomIncrement*<br/>
 [in] Určuje přírůstek zvětšení v ovládacím prvku posuvník.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

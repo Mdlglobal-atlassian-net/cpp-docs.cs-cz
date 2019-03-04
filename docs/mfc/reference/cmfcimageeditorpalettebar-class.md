@@ -1,5 +1,5 @@
 ---
-title: Cmfcimageeditorpalettebar – třída
+title: CMFCImageEditorPaletteBar Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCImageEditorPaletteBar
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - CMFCImageEditorPaletteBar [MFC], GetRowHeight
 - CMFCImageEditorPaletteBar [MFC], IsButtonExtraSizeAvailable
 ms.assetid: 3fb7ba8e-f254-4d56-b913-9941b4ed8138
-ms.openlocfilehash: 71fe8824e7a7d250d9e939afea99f73fcb4943dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6812f3f425186484ef892d7f5c626c0dfce0f863
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498018"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302974"
 ---
-# <a name="cmfcimageeditorpalettebar-class"></a>Cmfcimageeditorpalettebar – třída
+# <a name="cmfcimageeditorpalettebar-class"></a>CMFCImageEditorPaletteBar Class
 
 Poskytuje funkce panel palety dialogovém okně editoru obrázků.
 
@@ -57,9 +57,9 @@ Rozhraní používá tuto třídu zobrazíte panel palety v dialogovém okně ed
 
 [CMFCBaseToolBa](../../mfc/reference/cmfcbasetoolbar-class.md)
 
-[Cmfctoolbar –](../../mfc/reference/cmfctoolbar-class.md)
+[CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)
 
-[Cmfcimageeditorpalettebar –](../../mfc/reference/cmfcimageeditorpalettebar-class.md)
+[CMFCImageEditorPaletteBar](../../mfc/reference/cmfcimageeditorpalettebar-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -89,7 +89,7 @@ virtual BOOL IsButtonExtraSizeAvailable() const;
 
 Tato metoda vrátí hodnotu FALSE.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

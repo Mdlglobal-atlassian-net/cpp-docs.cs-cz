@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], creating
 - TCS_EX_FLATSEPARATORS extended style
 ms.assetid: 3a9c2d64-f5f4-41ea-84ab-fceb73c3dbdc
-ms.openlocfilehash: c444c938c88c2e8bf079f0f3eba80776c54af5ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4627009e2e07d1c5692d83d8d6262a9fcd37977e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573404"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304909"
 ---
 # <a name="creating-the-tab-control"></a>Vytvoření ovládacího prvku karta
 
@@ -58,8 +58,7 @@ Zrušte **tcs_ex_flatseparators –** stylu z `CTabCtrl` objektu s následujíc�
 
 Tato akce odebere oddělovače, které se zobrazí mezi tlačítek vaše `CTabCtrl` objektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CTabCtrl](../mfc/using-ctabctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

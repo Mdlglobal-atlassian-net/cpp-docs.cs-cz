@@ -15,12 +15,12 @@ helpviewer_keywords:
 - versioning ActiveX controls
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
-ms.openlocfilehash: fddd09ad7a3dc7d9211480bb21ac434419a48758
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c1c845640be2dfaa6aeda2defb478afb650b83b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522210"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303342"
 ---
 # <a name="mfc-activex-controls-serializing"></a>MFC – ovládací prvky ActiveX: Serializace
 
@@ -54,20 +54,20 @@ V následující tabulce jsou uvedeny funkce exchange myslitelnými vlastnostmi,
 
 |Funkce výměny vlastnost|Účel|
 |---------------------------------|-------------|
-|**Px_blob –)**|Serializuje typ dat vlastnosti binárních rozsáhlých objektů (BLOB).|
-|**Px_bool –)**|Serializuje typu vlastnost typu Boolean.|
-|**Px_color –)**|Serializuje typ vlastnosti.|
-|**Px_currency –)**|Serializuje typu **CY** vlastnosti (měna).|
-|**Px_double –)**|Serializuje typu **double** vlastnost.|
-|**Px_font –)**|Serializuje vlastnost typu písma.|
-|**Px_float –)**|Serializuje typu **float** vlastnost.|
+|**PX_Blob( )**|Serializuje typ dat vlastnosti binárních rozsáhlých objektů (BLOB).|
+|**PX_Bool( )**|Serializuje typu vlastnost typu Boolean.|
+|**PX_Color( )**|Serializuje typ vlastnosti.|
+|**PX_Currency( )**|Serializuje typu **CY** vlastnosti (měna).|
+|**PX_Double( )**|Serializuje typu **double** vlastnost.|
+|**PX_Font( )**|Serializuje vlastnost typu písma.|
+|**PX_Float( )**|Serializuje typu **float** vlastnost.|
 |**Px_iunknown –)**|Serializuje vlastnost typu `LPUNKNOWN`.|
 |**Px_long –)**|Serializuje typu **dlouhé** vlastnost.|
-|**Px_picture –)**|Serializuje typ vlastnosti obrázek.|
-|**Px_short –)**|Serializuje typu **krátký** vlastnost.|
+|**PX_Picture( )**|Serializuje typ vlastnosti obrázek.|
+|**PX_Short( )**|Serializuje typu **krátký** vlastnost.|
 |**(PXstring)**|Serializuje typu `CString` vlastnost.|
-|**Px_ulong –)**|Serializuje typu **ULONG** vlastnost.|
-|**Px_ushort –)**|Serializuje typu **USHORT** vlastnost.|
+|**PX_ULong( )**|Serializuje typu **ULONG** vlastnost.|
+|**PX_UShort( )**|Serializuje typu **USHORT** vlastnost.|
 
 Další informace o těchto funkcích vlastnost exchange najdete v části [trvalost z ovládacích prvků technologie OLE](../mfc/reference/persistence-of-ole-controls.md) v *odkaz knihovny MFC*.
 
@@ -93,7 +93,6 @@ Verze 1 tohoto ovládacího prvku vzorku v následujícím příkladu má pouze 
 
 Ve výchozím nastavení ovládací prvek "převede" stará data na nejnovější formát. Například pokud verze 2 ovládacího prvku načte data, která byla uložena ve verzi 1, bude zapsána formát verze 2 při uložení znovu. Pokud chcete ovládací prvek k ukládání dat ve formátu posledního přečtení, předejte **FALSE** jako třetí parametr při volání metody `ExchangeVersion`. Tento třetí parametr je nepovinný a je **TRUE** ve výchozím nastavení.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)
-

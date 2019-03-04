@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pOther
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
-ms.openlocfilehash: 7d550268fb417301116b5168d4c0ff76fdc35716
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12d9ead736a84d89b04f7b68ed76da8ccea22d0c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571135"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302868"
 ---
 # <a name="ccmdui-class"></a>Ccmdui – třída
 
@@ -77,7 +77,7 @@ Položka nabídky se dá nahradit výrazem tlačítko ovládacích panelů nebo 
 
 Následující tabulka shrnuje vliv `CCmdUI`na různé položky příkazu uživatelského rozhraní mají členské funkce.
 
-|Položka uživatelského rozhraní|Povolit|Setcheck –|Setradio –|SetText –|
+|Položka uživatelského rozhraní|Povolit|Setcheck –|SetRadio|SetText|
 |--------------------------|------------|--------------|--------------|-------------|
 |Položka nabídky|Povolí nebo zakáže|Ověří nebo zruší tohoto systému zaškrtnutí|Kontroly pomocí tečku|Nastaví položku text|
 |Tlačítko panelu nástrojů|Povolí nebo zakáže|Vybere, zruší výběr nakresleného, nebo neurčitý|Stejné jako `SetCheck`|(Není k dispozici)|
@@ -229,7 +229,7 @@ Ukazatel na textový řetězec.
 
 [!code-cpp[NVC_MFCDocView#48](../../mfc/codesnippet/cpp/ccmdui-class_3.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC MDI](../../visual-cpp-samples.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

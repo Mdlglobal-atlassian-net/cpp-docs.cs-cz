@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], PreMultiplyAlpha
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
-ms.openlocfilehash: 21a8e6ed28498756130e6ddb418e93b0e9ad86cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bbd2a2d301646b4d3897d9fe4990bdfd1e48325b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662771"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303333"
 ---
 # <a name="cmfctoolbarimages-class"></a>Cmfctoolbarimages – třída
 
@@ -326,7 +326,7 @@ int AddImage(
 *bSetBitPerPixel*<br/>
 [in] Hodnota TRUE, pokud `CMFCToolBarImages` objekt používá barevnou hloubku (bitů na pixel) novou image; FALSE v případě `CMFCToolbarImages` udržuje aktuální barevnou hloubku objektu.
 
-*Ovládací prvek ImageList*<br/>
+*imageList*<br/>
 [in] Odkaz na `CMFCToolbarImages` objekt, který obsahuje bitovou kopii přidat.
 
 *nIndex*<br/>
@@ -402,7 +402,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
 
 ### <a name="parameters"></a>Parametry
 
-*Ovládací prvek ImageList*<br/>
+*imageList*<br/>
 [in] Seznam obrázků použitého jako zdroj pro obrázky panelu nástrojů.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -467,7 +467,7 @@ BOOL Draw(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *x*<br/>
@@ -516,7 +516,7 @@ BOOL DrawEx(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *iImageIndex*<br/>
 [in] *horzAlign*<br/>
@@ -550,7 +550,7 @@ void EndDrawImage(CAfxDrawState& ds);
 
 ### <a name="parameters"></a>Parametry
 
-*adresářové služby*<br/>
+*ds*<br/>
 [in] Odkaz na `CAfxDrawState` objekt, který byl předán `PrepareDrawImage` metody.
 
 ##  <a name="extracticon"></a>  CMFCToolBarImages::ExtractIcon
@@ -582,7 +582,7 @@ static void FillDitheredRect(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *Rect*<br/>
@@ -1120,7 +1120,7 @@ BOOL PrepareDrawImage(
 
 ### <a name="parameters"></a>Parametry
 
-*adresářové služby*<br/>
+*ds*<br/>
 [in] Odkaz na `CAfxDrawState` struktura, která ukládá přidělené prostředky mezi jednotlivými fázemi vykreslování obrázků.
 
 *sizeImageDest*<br/>
@@ -1180,7 +1180,7 @@ static void SetDisabledImageAlpha(BYTE nValue);
 
 ### <a name="parameters"></a>Parametry
 
-*nHodnota*<br/>
+*nValue*<br/>
 [in] Nová hodnota alfa kanálu.
 
 ### <a name="remarks"></a>Poznámky
@@ -1381,7 +1381,7 @@ Hodnota TRUE v případě změny velikosti úspěšně. v opačném případě F
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

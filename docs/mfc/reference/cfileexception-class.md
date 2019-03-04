@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: e6b1b25f9125701a212f379c925a80ff888d58f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3514c76d4136fe2bc0b096cc382e6f7f4dd3392
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485814"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305117"
 ---
 # <a name="cfileexception-class"></a>Cfileexception – třída
 
@@ -187,35 +187,35 @@ int m_cause;
 
 Tento datový člen je veřejná proměnná typu **int**. Čítačů a jejich význam jsou následující:
 
-- `CFileException::none` 0: nedošlo k žádné chybě.
+- `CFileException::none` 0: Nedošlo k žádné chybě.
 
-- `CFileException::genericException` 1: došlo k nespecifikované chybě.
+- `CFileException::genericException` 1: Došlo k nespecifikované chybě.
 
-- `CFileException::fileNotFound` 2: soubor nebyl nalezen.
+- `CFileException::fileNotFound` 2: Soubor nebyl nalezen.
 
-- `CFileException::badPath` 3: všechny nebo část cesty je neplatný.
+- `CFileException::badPath` 3: Všechny nebo část cesty je neplatný.
 
-- `CFileException::tooManyOpenFiles` 4: byl překročen povolený počet otevřených souborů.
+- `CFileException::tooManyOpenFiles` 4: Byl překročen povolený počet otevřených souborů.
 
-- `CFileException::accessDenied` 5: soubor není přístupný.
+- `CFileException::accessDenied` 5: Soubor není přístupný.
 
-- `CFileException::invalidFile` 6: došlo k pokusu o použití neplatný popisovač souboru.
+- `CFileException::invalidFile` 6: Došlo k pokusu o použití neplatný popisovač souboru.
 
-- `CFileException::removeCurrentDir` 7: aktuální pracovní adresář nejde odebrat.
+- `CFileException::removeCurrentDir` 7: Nelze odebrat, aktuální pracovní adresář.
 
-- `CFileException::directoryFull` 8: neexistují žádné záznamy adresářů.
+- `CFileException::directoryFull` 8: Nejsou žádné záznamy adresářů.
 
-- `CFileException::badSeek` 9: došlo k chybě při pokusu o nastavení ukazatele souboru.
+- `CFileException::badSeek` 9: Došlo k chybě při pokusu o nastavení ukazatele souboru.
 
-- `CFileException::hardIO` 10: došlo k chybě hardwaru.
+- `CFileException::hardIO` 10: Došlo k chybě hardwaru.
 
-- `CFileException::sharingViolation` 11: SDÍLENÁ SLOŽKA. Soubor EXE nebyla načtena, nebo byla sdílená oblast uzamčena.
+- `CFileException::sharingViolation` 11: SDÍLENÉ SLOŽKY. Soubor EXE nebyla načtena, nebo byla sdílená oblast uzamčena.
 
-- `CFileException::lockViolation` 12: došlo pokusu o uzamčení oblasti, která již byla uzamčena.
+- `CFileException::lockViolation` 12: Došlo k pokusu o uzamčení oblasti, která již byla uzamčena.
 
-- `CFileException::diskFull` 14: disk je plný.
+- `CFileException::diskFull` 14: Disk je plný.
 
-- `CFileException::endOfFile` 15: bylo dosaženo konce souboru.
+- `CFileException::endOfFile` 15: Bylo dosaženo konce souboru.
 
     > [!NOTE]
     >  Tyto `CFileException` příčina enumerátory se liší od `CArchiveException` způsobit enumerátory.
@@ -308,9 +308,8 @@ Ukazatel na řetězec obsahující název souboru, který výjimku způsobila, p
 
 [!code-cpp[NVC_MFCFiles#29](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_6.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CException – třída](../../mfc/reference/cexception-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Zpracování výjimek](../../mfc/reference/exception-processing.md)
-

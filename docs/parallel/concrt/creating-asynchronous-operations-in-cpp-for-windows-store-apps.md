@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 59630c7702dffc4b606943e174e44fdba6aecfe8
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 0284970d57cf4cde65b4fb77338423cb81d5d54b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176949"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302270"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Vytváření asynchronních operací v jazyce C++ pro aplikace pro UPW
 
@@ -37,7 +37,7 @@ Použití asynchronního programování je klíčovou komponentou v aplikaci mod
 
 - [Vytváření asynchronních operací](#create-async)
 
-- [Příklad: Vytvoření součásti modulu Runtime Windows C++](#example-component)
+- [Příklad: Vytvoření komponenty prostředí Windows Runtime C++](#example-component)
 
 - [Řízení prováděcího vlákna](#exethread)
 
@@ -51,16 +51,16 @@ Modul Windows Runtime je programovací rozhraní, můžete použít k vytvořen�
 
 Pomocí prostředí Windows Runtime můžete využívat nejlepší funkce různých programovacích jazycích a je zkombinovat do jedné aplikace. Můžete například vytvářet uživatelské rozhraní v jazyce JavaScript a provádění výpočetně náročné aplikace logiky v komponentě C++. Možnost provádět tyto výpočetně náročné operace na pozadí je ale klíčovým faktorem ochraně responzivní uživatelské rozhraní. Vzhledem k tomu, `task` třída je specifická pro C++, je nutné použít rozhraní Windows Runtime pro komunikaci asynchronních operací na jiné součásti (která může být napsán v jiných jazycích než C++). Modul Windows Runtime poskytuje čtyři rozhraní, které můžete použít k reprezentaci asynchronních operací:
 
-[Windows::Foundation:: iasyncaction](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)<br/>
+[Windows::Foundation::IAsyncAction](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)<br/>
 Představuje asynchronní akci.
 
 [Windows::Foundation::IAsyncActionWithProgress\<TProgress>](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)<br/>
 Představuje asynchronní akci, která hlásí průběh.
 
-[:: Iasyncoperation\<TResult >](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)<br/>
+[Windows::Foundation::IAsyncOperation\<TResult>](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)<br/>
 Představuje asynchronní operaci, která vrací výsledek.
 
-[Windows::Foundation:: iasyncoperationwithprogress\<TResult, TProgress >](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)<br/>
+[Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress>](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)<br/>
 Představuje asynchronní operaci, která vrací výsledek a sestavy pokroku.
 
 Pojem *akce* znamená, že asynchronní úloha nevytvoří hodnotu (Představte si, že funkce, která vrátí `void`). Pojem *operace* znamená, že asynchronní úloha výsledkem hodnota. Pojem *průběh* znamená, že úloha může hlásit zprávy o průběhu volajícímu. JavaScript, rozhraní .NET Framework a jazyka Visual C++ nabízí svou vlastní způsob, jak vytvořit instance pro použití těchto rozhraní hranice ABI. Pro jazyk Visual C++ poskytuje PPL [concurrency::create_async](reference/concurrency-namespace-functions.md#create_async) funkce. Tato funkce vytvoří prostředí Windows Runtime asynchronní akce nebo operace, která představuje dokončení úlohy. `create_async` Funkce přebírá pracovní funkci (obvykle výraz lambda), vytvoří interně `task` objektu a zabalí, které úlohy v jednom ze čtyř asynchronní rozhraní Windows Runtime.
@@ -70,7 +70,7 @@ Pojem *akce* znamená, že asynchronní úloha nevytvoří hodnotu (Představte 
 
 Návratový typ `create_async` se určuje podle typu argumentů. Pokud vaše pracovní funkce nevrací hodnotu a neoznamuje průběh, například `create_async` vrátí `IAsyncAction`. Pokud vaše pracovní funkce nevrací hodnotu a také zobrazuje průběh, `create_async` vrátí `IAsyncActionWithProgress`. Chcete-li vykazování průběh, zadejte [concurrency::progress_reporter](../../parallel/concrt/reference/progress-reporter-class.md) objektu jako parametr na svoji pracovní funkci. Schopnost vykazovat postup umožňuje nahlásit, jaké množství práce byla provedena a jaké množství stále zůstává (například jako procento). Umožňuje také můžete ohlásit výsledky, jakmile budou k dispozici.
 
-`IAsyncAction`, `IAsyncActionWithProgress<TProgress>`, `IAsyncOperation<TResult>`, A `IAsyncActionOperationWithProgress<TProgress, TProgress>` rozhraními každý `Cancel` metodu, která umožňuje zrušit asynchronní operaci. `task` Třída pracuje s tokeny zrušení. Při použití token zrušení pro zrušení pracovní modul runtime nelze spustit novou práci, která si předplatí tento token. Práce, která je již aktivní můžete monitorovat jeho token zrušení a zastaví, jakmile ho může. Tento mechanismus je podrobněji popsána v dokumentu [zrušení v knihovně PPL](cancellation-in-the-ppl.md). Zrušení úlohy můžete připojit s modulem Windows Runtime`Cancel` metody dvěma způsoby. Nejprve můžete definovat pracovní funkce, který předáte `create_async` provést [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) objektu. Když `Cancel` metoda je volána, tento token zrušení se zrušila a normální zrušení pravidla se vztahují na základní `task` objekt, který podporuje `create_async` volání. Pokud nezadáte `cancellation_token` objektu základní `task` objektu definuje jeden implicitně. Definování `cancellation_token` objektu, když budete chtít kooperativně reagovat na zrušení v pracovní funkci. V části [příklad: řízení provádění v aplikaci Windows Runtime s C++ a XAML](#example-app) ukazuje příklad toho, jak provádět zrušení v aplikaci pro univerzální platformu Windows (UPW) pomocí C# a XAML, který používá vlastní modul Runtime C++ Windows komponenta.
+`IAsyncAction`, `IAsyncActionWithProgress<TProgress>`, `IAsyncOperation<TResult>`, A `IAsyncActionOperationWithProgress<TProgress, TProgress>` rozhraními každý `Cancel` metodu, která umožňuje zrušit asynchronní operaci. `task` Třída pracuje s tokeny zrušení. Při použití token zrušení pro zrušení pracovní modul runtime nelze spustit novou práci, která si předplatí tento token. Práce, která je již aktivní můžete monitorovat jeho token zrušení a zastaví, jakmile ho může. Tento mechanismus je podrobněji popsána v dokumentu [zrušení v knihovně PPL](cancellation-in-the-ppl.md). Zrušení úlohy můžete připojit s modulem Windows Runtime`Cancel` metody dvěma způsoby. Nejprve můžete definovat pracovní funkce, který předáte `create_async` provést [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) objektu. Když `Cancel` metoda je volána, tento token zrušení se zrušila a normální zrušení pravidla se vztahují na základní `task` objekt, který podporuje `create_async` volání. Pokud nezadáte `cancellation_token` objektu základní `task` objektu definuje jeden implicitně. Definování `cancellation_token` objektu, když budete chtít kooperativně reagovat na zrušení v pracovní funkci. V části [příkladu: Řízení provádění v aplikaci Windows Runtime s C++ a XAML](#example-app) ukazuje příklad toho, jak provádět zrušení v aplikaci pro univerzální platformu Windows (UPW) s C# a XAML, který používá vlastní komponent Windows Runtime C++.
 
 > [!WARNING]
 >  V řetězci pokračování úlohy, vždy vyčistit stavu a poté zavolejte [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) když je zrušen token zrušení. Pokud jste již v rané fázi vrátíte namísto volání metody `cancel_current_task`, operace přechody do dokončeného stavu místo zrušeném stavu.
@@ -90,7 +90,7 @@ Následující příklad ukazuje různé způsoby, jak vytvořit `IAsyncAction` 
 
 [!code-cpp[concrt-windowsstore-primes#100](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_1.cpp)]
 
-##  <a name="example-component"></a> Příklad: Vytvoření komponenty prostředí Windows Runtime C++ a její použití v jazyce C#
+##  <a name="example-component"></a> Příklad: Vytvoření komponenty prostředí Windows Runtime C++ a její z použitíC#
 
 Vezměte v úvahu aplikaci, která se používá k definování uživatelského rozhraní a komponenty modulu Windows Runtime C++ provádět operace náročné na výpočetní prostředky XAML a C#. V tomto příkladu vypočítá komponent C++, která čísla v dané oblasti jsou primární. Pro ilustraci rozdíly mezi čtyři asynchronní úloha rozhraní Windows Runtime, spuštění, v sadě Visual Studio, tak, že vytvoříte **prázdné řešení** a jeho pojmenování `Primes`. Pak přidejte do řešení **součást prostředí Windows Runtime** projektu a jeho pojmenování `PrimesLibrary`. Přidejte následující kód vygenerovaný soubor hlaviček jazyka C++ (Tento příklad přejmenuje Class1.h Primes.h). Každý `public` metoda definuje jednu ze čtyř asynchronní rozhraní. Vrátí metody, které vrací hodnotu [Windows::Foundation::Collections::IVector\<int >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) objektu. Vytvoření metody, které vykazování průběh `double` hodnoty, které definují procento celkové práce, která byla dokončena.
 
@@ -190,6 +190,6 @@ Následující obrázek ukazuje výsledky `CommonWords` aplikace.
 
 V tomto příkladu je možné pro podporu zrušení, protože `task` objektů, které podporují `create_async` použít token implicitní zrušení. Definujte svoji pracovní funkci provést `cancellation_token` objektu, pokud vaše úkoly potřebují reagovat na způsob spolupráce za zrušení. Další informace o zrušení v knihovně PPL naleznete v tématu [zrušení v knihovně PPL](cancellation-in-the-ppl.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Concurrency Runtime](../../parallel/concrt/concurrency-runtime.md)

@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_nGroupID
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
-ms.openlocfilehash: b05de00697aa019382014402f7701a8341da5198
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9be0a5b76f91ddf4dc3d1c4ff2816b7ffd5a1986
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512915"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304376"
 ---
 # <a name="canimationgroup-class"></a>Canimationgroup – třída
 
@@ -70,7 +70,7 @@ class CAnimationGroup;
 |Název|Popis|
 |----------|-----------------|
 |[CAnimationGroup::CAnimationGroup](#canimationgroup)|Vytvoří skupinu animace.|
-|[Canimationgroup –:: ~ canimationgroup –](#canimationgroup__~canimationgroup)|Destruktor. Volá se, když se likviduje skupinu animace.|
+|[CAnimationGroup::~CAnimationGroup](#canimationgroup__~canimationgroup)|Destruktor. Volá se, když se likviduje skupinu animace.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -387,6 +387,6 @@ Určuje, jak odstranit přechodů.
 
 Nastavte tuto hodnotu na hodnotu FALSE, pouze pokud přidělíte přechody do zásobníku. Výchozí hodnota je TRUE, proto se důrazně doporučujeme k přidělení paměti pro přechod objekty pomocí operátoru nové.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

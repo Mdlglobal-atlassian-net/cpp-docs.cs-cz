@@ -307,12 +307,12 @@ helpviewer_keywords:
 - CMenuImages class [MFC]
 - CleanUp method [MFC]
 ms.assetid: 3e2276aa-b02a-4781-97ba-ea074045e9e2
-ms.openlocfilehash: 706ba4cdd1a8f9d77857c52898058aa62fcca8c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae35aefefe548990eeb7fbe637839e475036c2bc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435487"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300086"
 ---
 # <a name="internal-classes"></a>Interní třídy
 
@@ -325,7 +325,7 @@ Následující třídy se používají interně v knihovně MFC. Pro úplnost Ta
 |`CCommandManager Class`|`CCommandManager` Třída spravuje příkazy a jejich přidružení k bitové kopie.|
 |`CDialogImpl Class (MFC)`|Poskytuje podrobnosti o implementaci na základě pole třídy dialogových oken, například `CDialogEx`.|
 |`CDocumentAdapter Class`|Implementuje objekt idocument získat rozhraní nezbytné pro hledání a uspořádat obslužné rutiny.|
-|`CFrameImpl Class`|`CFrameImpl` Třída zpracovává přizpůsobení panelu nástrojů pro následující třídy oken s rámečkem: [cframewndex – třída](../../mfc/reference/cframewndex-class.md), [CMDIFrameWndEx – třída](../../mfc/reference/cmdiframewndex-class.md), a [coleipframewndex–třída](../../mfc/reference/coleipframewndex-class.md).|
+|`CFrameImpl Class`|`CFrameImpl` Třída zpracovává přizpůsobení panelu nástrojů pro následující třídy oken s rámečkem: [Cframewndex – třída](../../mfc/reference/cframewndex-class.md), [CMDIFrameWndEx – třída](../../mfc/reference/cmdiframewndex-class.md), a [coleipframewndex – třída](../../mfc/reference/coleipframewndex-class.md).|
 |`CFullScreenImpl Class`|Implementuje funkce celé obrazovky společné aplikace SDI a knihovna MDI.|
 |`CMDIClientAreaWnd Class`|`CMDIClientAreaWnd` Třída je pomocná třída, která zjednodušuje provádění karet MDI a skupin s kartami MDI.|
 |`CMemDC Class`|Pomocná třída pro kontext zařízení paměti. Kontext zařízení paměti podporuje mimo obrazovku kreslení.|
@@ -409,7 +409,6 @@ Následující třídy se používají interně v knihovně MFC. Pro úplnost Ta
 |`CVSListBoxEditCtrl Class`|Rozšíří ovládací prvek úprav standardní seznam zobrazením malé tlačítko, které se otevře dialogové okno.|
 |`CVSToolsListBox Class`|Rozšíří ovládací prvek seznam standardních tím, že poskytuje další tlačítka pro přidání, odstranění a přesouvání položek v seznamu.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Desktopové aplikace knihovny MFC](../../mfc/mfc-desktop-applications.md)
-

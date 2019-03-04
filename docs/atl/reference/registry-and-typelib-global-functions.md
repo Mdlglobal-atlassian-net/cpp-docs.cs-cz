@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-ms.openlocfilehash: 85af8504fffa980d495cef59729ff5fcb145e318
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f94dd1770ff194e47e2e38cc3a9b5cf0cbaebe58
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486580"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301828"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Globální funkce registrace a TypeLib
 
@@ -97,7 +97,7 @@ LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTr
 
 ### <a name="parameters"></a>Parametry
 
-*podstrom hKey*<br/>
+*hKey*<br/>
 Popisovač otevřít klíč registru.
 
 *lpSubKey*<br/>
@@ -106,7 +106,7 @@ Název klíče, který tato funkce se otevře, nebo vytvoří.
 *phkResult*<br/>
 Ukazovat na proměnnou, která přijímá popisovač klíče otevřená nebo je vytvořený.
 
-*Druh*<br/>
+*pTM*<br/>
 Ukazatel `CAtlTransactionManager` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -115,7 +115,7 @@ Pokud funkce uspěje, vrácená hodnota je ERROR_SUCCESS. Pokud funkce selže, v
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxpriv.h
+**Header:** afxpriv.h
 
 ## <a name="afxregdeletekey"></a> AfxRegDeleteKey
 
@@ -129,13 +129,13 @@ LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager*
 
 ### <a name="parameters"></a>Parametry
 
-*podstrom hKey*<br/>
+*hKey*<br/>
 Popisovač otevřít klíč registru.
 
 *lpSubKey*<br/>
 Název klíče, která se má odstranit.
 
-*Druh*<br/>
+*pTM*<br/>
 Ukazatel `CAtlTransactionManager` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -144,7 +144,7 @@ Pokud funkce uspěje, vrácená hodnota je ERROR_SUCCESS. Pokud funkce selže, v
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxpriv.h
+**Header:** afxpriv.h
 
 ## <a name="afxregisterpreviewhandler"></a>
 
@@ -169,7 +169,7 @@ Určuje, přípona souboru registrovaná s touto obslužnou rutinou.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdisp.h
+**Header:** afxdisp.h
 
 ##  <a name="atlregistertypelib"></a>  AtlRegisterTypeLib
 
@@ -211,7 +211,7 @@ LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTran
 
 ### <a name="parameters"></a>Parametry
 
-*podstrom hKey*<br/>
+*hKey*<br/>
 Popisovač otevřít klíč registru.
 
 *lpSubKey*<br/>
@@ -220,7 +220,7 @@ Název klíče, který tato funkce se otevře, nebo vytvoří.
 *phkResult*<br/>
 Ukazovat na proměnnou, která přijímá popisovač vytvořený klíč.
 
-*Druh*<br/>
+*pTM*<br/>
 Ukazatel `CAtlTransactionManager` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -229,7 +229,7 @@ Pokud funkce uspěje, vrácená hodnota je ERROR_SUCCESS. Pokud funkce selže, v
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxpriv.h
+**Header:** afxpriv.h
 
 ## <a name="afxregopenkeyex"></a>  AfxRegOpenKeyEx
 
@@ -243,7 +243,7 @@ LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM
 
 ### <a name="parameters"></a>Parametry
 
-*podstrom hKey*<br/>
+*hKey*<br/>
 Popisovač otevřít klíč registru.
 
 *lpSubKey*<br/>
@@ -258,7 +258,7 @@ Maska, která určuje požadované přístupová práva ke klíči.
 *phkResult*<br/>
 Ukazovat na proměnnou, která přijímá popisovač otevřené klíč.
 
-*Druh*<br/>
+*pTM*<br/>
 Ukazatel `CAtlTransactionManager` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -267,7 +267,7 @@ Pokud funkce uspěje, vrácená hodnota je ERROR_SUCCESS. Pokud funkce selže, v
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxpriv.h
+**Header:** afxpriv.h
 
 ## <a name="afxunregisterpreviewhandler"></a> AfxUnregisterPreviewHandler
 
@@ -286,7 +286,7 @@ Určuje identifikátor CLSID obslužné rutiny pro odstranění registrace.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdisp.h
+**Header:** afxdisp.h
 
 ## <a name="atlsetperuserregistration"></a> AtlSetPerUserRegistration
 
@@ -408,7 +408,7 @@ HRESULT RegistryDataExchange(
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pT*<br/>
 Ukazatel na aktuální objekt.
 
 *rdxOp*<br/>
@@ -437,7 +437,7 @@ V následující tabulce jsou uvedeny možné výčtu hodnoty, které označují
 
 **Záhlaví:** atlbase.h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Funkce](atl-functions.md)<br/>
 [Makra výměny dat registru](registry-data-exchange-macros.md)

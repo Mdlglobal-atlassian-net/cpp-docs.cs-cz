@@ -2,12 +2,12 @@
 title: 'Návod: Násobení matic'
 ms.date: 11/19/2018
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: ae86ff5a111348404616c8bb4fecd3bf22afc90c
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 597ba0f47c7b081f62c82bf8e1ca01c286d35140
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176156"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300970"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Návod: Násobení matic
 
@@ -293,7 +293,7 @@ void main() {
 
 4. Zvolte **místo** panelu ukončíte aplikaci.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Návod: Ladění aplikace C++ AMP](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: 9eac0f7efdacc6181d8aaa15398f4d7365c0edd3
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: d3c3bca7932b9e9c7e7723b286c83ca3694a9968
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178496"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305091"
 ---
 # <a name="cdialog-class"></a>CDialog – třída
 
@@ -404,7 +404,7 @@ void MapDialogRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje na [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který obsahuje – dialogové okno koordinuje má být převeden.
 
 ### <a name="remarks"></a>Poznámky
@@ -556,10 +556,9 @@ void SetHelpID(UINT nIDR);
 *nIDR*<br/>
 Určuje ID kontextové nápovědy.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázka DLGCBR32 knihovny MFC](../../visual-cpp-samples.md)<br/>
 [Ukázky knihovny MFC DLGTEMPL](../../visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-

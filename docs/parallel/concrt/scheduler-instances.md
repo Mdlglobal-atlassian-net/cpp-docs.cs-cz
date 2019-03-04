@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
-ms.openlocfilehash: 370f8a3a8fdcc8e1daaee2d3424f939fb719a449
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19bd871857dcef6aaef153798388c0272239fa1f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570167"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301295"
 ---
 # <a name="scheduler-instances"></a>Instance plánovače
 
@@ -38,7 +38,7 @@ Podproces, který je připojen k plánovače se označuje jako *kontextu spušt�
 
 Obvykle `CurrentScheduler` třída se používá pro přístup k aktuálního plánovače. `Scheduler` Třídy je užitečné, když je potřeba spravovat plánovače, která není aktuální.
 
-Následující části popisují postup vytvoření a Správa instance plánovače. Kompletní příklad, který ilustruje tyto úkoly, naleznete v tématu [postupy: Správa Instance plánovače](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
+Následující části popisují postup vytvoření a Správa instance plánovače. Kompletní příklad, který ilustruje tyto úkoly, naleznete v tématu [jak: Správa Instance plánovače](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
 
 [[Horní](#top)]
 
@@ -120,12 +120,11 @@ V následující tabulce jsou uvedeny důležité metody, které jsou definován
 
 ##  <a name="example"></a> Příklad
 
-Základní příklady vytvoření a Správa instance plánovače, najdete v článku [postupy: Správa Instance plánovače](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
+Základní příklady vytvoření a Správa instance plánovače, najdete v článku [jak: Správa Instance plánovače](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Postupy: Správa instance plánovače](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>
 [Zásady plánovače](../../parallel/concrt/scheduler-policies.md)<br/>
 [Skupiny plánů](../../parallel/concrt/schedule-groups.md)
-

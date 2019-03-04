@@ -15,12 +15,12 @@ helpviewer_keywords:
 - destruction [MFC], data objects
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
-ms.openlocfilehash: a46cc15a101618699b9e7fa988155517de673fdb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74119d7ea33eef68f0cb4a67c8419514cbb73c10
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614965"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304431"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>Datové objekty a zdroje dat: Vytváření a likvidace
 
@@ -70,7 +70,7 @@ Zdroje dat se vytvoří, když aplikace potřebuje ke kopírování dat do schr�
 
 Tento scénář je implementováno ukázky MFC OLE [OCLIENT](../visual-cpp-samples.md) a [HIERSVR](../visual-cpp-samples.md). Podívejte se na zdroje pro každou aplikaci `CView`-odvozené třídy pro všechny kromě na `GetClipboardData` a `OnGetClipboardData` funkce. Tyto dvě funkce jsou buď `COleClientItem` nebo `COleServerItem`– implementace třídy odvozené. Tyto ukázkové programy poskytují dobrý příklad toho, jak implementovat tyto koncepty.
 
-Jeden další situace, ve kterém můžete chtít vytvořit `COleDataSource` objekt nastane, pokud chcete upravit výchozí chování operace přetažení myší. Další informace najdete v tématu [přetažení: přizpůsobení](../mfc/drag-and-drop-customizing.md) článku.
+Jeden další situace, ve kterém můžete chtít vytvořit `COleDataSource` objekt nastane, pokud chcete upravit výchozí chování operace přetažení myší. Další informace najdete v tématu [přetažení: Přizpůsobení](../mfc/drag-and-drop-customizing.md) článku.
 
 ##  <a name="_core_destroying_data_sources"></a> Zničení zdroje dat
 
@@ -82,7 +82,7 @@ Pokud zdroj dat dosud předán OLE, pak budete muset pro zničení, stejně jako
 
 Další informace najdete v tématu [přetažení](../mfc/drag-and-drop-ole.md), [schránky](../mfc/clipboard.md), a [manipulace s datové objekty a zdroje dat](../mfc/data-objects-and-data-sources-manipulation.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Datové objekty a zdroje dat (OLE)](../mfc/data-objects-and-data-sources-ole.md)<br/>
 [COleDataObject – třída](../mfc/reference/coledataobject-class.md)<br/>

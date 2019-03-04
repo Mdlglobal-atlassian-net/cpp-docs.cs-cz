@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: 938df6599ca3bfec3e08e77d7a60106133f54324
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ee1820601f80ed270221b3186188793f7fdcbe08
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178535"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301451"
 ---
 # <a name="ctoolbar-class"></a>Ctoolbar – třída
 
@@ -151,7 +151,7 @@ Další informace o používání `CToolBar`, najdete v článku [implementace p
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[Ccontrolbar –](../../mfc/reference/ccontrolbar-class.md)
+[CControlBar](../../mfc/reference/ccontrolbar-class.md)
 
 `CToolBar`
 
@@ -405,7 +405,7 @@ virtual void GetItemRect(
 *nIndex*<br/>
 Index položky (tlačítko nebo oddělovač), jehož souřadnice obdélník se mají načíst.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Adresa [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktura, která bude obsahovat souřadnice položky.
 
 ### <a name="remarks"></a>Poznámky
@@ -715,7 +715,7 @@ Voláním této členské funkce jenom pro panely nástrojů, které se neříd�
 
 [!code-cpp[NVC_MFCListView#8](../../atl/reference/codesnippet/cpp/ctoolbar-class_4.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC CTRLBARS](../../visual-cpp-samples.md)<br/>
 [Ukázka DLGCBR32 knihovny MFC](../../visual-cpp-samples.md)<br/>

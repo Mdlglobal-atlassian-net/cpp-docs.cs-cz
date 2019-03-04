@@ -1,5 +1,5 @@
 ---
-title: Cd2dpointf – třída
+title: CD2DPointF Class
 ms.date: 11/04/2016
 f1_keywords:
 - CD2DPointF
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DPointF [MFC], CD2DPointF
 ms.assetid: 30f72083-1c8a-4f50-adb2-72dbbe3522d4
-ms.openlocfilehash: 7b9f6634e4b5980d8318557a8822549d226910b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8fe808c3147fa52c5041e2988822ace0ba60896
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559104"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304038"
 ---
-# <a name="cd2dpointf-class"></a>Cd2dpointf – třída
+# <a name="cd2dpointf-class"></a>CD2DPointF Class
 
 Obálka pro `D2D1_POINT_2F`.
 
@@ -62,13 +62,13 @@ CD2DPointF(FLOAT fX = 0., FLOAT fY = 0.);
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pt*<br/>
 zdrojový bod
 
 *fX*<br/>
 Zdroj X
 
-*FR*<br/>
+*fY*<br/>
 Zdroj Y
 
 ##  <a name="operator_cpoint"></a>  CD2DPointF::Operator CPoint
@@ -83,6 +83,6 @@ operator CPoint();
 
 Aktuální hodnota bodu D2D.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

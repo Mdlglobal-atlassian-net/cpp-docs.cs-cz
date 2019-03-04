@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 6fcff646a577500fd05b7c938b2c336ebe725957
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 02b7cbb9e66e1e8297699503fc510247efed1629
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894312"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301893"
 ---
 # <a name="csid-class"></a>CSID – třída
 
@@ -572,7 +572,7 @@ Vrací hodnotu datového člena, který ukládá hodnotu popisující stav `CSid
 
 Volání [CSid::LoadAccount](#loadaccount) aktualizovat `CSid` objekt před voláním `SidNameUse` vrátit svůj stav. `SidNameUse` nedojde ke změně stavu objektu (pomocí volání do `LookupAccountName` nebo `LookupAccountSid`), ale pouze vrátí aktuální stav.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázka zabezpečení](../../visual-cpp-samples.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)<br/>

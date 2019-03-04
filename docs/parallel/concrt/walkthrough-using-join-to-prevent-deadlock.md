@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Použití metody join k zabránění vzájemnému zablokování'
+title: 'Návod: Předcházení zablokování pomocí spojení'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - preventing deadlock with joins [Concurrency Runtime]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: b62f4007a79faaff479e4e8ff998a8b48e4d5dd1
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 2f9e0f50866ed0635fbaa4b700dbf522f09458d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175910"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303050"
 ---
-# <a name="walkthrough-using-join-to-prevent-deadlock"></a>Návod: Použití metody join k zabránění vzájemnému zablokování
+# <a name="walkthrough-using-join-to-prevent-deadlock"></a>Návod: Předcházení zablokování pomocí spojení
 
 Toto téma používá problém obědvajících filozofů si ukážeme, jak používat [concurrency::join](../../parallel/concrt/reference/join-class.md) třídy, aby se zabránilo zablokování v aplikaci. V případě aplikace softwaru *zablokování* nastane, pokud dva nebo více procesů jednotlivých uložení prostředku a vzájemně počkat na jiný proces uvolnit jiný prostředek.
 
@@ -148,11 +148,11 @@ plato ate 50 times.
 
 Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `philosophers-join.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
 
-**cl.exe/EHsc filozofů join.cpp**
+**cl.exe /EHsc philosophers-join.cpp**
 
 [[Horní](#top)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Návody pro Concurrency Runtime](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [Knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md)<br/>

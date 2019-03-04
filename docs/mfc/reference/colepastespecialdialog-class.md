@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-ms.openlocfilehash: 247514c37ef62987baa31be83efc73e05735904a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d135a2a254f71a4123a8bd338e1d6e9f87b74c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530023"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303310"
 ---
 # <a name="colepastespecialdialog-class"></a>Colepastespecialdialog – třída
 
@@ -91,9 +91,9 @@ Další informace o dialogových oken OLE konkrétní, najdete v článku [dialo
 
 [CDialog](../../mfc/reference/cdialog-class.md)
 
-[Ccommondialog –](../../mfc/reference/ccommondialog-class.md)
+[CCommonDialog](../../mfc/reference/ccommondialog-class.md)
 
-[Coledialog –](../../mfc/reference/coledialog-class.md)
+[COleDialog](../../mfc/reference/coledialog-class.md)
 
 `COlePasteSpecialDialog`
 
@@ -122,7 +122,7 @@ void AddFormat(
 
 ### <a name="parameters"></a>Parametry
 
-*FMT*<br/>
+*fmt*<br/>
 Odkaz na datový typ, který chcete přidat.
 
 *lpszFormat*<br/>
@@ -134,7 +134,7 @@ Odkaz na datový typ, který chcete přidat.
 *příznaky*<br/>
 Různé propojování a vkládání možnosti dostupné pro tento formát. Tento příznak je bitová kombinace hodnot jednoho nebo více různých hodnot v OLEUIPASTEFLAG výčtového typu.
 
-*CF*<br/>
+*cf*<br/>
 Formát schránky pro přidání.
 
 *objekt tymed*<br/>
@@ -151,7 +151,7 @@ Příznak, který určuje, zda je povoleno přepínací tlačítko Vložit odkaz
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této funkce můžete přidat buď standardní formáty, jako je například CF_TEXT nebo CF_TIFF nebo vlastní formáty, které vaše aplikace má registrovaný v systému. Další informace o vkládání dat objektů do vaší aplikace, najdete v článku [datové objekty a zdroje dat: manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).
+Voláním této funkce můžete přidat buď standardní formáty, jako je například CF_TEXT nebo CF_TIFF nebo vlastní formáty, které vaše aplikace má registrovaný v systému. Další informace o vkládání dat objektů do vaší aplikace, najdete v článku [datové objekty a zdroje dat: Manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Další informace najdete v tématu [objekt TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed) typ výčtu a [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura v sadě Windows SDK.
 
@@ -167,7 +167,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 
 ### <a name="parameters"></a>Parametry
 
-*CF*<br/>
+*cf*<br/>
 Formát schránky pro přidání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -381,7 +381,7 @@ Přímo nebo prostřednictvím členské funkce, lze upravit členy této strukt
 
 Další informace najdete v tématu [OLEUIPASTESPECIAL](/windows/desktop/api/oledlg/ns-oledlg-tagoleuipastespeciala) struktura v sadě Windows SDK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC OCLIENT](../../visual-cpp-samples.md)<br/>
 [COleDialog – třída](../../mfc/reference/coledialog-class.md)<br/>

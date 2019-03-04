@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CPropertyPageDialog class [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
-ms.openlocfilehash: 7027a58960e07903c9d774e07379c8050bc489b8
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3fe092e412cf11f7bf8600e8d0d7d43abb0e11c7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176455"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303895"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC – ovládací prvky ActiveX: Stránky vlastností
 
@@ -53,7 +53,7 @@ Informace o použití seznamů vlastností v aplikaci MFC než ovládací prvek 
 
 ##  <a name="_core_implementing_the_default_property_page"></a> Implementace výchozí stránky vlastností
 
-Pokud používáte Průvodce ovládacím prvkem ActiveX k vytvoření projektu ovládacího prvku, Průvodce ovládacím prvkem ActiveX poskytuje třídy stránky vlastností výchozí pro ovládací prvek odvozen od [COlePropertyPage – třída](../mfc/reference/colepropertypage-class.md). Na začátku této stránky vlastností je prázdná, ale k němu můžete přidat libovolný ovládací prvek dialogového okna nebo sadu ovládacích prvků. Vzhledem k tomu, že ve výchozím nastavení, další vlastnosti třídy stránky Průvodce ovládacím prvkem ActiveX vytvoří pouze jednu vlastnost třídy stránky (také odvozený z `COlePropertyPage`) musí být vytvořen pomocí zobrazení tříd. Další informace o tomto postupu najdete v tématu [knihovny MFC – ovládací prvky ActiveX: přidání další stránka vlastností vlastního](../mfc/mfc-activex-controls-adding-another-custom-property-page.md).
+Pokud používáte Průvodce ovládacím prvkem ActiveX k vytvoření projektu ovládacího prvku, Průvodce ovládacím prvkem ActiveX poskytuje třídy stránky vlastností výchozí pro ovládací prvek odvozen od [COlePropertyPage – třída](../mfc/reference/colepropertypage-class.md). Na začátku této stránky vlastností je prázdná, ale k němu můžete přidat libovolný ovládací prvek dialogového okna nebo sadu ovládacích prvků. Vzhledem k tomu, že ve výchozím nastavení, další vlastnosti třídy stránky Průvodce ovládacím prvkem ActiveX vytvoří pouze jednu vlastnost třídy stránky (také odvozený z `COlePropertyPage`) musí být vytvořen pomocí zobrazení tříd. Další informace o tomto postupu najdete v tématu [knihovny MFC – ovládací prvky ActiveX: Přidání další stránky přizpůsobených vlastností](../mfc/mfc-activex-controls-adding-another-custom-property-page.md).
 
 Implementace vlastnosti stránky (v tomto případě výchozí hodnota) je třech krocích:
 
@@ -115,7 +115,7 @@ Jakmile budete mít ovládacích prvků stránky vlastností, vložit, budete mu
 |`DDP_Radio`|Přepínací tlačítko s vlastností ovládacího prvku.|
 |`DDP_Text`|Text s vlastností ovládacího prvku.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)<br/>
 [COlePropertyPage – třída](../mfc/reference/colepropertypage-class.md)

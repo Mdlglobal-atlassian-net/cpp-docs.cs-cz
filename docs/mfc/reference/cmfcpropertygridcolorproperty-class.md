@@ -1,5 +1,5 @@
 ---
-title: Cmfcpropertygridcolorproperty – třída
+title: CMFCPropertyGridColorProperty Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCPropertyGridColorProperty
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - CMFCPropertyGridColorProperty [MFC], SetColumnsNumber
 - CMFCPropertyGridColorProperty [MFC], SetOriginalValue
 ms.assetid: af37be93-a91e-40a2-9a65-0f3412c6f0f8
-ms.openlocfilehash: c284906a85ec93c5c5419acb783f6f46ebcf03e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65c2c22c93dc3acb50fc4627c3710a3f0c86aeb0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575731"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303960"
 ---
-# <a name="cmfcpropertygridcolorproperty-class"></a>Cmfcpropertygridcolorproperty – třída
+# <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty Class
 
 `CMFCPropertyGridColorProperty` Třída podporuje položku ovládacího prvku seznamu s, která se otevře dialogové okno Výběr barvy.
 
@@ -52,13 +52,13 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
 |----------|-----------------|
 |[CMFCPropertyGridColorProperty::EnableAutomaticButton](#enableautomaticbutton)|Umožňuje *automatické* tlačítko na dialogové okno Výběr barvy. (Standardní automatické tlačítko má název **automatické**.)|
 |[CMFCPropertyGridColorProperty::EnableOtherButton](#enableotherbutton)|Umožňuje *jiných* tlačítko na dialogové okno Výběr barvy. (Standardní jiné tlačítko má název **Další barvy**.)|
-|`CMFCPropertyGridColorProperty::FormatProperty`|Formátuje textovou reprezentaci hodnoty vlastnosti. (Přepíše [CMFCPropertyGridProperty::FormatProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|
+|`CMFCPropertyGridColorProperty::FormatProperty`|Formátuje textovou reprezentaci hodnoty vlastnosti. (Overrides [CMFCPropertyGridProperty::FormatProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|
 |[CMFCPropertyGridColorProperty::GetColor](#getcolor)|Získá aktuální barvu vlastnosti.|
 |`CMFCPropertyGridColorProperty::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|
-|`CMFCPropertyGridColorProperty::OnClickButton`|Volá se rozhraním, když uživatel klikne na tlačítko, který je obsažen ve vlastnosti. (Přepíše [CMFCPropertyGridProperty::OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|
+|`CMFCPropertyGridColorProperty::OnClickButton`|Volá se rozhraním, když uživatel klikne na tlačítko, který je obsažen ve vlastnosti. (Overrides [CMFCPropertyGridProperty::OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|
 |`CMFCPropertyGridColorProperty::OnDrawValue`|Volá se rozhraním, aby zobrazil hodnotu vlastnosti. (Přepíše [CMFCPropertyGridProperty::OnDrawValue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue).)|
-|`CMFCPropertyGridColorProperty::OnEdit`|Volá se rozhraním, když se uživatel chystá upravit hodnotu vlastnosti. (Přepíše [CMFCPropertyGridProperty::OnEdit](../../mfc/reference/cmfcpropertygridproperty-class.md#onedit).)|
-|`CMFCPropertyGridColorProperty::OnUpdateValue`|Volá se rozhraním, se při změně hodnoty vlastnosti upravovat. (Přepíše [CMFCPropertyGridProperty::OnUpdateValue](../../mfc/reference/cmfcpropertygridproperty-class.md#onupdatevalue).)|
+|`CMFCPropertyGridColorProperty::OnEdit`|Volá se rozhraním, když se uživatel chystá upravit hodnotu vlastnosti. (Overrides [CMFCPropertyGridProperty::OnEdit](../../mfc/reference/cmfcpropertygridproperty-class.md#onedit).)|
+|`CMFCPropertyGridColorProperty::OnUpdateValue`|Volá se rozhraním, se při změně hodnoty vlastnosti upravovat. (Overrides [CMFCPropertyGridProperty::OnUpdateValue](../../mfc/reference/cmfcpropertygridproperty-class.md#onupdatevalue).)|
 |[CMFCPropertyGridColorProperty::SetColor](#setcolor)|Nastaví barvu nové vlastnosti.|
 |[CMFCPropertyGridColorProperty::SetColumnsNumber](#setcolumnsnumber)|Určuje počet sloupců v mřížce vlastnost aktuální barvu.|
 |[CMFCPropertyGridColorProperty::SetOriginalValue](#setoriginalvalue)|Nastaví původní hodnoty upravovat vlastnosti.|
@@ -77,13 +77,13 @@ Následující příklad ukazuje, jak vytvořit objekt `CMFCPropertyGridColorPro
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cmfcpropertygridproperty –](../../mfc/reference/cmfcpropertygridproperty-class.md)
+[CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)
 
-[Cmfcpropertygridcolorproperty –](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)
+[CMFCPropertyGridColorProperty](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxpropertygridctrl.h
+**Header:** afxpropertygridctrl.h
 
 ##  <a name="cmfcpropertygridcolorproperty"></a>  CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty
 
@@ -100,10 +100,10 @@ CMFCPropertyGridColorProperty(
 
 ### <a name="parameters"></a>Parametry
 
-*%{strName/*<br/>
+*strName*<br/>
 [in] Název vlastnosti.
 
-*Barva*<br/>
+*color*<br/>
 [in] Hodnota barvy vlastnosti.
 
 *pPalette*<br/>
@@ -131,7 +131,7 @@ void EnableAutomaticButton(
 *lpszLabel*<br/>
 [in] Text popisku tlačítka pro automatické.
 
-*barvaAutomatická*<br/>
+*colorAutomatic*<br/>
 [in] Hodnota barvy RGB barvy automaticky (výchozí).
 
 *bEnable*<br/>
@@ -187,7 +187,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*Barva*<br/>
+*color*<br/>
 [in] Hodnota barvy RGB.
 
 ### <a name="remarks"></a>Poznámky
@@ -226,7 +226,7 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 
 Použití [CMFCPropertyGridProperty::ResetOriginalValue](../../mfc/reference/cmfcpropertygridproperty-class.md#resetoriginalvalue) metoda obnovit původní hodnotu upravených vlastností.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

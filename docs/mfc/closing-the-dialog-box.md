@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], closing
 - dialog boxes [MFC], closing
 ms.assetid: 946f5675-c482-46a4-a5dd-34fe138ffae5
-ms.openlocfilehash: fe57c5603f1b0e9ea0b6fb9e6ea8d80bec961f6e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07e4159eccde1fab89d4a5ffadee4e6d11fc20f0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448110"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302575"
 ---
 # <a name="closing-the-dialog-box"></a>Zavření dialogového okna
 
@@ -18,7 +18,6 @@ Modální dialogové okno se zavře, když uživatel vybere jeden z jeho tlačí
 
 Pokud chcete uspořádat pro zavření a odstranění nemodální dialogové okno, přepište `PostNcDestroy` a vyvolat **odstranit** operátoru u **to** ukazatele. [Zničení dialogových oken](../mfc/destroying-the-dialog-box.md) vysvětluje, co bude dál.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
-

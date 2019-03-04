@@ -1,5 +1,5 @@
 ---
-title: Ccontextmenumanager – třída
+title: CContextMenuManager Class
 ms.date: 11/04/2016
 f1_keywords:
 - CContextMenuManager
@@ -28,14 +28,14 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], ShowPopupMenu
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
-ms.openlocfilehash: 49e9b1cd12bee562daaf4ffb40492c80d8549ec3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 594b78fd36dcb1ff92c63867688c38eac7520eba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639331"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304327"
 ---
-# <a name="ccontextmenumanager-class"></a>Ccontextmenumanager – třída
+# <a name="ccontextmenumanager-class"></a>CContextMenuManager Class
 
 `CContextMenuManager` Objektu spravuje místní nabídky, také známé jako kontextové nabídky.
 
@@ -372,7 +372,7 @@ ID nabídky příkazu příkazu, který uživatel vybere; 0, pokud uživatel nez
 
 Tato metoda funguje jako modální volání zobrazit místní nabídku. Aplikace nebude pokračovat na následující řádek kódu, dokud uživatel zavře nabídku nebo vybere příkaz. Je alternativní metoda, která slouží k zobrazení místní nabídky [CContextMenuManager::ShowPopupMenu](#showpopupmenu). Tato metoda není modální volání a nevrátí ID vybraného příkazu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

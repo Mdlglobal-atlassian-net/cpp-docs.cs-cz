@@ -1,5 +1,5 @@
 ---
-title: Cmfcpropertygridproperty – třída
+title: CMFCPropertyGridProperty Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCPropertyGridProperty
@@ -166,14 +166,14 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: f7a8cca3da85e3ac0b7b7e63e83d394a0e8a9899
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 550f238ae66bcaf7d5afc245b709c42c78769949
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524724"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305065"
 ---
-# <a name="cmfcpropertygridproperty-class"></a>Cmfcpropertygridproperty – třída
+# <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty Class
 
 A `CMFCPropertyGridProperty` objekt představuje položku ovládacího prvku seznamu vlastností.
 
@@ -305,11 +305,11 @@ Následující příklad ukazuje, jak vytvořit `CMFCPropertyGridProperty` objek
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cmfcpropertygridproperty –](../../mfc/reference/cmfcpropertygridproperty-class.md)
+[CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxpropertygridctrl.h
+**Header:** afxpropertygridctrl.h
 
 ##  <a name="addoption"></a>  CMFCPropertyGridProperty::AddOption
 
@@ -439,7 +439,7 @@ CMFCPropertyGridProperty(
 *dwData*<br/>
 [in] Specifická data, jako je například celé číslo nebo ukazatel na další data, která souvisí s vlastností. Výchozí hodnota je 0.
 
-*%{strName/*<br/>
+*strName*<br/>
 [in] Název vlastnosti.
 
 *varValue*<br/>
@@ -566,10 +566,10 @@ void EnableSpinControl(
 *bEnable*<br/>
 [in] TRUE, pokud chcete povolit otočný ovládací prvek tlačítka; FALSE, pokud chcete zakázat otočný ovládací prvek tlačítko. Výchozí hodnota je TRUE.
 
-*Nminimum*<br/>
+*nMin*<br/>
 [in] Minimální hodnota otočný ovládací prvek tlačítko. Výchozí hodnota je 0.
 
-*Nmaximum*<br/>
+*nMax*<br/>
 [in] Maximální hodnota otočný ovládací prvek tlačítko. Výchozí hodnota je 0.
 
 ### <a name="remarks"></a>Poznámky
@@ -880,10 +880,10 @@ CMFCPropertyGridProperty* HitTest(
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Bod, který chcete otestovat, v souřadnicích klienta. Tento parametr je obvykle aktuální umístění ukazatele myši.
 
-*PT*<br/>
+*pt*<br/>
 [in] Bod, který chcete otestovat, v souřadnicích klienta.
 
 *pnArea*<br/>
@@ -1129,7 +1129,7 @@ virtual void OnClickButton(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Bod, v souřadnicích klienta.
 
 ### <a name="remarks"></a>Poznámky
@@ -1169,7 +1169,7 @@ virtual BOOL OnClickValue(
 *uiMsg*<br/>
 [in] Zpráva myši.
 
-*Bod*<br/>
+*point*<br/>
 [in] Bod, v souřadnicích klienta.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1202,7 +1202,7 @@ virtual HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *nCtlColor*<br/>
@@ -1224,7 +1224,7 @@ virtual BOOL OnDblClk(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Bod, v souřadnicích klienta.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1257,7 +1257,7 @@ virtual void OnDrawButton(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *rectButton*<br/>
@@ -1277,7 +1277,7 @@ virtual void OnDrawDescription(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *Rect*<br/>
@@ -1299,7 +1299,7 @@ virtual void OnDrawExpandBox(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *rectExpand*<br/>
@@ -1321,7 +1321,7 @@ virtual void OnDrawName(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *Rect*<br/>
@@ -1341,7 +1341,7 @@ virtual void OnDrawValue(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *Rect*<br/>
@@ -1416,7 +1416,7 @@ virtual void OnKillSelection(CMFCPropertyGridProperty*);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *Cmfcpropertygridproperty –&#42;*<br/>
+[in] *CMFCPropertyGridProperty&#42;*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1501,7 +1501,7 @@ Hodnota TRUE, pokud je aktuální vlastnost typu variant ani seznam hodnot, a ta
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda podporuje následující typy variant: VT_INT VT_I2, VT_I4, VT_UINT, VT_UI1, VT_UI2, VT_UI4, VT_R4, VT_R8 a VT_BSTR.
+Tato metoda podporuje následující typy variant: VT_INT, VT_I2, VT_I4, VT_UINT, VT_UI1, VT_UI2, VT_UI4, VT_R4, VT_R8, and VT_BSTR.
 
 ##  <a name="onsetselection"></a>  CMFCPropertyGridProperty::OnSetSelection
 
@@ -1511,7 +1511,7 @@ virtual void OnSetSelection CMFCPropertyGridProperty*);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *Cmfcpropertygridproperty –&#42;*<br/>
+[in] *CMFCPropertyGridProperty&#42;*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1550,7 +1550,7 @@ Hodnota TRUE, pokud je pokračování operace úprav; v opačném případě hod
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda podporuje vlastnost, která může být buď seznam hodnot nebo jedna z následujících typů variant: VT_INT VT_I2, VT_I4, VT_UINT, VT_UI1, VT_UI2, VT_UI4, VT_R4, VT_R8 a VT_BSTR.
+Tato metoda podporuje vlastnost, která je seznam hodnot nebo jeden z následujících typů variant: VT_INT, VT_I2, VT_I4, VT_UINT, VT_UI1, VT_UI2, VT_UI4, VT_R4, VT_R8, and VT_BSTR.
 
 ##  <a name="redraw"></a>  CMFCPropertyGridProperty::Redraw
 
@@ -1710,7 +1710,7 @@ void Show(
 *bAdjustLayout*<br/>
 [in] TRUE, pokud chcete přepočítat vykreslení popisku a hodnotu vlastnosti a následně nakreslete vlastnost; FALSE pro existující výpočty, použijte, chcete-li nakreslit vlastnost. Výchozí hodnota je TRUE.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetButtonsFont
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
-ms.openlocfilehash: fd865d888a4ebe4504f19282d3c98ce8d7514e2c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be11bcd4cdbcd8448cc54f688d7dab9b61f49a57
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622622"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304077"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar – třída
 
@@ -89,7 +89,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ## <a name="remarks"></a>Poznámky
 
-Příklad panel aplikace Outlook, najdete v článku [OutlookDemo vzorku: aplikace knihovny MFC OutlookDemo](../../visual-cpp-samples.md).
+Příklad panel aplikace Outlook, najdete v článku [OutlookDemo vzorku: Aplikace MFC OutlookDemo](../../visual-cpp-samples.md).
 
 ## <a name="implementing-the-outlook-bar"></a>Implementace panelu aplikace Outlook
 
@@ -177,9 +177,9 @@ Použití [CMFCOutlookBar::SetMode2003](#setmode2003) pro povolení režimu Outl
 
 [CDockablePane](../../mfc/reference/cdockablepane-class.md)
 
-[Cbasetabbedpane –](../../mfc/reference/cbasetabbedpane-class.md)
+[CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md)
 
-[CMFCOutlookBar –](../../mfc/reference/cmfcoutlookbar-class.md)
+[CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -511,7 +511,7 @@ BOOL RemoveCustomPage(
 
 ### <a name="parameters"></a>Parametry
 
-*Element uiPage*<br/>
+*uiPage*<br/>
 [in] Z nuly vycházející index stránky v nadřazené okno aplikace Outlook.
 
 *pTargetWnd*<br/>
@@ -573,7 +573,7 @@ Tento režim je ve výchozím nastavení zakázána.
 > [!NOTE]
 >  Tato funkce musí být volána před [CMFCOutlookBar::Create](#create).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

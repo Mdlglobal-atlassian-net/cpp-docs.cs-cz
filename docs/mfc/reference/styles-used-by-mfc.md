@@ -196,12 +196,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: b47fa90fff6753b805d7fd0495050e45bc915d5d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: eb5123c347fdb847cade54f15764f175ee0ab799
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694774"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304896"
 ---
 # <a name="styles-used-by-mfc"></a>Styly využívané prostředím MFC
 
@@ -360,10 +360,10 @@ Tyto styly oken zpráv jsou k dispozici.
 
 |Styl|Popis|
 |-----------|-----------------|
-|MB_ABORTRETRYIGNORE|Do pole zpráva obsahuje tři tlačítek: Abort, zkuste to znovu a ignorovat.|
+|MB_ABORTRETRYIGNORE|Do pole zpráva obsahuje tři tlačítek: Přerušit, zkuste to znovu a ignorovat.|
 |MB_OK|Do pole zpráva obsahuje jeden pushbutton: OK.|
 |MB_OKCANCEL|Do pole zpráva obsahuje dvě tlačítek: OK a zrušit.|
-|MB_RETRYCANCEL|Do pole zpráva obsahuje dvě tlačítek: opakování a zrušit.|
+|MB_RETRYCANCEL|Do pole zpráva obsahuje dvě tlačítek: Zkuste to znovu a zrušit.|
 |MB_YESNO|Do pole zpráva obsahuje dvě tlačítek: Ano i ne|
 |MB_YESNOCANCEL|Do pole zpráva obsahuje tři tlačítek: Ano, ne a zrušit.|
 
@@ -506,7 +506,7 @@ Rozšířené styly oken platí pro [třída CWnd](../../mfc/reference/cwnd-clas
 |WS_EX_TRANSPARENT|Určuje, že okno vytvořené s tímto stylem má být průhledné. To znamená, že žádné okno není umístěním pod toto okno zakryto. Okno vytvořené s tímto stylem přijímá zprávy WM_PAINT pouze po aktualizaci všechna okna stejné úrovně pod ním.|
 |WS_EX_WINDOWEDGE|Určuje, že okno má ohraničení s vystouplým okrajem.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled třídy knihovny MFC](../../mfc/class-library-overview.md)<br/>
 [CWnd::Create](../../mfc/reference/cwnd-class.md#create)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Cmfctabdroptarget – třída
+title: CMFCTabDropTarget Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCTabDropTarget
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - CMFCTabDropTarget [MFC], OnDropEx
 - CMFCTabDropTarget [MFC], Register
 ms.assetid: 9777b7b6-10da-4c4b-b1d1-7ea795b0f1cb
-ms.openlocfilehash: bd68179be21fec85c0ebb901c2a8c9a4491ff401
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b24d7679edfaab4d4eeb6d59770f30cd4253580
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534822"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303934"
 ---
-# <a name="cmfctabdroptarget-class"></a>Cmfctabdroptarget – třída
+# <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget Class
 
 Poskytuje mechanismus pro komunikaci mezi ovládacím prvkem karta a knihovnami OLE.
 
@@ -71,13 +71,13 @@ Následující příklad ukazuje, jak vytvořit `CMFCTabDropTarget` objektu a po
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[Coledroptarget –](../../mfc/reference/coledroptarget-class.md)
+[COleDropTarget](../../mfc/reference/coledroptarget-class.md)
 
-[Cmfctabdroptarget –](../../mfc/reference/cmfctabdroptarget-class.md)
+[CMFCTabDropTarget](../../mfc/reference/cmfctabdroptarget-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxbasetabctrl.h
+**Header:** afxbasetabctrl.h
 
 ##  <a name="ondragenter"></a>  CMFCTabDropTarget::OnDragEnter
 
@@ -99,7 +99,7 @@ virtual DROPEFFECT OnDragEnter(
 |*pWnd*|[in] Nevyužité.|
 |*pDataObject*|[in] Ukazatel na objekt, který uživatel přetáhne.|
 |*dwKeyState*|[in] Obsahuje informace o stavu modifikační klávesy. Jedná se o kombinaci libovolný počet následující: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON.|
-|*Bod*|[in] Umístění kurzoru v souřadnicích klienta.|
+|*point*|[in] Umístění kurzoru v souřadnicích klienta.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -160,7 +160,7 @@ virtual DROPEFFECT OnDragOver(
 |*pWnd*|[in] Nevyužité.|
 |*pDataObject*|[in] Ukazatel na objekt, který uživatel přetáhne.|
 |*dwKeyState*|[in] Obsahuje informace o stavu modifikační klávesy. Jedná se o kombinaci libovolný počet následující: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON.|
-|*Bod*|[in] Umístění ukazatele myši v souřadnice klienta.|
+|*point*|[in] Umístění ukazatele myši v souřadnice klienta.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -203,8 +203,8 @@ virtual DROPEFFECT OnDropEx(
 |*pWnd*|[in] Nevyužité.|
 |*pDataObject*|[in] Ukazatel na objekt, který uživatel přetáhne.|
 |*dropEffect*|[in] Výchozí operaci přetažení.|
-|*rozevíracího seznamu*|[in] Nevyužité.|
-|*Bod*|[in] Umístění ukazatele myši v souřadnice klienta.|
+|*dropList*|[in] Nevyužité.|
+|*point*|[in] Umístění ukazatele myši v souřadnice klienta.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -249,9 +249,8 @@ Nenulové, pokud byla registrace úspěšná. jinak 0.
 
 Tato metoda volá [COleDropTarget::Register](../../mfc/reference/coledroptarget-class.md#register) zaregistrovat ovládací prvky pro operace a přetažení.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
 [Přetažení (OLE)](../../mfc/drag-and-drop-ole.md)
-

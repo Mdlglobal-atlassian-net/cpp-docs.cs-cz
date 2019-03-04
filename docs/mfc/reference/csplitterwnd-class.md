@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 450699d001ee7246742fe23d9bf89d03c2d61cb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42913ddea7818636dce8d630ed2d79d13c19ce81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600506"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302101"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd – třída
 
@@ -391,7 +391,7 @@ virtual BOOL CreateView(
 *Řádek*<br/>
 Určuje řádku rozdělovač okna ve kterém je umístí nové zobrazení.
 
-*sloupec*<br/>
+*col*<br/>
 Určuje sloupec rozdělovač okna, ve kterém k umístění nového zobrazení.
 
 *pViewClass*<br/>
@@ -478,7 +478,7 @@ virtual void DeleteView(
 *Řádek*<br/>
 Určuje řádku rozdělovač okna ve kterém se má odstranit zobrazení.
 
-*sloupec*<br/>
+*col*<br/>
 Určuje sloupec rozdělovač okna na kterou chcete odstranit zobrazení.
 
 ### <a name="remarks"></a>Poznámky
@@ -628,7 +628,7 @@ void GetColumnInfo(
 
 ### <a name="parameters"></a>Parametry
 
-*sloupec*<br/>
+*col*<br/>
 Určuje sloupec.
 
 *cxCur*<br/>
@@ -652,7 +652,7 @@ CWnd* GetPane(
 *Řádek*<br/>
 Určuje řádek.
 
-*sloupec*<br/>
+*col*<br/>
 Určuje sloupec.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -730,7 +730,7 @@ int IdFromRowCol(
 *Řádek*<br/>
 Určuje řádku rozdělovač okna.
 
-*sloupec*<br/>
+*col*<br/>
 Určuje sloupec rozdělovač okna.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -804,10 +804,10 @@ virtual void OnDrawSplitter(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel na kontext zařízení, ve kterém chcete-li nakreslit. Pokud *primárního řadiče domény* má hodnotu NULL, pak [CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow) nazývá a žádná rozdělení okna vykreslením.
 
-*nTyp*<br/>
+*nType*<br/>
 Hodnota `enum ESplitType`, což může být jeden z následujících akcí:
 
     - `splitBox` Přetáhněte pole rozdělovač.
@@ -880,7 +880,7 @@ virtual void SetActivePane(
 *Řádek*<br/>
 Pokud *pWnd* má hodnotu NULL, určuje řádku v podokně, které bude aktivní.
 
-*sloupec*<br/>
+*col*<br/>
 Pokud *pWnd* má hodnotu NULL, určuje sloupec v podokně, které bude aktivní.
 
 *pWnd*<br/>
@@ -905,7 +905,7 @@ void SetColumnInfo(
 
 ### <a name="parameters"></a>Parametry
 
-*sloupec*<br/>
+*col*<br/>
 Určuje sloupec rozdělovač okna.
 
 *cxIdeal*<br/>
@@ -1029,12 +1029,12 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel na kontext zařízení.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC VIEWEX](../../visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>

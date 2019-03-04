@@ -9,16 +9,16 @@ helpviewer_keywords:
 - toolbar controls [MFC], creating
 - CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: f19d8d65-d49f-445c-abe8-d47d3e4101c8
-ms.openlocfilehash: 5296c0454e035770e196c3d6a4d15291d0c4ca6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f269ad990042f51554ec598b0bddbe5a6d7776b8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612456"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304389"
 ---
 # <a name="methods-of-creating-a-toolbar"></a>Metody vytváření panelů nástrojů
 
-Knihovna MFC poskytuje dvě třídy pro vytváření panelů nástrojů: [ctoolbar –](../mfc/reference/ctoolbar-class.md) a [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) (která zabalí Windows běžný ovládací prvek rozhraní API). `CToolBar` obsahuje všechny funkce běžný ovládací prvek panelu nástrojů, a zpracovává mnoho struktury a vyžaduje obecná nastavení ovládacího prvku pro vás. Avšak výsledný spustitelný soubor obvykle bude větší než vytvořený pomocí `CToolBarCtrl`.
+Knihovna MFC poskytuje dvě třídy pro vytváření panelů nástrojů: [Ctoolbar –](../mfc/reference/ctoolbar-class.md) a [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) (která zabalí Windows běžný ovládací prvek rozhraní API). `CToolBar` obsahuje všechny funkce běžný ovládací prvek panelu nástrojů, a zpracovává mnoho struktury a vyžaduje obecná nastavení ovládacího prvku pro vás. Avšak výsledný spustitelný soubor obvykle bude větší než vytvořený pomocí `CToolBarCtrl`.
 
 `CToolBarCtrl` obvykle za následek menší spustitelný soubor a možná dáte přednost použití `CToolBarCtrl` Pokud nezamýšlíte integrovat architektury MFC panelu nástrojů. Pokud budete chtít použít `CToolBarCtrl` a integrovat panelu nástrojů do architektury MFC, je nutné provést dodatečnou pozornost komunikovat manipulace ovládacího prvku panel nástrojů ke knihovně MFC. Tato zpráva není složité. je však další práce, nebude potřeba při použití `CToolBar`.
 
@@ -30,8 +30,7 @@ Visual C++ poskytuje dva způsoby, jak využít výhod běžný ovládací prvek
 
 Některé z metod získáte přístup na členské funkce ovládacího prvku toolbar. Při volání `CToolBar::GetToolBarCtrl`, vrátí odkaz na `CToolBarCtrl` objektu, můžete použít buď sadu členské funkce. Zobrazit [ctoolbar –](../mfc/reference/ctoolbar-class.md) informace o vytváření a vytvořit pomocí nástrojů `CToolBar`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

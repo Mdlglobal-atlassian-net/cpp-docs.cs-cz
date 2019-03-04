@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CView class [MFC], interpreting user input
 - user input [MFC], interpreting through view class [MFC]
 ms.assetid: f0302a70-661f-4781-8fe7-78f082bef2a5
-ms.openlocfilehash: fe64f7c499b4a7c93f628fa0dff0855c379cbd58
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ef23ad74e1ff53d947453faa5682c5ecc1f4e43
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552565"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304445"
 ---
 # <a name="interpreting-user-input-through-a-view"></a>Interpretace vstupu uživatele prostřednictvím zobrazení
 
@@ -39,7 +39,6 @@ Vaše aplikace například může být nutné implementovat přímým přístupe
 
 Zobrazení může také zpracovávat určité příkazy nabídek, jako jsou ty z nabídky Úpravy na vyjmutí, kopírování, vložení nebo odstranění vybraných dat pomocí schránky. Tyto rutiny by volat některý člen schránky související funkce třídy `CWnd` přenést položka vybraná data do nebo ze schránky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití zobrazení](../mfc/using-views.md)
-

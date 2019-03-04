@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: Jak pracují sokety s archivy'
+title: 'Windows Sockets: Jak pracují sokety s archivy'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - Windows Sockets [MFC], synchronous
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Windows Sockets [MFC], with archives
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
-ms.openlocfilehash: f6101193c85e41fbf82681b0b2ae1e09e4162f87
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3af94bc881276238f1a8d2dbeeee4dca1f173a4b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174909"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300684"
 ---
-# <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: Jak pracují sokety s archivy
+# <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: Jak pracují sokety s archivy
 
 Tento článek vysvětluje, jak [csocket –](../mfc/reference/csocket-class.md) objektu, [csocketfile –](../mfc/reference/csocketfile-class.md) objektu a [CArchive](../mfc/reference/carchive-class.md) objektu jsou sloučeny pro zjednodušení odesílání a přijímání dat prostřednictvím Windows Soket.
 
-Článek [rozhraní Windows Sockets: příklad z Sockets pomocí archivy](../mfc/windows-sockets-example-of-sockets-using-archives.md) uvede `PacketSerialize` funkce. Objekt archiv v `PacketSerialize` příklad funguje stejně jako archiv objekt předaný do knihovny MFC [serializace](../mfc/reference/cobject-class.md#serialize) funkce. Základní rozdíl je, že soketů, archivu je přiřazena není standardní [cfile –](../mfc/reference/cfile-class.md) objektu (obvykle přidružené k souboru na disku) ale položky `CSocketFile` objektu. Místo připojování k souboru na disku, `CSocketFile` objekt připojí k `CSocket` objektu.
+Tento článek [rozhraní Windows Sockets: Příklad Sockets pomocí archivy](../mfc/windows-sockets-example-of-sockets-using-archives.md) uvede `PacketSerialize` funkce. Objekt archiv v `PacketSerialize` příklad funguje stejně jako archiv objekt předaný do knihovny MFC [serializace](../mfc/reference/cobject-class.md#serialize) funkce. Základní rozdíl je, že soketů, archivu je přiřazena není standardní [cfile –](../mfc/reference/cfile-class.md) objektu (obvykle přidružené k souboru na disku) ale položky `CSocketFile` objektu. Místo připojování k souboru na disku, `CSocketFile` objekt připojí k `CSocket` objektu.
 
 A `CArchive` objekt spravuje vyrovnávací paměti. Po zaplnění vyrovnávací paměti ukládání archivu (odesílání), přidružené `CFile` objekt zapíše do vyrovnávací paměti obsahu. Vyprazdňování vyrovnávací paměti archiv připojený soket je ekvivalentní k odeslání zprávy. Po zaplnění vyrovnávací paměti načtení (přijímání) archivu `CFile` objekt zastaví čtení až do vyrovnávací paměti je opět k dispozici.
 
@@ -46,9 +46,9 @@ Pokud `CSocket` nejsou implementované jako objekt dvou stavů, je možné přij
 
 V režimu "archivu compatible" `CSocketFile` objekt poskytuje lepší výkon a snižuje nebezpečí "zablokování." K zablokování dochází tehdy, jsou čekání na sebe navzájem a odesílající sokety, nebo čeká na běžné prostředek. Tato situace může nastat, pokud `CArchive` objektu ve spolupráci s `CSocketFile` tak, jak to funguje se službou `CFile` objektu. S `CFile`, archivu můžete předpokládat, že pokud obdrží méně bajtů než je požadováno, na konci souboru se dosáhlo. S `CSocketFile`, ale data jsou zprávy na základě; vyrovnávací paměti může obsahovat více zpráv, tak přijímá méně než počet bajtů neznamená konec souboru. Aplikace není v tomto případě blokování, jak se může stát, že se `CFile`, a můžete pokračovat, přečte zprávy z vyrovnávací paměti, dokud vyrovnávací paměť je prázdná. [IsBufferEmpty](../mfc/reference/carchive-class.md#isbufferempty) fungovat v `CArchive` je užitečný pro sledování stavu archivu vyrovnávací paměti v takovém případě.
 
-Další informace najdete v tématu [rozhraní Windows Sockets: použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md)
+Další informace najdete v tématu [rozhraní Windows Sockets: Použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)<br/>
 [CObject::Serialize](../mfc/reference/cobject-class.md#serialize)

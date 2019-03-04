@@ -1,5 +1,5 @@
 ---
-title: Cmfcribbonapplicationbutton – třída
+title: CMFCRibbonApplicationButton Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonApplicationButton
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - CMFCRibbonApplicationButton [MFC], CMFCRibbonApplicationButton
 - CMFCRibbonApplicationButton [MFC], SetImage
 ms.assetid: beb81757-fabd-4641-9130-876ba8505b78
-ms.openlocfilehash: 6bf62cc414162a15ee685361cacad8d72fc41b06
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 892e9e56b6df5bc0a3dc0aa9cf3786e36b5311c7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600343"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302634"
 ---
-# <a name="cmfcribbonapplicationbutton-class"></a>Cmfcribbonapplicationbutton – třída
+# <a name="cmfcribbonapplicationbutton-class"></a>CMFCRibbonApplicationButton Class
 
 Implementuje speciální tlačítko umístěné v levém horním rohu okna aplikace. Po kliknutí na tlačítko otevře nabídku, která obvykle obsahuje běžné **souboru** příkazy jako **otevřít**, **Uložit**, a **ukončovací**.
 
@@ -56,9 +56,9 @@ Následující příklad ukazuje, jak použít různé metody v `CMFCRibbonAppli
 
 [Cmfcribbonbaseelement –](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
-[Cmfcribbonbutton –](../../mfc/reference/cmfcribbonbutton-class.md)
+[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
 
-[Cmfcribbonapplicationbutton –](../../mfc/reference/cmfcribbonapplicationbutton-class.md)
+[CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -107,7 +107,7 @@ void SetImage(HBITMAP hBmp);
 
 Pomocí této metody můžete po vytvoření tlačítka přiřadit novou bitovou kopii na pásu karet tlačítko aplikace. Tlačítko aplikace se nachází v levém horním rohu okna aplikace.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

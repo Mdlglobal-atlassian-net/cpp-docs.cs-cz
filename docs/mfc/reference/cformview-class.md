@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CFormView [MFC], CFormView
 - CFormView [MFC], IsInitDlgCompleted
 ms.assetid: a99ec313-36f0-4f28-9d2b-de11de14ac19
-ms.openlocfilehash: 37ae7ca2efeb579cba388e22cf0fe450a068e721
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d1f6a19e0fb2ddb88602600e02aec45936ce599
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651955"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305104"
 ---
 # <a name="cformview-class"></a>CFormView – třída
 
@@ -61,7 +61,7 @@ Průvodce aplikací knihovny MFC a příkaz Přidat třídu, jsou upřednostňov
 
 [CView](../../mfc/reference/cview-class.md)
 
-[Cscrollview –](../../mfc/reference/cscrollview-class.md)
+[CScrollView](../../mfc/reference/cscrollview-class.md)
 
 `CFormView`
 
@@ -113,7 +113,7 @@ BOOL IsInitDlgCompleted() const;
 
 True, pokud byla dokončena inicializace funkce pro tento dialog.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC SNAPVW](../../visual-cpp-samples.md)<br/>
 [Ukázky knihovny MFC VIEWEX](../../visual-cpp-samples.md)<br/>

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - simple_partitioner class
 ms.assetid: d7e997af-54d1-43f5-abe0-def72df6edb3
-ms.openlocfilehash: f3c5792a13d9e63a05ce6710dea77828f2510f0d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 372773926903da32f1690904b34cd143a04940dd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522444"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301269"
 ---
 # <a name="simplepartitioner-class"></a>simple_partitioner – třída
 
@@ -44,7 +44,7 @@ class simple_partitioner;
 
 **Namespace:** souběžnosti
 
-##  <a name="dtor"></a> ~ simple_partitioner –
+##  <a name="dtor"></a> ~simple_partitioner
 
 Odstraní `simple_partitioner` objektu.
 
@@ -65,6 +65,6 @@ explicit simple_partitioner(_Size_type _Chunk_size);
 *_Chunk_size*<br/>
 Požadovanou minimální velikost oddílu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)

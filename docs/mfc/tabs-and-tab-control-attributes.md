@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tabs [MFC], attributes
 - CTabCtrl class [MFC], tab control attributes
 ms.assetid: ecf190cb-f323-4751-bfdb-766dbe6bb553
-ms.openlocfilehash: ba63fdca32af28d0763dd4cf2da3465a99ddeb1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca9f89565770e60a59007d609d132fae15eacae6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571987"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304792"
 ---
 # <a name="tabs-and-tab-control-attributes"></a>Karty a atributy ovládacího prvku karta
 
@@ -27,8 +27,7 @@ Následující kód vymaže stav všech položek kartu a pak změní stav třet�
 
 Další informace o atributech kartu, najdete v části [karty a atributy karta](/windows/desktop/Controls/tab-controls) v sadě Windows SDK. Další informace o přidání karet do ovládacího prvku karta, naleznete v tématu [přidání karet do ovládacího prvku karta](../mfc/adding-tabs-to-a-tab-control.md) dále v tomto tématu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CTabCtrl](../mfc/using-ctabctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

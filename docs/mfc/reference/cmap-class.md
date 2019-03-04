@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 88ca218d4cb4e70dcc46ba04bbdfb7a9d12eb808
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 81b52d6876b0691c09db0e9dcf7fa7d491f999ca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657575"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305169"
 ---
 # <a name="cmap-class"></a>Cmap – třída
 
@@ -232,7 +232,7 @@ Určuje vrácené klíč načtený elementu.
 *HODNOTA*<br/>
 Parametr šablony určující typ hodnoty na mapě.
 
-*r-hodnoty*<br/>
+*rValue*<br/>
 Určuje, vrácená hodnota elementu načtený.
 
 ### <a name="remarks"></a>Poznámky
@@ -344,7 +344,7 @@ Určuje klíč, který identifikuje elementu, který chcete vyhledávat.
 *HODNOTA*<br/>
 Určuje typ hodnoty, které chcete vyhledávat.
 
-*r-hodnoty*<br/>
+*rValue*<br/>
 Přijímá hodnotu vyhledaných.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -536,7 +536,7 @@ Nejprve je klíč vyhledávat. Pokud je nalezen klíč, pak odpovídající hodn
 
 [!code-cpp[NVC_MFCCollections#62](../../mfc/codesnippet/cpp/cmap-class_7.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC shromažďování](../../visual-cpp-samples.md)<br/>
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>

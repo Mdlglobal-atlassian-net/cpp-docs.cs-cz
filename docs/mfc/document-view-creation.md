@@ -12,12 +12,12 @@ helpviewer_keywords:
 - MFC, documents
 - tables [MFC], objects each MFC object creates
 ms.assetid: bda14f41-ed50-439d-af9e-591174e7dd64
-ms.openlocfilehash: eccc65df784d000f8dccc244e295da522658b626
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b5f9b783e8e14744a816fd63b327ed95d9da8e8a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633554"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304944"
 ---
 # <a name="documentview-creation"></a>Vytváření dokumentů/zobrazení
 
@@ -32,10 +32,9 @@ Architektura dodává implementace **nový** a **otevřít** příkazy (mimo jin
 |Šablona dokumentu|Okno rámce|
 |Okno rámce|Zobrazit|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Šablony dokumentů a proces vytváření dokumentů/zobrazení](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
 [Vytváření šablon dokumentů](../mfc/document-template-creation.md)<br/>
 [Vztahy mezi objekty MFC](../mfc/relationships-among-mfc-objects.md)<br/>
 [Vytváření nových dokumentů, oken a zobrazení](../mfc/creating-new-documents-windows-and-views.md)
-

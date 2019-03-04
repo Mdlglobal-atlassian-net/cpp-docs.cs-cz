@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 0c8944846e249e4f752183b057bf8d2857022ab5
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179055"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305078"
 ---
 # <a name="cdc-class"></a>CDC – třída
 
@@ -448,7 +448,7 @@ class CDC : public CObject
 |[CDC::CreateIC](#createic)|Vytvoří objekt context informace pro konkrétní zařízení. To poskytuje rychlý způsob, jak získat informace o zařízení bez vytvoření kontextu zařízení.|
 |[CDC::DeleteDC](#deletedc)|Odstraní kontext zařízení Windows, který je přidružený k tomuto `CDC` objektu.|
 |[CDC::DeleteTempMap](#deletetempmap)|Volá `CWinApp` doby nečinnosti obslužná rutina se odstranit všechny dočasné `CDC` objekt vytvořený pomocí `FromHandle`. Také odpojí kontextu zařízení.|
-|[CDC::detach](#detach)|Odpojí kontextu zařízení Windows z tohoto `CDC` objektu.|
+|[CDC::Detach](#detach)|Odpojí kontextu zařízení Windows z tohoto `CDC` objektu.|
 |[CDC::DPtoHIMETRIC](#dptohimetric)|Převede zařízení jednotky na jednotkách HIMETRIC.|
 |[CDC::DPtoLP](#dptolp)|Převede zařízení jednotky logické jednotky.|
 |[CDC::Draw3dRect](#draw3drect)|Kreslení 3D obdélníku.|
@@ -557,14 +557,14 @@ class CDC : public CObject
 |[CDC::OffsetWindowOrg](#offsetwindoworg)|Upraví okno původu vzhledem k souřadnice původu aktuální okno.|
 |[CDC::PaintRgn](#paintrgn)|Vyplní oblast o štětec vybraný.|
 |[CDC::PatBlt](#patblt)|Vytvoří bitový vzor.|
-|[CDC::PIE](#pie)|Nakreslí ve tvaru výsečový výseče.|
+|[CDC::Pie](#pie)|Nakreslí ve tvaru výsečový výseče.|
 |[CDC::PlayMetaFile](#playmetafile)|Přehrávání obsahu zadaného metasouboru. na daném zařízení. Rozšířené verzi `PlayMetaFile` zobrazí obrázek uložený v dané metasoubor rozšířeného formátu. Tento metasoubor můžete přehrát libovolný počet pokusů.|
 |[CDC::PlgBlt](#plgblt)|Provádí přenos bitového bloku bitů data o barvách ze zadaného obdélníku v kontextu zdrojového zařízení zadané rovnoběžník v kontextu daného zařízení.|
 |[CDC::PolyBezier](#polybezier)|Kreslení křivek Bzier jeden nebo více. Aktuální pozice použít ani aktualizovat.|
 |[CDC::PolyBezierTo](#polybezierto)|Kreslení křivek Bzier jeden nebo více a přesune aktuální pozici ke koncovému bodu poslední Bzier křivky.|
 |[CDC::PolyDraw](#polydraw)|Vykreslí sadu segmenty čar a křivek Bzier. Tato funkce se aktualizuje na aktuální pozici.|
 |[CDC::Polygon](#polygon)|Nakreslí mnohoúhelníku sestávající z minimálně dva body (vrcholy) spojeny čarami.|
-|[CDC::POLYLINE](#polyline)|Vykreslí sadu segmenty čáry zadané body připojení.|
+|[CDC::Polyline](#polyline)|Vykreslí sadu segmenty čáry zadané body připojení.|
 |[CDC::PolylineTo](#polylineto)|Kreslení rovné čáry jeden nebo více a přesune aktuální pozici ke koncovému bodu poslední řádek.|
 |[CDC::PolyPolygon](#polypolygon)|Vytvoří dvě nebo více mnohoúhelníky, které jsou vyplněny pomocí aktuální režim vyplnění mnohoúhelníku. Může být polygonů nesouvislý nebo mohou překrývat.|
 |[CDC::PolyPolyline](#polypolyline)|Nakreslí více řad z připojených segmentů. Aktuální pozice použít ani aktualizovat pomocí této funkce.|
@@ -888,7 +888,7 @@ BOOL Arc(
 *x1*<br/>
 Určuje souřadnici x ohraničující obdélník (v logických jednotkách) levého horního rohu.
 
-*Y1*<br/>
+*y1*<br/>
 Určuje souřadnici y levého horního rohu ohraničující obdélník (v logických jednotkách).
 
 *x2*<br/>
@@ -900,7 +900,7 @@ Určuje souřadnici y pravého dolního rohu ohraničující obdélník (v logic
 *x3*<br/>
 Určuje souřadnici x bodu, který definuje oblouku počáteční bod (v logických jednotkách). Tento bod nemusí být přesně na oblouk.
 
-*Y3*<br/>
+*y3*<br/>
 Určuje souřadnici y bodu, který definuje oblouku počáteční bod (v logických jednotkách). Tento bod nemusí být přesně na oblouk.
 
 *x4*<br/>
@@ -909,7 +909,7 @@ Určuje souřadnici x bodu, který definuje koncový bod oblouku (v logických j
 *Y4*<br/>
 Určuje souřadnici y bodu, který definuje koncový bod oblouku (v logických jednotkách). Tento bod nemusí být přesně na oblouk.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Určuje ohraničující obdélník (v logických jednotkách). Můžete předat buď lprect – nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt pro tento parametr.
 
 *ptStart*<br/>
@@ -958,7 +958,7 @@ BOOL ArcTo(
 *x1*<br/>
 Určuje souřadnici x ohraničující obdélník (v logických jednotkách) levého horního rohu.
 
-*Y1*<br/>
+*y1*<br/>
 Určuje souřadnici y levého horního rohu ohraničující obdélník (v logických jednotkách).
 
 *x2*<br/>
@@ -970,7 +970,7 @@ Určuje souřadnici y pravého dolního rohu ohraničující obdélník (v logic
 *x3*<br/>
 Určuje souřadnici x bodu, který definuje oblouku počáteční bod (v logických jednotkách). Tento bod nemusí být přesně na oblouk.
 
-*Y3*<br/>
+*y3*<br/>
 Určuje souřadnici y bodu, který definuje oblouku počáteční bod (v logických jednotkách). Tento bod nemusí být přesně na oblouk.
 
 *x4*<br/>
@@ -979,7 +979,7 @@ Určuje souřadnici x bodu, který definuje koncový bod oblouku (v logických j
 *Y4*<br/>
 Určuje souřadnici y bodu, který definuje koncový bod oblouku (v logických jednotkách). Tento bod nemusí být přesně na oblouk.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Určuje ohraničující obdélník (v logických jednotkách). Můžete předat ukazatel na [RECT](/windows/desktop/api/windef/ns-windef-tagrect) datová struktura nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt pro tento parametr.
 
 *ptStart*<br/>
@@ -1141,7 +1141,7 @@ BOOL Chord(
 *x1*<br/>
 Určuje že souřadnice x levého horního rohu ctr uživatele ohraničující obdélník (v logických jednotkách).
 
-*Y1*<br/>
+*y1*<br/>
 Určuje že souřadnici y levého horního rohu ctr uživatele ohraničující obdélník (v logických jednotkách).
 
 *x2*<br/>
@@ -1153,7 +1153,7 @@ Určuje že souřadnici y pravého dolního rohu ctr uživatele ohraničující 
 *x3*<br/>
 Určuje souřadnici x bodu, který definuje ctr počáteční bod (v logických jednotkách).
 
-*Y3*<br/>
+*y3*<br/>
 Určuje souřadnici y bodu, který definuje ctr počáteční bod (v logických jednotkách).
 
 *x4*<br/>
@@ -1162,7 +1162,7 @@ Určuje souřadnici x bodu, který definuje koncový bod ctr (v logických jedno
 *Y4*<br/>
 Určuje souřadnici y bodu, který definuje koncový bod ctr (v logických jednotkách).
 
-*lprect –*<br/>
+*lpRect*<br/>
 Určuje ohraničující obdélník (v logických jednotkách). Můžete předat buď lprect – nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt pro tento parametr.
 
 *ptStart*<br/>
@@ -1213,7 +1213,7 @@ BOOL CreateCompatibleDC(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel na kontext zařízení. Pokud *primárního řadiče domény* má hodnotu NULL, funkce vytvoří kontext paměti zařízení, která je kompatibilní s zobrazení systému.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1388,7 +1388,7 @@ Odkazuje na pole [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) struktur
 *nCount*<br/>
 Počet bodů v poli.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu. Tento parametr se používá pro převod jednoho obdélník z bodů zařízení na logické body jednoduchém případě.
 
 *lpSize*<br/>
@@ -1419,7 +1419,7 @@ void Draw3dRect(
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Určuje ohraničující obdélník (v logických jednotkách). Můžete předat ukazatel na [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt pro tento parametr.
 
 *clrTopLeft*<br/>
@@ -1434,10 +1434,10 @@ Určuje logickou souřadnici x levého horního rohu trojrozměrného obdélník
 *y*<br/>
 Určuje logickou souřadnici y levého horního rohu trojrozměrného obdélník.
 
-*CX*<br/>
+*cx*<br/>
 Určuje šířku trojrozměrného obdélníku.
 
-*CY*<br/>
+*cy*<br/>
 Určuje výšku trojrozměrného obdélníku.
 
 ### <a name="remarks"></a>Poznámky
@@ -1464,7 +1464,7 @@ void DrawDragRect(
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje na [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který určuje logický souřadnice obdélník – v takovém případě koncová pozice se překreslení obdélníku.
 
 *Velikost*<br/>
@@ -1501,7 +1501,7 @@ BOOL DrawEdge(
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Ukazatel `RECT` strukturu, která obsahuje logický souřadnice obdélníku.
 
 *nEdge*<br/>
@@ -1554,7 +1554,7 @@ void DrawFocusRect(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje na [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který určuje logický souřadnice obdélníku chcete kreslit.
 
 ### <a name="remarks"></a>Poznámky
@@ -1577,13 +1577,13 @@ BOOL DrawFrameControl(
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Ukazatel `RECT` strukturu, která obsahuje logický souřadnice obdélníku.
 
-*nTyp*<br/>
+*nType*<br/>
 Určuje typ frame – ovládací prvek pro kreslení. Zobrazit *uType* parametr [DrawFrameControl](/windows/desktop/api/winuser/nf-winuser-drawframecontrol) v sadě Windows SDK pro seznam možných hodnot tohoto parametru.
 
-*nInformace*<br/>
+*nState*<br/>
 Určuje počáteční stav ovládací prvek frame. Může být jeden nebo více hodnot pro *uState* parametr `DrawFrameControl` v sadě Windows SDK. Použití *nInformace* hodnota DFCS_ADJUSTRECT ohraničující obdélník vyloučit okolního okraje tlačítko Upravit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1624,7 +1624,7 @@ V několika případech *nInformace* závisí *nTyp* parametru. Následující s
 
     - Šipka DFCS_MENUARROW podnabídky
 
-    - DFCS_MENUBULLET odrážky
+    - DFCS_MENUBULLET Bullet
 
     - DFCS_MENUCHECK zaškrtnutí
 
@@ -1674,7 +1674,7 @@ Určuje logickou souřadnici y levého horního rohu na ikonu.
 *hIcon*<br/>
 Identifikuje popisovač ikony chcete kreslit.
 
-*Bod*<br/>
+*point*<br/>
 Určuje logický x - a souřadnice y levého horního rohu na ikonu. Můžete předat [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt pro tento parametr.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1764,7 +1764,7 @@ BOOL DrawState(
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pt*<br/>
 Určuje umístění bitové kopie.
 
 *Velikost*<br/>
@@ -1832,7 +1832,7 @@ Odkazuje na řetězec, který má být vykreslen. Pokud *nCount* se -1, musí b�
 *nCount*<br/>
 Určuje počet znaků v řetězci. Pokud *nCount* -1, pak je *lpszString* je považován za dlouhá ukazatel na řetězec zakončený hodnotou null a `DrawText` automaticky vypočítá počet znaků.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který obsahuje obdélníku (v logických souřadnice), ve kterém má být ve formátu textu.
 
 *str*<br/>
@@ -1889,7 +1889,7 @@ Odkazuje na řetězec, který má být vykreslen. Pokud *nCount* se -1, musí b�
 *nCount*<br/>
 Určuje počet znaků v řetězci. Pokud *nCount* -1, pak je *lpszString* je považován za dlouhá ukazatel na řetězec zakončený hodnotou null a `DrawText` automaticky vypočítá počet znaků.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který obsahuje obdélníku (v logických souřadnice), ve kterém má být ve formátu textu.
 
 *str*<br/>
@@ -1929,7 +1929,7 @@ BOOL Ellipse(LPCRECT lpRect);
 *x1*<br/>
 Určuje logickou souřadnici x levého horního rohu ohraničující obdélník na tři tečky.
 
-*Y1*<br/>
+*y1*<br/>
 Určuje logickou souřadnici y levého horního rohu ohraničující obdélník na tři tečky.
 
 *x2*<br/>
@@ -1938,7 +1938,7 @@ Určuje logickou souřadnici x pravého dolního rohu ohraničující obdélník
 *y2*<br/>
 Určuje logickou souřadnici y pravého dolního rohu ohraničující obdélník na tři tečky.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Určuje, že se třemi tečkami ohraničovacího rámečku. Můžete také předat [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt pro tento parametr.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2165,7 +2165,7 @@ int ExcludeClipRect(LPCRECT lpRect);
 *x1*<br/>
 Určuje logickou souřadnici x levého horního rohu obdélníku.
 
-*Y1*<br/>
+*y1*<br/>
 Určuje logickou souřadnici y levého horního rohu obdélníku.
 
 *x2*<br/>
@@ -2174,7 +2174,7 @@ Určuje logickou souřadnici x pravého dolního rohu obdélníku.
 *y2*<br/>
 Určuje logickou souřadnici y pravého dolního rohu obdélníku.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Určuje obdélníku. Může být také `CRect` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2300,7 +2300,7 @@ Určuje typ obdélník. Tento parametr může být jeden, obou nebo ani jeden z 
 
 - ETO_OPAQUE Určuje, že aktuální barva pozadí vyplní obdélníku. (Můžete nastavit a dotazovat aktuální barvu pozadí [SetBkColor](#setbkcolor) a [GetBkColor](#getbkcolor) členské funkce.)
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktura, která určuje rozměry obdélníku. Tento parametr může mít hodnotu NULL. Můžete také předat [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt pro tento parametr.
 
 *lpszString*<br/>
@@ -2353,7 +2353,7 @@ void FillRect(
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje [RECT](/windows/desktop/api/windef/ns-windef-tagrect) strukturu, která obsahuje logický souřadnice obdélníku pro vyplnění. Můžete také předat [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt pro tento parametr.
 
 *pBrush*<br/>
@@ -2418,7 +2418,7 @@ void FillSolidRect(
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Určuje ohraničující obdélník (v logických jednotkách). Můžete předat ukazatel na [RECT](/windows/desktop/api/windef/ns-windef-tagrect) datová struktura nebo `CRect` objekt pro tento parametr.
 
 *CLR* Určuje barvu použitou k vyplnění obdélníku.
@@ -2429,10 +2429,10 @@ Určuje logickou souřadnici x levého horního rohu obdélníku.
 *y*<br/>
 Určuje logickou souřadnici y levého horního rohu cílového obdélníku.
 
-*CX*<br/>
+*cx*<br/>
 Určuje šířku obdélníku.
 
-*CY*<br/>
+*cy*<br/>
 Určuje výšku obdélníku.
 
 ### <a name="remarks"></a>Poznámky
@@ -2500,7 +2500,7 @@ void FrameRect(
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který obsahuje logické souřadnice levého a pravého dolního rohu obdélníku. Můžete také předat `CRect` objekt pro tento parametr.
 
 *pBrush*<br/>
@@ -2807,10 +2807,10 @@ BOOL GetCharABCWidthsI(
 *giFirst*<br/>
 Určuje první index šifry ve skupině po sobě jdoucích glyphs indexy z aktuálního písma. Tento parametr se používá, pouze pokud *pgi* parametr hodnotu NULL.
 
-*CGI*<br/>
+*cgi*<br/>
 Určuje počet glyphs indexy.
 
-*PGI*<br/>
+*pgi*<br/>
 Ukazatel na pole obsahující glyphs indexy. Pokud je hodnota NULL, *giFirst* se místo toho používá parametr. *Cgi* parametr určuje počet glyphs indexy v tomto poli.
 
 *lpabc*<br/>
@@ -2848,7 +2848,7 @@ Určuje první znak v skupinu po sobě jdoucích znaků v aktuálním písmem.
 *nLastChar*<br/>
 Určuje poslední znak v skupinu po sobě jdoucích znaků v aktuálním písmem.
 
-*lpBuffer.*<br/>
+*lpBuffer*<br/>
 Body do vyrovnávací paměti, která bude přijímat šířka hodnoty pro skupinu po sobě jdoucích znaků v aktuálním písmem.
 
 *lpFloatBuffer*<br/>
@@ -2883,13 +2883,13 @@ BOOL GetCharWidthI(
 *giFirst*<br/>
 Určuje první index šifry ve skupině po sobě jdoucích glyphs indexy z aktuálního písma. Tento parametr se používá, pouze pokud *pgi* parametr hodnotu NULL.
 
-*CGI*<br/>
+*cgi*<br/>
 Určuje počet glyphs indexy.
 
-*PGI*<br/>
+*pgi*<br/>
 Ukazatel na pole obsahující glyphs indexy. Pokud je hodnota NULL, *giFirst* se místo toho používá parametr. *Cgi* parametr určuje počet glyphs indexy v tomto poli.
 
-*lpBuffer.*<br/>
+*lpBuffer*<br/>
 Ukazatel do vyrovnávací paměti, která přijímá šířky.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2910,7 +2910,7 @@ virtual int GetClipBox(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje na [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který je pro příjem dimenze obdélník.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3187,10 +3187,10 @@ Když hodnota *nFormat* je 0, funkce vyplní [GLYPHMETRICS](/windows/desktop/api
 *lpgm*<br/>
 Odkazuje na strukturu GLYPHMETRICS, která popisuje umístění glyfů v buňky znaku.
 
-*hodnotou cbBuffer*<br/>
+*cbBuffer*<br/>
 Určuje velikost vyrovnávací paměti, do kterého funkce zkopíruje informace o znak osnovy. Pokud tato hodnota je 0 a *nFormat* parametr je GGO_BITMAP nebo GGO_NATIVE hodnoty, funkce vrátí velikost požadované vyrovnávací paměti.
 
-*lpBuffer.*<br/>
+*lpBuffer*<br/>
 Body do vyrovnávací paměti, do kterého funkce zkopíruje informace o znak osnovy. Pokud *nFormat* Určuje hodnotu GGO_NATIVE informace se zkopíruje ve formě TTPOLYGONHEADER a TTPOLYCURVE struktury. Pokud je tato hodnota NULL a *nFormat* je GGO_BITMAP nebo GGO_NATIVE hodnota, funkce vrátí velikost požadované vyrovnávací paměti.
 
 *lpmat2*<br/>
@@ -3386,7 +3386,7 @@ Určuje první znak v skupinu po sobě jdoucích znaků v aktuálním písmem.
 *nLastChar*<br/>
 Určuje poslední znak v skupinu po sobě jdoucích znaků v aktuálním písmem.
 
-*lpBuffer.*<br/>
+*lpBuffer*<br/>
 Body do vyrovnávací paměti, která bude přijímat šířka hodnoty pro skupinu po sobě jdoucích znaků v aktuálním písmem.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3565,7 +3565,7 @@ Určuje logickou souřadnici x bodu prověřit.
 *y*<br/>
 Určuje logickou souřadnici y bodu prověřit.
 
-*Bod*<br/>
+*point*<br/>
 Určuje logický x - a souřadnice y bodu prověřit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3828,7 +3828,7 @@ BOOL GetTextExtentExPointI(
 *pgiIn*<br/>
 Ukazatel na pole glyphs indexy, pro které rozsahy se mají načíst.
 
-*CGI*<br/>
+*cgi*<br/>
 Určuje počet glyfy v poli, na které odkazuje *pgiIn*.
 
 *nMaxExtent*<br/>
@@ -3867,7 +3867,7 @@ BOOL GetTextExtentPointI(
 *pgiIn*<br/>
 Ukazatel na pole glyphs indexy, pro které rozsahy se mají načíst.
 
-*CGI*<br/>
+*cgi*<br/>
 Určuje počet glyfy v poli, na které odkazuje *pgiIn*.
 
 *lpSize*<br/>
@@ -4174,7 +4174,7 @@ int IntersectClipRect(LPCRECT lpRect);
 *x1*<br/>
 Určuje logickou souřadnici x levého horního rohu obdélníku.
 
-*Y1*<br/>
+*y1*<br/>
 Určuje logickou souřadnici y levého horního rohu obdélníku.
 
 *x2*<br/>
@@ -4183,7 +4183,7 @@ Určuje logickou souřadnici x pravého dolního rohu obdélníku.
 *y2*<br/>
 Určuje logickou souřadnici y pravého dolního rohu obdélníku.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Určuje obdélníku. Můžete předat buď `CRect` objekt nebo ukazatel `RECT` strukturu pro tento parametr.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4212,7 +4212,7 @@ void InvertRect(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje `RECT` , který obsahuje logické souřadnice obdélníku, kde se převrátí. Můžete také předat `CRect` objekt pro tento parametr.
 
 ### <a name="remarks"></a>Poznámky
@@ -4278,7 +4278,7 @@ Určuje logickou souřadnici x koncového bodu pro řádek.
 *y*<br/>
 Určuje logickou souřadnici y koncového bodu pro řádek.
 
-*Bod*<br/>
+*point*<br/>
 Určuje koncový bod pro řádek. Můžete předat buď `POINT` struktury nebo `CPoint` objekt pro tento parametr.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4314,7 +4314,7 @@ Odkazuje na pole body. Každý bod v poli [bodu](/windows/desktop/api/windef/ns-
 *nCount*<br/>
 Počet bodů v poli.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje na [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu. Tento parametr se používá pro běžné mapování obdélník z logických jednotek zařízení.
 
 *lpSize*<br/>
@@ -4485,7 +4485,7 @@ Určuje logickou souřadnici x nové pozice.
 *y*<br/>
 Určuje logickou souřadnici y nové pozice.
 
-*Bod*<br/>
+*point*<br/>
 Určuje novou pozici. Můžete předat buď `POINT` struktury nebo `CPoint` objekt pro tento parametr.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4688,7 +4688,7 @@ BOOL Pie(
 *x1*<br/>
 Určuje souřadnici x ohraničující obdélník (v logických jednotkách) levého horního rohu.
 
-*Y1*<br/>
+*y1*<br/>
 Určuje souřadnici y levého horního rohu ohraničující obdélník (v logických jednotkách).
 
 *x2*<br/>
@@ -4700,7 +4700,7 @@ Určuje souřadnici y pravého dolního rohu ohraničující obdélník (v logic
 *x3*<br/>
 Určuje souřadnici x počátečního bodu oblouku (v logických jednotkách). Tento bod nemusí být přesně na oblouk.
 
-*Y3*<br/>
+*y3*<br/>
 Určuje souřadnici y počátečního bodu oblouku (v logických jednotkách). Tento bod nemusí být přesně na oblouk.
 
 *x4*<br/>
@@ -4709,7 +4709,7 @@ Určuje souřadnici x oblouku koncového bodu (v logických jednotkách). Tento 
 *Y4*<br/>
 Určuje souřadnici y oblouku koncového bodu (v logických jednotkách). Tento bod nemusí být přesně na oblouk.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Určuje ohraničující obdélník. Můžete předat buď `CRect` objekt nebo ukazatel `RECT` strukturu pro tento parametr.
 
 *ptStart*<br/>
@@ -4790,7 +4790,7 @@ BOOL PlgBlt(
 
 ### <a name="parameters"></a>Parametry
 
-*lppoint –*<br/>
+*lpPoint*<br/>
 Odkazuje na pole v logický prostor, který identifikuje tři rohů rovnoběžník cílové tři body. Levém horním rohu zdrojového obdélníku je namapována na prvním bodem toto pole, pravém horním rohu na druhý bod v tomto poli a levém dolním rohu na třetí bod. Pravém dolním rohu zdrojového obdélníku je namapována na implicitní čtvrtý časovému rovnoběžník.
 
 *pSrcDC*<br/>
@@ -5115,7 +5115,7 @@ Určuje logickou souřadnici x bodu.
 *y*<br/>
 Určuje logickou souřadnici y bodu.
 
-*Bod*<br/>
+*point*<br/>
 Určuje bod k vrácení se změnami logické souřadnice. Můžete předat buď `POINT` struktury nebo `CPoint` objekt pro tento parametr.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -5173,7 +5173,7 @@ BOOL Rectangle(LPCRECT lpRect);
 *x1*<br/>
 Určuje souřadnice x levého horního rohu obdélníku (v logických jednotkách).
 
-*Y1*<br/>
+*y1*<br/>
 Určuje souřadnici y levého horního rohu obdélníku (v logických jednotkách).
 
 *x2*<br/>
@@ -5182,7 +5182,7 @@ Určuje souřadnici x v pravém dolním rohu obdélníku (v logických jednotká
 *y2*<br/>
 Určuje souřadnici y pravého dolního rohu obdélníku (v logických jednotkách).
 
-*lprect –*<br/>
+*lpRect*<br/>
 Určuje obdélníku v logických jednotkách. Můžete předat buď `CRect` objekt nebo ukazatel `RECT` strukturu pro tento parametr.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -5209,7 +5209,7 @@ virtual BOOL RectVisible(LPCRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje na `RECT` struktury nebo `CRect` objekt, který obsahuje logické souřadnice zadané obdélník.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -5313,7 +5313,7 @@ BOOL RoundRect(
 *x1*<br/>
 Určuje souřadnice x levého horního rohu obdélníku (v logických jednotkách).
 
-*Y1*<br/>
+*y1*<br/>
 Určuje souřadnici y levého horního rohu obdélníku (v logických jednotkách).
 
 *x2*<br/>
@@ -5325,13 +5325,13 @@ Určuje souřadnici y pravého dolního rohu obdélníku (v logických jednotká
 *x3*<br/>
 Určuje šířku na tři tečky používá k nakreslení zaoblené rohy (v logických jednotkách).
 
-*Y3*<br/>
+*y3*<br/>
 Určuje výšku elipsy používá k nakreslení zaoblené rohy (v logických jednotkách).
 
-*lprect –*<br/>
+*lpRect*<br/>
 Určuje ohraničující obdélník v logických jednotkách. Můžete předat buď `CRect` objekt nebo ukazatel `RECT` strukturu pro tento parametr.
 
-*Bod*<br/>
+*point*<br/>
 Souřadnici x *bodu* Určuje šířku na tři tečky (v logických jednotkách) nakreslit zaoblené rohy. Souřadnici y *bodu* Určuje výšku elipsy, chcete-li nakreslit zaoblené rohy (v logických jednotkách). Můžete předat buď `POINT` struktury nebo `CPoint` objekt pro tento parametr.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -5462,7 +5462,7 @@ BOOL ScrollDC(
 
 ### <a name="parameters"></a>Parametry
 
-*DX*<br/>
+*dx*<br/>
 Určuje počet jednotek vodorovného posuvníku.
 
 *dy*<br/>
@@ -5605,7 +5605,7 @@ Ukazatel [cbitmap –](../../mfc/reference/cbitmap-class.md) vybraného objektu.
 *pRgn*<br/>
 Ukazatel [CRgn](../../mfc/reference/crgn-class.md) vybraného objektu.
 
-*odstraněný objekt*<br/>
+*pObject*<br/>
 Ukazatel [cgdiobject –](../../mfc/reference/cgdiobject-class.md) vybraného objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -5908,7 +5908,7 @@ Určuje souřadnici x (v jednotkách zařízení) nového zdroje. Tato hodnota m
 *y*<br/>
 Určuje souřadnici y (v jednotkách zařízení) nového zdroje. Tato hodnota musí být v rozsahu 0-7.
 
-*Bod*<br/>
+*point*<br/>
 Určuje souřadnic x a y-nové původu. Každá hodnota musí být v rozsahu 0-7. Můžete předat buď `POINT` struktury nebo `CPoint` objekt pro tento parametr.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -6179,7 +6179,7 @@ Určuje logickou souřadnici y bodu, která se má nastavit.
 *crColor*<br/>
 Hodnota COLORREF RGB, který určuje barvu použitou k vykreslení bod. Zobrazit [COLORREF](/windows/desktop/gdi/colorref) v sadě Windows SDK pro popis této hodnoty.
 
-*Bod*<br/>
+*point*<br/>
 Určuje logický x - a souřadnice y bodu, která se má nastavit. Můžete předat buď `POINT` struktury nebo `CPoint` objekt pro tento parametr.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -6218,7 +6218,7 @@ Určuje souřadnici y v logických jednotkách bodu, která se má nastavit.
 *crColor*<br/>
 Určuje barvu, která se používá k malování bod.
 
-*Bod*<br/>
+*point*<br/>
 Určuje logický x - a souřadnice y bodu, která se má nastavit. Můžete předat buď [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) datová struktura nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt pro tento parametr.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -6487,10 +6487,10 @@ CSize SetViewportExt(SIZE size);
 
 ### <a name="parameters"></a>Parametry
 
-*CX*<br/>
+*cx*<br/>
 Určuje rozsah x zobrazení (v jednotkách zařízení).
 
-*CY*<br/>
+*cy*<br/>
 Určuje rozsah y zobrazení (v jednotkách zařízení).
 
 *Velikost*<br/>
@@ -6537,7 +6537,7 @@ Určuje souřadnici x (v jednotkách zařízení) původu zobrazení. Hodnota mu
 *y*<br/>
 Určuje souřadnici y (v jednotkách zařízení) původu zobrazení. Hodnota musí být v rozsahu souřadný systém zařízení.
 
-*Bod*<br/>
+*point*<br/>
 Určuje počátek zobrazení. Hodnoty musí být v rozsahu souřadný systém zařízení. Můžete předat buď `POINT` struktury nebo `CPoint` objekt pro tento parametr.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -6568,10 +6568,10 @@ CSize SetWindowExt(SIZE size);
 
 ### <a name="parameters"></a>Parametry
 
-*CX*<br/>
+*cx*<br/>
 Určuje x rozsah (v logických jednotkách) v okně.
 
-*CY*<br/>
+*cy*<br/>
 Určuje y rozsah (v logických jednotkách) v okně.
 
 *Velikost*<br/>
@@ -6625,7 +6625,7 @@ Určuje logickou souřadnici x původu nového okna.
 *y*<br/>
 Určuje logickou souřadnici y původu nového okna.
 
-*Bod*<br/>
+*point*<br/>
 Určuje logický souřadnice původu nového okna. Můžete předat buď `POINT` struktury nebo `CPoint` objekt pro tento parametr.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -7057,7 +7057,7 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 Tato funkce je úspěšný pouze v případě, že je aktuální pero geometrické pera z druhé verze `CreatePen` členská funkce, nebo pokud pera se vytvoří v první verzi `CreatePen` a má šířku, v jednotkách, zařízení, které je větší než 1. Kontext zařízení musí obsahovat uzavřené cestu. Žádné Bzier křivky v cestě jsou převedeny na pořadí rovné čáry neprůhledných rozšířil křivky. V důsledku toho zůstane žádné Bzier křivky v cestě po `WidenPath` je volána.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

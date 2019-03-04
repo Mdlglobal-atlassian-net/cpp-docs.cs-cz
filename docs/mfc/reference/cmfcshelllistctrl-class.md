@@ -1,5 +1,5 @@
 ---
-title: CMFCShellListCtrl – třída
+title: CMFCShellListCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCShellListCtrl
@@ -42,14 +42,14 @@ helpviewer_keywords:
 - CMFCShellListCtrl [MFC], Refresh
 - CMFCShellListCtrl [MFC], SetItemTypes
 ms.assetid: ad472958-5586-4c50-aadf-1844c30bf6e7
-ms.openlocfilehash: 4aa6da49f7d8235e0358f4fd042d3c720521eb0f
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: a08cfff3996d3dce617cf80293a96675083a39d1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694202"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302543"
 ---
-# <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl – třída
+# <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl Class
 
 `CMFCShellListCtrl` Třída poskytuje funkce pro řízení seznamu Windows a umožňuje jeho rozšíření tím včetně možnost zobrazit seznam položek prostředí.
 
@@ -108,13 +108,13 @@ Následující příklad ukazuje, jak vytvořit objekt `CMFCShellListCtrl` tří
 
 [CListCtrl](../../mfc/reference/clistctrl-class.md)
 
-[Cmfclistctrl –](../../mfc/reference/cmfclistctrl-class.md)
+[CMFCListCtrl](../../mfc/reference/cmfclistctrl-class.md)
 
 `CMFCShellListCtrl`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxshelllistCtrl.h
+**Header:** afxshelllistCtrl.h
 
 ##  <a name="displayfolder"></a>  CMFCShellListCtrl::DisplayFolder
 
@@ -193,7 +193,7 @@ BOOL GetCurrentFolderName(CString& strName) const;
 
 ### <a name="parameters"></a>Parametry
 
-*%{strName/*<br/>
+*strName*<br/>
 [out] Odkaz na parametr řetězce, kde Metoda zapíše název.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -456,7 +456,7 @@ void SetItemTypes(SHCONTF nTypes);
 
 Další informace o seznamu typů položek najdete v tématu [SHCONTF](/windows/desktop/api/shobjidl_core/ne-shobjidl_core-_shcontf).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

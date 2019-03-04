@@ -1,5 +1,5 @@
 ---
-title: CListCtrl – třída
+title: CListCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CListCtrl
@@ -264,14 +264,14 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 4bc50a8a77a4964cf92d003ed1e06213398f401c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 850c16420606452414cbe284c5f9f25031859c93
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525545"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304519"
 ---
-# <a name="clistctrl-class"></a>CListCtrl – třída
+# <a name="clistctrl-class"></a>CListCtrl Class
 
 Zapouzdřuje funkce ovládacího prvku"seznam zobrazení," které zobrazuje kolekci položek, z nichž každá se skládá z ikony (ze seznamu obrázků) a popisek.
 
@@ -446,9 +446,9 @@ Ovládací prvky zobrazení seznamu můžete zobrazit jejich obsah v čtyřmi r�
 
 - Zobrazení sestav
 
-   Každá položka je zobrazena na samostatném řádku, společně s dalšími informacemi, které jsou uspořádány ve sloupcích na pravé straně. Levém sloupci obsahuje malé ikony a popisek a následující sloupce obsahují podřízené položky podle aplikace. Ovládací prvek vložený záhlaví (třída [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementuje tyto sloupce. Další informace o ovládací prvky záhlaví a sloupců v zobrazení sestav, naleznete v tématu [pomocí třídy CListCtrl: přidávání sloupců do ovládacího prvku (zobrazení sestavy)](../../mfc/adding-columns-to-the-control-report-view.md).
+   Každá položka je zobrazena na samostatném řádku, společně s dalšími informacemi, které jsou uspořádány ve sloupcích na pravé straně. Levém sloupci obsahuje malé ikony a popisek a následující sloupce obsahují podřízené položky podle aplikace. Ovládací prvek vložený záhlaví (třída [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementuje tyto sloupce. Další informace o ovládací prvky záhlaví a sloupců v zobrazení sestav, naleznete v tématu [pomocí třídy CListCtrl: Přidávání sloupců do ovládacího prvku (zobrazení sestavy)](../../mfc/adding-columns-to-the-control-report-view.md).
 
-Určuje styl ovládacího prvku zobrazení aktuálního seznamu aktuálního zobrazení. Další informace o těchto stylů a jejich využití naleznete v tématu [pomocí třídy CListCtrl: Změna stylů ovládacího prvku seznam](../../mfc/changing-list-control-styles.md).
+Určuje styl ovládacího prvku zobrazení aktuálního seznamu aktuálního zobrazení. Další informace o těchto stylů a jejich využití naleznete v tématu [pomocí třídy CListCtrl: Změna stylů ovládacího prvku seznamu](../../mfc/changing-list-control-styles.md).
 
 ## <a name="extended-styles"></a>Rozšířené styly
 
@@ -460,7 +460,7 @@ Kromě standardní seznamu styly třídy `CListCtrl` podporuje velké sady rozš
 
 - Zobrazení virtuálního seznamu
 
-   Když je povoleno, umožňuje ovládacímu prvku podporovat až položky DWORD. To je možné tak, že režie na správu dat položek na aplikaci. S výjimkou výběr položek a detailní informace se všechny informace o položkách musí spravovat přes aplikaci. Další informace najdete v tématu [pomocí třídy CListCtrl: ovládací prvky typu virtuální seznam](../../mfc/virtual-list-controls.md).
+   Když je povoleno, umožňuje ovládacímu prvku podporovat až položky DWORD. To je možné tak, že režie na správu dat položek na aplikaci. S výjimkou výběr položek a detailní informace se všechny informace o položkách musí spravovat přes aplikaci. Další informace najdete v tématu [pomocí třídy CListCtrl: Ovládací prvky typu virtuální seznam](../../mfc/virtual-list-controls.md).
 
 - Aktivace jedním a dvě kliknutím
 
@@ -470,7 +470,7 @@ Kromě standardní seznamu styly třídy `CListCtrl` podporuje velké sady rozš
 
    Když povoleno, umožňuje přetažení myší změny pořadí sloupců v ovládacím prvku zobrazení seznamu. Dostupné jenom v zobrazení sestavy.
 
-Informace o použití těchto nových rozšířené styly, najdete v části [pomocí třídy CListCtrl: Změna stylů ovládacího prvku seznam](../../mfc/changing-list-control-styles.md).
+Informace o použití těchto nových rozšířené styly, najdete v části [pomocí třídy CListCtrl: Změna stylů ovládacího prvku seznamu](../../mfc/changing-list-control-styles.md).
 
 ## <a name="items-and-subitems"></a>Položky a podřízené položky
 
@@ -478,7 +478,7 @@ Každá položka v ovládacím prvku zobrazení seznamu se skládá z ikony (ze 
 
 Třída `CListCtrl` poskytuje několik funkcí pro vkládání, odstraňování, hledání a úprava těchto položek. Další informace najdete v tématu [CListCtrl::GetItem](#getitem), [CListCtrl::InsertItem](#insertitem), a [CListCtrl::FindItem](#finditem), [přidávání položek do ovládacího prvku](../adding-items-to-the-control.md), a [posouvání, uspořádání, řazení a hledání v ovládacích prvcích seznam](../scrolling-arranging-sorting-and-finding-in-list-controls.md).
 
-Ve výchozím nastavení je zodpovědná za uložení atributů položky ikonu a text ovládacího prvku zobrazení seznamu. Nicméně, kromě těchto typů položek třídy `CListCtrl` podporuje "položky zpětného volání." Položka zobrazení seznamu, pro kterou je "Položka zpětného volání" aplikace – místo ovládacího prvku – ukládá text nebo ikonu. Maska zpětného volání slouží k určení, jaké atributy položky (text nebo ikonu) jsou poskytnuté aplikací. Pokud aplikace používá položky zpětného volání, musí být možné zadat text nebo ikonu atributy na vyžádání. Položky zpětného volání jsou užitečné, pokud už vaše aplikace udržuje některé z těchto informací. Další informace najdete v tématu [pomocí třídy CListCtrl: položky zpětného volání a maska zpětného volání](../callback-items-and-the-callback-mask.md).
+Ve výchozím nastavení je zodpovědná za uložení atributů položky ikonu a text ovládacího prvku zobrazení seznamu. Nicméně, kromě těchto typů položek třídy `CListCtrl` podporuje "položky zpětného volání." Položka zobrazení seznamu, pro kterou je "Položka zpětného volání" aplikace – místo ovládacího prvku – ukládá text nebo ikonu. Maska zpětného volání slouží k určení, jaké atributy položky (text nebo ikonu) jsou poskytnuté aplikací. Pokud aplikace používá položky zpětného volání, musí být možné zadat text nebo ikonu atributy na vyžádání. Položky zpětného volání jsou užitečné, pokud už vaše aplikace udržuje některé z těchto informací. Další informace najdete v tématu [pomocí třídy CListCtrl: Položky zpětného volání a maska zpětného volání](../callback-items-and-the-callback-mask.md).
 
 ## <a name="image-lists"></a>Seznamy obrázků
 
@@ -500,7 +500,7 @@ Ikony, obrázků položek záhlaví a aplikace – stavy definované pro položk
 
    Používá se v zobrazení sestav pro malé obrázky, které se zobrazují v každé položce ovládacího prvku záhlaví.
 
-Ve výchozím nastavení ovládací prvek zobrazení seznamu odstraní přiřazeno, když je zničen; seznamů obrázků Vývojář můžete upravit toto chování však likvidaci každý seznam obrázků po se už nepoužívá, počítáno od aplikace. Další informace najdete v tématu [pomocí třídy CListCtrl: položky seznamu a seznamy obrázků](../list-items-and-image-lists.md).
+Ve výchozím nastavení ovládací prvek zobrazení seznamu odstraní přiřazeno, když je zničen; seznamů obrázků Vývojář můžete upravit toto chování však likvidaci každý seznam obrázků po se už nepoužívá, počítáno od aplikace. Další informace najdete v tématu [pomocí třídy CListCtrl: Položky seznamu a seznamy obrázků](../list-items-and-image-lists.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -529,7 +529,7 @@ CSize ApproximateViewRect(
 
 ### <a name="parameters"></a>Parametry
 
-*Sz*<br/>
+*sz*<br/>
 Navrhované rozměry ovládacího prvku v pixelech. Pokud nejsou zadány dimenze, systém použije aktuální hodnoty šířku nebo výšku ovládacího prvku.
 
 *iCount*<br/>
@@ -700,7 +700,7 @@ CImageList* CreateDragImage(
 *nItem*<br/>
 Index položky, jejichž přetáhnout seznam image se má vytvořit.
 
-*lppoint –*<br/>
+*lpPoint*<br/>
 Adresa [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) v zobrazení koordinuje struktury, která přijímá počáteční umístění levého horního rohu na obrázku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -930,7 +930,7 @@ int FindItem(
 *pFindInfo*<br/>
 Ukazatel [LVFINDINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvfindinfoa) struktura obsahující informace o položka, která má být vyhledán.
 
-*Nzačínat*<br/>
+*nStart*<br/>
 Index položky zahájíte hledání s použitím nebo -1 pro začít od začátku. Položka na *Nzačínat* je vyloučen z hledání, pokud *Nzačínat* není roven -1.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1442,7 +1442,7 @@ BOOL GetGroupRect(
 |Parametr|Popis|
 |---------------|-----------------|
 |*iGroupId*|[in] Určuje skupinu.|
-|*lprect –*|[out v] Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Pokud tato metoda je úspěšná, strukturu, obdrží obdélník souřadnice skupiny, která je určená *iGroupId*.|
+|*lpRect*|[out v] Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Pokud tato metoda je úspěšná, strukturu, obdrží obdélník souřadnice skupiny, která je určená *iGroupId*.|
 |*iCoords*|[in] Určuje souřadnice obdélník k načtení. Použijte jednu z těchto hodnot:<br /><br /> -LVGGR_GROUP – (výchozí) souřadnice celý rozbalené skupiny.<br />-LVGGR_HEADER - souřadnice pouze záhlaví (sbalené skupiny).<br />-LVGGR_SUBSETLINK - koordinuje pouze podmnožina odkazu (je to podskupina značek).|
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1843,7 +1843,7 @@ BOOL GetItemPosition(
 *nItem*<br/>
 Index položky, jejichž pozice má být načtena.
 
-*lppoint –*<br/>
+*lpPoint*<br/>
 Adresa [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) v zobrazení koordinuje struktury, která bude přijímat pozice levého horního rohu položky.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1882,7 +1882,7 @@ BOOL GetItemRect(
 *nItem*<br/>
 Index položky, jejichž pozice má být načtena.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Adresa [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá ohraničující obdélník.
 
 *nCode*<br/>
@@ -2116,7 +2116,7 @@ int GetNextSelectedItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Odkaz na POZICI hodnotu vrácenou příkazem předchozí volání `GetNextSelectedItem` nebo `GetFirstSelectedItemPosition`. Hodnota je aktualizovat na další pozici tohoto volání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2219,7 +2219,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lppoint –*<br/>
+*lpPoint*<br/>
 Adresa [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktura, která přijímá zobrazení původu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2416,7 +2416,7 @@ BOOL GetTileInfo(PLVTILEINFO pti) const;
 
 ### <a name="parameters"></a>Parametry
 
-*PTI*<br/>
+*pti*<br/>
 Ukazatel [LVTILEINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvtileinfo) struktura, která přijímá informace dlaždice.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2530,7 +2530,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Adresa [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2556,7 +2556,7 @@ void GetWorkAreas(
 *nWorkAreas*<br/>
 Počet `RECT` obsažené ve strukturách *ČLR* pole.
 
-*Čínská lidová republika*<br/>
+*prc*<br/>
 Ukazatel na pole `RECT` struktury (nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekty), který zobrazí pracovní oblasti ovládacího prvku zobrazení seznamu. Hodnoty v těchto struktur jsou souřadnice klienta.
 
 ### <a name="remarks"></a>Poznámky
@@ -2605,7 +2605,7 @@ int HitTest(
 *pHitTestInfo*<br/>
 Adresa `LVHITTESTINFO` strukturu, která obsahuje pozici pro spuštění testu a, která obdrží informace o výsledcích testu přístupů.
 
-*PT*<br/>
+*pt*<br/>
 Bod má být testována.
 
 *pFlags*<br/>
@@ -2672,7 +2672,7 @@ Adresa `LVCOLUMN` strukturu, která obsahuje atributy nového sloupce.
 Adresa řetězec obsahující záhlaví sloupce.
 
 *nFormat*<br/>
-Celé číslo určující zarovnání sloupce. Může být jedna z těchto hodnot: LVCFMT_LEFT, LVCFMT_RIGHT nebo LVCFMT_CENTER.
+Celé číslo určující zarovnání sloupce. Může být jedna z těchto hodnot: LVCFMT_LEFT LVCFMT_RIGHT či LVCFMT_CENTER.
 
 *nWidth*<br/>
 Šířka sloupce v pixelech. Pokud má parametr hodnotu -1, není nastavená šířka sloupce.
@@ -2774,13 +2774,13 @@ Index položky má být vložen.
 *lpszItem*<br/>
 Adresa řetězec obsahující popisek položky nebo LPSTR_TEXTCALLBACK, pokud je položka položka zpětného volání. Informace o položky zpětného volání, naleznete v tématu [CListCtrl::GetCallbackMask](#getcallbackmask).
 
-*nvybrán Nobrázek*<br/>
+*nImage*<br/>
 Index položky obrázku nebo I_IMAGECALLBACK, pokud je položka položka zpětného volání. Informace o položky zpětného volání, naleznete v tématu [CListCtrl::GetCallbackMask](#getcallbackmask).
 
 *nMask*<br/>
 *NMask* parametr určuje, která položka předány jako parametry jsou platné. Může to být jeden nebo více hodnot maska je popsáno v [LVITEM struktura](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) v sadě Windows SDK. Platné hodnoty lze spojovat pomocí bitového operátoru OR.
 
-*nInformace*<br/>
+*nState*<br/>
 Označuje stav, stav image a image překrytí položky. Najdete v tématech Windows SDK [LVITEM struktura](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) Další informace a [stavů zobrazení seznamu položek](/windows/desktop/Controls/list-view-item-states) seznam platné příznaky.
 
 *nStateMask*<br/>
@@ -3040,7 +3040,7 @@ BOOL RedrawItems(
 
 ### <a name="parameters"></a>Parametry
 
-*Nprvní*<br/>
+*nFirst*<br/>
 Index první položky na překreslen.
 
 *Nposlední*<br/>
@@ -3114,7 +3114,7 @@ BOOL SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parametry
 
-*znak CR*<br/>
+*cr*<br/>
 Barva pozadí pro nastavení, nebo hodnota CLR_NONE žádné barvu pozadí. Ovládací prvky zobrazení seznamu s barvy pozadí ho překreslit sami výrazně rychlejší než ty, které bez barvy pozadí. Informace najdete v tématu [COLORREF](/windows/desktop/gdi/colorref) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3225,7 +3225,7 @@ BOOL SetCheck(
 *nItem*<br/>
 Index založený na nule položku ovládacího prvku seznamu.
 
-*Podívejte se*<br/>
+*fCheck*<br/>
 Určuje, zda má nebo nemá být viditelné obrázku stavu položky. Ve výchozím nastavení *podívejte* hodnotu TRUE a je viditelný obrázku stavu. Pokud *podívejte* má hodnotu FALSE, nezobrazí se.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3320,7 +3320,7 @@ BOOL SetColumnWidth(
 *nCol*<br/>
 Index sloupce, pro který má být nastavena šířku. V zobrazení seznamu tento parametr musí být 0.
 
-*CX*<br/>
+*cx*<br/>
 Novou šířku sloupce. Může být LVSCW_AUTOSIZE nebo LVSCW_AUTOSIZE_USEHEADER, jak je popsáno v [LVM_SETCOLUMNWIDTH](/windows/desktop/Controls/lvm-setcolumnwidth) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3409,7 +3409,7 @@ HCURSOR SetHotCursor(HCURSOR hc);
 
 ### <a name="parameters"></a>Parametry
 
-*hybridní připojení*<br/>
+*hc*<br/>
 Popisovač pro prostředek kurzor používá k reprezentování horké kurzoru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3490,10 +3490,10 @@ CSize SetIconSpacing(CSize size);
 
 ### <a name="parameters"></a>Parametry
 
-*CX*<br/>
+*cx*<br/>
 Distance (v pixelech) mezi ikony na ose x.
 
-*CY*<br/>
+*cy*<br/>
 Distance (v pixelech) mezi ikony na ose y.
 
 *Velikost*<br/>
@@ -3598,7 +3598,7 @@ COLORREF SetInsertMarkColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*Barva*<br/>
+*color*<br/>
 A [COLORREF](/windows/desktop/gdi/colorref) struktura určující barvu k nastavení kurzoru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3655,10 +3655,10 @@ Určuje atributy, které se mají nastavit (viz poznámky).
 *lpszItem*<br/>
 Adresa řetězec zakončený hodnotou null zadání popisku položky.
 
-*nvybrán Nobrázek*<br/>
+*nImage*<br/>
 Index obrázku položky v seznamu obrázků.
 
-*nInformace*<br/>
+*nState*<br/>
 Určuje hodnoty pro jednotlivé státy změnit (viz poznámky).
 
 *nStateMask*<br/>
@@ -3853,7 +3853,7 @@ BOOL SetItemPosition(
 *nItem*<br/>
 Index položky, jejichž pozice je nastavit.
 
-*PT*<br/>
+*pt*<br/>
 A [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) koordinuje struktury zadáte novou pozici v zobrazení levého horního rohu položky.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3893,7 +3893,7 @@ Index položky, jejichž stav je nastavit.
 *pItem*<br/>
 Adresa [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) struktury, jak je popsáno v sadě Windows SDK. Nastavení struktury `stateMask` člen Určuje, které stav bitů změn a struktuře vaší `state` člena obsahuje nové hodnoty pro tyto služby bits. Ostatní členové jsou ignorovány.
 
-*nInformace*<br/>
+*nState*<br/>
 Nové hodnoty bitů stavu. Seznam možných hodnot najdete v tématu [CListCtrl::GetNextItem](#getnextitem) a [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) stav člena.
 
 *nMask*<br/>
@@ -3955,7 +3955,7 @@ COLORREF SetOutlineColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*Barva*<br/>
+*color*<br/>
 Nové [COLORREF](/windows/desktop/gdi/colorref) struktury obsahující obrysovou barvu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4022,7 +4022,7 @@ BOOL SetTextBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parametry
 
-*znak CR*<br/>
+*cr*<br/>
 COLORREF, zadáte novou barvu pozadí textu. Informace najdete v tématu [COLORREF](/windows/desktop/gdi/colorref) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4048,7 +4048,7 @@ BOOL SetTextColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parametry
 
-*znak CR*<br/>
+*cr*<br/>
 COLORREF, zadáte novou barvu textu. Informace najdete v tématu [COLORREF](/windows/desktop/gdi/colorref) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4075,7 +4075,7 @@ BOOL SetTileInfo(PLVTILEINFO pti);
 
 ### <a name="parameters"></a>Parametry
 
-*PTI*<br/>
+*pti*<br/>
 Ukazatel [LVTILEINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvtileinfo) struktura obsahující informace o nastavení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4166,7 +4166,7 @@ void SetWorkAreas(
 *nWorkAreas*<br/>
 Počet `RECT` struktury (nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objektů) v poli, na které odkazuje *lprect –*.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Adresa pole `RECT` struktury (nebo `CRect` objekty), které určují nové pracovní oblasti ovládacího prvku zobrazení seznamu. Tyto oblasti je třeba zadat v souřadnicích klienta. Pokud má parametr hodnotu NULL, pracovní plocha nastaví na klientské oblasti ovládacího prvku.
 
 ### <a name="remarks"></a>Poznámky
@@ -4420,10 +4420,9 @@ Tato funkce také uspořádá ovládací prvek zobrazení seznamu, pokud má LVS
 
   Podívejte se na příklad pro [CListCtrl::GetSelectedCount](#getselectedcount).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC ROWLIST](../../visual-cpp-samples.md)<br/>
 [CWnd – třída](cwnd-class.md)<br/>
 [Graf hierarchie](../hierarchy-chart.md)<br/>
 [CImageList – třída](cimagelist-class.md)
-

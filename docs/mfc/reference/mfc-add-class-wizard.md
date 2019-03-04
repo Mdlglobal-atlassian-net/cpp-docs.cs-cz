@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC Add Class Wizard
 - wizards [MFC]
 ms.assetid: ad3b0989-d307-43b2-9417-3f9a78889024
-ms.openlocfilehash: 245963d4222188f16fd334d6950e04584ac1e978
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fa9b947ae6fc0e48aaecde61e35a5f4152c85f27
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520839"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304090"
 ---
 # <a name="mfc-add-class-wizard"></a>Průvodce přidáním třídy MFC
 
@@ -49,7 +49,7 @@ Na této stránce zadejte název třídy, základní třídy a názvy souborů p
 
   Určuje ID dialogu, pokud jste vybrali `CDialog`, `CFormView`, `CPropertyPage`, nebo `CDHtmlDialog` jako **základní třída**.
 
-- **soubor .h**
+- **.h file**
 
   Nastaví název hlavičkového souboru pro nový objekt třídy. Ve výchozím nastavení, tento název je založen na názvu je zadat v **název třídy**. Klikněte na tlačítko se třemi tečkami uložení názvu souboru do umístění podle vaší volby, nebo připojit k existujícímu souboru deklaraci třídy. Pokud zvolíte existující soubor, Průvodce neuloží se do vybraného umístění dokud kliknutím **Dokončit** v průvodci.
 
@@ -69,7 +69,7 @@ Na této stránce zadejte název třídy, základní třídy a názvy souborů p
 
   Platí pro třídy odvozené od `CDHtmlDialog` pouze. Určuje Identifikátor prostředku dialogového okna DHTML. ID prostředku se zobrazí v části HTML souboru .rc v projektu, spolu s názvem souboru dialogové okno pole HTML. DHTML prostředků, pomocí tohoto ID se hostuje dialogovém okně identifikovaný **ID dialogu**.
 
-- **. Soubor HTM**
+- **.HTM file**
 
   Platí pro třídy odvozené od `CDHtmlDialog` pouze. Nastaví název souboru ve formátu HTML pro dialogové okno Dynamic HTML. Ve výchozím nastavení tento název souboru je podle názvu třídy. Název souboru se zobrazí v části HTML souboru .rc v projektu, spolu s ID DHTML dialog box prostředku.
 
@@ -79,7 +79,7 @@ Na této stránce zadejte název třídy, základní třídy a názvy souborů p
 
   |Možnost|Popis|
   |------------|-----------------|
-  |**None**|Označuje, že třída nemá žádné podporu automatizace.|
+  |**Žádné**|Označuje, že třída nemá žádné podporu automatizace.|
   |**Automatizace**|Označuje, že třída podporuje služby Automation. Pokud vyberete tuto možnost, nově vytvořené třídy je k dispozici jako programovatelný objekt automatizace klientskými aplikacemi, jako je například Microsoft Visual Basic a aplikaci Microsoft Excel. Tato možnost není k dispozici pro základní třídy uvedeny za touto tabulkou.|
   |**Vytvořitelný modelem ID typu**|Označuje, že třídu a projekt podporovat jiné aplikace, vytváření objektů této třídy pomocí automatizace. Pomocí této možnosti můžete klientům automatizace přímo vytvořit automatizační objekt. Typ Identifikátoru v textovém poli používá klientská aplikace zadat objekt, který má být vytvořen; je v celém systému a musí být jedinečný. Tato možnost není k dispozici pro základní třídy uvedeny za touto tabulkou.|
 
@@ -117,7 +117,7 @@ Na této stránce zadejte název třídy, základní třídy a názvy souborů p
 
   Zobrazit [šablony dokumentů a proces vytváření dokumentů/zobrazení](../../mfc/document-templates-and-the-document-view-creation-process.md) Další informace.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Třída knihovny MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
+[MFC Class](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Přidání třídy](../../ide/adding-a-class-visual-cpp.md)

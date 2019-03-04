@@ -7,12 +7,12 @@ helpviewer_keywords:
 - message maps [MFC], derived
 - derived message maps
 ms.assetid: 21829556-6e64-40c3-8279-fed85d99de77
-ms.openlocfilehash: 2ae536a53a43472a4fb81d30e685fbc3faaa603f
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: fcdff67c57e932e414a2b61b28cd0498ab997c60
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175598"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304233"
 ---
 # <a name="derived-message-maps"></a>Mapy odvozených zpráv
 
@@ -21,7 +21,7 @@ Během zpráva zpracování, kontrola zprávu třídy vlastní mapy není konec 
 Mějte na paměti, která `CView`, základní třída `CMyView`, je zase odvozen z `CWnd`. Proto `CMyView` *je* `CView` a *je* `CWnd`. Každý z těchto tříd má vlastní mapu zpráv. Obrázek "A zobrazit hierarchii" níže zobrazuje hierarchický vztah tříd, ale mějte na paměti, že `CMyView` objektu je jeden objekt, který má vlastnosti všechny tři třídy.
 
 ![Hierarchie zobrazení](../mfc/media/vc38621.gif "hierarchie zobrazení") <br/>
-Zobrazit hierarchii
+A View Hierarchy
 
 Pokud nejde spárovat zprávu ve třídě `CMyView`na mapu zpráv, rozhraní také prohledává mapy zpráv z přímé základní třídy. `BEGIN_MESSAGE_MAP` – Makro na začátku mapu zpráv určuje názvy dvou tříd jako argumenty:
 
@@ -35,7 +35,6 @@ Pokud žádná obslužná rutina je nalezena v žádném z mapy zpráv základn�
 
 Na rychlost mapování zpráv odpovídající, rozhraní ukládá do mezipaměti poslední shody na pravděpodobnost, že ho bude tato zpráva znovu. Důsledkem tohoto objektu je procesy framework poměrně efektivní neošetřená zprávy. Mapy zpráv jsou také místo efektivnější než implementace, které používají virtuální funkce.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Jak framework prohledává mapy zpráv](../mfc/how-the-framework-searches-message-maps.md)
-

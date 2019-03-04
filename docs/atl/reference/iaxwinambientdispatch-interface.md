@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatch interface
 ms.assetid: 55ba6f7b-7a3c-4792-ae47-c8a84b683ca9
-ms.openlocfilehash: f143b2c58159d1bb0812152c68d3c31153d4570d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b9557a76d133d81a07320f1a64482d17c955ef2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467428"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301590"
 ---
 # <a name="iaxwinambientdispatch-interface"></a>Iaxwinambientdispatch – rozhraní
 
@@ -107,7 +107,7 @@ Definice toto rozhraní není k dispozici v různých formách, jak je znázorn�
 |Typ definice|Soubor|
 |---------------------|----------|
 |IDL|atliface.IDL|
-|Knihovny typů|ATL.|
+|Knihovny typů|ATL.dll|
 |C++|atliface.h (také součástí ATLBase.h)|
 
 ##  <a name="get_allowcontextmenu"></a>  IAxWinAmbientDispatch::get_AllowContextMenu
@@ -692,10 +692,9 @@ Standardní hodnoty HRESULT.
 
 Implementace objektu ATL hostitele používá VARIANT_TRUE jako výchozí hodnota této vlastnosti.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IAxWinAmbientDispatchEx – rozhraní](../../atl/reference/iaxwinambientdispatchex-interface.md)<br/>
 [IAxWinHostWindow – rozhraní](../../atl/reference/iaxwinhostwindow-interface.md)<br/>
 [CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
 [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
-

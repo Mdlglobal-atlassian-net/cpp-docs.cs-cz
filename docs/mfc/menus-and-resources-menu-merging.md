@@ -1,5 +1,5 @@
 ---
-title: 'Nabídky a prostředky: Sloučení nabídky'
+title: 'Nabídky a prostředky: Slučováním nabídek'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - status bars [MFC], OLE document applications
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-ms.openlocfilehash: 30663afae0bfd30b42f99daf95cb8ff35979ee50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e00464e59de5e20627fd2423c101c23629d7c4d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438438"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300346"
 ---
-# <a name="menus-and-resources-menu-merging"></a>Nabídky a prostředky: Sloučení nabídky
+# <a name="menus-and-resources-menu-merging"></a>Nabídky a prostředky: Slučováním nabídek
 
 Tento článek podrobně popisuje kroky potřebné pro OLE – aplikace dokumentů zpracování vizuální úpravy a aktivace na místě správně. Aktivace na místě představuje výzvu pro kontejner a server aplikace (součást). Uživatel zůstane v okně rámce (v rámci dokumentu kontejneru), ale je ve skutečnosti spuštěna jiná aplikace (server). To vyžaduje koordinaci mezi prostředky kontejneru a serverové aplikace.
 
@@ -105,12 +105,11 @@ Při aktivaci vloženou položku na místě rozhraní načte v místní nabídce
 
 Serverové aplikace by měl vytvořit nový panel nástrojů a uložte jeho rastrového obrázku v samostatném souboru. Aplikace vygenerované průvodcem aplikací uložte soubor s názvem ITOOLBAR tento rastrový obrázek. BMP. Nový panel nástrojů nahradí nástrojů aplikace typu kontejner položku pro váš server se aktivuje v místě, by měl obsahovat stejné položky jako normální nástrojů, ale odebrání ikony reprezentující překročení položek v nabídkách souboru a okno.
 
-Tento panel nástrojů je načten do vaší `COleIPFrameWnd`-odvozené třídy za vás vytvoří služba Průvodce aplikací. Aplikace typu kontejner zpracovává stavový řádek. Další informace o implementace oken s rámečkem na místě, naleznete v tématu [servery: implementace serveru](../mfc/servers-implementing-a-server.md).
+Tento panel nástrojů je načten do vaší `COleIPFrameWnd`-odvozené třídy za vás vytvoří služba Průvodce aplikací. Aplikace typu kontejner zpracovává stavový řádek. Další informace o implementace oken s rámečkem na místě, naleznete v tématu [serverů: Implementace serveru](../mfc/servers-implementing-a-server.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md)<br/>
 [Aktivace](../mfc/activation-cpp.md)<br/>
 [Servery](../mfc/servers.md)<br/>
 [Kontejnery](../mfc/containers.md)
-

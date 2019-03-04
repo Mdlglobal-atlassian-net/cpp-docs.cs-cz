@@ -8,12 +8,12 @@ helpviewer_keywords:
 - control classes [MFC], variables
 - classes [MFC], declaring variables based on
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
-ms.openlocfilehash: f79ecb6edec58d26042818d647a0ea121dd41a55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3b1a168619c1c111db3e71e1a9562d441cc710d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595686"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302075"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>Deklarace proměnné založené na nové třídě ovládacího prvku
 
@@ -41,9 +41,9 @@ Po vytvoření třídy ovládacího prvku knihovny MFC, je možné deklarovat pr
 
 9. V **komentář** přidejte všechny komentáře, které se mají zobrazit ve vašem kódu.
 
-10. Klikněte na tlačítko **OK**.
+10. Klikněte na **OK**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Mapování zpráv na funkce](../../mfc/reference/mapping-messages-to-functions.md)<br/>
 [Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>

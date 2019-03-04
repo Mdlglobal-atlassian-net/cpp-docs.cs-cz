@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: 50fb7da1a59d35d96f1f65428b3a361e3a226607
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: efcf5057481345c001cc48224f53c666623d0780
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694451"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304987"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd – třída
 
@@ -285,7 +285,7 @@ Popisovač prostředku akcelerátoru.
 
 Voláním této funkce nastavíte nabídky a akcelerátor prostředky používané tímto objektem podřízené okno MDI.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC MDI](../../visual-cpp-samples.md)<br/>
 [Ukázky knihovny MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>

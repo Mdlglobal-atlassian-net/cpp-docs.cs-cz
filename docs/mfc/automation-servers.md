@@ -7,12 +7,12 @@ helpviewer_keywords:
 - dispatch maps [MFC], Automation servers
 - servers, Automation
 ms.assetid: 523fd155-51ce-4f91-b986-b74bdbdd7d92
-ms.openlocfilehash: 0c7f3a3bd37c5f7f5696de363aa646f5376f4e75
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39e870db2f5476a630a8ed3bc68944dbb164d469
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468793"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305130"
 ---
 # <a name="automation-servers"></a>Automatizační servery
 
@@ -51,8 +51,7 @@ Průvodce aplikací MFC zjednodušuje kroky při získávání vaší aplikaci a
 
 - [Další informace o třídě COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Automatizace](../mfc/automation.md)<br/>
 [MFC – průvodce aplikací](../mfc/reference/mfc-application-wizard.md)
-

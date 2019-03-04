@@ -1,5 +1,5 @@
 ---
-title: Ccolordialog – třída
+title: CColorDialog Class
 ms.date: 11/04/2016
 f1_keywords:
 - CColorDialog
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - CColorDialog [MFC], OnColorOK
 - CColorDialog [MFC], m_cc
 ms.assetid: d013dc25-9290-4b5d-a97e-95ad7208e13b
-ms.openlocfilehash: 8b9c452dc3dcb157b20558a1f7cb31103dc01f84
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39868ed27a0dfb8756b4829ea7c378c798bd2ff3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561262"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304207"
 ---
-# <a name="ccolordialog-class"></a>Ccolordialog – třída
+# <a name="ccolordialog-class"></a>CColorDialog Class
 
 Umožňuje zahrnout do vaší aplikace dialogové okno Výběr barvy.
 
@@ -101,7 +101,7 @@ Další informace o používání `CColorDialog`, naleznete v tématu [společn�
 
 [CDialog](../../mfc/reference/cdialog-class.md)
 
-[Ccommondialog –](../../mfc/reference/ccommondialog-class.md)
+[CCommonDialog](../../mfc/reference/ccommondialog-class.md)
 
 `CColorDialog`
 
@@ -266,10 +266,9 @@ Tato funkce je volána v rámci obslužné rutiny zpráv nebo `OnColorOK`. Dialo
 
   Podívejte se na příklad pro [CColorDialog::OnColorOK](#oncolorok).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC MDI](../../visual-cpp-samples.md)<br/>
 [Ukázky knihovny MFC DRAWCLI](../../visual-cpp-samples.md)<br/>
 [CCommonDialog – třída](../../mfc/reference/ccommondialog-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-

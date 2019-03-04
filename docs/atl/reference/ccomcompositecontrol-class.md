@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CComCompositeControl class
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
-ms.openlocfilehash: 370f0bb2fc76e1377dce6ae4616861085ad44562
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1a9a2d0628b3683f047ce9858d809040438db03
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429039"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301997"
 ---
 # <a name="ccomcompositecontrol-class"></a>Ccomcompositecontrol – třída
 
@@ -49,7 +49,7 @@ Vaše třída odvozena od [ccomobjectroot –](../../atl/reference/ccomobjectroo
 |Název|Popis|
 |----------|-----------------|
 |[CComCompositeControl::CComCompositeControl](#ccomcompositecontrol)|Konstruktor|
-|[Ccomcompositecontrol –:: ~ ccomcompositecontrol –](#dtor)|Destruktor.|
+|[CComCompositeControl::~CComCompositeControl](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -94,7 +94,7 @@ Ovládací prvek implementované `CComCompositeControl`-odvozená třída nemá 
 
 [CComControlBase](../../atl/reference/ccomcontrolbase-class.md)
 
-[Ccomcontrol –](../../atl/reference/ccomcontrol-class.md)
+[CComControl](../../atl/reference/ccomcontrol-class.md)
 
 `CComCompositeControl`
 
@@ -193,7 +193,7 @@ CComCompositeControl();
 
 Inicializuje [CComCompositeControl::m_hbrBackground](#m_hbrbackground) a [CComCompositeControl::m_hWndFocus](#m_hwndfocus) datové členy na hodnotu NULL.
 
-##  <a name="dtor"></a>  Ccomcompositecontrol –:: ~ ccomcompositecontrol –
+##  <a name="dtor"></a>  CComCompositeControl::~CComCompositeControl
 
 Destruktor.
 
@@ -259,7 +259,7 @@ HRESULT SetBackgroundColorFromAmbient();
 
 Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CComControl – třída](../../atl/reference/ccomcontrol-class.md)<br/>
 [Principy vytváření složených prvků](../../atl/atl-composite-control-fundamentals.md)<br/>

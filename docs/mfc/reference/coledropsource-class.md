@@ -1,5 +1,5 @@
 ---
-title: Coledropsource – třída
+title: COleDropSource Class
 ms.date: 11/04/2016
 f1_keywords:
 - COleDropSource
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-ms.openlocfilehash: 51d524054b67a5cecc5aa7791b0aeea0cc076813
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 587aa0730502d5e8f90c4fec57bb87886b79fb3f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457778"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304974"
 ---
-# <a name="coledropsource-class"></a>Coledropsource – třída
+# <a name="coledropsource-class"></a>COleDropSource Class
 
 Umožňuje dat přetáhnout do cíle přetažení.
 
@@ -161,10 +161,9 @@ Výchozí implementace zahájí rozevíracího nebo zruší přetahování násl
 
 Protože tato funkce je volána často, to by mělo být optimalizované co největší míře.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC HIERSVR](../../visual-cpp-samples.md)<br/>
 [Ukázky knihovny MFC OCLIENT](../../visual-cpp-samples.md)<br/>
 [CCmdTarget – třída](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-

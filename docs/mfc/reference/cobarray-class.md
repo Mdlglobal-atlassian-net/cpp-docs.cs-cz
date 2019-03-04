@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 27894efd-2370-4776-9ed9-24a98492af17
-ms.openlocfilehash: 031f163a5a4b5663b296dc6615712fe7dd5dbc56
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 78d736b53a2febe4f4a026e3aaf9db14dd7f9c0b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657601"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300402"
 ---
 # <a name="cobarray-class"></a>Cobarray – třída
 
@@ -154,12 +154,12 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray –](../../mfc/reference/cbytearray-class.md)|**Přidat INT_PTR (BYTE** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[Cdwordarray –](../../mfc/reference/cdwordarray-class.md)|**Přidat INT_PTR (DWORD** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[Cptrarray –](../../mfc/reference/cptrarray-class.md)|**Přidat INT_PTR (void** <strong>\*</strong> `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[Cstringarray –](../../mfc/reference/cstringarray-class.md)|**Přidat INT_PTR (LPCTSTR** `newElement` **); throw (cmemoryexception –\* );**<br /><br /> **INT_PTR Add(const CString&** `newElement` **);**|
-|[Cuintarray –](../../mfc/reference/cuintarray-class.md)|**Přidat INT_PTR (UINT** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[Cwordarray –](../../mfc/reference/cwordarray-class.md)|**Přidat INT_PTR (slovo** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**INT_PTR Add( BYTE** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**Přidat INT_PTR (DWORD** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**Přidat INT_PTR (void** <strong>\*</strong> `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**Přidat INT_PTR (LPCTSTR** `newElement` **); throw (cmemoryexception –\* );**<br /><br /> **INT_PTR Add(const CString&** `newElement` **);**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR Add( UINT** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**Přidat INT_PTR (slovo** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
 
 ### <a name="example"></a>Příklad
 
@@ -202,12 +202,12 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray –](../../mfc/reference/cbytearray-class.md)|**Připojit INT_PTR (const CByteArray &** *src* **);**|
-|[Cdwordarray –](../../mfc/reference/cdwordarray-class.md)|**Připojit INT_PTR (const cdwordarray – &** *src* **);**|
-|[Cptrarray –](../../mfc/reference/cptrarray-class.md)|**Připojit INT_PTR (const cptrarray – &** *src* **);**|
-|[Cstringarray –](../../mfc/reference/cstringarray-class.md)|**Připojit INT_PTR (const cstringarray – &** *src* **);**|
-|[Cuintarray –](../../mfc/reference/cuintarray-class.md)|**Připojit INT_PTR (const cuintarray – &** *src* **);**|
-|[Cwordarray –](../../mfc/reference/cwordarray-class.md)|**Připojit INT_PTR (const cwordarray – &** *src* **);**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**Připojit INT_PTR (const CByteArray &** *src* **);**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**Připojit INT_PTR (const cdwordarray – &** *src* **);**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**Připojit INT_PTR (const cptrarray – &** *src* **);**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**Připojit INT_PTR (const cstringarray – &** *src* **);**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**Připojit INT_PTR (const cuintarray – &** *src* **);**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**Připojit INT_PTR (const cwordarray – &** *src* **);**|
 
 ### <a name="example"></a>Příklad
 
@@ -236,12 +236,12 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray –](../../mfc/reference/cbytearray-class.md)|**void kopírování (const CByteArray &** *src* **);**|
-|[Cdwordarray –](../../mfc/reference/cdwordarray-class.md)|**void kopírování (const cdwordarray – &** *src* **);**|
-|[Cptrarray –](../../mfc/reference/cptrarray-class.md)|**void kopírování (const cptrarray – &** *src* **);**|
-|[Cstringarray –](../../mfc/reference/cstringarray-class.md)|**void kopírování (const cstringarray – &** *src* **);**|
-|[Cuintarray –](../../mfc/reference/cuintarray-class.md)|**void kopírování (const cuintarray – &** *src* **);**|
-|[Cwordarray –](../../mfc/reference/cwordarray-class.md)|**void kopírování (const cwordarray – &** *src* **);**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void kopírování (const CByteArray &** *src* **);**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void kopírování (const cdwordarray – &** *src* **);**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void kopírování (const cptrarray – &** *src* **);**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void kopírování (const cstringarray – &** *src* **);**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void kopírování (const cuintarray – &** *src* **);**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void kopírování (const cwordarray – &** *src* **);**|
 
 ### <a name="example"></a>Příklad
 
@@ -265,12 +265,12 @@ V následující tabulce jsou uvedeny další konstruktory, které jsou podobné
 
 |Třída|Konstruktor|
 |-----------|-----------------|
-|[CByteArray –](../../mfc/reference/cbytearray-class.md)|**CByteArray ();**|
-|[Cdwordarray –](../../mfc/reference/cdwordarray-class.md)|**Cdwordarray – ();**|
-|[Cptrarray –](../../mfc/reference/cptrarray-class.md)|**Cptrarray – ();**|
-|[Cstringarray –](../../mfc/reference/cstringarray-class.md)|**Cstringarray – ();**|
-|[Cuintarray –](../../mfc/reference/cuintarray-class.md)|**Cuintarray – ();**|
-|[Cwordarray –](../../mfc/reference/cwordarray-class.md)|**Cwordarray – ();**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**CByteArray( );**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**CDWordArray( );**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**CPtrArray( );**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**CStringArray( );**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**CUIntArray( );**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**CWordArray( );**|
 
 ### <a name="example"></a>Příklad
 
@@ -301,12 +301,12 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray –](../../mfc/reference/cbytearray-class.md)|**BAJTŮ & ElementAt (INT_PTR** `nIndex` **);**|
-|[Cdwordarray –](../../mfc/reference/cdwordarray-class.md)|**DWORD & ElementAt (INT_PTR** `nIndex` **);**|
-|[Cptrarray –](../../mfc/reference/cptrarray-class.md)|**void\*& ElementAt (INT_PTR** `nIndex` **);**|
-|[Cstringarray –](../../mfc/reference/cstringarray-class.md)|**CString – & ElementAt (INT_PTR** `nIndex` **);**|
-|[Cuintarray –](../../mfc/reference/cuintarray-class.md)|**UINT & ElementAt (INT_PTR** `nIndex` **);**|
-|[Cwordarray –](../../mfc/reference/cwordarray-class.md)|**WORD & ElementAt (INT_PTR** `nIndex` **);**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**BYTE& ElementAt( INT_PTR** `nIndex` **);**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**DWORD & ElementAt (INT_PTR** `nIndex` **);**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void\*& ElementAt( INT_PTR** `nIndex` **);**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**CString – & ElementAt (INT_PTR** `nIndex` **);**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT& ElementAt( INT_PTR** `nIndex` **);**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD & ElementAt (INT_PTR** `nIndex` **);**|
 
 ### <a name="example"></a>Příklad
 
@@ -328,12 +328,12 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray –](../../mfc/reference/cbytearray-class.md)|**void (FreeExtra);**|
-|[Cdwordarray –](../../mfc/reference/cdwordarray-class.md)|**void (FreeExtra);**|
-|[Cptrarray –](../../mfc/reference/cptrarray-class.md)|**void (FreeExtra);**|
-|[Cstringarray –](../../mfc/reference/cstringarray-class.md)|**void (FreeExtra);**|
-|[Cuintarray –](../../mfc/reference/cuintarray-class.md)|**void (FreeExtra);**|
-|[Cwordarray –](../../mfc/reference/cwordarray-class.md)|**void (FreeExtra);**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void FreeExtra( );**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void FreeExtra( );**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void FreeExtra( );**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void FreeExtra( );**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void FreeExtra( );**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void FreeExtra( );**|
 
 ### <a name="example"></a>Příklad
 
@@ -365,12 +365,12 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray –](../../mfc/reference/cbytearray-class.md)|**GetAt BAJTŮ (INT_PTR** `nIndex` **) const;**|
-|[Cdwordarray –](../../mfc/reference/cdwordarray-class.md)|**DWORD GetAt (INT_PTR** `nIndex` **) const;**|
-|[Cptrarray –](../../mfc/reference/cptrarray-class.md)|**void\* GetAt (INT_PTR** `nIndex` **) const;**|
-|[Cstringarray –](../../mfc/reference/cstringarray-class.md)|**CString – GetAt (INT_PTR** `nIndex` **) const;**|
-|[Cuintarray –](../../mfc/reference/cuintarray-class.md)|**UINT GetAt (INT_PTR** `nIndex` **) const;**|
-|[Cwordarray –](../../mfc/reference/cwordarray-class.md)|**WORD GetAt (INT_PTR** `nIndex` **) const;**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**GetAt BAJTŮ (INT_PTR** `nIndex` **) const;**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**DWORD GetAt (INT_PTR** `nIndex` **) const;**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void\* GetAt (INT_PTR** `nIndex` **) const;**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**CString – GetAt (INT_PTR** `nIndex` **) const;**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT GetAt (INT_PTR** `nIndex` **) const;**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD GetAt (INT_PTR** `nIndex` **) const;**|
 
 ### <a name="example"></a>Příklad
 
@@ -398,12 +398,12 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray –](../../mfc/reference/cbytearray-class.md)|**INT_PTR GetCount (const;)**|
-|[Cdwordarray –](../../mfc/reference/cdwordarray-class.md)|**INT_PTR GetCount (const;)**|
-|[Cptrarray –](../../mfc/reference/cptrarray-class.md)|**INT_PTR GetCount (const;)**|
-|[Cstringarray –](../../mfc/reference/cstringarray-class.md)|**INT_PTR GetCount (const;)**|
-|[Cuintarray –](../../mfc/reference/cuintarray-class.md)|**INT_PTR GetCount (const;)**|
-|[Cwordarray –](../../mfc/reference/cwordarray-class.md)|**INT_PTR GetCount (const;)**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**INT_PTR GetCount (const;)**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTR GetCount (const;)**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR GetCount (const;)**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTR GetCount (const;)**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR GetCount (const;)**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR GetCount (const;)**|
 
 ### <a name="example"></a>Příklad
 
@@ -435,12 +435,12 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray –](../../mfc/reference/cbytearray-class.md)|**Const BAJTŮ\* const; () GetData BAJTŮ\* GetData ();**|
-|[Cdwordarray –](../../mfc/reference/cdwordarray-class.md)|**Const DWORD\* GetData const (); DWORD\* GetData ();**|
-|[Cptrarray –](../../mfc/reference/cptrarray-class.md)|**Const void\* \* (GetData) const; void\* \* GetData ();**|
-|[Cstringarray –](../../mfc/reference/cstringarray-class.md)|**Const CString\* const; () GetData CString –\* GetData ();**|
-|[Cuintarray –](../../mfc/reference/cuintarray-class.md)|**Const UINT\* const; () GetData UINT\* GetData ();**|
-|[Cwordarray –](../../mfc/reference/cwordarray-class.md)|**argument WORD\* const; () GetData WORD\* GetData ();**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**Const BAJTŮ\* const; () GetData BAJTŮ\* GetData ();**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**Const DWORD\* GetData const (); DWORD\* GetData ();**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**Const void\* \* (GetData) const; void\* \* GetData ();**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**Const CString\* const; () GetData CString –\* GetData ();**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**Const UINT\* const; () GetData UINT\* GetData ();**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**argument WORD\* const; () GetData WORD\* GetData ();**|
 
 ### <a name="example"></a>Příklad
 
@@ -464,12 +464,12 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray –](../../mfc/reference/cbytearray-class.md)|**INT_PTR getsize – (const;)**|
-|[Cdwordarray –](../../mfc/reference/cdwordarray-class.md)|**INT_PTR getsize – (const;)**|
-|[Cptrarray –](../../mfc/reference/cptrarray-class.md)|**INT_PTR getsize – (const;)**|
-|[Cstringarray –](../../mfc/reference/cstringarray-class.md)|**INT_PTR getsize – (const;)**|
-|[Cuintarray –](../../mfc/reference/cuintarray-class.md)|**INT_PTR getsize – (const;)**|
-|[Cwordarray –](../../mfc/reference/cwordarray-class.md)|**INT_PTR getsize – (const;)**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**INT_PTR getsize – (const;)**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTR getsize – (const;)**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR getsize – (const;)**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTR getsize – (const;)**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR getsize – (const;)**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR getsize – (const;)**|
 
 ### <a name="example"></a>Příklad
 
@@ -499,12 +499,12 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray –](../../mfc/reference/cbytearray-class.md)|**INT_PTR GetUpperBound (const;)**|
-|[Cdwordarray –](../../mfc/reference/cdwordarray-class.md)|**INT_PTR GetUpperBound (const;)**|
-|[Cptrarray –](../../mfc/reference/cptrarray-class.md)|**INT_PTR GetUpperBound (const;)**|
-|[Cstringarray –](../../mfc/reference/cstringarray-class.md)|**INT_PTR GetUpperBound (const;)**|
-|[Cuintarray –](../../mfc/reference/cuintarray-class.md)|**INT_PTR GetUpperBound (const;)**|
-|[Cwordarray –](../../mfc/reference/cwordarray-class.md)|**INT_PTR GetUpperBound (const;)**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**INT_PTR GetUpperBound (const;)**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTR GetUpperBound (const;)**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR GetUpperBound (const;)**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTR GetUpperBound (const;)**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR GetUpperBound (const;)**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR GetUpperBound (const;)**|
 
 ### <a name="example"></a>Příklad
 
@@ -556,12 +556,12 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray –](../../mfc/reference/cbytearray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, BYTE** `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, CByteArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[Cdwordarray –](../../mfc/reference/cdwordarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, DWORD** `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, cdwordarray –** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[Cptrarray –](../../mfc/reference/cptrarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, void** <strong>\*</strong> `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, cptrarray –** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[Cstringarray –](../../mfc/reference/cstringarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, LPCTSTR** `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, cstringarray –** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[Cuintarray –](../../mfc/reference/cuintarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, UINT** `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, cuintarray –** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[Cwordarray –](../../mfc/reference/cwordarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, WORD** `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, cwordarray –** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, BYTE** `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CByteArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, DWORD** `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CDWordArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, void** <strong>\*</strong> `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CPtrArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, LPCTSTR** `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, cstringarray –** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, UINT** `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, cuintarray –** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, WORD** `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CWordArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|
 
 ### <a name="example"></a>Příklad
 
@@ -609,12 +609,12 @@ V následující tabulce jsou uvedeny ostatní operátory, které jsou podobné 
 
 |Třída|Operátor|
 |-----------|--------------|
-|[CByteArray –](../../mfc/reference/cbytearray-class.md)|**Operátor & BYTE [] (int_ptr** `nindex`  **\);**<br /><br /> **BYTE [] – operátor (int_ptr** `nindex`  **\) const;**|
-|[Cdwordarray –](../../mfc/reference/cdwordarray-class.md)|**DWORD & – operátor [] (int_ptr** `nindex`  **\);**<br /><br /> **DWORD – operátor [] (int_ptr** `nindex`  **\) const;**|
-|[Cptrarray –](../../mfc/reference/cptrarray-class.md)|**void\*& operator [] (int_ptr** `nindex`  **\);**<br /><br /> **void\* operator [] (int_ptr** `nindex`  **\) const;**|
-|[Cstringarray –](../../mfc/reference/cstringarray-class.md)|**CString – & – operátor [] (int_ptr** `nindex`  **\);**<br /><br /> **CString – operator [] (int_ptr** `nindex`  **\) const;**|
-|[Cuintarray –](../../mfc/reference/cuintarray-class.md)|**UINT & – operátor [] (int_ptr** `nindex`  **\);**<br /><br /> **UINT operator [] (int_ptr** `nindex`  **\) const;**|
-|[Cwordarray –](../../mfc/reference/cwordarray-class.md)|**WORD & – operátor [] (int_ptr** `nindex`  **\);**<br /><br /> **SLOVO operator [] (int_ptr** `nindex`  **\) const;**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**Operátor & BYTE [] (int_ptr** `nindex`  **\);**<br /><br /> **BYTE [] – operátor (int_ptr** `nindex`  **\) const;**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**DWORD & – operátor [] (int_ptr** `nindex`  **\);**<br /><br /> **DWORD – operátor [] (int_ptr** `nindex`  **\) const;**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void\*& operator [](int_ptr** `nindex` **\);**<br /><br /> **void\* operator [] (int_ptr** `nindex`  **\) const;**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**CString& operator [](int_ptr** `nindex` **\);**<br /><br /> **CString – operator [] (int_ptr** `nindex`  **\) const;**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT& operator [](int_ptr** `nindex` **\);**<br /><br /> **UINT operator [] (int_ptr** `nindex`  **\) const;**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD & – operátor [] (int_ptr** `nindex`  **\);**<br /><br /> **SLOVO operator [] (int_ptr** `nindex`  **\) const;**|
 
 ### <a name="example"></a>Příklad
 
@@ -640,12 +640,12 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray –](../../mfc/reference/cbytearray-class.md)|**void (RemoveAll);**|
-|[Cdwordarray –](../../mfc/reference/cdwordarray-class.md)|**void (RemoveAll);**|
-|[Cptrarray –](../../mfc/reference/cptrarray-class.md)|**void (RemoveAll);**|
-|[Cstringarray –](../../mfc/reference/cstringarray-class.md)|**void (RemoveAll);**|
-|[Cuintarray –](../../mfc/reference/cuintarray-class.md)|**void (RemoveAll);**|
-|[Cwordarray –](../../mfc/reference/cwordarray-class.md)|**void (RemoveAll);**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void (RemoveAll);**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void (RemoveAll);**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void (RemoveAll);**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void (RemoveAll);**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void (RemoveAll);**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void (RemoveAll);**|
 
 ### <a name="example"></a>Příklad
 
@@ -683,12 +683,12 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray –](../../mfc/reference/cbytearray-class.md)|**void RemoveAt (INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1);**|
-|[Cdwordarray –](../../mfc/reference/cdwordarray-class.md)|**void RemoveAt (INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1);**|
-|[Cptrarray –](../../mfc/reference/cptrarray-class.md)|**void RemoveAt (INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1);**|
-|[Cstringarray –](../../mfc/reference/cstringarray-class.md)|**void RemoveAt (INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1);**|
-|[Cuintarray –](../../mfc/reference/cuintarray-class.md)|**void RemoveAt (INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1);**|
-|[Cwordarray –](../../mfc/reference/cwordarray-class.md)|**void RemoveAt (INT_PTR** `nIndex` **, INT_PTR** *nCount* **= 1);**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void RemoveAt( INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1 );**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void RemoveAt( INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1 );**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void RemoveAt( INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1 );**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void RemoveAt( INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1 );**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void RemoveAt( INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1 );**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void RemoveAt( INT_PTR** `nIndex` **, INT_PTR** *nCount* **= 1 );**|
 
 ### <a name="example"></a>Příklad
 
@@ -731,12 +731,12 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray –](../../mfc/reference/cbytearray-class.md)|**void SetAt (INT_PTR** `nIndex` **, BYTE** `newElement` **);**|
-|[Cdwordarray –](../../mfc/reference/cdwordarray-class.md)|**void SetAt (INT_PTR** `nIndex` **, DWORD** `newElement` **);**|
-|[Cptrarray –](../../mfc/reference/cptrarray-class.md)|**void SetAt (INT_PTR** `nIndex` **, void** <strong>\*</strong> `newElement` **);**|
-|[Cstringarray –](../../mfc/reference/cstringarray-class.md)|**void SetAt (INT_PTR** `nIndex` **, LPCTSTR** `newElement` **);**|
-|[Cuintarray –](../../mfc/reference/cuintarray-class.md)|**void SetAt (INT_PTR** `nIndex` **, UINT** `newElement` **);**|
-|[Cwordarray –](../../mfc/reference/cwordarray-class.md)|**void SetAt (INT_PTR** `nIndex` **, WORD** `newElement` **);**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void SetAt (INT_PTR** `nIndex` **, BYTE** `newElement` **);**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void SetAt( INT_PTR** `nIndex` **, DWORD** `newElement` **);**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void SetAt (INT_PTR** `nIndex` **, void** <strong>\*</strong> `newElement` **);**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void SetAt( INT_PTR** `nIndex` **, LPCTSTR** `newElement` **);**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void SetAt( INT_PTR** `nIndex` **, UINT** `newElement` **);**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetAt (INT_PTR** `nIndex` **, WORD** `newElement` **);**|
 
 ### <a name="example"></a>Příklad
 
@@ -778,12 +778,12 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray –](../../mfc/reference/cbytearray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **, BYTE** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[Cdwordarray –](../../mfc/reference/cdwordarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **, DWORD** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[Cptrarray –](../../mfc/reference/cptrarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **, void** <strong>\*</strong> `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[Cstringarray –](../../mfc/reference/cstringarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **, LPCTSTR** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[Cuintarray –](../../mfc/reference/cuintarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **, UINT** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[Cwordarray –](../../mfc/reference/cwordarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **, WORD** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, BYTE** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, DWORD** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **, void** <strong>\*</strong> `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, LPCTSTR** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, UINT** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, WORD** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
 
 ### <a name="example"></a>Příklad
 
@@ -831,18 +831,18 @@ Následující tabulka uvádí další členské funkce, které jsou podobné `C
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray –](../../mfc/reference/cbytearray-class.md)|**void SetSize (INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[Cdwordarray –](../../mfc/reference/cdwordarray-class.md)|**void SetSize (INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[Cptrarray –](../../mfc/reference/cptrarray-class.md)|**void SetSize (INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[Cstringarray –](../../mfc/reference/cstringarray-class.md)|**void SetSize (INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[Cuintarray –](../../mfc/reference/cuintarray-class.md)|**void SetSize (INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[Cwordarray –](../../mfc/reference/cwordarray-class.md)|**void SetSize (INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1);**<br /><br /> **throw (cmemoryexception –\* );**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void SetSize (INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1);**<br /><br /> **throw (cmemoryexception –\* );**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void SetSize (INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1);**<br /><br /> **throw (cmemoryexception –\* );**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void SetSize (INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1);**<br /><br /> **throw (cmemoryexception –\* );**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void SetSize (INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1);**<br /><br /> **throw (cmemoryexception –\* );**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void SetSize (INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1);**<br /><br /> **throw (cmemoryexception –\* );**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetSize (INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1);**<br /><br /> **throw (cmemoryexception –\* );**|
 
 ### <a name="example"></a>Příklad
 
   Podívejte se na příklad pro [CObArray::GetData](#getdata).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-ms.openlocfilehash: a679ca48b054a545752483ff5349442e7c4a0ddd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 438fc753e91092502c84acfc491ec64c15133023
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505388"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305052"
 ---
 # <a name="cmfcribbonpanel-class"></a>Cmfcribbonpanel – třída
 
@@ -215,7 +215,7 @@ Následující příklad ukazuje, jak nakonfigurovat `CMFCRibbonPanel` pomocí r
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cmfcribbonpanel –](../../mfc/reference/cmfcribbonpanel-class.md)
+[CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -642,7 +642,7 @@ CPoint point);
 *bHighlight*<br/>
 [in] TRUE, pokud chcete zvýraznit panelu pásu karet. FALSE unhighlight panel pásu karet.
 
-*Bod*<br/>
+*point*<br/>
 [in] Souřadnice x a y ukazatele myši relativně vzhledem k levém horním rohu okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -659,7 +659,7 @@ BOOL bCheckPanelCaption = FALSE);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Souřadnice x a y ukazatele myši relativně vzhledem k levém horním rohu okna.
 
 *bCheckPanelCaption*<br/>
@@ -683,7 +683,7 @@ virtual int HitTestEx(CPoint point) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Souřadnice x a y ukazatele myši relativně vzhledem k levém horním rohu okna.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -851,7 +851,7 @@ int nHeight);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení pro panel pásu karet.
 
 *nHeight*<br/>
@@ -1248,7 +1248,7 @@ Ukazatel na element s fokusem nebo hodnota NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

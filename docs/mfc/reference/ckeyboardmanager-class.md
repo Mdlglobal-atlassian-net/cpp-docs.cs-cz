@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: d144731d05e861f4b462c4d58022b5155fdeb79b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: c953958b3e0112997423376d42b62953b936049a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694267"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303604"
 ---
 # <a name="ckeyboardmanager-class"></a>Ckeyboardmanager – třída
 
@@ -89,7 +89,7 @@ Následující příklad ukazuje, jak se načítají ukazatel na `CKeyboardManag
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Ckeyboardmanager –](../../mfc/reference/ckeyboardmanager-class.md)
+[CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -375,11 +375,10 @@ Nenulové, pokud je metoda úspěšná. jinak 0.
 
 Tuto funkci použijte, pokud chcete nahradit existující místní tabulky nové klávesové zkratky pro několik objektů oken rámce. Funkce šablony dokumentu přijímá jako parametr získat přístup ke všem objektům okno rámce připojený k šabloně dokumentu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
 [CWinAppEx – třída](../../mfc/reference/cwinappex-class.md)<br/>
 [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)<br/>
 [Přizpůsobení klávesnice a myši](../../mfc/keyboard-and-mouse-customization.md)
-

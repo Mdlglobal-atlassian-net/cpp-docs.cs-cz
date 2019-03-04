@@ -14,12 +14,12 @@ helpviewer_keywords:
 - text, controls for input [MFC]
 - user input [MFC], MFC control classes
 ms.assetid: f9876606-9f5b-44cb-9135-213298d1df8f
-ms.openlocfilehash: 880ef783316f710943fde323bc89a49d19b0a1fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79a71a4660cd49f85726d730c9fad0b2f10f83bb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509001"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300424"
 ---
 # <a name="control-classes"></a>Třídy ovládacích prvků
 
@@ -34,10 +34,10 @@ Statické zobrazení okna. Statické ovládací prvky se používají k popisku,
 
 ## <a name="text-controls"></a>Textových ovládacích prvků
 
-[Cedit –](../mfc/reference/cedit-class.md)<br/>
+[CEdit](../mfc/reference/cedit-class.md)<br/>
 Okno aplikace upravitelný text ovládacího prvku. Upravit ovládací prvky se používají tak, aby přijímal textový vstup od uživatele.
 
-[Cipaddressctrl –](../mfc/reference/cipaddressctrl-class.md)<br/>
+[CIPAddressCtrl](../mfc/reference/cipaddressctrl-class.md)<br/>
 Do textového pole podporuje pro manipulaci s adresy Internet Protocol (IP).
 
 [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)<br/>
@@ -48,7 +48,7 @@ Ovládací prvek, ve kterém můžete uživatele zadat a upravit text. Na rozdí
 [CSliderCtrl](../mfc/reference/csliderctrl-class.md)<br/>
 Ovládací prvek obsahující ovládací prvek posuvník, který uživatel přesune výběr hodnotu nebo sadu hodnot.
 
-[Cspinbuttonctrl –](../mfc/reference/cspinbuttonctrl-class.md)<br/>
+[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)<br/>
 Zvýší nebo sníží hodnotu může uživatel kliknout pár tlačítek.
 
 [CProgressCtrl](../mfc/reference/cprogressctrl-class.md)<br/>
@@ -67,10 +67,10 @@ Tlačítko s rastrový obrázek, ne textový popisek.
 
 ## <a name="lists"></a>Seznamy
 
-[Clistbox –](../mfc/reference/clistbox-class.md)<br/>
+[CListBox](../mfc/reference/clistbox-class.md)<br/>
 Okno ovládacího prvku pole se seznamem. Seznamu se zobrazí seznam položek, které uživatel může zobrazit a vybrat.
 
-[Cdraglistbox –](../mfc/reference/cdraglistbox-class.md)<br/>
+[CDragListBox](../mfc/reference/cdraglistbox-class.md)<br/>
 Poskytuje funkce pro pole se seznamem Windows; Umožňuje uživateli seznam položek pole, jako jsou názvy souborů a řetězcové literály, přesouvat v rámci pole se seznamem. Pole se seznamem díky tomu jsou užitečné pro seznam položek v jiné než abecední pořadí, jako například obsahovat soubory nebo cesty v projektu.
 
 [CComboBox](../mfc/reference/ccombobox-class.md)<br/>
@@ -79,7 +79,7 @@ Okno ovládacího prvku pole se seznamem. Pole se seznamem se skládá z ovláda
 [CComboBoxEx](../mfc/reference/ccomboboxex-class.md)<br/>
 Poskytnutím podpory pro seznamy obrázků rozšiřuje ovládací prvek pole se seznamem.
 
-[Cchecklistbox –](../mfc/reference/cchecklistbox-class.md)<br/>
+[CCheckListBox](../mfc/reference/cchecklistbox-class.md)<br/>
 Zobrazí seznam položek pomocí zaškrtávacích políček, která uživatel může zaškrtněte nebo zrušte zaškrtnutí, vedle každé položky.
 
 [CListCtrl](../mfc/reference/clistctrl-class.md)<br/>
@@ -119,24 +119,24 @@ Ovládací prvek karty, na které může uživatel kliknout, obdobná oddělova�
 [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)<br/>
 Umožňuje uživateli vytvořit klávesové kombinace kláves, které může uživatel stisknout k rychlému provádění akce.
 
-[Clinkctrl –](../mfc/reference/clinkctrl-class.md)<br/>
+[CLinkCtrl](../mfc/reference/clinkctrl-class.md)<br/>
 Generuje text značkami a spouští příslušné aplikace, když uživatel klikne na odkaz vložený.
 
-[Chtmleditctrl –](../mfc/reference/chtmleditctrl-class.md)<br/>
+[CHtmlEditCtrl](../mfc/reference/chtmleditctrl-class.md)<br/>
 Poskytuje funkce pro ovládací prvek WebBrowser ActiveX v okně MFC.
 
 ## <a name="related-classes"></a>Související třídy
 
-[Cimagelist –](../mfc/reference/cimagelist-class.md)<br/>
+[CImageList](../mfc/reference/cimagelist-class.md)<br/>
 Poskytuje funkce pro seznam obrázků Windows. Seznamy obrázků se používají s ovládacími prvky seznam a stromu ovládacích prvků. Můžete také používají k ukládání a archivovat sadu rastrové obrázky stejné velikosti.
 
-[Cctrlview –](../mfc/reference/cctrlview-class.md)<br/>
+[CCtrlView](../mfc/reference/cctrlview-class.md)<br/>
 Základní třída pro všechna zobrazení související s ovládacími prvky Windows. Zobrazení založená na ovládací prvky jsou popsané níže.
 
 [CEditView](../mfc/reference/ceditview-class.md)<br/>
 Zobrazení, která obsahuje standardní Windows ovládacích prvků pro úpravy.
 
-[Cricheditview –](../mfc/reference/cricheditview-class.md)<br/>
+[CRichEditView](../mfc/reference/cricheditview-class.md)<br/>
 Zobrazení, které obsahuje Windows bohatých ovládacích prvků pro úpravy.
 
 [CListView](../mfc/reference/clistview-class.md)<br/>
@@ -145,7 +145,6 @@ Zobrazení, která obsahuje ovládací prvek seznamu Windows.
 [CTreeView](../mfc/reference/ctreeview-class.md)<br/>
 Zobrazení, která obsahuje ovládací prvek stromu Windows.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../mfc/class-library-overview.md)
-

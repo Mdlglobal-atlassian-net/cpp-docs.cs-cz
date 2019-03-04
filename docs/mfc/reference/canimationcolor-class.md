@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CAnimationColor [MFC], m_gValue
 - CAnimationColor [MFC], m_rValue
 ms.assetid: 88bfabd4-efeb-4652-87e8-304253d8e48c
-ms.openlocfilehash: 6037dd11ddef10500d9468bdf9fa188901aad739
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee6003a22db78c2a510579c3d717fec887f8a6ad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536682"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304328"
 ---
 # <a name="canimationcolor-class"></a>Canimationcolor – třída
 
@@ -96,7 +96,7 @@ Canimationcolor – třída zapouzdří tři objekty canimationvariable – a m�
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Canimationbaseobject –](../../mfc/reference/canimationbaseobject-class.md)
+[CAnimationBaseObject](../../mfc/reference/canimationbaseobject-class.md)
 
 `CAnimationColor`
 
@@ -146,7 +146,7 @@ CAnimationColor(
 
 ### <a name="parameters"></a>Parametry
 
-*Barva*<br/>
+*color*<br/>
 Určuje výchozí barvu.
 
 *nGroupID*<br/>
@@ -172,7 +172,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*>& lst);
 
 ### <a name="parameters"></a>Parametry
 
-*obrázků*<br/>
+*lst*<br/>
 Pokud funkce vrátí, obsahuje odkazy na tři objekty canimationvariable – které představují komponenty červené, zelené a modré.
 
 ##  <a name="getb"></a>  CAnimationColor::GetB
@@ -249,7 +249,7 @@ BOOL GetValue(COLORREF& color);
 
 ### <a name="parameters"></a>Parametry
 
-*Barva*<br/>
+*color*<br/>
 Výstup. Po návratu metody obsahuje aktuální hodnotu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -302,7 +302,7 @@ void operator=(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*Barva*<br/>
+*color*<br/>
 Určuje nové hodnoty animace barev.
 
 ### <a name="remarks"></a>Poznámky
@@ -319,13 +319,13 @@ void SetDefaultValue(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*Barva*<br/>
+*color*<br/>
 Určuje nové výchozí hodnoty pro součásti červené, zelené a modré.
 
 ### <a name="remarks"></a>Poznámky
 
 Tuto funkci použijte k nastavení výchozí hodnoty na objekt animace. Tyto metody přiřadí výchozí hodnoty barevných složek animace barvy. Také obnoví základní objekty modelu COM, pokud byl vytvořen. Pokud odebíráte tento objekt animace na události (ValueChanged nebo IntegerValueChanged), musíte znovu zapnout. Tyto události.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

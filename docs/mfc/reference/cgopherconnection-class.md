@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CGopherConnection [MFC], GetAttribute
 - CGopherConnection [MFC], OpenFile
 ms.assetid: b5b96aea-ac99-430e-bd84-d1372b43f78f
-ms.openlocfilehash: f9c2a99c30213a28f4c20ba0f4a2eebea85bef76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d960d566a63531af211592a7a8ae8f1cb35c5958
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519662"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300716"
 ---
 # <a name="cgopherconnection-class"></a>Cgopherconnection – třída
 
@@ -54,7 +54,7 @@ class CGopherConnection : public CInternetConnection
 
 Služba gopher je jedním z tři služby Internet rozpoznat pomocí tříd WinInet knihovny MFC.
 
-Třída `CGopherConnection` obsahuje konstruktor a tři další členské funkce, které spravují službu gopher: [OpenFile](#openfile), [CreateLocator](#createlocator), a [GetAttribute](#getattribute).
+Třída `CGopherConnection` obsahuje konstruktor a tři další členské funkce, které spravují gopher služby: [OpenFile](#openfile), [CreateLocator](#createlocator), a [GetAttribute](#getattribute).
 
 Ke komunikaci s gopher serveru Internet, musíte nejprve vytvořit instanci [cinternetsession –](../../mfc/reference/cinternetsession-class.md)a pak vyvolejte [CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection), která vytvoří `CGopherConnection` objekt a vrátí ukazatel na něj. Nikdy nevytvářejte `CGopherConnection` objektu přímo.
 
@@ -64,7 +64,7 @@ Další informace o tom, `CGopherConnection` funguje s jinými třídami MFC Int
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cinternetconnection –](../../mfc/reference/cinternetconnection-class.md)
+[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)
 
 `CGopherConnection`
 
@@ -233,9 +233,9 @@ Ukazatel [cgopherfile –](../../mfc/reference/cgopherfile-class.md) objektu, kt
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsat *dwContext* výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu souvisí s tuto konkrétní operaci `CGopherConnection` objekt vytvořený pomocí jeho [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objektu. Hodnota se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) kvůli stavu na operaci, se kterým je identifikován. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.
+Přepsat *dwContext* výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu souvisí s tuto konkrétní operaci `CGopherConnection` objekt vytvořený pomocí jeho [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objektu. Hodnota se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) kvůli stavu na operaci, se kterým je identifikován. Přečtěte si článek [Internet první kroky: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CInternetConnection – třída](../../mfc/reference/cinternetconnection-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

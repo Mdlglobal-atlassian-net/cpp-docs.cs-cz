@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-ms.openlocfilehash: f66936c597b8c595dc21ae6994d7af0477e8d2aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcc79f781be3a0292398e4f211ea55f5403b6b8f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528645"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302877"
 ---
 # <a name="coletemplateserver-class"></a>Coletemplateserver – třída
 
@@ -53,7 +53,7 @@ Tato třída je odvozená od třídy [COleObjectFactory](../../mfc/reference/col
 
 `COleTemplateServer` přepsání `OnCreateInstance` členské funkce definované `COleObjectFactory`. Tato členská funkce se volá se rozhraním, chcete-li vytvořit objekt jazyka C++ vhodný typ.
 
-Další informace o serverech, najdete v článku [servery: implementace serveru](../../mfc/servers-implementing-a-server.md).
+Další informace o serverech, najdete v článku [serverů: Implementace serveru](../../mfc/servers-implementing-a-server.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -61,13 +61,13 @@ Další informace o serverech, najdete v článku [servery: implementace serveru
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[COleObjectFactory –](../../mfc/reference/coleobjectfactory-class.md)
+[COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md)
 
 `COleTemplateServer`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdisp.h
+**Header:** afxdisp.h
 
 ##  <a name="coletemplateserver"></a>  COleTemplateServer::COleTemplateServer
 
@@ -94,7 +94,7 @@ void ConnectTemplate(
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor CLSID*<br/>
+*clsid*<br/>
 Odkaz na ID třídy OLE, který požaduje šablony.
 
 *pDocTemplate*<br/>
@@ -169,7 +169,7 @@ Informace v argumentech *rglpszRegister* a *rglpszOverwrite* jsou zapsána do re
 
 Další informace najdete v tématu [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC HIERSVR](../../visual-cpp-samples.md)<br/>
 [COleObjectFactory – třída](../../mfc/reference/coleobjectfactory-class.md)<br/>

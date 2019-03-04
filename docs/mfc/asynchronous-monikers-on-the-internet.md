@@ -10,12 +10,12 @@ helpviewer_keywords:
 - optimization [MFC], asynchronous downloading across Internet
 - Internet [MFC], asynchronous downloading
 ms.assetid: 418b0c64-0046-4dae-8118-c9c762b5822e
-ms.openlocfilehash: 63bdc8372223075804d8c710909909382167b2c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7a7ea51bca134e965747db8aac7f8a62822c9eb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591292"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305026"
 ---
 # <a name="asynchronous-monikers-on-the-internet"></a>Asynchronní monikery na Internetu
 
@@ -63,8 +63,7 @@ Třídy MFC `CDataPathProperty` a [ccacheddatapathproperty –](../mfc/reference
 
 Informace o stahování asynchronně v ovládacím prvku ActiveX naleznete v tématu [ovládací prvky Activexna Internetu](../mfc/activex-controls-on-the-internet.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Úlohy internetového programování MFC](../mfc/mfc-internet-programming-tasks.md)<br/>
 [Základy internetového programování v prostředí MFC](../mfc/mfc-internet-programming-basics.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Cstringrefelementtraits – třída
+title: CStringRefElementTraits Class
 ms.date: 11/04/2016
 f1_keywords:
 - CStringRefElementTraits
@@ -10,14 +10,14 @@ f1_keywords:
 helpviewer_keywords:
 - CStringRefElementTraits class
 ms.assetid: cc15062d-5627-46cc-ac2b-1744afdc2dbd
-ms.openlocfilehash: 86b8db169cbb0f0f43ebf37a8ea9bf959ee0ee06
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c57fda64689a80dfa548977e56b0416641bb4360
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633337"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301620"
 ---
-# <a name="cstringrefelementtraits-class"></a>Cstringrefelementtraits – třída
+# <a name="cstringrefelementtraits-class"></a>CStringRefElementTraits Class
 
 Tato třída poskytuje statické funkce související se ukládají v objektech třídy kolekce řetězců. Řetězcových objektů jsou zpracovány jako odkazy.
 
@@ -89,10 +89,10 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Str1*<br/>
+*str1*<br/>
 První řetězec elementu.
 
-*řetězci Str2*<br/>
+*str2*<br/>
 Druhý řetězec elementu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -116,7 +116,7 @@ Element řetězce.
 
 Vrátí hodnotu hash pomocí obsahu řetězce.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CElementTraitsBase – třída](../../atl/reference/celementtraitsbase-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

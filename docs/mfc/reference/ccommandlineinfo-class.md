@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCommandLineInfo [MFC], m_strPrinterName
 - CCommandLineInfo [MFC], m_strRestartIdentifier
 ms.assetid: 3e313ddb-0a82-4991-87ac-a27feff4668c
-ms.openlocfilehash: 60c0ae66234d5fb3be61d9249cf61ee77dff41ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e4b535da00fdcecf4ce52fad696cb5d2bc55efa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481468"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303024"
 ---
 # <a name="ccommandlineinfo-class"></a>Ccommandlineinfo – třída
 
@@ -81,15 +81,15 @@ Tento objekt lze použít k zapouzdření následujících možností příkazov
 
 |argument příkazového řádku|Příkaz provedený|
 |----------------------------|----------------------|
-|*Aplikace*|Nový soubor.|
+|*app*|Nový soubor.|
 |*aplikace* název souboru|Otevřít soubor.|
 |*aplikace* `/p` název souboru|Tisk souboru se výchozí tiskárna.|
 |*aplikace* `/pt` filename port ovladače tiskárny|Tisk souboru na zadané tiskárně.|
-|*Aplikace* `/dde`|Spuštění a operátoru await příkazu DDE.|
-|*Aplikace* `/Automation`|Spuštění jako server automatizace OLE.|
-|*Aplikace* `/Embedding`|Spuštění upravit vložené položky OLE.|
-|*Aplikace* `/Register`<br /><br /> *Aplikace* `/Regserver`|Informuje o tom aplikace k provádění úloh registrace.|
-|*Aplikace* `/Unregister`<br /><br /> *Aplikace* `/Unregserver`|Informuje o tom aplikace provádět všechny úlohy zrušení registrace.|
+|*app* `/dde`|Spuštění a operátoru await příkazu DDE.|
+|*app* `/Automation`|Spuštění jako server automatizace OLE.|
+|*app* `/Embedding`|Spuštění upravit vložené položky OLE.|
+|*app* `/Register`<br /><br /> *app* `/Regserver`|Informuje o tom aplikace k provádění úloh registrace.|
+|*app* `/Unregister`<br /><br /> *app* `/Unregserver`|Informuje o tom aplikace provádět všechny úlohy zrušení registrace.|
 
 Odvodit novou třídu z `CCommandLineInfo` ostatní příznaky a hodnoty parametrů. Přepsat [ParseParam](#parseparam) ke zpracování nového příznaky.
 
@@ -304,15 +304,15 @@ Výchozí implementace této funkce rozpoznává následující příznaky: `/p`
 
 |argument příkazového řádku|Příkaz provedený|
 |----------------------------|----------------------|
-|*Aplikace*|Nový soubor.|
+|*app*|Nový soubor.|
 |*aplikace* název souboru|Otevřít soubor.|
 |*aplikace* `/p` název souboru|Tisk souboru se výchozí tiskárna.|
 |*aplikace* `/pt` filename port ovladače tiskárny|Tisk souboru na zadané tiskárně.|
-|*Aplikace* `/dde`|Spuštění a operátoru await příkazu DDE.|
-|*Aplikace* `/Automation`|Spuštění jako server automatizace OLE.|
-|*Aplikace* `/Embedding`|Spuštění upravit vložené položky OLE.|
-|*Aplikace* `/Register`<br /><br /> *Aplikace* `/Regserver`|Informuje o tom aplikace k provádění úloh registrace.|
-|*Aplikace* `/Unregister`<br /><br /> *Aplikace* `/Unregserver`|Informuje o tom aplikace provádět všechny úlohy zrušení registrace.|
+|*app* `/dde`|Spuštění a operátoru await příkazu DDE.|
+|*app* `/Automation`|Spuštění jako server automatizace OLE.|
+|*app* `/Embedding`|Spuštění upravit vložené položky OLE.|
+|*app* `/Register`<br /><br /> *app* `/Regserver`|Informuje o tom aplikace k provádění úloh registrace.|
+|*app* `/Unregister`<br /><br /> *app* `/Unregserver`|Informuje o tom aplikace provádět všechny úlohy zrušení registrace.|
 
 Tyto informace jsou uloženy v [m_bRunAutomated](#m_brunautomated), [m_bRunEmbedded](#m_brunembedded), a [m_nShellCommand](#m_nshellcommand). Příznaky jsou označeny buď lomítko " **/**"nebo" **-**".
 
@@ -322,10 +322,9 @@ Výchozí implementace také nastaví [m_bShowSplash](#m_bshowsplash) na hodnotu
 
 Přepsání této funkce ve vaší odvozené třídy za účelem zpracování další příznak a parametr hodnoty.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)<br/>
 [CWinApp::ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand)
-

@@ -1,18 +1,18 @@
 ---
-title: 'Návod: Odstranění práce z vlákna uživatelského rozhraní'
+title: 'Návod: Odstranění práce z vlákna uživatelského rozhraní'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 1230cf2b3fa510aeca8516e41cf30f9665987d05
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 1838ad0d6adb146adacb8b3a395f44f76e2a8d3f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176312"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304714"
 ---
-# <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Návod: Odstranění práce z vlákna uživatelského rozhraní
+# <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Návod: Odstranění práce z vlákna uživatelského rozhraní
 
 Tento dokument popisuje způsob použití Concurrency Runtime pro přesun práce, která se provádí pomocí vlákna uživatelského rozhraní (UI) v aplikaci Microsoft Foundation Classes (MFC) pracovní vlákno. Tento dokument také ukazuje, jak zlepšit výkon operace s delším průběhem výkresu.
 
@@ -222,7 +222,7 @@ Pouze pro velikost poslední okno kreslení práce se provede při změně velik
 
 [[Horní](#top)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Návody pro Concurrency Runtime](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [Funkční paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>

@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: 679cdc5b5a0a85ade09fe1999e8de40300a8ae8e
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: fe9b282fd248f8dd03a6a7f078c03866d1b14b2d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694384"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305013"
 ---
 # <a name="cview-class"></a>CView – třída
 
@@ -247,7 +247,7 @@ virtual void OnActivateFrame(
 
 ### <a name="parameters"></a>Parametry
 
-*nInformace*<br/>
+*nState*<br/>
 Určuje, zda je okno rámce se aktivuje nebo deaktivuje. Může být jeden z následujících hodnot:
 
 - WA_INACTIVE okno rámce je právě deaktivována.
@@ -305,7 +305,7 @@ virtual void OnBeginPrinting(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Odkazuje na kontext zařízení tiskárny.
 
 *pInfo*<br/>
@@ -336,7 +336,7 @@ Odkazuje [coledataobject –](../../mfc/reference/coledataobject-class.md) se p�
 *dwKeyState*<br/>
 Obsahuje informace o stavu modifikační klávesy. Jedná se o kombinaci libovolný počet následující: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON.
 
-*Bod*<br/>
+*point*<br/>
 Aktuální pozicí myši vzhledem ke klientské oblasti zobrazení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -357,7 +357,7 @@ Další informace najdete v ukázce MFC Advanced Concepts [OCLIENT](../../visual
 
 Výchozí implementace je Neprovádět žádnou akci a vrátí DROPEFFECT_NONE.
 
-Přepsání této funkce můžete připravit pro budoucí volání [ondragover –](#ondragover) členskou funkci. V tuto chvíli pro pozdější použití v mají být načtena žádná data z datového objektu vyžaduje `OnDragOver` členskou funkci. Zobrazení se musí aktualizovat také v tuto chvíli poskytnout uživateli vizuální zpětnou vazbu. Další informace najdete v článku [přetažení: implementace cíle přetažení](../../mfc/drag-and-drop-implementing-a-drop-target.md).
+Přepsání této funkce můžete připravit pro budoucí volání [ondragover –](#ondragover) členskou funkci. V tuto chvíli pro pozdější použití v mají být načtena žádná data z datového objektu vyžaduje `OnDragOver` členskou funkci. Zobrazení se musí aktualizovat také v tuto chvíli poskytnout uživateli vizuální zpětnou vazbu. Další informace najdete v článku [přetažení: Implementace cíle přetažení](../../mfc/drag-and-drop-implementing-a-drop-target.md).
 
 ##  <a name="ondragleave"></a>  CView::OnDragLeave
 
@@ -390,7 +390,7 @@ Odkazuje [coledataobject –](../../mfc/reference/coledataobject-class.md) přet
 *dwKeyState*<br/>
 Obsahuje informace o stavu modifikační klávesy. Jedná se o kombinaci libovolný počet následující: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON.
 
-*Bod*<br/>
+*point*<br/>
 Aktuální pozice myši vzhledem ke klientské oblasti zobrazení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -411,7 +411,7 @@ Další informace najdete v ukázce MFC Advanced Concepts [OCLIENT](../../visual
 
 Výchozí implementace je Neprovádět žádnou akci a vrátí DROPEFFECT_NONE.
 
-Přepsání této funkce můžete poskytnout uživateli vizuální zpětnou vazbu během operace přetažení. Protože tato funkce je volána nepřetržitě, jakýkoli kód, jsou v něm obsaženy by mělo být optimalizované co největší míře. Další informace najdete v článku [přetažení: implementace cíle přetažení](../../mfc/drag-and-drop-implementing-a-drop-target.md).
+Přepsání této funkce můžete poskytnout uživateli vizuální zpětnou vazbu během operace přetažení. Protože tato funkce je volána nepřetržitě, jakýkoli kód, jsou v něm obsaženy by mělo být optimalizované co největší míře. Další informace najdete v článku [přetažení: Implementace cíle přetažení](../../mfc/drag-and-drop-implementing-a-drop-target.md).
 
 ##  <a name="ondragscroll"></a>  CView::OnDragScroll
 
@@ -428,7 +428,7 @@ virtual DROPEFFECT OnDragScroll(
 *dwKeyState*<br/>
 Obsahuje informace o stavu modifikační klávesy. Jedná se o kombinaci libovolný počet následující: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON.
 
-*Bod*<br/>
+*point*<br/>
 Obsahuje umístění kurzoru v pixelech, vzhledem k obrazovce.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -449,7 +449,7 @@ Další informace najdete v ukázce MFC Advanced Concepts [OCLIENT](../../visual
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce přepište, pokud chcete zadat zvláštní chování pro tuto událost. Výchozí implementace automaticky posouvá windows, pokud kurzor je přetáhnout do oblasti posuvníku výchozí uvnitř ohraničení okna. Další informace najdete v článku [přetažení: implementace cíle přetažení](../../mfc/drag-and-drop-implementing-a-drop-target.md).
+Tato funkce přepište, pokud chcete zadat zvláštní chování pro tuto událost. Výchozí implementace automaticky posouvá windows, pokud kurzor je přetáhnout do oblasti posuvníku výchozí uvnitř ohraničení okna. Další informace najdete v článku [přetažení: Implementace cíle přetažení](../../mfc/drag-and-drop-implementing-a-drop-target.md).
 
 ##  <a name="ondraw"></a>  CView::OnDraw
 
@@ -461,7 +461,7 @@ virtual void OnDraw(CDC* pDC) = 0;
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Odkazuje na kontext zařízení má být použit pro vykreslení bitovou kopii dokumentu.
 
 ### <a name="remarks"></a>Poznámky
@@ -496,7 +496,7 @@ Přetažení efekt, který uživatel požaduje.
 
 - DROPEFFECT_LINK vytvoří propojení mezi datový objekt a jeho serverem.
 
-*Bod*<br/>
+*point*<br/>
 Aktuální pozice myši vzhledem ke klientské oblasti zobrazení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -532,10 +532,10 @@ Odkazuje [coledataobject –](../../mfc/reference/coledataobject-class.md) , kte
 *dropDefault*<br/>
 Efekt, který uživatel vybral pro operaci přetažení výchozí na základě aktuálního stavu klíče. To může být DROPEFFECT_NONE. Přetažení efekty jsou popsány v části poznámky.
 
-*rozevíracího seznamu*<br/>
+*dropList*<br/>
 Seznam rozevírací efekty, které podporuje zdroje přemístění. Přetažení efekt hodnoty lze spojovat pomocí bitový operátor OR ( **&#124;**) operace. Přetažení efekty jsou popsány v části poznámky.
 
-*Bod*<br/>
+*point*<br/>
 Aktuální pozice myši vzhledem ke klientské oblasti zobrazení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -588,7 +588,7 @@ virtual void OnEndPrinting(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Odkazuje na kontext zařízení tiskárny.
 
 *pInfo*<br/>
@@ -612,13 +612,13 @@ virtual void OnEndPrintPreview(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Odkazuje na kontext zařízení tiskárny.
 
 *pInfo*<br/>
 Odkazuje [cprintinfo –](../../mfc/reference/cprintinfo-structure.md) struktura, která popisuje aktuální tiskové úlohy.
 
-*Bod*<br/>
+*point*<br/>
 Určuje bod na stránku, která byla naposledy zobrazená v režimu náhledu.
 
 *pView*<br/>
@@ -654,7 +654,7 @@ virtual void OnPrepareDC(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Odkazuje na kontext zařízení má být použit pro vykreslení bitovou kopii dokumentu.
 
 *pInfo*<br/>
@@ -731,7 +731,7 @@ virtual void OnPrint(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Odkazuje na kontext zařízení tiskárny.
 
 *pInfo*<br/>
@@ -793,7 +793,7 @@ Posuvníku kód, který označuje, že uživatel je posouvání požadavku. Tent
 
 - Posune SB_TOP nahoru.
 
-*nPos –*<br/>
+*nPos*<br/>
 Obsahuje aktuální pozice posuvníku – Pokud je kód posuvníku SB_THUMBTRACK; v opačném případě se nepoužívá. V závislosti na rozsahu počáteční posuvníku *nPos* může být záporný a by měl být přetypovat na **int** v případě potřeby.
 
 *bDoScroll*<br/>
@@ -869,7 +869,7 @@ Obvykle by neměl provedením kreslení přímo z `OnUpdate`. Místo toho určet
 
 Pokud *lHint* je 0 a *pHint* má hodnotu NULL, dokument odeslala oznámení obecné aktualizace. Pokud zobrazení obdrží upozornění na obecné aktualizace nebo jej nelze dekódovat pomocné parametry, by měl zneplatnit její celou klientskou oblast.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
