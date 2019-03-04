@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-ms.openlocfilehash: 7e1d4bd0e851a14680a46d7d6ae79dcf4bd190e4
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: fb764dbd71d89ae3317816df3539c2881b9695b6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176728"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290778"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>Funkce Gray a Dithered pro bitové mapy
 
@@ -26,8 +26,8 @@ Knihovna MFC poskytuje dvě funkce pro poskytování rastrový obrázek vzhledu 
 
 |||
 |-|-|
-|[Afxdrawgraybitmap –](#afxdrawgraybitmap)|Nakreslí šedé verzi rastrový obrázek.|
-|[Afxgetgraybitmap –](#afxgetgraybitmap)|Zkopíruje šedé verzi rastrový obrázek.|
+|[AfxDrawGrayBitmap](#afxdrawgraybitmap)|Nakreslí šedé verzi rastrový obrázek.|
+|[AfxGetGrayBitmap](#afxgetgraybitmap)|Zkopíruje šedé verzi rastrový obrázek.|
 
 **Funkce dithered pro bitové mapy**
 
@@ -37,10 +37,10 @@ Knihovna MFC poskytuje dvě funkce také pro nahrazení vzoru dithered pro bitov
 
 |||
 |-|-|
-|[Afxdrawditheredbitmap –](#afxdrawditheredbitmap)|Nakreslí rastrový obrázek s dithered pro bitové na pozadí.|
-|[Afxgetditheredbitmap –](#afxgetditheredbitmap)|Zkopíruje bitmapu s dithered pro bitové na pozadí.|
+|[AfxDrawDitheredBitmap](#afxdrawditheredbitmap)|Nakreslí rastrový obrázek s dithered pro bitové na pozadí.|
+|[AfxGetDitheredBitmap](#afxgetditheredbitmap)|Zkopíruje bitmapu s dithered pro bitové na pozadí.|
 
-##  <a name="afxdrawgraybitmap"></a>  Afxdrawgraybitmap –
+##  <a name="afxdrawgraybitmap"></a>  AfxDrawGrayBitmap
 
 Nakreslí šedé verzi rastrový obrázek.
 
@@ -55,7 +55,7 @@ void AFXAPI AfxDrawGrayBitmap(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Odkazuje na cílový řadič domény.
 
 *x*<br/>
@@ -84,7 +84,7 @@ Rastrový obrázek nakreslit `AfxDrawGrayBitmap` bude mít vzhled zablokovaný o
 
 **Záhlaví:** afxwin.h
 
-##  <a name="afxgetgraybitmap"></a>  Afxgetgraybitmap –
+##  <a name="afxgetgraybitmap"></a>  AfxGetGrayBitmap
 
 Zkopíruje šedé verzi rastrový obrázek.
 
@@ -136,7 +136,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Odkazuje na cílový řadič domény.
 
 *x*<br/>
@@ -151,7 +151,7 @@ Zdrojovou bitmapu.
 *cr1*<br/>
 Jednu z dvou tónování barev, obvykle bílou.
 
-*CR2*<br/>
+*cr2*<br/>
 Další tónování barvu, obvykle světle šedá (COLOR_MENU).
 
 ### <a name="remarks"></a>Poznámky
@@ -168,7 +168,7 @@ Zdrojovou bitmapu je vykreslen na cílový řadič domény s dvěma barvami (*cr
 
 **Záhlaví:** afxwin.h
 
-##  <a name="afxgetditheredbitmap"></a>  Afxgetditheredbitmap –
+##  <a name="afxgetditheredbitmap"></a>  AfxGetDitheredBitmap
 
 Zkopíruje bitmapu, jeho pozadí nahrazení vzoru dithered pro bitové (kontroly).
 
@@ -191,7 +191,7 @@ Cílovou bitmapu.
 *cr1*<br/>
 Jednu z dvou tónování barev, obvykle bílou.
 
-*CR2*<br/>
+*cr2*<br/>
 Další tónování barvu, obvykle světle šedá (COLOR_MENU).
 
 ### <a name="remarks"></a>Poznámky
@@ -208,6 +208,6 @@ Zdrojová bitmapa nezkopíruje do cílové bitmapy barvou dvou (*cr1* a *cr2*) �
 
 **Záhlaví:** afxwin.h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)

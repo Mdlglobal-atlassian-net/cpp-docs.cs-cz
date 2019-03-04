@@ -1,5 +1,5 @@
 ---
-title: Cmfcautohidebar – třída
+title: CMFCAutoHideBar Class
 ms.date: 10/18/2018
 f1_keywords:
 - CMFCAutoHideBar
@@ -38,14 +38,14 @@ helpviewer_keywords:
 - CMFCAutoHideBar [MFC], UpdateVisibleState
 - CMFCAutoHideBar [MFC], m_nShowAHWndDelay
 ms.assetid: 54c8d84f-de64-4efd-8a47-3ea0ade40a70
-ms.openlocfilehash: 8592a5485afedab075a21215e1ffa140a8c66e28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b40e4d48e8204824375630f7517ff3f5aa5108d3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619450"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291415"
 ---
-# <a name="cmfcautohidebar-class"></a>Cmfcautohidebar – třída
+# <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar Class
 
 `CMFCAutoHideBar` Třídy je třída speciální nástrojů, která implementuje funkce automatického skrytí.
 
@@ -116,7 +116,7 @@ Následující příklad ukazuje, jak vytvořit `CMFCAutoHideBar` objektu a pou�
 
 [CPane](../../mfc/reference/cpane-class.md)
 
-[Cmfcautohidebar –](../../mfc/reference/cmfcautohidebar-class.md)
+[CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -404,7 +404,7 @@ void UpdateVisibleState();
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [ATL], adding to projects
 - ATL Control Wizard
 ms.assetid: 991f8e72-ffbc-4382-a4ce-e255acfba5b6
-ms.openlocfilehash: a7fd85263531968aeb4dd86534b4e67ddc553629
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 58c3ebe4c2a15aa3f0d59191c37a7f2422a63ab5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598819"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287896"
 ---
 # <a name="atl-control-wizard"></a>Průvodce ovládacími prvky ATL
 
@@ -50,7 +50,7 @@ Poskytuje informace pro třídy C++ vytvořený pro implementaci objektu.
 
    Nastaví název třídy, která implementuje objekt. Tento název je založen na název, který jste zadali v **krátký název**, předchází "C", typická předpona pro název třídy.
 
-- **soubor .h**
+- **.h file**
 
    Nastaví název hlavičkového souboru pro nový objekt třídy. Ve výchozím nastavení, tento název je založen na název, který jste zadali v **krátký název**. Klikněte na tlačítko se třemi tečkami uložení názvu souboru do umístění podle vaší volby, nebo připojit k existujícímu souboru deklaraci třídy. Pokud vyberete existující soubor, Průvodce neuloží se do vybraného umístění dokud kliknutím **Dokončit**.
 
@@ -95,9 +95,8 @@ Poskytuje informace o funkcích, které modelu COM pro objekt.
 
    Nastaví název, který kontejnery lze použít místo identifikátor CLSID objektu. Toto pole se vyplní automaticky. Pokud toto pole ručně nevyplníte, nemusí být k dispozici s ostatními nástroji ovládacího prvku. Například ovládací prvky ActiveX, které jsou generovány bez `ProgID` nejsou k dispozici v **vložit ovládací prvek ActiveX** dialogové okno. Další informace o dialogovém okně najdete v tématu [Insert Dialog Box ovládacího prvku ActiveX](../../windows/insert-activex-control-dialog-box.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Ovládací prvek ATL](../../atl/reference/adding-an-atl-control.md)<br/>
+[ATL Control](../../atl/reference/adding-an-atl-control.md)<br/>
 [Přidání funkcí do složeného ovládacího prvku](../../atl/adding-functionality-to-the-composite-control.md)<br/>
 [Základy ATL – objekty COM](../../atl/fundamentals-of-atl-com-objects.md)
-

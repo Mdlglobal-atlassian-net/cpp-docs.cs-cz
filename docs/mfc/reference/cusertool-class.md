@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CUserTool [MFC], m_strInitialDirectory
 - CUserTool [MFC], m_strLabel
 ms.assetid: 7c287d3e-d012-488d-b4e1-aa0f83f294bb
-ms.openlocfilehash: 6c439ace92a407c8de3a200dedd61428b9bdbc28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca9035ecfcde0c2e82628c5509a16557a487b8cc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437365"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290453"
 ---
 # <a name="cusertool-class"></a>Cusertool – třída
 
@@ -90,7 +90,7 @@ Následující příklad ukazuje, jak vytvořit nástroj z `CUserToolsManager` o
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cusertool –](../../mfc/reference/cusertool-class.md)
+[CUserTool](../../mfc/reference/cusertool-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -120,7 +120,7 @@ void DrawToolIcon(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *rectImage*<br/>
@@ -263,7 +263,7 @@ Popisovač načíst ikonu.
 
 Voláním této metody lze načíst ikonu zobrazený na položku nabídky. Tato metoda vyhledává ikona ve spustitelném souboru, který používá nástroj. Pokud nemá žádné výchozí ikona, na ikonu poskytované [CUserTool::LoadDefaultIcon](#loaddefaulticon) místo ní se použije.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

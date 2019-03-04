@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CDocTemplate [MFC], SetPreviewInfo
 - CDocTemplate [MFC], SetServerInfo
 ms.assetid: 14b41a1f-bf9d-4eac-b6a8-4c54ffcc77f6
-ms.openlocfilehash: 8044af41a3176d58c09f2c91c52497fa7f59de05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b2d84af9be8e5c606cde8794b51e12207dcdec9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658585"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289621"
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate – třída
 
@@ -353,7 +353,7 @@ Ukazatel na další dokument v seznamu dokumentů, které jsou spojené s touto 
 
 ### <a name="parameters"></a>Parametry
 
-*rpo*<br/>
+*rPos*<br/>
 Odkaz na POZICI hodnotu vrácenou příkazem předchozí volání [GetFirstDocPosition](#getfirstdocposition) nebo `GetNextDoc`.
 
 ### <a name="remarks"></a>Poznámky
@@ -623,7 +623,7 @@ Určuje ukazatel na strukturu runtime třídy informace o zobrazení ve verzi pr
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CCmdTarget – třída](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, macros
 ms.assetid: c1bc5e79-2307-43d2-9d10-3a62ffadf473
-ms.openlocfilehash: c1a746487b799979cd83f2900a0f7a12d21a6837
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69b823cbcd85ebaaeb05979283ea4f8fea80f4b6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524828"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290687"
 ---
 # <a name="registry-data-exchange-macros"></a>Makra výměny dat registru
 
@@ -79,10 +79,10 @@ RDX_BINARY(
 
 ### <a name="parameters"></a>Parametry
 
-*kořenovým klíčem*<br/>
+*rootkey*<br/>
 Kořenový klíč registru.
 
-*podklíč*<br/>
+*subkey*<br/>
 Podklíč registru.
 
 *Název hodnoty*<br/>
@@ -113,10 +113,10 @@ RDX_CSTRING_TEXT(
 
 ### <a name="parameters"></a>Parametry
 
-*kořenovým klíčem*<br/>
+*rootkey*<br/>
 Kořenový klíč registru.
 
-*podklíč*<br/>
+*subkey*<br/>
 Podklíč registru.
 
 *Název hodnoty*<br/>
@@ -147,10 +147,10 @@ RDX_DWORD(
 
 ### <a name="parameters"></a>Parametry
 
-*kořenovým klíčem*<br/>
+*rootkey*<br/>
 Kořenový klíč registru.
 
-*podklíč*<br/>
+*subkey*<br/>
 Podklíč registru.
 
 *Název hodnoty*<br/>
@@ -181,10 +181,10 @@ RDX_TEXT(
 
 ### <a name="parameters"></a>Parametry
 
-*kořenovým klíčem*<br/>
+*rootkey*<br/>
 Kořenový klíč registru.
 
-*podklíč*<br/>
+*subkey*<br/>
 Podklíč registru.
 
 *Název hodnoty*<br/>
@@ -200,8 +200,7 @@ Velikost v bajtech, členské proměnné.
 
 Toto makro se používá ve spojení s makry BEGIN_RDX_MAP a END_RDX_MAP Pokud chcete přidružit k členské proměnné položky daného registru. Globální funkce [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), nebo členská funkce se stejným názvem, který vytvořil BEGIN_RDX_MAP a END_RDX_MAP makra, by měla sloužit k provedení výměny dat mezi systémovým registrem a členské proměnné v RDX map.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Makra](../../atl/reference/atl-macros.md)<br/>
 [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)
-

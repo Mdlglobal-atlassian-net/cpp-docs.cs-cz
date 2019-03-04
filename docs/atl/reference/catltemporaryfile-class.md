@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTemporaryFile class
 ms.assetid: 05f0f2a5-94f6-4594-8dae-b114292ff5f9
-ms.openlocfilehash: f440476db3618c24f0fd1cfbfe028c959517a607
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1da5037deb0143c6d05009baccc8c1553616028
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642267"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288185"
 ---
 # <a name="catltemporaryfile-class"></a>Catltemporaryfile – třída
 
@@ -49,7 +49,7 @@ class CAtlTemporaryFile
 |Název|Popis|
 |----------|-----------------|
 |[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)|Konstruktor|
-|[Catltemporaryfile –:: ~ catltemporaryfile –](#dtor)|Destruktor.|
+|[CAtlTemporaryFile::~CAtlTemporaryFile](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -104,7 +104,7 @@ Soubor není otevřen ve skutečnosti, dokud je provedeno volání [CAtlTemporar
 
 [!code-cpp[NVC_ATL_Utilities#73](../../atl/codesnippet/cpp/catltemporaryfile-class_1.cpp)]
 
-##  <a name="dtor"></a>  Catltemporaryfile –:: ~ catltemporaryfile –
+##  <a name="dtor"></a>  CAtlTemporaryFile::~CAtlTemporaryFile
 
 Destruktor.
 
@@ -191,7 +191,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nPos –*<br/>
+*nPos*<br/>
 Pozice v bajtech.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -261,7 +261,7 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nPos –*<br/>
+*nPos*<br/>
 Pozice v souboru, ve kterém chcete spustit zámek.
 
 *nCount*<br/>
@@ -392,7 +392,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nPos –*<br/>
+*nPos*<br/>
 Pozice v souboru, ve kterém chcete spustit odemknout.
 
 *nCount*<br/>
@@ -440,7 +440,7 @@ Volání [CAtlFile::Write](../../atl/reference/catlfile-class.md#write).
 
 Podívejte se na příklad pro [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [CAtlFile – třída](../../atl/reference/catlfile-class.md)

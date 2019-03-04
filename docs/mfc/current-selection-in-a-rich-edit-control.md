@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rich edit controls [MFC], current selection in
 - selection, current in CRichEditCtrl
 ms.assetid: f6b2a2b6-5481-4ad3-9720-6dd772ea6fc8
-ms.openlocfilehash: 4b4b4d0b3419201cd1243bf6f846ab0e1b5ed686
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4516c4506419169ac3ab284e6c59cae71595be59
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636501"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286861"
 ---
 # <a name="current-selection-in-a-rich-edit-control"></a>Aktuální výběr v ovládacích prvcích pro úpravy s formátováním
 
@@ -26,8 +26,7 @@ Chcete-li získat vybraný text v ovládacím prvku RichEdit, použijte [GetSelT
 
 Můžete hledat pomocí řetězce v ovládacím prvku RichEdit [FindText](../mfc/reference/cricheditctrl-class.md#findtext) členskou funkci [FINDTEXTEX](/windows/desktop/api/richedit/ns-richedit-_findtextexa) struktury použité s touto funkcí určuje rozsah textu vyhledávání a hledaný řetězec. Tyto možnosti můžete zadat také určuje, zda je hledání malá a velká písmena.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

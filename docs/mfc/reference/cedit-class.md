@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: f18866dca3610db275c629bbb2ac885c21cbdcb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6af054ea27233de2cc3b551bbec69c0ab3b4be9e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455806"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289959"
 ---
 # <a name="cedit-class"></a>Cedit – třída
 
@@ -187,7 +187,7 @@ kde `id` identifikátor podřízené okno ovládacího prvku pro úpravy, posíl
 
 Prototyp funkce nadřazeného objektu je následujícím způsobem:
 
-**afx_msg** void memberFxn **();**
+**afx_msg** void memberFxn **( );**
 
 Tady je seznam možných položky mapování zpráv a popis případy, ve kterých se mají být odeslány do nadřazené:
 
@@ -277,7 +277,7 @@ int CharFromPos(CPoint pt) const;
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pt*<br/>
 Souřadnice bodu v klientské oblasti tohoto `CEdit` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -726,7 +726,7 @@ void GetRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje `RECT` struktura, která přijímá formátování obdélník.
 
 ### <a name="remarks"></a>Poznámky
@@ -1117,7 +1117,7 @@ void SetLimitText(UINT nMax);
 
 ### <a name="parameters"></a>Parametry
 
-*Nmaximum*<br/>
+*nMax*<br/>
 Nový text limit, ve znacích.
 
 ### <a name="remarks"></a>Poznámky
@@ -1252,7 +1252,7 @@ void SetRect(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje `RECT` struktury nebo `CRect` objekt, který určuje nové rozměry formátování obdélník.
 
 ### <a name="remarks"></a>Poznámky
@@ -1281,7 +1281,7 @@ void SetRectNP(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje `RECT` struktury nebo `CRect` objekt, který určuje nové rozměry obdélníku.
 
 ### <a name="remarks"></a>Poznámky
@@ -1447,7 +1447,7 @@ Další informace najdete v tématu [EM_UNDO](/windows/desktop/Controls/em-undo)
 
 [!code-cpp[NVC_MFC_CEdit#25](../../mfc/reference/codesnippet/cpp/cedit-class_27.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC CALCDRIV](../../visual-cpp-samples.md)<br/>
 [Ukázka CMNCTRL2 knihovny MFC](../../visual-cpp-samples.md)<br/>

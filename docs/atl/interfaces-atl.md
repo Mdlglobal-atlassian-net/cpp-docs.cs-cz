@@ -6,12 +6,12 @@ helpviewer_keywords:
 - COM interfaces
 - interfaces, COM
 ms.assetid: de6c8b12-6230-4fdc-af66-a28b91d5ee55
-ms.openlocfilehash: 3f6e8978c01d6689118a3a004c48e75a40151490
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5416fb8a99420f0f6c84318753ee3399ccf5db2a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594737"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287372"
 ---
 # <a name="interfaces-atl"></a>Rozhraní (ATL)
 
@@ -24,8 +24,7 @@ Každé rozhraní je rovněž jedinečné ID rozhraní (IID). Tuto jedinečnost 
 > [!NOTE]
 >  IID pro rozhraní COM a OLE standard jsou předdefinovány.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Úvod do modelu COM](../atl/introduction-to-com.md)<br/>
 [Objekty COM a rozhraní](/windows/desktop/com/com-objects-and-interfaces)
-

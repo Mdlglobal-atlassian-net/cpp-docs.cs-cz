@@ -8,12 +8,12 @@ helpviewer_keywords:
 - rebar controls [MFC], dialog bars
 - dialog bars [MFC], using with rebar bands
 ms.assetid: e528cea0-6b81-4bdf-9643-7c03b6176590
-ms.openlocfilehash: fdef763db5085d6419f082ecd4dddca27a5b39b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33ca3d0a7bf2e60511ea0048ad91b1f0930a2894
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554366"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287172"
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>Použití dialogového pruhu s ovládacím prvkem matrice
 
@@ -41,8 +41,7 @@ Následující podrobnosti o postupu kroky potřebné k dosažení transparentno
 
 Nové obslužné rutiny simulovat transparentnosti panel dialogového okna předávání WM_ERASEBKGND zprávu nadřazenému oknu a vynucení repaint pokaždé, když je přesunut objektu panel dialogového okna.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

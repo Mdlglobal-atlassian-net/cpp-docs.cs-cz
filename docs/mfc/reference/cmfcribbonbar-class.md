@@ -188,12 +188,12 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-ms.openlocfilehash: 78566eaa15eb695d892471925a9dadcad9655c5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3656b6a135757a4658f2ef08b80a54efffe89012
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640242"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288412"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar – třída
 
@@ -319,7 +319,7 @@ Prvky, které se zobrazí na Rozbalit panel pásu karet a smlouvy co nejlíp vyu
 
 Můžete použít `CMFCRibbonStatusBar` třídu pro implementaci stavový řádek podobný tomu použitému v Office 2007. Kategorie pásu karet obsahuje (a zobrazí) skupinu [panely pásu karet](../../mfc/reference/cmfcribbonpanel-class.md). Každý panel pásu karet obsahuje jeden nebo více prvků pásu karet, které jsou odvozeny z [cmfcribbonbaseelement –](../../mfc/reference/cmfcribbonbaseelement-class.md).
 
-Informace o tom, jak přidat panel pásu karet do existující aplikace knihovny MFC naleznete v tématu [návod: aktualizace aplikace MFC Scribble](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
+Informace o tom, jak přidat panel pásu karet do existující aplikace knihovny MFC naleznete v tématu [názorný postup: Aktualizace aplikace MFC Scribble](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -333,7 +333,7 @@ Informace o tom, jak přidat panel pásu karet do existující aplikace knihovny
 
 [CPane](../../mfc/reference/cpane-class.md)
 
-[CMFCRibbonBar –](../../mfc/reference/cmfcribbonbar-class.md)
+[CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -703,7 +703,7 @@ BOOL DrawMenuImage(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení pro tlačítko nabídky.
 
 *pMenuItem*<br/>
@@ -992,7 +992,7 @@ BOOL GetContextName(
 *uiContextID*<br/>
 [in] ID pásu karet kategorii kontextu.
 
-*%{strName/*<br/>
+*strName*<br/>
 [out] Název kategorie titulek kontextu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1305,7 +1305,7 @@ virtual CMFCRibbonBaseElement* HitTest(
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Umístění bodu v souřadnicích panel pásu karet.
 
 *bCheckActiveCategory*<br/>
@@ -1478,7 +1478,7 @@ virtual void OnClickButton(
 *pButton*<br/>
 [in] Ukazatel na došlo ke kliknutí na tlačítko.
 
-*Bod*<br/>
+*point*<br/>
 [in] Tento parametr se nepoužívá.
 
 ### <a name="remarks"></a>Poznámky
@@ -1896,7 +1896,7 @@ void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& 
 
 ### <a name="parameters"></a>Parametry
 
-*Stav*<br/>
+*state*<br/>
 [in] Výchozí stav panelu nástrojů Rychlý přístup.
 
 ### <a name="remarks"></a>Poznámky
@@ -2147,7 +2147,7 @@ Přepočítá rozložení pásu karet; TRUE FALSE v opačném případě.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
@@ -2156,4 +2156,3 @@ Přepočítá rozložení pásu karet; TRUE FALSE v opačném případě.
 [CMFCRibbonPanel – třída](../../mfc/reference/cmfcribbonpanel-class.md)<br/>
 [CMFCRibbonBaseElement – třída](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
 [Návod: Aktualizace aplikace MFC Scribble](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
-

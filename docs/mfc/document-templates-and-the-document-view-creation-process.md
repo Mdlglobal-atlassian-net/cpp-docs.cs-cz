@@ -11,16 +11,16 @@ helpviewer_keywords:
 - CDocTemplate class [MFC]
 - templates [MFC], document templates
 ms.assetid: 311ce4cd-fbdf-4ea1-a51b-5bb043abbcee
-ms.openlocfilehash: 29575166a188b0691465bef0a72810d2e3d97624
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 79d24ef4b6687bce61295a92cdb90f4ce4a0d619
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174873"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289998"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>Šablony dokumentů a proces tvorby v modelu dokument/zobrazení
 
-Rozhraní pro správu složitého procesu vytváření dokumentů s jejich přidružené zobrazení a oken s rámečkem, používá dvě třídy šablony dokumentu: [csingledoctemplate –](../mfc/reference/csingledoctemplate-class.md) pro aplikace SDI a [cmultidoctemplate – ](../mfc/reference/cmultidoctemplate-class.md) pro aplikace MDI. A `CSingleDocTemplate` můžete vytvářet a ukládat dokumenty jednoho typu v čase. A `CMultiDocTemplate` udržuje seznam mnoho otevřených dokumentů jednoho typu.
+Rozhraní pro správu složitého procesu vytváření dokumentů s jejich přidružené zobrazení a oken s rámečkem, používá dvě třídy šablony dokumentu: [Csingledoctemplate –](../mfc/reference/csingledoctemplate-class.md) pro aplikace SDI a [cmultidoctemplate –](../mfc/reference/cmultidoctemplate-class.md) pro aplikace MDI. A `CSingleDocTemplate` můžete vytvářet a ukládat dokumenty jednoho typu v čase. A `CMultiDocTemplate` udržuje seznam mnoho otevřených dokumentů jednoho typu.
 
 Některé aplikace podporují více typů dokumentů. Aplikace může například podporovat dokumenty textu a grafiky dokumenty. V takové aplikace když uživatel vybere nový příkaz v nabídce Soubor dialogové okno zobrazuje seznam možných typů nový dokument otevřít. Pro každý typ podporovaného dokumentu aplikace používá objekt šablony odlišné dokumentu. Následující obrázek znázorňuje konfiguraci aplikace MDI, která podporuje dva typy dokumentu a ukazuje několik otevřené dokumenty.
 
@@ -35,11 +35,10 @@ Ikona zaregistrován ke každé šabloně dokument podle jeho pozice v seznamu a
 
 Šablona dokumentu je například třetí ze tří pro aplikaci. Pokud aplikace v indexu 3 existuje prostředek s ikonou, tato ikona se používá pro šablonu dokumentu. V opačném případě ikona na pozici 0 je použita jako výchozí.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Obecná témata MFC](../mfc/general-mfc-topics.md)<br/>
 [Vytváření šablon dokumentů](../mfc/document-template-creation.md)<br/>
 [Vytváření dokumentů/zobrazení](../mfc/document-view-creation.md)<br/>
 [Vztahy mezi objekty MFC](../mfc/relationships-among-mfc-objects.md)<br/>
 [Vytváření nových dokumentů, oken a zobrazení](../mfc/creating-new-documents-windows-and-views.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Csinusoidaltransitionfromvelocity – třída
+title: CSinusoidalTransitionFromVelocity Class
 ms.date: 11/04/2016
 f1_keywords:
 - CSinusoidalTransitionFromVelocity
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CSinusoidalTransitionFromVelocity [MFC], m_duration
 - CSinusoidalTransitionFromVelocity [MFC], m_period
 ms.assetid: cc885f17-b84b-45ee-8f1f-36a8bbb7adad
-ms.openlocfilehash: 585ffcf787b2e1156b4f0b9f6444b15a4d5bfc54
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f61effb6dacdd1076784de8e825a3acec192474c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500513"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286941"
 ---
-# <a name="csinusoidaltransitionfromvelocity-class"></a>Csinusoidaltransitionfromvelocity – třída
+# <a name="csinusoidaltransitionfromvelocity-class"></a>CSinusoidalTransitionFromVelocity Class
 
 Zapouzdřuje přechod se sinusovou, který má amplitudu určenou počáteční rychlostí proměnné animace.
 
@@ -60,9 +60,9 @@ Hodnota proměnné animace oscillates kolem počáteční hodnota za celou dobu 
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cbasetransition –](../../mfc/reference/cbasetransition-class.md)
+[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
 
-[Csinusoidaltransitionfromvelocity –](../../mfc/reference/csinusoidaltransitionfromvelocity-class.md)
+[CSinusoidalTransitionFromVelocity](../../mfc/reference/csinusoidaltransitionfromvelocity-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -121,6 +121,6 @@ Období oscilace sinusovým wave během několika sekund.
 UI_ANIMATION_SECONDS m_period;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

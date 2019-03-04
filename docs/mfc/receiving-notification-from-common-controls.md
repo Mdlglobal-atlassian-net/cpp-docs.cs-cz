@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Windows common controls [MFC], notifications
 - WM_NOTIFY message
 ms.assetid: 50194592-d60d-44d0-8ab3-338a2a2c63e7
-ms.openlocfilehash: 8813a7f86bde417b48d5ab2d943d296efef5e91c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb923374866aa8348f9b895c9b97915817564883
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542646"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287424"
 ---
 # <a name="receiving-notification-from-common-controls"></a>Příjem oznámení z běžných ovládacích prvků
 
@@ -27,7 +27,7 @@ Běžné ovládací prvky jsou podřízených oken, které odesílají zprávy o
 
 Aplikace se spoléhá na tyto zprávy oznámení a zjistěte, jakou akci uživatel chce, aby se k provedení. Většina běžných ovládacích prvků zasílání oznámení, jako wm_notify – zprávy. Ovládací prvky Windows většina zpráv s oznámením odeslat jako wm_command – zprávy. [CWnd::OnNotify](../mfc/reference/cwnd-class.md#onnotify) je obslužná rutina wm_notify – zprávy. Stejně jako u `CWnd::OnCommand`, provádění `OnNotify` odešle zprávu do zprávu s oznámením `OnCmdMsg` pro zpracování v mapování zprávy. Položka mapování zpráv pro zpracování oznámení o je ON_NOTIFY. Další informace najdete v tématu [Technická poznámka 61: ON_NOTIFY a wm_notify – zprávy](../mfc/tn061-on-notify-and-wm-notify-messages.md).
 
-Alternativně odvozená třída může zpracovávat své vlastní zprávy oznámení pomocí "reflexe zprávy." Další informace najdete v tématu [62 technická Poznámka: reflexe zprávy pro Windows prvky](../mfc/tn062-message-reflection-for-windows-controls.md).
+Alternativně odvozená třída může zpracovávat své vlastní zprávy oznámení pomocí "reflexe zprávy." Další informace najdete v tématu [62 technická Poznámka: Zpráva reflexe pro ovládací prvky Windows](../mfc/tn062-message-reflection-for-windows-controls.md).
 
 ## <a name="retrieving-the-cursor-position-in-a-notification-message"></a>Načítání pozice kurzoru v zprávu s oznámením
 
@@ -44,8 +44,7 @@ Přidejte následující kód do těla obslužné rutiny zprávy oznámení (v t
 
 V tomto okamžiku je umístění kurzoru myši uložené v `cursorPos` objektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Příprava a použití ovládacích prvků](../mfc/making-and-using-controls.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

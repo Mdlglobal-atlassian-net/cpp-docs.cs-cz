@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CCriticalSection [MFC], Unlock
 - CCriticalSection [MFC], m_sect
 ms.assetid: f776f74b-5b0b-4f32-9c13-2b8e4a0d7b2b
-ms.openlocfilehash: 152efe6b1c5e8be67a3c37cc7e56b12c88c1b4dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c89647afc8a9a8c6564d25afe20d48818a643f2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641463"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291038"
 ---
 # <a name="ccriticalsection-class"></a>CCriticalSection – třída
 
@@ -75,7 +75,7 @@ Existují dvě metody pro použití `CCriticalSection` objektu: samostatné a vl
 
 - Vložené metody třídy můžete také sdílet s více vlákny tak, že přidáte `CCriticalSection`– datový člen typu třídy a zamykání datový člen v případě potřeby.
 
-Další informace o používání `CCriticalSection` objekty, najdete v článku [Multithreading: jak používat synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Další informace o používání `CCriticalSection` objekty, najdete v článku [Multithreading: Jak používat synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -179,7 +179,7 @@ Pokud `CCriticalSection` používá samostatné, `Unlock` musí být volána ihn
 
   Podívejte se na příklad pro [CCriticalSection::Lock](#lock).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CSyncObject – třída](../../mfc/reference/csyncobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

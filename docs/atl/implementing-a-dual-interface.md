@@ -5,12 +5,12 @@ helpviewer_keywords:
 - IDispatchImpl class, implementing dual interfaces
 - dual interfaces, implementing
 ms.assetid: d1da3633-b445-4dcd-8a0a-3efdafada3ea
-ms.openlocfilehash: 3b5363bb74a0db5b3cc5dad9bb0c0c6cb05edf15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ecd6a0cc90ca4175c4ae898f2e9aa8bf00508a3e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441220"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287333"
 ---
 # <a name="implementing-a-dual-interface"></a>Implementace duálního rozhraní
 
@@ -46,7 +46,6 @@ Můžete použít `IDispatchImpl` základní třídu na: zajišťovat implementa
 > [!NOTE]
 >  ATL – nabízí [IDispEventImpl](../atl/reference/idispeventimpl-class.md) a [idispeventsimpleimpl –](../atl/reference/idispeventsimpleimpl-class.md) třídy, které vám pomůže implementovat odesílacích rozhraních bez nutnosti knihovnu typů obsahující definice kompatibilní duální rozhraní.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Duální rozhraní a ATL](../atl/dual-interfaces-and-atl.md)
-

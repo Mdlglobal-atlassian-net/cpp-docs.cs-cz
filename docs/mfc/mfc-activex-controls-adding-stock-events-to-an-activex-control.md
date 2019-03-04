@@ -42,12 +42,12 @@ helpviewer_keywords:
 - EVENT_STOCK_READYSTATECHANGE event
 - EVENT_STOCK_KEYPRESS event
 ms.assetid: 3eeadc67-4b3d-4444-8caa-53054073988a
-ms.openlocfilehash: d224bfada94878fcec69b0675bd0faa03575ed27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f6f3c63f0436296791df428c704bce96eca3ec0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540007"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291116"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC – ovládací prvky ActiveX: Přidání uložených událostí do ovládacího prvku ActiveX
 
@@ -61,16 +61,16 @@ Uložených událostí se liší od vlastních událostí, v tom, že automatick
 
 |Událost|Ohlásí – funkce|Komentáře|
 |-----------|---------------------|--------------|
-|Klikněte na...|**void (fireclick –)**|Aktivována, když ovládací prvek zachytí myš, všechny **BUTTONUP** přijetí zprávy (levý, střední nebo pravou) a na tlačítko se uvolní nad ovládací prvek. MouseDown akcie a události MouseUp dojít před touto událostí.<br /><br /> Zápis do mapy událostí: **(event_stock_click –)**|
-|DblClick|**void (firedblclick –)**|Podobně jako to Click ale aktivována, pokud **BUTTONDBLCLK** doručení zprávy.<br /><br /> Zápis do mapy událostí: **(event_stock_dblclick –)**|
-|Chyba|**fireerror – void (SCODE***scode* **, LPCSTR** `lpszDescription` **, UINT**`nHelpID`**= 0)**|Je aktivována při výskytu chyby v rámci ovládacího prvku ActiveX mimo rozsah přístup metody volání nebo vlastnost.<br /><br /> Zápis do mapy událostí: **(event_stock_errorevent –)**|
-|KeyDown|**firekeydown – void (krátký** `nChar` **krátká**`nShiftState`**)**|Aktivováno, když `WM_SYSKEYDOWN` nebo `WM_KEYDOWN` doručení zprávy.<br /><br /> Zápis do mapy událostí: **(event_stock_keydown –)**|
-|KeyPress|**firekeypress – void (krátký** <strong>\*</strong> `pnChar` **)**|Aktivováno, když `WM_CHAR` doručení zprávy.<br /><br /> Zápis do mapy událostí: **EVENT_STOCK_KEYPRESS)**|
-|KeyUp|**firekeyup – void (krátký** `nChar` **krátká**`nShiftState`**)**|Aktivováno, když `WM_SYSKEYUP` nebo `WM_KEYUP` doručení zprávy.<br /><br /> Zápis do mapy událostí: **(event_stock_keyup –)**|
-|MouseDown|**firemousedown – void (krátký** `nButton` **krátká** `nShiftState` **, float***x* **, float** *y***)**|Odesláno, pokud žádné **STISKNUTITLACITKA** přijetí (doleva, střední nebo doprava). Ukazatel myši je zachycena, bezprostředně před Tato událost se aktivuje.<br /><br /> Zápis do mapy událostí: **(event_stock_mousedown –)**|
-|MouseMove|**firemousemove – void (krátký** `nButton` **krátká** `nShiftState` **, float***x* **, float** *y***)**|Je aktivována při doručení zprávy do wm_mousemove a.<br /><br /> Zápis do mapy událostí: **(event_stock_mousemove –)**|
-|MouseUp|**firemouseup – void (krátký** `nButton` **krátká** `nShiftState` **, float***x* **, float** *y***)**|Odesláno, pokud žádné **BUTTONUP** přijetí (doleva, střední nebo doprava). Zachycení myši je uvolněn předtím, než se tato událost se aktivuje.<br /><br /> Zápis do mapy událostí: **(event_stock_mouseup –)**|
-|ReadyStateChange|**void (FireReadyStateChange)**|Je aktivována při řízení přejde na další připravena kvůli množství dat přijatých.<br /><br /> Zápis do mapy událostí: **(event_stock_readystatechange –)**|
+|Klikněte na...|**void (fireclick –)**|Aktivována, když ovládací prvek zachytí myš, všechny **BUTTONUP** přijetí zprávy (levý, střední nebo pravou) a na tlačítko se uvolní nad ovládací prvek. MouseDown akcie a události MouseUp dojít před touto událostí.<br /><br /> Položka mapy událostí: **EVENT_STOCK_CLICK( )**|
+|DblClick|**void FireDblClick( )**|Podobně jako to Click ale aktivována, pokud **BUTTONDBLCLK** doručení zprávy.<br /><br /> Položka mapy událostí: **EVENT_STOCK_DBLCLICK( )**|
+|Chyba|**fireerror – void (SCODE***scode* **, LPCSTR** `lpszDescription` **, UINT**`nHelpID`**= 0)**|Je aktivována při výskytu chyby v rámci ovládacího prvku ActiveX mimo rozsah přístup metody volání nebo vlastnost.<br /><br /> Položka mapy událostí: **EVENT_STOCK_ERROREVENT –)**|
+|KeyDown|**firekeydown – void (krátký** `nChar` **krátká**`nShiftState`**)**|Aktivováno, když `WM_SYSKEYDOWN` nebo `WM_KEYDOWN` doručení zprávy.<br /><br /> Položka mapy událostí: **EVENT_STOCK_KEYDOWN( )**|
+|KeyPress|**firekeypress – void (krátký** <strong>\*</strong> `pnChar` **)**|Aktivováno, když `WM_CHAR` doručení zprávy.<br /><br /> Položka mapy událostí: **EVENT_STOCK_KEYPRESS( )**|
+|KeyUp|**firekeyup – void (krátký** `nChar` **krátká**`nShiftState`**)**|Aktivováno, když `WM_SYSKEYUP` nebo `WM_KEYUP` doručení zprávy.<br /><br /> Položka mapy událostí: **EVENT_STOCK_KEYUP( )**|
+|MouseDown|**firemousedown – void (krátký** `nButton` **krátká** `nShiftState` **, float***x* **, float** *y***)**|Odesláno, pokud žádné **STISKNUTITLACITKA** přijetí (doleva, střední nebo doprava). Ukazatel myši je zachycena, bezprostředně před Tato událost se aktivuje.<br /><br /> Položka mapy událostí: **EVENT_STOCK_MOUSEDOWN( )**|
+|MouseMove|**firemousemove – void (krátký** `nButton` **krátká** `nShiftState` **, float***x* **, float** *y***)**|Je aktivována při doručení zprávy do wm_mousemove a.<br /><br /> Položka mapy událostí: **EVENT_STOCK_MOUSEMOVE( )**|
+|MouseUp|**firemouseup – void (krátký** `nButton` **krátká** `nShiftState` **, float***x* **, float** *y***)**|Odesláno, pokud žádné **BUTTONUP** přijetí (doleva, střední nebo doprava). Zachycení myši je uvolněn předtím, než se tato událost se aktivuje.<br /><br /> Položka mapy událostí: **EVENT_STOCK_MOUSEUP( )**|
+|ReadyStateChange|**void FireReadyStateChange( )**|Je aktivována při řízení přejde na další připravena kvůli množství dat přijatých.<br /><br /> Položka mapy událostí: **EVENT_STOCK_READYSTATECHANGE –)**|
 
 ##  <a name="_core_adding_a_stock_event_using_classwizard"></a> Přidání uložených událostí pomocí Průvodce přidáním události
 
@@ -104,7 +104,7 @@ Průvodce přidáním události přidá následující řádek kódu do ovládac
 
 Tento řádek přidruží události KeyPress standard dispatch ID a umožňuje kontejneru předvídat události KeyPress.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)<br/>
 [MFC – ovládací prvky ActiveX: Metody](../mfc/mfc-activex-controls-methods.md)<br/>

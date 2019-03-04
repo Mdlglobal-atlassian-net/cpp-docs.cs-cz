@@ -72,12 +72,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::set_zx
 - amp_short_vectors/Concurrency::graphics::norm_3::bgr
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
-ms.openlocfilehash: f350e5c5707dad93fe2863523e816d309647acd3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cec778e6cdc53871b7987ef5a2faf529eea6d4f3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513799"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288932"
 ---
 # <a name="norm3-class"></a>norm_3 – třída
 
@@ -206,7 +206,7 @@ class norm_3;
 
 **Záhlaví:** amp_short_vectors.h
 
-**Namespace:** Concurrency::graphics
+**Namespace:** Concurrency::Graphics
 
 ## <a name="ctor"></a> norm_3 – konstruktor
 
@@ -282,6 +282,6 @@ Objekt použitý k inicializaci.
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

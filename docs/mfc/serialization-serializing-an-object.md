@@ -6,12 +6,12 @@ helpviewer_keywords:
 - serialization [MFC], objects
 - objects [MFC], serializing
 ms.assetid: 1db772b1-ad55-4fcf-b133-126cca082510
-ms.openlocfilehash: 10a7c52e6187f4db8345e1eadb88faeefa50b419
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c1106f180c587894283575a82a88e9e18b5c01a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588519"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290488"
 ---
 # <a name="serialization-serializing-an-object"></a>Serializace: Serializace objektu
 
@@ -27,7 +27,6 @@ Tento článek [serializace: Příprava serializovatelné třídy](../mfc/serial
 
 Můžete umožnit, aby rozhraní vytvořit archiv serializovatelný dokumentu nebo explicitně `CArchive` objektu sami. Můžete přenášet data mezi souborem a serializovatelný objekt pomocí <\< a >> operátory pro `CArchive` nebo v některých případech se pomocí volání `Serialize` funkce `CObject`-odvozené třídy.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Serializace](../mfc/serialization-in-mfc.md)
-

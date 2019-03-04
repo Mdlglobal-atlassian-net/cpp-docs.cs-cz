@@ -7,18 +7,18 @@ helpviewer_keywords:
 - ActiveX controls [MFC], property pages
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: fcf7e119-9f29-41a9-908d-e9b1607e08af
-ms.openlocfilehash: ac72258e881d10723a02b5103c602ac5cec6a1f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87b71fdddc5b52f66c34cdbcdb234c83616d0850
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465309"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289543"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC – ovládací prvky ActiveX: Přidání další stránky přizpůsobených vlastností
 
 Ovládací prvek ActiveX v některých případech bude mít více vlastností než rozumně vejde na jednu stránku vlastností. V takovém případě můžete přidat stránky vlastností do ovládacího prvku ActiveX k zobrazení těchto vlastností.
 
-Tento článek popisuje přidání nové stránky vlastností do ovládacího prvku ActiveX, který už má alespoň jednu stránku vlastností. Další informace o přidání uložených vlastností stránky (písma, obrázek nebo barva), najdete v článku [knihovny MFC – ovládací prvky ActiveX: použití stránek vlastností akcie](../mfc/mfc-activex-controls-using-stock-property-pages.md).
+Tento článek popisuje přidání nové stránky vlastností do ovládacího prvku ActiveX, který už má alespoň jednu stránku vlastností. Další informace o přidání uložených vlastností stránky (písma, obrázek nebo barva), najdete v článku [knihovny MFC – ovládací prvky ActiveX: Použití stránek uložených vlastností](../mfc/mfc-activex-controls-using-stock-property-pages.md).
 
 Následující postupy používají ukázkové rozhraní ovládacího prvku ActiveX vytvořené průvodcem ovládacího prvku ActiveX. Proto jsou jedinečné pro tento příklad názvy tříd a identifikátory.
 
@@ -107,7 +107,6 @@ Dalším krokem zahrnuje vytvoření dvou nových prostředků řetězce, které
 
 Po provedení potřebné změny znovu sestavit projekt a použít kontejner testu otestovat nové stránky vlastností. Zobrazit [testování vlastností a událostí pomocí testování kontejneru](../mfc/testing-properties-and-events-with-test-container.md) informace o tom, jak získat přístup ke kontejneru testů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)
-

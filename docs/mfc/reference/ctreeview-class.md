@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CTreeView [MFC], CTreeView
 - CTreeView [MFC], GetTreeCtrl
 ms.assetid: 5df583a6-d69f-42ca-9d8d-57e04558afff
-ms.openlocfilehash: db899b58c68dabc25e571c390db0575a2d2ebb58
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fec8379a3944d981672754274f50dd4e60f71b61
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496336"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288867"
 ---
 # <a name="ctreeview-class"></a>CTreeView – třída
 
@@ -55,7 +55,7 @@ Další informace na této architektuře, najdete v přehledu pro [CView](../../
 
 [CView](../../mfc/reference/cview-class.md)
 
-[Cctrlview –](../../mfc/reference/cctrlview-class.md)
+[CCtrlView](../../mfc/reference/cctrlview-class.md)
 
 `CTreeView`
 
@@ -79,7 +79,7 @@ Vrátí odkaz na ovládací prvek stromu přidružený k zobrazení.
 CTreeCtrl& GetTreeCtrl() const;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CCtrlView – třída](../../mfc/reference/cctrlview-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: aktualizace objektů uživatelského rozhraní'
+title: 'Postupy: Aktualizace objektů uživatelského rozhraní'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - menus [MFC], updating as context changes
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - commands [MFC], updating UI
 - enabling menus [MFC]
 ms.assetid: 82f09773-c978-427b-b321-05a6143b7369
-ms.openlocfilehash: 2e16d912d0fb9ac195df80846d5bd740d86e30ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0dee9bb48c11cf061af60ebaf9a80c0123d339be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566059"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289699"
 ---
-# <a name="how-to-update-user-interface-objects"></a>Postupy: aktualizace objektů uživatelského rozhraní
+# <a name="how-to-update-user-interface-objects"></a>Postupy: Aktualizace objektů uživatelského rozhraní
 
 Položky nabídky a tlačítka panelu nástrojů obvykle mít více než jeden stav. Položky nabídky například je šedý (neaktivní) Pokud není k dispozici v kontextu k dispozici. Položky nabídky může také být zaškrtnuté nebo nezaškrtnuté. Je-li k dispozici také zakázat tlačítko panelu nástrojů nebo mohla být zařazena.
 
@@ -38,7 +38,6 @@ Následující témata popisují použití obslužné rutiny aktualizace:
 
 - [Ccmdui – třída](../mfc/the-ccmdui-class.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nabídky](../mfc/menus-mfc.md)
-

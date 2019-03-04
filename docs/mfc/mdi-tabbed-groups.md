@@ -5,12 +5,12 @@ helpviewer_keywords:
 - mdi [MFC], tabbed groups
 - tabbed grous [MFC]
 ms.assetid: 0a464f36-39b7-4e68-8b67-ec175de28377
-ms.openlocfilehash: cefd97b377c2755b158830d8e649ac40f90fee11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b68d1bc06a6827ca94b05fa2760206f424d40fe
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544483"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289517"
 ---
 # <a name="mdi-tabbed-groups"></a>MDI – skupiny se záložkami
 
@@ -60,7 +60,7 @@ Zde jsou úkoly obvykle provádí pomocí skupin s kartami MDI:
 
 - Chcete-li uložit rozložení skupin s kartami MDI v aplikaci, zavolejte `CMDIFrameWndEx::SaveMDIState`. Načíst dříve uložený MDI – skupiny profilu se záložkami, zavolejte `CMDIFrameWndEx::LoadMDIState`. Můžete také volat tyto metody k načtení nebo uložení seznamu otevřených dokumentů v aplikaci MDI. Další informace o ukládání a načítání stavu MDI, naleznete v tématu [CMDIFrameWndEx::LoadMDIState](../mfc/reference/cmdiframewndex-class.md#loadmdistate).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Prvky uživatelského rozhraní](../mfc/user-interface-elements-mfc.md)<br/>
 [CMDIFrameWndEx – třída](../mfc/reference/cmdiframewndex-class.md)<br/>

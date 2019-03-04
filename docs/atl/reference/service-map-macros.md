@@ -7,12 +7,12 @@ f1_keywords:
 - atlcom/ATL::SERVICE_ENTRY
 - atlcom/ATL::SERVICE_ENTRY_CHAIN
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
-ms.openlocfilehash: 14e543946be50c39020d46ab00e702a4f2b7a815
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab130b2401dc9885f82fd5668a2d722a96dd289b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618176"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290531"
 ---
 # <a name="service-map-macros"></a>Makra Map služeb
 
@@ -140,7 +140,7 @@ Vrácená hodnota HRESULT je jedním z následujících akcí:
 
 Při volání `QueryService`, předáte identifikátor služby (*guidService*) a identifikátor rozhraní (*riid*). *GuidService* určuje služby, ke kterému chcete získat přístup, a *riid* identifikuje rozhraní, která je součástí služby. Na oplátku obdržíte nepřímé ukazatel na rozhraní.
 
-Objekt, který implementuje rozhraní může také implementovat rozhraní, které jsou součástí jiné služby. Vezměte v úvahu následující:
+Objekt, který implementuje rozhraní může také implementovat rozhraní, které jsou součástí jiné služby. Zvažte použití těchto zdrojů:
 
 - Některé z těchto rozhraní může být volitelný. Ne všechna rozhraní, které jsou definované v popisu služby nejsou nutně na každou implementaci služby nebo na každý vráceného objektu.
 
@@ -150,6 +150,6 @@ Objekt, který implementuje rozhraní může také implementovat rozhraní, kter
 
 Dvě různé služby, jako je například SID_SMyService a SID_SYourService, můžete i určit používá stejné rozhraní, i když implementaci rozhraní může mít nic společného mezi těmito dvěma službami. Tento postup funguje, protože volání `QueryService` (SID_SMyService, IID_IDispatch) může vrátit do jiného objektu než `QueryService` (SID_SYourService, IID_IDispatch). Identita objektu není předpokládá, že pokud zadáte identifikátor jinou službu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Makra](../../atl/reference/atl-macros.md)

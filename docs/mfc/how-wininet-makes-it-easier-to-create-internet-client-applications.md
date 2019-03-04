@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WinInet classes [MFC], vs. WinSock
 - WinInet classes [MFC], Internet client applications
 ms.assetid: dc0f9f47-3184-4e7a-8074-2c63e0359885
-ms.openlocfilehash: 2bca338aa2a1b18e8c9ab41a887678767cf6c8c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6da2ef1595e525bcfd407d67c806aa80cf90f1c3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636853"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286761"
 ---
 # <a name="how-wininet-makes-it-easier-to-create-internet-client-applications"></a>Jak rozhraní WinInet usnadňuje tvorbu internetových klientských aplikací
 
@@ -45,8 +45,7 @@ Pro všechny tři protokoly navázat připojení, zkontrolujte požadavky na ser
 
 Mnoho operací, které můžete provádět v počítači jako klienta na jiné počítače na Internetu může trvat dlouhou dobu. Rychlost těchto operací je obvykle limitována rychlostí síťového připojení, ale může mít také vliv tak, že provoz v síti a složitosti operaci. Připojování ke vzdálenému serveru FTP, například vyžaduje, že počítač nejprve vyhledat název tohoto serveru na její adresu. Aplikace se pak pokusí připojit k serveru na této adrese. Jakmile je otevřeno připojení, počítačem a vzdáleným serverem opraví, zahájí se konverzace s protokol pro přenos souborů předtím, než ve skutečnosti můžete připojení k načtení souborů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Win32 – internetová rozšíření (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
 [Jak prostředí MFC usnadňuje tvorbu internetových klientských aplikací](../mfc/how-mfc-makes-it-easier-to-create-internet-client-applications.md)
-

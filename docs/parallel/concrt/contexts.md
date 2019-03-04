@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - contexts [Concurrency Runtime]
 ms.assetid: 10c1d861-8fbb-4ba0-b2ec-61876b11176e
-ms.openlocfilehash: b7d1a5bbc63781e865be8053cb4365d6a8590935
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d511f8fa751d61c3c490a184dae660096dd9f76f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529167"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285903"
 ---
 # <a name="contexts"></a>Kontexty
 
@@ -26,7 +26,7 @@ Předejte 0 (nula) `milliseconds` parametr způsobí, že modul runtime pro doč
 
 ### <a name="example"></a>Příklad
 
-Příklad, který se používá `wait` funkce výnosu z aktuálního kontextu a tím umožní jiných kontextů provést, najdete v článku [postupy: použití skupin plánů vliv pořadí spouštění](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
+Příklad, který se používá `wait` funkce výnosu z aktuálního kontextu a tím umožní jiných kontextů provést, najdete v článku [jak: Použití skupin plánů k ovlivnění pořadí provádění](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
 
 ## <a name="the-context-class"></a>Třídy kontextu
 
@@ -46,7 +46,7 @@ Každý pár volání musí odpovídat `Context::Block` a `Context::Unblock`. Mo
 
 #### <a name="example"></a>Příklad
 
-Příklad, který se používá `Context::Block`, `Context::Unblock`, a `Context::Yield` metody k implementaci třídy semaforu pro spolupráci, viz [postupy: použití třídy kontextu pro implementaci semaforu kooperativní](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
+Příklad, který se používá `Context::Block`, `Context::Unblock`, a `Context::Yield` metody k implementaci třídy semaforu pro spolupráci, viz [jak: Použití třídy kontextu pro implementaci semaforu pro spolupráci](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
 
 ##### <a name="oversubscription"></a>Překryvný odběr
 
@@ -66,12 +66,11 @@ Můžete povolit překročení stanovených více než jednou z aktuálního kon
 
 ###### <a name="example"></a>Příklad
 
-Příklad použití překryvného odběru latence, jež je způsobena čtení dat z připojení k síti, najdete v části [postupy: použití překryvného odběru na latenci posun](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Příklad použití překryvného odběru latence, jež je způsobena čtení dat z připojení k síti, najdete v části [jak: Latence vytvořením nadbytečného](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Postupy: Použití skupin plánů k ovlivnění pořadí provádění](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)<br/>
 [Postupy: Použití třídy kontextu pro implementaci semaforu pro spolupráci](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
 [Postupy: Kompenzace latence vytvořením nadbytečného počtu vláken](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)
-

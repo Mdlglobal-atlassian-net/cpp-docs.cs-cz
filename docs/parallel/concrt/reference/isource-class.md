@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - ISource class
 ms.assetid: c7b73463-42f6-4dcc-801a-81379b12d35a
-ms.openlocfilehash: 4e96dc11455015a83af9be545ba15c96b5e2f779
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b0704f3d666eca08bafb33f9236709478d347d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620516"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288763"
 ---
 # <a name="isource-class"></a>ISource – třída
 
@@ -51,7 +51,7 @@ Datový typ datové části v rámci zprávy vytvářené zdrojovým blokem.
 
 |Název|Popis|
 |----------|-----------------|
-|[~ ISource – destruktor](#dtor)|Odstraní `ISource` objektu.|
+|[~ISource Destructor](#dtor)|Odstraní `ISource` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -63,7 +63,7 @@ Datový typ datové části v rámci zprávy vytvářené zdrojovým blokem.
 |[link_target](#link_target)|Při přepisu v odvozené třídě, odkazuje na tento cílový blok `ISource` bloku.|
 |[Vydání verze](#release)|Při přepisu v odvozené třídě, uvolní předchozí vyhrazení úspěšné zprávy.|
 |[release_ref](#release_ref)|Při přepisu v odvozené třídě, uvolní počet odkazů na tomto `ISource` bloku.|
-|[Rezervovat](#reserve)|Při přepisu v odvozené třídě, vyhradí zprávu nabízely dříve v tomto `ISource` bloku.|
+|[reserve](#reserve)|Při přepisu v odvozené třídě, vyhradí zprávu nabízely dříve v tomto `ISource` bloku.|
 |[unlink_target](#unlink_target)|Při přepisu v odvozené třídě, nebude odpojen cílový blok z tohoto `ISource` blokovat, pokud nalezen dříve propojení.|
 |[unlink_targets](#unlink_targets)|Při přepisu v odvozené třídě, nebude odpojen všem cílovým blokům z tohoto `ISource` bloku.|
 
@@ -253,7 +253,7 @@ Při přepisu v odvozené třídě, nebude odpojen všem cílovým blokům z toh
 virtual void unlink_targets() = 0;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [ITarget – třída](itarget-class.md)

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CD2DSolidColorBrush [MFC], m_colorSolid
 - CD2DSolidColorBrush [MFC], m_pSolidColorBrush
 ms.assetid: d4506637-acce-4f74-8a9b-f0a45571a735
-ms.openlocfilehash: fa2114df914af07dd9baa140cc96cc94eaea6a91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41d1d1b8c28335ae6207e41d696359295a83e646
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521768"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291233"
 ---
 # <a name="cd2dsolidcolorbrush-class"></a>Cd2dsolidcolorbrush – třída
 
@@ -50,7 +50,7 @@ class CD2DSolidColorBrush : public CD2DBrush;
 |Název|Popis|
 |----------|-----------------|
 |[CD2DSolidColorBrush::CD2DSolidColorBrush](#cd2dsolidcolorbrush)|Přetíženo. Vytvoří objekt cd2dsolidcolorbrush –.|
-|[Cd2dsolidcolorbrush –:: ~ cd2dsolidcolorbrush –](#cd2dsolidcolorbrush__~cd2dsolidcolorbrush)|Destruktor. Volá se, když se likviduje štětec objektu D2D.|
+|[CD2DSolidColorBrush::~CD2DSolidColorBrush](#cd2dsolidcolorbrush__~cd2dsolidcolorbrush)|Destruktor. Volá se, když se likviduje štětec objektu D2D.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -81,11 +81,11 @@ class CD2DSolidColorBrush : public CD2DBrush;
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cd2dresource –](../../mfc/reference/cd2dresource-class.md)
+[CD2DResource](../../mfc/reference/cd2dresource-class.md)
 
-[Cd2dbrush –](../../mfc/reference/cd2dbrush-class.md)
+[CD2DBrush](../../mfc/reference/cd2dbrush-class.md)
 
-[Cd2dsolidcolorbrush –](../../mfc/reference/cd2dsolidcolorbrush-class.md)
+[CD2DSolidColorBrush](../../mfc/reference/cd2dsolidcolorbrush-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -136,7 +136,7 @@ CD2DSolidColorBrush(
 *pParentTarget*<br/>
 Ukazatel na cíl vykreslování.
 
-*Barva*<br/>
+*color*<br/>
 Červené, zelená, modrá a alfa hodnoty barvy na stopu.
 
 *pBrushProperties*<br/>
@@ -247,9 +247,9 @@ void SetColor(D2D1_COLOR_F color);
 
 ### <a name="parameters"></a>Parametry
 
-*Barva*<br/>
+*color*<br/>
 Barva této štětec jednotné barvy
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

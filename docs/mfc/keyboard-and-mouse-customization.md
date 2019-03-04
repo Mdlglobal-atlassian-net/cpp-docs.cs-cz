@@ -5,12 +5,12 @@ helpviewer_keywords:
 - customizations [MFC], keyboard and mouse (MFC Extensions)
 - keyboard and mouse customizations (MFC Extensions)
 ms.assetid: 1f789f1b-5f2e-4b11-b974-e3e2a2e49d82
-ms.openlocfilehash: 0ccbe83185c48439273024a97c881f1c32a2ddc7
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 55eaac9d800730f3a01dcdb2eef943eb48d147b1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175676"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289179"
 ---
 # <a name="keyboard-and-mouse-customization"></a>Přizpůsobení klávesnice a myši
 
@@ -66,10 +66,9 @@ Kromě toho tento druh útoku může obejít ochranu uživatelského rozhraní. 
 
 Pro ochranu proti tento druh útoku, přidejte kód pro vaše obslužná rutina příkazu aplikace ověřte, zda je příkazu platná před jeho provedením. Není závislý na uživatelské rozhraní pro příkazu zabrání v odesílání do aplikace.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přizpůsobení pro prostředí MFC](../mfc/customization-for-mfc.md)<br/>
 [CKeyboardManager – třída](../mfc/reference/ckeyboardmanager-class.md)<br/>
 [CMouseManager – třída](../mfc/reference/cmousemanager-class.md)<br/>
 [Vliv přizpůsobení na zabezpečení](../mfc/security-implications-of-customization.md)
-

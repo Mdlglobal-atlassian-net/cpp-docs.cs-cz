@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-ms.openlocfilehash: 4f706b4551d71c77e136e4d65d2d6a3183293d8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 20032f393964c8919d2c1a49ec8545400cd9e392
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454493"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290128"
 ---
 # <a name="singlelinkregistry-class"></a>single_link_registry – třída
 
@@ -33,7 +33,7 @@ class single_link_registry : public network_link_registry<_Block>;
 
 #### <a name="parameters"></a>Parametry
 
-*_Blok při znaku*<br/>
+*_Block*<br/>
 Zadejte bloku dat ukládají do `single_link_registry` objektu.
 
 ## <a name="members"></a>Členové
@@ -43,14 +43,14 @@ Zadejte bloku dat ukládají do `single_link_registry` objektu.
 |Název|Popis|
 |----------|-----------------|
 |[single_link_registry](#ctor)|Vytvoří `single_link_registry` objektu.|
-|[~ single_link_registry – destruktor](#dtor)|Odstraní `single_link_registry` objektu.|
+|[~single_link_registry Destructor](#dtor)|Odstraní `single_link_registry` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
 |[add](#add)|Přidá odkaz `single_link_registry` objektu. (Přepíše [network_link_registry::Add –](network-link-registry-class.md#add).)|
-|[začít](#begin)|Vrátí iterátor na první prvek `single_link_registry` objektu. (Přepíše [network_link_registry::BEGIN –](network-link-registry-class.md#begin).)|
+|[začít](#begin)|Vrátí iterátor na první prvek `single_link_registry` objektu. (Overrides [network_link_registry::begin](network-link-registry-class.md#begin).)|
 |[Obsahuje](#contains)|Hledání `single_link_registry` objekt pro zadaný blok. (Přepíše [network_link_registry::contains –](network-link-registry-class.md#contains).)|
 |[Počet](#count)|Vrátí počet položek v `single_link_registry` objektu. (Přepíše [network_link_registry::Count –](network-link-registry-class.md#count).)|
 |[remove](#remove)|Odebere odkaz `single_link_registry` objektu. (Přepíše [network_link_registry::Remove –](network-link-registry-class.md#remove).)|
@@ -154,7 +154,7 @@ Vytvoří `single_link_registry` objektu.
 single_link_registry();
 ```
 
-##  <a name="dtor"></a> ~ single_link_registry –
+##  <a name="dtor"></a> ~single_link_registry
 
 Odstraní `single_link_registry` objektu.
 
@@ -166,7 +166,7 @@ virtual ~single_link_registry();
 
 Metoda vyvolá [invalid_operation](invalid-operation-class.md) výjimku, pokud je volána před odebráním odkazu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [multi_link_registry – třída](multi-link-registry-class.md)

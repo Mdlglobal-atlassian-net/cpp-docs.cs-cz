@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-ms.openlocfilehash: f8d93362f9e341087e9213d07475501a26d79d44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f1fd2435222b33d0dfb188d2a51442c2f6aa82a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492605"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288880"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Cmfcoutlookbarpane – třída
 
@@ -128,11 +128,11 @@ Následující příklad ukazuje, jak použít různé metody `CMFCOutlookBarPan
 
 [CPane](../../mfc/reference/cpane-class.md)
 
-[Cmfcbasetoolbar –](../../mfc/reference/cmfcbasetoolbar-class.md)
+[CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)
 
-[Cmfctoolbar –](../../mfc/reference/cmfctoolbar-class.md)
+[CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)
 
-[Cmfcoutlookbarpane –](../../mfc/reference/cmfcoutlookbarpane-class.md)
+[CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -401,7 +401,7 @@ void SetBackColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*Barva*<br/>
+*color*<br/>
 [in] Určuje novou barvou pozadí.
 
 ### <a name="remarks"></a>Poznámky
@@ -473,14 +473,14 @@ void SetTransparentColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*Barva*<br/>
+*color*<br/>
 Určuje průhlednou barvu nové.
 
 ### <a name="remarks"></a>Poznámky
 
 Průhledná barva je vyžadována k zobrazení průhledné obrázky. Jakýmkoli výskytem tuto barvu v obrázku se barvou pozadí vymalovávání místo.  Neexistuje žádné prolnutí imagí na pozadí a popředí.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

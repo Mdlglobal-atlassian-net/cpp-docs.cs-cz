@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-ms.openlocfilehash: ad096eea3467346d85ce4249e910915cbd73488d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98ad5f817361d8410e5a60648fb23baec06c42d7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560248"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289140"
 ---
 # <a name="agent-class"></a>agent – třída
 
@@ -48,8 +48,8 @@ class agent;
 |Název|Popis|
 |----------|-----------------|
 |[Zrušit](#cancel)|Přesune agenta buď z `agent_created` nebo `agent_runnable` stavy `agent_canceled` stavu.|
-|[Spuštění](#start)|Přesune z agenta `agent_created` do stavu `agent_runnable` stavu a plány pro spuštění.|
-|[Stav](#status)|Synchronní zdroj informací o stavu z agenta.|
+|[start](#start)|Přesune z agenta `agent_created` do stavu `agent_runnable` stavu a plány pro spuštění.|
+|[status](#status)|Synchronní zdroj informací o stavu z agenta.|
 |[status_port](#status_port)|Asynchronní zdroj informací o stavu z agenta.|
 |[Počkej](#wait)|Čeká se na agenta a dokončení úkolu.|
 |[wait_for_all](#wait_for_all)|Čeká na všechny zadané agentů k dokončení jejich úloh.|
@@ -284,6 +284,6 @@ Maximální doba, která čekání v milisekundách.
 
 Pokud parametr `_Timeout` má jinou hodnotu než konstanta `COOPERATIVE_TIMEOUT_INFINITE`, výjimka [operation_timed_out –](operation-timed-out-class.md) je vyvolána, pokud zadaného časového intervalu vyprší agenta dokončí úlohu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)

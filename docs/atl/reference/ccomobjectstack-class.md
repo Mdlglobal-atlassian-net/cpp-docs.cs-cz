@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectStack class
 ms.assetid: 3da72c40-c834-45f6-bb76-6ac204028d80
-ms.openlocfilehash: dfe8c58803a0eb06ea17ae1b241e1e435f0263f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19fd226e617e4cdb1bba8a113b8984c36bf28d59
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579267"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287157"
 ---
 # <a name="ccomobjectstack-class"></a>Ccomobjectstack – třída
 
@@ -42,7 +42,7 @@ Vaše třída odvozena od [ccomobjectroot –](../../atl/reference/ccomobjectroo
 |Název|Popis|
 |----------|-----------------|
 |[CComObjectStack::CComObjectStack](#ccomobjectstack)|Konstruktor|
-|[Ccomobjectstack –:: ~ ccomobjectstack –](#dtor)|Destruktor.|
+|[CComObjectStack::~CComObjectStack](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -158,7 +158,7 @@ Vrátí nulu.
 
 V režimu ladění, volá `_ASSERTE`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CComAggObject – třída](../../atl/reference/ccomaggobject-class.md)<br/>
 [CComObject – třída](../../atl/reference/ccomobject-class.md)<br/>

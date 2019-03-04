@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DateTimePicker control [MFC], display styles
 - DateTimePicker control [MFC]
 ms.assetid: 7d577f03-6ca0-4597-9093-50b78f304719
-ms.openlocfilehash: 2e3e980649264a6842abcc9491171e5105dbab17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8da5ecaf473d6d3c35ddc1b95ac856ce8c12f163
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557488"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286883"
 ---
 # <a name="using-custom-format-strings-in-a-date-and-time-picker-control"></a>Použití řetězců vlastního formátu v ovládacím prvku pro výběr data a času
 
@@ -31,8 +31,7 @@ Následující příklad kódu (kde *m_dtPicker* je `CDateTimeCtrl` objekt) ukaz
 
 Kromě vlastních formátovacích řetězců, výběr data a času řídí také podporu [pole zpětného volání](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CDateTimeCtrl](../mfc/using-cdatetimectrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

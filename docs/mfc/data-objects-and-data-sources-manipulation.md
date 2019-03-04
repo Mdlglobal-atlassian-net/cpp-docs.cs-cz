@@ -1,5 +1,5 @@
 ---
-title: 'Datové objekty a zdroje dat: Manipulace'
+title: 'Datové objekty a zdroje dat: Manipulace s'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data objects [MFC], manipulating
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-ms.openlocfilehash: ee5cb320cb07a656675bd6735d6761cb69573d0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81dfe911866c4d1ba1720ee2c9854076c499f0a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636147"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286748"
 ---
-# <a name="data-objects-and-data-sources-manipulation"></a>Datové objekty a zdroje dat: Manipulace
+# <a name="data-objects-and-data-sources-manipulation"></a>Datové objekty a zdroje dat: Manipulace s
 
 Po vytvoření datového objektu nebo zdroj dat, můžete provádět řadu běžných operací na data, jako je například vkládání a odstraňování dat, vytváření výčtu formátů, ve kterém data nachází, a další. Tento článek popisuje postupy nezbytné pro dokončení nejběžnějších operací. Mezi témata patří:
 
@@ -67,7 +67,7 @@ Předtím, než aplikace umožňuje uživatelům dat vložte do něj, je potřeb
 
    - Datový objekt volat `BeginEnumFormats` členskou funkci začne formáty, které jsou k dispozici do schránky. Poté zavolejte `GetNextFormat` až do schránky vrátí formátu vaše aplikace podporuje nebo neexistují žádné další formáty.
 
-Pokud používáte **ON_UPDATE_COMMAND_UI**, teď můžete povolit vložení a případně i Vložit jinak položky v nabídce Úpravy. K tomuto účelu volání `CMenu::EnableMenuItem` nebo `CCmdUI::Enable`. Další informace o jaké kontejneru by aplikace provést pomocí položky nabídky a když, naleznete v tématu [nabídky a prostředky: kontejnerové doplňky](../mfc/menus-and-resources-container-additions.md).
+Pokud používáte **ON_UPDATE_COMMAND_UI**, teď můžete povolit vložení a případně i Vložit jinak položky v nabídce Úpravy. K tomuto účelu volání `CMenu::EnableMenuItem` nebo `CCmdUI::Enable`. Další informace o jaké kontejneru by aplikace provést pomocí položky nabídky a když, naleznete v tématu [nabídky a prostředky: Kontejnerové doplňky](../mfc/menus-and-resources-container-additions.md).
 
 ##  <a name="_core_retrieving_data_from_a_data_object"></a> Načítání dat z datového objektu
 
@@ -91,7 +91,7 @@ Uživatel může nyní vložit data do dokumentu stejně jako u jiných dat ve s
 
 - [Schránka](../mfc/clipboard.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Datové objekty a zdroje dat (OLE)](../mfc/data-objects-and-data-sources-ole.md)<br/>
 [COleDataObject – třída](../mfc/reference/coledataobject-class.md)<br/>

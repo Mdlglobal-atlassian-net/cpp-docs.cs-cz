@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CKeyFrame [MFC], m_pExistingKeyFrame
 - CKeyFrame [MFC], m_pTransition
 ms.assetid: d050a562-20f6-4c65-8ce5-ccb3aef1a20e
-ms.openlocfilehash: b6ebe5ba78a259014f62bdf04f30e856a57f1aba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2c6add30757e1d83b70001679b37a7a22b9d7d6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451074"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291325"
 ---
 # <a name="ckeyframe-class"></a>Ckeyframe – třída
 
@@ -78,9 +78,9 @@ Tato třída implementuje klíčový snímek animace. Klíčový snímek předst
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cbasekeyframe –](../../mfc/reference/cbasekeyframe-class.md)
+[CBaseKeyFrame](../../mfc/reference/cbasekeyframe-class.md)
 
-[Ckeyframe –](../../mfc/reference/ckeyframe-class.md)
+[CKeyFrame](../../mfc/reference/ckeyframe-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -263,6 +263,6 @@ Uchovává ukazatel na transtion, který začíná na tento klíčový snímek.
 CBaseTransition* m_pTransition;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

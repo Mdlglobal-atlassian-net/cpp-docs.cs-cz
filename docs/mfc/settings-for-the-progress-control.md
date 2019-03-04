@@ -5,12 +5,12 @@ helpviewer_keywords:
 - CProgressCtrl class [MFC], settings
 - progress controls [MFC], settings
 ms.assetid: f4616e91-74fa-4000-ba0d-d3ddc0ee075b
-ms.openlocfilehash: 444dc45c816e0dfc2fd45bad999ad90c2acacc01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1960b15c2f76d7cbfc9f249a77481b795e6a27ea
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481776"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290748"
 ---
 # <a name="settings-for-the-progress-control"></a>Nastavení pro ovládací prvek průběh
 
@@ -22,8 +22,7 @@ Nastavit pozici, použijte [SetPos](../mfc/reference/cprogressctrl-class.md#setp
 
 Chcete-li aktuální pozici ovládacím prvkem průběh, použijte [StepIt](../mfc/reference/cprogressctrl-class.md#stepit). Chcete-li nastavit dobu, každý krok, použijte [SetStep](../mfc/reference/cprogressctrl-class.md#setstep)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CProgressCtrl](../mfc/using-cprogressctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

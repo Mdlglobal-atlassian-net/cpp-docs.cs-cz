@@ -1,5 +1,5 @@
 ---
-title: Chtmleditdoc – třída
+title: CHtmlEditDoc Class
 ms.date: 11/04/2016
 f1_keywords:
 - CHtmlEditDoc
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CHtmlEditDoc [MFC], IsModified
 - CHtmlEditDoc [MFC], OpenURL
 ms.assetid: b2cca61f-e5d6-4099-b0d1-46bf85f0bd64
-ms.openlocfilehash: 1398f71abaa01569c8361bf3ee72f6dc13e9d711
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f468de46cf6d8a8bfcd60521df8b1076a98f0735
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516191"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285331"
 ---
-# <a name="chtmleditdoc-class"></a>Chtmleditdoc – třída
+# <a name="chtmleditdoc-class"></a>CHtmlEditDoc Class
 
 S [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), poskytuje funkce úprav platformy WebBrowser v rámci kontextu architektury zobrazení dokumentu MFC.
 
@@ -59,7 +59,7 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxhtml.h
+**Header:** afxhtml.h
 
 ##  <a name="chtmleditdoc"></a>  CHtmlEditDoc::CHtmlEditDoc
 
@@ -106,8 +106,7 @@ Chcete-li otevřít adresu URL.
 
 Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázka HTMLEdit](../../visual-cpp-samples.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-

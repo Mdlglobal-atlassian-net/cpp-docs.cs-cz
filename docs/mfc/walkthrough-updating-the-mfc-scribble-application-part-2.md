@@ -4,12 +4,12 @@ ms.date: 09/20/2018
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-ms.openlocfilehash: 6a52486658307f001001e91772dad1167730def2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: c4c4ecce92bce3fbd2cb37f69b9aa02a9af4d7c3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519266"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291428"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Návod: Aktualizace aplikace MFC Scribble (část 2)
 
@@ -335,7 +335,7 @@ V dalším kroku inicializujte barvu a šířku pera. A konečně uložit a nač
 
 Aplikace MFC Scribble jste aktualizovali. Pomocí tohoto průvodce použijte jako vodítko při úpravě stávající aplikace.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Návody](../mfc/walkthroughs-mfc.md)<br/>
 [Návod: Aktualizace aplikace MFC Scribble (část 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)

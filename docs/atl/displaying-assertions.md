@@ -7,12 +7,12 @@ helpviewer_keywords:
 - debugging assertions
 - assertions, debugging
 ms.assetid: fa353fe8-4656-4384-a5d2-8866bc977f06
-ms.openlocfilehash: e183f782d488c2e5b92f61cfd63627f056e1f588
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb06b8f124180ed566ecf2c761deb359444fb019
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616447"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289985"
 ---
 # <a name="displaying-assertions"></a>Zobrazení kontrolních výrazů
 
@@ -20,7 +20,6 @@ Pokud klient připojený k vaší službě se zobrazí přestane reagovat, můž
 
 Pokud zjistíte, že vaše služba se zobrazuje okno se zprávou, která nelze zobrazit, můžete nastavit **povolit službu interakcí s plochou** možnost před použitím služby znovu. Tato možnost je parametr spuštění, která umožňuje všechny okna se zprávou zobrazí ve službě a zobrazí v klientských počítačích. Nastavení této možnosti, otevřete aplikaci ovládacím panelu služby, vyberte službu, klikněte na tlačítko **spuštění**a pak vyberte **povolit službu interakcí s plochou** možnost.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Tipy pro ladění](../atl/debugging-tips.md)
-

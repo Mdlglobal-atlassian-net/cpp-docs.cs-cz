@@ -1,5 +1,5 @@
 ---
-title: Ctypedptrlist – třída
+title: CTypedPtrList Class
 ms.date: 11/04/2016
 f1_keywords:
 - CTypedPtrList
@@ -26,14 +26,14 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], RemoveTail
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
-ms.openlocfilehash: 485550fbd4d3fc483303cd6ba73d74e29cc7a006
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 756ef5043468f614c6ab3ac64598d62b29b2dc41
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555872"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286020"
 ---
-# <a name="ctypedptrlist-class"></a>Ctypedptrlist – třída
+# <a name="ctypedptrlist-class"></a>CTypedPtrList Class
 
 Poskytuje typově "zabezpečenou obálku" pro objekty třídy `CPtrList`.
 
@@ -46,7 +46,7 @@ class CTypedPtrList : public BASE_CLASS
 
 #### <a name="parameters"></a>Parametry
 
-*$BASE_CLASS*<br/>
+*BASE_CLASS*<br/>
 Základní třída typované ukazatele seznamu třídy; musí být třída seznamu ukazatel ( `CObList` nebo `CPtrList`).
 
 *TYP*<br/>
@@ -120,7 +120,7 @@ Typ prvků uložených v seznamu základní třídy.
 *newElement*<br/>
 Ukazatel objektu přidávané do tohoto seznamu. Je povolena hodnota NULL.
 
-*$BASE_CLASS*<br/>
+*BASE_CLASS*<br/>
 Základní třída typované ukazatele seznamu třídy; musí být třída seznamu ukazatel ( [coblist –](../../mfc/reference/coblist-class.md) nebo [cptrlist –](../../mfc/reference/cptrlist-class.md)).
 
 *pNewList*<br/>
@@ -151,7 +151,7 @@ Typ prvků uložených v seznamu základní třídy.
 *newElement*<br/>
 Ukazatel objektu přidávané do tohoto seznamu. Je povolena hodnota NULL.
 
-*$BASE_CLASS*<br/>
+*BASE_CLASS*<br/>
 Základní třída typované ukazatele seznamu třídy; musí být třída seznamu ukazatel ( [coblist –](../../mfc/reference/coblist-class.md) nebo [cptrlist –](../../mfc/reference/cptrlist-class.md)).
 
 *pNewList*<br/>
@@ -360,7 +360,7 @@ void SetAt(POSITION pos, TYPE newElement);
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Pozice prvku, který chcete nastavit.
 
 *TYP*<br/>
@@ -377,7 +377,7 @@ Ujistěte se, že hodnota pozice představuje platná pozice v seznamu. Pokud je
 
 Podrobné poznámky, naleznete v tématu [CObList::SetAt](../../mfc/reference/coblist-class.md#setat).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC shromažďování](../../visual-cpp-samples.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

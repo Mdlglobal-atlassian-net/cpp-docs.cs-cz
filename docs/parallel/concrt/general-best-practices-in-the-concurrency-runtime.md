@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-ms.openlocfilehash: 445e985117929cae2ec9a26a1e148b3eff55c2a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e25011e2466d76c946cc55421ed228c8ea174161
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647692"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285604"
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>Obecné osvědčené postupy v Concurrency Runtime
 
@@ -84,7 +84,7 @@ Vezměte v úvahu následující funkci `download`, která stáhne soubor na dan
 
 [!code-cpp[concrt-download-oversubscription#4](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_3.cpp)]
 
-Vzhledem k tomu, `GetHttpFile` funkce provede operaci potenciálně latentní, překryvného odběru můžete povolit další úlohy spustit, protože aktuální úloha čeká na data. Kompletní verze tohoto příkladu naleznete v tématu [postupy: použití překryvného odběru na posun latenci](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Vzhledem k tomu, `GetHttpFile` funkce provede operaci potenciálně latentní, překryvného odběru můžete povolit další úlohy spustit, protože aktuální úloha čeká na data. Kompletní verze tohoto příkladu naleznete v tématu [jak: Latence vytvořením nadbytečného](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
 [[Horní](#top)]
 
@@ -92,7 +92,7 @@ Vzhledem k tomu, `GetHttpFile` funkce provede operaci potenciálně latentní, p
 
 Pomocí funkce správy paměti [concurrency::Alloc](reference/concurrency-namespace-functions.md#alloc) a [concurrency::Free](reference/concurrency-namespace-functions.md#free), až budete mít podrobné úkoly, které často přidělovat malé objekty, které mají poměrně krátké doby života. Modul Concurrency Runtime obsahuje samostatný mezipaměti pro každé vlákno spuštěné. `Alloc` a `Free` funkce přidělují a uvolňují paměť z těchto mezipamětí bez použití zámků nebo překážky paměti.
 
-Další informace o tyto funkce správy paměti naleznete v tématu [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Příklad použití těchto funkcí, naleznete v tématu [postupy: použití Alloc a Free ke zlepšení výkonu paměti](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
+Další informace o tyto funkce správy paměti naleznete v tématu [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Příklad použití těchto funkcí, naleznete v tématu [jak: Použití funkcí Alloc a Free ke zlepšení výkonu paměti](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
 
 [[Horní](#top)]
 
@@ -124,7 +124,7 @@ Error details:
     negative balance: -76
 ```
 
-Další příklady, které používají vzor RAII pro správu životnosti objektů souběžnosti, najdete v článku [návod: odebrání práce z uživatelského rozhraní vlákna](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md), [postupy: použití třídy kontextu pro implementaci spolupráce Semafor](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md), a [jak: latence vytvořením nadbytečného](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Další příklady, které používají vzor RAII pro správu životnosti objektů souběžnosti, najdete v článku [názorný postup: Odstranění práce z vlákna uživatelského rozhraní](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md), [jak: Použití třídy kontextu pro implementaci semaforu pro spolupráci](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md), a [jak: Latence vytvořením nadbytečného](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
 [[Horní](#top)]
 
@@ -148,7 +148,7 @@ Modulu Runtime souběžnosti nepodporuje použití objekty souběžnosti v čás
 
 [[Horní](#top)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Osvědčené postupy v Concurrency Runtime](../../parallel/concrt/concurrency-runtime-best-practices.md)<br/>
 [Knihovna PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>

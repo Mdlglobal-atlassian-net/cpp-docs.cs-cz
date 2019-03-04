@@ -6,12 +6,12 @@ helpviewer_keywords:
 - flicker, MFC ActiveX controls
 - activation [MFC], flicker-free
 ms.assetid: bcb24b77-31d8-44a0-8c58-2ea6213b4c43
-ms.openlocfilehash: d979a6f633926bed1ad59de86829b9ac27b0d0cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fad24d6201260e87ff32436752a9fbf035e822ae
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438139"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287671"
 ---
 # <a name="providing-flicker-free-activation"></a>Zajištění aktivace bez blikání
 
@@ -25,7 +25,6 @@ Kód, který patří tento příznak není automaticky vygenerován, pokud jste 
 
 Pokud používáte aktivace bez oken, tyto optimalizace nemá žádný vliv.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – ovládací prvky ActiveX: Optimalizace](../mfc/mfc-activex-controls-optimization.md)
-

@@ -1,18 +1,18 @@
 ---
-title: 'Návod: Umístění ovládacích prvků na panely nástrojů'
+title: 'Návod: Vkládání ovládacích prvků na panely nástrojů'
 ms.date: 09/20/2018
 helpviewer_keywords:
 - Customize dialog box, adding controls
 - toolbars [MFC], adding controls
 ms.assetid: 8fc94bdf-0da7-45d9-8bc4-52b7b1edf205
-ms.openlocfilehash: 3e0cc066e39cc71833e2061a1964619d04a80be3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b5b8685b3062bf63187a765b7e90e26f8c65681
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580294"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291385"
 ---
-# <a name="walkthrough-putting-controls-on-toolbars"></a>Návod: Umístění ovládacích prvků na panely nástrojů
+# <a name="walkthrough-putting-controls-on-toolbars"></a>Návod: Vkládání ovládacích prvků na panely nástrojů
 
 Tento článek popisuje, jak přidat tlačítko panelu nástrojů, která obsahuje ovládací prvek Windows na panelu nástrojů. V knihovně MFC, musí být tlačítko panelu nástrojů [cmfctoolbarbutton – třída](../mfc/reference/cmfctoolbarbutton-class.md)-odvozené třídy, například [cmfctoolbarcomboboxbutton – třída](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [cmfctoolbareditboxbutton – třída](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Cmfcdropdowntoolbarbutton – třída](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), nebo [cmfctoolbarmenubutton – třída](../mfc/reference/cmfctoolbarmenubutton-class.md).
 
@@ -98,7 +98,7 @@ Chcete-li přidat tlačítko pole se seznamem na panel nástrojů, postupujte ta
 
 V obslužné rutině přizpůsobení `OnViewCustomize`, volání [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) nahradit **najít** tlačítko (tj. tlačítko s Identifikátorem příkazu `ID_EDIT_FIND`) s `CFindComboButton` objektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../mfc/hierarchy-chart.md)<br/>
 [Třídy](../mfc/reference/mfc-classes.md)<br/>

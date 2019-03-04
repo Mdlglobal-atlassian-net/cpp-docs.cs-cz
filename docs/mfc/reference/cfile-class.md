@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: dc0e6f75f4794b94d6e94d77f2e427b9c1df9f06
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f287b04b32b7bc45342ac7248fbe986a3dcf959e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644142"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289864"
 ---
 # <a name="cfile-class"></a>Cfile – třída
 
@@ -195,7 +195,7 @@ CAtlTransactionManager* pTM);
 
 ### <a name="parameters"></a>Parametry
 
-*hfile –*<br/>
+*hFile*<br/>
 Popisovač souboru pro připojení k `CFile` objektu.
 
 *lpszFileName*<br/>
@@ -204,7 +204,7 @@ Popisovač souboru pro připojení k `CFile` objektu.
 *nOpenFlags*<br/>
 Bitová kombinace (nebo) možnosti přístupu k souboru pro určený soubor. Možnosti v části poznámky.
 
-*Druh*<br/>
+*pTM*<br/>
 Ukazatel na catltransactionmanager – objekt
 
 ### <a name="remarks"></a>Poznámky
@@ -455,7 +455,7 @@ Odkaz na uživatelem zadané `CFileStatus` struktura, která se zobrazí informa
 *lpszFileName*<br/>
 Řetězec znaků Windows nastavte, který je cestu do požadovaného souboru. Cesta může být relativní nebo absolutní, nebo může obsahovat název síťové cesty.
 
-*Druh*<br/>
+*pTM*<br/>
 Ukazatel na catltransactionmanager – objekt
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -583,7 +583,7 @@ UINT, který definuje režim sdílení a přístup k souboru. Určuje akci, kter
 *pError*<br/>
 Ukazatel na existující objekt výjimky souborů, který se zobrazí stav operace, která selhala.
 
-*Druh*<br/>
+*pTM*<br/>
 Ukazatel na catltransactionmanager – objekt
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -662,7 +662,7 @@ static void PASCAL Remove(
 *lpszFileName*<br/>
 Řetězec, který určuje cestu k souboru požadovaného. Cesta může být relativní nebo absolutní a může obsahovat název sítě.
 
-*Druh*<br/>
+*pTM*<br/>
 Ukazatel na catltransactionmanager – objekt
 
 ### <a name="remarks"></a>Poznámky
@@ -694,7 +694,7 @@ Staré cestě.
 *lpszNewName*<br/>
 Novou cestu.
 
-*Druh*<br/>
+*pTM*<br/>
 Ukazatel na catltransactionmanager – objekt
 
 ### <a name="remarks"></a>Poznámky
@@ -720,7 +720,7 @@ UINT nFrom);
 *lOff*<br/>
 Počet bajtů, které mají ukazatel souboru. Kladné hodnoty přesuňte ukazatel na soubor na konci souboru. záporné hodnoty přesuňte ukazatel na soubor směrem k začátku souboru.
 
-*Nze*<br/>
+*nFrom*<br/>
 Pozice k vyhledání z. Možné hodnoty v části poznámky.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -843,10 +843,10 @@ static void PASCAL SetStatus(
 *lpszFileName*<br/>
 Řetězec, který určuje cestu k souboru požadovaného. Cesta může být relativní nebo absolutní a může obsahovat název sítě.
 
-*Stav*<br/>
+*status*<br/>
 Vyrovnávací paměť obsahující nové informace o stavu. Volání `GetStatus` členskou funkci k předběžnému vyplnění `CFileStatus` struktury pomocí aktuální hodnoty a pak proveďte požadované změny. Pokud je hodnota 0, není aktualizován odpovídající položky stavu. Najdete v článku [GetStatus](#getstatus) členskou funkci Popis `CFileStatus` struktury.
 
-*Druh*<br/>
+*pTM*<br/>
 Ukazatel na catltransactionmanager – objekt
 
 ### <a name="remarks"></a>Poznámky
@@ -916,7 +916,7 @@ Počet bajtů, které mají být přeneseny z vyrovnávací paměti. Pro režim 
 
 Kromě toho, podívejte se na příklady pro [CFile::CFile](#cfile) a [CFile::Open](#open).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC DRAWCLI](../../visual-cpp-samples.md)<br/>
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>

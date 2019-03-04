@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CDBVariant [MFC], m_pstringA
 - CDBVariant [MFC], m_pstringW
 ms.assetid: de23609c-c560-4b24-bd6b-9d8903fd5b49
-ms.openlocfilehash: 2a600aa893ae86abebb4146eda4864e69da3c35c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41ea20bcddc53142773d474af41021e9c71af1aa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485303"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289855"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant – třída
 
@@ -242,7 +242,7 @@ Uchovává ukazatel na široké [CString](../../atl-mfc-shared/reference/cstring
 
 `m_pstringW` Patří datový člen sjednocení. Před použitím `m_pstringW`, nejprve zkontrolujte hodnotu [CDBVariant::m_dwType](#m_dwtype). Pokud `m_dwType` nastavena na DBVT_WSTRING, pak `m_pstringW` obsahuje platný ukazatel; v opačném případě přístupu k `m_pstringW` vytvoří nespolehlivé výsledky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CRecordset – třída](../../mfc/reference/crecordset-class.md)

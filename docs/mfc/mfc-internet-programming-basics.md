@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: 5bb6a1d379ed754ed96637dfe5b3e4da983edb9f
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 37fe5486d6d41ad182779a3a15b0aca3af51d04b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175584"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288438"
 ---
 # <a name="mfc-internet-programming-basics"></a>Základy internetového programování v prostředí MFC
 
@@ -80,5 +80,4 @@ Tento web pro vývojáře obsahuje informace o použití Microsoft vývojářsk�
 
 OLE – část sady Windows SDK obsahuje další informace o programování technologie OLE. Tyto informace obsahuje podrobnosti o použití funkce rozhraní Win32 WinInet přímo, namísto prostřednictvím třídy knihovny MFC. Také obsahuje souhrnné informace o technologiích Internet.
 
-## <a name="see-also"></a>Viz také
-
+## <a name="see-also"></a>Viz také:

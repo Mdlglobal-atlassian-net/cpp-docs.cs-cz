@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE containers [MFC], trackers
 - CRectTracker class [MFC], implementing trackers
 ms.assetid: 5103a517-65bd-441a-8a53-02915ff3ef08
-ms.openlocfilehash: 19ffa94b7be4b96c57317f63d9cfd9242bff061f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f42ba8f8aa987225c6b545b60e92f00a4f7e3071
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613093"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287970"
 ---
 # <a name="trackers-implementing-trackers-in-your-ole-application"></a>Snímače: Implementace snímačů ve vašich aplikacích OLE
 
@@ -26,7 +26,6 @@ Snímače poskytuje grafické rozhraní pro povolení uživatelům interakci s k
 
 Tento článek obsahuje také použití styly s snímače. Kromě toho je několik odkazů na ukázky MFC OLE [OCLIENT](../visual-cpp-samples.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Snímače](../mfc/trackers.md)
-

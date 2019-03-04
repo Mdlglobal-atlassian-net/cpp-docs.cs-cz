@@ -10,12 +10,12 @@ helpviewer_keywords:
 - OLE server applications [MFC], server types
 - server applications [MFC]
 ms.assetid: e45172e8-eae3-400a-8139-0fa009a42fdc
-ms.openlocfilehash: d1e0a8ca85055c289d1ef8e1c36fcd35eab61c91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b1eb0df439bcfde3aa295f23a90291e865df3a9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526498"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290795"
 ---
 # <a name="servers"></a>Servery
 
@@ -47,13 +47,13 @@ Podrobné informace o serverech najdete v článku:
 
 - [Servery: Implementace dokumentů serveru](../mfc/servers-implementing-server-documents.md)
 
-- [Servery: Implementace oken s rámečkem na místě](../mfc/servers-implementing-in-place-frame-windows.md)
+- [Servery: Implementace Windows rámečkem na místě](../mfc/servers-implementing-in-place-frame-windows.md)
 
 - [Servery: Serverové položky](../mfc/servers-server-items.md)
 
 - [Servery: Problémy uživatelského rozhraní](../mfc/servers-user-interface-issues.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [Kontejnery](../mfc/containers.md)<br/>
@@ -61,4 +61,3 @@ Podrobné informace o serverech najdete v článku:
 [Nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md)<br/>
 [Registrace](../mfc/registration.md)<br/>
 [Automatizační servery](../mfc/automation-servers.md)
-

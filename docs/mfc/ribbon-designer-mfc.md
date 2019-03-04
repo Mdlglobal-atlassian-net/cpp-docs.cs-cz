@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 903adc96f4c9bc092ac23787781a76c0e7e3714c
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 0972cdfbb80129b0c87c96fa7daf6768d18aa0c4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175831"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288777"
 ---
 # <a name="ribbon-designer-mfc"></a>Návrhář pásu karet (MFC)
 
@@ -56,11 +56,11 @@ Chcete-li použít prostředky pásu karet v aplikaci knihovny MFC, načtěte pr
 
 Toto jsou dva způsoby, jak přidat prostředek pásu karet do projektu knihovny MFC:
 
-- Vytvoření aplikace knihovny MFC a konfigurace Průvodce projektu knihovny MFC vytvořte pás karet. Další informace najdete v tématu [návod: vytváření pásu karet aplikace podle pomocí knihovny MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
+- Vytvoření aplikace knihovny MFC a konfigurace Průvodce projektu knihovny MFC vytvořte pás karet. Další informace najdete v tématu [názorný postup: Vytvoření jednoduché aplikace pásu karet pomocí knihovny MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
 
-- V existujícím projektu knihovny MFC vytvořte prostředek pásu karet a načtěte jej. Další informace najdete v tématu [návod: aktualizace aplikace MFC Scribble (část 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
+- V existujícím projektu knihovny MFC vytvořte prostředek pásu karet a načtěte jej. Další informace najdete v tématu [názorný postup: Aktualizace aplikace MFC Scribble (část 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
 
-Pokud váš projekt již má ručně kódovaný pás, knihovna MFC má funkce, které můžete použít pro převod existujícího pásu karet na prostředek pásu karet. Další informace najdete v tématu [postupy: převod existujícího pásu karet MFC na prostředek pásu karet](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md).
+Pokud váš projekt již má ručně kódovaný pás, knihovna MFC má funkce, které můžete použít pro převod existujícího pásu karet na prostředek pásu karet. Další informace najdete v tématu [jak: Převod existujícího pásu karet MFC na prostředek pásu karet](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md).
 
 > [!NOTE]
 >  Pásy karet nelze v aplikacích založených na dialogové okno. Další informace najdete v tématu [typ aplikace, Průvodce aplikací knihovny MFC](../mfc/reference/application-type-mfc-application-wizard.md).
@@ -73,15 +73,15 @@ Následující obrázek znázorňuje různé součásti v Návrháři pásu kare
 
 ![Návrhář pásu karet MFC](../mfc/media/ribbon_designer.png "Návrháře pásu karet MFC")
 
-- **Panel nástrojů:** obsahuje ovládací prvky, které lze přetáhnout do návrhové ploše.
+- **Panel nástrojů:** Obsahuje ovládací prvky, které lze přetáhnout do návrhové ploše.
 
-- **Návrhové:** obsahuje vizuální reprezentaci prostředků pásu karet.
+- **Povrch návrháře:** Obsahuje vizuální reprezentaci prostředků pásu karet.
 
-- **Okno vlastností:** uvádí seznam atributů položky vybrané na návrhové ploše.
+- **Okno Vlastnosti:** Seznam atributů položky vybrané na návrhové ploše.
 
-- **Okno zobrazení zdrojů:** zobrazí prostředky, které obsahují prostředky z pásu karet, ve vašem projektu.
+- **Okno zobrazení zdrojů:** Zobrazí prostředky, které obsahují prostředky z pásu karet, ve vašem projektu.
 
-- **Panel nástrojů editoru pásu karet:** obsahuje příkazy, které umožňují zobrazit náhled pásu karet a změnit jeho vizuální motiv.
+- **Panel nástrojů editoru pásu karet:** Obsahuje příkazy, které umožňují zobrazit náhled pásu karet a změnit jeho vizuální motiv.
 
 Následující témata popisují, jak používat funkce v Návrháři pásu karet:
 
@@ -91,26 +91,25 @@ Následující témata popisují, jak používat funkce v Návrháři pásu kare
 
 - [Postupy: Přidání ovládacích prvků pásu karet a obslužných rutin událostí](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)
 
-- [Postupy: Načtení prostředku pásu karet z aplikace MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)
+- [Postupy: Načtení prostředku pásu karet z aplikace knihovny MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)
 
 ## <a name="definitions-of-ribbon-elements"></a>Definice prvků pásu karet
 
-![Pás karet MFC](../mfc/media/ribbon.png "pásu karet MFC")
+![MFC Ribbon](../mfc/media/ribbon.png "MFC Ribbon")
 
-- **Tlačítko aplikace:** tlačítka, které se zobrazí v levém horním rohu pásu karet. Tlačítko aplikace nahrazuje nabídku Soubor a je viditelný i v případě, že je pás karet minimalizovaný. Po kliknutí na tlačítko se zobrazí nabídka, která obsahuje seznam příkazů.
+- **Tlačítko aplikace:** Tlačítko, které se zobrazí v levém horním rohu pásu karet. Tlačítko aplikace nahrazuje nabídku Soubor a je viditelný i v případě, že je pás karet minimalizovaný. Po kliknutí na tlačítko se zobrazí nabídka, která obsahuje seznam příkazů.
 
-- **Panel nástrojů Rychlý přístup:** malý a přizpůsobitelný panel nástrojů, který zobrazuje často používané příkazy.
+- **Panel nástrojů Rychlý přístup:** Malý a přizpůsobitelný panel nástrojů, který zobrazuje často používané příkazy.
 
-- **Kategorie**: logické seskupení, který představuje obsah karty pásu karet.
+- **Kategorie**: Logické seskupení, který představuje obsah karty pásu karet.
 
-- **Výchozí tlačítko kategorie:** tlačítka, které se zobrazí na pásu karet, když je minimalizovaný. Po kliknutí na tlačítko kategorie se zobrazí znovu jako nabídka.
+- **Výchozí tlačítko kategorie:** Tlačítko, které se zobrazí na pásu karet, když je minimalizovaný. Po kliknutí na tlačítko kategorie se zobrazí znovu jako nabídka.
 
-- **Panel:** oblast na pásu karet, který se zobrazuje skupina souvisejících ovládacích prvků. Každá kategorie pásu karet obsahuje jeden nebo více panelů pásu karet.
+- **Panel:** Oblast na pásu karet, který se zobrazuje skupina souvisejících ovládacích prvků. Každá kategorie pásu karet obsahuje jeden nebo více panelů pásu karet.
 
-- **Prvky pásu karet:** ovládací prvky na panelech, například tlačítka a pole se seznamem. Různé ovládací prvky, které mohou být hostovány na pásu karet najdete v tématu [vzorek RibbonGadgets: aplikace pro miniaplikace na pásu karet](../visual-cpp-samples.md).
+- **Prvky pásu karet:** Ovládací prvky na panelech, například tlačítka a pole se seznamem. Různé ovládací prvky, které mohou být hostovány na pásu karet najdete v tématu [vzorek RibbonGadgets: Aplikace pro miniaplikace na pásu karet](../visual-cpp-samples.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Prvky uživatelského rozhraní](../mfc/user-interface-elements-mfc.md)<br/>
 [Práce se zdrojovými soubory](../windows/working-with-resource-files.md)
-

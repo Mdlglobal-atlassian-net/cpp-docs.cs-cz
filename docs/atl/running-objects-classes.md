@@ -8,12 +8,12 @@ helpviewer_keywords:
 - object classes, running
 - objects [C++], running objects classes
 ms.assetid: b4d63c41-81fd-4000-96c5-ea0a011f4308
-ms.openlocfilehash: c58997add54515027290d4fb6cd1379d1e3ddd94
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b18264aa3e89ca3ad45d32a9af3000e949a86f1e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574834"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290180"
 ---
 # <a name="running-objects-classes"></a>Třídy spuštěných objektů
 
@@ -25,7 +25,6 @@ Následující třída poskytuje podporu pro spouštění objekty:
 
 [ATL – tutoriál](../atl/active-template-library-atl-tutorial.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../atl/atl-class-overview.md)
-

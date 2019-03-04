@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Add Class Wizard, document control strings
 ms.assetid: 14e1c834-5e79-4dbd-811f-ec8f0a9cdcb2
-ms.openlocfilehash: a5664a539af351051f9ae3642c089e51b54bc8cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de0b483b6b3d242ee05680c47ae29ed675d54a36
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662420"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285266"
 ---
 # <a name="document-template-strings-mfc-add-class-wizard"></a>Řetězce šablony dokumentu, Průvodce přidáním třídy MFC
 
@@ -71,8 +71,8 @@ Vytváří řetězce, které jsou spojené s formuláři a dokumenty, které čt
 
    Určuje třídy dokumentu v projektu. Ve výchozím nastavení, tato třída je hlavní aplikace dokumentové třídy, jak je uvedeno v [třídy generované v revizi](../../mfc/reference/generated-classes-mfc-application-wizard.md) stránky Průvodce aplikací knihovny MFC. V seznamu můžete vybrat jiné třídy dokumentu, pokud jste přidali další třídy dokumentu v projektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Průvodce přidáním třídy MFC](../../mfc/reference/mfc-add-class-wizard.md)<br/>
-[Třída knihovny MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
+[MFC Class](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Přidání třídy](../../ide/adding-a-class-visual-cpp.md)

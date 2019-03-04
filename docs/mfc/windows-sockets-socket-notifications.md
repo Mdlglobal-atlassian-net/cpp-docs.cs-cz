@@ -6,26 +6,26 @@ helpviewer_keywords:
 - notifications [MFC], socket
 - sockets [MFC], notifications
 ms.assetid: 87d5bf70-6e77-49a9-9a64-aaadee2ad018
-ms.openlocfilehash: e49001e9693872d23162284df49f128097e68784
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c08305b8aeeca00eaf41e4f1c24b51a46a8c4254
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476476"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289907"
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows Sockets: Oznámení soketů
 
 Tento článek popisuje funkce oznámení ve třídách soketu. Tyto členské funkce jsou funkce zpětného volání, které volá framework oznámit objekt soketu o důležitých událostech. Funkce oznámení jsou:
 
-- [Události OnReceive](../mfc/reference/casyncsocket-class.md#onreceive): upozorní tento soket má data ve vyrovnávací paměti, aby se načíst voláním [Receive](../mfc/reference/casyncsocket-class.md#receive).
+- [Události OnReceive](../mfc/reference/casyncsocket-class.md#onreceive): Upozorní tento soket má data ve vyrovnávací paměti, aby se načíst voláním [Receive](../mfc/reference/casyncsocket-class.md#receive).
 
-- [OnSend](../mfc/reference/casyncsocket-class.md#onsend): upozorní tento soket, aby ho teď může odesílat data voláním [odeslat](../mfc/reference/casyncsocket-class.md#send).
+- [OnSend](../mfc/reference/casyncsocket-class.md#onsend): Upozorní tento soket, aby ho teď může odesílat data voláním [odeslat](../mfc/reference/casyncsocket-class.md#send).
 
-- [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept): upozorní tento naslouchání soketu, ve kterém lze přijmout čekající žádosti o připojení pomocí volání [přijmout](../mfc/reference/casyncsocket-class.md#accept).
+- [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept): Upozorní tento naslouchání soketu, ve kterém lze přijmout čekající žádosti o připojení pomocí volání [přijmout](../mfc/reference/casyncsocket-class.md#accept).
 
-- [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect): upozorní tento připojování soketu došlo k pokusu o jeho dokončení: možná úspěšně, nebo možná chybu.
+- [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect): Upozorní tento připojování soketu došlo k pokusu o jeho dokončení: možná úspěšně, nebo možná chybu.
 
-- [Při zavření](../mfc/reference/casyncsocket-class.md#onclose): upozorní tento soket, který je připojený k soketu byl uzavřen.
+- [Při zavření](../mfc/reference/casyncsocket-class.md#onclose): Upozorní tento soket, který má uzavřený soket, ke kterému je připojený k.
 
     > [!NOTE]
     >  Je další oznamovací funkci [OnOutOfBandData](../mfc/reference/casyncsocket-class.md#onoutofbanddata). Toto oznámení informuje příjmu soketu, že odesílání soket má "out-of-band" data k odeslání. Out-of-band data jsou logicky nezávislý channel spojené s každou dvojici sokety datového proudu připojené. Out-of-band kanálu se obvykle používá k odesílání dat "urgentní". MFC podporuje out-of-band data. Zkušení uživatelé pracovat s třídou [CAsyncSocket](../mfc/reference/casyncsocket-class.md) může být potřeba použít out-of-band kanálu, ale uživatelé třídy [csocket –](../mfc/reference/csocket-class.md) se nedoporučuje používat. Vytvořit druhý soket pro předávání těchto dat je jednodušší způsob. Další informace o datech out-of-band najdete v tématu Specifikace rozhraní Windows Sockets k dispozici v sadě Windows SDK.
@@ -47,11 +47,11 @@ Podrobnosti o jednotlivých funkcích notification, najdete v části funkce v r
 
 Další informace naleznete v tématu:
 
-- [Windows Sockets – Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets: Odvozování z tříd soketů](../mfc/windows-sockets-deriving-from-socket-classes.md)
+- [Windows Sockets: Odvozování z tříd soketů](../mfc/windows-sockets-deriving-from-socket-classes.md)
 
-- [Windows Sockets: Jak pracují sokety s archivy](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows Sockets: Jak pracují sokety s archivy](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
 - [Windows Sockets: Blokování](../mfc/windows-sockets-blocking.md)
 
@@ -59,7 +59,6 @@ Další informace naleznete v tématu:
 
 - [Windows Sockets: Převádění řetězců](../mfc/windows-sockets-converting-strings.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)
-

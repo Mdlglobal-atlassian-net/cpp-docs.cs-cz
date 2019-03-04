@@ -7,12 +7,12 @@ helpviewer_keywords:
 - containers [MFC], active document
 - MFC COM, active document containment
 ms.assetid: ba20183a-8b4c-440f-9031-e5fcc41d391b
-ms.openlocfilehash: bfd4018496f1516f8016bb56da2406f2e4b04c08
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 6e4defaf347f0d539ef023ee9c0e1e85dd2390db
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176780"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288958"
 ---
 # <a name="active-document-containers"></a>Kontejnery pro aktivní dokument
 
@@ -83,7 +83,6 @@ Orámovat objekt kontejneru je ve většině případů stejné rámce, který s
 
 Kontejner pro aktivní dokument můžete rozšířit rámce přidáním `IOleCommandTarget`. Umožní vám to přijímá příkazy, které pocházejí z aktivního dokumentu uživatelské rozhraní stejným způsobem, že toto rozhraní umožňuje kontejner k odesílání stejných příkazů (například **nový soubor**, **otevřít**,  **Uložit jako**, **tisk**; **Upravit kopii**, **vložit**, **zpět**a další) pro aktivní dokument. Další informace najdete v tématu [cíle příkazů](../mfc/message-handling-and-command-targets.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zahrnutí aktivního dokumentu](../mfc/active-document-containment.md)
-

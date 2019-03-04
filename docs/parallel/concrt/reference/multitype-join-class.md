@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
-ms.openlocfilehash: 2fd94ef072fcab9af076fcdfa1b5c094d77f89c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a0c68c2c017eedfa23548bee1d17177e8eaaa1e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547396"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289023"
 ---
 # <a name="multitypejoin-class"></a>multitype_join – třída
 
@@ -71,7 +71,7 @@ Druh nástroje `join` bloku jedná buď `greedy` nebo `non_greedy`
 |[link_target](#link_target)|K této propojuje cílový blok `multitype_join` blok zpráv.|
 |[Vydání verze](#release)|Uvolní předchozí vyhrazení úspěšné zprávy.|
 |[release_ref](#release_ref)|Počet odkazů v tomto vydání `multiple_join` blok zpráv.|
-|[Rezervovat](#reserve)|Vyhradí zprávu nabízely dříve v tomto `multitype_join` blok zpráv.|
+|[reserve](#reserve)|Vyhradí zprávu nabízely dříve v tomto `multitype_join` blok zpráv.|
 |[unlink_target](#unlink_target)|Cílový blok z tohoto nebude odpojen `multitype_join` blok zpráv.|
 |[unlink_targets](#unlink_targets)|Zruší všechny cíle z tohoto propojení `multitype_join` blok zpráv. (Přepíše [isource::unlink_targets –](isource-class.md#unlink_targets).)|
 
@@ -81,7 +81,7 @@ Další informace najdete v tématu [asynchronní bloky zpráv](../../../paralle
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Isource –](isource-class.md)
+[ISource](isource-class.md)
 
 `multitype_join`
 
@@ -200,7 +200,7 @@ A `tuple` zdrojů pro tuto `multitype_join` blok zpráv.
 *_PScheduleGroup*<br/>
 `ScheduleGroup` Objekt v rámci kterého Úloha šíření pro `multitype_join` naplánovaný zasílání zpráv bloku. `Scheduler` Skupina plánování předpokládá používaný objekt.
 
-*_Spojit*<br/>
+*_Join*<br/>
 A `multitype_join` blok zpráv bude kopírováno. Všimněte si, že je osamocené na původní objekt, takže jde konstruktor move.
 
 ### <a name="remarks"></a>Poznámky
@@ -209,7 +209,7 @@ Modul runtime používá výchozí plánovač, pokud není zadán `_PScheduler` 
 
 Přesun konstrukce neprovádí pod zámek, což znamená, že je až uživatele, aby se neobjeví žádné úlohy s nižšími nároky na cestě v době přesunutí. V opačném případě mnoha bude situace může nastat, což vede k výjimky nebo nekonzistentním stavu.
 
-##  <a name="dtor"></a> ~ multitype_join
+##  <a name="dtor"></a> ~multitype_join
 
 Odstraní `multitype_join` blok zpráv.
 
@@ -299,7 +299,7 @@ Zruší všechny cíle z tohoto propojení `multitype_join` blok zpráv.
 virtual void unlink_targets();
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [choice – třída](choice-class.md)<br/>

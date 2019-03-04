@@ -118,12 +118,12 @@ helpviewer_keywords:
 - CWinAppEx [MFC], StoreWindowPlacement
 - CWinAppEx [MFC], m_bForceImageReset
 ms.assetid: a3d3e053-3e22-463f-9444-c73abb1bb9d7
-ms.openlocfilehash: 57c18ff00cd9e3a1d3156d8214ac78b49ca00c1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c222567703d0e57480c00f6f2bf9e78f16979150
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544414"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288828"
 ---
 # <a name="cwinappex-class"></a>CWinAppEx – třída
 
@@ -222,7 +222,7 @@ Většina funkcí poskytovaných rozhraní MFC závisí `CWinAppEx` třídy. Mů
 
 - Odvodit třídu hlavní aplikaci z `CWinAppEx`.
 
-Jakmile implementujete `CWinAppEx` do své aplikace můžete inicializovat některý správce aplikace. Před použitím správce aplikace musí inicializovat pomocí volání metody odpovídající inicializace. Získat ukazatel na konkrétní manažera, zavolejte metodu přidružené get. `CWinAppEx` Třída spravuje správce následující aplikace: [cmousemanager – třída](../../mfc/reference/cmousemanager-class.md), [ccontextmenumanager – třída](../../mfc/reference/ccontextmenumanager-class.md), [ckeyboardmanager – třída](../../mfc/reference/ckeyboardmanager-class.md), [ Cusertoolsmanager – třída](../../mfc/reference/cusertoolsmanager-class.md), a [cmenutearoffmanager – třída](../../mfc/reference/cmenutearoffmanager-class.md).
+Jakmile implementujete `CWinAppEx` do své aplikace můžete inicializovat některý správce aplikace. Před použitím správce aplikace musí inicializovat pomocí volání metody odpovídající inicializace. Získat ukazatel na konkrétní manažera, zavolejte metodu přidružené get. `CWinAppEx` Třída spravuje správce následující aplikace: [Cmousemanager – třída](../../mfc/reference/cmousemanager-class.md), [ccontextmenumanager – třída](../../mfc/reference/ccontextmenumanager-class.md), [ckeyboardmanager – třída](../../mfc/reference/ckeyboardmanager-class.md), [cusertoolsmanager – třída](../../mfc/reference/cusertoolsmanager-class.md), a [ Cmenutearoffmanager – třída](../../mfc/reference/cmenutearoffmanager-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -234,7 +234,7 @@ Jakmile implementujete `CWinAppEx` do své aplikace můžete inicializovat někt
 
 [CWinApp](../../mfc/reference/cwinapp-class.md)
 
-[CWinAppEx –](../../mfc/reference/cwinappex-class.md)
+[CWinAppEx](../../mfc/reference/cwinappex-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -1031,7 +1031,7 @@ virtual void OnAppContextHelp(
 *pWndControl*<br/>
 [in] Ukazatel na objekt window, pro kterou uživatel vyvolal kontextové nápovědy.
 
-*[] dwHelpIDArray*<br/>
+*dwHelpIDArray[]*<br/>
 [in] Rezervovanou hodnotu.
 
 ### <a name="remarks"></a>Poznámky
@@ -1232,7 +1232,7 @@ virtual BOOL ShowPopupMenu(
 *uiMenuResId*<br/>
 [in] ID prostředku nabídky
 
-*Bod*<br/>
+*point*<br/>
 [in] A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , která určuje umístění v nabídce v souřadnicovém systému obrazovky.
 
 *pWnd*<br/>
@@ -1327,7 +1327,7 @@ BOOL WriteInt(
 *lpszEntry*<br/>
 [in] Řetězec, který obsahuje název klíče registru.
 
-*nHodnota*<br/>
+*nValue*<br/>
 [in] Data k uložení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1421,7 +1421,7 @@ BOOL WriteSectionInt(
 *lpszEntry*<br/>
 [in] Řetězec, který obsahuje hodnotu pro nastavení.
 
-*nHodnota*<br/>
+*nValue*<br/>
 [in] Data k zápisu do registru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1526,7 +1526,7 @@ Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě FALSE.
 
 Pokud klíč určené *lspzEntry* buď neexistuje, tato metoda vytvoří.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

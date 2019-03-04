@@ -1,5 +1,5 @@
 ---
-title: CMultiLock – třída
+title: CMultiLock Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMultiLock
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CMultiLock [MFC], Lock
 - CMultiLock [MFC], Unlock
 ms.assetid: c5b7c78b-1f81-4387-b7dd-2c813c5b6b61
-ms.openlocfilehash: 27c0eb396ac1384b691f51bf7089f6820157cf8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 107ed227c5515cbf2fcb08e957a64a4a17d8287a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613418"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288661"
 ---
-# <a name="cmultilock-class"></a>CMultiLock – třída
+# <a name="cmultilock-class"></a>CMultiLock Class
 
 Představuje mechanismus řízení přístupu, který se používá při řízení přístupu k prostředkům ve vícevláknovém programu.
 
@@ -57,7 +57,7 @@ Použití `CMultiLock` objektu, musíte nejprve vytvořit pole, které chcete č
 
 `CMultiLock` objekty jsou nejužitečnější tehdy, pokud vlákno obsahuje velký počet `CEvent` objekty, které může reagovat. Vytvořit pole obsahující všechny `CEvent` ukazatele a volání `Lock`. To způsobí, že vlákno počkat, až některou událost je signalizována.
 
-Další informace o tom, jak používat `CMultiLock` objekty, najdete v článku [Multithreading: jak používat synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Další informace o tom, jak používat `CMultiLock` objekty, najdete v článku [Multithreading: Jak používat synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -188,7 +188,6 @@ Tato funkce je volána `CMultiLock`jeho destruktor.
 
 První formulář `Unlock` pokusí o odemknutí synchronizace objektem spravovaným `CMultiLock`. Tedy o druhou podobu `Unlock` pokusí o odemknutí `CSemaphore` objekty vlastněné `CMultiLock`. Pokud `CMultiLock` nevlastní žádné uzamčené `CSemaphore` objektu, funkce vrátí FALSE; v opačném případě vrátí hodnotu TRUE. *lCount* a *lpPrevCount* jsou stejné jako parametry [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock). Tedy o druhou podobu `Unlock` zřídka lze použít na multilock situacích.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-

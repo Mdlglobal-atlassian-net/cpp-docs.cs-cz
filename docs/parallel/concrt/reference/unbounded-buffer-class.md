@@ -19,12 +19,12 @@ f1_keywords:
 - AGENTS/concurrency::unbounded_buffer::send_message
 - AGENTS/concurrency::unbounded_buffer::supports_anonymous_source
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-ms.openlocfilehash: b4a54e80067c5bc4cea9cd0dac0e24a66e1858e0
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 1474381a2d1c0947b2428ab4cf0b4683198eef84
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694748"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288141"
 ---
 # <a name="unboundedbuffer-class"></a>Třída unbounded_buffer
 
@@ -41,7 +41,7 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
 
 #### <a name="parameters"></a>Parametry
 
-*_Typ*<br/>
+*_Type*<br/>
 Typ datové části zprávy, uloženy a následně vyrovnávací paměti.
 
 ## <a name="members"></a>Členové
@@ -57,8 +57,8 @@ Typ datové části zprávy, uloženy a následně vyrovnávací paměti.
 
 |Název|Popis|
 |----------|-----------------|
-|[Odstranění z fronty](#dequeue)|Odebere položku z `unbounded_buffer` blok zpráv.|
-|[Zařazení do fronty](#enqueue)|Přidá položku do `unbounded_buffer` blok zpráv.|
+|[dequeue](#dequeue)|Odebere položku z `unbounded_buffer` blok zpráv.|
+|[enqueue](#enqueue)|Přidá položku do `unbounded_buffer` blok zpráv.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
@@ -74,17 +74,17 @@ Typ datové části zprávy, uloženy a následně vyrovnávací paměti.
 |[reserve_message](#reserve_message)|Vyhradí zprávu nabízely dříve v tomto `unbounded_buffer` blok zpráv. (Přepíše [source_block::reserve_message –](source-block-class.md#reserve_message).)|
 |[resume_propagation](#resume_propagation)|Obnoví šíření po rezervaci byla uvolněna. (Přepíše [source_block::resume_propagation –](source-block-class.md#resume_propagation).)|
 |[send_message](#send_message)|Synchronně předává zprávy ze `ISource` bloku k tomuto `unbounded_buffer` blok zpráv. Je vyvolán `send` metodu, když se zavolá pomocí zdrojového bloku.|
-|[supports_anonymous_source –](#supports_anonymous_source)|Přepsání `supports_anonymous_source` indikace, že tento blok můžete přijímat zprávy, které jsou nabízeny zdrojem, který není spojený. (Přepíše [itarget::supports_anonymous_source –](itarget-class.md#supports_anonymous_source).)|
+|[supports_anonymous_source](#supports_anonymous_source)|Přepsání `supports_anonymous_source` indikace, že tento blok můžete přijímat zprávy, které jsou nabízeny zdrojem, který není spojený. (Přepíše [itarget::supports_anonymous_source –](itarget-class.md#supports_anonymous_source).)|
 
 Další informace najdete v tématu [asynchronní bloky zpráv](../asynchronous-message-blocks.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Isource –](isource-class.md)
+[ISource](isource-class.md)
 
-[Itarget –](itarget-class.md)
+[ITarget](itarget-class.md)
 
-[source_block –](source-block-class.md)
+[source_block](source-block-class.md)
 
 [propagator_block](propagator-block-class.md)
 
@@ -207,7 +207,7 @@ Ukazatele na blok zdroje nabídky zprávy.
 
 A [message_status –](concurrency-namespace-enums.md#message_status) označení cíl rozhodla se zprávy.
 
-##  <a name="propagate_output_messages"></a> propagate_output_messages –
+##  <a name="propagate_output_messages"></a> propagate_output_messages
 
 Místa `message` `_PMessage` v tomto `unbounded_buffer` blok zpráv a pokouší se nabízejí na všechny propojené cíle.
 
@@ -347,7 +347,7 @@ unbounded_buffer(
 
 ### <a name="parameters"></a>Parametry
 
-*_Filtrovat*<br/>
+*_Filter*<br/>
 Funkce filtru, která určuje, zda by měl být přijat nabízené zprávy.
 
 *_PScheduler*<br/>
@@ -370,9 +370,8 @@ Odstraní `unbounded_buffer` blok zpráv.
 ~unbounded_buffer();
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [overwrite_buffer – třída](overwrite-buffer-class.md)<br/>
 [single_assignment – třída](single-assignment-class.md)
-

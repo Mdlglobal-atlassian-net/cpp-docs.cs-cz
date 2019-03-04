@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding dialog resources
 - ATL Dialog Wizard
 ms.assetid: b0b9ace5-83c9-40d3-82c3-eb6293f10583
-ms.openlocfilehash: 7f868800bb8453ac47ec0f188d6a2970aee7a55f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 043c170021ce1ceb072dba3e5a450375f556753a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458049"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287918"
 ---
 # <a name="atl-dialog-wizard"></a>Průvodce dialogem ATL
 
@@ -30,7 +30,7 @@ Průvodce se vloží do hlavičky souboru [mapu zpráv](../../atl/message-maps-a
 
    Nastaví název třídy, který se má vytvořit. Tento název je založen na názvu je zadat v **krátký název**, předchází "C", typická předpona pro název třídy.
 
-- **soubor .h**
+- **.h file**
 
    Nastaví název hlavičkového souboru pro nový objekt třídy. Ve výchozím nastavení, tento název je založen na názvu je zadat v **krátký název**. Klikněte na tlačítko se třemi tečkami uložení názvu souboru do umístění podle vaší volby, nebo připojit k existujícímu souboru deklaraci třídy. Pokud zvolíte existující soubor, Průvodce neuloží se do vybraného umístění dokud kliknutím **Dokončit** v průvodci.
 
@@ -42,7 +42,6 @@ Průvodce se vloží do hlavičky souboru [mapu zpráv](../../atl/message-maps-a
 
    Průvodce nepřepisuje soubor. Pokud jste vybrali název existujícího souboru, po kliknutí na **Dokončit**, Průvodce vás vyzve k označení, zda má být připojen implementace třídy do obsahu souboru. Klikněte na tlačítko **Ano** pro připojení k souboru, klikněte na tlačítko **ne** pro návrat do průvodce a zadejte jiný název souboru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Dialogového okna ATL](../../atl/reference/adding-an-atl-dialog-box.md)
-

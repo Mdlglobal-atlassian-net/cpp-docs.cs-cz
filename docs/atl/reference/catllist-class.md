@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-ms.openlocfilehash: 9e657bbf375a8babf1c03cc7254310956131d62b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: faed99197eb14da8ea095bef81d0d1a9845b18ad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449363"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285500"
 ---
 # <a name="catllist-class"></a>Catllist – třída
 
@@ -76,7 +76,7 @@ Kód použitý má zkopírovat nebo přesunout prvky. Zobrazit [celementtraits �
 |Název|Popis|
 |----------|-----------------|
 |[CAtlList::CAtlList](#catllist)|Konstruktor|
-|[Catllist –:: ~ catllist –](#dtor)|Destruktor.|
+|[CAtlList::~CAtlList](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -334,7 +334,7 @@ const E& GetAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Hodnota pozice, zadání konkrétní elementu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -425,7 +425,7 @@ const E& GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Hodnota pozice, vrácený z předchozího volání `GetNext`, [CAtlList::GetHeadPosition](#getheadposition), nebo jiné `CAtlList` metody.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -453,7 +453,7 @@ const E& GetPrev(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Hodnota pozice, vrácený z předchozího volání `GetPrev`, [CAtlList::GetTailPosition](#gettailposition), nebo jiné `CAtlList` metody.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -533,7 +533,7 @@ POSITION InsertAfter(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Hodnota pozice, po jejímž uplynutí se vloží nový prvek.
 
 *– Element*<br/>
@@ -561,7 +561,7 @@ POSITION InsertBefore(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Nový prvek se vloží do seznamu před tuto hodnotu pozice.
 
 *– Element*<br/>
@@ -605,7 +605,7 @@ void MoveToHead(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Hodnota pozice prvku, který chcete přesunout.
 
 ### <a name="remarks"></a>Poznámky
@@ -626,7 +626,7 @@ void MoveToTail(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Hodnota pozice prvku, který chcete přesunout.
 
 ### <a name="remarks"></a>Poznámky
@@ -663,7 +663,7 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Hodnota pozice prvku, který chcete odebrat.
 
 ### <a name="remarks"></a>Poznámky
@@ -758,7 +758,7 @@ void SetAt(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Hodnota pozice odpovídá elementu, který chcete změnit.
 
 *– Element*<br/>
@@ -796,7 +796,7 @@ Zamění prvky ve dvou pozic určený. V sestavení ladění bude selhání kont
 
 [!code-cpp[NVC_ATL_Utilities#31](../../atl/codesnippet/cpp/catllist-class_19.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CList – třída](../../mfc/reference/clist-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

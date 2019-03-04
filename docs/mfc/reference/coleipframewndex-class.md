@@ -94,12 +94,12 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], WinHelpA
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
-ms.openlocfilehash: c30ced2f19602dca17badeec6e1b27ad1e90bf5c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ebf63e6cf31f3852434926c3559774e7b4b46d3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612729"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285344"
 ---
 # <a name="coleipframewndex-class"></a>Coleipframewndex – třída
 
@@ -184,9 +184,9 @@ Následující příklad ukazuje, jak podtřídy instance `COleIPFrameWndEx` tř
 
 [CFrameWnd](../../mfc/reference/cframewnd-class.md)
 
-[Coleipframewnd –](../../mfc/reference/coleipframewnd-class.md)
+[COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)
 
-[Coleipframewndex –](../../mfc/reference/coleipframewndex-class.md)
+[COleIPFrameWndEx](../../mfc/reference/coleipframewndex-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -242,7 +242,7 @@ void DockPane(
 
 [in] *pBar*<br/>
 [in] *nDockBarID*<br/>
-[in] *lprect –*<br/>
+[in] *lpRect*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
@@ -647,7 +647,7 @@ virtual BOOL OnDrawMenuImage(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *pMenuButton*<br/>
@@ -677,7 +677,7 @@ virtual void OnDrawMenuLogo(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *pMenu*<br/>
@@ -906,7 +906,7 @@ void SetDockState(const CDockState& state);
 
 ### <a name="parameters"></a>Parametry
 
-*Stav*<br/>
+*state*<br/>
 [in] Určuje stav ukotvení.
 
 ### <a name="remarks"></a>Poznámky
@@ -975,7 +975,7 @@ virtual void WinHelp(
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

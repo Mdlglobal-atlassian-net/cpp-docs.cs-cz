@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - rich edit controls [MFC]
 ms.assetid: ad589b9f-a3fd-4820-bf1f-6b1965997e68
-ms.openlocfilehash: 7f307674645ad68455123b801fef8e4ae24b5b41
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c45cb638ec860bb803c7de32065606dc3cc176b2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548275"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287710"
 ---
 # <a name="overview-of-the-rich-edit-control"></a>Přehled ovládacích prvků pro úpravy s formátováním
 
@@ -24,8 +24,7 @@ Pro úpravy s formátováním podpora ovládacích prvků téměř všechny oper
 
 Další informace o oznámeních najdete v tématu [oznámení z ovládacího prvku Rich upravit](../mfc/notifications-from-a-rich-edit-control.md) dále v tomto tématu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

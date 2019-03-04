@@ -1,5 +1,5 @@
 ---
-title: IConnectionPointImpl – třída
+title: IConnectionPointImpl Class
 ms.date: 11/04/2016
 f1_keywords:
 - IConnectionPointImpl
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - connection points [C++], implementing
 - IConnectionPointImpl class
 ms.assetid: 27992115-3b86-45dd-bc9e-54f32876c557
-ms.openlocfilehash: b850d9cfa9b2e2ea2a8b5e7f10e29e5cf26bc63e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54231a4229db9a9afeecad878d695814565d776b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655231"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285773"
 ---
-# <a name="iconnectionpointimpl-class"></a>IConnectionPointImpl – třída
+# <a name="iconnectionpointimpl-class"></a>IConnectionPointImpl Class
 
 Tato třída implementuje bod připojení.
 
@@ -155,7 +155,7 @@ STDMETHOD(Unadvise)(DWORD dwCookie);
 
 Zobrazit [IConnectionPoint::Unadvise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-unadvise) ve Windows SDK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

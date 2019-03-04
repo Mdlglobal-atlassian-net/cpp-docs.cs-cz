@@ -14,12 +14,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], active/inactive state
 - optimizing performance, ActiveX controls
 ms.assetid: 8b11f26a-190d-469b-b594-5336094a0109
-ms.openlocfilehash: cc4d210abe0bca5ba8d3a442796173111f45f6e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08cbb5ab0ff9b8c165e549bc2b250daebc1ce177
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588562"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288612"
 ---
 # <a name="mfc-activex-controls-optimization"></a>MFC – ovládací prvky ActiveX: Optimalizace
 
@@ -65,7 +65,6 @@ Další informace naleznete v tématu:
 
 - [Optimalizace vykreslování ovládacích prvků](../mfc/optimizing-control-drawing.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)
-

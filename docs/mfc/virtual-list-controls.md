@@ -7,12 +7,12 @@ helpviewer_keywords:
 - list controls [MFC], List view
 - virtual list controls
 ms.assetid: 319f841f-e426-423a-8276-d93f965b0b45
-ms.openlocfilehash: b9da918017d300d7af61b1fd3ab27869e136bb8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7372aca9e24a554e01f7a61f43d6170e99fe34c5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573667"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288711"
 ---
 # <a name="virtual-list-controls"></a>Ovládací prvky typu virtuální seznam
 
@@ -63,8 +63,7 @@ Zprávy oznámení LVN_ODFINDITEM posílá ovládací prvek typu virtuální sez
 
 Byste měli být připraveni vyhledejte položku, která odpovídá informace poskytují ovládací prvek zobrazení seznamu. Index položky v případě úspěchu nebo -1 by měla vrátit, pokud není nalezen žádný odpovídající položka.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CListCtrl](../mfc/using-clistctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

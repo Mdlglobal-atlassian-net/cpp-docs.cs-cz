@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-ms.openlocfilehash: 1b2b4de2a0aa844f9450af9d853b11ea6f485274
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f27dace61b0764962a78695c2a4c6b180b09d7a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638266"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287895"
 ---
 # <a name="scheduler-class"></a>Třída plánovače
 
@@ -57,7 +57,7 @@ class Scheduler;
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Vrátí aktuální počet virtuálních procesorů pro Plánovač.|
 |[GetPolicy](#getpolicy)|Vrátí kopii objektu zásad, který byl vytvořen plánovač.|
 |[ID](#id)|Vrací jedinečný identifikátor pro Plánovač.|
-|[Isavailablelocation –](#isavailablelocation)|Určuje, zda je na dané místo k dispozici na Plánovač.|
+|[IsAvailableLocation](#isavailablelocation)|Určuje, zda je na dané místo k dispozici na Plánovač.|
 |[Referenční informace](#reference)|Zvýší počet odkazů plánovače.|
 |[RegisterShutdownEvent](#registershutdownevent)|Způsobí, že obslužná rutina události Windows předaný `_Event` parametru má být signalizován, když Plánovač vypne a odstraní sama. V době, kdy událost je signalizována všechny práce, která má naplánované Plánovač je dokončena. Prostřednictvím této metody lze registrovat více událostí vypnutí.|
 |[Vydaná verze](#release)|Sníží počet referenční plánovače.|
@@ -109,7 +109,7 @@ static Scheduler* __cdecl Create(const SchedulerPolicy& _Policy);
 
 ### <a name="parameters"></a>Parametry
 
-*Zásady _protokolu*<br/>
+*_Policy*<br/>
 Zásady plánovače, která popisuje chování nově vytvořený plánovače.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -124,7 +124,7 @@ Plánovač vytvořené pomocí této metody není připojen k volání kontextu.
 
 Tato metoda může vyvolat výjimky, včetně různých [scheduler_resource_allocation_error –](scheduler-resource-allocation-error-class.md) a [invalid_scheduler_policy_value –](invalid-scheduler-policy-value-class.md).
 
-##  <a name="createschedulegroup"></a> Createschedulegroup –
+##  <a name="createschedulegroup"></a> CreateScheduleGroup
 
 Vytvoří novou skupinu plán v rámci plánovače. Verze, která přebírá parametr `_Placement` způsobí, že úlohy ve skupině nově vytvořený plán tendenční směrem k provádění v místě určeném v parametru.
 
@@ -173,7 +173,7 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 
 Kopie zásad, který byl vytvořen plánovač.
 
-##  <a name="id"></a> ID
+##  <a name="id"></a> Id
 
 Vrací jedinečný identifikátor pro Plánovač.
 
@@ -234,7 +234,7 @@ virtual void RegisterShutdownEvent(HANDLE _Event) = 0;
 
 ### <a name="parameters"></a>Parametry
 
-*_Událostí*<br/>
+*_Event*<br/>
 Popisovač objektu události Windows, který bude signál modulem runtime, když Plánovač vypne a odstraní sama.
 
 ##  <a name="release"></a> Vydání verze
@@ -323,17 +323,16 @@ static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
 
 ### <a name="parameters"></a>Parametry
 
-*Zásady _protokolu*<br/>
+*_Policy*<br/>
 Zásady pro nastavení jako výchozí zásadu plánovače.
 
 ### <a name="remarks"></a>Poznámky
 
 Pokud `SetDefaultSchedulerPolicy` metoda se volá, když je výchozím plánovačem již existuje v rámci procesu, modul runtime vyvolá výjimku [default_scheduler_exists –](default-scheduler-exists-class.md) výjimky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [Scheduler – třída](scheduler-class.md)<br/>
-[Policyelementkey –](concurrency-namespace-enums.md)<br/>
+[PolicyElementKey](concurrency-namespace-enums.md)<br/>
 [Plánovač úloh](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

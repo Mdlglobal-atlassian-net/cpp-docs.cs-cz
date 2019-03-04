@@ -1,5 +1,5 @@
 ---
-title: Cmfcribbonlinkctrl – třída
+title: CMFCRibbonLinkCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonLinkCtrl
@@ -32,14 +32,14 @@ helpviewer_keywords:
 - CMFCRibbonLinkCtrl [MFC], OpenLink
 - CMFCRibbonLinkCtrl [MFC], SetLink
 ms.assetid: 77ae1941-e0ab-4a9d-911e-1752d34c079b
-ms.openlocfilehash: 6e20b8fd2c8b40f907301c36f2aa3acef144d7b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f47e5a3a25120370bd618ac3a89de76761fa61a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559143"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287788"
 ---
-# <a name="cmfcribbonlinkctrl-class"></a>Cmfcribbonlinkctrl – třída
+# <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl Class
 
 Implementuje hypertextový odkaz, který je umístěn na pásu karet. Hypertextový odkaz otevře webovou stránku, po kliknutí.
 Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
@@ -83,11 +83,11 @@ Po vytvoření hypertextového odkazu, přidejte ho do panelu voláním [CMFCRib
 
 [CObject –](../../mfc/reference/cobject-class.md) [cmfcribbonbaseelement –](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
-[Cmfcribbonbutton –](../../mfc/reference/cmfcribbonbutton-class.md) [cmfcribbonlinkctrl –](../../mfc/reference/cmfcribbonlinkctrl-class.md)
+[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxRibbonLinkCtrl.h
+**Header:** afxRibbonLinkCtrl.h
 
 ##  <a name="cmfcribbonlinkctrl"></a>  CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl
 
@@ -137,7 +137,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -165,7 +165,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -214,7 +214,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
@@ -267,7 +267,7 @@ void SetLink(LPCTSTR lpszLink);
 *lpszLink*<br/>
 [in] Určuje text, hypertextový odkaz.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Ccomclassfactorysingleton – třída
+title: CComClassFactorySingleton Class
 ms.date: 11/04/2016
 f1_keywords:
 - CComClassFactorySingleton
@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactorySingleton class
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
-ms.openlocfilehash: 760bf47ff818e301ddfbdeb8c44d318ab105b760
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 480b4c2a6e052e8e0823b97b548fc5d07b55230f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517309"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290388"
 ---
-# <a name="ccomclassfactorysingleton-class"></a>Ccomclassfactorysingleton – třída
+# <a name="ccomclassfactorysingleton-class"></a>CComClassFactorySingleton Class
 
 Tato třída je odvozena z [ccomclassfactory –](../../atl/reference/ccomclassfactory-class.md) a používá [ccomobjectglobal –](../../atl/reference/ccomobjectglobal-class.md) k vytvoření jednoho objektu.
 
@@ -110,7 +110,7 @@ Každé volání [CreateInstance](#createinstance) metoda jednoduše dotazuje to
 
 Všimněte si, že aktuální formu `m_spObj` uvede k zásadní změně z způsob, který `CComClassFactorySingleton` pracovali v předchozích verzích ATL. V předchozích verzích `CComClassFactorySingleton` objekt byl vytvořen ve stejnou dobu jako objekt pro vytváření tříd, během inicializace serveru. V jazyce Visual C++ .NET 2003 je objekt vytvořen laxně, na první požadavek. Tato změna může způsobit chyby v programech, které jsou závislé na dřívější inicializace.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)<br/>
 [CComClassFactory2 – třída](../../atl/reference/ccomclassfactory2-class.md)<br/>

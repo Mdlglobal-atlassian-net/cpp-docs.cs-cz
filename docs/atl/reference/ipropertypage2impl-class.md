@@ -1,5 +1,5 @@
 ---
-title: Ipropertypage2impl – třída
+title: IPropertyPage2Impl Class
 ms.date: 11/04/2016
 f1_keywords:
 - IPropertyPage2Impl
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - IPropertyPage2 ATL implementation
 - IPropertyPage2Impl class
 ms.assetid: e89fbe90-203a-47f0-a5de-23616697e1ce
-ms.openlocfilehash: fd2d53c79ee372c9997e1da2b189ef18129e67f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf76182242f7b76e3a2c18f85b72674e88afa737
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617331"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287502"
 ---
-# <a name="ipropertypage2impl-class"></a>Ipropertypage2impl – třída
+# <a name="ipropertypage2impl-class"></a>IPropertyPage2Impl Class
 
 Tato třída implementuje `IUnknown` a zdědí výchozí implementace [ipropertypageimpl –](../../atl/reference/ipropertypageimpl-class.md).
 
@@ -58,7 +58,7 @@ Při vytváření stránky vlastností vaší třídy je obvykle odvozen z `IPro
 
 `IPropertyPage`
 
-[Ipropertypageimpl –](../../atl/reference/ipropertypageimpl-class.md)
+[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)
 
 `IPropertyPage2Impl`
 
@@ -82,7 +82,7 @@ Vrátí E_NOTIMPL.
 
 Zobrazit [IPropertyPage2::EditProperty](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage2-editproperty) ve Windows SDK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IPerPropertyBrowsingImpl – třída](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>
 [ISpecifyPropertyPagesImpl – třída](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>

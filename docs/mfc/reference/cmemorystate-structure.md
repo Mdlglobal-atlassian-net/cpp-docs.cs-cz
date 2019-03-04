@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory leaks [MFC], detecting
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
-ms.openlocfilehash: 5aee7bc2f44e4c2e7851baea554d3069c928088c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a110e1345cb970c117de125bd8105e1bc86eaf94
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523426"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288126"
 ---
 # <a name="cmemorystate-structure"></a>Cmemorystate – struktura
 
@@ -195,7 +195,6 @@ Přidání obslužné rutiny `ExitInstance` fungovat a použijte následující 
 
 Nyní můžete spustit program v režimu ladění, pokud chcete zobrazit výstup `DumpStatistics` funkce.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-

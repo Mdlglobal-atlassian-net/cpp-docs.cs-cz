@@ -1,21 +1,21 @@
 ---
-title: 'Postupy: Použití transformace v datovém kanálu'
+title: 'Postupy: Použití transformace v datovém kanálu'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - transformer class, example
 - data pipelines, using transformer [Concurrency Runtime]
 - using transformer in data pipelines [Concurrency Runtime]
 ms.assetid: ca49cb3f-4dab-4b09-a9c9-d3a109ae4c29
-ms.openlocfilehash: b94cf3fb7554ba32c03a404fa6616ef1b187e008
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59c4854eea985b3c91fad6e7dc6c47ca9b07d333
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461422"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291467"
 ---
-# <a name="how-to-use-transformer-in-a-data-pipeline"></a>Postupy: Použití transformace v datovém kanálu
+# <a name="how-to-use-transformer-in-a-data-pipeline"></a>Postupy: Použití transformace v datovém kanálu
 
-Toto téma obsahuje základní příklad, který ukazuje způsob použití [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) třídy v datovém kanálu. Úplný příklad, který používá datový kanál provádět zpracování obrázků, naleznete v tématu [návod: vytvoření sítě pro zpracování obrázků](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Toto téma obsahuje základní příklad, který ukazuje způsob použití [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) třídy v datovém kanálu. Úplný příklad, který používá datový kanál provádět zpracování obrázků, naleznete v tématu [názorný postup: Vytvoření sítě pro zpracování obrázků](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 *Paralelní zpracování dat* je běžný vzor v souběžné programování. Datový kanál se skládá z několika fází, kde každé fázi provádí práci a pak předá do další fáze výsledků, které pracují. `transformer` Třídy klíčovou součástí datové kanály vzhledem k tomu, že přijímá vstupní hodnoty, provede práci na tuto hodnotu a potom vytvoří výsledek pro jiné komponenty se má použít.
 
@@ -54,9 +54,8 @@ Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vlo
 
 **cl.exe/EHsc data-pipeline.cpp**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [Návod: Vytvoření sítě pro zpracování obrázků](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)
-

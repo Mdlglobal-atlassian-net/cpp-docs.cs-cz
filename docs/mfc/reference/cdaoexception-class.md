@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CDaoException [MFC], m_pErrorInfo
 - CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
-ms.openlocfilehash: 224ce79094b174d0bd011bd89afbcfe6fb7735d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d49291c51f66ee837f9b31a2ade390cec48c51a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585912"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288997"
 ---
 # <a name="cdaoexception-class"></a>Cdaoexception – třída
 
@@ -71,7 +71,7 @@ V knihovně MFC, jsou všechny chyby DAO vyjádřený jako výjimky typu `CDaoEx
 
 DAO – kódy chyb naleznete v souboru DAOERR. H. Související informace naleznete v tématu "Zachytitelné chyb přístupu k datům" v nápovědě k DAO.
 
-Další informace o zpracování výjimek v obecné, nebo o `CDaoException` objekty, najdete v článcích [zpracování výjimek (MFC)](../../mfc/exception-handling-in-mfc.md) a [výjimky: výjimky databáze](../../mfc/exceptions-database-exceptions.md). Druhý článek obsahuje ukázkový kód, který znázorňuje zpracování výjimek v rozhraní DAO.
+Další informace o zpracování výjimek v obecné, nebo o `CDaoException` objekty, najdete v článcích [zpracování výjimek (MFC)](../../mfc/exception-handling-in-mfc.md) a [výjimky: Výjimky databáze](../../mfc/exceptions-database-exceptions.md). Druhý článek obsahuje ukázkový kód, který znázorňuje zpracování výjimek v rozhraní DAO.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -113,7 +113,7 @@ Můžete však explicitně vytvořit objekt výjimky, pokud provádíte přímá
 
 1. Pokud je vytvořen objekt výjimky v haldě, odstraňte ho pomocí **odstranit** operátor po dokončení.
 
-Další informace o zpracování chyb v třídách knihovny MFC rozhraní DAO, najdete v článku [výjimky: výjimky databáze](../../mfc/exceptions-database-exceptions.md).
+Další informace o zpracování chyb v třídách knihovny MFC rozhraní DAO, najdete v článku [výjimky: Výjimky databáze](../../mfc/exceptions-database-exceptions.md).
 
 ##  <a name="geterrorcount"></a>  CDaoException::GetErrorCount
 
@@ -151,7 +151,7 @@ Index s informacemi o chybě v kolekci chyby databázový stroj, pro vyhledává
 
 Voláním této členské funkce získat následující druh informací o výjimce:
 
-- Kód chyby:
+- Kód chyby
 
 - Zdroj
 
@@ -163,7 +163,7 @@ Voláním této členské funkce získat následující druh informací o výjim
 
 `GetErrorInfo` ukládá informace v objektu výjimky `m_pErrorInfo` datový člen. Stručný popis informací, najdete v tématu [m_pErrorInfo](#m_perrorinfo). Při zachycení výjimky typu `CDaoException` vyvolané knihovny MFC, `m_pErrorInfo` člen už bude vyplněno. Pokud budete chtít přímo volat rozhraní DAO, musí volat objekt výjimky `GetErrorInfo` členskou funkci sami tak, aby vyplnil `m_pErrorInfo`. Podrobnější popis najdete v tématu [cdaoerrorinfo –](../../mfc/reference/cdaoerrorinfo-structure.md) struktury.
 
-Informace o výjimkách rozhraní DAO a ukázkový kód, naleznete v článku [výjimky: výjimky databáze](../../mfc/exceptions-database-exceptions.md).
+Informace o výjimkách rozhraní DAO a ukázkový kód, naleznete v článku [výjimky: Výjimky databáze](../../mfc/exceptions-database-exceptions.md).
 
 ##  <a name="m_nafxdaoerror"></a>  CDaoException::m_nAfxDaoError
 
@@ -211,7 +211,7 @@ Toto je kód OLE. Je potřeba zřídka použít tuto hodnotu, protože v témě�
 
 Informace o SCODE, naleznete v tématu [struktury z OLE kódy chyb](/windows/desktop/com/structure-of-com-error-codes) v sadě Windows SDK. Datový typ SCODE mapuje na datový typ HRESULT.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CException – třída](../../mfc/reference/cexception-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

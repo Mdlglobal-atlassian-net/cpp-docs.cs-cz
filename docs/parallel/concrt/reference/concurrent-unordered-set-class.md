@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_set class
 ms.assetid: c61f9a9a-4fd9-491a-9251-e300737ecf4b
-ms.openlocfilehash: c7a00cbb68d24cb515384645e943414b29549536
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43bce15f001e0daee817d9dae345b5d0858f2baa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652683"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286202"
 ---
 # <a name="concurrentunorderedset-class"></a>concurrent_unordered_set – třída
 
@@ -90,7 +90,7 @@ Typ představující uložený objekt alokátoru, který zapouzdřuje informace 
 |[hash_function –](#hash_function)|Vrátí uložený objekt hashovací funkce.|
 |[Vložit](#insert)|Přetíženo. Přidá prvky do `concurrent_unordered_set` objektu.|
 |[key_eq](#key_eq)|Vrátí uložené rovnosti objektu funkce porovnání.|
-|[Prohození](#swap)|Zamění obsah dvou `concurrent_unordered_set` objekty. Tato metoda není bezpečná pro souběžnost.|
+|[swap](#swap)|Zamění obsah dvou `concurrent_unordered_set` objekty. Tato metoda není bezpečná pro souběžnost.|
 |[unsafe_erase](#unsafe_erase)|Přetíženo. Odebere prvky z `concurrent_unordered_set` v určených pozicích. Tato metoda není bezpečná pro souběžnost.|
 
 ### <a name="public-operators"></a>Veřejné operátory
@@ -113,7 +113,7 @@ Podrobné informace o `concurrent_unordered_set` najdete v tématu [paralelní k
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concurrent_unordered_set.h
+**Header:** concurrent_unordered_set.h
 
 **Namespace:** souběžnosti
 
@@ -163,7 +163,7 @@ Vymaže všechny prvky v kontejneru souběžných. Tato funkce není bezpečné 
 void clear();
 ```
 
-##  <a name="ctor"></a> concurrent_unordered_set –
+##  <a name="ctor"></a> concurrent_unordered_set
 
 Sestaví souběžnou neuspořádanou sadu.
 
@@ -214,7 +214,7 @@ Funkce porovnání rovnosti pro tento neuspořádanou sadu.
 Alokátor pro tento neuspořádanou sadu.
 
 *první*<br/>
-*poslední*<br/>
+*last*<br/>
 *_Uset*<br/>
 Zdroj `concurrent_unordered_set` objektu, který chcete zkopírovat nebo přesunout elementy ze.
 
@@ -396,7 +396,7 @@ Výchozí umístění pro vyhledávání pro kurzor.
 *první*<br/>
 Začátek rozsahu, který chcete vložit.
 
-*poslední*<br/>
+*last*<br/>
 Konec rozsahu, který chcete vložit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -413,7 +413,7 @@ Třetí členská funkce vloží sekvenci hodnot prvku v rozsahu [ `first`, `las
 
 Poslední dva členské funkce se chovají stejně jako první dva, s výjimkou, že `value` se používá ke konstrukci Vložená hodnota.
 
-##  <a name="key_eq"></a> key_eq –
+##  <a name="key_eq"></a> key_eq
 
 Vrátí uložené rovnosti objektu funkce porovnání.
 
@@ -578,7 +578,7 @@ Klíč elementu, vyhledaly.
 
 Index kontejneru klíče v tomto kontejneru.
 
-##  <a name="unsafe_bucket_count"></a> unsafe_bucket_count –
+##  <a name="unsafe_bucket_count"></a> unsafe_bucket_count
 
 Vrátí aktuální počet kbelíků v tomto kontejneru.
 
@@ -590,7 +590,7 @@ size_type unsafe_bucket_count() const;
 
 Aktuální počet kbelíků, v tomto kontejneru.
 
-##  <a name="unsafe_bucket_size"></a> unsafe_bucket_size –
+##  <a name="unsafe_bucket_size"></a> unsafe_bucket_size
 
 Vrátí počet položek v konkrétním intervalu tohoto kontejneru.
 
@@ -685,7 +685,7 @@ Pozice iterátoru, který chcete smazat.
 Hodnota klíče vymazat.
 
 *první*<br/>
-*poslední*<br/>
+*last*<br/>
 Iterátory.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -698,7 +698,7 @@ První členská funkce odstraní prvek, na které odkazuje `_Where`. Druhá čl
 
 Třetí členská funkce odebere prvky v rozsahu odděleny [equal_range –](#equal_range)(KVal).
 
-##  <a name="unsafe_max_bucket_count"></a> unsafe_max_bucket_count –
+##  <a name="unsafe_max_bucket_count"></a> unsafe_max_bucket_count
 
 Vrátí maximální počet kbelíků v tomto kontejneru.
 
@@ -710,8 +710,7 @@ size_type unsafe_max_bucket_count() const;
 
 Maximální počet kbelíků, v tomto kontejneru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [Paralelní kontejnery a objekty](../../../parallel/concrt/parallel-containers-and-objects.md)
-

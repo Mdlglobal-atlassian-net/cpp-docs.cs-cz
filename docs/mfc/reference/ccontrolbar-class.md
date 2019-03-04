@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-ms.openlocfilehash: e9fba929017edfe547f2cc20105ea4f4bcdc9c33
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ac9ad66a076202113f0c59dafae243b6951ee4c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644389"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291623"
 ---
 # <a name="ccontrolbar-class"></a>Ccontrolbar – třída
 
@@ -141,7 +141,7 @@ Požadovaný dimenze ovládací panel, buď vodorovně nebo svisle, v závislost
 *nMode*<br/>
 Následující předdefinované příznaky slouží k určení výšku a šířku na dynamický ovládací prvek panelu. Použít bitový operátor OR (&#124;) – operátor kombinování příznaků.
 
-|Příznaky režim rozložení|Co znamená|
+|Příznaky režim rozložení|Význam|
 |-----------------------|-------------------|
 |LM_STRETCH|Určuje, zda ovládací prvek panel by měl roztažen tak, aby velikost rámce. Nastavte, pokud není panel dokovací panel (není k dispozici pro ukotvení). Nebyla nastavena při panelu je ukotvené nebo plovoucí (k dispozici pro ukotvení). Pokud nastavíte, LM_STRETCH ignoruje *nLength* a vrací na základě stavu LM_HORZ dimenze. LM_STRETCH funguje podobně jako *bStretch* parametr použitý v [CalcFixedLayout](#calcfixedlayout); zobrazit tuto funkci člena pro další informace o vztahu mezi roztažení a orientaci.|
 |LM_HORZ|Označuje, že na panelu je orientovaný vodorovně nebo svisle. Nastavte, pokud je panel je orientovaný vodorovně, a pokud svisle orientovaný, není nastaven. LM_HORZ funguje podobně jako *bHorz* parametr použitý v [CalcFixedLayout](#calcfixedlayout); zobrazit tuto funkci člena pro další informace o vztahu mezi roztažení a orientaci.|
@@ -236,7 +236,7 @@ virtual void DoPaint(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Odkazuje na kontext zařízení má být použit pro vykreslování ohraničení a úchytu ovládacím panelu.
 
 ### <a name="remarks"></a>Poznámky
@@ -257,7 +257,7 @@ virtual void DrawBorders(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Odkazuje na kontext zařízení má být použit pro vykreslení ohraničení panelu ovládacího prvku.
 
 *Rect*<br/>
@@ -279,7 +279,7 @@ virtual void DrawGripper(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Odkazuje na kontext zařízení má být použit pro vykreslení úchytu ovládacího panelu.
 
 *Rect*<br/>
@@ -517,7 +517,7 @@ Výška horního ohraničení panelu ovládacího prvku (v pixelech).
 *cyBottom*<br/>
 Výška ovládací panel dolního ohraničení (v pixelech).
 
-*lprect –*<br/>
+*lpRect*<br/>
 Ukazatel [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který obsahuje aktuální šířku (v pixelech) každé ohraničení panelu objekt ovládacího prvku.
 
 ### <a name="example"></a>Příklad
@@ -541,7 +541,7 @@ Ukazatel `CWnd` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC CTRLBARS](../../visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>

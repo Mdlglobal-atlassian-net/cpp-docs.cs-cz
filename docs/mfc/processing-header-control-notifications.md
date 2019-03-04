@@ -8,12 +8,12 @@ helpviewer_keywords:
 - header controls [MFC], processing notifications
 - header control notifications
 ms.assetid: e6c6af7c-d458-4d33-85aa-48014ccde5f6
-ms.openlocfilehash: 42113b43249b87a351047ab451cb1798aec1f022
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 3c5d147741123f97a53b18a854db9204738d0a2f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693344"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287684"
 ---
 # <a name="processing-header-control-notifications"></a>Zpracování oznámení ovládacího prvku záhlaví
 
@@ -21,8 +21,7 @@ Ve třídě zobrazení nebo dialogovém okně, použijte okno Vlastnosti k vytvo
 
 Upozornění související s ovládacím prvkem záhlaví jsou uvedeny v [záhlaví ovládacího prvku odkazu](/windows/desktop/controls/header-control-reference) v sadě Windows SDK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

@@ -1,18 +1,18 @@
 ---
-title: Cmfcprintpreviewtoolbar – třída
+title: CMFCPrintPreviewToolBar Class
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CMFCPrintPreviewToolBar class [MFC]
 - CMFCPrintPreviewToolBar class [MFC], destructor
 ms.assetid: 7b9f641b-d402-4339-8815-e5247237e7e5
-ms.openlocfilehash: 7da2fac76cda3c0e31c93d5cc12ed2c064947fd3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac1fba453a539c6c311e672c1b26e34a3bf81ffd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439348"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285318"
 ---
-# <a name="cmfcprintpreviewtoolbar-class"></a>Cmfcprintpreviewtoolbar – třída
+# <a name="cmfcprintpreviewtoolbar-class"></a>CMFCPrintPreviewToolBar Class
 
 Panel nástrojů v náhledu tisku.
 
@@ -50,17 +50,17 @@ class CMFCPrintPreviewToolBar : public CMFCToolBar
 
 [CPane](../../mfc/reference/cpane-class.md)
 
-[Cmfcbasetoolbar –](../../mfc/reference/cmfcbasetoolbar-class.md)
+[CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)
 
-[Cmfctoolbar –](../../mfc/reference/cmfctoolbar-class.md)
+[CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)
 
-[Cmfcprintpreviewtoolbar –](../../mfc/reference/cmfcprintpreviewtoolbar-class.md)
+[CMFCPrintPreviewToolBar](../../mfc/reference/cmfcprintpreviewtoolbar-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxpreviewviewex.h
+**Header:** afxpreviewviewex.h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)

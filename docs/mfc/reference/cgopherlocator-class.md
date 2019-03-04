@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CGopherLocator [MFC], CGopherLocator
 - CGopherLocator [MFC], GetLocatorType
 ms.assetid: 6fcc015f-5ae6-4959-b936-858634c71019
-ms.openlocfilehash: 336997fd4094f4e5e1eb73f467734e40440b63a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79adbf126438c7d9f2884987c53b573991f92cf1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641347"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291376"
 ---
 # <a name="cgopherlocator-class"></a>Cgopherlocator – třída
 
@@ -118,7 +118,7 @@ Možné typy jsou následující:
 |GOPHER_TYPE_DOS_ARCHIVE|Soubor archivu DOS.|
 |GOPHER_TYPE_UNIX_UUENCODED|Soubor kódování uuencode.|
 |GOPHER_TYPE_INDEX_SERVER|Server indexu.|
-|GOPHER_TYPE_TELNET|Telnet Server.|
+|GOPHER_TYPE_TELNET|A Telnet Server.|
 |GOPHER_TYPE_BINARY|Binární soubor.|
 |GOPHER_TYPE_REDUNDANT|Duplicitní serveru. Informace obsažené v rámci je duplicitní primárního serveru. Poslední položky adresáře, které nemají typ GOPHER_TYPE_REDUNDANT je primární server.|
 |GOPHER_TYPE_TN3270|TN3270 serveru.|
@@ -151,7 +151,7 @@ Ukazatel znaku řetězec data.
 
 Žádné znaky jsou zkopírovány; je vrácen pouze ukazatel.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

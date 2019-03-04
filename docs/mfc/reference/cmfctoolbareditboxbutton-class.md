@@ -1,5 +1,5 @@
 ---
-title: Cmfctoolbareditboxbutton – třída
+title: CMFCToolBarEditBoxButton Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCToolBarEditBoxButton
@@ -52,14 +52,14 @@ helpviewer_keywords:
 - CMFCToolBarEditBoxButton [MFC], SetContextMenuID
 - CMFCToolBarEditBoxButton [MFC], SetFlatMode
 ms.assetid: b21d9b67-6bf7-4ca9-bd62-b237756e0ab3
-ms.openlocfilehash: bf71bb508bf0327a7fdf34b128bdb825323cd3a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac07ff4e6bf97518e2c659a9d6df9bd721b6b806
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525715"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291610"
 ---
-# <a name="cmfctoolbareditboxbutton-class"></a>Cmfctoolbareditboxbutton – třída
+# <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton Class
 
 Tlačítka panelu nástrojů obsahující ovládací prvek úprav ( [cedit – třída](../../mfc/reference/cedit-class.md)).
 
@@ -104,11 +104,11 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 |[CMFCToolBarEditBoxButton::OnCtlColor](#onctlcolor)|Volá se rozhraním, když nadřazeného panelu nástrojů zpracovává WM_CTLCOLOR – zpráva. (Přepíše [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor).)|
 |`CMFCToolBarEditBoxButton::OnDraw`|Volá se rozhraním, chcete-li nakreslit tlačítko s použitím zadaného styly a možnosti. (Přepíše [CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|
 |`CMFCToolBarEditBoxButton::OnDrawOnCustomizeList`|Volá se rozhraním, chcete-li nakreslit tlačítko **příkazy** podokně **vlastní** dialogové okno. (Přepíše [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|
-|[CMFCToolBarEditBoxButton::OnGlobalFontsChanged](#onglobalfontschanged)|Volá se rozhraním, když došlo ke změně globální písma. (Přepíše [CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged).)|
+|[CMFCToolBarEditBoxButton::OnGlobalFontsChanged](#onglobalfontschanged)|Volá se rozhraním, když došlo ke změně globální písma. (Overrides [CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged).)|
 |[CMFCToolBarEditBoxButton::OnMove](#onmove)|Volá se rozhraním, když se přesune nadřazeného panelu nástrojů. (Přepíše [CMFCToolBarButton::OnMove](../../mfc/reference/cmfctoolbarbutton-class.md#onmove).)|
 |[CMFCToolBarEditBoxButton::OnShow](#onshow)|Volá se rozhraním při tlačítka stane viditelné nebo neviditelné. (Přepíše [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow).)|
 |[CMFCToolBarEditBoxButton::OnSize](#onsize)|Volá se rozhraním, když nadřazeného panelu nástrojů změní jeho velikost nebo pozice a tato změna způsobí, že tlačítko Změnit velikost. (Přepíše [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize).)|
-|[CMFCToolBarEditBoxButton::OnUpdateToolTip](#onupdatetooltip)|Volá se rozhraním, když nadřazeného panelu nástrojů aktualizuje její přejede myší. (Přepíše [CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip).)|
+|[CMFCToolBarEditBoxButton::OnUpdateToolTip](#onupdatetooltip)|Volá se rozhraním, když nadřazeného panelu nástrojů aktualizuje její přejede myší. (Overrides [CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip).)|
 |`CMFCToolBarEditBoxButton::Serialize`|Čte tento objekt z archivu nebo zapíše do archivu. (Přepíše [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize).)|
 |`CMFCToolBarEditBoxButton::SetACCData`|Naplní zadaných `CAccessibilityData` objekt usnadnění daty z panelu nástrojů. (Přepíše [CMFCToolBarButton::SetACCData](../../mfc/reference/cmfctoolbarbutton-class.md#setaccdata).)|
 |`CMFCToolBarEditBoxButton::` [CMFCToolBarEditBoxButton::SetContents](#setcontents)|Nastaví text v textovém poli tlačítka.|
@@ -127,7 +127,7 @@ Chcete-li přidat tlačítko pro úpravy pole do panelu nástrojů, postupujte t
 
 3. V popisovači zpráv, která zpracovává zprávu AFX_WM_RESETTOOLBAR, nahraďte zástupné tlačítko Nová tlačítka pole se seznamem pomocí [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).
 
-Další informace najdete v tématu [návod: vložení ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md).
+Další informace najdete v tématu [názorný postup: Vkládání ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md).
 
 ## <a name="example"></a>Příklad
 
@@ -139,13 +139,13 @@ Následující příklad ukazuje, jak použít různé metody v `CMFCToolBarEdit
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cmfctoolbarbutton –](../../mfc/reference/cmfctoolbarbutton-class.md)
+[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)
 
 `CMFCToolBarEditBoxButton`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxtoolbareditboxbutton.h
+**Header:** afxtoolbareditboxbutton.h
 
 ##  <a name="canbestretched"></a>  CMFCToolBarEditBoxButton::CanBeStretched
 
@@ -489,7 +489,7 @@ virtual HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Kontext zařízení, která se zobrazí tlačítko.
 
 *nCtlColor*<br/>
@@ -685,12 +685,11 @@ virtual void SetStyle(UINT nStyle);
 
 Tato metoda nastaví [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle) k *nStyle* když se aplikace je v režimu vlastní nastavení a povolí ho, když aplikace není v režimu vlastní (viz takézakážedotextovéhopole[ CMFCToolBar::SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode) a [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)). Zobrazit [– styly ovládacího prvku panel nástrojů](../../mfc/reference/toolbar-control-styles.md) seznam příznaky platný styl.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCToolBarButton – třída](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [CEdit – třída](../../mfc/reference/cedit-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[Návod: Umístění ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Návod: Vkládání ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - FTP (File Transfer Protocol) [MFC], client applications
 - Internet applications [MFC], FTP client applications
 ms.assetid: 70bed7b5-6040-40d1-bc77-702e63a698f2
-ms.openlocfilehash: ef772438558e5d587962242fdd7f1230cc2b2f25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d08edf704e748767f3b566252ad328baf40b55ea
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560183"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285799"
 ---
 # <a name="steps-in-a-typical-ftp-client-application"></a>Postup v typické aplikaci klienta FTP
 
@@ -33,7 +33,7 @@ Následující tabulka uvádí kroky, že které může provádět v typické ap
 |Zpracování výjimek.|Použití [cinternetexception –](../mfc/reference/cinternetexception-class.md) třídy.|Zpracovává všechny typy výjimek common Internet.|
 |Ukončení relace FTP.|Vyřazení [cinternetsession –](../mfc/reference/cinternetsession-class.md) objektu.|Automaticky vyčistí otevřené popisovače souborů a připojení.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Win32 – internetová rozšíření (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
 [Požadavky na třídy internetových klientů](../mfc/prerequisites-for-internet-client-classes.md)<br/>

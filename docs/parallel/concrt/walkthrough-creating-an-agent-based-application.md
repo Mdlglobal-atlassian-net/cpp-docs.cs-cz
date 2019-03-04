@@ -5,12 +5,12 @@ helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 1d5e7ed085481b714423760cebf2984084626645
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d55c9879a3dd90bb4a40b61a3bf958dbe960bc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509341"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290068"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Návod: Vytvoření aplikace založené na agentovi
 
@@ -180,13 +180,12 @@ Vždy volat [concurrency::agent:: provádí](reference/agent-class.md#done) meto
 
 ## <a name="next-steps"></a>Další kroky
 
-Další příklad aplikace založené na agentovi, naleznete v tématu [návod: použití metody join k zabránění vzájemnému zablokování](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
+Další příklad aplikace založené na agentovi, naleznete v tématu [názorný postup: Použití metody join k zabránění vzájemnému zablokování](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [Funkce pro předávání zpráv](../../parallel/concrt/message-passing-functions.md)<br/>
 [Synchronizační datové struktury](../../parallel/concrt/synchronization-data-structures.md)<br/>
 [Návod: Použití metody join k zabránění vzájemnému zablokování](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)
-

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CD2DGradientBrush [MFC], m_extendMode
 - CD2DGradientBrush [MFC], m_pGradientStops
 ms.assetid: 5bf133e6-16b7-4e3a-845d-0ce63fafe5ec
-ms.openlocfilehash: bc26dd495fb9bd91aaf5eac192011faad80bc668
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f49a3a1a1aaebed47b05bf003926379c6f0b8102
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506051"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290973"
 ---
 # <a name="cd2dgradientbrush-class"></a>Cd2dgradientbrush – třída
 
@@ -42,7 +42,7 @@ class CD2DGradientBrush : public CD2DBrush;
 |Název|Popis|
 |----------|-----------------|
 |[CD2DGradientBrush::CD2DGradientBrush](#cd2dgradientbrush)|Vytvoří objekt cd2dgradientbrush –.|
-|[Cd2dgradientbrush –:: ~ cd2dgradientbrush –](#cd2dgradientbrush__~cd2dgradientbrush)|Destruktor. Volá se, když se likviduje objektu D2D štětce přechodu.|
+|[CD2DGradientBrush::~CD2DGradientBrush](#cd2dgradientbrush__~cd2dgradientbrush)|Destruktor. Volá se, když se likviduje objektu D2D štětce přechodu.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
@@ -63,9 +63,9 @@ class CD2DGradientBrush : public CD2DBrush;
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cd2dresource –](../../mfc/reference/cd2dresource-class.md)
+[CD2DResource](../../mfc/reference/cd2dresource-class.md)
 
-[Cd2dbrush –](../../mfc/reference/cd2dbrush-class.md)
+[CD2DBrush](../../mfc/reference/cd2dbrush-class.md)
 
 `CD2DGradientBrush`
 
@@ -73,7 +73,7 @@ class CD2DGradientBrush : public CD2DBrush;
 
 **Záhlaví:** afxrendertarget.h
 
-##  <a name="_dtorcd2dgradientbrush"></a>  Cd2dgradientbrush –:: ~ cd2dgradientbrush –
+##  <a name="_dtorcd2dgradientbrush"></a>  CD2DGradientBrush::~CD2DGradientBrush
 
 Destruktor. Volá se, když se likviduje objektu D2D štětce přechodu.
 
@@ -159,6 +159,6 @@ Ukazatel na pole D2D1_GRADIENT_STOP struktur.
 ID2D1GradientStopCollection* m_pGradientStops;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
-ms.openlocfilehash: c99aba319df6f84dbda7b9cf90a1abebdc3757f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6afbd7b3a3f4280ad658c1cb9d8802cc3251d0ed
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570349"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291331"
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d – obor názvů
 
@@ -45,7 +45,7 @@ namespace direct3d;
 
 |Název|Popis|
 |----------|-----------------|
-|[Abs](concurrency-direct3d-namespace-functions-amp.md#abs)|Vrátí absolutní hodnotu argumentu|
+|[abs](concurrency-direct3d-namespace-functions-amp.md#abs)|Vrátí absolutní hodnotu argumentu|
 |[Stažení](concurrency-direct3d-namespace-functions-amp.md#clamp)|Přetíženo. Omezí hodnotu proměnné _X na zadaném rozsahu _min do _max|
 |[countbits –](concurrency-direct3d-namespace-functions-amp.md#countbits)|Spočítá počet nastavených bitů v proměnné _X|
 |[create_accelerator_view](concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)|Vytvoří [accelerator_view – třída](accelerator-view-class.md) z ukazatele na rozhraní zařízení Direct3D|
@@ -53,7 +53,7 @@ namespace direct3d;
 |[d3d_access_try_lock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_try_lock)|Pokus o získání zámku přístupu D3D na accelerator_view bez blokování.|
 |[d3d_access_unlock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_unlock)|Uvolněte zámek přístupu D3D na daný objekt accelerator_view.|
 |[firstbithigh –](concurrency-direct3d-namespace-functions-amp.md#firstbithigh)|Zjistí umístění prvního nastaveného bitu v _X, počínaje bitem nejvyšší a funguje směrem dolů|
-|[firstbitlow –](concurrency-direct3d-namespace-functions-amp.md#firstbitlow)|Zjistí umístění prvního nastaveného bitu v _X, počínaje bitem nejnižší a funguje směrem nahoru|
+|[firstbitlow](concurrency-direct3d-namespace-functions-amp.md#firstbitlow)|Zjistí umístění prvního nastaveného bitu v _X, počínaje bitem nejnižší a funguje směrem nahoru|
 |[get_buffer](concurrency-direct3d-namespace-functions-amp.md#get_buffer)|Získejte rozhraní vyrovnávací paměti rozhraní D3D podkládajícího pole.|
 |[imax](concurrency-direct3d-namespace-functions-amp.md#imax)|Porovná dvě hodnoty a vrátí hodnotu, která je větší.|
 |[imin](concurrency-direct3d-namespace-functions-amp.md#imin)|Porovná dvě hodnoty a vrátí hodnotu, která je menší.|
@@ -66,17 +66,17 @@ namespace direct3d;
 |[reversebits –](concurrency-direct3d-namespace-functions-amp.md#reversebits)|Obrátí pořadí bitů v proměnné _X|
 |[Saturate](concurrency-direct3d-namespace-functions-amp.md#saturate)|Omezí hodnotu proměnné _X z rozsahu 0 až 1|
 |[sign](concurrency-direct3d-namespace-functions-amp.md#sign)|Přetíženo. Vrátí znaménko argumentu|
-|[smoothstep –](concurrency-direct3d-namespace-functions-amp.md#smoothstep)|Vrátí smooth Hermitovu interpolaci mezi 0 a 1, pokud _X je v rozsahu [_Min, _Max].|
+|[smoothstep](concurrency-direct3d-namespace-functions-amp.md#smoothstep)|Vrátí smooth Hermitovu interpolaci mezi 0 a 1, pokud _X je v rozsahu [_Min, _Max].|
 |[Krok](concurrency-direct3d-namespace-functions-amp.md#step)|Porovná dvě hodnoty a vrátí hodnotu 0 nebo 1 podle toho, která hodnota je větší|
 |[umax](concurrency-direct3d-namespace-functions-amp.md#umax)|Porovná dvě nepodepsané hodnoty a vrátí hodnotu, která je větší.|
-|[umin –](concurrency-direct3d-namespace-functions-amp.md#umin)|Porovná dvě nepodepsané hodnoty a vrátí hodnotu, která je menší.|
+|[umin](concurrency-direct3d-namespace-functions-amp.md#umin)|Porovná dvě nepodepsané hodnoty a vrátí hodnotu, která je menší.|
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** amp.h
 
-**Namespace:** souběžnosti
+**Namespace:** Souběžnost
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

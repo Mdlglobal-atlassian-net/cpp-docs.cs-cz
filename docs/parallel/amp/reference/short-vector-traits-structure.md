@@ -7,12 +7,12 @@ f1_keywords:
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::size Constant
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
-ms.openlocfilehash: fd86228417234f705d3f765624cd942c982df875
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c407c42e5c6a7035e911218ecb41c2da62967787
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456183"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289608"
 ---
 # <a name="shortvectortraits-structure"></a>short_vector_traits – struktura
 
@@ -91,7 +91,7 @@ struct short_vector_traits<double_4>;
 
 |Název|Popis|
 |----------|-----------------|
-|[short_vector_traits::short_vector_traits – konstruktor](#ctor)||
+|[short_vector_traits::short_vector_traits Constructor](#ctor)||
 
 ### <a name="public-constants"></a>Veřejné konstanty
 
@@ -107,7 +107,7 @@ struct short_vector_traits<double_4>;
 
 **Záhlaví:** amp_short_vectors.h
 
-**Namespace:** Concurrency::graphics
+**Namespace:** Concurrency::Graphics
 
 ##  <a name="ctor"></a>  short_vector_traits::short_vector_traits – konstruktor
 
@@ -121,6 +121,6 @@ short_vector_traits();
 static int const size = 1;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

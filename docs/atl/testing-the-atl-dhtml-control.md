@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DHTML controls
 - DHTML controls, testing
 ms.assetid: 0e4b4358-80ce-4505-8b06-ef4f30b1d1f0
-ms.openlocfilehash: e808a21fe890db6e711bc66adf02b3e71f801dba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 510b24b383f6ae0489a1c54d701c632159140c2a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522522"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289946"
 ---
 # <a name="testing-the-atl-dhtml-control"></a>Testování ovládacího prvku ATL DHTML
 
@@ -26,7 +26,7 @@ Po vytvoření projektu můžete vytvářet a testovat Ukázka ovládacího prvk
 
 1. V **kontejner testu**, z **upravit** nabídky, klikněte na tlačítko **vložte nový ovládací prvek**.
 
-1. V **vložit ovládací prvek** dialogové okno Vyberte ovládací prvek pole se seznamem. Mějte na paměti, jeho název je založen na krátký název, který jste určili v Průvodce ovládacími prvky ATL. Klikněte na tlačítko **OK**.
+1. V **vložit ovládací prvek** dialogové okno Vyberte ovládací prvek pole se seznamem. Mějte na paměti, jeho název je založen na krátký název, který jste určili v Průvodce ovládacími prvky ATL. Klikněte na **OK**.
 
 1. Prozkoumejte ovládacího prvku. Všimněte si, že má posuvníku. Použijte úchyty ovládacího prvku pro změnu velikosti ovládacího prvku aktivovat posuvník.
 
@@ -36,6 +36,6 @@ Po vytvoření projektu můžete vytvářet a testovat Ukázka ovládacího prvk
 
 Zkuste [úpravy ovládací prvek DHTML](../atl/modifying-the-atl-dhtml-control.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora pro ovládací prvek DHTML](../atl/atl-support-for-dhtml-controls.md)

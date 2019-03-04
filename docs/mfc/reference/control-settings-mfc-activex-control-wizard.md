@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control settings
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
-ms.openlocfilehash: 3eedf24fa4b0bb527b374dbc9f538408f20de953
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34cc49fff88399a6c3cf5f7db71410c88e5c9bab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548236"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289634"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Nastavení ovládacího prvku, Průvodce ovládacím prvkem ActiveX v prostředí MFC
 
 Tato stránka průvodce slouží k určení způsobu chování ovládacího prvku. Například můžete založit na ovládací prvek na standardní typy ovládacích prvků Windows, optimalizace jeho chování a vzhledu nebo označuje, zda ovládací prvek může sloužit jako kontejner pro ostatní ovládací prvky.
 
-Další informace o tom, jak vybrat možnosti na této stránce pro maximalizaci efektivity ovládacího prvku, naleznete v tématu [knihovny MFC – ovládací prvky ActiveX: optimalizace](../../mfc/mfc-activex-controls-optimization.md).
+Další informace o tom, jak vybrat možnosti na této stránce pro maximalizaci efektivity ovládacího prvku, naleznete v tématu [knihovny MFC – ovládací prvky ActiveX: Optimalizace](../../mfc/mfc-activex-controls-optimization.md).
 
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
 
 - **Vytvoření ovládacího prvku na základě**
 
-   V tomto seznamu můžete vybrat typ ovládacího prvku, ze kterého by měla dědit ovládacího prvku. V seznamu je podmnožinou třídy ovládacích prvků, které jsou k dispozici pro `CreateWindowEx` a další běžné ovládací prvky, které jsou určené v commctrl.h. Váš výběr určuje styl ovládacího prvku `PreCreateWindow` fungovat v *název_projektu*Ctrl.cpp souboru. Další informace najdete v tématu [knihovny MFC – ovládací prvky ActiveX: vytvoření podtřídy ovládacího prvku Windows](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
+   V tomto seznamu můžete vybrat typ ovládacího prvku, ze kterého by měla dědit ovládacího prvku. V seznamu je podmnožinou třídy ovládacích prvků, které jsou k dispozici pro `CreateWindowEx` a další běžné ovládací prvky, které jsou určené v commctrl.h. Váš výběr určuje styl ovládacího prvku `PreCreateWindow` fungovat v *název_projektu*Ctrl.cpp souboru. Další informace najdete v tématu [knihovny MFC – ovládací prvky ActiveX: Vytvoření podtřídy ovládacího prvku Windows](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
 
-   |Ovládací prvek|Popis|
+   |Control|Popis|
    |-------------|-----------------|
    |**TLAČÍTKO**|Ovládací prvek tlačítka Windows|
    |**POLE SE SEZNAMEM**|Ovládací prvek pole se seznamem Windows|
@@ -93,9 +93,8 @@ Další informace o tom, jak vybrat možnosti na této stránce pro maximalizaci
 
    Umožňuje obnovit všechny předchozí asynchronní dat a zahájí nového zatížení asynchronní vlastnosti ovládacího prvku.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Průvodce ovládacím prvkem ActiveX v prostředí MFC](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
 [Nastavení aplikace, Průvodce ovládacím prvkem ActiveX v prostředí MFC](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)<br/>
 [Názvy ovládacích prvků, Průvodce ovládacím prvkem ActiveX v prostředí MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)
-

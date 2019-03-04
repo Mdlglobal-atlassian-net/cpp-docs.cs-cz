@@ -16,12 +16,12 @@ helpviewer_keywords:
 - collection classes [MFC], duplicates allowed
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
-ms.openlocfilehash: 2c8cb323feb44618909895a4ee536ad3b7832173
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c72a57385b0036d98629d1ee24111500b9d2f8ad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446732"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288035"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>Doporučení pro výběr třídy kolekce
 
@@ -91,10 +91,9 @@ V následující tabulce [vlastnosti třídy kolekcí MFC](#_core_characteristic
 
 3. Pokud ano označené v tomto sloupci, objektu bez šablony třídy kolekce je typově bezpečný, používají tak, jak má. Například pokud ukládáte bajtů `CByteArray`, pole je typově bezpečné. Ale pokud ho použít k ukládání znaky, je jeho bezpečnost typů méně určité.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Kolekce](../mfc/collections.md)<br/>
 [Třídy založené na šablonách](../mfc/template-based-classes.md)<br/>
-[Postupy: Příprava typově bezpečné kolekce](../mfc/how-to-make-a-type-safe-collection.md)<br/>
+[Postupy: Typově bezpečné kolekce](../mfc/how-to-make-a-type-safe-collection.md)<br/>
 [Přístup ke všem členům kolekce](../mfc/accessing-all-members-of-a-collection.md)
-

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - processing notifications [MFC]
 - CListCtrl class [MFC], processing notifications
 ms.assetid: 1f0e296e-d2a3-48fc-ae38-51d7fb096f51
-ms.openlocfilehash: 427abe5259334588b566656abd70acf22b923809
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a7899c74bfcddcdc8d54f7d9eb894553115ad66
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490087"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288065"
 ---
 # <a name="processing-notification-messages-in-list-controls"></a>Zpracování zpráv s oznámením v ovládacích prvcích seznamů
 
@@ -20,8 +20,7 @@ Zpracovat wm_notify – zprávy z ovládacího prvku seznam ve třídě zobrazen
 
 Seznam oznámení ovládacího prvku seznamu můžete poslat nezašle nadřazenému oknu, naleznete v tématu [odkaz na ovládací prvek zobrazení seznamu](/windows/desktop/Controls/list-view-control-reference) v sadě Windows SDK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CListCtrl](../mfc/using-clistctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

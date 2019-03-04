@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactoryAutoThread class
 ms.assetid: 22008042-533f-4dd9-bf7e-191ee571f9a1
-ms.openlocfilehash: 30a9d52ff661fd4fa39344382402aa6ff09d193f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 473e697dfb0203b52713fcfb359ec4f56138f560
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574821"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287307"
 ---
 # <a name="ccomclassfactoryautothread-class"></a>Ccomclassfactoryautothread – třída
 
@@ -102,7 +102,7 @@ STDMETHODIMP LockServer(BOOL fLock);
 
 ### <a name="parameters"></a>Parametry
 
-*hejna*<br/>
+*fLock*<br/>
 [in] Při hodnotě TRUE se zvýší počet zámků; v opačném případě je snížen počet zámků.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -115,7 +115,7 @@ Při použití `CComClassFactoryAutoThread`, `_Module` obvykle odkazuje na glob�
 
 Volání `LockServer` umožňuje klientovi opřete se o objekt pro vytváření tříd tak, aby více objektů lze rychle vytvořit.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)<br/>
 [CComClassFactory2 – třída](../../atl/reference/ccomclassfactory2-class.md)<br/>

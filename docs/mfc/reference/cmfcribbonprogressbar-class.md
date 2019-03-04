@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCRibbonProgressBar [MFC], SetPos
 - CMFCRibbonProgressBar [MFC], SetRange
 ms.assetid: de3d9f2e-ed59-480e-aa7d-08a33ab36c67
-ms.openlocfilehash: 13d73b09fc9fb88736242e7d0c04c33baa795914
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 626666a8f03a8312bd26fceca745f82ad1ab89b1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608595"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285916"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Cmfcribbonprogressbar – třída
 
@@ -81,7 +81,7 @@ Následující příklad ukazuje, jak použít různé metody v `CMFCRibbonProgr
 
 [Cmfcribbonbaseelement –](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
-[Cmfcribbonprogressbar –](../../mfc/reference/cmfcribbonprogressbar-class.md)
+[CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -163,7 +163,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -195,7 +195,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
@@ -228,7 +228,7 @@ void SetPos(
 
 ### <a name="parameters"></a>Parametry
 
-*nPos –*<br/>
+*nPos*<br/>
 [in] Určuje umístění, ke kterému je nastaven indikátor průběhu.
 
 *bRedraw*<br/>
@@ -250,17 +250,17 @@ void SetRange(
 
 ### <a name="parameters"></a>Parametry
 
-*Nminimum*<br/>
+*nMin*<br/>
 [in] Určuje minimální hodnotu rozsahu.
 
-*Nmaximum*<br/>
+*nMax*<br/>
 [in] Určuje maximální hodnotu rozsahu.
 
 ### <a name="remarks"></a>Poznámky
 
 Tuto metodu použijte k definování rozsahu indikátoru průběhu nastavením minimální a maximální hodnoty.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

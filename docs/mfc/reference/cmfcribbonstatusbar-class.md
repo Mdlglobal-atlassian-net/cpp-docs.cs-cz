@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CMFCRibbonStatusBar [MFC], SetInformation
 - CMFCRibbonStatusBar [MFC], OnDrawInformation
 ms.assetid: 921eb57f-3b40-49fa-a38c-3f2fb6dc2893
-ms.openlocfilehash: 068cff9ea3827e780bec886bc5d4b0e263c02e62
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b927012f241c30b1beec23ff7e0bbc9e8302d8da
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635341"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287635"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>Cmfcribbonstatusbar – třída
 
@@ -128,9 +128,9 @@ Následující příklad ukazuje, jak použít různé metody v `CMFCRibbonStatu
 
 [CPane](../../mfc/reference/cpane-class.md)
 
-[CMFCRibbonBar –](../../mfc/reference/cmfcribbonbar-class.md)
+[CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)
 
-[Cmfcribbonstatusbar –](../../mfc/reference/cmfcribbonstatusbar-class.md)
+[CMFCRibbonStatusBar](../../mfc/reference/cmfcribbonstatusbar-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -450,7 +450,7 @@ virtual void OnDrawInformation(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *strInfo*<br/>
@@ -517,7 +517,7 @@ Pomocí této metody můžete umístit na stavovém řádku v režimu informace.
 
 Když lpszInfo má hodnotu NULL, stavového řádku se vrátí do normálního režimu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

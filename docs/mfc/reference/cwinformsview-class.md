@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CWinFormsView [MFC], CWinFormsView
 - CWinFormsView [MFC], GetControl
 ms.assetid: d597e397-6529-469b-88f5-7f65a6b9e895
-ms.openlocfilehash: 766ce3e0db192cc416b17531864a75d721bfc4ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f4a5e6b88527dad8606092ccebd4899bba5181f6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597508"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289335"
 ---
 # <a name="cwinformsview-class"></a>CWinFormsView – třída
 
@@ -45,7 +45,7 @@ class CWinFormsView : public CView;
 
 |Název||
 |----------|-|
-|[Ovládací prvek CWinFormsView::operator ^](#operator_control)|Přetypování typu jako ukazatel na ovládacím prvku Windows Forms.|
+|[CWinFormsView::operator Control^](#operator_control)|Přetypování typu jako ukazatel na ovládacím prvku Windows Forms.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -116,7 +116,7 @@ Tento operátor umožňuje předat `CWinFormsView` zobrazení a funkce, které p
 
   Zobrazit [CWinFormsView::GetControl](#getcontrol).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CWinFormsControl – třída](../../mfc/reference/cwinformscontrol-class.md)<br/>

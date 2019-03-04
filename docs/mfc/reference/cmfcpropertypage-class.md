@@ -1,5 +1,5 @@
 ---
-title: Cmfcpropertypage – třída
+title: CMFCPropertyPage Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCPropertyPage
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCPropertyPage [MFC], CMFCPropertyPage
 ms.assetid: d279d7f2-2d81-418d-9f23-6147d6e8df09
-ms.openlocfilehash: a55a1a8cd5d63a9e775038824a7bbbe91adbae01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 62e33da998f1e5332436d887c38d3fd65526561b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566735"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288516"
 ---
-# <a name="cmfcpropertypage-class"></a>Cmfcpropertypage – třída
+# <a name="cmfcpropertypage-class"></a>CMFCPropertyPage Class
 
 `CMFCPropertyPage` Třídy podporuje zobrazení místních nabídek na stránce vlastností.
 
@@ -59,13 +59,13 @@ Použití `CMFCPropertyPage` třídy společně s [CMFCPropertySheet](../../mfc/
 
 [CDialog](../../mfc/reference/cdialog-class.md)
 
-[CPropertyPage –](../../mfc/reference/cpropertypage-class.md)
+[CPropertyPage](../../mfc/reference/cpropertypage-class.md)
 
-[Cmfcpropertypage –](../../mfc/reference/cmfcpropertypage-class.md)
+[CMFCPropertyPage](../../mfc/reference/cmfcpropertypage-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxpropertypage.h
+**Header:** afxpropertypage.h
 
 ##  <a name="cmfcpropertypage"></a>  CMFCPropertyPage::CMFCPropertyPage
 
@@ -98,7 +98,7 @@ Odkazuje na název šablony pro tuto stránku. Nemůže mít hodnotu NULL.
 
 Další informace o parametrech konstruktoru, naleznete v tématu [CPropertyPage::CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [MFC], what's changed
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
-ms.openlocfilehash: 54826ee7a7ac129ae69715b45770a0a66596a2a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb51ad91e001f0ed153bf4fdb5aa598ab5ba5042
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607984"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291220"
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Výjimky: Změny maker pro výjimky ve verzi 3.0
 
@@ -58,9 +58,8 @@ Například tento kód byl platný v předchozích verzích ale budou mít neoč
 
 Pomocí **THROW** v catch blok způsobí, že ukazatel `e` odstranit, aby lokality vnější catch obdrží neplatný ukazatel. Použití **THROW_LAST** pro opětovné vyvolání `e`.
 
-Další informace najdete v tématu [výjimky: výjimky zachycení a odstraňování](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Další informace najdete v tématu [výjimky: Zachytávání a mazání](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zpracování výjimek](../mfc/exception-handling-in-mfc.md)
-

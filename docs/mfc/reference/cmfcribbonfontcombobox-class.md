@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCRibbonFontComboBox [MFC], RebuildFonts
 - CMFCRibbonFontComboBox [MFC], SetFont
 ms.assetid: 33b4db50-df4f-45fa-8f05-2e6e73c31435
-ms.openlocfilehash: 5feb97b274b6547ebc6868e27ead20824ce4e8ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 643e2a519c6d96c1070990dd86d571c5b7c09f95
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635674"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288425"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>Cmfcribbonfontcombobox – třída
 
@@ -77,13 +77,13 @@ Po vytvoření `CMFCRibbonFontComboBox` objektu, přidejte na panel pásu karet 
 
 [Cmfcribbonbaseelement –](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
-[Cmfcribbonbutton –](../../mfc/reference/cmfcribbonbutton-class.md)
+[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
 
-[Cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md)
+[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)
 
-[Cmfcribboncombobox –](../../mfc/reference/cmfcribboncombobox-class.md)
+[CMFCRibbonComboBox](../../mfc/reference/cmfcribboncombobox-class.md)
 
-[Cmfcribbonfontcombobox –](../../mfc/reference/cmfcribbonfontcombobox-class.md)
+[CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -244,7 +244,7 @@ Rozteč a rodiny (viz LOGFONT v dokumentaci Windows SDK).
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

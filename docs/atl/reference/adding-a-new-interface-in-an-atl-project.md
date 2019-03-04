@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [ATL], interfaces
 - ATL projects, adding interfaces
 ms.assetid: 7d34b023-2c6b-4155-aca3-d47a40968063
-ms.openlocfilehash: 1724dd3eb73b82e34c5cc2b0c1965d73e099a708
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29b8fc3caf2d769fcc60772be7fdf1c25f13d100
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440050"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285383"
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>Přidání nového rozhraní projektu ATL
 
@@ -40,7 +40,7 @@ Nové rozhraní můžete přidat do vašeho ovládacího prvku v jednom ze dvou 
 
 1. Implementace metody v rozhraní.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Průvodce projektem ATL](../../atl/reference/atl-project-wizard.md)<br/>
 [Typy projektů Visual C++](../../ide/visual-cpp-project-types.md)<br/>

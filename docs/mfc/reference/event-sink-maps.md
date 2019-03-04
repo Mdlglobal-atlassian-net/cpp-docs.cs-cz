@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - event sink maps [MFC]
 ms.assetid: a9757eb2-5f4a-45ec-a2cd-ce5eec85b16f
-ms.openlocfilehash: 3e75f1d880ce767b6fdbb61b4877f0748ba779f4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8e33636253b269692f87f99980b9da0cd60867ee
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518928"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285578"
 ---
 # <a name="event-sink-maps"></a>Mapy jímek událostí
 
@@ -55,7 +55,7 @@ Další informace o mapy jímek událostí a kontejnery ovládacích prvků OLE,
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="declare_eventsink_map"></a>  DECLARE_EVENTSINK_MAP
 
@@ -85,7 +85,7 @@ END_EVENTSINK_MAP()
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="on_event"></a>  ON_EVENT
 
@@ -103,7 +103,7 @@ Třída, ke kterému patří této mapě událostí jímky.
 *id*<br/>
 ID ovládacího prvku OLE.
 
-*identifikátor DISPID*<br/>
+*dispid*<br/>
 Identifikátor odeslání události vyvolané ovládacího prvku.
 
 *pfnHandler*<br/>
@@ -124,7 +124,7 @@ Seznam **VTS_** konstanty, naleznete v tématu [EVENT_CUSTOM](event-maps.md#even
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="on_event_range"></a>  ON_EVENT_RANGE
 
@@ -145,7 +145,7 @@ ID ovládacího prvku první ovládací prvek OLE v rozsahu.
 *idLast*<br/>
 ID ovládacího prvku poslední ovládací prvek OLE v rozsahu.
 
-*identifikátor DISPID*<br/>
+*dispid*<br/>
 Identifikátor odeslání události vyvolané ovládacího prvku.
 
 *pfnHandler*<br/>
@@ -176,7 +176,7 @@ Následující kód je definovaný v souboru implementace třídy dialogového o
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="on_event_reflect"></a>  ON_EVENT_REFLECT
 
@@ -191,7 +191,7 @@ ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams)
 *theClass*<br/>
 Třída, ke kterému patří této mapě událostí jímky.
 
-*identifikátor DISPID*<br/>
+*dispid*<br/>
 Identifikátor odeslání události vyvolané ovládacího prvku.
 
 *pfnHandler*<br/>
@@ -214,7 +214,7 @@ Seznam **VTS_** konstanty, naleznete v tématu [EVENT_CUSTOM](event-maps.md#even
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="on_propnotify"></a>  ON_PROPNOTIFY
 
@@ -232,7 +232,7 @@ Třída, ke kterému patří této mapě událostí jímky.
 *id*<br/>
 ID ovládacího prvku OLE.
 
-*identifikátor DISPID*<br/>
+*dispid*<br/>
 ID odbavení vlastnost účastnící se oznámení.
 
 *pfnRequest*<br/>
@@ -271,7 +271,7 @@ ID ovládacího prvku první ovládací prvek OLE v rozsahu.
 *idLast*<br/>
 ID ovládacího prvku poslední ovládací prvek OLE v rozsahu.
 
-*identifikátor DISPID*<br/>
+*dispid*<br/>
 ID odbavení vlastnost účastnící se oznámení.
 
 *pfnRequest*<br/>
@@ -282,7 +282,7 @@ Ukazatel na členskou funkci, která zpracovává `OnChanged` oznámení pro tut
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="on_propnotify_reflect"></a>  ON_PROPNOTIFY_REFLECT
 
@@ -298,7 +298,7 @@ ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
 *theClass*<br/>
 Třída, ke kterému patří této mapě událostí jímky.
 
-*identifikátor DISPID*<br/>
+*dispid*<br/>
 ID odbavení vlastnost účastnící se oznámení.
 
 *pfnRequest*<br/>
@@ -309,8 +309,8 @@ Ukazatel na členskou funkci, která zpracovává `OnChanged` oznámení pro tut
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdisp.h
+  **Header** afxdisp.h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)

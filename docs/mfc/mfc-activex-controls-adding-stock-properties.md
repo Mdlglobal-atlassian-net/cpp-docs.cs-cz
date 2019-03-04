@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreground colors, ActiveX controls
 - foreground colors [MFC]
 ms.assetid: 8b98c8c5-5b69-4366-87bf-0e61e6668ecb
-ms.openlocfilehash: b27979b5492ed03b93aa0d8990c9c0b699242c86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 940f61c9ce6ccb57843333582455e61c1f7ac73b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607828"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289686"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>MFC – ovládací prvky ActiveX: Přidání uložených vlastností
 
@@ -75,15 +75,15 @@ To zpřístupňuje vlastnost Caption uživatelům ovládacího prvku. Pokud chce
 
 |Vlastnost|Zápis do mapy odbavení|Jak získat přístup k hodnotě|
 |--------------|------------------------|-------------------------|
-|`Appearance`|(DISP_STOCKPROP_APPEARANCE)|Hodnota, které jsou dostupné jako `m_sAppearance`.|
-|`BackColor`|(DISP_STOCKPROP_BACKCOLOR)|Hodnota přístupná pomocí volání `GetBackColor`.|
-|`BorderStyle`|(DISP_STOCKPROP_BORDERSTYLE)|Hodnota, které jsou dostupné jako `m_sBorderStyle`.|
-|`Caption`|(DISP_STOCKPROP_CAPTION)|Hodnota přístupná pomocí volání `InternalGetText`.|
-|`Enabled`|(DISP_STOCKPROP_ENABLED)|Hodnota, které jsou dostupné jako `m_bEnabled`.|
-|`Font`|(DISP_STOCKPROP_FONT)|Najdete v článku [knihovny MFC – ovládací prvky ActiveX: použití písem](../mfc/mfc-activex-controls-using-fonts.md) za využití.|
-|`ForeColor`|(DISP_STOCKPROP_FORECOLOR)|Hodnota přístupná pomocí volání `GetForeColor`.|
-|`hWnd`|(DISP_STOCKPROP_HWND)|Hodnota, které jsou dostupné jako `m_hWnd`.|
-|`Text`|(DISP_STOCKPROP_TEXT)|Hodnota přístupná pomocí volání `InternalGetText`. Tato vlastnost je stejný jako `Caption`, s výjimkou názvu vlastnosti.|
+|`Appearance`|DISP_STOCKPROP_APPEARANCE( )|Hodnota, které jsou dostupné jako `m_sAppearance`.|
+|`BackColor`|DISP_STOCKPROP_BACKCOLOR( )|Hodnota přístupná pomocí volání `GetBackColor`.|
+|`BorderStyle`|DISP_STOCKPROP_BORDERSTYLE( )|Hodnota, které jsou dostupné jako `m_sBorderStyle`.|
+|`Caption`|DISP_STOCKPROP_CAPTION( )|Hodnota přístupná pomocí volání `InternalGetText`.|
+|`Enabled`|DISP_STOCKPROP_ENABLED( )|Hodnota, které jsou dostupné jako `m_bEnabled`.|
+|`Font`|DISP_STOCKPROP_FONT( )|Přečtěte si článek [knihovny MFC – ovládací prvky ActiveX: Použití písem](../mfc/mfc-activex-controls-using-fonts.md) za využití.|
+|`ForeColor`|DISP_STOCKPROP_FORECOLOR( )|Hodnota přístupná pomocí volání `GetForeColor`.|
+|`hWnd`|DISP_STOCKPROP_HWND( )|Hodnota, které jsou dostupné jako `m_hWnd`.|
+|`Text`|DISP_STOCKPROP_TEXT( )|Hodnota přístupná pomocí volání `InternalGetText`. Tato vlastnost je stejný jako `Caption`, s výjimkou názvu vlastnosti.|
 |`ReadyState`|DISP_STOCKPROP_READYSTATE()|Hodnota, které jsou dostupné jako `m_lReadyState` nebo `GetReadyState`|
 
 ##  <a name="_core_stock_properties_and_notification"></a> Uložené vlastnosti a oznámení
@@ -100,7 +100,7 @@ Následující příklad ukazuje použití těchto vlastností barev dvou při v
 
 [!code-cpp[NVC_MFC_AxUI#24](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-properties_3.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)<br/>
 [MFC – ovládací prvky ActiveX: Vlastnosti](../mfc/mfc-activex-controls-properties.md)<br/>

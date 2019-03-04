@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-ms.openlocfilehash: 9029b8c0fb6aa20de62dbdf21aedeae6d8a15994
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07178597e66975a006a0ea5293192ee7ea099e42
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463303"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286462"
 ---
 # <a name="tn031-control-bars"></a>TN031: Ovládací pruhy
 
@@ -91,7 +91,7 @@ Zobrazit `CWnd::RepositionBars` a `CFrameWnd::RecalcLayout` další podrobnosti.
 
 MFC privátní Windows zprávy, včetně WM_SIZEPARENT, jsou popsány v [Technická poznámka 24](../mfc/tn024-mfc-defined-messages-and-resources.md).
 
-## <a name="_mfcnotes_cstatusbar"></a>  Cstatusbar –
+## <a name="_mfcnotes_cstatusbar"></a>  CStatusBar
 
 Stavový řádek je ovládací panel, který má na řádku podoken textového výstupu. Existují dva běžné způsoby použití podoken textového výstupu:
 
@@ -109,10 +109,10 @@ Barvy použité ve stavovém řádku jsou také v souladu s doporučením Průvo
 
 |Položka|Hodnota barvy Windows|Výchozí RGB|
 |----------|-------------------------|-----------------|
-|Stav pozadí panelu|COLOR_BTNFACE|RGB (192, 192 192.)|
-|Text stavového řádku|COLOR_BTNTEXT|RGB (000, 000 000.)|
-|Stavový řádek levého nebo horního okraje|COLOR_BTNHIGHLIGHT|RGB (255, 255, 255)|
-|Stavový řádek bot/pravé hrany|COLOR_BTNSHADOW|RGB (128, 128, 128)|
+|Stav pozadí panelu|COLOR_BTNFACE|RGB(192, 192, 192)|
+|Text stavového řádku|COLOR_BTNTEXT|RGB(000, 000, 000)|
+|Stavový řádek levého nebo horního okraje|COLOR_BTNHIGHLIGHT|RGB(255, 255, 255)|
+|Stavový řádek bot/pravé hrany|COLOR_BTNSHADOW|RGB(128, 128, 128)|
 
 **Ccmdui – podpora pro cstatusbar –**
 
@@ -120,7 +120,7 @@ Způsob, jakým jsou obvykle aktualizovány ukazatele je mechanismem ON_UPDATE_C
 
 Můžete volat ON_UPDATE_COMMAND_UI obslužné rutiny:
 
-- `Enable`: Pokud chcete povolit nebo zakázat v podokně. Zakázané panel vypadá stejně jako Povolené podokno, ale text je neviditelné (to znamená, vypne indikátoru text).
+- `Enable`: K povolení nebo zakázání podokna. Zakázané panel vypadá stejně jako Povolené podokno, ale text je neviditelné (to znamená, vypne indikátoru text).
 
 - `SetText`: Chcete-li změnit text. Buďte opatrní, pokud to použít, protože v podokně se mění svou velikost automaticky.
 
@@ -150,10 +150,10 @@ Rastrového obrázku tlačítka panelu nástrojů jsou také obarveny, jako by b
 
 |Hodnota RGB|Dynamicky mapované hodnoty barev|
 |---------------|------------------------------------|
-|RGB (000, 000 000.)|COLOR_BTNTEXT|
-|RGB (128, 128, 128)|COLOR_BTNSHADOW|
-|RGB (192, 192 192.)|COLOR_BTNFACE|
-|RGB (255, 255, 255)|COLOR_BTNHIGHLIGHT|
+|RGB(000, 000, 000)|COLOR_BTNTEXT|
+|RGB(128, 128, 128)|COLOR_BTNSHADOW|
+|RGB(192, 192, 192)|COLOR_BTNFACE|
+|RGB(255, 255, 255)|COLOR_BTNHIGHLIGHT|
 
 Odkazovat na třídu [ctoolbar –](../mfc/reference/ctoolbar-class.md) *knihovny tříd* podrobnosti o `CToolBar` tvorbu a přizpůsobení rozhraní API. Většina přizpůsobení panelů nástrojů má počítat dřív, než panelu nástrojů je zpočátku viditelné.
 
@@ -165,11 +165,11 @@ Pomocí mechanismu ON_UPDATE_COMMAND_UI je způsob, jakým jsou vždy aktualizov
 
 Můžete volat ON_UPDATE_COMMAND_UI obslužné rutiny:
 
-- `Enable`: Pokud chcete povolit nebo zakázat tlačítko. Funguje to stejně tlačítek a zaškrtávacího políčka tlačítka.
+- `Enable`: K povolení nebo zakázání tlačítka. Funguje to stejně tlačítek a zaškrtávacího políčka tlačítka.
 
 - `SetCheck`: K nastavení stavu zaškrtnutí tlačítka. Toto volání pro tlačítka panelu nástrojů, se změní na tlačítko zaškrtávacího políčka. `SetCheck` přijímá parametr, který může být 0 (není zaškrtnuté), 1 (čtverečkovaný) nebo 2 (neurčitý)
 
-- `SetRadio`: Zkrácený tvar vlastností pro `SetCheck`.
+- `SetRadio`: Zkrácený tvar vlastností `SetCheck`.
 
 Zaškrtněte políčko tlačítka jsou tlačítka, zaškrtávací políčko "AUTO"; To znamená když uživatel stiskne, je jejich okamžitě změní stav. Zaškrtnutí je mimo provoz nebo stisknuté stav. Neexistuje žádný způsob předdefinované uživatelské rozhraní změnit tlačítko do stavu "neurčitý"; který se musí provést prostřednictvím kódu.
 
@@ -179,17 +179,17 @@ Tlačítka panelu nástrojů pošle wm_command – zprávy jako normální tlač
 
 Existují čtyři nástrojů styly tlačítek (TBBS_ hodnoty) používá pro zobrazení stavů:
 
-- TBBS_CHECKED: zaškrtnuto zaškrtávací políčko je aktuálně (dolů).
+- TBBS_CHECKED:   Aktuálně je zaškrtnuté políčko (dolů).
 
-- TBBS_INDETERMINATE: zaškrtávací políčko je aktuálně neurčitý.
+- TBBS_INDETERMINATE:   Zaškrtávací políčko je aktuálně neurčitý.
 
-- TBBS_DISABLED: Tlačítko je aktuálně zakázaný.
+- TBBS_DISABLED:   Tlačítko je aktuálně zakázaný.
 
-- TBBS_PRESSED: Aktuálně stisknutí tlačítka.
+- TBBS_PRESSED:   Aktuálně se stiskne tlačítko.
 
 Šest oficiální styly tlačítek Průvodce návrhem aplikace rozhraní Windows jsou reprezentovány TBBS následující hodnoty:
 
-- Až = 0
+- Up = 0
 
 - Myši dolů = TBBS_PRESSED (&#124; jakýkoli styl)
 
@@ -201,7 +201,7 @@ Existují čtyři nástrojů styly tlačítek (TBBS_ hodnoty) používá pro zob
 
 - Neurčitá = TBBS_INDETERMINATE
 
-##  <a name="_mfcnotes_cdialogbar"></a> CDialogBar –
+##  <a name="_mfcnotes_cdialogbar"></a> CDialogBar
 
 Panel dialogového okna se ovládací panel, který obsahuje standardní ovládací prvky Windows. Funguje stejně jako dialogové okno obsahuje ovládací prvky a podporuje tabulátor mezi nimi. Taky funguje jako dialogové okno, používá k reprezentaci panelu šablony dialogového okna.
 
@@ -223,8 +223,7 @@ Můžete volat ON_UPDATE_COMMAND_UI obslužné rutiny:
 
 Přizpůsobení lze provést pomocí standardní okno Správce rozhraní API.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
-

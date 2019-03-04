@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetSmallCaption
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
-ms.openlocfilehash: 759f4cdb66c1e16f022731e9d3183ad1192e0975
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b7d72b048d9f44233f96a3af859315ea20e9747
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585130"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291636"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>Cmfcdesktopalertwnd – třída
 
@@ -132,7 +132,7 @@ Následující příklad ukazuje, jak použít různé metody v `CMFCDesktopAler
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[Cmfcdesktopalertwnd –](../../mfc/reference/cmfcdesktopalertwnd-class.md)
+[CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -368,7 +368,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*<br/>
+[in] *pDC*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
@@ -413,7 +413,7 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*<br/>
+*type*<br/>
 [in] Určuje typ animace.
 
 ### <a name="remarks"></a>Poznámky
@@ -491,7 +491,7 @@ virtual CSize GetDialogSize();
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

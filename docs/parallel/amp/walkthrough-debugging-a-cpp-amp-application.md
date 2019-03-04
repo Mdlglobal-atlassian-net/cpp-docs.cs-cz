@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 610cf317982204715d55d12ece510cb477543f4d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 5312ba7354c28286cafb092711d66d56a920581a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176689"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286909"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Návod: Ladění aplikace C++ AMP
 
@@ -36,7 +36,7 @@ Před zahájením tohoto návodu:
 
 - Čtení [přehled modelu C++ AMP](../../parallel/amp/cpp-amp-overview.md).
 
-- Ujistěte se, že tento řádek jsou čísla zobrazena v textovém editoru. Další informace najdete v tématu [postupy: zobrazení čísel řádků v editoru](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor).
+- Ujistěte se, že tento řádek jsou čísla zobrazena v textovém editoru. Další informace najdete v tématu [jak: Zobrazení čísel řádků v editoru](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor).
 
 - Zajistěte, aby že se systémem Windows 8 nebo Windows Server 2012, v zájmu podpory ladění v softwarovém emulátoru.
 
@@ -44,7 +44,7 @@ Před zahájením tohoto návodu:
 
 ### <a name="to-create-the-sample-project"></a>K vytvoření ukázkového projektu
 
-1. Spusťte sadu Visual Studio.
+1. Spusťte Visual Studio.
 
 2. V panelu nabídky zvolte **souboru** > **nový** > **projektu**.
 
@@ -335,7 +335,7 @@ Můžete označit konkrétní vlákna GPU označením je **vlákna GPU** okně *
 
 ## <a name="freezing-and-thawing-gpu-threads"></a>Zmrazení a uvolnění vlákna GPU
 
-Můžete ukotvit (Pozastavit) a uvolnit vlákna GPU (pokračovat) buď z **vlákna GPU** okno nebo **paralelní sledování** okna. Můžete zablokovat a odblokovat vlákna CPU stejným způsobem jako; informace najdete v tématu [postupy: použití okna vláken](/visualstudio/debugger/how-to-use-the-threads-window).
+Můžete ukotvit (Pozastavit) a uvolnit vlákna GPU (pokračovat) buď z **vlákna GPU** okno nebo **paralelní sledování** okna. Můžete zablokovat a odblokovat vlákna CPU stejným způsobem jako; informace najdete v tématu [jak: Použití okna vláken](/visualstudio/debugger/how-to-use-the-threads-window).
 
 ### <a name="to-freeze-and-thaw-gpu-threads"></a>Zablokovat a odblokovat vlákna GPU
 
@@ -383,10 +383,10 @@ Spuštění všech vláken v daném bloku na řádek obsahující kurzor pomocí
 
    24 vlákna, které byly dříve blokovány bariéře na řádku 21 pokročila řádek 32. To je ukázáno **vlákna GPU** okna.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled modelu C++ AMP](../../parallel/amp/cpp-amp-overview.md)<br/>
 [Ladění kódu GPU](/visualstudio/debugger/debugging-gpu-code)<br/>
 [Postupy: Použití okna vláken GPU](/visualstudio/debugger/how-to-use-the-gpu-threads-window)<br/>
-[Postupy: Použití okna paralelního sledování](/visualstudio/debugger/how-to-use-the-parallel-watch-window)<br/>
+[Postupy: Použití okna Paralelní sledování](/visualstudio/debugger/how-to-use-the-parallel-watch-window)<br/>
 [Analýza kódu C++ AMP pomocí Vizualizéru souběžnosti](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)

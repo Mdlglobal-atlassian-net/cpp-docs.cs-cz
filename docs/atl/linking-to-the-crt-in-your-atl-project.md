@@ -12,12 +12,12 @@ helpviewer_keywords:
 - wWinMainCRTStartup method
 - ATL, C Run-Time library (CRT)
 ms.assetid: 650957ae-362c-4ecf-8b03-5d49138e8b5b
-ms.openlocfilehash: fc8c3c591b04d62c6dd7cf72bedde7a668e9f146
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b117165c82e51a59fe691b90f8ef92d0ba802cbc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516448"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287944"
 ---
 # <a name="linking-to-the-crt-in-your-atl-project"></a>Propojení projektu ATL s Knihovnami CRT
 
@@ -35,8 +35,7 @@ Další informace najdete v tématu linkeru [/Entry (Symbol vstupního bodu)](..
 
 Pomocí možnosti linkeru NOWIN98 můžete dál snížit ovládacího prvku ATL výchozí pomocí 10 tisíc na expense z zvýšit čas v systémech Windows 98 načítání. Další informace o tvorbě možnosti, najdete v části [/OPT (optimalizace)](../build/reference/opt-optimizations.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Programování s použitím knihovny ATL a běhového kódu jazyka C](../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Knihovny DLL a chování běhové knihovny v jazyce Visual C++](../build/run-time-library-behavior.md)
-

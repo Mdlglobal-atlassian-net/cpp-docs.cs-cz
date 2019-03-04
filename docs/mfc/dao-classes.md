@@ -7,12 +7,12 @@ helpviewer_keywords:
 - database classes [MFC], DAO
 - DAO [MFC], classes
 ms.assetid: b15d0cd6-328b-4288-9c19-d037a795db57
-ms.openlocfilehash: cce9831cb317b468bfc51777eedbde261e798108
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 238aab0a1948f16a85b8ea16719b75b49f5e69c8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538941"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287489"
 ---
 # <a name="dao-classes"></a>DAO – třídy
 
@@ -23,45 +23,44 @@ Programy, které používají rozhraní DAO databáze bude mít alespoň `CDaoDa
 > [!NOTE]
 >  Prostředí Visual C++ a průvodců už nebude podporovat rozhraní DAO (i když jsou součástí třídy DAO a můžete stále použít). Společnost Microsoft doporučuje použití rozhraní ODBC pro nové projekty MFC. DAO byste měli používat jenom v udržování existujících aplikací.
 
-[Cdaoworkspace –](../mfc/reference/cdaoworkspace-class.md)<br/>
+[CDaoWorkspace](../mfc/reference/cdaoworkspace-class.md)<br/>
 Spravuje relace s názvem databáze chráněné heslem od přihlášení po odhlášení. Většina aplikací pomocí výchozího pracovního prostoru.
 
 [CDaoDatabase](../mfc/reference/cdaodatabase-class.md)<br/>
 Připojení k databázi, pomocí které můžete pracovat s daty.
 
-[CDaoRecordset –](../mfc/reference/cdaorecordset-class.md)<br/>
+[CDaoRecordset](../mfc/reference/cdaorecordset-class.md)<br/>
 Představuje sadu záznamů ze zdroje dat vybrané.
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
 Zobrazení, které zobrazuje záznamy databáze v ovládacích prvcích.
 
-[Cdaoquerydef –](../mfc/reference/cdaoquerydef-class.md)<br/>
+[CDaoQueryDef](../mfc/reference/cdaoquerydef-class.md)<br/>
 Představuje definici dotazu, obvykle jeden uložený v databázi.
 
-[Cdaotabledef –](../mfc/reference/cdaotabledef-class.md)<br/>
+[CDaoTableDef](../mfc/reference/cdaotabledef-class.md)<br/>
 Představuje uloženou definici základní tabulky nebo připojené tabulky.
 
-[Cdaoexception –](../mfc/reference/cdaoexception-class.md)<br/>
+[CDaoException](../mfc/reference/cdaoexception-class.md)<br/>
 Představuje podmínku výjimky vyplývající z tříd DAO.
 
-[Cdaofieldexchange –](../mfc/reference/cdaofieldexchange-class.md)<br/>
+[CDaoFieldExchange](../mfc/reference/cdaofieldexchange-class.md)<br/>
 Podporuje rutiny (DFX) systému exchange pole záznamu DAO používané databázové třídy DAO. Obvykle použijete přímo do této třídy.
 
 ## <a name="related-classes"></a>Související třídy
 
-[CLongBinary –](../mfc/reference/clongbinary-class.md)<br/>
+[CLongBinary](../mfc/reference/clongbinary-class.md)<br/>
 Zapouzdřuje popisovač úložiště pro binární velkých objektů (BLOB), jako je například rastrový obrázek. `CLongBinary` objekty se používají ke správě velkých datových objektů uložených v databázových tabulek.
 
 [COleCurrency](../mfc/reference/colecurrency-class.md)<br/>
 Obálka pro typ automatizace OLE **měny**, s pevnou desetinnou čárkou aritmetického typu, s 15 číslic od desetinné čárky a po 4 číslice.
 
-[COleDateTime –](../atl-mfc-shared/reference/coledatetime-class.md)<br/>
+[COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)<br/>
 Obálka pro typ automatizace OLE **datum**. Představuje hodnoty data a času.
 
 [COleVariant](../mfc/reference/colevariant-class.md)<br/>
 Obálka pro typ automatizace OLE **VARIANT**. Data v **VARIANT**s mohou být uloženy v mnoha formátech.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../mfc/class-library-overview.md)
-

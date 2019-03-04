@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_nOperation
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
-ms.openlocfilehash: ef88486d14ade1d5871d614069dc1c202d6ad159
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d28739ced9aedd29106937cb717c87a241993036
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654217"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291025"
 ---
 # <a name="cdaofieldexchange-class"></a>Cdaofieldexchange – třída
 
@@ -155,7 +155,7 @@ Pokud jste parametrizovat vaší třídy sady záznamů, by měl přidat DFX vol
 
 Obecně platí, všechny skupiny o volání funkcí DFX přidružené pole datové členy a parametry datových členů musí předcházet párový příkaz volání `SetFieldType`. *NFieldType* parametr jednotlivých `SetFieldType` volání jsou uvedeny typy datových členů reprezentována DFX volání funkcí, které následují `SetFieldType` volání.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CDaoRecordset – třída](../../mfc/reference/cdaorecordset-class.md)

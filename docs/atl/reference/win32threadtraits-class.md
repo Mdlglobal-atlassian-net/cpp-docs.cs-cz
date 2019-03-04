@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [ATL], creation functions
 - Win32ThreadTraits class
 ms.assetid: 50279c38-eae1-4301-9ea6-97ccea580f3e
-ms.openlocfilehash: 79d4d1a4fbbd5b2bddeafeaa9ea37b43d1b8c259
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da4b8b3d5a41ab16dc2027fd632c56158afd3b97
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574808"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288737"
 ---
 # <a name="win32threadtraits-class"></a>Win32threadtraits – třída
 
@@ -44,9 +44,9 @@ Vlastnosti vlákna jsou třídy, které poskytují funkce vytváření pro urči
 
 Vlastnosti vlákna jsou používány následující třídy:
 
-- [Cthreadpool –](../../atl/reference/cthreadpool-class.md)
+- [CThreadPool](../../atl/reference/cthreadpool-class.md)
 
-- [Cworkerthread –](../../atl/reference/cworkerthread-class.md)
+- [CWorkerThread](../../atl/reference/cworkerthread-class.md)
 
 Pokud vlákno se pomocí funkce CRT, použijte [crtthreadtraits –](../../atl/reference/crtthreadtraits-class.md) místo.
 
@@ -98,6 +98,6 @@ Zobrazit [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreads
 
 Tato funkce volá `CreateThread` k vytvoření vlákna.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../../atl/atl-class-overview.md)

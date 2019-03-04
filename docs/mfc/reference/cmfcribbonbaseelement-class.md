@@ -232,12 +232,12 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-ms.openlocfilehash: dee5d8c57bfff99e1b558f09c8df53c73e844f3c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4fe7c84981d116d5915013cb466c3e91119f20e1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514358"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289972"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Cmfcribbonbaseelement – třída
 
@@ -577,10 +577,10 @@ virtual void DrawImage(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
-*Typ*<br/>
+*type*<br/>
 [in] Typ image vytvořit výčet hodnoty. V části poznámky pro seznam možných hodnot.
 
 *rectImage*<br/>
@@ -685,7 +685,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -817,7 +817,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -848,7 +848,7 @@ virtual CRect GetKeyTipRect(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *bIsMenu*<br/>
@@ -872,7 +872,7 @@ virtual CSize GetKeyTipSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1059,7 +1059,7 @@ virtual CSize GetRegularSize(CDC* pDC) = 0;
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1081,7 +1081,7 @@ virtual CSize GetSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1199,7 +1199,7 @@ virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Tento parametr se nepoužívá.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1606,7 +1606,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Tento parametr se nepoužívá.
 
 ### <a name="remarks"></a>Poznámky
@@ -1639,7 +1639,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Tento parametr se nepoužívá.
 
 ### <a name="remarks"></a>Poznámky
@@ -1677,7 +1677,7 @@ virtual void OnDraw(CDC* pDC) = 0;
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 ### <a name="remarks"></a>Poznámky
@@ -1697,7 +1697,7 @@ virtual void OnDrawKeyTip(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *Rect*<br/>
@@ -1720,7 +1720,7 @@ virtual BOOL OnDrawMenuImage(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *Rect*<br/>
@@ -1748,7 +1748,7 @@ virtual void OnDrawOnList(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení pro prvek pásu karet.
 
 *strText*<br/>
@@ -1964,7 +1964,7 @@ Následující tabulka shrnuje logiku pro tuto metodu.
 |*bCompactMode*|Aktuální velikost elementu pásu karet|Nová velikost elementu pásu karet|
 |--------------------|---------------------------------|-----------------------------|
 |HODNOTA TRUE|Compact|Žádná změna.|
-|HODNOTA TRUE|Zprostředkující|Komprimujte, pokud je to možné.|
+|HODNOTA TRUE|Středně pokročilý|Komprimujte, pokud je to možné.|
 |HODNOTA TRUE|Velké|Zprostředkující, pokud je to možné.|
 |FALSE|Compact|Pokud je to možné, pokročilý jinak velká.|
 
@@ -2235,7 +2235,7 @@ virtual BOOL StretchToWholeRow(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Tento parametr se nepoužívá.
 
 *nHeight*<br/>
@@ -2273,7 +2273,7 @@ Hodnota TRUE, pokud prvek pásu karet se zaměřuje; v opačném případě FALS
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)

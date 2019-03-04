@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
-ms.openlocfilehash: 626da7b2fd52a93602afa08c416bbbb3a4abdbf7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7483b7473383958089b0c88d0b3c2645ddc2a4f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664647"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287567"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>Ladění a globální funkce hlášení chyb
 
@@ -53,7 +53,7 @@ AtlHresultFromWin32(DWORD error);
 
 ### <a name="parameters"></a>Parametry
 
-*Chyba*<br/>
+*error*<br/>
 Hodnota chyby pro převod.
 
 ### <a name="remarks"></a>Poznámky
@@ -119,13 +119,13 @@ HRESULT WINAPI AtlReportError(
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor CLSID*<br/>
+*clsid*<br/>
 [in] Identifikátor CLSID objektu oznámena tato chyba.
 
 *lpszDesc*<br/>
 [in] Řetězec popisující chybu. Verze Unicode určit, že *lpszDesc* je typ LPCOLESTR; verze ANSI Určuje typ LPCSTR.
 
-*identifikátor IID*<br/>
+*iid*<br/>
 [in] Identifikátor IID rozhraní definování chyb nebo GUID_NULL Pokud chyba není definován v operačním systému.
 
 *hRes*<br/>
@@ -221,8 +221,7 @@ Pokud je definován _ATL_NO_EXCEPTIONS, funkce způsobí selhání kontrolního 
 
 **Záhlaví:** atldef.h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Funkce](../../atl/reference/atl-functions.md)<br/>
 [Makra ladění a hlášení chyb](../../atl/reference/debugging-and-error-reporting-macros.md)
-

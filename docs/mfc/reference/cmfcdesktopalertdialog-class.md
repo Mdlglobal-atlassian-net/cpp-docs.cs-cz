@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertDialog [MFC], HasFocus
 - CMFCDesktopAlertDialog [MFC], PreTranslateMessage
 ms.assetid: a53c60aa-9607-485b-b826-ec64962075f6
-ms.openlocfilehash: abe10d764cb05f75bc6505a806b45452ee99635f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02086e09ca3229fae28359b1ea81e4708c5d1865
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509389"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288100"
 ---
 # <a name="cmfcdesktopalertdialog-class"></a>Cmfcdesktopalertdialog – třída
 
@@ -66,9 +66,9 @@ Proveďte následující kroky k zobrazení vlastního dialogu v automaticky ote
 
 [CDialog](../../mfc/reference/cdialog-class.md)
 
-[Cdialogex –](../../mfc/reference/cdialogex-class.md)
+[CDialogEx](../../mfc/reference/cdialogex-class.md)
 
-[Cmfcdesktopalertdialog –](../../mfc/reference/cmfcdesktopalertdialog-class.md)
+[CMFCDesktopAlertDialog](../../mfc/reference/cmfcdesktopalertdialog-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -126,7 +126,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

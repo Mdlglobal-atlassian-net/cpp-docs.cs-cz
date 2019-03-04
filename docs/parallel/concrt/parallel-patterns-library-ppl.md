@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Patterns Library (PPL)
 ms.assetid: 40fd86b2-69fa-45e5-93d8-98a75636c242
-ms.openlocfilehash: deeede132a919084399be54d5559605b99c4e4fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 11440d56b9618d4763e1b7e47a21b365bbdc0c15
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459407"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290713"
 ---
 # <a name="parallel-patterns-library-ppl"></a>Knihovna PPL (Parallel Patterns Library)
 
@@ -58,4 +58,3 @@ Každá iterace smyčky vyžaduje jinou množství času na dokončení. Výkon 
 |[Paralelní kontejnery a objekty](../../parallel/concrt/parallel-containers-and-objects.md)|Popisuje různé paralelní kontejnery a objekty, které jsou k dispozici v knihovně PPL.|
 |[Zrušení v knihovně PPL](cancellation-in-the-ppl.md)|Vysvětluje, jak zrušit práci prováděnou pomocí paralelního algoritmu.|
 |[Concurrency Runtime](../../parallel/concrt/concurrency-runtime.md)|Popisuje modulu Runtime souběžnosti, který zjednodušuje paralelní programování a obsahuje odkazy na související témata.|
-
