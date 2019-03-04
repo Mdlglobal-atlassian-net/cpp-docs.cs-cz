@@ -1,5 +1,5 @@
 ---
-title: Cmfcdisablemenuanimation – třída
+title: CMFCDisableMenuAnimation Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCDisableMenuAnimation
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCDisableMenuAnimation [MFC], Restore
 ms.assetid: c6eb07da-c382-43d6-8028-007f2320e50e
-ms.openlocfilehash: 0b0df30d48b2f77d620b00f67d40743445981b66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf8c598e9e105569e0a5676267e205b3d3939712
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665033"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267924"
 ---
-# <a name="cmfcdisablemenuanimation-class"></a>Cmfcdisablemenuanimation – třída
+# <a name="cmfcdisablemenuanimation-class"></a>CMFCDisableMenuAnimation Class
 
 Zakáže animace rozbalovací nabídky.
 
@@ -65,7 +65,7 @@ Následující příklad ukazuje způsob použití zásobníku dočasně zakáza
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Cmfcdisablemenuanimation –](../../mfc/reference/cmfcdisablemenuanimation-class.md)
+[CMFCDisableMenuAnimation](../../mfc/reference/cmfcdisablemenuanimation-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -83,7 +83,7 @@ void Restore ();
 
 Tato metoda je volána metodou `CMFCDisableMenuAnimation` destruktor obnovit předchozí animace, která rozhraní použité k zobrazení místní nabídky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

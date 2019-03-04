@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFile class
 ms.assetid: 93ed160b-af2a-448c-9cbe-e5fa46c199bb
-ms.openlocfilehash: 60d645d8818a0d073e4f52f22d836b34da96694f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19e230f150803019d47e1ea710e7d713d1822a53
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524602"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270086"
 ---
 # <a name="catlfile-class"></a>Catlfile – třída
 
@@ -100,10 +100,10 @@ explicit CAtlFile(HANDLE hFile) throw();
 *Soubor*<br/>
 Soubor objektu.
 
-*hfile –*<br/>
+*hFile*<br/>
 Popisovač souboru.
 
-*Druh*<br/>
+*pTM*<br/>
 Ukazatel na catltransactionmanager – objekt
 
 ### <a name="remarks"></a>Poznámky
@@ -212,7 +212,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nPos –*<br/>
+*nPos*<br/>
 Pozice v bajtech.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -254,7 +254,7 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nPos –*<br/>
+*nPos*<br/>
 Pozice v souboru, ve kterém chcete spustit zámek.
 
 *nCount*<br/>
@@ -386,7 +386,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nPos –*<br/>
+*nPos*<br/>
 Pozice v souboru, ve kterém chcete spustit odemknout.
 
 *nCount*<br/>
@@ -447,7 +447,7 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 První tři formuláře volání [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile), poslední volání [writefileex spuštěná](/windows/desktop/api/fileapi/nf-fileapi-writefileex) k zápisu dat do souboru. Použití [CAtlFile::Seek](#seek) přesunout ukazatel souboru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Výběr ukázky](../../visual-cpp-samples.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)<br/>

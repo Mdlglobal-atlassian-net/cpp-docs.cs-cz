@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
-ms.openlocfilehash: 1c2696695992cac9d51d547913c41234beaecf57
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 111d48b9c4a575078f2342bfaa944871bbd628f5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585988"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268652"
 ---
 # <a name="readerwriterlock-class"></a>reader_writer_lock – třída
 
@@ -38,8 +38,8 @@ class reader_writer_lock;
 
 |Název|Popis|
 |----------|-----------------|
-|[reader_writer_lock::scoped_lock – třída](#scoped_lock_class)|Výjimka bezpečné Obálka RAII, který slouží k získání `reader_writer_lock` zamknutí objektů jako zapisovač.|
-|[reader_writer_lock::scoped_lock_read – třída](#scoped_lock_read_class)|Výjimka bezpečné Obálka RAII, který slouží k získání `reader_writer_lock` zamknutí objektů jako čtečku.|
+|[reader_writer_lock::scoped_lock Class](#scoped_lock_class)|Výjimka bezpečné Obálka RAII, který slouží k získání `reader_writer_lock` zamknutí objektů jako zapisovač.|
+|[reader_writer_lock::scoped_lock_read Class](#scoped_lock_read_class)|Výjimka bezpečné Obálka RAII, který slouží k získání `reader_writer_lock` zamknutí objektů jako čtečku.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
@@ -56,7 +56,7 @@ class reader_writer_lock;
 |[lock_read](#lock_read)|Získá zámek pro čtení a zápis pro čtenáře. Pokud jsou uživatelé vytvářející obsah, aktivní čtenáři mají čekat, dokud to je všechno. Čtečka jednoduše zaregistruje zájmu o zámek a čeká zapisovače pro uvolnění.|
 |[try_lock](#try_lock)|Pokusí se získat zámek pro čtení a zápis jako zapisovač bez blokování.|
 |[try_lock_read](#try_lock_read)|Pokusí se získat zámek pro čtení a zápis pro čtenáře bez blokování.|
-|[Odemknutí](#unlock)|Odemkne uzamčení čtení a zápis, podle který uzamčen, čtečky nebo zapisovače.|
+|[unlock](#unlock)|Odemkne uzamčení čtení a zápis, podle který uzamčen, čtečky nebo zapisovače.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -145,7 +145,7 @@ explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
 *_Reader_writer_lock*<br/>
 `reader_writer_lock` Objektu získat jako zapisovač.
 
-## <a name="scoped_lock_dtor"></a> scoped_lock:: ~ scoped_lock
+## <a name="scoped_lock_dtor"></a> scoped_lock::~scoped_lock
 
 Odstraní `reader_writer_lock` objektu a uvolní zámek zadaný v konstruktoru.
 
@@ -178,7 +178,7 @@ explicit _CRTIMP scoped_lock_read(reader_writer_lock& _Reader_writer_lock);
 *_Reader_writer_lock*<br/>
 `reader_writer_lock` Objektu získat jako čtečku.
 
-## <a name="a-namescopedlockreaddtor--readerwriterlockscopedlockreadscopedlockread-destructor"></a><a name="scoped_lock_read_dtor">  reader_writer_lock::scoped_lock_read:: ~ scoped_lock_read – destruktor
+## <a name="a-namescopedlockreaddtor--readerwriterlockscopedlockreadscopedlockread-destructor"></a><a name="scoped_lock_read_dtor">  reader_writer_lock::scoped_lock_read::~scoped_lock_read Destructor
 
 Odstraní `scoped_lock_read` objektu a uvolní zámek zadaný v konstruktoru.
 
@@ -220,7 +220,7 @@ void unlock();
 
 Pokud existují uživatelé vytvářející obsah čekání na zámek, uvolnění zámku vždy použít další zápis v pořadí FIFO. Tohoto uzamknout tendenční směrem k uživatelé vytvářející obsah a může zhoršit výkon čtenáři průběžné zatížení zapisovačů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [critical_section – třída](critical-section-class.md)

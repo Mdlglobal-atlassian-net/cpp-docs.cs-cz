@@ -1,5 +1,5 @@
 ---
-title: Icollectiononstlimpl – třída
+title: ICollectionOnSTLImpl Class
 ms.date: 11/04/2016
 f1_keywords:
 - ICollectionOnSTLImpl
@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - ICollectionOnSTLImpl class
 ms.assetid: 683c88b0-0d97-4779-a762-e493334ba7f9
-ms.openlocfilehash: 1b76ec9840fbee53a9003ca3a6064021a0f8d751
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc1e4988237cb839cca9421b56dbcdd04067059d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452478"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266455"
 ---
-# <a name="icollectiononstlimpl-class"></a>Icollectiononstlimpl – třída
+# <a name="icollectiononstlimpl-class"></a>ICollectionOnSTLImpl Class
 
 Tato třída poskytuje metody používané třídy kolekce.
 
@@ -37,7 +37,7 @@ Kolekce rozhraní modelu COM.
 *CollType*<br/>
 Třída kontejneru standardní knihovny C++.
 
-*Typ položky*<br/>
+*ItemType*<br/>
 Typ položky, které jsou vystavené rozhraní kontejneru.
 
 *CopyItem*<br/>
@@ -101,7 +101,7 @@ STDMETHOD(getcount)(long* pcount);
 
 ### <a name="parameters"></a>Parametry
 
-*pcount –*<br/>
+*pcount*<br/>
 [out] Počet elementů v kolekci.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -161,7 +161,7 @@ Tento člen obsahuje položky reprezentována kolekce.
 CollType m_coll;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázka ATLCollections](../../visual-cpp-samples.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

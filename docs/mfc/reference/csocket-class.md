@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CSocket [MFC], IsBlocking
 - CSocket [MFC], OnMessagePending
 ms.assetid: 7f23c081-d24d-42e3-b511-8053ca53d729
-ms.openlocfilehash: 3c5340a8c65f804747fd8d3c8bd31fb20f80c6ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a861e557b7368d13d615aaf796faded93c72b040
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487276"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266559"
 ---
 # <a name="csocket-class"></a>Csocket – třída
 
@@ -67,7 +67,7 @@ class CSocket : public CAsyncSocket
 
 A `CSocket` objekt také poskytuje k blokování, což je nezbytné pro synchronní operace `CArchive`. Blokuje funkce, jako například `Receive`, `Send`, `ReceiveFrom`, `SendTo`, a `Accept` (všechny zděděné z `CAsyncSocket`), nevrátí `WSAEWOULDBLOCK` při `CSocket`. Tyto funkce místo toho Počkejte, dokud se operace dokončí. Kromě toho původní volání Pokud dojde k ukončení s chybou WSAEINTR `CancelBlockingCall` je volána, když některou z těchto funkcí je blokování.
 
-Použití `CSocket` objektu, volání konstruktoru, zavolejte `Create` vytvořit základní popisovač SOKETU (typ SOKETU). Výchozí parametry `Create` vytvořit soket datového proudu, ale v případě, že nepoužíváte soketu se `CArchive` objektu, můžete zadat parametr, který se místo toho vytvořit soket datagram nebo vytvořit vazbu na určitém portu pro vytvoření serverového soketu. Připojení k soketu klienta pomocí `Connect` na straně klienta a `Accept` na straně serveru. Pak vytvořte `CSocketFile` objektu a přidružte ho k `CSocket` objekt `CSocketFile` konstruktor. Dále vytvořte `CArchive` objektu pro odesílání a jeden pro příjem dat (podle potřeby), potom je přidružte `CSocketFile` objekt `CArchive` konstruktoru. Po dokončení komunikace se zničit `CArchive`, `CSocketFile`, a `CSocket` objekty. Datový typ SOCKET je popsaný v článku [rozhraní Windows Sockets: pozadí](../../mfc/windows-sockets-background.md).
+Použití `CSocket` objektu, volání konstruktoru, zavolejte `Create` vytvořit základní popisovač SOKETU (typ SOKETU). Výchozí parametry `Create` vytvořit soket datového proudu, ale v případě, že nepoužíváte soketu se `CArchive` objektu, můžete zadat parametr, který se místo toho vytvořit soket datagram nebo vytvořit vazbu na určitém portu pro vytvoření serverového soketu. Připojení k soketu klienta pomocí `Connect` na straně klienta a `Accept` na straně serveru. Pak vytvořte `CSocketFile` objektu a přidružte ho k `CSocket` objekt `CSocketFile` konstruktor. Dále vytvořte `CArchive` objektu pro odesílání a jeden pro příjem dat (podle potřeby), potom je přidružte `CSocketFile` objekt `CArchive` konstruktoru. Po dokončení komunikace se zničit `CArchive`, `CSocketFile`, a `CSocket` objekty. Datový typ SOCKET je popsaný v článku [rozhraní Windows Sockets: Pozadí](../../mfc/windows-sockets-background.md).
 
 Při použití `CArchive` s `CSocketFile` a `CSocket`, může nastat situace, kdy `CSocket::Receive` přejde do smyčky (podle `PumpMessages(FD_READ)`) čekající na požadovaný počet bajtů. Důvodem je, že rozhraní Windows sockets povolit pouze jedno volání přijatých za FD_READ oznámení, ale `CSocketFile` a `CSocket` povolit více volání přijatých za FD_READ. Pokud dojde FD_READ když nejsou žádná data ke čtení, dojde k zablokování aplikace. Pokud obdržíte nikdy jiného FD_READ, že aplikace přestane komunikaci přes soket.
 
@@ -80,7 +80,7 @@ V následujícím příkladu `m_dwExpected` je přibližný počet bajtů, kter�
 > [!NOTE]
 >  Při použití soketů knihovny MFC v sekundárních vláken aplikace staticky propojené knihovny MFC, je nutné volat `AfxSocketInit` v každém vlákně, který používá sockets k inicializaci soketu knihovny. Ve výchozím nastavení `AfxSocketInit` je volána pouze v primárním vlákně.
 
-Další informace najdete v tématu [Windows Sockets v prostředí MFC](../../mfc/windows-sockets-in-mfc.md), [rozhraní Windows Sockets: použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md), [rozhraní Windows Sockets: jak sokety s archivy pracovní](../../mfc/windows-sockets-how-sockets-with-archives-work.md), [Rozhraní Windows Sockets: posloupnost operací](../../mfc/windows-sockets-sequence-of-operations.md), [rozhraní Windows Sockets: Příklady soketů využívajících archivy](../../mfc/windows-sockets-example-of-sockets-using-archives.md).
+Další informace najdete v tématu [Windows Sockets v prostředí MFC](../../mfc/windows-sockets-in-mfc.md), [rozhraní Windows Sockets: Použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md), [rozhraní Windows Sockets: Jak pracují sokety s archivy](../../mfc/windows-sockets-how-sockets-with-archives-work.md), [rozhraní Windows Sockets: Posloupnost operací](../../mfc/windows-sockets-sequence-of-operations.md), [rozhraní Windows Sockets: Příklady soketů využívajících archivy](../../mfc/windows-sockets-example-of-sockets-using-archives.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -115,7 +115,7 @@ Nenulové, pokud je funkce úspěšná.
 
 Popisovač SOKETU je uložena v objektu [m_hSocket](../../mfc/reference/casyncsocket-class.md#m_hsocket) datový člen.
 
-Další informace najdete v tématu [rozhraní Windows Sockets: použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Další informace najdete v tématu [rozhraní Windows Sockets: Použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ### <a name="example"></a>Příklad
 
@@ -141,7 +141,7 @@ V případě blokování `Connect` operace, implementace rozhraní Windows Socke
 
 Všechny operace rušení jiné než `Accept` soketu ponechán v neurčitém stavu. Pokud aplikace zruší blokující operace se soketem, jedinou operací, která aplikace může záviset na schopnost provádět na soket je volání `Close`, i když jiné operace může fungovat v některých implementacích rozhraní Windows Sockets. Pokud vyžadujete maximální přenositelnost pro vaše aplikace, musí být pozor, abyste závisí na provádění operací po zrušení.
 
-Další informace najdete v tématu [rozhraní Windows Sockets: použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Další informace najdete v tématu [rozhraní Windows Sockets: Použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ##  <a name="create"></a>  CSocket::Create
 
@@ -180,7 +180,7 @@ Nenulové, pokud je funkce úspěšná; v opačném případě 0 a určitý kód
     > [!NOTE]
     >  `Accept` Členská funkce používá odkaz na nový, prázdný `CSocket` objektu jako svůj parametr. Je nutné vytvořit tento objekt před voláním `Accept`. Mějte na paměti, která pokud je tento objekt soketu se odesílá z oboru, ukončí připojení. Nevolejte `Create` pro tento nový objekt soketu.
 
-Další informace o streamu a datagram sokety, najdete v článcích [rozhraní Windows Sockets: pozadí](../../mfc/windows-sockets-background.md), [rozhraní Windows Sockets: porty a adresy soketů](../../mfc/windows-sockets-ports-and-socket-addresses.md), a [rozhraní Windows Sockets: použití Sokety s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Další informace o streamu a datagram sokety, najdete v článcích [rozhraní Windows Sockets: Pozadí](../../mfc/windows-sockets-background.md), [rozhraní Windows Sockets: Porty a adresy soketů](../../mfc/windows-sockets-ports-and-socket-addresses.md), a [rozhraní Windows Sockets: Použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ##  <a name="csocket"></a>  CSocket::CSocket
 
@@ -194,7 +194,7 @@ CSocket();
 
 Po vytvoření, je třeba zavolat `Create` členskou funkci.
 
-Další informace najdete v tématu [rozhraní Windows Sockets: použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Další informace najdete v tématu [rozhraní Windows Sockets: Použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ##  <a name="fromhandle"></a>  CSocket::FromHandle
 
@@ -217,7 +217,7 @@ Ukazatel na `CSocket` objektu, nebo hodnota NULL, pokud neexistuje žádný `CSo
 
 Když je zadaný popisovač SOKETU, pokud `CSocket` objekt není připojen ke popisovač, členská funkce vrátí hodnotu NULL a nelze vytvořit dočasný objekt.
 
-Další informace najdete v tématu [rozhraní Windows Sockets: použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Další informace najdete v tématu [rozhraní Windows Sockets: Použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ##  <a name="isblocking"></a>  CSocket::IsBlocking
 
@@ -233,7 +233,7 @@ Nenulové, pokud je blokování soketu; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [rozhraní Windows Sockets: použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Další informace najdete v tématu [rozhraní Windows Sockets: Použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ##  <a name="onmessagepending"></a>  CSocket::OnMessagePending
 
@@ -251,11 +251,11 @@ Nenulové, pokud zpráva byla zpracována; jinak 0.
 
 To je moderní overridable.
 
-Rámec volá `OnMessagePending` při soketu je – čerpání zpráv Windows vám poskytnou příležitost se zprávy, abyste vaší aplikace. Příklady použití `OnMessagePending`, najdete v článku [rozhraní Windows Sockets: odvozování z tříd soketů](../../mfc/windows-sockets-deriving-from-socket-classes.md).
+Rámec volá `OnMessagePending` při soketu je – čerpání zpráv Windows vám poskytnou příležitost se zprávy, abyste vaší aplikace. Příklady použití `OnMessagePending`, najdete v článku [rozhraní Windows Sockets: Odvozování z tříd soketů](../../mfc/windows-sockets-deriving-from-socket-classes.md).
 
-Další informace najdete v tématu [rozhraní Windows Sockets: použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Další informace najdete v tématu [rozhraní Windows Sockets: Použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CAsyncSocket – třída](../../mfc/reference/casyncsocket-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

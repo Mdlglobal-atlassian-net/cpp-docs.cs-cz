@@ -16,12 +16,12 @@ helpviewer_keywords:
 - prerequisites, Internet client classes [MFC]
 - Gopher client applications [MFC]
 ms.assetid: c51d1dfe-260c-4228-8100-e4efd90e9599
-ms.openlocfilehash: b6be476e4b9f7d1aaa09a588e1c06e72032f48c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6246db7dfb2837f5d94fa51f8433b46722c43663
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629876"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267742"
 ---
 # <a name="prerequisites-for-internet-client-classes"></a>Požadavky na třídy internetových klientů
 
@@ -57,7 +57,7 @@ Některé akce internetovým klientem (čtení souboru, třeba) nejsou požadova
 |Navázání připojení k protokolu HTTP.|Vytvoření [cinternetsession –](../mfc/reference/cinternetsession-class.md) jako základ pro toto internetových klientských aplikací. Volání [CInternetSession::GetHttpConnection](../mfc/reference/cinternetsession-class.md#gethttpconnection) k vytvoření [chttpconnection –](../mfc/reference/chttpconnection-class.md) objektu.|
 |Otevřete soubor protokolu HTTP.|Navázání připojení k protokolu HTTP. Volání [CHttpConnection::OpenRequest](../mfc/reference/chttpconnection-class.md#openrequest) k vytvoření [chttpfile –](../mfc/reference/chttpfile-class.md) objektu. Volání [CHttpFile::AddRequestHeaders](../mfc/reference/chttpfile-class.md#addrequestheaders). Volání [CHttpFile::SendRequest](../mfc/reference/chttpfile-class.md#sendrequest).|
 |Čtení souboru HTTP.|Otevřete soubor protokolu HTTP. Volání [CInternetFile::Read](../mfc/reference/cinternetfile-class.md#read).|
-|Získejte informace o požadavku HTTP.|Navázání připojení k protokolu HTTP. Volání [CHttpConnection::OpenRequest](../mfc/reference/chttpconnection-class.md#openrequest) k vytvoření [chttpfile –](../mfc/reference/chttpfile-class.md) objektu. Volání [CHttpFile::QueryInfo](../mfc/reference/chttpfile-class.md#queryinfo).|
+|Získejte informace o požadavku HTTP.|Navázání připojení k protokolu HTTP. Volání [CHttpConnection::OpenRequest](../mfc/reference/chttpconnection-class.md#openrequest) k vytvoření [chttpfile –](../mfc/reference/chttpfile-class.md) objektu. Call [CHttpFile::QueryInfo](../mfc/reference/chttpfile-class.md#queryinfo).|
 
 ### <a name="gopher"></a>Gopher
 
@@ -69,7 +69,7 @@ Některé akce internetovým klientem (čtení souboru, třeba) nejsou požadova
 |Otevřete soubor gopher.|Navázání připojení gopher. Vytvoření lokátoru gopher s [CGopherConnection::CreateLocator](../mfc/reference/cgopherconnection-class.md#createlocator) nebo najít Lokátor s [CGopherFileFind::GetLocator](../mfc/reference/cgopherfilefind-class.md#getlocator). Volání [CGopherConnection::OpenFile](../mfc/reference/cgopherconnection-class.md#openfile).|
 |Čtení souboru gopher.|Otevřete soubor gopher. Použití [cgopherfile –](../mfc/reference/cgopherfile-class.md).|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Win32 – internetová rozšíření (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
 [MFC – třídy pro tvorbu internetových klientských aplikací](../mfc/mfc-classes-for-creating-internet-client-applications.md)<br/>

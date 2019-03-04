@@ -1,5 +1,5 @@
 ---
-title: Cdataexchange – třída
+title: CDataExchange Class
 ms.date: 11/04/2016
 f1_keywords:
 - CDataExchange
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - CDataExchange [MFC], m_bSaveAndValidate
 - CDataExchange [MFC], m_pDlgWnd
 ms.assetid: 84ed6113-325d-493e-a75d-223f03a992b8
-ms.openlocfilehash: 7d0a804294fa5da619bdab4184adf3e28c420506
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 630bc41ee20aa7cf6f62cd320b15b8dca0d3fedf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509289"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268392"
 ---
-# <a name="cdataexchange-class"></a>Cdataexchange – třída
+# <a name="cdataexchange-class"></a>CDataExchange Class
 
 Podporuje výměna dat dialogových oken (DDX) a rutiny (DDV) ověřování dat dialogového okna používané v rámci tříd Microsoft Foundation.
 
@@ -228,10 +228,9 @@ Implementors vlastní rutiny DDX a DDV by měly volat `PrepareOleCtrl` pro všec
 
 Další informace o psaní vlastních rutiny DDX a DDV najdete v tématu [Technická poznámka 26](../../mfc/tn026-ddx-and-ddv-routines.md). Přehled DDX a DDV, naleznete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md) a [Dialog Box témata](../../mfc/dialog-boxes.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC VIEWEX](../../visual-cpp-samples.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CWnd::DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange)<br/>
 [CWnd::UpdateData](../../mfc/reference/cwnd-class.md#updatedata)
-

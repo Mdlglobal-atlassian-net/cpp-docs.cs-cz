@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArrayBound class
 ms.assetid: dd6299db-5f84-4630-bbf0-f5add5318437
-ms.openlocfilehash: 1997e56fb0b524ffd6cca5dc9d5983fda25a42e1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a79079c95536746cf5a4fa4b35caf39a55ca0f42
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518603"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269770"
 ---
 # <a name="ccomsafearraybound-class"></a>Ccomsafearraybound – třída
 
@@ -35,7 +35,7 @@ class CComSafeArrayBound : public SAFEARRAYBOUND
 
 |||
 |-|-|
-|[Ccomsafearraybound –](#ccomsafearraybound)|Konstruktor|
+|[CComSafeArrayBound](#ccomsafearraybound)|Konstruktor|
 |[GetCount](#getcount)|Voláním této metody vrátí počet prvků.|
 |[GetLowerBound](#getlowerbound)|Voláním této metody vrátí dolní mez.|
 |[GetUpperBound](#getupperbound)|Voláním této metody vrátí horní mez.|
@@ -187,6 +187,6 @@ Pokud pole je přístupný z programu v jazyce Visual C++, doporučuje se, že j
 
 Horní mez závisí na počtu prvků a hodnot dolní mez. Například pokud je dolní mez 0 a 10 je počet elementů, horní mez bude automaticky nastavit do 9.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../../atl/atl-class-overview.md)

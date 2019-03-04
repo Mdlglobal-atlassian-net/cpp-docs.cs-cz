@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDCRenderTarget [MFC], GetDCRenderTarget
 - CDCRenderTarget [MFC], m_pDCRenderTarget
 ms.assetid: aa8059c9-08e6-49e4-9b8c-00fa54077a61
-ms.openlocfilehash: e172d175bba5b4c379f7cd29451d7ad4215d9c68
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70169d2b89d9ea657898f7a96dea27556023d4e2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541710"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268275"
 ---
 # <a name="cdcrendertarget-class"></a>Cdcrendertarget – třída
 
@@ -71,9 +71,9 @@ class CDCRenderTarget : public CRenderTarget;
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Crendertarget –](../../mfc/reference/crendertarget-class.md)
+[CRenderTarget](../../mfc/reference/crendertarget-class.md)
 
-[Cdcrendertarget –](../../mfc/reference/cdcrendertarget-class.md)
+[CDCRenderTarget](../../mfc/reference/cdcrendertarget-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -104,7 +104,7 @@ BOOL BindDC(
 
 ### <a name="parameters"></a>Parametry
 
-*řadič domény*<br/>
+*dc*<br/>
 Kontext zařízení, ke kterému cíle vykreslování vysílá příkazy vykreslování
 
 *Rect*<br/>
@@ -183,6 +183,6 @@ operator ID2D1DCRenderTarget*();
 
 Ukazatel na rozhraní ID2D1DCRenderTarget nebo hodnota NULL, pokud objekt ještě není inicializován.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

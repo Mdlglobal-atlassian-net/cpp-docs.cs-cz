@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-ms.openlocfilehash: 60b09b674bec58a7d35a9a37d9a8f4c40d8cd522
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: aa4945bb5f9ef28937487ba504e23c461992b263
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522724"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267014"
 ---
 # <a name="choice-class"></a>Třída choice
 
@@ -57,7 +57,7 @@ A `tuple`– základní typ představující datové části ze vstupních zdroj
 
 |Název|Popis|
 |----------|-----------------|
-|[podle výběru](#ctor)|Přetíženo. Vytvoří `choice` blok zpráv.|
+|[choice](#ctor)|Přetíženo. Vytvoří `choice` blok zpráv.|
 |[~ choice – destruktor](#dtor)|Odstraní `choice` blok zpráv.|
 
 ### <a name="public-methods"></a>Veřejné metody
@@ -72,7 +72,7 @@ A `tuple`– základní typ představující datové části ze vstupních zdroj
 |[link_target](#link_target)|K této propojuje cílový blok `choice` blok zpráv.|
 |[Vydání verze](#release)|Uvolní předchozí vyhrazení úspěšné zprávy.|
 |[release_ref](#release_ref)|Počet odkazů v tomto vydání `choice` blok zpráv.|
-|[Rezervovat](#reserve)|Vyhradí zprávu nabízely dříve v tomto `choice` blok zpráv.|
+|[reserve](#reserve)|Vyhradí zprávu nabízely dříve v tomto `choice` blok zpráv.|
 |[unlink_target](#unlink_target)|Cílový blok z tohoto nebude odpojen `choice` blok zpráv.|
 |[unlink_targets](#unlink_targets)|Zruší všechny cíle z tohoto propojení `choice` blok zpráv. (Přepíše [isource::unlink_targets –](isource-class.md#unlink_targets).)|
 |[value](#value)|Získá zprávu, jejíž index se zvolila `choice` blok zpráv.|
@@ -85,7 +85,7 @@ Další informace najdete v tématu [asynchronní bloky zpráv](../../../paralle
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Isource –](isource-class.md)
+[ISource](isource-class.md)
 
 `choice`
 
@@ -174,7 +174,7 @@ Modul runtime používá výchozí plánovač, pokud není zadán `_PScheduler` 
 
 Přesun konstrukce neprovádí pod zámek, což znamená, že je až uživatele, aby se neobjeví žádné úlohy s nižšími nároky na cestě v době přesunutí. V opačném případě mnoha bude situace může nastat, což vede k výjimky nebo nekonzistentním stavu.
 
-##  <a name="dtor"></a> ~ podle výběru
+##  <a name="dtor"></a> ~choice
 
 Odstraní `choice` blok zpráv.
 
@@ -359,7 +359,7 @@ Datová část zprávy.
 
 Protože `choice` blok zpráv může přijímat vstupy s různé datové typy, je nutné zadat typ datové části Přejme během načítání. Můžete určit typ na základě výsledku z `index` metody.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [join – třída](join-class.md)<br/>

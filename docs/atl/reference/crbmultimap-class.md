@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CRBMultiMap class
 ms.assetid: 94d3ec0c-3e30-4ab7-a101-d8da4fb8add3
-ms.openlocfilehash: f421848a87ea3cc38309e85eb39c9453530ce4fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 03a9639e8b0b3d11a414e5db0ce874d7ca8f2d45
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659092"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267482"
 ---
 # <a name="crbmultimap-class"></a>Crbmultimap – třída
 
@@ -55,7 +55,7 @@ Kód použitý má zkopírovat nebo přesunout elementy hodnotu.
 |Název|Popis|
 |----------|-----------------|
 |[CRBMultiMap::CRBMultiMap](#crbmultimap)|Konstruktor|
-|[Crbmultimap –:: ~ crbmultimap –](#dtor)|Destruktor.|
+|[CRBMultiMap::~CRBMultiMap](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -83,7 +83,7 @@ Podrobnější diskuzi o různých třídy kolekcí a jejich funkce a výkonové
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Crbtree –](../../atl/reference/crbtree-class.md)
+[CRBTree](../../atl/reference/crbtree-class.md)
 
 `CRBMultiMap`
 
@@ -114,7 +114,7 @@ Najdete v dokumentaci pro základní třídu [crbtree –](../../atl/reference/c
 
 [!code-cpp[NVC_ATL_Utilities#85](../../atl/codesnippet/cpp/crbmultimap-class_1.cpp)]
 
-##  <a name="dtor"></a>  Crbmultimap –:: ~ crbmultimap –
+##  <a name="dtor"></a>  CRBMultiMap::~CRBMultiMap
 
 Destruktor.
 
@@ -138,7 +138,7 @@ POSITION FindFirstWithKey(KINARGTYPE key) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Určuje klíč, který identifikuje elementu, který chcete najít.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -170,10 +170,10 @@ V& GetNextValueWithKey(
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Hodnota pozice, získali buď voláním [CRBMultiMap::FindFirstWithKey](#findfirstwithkey) nebo [CRBMultiMap::GetNextWithKey](#getnextwithkey), nebo předchozí volání k `GetNextValueWithKey`.
 
-*Klíč*<br/>
+*key*<br/>
 Určuje klíč, který identifikuje elementu, který chcete najít.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -205,10 +205,10 @@ CPair* GetNextWithKey(
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Hodnota pozice, získali buď voláním [CRBMultiMap::FindFirstWithKey](#findfirstwithkey) nebo [CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey), nebo předchozí volání k `GetNextWithKey`.
 
-*Klíč*<br/>
+*key*<br/>
 Určuje klíč, který identifikuje elementu, který chcete najít.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -231,7 +231,7 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnotu klíče pro přidání do `CRBMultiMap` objektu.
 
 *value*<br/>
@@ -259,7 +259,7 @@ size_t RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Určuje klíč, který identifikuje elementy, která se má odstranit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -276,7 +276,7 @@ Najdete v dokumentaci pro základní třídu [crbtree –](../../atl/reference/c
 
 Podívejte se na příklad pro [CRBMultiMap::CRBMultiMap](#crbmultimap).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CRBTree – třída](../../atl/reference/crbtree-class.md)<br/>
 [CAtlMap – třída](../../atl/reference/catlmap-class.md)<br/>

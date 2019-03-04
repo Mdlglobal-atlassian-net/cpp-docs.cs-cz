@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - single_assignment class
 ms.assetid: ccc34728-8de9-4e07-b83d-a36a58d9d2b9
-ms.openlocfilehash: 5a27fb6cdc13fbbd3ceb8a85adacf5491ddc3ce1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 436d0d4cc16ee18449178782b775a25bb1d8592a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593476"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268954"
 ---
 # <a name="singleassignment-class"></a>Třída single_assignment
 
@@ -49,7 +49,7 @@ Typ datové části zprávy, uloženy a následně vyrovnávací paměti.
 |Název|Popis|
 |----------|-----------------|
 |[single_assignment](#ctor)|Přetíženo. Vytvoří `single_assignment` blok zpráv.|
-|[~ single_assignment – destruktor](#dtor)|Odstraní `single_assignment` blok zpráv.|
+|[~single_assignment Destructor](#dtor)|Odstraní `single_assignment` blok zpráv.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -80,11 +80,11 @@ Další informace najdete v tématu [asynchronní bloky zpráv](../../../paralle
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Isource –](isource-class.md)
+[ISource](isource-class.md)
 
-[Itarget –](itarget-class.md)
+[ITarget](itarget-class.md)
 
-[source_block –](source-block-class.md)
+[source_block](source-block-class.md)
 
 [propagator_block](propagator-block-class.md)
 
@@ -289,7 +289,7 @@ single_assignment(
 
 ### <a name="parameters"></a>Parametry
 
-*_Filtrovat*<br/>
+*_Filter*<br/>
 Funkce filtru, která určuje, zda by měl být přijat nabízené zprávy.
 
 *_PScheduler*<br/>
@@ -304,7 +304,7 @@ Modul runtime používá výchozí plánovač, pokud není zadán `_PScheduler` 
 
 Typ `filter_method` je funktor s podpisem `bool (T const &)` která je vyvolána situace `single_assignment` blok zpráv k určení, zda by měla přijímat nabízená zpráva.
 
-##  <a name="dtor"></a> ~ single_assignment
+##  <a name="dtor"></a> ~single_assignment
 
 Odstraní `single_assignment` blok zpráv.
 
@@ -328,9 +328,8 @@ Datová část uložené zprávy.
 
 Tato metoda budou čekat na přijetí e-mailu Pokud žádná zpráva je aktuálně uloženo v `single_assignment` blok zpráv.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [overwrite_buffer – třída](overwrite-buffer-class.md)<br/>
-[Třída unbounded_buffer](unbounded-buffer-class.md)
-
+[unbounded_buffer – třída](unbounded-buffer-class.md)

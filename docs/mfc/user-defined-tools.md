@@ -4,12 +4,12 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - user-defined tools (MFC Extensions)
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
-ms.openlocfilehash: df8ba98fa1986052bae82b2afbdf40725298bef7
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 785e37c63653dde91176bedd0321fc58ac122c7e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175727"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269705"
 ---
 # <a name="user-defined-tools"></a>Uživatelem definované nástroje
 
@@ -52,7 +52,7 @@ Pokud chcete pro předdefinování některé nástroje při spuštění aplikace
 
 1. Pro každý nástroj nastavením jeho textový popisek `CUserTool::m_strLabel` a nastavit jeho příkaz voláním `CUserTool::SetCommand`. Výchozí implementace [cusertool – třída](../mfc/reference/cusertool-class.md) automaticky načte dostupné ikony z programu, který je zadaný ve volání `SetCommand`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přizpůsobení pro prostředí MFC](../mfc/customization-for-mfc.md)<br/>
 [CUserTool – třída](../mfc/reference/cusertool-class.md)<br/>

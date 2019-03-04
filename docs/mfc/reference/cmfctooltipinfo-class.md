@@ -1,5 +1,5 @@
 ---
-title: Cmfctooltipinfo – třída
+title: CMFCToolTipInfo Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCToolTipInfo
@@ -32,14 +32,14 @@ helpviewer_keywords:
 - CMFCToolTipInfo [MFC], m_nGradientAngle
 - CMFCToolTipInfo [MFC], m_nMaxDescrWidth
 ms.assetid: f9d3d7f8-1f08-4342-a7b2-683860e5d2a5
-ms.openlocfilehash: 07f2882570e77d554230853dff87bc81df80e4cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b38c3a62cca376ef7a19a111fe3a34c923983d1b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668621"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270212"
 ---
-# <a name="cmfctooltipinfo-class"></a>Cmfctooltipinfo – třída
+# <a name="cmfctooltipinfo-class"></a>CMFCToolTipInfo Class
 
 Ukládá informace o vzhled popisů tlačítek.
 
@@ -55,7 +55,7 @@ class CMFCToolTipInfo
 
 |Název|Popis|
 |----------|-----------------|
-|[CMFCToolTipInfo::operator =](#operator_eq)||
+|[CMFCToolTipInfo::operator=](#operator_eq)||
 
 ### <a name="data-members"></a>Datové členy
 
@@ -87,11 +87,11 @@ Následující příklad ukazuje, jak nastavit hodnoty různých členské prom�
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Cmfctooltipinfo –](../../mfc/reference/cmfctooltipinfo-class.md)
+[CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxtooltipctrl.h
+**Header:** afxtooltipctrl.h
 
 ##  <a name="m_bballoontooltip"></a>  CMFCToolTipInfo::m_bBalloonTooltip
 
@@ -255,7 +255,7 @@ CMFCToolTipInfo& operator=(CMFCToolTipInfo& src);
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

@@ -10,16 +10,16 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-ms.openlocfilehash: 639c4f7952abcf18c29aa3cb0d9fee45b50430af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3992e6c0cf25925e01858016e4bac93d5552fe8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567463"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266143"
 ---
 # <a name="collection-class-helpers"></a>Pomocné rutiny třídy kolekce
 
-Třídy kolekcí `CMap`, `CList`, a `CArray` použít bez vizuálního vzhledu globální pomocných funkcí pro tyto účely porovnání, kopírování a serializaci elementů. Jako součást vaší implementace tříd na základě `CMap`, `CList`, a `CArray`, je nutné přepsat těchto funkcí podle potřeby s verzemi přizpůsobená pro typ dat uložených v mapě, seznamu nebo pole. Informace o přepsání pomocných funkcí, jako `SerializeElements`, najdete v článku [kolekcí: jak provádět typově bezpečné kolekce](../../mfc/how-to-make-a-type-safe-collection.md). Všimněte si, že `ConstructElements` a `DestructElements` jsou zastaralé.
+Třídy kolekcí `CMap`, `CList`, a `CArray` použít bez vizuálního vzhledu globální pomocných funkcí pro tyto účely porovnání, kopírování a serializaci elementů. Jako součást vaší implementace tříd na základě `CMap`, `CList`, a `CArray`, je nutné přepsat těchto funkcí podle potřeby s verzemi přizpůsobená pro typ dat uložených v mapě, seznamu nebo pole. Informace o přepsání pomocných funkcí, jako `SerializeElements`, najdete v článku [kolekce: Jak provádět typově bezpečné kolekce](../../mfc/how-to-make-a-type-safe-collection.md). Všimněte si, že `ConstructElements` a `DestructElements` jsou zastaralé.
 
 Knihovny Microsoft Foundation Class poskytuje následující globální funkce afxtempl.h při přizpůsobení tříd kolekce:
 
@@ -30,7 +30,7 @@ Knihovny Microsoft Foundation Class poskytuje následující globální funkce a
 |[Compareelements –](#compareelements)|Určuje, zda prvky jsou stejné.|
 |[Copyelements –](#copyelements)|Zkopíruje prvky z jednoho pole do jiného.|
 |[Dumpelements –](#dumpelements)|Poskytuje diagnostický výstup orientovaný na stream.|
-|[HashKey.](#hashkey)|Vypočítá hodnotu hash klíče.|
+|[HashKey](#hashkey)|Vypočítá hodnotu hash klíče.|
 |[Serializeelements –](#serializeelements)|Ukládá nebo načítá prvky do nebo z archivu.|
 
 ##  <a name="compareelements"></a>  Compareelements –
@@ -105,7 +105,7 @@ Počet prvků, které se mají zkopírovat.
 
 Výchozí implementace používá operátor jednoduchého přiřazení ( **=** ) k provedení této operace kopírování. Pokud typ jsou kopírovány nemá přetíženého operátoru =, pak výchozí implementace provádí logické bitové kopie.
 
-Informace o implementaci této a dalších funkcích pomocné rutiny, najdete v článku [kolekcí: jak provádět typově bezpečné kolekce](../how-to-make-a-type-safe-collection.md).
+Informace o implementaci této a dalších funkcích pomocné rutiny, najdete v článku [kolekce: Jak provádět typově bezpečné kolekce](../how-to-make-a-type-safe-collection.md).
 
 ### <a name="requirements"></a>Požadavky
 
@@ -125,7 +125,7 @@ void  AFXAPI DumpElements(
 
 ### <a name="parameters"></a>Parametry
 
-*řadič domény*<br/>
+*dc*<br/>
 Vypsat kontext pro výpis elementy.
 
 *TYP*<br/>
@@ -161,7 +161,7 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
 *ARG_KEY*<br/>
 Parametr šablony určující typ dat používá pro přístup k mapování klíčů.
 
-*Klíč*<br/>
+*key*<br/>
 Klíč, jehož hodnota hash je vypočítán.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -216,17 +216,17 @@ Počet prvků archivovaných
 
 Výchozí implementace neodpovídá bitové operace čtení nebo zápisu.
 
-Informace o implementaci této a dalších funkcích pomocné rutiny, najdete v článku [kolekcí: jak provádět typově bezpečné kolekce](../how-to-make-a-type-safe-collection.md).
+Informace o implementaci této a dalších funkcích pomocné rutiny, najdete v článku [kolekce: Jak provádět typově bezpečné kolekce](../how-to-make-a-type-safe-collection.md).
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad v tomto článku [kolekcí: jak provádět typově bezpečné kolekce](../how-to-make-a-type-safe-collection.md).
+Podívejte se na příklad v tomto článku [kolekce: Jak provádět typově bezpečné kolekce](../how-to-make-a-type-safe-collection.md).
 
 ### <a name="requirements"></a>Požadavky
 
   **Hlavička** afxtempl.h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Makra a globální prvky](mfc-macros-and-globals.md)<br/>
 [CMap – třída](cmap-class.md)<br/>

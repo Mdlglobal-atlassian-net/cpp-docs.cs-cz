@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], modal
 - modal dialog boxes [MFC]
 ms.assetid: e83df336-5994-4b8f-8233-7942f997315b
-ms.openlocfilehash: 7e1dc9c40f60dc46117ee0673a038d5a63df7680
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c3a5263736324d7fe25066e8879d13b3a41768de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528359"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268665"
 ---
 # <a name="modal-and-modeless-dialog-boxes"></a>Modální a nemodální dialogová okna
 
@@ -34,8 +34,7 @@ Vytvoření dialogového okna pro váš program vyžaduje následující kroky:
 
 1. Přidejte datové členy související s ovládacími prvky v dialogovém okně a k určení [výměna dat dialogových oken](../mfc/dialog-data-exchange.md) a [ověřování dat dialogového okna](../mfc/dialog-data-validation.md) pro ovládací prvky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Dialogová okna](../mfc/dialog-boxes.md)<br/>
 [Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
-

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleObjectFactory [MFC], VerifyLicenseKey
 - COleObjectFactory [MFC], VerifyUserLicense
 ms.assetid: ab179c1e-4af2-44aa-a576-37c48149b427
-ms.openlocfilehash: 4aa6d688de59884c7279b441d12dda9dcdf2ff6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25dce92f49ba9de08fcf33d54db8e97d520f5ea4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476008"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266377"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory – třída
 
@@ -97,7 +97,7 @@ class COleObjectFactory : public CCmdTarget
 
 - Registrace továrny objekt ovládacího prvku OLE systémového registru.
 
-Další informace o vytváření objektů najdete v článcích [datové objekty a zdroje dat (OLE)](../../mfc/data-objects-and-data-sources-ole.md) a [datové objekty a zdroje dat: vytváření a ničení](../../mfc/data-objects-and-data-sources-creation-and-destruction.md). Další informace o registraci, najdete v článku [registrace](../../mfc/registration.md).
+Další informace o vytváření objektů najdete v článcích [datové objekty a zdroje dat (OLE)](../../mfc/data-objects-and-data-sources-ole.md) a [datové objekty a zdroje dat: Vytváření a ničení](../../mfc/data-objects-and-data-sources-creation-and-destruction.md). Další informace o registraci, najdete v článku [registrace](../../mfc/registration.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -109,7 +109,7 @@ Další informace o vytváření objektů najdete v článcích [datové objekty
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdisp.h
+**Header:** afxdisp.h
 
 ##  <a name="coleobjectfactory"></a>  COleObjectFactory::COleObjectFactory
 
@@ -132,7 +132,7 @@ COleObjectFactory(
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor CLSID*<br/>
+*clsid*<br/>
 Odkaz na ID třídy OLE, představuje tento objekt pro vytváření objektů.
 
 *pRuntimeClass*<br/>
@@ -398,7 +398,7 @@ virtual BOOL VerifyUserLicense();
 
 Nenulové, pokud je platná; vývojářskou licenci jinak 0.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CCmdTarget – třída](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

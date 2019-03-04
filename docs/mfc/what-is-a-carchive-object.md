@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CArchive class [MFC], about CArchive class [MFC]
 - buffering, serializable objects
 ms.assetid: 843f1825-288d-4d89-a1fa-70e1f92d9b8b
-ms.openlocfilehash: 08260d1a1b21658e879410ff5201e5f455535332
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4bae451168449ce3e120ba9d172a615864ac2157
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519337"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270394"
 ---
 # <a name="what-is-a-carchive-object"></a>Co je objekt CArchive
 
@@ -27,7 +27,6 @@ Není-li archiv ukládá objekty do souboru, připojí archivu `CRuntimeClass` n
 
 Podle data, je serializován do archivu, archivu nahromadí data, dokud jeho vyrovnávací paměť je plná. Pak archivu zapíše do vyrovnávací paměti `CFile` objekt, který odkazuje `CArchive` objektu. Podobně jak načíst data z archivu, čte data ze souboru do vyrovnávací paměti a potom z vyrovnávací paměti deserializovaného objektu. Tato ukládání do vyrovnávací paměti snižuje počet pokusů, které je pevný disk fyzicky čtení, tedy zvýšení výkonu vaší aplikace.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Serializace: Serializace objektu](../mfc/serialization-serializing-an-object.md)
-

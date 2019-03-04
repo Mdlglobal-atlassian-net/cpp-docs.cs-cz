@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CListCtrl class [MFC], styles
 - CListCtrl class [MFC], changing styles
 ms.assetid: be74a005-0795-417c-9056-f6342aa74b26
-ms.openlocfilehash: cfaae07d0bb96cbdf40de5afa701b73ae82485e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ba9ae81f7b1693be0df3565256a65e4e3561fd3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645143"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266871"
 ---
 # <a name="changing-list-control-styles"></a>Změna stylů ovládacího prvku seznam
 
@@ -30,8 +30,7 @@ Kromě standardních stylů pro ovládací prvek seznamu je další sady, jen ro
 > [!NOTE]
 >  Pro výběr při najetí myší na práci, musíte také mít **LVS_EX_ONECLICKACTIVATE** nebo **LVS_EX_TWOCLICKACTIVATE** zapnuté.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CListCtrl](../mfc/using-clistctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

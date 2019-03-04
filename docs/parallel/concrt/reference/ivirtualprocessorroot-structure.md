@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IVirtualProcessorRoot structure
 ms.assetid: 5ef371b8-9e4f-4fef-bb0d-49099693dd2b
-ms.openlocfilehash: 6e3f874aa7c20494483172d7c7c3efee362cf6a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25ede76a81a77d489d0f2316bd3ae4cb7f84d704
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569868"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268613"
 ---
 # <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot – struktura
 
@@ -35,8 +35,8 @@ struct IVirtualProcessorRoot : public IExecutionResource;
 |Název|Popis|
 |----------|-----------------|
 |[IVirtualProcessorRoot::Activate](#activate)|Způsobí, že vlákno proxy spojené s rozhraním kontextu spuštění `pContext` spustit provádění na tomto kořenovém adresáři virtuálního procesoru.|
-|[Ivirtualprocessorroot::Deactivate –](#deactivate)|Způsobí, že se právě spouští na tomto kořenovém adresáři virtuálního procesoru zastavit odesílání kontextu spuštění proxy vlákna. Podproces proxy bude pokračovat provádění volání `Activate` metody.|
-|[Ivirtualprocessorroot::ensurealltasksvisible –](#ensurealltasksvisible)|Způsobí, že data uložená v hierarchii paměti jednotlivých procesorů stane viditelným pro všechny procesory systému. Zajišťuje, že ohrazení paměti úplné spustila na všechny procesory než metoda vrátí.|
+|[IVirtualProcessorRoot::Deactivate](#deactivate)|Způsobí, že se právě spouští na tomto kořenovém adresáři virtuálního procesoru zastavit odesílání kontextu spuštění proxy vlákna. Podproces proxy bude pokračovat provádění volání `Activate` metody.|
+|[IVirtualProcessorRoot::EnsureAllTasksVisible](#ensurealltasksvisible)|Způsobí, že data uložená v hierarchii paměti jednotlivých procesorů stane viditelným pro všechny procesory systému. Zajišťuje, že ohrazení paměti úplné spustila na všechny procesory než metoda vrátí.|
 |[IVirtualProcessorRoot::GetId](#getid)|Vrací jedinečný identifikátor pro kořen virtuálního procesoru.|
 
 ## <a name="remarks"></a>Poznámky
@@ -47,7 +47,7 @@ Resource Manager uděluje kořenových adresářů virtuálního procesoru plán
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Iexecutionresource –](iexecutionresource-structure.md)
+[IExecutionResource](iexecutionresource-structure.md)
 
 `IVirtualProcessorRoot`
 
@@ -152,6 +152,6 @@ virtual unsigned int GetId() const = 0;
 
 Identifikátor celé číslo.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)

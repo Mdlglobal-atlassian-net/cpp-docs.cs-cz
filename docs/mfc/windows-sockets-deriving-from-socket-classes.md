@@ -1,23 +1,23 @@
 ---
-title: 'Windows Sockets: Odvozování z tříd soketů'
+title: 'Windows Sockets: Odvozování z tříd soketů'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - derived classes [MFC], from socket classes
 - Windows Sockets [MFC], deriving from socket classes
 - sockets [MFC], deriving from socket classes
 ms.assetid: 3a26e67a-e323-433b-9b05-eca018799801
-ms.openlocfilehash: d860aacef164155f87db33355211b1a8e598c91b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12ab66cfd9212cd79752e2f6359b857194c6428c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648809"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270298"
 ---
-# <a name="windows-sockets-deriving-from-socket-classes"></a>Windows Sockets: Odvozování z tříd soketů
+# <a name="windows-sockets-deriving-from-socket-classes"></a>Windows Sockets: Odvozování z tříd soketů
 
 Tento článek popisuje některé funkce, které můžete získat vlastní třídy odvozené z jednoho z tříd soketů.
 
-Vaše vlastní třídy soketu lze odvodit z buď [CAsyncSocket](../mfc/reference/casyncsocket-class.md) nebo [csocket –](../mfc/reference/csocket-class.md) přidat vlastní funkce. Konkrétně se tyto třídy zadat počet virtuální členské funkce, které můžete přepsat. Tyto funkce patří [události OnReceive](../mfc/reference/casyncsocket-class.md#onreceive), [OnSend](../mfc/reference/casyncsocket-class.md#onsend), [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept), [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect), a [při zavření](../mfc/reference/casyncsocket-class.md#onclose). Funkce můžete přepsat v třídě odvozené soketu výhod oznámení, která poskytují při výskytu události sítě. Rozhraní volá tyto funkce zpětného volání oznámení upozornění na důležité soketu události, jako je například příjem dat, může začínat čtení. Další informace o funkcích notification, najdete v části [rozhraní Windows Sockets: oznámení soketů](../mfc/windows-sockets-socket-notifications.md).
+Vaše vlastní třídy soketu lze odvodit z buď [CAsyncSocket](../mfc/reference/casyncsocket-class.md) nebo [csocket –](../mfc/reference/csocket-class.md) přidat vlastní funkce. Konkrétně se tyto třídy zadat počet virtuální členské funkce, které můžete přepsat. Tyto funkce patří [události OnReceive](../mfc/reference/casyncsocket-class.md#onreceive), [OnSend](../mfc/reference/casyncsocket-class.md#onsend), [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept), [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect), a [při zavření](../mfc/reference/casyncsocket-class.md#onclose). Funkce můžete přepsat v třídě odvozené soketu výhod oznámení, která poskytují při výskytu události sítě. Rozhraní volá tyto funkce zpětného volání oznámení upozornění na důležité soketu události, jako je například příjem dat, může začínat čtení. Další informace o funkcích notification, najdete v části [rozhraní Windows Sockets: Soketu oznámení](../mfc/windows-sockets-socket-notifications.md).
 
 Kromě toho třídy `CSocket` poskytuje [OnMessagePending](../mfc/reference/csocket-class.md#onmessagepending) členská funkce (rozšířené overridable). MFC tuto funkci volá, když soket je – čerpání zpráv založené na Windows. Můžete přepsat `OnMessagePending` vyhledat konkrétní zprávy z Windows a reagovat na ně.
 
@@ -27,9 +27,9 @@ Ve vaší `OnMessagePending` přepsat, vrátit buď **TRUE** nebo proveďte náv
 
 Další informace naleznete v tématu:
 
-- [Windows Sockets: Použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets: Použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets – Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
 - [Windows Sockets: Blokování](../mfc/windows-sockets-blocking.md)
 
@@ -37,7 +37,6 @@ Další informace naleznete v tématu:
 
 - [Windows Sockets: Převádění řetězců](../mfc/windows-sockets-converting-strings.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)
-

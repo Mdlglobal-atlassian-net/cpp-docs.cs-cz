@@ -1,5 +1,5 @@
 ---
-title: Cmenutearoffmanager – třída
+title: CMenuTearOffManager Class
 ms.date: 10/18/2018
 f1_keywords:
 - CMenuTearOffManager
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - CMenuTearOffManager [MFC], SetInUse
 - CMenuTearOffManager [MFC], SetupTearOffMenus
 ms.assetid: ab7ca272-ce42-4678-95f7-6ad75038f5a0
-ms.openlocfilehash: 60e89967d139a3f5bc7b96cc1823b31b98a57fb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6bdbb18c2d1b40423457b4cf07d0a747138b99b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558844"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266195"
 ---
-# <a name="cmenutearoffmanager-class"></a>Cmenutearoffmanager – třída
+# <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager Class
 
 Spravuje odnímatelné nabídky. Odnímatelná nabídka je nabídka na panelu nabídek. Uživatel může odebrat odnímatelnou nabídku z řádku nabídek, způsobí odnímatelná nabídka uvolnění.
 
@@ -220,7 +220,7 @@ void SetupTearOffMenus(HMENU hMenu);
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

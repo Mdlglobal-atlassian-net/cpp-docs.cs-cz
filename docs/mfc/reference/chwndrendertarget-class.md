@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHwndRenderTarget [MFC], Resize
 - CHwndRenderTarget [MFC], m_pHwndRenderTarget
 ms.assetid: aa65b69f-7202-46ea-af81-ef325da0b840
-ms.openlocfilehash: 439ff0152ec69575f21faa332d8fac4bbe779a16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf446cdf1ea064943ff92d66ac89b0e4177e6910
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551863"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270317"
 ---
 # <a name="chwndrendertarget-class"></a>Chwndrendertarget – třída
 
@@ -68,7 +68,7 @@ class CHwndRenderTarget : public CRenderTarget;
 
 |Název|Popis|
 |----------|-----------------|
-|[CHwndRenderTarget::operator ID2D1HwndRenderTarget *](#operator_id2d1hwndrendertarget_star)|Vrátí ID2D1HwndRenderTarget rozhraní.|
+|[CHwndRenderTarget::operator ID2D1HwndRenderTarget*](#operator_id2d1hwndrendertarget_star)|Vrátí ID2D1HwndRenderTarget rozhraní.|
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
@@ -80,9 +80,9 @@ class CHwndRenderTarget : public CRenderTarget;
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Crendertarget –](../../mfc/reference/crendertarget-class.md)
+[CRenderTarget](../../mfc/reference/crendertarget-class.md)
 
-[Chwndrendertarget –](../../mfc/reference/chwndrendertarget-class.md)
+[CHwndRenderTarget](../../mfc/reference/chwndrendertarget-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -233,6 +233,6 @@ Nová velikost cíle vykreslování v pixelech zařízení
 
 Pokud metoda uspěje, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

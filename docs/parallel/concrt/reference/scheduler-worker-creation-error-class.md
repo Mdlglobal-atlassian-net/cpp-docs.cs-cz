@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - scheduler_worker_creation_error class
 ms.assetid: 4aec1c3e-c32a-41b2-899d-2d898f23b3c7
-ms.openlocfilehash: 565f4b409f19d7ab70d536e977c13d628c30e882
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 66e7485787606c22aba2970dbe481a7d29e66621
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442195"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268379"
 ---
 # <a name="schedulerworkercreationerror-class"></a>scheduler_worker_creation_error – třída
 
@@ -51,7 +51,7 @@ Toto se obvykle výjimka při volání do operačního systému vytvořit kontex
 
 **Namespace:** souběžnosti
 
-##  <a name="ctor"></a> scheduler_worker_creation_error –
+##  <a name="ctor"></a> scheduler_worker_creation_error
 
 Vytvoří `scheduler_worker_creation_error` objektu.
 
@@ -66,12 +66,12 @@ explicit _CRTIMP scheduler_worker_creation_error(
 
 ### <a name="parameters"></a>Parametry
 
-*_TEXT*<br/>
+*_Message*<br/>
 Popisná zpráva chyby.
 
 *_Hresult*<br/>
 `HRESULT` Hodnotou chyby, který způsobil výjimku.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)

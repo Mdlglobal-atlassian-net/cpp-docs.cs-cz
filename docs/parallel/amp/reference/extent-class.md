@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-ms.openlocfilehash: 3b6803b0ddfe09feb37a6e0d3072d8afa422de8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2236b1a1b72f307dae1efa0cfe197e222820c460
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476650"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270186"
 ---
 # <a name="extent-class-c-amp"></a>extent – třída (C++ AMP)
 
@@ -39,7 +39,7 @@ class extent;
 
 **Záhlaví:** amp.h
 
-**Namespace:** souběžnosti
+**Namespace:** Souběžnost
 
 ## <a name="members"></a>Členové
 
@@ -62,7 +62,7 @@ class extent;
 |Název|Popis|
 |----------|-----------------|
 |[Operator-](#operator_min)|Vrátí nový `extent` objekt, který je vytvořen tak, že se `index` prvků z odpovídajících `extent` elementy.|
-|[Operator--](#operator_min_min)|Sníží každý prvek `extent` objektu.|
+|[operator--](#operator_min_min)|Sníží každý prvek `extent` objektu.|
 |[operator%=](#operator_mod_eq)|Vypočítá modulo (zbytek) každého prvku `extent` objektu při dělení podle čísla.|
 |[Operator * =](#operator_star_eq)|Vynásobí každý prvek `extent` číslem.|
 |[/ = – operátor](#operator_min_eq)|Vydělí každý prvek `extent` číslem.|
@@ -71,7 +71,7 @@ class extent;
 |[Operator ++](#operator_add_add)|Zvýší všechny prvky objektu `extent` objektu.|
 |[operator+=](#operator_add_eq)|Přičte zadané číslo ke každému prvku objektu `extent` objektu.|
 |[operátor =](#operator_eq)|Zkopíruje obsah jiného `extent` do tohoto objektu.|
-|[operátor-=](#operator_min_eq)|Odečte zadané číslo od každého prvku objektu `extent` objektu.|
+|[operator-=](#operator_min_eq)|Odečte zadané číslo od každého prvku objektu `extent` objektu.|
 
 ### <a name="public-constants"></a>Veřejné konstanty
 
@@ -393,6 +393,6 @@ Další na nejvýznamnější komponenta dlaždic.
 *_Dim2*<br/>
 Nejméně významná komponenta dlaždic.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: dd5f79b8ecd65428ce1231777fa6632777859a00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31157ba2445a432af274650011b839fb3df9b3c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467094"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268171"
 ---
 # <a name="icommandui-interface"></a>Icommandui – rozhraní
 
@@ -51,7 +51,7 @@ Toto rozhraní poskytuje metody a vlastnosti, které spravují uživatelských r
 
 `ICommandUI` se používá v rámci obslužné rutiny ON_UPDATE_COMMAND_UI v [rozhraní ICommandTarget](../../mfc/reference/icommandtarget-interface.md)-odvozené třídy. Když uživatel aplikace aktivuje (zaškrtne nebo kliknutí) nabídka, každá položka nabídky se zobrazí jako povolené nebo zakázané. Cíl každý příkaz nabídky poskytuje tyto informace pomocí implementace obslužné rutiny ON_UPDATE_COMMAND_UI. Pro každý z objektů příkaz uživatelského rozhraní v aplikaci použijte okno Vlastnosti vytvořit položku mapování zpráv a prototyp funkce pro každou obslužnou rutinu.
 
-Další informace o tom, jak `ICommandUI` rozhraní se používá v směrování příkazů, naleznete v tématu [postupy: přidání směrování příkazů do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
+Další informace o tom, jak `ICommandUI` rozhraní se používá v směrování příkazů, naleznete v tématu [jak: Příkaz přidat ovládací prvek směrování Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
 
 Další informace o používání formulářů Windows, naleznete v tématu [použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -80,7 +80,7 @@ void ContinueRouting();
 
 ## <a name="remarks"></a>Poznámky
 
-To je funkce členů s pokročilým členstvím, které byste měli použít ve spojení s ON_COMMAND_EX obslužná rutina, která vrací hodnotu FALSE. Další informace najdete v tématu Technická poznámka TN006: mapy zpráv.
+To je funkce členů s pokročilým členstvím, které byste měli použít ve spojení s ON_COMMAND_EX obslužná rutina, která vrací hodnotu FALSE. Další informace najdete v tématu Technická poznámka TN006: Mapy zpráv.
 
 ## <a name="enabled"></a> ICommandUI::Enabled
 
@@ -141,6 +141,6 @@ Tato vlastnost nastavuje vlastnost text položky uživatelského rozhraní pro t
 
 **Záhlaví:** afxwinforms.h (definované v sestavení atlmfc\lib\mfcmifc80.dll)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CCmdUI – třída](../../mfc/reference/ccmdui-class.md)

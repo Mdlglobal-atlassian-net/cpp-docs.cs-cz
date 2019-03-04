@@ -1,5 +1,5 @@
 ---
-title: Cpagerctrl – třída
+title: CPagerCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CPagerCtrl
@@ -48,14 +48,14 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: cd3eed89753031de64d35a2b3602b1fb42356123
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c782d5761323129eccf7ee129d877128c400d93a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613535"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270718"
 ---
-# <a name="cpagerctrl-class"></a>Cpagerctrl – třída
+# <a name="cpagerctrl-class"></a>CPagerCtrl Class
 
 `CPagerCtrl` Třídy obaluje ovládací prvek stránkování Windows, který můžete přejít do zobrazení obsaženého okna obsahujícího okna nevejde.
 
@@ -612,9 +612,8 @@ void SetScrollPos(int iPos);
 
 Tato metoda odesílá [PGM_SETPOS](/windows/desktop/Controls/pgm-setpos) zprávu, která je popsána v sadě Windows SDK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CPagerCtrl – třída](../../mfc/reference/cpagerctrl-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Ovládacími prvky stránkování](/windows/desktop/Controls/pager-controls)
-

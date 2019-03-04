@@ -1,18 +1,18 @@
 ---
-title: 'Schránka: Kopírování a vkládání dat'
+title: 'Schránka: Kopírování a vkládání dat'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-ms.openlocfilehash: 7f22418b4006bcb9fac1d4430660c8721bc7e903
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da589743e98b2ac020e006aedb0ccc0415998f17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437034"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270732"
 ---
-# <a name="clipboard-copying-and-pasting-data"></a>Schránka: Kopírování a vkládání dat
+# <a name="clipboard-copying-and-pasting-data"></a>Schránka: Kopírování a vkládání dat
 
 Toto téma popisuje minimální práce, které jsou nezbytné k implementaci zkopírováním a vložením ze schránky ve vašich aplikacích OLE. Doporučujeme, abyste si přečetli [datové objekty a zdroje dat (OLE)](../mfc/data-objects-and-data-sources-ole.md) témata než budete pokračovat.
 
@@ -67,7 +67,6 @@ Pro zpracování možnost Vložit jinak v nabídce Upravit, naleznete v tématu 
 
 - [OLE](../mfc/ole-background.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Schránka: Použití mechanismu schránky OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
-

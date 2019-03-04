@@ -7,12 +7,12 @@ helpviewer_keywords:
 - wizards (MFC)
 - MFC Class Wizard
 ms.assetid: 8b0dd867-5d07-4214-99be-2a1c1995e6d9
-ms.openlocfilehash: d80dc10467b5180158fcb0f681bbc728ada60764
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59f0b39afe467267d61d7b851e654cc8bddc7b36
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471770"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265961"
 ---
 # <a name="mfc-class-wizard"></a>Průvodce třídou MFC
 
@@ -50,7 +50,7 @@ Chcete-li otevřít **Průvodce třídami MFC**na **projektu** nabídky, klikně
 
    **Deklarace třídy** pole se zobrazí pouze v případě, že název v ní se liší od názvu v **implementace třídy**.
 
-- **prostředek**
+- **Prostředek**
 
    ID prostředku v **název třídy**, pokud nějaké existují. V opačném případě **prostředků** pole je prázdné.
 
@@ -104,6 +104,6 @@ Chcete-li otevřít **Průvodce třídami MFC**na **projektu** nabídky, klikně
 
    Chcete-li zobrazit definici, dvakrát klikněte na položku **metody** seznamu. Nebo vyberte položku **metody** seznamu a potom klikněte na tlačítko **přejít k definici** tlačítko.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přidání třídy](../../ide/adding-a-class-visual-cpp.md)

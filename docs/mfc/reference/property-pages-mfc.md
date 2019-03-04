@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 4f8e56ed4be6bf4c7a5283894493ee46c4ed2ff4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2f75044c7cfbc1f9d2af1d9bda5c108f9afa881
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620906"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269211"
 ---
 # <a name="property-pages-mfc"></a>Stránky vlastností (MFC)
 
@@ -24,18 +24,18 @@ Tento mechanismus mapování dat mapuje ovládací prvky stránky vlastností pr
 
 |||
 |-|-|
-|[Ddp_cbindex –](#ddp_cbindex)|Propojí vybrané řetězcového indexu pole se seznamem s vlastností ovládacího prvku.|
-|[Ddp_cbstring –](#ddp_cbstring)|Propojí vybrané řetězec v poli se seznamem s vlastností ovládacího prvku. Vybrané řetězce mohou začínat stejná písmena jako hodnotu vlastnosti, ale nemusí odpovídat plně.|
-|[Ddp_cbstringexact –](#ddp_cbstringexact)|Propojí vybrané řetězec v poli se seznamem s vlastností ovládacího prvku. Vybraný řetězec a hodnotu vlastnosti řetězce musí přesně shodovat.|
-|[Ddp_check –](#ddp_check)|Obsahuje odkazy na stránce vlastností ovládacího prvku s vlastností ovládacího prvku zaškrtávací políčko.|
-|[Ddp_lbindex –](#ddp_lbindex)|Propojí vybrané řetězcového indexu v seznamu pomocí ovládacího prvku.|
-|[Ddp_lbstring –](#ddp_lbstring)|Propojí vybrané řetězec v seznamu pomocí ovládacího prvku. Vybrané řetězce mohou začínat stejná písmena jako hodnotu vlastnosti, ale nemusejí odpovídat plně.|
-|[Ddp_lbstringexact –](#ddp_lbstringexact)|Propojí vybrané řetězec v seznamu pomocí ovládacího prvku. Vybraný řetězec a hodnotu vlastnosti řetězce musí přesně shodovat.|
-|[Ddp_postprocessing –](#ddp_postprocessing)|Dokončení převodu hodnoty vlastnosti z ovládacího prvku.|
-|[Ddp_radio –](#ddp_radio)|Odkazy skupině přepínacích tlačítek na stránce vlastností ovládacího prvku s vlastností ovládacího prvku.|
-|[Ddp_text –](#ddp_text)|Obsahuje odkazy ovládací prvek na stránce vlastností ovládacího prvku s vlastností ovládacího prvku. Tato funkce zpracovává několik různých typů vlastností, jako například **double**, **krátký**, BSTR, a **dlouhé**.|
+|[DDP_CBIndex](#ddp_cbindex)|Propojí vybrané řetězcového indexu pole se seznamem s vlastností ovládacího prvku.|
+|[DDP_CBString](#ddp_cbstring)|Propojí vybrané řetězec v poli se seznamem s vlastností ovládacího prvku. Vybrané řetězce mohou začínat stejná písmena jako hodnotu vlastnosti, ale nemusí odpovídat plně.|
+|[DDP_CBStringExact](#ddp_cbstringexact)|Propojí vybrané řetězec v poli se seznamem s vlastností ovládacího prvku. Vybraný řetězec a hodnotu vlastnosti řetězce musí přesně shodovat.|
+|[DDP_Check](#ddp_check)|Obsahuje odkazy na stránce vlastností ovládacího prvku s vlastností ovládacího prvku zaškrtávací políčko.|
+|[DDP_LBIndex](#ddp_lbindex)|Propojí vybrané řetězcového indexu v seznamu pomocí ovládacího prvku.|
+|[DDP_LBString](#ddp_lbstring)|Propojí vybrané řetězec v seznamu pomocí ovládacího prvku. Vybrané řetězce mohou začínat stejná písmena jako hodnotu vlastnosti, ale nemusejí odpovídat plně.|
+|[DDP_LBStringExact](#ddp_lbstringexact)|Propojí vybrané řetězec v seznamu pomocí ovládacího prvku. Vybraný řetězec a hodnotu vlastnosti řetězce musí přesně shodovat.|
+|[DDP_PostProcessing](#ddp_postprocessing)|Dokončení převodu hodnoty vlastnosti z ovládacího prvku.|
+|[DDP_Radio](#ddp_radio)|Odkazy skupině přepínacích tlačítek na stránce vlastností ovládacího prvku s vlastností ovládacího prvku.|
+|[DDP_Text](#ddp_text)|Obsahuje odkazy ovládací prvek na stránce vlastností ovládacího prvku s vlastností ovládacího prvku. Tato funkce zpracovává několik různých typů vlastností, jako například **double**, **krátký**, BSTR, a **dlouhé**.|
 
-Další informace o `DoDataExchange` funkce a vlastnosti stránky, najdete v článku [ovládací prvky ActiveX: stránky vlastností](../../mfc/mfc-activex-controls-property-pages.md).
+Další informace o `DoDataExchange` funkce a vlastnosti stránky, najdete v článku [ovládací prvky ActiveX: Stránky vlastností](../../mfc/mfc-activex-controls-property-pages.md).
 
 Následuje seznam makra použitá k vytvoření a správě stránek vlastností pro ovládací prvek OLE:
 
@@ -47,7 +47,7 @@ Následuje seznam makra použitá k vytvoření a správě stránek vlastností 
 |[END_PROPPAGEIDS](#end_proppageids)|Konec seznamu ID stránek vlastností.|
 |[PROPPAGEID](#proppageid)|Deklaruje stránky vlastností třídy ovládacího prvku.|
 
-##  <a name="ddp_cbindex"></a>  Ddp_cbindex –
+##  <a name="ddp_cbindex"></a>  DDP_CBIndex
 
 Voláním této funkce na stránce vlastností `DoDataExchange` funkce pro synchronizaci se index aktuálního výběru v poli se seznamem na stránce vlastností hodnota celočíselnou vlastnost.
 
@@ -79,9 +79,9 @@ Tato funkce by měla být volána před odpovídajícími `DDX_CBIndex` volání
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxctl.h
+  **Header** afxctl.h
 
-##  <a name="ddp_cbstring"></a>  Ddp_cbstring –
+##  <a name="ddp_cbstring"></a>  DDP_CBString
 
 Voláním této funkce na stránce vlastností `DoDataExchange` funkce synchronizace hodnotu vlastnosti řetězce pomocí aktuálního výběru v poli se seznamem na stránce vlastností.
 
@@ -113,7 +113,7 @@ Tato funkce by měla být volána před odpovídajícími `DDX_CBString` volán�
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxctl.h
+  **Header** afxctl.h
 
 ##  <a name="ddp_cbstringexact"></a>  Ddp_cbstringexact –
 
@@ -147,7 +147,7 @@ Tato funkce by měla být volána před odpovídajícími `DDX_CBStringExact` vo
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxctl.h
+  **Header** afxctl.h
 
 ##  <a name="ddp_check"></a>  Ddp_check –
 
@@ -181,9 +181,9 @@ Tato funkce by měla být volána před odpovídajícími `DDX_Check` volání f
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxctl.h
+  **Header** afxctl.h
 
-##  <a name="ddp_lbindex"></a>  Ddp_lbindex –
+##  <a name="ddp_lbindex"></a>  DDP_LBIndex
 
 Voláním této funkce na stránce vlastností `DoDataExchange` funkce pro synchronizaci se index aktuálně vybrané položky v seznamu na stránce vlastností hodnota celočíselnou vlastnost.
 
@@ -215,7 +215,7 @@ Tato funkce by měla být volána před odpovídajícími `DDX_LBIndex` volání
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxctl.h
+  **Header** afxctl.h
 
 ##  <a name="ddp_lbstring"></a>  Ddp_lbstring –
 
@@ -249,7 +249,7 @@ Tato funkce by měla být volána před odpovídajícími `DDX_LBString` volán�
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxctl.h
+  **Header** afxctl.h
 
 ##  <a name="ddp_lbstringexact"></a>  Ddp_lbstringexact –
 
@@ -283,7 +283,7 @@ Tato funkce by měla být volána před odpovídajícími `DDX_LBStringExact` vo
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxctl.h
+  **Header** afxctl.h
 
 ##  <a name="ddp_postprocessing"></a>  Ddp_postprocessing –
 
@@ -306,9 +306,9 @@ Tuto funkci lze volat po dokončení všechny funkce výměny dat. Příklad:
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxctl.h
+  **Header** afxctl.h
 
-##  <a name="ddp_radio"></a>  Ddp_radio –
+##  <a name="ddp_radio"></a>  DDP_Radio
 
 Voláním této funkce ve vašem ovládacím prvku `DoPropExchange` funkce pro synchronizaci hodnoty vlastnosti se přidružené vlastnosti stránky ovládací prvek přepínač.
 
@@ -340,9 +340,9 @@ Tato funkce by měla být volána před odpovídajícími `DDX_Radio` volání f
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxctl.h
+  **Header** afxctl.h
 
-##  <a name="ddp_text"></a>  Ddp_text –
+##  <a name="ddp_text"></a>  DDP_Text
 
 Voláním této funkce ve vašem ovládacím prvku `DoDataExchange` funkce synchronizace hodnoty vlastnosti pomocí ovládacího prvku přidružené vlastnosti stránky.
 
@@ -416,7 +416,7 @@ Tato funkce by měla být volána před odpovídajícími `DDX_Text` volání fu
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxctl.h
+  **Header** afxctl.h
 
 ##  <a name="begin_proppageids"></a>  BEGIN_PROPPAGEIDS
 
@@ -428,7 +428,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 
 ### <a name="parameters"></a>Parametry
 
-*$class_name*<br/>
+*class_name*<br/>
 Název třídy ovládacího prvku pro vlastnosti, které jsou určené stránky.
 
 *Počet*<br/>
@@ -438,11 +438,11 @@ Název třídy ovládacího prvku pro vlastnosti, které jsou určené stránky.
 
 V souboru implementace (.cpp), který definuje členské funkce třídy seznam vlastností stránky začínat BEGIN_PROPPAGEIDS – makro pak přidat makro položky pro každý z vašich stránky vlastností a dokončení seznamu vlastností stránky pomocí END_PROPPAGEIDS makra.
 
-Další informace na stránkách vlastností, najdete v článku [ovládací prvky ActiveX: stránky vlastností](../../mfc/mfc-activex-controls-property-pages.md).
+Další informace na stránkách vlastností, najdete v článku [ovládací prvky ActiveX: Stránky vlastností](../../mfc/mfc-activex-controls-property-pages.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxctl.h
+  **Header** afxctl.h
 
 ##  <a name="end_proppageids"></a>  END_PROPPAGEIDS
 
@@ -454,12 +454,12 @@ END_PROPPAGEIDS(class_name)
 
 ### <a name="parameters"></a>Parametry
 
-*$class_name*<br/>
+*class_name*<br/>
 Název třídy ovládacího prvku, který vlastní stránky vlastností.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxctl.h
+  **Header** afxctl.h
 
 ##  <a name="proppageid"></a>  PROPPAGEID
 
@@ -471,7 +471,7 @@ PROPPAGEID(clsid)
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor CLSID*<br/>
+*clsid*<br/>
 ID jedinečné třídy stránky vlastností.
 
 ### <a name="remarks"></a>Poznámky
@@ -480,8 +480,8 @@ Všechna makra PROPPAGEID musí být umístěn mezi BEGIN_PROPPAGEIDS a END_PROP
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxctl.h
+  **Header** afxctl.h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows API [MFC], encapsulation by MFC
 - encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
-ms.openlocfilehash: ff29a867a8351a51ad7f09a5ca31d871fc67bab8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 933fcf97c24ed0903395e2c718f8c89d42473494
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589303"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269016"
 ---
 # <a name="framework-mfc"></a>Framework (MFC)
 
@@ -41,7 +41,7 @@ Zapouzdření znamená, že třídy C++ `CWnd`, například obsahuje členskou p
 
 [Jakým způsobem volá framework váš kód](../mfc/how-the-framework-calls-your-code.md)
 
-[CWinApp – třída aplikace](../mfc/cwinapp-the-application-class.md)
+[CWinApp Třída aplikace](../mfc/cwinapp-the-application-class.md)
 
 [Šablony dokumentů a proces vytváření dokumentů/zobrazení](../mfc/document-templates-and-the-document-view-creation-process.md)
 
@@ -49,6 +49,6 @@ Zapouzdření znamená, že třídy C++ `CWnd`, například obsahuje členskou p
 
 [Objekty oken](../mfc/window-objects.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití tříd pro psaní aplikací pro Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)

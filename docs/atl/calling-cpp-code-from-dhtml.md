@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - DHTML, calling C++ code from
 ms.assetid: 37329acd-4c22-40ca-a85a-b7480748f75f
-ms.openlocfilehash: 0fa4f51f4488be61edb0f01d9fddc956cd7a45b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb63f8671770f57972a4c789d983bdf9658d5ecb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555191"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270173"
 ---
 # <a name="calling-c-code-from-dhtml"></a>Volání kódu C++ z DHTML
 
@@ -41,7 +41,6 @@ V kódu HTML nad metodu okno externí `OnClick`, se nazývá jako součást zna�
 
 Zobrazit [úprav ovládacího prvku ATL DHTML](../atl/modifying-the-atl-dhtml-control.md) Další informace o poskytování vlastních metod. Zobrazit [identifikace prvků projektu ovládací prvek DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md) Další informace o souboru HTML.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora pro ovládací prvek DHTML](../atl/atl-support-for-dhtml-controls.md)
-

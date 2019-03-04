@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - customizations, MFC Extensions
 ms.assetid: 3b1b7532-8cc9-48dc-9bbe-7fd4060530b5
-ms.openlocfilehash: ea72d24cccf64f54a16efb05c541e781cf00e469
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42f4b21fb257646d4d505427760a8fe1c7056e77
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494537"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265838"
 ---
 # <a name="customization-for-mfc"></a>Přizpůsobení pro prostředí MFC
 
@@ -37,8 +37,7 @@ Tipy k další přizpůsobení najdete v následujících tématech:
 
 [Uživatelem definované nástroje](../mfc/user-defined-tools.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Desktopové aplikace knihovny MFC](../mfc/mfc-desktop-applications.md)<br/>
 [Vliv přizpůsobení na zabezpečení](../mfc/security-implications-of-customization.md)
-

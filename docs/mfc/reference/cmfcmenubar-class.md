@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: a15291b49127b6c5f1efd97d8102b272c126cc10
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: e4b1a7eba31ef28578c515c437978bc59cbd08f1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694358"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267365"
 ---
 # <a name="cmfcmenubar-class"></a>Cmfcmenubar – třída
 
@@ -131,7 +131,7 @@ class CMFCMenuBar : public CMFCToolbar
 |Název|Popis|
 |----------|-----------------|
 |[CMFCMenuBar::AdjustLocations](#adjustlocations)|(Přepíše `CMFCToolBar::AdjustLocations`.)|
-|[CMFCMenuBar::AllowChangeTextLabels](#allowchangetextlabels)|Určuje, zda textové popisky můžete zobrazit v části Image na tlačítka na panelu nástrojů. (Přepíše [CMFCToolBar::AllowChangeTextLabels](../../mfc/reference/cmfctoolbar-class.md#allowchangetextlabels).)|
+|[CMFCMenuBar::AllowChangeTextLabels](#allowchangetextlabels)|Určuje, zda textové popisky můžete zobrazit v části Image na tlačítka na panelu nástrojů. (Overrides [CMFCToolBar::AllowChangeTextLabels](../../mfc/reference/cmfctoolbar-class.md#allowchangetextlabels).)|
 |[CMFCMenuBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(Přepíše `CPane::AllowShowOnPaneMenu`.)|
 |[CMFCMenuBar::CalcFixedLayout](#calcfixedlayout)|Vypočítá vodorovnou velikost panelu nástrojů. (Přepíše [CMFCToolBar::CalcFixedLayout](../../mfc/reference/cmfctoolbar-class.md#calcfixedlayout).)|
 |[CMFCMenuBar::CalcLayout](#calclayout)|(Přepíše `CMFCToolBar::CalcLayout`.)|
@@ -208,9 +208,9 @@ Následující příklad ukazuje, jak použít různé metody v `CMFCMenuBar` t�
 
 [CPane](../../mfc/reference/cpane-class.md)
 
-[Cmfcbasetoolbar –](../../mfc/reference/cmfcbasetoolbar-class.md)
+[CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)
 
-[Cmfctoolbar –](../../mfc/reference/cmfctoolbar-class.md)
+[CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)
 
 `CMFCMenuBar`
 
@@ -1082,7 +1082,7 @@ static void SetShowAllCommands(BOOL bShowAllCommands = TRUE);
 
 Nabídka se nezobrazí všechny příkazy nabídky, skryje příkazy, které se používají zřídka. Další informace o zobrazení příkazů nabídky najdete v tématu [cmfcmenubar – třída](../../mfc/reference/cmfcmenubar-class.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

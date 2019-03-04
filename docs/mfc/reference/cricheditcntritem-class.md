@@ -1,5 +1,5 @@
 ---
-title: Cricheditcntritem – třída
+title: CRichEditCntrItem Class
 ms.date: 11/04/2016
 f1_keywords:
 - CRichEditCntrItem
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - CRichEditCntrItem [MFC], CRichEditCntrItem
 - CRichEditCntrItem [MFC], SyncToRichEditObject
 ms.assetid: 6c0b4efe-0fb8-4621-b5e1-fdcb8ec48c3b
-ms.openlocfilehash: 4683e0ea4a56e6766c039b2fcb858a54e28d14ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f71607147b353c5071830bdce481f1e5e5d4717
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443339"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268483"
 ---
-# <a name="cricheditcntritem-class"></a>Cricheditcntritem – třída
+# <a name="cricheditcntritem-class"></a>CRichEditCntrItem Class
 
 S [cricheditview –](../../mfc/reference/cricheditview-class.md) a [cricheditdoc –](../../mfc/reference/cricheditdoc-class.md), poskytuje funkce pro ovládací prvek RTF v rámci kontextu architektury zobrazení dokumentu MFC.
 
@@ -57,7 +57,7 @@ Příklad použití RichEdit kontejner položek v aplikaci knihovny MFC, najdete
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[Cdocitem –](../../mfc/reference/cdocitem-class.md)
+[CDocItem](../../mfc/reference/cdocitem-class.md)
 
 [COleClientItem](../../mfc/reference/coleclientitem-class.md)
 
@@ -101,14 +101,14 @@ void SyncToRichEditObject(REOBJECT& reo);
 
 ### <a name="parameters"></a>Parametry
 
-*Znov*<br/>
+*reo*<br/>
 Odkaz [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) struktura, která popisuje položky OLE.
 
 ### <a name="remarks"></a>Poznámky
 
 Další informace najdete v tématu [DVASPECT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect) v sadě Windows SDK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC WORDPAD](../../visual-cpp-samples.md)<br/>
 [COleClientItem – třída](../../mfc/reference/coleclientitem-class.md)<br/>

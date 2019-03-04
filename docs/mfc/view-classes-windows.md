@@ -8,12 +8,12 @@ helpviewer_keywords:
 - splitter window classes [MFC]
 - view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-ms.openlocfilehash: 5fc08ec23e0a2b2ba105aa3a633ee862dc452450
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad58fd6fa2548c2cf320baf75b8fc33a835ddd55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462295"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267092"
 ---
 # <a name="view-classes-windows"></a>Třídy zobrazení (Windows)
 
@@ -24,7 +24,7 @@ Zobrazit třídu souvisí s dokumentové třídy a použití objektu šablony do
 [CView](../mfc/reference/cview-class.md)<br/>
 Základní třída pro zobrazení specifické pro aplikace z dat dokumentu. Zobrazení zobrazovat data a přijímat uživatelský vstup pro úpravy nebo vyberte data. Zobrazit třídu nebo třídy z `CView`.
 
-[Cscrollview –](../mfc/reference/cscrollview-class.md)<br/>
+[CScrollView](../mfc/reference/cscrollview-class.md)<br/>
 Základní třída pro zobrazení s možností posouvání. Odvodit třídu vaše zobrazení z `CScrollView` pro automatické posouvání.
 
 ## <a name="form-and-record-views"></a>Formuláře a zobrazení záznamů
@@ -42,20 +42,20 @@ Formulář obsahuje zobrazení přímo připojen k objektu sady záznamů objekt
 [CRecordView](../mfc/reference/crecordview-class.md)<br/>
 Formulář obsahuje zobrazení přímo připojen k objektu sady záznamů připojení ODBC (Open Database). Všechna zobrazení formulářů, jako jsou `CRecordView` je založen na šabloně dialogu pole.
 
-[CHtmlEditView –](../mfc/reference/chtmleditview-class.md)<br/>
+[CHtmlEditView](../mfc/reference/chtmleditview-class.md)<br/>
 Zobrazení formuláře, které poskytuje funkce úprav platformy WebBrowser HTML.
 
 ## <a name="control-views"></a>Zobrazení ovládacích prvků
 
 Ovládací prvek zobrazení ovládacího prvku jako jejich zobrazení.
 
-[Cctrlview –](../mfc/reference/cctrlview-class.md)<br/>
+[CCtrlView](../mfc/reference/cctrlview-class.md)<br/>
 Základní třída pro všechna zobrazení související s ovládacími prvky Windows. Zobrazení založená na ovládací prvky jsou popsané níže.
 
 [CEditView](../mfc/reference/ceditview-class.md)<br/>
 Zobrazení, která obsahuje standardní Windows ovládacích prvků pro úpravy (viz [CEdit](../mfc/reference/cedit-class.md)). Upravte úpravy textu podpora ovládacích prvků, vyhledávání, nahrazení a možností posouvání.
 
-[Cricheditview –](../mfc/reference/cricheditview-class.md)<br/>
+[CRichEditView](../mfc/reference/cricheditview-class.md)<br/>
 Zobrazení, které obsahuje Windows bohatých ovládacích prvků pro úpravy (viz [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Kromě funkcí textové pole pro úpravy s formátováním ovládací prvky písma, barvy, formátování odstavce a vložené objekty OLE.
 
 [CListView](../mfc/reference/clistview-class.md)<br/>
@@ -71,19 +71,18 @@ Zobrazení, která obsahuje ovládací prvek stromu Windows (viz [CTreeCtrl](../
 [CSplitterWnd.](../mfc/reference/csplitterwnd-class.md)<br/>
 Okno, které můžete uživatele rozdělit do několika podoken. Těchto podoken můžete vizualizaci může být umožňující změnu velikosti uživatelem nebo pevnou velikostí.
 
-[Cprintdialog –](../mfc/reference/cprintdialog-class.md)<br/>
+[CPrintDialog](../mfc/reference/cprintdialog-class.md)<br/>
 Poskytuje standardní dialogové okno pro tisk souboru.
 
-[Cprintinfo –](../mfc/reference/cprintinfo-structure.md)<br/>
+[CPrintInfo](../mfc/reference/cprintinfo-structure.md)<br/>
 Struktury obsahující informace o úloze tisku nebo náhledu tisku. Používá `CView`je tisk architektury.
 
-[Cricheditdoc –](../mfc/reference/cricheditdoc-class.md)<br/>
+[CRichEditDoc](../mfc/reference/cricheditdoc-class.md)<br/>
 Udržuje seznam klientské položky OLE, které jsou v `CRichEditView`.
 
-[Cricheditcntritem –](../mfc/reference/cricheditcntritem-class.md)<br/>
+[CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)<br/>
 Poskytuje přístup na straně klienta OLE položky uložené v `CRichEditView`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../mfc/class-library-overview.md)
-

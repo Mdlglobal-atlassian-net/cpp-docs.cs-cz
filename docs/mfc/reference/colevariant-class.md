@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: b37105cf1afdcf966176a2e2615f9c141022088d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2b2d0935380caed8ad9d6741b9107a5f879f7903
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520515"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268056"
 ---
 # <a name="colevariant-class"></a>COleVariant – třída
 
@@ -87,7 +87,7 @@ Další informace o `COleVariant` třídy a jeho použití v automatizace OLE, n
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdisp.h
+**Header:** afxdisp.h
 
 ##  <a name="attach"></a>  COleVariant::Attach
 
@@ -169,7 +169,7 @@ A [CByteArray](../../mfc/reference/cbytearray-class.md) objektu, které se mají
 *lbSrc*<br/>
 A [CLongBinary](../../mfc/reference/clongbinary-class.md) objektu, které se mají zkopírovat do nové `COleVariant` objektu.
 
-*PIDL*<br/>
+*pidl*<br/>
 Ukazatel [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-_itemidlist) struktury, které se mají zkopírovat do nové `COleVariant` objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -218,7 +218,7 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*VarType*<br/>
+*vartype*<br/>
 VARTYPE to `COleVariant` objektu.
 
 *pSrc*<br/>
@@ -390,7 +390,7 @@ void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 *lpszSrc*<br/>
 Řetězec zakončený hodnotou null ke zkopírování do nové `COleVariant` objektu.
 
-*vtSrc*<br/>
+*VtSrc*<br/>
 VARTYPE pro novou `COleVariant` objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -399,6 +399,6 @@ Parametr *vtSrc* musí být VT_BSTR (UNICODE) nebo VT_BSTRT (ANSI). `SetString` 
 
 Sady záznamů rozhraní DAO v kódování UNICODE sestavení očekává, že řetězců, které mají být ANSI. Proto pro rozhraní DAO funkcí, které používají `COleVariant` objektů, pokud nevytváříte sady záznamů ve formátu UNICODE, je nutné použít **COleVariant::COleVariant (** *lpszSrc* **,** *vtSrc* **)** formu konstruktor s *vtSrc* nastavit VT_BSTRT (ANSI) nebo použít `SetString` s *vtSrc* nastavena na VT _BSTRT aby řetězců v kódu ANSI. Například `CDaoRecordset` funkce [CDaoRecordset::Seek](../../mfc/reference/cdaorecordset-class.md#seek) a [CDaoRecordset::SetFieldValue](../../mfc/reference/cdaorecordset-class.md#setfieldvalue) použít `COleVariant` objektů jako parametry. Tyto objekty musí být ANSI, pokud není sada záznamů rozhraní DAO kódování UNICODE.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

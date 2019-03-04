@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Primary verb [MFC]
 - OLE activation {MFC]
 ms.assetid: eb56ff23-1de8-43ad-abeb-dc7346ba7b70
-ms.openlocfilehash: f6774f1de1e7abd318e5cd38fed1a2c805270c15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: baf8e0ac3527407b2e5ba77dfdf3921419217fd7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443324"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267911"
 ---
 # <a name="activation-verbs"></a>Aktivace: Příkazy
 
@@ -29,13 +29,12 @@ Mnoho typů položek OLE podporují pouze jeden příkaz a upravit je nejčastě
 
 Další příkaz použitý často je otevřít. Příkaz Otevřít se shoduje s úpravy, s výjimkou serverová aplikace spuštěna v samostatném okně. Tento příkaz má být použit při aplikace typu kontejner nebo serverové aplikace nepodporuje aktivace na místě.
 
-Všechny příkazy než primárního operaci je nutné volat pomocí příkazu podnabídky při výběru položky. Tento podnabídky obsahuje všechny akce, které podporuje položky a obvykle se dostane *typename* **objekt** příkaz **upravit** nabídky. Informace o tom, *typename* **objektu** příkazu, najdete v článku [nabídky a prostředky: kontejnerové doplňky](../mfc/menus-and-resources-container-additions.md).
+Všechny příkazy než primárního operaci je nutné volat pomocí příkazu podnabídky při výběru položky. Tento podnabídky obsahuje všechny akce, které podporuje položky a obvykle se dostane *typename* **objekt** příkaz **upravit** nabídky. Informace o tom, *typename* **objektu** příkazu, najdete v článku [nabídky a prostředky: Kontejnerové doplňky](../mfc/menus-and-resources-container-additions.md).
 
 Příkazy, které podporuje serverové aplikace jsou uvedeny v registrační databázi Windows. Pokud je serverová aplikace napsané pomocí knihovny Microsoft Foundation Class, se automaticky zaregistruje všechny akce při spuštění serveru. V opačném případě byste měli zaregistrovat během fáze inicializace aplikace serveru. Další informace najdete v článku [registrace](../mfc/registration.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Aktivace](../mfc/activation-cpp.md)<br/>
 [Kontejnery](../mfc/containers.md)<br/>
 [Servery](../mfc/servers.md)
-

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITopologyNode structure
 ms.assetid: 92e7e032-04f6-4c7c-be36-8f9a35fc4734
-ms.openlocfilehash: 4f880e3c44cd9f301aa65d45500ed7f1d1725bc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 867e0543d1b9f2810a3fe761f038947c4d88da4d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636654"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268626"
 ---
 # <a name="itopologynode-structure"></a>ITopologyNode – struktura
 
@@ -35,11 +35,11 @@ struct ITopologyNode;
 
 |Název|Popis|
 |----------|-----------------|
-|[Itopologynode::getexecutionresourcecount –](#getexecutionresourcecount)|Vrátí počet spuštění prostředků seskupí dohromady pod tímto uzlem.|
-|[Itopologynode::getfirstexecutionresource –](#getfirstexecutionresource)|Vrátí první spuštění prostředků seskupené pod tento uzel v pořadí výčtu.|
+|[ITopologyNode::GetExecutionResourceCount](#getexecutionresourcecount)|Vrátí počet spuštění prostředků seskupí dohromady pod tímto uzlem.|
+|[ITopologyNode::GetFirstExecutionResource](#getfirstexecutionresource)|Vrátí první spuštění prostředků seskupené pod tento uzel v pořadí výčtu.|
 |[Itopologynode::getid –](#getid)|Vrátí jedinečný identifikátor správce prostředků pro tento uzel.|
 |[Itopologynode::GetNext –](#getnext)|Vrátí rozhraní k dalšímu uzlu topologie v pořadí výčtu.|
-|[Itopologynode::getnumanode –](#getnumanode)|Číslo uzlu NUMA, ke kterému patří tento uzel zdrojů systémem přiřazené vrátí Windows.|
+|[ITopologyNode::GetNumaNode](#getnumanode)|Číslo uzlu NUMA, ke kterému patří tento uzel zdrojů systémem přiřazené vrátí Windows.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -125,6 +125,6 @@ virtual unsigned long GetNumaNode() const = 0;
 
 Proxy vlákno spuštěné na kořenovém virtuálním procesoru patřícím do tohoto uzlu bude mít příbuznost alespoň na úrovni uzlu NUMA pro uzel NUMA vrácený touto metodou.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)

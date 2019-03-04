@@ -10,12 +10,12 @@ helpviewer_keywords:
 - applications [OLE], about OLE
 - OLE component object model (COM)
 ms.assetid: 5193479d-1239-4697-aea4-e82f92c707ab
-ms.openlocfilehash: 992715c545f90176ab750890c4be3e05dfe950d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 09d80e7c45875ad2e6ed8b599d4e01d2110d562f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520481"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267222"
 ---
 # <a name="ole-in-mfc"></a>OLE ve MFC
 
@@ -76,7 +76,6 @@ Popisuje kroky potřebné k začlenit volitelné pokročilé funkce do stávají
 [Component Object Model](/windows/desktop/com/the-component-object-model)<br/>
 Popisuje použití OLE bez knihovny MFC.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Koncepty](../mfc/mfc-concepts.md)
-

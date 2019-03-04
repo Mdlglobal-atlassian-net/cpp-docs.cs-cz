@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _ATL_MIN_CRT macro
 - distributing files with ATL components
 ms.assetid: 061d5f98-f669-440e-9380-42f017a0f9e8
-ms.openlocfilehash: c6fb81ad1a6a5233eb27f67fb7985e23b0c0f4b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f83e56e3e9b8468b71534d225080ff5874731b74
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443790"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268886"
 ---
 # <a name="creating-an-atl-project"></a>Vytvoření projektu ATL
 
@@ -35,7 +35,7 @@ Nejjednodušší způsob, jak vytvořit projekt knihovny ATL je použití Průvo
 
 Po vytvoření projektu lze zobrazit vytvořené soubory v **Průzkumníka řešení**. Další informace o souborech Průvodce vytvoří pro váš projekt, naleznete v generovaném souboru ReadMe.txt. Další informace o typech souborů naleznete v tématu [typy souborů vytvořené pro projekty Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md). Další informace o konfiguraci pro nový projekt knihovny ATL a jejich změny najdete v tématu [výchozí konfigurace projektu ATL](../../atl/reference/default-atl-project-configurations.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Stránky vlastností](../../ide/property-pages-visual-cpp.md)

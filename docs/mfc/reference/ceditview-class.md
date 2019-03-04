@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: e853a770dd1f98b1e7f06afd814962f3b3805ceb
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: a2ce38dcd8879378f7d0e4ea3f074e461c51db75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177872"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269848"
 ---
 # <a name="ceditview-class"></a>Ceditview – třída
 
@@ -138,7 +138,7 @@ Další informace o `CEditView`, naleznete v tématu [odvozené zobrazení tří
 
 [CView](../../mfc/reference/cview-class.md)
 
-[Cctrlview –](../../mfc/reference/cctrlview-class.md)
+[CCtrlView](../../mfc/reference/cctrlview-class.md)
 
 `CEditView`
 
@@ -397,7 +397,7 @@ UINT PrintInsideRect(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel na kontext zařízení tiskárny.
 
 *rectLayout*<br/>
@@ -490,7 +490,7 @@ void UnlockBuffer() const;
 
 Volání `UnlockBuffer` po dokončení používání ukazatele vrácené [LockBuffer](#lockbuffer).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC SUPERPAD](../../visual-cpp-samples.md)<br/>
 [CCtrlView – třída](../../mfc/reference/cctrlview-class.md)<br/>

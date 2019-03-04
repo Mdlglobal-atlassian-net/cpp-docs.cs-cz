@@ -9,12 +9,12 @@ helpviewer_keywords:
 - derived classes [MFC], window classes
 - window classes [MFC], derived
 ms.assetid: 6f7e437e-fbde-4a06-bfab-72d9dbf05292
-ms.openlocfilehash: bf0d8e82f1a1793f4e5561e24ed9ca173511d07c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e86ca139b8470dce614564f0c0134a611adeda2c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462111"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270297"
 ---
 # <a name="derived-window-classes"></a>Odvozené třídy oken
 
@@ -28,7 +28,7 @@ Používá se pro rámce windows SDI, která ohraničují jeden dokument a jeho 
 [CMDIFrameWnd –](../mfc/reference/cmdiframewnd-class.md)<br/>
 Použít jako hlavní okno rámce pro aplikace MDI. Hlavní okno rámce je kontejner pro všechna okna dokumentu MDI a sdílí s nimi jeho nabídky panelu. Okna rámce MDI je okno nejvyšší úrovně, který se zobrazí na ploše.
 
-[CMDIChildWnd –](../mfc/reference/cmdichildwnd-class.md)<br/>
+[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)<br/>
 Používá se pro jednotlivé dokumenty otevřené v okna hlavního rámce MDI. Každý dokument a jeho zobrazení jsou orámovány podřízeným oknem rámce MDI obsažených hlavním okně rámce MDI. Podřízené okno MDI vypadá podobně jako typické okno rámce, ale je obsaženo uvnitř okna rámce MDI namísto na ploše. Podřízené okno MDI však nemá vlastní panel nabídek a musí sdílet panel nabídek okna rámce MDI, který jej obsahuje.
 
 Další informace najdete v tématu [rámce Windows](../mfc/frame-windows.md).
@@ -62,7 +62,6 @@ Kromě tříd oken poskytovaných knihovnou tříd budete potřebovat speciáln�
 
 [Vytvoření Windows](../mfc/creating-windows.md) popisuje vytvoření vytvoření objektů oken a oken, která spravují.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Objekty oken](../mfc/window-objects.md)
-

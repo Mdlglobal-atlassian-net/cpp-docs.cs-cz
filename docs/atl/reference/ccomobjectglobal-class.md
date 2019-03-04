@@ -1,5 +1,5 @@
 ---
-title: Ccomobjectglobal – třída
+title: CComObjectGlobal Class
 ms.date: 11/04/2016
 f1_keywords:
 - CComObjectGlobal
@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectGlobal class
 ms.assetid: 79bdee55-66e4-4536-b5b3-bdf09f78b9a6
-ms.openlocfilehash: ebaec439393a67331293cbf47abd08a5e7e416af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec3abd04ce72cce98dae72a1ed8cbb8d9fe72079
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485563"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267430"
 ---
-# <a name="ccomobjectglobal-class"></a>Ccomobjectglobal – třída
+# <a name="ccomobjectglobal-class"></a>CComObjectGlobal Class
 
 Tato třída spravuje počet odkazů na modul obsahující vaše `Base` objektu.
 
@@ -42,7 +42,7 @@ Vaše třída odvozena od [ccomobjectroot –](../../atl/reference/ccomobjectroo
 |Název|Popis|
 |----------|-----------------|
 |[CComObjectGlobal::CComObjectGlobal](#ccomobjectglobal)|Konstruktor|
-|[Ccomobjectglobal –:: ~ ccomobjectglobal –](#dtor)|Destruktor.|
+|[CComObjectGlobal::~CComObjectGlobal](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -102,7 +102,7 @@ CComObjectGlobal(void* = NULL));
 
 Pokud ještě odvozené ze základní třídy [ccomobjectroot –](../../atl/reference/ccomobjectroot-class.md), je nutné zadat vlastní `FinalConstruct` metody. Volání destruktoru `FinalRelease`.
 
-##  <a name="dtor"></a>  Ccomobjectglobal –:: ~ ccomobjectglobal –
+##  <a name="dtor"></a>  CComObjectGlobal::~CComObjectGlobal
 
 Destruktor.
 
@@ -132,7 +132,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*<br/>
+*iid*<br/>
 [in] Identifikátor GUID se požadované rozhraní.
 
 *ppvObject*<br/>
@@ -162,7 +162,7 @@ V ladicím buildu `Release` vrátí hodnotu, která může být užitečné pro 
 
 Ve výchozím nastavení `Release` volání `_Module::Unlock`, kde `_Module` je globální instanci [ccommodule –](../../atl/reference/ccommodule-class.md) nebo z něj odvozenou třídu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CComObjectStack – třída](../../atl/reference/ccomobjectstack-class.md)<br/>
 [CComAggObject – třída](../../atl/reference/ccomaggobject-class.md)<br/>

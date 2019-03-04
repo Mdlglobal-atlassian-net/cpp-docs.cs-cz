@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tutorials [ATL]
 - ATL, tutorials
 ms.assetid: f921a121-09c8-4812-9317-e15b2f1471fa
-ms.openlocfilehash: b4a47cd22026663acb1cade6f2b4c098c4887965
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 716818306c751a8d774a8fc6c311694a7932be2c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570570"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270108"
 ---
 # <a name="active-template-library-atl-tutorial"></a>Tutoriál knihovny ATL (Active Template Library)
 
@@ -38,7 +38,6 @@ Tento kurz je rozdělen do sedmi kroků. Každý krok je třeba provést v pořa
 
 - [Krok 7: Vložení ovládacího prvku na webové stránce](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Koncepty](../atl/active-template-library-atl-concepts.md)
-

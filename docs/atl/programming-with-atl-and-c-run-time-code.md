@@ -7,12 +7,12 @@ helpviewer_keywords:
 - _ATL_MIN_CRT macro
 - ATL, C Run-Time library (CRT)
 ms.assetid: 20f03b66-1eb7-4add-84a2-6047db0911eb
-ms.openlocfilehash: a14f8155545666df7ec64b15072258163f559266
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e44f2d944d64eb4eefc7bbd543eaaaa04c8a9de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466778"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267667"
 ---
 # <a name="programming-with-atl-and-c-run-time-code"></a>Programování s použitím knihovny ATL a běhového kódu jazyka C
 
@@ -37,7 +37,6 @@ Obsahuje podrobné informace o tom, jak funguje spouštěcí kód VCRuntime a CR
 [Knihovny Run-Time jazyka C](../c-runtime-library/crt-library-features.md)<br/>
 Tento článek popisuje různé soubory LIB, které tvoří běhové knihovny jazyka C a uvádí jejich možnosti přidružené kompilátoru a direktivy preprocesoru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Koncepty](../atl/active-template-library-atl-concepts.md)
-

@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDAOTableDef
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
-ms.openlocfilehash: b2f431b250da4b791c06a629315d59bbc7935802
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 485fe3533916e5e59bc87084f58acfb37368ac32
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579232"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270225"
 ---
 # <a name="cdaotabledef-class"></a>Cdaotabledef – třída
 
@@ -315,7 +315,7 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 *lpszName*<br/>
 Ukazatel na řetězcový výraz určující název tohoto pole.
 
-*nTyp*<br/>
+*nType*<br/>
 Hodnota označující datový typ pole. Toto nastavení může být jedna z těchto hodnot:
 
 |Typ|Velikost (bajty)|Popis|
@@ -346,7 +346,7 @@ Hodnota odpovídající vlastnosti pole a, který lze spojovat pomocí bitového
 |`dbUpdatableField`|Můžete změnit hodnotu pole.|
 |`dbDescending`|Pole je seřazen v sestupném (Z - A nebo 100-0) pořadí (platí pouze pro pole objektů v kolekci polí objektu indexu). Vynecháte-li tato konstanta, pole je seřazen vzestupně (A – Z nebo 0 – 100) pořadí (výchozí).|
 
-*FieldInfo*<br/>
+*fieldinfo*<br/>
 Odkaz na [cdaofieldinfo –](../../mfc/reference/cdaofieldinfo-structure.md) struktury.
 
 ### <a name="remarks"></a>Poznámky
@@ -574,7 +574,7 @@ void GetFieldInfo(
 *nIndex*<br/>
 Index pole objektu v tabulky založený na nule kolekce pole pro vyhledávání podle indexu.
 
-*FieldInfo*<br/>
+*fieldinfo*<br/>
 Odkaz na [cdaofieldinfo –](../../mfc/reference/cdaofieldinfo-structure.md) struktury.
 
 *dwInfoOptions*<br/>
@@ -582,9 +582,9 @@ Možnosti, které určují, jaké informace o pole, které chcete načíst. Tady
 
 - `AFX_DAO_PRIMARY_INFO` (Výchozí) Název, typ, velikosti, atributy. Tuto možnost použijte pro nejrychlejší výkon.
 
-- `AFX_DAO_SECONDARY_INFO` Primární informace, a navíc: ordinální číslo pozice, povinné, umožňují nulovou délku, pořadí řazení cizí název pole zdroje, zdrojová tabulka
+- `AFX_DAO_SECONDARY_INFO` Primární informace, a navíc: Pořadí, povinné, umožňují nulovou délku, Kolační pořadí, cizí název, zdrojové pole, zdrojová tabulka
 
-- `AFX_DAO_ALL_INFO` Informace o primární a sekundární, a navíc: ověřovací pravidlo, Text pro ověření, výchozí hodnota
+- `AFX_DAO_ALL_INFO` Informace o primární a sekundární, a navíc: Ověřovací pravidla, Text pro ověření, výchozí hodnota
 
 *lpszName*<br/>
 Ukazatel na název objektu pole pro vyhledávání podle názvu. Název je řetězec s až 64 znaků, který jednoznačně názvy pole.
@@ -644,9 +644,9 @@ Možnosti, které určují, jaké informace o index k načtení. Tady jsou uvede
 
 - `AFX_DAO_PRIMARY_INFO` Pole se jménem, informace o poli. Tuto možnost použijte pro nejrychlejší výkon.
 
-- `AFX_DAO_SECONDARY_INFO` Primární informace, a navíc: primární, jedinečné, clusteru, Ignorovat hodnoty Null, povinné, cizí
+- `AFX_DAO_SECONDARY_INFO` Primární informace, a navíc: Primární, jedinečný, v clusteru, Ignorovat hodnoty Null, povinné, cizí
 
-- `AFX_DAO_ALL_INFO` Primární a sekundární informace, a navíc: počet jedinečných položek
+- `AFX_DAO_ALL_INFO` Informace o primární a sekundární, a navíc: Počet jedinečných položek
 
 *lpszName*<br/>
 Ukazatel na název objektu indexu pro vyhledávání podle názvu.
@@ -874,10 +874,10 @@ V následující tabulce jsou uvedeny typy databáze a jejich odpovídající sp
 |Excel 5.0 nebo 95 aplikace Excel|"Excel 5.0."|" `drive`:\\\ *cesta*\\\ *filename*. XLS"|
 |Excel 97|"Excel 8.0;"|" `drive`:\\\ *cesta*\ *filename*. XLS"|
 |HTML Import|"HTML Import;"|" `drive`:\\\ *cesta*\ *filename*"|
-|Export ve formátu HTML|"Export ve formátu HTML;"|" `drive`:\\\ *cesta*"|
+|HTML Export|"Export ve formátu HTML;"|" `drive`:\\\ *cesta*"|
 |Text|"Text";|"jednotka:\\\path"|
-|ODBC|"ODBC; DATABÁZE = `database`; UID = *uživatele*; PWD = *heslo*; Název zdroje dat = *datasourcename;* LOGINTIMEOUT = *sekund;*" (To nemusí být úplný připojovací řetězec pro všechny servery, je jenom pro příklad. Je velmi důležité, abyste adresní prostory mezi parametry.)|Žádné|
-|Exchange|"Exchange;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE = {0 &AMP;#124; 1};]<br /><br /> [Profil = *profilu*;]<br /><br /> [PWD = *heslo*;]<br /><br /> [DATABÁZE = `database`;] "|*"jednotka*:\\\ *cesta*\\\ *filename*. MDB"|
+|ODBC|"ODBC; DATABÁZE = `database`; UID = *uživatele*; PWD = *heslo*; Název zdroje dat = *datasourcename;* LOGINTIMEOUT = *sekund;*" (To nemusí být úplný připojovací řetězec pro všechny servery, je jenom pro příklad. Je velmi důležité, abyste adresní prostory mezi parametry.)|Žádná|
+|Exchange|"Exchange;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE = {0 &AMP;#124; 1};]<br /><br /> [PROFILE= *profile*;]<br /><br /> [PWD= *password*;]<br /><br /> [DATABASE= `database`;]"|*"jednotka*:\\\ *cesta*\\\ *filename*. MDB"|
 
 > [!NOTE]
 >  Btrieve je již nejsou podporovány od verze DAO 3.5.
@@ -972,7 +972,7 @@ Nelze nastavit text pro ověření připojené tabulky.
 
 Související informace naleznete v tématu "Ověřovací vlastnost" v nápovědě k DAO.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

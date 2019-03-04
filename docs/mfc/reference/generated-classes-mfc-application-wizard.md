@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, generated classes
 ms.assetid: 5f33209c-7f01-4f72-8c1c-6f02f507ba9f
-ms.openlocfilehash: 21b951b01b413a703bb28b76426da86a5996b99d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5926911a07edf6e4ce543b728a7b5c3984861948
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542282"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267417"
 ---
 # <a name="generated-classes-mfc-application-wizard"></a>Generované třídy, Průvodce aplikací MFC
 
@@ -27,7 +27,7 @@ Toto téma uvádí seznam základních tříd a soubory, které váš projekt vy
 
    Název třídy, která je aktuálně vybrána v **generované třídy** seznamu. Pokud toto políčko není aktivní, můžete změnit název třídy. Při změně fokusu z **název třídy** pole se zobrazí v změny názvu vybranou třídu **generované třídy** seznamu.
 
-- **soubor .h**
+- **.h file**
 
    Název souboru hlaviček třídy, která je aktuálně vybrána v **generované třídy** seznamu. Pokud textové pole aktivní, můžete změnit název souboru hlaviček.
 
@@ -39,8 +39,7 @@ Toto téma uvádí seznam základních tříd a soubory, které váš projekt vy
 
    Název souboru se zdrojovým kódem, který je spojen s vybranou třídu. Pokud textové pole aktivní, můžete změnit název implementačního souboru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Pokročilé funkce, Průvodce aplikací MFC](../../mfc/reference/advanced-features-mfc-application-wizard.md)<br/>
 [Typy souborů vytvořených pro projekty Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md)
-

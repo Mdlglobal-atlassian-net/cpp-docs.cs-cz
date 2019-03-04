@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL COM objects
 - COM objects, ATL
 ms.assetid: 0f9c9d98-cc28-45da-89ac-dc94cee422fe
-ms.openlocfilehash: 6af732b381ab0c6c507d1d651b096e3976ab2d4b
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: cba26ede01b69e4a077f1e842982adc8c2127331
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176494"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270043"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>Základy ATL – objekty COM
 
@@ -73,7 +73,6 @@ Poskytuje informace o vytvoření objektu ATL COM.
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Obsahuje odkazy na koncepční témata o tom, jak programovat pomocí knihovnu Active Template Library.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Koncepty](../atl/active-template-library-atl-concepts.md)
-

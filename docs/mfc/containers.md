@@ -8,12 +8,12 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - containers [MFC], container applications
 ms.assetid: b19d7c05-4d02-44bd-b76a-4a6c25994a62
-ms.openlocfilehash: 300561254df41dedf1a8a0ba60e288c1509ee429
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35416025339b8fc059ed44b2b3c55d9c38d18570
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646862"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269419"
 ---
 # <a name="containers"></a>Kontejnery
 
@@ -31,10 +31,9 @@ Aplikace typu kontejner je aplikace, která můžete začlenit do vlastní dokum
 
 [Pokročilé funkce kontejnerů](../mfc/containers-advanced-features.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [Servery](../mfc/servers.md)<br/>
 [Aktivace](../mfc/activation-cpp.md)<br/>
 [Nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md)
-

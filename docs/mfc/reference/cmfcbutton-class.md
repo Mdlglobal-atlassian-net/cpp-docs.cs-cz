@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: a82793ce29765bf01e8c52c94257bd3150187505
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 804c3219356d36f6a0a733937c5e354822a4be83
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178457"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269809"
 ---
 # <a name="cmfcbutton-class"></a>Cmfcbutton – třída
 
@@ -127,7 +127,7 @@ class CMFCButton : public CButton
 |[CMFCButton::IsPushed](#ispushed)|Určuje, zda tlačítko je vloženo.|
 |[CMFCButton::IsRadioButton](#isradiobutton)|Určuje, zda tlačítko je tlačítko přepínače.|
 |[CMFCButton::IsWindowsThemingEnabled](#iswindowsthemingenabled)|Určuje, zda styl ohraničení tlačítka odpovídá aktuální motiv Windows.|
-|`CMFCButton::OnDrawParentBackground`|Nakreslí pozadí nadřazeného objektu tlačítka v určené oblasti. (Přepíše [AFX_GLOBAL_DATA::DrawParentBackground](../../mfc/reference/afx-global-data-structure.md)|
+|`CMFCButton::OnDrawParentBackground`|Nakreslí pozadí nadřazeného objektu tlačítka v určené oblasti. (Overrides [AFX_GLOBAL_DATA::DrawParentBackground](../../mfc/reference/afx-global-data-structure.md)|
 |`CMFCButton::PreTranslateMessage`|Přeloží okno zprávy před odesláním do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkce Windows. (Přepíše [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
 |[CMFCButton::SetAutorepeatMode](#setautorepeatmode)|Nastaví tlačítko pro režim automatické opakování.|
 |[CMFCButton::SetCheckedImage](#setcheckedimage)|Nastaví obrázek pro tlačítko zaškrtnuto.|
@@ -197,7 +197,7 @@ Následující příklad ukazuje postup konfigurace vlastností tlačítka pomoc
 
 [CButton](../../mfc/reference/cbutton-class.md)
 
-[Cmfcbutton –](../../mfc/reference/cmfcbutton-class.md)
+[CMFCButton](../../mfc/reference/cmfcbutton-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -560,7 +560,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *Rect*<br/>
@@ -586,7 +586,7 @@ virtual void OnDrawBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *rectClient*<br/>
@@ -611,7 +611,7 @@ virtual void OnDrawFocusRect(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *rectClient*<br/>
@@ -636,7 +636,7 @@ virtual void OnDrawText(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *Rect*<br/>
@@ -667,7 +667,7 @@ virtual void OnFillBackground(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *rectClient*<br/>
@@ -687,7 +687,7 @@ virtual CFont* SelectFont(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -924,7 +924,7 @@ void SetStdImage(
 *id*<br/>
 [in] Jeden z identifikátorů image tlačítko, které jsou definovány v `CMenuImage::IMAGES_IDS` výčtu. Obrázek hodnoty určují, Image, jako je například šipky, kódy PIN a přepínače.
 
-*Stav*<br/>
+*state*<br/>
 [in] Jeden z identifikátorů stav obrázku tlačítka, definovaných v `CMenuImages::IMAGE_STATE` výčtu. Stavy image zadejte barvy tlačítka, jako je například bílé a tmavě šedé Černá, gray, světle šedá. Výchozí hodnota je `CMenuImages::ImageBlack`.
 
 *idDisabled*<br/>
@@ -998,7 +998,7 @@ A `CSize` objekt, který obsahuje novou velikost tlačítka.
 
 Ve výchozím nastavení tato metoda vypočítá novou velikost, která obsahuje vodorovný okraj 10 pixelů a vertikální okraji 5 pixelů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

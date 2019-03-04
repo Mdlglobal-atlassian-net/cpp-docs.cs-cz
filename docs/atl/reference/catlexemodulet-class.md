@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
-ms.openlocfilehash: d31dd9ed1d30633b8f7078794dad06d51ec119f2
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 3891741cb6998ec8621795801ce409aa40ab6d1d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893431"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270381"
 ---
 # <a name="catlexemodulet-class"></a>Catlexemodulet – třída
 
@@ -351,7 +351,7 @@ Vrátí ke spustitelnému souboru návratovou hodnotu.
 
 Tato metoda může být přepsána. Pokud přepisuje [CAtlExeModuleT::PreMessageLoop](#premessageloop), [CAtlExeModuleT::PostMessageLoop](#postmessageloop), nebo [CAtlExeModuleT::RunMessageLoop](#runmessageloop) neposkytuje dostatečně flexibilní, , je možné přepsat `WinMain` funkce pomocí této metody.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázka ATLDuck](../../visual-cpp-samples.md)<br/>
 [CAtlModuleT – třída](../../atl/reference/catlmodulet-class.md)<br/>

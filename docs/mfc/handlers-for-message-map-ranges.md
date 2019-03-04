@@ -22,12 +22,12 @@ helpviewer_keywords:
 - handler functions [MFC], declaring
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
-ms.openlocfilehash: d94f0391c1aebc95b51a1bc94bea28168c445086
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: b587064625178c520338e4253e812e8f84275257
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519383"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266364"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Obslužné rutiny pro oblasti map zpráv
 
@@ -145,6 +145,6 @@ Při zápisu funkce obslužné rutiny, zadejte nadbytečné **UINT** parametru, 
 
 Kód ukazuje příklad je typické: převod hodnoty předané do `int` v rámci oblasti zpráv a potvrzující, že se jedná o tento případ. Potom může trvat nějakou jinou akci v závislosti na tom, které došlo ke kliknutí na tlačítko.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Deklarace funkcí obslužných rutin zpráv](../mfc/declaring-message-handler-functions.md)

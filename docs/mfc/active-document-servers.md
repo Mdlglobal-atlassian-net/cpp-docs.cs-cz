@@ -6,12 +6,12 @@ helpviewer_keywords:
 - servers [MFC], active document
 - active document servers [MFC]
 ms.assetid: 131fec1e-02a0-4305-a7ab-903b911232a7
-ms.openlocfilehash: ad9b43444cfa18698371d93acb858c0d929c30bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7050b810bb5e1f0c240222cd9b8c4922ced4238a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657663"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270771"
 ---
 # <a name="active-document-servers"></a>Servery pro aktivní dokumenty
 
@@ -29,7 +29,6 @@ Regulární knihovny MFC serveru zavěšení vlastní `COleServerItem`-odvozené
 
 `COleDocObjectItem` Třída umožňuje kontejneru OLE se kontejner pro aktivní dokument. Můžete použít Průvodce aplikací knihovny MFC a vytvoří kontejner aktivního dokumentu výběrem **kontejner pro aktivní dokument** zaškrtávacího políčka na stránce Podpora složených dokumentů, Průvodce aplikací knihovny MFC. Další informace najdete v tématu [vytvoření aplikace kontejnerů pro aktivní dokument](../mfc/creating-an-active-document-container-application.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zahrnutí aktivního dokumentu](../mfc/active-document-containment.md)
-

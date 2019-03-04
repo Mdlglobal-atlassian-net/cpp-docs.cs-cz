@@ -1,5 +1,5 @@
 ---
-title: Cinternetexception – třída
+title: CInternetException Class
 ms.date: 11/04/2016
 f1_keywords:
 - CInternetException
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - CInternetException [MFC], m_dwContext
 - CInternetException [MFC], m_dwError
 ms.assetid: 44fb3cbe-523e-4754-8843-a77909990b14
-ms.openlocfilehash: e89293d7b7803cf661bce7a91ea6df72b9a06122
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dedf8926f02dd36dc8d6ac8ab5ff4056b60dfc91
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531570"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270255"
 ---
-# <a name="cinternetexception-class"></a>Cinternetexception – třída
+# <a name="cinternetexception-class"></a>CInternetException Class
 
 Představuje podmínku výjimky vztahující se k Internetu operaci.
 
@@ -105,7 +105,7 @@ Tato hodnota chyba může být systém kód chyby v nezdařila. H nebo chybovou 
 
 Seznam kódy chyb systému Win32 naleznete v tématu [kódy chyb](/windows/desktop/Debug/system-error-codes). Seznam Internet specifické chybové zprávy najdete v tématu. Obě témata jsou v sadě Windows SDK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CException – třída](../../mfc/reference/cexception-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

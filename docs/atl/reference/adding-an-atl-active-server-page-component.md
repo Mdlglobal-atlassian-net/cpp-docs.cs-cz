@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL, ASP components
 - ATL ASP components
 ms.assetid: 7be2204c-6e58-4099-8892-001b848c8987
-ms.openlocfilehash: 7cbe52d4f6bcc82d17880d6eaa6a38f76809952d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f7ad08cb514e33224c877bcbf1c5e8128e26185
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630591"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269835"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Přidání komponenty ATL Active Server stránky
 
@@ -34,11 +34,11 @@ Active Server Pages komponenty jsou součástí architekturu Internetová inform
 
 1. V [přidat třídu](../../ide/add-class-dialog-box.md) v dialogu **šablony** podokně klikněte na tlačítko **ATL Active Server Page Component**a potom klikněte na **otevřít** zobrazíte [Průvodce stránky komponentami ATL Active Server](../../atl/reference/atl-active-server-page-component-wizard.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přidání třídy](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Přidání nového rozhraní projektu ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)<br/>
 [Přidání bodů připojení objektu](../../atl/adding-connection-points-to-an-object.md)<br/>
 [Přidání metody](../../ide/adding-a-method-visual-cpp.md)<br/>
-[Třída knihovny MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
+[MFC Class](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Přidání generické třídy jazyka C++](../../ide/adding-a-generic-cpp-class.md)

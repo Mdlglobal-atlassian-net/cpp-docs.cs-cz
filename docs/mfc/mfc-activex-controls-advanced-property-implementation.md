@@ -6,12 +6,12 @@ helpviewer_keywords:
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
-ms.openlocfilehash: d26dbcb1c18c3c939214051d9010cb5b6db90929
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 438c95c56961cc587b64e494678ade191f18ab6b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568022"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266962"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC – ovládací prvky ActiveX: Implementace rozšířených vlastností
 
@@ -62,16 +62,16 @@ Tento vzorový kód volá `SetNotSupported` Pokud `m_bReadOnlyMode` je datový �
 
 ##  <a name="_core_returning_error_codes_from_a_property"></a> Vrácení chybových kódů z vlastnosti
 
-Chcete-li označit, že došlo k chybě při pokusu o získání nebo nastavení vlastnosti, použijte `COleControl::ThrowError` funkce, která přebírá SCODE (stavový kód) jako parametr. Můžete použít předdefinované SCODE nebo definovat svůj vlastní. Seznam předdefinovaných SCODEs a pokyny k definování vlastní SCODEs najdete v tématu [zpracování chyb v svůj ovládací prvek ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) v ovládacích prvcích ActiveX článku: Advanced témata.
+Chcete-li označit, že došlo k chybě při pokusu o získání nebo nastavení vlastnosti, použijte `COleControl::ThrowError` funkce, která přebírá SCODE (stavový kód) jako parametr. Můžete použít předdefinované SCODE nebo definovat svůj vlastní. Seznam předdefinovaných SCODEs a pokyny k definování vlastní SCODEs najdete v tématu [zpracování chyb v svůj ovládací prvek ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) v ovládacích prvcích ActiveX článku: Pokročilá témata.
 
 Neexistuje pomocné funkce, nejběžnější předdefinované SCODEs, jako například [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), a [COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).
 
 > [!NOTE]
 >  `ThrowError` je určen pro použití pouze jako způsob vrátit chybu z v rámci vlastnosti Get nebo Set funkci nebo metodu služby automation. Jedná se o jediný případů, kdy se obslužná rutina příslušné výjimky budou k dispozici v zásobníku.
 
-Další informace o vytváření sestav výjimky v jiných oblastech kód, naleznete v tématu [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) a v části [zpracování chyb v svůj ovládací prvek ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) v následujícím článku – ovládací prvky ActiveX: Upřesnit Témata.
+Další informace o vytváření sestav výjimky v jiných oblastech kód, naleznete v tématu [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) a v části [zpracování chyb v svůj ovládací prvek ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) v následujícím článku – ovládací prvky ActiveX: Pokročilá témata.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)<br/>
 [MFC – ovládací prvky ActiveX: Vlastnosti](../mfc/mfc-activex-controls-properties.md)<br/>

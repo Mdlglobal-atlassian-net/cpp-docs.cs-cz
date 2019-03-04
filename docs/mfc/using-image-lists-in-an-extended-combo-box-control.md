@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extended combo boxes [MFC], images
 - images [MFC], combo box items
 ms.assetid: dfff25fe-af70-47a2-8032-3901d1e6842d
-ms.openlocfilehash: 38f51205eea7220f0efbc2d8821fcb2b423e0add
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e4d983d53e49fc8d9c80c206f1a23078eb82f61
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504596"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266988"
 ---
 # <a name="using-image-lists-in-an-extended-combo-box-control"></a>Použití seznamů obrázků v ovládacím prvku rozšířené pole se seznamem
 
@@ -35,8 +35,7 @@ Následující postup přidruží seznamu obrázků s ovládacím prvku rozší�
 
 Jakmile seznamu obrázku přidružený k ovládacímu prvku, je jednotlivě zadat Image, kterou každá položka bude používat pro tři možné stavy. Další informace najdete v tématu [nastavení obrázků pro jednotlivé položky](../mfc/setting-the-images-for-an-individual-item.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CComboBoxEx](../mfc/using-ccomboboxex.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

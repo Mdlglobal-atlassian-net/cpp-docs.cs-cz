@@ -1,5 +1,5 @@
 ---
-title: Cshellmanager – třída
+title: CShellManager Class
 ms.date: 11/04/2016
 f1_keywords:
 - CShellManager
@@ -28,14 +28,14 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: 428f64dadb91887c4d076693e5dc939b6aff7680
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f58492c6adbb6c183d6498e4a58f3ce639d7d18
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571233"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269380"
 ---
-# <a name="cshellmanager-class"></a>Cshellmanager – třída
+# <a name="cshellmanager-class"></a>CShellManager Class
 
 Implementuje několik metod, které vám umožní pracovat s odkazy na seznamy identifikátorů (PIDLs).
 
@@ -78,7 +78,7 @@ Nevytvářejte `CShellManager` objekt ručně. Vytvoří se automaticky podle ro
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cshellmanager –](../../mfc/reference/cshellmanager-class.md)
+[CShellManager](../../mfc/reference/cshellmanager-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -218,7 +218,7 @@ void FreeItem(LPITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Parametry
 
-*PIDL*<br/>
+*pidl*<br/>
 [in] Seznam položek k odstranění.
 
 ##  <a name="getitemcount"></a>  CShellManager::GetItemCount
@@ -231,7 +231,7 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Parametry
 
-*PIDL*<br/>
+*pidl*<br/>
 [in] Ukazatel na seznam položek.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -248,7 +248,7 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Parametry
 
-*PIDL*<br/>
+*pidl*<br/>
 [in] Ukazatel na seznam položek.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -265,7 +265,7 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Parametry
 
-*PIDL*<br/>
+*pidl*<br/>
 [in] Seznam položek, které chcete iterovat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -317,14 +317,14 @@ HRESULT ItemFromPath(
 *lpszPath*<br/>
 [in] Řetězec, který určuje cestu pro položku.
 
-*PIDL*<br/>
+*pidl*<br/>
 [out] Odkaz na PIDL. Metoda používá tento PIDL k ukládání ukazatel na jeho návratovou hodnotu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí NOERROR v případě úspěchu; OLE definované chybovou hodnotu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)

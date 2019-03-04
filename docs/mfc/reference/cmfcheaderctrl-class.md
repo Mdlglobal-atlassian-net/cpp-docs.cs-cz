@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCHeaderCtrl [MFC], OnDrawSortArrow
 - CMFCHeaderCtrl [MFC], OnFillBackground
 ms.assetid: 2f5fbf7b-5c75-42db-9216-640b1628f777
-ms.openlocfilehash: 10d7dda39223e1d6206d2ede96874d9d546c8776
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86674e086da482e59b2711f5ba9154848ff05a6f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538499"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269432"
 ---
 # <a name="cmfcheaderctrl-class"></a>Cmfcheaderctrl – třída
 
@@ -98,11 +98,11 @@ Následující příklad ukazuje, jak vytvořit objekt `CMFCHeaderCtrl` třídy 
 
 [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)
 
-[Cmfcheaderctrl –](../../mfc/reference/cmfcheaderctrl-class.md)
+[CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxheaderctrl.h
+**Header:** afxheaderctrl.h
 
 ##  <a name="cmfcheaderctrl"></a>  CMFCHeaderCtrl::CMFCHeaderCtrl
 
@@ -243,7 +243,7 @@ virtual void OnDrawItem(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *Položky*<br/>
@@ -270,7 +270,7 @@ virtual void OnDrawSortArrow(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *rectArrow*<br/>
@@ -286,7 +286,7 @@ virtual void OnFillBackground(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 ### <a name="remarks"></a>Poznámky
@@ -336,7 +336,7 @@ FALSE, nejprve odeberte všechny sloupce ze seznamu řazení sloupců a pak při
 
 Tuto metodu použijte k nastavení pořadí řazení sloupce. V případě potřeby, tato metoda přidá sloupec na seznam řazení sloupců. Pořadí řazení ovládacího prvku záhlaví používá nakreslete řazení šipku, která odkazuje směrem nahoru nebo dolů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

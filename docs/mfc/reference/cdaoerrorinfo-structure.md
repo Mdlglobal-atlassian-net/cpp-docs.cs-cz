@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CDaoErrorInfo structure [MFC]
 - DAO (Data Access Objects), Errors collection
 ms.assetid: cd37ef71-b0b3-401d-bc2b-540c9147f532
-ms.openlocfilehash: 6afe6c711d3bd6a6bb6f277121b63c924d082057
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dd9610fce88c18ac42de81ed712492766ee705de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659522"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266008"
 ---
 # <a name="cdaoerrorinfo-structure"></a>CDaoErrorInfo – struktura
 
@@ -52,7 +52,7 @@ ID kontextu pro téma v souboru nápovědy pro Microsoft Windows. Podrobnosti na
 
 Knihovny MFC nejsou zapouzdření rozhraní DAO chyba objekty ve třídě. Místo toho [cdaoexception –](../../mfc/reference/cdaoexception-class.md) třída poskytuje rozhraní pro přístup k kolekce chyb, které jsou součástí objektem DAO `DBEngine` objekt, objekt, který také obsahuje všechny pracovní prostory. Pokud vyvolá operaci knihovny MFC rozhraní DAO `CDaoException` objektu při zachycení, že vyplní knihovny MFC `CDaoErrorInfo` struktury a ukládá ho do objektu výjimky [m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo) člen. (Pokud se rozhodnete přímo volat rozhraní DAO, musí volat objekt výjimky [GetErrorInfo –](../../mfc/reference/cdaoexception-class.md#geterrorinfo) členskou funkci sami tak, aby vyplnil `m_pErrorInfo`.)
 
-Další informace o zpracování chyb rozhraní DAO, najdete v článku [výjimky: výjimky databáze](../../mfc/exceptions-database-exceptions.md). Související informace naleznete v tématu "Chyba objekt" v nápovědě k DAO.
+Další informace o zpracování chyb rozhraní DAO, najdete v článku [výjimky: Výjimky databáze](../../mfc/exceptions-database-exceptions.md). Související informace naleznete v tématu "Chyba objekt" v nápovědě k DAO.
 
 Načte informace [CDaoException::GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo) členská funkce je uložen v `CDaoErrorInfo` struktury. Zkontrolujte [m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo) datový člen z `CDaoException` objekt, který najdete v obslužné rutiny výjimky nebo volání `GetErrorInfo` z `CDaoException` objekt, který explicitně vytvoříte za účelem ověření chyby, které může mít došlo k chybě během přímého volání rozhraní DAO. `CDaoErrorInfo` Definuje také `Dump` členská funkce ladění sestavení. Můžete použít `Dump` Vypsat obsah `CDaoErrorInfo` objektu.
 
@@ -60,7 +60,7 @@ Načte informace [CDaoException::GetErrorInfo](../../mfc/reference/cdaoexception
 
 **Záhlaví:** afxdao.h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Struktury, styly, zpětná volání a mapy zpráv](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDaoException – třída](../../mfc/reference/cdaoexception-class.md)

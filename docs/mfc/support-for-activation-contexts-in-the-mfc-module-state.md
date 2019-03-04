@@ -5,12 +5,12 @@ helpviewer_keywords:
 - activation contexts [MFC]
 - activation contexts [MFC], MFC support
 ms.assetid: 1e49eea9-3620-46dd-bc5f-d664749567c7
-ms.openlocfilehash: c5e3d5c9195f18c54de63ec7ecd38b165feca5df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a2e5f56eeb323f1bd5f20c5920bbdbe4a658554d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619019"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267859"
 ---
 # <a name="support-for-activation-contexts-in-the-mfc-module-state"></a>Podpora kontextů aktivace ve stavu modulu MFC
 
@@ -40,12 +40,11 @@ Aktivační kontext je vytvořen v [afxwininit –](../mfc/reference/application
 
 [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) – makro aktivuje a deaktivuje aktivační kontext. `AFX_MANAGE_STATE` je povolený pro statické knihovny MFC, knihovny DLL MFC, umožňující kódu knihovny MFC pro spuštění ve správné aktivační kontext zvolila DLL uživatele.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Kontexty aktivace](/windows/desktop/SbsCs/activation-contexts)<br/>
 [Manifesty aplikací](/windows/desktop/SbsCs/application-manifests)<br/>
 [Manifest sestavení](/windows/desktop/SbsCs/assembly-manifests)<br/>
-[Afxwininit –](../mfc/reference/application-information-and-management.md#afxwininit)<br/>
-[Afxgetstaticmodulestate –](reference/extension-dll-macros.md#afxgetstaticmodulestate)<br/>
+[AfxWinInit](../mfc/reference/application-information-and-management.md#afxwininit)<br/>
+[AfxGetStaticModuleState](reference/extension-dll-macros.md#afxgetstaticmodulestate)<br/>
 [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state)
-

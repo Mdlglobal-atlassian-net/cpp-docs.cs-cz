@@ -1,5 +1,5 @@
 ---
-title: IConnectionPointContainerImpl – třída
+title: IConnectionPointContainerImpl Class
 ms.date: 11/04/2016
 f1_keywords:
 - IConnectionPointContainerImpl
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connection points [C++], container
 - IConnectionPointContainerImpl class
 ms.assetid: 10db5a8d-8be9-4d9d-8a82-8ab9ffe3e9d6
-ms.openlocfilehash: 247013322925ad6fe246b079bcff7e0521e5561d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06baa4dac3248d783648b8ce37e51250e0de2498
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551642"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269302"
 ---
-# <a name="iconnectionpointcontainerimpl-class"></a>IConnectionPointContainerImpl – třída
+# <a name="iconnectionpointcontainerimpl-class"></a>IConnectionPointContainerImpl Class
 
 Tato třída implementuje kontejner bod připojení pro správu kolekce [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) objekty.
 
@@ -88,7 +88,7 @@ STDMETHOD(FindConnectionPoint)(REFIID riid, IConnectionPoint** ppCP);
 
 Zobrazit [IConnectionPointContainer::FindConnectionPoint](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) ve Windows SDK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

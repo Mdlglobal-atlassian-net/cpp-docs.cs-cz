@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ordered_message_processor class
 ms.assetid: 787adfb7-7f79-4a70-864a-80e3b64088cd
-ms.openlocfilehash: c6e09ff862f0725cc508e3e390dbfa3cc12f7daa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b88544f399031a5f770fa39aa1f3300306158511
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545961"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270745"
 ---
 # <a name="orderedmessageprocessor-class"></a>ordered_message_processor – třída
 
@@ -50,7 +50,7 @@ Typ datové části zprávy zpracovává procesoru.
 |Název|Popis|
 |----------|-----------------|
 |[ordered_message_processor](#ctor)|Vytvoří `ordered_message_processor` objektu.|
-|[~ ordered_message_processor – destruktor](#dtor)|Odstraní `ordered_message_processor` objektu.|
+|[~ordered_message_processor Destructor](#dtor)|Odstraní `ordered_message_processor` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -59,14 +59,14 @@ Typ datové části zprávy zpracovává procesoru.
 |[async_send](#async_send)|Asynchronně vloží do fronty zpráv a spustí úlohu zpracování, pokud to není již bylo provedeno. (Přepíše [message_processor::async_send –](message-processor-class.md#async_send).)|
 |[Inicializace](#initialize)|Inicializuje `ordered_message_processor` objekt skupinou odpovídající zpětného volání funkce, Plánovač a plán.|
 |[initialize_batched_processing](#initialize_batched_processing)|Inicializovat zpracování dávkové zprávy|
-|[sync_send](#sync_send)|Synchronně zařadí do fronty zpráv a spustí úlohu zpracování, pokud to není již bylo provedeno. (Přepíše [message_processor::sync_send –](message-processor-class.md#sync_send).)|
+|[sync_send](#sync_send)|Synchronně zařadí do fronty zpráv a spustí úlohu zpracování, pokud to není již bylo provedeno. (Overrides [message_processor::sync_send](message-processor-class.md#sync_send).)|
 |[Počkej](#wait)|Specifické pro procesor otočný čekání používané destruktory blokům zpráv, abyste měli jistotu, že všechny úlohy asynchronního zpracování dostatek času k dokončení a zničení bloku. (Přepíše [message_processor::wait –](message-processor-class.md#wait).)|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[process_incoming_message –](#process_incoming_message)|Zpracování funkce, která je volána asynchronně. Dequeues zprávy a zahájí zpracování je. (Přepíše [message_processor::process_incoming_message –](message-processor-class.md#process_incoming_message).)|
+|[process_incoming_message](#process_incoming_message)|Zpracování funkce, která je volána asynchronně. Dequeues zprávy a zahájí zpracování je. (Přepíše [message_processor::process_incoming_message –](message-processor-class.md#process_incoming_message).)|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -145,7 +145,7 @@ ordered_message_processor();
 
 To `ordered_message_processor` synchronní nebo asynchronní obslužné rutiny, dokud nebude naplánovat `initialize` funkce je volána.
 
-##  <a name="dtor"></a> ~ ordered_message_processor –
+##  <a name="dtor"></a> ~ordered_message_processor
 
 Odstraní `ordered_message_processor` objektu.
 
@@ -186,6 +186,6 @@ Specifické pro procesor otočný čekání používané destruktory blokům zpr
 virtual void wait();
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)

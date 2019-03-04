@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-ms.openlocfilehash: da7b1310f80bfb03645d386b59632e1c2811a367
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f8820be3073c6ffaffdaa9d04a7338ad584d36ca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651136"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267288"
 ---
 # <a name="csacl-class"></a>Csacl – třída
 
@@ -39,7 +39,7 @@ class CSacl : public CAcl
 |Název|Popis|
 |----------|-----------------|
 |[CSacl::CSacl](#csacl)|Konstruktor|
-|[Csacl –:: ~ csacl –](#dtor)|Destruktor.|
+|[CSacl::~CSacl](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -68,7 +68,7 @@ Používat metody třídy přidat, odebrat, vytvářet a odstraňovat položky �
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Cacl –](../../atl/reference/cacl-class.md)
+[CAcl](../../atl/reference/cacl-class.md)
 
 `CSacl`
 
@@ -149,7 +149,7 @@ Existující `ACL` struktury (seznamu řízení přístupu).
 
 `CSacl` Objekt můžete případně vytvořit pomocí existující `ACL` struktury. Ujistěte se, že tento parametr je systémový seznam řízení přístupu (SACL) a nikoli seznam volitelných řízení přístupu (DACL). V sestavení ladění, pokud je DACL zadaný kontrolní výraz dojde. V sestaveních pro vydání jsou ignorovány všechny položky ze seznamu DACL.
 
-##  <a name="dtor"></a>  Csacl –:: ~ csacl –
+##  <a name="dtor"></a>  CSacl::~CSacl
 
 Destruktor.
 
@@ -219,7 +219,7 @@ void RemoveAllAces() throw();
 
 Odebere všechny `ACE` strukturu (pokud existuje) v `CSacl` objektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CAcl – třída](../../atl/reference/cacl-class.md)<br/>
 [Seznamy ACL](/windows/desktop/SecAuthZ/access-control-lists)<br/>

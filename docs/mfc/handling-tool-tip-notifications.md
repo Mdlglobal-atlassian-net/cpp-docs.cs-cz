@@ -7,12 +7,12 @@ helpviewer_keywords:
 - notifications [MFC], tool tips
 - tool tips [MFC], notifications
 ms.assetid: ddb93b5f-2e4f-4537-8053-3453c86e2bbb
-ms.openlocfilehash: 973c4a12f3b3bdc91269736874b7193130290a76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 079dc26fdd355c5b5e3f89f28219902e5fd74a79
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548912"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268821"
 ---
 # <a name="handling-tool-tip-notifications"></a>Zpracování oznámení popisů tlačítek
 
@@ -36,15 +36,14 @@ Kromě **TTN_NEEDTEXT** oznámení, ovládacím prvkem popis tlačítka nástroj
 |**TTN_NEEDTEXTA**|Nástroj ovládacím prvkem popis tlačítka vyžaduje ASCII text (pouze Windows 95)|
 |**TTN_NEEDTEXTW**|Text v kódu UNICODE (pouze Windows NT) vyžaduje nástroj ovládacím prvkem popis tlačítka|
 |**TBN_HOTITEMCHANGE**|Označuje, že došlo ke změně aktivní (zvýrazněná) položka.|
-|**NM_RCLICK –**|Označuje, že uživatel má pravým tlačítkem myši kliknou na tlačítko.|
+|**NM_RCLICK**|Označuje, že uživatel má pravým tlačítkem myši kliknou na tlačítko.|
 |**TBN_DRAGOUT**|Označuje uživatel kliknul na tlačítko a přetáhnout ukazatel mimo tlačítko. Umožňuje aplikaci implementovat přetažení a přetažení z tlačítka panelu nástrojů. Při přijetí tohoto oznámení, aplikace bude začínat přetahování a operace odstranění.|
-|**TBN_DROPDOWN –**|Označuje, že uživatel klikl tlačítko, které používá **TBSTYLE_DROPDOWN** style.|
+|**TBN_DROPDOWN**|Označuje, že uživatel klikl tlačítko, které používá **TBSTYLE_DROPDOWN** style.|
 |**TBN_GETOBJECT**|Označuje uživatel přesune ukazatel myši nad tlačítkem, který používá **TBSTYLE_DROPPABLE** style.|
 
 Ukázkovou funkci obslužná rutina a další informace o povolení tipů nástrojů najdete v tématu [popisů tlačítek](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

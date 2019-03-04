@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::rba
 - amp_short_vectors/Concurrency::graphics::uint_4::set_yzx
 ms.assetid: 1cda9e2c-5970-4ced-ae54-d7ff3c6746f4
-ms.openlocfilehash: e763c2654f0edaa02ceaa5294eb33ef02e69ee9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5c0482854a08973593e9c67f2f51d5706304831
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579033"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266806"
 ---
 # <a name="uint4-class"></a>uint_4 – třída
 
@@ -469,10 +469,10 @@ class uint_4;
 |uint_4::abgr||
 |uint_4::abr||
 |uint_4::abrg||
-|uint_4::AG||
+|uint_4::ag||
 |uint_4::agb||
 |uint_4::agbr||
-|uint_4::AGR||
+|uint_4::agr||
 |uint_4::agrb||
 |uint_4::ar||
 |uint_4::arb||
@@ -497,18 +497,18 @@ class uint_4;
 |uint_4::brga||
 |uint_4::g||
 |uint_4::GA||
-|uint_4::GAB||
+|uint_4::gab||
 |uint_4::gabr||
 |uint_4::gar||
 |uint_4::garb||
 |uint_4::GB||
-|uint_4::GBA||
+|uint_4::gba||
 |uint_4::gbar||
-|uint_4::GBR||
-|uint_4::GBRA||
+|uint_4::gbr||
+|uint_4::gbra||
 |uint_4::GR||
 |uint_4::gra||
-|uint_4::Grab||
+|uint_4::grab||
 |uint_4::grb||
 |uint_4::grba||
 |uint_4::r||
@@ -576,7 +576,7 @@ class uint_4;
 |uint_4::yzx||
 |uint_4::yzxw||
 |uint_4::z||
-|uint_4::Zw||
+|uint_4::zw||
 |uint_4::zwx||
 |uint_4::zwxy||
 |uint_4::zwy||
@@ -586,7 +586,7 @@ class uint_4;
 |uint_4::zxwy||
 |uint_4::zxy||
 |uint_4::zxyw||
-|uint_4::Zy||
+|uint_4::zy||
 |uint_4::zyw||
 |uint_4::zywx||
 |uint_4::zyx||
@@ -600,9 +600,9 @@ class uint_4;
 
 **Záhlaví:** amp_short_vectors.h
 
-**Namespace:** Concurrency::graphics
+**Namespace:** Concurrency::Graphics
 
-## <a name="uint_4__ctor"></a> uint_4 –
+## <a name="uint_4__ctor"></a> uint_4
 
 Výchozí konstruktor, inicializuje všechny prvky na 0.
 
@@ -667,6 +667,6 @@ Objekt použitý k inicializaci.
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

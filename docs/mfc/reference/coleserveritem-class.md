@@ -1,5 +1,5 @@
 ---
-title: Coleserveritem – třída
+title: COleServerItem Class
 ms.date: 11/04/2016
 f1_keywords:
 - COleServerItem
@@ -74,14 +74,14 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: e0d48d37d8262c4e82a8532333bbd12f193087b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f774a8db1121dd293db8e58f7cd92aaabaeabada
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604113"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270550"
 ---
-# <a name="coleserveritem-class"></a>Coleserveritem – třída
+# <a name="coleserveritem-class"></a>COleServerItem Class
 
 Poskytuje rozhraní serveru pro položky OLE.
 
@@ -155,7 +155,7 @@ Propojená položka může představovat některé nebo všechny dokumentu na se
 
 Použití `COleServerItem`odvodit třídu z něj a implementovat [OnDraw](#ondraw) a [serializace](../../mfc/reference/cobject-class.md#serialize) členské funkce. `OnDraw` Poskytuje funkce znázornění metasouboru položky, díky kterému jej zobrazí, když se otevře aplikace typu kontejner do složeného dokumentu. `Serialize` Funkce `CObject` poskytuje nativní reprezentace některou položku, což vložená položka. přenos mezi aplikacemi serveru a kontejneru. [OnGetExtent](#ongetextent) poskytuje fyzická velikost položky do kontejneru, povolení kontejner pro nastavení velikosti položky.
 
-Další informace o serverech a související témata, najdete v článku [servery: implementace serveru](../../mfc/servers-implementing-a-server.md) a "Vytváření Server/kontejner aplikace" v článku [kontejnery: pokročilé funkce](../../mfc/containers-advanced-features.md).
+Další informace o serverech a související témata, najdete v článku [serverů: Implementace serveru](../../mfc/servers-implementing-a-server.md) a "Vytváření Server/kontejner aplikace" v článku [kontejnerů: Pokročilé funkce](../../mfc/containers-advanced-features.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -163,7 +163,7 @@ Další informace o serverech a související témata, najdete v článku [serve
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[Cdocitem –](../../mfc/reference/cdocitem-class.md)
+[CDocItem](../../mfc/reference/cdocitem-class.md)
 
 `COleServerItem`
 
@@ -539,7 +539,7 @@ virtual BOOL OnDraw(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel [CDC](../../mfc/reference/cdc-class.md) objekt, kterému chcete-li nakreslit položky. Kontext zobrazení je automaticky připojeni ke kontextu zobrazení atribut tak bude možné volat funkce atribut, i když to uděláte tak s žádným metasoubor konkrétní zařízení.
 
 *parametru rSize*<br/>
@@ -566,7 +566,7 @@ virtual BOOL OnDrawEx(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel [CDC](../../mfc/reference/cdc-class.md) objekt, kterému chcete-li nakreslit položky. Řadič domény je automaticky připojen k atribut řadiče domény tak bude možné volat funkce atribut, i když to uděláte tak s žádným metasoubor specifická pro zařízení.
 
 *nDrawAspect*<br/>
@@ -995,7 +995,7 @@ Ukazatel na nový název položky.
 
 Název musí být jedinečný v rámci dokumentu. Při volání serverovou aplikaci můžete upravit propojené položky aplikace používá tento název se najít položku. Není nutné volat tuto funkci pro vložené položky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC HIERSVR](../../visual-cpp-samples.md)<br/>
 [CDocItem – třída](../../mfc/reference/cdocitem-class.md)<br/>

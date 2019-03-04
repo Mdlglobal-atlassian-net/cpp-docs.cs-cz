@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 ms.assetid: e20271de-6ffa-4ba0-848b-bafe6c9e510c
-ms.openlocfilehash: 9e8bc35989dc0e933cdb67c2574fb3bf6a4d99de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71c4cdd5ea07b3468b7878a221129a0de5eb4974
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524576"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268405"
 ---
 # <a name="mfc-activex-controls-methods"></a>MFC – ovládací prvky ActiveX: Metody
 
 Ovládací prvek ActiveX aktivuje události ke komunikaci mezi samostatně a jeho kontejneru ovládacího prvku. Kontejner můžete také komunikovat s ovládacím prvkem prostřednictvím metody a vlastnosti. Metody jsou také volat funkce.
 
-Metody a vlastnosti poskytují exportovaného rozhraní pro použití jiné aplikace, jako je například klienti automatizace a ActiveX – kontejnery ovládacích prvků. Další informace o vlastnosti ovládacích prvků ActiveX naleznete v článku [knihovny MFC – ovládací prvky ActiveX: vlastnosti](../mfc/mfc-activex-controls-properties.md).
+Metody a vlastnosti poskytují exportovaného rozhraní pro použití jiné aplikace, jako je například klienti automatizace a ActiveX – kontejnery ovládacích prvků. Další informace o vlastnosti ovládacích prvků ActiveX naleznete v článku [knihovny MFC – ovládací prvky ActiveX: Vlastnosti](../mfc/mfc-activex-controls-properties.md).
 
 Metody jsou podobné v použití a účel členské funkce třídy jazyka C++. Existují dva typy metod můžete implementovat ovládacího prvku: uložených a vlastních. Podobné události zásob, stock metody jsou tyto metody pro kterou [COleControl](../mfc/reference/colecontrol-class.md) poskytuje implementaci. Další informace o uložených metod najdete v článku [knihovny MFC – ovládací prvky ActiveX: Přidání uložených metod](../mfc/mfc-activex-controls-adding-stock-methods.md). Vlastní metody, určené pro vývojáře, umožní líp přizpůsobte ovládacího prvku. Další informace najdete v článku [knihovny MFC – ovládací prvky ActiveX: Přidání vlastních metod](../mfc/mfc-activex-controls-adding-custom-methods.md).
 
@@ -38,9 +38,8 @@ Následující články popisují metody podrobně:
 
 - [MFC – ovládací prvky ActiveX: Přidání vlastních metod](../mfc/mfc-activex-controls-adding-custom-methods.md)
 
-- [MFC –ovládací prvky ActiveX: Vrácení chybových kódů z metody](../mfc/mfc-activex-controls-returning-error-codes-from-a-method.md)
+- [MFC – ovládací prvky ActiveX: Vrácení chybových kódů z metody](../mfc/mfc-activex-controls-returning-error-codes-from-a-method.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)
-

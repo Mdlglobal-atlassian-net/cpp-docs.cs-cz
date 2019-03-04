@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CD2DLayer [MFC], IsValid
 - CD2DLayer [MFC], m_pLayer
 ms.assetid: 2f96378e-66bb-40d1-9661-6afe324de3c1
-ms.openlocfilehash: cd4452eeb9e600aeabaec1b54fd40217514e02eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28ebe19b0f28692116a0b95721ff2e5490ad7e68
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531713"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270862"
 ---
 # <a name="cd2dlayer-class"></a>Cd2dlayer – třída
 
@@ -48,7 +48,7 @@ class CD2DLayer : public CD2DResource;
 |Název|Popis|
 |----------|-----------------|
 |[CD2DLayer::CD2DLayer](#cd2dlayer)|Vytvoří objekt cd2dlayer –.|
-|[Cd2dlayer –:: ~ cd2dlayer –](#_dtorcd2dlayer)|Destruktor. Volá se, když se likviduje vrstvy objektu D2D.|
+|[CD2DLayer::~CD2DLayer](#_dtorcd2dlayer)|Destruktor. Volá se, když se likviduje vrstvy objektu D2D.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -57,7 +57,7 @@ class CD2DLayer : public CD2DResource;
 |[CD2DLayer::Attach](#attach)|Bude k obrazci existujících prostředků rozhraní pro objekt|
 |[CD2DLayer::Create](#create)|Vytvoří cd2dlayer –. (Přepíše [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
 |[CD2DLayer::Destroy](#destroy)|Odstraní objekt cd2dlayer –. (Přepíše [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
-|[CD2DLayer::detach](#detach)|Odpojí prostředků rozhraní z objektu|
+|[CD2DLayer::Detach](#detach)|Odpojí prostředků rozhraní z objektu|
 |[CD2DLayer::Get](#get)|Vrátí ID2D1Layer rozhraní|
 |[CD2DLayer::GetSize](#getsize)|Vrátí velikost cíle vykreslování v pixelech nezávislých na zařízení|
 |[CD2DLayer::IsValid](#isvalid)|Zkontroluje platnost prostředku (přepíše [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
@@ -78,7 +78,7 @@ class CD2DLayer : public CD2DResource;
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cd2dresource –](../../mfc/reference/cd2dresource-class.md)
+[CD2DResource](../../mfc/reference/cd2dresource-class.md)
 
 `CD2DLayer`
 
@@ -218,6 +218,6 @@ operator ID2D1Layer* ();
 
 Ukazatel na rozhraní ID2D1Layer nebo hodnota NULL, pokud objekt ještě není inicializován.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

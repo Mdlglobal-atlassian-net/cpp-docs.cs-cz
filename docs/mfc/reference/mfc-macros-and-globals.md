@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Afx naming convention
 - macros
 ms.assetid: add4e33f-0e62-4d27-be14-896cb8675d22
-ms.openlocfilehash: 2dfb2c1c5062f742b728ea651a292be84e33f6d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27664d4e48c0c4e09439f9e970ded9f2a630d90d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566774"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268184"
 ---
 # <a name="mfc-macros-and-globals"></a>MFC – makra a globální prvky
 
-Knihovny Microsoft Foundation Class je možné rozdělit do dvou hlavních částí: (1) třídy knihovny MFC a (2) makra a globální prvky. Pokud funkce nebo proměnná není členem třídy, je globální funkce nebo proměnná.
+Knihovny Microsoft Foundation Class je možné rozdělit do dvou hlavních částech: (1) třídy knihovny MFC a (2) makra a globální prvky. Pokud funkce nebo proměnná není členem třídy, je globální funkce nebo proměnná.
 
 Knihovna MFC a aktivní šablony knihovny (ATL) sdílejí makra převodu řetězců. Další informace najdete v tématu [makra převodu řetězců](../../atl/reference/string-conversion-macros.md) v dokumentaci knihovny ATL.
 
@@ -30,7 +30,7 @@ MFC – makra a globální prvky nabízejí funkce v následujících kategorií
 
 ## <a name="general-mfc"></a>Obecné MFC
 
-- [datové typy](data-types-mfc.md)
+- [Datové typy](data-types-mfc.md)
 
 - [Přetypování objektů tříd MFC](type-casting-of-mfc-class-objects.md)
 
@@ -125,7 +125,6 @@ První část této části stručně popisuje všech předchozích kategorií a
 > [!NOTE]
 >  Mnoho globálních funkcí začínají předponou "Afx –", ale některé, například funkce exchange (DDX) dat dialogových oken a mnoho z funkcí databáze neřídí Tato konvence. Všechny globální proměnné začínat "afx –" jako předponu. Makra nezačínají žádné konkrétní předponu, ale jsou zapsány v velká písmena.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../../mfc/class-library-overview.md)
-

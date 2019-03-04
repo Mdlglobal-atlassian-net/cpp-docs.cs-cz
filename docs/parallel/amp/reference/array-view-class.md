@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-ms.openlocfilehash: d33c54e82e9bc228b97bff4802c9231a98f51033
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: e73639ffd11e08edb2fdb03471f2c6c88730f02d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657484"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268466"
 ---
 # <a name="arrayview-class"></a>array_view – třída
 
@@ -93,7 +93,7 @@ Datový typ prvků v `array_view` objektu.
 
 |Název|Popis|
 |----------|-----------------|
-|[Operator()](#operator_call)|Vrátí hodnotu prvku určeného parametrem nebo parametry.|
+|[operator()](#operator_call)|Vrátí hodnotu prvku určeného parametrem nebo parametry.|
 |[– Operátor\[\]](#operator_at)|Vrátí hodnotu prvku určeného parametry.|
 |[operátor =](#operator_eq)|Zkopíruje obsah zadaného `array_view` do tohoto objektu.|
 
@@ -549,7 +549,7 @@ Upozorní `array_view` objekt, který jemu přidružená paměť byla upravena m
 void refresh() const restrict(cpu);
 ```
 
-## <a name="reinterpret_as"></a> reinterpret_as –
+## <a name="reinterpret_as"></a> reinterpret_as
 
 Opětovně interpretuje objekt array_view skrze jednorozměrný prvek array_view, který případně může mít typ jinou hodnotu než zdrojový prvek array_view.
 
@@ -795,6 +795,6 @@ Datový typ prvků v původním [pole](array-class.md) objektu a ve vráceném `
 
 `array_view` , Který je vytvořen.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

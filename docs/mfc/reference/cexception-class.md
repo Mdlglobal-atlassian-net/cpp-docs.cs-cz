@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: 53dac18b2ee0176eba0a869a0af254ff2978cffd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 689afa2ffbc27feec6f9e1704a6b295d5eabfaee
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562224"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270420"
 ---
 # <a name="cexception-class"></a>Cexception – třída
 
@@ -52,19 +52,19 @@ Odvozené třídy a jejich popisy jsou uvedeny níže:
 
 |||
 |-|-|
-|[Csimpleexception –](../../mfc/reference/csimpleexception-class.md)|Základní třída pro výjimky kritických zdrojů MFC|
-|[Cinvalidargexception –](../../mfc/reference/cinvalidargexception-class.md)|Podmínku výjimky neplatného argumentu|
-|[Cmemoryexception –](../../mfc/reference/cmemoryexception-class.md)|Výjimka mimo z důvodu nedostatku paměti|
-|[Cnotsupportedexception –](../../mfc/reference/cnotsupportedexception-class.md)|Žádost o nepodporovanou operaci|
+|[CSimpleException](../../mfc/reference/csimpleexception-class.md)|Základní třída pro výjimky kritických zdrojů MFC|
+|[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)|Podmínku výjimky neplatného argumentu|
+|[CMemoryException](../../mfc/reference/cmemoryexception-class.md)|Výjimka mimo z důvodu nedostatku paměti|
+|[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)|Žádost o nepodporovanou operaci|
 |[Carchiveexception –](../../mfc/reference/carchiveexception-class.md)|Archiv specifické výjimky|
-|[Cfileexception –](../../mfc/reference/cfileexception-class.md)|Výjimka konkrétního souboru|
-|[Cresourceexception –](../../mfc/reference/cresourceexception-class.md)|Windows prostředek nebyl nalezen nebo není možné vytvořit|
-|[Coleexception –](../../mfc/reference/coleexception-class.md)|OLE – výjimka|
+|[CFileException](../../mfc/reference/cfileexception-class.md)|Výjimka konkrétního souboru|
+|[CResourceException](../../mfc/reference/cresourceexception-class.md)|Windows prostředek nebyl nalezen nebo není možné vytvořit|
+|[COleException](../../mfc/reference/coleexception-class.md)|OLE – výjimka|
 |[CDBException](../../mfc/reference/cdbexception-class.md)|Výjimky databáze (to znamená, že výjimka okolnosti, které pro databázových tříd MFC založených na Open Database Connectivity)|
-|[Coledispatchexception –](../../mfc/reference/coledispatchexception-class.md)|Výjimka odeslání (Automatizace) OLE|
-|[Cuserexception –](../../mfc/reference/cuserexception-class.md)|Výjimka, která označuje, že prostředek nebyl nalezen.|
-|[Cdaoexception –](../../mfc/reference/cdaoexception-class.md)|Objekt výjimky (to znamená, že výjimka okolnosti, které pro třídy DAO) pro přístup k datům|
-|[Cinternetexception –](../../mfc/reference/cinternetexception-class.md)|Výjimka Internetu (to znamená, že výjimka okolnosti, které třídy internetových).|
+|[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)|Výjimka odeslání (Automatizace) OLE|
+|[CUserException](../../mfc/reference/cuserexception-class.md)|Výjimka, která označuje, že prostředek nebyl nalezen.|
+|[CDaoException](../../mfc/reference/cdaoexception-class.md)|Objekt výjimky (to znamená, že výjimka okolnosti, které pro třídy DAO) pro přístup k datům|
+|[CInternetException](../../mfc/reference/cinternetexception-class.md)|Výjimka Internetu (to znamená, že výjimka okolnosti, které třídy internetových).|
 
 Tyto výjimky jsou určeny pro použití s [THROW](exception-processing.md#throw), [THROW_LAST](exception-processing.md#throw_last), [zkuste](exception-processing.md#try), [catch](exception-processing.md#catch), [and_catch](exception-processing.md#and_catch), a [end_catch](exception-processing.md#end_catch) makra. Další informace o výjimkách, naleznete v tématu [zpracování výjimek](exception-processing.md), nebo se podívejte článek [zpracování výjimek (MFC)](../exception-handling-in-mfc.md).
 
@@ -180,7 +180,7 @@ virtual int ReportError(
 
 ### <a name="parameters"></a>Parametry
 
-*nTyp*<br/>
+*nType*<br/>
 Určuje styl okna se zprávou. Použít libovolnou kombinaci [styly oken zpráv](styles-used-by-mfc.md#message-box-styles) do pole. Pokud tento parametr nezadáte, použije se MB_OK.
 
 *nMessageID*<br/>
@@ -226,10 +226,9 @@ else
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CObject – třída](cobject-class.md)<br/>
 [Graf hierarchie](../hierarchy-chart.md)<br/>
 [Zpracování výjimek](exception-processing.md)<br/>
-[Jak mohu: vytvořit vlastní třídy vlastní výjimky](http://go.microsoft.com/fwlink/p/?linkid=128045)
-
+[Postup: Vytvoření vlastní třídy vlastních výjimek](http://go.microsoft.com/fwlink/p/?linkid=128045)

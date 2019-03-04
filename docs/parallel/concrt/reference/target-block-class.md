@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - target_block class
 ms.assetid: 3ce181b4-b94a-4894-bf7b-64fc09821f9f
-ms.openlocfilehash: cb8880b66ebeef12018ef7449c9c383b99ec396c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6033da1347e116b4b68cf719a461a1cf6ff5d04f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656885"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269445"
 ---
 # <a name="targetblock-class"></a>target_block – třída
 
@@ -63,8 +63,8 @@ Typ procesoru pro zpracování zpráv.
 
 |Název|Popis|
 |----------|-----------------|
-|[target_block –](#ctor)|Vytvoří `target_block` objektu.|
-|[~ target_block – destruktor](#dtor)|Odstraní `target_block` objektu.|
+|[target_block](#ctor)|Vytvoří `target_block` objektu.|
+|[~target_block Destructor](#dtor)|Odstraní `target_block` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -78,24 +78,24 @@ Typ procesoru pro zpracování zpráv.
 |Název|Popis|
 |----------|-----------------|
 |[async_send](#async_send)|Asynchronně odešle zprávu pro zpracování.|
-|[decline_incoming_messages –](#decline_incoming_messages)|Na blok označuje, že by měl odmítnuty nové zprávy.|
-|[enable_batched_processing –](#enable_batched_processing)|Umožňuje dávce zpracování pro tento blok.|
+|[decline_incoming_messages](#decline_incoming_messages)|Na blok označuje, že by měl odmítnuty nové zprávy.|
+|[enable_batched_processing](#enable_batched_processing)|Umožňuje dávce zpracování pro tento blok.|
 |[initialize_target](#initialize_target)|Inicializuje základní objekt. Konkrétně `message_processor` objekt musí být inicializována.|
-|[link_source –](#link_source)|Odkazuje na tento blok zadaný zdroj `target_block` objektu.|
+|[link_source](#link_source)|Odkazuje na tento blok zadaný zdroj `target_block` objektu.|
 |[process_input_messages](#process_input_messages)|Zpracovává zprávy přijaté za vstupy.|
-|[process_message –](#process_message)|Při přepisu v odvozené třídě, zpracuje zprávu, která byla přijata situace `target_block` objektu.|
+|[process_message](#process_message)|Při přepisu v odvozené třídě, zpracuje zprávu, která byla přijata situace `target_block` objektu.|
 |[propagate_message](#propagate_message)|Při přepisu v odvozené třídě, tato metoda asynchronně předává zprávy ze `ISource` bloku k tomuto `target_block` objektu. Je vyvolán `propagate` metodu, když se zavolá pomocí zdrojového bloku.|
-|[register_filter –](#register_filter)|Zaregistruje filtr metodu, která se vyvolá u každé zprávy přijaté.|
-|[remove_sources –](#remove_sources)|Zruší po čekání na dokončení zbývajících asynchronní odeslání operací propojení všech zdrojů.|
+|[register_filter](#register_filter)|Zaregistruje filtr metodu, která se vyvolá u každé zprávy přijaté.|
+|[remove_sources](#remove_sources)|Zruší po čekání na dokončení zbývajících asynchronní odeslání operací propojení všech zdrojů.|
 |[send_message](#send_message)|Při přepisu v odvozené třídě, tato metoda synchronně předává zprávy ze `ISource` bloku k tomuto `target_block` objektu. Je vyvolán `send` metodu, když se zavolá pomocí zdrojového bloku.|
 |[sync_send](#sync_send)|Synchronně odešlete zprávu pro zpracování.|
 |[unlink_source](#unlink_source)|Zruší se propojení z tohoto bloku zadaný zdrojový `target_block` objektu.|
-|[unlink_sources –](#unlink_sources)|Zruší všechny zdrojové bloky z tohoto propojení `target_block` objektu. (Přepíše [itarget::unlink_sources –](itarget-class.md#unlink_sources).)|
+|[unlink_sources](#unlink_sources)|Zruší všechny zdrojové bloky z tohoto propojení `target_block` objektu. (Přepíše [itarget::unlink_sources –](itarget-class.md#unlink_sources).)|
 |[wait_for_async_sends](#wait_for_async_sends)|Čeká na všechny asynchronní šíření dokončete.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Itarget –](itarget-class.md)
+[ITarget](itarget-class.md)
 
 `target_block`
 
@@ -118,7 +118,7 @@ void async_send(_Inout_opt_ message<_Source_type>* _PMessage);
 *_PMessage*<br/>
 Ukazatel na odeslání zprávy.
 
-##  <a name="decline_incoming_messages"></a> decline_incoming_messages –
+##  <a name="decline_incoming_messages"></a> decline_incoming_messages
 
 Na blok označuje, že by měl odmítnuty nové zprávy.
 
@@ -252,7 +252,7 @@ void register_filter(filter_method const& _Filter);
 
 ### <a name="parameters"></a>Parametry
 
-*_Filtrovat*<br/>
+*_Filter*<br/>
 Metoda filtru.
 
 ##  <a name="remove_sources"></a> remove_sources –
@@ -365,7 +365,7 @@ Zruší všechny zdrojové bloky z tohoto propojení `target_block` objektu.
 virtual void unlink_sources();
 ```
 
-##  <a name="wait_for_async_sends"></a> wait_for_async_sends –
+##  <a name="wait_for_async_sends"></a> wait_for_async_sends
 
 Čeká na všechny asynchronní šíření dokončete.
 
@@ -377,7 +377,7 @@ void wait_for_async_sends();
 
 Tato metoda používá destruktory bloku zpráv k zajištění, že všechny asynchronní operace měli čas dokončení a zničení bloku.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [ITarget – třída](itarget-class.md)

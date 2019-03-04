@@ -12,12 +12,12 @@ helpviewer_keywords:
 - reading files
 - writing to files [MFC]
 ms.assetid: cac0c826-ba56-495f-99b3-ce6336f65763
-ms.openlocfilehash: 14bd6d57f4b3fa9bacc46fb70cb2abd2958117c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab1ddc58ec6cc2b67e5843f46afbead3ead54eba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591178"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267668"
 ---
 # <a name="reading-and-writing-files"></a>Čtení ze souborů a zápis do nich
 
@@ -38,7 +38,6 @@ Pokud jste použili funkcí zpracování souborů knihovny run-time jazyka C, se
 > [!NOTE]
 >  By obvykle provádět vstupně výstupní operace v rámci **zkuste**/**catch** bloku zpracování výjimek. Další informace najdete v tématu [zpracování výjimek (MFC)](../mfc/exception-handling-in-mfc.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Soubory](../mfc/files-in-mfc.md)
-

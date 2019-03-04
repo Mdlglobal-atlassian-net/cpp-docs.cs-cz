@@ -4,12 +4,12 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: a76a0f49e8b0ec7458b781785cd5030d2c523f0b
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: a86393954cdebec59bd2c6a50cd5e547ef06acb7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176468"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267235"
 ---
 # <a name="example-implementing-a-property-page"></a>Příklad: Implementace stránky vlastností
 
@@ -45,7 +45,7 @@ Nejprve vytvořte nový projekt knihovny ATL DLL serveru s názvem `ATLPages7`. 
 |----------|-----------|
 |Název|TextDocument|
 |Řetězec doc|Vlastnosti TextDocument VCUE|
-|Soubor nápovědy|*\<Prázdný >*|
+|Soubor nápovědy|*\<blank>*|
 
 Hodnoty, které jste nastavili na této stránce průvodce se vrátí do kontejneru stránky vlastností, pokud zavolá `IPropertyPage::GetPageInfo`. Co se stane řetězce po, který je závislý na kontejner, ale obvykle se používá k identifikaci vaší stránce uživateli. Nadpis se obvykle zobrazí na kartě nad vaší stránce a řetězec Doc, může se zobrazit ve stavovém řádku nebo popisek (i když rámec vlastnosti standardní nebude vůbec používat tento řetězec).
 
@@ -95,7 +95,7 @@ První `IPropertyPageImpl` je metoda, která je potřeba přepsat [SetObjects](.
 > [!NOTE]
 >  Je vhodné podporují pouze jeden objekt pro tuto stránku, protože vám umožní uživateli nastavit název souboru objektu – může existovat pouze jeden soubor v libovolném jednoho umístění.
 
-##  <a name="vcconoverriding_ipropertypageimpl_activate"></a> Přepsání IPropertyPageImpl::Activate
+##  <a name="vcconoverriding_ipropertypageimpl_activate"></a> Overriding IPropertyPageImpl::Activate
 
 Dalším krokem je inicializovat na stránce vlastností s hodnotami vlastností základního objektu při prvním vytvoření stránky.
 
@@ -109,7 +109,7 @@ Implementace základní třídy [aktivovat](../atl/reference/ipropertypageimpl-c
 
 Tento kód použije metody COM `Document` rozhraní pro získání vlastnosti, které vás zajímají. Poté použije obálek rozhraní Win32 API poskytované [CDialogImpl](../atl/reference/cdialogimpl-class.md) a její základní třídy k zobrazení hodnoty vlastností pro uživatele.
 
-##  <a name="vcconoverride_ipropertypageimpl_apply"></a> Přepsání IPropertyPageImpl::Apply
+##  <a name="vcconoverride_ipropertypageimpl_apply"></a> Overriding IPropertyPageImpl::Apply
 
 Pokud uživatelé chtějí své změny použít u objektů, bude volat web stránku vlastností [použít](../atl/reference/ipropertypageimpl-class.md#apply) metody. Toto je místo, kde opačný kód v `Activate` – že `Activate` trvalo hodnot z objektu a odesílají je do ovládacích prvků na stránce vlastností `Apply` vezme hodnoty ze ovládacích prvků na stránce vlastností a odesílá je do objekt.
 
@@ -161,7 +161,7 @@ End Module
 
 Když spustíte toto makro, na stránce vlastností zobrazí zobrazuje název souboru a stav jen pro čtení aktuálního textového dokumentu. Umožňuje zápis do dokumentu ve vývojovém prostředí; jsou pouze údaje stavu jen pro čtení dokumentu To nemá vliv na atribut jen pro čtení souboru na disku.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Stránky vlastností](../atl/atl-com-property-pages.md)<br/>
 [Ukázka ATLPages](../visual-cpp-samples.md)

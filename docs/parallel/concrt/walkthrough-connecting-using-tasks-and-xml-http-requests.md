@@ -1,19 +1,19 @@
 ---
-title: 'Návod: Připojení pomocí úloh a žádostí XML HTTP'
+title: 'Návod: Připojení pomocí úloh a žádostí XML HTTP'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - connecting to web services, UWP apps [C++]
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-ms.openlocfilehash: dfe4f111e130520f1c4948dc00fdf340e4d3113e
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f78adda7625d3a3def60de968c5e7be97f282a7f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175844"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266507"
 ---
-# <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Návod: Připojení pomocí úloh a žádostí XML HTTP
+# <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Návod: Připojení pomocí úloh a žádostí XML HTTP
 
 Tento příklad ukazuje způsob použití [IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) a [IXMLHTTPRequest2Callback](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) spolu s úkoly odesílajícími požadavky HTTP GET a POST na webovou službu v Universal Windows Platform (UPW ) aplikace. Propojením požadavku `IXMLHTTPRequest2` s úkoly můžete psát kód, který lze kombinovat s ostatními úkoly. Například můžete použít úlohu stahování jako součást posloupnosti úkolů. Úloha stažení můžete také odpovídat při práci se zruší.
 
@@ -24,7 +24,7 @@ Další informace o úlohách najdete v tématu [paralelismus](../../parallel/co
 
 Tento dokument nejprve ukazuje, jak vytvořit `HttpRequest` a její podpůrnou třídy. Následně ukazuje, jak použít tuto třídu v rámci aplikace pro UPW, která používá C++ a XAML.
 
-Příklad, který používá `IXMLHTTPRequest2` ale úkoly, naleznete v tématu [rychlý start: připojení pomocí XML požadavku protokolu HTTP (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\)).
+Příklad, který používá `IXMLHTTPRequest2` ale úkoly, naleznete v tématu [rychlý start: Připojení pomocí XML požadavku protokolu HTTP (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\)).
 
 > [!TIP]
 >  `IXMLHTTPRequest2` a `IXMLHTTPRequest2Callback` jsou rozhraní, které doporučujeme pro použití v aplikaci UWP. Tento příklad pro použití v desktopové aplikaci můžete také přizpůsobit.
@@ -106,7 +106,7 @@ Tady je spuštěné aplikaci:
 
 [Návody pro Concurrency Runtime](../../parallel/concrt/concurrency-runtime-walkthroughs.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Funkční paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [Zrušení v knihovně PPL](cancellation-in-the-ppl.md)<br/>

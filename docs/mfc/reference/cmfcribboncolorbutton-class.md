@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCRibbonColorButton [MFC], SetPalette
 - CMFCRibbonColorButton [MFC], UpdateColor
 ms.assetid: 6b4b4ee3-8cc0-41b4-a4eb-93e8847008e1
-ms.openlocfilehash: f0a55fa9cb431900a0454d481a77efc4e63372ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7901619110652423a2ab00d8088d6b9213fe202
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644831"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266273"
 ---
 # <a name="cmfcribboncolorbutton-class"></a>Cmfcribboncolorbutton – třída
 
@@ -102,11 +102,11 @@ Následující příklad ukazuje, jak použít různé metody v `CMFCRibbonColor
 
 [Cmfcribbonbaseelement –](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
-[Cmfcribbonbutton –](../../mfc/reference/cmfcribbonbutton-class.md)
+[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
 
 [Cmfcribbongallery –](../../mfc/reference/cmfcribbongallery-class.md)
 
-[Cmfcribboncolorbutton –](../../mfc/reference/cmfcribboncolorbutton-class.md)
+[CMFCRibbonColorButton](../../mfc/reference/cmfcribboncolorbutton-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -171,7 +171,7 @@ CMFCRibbonColorButton(
 *nSmallImageIndex*<br/>
 [in] Index založený na nule malý obrázek, který se zobrazí na tlačítku.
 
-*Barva*<br/>
+*color*<br/>
 [in] Barva tlačítka (výchozí hodnota je černá).
 
 *bSimpleButtonLook*<br/>
@@ -203,7 +203,7 @@ void EnableAutomaticButton(
 *lpszLabel*<br/>
 [in] Popisek **automatické** tlačítko.
 
-*barvaAutomatická*<br/>
+*colorAutomatic*<br/>
 [in] Hodnota RGB, která určuje, **automatické** výchozí barvy tlačítka.
 
 *bEnable*<br/>
@@ -324,7 +324,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*Barva*<br/>
+*color*<br/>
 [in] Barvu, kterou chcete nastavit.
 
 ##  <a name="setcolorboxsize"></a>  CMFCRibbonColorButton::SetColorBoxSize
@@ -352,10 +352,10 @@ static void __stdcall SetColorName(
 
 ### <a name="parameters"></a>Parametry
 
-*Barva*<br/>
+*color*<br/>
 [in] Hodnota RGB barvu.
 
-*%{strName/*<br/>
+*strName*<br/>
 [in] Nový název pro zadanou barvu.
 
 ### <a name="remarks"></a>Poznámky
@@ -420,14 +420,14 @@ void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*Barva*<br/>
+*color*<br/>
 [in] Barva vybraná uživatelem.
 
 ### <a name="remarks"></a>Poznámky
 
 `CMFCRibbonColorButton::UpdateColor` Metoda změní barvu vybraného tlačítka a upozorní nadřazené odesláním wm_command – zprávy s oznámením BN_CLICKED standard. Použití [CMFCRibbonColorButton::GetColor](#getcolor) metodu pro načtení vybraných barev.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

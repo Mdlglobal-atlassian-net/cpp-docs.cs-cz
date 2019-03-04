@@ -1,5 +1,5 @@
 ---
-title: Ctypedptrmap – třída
+title: CTypedPtrMap Class
 ms.date: 11/04/2016
 f1_keywords:
 - CTypedPtrMap
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: 4c6d20279792788c1013df8540080b2715ade1f2
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 05689001f8c385191057a8dc824a508189a43f05
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657380"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266052"
 ---
-# <a name="ctypedptrmap-class"></a>Ctypedptrmap – třída
+# <a name="ctypedptrmap-class"></a>CTypedPtrMap Class
 
 Poskytuje typově zabezpečenou "obálku" pro objekty tříd ukazatel mapy `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, a `CMapStringToPtr`.
 
@@ -34,7 +34,7 @@ class CTypedPtrMap : public BASE_CLASS
 
 #### <a name="parameters"></a>Parametry
 
-*$BASE_CLASS*<br/>
+*BASE_CLASS*<br/>
 Základní třída typované ukazatele mapování třídy; musí být třída map ukazatel ( `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, nebo `CMapStringToPtr`).
 
 *KEY*<br/>
@@ -103,7 +103,7 @@ Určuje vrácené klíč načtený elementu.
 *HODNOTA*<br/>
 Parametr šablony určující typ hodnoty na mapě.
 
-*r-hodnoty*<br/>
+*rValue*<br/>
 Určuje, vrácená hodnota elementu načtený.
 
 ### <a name="remarks"></a>Poznámky
@@ -124,7 +124,7 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 
 ### <a name="parameters"></a>Parametry
 
-*$BASE_CLASS*<br/>
+*BASE_CLASS*<br/>
 Parametr šablony určující základní třídy tuto mapu třídy.
 
 *key*<br/>
@@ -133,7 +133,7 @@ Klíč elementu, který chcete vyhledávat.
 *HODNOTA*<br/>
 Parametr šablony určující typ hodnot uložených na této mapě.
 
-*r-hodnoty*<br/>
+*rValue*<br/>
 Určuje, vrácená hodnota elementu načtený.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -144,7 +144,7 @@ Nenulové, pokud element nebyl nalezen; jinak 0.
 
 Tato vložená funkce zavolá `BASE_CLASS` **:: vyhledávání**.
 
-##  <a name="operator_at"></a>  [] Č. CTypedPtrMap::operator
+##  <a name="operator_at"></a>  CTypedPtrMap::operator [ ]
 
 Tento operátor lze použít pouze na levé straně příkazu přiřazení (l hodnota).
 
@@ -157,7 +157,7 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 *HODNOTA*<br/>
 Parametr šablony určující typ hodnot uložených na této mapě.
 
-*$BASE_CLASS*<br/>
+*BASE_CLASS*<br/>
 Parametr šablony určující základní třídy tuto mapu třídy.
 
 *key*<br/>
@@ -214,7 +214,7 @@ Určuje objekt ukazatel, který je hodnota nového elementu.
 
 Podrobné poznámky, naleznete v tématu [CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC shromažďování](../../visual-cpp-samples.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

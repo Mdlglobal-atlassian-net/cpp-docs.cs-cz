@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndButton [MFC], IsCaptionButton
 - CMFCDesktopAlertWndButton [MFC], IsCloseButton
 ms.assetid: df39a0c8-0c39-4ab0-8c64-78c5b2c4ecaf
-ms.openlocfilehash: daa2f978b306bbe45f91514ada0f264a848521c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a9ade332c87f293719872e426fb459b011d2d35
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450606"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270254"
 ---
 # <a name="cmfcdesktopalertwndbutton-class"></a>Cmfcdesktopalertwndbutton – třída
 
@@ -76,9 +76,9 @@ Následující příklad ukazuje způsob použití `SetImage` metodu `CMFCDeskto
 
 [CButton](../../mfc/reference/cbutton-class.md)
 
-[Cmfcbutton –](../../mfc/reference/cmfcbutton-class.md)
+[CMFCButton](../../mfc/reference/cmfcbutton-class.md)
 
-[Cmfcdesktopalertwndbutton –](../../mfc/reference/cmfcdesktopalertwndbutton-class.md)
+[CMFCDesktopAlertWndButton](../../mfc/reference/cmfcdesktopalertwndbutton-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -108,7 +108,7 @@ BOOL IsCloseButton() const;
 
 Nenulové, pokud tlačítko zavření dialogového okna Výstraha; jinak 0.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

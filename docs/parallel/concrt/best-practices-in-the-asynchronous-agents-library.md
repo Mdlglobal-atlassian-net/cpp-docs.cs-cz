@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Asynchronous Agents Library, practices to avoid
 - practices to avoid, Asynchronous Agents Library
 ms.assetid: 85f52354-41eb-4b0d-98c5-f7344ee8a8cf
-ms.openlocfilehash: 70c979be0d37817cf199af0b6a3cbf114fced265
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c61393957a63895a9ecbdaaae8d83a5fbd710de3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494576"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266416"
 ---
 # <a name="best-practices-in-the-asynchronous-agents-library"></a>Osvědčené postupy v knihovně asynchronních agentů
 
@@ -42,7 +42,7 @@ Obvykle izolovat tak, že datových členů ve stavu agenta `private` nebo `prot
 
 [!code-cpp[concrt-simple-agent#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_1.cpp)]
 
-Kompletní příklady o tom, jak definovat a používat agenty, naleznete v tématu [návod: vytvoření aplikace založené na agentovi](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md) a [návod: vytvoření agenta toku dat](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md).
+Kompletní příklady o tom, jak definovat a používat agenty, naleznete v tématu [názorný postup: Vytvoření aplikace založené na agentovi](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md) a [názorný postup: Vytvoření agenta toku dat](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md).
 
 [[Horní](#top)]
 
@@ -58,7 +58,7 @@ V následujícím základním příkladu ukazuje, jak použít semafor omezit po
 
 Výrobce v tomto příkladu odesílá relativně málo zprávy příjemci. Proto tento příklad neukazuje potenciální podmínku nedostatku paměti nebo na více instancí z důvodu nedostatku paměti. Tento mechanismus je však užitečný při datového kanálu obsahuje poměrně velké množství zpráv.
 
-Další informace o tom, jak vytvořit Semaphore – třída, která se používá v tomto příkladu najdete v tématu [postupy: použití třídy kontextu pro implementaci semaforu kooperativní](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
+Další informace o tom, jak vytvořit Semaphore – třída, která se používá v tomto příkladu najdete v tématu [jak: Použití třídy kontextu pro implementaci semaforu pro spolupráci](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
 
 [[Horní](#top)]
 
@@ -66,7 +66,7 @@ Další informace o tom, jak vytvořit Semaphore – třída, která se použív
 
 Knihovna agentů je nejužitečnější při práci, kterou provádí datový kanál se poměrně hrubých. Například jedna součást aplikace může číst data ze souboru nebo připojení k síti a příležitostně data odeslat, k jiné součásti. Protokol, který knihovna agentů používá šíření zpráv způsobí, že mechanismus předávání zpráv s vyšší mírou režie než úloha paralelní konstrukce, které jsou k dispozici v [knihovny Ppl](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL). Proto zajistěte, aby práce, která se provádí pomocí datového kanálu dostatečně dlouhá, aby posun Tato dodatečná režie.
 
-I datový kanál je nejúčinnější po hrubých jeho úkolů, každá fáze kanálu dat slouží k provádění více detailní operace PPL konstrukce, jako jsou skupiny úloh a paralelních algoritmů. Příklad hrubých data sítě, která používá dosáhnout jemně odstupňovaného paralelismu v každé fázi zpracování, naleznete v tématu [návod: vytvoření sítě pro zpracování obrázků](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+I datový kanál je nejúčinnější po hrubých jeho úkolů, každá fáze kanálu dat slouží k provádění více detailní operace PPL konstrukce, jako jsou skupiny úloh a paralelních algoritmů. Příklad hrubých data sítě, která používá dosáhnout jemně odstupňovaného paralelismu v každé fázi zpracování, naleznete v tématu [názorný postup: Vytvoření sítě pro zpracování obrázků](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 [[Horní](#top)]
 
@@ -114,13 +114,12 @@ receiver2: received resource 64
 Destroying resource 64...
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Osvědčené postupy v Concurrency Runtime](../../parallel/concrt/concurrency-runtime-best-practices.md)<br/>
 [Knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Návod: Vytvoření aplikace založené na agentovi](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br/>
-[Postupy: Vytvoření agenta toku dat](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
+[Návod: Vytvoření agenta toku dat](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
 [Návod: Vytvoření sítě pro zpracování obrázků](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
 [Osvědčené postupy v knihovně PPL (Parallel Patterns Library)](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br/>
 [Obecné osvědčené postupy v Concurrency Runtime](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)
-

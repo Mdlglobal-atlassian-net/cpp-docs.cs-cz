@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-ms.openlocfilehash: e858d5a481add0f3c6e61175a96a5b27133bf125
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01effb8cb1142db0bcae6f9c456e4a3b3abd69e8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559715"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269934"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>Cmfcoutlookbartabctrl – třída
 
@@ -122,13 +122,13 @@ Následující příklad ukazuje, jak inicializovat `CMFCOutlookBarTabCtrl` obje
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[Cmfcbasetabctrl –](../../mfc/reference/cmfcbasetabctrl-class.md)
+[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)
 
-[Cmfcoutlookbartabctrl –](../../mfc/reference/cmfcoutlookbartabctrl-class.md)
+[CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxoutlookbartabctrl.h
+**Header:** afxoutlookbartabctrl.h
 
 ##  <a name="addcontrol"></a>  CMFCOutlookBarTabCtrl::AddControl
 
@@ -476,7 +476,7 @@ BOOL SetToolbarImageList(
 *uiID*<br/>
 [in] Určuje ID prostředku bitové kopie k načtení.
 
-*CX*<br/>
+*cx*<br/>
 [in] Určuje šířku obrázku v seznamu obrázku v pixelech.
 
 *clrTransp*<br/>
@@ -504,7 +504,7 @@ void SetVisiblePageButtons(int nVisiblePageButtons);
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

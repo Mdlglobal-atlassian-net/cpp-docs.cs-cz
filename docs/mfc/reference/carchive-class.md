@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CArchive [MFC], WriteString
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
-ms.openlocfilehash: f1e5701e95ec080845f3d2422da5d6ce4b9c906b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f169964c6a313f37b5ea50a5105af29af7b59b1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465608"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266325"
 ---
 # <a name="carchive-class"></a>CArchive – třída
 
@@ -132,7 +132,7 @@ Přetížená extrakce ( **>>**) a vložení ( **<<**) operátory jsou vhodné a
 
 `CArchive` také pro podporu programování pomocí třídy soketů knihovny MFC Windows [csocket –](../../mfc/reference/csocket-class.md) a [csocketfile –](../../mfc/reference/csocketfile-class.md). [IsBufferEmpty](#isbufferempty) členská funkce podporuje určité použití.
 
-Další informace o `CArchive`, najdete v článcích [serializace](../../mfc/serialization-in-mfc.md) a [rozhraní Windows Sockets: použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Další informace o `CArchive`, najdete v článcích [serializace](../../mfc/serialization-in-mfc.md) a [rozhraní Windows Sockets: Použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -298,7 +298,7 @@ Tato funkce je zadaný pro podporu programování pomocí třídy soketů knihov
 
 Důvod pro použití `IsBufferEmpty` s archiv přidružené `CSocketFile` objektu je, že archivu vyrovnávací paměti může obsahovat více než jeden záznam nebo zprávy. Po přijetí zpráv, byste měli použít `IsBufferEmpty` pro řízení smyčky, který se bude přijímat data, dokud vyrovnávací paměť je prázdná. Další informace najdete v tématu [Receive](../../mfc/reference/casyncsocket-class.md#receive) členské funkce třídy `CAsyncSocket`, který ukazuje způsob použití `IsBufferEmpty`.
 
-Další informace najdete v tématu [rozhraní Windows Sockets: použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Další informace najdete v tématu [rozhraní Windows Sockets: Použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ##  <a name="isloading"></a>  CArchive::IsLoading
 
@@ -352,7 +352,7 @@ void MapObject(const CObject* pOb);
 
 ### <a name="parameters"></a>Parametry
 
-*Poštovní přihrádka*<br/>
+*pOb*<br/>
 Konstantní ukazatel na objekt uložené.
 
 ### <a name="remarks"></a>Poznámky
@@ -552,7 +552,7 @@ UINT Read(void* lpBuf, UINT nMax);
 *lpBuf*<br/>
 Ukazatel do vyrovnávací paměti, uživatelem zadané, která se zobrazí data načtená z archivu.
 
-*Nmaximum*<br/>
+*nMax*<br/>
 Celé číslo bez znaménka určující počet bajtů ke čtení z archivu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -653,7 +653,7 @@ Odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) poté, co j
 *lpsz*<br/>
 Určuje ukazatel do vyrovnávací paměti, zadané uživatele, který bude příjemcem řetězec zakončený hodnotou null text.
 
-*Nmaximum*<br/>
+*nMax*<br/>
 Určuje maximální počet znaků pro čtení. By měl být menší než velikost *lpsz* vyrovnávací paměti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -784,7 +784,7 @@ void Write(const void* lpBuf, INT nMax);
 *lpBuf*<br/>
 Ukazatel do vyrovnávací paměti zadaných uživatelem, který obsahuje data, která mají být zapsána do archivu.
 
-*Nmaximum*<br/>
+*nMax*<br/>
 Celé číslo určující počet bajtů, které mají být zapsána do archivu.
 
 ### <a name="remarks"></a>Poznámky
@@ -834,7 +834,7 @@ void WriteObject(const CObject* pOb);
 
 ### <a name="parameters"></a>Parametry
 
-*Poštovní přihrádka*<br/>
+*pOb*<br/>
 Konstantní ukazatel na objekt uložené.
 
 ### <a name="remarks"></a>Poznámky
@@ -879,7 +879,7 @@ Ukončující znak null ('\0') není zapsána do souboru. ani je nový řádek a
 
 [!code-cpp[NVC_MFCSerialization#30](../../mfc/codesnippet/cpp/carchive-class_23.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CFile – třída](../../mfc/reference/cfile-class.md)<br/>

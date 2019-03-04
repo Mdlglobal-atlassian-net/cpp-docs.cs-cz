@@ -1,5 +1,5 @@
 ---
-title: Csimplemapequalhelperfalse – třída
+title: CSimpleMapEqualHelperFalse Class
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleMapEqualHelperFalse
@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleMapEqualHelperFalse class
 ms.assetid: a873eea3-e130-45cc-a476-61ee79511c3b
-ms.openlocfilehash: 7ccfe59e6741c267aded8f59828947a1d98bfbc3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c4241049ad323047f06c0b29f946521f2c02167
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572689"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268899"
 ---
-# <a name="csimplemapequalhelperfalse-class"></a>Csimplemapequalhelperfalse – třída
+# <a name="csimplemapequalhelperfalse-class"></a>CSimpleMapEqualHelperFalse Class
 
 Tato třída je pomocné rutiny pro [csimplemap –](../../atl/reference/csimplemap-class.md) třídy.
 
@@ -86,7 +86,7 @@ Vrátí hodnotu false.
 
 Tato metoda vždy vrátí hodnotu false a bude volat `ATLASSERT` s argumentem false, pokud se na ni stále odkazuje. Účelem `CSimpleMapEqualHelperFalse::IsEqualValue` metodou je vynutit metod pomocí porovnávání selhání způsobem jasně definované při rovnosti testy nebyly definovány odpovídajícím způsobem.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CSimpleMapEqualHelper – třída](../../atl/reference/csimplemapequalhelper-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

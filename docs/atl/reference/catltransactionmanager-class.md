@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-ms.openlocfilehash: e69ea2b7446e784bb643050bd122c93ea53a0676
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 031d72903d72af77f6929072e4605d32d81585a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463775"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270199"
 ---
 # <a name="catltransactionmanager-class"></a>Catltransactionmanager – třída
 
@@ -51,8 +51,8 @@ class CAtlTransactionManager;
 
 |Název|Popis|
 |----------|-----------------|
-|[~ Catltransactionmanager –](#dtor)|Catltransactionmanager – destruktor|
-|[Catltransactionmanager –](#catltransactionmanager)|Catltransactionmanager – konstruktor.|
+|[~CAtlTransactionManager](#dtor)|Catltransactionmanager – destruktor|
+|[CAtlTransactionManager](#catltransactionmanager)|Catltransactionmanager – konstruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -66,12 +66,12 @@ class CAtlTransactionManager;
 |[FindFirstFile](#findfirstfile)|Vyhledá v adresáři souboru nebo podadresáře rámci transakčním režimu operace.|
 |[GetFileAttributes](#getfileattributes)|Získá atributy systému souborů pro určený soubor nebo adresář jako Počet zrušených zpracovaných operací.|
 |[GetFileAttributesEx](#getfileattributesex)|Získá atributy systému souborů pro určený soubor nebo adresář jako Počet zrušených zpracovaných operací.|
-|[Gethandle –](#gethandle)|Vrátí popisovač transakcí.|
+|[GetHandle](#gethandle)|Vrátí popisovač transakcí.|
 |[IsFallback](#isfallback)|Určuje, zda je povoleno použití náhradní lokality volá.|
 |[MoveFile](#movefile)|Přesune existující soubor nebo adresář, včetně jejích potomků, rámci transakčním režimu operace.|
 |[RegCreateKeyEx](#regcreatekeyex)|Vytvoří zadaného klíče registru a přidruží ji k transakci. Pokud klíč již existuje, funkce otevře.|
 |[RegDeleteKey](#regdeletekey)|Odstraní podklíče a jeho hodnot z registru zadané zobrazení specifické pro platformu rámci transakčním režimu operace.|
-|[Volání RegOpenKeyEx](#regopenkeyex)|Otevře zadaný klíč registru a přidruží ji k transakci.|
+|[RegOpenKeyEx](#regopenkeyex)|Otevře zadaný klíč registru a přidruží ji k transakci.|
 |[Vrácení zpět](#rollback)|Požadavky, které transakce vrácena zpět.|
 |[SetFileAttributes](#setfileattributes)|Nastaví atributy pro soubor nebo adresář jako Počet zrušených zpracovaných operací.|
 
@@ -104,7 +104,7 @@ virtual ~CAtlTransactionManager();
 
 V běžném zpracování transakce je automaticky potvrzené a zavřít. Pokud během unwind výjimek je volán destruktor, transakce je vrácena zpět a zavřít.
 
-##  <a name="catltransactionmanager"></a>  Catltransactionmanager –
+##  <a name="catltransactionmanager"></a>  CAtlTransactionManager
 
 Catltransactionmanager – konstruktor.
 
@@ -191,10 +191,10 @@ inline HANDLE CreateFile(
 Název objektu má být vytvořen nebo otevřen.
 
 *dwDesiredAccess*<br/>
-Přístup k objektu, který lze shrnout jako čtení, zápis, obou nebo ani jedna (nula). Nejčastěji používanými hodnotami jsou všeobecné_čtení či GENERIC_WRITE: všeobecné_čtení &#124; ke GENERIC_WRITE.
+Přístup k objektu, který lze shrnout jako čtení, zápis, obou nebo ani jedna (nula). Nejčastěji používanými hodnotami jsou všeobecné_čtení či GENERIC_WRITE: GENERIC_READ &#124; GENERIC_WRITE.
 
 *dwShareMode*<br/>
-Režim sdílení objektu, který může být čtení, zápisu a obě, odstranění, všechny z nich, nebo žádný: 0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.
+Režim sdílení objektu, který může být čtení, zápisu a obě, odstranit, všechny z nich, nebo žádný: 0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.
 
 *lpSecurityAttributes*<br/>
 Ukazatel na strukturu SECURITY_ATTRIBUTES, která obsahuje popisovač volitelné zabezpečení a také určuje, zda lze Vrácený popisovač Zdědit podřízenými procesy. Tento parametr může mít hodnotu NULL.
@@ -389,7 +389,7 @@ inline LSTATUS RegCreateKeyEx(
 
 ### <a name="parameters"></a>Parametry
 
-*podstrom hKey*<br/>
+*hKey*<br/>
 Popisovač otevřít klíč registru.
 
 *lpSubKey*<br/>
@@ -402,7 +402,7 @@ Tento parametr je vyhrazen a musí být nula.
 Uživatelsky definované třídy tohoto klíče. Tento parametr může být ignorován. Tento parametr může mít hodnotu NULL.
 
 *dwOptions*<br/>
-Tento parametr může být jedna z následujících hodnot: REG_OPTION_BACKUP_RESTORE, REG_OPTION_NON_VOLATILE nebo REG_OPTION_VOLATILE.
+Tento parametr může být jeden z následujících hodnot: REG_OPTION_BACKUP_RESTORE REG_OPTION_NON_VOLATILE či REG_OPTION_VOLATILE.
 
 *samDesired*<br/>
 Maska, která určuje přístupová práva pro klíč.
@@ -436,7 +436,7 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*podstrom hKey*|Popisovač otevřít klíč registru.|
+|*hKey*|Popisovač otevřít klíč registru.|
 |*lpSubKey*|Název klíče, která se má odstranit.|
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -462,7 +462,7 @@ inline LSTATUS RegOpenKeyEx(
 
 ### <a name="parameters"></a>Parametry
 
-*podstrom hKey*<br/>
+*hKey*<br/>
 Popisovač otevřít klíč registru.
 
 *lpSubKey*<br/>
@@ -521,6 +521,6 @@ Atributy souboru, který se mají nastavit pro soubor. Další informace najdete
 
 Tato Obálka volání `SetFileAttributesTransacted` funkce.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Desktopové komponenty ATL objektů COM](../../atl/atl-com-desktop-components.md)

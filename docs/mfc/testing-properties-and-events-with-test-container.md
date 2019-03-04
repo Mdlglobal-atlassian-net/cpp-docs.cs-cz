@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ActiveX controls [MFC], testing
 - properties [MFC], testing
 ms.assetid: 626867cf-fe53-4c30-8973-55bb93ef3917
-ms.openlocfilehash: cf36514c6ce2cd25a49901165fcf919cffd5da7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b1d023488e8d547217dafffd224ab9fc05bd876
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633360"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267898"
 ---
 # <a name="testing-properties-and-events-with-test-container"></a>Testování vlastností a událostí pomocí testovacího kontejneru
 
@@ -23,7 +23,7 @@ Aplikace typu kontejner testu, dodávané v jazyce Visual C++ je kontejner ovlá
 
 ### <a name="to-access-the-activex-control-test-container"></a>Pro přístup k kontejner testů ovládacích prvků ActiveX
 
-1. Sestavení [lze kontejner TSTCON vzorku: kontejner testů ovládacích prvků ActiveX](../visual-cpp-samples.md).
+1. Sestavení [lze kontejner TSTCON vzorku: Kontejner testů ovládacích prvků ActiveX](../visual-cpp-samples.md).
 
 ### <a name="to-test-your-activex-control"></a>Testování ovládacího prvku ActiveX
 
@@ -54,8 +54,7 @@ V tomto okamžiku můžete otestovat, vlastnosti nebo události ovládacího prv
 
 1. Zadejte cílovou složku z informací o události.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)<br/>
 [Postupy: Ladění ovládacího prvku ActiveX](/visualstudio/debugger/how-to-debug-an-activex-control)
-

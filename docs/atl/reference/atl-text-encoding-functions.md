@@ -25,12 +25,12 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-ms.openlocfilehash: 2a076b666577920c940413fba4951f7de5f24fc6
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 13c521bae6790a030212c4a8edac460c960ecfc0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850256"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270817"
 ---
 # <a name="atl-text-encoding-functions"></a>Funkce kódování textu ATL
 
@@ -721,7 +721,7 @@ Počet znaků vyžadovaný pro vyrovnávací paměť, která by mohla obsahovat 
 
 Tato implementace uuencoding následuje specifikace POSIX P1003.2b/D11.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Koncepty](../active-template-library-atl-concepts.md)<br/>
 [Desktopové komponenty ATL objektů COM](../atl-com-desktop-components.md)

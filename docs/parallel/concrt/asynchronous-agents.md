@@ -5,12 +5,12 @@ helpviewer_keywords:
 - asynchronous agents
 - agents [Concurrency Runtime]
 ms.assetid: 6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a
-ms.openlocfilehash: a99400e4df49e36e1cddda7068f315485b976cde
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ff6fa851519066c3c399a28557fd8f103d0e94be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176533"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268938"
 ---
 # <a name="asynchronous-agents"></a>Asynchronní agenti
 
@@ -44,11 +44,11 @@ V následující tabulce jsou uvedeny některé důležité metody, které patř
 
 |Metoda|Popis|
 |------------|-----------------|
-|[Spuštění](reference/agent-class.md#start)|Plány `agent` objekt pro provedení a nastaví ji `agent_runnable` stavu.|
+|[start](reference/agent-class.md#start)|Plány `agent` objekt pro provedení a nastaví ji `agent_runnable` stavu.|
 |[Spuštění](reference/agent-class.md#run)|Úloha, která se má provést pomocí provádí `agent` objektu.|
 |[Hotovo](reference/agent-class.md#done)|Přesune agenta, aby `agent_done` stavu.|
 |[Zrušit](../../parallel/concrt/cancellation-in-the-ppl.md#cancel)|Pokud agenta nebyla spuštěna, tato metoda zruší spuštění agenta a nastaví na `agent_canceled` stavu.|
-|[Stav](reference/agent-class.md#status)|Načte aktuální stav `agent` objektu.|
+|[status](reference/agent-class.md#status)|Načte aktuální stav `agent` objektu.|
 |[Počkej](reference/agent-class.md#wait)|Čeká `agent` objektu k zadání `agent_done` nebo `agent_canceled` stavu.|
 |[wait_for_all](reference/agent-class.md#wait_for_all)|Čeká na všechny zadané `agent` objekty k zadání `agent_done` nebo `agent_canceled` stavu.|
 |[wait_for_one](reference/agent-class.md#wait_for_one)|Čeká na nejméně jednoho ze zadaných `agent` objekty k zadání `agent_done` nebo `agent_canceled` stavu.|
@@ -59,9 +59,8 @@ Modul runtime nedokáže spravovat výjimky, které jsou vyvolány asynchronníc
 
 ## <a name="example"></a>Příklad
 
-Příklad, který ukazuje, jak vytvořit základní aplikaci založené na agentovi, naleznete v tématu [návod: vytvoření aplikace založené na agentovi](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md).
+Příklad, který ukazuje, jak vytvořit základní aplikaci založené na agentovi, naleznete v tématu [názorný postup: Vytvoření aplikace založené na agentovi](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md)
-

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - servers, implementing
 - OLE server applications [MFC], implementing OLE servers
 ms.assetid: 5bd57e8e-3b23-4f23-9597-496fac2d24b5
-ms.openlocfilehash: a5c89ff1256d557ef417b9e53ce76bbf1b5d6196
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 953d157f4bbad0b460947740a2622074dfc90f4f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518954"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267560"
 ---
 # <a name="servers-implementing-a-server"></a>Servery: Implementace serveru
 
@@ -26,13 +26,13 @@ Kód serveru, který obsahuje Průvodce aplikací spadá do několika kategorií
 
   - Prostředky nabídek a panelů nástrojů použít, pokud je na místě aktivní server.
 
-  Další informace o těchto prostředků najdete v tématu [nabídky a prostředky: serverové doplňky](../mfc/menus-and-resources-server-additions.md).
+  Další informace o těchto prostředků najdete v tématu [nabídky a prostředky: Serverové doplňky](../mfc/menus-and-resources-server-additions.md).
 
-- Definuje třídu položky odvozené z `COleServerItem`. Další podrobnosti o serverové položky, naleznete v tématu [servery: serverové položky](../mfc/servers-server-items.md).
+- Definuje třídu položky odvozené z `COleServerItem`. Další podrobnosti o serverové položky, naleznete v tématu [serverů: Serverové položky](../mfc/servers-server-items.md).
 
-- Změna základní třídu třídy dokumentu má `COleServerDoc`. Další podrobnosti najdete v tématu [servery: implementace dokumentů serveru](../mfc/servers-implementing-server-documents.md).
+- Změna základní třídu třídy dokumentu má `COleServerDoc`. Další podrobnosti najdete v tématu [serverů: Implementace dokumentů serveru](../mfc/servers-implementing-server-documents.md).
 
-- Definování třídy rámec okno odvozené z `COleIPFrameWnd`. Další podrobnosti najdete v tématu [servery: implementace místní rámce Windows](../mfc/servers-implementing-in-place-frame-windows.md).
+- Definování třídy rámec okno odvozené z `COleIPFrameWnd`. Další podrobnosti najdete v tématu [serverů: Implementace rámečkem na místě Windows](../mfc/servers-implementing-in-place-frame-windows.md).
 
 - Vytvářet položku pro serverové aplikace v registrační databázi Windows a registrovat novou instanci serveru pomocí systému OLE. Informace v tomto tématu najdete v tématu [registrace](../mfc/registration.md).
 
@@ -40,10 +40,9 @@ Kód serveru, který obsahuje Průvodce aplikací spadá do několika kategorií
 
 Další informace najdete v tématu [odvozenou třídu COleServerItem](../mfc/reference/coleserveritem-class.md), [coleserverdoc –](../mfc/reference/coleserverdoc-class.md), a [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md) v *knihovny tříd*.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Servery](../mfc/servers.md)<br/>
 [Kontejnery](../mfc/containers.md)<br/>
 [Nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md)<br/>
 [Registrace](../mfc/registration.md)
-

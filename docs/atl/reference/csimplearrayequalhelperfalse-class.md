@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArrayEqualHelperFalse class
 ms.assetid: 6918af6f-d23d-49eb-8482-c44272f5ffeb
-ms.openlocfilehash: 91987d369291a092b6dfb5f7db9ca8ba1434a7cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35207fdcbffc0e0367d86682b5f731eef617d761
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594906"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269055"
 ---
 # <a name="csimplearrayequalhelperfalse-class"></a>Csimplearrayequalhelperfalse – třída
 
@@ -63,7 +63,7 @@ Vrátí hodnotu false.
 
 Tato metoda vždy vrátí hodnotu false a bude volat `ATLASSERT` s argumentem false, pokud odkazuje. Účelem `CSimpleArrayEqualHelperFalse::IsEqual` metodou je vynutit metod pomocí porovnávání selhání způsobem jasně definované při rovnosti testy nebyly definovány odpovídajícím způsobem.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CSimpleArrayEqualHelper – třída](../../atl/reference/csimplearrayequalhelper-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

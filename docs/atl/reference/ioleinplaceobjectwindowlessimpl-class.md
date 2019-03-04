@@ -1,5 +1,5 @@
 ---
-title: Ioleinplaceobjectwindowlessimpl – třída
+title: IOleInPlaceObjectWindowlessImpl Class
 ms.date: 11/04/2016
 f1_keywords:
 - IOleInPlaceObjectWindowlessImpl
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - controls [ATL], windowless
 - deactivating ATL
 ms.assetid: a2e0feb4-bc59-4adf-aab2-105457bbdbb4
-ms.openlocfilehash: a83fbed524c55c6bc98aa25caa17b80c1e5f89f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df14c22f5cf4828b51bf03f6d0f0c4c20cf5a009
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592124"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267170"
 ---
-# <a name="ioleinplaceobjectwindowlessimpl-class"></a>Ioleinplaceobjectwindowlessimpl – třída
+# <a name="ioleinplaceobjectwindowlessimpl-class"></a>IOleInPlaceObjectWindowlessImpl Class
 
 Tato třída implementuje `IUnknown` a poskytuje metody, které umožňují ovládací prvek bez oken pro příjem zprávy okna a účastnit se operace přetažení myší.
 
@@ -185,7 +185,7 @@ Nastaví – datový člen třídy ovládacího prvku `m_bUIActive` na hodnotu F
 
 Zobrazit [IOleInPlaceObject::UIDeactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-uideactivate) ve Windows SDK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CComControl – třída](../../atl/reference/ccomcontrol-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 'WM_ – obslužné rutiny zpráv: A–C'
+title: 'Wm_ – obslužné rutiny zpráv: A - C'
 ms.date: 11/04/2016
 f1_keywords:
 - ON_WM_CREATE
@@ -35,14 +35,14 @@ helpviewer_keywords:
 - ON_WM_ACTIVATEAPP [MFC]
 - ON_WM_CHANGECBCHAIN
 ms.assetid: 4e315896-d646-4b87-b0ab-41a4a753b045
-ms.openlocfilehash: 67ab1620d0ad815cc070935a2b314bbfa2ef1408
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08221e7569a8b4c4f4e8decba410bd1fe40f04d7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596830"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266026"
 ---
-# <a name="wm-message-handlers-a---c"></a>WM_ – obslužné rutiny zpráv: A–C
+# <a name="wm-message-handlers-a---c"></a>Wm_ – obslužné rutiny zpráv: A - C
 
 Následující položky mapování na levé straně odpovídají prototypy na pravé straně:
 
@@ -52,14 +52,14 @@ Následující položky mapování na levé straně odpovídají prototypy na pr
 |ON_WM_ACTIVATEAPP()|afx_msg void [OnActivateApp](../../mfc/reference/cwnd-class.md#onactivateapp)(BOOL, DWORD);|
 |ON_WM_APPCOMMAND()|afx_msg void [OnAppCommand](../../mfc/reference/cwnd-class.md#onappcommand)(CWnd\*, UINT, UINT, UINT);|
 |ON_WM_ASKCBFORMATNAME()|afx_msg void [OnAskCbFormatName](../../mfc/reference/cwnd-class.md#onaskcbformatname)(UINT, LPSTR);|
-|ON_WM_CANCELMODE()|afx_msg void [oncancelmode –](../../mfc/reference/cwnd-class.md#oncancelmode)();|
+|ON_WM_CANCELMODE()|afx_msg void [OnCancelMode](../../mfc/reference/cwnd-class.md#oncancelmode)();|
 |ON_WM_CAPTURECHANGED()|afx_msg void [OnCaptureChanged](../../mfc/reference/cwnd-class.md#oncapturechanged)(CWnd\*);|
 |ON_WM_CHANGECBCHAIN()|afx_msg void [OnChangeCbChain](../../mfc/reference/cwnd-class.md#onchangecbchain)(HWND, HWND);|
 |ON_WM_CHAR()|afx_msg void [OnChar](../../mfc/reference/cwnd-class.md#onchar)(UINT, UINT, UINT);|
 |ON_WM_CHARTOITEM()|afx_msg int [OnCharToItem](../../mfc/reference/cwnd-class.md#onchartoitem)(UINT, CWnd\*, UINT);|
 |ON_WM_CHILDACTIVATE()|afx_msg void [OnChildActivate](../../mfc/reference/cwnd-class.md#onchildactivate)();|
 |ON_WM_CLIPBOARDUPDATE()|afx_msg void [OnClipboardUpdate](../../mfc/reference/cwnd-class.md#onclipboardupdate)();|
-|ON_WM_CLOSE()|afx_msg void [při zavření](../../mfc/reference/cwnd-class.md#onclose)();|
+|ON_WM_CLOSE()|afx_msg void [OnClose](../../mfc/reference/cwnd-class.md#onclose)();|
 |ON_WM_COMPACTING()|afx_msg void [OnCompacting](../../mfc/reference/cwnd-class.md#oncompacting)(UINT);|
 |ON_WM_COMPAREITEM()|afx_msg int [OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem)(LPCOMPAREITEMSTRUCT);|
 |ON_WM_CONTEXTMENU()|afx_msg void [OnContextMenu](../../mfc/reference/cwnd-class.md#oncontextmenu)(CWnd\*, CPoint);|
@@ -67,8 +67,7 @@ Následující položky mapování na levé straně odpovídají prototypy na pr
 |ON_WM_CREATE()|afx_msg int [OnCreate](../../mfc/reference/cwnd-class.md#oncreate)(LPCREATESTRUCT);|
 |ON_WM_CTLCOLOR()|afx_msg HBRUSH [OnCtlColor](../../mfc/reference/cwnd-class.md#onctlcolor)(CDC\*, CWnd\*, UINT);|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Mapy zpráv](../../mfc/reference/message-maps-mfc.md)<br/>
 [Obslužné rutiny pro zprávy WM_](../../mfc/reference/handlers-for-wm-messages.md)
-

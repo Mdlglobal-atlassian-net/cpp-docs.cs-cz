@@ -1,5 +1,5 @@
 ---
-title: 'OLE – pozadí: Implementace MFC'
+title: 'OLE – pozadí: Implementace v prostředí MFC'
 ms.date: 11/04/2016
 f1_keywords:
 - IMarshall
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE IMoniker interface
 - OLE IUnknown
 ms.assetid: 2b67016a-d78e-4d60-925f-c28ec8fb6180
-ms.openlocfilehash: 6372f28c78be99af9e329ff83ef531d18ad2480f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f793c7d7303a49057e46c32eb658ea7eea8e9ccc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476671"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267270"
 ---
-# <a name="ole-background-mfc-implementation"></a>OLE – pozadí: Implementace MFC
+# <a name="ole-background-mfc-implementation"></a>OLE – pozadí: Implementace v prostředí MFC
 
 Kvůli velikosti a složitosti nezpracovaná OLE rozhraní API ho přímo pro psaní aplikací OLE volání může být časově velmi náročné. Cílem implementace knihovny Microsoft Foundation Class OLE je snížit množství práce, kterou musíte udělat pro psaní aplikací plně funkční, podporující OLE.
 
@@ -35,7 +35,7 @@ Imoniker – rozhraní `IMoniker` rozhraní je implementováno knihovnou tříd 
 
 IUnknown a rozhraní imarshal – `IUnknown` rozhraní je implementované knihovny tříd, ale není dostupné na programátorovi. `IMarshal` Rozhraní není implementováno pomocí knihovny tříd, ale používá se interně. Automatizační servery sestavený pomocí knihovny třídy již mít zařazování možností integrovaných.
 
-Knihovna tříd podporuje částečně složené soubory DOCFILES (složených souborů). Žádnou z funkcí, které přímo pracovat nad rámec vytváření složených souborů nejsou podporovány. Knihovna MFC používá třídy `COleFileStream` pro podporu zpracování datových proudů s využitím functions standardní soubor. Další informace najdete v článku [kontejnery: složené soubory](../mfc/containers-compound-files.md).
+Knihovna tříd podporuje částečně složené soubory DOCFILES (složených souborů). Žádnou z funkcí, které přímo pracovat nad rámec vytváření složených souborů nejsou podporovány. Knihovna MFC používá třídy `COleFileStream` pro podporu zpracování datových proudů s využitím functions standardní soubor. Další informace najdete v článku [kontejnerů: Složené soubory](../mfc/containers-compound-files.md).
 
 Vnitroprocesové servery a obslužné rutiny objekt vnitroprocesové servery a objekt obslužné rutiny umožňují provádění vizuální úpravy dat nebo úplné objekty modelu COM (Component Object) v dynamická knihovna (DLL). K tomu je možné implementovat vaše knihovna DLL prostřednictvím přímého volání OLE API. Nicméně pokud píšete automatizační server a server nemá žádné uživatelské rozhraní, můžete použít AppWizard kompletně umístit do knihovny DLL a aby byl váš server v procesový server. Další informace o těchto tématech najdete v tématu [automatizační servery](../mfc/automation-servers.md).
 
@@ -44,8 +44,7 @@ Vnitroprocesové servery a obslužné rutiny objekt vnitroprocesové servery a o
 
 Další informace o způsobu implementace tříd Microsoft Foundation OLE rozhraní OLE, najdete v článku MFC – technické poznámky [38](../mfc/tn038-mfc-ole-iunknown-implementation.md), [39](../mfc/tn039-mfc-ole-automation-implementation.md), a [40](../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [OLE – pozadí](../mfc/ole-background.md)<br/>
 [OLE – pozadí: Strategie implementace](../mfc/ole-background-implementation-strategies.md)
-

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MFC ActiveX Control Wizard
 - OLE controls [MFC]
 ms.assetid: f19d698c-bdc3-4c74-af97-3d6ccb441b75
-ms.openlocfilehash: d916517342bd28aaf77cdce20e2479eb80dec024
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 009c7a2b0c703facf70b7a4b2706f288c4d7fd9a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446589"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267576"
 ---
 # <a name="mfc-activex-control-wizard"></a>Průvodce ovládacím prvkem ActiveX v prostředí MFC
 
@@ -62,9 +62,8 @@ Tato stránka průvodce popisuje aktuální nastavení aplikace pro projekt ovl�
 
 - Ovládací prvek je založen na žádný existující ovládací prvek Windows, aktivuje se, když se zobrazí, má uživatelské rozhraní a zahrnuje **o** dialogové okno. Tato výchozí nastavení můžete změnit na [nastavení](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) stránky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vytváření a spravování projektů Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)<br/>
 [Typy projektů Visual C++](../../ide/visual-cpp-project-types.md)<br/>
 [Koncepty](../../atl/active-template-library-atl-concepts.md)
-
