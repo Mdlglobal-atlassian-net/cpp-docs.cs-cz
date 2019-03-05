@@ -64,7 +64,7 @@ Seznam parametrů v definici používá tuto syntaxi:
 
 *Seznam parametrů*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarace parametru*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Seznam parametrů* **,***deklarace parametru*
+&nbsp;&nbsp;&nbsp;&nbsp;*Seznam parametrů* **,** *deklarace parametru*
 
 *deklarace parametru*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*specifikátory deklarace* *deklarátorů*<br/>

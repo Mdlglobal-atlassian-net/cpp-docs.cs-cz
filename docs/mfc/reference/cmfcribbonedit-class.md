@@ -73,12 +73,12 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetTextAlign
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
-ms.openlocfilehash: 094b91bb730f125ee3a159c80626a8724c10f93e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1a8f601c9f5798494ee34d3c3987222c14ecfa7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578903"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292185"
 ---
 # <a name="cmfcribbonedit-class"></a>Cmfcribbonedit – třída
 
@@ -187,7 +187,7 @@ CMFCRibbonEdit();
 *lpszLabel*<br/>
 [in] Popisek `CMFCRibbonEdit` ovládacího prvku.
 
-*nvybrán Nobrázek*<br/>
+*nImage*<br/>
 [in] Index malý obrázek pro `CMFCRibbonEdit` ovládacího prvku. Kolekce malé obrázky se spravuje pomocí nadřazené kategorie pásu karet.
 
 ### <a name="remarks"></a>Poznámky
@@ -283,10 +283,10 @@ void EnableSpinButtons(
 
 ### <a name="parameters"></a>Parametry
 
-*Nminimum*<br/>
+*nMin*<br/>
 [in] Minimální hodnotu číselníku.
 
-*Nmaximum*<br/>
+*nMax*<br/>
 [in] Maximální hodnotu číselníku.
 
 ### <a name="remarks"></a>Poznámky
@@ -303,7 +303,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení pro `CMFCRibbonEdit` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -336,7 +336,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení pro `CMFCRibbonEdit` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -472,7 +472,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení pro `CMFCRibbonEdit` ovládacího prvku.
 
 ### <a name="remarks"></a>Poznámky
@@ -487,7 +487,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení pro `CMFCRibbonEdit` ovládacího prvku.
 
 ### <a name="remarks"></a>Poznámky
@@ -502,7 +502,7 @@ virtual void OnDrawLabelAndImage(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení pro `CMFCRibbonEdit` ovládacího prvku.
 
 ### <a name="remarks"></a>Poznámky
@@ -523,7 +523,7 @@ virtual void OnDrawOnList(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení pro `CMFCRibbonEdit` ovládacího prvku.
 
 *strText*<br/>
@@ -604,7 +604,7 @@ virtual void OnLButtonDown(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Tento parametr se nepoužívá.
 
 ### <a name="remarks"></a>Poznámky
@@ -619,7 +619,7 @@ virtual void OnLButtonUp(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Tento parametr se nepoužívá.
 
 ### <a name="remarks"></a>Poznámky
@@ -750,7 +750,7 @@ TRUE, pokud chcete nastavit šířku pro režim s plovoucí desetinnou čárkou.
 
 `CMFCRibbonEdit` Ovládací prvek má dva šířku v závislosti na jeho režimu zobrazení: s plovoucí desetinnou čárkou a pravidelné režimu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
