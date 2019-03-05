@@ -1,5 +1,5 @@
 ---
-title: CMFCStatusBar – třída
+title: CMFCStatusBar Class
 ms.date: 11/19/2018
 f1_keywords:
 - CMFCStatusBar
@@ -72,14 +72,14 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: c4891c6bb66fe5e4b737ca9b128a01bcedcf39e7
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 94876dcf6549842a5fedbd96a93ef2cc760225ce
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176572"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326748"
 ---
-# <a name="cmfcstatusbar-class"></a>CMFCStatusBar – třída
+# <a name="cmfcstatusbar-class"></a>CMFCStatusBar Class
 
 `CMFCStatusBar` Třída implementuje stavový řádek podobný `CStatusBar` třídy. Ale `CMFCStatusBar` třída obsahuje funkce, které nejsou nabízeny třídou `CStatusBar` třídy, jako je schopnost zobrazit obrázky, animace a indikátory; a schopnost reagovat na poklepání myši.
 
@@ -178,7 +178,7 @@ Následující příklad ukazuje způsob volání různých metodách `CMFCStatu
 
 [CPane](../../mfc/reference/cpane-class.md)
 
-[CMFCStatusBar –](../../mfc/reference/cmfcstatusbar-class.md)
+[CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -385,7 +385,7 @@ void GetItemRect(
 ### <a name="parameters"></a>Parametry
 
 [in] *nIndex*<br/>
-[in] *lprect –*<br/>
+[in] *lpRect*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
@@ -518,7 +518,7 @@ virtual void OnDrawPane(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení pro kreslení.
 
 *pPane*<br/>
@@ -783,7 +783,7 @@ void SetPaneWidth(
 *nIndex*<br/>
 [in] Index podokno panelu Stav, pro kterou chcete nastavit novou šířku.
 
-*CX*<br/>
+*cx*<br/>
 [in] Novou šířku podokno panelu Stav, v pixelech.
 
 ##  <a name="settiptext"></a>  CMFCStatusBar::SetTipText
@@ -804,7 +804,7 @@ void SetTipText(
 *pszTipText*<br/>
 [in] Nový text popisku.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

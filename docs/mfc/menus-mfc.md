@@ -7,12 +7,12 @@ helpviewer_keywords:
 - menus [MFC], manipulating during execution
 - menus [MFC]
 ms.assetid: 6a181495-47a9-4356-83fc-b89152d6cb4c
-ms.openlocfilehash: b0eae559fd15b7b19867cef9f785f7c70f782c30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 202a8c791f3ecaa6180eb91134b28a86572f6e19
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621777"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326033"
 ---
 # <a name="menus-mfc"></a>Nabídky (MFC)
 
@@ -32,6 +32,6 @@ Také poskytuje jazyk Visual C++ [editor nabídek](../windows/menu-editor.md) pr
 
 - [Ukázka](../mfc/menu-sample-list.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Prvky uživatelského rozhraní](../mfc/user-interface-elements-mfc.md)

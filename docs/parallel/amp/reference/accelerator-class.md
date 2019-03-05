@@ -40,12 +40,12 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
-ms.openlocfilehash: 2045d2d1c6a848378ac55114b61177d386b14fab
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 31008b398d17ac0c226f9359745067c4fefc08a9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523920"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326613"
 ---
 # <a name="accelerator-class"></a>accelerator – třída
 
@@ -63,7 +63,7 @@ class accelerator;
 
 |Název|Popis|
 |----------|-----------------|
-|[akcelerátor konstruktor](#ctor)|Inicializuje novou instanci třídy `accelerator` třídy.|
+|[accelerator Constructor](#ctor)|Inicializuje novou instanci třídy `accelerator` třídy.|
 |[~ accelerator – destruktor](#ctor)|Odstraní `accelerator` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
@@ -73,10 +73,10 @@ class accelerator;
 |[create_view](#create_view)|Vytvoří a vrátí `accelerator_view` objekt na tomto akcelerátoru.|
 |[get_all](#get_all)|Vrátí vektor `accelerator` objekty, které představují všechny dostupné akcelerátory.|
 |[get_auto_selection_view](#get_auto_selection_view)|Vrátí automatický výběr `accelerator_view`.|
-|[get_dedicated_memory –](#get_dedicated_memory)|Vrátí velikost vyhrazené paměti pro `accelerator`, v kilobajtech.|
+|[get_dedicated_memory](#get_dedicated_memory)|Vrátí velikost vyhrazené paměti pro `accelerator`, v kilobajtech.|
 |[get_default_cpu_access_type](#get_default_cpu_access_type)|Vrátí výchozí [access_type](concurrency-namespace-enums-amp.md#access_type) pro vyrovnávací paměti vytvořené na tomto akcelerátoru.|
 |[get_default_view](#get_default_view)|Vrátí výchozí `accelerator_view` objekt, který je přidružený `accelerator`.|
-|[get_description –](#get_description)|Vrátí krátký popis `accelerator` zařízení.|
+|[get_description](#get_description)|Vrátí krátký popis `accelerator` zařízení.|
 |[get_device_path](#get_device_path)|Vrátí cestu k zařízení.|
 |[get_has_display](#get_has_display)|Určuje, zda `accelerator` je připojen k displeji.|
 |[get_is_debug](#get_is_debug)|Určuje, zda `accelerator` má povolenu vrstvu DEBUG pro rozsáhlé hlášení chyb.|
@@ -84,7 +84,7 @@ class accelerator;
 |[get_supports_cpu_shared_memory](#get_supports_cpu_shared_memory)|Určuje, zda `accelerator` podporuje sdílenou paměť|
 |[get_supports_double_precision](#get_supports_double_precision)|Určuje, zda `accelerator` je připojen k displeji.|
 |[get_supports_limited_double_precision](#get_supports_limited_double_precision)|Určuje, zda `accelerator` má omezenou podporu pro matematiku s dvojitou přesností.|
-|[get_version –](#get_version)|Vrátí verzi `accelerator`.|
+|[get_version](#get_version)|Vrátí verzi `accelerator`.|
 |[set_default](#set_default)|Vrátí cestu k výchozí akcelerátor.|
 |[set_default_cpu_access_type](#set_default_cpu_access_type)|Nastaví výchozí procesor [access_type](concurrency-namespace-enums-amp.md#access_type)pro pole a implicitní přidělení paměti provedené v tomto `accelerator`.|
 
@@ -101,11 +101,11 @@ class accelerator;
 |Název|Popis|
 |----------|-----------------|
 |[cpu_accelerator](#cpu_accelerator)|Získá konstantní řetězec CPU `accelerator`.|
-|[dedicated_memory –](#dedicated_memory)|Získá velikost vyhrazené paměti pro `accelerator`, v kilobajtech.|
+|[dedicated_memory](#dedicated_memory)|Získá velikost vyhrazené paměti pro `accelerator`, v kilobajtech.|
 |[default_accelerator](#default_accelerator)|Získá konstantní řetězec pro výchozí `accelerator`.|
 |[default_cpu_access_type](#default_cpu_access_type)|Získá nebo nastaví výchozí procesor [access_type](concurrency-namespace-enums-amp.md#access_type)pro pole a implicitní přidělení paměti provedené v tomto `accelerator`.|
 |[default_view](#default_view)|Získá výchozí `accelerator_view` objekt, který je přidružený `accelerator`.|
-|[Popis](#description)|Získá krátký popis `accelerator` zařízení.|
+|[description](#description)|Získá krátký popis `accelerator` zařízení.|
 |[device_path](#device_path)|Získá cestu k zařízení.|
 |[direct3d_ref](#direct3d_ref)|Získá konstantní řetězec pro odkaz rozhraní Direct3D `accelerator`.|
 |[direct3d_warp](#direct3d_warp)|Získá konstantní řetězec `accelerator` objektu, lze použít pro spuštění kódu jazyka C++ AMP na vícejádrových procesorech pomocí Streaming SIMD Extensions (SSE).|
@@ -131,7 +131,7 @@ Můžete vytvořit `accelerator` objekt výčtu dostupných zařízení, nebo z�
 
 **Záhlaví:** amprt.h
 
-**Namespace:** souběžnosti
+**Namespace:** Souběžnost
 
 ##  <a name="dtor"></a> </a> ~ accelerator
 
@@ -244,7 +244,7 @@ Získá konstantní řetězec pro odkaz akcelerátorem Direct3D.
 static const wchar_t direct3d_ref[];
 ```
 
-##  <a name="direct3d_warp"></a> direct3d_warp –
+##  <a name="direct3d_warp"></a> direct3d_warp
 
 Získá konstantní řetězec `accelerator` objektu, lze použít pro spuštění kódu C++ AMP na vícejádrových procesorech pomocí Streaming SIMD Extensions (SSE).
 
@@ -324,7 +324,7 @@ std::wstring get_description() const;
 
 Krátký popis `accelerator` zařízení.
 
-##  <a name="get_device_path"></a> get_device_path –
+##  <a name="get_device_path"></a> get_device_path
 
 Vrátí cestu k akcelerátoru. Cesta je jedinečná v systému.
 
@@ -336,7 +336,7 @@ std::wstring get_device_path() const;
 
 Cesta instance systémová zařízení jedinečné.
 
-##  <a name="get_has_display"></a> get_has_display –
+##  <a name="get_has_display"></a> get_has_display
 
 Vrátí logickou hodnotu, která určuje, zda `accelerator` zvládne výstup na monitor.
 
@@ -348,7 +348,7 @@ bool get_has_display() const;
 
 **Hodnota TRUE** Pokud `accelerator` zvládne výstup na monitor; v opačném případě **false**.
 
-##  <a name="get_is_debug"></a> get_is_debug –
+##  <a name="get_is_debug"></a> get_is_debug
 
 Určuje, zda `accelerator` má povolenu vrstvu DEBUG pro rozsáhlé hlášení chyb.
 
@@ -505,7 +505,7 @@ static inline bool set_default(std::wstring _Path);
 
 ### <a name="parameters"></a>Parametry
 
-*Cesta z_pětného*<br/>
+*_Path*<br/>
 Cesta k akcelerátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -640,7 +640,7 @@ bool get_is_auto_selection() const;
 
 **Hodnota TRUE** Pokud modul runtime automaticky vybere odpovídající akcelerátor; v opačném případě **false**.
 
-##  <a name="get_is_debug"></a> get_is_debug –
+##  <a name="get_is_debug"></a> get_is_debug
 
 Vrátí logickou hodnotu, která určuje, zda [accelerator_view](accelerator-view-class.md) objekt má povolenu vrstvu DEBUG pro rozsáhlé hlášení chyb.
 
@@ -771,6 +771,6 @@ void wait();
 
 Vrátí `void`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

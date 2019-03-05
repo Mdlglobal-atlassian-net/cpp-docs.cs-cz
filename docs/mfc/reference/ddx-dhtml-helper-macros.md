@@ -17,12 +17,12 @@ helpviewer_keywords:
 - DDX (dialog data exchange), DHtml helper macros
 - macros [MFC], DDX_DHtml helpers
 ms.assetid: c46302d2-ea43-4fea-bfc2-6f590d99f267
-ms.openlocfilehash: e2deed5e3fb63f46d83cf4c6f0d3c13525e93a2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90c80dbc5c8b6788f3afad3cf77d796139fbd946
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592530"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326644"
 ---
 # <a name="ddxdhtml-helper-macros"></a>Pomocné rutiny Ddx_dhtml
 
@@ -43,7 +43,7 @@ Pomocné rutiny ddx_dhtml umožňují snadný přístup k běžně používanýc
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdhtml.h
+**Header:** afxdhtml.h
 
 ## <a name="ddx_dhtml_anchor_href"></a> DDX_DHtml_Anchor_Href
 
@@ -58,8 +58,8 @@ DDX_DHtml_Anchor_Href(
 
 #### <a name="parameters"></a>Parametry
 
-*DX*<br/>
-Ukazatel [cdataexchange –](../../mfc/reference/cdataexchange-class.md) objektu.
+*dx*<br/>
+Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.
 
 *Jméno*<br/>
 Hodnota zadaná pro parametr ID ovládacího prvku HTML.
@@ -84,8 +84,8 @@ DDX_DHtml_Anchor_Target(
 
 #### <a name="parameters"></a>Parametry
 
-*DX*<br/>
-Ukazatel [cdataexchange –](../../mfc/reference/cdataexchange-class.md) objektu.
+*dx*<br/>
+Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.
 
 *Jméno*<br/>
 Hodnota zadaná pro parametr ID ovládacího prvku HTML.
@@ -110,8 +110,8 @@ DDX_DHtml_ElementInnerHtml(
 
 #### <a name="parameters"></a>Parametry
 
-*DX*<br/>
-Ukazatel [cdataexchange –](../../mfc/reference/cdataexchange-class.md) objektu.
+*dx*<br/>
+Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.
 
 *Jméno*<br/>
 Hodnota zadaná pro parametr ID ovládacího prvku HTML.
@@ -136,8 +136,8 @@ DDX_DHtml_ElementInnerText(
 
 #### <a name="parameters"></a>Parametry
 
-*DX*<br/>
-Ukazatel [cdataexchange –](../../mfc/reference/cdataexchange-class.md) objektu.
+*dx*<br/>
+Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.
 
 *Jméno*<br/>
 Hodnota zadaná pro parametr ID ovládacího prvku HTML.
@@ -162,14 +162,14 @@ DDX_DHtml_ElementValue(
 
 #### <a name="parameters"></a>Parametry
 
-*DX*<br/>
-Ukazatel [cdataexchange –](../../mfc/reference/cdataexchange-class.md) objektu.
+*dx*<br/>
+Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.
 
 *Jméno*<br/>
 Hodnota zadaná pro parametr ID ovládacího prvku HTML.
 
 *var*<br/>
-Hodnota, která se vyměňují. Zobrazit *hodnotu* v [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext).
+Hodnota, která se vyměňují. See *value* in [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext).
 
 ## <a name="remarks"></a>Poznámky
 
@@ -190,8 +190,8 @@ DDX_DHtml_Frame_Src(
 
 #### <a name="parameters"></a>Parametry
 
-*DX*<br/>
-Ukazatel [cdataexchange –](../../mfc/reference/cdataexchange-class.md) objektu.
+*dx*<br/>
+Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.
 
 *Jméno*<br/>
 Hodnota zadaná pro parametr ID ovládacího prvku HTML.
@@ -216,8 +216,8 @@ DDX_DHtml_IFrame_Src(
 
 #### <a name="parameters"></a>Parametry
 
-*DX*<br/>
-Ukazatel [cdataexchange –](../../mfc/reference/cdataexchange-class.md) objektu.
+*dx*<br/>
+Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.
 
 *Jméno*<br/>
 Hodnota zadaná pro parametr ID ovládacího prvku HTML.
@@ -242,8 +242,8 @@ DDX_DHtml_Img_Src(
 
 #### <a name="parameters"></a>Parametry
 
-*DX*<br/>
-Ukazatel [cdataexchange –](../../mfc/reference/cdataexchange-class.md) objektu.
+*dx*<br/>
+Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.
 
 *Jméno*<br/>
 Hodnota zadaná pro parametr ID ovládacího prvku HTML.
@@ -257,6 +257,6 @@ Při použití makra DDX_DHtml_Img_Src načíst vlastnost src pro IMAGE element,
 
 Toto makro volá [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funkce využívá DISPID_IHTMLIMGELEMENT_SRC dispatch ID.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CDHtmlDialog – třída](../../mfc/reference/cdhtmldialog-class.md)

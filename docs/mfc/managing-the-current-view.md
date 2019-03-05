@@ -11,12 +11,12 @@ helpviewer_keywords:
 - deactivating views [MFC]
 - current view in frame window [MFC]
 ms.assetid: 0a1cc22d-d646-4536-9ad2-3cb6d7092e4a
-ms.openlocfilehash: c53193a2e8121274246eabd9c7b614ad986146c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a926a9e31f7c43ab625220a4d759f6d536c2a77f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575484"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326228"
 ---
 # <a name="managing-the-current-view"></a>Správa aktuálního zobrazení
 
@@ -26,7 +26,6 @@ Aktivní zobrazení změny, rozhraní upozorní aktuální zobrazení po zavolá
 
 Okno rámce předává příkazy do jeho aktuálního zobrazení (aktivní), jak je popsáno v [směrování příkazů](../mfc/command-routing.md), jako součást standardního směrování příkazů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití oken s rámečkem](../mfc/using-frame-windows.md)
-

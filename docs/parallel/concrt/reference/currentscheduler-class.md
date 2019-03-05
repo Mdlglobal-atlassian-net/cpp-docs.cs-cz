@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-ms.openlocfilehash: 46bd55c39e79ca01664c3800d10e4efa8cf7d042
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a27ec7c25962b6addd26e61af8f33130d4c653ba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619177"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326787"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler – třída
 
@@ -47,7 +47,7 @@ class CurrentScheduler;
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Vrátí aktuální počet virtuálních procesorů pro Plánovač přidružený kontext volání.|
 |[GetPolicy](#getpolicy)|Vrátí kopii objektu zásad, který byl vytvořen aktuálního plánovače.|
 |[ID](#id)|Vrací jedinečný identifikátor pro aktuální plánovač.|
-|[Isavailablelocation –](#isavailablelocation)|Určuje, zda je k dispozici pro aktuální Plánovač na dané místo.|
+|[IsAvailableLocation](#isavailablelocation)|Určuje, zda je k dispozici pro aktuální Plánovač na dané místo.|
 |[RegisterShutdownEvent](#registershutdownevent)|Způsobí, že obslužná rutina události Windows předaný `_ShutdownEvent` parametru má být signalizován, když Plánovač spojené s aktuálním kontextu vypne a odstraní sama. V době, kdy událost je signalizována všechny práce, která má naplánované Plánovač je dokončena. Prostřednictvím této metody lze registrovat více událostí vypnutí.|
 |[Scheduletask –](#scheduletask)|Přetíženo. Naplánuje lehký úkol v rámci plánovače, přidružený k volání kontextu. Lehký úkol se umístí do skupiny plánu určeno modulem runtime. Verze, která přebírá parametr `_Placement` způsobí, že úkol tendenční směrem k provádění v zadaném umístění.|
 
@@ -75,7 +75,7 @@ static void __cdecl Create(const SchedulerPolicy& _Policy);
 
 ### <a name="parameters"></a>Parametry
 
-*Zásady _protokolu*<br/>
+*_Policy*<br/>
 Zásady plánovače, která popisuje chování nově vytvořený plánovač.
 
 ### <a name="remarks"></a>Poznámky
@@ -88,7 +88,7 @@ Pokud tato metoda se volá z kontextu, který je již připojena k jiné plánov
 
 Tato metoda může vyvolat výjimky, včetně různých [scheduler_resource_allocation_error –](scheduler-resource-allocation-error-class.md) a [invalid_scheduler_policy_value –](invalid-scheduler-policy-value-class.md).
 
-##  <a name="createschedulegroup"></a> Createschedulegroup –
+##  <a name="createschedulegroup"></a> CreateScheduleGroup
 
 Vytvoří novou skupinu plán v rámci plánovače, přidružený k volání kontextu. Verze, která přebírá parametr `_Placement` způsobí, že úlohy ve skupině nově vytvořený plán tendenční směrem k provádění v místě určeném v parametru.
 
@@ -181,7 +181,7 @@ Kopie zásad, který byl vytvořen aktuálního plánovače.
 
 Tato metoda způsobí procesu výchozím plánovačem se vytvoří a/nebo připojené k volání kontextu, pokud neexistuje žádný Plánovač aktuálně přiřazen k volání kontextu.
 
-##  <a name="id"></a> ID
+##  <a name="id"></a> Id
 
 Vrací jedinečný identifikátor pro aktuální plánovač.
 
@@ -267,10 +267,9 @@ Odkaz na umístění, ve kterém bude možné lehký úkol tendenční směrem k
 
 Tato metoda způsobí procesu výchozím plánovačem se vytvoří a/nebo připojené k volání kontextu, pokud neexistuje žádný Plánovač aktuálně přiřazen k volání kontextu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [Scheduler – třída](scheduler-class.md)<br/>
-[Policyelementkey –](concurrency-namespace-enums.md)<br/>
+[PolicyElementKey](concurrency-namespace-enums.md)<br/>
 [Plánovač úloh](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

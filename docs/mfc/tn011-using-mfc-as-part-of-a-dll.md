@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-ms.openlocfilehash: f1c98056d5a5e2565e57044b1fb551db4f354f34
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 63e97c3b9260465259d76cf6996d1d389f65ee41
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326197"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326449"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: Použití prostředí MFC jako součásti knihovny DLL
 
@@ -43,7 +43,7 @@ regulární knihovny DLL MFC mají několik výhod:
 
 Některé funkce knihovny MFC se nevztahují na verze knihovny DLL, buď z důvodu technická omezení nebo proto, že tyto služby jsou obvykle poskytovaný aplikací. Aktuální verze knihovny MFC, je pouze funkce, která se nedá použít `CWinApp::SetDialogBkColor`.
 
-## <a name="building-your-dll"></a>Vytváření knihovny DLL
+## <a name="building-your-dll"></a>Building Your DLL
 
 Při kompilaci běžných knihovnách MFC DLL, která staticky propojené ke knihovně MFC, symboly `_USRDLL` a `_WINDLL` musí být definovaný. Váš kód knihovny DLL musí být zkompilovaná následující přepínače kompilátoru:
 
@@ -77,7 +77,7 @@ Najdete v ukázce DLLScreenCap pro použití této funkce.
 
 Pomocí běžných knihovnách MFC DLL, která staticky propojené ke knihovně MFC je třeba propojit vaši knihovnu DLL Nafxcwd.lib nebo Nafxcw.lib a s verzí modulů runtime jazyka C s názvem Libcmt.lib. Tyto knihovny jsou předem připravená a mohou být nainstalovány službou je zadáte, když spustíte instalační program Visual C++.
 
-## <a name="sample-code"></a>Ukázkový kód
+## <a name="sample-code"></a>Vzorový kód
 
 Najdete v ukázce MFC Advanced Concepts programu DLLScreenCap úplnou ukázku. Několik zajímavých věcí, Všimněte si v této ukázce jsou následující:
 
@@ -111,8 +111,7 @@ BOOL PromptTraceFlags(TracerData FAR* lpData);
 
 Struktury využívané prostředím rozhraní API nejsou odvozeny od třídy knihovny MFC a jsou definovaná v záhlaví rozhraní API. Tím se sníží složitost rozhraní mezi knihovny DLL a aplikací a znamená použitelné knihovny DLL pomocí programů jazyka C.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
-
