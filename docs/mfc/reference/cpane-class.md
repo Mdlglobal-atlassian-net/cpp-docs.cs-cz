@@ -1,5 +1,5 @@
 ---
-title: Cpane – třída
+title: CPane Class
 ms.date: 11/04/2016
 f1_keywords:
 - CPane
@@ -133,14 +133,14 @@ helpviewer_keywords:
 - CPane [MFC], m_bHandleMinSize
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
-ms.openlocfilehash: 1c485d1b6f2b0557243973774bf9dfb382c2595b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b660d181aada8abeb61b397fb30b097897e74f65
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550433"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326774"
 ---
-# <a name="cpane-class"></a>Cpane – třída
+# <a name="cpane-class"></a>CPane Class
 
 `CPane` Třída je rozšířením [ccontrolbar – třída](../../mfc/reference/ccontrolbar-class.md). Pokud provádíte upgrade existujícího projektu knihovny MFC, nahraďte všechny výskyty `CControlBar` s `CPane`.
 
@@ -620,7 +620,7 @@ virtual BOOL DockPane(
 *pDockBar*<br/>
 [out v] Určuje základní podokně ukotvení v tomto podokně na.
 
-*lprect –*<br/>
+*lpRect*<br/>
 [in] Určuje základní podokno, kde je v tomto podokně ukotvit obdélníku.
 
 *dockMethod*<br/>
@@ -683,7 +683,7 @@ virtual BOOL DockToFrameWindow(
 *dwAlignment*<br/>
 [in] Na straně, který chcete ukotvit podokně nadřazeného rámce.
 
-*lprect –*<br/>
+*lpRect*<br/>
 [in] Zadaná velikost.
 
 *dwDockFlags*<br/>
@@ -879,7 +879,7 @@ virtual void GetPaneName(CString& strName) const;
 
 ### <a name="parameters"></a>Parametry
 
-*%{strName/*<br/>
+*strName*<br/>
 [out] A `CString` objekt, který je vyplněna názvu záhlaví.
 
 ### <a name="remarks"></a>Poznámky
@@ -1179,7 +1179,7 @@ virtual void OnAfterDock(
 *pBar*<br/>
 [in] Tento parametr se nepoužívá.
 
-*lprect –*<br/>
+*lpRect*<br/>
 [in] Tento parametr se nepoužívá.
 
 *dockMethod*<br/>
@@ -1237,7 +1237,7 @@ virtual BOOL OnBeforeDock(
 *ppDockBar*<br/>
 [out v] Určuje panel, který je na ukotvení v tomto podokně.
 
-*lprect –*<br/>
+*lpRect*<br/>
 [in] Určuje dokovací obdélník.
 
 *dockMethod*<br/>
@@ -1299,7 +1299,7 @@ virtual BOOL OnShowControlBarMenu(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Určuje umístění nabídky.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1308,7 +1308,7 @@ Hodnota TRUE, pokud je možné zobrazit v nabídce; v opačném případě hodno
 
 ### <a name="remarks"></a>Poznámky
 
-Nabídka obsahuje několik položek, které vám umožní určit chování v podokně, jmenovitě: **plovoucí**, **ukotvení**, **automatické skrývání**, a **skrýt**. Tato nabídka pro všechna podokna můžete povolit pomocí volání [CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
+Nabídka obsahuje několik položek, které vám umožní určit chování v podokně, konkrétně: **Číslo s plovoucí čárkou**, **ukotvení**, **automatické skrývání**, a **skrýt**. Tato nabídka pro všechna podokna můžete povolit pomocí volání [CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
 
 ##  <a name="recalclayout"></a>  CPane::RecalcLayout
 
@@ -1405,7 +1405,7 @@ void SetBorders(LPCRECT lpRect);
 *cyBottom*<br/>
 [in] Určuje šířku v pixelech dolního ohraničení panelu.
 
-*lprect –*<br/>
+*lpRect*<br/>
 [in] A [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který obsahuje požadovanou šířku v pixelech, každý ohraničení panelu.
 
 ### <a name="remarks"></a>Poznámky
@@ -1604,7 +1604,7 @@ Druhé přetížení přesouvá virtuální obdélník částkou, která je zad�
 
 Třetí přetížení nastaví virtuální obdélníku pomocí aktuální pozici v podokně a velikost, která je zadána *sizeNew*.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - U_RECT class
 - _U_RECT class
 ms.assetid: 5f880a2d-09cf-4327-bf32-a3519c4dcd63
-ms.openlocfilehash: a4f3139498c9954026bd0247316eee1155f1b737
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 306092a00a1e119263f4563eea181d7d3ee2b4b2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642075"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326371"
 ---
 # <a name="urect-class"></a>_U_rect – třída
 
@@ -70,16 +70,16 @@ _U_RECT(LPRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*RC*<br/>
+*rc*<br/>
 A `RECT` odkaz.
 
-*lprect –*<br/>
+*lpRect*<br/>
 A `RECT` ukazatele.
 
 ### <a name="remarks"></a>Poznámky
 
 Argument pro konstruktor ukazatel se ukládají přímo bez převodu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../../atl/atl-class-overview.md)

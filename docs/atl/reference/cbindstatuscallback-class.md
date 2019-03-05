@@ -29,12 +29,12 @@ helpviewer_keywords:
 - data transfer [C++], asynchronous
 - CBindStatusCallback class
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
-ms.openlocfilehash: 16e97b994ad30fdd4c255dac45e8b56fd04f663a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8c8d3f170803a792ca2ea8c7a37a18fd2cebd48
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583310"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259201"
 ---
 # <a name="cbindstatuscallback-class"></a>Cbindstatuscallback – třída
 
@@ -67,7 +67,7 @@ Určuje příznaky vazby, které jsou vráceny pomocí [GetBindInfo](#getbindinf
 |Název|Popis|
 |----------|-----------------|
 |[CBindStatusCallback::CBindStatusCallback](#cbindstatuscallback)|Konstruktor|
-|[Cbindstatuscallback –:: ~ cbindstatuscallback –](#dtor)|Destruktor.|
+|[CBindStatusCallback::~CBindStatusCallback](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -162,7 +162,7 @@ static HRESULT Download(
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pT*<br/>
 [in] Ukazatel na objekt žádosti o přenos dat asynchronní. `CBindStatusCallback` Objektu je založena na tento objekt třídy.
 
 *pFunc*<br/>
@@ -357,7 +357,7 @@ STDMETHOD(
 ### <a name="parameters"></a>Parametry
 
 *grfBSCF*<br/>
-[in] Hodnota výčtu BSCF. Jeden nebo více z následujících akcí: BSCF_FIRSTDATANOTIFICATION, BSCF_INTERMEDIARYDATANOTIFICATION nebo BSCF_LASTDATANOTIFICATION.
+[in] Hodnota výčtu BSCF. Jeden nebo více z následujících akcí: BSCF_FIRSTDATANOTIFICATION BSCF_INTERMEDIARYDATANOTIFICATION či BSCF_LASTDATANOTIFICATION.
 
 *dwSize*<br/>
 [in] Souhrnně za (v bajtech) k dispozici od začátku vazby data. Může být nula, která znamená, že objem dat se nevztahuje nebo, že bez ohledu na konkrétní začal být k dispozici.
@@ -494,7 +494,7 @@ HRESULT StartAsyncDownload(
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pT*<br/>
 [in] Ukazatel na objekt žádosti o přenos dat asynchronní. `CBindStatusCallback` Objektu je založena na tento objekt třídy.
 
 *pFunc*<br/>
@@ -534,6 +534,6 @@ V následujícím příkladu (z [ASYNCHRONNÍ](../../visual-cpp-samples.md) uká
 
 [!code-cpp[NVC_ATL_Windowing#87](../../atl/codesnippet/cpp/cbindstatuscallback-class_2.h)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../../atl/atl-class-overview.md)

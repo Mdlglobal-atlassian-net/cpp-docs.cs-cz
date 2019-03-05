@@ -1,5 +1,5 @@
 ---
-title: 'TN035: Použití více zdrojových souborů a hlavičkových souborů v jazyku Visual C++'
+title: 'TN035: Použití více zdrojových souborů a hlavičkových souborů v jazyce Visual C++'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.resources
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 6f89e10c2a05d1352dc2347af0aa0215079ea56c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d97e4536c2a43e7e224e9056aa39df5480daeca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567658"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279913"
 ---
-# <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Použití více zdrojových souborů a hlavičkových souborů v jazyku Visual C++
+# <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Použití více zdrojových souborů a hlavičkových souborů v jazyce Visual C++
 
 > [!NOTE]
 >  Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
@@ -111,7 +111,7 @@ AFXRES. H definuje standardní symboly, jako například `ID_FILE_NEW`, použív
 
 ## <a name="_mfcnotes_tn035_including"></a> Včetně další souborů záhlaví
 
-Aplikace vytvořená Průvodcem AppWizard obsahuje pouze dva soubory hlaviček: prostředků. H a AFXRES. H. Pouze zdroj. H je specifické pro aplikaci. Je třeba zahrnout další záhlaví jen pro čtení souborů v následujících případech:
+Aplikace vytvořená Průvodcem AppWizard obsahuje pouze dva soubory hlaviček: PROSTŘEDEK. H a AFXRES. H. Pouze zdroj. H je specifické pro aplikaci. Je třeba zahrnout další záhlaví jen pro čtení souborů v následujících případech:
 
 Soubor hlavičky pochází od externího zdroje nebo ho chcete sdílet mezi více projekty nebo více částí stejného projektu.
 
@@ -379,8 +379,7 @@ BEGIN
 END
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
-

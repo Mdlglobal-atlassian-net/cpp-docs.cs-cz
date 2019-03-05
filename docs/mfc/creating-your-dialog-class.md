@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dialog classes [MFC], Add Class Wizard
 - dialog classes [MFC], creating
 ms.assetid: d5321741-da41-47a8-bb1c-6a0e8b28c4c1
-ms.openlocfilehash: 924cf2d79056d958aad775f92a6d0df2d45c8a70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bacedc49fcdabdd5dc7fb0f392a66afd3baadd06
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536575"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326397"
 ---
 # <a name="creating-your-dialog-class"></a>Vytvoření vlastní třídy dialogového okna
 
@@ -33,8 +33,7 @@ V. Soubor CPP:
 
 - Přepsání [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) členskou funkci. Úprava této funkce. Používá se pro dialogové okno Možnosti výměna a ověřování dat jak je popsáno později v [výměna dat dialogových oken a ověření](../mfc/dialog-data-exchange-and-validation.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vytvoření třídy dialogového okna s použitím průvodců kódem](../mfc/creating-a-dialog-class-with-code-wizards.md)<br/>
 [Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
-

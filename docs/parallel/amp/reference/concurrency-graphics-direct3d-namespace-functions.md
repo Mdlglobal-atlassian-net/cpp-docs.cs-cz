@@ -6,12 +6,12 @@ f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d::make_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_texture
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
-ms.openlocfilehash: c19cc8697820c038875d55b41cde61120bda9df7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 18fb409b033ea14c3a140ea6600fc43cf3a8d603
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518370"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326085"
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Funkce oboru názvů Concurrency::Graphics:: Direct3D
 
@@ -153,7 +153,7 @@ inline uint4 msad4(
 *_Referenční*<br/>
 Referenční pole 4 bajtů v jedné hodnotě uint
 
-*_Zdroj*<br/>
+*_Source*<br/>
 Zdrojové pole 8 bajtů hodnoty ve vektoru dvou hodnot uint.
 
 *_Accum*<br/>
@@ -169,6 +169,6 @@ Vrátí vektor součtu 4. Každá částka odpovídá maskovanému součtu absol
 
 **Namespace:** Concurrency::Graphics:: Direct3D
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Concurrency::graphics::direct3d – obor názvů](concurrency-graphics-direct3d-namespace.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-ms.openlocfilehash: f0886f364637c8844aceb5d5d7b6b2ed7175225d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ec933d29474695c1b94b72e712d68a9b3a08bd4e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176845"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326579"
 ---
 # <a name="documentview-architecture"></a>Architektonický model dokument/zobrazení
 
@@ -82,7 +82,7 @@ Dokumenty, jejich přidružené zobrazení a která ohraničují zobrazení oken
 
 - [Ukázky](../visual-cpp-samples.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Prvky uživatelského rozhraní](../mfc/user-interface-elements-mfc.md)<br/>
 [Windows](../mfc/windows.md)<br/>
@@ -90,4 +90,3 @@ Dokumenty, jejich přidružené zobrazení a která ohraničují zobrazení oken
 [Šablony dokumentů a proces vytváření dokumentů/zobrazení](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
 [Vytváření dokumentů/zobrazení](../mfc/document-view-creation.md)<br/>
 [Vytváření nových dokumentů, oken a zobrazení](../mfc/creating-new-documents-windows-and-views.md)
-

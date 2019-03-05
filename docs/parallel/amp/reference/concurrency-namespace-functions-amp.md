@@ -13,24 +13,24 @@ f1_keywords:
 - amp/Concurrency::global_memory_fence
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-ms.openlocfilehash: 43be1fc3a5df52f6edcc05b501b1463bd5da7e6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7baae51480c273ca023856253af7963ac83d7c92
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481793"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284837"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Funkce oboru názvů Concurrency (AMP)
 
 ||||
 |-|-|-|
-|[all_memory_fence –](#all_memory_fence)|[amp_uninitialize](#amp_uninitialize)|[atomic_compare_exchange](#atomic_compare_exchange)|
+|[all_memory_fence](#all_memory_fence)|[amp_uninitialize](#amp_uninitialize)|[atomic_compare_exchange](#atomic_compare_exchange)|
 |[atomic_exchange – funkce (C++ AMP)](#atomic_exchange)|[atomic_fetch_add – funkce (C++ AMP)](#atomic_fetch_add)|[atomic_fetch_and – funkce (C++ AMP)](#atomic_fetch_and)|
 |[atomic_fetch_dec](#atomic_fetch_dec)|[atomic_fetch_inc](#atomic_fetch_inc)|[atomic_fetch_max](#atomic_fetch_max)|
 |[atomic_fetch_min](#atomic_fetch_min)|[atomic_fetch_or – funkce (C++ AMP)](#atomic_fetch_or)|[atomic_fetch_sub – funkce (C++ AMP)](#atomic_fetch_sub)|
 |[atomic_fetch_xor – funkce (C++ AMP)](#atomic_fetch_xor)|[kopírování](#copy)|[copy_async](#copy_async)|
 |[direct3d_abort](#direct3d_abort)|[direct3d_errorf](#direct3d_errorf)|[direct3d_printf](#direct3d_printf)|
-|[global_memory_fence –](#global_memory_fence)|[parallel_for_each – funkce (C++ AMP)](#parallel_for_each)|[tile_static_memory_fence –](#tile_static_memory_fence)|
+|[global_memory_fence](#global_memory_fence)|[parallel_for_each – funkce (C++ AMP)](#parallel_for_each)|[tile_static_memory_fence](#tile_static_memory_fence)|
 
 ##  <a name="all_memory_fence"></a>  all_memory_fence –
 
@@ -451,7 +451,7 @@ Koncový iterátor do zdrojového kontejneru.
 *value_type*<br/>
 Datový typ prvků, které jsou zkopírovány.
 
-##  <a name="copy_async"></a>  copy_async –
+##  <a name="copy_async"></a>  copy_async
 
 Zkopíruje objekt jazyka C++ AMP a vrátí [completion_future](completion-future-class.md) objekt, který lze čekat. Data nelze kopírovat, li kód spuštěn na akcelerátoru.  Obecný tvar této funkce je `copy(src, dest)`.
 
@@ -546,7 +546,7 @@ A `future<void>` , který lze čekat.
 
 ##  <a name="direct3d_abort"></a>  direct3d_abort –
 
-Zruší spuštění funkce se `restrict(amp)` podmínkou. Modulu runtime AMP zachytí volání, vyvolá [runtime_exception](runtime-exception-class.md) výjimka s chybovou zprávou "rasterizéru referenčního: shaderu přerušit přístupů k instrukci".
+Zruší spuštění funkce se `restrict(amp)` podmínkou. Modulu runtime AMP zachytí volání, vyvolá [runtime_exception](runtime-exception-class.md) výjimka s chybovou zprávou "rasterizéru referenčního: Instrukce stiskněte přerušit shaderu".
 
 ```
 void direct3d_abort() restrict(amp);
@@ -674,6 +674,6 @@ inline void tile_static_memory_fence(const tile_barrier& _Barrier) restrict(amp)
 *_Barrier*<br/>
 Objekt tile_barrier.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

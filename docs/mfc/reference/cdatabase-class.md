@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-ms.openlocfilehash: d152153ac4e379f4159c4ade5dfc044288f69720
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e523b2a145254cd9b7adf2b066605a679349f6c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541399"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273442"
 ---
 # <a name="cdatabase-class"></a>CDatabase – třída
 
@@ -111,11 +111,11 @@ class CDatabase : public CObject
 Zdroj dat je konkrétní instanci datům hostovaným v některých systém správy databáze (DBMS). Mezi příklady patří Microsoft SQL Server, Microsoft Access, Borlandu dBASE a xBASE. Můžete mít jednu nebo více `CDatabase` objektů active současně ve vaší aplikaci.
 
 > [!NOTE]
->  Pokud pracujete s třídami objektů DAO (Data Access), a ne třídy připojení ODBC (Open Database), použijte třídu [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) místo. Další informace najdete v článku [přehled: databáze programování](../../data/data-access-programming-mfc-atl.md).
+>  Pokud pracujete s třídami objektů DAO (Data Access), a ne třídy připojení ODBC (Open Database), použijte třídu [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) místo. Další informace najdete v článku [přehled: Databáze programování](../../data/data-access-programming-mfc-atl.md).
 
 Použití `CDatabase`, sestavit `CDatabase` objektu a volání jeho `OpenEx` členskou funkci. Tím se otevře připojení. Když potom vytvoříte `CRecordset` objekty pro provoz ve zdroji dat předat konstruktoru sady záznamů ukazatel na váš `CDatabase` objektu. Volat po dokončení práce připojení `Close` členské funkce a zničit `CDatabase` objektu. `Close` Zavře všechny sady záznamů, které nebyly uzavřeny dříve.
 
-Další informace o `CDatabase`, najdete v článcích [datové zdroje (ODBC)](../../data/odbc/data-source-odbc.md) a [přehled: databáze programování](../../data/data-access-programming-mfc-atl.md).
+Další informace o `CDatabase`, najdete v článcích [datové zdroje (ODBC)](../../data/odbc/data-source-odbc.md) a [přehled: Databáze programování](../../data/data-access-programming-mfc-atl.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -146,7 +146,7 @@ Transakce se skládá z jednoho nebo více volání `AddNew`, `Edit`, `Delete`, 
 > [!CAUTION]
 >  V závislosti na váš ovladač rozhraní ODBC otevření sady záznamů před zavoláním funkce `BeginTrans` může způsobit problémy při volání metody `Rollback`. Měli byste zkontrolovat konkrétní ovladač, který používáte. Například při použití ovladače Microsoft Access, které jsou součástí Microsoft ODBC Desktopu ovladač Pack 3.0, musíte vzít v úvahu pro modul databáze Jet požadavek, že by neměl spustit transakci na všechny databáze, které se má otevřít kurzor. V databázových tříd MFC otevřít kurzor znamená, že otevřený `CRecordset` objektu. Další informace najdete v tématu [Technická poznámka 68](../../mfc/tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md).
 
-`BeginTrans` může také uzamknout datových záznamů na serveru, v závislosti na možnosti zdroje dat a požadovaný souběžnosti. Informace o uzamčení data, najdete v článku [sada záznamů: zamykání záznamů (ODBC)](../../data/odbc/recordset-locking-records-odbc.md).
+`BeginTrans` může také uzamknout datových záznamů na serveru, v závislosti na možnosti zdroje dat a požadovaný souběžnosti. Informace o uzamčení data, najdete v článku [sada záznamů: Zamykání záznamů (ODBC)](../../data/odbc/recordset-locking-records-odbc.md).
 
 Uživatelské transakce jsou vysvětlené v článku [transakce (ODBC)](../../data/odbc/transaction-odbc.md).
 
@@ -161,7 +161,7 @@ Další informace o transakcích, najdete v článku [transakce (ODBC)](../../da
 
 ### <a name="example"></a>Příklad
 
-  Přečtěte si článek [transakce: provádění transakcí v sadě záznamů (rozhraní ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
+  Přečtěte si článek [transakce: Provádění transakcí v sadě záznamů (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
 
 ##  <a name="bindparameters"></a>  CDatabase::BindParameters
 
@@ -173,7 +173,7 @@ virtual void BindParameters(HSTMT hstmt);
 
 ### <a name="parameters"></a>Parametry
 
-*HSTMT*<br/>
+*hstmt*<br/>
 Popisovač příkazu ODBC, pro které chcete pro svázání parametrů.
 
 ### <a name="remarks"></a>Poznámky
@@ -288,7 +288,7 @@ Další informace o transakcích, najdete v článku [transakce (ODBC)](../../da
 
 ### <a name="example"></a>Příklad
 
-  Přečtěte si článek [transakce: provádění transakcí v sadě záznamů (rozhraní ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
+  Přečtěte si článek [transakce: Provádění transakcí v sadě záznamů (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
 
 ##  <a name="executesql"></a>  CDatabase::ExecuteSQL
 
@@ -300,7 +300,7 @@ void ExecuteSQL(LPCTSTR lpszSQL);
 
 ### <a name="parameters"></a>Parametry
 
-*Ipszsql*<br/>
+*lpszSQL*<br/>
 Ukazatel na řetězec zakončený hodnotou null obsahující platný příkaz SQL pro spuštění. Můžete předat [CString](../../atl-mfc-shared/reference/cstringt-class.md).
 
 ### <a name="remarks"></a>Poznámky
@@ -341,7 +341,7 @@ V následující tabulce jsou uvedeny hodnoty bitové masky, které mohou být k
 |SQL_BP_UPDATE|Záložka pro řádek je platný po `Update` operace na daném řádku.|
 |SQL_BP_OTHER_HSTMT|Záložky spojených s jedním objektem sady záznamů jsou platné v druhé sady záznamů.|
 
-Další informace o tomto návratovou hodnotu, najdete v části funkce ODBC API `SQLGetInfo` v sadě Windows SDK. Další informace o záložky, najdete v článku [sada záznamů: záložky a absolutní pozice (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
+Další informace o tomto návratovou hodnotu, najdete v části funkce ODBC API `SQLGetInfo` v sadě Windows SDK. Další informace o záložky, najdete v článku [sada záznamů: Záložky a absolutní umístění (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
 
 ##  <a name="getconnect"></a>  CDatabase::getconnect byla
 
@@ -461,7 +461,7 @@ virtual void OnSetOptions(HSTMT hstmt);
 
 ### <a name="parameters"></a>Parametry
 
-*HSTMT*<br/>
+*hstmt*<br/>
 Popisovač příkazu ODBC, pro které jsou nastavené možnosti.
 
 ### <a name="remarks"></a>Poznámky
@@ -600,7 +600,7 @@ Po vrácení zpět zůstane aktuální záznam, který byl aktuální před vrá
 
 ### <a name="example"></a>Příklad
 
-  Přečtěte si článek [transakce: provádění transakcí v sadě záznamů (rozhraní ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
+  Přečtěte si článek [transakce: Provádění transakcí v sadě záznamů (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
 
 ##  <a name="setlogintimeout"></a>  CDatabase::SetLoginTimeout
 
@@ -640,7 +640,7 @@ Operace může časový limit z důvodu problémů s přístupem k síti, doba z
 
 Výchozí hodnota pro vypršení časového limitu dotazu je 15 sekund. Ne všechny zdroje dat podporují možnost nastavit hodnotu časového limitu dotazu. Pokud nastavíte hodnotu časového limitu dotazu 0, dojde k žádný časový limit; komunikace se zdrojem dat může přestat reagovat. Toto chování může být užitečné během vývoje. Pokud zdroj dat nepodporuje časový limit, získáte výstup trasování, ale ne výjimku.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

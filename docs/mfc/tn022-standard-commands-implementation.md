@@ -59,12 +59,12 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-ms.openlocfilehash: 0f79aaaf59f12e226220e51681f64d0bf1131303
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c066521ba2b5be9ac24a8abaece42e57b8ad85f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504335"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279348"
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022: Implementace standardních příkazů
 
@@ -468,30 +468,29 @@ Pro každé ID příkazu je standardní zprávy řádku výzvy řetězec, který
 
 Několik identifikátory standardních příkazů se používají jako ukazatele ve stavovém řádku. Tyto stejné příkazu pro aktualizaci uživatelského rozhraní mechanismu pro zpracování zobrazíte pomocí jejich aktuální vizuální stav během doby nečinnosti aplikace. Protože nemůže být vybrána uživatelem (to znamená, budete nelze odeslat panelu stavového řádku stav), pak nemá smysl mít obslužnou rutinu ON_COMMAND pro tyto identifikátory příkazů.
 
-- Id_indicator_caps –: Limit zámku ukazatel.
+- ID_INDICATOR_CAPS –: Zakončení ukazatele zámku.
 
-- Id_indicator_num –: NUM lock ukazatel.
+- ID_INDICATOR_NUM –: Indikátor NUM lock.
 
-- Id_indicator_scrl –: SCRL zámek ukazatel.
+- ID_INDICATOR_SCRL : Indikátor SCRL uzamčení.
 
-- Id_indicator_kana –: KANA uzamknout ukazatel (platí jenom pro japonské systémy).
+- ID_INDICATOR_KANA –: KANA uzamknout ukazatel (platí jenom pro japonské systémy).
 
 Všechny tyto tři jsou implementovány v `CFrameWnd::OnUpdateKeyIndicator`, implementace pomocné rutiny, který používá ID příkazu pro mapování na příslušné virtuální klávesy. Běžnou implementaci povolí nebo zakáže (podokna stavu zakázáno = žádný text) `CCmdUI` objekt v závislosti na tom, jestli je aktuálně uzamčená odpovídající virtuální klávesy.
 
 Přizpůsobení Tato obslužná rutina příkazu se nedoporučuje.
 
-- Id_indicator_ext –: Rozšířený výběr ukazatele.
+- ID_INDICATOR_EXT –: Rozšířený výběr ukazatele.
 
-- Id_indicator_ovr –: Indikátor přepisování.
+- ID_INDICATOR_OVR –: Přepisování ukazatel.
 
-- Id_indicator_rec –: Zaznamenávání indikátoru.
+- ID_INDICATOR_REC –: Indikátor záznam.
 
 Aktuálně neexistuje žádná standardní implementace pro tyto ukazatele.
 
-Pokud se rozhodnete implementovat tyto indikátory, doporučujeme, abyste používali tyto identifikátory ukazatele a zachování řazení ukazatelů ve stavovém řádku (to znamená, že v tomto pořadí: EXT, Zakončení, číslo, SCRL, přes, dop.).
+Pokud se rozhodnete implementovat tyto indikátory, doporučujeme, abyste používali tyto ukazatele ID a zachování řazení ukazatelů ve stavovém řádku (to znamená, že v tomto pořadí: EXT, CAP, NUM, SCRL, OVR, REC).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
-

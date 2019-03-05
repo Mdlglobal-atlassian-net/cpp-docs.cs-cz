@@ -14,12 +14,12 @@ helpviewer_keywords:
 - mutex [C++]
 - threading [C++], thread stacks
 ms.assetid: 1415f47d-417f-4f42-949b-946fb28aab0e
-ms.openlocfilehash: c7d9790cfee39fbddd9ab545d48fa375d56f3a05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8536505882ca9a87aec385ca1c42d652ea84ff7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561327"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326532"
 ---
 # <a name="writing-a-multithreaded-win32-program"></a>Psaní programů s více vlákny pro prostředí Win32
 
@@ -28,7 +28,7 @@ Při psaní programů s více vlákny je třeba koordinovat jejich chování a [
 ##  <a name="_core_sharing_common_resources_between_threads"></a> Sdílení společných prostředků mezi vlákny
 
 > [!NOTE]
->  Podobné informace z hlediska knihovny MFC naleznete v tématu [Multithreading: Programovací tipy](multithreading-programming-tips.md) a [Multithreading: kdy použít synchronizační třídy](multithreading-when-to-use-the-synchronization-classes.md).
+>  Podobné informace z hlediska knihovny MFC naleznete v tématu [Multithreading: Tipy pro programování](multithreading-programming-tips.md) a [Multithreading: Kdy použít synchronizační třídy](multithreading-when-to-use-the-synchronization-classes.md).
 
 Každé vlákno má svůj vlastní zásobníku a zaregistruje vlastní kopii procesoru. Další prostředky, jako jsou soubory, statických dat a paměť haldy jsou sdíleny všemi vlákny v procesu. Vlákna, která používají tyto běžné prostředky musí být synchronizovány. Win32 poskytuje několik způsobů, jak synchronizovat prostředky, včetně semafory, kritické oddíly, události a vzájemně vyloučené přístupy.
 
@@ -61,6 +61,6 @@ Protože každé vlákno má svůj vlastní zásobníku, můžete vyhnout potenc
 
 Win32 také poskytuje úložiště Thread Local (TLS) k ukládání dat pro vlákno. Další informace najdete v tématu [vlákna místní úložiště (TLS)](thread-local-storage-tls.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Multithreading s použitím jazyka C a prostředí Win32](multithreading-with-c-and-win32.md)

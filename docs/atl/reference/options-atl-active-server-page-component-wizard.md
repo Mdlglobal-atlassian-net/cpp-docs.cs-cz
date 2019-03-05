@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Active Server Page Component Wizard, options
 ms.assetid: 54f34e26-53c7-4456-9675-cb86e356bde0
-ms.openlocfilehash: d8d8eaa6190bd04d626b9a23c9d27d1f9daeb003
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e9740a67f265484c349a4df644be882dba30c13
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595634"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280235"
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>Možnosti Průvodce stránky komponentami ATL Active Server
 
@@ -28,9 +28,9 @@ Další informace o projekty knihovny ATL a třídy knihovny ATL modelu COM, nal
    |Možnost|Popis|
    |------------|-----------------|
    |**Jeden**|Určuje, že objekt používá jeden model vláken. V jedné modelu vláken objekt vždy běží v primárním vláknu COM. Zobrazit [jedno vláknové objekty apartment](/windows/desktop/com/single-threaded-apartments) a [InprocServer32](/windows/desktop/com/inprocserver32) Další informace.|
-   |**Objektu Apartment**|Určuje, že objekt používá podprocesový model apartment. Odpovídá jediné vlákně. Každý objekt jako součást podprocesový model apartment je přiřazena objektu apartment pro jeho vlákna po celou dobu životnosti objektu. více vláken však můžete použít pro více objektů. Každý apartment se váže na konkrétní vlákno a má pumpu zpráv Windows (výchozí).<br /><br /> Zobrazit [jedno vláknové objekty apartment](/windows/desktop/com/single-threaded-apartments) Další informace.|
+   |**Apartment**|Určuje, že objekt používá podprocesový model apartment. Odpovídá jediné vlákně. Každý objekt jako součást podprocesový model apartment je přiřazena objektu apartment pro jeho vlákna po celou dobu životnosti objektu. více vláken však můžete použít pro více objektů. Každý apartment se váže na konkrétní vlákno a má pumpu zpráv Windows (výchozí).<br /><br /> Zobrazit [jedno vláknové objekty apartment](/windows/desktop/com/single-threaded-apartments) Další informace.|
    |**Obojí**|Určuje, zda objekt můžete používat objektu apartment nebo volných vláken, ze které druh vlákno je vytvořen v závislosti.|
-   |**Zdarma**|Určuje, že objekt používá volných vláken. Volných vláken je ekvivalentní s více vlákny typu apartment modelu. Zobrazit [s více vlákny objekty apartment](/windows/desktop/com/multithreaded-apartments) Další informace.|
+   |**Free**|Určuje, že objekt používá volných vláken. Volných vláken je ekvivalentní s více vlákny typu apartment modelu. Zobrazit [s více vlákny objekty apartment](/windows/desktop/com/multithreaded-apartments) Další informace.|
    |**Neutrální**|Určuje, že objekt pokyny pro vícevláknové izolované prostory se však můžete spustit na jakékoliv vlákno.|
 
 - **Agregace**
@@ -53,8 +53,7 @@ Další informace o projekty knihovny ATL a třídy knihovny ATL modelu COM, nal
    |**Body připojení**|Umožňuje spojovací body pro svůj objekt tím, že jsou odvozeny z třídy objektu [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md).|
    |**Volné zařazování vláken**|Vytvoří objekt volným zařazováním vláken a zařazování ukazatele rozhraní efektivně mezi vlákny v rámci stejného procesu. K dispozici pro objekt zadat buď **obě** nebo **Free** jako model vláken.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Průvodce komponentami ATL Active Server Pages](../../atl/reference/atl-active-server-page-component-wizard.md)<br/>
 [Komponenta knihovny ATL Active Server Page](../../atl/reference/adding-an-atl-active-server-page-component.md)
-

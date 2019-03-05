@@ -1,5 +1,5 @@
 ---
-title: 'TN048: Psaní programů pro nastavení a správu rozhraní ODBC pro databázové aplikace MFC'
+title: 'TN048: Zápis nastavení rozhraní ODBC a programy pro správu pro databázové aplikace MFC'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.odbc
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC, and MFC
 - MFC, database applications
 ms.assetid: d456cdd4-0513-4a51-80c0-9132b66115ce
-ms.openlocfilehash: b31ceb8bfc48decb5387d386ee8e8b64822f72ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2904ceb626fd1bfad0b24026deb08f2c5dcbcd4a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584122"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283888"
 ---
-# <a name="tn048-writing-odbc-setup-and-administration-programs-for-mfc-database-applications"></a>TN048: Psaní programů pro nastavení a správu rozhraní ODBC pro databázové aplikace MFC
+# <a name="tn048-writing-odbc-setup-and-administration-programs-for-mfc-database-applications"></a>TN048: Zápis nastavení rozhraní ODBC a programy pro správu pro databázové aplikace MFC
 
 > [!NOTE]
 >  Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
@@ -53,8 +53,7 @@ Chcete-li zobrazit dialogové okno, pomocí kterého můžete uživatele přidat
 
 Další informace najdete v tématu rozhraní ODBC SDK *referenční informace pro programátory* kapitoly 23, instalační program referenční dokumentace funkcí knihovny DLL a kapitoly 24, instalační program referenční dokumentace funkcí knihovny DLL.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
-

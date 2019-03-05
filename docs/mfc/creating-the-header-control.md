@@ -5,12 +5,12 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], creating
 - header controls [MFC], creating
 ms.assetid: 7864d9d2-4a2c-4622-b58b-7b110a1e28d2
-ms.openlocfilehash: fdb96eee243214d053a8f375f742cf69aa4e512d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 669b13cf566f24bfcd5a29ae41af1cdb90513f73
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568459"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326137"
 ---
 # <a name="creating-the-header-control"></a>Vytvoření ovládacího prvku záhlaví
 
@@ -40,8 +40,7 @@ V obou případech se vytvoří vloženému ovládacímu prvku objektu při vytv
 
 Další informace najdete v tématu [vytvoření ovládacího prvku záhlaví](/windows/desktop/Controls/header-controls) v sadě Windows SDK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)
-

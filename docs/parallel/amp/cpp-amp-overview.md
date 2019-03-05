@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 26f24e922769a565c88264032373662116eee290
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: da77e2ba93554cb65d4cc92353d05d54467b50d4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176988"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269640"
 ---
 # <a name="c-amp-overview"></a>Přehled produktu C++ AMP
 
@@ -58,7 +58,7 @@ Důležité části kódu jsou následující:
 
 - Iterace: První `for` smyčky poskytuje mechanismus pro procházení prvků v polích. Kód, který chcete spustit pro výpočet součtu je obsažen v prvním `for` bloku.
 
-- Index: `idx` proměnnou přistupuje k jednotlivým prvkům polí.
+- Index: `idx` Proměnnou přistupuje k jednotlivým prvkům polí.
 
 Používání modelu C++ AMP, můžete například napsat následující kód místo.
 
@@ -98,11 +98,11 @@ void CppAmpMethod() {
 
 Stejné základní prvky jsou k dispozici, ale jsou použity konstrukce knihovny C++ AMP:
 
-- Data: Použita pole jazyka C++ k vytvoření tří C++ AMP [array_view](../../parallel/amp/reference/array-view-class.md) objekty. Zadat čtyři hodnoty k vytvoření `array_view` objektu: hodnoty dat, počet rozměrů, typ elementu a délku `array_view` objektu v každém rozměru. Počet rozměrů a typ jsou předány jako parametry typu. Data a délka jsou předány jako parametry konstruktoru. V tomto příkladu je jednorozměrné pole jazyka C++, která je předána do konstruktoru. Počet rozměrů a délka se používají k tvorbě obdélníkového tvaru dat `array_view` objektu a datové hodnoty jsou použity k vyplnění pole. Běhová knihovna také zahrnuje [array – třída](../../parallel/amp/reference/array-class.md), která má podobné rozhraní `array_view` třídy a je popsána dále v tomto článku.
+- Data: Pole jazyka C++ lze použít k sestavení tři C++ AMP [array_view](../../parallel/amp/reference/array-view-class.md) objekty. Zadat čtyři hodnoty k vytvoření `array_view` objektu: hodnoty dat, počet rozměrů, typ elementu a délku `array_view` objektu v každém rozměru. Počet rozměrů a typ jsou předány jako parametry typu. Data a délka jsou předány jako parametry konstruktoru. V tomto příkladu je jednorozměrné pole jazyka C++, která je předána do konstruktoru. Počet rozměrů a délka se používají k tvorbě obdélníkového tvaru dat `array_view` objektu a datové hodnoty jsou použity k vyplnění pole. Běhová knihovna také zahrnuje [array – třída](../../parallel/amp/reference/array-class.md), která má podobné rozhraní `array_view` třídy a je popsána dále v tomto článku.
 
-- Iterace: [parallel_for_each – funkce (C++ AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each) poskytuje mechanismus pro procházení datových prvků, nebo *výpočetní domény*. V tomto příkladu je výpočetní domény určené `sum.extent`. Kód, který chcete spustit je obsažen ve výrazu lambda nebo *funkce jádra*. `restrict(amp)` Označuje, že je použita pouze podmnožina jazyka C++, kterou může knihovna C++ AMP urychlit.
+- Iterace: [Parallel_for_each – funkce (C++ AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each) poskytuje mechanismus pro procházení datových prvků, nebo *výpočetní domény*. V tomto příkladu je výpočetní domény určené `sum.extent`. Kód, který chcete spustit je obsažen ve výrazu lambda nebo *funkce jádra*. `restrict(amp)` Označuje, že je použita pouze podmnožina jazyka C++, kterou může knihovna C++ AMP urychlit.
 
-- Index: [index – třída](../../parallel/amp/reference/index-class.md) proměnnou, `idx`, je deklarována s rozměrem jedna, aby odpovídala pořadí `array_view` objektu. Pomocí indexu lze přistupovat k jednotlivým prvkům `array_view` objekty.
+- Index: [Index – třída](../../parallel/amp/reference/index-class.md) proměnnou, `idx`, je deklarována s rozměrem jedna, aby odpovídala pořadí `array_view` objektu. Pomocí indexu lze přistupovat k jednotlivým prvkům `array_view` objekty.
 
 ## <a name="shaping-and-indexing-data-index-and-extent"></a>Tvarování a indexování dat: index a rozsah
 
@@ -457,11 +457,11 @@ void MathExample() {
 
 C++ AMP obsahuje grafickou knihovnu, která je navržena pro urychlené programování grafiky. Tato knihovna se používá jenom na zařízeních, která podporují nativní grafické funkce. Metody jsou v [Concurrency::graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md) a jsou obsaženy v \<amp_graphics.h > soubor hlaviček. Klíčové součásti grafické knihovny jsou:
 
-- [Texture – třída](../../parallel/amp/reference/texture-class.md): tuto třídu textur lze použít pro tvorbu textur z paměti nebo ze souboru. Textury se podobají polím, protože obsahují data a připomínají kontejnery ve standardní knihovně jazyka C++ s ohledem na přiřazení a konstrukci kopie. Další informace najdete v tématu [kontejnery standardní knihovny C++](../../standard-library/stl-containers.md). Parametry šablony `texture` třídy jsou typ prvku a počet rozměrů. Počet rozměrů může být 1, 2 nebo 3. Typ prvku může být jeden z typů krátkých vektorů, popsaných dále v tomto článku.
+- [Texture – třída](../../parallel/amp/reference/texture-class.md): Tuto třídu textur lze použít pro tvorbu textur z paměti nebo ze souboru. Textury se podobají polím, protože obsahují data a připomínají kontejnery ve standardní knihovně jazyka C++ s ohledem na přiřazení a konstrukci kopie. Další informace najdete v tématu [kontejnery standardní knihovny C++](../../standard-library/stl-containers.md). Parametry šablony `texture` třídy jsou typ prvku a počet rozměrů. Počet rozměrů může být 1, 2 nebo 3. Typ prvku může být jeden z typů krátkých vektorů, popsaných dále v tomto článku.
 
-- [writeonly_texture_view – třída](../../parallel/amp/reference/writeonly-texture-view-class.md): poskytuje přístup jen pro zápis pro všechny textury.
+- [writeonly_texture_view – třída](../../parallel/amp/reference/writeonly-texture-view-class.md): Poskytuje přístup jen pro zápis pro všechny textury.
 
-- Knihovna krátkých vektorů: Definuje sadu typů krátkých vektorů o délce 2, 3 a 4, které jsou založeny na **int**, `uint`, **float**, **double**, [norm ](../../parallel/amp/reference/norm-class.md), nebo [unorm](../../parallel/amp/reference/unorm-class.md).
+- Knihovna krátkých vektorů: Definuje sadu typů krátkých vektorů o délce 2, 3 a 4, které jsou založeny na **int**, `uint`, **float**, **double**, [norm](../../parallel/amp/reference/norm-class.md), nebo [unorm](../../parallel/amp/reference/unorm-class.md).
 
 ## <a name="universal-windows-platform-uwp-apps"></a>Aplikace Universal Windows Platform (UWP)
 
@@ -499,7 +499,7 @@ Vizualizátor souběžnosti zahrnuje podporu pro analýzu výkonu kódu jazyka C
 
 Operace modulo a dělení celých čísel bez znaménka mají výrazně lepší výkon než operace modulo a dělení celých čísel se znaménkem. Doporučujeme používat celá čísla bez znaménka Pokud je to možné.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Syntaxe výrazů lambda](../../cpp/lambda-expression-syntax.md)<br/>

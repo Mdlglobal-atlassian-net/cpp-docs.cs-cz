@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-ms.openlocfilehash: d0da6ebcb178735fc25c656241fe23497d941ab6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79b1cabc0304e905012db5f6dd73ed71073c0c1e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631150"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258473"
 ---
 # <a name="compiler-options-macros"></a>Makra možností kompilátoru
 
@@ -220,6 +220,6 @@ _ATL_SINGLE_THREADED
 
 Určuje, že objekt vždy běží v primárním vláknu COM. V tématu [určení modelu vláken projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) pro ostatní vlákna možnosti, a [možnosti, Průvodce jednoduchý objekt knihovny ATL](../../atl/reference/options-atl-simple-object-wizard.md) popis práce s vlákny modely k dispozici pro objekt knihovny ATL.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Makra](../../atl/reference/atl-macros.md)

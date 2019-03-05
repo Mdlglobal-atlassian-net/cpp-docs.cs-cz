@@ -23,12 +23,12 @@ helpviewer_keywords:
 - typedefs
 - ATL, typedefs
 ms.assetid: 7dd05baa-3efb-4e3b-af23-793c610f4560
-ms.openlocfilehash: c723d76f17ad1c74ab98e7348450cea3f03c4d78
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3db32e85ea9cba1e946db6259c00c621650e969
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429312"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290557"
 ---
 # <a name="atl-typedefs"></a>ATL – definice TypeDef
 
@@ -170,12 +170,12 @@ Pomocí `CComGlobalsThreadModel` díky které určení konkrétní třídy model
 
 Kromě `CComGlobalsThreadModel`, knihovna ATL poskytuje **typedef** název [CComObjectThreadModel](#ccomobjectthreadmodel). Třída odkazovaná každou `typedef` závisí na model vláken použít, jak je znázorněno v následující tabulce:
 
-|– definice typedef|Jeden dělení na vlákna|Práce s vlákny typu Apartment|Bezplatné dělení na vlákna|
+| – definice typedef|Jeden dělení na vlákna|Práce s vlákny typu Apartment|Bezplatné dělení na vlákna|
 |-------------|----------------------|-------------------------|--------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel`; M = `CComMultiThreadModel`
+S= `CComSingleThreadModel`; M= `CComMultiThreadModel`
 
 Použití `CComObjectThreadModel` v rámci jednoho objektu třídy. Použití `CComGlobalsThreadModel` v objektu, která je dostupná globálně vašemu programu, nebo pokud chcete chránit modulu prostředků napříč několika vlákny.
 
@@ -210,12 +210,12 @@ Pomocí `CComObjectThreadModel` díky které určení konkrétní třídy modelu
 
 Kromě `CComObjectThreadModel`, knihovna ATL poskytuje **typedef** název [CComGlobalsThreadModel](#ccomglobalsthreadmodel). Třída odkazovaná každou **typedef** závisí na model vláken použít, jak je znázorněno v následující tabulce:
 
-|– definice typedef|Jeden dělení na vlákna|Práce s vlákny typu Apartment|Bezplatné dělení na vlákna|
+| – definice typedef|Jeden dělení na vlákna|Práce s vlákny typu Apartment|Bezplatné dělení na vlákna|
 |-------------|----------------------|-------------------------|--------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel`; M = `CComMultiThreadModel`
+S= `CComSingleThreadModel`; M= `CComMultiThreadModel`
 
 Použití `CComObjectThreadModel` v rámci jednoho objektu třídy. Použití `CComGlobalsThreadModel` v objektu, který je buď globálně dostupné vašemu programu, nebo když chcete chránit prostředky modulu napříč více vlákny.
 
@@ -337,7 +337,7 @@ typedef CUrl* LPURL;
 
 **Záhlaví:** atlutil.h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Desktopové komponenty ATL objektů COM](../../atl/atl-com-desktop-components.md)<br/>
 [Funkce](../../atl/reference/atl-functions.md)<br/>

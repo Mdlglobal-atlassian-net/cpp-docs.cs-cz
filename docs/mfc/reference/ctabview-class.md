@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTabView [MFC], IsScrollBar
 - CTabView [MFC], OnActivateView
 ms.assetid: 8e6ecd9d-d28d-432b-8ec8-0446f0204d52
-ms.openlocfilehash: 38c56cd5d6f464cd560c6671f4ebf0a9c118d020
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ac62d04c38dbddda90d2f33a9c14c9c131fcd9c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443784"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326592"
 ---
 # <a name="ctabview-class"></a>Ctabview – třída
 
@@ -65,7 +65,7 @@ Tato třída umožňuje snadno převést zobrazení se záložkami do dokumentů
 
 Například může mít dokument, který může být reprezentována různými způsoby: jako tabulky, graf, Upravitelný formulář a tak dále. Můžete vytvořit jednotlivé zobrazení vykreslování data podle potřeby, vložte je do vašeho `CTabView`-odvozenému objektu a potom kliknul na záložkách bez jakékoli další kódování.
 
-[Ukázka TabbedView: MFC s kartami zobrazení aplikace](../../visual-cpp-samples.md) ukazuje využití `CTabView`.
+[Ukázka TabbedView: Zobrazení aplikace s kartami knihovny MFC](../../visual-cpp-samples.md) ukazuje využití `CTabView`.
 
 ## <a name="example"></a>Příklad
 
@@ -233,9 +233,9 @@ TRUE, pokud zadané zobrazení se provádí aktivní, FALSE v případě zobraze
 
 Další informace najdete v části [CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[Cmfctabctrl –](../../mfc/reference/ctabview-class.md)<br/>
+[CMFCTabCtrl](../../mfc/reference/ctabview-class.md)<br/>
 [CView – třída](../../mfc/reference/cview-class.md)

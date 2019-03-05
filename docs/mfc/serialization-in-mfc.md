@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization [MFC], MFC
 - serialization [MFC], bypassing
 ms.assetid: fb596a18-4522-47e0-96e0-192732d24c12
-ms.openlocfilehash: d439f5e13148d4359394739ec56048f00ceb35ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c7dec140635b6d83bdae936d1bb0cef144f825b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462761"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262139"
 ---
 # <a name="serialization-in-mfc"></a>Serializace v prostředí MFC
 
@@ -27,7 +27,7 @@ Základní myšlenka serializace je, že objekt by měl být schopni napsat jej�
 
 Knihovna MFC používá objekt `CArchive` třídu jako prostředník mezi objekt, který má být serializován a paměťovému médiu. Tento objekt je vždy přidruženo `CFile` objekt, který získá informace potřebné pro serializaci, včetně názvu souboru a určuje, zda požadovaná operace je pro čtení nebo zápisu. Můžete použít objekt, který provádí operace serializace `CArchive` objektu bez ohledu na druh paměťovému médiu.
 
-A `CArchive` objekt používá přetížené vložení (**<\<**) a extrakce (**>>**) operátoři mohli provést zápis a čtení operací. Další informace najdete v tématu [ukládání a načítání objektů CObject prostřednictvím archivu](../mfc/storing-and-loading-cobjects-via-an-archive.md) v článku serializace: serializace objektu.
+A `CArchive` objekt používá přetížené vložení (**<\<**) a extrakce (**>>**) operátoři mohli provést zápis a čtení operací. Další informace najdete v tématu [ukládání a načítání objektů CObject prostřednictvím archivu](../mfc/storing-and-loading-cobjects-via-an-archive.md) v článku serializace: Serializace objektu.
 
 > [!NOTE]
 >  Nepleťte si `CArchive` třída s atributem pro obecné účely iostream – třídy, které jsou pro formátovaný pouze text. `CArchive` Je třída Serializované objekty binární formát.
@@ -42,7 +42,7 @@ V následujících článcích zahrnují dva hlavní úkoly vyžadované pro ser
 
 Tento článek [serializace: Serializace vs. Databáze vstupní a výstupní](../mfc/serialization-serialization-vs-database-input-output.md) popisuje po serializace je příslušný postup vstupní a výstupní v databázových aplikacích.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Koncepty](../mfc/mfc-concepts.md)<br/>
 [Obecná témata MFC](../mfc/general-mfc-topics.md)<br/>

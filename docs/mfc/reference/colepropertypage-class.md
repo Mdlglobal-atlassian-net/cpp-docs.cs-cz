@@ -38,12 +38,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: 905f92ef7875dac984b6c0d537e4687dcc779f49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55f4b7304d0b50004585b55142804e0bb4234c16
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605709"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271252"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage – třída
 
@@ -89,7 +89,7 @@ Stránky vlastností pro instanci může obsahovat prvek pro úpravy, který umo
 
 Každá vlastnost základní nebo vlastní ovládací prvek může mít ovládací prvek dialogového okna, který umožňuje uživateli zobrazit aktuální hodnota vlastnosti a v případě potřeby změňte tuto hodnotu ovládacího prvku.
 
-Další informace o používání `COlePropertyPage`, najdete v článku [ovládací prvky ActiveX: stránky vlastností](../../mfc/mfc-activex-controls-property-pages.md).
+Další informace o používání `COlePropertyPage`, najdete v článku [ovládací prvky ActiveX: Stránky vlastností](../../mfc/mfc-activex-controls-property-pages.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -222,7 +222,7 @@ virtual BOOL OnEditProperty(DISPID dispid);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor DISPID*<br/>
+*dispid*<br/>
 Hodnotu Dispatch ID vlastnosti, který právě upravujete.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -383,7 +383,7 @@ void SetPageName(LPCTSTR lpszPageName);
 *lpszPageName*<br/>
 Ukazatel na řetězec obsahující název vlastnosti stránky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC Circ3 –](../../visual-cpp-samples.md)<br/>
 [Ukázky knihovny MFC TESTHELP](../../visual-cpp-samples.md)<br/>

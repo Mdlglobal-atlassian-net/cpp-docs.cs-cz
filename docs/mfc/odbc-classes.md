@@ -7,12 +7,12 @@ helpviewer_keywords:
 - database classes [MFC], ODBC
 - ODBC classes [MFC]
 ms.assetid: 6c40fca8-3033-4873-9abe-7f51725de0e0
-ms.openlocfilehash: f0ff337a7193093456ab4f5de2f6087d88ca12df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75e022ea3e5de4a57f0ef2b1e3f312654c2889ec
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518518"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267131"
 ---
 # <a name="odbc-classes"></a>ODBC – třídy
 
@@ -23,7 +23,7 @@ Programy, které používají rozhraní ODBC databáze bude mít alespoň `CData
 [CDatabase](../mfc/reference/cdatabase-class.md)<br/>
 Zapouzdřuje připojení ke zdroji dat, pomocí kterého můžete pracovat ve zdroji dat.
 
-[CRecordset –](../mfc/reference/crecordset-class.md)<br/>
+[CRecordset](../mfc/reference/crecordset-class.md)<br/>
 Zapouzdřuje sadu záznamů ze zdroje dat vybrané. Sady záznamů povolit posouvání ze záznamu, aktualizují záznamy (přidání, úpravy a odstranění záznamů), výběr kvalifikaci s filtrem, řazení výběr a Parametrizace výběru s informacemi o získaných nebo vypočítat v době běhu.
 
 [CRecordView](../mfc/reference/crecordview-class.md)<br/>
@@ -37,13 +37,12 @@ Poskytuje kontextové informace pro podporu výměna pole záznamu (RFX), který
 
 ## <a name="related-classes"></a>Související třídy
 
-[CLongBinary –](../mfc/reference/clongbinary-class.md)<br/>
+[CLongBinary](../mfc/reference/clongbinary-class.md)<br/>
 Zapouzdřuje popisovač úložiště pro binární velkých objektů (BLOB), jako je například rastrový obrázek. `CLongBinary` objekty se používají ke správě velkých datových objektů uložených v databázových tabulek.
 
-[CDBVariant –](../mfc/reference/cdbvariant-class.md)<br/>
+[CDBVariant](../mfc/reference/cdbvariant-class.md)<br/>
 Umožňuje uložit hodnotu bez starostí o datový typ hodnoty. `CDBVariant` sleduje datový typ aktuální hodnotu, která je uložena ve sjednocení.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../mfc/class-library-overview.md)
-

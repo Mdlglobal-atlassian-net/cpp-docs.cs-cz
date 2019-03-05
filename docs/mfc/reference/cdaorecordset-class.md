@@ -1,5 +1,5 @@
 ---
-title: CDaoRecordset – třída
+title: CDaoRecordset Class
 ms.date: 08/27/2018
 f1_keywords:
 - CDaoRecordset
@@ -166,14 +166,14 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-ms.openlocfilehash: 6b3e3fac575d6a1308a9f61b3bf827d76785e94d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96118645aa656e97fcb93a0fd223045208ab03a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639320"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273891"
 ---
-# <a name="cdaorecordset-class"></a>CDaoRecordset – třída
+# <a name="cdaorecordset-class"></a>CDaoRecordset Class
 
 Představuje sadu záznamů ze zdroje dat vybrané.
 
@@ -1122,7 +1122,7 @@ void GetFieldInfo(
 *nIndex*<br/>
 Index založený na nule předdefinované pole v kolekci polí sady záznamů, pro vyhledávání podle indexu.
 
-*FieldInfo*<br/>
+*fieldinfo*<br/>
 Odkaz na [cdaofieldinfo –](../../mfc/reference/cdaofieldinfo-structure.md) struktury.
 
 *dwInfoOptions*<br/>
@@ -1130,9 +1130,9 @@ Možnosti, které určují, jaké informace o sadě záznamů pro načtení. Dos
 
 - `AFX_DAO_PRIMARY_INFO` (Výchozí) Název, typ, velikosti, atributy
 
-- `AFX_DAO_SECONDARY_INFO` Primární informace, a navíc: ordinální číslo pozice, povinné, umožňují nulovou délku, pořadí řazení cizí název pole zdroje, zdrojová tabulka
+- `AFX_DAO_SECONDARY_INFO` Primární informace, a navíc: Pořadí, povinné, umožňují nulovou délku, Kolační pořadí, cizí název, zdrojové pole, zdrojová tabulka
 
-- `AFX_DAO_ALL_INFO` Primární a sekundární informace, a navíc: Text výchozí hodnoty ověřovacího pravidla ověřování
+- `AFX_DAO_ALL_INFO` Informace o primární a sekundární, a navíc: Výchozí hodnota, ověřovací pravidlo, Text pro ověření
 
 *lpszName*<br/>
 Název pole.
@@ -1237,9 +1237,9 @@ Možnosti, které určují, jaké informace o index k načtení. Dostupné možn
 
 - `AFX_DAO_PRIMARY_INFO` (Výchozí) Pole se jménem, informace o poli
 
-- `AFX_DAO_SECONDARY_INFO` Primární informace, a navíc: primární, jedinečné, clusteru, Ignorovat hodnoty Null, povinné, cizí
+- `AFX_DAO_SECONDARY_INFO` Primární informace, a navíc: Primární, jedinečné, clusteru, Ignorovat hodnoty Null, povinné, cizí
 
-- `AFX_DAO_ALL_INFO` Primární a sekundární informace, a navíc: počet jedinečných položek
+- `AFX_DAO_ALL_INFO` Informace o primární a sekundární, a navíc: Počet jedinečných položek
 
 *lpszName*<br/>
 Ukazatel na název objektu indexu pro vyhledávání podle názvu.
@@ -1424,7 +1424,7 @@ Jeden z následujících hodnot, které označuje typ sady záznamů:
 
 - `dbOpenTable` Sada záznamů typ tabulky
 
-- `dbOpenDynaset` Dynamické sady záznamů
+- `dbOpenDynaset` Dynaset-type recordset
 
 - `dbOpenSnapshot` Sada záznamů typu snímek
 
@@ -1601,7 +1601,7 @@ BOOL IsFieldDirty(void* pv);
 
 ### <a name="parameters"></a>Parametry
 
-*PV*<br/>
+*pv*<br/>
 Ukazatel na pole datového člena, jehož stav chcete zkontrolovat nebo NULL, pokud chcete zjistit, zda jsou změny libovolné pole.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1624,7 +1624,7 @@ BOOL IsFieldNull(void* pv);
 
 ### <a name="parameters"></a>Parametry
 
-*PV*<br/>
+*pv*<br/>
 Ukazatel na pole datového člena, jehož stav chcete zkontrolovat nebo NULL, pokud chcete zjistit, zda libovolné pole jsou Null.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1653,7 +1653,7 @@ BOOL IsFieldNullable(void* pv);
 
 ### <a name="parameters"></a>Parametry
 
-*PV*<br/>
+*pv*<br/>
 Ukazatel na pole datového člena, jehož stav chcete zkontrolovat nebo NULL, pokud chcete zjistit, zda libovolné pole jsou Null.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1940,7 +1940,7 @@ Jeden z následujících hodnot:
 
 - `dbOpenSnapshot` Typ snímku sada záznamů s posouváním obousměrné.
 
-*Ipszsql*<br/>
+*lpszSQL*<br/>
 Ukazatel řetězce obsahující jedno z následujících:
 
 - Ukazatel s hodnotou NULL.
@@ -2084,7 +2084,7 @@ BOOL Seek(
 Jeden z těchto výrazů řetězce: "<","\<=", "=", "> =", nebo ">".
 
 *pKey1*<br/>
-Ukazatel [COleVariant](../../mfc/reference/colevariant-class.md) jejíž hodnota odpovídá na první pole v indexu. Požadováno.
+Ukazatel [COleVariant](../../mfc/reference/colevariant-class.md) jejíž hodnota odpovídá na první pole v indexu. Povinný parametr.
 
 *pKey2*<br/>
 Ukazatel `COleVariant` jejíž hodnota odpovídá druhé pole v indexu, pokud existuje. Výchozí hodnota je NULL.
@@ -2261,7 +2261,7 @@ void SetFieldDirty(
 
 ### <a name="parameters"></a>Parametry
 
-*PV*<br/>
+*pv*<br/>
 Obsahuje adresu pole datového člena v sadě záznamů nebo hodnota NULL. Pokud má hodnotu NULL, se označí všechny datové členy v sadě záznamů. (C++ NULL není stejná jako hodnota Null v, řečeno terminologií databáze, což znamená, že "s žádnou hodnotu.")
 
 *bDirty*<br/>
@@ -2304,7 +2304,7 @@ void SetFieldNull(
 
 ### <a name="parameters"></a>Parametry
 
-*PV*<br/>
+*pv*<br/>
 Obsahuje adresu pole datového člena v sadě záznamů nebo hodnota NULL. Pokud má hodnotu NULL, se označí všechny datové členy v sadě záznamů. (C++ NULL není stejná jako hodnota Null v, řečeno terminologií databáze, což znamená, že "s žádnou hodnotu.")
 
 *bNull*<br/>
@@ -2525,7 +2525,7 @@ Pokud objekt sady záznamů je uzamčené pessimistically v prostředí, zůstan
 
 Související informace naleznete v tématech "Metodu AddNew", "CancelUpdate metoda", "Metodu Delete", "LastModified vlastnost", "Metodu aktualizace" a "EditMode vlastnost" v nápovědě k DAO.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

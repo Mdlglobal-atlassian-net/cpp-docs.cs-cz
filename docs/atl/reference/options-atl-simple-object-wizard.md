@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Simple Object Wizard, options
 ms.assetid: 125fe179-942d-4181-8b82-33e92e1fd779
-ms.openlocfilehash: efd79c877fcf71ae33b1539e41d3d13379b834de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 327c78b00cbe69fcce4f055b0ae63c4dc2e5a7d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650501"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273388"
 ---
 # <a name="options-atl-simple-object-wizard"></a>Možnosti Průvodce jednoduchým objektem ATL
 
@@ -28,9 +28,9 @@ Další informace o projekty knihovny ATL a třídy knihovny ATL modelu COM, nal
    |Možnost|Popis|
    |------------|-----------------|
    |**Jeden**|Určuje, že objekt vždy běží v primárním vláknu COM. Zobrazit [jedno vláknové objekty apartment](/windows/desktop/com/single-threaded-apartments) a [InprocServer32](/windows/desktop/com/inprocserver32) Další informace.|
-   |**Objektu Apartment**|Určuje, že objekt používá podprocesový model apartment. Odpovídá jediné vlákně. Každý objekt jako součást podprocesový model apartment je přiřazena objektu apartment pro jeho vlákna po celou dobu životnosti objektu. více vláken však můžete použít pro více objektů. Každý apartment se váže na konkrétní vlákno a má pumpu zpráv Windows (výchozí).<br /><br /> Zobrazit [jedno vláknové objekty apartment](/windows/desktop/com/single-threaded-apartments) Další informace.|
+   |**Apartment**|Určuje, že objekt používá podprocesový model apartment. Odpovídá jediné vlákně. Každý objekt jako součást podprocesový model apartment je přiřazena objektu apartment pro jeho vlákna po celou dobu životnosti objektu. více vláken však můžete použít pro více objektů. Každý apartment se váže na konkrétní vlákno a má pumpu zpráv Windows (výchozí).<br /><br /> Zobrazit [jedno vláknové objekty apartment](/windows/desktop/com/single-threaded-apartments) Další informace.|
    |**Obojí**|Určuje, zda objekt můžete používat objektu apartment nebo volných vláken, ze které druh vlákno je vytvořen v závislosti.|
-   |**Zdarma**|Určuje, že objekt používá volných vláken. Volných vláken je ekvivalentní s více vlákny typu apartment modelu. Zobrazit [s více vlákny objekty apartment](/windows/desktop/com/multithreaded-apartments) Další informace.|
+   |**Free**|Určuje, že objekt používá volných vláken. Volných vláken je ekvivalentní s více vlákny typu apartment modelu. Zobrazit [s více vlákny objekty apartment](/windows/desktop/com/multithreaded-apartments) Další informace.|
    |**Neutrální**|Určuje, že objekt pokyny pro vícevláknové izolované prostory se však můžete spustit na jakékoliv vlákno.|
 
 - **Agregace**
@@ -63,9 +63,8 @@ Další informace o projekty knihovny ATL a třídy knihovny ATL modelu COM, nal
    |**Volné zařazování vláken**|Vytvoří objekt volným zařazováním vláken a zařazování ukazatele rozhraní efektivně mezi vlákny v rámci stejného procesu. K dispozici se zadáním objektu **obě** jako model vláken.|
    |**IObjectWithSite** (podpora objektu aplikace Internet Explorer)|Implementuje [IObjectWithSiteImpl](../../atl/reference/iobjectwithsiteimpl-class.md), která poskytuje jednoduchý způsob, aby mohly podporovat komunikaci mezi objekt a jeho web v kontejneru.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Průvodce jednoduchým objektem ATL](../../atl/reference/atl-simple-object-wizard.md)<br/>
 [Jednoduchý objekt knihovny ATL](../../atl/reference/adding-an-atl-simple-object.md)<br/>
 [Proces serveru potíže s vlákny](/windows/desktop/com/in-process-server-threading-issues)
-

@@ -1,5 +1,5 @@
 ---
-title: Casyncmonikerfile – třída
+title: CAsyncMonikerFile Class
 ms.date: 11/04/2016
 f1_keywords:
 - CAsyncMonikerFile
@@ -32,14 +32,14 @@ helpviewer_keywords:
 - CAsyncMonikerFile [MFC], OnStartBinding
 - CAsyncMonikerFile [MFC], OnStopBinding
 ms.assetid: 17378b66-a49a-4b67-88e3-7756ad26a2fc
-ms.openlocfilehash: 107f791505bc41b8dbf9c0374c5e3821abbc0fe3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48d7c3b5dd1b43c7a1639c6d5c56979b422d7017
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669063"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262620"
 ---
-# <a name="casyncmonikerfile-class"></a>Casyncmonikerfile – třída
+# <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile Class
 
 Poskytuje funkce pro používání asynchronních zástupných názvů v ovládacích prvcích ActiveX (dříve ovládací prvky OLE).
 
@@ -87,19 +87,19 @@ Asynchronní monikery se používají především v internetových aplikací a 
 
 Další informace o tom, jak použít asynchronní monikery a ovládací prvky ActiveX v internetových aplikací najdete v následujících článcích:
 
-- [Internetu první kroky: Asynchronní Monikery](../../mfc/asynchronous-monikers-on-the-internet.md)
+- [První kroky Internetu: Asynchronní Monikery](../../mfc/asynchronous-monikers-on-the-internet.md)
 
-- [Internet první kroky: Ovládací prvky ActiveX](../../mfc/activex-controls-on-the-internet.md)
+- [První kroky Internetu: Ovládací prvky ActiveX](../../mfc/activex-controls-on-the-internet.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cfile –](../../mfc/reference/cfile-class.md)
+[CFile](../../mfc/reference/cfile-class.md)
 
-[Colestreamfile –](../../mfc/reference/colestreamfile-class.md)
+[COleStreamFile](../../mfc/reference/colestreamfile-class.md)
 
-[Cmonikerfile –](../../mfc/reference/cmonikerfile-class.md)
+[CMonikerFile](../../mfc/reference/cmonikerfile-class.md)
 
 `CAsyncMonikerFile`
 
@@ -218,7 +218,7 @@ virtual LONG GetPriority() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Priorita, ve kterém se asynchronní přenos proběhnout. Příznaky priority standardní vlákno: THREAD_PRIORITY_ABOVE_NORMAL THREAD_PRIORITY_BELOW_NORMAL, THREAD_PRIORITY_HIGHEST, THREAD_PRIORITY_IDLE, THREAD_PRIORITY_LOWEST, THREAD_PRIORITY_NORMAL a THREAD_PRIORITY_TIME_CRITICAL. Podívat se na funkci Windows [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) popis z těchto hodnot.
+Priorita, ve kterém se asynchronní přenos proběhnout. Jedním z příznaků priority standardní vlákna: THREAD_PRIORITY_ABOVE_NORMAL THREAD_PRIORITY_BELOW_NORMAL, THREAD_PRIORITY_HIGHEST, THREAD_PRIORITY_IDLE, THREAD_PRIORITY_LOWEST, THREAD_PRIORITY_NORMAL a THREAD_PRIORITY_TIME_CRITICAL. Podívat se na funkci Windows [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) popis z těchto hodnot.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -422,7 +422,7 @@ Můžete použít adresu URL nebo název souboru pro *lpszURL* parametru. Přík
 
 [!code-cpp[NVC_MFCWinInet#7](../../mfc/codesnippet/cpp/casyncmonikerfile-class_3.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CMonikerFile – třída](../../mfc/reference/cmonikerfile-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

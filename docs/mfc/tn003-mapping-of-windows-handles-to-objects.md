@@ -1,5 +1,5 @@
 ---
-title: TN003Mapování obslužných rutin Windows na objekty
+title: 'TN003: Mapování Windows zpracovává na objekty'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mapping
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows handles to objects [MFC]
 - mappings [MFC], Windows handles to objects
 ms.assetid: fbea9f38-992c-4091-8dbc-f29e288617d6
-ms.openlocfilehash: 46421016171f61a199e6a0a04f6b9b81e260496e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7844398ebaf5a8fdf8c56ab18b33d8c7717d1ad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677146"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326696"
 ---
-# <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003Mapování obslužných rutin Windows na objekty
+# <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: Mapování Windows zpracovává na objekty
 
 Tato poznámka popisuje MFC rutin, které podporují mapování Windows objekt popisovače objektů jazyka C++.
 
@@ -32,7 +32,7 @@ Windows objekty, které používají mapování zpracování jsou následující
 
 - HMENU ([cmenu –](../mfc/reference/cmenu-class.md))
 
-- HPEN ([cgdiobject –](../mfc/reference/cgdiobject-class.md))
+- HPEN ([CGdiObject](../mfc/reference/cgdiobject-class.md))
 
 - HBRUSH (`CGdiObject`)
 
@@ -83,8 +83,7 @@ Dočasné a trvalé objekty se udržuje na základě vlákna. To znamená jedno 
 
 Předat tyto objekty z jednoho vlákna do druhého, vždy je odeslat jako jejich nativním `HANDLE` typu. Předání objektu obálky C++ z jednoho vlákna do druhého se často vést k neočekávaným výsledkům.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
-

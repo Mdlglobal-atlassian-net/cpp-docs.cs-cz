@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-ms.openlocfilehash: 1ad14060c7607698cd647ae34fb35b6ea3ae547c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 335d29e1e2e8e5b54ec1434a4c072ff3909b3823
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559559"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269029"
 ---
 # <a name="canimationvariable-class"></a>Canimationvariable – třída
 
@@ -68,7 +68,7 @@ class CAnimationVariable;
 |Název|Popis|
 |----------|-----------------|
 |[CAnimationVariable::CAnimationVariable](#canimationvariable)|Vytvoří objekt proměnné animace.|
-|[Canimationvariable –:: ~ canimationvariable –](#canimationvariable__~canimationvariable)|Destruktor. Volá se, když se likviduje canimationvariable – objektu.|
+|[CAnimationVariable::~CAnimationVariable](#canimationvariable__~canimationvariable)|Destruktor. Volá se, když se likviduje canimationvariable – objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -339,7 +339,7 @@ HRESULT GetValue(INT32& nValue);
 *dblValue*<br/>
 Aktuální hodnota proměnné animace.
 
-*nHodnota*<br/>
+*nValue*<br/>
 Aktuální hodnota proměnné animace.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -444,6 +444,6 @@ Ukazatel na objekt animace, která obsahuje tuto proměnnou.
 
 Tato metoda je volána interně k navázání relace 1: 1 mezi proměnnou animace a animace objektu, který zapouzdřuje ho.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)

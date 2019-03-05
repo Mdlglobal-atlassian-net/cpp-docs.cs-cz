@@ -1,5 +1,5 @@
 ---
-title: Coledatasource – třída
+title: COleDataSource Class
 ms.date: 11/04/2016
 f1_keywords:
 - COleDataSource
@@ -36,14 +36,14 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-ms.openlocfilehash: 539f3f1611d4d9d83d37754b66986c6b4f59549c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc3d9f089dc6289331c79c6a1e18eccbc9ff4993
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614198"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296972"
 ---
-# <a name="coledatasource-class"></a>Coledatasource – třída
+# <a name="coledatasource-class"></a>COleDataSource Class
 
 Slouží jako mezipaměť, do které aplikace umístí data, která bude nabízet během data transfer operace, jako je například schránky nebo operace přetažení myší.
 
@@ -130,7 +130,7 @@ Zadat data s využitím [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstg
 
 Po volání `CacheData` `ptd` členem `lpFormatEtc` a obsah *lpStgMedium* jsou vlastněny datový objekt volajícím.
 
-Použití zpožděného vykreslování, zavolejte [DelayRenderData](#delayrenderdata) nebo [DelayRenderFileData](#delayrenderfiledata) členskou funkci. Další informace o vykreslování zpožděné jako zpracované knihovnou MFC naleznete v článku [datové objekty a zdroje dat: manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).
+Použití zpožděného vykreslování, zavolejte [DelayRenderData](#delayrenderdata) nebo [DelayRenderFileData](#delayrenderfiledata) členskou funkci. Další informace o vykreslování zpožděné jako zpracované knihovnou MFC naleznete v článku [datové objekty a zdroje dat: Manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Další informace najdete v tématu [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) a [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktury v sadě Windows SDK.
 
@@ -162,7 +162,7 @@ Odkazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktu
 
 Tato funkce poskytuje data s využitím okamžité vykreslování, takže při volání funkce; je nutné zadat data data se do mezipaměti, dokud není potřeba. Použití `CacheData` členskou funkci, pokud zadáváte velká množství dat nebo pokud požadujete střední strukturované úložiště.
 
-Použití zpožděného vykreslování, zavolejte [DelayRenderData](#delayrenderdata) nebo [DelayRenderFileData](#delayrenderfiledata) členskou funkci. Další informace o vykreslování zpožděné jako zpracované knihovnou MFC naleznete v článku [datové objekty a zdroje dat: manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).
+Použití zpožděného vykreslování, zavolejte [DelayRenderData](#delayrenderdata) nebo [DelayRenderFileData](#delayrenderfiledata) členskou funkci. Další informace o vykreslování zpožděné jako zpracované knihovnou MFC naleznete v článku [datové objekty a zdroje dat: Manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Další informace najdete v tématu [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura v sadě Windows SDK.
 
@@ -198,7 +198,7 @@ Odkazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktu
 
 Tato funkce poskytuje data pomocí zpožděného vykreslování, takže data není zadáno okamžitě. [OnRenderData](#onrenderdata) nebo [OnRenderGlobalData](#onrenderglobaldata) členská funkce je volána k požadavku data.
 
-Tuto funkci použít, pokud se chystáte zadat data prostřednictvím `CFile` objektu. Pokud se chystáte zadat data prostřednictvím `CFile` objektů, zavolejte [DelayRenderFileData](#delayrenderfiledata) členskou funkci. Další informace o vykreslování zpožděné jako zpracované knihovnou MFC naleznete v článku [datové objekty a zdroje dat: manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).
+Tuto funkci použít, pokud se chystáte zadat data prostřednictvím `CFile` objektu. Pokud se chystáte zadat data prostřednictvím `CFile` objektů, zavolejte [DelayRenderFileData](#delayrenderfiledata) členskou funkci. Další informace o vykreslování zpožděné jako zpracované knihovnou MFC naleznete v článku [datové objekty a zdroje dat: Manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Chcete-li použít okamžité vykreslování, zavolejte [CacheData](#cachedata) nebo [CacheGlobalData](#cacheglobaldata) členskou funkci.
 
@@ -228,7 +228,7 @@ Odkazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktu
 
 Tato funkce poskytuje data pomocí zpožděného vykreslování, takže data není zadáno okamžitě. [OnRenderFileData](#onrenderfiledata) členská funkce je volána k požadavku data.
 
-Tuto funkci použít, pokud se chystáte použít `CFile` objekt slouží k poskytování data. Pokud se chystáte použít `CFile` objektů, zavolejte [DelayRenderData](#delayrenderdata) členskou funkci. Další informace o vykreslování zpožděné jako zpracované knihovnou MFC naleznete v článku [datové objekty a zdroje dat: manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).
+Tuto funkci použít, pokud se chystáte použít `CFile` objekt slouží k poskytování data. Pokud se chystáte použít `CFile` objektů, zavolejte [DelayRenderData](#delayrenderdata) členskou funkci. Další informace o vykreslování zpožděné jako zpracované knihovnou MFC naleznete v článku [datové objekty a zdroje dat: Manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Chcete-li použít okamžité vykreslování, zavolejte [CacheData](#cachedata) nebo [CacheGlobalData](#cacheglobaldata) členskou funkci.
 
@@ -310,7 +310,7 @@ Doba zpoždění je určené nastavení klíče registru. Doba zpoždění lze z
 
 Pro další informace o tom, přetáhněte zpoždění informace jsou uloženy v registru buď nebo. Soubor INI, naleznete v tématu [WriteProfileString](/windows/desktop/api/winbase/nf-winbase-writeprofilestringa) v sadě Windows SDK.
 
-Další informace najdete v článku [přetažení: implementace zdroje vyřadit](../../mfc/drag-and-drop-implementing-a-drop-source.md).
+Další informace najdete v článku [přetažení: Implementace zdroje přemístění](../../mfc/drag-and-drop-implementing-a-drop-source.md).
 
 ##  <a name="empty"></a>  COleDataSource::Empty
 
@@ -374,7 +374,7 @@ Nenulové, pokud je úspěšná. jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Zadaný formát je jedna dříve umístili ve `COleDataSource` pomocí [DelayRenderData](#delayrenderdata) nebo [DelayRenderFileData](#delayrenderfiledata) členskou funkci pro zpožděné vykreslování. Výchozí implementace této funkce bude volat [OnRenderFileData](#onrenderfiledata) nebo [OnRenderGlobalData](#onrenderglobaldata) Pokud je zadaný paměťovému médiu souboru nebo paměti, v uvedeném pořadí. Pokud ani jedno z těchto formátů údaje nezadáte, bude výchozí implementace vrátí 0 a Neprovádět žádnou akci. Další informace o vykreslování zpožděné jako zpracované knihovnou MFC naleznete v článku [datové objekty a zdroje dat: manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).
+Zadaný formát je jedna dříve umístili ve `COleDataSource` pomocí [DelayRenderData](#delayrenderdata) nebo [DelayRenderFileData](#delayrenderfiledata) členskou funkci pro zpožděné vykreslování. Výchozí implementace této funkce bude volat [OnRenderFileData](#onrenderfiledata) nebo [OnRenderGlobalData](#onrenderglobaldata) Pokud je zadaný paměťovému médiu souboru nebo paměti, v uvedeném pořadí. Pokud ani jedno z těchto formátů údaje nezadáte, bude výchozí implementace vrátí 0 a Neprovádět žádnou akci. Další informace o vykreslování zpožděné jako zpracované knihovnou MFC naleznete v článku [datové objekty a zdroje dat: Manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Pokud *lpStgMedium*-> *objekt tymed* je TYMED_NULL, `STGMEDIUM` by měl být přiděleno a vyplní podle specifikace *lpFormatEtc -> objekt tymed*. Pokud není TYMED_NULL, `STGMEDIUM` by mělo být vyplněno místo s daty.
 
@@ -408,7 +408,7 @@ Nenulové, pokud je úspěšná. jinak 0.
 
 Zadaný formát je jedna dříve umístili ve `COleDataSource` pomocí [DelayRenderData](#delayrenderdata) členskou funkci pro zpožděné vykreslování. Výchozí implementace této funkce jednoduše vrací hodnotu FALSE.
 
-To je moderní overridable. Tato funkce slouží k poskytování dat v požadovaný formát a střední přepište. V závislosti na vašich dat můžete chtít přepsat místo toho některou z dalších verzí této funkce. Pokud chcete zpracovávat více úložná média, má přednost před [OnRenderData](#onrenderdata). Pokud vaše data se v souboru nebo se s proměnnou velikostí, má přednost před `OnRenderFileData`. Další informace o vykreslování zpožděné jako zpracované knihovnou MFC naleznete v článku [datové objekty a zdroje dat: manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).
+To je moderní overridable. Tato funkce slouží k poskytování dat v požadovaný formát a střední přepište. V závislosti na vašich dat můžete chtít přepsat místo toho některou z dalších verzí této funkce. Pokud chcete zpracovávat více úložná média, má přednost před [OnRenderData](#onrenderdata). Pokud vaše data se v souboru nebo se s proměnnou velikostí, má přednost před `OnRenderFileData`. Další informace o vykreslování zpožděné jako zpracované knihovnou MFC naleznete v článku [datové objekty a zdroje dat: Manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Další informace najdete v tématu [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) strukturu a [IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) v sadě Windows SDK.
 
@@ -440,7 +440,7 @@ Zadaný formát je jedna dříve umístili ve `COleDataSource` pomocí [DelayRen
 
 Pokud *phGlobal* má hodnotu NULL, pak nové HGLOBAL by měl být přiděleno a vrácené v *phGlobal*. V opačném případě HGLOBAL určené *phGlobal* by měl být vyplněny data. Množství dat, které jsou umístěny v HGLOBAL nesmí být delší než aktuální velikost bloku paměti. Navíc bloku nejde znovu přidělit, větší velikosti.
 
-To je moderní overridable. Tato funkce slouží k poskytování dat v požadovaný formát a střední přepište. V závislosti na vašich dat můžete chtít přepsat místo toho některou z dalších verzí této funkce. Pokud chcete zpracovávat více úložná média, má přednost před [OnRenderData](#onrenderdata). Pokud vaše data se v souboru nebo se s proměnnou velikostí, má přednost před [OnRenderFileData](#onrenderfiledata). Další informace o vykreslování zpožděné jako zpracované knihovnou MFC naleznete v článku [datové objekty a zdroje dat: manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).
+To je moderní overridable. Tato funkce slouží k poskytování dat v požadovaný formát a střední přepište. V závislosti na vašich dat můžete chtít přepsat místo toho některou z dalších verzí této funkce. Pokud chcete zpracovávat více úložná média, má přednost před [OnRenderData](#onrenderdata). Pokud vaše data se v souboru nebo se s proměnnou velikostí, má přednost před [OnRenderFileData](#onrenderfiledata). Další informace o vykreslování zpožděné jako zpracované knihovnou MFC naleznete v článku [datové objekty a zdroje dat: Manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Další informace najdete v tématu [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) strukturu a [IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) v sadě Windows SDK.
 
@@ -480,13 +480,13 @@ Další informace najdete v tématu [STGMEDIUM](/windows/desktop/api/objidl/ns-o
 
 ##  <a name="setclipboard"></a>  COleDataSource::SetClipboard
 
-Vloží data obsažená v `COleDataSource` objektu do schránky po volání jedné z následujících funkcí: [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata), nebo [DelayRenderFileData](#delayrenderfiledata).
+Vloží data obsažená v `COleDataSource` objektu do schránky po volání jedné z následujících funkcí: [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata), or [DelayRenderFileData](#delayrenderfiledata).
 
 ```
 void SetClipboard();
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC HIERSVR](../../visual-cpp-samples.md)<br/>
 [Ukázky knihovny MFC OCLIENT](../../visual-cpp-samples.md)<br/>

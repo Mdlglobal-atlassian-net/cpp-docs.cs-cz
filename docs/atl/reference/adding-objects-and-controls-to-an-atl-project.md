@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: 0577788e4ab28139943da4b3bd14914799341213
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b442db405ed04c4ebf697089adf3529cd590753a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506129"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57325994"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Přidání objektů a ovládacích prvků do projektu ATL
 
@@ -24,7 +24,7 @@ Některého z průvodců kódu knihovny ATL slouží k přidání objektu nebo o
 
 ||||
 |-|-|-|
-|[Jednoduchý objekt knihovny ATL](../../atl/reference/atl-simple-object-wizard.md)|[ATL Dialog](../../atl/reference/atl-dialog-wizard.md)|[Ovládací prvek ATL](../../atl/reference/atl-control-wizard.md)|
+|[Jednoduchý objekt knihovny ATL](../../atl/reference/atl-simple-object-wizard.md)|[ATL Dialog](../../atl/reference/atl-dialog-wizard.md)|[ATL Control](../../atl/reference/atl-control-wizard.md)|
 |[Stránka vlastností knihovny ATL](../../atl/reference/atl-property-page-wizard.md)|[Komponenta knihovny ATL Active Server Page](../../atl/reference/atl-active-server-page-component-wizard.md)|[Příjemce knihovny ATL technologie OLE DB](../../atl/reference/atl-ole-db-consumer-wizard.md)|
 |[Přidat podporu ATL do MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|[Průvodce komponentami ATL COM+ 1.0](../../atl/reference/atl-com-plus-1-0-component-wizard.md)|[Zprostředkovatel knihovny ATL technologie OLE DB](../../atl/reference/atl-ole-db-provider-wizard.md)|
 
@@ -44,7 +44,7 @@ Některého z průvodců kódu knihovny ATL slouží k přidání objektu nebo o
 
    Můžete také při pokusu o přidání objektu ATL bez dříve přidání podpory knihovny ATL do projektu knihovny MFC, Visual Studio vás vyzve k určení, zda chcete podpory knihovny ATL přidané do projektu. Klikněte na tlačítko **Ano** přidat podporu ATL do projektu a otevřete Průvodce vybrané knihovny ATL.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Průvodce projektem ATL](../../atl/reference/atl-project-wizard.md)<br/>
 [Typy projektů Visual C++](../../ide/visual-cpp-project-types.md)<br/>

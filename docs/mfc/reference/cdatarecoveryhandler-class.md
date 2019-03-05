@@ -1,5 +1,5 @@
 ---
-title: Cdatarecoveryhandler – třída
+title: CDataRecoveryHandler Class
 ms.date: 11/04/2016
 f1_keywords:
 - CDataRecoveryHandler
@@ -62,14 +62,14 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], SetShutdownByRestartManager
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
-ms.openlocfilehash: 10107d7b815f8a3c479a28de8ff07439b5da2fda
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88cc4a433c774dc7767efaaa62edc71ce8b904d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456040"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273033"
 ---
-# <a name="cdatarecoveryhandler-class"></a>Cdatarecoveryhandler – třída
+# <a name="cdatarecoveryhandler-class"></a>CDataRecoveryHandler Class
 
 `CDataRecoveryHandler` Automaticky ukládá dokumenty a obnoví je, pokud se aplikace neočekávaně ukončí.
 
@@ -146,7 +146,7 @@ Všechny metody `CDataRecoveryHandler` třídy jsou virtuální. Přepište meto
 
 Než budete moct použít `CDataRecoveryHandler` objektu, je nutné volat [CDataRecoveryHandler::Initialize](#initialize).
 
-Protože `CDataRecoveryHandler` třídy úzce připojen správce restartování `CDataRecoveryHandler` závisí na parametru globální `m_dwRestartManagerSupportFlags`. Tento parametr určuje, jaká oprávnění, která má správce restartování a interakci s vaší aplikací. Správce restartování začlenit do existující aplikace, je potřeba přiřadit `m_dwRestartManagerSupportFlags` odpovídající hodnotu v konstruktoru hlavní aplikace. Další informace o tom, jak použít správce restartování najdete v tématu [postupy: Přidání podpory správce restartování](../../mfc/how-to-add-restart-manager-support.md).
+Protože `CDataRecoveryHandler` třídy úzce připojen správce restartování `CDataRecoveryHandler` závisí na parametru globální `m_dwRestartManagerSupportFlags`. Tento parametr určuje, jaká oprávnění, která má správce restartování a interakci s vaší aplikací. Správce restartování začlenit do existující aplikace, je potřeba přiřadit `m_dwRestartManagerSupportFlags` odpovídající hodnotu v konstruktoru hlavní aplikace. Další informace o tom, jak použít správce restartování najdete v tématu [jak: Přidání podpory správce restartování](../../mfc/how-to-add-restart-manager-support.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -684,10 +684,9 @@ Když uživatel uloží dokument, aplikace odebere soubor automaticky uložené,
 
 Pokud chcete použít tuto metodu, musí být nastavena v AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES *m_dwRestartManagerSupportFlags*.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Postupy: Přidání podpory správce restartování](../../mfc/how-to-add-restart-manager-support.md)
-

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding components
 - ATL COM+ 1.0 Component Wizard
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-ms.openlocfilehash: 227dda9518b67b410f52db8c6efb33bbc2c8f1b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df13c94eb0cc2aa7e2dea49aba6901f01fce0a15
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513773"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326423"
 ---
 # <a name="atl-com-10-component-wizard"></a>Průvodce komponentami 1.0 knihovny ATL modelu COM +
 
@@ -35,7 +35,7 @@ Zadejte názvy objektů, rozhraní a třídy, které se přidají do vašeho pro
 
    Nastaví zkrácený název pro objekt. Název, který zadáte, určuje `Class` a `Coclass` názvy, **soubor .cpp** a **souboru .h** názvy, **rozhraní** název, **Typ** názvy a **ProgID**, pokud nezměníte těchto polí samostatně.
 
-- **soubor .h**
+- **.h file**
 
    Nastaví název hlavičkového souboru pro nový objekt třídy. Ve výchozím nastavení, tento název je založen na název, který jste zadali v **krátký název**. Klikněte na tlačítko se třemi tečkami uložení názvu souboru do umístění podle vaší volby, nebo připojit k existujícímu souboru deklaraci třídy. Pokud zvolíte existující soubor, Průvodce neuloží se do vybraného umístění dokud kliknutím **Dokončit** v průvodci.
 
@@ -84,7 +84,6 @@ Poskytuje informace o funkcích, které modelu COM pro objekt.
 
    Nastaví název, který kontejnery lze použít místo identifikátor CLSID objektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Komponenta knihovny ATL modelu COM + 1.0](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)
-

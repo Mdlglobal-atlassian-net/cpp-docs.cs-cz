@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CTraits classes
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-ms.openlocfilehash: f24e5f7dd2ffa4eb5992362aee18a78fb0000aa9
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 11da1dd7d72951d421d2600e3825e7cafe189240
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176702"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272097"
 ---
 # <a name="atl-collection-classes"></a>ATL – třídy kolekce
 
@@ -38,7 +38,7 @@ Knihovna ATL poskytuje následující pole třídy pro práci s čísly objektů
 
 |Třída|Typ úložiště dat|
 |-----------|--------------------------|
-|[Csimplearray –](../atl/reference/csimplearray-class.md)|Implementuje třídu pole pro práci s čísly objektů.|
+|[CSimpleArray](../atl/reference/csimplearray-class.md)|Implementuje třídu pole pro práci s čísly objektů.|
 |[CSimpleMap](../atl/reference/csimplemap-class.md)|Implementuje třídu mapování pro práci s čísly objektů.|
 
 ## <a name="general-purpose-collection-classes"></a>Obecné kolekce tříd
@@ -48,9 +48,9 @@ Postupujte podle třídy implementace pole, seznamy a mapy a jsou k dispozici ja
 |Třída|Typ úložiště dat|
 |-----------|--------------------------|
 |[CAtlArray](../atl/reference/catlarray-class.md)|Implementuje pole.|
-|[Catllist –](../atl/reference/catllist-class.md)|Implementuje seznam.|
+|[CAtlList](../atl/reference/catllist-class.md)|Implementuje seznam.|
 |[CAtlMap](../atl/reference/catlmap-class.md)|Implementuje strukturu mapování, které data lze odkazovat pomocí klíče nebo hodnoty.|
-|[Crbmap –](../atl/reference/crbmap-class.md)|Implementuje strukturu mapování pomocí algoritmu Red Black.|
+|[CRBMap](../atl/reference/crbmap-class.md)|Implementuje strukturu mapování pomocí algoritmu Red Black.|
 |[CRBMultiMap](../atl/reference/crbmultimap-class.md)|Implementuje strukturu multimapping Red Black.|
 
 Tyto třídy bude zachytávat mnoho programovacích chyb při použití v sestavení ladění, ale pro ukazujeme výkonu, nebudou provedeny tyto kontroly v prodejní buildy.
@@ -61,11 +61,11 @@ Více specializované třídy kolekcí jsou k dispozici také pro správu pamět
 
 |Třída|Účel|
 |-----------|-------------|
-|[Cautoptrarray –](../atl/reference/cautoptrarray-class.md)|Poskytuje metody, které jsou užitečné při vytváření pole inteligentních ukazatelů.|
+|[CAutoPtrArray](../atl/reference/cautoptrarray-class.md)|Poskytuje metody, které jsou užitečné při vytváření pole inteligentních ukazatelů.|
 |[CAutoPtrList](../atl/reference/cautoptrlist-class.md)|Poskytuje metody, které jsou užitečné při vytváření seznamu inteligentní ukazatele.|
 |[CComUnkArray](../atl/reference/ccomunkarray-class.md)|Úložiště `IUnknown` ukazatele a je určený jako parametr, který se použije [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) šablony třídy.|
-|[Cheapptrlist –](../atl/reference/cheapptrlist-class.md)|Poskytuje metody, které jsou užitečné při vytváření seznamu haldy ukazatele.|
-|[Cinterfacearray –](../atl/reference/cinterfacearray-class.md)|Poskytuje metody, které jsou užitečné při vytváření pole z ukazatele rozhraní modelu COM.|
+|[CHeapPtrList](../atl/reference/cheapptrlist-class.md)|Poskytuje metody, které jsou užitečné při vytváření seznamu haldy ukazatele.|
+|[CInterfaceArray](../atl/reference/cinterfacearray-class.md)|Poskytuje metody, které jsou užitečné při vytváření pole z ukazatele rozhraní modelu COM.|
 |[Cinterfacelist –](../atl/reference/cinterfacelist-class.md)|Poskytuje metody, které jsou užitečné při vytváření seznamu ukazatele rozhraní modelu COM.|
 
 ## <a name="choosing-a-collection-class"></a>Výběr třídy kolekce
@@ -82,7 +82,7 @@ Každá z třídy kolekcí k dispozici nabízí jiné výkonové charakteristiky
 
 ### <a name="collection-shape-features"></a>Funkce tvar kolekce
 
-|Obrazec|Řazení|Indexované|Vložení<br /><br /> – element|Hledání<br /><br /> zadaný element|Duplicitní<br /><br /> elementy|
+|Obrazec|Řazení|Indexované|Vložení<br /><br />  – element|Hledání<br /><br /> zadaný element|Duplicitní<br /><br /> elementy|
 |-----------|--------------|--------------|---------------------------|--------------------------------------|-----------------------------|
 |Seznam|Ano|Ne|Fast (konstantní čas)|Pomalé O(n)|Ano|
 |Pole|Ano|Podle int (konstantní čas)|Pomalé O(n), s výjimkou Pokud vložení na konci, v jaké velikosti písmen konstantním času|Pomalé O(n)|Ano|
@@ -116,7 +116,7 @@ Následující diagram znázorňuje hierarchii tříd pro ctraits – třídy.
 
 Následující ukázky ukazují třídy kolekcí:
 
-- [Ukázka MMXSwarm](../visual-cpp-samples.md)
+- [MMXSwarm Sample](../visual-cpp-samples.md)
 
 - [Příklad DynamicConsumer](../visual-cpp-samples.md)
 
@@ -124,7 +124,7 @@ Následující ukázky ukazují třídy kolekcí:
 
 - [Výběr ukázky](../visual-cpp-samples.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Koncepty](../atl/active-template-library-atl-concepts.md)<br/>
 [Třídy kolekce](../atl/collection-classes.md)

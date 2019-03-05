@@ -5,18 +5,18 @@ f1_keywords:
 - amp/Concurrency::access_type
 - amp/Concurrency::queuing_mode
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
-ms.openlocfilehash: d78299a9ce47760e6b1340c69d8be699a5eed8a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: adfc1743d887f2a670111eff31cf4653d2df1bee
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50433566"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326072"
 ---
 # <a name="concurrency-namespace-enums-amp"></a>Výčty oboru názvů Concurrency (AMP)
 
 |||
 |-|-|
-|[access_type – výčet](#access_type)|[queuing_mode – výčet](#queuing_mode)|
+|[access_type Enumeration](#access_type)|[queuing_mode Enumeration](#queuing_mode)|
 
 ##  <a name="access_type"></a>  access_type – výčet
 
@@ -51,6 +51,6 @@ enum queuing_mode;
 |`queuing_mode_immediate`|Režim zařazování do fronty, která určuje, že všechny příkazy, například [parallel_for_each – funkce (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each), odesílají do odpovídajících zařízení akcelerátoru ihned po jejich vrácení volajícímu.|
 |`queuing_mode_automatic`|Režim zařazování do fronty, která určuje, že se příkazy zařazeny příkazové fronty odpovídající [accelerator_view](accelerator-view-class.md) objektu. Příkazy jsou odesílány na zařízení při [accelerator_view::flush](accelerator-view-class.md#flush) je volána.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -3,12 +3,12 @@ title: Vytvoření projektu (ATL – tutoriál, část 1)
 ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: dab9bdab75bb710bf73314aae7283611d9a3b5cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a608fb3a096dee2420ef652ba213c534d8fb426
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539578"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273922"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Vytvoření projektu (ATL – tutoriál, část 1)
 
@@ -72,12 +72,12 @@ Tento kurz vás provede bez atributové projekt knihovny ATL, který vytvoří o
 
 1. Klikněte na **Linkeru**. Změnit **za UserRedirection** umožňuje **Ano**.
 
-1. Klikněte na tlačítko **OK**.
+1. Klikněte na **OK**.
 
 V dalším kroku přidáte ovládací prvek do projektu.
 
 [Ke kroku 2](../atl/adding-a-control-atl-tutorial-part-2.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Kurz](../atl/active-template-library-atl-tutorial.md)

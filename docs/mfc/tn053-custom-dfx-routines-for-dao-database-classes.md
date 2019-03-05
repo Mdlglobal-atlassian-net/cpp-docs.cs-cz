@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DFX (DAO record field exchange) [MFC]
 - custom DFX routines [MFC]
 ms.assetid: fdcf3c51-4fa8-4517-9222-58aaa4f25cac
-ms.openlocfilehash: 81529dd1e34d06dd3e5d541d39dbe91bb5eda1b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b610604c1b7a68128dc9eb6fb5515225ed22b16e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517764"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282406"
 ---
 # <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053: Vlastní rutiny DFX pro databázové třídy DAO
 
@@ -29,7 +29,7 @@ Tato technická Poznámka popisuje mechanismem výměny (DFX) DAO pole záznamu.
 
 Tato technická poznámka obsahuje:
 
-- DFX – přehled
+- DFX Overview
 
 - [Příklady](#_mfcnotes_tn053_examples) pomocí záznamu – Record Field Exchange a dynamické vazby
 
@@ -39,7 +39,7 @@ Tato technická poznámka obsahuje:
 
 - [Podrobnosti o dfx_text –](#_mfcnotes_tn053_details_of_dfx_text)
 
-**DFX – přehled**
+**DFX Overview**
 
 DAO mechanismem výměny pole záznamu (DFX) slouží ke zjednodušení procesu načítání a aktualizace dat při použití `CDaoRecordset` třídy. Proces je zjednodušeno pomocí datové členy `CDaoRecordset` třídy. Odvozením z `CDaoRecordset`, můžete přidat datové členy odvozené třídy, představující každé pole v tabulce nebo dotazu. Tento mechanismus "statická vazba" je jednoduchý, ale nemusí být metodu načtení nebo aktualizace dat podle výběru pro všechny aplikace. DFX načte všechny vázané pole pokaždé, když se změní aktuální záznam. Pokud vyvíjíte aplikace náročné na výkon, který nevyžaduje načítání každé pole při změně měny "dynamická vazba" prostřednictvím `CDaoRecordset::GetFieldValue` a `CDaoRecordset::SetFieldValue` mohou být data metody přístupu podle výběru.
 
@@ -216,8 +216,7 @@ Všechny zbývající operace řešit pouze pomocí datové mezipaměti. Mezipam
 > [!TIP]
 > Vlastní rutiny DFX model na existující rutiny DFX pro standardní datových typů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
-

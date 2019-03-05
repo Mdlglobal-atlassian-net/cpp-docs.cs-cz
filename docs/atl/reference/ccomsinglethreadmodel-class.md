@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CComSingleThreadModel class
 - single-threaded applications, ATL
 ms.assetid: e5dc30c7-405a-4ba4-8ae9-51937243fce8
-ms.openlocfilehash: 2b0e19c94c16de936758ed4e547d731aed40cb26
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57219ca79dfa46437a8b13d889bb5f0c5a5d6f37
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565357"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262048"
 ---
 # <a name="ccomsinglethreadmodel-class"></a>CComSingleThreadModel – třída
 
@@ -54,12 +54,12 @@ class CComSingleThreadModel
 
 Obvykle použijete `CComSingleThreadModel` prostřednictvím jednoho ze dvou **typedef** názvy buď [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) nebo [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel). Třída odkazovaná každou **typedef** závisí na model vláken použít, jak je znázorněno v následující tabulce:
 
-|– definice typedef|Jeden model vláken|Podprocesový model Apartment|Model vláken zdarma|
+| – definice typedef|Jeden model vláken|Podprocesový model Apartment|Model vláken zdarma|
 |-------------|----------------------------|-------------------------------|--------------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel`; M = `CComMultiThreadModel`
+S= `CComSingleThreadModel`; M= `CComMultiThreadModel`
 
 `CComSingleThreadModel` samotný definuje tři **typedef** názvy. `ThreadModelNoCS` odkazy na `CComSingleThreadModel`. `AutoCriticalSection` a `CriticalSection` referenční třídu [ccomfakecriticalsection –](../../atl/reference/ccomfakecriticalsection-class.md), která poskytuje prázdný metody, které jsou přidružené k získání a uvolnění vlastnictví kritický oddíl.
 
@@ -175,6 +175,6 @@ typedef CComSingleThreadModel ThreadModelNoCS;
 
 Zobrazit [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled tříd](../../atl/atl-class-overview.md)
