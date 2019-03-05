@@ -1,5 +1,5 @@
 ---
-title: 'ActiveX – kontejnery ovládacích prvků: Zobrazení a úpravy vlastností ovládacích prvků'
+title: 'Kontejnery ovládacích prvků ActiveX: Zobrazení a úpravy vlastností ovládacích prvků'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - properties [MFC], viewing and modifying
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - ActiveX controls [MFC], properties
 - controls [MFC], properties
 ms.assetid: 14ce5152-742b-4e0d-a9ab-c7b456e32918
-ms.openlocfilehash: abddda015a80b21d941409044524e2f526b26f08
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0a03acfd880bcf63017eec9796315b98e5d5f4d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454938"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326358"
 ---
-# <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>ActiveX – kontejnery ovládacích prvků: Zobrazení a úpravy vlastností ovládacích prvků
+# <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>Kontejnery ovládacích prvků ActiveX: Zobrazení a úpravy vlastností ovládacích prvků
 
 Když je do projektu vložit ovládací prvek ActiveX, je užitečný k zobrazení a změna vlastností podporuje ovládací prvek ActiveX. Tento článek popisuje, jak k tomu použít editor prostředků Visual C++.
 
 Pokud vaše kontejnerové aplikace ovládacího prvku ActiveX používá vložené ovládací prvky, můžete zobrazit a upravit vlastnosti ovládacího prvku v editoru prostředků. Editor prostředků můžete také použít k nastavení hodnot vlastností v době návrhu. Editor prostředků pak automaticky ukládá tyto hodnoty v souboru prostředků projektu. Všechny instance ovládací prvek pak bude mít inicializován na tyto hodnoty vlastností.
 
-Tento postup předpokládá, že jste tam vložili ovládací prvek do projektu. Informace najdete v tématu [ActiveX – kontejnery ovládacích prvků: vložení ovládacího prvku do ovládací prvek aplikace typu kontejner pro](../mfc/inserting-a-control-into-a-control-container-application.md).
+Tento postup předpokládá, že jste tam vložili ovládací prvek do projektu. Informace najdete v tématu [ActiveX – kontejnery ovládacích prvků: Vložení ovládacího prvku do kontejnerové aplikace ovládacího prvku](../mfc/inserting-a-control-into-a-control-container-application.md).
 
 Prvním krokem při zobrazení vlastností ovládacího prvku je do projektu šablony dialogového okna přidat instanci ovládacího prvku.
 
@@ -39,7 +39,6 @@ Prvním krokem při zobrazení vlastností ovládacího prvku je do projektu ša
 
 Použití **vlastnosti** dialogové okno Upravit a hned ho otestujte nové vlastnosti.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [ActiveX – kontejnery ovládacích prvků](../mfc/activex-control-containers.md)
-
