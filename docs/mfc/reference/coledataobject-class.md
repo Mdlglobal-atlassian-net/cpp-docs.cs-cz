@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: 40c7d87e2dafa3c9b40e8ebda60b15a7b32709eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 95a19b20e0acc4ae45a953eee5a1c4d2bfb3e9da
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540280"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326722"
 ---
 # <a name="coledataobject-class"></a>Coledataobject – třída
 
@@ -336,7 +336,7 @@ void Release();
 
 `IDataObject` Byl přidružen `COleDataObject` voláním `Attach` nebo `AttachClipboard` explicitně nebo rozhraní. Pokud *bAutoRelease* parametr `Attach` má hodnotu FALSE, `IDataObject` objekt nebude uvolněn. V tomto případě je zodpovědná za uvolnění volající `IDataObject` voláním [IUnknown::Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC HIERSVR](../../visual-cpp-samples.md)<br/>
 [Ukázky knihovny MFC OCLIENT](../../visual-cpp-samples.md)<br/>
