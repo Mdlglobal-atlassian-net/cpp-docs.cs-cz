@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, notification hooks
 ms.assetid: e9c291ed-2f2d-4319-a171-09800625256f
-ms.openlocfilehash: 9205791995bc113e4f560ab6085fc3acf47c8182
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e4dc6331e2a957c0268e686fff7dbb3f7eb0b24
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549823"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426547"
 ---
 # <a name="notification-hooks"></a>Háky oznámení
 
@@ -27,7 +27,7 @@ Je povolené hook oznámení:
 
 - Zadáním novou definici ukazatele **__pfnDliNotifyHook2** , který je inicializován tak, aby odkazoval na vlastní funkce, která bude přijímat oznámení.
 
-   \-nebo –
+   \-or-
 
 - Tím, že nastavíte ukazatel **__pfnDliNotifyHook2** do funkce háku před všechna volání do knihovny DLL, která je program zpozdit načtení.
 
@@ -79,6 +79,6 @@ PfnDliHook   __pfnDliFailureHook2;
 
 Oznámení předat **DelayLoadInfo** Struktura funkce háku spolu s hodnotou oznámení. Tato data jsou stejné jako, který používá pomocná rutina zatížení zpoždění. Hodnota oznámení bude jedna z hodnot fronty definovaných v [struktura a definice konstant](../../build/reference/structure-and-constant-definitions.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zpracování chyb a oznámení](../../build/reference/error-handling-and-notification.md)

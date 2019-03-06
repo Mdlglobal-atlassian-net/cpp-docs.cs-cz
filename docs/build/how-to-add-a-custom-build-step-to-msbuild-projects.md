@@ -1,19 +1,19 @@
 ---
-title: 'Postupy: Přidání vlastního kroku sestavení do projektů MSBuild'
+title: 'Postupy: Přidat vlastní krok sestavení do projektů MSBuild'
 ms.date: 11/04/2016
 f1_keywords:
 - msbuild.cpp.howto.addcustombuildstep
 helpviewer_keywords:
 - 'msbuild (c++), howto: add a custom build step'
 ms.assetid: a20a0c47-4df4-4754-a1f0-a94a99958916
-ms.openlocfilehash: 7b169bfc6668fc284b45554d08d68880967a7de1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57b7636c58a245bfea3a71dfb6aa7ee853329f19
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610974"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413222"
 ---
-# <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Postupy: Přidání vlastního kroku sestavení do projektů MSBuild
+# <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Postupy: Přidat vlastní krok sestavení do projektů MSBuild
 
 Vlastní krok sestavení je krok uživatelem definované v sestavení. Vlastní krok sestavení se chová stejně jako jakýkoli jiný *příkazu nástroje* krok, jako je například standardní nástroj krok kompilace nebo odkaz.
 
@@ -27,7 +27,7 @@ Vlastní sestavovací nástroje a vlastní kroky sestavení sdílet informace uv
 
 ### <a name="to-define-what-is-executed-by-the-custom-build-step"></a>Chcete-li definovat, co spuštění vlastního kroku sestavení
 
-1. Přidejte skupiny vlastností do souboru projektu. V této skupině vlastnost zadejte příkaz, jeho vstupů a výstupů a zprávu, jak je znázorněno v následujícím příkladu. Tento příklad vytvoří soubor .cab ze souboru main.cpp, kterou jste vytvořili v [návod: použití nástroje MSBuild k vytvoření projektu jazyka Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
+1. Přidejte skupiny vlastností do souboru projektu. V této skupině vlastnost zadejte příkaz, jeho vstupů a výstupů a zprávu, jak je znázorněno v následujícím příkladu. Tento příklad vytvoří soubor .cab ze souboru main.cpp, kterou jste vytvořili v [názorný postup: Vytvoření projektu jazyka Visual C++ pomocí nástroje MSBuild](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
 
     ```
     <ItemDefinitionGroup>
@@ -50,7 +50,7 @@ Vlastní sestavovací nástroje a vlastní kroky sestavení sdílet informace uv
     </PropertyGroup>
     ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Návod: Vytvoření projektu jazyka Visual C++ pomocí nástroje MSBuild](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
 [Postupy: Použití událostí sestavení v projektech MSBuild](../build/how-to-use-build-events-in-msbuild-projects.md)<br/>

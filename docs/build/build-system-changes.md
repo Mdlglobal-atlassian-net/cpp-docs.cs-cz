@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-ms.openlocfilehash: a7a98c864a1d0bf617ebf4ededea5e1a59a1af31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 742b018ae96ff706336a81b49e1d8e5fb954d9b7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437151"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425442"
 ---
 # <a name="build-system-changes"></a>Změny systému sestavení
 
@@ -72,6 +72,6 @@ Nastavení adresáře VC ++ nejde změnit, pokud spustíte [devenv/resetsettings
 
 Migrace nastavení adresáře VC ++ ze souboru .vssettings, který je vytvořen pomocí dřívější verze aplikace Visual C++. Otevřít **nástroje** nabídky, klikněte na tlačítko **nastavení importu a exportu**vyberte **importovat vybrané nastavení prostředí**a pak postupujte podle pokynů v průvodci. Nebo když spustíte Visual Studio poprvé, na **zvolte výchozí nastavení prostředí** dialogu **migrovat nastavení oprávnění z předchozí verze a použít je kromě výchozího nastavení vybrané níže**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)

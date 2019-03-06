@@ -2,24 +2,24 @@
 title: Získání ukazatelů do vyrovnávací paměti dat (C + +/ CX)
 ms.date: 11/19/2018
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-ms.openlocfilehash: 2cd99019d75272f4362518de78b729cd7a2549f3
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 46a81fa9e3d278645b654dca3c652653f6c21037
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175103"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426366"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Získání ukazatelů do vyrovnávací paměti dat (C + +/ CX)
 
-V modulu Windows Runtime [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) rozhraní poskytuje jazykově neutrální, základem je stream znamená, že přístup k datové vyrovnávací paměti. V jazyce C++ můžete získat nezpracovaný ukazatel na podkladové pole bajtů s použitím rozhraní IBufferByteAccess knihovna Windows Runtime, který je definován v robuffer.h. Pomocí tohoto přístupu můžete upravit bajtové pole na místě přitom všechny nepotřebné kopie data.
+V modulu Windows Runtime [Windows::Storage::Streams::IBuffer](/uwp/api/windows.storage.streams.ibuffer) rozhraní poskytuje jazykově neutrální, základem je stream znamená, že přístup k datové vyrovnávací paměti. V jazyce C++ můžete získat nezpracovaný ukazatel na podkladové pole bajtů s použitím rozhraní IBufferByteAccess knihovna Windows Runtime, který je definován v robuffer.h. Pomocí tohoto přístupu můžete upravit bajtové pole na místě přitom všechny nepotřebné kopie data.
 
-Následující diagram znázorňuje obrázek prvek XAML, jejichž zdrojem je [Windows::UI::Xaml::Media::Imaging WriteableBitmap](https://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx). Klientskou aplikaci, která je napsána v libovolném jazyce můžete předat odkaz na `WriteableBitmap` c++ kódu a pak C++ pomocí odkazu zobrazíte na základní vyrovnávací paměti. V aplikaci univerzální platformy Windows, která je napsána v jazyce C++ můžete použít funkci v následujícím příkladu přímo ve zdrojovém kódu bez balení v součásti prostředí Windows Runtime.
+Následující diagram znázorňuje obrázek prvek XAML, jejichž zdrojem je [Windows::UI::Xaml::Media::Imaging WriteableBitmap](/uwp/api/Windows.UI.Xaml.Media.Imaging.WriteableBitmap). Klientskou aplikaci, která je napsána v libovolném jazyce můžete předat odkaz na `WriteableBitmap` c++ kódu a pak C++ pomocí odkazu zobrazíte na základní vyrovnávací paměti. V aplikaci univerzální platformy Windows, která je napsána v jazyce C++ můžete použít funkci v následujícím příkladu přímo ve zdrojovém kódu bez balení v součásti prostředí Windows Runtime.
 
 ![C&#43; &#43; kód, který přistupuje k datům pixel přímo](../cppcx/media/ibufferbyteaccessdiagram.png "C&#43; &#43; kód, který přistupuje k datům pixel přímo")
 
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData
 
-Následující metoda přijímá [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) a vrátí ukazatel raw k podkladové pole bajtů. Pro volání funkce, předejte [WriteableBitmap::PixelBuffer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) vlastnost.
+Následující metoda přijímá [Windows::Storage::Streams::IBuffer](/uwp/api/windows.storage.streams.ibuffer) a vrátí ukazatel raw k podkladové pole bajtů. Pro volání funkce, předejte [WriteableBitmap::PixelBuffer](/uwp/api/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer) vlastnost.
 
 ```cpp
 #include <wrl.h>
@@ -57,7 +57,7 @@ Následující kroky ukazují, jak vytvořit aplikace s C# Universal Windows Pla
 
 1. Použijte šablonu projektu prázdnou aplikaci pro vytvoření aplikace v jazyce C# Universal Windows Platform.
 
-1. V souboru MainPage.xaml
+1. In MainPage.xaml
 
    - Použít tento XAML k nahrazení `Grid` element:
 
@@ -70,7 +70,7 @@ Následující kroky ukazují, jak vytvořit aplikace s C# Universal Windows Pla
         </Grid>
         ```
 
-1. V MainPage.xaml.cs
+1. In MainPage.xaml.cs
 
    1. Přidejte tyto deklarace oboru názvů:
 

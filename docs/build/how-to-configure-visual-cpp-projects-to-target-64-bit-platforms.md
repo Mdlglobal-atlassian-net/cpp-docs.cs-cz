@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: c0c734648b084c3f58577cb56984e3ea003a6a8e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 17255a5671880063f030ed0087c1fa839c5a14ef
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523934"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421366"
 ---
 # <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>Postupy: Konfigurace projektů Visual C++ pro cílení 64-Bit, x64 platformy
 
@@ -49,14 +49,14 @@ Konfigurace projektu v integrovaném vývojovém prostředí sady Visual Studio 
 
   - **Cílové prostředí** je nastavena na **/env x64**. Další informace najdete v tématu [MIDL – stránky vlastností: Obecné](../ide/midl-property-pages-general.md).
 
-  - **Ověřit parametry** je vymazána a resetovat na výchozí hodnotu. Další informace najdete v tématu [MIDL – stránky vlastností: Upřesnit](../ide/midl-property-pages-advanced.md).
+  - **Ověřit parametry** je vymazána a resetovat na výchozí hodnotu. Další informace najdete v tématu [MIDL – stránky vlastností: Pokročilé](../ide/midl-property-pages-advanced.md).
 
   - Pokud **formát informací o ladění** byl nastaven na **/zi** v konfiguraci projektu Win32, pak bude nastaven **/zi** v konfiguraci projektu 64-bit. Další informace najdete v tématu [/Z7, / zi, /ZI (formát informací o ladění)](../build/reference/z7-zi-zi-debug-information-format.md).
 
   > [!NOTE]
   > Žádná z těchto vlastností projektu se změní, pokud jsou přepsány na úrovni souboru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [64bitové aplikace rozhraní .NET framework](/dotnet/framework/64-bit-apps)<br/>
 [Konfigurace Visual C++ pro 64bitové cíle x64](../build/configuring-programs-for-64-bit-visual-cpp.md)<br/>

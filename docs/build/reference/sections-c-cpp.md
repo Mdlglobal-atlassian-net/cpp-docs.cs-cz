@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - SECTIONS .def file statement
 ms.assetid: 7b974366-9ef5-4e57-bbcc-73a1df6f8857
-ms.openlocfilehash: 7b6708e760a85a137a01718d07a5f167de849220
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d70c8d6e7188844a8721b37d5e80fb88a4e21ef9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485862"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412793"
 ---
 # <a name="sections-cc"></a>ODDÍLY (C/C++)
 
@@ -60,6 +60,6 @@ section [CLASS 'classname'] specifier
 
 Je ekvivalentní umožňuje určit atributy oddílu [/SECTION](../../build/reference/section-specify-section-attributes.md) možnost.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Pravidla pro příkazy definice modulu](../../build/reference/rules-for-module-definition-statements.md)

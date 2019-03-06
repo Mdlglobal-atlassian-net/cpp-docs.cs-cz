@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: 33206dfb885239839c3a64436b6b540fc7d4e6e5
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 7dab7f3b6593bf4eaed1b8c804deb915677ccf5b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627537"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422972"
 ---
 # <a name="x64-exception-handling"></a>x64 zpracování výjimek
 
@@ -182,21 +182,21 @@ Kód operace unwind je jedna z těchto hodnot:
 
   |||
   |-|-|
-  |RSP + 32|SS|
-  |RSP + 24|Starý RSP|
+  |RSP+32|SS|
+  |RSP+24|Starý RSP|
   |RSP + 16|EFLAGS|
   |RSP + 8|CS|
-  |RSP|KOPÍROVÁNÍ|
+  |RSP|RIP|
 
   Pokud se o operaci rovná 1, pak jednu z těchto snímků bylo vloženo:
 
   |||
   |-|-|
-  |RSP + 40|SS|
-  |RSP + 32|Starý RSP|
-  |RSP + 24|EFLAGS|
+  |RSP+40|SS|
+  |RSP+32|Starý RSP|
+  |RSP+24|EFLAGS|
   |RSP + 16|CS|
-  |RSP + 8|KOPÍROVÁNÍ|
+  |RSP + 8|RIP|
   |RSP|Kód chyby|
 
   Tento kód unwind se vždy zobrazí ve fiktivní prologu, který je ve skutečnosti nikdy proveden, ale místo toho se zobrazí před skutečné vstupní bod rutiny přerušení a existuje jenom k poskytování místo, kde můžete simulovat nasdílení změn rámce počítače. `UWOP_PUSH_MACHFRAME` zaznamenává tuto simulaci, která indikuje, že je počítač koncepčně dokončení této operace:
@@ -209,7 +209,7 @@ Kód operace unwind je jedna z těchto hodnot:
 
   1. Push EFLAGS
 
-  1. CS nabízených oznámení
+  1. Push CS
 
   1. Push *Temp*
 
@@ -394,11 +394,11 @@ Pro zjednodušení používání [nezpracovaná operace pseudo](#raw-pseudo-oper
 |– Makro|Popis|
 |-|-|
 |alloc_stack(n)|Přiděluje blok zásobníku n bajtů (pomocí `sub rsp, n`) a vysílá příslušné unwind informace (.allocstack n)|
-|save_reg *reg*, *umístění*|Uloží stálé registru *reg* v zásobníku volání na RSP posun *loc*a vysílá unwind příslušné informace. (.savereg reg umístění)|
-|push_reg *registru*|Stálé registrace nabízených oznámení *reg* v zásobníku a vysílá unwind příslušné informace. (.pushreg registru)|
-|rex_push_reg *registru*|Uložení stálé registru do zásobníku pomocí operace push 2 bajtů a vydává příslušné unwind informace (.pushreg reg) by měl ten použije, pokud je první instrukci ve funkci tak, aby byl funkci horká-opravitelnou za provozu.|
+|save_reg *reg*, *loc*|Uloží stálé registru *reg* v zásobníku volání na RSP posun *loc*a vysílá unwind příslušné informace. (.savereg reg umístění)|
+|push_reg *reg*|Stálé registrace nabízených oznámení *reg* v zásobníku a vysílá unwind příslušné informace. (.pushreg registru)|
+|rex_push_reg *reg*|Uložení stálé registru do zásobníku pomocí operace push 2 bajtů a vydává příslušné unwind informace (.pushreg reg) by měl ten použije, pokud je první instrukci ve funkci tak, aby byl funkci horká-opravitelnou za provozu.|
 |save_xmm128 *reg*, *umístění*|Uloží stálé registru XMM *reg* v zásobníku volání na RSP posun *loc*a vysílá příslušné unwind informace (.savexmm128 reg, umístění)|
-|set_frame *reg*, *posun*|Nastaví rámec registru *reg* bude RSP + *posun* (použití `mov`, nebo `lea`) a vysílá příslušné unwind informace (.set_frame reg, odsazení)|
+|set_frame *reg*, *offset*|Nastaví rámec registru *reg* bude RSP + *posun* (použití `mov`, nebo `lea`) a vysílá příslušné unwind informace (.set_frame reg, odsazení)|
 |push_eflags|Eflags pomocí nabízených oznámení `pushfq` instrukce a vysílá příslušné unwind informace (.alloc_stack 8)|
 
 Tady je ukázkový prolog funkce s správné použití makra:
@@ -502,6 +502,6 @@ typedef struct _RUNTIME_FUNCTION {
     ((PVOID)((PULONG)GetLanguageSpecificData(info) + 1)
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[x64 softwarové konvence](../build/x64-software-conventions.md)
+[x64 – softwarové konvence](../build/x64-software-conventions.md)

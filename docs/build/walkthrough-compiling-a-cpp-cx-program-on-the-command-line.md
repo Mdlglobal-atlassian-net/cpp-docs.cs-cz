@@ -1,15 +1,15 @@
 ---
-title: 'Návod: Kompilace a C + +/ CX Program na příkazovém řádku'
+title: 'Průvodce: Kompilování programu C++/CX na příkazovém řádku'
 ms.date: 09/24/2018
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: 6acfa707ac64a647e838fd1dbcd5564c79faa1a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f6716b379a11f88adb5c75643e325a9b2856eac
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515138"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413794"
 ---
-# <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Návod: Kompilace a C + +/ CX Program na příkazovém řádku
+# <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Návod: Kompilování programu C++/CX na příkazovém řádku
 
 Můžete vytvořit programy v jazyce Visual C++, které se zaměřují na modul Windows Runtime je v příkazovém řádku. Jazyk Visual C++ podporuje rozšíření součásti Visual C++ (C + +/ CX), který má další typy a operátory cílení programovacího modelu Windows Runtime. Můžete použít C + +/ CX a vytvářejte aplikace pro univerzální platformu Windows (UPW), Windows Phone 8.1 a Windows desktop. Další informace najdete v tématu [A prohlídku vyhodnocování +/ CX](https://msdn.microsoft.com/magazine/dn166929.aspx) a [přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md).
 
@@ -61,7 +61,7 @@ Chcete-li povolit kompilace pro C + +/ CX, je nutné použít [/ZW](../build/ref
     This is a C++/CX program.
     ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)<br/>

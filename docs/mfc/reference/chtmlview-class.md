@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 69a04b49cf82c2b30ece3a32f76fbb2bc9a65f01
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 251a1f9f6773363955ac374aa8714bc616137a31
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295991"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425000"
 ---
 # <a name="chtmlview-class"></a>CHtmlView – třída
 
@@ -390,7 +390,7 @@ Odkazuje na řetězec znaků zakončené znakem null představující název okn
 Určuje atributy stylu okna. Ve výchozím nastavení jsou nastavené styly WS_VISIBLE a WS_CHILD Windows.
 
 *Rect*<br/>
-Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura určující velikost a umístění okna. *RectDefault* hodnota umožňuje určit velikost a umístění nového okna Windows.
+Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura určující velikost a umístění okna. *RectDefault* hodnota umožňuje určit velikost a umístění nového okna Windows.
 
 *pParentWnd*<br/>
 Ukazatel na nadřazené okno ovládacího prvku.
@@ -1045,7 +1045,7 @@ void Navigate(
 Volající – přidělené řetězec, který obsahuje adresu URL pro navigaci na, nebo úplnou cestu souboru, který se zobrazí.
 
 *dwFlags*<br/>
-Příznaky proměnná, která určuje, zda bude příslušný materiál přidán do seznamu historie, jestli se má ke čtení nebo zápisu z mezipaměti a jestli se mají zobrazovat prostředku v novém okně. Proměnná může být kombinací hodnot určené [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) výčtu.
+Příznaky proměnná, která určuje, zda bude příslušný materiál přidán do seznamu historie, jestli se má ke čtení nebo zápisu z mezipaměti a jestli se mají zobrazovat prostředku v novém okně. Proměnná může být kombinací hodnot určené [BrowserNavConstants](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\)) výčtu.
 
 *lpszTargetFrameName*<br/>
 Ukazatel na řetězec, který obsahuje název rámce, ve kterém chcete zobrazit zdroj.
@@ -1095,7 +1095,7 @@ void Navigate2(
 Ukazatel [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-_itemidlist) struktury.
 
 *dwFlags*<br/>
-Příznaky proměnná, která určuje, zda bude příslušný materiál přidán do seznamu historie, jestli se má ke čtení nebo zápisu z mezipaměti a jestli se mají zobrazovat prostředku v novém okně. Proměnná může být kombinací hodnot určené [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) výčtu.
+Příznaky proměnná, která určuje, zda bude příslušný materiál přidán do seznamu historie, jestli se má ke čtení nebo zápisu z mezipaměti a jestli se mají zobrazovat prostředku v novém okně. Proměnná může být kombinací hodnot určené [BrowserNavConstants](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\)) výčtu.
 
 *lpszTargetFrameName*<br/>
 Ukazatel na řetězec, který obsahuje název rámce, ve kterém chcete zobrazit zdroj.
@@ -1215,7 +1215,7 @@ S_OK, pokud je úspěšná, nebo jinak kód chyby definované OLE.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsat `OnDocWindowActivate` reagovat `OnDocWindowActivate` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx) v sadě Windows SDK pro další informace.
+Přepsat `OnDocWindowActivate` reagovat `OnDocWindowActivate` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)) v sadě Windows SDK pro další informace.
 
 ##  <a name="ondownloadbegin"></a>  CHtmlView::OnDownloadBegin
 
@@ -1256,7 +1256,7 @@ S_OK, pokud je úspěšná, nebo jinak kód chyby definované OLE.
 
 ### <a name="remarks"></a>Poznámky
 
-Povolí nebo zakáže nemodálních dialogových oken, pokud kontejner vytvoří nebo odstraní modální dialogové okno. Přepsat `OnEnableModeless` reagovat `EnableModeless` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx) v sadě Windows SDK pro další informace.
+Povolí nebo zakáže nemodálních dialogových oken, pokud kontejner vytvoří nebo odstraní modální dialogové okno. Přepsat `OnEnableModeless` reagovat `EnableModeless` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)) v sadě Windows SDK pro další informace.
 
 ##  <a name="onfilterdataobject"></a>  CHtmlView::OnFilterDataObject
 
@@ -1282,7 +1282,7 @@ S_OK, pokud se nahradí datový objekt, S_FALSE, pokud nedojde k nahrazení dato
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsat `OnFilterDataObject` reagovat `FilterDataObject` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx) v sadě Windows SDK pro další informace.
+Přepsat `OnFilterDataObject` reagovat `FilterDataObject` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\)) v sadě Windows SDK pro další informace.
 
 ##  <a name="onframewindowactivate"></a>  CHtmlView::OnFrameWindowActivate
 
@@ -1303,7 +1303,7 @@ S_OK, pokud je úspěšná, nebo jinak kód chyby definované OLE.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsat `OnFrameWindowActivate` reagovat `OnFrameWindowActivate` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx) v sadě Windows SDK pro další informace.
+Přepsat `OnFrameWindowActivate` reagovat `OnFrameWindowActivate` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)) v sadě Windows SDK pro další informace.
 
 ##  <a name="onfullscreen"></a>  CHtmlView::OnFullScreen
 
@@ -1338,11 +1338,11 @@ Adresa `IDropTarget` , který přijímá `IDropTarget` ukazatel rozhraní, kter�
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Zobrazit [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx) v sadě Windows SDK pro seznam návratových kódů.
+Zobrazit [IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) v sadě Windows SDK pro seznam návratových kódů.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsat `OnGetDropTarget` reagovat `GetDropTarget` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx) v sadě Windows SDK pro další informace.
+Přepsat `OnGetDropTarget` reagovat `GetDropTarget` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) v sadě Windows SDK pro další informace.
 
 ##  <a name="ongetexternal"></a>  CHtmlView::OnGetExternal
 
@@ -1363,7 +1363,7 @@ S_OK, pokud je úspěšná, nebo jinak kód chyby definované OLE.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsat `OnGetExternal` reagovat `GetExternal` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx) v sadě Windows SDK pro další informace.
+Přepsat `OnGetExternal` reagovat `GetExternal` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\)) v sadě Windows SDK pro další informace.
 
 ##  <a name="ongethostinfo"></a>  CHtmlView::OnGetHostInfo
 
@@ -1376,7 +1376,7 @@ virtual HRESULT OnGetHostInfo(DOCHOSTUIINFO* pInfo);
 ### <a name="parameters"></a>Parametry
 
 *pInfo*<br/>
-Adresa [DOCHOSTUIINFO](https://msdn.microsoft.com/library/aa770044.aspx) struktura, která přijímá funkce uživatelského rozhraní hostiteli.
+Adresa [DOCHOSTUIINFO](/previous-versions/aa770044\(v=vs.85\)) struktura, která přijímá funkce uživatelského rozhraní hostiteli.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1384,7 +1384,7 @@ S_OK, pokud je úspěšná, nebo jinak kód chyby definované OLE.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsat `OnGetHostInfo` reagovat `GetHostInfo` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx) v sadě Windows SDK pro další informace.
+Přepsat `OnGetHostInfo` reagovat `GetHostInfo` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)) v sadě Windows SDK pro další informace.
 
 ##  <a name="ongetoptionkeypath"></a>  CHtmlView::OnGetOptionKeyPath
 
@@ -1410,7 +1410,7 @@ S_OK, pokud je úspěšná, nebo jinak S_FALSE. Pokud S_FALSE, Internet Explorer
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsat `OnGetOptionKeyPath` reagovat `GetOptionKeyPath` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx) v sadě Windows SDK pro další informace.
+Přepsat `OnGetOptionKeyPath` reagovat `GetOptionKeyPath` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\)) v sadě Windows SDK pro další informace.
 
 ##  <a name="onhideui"></a>  CHtmlView::OnHideUI
 
@@ -1426,7 +1426,7 @@ S_OK, pokud je úspěšná, nebo jinak kód chyby definované OLE.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsat `OnHideUI` reagovat `HideUI` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::HideUI](https://msdn.microsoft.com/library/aa753259.aspx) v sadě Windows SDK pro další informace.
+Přepsat `OnHideUI` reagovat `HideUI` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\)) v sadě Windows SDK pro další informace.
 
 ##  <a name="onmenubar"></a>  CHtmlView::OnMenuBar
 
@@ -1585,7 +1585,7 @@ S_OK, pokud je úspěšná, nebo jinak kód chyby definované OLE.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsat `OnResizeBorder` reagovat `ResizeBorder` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx) v sadě Windows SDK pro další informace.
+Přepsat `OnResizeBorder` reagovat `ResizeBorder` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\)) v sadě Windows SDK pro další informace.
 
 ##  <a name="onshowcontextmenu"></a>  CHtmlView::OnShowContextMenu
 
@@ -1615,11 +1615,11 @@ Rozhraní IDispatch objektu na souřadnice obrazovky. To umožňuje k rozlišen�
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Zobrazit [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx) v sadě Windows SDK pro seznam hodnot.
+Zobrazit [IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) v sadě Windows SDK pro seznam hodnot.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsat `OnShowContextMenu` reagovat `ShowContextMenu` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx) v sadě Windows SDK pro další informace.
+Přepsat `OnShowContextMenu` reagovat `ShowContextMenu` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) v sadě Windows SDK pro další informace.
 
 ##  <a name="onshowui"></a>  CHtmlView::OnShowUI
 
@@ -1653,11 +1653,11 @@ Vyhrazeno pro budoucí použití.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Zobrazit [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx) v sadě Windows SDK pro seznam hodnot.
+Zobrazit [IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) v sadě Windows SDK pro seznam hodnot.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsat `OnShowUI` reagovat `ShowUI` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx) v sadě Windows SDK pro další informace.
+Přepsat `OnShowUI` reagovat `ShowUI` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) v sadě Windows SDK pro další informace.
 
 ##  <a name="onstatusbar"></a>  CHtmlView::OnStatusBar
 
@@ -1756,7 +1756,7 @@ S_OK, pokud je úspěšná, nebo jinak S_FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsat `OnTranslateAccelerator` reagovat `TranslateAccelerator` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx) v sadě Windows SDK pro další informace.
+Přepsat `OnTranslateAccelerator` reagovat `TranslateAccelerator` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\)) v sadě Windows SDK pro další informace.
 
 ##  <a name="ontranslateurl"></a>  CHtmlView::OnTranslateUrl
 
@@ -1786,7 +1786,7 @@ Adresa ukazatele na řetězec, který přijímá adresy přeložené adresy URL.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsat `OnTranslateUrl` reagovat `TranslateUrl` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx) v sadě Windows SDK pro další informace.
+Přepsat `OnTranslateUrl` reagovat `TranslateUrl` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)) v sadě Windows SDK pro další informace.
 
 ##  <a name="onupdateui"></a>  CHtmlView::OnUpdateUI
 
@@ -2236,4 +2236,4 @@ Platí pro aplikaci Internet Explorer a WebBrowser.
 [Ukázky knihovny MFC MFCIE](../../visual-cpp-samples.md)<br/>
 [CFormView – třída](../../mfc/reference/cformview-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx)
+[IWebBrowser2](/windows/desktop/api/exdisp/nn-exdisp-iwebbrowser2)

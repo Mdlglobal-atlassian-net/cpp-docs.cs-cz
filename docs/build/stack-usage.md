@@ -2,12 +2,12 @@
 title: x64 zásobníku využití
 ms.date: 12/17/2018
 ms.assetid: 383f0072-0438-489f-8829-cca89582408c
-ms.openlocfilehash: 3318a3512f83e242496454ffa2dc4aa8d26e1fc3
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 902e4304ac124be46c6edf0860118dc522b34890
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627316"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425598"
 ---
 # <a name="x64-stack-usage"></a>x64 zásobníku využití
 
@@ -57,8 +57,8 @@ Visual C++ umožňuje typy, které mají *rozšířené zarovnání*, která se 
 
 Zásobník, který je přidělen musí obsahovat místa po něm pro parametry, které následně volané funkce, jak je popsáno v [přidělení zásobníku](#stack-allocation).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[x64 softwarové konvence](../build/x64-software-conventions.md)<br/>
+[x64 – softwarové konvence](../build/x64-software-conventions.md)<br/>
 [align](../cpp/align-cpp.md)<br/>
 [__declspec](../cpp/declspec.md)

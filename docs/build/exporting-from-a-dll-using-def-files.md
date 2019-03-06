@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .def files [C++], exporting from DLLs
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-ms.openlocfilehash: 0f485353d344b17dabbf0f56a4c7ded2cbccce76
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: bed47c2c69b154c6bab996299eaeb4173c8298f3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220709"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416546"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>Export z knihovny DLL pomocí souborů .DEF
 
@@ -82,6 +82,6 @@ Všimněte si, že knihovna MFC sama používá soubory DEF pro export funkcí a
 
 - [Vzájemné importy](../build/mutual-imports.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Export z knihovny DLL](../build/exporting-from-a-dll.md)

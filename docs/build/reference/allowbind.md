@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /ALLOWBIND editbin option
 - -ALLOWBIND editbin option
 ms.assetid: eaadbb8c-4339-4281-9a75-3a1ce2352ff8
-ms.openlocfilehash: 3d38b2a70fc3510b2c26942dc3e5e6fdd76a28e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f59cc83c06bbaaccba911c44835247253cb264b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550524"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416888"
 ---
 # <a name="allowbind"></a>/ALLOWBIND
 
@@ -32,6 +32,6 @@ Použití **/ALLOWBIND:NO** Bind.exe zabránit vytvoření vazby knihovny DLL.
 
 Další informace najdete v tématu [/ALLOWBIND](../../build/reference/allowbind-prevent-dll-binding.md) – možnost linkeru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [EDITBIN – možnosti](../../build/reference/editbin-options.md)

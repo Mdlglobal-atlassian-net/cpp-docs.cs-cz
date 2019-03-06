@@ -40,12 +40,12 @@ helpviewer_keywords:
 - LIST library manager option
 - /CONVERT library manager option
 ms.assetid: f56a8b85-fbdc-4c09-8d8e-00f0ffe1da53
-ms.openlocfilehash: 69cd03e029d014b9b74a8688f155dfb1f023b55c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb06fdf0298d627f289448930b490fb0660e381d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477061"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419605"
 ---
 # <a name="managing-a-library"></a>Správa knihovny
 
@@ -66,7 +66,7 @@ Tyto možnosti platí pro vytváření a úpravy knihovny:
 **/ LIBPATH:** *dir*<br/>
 Přepíše cestu ke knihovně prostředí. Podrobnosti najdete v tématu Popis odkazu [/Libpath](../../build/reference/libpath-additional-libpath.md) možnost.
 
-**/ LIST**<br/>
+**/LIST**<br/>
 Zobrazí informace o výstupní knihovně na standardním výstupu. Výstup je možné přesměrovat do souboru. / List můžete zjistit obsah stávající knihovny bez její změny.
 
 **/ NAME:** *název souboru*<br/>
@@ -99,6 +99,6 @@ Můžete provádět následující úlohy správy knihovny LIB:
 > [!NOTE]
 >  Nelze současně odstraní člena a rozbalte ho do souboru do jednoho kroku. Nejdřív musíte extrahovat členského objektu pomocí/extract a potom spusťte LIB znovu pomocí parametru/remove. Toto chování se liší od 16 bitů LIB (pro knihovny OMF) k dispozici v jiných produktů Microsoftu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace ke knihovně LIB](../../build/reference/lib-reference.md)

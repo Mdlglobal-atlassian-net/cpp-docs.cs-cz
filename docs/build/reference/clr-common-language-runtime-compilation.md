@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: 9e9867e5cea8d45aefa0901798b86557b05693f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a908fc49776eaca68d9a79fb679b759155853d9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528034"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418851"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Common Language Runtime)
 
@@ -41,7 +41,7 @@ Jeden nebo více z následujících parametrů oddělených čárkou.
 
    **/ CLR: pure zastaralé**. Možnost Odebereme v sadě Visual Studio 2017. Doporučujeme vám, že port kód, který musí být prázdné MSIL do jazyka C#.
 
-- **Bezpečné**
+- **safe**
 
    **zastaralé/CLR: safe**. Možnost Odebereme v sadě Visual Studio 2017. Doporučujeme vám, že port kód, který musí být bezpečné jazyka MSIL do jazyka C#.
 
@@ -103,7 +103,7 @@ class {} x;
 
 Umožňuje zobrazit metadata ildasm.exe.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

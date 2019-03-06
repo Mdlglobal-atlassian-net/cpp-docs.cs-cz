@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: a683c877b67f4eae1a7411f5916987c9789b6817
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 51cdfb481892ba5057d4ca26ff4d6e51665557e5
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261346"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415614"
 ---
 # <a name="cheaderctrl-class"></a>Cheaderctrl – třída
 
@@ -231,7 +231,7 @@ virtual BOOL Create(
 Určuje styl ovládacího prvku záhlaví. Popis – styly ovládacích prvků záhlaví, naleznete v tématu [– styly ovládacích prvků záhlaví](/windows/desktop/Controls/header-control-styles) v sadě Windows SDK.
 
 *Rect*<br/>
-Určuje velikost a umístění ovládacího prvku záhlaví. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.
+Určuje velikost a umístění ovládacího prvku záhlaví. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 *pParentWnd*<br/>
 Určuje nadřazené okno ovládacího prvku záhlaví, obvykle `CDialog`. Nesmí být NULL.
@@ -301,7 +301,7 @@ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené s
 Styl záhlaví ovládacího prvku. Popis – styly ovládacích prvků záhlaví, naleznete v tématu [– styly ovládacích prvků záhlaví](/windows/desktop/Controls/header-control-styles) v sadě Windows SDK. Zobrazit [vytvořit](#create) seznam Další styly.
 
 *Rect*<br/>
-Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.
+Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.
 
 *pParentWnd*<br/>
 Ukazatel na okno, který je nadřazeného ovládacího prvku.
@@ -543,7 +543,7 @@ BOOL GetItemDropDownRect(
 |Parametr|Popis|
 |---------------|-----------------|
 |*Položky*|[in] Z nuly vycházející index položky záhlaví, jehož styl je HDF_SPLITBUTTON. Další informace najdete v tématu `fmt` člena [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) struktury.|
-|*lpRect*|[out] Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktuře získávat informace ohraničující obdélník.|
+|*lpRect*|[out] Ukazatel [RECT](/previous-versions/dd162897\(v=vs.85\)) struktuře získávat informace ohraničující obdélník.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -581,7 +581,7 @@ BOOL GetItemRect(
 Index založený na nule položky ovládacího prvku záhlaví
 
 *lpRect*<br/>
-Ukazatel na adresu [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá informace ohraničující obdélník.
+Ukazatel na adresu [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura, která přijímá informace ohraničující obdélník.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -633,7 +633,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*lpRect*|[out] Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá informace ohraničující obdélník.|
+|*lpRect*|[out] Ukazatel [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura, která přijímá informace ohraničující obdélník.|
 
 ### <a name="return-value"></a>Návratová hodnota
 

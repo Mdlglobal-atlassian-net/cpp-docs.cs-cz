@@ -7,12 +7,12 @@ helpviewer_keywords:
 - builds [C++], C/C++ tools
 - tools [C++], build
 ms.assetid: 48d9daf4-6bbf-473a-8ce2-bf2923b69f80
-ms.openlocfilehash: dd698aafca3c9bc489405e0ab9cb4dcec98a26ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8240ee91d0318b969ba36cedac9dbc3f645d2ed8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510081"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416759"
 ---
 # <a name="cc-build-tools"></a>Nástroje sestavení C/C++
 
@@ -30,7 +30,7 @@ Visual C++ poskytuje následující nástroje příkazového řádku pro zobraze
 
 - [Errlook –](../../build/reference/value-edit-control.md), nástroj vyhledávání chyby načte modul chybová zpráva, která je založena na hodnotě zadané nebo chybovou zprávu systému.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Referenční zdroje k sestavení programu v jazyce C/C++](../../build/reference/c-cpp-building-reference.md)<br/>
 [Dekorované názvy](../../build/reference/decorated-names.md)<br/>

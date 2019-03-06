@@ -1,18 +1,18 @@
 ---
-title: 'Postupy: Vytváření konzolových aplikací CLR (C++/CLI)'
+title: 'Postupy: Vytváření konzolových aplikací CLR (C + +/ CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - console applications, templates
 - CLR console applications, project template
 ms.assetid: e89bce3c-706f-4ae0-8a90-cb1a0f674e70
-ms.openlocfilehash: fa45578b1e773e954fe692bd1c49e311626c35de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ce50266eeb17ad858891149489db85b03855aec
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525656"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426329"
 ---
-# <a name="how-to-create-clr-console-applications-ccli"></a>Postupy: Vytváření konzolových aplikací CLR (C++/CLI)
+# <a name="how-to-create-clr-console-applications-ccli"></a>Postupy: Vytváření konzolových aplikací CLR (C + +/ CLI)
 
 Pomocí šablony Konzolová aplikace lze vytvořit projekt konzolové aplikace, který již obsahuje základní odkazy a soubory projektu.
 
@@ -22,7 +22,7 @@ Projekt vytvořený pomocí šablony Konzolová aplikace automaticky přidá tyt
 
 - Odkazy na tyto obory názvů rozhraní .NET Framework:
 
-   - [Systém](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx)– obsahuje základní třídy a základních tříd, které definují běžně používá hodnoty a odkazové datové typy, události a obslužné rutiny událostí, rozhraní, atributy a zpracování výjimek.
+   - <xref:System.AppDomainManager>– Obsahuje základní třídy a základní třídy, které definují běžně používané hodnoty a odkazové datové typy, události a obslužné rutiny událostí, rozhraní, atributy a zpracování výjimek.
 
    - mscorlib – Sestavení knihovny DLL, která podporuje vývoj pomocí rozhraní .NET Framework.
 

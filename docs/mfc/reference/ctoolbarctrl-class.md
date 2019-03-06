@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: 61cbcbd2a64e8648c6467ebbc0d86d6f89953442
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 97854a554be729b75d50f09b0627ffc94b1b093f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302493"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424480"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl Class
 
@@ -627,7 +627,7 @@ virtual BOOL Create(
 Určuje styl ovládacího prvku toolbar. Panely nástrojů musí mít vždy WS_CHILD style. Kromě toho můžete zadat libovolnou kombinaci toolbar – styly a styly oken, jak je popsáno v části **poznámky**.
 
 *Rect*<br/>
-Volitelně určuje velikost a umístění ovládacího prvku toolbar. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.
+Volitelně určuje velikost a umístění ovládacího prvku toolbar. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 *pParentWnd*<br/>
 Určuje nadřazené okno ovládacího prvku panel nástrojů. Nesmí být NULL.
@@ -681,7 +681,7 @@ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené s
 Určuje styl ovládacího prvku toolbar. Panely nástrojů musí mít vždy WS_CHILD style. Kromě toho můžete zadat libovolnou kombinaci toolbar – styly a styly oken, jak je popsáno v **poznámky** část [vytvořit](#create).
 
 *Rect*<br/>
-Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.
+Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.
 
 *pParentWnd*<br/>
 Ukazatel na okno, který je nadřazeného ovládacího prvku.
@@ -1085,7 +1085,7 @@ BOOL GetItemRect(
 Tlačítko, pro které chcete načíst informace o index založený na nule.
 
 *lpRect*<br/>
-Adresa [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který přijme souřadnice ohraničujícího rámečku.
+Adresa [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který přijme souřadnice ohraničujícího rámečku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1202,7 +1202,7 @@ BOOL GetRect(
 Identifikátor tlačítka.
 
 *lpRect*<br/>
-Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktuře získávat informace ohraničující obdélník.
+Ukazatel [RECT](/previous-versions/dd162897\(v=vs.85\)) struktuře získávat informace ohraničující obdélník.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1325,7 +1325,7 @@ int HitTest(LPPOINT ppt) const;
 ### <a name="parameters"></a>Parametry
 
 *ppt*<br/>
-Ukazatel na [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) strukturu, která obsahuje souřadnici x pozice v `x` člen a souřadnici y o shodě testování v `y` člena. Souřadnice jsou vzhledem ke klientské oblasti panelu nástrojů.
+Ukazatel na [bodu](/previous-versions/dd162805\(v=vs.85\)) strukturu, která obsahuje souřadnici x pozice v `x` člen a souřadnici y o shodě testování v `y` člena. Souřadnice jsou vzhledem ke klientské oblasti panelu nástrojů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1428,7 +1428,7 @@ BOOL InsertMarkHitTest(
 ### <a name="parameters"></a>Parametry
 
 *ppt*<br/>
-Ukazatel [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) strukturu, která obsahuje průchodů testů koordinuje vzhledem ke klientské oblasti panelu nástrojů.
+Ukazatel [bodu](/previous-versions/dd162805\(v=vs.85\)) strukturu, která obsahuje průchodů testů koordinuje vzhledem ke klientské oblasti panelu nástrojů.
 
 *ptbim*<br/>
 Ukazatel [TBINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark) struktura, která přijímá informace značky vložení.
@@ -2295,7 +2295,7 @@ Požadovaný počet řádků.
 Určuje, jestli se má použít další řádky nebo méně řádků, pokud panelu nelze změnit velikost na požadovaný počet řádků.
 
 *lpRect*<br/>
-Odkazuje [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která bude dostávat nové ohraničující obdélník panelu nástrojů.
+Odkazuje [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura, která bude dostávat nové ohraničující obdélník panelu nástrojů.
 
 ### <a name="remarks"></a>Poznámky
 

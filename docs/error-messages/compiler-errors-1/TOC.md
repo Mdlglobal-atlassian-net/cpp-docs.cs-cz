@@ -232,6 +232,7 @@
 ## [Chyba kompilátoru C2128](compiler-error-c2128.md)
 ## [Chyba kompilátoru C2129](compiler-error-c2129.md)
 ## [Chyba kompilátoru C2130](compiler-error-c2130.md)
+## [Chyba kompilátoru C2131](compiler-error-c2131.md)
 ## [Chyba kompilátoru C2132](compiler-error-c2132.md)
 ## [Chyba kompilátoru C2133](compiler-error-c2133.md)
 ## [Chyba kompilátoru C2134](compiler-error-c2134.md)

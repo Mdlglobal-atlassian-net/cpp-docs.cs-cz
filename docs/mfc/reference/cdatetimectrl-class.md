@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: bf8ced746b70f64b83733152d845aa0291f07310
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a68f3570f0e8c3315e8b0716cddcd37563894e76
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302498"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422491"
 ---
 # <a name="cdatetimectrl-class"></a>Cdatetimectrl – třída
 
@@ -158,7 +158,7 @@ virtual BOOL Create(
 Určuje kombinaci – styly ovládacího prvku datum čas. Zobrazit [datum a čas – styly ovládacího prvku pro výběr](/windows/desktop/Controls/date-and-time-picker-control-styles) v sadě Windows SDK pro další informace o stylech výběr data a času.
 
 *Rect*<br/>
-Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, což je umístění a velikost prvku Výběr data a času.
+Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury, což je umístění a velikost prvku Výběr data a času.
 
 *pParentWnd*<br/>
 Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku datum a čas výběr. Nesmí být NULL.

@@ -5,12 +5,12 @@ f1_keywords:
 - /guard
 - VC.Project.VCCLCompilerTool.ControlFlowGuard
 ms.assetid: be495323-f59f-4cf3-a6b6-8ee69e6a19dd
-ms.openlocfilehash: 8b15318ab7ae4233d6cf02a505ffe901bbe1d689
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d79f4b20499d964d407af61fa498b4579b6794d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516070"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424077"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard (povolení ochrany toku řízení)
 
@@ -48,7 +48,7 @@ Kód zkompilovaný pomocí **/Guard: CF** lze propojit do knihovny a soubory, kt
 
 1. V ovládacím prvku rozevíracího seznamu vyberte **Ano** k povolení ochrany toku provádění, nebo **ne** ho zakážete.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

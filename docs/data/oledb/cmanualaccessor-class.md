@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: b3d4a1a6f4680579adafec7c1fcf5f4372f9918e
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 98689fc3262cd8fc3bcb29e0bda59b1f40761141
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556709"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422784"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor – třída
 
@@ -61,8 +61,8 @@ class CManualAccessor : public CAccessorBase
 |-|-|
 |[AddBindEntry –](#addbindentry)|Přidá položku vazby výstupní sloupce.|
 |[AddParameterEntry](#addparameterentry)|Přidá položku parametru pro parametr přístupového objektu.|
-|[CreateAccessor –](#createaccessor)|Přiděluje paměť pro sloupec struktury vazby a inicializuje sloupec datové členy.|
-|[Createparameteraccessor –](#createparameteraccessor)|Přiděluje paměť pro parametr vazby struktury a inicializuje parametry datových členů.|
+|[CreateAccessor](#createaccessor)|Přiděluje paměť pro sloupec struktury vazby a inicializuje sloupec datové členy.|
+|[CreateParameterAccessor](#createparameteraccessor)|Přiděluje paměť pro parametr vazby struktury a inicializuje parametry datových členů.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -84,7 +84,7 @@ void AddBindEntry(DBORDINAL nOrdinal,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 *nOrdinal*<br/>
 [in] Číslo sloupce.
@@ -125,7 +125,7 @@ void AddParameterEntry(DBORDINAL nOrdinal,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 *nOrdinal*<br/>
 [in] Počet parametrů.

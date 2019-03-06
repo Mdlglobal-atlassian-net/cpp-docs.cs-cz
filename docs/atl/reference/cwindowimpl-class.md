@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-ms.openlocfilehash: 2e4a9b585ed653927c87eaf82dfae8ce8f982dfc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 96807debc7a3af5eca5d7a0c17a7728431733325
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290700"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417928"
 ---
 # <a name="cwindowimpl-class"></a>Cwindowimpl – třída
 
@@ -147,7 +147,7 @@ HWND Create(
 [in] Popisovač okna nadřazené nebo vlastníka.
 
 *Rect*<br/>
-[in] A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura určující pozici okna. `RECT` Je možné předat ukazatelem nebo odkazem.
+[in] A [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura určující pozici okna. `RECT` Je možné předat ukazatelem nebo odkazem.
 
 *szWindowName*<br/>
 [in] Určuje název okna. Výchozí hodnota je NULL.

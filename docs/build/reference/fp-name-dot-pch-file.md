@@ -15,12 +15,12 @@ helpviewer_keywords:
 - precompiled header files, naming
 - /Fp compiler option [C++]
 ms.assetid: 0fcd9cbd-e09f-44d3-9715-b41efb5d0be2
-ms.openlocfilehash: 30a569b367d10a4f230d0054b19833c6614afac7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8384aa1ee27fee0bc42e023b78b948d9acd384e8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517088"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414093"
 ---
 # <a name="fp-name-pch-file"></a>/Fp (název souboru .Pch)
 
@@ -28,7 +28,7 @@ Poskytuje název cesty pro předkompilované hlavičky místo použití výchoz�
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/Fp**<em>cesta</em>
+> **/Fp**<em>pathname</em>
 
 ## <a name="remarks"></a>Poznámky
 
@@ -68,7 +68,7 @@ Následující příkaz určuje použití předkompilovaného hlavičkového sou
 CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti výstupního souboru (/F)](../../build/reference/output-file-f-options.md)<br/>
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>

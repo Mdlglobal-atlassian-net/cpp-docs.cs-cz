@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: 7605d78a140a0f5353a16b9e22d5d618d29ff327
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: ff2a139c16b6678bedf38c64a16dce28fa53c5fe
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556677"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425195"
 ---
 # <a name="ctable-class"></a>CTable – třída
 
@@ -91,14 +91,14 @@ HRESULT Open(const CSession& session,
 *szTableName*<br/>
 [in] Název tabulky, pokud chcete otevřít, je předán jako řetězec ANSI.
 
-*DBID*<br/>
+*dbid*<br/>
 [in] `DBID` Tabulky otevřete.
 
 *pPropSet*<br/>
-[in] Ukazatel na pole [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) v *referenční informace pro OLE DB programátory* ve Windows SDK. Výchozí hodnota Null určuje žádné vlastnosti.
+[in] Ukazatel na pole [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](/previous-versions/windows/desktop/ms713696(v=vs.85)) v *referenční informace pro OLE DB programátory* ve Windows SDK. Výchozí hodnota Null určuje žádné vlastnosti.
 
 *ulPropSets*<br/>
-[in] Počet [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury předané *pPropSet* argument.
+[in] Počet [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury předané *pPropSet* argument.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -106,7 +106,7 @@ Standardní HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Další podrobnosti najdete v tématu [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) v *OLE DB referenční informace pro programátory*.
+Další podrobnosti najdete v tématu [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) v *OLE DB referenční informace pro programátory*.
 
 ## <a name="see-also"></a>Viz také
 

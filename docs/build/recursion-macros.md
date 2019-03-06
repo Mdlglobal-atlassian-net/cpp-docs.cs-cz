@@ -6,12 +6,12 @@ helpviewer_keywords:
 - recursion macros
 - macros, recursion
 ms.assetid: c53e5ae7-619e-46b1-bdc2-86d8c7798b1d
-ms.openlocfilehash: 0005a4be0422ed83816eabc7b55932a81441ae25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c04b23d4c8116fdf898c2f732b63c5e02adf5661
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451256"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416407"
 ---
 # <a name="recursion-macros"></a>Rekurzivní makra
 
@@ -23,6 +23,6 @@ Rekurzivní makra použijte k volání NMAKE rekurzivně. Rekurzivní relace dě
 |**MAKEDIR –**|Aktuální adresář při NMAKE.|
 |**MAKEFLAGS**|Možnosti aktuálně používána. Použít jako `/$(MAKEFLAGS)`.  Mějte na paměti, /F produkt není zahrnutý.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Speciální makra NMAKE](../build/special-nmake-macros.md)

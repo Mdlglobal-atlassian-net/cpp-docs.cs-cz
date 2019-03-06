@@ -3,12 +3,12 @@ title: x64 konvence volání
 description: Podrobnosti o výchozí x64 ABI konvenci volání.
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: f2a63df878d4eac727f9c697cc326bb1f2981d95
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 02bf4719766366049b600b148ad88fc238f4e54e
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53636047"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415780"
 ---
 # <a name="x64-calling-convention"></a>x64 konvence volání
 
@@ -205,6 +205,6 @@ Pokud zahrnete setjmpex.h nebo setjmp.h, veškerá volání [setjmp](../c-runtim
 
 Volání `setjmp` zachová aktuální ukazatel zásobníku, bez registry a MxCsr registrů.  Volání `longjmp` vraťte se na nejnovější `setjmp` volání webu a obnoví ukazatel zásobníku, bez registry a MxCsr zaregistruje, zpět do stavu jako zachovaný nejnovější `setjmp` volání.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[x64 softwarové konvence](../build/x64-software-conventions.md)
+[x64 – softwarové konvence](../build/x64-software-conventions.md)

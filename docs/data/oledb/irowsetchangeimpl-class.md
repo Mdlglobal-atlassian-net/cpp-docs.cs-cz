@@ -32,16 +32,16 @@ helpviewer_keywords:
 - SetData method
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-ms.openlocfilehash: dacf9de0835108ae946e7523472a0adf12e7e222
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 299cebd93a3d54ab747f5c58b22dbbf215a02e4c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556722"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426651"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl – třída
 
-Šablony technologie OLE DB provádění [IRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715790(v=vs.85)) rozhraní ve specifikaci OLE DB.
+Šablony technologie OLE DB provádění [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)) rozhraní ve specifikaci OLE DB.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -83,7 +83,7 @@ Jednotky úložiště pro všechny popisovačů řádků uchovávat zprostředko
 |||
 |-|-|
 |[DeleteRows](#deleterows)|Odstraní řádky ze sady řádků.|
-|[Insertrow –](#insertrow)|Vloží řádek do sady řádků.|
+|[InsertRow](#insertrow)|Vloží řádek do sady řádků.|
 |[SetData](#setdata)|Nastaví hodnoty dat v jedné nebo více sloupců.|
 
 ### <a name="implementation-method-callback"></a>Implementace metody (zpětného volání)
@@ -124,7 +124,7 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IRowsetChange::DeleteRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="insertrow"></a> IRowsetChangeImpl::InsertRow
 
@@ -141,7 +141,7 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IRowsetChange::InsertRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms716921(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IRowsetChange::InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="setdata"></a> IRowsetChangeImpl::SetData
 
@@ -157,7 +157,7 @@ STDMETHOD (SetData )(HROW hRow,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IRowsetChange::SetData](https://docs.microsoft.com/previous-versions/windows/desktop/ms721232(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="flushdata"></a> IRowsetChangeImpl::FlushData
 

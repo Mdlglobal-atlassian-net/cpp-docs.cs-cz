@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 0284970d57cf4cde65b4fb77338423cb81d5d54b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8815861e525a2824bb1bc7a7d0e40f96b053c6a4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302270"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426781"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Vytváření asynchronních operací v jazyce C++ pro aplikace pro UPW
 
@@ -51,7 +51,7 @@ Modul Windows Runtime je programovací rozhraní, můžete použít k vytvořen�
 
 Pomocí prostředí Windows Runtime můžete využívat nejlepší funkce různých programovacích jazycích a je zkombinovat do jedné aplikace. Můžete například vytvářet uživatelské rozhraní v jazyce JavaScript a provádění výpočetně náročné aplikace logiky v komponentě C++. Možnost provádět tyto výpočetně náročné operace na pozadí je ale klíčovým faktorem ochraně responzivní uživatelské rozhraní. Vzhledem k tomu, `task` třída je specifická pro C++, je nutné použít rozhraní Windows Runtime pro komunikaci asynchronních operací na jiné součásti (která může být napsán v jiných jazycích než C++). Modul Windows Runtime poskytuje čtyři rozhraní, které můžete použít k reprezentaci asynchronních operací:
 
-[Windows::Foundation::IAsyncAction](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)<br/>
+[Windows::Foundation::IAsyncAction](/uwp/api/windows.foundation.iasyncaction)<br/>
 Představuje asynchronní akci.
 
 [Windows::Foundation::IAsyncActionWithProgress\<TProgress>](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)<br/>
@@ -92,7 +92,7 @@ Následující příklad ukazuje různé způsoby, jak vytvořit `IAsyncAction` 
 
 ##  <a name="example-component"></a> Příklad: Vytvoření komponenty prostředí Windows Runtime C++ a její z použitíC#
 
-Vezměte v úvahu aplikaci, která se používá k definování uživatelského rozhraní a komponenty modulu Windows Runtime C++ provádět operace náročné na výpočetní prostředky XAML a C#. V tomto příkladu vypočítá komponent C++, která čísla v dané oblasti jsou primární. Pro ilustraci rozdíly mezi čtyři asynchronní úloha rozhraní Windows Runtime, spuštění, v sadě Visual Studio, tak, že vytvoříte **prázdné řešení** a jeho pojmenování `Primes`. Pak přidejte do řešení **součást prostředí Windows Runtime** projektu a jeho pojmenování `PrimesLibrary`. Přidejte následující kód vygenerovaný soubor hlaviček jazyka C++ (Tento příklad přejmenuje Class1.h Primes.h). Každý `public` metoda definuje jednu ze čtyř asynchronní rozhraní. Vrátí metody, které vrací hodnotu [Windows::Foundation::Collections::IVector\<int >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) objektu. Vytvoření metody, které vykazování průběh `double` hodnoty, které definují procento celkové práce, která byla dokončena.
+Vezměte v úvahu aplikaci, která se používá k definování uživatelského rozhraní a komponenty modulu Windows Runtime C++ provádět operace náročné na výpočetní prostředky XAML a C#. V tomto příkladu vypočítá komponent C++, která čísla v dané oblasti jsou primární. Pro ilustraci rozdíly mezi čtyři asynchronní úloha rozhraní Windows Runtime, spuštění, v sadě Visual Studio, tak, že vytvoříte **prázdné řešení** a jeho pojmenování `Primes`. Pak přidejte do řešení **součást prostředí Windows Runtime** projektu a jeho pojmenování `PrimesLibrary`. Přidejte následující kód vygenerovaný soubor hlaviček jazyka C++ (Tento příklad přejmenuje Class1.h Primes.h). Každý `public` metoda definuje jednu ze čtyř asynchronní rozhraní. Vrátí metody, které vrací hodnotu [Windows::Foundation::Collections::IVector\<int >](/uwp/api/Windows.Foundation.Collections.IVector_T_) objektu. Vytvoření metody, které vykazování průběh `double` hodnoty, které definují procento celkové práce, která byla dokončena.
 
 [!code-cpp[concrt-windowsstore-primes#1](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_2.h)]
 
@@ -117,7 +117,7 @@ Přidejte následující kód, který `MainPage` třída v souboru MainPage.xaml
 
 Tyto metody používají `async` a `await` klíčových slov pro aktualizaci uživatelského rozhraní, po dokončení asynchronní operace. Informace o asynchronním programování v aplikacích pro UPW, naleznete v tématu [asynchronní programování a zřetězení](/windows/uwp/threading-async).
 
-`getPrimesCancellation` a `cancelGetPrimes` metody spolupracují a umožňují uživateli zrušit operaci. Když uživatel klikne **zrušit** tlačítko, `cancelGetPrimes` volání metody [IAsyncOperationWithProgress\<TResult, TProgress >:: zrušit](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel.aspx) na zrušení operace. Modulu Runtime souběžnosti, který spravuje podkladová asynchronní operace, vyvolá výjimku, která je zachycena ve Windows Runtime pro komunikaci, že dokončení zrušení typ vnitřní výjimky. Další informace o tomto modelu zrušení naleznete v tématu [zrušení](../../parallel/concrt/cancellation-in-the-ppl.md).
+`getPrimesCancellation` a `cancelGetPrimes` metody spolupracují a umožňují uživateli zrušit operaci. Když uživatel klikne **zrušit** tlačítko, `cancelGetPrimes` volání metody [IAsyncOperationWithProgress\<TResult, TProgress >:: zrušit](/uwp/api/windows.foundation.iasyncinfo.cancel) na zrušení operace. Modulu Runtime souběžnosti, který spravuje podkladová asynchronní operace, vyvolá výjimku, která je zachycena ve Windows Runtime pro komunikaci, že dokončení zrušení typ vnitřní výjimky. Další informace o tomto modelu zrušení naleznete v tématu [zrušení](../../parallel/concrt/cancellation-in-the-ppl.md).
 
 > [!IMPORTANT]
 >  Pokud chcete povolit PPL správně hlášení do prostředí Windows Runtime zrušil operaci, nebude zachytávat tento typ vnitřní výjimky. To znamená, že neměli byste také zachytit všechny výjimky (`catch (...)`). Pokud musíte zachytit všechny výjimky, znovu vyvolá výjimku, k zajištění, že prostředí Windows Runtime můžete dokončit operaci zrušení.

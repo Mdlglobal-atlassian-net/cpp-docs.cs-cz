@@ -13,12 +13,12 @@ helpviewer_keywords:
 - dependencies [C++], dependency information in linker output
 - VERBOSE linker option
 ms.assetid: 9c347d98-4c37-4724-a39e-0983934693ab
-ms.openlocfilehash: 41a8ee835a65a7c9a17df9bb9c155267cae29baf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 290d2e5c5c5a87042ee805cdaed90cce4418a389
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575614"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423748"
 ---
 # <a name="verbose-print-progress-messages"></a>/VERBOSE (tisk zpráv průběhu)
 
@@ -54,7 +54,7 @@ Linker odesílá informace o průběhu relace propojení do **výstup** okna. Na
 
 - Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ShowProgress%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
 [Možnosti linkeru](../../build/reference/linker-options.md)

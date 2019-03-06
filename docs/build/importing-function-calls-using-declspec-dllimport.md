@@ -10,12 +10,12 @@ helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 - function calls [C++], importing
 ms.assetid: 6b53c616-0c6d-419a-8e2a-d2fff20510b3
-ms.openlocfilehash: 513e6bd7b1120dd710852ab61aa7603bba74907e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 055edf4efc066695abb60a09b84cb1b13302af9c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498225"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423960"
 ---
 # <a name="importing-function-calls-using-declspecdllimport"></a>Import volání funkcí pomocí deklarace __declspec(dllimport)
 
@@ -72,6 +72,6 @@ Neexistuje žádný převodní rutina a ne `jmp` instrukce, takže kód je menš
 
 Na druhé straně pro volání funkce uvnitř knihovny DLL, nechcete k použít nepřímé volání. Adresa funkce už znáte. Protože jsou náročné na načítají a ukládají adresu funkce před nepřímé volání na čas a prostor, přímého volání je vždy menší a rychlejší. Chcete použít **__declspec(dllimport)** při volání funkcí knihovny DLL mimo samotná knihovna DLL. Nepoužívejte **__declspec(dllimport)** ve funkcích uvnitř knihovny DLL při vytváření této knihovny DLL.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Import do aplikace](../build/importing-into-an-application.md)

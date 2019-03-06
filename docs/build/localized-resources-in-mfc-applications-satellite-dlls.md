@@ -1,5 +1,5 @@
 ---
-title: 'Místní zdroje v aplikacích MFC: Satelitní knihovny DLL'
+title: 'Lokalizované prostředky v aplikacích MFC: Satelitní knihovny DLL'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - multiple language support [C++]
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - resource-only DLLs [C++], MFC applications
 - satellite DLLs [C++]
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
-ms.openlocfilehash: e9f9b751da6339cbe8f352bdb7eee4b7af2c359b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d479599acceac29f0f2ee54857c663c81a919acf
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657997"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420398"
 ---
-# <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Místní zdroje v aplikacích MFC: Satelitní knihovny DLL
+# <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Lokalizované prostředky v aplikacích MFC: Satelitní knihovny DLL
 
 Knihovna MFC verze 7.0 nebo novější poskytuje rozšířenou podporu pro satelitní knihovny DLL, funkci, která pomáhá při vytváření aplikací lokalizovaných do více jazyků. Satelitní knihovna DLL je [knihovny DLL pouze prostředků](../build/creating-a-resource-only-dll.md) , který obsahuje aplikace prostředky lokalizovanými pro konkrétní jazyk. Po zahájení provádění aplikace knihovny MFC automaticky načte lokalizované prostředky, které jsou nejvhodnější pro prostředí. Například můžete mít aplikace pomocí anglické jazykové prostředky se dvěma satelitní knihovny DLL, jedna obsahuje francouzské překlad svých prostředků a druhý obsahuje německý překlad. Při spuštění aplikace v anglickém jazyce systému používá anglické prostředky. Pokud je spuštěna ve francouzské systému, používá francouzské prostředků; Pokud je spuštěna v německé systému, používá německé prostředky.
 
@@ -51,7 +51,7 @@ Jako příklad předpokládejme, že LangExample.exe aplikace používá knihovn
 
 Pokud se nenajdou žádné z těchto knihoven DLL, knihovna MFC používá prostředky v LangExample.exe.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)<br/>
 [TN057: Lokalizace komponent MFC](../mfc/tn057-localization-of-mfc-components.md)

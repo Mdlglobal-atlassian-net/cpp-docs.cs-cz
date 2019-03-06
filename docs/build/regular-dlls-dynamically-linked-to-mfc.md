@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - dynamically linked DLLs [C++]
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
-ms.openlocfilehash: 550391d51560ff0beca8252ffb6193dd1e4d89b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 548fbde379937ab4d915f08a43a8b865e071d688
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632385"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413170"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>Běžné knihovny MFC DLL staticky propojené do MFC
 
@@ -33,7 +33,7 @@ Běžné knihovny MFC DLL staticky propojené do MFC má následující funkce:
 
 - Na rozdíl od staticky propojených běžné knihovny MFC DLL tento typ knihovny DLL dynamicky propojené ke knihovně MFC DLL (označované také jako sdílená knihovna MFC DLL).
 
-- Importovat knihovny MFC propojené s DLL tento typ je stejný jako ten použitý pro rozšiřující knihovny DLL MFC nebo aplikace používající knihovnu MFC DLL: lib MFCxx (D).
+- Import knihovny MFC propojené s DLL tento typ je stejný jako ten použitý pro rozšiřující knihovny DLL MFC nebo aplikace používající knihovnu MFC DLL: MFCxx(D).lib.
 
 Běžné knihovny MFC DLL dynamicky propojené ke knihovně MFC mají následující požadavky:
 
@@ -95,6 +95,6 @@ Příklad toho, jak zapisovat, vytvářet a využívat běžné knihovny MFC DLL
 
 - [Použití prostředí MFC jako součásti knihovny DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Typy knihoven DLL](../build/kinds-of-dlls.md)

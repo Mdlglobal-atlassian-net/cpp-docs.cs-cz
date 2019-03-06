@@ -52,16 +52,16 @@ helpviewer_keywords:
 - IsUpdateAllowed method
 - m_mapCachedData
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-ms.openlocfilehash: f97e2a406d3016431babd0cb3f13334c15947258
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 0ee4fc505bb3e22046f1b0c197f14326e5a50d7d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556891"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423895"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl – třída
 
-Šablony technologie OLE DB provádění [IRowsetUpdate](https://docs.microsoft.com/previous-versions/windows/desktop/ms714401(v=vs.85)) rozhraní.
+Šablony technologie OLE DB provádění [IRowsetUpdate](/previous-versions/windows/desktop/ms714401(v=vs.85)) rozhraní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -116,8 +116,8 @@ Jednotky úložiště pro všechny popisovačů řádků uchovávat zprostředko
 |||
 |-|-|
 |[GetOriginalData](#getoriginaldata)|Získá data naposledy předány nebo získané ze zdroje dat, ignoruje se čekající změny.|
-|[Getpendingrows –](#getpendingrows)|Vrátí seznam hodnot řádků s čekajícími změnami.|
-|[GetRowStatus –](#getrowstatus)|Vrátí stav zadaných řádků.|
+|[GetPendingRows](#getpendingrows)|Vrátí seznam hodnot řádků s čekajícími změnami.|
+|[GetRowStatus](#getrowstatus)|Vrátí stav zadaných řádků.|
 |[Vrácení zpět](#undo)|Zruší všechny změny řádku od posledního načtení nebo aktualizace.|
 |[Aktualizace](#update)|Odesílá všechny změny provedené od posledního načtení nebo aktualizace řádku.|
 
@@ -125,7 +125,7 @@ Jednotky úložiště pro všechny popisovačů řádků uchovávat zprostředko
 
 |||
 |-|-|
-|[IsUpdateAllowed –](#isupdateallowed)|Používá se ke kontrole integrity, zabezpečení a tak dále předtím, než aktualizace.|
+|[IsUpdateAllowed](#isupdateallowed)|Používá se ke kontrole integrity, zabezpečení a tak dále předtím, než aktualizace.|
 
 ### <a name="data-members"></a>Datové členy
 
@@ -135,7 +135,7 @@ Jednotky úložiště pro všechny popisovačů řádků uchovávat zprostředko
 
 ## <a name="remarks"></a>Poznámky
 
-Nejprve byste si a porozuměli jim v dokumentaci k [IRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715790(v=vs.85)), protože všechno, co je popsáno zde platí i zde. Doporučujeme přečíst kapitola 6 *OLE DB referenční informace pro programátory* o nastavení data.
+Nejprve byste si a porozuměli jim v dokumentaci k [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)), protože všechno, co je popsáno zde platí i zde. Doporučujeme přečíst kapitola 6 *OLE DB referenční informace pro programátory* o nastavení data.
 
 `IRowsetUpdateImpl` implementuje rozhraní OLE DB `IRowsetUpdate` rozhraní, která umožňuje uživatelům zpoždění přenosu změn provedených s `IRowsetChange` do zdroje dat a vrátit zpět změny před samotným přenosem.
 
@@ -162,7 +162,7 @@ STDMETHOD (SetData )(HROW hRow,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IRowsetChange::SetData](https://docs.microsoft.com/previous-versions/windows/desktop/ms721232(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -182,7 +182,7 @@ STDMETHOD (GetOriginalData )(HROW hRow,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IRowsetUpdate::GetOriginalData](https://docs.microsoft.com/previous-versions/windows/desktop/ms709947(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IRowsetUpdate::GetOriginalData](/previous-versions/windows/desktop/ms709947(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="getpendingrows"></a> IRowsetUpdateImpl::GetPendingRows
 
@@ -201,13 +201,13 @@ STDMETHOD (GetPendingRows )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>Parametry
 
 *hReserved*<br/>
-[in] Odpovídá *hChapter* parametr [IRowsetUpdate::GetPendingRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719626(v=vs.85)).
+[in] Odpovídá *hChapter* parametr [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626(v=vs.85)).
 
-Další parametry, naleznete v tématu [IRowsetUpdate::GetPendingRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719626(v=vs.85)) v *OLE DB referenční informace pro programátory*.
+Další parametry, naleznete v tématu [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626(v=vs.85)) v *OLE DB referenční informace pro programátory*.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [IRowsetUpdate::GetPendingRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719626(v=vs.85)) v *OLE DB referenční informace pro programátory*.
+Další informace najdete v tématu [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626(v=vs.85)) v *OLE DB referenční informace pro programátory*.
 
 ## <a name="getrowstatus"></a> IRowsetUpdateImpl::GetRowStatus
 
@@ -225,9 +225,9 @@ STDMETHOD (GetRowStatus )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>Parametry
 
 *hReserved*<br/>
-[in] Odpovídá *hChapter* parametr [IRowsetUpdate::GetRowStatus](https://docs.microsoft.com/previous-versions/windows/desktop/ms724377(v=vs.85)).
+[in] Odpovídá *hChapter* parametr [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377(v=vs.85)).
 
-Další parametry, naleznete v tématu [IRowsetUpdate::GetRowStatus](https://docs.microsoft.com/previous-versions/windows/desktop/ms724377(v=vs.85)) v *OLE DB referenční informace pro programátory*.
+Další parametry, naleznete v tématu [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377(v=vs.85)) v *OLE DB referenční informace pro programátory*.
 
 ## <a name="undo"></a> IRowsetUpdateImpl::Undo
 
@@ -247,15 +247,15 @@ STDMETHOD (Undo )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>Parametry
 
 *hReserved*<br/>
-[in] Odpovídá *hChapter* parametr [IRowsetUpdate::Undo](https://docs.microsoft.com/previous-versions/windows/desktop/ms719655(v=vs.85)).
+[in] Odpovídá *hChapter* parametr [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655(v=vs.85)).
 
 *pcRowsUndone*<br/>
-[out] Odpovídá *pcRows* parametr [IRowsetUpdate::Undo](https://docs.microsoft.com/previous-versions/windows/desktop/ms719655(v=vs.85)).
+[out] Odpovídá *pcRows* parametr [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655(v=vs.85)).
 
 *prgRowsUndone*<br/>
-[in] Odpovídá *prgRows* parametr [IRowsetUpdate::Undo](https://docs.microsoft.com/previous-versions/windows/desktop/ms719655(v=vs.85)).
+[in] Odpovídá *prgRows* parametr [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655(v=vs.85)).
 
-Další parametry, naleznete v tématu [IRowsetUpdate::Undo](https://docs.microsoft.com/previous-versions/windows/desktop/ms719655(v=vs.85)) v *OLE DB referenční informace pro programátory*.
+Další parametry, naleznete v tématu [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655(v=vs.85)) v *OLE DB referenční informace pro programátory*.
 
 ## <a name="update"></a> IRowsetUpdateImpl::Update
 
@@ -275,13 +275,13 @@ STDMETHOD (Update )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>Parametry
 
 *hReserved*<br/>
-[in] Odpovídá *hChapter* parametr [IRowsetUpdate::Update](https://docs.microsoft.com/previous-versions/windows/desktop/ms719709(v=vs.85)).
+[in] Odpovídá *hChapter* parametr [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709(v=vs.85)).
 
-Další parametry, naleznete v tématu [IRowsetUpdate::Update](https://docs.microsoft.com/previous-versions/windows/desktop/ms719709(v=vs.85)) v *OLE DB referenční informace pro programátory*.
+Další parametry, naleznete v tématu [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709(v=vs.85)) v *OLE DB referenční informace pro programátory*.
 
 ### <a name="remarks"></a>Poznámky
 
-Změny se přenáší pomocí volání [IRowsetChangeImpl::FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md). Spotřebitel musí volat [CRowset::Update](../../data/oledb/crowset-update.md) se změny projevily. Nastavte *prgRowstatus* na odpovídající hodnotu jak je popsáno v [stavy řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms722752(v=vs.85)) v *OLE DB referenční informace pro programátory*.
+Změny se přenáší pomocí volání [IRowsetChangeImpl::FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md). Spotřebitel musí volat [CRowset::Update](../../data/oledb/crowset-update.md) se změny projevily. Nastavte *prgRowstatus* na odpovídající hodnotu jak je popsáno v [stavy řádků](/previous-versions/windows/desktop/ms722752(v=vs.85)) v *OLE DB referenční informace pro programátory*.
 
 ## <a name="isupdateallowed"></a> IRowsetUpdateImpl::IsUpdateAllowed
 
@@ -297,7 +297,7 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
 
 #### <a name="parameters"></a>Parametry
 
-*Stav*<br/>
+*status*<br/>
 [in] Stav čekající operace na řádky.
 
 *hRowUpdate*<br/>
@@ -308,7 +308,7 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud zjistíte, že má být povolený aktualizace, vrátí hodnotu S_OK; v opačném případě vrátí E_FAIL. Pokud povolíte aktualizaci, musíte také nastavit `DBROWSTATUS` v [IRowsetUpdateImpl::Update](../../data/oledb/irowsetupdateimpl-update.md) na odpovídající [řádek stavu](https://docs.microsoft.com/previous-versions/windows/desktop/ms722752(v=vs.85)).
+Pokud zjistíte, že má být povolený aktualizace, vrátí hodnotu S_OK; v opačném případě vrátí E_FAIL. Pokud povolíte aktualizaci, musíte také nastavit `DBROWSTATUS` v [IRowsetUpdateImpl::Update](../../data/oledb/irowsetupdateimpl-update.md) na odpovídající [řádek stavu](/previous-versions/windows/desktop/ms722752(v=vs.85)).
 
 ## <a name="mapcacheddata"></a> IRowsetUpdateImpl::m_mapCachedData
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - delayed loading of DLLs, specifying
 - /DELAYLOAD linker option
 ms.assetid: 94cbecfe-7a42-40d1-a618-9f2786bac0d8
-ms.openlocfilehash: 986dab0621127c90097808025825930bf9974a7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1ca214d8c840d9e993d5a89823b63868a664bec
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549861"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424883"
 ---
 # <a name="specifying-dlls-to-delay-load"></a>Určení knihoven DLL pro odložené načtení
 
@@ -35,6 +35,6 @@ int main() {
 
 Sestavení verze ladění projektu. Krokovat kód pomocí ladicího programu a můžete si všimnout, že user32.dll je načtena pouze při volání `MessageBox`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora linkeru pro knihovny DLL s odloženým načtením](../../build/reference/linker-support-for-delay-loaded-dlls.md)

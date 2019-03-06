@@ -3,12 +3,12 @@ title: Výčet tříd (C + +/ CLI a C + +/ CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: 5bc850831e961a500ae71ce90e3ca39b3aabd159
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aee3d4f44c18074ca536ff028565bbbd0e37d04c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592514"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417421"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>Výčet tříd (C + +/ CLI a C + +/ CX)
 
@@ -34,18 +34,18 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="parameters"></a>Parametry
 
-*Přístup*<br/>
+*access*<br/>
 Usnadnění výčet, který může být **veřejné** nebo **privátní**.
 
 *Identifikátor výčtu*<br/>
 Název výčtu.
 
-*Základní typ*<br/>
+*underlying-type*<br/>
 (Volitelné) Základní typ výčtu.
 
 (Volitelné. Pouze Windows Runtime) základní typ výčtu, který může být **bool**, **char**, `char16`, `int16`, `uint16`, **int**, `uint32`, `int64`, nebo `uint64`.
 
-*seznam výčtu*<br/>
+*enumerator-list*<br/>
 Čárkami oddělený seznam názvů enumerátor.
 
 Hodnota každého výčtu je konstantní výraz, který je buď definován implicitně kompilátorem, nebo explicitně zápisu, *enumerátor*`=`*konstantní výraz*. Ve výchozím nastavení hodnota první čítače výčtu je nula, pokud je implicitně definovaný. Hodnotu každé následné implicitně definovaný enumerátor je hodnota z předchozího výčtu + 1.
@@ -55,7 +55,7 @@ Hodnota každého výčtu je konstantní výraz, který je buď definován impli
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace a příklady najdete v tématu [výčty](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx).
+Další informace a příklady najdete v tématu [výčty](../cppcx/enums-c-cx.md).
 
 Všimněte si, že kompilátor vydá chybové zprávy, pokud nemůže být reprezentována konstantní výraz, který definuje hodnotu čítače *základní typ*.  Kompilátor nehlásí chybu, která je nevhodná pro základní typ hodnoty. Příklad:
 
@@ -82,16 +82,16 @@ accessenum structname [:type] { enumerator-list } var;
 
 ### <a name="parameters"></a>Parametry
 
-*Přístup*<br/>
+*access*<br/>
 Přístupnost člena výčtu. Může být buď **veřejné** nebo **privátní**.
 
-*seznam výčtu*<br/>
+*enumerator-list*<br/>
 Čárkou oddělený seznam identifikátorů (enumerátory) ve výčtu.
 
 *Jméno*<br/>
 Název výčtu. Anonymní výčty spravované nejsou povoleny.
 
-*Typ*<br/>
+*type*<br/>
 (Volitelné) Základní typ *identifikátory*. To může být libovolného skalárního typu, jako je například podepsaná nebo nepodepsaná verze z **int**, **krátký**, nebo **dlouhé**.  **BOOL** nebo **char** je také povolena.
 
 *var*<br/>

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - stack checking calls
 ms.assetid: 40daed7c-f942-4085-b872-01e12b37729e
-ms.openlocfilehash: 52e203380045c3e23b04950cb241176f10321c2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49433cd0c84b05248bacf1e930dd5ec78bc3cd1b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646462"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418825"
 ---
 # <a name="gs-control-stack-checking-calls"></a>/Gs (kontrola volání ověření zásobníku)
 
@@ -25,7 +25,7 @@ Určuje mezní hodnotu pro sondy zásobníku.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/GS**[*velikost*]
+> **/Gs**[*size*]
 
 ## <a name="arguments"></a>Arguments
 
@@ -65,7 +65,7 @@ Sondy zásobníku zapnutí nebo vypnutí můžete vypnout pomocí [check_stack �
 
 - Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

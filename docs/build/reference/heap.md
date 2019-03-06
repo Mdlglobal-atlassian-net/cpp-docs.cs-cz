@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -HEAP editbin option
 - /HEAP editbin option
 ms.assetid: 6ce759b5-75b7-44ff-a5fd-3a83a0ba9a48
-ms.openlocfilehash: 89f7b2449adc392c3ec254de9e9518be6fbecfa2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 24470c00afce54bab0a15dd08e03cef6dfee63fc
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534209"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415250"
 ---
 # <a name="heap"></a>/HEAP
 
@@ -34,6 +34,6 @@ Volitelný `commit` argument podléhá interpretaci operačního systému. V ope
 
 Zadejte `reserve` a `commit` hodnoty v desítkové nebo šestnáctkové nebo osmičkové soustavě zápisu jazyka. Například může být zadána hodnota 1 MB jako 1048576 v desítkové soustavě, nebo jako 0x100000 v šestnáctkové soustavě nebo jako 04000000 v osmičkové.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [EDITBIN – možnosti](../../build/reference/editbin-options.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - linker command line [C++]
 - LINK tool [C++], command-line syntax
 ms.assetid: e2a31e17-77bd-4e74-9305-75b105b26539
-ms.openlocfilehash: 844d2fe4c02e274cda02fe71303f0b6dd092b431
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55171c1f16b43e08b5c4a6b078c82f4ed08855d5
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464113"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422725"
 ---
 # <a name="linker-command-line-syntax"></a>Syntaxe příkazového řádku linkeru
 
@@ -32,7 +32,7 @@ Do propojovacího programu předat do souboru, zadejte na příkazovém řádku 
 
 Link.exe vrátí hodnotu 0 pro úspěch (bez chyb).  V opačném případě vrátí linkeru číslo chyby, který zastavil na odkaz.  Například pokud linker vydá LNK1104, linker vrátí 1104.  Nejnižší číslo chyby vrácené v případě chyby linkeru odpovídajícím způsobem, je 1000.  Vrácená hodnota 128 představuje buď problém s operačním systémem nebo o soubor .config. zavaděč se nenačetla link.exe nebo c2.dll.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
 [Možnosti linkeru](../../build/reference/linker-options.md)

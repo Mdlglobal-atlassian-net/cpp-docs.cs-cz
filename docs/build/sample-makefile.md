@@ -2,12 +2,12 @@
 title: Ukázkový soubor pravidel
 ms.date: 11/04/2016
 ms.assetid: 8343ce71-5556-4ae0-8d1e-7efd82673070
-ms.openlocfilehash: 248924ff83befdefe1045da197be5328095c0caf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d665185ed872cb0dc68707895a8d2a251d084ad7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534878"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415926"
 ---
 # <a name="sample-makefile"></a>Ukázkový soubor pravidel
 
@@ -34,6 +34,6 @@ challeng.exe: challeng.obj md4c.obj
   $(link) $(ldebug) $(conflags) -out:challeng.exe $** $(conlibs) lsapi32.lib
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Obsah souboru pravidel](../build/contents-of-a-makefile.md)

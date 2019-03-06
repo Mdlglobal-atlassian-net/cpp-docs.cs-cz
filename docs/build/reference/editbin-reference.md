@@ -9,12 +9,12 @@ helpviewer_keywords:
 - EDITBIN program
 - COFF files, editing
 ms.assetid: efdda03b-3dfc-4d31-90e6-caf5b3977914
-ms.openlocfilehash: c2c0ee66ed1811755edc33b24737e057554fd01f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39fdcfd3221599f20617092118e5cef5267e3d2b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542902"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418786"
 ---
 # <a name="editbin-reference"></a>EDITBIN – odkaz
 
@@ -29,6 +29,6 @@ Editbin – není k dispozici pro použití se soubory vytvořenými pomocí [/G
 
 - [– Možnosti nástroje EDITBIN](../../build/reference/editbin-options.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nástroje sestavení C/C++](../../build/reference/c-cpp-build-tools.md)

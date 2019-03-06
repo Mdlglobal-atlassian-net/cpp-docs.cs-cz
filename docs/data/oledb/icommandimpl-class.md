@@ -52,16 +52,16 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: c5e599b437f7660801a1eb40618eb49bee84a918
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: e1f461cc850a2122af7902babfad8f1e14ac3e33
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556813"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424844"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl – třída
 
-Poskytuje implementaci pro [rozhraní ICommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms709737(v=vs.85)) rozhraní.
+Poskytuje implementaci pro [rozhraní ICommand](/previous-versions/windows/desktop/ms709737(v=vs.85)) rozhraní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -89,11 +89,11 @@ Příkaz rozhraní. Výchozí hodnota je `ICommand`.
 |||
 |-|-|
 |[Zrušení](#cancel)|Zruší aktuální provedení příkazu.|
-|[Cancelexecution –](#cancelexecution)|Zruší aktuální provedení příkazu.|
-|[Createrowset –](#createrowset)|Vytvoří objekt sady řádků.|
+|[CancelExecution](#cancelexecution)|Zruší aktuální provedení příkazu.|
+|[CreateRowset](#createrowset)|Vytvoří objekt sady řádků.|
 |[Execute](#execute)|Vykoná příkaz.|
-|[Getdbsession –](#getdbsession)|Vrátí ukazatel rozhraní na relaci, která vytvoří příkaz.|
-|[Icommandimpl –](#icommandimpl)|Konstruktor|
+|[GetDBSession](#getdbsession)|Vrátí ukazatel rozhraní na relaci, která vytvoří příkaz.|
+|[ICommandImpl](#icommandimpl)|Konstruktor|
 
 ### <a name="data-members"></a>Datové členy
 
@@ -119,7 +119,7 @@ STDMETHOD(Cancel)();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [ICommand::Cancel](https://docs.microsoft.com/previous-versions/windows/desktop/ms714402(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [ICommand::Cancel](/previous-versions/windows/desktop/ms714402(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="cancelexecution"></a> ICommandImpl::CancelExecution
 
@@ -178,7 +178,7 @@ Standardní hodnoty HRESULT. Zobrazit `ICommand::Execute` seznam typické hodnot
 
 Chcete-li vytvořit více než jedné sady řádků nebo poskytnout vlastní podmínky pro vytváření různých sad řádků, umístěte volání různých `CreateRowset` zevnitř `Execute`.
 
-Zobrazit [ICommand::Execute](https://docs.microsoft.com/previous-versions/windows/desktop/ms718095(v=vs.85)) v *referenční informace pro OLE DB programátory.*
+Zobrazit [ICommand::Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) v *referenční informace pro OLE DB programátory.*
 
 ## <a name="execute"></a> ICommandImpl::Execute
 
@@ -196,7 +196,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ICommand::Execute](https://docs.microsoft.com/previous-versions/windows/desktop/ms718095(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [ICommand::Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -217,7 +217,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ICommand::GetDBSession](https://docs.microsoft.com/previous-versions/windows/desktop/ms719622(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ### <a name="remarks"></a>Poznámky
 

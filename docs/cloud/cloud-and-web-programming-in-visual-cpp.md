@@ -2,12 +2,12 @@
 title: Cloudové a webové programování v jazyku Visual C++
 ms.date: 11/04/2016
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-ms.openlocfilehash: 197d3d344d4be809c81f52f30e2462d35ebefbbe
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: ec5999a90701c427a3b7166803ee79a4a5cd19b2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519630"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414483"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Cloudové a webové programování v jazyku Visual C++
 
@@ -17,7 +17,7 @@ V jazyce C++ máte několik možností pro připojení k webu a cloudu.
 
 - [Windows Azure Mobile Services](http://www.windowsazure.com/develop/mobile/)
 
-  Poskytuje nativní rozhraní API, které můžete použít v aplikacích pro univerzální platformu Windows (UPW) nebo aplikací klasické pracovní plochy Windows k připojení k mobilním službám Windows Azure. I když většina příkladů na webu v jazyce C#, můžete použít také C++. Další informace najdete v tématu [rychlý start: přidání mobilních služeb pomocí jazyka C++](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx).
+  Poskytuje nativní rozhraní API, které můžete použít v aplikacích pro univerzální platformu Windows (UPW) nebo aplikací klasické pracovní plochy Windows k připojení k mobilním službám Windows Azure. I když většina příkladů na webu v jazyce C#, můžete použít také C++. Další informace najdete v tématu [rychlý start: Přidání mobilních služeb pomocí jazyka C++](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx).
 
 - [Klientská knihovna pro úložiště Microsoft Azure pro jazyk C++](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/)
 
@@ -44,13 +44,13 @@ V jazyce C++ máte několik možností pro připojení k webu a cloudu.
 
   Podporuje Windows Desktop (7 +), Windows Server (2012 +), univerzální platforma Windows, Linux, OSX, Android a iOS.
 
-- [Windows::Web::Http::HttpClient](https://msdn.microsoft.com/library/windows/apps/windows.web.http.httpclient.aspx)
+- [Windows::Web::Http::HttpClient](/uwp/api/windows.web.http.httpclient)
 
   Třída klienta Windows Runtime HTTP modelována ve třídě rozhraní .NET Framework se stejným názvem v oboru názvů System.Web. `HttpClient` plně podporuje asynchronní nahrávání a stahování prostřednictvím protokolu HTTP a kanály filtrů, které umožňují vkládání vlastní obslužné rutiny HTTP do kanálu. Sada Windows SDK obsahuje ukázku filtrů pro měřené sítě, ověřování OAuth a další. Pro aplikace, které se zaměřují jenom na univerzální platformu Windows, doporučujeme použít `Windows::Web:HttpClient` třídy.
 
 - [Rozhraní IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)
 
-  Poskytuje nativní rozhraní modelu COM, můžete použít v aplikacích pro Windows Runtime nebo aplikace klasické pracovní plochy Windows k připojení k Internetu přes protokol HTTP a vydávání příkazů GET, PUT a jiných příkazů protokolu HTTP. Další informace najdete v tématu [návod: připojení pomocí úloh a žádostí XML HTTP](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).
+  Poskytuje nativní rozhraní modelu COM, můžete použít v aplikacích pro Windows Runtime nebo aplikace klasické pracovní plochy Windows k připojení k Internetu přes protokol HTTP a vydávání příkazů GET, PUT a jiných příkazů protokolu HTTP. Další informace najdete v tématu [názorný postup: Připojení pomocí úloh a žádostí XML HTTP](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).
 
 - [Windows Internet (WinInet)](/windows/desktop/WinInet/portal)
 

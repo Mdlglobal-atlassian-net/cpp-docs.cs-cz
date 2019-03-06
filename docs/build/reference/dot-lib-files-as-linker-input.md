@@ -14,12 +14,12 @@ helpviewer_keywords:
 - defaults [C++], libraries
 - .lib files
 ms.assetid: dc5d2b1c-2487-41fa-aa71-ad1e0647958b
-ms.openlocfilehash: 0bf791d682b66d9d0da968fb0bfd5229e912e84c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3b2ae0d82e682cc89243b7b527ee6e0b51d4c3d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505345"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426768"
 ---
 # <a name="lib-files-as-linker-input"></a>Soubory .Lib jako vstup linkeru
 
@@ -37,7 +37,7 @@ Knihovny je zadán odkaz jako argument název souboru nebo výchozí knihovny. O
 
 ## <a name="to-programmatically-add-lib-files-as-linker-input"></a>Chcete-li programově přidat soubory .lib jako vstup linkeru
 
-- Zobrazit [AdditionalDependencies](https://msdn.microsoft.com/library/microsoft.visualstudio.vcprojectengine.vclinkertool.additionaldependencies.aspx).
+- Zobrazit [AdditionalDependencies](/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.additionaldependencies).
 
 ## <a name="example"></a>Příklad
 
@@ -67,7 +67,7 @@ int main() {
 213
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vstupní soubory LINK](../../build/reference/link-input-files.md)<br/>
 [Možnosti linkeru](../../build/reference/linker-options.md)

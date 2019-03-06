@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - helper functions
 ms.assetid: a845429d-68b1-4e14-aa88-f3f5343bd490
-ms.openlocfilehash: 0bd0066cee875408056bd88895b0b5f449802c5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2601aff6b53e9ad3a970dbe1be008efdd7008ef8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492007"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424428"
 ---
 # <a name="developing-your-own-helper-function"></a>Vývoj vlastní pomocné funkce
 
@@ -23,6 +23,6 @@ To je poměrně jednoduché, protože je v podstatě použít zadaný kód jako 
 
 Bude pravděpodobně nejjednodušším stačí zadat nový ukazatel na funkci připojení uživatelem zadané oznámení, která přijímá stejné hodnoty jako výchozí pomocné rutiny na dliStartProcessing oznámení. V tomto okamžiku funkce háku se v podstatě stát novou funkci pomocné rutiny, jak úspěšně vrátit do pomocné rutiny výchozí obejde všechny další zpracování v pomocné výchozí.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora linkeru pro knihovny DLL s odloženým načtením](../../build/reference/linker-support-for-delay-loaded-dlls.md)

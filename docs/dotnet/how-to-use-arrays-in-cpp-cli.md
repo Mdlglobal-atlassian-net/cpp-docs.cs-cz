@@ -1,17 +1,17 @@
 ---
-title: 'Postupy: Používání polí v jazyce C++/CLI'
+title: 'Postupy: Používání polí v jazyce C + +/ CLI'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - arrays [C++], single-dimension
 ms.assetid: 301cfb3e-199f-42c8-8151-629dce9e87f3
-ms.openlocfilehash: e38e15cffbf623f629f57243923ddae273801bfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b0a13441bc3532884dbbd32f28d57c15e352c3ef
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596245"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414600"
 ---
-# <a name="how-to-use-arrays-in-ccli"></a>Postupy: Používání polí v jazyce C++/CLI
+# <a name="how-to-use-arrays-in-ccli"></a>Postupy: Používání polí v jazyce C + +/ CLI
 
 Tento článek popisuje způsob použití pole v jazyce C + +/ CLI.
 
@@ -503,7 +503,7 @@ int main() {
 
 Na rozdíl od standardní pole jazyka C++ jsou spravovaná pole implicitně odvozené ze základní třídy pole ze kterého dědí společné chování. Příkladem je `Sort` metodu, která slouží k seřazení položky v libovolné pole.
 
-Pro pole, které obsahují základní vnitřní typy, můžete volat `Sort` metody. Můžete přepsat kritéria řazení a takový postup je povinný při řazení pro pole komplexních typů. V takovém případě musí implementovat typ prvku pole [IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx) metody.
+Pro pole, které obsahují základní vnitřní typy, můžete volat `Sort` metody. Můžete přepsat kritéria řazení a takový postup je povinný při řazení pro pole komplexních typů. V takovém případě musí implementovat typ prvku pole <xref:System.IComparable.CompareTo%2A> metody.
 
 ```cpp
 // array_sort.cpp
@@ -520,7 +520,7 @@ int main() {
 
 ## <a name="sorting-arrays-by-using-custom-criteria"></a>Řazení polí s použitím vlastních kritérií
 
-Můžete seřadit pole, které obsahují základní vnitřní typy, stačí zavolat `Array::Sort` metody. Však k řazení pole, které obsahují komplexních typů nebo chcete přepsat výchozí kritéria řazení, přepište [IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx) metody.
+Můžete seřadit pole, které obsahují základní vnitřní typy, stačí zavolat `Array::Sort` metody. Však k řazení pole, které obsahují komplexních typů nebo chcete přepsat výchozí kritéria řazení, přepište <xref:System.IComparable.CompareTo%2A> metody.
 
 V následujícím příkladu, s názvem struktury `Element` je odvozen z <xref:System.IComparable>a zadejte do něj zapisovat <xref:System.IComparable.CompareTo%2A> metodu, která používá průměr dvou celých čísel jako kritérium řazení.
 

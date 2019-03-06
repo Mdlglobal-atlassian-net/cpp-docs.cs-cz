@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 850c16420606452414cbe284c5f9f25031859c93
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fdfc0888e7d6213fb7c04a5257358da8f5dae138
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304519"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425091"
 ---
 # <a name="clistctrl-class"></a>CListCtrl Class
 
@@ -619,7 +619,7 @@ virtual BOOL Create(
 Určuje styl ovládacího prvku seznamu. Použijte libovolnou kombinaci – styly ovládacího prvku seznamu do ovládacího prvku. Zobrazit [styly oken zobrazení seznamu](/windows/desktop/Controls/list-view-window-styles) v sadě Windows SDK pro úplný seznam z těchto stylů vyplývají. Rozšířené styly specifické pro ovládací prvek pomocí sady [SetExtendedStyle](#setextendedstyle).
 
 *Rect*<br/>
-Určuje velikost a umístění ovládacího prvku seznamu. Může být buď `CRect` objektu nebo [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.
+Určuje velikost a umístění ovládacího prvku seznamu. Může být buď `CRect` objektu nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 *pParentWnd*<br/>
 Určuje nadřazené okno ovládacího prvku seznam, obvykle `CDialog`. Nesmí být NULL.
@@ -667,7 +667,7 @@ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené s
 Určuje styl ovládacího prvku seznamu. Použijte libovolnou kombinaci – styly ovládacího prvku seznamu do ovládacího prvku. Úplný seznam těchto stylů, najdete v části [styly oken zobrazení seznamu](/windows/desktop/Controls/list-view-window-styles) v sadě Windows SDK.
 
 *Rect*<br/>
-Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.
+Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.
 
 *pParentWnd*<br/>
 Ukazatel na okno, který je nadřazeného ovládacího prvku.
@@ -701,7 +701,7 @@ CImageList* CreateDragImage(
 Index položky, jejichž přetáhnout seznam image se má vytvořit.
 
 *lpPoint*<br/>
-Adresa [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) v zobrazení koordinuje struktury, která přijímá počáteční umístění levého horního rohu na obrázku.
+Adresa [bodu](/previous-versions/dd162805\(v=vs.85\)) v zobrazení koordinuje struktury, která přijímá počáteční umístění levého horního rohu na obrázku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1442,7 +1442,7 @@ BOOL GetGroupRect(
 |Parametr|Popis|
 |---------------|-----------------|
 |*iGroupId*|[in] Určuje skupinu.|
-|*lpRect*|[out v] Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Pokud tato metoda je úspěšná, strukturu, obdrží obdélník souřadnice skupiny, která je určená *iGroupId*.|
+|*lpRect*|[out v] Ukazatel [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury. Pokud tato metoda je úspěšná, strukturu, obdrží obdélník souřadnice skupiny, která je určená *iGroupId*.|
 |*iCoords*|[in] Určuje souřadnice obdélník k načtení. Použijte jednu z těchto hodnot:<br /><br /> -LVGGR_GROUP – (výchozí) souřadnice celý rozbalené skupiny.<br />-LVGGR_HEADER - souřadnice pouze záhlaví (sbalené skupiny).<br />-LVGGR_SUBSETLINK - koordinuje pouze podmnožina odkazu (je to podskupina značek).|
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1451,7 +1451,7 @@ Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota F
 
 ### <a name="remarks"></a>Poznámky
 
-Volající zodpovídá za přidělování [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury na které odkazují *pRect* parametru.
+Volající zodpovídá za přidělování [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury na které odkazují *pRect* parametru.
 
 Tato metoda odesílá [LVM_GETGROUPRECT](/windows/desktop/Controls/lvm-getgrouprect) zprávu, která je popsána v sadě Windows SDK.
 
@@ -1790,7 +1790,7 @@ BOOL GetItemIndexRect(
 |*pItemIndex*|[in] Ukazatel [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) strukturu pro nadřazenou položku podřízenou položku.<br /><br /> Volající zodpovídá za přidělování a nastavení členové [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) struktury. Tento parametr nemůže mít hodnotu NULL.|
 |*iColumn*|[in] Z nuly vycházející index sloupce v ovládacím prvku.|
 |*rectType*|[in] Část subitem zobrazení seznamu, pro který je načten ohraničující obdélník. Zadejte jednu z následujících hodnot:<br /><br /> LVIR_BOUNDS – vrací ohraničující obdélník podřízenou položku včetně ikonu a popisek.<br /><br /> LVIR_ICON – vrací ohraničující obdélník ikonu nebo malé ikony podřízenou položku.<br /><br /> LVIR_LABEL – vrací ohraničující obdélník text podřízenou položku.|
-|*pRect*|[out] Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která obdrží informace o ohraničující obdélník podřízenou položku.<br /><br /> Volající zodpovídá za přidělování [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Tento parametr nemůže mít hodnotu NULL.|
+|*pRect*|[out] Ukazatel [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura, která obdrží informace o ohraničující obdélník podřízenou položku.<br /><br /> Volající zodpovídá za přidělování [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury. Tento parametr nemůže mít hodnotu NULL.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1844,7 +1844,7 @@ BOOL GetItemPosition(
 Index položky, jejichž pozice má být načtena.
 
 *lpPoint*<br/>
-Adresa [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) v zobrazení koordinuje struktury, která bude přijímat pozice levého horního rohu položky.
+Adresa [bodu](/previous-versions/dd162805\(v=vs.85\)) v zobrazení koordinuje struktury, která bude přijímat pozice levého horního rohu položky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1883,7 +1883,7 @@ BOOL GetItemRect(
 Index položky, jejichž pozice má být načtena.
 
 *lpRect*<br/>
-Adresa [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá ohraničující obdélník.
+Adresa [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura, která přijímá ohraničující obdélník.
 
 *nCode*<br/>
 Část položky zobrazení seznamu, pro které se mají načíst ohraničující obdélník. Může být jedna z těchto hodnot:
@@ -2220,7 +2220,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 ### <a name="parameters"></a>Parametry
 
 *lpPoint*<br/>
-Adresa [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktura, která přijímá zobrazení původu.
+Adresa [bodu](/previous-versions/dd162805\(v=vs.85\)) struktura, která přijímá zobrazení původu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2531,7 +2531,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Adresa [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.
+Adresa [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2834,7 +2834,7 @@ int InsertMarkHitTest(
 ### <a name="parameters"></a>Parametry
 
 *pPoint*<br/>
-Ukazatel [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) strukturu, která obsahuje průchodů testů koordinuje vzhledem ke klientské oblasti ovládacího prvku seznamu.
+Ukazatel [bodu](/previous-versions/dd162805\(v=vs.85\)) strukturu, která obsahuje průchodů testů koordinuje vzhledem ke klientské oblasti ovládacího prvku seznamu.
 
 *lvim*<br/>
 Ukazatel [LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark) struktura, která určuje, co nejblíž koncovým souřadnice určené parametrem bodu kurzoru.
@@ -3854,7 +3854,7 @@ BOOL SetItemPosition(
 Index položky, jejichž pozice je nastavit.
 
 *pt*<br/>
-A [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) koordinuje struktury zadáte novou pozici v zobrazení levého horního rohu položky.
+A [bodu](/previous-versions/dd162805\(v=vs.85\)) koordinuje struktury zadáte novou pozici v zobrazení levého horního rohu položky.
 
 ### <a name="return-value"></a>Návratová hodnota
 

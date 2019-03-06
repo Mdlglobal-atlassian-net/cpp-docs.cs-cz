@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateWindowsMetadata
 ms.assetid: bcfb4901-411e-4c9e-9f78-23028b6e5fcc
-ms.openlocfilehash: 3a59dd770d9429f23a4f401c6e1f5b13b9f743ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 83d22a0114b26f53fa9df9d2470c71cd80465d64
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656102"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426680"
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD (Generování metadat Windows)
 
@@ -42,9 +42,9 @@ Ve výchozím nastavení, název výstupního souboru má tvar *binaryname*.winm
 
 1. V **generování metadat Windows** rozevíracího seznamu vyberte požadovanou možnost.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Návod: Vytvoření komponenty jednoduché Windows Runtime a volání komponenty z jazyka JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)<br/>
+[Návod: Vytvoření součásti jednoduché prostředí Windows Runtime a volání komponenty z jazyka JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)<br/>
 [Úvod do Microsoft Interface Definition Language 3.0](/uwp/midl-3/intro)<br/>
 [/WINMDFILE (určení souboru winmd)](winmdfile-specify-winmd-file.md)<br/>
 [/WINMDKEYFILE (určení souboru klíče winmd)](winmdkeyfile-specify-winmd-key-file.md)<br/>

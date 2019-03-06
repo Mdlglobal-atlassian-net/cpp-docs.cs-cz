@@ -2,12 +2,12 @@
 title: Delegáti (C + +/ CX)
 ms.date: 01/22/2017
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
-ms.openlocfilehash: 8153ac6ffc48b43fc218ee786cdb3f64504d825e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb23c5d1ae35a56a827bc2436dbdd81b53dd1224
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635237"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415276"
 ---
 # <a name="delegates-ccx"></a>Delegáti (C + +/ CX)
 
@@ -23,7 +23,7 @@ Delegáty se běžně používají ve spojení s událostmi. Událost má typ de
 event PrimeFoundHandler^ primeFoundEvent;
 ```
 
-Při deklarování delegáty, kteří budou přístupné pro klienty napříč binárním rozhraním aplikace Windows Runtime, použijte [Windows::Foundation:: typedeventhandler\<TSender, TResult >](https://msdn.microsoft.com/library/windows/apps/br225997.aspx). Tento delegát má předdefinovaná proxy a zástupných procedur binární soubory, které umožňují využívat klientů Javascript.
+Při deklarování delegáty, kteří budou přístupné pro klienty napříč binárním rozhraním aplikace Windows Runtime, použijte [Windows::Foundation:: typedeventhandler\<TSender, TResult >](/uwp/api/windows.foundation.typedeventhandler). Tento delegát má předdefinovaná proxy a zástupných procedur binární soubory, které umožňují využívat klientů Javascript.
 
 ## <a name="consuming-delegates"></a>Použití delegátů
 

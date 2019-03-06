@@ -2,12 +2,12 @@
 title: /INTEGRITYCHECK (povinná kontrola podpisu)
 ms.date: 11/04/2016
 ms.assetid: 9e738825-2c98-40cd-8ad2-5d0d9c14893e
-ms.openlocfilehash: 8530175cd5bc0ed5dced7f92e5f67a1576bb43e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad4420847be7c8bbcaa9fda4c5b7dfda818e7f27
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578344"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419594"
 ---
 # <a name="integritycheck-require-signature-check"></a>/INTEGRITYCHECK (povinná kontrola podpisu)
 
@@ -35,7 +35,7 @@ Ve výchozím nastavení **/INTEGRITYCHECK** je vypnuté.
 
 1. V **další možnosti**, zadejte `/INTEGRITYCHECK` nebo `/INTEGRITYCHECK:NO`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
 [Možnosti linkeru](../../build/reference/linker-options.md)<br/>

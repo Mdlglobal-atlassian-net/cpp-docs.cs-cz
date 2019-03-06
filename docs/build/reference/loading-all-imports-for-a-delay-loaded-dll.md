@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - __HrLoadAllImportsForDll linker option
 ms.assetid: 975fcd97-1a56-4a16-9698-e1a249d2d592
-ms.openlocfilehash: a9e9df6b0bae49eaf599e56e5d96040afae315e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a144f3d4e0d6dbf306938dcc3fddd4faca73c17c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536562"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421165"
 ---
 # <a name="loading-all-imports-for-a-delay-loaded-dll"></a>Načtení všech importů pro knihovnu DLL se zpožděným načtením
 
@@ -30,6 +30,6 @@ if (FAILED(__HrLoadAllImportsForDll("delay1.dll"))) {
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora linkeru pro knihovny DLL s odloženým načtením](../../build/reference/linker-support-for-delay-loaded-dlls.md)

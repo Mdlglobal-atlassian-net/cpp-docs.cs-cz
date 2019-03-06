@@ -10,12 +10,12 @@ helpviewer_keywords:
 - FU compiler option [C++]
 - /FU compiler option [C++]
 ms.assetid: 698f8603-457f-435a-baff-5ac9243d6ca1
-ms.openlocfilehash: ecd9290336cfd6efd183bdd701f1d447b7ddaf2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a035be2080d9fe407799122f804668e0fc3ce76
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492089"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413157"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (soubor s vynuceným názvem #using)
 
@@ -50,7 +50,7 @@ Informace o tom, jak vytvořit sestavení nebo modul pro modul common language r
 
 - Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForcedUsingFiles%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti výstupního souboru (/F)](../../build/reference/output-file-f-options.md)<br/>
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>

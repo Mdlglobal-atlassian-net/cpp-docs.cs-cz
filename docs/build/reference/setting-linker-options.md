@@ -9,12 +9,12 @@ helpviewer_keywords:
 - input files [C++]
 - object/library modules
 ms.assetid: e08fb487-0f2e-4f24-87db-232dbc8bd2e2
-ms.openlocfilehash: 5b885ad5c86bc59029fc6a3a60ccee385703ab2d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61f4ee8d02cda5b2cd270d7ef789bf58060e7fdf
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508937"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423167"
 ---
 # <a name="setting-linker-options"></a>Nastavení možností linkeru
 
@@ -32,7 +32,7 @@ ODKAZ první procesy možnosti zadané v proměnné prostředí LINK, za nímž 
 
 Možnosti platí pro celé sestavení; bez možností je použít na konkrétní vstupní soubory.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Referenční zdroje k sestavení programu v jazyce C/C++](../../build/reference/c-cpp-building-reference.md)<br/>
 [Možnosti linkeru](../../build/reference/linker-options.md)

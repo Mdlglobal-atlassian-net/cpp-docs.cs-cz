@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __delayLoadHelper2 function
 - helper functions, what's changed
 ms.assetid: 99f0be69-105d-49ba-8dd5-3be7939c0c72
-ms.openlocfilehash: 8d50962bf66e07d6238be4a1a973c9d9ff06a556
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25c59d37b753c80014b566fd925363cae71798be
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613769"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426521"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Změny v podpůrné funkci knihovny DLL s odloženým načtením od aplikace Visual C++ verze 6.0
 
@@ -47,12 +47,12 @@ Je-li definovány vlastní pomocné funkce a používáte aktuální verzi jazyk
 
 - Přejmenovat pomocnou funkci pro **__delayloadhelper2 –**.
 
-- Protože ukazatele v popisovači zpoždění (v delayimp.h ImgDelayDescr) byly změněny z absolutních adresách (pro vozidla) na relativní adresy (RVA) fungovat podle očekávání v obě 32bitové a 64bitové aplikace, musíte převést tyto zpět na ukazatele. Byly zavedeny nové funkce: pfromrva –, který je součástí delayhlp.cpp. Tuto funkci můžete použít na všech polí v popisovači převést zpět na buď ukazatele 32 nebo 64 bitů. Pomocná funkce výchozí zpoždění zatížení nadále funkční šablonu, která slouží jako příklad.
+- Protože ukazatele v popisovači zpoždění (v delayimp.h ImgDelayDescr) byly změněny z absolutních adresách (pro vozidla) na relativní adresy (RVA) fungovat podle očekávání v obě 32bitové a 64bitové aplikace, musíte převést tyto zpět na ukazatele. Byly zavedeny nové funkce: Pfromrva – součástí delayhlp.cpp. Tuto funkci můžete použít na všech polí v popisovači převést zpět na buď ukazatele 32 nebo 64 bitů. Pomocná funkce výchozí zpoždění zatížení nadále funkční šablonu, která slouží jako příklad.
 
 ## <a name="load-all-imports-for-a-delay-loaded-dll"></a>Načtení všech importů pro knihovnu DLL se zpožděným načtením
 
 Propojovací program můžete načíst všechny importy z knihovny DLL, který jste zadali jako zpožděné načtení. Zobrazit [načtení všech importů pro knihovnu DLL Delay-Loaded](../../build/reference/loading-all-imports-for-a-delay-loaded-dll.md) Další informace.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Základní informace o podpůrné funkci](understanding-the-helper-function.md)

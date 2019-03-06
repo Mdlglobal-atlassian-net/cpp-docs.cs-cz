@@ -7,18 +7,18 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: d00b9036b216e3425615478d6bf92d239a3637d1
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: fb915a2f61c2adfedc41630e637f6b5beee30768
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556696"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424359"
 ---
 # <a name="updating-rowsets"></a>Aktualizace sad řádků
 
 Operace databáze basic je aktualizovat, nebo zápis dat do úložiště dat. V OLE DB, je jednoduchý mechanismus aktualizace: aplikace příjemce nastaví hodnoty vázaných dat členů a pak zapíše hodnoty do sady řádků; Příjemce potom, aktualizujte poskytovatele úložiště dat požadavky.
 
-Uživatelé dokončit následující typy aktualizací na sadu řádků dat: nastavení hodnot sloupce v řádku, řádku vkládání a odstraňování řádku. K dokončení těchto operací třídu šablony technologie OLE DB [CRowset](../../data/oledb/crowset-class.md) implementuje [IRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715790(v=vs.85)) rozhraní a přepíše metody následující rozhraní:
+Uživatelé dokončit následující typy aktualizací na sadu řádků dat: nastavení hodnot sloupce v řádku, řádku vkládání a odstraňování řádku. K dokončení těchto operací třídu šablony technologie OLE DB [CRowset](../../data/oledb/crowset-class.md) implementuje [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)) rozhraní a přepíše metody následující rozhraní:
 
 - [Operaci SetData](../../data/oledb/crowset-setdata.md) hodnoty pro sloupce změny za sebou sady řádků; to odpovídá příkazu SQL UPDATE.
 
@@ -207,4 +207,4 @@ Nakonec jeden z hlavních důvodů odložit změny je možné vrátit zpět, je.
 
 [Práce s šablonami příjemců OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
 [CRowset – třída](../../data/oledb/crowset-class.md)<br/>
-[IRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715790(v=vs.85))<br/>
+[IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))<br/>
