@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-ms.openlocfilehash: 03209bc409453cab1769606cb972f4572d3617bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a66f78d225a5899b53a931c7eb6a0564de689ca1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548496"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423284"
 ---
 # <a name="overview-of-lib"></a>Přehled LIB
 
@@ -33,13 +33,13 @@ V následující tabulce jsou uvedeny možnosti lib.exe odkazy na další inform
 
 |Možnost|Popis|
 |-|-|
-|**/ DEF**|Vytvořte knihovnu importu a souboru exportu.<br/><br/>Další informace najdete v části [sestavení knihovny importu a exportu souboru](../../build/reference/building-an-import-library-and-export-file.md).|
+|**/DEF**|Vytvořte knihovnu importu a souboru exportu.<br/><br/>Další informace najdete v části [sestavení knihovny importu a exportu souboru](../../build/reference/building-an-import-library-and-export-file.md).|
 |**/ ERRORREPORT**|   Odesílat informace společnosti Microsoft o vnitřních chybách s lib.exe.<br/><br/>Další informace najdete v části [spuštění knihovny LIB](../../build/reference/running-lib.md).|
 |**/EXPORT**|   Exportuje funkci z vaší aplikace.<br/><br/>Další informace najdete v části [sestavení knihovny importu a exportu souboru](../../build/reference/building-an-import-library-and-export-file.md).|
 |**/ EXTRACT**|   Vytvořte soubor objektů (.obj), který obsahuje kopii členem existující knihovnu.<br/><br/>Další informace najdete v části [extrahování člena knihovny](../../build/reference/extracting-a-library-member.md).|
 |**/ INCLUDE**|   Symbol se přidá do tabulky symbolů.<br/><br/>Další informace najdete v části [sestavení knihovny importu a exportu souboru](../../build/reference/building-an-import-library-and-export-file.md).|
-|**/ LIBPATH**|   Přepíše cestu ke knihovně prostředí.<br/><br/>Další informace najdete v části [Správa knihovny](../../build/reference/managing-a-library.md).|
-|**/ LIST**|   Zobrazí informace o výstupní knihovně na standardním výstupu.<br/><br/>Další informace najdete v části [Správa knihovny](../../build/reference/managing-a-library.md).|
+|**/LIBPATH**|   Přepíše cestu ke knihovně prostředí.<br/><br/>Další informace najdete v části [Správa knihovny](../../build/reference/managing-a-library.md).|
+|**/LIST**|   Zobrazí informace o výstupní knihovně na standardním výstupu.<br/><br/>Další informace najdete v části [Správa knihovny](../../build/reference/managing-a-library.md).|
 |**/LTCG**|   Způsobí, že knihovna, která má být sestaven pomocí generování kódu při propojování.<br/><br/>Další informace najdete v části [spuštění knihovny LIB](../../build/reference/running-lib.md).|
 |**/ MACHINE**|   Určuje cílovou platformu programu.<br/><br/>Další informace najdete v části [spuštění knihovny LIB](../../build/reference/running-lib.md).|
 |**/ NAME**|   Při sestavování knihovny importů Určuje název knihovny DLL pro kterou má být sestaven knihovny importu.<br/><br/>Další informace najdete v části [Správa knihovny](../../build/reference/managing-a-library.md).|
@@ -51,7 +51,7 @@ V následující tabulce jsou uvedeny možnosti lib.exe odkazy na další inform
 |**/ VERBOSE**|   Zobrazí podrobnosti o průběhu relace, včetně názvů přidávané soubory .obj.<br/><br/>Další informace najdete v části [spuštění knihovny LIB](../../build/reference/running-lib.md).|
 |**/WX**|   Zpracovávat upozornění jako chyby.<br/><br/>Další informace najdete v části [spuštění knihovny LIB](../../build/reference/running-lib.md).|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace ke knihovně LIB](../../build/reference/lib-reference.md)<br/>
 [Vstupní soubory knihovny LIB](../../build/reference/lib-input-files.md)<br/>

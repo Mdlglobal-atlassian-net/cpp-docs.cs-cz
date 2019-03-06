@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: b73e27097a64722afd6bad5b9bc2157655bd9aad
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 70bba379f33be2d4df05f6b96eac14bf248cf356
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274502"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414640"
 ---
 # <a name="csplitbutton-class"></a>Csplitbutton – třída
 
@@ -97,7 +97,7 @@ virtual BOOL Create(
 |Parametr|Popis|
 |---------------|-----------------|
 |*dwStyle*|[in] Bitová kombinace (nebo) stylů pro ovládací prvek. Další informace najdete v tématu [styly](../../mfc/reference/styles-used-by-mfc.md#button-styles).|
-|*Rect*|[in] Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, která obsahuje umístění a velikost ovládacího prvku.|
+|*Rect*|[in] Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) strukturu, která obsahuje umístění a velikost ovládacího prvku.|
 |*pParentWnd*|[in] Nenulový ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku.|
 |*nID*|[in] ID ovládacího prvku.|
 

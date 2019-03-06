@@ -18,12 +18,12 @@ helpviewer_keywords:
 - troubleshooting release builds
 - memory [C++], overwrites
 ms.assetid: 73cbc1f9-3e33-472d-9880-39a8e9977b95
-ms.openlocfilehash: a19eabc7b3e334f4a2a6d967d2bfc81b080c0054
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb5098ab4c92a408ae5895b5c59c7ecd36585bdb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546549"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415653"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>Běžné problémy při vytváření sestavení pro vydání
 
@@ -63,7 +63,7 @@ Chybí informace o ladění odstraní odsazení z vaší aplikace. Ukazatele str
 
 V závislosti na povaze určité segmenty kódů optimalizující kompilátor může vygenerovat neočekávaný kód. Toto je nejméně pravděpodobné příčiny problémů se sestavením pro vydání, ale v některých případech dojít. Řešení, najdete v části [optimalizace kódu](../../build/reference/optimizing-your-code.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Sestavení pro vydání](../../build/reference/release-builds.md)<br/>
 [Oprava problémů se sestavením pro vydání](../../build/reference/fixing-release-build-problems.md)

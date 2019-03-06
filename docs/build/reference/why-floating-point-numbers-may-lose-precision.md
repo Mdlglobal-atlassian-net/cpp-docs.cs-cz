@@ -6,12 +6,12 @@ helpviewer_keywords:
 - FLT_EPSILON constant
 - floating-point numbers, precision
 ms.assetid: 1acb1add-ac06-4134-a2fd-aff13d8c4c15
-ms.openlocfilehash: 6e6f758e7a683a28189123b03252223476ac732a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b001bff2f5327599fc5ad2ecae141976403ec58
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442663"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424064"
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>Proč čísla s plovoucí desetinnou čárkou mohou ztratit přesnost
 
@@ -62,6 +62,6 @@ They are not equal! The value of c is  2.4679999352 or 2.468000
 
 EPSILON, můžete použít konstanty FLT_EPSILON, která je definována pro plovoucí desetinnou čárkou jako 1.192092896e-07F, nebo DBL_EPSILON, která je definována pro double jako 2.2204460492503131e-016. Je třeba zahrnout float.h pro tyto konstanty. Tyto konstanty jsou definovány jako nejmenší kladné číslo x, například tento x + 1,0 není roven 1,0. Protože jde o velmi malé číslo, by měly používat uživatelem definované proti chybám pro výpočty s velmi velká čísla.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Optimalizace kódu](../../build/reference/optimizing-your-code.md)

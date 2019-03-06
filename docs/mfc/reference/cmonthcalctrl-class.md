@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 9807d45f12b5336ebbb80ea9718af77cf8d38188
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 440d158774a716db9fba351200f2760783925cc6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303667"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413924"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl Class
 
@@ -227,10 +227,10 @@ virtual BOOL Create(
 Určuje kombinaci styly Windows použité pro ovládací prvek měsíční kalendář. Zobrazit [– styly ovládacích prvků kalendáře měsíce](/windows/desktop/Controls/month-calendar-control-styles) v sadě Windows SDK pro další informace o stylech.
 
 *Rect*<br/>
-Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Obsahuje umístění a velikost ovládací prvek měsíční kalendář.
+Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury. Obsahuje umístění a velikost ovládací prvek měsíční kalendář.
 
 *pt*<br/>
-Odkaz na [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) strukturu, která identifikuje umístění ovládací prvek měsíční kalendář.
+Odkaz na [bodu](/previous-versions/dd162805\(v=vs.85\)) strukturu, která identifikuje umístění ovládací prvek měsíční kalendář.
 
 *pParentWnd*<br/>
 Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno Ovládací prvek měsíční kalendář. Nesmí být NULL.
@@ -523,7 +523,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 ### <a name="parameters"></a>Parametry
 
 *pRect*<br/>
-Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která bude dostávat informace ohraničující obdélník. Tento parametr musí být platnou adresou a nesmí mít hodnotu NULL.
+Ukazatel [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura, která bude dostávat informace ohraničující obdélník. Tento parametr musí být platnou adresou a nesmí mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1290,11 +1290,11 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*lpRect*|[in] Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, která definuje obdélník, který obsahuje požadované číslo kalendáře.|
+|*lpRect*|[in] Ukazatel [RECT](/previous-versions/dd162897\(v=vs.85\)) strukturu, která definuje obdélník, který obsahuje požadované číslo kalendáře.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, která definuje obdélníku, jehož velikost je menší než nebo rovna obdélníku definovaném *lprect –* parametru.
+Ukazatel [RECT](/previous-versions/dd162897\(v=vs.85\)) strukturu, která definuje obdélníku, jehož velikost je menší než nebo rovna obdélníku definovaném *lprect –* parametru.
 
 ### <a name="remarks"></a>Poznámky
 

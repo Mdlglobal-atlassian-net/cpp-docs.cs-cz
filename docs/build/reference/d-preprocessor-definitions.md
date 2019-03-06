@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -D compiler option [C++]
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
-ms.openlocfilehash: 21836d2842427581cc5019a42c563a78356d1ec2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 089f34f6daa606ed2869852a04ee76c6bda8fe25
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620503"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424675"
 ---
 # <a name="d-preprocessor-definitions"></a>/D (definice preprocesoru)
 
@@ -46,7 +46,7 @@ Tento příkaz definuje symbol DEBUG v souboru TEST.c:
 
 Tento příkaz odebere všechny výskyty klíčového slova `__far` v souboru TEST.c:
 
-**CL /D__far = TEST. C**
+**CL /D__far=  TEST.C**
 
 **CL** nelze nastavit proměnné prostředí na řetězec, který obsahuje rovnítko. Chcete-li použít **/D** spolu s **CL** prostředí proměnné, je nutné zadat znak čísla místo rovnítka:
 
@@ -54,7 +54,7 @@ Tento příkaz odebere všechny výskyty klíčového slova `__far` v souboru TE
 SET CL=/DTEST#0
 ```
 
-Při definici symbolu předzpracování na příkazovém řádku pamatujte jak na pravidla analýzy kompilátoru, tak na pravidla analýzy prostředí. Chcete-li například v programu definovat jako symbol předzpracování znak procenta (%), zadejte na příkazovém řádku dva znaky procenta (%%); pokud zadáte pouze jeden, dojde k chybě analýzy.
+Při definici symbolu předzpracování na příkazovém řádku pamatujte jak na pravidla analýzy kompilátoru, tak na pravidla analýzy prostředí. Například, chcete-li definovat symbol předzpracování znak procenta (%) ve svém programu zadejte znak procenta dvou znaků (%) na příkazovém řádku: Pokud zadáte pouze jeden, jsou vydávány chybu analýzy.
 
 ```
 CL /DTEST=%% TEST.C
@@ -95,7 +95,7 @@ int main( )
 TEST defined 1
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>

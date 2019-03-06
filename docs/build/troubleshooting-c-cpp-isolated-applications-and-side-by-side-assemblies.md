@@ -6,12 +6,12 @@ helpviewer_keywords:
 - troubleshooting isolated applications
 - troubleshooting Visual C++
 ms.assetid: 3257257a-1f0b-4ede-8564-9277a7113a35
-ms.openlocfilehash: 58d8453cc50c28527c1f777db1b47ea23299d38f
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 74c57ee8e79da039796f28b9517e1ef41007cef0
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693942"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413729"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Řešení potíží s izolovanými aplikacemi C/C++ a souběžnými sestaveními
 
@@ -100,7 +100,7 @@ Ale sestavení můžete také nainstalovat jako soukromé sestavení vedle sebe 
 
 Další informace o jak zavaděč hledá závislá sestavení naleznete v tématu [pořadí hledání sestavení](/windows/desktop/SbsCs/assembly-searching-sequence). Pokud zavaděč nepodaří najít závislé sestavení jako soukromé sestavení, zatížení se nezdaří a zobrazí se zpráva "systém nemůže spustit určený program". Chcete-li vyřešit tuto chybu, ujistěte se, že závislé sestavení – a knihovny DLL, které jsou součástí je – jsou nainstalovány v počítači jako privátní nebo sdílené sestavení.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Koncept izolovaných aplikací a souběžných sestavení](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)<br/>
 [Sestavení izolovaných aplikací C/C++ a souběžných sestavení](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

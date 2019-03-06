@@ -13,12 +13,12 @@ helpviewer_keywords:
 - banners, suppressing startup
 - NOLOGO linker option
 ms.assetid: 3b20dddd-eca6-4545-a331-9f70bf720197
-ms.openlocfilehash: d246da2e10f7c16f7c194962841e2e44d1fd1758
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1b966c1f7af556a85aadcafaa8ed43da5b3f75df
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515541"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422153"
 ---
 # <a name="nologo-suppress-startup-banner-linker"></a>/NOLOGO (Potlačit úvodní nápis při spouštění) (linker)
 
@@ -42,7 +42,7 @@ Ve výchozím nastavení tyto informace jsou odeslány pomocí linkeru, aby v ok
 
 1. Tohoto parametru linkeru nelze změnit prostřednictvím kódu programu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
 [Možnosti linkeru](../../build/reference/linker-options.md)

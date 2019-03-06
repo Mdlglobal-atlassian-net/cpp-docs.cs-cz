@@ -10,12 +10,12 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-ms.openlocfilehash: effefa2c370634c450b03ed18187769e12e40adf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48592fd6162ee354d82e73228e8b144ef0f354ed
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500383"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420581"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Export z knihovny DLL pomocí deklarace __declspec(dllexport)
 
@@ -80,6 +80,6 @@ Jako odkaz Hledat v souboru hlaviček Win32 Winbase.h. Obsahuje příklady **__d
 
 - [Vzájemné importy](../build/mutual-imports.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Export z knihovny DLL](../build/exporting-from-a-dll.md)

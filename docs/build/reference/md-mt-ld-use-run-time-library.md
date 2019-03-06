@@ -35,12 +35,12 @@ helpviewer_keywords:
 - LIBCMTD.lib
 - -MT compiler option [C++]
 ms.assetid: cf7ed652-dc3a-49b3-aab9-ad60e5395579
-ms.openlocfilehash: 5c7f71e51e0741c534761b22a66ac77a6df8f870
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a953a63409c0b6c281533466797e1fc0c30c7a66
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661081"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415822"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD, /MT, /LD (Použít běhovou knihovnu)
 
@@ -58,12 +58,12 @@ Označuje, zda je vícevláknový modul knihovnou DLL, a určuje prodejní nebo
 
 |Možnost|Popis|
 |------------|-----------------|
-|**/ MD**|Způsobí, že aplikace použije verzi knihovny runtime, která je vícevláknová a specifická pro knihovnu DLL. Definuje `_MT` a `_DLL` a způsobí, že kompilátor umístí knihovnu s názvem MSVCRT.lib do souboru .obj.<br /><br /> Aplikace kompilované s tímto parametrem jsou staticky propojeny se souborem MSVCRT.lib. Tato knihovna poskytuje vrstvu kódu, která linkeru umožňuje překládat externí odkazy. Skutečný pracovní kód je obsažen v knihovně MSVCR*číslo_verze*. Knihovny DLL, která musí být k dispozici v době běhu k aplikacím propojeným s knihovnou MSVCRT.lib.|
-|**/ MDd**|Definuje `_DEBUG`, `_MT`, a `_DLL` a způsobí, že aplikace použije ladicí Vícevláknová a specifická knihovnu DLL verze knihovny run-time. Navíc způsobí, že kompilátor umístí knihovnu s názvem MSVCRTD.lib do souboru .obj.|
+|**/MD**|Způsobí, že aplikace použije verzi knihovny runtime, která je vícevláknová a specifická pro knihovnu DLL. Definuje `_MT` a `_DLL` a způsobí, že kompilátor umístí knihovnu s názvem MSVCRT.lib do souboru .obj.<br /><br /> Aplikace kompilované s tímto parametrem jsou staticky propojeny se souborem MSVCRT.lib. Tato knihovna poskytuje vrstvu kódu, která linkeru umožňuje překládat externí odkazy. Skutečný pracovní kód je obsažen v knihovně MSVCR*číslo_verze*. Knihovny DLL, která musí být k dispozici v době běhu k aplikacím propojeným s knihovnou MSVCRT.lib.|
+|**/MDd**|Definuje `_DEBUG`, `_MT`, a `_DLL` a způsobí, že aplikace použije ladicí Vícevláknová a specifická knihovnu DLL verze knihovny run-time. Navíc způsobí, že kompilátor umístí knihovnu s názvem MSVCRTD.lib do souboru .obj.|
 |**/MT**|Způsobí, že aplikace použije vícevláknovou statickou verzi knihovny runtime. Definuje `_MT` a způsobí, že kompilátor umístí knihovnu s názvem LIBCMT.lib do souboru .obj, aby linker použil k překladu externích symbolů LIBCMT.lib.|
 |**/MTd**|Definuje `_DEBUG` a `_MT`. Tento parametr navíc způsobí, že kompilátor umístí knihovnu s názvem LIBCMTD.lib do souboru .obj, aby linker použil k překladu externích symbolů soubor LIBCMTD.lib.|
 |**/LD**|Vytvoří knihovnu DLL.<br /><br /> Předává **/dll** – možnost linkeru. Propojovací program hledá, ale nevyžaduje, `DllMain` funkce. Pokud nenapíšete `DllMain` vloží linker funkci `DllMain` funkce, která vrací hodnotu TRUE.<br /><br /> Propojí spouštěcí kód knihovny DLL.<br /><br /> Vytvoří knihovnu importu (.lib), není-li na příkazovém řádku zadán soubor exportu (.exp). Knihovnu importu propojíte s aplikacemi, které volají vaši knihovnu DLL.<br /><br /> Interpretuje [/Fe (pojmenování souboru EXE)](../../build/reference/fe-name-exe-file.md) jako pojmenování knihovny DLL a nikoli souboru .exe. Ve výchozím nastavení, název programu bude *basename*.dll namísto *basename*.exe.<br /><br /> Zahrnuje **/MT** Pokud explicitně neurčíte **/MD**.|
-|**/ LDd**|Vytvoří ladicí knihovnu DLL. Definuje `_MT` a `_DEBUG`.|
+|**/LDd**|Vytvoří ladicí knihovnu DLL. Definuje `_MT` a `_DEBUG`.|
 
 Další informace o běhové knihovny jazyka C a které knihovny se používají při kompilaci s [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md), naleznete v tématu [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md).
 
@@ -87,7 +87,7 @@ Další informace o knihovnách DLL naleznete v tématu [knihovny DLL v jazyce V
 
 - Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.RuntimeLibrary%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

@@ -4,12 +4,12 @@ ms.date: 09/05/2018
 helpviewer_keywords:
 - cl.exe compiler, return value
 ms.assetid: 7c2d7f33-ee0d-4199-8ef4-75fe2b007670
-ms.openlocfilehash: 39b53731d94e3b5ff5fcb666caac6a584c34d287
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ad4b7947890d105d2c87bc4dbf29186fa15a86b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656076"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412780"
 ---
 # <a name="return-value-of-clexe"></a>Návratová hodnota cl.exe
 
@@ -17,7 +17,7 @@ Program cl.exe vrátí při úspěchu nulovou hodnotu (bez chyb), v opačném p
 
 Vrácená hodnota programu cl.exe může být užitečná při kompilaci ze skriptu, prostředí powershell, souboru .cmd nebo .bat. Pro případ, že se vyskytnou chyby nebo upozornění, doporučujeme výstup kompilátoru zachytit, abyste je mohli vyřešit.
 
-Program cl.exe má příliš mnoho možných ukončovacích kódů, než aby zde byly všechny uvedeny. Můžete vyhledat kód chyby ve winerror.h nebo ntstatus.h soubory součástí sady Windows Software Development Kit ve složce % ProgramFiles (x86) %\Windows sady\\<em>verze</em>\Include\shared\ adresáře. Kvůli vyhledávání se kódy chyb vrácené v desítkové soustavě musí převést do šestnáctkové soustavy. Například kód chyby -1073741620 se do šestnáctkové soustavy převede jako 0xC00000CC. Tato chyba se nachází v souboru ntstatus.h s odpovídající zprávou „Zadaný sdílený název nelze najít na vzdáleném serveru“. Ke stažení seznam kódů chyb Windows najdete v tématu [ &#91;MS-ERREF&#93;: kódy chyb Windows](https://msdn.microsoft.com/library/cc231196).
+Program cl.exe má příliš mnoho možných ukončovacích kódů, než aby zde byly všechny uvedeny. Můžete vyhledat kód chyby ve winerror.h nebo ntstatus.h soubory součástí sady Windows Software Development Kit ve složce % ProgramFiles (x86) %\Windows sady\\<em>verze</em>\Include\shared\ adresáře. Kvůli vyhledávání se kódy chyb vrácené v desítkové soustavě musí převést do šestnáctkové soustavy. Například kód chyby -1073741620 se do šestnáctkové soustavy převede jako 0xC00000CC. Tato chyba se nachází v souboru ntstatus.h s odpovídající zprávou „Zadaný sdílený název nelze najít na vzdáleném serveru“. Ke stažení seznam kódů chyb Windows najdete v tématu [ &#91;MS-ERREF&#93;: Kódy chyb Windows](https://msdn.microsoft.com/library/cc231196).
 
 Ke zjištění významu chybových zpráv kompilátoru můžete použít také nástroj pro vyhledávání chyb v sadě Visual Studio. V příkazovém prostředí sady Visual Studio, zadejte **errlook.exe** spustit nástroj; nebo v sadě Visual Studio IDE, v řádku nabídek zvolte **nástroje**, **vyhledávání chyby**. Zadáním chybové hodnoty najdete popisný text přidružený k této chybě. Další informace najdete v části [errlook – odkaz](../../build/reference/errlook-reference.md).
 
@@ -49,6 +49,6 @@ cl /W4 t.cpp
 :end
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Syntaxe příkazového řádku kompilátoru](../../build/reference/compiler-command-line-syntax.md)

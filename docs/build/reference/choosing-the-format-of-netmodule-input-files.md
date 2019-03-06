@@ -2,12 +2,12 @@
 title: Výběr formátu vstupních souborů .netmodule
 ms.date: 11/04/2016
 ms.assetid: 4653d1bd-300f-4083-86f5-d1a06f44e61c
-ms.openlocfilehash: 92f7aafa102a8591192f4394aee62afe86bb3549
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed492e47c09c05fc8ce2af3e19822cc5dde47b63
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444314"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420047"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>Výběr formátu vstupních souborů .netmodule
 
@@ -34,6 +34,6 @@ Použijte následující postup k určení, jestli je potřeba použít .netmodu
 
 - Pokud moduly se použije k vytvoření spravované knihovny a jeden nebo více modulů vstup do linkeru se nevytvoří se jen parametrem/CLR, použijte soubory .obj jako vstup modulu do linkeru a generovat DLL (sestavení).  Pokud chcete vystavit spravované typy z knihovny a pokud chcete využívat nativní typy v knihovně aplikace C++, knihovny bude obsahovat soubory .obj pro moduly komponentu knihovny (budete také chtít odeslání souborů .h jednotlivých modulů takže může být odkazováno pomocí #include ze zdrojového kódu).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Soubory .netmodule jako vstup linkeru](../../build/reference/netmodule-files-as-linker-input.md)

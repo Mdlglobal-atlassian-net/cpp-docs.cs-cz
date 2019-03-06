@@ -2,12 +2,12 @@
 title: Pole a WriteOnlyArray (C + +/ CX)
 ms.date: 01/22/2017
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-ms.openlocfilehash: b957e7d34486aced4796a029ebfdfa710dc71fcc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 44dc57d834272a1d78b0825ac5208d3b251aef6b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530192"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420697"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Pole a WriteOnlyArray (C + +/ CX)
 
@@ -79,13 +79,13 @@ Systém typů prostředí Windows Runtime nepodporuje konceptu Vícenásobná po
 
 V některých scénářích, kde je data předávána napříč ABI do [Platform::Array](../cppcx/platform-array-class.md)a nakonec chcete zpracovávat data v poli ve stylu jazyka C pro účinnost mezi body, můžete použít [Platform::arrayreference –](../cppcx/platform-arrayreference-class.md) Chcete-li se vyhnout operaci kopírování navíc. Při předání [Platform::arrayreference –](../cppcx/platform-arrayreference-class.md) jako argument pro parametr, který přijímá `Platform::Array`, `ArrayReference` se uloží data přímo do pole stylu C, který zadáte. Právě mějte na paměti, který `ArrayReference` nemá žádný zámek na zdrojová data tak, že data se změnily nebo odstranily v jiném vlákně, před dokončením volání, výsledky bude definováno.
 
-Následující fragment kódu ukazuje, jak kopírovat výsledky [DataReader](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx) operace do `Platform::Array` (vzorce) a potom nahraďte `ArrayReference` ke zkopírování dat přímo do pole stylu C:
+Následující fragment kódu ukazuje, jak kopírovat výsledky [DataReader](/uwp/api/Windows.Storage.Streams.DataReader) operace do `Platform::Array` (vzorce) a potom nahraďte `ArrayReference` ke zkopírování dat přímo do pole stylu C:
 
 [!code-cpp[cx_arrays#07](../cppcx/codesnippet/CPP/js-array/class1.h#07)]
 
 ## <a name="avoid-exposing-an-array-as-a-property"></a>Vyhněte se úniku pole jako vlastnost
 
-Obecně byste se měli vyhnout vystavení `Platform::Array` typu jako vlastnost v třídy ref class, protože celého pole se vrátí i v případě, že kód klienta je pouze pokusu o přístup k jeden element. Když budete chtít pořadí kontejner zveřejnit jako vlastnost v public ref class, [Windows::Foundation::IVector](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) je lepší volbou. V privátní nebo interní rozhraní API (které nejsou publikovány na metadata), zvažte použití standardní C++ kontejneru jako například [std::vector](../standard-library/vector-class.md).
+Obecně byste se měli vyhnout vystavení `Platform::Array` typu jako vlastnost v třídy ref class, protože celého pole se vrátí i v případě, že kód klienta je pouze pokusu o přístup k jeden element. Když budete chtít pořadí kontejner zveřejnit jako vlastnost v public ref class, [Windows::Foundation::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) je lepší volbou. V privátní nebo interní rozhraní API (které nejsou publikovány na metadata), zvažte použití standardní C++ kontejneru jako například [std::vector](../standard-library/vector-class.md).
 
 ## <a name="see-also"></a>Viz také
 

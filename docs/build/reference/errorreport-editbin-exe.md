@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ERRORREPORT editbin option
 - /ERRORREPORT editbin option
 ms.assetid: eca66ac3-b754-4bd7-9dd4-e04fc79a71b6
-ms.openlocfilehash: 046b446ae8065bc8da16ae97005df5d2ff3a1155
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb1cb07d7b162c9bf2824bebbc2ec0c8cba2dd86
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605007"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417239"
 ---
 # <a name="errorreport-editbinexe"></a>/ERRORREPORT (editbin.exe)
 
@@ -27,6 +27,6 @@ Pokud editbin.exe selže v době běhu, můžete použít **/errorreport** odes�
 
 Další informace o **/errorreport**, naleznete v tématu [/errorreport (sestava interními chybami kompilátoru)](../../build/reference/errorreport-report-internal-compiler-errors.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [EDITBIN – možnosti](../../build/reference/editbin-options.md)

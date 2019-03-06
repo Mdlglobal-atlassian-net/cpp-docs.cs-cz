@@ -10,12 +10,12 @@ helpviewer_keywords:
 - bsc files, building
 - BSCMAKE
 ms.assetid: b97ad994-1355-4809-98db-6abc12c6fb13
-ms.openlocfilehash: 1f321d51d1b880ea634c835567767c528aca041b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1dd89047b8fa6a415e7e19dd69ca3f499887299f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509471"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416246"
 ---
 # <a name="bscmake-reference"></a>BSCMAKE – odkaz
 
@@ -33,7 +33,7 @@ Pokud vytváříte program mimo vývojové prostředí, můžete stále vytvoři
 
 Tento oddíl obsahuje následující témata:
 
-- [Sestavení souborů informací o procházení: Přehled](../../build/reference/building-browse-information-files-overview.md)
+- [Sestavení souborů s informacemi o procházení: Přehled](../../build/reference/building-browse-information-files-overview.md)
 
 - [Sestavení souboru .bsc](../../build/reference/building-a-dot-bsc-file.md)
 
@@ -45,6 +45,6 @@ Tento oddíl obsahuje následující témata:
 
 - [BscMake – kódy ukončení](../../build/reference/bscmake-exit-codes.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nástroje sestavení C/C++](../../build/reference/c-cpp-build-tools.md)

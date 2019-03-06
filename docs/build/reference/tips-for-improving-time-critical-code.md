@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _lfind function
 - heap allocation, time-critical code performance
 ms.assetid: 3e95a8cc-6239-48d1-9d6d-feb701eccb54
-ms.openlocfilehash: 081c8b46d03abf8257cc9bea642db93918f97429
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5017088a2f82e02e6f9fd5954f78cfdacb3fded
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536939"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413612"
 ---
 # <a name="tips-for-improving-time-critical-code"></a>Tipy pro zlepšení časově kritického kódu
 
@@ -157,6 +157,6 @@ Menší pracovní sady znamená lepší místo odkazu na méně chyb stránky a 
 
 - Pokud chcete zobrazit velikost pracovní sady, použijte nástroje Spy ++.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Optimalizace kódu](../../build/reference/optimizing-your-code.md)

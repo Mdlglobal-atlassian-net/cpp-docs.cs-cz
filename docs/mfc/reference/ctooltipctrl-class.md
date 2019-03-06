@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 7750b7335b99bbfaa02c1f310c70bb868ef56573
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6055926e05f8a7f9fbecec113e859d08e6b6e636
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300957"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420840"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -210,7 +210,7 @@ Ukazatel na okno, které obsahuje nástroj.
 ID prostředku řetězců obsahující text pro nástroj.
 
 *lpRectTool*<br/>
-Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury obsahující souřadnice nástroj společnosti ohraničující obdélník. Souřadnice jsou relativní vzhledem k levého horního rohu klientské oblasti okna identifikovaný *pWnd*.
+Ukazatel [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury obsahující souřadnice nástroj společnosti ohraničující obdélník. Souřadnice jsou relativní vzhledem k levého horního rohu klientské oblasti okna identifikovaný *pWnd*.
 
 *nIDTool*<br/>
 ID tohoto nástroje.
@@ -248,7 +248,7 @@ BOOL AdjustRect(
 ### <a name="parameters"></a>Parametry
 
 *lprc*<br/>
-Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která obsahuje obdélník tip okno nástroje nebo zobrazovací obdélník text.
+Ukazatel [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura, která obsahuje obdélník tip okno nástroje nebo zobrazovací obdélník text.
 
 *bLarger*<br/>
 Při hodnotě TRUE se *lprc* slouží k určení obdélník zobrazení textu a přijímat odpovídající rámeček okna. Pokud má hodnotu FALSE, *lprc* slouží k určení okno obdélníku, a přijímá zobrazovací obdélník odpovídající text.
@@ -453,7 +453,7 @@ void GetMargin(LPRECT lprc) const;
 ### <a name="parameters"></a>Parametry
 
 *lprc*<br/>
-Adresa `RECT` struktura, která bude dostávat informace okraj. Členové [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura nedefinují ohraničující obdélník. Pro účely této zprávy jsou členy struktury interpretován takto:
+Adresa `RECT` struktura, která bude dostávat informace okraj. Členové [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura nedefinují ohraničující obdélník. Pro účely této zprávy jsou členy struktury interpretován takto:
 
 |Člen|Reprezentace|
 |------------|--------------------|
@@ -867,7 +867,7 @@ Ukazatel na okno, které obsahuje nástroj.
 ID tohoto nástroje.
 
 *lpRect*<br/>
-Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura zadání nového ohraničující obdélník.
+Ukazatel [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura zadání nového ohraničující obdélník.
 
 ##  <a name="setwindowtheme"></a>  CToolTipCtrl::SetWindowTheme
 

@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 9cf01f16fe21d0c5bea34bf168c6ea6bff04c195
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5b3e34987b5d6b63ee302ba53e456c448ac3c3d2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263608"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413950"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog – třída
 
@@ -582,7 +582,7 @@ STDMETHOD(EnableModeless)(BOOL fEnable);
 ### <a name="parameters"></a>Parametry
 
 *fEnable*<br/>
-Zobrazit *fEnable* v [IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx) v sadě Windows SDK.
+Zobrazit *fEnable* v [IDocHostUIHandler::EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -590,7 +590,7 @@ Vrátí E_NOTIMPL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
 
 ##  <a name="filterdataobject"></a>  CDHtmlDialog::FilterDataObject
 
@@ -605,7 +605,7 @@ STDMETHOD(FilterDataObject)(
 ### <a name="parameters"></a>Parametry
 
 *pDO*<br/>
-Zobrazit *pDO* v [IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx) v sadě Windows SDK.
+Zobrazit *pDO* v [IDocHostUIHandler::FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\)) v sadě Windows SDK.
 
 *ppDORet*<br/>
 Zobrazit *ppDORet* v `IDocHostUIHandler::FilterDataObject` v sadě Windows SDK.
@@ -616,7 +616,7 @@ Vrátí S_FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
 
 ##  <a name="getcontroldispatch"></a>  CDHtmlDialog::GetControlDispatch
 
@@ -695,7 +695,7 @@ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který obs
 
 ##  <a name="getdhtmldocument"></a>  CDHtmlDialog::GetDHtmlDocument
 
-Načte [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) rozhraní v aktuálně načtených dokumentu HTML.
+Načte [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) rozhraní v aktuálně načtených dokumentu HTML.
 
 ```
 HRESULT GetDHtmlDocument(IHTMLDocument2 **pphtmlDoc);
@@ -722,7 +722,7 @@ STDMETHOD(GetDropTarget)(
 ### <a name="parameters"></a>Parametry
 
 *pDropTarget*<br/>
-Zobrazit *pDropTarget* v [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx) v sadě Windows SDK.
+Zobrazit *pDropTarget* v [IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) v sadě Windows SDK.
 
 *ppDropTarget*<br/>
 Zobrazit *ppDropTarget* v `IDocHostUIHandler::GetDropTarget` v sadě Windows SDK.
@@ -733,7 +733,7 @@ Vrátí E_NOTIMPL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
 
 ##  <a name="getelement"></a>  CDHtmlDialog::GetElement
 
@@ -896,7 +896,7 @@ STDMETHOD(GetExternal)(IDispatch** ppDispatch);
 ### <a name="parameters"></a>Parametry
 
 *ppDispatch*<br/>
-Zobrazit *ppDispatch* v [IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx) v sadě Windows SDK.
+Zobrazit *ppDispatch* v [IDocHostUIHandler::GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\)) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -904,7 +904,7 @@ Vrátí hodnotu S_OK při úspěchu nebo E_NOTIMPL při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
 
 ##  <a name="gethostinfo"></a>  CDHtmlDialog::GetHostInfo
 
@@ -917,7 +917,7 @@ STDMETHOD(GetHostInfo)(DOCHOSTUIINFO* pInfo);
 ### <a name="parameters"></a>Parametry
 
 *pInfo*<br/>
-Zobrazit *pInfo* v [IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx) v sadě Windows SDK.
+Zobrazit *pInfo* v [IDocHostUIHandler::GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -925,7 +925,7 @@ Vrátí hodnotu S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
 
 ##  <a name="getoptionkeypath"></a>  CDHtmlDialog::GetOptionKeyPath
 
@@ -940,7 +940,7 @@ STDMETHOD(GetOptionKeyPath)(
 ### <a name="parameters"></a>Parametry
 
 *pchKey*<br/>
-Zobrazit *pchKey* v [IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx) v sadě Windows SDK.
+Zobrazit *pchKey* v [IDocHostUIHandler::GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\)) v sadě Windows SDK.
 
 *dw*<br/>
 Zobrazit *dw* v `IDocHostUIHandler::GetOptionKeyPath` ve Windows SDK.
@@ -951,7 +951,7 @@ Vrátí E_NOTIMPL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
 
 ##  <a name="hideui"></a>  CDHtmlDialog::HideUI
 
@@ -967,7 +967,7 @@ Vrátí E_NOTIMPL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::HideUI](https://msdn.microsoft.com/library/aa753259.aspx), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
 
 ##  <a name="isexternaldispatchsafe"></a>  CDHtmlDialog::IsExternalDispatchSafe
 
@@ -1082,7 +1082,7 @@ void Navigate(
 Ukazatel na řetězec obsahující adresu URL, na kterou bude cílit.
 
 *dwFlags*<br/>
-Příznaky proměnná, která určuje, zda bude příslušný materiál přidán do seznamu historie, jestli se z mezipaměti zápisu nebo čtení do mezipaměti a jestli se mají zobrazovat prostředku v novém okně. Proměnná může být kombinací hodnot určené [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) výčtu.
+Příznaky proměnná, která určuje, zda bude příslušný materiál přidán do seznamu historie, jestli se z mezipaměti zápisu nebo čtení do mezipaměti a jestli se mají zobrazovat prostředku v novém okně. Proměnná může být kombinací hodnot určené [BrowserNavConstants](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\)) výčtu.
 
 *lpszTargetFrameName*<br/>
 Ukazatel na řetězec, který obsahuje název rámce, ve kterém chcete zobrazit zdroj.
@@ -1143,7 +1143,7 @@ STDMETHOD(OnDocWindowActivate)(BOOL fActivate);
 ### <a name="parameters"></a>Parametry
 
 *fActivate*<br/>
-Zobrazit *fActivate* v [IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx) v sadě Windows SDK.
+Zobrazit *fActivate* v [IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1151,7 +1151,7 @@ Vrátí E_NOTIMPL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je od CDHtmlDialog čerpat ze [IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je od CDHtmlDialog čerpat ze [IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
 
 ##  <a name="onframewindowactivate"></a>  CDHtmlDialog::OnFrameWindowActivate
 
@@ -1164,7 +1164,7 @@ STDMETHOD(OnFrameWindowActivate)(BOOL fActivate);
 ### <a name="parameters"></a>Parametry
 
 *fActivate*<br/>
-Zobrazit *fActivate* v [IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx) v sadě Windows SDK.
+Zobrazit *fActivate* v [IDocHostUIHandler::OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1172,7 +1172,7 @@ Vrátí E_NOTIMPL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
 
 ##  <a name="oninitdialog"></a>  CDHtmlDialog::OnInitDialog
 
@@ -1226,7 +1226,7 @@ STDMETHOD(ResizeBorder)(
 ### <a name="parameters"></a>Parametry
 
 *prcBorder*<br/>
-Zobrazit *prcBorder* v [IDocHostUIHandler::ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx) v sadě Windows SDK.
+Zobrazit *prcBorder* v [IDocHostUIHandler::ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\)) v sadě Windows SDK.
 
 *pUIWindow*<br/>
 Zobrazit *pUIWindow* v `IDocHostUIHandler::ResizeBorder` v sadě Windows SDK.
@@ -1372,7 +1372,7 @@ void SetHostFlags(DWORD dwFlags);
 ### <a name="parameters"></a>Parametry
 
 *dwFlags*<br/>
-Možné hodnoty najdete v části [DOCHOSTUIFLAG](https://msdn.microsoft.com/library/aa753277.aspx) v sadě Windows SDK.
+Možné hodnoty najdete v části [DOCHOSTUIFLAG](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753277\(v=vs.85\)) v sadě Windows SDK.
 
 ##  <a name="showcontextmenu"></a>  CDHtmlDialog::ShowContextMenu
 
@@ -1389,7 +1389,7 @@ STDMETHOD(ShowContextMenu)(
 ### <a name="parameters"></a>Parametry
 
 *dwID*<br/>
-Zobrazit *dwID* v [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx) v sadě Windows SDK.
+Zobrazit *dwID* v [IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) v sadě Windows SDK.
 
 *ppt*<br/>
 Zobrazit *ppt* v `IDocHostUIHandler::ShowContextMenu` ve Windows SDK.
@@ -1406,7 +1406,7 @@ Vrátí S_FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
 
 ##  <a name="showui"></a>  CDHtmlDialog::ShowUI
 
@@ -1424,7 +1424,7 @@ STDMETHOD(ShowUI)(
 ### <a name="parameters"></a>Parametry
 
 *dwID*<br/>
-Zobrazit *dwID* v [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx) v sadě Windows SDK.
+Zobrazit *dwID* v [IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) v sadě Windows SDK.
 
 *pActiveObject*<br/>
 Zobrazit *d pActiveObject* v `IDocHostUIHandler::ShowUI` v sadě Windows SDK.
@@ -1444,7 +1444,7 @@ Vrátí S_FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
 
 ##  <a name="translateaccelerator"></a>  CDHtmlDialog::TranslateAccelerator
 
@@ -1460,7 +1460,7 @@ STDMETHOD(TranslateAccelerator)(
 ### <a name="parameters"></a>Parametry
 
 *lpMsg*<br/>
-Zobrazit *lpMsg* v [IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx) v sadě Windows SDK.
+Zobrazit *lpMsg* v [IDocHostUIHandler::TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\)) v sadě Windows SDK.
 
 *pguidCmdGroup*<br/>
 Zobrazit *pguidCmdGroup* v `IDocHostUIHandler::TranslateAccelerator` v sadě Windows SDK.
@@ -1474,7 +1474,7 @@ Vrátí S_FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
 
 ##  <a name="translateurl"></a>  CDHtmlDialog::TranslateUrl
 
@@ -1490,7 +1490,7 @@ STDMETHOD(TranslateUrl)(
 ### <a name="parameters"></a>Parametry
 
 *dwTranslate*<br/>
-Zobrazit *dwTranslate* v [IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx) v sadě Windows SDK.
+Zobrazit *dwTranslate* v [IDocHostUIHandler::TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)) v sadě Windows SDK.
 
 *pchURLIn*<br/>
 Zobrazit *pchURLIn* v `IDocHostUIHandler::TranslateUrl` v sadě Windows SDK.
@@ -1504,7 +1504,7 @@ Vrátí S_FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
 
 ##  <a name="updateui"></a>  CDHtmlDialog::UpdateUI
 
@@ -1520,7 +1520,7 @@ Vrátí E_NOTIMPL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::UpdateUI](https://msdn.microsoft.com/library/aa753268.aspx), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::UpdateUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753268\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
 
 ## <a name="see-also"></a>Viz také:
 

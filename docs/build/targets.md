@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - targets, specifying in NMAKE
 ms.assetid: 826ee849-4278-4c6e-97c3-79a2b5fe6463
-ms.openlocfilehash: f2163b6fdbd03c5cc1f5af307b5646f31d8a0c34
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d9341178150e19aac51379c2b31ca4ca25bc7f8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664214"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415432"
 ---
 # <a name="targets"></a>Cíle
 
@@ -27,6 +27,6 @@ V řádku závislostí, zadejte jeden nebo více cílů, pomocí libovolný plat
 
 [Vedlejší efekty závislostí](../build/dependency-side-effects.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bloky popisů](../build/description-blocks.md)

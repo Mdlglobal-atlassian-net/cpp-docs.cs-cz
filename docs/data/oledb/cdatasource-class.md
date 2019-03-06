@@ -57,12 +57,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: 53e9305dd308e77afbd8d53754614c1cfb559f94
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: ed2c0b11dfdc6882352c87166b74b2fab327fcd3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557073"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418604"
 ---
 # <a name="cdatasource-class"></a>CDataSource – třída
 
@@ -85,14 +85,14 @@ class CDataSource
 |||
 |-|-|
 |[Zavřít](#close)|Ukončí připojení.|
-|[Getinitializationstring –](#getinitializationstring)|Načte inicializační řetězec zdroje dat, která je aktuálně otevřená.|
+|[GetInitializationString](#getinitializationstring)|Načte inicializační řetězec zdroje dat, která je aktuálně otevřená.|
 |[GetProperties](#getproperties)|Získá hodnoty vlastností pro připojených zdrojů dat aktuálně nastavená.|
 |[Metoda GetProperty](#getproperty)|Získá hodnotu jedné vlastnosti pro připojených zdrojů dat aktuálně nastavená.|
 |[Otevřít](#open)|Vytvoří připojení ke zprostředkovateli (zdroj dat), buď pomocí `CLSID`, `ProgID`, nebo `CEnumerator` moniker poskytnutá volajícím.|
 |[OpenFromFileName](#openfromfilename)|Otevře se zdroji dat ze souboru určeném názvem souboru zadaný uživatelem.|
-|[OpenFromInitializationString –](#openfrominitializationstring)|Otevře se zdroji dat určené inicializačního řetězce.|
+|[OpenFromInitializationString](#openfrominitializationstring)|Otevře se zdroji dat určené inicializačního řetězce.|
 |[OpenWithPromptFileName](#openwithpromptfilename)|Umožňuje uživateli vybrat dříve vytvořeného datového souboru odkaz k otevření odpovídající zdroj dat.|
-|[Openwithservicecomponents –](#openwithservicecomponents)|Otevře objekt zdroje dat pomocí dialogového okna dat propojení.|
+|[OpenWithServiceComponents](#openwithservicecomponents)|Otevře objekt zdroje dat pomocí dialogového okna dat propojení.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -152,7 +152,7 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IDBProperties::GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms714344(v=vs.85)) v *referenční informace pro OLE DB programátory* ve Windows SDK.
+Zobrazit [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344(v=vs.85)) v *referenční informace pro OLE DB programátory* ve Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -179,7 +179,7 @@ HRESULT GetProperty(const GUID& guid,
 *identifikátor GUID*<br/>
 [in] Identifikátor GUID identifikující vlastnost, pro které se má vrátit vlastnost nastavit.
 
-*číslo PropId*<br/>
+*propid*<br/>
 [in] Vlastnost ID pro vlastnost vrátit.
 
 *pVariant*<br/>
@@ -240,14 +240,14 @@ HRESULT Open(LPCSTR szProgID,
 
 #### <a name="parameters"></a>Parametry
 
-*identifikátor CLSID*<br/>
+*clsid*<br/>
 [in] `CLSID` Data zprostředkovatele.
 
 *pPropSet*<br/>
-[in] Ukazatel na pole [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) v *referenční informace pro OLE DB programátory* ve Windows SDK.
+[in] Ukazatel na pole [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](/previous-versions/windows/desktop/ms713696(v=vs.85)) v *referenční informace pro OLE DB programátory* ve Windows SDK.
 
 *nPropertySets*<br/>
-[in] Počet [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury předané *pPropSet* argument.
+[in] Počet [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury předané *pPropSet* argument.
 
 *pName*<br/>
 [in] Název databáze pro připojení.
@@ -259,7 +259,7 @@ HRESULT Open(LPCSTR szProgID,
 [in] Heslo uživatele.
 
 *nInitMode*<br/>
-[in] Režim inicializaci databáze. Zobrazit [inicializační vlastnosti](https://docs.microsoft.com/previous-versions/windows/desktop/ms723127(v=vs.85))v *OLE DB referenční informace pro programátory* v sadě Windows SDK pro seznam režimů platné inicializace. Pokud *nInitMode* je nula, žádná inicializace režimu je součástí sady vlastností, které se používá k otevření připojení.
+[in] Režim inicializaci databáze. Zobrazit [inicializační vlastnosti](/previous-versions/windows/desktop/ms723127(v=vs.85))v *OLE DB referenční informace pro programátory* v sadě Windows SDK pro seznam režimů platné inicializace. Pokud *nInitMode* je nula, žádná inicializace režimu je součástí sady vlastností, které se používá k otevření připojení.
 
 *szProgID*<br/>
 [in] Identifikátor programu.
@@ -304,7 +304,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 *szFileName*<br/>
 [in] Název souboru, obvykle připojení ke zdroji dat (. Soubor UDL).
 
-Další informace o souborech odkaz data (soubory UDL) najdete v tématu [Data přehled rozhraní API odkazu](https://docs.microsoft.com/previous-versions/windows/desktop/ms718102(v=vs.85)) v sadě Windows SDK.
+Další informace o souborech odkaz data (soubory UDL) najdete v tématu [Data přehled rozhraní API odkazu](/previous-versions/windows/desktop/ms718102(v=vs.85)) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -392,17 +392,17 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 
 #### <a name="parameters"></a>Parametry
 
-*identifikátor CLSID*<br/>
+*clsid*<br/>
 [in] `CLSID` Data zprostředkovatele.
 
 *szProgID*<br/>
 [in] ID programu zprostředkovatele dat
 
 *pPropset*<br/>
-[in] Ukazatel na pole [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) v *referenční informace pro OLE DB programátory* ve Windows SDK. Pokud je inicializovat objekt zdroje dat, vlastnosti musí patřit do skupiny vlastností zdroje dat. Pokud stejná vlastnost je zadán více než jednou v *pPropset*, jehož hodnota se používá se specifickým pro zprostředkovatele. Pokud *ulPropSets* je nula, tento parametr je ignorován.
+[in] Ukazatel na pole [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](/previous-versions/windows/desktop/ms713696(v=vs.85)) v *referenční informace pro OLE DB programátory* ve Windows SDK. Pokud je inicializovat objekt zdroje dat, vlastnosti musí patřit do skupiny vlastností zdroje dat. Pokud stejná vlastnost je zadán více než jednou v *pPropset*, jehož hodnota se používá se specifickým pro zprostředkovatele. Pokud *ulPropSets* je nula, tento parametr je ignorován.
 
 *ulPropSets*<br/>
-[in] Počet [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury předané *pPropSet* argument. Pokud to je nula, poskytovatel ignoruje *pPropset*.
+[in] Počet [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury předané *pPropSet* argument. Pokud to je nula, poskytovatel ignoruje *pPropset*.
 
 ### <a name="return-value"></a>Návratová hodnota
 

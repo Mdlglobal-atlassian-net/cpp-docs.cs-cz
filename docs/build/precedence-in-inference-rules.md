@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rules, inference
 - precedence, inference rule
 ms.assetid: 69e3dc02-0815-4c3a-b02b-1cb85fceaf24
-ms.openlocfilehash: 30dee54c99115c076f7662bafb8aa22d97f234fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99d92985b00f7c05f409b43009eb61cec6d6f1b1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548730"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413274"
 ---
 # <a name="precedence-in-inference-rules"></a>Priorita odvozených pravidel
 
@@ -23,6 +23,6 @@ Pokud odvozené pravidlo je definovaná víckrát, používá NMAKE definici nej
 
 1. Předdefinované odvozené pravidlo.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odvozená pravidla](../build/inference-rules.md)

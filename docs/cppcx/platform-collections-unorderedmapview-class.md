@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-ms.openlocfilehash: 9564904fa77ae6a7355119e83bdfa3ac65a4050c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a60d962d79684cb16d8d5a5139b9b65df8148052
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560833"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414405"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView – třída
 
@@ -57,7 +57,7 @@ UnorderedMapView je konkrétní implementaci C++ [Windows::Foundation::Collectio
 |[UnorderedMapView::HasKey](#haskey)|Určuje, zda aktuální UnorderedMapView obsahuje zadaný klíč.|
 |[UnorderedMapView::Lookup](#lookup)|Získá prvek na zadaný klíč v aktuálním objektu UnorderedMapView.|
 |[Unorderedmapview::size –](#size)|Vrátí počet prvků v aktuálním objektu UnorderedMapView.|
-|[Unorderedmapview::split –](#split)|Původní objekt UnorderedMapView rozdělí na dva objekty UnorderedMapView.|
+|[UnorderedMapView::Split](#split)|Původní objekt UnorderedMapView rozdělí na dva objekty UnorderedMapView.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -71,7 +71,7 @@ UnorderedMapView je konkrétní implementaci C++ [Windows::Foundation::Collectio
 
 ## <a name="first"></a>  Unorderedmapview::First – metoda
 
-Vrátí iterátor, který určuje první [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) prvek neuspořádanou mapu.
+Vrátí iterátor, který určuje první [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) prvek neuspořádanou mapu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -87,7 +87,7 @@ Iterátor, který určuje první prvek v zobrazení mapy.
 
 ### <a name="remarks"></a>Poznámky
 
-Praktický způsob uložení iterátorů vrácené First() je přiřadit návratovou hodnotu proměnné, která je deklarována s **automaticky** klíčovým slovem odvození typu. Například `auto x = myMapView->First();`.
+Praktický způsob uložení iterátorů vrácené First() je přiřadit návratovou hodnotu proměnné, která je deklarována s **automaticky** klíčovým slovem odvození typu. Například, `auto x = myMapView->First();`.
 
 ## <a name="haskey"></a>  Unorderedmapview::haskey – metoda
 
@@ -101,7 +101,7 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč používaná k nalezení prvku. Typ `key` je typename *K*.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -120,7 +120,7 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč používaná k nalezení prvku v UnorderedMapView. Typ `key` je typename *K*.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -129,7 +129,7 @@ Hodnota, která se páruje s oblastí `key`. Typ vrácené hodnoty je typename *
 
 ## <a name="size"></a>  Unorderedmapview::size – metoda
 
-Vrátí počet [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) prvky UnorderedMapView.
+Vrátí počet [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) prvky UnorderedMapView.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -236,7 +236,7 @@ Odkaz nebo [hodnoty lvalue a rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) k
 *první*<br/>
 Vstupní iterátor první prvek v rozsahu prvků, které slouží k inicializaci UnorderedMapView.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor první prvek po celou řadu prvků, které slouží k inicializaci UnorderedMapView.
 
 ## <a name="see-also"></a>Viz také

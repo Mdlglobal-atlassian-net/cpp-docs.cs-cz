@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '@ linker option'
 - response files, C/C++ linker
 ms.assetid: 5530014f-17d0-4f6b-a6b0-a6ba34f34cfd
-ms.openlocfilehash: e253381cef2fc46cf40792be85ad8367d75eef70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32c100a5b7388c71081c46200ec8aea047ccf0d4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595746"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412468"
 ---
 # <a name="-specify-a-linker-response-file"></a>@ (Zadat soubor odpovědí linkeru)
 
@@ -42,7 +42,7 @@ Zobrazit [@ (zadat soubor odezvy kompilátoru)](../../build/reference/at-specify
 
 - Tohoto parametru linkeru nelze změnit prostřednictvím kódu programu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
 [Možnosti linkeru](../../build/reference/linker-options.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - output files, preprocessor
 - preprocessing output files
 ms.assetid: 123ee54f-8219-4a6f-9876-4227023d83fc
-ms.openlocfilehash: 9b3d84d94ed75acd68011b895afbc4f190019673
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e1280b404668cebb64afa5a810d769a97bdbf85
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622228"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418058"
 ---
 # <a name="p-preprocess-to-a-file"></a>/P (předběžné zpracování souboru)
 
@@ -59,7 +59,7 @@ Následující příkaz upraví `ADD.C`, zachová komentáře, přidá `#line` d
 CL /P /C ADD.C
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>

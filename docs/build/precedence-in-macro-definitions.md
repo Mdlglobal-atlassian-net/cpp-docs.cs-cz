@@ -5,12 +5,12 @@ helpviewer_keywords:
 - NMAKE program, precedence in macro definitions
 - macros, precedence
 ms.assetid: 0c13182d-83cb-4cbd-af2d-f4c916b62aeb
-ms.openlocfilehash: 8829b3cdbc7b2324ef3d118f8ca45dd2a1621e7e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f847cd7cea736ff9b4360a050767d00bd6cf539
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619076"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421499"
 ---
 # <a name="precedence-in-macro-definitions"></a>Priority v definicích maker
 
@@ -28,6 +28,6 @@ Pokud makro má několik definic, používá NMAKE definici nejvyšší prioritu
 
 /E použijte, aby makra zděděno z proměnné prostředí přepsat makra souboru pravidel se stejným názvem. Použití **! UNDEF** přepsat příkazového řádku.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Definice makra NMAKE](../build/defining-an-nmake-macro.md)

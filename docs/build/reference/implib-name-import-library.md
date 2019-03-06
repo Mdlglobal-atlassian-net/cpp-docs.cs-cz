@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -IMPLIB linker option
 - import libraries, overriding default name
 ms.assetid: fe8f71ab-7055-41b5-8ef8-2b97cfa4a432
-ms.openlocfilehash: 268a091d3e0bc825acae96dafc5d92ffa11c7bc3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d3793b11e7bd0430c94d89f9d40ec3627c4eb20
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589576"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413352"
 ---
 # <a name="implib-name-import-library"></a>/IMPLIB (knihovna importu názvů)
 
@@ -52,7 +52,7 @@ ODKAZ ignoruje /IMPLIB při knihovnu importu se vytváří. Pokud nejsou zadány
 
 - Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ImportLibrary%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
 [Možnosti linkeru](../../build/reference/linker-options.md)

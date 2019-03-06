@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 0042fffb0eaa383909edd6647bcdb4375341d8dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a62919ebd6b2aba54aa8003743b0006571cdedf4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605852"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419666"
 ---
 # <a name="cimage-class"></a>Cimage – třída
 
@@ -258,7 +258,7 @@ Hodnotu alfa průhlednost na pro přechod na celý zdrojovou bitmapu. Výchozí 
 Funkce alfa blending pro zdroj a cílovým bitmapám, globální alfa hodnotu použít celý zdrojovou bitmapu a informace o formátu pro zdrojovou bitmapu. Funkce blendu zdrojových a cílových jsou aktuálně omezené na AC_SRC_OVER.
 
 *pointDest*<br/>
-Odkaz na [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) strukturu, která identifikuje levém horním rohu cílového obdélníku v logických jednotkách.
+Odkaz na [bodu](/previous-versions/dd162805\(v=vs.85\)) strukturu, která identifikuje levém horním rohu cílového obdélníku v logických jednotkách.
 
 *nDestWidth*<br/>
 Šířka v logické jednotky cílového obdélníku.
@@ -279,7 +279,7 @@ Logickou souřadnici y levého horního rohu zdrojového obdélníku.
 Výška v logických jednotkách, zdrojového obdélníku.
 
 *rectDest*<br/>
-Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, identifikace cíle.
+Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) strukturu, identifikace cíle.
 
 *rectSrc*<br/>
 Odkaz na `RECT` strukturu, identifikace zdroji.
@@ -368,7 +368,7 @@ Logickou souřadnici y levého horního rohu cílového obdélníku.
 Rastrová operace provést. Kódy rastrové operace definovat přesně jak kombinovat bity zdroje, cíle a vzor k cíli (podle aktuálně vybraného štětce). Zobrazit [přenos bitových bloků](/windows/desktop/api/wingdi/nf-wingdi-bitblt) v sadě Windows SDK pro seznam další kódy rastrové operace a jejich popisy.
 
 *pointDest*<br/>
-A [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktura označující levém horním rohu cílového obdélníku.
+A [bodu](/previous-versions/dd162805\(v=vs.85\)) struktura označující levém horním rohu cílového obdélníku.
 
 *nDestWidth*<br/>
 Šířka v logické jednotky cílového obdélníku.
@@ -383,7 +383,7 @@ Logickou souřadnici x levého horního rohu zdrojového obdélníku.
 Logickou souřadnici y levého horního rohu zdrojového obdélníku.
 
 *rectDest*<br/>
-A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura označující cílového obdélníku.
+A [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura označující cílového obdélníku.
 
 *pointSrc*<br/>
 A `POINT` struktura označující levém horním rohu zdrojového obdélníku.
@@ -595,13 +595,13 @@ Souřadnice y, v logických jednotkách, levého horního rohu zdrojového obdé
 Výška v logických jednotkách, zdrojového obdélníku.
 
 *rectDest*<br/>
-Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, identifikace cíle.
+Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) strukturu, identifikace cíle.
 
 *rectSrc*<br/>
 Odkaz na `RECT` strukturu, identifikace zdroji.
 
 *pointDest*<br/>
-Odkaz na [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) strukturu, která identifikuje levém horním rohu cílového obdélníku v logických jednotkách.
+Odkaz na [bodu](/previous-versions/dd162805\(v=vs.85\)) strukturu, která identifikuje levém horním rohu cílového obdélníku v logických jednotkách.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1259,10 +1259,10 @@ Souřadnice x levého horního rohu monochromatický rastrový obrázek.
 Souřadnice y levého horního rohu monochromatický rastrový obrázek.
 
 *rectSrc*<br/>
-Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura zadání souřadnic zdrojového obdélníku.
+Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura zadání souřadnic zdrojového obdélníku.
 
 *pointMask*<br/>
-A [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktura označující levý horní roh maska rastrového obrázku.
+A [bodu](/previous-versions/dd162805\(v=vs.85\)) struktura označující levý horní roh maska rastrového obrázku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1384,7 +1384,7 @@ Vodorovné umístění obrazového bodu nastavit.
 *y*<br/>
 Svislé umístění obrazového bodu nastavit.
 
-*Barva*<br/>
+*color*<br/>
 Barva, do které jste nastavili je pixel.
 
 ### <a name="remarks"></a>Poznámky
@@ -1519,7 +1519,7 @@ Výška v logických jednotkách cílového obdélníku.
 Rastrová operace provést. Kódy rastrové operace definovat přesně jak kombinovat bity zdroje, cíle a vzor k cíli (podle aktuálně vybraného štětce). Zobrazit [přenos bitových bloků](/windows/desktop/api/wingdi/nf-wingdi-bitblt) v sadě Windows SDK pro seznam další kódy rastrové operace a jejich popisy.
 
 *rectDest*<br/>
-Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, identifikace cíle.
+Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) strukturu, identifikace cíle.
 
 *xSrc*<br/>
 Souřadnice x, v logických jednotkách, levého horního rohu zdrojového obdélníku.
@@ -1602,7 +1602,7 @@ Výška v logických jednotkách cílového obdélníku.
 Barva v zdrojovou bitmapu do považována za průhlednou. Ve výchozím nastavení CLR_INVALID, by měl být použit označující, že barva aktuálně nastavený jako průhledná barva obrázku.
 
 *rectDest*<br/>
-Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, identifikace cíle.
+Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) strukturu, identifikace cíle.
 
 *xSrc*<br/>
 Souřadnice x, v logických jednotkách, levého horního rohu zdrojového obdélníku.
@@ -1658,7 +1658,7 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 
 ## <a name="see-also"></a>Viz také
 
-[Ukázka MMXSwarm](../../visual-cpp-samples.md)<br/>
+[MMXSwarm Sample](../../visual-cpp-samples.md)<br/>
 [Ukázka SimpleImage](../../visual-cpp-samples.md)<br/>
 [Bitmap nezávislých na zařízení](/windows/desktop/gdi/device-independent-bitmaps)<br/>
 [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)<br/>

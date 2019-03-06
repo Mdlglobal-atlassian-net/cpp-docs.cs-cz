@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: b27d6bb01b9e94ebe38be5455ffcc870806ac33b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2767770e354c81e5a34a0d6e9105a27ecb361ddc
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298344"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425065"
 ---
 # <a name="cwindow-class"></a>Cwindow – třída
 
@@ -536,7 +536,7 @@ BOOL ClientToScreen(LPRECT lpRect) const throw();
 
 Zobrazit [ClientToScreen](/windows/desktop/api/winuser/nf-winuser-clienttoscreen) ve Windows SDK.
 
-Druhá verze této metody můžete převést souřadnice [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.
+Druhá verze této metody můžete převést souřadnice [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 ##  <a name="create"></a>  CWindow::Create
 
@@ -1789,7 +1789,7 @@ int MapWindowPoints(
 
 Zobrazit [MapWindowPoints](/windows/desktop/api/winuser/nf-winuser-mapwindowpoints) ve Windows SDK.
 
-Druhá verze této metody můžete převést souřadnice [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.
+Druhá verze této metody můžete převést souřadnice [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 ##  <a name="messagebox"></a>  CWindow::MessageBox
 
@@ -1923,7 +1923,7 @@ BOOL MoveWindow(
 
 Pro okno nejvyšší úrovně parametry objektu, x a y jsou relativní vzhledem k levého horního rohu obrazovky. Pro podřízený objekt okna jsou od levého horního rohu nadřazené okno klientské oblasti.
 
-Druhou verzi tato metoda používá [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura určit novou pozici, šířku a výšku okna.
+Druhou verzi tato metoda používá [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura určit novou pozici, šířku a výšku okna.
 
 ##  <a name="nextdlgctrl"></a>  CWindow::NextDlgCtrl
 
@@ -2134,7 +2134,7 @@ BOOL ScreenToClient(LPRECT lpRect) const throw();
 
 Zobrazit [ScreenToClient](/windows/desktop/api/winuser/nf-winuser-screentoclient) ve Windows SDK.
 
-Druhá verze této metody můžete převést souřadnice [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.
+Druhá verze této metody můžete převést souřadnice [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 ##  <a name="scrollwindow"></a>  CWindow::ScrollWindow
 
@@ -2605,7 +2605,7 @@ BOOL SetWindowPos(
 
 Zobrazit [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) ve Windows SDK.
 
-Druhou verzi tato metoda používá [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura nastavit novou pozici, šířku a výšku okna.
+Druhou verzi tato metoda používá [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura nastavit novou pozici, šířku a výšku okna.
 
 ##  <a name="setwindowrgn"></a>  CWindow::SetWindowRgn
 

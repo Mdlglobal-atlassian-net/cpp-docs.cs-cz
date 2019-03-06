@@ -5,12 +5,12 @@ helpviewer_keywords:
 - debugging [C++], release builds
 - release builds, debugging
 ms.assetid: d333e4d1-4e6c-4384-84a9-cb549702da25
-ms.openlocfilehash: 4ee99bb76d3af4339e065a3ed4d4809acfe23507
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61baaa827feb1abcc03a0296574e56c993ce1681
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649251"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412559"
 ---
 # <a name="how-to-debug-a-release-build"></a>Postupy: Ladění sestavení pro vydání
 
@@ -36,6 +36,6 @@ Ladíte sestavení pro vydání aplikace.
 
    Další informace najdete v tématu [optimalizace kódu](../../build/reference/optimizing-your-code.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Oprava problémů se sestavením pro vydání](../../build/reference/fixing-release-build-problems.md)

@@ -102,12 +102,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: bb7f7ee0b4c190889daf661816a9e1c96575a052
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 776123baa0d53ac2a1777849b60d35cf0d93a172
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557086"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426222"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset – třída
 
@@ -139,12 +139,12 @@ Třídu přistupujícího objektu.
 |[CBulkRowset](#cbulkrowset)|Konstruktor|
 |[MoveFirst](#movefirst)|Načte první řádek dat, provádění nové hromadné načítání, v případě potřeby.|
 |[MoveLast](#movelast)|Přejde na poslední řádek.|
-|[Metoda MoveNext](#movenext)|Načte další řádek dat.|
+|[MoveNext](#movenext)|Načte další řádek dat.|
 |[MovePrev](#moveprev)|Přesune se na předchozí řádek.|
 |[MoveToBookmark](#movetobookmark)|Načte řádek označený záložkou nebo řádek na zadaný posun z tuto záložku.|
-|[Movetoratio –](#movetoratio)|Načte řádky začínající od desetinné pozice v dané sadě řádků.|
-|[Releaserows –](#releaserows)|Nastaví aktuální řádek (`m_nCurrentRow`) na nulu a verzích všechny řádky.|
-|[Setrows –](#setrows)|Nastaví počet popisovačů řádků, které se mají načíst jedním voláním.|
+|[MoveToRatio](#movetoratio)|Načte řádky začínající od desetinné pozice v dané sadě řádků.|
+|[ReleaseRows](#releaserows)|Nastaví aktuální řádek (`m_nCurrentRow`) na nulu a verzích všechny řádky.|
+|[SetRows](#setrows)|Nastaví počet popisovačů řádků, které se mají načíst jedním voláním.|
 
 ## <a name="example"></a>Příklad
 
@@ -154,7 +154,7 @@ Následující příklad ukazuje použití `CBulkRowset` třídy.
 
 ## <a name="addrefrows"></a> CBulkRowset::AddRefRows
 
-Volání [IRowset::AddRefRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719619(v=vs.85)) se zvýší počet odkazů pro všechny řádky, které jsou aktuálně získaných v hromadné sadě řádků.
+Volání [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) se zvýší počet odkazů pro všechny řádky, které jsou aktuálně získaných v hromadné sadě řádků.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -253,7 +253,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Zobrazit [IRowset::GetData](https://docs.microsoft.com/previous-versions/windows/desktop/ms716988(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IRowset::GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="movetoratio"></a> CBulkRowset::MoveToRatio
 
@@ -284,11 +284,11 @@ Standardní HRESULT.
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-Kde `RowsetSize` je velikost řádků, měřený v řádcích. Přesnost tohoto vzorce závisí na konkrétního zprostředkovatele. Podrobnosti najdete v tématu [IRowsetScroll::GetRowsAtRatio](https://docs.microsoft.com/previous-versions/windows/desktop/ms709602(v=vs.85)) v *OLE DB referenční informace pro programátory*.
+Kde `RowsetSize` je velikost řádků, měřený v řádcích. Přesnost tohoto vzorce závisí na konkrétního zprostředkovatele. Podrobnosti najdete v tématu [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) v *OLE DB referenční informace pro programátory*.
 
 ## <a name="releaserows"></a> CBulkRowset::ReleaseRows
 
-Volání [IRowset::ReleaseRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719771(v=vs.85)) se sníží počet odkazů pro všechny řádky, které jsou aktuálně získaných v hromadné sadě řádků.
+Volání [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) se sníží počet odkazů pro všechny řádky, které jsou aktuálně získaných v hromadné sadě řádků.
 
 ### <a name="syntax"></a>Syntaxe
 

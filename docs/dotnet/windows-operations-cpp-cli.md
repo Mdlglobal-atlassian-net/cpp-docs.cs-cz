@@ -43,12 +43,12 @@ helpviewer_keywords:
 - registry, writing to
 - Visual C++, writing to Windows Registry
 ms.assetid: b9a75cb4-0589-4d5b-92cb-5e8be42b4ac0
-ms.openlocfilehash: d23eef1d48674751a725e076d1b652b304ad40a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1075c70b10ca8c59272e9a9de8a9a3fd7aa248e6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508391"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415081"
 ---
 # <a name="windows-operations-ccli"></a>Operace systému Windows (C++/CLI)
 
@@ -144,7 +144,7 @@ int main( )
 
 <xref:Microsoft.Win32.Registry> Třídy slouží pouze jako kontejner pro statické instance <xref:Microsoft.Win32.RegistryKey>. Každá instance představuje kořenový uzel registru. Instance jsou <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, a <xref:Microsoft.Win32.Registry.Users>.
 
-Navíc se statické, objekty v rámci <xref:Microsoft.Win32.Registry> třídy jsou jen pro čtení. Kromě toho instance z <xref:Microsoft.Win32.RegistryKey> třídu, která se vytváří za účelem přístupu k obsahu registru objekty a jsou jen pro čtení. Příklad toho, jak toto chování přepsat, naleznete v tématu [postupy: zápis dat do registru Windows (C + +/ CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md).
+Navíc se statické, objekty v rámci <xref:Microsoft.Win32.Registry> třídy jsou jen pro čtení. Kromě toho instance z <xref:Microsoft.Win32.RegistryKey> třídu, která se vytváří za účelem přístupu k obsahu registru objekty a jsou jen pro čtení. Příklad toho, jak toto chování přepsat, naleznete v tématu [jak: Zápis dat do registru Windows (C + +/ CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md).
 
 Ve třídě <xref:Microsoft.Win32.Registry> existují dva další objekty: <xref:Microsoft.Win32.Registry.DynData> a <xref:Microsoft.Win32.Registry.PerformanceData>. Jsou obě instance <xref:Microsoft.Win32.RegistryKey> třídy. <xref:Microsoft.Win32.Registry.DynData> Obsahuje informace o dynamické registru, který je podporován pouze ve Windows 98 a Windows Me. <xref:Microsoft.Win32.Registry.PerformanceData> Objekt lze použít pro přístup k informacím čítače výkonu pro aplikace, které používají systém sledování výkonu Windows. <xref:Microsoft.Win32.Registry.PerformanceData> Informace, které nejsou ve skutečnosti uložené v registru a proto nemůže zobrazit pomocí Regedit.exe představuje uzel.
 
@@ -503,7 +503,7 @@ int main()
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete použít pro přístup k registru pomocí rozhraní .NET Framework <xref:Microsoft.Win32.Registry> a [RegistryKey](https://msdn.microsoft.com/library/microsoft.win32.registrykey.aspx) třídy, které jsou definovány v <xref:Microsoft.Win32> oboru názvů. **Registru** třídy je kontejner pro statické instance <xref:Microsoft.Win32.RegistryKey> třídy. Každá instance představuje kořenový uzel registru. Instance jsou <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, a <xref:Microsoft.Win32.Registry.Users>.
+Můžete použít pro přístup k registru pomocí rozhraní .NET Framework <xref:Microsoft.Win32.Registry> a <xref:Microsoft.Win32.RegistryKey> třídy, které jsou definovány v <xref:Microsoft.Win32> oboru názvů. **Registru** třídy je kontejner pro statické instance <xref:Microsoft.Win32.RegistryKey> třídy. Každá instance představuje kořenový uzel registru. Instance jsou <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, a <xref:Microsoft.Win32.Registry.Users>.
 
 ## <a name="related-sections"></a>Související oddíly
 

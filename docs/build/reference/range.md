@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /RANGE dumpbin option
 - -RANGE dumpbin option
 ms.assetid: 7eeba266-32be-49cc-a350-96bdf541f98a
-ms.openlocfilehash: d664e9d08a21427f2e849638e39b01450b8b301c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 011a8f9b2c8d0722e9aff98d52bb47dc549cc769
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641998"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421633"
 ---
 # <a name="range"></a>/RANGE
 
@@ -44,6 +44,6 @@ V tomto příkladu **/rozsahu** se používá k úpravě zobrazení **/disasm** 
 dumpbin /disasm /range:4219334,0x004061CD t.exe
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [DUMPBIN – možnosti](../../build/reference/dumpbin-options.md)

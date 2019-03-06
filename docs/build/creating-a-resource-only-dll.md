@@ -5,16 +5,16 @@ helpviewer_keywords:
 - resource-only DLLs [C++], creating
 - DLLs [C++], creating
 ms.assetid: e6b1d4da-7275-467f-a58c-a0a8a5835199
-ms.openlocfilehash: 9a31d4197e71fb6cf20a0ecfce778552357d7e06
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2854c9ca993e9f1f27cab60cdd09e28ce2985f1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612911"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412643"
 ---
 # <a name="creating-a-resource-only-dll"></a>Vytvoření knihovny DLL obsahující pouze prostředky
 
-Knihovny DLL pouze prostředků je knihovnu DLL, která obsahuje prostředky, jako jsou ikony, bitmapy, řetězce a dialogová okna. Použití knihovny DLL pouze prostředků je dobrým způsobem, jak sdílet stejnou sadu prostředků mezi více aplikacemi. Je také vhodný způsob aplikace s prostředky lokalizovanými pro více jazyků (viz [lokalizované prostředky v aplikacích MFC: satelitní knihovny DLL](../build/localized-resources-in-mfc-applications-satellite-dlls.md)).
+Knihovny DLL pouze prostředků je knihovnu DLL, která obsahuje prostředky, jako jsou ikony, bitmapy, řetězce a dialogová okna. Použití knihovny DLL pouze prostředků je dobrým způsobem, jak sdílet stejnou sadu prostředků mezi více aplikacemi. Je také vhodný způsob aplikace s prostředky lokalizovanými pro více jazyků (viz [lokalizované prostředky v aplikacích MFC: Satelitní knihovny DLL](../build/localized-resources-in-mfc-applications-satellite-dlls.md)).
 
 Pokud chcete vytvořit knihovnu DLL pouze prostředků, vytvořte nový projekt Win32 DLL (non-MFC) a přidat prostředky do projektu.
 
@@ -46,7 +46,7 @@ Aplikace, která používá knihovnu DLL pouze prostředků by měly volat [Load
 
 Aplikace by měly volat `FreeLibrary` po dokončení používání prostředků.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Práce se zdrojovými soubory](../windows/working-with-resource-files.md)<br/>
 [Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)

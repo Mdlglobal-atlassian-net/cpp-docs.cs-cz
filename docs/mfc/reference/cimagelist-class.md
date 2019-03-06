@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: 3e8c524a95730282d0e35e5f791ebf229725e282
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2fc92858f84826e2b953fcbc9de020741e97b007
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298916"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416004"
 ---
 # <a name="cimagelist-class"></a>Cimagelist – třída
 
@@ -691,13 +691,13 @@ Ukazatel na kontextu cílového zařízení. Je to nutné odstranit [CDC](../../
 Z nuly vycházející index image, které chcete kreslit.
 
 *pt*<br/>
-A [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktury obsahující souřadnic x a y – kde bude vykreslen na obrázku.
+A [bodu](/previous-versions/dd162805\(v=vs.85\)) struktury obsahující souřadnic x a y – kde bude vykreslen na obrázku.
 
 *sz*<br/>
 A [velikost](/windows/desktop/api/windef/ns-windef-tagsize) struktura určující velikost bitové kopie, které chcete kreslit.
 
 *ptOrigin*<br/>
-A [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktury obsahující souřadnic x a y-zadání levý horní roh kreslení s ohledem na samotný obrázek. Nejsou vykreslit pixelů bitové kopie, které jsou nalevo souřadnice x a nad souřadnice na ose y.
+A [bodu](/previous-versions/dd162805\(v=vs.85\)) struktury obsahující souřadnic x a y-zadání levý horní roh kreslení s ohledem na samotný obrázek. Nejsou vykreslit pixelů bitové kopie, které jsou nalevo souřadnice x a nad souřadnice na ose y.
 
 *fStyle*<br/>
 Příznak určující styl vykreslování a volitelně obrázků překrytí. V části poznámky informace na imagi překrytí. Výchozí implementace MFC ILD_NORMAL, kreslení obrázku barvou pozadí pro seznam obrázků. Pokud je barva pozadí CLR_NONE hodnotu, na obrázku je vykreslen transparentně masky.
@@ -874,7 +874,7 @@ static CImageList* PASCAL GetDragImage(
 ### <a name="parameters"></a>Parametry
 
 *lpPoint*<br/>
-Adresa [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) přetáhněte struktura, která přijímá aktuální pozici.
+Adresa [bodu](/previous-versions/dd162805\(v=vs.85\)) přetáhněte struktura, která přijímá aktuální pozici.
 
 *lpPointHotSpot*<br/>
 Adresa `POINT` struktura, která přijímá posun přetáhnout obrázek umístění přetažení.

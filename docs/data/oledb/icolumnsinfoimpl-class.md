@@ -27,16 +27,16 @@ helpviewer_keywords:
 - GetColumnInfo method
 - MapColumnIDs method
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
-ms.openlocfilehash: 67052bdc5d49673146c036167c027d1efd882495
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 802c105e7795cdce604e72983f4fda549abcd5fb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556501"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418266"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl – třída
 
-Poskytuje implementaci [IColumnsInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms724541(v=vs.85)) rozhraní.
+Poskytuje implementaci [IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85)) rozhraní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,8 +62,8 @@ Vaše třída odvozena od `IColumnsInfoImpl`.
 
 |||
 |-|-|
-|[GetColumnInfo –](#getcolumninfo)|Vrátí metadata sloupce vyžadované většina uživatelů.|
-|[Mapcolumnids –](#mapcolumnids)|Vrátí pole řadové číslovky sloupců v sadě řádků, které se identifikují pomocí ID zadaného sloupce.|
+|[GetColumnInfo](#getcolumninfo)|Vrátí metadata sloupce vyžadované většina uživatelů.|
+|[MapColumnIDs](#mapcolumnids)|Vrátí pole řadové číslovky sloupců v sadě řádků, které se identifikují pomocí ID zadaného sloupce.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -83,7 +83,7 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IColumnsInfo::GetColumnInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="mapcolumnids"></a> IColumnsInfoImpl::MapColumnIDs
 
@@ -99,7 +99,7 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IColumnsInfo::MapColumnIDs](https://docs.microsoft.com/previous-versions/windows/desktop/ms714200(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="see-also"></a>Viz také
 

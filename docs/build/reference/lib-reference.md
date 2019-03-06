@@ -10,12 +10,12 @@ helpviewer_keywords:
 - LIB [C++]
 - 32-Bit Library Manager
 ms.assetid: ecc7f643-bbd4-47a3-8dc6-b360f880db91
-ms.openlocfilehash: 1b3982e29d1bbf919e326e39f62ddb361d4c12ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 382810fd418dbc49b20885f487ca9a35b0889a5f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543270"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415328"
 ---
 # <a name="lib-reference"></a>Referenční dokumentace ke knihovně LIB
 
@@ -26,7 +26,7 @@ Správce knihovny Microsoft (LIB.exe) vytváří a spravuje knihovnu objektovýc
 
 - [Přehled knihovny LIB](../../build/reference/overview-of-lib.md)
 
-- [Postupy: Nastavení možností LIB.EXE ve vývojovém prostředí Visual Studio](../../build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)
+- [Postupy: Nastavení možností LIB.EXE ve vývojovém prostředí sady Visual Studio](../../build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)
 
 - [Spuštění knihovny LIB](../../build/reference/running-lib.md)
 
@@ -36,6 +36,6 @@ Správce knihovny Microsoft (LIB.exe) vytváří a spravuje knihovnu objektovýc
 
 - [Práce s knihovnami importu a soubory exportu](../../build/reference/working-with-import-libraries-and-export-files.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nástroje sestavení C/C++](../../build/reference/c-cpp-build-tools.md)

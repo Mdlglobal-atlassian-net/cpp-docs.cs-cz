@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - side-by-side applications [C++]
 ms.assetid: 7fa20b16-3737-4f76-a0b5-1dacea19a1e8
-ms.openlocfilehash: b904dd3e9c10470151bdb8e01435aaf6359179b8
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 6875c4178a405f887166b0606af329614d27907f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693639"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413872"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>Sestavení souběžných sestavení C/C++
 
@@ -29,7 +29,7 @@ Jeden nebo několik týkající se knihoven DLL může být znovu zabalené, sad
 
 Tato změna může povolit nasazení odpovídající knihovny DLL jako [soukromé sestavení](/windows/desktop/Msi/private-assemblies) do místní složky aplikace nebo jako [sdílené sestavení](/windows/desktop/Msi/shared-assemblies) WinSxS mezipaměti sestavení. Několik kroků musí následovat, abyste dosáhli správný modul runtime chování tohoto nového sestavení; Tyto toky jsou popsané v [pokyny pro vytváření sestavení vedle sebe](/windows/desktop/SbsCs/guidelines-for-creating-side-by-side-assemblies). Po sestavení je správně vytvořený můžete nasadit jako buď sdílené nebo soukromé sestavení společně s aplikací, které na ní závisí. Při instalaci sestavení vedle sebe jako sdílená sestavení, můžete buď postupujte podle pokynů uvedených v [instalaci sestavení Win32 pro sdílení vedle sebe na Windows XP](/windows/desktop/Msi/installing-win32-assemblies-for-side-by-side-sharing-on-windows-xp) nebo použijte [slučovací moduly](/windows/desktop/msi/merge-modules). Při instalaci sestavení vedle sebe jako soukromé sestavení, můžete jenom kopírovat odpovídající knihovny DLL, prostředky a sestavení manifestů jako součást procesu instalace do místní složky aplikace na cílovém počítači zajistit, že toto sestavení může být najít zavaděč za běhu (viz [pořadí hledání sestavení](/windows/desktop/SbsCs/assembly-searching-sequence)). Jinou možností je použít [Instalační služby systému Windows](/windows/desktop/Msi/windows-installer-portal) a postupujte podle pokynů uvedených v [instalaci sestavení Win32 pro soukromé použití aplikace na Windows XP](/windows/desktop/Msi/installing-win32-assemblies-for-the-private-use-of-an-application-on-windows-xp).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Příklady nasazení](../ide/deployment-examples.md)<br/>
 [Sestavení izolovaných aplikací C/C++](../build/building-c-cpp-isolated-applications.md)<br/>

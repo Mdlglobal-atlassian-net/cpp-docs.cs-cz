@@ -33,12 +33,12 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: fdda18243366de059b26fd566b5eecb308cbed14
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: d51b1bf6862aebda34586518be6501f57f119590
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556644"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419952"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet – třída
 
@@ -60,9 +60,9 @@ class CDBPropIDSet : public tagDBPROPIDSET
 
 |||
 |-|-|
-|[Addpropertyid –](#addpropertyid)|Přidá vlastnost ID sady vlastností.|
-|[Cdbpropidset –](#cdbpropidset)|Konstruktor|
-|[Setguid –](#setguid)|Nastaví nastavení GUID ID vlastnosti.|
+|[AddPropertyID](#addpropertyid)|Přidá vlastnost ID sady vlastností.|
+|[CDBPropIDSet](#cdbpropidset)|Konstruktor|
+|[SetGUID](#setguid)|Nastaví nastavení GUID ID vlastnosti.|
 
 ### <a name="operators"></a>Operátory
 
@@ -72,7 +72,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 
 ## <a name="remarks"></a>Poznámky
 
-Použití příjemců OLE DB `DBPROPIDSET` struktury předat pole ID vlastnost, pro které chce příjemce se získat informace o vlastnosti. Vlastnosti identifikované v jediném [DBPROPIDSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms717981(v=vs.85)) struktura patří do sady jednu vlastnost.
+Použití příjemců OLE DB `DBPROPIDSET` struktury předat pole ID vlastnost, pro které chce příjemce se získat informace o vlastnosti. Vlastnosti identifikované v jediném [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) struktura patří do sady jednu vlastnost.
 
 ## <a name="addpropertyid"></a> CDBPropIDSet::AddPropertyID
 
@@ -86,12 +86,12 @@ bool AddPropertyID(DBPROPID propid) throw();
 
 #### <a name="parameters"></a>Parametry
 
-*číslo PropId*<br/>
+*propid*<br/>
 [in] Nastavte vlastnost ID se má přidat do ID vlastnosti.
 
 ## <a name="cdbpropidset"></a> CDBPropIDSet::CDBPropIDSet
 
-Konstruktor Inicializuje `rgProperties`, `cProperties`a (volitelně) `guidPropertySet` pole [DBPROPIDSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms717981(v=vs.85)) struktury.
+Konstruktor Inicializuje `rgProperties`, `cProperties`a (volitelně) `guidPropertySet` pole [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) struktury.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -124,7 +124,7 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>Parametry
 
 *identifikátor GUID*<br/>
-[in] Identifikátor GUID lze nastavit `guidPropertySet` pole [DBPROPIDSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms717981(v=vs.85)) struktury.
+[in] Identifikátor GUID lze nastavit `guidPropertySet` pole [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) struktury.
 
 ### <a name="remarks"></a>Poznámky
 

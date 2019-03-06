@@ -2,16 +2,16 @@
 title: Windows::UI::Xaml::Interop::TypeName – operátor
 ms.date: 12/30/2016
 ms.assetid: a65a105e-7e3a-452f-932f-2cdaf00fbba5
-ms.openlocfilehash: c77655ed7692c4cdccc311bc27c492126d62e54e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7480df474086d78e28d235cc89b05094c648d28b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659210"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415172"
 ---
 # <a name="operator-windowsuixamlinteroptypename"></a>Windows::UI::Xaml::Interop::TypeName – operátor
 
-Umožňuje převod z `Platform::Type` k [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx).
+Umožňuje převod z `Platform::Type` k [Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -21,11 +21,11 @@ Operator TypeName(Platform::Type^ type);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) když `Platform::Type^`.
+Vrátí [Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename) když `Platform::Type^`.
 
 ### <a name="remarks"></a>Poznámky
 
-`TypeName` je struktura prostředí Windows Runtime jazykově neutrální představující informace o typu. [Platform::type –](../cppcx/platform-type-class.md) je specifická pro C++ a nelze předat jako napříč binárním rozhraním aplikace (ABI). Tady je jedno použití `TypeName`v [Navigovat](https://msdn.microsoft.com/library/windows/apps/hh702394.aspx) funkce:
+`TypeName` je struktura prostředí Windows Runtime jazykově neutrální představující informace o typu. [Platform::type –](../cppcx/platform-type-class.md) je specifická pro C++ a nelze předat jako napříč binárním rozhraním aplikace (ABI). Tady je jedno použití `TypeName`v [Navigovat](/uwp/api/windows.ui.xaml.controls.frame.navigate) funkce:
 
 ```
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
@@ -52,5 +52,5 @@ Rozhraní .NET framework projektu programy `TypeName` jako [System.Type](assetId
 
 ## <a name="see-also"></a>Viz také
 
-[operátor Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md)<br/>
+[operator Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md)<br/>
 [Platform::Type – třída](../cppcx/platform-type-class.md)

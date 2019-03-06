@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: ec771efcd8fffd1aa1825f2c500404dc0b2a4965
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5fda93951918357de5441022f1cc6ea81a522ef6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638734"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415133"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
@@ -38,7 +38,7 @@ Aplikace, která běží v prostředí spouštění Windows. Další informace o
 Aplikace znakového režimu Windows. Operační systém poskytuje konzolu pro konzolové aplikace.
 
 **EFI_APPLICATION**<br/>
-**BITOVÁ KOPIE EFI_BOOT_SERVICE_DRIVER**<br/>
+**EFI_BOOT_SERVICE_DRIVER**<br/>
 **EFI_ROM**<br/>
 **EFI_RUNTIME_DRIVER**<br/>
 Obrázek Extensible Firmware Interface (EFI)
@@ -69,6 +69,6 @@ Volba subsystému ovlivňuje výchozí počáteční adresu programu. Další in
 
 Další informace, včetně minimální a výchozí hodnoty pro číslo hlavní verze a podverze pro každý subsystém naleznete v tématu [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) – možnost linkeru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [EDITBIN – možnosti](../../build/reference/editbin-options.md)
