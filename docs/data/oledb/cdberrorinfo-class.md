@@ -44,16 +44,16 @@ helpviewer_keywords:
 - GetErrorParameters method
 - GetErrorRecords method
 ms.assetid: 9a5c18a2-ee3e-40f5-ab4c-581288d7f737
-ms.openlocfilehash: 4249fb7c6ac05a925ace34ade30aa50ffe3503e7
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: e523f299831ee67d994a693e5357de96eba968aa
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556826"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413898"
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo – třída
 
-Poskytuje podporu pro zpracování chyb technologie OLE DB pomocí rozhraní OLE DB [IErrorRecords](https://docs.microsoft.com/previous-versions/windows/desktop/ms718112(v=vs.85)) rozhraní.
+Poskytuje podporu pro zpracování chyb technologie OLE DB pomocí rozhraní OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112(v=vs.85)) rozhraní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -72,10 +72,10 @@ class CDBErrorInfo
 |||
 |-|-|
 |[GetAllErrorInfo](#getallerrorinfo)|Vrátí všechny informace o chybě obsažené v záznamu o chybě.|
-|[GetBasicErrorInfo](#getbasicerrorinfo)|Volání [IErrorRecords::GetBasicErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms723907(v=vs.85)) vrátit základní informace o zadané chybě.|
-|[GetCustomErrorObject](#getcustomerrorobject)|Volání [IErrorRecords::GetCustomErrorObject](https://docs.microsoft.com/previous-versions/windows/desktop/ms725417(v=vs.85)) k vrací ukazatel rozhraní na objekt vlastních chyb.|
-|[GetErrorInfo](#geterrorinfo)|Volání [IErrorRecords::GetErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms711230(v=vs.85)) se vraťte `IErrorInfo` ukazatel rozhraní na zadaný záznam.|
-|[Geterrorparameters –](#geterrorparameters)|Volání [IErrorRecords::GetErrorParameters](https://docs.microsoft.com/previous-versions/windows/desktop/ms715793(v=vs.85)) vrátit parametry chyby.|
+|[GetBasicErrorInfo](#getbasicerrorinfo)|Volání [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) vrátit základní informace o zadané chybě.|
+|[GetCustomErrorObject](#getcustomerrorobject)|Volání [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) k vrací ukazatel rozhraní na objekt vlastních chyb.|
+|[GetErrorInfo](#geterrorinfo)|Volání [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) se vraťte `IErrorInfo` ukazatel rozhraní na zadaný záznam.|
+|[Geterrorparameters –](#geterrorparameters)|Volání [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) vrátit parametry chyby.|
 |[GetErrorRecords](#geterrorrecords)|Získá záznamy o chybách pro zadaný objekt.|
 
 ## <a name="remarks"></a>Poznámky
@@ -122,7 +122,7 @@ HRESULT GetAllErrorInfo(ULONG ulRecordNum,
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěšného ověření. Zobrazit [IErrorRecords::GetErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms711230(v=vs.85)) v *OLE DB referenční informace pro programátory* pro ostatní vrácené hodnoty.
+S_OK v případě úspěšného ověření. Zobrazit [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) v *OLE DB referenční informace pro programátory* pro ostatní vrácené hodnoty.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -134,7 +134,7 @@ Výstupní hodnota z *pbstrDescription* je interně získán voláním `IErrorIn
 
 ## <a name="getbasicerrorinfo"></a> CDBErrorInfo::GetBasicErrorInfo
 
-Volání [IErrorRecords::GetBasicErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms723907(v=vs.85)) vrátit základní informace o této chybě, jako je například návratový kód a číslo chyby specifické pro zprostředkovatele.
+Volání [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) vrátit základní informace o této chybě, jako je například návratový kód a číslo chyby specifické pro zprostředkovatele.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -145,7 +145,7 @@ HRESULT GetBasicErrorInfo(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IErrorRecords::GetBasicErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms723907(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -153,7 +153,7 @@ Standardní HRESULT.
 
 ## <a name="getcustomerrorobject"></a> CDBErrorInfo::GetCustomErrorObject
 
-Volání [IErrorRecords::GetCustomErrorObject](https://docs.microsoft.com/previous-versions/windows/desktop/ms725417(v=vs.85)) k vrací ukazatel rozhraní na objekt vlastních chyb.
+Volání [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) k vrací ukazatel rozhraní na objekt vlastních chyb.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -164,7 +164,7 @@ HRESULT GetCustomErrorObject(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IErrorRecords::GetCustomErrorObject](https://docs.microsoft.com/previous-versions/windows/desktop/ms725417(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -172,7 +172,7 @@ Standardní HRESULT.
 
 ## <a name="geterrorinfo"></a> CDBErrorInfo::GetErrorInfo
 
-Volání [IErrorRecords::GetErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms711230(v=vs.85)) se vraťte [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms718112(v=vs.85)) ukazatel rozhraní na zadaný záznam.
+Volání [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) se vraťte [IErrorInfo](/previous-versions/windows/desktop/ms718112(v=vs.85)) ukazatel rozhraní na zadaný záznam.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -183,7 +183,7 @@ HRESULT GetErrorInfo(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IErrorRecords::GetErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms711230(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -191,7 +191,7 @@ Standardní HRESULT.
 
 ## <a name="geterrorparameters"></a> CDBErrorInfo::GetErrorParameters
 
-Volání [IErrorRecords::GetErrorParameters](https://docs.microsoft.com/previous-versions/windows/desktop/ms715793(v=vs.85)) vrátit parametry chyby.
+Volání [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) vrátit parametry chyby.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -202,7 +202,7 @@ HRESULT GetErrorParameters(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IErrorRecords::GetErrorParameters](https://docs.microsoft.com/previous-versions/windows/desktop/ms715793(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -227,7 +227,7 @@ HRESULT GetErrorRecords(ULONG* pcRecords) throw();
 *pUnk*<br/>
 [in] Rozhraní pro objekt, pro které chcete získat záznamy o chybách.
 
-*identifikátor IID*<br/>
+*iid*<br/>
 [in] Identifikátor IID rozhraní přidružené k chybě.
 
 *pcRecords*<br/>

@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: c6edd8cdd089e24011df41db09f3c1bb5d6465f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a41f2012b4ee5441bcb9aa7d99cd0d0e97b6acc7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481455"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423700"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections:: map – třída
 
@@ -132,7 +132,7 @@ Iterátor, který určuje první prvek v objektu map.
 
 ### <a name="remarks"></a>Poznámky
 
-Praktický způsob uložení iterátorů vrácené First() je přiřadit návratovou hodnotu proměnné, která je deklarována s **automaticky** klíčovým slovem odvození typu. Například `auto x = myMap->First();`.
+Praktický způsob uložení iterátorů vrácené First() je přiřadit návratovou hodnotu proměnné, která je deklarována s **automaticky** klíčovým slovem odvození typu. Například, `auto x = myMap->First();`.
 
 ## <a name="getview"></a>  Map::GetView – metoda
 
@@ -160,7 +160,7 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč používaná k nalezení elementu mapy. Typ *klíč* je typename *K*.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -179,7 +179,7 @@ virtual bool Insert(K key, V value);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Část klíče dvojice klíč hodnota. Typ *klíč* je typename *K*.
 
 *value*<br/>
@@ -201,7 +201,7 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč používaná k nalezení prvku v objektu Map. Typ *klíč* je typename *K*.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -234,7 +234,7 @@ Map(
 *Inicializace*<br/>
 Typename aktuální mapování.
 
-*Kompozice*<br/>
+*comp*<br/>
 Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v objektu Map.
 
 *m*<br/>
@@ -243,7 +243,7 @@ Odkaz nebo [hodnoty lvalue a rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) k
 *první*<br/>
 Vstupní iterátor první prvek v rozsahu prvků, které slouží k inicializaci aktuální mapování.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor první prvek po celou řadu prvků, které slouží k inicializaci aktuální mapování.
 
 ## <a name="mapchanged"></a>  Map::mapchanged – událost
@@ -258,7 +258,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Hodnota vlastnosti / návratová hodnota
 
-A [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) , který obsahuje informace o objektu, který vyvolal událost a druh změn, ke které došlo. Viz také [IMapChangedEventArgs\<K >](https://msdn.microsoft.com/library/windows/apps/br226034.aspx) a [CollectionChange výčet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
+A [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) , který obsahuje informace o objektu, který vyvolal událost a druh změn, ke které došlo. Viz také [IMapChangedEventArgs\<K >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) a [CollectionChange výčet](/uwp/api/windows.foundation.collections.collectionchange).
 
 ## <a name="net-framework-equivalent"></a>Ekvivalent v rozhraní .NET Framework
 
@@ -276,12 +276,12 @@ virtual void Remove(K key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Část klíče dvojice klíč hodnota. Typ *klíč* je typename *K*.
 
 ## <a name="size"></a>  Map::size – metoda
 
-Vrátí počet [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) prvků v objektu Map.
+Vrátí počet [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) prvků v objektu Map.
 
 ### <a name="syntax"></a>Syntaxe
 

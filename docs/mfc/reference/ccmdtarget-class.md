@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 0416d7387fe4250c7a42dca5a0d6d56d7857aed2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5e4de39b0352f33ad59950754df7c0815d6038c3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259110"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417902"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget – třída
 
@@ -169,7 +169,7 @@ Ukazatel [MSG](/windows/desktop/api/winuser/ns-winuser-msg) struktura popisujíc
 Popisovač okna dokumentu obsahující objekt.
 
 *lpRect*<br/>
-Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury obsahující souřadnice, v pixelech, které definují objekt ohraničovacího rámečku v *hwndParent*.
+Ukazatel [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury obsahující souřadnice, v pixelech, které definují objekt ohraničovacího rámečku v *hwndParent*.
 
 ### <a name="return-value"></a>Návratová hodnota
 

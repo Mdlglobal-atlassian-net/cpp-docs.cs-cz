@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: b1f612040eea0078b0f27cf72327db94fe9e2939
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50f3e7a79b80514b6c28bd9aee86c720d6e20cf6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665428"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413911"
 ---
 # <a name="zc-conformance"></a>/Zc (shoda)
 
@@ -33,12 +33,12 @@ Jedná se o `/Zc` – možnosti kompilátoru:
 |Možnost|Chování|
 |---|---|
 |[alignedNew\[-\]](zc-alignednew.md)|Povolení C ++ 17 nadbytečně zarovnané dynamického přidělování (zapnuto ve výchozím nastavení v C ++ 17).|
-|[Automaticky\[-\]](zc-auto-deduce-variable-type.md)|Vynutit nový význam jazyka Standard C++ pro `auto` (na ve výchozím nastavení).|
+|[auto\[-\]](zc-auto-deduce-variable-type.md)|Vynutit nový význam jazyka Standard C++ pro `auto` (na ve výchozím nastavení).|
 |[__cplusplus\[-\]](zc-cplusplus.md)|Povolit **__cplusplus** – makro hlášení podporované standard (ve výchozím nastavení vypnuté).|
 |[externConstexpr\[-\]](zc-externconstexpr.md)|Povolit vnější propojení pro `constexpr` proměnné (ve výchozím nastavení vypnuté).|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|Vynutit Standard C++ `for` pravidel oboru (na ve výchozím nastavení).|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|Povolit implicitní `noexcept` pro požadované funkce (na ve výchozím nastavení).|
-|[vložené\[-\]](zc-inline-remove-unreferenced-comdat.md)|Odebrat neodkazovaný funkci nebo data, pokud je COMDAT nebo má jenom vnitřní vazby (ve výchozím nastavení vypnuté).|
+|[inline\[-\]](zc-inline-remove-unreferenced-comdat.md)|Odebrat neodkazovaný funkci nebo data, pokud je COMDAT nebo má jenom vnitřní vazby (ve výchozím nastavení vypnuté).|
 |[noexceptTypes\[-\]](zc-noexcepttypes.md)|Vynutit pravidla C ++ 17 noexcept (v ve výchozím nastavení v C ++ 17 nebo novější).|
 |[referenceBinding\[-\]](zc-referencebinding-enforce-reference-binding-rules.md)|UDT dočasné se nebudou vázat k odkazu na nekonstantní l-hodnota (ve výchozím nastavení vypnuté).|
 |[rvalueCast\[-\]](zc-rvaluecast-enforce-type-conversion-rules.md)|Vynucení pravidel převodu explicitního typu Standard C++ (ve výchozím nastavení vypnuté).|
@@ -53,7 +53,7 @@ Jedná se o `/Zc` – možnosti kompilátoru:
 
 Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete v tématu [nestandardní chování](../../cpp/nonstandard-behavior.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti kompilátoru](compiler-options.md)<br/>
 [Nastavení možností kompilátoru](setting-compiler-options.md)

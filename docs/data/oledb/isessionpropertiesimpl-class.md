@@ -14,16 +14,16 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: a6b2abc97a44117c0fdd7c08c61de7ba900d1115
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 7b9f402d9b1c45c2fa10c1128afd271229036f88
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556306"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420775"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl – třída
 
-Poskytuje implementaci [ISessionProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms713721(v=vs.85)) rozhraní.
+Poskytuje implementaci [ISessionProperties](/previous-versions/windows/desktop/ms713721(v=vs.85)) rozhraní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -74,7 +74,7 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ISessionProperties::GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723643(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="setproperties"></a> ISessionPropertiesImpl::SetProperties
 
@@ -89,7 +89,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ISessionProperties::SetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms714405(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="see-also"></a>Viz také
 

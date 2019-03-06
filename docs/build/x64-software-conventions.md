@@ -5,12 +5,12 @@ helpviewer_keywords:
 - x64 coding conventions
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
-ms.openlocfilehash: 55be8f381b39ee566b389350ff70a9b0a3fe7694
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 11d29b6c31ccecfe5b9c51c2f9311213bd4a6732
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702065"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420268"
 ---
 # <a name="x64-software-conventions"></a>x64 softwarové konvence
 
@@ -238,6 +238,6 @@ Vnitřní objekty podporovány kompilátorem jsou popsány v [vnitřní funkce k
 
 X64 formátu spustitelná image, která je typu PE32 +. Spustitelné bitové kopie (knihovny DLL a exe) jsou omezena na maximální velikosti 2 GB, takže relativní adresy s 32bitovým posunem můžete používat k adresování statických dat bitové kopie. Tato data zahrnují tabulky importních adres, řetězcové konstanty, statické globálních dat a tak dále.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Konvence volání](../cpp/calling-conventions.md)

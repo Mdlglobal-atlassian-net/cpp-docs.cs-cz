@@ -13,12 +13,12 @@ helpviewer_keywords:
 - /U compiler option [C++]
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
-ms.openlocfilehash: 1ccda218a2bccc261653016ad6a47d419ddacfd9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59522b462f2393dd3fd4d8afefe9cbbe0e519203
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624442"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413040"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (nedefinované symboly)
 
@@ -33,7 +33,7 @@ ms.locfileid: "50624442"
 
 ## <a name="arguments"></a>Arguments
 
-*Symbol*<br/>
+*symbol*<br/>
 Symbol preprocesoru definice.
 
 ## <a name="remarks"></a>Poznámky
@@ -69,7 +69,7 @@ Ve výchozím nastavení kompilátor definuje následující symboly specifické
 
 - Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UndefineAllPreprocessorDefinitions%2A> nebo <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UndefinePreprocessorDefinitions%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>

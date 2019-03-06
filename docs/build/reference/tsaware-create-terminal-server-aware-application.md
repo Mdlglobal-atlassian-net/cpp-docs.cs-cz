@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-ms.openlocfilehash: 4b6cebfd30c6572c2ea7d9a0e59625ac8fd66de1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe31763c5da21a724f0c9242e6eb8429a2379ecd
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566592"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421490"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (Vytvořit aplikace s detekcí terminálového serveru)
 
@@ -54,7 +54,7 @@ Pokud byla aplikace propojené s parametr/TSAWARE, DUMPBIN [/HEADERS](../../buil
 
 - Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TerminalServerAware%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
 [Možnosti linkeru](../../build/reference/linker-options.md)<br/>

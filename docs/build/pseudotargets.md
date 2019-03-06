@@ -8,12 +8,12 @@ helpviewer_keywords:
 - timestamps, makefile pseudotargets
 - NMAKE program, targets
 ms.assetid: c8c479dc-0129-4186-8366-bc6251f2b494
-ms.openlocfilehash: bf0f1e2feb91611222ade366a7644e89cbe22600
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34b2b2f0d54a6e11bdfd6e818eb08d01721d80e2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541073"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414833"
 ---
 # <a name="pseudotargets"></a>Pseudocíle
 
@@ -21,6 +21,6 @@ Pseudotarget je popisek, použijí se místo názvu souboru na řádku závislos
 
 Názvy pseudotarget podle pravidel syntaxe názvu souboru pro cíle. Nicméně není-li název rozšíření (to znamená, že neobsahuje tečkou), může být delší než 8 znaků omezení pro názvy souborů a může mít až 256 znaků.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Cíle](../build/targets.md)

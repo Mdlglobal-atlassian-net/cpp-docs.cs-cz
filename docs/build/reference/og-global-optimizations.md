@@ -13,12 +13,12 @@ helpviewer_keywords:
 - common subexpression elimination
 - Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
-ms.openlocfilehash: d6913be5bc02755730ffb6205e9f34811c9a5dbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8032d7dbd771ca1527c6515a779b0f532a2c658
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431938"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420866"
 ---
 # <a name="og-global-optimizations"></a>/Og (globální optimalizace)
 
@@ -92,7 +92,7 @@ Související informace naleznete v tématu [/Oi (Generovat vnitřní funkce)](.
 
 - Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [/O – možnosti (optimalizace kódu)](../../build/reference/o-options-optimize-code.md)
 

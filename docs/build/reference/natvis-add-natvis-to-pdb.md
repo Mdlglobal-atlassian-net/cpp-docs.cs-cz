@@ -10,16 +10,16 @@ helpviewer_keywords:
 - -NATVIS linker option
 - Add Natvis file to PDB
 ms.assetid: 8747fc0c-701a-4796-bb4d-818ab4465cca
-ms.openlocfilehash: 475eb377fd55d6118c109f4e03ea1cf624a563f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 983cbe4c4bd4164d81b83a23fe19569318d5193c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446017"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424974"
 ---
 # <a name="natvis-add-natvis-to-pdb"></a>/ NATVIS (přidání Natvisu do souboru PDB)
 
-> / NATVIS:*název souboru*
+> /NATVIS:*filename*
 
 ## <a name="parameters"></a>Parametry
 
@@ -44,7 +44,7 @@ ODKAZ ignoruje /NATVIS při soubor PDB nebyl vytvořen pomocí [/DEBUG](../../bu
 
 - Tato možnost nemá programový ekvivalent.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vytváření vlastních zobrazení nativních objektů v ladicím programu sady Visual Studio](/visualstudio/debugger/create-custom-views-of-native-objects)<br/>
 [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>

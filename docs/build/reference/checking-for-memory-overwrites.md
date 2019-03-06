@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - memory, overwrites
 ms.assetid: da7c5d77-a267-415f-a8ab-ee5ce5bfc286
-ms.openlocfilehash: ff900c7366a28d19d3b90cbd4a6d9ee732e4ce02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b37bd68519aea1194b601e89fefd0f14d428630a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621556"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422192"
 ---
 # <a name="checking-for-memory-overwrites"></a>Kontrola přepisů paměti
 
@@ -28,6 +28,6 @@ if(_heapchk()!=_HEAPOK)
 
 Pokud se tato funkce někdy nezdaří, je třeba izolovat v tomto okamžiku byla poškozena halda.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Oprava problémů se sestavením pro vydání](../../build/reference/fixing-release-build-problems.md)

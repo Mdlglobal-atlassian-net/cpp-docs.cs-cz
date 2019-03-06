@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -JMC compiler option [C++]
 - User code, debugging
 - JMC compiler option [C++]
-ms.openlocfilehash: a81292b590d96ef93446f9bb59af305c7eda2ef9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1950ff4a973ddbd23ff902ba4afb0d45dacb0e5
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516854"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417759"
 ---
 # <a name="jmc-just-my-code-debugging"></a>/ JMC (ladění pouze můj kód)
 
@@ -22,7 +22,7 @@ Určuje podporu kompilátoru pro nativní *pouze můj kód* ladění v ladicím 
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/ JMC**\[**-**]
+> **/JMC**\[**-**]
 
 ## <a name="remarks"></a>Poznámky
 
@@ -46,7 +46,7 @@ Další informace najdete v tématu [pouze můj kód C++](/visualstudio/debugger
 
 - Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>

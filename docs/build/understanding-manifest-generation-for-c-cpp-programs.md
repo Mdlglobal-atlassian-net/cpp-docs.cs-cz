@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: a1f24221-5b09-4824-be48-92eae5644b53
-ms.openlocfilehash: a4391ffd3b7d293ed04a4852582444550570e577
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 08bda1a297e99c28dadfc2c58853900ee67dbb90
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693357"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416043"
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>Základní informace o generování manifestu pro programy C/C++
 
@@ -19,7 +19,7 @@ Existují dva způsoby vytvoření manifestu izolované aplikace nebo sestavení
 
 Hlavičky knihoven Visual C++ obsahují informace o sestavení, a když tyto knihovny jsou zahrnuty v kódu aplikace, tyto informace sestavení používá propojovací program k vytvoření manifestu pro koncovém binárním souboru. Propojovací program nelze vložit soubor manifestu do binárního souboru a můžou jenom generovat manifest jako externího souboru. Ve všech případech nemusí fungovat s manifestu jako externího souboru. Například se doporučuje, aby soukromých sestavení mají vložených manifestů. V sestaveních příkazového řádku jako jsou ty, které používají nmake sestavovat kód lze jej vkládat manifestu pomocí nástroje manifestu; Další informace najdete v části [generování manifestu v příkazovém řádku](../build/manifest-generation-at-the-command-line.md). Při sestavování v sadě Visual Studio, může být manifestu vložen nastavením vlastnosti pro nástroj manifest v **vlastnosti projektu** dialogové okno; viz [generování manifestu v sadě Visual Studio](../build/manifest-generation-in-visual-studio.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Koncept izolovaných aplikací a souběžných sestavení](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)<br/>
 [Sestavení izolovaných aplikací C/C++ a souběžných sestavení](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

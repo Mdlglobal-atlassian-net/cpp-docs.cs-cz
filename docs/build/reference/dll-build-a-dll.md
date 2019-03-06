@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLLs [C++], building
 - DLL linker option [C++]
 ms.assetid: c7685aec-31d0-490f-9503-fb5171a23609
-ms.openlocfilehash: 71696e4ffae91ed1fa8a13e69e75523ce66e8361
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: edad85b2890679e4247c7d34b4e19534e871f4dd
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546336"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420060"
 ---
 # <a name="dll-build-a-dll"></a>/DLL (Sestavit knihovnu DLL)
 
@@ -55,7 +55,7 @@ Všimněte si, že když vytvoříte knihovny importu v předběžný krok před
 
 - Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCPropertySheet.ConfigurationType%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
 [Možnosti linkeru](../../build/reference/linker-options.md)

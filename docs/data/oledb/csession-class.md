@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: f3b77823608376fdfc12beacf7cab5dd810c415e
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 86ac5984f5d21e0077c15027ac7a8d8daab08945
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556787"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414002"
 ---
 # <a name="csession-class"></a>CSession – třída
 
@@ -70,9 +70,9 @@ class CSession
 |[Abort](#abort)|Zruší (končí) transakce.|
 |[Zavřít](#close)|Ukončení relace.|
 |[Potvrzení změn](#commit)|potvrzení transakce.|
-|[Gettransactioninfo –](#gettransactioninfo)|Vrátí informace o transakci.|
+|[GetTransactionInfo](#gettransactioninfo)|Vrátí informace o transakci.|
 |[Otevřít](#open)|Otevře se nová relace pro objekt zdroje dat.|
-|[StartTransaction –](#starttransaction)|Spustí novou transakci pro tuto relaci.|
+|[StartTransaction](#starttransaction)|Spustí novou transakci pro tuto relaci.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -92,7 +92,7 @@ HRESULT Abort(BOID* pboidReason = NULL,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ITransaction::Abort](https://docs.microsoft.com/previous-versions/windows/desktop/ms709833(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [ITransaction::Abort](/previous-versions/windows/desktop/ms709833(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -126,7 +126,7 @@ HRESULT Commit(BOOL bRetaining = FALSE,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ITransaction::Commit](https://docs.microsoft.com/previous-versions/windows/desktop/ms713008(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [ITransaction::Commit](/previous-versions/windows/desktop/ms713008(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -134,7 +134,7 @@ Standardní HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [ITransaction::Commit](https://docs.microsoft.com/previous-versions/windows/desktop/ms713008(v=vs.85)).
+Další informace najdete v tématu [ITransaction::Commit](/previous-versions/windows/desktop/ms713008(v=vs.85)).
 
 ## <a name="gettransactioninfo"></a> CSession::GetTransactionInfo
 
@@ -148,7 +148,7 @@ HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ITransaction::GetTransactionInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms714975(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -156,7 +156,7 @@ Standardní HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [ITransaction::GetTransactionInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms714975(v=vs.85)) v *OLE DB referenční informace pro programátory*.
+Další informace najdete v tématu [ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85)) v *OLE DB referenční informace pro programátory*.
 
 ## <a name="open"></a> CSession::Open
 
@@ -172,14 +172,14 @@ HRESULT Open(const CDataSource& ds,
 
 #### <a name="parameters"></a>Parametry
 
-*adresářové služby*<br/>
+*ds*<br/>
 [in] Zdroj dat, pro který má být otevřeno relace.
 
 *pPropSet*<br/>
-[in] Ukazatel na pole [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) v *referenční informace pro OLE DB programátory* ve Windows SDK.
+[in] Ukazatel na pole [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](/previous-versions/windows/desktop/ms713696(v=vs.85)) v *referenční informace pro OLE DB programátory* ve Windows SDK.
 
 *ulPropSets*<br/>
-[in] Počet [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury předané *pPropSet* argument.
+[in] Počet [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury předané *pPropSet* argument.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -204,7 +204,7 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ITransactionLocal::StartTransaction](https://docs.microsoft.com/previous-versions/windows/desktop/ms709786(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -212,7 +212,7 @@ Standardní HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [ITransactionLocal::StartTransaction](https://docs.microsoft.com/previous-versions/windows/desktop/ms709786(v=vs.85)) v *OLE DB referenční informace pro programátory*.
+Další informace najdete v tématu [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85)) v *OLE DB referenční informace pro programátory*.
 
 ## <a name="see-also"></a>Viz také
 

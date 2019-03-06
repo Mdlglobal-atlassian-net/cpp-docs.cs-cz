@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -HEADERS dumpbin option
 - /HEADERS dumpbin option
 ms.assetid: 24d9a770-d44e-48b6-b744-143e4fff7748
-ms.openlocfilehash: 627dbd5f8467bd76871c82f41b28f0f597c0068a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 934bda775cdae506e1a0b9a2fb40d3a22ef01934
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645000"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423622"
 ---
 # <a name="headers"></a>/HEADERS
 
@@ -27,6 +27,6 @@ Tato možnost zobrazí záhlaví souboru a záhlaví každého oddílu. Je-li po
 
 Pouze **/HEADERS** – možnost nástroje DUMPBIN je k dispozici pro použití se soubory vytvořenými pomocí [/GL](../../build/reference/gl-whole-program-optimization.md) – možnost kompilátoru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [DUMPBIN – možnosti](../../build/reference/dumpbin-options.md)

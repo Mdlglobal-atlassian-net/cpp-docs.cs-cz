@@ -91,12 +91,12 @@ helpviewer_keywords:
 - m_iRowset
 - m_rgRowHandles
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-ms.openlocfilehash: a1826155bec3313afe503ee1c58f786a5c4739e8
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: d7d7797e0e1ac69ef114a251fbcee9fbe29cd7e9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556982"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420892"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl – třída
 
@@ -140,14 +140,14 @@ Jednotky úložiště pro všechny popisovačů řádků uchovávat zprostředko
 |||
 |-|-|
 |[Addrefrows –](#addrefrows)|Přidá počet odkazů na existující popisovač řádku.|
-|[Createrow –](#createrow)|Volané [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) přidělit nový `HROW`. Nebyla volána přímo uživatelem.|
+|[CreateRow](#createrow)|Volané [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) přidělit nový `HROW`. Nebyla volána přímo uživatelem.|
 |[GetData](#getdata)|Načte data z dané sadě řádků kopii řádku.|
 |[GetDBStatus](#getdbstatus)|Vrátí stav pro zadané pole.|
 |[GetNextRows](#getnextrows)|Načte řádky postupně, pamatovat předchozí pozici.|
-|[IRowsetImpl –](#irowsetimpl)|Konstruktor Nebyla volána přímo uživatelem.|
-|[Refrows –](#refrows)|Volané [addrefrows –](../../data/oledb/irowsetimpl-addrefrows.md) a [releaserows –](../../data/oledb/irowsetimpl-releaserows.md). Nebyla volána přímo uživatelem.|
-|[Releaserows –](#releaserows)|Verze řádků.|
-|[Volání metody RestartPosition](#restartposition)|Přemístí pozici na počáteční pozici; To znamená vytvořit svůj postoj při první sadu řádků.|
+|[IRowsetImpl](#irowsetimpl)|Konstruktor Nebyla volána přímo uživatelem.|
+|[RefRows](#refrows)|Volané [addrefrows –](../../data/oledb/irowsetimpl-addrefrows.md) a [releaserows –](../../data/oledb/irowsetimpl-releaserows.md). Nebyla volána přímo uživatelem.|
+|[ReleaseRows](#releaserows)|Verze řádků.|
+|[RestartPosition](#restartposition)|Přemístí pozici na počáteční pozici; To znamená vytvořit svůj postoj při první sadu řádků.|
 |[SetDBStatus](#setdbstatus)|Nastaví stav příznaky pro zadané pole.|
 
 ### <a name="data-members"></a>Datové členy
@@ -162,7 +162,7 @@ Jednotky úložiště pro všechny popisovačů řádků uchovávat zprostředko
 
 ## <a name="remarks"></a>Poznámky
 
-[IRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms720986(v=vs.85)) je rozhraní pro základní sadu řádků.
+[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) je rozhraní pro základní sadu řádků.
 
 ## <a name="addrefrows"></a> IRowsetImpl::AddRefRows
 
@@ -179,7 +179,7 @@ STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IRowset::AddRefRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719619(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="createrow"></a> IRowsetImpl::CreateRow
 
@@ -222,7 +222,7 @@ STDMETHOD(GetData )(HROW hRow,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IRowset::GetData](https://docs.microsoft.com/previous-versions/windows/desktop/ms716988(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IRowset::GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 Některé parametry odpovídají *OLE DB referenční informace pro programátory* parametry jiné názvy, které jsou popsány v `IRowset::GetData`:
 
@@ -247,15 +247,15 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
 
 #### <a name="parameters"></a>Parametry
 
-*vlastnosti CurrentRow platné*<br/>
+*currentRow*<br/>
 [in] Na aktuálním řádku.
 
-*názvy sloupců*<br/>
+*columnNames*<br/>
 [in] Sloupec, pro který je požadovaný stav.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[DBSTATUS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) příznaky pro sloupec.
+[DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85)) příznaky pro sloupec.
 
 ## <a name="getnextrows"></a> IRowsetImpl::GetNextRows
 
@@ -273,7 +273,7 @@ STDMETHOD(GetNextRows )(HCHAPTER hReserved,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IRowset::GetNextRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms709827(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IRowset::GetNextRows](/previous-versions/windows/desktop/ms709827(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="irowsetimpl"></a> IRowsetImpl::IRowsetImpl
 
@@ -305,7 +305,7 @@ HRESULT RefRows(DBCOUNTITEM cRows,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IRowset::AddRefRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719619(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -327,7 +327,7 @@ STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IRowset::ReleaseRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719771(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="restartposition"></a> IRowsetImpl::RestartPosition
 
@@ -341,7 +341,7 @@ STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IRowset::RestartPosition](https://docs.microsoft.com/previous-versions/windows/desktop/ms712877(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -362,12 +362,12 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
 #### <a name="parameters"></a>Parametry
 
 *statusFlags*<br/>
-[DBSTATUS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) příznaky nastavit pro sloupec.
+[DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85)) příznaky nastavit pro sloupec.
 
-*vlastnosti CurrentRow platné*<br/>
+*currentRow*<br/>
 Na aktuálním řádku.
 
-*Vlastnost columnInfo*<br/>
+*columnInfo*<br/>
 Sloupec, pro který je nastaven stav.
 
 ### <a name="return-value"></a>Návratová hodnota

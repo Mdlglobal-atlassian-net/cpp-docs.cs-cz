@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add New Item command
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
-ms.openlocfilehash: 0e63a1e9b2ab5c479d5a85cd24e92ad41fb286ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a4480bc7389e1c116dbc97235da06cab75e2a5a8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549315"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424415"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Použití šablon pro přidání nové položky v prostředí Visual C++
 
@@ -20,7 +20,7 @@ Můžete snadno přidat položky, které jsou společné pro projekty Visual C++
 
 V následující tabulce je abecední seznam šablon Visual C++, přidat novou položku.
 
-|Šablony|Popis|
+|Šablona|Popis|
 |--------------|-----------------|
 |Soubor zdrojů sestaveni (.resx)|Vytvoří soubor obsahující zdroje CLR.|
 |Soubor rastrového obrázku (BMP)|Vytvoří soubor rastrového obrázku Win32.|
@@ -35,7 +35,7 @@ V následující tabulce je abecední seznam šablon Visual C++, přidat novou p
 |Soubor hlaviček (.h)|Vytvoří soubor hlaviček jazyka C++.|
 |HTML stránka (.htm)|Vytvoří prázdný soubor HTML.|
 |Soubor ikony (.ico)|Vytvoří soubor ikony Win32.|
-|Instalační třída|Přidá třídu, která dědí z [Instalační třída](https://msdn.microsoft.com/library/system.configuration.install.installer.aspx) pomocí funkce CLR.|
+|Instalační třída|Přidá třídu, která dědí z <xref:System.Configuration.Install.Installer> pomocí funkce CLR.|
 |Soubor MIDL (.idl)|Vytvoří soubor s příponou Interface Definition Language.|
 |Soubor definice modulu (.def)|Vytvoří definiční soubor exportu DLL.|
 |Seznam vlastností (.props)|Vytvoří soubor seznamu vlastností Visual C++.|
@@ -45,7 +45,7 @@ V následující tabulce je abecední seznam šablon Visual C++, přidat novou p
 |Soubor šablony zdrojů (.rct)|Vytvoří soubor prostředků šablony.|
 |Pás karet (.mfcribbon-ms)|Vytvoří soubor pásu karet.|
 |Soubor odezvy serveru (.srf)|Vytvoří soubor odezvy serveru používaný serverem ATL.|
-|Soubor skriptu SQL (.sql)|Vytvoří soubor skriptu SQL. **Poznámka:** Tato šablona není funkcí edice Professional.|
+|SQL Script File (.sql)|Vytvoří soubor skriptu SQL. **Poznámka:**  Tato šablona není funkcí edice Professional.|
 |Šablona stylů (.css)|Přidá šablona stylů používaná pro bohaté definice stylů HTML.|
 |Textový soubor (.txt)|Přidá prázdný textový soubor.|
 |Uživatelský ovládací prvek|Přidá uživatelský ovládací prvek pomocí funkce CLR.|

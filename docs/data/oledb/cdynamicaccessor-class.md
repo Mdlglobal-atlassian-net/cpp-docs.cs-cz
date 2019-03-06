@@ -127,12 +127,12 @@ helpviewer_keywords:
 - SetStatus method
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-ms.openlocfilehash: 12953da220016c7f66e9a2f01b4b8860d2e508b8
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: a9e862e9df785a0986d9d75759de85c0c1448912
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557021"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423453"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor – třída
 
@@ -156,13 +156,13 @@ class CDynamicAccessor : public CAccessorBase
 |-|-|
 |[AddBindEntry –](#addbindentry)|Přidá do vazby položku výstupní sloupce při přepisování výchozí přístupový objekt.|
 |[CDynamicAccessor](#cdynamicaccessor)|Vytvoří a inicializuje `CDynamicAccessor` objektu.|
-|[Zavřít](#close)|Odpojuje všechny sloupce, uvolní přidělené paměti a uvolní [IAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719672(v=vs.85)) ukazatel rozhraní ve třídě.|
+|[Zavřít](#close)|Odpojuje všechny sloupce, uvolní přidělené paměti a uvolní [IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85)) ukazatel rozhraní ve třídě.|
 |[Getblobhandling –](#getblobhandling)|Načte objekt BLOB zpracování hodnotu aktuálního řádku.|
 |[Getblobsizelimit –](#getblobsizelimit)|Získá maximální velikost objektu BLOB v bajtech.|
 |[GetBookmark](#getbookmark)|Načte záložky na aktuálním řádku.|
 |[Getcolumncount –](#getcolumncount)|Získá počet sloupců v dané sadě řádků.|
 |[Getcolumnflags –](#getcolumnflags)|Načte vlastnosti sloupce.|
-|[GetColumnInfo –](#getcolumninfo)|Načte metadata pro sloupec.|
+|[GetColumnInfo](#getcolumninfo)|Načte metadata pro sloupec.|
 |[Getcolumnname –](#getcolumnname)|Načte název určený sloupec.|
 |[Getcolumntype –](#getcolumntype)|Načte datový typ zadaný sloupec.|
 |[GetLength](#getlength)|Získá maximální možná délka sloupce v bajtech.|
@@ -195,8 +195,8 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 
 #### <a name="parameters"></a>Parametry
 
-*Informace o*<br/>
-[in] A `DBCOLUMNINFO` struktura obsahující informace o sloupci. Naleznete v části "DBCOLUMNINFO struktury" v [IColumnsInfo::GetColumnInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+*info*<br/>
+[in] A `DBCOLUMNINFO` struktura obsahující informace o sloupci. Naleznete v části "DBCOLUMNINFO struktury" v [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -233,7 +233,7 @@ Můžete také určit, jak `CDynamicAccessor` zpracovává sloupec data, která 
 
 ## <a name="close"></a> CDynamicAccessor::Close
 
-Odpojuje všechny sloupce, uvolní přidělené paměti a uvolní [IAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719672(v=vs.85)) ukazatel rozhraní ve třídě.
+Odpojuje všechny sloupce, uvolní přidělené paměti a uvolní [IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85)) ukazatel rozhraní ve třídě.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -323,7 +323,7 @@ bool GetColumnFlags(DBORDINAL nColumn,
 [in] Číslo sloupce. Sloupec čísel začínající číslem 1. Hodnota 0 odkazuje na sloupec záložku, pokud existuje.
 
 *pFlags*<br/>
-[out] Ukazatel na bitová maska, která popisuje vlastnosti sloupce. Naleznete v části "DBCOLUMNFLAGS Výčtový typ" v [IColumnsInfo::GetColumnInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+[out] Ukazatel na bitová maska, která popisuje vlastnosti sloupce. Naleznete v části "DBCOLUMNFLAGS Výčtový typ" v [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -349,13 +349,13 @@ HRESULT GetColumnInfo(IRowset* pRowset,
 #### <a name="parameters"></a>Parametry
 
 *pRowset*<br/>
-[in] Ukazatel [IRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms720986(v=vs.85)) rozhraní.
+[in] Ukazatel [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) rozhraní.
 
 *pColumns*<br/>
 [out] Ukazatel na paměť ke vrácení počet sloupců v dané sadě řádků; Toto číslo zahrnuje sloupec záložky, pokud existuje.
 
 *ppColumnInfo*<br/>
-[out] Ukazatel na paměť ke vrácení pole `DBCOLUMNINFO` struktury. Naleznete v části "DBCOLUMNINFO struktury" v [IColumnsInfo::GetColumnInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+[out] Ukazatel na paměť ke vrácení pole `DBCOLUMNINFO` struktury. Naleznete v části "DBCOLUMNINFO struktury" v [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.
 
 *ppStringsBuffer*<br/>
 [out] Ukazatel na paměť ke vrácení ukazatele do služby storage pro všechny hodnoty řetězce (použít názvy v rámci *columnid* nebo *pwszName*) v rámci jedna alokace bloku.
@@ -366,7 +366,7 @@ Jeden standardní hodnoty HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IColumnsInfo::GetColumnInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) v *OLE DB referenční informace pro programátory* informace o typech dat `DBORDINAL`, `DBCOLUMNINFO`, a `OLECHAR`.
+Zobrazit [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) v *OLE DB referenční informace pro programátory* informace o typech dat `DBORDINAL`, `DBCOLUMNINFO`, a `OLECHAR`.
 
 ## <a name="getcolumnname"></a> CDynamicAccessor::GetColumnName
 
@@ -498,7 +498,7 @@ bool GetStatus(const WCHAR* pColumnName,
 [in] Ukazatel na řetězec znaků, který obsahuje název sloupce.
 
 *pStatus*<br/>
-[out] Ukazatel na proměnnou obsahující sloupec Stav. Zobrazit [DBSTATUS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace.
+[out] Ukazatel na proměnnou obsahující sloupec Stav. Zobrazit [DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -568,9 +568,9 @@ bool SetBlobHandling(DBBLOBHANDLINGENUM eBlobHandling);
 *eBlobHandling*<br/>
 Určuje, jak má být zpracována datový objekt BLOB. To můžete provést následující hodnoty:
 
-- DBBLOBHANDLING_DEFAULT: Zpracování sloupec dat větší než *nBlobSize* (jako nastavení podle `SetBlobSizeLimit`) stejně jako data v objektech BLOB a jejich prostřednictvím načtení `ISequentialStream` nebo `IStream` objektu. Tento příkaz se pokusí vytvořit vazbu každý sloupec, který obsahuje data, které jsou větší než *nBlobSize* nebo uveden jako DBTYPE_IUNKNOWN jako data objektů BLOB.
+- DBBLOBHANDLING_DEFAULT: Zpracování dat sloupců, které jsou větší než *nBlobSize* (jako nastavení podle `SetBlobSizeLimit`) stejně jako data v objektech BLOB a jeho prostřednictvím získat `ISequentialStream` nebo `IStream` objektu. Tento příkaz se pokusí vytvořit vazbu každý sloupec, který obsahuje data, které jsou větší než *nBlobSize* nebo uveden jako DBTYPE_IUNKNOWN jako data objektů BLOB.
 
-- DBBLOBHANDLING_NOSTREAMS: Zpracování sloupec dat větší než *nBlobSize* (například nastavit podle `SetBlobSizeLimit`) stejně jako data v objektech BLOB a získat prostřednictvím odkazů v paměti přidělené poskytovatele, vlastnictví příjemce. Tato možnost je užitečná pro tabulky, které mají více než jeden sloupec objektů BLOB a zprostředkovatel podporuje pouze jeden `ISequentialStream` objekt za přistupujícího objektu.
+- DBBLOBHANDLING_NOSTREAMS: Zpracování dat sloupců, které jsou větší než *nBlobSize* (například nastavit podle `SetBlobSizeLimit`) stejně jako data v objektech BLOB a získat prostřednictvím odkazů v paměti přidělené poskytovatele, vlastnictví příjemce. Tato možnost je užitečná pro tabulky, které mají více než jeden sloupec objektů BLOB a zprostředkovatel podporuje pouze jeden `ISequentialStream` objekt za přistupujícího objektu.
 
 - DBBLOBHANDLING_SKIP: Přeskočit (vazba není) sloupce kvalifikaci jako obsahující objekty BLOB (přistupujícím objektu nebude vazby nebo načíst hodnotu sloupce, ale stále se načtou sloupce stavu a délky).
 
@@ -655,8 +655,8 @@ bool SetStatus(const WCHAR* pColumnName,
 *nColumn*<br/>
 [in] Číslo sloupce. Sloupec čísel začínající číslem 1. Hodnota 0 odkazuje na sloupec záložku, pokud existuje.
 
-*Stav*<br/>
-[in] Stav sloupce. Zobrazit [DBSTATUS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace.
+*status*<br/>
+[in] Stav sloupce. Zobrazit [DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace.
 
 *pColumnName*<br/>
 [in] Ukazatel na řetězec znaků, který obsahuje název sloupce.

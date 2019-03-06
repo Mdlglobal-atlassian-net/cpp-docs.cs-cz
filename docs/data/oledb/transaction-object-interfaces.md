@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 - interfaces, list of
 ms.assetid: d2ce99ce-6f7a-4ff9-bc6e-acda3633d5c8
-ms.openlocfilehash: 177f66222a054c3305418ffcd0acdda5c82ccf43
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 386fb83df9ea7a889c8bb11f550313aad0bda926
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556176"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418890"
 ---
 # <a name="transaction-object-interfaces"></a>Rozhraní objektu transakce
 
@@ -25,8 +25,8 @@ V následující tabulce jsou uvedeny povinných a volitelných rozhraní defino
 |Rozhraní|Povinné?|Šablony technologie OLE DB implementované?|
 |---------------|---------------|--------------------------------------|
 |[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Povinné|Ne|
-|[ITransaction](https://docs.microsoft.com/previous-versions/windows/desktop/ms723053(v=vs.85))|Povinné|Ne|
-|[ISupportErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms715816(v=vs.85))|volitelná,|Ne|
+|[ITransaction](/previous-versions/windows/desktop/ms723053(v=vs.85))|Povinné|Ne|
+|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816(v=vs.85))|volitelná,|Ne|
 
 ## <a name="see-also"></a>Viz také
 

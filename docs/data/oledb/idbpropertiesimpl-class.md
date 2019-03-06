@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetPropertyInfo method
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-ms.openlocfilehash: 2ce9f3fa18d2a17d499b65258cfda52783ce46c5
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 13c41b97190ff13b87361b6e8344b8f17798708a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556943"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413339"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl – třída
 
@@ -62,7 +62,7 @@ Vaše třída odvozena od `IDBPropertiesImpl`.
 
 ## <a name="remarks"></a>Poznámky
 
-[IDBProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms719607(v=vs.85)) je povinné rozhraní pro objekty zdroje dat a volitelné rozhraní pro enumerátory. Nicméně pokud enumerátor zpřístupní [IDBInitialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms713706(v=vs.85)), musí vystavit `IDBProperties`. `IDBPropertiesImpl` implementuje `IDBProperties` pomocí statické funkce definované [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+[IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85)) je povinné rozhraní pro objekty zdroje dat a volitelné rozhraní pro enumerátory. Nicméně pokud enumerátor zpřístupní [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85)), musí vystavit `IDBProperties`. `IDBPropertiesImpl` implementuje `IDBProperties` pomocí statické funkce definované [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
 ## <a name="getproperties"></a> IDBPropertiesImpl::GetProperties
 
@@ -79,7 +79,7 @@ STDMETHOD(GetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IDBProperties::GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms714344(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 Některé parametry odpovídají *OLE DB referenční informace pro programátory* parametry jiné názvy, které jsou popsány v `IDBProperties::GetProperties`:
 
@@ -110,7 +110,7 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IDBProperties::GetPropertyInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms718175(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IDBProperties::GetPropertyInfo](/previous-versions/windows/desktop/ms718175(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 Některé parametry odpovídají *OLE DB referenční informace pro programátory* parametry jiné názvy, které jsou popsány v `IDBProperties::GetPropertyInfo`:
 
@@ -136,7 +136,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IDBProperties::SetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723049(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IDBProperties::SetProperties](/previous-versions/windows/desktop/ms723049(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ### <a name="remarks"></a>Poznámky
 

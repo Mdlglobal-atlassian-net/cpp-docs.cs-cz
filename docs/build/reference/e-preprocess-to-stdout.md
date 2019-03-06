@@ -9,12 +9,12 @@ helpviewer_keywords:
 - preprocessor output, copy to stdout
 - preprocessor output
 ms.assetid: ddbb1725-d950-4978-ab2f-30a5cd7b778c
-ms.openlocfilehash: 892203d300c07711d06cff602128ec6e9ceb351c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0a0d692cd7eaf59aa0c53ecf4436b4c507439a3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504570"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425481"
 ---
 # <a name="e-preprocess-to-stdout"></a>/E (předběžné zpracování výstupu stdout)
 
@@ -82,7 +82,7 @@ Následující příkaz upraví `ADD.C`, zachová komentáře, přidá `#line` d
 CL /E /C ADD.C
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

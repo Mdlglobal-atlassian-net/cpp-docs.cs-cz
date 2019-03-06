@@ -33,12 +33,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 4b71fc43c3766f9a039d841b8872dee99210fe8c
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 01b9012a2b32c22b86968b1ea0895bdc9ceabb13
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556748"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417720"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet – třída
 
@@ -62,7 +62,7 @@ class CDBPropSet : public tagDBPROPSET
 |-|-|
 |[addProperty](#addproperty)|Přidá vlastnost sady vlastností.|
 |[CDBPropSet](#cdbpropset)|Konstruktor|
-|[Setguid –](#setguid)|Nastaví `guidPropertySet` pole `DBPROPSET` struktury.|
+|[SetGUID](#setguid)|Nastaví `guidPropertySet` pole `DBPROPSET` struktury.|
 
 ### <a name="operators"></a>Operátory
 
@@ -109,7 +109,7 @@ bool AddProperty(DWORD dwPropertyID,
 *bValue*<br/>
 [in] A `BYTE` nebo logická hodnota, které se používají k inicializaci hodnoty vlastnosti pro `DBPROP` struktury přidána do sady vlastností.
 
-*nHodnota*<br/>
+*nValue*<br/>
 [in] Celočíselná hodnota použitý k inicializaci hodnoty vlastnosti pro `DBPROP` struktury přidána do sady vlastností.
 
 *fltValue*<br/>
@@ -127,7 +127,7 @@ bool AddProperty(DWORD dwPropertyID,
 
 ## <a name="cdbpropset"></a> CDBPropSet::CDBPropSet
 
-Konstruktor Inicializuje `rgProperties`, `cProperties`, a `guidPropertySet` pole [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury.
+Konstruktor Inicializuje `rgProperties`, `cProperties`, a `guidPropertySet` pole [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -144,7 +144,7 @@ CDBPropSet();
 *identifikátor GUID*<br/>
 [in] Identifikátor GUID použitý k inicializaci `guidPropertySet` pole.
 
-*Sada vlastností*<br/>
+*propset*<br/>
 [in] Jiné `CDBPropSet` objekt pro konstrukci kopie.
 
 ## <a name="setguid"></a> CDBPropSet::SetGUID
@@ -160,7 +160,7 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>Parametry
 
 *identifikátor GUID*<br/>
-[in] Identifikátor GUID lze nastavit `guidPropertySet` pole [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury.
+[in] Identifikátor GUID lze nastavit `guidPropertySet` pole [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -181,5 +181,5 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CDBPropIDSet – třída](../../data/oledb/cdbpropidset-class.md)<br/>
-[Struktura DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))
-[DBPROP struktura](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85))
+[Struktura DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))
+[DBPROP struktura](/previous-versions/windows/desktop/ms717970(v=vs.85))

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-ms.openlocfilehash: 45244ace414fc073956684088ac43eb9b92f1e5b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4eb74fe3e485f12ac7f43b0a8a56800ef0535e7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588237"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423843"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>Základní koncepce při práci se spravovanými výjimkami
 
@@ -29,7 +29,7 @@ Toto téma popisuje zpracování výjimek v spravovaných aplikací. To znamená
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud kompilujete s **/CLR** možnost, můžete zpracovávat výjimky CLR, stejně jako standardní [zpracování výjimek jazyka C++](../cpp/cpp-exception-handling.md) a [strukturované zpracování výjimek](../cpp/structured-exception-handling-c-cpp.md) (SEH). Výjimky modulu CLR je všechny výjimky vyvolané spravovaným typem. [System::Exception](https://msdn.microsoft.com/library/system.exception.aspx) třídy nabízí spoustu užitečných metod pro zpracování výjimek CLR a doporučuje se jako základní třída pro třídy definované uživatelem výjimek.
+Pokud kompilujete s **/CLR** možnost, můžete zpracovávat výjimky CLR, stejně jako standardní <xref:System.Exception> třídy nabízí spoustu užitečných metod pro zpracování výjimek CLR a doporučuje se jako základní třída pro uživatelem definované výjimky třídy.
 
 Zachycování výjimek typy odvozené od rozhraní není podporován v rámci **/CLR**. Kromě toho modul common language runtime nepovoluje jak zachytávat výjimky přetečení zásobníku; k výjimce přetečení zásobníku se ukončit proces.
 
@@ -140,7 +140,7 @@ Pořadí událostí pro vyvolanou výjimku vypadá takto:
 
 ### <a name="catching-unmanaged-types"></a>Zachycení nespravovaného typy
 
-Při vyvolání typem nespravovaného objektu je zabalený s výjimkou typu [System::Runtime.InteropServices::SEHException](https://msdn.microsoft.com/library/system.runtime.interopservices.sehexception.aspx). Při hledání odpovídající **catch** klauzule, existují dvě možnosti.
+Při vyvolání typem nespravovaného objektu je zabalený s výjimkou typu <xref:System.Runtime.InteropServices.SEHException>. Při hledání odpovídající **catch** klauzule, existují dvě možnosti.
 
 - Pokud je nativní typ jazyka C++, výjimky je neobalený a ve srovnání s byl zjištěn typ. Toto porovnání umožňuje nativní typu jazyka C++, chcete-li zachytit běžným způsobem.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - architecture [C++], OLE DB Provider
 - OLE DB provider templates, object model
 ms.assetid: 639304a3-f9e0-44dc-8d0c-0ebd2455b363
-ms.openlocfilehash: 099c29e141d721645c416e60be240c22d22cd869
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: b6d177d793451b7c5e9c19f6d40add973a627d60
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175636"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422998"
 ---
 # <a name="ole-db-provider-template-architecture"></a>Architektura šablon zprostředkovatele OLE DB
 
@@ -31,7 +31,7 @@ Spolu s zdrojové soubory vytvořené **Průvodce zprostředkovatelem technologi
 
 - [Relace](../../data/oledb/session-object-interfaces.md)
 
-- [Sady řádků](../../data/oledb/rowset-object-interfaces.md)
+- [Rowset](../../data/oledb/rowset-object-interfaces.md)
 
 - [Příkaz](../../data/oledb/command-object-interfaces.md)
 
@@ -39,13 +39,13 @@ Spolu s zdrojové soubory vytvořené **Průvodce zprostředkovatelem technologi
 
 Šablony zprostředkovatele OLE DB neimplementují řádek a úložiště objektů.
 
-Následující tabulka obsahuje seznam povinných a volitelných rozhraní pro objekty uvedené výše, podle [2.6 SDK dokumentace technologie OLE DB](https://docs.microsoft.com/previous-versions/windows/desktop/ms722784(v=vs.85)).
+Následující tabulka obsahuje seznam povinných a volitelných rozhraní pro objekty uvedené výše, podle [2.6 SDK dokumentace technologie OLE DB](/previous-versions/windows/desktop/ms722784(v=vs.85)).
 
 |Součást|Rozhraní|Komentář|
 |---------------|---------------|-------------|
-|[Zdroj dat](../../data/oledb/data-source-object-interfaces.md) ([CDataSource](../../data/oledb/cdatasource-class.md))|[povinné] `IDBCreateSession`<br /><br /> [povinné] `IDBInitialize`<br /><br /> [povinné] `IDBProperties`<br /><br /> [povinné] `IPersist`<br /><br /> [volitelné] `IConnectionPointContainer`<br /><br /> [volitelné] `IDBAsynchStatus`<br /><br /> [volitelné] `IDBDataSourceAdmin`<br /><br /> [volitelné] `IDBInfo`<br /><br /> [volitelné] `IPersistFile`<br /><br /> [volitelné] `ISupportErrorInfo`|Připojení od uživatele ke zprostředkovateli. Objekt se používá k určení vlastností na připojení, jako je například název zdroje ID, heslo a dat uživatele. Objekt je také možné spravovat zdroje dat (vytvořit, aktualizovat, odstranit, tabulky a tak dále).|
+|[Data source](../../data/oledb/data-source-object-interfaces.md) ([CDataSource](../../data/oledb/cdatasource-class.md))|[povinné] `IDBCreateSession`<br /><br /> [povinné] `IDBInitialize`<br /><br /> [povinné] `IDBProperties`<br /><br /> [povinné] `IPersist`<br /><br /> [volitelné] `IConnectionPointContainer`<br /><br /> [volitelné] `IDBAsynchStatus`<br /><br /> [volitelné] `IDBDataSourceAdmin`<br /><br /> [volitelné] `IDBInfo`<br /><br /> [volitelné] `IPersistFile`<br /><br /> [volitelné] `ISupportErrorInfo`|Připojení od uživatele ke zprostředkovateli. Objekt se používá k určení vlastností na připojení, jako je například název zdroje ID, heslo a dat uživatele. Objekt je také možné spravovat zdroje dat (vytvořit, aktualizovat, odstranit, tabulky a tak dále).|
 |[Relace](../../data/oledb/session-object-interfaces.md) ([CSession](../../data/oledb/cdataconnection-operator-csession-amp.md))|[povinné] `IGetDataSource`<br /><br /> [povinné] `IOpenRowset`<br /><br /> [povinné] `ISessionProperties`<br /><br /> [volitelné] `IAlterIndex`<br /><br /> [volitelné] `IAlterTable`<br /><br /> [volitelné] `IBindResource`<br /><br /> [volitelné] `ICreateRow`<br /><br /> [volitelné] `IDBCreateCommand`<br /><br /> [volitelné] `IDBSchemaRowset`<br /><br /> [volitelné] `IIndexDefinition`<br /><br /> [volitelné] `ISupportErrorInfo`<br /><br /> [volitelné] `ITableCreation`<br /><br /> [volitelné] `ITableDefinition`<br /><br /> [volitelné] `ITableDefinitionWithConstraints`<br /><br /> [volitelné] `ITransaction`<br /><br /> [volitelné] `ITransactionJoin`<br /><br /> [volitelné] `ITransactionLocal`<br /><br /> [volitelné] `ITransactionObject`|Objekt relace je jeden konverzaci mezi spotřebitele a zprostředkovatele. Se podobá rozhraní ODBC `HSTMT` v tom, že může existovat mnoho souběžných relací aktivní.<br /><br /> Objekt relace je primární propojení, chcete-li získat funkce technologie OLE DB. Pokud chcete získat k příkazu, transakce nebo objektu sady řádků, projít objekt relace.|
-|[Sada řádků](../../data/oledb/rowset-object-interfaces.md) ([CRowset](../../data/oledb/crowset-class.md))|[povinné] `IAccessor`<br /><br /> [povinné] `IColumnsInfo`<br /><br /> [povinné] `IConvertType`<br /><br /> [povinné] `IRowset`<br /><br /> [povinné] `IRowsetInfo`<br /><br /> [volitelné] `IChapteredRowset`<br /><br /> [volitelné] `IColumnsInfo2`<br /><br /> [volitelné] `IColumnsRowset`<br /><br /> [volitelné] `IConnectionPointContainer`<br /><br /> [volitelné] `IDBAsynchStatus`<br /><br /> [volitelné] `IGetRow`<br /><br /> [volitelné] `IRowsetChange`<br /><br /> [volitelné] `IRowsetChapterMember`<br /><br /> [volitelné] `IRowsetCurrentIndex`<br /><br /> [volitelné] `IRowsetFind`<br /><br /> [volitelné] `IRowsetIdentity`<br /><br /> [volitelné] `IRowsetIndex`<br /><br /> [volitelné] `IRowsetLocate`<br /><br /> [volitelné] `IRowsetRefresh`<br /><br /> [volitelné] `IRowsetScroll`<br /><br /> [volitelné] `IRowsetUpdate`<br /><br /> [volitelné] `IRowsetView`<br /><br /> [volitelné] `ISupportErrorInfo`<br /><br /> [volitelné] `IRowsetBookmark`|Objektu sady řádků je v datech ze zdroje dat. Objekt se používá u vazeb dat a všechny základní operace (aktualizace, načítání, přesouvání a jiné) s daty. Vždy máte objektu sady řádků zachovat a manipulaci s daty.|
+|[Rowset](../../data/oledb/rowset-object-interfaces.md) ([CRowset](../../data/oledb/crowset-class.md))|[povinné] `IAccessor`<br /><br /> [povinné] `IColumnsInfo`<br /><br /> [povinné] `IConvertType`<br /><br /> [povinné] `IRowset`<br /><br /> [povinné] `IRowsetInfo`<br /><br /> [volitelné] `IChapteredRowset`<br /><br /> [volitelné] `IColumnsInfo2`<br /><br /> [volitelné] `IColumnsRowset`<br /><br /> [volitelné] `IConnectionPointContainer`<br /><br /> [volitelné] `IDBAsynchStatus`<br /><br /> [volitelné] `IGetRow`<br /><br /> [volitelné] `IRowsetChange`<br /><br /> [volitelné] `IRowsetChapterMember`<br /><br /> [volitelné] `IRowsetCurrentIndex`<br /><br /> [volitelné] `IRowsetFind`<br /><br /> [volitelné] `IRowsetIdentity`<br /><br /> [volitelné] `IRowsetIndex`<br /><br /> [volitelné] `IRowsetLocate`<br /><br /> [volitelné] `IRowsetRefresh`<br /><br /> [volitelné] `IRowsetScroll`<br /><br /> [volitelné] `IRowsetUpdate`<br /><br /> [volitelné] `IRowsetView`<br /><br /> [volitelné] `ISupportErrorInfo`<br /><br /> [volitelné] `IRowsetBookmark`|Objektu sady řádků je v datech ze zdroje dat. Objekt se používá u vazeb dat a všechny základní operace (aktualizace, načítání, přesouvání a jiné) s daty. Vždy máte objektu sady řádků zachovat a manipulaci s daty.|
 |[Příkaz](../../data/oledb/command-object-interfaces.md) ([CCommand](ccommand-class.md))|[povinné] `IAccessor`<br /><br /> [povinné] `IColumnsInfo`<br /><br /> [povinné] `ICommand`<br /><br /> [povinné] `ICommandProperties`<br /><br /> [povinné] `ICommandText`<br /><br /> [povinné] `IConvertType`<br /><br /> [volitelné] `IColumnsRowset`<br /><br /> [volitelné] `ICommandPersist`<br /><br /> [volitelné] `ICommandPrepare`<br /><br /> [volitelné] `ICommandWithParameters`<br /><br /> [volitelné] `ISupportErrorInfo`<br /><br /> [volitelné] `ICommandStream`|Objekt příkazu zpracovává operace s daty, jako jsou dotazy. Dokáže zpracovat parametrizované nebo parametrizované příkazy.<br /><br /> Objekt příkazu je také zodpovědná za zpracování vazby pro parametry a výstupní sloupce. Vazba je struktura, která obsahuje informace o tom, jak by mělo být získáno sloupec, v sadě řádků. Obsahuje informace, jako je pořadí, datový typ, délku a stav.|
 |[Transakce](../../data/oledb/transaction-object-interfaces.md) (volitelné)|[povinné] `IConnectionPointContainer`<br /><br /> [povinné] `ITransaction`<br /><br /> [volitelné] `ISupportErrorInfo`|Objekt transakce definuje atomickou jednotku práce na zdroji dat a určuje, jak tyto jednotky práce vzájemně souvisí. Tento objekt není přímo podporován šablonami zprostředkovatele OLE DB (to znamená, že vytvoříte vlastní objekt).|
 
@@ -58,4 +58,4 @@ Další informace naleznete v následujících tématech:
 ## <a name="see-also"></a>Viz také
 
 [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Rozhraní OLE DB](https://docs.microsoft.com/previous-versions/windows/desktop/ms709709(v=vs.85))<br/>
+[Rozhraní OLE DB](/previous-versions/windows/desktop/ms709709(v=vs.85))<br/>

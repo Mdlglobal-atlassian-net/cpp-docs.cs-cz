@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -IDLOUT linker option
 - IDLOUT linker option
 ms.assetid: 10d00a6a-85b4-4de1-8732-e422c6931509
-ms.openlocfilehash: b21e8eb266de9a0baa0512a82acb0ae8a9f650a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91c1a3642f157390e5a0d5c7e2f36d7adf3ca118
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500422"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417629"
 ---
 # <a name="idlout-name-midl-output-files"></a>/IDLOUT (Pojmenovat výstupní soubory MIDL)
 
@@ -44,7 +44,7 @@ V kompilátoru MIDL je volán linkeru jazyka Visual C++ při propojování proje
 
 - *Název souboru*.tlb
 
-- *Název souboru*_p.c
+- *filename*_p.c
 
 - *Název souboru*_i.c
 
@@ -68,7 +68,7 @@ Pokud nezadáte /IDLOUT ani /TLBOUT, linker vytvoří vc70.tlb, vc70.idl, vc70_p
 
 - Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MergedIDLBaseFileName%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
 [Možnosti linkeru](../../build/reference/linker-options.md)<br/>

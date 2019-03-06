@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: 0eac756824b3da6352c60ec69e9d6e679732522c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 072bc15cc931c2fd50cf8a2a1ff0c9145da8b7be
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484796"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414691"
 ---
 # <a name="msbuild-visual-c-overview"></a>Přehled nástroje MSBuild (Visual C++)
 
@@ -27,7 +27,7 @@ Přečtěte si následující dokumenty o MSBuild.
 
 - [Odkaz na příkazový řádek](/visualstudio/msbuild/msbuild-command-line-reference) popisuje argumenty příkazového řádku a možnosti, které lze použít s msbuild.exe.
 
-- [Úloha odkazu](/visualstudio/msbuild/msbuild-task-reference) úlohy nástroje MSBuild popisuje. Obzvláště zvažte tyto prvky, které jsou specifické pro Visual C++: [BscMake – úloha](/visualstudio/msbuild/bscmake-task), [cl – úloha](/visualstudio/msbuild/cl-task), [cppclean – úloha](/visualstudio/msbuild/cppclean-task), [lib – úloha](/visualstudio/msbuild/lib-task), [Propojení úkolů](/visualstudio/msbuild/link-task), [MIDL – úloha](/visualstudio/msbuild/midl-task), [MT – úloha](/visualstudio/msbuild/mt-task), [RC – úloha](/visualstudio/msbuild/rc-task), [SETENV – úloha](/visualstudio/msbuild/setenv-task), [ Vcmessage – úloha](/visualstudio/msbuild/vcmessage-task), [xdcmake – úloha](/visualstudio/msbuild/xdcmake-task), [XSD – úloha](/visualstudio/msbuild/xsd-task).
+- [Úloha odkazu](/visualstudio/msbuild/msbuild-task-reference) úlohy nástroje MSBuild popisuje. Obzvláště zvažte tyto prvky, které jsou specifické pro Visual C++: [BscMake – úloha](/visualstudio/msbuild/bscmake-task), [cl – úloha](/visualstudio/msbuild/cl-task), [cppclean – úloha](/visualstudio/msbuild/cppclean-task), [lib – úloha](/visualstudio/msbuild/lib-task), [propojení úkolů](/visualstudio/msbuild/link-task), [MIDL – úloha](/visualstudio/msbuild/midl-task), [MT – úloha](/visualstudio/msbuild/mt-task), [RC – úloha](/visualstudio/msbuild/rc-task), [SETENV – úloha](/visualstudio/msbuild/setenv-task), [vcmessage – úloha](/visualstudio/msbuild/vcmessage-task), [xdcmake – úloha](/visualstudio/msbuild/xdcmake-task), [XSD – úloha](/visualstudio/msbuild/xsd-task).
 
 ## <a name="msbuild-on-the-command-line"></a>MSBuild na příkazovém řádku
 
@@ -65,15 +65,15 @@ Standardně primární podpůrné soubory Visual C++ jsou umístěny v následuj
 
 |Adresář|Popis|
 |---------------|-----------------|
-|*jednotky*: \Program Files *(x86)* \Microsoft Visual Studio\\*rok*\\*edition*\Common7\IDE\VC\VCTargets\ <br /><br />*jednotky*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp (x86) \v4.0\\*verze*\ |Obsahuje primární cílové soubory (TARGETS) a soubory vlastností (props), které jsou používány těmito cíly. Ve výchozím nastavení makro $(VCTargetsPath) odkazuje na tento adresář.|
-|*jednotky*: \Program Files *(x86)* \Microsoft Visual Studio\\*rok*\\*edition*\Common7\IDE\VC\VCTargets\ Platformy\\*platformy*\ <br /><br />*jednotky*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*verze*\Platforms\\*platformy*\ |Obsahuje soubory cíle a vlastnosti specifické pro platformu, které přepíší cíle a vlastnosti svého nadřazeného adresáře. Tento adresář obsahuje taky knihovnu DLL, která definuje úlohy, které jsou používány cíli v tomto adresáři.<br /><br /> *Platformy* zastupuje ARM, Win32 nebo x64 podadresáře.|
-|*jednotky*: \Program Files *(x86)* \Microsoft Visual Studio\\*rok*\\*edition*\Common7\IDE\VC\VCTargets\ Platformy\\*platformy*\PlatformToolsets\\*sady nástrojů*\ <br /><br />*jednotky*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*verze*\Platforms\\*platformy*\ PlatformToolsets\\*sady nástrojů*\ <br /><br />*jednotky*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*platformy*\PlatformToolsets\\*sady nástrojů*\ |Obsahuje adresáře, které umožňují sestavení generovat aplikace Visual C++ s použitím zadaného *nástrojů*.<br /><br /> *Rok* a *edition* zástupné symboly používají Visual Studio 2017 a novější verze. *Verze* zástupný symbol je V110 pro sadu Visual Studio 2012, V120 pro Visual Studio 2013 nebo V140 pro Visual Studio 2015. *Platformy* zastupuje ARM, Win32 nebo x64 podadresáře. *Nástrojů* zástupný text představuje podadresář sady nástrojů, například v140 pro vytváření aplikací pro Windows pomocí nástrojů Visual Studio 2015, v120_xp k vývoji pro Windows XP pomocí sady nástrojů Visual Studio 2013 nebo v110_wp80 do vytváření aplikací Windows Phone 8.0 pomocí sady nástrojů Visual Studio 2012.<br /><br />Neobsahuje cestu, která obsahuje adresáře, které umožňují sestavení generovat aplikace Visual C++ 2008 nebo Visual C++ 2010 *verze*a *platformy* představuje zástupný text Itanium, Win32 nebo x64 podadresáře. *Nástrojů* zástupný text představuje podadresář sady nástrojů v90 nebo v100.|
+|*drive*:\Program Files *(x86)* \Microsoft Visual Studio\\*year*\\*edition*\Common7\IDE\VC\VCTargets\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp (x86)\v4.0\\*version*\ |Obsahuje primární cílové soubory (TARGETS) a soubory vlastností (props), které jsou používány těmito cíly. Ve výchozím nastavení makro $(VCTargetsPath) odkazuje na tento adresář.|
+|*drive*:\Program Files *(x86)* \Microsoft Visual Studio\\*year*\\*edition*\Common7\IDE\VC\VCTargets\Platforms\\*platform*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*platform*\ |Obsahuje soubory cíle a vlastnosti specifické pro platformu, které přepíší cíle a vlastnosti svého nadřazeného adresáře. Tento adresář obsahuje taky knihovnu DLL, která definuje úlohy, které jsou používány cíli v tomto adresáři.<br /><br /> *Platformy* zastupuje ARM, Win32 nebo x64 podadresáře.|
+|*drive*:\Program Files *(x86)* \Microsoft Visual Studio\\*year*\\*edition*\Common7\IDE\VC\VCTargets\Platforms\\*platform*\PlatformToolsets\\*toolset*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*platform*\PlatformToolsets\\*toolset*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*platform*\PlatformToolsets\\*toolset*\ |Obsahuje adresáře, které umožňují sestavení generovat aplikace Visual C++ s použitím zadaného *nástrojů*.<br /><br /> *Rok* a *edition* zástupné symboly používají Visual Studio 2017 a novější verze. *Verze* zástupný symbol je V110 pro sadu Visual Studio 2012, V120 pro Visual Studio 2013 nebo V140 pro Visual Studio 2015. *Platformy* zastupuje ARM, Win32 nebo x64 podadresáře. *Nástrojů* zástupný text představuje podadresář sady nástrojů, například v140 pro vytváření aplikací pro Windows pomocí nástrojů Visual Studio 2015, v120_xp k vývoji pro Windows XP pomocí sady nástrojů Visual Studio 2013 nebo v110_wp80 do vytváření aplikací Windows Phone 8.0 pomocí sady nástrojů Visual Studio 2012.<br /><br />Neobsahuje cestu, která obsahuje adresáře, které umožňují sestavení generovat aplikace Visual C++ 2008 nebo Visual C++ 2010 *verze*a *platformy* představuje zástupný text Itanium, Win32 nebo x64 podadresáře. *Nástrojů* zástupný text představuje podadresář sady nástrojů v90 nebo v100.|
 
 ### <a name="support-files"></a>Soubory podpory
 
 Adresáře souboru podpory obsahují soubory s těmito příponami:
 
-|Rozšíření|Popis|
+|Linka|Popis|
 |---------------|-----------------|
 |.TARGETS|Obsahuje `Target` elementů XML, které určují úkoly, které jsou spouštěny cílem. Může také obsahovat `PropertyGroup`, `ItemGroup`, `ItemDefinitionGroup`a uživatelem definovanými `Item` prvků, které slouží k přiřazení souborů a možnosti příkazového řádku pro parametry úlohy.<br /><br /> Další informace najdete v tématu [Target – Element (MSBuild)](/visualstudio/msbuild/target-element-msbuild).|
 |.props|Obsahuje `Property Group` a uživatelem definovanými `Property` elementů XML, které určují soubor a nastavení parametru používané během sestavení.<br /><br /> Může také obsahovat `ItemDefinitionGroup` a uživatelem definovanými `Item` elementů XML, které určují další nastavení. Položky definované ve skupině definice se podobají vlastnosti, ale není přístupný z příkazového řádku. Soubory projektu Visual C++ často používají položky namísto vlastností k vyjádření nastavení.<br /><br /> Další informace najdete v tématu [itemgroup – Element (MSBuild)](/visualstudio/msbuild/itemgroup-element-msbuild), [ItemDefinitionGroup – Element (MSBuild)](/visualstudio/msbuild/itemdefinitiongroup-element-msbuild), a [Item – Element (MSBuild)](/visualstudio/msbuild/item-element-msbuild).|
@@ -83,7 +83,7 @@ Adresáře souboru podpory obsahují soubory s těmito příponami:
 
 K co nejefektivnějšímu využití MSBuild na příkazovém řádku, pomáhá zjistit, jaké vlastnosti a cíle jsou užitečné a důležité. Většina vlastností a cílů pomáhá implementovat systém sestavení Visual C++ a v důsledku toho nejsou relevantní pro daného uživatele. Tato část popisuje některé vhodné uživatelem orientované vlastnosti a cíle.
 
-### <a name="platformtoolset-property"></a>Vlastnost PlatformToolset
+### <a name="platformtoolset-property"></a>PlatformToolset Property
 
 `PlatformToolset` Vlastnost určuje, které sady nástrojů Visual C++ se používají v sestavení. Ve výchozím nastavení se používá aktuální sady nástrojů. Pokud je tato vlastnost nastavena, hodnota vlastnosti je zřetězená s literálovými řetězci k vytvoření cesty k adresáři, který obsahuje vlastnost a cílové soubory, které jsou nutné k vytvoření projektu pro konkrétní platformu. Pro sestavení pomocí této verze sady nástrojů platformy musí být nainstalovaná sada nástrojů platformy.
 
@@ -111,24 +111,24 @@ Existují stovky cílů v podpůrných souborů Visual C++. Nejvíce je však c�
 
 V následující tabulce jsou uvedeny některé užitečné cíle zaměřených na uživatele.
 
-|Cíl|Popis|
+|Target|Popis|
 |------------|-----------------|
-|Nástroje BscMake|Spustí nástroj vyhledejte informace o údržbě nástroje Microsoft bscmake.exe.|
+|BscMake|Spustí nástroj vyhledejte informace o údržbě nástroje Microsoft bscmake.exe.|
 |Sestavení|Vytvoří projekt.<br /><br /> Toto je výchozí cíl pro projekt.|
 |ClCompile|Spustí nástroj kompilátoru Visual C++, cl.exe.|
 |Vyčistit|Odstraní dočasné a průběžné zprostředkující soubory sestavení.|
 |lib|Spustí nástroj Microsoft 32bitový Správce knihovny lib.exe.|
 |Odkaz|Spustí nástroj linker Visual C++, link.exe.|
 |ManifestResourceCompile|Extrahujte seznam prostředků z manifestu a poté spustí nástroj Microsoft Windows Resource Compiler, rc.exe.|
-|MIDL|Spustí nástroj kompilátoru Microsoft Interface Definition Language (MIDL), midl.exe.|
+|Midl|Spustí nástroj kompilátoru Microsoft Interface Definition Language (MIDL), midl.exe.|
 |Opětovné sestavení|Čistí a poté sestaví váš projekt.|
 |ResourceCompile|Spustí nástroj Microsoft Windows Resource Compiler, rc.exe.|
-|Xdcmake –|Spustí nástroj dokumentace XML, xdcmake.exe.|
-|XSD|Spustí nástroj definice schématu XML, xsd.exe. *Viz poznámka níže.*|
+|XdcMake|Spustí nástroj dokumentace XML, xdcmake.exe.|
+|Xsd|Spustí nástroj definice schématu XML, xsd.exe. *Viz poznámka níže.*|
 
 > [!NOTE]
 > V sadě Visual Studio 2017, projekt C++ podpora **xsd** zastaralé soubory. Můžete dál používat **Microsoft.VisualC.CppCodeProvider** přidáním **CppCodeProvider.dll** ručně do mezipaměti GAC.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)

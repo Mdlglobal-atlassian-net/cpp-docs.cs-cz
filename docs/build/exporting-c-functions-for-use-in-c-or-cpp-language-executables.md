@@ -8,12 +8,12 @@ helpviewer_keywords:
 - exporting DLLs [C++], C functions in C++ executables
 - exporting functions [C++], C functions in C++ executables
 ms.assetid: b51d6e5e-37cf-4c1c-b0bf-fcf188c82f00
-ms.openlocfilehash: 0b7347ee29e973e1043a153f8284baa47b674a4d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d459c0116a657e12eafa09b50b1a855243f96ea
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631813"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416498"
 ---
 # <a name="exporting-c-functions-for-use-in-c-or-c-language-executables"></a>Export funkcí jazyka C pro použití ve spustitelných souborech jazyka C nebo C++
 
@@ -64,6 +64,6 @@ extern "C" {
 
 - [Používání příkazu extern pro specifikaci propojení](../cpp/using-extern-to-specify-linkage.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Export z knihovny DLL](../build/exporting-from-a-dll.md)

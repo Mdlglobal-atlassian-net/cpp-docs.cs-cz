@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ASSEMBLYLINKRESOURCE linker option
 - /ASSEMBLYLINKRESOURCE linker option
 ms.assetid: 8b6ad184-1b33-47a4-8513-4803cf915b64
-ms.openlocfilehash: 7c1d78758e43bf8e0c2c281c495c81e9f62b36e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2970f4e6d94cfa2e6315eeff85eb71a30dc032a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473902"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422426"
 ---
 # <a name="assemblylinkresource-link-to-net-framework-resource"></a>/ASSEMBLYLINKRESOURCE (Vytvořit odkaz na prostředek rozhraní .NET Framework)
 
@@ -35,7 +35,7 @@ Propojené prostředky byly veřejné sestavení při vytvořené pomocí linker
 
 / ASSEMBLYLINKRESOURCE vyžaduje, aby kompilace [/CLR](../../build/reference/clr-common-language-runtime-compilation.md); [/LN](../../build/reference/ln-create-msil-module.md) nebo [parametr/noassembly](../../build/reference/noassembly-create-a-msil-module.md) není povolen u /ASSEMBLYLINKRESOURCE.
 
-Pokud *filename* je soubor prostředků rozhraní .NET Framework vytvořený, například podle [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) nebo ve vývojovém prostředí, můžete přistupovat pomocí členů z **System.Resources** oboru názvů. Další informace najdete v tématu [System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx). U všech ostatních prostředků, použijte **GetManifestResource** \* metody v **System.Reflection.Assembly** pro přístup k prostředku v době běhu.
+Pokud *filename* je soubor prostředků rozhraní .NET Framework vytvořený, například podle [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) nebo ve vývojovém prostředí, můžete přistupovat pomocí členů z **System.Resources** oboru názvů. Další informace najdete v tématu [System.Resources.ResourceManager](/dotnet/api/system.resources.resourcemanager). U všech ostatních prostředků, použijte **GetManifestResource** \* metody v **System.Reflection.Assembly** pro přístup k prostředku v době běhu.
 
 *Název souboru* může být libovolný formát souboru. Můžete například vytvořit nativní knihovna DLL stane součástí sestavení, abyste mohli nainstalovat do globální mezipaměti sestavení a získat přístup ze spravovaného kódu v sestavení.
 
@@ -69,7 +69,7 @@ Další možnosti linkeru, které ovlivňují generování sestavení jsou:
 
 - Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
 [Možnosti linkeru](../../build/reference/linker-options.md)

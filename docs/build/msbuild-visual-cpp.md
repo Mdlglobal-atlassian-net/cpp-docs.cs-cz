@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MSBuild
 ms.assetid: 7a1be7ff-0312-4669-adf2-5f5bf507d560
-ms.openlocfilehash: 4e0a82602cdeb775569099c559eef5aed51b431f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6ca3ac46a4d84c9513ba4f7fd34a15f667cb6ed
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429429"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423219"
 ---
 # <a name="msbuild-visual-c"></a>MSBuild (Visual C++)
 
@@ -30,6 +30,6 @@ Můžete použít **MSBuild** nástroj pro sestavování z příkazového řádk
 |[Postupy: Integrace vlastních nástrojů do vlastností projektu](../build/how-to-integrate-custom-tools-into-the-project-properties.md)|Ukazuje, jak přidat možnosti pro vlastní nástroj ve vlastnostech projektu.|
 |[Postupy: Změna cílové architektury a sady nástrojů](../build/how-to-modify-the-target-framework-and-platform-toolset.md)|Ukazuje, jak sestavit projekt pro více rozhraní nebo sad nástrojů.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Sestavení kódu C/C++ na příkazovém řádku](../build/building-on-the-command-line.md)

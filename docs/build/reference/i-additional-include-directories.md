@@ -14,12 +14,12 @@ helpviewer_keywords:
 - set include directories
 - include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-ms.openlocfilehash: 0dc1769924880d8cb1b5dc173dd614e87584cac9
-ms.sourcegitcommit: 45835842604602a011813d0cd70abc5df91b89ed
+ms.openlocfilehash: 72f871b99602c63e3edaea719faf5de6d4451515
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750389"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412845"
 ---
 # <a name="i-additional-include-directories"></a>/I (Další adresáře souborů k zahrnutí)
 
@@ -31,7 +31,7 @@ Adresář se přidá do seznamu adresářů hledat vkládané soubory.
 
 ### <a name="arguments"></a>Arguments
 
-*Adresář*<br/>
+*directory*<br/>
 Adresář, který má být přidán do seznamu adresáře hledat vkládané soubory.
 
 ## <a name="remarks"></a>Poznámky
@@ -62,13 +62,13 @@ Kompilátor vyhledá adresářů v následujícím pořadí:
 
 ## <a name="example"></a>Příklad
 
-Následující příkaz hledá soubory k zahrnutí požadoval MAIN.c v následujícím pořadí: nejprve, pokud zadaný pomocí dvojité uvozovky, místní soubory budou prohledány. V dalším kroku vyhledávání bude pokračovat v adresář \INCLUDE a potom v adresáři \MY\INCLUDE a nakonec v adresářích přiřazená k proměnné prostředí INCLUDE.
+Následující příkaz hledá soubory k zahrnutí požadoval MAIN.c v následujícím pořadí: Nejprve Pokud zadané pomocí dvojité uvozovky, budou prohledány místní soubory. V dalším kroku vyhledávání bude pokračovat v adresář \INCLUDE a potom v adresáři \MY\INCLUDE a nakonec v adresářích přiřazená k proměnné prostředí INCLUDE.
 
 ```
 CL /I \INCLUDE /I\MY\INCLUDE MAIN.C
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

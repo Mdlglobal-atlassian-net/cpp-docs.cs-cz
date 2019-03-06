@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
-ms.openlocfilehash: ae91921ecd5f53f4551e46e1d03cf027ce3e1f3b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 638152d8c49bd20742a586bc665efcdb662b6f3a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292396"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413885"
 ---
 # <a name="iaxwinambientdispatchex-interface"></a>Iaxwinambientdispatchex – rozhraní
 
@@ -42,7 +42,7 @@ Toto rozhraní zahrňte knihovny ATL aplikace, které jsou staticky propojené k
 
 Toto rozhraní je zveřejněný prostřednictvím ovládací prvek ActiveX knihovny ATL pro hostování objektů. Odvozené od [iaxwinambientdispatch –](../../atl/reference/iaxwinambientdispatch-interface.md), `IAxWinAmbientDispatchEx` přidá metodu, která umožňuje doplnit rozhraní vedlejší vlastnost poskytované ATL s vlastním.
 
-[AXHost](https://msdn.microsoft.com/library/system.windows.forms.axhost.aspx) se pokusí načíst informace o typu o `IAxWinAmbientDispatch` a `IAxWinAmbientDispatchEx` z knihovny typů, která obsahuje kód.
+<xref:System.Windows.Forms.AxHost> pokusí se načíst informace o typu o `IAxWinAmbientDispatch` a `IAxWinAmbientDispatchEx` z knihovny typů, která obsahuje kód.
 
 Pokud se připojujete k ATL90.dll, **AXHost** načte informace o typu z knihovny typů v knihovně DLL.
 

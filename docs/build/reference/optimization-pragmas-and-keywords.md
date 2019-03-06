@@ -6,12 +6,12 @@ helpviewer_keywords:
 - pragmas, for optimization
 - optimization, keywords and pragmas
 ms.assetid: 66a94842-ef10-490a-88b3-51d1a568ead5
-ms.openlocfilehash: 1d975d72385396e37a1c1fd3587a7b91fdd680a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ece9a163660d5cd5a756a1bf141ede31a21a770c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504400"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421178"
 ---
 # <a name="optimization-pragmas-and-keywords"></a>Optimalizace pragmas a klíčových slov
 
@@ -25,7 +25,7 @@ Několik klíčová slova a pragmas, který používáte ve vašem kódu C nebo 
 
 - [#pragma auto_inline](../../preprocessor/auto-inline.md)
 
-- [check_stack – #pragma](../../preprocessor/check-stack.md)
+- [#pragma check_stack](../../preprocessor/check-stack.md)
 
 - [#pragma – funkce](../../preprocessor/function-c-cpp.md)
 
@@ -39,6 +39,6 @@ Několik klíčová slova a pragmas, který používáte ve vašem kódu C nebo 
 
 - [Register – klíčové slovo](../../cpp/storage-classes-cpp.md#register)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Optimalizace kódu](../../build/reference/optimizing-your-code.md)

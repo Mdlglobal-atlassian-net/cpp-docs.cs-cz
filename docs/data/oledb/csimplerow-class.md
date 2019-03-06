@@ -35,12 +35,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: dba86b310dcd9b89026d95732f9ca542e6995146
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: b7284ace73d80eff6337e1d71cafef26094455f0
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556631"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414018"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow – třída
 
@@ -105,7 +105,7 @@ Ukazatel `CSimpleRow` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnotu HRESULT, obvykle S_OK označující dvěma řádky se stejnou instanci řádek nebo S_FALSE označující dvěma řádky se liší. Zobrazit [IRowsetIdentity::IsSameRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms719629(v=vs.85)) v *OLE DB referenční informace pro programátory* pro ostatní možných vrácených hodnot.
+Hodnotu HRESULT, obvykle S_OK označující dvěma řádky se stejnou instanci řádek nebo S_FALSE označující dvěma řádky se liší. Zobrazit [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) v *OLE DB referenční informace pro programátory* pro ostatní možných vrácených hodnot.
 
 ## <a name="csimplerow"></a> CSimpleRow::CSimpleRow
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - import libraries, using
 - export files
 ms.assetid: 2634256a-8aa5-4495-8c9e-6cde10e4ed76
-ms.openlocfilehash: e23b729bdca102ec24c4426e9784e3aab267bff2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75a93d97478050718b3f6c32fa83d7320a38954b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484949"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412975"
 ---
 # <a name="using-an-import-library-and-export-file"></a>Použití knihovny importu a souboru exportu
 
@@ -27,6 +27,6 @@ Po vytvoření knihovnu importu (.lib) a souboru exportu (.exp) pro program, pou
 
 A konečně propojte program, který jste začali. V příkazu LINK zadejte objekty a knihovny pro program souboru .exp LIB vytvořený pro program a knihovna importu nebo knihovny pro exporty používá tento program. Chcete-li pokračovat v příkladu, obsahuje odkaz pro ONE.dll ONE.exp a TWO.lib, jakož i objekty a knihovny, které patří do ONE.dll. V příkazu LINK; neurčí soubor .def nebo specifikaci/Export je přebytečný ty nejsou potřeba, protože definice exportu jsou obsaženy v souboru .exp. Při propojování pomocí souboru .exp odkaz nelze vytvořit knihovnu importu, protože předpokládá, že jedna byl vytvořen při vytvoření souboru .exp.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Práce s knihovnami importu a soubory exportu](../../build/reference/working-with-import-libraries-and-export-files.md)

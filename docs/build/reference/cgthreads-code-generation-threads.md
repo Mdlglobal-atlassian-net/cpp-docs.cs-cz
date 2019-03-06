@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cgthreads compiler option (C++)
 - cgthreads
 ms.assetid: 64bc768c-6caa-4baf-9dea-7cfa1ffb01c2
-ms.openlocfilehash: b06a800fca529a86b393ca00dcffce30ac7a21fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c3d3b51691247ddef5614cae113ffa9ded576e9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606463"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425234"
 ---
 # <a name="cgthreads-code-generation-threads"></a>/cgthreads (Vlákna generování kódu)
 
@@ -51,7 +51,7 @@ Sestavení lze zadat více úrovní paralelismu. Přepínač msbuild.exe **/maxc
 
 - Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

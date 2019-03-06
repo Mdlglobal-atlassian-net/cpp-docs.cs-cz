@@ -16,12 +16,12 @@ helpviewer_keywords:
 - listing file type
 - assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
-ms.openlocfilehash: 6bb5e18c5a174c9e48b253031daad195e6132375
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 610c94646b82783a49ca6de6bc443e99a3c137bc
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507299"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420905"
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (soubor seznamu)
 
@@ -29,7 +29,7 @@ Vytvoří soubor výpisu obsahující kódu assembleru.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/FA**[**c**\][**s**\][**u**] **/Fa**_cesta_
+> **/FA**[**c**\][**s**\][**u**] **/Fa**_pathname_
 
 ## <a name="remarks"></a>Poznámky
 
@@ -61,7 +61,7 @@ Jeden *zdroj*.asm soubor se vytvoří pro každý soubor zdrojového kódu dané
 *Název souboru*<br/>
 Soubor výpisu s názvem *filename*asm je umístěn v aktuálním adresáři. To platí jenom při kompilaci jeden zdrojový soubor kódu.
 
-*filename.Extension*<br/>
+*filename.extension*<br/>
 Soubor výpisu s názvem *filename.extension* je umístěn v aktuálním adresáři. To platí jenom při kompilaci jeden zdrojový soubor kódu.
 
 *Adresář*__\\__<br/>
@@ -95,7 +95,7 @@ Následující příkaz vytvoří kombinované zdroje a výpis strojového kódu
 CL /FAcs HELLO.CPP
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti výstupního souboru (/F)](../../build/reference/output-file-f-options.md)<br/>
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>

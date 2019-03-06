@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: f1e9c6e4505c67b881d479817ec8b45e4ae5dc8b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: db72dbab14db69f14d7c3d813562ec661df4b424
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304548"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417655"
 ---
 # <a name="crebarctrl-class"></a>Crebarctrl – třída
 
@@ -255,7 +255,7 @@ virtual BOOL Create(
 Určuje kombinaci – styly ovládacího prvku matrice použité pro ovládací prvek. Zobrazit [– styly ovládacího prvku Rebar](/windows/desktop/Controls/rebar-control-styles) v sadě Windows SDK pro seznam podporovaných styly.
 
 *Rect*<br/>
-Odkaz na [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, což je umístění a velikost ovládacího prvku rebar.
+Odkaz na [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury, což je umístění a velikost ovládacího prvku rebar.
 
 *pParentWnd*<br/>
 Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku rebar. Nesmí být NULL.
@@ -303,7 +303,7 @@ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené s
 Určuje kombinaci – styly ovládacího prvku matrice použité pro ovládací prvek. Seznam podporovaných stylů, najdete v části [– styly ovládacího prvku Rebar](/windows/desktop/Controls/rebar-control-styles) v sadě Windows SDK.
 
 *Rect*<br/>
-Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.
+Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.
 
 *pParentWnd*<br/>
 Ukazatel na okno, který je nadřazeného ovládacího prvku.
@@ -389,7 +389,7 @@ void GetBandBorders(
 Index založený na nule pásmo, pro kterou budou načteny ohraničení.
 
 *prc*<br/>
-Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která se zobrazí ohraničení obsluhy vzdálené správy. Pokud ovládacího prvku rebar. má RBS_BANDBORDERS styl, dostane každý člen této struktury počet pixelů na straně odpovídajícího pásmu, které tvoří ohraničení. Pokud ovládacího prvku rebar. nemá žádné RBS_BANDBORDERS styl, obdrží jenom levé člen této struktury platné informace. Popis – styly ovládacího prvku matrice, naleznete v tématu [– styly ovládacího prvku matrice](/windows/desktop/Controls/rebar-control-styles) v sadě Windows SDK.
+Ukazatel [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura, která se zobrazí ohraničení obsluhy vzdálené správy. Pokud ovládacího prvku rebar. má RBS_BANDBORDERS styl, dostane každý člen této struktury počet pixelů na straně odpovídajícího pásmu, které tvoří ohraničení. Pokud ovládacího prvku rebar. nemá žádné RBS_BANDBORDERS styl, obdrží jenom levé člen této struktury platné informace. Popis – styly ovládacího prvku matrice, naleznete v tématu [– styly ovládacího prvku matrice](/windows/desktop/Controls/rebar-control-styles) v sadě Windows SDK.
 
 ##  <a name="getbandcount"></a>  CReBarCtrl::GetBandCount
 
@@ -584,7 +584,7 @@ BOOL GetRect(
 Index založený na nule vzdálené správy v rámci ovládacího prvku rebar.
 
 *prc*<br/>
-Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která bude dostávat hranice vzdálené matrice.
+Ukazatel [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura, která bude dostávat hranice vzdálené matrice.
 
 ### <a name="return-value"></a>Návratová hodnota
 

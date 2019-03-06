@@ -5,12 +5,12 @@ helpviewer_keywords:
 - NMAKE program, dot directives
 - dot directives in NMAKE
 ms.assetid: ab35da65-30b6-48b7-87d6-61503d7faf9f
-ms.openlocfilehash: 18688afedfe076ea2e4485471ffbe92dc2e09a2d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e360e7424cb82f5c844f12f2a7074590410ca055
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542867"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420242"
 ---
 # <a name="dot-directives"></a>Direktivy s tečkou
 
@@ -37,6 +37,6 @@ Chcete-li přidat další přípony na konec seznamu, zadejte
 
 kde *suffixlist* seznam obsahuje další přípony, oddělené mezerami nebo karty. Pokud chcete zobrazit aktuální nastavení **. PŘÍPONY**, spusťte s parametrem/p. NMAKE
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [NMAKE – referenční zdroje](../build/nmake-reference.md)

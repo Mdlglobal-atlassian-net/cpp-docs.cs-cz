@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - memory, overwrites
 ms.assetid: 1345eb4d-24ba-4595-b1cc-2da66986311e
-ms.openlocfilehash: 4983d64f7d783c5f23643a046780fb5fa4ba4565
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75f4d5aeddc617173aa33d96f8ff934fb8c1b320
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623727"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413833"
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>Kontrola přepisování paměti použitím ladění sestavení
 
@@ -39,6 +39,6 @@ Pokud první vyhodnocení úspěšné a druhý se nezdaří, znamená to, že p�
 
 V závislosti na povaze vašich aplikací, můžete zjistit, která `afxMemDF` způsobí, že váš program pro spuštění příliš pomalu i testování. `afxMemDF` Způsobí, že proměnná `AfxCheckMemory` nelze volat pro každé volání na nový a odstraňovat. V takovém případě by měl bodový vlastní volání `AfxCheckMemory`(jak je uvedeno výše) a zkuste k izolaci paměť přepsat tímto způsobem.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Oprava problémů se sestavením pro vydání](../../build/reference/fixing-release-build-problems.md)

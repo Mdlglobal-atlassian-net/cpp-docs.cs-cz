@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - DUMPBIN program, options
 ms.assetid: 563b696e-7599-4480-94b9-014776289ec8
-ms.openlocfilehash: 5c57c49a39ae135f88f1f1eca25e59a68c7ad1aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a836af74260c213289f3300500bf7e4de521d5a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434304"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420086"
 ---
 # <a name="dumpbin-options"></a>Možnosti DUMPBIN
 
@@ -39,7 +39,7 @@ Nástroj DUMPBIN obsahuje následující možnosti:
 
 - [/HEADERS](../../build/reference/headers.md)
 
-- [/ IMPORTS](../../build/reference/imports-dumpbin.md)
+- [/IMPORTS](../../build/reference/imports-dumpbin.md)
 
 - [/LINENUMBERS](../../build/reference/linenumbers.md)
 
@@ -67,7 +67,7 @@ Nástroj DUMPBIN obsahuje následující možnosti:
 
 - [/TLS](../../build/reference/tls.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nástroje sestavení C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
 [DUMPBIN – odkaz](../../build/reference/dumpbin-reference.md)

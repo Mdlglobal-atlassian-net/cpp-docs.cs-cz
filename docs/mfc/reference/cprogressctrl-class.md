@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: a6d5d3becfd1c1ee4a032c74eb116ede82c42bc4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 131bee5f9eae1e6e2be4d48941d148edbde68262
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260267"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418760"
 ---
 # <a name="cprogressctrl-class"></a>Cprogressctrl – třída
 
@@ -149,7 +149,7 @@ Určuje ovládací prvek indikátoru průběhu stylu. Použít libovolnou kombin
 - Pbs_smooth – zobrazí postupné, technologie smooth vyplníte ovládací prvek indikátoru průběhu. Bez tohoto příznaku ovládací prvek vyplní bloky.
 
 *Rect*<br/>
-Určuje ovládací prvek indikátoru průběhu velikost a umístění. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Vzhledem k tomu, ovládací prvek musí být podřízené okno, zadaných souřadnic jsou vzhledem ke klientské oblasti *pParentWnd*.
+Určuje ovládací prvek indikátoru průběhu velikost a umístění. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury. Vzhledem k tomu, ovládací prvek musí být podřízené okno, zadaných souřadnic jsou vzhledem ke klientské oblasti *pParentWnd*.
 
 *pParentWnd*<br/>
 Určuje průběhu nadřazené okno ovládacího prvku, obvykle `CDialog`. Nesmí být NULL.
@@ -191,7 +191,7 @@ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené s
 Určuje ovládací prvek indikátoru průběhu stylu. Použít libovolnou kombinaci styly oken, které jsou popsané v [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) v sadě Windows SDK.
 
 *Rect*<br/>
-Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.
+Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.
 
 *pParentWnd*<br/>
 Ukazatel na okno, který je nadřazeného ovládacího prvku.

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], compiling without linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
-ms.openlocfilehash: e071209bd09fea17082379bf3f2486866b52c548
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e65801fcddef739f3fabe88b2b940602fde965a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447200"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412728"
 ---
 # <a name="cl-invokes-the-linker"></a>CL vyvolává linker
 
@@ -24,9 +24,9 @@ CL vyvolává linker automaticky po kompilaci, pokud se nepoužije možnost /c. 
 |Možnost|Popis|
 |------------|-----------------|
 |/c|Kompilovat bez propojení|
-|/ /P E, /EP,|Umožňuje předzpracování bez kompilace nebo propojení|
+|/E, /EP, /P|Umožňuje předzpracování bez kompilace nebo propojení|
 |/Zg|Generovat prototypy funkcí|
-|/ZS|Zkontrolovat syntaxi|
+|/Zs|Zkontrolovat syntaxi|
 
 Další informace o propojení naleznete v tématu [možnosti Linkeru](../../build/reference/linker-options.md).
 
@@ -56,7 +56,7 @@ CL názvy souborů .obj, spolu s názvem MYGRAPH.lib, předá linkeru. Linker p�
 
 1. V MOD2.obj, odkazy na `myline` a `mycircle` se budou překládat pomocí definice v MYGRAPH.lib.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

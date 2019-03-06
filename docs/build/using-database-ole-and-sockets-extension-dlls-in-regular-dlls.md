@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], extension
 - DLLs [C++], regular
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
-ms.openlocfilehash: 74945f712fed68548e3853d231a586ec0c70d84b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2d4cc4f3b82bd3082ba3b4eac635ea91c19691f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587522"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421204"
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>Použití databáze, OLE a Soketových rozšiřujících knihoven DLL v běžných knihovnách MFC DLL
 
@@ -55,7 +55,7 @@ Pokud MFC – rozšiřující knihovny DLL je pouze bude používat z aplikace k
 
 Všimněte si, že je vhodné mít více **CDynLinkLibrary** objekty z jedné MFC – rozšiřující knihovny DLL v jakémkoliv řetězci, zejména v případě, že bude MFC – rozšiřující knihovny DLL dynamicky uvolněna z paměti. Nevolejte inicializační funkce více než jednou z jakékoli jeden modul.
 
-## <a name="sample-code"></a>Ukázkový kód
+## <a name="sample-code"></a>Vzorový kód
 
 Tento vzorový kód předpokládá, že je běžné knihovny MFC DLL implicitně propojení s MFC – rozšiřující knihovny DLL. Toho lze dosáhnout odkazování na knihovnu importu (.lib) MFC – rozšiřující knihovny DLL při sestavování běžné knihovny MFC DLL.
 
@@ -148,6 +148,6 @@ BOOL CYourRegularDLL::InitInstance()
 
 - [DLL verze knihovny MFC](../mfc/tn033-dll-version-of-mfc.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – rozšiřující knihovny DLL](../build/extension-dlls.md)

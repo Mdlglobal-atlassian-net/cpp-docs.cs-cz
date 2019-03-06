@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - error handling, and notification
 ms.assetid: b621cf60-d869-451a-b05e-dc86d78addaa
-ms.openlocfilehash: 845a79e035943dbbde0d498702f70ec7dd6b4d3b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7aae4d68b272a6c12233f283d4b263648062b7c1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432390"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418942"
 ---
 # <a name="error-handling-and-notification"></a>Zpracování chyb a oznámení
 
@@ -33,6 +33,6 @@ Následující témata popisují zpracování chyb a oznámení:
 
 - [Výjimky](../../build/reference/exceptions-c-cpp.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora linkeru pro knihovny DLL s odloženým načtením](../../build/reference/linker-support-for-delay-loaded-dlls.md)

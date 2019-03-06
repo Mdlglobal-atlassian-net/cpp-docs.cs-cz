@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -LIBPATH linker option
 - library path linker option
 ms.assetid: 7240af0b-9a3d-4d53-8169-2a92cd6958ba
-ms.openlocfilehash: 40662e77faf03de8e5ef0abf334f4ec7be69c3ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0495081fb108b2b0a60de1b7782dc92717367ec6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615147"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413118"
 ---
 # <a name="libpath-additional-libpath"></a>/LIBPATH (další proměnná Libpath)
 
@@ -27,7 +27,7 @@ ms.locfileid: "50615147"
 
 ## <a name="parameters"></a>Parametry
 
-*adresář*<br/>
+*dir*<br/>
 Určuje cestu, že propojovací program bude hledat před prohledává cestě zadané v možnosti prostředí LIB.
 
 ## <a name="remarks"></a>Poznámky
@@ -48,7 +48,7 @@ Pomocí možnosti/Libpath přepsat cestu ke knihovně prostředí. Linker se nej
 
 - Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalLibraryDirectories%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
 [Možnosti linkeru](../../build/reference/linker-options.md)

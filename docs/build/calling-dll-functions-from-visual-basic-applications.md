@@ -10,12 +10,12 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 - DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
-ms.openlocfilehash: 504bb2fbb6dcdf624f7e6b380cd895e20580824b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88705b2a33e3eb82043d93c534477fce96849502
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521213"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417587"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Volání funkcí knihovny DLL z aplikací jazyka Visual Basic
 
@@ -70,6 +70,6 @@ Knihovny DLL, být volány programy napsanými v jazyce Visual Basic vyžadují 
 
 - [Dekorované názvy](../build/reference/decorated-names.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)

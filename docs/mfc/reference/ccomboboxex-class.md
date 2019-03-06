@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: d7a39dd19a51bc5bab0f924d360d594bddf89b44
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 44943803fdb422ccbf77302e7c81f23c34cc7433
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265935"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420755"
 ---
 # <a name="ccomboboxex-class"></a>Ccomboboxex – třída
 
@@ -150,7 +150,7 @@ virtual BOOL Create(
 Určuje kombinaci styly pole se seznamem použít pro pole se seznamem. Zobrazit **poznámky** níže pro další informace o stylech.
 
 *Rect*<br/>
-Odkaz na [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, což je umístění a velikost pole se seznamem.
+Odkaz na [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury, což je umístění a velikost pole se seznamem.
 
 *pParentWnd*<br/>
 Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno pole se seznamem (obvykle `CDialog`). Nesmí být NULL.
@@ -210,7 +210,7 @@ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené s
 Styl ovládacího prvku pole se seznamem. Zobrazit [vytvořit](#create) seznam styly.
 
 *Rect*<br/>
-Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.
+Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.
 
 *pParentWnd*<br/>
 Ukazatel na okno, který je nadřazeného ovládacího prvku.

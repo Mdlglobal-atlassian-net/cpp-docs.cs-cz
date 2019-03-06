@@ -15,12 +15,12 @@ helpviewer_keywords:
 - extension DLLs [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
-ms.openlocfilehash: 2d9b23871cedd93c4145c79d2c22240b9ae2e775
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28954ff1c77b7dcc530392fce095ed9df5c29cbf
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429236"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414561"
 ---
 # <a name="mfc-extension-dlls"></a>MFC – rozšiřující knihovny DLL
 
@@ -130,6 +130,6 @@ Pokud vaše MFC – rozšiřující knihovny DLL je potřeba udržovat doplňuj�
 
 - [Používání databázových, OLE a soketových rozšiřujících knihoven MFC DLL v běžných knihovnách MFC DLL](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)

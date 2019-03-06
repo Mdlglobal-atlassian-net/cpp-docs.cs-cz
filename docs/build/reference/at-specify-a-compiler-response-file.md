@@ -8,12 +8,12 @@ helpviewer_keywords:
 - '@ compiler option'
 - cl.exe compiler, specifying response files
 ms.assetid: 400fffee-909d-4f60-bf76-45833e822685
-ms.openlocfilehash: 90dcadbb47cdc7eb4fa1ff039f5074a3141eac83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc61477da9547204acfce93bbedcd077787162c2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491309"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416953"
 ---
 # <a name="-specify-a-compiler-response-file"></a>@ (Zadat soubor odezvy kompilátoru)
 
@@ -44,7 +44,7 @@ Z příkazového řádku můžete zadat libovolný počet možností soubor odpo
 
 - Tato možnost kompilátoru nelze změnit prostřednictvím kódu programu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

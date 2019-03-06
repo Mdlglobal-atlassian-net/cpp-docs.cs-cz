@@ -15,12 +15,12 @@ helpviewer_keywords:
 - /Yc compiler option [C++]
 - Yc compiler option [C++]
 ms.assetid: 47c2e555-b4f5-46e6-906e-ab5cf21f0678
-ms.openlocfilehash: bda384152962bc59ab37b1aae138091aa6f4514c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35b8bfb30a49efa35a3af3d3b76e75f8dede9fd7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536836"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418968"
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc (Vytvořit předkompilovaný hlavičkový soubor)
 
@@ -29,7 +29,7 @@ Dává pokyn kompilátoru k vytvoření souboru předkompilované hlavičky (pch
 ## <a name="syntax"></a>Syntaxe
 
 > __/Yc__<br/>
-> __/Yc__*název souboru*
+> __/Yc__*filename*
 
 ## <a name="arguments"></a>Arguments
 
@@ -83,7 +83,7 @@ Vezměte v úvahu následující kód:
 
 Když tento kód je zkompilován pomocí příkazu `CL /YcMYAPP.H PROG.CPP`, kompilátor uloží všechny předzpracování pro AFXWIN.h RESOURCE.h, a volá MYAPP.pch MYAPP.h v souboru předkompilované hlavičky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /VERSION linker option
 - VERSION linker option
 ms.assetid: b86d0e86-dca6-4316-aee2-d863ccb9f223
-ms.openlocfilehash: 3e24a5307b8c4f60f29de390d38d9694f1cacf29
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 709ba836fb537fbcb594f7eb6aa2f2d43df5b4d1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529694"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414704"
 ---
 # <a name="version-version-information"></a>/VERSION (informace o verzi)
 
@@ -53,7 +53,7 @@ Dalším způsobem, jak vložit číslo verze se [verze](../../build/reference/v
 
 - Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Version%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
 [Možnosti linkeru](../../build/reference/linker-options.md)

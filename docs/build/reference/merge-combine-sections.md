@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -MERGE linker option
 - MERGE linker option
 ms.assetid: 10fb20c2-0b3f-4c8d-98a8-f69aedf03d52
-ms.openlocfilehash: e0329c6a29a8667a09a56d894386f5c173a77916
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9e029bf38beab83e7823a65376a70278c82d34c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532181"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414717"
 ---
 # <a name="merge-combine-sections"></a>/MERGE (kombinované oddíly)
 
@@ -27,7 +27,7 @@ ms.locfileid: "50532181"
 
 ## <a name="remarks"></a>Poznámky
 
-Parametr / merge Sloučí první oddíl (*z*) s druhým oddílem (*k*), výsledný oddíl *k*. Například `/merge:.rdata=.text`.
+Parametr / merge Sloučí první oddíl (*z*) s druhým oddílem (*k*), výsledný oddíl *k*. Například, `/merge:.rdata=.text`.
 
 Pokud se druhý oddíl neexistuje, přejmenuje odkaz v části *z* jako *k*.
 
@@ -47,7 +47,7 @@ Pokud se druhý oddíl neexistuje, přejmenuje odkaz v části *z* jako *k*.
 
 1. Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MergeSections%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
 [Možnosti linkeru](../../build/reference/linker-options.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -SUBSYSTEM linker option
 - subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
-ms.openlocfilehash: 3d808f86a9ea3b34da0dccae18ecc000ca364f0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b6a8a841cefcd519cbeeae9f3355d72e1bbf286
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518388"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417005"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (Zadat subsystém)
 
@@ -36,7 +36,7 @@ Aplikace, která běží v prostředí spouštění Windows. Další informace o
 Aplikace znakového režimu systému Win32. Operační systém poskytuje konzolu pro konzolové aplikace. Pokud `main` nebo `wmain` je definována pro nativní kód `int main(array<String ^> ^)` je definována pro spravovaný kód, nebo zcela sestavení aplikace s použitím `/clr:safe`, KONZOLA je výchozí hodnota.
 
 **EFI_APPLICATION**<br/>
-**BITOVÁ KOPIE EFI_BOOT_SERVICE_DRIVER**<br/>
+**EFI_BOOT_SERVICE_DRIVER**<br/>
 **EFI_ROM**<br/>
 **EFI_RUNTIME_DRIVER**<br/>
 Subsystémy Extensible Firmware Interface. V tématu Specifikace rozhraní EFI pro další informace. Příklady naleznete v tématu na webu společnosti Intel. Minimální verze a výchozí verze je 1.0.
@@ -64,12 +64,12 @@ Volitelné minimální a výchozí *hlavní* a *menší* čísla verzí pro subs
 |Subsystém|Minimální|Výchozí|
 |---------------|-------------|-------------|
 |BOOT_APPLICATION|1.0|1.0|
-|KONZOLY|5.01 (x 86) 5.02 (x 64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|
-|SYSTÉM WINDOWS|5.01 (x 86) 5.02 (x 64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|
-|NATIVNÍ (DRIVER: WDM)|1,00 (x 86) 1.10 (x64, ARM)|1,00 (x 86) 1.10 (x64, ARM)|
-|NATIVNÍ (bez /DRIVER:WDM)|4.00 (x 86) 5.02 (x 64) 6.02 (ARM)|4.00 (x 86) 5.02 (x 64) 6.02 (ARM)|
+|KONZOLY|5.01 (x86) 5.02 (x64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|
+|SYSTÉM WINDOWS|5.01 (x86) 5.02 (x64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|
+|NATIVNÍ (DRIVER: WDM)|1.00 (x86) 1.10 (x64, ARM)|1.00 (x86) 1.10 (x64, ARM)|
+|NATIVNÍ (bez /DRIVER:WDM)|4.00 (x86) 5.02 (x64) 6.02 (ARM)|4.00 (x86) 5.02 (x64) 6.02 (ARM)|
 |POSIX|1.0|19.90|
-|EFI_APPLICATION, BITOVÁ KOPIE EFI_BOOT_SERVICE_DRIVER, EFI_ROM, EFI_RUNTIME_DRIVER|1.0|1.0|
+|EFI_APPLICATION, EFI_BOOT_SERVICE_DRIVER, EFI_ROM, EFI_RUNTIME_DRIVER|1.0|1.0|
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
@@ -85,7 +85,7 @@ Volitelné minimální a výchozí *hlavní* a *menší* čísla verzí pro subs
 
 - Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SubSystem%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
 [Možnosti linkeru](../../build/reference/linker-options.md)

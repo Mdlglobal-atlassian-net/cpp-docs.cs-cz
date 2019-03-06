@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MANIFESTUAC linker option
 - -MANIFESTUAC linker option
 ms.assetid: 2d243c39-fa13-493c-b56f-d0d972a1603a
-ms.openlocfilehash: 702dae41f873218dab0d3fb24e46dacd710bc20f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ae9d18bb0fe2172886ef24250d53cf76851bbba
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625088"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420424"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (vložené informace UAC v manifestu)
 
@@ -36,7 +36,7 @@ Určuje, zda informace o řízení uživatelských účtů (UAC) je vloženy do 
 *Fragment*<br/>
 Řetězec, ve kterém `level` a `uiAccess` hodnoty. Další informace najdete v části poznámky dále v tomto tématu.
 
-*ú_roveň*<br/>
+*_level*<br/>
 Jeden z *asInvoker*, *highestAvailable*, nebo *requireAdministrator*. Výchozí hodnota je asInvoker. Další informace najdete v části poznámky dále v tomto tématu.
 
 *_uiAccess*<br/>
@@ -48,11 +48,11 @@ Pokud zadáte více možností/MANIFESTUAC na příkazovém řádku, posledním 
 
 Možnosti pro /MANIFESTUAC:level jsou následující:
 
-- `asInvoker`: Aplikace se spustí se stejnými oprávněními jako proces, který ji spustil. Aplikace může být zvýšena na vyšší úroveň oprávnění tak, že vyberete **spustit jako správce**.
+- `asInvoker`: Aplikace spustí se stejnými oprávněními jako proces, který ji spustil. Aplikace může být zvýšena na vyšší úroveň oprávnění tak, že vyberete **spustit jako správce**.
 
-- highestAvailable: aplikace se spustí s nejvyšší úrovní oprávnění, která se to dá. Pokud uživatel spustí aplikaci, která je členem skupiny Administrators, tato možnost je stejný jako requireAdministrator. Pokud je vyšší než úroveň při otevírání nejvyšší úroveň oprávnění k dispozici, systém zobrazí výzvu pro přihlašovací údaje.
+- highestAvailable: Aplikace se spustí s nejvyšší úrovní oprávnění, která se to dá. Pokud uživatel spustí aplikaci, která je členem skupiny Administrators, tato možnost je stejný jako requireAdministrator. Pokud je vyšší než úroveň při otevírání nejvyšší úroveň oprávnění k dispozici, systém zobrazí výzvu pro přihlašovací údaje.
 
-- requireAdministrator: aplikace se spustí s oprávněními správce. Uživatel, který spustí aplikaci, která musí být členem skupiny Administrators. Pokud při otevírání neběží s oprávněními správce, systém zobrazí výzvu k zadání pověření.
+- requireAdministrator: Aplikace se spustí s oprávněními správce. Uživatel, který spustí aplikaci, která musí být členem skupiny Administrators. Pokud při otevírání neběží s oprávněními správce, systém zobrazí výzvu k zadání pověření.
 
 Můžete zadat úroveň a uiAccess hodnoty v jednom kroku pomocí možnosti /MANIFESTUAC:fragment. Fragment musí být v následujícím tvaru:
 
@@ -76,7 +76,7 @@ Můžete zadat úroveň a uiAccess hodnoty v jednom kroku pomocí možnosti /MAN
 
 1. Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EnableUAC%2A>, <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.UACExecutionLevel%2A>, a <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.UACUIAccess%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
 [Možnosti linkeru](../../build/reference/linker-options.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - /execution-charset compiler option
 ms.assetid: d3c5bf7f-526d-4ee4-acc5-c1a02a4fc481
-ms.openlocfilehash: 2a204000be6e4e434b6ef4aabf6bbc0db1593fb0
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: ec5ac314f73c49b47f4132583d7651681b6b0545
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849714"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413053"
 ---
 # <a name="source-charset-set-source-character-set"></a>/ Source-Charset (nastavení zdrojové znakové sady)
 
@@ -52,7 +52,7 @@ Pokud chcete nastavit zdrojové znakové sady a znakové sady spuštění na UTF
 
 1. Zvolte **OK** uložte provedené změny.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>

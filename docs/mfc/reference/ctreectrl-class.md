@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 9bc31cc9cff12146e6f5fe227e0e191d1c555063
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 92666e10d82d96b76ad43b652ed90e0e41b8f853
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271395"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418929"
 ---
 # <a name="ctreectrl-class"></a>Ctreectrl – třída
 
@@ -315,7 +315,7 @@ virtual BOOL Create(
 Určuje styl ovládacího prvku zobrazení stromu. Použít styly oken, je popsáno v [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)a libovolnou kombinaci [stromové zobrazení – styly ovládacích prvků](/windows/desktop/Controls/tree-view-control-window-styles) jak je popsáno v sadě Windows SDK.
 
 *Rect*<br/>
-Určuje velikost a umístění ovládací prvek zobrazení stromové struktury. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.
+Určuje velikost a umístění ovládací prvek zobrazení stromové struktury. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 *pParentWnd*<br/>
 Určuje nadřazené okno ovládacího prvku zobrazení stromové struktury, obvykle `CDialog`. Nesmí být NULL.
@@ -361,7 +361,7 @@ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené s
 Určuje styl ovládacího prvku zobrazení stromu. Použít styly oken, je popsáno v [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)a libovolnou kombinaci [stromové zobrazení – styly ovládacích prvků](/windows/desktop/Controls/tree-view-control-window-styles) jak je popsáno v sadě Windows SDK.
 
 *Rect*<br/>
-Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.
+Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.
 
 *pParentWnd*<br/>
 Ukazatel na okno, který je nadřazeného ovládacího prvku.
@@ -887,7 +887,7 @@ BOOL GetItemPartRect(
 |---------------|-----------------|
 |*: hItem*|[in] Zpracování na položku Ovládací prvek stromového zobrazení.|
 |*nPart*|[in] Identifikátor pro část. Musí být nastavena na TVGIPR_BUTTON.|
-|*lpRect*|[out] Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Pokud tato metoda je úspěšná, struktura obdrží souřadnice obdélník části určené *: hItem* a *nPart*.|
+|*lpRect*|[out] Ukazatel [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury. Pokud tato metoda je úspěšná, struktura obdrží souřadnice obdélník části určené *: hItem* a *nPart*.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -928,7 +928,7 @@ BOOL GetItemRect(
 Popisovač předmětu ovládací prvek zobrazení stromové struktury.
 
 *lpRect*<br/>
-Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá ohraničující obdélník. Souřadnice jsou relativní vzhledem k levého horního rohu ovládacího prvku stromu zobrazení.
+Ukazatel [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura, která přijímá ohraničující obdélník. Souřadnice jsou relativní vzhledem k levého horního rohu ovládacího prvku stromu zobrazení.
 
 *bTextOnly*<br/>
 Pokud je tento parametr nenulovou hodnotu, ohraničující obdélník obsahuje pouze text položky. V opačném případě obsahuje celý řádek, který bude zabírat položky ve stromovém zobrazení.

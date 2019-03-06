@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ordinal exports [C++]
 - GetProcAddress method
 ms.assetid: 48d14ae0-47ea-4c5d-96b1-2c158f1a26af
-ms.openlocfilehash: 241f31717274c73a658f4cddf4e6e1ef4e40b402
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e20c9ad913744879dcc15a9b4c177799cc59f654
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457665"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421334"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 
@@ -67,6 +67,6 @@ Můžete si opatřit pouze ordinální export Pokud odkazujete na knihovnu DLL s
 
 - [Export z knihovny DLL pomocí souborů DEF](../build/exporting-from-a-dll-using-def-files.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)

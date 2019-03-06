@@ -12,12 +12,12 @@ helpviewer_keywords:
 - merging injected code
 - /Fx compiler option [C++]
 ms.assetid: 14f0e301-3bab-45a3-bbdf-e7ce66f20560
-ms.openlocfilehash: 3a8bb0a6607542b325cdfeb0909bcea4a01fa0f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 674dc9d09aec0cb8d6b127c11185693534359b31
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646313"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416615"
 ---
 # <a name="fx-merge-injected-code"></a>/Fx (sloučení vloženého kódu)
 
@@ -74,7 +74,7 @@ Pokud váš program zahrnuje soubor hlaviček, který používá vložený kód 
 
 - Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ExpandAttributedSource%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti výstupního souboru (/F)](../../build/reference/output-file-f-options.md)<br/>
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>

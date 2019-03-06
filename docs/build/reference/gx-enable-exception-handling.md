@@ -11,12 +11,12 @@ helpviewer_keywords:
 - enable exception handling compiler option [C++]
 - GX compiler option [C++]
 ms.assetid: 933b43ba-de77-4ff8-a48b-7074de90bc1c
-ms.openlocfilehash: 3e820791b651a029f048423daacf50ddc8b74a1d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ac2b86c19845a092c743c484ad48d0cd0b6fb35
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620620"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416030"
 ---
 # <a name="gx-enable-exception-handling"></a>/GX (povolení zpracování výjimek)
 
@@ -48,7 +48,7 @@ Další informace najdete v tématu [zpracování výjimek jazyka C++](../../cpp
 
 - Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>

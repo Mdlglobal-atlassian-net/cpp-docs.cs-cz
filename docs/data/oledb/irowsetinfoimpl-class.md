@@ -26,16 +26,16 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: 61544658f2aef4b59b2b70baa310dcc09e2740fe
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: ca22f16cf22cabc4c508df053d49d862fef70bce
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556202"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414613"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl – třída
 
-Poskytuje implementaci pro [IRowsetInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms724541(v=vs.85)) rozhraní.
+Poskytuje implementaci pro [IRowsetInfo](/previous-versions/windows/desktop/ms724541(v=vs.85)) rozhraní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -65,7 +65,7 @@ Uživatelská vlastnost třídy, která výchozí hodnota je *T*.
 |||
 |-|-|
 |[GetProperties](#getproperties)|Vrátí aktuální nastavení všech vlastností, které sada řádků podporuje.|
-|[Getreferencedrowset –](#getreferencedrowset)|Vrátí ukazatel rozhraní v sadě řádků, ke kterému se vztahuje na záložku.|
+|[GetReferencedRowset](#getreferencedrowset)|Vrátí ukazatel rozhraní v sadě řádků, ke kterému se vztahuje na záložku.|
 |[Getspecification –](#getspecification)|Vrátí ukazatel rozhraní na objekt (příkaz nebo relace), který vytvořili této sady řádků.|
 
 ## <a name="remarks"></a>Poznámky
@@ -87,7 +87,7 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IRowsetInfo::GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms719611(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IRowsetInfo::GetProperties](/previous-versions/windows/desktop/ms719611(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="getreferencedrowset"></a> IRowsetInfoImpl::GetReferencedRowset
 
@@ -103,7 +103,7 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IRowsetInfo::GetReferencedRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms721145(v=vs.85)) v *referenční informace pro OLE DB programátory*. *IOrdinal* parametr musí být sloupec záložky.
+Zobrazit [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145(v=vs.85)) v *referenční informace pro OLE DB programátory*. *IOrdinal* parametr musí být sloupec záložky.
 
 ## <a name="getspecification"></a> IRowsetInfoImpl::GetSpecification
 
@@ -118,7 +118,7 @@ STDMETHOD (GetSpecification )(REFIID riid,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IRowsetInfo::GetSpecification](https://docs.microsoft.com/previous-versions/windows/desktop/ms716746(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ### <a name="remarks"></a>Poznámky
 

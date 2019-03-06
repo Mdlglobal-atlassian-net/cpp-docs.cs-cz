@@ -65,16 +65,16 @@ helpviewer_keywords:
 - GetRecordCount method
 - m_rgErrors
 ms.assetid: dea8e938-c5d8-45ab-86de-eb8fbf534ffb
-ms.openlocfilehash: 8a864e0da8b5e6c93a1cdccde93fcec4cd3b3e6c
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 24c64c489f52cb4746e3e2b6ebb52bb81870cffd
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556904"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420190"
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl – třída
 
-Implementuje rozhraní OLE DB [IErrorRecords](https://docs.microsoft.com/previous-versions/windows/desktop/ms718112(v=vs.85)) rozhraní, přidání záznamů do a načtení záznamů z datového členu ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) typu **catlarray – <** `RecordClass`**>**.
+Implementuje rozhraní OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112(v=vs.85)) rozhraní, přidání záznamů do a načtení záznamů z datového členu ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) typu **catlarray – <** `RecordClass`**>**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -101,20 +101,20 @@ Třída, která představuje objekt error OLE DB.
 
 |||
 |-|-|
-|[Geterrordescriptionstring –](#geterrordescriptionstring)|Získá řetězec popisu chyby z záznam chyby.|
-|[Geterrorguid –](#geterrorguid)|Získá chybu identifikátoru GUID z záznam chyby.|
+|[GetErrorDescriptionString](#geterrordescriptionstring)|Získá řetězec popisu chyby z záznam chyby.|
+|[GetErrorGUID](#geterrorguid)|Získá chybu identifikátoru GUID z záznam chyby.|
 |[Geterrorhelpcontext –](#geterrorhelpcontext)|Získá ID kontextové nápovědy z záznam chyby.|
 |[Geterrorhelpfile –](#geterrorhelpfile)|Získá úplnou cestu v souboru nápovědy z záznam chyby.|
-|[Geterrorsource –](#geterrorsource)|Získá zdrojový kód chyby z záznam chyby.|
+|[GetErrorSource](#geterrorsource)|Získá zdrojový kód chyby z záznam chyby.|
 
 ### <a name="interface-methods"></a>Metody rozhraní
 
 |||
 |-|-|
-|[Adderrorrecord –](#adderrorrecord)|Přidá záznam do objektu Chyba OLE DB.|
+|[AddErrorRecord](#adderrorrecord)|Přidá záznam do objektu Chyba OLE DB.|
 |[GetBasicErrorInfo](#getbasicerrorinfo)|Vrátí základní informace o této chybě, jako je například návratový kód a číslo chyby specifické pro zprostředkovatele.|
 |[GetCustomErrorObject](#getcustomerrorobject)|Vrací ukazatel na rozhraní pro objekt vlastních chyb.|
-|[GetErrorInfo](#geterrorinfo)|Vrátí [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms718112(v=vs.85)) ukazatel rozhraní na zadaný záznam.|
+|[GetErrorInfo](#geterrorinfo)|Vrátí [IErrorInfo](/previous-versions/windows/desktop/ms718112(v=vs.85)) ukazatel rozhraní na zadaný záznam.|
 |[Geterrorparameters –](#geterrorparameters)|Vrátí parametry chyby.|
 |[GetRecordCount](#getrecordcount)|Vrátí počet záznamů v záznamu objektu OLE DB.|
 
@@ -235,7 +235,7 @@ STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IErrorRecords::AddErrorRecord](https://docs.microsoft.com/previous-versions/windows/desktop/ms725362(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IErrorRecords::AddErrorRecord](/previous-versions/windows/desktop/ms725362(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="getbasicerrorinfo"></a> IErrorRecordsImpl::GetBasicErrorInfo
 
@@ -250,7 +250,7 @@ STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IErrorRecords::GetBasicErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms723907(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="getcustomerrorobject"></a> IErrorRecordsImpl::GetCustomErrorObject
 
@@ -266,11 +266,11 @@ STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IErrorRecords::GetCustomErrorObject](https://docs.microsoft.com/previous-versions/windows/desktop/ms725417(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="geterrorinfo"></a> IErrorRecordsImpl::GetErrorInfo
 
-Vrátí [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms718112(v=vs.85)) ukazatel rozhraní na zadaný záznam.
+Vrátí [IErrorInfo](/previous-versions/windows/desktop/ms718112(v=vs.85)) ukazatel rozhraní na zadaný záznam.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -282,7 +282,7 @@ STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IErrorRecords::GetErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms711230(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="geterrorparameters"></a> IErrorRecordsImpl::GetErrorParameters
 
@@ -297,7 +297,7 @@ STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IErrorRecords::GetErrorParameters](https://docs.microsoft.com/previous-versions/windows/desktop/ms715793(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="getrecordcount"></a> IErrorRecordsImpl::GetRecordCount
 
@@ -311,7 +311,7 @@ STDMETHOD(GetRecordCount )(ULONG *pcRecords);
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IErrorRecords::GetRecordCount](https://docs.microsoft.com/previous-versions/windows/desktop/ms722724(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IErrorRecords::GetRecordCount](/previous-versions/windows/desktop/ms722724(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="rgerrors"></a> IErrorRecordsImpl::m_rgErrors
 

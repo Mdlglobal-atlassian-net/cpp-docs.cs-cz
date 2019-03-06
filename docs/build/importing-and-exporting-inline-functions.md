@@ -12,12 +12,12 @@ helpviewer_keywords:
 - functions [C++], importing
 - functions [C++], exporting
 ms.assetid: 89f488f8-b078-40fe-afd7-80bd7840057b
-ms.openlocfilehash: 407ca39aa53cf622b531fa0ca7818682c82c561f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb117ce6c6088b9fdca57f7d4fd7d0193e1813c2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439101"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425546"
 ---
 # <a name="importing-and-exporting-inline-functions"></a>Import a export vložených funkcí
 
@@ -44,6 +44,6 @@ Jednu funkci vložené importované funkce je, že může trvat adresy v jazyce 
 
 - [Import do aplikace s použitím deklarace __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Import a export](../build/importing-and-exporting.md)

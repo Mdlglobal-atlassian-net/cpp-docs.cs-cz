@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /IMPORTS dumpbin option
 - -IMPORTS dumpbin option
 ms.assetid: 6a296216-2b1b-40f8-8736-cd4553a22456
-ms.openlocfilehash: 9367457a8e7f6be1f372244f8288a994eb777071
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94009670329887a0b8a35e7b8b36996a84c7faa6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613782"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417499"
 ---
 # <a name="imports-dumpbin"></a>/IMPORTS (DUMPBIN)
 
@@ -35,6 +35,6 @@ Tato možnost zobrazí výstup je podobný [/EXPORTUJE](../../build/reference/da
 
 Pouze [/HEADERS](../../build/reference/headers.md) – možnost nástroje DUMPBIN je k dispozici pro použití se soubory vytvořenými pomocí [/GL](../../build/reference/gl-whole-program-optimization.md) – možnost kompilátoru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [DUMPBIN – možnosti](../../build/reference/dumpbin-options.md)

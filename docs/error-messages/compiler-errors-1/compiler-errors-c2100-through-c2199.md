@@ -7,7 +7,6 @@ f1_keywords:
 - C2125
 - C2126
 - C2127
-- C2131
 - C2136
 - C2176
 - C2187
@@ -24,12 +23,12 @@ helpviewer_keywords:
 - C2187
 - C2189
 ms.assetid: 1ccab076-0954-4386-b959-d3112a6793ae
-ms.openlocfilehash: 98e804b7c53eddf239e752f120854439cc3a0b01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31974bb830364b2ef41a7da17cb0ad95d931f771
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546551"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423531"
 ---
 # <a name="compiler-errors-c2100-through-c2199"></a>Chyby kompilátoru C2100 až C2199
 
@@ -60,24 +59,24 @@ ms.locfileid: "50546551"
 |[Chyba kompilátoru C2116](compiler-error-c2116.md)|seznamy parametrů funkcí se lišily|
 |[Chyba kompilátoru C2117](compiler-error-c2117.md)|"*identifikátor*': přetečení hranic pole|
 |[Chyba kompilátoru C2118](compiler-error-c2118.md)|záporný subscript|
-|C2119 chyby kompilátoru|"*identifikátor*': typ pro"*typ*' nelze odvodit z prázdného inicializátoru|
+|Compiler Error C2119|"*identifikátor*': typ pro"*typ*' nelze odvodit z prázdného inicializátoru|
 |[Chyba kompilátoru C2120](compiler-error-c2120.md)|void neplatná se všemi typy|
 |[Chyba kompilátoru C2121](compiler-error-c2121.md)|'#': neplatný znak: může být výsledkem rozšíření makra|
 |[Chyba kompilátoru C2122](compiler-error-c2122.md)|"*identifikátor*': Parametr prototype v seznamu názvů je neplatný|
 |C2123 chyby kompilátoru|"*identifikátor*': šablony aliasů nesmí být explicitně ani částečně serializovat|
 |[Chyba kompilátoru C2124](compiler-error-c2124.md)|dělení nulou nebo dělení nulou se zbytkem|
-|C2125 chyby kompilátoru|'constexpr' není kompatibilní s "*token*.|
+|Compiler Error C2125|'constexpr' není kompatibilní s "*token*.|
 |C2126 chyby kompilátoru|"*identifikátor*' nemůže deklarovat se specifikátorem constexpr.|
 |C2127 chyby kompilátoru|"*identifikátor*': Neplatná inicializace entity 'constexpr' se nekonstantní výraz|
 |[Chyba kompilátoru C2128](compiler-error-c2128.md)|"*funkce*': alloc_text/same_seg se dá jenom pro funkce s C-linkage|
 |[Chyba kompilátoru C2129](compiler-error-c2129.md)|statická funkce "*identifikátor*" deklarovány, ale není definovaný.|
 |[Chyba kompilátoru C2130](compiler-error-c2130.md)|#line se očekával řetězec obsahující název souboru, našlo se:*token*.|
-|C2131 chyby kompilátoru|Výraz se nevyhodnotil na konstantu|
+|[C2131 chyby kompilátoru](compiler-error-c2131.md)|Výraz se nevyhodnotil na konstantu|
 |[Chyba kompilátoru C2132](compiler-error-c2132.md)|Chyba syntaxe: neočekávaný identifikátor|
 |[Chyba kompilátoru C2133](compiler-error-c2133.md)|"*identifikátor*': Neznámá velikost|
 |[Chyba kompilátoru C2134](compiler-error-c2134.md)|"*funkce*': volání nemá za následek konstantní výraz|
 |[Chyba kompilátoru C2135](compiler-error-c2135.md)|"*operátor*': Neplatná operace bitového pole|
-|C2136 chyby kompilátoru|vytváření kontraktů rozhraní API není povolené|
+|Compiler Error C2136|vytváření kontraktů rozhraní API není povolené|
 |[Chyba kompilátoru C2137](compiler-error-c2137.md)|prázdná Znaková konstanta|
 |[Chyba kompilátoru C2138](compiler-error-c2138.md)|definování výčtu bez členů není platné.|
 |[Chyba kompilátoru C2139](compiler-error-c2139.md)|"*třídy*': Nedefinovaná třída není povolená jako argument vlastnosti kompilátoru vnitřního typu"*vlastností*.|
@@ -128,9 +127,9 @@ ms.locfileid: "50546551"
 |[Chyba kompilátoru C2184](compiler-error-c2184.md)|"*typ*': Neplatný typ pro výraz __except|
 |[Chyba kompilátoru C2185](compiler-error-c2185.md)|"*identifikátor*': neplatné přidělování based|
 |[Chyba kompilátoru C2186](compiler-error-c2186.md)|"*operátor*': Neplatný operand typ void.|
-|C2187 chyby kompilátoru|Chyba syntaxe: "*token*' se tady neočekávalo.|
+|Compiler Error C2187|Chyba syntaxe: "*token*' se tady neočekávalo.|
 |[Chyba kompilátoru C2188](compiler-error-c2188.md)|"*číslo*': moc velké pro široký znak|
-|C2189 chyby kompilátoru|atribut 'alignas' nejde použít u bitové pole, parametr funkce, deklaraci výjimky nebo proměnnou deklarovanou s třídou úložiště "register.|
+|Compiler Error C2189|atribut 'alignas' nejde použít u bitové pole, parametr funkce, deklaraci výjimky nebo proměnnou deklarovanou s třídou úložiště "register.|
 |[Chyba kompilátoru C2190](compiler-error-c2190.md)|první seznam parametrů je delší než druhý.|
 |[Chyba kompilátoru C2191](compiler-error-c2191.md)|druhý seznam parametrů je delší než první.|
 |[Chyba kompilátoru C2192](compiler-error-c2192.md)|Parametr '*číslo*"deklarace jinou|
