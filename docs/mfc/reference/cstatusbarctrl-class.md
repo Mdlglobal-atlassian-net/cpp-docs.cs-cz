@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 5a5adc5ae6b1981d7f8260d684a33d8bd7918e40
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8db2be9b14f9d60f2103ce0b63b772962b079bbe
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272838"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426131"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl Class
 
@@ -132,7 +132,7 @@ virtual BOOL Create(
 Určuje styl ovládacího prvku panelu stavu. Použít libovolnou kombinaci stavového řádku – styly ovládacích prvků, které jsou uvedeny v [– styly běžných ovládacích prvků](/windows/desktop/Controls/common-control-styles) v sadě Windows SDK. Tento parametr musí obsahovat WS_CHILD style. Měl by obsahovat také WS_VISIBLE style.
 
 *Rect*<br/>
-Určuje ovládací prvek panelu stavu velikost a umístění. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.
+Určuje ovládací prvek panelu stavu velikost a umístění. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 *pParentWnd*<br/>
 Určuje stavového řádku nadřazené okno ovládacího prvku, obvykle `CDialog`. Nesmí být NULL.
@@ -178,7 +178,7 @@ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené s
 Určuje styl ovládacího prvku panelu stavu. Použít libovolnou kombinaci stavového řádku – styly ovládacích prvků, které jsou uvedeny v [– styly běžných ovládacích prvků](/windows/desktop/Controls/common-control-styles) v sadě Windows SDK. Tento parametr musí obsahovat WS_CHILD style. Měl by obsahovat také WS_VISIBLE style.
 
 *Rect*<br/>
-Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.
+Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.
 
 *pParentWnd*<br/>
 Ukazatel na okno, který je nadřazeného ovládacího prvku.
@@ -344,7 +344,7 @@ BOOL GetRect(
 Z nuly vycházející index části, jehož ohraničující obdélník má být načtena.
 
 *lpRect*<br/>
-Adresa [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá ohraničující obdélník.
+Adresa [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura, která přijímá ohraničující obdélník.
 
 ### <a name="return-value"></a>Návratová hodnota
 

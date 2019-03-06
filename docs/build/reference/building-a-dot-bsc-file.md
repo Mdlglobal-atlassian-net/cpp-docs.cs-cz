@@ -5,12 +5,12 @@ helpviewer_keywords:
 - .bsc files, building
 - bsc files, building
 ms.assetid: 304e240d-692a-4f8b-b9ed-891c01bbb2ad
-ms.openlocfilehash: f108fc29fd0cb1b99c727f446a9630cf7dd359b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 14956c41b7427eec2ccb766ce1ca0e551a3f0f6b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463788"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420021"
 ---
 # <a name="building-a-bsc-file"></a>Sestavení souboru BSC
 
@@ -20,6 +20,6 @@ BscMake – můžete vytvořit nový soubor informací procházení z soubory .s
 
 - [Postupy: sestavení souboru .BSC nástrojem BSCMAKE](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [BSCMAKE – referenční dokumentace](../../build/reference/bscmake-reference.md)

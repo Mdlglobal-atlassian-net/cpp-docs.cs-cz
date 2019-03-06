@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C++], makefile preprocessing
 - makefiles, preprocessing
 ms.assetid: 37f0f413-97e0-452c-a83f-3c9002c44c92
-ms.openlocfilehash: 8d7b8cd489eabf239cbc993181142ca84431cd82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e55be14b6623232966b1539615c4f7f40139e38f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594867"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421845"
 ---
 # <a name="expressions-in-makefile-preprocessing"></a>Výrazy v předběžném zpracování souboru pravidel
 
@@ -25,6 +25,6 @@ Výrazy můžete použít operátory, které fungují na konstantní hodnoty, uk
 
 [Spuštění programu při předběžném zpracování](../build/executing-a-program-in-preprocessing.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Předběžné zpracování souboru pravidel](../build/makefile-preprocessing.md)

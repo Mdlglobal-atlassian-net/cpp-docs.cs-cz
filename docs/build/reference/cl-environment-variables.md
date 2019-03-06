@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - environment variables, CL compiler
 ms.assetid: 2606585b-a681-42ee-986e-1c9a2da32108
-ms.openlocfilehash: 4c9643e977c707f7e7fd99ccc48d0475e2dc7837
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 47d6966cdc821cee4bd9ffd61b36c0c79143b6c2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535769"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412455"
 ---
 # <a name="cl-environment-variables"></a>Proměnné prostředí CL
 
@@ -42,11 +42,11 @@ Související informace naleznete v tématu [nastavit proměnné prostředí](..
 
 Následuje příklad nastavení proměnné prostředí CL:
 
-> Nastavte CL = / Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE. OBJ
+> SET CL=/Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE.OBJ
 
 Pokud je tato proměnná prostředí nastavíte, pokud zadáte `CL INPUT.C` příkazového řádku, toto je účinné příkaz:
 
-> CL /Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE. OBJ VSTUP. C
+> CL /Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE.OBJ INPUT.C
 
 Následující příklad způsobí, že obyčejný CL příkaz pro kompilaci souborů zdrojového souboru FILE1.c a soubor FILE2.c a pak propojení objektových souborů FILE1.obj FILE2.obj a FILE3.obj:
 
@@ -54,9 +54,9 @@ Následující příklad způsobí, že obyčejný CL příkaz pro kompilaci sou
 
 To má stejný účinek jako následující příkazový řádek:
 
-> CL FILE1. C FILE2. SOUBOR3 C. OBJ
+> CL FILE1.C FILE2.C FILE3.OBJ
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)

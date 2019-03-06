@@ -26,12 +26,12 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-ms.openlocfilehash: 73a259faa57d74fbe535bfa329dfc2a39cb6bbad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fdfeb16d41f51262cbd3a3814699a7b8dbc5fe4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656973"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413326"
 ---
 # <a name="running-lib"></a>Spuštění knihovny LIB
 
@@ -62,7 +62,7 @@ Možnost sestává ze specifikátoru možnosti, které je buď pomlčka (**-**) 
 
 Tyto možnosti platí pro všechny druhy LIB:
 
-> **/ ERRORREPORT** [**NONE** &AMP;#124; **VÝZVY** &AMP;#124; **FRONTY** &AMP;#124; **ODESLAT**]
+> **/ERRORREPORT** [**NONE** &#124; **PROMPT** &#124; **QUEUE** &#124; **SEND**]
 
 Pokud lib.exe selže v době běhu, můžete použít **/errorreport** odesílat informace společnosti Microsoft o tyto vnitřní chyby.
 
@@ -88,12 +88,12 @@ Potlačí zobrazení LIB o autorských právech zprávu a číslo verze a zabra�
 
 Zobrazí podrobnosti o průběhu relace, včetně názvů přidávané soubory .obj. Informace odeslány na standardní výstup a je možné přesměrovat do souboru.
 
-> **/WX**[**: NO**]
+> **/WX**[**:NO**]
 
 Zpracovávat upozornění jako chyby. Zobrazit [/WX (zpracovávat upozornění Linkeru jako chyb)](../../build/reference/wx-treat-linker-warnings-as-errors.md) Další informace.
 
 Další možnosti platí jenom pro konkrétní druhy LIB. Tyto možnosti jsou popsány v části popisující oba režimy.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace ke knihovně LIB](../../build/reference/lib-reference.md)

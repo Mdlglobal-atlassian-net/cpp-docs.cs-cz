@@ -11,12 +11,12 @@ helpviewer_keywords:
 - file names [C++], CL compiler
 - file names [C++]
 ms.assetid: 3ca72586-75be-4477-b323-a1be232e80d4
-ms.openlocfilehash: 929096ed169a33e0876c3afb68f3594757d61e4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2dd51370fd346c4cd7dad7bb97bfa76a9f759d9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438932"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420723"
 ---
 # <a name="cl-filename-syntax"></a>Syntaxe názvu souboru CL
 
@@ -24,6 +24,6 @@ CL přijímá soubory s názvy, které dodržují konvence vytváření názvů 
 
 Přípona názvu souboru Určuje, jak se soubory zpracují. Soubory C a C++, které mají přípony .c, .cxx nebo .cpp, jsou zkompilovány. Další soubory, včetně soubory .obj a knihoven (.lib), soubory definice modulu (.def), jsou linkeru předány bez právě zpracovává.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Syntaxe příkazového řádku kompilátoru](../../build/reference/compiler-command-line-syntax.md)

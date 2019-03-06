@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB consumer templates [C++]
 - databases [C++], consumers
 ms.assetid: d3e42612-0bc0-4d65-9c32-0e8a7b219e82
-ms.openlocfilehash: 6bda050efd7d2d4ac6df196e42ffe6be43ab1a65
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: f3b247660e65975630b9434685d0a12caf0fc257
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556605"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419166"
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB – šablony příjemce (C++)
 
@@ -24,7 +24,7 @@ ms.locfileid: "51556605"
 
 - Nativní datových typů jazyka C/C++ pro programování technologie OLE DB.
 
-Použití šablony technologie OLE DB, byste měli vědět, jak šablon jazyka C++, COM a rozhraní OLE DB. Pokud nejste obeznámeni s OLE DB, přečtěte si téma [OLE DB referenční informace pro programátory](https://docs.microsoft.com/previous-versions/windows/desktop/ms718124(v=vs.85)).
+Použití šablony technologie OLE DB, byste měli vědět, jak šablon jazyka C++, COM a rozhraní OLE DB. Pokud nejste obeznámeni s OLE DB, přečtěte si téma [OLE DB referenční informace pro programátory](/previous-versions/windows/desktop/ms718124(v=vs.85)).
 
 Šablony technologie OLE DB podporovat existující objektový model OLE DB místo přidání nového objektu modelu. Horní vrstva tříd v šablony příjemce technologie OLE DB paralelní součásti definovaných ve specifikaci OLE DB. Návrh šablony příjemce technologie OLE DB zahrnuje pokročilé funkce, jako je několik přístupových objektů pro sadu řádků. Použití šablon a vícenásobná dědičnost činí knihovnu malé a flexibilní.
 
@@ -60,5 +60,5 @@ Další informace naleznete v následujících tématech:
 
 [Programování v architektuře OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Přístup k datům](../data-access-in-cpp.md)<br/>
-[Dokumentace k sadě SDK technologie OLE DB](https://docs.microsoft.com/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
+[Dokumentace k sadě SDK technologie OLE DB](/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
 [Referenční informace pro OLE DB programátory](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)

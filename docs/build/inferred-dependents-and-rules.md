@@ -7,12 +7,12 @@ helpviewer_keywords:
 - inferred rules in NMAKE
 - dependents, inferred
 ms.assetid: 9381e74a-53d9-445c-836d-0ff7ef6112d9
-ms.openlocfilehash: 6d2f439a0e936b06012045c62d55b6ad76e5817d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 125d64c47fb8ac9cd86269bedf246a131eda57e7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548899"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414831"
 ---
 # <a name="inferred-dependents-and-rules"></a>Odvozené závislé objekty a pravidla
 
@@ -28,6 +28,6 @@ NMAKE předpokládá odvozené závislé pro cíl, pokud existuje pravidlo použ
 
 Odvozené závislé objekty může způsobit neočekávané vedlejší účinky. Pokud cílový blok popis obsahuje příkazy, NMAKE provede tyto příkazy místo příkazy v pravidle.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odvozená pravidla](../build/inference-rules.md)

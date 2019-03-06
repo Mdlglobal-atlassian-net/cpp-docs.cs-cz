@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: c782d5761323129eccf7ee129d877128c400d93a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 648bc17f0f130b831aa619b90ed13ba6be35b4d4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270718"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417575"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl Class
 
@@ -149,7 +149,7 @@ virtual BOOL Create(
 |Parametr|Popis|
 |---------------|-----------------|
 |*dwStyle*|[in] Bitová kombinace (nebo) [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) a [– styly ovládacího prvku stránkování](/windows/desktop/Controls/pager-control-styles) u ovládacího prvku.|
-|*Rect*|[in] Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, která obsahuje umístění a velikost ovládacího prvku, v souřadnicích klienta.|
+|*Rect*|[in] Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) strukturu, která obsahuje umístění a velikost ovládacího prvku, v souřadnicích klienta.|
 |*pParentWnd*|[in] Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku. Tento parametr nemůže mít hodnotu NULL.|
 |*nID*|[in] ID ovládacího prvku.|
 
@@ -186,7 +186,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*dwExStyle*|[in] Bitová kombinace hodnot rozšířené styly pro ovládací prvek. Další informace najdete v tématu *dwExStyle* parametr [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) funkce.|
 |*dwStyle*|[in] Bitová kombinace (nebo) [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) a [– styly ovládacího prvku stránkování](/windows/desktop/Controls/pager-control-styles) u ovládacího prvku.|
-|*Rect*|[in] Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, která obsahuje umístění a velikost ovládacího prvku, v souřadnicích klienta.|
+|*Rect*|[in] Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) strukturu, která obsahuje umístění a velikost ovládacího prvku, v souřadnicích klienta.|
 |*pParentWnd*|[in] Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku. Tento parametr nemůže mít hodnotu NULL.|
 |*nID*|[in] ID ovládacího prvku.|
 

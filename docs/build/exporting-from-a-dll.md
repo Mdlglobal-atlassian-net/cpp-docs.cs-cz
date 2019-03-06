@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], exporting
 - exports table [C++]
 ms.assetid: a08f86c4-5996-460b-ae54-da2b764045f0
-ms.openlocfilehash: f932ba2d9b229d236270eb664ac1291725471706
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac00df5a1bf1bcfaa300e12bb47cf1e6291aa0f1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493818"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416226"
 ---
 # <a name="exporting-from-a-dll"></a>Export z knihovny DLL
 
@@ -57,6 +57,6 @@ Při exportu funkcí pomocí některé z metod, je nutné použít [__stdcall](.
 
 - [Vzájemné importy](../build/mutual-imports.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Import a export](../build/importing-and-exporting.md)

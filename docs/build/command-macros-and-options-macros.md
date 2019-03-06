@@ -7,12 +7,12 @@ helpviewer_keywords:
 - macros, options macros
 - macros, command macros
 ms.assetid: 50dff03c-0dc3-4a8a-9a17-57e0e4ea9bac
-ms.openlocfilehash: f18cfd6ada235485a5fe47bdc94b49631b9abbbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: daf8c243f95f7cc12a3d3b1c5cf16f5a384c9671
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601302"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418294"
 ---
 # <a name="command-macros-and-options-macros"></a>Příkazová makra a makra možností
 
@@ -20,13 +20,13 @@ Příkazová makra jsou předdefinované pro produkty společnosti Microsoft. Ma
 
 |Produkt společnosti Microsoft|Příkaz – Makro|Definován jako|Možnosti – makro|
 |-----------------------|-------------------|----------------|-------------------|
-|MASM|**STEJNĚ JAKO**|ml|**AFLAGS**|
-|Základní kompilátoru|**BC**|BC|**BFLAGS**|
-|Kompilátor jazyka C|**KOPIE**|cl|**CFLAGS**|
+|MASM|**AS**|ml|**AFLAGS**|
+|Základní kompilátoru|**BC**|bc|**BFLAGS**|
+|Kompilátor jazyka C|**CC**|cl|**CFLAGS**|
 |Kompilátor C++|**CPP**|cl|**CPPFLAGS**|
 |Kompilátor C++|**CXX**|cl|**CXXFLAGS**|
-|kompilátor prostředků|**RC**|RC|**RFLAGS**|
+|kompilátor prostředků|**RC**|rc|**RFLAGS**|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Speciální makra NMAKE](../build/special-nmake-macros.md)

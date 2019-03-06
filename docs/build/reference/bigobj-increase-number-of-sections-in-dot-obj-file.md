@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /bigobj compiler option [C++]
 - bigobj compiler option [C++]
 ms.assetid: ba94d602-4015-4a8d-86ec-49241ab74c12
-ms.openlocfilehash: d2deaf7b3e248dd1269d9f04037c9d38651a5b56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 051eaeb568418a8a01d25f738617fa171039f27d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649706"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416485"
 ---
 # <a name="bigobj-increase-number-of-sections-in-obj-file"></a>/bigobj (Zvýšit počet oddílů v souboru .Obj)
 
@@ -47,7 +47,7 @@ Linkers, které byly dodány před Visual C++ 2005 nelze číst soubory .obj, kt
 
 - Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

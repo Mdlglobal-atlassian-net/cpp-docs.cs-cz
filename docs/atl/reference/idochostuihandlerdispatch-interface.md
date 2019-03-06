@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - IDocHostUIHandlerDispatch interface
 ms.assetid: 6963a301-601a-4ac3-8bef-f7b252ea2fc6
-ms.openlocfilehash: 0652801d7ad80ba53716299e3919f5b432de855a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6ce3532e99dc1d0ff0151285766aa5d78c2b9e9d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293144"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421879"
 ---
 # <a name="idochostuihandlerdispatch-interface"></a>IDocHostUIHandlerDispatch Interface
 
@@ -36,21 +36,21 @@ interface IDocHostUIHandlerDispatch : IDispatch
 
 |||
 |-|-|
-|[EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx)|Volání z implementace MSHTML [IOleInPlaceActiveObject::EnableModeless](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless). Také volá se, když MSHTML zobrazí modální uživatelské rozhraní.|
-|[FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx)|Volá se na hostiteli pomocí MSHTML aplikace umožňující hostitele k nahrazení MSHTML na datový objekt.|
-|[GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)|Voláno rozhraním MSHTML aplikace, když se používá se jako cíl přetažení k hostiteli umožní zadat alternativní [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget).|
-|[GetExternal](https://msdn.microsoft.com/library/aa753256.aspx)|Je voláno MSHTML získat rozhraní IDispatch hostitele.|
-|[GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx)|Načte možnosti uživatelského rozhraní MSHTML hostitele.|
-|[GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx)|Vrátí klíč registru, ve které ukládá MSHTML předvolby uživatele.|
-|[HideUI](https://msdn.microsoft.com/library/aa753259.aspx)|Volá se, když MSHTML odebere jeho nabídek a panelů nástrojů.|
-|[OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx)|Volání z implementace MSHTML [IOleInPlaceActiveObject::OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate).|
-|[OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx)|Volání z implementace MSHTML [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate).|
-|[ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx)|Volání z implementace MSHTML [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder).|
-|[ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx)|Volá se z MSHTML zobrazení místní nabídky.|
-|[ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)|Umožňuje hostiteli nahradit MSHTML nabídek a panelů nástrojů.|
-|[TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx)|Volané MSHTML při [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) nebo [IOleControlSite::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) je volána.|
-|[TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx)|Je voláno MSHTML aplikace umožňující hostitele příležitost změnit adresu URL, který se má načíst.|
-|[UpdateUI](https://msdn.microsoft.com/library/aa753268.aspx)|Upozorňuje hostitele, stav příkazu se změnila.|
+|[EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\))|Volání z implementace MSHTML [IOleInPlaceActiveObject::EnableModeless](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless). Také volá se, když MSHTML zobrazí modální uživatelské rozhraní.|
+|[FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\))|Volá se na hostiteli pomocí MSHTML aplikace umožňující hostitele k nahrazení MSHTML na datový objekt.|
+|[GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\))|Voláno rozhraním MSHTML aplikace, když se používá se jako cíl přetažení k hostiteli umožní zadat alternativní [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget).|
+|[GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\))|Je voláno MSHTML získat rozhraní IDispatch hostitele.|
+|[GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\))|Načte možnosti uživatelského rozhraní MSHTML hostitele.|
+|[GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\))|Vrátí klíč registru, ve které ukládá MSHTML předvolby uživatele.|
+|[HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\))|Volá se, když MSHTML odebere jeho nabídek a panelů nástrojů.|
+|[OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\))|Volání z implementace MSHTML [IOleInPlaceActiveObject::OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate).|
+|[OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\))|Volání z implementace MSHTML [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate).|
+|[ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\))|Volání z implementace MSHTML [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder).|
+|[ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\))|Volá se z MSHTML zobrazení místní nabídky.|
+|[ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\))|Umožňuje hostiteli nahradit MSHTML nabídek a panelů nástrojů.|
+|[TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\))|Volané MSHTML při [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) nebo [IOleControlSite::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) je volána.|
+|[TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\))|Je voláno MSHTML aplikace umožňující hostitele příležitost změnit adresu URL, který se má načíst.|
+|[UpdateUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753268\(v=vs.85\))|Upozorňuje hostitele, stav příkazu se změnila.|
 
 ## <a name="remarks"></a>Poznámky
 

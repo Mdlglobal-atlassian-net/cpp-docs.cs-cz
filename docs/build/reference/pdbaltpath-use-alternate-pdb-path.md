@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /PDBALTPATH dumpbin option
 - PDB files, path
 ms.assetid: 72e200aa-e2c3-4ad8-b687-25528da1aaaf
-ms.openlocfilehash: dd7bdc8d161e92eedf4856fcd28d9f9f1ac781b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22bc53858aca3b037655829bd7449049971ca79f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551096"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419181"
 ---
 # <a name="pdbaltpath-use-alternate-pdb-path"></a>/PDBALTPATH (Použít alternativní cestu PDB)
 
@@ -34,7 +34,7 @@ Pomocí této možnosti můžete zadat alternativní umístění pro soubor data
 
 Hodnota *pdb_file_name* může být libovolný řetězec, proměnné prostředí, nebo **_PDB %**. Linker se rozbalí proměnné prostředí, jako například **adresáře % SystemRoot %**, na jeho hodnotu. Linker definuje proměnné prostředí **_PDB %** a **_EXT %**. **_PDB %** rozšíří na název souboru PDB skutečný soubor bez jakýchkoli informací o cestě a **_EXT %** je rozšíření generované spustitelné soubory.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [DUMPBIN – možnosti](../../build/reference/dumpbin-options.md)<br/>
 [/PDBPATH](../../build/reference/pdbpath.md)

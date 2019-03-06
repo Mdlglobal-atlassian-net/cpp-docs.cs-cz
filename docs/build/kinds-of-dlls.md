@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], types
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-ms.openlocfilehash: daf042f742a9c4b7757813fc73eeb4b6d1a87413
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb63814161fb72121a34d2857b6fada3866e505a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441116"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424805"
 ---
 # <a name="kinds-of-dlls"></a>Druhy knihoven DLL
 
@@ -31,7 +31,7 @@ Samotné knihovny MFC je k dispozici ve statickém propojení knihoven nebo v ř
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
 
-- [Knihovny DLL mimo MFC – přehled](../build/non-mfc-dlls-overview.md)
+- [Knihovny DLL mimo MFC: Přehled](../build/non-mfc-dlls-overview.md)
 
 - [Regulární knihovny MFC DLL staticky propojené do MFC](../build/regular-dlls-statically-linked-to-mfc.md)
 
@@ -55,11 +55,11 @@ Pokud vaše knihovna DLL bude použita pouze spustitelnými soubory knihovny MFC
 
 Pokud vaše knihovna DLL dynamicky propojuje ke knihovně MFC, knihovny DLL MFC můžou být znovu distribuovány s vaší knihovou DLL. Tato architektura je zvláště užitečná pro sdílení knihovny tříd mezi několika spustitelnými soubory k ušetřit místo na disku a minimalizuje využití paměti.
 
-Před verzí 4.0, Visual C++ pouze podporované dva druhy knihoven DLL, které používají knihovnu MFC: USRDLL a AFXDLL. Regulární knihovny MFC DLL staticky propojené do MFC mají stejné vlastnosti jako dosavadní USRDLL. Rozšiřující knihovny DLL MFC mají stejné vlastnosti jako dřívější AFXDLL.
+Před verzí 4.0 podporují Visual C++ pouze dva druhy knihoven DLL, které používají knihovnu MFC: USRDLL a AFXDLL. Regulární knihovny MFC DLL staticky propojené do MFC mají stejné vlastnosti jako dosavadní USRDLL. Rozšiřující knihovny DLL MFC mají stejné vlastnosti jako dřívější AFXDLL.
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
 
-- [Knihovny DLL mimo MFC – přehled](../build/non-mfc-dlls-overview.md)
+- [Knihovny DLL mimo MFC: Přehled](../build/non-mfc-dlls-overview.md)
 
 - [Regulární knihovny MFC DLL staticky propojené do MFC](../build/regular-dlls-statically-linked-to-mfc.md)
 
@@ -67,6 +67,6 @@ Před verzí 4.0, Visual C++ pouze podporované dva druhy knihoven DLL, které p
 
 - [Rozšiřující knihovny MFC DLL: Přehled](../build/extension-dlls-overview.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)

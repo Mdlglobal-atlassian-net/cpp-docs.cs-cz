@@ -11,12 +11,12 @@ helpviewer_keywords:
 - .pch files, use existing
 - precompiled header files, use existing
 ms.assetid: 24f1bd0e-b624-4296-a17e-d4b53e374e1f
-ms.openlocfilehash: 8d2b02c378179ac2603ec095efe89ce78f9f1afa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49cc7a67a8b25e515d352d481b6ede8d521e51e1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505339"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424116"
 ---
 # <a name="yu-use-precompiled-header-file"></a>/Yu (Použít předkompilovaný hlavičkový soubor)
 
@@ -96,7 +96,7 @@ CL /YuMYAPP.H /FpMYPCH.pch PROG.CPP
 
 Tento příkaz určuje předkompilovaného hlavičkového souboru s názvem MYPCH.pch. Kompilátor používá k obnovení předkompilované stavu všech včetně MYAPP.h a soubory hlaviček až do jeho obsah. Kompilátor poté kompiluje kód, nacházející se MYAPP.h **zahrnují** příkazu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

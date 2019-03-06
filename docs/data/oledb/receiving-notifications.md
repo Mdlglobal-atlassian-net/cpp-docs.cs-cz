@@ -10,16 +10,16 @@ helpviewer_keywords:
 - rowsets, event notifications
 - OLE DB providers, notifications
 ms.assetid: 305a1103-0c87-40c8-94bc-7fbbdd52ae32
-ms.openlocfilehash: 491da4d1735a32eba4e6e5bd8bee6604da4aeb73
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 67f7eb5f77dc68b57f04ab4d016680255cb1ae86
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556332"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416017"
 ---
 # <a name="receiving-notifications"></a>Příjem oznámení
 
-OLE DB poskytuje rozhraní pro příjem oznámení, když dojde k událostem. Tyto možnosti jsou popsány v [oznámení objektu OLE DB](https://docs.microsoft.com/previous-versions/windows/desktop/ms725406(v=vs.85)) v **OLE DB referenční informace pro programátory**. Nastavení těchto událostí používá standardní mechanismus bodu připojení COM. Například objekt knihovny ATL, který chce, aby se k načtení událostí prostřednictvím `IRowsetNotify` implementuje `IRowsetNotify` rozhraní přidáním `IRowsetNotify` do seznamu odvozené třídy, která bude vystavená prostřednictvím COM_INTERFACE_ENTRY makra.
+OLE DB poskytuje rozhraní pro příjem oznámení, když dojde k událostem. Tyto možnosti jsou popsány v [oznámení objektu OLE DB](/previous-versions/windows/desktop/ms725406(v=vs.85)) v **OLE DB referenční informace pro programátory**. Nastavení těchto událostí používá standardní mechanismus bodu připojení COM. Například objekt knihovny ATL, který chce, aby se k načtení událostí prostřednictvím `IRowsetNotify` implementuje `IRowsetNotify` rozhraní přidáním `IRowsetNotify` do seznamu odvozené třídy, která bude vystavená prostřednictvím COM_INTERFACE_ENTRY makra.
 
 `IRowsetNotify` má tři metody, které mohou být volány v různých časech. Pokud chcete reagovat na pouze jednu z těchto metod, můžete použít [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) třídu, která vrátí E_NOTIMPL pro metody nemusí.
 

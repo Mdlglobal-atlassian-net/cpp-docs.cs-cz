@@ -20,12 +20,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - at sign symbol for base address
 ms.assetid: 00b9f6fe-0bd2-4772-a69c-7365eb199069
-ms.openlocfilehash: 49467b9c59d8f8861011f0f36009f4e3951871f9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 87fdceea4ac71fe4bf0a53d7ae8e473bc97a01d7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329849"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416745"
 ---
 # <a name="base-base-address"></a>/BASE (základní adresa)
 
@@ -76,7 +76,7 @@ Dalším způsobem, jak nastavit základní adresu, je pomocí *základní* argu
 
 - Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.BaseAddress%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
 [Možnosti linkeru](../../build/reference/linker-options.md)

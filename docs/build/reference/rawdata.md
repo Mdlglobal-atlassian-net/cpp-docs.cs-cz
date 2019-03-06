@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -RAWDATA dumpbin option
 - /RAWDATA dumpbin option
 ms.assetid: 41cba845-5e1f-415e-9fe4-604a52235983
-ms.openlocfilehash: 91fa1e26ca159f23c848efc6bf46afdea2a8bc52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e884ba8bca7b3ccdf900c7da2c43dd741c03d12
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621478"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413365"
 ---
 # <a name="rawdata"></a>/RAWDATA
 
@@ -37,6 +37,6 @@ Tato možnost zobrazí nezpracované obsah jednotlivých oddílů v souboru. Arg
 
 Pouze [/HEADERS](../../build/reference/headers.md) – možnost nástroje DUMPBIN je k dispozici pro použití se soubory vytvořenými pomocí [/GL](../../build/reference/gl-whole-program-optimization.md) – možnost kompilátoru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [DUMPBIN – možnosti](../../build/reference/dumpbin-options.md)

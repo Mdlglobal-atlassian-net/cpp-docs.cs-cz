@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 00f2b57bdf63f9f8bcfd9e544bebab2805ff7f65
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 8267d42e67ddf703b4a3a681509b92978e7de8bb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850088"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422778"
 ---
 # <a name="platformobject-class"></a>Platform::Object – třída
 
@@ -116,7 +116,7 @@ A [Platform::type –](../cppcx/platform-type-class.md) objekt, který popisuje 
 
 Statické [Type::GetTypeCode](../cppcx/platform-type-class.md#gettypecode) můžete použít k získání [Platform::TypeCode – výčet](../cppcx/platform-typecode-enumeration.md) hodnotu, která představuje aktuálního typu. To oceníte především pro předdefinované typy. Typ kódu pro všechny třídy ref class kromě [Platform::String](../cppcx/platform-string-class.md) je objekt (1).
 
-[Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) třída se používá v rozhraní Windows API způsobem nezávislým na jazyku předávání informací o typu mezi součásti Windows a aplikace. T[Platform::type – třída](../cppcx/platform-type-class.md) má operátory pro převod mezi `Type` a `TypeName`.
+[Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename) třída se používá v rozhraní Windows API způsobem nezávislým na jazyku předávání informací o typu mezi součásti Windows a aplikace. T[Platform::type – třída](../cppcx/platform-type-class.md) má operátory pro převod mezi `Type` a `TypeName`.
 
 Použití [typeid](../windows/typeid-cpp-component-extensions.md) operátor se vraťte `Platform::Type` objekt pro název třídy, například při navigaci mezi stránkami XAML:
 

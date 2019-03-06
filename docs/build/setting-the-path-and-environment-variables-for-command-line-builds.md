@@ -18,12 +18,12 @@ helpviewer_keywords:
 - compiling source code [C++], from command line
 - environment variables [C++], CL compiler
 ms.assetid: 99389528-deb5-43b9-b99a-03c8773ebaf4
-ms.openlocfilehash: 256d62ef480e8d67f3861b3b8233c45fc6a95a4f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dee8f4ee08f9922c4bfc79c5103618681058e56e
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547179"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415367"
 ---
 # <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>Nastavení cesty a proměnných prostředí pro sestavení příkazového řádku
 
@@ -36,7 +36,7 @@ Pokud chcete zobrazit, které proměnné prostředí se nastavují pomocí zást
 > [!NOTE]
 >  Několik nástrojů příkazového řádku nebo možnosti nástroje mohou vyžadovat oprávnění správce. Pokud máte oprávnění problémy, když je budete používat, doporučujeme otevřete okno příkazového řádku pro vývojáře s použitím **spustit jako správce** možnost. Ve Windows 10, klikněte pravým tlačítkem a otevřete místní nabídku pro okno příkazového řádku a pak zvolte **Další**, **spustit jako správce**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Sestavení kódu C/C++ na příkazovém řádku](../build/building-on-the-command-line.md)<br/>
 [Propojování](../build/reference/linking.md)<br/>

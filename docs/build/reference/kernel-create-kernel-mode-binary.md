@@ -5,12 +5,12 @@ f1_keywords:
 - /kernel
 - /kernel-
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
-ms.openlocfilehash: 0df133922af90a91d5c1ae1ad3caebe11d854b8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33a0f4019d8ad278f5850c499ee552ee72279455
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509654"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414752"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (vytvoření binárního režimu jádra)
 
@@ -27,7 +27,7 @@ Vytvoří binární soubor, který lze spustit v jádru Windows.
 **/kernel**<br/>
 Kód v aktuálním projektu je zkompilován a propojené s použitím sady pravidel jazyka C++, které jsou specifické pro kód, který se spustí v režimu jádra.
 
-**/Kernel-**<br/>
+**/kernel-**<br/>
 Kód v aktuální projekt je zkompilován a propojené bez použití jazykových pravidel C++, které jsou specifické pro kód, který se spustí v režimu jádra.
 
 ## <a name="remarks"></a>Poznámky
@@ -96,7 +96,7 @@ Sestavování s **/kernel** také předá **/kernel** linkeru. Jí je, jak to ov
 
 1. V **další možnosti** přidejte `/kernel` nebo `/kernel-`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

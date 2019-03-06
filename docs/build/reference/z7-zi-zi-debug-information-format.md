@@ -23,12 +23,12 @@ helpviewer_keywords:
 - line numbers only compiler option [C++]
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
-ms.openlocfilehash: 43ffbe76092b9675be1610e58c65c0034955634f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8aadca14f52432e3fccb168c213ae566b1baae2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479040"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421434"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (formát ladicích informací)
 
@@ -42,7 +42,7 @@ Určuje typ ladicích informací vytvářených pro program a zda tyto informace
 
 Pokud kód je zkompilován a vytvořené v režimu ladění, kompilátor vytvoří názvy symbolů pro funkce a proměnné, informace o typu a umístění číslo řádku pro použití ladicím programem. Symbolickém ladění může být zahrnuté v souborech objektů (soubory .obj) produkované kompilátorem nebo v samostatném souboru PDB (soubor typu .pdb) pro spustitelný soubor.  Možnosti formátování informace o ladění jsou popsány v následujících částech.
 
-### <a name="none"></a>Žádné
+### <a name="none"></a>Žádná
 
 Ve výchozím nastavení Pokud není zadána žádná možnost formát informací ladění, kompilátor nevytváří žádné ladicí informace, kompilace je proto rychlejší.
 
@@ -93,4 +93,3 @@ Pokud vytvoříte knihovnu z objektů, které byly zkompilovány pomocí **/zi**
 
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
-

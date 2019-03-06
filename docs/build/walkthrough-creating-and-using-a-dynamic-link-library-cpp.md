@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: c09fa369cd4e0b726d809fa709518574d4fdbc6e
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: fb77230d5cc27c1fba1f7df1404150fada36d43a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330538"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416446"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Návod: Vytvoření a použití vlastní dynamické propojení knihovny (C++)
 
@@ -41,7 +41,7 @@ Tento návod používá Visual Studio 2017, ale kód a většina pokyny platí p
 
 - Počítač, na kterém běží Microsoft Windows 7 nebo novější verze. Doporučujeme pro nejlepší vývojové prostředí Windows 10.
 
-- Kopie sady Visual Studio 2017. Informace o tom, jak stáhnout a nainstalovat sadu Visual Studio najdete v tématu [instalace sady Visual Studio 2017](/visualstudio/install/install-visual-studio). Když spustíte instalační program, ujistěte se, že **vývoj desktopových aplikací pomocí C++** úlohy je zaškrtnuté políčko. Nedělejte si starosti, pokud je tato úloha nenainstaloval při instalaci sady Visual Studio. Můžete znovu spustit instalační program a jeho instalaci.
+- A copy of Visual Studio 2017. Informace o tom, jak stáhnout a nainstalovat sadu Visual Studio najdete v tématu [instalace sady Visual Studio 2017](/visualstudio/install/install-visual-studio). Když spustíte instalační program, ujistěte se, že **vývoj desktopových aplikací pomocí C++** úlohy je zaškrtnuté políčko. Nedělejte si starosti, pokud je tato úloha nenainstaloval při instalaci sady Visual Studio. Můžete znovu spustit instalační program a jeho instalaci.
 
    ![Vývoj desktopových aplikací pomocí C++](media/desktop-development-with-cpp.png "vývoj desktopových aplikací pomocí C++")
 
@@ -398,7 +398,7 @@ Teď, když jste vytvořili knihovnu DLL a klientské aplikace, můžete experim
 
 Když nasadíte aplikaci, je nutné nasadit knihoven DLL, která používá. Nejjednodušší způsob, jak zpřístupnit knihovny DLL, který jste vytvořili nebo které zahrnete od jiných výrobců do vaší aplikace je jejich umístění ve stejném adresáři jako aplikace, označované také jako *nasazení aplikace – místní*. Další informace o nasazení naleznete v tématu [nasazení v jazyce Visual C++](../ide/deployment-in-visual-cpp.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)<br/>
 [Nasazení aplikací klasické pracovní plochy](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>

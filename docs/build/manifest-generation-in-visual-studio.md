@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
-ms.openlocfilehash: 75f8fcae2a51e4e8296f6f3c252888b6ca55ad20
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69e1868990358aeb4d790366b3a0bfa8d8999823
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520351"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414744"
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Generování manifestu v aplikaci Visual Studio
 
@@ -29,7 +29,7 @@ Systém sestavení v sadě Visual Studio umožňuje manifest vložený do soubor
 
 Je manifest vložený v koncovém binárním souboru jako prostředek text a bude možné dokument zobrazit tak, že otevřete koncovém binárním souboru jako soubor v sadě Visual Studio. Aby bylo zajištěno, že manifest se odkazuje na správný knihovny, postupujte podle kroků popsaných v [Principy závislostí v aplikacích Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md) nebo postupujte podle doporučení podle [Poradce při potížích s](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) oddílu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Postupy: Vložení manifestu do aplikace C/C++](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md)<br/>
 [O soukromých sestaveních](/windows/desktop/SbsCs/about-private-assemblies-)<br/>

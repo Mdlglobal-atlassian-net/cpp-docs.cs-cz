@@ -6,16 +6,16 @@ helpviewer_keywords:
 - references, to properties in providers
 - referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-ms.openlocfilehash: 642e6219f72e506205e8192770be7d8af5d0d817
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: d8c775af8f887deb7bf49016f9716fa0a76d2439
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556456"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415939"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>Odkazování na vlastnost ve zprostředkovateli
 
-Najdete skupinu vlastností a vlastnost ID pro požadovanou vlastnost. Další informace najdete v tématu [vlastnosti technologie OLE DB](https://docs.microsoft.com/previous-versions/windows/desktop/ms722734(v=vs.85)) v **OLE DB referenční informace pro programátory**.
+Najdete skupinu vlastností a vlastnost ID pro požadovanou vlastnost. Další informace najdete v tématu [vlastnosti technologie OLE DB](/previous-versions/windows/desktop/ms722734(v=vs.85)) v **OLE DB referenční informace pro programátory**.
 
 V následujícím příkladu se předpokládá, že se pokoušíte získat vlastnosti ze sady řádků. Kód pro použití relace nebo příkazu je podobné, ale používá jiné rozhraní.
 

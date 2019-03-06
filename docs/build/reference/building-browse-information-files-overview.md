@@ -7,12 +7,12 @@ helpviewer_keywords:
 - browse information files (.bsc)
 - browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-ms.openlocfilehash: d620c7170ef5e84a05496af6e74d3a22f594749b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02f2107469e2fbbc4ea3591e1211e600d16fb9e9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469966"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413014"
 ---
 # <a name="building-browse-information-files-overview"></a>Sestavení souborů informací o procházení: Přehled
 
@@ -43,7 +43,7 @@ Zobrazit [Obecná stránka vlastností (projekt)](../../ide/general-property-pag
 
 1. Po jsou všechny projekty sestaveny, spusťte nástroj BSCMAKE všechny soubory .sbr jako vstup. Zástupné znaky. Například pokud jste měli adresáře projektu C:\X C:\Y a C:\Z se soubory .sbr je, a chtěli je zkombinovat do jednoho souboru BSC programem, použijte nástroje BSCMAKE C:\X\\\*.sbr C:\Y\\\*.sbr C:\Z\\ \*.sbr /o c:\whatever_directory\combined.bsc pro sestavení souboru .bsc kombinované.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nástroje sestavení C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
 [BSCMAKE – referenční dokumentace](../../build/reference/bscmake-reference.md)

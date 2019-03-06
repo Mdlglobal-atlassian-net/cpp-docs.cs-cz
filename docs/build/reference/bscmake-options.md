@@ -29,12 +29,12 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-ms.openlocfilehash: 669f1fc3ef151ee76ab6b057798f33f5b3cc1287
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7727f433ae68f26075645b35ff5edad43159ec67
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464906"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415406"
 ---
 # <a name="bscmake-options"></a>Možnosti BSCMAKE
 
@@ -54,18 +54,18 @@ Vyloučí symboly v těle makra. Použití **/Em** mají být zahrnuty pouze ná
 **/ER (** *symbol*... **)**<br/>
 Vyloučí zadaný symboly z informačního souboru procházení. Chcete-li zadat více názvů symbol, názvy oddělte mezerou a uvést v seznamu v závorkách. Závorky nejsou nezbytné, pokud zadáte pouze jeden *symbol*.
 
-**/ES**<br/>
+**/Es**<br/>
 Vyloučí z informačního souboru procházení každý soubor zahrnutí zadán s parametrem absolutní cestu nebo absolutní cesta zadaná v proměnné prostředí INCLUDE součástí. (Obvykle se jedná o systému vkládané soubory, které obsahují velké množství informací, které nemusí být nutné v informačního souboru procházení.) Tato možnost nevylučuje zadaných bez cesty, nebo relativní cesty nebo soubory nalezené v relativní cestu VLOŽENÝCH souborů. Můžete použít **/Ei** možnost spolu s **/Es** vyloučit soubory, které **/Es** nevylučuje. Pokud budete chtít vyloučit pouze některé soubory, které **/Es** vyloučí, použijte **/Ei** místo **/Es** a seznam souborů, které chcete vyloučit.
 
-**/ errorreport:**[**žádný** &#124; **řádku** &#124; **fronty** &#124; **odeslat**]<br/>
+**/errorreport:**[**none** &#124; **prompt** &#124; **queue** &#124; **send**]<br/>
 Umožňuje odesílat informace společnosti Microsoft týkající se s interními chybami v bscmake.exe.
 
 Další informace o **/errorreport**, naleznete v tématu [/errorreport (sestava interními chybami kompilátoru)](../../build/reference/errorreport-report-internal-compiler-errors.md).
 
-**/ HELP**<br/>
+**/HELP**<br/>
 Zobrazí souhrn syntaxe příkazového řádku nástroje BSCMAKE.
 
-**/IU**<br/>
+**/Iu**<br/>
 Zahrnuje neodkazovaná symboly. Ve výchozím nastavení BSCMAKE nezaznamenává všechny symboly, které jsou definovány, ale neodkazuje. Pokud soubor .sbr byla zabalena, tato možnost nemá žádný účinek pro tento vstupní soubor, protože kompilátor už odebrala neodkazovaná symboly.
 
 **/n**<br/>
@@ -92,6 +92,6 @@ Následující příkazový řádek říká BSCMAKE provést úplné sestavení 
 BSCMAKE /n /S toolbox.h /o main.bsc file1.sbr file2.sbr file3.sbr
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [BSCMAKE – referenční dokumentace](../../build/reference/bscmake-reference.md)

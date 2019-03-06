@@ -10,12 +10,12 @@ helpviewer_keywords:
 - delayimp.h
 - helper functions
 ms.assetid: 6279c12c-d908-4967-b0b3-cabfc3e91d3d
-ms.openlocfilehash: ee2a8b66eaf4a8ba29ba3de7e63407bea738d626
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 955ae0ed8feac22da19eb13218e2332849477e29
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440141"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421377"
 ---
 # <a name="understanding-the-helper-function"></a>Základní informace o podpůrné funkci
 
@@ -63,6 +63,6 @@ Následující témata popisují pomocnou funkci:
 
 - [Uvolnění knihovny DLL s odloženým načtením](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora linkeru pro knihovny DLL s odloženým načtením](../../build/reference/linker-support-for-delay-loaded-dlls.md)

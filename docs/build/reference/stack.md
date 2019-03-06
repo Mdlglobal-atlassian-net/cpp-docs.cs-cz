@@ -9,12 +9,12 @@ helpviewer_keywords:
 - stack, setting size
 - /STACK editbin option
 ms.assetid: a39bcff0-c945-4355-80cc-8e4f24a5f142
-ms.openlocfilehash: 89591a9d0a7f19422275b6bce6f4c5a7a723e800
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d583a7259e1aecef0a638743fb0b6271ff09330
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647701"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417746"
 ---
 # <a name="stack"></a>/STACK
 
@@ -30,6 +30,6 @@ Tato možnost nastaví velikost zásobníku v bajtech a přebírá argumenty v z
 
 Volitelný `commit` argument podléhá interpretaci operačního systému. V systému Windows NT, Windows 95 a Windows 98 `commit` určuje množství fyzické paměti do okamžiku přidělit. Potvrzená virtuální paměť rezervuje místo ve stránkovacím souboru. Vyšší `commit` hodnotu šetří čas, kdy aplikace potřebuje více místa v zásobníku, ale zvyšuje požadavky na paměť a případně čas spuštění.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [EDITBIN – možnosti](../../build/reference/editbin-options.md)

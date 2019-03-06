@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /Gw compiler option [C++]
 - -Gw compiler option [C++]
 ms.assetid: 6f90f4e9-5eb8-4c47-886e-631278a5a4a9
-ms.openlocfilehash: 406b1577b77f056e18753db10bae5675febe879e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2c7d8d9a3b3bb877fcf7f4418f3ed20a90a9a11
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506688"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420125"
 ---
 # <a name="gw-optimize-global-data"></a>/Gw (Optimalizovat globální data)
 
@@ -48,7 +48,7 @@ Další informace najdete v tématu [Představujeme /Gw přepínač kompilátoru
 
 - Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
