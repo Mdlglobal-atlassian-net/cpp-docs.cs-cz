@@ -1,19 +1,19 @@
 ---
 title: Konfigurace projektu C++ Linux v sadě Visual Studio
-ms.date: 09/18/2018
+ms.date: 11/12/2018
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: fd87b3d60e6625fb86ad1b494fd878b9b5ca031b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0323ae57de1e03811b12fec7fea79b6bab954e44
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622492"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563339"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurace projektu Linux
 
-Toto téma popisuje postup konfigurace projektu C++ Linux v sadě Visual Studio. Informace o Linuxové projekty CMake v sadě Visual Studio najdete v tématu [konfigurace projektu Linux CMake ](cmake-linux-project.md).
+Toto téma popisuje postup konfigurace projektu C++ Linux, který je založen na šabloně projektu Linux v sadě Visual Studio. Informace o Linuxové projekty CMake v sadě Visual Studio najdete v tématu [konfigurace projektu Linux CMake ](cmake-linux-project.md).
 
-## <a name="general-settings"></a>Obecné nastavení
+## <a name="general-settings"></a>Obecná nastavení
 
 Širokou škálu možností je nakonfigurovat pro Linux projekt pomocí sady Visual Studio.  Chcete-li zobrazit tyto možnosti, vyberte **projektu > vlastnosti** nabídek nebo kliknutím pravým tlačítkem na projekt v **Průzkumníka řešení** a vyberte **vlastnosti** v místní nabídce. **Obecné** nastavení se zobrazí.
 
@@ -90,7 +90,7 @@ Ke správě vaší mezipaměti hlaviček, přejděte na **nástroje > Možnosti,
 ## <a name="see-also"></a>Viz také
 
 [Práce s vlastnostmi projektu](../ide/working-with-project-properties.md)<br/>
-[C++ obecné vlastnosti (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
-[Adresáře VC ++ (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
-[Kopírovat projekt vlastností zdrojů (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
-[Vytvořit událost vlastnosti (Linux C++)](../linux/prop-pages/build-events-linux.md)
+[C++ obecné vlastnosti (Linux C++)](prop-pages/general-linux.md)<br/>
+[Adresáře VC ++ (Linux C++)](prop-pages/directories-linux.md)<br/>
+[Kopírovat projekt vlastností zdrojů (Linux C++)](prop-pages/copy-sources-project.md)<br/>
+[Vytvořit událost vlastnosti (Linux C++)](prop-pages/build-events-linux.md)

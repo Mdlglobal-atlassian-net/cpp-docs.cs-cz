@@ -9,12 +9,12 @@ helpviewer_keywords:
 - databases [C++], MFC programming model
 - Windows programming MFC symbols [C++]
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-ms.openlocfilehash: 329d56f4a8e0e9992cb78987c559f74c7349f681
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: c60c75275ca565b332c33848d27c134deb90a5c6
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954949"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563200"
 ---
 # <a name="mfc-predefined-symbols"></a>Předdefinované symboly MFC
 
@@ -236,7 +236,7 @@ Symboly v této tabulce zobrazí jenom v projektu knihovny MFC při byla přidá
 
 Tyto symboly jsou taky součástí soubory podpory knihovny MFC, ale podporují standardní funkce aplikace Windows a akce. Tyto symboly se používají s nabídkami.
 
-Pokud pracujete s nabídkami v **Editor nabídek**, tyto symboly se zobrazí v **okně s vlastnostmi** přidružené k běžné příkazy nabídky. Například pokud má vaše aplikace **souboru** nabídky s **ukončovací** příkazu, že bude spojená s symbol id_app_exit – příkaz v [okno vlastností](/visualstudio/ide/reference/properties-window).
+Pokud pracujete s nabídkami v **Editor nabídek**, tyto symboly se zobrazí v **vlastnost** přidružené k běžné příkazy nabídky okna. Například pokud má vaše aplikace **souboru** nabídky s **ukončovací** příkazu, že bude spojená s symbol id_app_exit – příkaz v [okno vlastností](/visualstudio/ide/reference/properties-window).
 
 ||||
 |-|-|-|

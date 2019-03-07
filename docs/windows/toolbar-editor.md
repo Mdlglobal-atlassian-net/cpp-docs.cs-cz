@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: 5aadb00e6e010467ee9c70dc357916d3c4f81853
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: a138eb5aa40429696ca2efa4a67e1a1c5490f4fa
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211079"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563248"
 ---
 # <a name="toolbar-editor-c"></a>Editor panelu nástrojů (C++)
 
@@ -103,7 +103,7 @@ Tlačítka panelu nástrojů má následující vlastnosti:
 
 ### <a name="to-create-new-toolbars"></a>K vytvoření nových panelů nástrojů
 
-1. V **prostředků** zobrazení, klikněte pravým tlačítkem na soubor .rc a zvolte **přidat prostředek**. Pokud máte existující nástrojů v souboru .rc, kliknete pravým tlačítkem **nástrojů** a pak zvolte položku **vložit nástrojů**.
+1. V **zobrazení prostředků**, klikněte pravým tlačítkem na váš *.rc* soubor a zvolte **přidat prostředek**. Pokud máte existující nástrojů ve vaší *.rc* souborů, které můžete kliknout pravým tlačítkem **nástrojů** a pak zvolte položku **vložit nástrojů**.
 
 1. V **přidat prostředek** dialogu **nástrojů** v **typ prostředku** seznamu a pak zvolte **nový**.
 
@@ -111,7 +111,7 @@ Tlačítka panelu nástrojů má následující vlastnosti:
 
 ### <a name="to-convert-bitmaps-to-toolbar-resources"></a>Převod bitmap na prostředky panelu nástrojů
 
-1. Otevřete existující prostředek rastrového obrázku v [Editor obrázků](../windows/image-editor-for-icons.md). Pokud ještě rastrového obrázku není v souboru .rc, klikněte pravým tlačítkem na soubor .rc a zvolte **Import**, přejděte na rastrový obrázek, kterou chcete přidat do souboru .rc a vyberte **otevřít**.
+1. Otevřete existující prostředek rastrového obrázku v [Editor obrázků](../windows/image-editor-for-icons.md). Pokud ještě není v rastrový obrázek vaší *.rc* souboru, klikněte pravým tlačítkem na *.rc* soubor a zvolte **Import**, přejděte na rastrový obrázek, které chcete přidat do vaší *.rc*  a vyberte možnost **otevřít**.
 
 1. Přejděte do nabídky **Image** > **panelu nástrojů editoru**.
 
@@ -126,7 +126,7 @@ Tlačítka panelu nástrojů má následující vlastnosti:
 
 ### <a name="to-manage-toolbar-buttons"></a>Ke správě tlačítka na panelu nástrojů
 
-Vytvoření nového tlačítka panelu nástrojů:
+#### <a name="to-create-a-new-toolbar-button"></a>K vytvoření nového tlačítka panelu nástrojů
 
 1. V [zobrazení prostředků](../windows/resource-view-window.md) rozbalte složku prostředků (například *Project1.rc*).
 
@@ -134,36 +134,34 @@ Vytvoření nového tlačítka panelu nástrojů:
 
    - Přiřaďte ID prázdné tlačítko na pravém konci panelu nástrojů. Můžete tak učinit pomocí úpravy **ID** vlastnost [okno vlastností](/visualstudio/ide/reference/properties-window). Můžete například poskytnout stejný Identifikátor jako možnost nabídky tlačítka panelu nástrojů. V takovém případě použijte pole rozevíracího seznamu vyberte **ID** položky nabídky.
 
-   - Vyberte tlačítko prázdné na pravém konci panelu nástrojů (v **panel nástrojů zobrazení** podokno) a začněte kreslení. Je přiřazen výchozí Identifikátor příkazu tlačítka (ID_BUTTON\<n >).
+   - Vyberte prázdnou tlačítko na panelu nástrojů v pravém konci **panel nástrojů zobrazení** podokně a začněte kreslení. Je přiřazen výchozí Identifikátor příkazu tlačítka (ID_BUTTON\<n >).
 
-Můžete také zkopírovat a vložit obrázek do nového tlačítka panelu nástrojů.
-
-Chcete-li přidat bitovou kopii na panelu nástrojů jako tlačítko:
+#### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Chcete-li přidat bitovou kopii na panelu nástrojů jako tlačítko
 
 1. V [zobrazení prostředků](../windows/resource-view-window.md), otevřete poklepáním panelu nástrojů.
 
 1. Dále otevřete image, kterou chcete přidat na panel nástrojů.
 
    > [!NOTE]
-   > Pokud obrázek otevřít v sadě Visual Studio, se otevře v **Image** editoru. Image můžete otevřít také v jiných aplikacích grafiky.
+   > Pokud obrázek otevřít v sadě Visual Studio, se otevře v **Editor obrázků**. Image můžete otevřít také v jiných aplikacích grafiky.
 
-1. Z **upravit** nabídce zvolte **kopírování**.
+1. Přejděte do nabídky **upravit** > **kopírování**.
 
 1. Přepnout na panel nástrojů tak, že vyberete jeho karty v horní části okna zdroje.
 
-1. Z **upravit** nabídce zvolte **vložit**.
+1. Přejděte do nabídky **upravit** > **vložit**.
 
    Obrázek se zobrazí na panelu nástrojů jako nového tlačítka.
 
-Přesunutí tlačítka panelu nástrojů:
+#### <a name="to-move-a-toolbar-button"></a>Přesunutí tlačítka panelu nástrojů
 
 V **panel nástrojů zobrazení** podokně přetáhněte tlačítko, které chcete přesunout do nového umístění na panelu nástrojů.
 
-Kopírování tlačítek z panelu nástrojů, podržte klávesu **Ctrl** klíč a **panel nástrojů zobrazení** podokně přetáhněte tlačítko buď nové místo na panelu nástrojů nebo do umístění na jiný panel nástrojů.
+- Kopírování tlačítek z panelu nástrojů, podržte klávesu **Ctrl** klíč a **panel nástrojů zobrazení** podokně přetáhněte tlačítko buď nové místo na panelu nástrojů nebo do umístění na jiný panel nástrojů.
 
-Odstranění tlačítka panelu nástrojů vyberte tlačítko panelu nástrojů a přetáhněte ho z panelu nástrojů.
+- Odstranění tlačítka panelu nástrojů vyberte tlačítko panelu nástrojů a přetáhněte ho z panelu nástrojů.
 
-Vložit nebo odebrání mezer mezi tlačítky na panelu nástrojů, buď přetáhněte je ze nebo vůči navzájem na panelu nástrojů.
+- Vložit nebo odebrání mezer mezi tlačítky na panelu nástrojů, buď přetáhněte je ze nebo vůči navzájem na panelu nástrojů.
 
 |Akce|Krok|
 |------|------|
@@ -175,19 +173,19 @@ Vložit nebo odebrání mezer mezi tlačítky na panelu nástrojů, buď přetá
 > [!NOTE]
 > Pokud není místa vedle tlačítka, které jste přetažením směrem od a více než polovinu životnosti minulé vedle tlačítka, přetáhněte tlačítko **panelu nástrojů editoru** vloží mezeru na opačnou stranu tlačítka, které jste přetažení.
 
-Chcete-li změnit vlastnosti tlačítka panelu nástrojů:
+#### <a name="to-change-the-properties-of-a-toolbar-button"></a>Chcete-li změnit vlastnosti tlačítka panelu nástrojů
 
 1. V projektu jazyka C++ vyberte tlačítko panelu nástrojů.
 
 1. Zadejte nové ID v **ID** vlastnost [okno vlastností](/visualstudio/ide/reference/properties-window), nebo pomocí rozevíracího seznamu vyberte novou **ID**.
 
-Vytvoření popisku tlačítka pro tlačítko toolbar:
+#### <a name="to-create-a-tool-tip-for-a-toolbar-button"></a>Vytvoření popisku tlačítka pro tlačítko toolbar
 
 1. Vyberte tlačítko panelu nástrojů.
 
 1. V [okno vlastností](/visualstudio/ide/reference/properties-window)v **výzvy** pole, přidejte popis tlačítka na stavový řádek a po něm, přidejte `\n` a název nástroje tip.
 
-Například viz popis tlačítka pro **tisk** tlačítko **WordPad**:
+Například, chcete-li zobrazit popis tlačítka pro **tisk** tlačítko **WordPad**:
 
 1. Otevřít **WordPad**.
 

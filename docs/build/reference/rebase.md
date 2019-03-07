@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - /REBASE editbin option [C++]
 ms.assetid: 3f89d874-af5c-485b-974b-fd205f6e1a4b
-ms.openlocfilehash: de8b648c6bca02c71a9cfedd92bfbe7e6ca56b70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0b581dfc116e25228a9aa9133c4de027e194799
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463645"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422036"
 ---
 # <a name="rebase"></a>/REBASE
 
@@ -32,10 +32,10 @@ Zadejte spustitelné soubory a knihovny DLL v programu *soubory* argument v př�
 
 |Modifikátor|Akce|
 |--------------|------------|
-|**ZÁKLAD =**<em>adresu</em>|Obsahuje počáteční adresu pro opětovné přiřazení základní adresy k souborům. Zadejte *adresu* v desítkovém zápisu nebo v zápisu jazyka. Pokud základ není zadán, je výchozí počáteční základní adresa 0x400000. Pokud dolů je použit, základní musí být zadán, a *adresu* Nastaví konec rozsahu základní adresy.|
+|**BASE=**<em>address</em>|Obsahuje počáteční adresu pro opětovné přiřazení základní adresy k souborům. Zadejte *adresu* v desítkovém zápisu nebo v zápisu jazyka. Pokud základ není zadán, je výchozí počáteční základní adresa 0x400000. Pokud dolů je použit, základní musí být zadán, a *adresu* Nastaví konec rozsahu základní adresy.|
 |**BASEFILE**|Vytvoří soubor s názvem COFFBASE. TXT, který je textový soubor ve formátu očekávaném podle odkazu nebo základní možnosti.|
 |**DOLŮ**|Říká EDITBIN přiřazení základní adresy směrem dolů od koncových adres. Soubory jsou přiřazeny v uvedeném pořadí s první soubor umístěný v nejvyšší možné adresy dál konci rozsahu adres. ZÁKLADNÍ musí použít s dolů zajistit dostatečný Adresní prostor pro odvození soubory. K určení adresního prostoru vyžadované zadané soubory, spusťte nástroje EDITBIN s /REBASE na souborech a přidejte do zobrazeného celkové velikosti 64 KB.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [EDITBIN – možnosti](../../build/reference/editbin-options.md)

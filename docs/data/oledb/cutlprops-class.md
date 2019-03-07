@@ -30,12 +30,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: db0976ecd3e3af76640a56ebc1e07e9ade2e3815
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1c45e28e0e74d7216023f06ad22896c53c9226b8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556774"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423050"
 ---
 # <a name="cutlprops-class"></a>CUtlProps – třída
 
@@ -63,17 +63,17 @@ Třída, která obsahuje `BEGIN_PROPSET_MAP`.
 
 |||
 |-|-|
-|[Getpropvalue –](#getpropvalue)|Získá vlastnost ze sady vlastností.|
+|[GetPropValue](#getpropvalue)|Získá vlastnost ze sady vlastností.|
 |[IsValidValue –](#isvalidvalue)|Slouží k ověření hodnotu před nastavením vlastnosti.|
 |[OnInterfaceRequested](#oninterfacerequested)|Zpracovává požadavky pro volitelné rozhraní, když příjemce volá metodu pro vytvoření rozhraní objektu.|
-|[OnPropertyChanged –](#onpropertychanged)|Volá se po nastavení vlastnosti pro zpracování zřetězené vlastnosti.|
-|[Setpropvalue –](#setpropvalue)|Nastaví vlastnost v sadu vlastností.|
+|[OnPropertyChanged](#onpropertychanged)|Volá se po nastavení vlastnosti pro zpracování zřetězené vlastnosti.|
+|[SetPropValue](#setpropvalue)|Nastaví vlastnost v sadu vlastností.|
 
 ## <a name="remarks"></a>Poznámky
 
 Většina této třídy je podrobnost implementace.
 
-`CUtlProps` obsahuje dva členy pro nastavení vlastnosti interně: [getpropvalue –](../../data/oledb/cutlprops-getpropvalue.md) a [setpropvalue –](../../data/oledb/cutlprops-setpropvalue.md).
+`CUtlProps` pro nastavení vlastnosti interně obsahuje dva členy: [Getpropvalue –](../../data/oledb/cutlprops-getpropvalue.md) a [setpropvalue –](../../data/oledb/cutlprops-setpropvalue.md).
 
 Další informace o makra použít v mapování sady vlastností, naleznete v tématu [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) a [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).
 
@@ -121,7 +121,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 Index pole vlastností nastavenou; nula, pokud existuje pouze jedna vlastnost sady.
 
 *pDBProp*<br/>
-ID vlastnosti a nová hodnota v [DBPROP](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85)) struktury.
+ID vlastnosti a nová hodnota v [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85)) struktury.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -183,7 +183,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 Index pole vlastností nastavenou; nula, pokud existuje pouze jedna vlastnost sady.
 
 *pDBProp*<br/>
-ID vlastnosti a nová hodnota v [DBPROP](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85)) struktury.
+ID vlastnosti a nová hodnota v [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85)) struktury.
 
 ### <a name="return-value"></a>Návratová hodnota
 

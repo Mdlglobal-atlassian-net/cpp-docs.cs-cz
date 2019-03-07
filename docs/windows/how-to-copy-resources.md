@@ -30,20 +30,14 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: ce1cf1f6d0010475192ecf7ef3ce2416fac51dfd
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 28127ea89fdba1b70988ced1d6004c0f914c66e2
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676406"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563040"
 ---
 # <a name="how-to-manage-resources-c"></a>Postupy: Správa prostředků (C++)
-
-Spravovat prostředky pro váš projekt podle:
-
-- Kopírování a úpravy prostředků.
-
-- Import a export prostředků.
 
 ## <a name="copy-and-edit-resources"></a>Kopírovat a upravit prostředky
 
@@ -54,7 +48,7 @@ Prostředky můžete snadno zkopírovat z existující prostředek nebo spustite
 > [!NOTE]
 > Visual C++ obsahuje ukázkové soubory prostředků, které můžete použít ve své aplikaci. Další informace najdete v tématu [Klipart: Běžným prostředkům](https://github.com/Microsoft/VCSamples).
 
-Můžete použít metodu a přetažení mezi soubory .rc, které jsou otevřeny mimo projekt.
+Nelze přetáhnout a vyřadit, kopírování, vyjmutí nebo vložte mezi soubory prostředků v projektu (**zobrazení prostředků**) a otevírání souborů .rc samostatné v dokumentu systému windows. Můžete to udělat v předchozích verzích produktu. Pouze pomocí metody a přetažení mezi soubory .rc, které jsou otevřeny mimo projekt.
 
 ### <a name="to-copy-resources"></a>Chcete-li kopírovat zdroje
 
@@ -78,9 +72,6 @@ Můžete použít metodu a přetažení mezi soubory .rc, které jsou otevřeny 
       1. Klikněte pravým tlačítkem na soubor prostředků, do které chcete vložit prostředku (například *Source2.rc*) a zvolte **vložte**.
 
 > [!NOTE]
-> Nelze přetáhnout a vyřadit, kopírování, vyjmutí nebo vložte mezi soubory prostředků v projektu (**zobrazení prostředků**) a samostatné .rc soubory (ty otevřít v systému windows dokumentu). Můžete to udělat v předchozích verzích produktu.
-
-> [!NOTE]
 > Aby nedocházelo ke konfliktům s názvy symbolů nebo hodnoty v existující soubor, Visual C++ změnit hodnotu symbolu přenesené prostředků nebo název symbolu a hodnota při kopírování do nového souboru.
 
 Při kopírování v prostředku, můžete změnit jeho vlastnost jazyka vlastnost podmínka nebo obojí.
@@ -95,17 +86,17 @@ Jazyk a podmínky prostředku jsou uvedeny v závorkách za názvem prostředku 
 IDD_AboutBox (Finnish - XX33)
 ```
 
-Kopírovat existující prostředek a změnit jeho jazyka nebo podmínky
+### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Kopírovat existující prostředek a změnit jeho jazyka nebo podmínky
 
-1. V souboru .rc nebo v [zobrazení prostředků](../windows/resource-view-window.md) okna, klikněte pravým tlačítkem na požadovaný prostředek zkopírovat a zvolte **vložit kopii**. Potom nastavte následující:
+V *.rc* souboru nebo [zobrazení prostředků](../windows/resource-view-window.md) okna, klikněte pravým tlačítkem na požadovaný prostředek zkopírovat a zvolte **vložit kopii**. Potom nastavte následující:
 
-   - Pro **jazyk** seznamu, vyberte jazyk.
+- Pro **jazyk** seznamu, vyberte jazyk.
 
-   - V **podmínku** zadejte podmínku.
+- V **podmínku** zadejte podmínku.
 
 ### <a name="to-edit-resources"></a>Chcete-li upravit prostředky
 
-Soubory spravovaného prostředku (RESX) jsou soubory formátu XML. Když přidáte spravovaný soubor prostředků do projektu z **přidat novou položku** dialogovém okně **editoru spravovaných prostředků** otevře ve výchozím nastavení.
+Spravované prostředky (RESX) soubory jsou soubory formátu XML. Když přidáte spravovaný soubor prostředků do projektu z **přidat novou položku** dialogovém okně **editoru spravovaných prostředků** otevře ve výchozím nastavení.
 
 ## <a name="import-and-export-resources"></a>Import a Export prostředků
 

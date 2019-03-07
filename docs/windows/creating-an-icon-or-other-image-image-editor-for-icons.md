@@ -87,27 +87,24 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 69fffc71a7b5dfad12e70a9132fc61b11a0914cc
-ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
+ms.openlocfilehash: 92eac69e6802a824c4b6e107d2ff3393e931a542
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56336589"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563053"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>Postupy: Vytvoření ikony nebo jiného obrázku
 
-Můžete vytvořit novou bitovou kopii (rastrový obrázek, ikona, kurzoru nebo panelu nástrojů) a potom použít editor obrázků přizpůsobit její vzhled. Můžete také vytvořit nový rastrový obrázek vzorované po [šablony](../windows/how-to-use-resource-templates.md).
+Můžete vytvořit novou bitovou kopii, rastrový obrázek, ikona, kurzoru nebo panelu nástrojů a pak použít **Editor obrázků** přizpůsobit její vzhled. Můžete také vytvořit nový rastrový obrázek vzorované po [šablony resource](../windows/how-to-use-resource-templates.md).
 
 ## <a name="icons-and-cursors-image-resources-for-display-devices"></a>Ikony a kurzory: Prostředky obrázků pro zobrazovací zařízení
 
-Ikony a kurzory jsou grafických prostředků, které může obsahovat více bitových kopií v různých velikostech a barevná schémata pro různé typy zařízení s displejem. Kurzor má také "aktivního bodu," požadované místo Windows používá ke sledování jeho pozice. Ikony a kurzory jsou vytvořeny a upravovat pomocí **Image** editoru, jako jsou rastrové obrázky a další Image.
+Ikony a kurzory jsou grafických prostředků, které může obsahovat více bitových kopií v různých velikostech a barevná schémata pro různé typy zařízení s displejem. Také obsahuje aktivního bodu kurzoru, místo Windows používá ke sledování jeho pozice. Ikony a kurzory jsou vytvořeny a upravovat pomocí **Editor obrázků**, protože jsou rastrové obrázky a další Image.
 
-Při vytváření nové ikony nebo kurzoru, **Image** editoru nejprve vytvoří bitovou kopii standardních typů. Na obrázku je zpočátku vyplněn barvou obrazovky (transparentní). Pokud se image nachází kurzor, aktivního bodu je zpočátku levý horní roh (souřadnice 0; 0).
+Při vytváření nové ikony nebo kurzoru, **Editor obrázků** nejprve vytvoří bitovou kopii standardních typů. Na obrázku je zpočátku vyplněn barvou obrazovky (transparentní). Pokud se image nachází kurzor, aktivního bodu je zpočátku levém horním rohu se souřadnicemi `0,0`.
 
-Ve výchozím nastavení **Image** editor podporuje vytváření dalších bitových kopií pro zařízení uvedené v následující tabulce. Můžete vytvářet Image pro jiná zařízení tak, že zadáte parametry šířku, výšku a počet barev do [dialogové okno vlastní obrázek](custom-image-dialog-box-image-editor-for-icons.md).
-
-> [!NOTE]
-> Použití **Editor obrázků**, můžete zobrazit obrázky 32-bit, ale nemůžete je upravovat.
+Ve výchozím nastavení **Editor obrázků** podporuje vytváření dalších bitových kopií pro zařízení uvedené v následující tabulce. Můžete vytvářet Image pro jiná zařízení tak, že zadáte parametry šířku, výšku a počet barev do **vlastní Image** dialogové okno.
 
 |Barva|Šířka (v pixelech)|Výška (v pixelech)|
 |-----------|----------------------|-----------------------|
@@ -129,13 +126,16 @@ Ve výchozím nastavení **Image** editor podporuje vytváření dalších bitov
 
 ### <a name="create-a-device-image-icon-or-cursor"></a>Vytvoření obrázku zařízení (ikony nebo kurzoru)
 
-Když vytvoříte nové ikony nebo kurzoru prostředků **Image** editoru nejprve vytvoří bitovou kopii v konkrétním stylu (32 × 32, 16 barvy ikony a 32 × 32, monochromatický pro ukazatele). Můžete přidat obrázky v různých velikostech a styly do počáteční ikony nebo kurzoru a upravit každé další image, podle potřeby pro jiné zobrazovací zařízení. Můžete také upravit obrázek pomocí operace vyjmutí a vložení z existujícího typu obrázku nebo z bitmapy vytvořené v programu grafiky.
+Když vytvoříte nové ikony nebo kurzoru prostředků **Editor obrázků** nejprve vytvoří bitovou kopii v konkrétním stylu (32 × 32, 16 barvy ikony a 32 × 32, monochromatický pro ukazatele). Můžete přidat obrázky v různých velikostech a styly do počáteční ikony nebo kurzoru a upravit každé další image, podle potřeby pro jiné zobrazovací zařízení. Můžete také upravit obrázek pomocí operace vyjmutí a vložení z existujícího typu obrázku nebo z bitmapy vytvořené v programu grafiky.
 
-Při otevření prostředku ikony nebo kurzoru v [editor obrázků](../windows/image-editor-for-icons.md), image, většina úzce odpovídající aktuální zobrazovací zařízení se otevře ve výchozím nastavení.
+Při otevření prostředku ikony nebo kurzoru v [Editor obrázků](../windows/image-editor-for-icons.md), image, většina úzce odpovídající aktuální zobrazovací zařízení se otevře ve výchozím nastavení.
 
-**Nový &lt;zařízení&gt; typ obrázku** dialogové okno umožňuje vytvořit nový obrázek zařízení zadaného typu. Otevřete **nový \<zařízení > obrázku** dialogu **nový typ obrázku** na **Image** nabídky. Jsou zahrnuty následující vlastnosti **cílový typ obrázku** a **vlastní**.
+> [!NOTE]
+> Pokud váš projekt již neobsahuje soubor .rc, přečtěte si téma [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
 
-**Cílový typ obrázku** image dostupných typů seznamů vlastností. Vyberte typ obrázku, který chcete otevřít:
+**Nový &lt;zařízení&gt; typ obrázku** dialogové okno umožňuje vytvořit nový obrázek zařízení zadaného typu. Chcete-li otevřít **nový \<zařízení > obrázku** dialogové okno, přejděte do nabídky **Image** > **nový typ obrázku**. Jsou zahrnuty následující vlastnosti **cílový typ obrázku** a **vlastní**.
+
+**Cílový typ obrázku** dostupné image typy, kde můžete vybrat image seznamů vlastností typu, který chcete spustit:
 
 ||||
 |-|-|-|
@@ -167,10 +167,7 @@ Použití **otevřete &lt;zařízení&gt; Image** dialogové okno otevřete obr�
 
 #### <a name="to-create-a-new-icon-or-cursor"></a>Chcete-li vytvořit nové ikony nebo kurzoru
 
-1. V [zobrazení prostředků](../windows/resource-view-window.md), klikněte pravým tlačítkem na soubor .rc a pak zvolte **vložit prostředků** z místní nabídky. (Pokud už máte existující prostředek obrázku v souboru .rc, jako je například kurzoru, kliknete pravým tlačítkem **kurzor** a pak zvolte položku **vložení kurzoru** z místní nabídky.)
-
-   > [!NOTE]
-   > Pokud váš projekt již neobsahuje soubor .rc, přečtěte si téma [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
+1. V [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources), klikněte pravým tlačítkem na váš *.rc* souboru a pak zvolte **vložit prostředků**. Pokud už máte existující prostředek obrázku vaše *.rc* souboru, jako je například kurzor, můžete kliknout pravým tlačítkem **kurzor** a pak zvolte položku **vložení kurzoru**.
 
 1. V [vložit prostředek – dialogové okno](../windows/add-resource-dialog-box.md)vyberte **ikonu** nebo **kurzor** a zvolte **nový**. U ikon tato akce vytvoří prostředek s ikonou s 32 × 32, ikona 16 barev. Pro ukazatele, 32 × 32, bude vytvořena monochromatický obrázek (barvami. 2).
 
@@ -178,13 +175,13 @@ Použití **otevřete &lt;zařízení&gt; Image** dialogové okno otevřete obr�
 
 ### <a name="to-add-an-image-for-a-different-display-device"></a>Přidání obrázku pro zařízení s jiným zobrazením
 
-1. Na **Image** nabídce vyberte možnost **nový obrázek zařízení** (nebo klikněte pravým tlačítkem **Editor obrázků** podokně a zvolte **nový obrázek zařízení** z místní nabídka).
+1. Přejděte do nabídky **Image** > **nový obrázek zařízení**, nebo klikněte pravým tlačítkem **Editor obrázků** podokně a zvolte **nový obrázek zařízení**.
 
 1. Vyberte typ image, kterou chcete přidat. Můžete také vybrat **vlastní** vytváření ikony jejíž velikost není k dispozici ve výchozím seznamu.
 
 ### <a name="to-copy-a-device-image"></a>Kopírování obrázku zařízení
 
-1. Na **Image** nabídce vyberte možnost **otevřít obraz zařízení** a pak vyberte bitovou kopii z aktuálního seznamu imagí. Například zvolte 32 × 32, 16 barev verzi ikonu.
+1. Přejděte do nabídky **Image** > **otevřít obraz zařízení** a pak vyberte bitovou kopii z aktuálního seznamu imagí. Například zvolte 32 × 32, 16 barev verzi ikonu.
 
 1. Zkopírujte aktuálně zobrazené obraz bitové kopie (**Ctrl**+**C**).
 
@@ -194,23 +191,23 @@ Použití **otevřete &lt;zařízení&gt; Image** dialogové okno otevřete obr�
 
 ### <a name="to-delete-a-device-image"></a>Odstranění obrázku zařízení
 
-Zatímco obrázek ikony se zobrazí v **Image** editoru, vyberte **odstranění obrázku zařízení** z **Image** nabídky. Když odstraníte poslední obrázek ikony v prostředku, prostředek se také odstraní.
+Zatímco obrázek ikony se zobrazí v **Editor obrázků**, přejděte do nabídky **Image** > **odstranění obrázku zařízení**. Když odstraníte poslední obrázek ikony v prostředku, prostředek se také odstraní.
 
-   > [!NOTE]
-   > Po stisknutí klávesy **Del** klíče, obrázky a barvy nakreslen na ikonu se odstraní, ale zůstane ikona; nyní ji můžete upravit. Pokud stisknete **Del** omylem, můžete stisknout **Ctrl**+**Z** vrátit zpět akce.
+> [!NOTE]
+> Po stisknutí klávesy **Del** klíče, obrázky a barvy nakreslen na ikonu se odstraní, ale zůstává na ikonu a teď ji můžete upravit. Pokud stisknete **Del** omylem, stiskněte klávesu **Ctrl**+**Z** vrátit zpět akce.
 
 ### <a name="to-create-transparent-or-inverse-regions-in-device-images"></a>Vytvoření průhledných nebo obrácených oblastí v obrázcích zařízení
 
-V [editor obrázků](../windows/image-editor-for-icons.md), počáteční ikony nebo kurzoru bitová kopie má atribut transparentní. I když jsou obdélníkové obrázky ikon a kurzorů, mnoho nezobrazí, protože části obrázku jsou transparentní; základní image na obrazovce zobrazí prostřednictvím ikony nebo kurzoru. Při přetažení ikonu, části obrázku se může vyskytovat obrácenou barvu. Vytvoření tohoto efektu tak, že nastavíte barvu obrazovky a inverzní barvy v [okno barvy](../windows/colors-window-image-editor-for-icons.md).
+V [Editor obrázků](../windows/image-editor-for-icons.md), počáteční ikony nebo kurzoru bitová kopie má atribut transparentní. I když jsou obdélníkové obrázky ikon a kurzorů, nejsou mnoho tak zobrazeny, protože jsou transparentní části obrázku a základní image na obrazovce zobrazí prostřednictvím ikony nebo kurzoru. Při přetažení ikonu, části obrázku se může vyskytovat obrácenou barvu. Vytvoření tohoto efektu tak, že nastavíte barvu obrazovky a inverzní barvy v [okno barvy](../windows/colors-window-image-editor-for-icons.md).
 
 Obrazovky a inverzní barvy použijete s ikonami a kurzory tvar a barva odvozené image nebo přiřadit inverzní oblasti. Barvy označují částí bitové kopie, které mají tyto atributy. Můžete změnit barvy, které představují vlastnosti obrazovky a inverzní barev v úpravách. Tyto změny nemají vliv na vzhled ikony nebo kurzoru v aplikaci.
 
 > [!NOTE]
-> Dialogová okna a příkazy nabídek, zobrazí se mohou lišit od těch popsaných v **pomáhají** v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení integrovaného vývojového prostředí sady Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+> Dialogová okna a příkazy nabídek, zobrazí se mohou lišit od těch popsaných v **pomáhají** v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, přejděte do nabídky **nástroje** > **nastavení importu a exportu**. Další informace najdete v tématu [přizpůsobení integrovaného vývojového prostředí sady Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
 #### <a name="to-create-transparent-or-inverse-regions"></a>Vytvoření průhledných nebo obrácených oblastí
 
-1. V **barvy** okna, vyberte **barvy obrazovky** selektor nebo **inverzní barvy** selektor.
+1. V **barvy** okně zvolte volič **barvy obrazovky** nebo **inverzní barvy**.
 
 1. Použijte na obrazovce nebo inverzní barvy na používání nástroje kreslení obrázku. Další informace o kreslicích nástrojů najdete v tématu [používání nástroje kreslení](using-a-drawing-tool-image-editor-for-icons.md).
 
@@ -227,20 +224,15 @@ Obrazovky a inverzní barvy použijete s ikonami a kurzory tvar a barva odvozen�
 
 ### <a name="use-the-256-color-palette"></a>Použití 256 barev
 
-Použití **Image** editoru, ikony a kurzory může být velikosti velké (64 × 64) s 256 barev palety lze vybírat. Po vytvoření prostředku, je vybrat styl obrázku zařízení.
+Použití **Editor obrázků**, ikony a kurzory mohou být velikosti velké (64 × 64) s 256 barev palety zvolit z. Po vytvoření prostředku, je vybrat styl obrázku zařízení.
 
 #### <a name="to-create-a-256-color-icon-or-cursor"></a>Chcete-li vytvořit 256barevných ikony nebo kurzoru
 
-1. V [zobrazení prostředků](../windows/resource-view-window.md), klikněte pravým tlačítkem na soubor .rc a pak zvolte **vložit prostředků** z místní nabídky. (Pokud už máte existující prostředek obrázku v souboru .rc, jako je například kurzoru, kliknete pravým tlačítkem **kurzor** a pak zvolte položku **vložení kurzoru** z místní nabídky.)
-
-   > [!NOTE]
-   > Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
+1. V [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources), klikněte pravým tlačítkem na váš *.rc* souboru a pak zvolte **vložit prostředků**. Pokud už máte existující prostředek obrázku vaše *.rc* souboru, jako je například kurzor, můžete kliknout pravým tlačítkem **kurzor** a pak zvolte položku **vložení kurzoru**.
 
 1. V [vložit prostředek – dialogové okno](../windows/add-resource-dialog-box.md)vyberte **ikonu** nebo **kurzor** a zvolte **nový**.
 
-1. Na **Image** nabídce vyberte možnost **nový obrázek zařízení**.
-
-1. Vyberte požadovaný styl 256 barev obrázku.
+1. Přejděte do nabídky **Image** > **nový obrázek zařízení** a vyberte požadovaný styl 256 barev obrázku.
 
 #### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>Vybrat barvu z palety barev 256 pro velké ikony
 
@@ -255,11 +247,9 @@ Pro kreslení pomocí výběru z palety barev 256, je nutné vybrat barvy z **ba
    > [!NOTE]
    > Počáteční paletu 256barevných imagí odpovídá na paletě vrácené `CreateHalftonePalette` rozhraní Windows API. Všechny ikony určený pro prostředí Windows by měl palety můžete zabránit blikání během palety realizace.
 
-### <a name="set-a-cursor39s-hot-spot"></a>Nastavit kurzor&#39;s aktivního bodu
+### <a name="to-set-a-cursors-hot-spot"></a>Nastavení aktivního bodu kurzoru
 
-Aktivního bodu kurzoru je bod, na které odkazuje Windows ve sledování pozice kurzoru. Ve výchozím nastavení je nastavení aktivního bodu do levého horního rohu kurzor (souřadnice 0; 0). **Aktivního bodu** vlastnost [okno vlastností](/visualstudio/ide/reference/properties-window) ukazuje souřadnice aktivního bodu.
-
-#### <a name="to-set-a-cursors-hot-spot"></a>Nastavení aktivního bodu kurzoru
+Aktivního bodu kurzoru je bod, na které odkazuje Windows ve sledování pozice kurzoru. Ve výchozím nastavení, je nastavení aktivního bodu do levého horního rohu kurzor se souřadnicemi `0,0`. **Aktivního bodu** vlastnost [okno vlastností](/visualstudio/ide/reference/properties-window) ukazuje souřadnice aktivního bodu.
 
 1. Na [panelu nástrojů editoru obrázků](../windows/toolbar-image-editor-for-icons.md), zvolte **nastavte aktivní bod** nástroj.
 
@@ -267,27 +257,22 @@ Aktivního bodu kurzoru je bod, na které odkazuje Windows ve sledování pozice
 
    **Hotspot** vlastnost **vlastnosti** v okně se zobrazí nové souřadnice.
 
-   > [!TIP]
-   > Popisy tlačítek se zobrazí při přejeďte kurzorem přes tlačítko panelu nástrojů. Tyto tipy mohou pomoci identifikovat funkce každé tlačítko.
-
-## <a name="saving-bitmaps-as-gifs-or-jpegs"></a>Ukládání bitmap ve formátu GIF nebo JPEG
+### <a name="to-create-and-save-a-bitmap-as-a-gif-or-jpeg"></a>Vytvoříte a uložíte rastrový obrázek GIF nebo JPEG
 
 Když vytvoříte rastrový obrázek, vytvoření image ve formátu rastrový obrázek (BMP). Image můžete, ale uložit jako ve formátu GIF nebo JPEG nebo v jiné formáty.
 
 > [!NOTE]
-> Tento proces se nevztahují na ikony a kurzory.
+> Tento proces se nevztahuje na ikony a kurzory.
 
-### <a name="to-create-and-save-a-bitmap-as-a-gif-or-jpeg"></a>Vytvoříte a uložíte rastrový obrázek GIF nebo JPEG
-
-1. Z **souboru** nabídce zvolte **otevřít**a pak vyberte **souboru**.
+1. Přejděte do nabídky **souboru** > **otevřít**a pak vyberte **souboru**.
 
 1. V **dialogové okno Nový soubor**, zvolte **Visual C++** složku, pak vyberte **rastrového obrázku (BMP)** v **šablony** a vyberte  **Otevřít**.
 
-   Rastrový obrázek se otevře v **Image** editoru.
+   Rastrový obrázek se otevře v **Editor obrázků**.
 
 1. Podle potřeby proveďte změny na nový rastrový obrázek.
 
-1. Se stále otevřen v rastrového obrázku **Image** editoru, **Uložit *název souboru*.bmp jako** na **souboru** nabídky.
+1. Se stále otevřen v rastrového obrázku **Editor obrázků**, přejděte do nabídky **souboru** > **Uložit *filename*.bmp jako**.
 
 1. V **uložit soubor jako** dialogového okna zadejte název, kterému chcete udělit soubor a rozšíření, která označuje formát souboru, které chcete v **název_souboru** pole. Například *myfile.gif*.
 
@@ -296,34 +281,29 @@ Když vytvoříte rastrový obrázek, vytvoření image ve formátu rastrový ob
 
 1. Vyberte **Uložit**.
 
-## <a name="converting-an-image-from-one-format-to-another"></a>Převod obrázku z jednoho formátu do druhého
-
-Můžete otevřít ve formátu GIF nebo JPEG imagí v **Image** editoru a uložte je jako rastrové obrázky. Můžete také otevřít soubor rastrového obrázku a uložit jako ve formátu GIF nebo JPEG. Při práci s obrázky nemusí být součástí projektu pro úpravy ve vývojovém prostředí (naleznete v tématu [samostatný obrázek úpravy](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)).
-
 ### <a name="to-convert-an-image-from-one-format-to-another"></a>K převedení obrázku z jednoho formátu do druhého
 
-1. Otevřít obrázek v **Image** editoru.
+Můžete otevřít ve formátu GIF nebo JPEG imagí v **Editor obrázků** a uložit je jako rastrové obrázky. Můžete také otevřít soubor rastrového obrázku a uložit jako ve formátu GIF nebo JPEG. Při práci s obrázky nemusí být součástí projektu pro úpravy ve vývojovém prostředí (naleznete v tématu [samostatný obrázek úpravy](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)).
 
-1. Z **souboru** nabídce zvolte **Uložit *filename* jako**.
+1. Otevřít obrázek v **Editor obrázků**.
+
+1. Přejděte do nabídky **souboru** > **Uložit *filename* jako**.
 
 1. V **uložit soubor jako** v dialogu **název_souboru** zadejte název souboru a rozšíření, která označuje požadovaný formát.
 
 1. Vyberte **Uložit**.
 
-## <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>Chcete-li přidat nový prostředek obrázku do nespravované projektu C++
+### <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>Chcete-li přidat nový prostředek obrázku do nespravované projektu C++
 
-1. V [zobrazení prostředků](../windows/resource-view-window.md), klikněte pravým tlačítkem na soubor .rc a pak zvolte **vložit prostředků** z místní nabídky. (Pokud už máte existující prostředek obrázku v souboru .rc, jako je například kurzor, můžete můžete jednoduše kliknout pravým tlačítkem **kurzor** a pak zvolte položku **vložení kurzoru** z místní nabídky.)
-
-   > [!NOTE]
-   > Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
+1. V [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources), klikněte pravým tlačítkem na váš *.rc* souboru a pak zvolte **vložit prostředků**. Pokud už máte existující prostředek obrázku vaše *.rc* souboru, jako je například kurzor, můžete jednoduše klikněte pravým tlačítkem **kurzor** a pak zvolte položku **vložení kurzoru**.
 
 1. V [vložit prostředek – dialogové okno](../windows/add-resource-dialog-box.md), vyberte typ, který chcete vytvořit prostředek obrázku (**rastrový obrázek**, například) klikněte na tlačítko **nový**.
 
    Pokud symbol plus (**+**) se zobrazí u typu prostředku bitové kopie v **vložit prostředků** dialogové okno, znamená to, že šablony nástrojů jsou k dispozici. Vyberte znaménko plus rozbalit seznam šablon, vyberte šablonu a zvolte **nový**.
 
-## <a name="to-add-a-new-image-resource-to-a-project-in-a-net-programming-language"></a>Chcete-li přidat nový prostředek obrázku do projektu v .NET programovací jazyk
+### <a name="to-add-a-new-image-resource-to-a-project-in-a-net-programming-language"></a>Chcete-li přidat nový prostředek obrázku do projektu v .NET programovací jazyk
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na složku projektu (například `WindowsApplication1`).
+1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na složku projektu (například *WindowsApplication1*).
 
 1. V místní nabídce vyberte **přidat**, klikněte na tlačítko **přidat novou položku**.
 
@@ -331,10 +311,7 @@ Můžete otevřít ve formátu GIF nebo JPEG imagí v **Image** editoru a uložt
 
 1. V **šablony** podokně, vyberte typ prostředku, který chcete přidat do projektu.
 
-   Prostředek se přidá do vašeho projektu v **Průzkumníka řešení** a prostředek se otevře [editor obrázků](../windows/image-editor-for-icons.md). Všechny nástroje, které jsou k dispozici v editoru obrázků můžete nyní upravovat bitové kopie. Další informace o přidávání bitové kopie do spravovaných projektů naleznete v tématu [načítání obrázku v době návrhu](/dotnet/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms).
-
-   > [!NOTE]
-   > Všechny spravované prostředky, které chcete upravit, musí být propojené prostředky. Editory prostředků Visual Studio nepodporují úpravy vložených prostředků. Další informace najdete v tématu [Creating Resource Files](/dotnet/framework/resources/creating-resource-files-for-desktop-apps) v *rozhraní .NET Framework Developer's Guide*.
+   Prostředek se přidá do vašeho projektu v **Průzkumníka řešení** a prostředek se otevře [Editor obrázků](../windows/image-editor-for-icons.md). Teď můžete použít všechny nástroje, které jsou k dispozici v **Editor obrázků** úprava vaší bitové kopie. Další informace o přidávání bitové kopie do spravovaných projektů naleznete v tématu [načítání obrázku v době návrhu](/dotnet/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -342,11 +319,13 @@ Můžete otevřít ve formátu GIF nebo JPEG imagí v **Image** editoru a uložt
 
 ## <a name="see-also"></a>Viz také
 
-[Převádění bitmap na panely nástrojů](../windows/converting-bitmaps-to-toolbars.md)<br/>
-[Vytváření nových panelů nástrojů](../windows/creating-new-toolbars.md)<br/>
-[Úprava grafických prostředků](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Editor obrázků pro ikony](../windows/image-editor-for-icons.md)<br/>
-[Nabídka obrázku](../windows/image-menu-image-editor-for-icons.md)<br/>
-[Ikony](/windows/desktop/menurc/icons)<br/>
-[Kurzory](/windows/desktop/menurc/cursors)<br/>
+[Postupy: Úprava obrázku](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Postupy: Použití nástroje pro kreslení](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Postupy: Práce s barvou](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+<!--
+[Converting Bitmaps to Toolbars](../windows/converting-bitmaps-to-toolbars.md)<br/>
+[Creating New Toolbars](../windows/creating-new-toolbars.md)<br/>
+[Icons](/windows/desktop/menurc/icons)<br/>
+[Cursors](/windows/desktop/menurc/cursors)<br/>-->

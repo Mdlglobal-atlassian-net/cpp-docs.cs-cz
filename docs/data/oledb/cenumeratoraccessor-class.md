@@ -37,12 +37,12 @@ helpviewer_keywords:
 - m_szName
 - m_szParseName
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
-ms.openlocfilehash: 2bcbf55c4bc6d546c8a2b4eca3ea2dbeafc613fa
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1fa04d94e4e6785e5a9d0941ce44a4404b1e28da
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556345"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423388"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor – třída
 
@@ -86,7 +86,7 @@ VARIANT_BOOL m_bIsParent;
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [ISourcesRowset::GetSourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace.
+Zobrazit [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace.
 
 ## <a name="ntype"></a> CEnumeratorAccessor::m_nType
 
@@ -100,7 +100,7 @@ USHORT m_nType;
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [ISourcesRowset::GetSourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace.
+Zobrazit [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace.
 
 ## <a name="szdescription"></a> CEnumeratorAccessor::m_szDescription
 
@@ -114,7 +114,7 @@ WCHAR m_szDescription[129];
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [ISourcesRowset::GetSourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace.
+Zobrazit [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace.
 
 ## <a name="szname"></a> CEnumeratorAccessor::m_szName
 
@@ -128,7 +128,7 @@ WCHAR m_szName[129];
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [ISourcesRowset::GetSourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace.
+Zobrazit [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace.
 
 ## <a name="szparsename"></a> CEnumeratorAccessor::m_szParseName
 
@@ -142,7 +142,7 @@ WCHAR m_szParseName[129];
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [ISourcesRowset::GetSourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace.
+Zobrazit [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace.
 
 ## <a name="see-also"></a>Viz také
 

@@ -1,18 +1,22 @@
 ---
 title: Nainstalujte úlohu C++ Linux v sadě Visual Studio
 description: Popisuje, jak stáhnout, nainstalovat a nastavit Linux úlohy pro C++ v sadě Visual Studio.
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: c01c8ddeeb8439a7610c0f6c7c11b608ab3675d8
-ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
+ms.openlocfilehash: 5fa4b6ee953748673564bf6eeb9018783e02dce8
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55763881"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562806"
 ---
-# <a name="download-install-and-setup-the-linux-workload"></a>Stažení, instalace a nastavení úloh Linux
+# <a name="download-install-and-set-up-the-linux-workload"></a>Stažení, instalace a nastavení úloh Linux
 
-Integrované vývojové prostředí sady Visual Studio ve Windows můžete použít k vytváření, úpravy a ladění projektů C++, které jsou spouštěny na fyzickém počítači Linux, virtuální počítač, nebo [subsystém Windows pro Linux](/windows/wsl/about). Pro žádnou z těchto scénářů, nejdřív nainstalovat **vývoj pro Linux v C++** pracovního vytížení.
+Integrované vývojové prostředí Visual Studio 2017 ve Windows můžete použít k vytváření, úpravy a ladění projektů C++, které jsou spouštěny na fyzickém počítači Linux, virtuální počítač, nebo [subsystém Windows pro Linux](/windows/wsl/about). 
+
+Můžete pracovat na svém stávajícím základu kódu, který používá CMake nebo jakémkoli jiném systému sestavení bez nutnosti převádět na projekt sady Visual Studio. Je-li vašeho základu kódu napříč platformami, je cílem Windows a Linuxem z Visual Studia. Například můžete upravit, ladění a profilování kódu ve Windows pomocí sady Visual Studio a pak rychle změnit cílení projektů pro Linux provedete dalšímu testování. Soubory hlaviček Linux se automaticky zkopírují do svého místního počítače, kde sady Visual Studio je využívá k poskytování plnou podporou technologie IntelliSense (dokončování příkazů, přejít k definici a tak dále) podpory.
+ 
+Pro některý z těchto scénářů **vývoj pro Linux v C++** zatížení je povinný. 
 
 ## <a name="visual-studio-setup"></a>Instalační program sady Visual Studio
 
@@ -22,6 +26,8 @@ Integrované vývojové prostředí sady Visual Studio ve Windows můžete použ
    ![Visual C++ pro úlohu vývoj pro Linux](media/linuxworkload.png)
 
 1. Pokud používáte CMake nebo cílíte na platformy vložený nebo IoT, přejděte na **podrobné informace o instalaci** podokno na pravé straně v části **vývoj pro Linux v C++**, rozbalte **volitelné součásti** a vyberte komponenty, které potřebujete.
+
+    **Visual Studio 2017 verze 15.4 nebo novější**<br/>: Pokud jste si nainstalovali úlohu Linux C++ pro Visual Studio, je standardně vybraná podpora CMake pro Linux.
 
 1. Klikněte na tlačítko **změnit** pokračujte v instalaci.
 
@@ -62,4 +68,9 @@ Cílový počítač s Fedora používá **dnf** balíček Instalační služby. 
    `sudo systemctl start sshd`
 
    To spustí službu a běží na pozadí je připraven přijmout připojení na portu.
+
+## <a name="ensure-you-have-cmake-38-on-the-remote-linux-machine"></a>Ujistěte se, že máte CMake 3.8 na vzdáleném počítači s Linuxem
+
+Vaší distribuce Linuxu mohou mít starší verzi CMake. Podpora CMake v sadě Visual Studio vyžaduje režim podporu serveru, která byla zavedena v CMake 3.8. Hodnotu typu variant CMake poskytovaný společností Microsoft, stáhněte si nejnovější předem připravených binární soubory pro počítač s Linuxem v [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases).
+
 

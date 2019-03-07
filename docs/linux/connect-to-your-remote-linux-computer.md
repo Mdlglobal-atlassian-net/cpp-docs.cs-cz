@@ -3,12 +3,12 @@ title: Připojení ke vzdálenému počítači s Linuxem v sadě Visual Studio
 description: Jak se připojit ke vzdálenému počítači Linux z uvnitř projektu Visual Studio C++.
 ms.date: 07/20/2018
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: ce6a3c02846586dbc46b0c9bc0db0d579878c814
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e20714308448349ee5dac8951a7b5d7bfd2f29ef
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575237"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562845"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>Připojení ke vzdálenému počítači s Linuxem
 
@@ -24,7 +24,7 @@ Při sestavování projektu C++ Linux v sadě Visual Studio, na základě nastav
 
 1. Zadejte následující informace:
 
-   | Položka | Popis
+   | Entry | Popis
    | ----- | ---
    | **Název hostitele**           | Název nebo IP adresa cílového zařízení
    | **Port**                | Port, na kterém běží služba SSH na obvykle 22

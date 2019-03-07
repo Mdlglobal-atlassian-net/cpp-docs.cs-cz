@@ -6,19 +6,19 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 71a76da9f4eadfdca0d69873b821f4ea8eb8fc05
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 8edc860db453c4ee9e0dd3fdacb18bbde662accb
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676419"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562962"
 ---
 # <a name="working-with-resource-files"></a>Práce se zdrojovými soubory
 
 > [!WARNING]
 > Tato část se týká aplikací klasické pracovní plochy Windows napsaný v jazyce C++.
 >
-> Informace o prostředcích v aplikacích pro univerzální platformu Windows napsaný v jazyce C++, naleznete v tématu [definování prostředků aplikace](/windows/uwp/app-resources/), nebo o přidávání prostředků do C + +/ CLI (spravované) projekty, naleznete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.
+> Informace o prostředcích v aplikacích pro univerzální platformu Windows napsaný v jazyce C++, naleznete v tématu [definování prostředků aplikace](/windows/uwp/app-resources/), nebo o přidávání prostředků do C + +/ CLI (spravované) projekty, naleznete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v Příručka pro vývojáře rozhraní .NET Framework.
 
 Prostředky může skládat ze široké škály prvky, jako je:
 
@@ -28,6 +28,9 @@ Prostředky může skládat ze široké škály prvky, jako je:
 - Integrované prostředky nabídky a dialogové okno.
 
 Můžete přidat nové prostředky do projektu a upravit tyto prostředky pomocí editoru odpovídající prostředek. Většina průvodců aplikace Visual C++ bude automaticky generovat soubor .rc pro váš projekt.
+
+> [!NOTE]
+> **Editory prostředků** a **zobrazení prostředků** nejsou k dispozici ve verzích Express.
 
 Ruční přidání souborů prostředků do spravovaných projektů, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Tento článek obsahuje informace, jak přístup k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnosti.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ERRORREPORT dumpbin option
 - /ERRORREPORT dumpbin option
 ms.assetid: 51178c43-4f95-4fda-8f97-50a257d1c948
-ms.openlocfilehash: 9f210685b7fc9d082d83ac9e2c9ed73c1c373023
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85d1b03e65a0a8b367f1dee8376b3284f8179e64
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550446"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422712"
 ---
 # <a name="errorreport-dumpbinexe"></a>/ERRORREPORT (dumpbin.exe)
 
@@ -27,6 +27,6 @@ Pokud dumpbin.exe selže v době běhu, můžete použít **/errorreport** odes�
 
 Další informace o **/errorreport**, naleznete v tématu [/errorreport (sestava interními chybami kompilátoru)](../../build/reference/errorreport-report-internal-compiler-errors.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [DUMPBIN – možnosti](../../build/reference/dumpbin-options.md)

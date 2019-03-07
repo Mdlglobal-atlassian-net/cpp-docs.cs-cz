@@ -2,12 +2,12 @@
 title: /arch (x86)
 ms.date: 11/04/2016
 ms.assetid: 9dd5a75d-06e4-4674-aade-33228486078d
-ms.openlocfilehash: fb115d564ca24ff29e120e0d8c25e0dbe28024cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2aba6dc18db621710b5293f9f970fa5f453b8a9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549705"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421804"
 ---
 # <a name="arch-x86"></a>/arch (x86)
 
@@ -50,7 +50,7 @@ Protože x86 kompilátor generuje kód, který používá SSE2 pokyny ve výchoz
 
 **/ arch** jen ovlivňuje generování kódu pro nativní funkce. Při použití [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) ke kompilaci, **/arch** nemá žádný vliv na generování kódu pro spravované funkce.
 
-**/ arch** a [/QIfist](../../build/reference/qifist-suppress-ftol.md) nelze použít na stejném kompilace. Konkrétně, pokud nepoužijete `_controlfp` upravit řídicí slovo FP pak za běhu při spuštění kódu nastaví x87 FPU ovládací prvek slovo přesnost – ovládací prvek pole na 53 bitů. Proto všechny plovoucí desetinnou čárkou a double operace ve výrazu používá 53bitovou mantisy a exponentu 15-bit. Však všechny operace s jednoduchou přesností SSE používá 24-bit mantisy a exponentu 8 bitů a operace s dvojitou přesností SSE2 používají 53bitovou mantisy a 11bitový exponent. Další informace najdete v tématu [_control87 _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md). Tyto rozdíly jsou možné u strom výrazů, ale nejsou v případech, kde je zahrnuta přiřazení uživatelů po každé dílčí výraz. Vezměte v úvahu následující:
+**/ arch** a [/QIfist](../../build/reference/qifist-suppress-ftol.md) nelze použít na stejném kompilace. Konkrétně, pokud nepoužijete `_controlfp` upravit řídicí slovo FP pak za běhu při spuštění kódu nastaví x87 FPU ovládací prvek slovo přesnost – ovládací prvek pole na 53 bitů. Proto všechny plovoucí desetinnou čárkou a double operace ve výrazu používá 53bitovou mantisy a exponentu 15-bit. Však všechny operace s jednoduchou přesností SSE používá 24-bit mantisy a exponentu 8 bitů a operace s dvojitou přesností SSE2 používají 53bitovou mantisy a 11bitový exponent. Další informace najdete v tématu [_control87 _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md). Tyto rozdíly jsou možné u strom výrazů, ale nejsou v případech, kde je zahrnuta přiřazení uživatelů po každé dílčí výraz. Zvažte použití těchto zdrojů:
 
 ```cpp
 r = f1 * f2 + d;  // Different results are possible on SSE/SSE2.
@@ -78,7 +78,7 @@ r = t + d;     // This should produce the same overall result
 
 - Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableEnhancedInstructionSet%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [/arch (minimální architektura procesoru)](../../build/reference/arch-minimum-cpu-architecture.md)<br/>
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>

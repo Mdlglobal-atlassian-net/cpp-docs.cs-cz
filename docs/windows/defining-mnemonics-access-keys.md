@@ -1,5 +1,5 @@
 ---
-title: Definování řízení přístupu a hodnoty
+title: 'Postupy: Definování řízení přístupu a hodnoty (C++)'
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.combo
@@ -22,61 +22,42 @@ helpviewer_keywords:
 - Data property
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-ms.openlocfilehash: 20319cd08d6d1e77faef1275e63bf3ffd354356b
-ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
+ms.openlocfilehash: 32c7b121d8c9309d2286158645ee4b6586f1df3b
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56336485"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563365"
 ---
-# <a name="defining-control-access-and-values"></a>Definování řízení přístupu a hodnoty
+# <a name="how-to-define-control-access-and-values-c"></a>Postupy: Definování řízení přístupu a hodnoty (C++)
 
-## <a name="change-the-tab-order-of-controls"></a>Změna pořadí ovládacích prvků
+## <a name="tab-order"></a>Pořadí karet
 
 Pořadí, ve kterém je pořadí **kartu** klíč přesune zaměření pro vstup z jednoho ovládacího prvku v rámci dialogového okna. Obvykle pokračuje pořadí zleva doprava a shora dolů v dialogovém okně. Každý ovládací prvek má **Tabstop** vlastnost, která určuje, zda ovládací prvek nastaven vstupní fokus.
 
-### <a name="to-set-input-focus-for-a-control"></a>Chcete-li nastavit fokus vstupu pro ovládací prvek
+- V nastavení vstupní fokus pro ovládací prvek, [okno vlastností](/visualstudio/ide/reference/properties-window)vyberte **True** nebo **False** v **Tabstop** vlastnost.
 
-V [okno vlastností](/visualstudio/ide/reference/properties-window)vyberte **True** nebo **False** v **Tabstop** vlastnost.
-
-Dokonce i ovládací prvky, které nemají **Tabstop** nastavenou na **True** musí být součástí pořadí ovládacích prvků. Pořadí je důležité, například, když jste [definujte přístupové klíče (klávesových zkratek)](../windows/defining-mnemonics-access-keys.md) pro ovládací prvky, které nemají titulky. Statický text, který obsahuje přístupový klíč pro související ovládací prvek musí bezprostředně předcházet související ovládací prvek v pořadí.
+Dokonce i ovládací prvky, které nemají **Tabstop** vlastnost nastavena na hodnotu **True** musí být součástí pořadí ovládacích prvků, zejména pro ovládací prvky, které nemají titulky. Statický text, který obsahuje přístupový klíč pro související ovládací prvek musí bezprostředně předcházet související ovládací prvek v pořadí.
 
 > [!NOTE]
 > Pokud vaše dialogové okno obsahuje překrývající se ovládací prvky, změna pořadí karet může změnit způsob, jakým se zobrazí ovládací prvky. Ovládací prvky, které jsou dále v pořadí karet se vždy zobrazují nad překrývající se ovládací prvky, které předcházet v pořadí.
 
-### <a name="to-view-the-current-tab-order-for-all-controls-in-a-dialog-box"></a>Chcete-li zobrazit aktuální pořadí pro všechny ovládací prvky v dialogovém okně
-
-Přejděte na **formátu** nabídky a vybereme **pořadí**, nebo stiskněte klávesu **Ctrl** + **D**.
-
-### <a name="to-change-the-tab-order-for-all-controls-in-a-dialog-box"></a>Chcete-li změnit pořadí ovládacích prvků pro všechny ovládací prvky v dialogovém okně
-
-1. Na **formátu** nabídce vyberte možnost **pořadí**.
+- Chcete-li zobrazit aktuální pořadí pro všechny ovládací prvky, přejděte do nabídky **formátu** > **pořadí**, nebo stiskněte klávesu **Ctrl** + **D**.
 
    Řadu každý ovládací prvek v levém horním rohu se zobrazí místo něj v aktuální pořadí.
 
-1. Nastavení pořadí ovládacích prvků tak, že vyberete každý ovládací prvek v pořadí, které chcete **kartu** klíč použít.
+- Chcete-li změnit pořadí pro všechny ovládací prvky, přejděte do nabídky **formátu** > **pořadí** a nastavit pořadí prvků tak, že vyberete každý ovládací prvek v pořadí, které chcete **kartu** klíč sledovat.
 
-1. Stisknutím klávesy **Enter** ukončíte **pořadí** režimu.
-
-   > [!TIP]
-   > Jakmile zadáte **pořadí** režimu, můžete stisknout **Esc** nebo **Enter** zakázat možnost změnit pořadí ovládacích prvků.
-
-### <a name="to-change-the-tab-order-for-two-or-more-controls"></a>Chcete-li změnit pořadí pro dva nebo více ovládacích prvků
-
-1. Z **formátu** nabídce zvolte **pořadí**.
-
-1. Zadejte, kde se začne změna v pořadí. Podržte stisknutou klávesu nejprve **Ctrl** klíče a vyberte ovládací prvek a pak vyberte ten, kde chcete začít změněné směr.
+- Chcete-li změnit pořadí pro dva nebo více ovládacích prvků, přejděte do nabídky **formátu** > **pořadí**. Podržte stisknutou klávesu **Ctrl** klíče a vyberte ovládací prvek, ve kterém se změny v pořadí začít a pak uvolněte **Ctrl** klíče a vyberte ovládací prvky v pořadí, které chcete **kartu** klíč postupujte podle od tohoto okamžiku.
 
    Například, pokud chcete změnit pořadí ovládacích prvků `7` prostřednictvím `9`, podržte stisknutou klávesu **Ctrl**, vyberte ovládací prvek `6` první.
 
-   > [!NOTE]
-   > Chcete-li nastavit konkrétní ovládací prvek na číslo `1` (první v pořadí), poklepejte na ovládací prvek.
+- Chcete-li nastavit konkrétní ovládací prvek na číslo `1`, nebo první v pořadí, poklepejte na ovládací prvek.
 
-1. Verze **Ctrl** klíče a potom vyberte ovládací prvky v pořadí, které chcete **kartu** klíč dodržovat od tohoto okamžiku.
+> [!TIP]
+> Jakmile zadáte **pořadí** režimu, stiskněte klávesu **Esc** nebo **Enter** ukončíte **pořadí** režimu a zakažte možnost změnit pořadí ovládacích prvků.
 
-1. Stisknutím klávesy **Enter** ukončíte **pořadí** režimu.
-
-## <a name="define-mnemonics-access-keys"></a>Definice klávesových zkratek (přístupové klávesy)
+## <a name="mnemonics-access-keys"></a>Klávesových zkratek (přístupové klávesy)
 
 Za normálních okolností uživatelé klávesnice Přesun zaměření pro vstup z jednoho ovládacího prvku do druhého v dialogovém okně s **kartu** a **šipku** klíče. Ale můžete definovat přístupovou klávesu (název mnemonická nebo snadno zapamatovat), který umožňuje uživatelům vybrat ovládací prvek stisknutím klávesy jeden klíč.
 
@@ -99,14 +80,14 @@ Za normálních okolností uživatelé klávesnice Přesun zaměření pro vstup
 1. Ujistěte se, že ovládací prvek statického textu bezprostředně předchází ovládací prvek, který ho popisky v pořadí.
 
 > [!NOTE]
-> Přístupové klíče v rámci dialogového okna musí být jedinečné. Chcete-li zkontrolovat duplicitní přístupové klávesy, přejděte na **formátu** nabídky a vybereme **zkontrolujte klávesových zkratek**.
+> Všechny přístupové klíče v rámci dialogového okna musí být jedinečné. Zkontrolovat duplicitní přístupové klávesy, přejděte do nabídky **formátu** > **zkontrolujte klávesových zkratek**.
 
 ## <a name="combo-box-values"></a>Hodnoty pole se seznamem
 
-Můžete přidat hodnoty do ovládacího prvku pole se seznamem za předpokladu, že máte **dialogové okno** editoru otevřít.
+Můžete přidat hodnoty do ovládacího prvku pole se seznamem za předpokladu, že máte **editoru dialogového okna** otevřete.
 
 > [!TIP]
-> Je vhodné přidat všechny hodnoty do pole se seznamem *před* velikost pole **dialogové okno** editoru, nebo může zkrátit text, který by se měla zobrazit v ovládacím prvku pole se seznamem.
+> Je vhodné přidat všechny hodnoty do pole se seznamem *před* velikost pole v **editoru dialogového okna**, nebo může zkrátit text, který by se měla zobrazit v ovládacím prvku pole se seznamem.
 
 ### <a name="to-enter-values-into-a-combo-box-control"></a>Zadejte hodnoty do ovládacího prvku pole se seznamem
 
@@ -131,14 +112,11 @@ Informace o zvětšení rozevírací část pole se seznamem, naleznete v témat
 
 ### <a name="to-test-the-appearance-of-values-in-a-combo-box"></a>K otestování výskytu hodnoty v poli se seznamem
 
-Po zadání hodnoty v **Data** vlastnosti, vyberte **testovací** tlačítko [nástrojů editoru dialogového okna](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
+1. Po zadání hodnoty v **Data** vlastnosti, vyberte **testovací** tlačítko [nástrojů editoru dialogového okna](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
 
-   Zkuste Posun směrem dolů seznamem celá hodnota. Hodnoty se zobrazí přesně tak, jak jsou zadány v **Data** vlastnost **vlastnosti** okna. Neexistuje žádné pravopisné nebo kontrola malá a velká písmena.
+1. Zkuste Posun směrem dolů seznamem celá hodnota. Hodnoty se zobrazí přesně tak, jak jsou zadány v **Data** vlastnost **vlastnosti** okna. Neexistuje žádné pravopisné nebo kontrola malá a velká písmena.
 
-   Stisknutím klávesy **Esc** se vrátíte **dialogové okno** editoru.
-
-   Nyní můžete upravit kódu k určení, jaké tlačítko přepínače by se měla zobrazit vybraný. Například `m_radioBox1 = 0;` vybere první přepínací tlačítko ve skupině.
-Nyní můžete upravit kódu k určení, jaké tlačítko přepínače by se měla zobrazit vybraný. Například `m_radioBox1 = 0;` vybere první přepínací tlačítko ve skupině.
+1. Stisknutím klávesy **Esc** se vrátíte **dialogové okno** editoru.
 
 ## <a name="radio-button-values"></a>Přepínač hodnoty
 
@@ -161,13 +139,13 @@ V dialogovém okně můžete mít více než jedné skupině přepínačů. Při
 
 ### <a name="to-add-a-member-variable-for-the-radio-button-group"></a>Přidání členské proměnné pro skupina přepínacích tlačítek
 
-1. Klikněte pravým tlačítkem na první tlačítko ovládacím prvku přepínač v pořadí (dominantního ovládacího prvku a ten se **skupiny** vlastnost nastavena na hodnotu **True**) a zvolte **přidat proměnnou** z místní nabídka.
+1. Klikněte pravým tlačítkem na první tlačítko ovládacím prvku přepínač v pořadí (dominantního ovládacího prvku a ten se **skupiny** vlastnost nastavena na hodnotu **True**) a zvolte **přidat proměnnou**.
 
 1. V [Průvodce přidáním členské proměnné](../ide/add-member-variable-wizard.md), vyberte **řídicí proměnná** zaškrtněte políčko a potom vyberte **hodnotu** přepínač.
 
-1. V **název proměnné** zadejte název pro novou proměnnou člena.
+   - V **název proměnné** zadejte název pro novou proměnnou člena.
 
-1. V **typ proměnné** pole se seznamem, vyberte **int** nebo typ *int*.
+   - V **typ proměnné** pole se seznamem, vyberte **int** nebo typ *int*.
 
    Nyní můžete upravit kódu k určení, jaké tlačítko přepínače by se měla zobrazit vybraný. Například `m_radioBox1 = 0;` vybere první přepínací tlačítko ve skupině.
 
@@ -177,5 +155,6 @@ Win32
 
 ## <a name="see-also"></a>Viz také
 
-[Ovládací prvky v dialogových oknech](../windows/controls-in-dialog-boxes.md)<br/>
-[Ovládací prvky](../mfc/controls-mfc.md)
+[Správa ovládací prvky dialogového okna](controls-in-dialog-boxes.md)<br/>
+[Postupy: Přidání, úprava nebo odstranění ovládacích prvků](adding-editing-or-deleting-controls.md)<br/>
+[Postupy: Rozložení ovládacích prvků](arrangement-of-controls-on-dialog-boxes.md)<br/>

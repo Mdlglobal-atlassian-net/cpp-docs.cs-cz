@@ -2,12 +2,12 @@
 title: /arch (ARM)
 ms.date: 11/04/2016
 ms.assetid: 4f1406ff-f174-487c-a126-8ab06cf447c1
-ms.openlocfilehash: bf12abd140a56b1b914156083ecbbd3e61e7285a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7fd396f4ed9c02daff5363342d7c851d022919ac
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495562"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424987"
 ---
 # <a name="arch-arm"></a>/arch (ARM)
 
@@ -47,7 +47,7 @@ Při použití [/CLR](../../build/reference/clr-common-language-runtime-compilat
 
 - Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableEnhancedInstructionSet%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [/arch (minimální architektura procesoru)](../../build/reference/arch-minimum-cpu-architecture.md)<br/>
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>

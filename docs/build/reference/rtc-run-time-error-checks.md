@@ -25,12 +25,12 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: 77dc97ee07499b7df37a115dafafddd71acb7bb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ac70904332f5f05463b317f02a2ab8d3bfc7bb3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654998"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424610"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (kontrola chyb za běhu)
 
@@ -95,7 +95,7 @@ Pokud by byl inicializován proměnnou, nebudou ohlášena v době běhu **/RTC*
 
 ## <a name="remarks"></a>Poznámky
 
-Kontrola chyb za běhu jsou způsob, jak můžete najít problémy v kódu spuštěného; Další informace najdete v tématu [postupy: použití nativních kontrol za běhu](/visualstudio/debugger/how-to-use-native-run-time-checks).
+Kontrola chyb za běhu jsou způsob, jak můžete najít problémy v kódu spuštěného; Další informace najdete v tématu [jak: Použití nativních kontrol za běhu](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
 Pokud kompilujete aplikace příkazového řádku pomocí kteréhokoli z **/RTC** – možnosti kompilátoru, všechny – Direktiva pragma [optimalizovat](../../preprocessor/optimize.md) podle pokynů v kódu se bez upozornění nepodaří. Je to proto, že nejsou platné v sestavení pro vydání (optimalizované) Kontrola chyb za běhu.
 
@@ -111,13 +111,13 @@ Direktivy preprocesoru __MSVC_RUNTIME_CHECKS bude definovat, když použijete n�
 
 1. Klikněte na tlačítko **generování kódu** stránku vlastností.
 
-1. Změnit jedno nebo obě z následujících vlastností: **Basic Runtime Checks** nebo **menší kontrolu**.
+1. Změňte jedno nebo obě z následujících vlastností: **Základní kontroly za běhu** nebo **menší typ kontroly**.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
 - Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BasicRuntimeChecks%2A> a <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.SmallerTypeCheck%2A> vlastnosti.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>

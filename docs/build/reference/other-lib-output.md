@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - output files, LIB
 ms.assetid: 656864a6-0b7a-4633-8dc6-ee3b1766d836
-ms.openlocfilehash: 877450eac85044e187e27ce4acacff33ff9dba32
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef4df8441cfcb2adadc07758712971aee870a8bf
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642387"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422075"
 ---
 # <a name="other-lib-output"></a>Další výstup LIB
 
@@ -23,6 +23,6 @@ Po zadání `lib` s žádný vstup, LIB zobrazí využití příkaz, který shrn
 
 Chybové a výstražné zprávy vydané LIB mít formát _služba ._protokol LNK*nnnn*. Nástroje pro propojení, DUMPBIN a EDITBIN také použít tuto řadu chyb. Výběrem chyby v okně Výstup a stisknutím klávesy F1 není k dispozici nápověda.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled knihovny LIB](../../build/reference/overview-of-lib.md)

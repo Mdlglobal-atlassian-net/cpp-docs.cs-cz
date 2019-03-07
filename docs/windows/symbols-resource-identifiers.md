@@ -10,16 +10,16 @@ helpviewer_keywords:
 - symbols [C++], editing
 - resource editors [C++], resource symbols
 ms.assetid: 8fccc09a-0237-4a65-b9c4-57d60c59e324
-ms.openlocfilehash: c76b870ad1fdfeda7370af03c6396bedba9530ab
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: 63971ba381394bcaf905d614496511b7aa0d01f3
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954858"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563313"
 ---
 # <a name="resource-identifiers-symbols-c"></a>Identifikátory prostředků (symbolů) (C++)
 
-Symbol je identifikátor prostředku (ID), který se skládá ze dvou částí: textový řetězec (název symbolu) mapovat na celočíselnou hodnotu (hodnoty symbolů). Příklad:
+Symbol je identifikátor prostředku (ID), který se skládá ze dvou částí namapována na hodnotu symbol (celé číslo), třeba názvu symbolu (řetězec):
 
 ```
 IDC_EDITNAME = 5100
@@ -29,11 +29,6 @@ Názvy symbolů se často označují jako identifikátory.
 
 Symboly zadejte popisný způsob, jak odkazující na prostředky a objekty uživatelského rozhraní, ve zdrojovém kódu a při práci s nimi v editory prostředků. Můžete zobrazit a pracovat s symboly pomocí jednoho vhodným místem [symboly prostředků – dialogové okno](../windows/viewing-resource-symbols.md).
 
-Když vytvoříte nový prostředek nebo prostředek objektu [editory prostředků](../windows/resource-editors.md) zadejte výchozí název prostředku, například `IDC_RADIO1`a přiřadit hodnotu. Definice name plus hodnota je uložena v `Resource.h` souboru.
-
-> [!NOTE]
-> Při do jiné kopírování prostředků nebo objektů prostředků z jednoho souboru .rc, Visual C++ může změnit přenesené prostředek hodnota symbolu, nebo názvu symbolu a hodnotu, aby nedocházelo ke konfliktům s názvy symbolů nebo hodnoty v existující soubor.
-
 S růstem vaší aplikace v velikost i sofistikovanější postupy zločinců se počet zdrojů a symbolů. Sledování velký počet symbolů, které jsou rozmístěny v několika souborů. může být obtížné. **Symbolů prostředků** dialogové okno zjednodušuje správu symbol tím, že nabízí centrální nástroj, pomocí kterého můžete:
 
 - [Vytváření symbolů](../windows/creating-new-symbols.md)
@@ -41,6 +36,11 @@ S růstem vaší aplikace v velikost i sofistikovanější postupy zločinců se
 - [Správa symbolů](../windows/changing-a-symbol-or-symbol-name-id.md)
 
 - [Zobrazit ID předdefinovaných symbolů](../windows/predefined-symbol-ids.md)
+
+Když vytvoříte nový prostředek nebo prostředek objektu [editory prostředků](../windows/resource-editors.md) zadejte výchozí název prostředku, například `IDC_RADIO1`a přiřadit hodnotu. Definice name plus hodnota je uložena v `Resource.h` souboru.
+
+> [!NOTE]
+> Při do jiné kopírování prostředků nebo objektů prostředků z jednoho souboru .rc, Visual C++ může změnit přenesené prostředek hodnota symbolu, nebo názvu symbolu a hodnotu, aby nedocházelo ke konfliktům s názvy symbolů nebo hodnoty v existující soubor.
 
 ## <a name="requirements"></a>Požadavky
 

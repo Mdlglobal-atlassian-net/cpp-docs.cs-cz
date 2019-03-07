@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: 62d42995a3d1b4a61dbd3ff38c48d9b300177798
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ccf35c7a036a69487d5138baf8c017f9c5995bef
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259539"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425013"
 ---
 # <a name="ctabctrl-class"></a>Ctabctrl – třída
 
@@ -170,7 +170,7 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 Označuje, kterou operaci má provést. Pokud tento parametr má hodnotu TRUE, *lprect –* určuje zobrazovací obdélník a přijímat odpovídající rámeček okna. Pokud tento parametr má hodnotu FALSE, *lprect –* určuje rámeček okna a přijímat odpovídající zobrazovací obdélník.
 
 *lpRect*<br/>
-Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která určuje danou obdélník a přijímá počítaný obdélník.
+Ukazatel [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura, která určuje danou obdélník a přijímá počítaný obdélník.
 
 ### <a name="example"></a>Příklad
 
@@ -194,7 +194,7 @@ virtual BOOL Create(
 Určuje styl ovládacího prvku karty. Použít libovolnou kombinaci [kartě – styly ovládacích prvků](/windows/desktop/Controls/tab-control-styles), které jsou popsány v sadě Windows SDK. Zobrazit **poznámky** seznam styly oken, které můžete provést také do ovládacího prvku.
 
 *Rect*<br/>
-Určuje velikost a umístění ovládacího prvku karty. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.
+Určuje velikost a umístění ovládacího prvku karty. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 *pParentWnd*<br/>
 Určuje nadřazené okno ovládacího prvku karta, obvykle `CDialog`. Nesmí být NULL.
@@ -250,7 +250,7 @@ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené s
 Určuje styl ovládacího prvku karty. Použít libovolnou kombinaci [kartě – styly ovládacích prvků](/windows/desktop/Controls/tab-control-styles), které jsou popsány v sadě Windows SDK. Zobrazit **poznámky** v [vytvořit](#create) seznam styly oken, které můžete provést také do ovládacího prvku.
 
 *Rect*<br/>
-Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.
+Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.
 
 *pParentWnd*<br/>
 Ukazatel na okno, který je nadřazeného ovládacího prvku.
@@ -485,7 +485,7 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 Z nuly vycházející index položky karty.
 
 *lpRect*<br/>
-Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá ohraničující obdélník na kartě. Tyto souřadnice režim zobrazení na aktuální mapování.
+Ukazatel [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura, která přijímá ohraničující obdélník na kartě. Tyto souřadnice režim zobrazení na aktuální mapování.
 
 ### <a name="return-value"></a>Návratová hodnota
 

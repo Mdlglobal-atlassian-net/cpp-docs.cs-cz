@@ -2,21 +2,21 @@
 title: Referenční dokumentace jazyka Visual C++ (C + +/ CX)
 ms.date: 09/15/2017
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-ms.openlocfilehash: e8d73523a2b9ae577125975726f0072503f0e2e0
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 319374447ba08dbf18fba91e4c24c0874d3b6ce2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330421"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422959"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Referenční dokumentace jazyka Visual C++ (C + +/ CX)
 
 C + +/ CX je sada rozšíření jazyka C++, které umožňují vytváření aplikací pro Windows a součásti prostředí Windows Runtime v idiom, který je co nejblíže k moderní C++. Pomocí C + +/ CX pro zápis aplikace Windows a komponenty v nativním kódu, který se snadno pracovat s Visual C#, Visual Basic a JavaScript a další jazyky, které podporují prostředí Windows Runtime. Ve vzácných případech, které vyžadují přímý přístup k nezpracované rozhraní modelu COM nebo nevýjimečným kódem, můžete použít [Windows Runtime C++ šablony knihovny (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
 
 > [!NOTE]
-> **[C + +/ WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index) je doporučenou alternativou k C + +/ CX**. Je nový, standard C ++ 17 jazyk projekci pro API Windows Runtime, k dispozici v nejnovější sadu Windows 10 SDK verze 1803 dále. C + +/ WinRT je implementované jenom v souborech hlaviček a navržená tak, aby poskytují přístup k prvotřídní moderní rozhraní Windows API.
+> **[C + +/ WinRT](/windows/uwp/cpp-and-winrt-apis/index) je doporučenou alternativou k C + +/ CX**. Je nový, standard C ++ 17 jazyk projekci pro API Windows Runtime, k dispozici v nejnovější sadu Windows 10 SDK verze 1803 dále. C + +/ WinRT je implementované jenom v souborech hlaviček a navržená tak, aby poskytují přístup k prvotřídní moderní rozhraní Windows API.
 >
-> Pomocí C + +/ WinRT, můžete současně využívat a vytvářet rozhraní API Windows Runtime pomocí jakékoli standardům C ++ 17 kompilátoru. C + +/ WinRT obvykle vrací lepší výsledky a vytváří menší binárních souborů než jakékoli jiné možnosti jazyka prostředí Windows Runtime. Budeme dál podporovat C + +/ CX a WRL, ale důrazně doporučujeme, aby nové aplikace pomocí C + +/ WinRT. Další informace najdete v tématu [C + +/ WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
+> Pomocí C + +/ WinRT, můžete současně využívat a vytvářet rozhraní API Windows Runtime pomocí jakékoli standardům C ++ 17 kompilátoru. C + +/ WinRT obvykle vrací lepší výsledky a vytváří menší binárních souborů než jakékoli jiné možnosti jazyka prostředí Windows Runtime. Budeme dál podporovat C + +/ CX a WRL, ale důrazně doporučujeme, aby nové aplikace pomocí C + +/ WinRT. Další informace najdete v tématu [C + +/ WinRT](/windows/uwp/cpp-and-winrt-apis/index).
 
 S použitím C + +/ CX, můžete vytvořit:
 
@@ -38,4 +38,4 @@ S použitím C + +/ CX, můžete vytvořit:
 |[Odkaz na obory názvů](../cppcx/namespaces-reference-c-cx.md)|Referenční dokumentace pro výchozí obor názvů, obor názvů Platform, Platform::Collections – a související obory názvů.|
 |[Nepodporované funkce CRT v aplikacích pro Univerzální platformu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|Seznam funkcí CRT, které nejsou k dispozici pro použití v aplikacích pro Windows Runtime.|
 |[Postupy pro aplikace pro Windows 10](https://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx)|Obsahuje základní pokyny pro aplikace pro Windows 10 a odkazy na další informace.|
-|[C + +/ CX součástí 0 \[n\]: Úvod](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C + +/ CX, část 1 ze \[n\]: jednoduchou třídu](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C + +/ CX část 2 \[n\]: typy, které Wear Hats](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C + +/ CX část 3 \[n\]: vytvářený](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C + +/ CX část 4 \[n\]: statické členské funkce](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|Úvodní sérii blogů Visual C++ v jazyce C + +/ CX.|
+|[C + +/ CX součástí 0 \[n\]: Úvod](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C + +/ CX, část 1 ze \[n\]: Jednoduchá třída](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C + +/ CX část 2 \[n\]: Typy, které Hats Wear](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C + +/ CX část 3 \[n\]: Ve výstavbě](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C + +/ CX část 4 \[n\]: Statické členské funkce](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|Úvodní sérii blogů Visual C++ v jazyce C + +/ CX.|

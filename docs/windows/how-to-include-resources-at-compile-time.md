@@ -23,16 +23,16 @@ helpviewer_keywords:
 - symbols [C++], finding
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: 5768347c32b1856da16310f29e7a4257e18b6a93
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 74c70db5c04a6b56ec7bb2630c8d829151ec4225
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676458"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562832"
 ---
 # <a name="how-to-include-resources-at-compile-time-c"></a>Postupy: Zahrnutí prostředků v době kompilace (C++)
 
-Ve výchozím nastavení všechny prostředky v umístěný v souboru skriptu (.rc) jeden prostředek, ale existuje mnoho důvodů, proč k umístění zdroje v souboru než hlavní .rc souborů:
+Ve výchozím nastavení všechny prostředky jsou umístěné v jednom souboru prostředku skriptů (.rc) ale existuje mnoho důvodů umístit prostředky do souboru než hlavní .rc souborů:
 
 - Chcete-li přidat komentáře pro příkazy prostředků, které nebudou se odstraní při ukládání souboru .rc.
 
@@ -48,32 +48,32 @@ Pokud máte oddíly v existujících souborech .rc, které splňují kterákoli 
 
 Můžete přidat prostředky z jiných souborů do projektu v době kompilace v jejich uvedení v seznamu **směrnice času kompilace** pole **prostředek zahrnuje** dialogové okno. Použití **prostředek zahrnuje** dialogové okno Upravit prostředí projektu normální funkční uspořádání ukládání všech prostředků v projektu soubor .rc a všechny [symboly](../windows/symbols-resource-identifiers.md) v `Resource.h`.
 
-Chcete-li začít, otevřete **prostředek zahrnuje** dialogové okno kliknutím pravým tlačítkem myši v souboru .rc [zobrazení prostředků](../windows/resource-view-window.md)vyberte **prostředek zahrnuje** a mějte na paměti následující vlastnosti:
+Chcete-li začít, otevřete **prostředek zahrnuje** dialogové okno kliknutím pravým tlačítkem myši v souboru .rc [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources)vyberte **prostředek zahrnuje** a mějte na paměti následující vlastnosti:
 
 | Vlastnost | Popis |
 |---|---|
 | **Hlavičkový soubor symbolů** | Umožňuje změnit název hlavičkového souboru, kde jsou uloženy definice symbolů pro vaše soubory prostředků.<br/><br/>Další informace najdete v tématu [mění se názvy z hlavičkových souborů symbolu](../windows/changing-the-names-of-symbol-header-files.md). |
-| **Směrnice souborů jen pro čtení** | Umožňuje zahrnout soubory hlaviček, které obsahují symboly, které by se nemělo upravovat. Například soubory symbolů ke sdílení s jinými projekty. To může zahrnovat souborech hlaviček knihovny MFC.<br/><br/>Další informace najdete v tématu [zahrnutí sdílených (jen pro čtení) nebo počítané symboly](../windows/including-shared-read-only-or-calculated-symbols.md). |
-| **Směrnice času kompilace** | Umožňuje zahrnout soubory prostředků, které vytvářejí se a upravují samostatně z prostředků v hlavní soubor prostředků, obsahovat směrnice času kompilace (jako jsou uvedené směrnice, které podmíněně zahrnout prostředky), nebo obsahují prostředky ve vlastním formátu. Můžete také použít **pole direktivy kompilace** mají zahrnout soubory prostředků standardní knihovny MFC. |
+| **Směrnice souborů jen pro čtení** | Umožňuje zahrnout soubory hlaviček, které obsahují symboly, které by se nemělo upravovat.<br/><br/>Například soubory symbolů ke sdílení s jinými projekty. To může zahrnovat souborech hlaviček knihovny MFC. Další informace najdete v tématu [zahrnutí sdílených (jen pro čtení) nebo počítané symboly](../windows/including-shared-read-only-or-calculated-symbols.md). |
+| **Směrnice času kompilace** | Umožňuje zahrnout soubory prostředků, které vytvářejí se a upravují samostatně z prostředků v hlavní soubor prostředků, obsahovat směrnice času kompilace (jako jsou uvedené směrnice, které podmíněně zahrnout prostředky), nebo obsahují prostředky ve vlastním formátu.<br/><br/>Můžete také použít **pole direktivy kompilace** mají zahrnout soubory prostředků standardní knihovny MFC. |
 
 > [!NOTE]
 > Zobrazí položky v těchto textových polí v souboru .rc, které jsou označené nástrojem `TEXTINCLUDE 1`, `TEXTINCLUDE 2`, a `TEXTINCLUDE 3` v uvedeném pořadí. Další informace najdete v tématu [TN035: Použití více zdrojových souborů a hlavičkových souborů v jazyce Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md).
 
-Po provedení změn pomocí souboru prostředků **prostředek zahrnuje** dialogové okno, musíte ukončit a znovu otevřete soubor .rc, aby se změny projevily.
+Po provedení změn pomocí souboru prostředků **prostředek zahrnuje** dialogové okno, musíte zavřít a znovu otevřít *.rc* souboru, aby se změny projevily.
 
 ### <a name="to-include-resources-in-your-project-at-compile-time"></a>Chcete zahrnout prostředky ve vašem projektu v době kompilace
 
-1. Umístíte prostředky v souboru skriptu prostředků s jedinečným názvem souboru. Nepoužívejte *projectname*.rc, protože jde o název souboru pro soubor skriptu hlavní prostředku.
+1. Umístíte prostředky v souboru skriptu prostředků s jedinečným názvem souboru. Nepoužívejte *projectname.rc*, protože jde o název souboru pro soubor skriptu hlavní prostředku.
 
-1. Klikněte pravým tlačítkem na soubor .rc v [zobrazení prostředků](../windows/resource-view-window.md) a zvolte **prostředek zahrnuje** z místní nabídky.
+1. Klikněte pravým tlačítkem myši *.rc* ve [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources) a vyberte **prostředek zahrnuje**.
 
 1. V **směrnice času kompilace** přidejte [#include](../preprocessor/hash-include-directive-c-cpp.md) direktivy kompilátoru zahrnout nový soubor prostředků hlavního souboru prostředku ve vývojovém prostředí.
 
-   Prostředky v souborech tímto způsobem jsou prováděny pouze část spustitelný soubor v době kompilace a nejsou k dispozici pro úpravy nebo změny při práci na souboru .rc hlavního projektu. Soubory zahrnuté .rc muset otevřít samostatně a všechny soubory zahrnuté bez přípony .rc nebude možné upravovat podle editory prostředků.
+Prostředky v souborech tímto způsobem jsou prováděny pouze část spustitelný soubor v době kompilace a nejsou k dispozici pro úpravy nebo změny při práci na souboru .rc hlavního projektu. Soubory zahrnuté .rc muset otevřít samostatně a všechny soubory zahrnuté bez přípony .rc nebude možné upravovat podle editory prostředků.
 
-### <a name="to-specify-include-directories-for-a-specific-resource-rc-file"></a>K určení adresářů include pro konkrétní prostředek (soubor .rc)
+### <a name="to-specify-include-directories-for-a-specific-resource-rc-file"></a>K určení adresářů include pro soubor konkrétních prostředků (.rc)
 
-1. Klikněte pravým tlačítkem na soubor .rc v **Průzkumníka řešení** a vyberte **vlastnosti**.
+1. Klikněte pravým tlačítkem myši *.rc* ve **Průzkumníka řešení** a vyberte **vlastnosti**.
 
 1. Vyberte **prostředky** uzlu v levém podokně a určete všechny další adresáře include **další adresáře souborů k zahrnutí** vlastnost.
 
@@ -84,7 +84,7 @@ Po provedení změn pomocí souboru prostředků **prostředek zahrnuje** dialog
    > [!TIP]
    > Použití [regulární výrazy](/visualstudio/ide/using-regular-expressions-in-visual-studio) při hledání, vyberte [najít v souborech](/visualstudio/ide/reference/find-command) v **upravit** nabídky místo **najít Symbol**. Vyberte **použití: Regulární výrazy** zaškrtávací políčko [dialogové okno hledání](/visualstudio/ide/finding-and-replacing-text) a **najít** hledaný regulární výraz lze vybírat z rozevíracího seznamu. Když vyberete výrazu z tohoto seznamu, je nahrazen jako hledaný text v **najít** pole.
 
-1. V **najít** pole, vyberte předchozí hledaný řetězec z rozevíracího seznamu nebo zadejte klíče akcelerátoru, které chcete najít (například `ID_ACCEL1`).
+1. V **najít** pole, vyberte předchozí hledaný řetězec z rozevíracího seznamu nebo zadejte klíče akcelerátoru, které chcete najít, například `ID_ACCEL1`.
 
 1. Vyberte některou z **najít** možnosti a vyberte **najít další**.
 
