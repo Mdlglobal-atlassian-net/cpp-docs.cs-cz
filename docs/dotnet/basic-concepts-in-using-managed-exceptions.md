@@ -10,12 +10,12 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-ms.openlocfilehash: b4eb74fe3e485f12ac7f43b0a8a56800ef0535e7
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2b063abd4186523d27cab7a766f57aadfeaf765d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423843"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746042"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>Základní koncepce při práci se spravovanými výjimkami
 
@@ -164,7 +164,7 @@ Pokud nespravovaným typem se zachycuje prostřednictvím catch(Object^), nezni�
 
 Při vyvolávání a zachycování nespravované výjimky, doporučujeme použít [/EHsc](../build/reference/eh-exception-handling-model.md) – možnost kompilátoru místo **/EHS** nebo **/EHa**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zpracování výjimek](../windows/exception-handling-cpp-component-extensions.md)<br/>
 [safe_cast](../windows/safe-cast-cpp-component-extensions.md)<br/>

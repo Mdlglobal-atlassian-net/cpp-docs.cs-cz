@@ -9,12 +9,12 @@ helpviewer_keywords:
 - character sets [C++], multibyte
 - character sets [C++], single byte
 ms.assetid: 2cbc78ea-33c0-4cfb-b0df-7ce2458431ce
-ms.openlocfilehash: 1870fed732e5b940edb7690f9c3b58bb39c24572
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e2d3f26891257101b4a9511f4e0b10f03113309
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645377"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745324"
 ---
 # <a name="single-byte-and-multibyte-character-sets"></a>Jednobajtové a vícebajtové znakové sady
 
@@ -25,7 +25,7 @@ Znaková sada ASCII definuje znaky v rozsahu 0x00 – 0x7F. Existuje mnoho jiný
 
 Vícebajtové znakové sady může obsahovat jednobajtových a dvoubajtových znaků. Řetězec vícebajtového znaku zakončeného proto může obsahovat kombinaci jednobajtových a dvoubajtových znaků. Dvoubajtový vícebajtový znak je vedoucí bajt a druhý bajt. V konkrétní vícebajtové znakové sady úvodní bajty spadají do určitého rozsahu, stejně jako záznam pro bajty. Pokud tyto rozsahy překrývají, může být potřeba vyhodnotit konkrétní kontext k určení, zda je dané bajtové funguje jako vedoucí bajt nebo druhý bajt.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Internacionalizace](../c-runtime-library/internationalization.md)<br/>
 [Rutiny UCRT (Universal C runtime) podle kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>

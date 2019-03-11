@@ -9,12 +9,12 @@ helpviewer_keywords:
 - string comparison, CString operations
 - characters, accessing in CStrings
 ms.assetid: 41db66b2-9427-4bb3-845a-9b6869159a6c
-ms.openlocfilehash: b387cbb8671dda0aca63da9b57dd694e478b62a9
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 08c496038efc9e24e1c1610da07b6824c3a50b64
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523127"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746211"
 ---
 # <a name="basic-cstring-operations"></a>CString – základní operace
 
@@ -85,7 +85,7 @@ V následující tabulce jsou uvedeny dostupné [CString](../atl-mfc-shared/refe
 
 ##  <a name="_core_converting_cstring_objects"></a> Převod CString – objekty
 
-Informace o převádění objektů CString na jiné typy řetězce, naleznete v tématu [postupy: převod mezi různými typy řetězců](../text/how-to-convert-between-various-string-types.md).
+Informace o převádění objektů CString na jiné typy řetězce, naleznete v tématu [jak: Převést mezi různými typy řetězců](../text/how-to-convert-between-various-string-types.md).
 
 ## <a name="using-cstring-with-wcout"></a>CString – použití s wcout
 
@@ -99,10 +99,9 @@ wcout << (const wchar_t*) cs << endl;
 
 Bez přetypování `cs` je považován za `void*` a `wcout` vypíše adresu objektu. Toto chování je způsobené drobné interakce mezi šablony argument odvození přetížení rozlišení a které jsou v samotných správné a splňovala podmínky shody se standardem jazyka C++.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Řetězce (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [CStringT – třída](../atl-mfc-shared/reference/cstringt-class.md)<br/>
 [Specializace šablon](../cpp/template-specialization-cpp.md)<br/>
-[Postupy: Převody mezi různými typy řetězců](../text/how-to-convert-between-various-string-types.md)
-
+[Postupy: Převody různých typů řetězců](../text/how-to-convert-between-various-string-types.md)

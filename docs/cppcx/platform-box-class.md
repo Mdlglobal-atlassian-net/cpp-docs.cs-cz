@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Box
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
-ms.openlocfilehash: 29cbe852dcd606ea5cf2953c709fc8e47b89e1f1
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: ca8c9229d0ef5fa654f462282f257b1684984102
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327028"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742937"
 ---
 # <a name="platformbox-class"></a>Platform::Box – třída
 
@@ -26,16 +26,16 @@ ref class Box abstract;
 
 **Záhlaví:** vccorlib.h
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 ### <a name="members"></a>Členové
 
 |Člen|Popis|
 |------------|-----------------|
-|[Pole](#ctor) | Vytvoří `Box` , který může zapouzdřit hodnotu zadaného typu. |
+|[Box](#ctor) | Vytvoří `Box` , který může zapouzdřit hodnotu zadaného typu. |
 |[operátor pole&lt;const T&gt;^](#box-const-t) | Umožňuje převod na uzavřené určení z `const` hodnotu třídy `T` nebo `enum` třídy `T` k `Box<T>`. |
 |[operátor pole&lt;const volatile T&gt;^](#box-const-volatile-t) | Umožňuje převod na uzavřené určení z `const volatile` hodnotu třídy `T` nebo `enum` typ `T` k `Box<T>`. |
-|[operátor pole&lt;T&gt;^](#box-t) | Umožňuje zabalení převody z hodnotové třídy `T` k `Box<T>`. |
+|[operator Box&lt;T&gt;^](#box-t) | Umožňuje zabalení převody z hodnotové třídy `T` k `Box<T>`. |
 |[operátor pole&lt;volatile T&gt;^](#box-volatile-t) | Umožňuje převod na uzavřené určení z `volatile` hodnotu třídy `T` nebo `enum` typ `T` k `Box<T>`. |
 |[Box::Operator T](#t) | Umožňuje zabalení převody z hodnotové třídy `T` nebo `enum` třídy `T` k `Box<T>`. |
 |[Value – vlastnost](#value) | Vrátí hodnotu, která jsou zapouzdřena v `Box` objektu. |
@@ -166,7 +166,7 @@ virtual property T Value{
 
 Vrátí zabalené hodnoty stejného typu jako původně předtím, než je zabalená.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)<br/>
 [Zabalení](../cppcx/boxing-c-cx.md)

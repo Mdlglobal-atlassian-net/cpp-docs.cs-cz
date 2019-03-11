@@ -11,12 +11,12 @@ helpviewer_keywords:
 - memory deallocation, BSTR memory
 - strings [C++], releasing
 ms.assetid: 98041e29-3442-4a02-b425-7a4a13e9cc84
-ms.openlocfilehash: cfa921758122dfadb7b008740a14e352456a180f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: adc3e1efd032bb3e3e45381da24c5a5b59852375
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518187"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747135"
 ---
 # <a name="allocating-and-releasing-memory-for-a-bstr"></a>Přidělování a uvolňování pro BSTR
 
@@ -40,10 +40,9 @@ Obecně platí, pravidla pro přidělení a uvolnění paměti přidělené `BST
 
    [!code-cpp[NVC_ATLMFC_Utilities#196](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_5.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Řetězce (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [CStringT::AllocSysString](../atl-mfc-shared/reference/cstringt-class.md#allocsysstring)<br/>
 [SysAllocString](/windows/desktop/api/oleauto/nf-oleauto-sysallocstring)<br/>
 [SysFreeString](/windows/desktop/api/oleauto/nf-oleauto-sysfreestring)
-

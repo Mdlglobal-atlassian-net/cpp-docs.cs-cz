@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Deklarace obslužných rutin v nativních typech'
+title: 'Postupy: Deklarace obslužných rutin v nativních typech'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - gcroot keyword [C++]
 - types [C++], declaring handles in
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
-ms.openlocfilehash: 4b5cd212589be04f5f9f3a5dd6d4496a8f5add2c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f5d6d31be9f3c10e1a56639ccf20663ce59d7941
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464920"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745985"
 ---
-# <a name="how-to-declare-handles-in-native-types"></a>Postupy: Deklarace obslužných rutin v nativních typech
+# <a name="how-to-declare-handles-in-native-types"></a>Postupy: Deklarace obslužných rutin v nativních typech
 
 Nelze deklarovat typ popisovače v nativním typu. Vcclr.h poskytuje obálku zajišťující bezpečnost typů šablonu `gcroot` k odkazování na objekt CLR z haldy jazyka C++. Tato šablona vám umožní vložit virtuální popisovač v nativním typu a s zacházet, jako by šlo základní typ. Ve většině případů můžete použít `gcroot` objektu jako vložený typ, bez jakékoli přetypování. Nicméně s [u každé v](../dotnet/for-each-in.md), budete muset použít `static_cast` načíst základní referenční informace pro spravované.
 
@@ -113,6 +113,6 @@ int main() {
 String in V: Hello
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

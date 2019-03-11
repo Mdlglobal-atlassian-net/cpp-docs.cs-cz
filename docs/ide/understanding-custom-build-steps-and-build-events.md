@@ -11,12 +11,12 @@ helpviewer_keywords:
 - build steps [C++], build events
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
-ms.openlocfilehash: fbc29831a11f20e8363f1e01afcbace4896d7491
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6968f209379c4df88d717cb595042d96eec2c59c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608189"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745092"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Seznámení s kroky vlastního sestavení a s událostmi sestavení
 
@@ -24,11 +24,11 @@ Z vývojového prostředí Visual C++ existují tři základní způsoby, jak p�
 
 - **Vlastní kroky sestavení**
 
-   Vlastní krok sestavení je pravidlo sestavení přidružené k projektu. Vlastní krok sestavení můžete zadat příkazový řádek ke spuštění jakékoli další vstupní nebo výstupní soubory a napište zprávu zobrazit. Další informace najdete v tématu [postupy: Přidání vlastní krok sestavení do projektů MSBuild](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md).
+   Vlastní krok sestavení je pravidlo sestavení přidružené k projektu. Vlastní krok sestavení můžete zadat příkazový řádek ke spuštění jakékoli další vstupní nebo výstupní soubory a napište zprávu zobrazit. Další informace najdete v tématu [jak: Přidat vlastní krok sestavení do projektů MSBuild](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md).
 
 - **Vlastní sestavovací nástroje**
 
-   Pro vlastní nástroj sestavení je pravidlo sestavení přidružené k jedné nebo více souborů. Vlastní krok sestavení můžete předat vstupních souborů pro vlastní nástroj sestavení, což vede k jedné nebo více výstupních souborů. Například soubory nápovědy v aplikacích MFC jsou vybaveny pro vlastní nástroj sestavení. Další informace najdete v tématu [postupy: Přidání Build Tools vlastní do projektů MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md) a [zadání Custom Build Tools](../ide/specifying-custom-build-tools.md).
+   Pro vlastní nástroj sestavení je pravidlo sestavení přidružené k jedné nebo více souborů. Vlastní krok sestavení můžete předat vstupních souborů pro vlastní nástroj sestavení, což vede k jedné nebo více výstupních souborů. Například soubory nápovědy v aplikacích MFC jsou vybaveny pro vlastní nástroj sestavení. Další informace najdete v tématu [jak: Přidání vlastních nástrojů sestavení do projektů MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md) a [zadání vlastního nástroje sestavení](../ide/specifying-custom-build-tools.md).
 
 - **Události sestavení**
 
@@ -56,7 +56,7 @@ Události sestavení a vlastní kroky v uvedeném pořadí společně s další 
 
 8. Nástroj manifest
 
-9. Nástroje BSCMake
+9. BSCMake
 
 10. Vlastní krok sestavení na projektu
 
@@ -64,7 +64,7 @@ Události sestavení a vlastní kroky v uvedeném pořadí společně s další 
 
 `custom build step on the project` a `post-build event` spustit postupně po všech ostatních vytvoření zpracovává dokončit.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Sestavení projektů C++ v sadě Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)<br>
 [Běžná makra pro příkazy a vlastnosti sestavení](../ide/common-macros-for-build-commands-and-properties.md)

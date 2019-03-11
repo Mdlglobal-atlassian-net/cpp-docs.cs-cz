@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: a41f2012b4ee5441bcb9aa7d99cd0d0e97b6acc7
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: cbe0b5e422c05cee46bff85e816ecc726c667749
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423700"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745173"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections:: map – třída
 
@@ -293,7 +293,7 @@ virtual property unsigned int Size;
 
 Počet prvků v objektu Map.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Platforma Namespace](platform-namespace-c-cx.md)<br/>
 [Vytváření komponent Windows Runtime v jazyce C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: 61ddf4f8dd4042f7be0b892b4fe239caa932a85e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5ee72e557c62e3db2eeb5dac4811133719183f6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532746"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746303"
 ---
 # <a name="for-each-in"></a>for each, in
 
@@ -31,10 +31,10 @@ Prochází skrze pole nebo kolekci. Toto nestandardní klíčové slovo je k di
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*<br/>
+*type*<br/>
 Typ `identifier`.
 
-*identifikátor*<br/>
+*identifier*<br/>
 Iterační proměnná, která představuje prvek kolekce.  Když `identifier` je [Tracking Reference Operator](../windows/tracking-reference-operator-cpp-component-extensions.md), lze tento prvek upravit.
 
 *Výraz*<br/>
@@ -55,11 +55,11 @@ Další informace:
 
 - [Iterace nad kolekcí STL C++ s použitím výrazu for each](../dotnet/iterating-over-stl-collection-by-using-for-each.md)
 
-- [Postupy: Iterace v polích s použitím výrazu for each](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
+- [Postupy: Iterace v polích s výrazem for each](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
 
-- [Postupy: Iterace v obecné kolekci s výrazem for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
+- [Postupy: Iterace v obecné kolekci s výrazem for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
 
-- [Postupy: Iterace v uživatelem definované kolekci s výrazem for each](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)
+- [Postupy: Iterace v uživatelem definované kolekci s výrazem for each](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
@@ -157,6 +157,6 @@ abcd
 Testing
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
