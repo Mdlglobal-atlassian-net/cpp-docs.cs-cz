@@ -10,12 +10,12 @@ helpviewer_keywords:
 - projects [C++], adding functionality
 - class wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: d96b02317f88abd426ceaca4a239e59b2c88b585
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 028434d7404cc02121e9fd961d6566c28f458a0c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629863"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739799"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Přidání funkce pomocí průvodců kódem (C++)
 
@@ -69,7 +69,7 @@ Existují tři umístění, kam máte přístup průvodců kódem jazyka Visual 
    |Průzkumník řešení|Průvodci kódem, který je k dispozici v Průzkumníku řešení závisí na místě, kde kurzoru při klikněte pravým tlačítkem na položku. Pokud **přidat** možnost se nezobrazí, klikněte pravým tlačítkem na položku, přesuňte ukazatel myši nahoru o jednu úroveň ve stromové struktuře vývoje a zkuste to znovu. Průvodci kódem vždy umístí další kód na příslušné místo ve stromové struktuře vývoj bez ohledu na to kdy je ukazatel myši. Průvodci kódem, které jsou k dispozici z Průzkumníka řešení, patří:<br /><br />-Přidat třídě (otevře **přidat třídu** dialogové okno obsahuje Průvodce kódem).<br />-Přidat prostředek (nové, Import, nebo vlastní).<br />-Přidáte webový odkaz.|
    |zobrazení tříd|Průvodci kódem, který je k dispozici ze zobrazení tříd, závisí na místě, kde kurzoru při klikněte pravým tlačítkem myši klikněte na položku. Pokud **přidat** možnost se nezobrazí, klikněte pravým tlačítkem myši klikněte na položku, přesuňte ukazatel myši nahoru o jednu úroveň ve stromu tříd a zkuste to znovu. Průvodci kódem vždy umístí další kód na příslušné místo ve stromové struktuře vývoj bez ohledu na to kdy je ukazatel myši. Průvodci kódem, které jsou k dispozici ze zobrazení tříd patří:<br /><br />- [Přidat členskou funkci](../ide/adding-a-member-function-visual-cpp.md).<br />- [Přidat členskou proměnnou](../ide/adding-a-member-variable-visual-cpp.md).<br />- [Přidejte třídu](../ide/adding-a-class-visual-cpp.md).<br />- [Implementovat rozhraní](../ide/implement-interface-wizard.md) (z třídy ovládacího prvku jenom)<br />- [Přidat připojovací bod](../ide/implement-connection-point-wizard.md) (pouze třídy ATL)<br />- [Přidejte metodu](../ide/add-method-wizard.md) (z rozhraní jenom)<br />- [Přidat vlastnost](../ide/names-add-property-wizard.md) (z rozhraní jenom)<br />- [Přidat událost](../ide/add-event-wizard.md) (z třídy ovládacího prvku jenom)<br /><br />Přidat třídu výběr otevře **přidat třídu** dialogové okno, které vám umožňuje přístup ke všem přidat třídu Průvodce kódem.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přepisování virtuální funkce](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
 [Navigace strukturou třídy](../ide/navigating-the-class-structure-visual-cpp.md)<br>

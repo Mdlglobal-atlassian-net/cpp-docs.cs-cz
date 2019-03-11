@@ -1,17 +1,17 @@
 ---
-title: 'Postupy: Používání operátoru safe_cast v jazyce C++/CLI'
+title: 'Postupy: Používání operátoru safe_cast v jazyce C + +/ CLI'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - safe_cast keyword [C++], upcasting
 ms.assetid: 0fbc87d8-ecdf-4cd5-81f4-0d8cc18e2aff
-ms.openlocfilehash: 30aee0407e41533d34a860f3cedceb0be5b7b881
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1fd1b2d698af44ab841aeb6e205b750beb30ae0d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656999"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739345"
 ---
-# <a name="how-to-use-safecast-in-ccli"></a>Postupy: Používání operátoru safe_cast v jazyce C++/CLI
+# <a name="how-to-use-safecast-in-ccli"></a>Postupy: Používání operátoru safe_cast v jazyce C + +/ CLI
 
 Tento článek popisuje, jak pomocí operátoru safe_cast v jazyce C + +/ CLI aplikací. Informace o operátoru safe_cast v jazyce C + +/ CX, viz [safe_cast](../windows/safe-cast-cpp-component-extensions.md).
 
@@ -329,6 +329,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [safe_cast](../windows/safe-cast-cpp-component-extensions.md)

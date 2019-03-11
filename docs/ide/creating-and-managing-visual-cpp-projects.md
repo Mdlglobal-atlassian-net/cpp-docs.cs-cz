@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: 2c3722fe9da764a578c255e50120fa2770555665
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e511ef597e64a3782ce7a3ce650db065e9299cdd
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553176"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744338"
 ---
 # <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>Vytváření a spravování projektů Visual C++ založené na MSBuild
 
@@ -61,6 +61,6 @@ Popisuje způsob uspořádání výstupních souborů projektu.
 [Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)<br>
 Obsahuje odkazy na témata popisující vytváření vaší aplikace z příkazového řádku nebo z integrovaného vývojového prostředí sady Visual Studio.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Visual Studio SDK](https://msdn.microsoft.com/vstudio/extend)

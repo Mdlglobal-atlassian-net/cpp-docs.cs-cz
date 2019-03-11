@@ -7,18 +7,18 @@ helpviewer_keywords:
 - generic-text mappings
 - mappings, generic-text
 ms.assetid: 1ed02e02-3649-42dd-a697-e1b4af25bb02
-ms.openlocfilehash: 892f36c104a6754b4168860f3d72153ed03d8f1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4bf4fdc44cc8807bebacdad3700d2040c628b0d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658910"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742680"
 ---
 # <a name="generic-text-mappings"></a>Mapování obecného textu
 
 Pokud chcete zjednodušit psaní kódu pro mezinárodní trhy, jsou definovány mapování obecného textu v TCHAR. H pro:
 
-- [datové typy](../c-runtime-library/data-type-mappings.md)
+- [Datové typy](../c-runtime-library/data-type-mappings.md)
 
 - [Konstant a globálních proměnných](../c-runtime-library/constant-and-global-variable-mappings.md)
 
@@ -26,7 +26,7 @@ Pokud chcete zjednodušit psaní kódu pro mezinárodní trhy, jsou definovány 
 
 Další informace najdete v tématu [použití mapování obecného textu](../c-runtime-library/using-generic-text-mappings.md). Mapování obecného textu jsou rozšíření společnosti Microsoft, které nejsou kompatibilní ANSI.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Mapování datového typu](../c-runtime-library/data-type-mappings.md)<br/>
 [Ukázka programu obecného textu](../c-runtime-library/a-sample-generic-text-program.md)

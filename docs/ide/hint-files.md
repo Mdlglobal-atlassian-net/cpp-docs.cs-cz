@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: ca250849a0bcd150a6359abdad996b72c4372713
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.openlocfilehash: c08b45bddaed23bf5d1bf82fd6d27d1078fc84a6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006747"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740983"
 ---
 # <a name="hint-files"></a>Soubory pokynů
 
@@ -242,7 +242,7 @@ Tyto poznámky platí pro v předchozím seznamu:
 
 - `#undef` Pomocného parametru v `A2` directory odebrat pomocné parametry pro `OBRACE` a `CBRACE` v `Debug` directory informačního souboru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Typy souborů vytvořených pro projekty Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)<br>
 [#define – direktiva (C++)](../preprocessor/hash-define-directive-c-cpp.md)<br>

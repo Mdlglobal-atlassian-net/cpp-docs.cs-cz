@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: a62919ebd6b2aba54aa8003743b0006571cdedf4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c954955ad52197316da0952dc6dd415a91782444
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419666"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739447"
 ---
 # <a name="cimage-class"></a>Cimage – třída
 
@@ -1656,7 +1656,7 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MMXSwarm Sample](../../visual-cpp-samples.md)<br/>
 [Ukázka SimpleImage](../../visual-cpp-samples.md)<br/>

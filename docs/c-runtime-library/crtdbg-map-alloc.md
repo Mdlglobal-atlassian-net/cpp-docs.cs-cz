@@ -9,12 +9,12 @@ helpviewer_keywords:
 - memory allocation, in debug builds
 - CRTDBG_MAP_ALLOC macro
 ms.assetid: 435242b8-caea-4063-b765-4a608200312b
-ms.openlocfilehash: a6b6ca5d3e6fdc1bac43d082b0d7df5a87830050
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8bcb0f5ea26218b74034eb0a41199a1104ba944d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453436"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739776"
 ---
 # <a name="crtdbgmapalloc"></a>_CRTDBG_MAP_ALLOC
 
@@ -22,6 +22,6 @@ Když **_CRTDBG_MAP_ALLOC** příznak je definován v ladicí verzi aplikace, z�
 
 Další informace o používání verze ladění a základní verze funkcí haldy najdete v tématu [pomocí ladění verze oproti the základní verze](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Příznaky řízení](../c-runtime-library/control-flags.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - merge modules, using
 - redistributing applications, using merge modules
 ms.assetid: 93b84211-bf9b-4a78-9f22-474ac2ef7840
-ms.openlocfilehash: 8fa717f376017560c4bd2e9012bd25c5190da563
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b98bcad0d8df26796cb6e2a2c29d90a7a20aadd1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676457"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741423"
 ---
 # <a name="redistributing-components-by-using-merge-modules"></a>Redistribuce součástí s použitím modulů sloučení
 
@@ -20,6 +20,6 @@ Slučovací moduly můžete použít k instalaci distribuovatelné součásti Vi
 
 Doporučujeme slučovací moduly nepoužívat, s výjimkou případů, kdy není nutné aplikaci obsluhovat a nemáte závislosti na více než jedné verzi knihovny DLL. Do jednoho instalačního programu nelze zahrnout slučovací moduly pro různé verze stejné knihovny DLL. Slučovací moduly navíc komplikují obsluhu knihoven DLL nezávisle na aplikaci. Namísto toho doporučujeme nainstalovat Distribuovatelný balíček Visual C++.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Redistribuce souborů Visual C++](../ide/redistributing-visual-cpp-files.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ native multi-targeting
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
-ms.openlocfilehash: a4bb059b13f2001c6691e8d051106aa5e11eccbd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57f7450537f7609cbc66f8adf0bc868631e15f3a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429135"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740815"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Pomocí nativního cílení na více platforem v sadě Visual Studio sestavení starých projektů
 
@@ -52,7 +52,7 @@ Dále je třeba aktualizovat Visual Studio 2008 řešení a projektů na aktuál
 
 Po dokončení upgradu, pokud má sestava protokolu chyb a upozornění pro všechny projekty, seznamte se s nimi pečlivě. Převod z **VCBuild** k **MSBuild** může způsobit problémy. Ujistěte se, že pochopit a implementovat všechny akce položky uvedené v sestavě. Další informace o protokolu o upgradu sestavy a problémy, které mohou nastat při převodu **VCBuild** k **MSBuild**, najdete v tomto [cílení na více verzí v nativním C++](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) blogový příspěvek.
 
-Po dokončení upgradu projektu a opravili všechny problémy v souboru protokolu, vaše řešení cílí skutečně nejnovější sadu nástrojů. V posledním kroku změníte vlastnosti pro každý projekt v řešení použít sadu nástrojů Visual Studio 2008. S řešením načten v aktuální verzi sady Visual Studio, pro každý projekt v řešení, otevřete projekt **stránky vlastností** dialogové okno: klikněte pravým tlačítkem na projekt v **Průzkumníka řešení** a pak Vyberte **vlastnosti**. V **stránky vlastností** dialogovém okně Změnit **konfigurace** hodnotu rozevíracího seznamu **všechny konfigurace**. V **vlastnosti konfigurace**vyberte **Obecné**a potom změňte **sada nástrojů platformy** k **Visual Studio 2008 (v90)**.
+Po dokončení upgradu projektu a opravili všechny problémy v souboru protokolu, vaše řešení cílí skutečně nejnovější sadu nástrojů. V posledním kroku změníte vlastnosti pro každý projekt v řešení použít sadu nástrojů Visual Studio 2008. S řešením načten v aktuální verzi sady Visual Studio, pro každý projekt v řešení, otevřete projekt **stránky vlastností** dialogové okno: Klikněte pravým tlačítkem na projekt v **Průzkumníka řešení** a pak vyberte **vlastnosti**. V **stránky vlastností** dialogovém okně Změnit **konfigurace** hodnotu rozevíracího seznamu **všechny konfigurace**. V **vlastnosti konfigurace**vyberte **Obecné**a potom změňte **sada nástrojů platformy** k **Visual Studio 2008 (v90)**.
 
 Po této změně Visual Studio 2008 kompilátor a knihovny se používají ke generování binárních souborů projektu při sestavování řešení v aktuální verzi sady Visual Studio.
 
@@ -64,7 +64,7 @@ Aktuálně k dispozici ke stažení, najdete v části [starší sadě Visual St
 
 Při instalaci těchto produktů **sada nástrojů platformy** vlastnost rozevírací seznam v **stránky vlastností** dialogové okno se automaticky aktualizuje a zobrazí dostupné sady nástrojů. Nejnovější verzi sady Visual Studio můžete nyní použít k sestavení projektů pro tyto starší verze sady nástrojů bez převodu nebo upgradu je.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Upgrade projektů z dřívějších verzí Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Vylepšení shody C++ se sadou Visual Studio 2017](../cpp-conformance-improvements-2017.md)

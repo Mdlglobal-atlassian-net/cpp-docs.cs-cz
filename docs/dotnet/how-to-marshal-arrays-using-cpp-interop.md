@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Zařazování polí pomocí zprostředkovatele komunikace C++'
+title: 'Postupy: Zařazování polí pomocí interoperability C++'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - C++ Interop, arrays
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-ms.openlocfilehash: 10cf89d0f14a072318e6b1ef743f386e6ba914cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b27fd65b7d42bff2a009b14c39d9547d8a4a919
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441662"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739998"
 ---
-# <a name="how-to-marshal-arrays-using-c-interop"></a>Postupy: Zařazování polí pomocí zprostředkovatele komunikace C++
+# <a name="how-to-marshal-arrays-using-c-interop"></a>Postupy: Zařazování polí pomocí interoperability C++
 
 Toto téma popisuje jeden aspekt vzájemná funkční spolupráce jazyka Visual C++. Další informace najdete v tématu [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
@@ -129,6 +129,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

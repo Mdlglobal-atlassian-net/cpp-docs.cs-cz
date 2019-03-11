@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: 5e9d4b5c28adceb52078c13dbf18170e7a2b19e5
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: fadb430d570e516d915d520f06e4c247b131c3db
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178750"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739426"
 ---
 # <a name="crect-class"></a>Crect – třída
 
@@ -306,7 +306,7 @@ Odkazuje [RECT](/windows/desktop/api/windef/ns-windef-tagrect) strukturu s souř
 *lpSrcRect*<br/>
 Odkazuje `RECT` strukturu s souřadnice pro `CRect`.
 
-*Bod*<br/>
+*point*<br/>
 Určuje počáteční bod pro obdélník budovat. Odpovídá do levého horního rohu.
 
 *Velikost*<br/>
@@ -315,7 +315,7 @@ Určuje posunutí z levého horního rohu do pravého dolního rohu obdélníku,
 *TopLeft*<br/>
 Určuje umístění levého horního rohu `CRect`.
 
-*BottomRight*<br/>
+*bottomRight*<br/>
 Určuje pozici vpravo dole `CRect`.
 
 ### <a name="remarks"></a>Poznámky
@@ -384,7 +384,7 @@ Určuje počet jednotek, aby se horní a dolní část deflate `CRect`.
 *Velikost*<br/>
 A [velikost](/windows/desktop/api/windef/ns-windef-tagsize) nebo [CSize](csize-class.md) , která určuje počet jednotek deflate `CRect`. `cx` Hodnota určuje počet jednotek deflate levé a pravé straně a `cy` hodnota určuje počet jednotek, aby se horní a dolní deflate.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo `CRect` , která určuje počet jednotek na každé straně deflate.
 
 *l*<br/>
@@ -430,7 +430,7 @@ BOOL EqualRect(LPCRECT lpRect) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo `CRect` objekt, který obsahuje souřadnice levého a pravého dolního rohu obdélníku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -510,7 +510,7 @@ Určuje počet jednotek, aby se zvýšilo horní a dolní část `CRect`.
 *Velikost*<br/>
 A [velikost](/windows/desktop/api/windef/ns-windef-tagsize) nebo [CSize](csize-class.md) , která určuje počet jednotek, aby se zvýšilo `CRect`. `cx` Hodnota určuje počet jednotek, aby se zvýšilo levé a pravé straně a `cy` hodnota určuje počet jednotek, aby se zvýšilo horní a dolní části.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje na [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo `CRect` , která určuje počet jednotek, aby se zvýšilo každé straně.
 
 *l*<br/>
@@ -696,7 +696,7 @@ Absolutní souřadnice x levého horního rohu obdélníku.
 *y*<br/>
 Absolutní souřadnice y levého horního rohu obdélníku.
 
-*Bod*<br/>
+*point*<br/>
 A `POINT` struktura určení absolutní levého horního rohu obdélníku.
 
 ### <a name="example"></a>Příklad
@@ -776,7 +776,7 @@ Určuje dobu, chcete-li posunout vlevo nebo vpravo. Musí být záporná hodnota
 *y*<br/>
 Určuje dobu, chcete-li přesunout nahoru nebo dolů. Musí být záporná hodnota, při přesunutí nahoru.
 
-*Bod*<br/>
+*point*<br/>
 Obsahuje [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury nebo [CPoint](cpoint-class.md) určující oba rozměry, podle kterého se má přesunout.
 
 *Velikost*<br/>
@@ -937,13 +937,13 @@ void operator+=(LPCRECT lpRect) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 A [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury nebo [CPoint](cpoint-class.md) objekt, který určuje počet jednotek přesunout obdélník.
 
 *Velikost*<br/>
 A [velikost](/windows/desktop/api/windef/ns-windef-tagsize) struktury nebo [CSize](csize-class.md) objekt, který určuje počet jednotek přesunout obdélník.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje na [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo `CRect` objekt, který obsahuje počet jednotek na každé straně rozšiřování `CRect`.
 
 ### <a name="remarks"></a>Poznámky
@@ -975,13 +975,13 @@ void operator-=(LPCRECT lpRect) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 A [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury nebo [CPoint](cpoint-class.md) objekt, který určuje počet jednotek přesunout obdélník.
 
 *Velikost*<br/>
 A [velikost](/windows/desktop/api/windef/ns-windef-tagsize) struktury nebo [CSize](csize-class.md) objekt, který určuje počet jednotek přesunout obdélník.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo `CRect` objekt, který obsahuje počet jednotek na každé straně deflate `CRect`.
 
 ### <a name="remarks"></a>Poznámky
@@ -1068,13 +1068,13 @@ CRect operator+(SIZE size) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 A [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury nebo [CPoint](cpoint-class.md) objekt, který určuje počet jednotek pro přesun návratovou hodnotu.
 
 *Velikost*<br/>
 A [velikost](/windows/desktop/api/windef/ns-windef-tagsize) struktury nebo [CSize](csize-class.md) objekt, který určuje počet jednotek pro přesun návratovou hodnotu.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje na [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo `CRect` objekt, který obsahuje počet jednotek, aby se zvýšilo každé straně návratovou hodnotu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1111,13 +1111,13 @@ CRect operator-(LPCRECT lpRect) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 A [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury nebo `CPoint` objekt, který určuje počet jednotek pro přesun návratovou hodnotu.
 
 *Velikost*<br/>
 A [velikost](/windows/desktop/api/windef/ns-windef-tagsize) struktury nebo `CSize` objekt, který určuje počet jednotek pro přesun návratovou hodnotu.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje na [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo `CRect` objekt, který obsahuje počet jednotek na každé straně návratová hodnota deflate.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1225,7 +1225,7 @@ BOOL PtInRect(POINT point) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 Obsahuje [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury nebo [CPoint](cpoint-class.md) objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1280,7 +1280,7 @@ void SetRect(int x1, int y1, int x2, int y2) throw();
 *x1*<br/>
 Určuje souřadnice x levého horního rohu.
 
-*Y1*<br/>
+*y1*<br/>
 Určuje souřadnici y levého horního rohu.
 
 *x2*<br/>
@@ -1499,9 +1499,8 @@ int Width() const throw();
    ASSERT(nWid == 60);
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CPoint – třída](cpoint-class.md)<br/>
 [CSize – třída](csize-class.md)<br/>
 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)
-

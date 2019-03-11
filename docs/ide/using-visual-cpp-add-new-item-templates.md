@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add New Item command
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
-ms.openlocfilehash: a4480bc7389e1c116dbc97235da06cab75e2a5a8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f9b3b3dbfe3802326539346a22de11b545577252
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424415"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746294"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Použití šablon pro přidání nové položky v prostředí Visual C++
 
@@ -54,6 +54,6 @@ V následující tabulce je abecední seznam šablon Visual C++, přidat novou p
 |Soubor schématu XML (XSD)|Vytvoří soubor, který se používá k definování schématu pro dokumenty XML.|
 |Soubor XSLT (.)|Vytvoří soubor používaném k transformaci dokumentů XML.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přidání funkce pomocí průvodců kódem](../ide/adding-functionality-with-code-wizards-cpp.md)

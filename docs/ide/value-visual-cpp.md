@@ -8,12 +8,12 @@ helpviewer_keywords:
 - value C++ XML tag
 - <value> C++ XML tag
 ms.assetid: 0ba0a0d5-bcd7-4862-a169-83f2721ad80e
-ms.openlocfilehash: 84a19c96e3e7024dbb891c6bde91646d4731b2be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6add2d7fb6676d631a03d5f6e1764ebf221b4c52
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599287"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742508"
 ---
 # <a name="ltvaluegt-visual-c"></a>&lt;Hodnota&gt; (Visual C++)
 
@@ -27,7 +27,7 @@ ms.locfileid: "50599287"
 
 #### <a name="parameters"></a>Parametry
 
-*Popis vlastnosti*<br/>
+*property-description*<br/>
 Popis pro vlastnost.
 
 ## <a name="remarks"></a>Poznámky
@@ -58,6 +58,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Dokumentace XML](../ide/xml-documentation-visual-cpp.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - byte streams
 - wide streams
 ms.assetid: 61ef0587-4cbc-4eb8-aae5-4c298dbbc6f9
-ms.openlocfilehash: bb14cbd5caed413425810bfe017e068f4b4b4257
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67de6b609b3e0546d539ef9c37f12db1067546ad
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590424"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739363"
 ---
 # <a name="byte-and-wide-streams"></a>Bajtové a široké proudy
 
@@ -22,7 +22,7 @@ Naopak široké stream považuje za soubor posloupnost zobecněný vícebajtový
 
 Umístění v rámci široké datového proudu utrpí stejná omezení jako text steams. Kromě toho Indikátor pozice v souboru může mít také řešit závislá na stavu kódování. Obvykle obsahuje oba posun v bajtech v rámci datový proud a objekt typu `mbstate_t`. Proto pouze spolehlivý způsob, jak získat pozice souboru v rámci široké datového proudu je voláním [fgetpos](../c-runtime-library/reference/fgetpos.md), a pouze spolehlivý způsob, jak obnovit pozici získat tímto způsobem je voláním [fsetpos](../c-runtime-library/reference/fsetpos.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Soubory a proudy](../c-runtime-library/files-and-streams.md)<br/>
 [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)

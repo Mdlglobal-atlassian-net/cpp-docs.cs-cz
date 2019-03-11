@@ -5,12 +5,12 @@ helpviewer_keywords:
 - unsupported CRT functions, Windows Runtime
 - Windows Runtime, unsupported CRT functions
 ms.assetid: bb8386d6-0ef8-460c-88d8-addff009b6f1
-ms.openlocfilehash: 5989b584083e8a5474b333f3a4a497fbe583589b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f5b900d968bd80f9095c564f0222364769d63c9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601328"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745553"
 ---
 # <a name="windows-runtime-unsupported-crt-functions"></a>Nepodporované funkce CRT prostředí Windows Runtime
 
@@ -18,7 +18,7 @@ Mnoho C Runtime (CRT) rozhraní API nelze použít v aplikacích pro univerzáln
 
 Všechna rozhraní API CRT jsou popsána v [abecední odkazy funkcí](../c-runtime-library/reference/crt-alphabetical-function-reference.md) část dokumentace.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Rutiny UCRT (Universal C runtime) podle kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
 [Abecední seznam odkazů na funkce](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>

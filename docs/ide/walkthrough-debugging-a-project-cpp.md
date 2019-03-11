@@ -6,12 +6,12 @@ helpviewer_keywords:
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-ms.openlocfilehash: 85753e4842ab2377aa64384bb75e0c2dafd3f858
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4cd0f81ccf768938d585c206d5f50b20f6a0ae19
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581945"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741346"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>Návod: Ladění projektu (C++)
 
@@ -53,10 +53,10 @@ V tomto návodu změníte program pro vyřešení problému, který jste zjistil
 
 ## <a name="next-steps"></a>Další kroky
 
-**Předchozí:** [návod: testování projektu (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
-**Další krok:** [návod: nasazení programu (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
+**Předchozí:** [Návod: Testování projektu (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
+**Další:** [Návod: Nasazení programu (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)<br/>

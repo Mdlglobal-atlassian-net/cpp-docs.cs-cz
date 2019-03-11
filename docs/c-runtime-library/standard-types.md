@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: dd508095508cf9d0d04778b06d6296296649f710
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85ebe9052d9e8bd18dfc9b3b123871e2e5acda4e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565318"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740469"
 ---
 # <a name="standard-types"></a>Standardní typy
 
@@ -176,18 +176,18 @@ Běhové knihovny Microsoft definuje následující standardní typy a definice 
 |Název|Ekvivalentní předdefinovaný typ|
 |----------|-------------------------------|
 |int8\_t, uint8\_t|podepsané char unsigned char|
-|Int16\_t, uint16\_t|krátký, short bez znaménka|
-|datový typ Int32\_t, uint32\_t|int, unsigned int|
-|Int64\_t, uint64\_t|unsigned long long long long.|
-|int_least8_t uint_least8_t|podepsané char unsigned char|
-|int_least16_t uint_least16_t|krátký, short bez znaménka|
-|int_least32_t uint_least32_t|int, unsigned int|
-|int_least64_t uint_least64_t|unsigned long long long long.|
-|int_fast8_t uint_fast8_t|podepsané char unsigned char|
-|int_fast16_t uint_fast16_t|int, unsigned int|
-|int_fast32_t uint_fast32_t|int, unsigned int|
-|int_fast64_t uint_fast64_t|unsigned long long long long.|
-|intmax_t uintmax_t|unsigned long long long long.|
+|int16\_t, uint16\_t|krátký, short bez znaménka|
+|int32\_t, uint32\_t|int, unsigned int|
+|int64\_t, uint64\_t|unsigned long long long long.|
+|int_least8_t, uint_least8_t|podepsané char unsigned char|
+|int_least16_t, uint_least16_t|krátký, short bez znaménka|
+|int_least32_t, uint_least32_t|int, unsigned int|
+|int_least64_t, uint_least64_t|unsigned long long long long.|
+|int_fast8_t, uint_fast8_t|podepsané char unsigned char|
+|int_fast16_t, uint_fast16_t|int, unsigned int|
+|int_fast32_t, uint_fast32_t|int, unsigned int|
+|int_fast64_t, uint_fast64_t|unsigned long long long long.|
+|intmax_t, uintmax_t|unsigned long long long long.|
 
 |Typ|Popis|Deklarováno v|
 |----------|-----------------|-----------------|
@@ -253,6 +253,6 @@ Běhové knihovny Microsoft definuje následující standardní typy a definice 
 |`wctype_t` celé číslo|Může představovat všechny znaky znakové sady libovolného jazyka.|WCHAR.H,<br /><br /> CRTDEFS.H|
 |`wint_t` celé číslo|Typ datového objektu, který může pojmout všechny široké znaky nebo hodnotu širokého konce souboru.|WCHAR.H,<br /><br /> CRTDEFS.H|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace knihovny CRT](../c-runtime-library/c-run-time-library-reference.md)

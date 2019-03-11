@@ -2,12 +2,12 @@
 title: U aplikací pro UPW, prostředí Windows Runtime a C Run-Time
 ms.date: 02/02/2019
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
-ms.openlocfilehash: ae57390dc916116b8d799b9f937ff882abaef970
-ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
+ms.openlocfilehash: 932b5388f2d1bf87f0d77ae1330fa3e613c9dca7
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55763885"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738674"
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>U aplikací pro UPW, prostředí Windows Runtime a C Run-Time
 
@@ -39,7 +39,7 @@ Modul Windows Runtime nepodporuje následující funkce CRT:
 
 Úplný seznam funkcí CRT, které nejsou k dispozici v aplikaci UPW a návrhů týkajících se alternativní funkcí najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Kompatibilita](../c-runtime-library/compatibility.md)<br/>
 [Nepodporované funkce CRT prostředí Windows Runtime](../c-runtime-library/windows-runtime-unsupported-crt-functions.md)<br/>

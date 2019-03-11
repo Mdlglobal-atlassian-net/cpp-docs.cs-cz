@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined operators under /clr
 ms.assetid: 42f93b4a-6de4-4e34-b07b-5a62ac014f2c
-ms.openlocfilehash: 17f2f05ba6a8854a69fd2dd449a94d6b86a66d7b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 462d0d2819d4c65b0e37d39f24566a7152a44cf3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480012"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739981"
 ---
 # <a name="user-defined-operators-ccli"></a>Uživatelem definované operátory (C++/CLI)
 
@@ -19,7 +19,7 @@ Typ odkazu jeden z parametrů statické uživatelem definovaný operátor musí 
 
 - Popisovač (`type` ^) na instanci nadřazeného typu.
 
-- Dereference typu odkazu (`type`^ & nebo typ ^ %) pro popisovač instance nadřazeného typu.
+- Dereference typu odkazu (`type`^ & nebo typ ^ %) ke zpracování do instance systému nadřazeného typu.
 
 Typ hodnoty jeden z parametrů statické uživatelem definovaný operátor musí být jedna z následujících:
 
@@ -43,7 +43,7 @@ Můžete definovat následující operátory:
 |*|Jednočlenné a binární soubor|
 |+|Jednočlenné a binární soubor|
 |++|Unární|
-|,|binární|
+|, |binární|
 |-|Jednočlenné a binární soubor|
 |--|Unární|
 |->|Unární|
@@ -163,6 +163,6 @@ int main() {
 30
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md)

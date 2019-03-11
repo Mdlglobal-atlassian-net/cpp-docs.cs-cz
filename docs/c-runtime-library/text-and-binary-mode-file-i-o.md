@@ -15,12 +15,12 @@ helpviewer_keywords:
 - translation modes (file I/O)
 - binary access
 ms.assetid: 3196e321-8b87-4609-b302-cd6f3c516051
-ms.openlocfilehash: 54b095913ea4ec25fe5bd077d38a6bba303a7b72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c875350aedadb55d8f96fb682d6215030be2198
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546286"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738580"
 ---
 # <a name="text-and-binary-mode-file-io"></a>I/O soubor textového a binárního režimu
 
@@ -34,7 +34,7 @@ Vstupně-výstupní operace můžou probíhat v jednom ze dvou režimů použív
 
 Při volání funkce otevření souboru jako [_Otevřít](../c-runtime-library/reference/open-wopen.md), [fopen](../c-runtime-library/reference/fopen-wfopen.md), [fopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md), [freopen](../c-runtime-library/reference/freopen-wfreopen.md), [freopen_s –](../c-runtime-library/reference/freopen-s-wfreopen-s.md), [_fsopen –](../c-runtime-library/reference/fsopen-wfsopen.md) nebo [_sopen_s –](../c-runtime-library/reference/sopen-s-wsopen-s.md), přepíšete aktuální výchozí nastavení **_fmode** tak, že zadáte odpovídající argument pro funkci [_set_fmode –](../c-runtime-library/reference/set-fmode.md). **Stdin**, **stdout**, a **stderr** streamů se vždy otevře v režimu textu ve výchozím nastavení, můžete také přepsat toto výchozí nastavení při otevírání některý z těchto souborů. Použití [_setmode](../c-runtime-library/reference/setmode.md) Chcete-li změnit režim překladu po otevření souboru pomocí popisovače souboru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vstup a výstup](../c-runtime-library/input-and-output.md)<br/>
 [Rutiny UCRT (Universal C runtime) podle kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>

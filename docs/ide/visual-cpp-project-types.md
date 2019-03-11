@@ -10,12 +10,12 @@ helpviewer_keywords:
 - applications [C++], projects
 - Visual C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: 456fdb5ec2025b3085332eced3a0c7f33e117918
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a81d73100ef52b61f834f7bffe4467bd296c079
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658013"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744550"
 ---
 # <a name="visual-c-project-types"></a>Typy projektů Visual C++
 
@@ -52,7 +52,7 @@ Není nutné používat šablonu k vytvoření projektu, ale ve většině pří
 
 |Šablona projektu|Popis|
 |----------------------|-----------------------------|
-|[Projekt knihovny ATL](../atl/reference/creating-an-atl-project.md)|Projekt, který používá knihovnu Active Template Library.|
+|[ATL Project](../atl/reference/creating-an-atl-project.md)|Projekt, který používá knihovnu Active Template Library.|
 
 ### <a name="test"></a>Test
 
@@ -67,8 +67,8 @@ Pokud chcete přidat komponenty k instalaci sady Visual Studio podporu knihovny 
 |Šablona projektu|Popis|
 |----------------------|-----------------------------|
 |[Aplikace MFC](../mfc/reference/creating-an-mfc-application.md)|Projekt pro vytvoření aplikace, která používá knihovny Microsoft Foundation Class (MFC).|
-|[Ovládací prvek ActiveX knihovny MFC](../mfc/reference/creating-an-mfc-activex-control.md)|Projekt pro vytvoření ovládacího prvku ActiveX, který používá knihovnu MFC.|
-|[KNIHOVNA MFC DLL](../mfc/reference/creating-an-mfc-dll-project.md)|Projekt pro vytvoření knihovny DLL, která používá knihovnu MFC.|
+|[MFC ActiveX Control](../mfc/reference/creating-an-mfc-activex-control.md)|Projekt pro vytvoření ovládacího prvku ActiveX, který používá knihovnu MFC.|
+|[MFC DLL](../mfc/reference/creating-an-mfc-dll-project.md)|Projekt pro vytvoření knihovny DLL, která používá knihovnu MFC.|
 
 ### <a name="windows-universal-apps"></a>Univerzální aplikace pro Windows
 
@@ -92,6 +92,6 @@ Přehled Windows univerzální aplikace v jazyce C++, naleznete v tématu [unive
 
 Mnoho soubory generované záznamem šablony projektu obsahovat komentáře TODO, abyste mohli snadno identifikovat, ve kterém můžete zadat zdrojový kód. Další informace o tom, jak přidat kód, naleznete v tématu [přidání funkce pomocí průvodců kódem](../ide/adding-functionality-with-code-wizards-cpp.md) a [práce se zdrojovými soubory](../windows/working-with-resource-files.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Tvorba desktopových projektů pomocí průvodců aplikací](../ide/creating-desktop-projects-by-using-application-wizards.md)

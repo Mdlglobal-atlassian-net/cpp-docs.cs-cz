@@ -2,12 +2,12 @@
 title: Delegáti (C + +/ CX)
 ms.date: 01/22/2017
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
-ms.openlocfilehash: cb23c5d1ae35a56a827bc2436dbdd81b53dd1224
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e2158adad288045c9a98889dbe97e834dc93ea71
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415276"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745598"
 ---
 # <a name="delegates-ccx"></a>Delegáti (C + +/ CX)
 
@@ -130,7 +130,7 @@ Pokud chcete vytvořený delegát být ve stejném vlákně, který byl vytvoře
 
 Pokud jste se seznámili s obslužné rutiny události v rozhraní .NET, víte, že doporučeným postupem je vytvořit místní kopii předtím, než se aktivuje událost. Tím se vyhnete časování, ve kterých může být obslužné rutiny události odebrán těsně před plánovaným začátkem události je vyvolána. Není to nutné k tomu v jazyce C + +/ CX vzhledem k tomu, že při přidávání nebo odebírání obslužných rutin událostí se vytvoří nový seznam obslužné rutiny. Protože objekt jazyka C++ zvýší počet odkazů na seznam obslužných rutin před vyvoláním události, není zaručeno, že všechny obslužné rutiny bude platit. To ale také znamená, že pokud odeberete obslužné rutiny události v konzumním vlákně, tato obslužná rutina může stále získat vyvolána, pokud publikování objektu stále pracuje na jeho kopii v seznamu je nyní zastaralá. Publikování objekt nebude aktualizovaný seznam získáte až do příštího vyvolá událost.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Systém typů](../cppcx/type-system-c-cx.md)<br/>
 [Referenční dokumentace jazyka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>

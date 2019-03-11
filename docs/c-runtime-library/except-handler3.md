@@ -19,12 +19,12 @@ helpviewer_keywords:
 - _except_handler3 function
 - except_handler3 function
 ms.assetid: b0c64898-0ae5-48b7-9724-80135a0813e2
-ms.openlocfilehash: 144bf25495d803a4db42ab45fcb0b101b09fe7cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0dfe007d7b444401accbf547674f96f7f7d54ac1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613860"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741315"
 ---
 # <a name="excepthandler3"></a>_except_handler3
 
@@ -46,13 +46,13 @@ int _except_handler3(
 *exception_record*<br/>
 [in] Informace o určité výjimky.
 
-*Registrace*<br/>
+*registration*<br/>
 [in] Záznam, který určuje, které rozsah tabulky by měl být použit k vyhledání obslužná rutina výjimky.
 
-*Kontext*<br/>
+*context*<br/>
 [in] Vyhrazená.
 
-*Dispečer*<br/>
+*dispatcher*<br/>
 [in] Vyhrazená.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -63,6 +63,6 @@ Pokud by měl zrušit výjimku, vrátí `DISPOSITION_DISMISS`. Pokud výjimky by
 
 Pokud tato metoda vyhledá obslužnou rutinu příslušné výjimky, předá výjimku do obslužné rutiny. V takovém případě tato metoda nevrátí do kódu, která ji zavolala a vrácená hodnota je relevantní.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](../c-runtime-library/reference/crt-alphabetical-function-reference.md)

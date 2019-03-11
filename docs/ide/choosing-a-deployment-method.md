@@ -12,12 +12,12 @@ helpviewer_keywords:
 - static linking [C++]
 - libraries [C++], application deployment issues
 ms.assetid: fd8eb956-f4a0-4ffb-b401-328c73e66986
-ms.openlocfilehash: eb9b0784dc5a31accc086314e64758b5bd91033f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e755ad44d088dca77f012569cd3783079cd23f86
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607646"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739709"
 ---
 # <a name="choosing-a-deployment-method"></a>Volba metody nasazení
 
@@ -34,7 +34,7 @@ Protože knihovny Visual C++ instaluje Instalační služba sady Visual Studio d
 
 Ve svých nasazeních můžete distribuovat jakoukoli verzi knihovny Visual C++, která disponuje licencí pro distribuci. Můžete je nasadit třemi způsoby:
 
-- Centrální nasazení pomocí distribuovatelných balíčků, které nainstalují knihovny Visual C++ jako sdílených DLL v %windir%\system32\\. (Instalace do této složky vyžaduje oprávnění správce.) Můžete vytvořit skript nebo instalační program, který spustí distribuovatelný balíček před instalací aplikace do cílového počítače. Distribuovatelné balíčky jsou k dispozici pro platformy x86, x64 a ARM (VCRedist_x86.exe, VCRedist_x64.exe nebo VCRedist_arm.exe). Visual Studio obsahuje tyto balíčky v % ProgramFiles (x86) %\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\. Můžete také stáhnout z [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?linkid=132793). (Použijte vyhledávací pole pro hledání v Centru pro stahování "Distribuovatelný balíček Visual C++ *verze sady Visual Studio a aktualizace*", který odpovídá vaší aplikace. For example, pokud jste k sestavení aplikace použili Visual Studio 2015 update 3, vyhledejte "Visual C++ Redistributable Package 2015 update 3".) Informace o tom, jak pomocí distribuovatelných balíčků naleznete v tématu [Walkthrough: Deploying Visual C++ Application By Using the Visual C++ Redistributable Package](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).
+- Centrální nasazení pomocí distribuovatelných balíčků, které nainstalují knihovny Visual C++ jako sdílených DLL v %windir%\system32\\. (Instalace do této složky vyžaduje oprávnění správce.) Můžete vytvořit skript nebo instalační program, který spustí distribuovatelný balíček před instalací aplikace do cílového počítače. Distribuovatelné balíčky jsou k dispozici pro platformy x86, x64 a ARM (VCRedist_x86.exe, VCRedist_x64.exe nebo VCRedist_arm.exe). Visual Studio obsahuje tyto balíčky v % ProgramFiles (x86) %\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\. Můžete také stáhnout z [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?linkid=132793). (Použijte vyhledávací pole pro hledání v Centru pro stahování "Distribuovatelný balíček Visual C++ *verze sady Visual Studio a aktualizace*", který odpovídá vaší aplikace. For example, pokud jste k sestavení aplikace použili Visual Studio 2015 update 3, vyhledejte "Visual C++ Redistributable Package 2015 update 3".) Informace o tom, jak pomocí distribuovatelných balíčků naleznete v tématu [názorný postup: Nasazení aplikace v jazyce Visual C++ s použitím redistribuovatelného balíčku Visual C++](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).
 
 - Centrální nasazení pomocí slučovacích modulů, z nichž každý nainstaluje konkrétní knihovnu Visual C++ jako sdílenou knihovnu DLL do %windir%\system32\\. (Instalace do této složky vyžaduje oprávnění správce.) Slučovací moduly se stanou součástí instalačního souboru .msi pro vaši aplikaci. Visual C++ distribuovatelné slučovací moduly jsou zahrnuty v sadě Visual Studio v \Program soubory (x86) \Common moduly\\. Další informace najdete v tématu [Redistribuce podle pomocí slučovacích modulů](../ide/redistributing-components-by-using-merge-modules.md).
 
@@ -48,7 +48,7 @@ Nesprávné nasazení knihoven Visual C++ může způsobit chyby prostředí Run
 
 Doporučujeme, abyste je velmi riskantní statické propojování při redistribuci knihoven Visual C++. Tento typ propojení téměř nikdy výrazně nezlepší výkon aplikace, a naopak prakticky pokaždé zvyšuje náklady na obsluhu. Představte si například aplikaci staticky propojenou s knihovnou, kterou je třeba aktualizovat pomocí vylepšení zabezpečení – aplikace nebude moci aktualizace využívat, pokud ji znovu nezkompilujete a nenasadíte. Namísto toho doporučujeme aplikace dynamicky propojit s knihovnami, na kterých jsou závislé, aby bylo možné knihovny aktualizovat bez ohledu na to, kde jsou nasazeny.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nasazení aplikací klasické pracovní plochy](../ide/deploying-native-desktop-applications-visual-cpp.md)<br>
 [ClickOnce – zabezpečení a nasazení](/visualstudio/deployment/clickonce-security-and-deployment)<br>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - platform invoke [C++], callbacks and delegates
 - marshaling [C++], callbacks and delegates
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
-ms.openlocfilehash: 2f12c86b7e32955622a4a2c598d01057e303a329
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 031bda0f93d6a95aa3c774553aefca0647d0518c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435604"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742869"
 ---
 # <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Postupy: Zařazení ukazatelů na funkce pomocí služby PInvoke
 
@@ -21,7 +21,7 @@ Toto téma vysvětluje, jak spravované delegáti se dá použít namísto ukaza
 
 - [Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
 
-- [Postupy: Zařazování zpětných volání a delegátů pomocí funkcí interoperability C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)
+- [Postupy: Zařazování zpětných volání a delegátů pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)
 
 Nespravovaná rozhraní API, které přebírají ukazatele funkce jako argumenty lze volat ze spravovaného kódu pomocí spravované delegáta místo ukazatel nativní funkce. Kompilátor automaticky zařadí delegátů k nespravovaným funkcím jako ukazatel na funkci a vloží nezbytné přechod spravovaného a nespravovaného kódu.
 
@@ -87,6 +87,6 @@ int main() {
 
 Všimněte si, že není žádná část knihovny DLL zpřístupněna spravovaného kódu pomocí tradiční #include. Ve skutečnosti se knihovny DLL přistupuje za běhu pouze, takže problémy s funkcí importovány s <xref:System.Runtime.InteropServices.DllImportAttribute> nebudou zjištěna v době kompilace.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití explicitního volání PInvoke v jazyce C++ (atribut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

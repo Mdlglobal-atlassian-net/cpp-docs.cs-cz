@@ -9,12 +9,12 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: e3fff9d5c587741742a73f70fd015548359cdc4d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bccbe435d926a75990a4ca35b98c9b352dd40e8b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416992"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740314"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Syntaxe specifikace formátu: funkce printf a wprintf
 
@@ -203,7 +203,7 @@ V jazyce Visual C++ i když `long double` je odlišný typ se má stejnou vnitř
 > [!NOTE]
 > **Specifické pro Microsoft** **můžu** (velká písmena i) **I32**, **I64**, a **w** předpony modifikující velikost argumentu jsou společnosti Microsoft rozšíření a jsou není kompatibilní s ISO C. **h** předpony při použití s daty typu `char` a **l** (malé písmeno L) předpony při použití s daty typu `double` jsou rozšíření společnosti Microsoft.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)<br/>
 [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>

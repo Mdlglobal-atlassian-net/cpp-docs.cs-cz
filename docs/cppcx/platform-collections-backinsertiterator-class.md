@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: 33397ed7061f14d9aeb9c8b5c3d561865ad91cad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7478555b19bbe5c984fcbe531d2d8be1a0b865a9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638084"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739538"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections:: backinsertiterator – třída
 
@@ -83,7 +83,7 @@ IVector\<T > objektu.
 
 A `BackInsertIterator` vloží prvky za poslední prvek objektu určeného parametrem `v`.
 
-## <a name="operator-assign"></a>  BackInsertIterator::operator = – operátor
+## <a name="operator-assign"></a>  BackInsertIterator::operator= Operator
 
 Připojí zadaný objekt na konec aktuální sekvenční kolekcí.
 
@@ -143,6 +143,6 @@ Návrh první příklad syntaxe předem zvýší aktuální BackInsertIterator a
 
 Ale tento operátor neprovede žádné změny ve skutečnosti BackInsertIterator. Místo toho tento operátor vrátí odkaz na iterátor bez úprav, aktuální. Jedná se o stejné chování jako [operátor *](#dereference-operator).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Platforma Namespace](platform-namespace-c-cx.md)

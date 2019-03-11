@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC, date and time
 - dates, MFC
 ms.assetid: ecf56dc5-d418-4603-ad3e-af7e205a6403
-ms.openlocfilehash: dcb5ef9f21987e11608cfa29e77b24e96153e6b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32222b4a2a529716db2c414e0281e1b1ba16a0dd
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459446"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739162"
 ---
 # <a name="date-and-time"></a>Datum a čas
 
@@ -32,8 +32,7 @@ MFC podporuje několika různými způsoby práce s daty a časy. Zde jsou někt
 
 - [Datum a čas: Podpora databáze](../atl-mfc-shared/date-and-time-database-support.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Koncepty](../mfc/mfc-concepts.md)<br/>
 [Obecná témata MFC](../mfc/general-mfc-topics.md)
-

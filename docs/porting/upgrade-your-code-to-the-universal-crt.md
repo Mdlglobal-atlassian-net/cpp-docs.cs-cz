@@ -2,12 +2,12 @@
 title: Upgrade kódu na Universal CRT
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: 41b33698c1617cef02f1b98a654d3403843215d8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: ba987c6c88a3b559b8fe6224fd27dfbfe8c9d821
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331747"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741344"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Upgrade kódu na Universal CRT
 
@@ -43,7 +43,7 @@ Aplikace – místní nasazení UCRT se podporuje, ale nedoporučuje se z důvod
 
 Mnoho funkcí přidaná nebo aktualizovaná UCRT ke zlepšení ISO C99 shoda a řešit problémy zabezpečení a kvalitní kód. V některých případech to vyžaduje rozbíjející změny v knihovně. Pokud váš kód zkompilován čistě používáte starší verzi CRT ale konce při kompilaci pomocí UCRT, je nutné změnit váš kód výhod těchto aktualizací a funkcí. Podrobné informace o nejnovější změny a aktualizace CRT v Universal CRT, najdete v článku [knihovny Runtime jazyka C (CRT)](visual-cpp-change-history-2003-2015.md#BK_CRT) historii změn části Visual C++. Obsahuje seznam ovlivněných záhlaví a funkce, které vám umožní identifikovat změny potřebné v kódu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Průvodce přenosem a upgradem Visual C++](visual-cpp-porting-and-upgrading-guide.md)<br/>
 [Přehled potenciálních problémů s upgradem (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>

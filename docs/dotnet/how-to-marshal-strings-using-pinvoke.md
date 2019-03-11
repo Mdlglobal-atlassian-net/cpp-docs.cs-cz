@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Zařazení řetězců pomocí služby PInvoke'
+title: 'Postupy: Zařazování řetězců v kódu pomocí služby PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-ms.openlocfilehash: 86ce065da5c214c0da803ad53d19eaec3de5efb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f316e33f1711ea0053fb68c0af7e89f90b793e05
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598117"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739244"
 ---
-# <a name="how-to-marshal-strings-using-pinvoke"></a>Postupy: Zařazení řetězců pomocí služby PInvoke
+# <a name="how-to-marshal-strings-using-pinvoke"></a>Postupy: Zařazování řetězců v kódu pomocí služby PInvoke
 
 Toto téma vysvětluje, jak nativní funkce, které přijímají řetězce ve stylu jazyka C lze volat pomocí řetězce CLR zadejte System::String s využitím podpory nástroje nespravovaného kódu rozhraní .NET Framework. Programátoři jazyka Visual C++ jsou ukončena. doporučujeme místo toho použijte funkce zprostředkovatele komunikace C++ (Pokud je to možné), protože deklarace P/Invoke obsahuje malý kompilace zpráv o chybách, není typově bezpečný a může být pracná k implementaci. Pokud nespravované rozhraní API je zabalený jako knihovnu DLL a zdrojový kód není k dispozici, pak P/Invoke je jedinou možností, ale jinak naleznete v tématu [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
@@ -77,6 +77,6 @@ Tento postup způsobí, že kopie řetězec, který má být postavená na nespr
 
 Všimněte si, že žádná část knihovny DLL je přístupný pro spravovaný kód prostřednictvím tradiční #include. Ve skutečnosti knihovny DLL přistupuje pouze za běhu, takže problémy s funkcí importovány pomocí `DllImport` nebudou zjištěna v době kompilace.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití explicitního volání PInvoke v jazyce C++ (atribut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

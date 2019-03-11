@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CFixedStringT class, using a custom string manager
 ms.assetid: 1cf11fd7-51b8-4b94-87af-02bc25f47dd6
-ms.openlocfilehash: d35c4c998a6e5913cd972312c511b2a102480c81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b6da5d4166b220ef63500d0154ab32dc72b40f4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663158"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740701"
 ---
 # <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT: Příklad z vlastního správce řetězců
 
@@ -17,11 +17,11 @@ Jedním z příkladů vlastní řetězec správce používá třída implementuj
 
 Konstruktor pro `CFixedStringMgr` přijímá tři parametry:
 
-- *pData:* ukazatel na pevné `CStringData` struktury, který se má použít.
+- *pData:* Ukazatel na pevné `CStringData` struktury, který se má použít.
 
-- *nChars:* maximální počet znaků `CStringData` struktura může obsahovat.
+- *nChars:* Maximální počet znaků `CStringData` struktura může obsahovat.
 
-- *pMgr:* ukazatel `IAtlStringMgr` rozhraní "správce zálohování řetězců".
+- *pMgr:* Ukazatel `IAtlStringMgr` rozhraní "správce zálohování řetězců".
 
 Konstruktor ukládá hodnoty *pData* a *pMgr* v jejich příslušných členské proměnné (`m_pData` a `m_pMgr`). Potom nastaví délku vyrovnávací paměť na nulu, k dispozici délku odpovídající maximální velikosti vyrovnávací paměť pevné a počet odkazů na hodnotu -1. Určuje hodnotu počtu odkazů vyrovnávací paměť je uzamčen a použít tuto instanci `CFixedStringMgr` jako správce řetězců.
 
@@ -61,7 +61,6 @@ Pokaždé, když pevná vyrovnávací paměť není používán, `CFixedStringMg
 
 **Záhlaví:** cstringt.h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Správa paměti pomocí CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
-

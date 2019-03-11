@@ -7,12 +7,12 @@ helpviewer_keywords:
 - character classification routines
 - characters, testing
 ms.assetid: 3b6c8f0b-9701-407a-b384-9086698773f5
-ms.openlocfilehash: b1516aaa5cdb22ecee3895978f1e9c085367a935
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 757eeac41ecd4e300b7aabef122a8dbdd7e79e11
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326443"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739762"
 ---
 # <a name="character-classification"></a>Klasifikace znaků
 
@@ -36,9 +36,9 @@ if ((c >= 'A') && (c <= 'Z')) || ((c >= 'a') && (c <= 'z'))
 |[isalpha iswalpha –, _isalpha_l – _iswalpha_l –](../c-runtime-library/reference/isalpha-iswalpha-isalpha-l-iswalpha-l.md), [_ismbcalnum – _ismbcalnum_l –, _ismbcalpha –, _ismbcalpha_l –, _ismbcdigit –, _ismbcdigit_l –](../c-runtime-library/reference/ismbcalnum-functions.md)|Abecedy|
 |[isascii, __isascii, iswascii](../c-runtime-library/reference/isascii-isascii-iswascii.md)|ASCII|
 |[isblank iswblank, _isblank_l _iswblank_l](../c-runtime-library/reference/isblank-iswblank-isblank-l-iswblank-l.md), [_ismbcsblank _ismbcsblank_l](../c-runtime-library/reference/ismbcgraph-functions.md)|Prázdné (mezera nebo horizontální tabelátor)|
-|[iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l](../c-runtime-library/reference/iscntrl-iswcntrl-iscntrl-l-iswcntrl-l.md)|Ovládací prvek|
-|[iscsym – iscsymf –, __iscsym –, \__iswcsym, \__iscsymf, \__iswcsymf _iscsym_l –, _iswcsym_l –, _iscsymf_l –, _iswcsymf_l –](../c-runtime-library/reference/iscsym-functions.md)|Písmeno, znak podtržení nebo číslice|
-|[iscsym – iscsymf –, __iscsym –, \__iswcsym, \__iscsymf, \__iswcsymf _iscsym_l –, _iswcsym_l –, _iscsymf_l –, _iswcsymf_l –](../c-runtime-library/reference/iscsym-functions.md)|Písmeno nebo znak podtržení|
+|[iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l](../c-runtime-library/reference/iscntrl-iswcntrl-iscntrl-l-iswcntrl-l.md)|Control|
+|[iscsym, iscsymf, __iscsym, \__iswcsym, \__iscsymf, \__iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l](../c-runtime-library/reference/iscsym-functions.md)|Písmeno, znak podtržení nebo číslice|
+|[iscsym, iscsymf, __iscsym, \__iswcsym, \__iscsymf, \__iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l](../c-runtime-library/reference/iscsym-functions.md)|Písmeno nebo znak podtržení|
 |[IsDigit iswdigit –, _isdigit_l – _iswdigit_l –](../c-runtime-library/reference/isdigit-iswdigit-isdigit-l-iswdigit-l.md), [_ismbcalnum – _ismbcalnum_l –, _ismbcalpha –, _ismbcalpha_l –, _ismbcdigit –, _ismbcdigit_l –](../c-runtime-library/reference/ismbcalnum-functions.md)|Desítková číslice|
 |[isgraph iswgraph –, _isgraph_l – _iswgraph_l –](../c-runtime-library/reference/isgraph-iswgraph-isgraph-l-iswgraph-l.md), [_ismbcgraph – _ismbcgraph_l –, _ismbcprint –, _ismbcprint_l –, _ismbcpunct –, _ismbcpunct_l –, _ismbcblank, _ismbcblank_l, _ismbcspace –, _ismbcspace_l –](../c-runtime-library/reference/ismbcgraph-functions.md)|Tisknutelný jiný než mezera|
 |[islower iswlower –, _islower_l – _iswlower_l –](../c-runtime-library/reference/islower-iswlower-islower-l-iswlower-l.md), [_ismbclower – _ismbclower_l –, _ismbcupper – _ismbcupper_l –](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|Malá|
@@ -57,6 +57,6 @@ if ((c >= 'A') && (c <= 'Z')) || ((c >= 'a') && (c <= 'z'))
 |[isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l](../c-runtime-library/reference/isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)|Šestnáctková číslice|
 |[_mbclen, mblen, _mblen_l](../c-runtime-library/reference/mbclen-mblen-mblen-l.md)|Vrátí délku platného vícebajtového znaku. Výsledek závisí na **LC_CTYPE** nastavením kategorie aktuálního národního prostředí|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Rutiny UCRT (Universal C runtime) podle kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>

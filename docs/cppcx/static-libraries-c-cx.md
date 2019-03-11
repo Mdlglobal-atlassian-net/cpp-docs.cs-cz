@@ -2,12 +2,12 @@
 title: Statické knihovny (C + +/ CX)
 ms.date: 02/03/2017
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-ms.openlocfilehash: 4c423f9e59b7597782acfa4c98db3c9bff747098
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 242ba10b29a8efe0c3e9580f1d0d0c3be529a7d2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437956"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738931"
 ---
 # <a name="static-libraries-ccx"></a>Statické knihovny (C + +/ CX)
 
@@ -31,6 +31,6 @@ Pokud využíváte statickou knihovnu, která vytvoří veřejné `ref` tříd, 
 
 Upozornění můžete bezpečně ignorovat pouze v případě, že se statickou knihovnou není vytváření komponent Windows Runtime, využívání mimo samotné knihovny. Pokud knihovny nespotřeboval komponenty, která definuje, pak linkeru můžete optimalizují implementace i v případě, že veřejný metadata obsahují informace o typu. To znamená, že bude zkompilována veřejné součásti ve statické knihovně, ale za běhu, neaktivuje. Z tohoto důvodu všechny modulu Windows Runtime komponenty, která je určena pro použití jinými součástmi nebo aplikace musí být implementován v dynamická knihovna (DLL).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Práce s vlákny a zařazování](../cppcx/threading-and-marshaling-c-cx.md)

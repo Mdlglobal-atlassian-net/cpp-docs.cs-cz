@@ -1,18 +1,18 @@
 ---
-title: 'Postupy: Používání vlastností v jazyce C++/CLI'
+title: 'Postupy: Používání vlastností v jazyce C + +/ CLI'
 ms.date: 07/21/2017
 helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: 546c729245fb0c941f07e9222b71670278c44fde
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f29bf419ca19ce1bbe45e36adb08d7f4e5629f5a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617487"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739291"
 ---
-# <a name="how-to-use-properties-in-ccli"></a>Postupy: Používání vlastností v jazyce C++/CLI
+# <a name="how-to-use-properties-in-ccli"></a>Postupy: Používání vlastností v jazyce C + +/ CLI
 
 Tento článek popisuje, jak používat vlastnosti v jazyce C + +/ CLI.
 
@@ -88,7 +88,7 @@ Indexovaná vlastnost obvykle poskytuje datová struktura, která se využívaj�
 
 Pokud používáte výchozí indexovanou vlastnost, dostanete strukturu dat tak, že odkazují na název třídy, ale pokud používáte indexované vlastnosti definované uživatelem, je nutné zadat název vlastnosti pro přístup k datová struktura.
 
-Informace o tom, jak využívat indexeru, která je napsána v jazyce C# najdete v tématu [postupy: spotřeba indexeru C# (C + +/ CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).
+Informace o tom, jak využívat indexer, který je napsán v C#, naleznete v tématu [jak: Využití C# Indexer (C + +/ CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).
 
 Tento vzorový kód ukazuje, jak používat výchozí a uživatelem definované indexované vlastnosti:
 
@@ -407,6 +407,6 @@ int main() {
 6.8
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [property](../windows/property-cpp-component-extensions.md)

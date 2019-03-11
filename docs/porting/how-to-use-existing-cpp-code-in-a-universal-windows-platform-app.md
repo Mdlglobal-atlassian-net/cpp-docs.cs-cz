@@ -1,15 +1,15 @@
 ---
-title: 'Návody: Použití existujícího kódu C++ v aplikaci pro univerzální platformu pro Windows'
+title: 'Postupy: Použití existujícího kódu C++ v aplikaci Windows Universal Platform'
 ms.date: 08/21/2018
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: 55fb1f3fa89f192c83effb755966158394d2fbcf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a4633b74591e16f22def44ff5875557f2909043
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528710"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745509"
 ---
-# <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Návody: Použití existujícího kódu C++ v aplikaci pro univerzální platformu pro Windows
+# <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Postupy: Použití existujícího kódu C++ v aplikaci Windows Universal Platform
 
 Nejjednodušší způsob, jak získat aplikace klasické pracovní plochy běžící v prostředí UPW je možná použití technologie přemostění na Desktop. Patří mezi ně Desktop App Converter, který vytvoří balíček aplikace jako aplikace pro UPW bez nutných změn kódu. Další informace najdete v tématu [přemostění na Desktop](/windows/uwp/porting/desktop-to-uwp-root).
 
@@ -229,6 +229,6 @@ Pokud chcete používat nativní rozhraní API ve statické knihovně z aplikace
 
 9. Otestovat součást přidáním na ni odkaz z projektu aplikace UPW a přidejte nějaký kód do volání veřejné rozhraní API služby jste vytvořili.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přenos aplikací do platformy Universal Windows](../porting/porting-to-the-universal-windows-platform-cpp.md)

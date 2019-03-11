@@ -9,12 +9,12 @@ helpviewer_keywords:
 - calling native functions from managed code
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
-ms.openlocfilehash: 97b0221a4ec73be41bb5ba052607dfb5ced233c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 285bfabbd5935df303a39ada11c388713ae24f34
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462035"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743245"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Volání nativních funkcí ze spravovaného kódu
 
@@ -174,7 +174,7 @@ Musíte však zařazovat typy, které nemají stejnou formu. Jedná se o typy ch
 
 |wtypes.h|Visual C++|Visual C++ s parametrem/CLR|Modul common language runtime|
 |--------------|------------------|-----------------------------|-----------------------------|
-|POPISOVAČ|Typ void \*|Typ void \*|IntPtr UIntPtr|
+|POPISOVAČ|Typ void \*|Typ void \*|IntPtr, UIntPtr|
 |BYTE|unsigned char|unsigned char|Byte|
 |KRÁTKÉ|short|short|Int16|
 |WORD|unsigned short|unsigned short|UInt16|
@@ -188,7 +188,7 @@ Musíte však zařazovat typy, které nemají stejnou formu. Jedná se o typy ch
 |LPCSTR|Char \*|Řetězec ^ [in], StringBuilder ^ [v, out]|Řetězec ^ [in], StringBuilder ^ [v, out]|
 |LPCSTR|const char \*|Řetězec ^|String|
 |LPWSTR|wchar_t \*|Řetězec ^ [in], StringBuilder ^ [v, out]|Řetězec ^ [in], StringBuilder ^ [v, out]|
-|LPCWSTR|Const wchar_t \*|Řetězec ^|String|
+|LPCWSTR|const wchar_t \*|Řetězec ^|String|
 |PLOVOUCÍ DESETINNOU ČÁRKOU|float|float|Single|
 |DOUBLE|double|double|Double|
 
@@ -225,6 +225,6 @@ PInvoke má režii mezi 10 a 30 x86 pokyny za volání. Vedle těchto pevně sta
 
 Pro zajištění lepšího výkonu máte méně volání PInvoke, která zařazují pro množství dat nejdříve, než více volání, která zařazují pro každé volání méně údajů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nativní funkce a vzájemná funkční spolupráce rozhraní .NET](../dotnet/native-and-dotnet-interoperability.md)

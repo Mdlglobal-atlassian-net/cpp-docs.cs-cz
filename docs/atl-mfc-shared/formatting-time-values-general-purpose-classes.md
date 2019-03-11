@@ -7,12 +7,12 @@ helpviewer_keywords:
 - time [C++], formatting
 - formatting [C++], time
 ms.assetid: 7fcfee24-f874-4a4d-95b3-adc19a0f2df0
-ms.openlocfilehash: 48290adbc3e0e7f3cbe9a5a8e0569a5b61833e8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bab93638d81e8e4e5d6f7ce71bf6a3180fa7f7e5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478660"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739182"
 ---
 # <a name="formatting-time-values-general-purpose-classes"></a>Formátování časových hodnot: Obecné třídy
 
@@ -31,4 +31,3 @@ Použití `Format` členskou funkci ze buď [CTime](../atl-mfc-shared/reference/
 - [Práce s SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)
 
 - [Podpora automatizace data a času programování](../atl-mfc-shared/date-and-time-automation-support.md)
-

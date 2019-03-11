@@ -6,23 +6,23 @@ helpviewer_keywords:
 - MFC [C++], Windows Forms Controls
 - Windows Forms [C++], MFC support
 ms.assetid: 625b5821-f923-4701-aca0-c1a4ceca4f63
-ms.openlocfilehash: c2705ef1938684d8521316436fccaae367629584
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d535fce47be5504f6f521cda1267344206287da
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509119"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738769"
 ---
 # <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Postupy: Vytvoření uživatelského ovládacího prvku a hostitelské poskytování zobrazení MDI
 
 Následující kroky ukazují, jak vytvořit uživatelský ovládací prvek rozhraní .NET Framework, ovládací prvek v knihovně tříd ovládacího prvku (konkrétně v projektu knihovny ovládacích prvků Windows) a poté zkompilovat projekt do sestavení. Ovládací prvek může být potom používán z aplikace knihovny MFC, která používá třídy odvozené z [CView Class](../mfc/reference/cview-class.md) a [CWinFormsView – třída](../mfc/reference/cwinformsview-class.md).
 
-Informace o tom, jak vytvořit uživatelský ovládací prvek Windows Forms a vytvořit knihovnu tříd ovládacího prvku, naleznete v tématu [postupy: vytváření uživatelských ovládacích prvků](/dotnet/framework/winforms/controls/how-to-author-composite-controls).
+Informace o tom, jak vytvořit uživatelský ovládací prvek Windows Forms a vytvořit knihovnu tříd ovládacího prvku, naleznete v tématu [jak: Vytváření uživatelských ovládacích prvků](/dotnet/framework/winforms/controls/how-to-author-composite-controls).
 
 > [!NOTE]
 >  V některých případech se ovládací prvky Windows Forms, jako je například ovládací prvek mřížky jiného výrobce, pravděpodobně nebudou chovat spolehlivě když jsou hostované v aplikaci MFC. Doporučené řešení je umístit uživatelský ovládací prvek Windows Forms do aplikace knihovny MFC a umístit ovládací prvek mřížky jiného výrobce do uživatelského ovládacího prvku.
 
-Tento postup předpokládá, že jste vytvořili projekt Knihovna ovládacích prvků Windows Forms s názvem WindowsFormsControlLibrary1, podle postupu v [postupy: vytvoření uživatelského ovládacího prvku a hostitele v dialogovém okně](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
+Tento postup předpokládá, že jste vytvořili projekt Knihovna ovládacích prvků Windows Forms s názvem WindowsFormsControlLibrary1, podle postupu v [jak: Vytvoření uživatelského ovládacího prvku a hostitele v dialogovém okně](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
 
 ### <a name="to-create-the-mfc-host-application"></a>Chcete-li vytvořit hostitelskou aplikaci knihovny MFC
 
@@ -30,7 +30,7 @@ Tento postup předpokládá, že jste vytvořili projekt Knihovna ovládacích p
 
    Na **souboru** nabídce vyberte možnost **nový**a potom klikněte na tlačítko **projektu**. V **Visual C++** složky, vyberte **aplikace knihovny MFC**.
 
-   V **název** zadejte `MFC02` a změnit **řešení** nastavení **přidat do řešení**. Klikněte na tlačítko **OK**.
+   V **název** zadejte `MFC02` a změnit **řešení** nastavení **přidat do řešení**. Klikněte na **OK**.
 
    V **Průvodce aplikací knihovny MFC**, přijměte všechny výchozí hodnoty a klikněte na **Dokončit**. Tím se vytvoří aplikace knihovny MFC s rozhraním více dokumentů.
 
@@ -101,6 +101,6 @@ Tento postup předpokládá, že jste vytvořili projekt Knihovna ovládacích p
 
    Na **ladění** nabídky, klikněte na tlačítko **spustit bez ladění**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Hostitelské poskytování uživatelského ovládacího prvku Windows Forms jako zobrazení MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)

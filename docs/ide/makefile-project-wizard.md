@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Makefile projects, Makefile Project Wizard
 - MakeFile Project Wizard [Visual Studio]
 ms.assetid: 38219802-320d-4c48-a118-4792de8f3b2d
-ms.openlocfilehash: 00514ceb32e6ea80e493bb61eecc40a32bcad86e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b5158cca3663ea41f22550241da4e873287a1d0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624494"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741780"
 ---
 # <a name="makefile-project-wizard"></a>Průvodce projektem souboru pravidel
 
@@ -24,7 +24,7 @@ Tato stránka průvodce popisuje aktuální nastavení projektu pro projekt, kte
 
 Chcete-li změnit výchozí nastavení, klikněte na tlačítko [nastavení aplikace](../ide/application-settings-makefile-project-wizard.md) kartu v levém sloupci průvodce a proveďte požadované změny.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vytvoření projektu souboru pravidel](../ide/creating-a-makefile-project.md)<br>
 [NMAKE – referenční zdroje](../build/nmake-reference.md)<br>

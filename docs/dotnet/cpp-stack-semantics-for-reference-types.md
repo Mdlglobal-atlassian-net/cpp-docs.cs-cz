@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: b2d2d5991f7b52727b366214b8ca9ed4d8e14956
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ba17a56c5274295c44cdc5aa651380d1e6c83d3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607857"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740922"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>C++ – sémantika zásobníku pro odkazové typy
 
@@ -27,7 +27,7 @@ Kompilátor nevygeneruje kopírovacího konstruktoru pro typ odkazu. Proto pokud
 
 Kompilátor nevygeneruje výchozí operátor přiřazení pro typ odkazu. Operátor přiřazení můžete vytvořit objekt pomocí – sémantika zásobníku a inicializujte ji s existující objekt vytvořený pomocí – sémantika zásobníku. Operátor přiřazení pro typ odkazu nemá podpis v následujícím formátu: `void operator=( R% ){}`.
 
-Pokud váš typ destruktor uvolní důležitých prostředků a použít – sémantika zásobníku pro odkazové typy, není potřeba explicitně zavolat destruktor (nebo volat `delete`). Další informace o destruktorech v referenčních typech najdete v tématu [destruktory a finalizační metody v tom, jak: definice a používání tříd a struktur (C + +/ CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Pokud váš typ destruktor uvolní důležitých prostředků a použít – sémantika zásobníku pro odkazové typy, není potřeba explicitně zavolat destruktor (nebo volat `delete`). Další informace o destruktorech v referenčních typech najdete v tématu [destruktory a finalizační metody v tom, jak: Definice a používání tříd a struktur (C + +/ CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 Operátor přiřazení vygenerované kompilátorem bude postupovat podle obvyklých pravidel C++ standard s těmito přídavky:
 
@@ -111,6 +111,6 @@ int main() {
 13
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md)

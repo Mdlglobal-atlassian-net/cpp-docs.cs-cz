@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Zařazování struktur pomocí zprostředkovatele komunikace C++'
+title: 'Postupy: Zařazování struktur pomocí interoperability C++'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: c2080200-f983-4d6e-a557-cd870f060a54
-ms.openlocfilehash: c44b23bf0f73191b86b4970c57313d9bc38c8b7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93aeabc3fe984bee8a9281281320d61dccd182bf
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521326"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739394"
 ---
-# <a name="how-to-marshal-structures-using-c-interop"></a>Postupy: Zařazování struktur pomocí zprostředkovatele komunikace C++
+# <a name="how-to-marshal-structures-using-c-interop"></a>Postupy: Zařazování struktur pomocí interoperability C++
 
 Toto téma popisuje jeden aspekt vzájemná funkční spolupráce jazyka Visual C++. Další informace najdete v tématu [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
@@ -24,7 +24,7 @@ Následující příklady kódu používají [spravované, nespravované](../pre
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje předávání struktury ze spravované na nespravované funkci, podle hodnoty a podle reference. Vzhledem k tomu, že struktura v tomto příkladu obsahuje pouze jednoduché, vnitřní datové typy (viz [přenositelné a Non-přenositelné typy](/dotnet/framework/interop/blittable-and-non-blittable-types)), není požadováno žádné speciální zařazování. Chcete-li zařadit nepřenositelné struktury, jako jsou ty, které obsahují ukazatele, přečtěte si téma [postupy: zařazení vložených ukazatelů pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
+Následující příklad ukazuje předávání struktury ze spravované na nespravované funkci, podle hodnoty a podle reference. Vzhledem k tomu, že struktura v tomto příkladu obsahuje pouze jednoduché, vnitřní datové typy (viz [přenositelné a Non-přenositelné typy](/dotnet/framework/interop/blittable-and-non-blittable-types)), není požadováno žádné speciální zařazování. Chcete-li zařadit nepřenositelné struktury, jako jsou ty, které obsahují ukazatele, přečtěte si téma [jak: Zařazení vložených ukazatelů pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
 
 ```
 // PassStruct1.cpp
@@ -82,7 +82,7 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje podle hodnoty a podle reference předávání struktury z nespravované na spravované funkce. Vzhledem k tomu, že struktura v tomto příkladu obsahuje pouze jednoduché, vnitřní datové typy (naleznete v tématu [přenositelné a Non-přenositelné typy](/dotnet/framework/interop/blittable-and-non-blittable-types)), žádná speciální zařazování je povinný. Chcete-li zařadit nepřenositelné struktury, jako jsou ty, které obsahují ukazatele, přečtěte si téma [postupy: zařazení vložených ukazatelů pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
+Následující příklad ukazuje podle hodnoty a podle reference předávání struktury z nespravované na spravované funkce. Vzhledem k tomu, že struktura v tomto příkladu obsahuje pouze jednoduché, vnitřní datové typy (naleznete v tématu [přenositelné a Non-přenositelné typy](/dotnet/framework/interop/blittable-and-non-blittable-types)), žádná speciální zařazování je povinný. Chcete-li zařadit nepřenositelné struktury, jako jsou ty, které obsahují ukazatele, přečtěte si téma [jak: Zařazení vložených ukazatelů pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
 
 ```
 // PassStruct2.cpp
@@ -147,6 +147,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

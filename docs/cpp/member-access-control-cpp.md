@@ -6,12 +6,12 @@ helpviewer_keywords:
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-ms.openlocfilehash: 546b23b939078c723084bdfc659ff4fd3216b479
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 367ee5183498453b9ce647c8e91ad1194f90fbd2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176222"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740270"
 ---
 # <a name="member-access-control-c"></a>řízení přístupu ke členu (C++)
 
@@ -239,6 +239,6 @@ Přístup podél cest grafu dědičnosti
 
 Na obrázku je název deklarovaný ve třídě `VBase` vždy dosažen prostřednictvím třídy `RightPath`. Pravá cesta je přístupnější, protože třída `RightPath` deklaruje třídu `VBase` jako veřejnou základní, zatímco třída `LeftPath` deklaruje třídu `VBase` jako soukromou.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)

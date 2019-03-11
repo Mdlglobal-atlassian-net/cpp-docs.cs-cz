@@ -5,12 +5,12 @@ helpviewer_keywords:
 - CLR empty projects
 - CLR empty projects, creating
 ms.assetid: edb4574f-fea7-426d-9b5c-fa4ecad2befb
-ms.openlocfilehash: 0acfa073d0aa11dec63ad26f1fac4ec206cda6c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3779887a91b69848d767c15af4a53ff2e87b760c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612131"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740478"
 ---
 # <a name="how-to-create-clr-empty-projects"></a>Postupy: Vytváření prázdných projektů CLR
 
@@ -23,7 +23,7 @@ Chcete-li vytvořit prázdný projekt CLR, použijte **prázdný projekt CLR** �
 
 1. Na **souboru** nabídky, klikněte na tlačítko **nový**a potom klikněte na tlačítko **projektu**.
 
-   **Nový projekt** zobrazí se dialogové okno.
+   Zobrazí se dialogové okno **Nový projekt**.
 
 1. V části **nainstalované šablony**, klikněte na tlačítko **Visual C++** uzel; potom klikněte na tlačítko **CLR** uzlu. Zvolte **prázdný projekt CLR** ikonu.
 
@@ -32,9 +32,9 @@ Chcete-li vytvořit prázdný projekt CLR, použijte **prázdný projekt CLR** �
     > [!NOTE]
     >  Můžete také zadat další nastavení projektu a řešení od **nový projekt** dialogovému oknu, ale tato nastavení se nevyžadují.
 
-1. Klikněte na tlačítko **OK**.
+1. Klikněte na **OK**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Typy projektů Visual C++](../ide/visual-cpp-project-types.md)<br/>
 [Typy projektů Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)

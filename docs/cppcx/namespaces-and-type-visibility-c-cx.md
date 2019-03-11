@@ -2,12 +2,12 @@
 title: Obory názvů a viditelnost typů (C + +/ CX)
 ms.date: 12/30/2016
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-ms.openlocfilehash: 02a73f84314d4406c5fb8e9b8635a307c30e4c3d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 54bac3492991d0bd849f7476cc87a1336108bd52
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693891"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739292"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Obory názvů a viditelnost typů (C + +/ CX)
 
@@ -54,6 +54,6 @@ C + +/ CX definují určité typy v těchto oborech názvů jako součást proje
 |Platform::Collections –|Obsahuje třídy konkrétní kolekci, které implementují rozhraní Windows Runtime kolekce `IVector`, `IMap`, a tak dále. Tyto typy jsou definovány v souboru hlaviček, collection.h není v platform.winmd.|
 |Platform::details –|Obsahuje typy, které se používají v kompilátoru a nejsou určena ke zveřejnění.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Systém typů (C++/CX)](../cppcx/type-system-c-cx.md)

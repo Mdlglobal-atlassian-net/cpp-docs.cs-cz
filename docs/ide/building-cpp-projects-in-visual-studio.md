@@ -6,12 +6,12 @@ helpviewer_keywords:
 - projects [C++], building
 - builds [C++], about building in Visual Studio
 ms.assetid: 9e8bc1a2-bb17-4951-937a-c757ed88d2d1
-ms.openlocfilehash: 83f79e922a66622611f3f6e493ca8d498435033f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5565b582b9b80daef88ed37982f3e23bf44bf8c8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569671"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740010"
 ---
 # <a name="building-c-projects-in-visual-studio"></a>Sestavení projektů C++ v sadě Visual Studio
 
@@ -41,7 +41,7 @@ Sestavení projektu, který je vybraný v **Průzkumníka řešení**, můžete:
 
 Při vytváření aplikace v jazyce Visual C++ v sadě Visual Studio, můžete upravit mnoho nastavení sestavení v dialogovém okně stránky vlastností projektu. Informace o tom, jak nastavit vlastnosti projektu naleznete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).
 
-Příklad, jak používat rozhraní IDE k vytvoření, sestavení a ladění projektu jazyka C++, naleznete v tématu [názorný postup: prozkoumání Visual Studio IDE v jazyce C++](/visualstudio/ide/getting-started-with-cpp-in-visual-studio). Pro příklad, jak použít rozhraní IDE k sestavení a C + +/ CLR projekt, naleznete v tématu [návod: kompilace programu v jazyce C++ pro CLR v sadě Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md). Příklad, jak použít rozhraní IDE k vytvoření aplikace pro Windows Runtime, naleznete v tématu [vytvoření první aplikace pro Windows Runtime pomocí jazyka C++](https://msdn.microsoft.com/library/windows/apps/hh974580.aspx).
+Příklad, jak používat rozhraní IDE k vytvoření, sestavení a ladění projektu jazyka C++, naleznete v tématu [názorný postup: Prozkoumat sadu Visual Studio IDE v jazyce C++](/visualstudio/ide/getting-started-with-cpp-in-visual-studio). Pro příklad, jak použít rozhraní IDE k sestavení a C + +/ CLR projekt, naleznete v tématu [názorný postup: Kompilace programu v jazyce C++ pro CLR v sadě Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md). Příklad, jak použít rozhraní IDE k vytvoření aplikace pro Windows Runtime, naleznete v tématu [vytvoření první aplikace pro Windows Runtime pomocí jazyka C++](https://msdn.microsoft.com/library/windows/apps/hh974580.aspx).
 
 Další informace o tom, jak vytvářet, upravovat nastavení sestavení a zadat vlastní kroky sestavení, naleznete v následujících článcích.
 
@@ -78,6 +78,6 @@ Obsahuje odkazy na témata týkající se problémů na upgrade na novější ve
 
 [Visual C++ Průvodce přenosem a upgradováním](../porting/visual-cpp-porting-and-upgrading-guide.md) podrobné informace o tom, jak upgradovat aplikací v jazyce C++, které byly vytvořeny v dřívějších verzích sady Visual Studio a postupu při migraci aplikací, které byly vytvořeny pomocí jiných nástrojů než Visual Studio.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Univerzální aplikace pro Windows (C++)](../windows/universal-windows-apps-cpp.md)

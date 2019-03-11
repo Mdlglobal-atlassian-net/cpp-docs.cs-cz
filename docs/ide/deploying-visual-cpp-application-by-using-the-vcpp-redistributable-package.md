@@ -4,14 +4,14 @@ ms.date: 09/17/2018
 helpviewer_keywords:
 - walkthrough, deploying a Visual C++ application by using the redistributable package
 ms.assetid: e59becbf-b8c6-4c8e-bab3-b69cc1ed3e5e
-ms.openlocfilehash: 6de94ac300c5d50be67ede24cfcc3d03bc966fed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccf6b74096894c2e48258e6e0a60b807c7c6c5b4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436425"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743794"
 ---
-# <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>Návod: Nasazení aplikace Visual C++ s použitím redistribuovatelného balíčku Visual C++
+# <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>Návod: Nasazení aplikace v jazyce Visual C++ s použitím redistribuovatelného balíčku Visual C++
 
 Tento článek popisuje, jak používat Visual C++ Redistributable Package k nasazení aplikace v jazyce Visual C++.
 
@@ -25,7 +25,7 @@ Tyto součásti k dokončení tohoto názorného postupu musíte mít:
 
 ### <a name="to-use-the-visual-c-redistributable-package-to-deploy-an-application"></a>Distribuovatelný balíček Visual C++ použít k nasazení aplikace
 
-1.  Vytvoření a sestavení aplikace knihovny MFC podle postupu v [návod: nasazení Visual C++ Application By Using a Setup Project](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
+1.  Vytvoření a sestavení aplikace knihovny MFC podle postupu v [názorný postup: Nasazení aplikace v jazyce Visual C++ pomocí projektu instalace](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
 
 1. Vytvořte soubor, pojmenujte ho setup.bat a přidejte následující příkazy do ní. Změna `MyMFCApplication` na název vašeho projektu.
 
@@ -54,7 +54,7 @@ Tyto součásti k dokončení tohoto názorného postupu musíte mít:
 
       - Aplikace knihovny MFC (soubor .exe).
 
-      - VCRedist_x86.exe. Tento soubor je umístěn v \Program Files (x86) \Microsoft Visual Studio \<verze > \SDK\Bootstrapper\Packages\. Můžete také stáhnout tento soubor z [Microsoft](https://www.microsoft.com/download/confirmation.aspx?id=5555).
+      - vcredist_x86.exe. Tento soubor je umístěn v \Program Files (x86) \Microsoft Visual Studio \<verze > \SDK\Bootstrapper\Packages\. Můžete také stáhnout tento soubor z [Microsoft](https://www.microsoft.com/download/confirmation.aspx?id=5555).
 
       - Soubor setup.bat, který jste vytvořili v předchozím kroku.
 
@@ -85,6 +85,6 @@ Tyto součásti k dokončení tohoto názorného postupu musíte mít:
       > [!IMPORTANT]
       > Pokud chcete zjistit, která verze modulu runtime je nainstalovaná, instalační program zkontroluje \HKLM\SOFTWARE\Microsoft\VisualStudio klíče registru\\\<verze > \VC\Runtimes\\<platform>. Pokud aktuálně nainstalované verze je novější než verze, které instalační program se pokouší nainstalovat, instalační program vrátí úspěch bez instalace starší verze a ponechá další položky na stránce s nainstalovanými programy v Ovládacích panelech.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Příklady nasazení](deployment-examples.md)<br/>

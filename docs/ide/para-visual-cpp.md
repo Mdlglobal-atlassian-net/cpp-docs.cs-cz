@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <para> C++ XML tag
 - para C++ XML tag
 ms.assetid: 35f2a1b3-bc14-4f13-bcb0-c39ccbf74d59
-ms.openlocfilehash: c9b7316a32001a1e935f064cdd496d6ce350fa30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d08893b338ae2dcab1c9423e6d88828b8fd74ee5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618137"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740908"
 ---
 # <a name="ltparagt-visual-c"></a>&lt;para&gt; (Visual C++)
 
@@ -27,7 +27,7 @@ ms.locfileid: "50618137"
 
 #### <a name="parameters"></a>Parametry
 
-*Obsah*<br/>
+*content*<br/>
 Text odstavce.
 
 ## <a name="remarks"></a>Poznámky
@@ -38,6 +38,6 @@ Kompilovat s [/doc](../build/reference/doc-process-documentation-comments-c-cpp.
 
 Zobrazit [ \<summary >](../ide/summary-visual-cpp.md) pro příklad použití \<para >.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Dokumentace XML](../ide/xml-documentation-visual-cpp.md)

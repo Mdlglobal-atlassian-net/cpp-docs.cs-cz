@@ -10,12 +10,12 @@ f1_keywords:
 - VC.Project.VCManifestTool.OutputResourceManifest
 - VC.Project.VCManifestTool.GenerateCatalogFiles
 ms.assetid: a8bb20f6-7ace-45ca-bab0-b4f4a5caf170
-ms.openlocfilehash: 8aa007e41cdabe0bf548f1184b801c1f81655596
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b9af50e6dca2dafa4dabd356a868405dfacc958
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624698"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741190"
 ---
 # <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Vstup a výstup, Nástroj Manifest, vlastnosti konfigurace, &lt;Projectname&gt; dialogové okno stránky vlastností projektu
 
@@ -61,7 +61,7 @@ Používá se **- managedassembly** možnost. Tato značka způsobí, že se bud
 **Povolit rozpoznání nastavení dpi**<br/>
 Určuje, zda je aplikace s ohledem na DPI. Ve výchozím nastavení je **Ano** pro projekty MFC a **ne** jinak, protože pouze projekty MFC vytvořili rozpoznání nastavení dpi. Můžete přepsat nastavení **Ano** Pokud přidáte kód pro zpracování různých nastavení DPI. Vaše aplikace může zobrazit fuzzy logikou nebo malé, pokud ji nastavíte jako rozlišením DPI když není.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [ClickOnce – manifest aplikace ](/visualstudio/deployment/clickonce-application-manifest)<br/>
 [Stránky vlastností nástroje manifest](../ide/manifest-tool-property-pages.md)<br/>

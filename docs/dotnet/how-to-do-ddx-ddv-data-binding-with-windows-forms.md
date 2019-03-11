@@ -1,19 +1,19 @@
 ---
-title: 'Postupy: datové vazby DDX / DDV s formuláři Windows'
+title: 'Postupy: Proveďte DDX / DDV datové vazby pomocí Windows Forms'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: b2957370-cf1f-4779-94ac-228cd393686c
-ms.openlocfilehash: 793d6728c7726028c02b885784f122792d84dd2e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 558c763fd18cd1569ff23435bf6156b3117f117d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456431"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740949"
 ---
-# <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>Postupy: Vytvoření datové vazby DDX/DDV s modelem Windows Forms
+# <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>Postupy: Proveďte DDX/DDV datové vazby pomocí Windows Forms
 
 [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol) volání [CWinFormsControl::CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol) vytvořit ovládací prvek s odpovídajícím ID prostředku ovládacího prvku. Pokud používáte `DDX_ManagedControl` pro `CWinFormsControl` ovládacího prvku (ve vygenerovaném kódu), neměli by jste volat `CreateManagedControl` explicitně pro stejný ovládací prvek.
 
@@ -27,7 +27,7 @@ Následuje příklad datové vazby DDX/DDV řetězce MFC `m_str` s uživatelsky 
 
 Ovládací prvek je vytvořen při [CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) volání `CMyDlg::DoDataExchange` poprvé, tak, aby kód, který odkazuje `m_UserControl` musí být pozdější než `DDX_ManagedControl` volání.
 
-Tento kód lze implementovat v MFC01 aplikaci, kterou jste vytvořili v [postupy: vytvoření uživatelského ovládacího prvku a hostitele v dialogovém okně](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
+Tento kód lze implementovat v MFC01 aplikaci, kterou jste vytvořili v [jak: Vytvoření uživatelského ovládacího prvku a hostitele v dialogovém okně](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
 
 Umístěte do deklarace CMFC01Dlg, vložte následující kód:
 
@@ -82,7 +82,7 @@ m_MyControl.GetControl()->textBox1->Text = "hello";
 
 Teď můžete sestavit a spustit aplikaci. Všimněte si, že veškerý text v textovém poli se zobrazí v místním okně se zprávou, po zavření aplikace.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CWinFormsControl – třída](../mfc/reference/cwinformscontrol-class.md)<br/>
 [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)<br/>

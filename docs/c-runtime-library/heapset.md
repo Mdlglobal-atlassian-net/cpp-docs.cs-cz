@@ -22,12 +22,12 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-ms.openlocfilehash: c93624b8b56fb53eb15263dbd0d203cd9130eacf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41c39914964de74401dcdef847b2c44f623af249
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528190"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742126"
 ---
 # <a name="heapset"></a>_heapset
 
@@ -72,7 +72,7 @@ Kromě toho, pokud dojde k chybě `_heapset` nastaví `errno` k `ENOSYS`.
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|`_heapset`|\<malloc.h >|\<errno.h>|
+|`_heapset`|\<malloc.h>|\<errno.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../c-runtime-library/compatibility.md) v úvodu.
 
@@ -118,7 +118,7 @@ int main( void )
 OK - heap is fine
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přidělení paměti](../c-runtime-library/memory-allocation.md)<br/>
 [_heapadd](../c-runtime-library/heapadd.md)<br/>

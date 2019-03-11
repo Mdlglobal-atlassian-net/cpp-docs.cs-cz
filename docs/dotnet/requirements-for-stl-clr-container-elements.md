@@ -8,12 +8,12 @@ helpviewer_keywords:
 - containers, STL/CLR
 - containers, C++ Standard Library
 ms.assetid: 59ab240c-15bf-4701-a9f9-e7c56e5ab53f
-ms.openlocfilehash: 0744d38a08dbd972b786e1cc74c112322ecf181f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 113624b15a0c2c6062feb7113c4771fda6d6cf39
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428571"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739401"
 ---
 # <a name="requirements-for-stlclr-container-elements"></a>Požadavky na elementy kontejnerů STL/CLR
 
@@ -29,6 +29,6 @@ Kromě toho asociativní kontejnery, jako [nastavit](../dotnet/set-stl-clr.md) a
 
 Stejně jako typy odkazů, typy hodnot a popisovače odkazovat na typy, které mají být vloženy do asociativní kontejner musí mít operátor porovnání, jako `operator<` definované. Požadavky na veřejné kopírovacího konstruktoru, operátor přiřazení veřejné a veřejným destruktorem neexistují pro typy hodnot nebo popisovače referenční typy.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

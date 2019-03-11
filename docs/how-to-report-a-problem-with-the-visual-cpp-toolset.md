@@ -4,12 +4,12 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 7758905f6db537260ec9e8b6e516bfa409e97ad2
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: 4b64f79ea5a9566d2ad28216fbc5e736b622fe00
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809734"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740245"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Postup ohlášení problému se sadou nástrojů Visual C++ nebo dokumentace
 
@@ -398,4 +398,3 @@ Chcete-li udržovat vaše osobní údaje a udržovat vaše citlivé informace z 
 Problémy s úložištěm GitHub používáme ke sledování problémů, které jsou uvedeny v naší dokumentaci. Nyní můžete vytvořit Githubu problémy přímo ze stránky obsahu, který vám umožní pracovat způsobem mnohem bohatší zapisovače a produktových týmů. Pokud narazíte na problém s dokumentem, ukázka chybného kódu, matoucí vysvětlení, kritické vynechání nebo jenom překlep, které lze snadno dejte nám vědět. Přejděte do dolní části stránky a vyberte **přihlásit se a poskytnout názor na dokumentaci**. Budete muset vytvořit účet Githubu, pokud již nemáte, ale až to uděláte, můžete zobrazit všechny problémy v naší dokumentaci, jejich stav a odeslání oznámení, když dojde ke změně pro problém, který jste nahlásili. Další informace najdete v tématu [A novou zpětnou vazbu systém přichází na web docs.microsoft.com](/teamblog/a-new-feedback-system-is-coming-to-docs).
 
 Při vytváření dokumentace problém na Githubu pomocí tlačítka dokumentace ke službě, problém se automaticky vyplní některé informace o stránku, kterou jste vytvořili problému, abychom věděli, kde se nachází problém. Neupravujte prosím tyto informace. Stačí připojte podrobnosti o tom, co je špatně a pokud chcete, navrhované opravy. [Naše dokumentace je open source](https://github.com/MicrosoftDocs/cpp-docs/), takže pokud chcete skutečně proveďte opravu a navrhovat sami, můžete to udělat. Další informace o jak přispívat k naší dokumentaci najdete v tématu naše [využité průvodce](https://github.com/MicrosoftDocs/cpp-docs/blob/master/CONTRIBUTING.md) na Githubu.
-
