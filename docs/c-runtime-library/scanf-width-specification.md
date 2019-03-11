@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-ms.openlocfilehash: e4608d46664dad3e04d37a82368cc6e7173106f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1431002a7e7d0054ac20c05c76b05cabc96177c5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445159"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743261"
 ---
 # <a name="scanf-width-specification"></a>Specifikace šířky scanf
 
@@ -79,9 +79,9 @@ Pokud používáte nezabezpečené funkce v `scanf` řady, vynechejte parametr v
 
 ## <a name="reading-undelimited-strings"></a>Čtení Undelimited řetězce
 
-Ke čtení řetězce není odděleny mezer znaky, sady znaků v hranatých závorkách (**[] č.**) mohou být nahrazeny **s** – znak typu (string). Množinu znaků v závorkách se označuje jako řetězec ovládacího prvku. Odpovídající vstupní pole je přečtěte si na první znak, který se nezobrazí v řetězci ovládacího prvku. Pokud je první znak v sadě stříšky (**^**), je obrácený efekt: vstupní pole je přečtěte si na první znak, který se zobrazí ve zbývající části znakovou sadu.
+Ke čtení řetězce není odděleny mezer znaky, sady znaků v hranatých závorkách (**[] č.**) mohou být nahrazeny **s** – znak typu (string). Množinu znaků v závorkách se označuje jako řetězec ovládacího prvku. Odpovídající vstupní pole je přečtěte si na první znak, který se nezobrazí v řetězci ovládacího prvku. Pokud je první znak v sadě stříšky (**^**), je obrácený vliv: Vstupní pole je přečtěte si na první znak, který se zobrazí ve zbývající části znakovou sadu.
 
-Všimněte si, že **% [-z]** a **% [z-a]** jsou interpretovány jako ekvivalentní **%[abcde...z]**. Toto je běžný `scanf` rozšíření funkce, ale Všimněte si, že standardu ANSI nevyžaduje.
+Všimněte si, že **% [-z]** a **% [z-a]** jsou interpretovány jako ekvivalentní **% [abcde... z]**. Toto je běžný `scanf` rozšíření funkce, ale Všimněte si, že standardu ANSI nevyžaduje.
 
 ## <a name="reading-unterminated-strings"></a>Neukončený čtení řetězce
 
@@ -101,7 +101,7 @@ Pro uložení řetězce bez uložení ukončující znak null ('\0'), použijte 
 
 Z jakéhokoli důvodu když `scanf` funkce zastaví čtení vstupního pole, další vstupní pole je považován za začít u prvního znaku nepřečtené. Konfliktní znak, pokud existuje, je považován za nepřečtené a je první znak další vstupní pole nebo první znak v další operacích čtení vstupního datového proudu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>

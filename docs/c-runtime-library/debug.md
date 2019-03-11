@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DEBUG macro
 - _DEBUG macro
 ms.assetid: a9901568-4846-4731-a404-399d947e2e7a
-ms.openlocfilehash: eeffbd207c4e5b4fdcaaca6f47a2b69ba641a46e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 754be1d8e676a8fc600ee5af66cab6217f015e59
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510822"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741698"
 ---
 # <a name="debug"></a>_DEBUG
 
@@ -21,6 +21,6 @@ Definuje kompilátor `_DEBUG` Pokud zadáte možnost/MTD nebo/MDd. Tyto možnost
 
 Další informace najdete v tématu [techniky ladění CRT](/visualstudio/debugger/crt-debugging-techniques).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Příznaky řízení](../c-runtime-library/control-flags.md)

@@ -3,12 +3,12 @@ title: Nainstalujte úlohu C++ Linux v sadě Visual Studio
 description: Popisuje, jak stáhnout, nainstalovat a nastavit Linux úlohy pro C++ v sadě Visual Studio.
 ms.date: 03/05/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 5fa4b6ee953748673564bf6eeb9018783e02dce8
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 74155724abb3a0e02cc27dd8a8d144f142ee4b6f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562806"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747719"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Stažení, instalace a nastavení úloh Linux
 
@@ -72,5 +72,3 @@ Cílový počítač s Fedora používá **dnf** balíček Instalační služby. 
 ## <a name="ensure-you-have-cmake-38-on-the-remote-linux-machine"></a>Ujistěte se, že máte CMake 3.8 na vzdáleném počítači s Linuxem
 
 Vaší distribuce Linuxu mohou mít starší verzi CMake. Podpora CMake v sadě Visual Studio vyžaduje režim podporu serveru, která byla zavedena v CMake 3.8. Hodnotu typu variant CMake poskytovaný společností Microsoft, stáhněte si nejnovější předem připravených binární soubory pro počítač s Linuxem v [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases).
-
-

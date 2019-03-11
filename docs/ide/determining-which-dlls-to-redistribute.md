@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-ms.openlocfilehash: fdca832810312d2f36697da8fbaac539c5ce951c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee81fb1560133b2777a33e80d32c0e2e55c01bf4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452595"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749084"
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>Zjištění, které knihovny DLL je třeba redistribuovat
 
@@ -39,18 +39,18 @@ Následující tabulka popisuje některé z Visual C++ knihovny DLL, které mů�
 
 |Knihovny jazyka Visual C++|Popis|Platí pro|
 |--------------------------|-----------------|----------------|
-|vcruntime*verze*.dll|Knihovna prostředí runtime pro nativní kód.|Aplikace, které používají normální C a C++ language spuštění a ukončení služby.|
-|vccorlib*verze*.dll|Knihovna prostředí runtime pro spravovaný kód.|Aplikace, které používají služby jazyka C++ pro spravovaný kód.|
+|vcruntime*version*.dll|Knihovna prostředí runtime pro nativní kód.|Aplikace, které používají normální C a C++ language spuštění a ukončení služby.|
+|vccorlib*version*.dll|Knihovna prostředí runtime pro spravovaný kód.|Aplikace, které používají služby jazyka C++ pro spravovaný kód.|
 |msvcp*verze*.dll a msvcp*verze*_*dotnumber*.dll|Standardní knihovny C++ pro nativní kód.|Aplikace, které používají [standardní knihovny C++](../standard-library/cpp-standard-library-reference.md).|
 |concrt*verze*.dll|Knihovna Runtime souběžnosti pro nativní kód.|Aplikace, které používají [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).|
-|MFC*verze*.dll|Microsoft Foundation Classes (MFC) knihovny.|Aplikace, které používají [knihovny MFC](../mfc/mfc-desktop-applications.md).|
-|MFC*verze* *jazyk*.dll|Microsoft Foundation Classes (MFC) prostředků knihovny.|Aplikace, které používají prostředky pro konkrétní jazyk pro knihovny MFC.|
-|MFC*verze*u.dll|Knihovna MFC s podporou kódování Unicode.|Aplikace, které používají [knihovny MFC](../mfc/mfc-desktop-applications.md) a vyžadující podporu kódování Unicode.|
+|mfc*version*.dll|Microsoft Foundation Classes (MFC) knihovny.|Aplikace, které používají [knihovny MFC](../mfc/mfc-desktop-applications.md).|
+|mfc*version* *language*.dll|Microsoft Foundation Classes (MFC) prostředků knihovny.|Aplikace, které používají prostředky pro konkrétní jazyk pro knihovny MFC.|
+|mfc*version*u.dll|Knihovna MFC s podporou kódování Unicode.|Aplikace, které používají [knihovny MFC](../mfc/mfc-desktop-applications.md) a vyžadující podporu kódování Unicode.|
 |mfcmifc80.dll|Řízená rozhraní knihovny MFC.|Aplikace, které používají [knihovny MFC](../mfc/mfc-desktop-applications.md) s [ovládacích prvků Windows Forms](/dotnet/framework/winforms/controls/index).|
 |mfcm*verze*.dll|Řízená knihovna MFC.|Aplikace, které používají [knihovny MFC](../mfc/mfc-desktop-applications.md) s [ovládacích prvků Windows Forms](/dotnet/framework/winforms/controls/index).|
-|mfcm*verze*u.dll|Řízená knihovna MFC s podporou kódování Unicode.|Aplikace, které používají [knihovny MFC](../mfc/mfc-desktop-applications.md) s [ovládacích prvků Windows Forms](/dotnet/framework/winforms/controls/index) a vyžadující podporu kódování Unicode.|
-|vcamp*verze*.dll|Knihovny AMP pro nativní kód.|Aplikace, které používají [knihovny C++ AMP](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md) kódu.|
-|vcomp*verze*.dll|OpenMP – knihovny pro nativní kód.|Aplikace, které používají [C++ OpenMP – knihovny](../parallel/openmp/openmp-in-visual-cpp.md) kódu.|
+|mfcm*version*u.dll|Řízená knihovna MFC s podporou kódování Unicode.|Aplikace, které používají [knihovny MFC](../mfc/mfc-desktop-applications.md) s [ovládacích prvků Windows Forms](/dotnet/framework/winforms/controls/index) a vyžadující podporu kódování Unicode.|
+|vcamp*version*.dll|Knihovny AMP pro nativní kód.|Aplikace, které používají [knihovny C++ AMP](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md) kódu.|
+|vcomp*version*.dll|OpenMP – knihovny pro nativní kód.|Aplikace, které používají [C++ OpenMP – knihovny](../parallel/openmp/openmp-in-visual-cpp.md) kódu.|
 
 > [!NOTE]
 > Už nemusíte znovu distribuovat knihovnu Active Template Library jako samostatné knihovny DLL. Jeho funkcí se přesunulo na záhlaví a statická knihovna.
@@ -59,7 +59,7 @@ Další informace o postupu distribuce těchto knihoven DLL s vaší aplikací n
 
 Obvykle není nutné distribuovat systémové knihovny DLL, protože jsou součástí operačního systému. Nicméně mohou existovat výjimky, například když vaše aplikace bude spuštěna na několika verzích operačních systémů Microsoft. V takovém případě nezapomeňte přečíst odpovídající podmínky licenční smlouvy. Také pokusí se získat systémové knihovny DLL prostřednictvím služby Windows Update, aktualizace service Pack nebo s použitím distribuovatelných balíčků poskytovaných společností Microsoft.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Volba metody nasazení](../ide/choosing-a-deployment-method.md)
 

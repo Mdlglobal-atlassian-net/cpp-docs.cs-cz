@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C++ Standard Library, converting System::String to standard string
 - string conversion, System::String
 ms.assetid: 79e2537e-d4eb-459f-9506-0e738045b59e
-ms.openlocfilehash: fafd23cb9dec25c742e040fad0793c38bd092322
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ea3c56af2fefaf7c65055135e8549fb153c9a8b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473226"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749270"
 ---
 # <a name="how-to-convert-systemstring-to-standard-string"></a>Postupy: Převod typu System::String na standardní řetězec
 
@@ -63,6 +63,6 @@ abcd
 efgh
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

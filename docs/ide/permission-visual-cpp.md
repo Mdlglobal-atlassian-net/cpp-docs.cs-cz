@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <permission> C++ XML tag
 - permission C++ XML tag
 ms.assetid: 537ee2bc-95bd-48e4-9ce6-3420c3da87f4
-ms.openlocfilehash: 5cbcfd6bee97c3ca937ddfac363cd70276ee4d1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ecf027600b23a640d1dc0cd68b75ffa5eb1b3659
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529113"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744620"
 ---
 # <a name="ltpermissiongt-visual-c"></a>&lt;oprávnění&gt; (Visual C++)
 
@@ -34,7 +34,7 @@ Kompilátor vyvolá upozornění, pokud se nenajde `member`.
 
 Informace o tom, jak vytvořit cref odkaz na obecný typ, naleznete v tématu [ \<naleznete v tématu >](../ide/see-visual-cpp.md).
 
-*Popis*<br/>
+*description*<br/>
 Popis přístup ke členu.
 
 ## <a name="remarks"></a>Poznámky
@@ -57,6 +57,6 @@ public ref class TestClass {
 };
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Dokumentace XML](../ide/xml-documentation-visual-cpp.md)

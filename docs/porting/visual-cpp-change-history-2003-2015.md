@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: b1070a330e40c0bf73f3713783b3f126d0848cbc
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: dcae15ade3bd155e16149cc56981f79abb245e16
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525519"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740385"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>2003 – 2015 historie změn Visual C++
 
@@ -54,7 +54,7 @@ Kromě toho probíhající vylepšení shoda s kompilátorem prostředí můžet
 
    Pokud používáte na národní prostředí pro vlákno, zkontrolujte vaše užívání localeconv zobrazíte, pokud váš kód předpokládá, že vrácená data lconv – je pro globální národní prostředí a příslušným způsobem upravte.
 
-#### <a name="mathh"></a>\<Math.h >
+#### <a name="mathh"></a>\<math.h>
 
 - **Přetížení C++ matematických knihovních funkcí**
 
@@ -96,7 +96,7 @@ Kromě toho probíhající vylepšení shoda s kompilátorem prostředí můžet
 
    To není zásadní změny pro nativní nebo smíšený kód (`/clr`), ale pro kód zkompilovaný jako [/CLR: pure](../build/reference/clr-common-language-runtime-compilation.md), tato akce může způsobit selhání kompilace vašeho kódu. Pokud při kompilaci kódu jako `/clr:pure`, budete muset přidat `#include <new>` nebo `#include <new.h>` obejít chyby sestavení z důvodu této změny. Všimněte si, že `/clr:pure` je zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017. Kód, který musí být "čistě" by měl být přenést do jazyka C#.
 
-#### <a name="processh"></a>\<Process.h >
+#### <a name="processh"></a>\<process.h>
 
 - **_beginthread a _beginthreadex**
 
@@ -139,11 +139,11 @@ Kromě toho probíhající vylepšení shoda s kompilátorem prostředí můžet
 
    V předchozích verzích nekonečno a hodnoty NaN by být formátována pomocí sadu řetězců sentinel konkrétní MSVC.
 
-  - Nekonečno: 1. #INF
+  - Nekonečno: 1.#INF
 
-  - Tichý NaN: 1. #QNAN
+  - Tichý NaN: 1.#QNAN
 
-  - Signalizace NaN: 1. #SNAN
+  - Signalizace NaN: 1.#SNAN
 
   - Neomezené NaN: 1. #IND
 
@@ -207,7 +207,7 @@ Kromě toho probíhající vylepšení shoda s kompilátorem prostředí můžet
 
 - **Exponent, formátování**
 
-   %E a %E formát specifikátorů formátu plovoucí číslo bodu jako desítkové mantisy a exponentu. Specifikátory formátu %G a %g také formátování čísel v tomto formuláři v některých případech. V předchozích verzích by CRT vždy generovat řetězce s trojmístný exponenty. Například `printf("%e\n", 1.0)` vytiskne 1.000000e + 000. To byl nesprávný: jazyk C vyžaduje, je-li exponent reprezentovat pomocí jednoho nebo dvou číslic, pak pouze dvě číslice se mají vytisknout.
+   %E a %E formát specifikátorů formátu plovoucí číslo bodu jako desítkové mantisy a exponentu. Specifikátory formátu %G a %g také formátování čísel v tomto formuláři v některých případech. V předchozích verzích by CRT vždy generovat řetězce s trojmístný exponenty. Například `printf("%e\n", 1.0)` vytiskne 1.000000e + 000. To bylo nesprávné: Jazyk C vyžaduje, je-li exponent reprezentovat pomocí jednoho nebo dvou číslic, pak pouze dvě číslice se mají vytisknout.
 
    V sadě Visual Studio 2005 byl přidán globální shoda přepínač: [_set_output_format –](../c-runtime-library/set-output-format.md). Program lze volat tuto funkci s argumentem _TWO_DIGIT_EXPONENT, povolení vyhovující exponentu tisku. Výchozí chování se změnil na vyhovující standardům exponentu tisk režimu.
 
@@ -261,9 +261,9 @@ Kromě toho probíhající vylepšení shoda s kompilátorem prostředí můžet
 
    `smalheap` Možnost propojení se odebrala. Zobrazit [propojit možnosti](../c-runtime-library/link-options.md).
 
-#### <a name="stringh"></a>\<String.h >
+#### <a name="stringh"></a>\<string.h>
 
-- **wcstok –**
+- **wcstok**
 
    Podpis metody `wcstok` funkce byl změněn tak, aby odpovídaly toho, co vyžaduje C Standard. V předchozích verzích knihovny se signatura této funkce:
 
@@ -275,7 +275,7 @@ Kromě toho probíhající vylepšení shoda s kompilátorem prostředí můžet
 
    Nový `_wcstok` funkce byla přidána s starý podpis k usnadnění přenos. Při kompilaci kódu jazyka C++, k dispozici je také přetížení vložené `wcstok` , který má starý podpis. Toto přetížení je deklarován jako zastaralé. V kódu jazyka C, může způsobit define_CRT_NON_CONFORMING_WCSTOK `_wcstok` má být použit místo `wcstok`.
 
-#### <a name="timeh"></a>\<Time.h >
+#### <a name="timeh"></a>\<time.h>
 
 - **clock**
 
@@ -287,9 +287,9 @@ Kromě toho probíhající vylepšení shoda s kompilátorem prostředí můžet
 
    V sadě Visual Studio 2013 byl opraven problém v **_stat** řadu funkcí, ale s podobnými problémy v **fstat –** a **_utime** nebyly oprava rodinách funkcí. To vedlo k problémům kvůli nekonzistencí mezi funkcemi. **Fstat –** a **_utime** rodinách funkcí teď jsme opravili, takže všechny tyto funkce nyní zpracovávají letní čas správnou a konzistentní.
 
-- **asctime –**
+- **asctime**
 
-   V předchozích verzích [asctime –](../c-runtime-library/reference/asctime-wasctime.md) funkce by vyplnění řádu dnů s počáteční nulou, například: 06 června Pá 08:00:00 2014. Specifikace vyžaduje, aby těchto dnů bude doplněn s přední místa, například Pá června 6 08:00:00 2014. Tato chyba byla opravena.
+   V předchozích verzích [asctime –](../c-runtime-library/reference/asctime-wasctime.md) funkce by vyplnění řádu dnů s počáteční nulou, například: Pracovní dny června 06 08:00:00 2014. Specifikace vyžaduje, aby těchto dnů bude doplněn s přední místa, například Pá června 6 08:00:00 2014. Tato chyba byla opravena.
 
 - **STRFTIME a wcsftime**
 
@@ -362,20 +362,20 @@ Pokud byte chtěli povolit nové optimalizace a kontroly ladění, implementace 
 
    |Starý název|Nový název|
    |--------------|--------------|
-   |add_reference –|add_lvalue_reference|
+   |add_reference|add_lvalue_reference|
    |has_default_constructor|is_default_constructible|
    |has_copy_constructor|is_copy_constructible|
    |has_move_constructor|is_move_constructible|
-   |has_nothrow_constructor –|is_nothrow_default_constructible –|
-   |has_nothrow_default_constructor|is_nothrow_default_constructible –|
-   |has_nothrow_copy –|is_nothrow_copy_constructible –|
-   |has_nothrow_copy_constructor –|is_nothrow_copy_constructible –|
-   |has_nothrow_move_constructor|is_nothrow_move_constructible –|
-   |has_nothrow_assign|is_nothrow_copy_assignable –|
-   |has_nothrow_copy_assign|is_nothrow_copy_assignable –|
+   |has_nothrow_constructor|is_nothrow_default_constructible|
+   |has_nothrow_default_constructor|is_nothrow_default_constructible|
+   |has_nothrow_copy|is_nothrow_copy_constructible|
+   |has_nothrow_copy_constructor|is_nothrow_copy_constructible|
+   |has_nothrow_move_constructor|is_nothrow_move_constructible|
+   |has_nothrow_assign|is_nothrow_copy_assignable|
+   |has_nothrow_copy_assign|is_nothrow_copy_assignable|
    |has_nothrow_move_assign|is_nothrow_move_assignable|
-   |has_trivial_constructor –|is_trivially_default_constructible –|
-   |has_trivial_default_constructor|is_trivially_default_constructible –|
+   |has_trivial_constructor|is_trivially_default_constructible|
+   |has_trivial_default_constructor|is_trivially_default_constructible|
    |has_trivial_copy|is_trivially_copy_constructible –|
    |has_trivial_move_constructor|is_trivially_move_constructible|
    |has_trivial_assign|is_trivially_copy_assignable|
@@ -1190,7 +1190,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
 - **Výjimky MFC nejde zachytit podle hodnoty, protože nejsou kopírovatelné**
 
-   Následující kód v aplikaci MFC způsobí chybu C2316: měl ': nejde zachytit, protože destruktor nebo kopírovací konstuktor jsou nedostupné nebo odstraněné
+   Následující kód v aplikaci MFC způsobí chybu C2316: Kdyby ": nejde zachytit, protože destruktor nebo kopírovací konstuktor jsou nedostupné nebo odstraněné
 
     ```cpp
     struct B {
@@ -1336,7 +1336,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
 - **Oprava neplatné kopírování inicializace v inicializaci členů nestatických dat (NSDMI)**
 
-   Následující kód nyní generuje chybu upozornění C2664: 'S1::S1(S1 &&)': nelze převést argument 1 'bool' na ' const S1 & ":
+   Následující kód nyní vygeneruje Chyba upozornění C2664: 'S1::S1(S1 &&)': nelze převést argument 1 'bool' na ' const S1 & ":
 
     ```cpp
     struct S1 {
@@ -2899,7 +2899,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     };
     ```
 
-   Před Visual Studio 2013, tento kód vracel tuto zprávu: "C4370 upozornění:"S2": má ke změně rozložení třídy z předchozí verze kompilátoru z důvodu lepšího balení".
+   Před Visual Studio 2013, tento kód vracel tuto zprávu: "C4370 upozornění: "S2": má ke změně rozložení třídy z předchozí verze kompilátoru z důvodu lepšího balení ".
 
    X86 kompilátoru má stejný problém s optimalizací rozložení ve všech verzích kompilátoru. Pokud je například tento kód je zkompilován pro platformu x86:
 
@@ -2963,7 +2963,7 @@ Kompilátor C++ v sadě Visual Studio 2013 zjistí neshody v makru _ITERATOR_DEB
 
 ### <a name="mfc-and-atl"></a>Rozhraní MFC a knihovna ATL
 
-- **Visual Studio 2013 pouze**: Knihovna MFC MBCS není zahrnutý v sadě Visual Studio, protože kódování Unicode je Oblíbené a používání znakové sady MBCS je výrazně omezeno. Tato změna také udržuje MFC lépe zarovnané s Windows SDK, protože mnoho ovládacích prvků a zpráv má pouze kódování Unicode. Nicméně, pokud je nutné použít knihovnu MFC znakové sady MBCS, můžete ji stáhnout ze služby Stažení softwaru MSDN na [vícebajtová knihovna MFC pro Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770). Distribuovatelný balíček Visual C++ stále zahrnuje i tuto knihovnu.  (Poznámka: knihovny DLL znakové sady MBCS je součástí komponenty instalačního programu C++ v sadě Visual Studio 2015 a novější).
+- **Visual Studio 2013 pouze**: Knihovna MFC MBCS není zahrnutý v sadě Visual Studio, protože kódování Unicode je Oblíbené a používání znakové sady MBCS je výrazně omezeno. Tato změna také udržuje MFC lépe zarovnané s Windows SDK, protože mnoho ovládacích prvků a zpráv má pouze kódování Unicode. Nicméně, pokud je nutné použít knihovnu MFC znakové sady MBCS, můžete ji stáhnout ze služby Stažení softwaru MSDN na [vícebajtová knihovna MFC pro Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770). Distribuovatelný balíček Visual C++ stále zahrnuje i tuto knihovnu.  (Poznámka: Knihovny DLL znakové sady MBCS je součástí komponenty instalačního programu C++ v sadě Visual Studio 2015 a novější).
 
 - Přístupnost pásu karet MFC se změní.  Místo architektury existuje je nyní hierarchická architektura. Můžete přesto používat staré chování voláním `CRibbonBar::EnableSingleLevelAccessibilityMode()`.
 
@@ -3043,7 +3043,7 @@ Kompilátor C++ v sadě Visual Studio 2013 zjistí neshody v makru _ITERATOR_DEB
 
 - Následující k zásadní změně C ++ 98/03 až 11 standardů C ++ pomocí explicitní argumenty šablony pro volání `make_pair()` – stejně jako v `make_pair<int, int>(x, y)` – obvykle nezkompiluje v jazyce Visual C++ v sadě Visual Studio 2012. Toto řešení je vždy volat `make_pair() `bez explicitní argumenty šablony, stejně jako v `make_pair(x, y)`. Poskytuje šablony explicitní argumenty popírá účel funkce. Pokud potřebujete mít naprostou kontrolu nad výsledný typ, použijte `pair` místo `make_pair` – stejně jako v `pair<short, short>(int1, int2)`.
 
-- Jiná rozbíjející změna mezi C ++ 11 standardy a C ++ 98/03: když je implicitně převést na B a B je implicitně převést na C, A není implicitně převést na C a C ++ 98/03 Visual C++ 2010 povolené, ale `pair<A, X>` (implicitně převést nebo explicitně) k `pair<C, X>`. (Další typ, X, není zajímají tady, a to není specifická pro první typ v páru.) Protože C ++ 11 a kompilátor jazyka C++ v sadě Visual Studio 2012 zjišťovat, A není implicitně převést na C, odstraňují pár převod z řešení přetížení. Jedná se o kladné změnu pro řadu scénářů. Například přetížení `func(const pair<int, int>&)` a `func(const pair<string, string>&)`a volání `func()` s `pair<const char *, const char *>` se zkompiluje podle této změny. Tato změna však konce kódu, který spoléhal na agresivní pár převody. Provedením jedné části převod explicitně obvykle lze napravit takového kódu – například tím, že předáte `make_pair(static_cast<B>(a), x)` funkci, která očekává, že `pair<C, X>`.
+- Další změnou rozdělení mezi C ++ 11 standardy a C ++ 98/03: Když je implicitně převést na B a B A je implicitně převést na C, ale není implicitně převést na C a C ++ 98/03 Visual C++ 2010 povolené A `pair<A, X>` má být převeden (implicitně nebo explicitně) do `pair<C, X>`. (Další typ, X, není zajímají tady, a to není specifická pro první typ v páru.) Protože C ++ 11 a kompilátor jazyka C++ v sadě Visual Studio 2012 zjišťovat, A není implicitně převést na C, odstraňují pár převod z řešení přetížení. Jedná se o kladné změnu pro řadu scénářů. Například přetížení `func(const pair<int, int>&)` a `func(const pair<string, string>&)`a volání `func()` s `pair<const char *, const char *>` se zkompiluje podle této změny. Tato změna však konce kódu, který spoléhal na agresivní pár převody. Provedením jedné části převod explicitně obvykle lze napravit takového kódu – například tím, že předáte `make_pair(static_cast<B>(a), x)` funkci, která očekává, že `pair<C, X>`.
 
 - Visual C++ 2010 simulované variadické šablony – například `make_shared<T>(arg1, arg2, argN)`– až po limit 10 argumentů, orazítkování přetížení a specializace preprocesoru zařízení. V sadě Visual Studio 2012 je tento limit snížena na 5 argumenty zlepšit dobu potřebnou ke kompilaci a spotřebu paměti kompilátoru pro většinu uživatelů. Předchozí limit však můžete nastavit tak, že explicitně definujete příkaz _VARIADIC_MAX jako 10 celého projektu.
 
@@ -3091,7 +3091,7 @@ Kompilátor C++ v sadě Visual Studio 2013 zjistí neshody v makru _ITERATOR_DEB
 
 - Přidání parametru k `CFolderPickerDialog` konstruktoru. (Je to výchozí parametr, a proto není prolamující zdrojový.)
 
-- `CFileStatus` změnit velikost struktury: `m_attribute` člena se změnil z BAJTŮ DWORD (tak, aby odpovídala hodnotě, která je vrácena z `GetFileAttributes`).
+- `CFileStatus` změnit velikost struktury: `m_attribute` Člena se změnil z BAJTŮ DWORD (tak, aby odpovídala hodnotě, která je vrácena z `GetFileAttributes`).
 
 - `CRichEditCtrl` a `CRichEditView` v kódování Unicode sestavení použít MSFTEDIT_CLASS (ovládací prvek RichEdit 4.1) namísto RICHEDIT_CLASS (ovládací prvek RichEdit 3.0).
 
@@ -3319,7 +3319,7 @@ Kompilátor C++ v sadě Visual Studio 2013 zjistí neshody v makru _ITERATOR_DEB
 
    - perf_object
 
-   - Nástroj Perfmon
+   - perfmon
 
    - request_handler
 
@@ -3405,21 +3405,21 @@ Kompilátor C++ v sadě Visual Studio 2013 zjistí neshody v makru _ITERATOR_DEB
 
 ### <a name="mfc"></a>MFC
 
-- `CTime` Třída: `CTime` třídy nyní přijímá data od 1/1/1900 n. l. namísto 1/1/1970 n. l.
+- `CTime` Třída: `CTime` Třídy nyní přijímá data od 1/1/1900 n. l. namísto 1/1/1970 n. l.
 
-- Karta pořadí ovládacích prvků v dialogových oknech MFC: správné pořadí prvků více ovládacích prvků v dialogovém okně knihovny MFC je narušen, pokud ovládací prvek ActiveX knihovny MFC je vložen do pořadí ovládacích prvků. Tato změna opravuje tohoto problému.
+- Pořadí karet ovládacích prvků v dialogových oknech MFC: Správné pořadí prvků více ovládacích prvků v dialogovém okně knihovny MFC je narušen, pokud ovládací prvek ActiveX knihovny MFC je vložen do pořadí ovládacích prvků. Tato změna opravuje tohoto problému.
 
    Například vytvoření aplikace knihovny MFC dialogového okna, který má ovládací prvek ActiveX a několik ovládacích prvcích pro úpravy. Pozice ovládacího prvku ActiveX uprostřed pořadí ovládacích prvků pro úpravy. Spusťte aplikaci, klikněte na tlačítko ovládacího prvku pro úpravy, jejichž pořadí je po ovládacího prvku ActiveX a karty. Před touto změnou se nepovedlo fokus do ovládacího prvku edit následující ovládací prvek ActiveX namísto na další ovládací prvek úprav v pořadí.
 
-- `CFileDialog` Třída: Vlastních šablon pro `CFileDialog` třídy nejde přenést automaticky na Windows Vista. Jsou i nadále použitelná, ale nebudou mít další funkce nebo vypadá dialogů styl, Windows Vista.
+- `CFileDialog` Třída: Vlastní šablony `CFileDialog` třídy nejde přenést automaticky na Windows Vista. Jsou i nadále použitelná, ale nebudou mít další funkce nebo vypadá dialogů styl, Windows Vista.
 
-- `CWnd` Třídy a `CFrameWnd` třída: `CWnd::GetMenuBarInfo` metoda byla odebrána.
+- `CWnd` Třídy a `CFrameWnd` třídy: `CWnd::GetMenuBarInfo` Metoda byla odebrána.
 
    `CFrameWnd::GetMenuBarInfo` Metoda je nyní nevirtuální metoda. Další informace najdete v tématu **GetMenuBarInfo funkce** v sadě Windows SDK.
 
-- Podpora knihovny MFC rozhraní ISAPI: MFC už podporuje vytváření aplikací s serveru aplikaci rozhraní ISAPI (Internet Programming). Pokud chcete k sestavení aplikace ISAPI, rozšíření ISAPI přímo volejte.
+- Podpora knihovny MFC rozhraní ISAPI: Knihovna MFC už podporuje vytváření aplikací s serveru aplikaci rozhraní ISAPI (Internet Programming). Pokud chcete k sestavení aplikace ISAPI, rozšíření ISAPI přímo volejte.
 
-- Zastaralá rozhraní API standardu ANSI: Verze ANSI z několika metod MFC jsou zastaralé. Použijte Unicode verze těchto metod v budoucí aplikace. Další informace najdete v tématu **vytvářet požadavky pro Windows Vista běžné ovládací prvky**.
+- Rozhraní API nepoužívané standardu ANSI: ANSI verze z několika metod MFC jsou zastaralé. Použijte Unicode verze těchto metod v budoucí aplikace. Další informace najdete v tématu **vytvářet požadavky pro Windows Vista běžné ovládací prvky**.
 
 ## <a name="visual-c-2005-breaking-changes"></a>Visual C++ 2005 nejnovější změny
 
@@ -3471,7 +3471,7 @@ Kompilátor C++ v sadě Visual Studio 2013 zjistí neshody v makru _ITERATOR_DEB
 
 - Při volání metody `valarray::resize()`, obsah `valarray` budou ztraceny a budou nahrazeny výchozí hodnoty. `resize()` Metoda je určena k inicializaci `valarray` místo dynamicky zvětšovat jako vektor.
 
-- Ladění iterátorů: Aplikace se vytvářejí s ladicí verzí knihovny C Runtime a které používání iterátorů nesprávně můžou začít vyskytovat, chcete-li zobrazit vyhodnotí za běhu. Chcete-li zakázat tyto nepodmíněné výrazy, je nutné definovat _HAS_ITERATOR_DEBUGGING (nahrazena [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) po sadu Visual Studio 2010) na hodnotu 0. Další informace najdete v tématu [Debug Iterator Support](../standard-library/debug-iterator-support.md)
+- Ladění iterátorů: Aplikace vytvořené s ladicí verzí knihovny C Runtime a které používání iterátorů nesprávně můžou začít vyskytovat, chcete-li zobrazit vyhodnotí za běhu. Chcete-li zakázat tyto nepodmíněné výrazy, je nutné definovat _HAS_ITERATOR_DEBUGGING (nahrazena [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) po sadu Visual Studio 2010) na hodnotu 0. Další informace najdete v tématu [Debug Iterator Support](../standard-library/debug-iterator-support.md)
 
 ## <a name="visual-c-net-2003-breaking-changes"></a>Rozbíjející změny v jazyce Visual C++ .NET 2003
 
@@ -3523,6 +3523,6 @@ Kompilátor C++ v sadě Visual Studio 2013 zjistí neshody v makru _ITERATOR_DEB
 
 - Kompilátor nyní hlásí nedosažitelný kód (C4702).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Co je nového v aplikaci Visual C++ v sadě Visual Studio](../what-s-new-for-visual-cpp-in-visual-studio.md)

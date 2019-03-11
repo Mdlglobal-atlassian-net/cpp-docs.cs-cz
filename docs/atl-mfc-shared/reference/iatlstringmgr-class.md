@@ -14,12 +14,12 @@ helpviewer_keywords:
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-ms.openlocfilehash: de0bd720d1806c7950fa9aecc2db6e72aeb1fb4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 978d33c719b9cb8c2708dc97fa78874534dfd748
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493931"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749955"
 ---
 # <a name="iatlstringmgr-class"></a>Iatlstringmgr – třída
 
@@ -39,7 +39,7 @@ __interface IAtlStringMgr
 |-|-|
 |[přidělení](#allocate)|Volejte tuto metodu za účelem přidělení nového datová struktura řetězec.|
 |[Clone](#clone)|Volejte tuto metodu za účelem vrací ukazatel na nového správce řetězců pro použití s jinou instancí `CSimpleStringT`.|
-|[Zdarma](#free)|Volejte tuto metodu pro uvolnění datová struktura řetězec.|
+|[Free](#free)|Volejte tuto metodu pro uvolnění datová struktura řetězec.|
 |[GetNilString](#getnilstring)|Vrací ukazatel `CStringData` objekt použitý objektem objekty prázdný řetězec.|
 |[Přidělit jinému uživateli](#reallocate)|Volejte tuto metodu, aby mohla znovu přidělit datová struktura řetězec.|
 
@@ -181,7 +181,7 @@ Volání [IAtlStringMgr::Free](#free) k uvolnění paměti přidělené touto me
 > [!NOTE]
 > Příklady využití naleznete v tématu [Správa paměti a CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Sdílené třídy ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

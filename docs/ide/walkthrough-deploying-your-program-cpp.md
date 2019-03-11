@@ -1,5 +1,5 @@
 ---
-title: 'Průvodce: Nasazení programu (C++)'
+title: 'Návod: Nasazení programu (C++)'
 ms.date: 09/14/2018
 helpviewer_keywords:
 - deploying applications [C++], walkthroughs
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: 7170fe3ae058f832e452089021d9f863f1791f14
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: c202d4eae5e9115f847caefce18a8974a4388a04
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657510"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740458"
 ---
-# <a name="walkthrough-deploying-your-program-c"></a>Průvodce: Nasazení programu (C++)
+# <a name="walkthrough-deploying-your-program-c"></a>Návod: Nasazení programu (C++)
 
 Teď, když jste vytvořili aplikaci provedením dříve související návody, které jsou uvedeny v [pomocí integrovaného vývojového prostředí sady Visual Studio pro vývoj v jazyce C++ Desktop](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md), posledním krokem je vytvoření instalátoru, mohli ostatní uživatelé Nainstalujte aplikaci na svých počítačích. Pro instalační program přidáte nový projekt do existujícího řešení. Výstup tohoto nového projektu je soubor setup.exe, který nainstaluje vaši aplikaci na jiném počítači.
 
@@ -74,7 +74,7 @@ Návodu ukazuje způsob použití Instalační služby systému Windows pro nasa
 
 **Předchozí:** [Návod: Ladění projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)<br/>

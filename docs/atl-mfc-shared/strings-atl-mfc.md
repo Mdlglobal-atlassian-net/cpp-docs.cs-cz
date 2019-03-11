@@ -21,12 +21,12 @@ helpviewer_keywords:
 - strings [C++], class CString
 - literal strings [C++], class CStringT
 ms.assetid: 3b33125b-1684-4542-a3a7-b00de7d0419e
-ms.openlocfilehash: 1f0764dd7231492a2addef6359318aa436869a31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f4d300bccb6387c510dc16d55eda17de20b4b134
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626678"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742581"
 ---
 # <a name="strings-atlmfc"></a>Řetězce (ATL/MFC)
 
@@ -48,7 +48,6 @@ Poskytuje referenční informace o sdílený `CStringT` třídy.
 [MFC – koncepce](../mfc/mfc-concepts.md)<br/>
 Obsahuje rámcové a úlohově zaměřená témata, které vám pomůžou programovat pomocí knihovny MFC.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Sdílené třídy ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)
-

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - _SH_DENYNO constant
 - SH_COMPAT constant
 ms.assetid: 95fadc3a-55dc-473d-98b5-e8211900465d
-ms.openlocfilehash: 5bcebc4f9321ebf3f85bdd757118f779a759fc62
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: dc27b3af0d430aedb8159b4591004f46d197ccd5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220514"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751541"
 ---
 # <a name="sharing-constants"></a>Sdílení konstant
 
@@ -51,7 +51,7 @@ V následující tabulce jsou uvedeny konstanty a jejich význam:
 |`_SH_DENYNO`|Povolí čtení a zápis|
 |`_SH_SECURE`|Nastaví zabezpečený režim (sdílené pro čtení, exkluzivní přístup pro zápis).|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>
 [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - robustness [CRT]
 ms.assetid: 7f1a87f8-eff9-4b76-ae9b-d133d3de6adf
-ms.openlocfilehash: 9244ba430efab01cd82b8ad773ad669470d67cff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c70c9a2bf0b95063fa3f679ca6c3053d2a4f2df5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454701"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744571"
 ---
 # <a name="robustness"></a>Robustnost
 
@@ -26,7 +26,7 @@ Následující funkce běhové knihovny jazyka C umožňuje zvýšit robustnost 
 |[set_terminate](../c-runtime-library/reference/set-terminate-crt.md)|Nainstaluje vlastní funkci ukončení má být volána [ukončit](../c-runtime-library/reference/terminate-crt.md).|
 |[set_unexpected](../c-runtime-library/reference/set-unexpected-crt.md)|Nainstaluje vlastní funkci ukončení má být volána [neočekávané](../c-runtime-library/reference/unexpected-crt.md).|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Rutiny UCRT (Universal C runtime) podle kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
 [SetUnhandledExceptionFilter](https://msdn.microsoft.com/library/windows/desktop/ms680634.aspx)<br/>

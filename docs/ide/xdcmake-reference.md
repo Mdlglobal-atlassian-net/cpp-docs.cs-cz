@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - xdcmake program
 ms.assetid: 14e65747-d000-4343-854b-8393bf01cbac
-ms.openlocfilehash: 85c7ef351e6e91bfd51a7f1e87ecec4186986505
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: adbb06b5100850aac0cfd191a530d5c98b380738
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450268"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740443"
 ---
 # <a name="xdcmake-reference"></a>Referenční dokumentace nástroje XDCMake
 
@@ -30,7 +30,7 @@ xdcmake.exe je program, který se zkompiluje soubory do souboru XML. Je vytvoře
 
 ## <a name="syntax"></a>Syntaxe
 
-xdcmake – `input_filename options`
+xdcmake `input_filename options`
 
 ## <a name="parameters"></a>Parametry
 
@@ -42,7 +42,7 @@ Nula nebo více z následujících akcí:
 
 |Možnost|Popis|
 |------------|-----------------|
-|/?, / help|Zobrazit nápovědu pro xdcmake.exe.|
+|/?, /help|Zobrazit nápovědu pro xdcmake.exe.|
 |/ Assembly:*název souboru*|Umožňuje zadat hodnotu \<sestavení > značky v souboru XML.  Výchozí hodnota \<sestavení > Značka je stejný jako název souboru XML.|
 |/nologo|Potlačí zprávu o autorských právech.|
 |/ out:*název souboru*|Umožňuje zadat název souboru XML.  Ve výchozím nastavení název souboru XML je název prvního souboru .xdc zpracovány xdcmake.exe.|
@@ -53,6 +53,6 @@ Visual Studio se vyvolá xdcmake.exe automaticky při sestavování projektu. M�
 
 Zobrazit [doporučené značky pro dokumentační komentáře](../ide/recommended-tags-for-documentation-comments-visual-cpp.md) pro další informace o přidání komentáře k dokumentaci souborů se zdrojovým kódem.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Dokumentace XML](../ide/xml-documentation-visual-cpp.md)

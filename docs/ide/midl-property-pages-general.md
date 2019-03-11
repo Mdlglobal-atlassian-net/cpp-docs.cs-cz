@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - MIDL, property pages
 ms.assetid: 0692484c-a7e6-4270-8df7-981589368399
-ms.openlocfilehash: 9be01911ec52c62450b64273776a611ad5542db3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ba8e5db5884adf467ba588aa3f00365b3a1a6e6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512662"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742127"
 ---
 # <a name="midl-property-pages-general"></a>MIDL – stránky vlastností: Obecné
 
@@ -32,7 +32,7 @@ ms.locfileid: "50512662"
 
 - Ignorovat standardní cestu zahrnují ([/no_def_idir](https://msdn.microsoft.com/library/windows/desktop/aa367347))
 
-- Kompatibilní s MkTypLib ([/mktyplib203](https://msdn.microsoft.com/library/windows/desktop/aa367332))
+- MkTypLib Compatible ([/mktyplib203](https://msdn.microsoft.com/library/windows/desktop/aa367332))
 
 - Úroveň upozornění ([/W](https://msdn.microsoft.com/library/windows/desktop/aa367383))
 
@@ -50,6 +50,6 @@ Informace o tom, jak získat přístup k **Obecné** stránku vlastností v **MI
 
 Informace o tom, jak programově přistupovat k MIDL pro projekty C++, naleznete v tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> objektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MIDL – stránky vlastností](../ide/midl-property-pages.md)

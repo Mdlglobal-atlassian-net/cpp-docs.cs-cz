@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - swap function
 ms.assetid: 2fe8146b-a7f7-445a-9ae9-53b5556be701
-ms.openlocfilehash: 084749bc92491593995904b6707ca94f6545981f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ed4e3f946f314819e6c562d489050182a975b7b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484276"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748499"
 ---
 # <a name="swap-function-autogcroot"></a>swap – funkce (auto_gcroot)
 
@@ -31,7 +31,7 @@ void swap(
 
 #### <a name="parameters"></a>Parametry
 
-*_vlevo*<br/>
+*_left*<br/>
 `auto_gcroot`.
 
 *vp_ravo*<br/>
@@ -70,7 +70,7 @@ s1 = 'string two', s2 = 'string one'
 
 **Namespace** msclr –
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [auto_gcroot](../dotnet/auto-gcroot.md)<br/>
 [auto_gcroot::swap](../dotnet/auto-gcroot-swap.md)

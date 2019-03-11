@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <remarks> C++ XML tag
 - remarks C++ XML tag
 ms.assetid: c820083b-3192-40ab-9ec8-1472c55b4247
-ms.openlocfilehash: bf81c1e9ef51caf1a3f30591d0df559ea4dfc631
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a897b20cbee797bd1e9a7477e30460f2ed4064c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461526"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748980"
 ---
 # <a name="ltremarksgt-visual-c"></a>&lt;Poznámky&gt; (Visual C++)
 
@@ -27,7 +27,7 @@ ms.locfileid: "50461526"
 
 #### <a name="parameters"></a>Parametry
 
-*Popis*<br/>
+*description*<br/>
 Popis člena.
 
 ## <a name="remarks"></a>Poznámky
@@ -52,6 +52,6 @@ using namespace System;
 public ref class MyClass {};
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Dokumentace XML](../ide/xml-documentation-visual-cpp.md)

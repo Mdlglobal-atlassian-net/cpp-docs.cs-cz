@@ -1,5 +1,5 @@
 ---
-title: ___setlc_active_func ___unguarded_readlc_active_add_func
+title: ___setlc_active_func, ___unguarded_readlc_active_add_func
 ms.date: 11/04/2016
 apiname:
 - ___setlc_active_func
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - ___setlc_active_func
 - ___unguarded_readlc_active_add_func
 ms.assetid: 605ec4e3-81e5-4ece-935a-f434768cc702
-ms.openlocfilehash: 23095bb13108ec9fde2b168035009f440e9d96f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 244bb5b0bd6a15dab2de1ad2d6b71c2ae2f850bb
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525775"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743975"
 ---
-# <a name="setlcactivefunc-unguardedreadlcactiveaddfunc"></a>___setlc_active_func ___unguarded_readlc_active_add_func
+# <a name="setlcactivefunc-unguardedreadlcactiveaddfunc"></a>___setlc_active_func, ___unguarded_readlc_active_add_func
 
 ZASTARALÉ. CRT exportuje tyto vnitřní funkce pouze pro zachování binární kompatibilitu.
 
@@ -52,6 +52,6 @@ I když vnitřní funkce CRT `___setlc_active_func` a `___unguarded_readlc_activ
 |-------------|---------------------|
 |`___setlc_active_func`, `___unguarded_readlc_active_add_func`|žádná|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)

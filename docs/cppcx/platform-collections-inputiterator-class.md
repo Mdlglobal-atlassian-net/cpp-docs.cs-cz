@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-ms.openlocfilehash: d01519870d52a51a18e25f73d5caa853d90a8792
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f5cd6afa591ba2a03fbfe492e566b0fc938ae396
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455234"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745802"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections:: inputiterator – třída
 
@@ -56,7 +56,7 @@ Vlastnost typename třídy InputIterator šablony.
 |[InputIterator::operator * – operátor](#operator-decrement)|Získá odkaz na prvek určeném aktuálním InputIterator.|
 |[InputIterator::operator ++ – operátor](#operator-increment)|Aktuální InputIterator zvýší.|
 |[InputIterator::operator == – operátor](#operator-equality)|Určuje, zda aktuální InputIterator rovná zadané InputIterator.|
-|[InputIterator::operator -> – operátor](#operator-arrow)|Načte adresu elementu, který odkazuje aktuální InputIterator.|
+|[InputIterator::operator-> Operator](#operator-arrow)|Načte adresu elementu, který odkazuje aktuální InputIterator.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -81,7 +81,7 @@ explicit InputIterator(Windows::Foundation::Collections<X>^ iter);
 
 ### <a name="parameters"></a>Parametry
 
-*ITER*<br/>
+*iter*<br/>
 Objekt iterátoru.
 
 ## <a name="operator-arrow"></a>  InputIterator::operator -&gt; – operátor
@@ -171,6 +171,6 @@ Jiné InputIterator.
 
 **true** Pokud aktuální InputIterator není roven *jiných*; v opačném případě **false**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Platforma Namespace](platform-namespace-c-cx.md)

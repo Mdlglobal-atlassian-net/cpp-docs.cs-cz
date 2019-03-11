@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - global constants
 ms.assetid: 778d86fd-3ca6-4d2b-b4c5-aee6dc1efe6b
-ms.openlocfilehash: a23f45b7208899e31d755e17dad4ef1a184746f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f5d4093cccdc3a7ddf11fc48503b01161b04c5c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546374"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748590"
 ---
 # <a name="global-constants"></a>Globální konstanty
 
@@ -33,7 +33,7 @@ Běhové knihovny Microsoft obsahuje definice pro globální konstanty použív�
 |[HUGE_VAL, _HUGE](../c-runtime-library/huge-val-huge.md)|[Kategorie národního prostředí](../c-runtime-library/locale-categories.md)|
 |[_locking – konstanty](../c-runtime-library/locking-constants.md)|[Matematické konstanty](../c-runtime-library/math-constants.md)|
 |[Konstanty matematické chyby](../c-runtime-library/math-error-constants.md)|[_MAX_ENV](../c-runtime-library/max-env.md)|
-|[MB_CUR_MAX](../c-runtime-library/mb-cur-max.md)|[HODNOTU NULL](../c-runtime-library/null-crt.md)|
+|[MB_CUR_MAX](../c-runtime-library/mb-cur-max.md)|[NULL](../c-runtime-library/null-crt.md)|
 |[Omezení pole cesty](../c-runtime-library/path-field-limits.md)|[RAND_MAX](../c-runtime-library/rand-max.md)|
 |[setvbuf – konstanty](../c-runtime-library/setvbuf-constants.md)|[Konstanty sdílení](../c-runtime-library/sharing-constants.md)|
 |[signal – konstanty](../c-runtime-library/signal-constants.md)|[signal – konstanty akce](../c-runtime-library/signal-action-constants.md)|
@@ -43,7 +43,7 @@ Běhové knihovny Microsoft obsahuje definice pro globální konstanty použív�
 |[TZNAME_MAX](../c-runtime-library/tzname-max.md)|[_WAIT_CHILD, _WAIT_GRANDCHILD](../c-runtime-library/wait-child-wait-grandchild.md)|
 |[WCHAR_MAX](../c-runtime-library/wchar-max.md)|[WCHAR_MIN](../c-runtime-library/wchar-min.md)|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace knihovny CRT](../c-runtime-library/c-run-time-library-reference.md)<br/>
 [Globální proměnné](../c-runtime-library/global-variables.md)<br/>

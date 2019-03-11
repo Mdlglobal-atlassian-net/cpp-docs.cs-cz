@@ -25,12 +25,12 @@ helpviewer_keywords:
 - _A_HIDDEN constant
 - _A_RDONLY constant
 ms.assetid: 8dc8ccb9-99f5-446b-876c-7ebecc2f764f
-ms.openlocfilehash: 90aacc1e1e8c45f739c1f6aec973f55e7fab67d9
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 271459c33cdcc1110222871bdca06d3f04edb497
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220176"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750881"
 ---
 # <a name="file-attribute-constants"></a>Konstanty atributu souboru
 
@@ -57,7 +57,7 @@ Atributy jsou reprezentované prostřednictvím následujících konstant manife
 
 Je možné kombinovat více konstant s operátor OR (&#124;).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Funkce hledání názvů souborů](../c-runtime-library/filename-search-functions.md)<br/>
 [Globální konstanty](../c-runtime-library/global-constants.md)

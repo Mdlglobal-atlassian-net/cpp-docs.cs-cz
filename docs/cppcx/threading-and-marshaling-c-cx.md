@@ -8,12 +8,12 @@ helpviewer_keywords:
 - agility, C++/CX
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
-ms.openlocfilehash: ddf59e8df82b1ec98f4e1fabe9917027bdf0c75b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c5bce60e564bef490bcfafd6f8559dffe5fd4f1d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426755"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751697"
 ---
 # <a name="threading-and-marshaling-ccx"></a>Práce s vlákny a zařazování (C + +/ CX)
 
@@ -122,7 +122,7 @@ Nezapečetěné třídy musí mít atribut nastavení zařazování a dělení n
 
 Práce s vlákny a zařazovací informace, který vyžaduje prostředí Windows Runtime komponenty třetích stran je zadáno v manifestu registrační informace aplikace pro komponentu. Doporučujeme vám, abyste provedli všechny vaše součásti prostředí Windows Runtime agile. Tím se zajistí, že kód klienta můžete volat vaše komponenta z jakékoli vlákno v aplikaci a zlepšuje výkon při volání selžou, protože jsou přímá volání, které mají žádné zařazování. Pokud vytváříte vaší třídy tímto způsobem, pak klientský kód nebude muset používat `Platform::Agile<T>` využívat vaší třídy.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [ThreadingModel](/uwp/api/Windows.Foundation.Metadata.ThreadingModel)<br/>
 [MarshallingBehavior](/uwp/api/windows.foundation.metadata.marshalingbehaviorattribute)

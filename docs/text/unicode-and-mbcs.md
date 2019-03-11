@@ -13,12 +13,12 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - runtime [C++], language portability
 ms.assetid: 677baec6-71b4-4579-94df-64f18bc117c4
-ms.openlocfilehash: 3296b5204faec393d3d503dc106733f97b32b248
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5883dcce5c290b197dcaa61296eb2f44f3bb882c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582595"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741824"
 ---
 # <a name="unicode-and-mbcs"></a>Unicode a MBCS
 
@@ -41,7 +41,7 @@ Knihovny Microsoft Foundation Classes (MFC), knihovny run-time jazyka C pro Visu
 
 Podle definice je znaková sada ASCII podmnožinou všech vícebajtových znakových sad. V mnoha vícebajtové znakové sady každý znak v rozsahu 0x00 – 0x7F je stejný jako znak, který má stejnou hodnotu ve znakové sadě ASCII. V řetězce znaků ASCII a znakové sady MBCS, například 1bajtových znak NULL ('\0') má hodnotu 0x00 a označuje ukončujícího znaku null.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Text a řetězce](../text/text-and-strings-in-visual-cpp.md)<br/>
 [Podpora národních prostředí](../text/international-enabling.md)

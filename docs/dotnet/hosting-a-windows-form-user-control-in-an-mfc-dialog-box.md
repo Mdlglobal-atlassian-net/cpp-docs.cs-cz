@@ -6,12 +6,12 @@ helpviewer_keywords:
 - hosting Windows Forms control [C++]
 - Windows Forms [C++], MFC support
 ms.assetid: 9f66ee52-b7cb-4ffd-8306-392a5da990d8
-ms.openlocfilehash: 921e6fac32d37f8976d53d49adab72fb27ab5e99
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56cf00da71fe6c47e39de2a8fc06df572a301a61
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632216"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748564"
 ---
 # <a name="hosting-a-windows-form-user-control-in-an-mfc-dialog-box"></a>Hostitelské poskytování uživatelského rozhraní Windows Form v dialogovém okně knihovny MFC
 
@@ -26,15 +26,15 @@ Ukázková aplikace, která ukazuje použití s knihovnou MFC modelu Windows For
 
 [Postupy: Vytvoření uživatelského ovládacího prvku a jeho hostování v dialogovém okně](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)
 
-[Postupy: vytvoření DDX/DDV datové vazby s formuláři Windows](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)
+[Postupy: Proveďte DDX/DDV datové vazby pomocí Windows Forms](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)
 
-[Postupy: Zpracování událostí modelu Windows Forms z nativních tříd jazyka C++](../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
+[Postupy: Zpracování jímky událostí modelu Windows Forms z nativních tříd jazyka C++](../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
 ## <a name="reference"></a>Odkaz
 
 [CWinFormsControl – třída](../mfc/reference/cwinformscontrol-class.md) &#124; [CDialog – třída](../mfc/reference/cdialog-class.md) &#124; [třída CWnd](../mfc/reference/cwnd-class.md)&#124; <xref:System.Windows.Forms.Control>
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
 [Windows Forms a MFC programování rozdíly](../dotnet/windows-forms-mfc-programming-differences.md)<br/>

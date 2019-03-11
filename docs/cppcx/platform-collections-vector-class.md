@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: fb03f7a00dfabe9d082ca761552af99e552d3190
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5466f1d1c8987724aa0768cd8915e06b62b031ad
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499866"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747122"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections:: Vector – třída
 
@@ -96,7 +96,7 @@ Pokud se pokusíte použít **vektoru** zadejte veřejné návratová hodnota ne
 |||
 |-|-|
 |Název|Popis|
-|událost [Windows::Foundation::Collection::VectorChangedEventHandler\<T > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Nastane při změně vektoru.|
+|event [Windows::Foundation::Collection::VectorChangedEventHandler\<T>^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Nastane při změně vektoru.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -149,7 +149,7 @@ Iterátor odkazující na první prvek ve vektoru.
 
 ### <a name="remarks"></a>Poznámky
 
-Praktický způsob uložení iterátorů vrácené First() je přiřadit návratovou hodnotu proměnné, která je deklarována s **automaticky** klíčovým slovem odvození typu. Například `auto x = myVector->First();`. Tato iterátoru ví délka kolekce.
+Praktický způsob uložení iterátorů vrácené First() je přiřadit návratovou hodnotu proměnné, která je deklarována s **automaticky** klíčovým slovem odvození typu. Například, `auto x = myVector->First();`. Tato iterátoru ví délka kolekce.
 
 Když budete potřebovat pár iterátorů předání do funkce STL, používat bezplatné funkce [Windows::Foundation:: Collections –:: začít](../cppcx/begin-function.md) a [Windows::Foundation::Collections::end](../cppcx/end-function.md)
 
@@ -189,7 +189,7 @@ virtual unsigned int GetMany(
 *startIndex*<br/>
 Index založený na nule začátek položky, které chcete načíst.
 
-*cíl*<br/>
+*dest*<br/>
 Pole přidělené volajícímu položek, které začíná v elementu určené *startIndex* a konec na poslední prvek ve vektoru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -257,7 +257,7 @@ virtual void InsertAt(unsigned int index, T item)
 *index*<br/>
 Nulovým základem celé číslo bez znaménka, která určuje konkrétní prvek v objektu vektoru.
 
-*Položka*<br/>
+*item*<br/>
 Položky k vložení do vektoru za prvek určeného *index*. Typ *položky* je definován *T* typename.
 
 ## <a name="removeat"></a>  Vector::removeAt – metoda
@@ -297,7 +297,7 @@ virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 
 ### <a name="parameters"></a>Parametry
 
-*směrování žádostí na aplikace*<br/>
+*arr*<br/>
 Pole objektů, jehož typ je definován *T* typename.
 
 ## <a name="setat"></a>  Vector::SetAt – metoda
@@ -315,7 +315,7 @@ virtual void SetAt(unsigned int index, T item);
 *index*<br/>
 Nulovým základem celé číslo bez znaménka, která určuje konkrétní prvek v objektu vektoru.
 
-*Položka*<br/>
+*item*<br/>
 Hodnota pro přiřazení k zadanému prvku. Typ *položky* je definován *T* typename.
 
 ## <a name="size"></a>  Vector::size – metoda
@@ -360,13 +360,13 @@ Vector(std::initializer_list<T> il);
 *a*<br/>
 A [std::array](../standard-library/array-class-stl.md) , který se použije k inicializují vektor.
 
-*směrování žádostí na aplikace*<br/>
+*arr*<br/>
 A [Platform::Array](../cppcx/platform-array-class.md) , který se použije k inicializují vektor.
 
 *Inicializace*<br/>
 Typ kolekce objektů, které slouží k inicializaci aktuální vektoru.
 
-*IL*<br/>
+*il*<br/>
 A [std::initializer_list](../standard-library/initializer-list-class.md) objektů typu *T* , který se použije k inicializují vektor.
 
 *N*<br/>
@@ -387,10 +387,10 @@ Ukazatel `std::vector` , který slouží k inicializaci aktuální vektoru.
 *první*<br/>
 První prvek v sekvenci objektů, které se používají k inicializaci aktuální vektoru. Typ *první* je předáno *perfektní přesměrování*. Další informace najdete v tématu [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-*poslední*<br/>
+*last*<br/>
 Po posledním prvku v sekvenci objektů, které se používají k inicializaci aktuální vektoru. Typ *poslední* je předáno *perfektní přesměrování*. Další informace najdete v tématu [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Platforma Namespace](platform-namespace-c-cx.md)<br/>
 [Vytváření komponent Windows Runtime v jazyce C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

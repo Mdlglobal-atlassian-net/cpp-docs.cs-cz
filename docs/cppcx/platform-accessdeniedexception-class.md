@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::AccessDeniedException
 ms.assetid: 6ae2155b-7b16-4587-8d2d-da05eab4c7e9
-ms.openlocfilehash: 4865492e3b5d8e4acc35e58081a226c9e66ed99f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4abbac977a256ff27f99caaf77393450d3ccf858
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588146"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752412"
 ---
 # <a name="platformaccessdeniedexception-class"></a>Platform::accessdeniedexception – třída
 
@@ -33,12 +33,12 @@ Pokud došlo k této výjimce, ujistěte se, že si vyžádáte příslušnou fu
 
 **Minimální podporovaná klienta:** Windows 8
 
-**Minimální podporovaná serverem:** systému Windows Server 2012
+**Minimální podporovaná serveru:** Windows Server 2012
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 **Metadata:** platform.winmd
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Platform::COMException – třída](../cppcx/platform-comexception-class.md)

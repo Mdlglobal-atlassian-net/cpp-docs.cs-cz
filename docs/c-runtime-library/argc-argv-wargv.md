@@ -17,12 +17,12 @@ helpviewer_keywords:
 - __wargv
 - __argc
 ms.assetid: 17001b0a-04ad-4762-b3a6-c54847f02d7c
-ms.openlocfilehash: de0c4783b30764350eea35007583c1481ab01024
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f428d81215193361a409473a411eb5c4d91fa997
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575315"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743308"
 ---
 # <a name="argc-argv-wargv"></a>__argc __argv, __wargv
 
@@ -52,12 +52,12 @@ Přenositelný kód, doporučujeme použít argumenty předané `main` získat a
 
 |Globální proměnná|Požadovaný hlavičkový soubor|
 |---------------------|---------------------|
-|`__argc`, `__argv`, `__wargv`|\<stdlib.h >, \<cstdlib – > (C++)|
+|`__argc`, `__argv`, `__wargv`|\<stdlib.h>, \<cstdlib> (C++)|
 
 `__argc`, `__argv`, a `__wargv` jsou rozšíření společnosti Microsoft. Informace o kompatibilitě naleznete v tématu [kompatibility](../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Globální proměnné](../c-runtime-library/global-variables.md)<br/>
-[main: spuštění programu](../cpp/main-program-startup.md)<br/>
+[hlavní: Spuštění programu](../cpp/main-program-startup.md)<br/>
 [Použití funkce wmain namísto main](../cpp/using-wmain-instead-of-main.md)

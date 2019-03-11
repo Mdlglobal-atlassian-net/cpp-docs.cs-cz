@@ -22,12 +22,12 @@ helpviewer_keywords:
 - SAFEARRAY, marshaling
 - ADO.NET [C++], marshaling SAFEARRAY types
 ms.assetid: b0cd987d-1ea7-4f76-ba01-cbd52503d06d
-ms.openlocfilehash: 896cad4d3a679cd1832b073f4b1f355a70a608d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b258e574b912b1c32e5ffae7ba29cfc5f9903685
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638474"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749344"
 ---
 # <a name="data-access-using-adonet-ccli"></a>Přístup k datům s použitím technologie ADO.NET (C++/CLI)
 
@@ -43,7 +43,7 @@ Ukazuje, jak přidat nativní řetězec (`char *`) k databázi a způsobu zařaz
 
 V tomto příkladu je třída DatabaseClass vytvořena pro interakci s technologie ADO.NET <xref:System.Data.DataTable> objektu. Všimněte si, že tato třída je nativní kód C++ `class` (ve srovnání s `ref class` nebo `value class`). To je nezbytné, protože chceme použít tuto třídu z nativního kódu a spravovanými typy nelze používat v nativním kódu. Tato třída se zkompiluje do cílové CLR, jak je uvedeno ve `#pragma managed` směrnice předchozí deklaraci třídy. Další informace o této směrnice, naleznete v tématu [spravované, nespravované](../preprocessor/managed-unmanaged.md).
 
-Všimněte si soukromému členu třídy DatabaseClass: `gcroot<DataTable ^> table`. Protože nativní typy nemůžou obsahovat spravované typy `gcroot` – klíčové slovo je nezbytné. Další informace o `gcroot`, naleznete v tématu [postupy: deklarování zpracovává v nativních typech](../dotnet/how-to-declare-handles-in-native-types.md).
+Všimněte si soukromému členu třídy DatabaseClass: `gcroot<DataTable ^> table`. Protože nativní typy nemůžou obsahovat spravované typy `gcroot` – klíčové slovo je nezbytné. Další informace o `gcroot`, naleznete v tématu [jak: Deklarace obslužných rutin v nativních typech](../dotnet/how-to-declare-handles-in-native-types.md).
 
 Zbytek kódu v tomto příkladu je nativní kód C++, jako je indikován `#pragma unmanaged` předchází `main`. V tomto příkladu jsme se vytváří novou instanci třídy DatabaseClass a volání metody k vytvoření tabulky a naplňte několik řádků v tabulce. Všimněte si, že nativní C++ řetězce jsou předávány jako hodnoty pro sloupec databáze StringCol. Uvnitř DatabaseClass, tyto řetězce jsou zařazeny do spravované řetězce pomocí zařazování funkcemi produktu <xref:System.Runtime.InteropServices?displayProperty=fullName> oboru názvů. Konkrétně metoda <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A> použitý k zařazování `char *` k <xref:System.String>a metodu <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> použitý k zařazování <xref:System.String> k `char *`.
 
@@ -161,7 +161,7 @@ StringCol: This is string 2.
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_string_native.cpp
     ```
 
-## <a name="marshal_bstr"></a> Zařazování řetězců BSTR pro technologii ADO.NET
+## <a name="marshal_bstr"></a> Marshal BSTR Strings for ADO.NET
 
 Ukazuje, jak přidat řetězec modelu COM (`BSTR`) k databázi a způsobu zařazení <xref:System.String?displayProperty=fullName> z databáze `BSTR`.
 
@@ -169,7 +169,7 @@ Ukazuje, jak přidat řetězec modelu COM (`BSTR`) k databázi a způsobu zařaz
 
 V tomto příkladu je třída DatabaseClass vytvořena pro interakci s technologie ADO.NET <xref:System.Data.DataTable> objektu. Všimněte si, že tato třída je nativní kód C++ `class` (ve srovnání s `ref class` nebo `value class`). To je nezbytné, protože chceme použít tuto třídu z nativního kódu a spravovanými typy nelze používat v nativním kódu. Tato třída se zkompiluje do cílové CLR, jak je uvedeno ve `#pragma managed` směrnice předchozí deklaraci třídy. Další informace o této směrnice, naleznete v tématu [spravované, nespravované](../preprocessor/managed-unmanaged.md).
 
-Všimněte si soukromému členu třídy DatabaseClass: `gcroot<DataTable ^> table`. Protože nativní typy nemůžou obsahovat spravované typy `gcroot` – klíčové slovo je nezbytné. Další informace o `gcroot`, naleznete v tématu [postupy: deklarování zpracovává v nativních typech](../dotnet/how-to-declare-handles-in-native-types.md).
+Všimněte si soukromému členu třídy DatabaseClass: `gcroot<DataTable ^> table`. Protože nativní typy nemůžou obsahovat spravované typy `gcroot` – klíčové slovo je nezbytné. Další informace o `gcroot`, naleznete v tématu [jak: Deklarace obslužných rutin v nativních typech](../dotnet/how-to-declare-handles-in-native-types.md).
 
 Zbytek kódu v tomto příkladu je nativní kód C++, jako je indikován `#pragma unmanaged` předchází `main`. V tomto příkladu jsme se vytváří novou instanci třídy DatabaseClass a volání metody k vytvoření tabulky a naplňte několik řádků v tabulce. Všimněte si, že řetězců modelu COM jsou předávány jako hodnoty pro sloupec databáze StringCol. Uvnitř DatabaseClass, tyto řetězce jsou zařazeny do spravované řetězce pomocí zařazování funkcemi produktu <xref:System.Runtime.InteropServices?displayProperty=fullName> oboru názvů. Konkrétně metoda <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> použitý k zařazování `BSTR` k <xref:System.String>a metodu <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> použitý k zařazování <xref:System.String> k `BSTR`.
 
@@ -303,7 +303,7 @@ Ukazuje, jak přidat nativní řetězec znaků Unicode (`wchar_t *`) k databázi
 
 V tomto příkladu je třída DatabaseClass vytvořena pro interakci s technologie ADO.NET <xref:System.Data.DataTable> objektu. Všimněte si, že tato třída je nativní kód C++ `class` (ve srovnání s `ref class` nebo `value class`). To je nezbytné, protože chceme použít tuto třídu z nativního kódu a spravovanými typy nelze používat v nativním kódu. Tato třída se zkompiluje do cílové CLR, jak je uvedeno ve `#pragma managed` směrnice předchozí deklaraci třídy. Další informace o této směrnice, naleznete v tématu [spravované, nespravované](../preprocessor/managed-unmanaged.md).
 
-Všimněte si soukromému členu třídy DatabaseClass: `gcroot<DataTable ^> table`. Protože nativní typy nemůžou obsahovat spravované typy `gcroot` – klíčové slovo je nezbytné. Další informace o `gcroot`, naleznete v tématu [postupy: deklarování zpracovává v nativních typech](../dotnet/how-to-declare-handles-in-native-types.md).
+Všimněte si soukromému členu třídy DatabaseClass: `gcroot<DataTable ^> table`. Protože nativní typy nemůžou obsahovat spravované typy `gcroot` – klíčové slovo je nezbytné. Další informace o `gcroot`, naleznete v tématu [jak: Deklarace obslužných rutin v nativních typech](../dotnet/how-to-declare-handles-in-native-types.md).
 
 Zbytek kódu v tomto příkladu je nativní kód C++, jako je indikován `#pragma unmanaged` předchází `main`. V tomto příkladu jsme se vytváří novou instanci třídy DatabaseClass a volání metody k vytvoření tabulky a naplňte několik řádků v tabulce. Všimněte si, že řetězce Unicode C++ jsou předávány jako hodnoty pro sloupec databáze StringCol. Uvnitř DatabaseClass, tyto řetězce jsou zařazeny do spravované řetězce pomocí zařazování funkcemi produktu <xref:System.Runtime.InteropServices?displayProperty=fullName> oboru názvů. Konkrétně metoda <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> použitý k zařazování `wchar_t *` k <xref:System.String>a metodu <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalUni%2A> použitý k zařazování <xref:System.String> k `wchar_t *`.
 
@@ -429,7 +429,7 @@ Ukazuje, jak přidat nativní `VARIANT` k databázi a způsobu zařazení <xref:
 
 V tomto příkladu je třída DatabaseClass vytvořena pro interakci s technologie ADO.NET <xref:System.Data.DataTable> objektu. Všimněte si, že tato třída je nativní kód C++ `class` (ve srovnání s `ref class` nebo `value class`). To je nezbytné, protože chceme použít tuto třídu z nativního kódu a spravovanými typy nelze používat v nativním kódu. Tato třída se zkompiluje do cílové CLR, jak je uvedeno ve `#pragma managed` směrnice předchozí deklaraci třídy. Další informace o této směrnice, naleznete v tématu [spravované, nespravované](../preprocessor/managed-unmanaged.md).
 
-Všimněte si soukromému členu třídy DatabaseClass: `gcroot<DataTable ^> table`. Protože nativní typy nemůžou obsahovat spravované typy `gcroot` – klíčové slovo je nezbytné. Další informace o `gcroot`, naleznete v tématu [postupy: deklarování zpracovává v nativních typech](../dotnet/how-to-declare-handles-in-native-types.md).
+Všimněte si soukromému členu třídy DatabaseClass: `gcroot<DataTable ^> table`. Protože nativní typy nemůžou obsahovat spravované typy `gcroot` – klíčové slovo je nezbytné. Další informace o `gcroot`, naleznete v tématu [jak: Deklarace obslužných rutin v nativních typech](../dotnet/how-to-declare-handles-in-native-types.md).
 
 Zbytek kódu v tomto příkladu je nativní kód C++, jako je indikován `#pragma unmanaged` předchází `main`. V tomto příkladu jsme se vytváří novou instanci třídy DatabaseClass a volání metody k vytvoření tabulky a naplňte několik řádků v tabulce. Všimněte si, že nativní `VARIANT` typy jsou předávány jako hodnoty pro sloupec databáze ObjectCol. Uvnitř DatabaseClass tyto `VARIANT` typy, které jsou zařazeny do spravované objekty zařazování funkce součástí <xref:System.Runtime.InteropServices?displayProperty=fullName> oboru názvů. Konkrétně metoda <xref:System.Runtime.InteropServices.Marshal.GetObjectForNativeVariant%2A> použitý k zařazování `VARIANT` k <xref:System.Object>a metodu <xref:System.Runtime.InteropServices.Marshal.GetNativeVariantForObject%2A> použitý k zařazování <xref:System.Object> k `VARIANT`.
 
@@ -570,7 +570,7 @@ Ukazuje, jak přidat nativní `SAFEARRAY` k databázi a způsobu zařazení spra
 
 V tomto příkladu je třída DatabaseClass vytvořena pro interakci s technologie ADO.NET <xref:System.Data.DataTable> objektu. Všimněte si, že tato třída je nativní kód C++ `class` (ve srovnání s `ref class` nebo `value class`). To je nezbytné, protože chceme použít tuto třídu z nativního kódu a spravovanými typy nelze používat v nativním kódu. Tato třída se zkompiluje do cílové CLR, jak je uvedeno ve `#pragma managed` směrnice předchozí deklaraci třídy. Další informace o této směrnice, naleznete v tématu [spravované, nespravované](../preprocessor/managed-unmanaged.md).
 
-Všimněte si soukromému členu třídy DatabaseClass: `gcroot<DataTable ^> table`. Protože nativní typy nemůžou obsahovat spravované typy `gcroot` – klíčové slovo je nezbytné. Další informace o `gcroot`, naleznete v tématu [postupy: deklarování zpracovává v nativních typech](../dotnet/how-to-declare-handles-in-native-types.md).
+Všimněte si soukromému členu třídy DatabaseClass: `gcroot<DataTable ^> table`. Protože nativní typy nemůžou obsahovat spravované typy `gcroot` – klíčové slovo je nezbytné. Další informace o `gcroot`, naleznete v tématu [jak: Deklarace obslužných rutin v nativních typech](../dotnet/how-to-declare-handles-in-native-types.md).
 
 Zbytek kódu v tomto příkladu je nativní kód C++, jako je indikován `#pragma unmanaged` předchází `main`. V tomto příkladu jsme se vytváří novou instanci třídy DatabaseClass a volání metody k vytvoření tabulky a naplňte několik řádků v tabulce. Všimněte si, že nativní `SAFEARRAY` typy jsou předávány jako hodnoty pro sloupec databáze ArrayIntsCol. Uvnitř DatabaseClass tyto `SAFEARRAY` typy, které jsou zařazeny do spravované objekty zařazování funkce součástí <xref:System.Runtime.InteropServices?displayProperty=fullName> oboru názvů. Konkrétně metoda <xref:System.Runtime.InteropServices.Marshal.Copy%2A> použitý k zařazování `SAFEARRAY` spravované pole celých čísel a metodu <xref:System.Runtime.InteropServices.Marshal.Copy%2A> použitý k zařazování spravovaného pole celých čísel na `SAFEARRAY`.
 
@@ -721,11 +721,11 @@ Informace týkající se zabezpečení zahrnující ADO.NET naleznete v tématu 
 
 ## <a name="related-sections"></a>Související oddíly
 
-|Oddíl|Popis|
+|Sekce|Popis|
 |-------------|-----------------|
 |[ADO.NET](/dotnet/framework/data/adonet/index)|Poskytuje přehled ADO.NET, sadu tříd, které zprostředkovávají služby data access services pro programátora rozhraní .NET.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 

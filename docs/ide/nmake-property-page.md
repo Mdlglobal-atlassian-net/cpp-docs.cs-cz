@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - NMake property page
 ms.assetid: bd20cb52-9f1d-4240-b4fc-4f43205ac94b
-ms.openlocfilehash: 7d890794d706a687b9cf945022aa4c230684131d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18d32dd85c39586576686942968a3f6e1735337d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473538"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749893"
 ---
 # <a name="nmake-property-page"></a>NMake – stránka vlastností
 
@@ -70,7 +70,7 @@ Informace o tom, jak získat přístup **NMake** stránky vlastností naleznete 
 
 Informace o tom, jak prostřednictvím kódu programu získat přístup ke členům tohoto objektu najdete v tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCNMakeTool>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Stránky vlastností](../ide/property-pages-visual-cpp.md)<br>
 [Postupy: Povolení technologie IntelliSense pro projekty souborů pravidel](../ide/how-to-enable-intellisense-for-makefile-projects.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Postupy: Přidání směrování příkazů do ovládacího prvku Windows Forms'
+title: 'Postupy: Příkaz přidat ovládací prvek směrování Windows Forms'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - command routing [C++], adding to Windows Forms controls
 - Windows Forms controls [C++], command routing
 ms.assetid: bf138ece-b463-442a-b0a0-de7063a760c0
-ms.openlocfilehash: b3f93574e007fdb1b7d4009d85c573223091adf9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f633cf744314833409a3ffeacf8c850429e099c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447109"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750295"
 ---
-# <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>Postupy: Přidání směrování příkazů do ovládacího prvku Windows Forms
+# <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>Postupy: Příkaz přidat ovládací prvek směrování Windows Forms
 
 [CWinFormsView](../mfc/reference/cwinformsview-class.md) směřuje příkazy a aktualizace příkazů zpráv uživatelského rozhraní do uživatelského ovládacího prvku, aby mohla zpracovávat příkazy knihovny MFC (například rámec nabídky položek a tlačítka panelu nástrojů).
 
@@ -21,11 +21,11 @@ Uživatelský ovládací prvek používá [ICommandTarget::Initialize](../mfc/re
 
 `CWinFormsView` zpracovává několik obecných zobrazovacích oznámení knihovny MFC předáváním do spravovaného uživatelského ovládacího prvku. Tato oznámení zahrnují [OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate), [OnUpdate](../mfc/reference/iview-interface.md#onupdate) a [OnActivateView](../mfc/reference/iview-interface.md#onactivateview) metody.
 
-Toto téma předpokládá, že jste již dříve dokončili [postupy: vytvoření uživatelského ovládacího prvku a hostitele v dialogovém okně](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) a [postupy: vytvoření uživatelského ovládacího prvku a poskytování zobrazení MDI hostitele](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
+Toto téma předpokládá, že jste již dříve dokončili [jak: Vytvoření uživatelského ovládacího prvku a hostitele v dialogovém okně](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) a [jak: Vytvoření uživatelského ovládacího prvku a hostitelské poskytování zobrazení MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
 
 ### <a name="to-create-the-mfc-host-application"></a>Chcete-li vytvořit hostitelskou aplikaci knihovny MFC
 
-1. Otevřete Knihovna ovládacích prvků formulářů Windows, kterou jste vytvořili v [postupy: vytvoření uživatelského ovládacího prvku a hostitele v dialogovém okně](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
+1. Otevřete Knihovna ovládacích prvků formulářů Windows, kterou jste vytvořili v [jak: Vytvoření uživatelského ovládacího prvku a hostitele v dialogovém okně](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
 
 1. Přidejte odkaz na mfcmifc80.dll, což lze provést kliknutím pravým tlačítkem myši na uzel projektu v **Průzkumníka řešení**, kde vyberou **přidat**, **odkaz**a poté přejděte na Microsoft Visual Studio 10.0\VC\atlmfc\lib.
 
@@ -70,7 +70,7 @@ Toto téma předpokládá, že jste již dříve dokončili [postupy: vytvořen�
     }
     ```
 
-1. Otevřete aplikaci knihovny MFC, kterou jste vytvořili v [postupy: vytvoření uživatelského ovládacího prvku a poskytování zobrazení MDI hostitele](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
+1. Otevřete aplikaci knihovny MFC, kterou jste vytvořili v [jak: Vytvoření uživatelského ovládacího prvku a hostitelské poskytování zobrazení MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
 
 1. Přidat položku nabídky, která se vyvolá `singleMenuHandler`.
 
@@ -88,7 +88,7 @@ Toto téma předpokládá, že jste již dříve dokončili [postupy: vytvořen�
 
    Vyberte možnost nabídky, kterou jste přidali. Všimněte si, že je volána metoda v knihovně .dll.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Hostitelské poskytování uživatelského ovládacího prvku Windows Forms jako zobrazení MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)<br/>
 [ICommandSource – rozhraní](../mfc/reference/icommandsource-interface.md)<br/>

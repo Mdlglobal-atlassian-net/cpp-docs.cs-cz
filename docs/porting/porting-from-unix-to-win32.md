@@ -10,12 +10,12 @@ helpviewer_keywords:
 - porting to Win32 [C++]
 - Win32 applications [C++], migrating from UNIX
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: 70cbff207931ada378a89b978acf13fadb3a8744
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 1cf5660d1ad2f0fdde02837eeffb642c4a74e5ea
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694085"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744500"
 ---
 # <a name="porting-from-unix-to-win32"></a>Portování ze systému UNIX do Win32
 
@@ -77,7 +77,7 @@ Základní aplikace v systému UNIX, včetně mnoha aplikace CGI, by měl port s
 
 Možnost UNIX programátoři podívat je subsystém Windows POSIX. Však podporuje pouze 1003.1 POSIX, která byla pouze verze POSIX standardizované při vytvoření Windows NT. Od té doby došlo malé nároky pro rozšíření subsystému, protože většina aplikací se převedl do Win32. Systém 1003.1 je omezená relevantní pro plně funkční aplikace, protože nezahrnuje mnoho možností (například ve verzi 1003.2 podporu sítě a tak dále). Úplné vybrané aplikace spuštěné v subsystému Windows POSIX nebudou mít přístup k funkcím Windows k dispozici pro aplikace Win32, jako jsou soubory mapované paměti, sítě a grafiky. Aplikace, jako je GREP, VI a LS jsou hlavního cíle podsystému Windows POSIX.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Průvodce přenosem a upgradem Visual C++](visual-cpp-change-history-2003-2015.md)<br/>
 [UNIX](../c-runtime-library/unix.md)<br/>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, versions
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 7f40e59ae3e5e883827a212a16d1dd19822dc136
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d3c6e25594eb3bb01ad3fc995a24cdc723d5726
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463749"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751892"
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Nástroje Visual C++ a funkcí v edicích sady Visual Studio
 
@@ -34,9 +34,9 @@ Následující tabulky popisují funkce Visual C++, které jsou k dispozici v sa
 |Kompilátor|Visual Studio Express pro Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |X86 32-bit kompilátor|X|X|X|X|
-|Křížový kompilátor X86_arm|X||X|X|
+|X86_arm cross-compiler|X||X|X|
 |x64 64-bit kompilátor|||X|X|
-|X86_ x64 křížový kompilátor|X|X|X|X|
+|X86_ x64 cross-compiler|X|X|X|X|
 
 ## <a name="libraries-and-headers"></a>Knihovny a hlavičky
 
@@ -52,7 +52,7 @@ Následující tabulky popisují funkce Visual C++, které jsou k dispozici v sa
 
 ## <a name="project-templates"></a>Šablony projektů
 
-|Šablony|Visual Studio Express pro Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
+|Šablona|Visual Studio Express pro Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |Šablony XAML pro UPW, Windows 8.1, Windows Phone 8.0|X||X|X|
 |Aplikace Direct3D|X||X|X|
@@ -167,12 +167,12 @@ Následující tabulky popisují funkce Visual C++, které jsou k dispozici v sa
 |Testování jednotek (spravované framework)||X|X|X|
 |Pokrytí kódu||||X|
 |Manuální testování||||X|
-|průzkumné testování||||X|
+|nahodilé testování||||X|
 |Správa testovacích případů||||X|
 |Kód mapy a závislostí grafů|||jen pro čtení|X|
 |Ladění mapy kódu||||X|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Instalace sady Visual Studio](/visualstudio/install/install-visual-studio)<br/>
 [Co je nového v sadě Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: 78ba4afd8a7fad87f09c2a403d25d3c6d52cc0c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 30a1b57a12d5a238c80f9bb8f0a069385911a8e1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573469"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746901"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>Typy souborů vytvořených pro projekty Visual C++
 
@@ -51,39 +51,39 @@ Následující tabulka uvádí běžné soubory projektu v jazyce Visual C++ a u
 |--------------------|----------|--------------|
 |asmx|Zdroj|Nasazení souboru.|
 |.asp|Zdroj|Stránka ASP.|
-|.ATP|Projekt|Soubor šablony projektu aplikace.|
+|.atp|Project|Soubor šablony projektu aplikace.|
 |.bmp, .dib, .gif, .jpg, .jpe, PNG|Prostředek|Obecné obrazových souborů.|
-|.BSC|Kompilace|Soubor kódu prohlížeče.|
-|.cpp, .c|Zdroj|Soubory hlavní zdrojového kódu pro vaši aplikaci.|
+|.bsc|Kompilace|Soubor kódu prohlížeče.|
+|.cpp; .c|Zdroj|Soubory hlavní zdrojového kódu pro vaši aplikaci.|
 |.cur|Prostředek|Rastrový obrázek kurzoru.|
-|.DBP|Projekt|Soubor projektu databáze.|
+|.dbp|Project|Soubor projektu databáze.|
 |.disco|Zdroj|Dynamicky zpřístupněný soubor dokumentu. Zpracovává zjišťování XML webové služby.|
-|.exe, .dll|Projekt|Soubory knihoven DLL nebo spustitelného souboru.|
+|.exe, .dll|Project|Soubory knihoven DLL nebo spustitelného souboru.|
 |.h|Zdroj|Záhlaví (zahrnout) souboru.|
 |htm, HTML, .xsp, ASP, HTC, HTA, .xml|Prostředek|Běžné webové soubory.|
-|. HxC|Projekt|Projekt soubor nápovědy.|
+|.HxC|Project|Projekt soubor nápovědy.|
 |.ico|Prostředek|Rastrový obrázek ikony.|
-|IDB|Kompilace|Stav soubor obsahující informace o závislostech mezi zdrojovými soubory a definice tříd, které je možné použít kompilátor během minimálního opětovného sestavení a přírůstková kompilace. Použití [/Fd](../build/reference/fd-program-database-file-name.md) – možnost kompilátoru zadat název souboru IDB. Zobrazit [/Gm (povolení minimálního opětovného sestavení)](../build/reference/gm-enable-minimal-rebuild.md) Další informace.|
+|.idb|Kompilace|Stav soubor obsahující informace o závislostech mezi zdrojovými soubory a definice tříd, které je možné použít kompilátor během minimálního opětovného sestavení a přírůstková kompilace. Použití [/Fd](../build/reference/fd-program-database-file-name.md) – možnost kompilátoru zadat název souboru IDB. Zobrazit [/Gm (povolení minimálního opětovného sestavení)](../build/reference/gm-enable-minimal-rebuild.md) Další informace.|
 |IDL|Kompilace|Soubor definice jazyka rozhraní. Zobrazit [soubor Interface Definition (IDL)](/windows/desktop/Rpc/the-interface-definition-language-idl-file) v sadě Windows SDK pro další informace.|
 |.ilk|Propojení|Soubor přírůstkové propojení. Zobrazit [/INCREMENTAL](../build/reference/incremental-link-incrementally.md) Další informace.|
 |.map|Propojení|Textový soubor obsahující informace linkeru. Použití [/Fm](../build/reference/fm-name-mapfile.md) pojmenovat soubor mapování – možnost kompilátoru. Zobrazit [/MAP](../build/reference/map-generate-mapfile.md) Další informace.|
-|.mfcribbon ms|Prostředek|Soubor prostředků, která obsahuje kód XML, který definuje tlačítka, ovládací prvky a atributy pásu karet. Další informace najdete v tématu [Návrhář pásu karet (MFC)](../mfc/ribbon-designer-mfc.md).|
+|.mfcribbon-ms|Prostředek|Soubor prostředků, která obsahuje kód XML, který definuje tlačítka, ovládací prvky a atributy pásu karet. Další informace najdete v tématu [Návrhář pásu karet (MFC)](../mfc/ribbon-designer-mfc.md).|
 |obj, .o||Objektové soubory zkompilovány, ale není propojená.|
 |.pch|Ladit|Soubor předkompilované hlavičky.|
 |.rc, .rc2|Prostředek|[Soubory skriptu prostředků](../windows/working-with-resource-files.md) pro generování prostředků.|
-|.SBR|Kompilace|Zprostředkující soubor zdrojového prohlížeče. Vstupní soubor pro [BSCMAKE](../build/reference/bscmake-options.md).|
+|.sbr|Kompilace|Zprostředkující soubor zdrojového prohlížeče. Vstupní soubor pro [BSCMAKE](../build/reference/bscmake-options.md).|
 |.sln|Řešení|[Řešení](/visualstudio/ide/solutions-and-projects-in-visual-studio) souboru.|
 |.suo|Řešení|Soubor možností řešení.|
 |.txt|Prostředek|Textový soubor, obvykle v souboru "readme".|
-|.Vap|Projekt|Soubor projektu Visual Studio Analyzer.|
+|.Vap|Project|Soubor projektu Visual Studio Analyzer.|
 |.vbg|Řešení|Soubor projektu kompatibilní skupiny.|
-|.VBP, .vip, .vbproj|Projekt|Soubor projektu jazyka Visual Basic.|
-|.vcxitems|Projekt|Projekt sdílené položky ke sdílení souborů kód mezi více projekty C++. Zobrazit [soubory projektu a souborů pravidel](../ide/project-and-solution-files.md) Další informace.|
-|.vcxproj|Projekt|Soubor projektu Visual C++. Zobrazit [soubory projektu a souborů pravidel](../ide/project-and-solution-files.md) Další informace.|
-|. vcxproj.filters|Projekt|Pokud Průzkumník řešení se používá k přidání souboru do projektu, soubor filtrů definuje kde ve stromovém zobrazení Průzkumníka řešení se přidá soubor, na základě jeho přípony názvu souboru.|
-|.vdproj|Projekt|Soubor projektu nasazení sady Visual Studio.|
-|.VMX|Projekt|Makro souboru projektu.|
-|.Vup|Projekt|Soubor projektu nástroje.|
+|.VBP, .vip, .vbproj|Project|Soubor projektu jazyka Visual Basic.|
+|.vcxitems|Project|Projekt sdílené položky ke sdílení souborů kód mezi více projekty C++. Zobrazit [soubory projektu a souborů pravidel](../ide/project-and-solution-files.md) Další informace.|
+|.vcxproj|Project|Soubor projektu Visual C++. Zobrazit [soubory projektu a souborů pravidel](../ide/project-and-solution-files.md) Další informace.|
+|.vcxproj.filters|Project|Pokud Průzkumník řešení se používá k přidání souboru do projektu, soubor filtrů definuje kde ve stromovém zobrazení Průzkumníka řešení se přidá soubor, na základě jeho přípony názvu souboru.|
+|.vdproj|Project|Soubor projektu nasazení sady Visual Studio.|
+|.VMX|Project|Makro souboru projektu.|
+|.Vup|Project|Soubor projektu nástroje.|
 
 Informace o dalších soubory přidružené k sadě Visual Studio, naleznete v tématu [typy souborů a přípony souborů v sadě Visual Studio .NET](/visualstudio/ide/reference/project-and-solution-file-types).
 
@@ -91,7 +91,7 @@ Soubory projektu jsou uspořádány do složek v Průzkumníku řešení. Visual
 
 Při přidání položky do projektu přidat položku do všechny konfigurace pro tento projekt, bez ohledu na to, zda je položka sestavitelná. Například pokud máte projekt s názvem MyProject přidání položky přidá ji do i konfigurace Debug a Release projektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vytváření a spravování projektů Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)<br>
 [Typy projektů Visual C++](../ide/visual-cpp-project-types.md)<br>

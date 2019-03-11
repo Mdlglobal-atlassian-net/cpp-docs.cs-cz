@@ -1,5 +1,5 @@
 ---
-title: 'HLSL – stránky vlastností: Obecné'
+title: 'Hlsl – stránky vlastností: Obecné'
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.FXCompilerTool.ShaderModel
@@ -10,14 +10,14 @@ f1_keywords:
 - VC.Project.FXCompilerTool.DisableOptimizations
 - VC.Project.FXCompilerTool.EntryPointName
 ms.assetid: 0e02f2a6-f123-43da-b04b-a0719a7c2b03
-ms.openlocfilehash: 255cf2fb0879ca7a6af0a9bdb340f6a4d2434cb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc7c0837def7628414d017a660453915a472318e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494520"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751437"
 ---
-# <a name="hlsl-property-pages-general"></a>HLSL – stránky vlastností: Obecné
+# <a name="hlsl-property-pages-general"></a>Hlsl – stránky vlastností: Obecné
 
 Pokud chcete konfigurovat následující vlastnosti kompilátor HLSL (fxc.exe), použijte jeho **Obecné** stránku vlastností. Informace o tom, jak získat přístup **Obecné** zobrazit stránku vlastností ve složce HLSL [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).
 
@@ -63,7 +63,7 @@ Tato vlastnost odpovídá **/E [název]** argument příkazového řádku.
 
    Tato vlastnost odpovídá **/D \[definice]** argument příkazového řádku pro kompilátor HLSL.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [HLSL – stránky vlastností](../ide/hlsl-property-pages.md)<br>
 [HLSL – stránky vlastností: Upřesnit](../ide/hlsl-property-pages-advanced.md)<br>

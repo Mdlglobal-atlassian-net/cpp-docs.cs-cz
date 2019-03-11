@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-ms.openlocfilehash: ef9838fa8a6a34eac1d2d3531ff93fb124c81d4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac9ee843f5f11d4a42377b16ec77b266238fc461
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607035"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746185"
 ---
 # <a name="platformstring-class"></a>Platform::String – třída
 
@@ -69,7 +69,7 @@ Třída String dědí metody Equals() Finalize(), GetHashCode(), GetType(), Memb
 |[String::begin](#begin)|Vrací ukazatel na začátek aktuálního řetězce.|
 |[String::CompareOrdinal](#compareordinal)|Porovná dva `String` objekty vyhodnocením číselné hodnoty odpovídající znaky v dva řetězcové hodnoty reprezentována objekty.|
 |[String::concat](#concat)|Zřetězí hodnoty ze dvou řetězcových objektů.|
-|[String::data](#data)|Vrací ukazatel na začátek aktuálního řetězce.|
+|[String::Data](#data)|Vrací ukazatel na začátek aktuálního řetězce.|
 |[String::dispose](#dispose)|Uvolní nebo uvolní prostředky.|
 |[String::end](#end)|Vrací ukazatel ukazující za hranice aktuální řetězce.|
 |[String::Equals](#equals)|Určuje, zda zadaný objekt rovná aktuálnímu objektu.|
@@ -96,9 +96,9 @@ Třída řetězec má následující operátory.
 
 **Minimální podporovaná klienta:** Windows 8
 
-**Minimální podporovaná serverem:** systému Windows Server 2012
+**Minimální podporovaná serveru:** Windows Server 2012
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 **Hlavička** vccorlib.h (zahrnuté ve výchozím nastavení)
 
@@ -128,10 +128,10 @@ int CompareOrdinal( String^ str1, String^ str2 );
 
 ### <a name="parameters"></a>Parametry
 
-*Str1*<br/>
+*str1*<br/>
 První řetězec objektu.
 
-*řetězci Str2*<br/>
+*str2*<br/>
 Druhý objekt řetězce.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -156,10 +156,10 @@ String^ Concat( String^ str1, String^ str2);
 
 ### <a name="parameters"></a>Parametry
 
-*Str1*<br/>
+*str1*<br/>
 První řetězec objektu, nebo `null`.
 
-*řetězci Str2*<br/>
+*str2*<br/>
 Druhý objekt řetězce nebo `null`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -212,7 +212,7 @@ Ukazatel ukazující za hranice aktuální řetězce.
 
 ### <a name="remarks"></a>Poznámky
 
-End() vrátí Begin() + délka.
+End() returns Begin() + Length.
 
 ## <a name="equals"></a>  String::Equals – metoda
 
@@ -321,10 +321,10 @@ bool String::operator+( String^ str1, String^ str2);
 
 ### <a name="parameters"></a>Parametry
 
-*Str1*<br/>
+*str1*<br/>
 První `String` objektu.
 
-*řetězci Str2*<br/>
+*str2*<br/>
 Druhá `String` objekt, jehož obsah se připojí k `str1`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -347,10 +347,10 @@ bool String::operator==( String^ str1, String^ str2);
 
 ### <a name="parameters"></a>Parametry
 
-*Str1*<br/>
+*str1*<br/>
 První `String` objekt k porovnání.
 
-*řetězci Str2*<br/>
+*str2*<br/>
 Druhá `String` objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -373,10 +373,10 @@ bool String::operator>( String^ str1, String^ str2);
 
 ### <a name="parameters"></a>Parametry
 
-*Str1*<br/>
+*str1*<br/>
 První `String` objektu.
 
-*řetězci Str2*<br/>
+*str2*<br/>
 Druhá `String` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -399,10 +399,10 @@ bool String::operator>=( String^ str1, String^ str2);
 
 ### <a name="parameters"></a>Parametry
 
-*Str1*<br/>
+*str1*<br/>
 První `String` objektu.
 
-*řetězci Str2*<br/>
+*str2*<br/>
 Druhá `String` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -421,10 +421,10 @@ bool String::operator!=( String^ str1, String^ str2);
 
 ### <a name="parameters"></a>Parametry
 
-*Str1*<br/>
+*str1*<br/>
 První `String` objekt k porovnání.
 
-*řetězci Str2*<br/>
+*str2*<br/>
 Druhá `String` objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -443,10 +443,10 @@ bool String::operator<( String^ str1, String^ str2);
 
 ### <a name="parameters"></a>Parametry
 
-*Str1*<br/>
+*str1*<br/>
 První `String` objektu.
 
-*řetězci Str2*<br/>
+*str2*<br/>
 Druhá `String` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -496,6 +496,6 @@ String^ String::ToString();
 
 A `String` objekt, jehož hodnota je stejná jako aktuální řetězec.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)

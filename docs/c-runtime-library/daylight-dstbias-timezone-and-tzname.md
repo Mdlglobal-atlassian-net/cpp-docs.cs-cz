@@ -21,12 +21,12 @@ helpviewer_keywords:
 - tzname function
 - time-zone variables
 ms.assetid: d06c7292-6b99-4aba-b284-16a96570c856
-ms.openlocfilehash: ad28ce701a4c6aa60208ed0cefe8f7dc06ef55a7
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 3f9f78d0798140399960cade7ead408f958450ba
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51325899"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748252"
 ---
 # <a name="daylight-dstbias-timezone-and-tzname"></a>_daylight, _dstbias, _timezone a _tzname
 
@@ -62,7 +62,7 @@ Volání `_ftime`, `localtime`, nebo `_tzset`, hodnoty `_daylight`, `_dstbias`, 
 |`_tzname[0]`|Název časového pásma odvozen od `TZ` proměnné prostředí. Výchozí hodnota je "PST".|
 |`_tzname[1]`|Název zóny letního času odvozen od `TZ` proměnné prostředí. Výchozí hodnota je "PDT" (tichomořského letního času).|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Globální proměnné](../c-runtime-library/global-variables.md)<br/>
 [_get_daylight](../c-runtime-library/reference/get-daylight.md)<br/>

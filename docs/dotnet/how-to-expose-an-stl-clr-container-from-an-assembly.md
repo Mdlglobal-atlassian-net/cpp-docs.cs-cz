@@ -5,12 +5,12 @@ helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 - STL/CLR, cross-assembly issues
 ms.assetid: 87efb41b-3db3-4498-a2e7-f3ef8a99f04d
-ms.openlocfilehash: ba881210f7ee48acd0e92dce3432cae92f3072ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 206a95cbaa808f54d7ae0e500b5a2bea272d974b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590083"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748434"
 ---
 # <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>Postupy: Vystavení kontejneru STL/CLR ze sestavení
 
@@ -384,6 +384,6 @@ cliext::vector contents:
 20
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace knihoven STL/CLR](../dotnet/stl-clr-library-reference.md)

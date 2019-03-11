@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-ms.openlocfilehash: 6ee03b546cf89aff3ef79fa9c89d15f39b4d9fe0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d4a591c6febdf6e34757251c4de5d01a9e2fa87
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539136"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743739"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections:: vectorviewiterator – třída
 
@@ -55,20 +55,20 @@ Vlastnost typename třídy VectorViewIterator šablony.
 |Název|Popis|
 |----------|-----------------|
 |[VectorViewIterator::operator-– operátor](#operator-minus)|Odečte buď zadaný počet prvků z aktuální iterace, což má za následek nové iterátor nebo iterátor zadané z aktuální iterace, což má za následek počet prvků mezi iterátory.|
-|[VectorViewIterator::operator--– operátor](#operator-decrement)|Sníží aktuální VectorViewIterator.|
-|[VectorViewIterator::operator! = – operátor](#operator-inequality)|Určuje, zda aktuální VectorViewIterator není roven zadané VectorViewIterator.|
+|[VectorViewIterator::operator-- Operator](#operator-decrement)|Sníží aktuální VectorViewIterator.|
+|[VectorViewIterator::operator!= Operator](#operator-inequality)|Určuje, zda aktuální VectorViewIterator není roven zadané VectorViewIterator.|
 |[VectorViewIterator::operator * – operátor](#operator-dereference)|Získá odkaz na prvek určeném aktuálním VectorViewIterator.|
 |[VectorViewIterator::operator\[\]](#operator-at)|Získá odkaz na prvek, který je zadaný posun z aktuální VectorViewIterator.|
 |[VectorViewIterator::operator + – operátor](#operator-plus)|Vrátí VectorViewIterator, odkazující na prvek na zadané posunutí ze zadaného VectorViewIterator.|
 |[VectorViewIterator::operator ++ – operátor](#operator-increment)|Aktuální VectorViewIterator zvýší.|
-|[VectorViewIterator::operator += – operátor](#operator-plus-assign)|Zvětší aktuální VectorViewIterator podle zadaného posunu.|
+|[VectorViewIterator::operator+= Operator](#operator-plus-assign)|Zvětší aktuální VectorViewIterator podle zadaného posunu.|
 |[VectorViewIterator::operator < – operátor](#operator-less-than)|Označuje, zda aktuální VectorViewIterator je nižší než zadané VectorViewIterator.|
-|[VectorViewIterator::operator\<= – operátor](#operator-less-than-or-equals)|Označuje, zda aktuální VectorViewIterator je menší než nebo rovna hodnotě zadané VectorViewIterator.|
-|[VectorViewIterator::operator-= – operátor](#operator-minus-assign)|Sníží aktuální VectorViewIterator podle zadaného posunu.|
-|[VectorViewIterator::operator == – operátor](#operator-equality)|Určuje, zda aktuální VectorViewIterator rovná zadané VectorViewIterator.|
-|[VectorViewIterator::operator > – operátor](#operator-greater-than)|Označuje, zda je aktuální VectorViewIterator větší než zadaný VectorViewIterator.|
-|[VectorViewIterator::operator -> – operátor](#operator-arrow)|Načte adresu elementu, který odkazuje aktuální VectorViewIterator.|
-|[VectorViewIterator::operator > = – operátor](#operator-greater-than-or-equals)|Určuje, zda aktuální VectorViewIterator je větší než nebo rovna hodnotě zadané VectorViewIterator.|
+|[VectorViewIterator::operator\<= Operator](#operator-less-than-or-equals)|Označuje, zda aktuální VectorViewIterator je menší než nebo rovna hodnotě zadané VectorViewIterator.|
+|[VectorViewIterator::operator-= Operator](#operator-minus-assign)|Sníží aktuální VectorViewIterator podle zadaného posunu.|
+|[VectorViewIterator::operator== Operator](#operator-equality)|Určuje, zda aktuální VectorViewIterator rovná zadané VectorViewIterator.|
+|[VectorViewIterator::operator> Operator](#operator-greater-than)|Označuje, zda je aktuální VectorViewIterator větší než zadaný VectorViewIterator.|
+|[VectorViewIterator::operator-> Operator](#operator-arrow)|Načte adresu elementu, který odkazuje aktuální VectorViewIterator.|
+|[VectorViewIterator::operator>= Operator](#operator-greater-than-or-equals)|Určuje, zda aktuální VectorViewIterator je větší než nebo rovna hodnotě zadané VectorViewIterator.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -347,7 +347,7 @@ V první syntaxe VectorViewIterator, který odkazuje na element na zadaný posun
 
 V druhém syntaxi VectorViewIterator, který odkazuje na element na zadaný posun od začátku parametru `i`.
 
-## <a name="operator-minus-assign"></a>  VectorViewIterator::operator-= – operátor
+## <a name="operator-minus-assign"></a>  VectorViewIterator::operator-= Operator
 
 Sníží aktuální VectorIterator podle zadaného posunu.
 
@@ -409,6 +409,6 @@ IVectorView\<T > objektu.
 
 První příklad syntaxe je výchozí konstruktor. Druhý příklad syntaxe je explicitní konstruktor, který se používá ke konstrukci VectorViewIterator ze IVectorView\<T > objektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Platforma Namespace](platform-namespace-c-cx.md)

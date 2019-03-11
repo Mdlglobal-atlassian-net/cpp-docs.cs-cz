@@ -1,15 +1,15 @@
 ---
-title: 'Přenos a upgrade: Příklady a případové studie'
+title: 'Portování a upgradování: Příklady a případové studie'
 ms.date: 11/04/2016
 ms.assetid: d48bbff9-1ea7-467f-8c8b-758601f01573
-ms.openlocfilehash: 1f49b72b8d390d5631687f67640f4ddd38bec3b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50e22c9eac39927c4456eeff1ed05c46a239bd30
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568207"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747187"
 ---
-# <a name="porting-and-upgrading-examples-and-case-studies"></a>Přenos a upgrade: Příklady a případové studie
+# <a name="porting-and-upgrading-examples-and-case-studies"></a>Portování a upgradování: Příklady a případové studie
 
 Můžete získat představu o druhy problémů můžete setkat, doba trvání migrace z předchozí verze aplikace Visual C++ do aktuálního kontrolou scénářů migrace úspěšná.
 
@@ -23,6 +23,6 @@ Tady si přečíst o trvalo pro migraci některých mírné ukázek a nástrojů
 
 - [Spy ++](../porting/porting-guide-spy-increment.md) je aplikace, která zkontroluje a poskytne vám informace o prvcích uživatelského rozhraní v spuštěných aplikací.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Průvodce přenosem a upgradem Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)

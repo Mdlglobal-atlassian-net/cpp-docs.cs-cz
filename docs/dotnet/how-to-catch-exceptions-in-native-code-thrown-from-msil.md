@@ -1,19 +1,19 @@
 ---
-title: 'Postupy: Zachycení výjimek v nativním kódu vyvolaných z prostředí MSIL'
+title: 'Postupy: Zachycení výjimek v nativním kódu vyvolaných z prostředí MSIL'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exceptions, catching
 - catching exceptions, thrown from MSIL
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-ms.openlocfilehash: 73c9a9af66a6e292c76b96ec47a5853684e602f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: acb3ba1ab6d10decba10b899861007abfff03359
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635609"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748720"
 ---
-# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Postupy: Zachycení výjimek v nativním kódu vyvolaných z prostředí MSIL
+# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Postupy: Zachycení výjimek v nativním kódu vyvolaných z prostředí MSIL
 
 V nativním kódu můžete zachytit nativní výjimek jazyka C++ z prostředí MSIL.  Při zachycení výjimky CLR s `__try` a `__except`.
 
@@ -77,6 +77,6 @@ error
 caught an exception
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zpracování výjimek](../windows/exception-handling-cpp-component-extensions.md)

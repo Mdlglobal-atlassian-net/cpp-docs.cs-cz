@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-ms.openlocfilehash: 94e55f08e4ff427aef0c93bf74c711a6fd935d0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 20e6d45c088fe92fa736539e485d6807802b368a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631018"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750543"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Doprovodné materiály pro vývojáře v C++ pro kanály na straně spekulativního spouštění
 
@@ -356,7 +356,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 Další technikou, který slouží k omezení spekulativního spouštění na straně kanálu ohrožení zabezpečení je odebrání citlivých informací z paměti. Vývojáři softwaru můžete vyhledat příležitosti k refaktorování své aplikace tak, aby citlivých informací není přístupné během spekulativního spouštění. To lze provést refaktoring návrhu aplikace izolovat citlivé informace do samostatné procesy. Například aplikace webového prohlížeče může pokusit o izolovat data související s každou původu webového do samostatné procesy zamezuje tak nebudou mít přístup k datům nepůvodního prostřednictvím spekulativního spouštění jeden proces.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Pokyny ke zmírnění chyby zabezpečení na straně kanálu spekulativního spouštění](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)<br/>
 [Omezení spekulativního spouštění na straně kanálu hardwarové ohrožení zabezpečení](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)

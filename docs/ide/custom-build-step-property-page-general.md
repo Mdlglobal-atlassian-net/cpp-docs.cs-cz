@@ -1,5 +1,5 @@
 ---
-title: 'Stránka vlastností vlastního kroku sestavení: Obecné'
+title: 'Stránka vlastností kroku vlastního sestavení: Obecné'
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCustomBuildStep.AdditionalInputs
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - project properties, custom build step
 - custom build step (general)
 ms.assetid: bd319741-0491-46c4-a428-7c61b4b46a02
-ms.openlocfilehash: dc6765c9519c6cdb4245afa2f07079548a07e1fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c144648308fa91b8da98c0f2992174203c2e5ae7
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621751"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746163"
 ---
-# <a name="custom-build-step-property-page-general"></a>Stránka vlastností vlastního kroku sestavení: Obecné
+# <a name="custom-build-step-property-page-general"></a>Stránka vlastností kroku vlastního sestavení: Obecné
 
 Pro každou kombinaci konfigurace projektu a cílové platformy v projektu můžete zadat vlastní krok, který se má provést při sestavení projektu.
 
@@ -35,7 +35,7 @@ Verzi Linuxu na této stránce, najdete v části [vlastní krok vlastnosti sest
 
    Zpráva, která se zobrazí při spuštění vlastního kroku sestavení
 
-- **výstupy**
+- **Výstupy**
 
    Výstupní soubor, který je vygenerován vlastním krokem sestavení. Toto nastavení je povinné, aby přírůstkové sestavení fungovalo správně.
 
@@ -59,6 +59,6 @@ Verzi Linuxu na této stránce, najdete v části [vlastní krok vlastnosti sest
 
 1. Podle potřeby upravte nastavení.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Stránky vlastností](../ide/property-pages-visual-cpp.md)

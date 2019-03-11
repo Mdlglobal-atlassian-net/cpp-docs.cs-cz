@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - swap function
 ms.assetid: 7dd91b5c-f0de-4634-a2e2-642626706e27
-ms.openlocfilehash: a4e15e2a0481f10b58517135c5dc283549f358af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb410d420e91f9b64742d74d9f9262a4db42f562
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638299"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751619"
 ---
 # <a name="swap-function-autohandle"></a>swap – funkce (auto_handle)
 
@@ -31,7 +31,7 @@ void swap(
 
 #### <a name="parameters"></a>Parametry
 
-*_vlevo*<br/>
+*_left*<br/>
 `auto_handle`.
 
 *vp_ravo*<br/>
@@ -70,7 +70,7 @@ s1 = 'string two', s2 = 'string one'
 
 **Namespace** msclr –
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [auto_handle](../dotnet/auto-handle.md)<br/>
 [auto_handle::swap](../dotnet/auto-handle-swap.md)

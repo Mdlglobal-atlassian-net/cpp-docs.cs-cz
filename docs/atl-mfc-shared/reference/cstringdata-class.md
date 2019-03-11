@@ -1,5 +1,5 @@
 ---
-title: Cstringdata – třída
+title: CStringData Class
 ms.date: 11/04/2016
 f1_keywords:
 - CStringData
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - CStringData class
 - shared classes, CStringData
 ms.assetid: 4e31b5ca-3dbe-4fd5-b692-8211fbfb2593
-ms.openlocfilehash: 24d1321c66fb6cebbd2e86da3e85fdb8e1a3d33d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5977d26cade89f2e70453d5184323958e99e54c4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589524"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748512"
 ---
-# <a name="cstringdata-class"></a>Cstringdata – třída
+# <a name="cstringdata-class"></a>CStringData Class
 
 Tato třída reprezentuje data objektu string.
 
@@ -249,8 +249,7 @@ Voláním této funkce k odemknutí vyrovnávací paměti pro znaky řetězce da
 
 Zamknutí a odemknutí se používá, když vývojář musí zajistit, že nebudou sdílet data řetězce. Dobrým příkladem uzamčení prokazuje [LockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer) a [UnlockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer) metody `CSimpleStringT`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Sdílené třídy ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

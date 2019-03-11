@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-ms.openlocfilehash: 8df41f8845bad0847e8835c1c6c3a1019d2621d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73338e5b4c723c7f66dbecaea5add3b197f3493d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517062"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744039"
 ---
 # <a name="platformtype-class"></a>Platform::type – třída
 
@@ -48,16 +48,16 @@ public ref class Platform::Type :
 
 |||
 |-|-|
-|[Type – operátor ^](../cppcx/operator-type-hat.md)|Umožňuje převod z `Windows::UI::Xaml::Interop::TypeName` k `Platform::Type`.|
-|[operátor Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md)|Umožňuje převod z `Platform::Type` k `Windows::UI::Xaml::Interop::TypeName`.|
+|[operator Type^](../cppcx/operator-type-hat.md)|Umožňuje převod z `Windows::UI::Xaml::Interop::TypeName` k `Platform::Type`.|
+|[operator Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md)|Umožňuje převod z `Platform::Type` k `Windows::UI::Xaml::Interop::TypeName`.|
 
 ### <a name="requirements"></a>Požadavky
 
 **Minimální podporovaná klienta:** Windows 8
 
-**Minimální podporovaná serverem:** systému Windows Server 2012
+**Minimální podporovaná serveru:** Windows Server 2012
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 **Metadata:** platform.winmd
 
@@ -120,6 +120,6 @@ Platform::String^ ToString();
 
 Název typu, jak je uvedeno ve svých metadatech.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)

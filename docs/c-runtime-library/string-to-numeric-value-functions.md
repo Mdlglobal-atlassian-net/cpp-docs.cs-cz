@@ -16,12 +16,12 @@ helpviewer_keywords:
 - parsing, numeric strings
 - string conversion, to numeric values
 ms.assetid: 11cbd9ce-033b-4914-bf66-029070e7e385
-ms.openlocfilehash: d3e53c665378efdd63a373027f4edd6b7fb90ad3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f24b75c2fdb3aa0d84b16874d2d01f1cb96d4b9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544570"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743882"
 ---
 # <a name="string-to-numeric-value-functions"></a>Funkce řetězců na numerické hodnoty
 
@@ -63,7 +63,7 @@ A *prázdné znaky* může skládat ze znaků mezera nebo tabulátor, které jso
 
 `strtol`, `strtoul`, `_strtoi64`, A `_strtoui64` funkce očekávat na řetězec v následujícím formátu:
 
-[*prázdné znaky*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [`digits`]
+[*whitespace*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [`digits`]
 
 Pokud je základní argument mezi 2 a 36, použije se jako základ pro číslo. Pokud je 0, počáteční znaky odkazuje end převod ukazatele se používají ke stanovení základu. Pokud je první znak 0 a druhý znak není "x" nebo "X", řetězec je interpretován jako osmičkové celé číslo. v opačném případě je interpretován jako desítkové číslo. Pokud je první znak "0" a druhý znak je písmeno "x" nebo "X", řetězec je interpretován jako hexadecimální celé číslo. Pokud je první znak "1" až "9", řetězec je interpretován jako desítkové celé číslo. Písmenům "a" až "z" (nebo "A" až "Z") jsou přiřazeny hodnoty 10 až 35; jenom písmena, jejichž přiřazené hodnoty jsou menší než *základní* nejsou povoleny. `strtoul` a `_strtoui64` povolit plus (**+**) nebo minus (**-**) přihlašování předponu; úvodní mínus znamená, že návratová hodnota je negovat.
 
@@ -88,7 +88,7 @@ Při hodnotě vrácené tyto funkce by způsobilo přetečení nebo podtečení,
 
 `wcstod`, `wcstol`, `wcstoul`, `_wcstoi64`, a `_wcstoui64` jsou širokoznaké verze `strtod`, `strtol`, `strtoul`, `_strtoi64`, a `_strtoui64`v uvedeném pořadí; ukazatel na end sady konverzi argument pro každý z těchto funkcí širokého znaku je širokoznaký řetězec. Jinak každá z těchto funkcí širokého znaku chová stejně jako jeho protějšek jedním jednobajtového znaku.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Převod dat](../c-runtime-library/data-conversion.md)<br/>
 [Národní prostředí](../c-runtime-library/locale.md)<br/>

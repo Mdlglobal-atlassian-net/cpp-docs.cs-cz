@@ -2,12 +2,12 @@
 title: Průvodce přenosem a upgradováním Visual C++
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 39b0e716ae6dbc1210130908b27cfa1d06f86ec6
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1b3f7142b5240d8b4a94040d5cda7d033e50e39d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556865"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752425"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Průvodce přenosem a upgradováním Visual C++
 
@@ -81,11 +81,11 @@ Případně třeba Teď máte nové požadavky nebo můžou předvídat potřebu
 |[Historie změn Visual C++ 2003–2015](visual-cpp-change-history-2003-2015.md)|Seznam všech změn v Visual C++ knihovny a nástroje sestavení ze sady Visual Studio 2003 do 2015, které mohou vyžadovat změny v kódu.|
 |[Novinky Visual C++ 2003–2015](visual-cpp-what-s-new-2003-through-2015.md)|Všechny "Novinky" informace pro jazyk Visual C++ ze sady Visual Studio 2003 do Visual Studio 2015.|
 |[Přenos knihoven třetích stran](porting-third-party-libraries.md)|Jak používat **vcpkg** nástroj příkazového řádku k portu starší knihovny open-source verze kompilován s novější sady nástrojů Visual C++.|
-|[Přenos a upgrade: Příklady a případové studie](porting-and-upgrading-examples-and-case-studies.md)|Pro tento oddíl přenáší a upgraduje několik ukázek a aplikací jsme probírali prostředí a výsledky. Můžete zjistit, že čtení těchto poskytuje vás o tom, co se tak zapojí v portování a upgradování procesu. Během tohoto procesu jsme popisují tipy a triky pro upgrade a zobrazit jak se konkrétní chyby byly opraveny.|
+|[Portování a upgradování: Příklady a případové studie](porting-and-upgrading-examples-and-case-studies.md)|Pro tento oddíl přenáší a upgraduje několik ukázek a aplikací jsme probírali prostředí a výsledky. Můžete zjistit, že čtení těchto poskytuje vás o tom, co se tak zapojí v portování a upgradování procesu. Během tohoto procesu jsme popisují tipy a triky pro upgrade a zobrazit jak se konkrétní chyby byly opraveny.|
 |[Přenos aplikací do platformy Universal Windows](porting-to-the-universal-windows-platform-cpp.md)|Obsahuje informace o převodu kódu pro Windows 10|
 |[Úvod do prostředí Visual C++ pro uživatele systému UNIX](introduction-to-visual-cpp-for-unix-users.md)|Poskytuje informace pro uživatele systému UNIX, kteří začínají s Visual C++ a chcete se s ním být produktivní.|
 |[Přenos ze systému UNIX do Win32](porting-from-unix-to-win32.md)|Tento článek popisuje možnosti pro migraci systému UNIX aplikací pro Windows.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Visual C++](../visual-cpp-in-visual-studio.md)

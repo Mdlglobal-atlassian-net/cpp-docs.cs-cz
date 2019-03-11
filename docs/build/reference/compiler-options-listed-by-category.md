@@ -4,12 +4,12 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 63b621bf99a1aeada10706badfe19cde417d7233
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 128b477a2c4252c841990e2a2462029abe5a3bbb
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676497"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746966"
 ---
 # <a name="compiler-options-listed-by-category"></a>Možnosti kompilátoru uvedené podle kategorie
 
@@ -118,9 +118,9 @@ Tento článek obsahuje seznam kategorií možností kompilátoru. Abecední sez
 |[/vms](vmm-vms-vmv-general-purpose-representation.md)|Deklaruje jednoduchou dědičnost.|
 |[/vmv](vmm-vms-vmv-general-purpose-representation.md)|Deklaruje virtuální dědičnost.|
 |[/Z7](z7-zi-zi-debug-information-format.md)|Generuje kompatibilní s C 7.0 ladicí informace.|
-|[/Za](za-ze-disable-language-extensions.md)|Zakáže jazyková rozšíření.|
+|[/Za](za-ze-disable-language-extensions.md)|Zakáže rozšíření jazyka C89.|
 |[/Zc](zc-conformance.md)|Určí obvyklé chování pod [/Ze](za-ze-disable-language-extensions.md).|
-|[/Ze](za-ze-disable-language-extensions.md)|Zastaralé Povolí jazyková rozšíření.|
+|[/Ze](za-ze-disable-language-extensions.md)|Zastaralé Povolí rozšíření jazyka C89.|
 |[/Zf](zf.md)|Zlepšuje PDB generování dobu v paralelních sestaveních.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Obsahuje informace o ladění v databázi programu, který je kompatibilní s upravit a pokračovat. (pouze x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Generuje úplné ladicí informace.|

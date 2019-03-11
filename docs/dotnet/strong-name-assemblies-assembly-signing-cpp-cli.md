@@ -9,12 +9,12 @@ helpviewer_keywords:
 - linker [C++], assembly signing
 - strong-named assemblies [C++]
 ms.assetid: c337cd3f-e5dd-4c6f-a1ad-437e85dba1cc
-ms.openlocfilehash: c23c3b70a2152fbceb771e085b73d7daf7aa3c2a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 762c95c3ecc60995e8d0e6f9e4f7bc95d179c26f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527553"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747498"
 ---
 # <a name="strong-name-assemblies-assembly-signing-ccli"></a>Sestavení se silným názvem (Podepisování sestavení) (C++/CLI)
 
@@ -46,6 +46,6 @@ Následující možnosti linkeru podporují podepisování sestavení:
 
 Další informace o silné sestavení naleznete v tématu [vytvoření a použití sestavení](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

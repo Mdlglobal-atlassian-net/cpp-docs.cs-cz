@@ -19,12 +19,12 @@ helpviewer_keywords:
 - _local_unwind2 function
 - local_unwind2 function
 ms.assetid: 44f1fa82-e01e-490f-a6e6-18fc6811c28c
-ms.openlocfilehash: 8ae5c3937c9dedc54f0a936b91963419d59f79cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c62763ecbdd2c05e8cd7b6733ec1df4254362527
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535405"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743995"
 ---
 # <a name="localunwind2"></a>_local_unwind2
 
@@ -41,10 +41,10 @@ void _local_unwind2(
 
 #### <a name="parameters"></a>Parametry
 
-*XR*<br/>
+*xr*<br/>
 [in] Registrační záznam, který je přidružený jeden rozsah tabulky.
 
-*Stop*<br/>
+*stop*<br/>
 [in] Lexikální úroveň, která označuje, kde `_local_unwind2` by se měla zastavit.
 
 ## <a name="remarks"></a>Poznámky
@@ -53,6 +53,6 @@ Tato metoda se používá pouze pomocí prostředí za běhu. Nevolejte metodu v
 
 Když tato metoda se spouští obslužné rutiny ukončení, začne na aktuální úrovni lexikální a funguje směrem nahoru lexikální úrovní, dokud nebude dosaženo úrovně, který je označen `stop`. Nespouští obslužné rutiny ukončení na úrovni, který je označen `stop`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](../c-runtime-library/reference/crt-alphabetical-function-reference.md)

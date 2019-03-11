@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::OperationCanceledException
 ms.assetid: 5351bc20-5408-423a-8169-f09acc8a3fbb
-ms.openlocfilehash: 11a5b6b9886fdf59512446e8f7c3deb5045b7ce3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f129c49077a5c6bde54c5afb0ede2cfd9adf9db2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506558"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747914"
 ---
 # <a name="platformoperationcanceledexception-class"></a>Platform::OperationCanceledException – třída
 
@@ -33,12 +33,12 @@ Další informace najdete v tématu [COMException](../cppcx/platform-comexceptio
 
 **Minimální podporovaná klienta:** Windows 8
 
-**Minimální podporovaná serverem:** systému Windows Server 2012
+**Minimální podporovaná serveru:** Windows Server 2012
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 **Metadata:** platform.winmd
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Platform::COMException – třída](../cppcx/platform-comexception-class.md)

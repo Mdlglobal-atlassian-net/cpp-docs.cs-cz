@@ -5,12 +5,12 @@ helpviewer_keywords:
 - 3rd-party libraries
 - vspkg
 ms.assetid: b055ed20-8a9e-45b2-ac2a-e3d94271c009
-ms.openlocfilehash: 1abd7f05614317237c911ceb69c243211a373e34
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51c1634aade159e095b5957a15783e40ec0284d0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658299"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750959"
 ---
 # <a name="porting-third-party-libraries"></a>Přenos knihoven třetích stran
 
@@ -26,6 +26,6 @@ Pokud není k dispozici v knihovně **vcpkg** katalogu, které otevřete problé
 
 Pro nechráněný 3 stran knihovny (není otevřený zdroj) doporučujeme, abyste se obrátili zprostředkovatele knihovny. Ale jsme chtěli vědět o žádné speciální knihovny používají a zablokuje, dejte nám vědět, které z nich záviset na (můžete kontaktujte nás na adrese vcupgrade@microsoft.com).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Průvodce přenosem a upgradem Visual C++](visual-cpp-porting-and-upgrading-guide.md)

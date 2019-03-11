@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::IntPtr Struct
 ms.assetid: 6c0326e8-edfd-4e53-a963-240b845dcde8
-ms.openlocfilehash: eda65255aa76d6a801bdc0f80c437a9dc975d8f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8101fa2c82a0ac3e3b573384d14d9a7eff6ecf61
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449137"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747109"
 ---
 # <a name="platformintptr-value-class"></a>Platform::IntPtr – hodnotová třída
 
@@ -40,9 +40,9 @@ IntPtr má následující členy:
 
 **Minimální podporovaná klienta:** Windows 8
 
-**Minimální podporovaná serverem:** systému Windows Server 2012
+**Minimální podporovaná serveru:** Windows Server 2012
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 **Metadata:** platform.winmd
 
@@ -73,14 +73,14 @@ static IntPtr::operator IntPtr( void* value1);   static IntPtr::operator IntPtr(
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnota1*<br/>
+*value1*<br/>
 Ukazatel na popisovač nebo IntPtr.
 
-*Hodnota2*<br/>
+*value2*<br/>
 Celé číslo 32-bit, který lze převést na IntPtr.
 
-*hodnota3*<br/>
-IntPtr.
+*value3*<br/>
+An IntPtr.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -100,6 +100,6 @@ int32 IntPtr::ToInt32();
 
 32bitové celé číslo.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)

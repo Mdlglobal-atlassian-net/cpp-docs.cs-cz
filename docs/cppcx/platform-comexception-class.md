@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-ms.openlocfilehash: 6ba387b8d3be0e3f91a844bb7633bedfdb7ee9d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a74184a8cbc4126988da2ba0be61d9f5b2bb71c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607802"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745209"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException – třída
 
@@ -67,7 +67,7 @@ Následující předdefinované výjimky jsou odvozeny z COMException. Se liší
 |InvalidCastException|E_NOINTERFACE|Vyvolána, když typ nelze převést na jiného typu.|
 |NotImplementedException|E_NOTIMPL|Vyvolána, pokud se neimplementoval metodu rozhraní na třídě.|
 |NullReferenceException|E_POINTER|Vyvolána, když je pokus přistoupit přes ukazatel odkaz na objekt s hodnotou null.|
-|OperationCanceledException –|E_ABORT|Vyvolána, pokud je operace přerušena.|
+|OperationCanceledException|E_ABORT|Vyvolána, pokud je operace přerušena.|
 |OutOfBoundsException|E_BOUNDS|Vyvolána, když se pokusí získat přístup k datům mimo platný rozsah operace.|
 |OutOfMemoryException|E_OUTOFMEMORY|Vyvolána, když není dostatek paměti k dokončení operace.|
 
@@ -75,9 +75,9 @@ Následující předdefinované výjimky jsou odvozeny z COMException. Se liší
 
 **Minimální podporovaná klienta:** Windows 8
 
-**Minimální podporovaná serverem:** systému Windows Server 2012
+**Minimální podporovaná serveru:** Windows Server 2012
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 **Metadata:** platform.winmd
 
@@ -129,6 +129,6 @@ public:property String^ Message {    String^ get();}
 
 Popis výjimky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)

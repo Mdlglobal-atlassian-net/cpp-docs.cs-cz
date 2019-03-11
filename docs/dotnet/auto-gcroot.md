@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - auto_gcroot
 ms.assetid: 1084ff0f-3094-4d19-8646-1314c0733355
-ms.openlocfilehash: f81749852d5498c6673aeca079ed3da9ec7ddad4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 24640f6c98b54f2df8deec6bf8bcf2a352d8b461
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506623"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750059"
 ---
 # <a name="autogcroot"></a>auto_gcroot
 
@@ -32,6 +32,6 @@ Z tohoto hlavičkového souboru:
 
 [swap – funkce (auto_gcroot)](../dotnet/swap-function-auto-gcroot.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Knihovna podpory C++](../dotnet/cpp-support-library.md)

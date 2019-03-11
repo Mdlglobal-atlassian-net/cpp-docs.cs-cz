@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: a49b886bcf9c25642b1f7b8e843be11baf2d2d00
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 6644e4e10916068a91e48611338d79bbb9d0d75b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894104"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740527"
 ---
 # <a name="coledatetime-class"></a>COleDateTime – třída
 
@@ -1224,11 +1224,10 @@ Další informace o hranice pro `COleDateTime` hodnoty, najdete v článku [datu
 
 Podívejte se na příklad pro [SetDate](#setdate).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [COleVariant – třída](../../mfc/reference/colevariant-class.md)<br/>
 [CTime – třída](../../atl-mfc-shared/reference/ctime-class.md)<br/>
 [CTimeSpan – třída](../../atl-mfc-shared/reference/ctimespan-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Sdílené třídy ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

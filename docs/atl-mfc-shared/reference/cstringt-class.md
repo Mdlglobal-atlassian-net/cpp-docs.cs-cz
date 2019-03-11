@@ -1,5 +1,5 @@
 ---
-title: Cstringt – třída
+title: CStringT Class
 ms.date: 10/18/2018
 f1_keywords:
 - CStringT
@@ -80,14 +80,14 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: bd8fefd3424ab5ec422adb352972ba846e45139d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9566830de4d3af8f34e8efa5e5ef468acae1fba5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525493"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750868"
 ---
-# <a name="cstringt-class"></a>Cstringt – třída
+# <a name="cstringt-class"></a>CStringT Class
 
 Tato třída reprezentuje `CStringT` objektu.
 
@@ -137,7 +137,7 @@ Určuje, zda třída string, potřebuje podpora knihovny Run-Time C (CRT) a kde 
 |Název|Popis|
 |----------|-----------------|
 |[CStringT::CStringT](#cstringt)|Vytvoří `CStringT` objekt různými způsoby.|
-|[CStringT:: ~ CStringT](#_dtorcstringt)|Odstraní `CStringT` objektu.|
+|[CStringT::~CStringT](#_dtorcstringt)|Odstraní `CStringT` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -265,7 +265,7 @@ Protože `CStringT` používá argument šablony pro definování tyto typy znak
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Csimplestringt –](../../atl-mfc-shared/reference/csimplestringt-class.md)
+[CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md)
 
 `CStringT`
 
@@ -335,7 +335,7 @@ void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 *nFormatID*<br/>
 Identifikátor prostředku řetězců obsahující řetězec řízení formátu.
 
-*Argument*<br/>
+*argument*<br/>
 Volitelné argumenty
 
 ### <a name="remarks"></a>Poznámky
@@ -570,7 +570,7 @@ Protože se konstruktory kopírují do nového úložiště přidělené vstupn�
 
 - `CStringT`( `LPCSTR` `lpsz` ): Vytvoří Unicode `CStringT` z řetězce ANSI. Můžete také použít tento konstruktor se načíst prostředek řetězce, jak je znázorněno v následujícím příkladu.
 
-- `CStringT(` `LPCWSTR` `lpsz` ): Konstrukce `CStringT` z řetězce Unicode.
+- `CStringT(` `LPCWSTR` `lpsz` ): Vytvoří `CStringT` z řetězce Unicode.
 
 - `CStringT`( `const unsigned char*` `psz` ): Umožňuje vytvářet `CStringT` z ukazatele na **unsigned char**.
 
@@ -588,7 +588,7 @@ Přetižte operátor `CSimpleStringT<>&()` sestaví `CStringT` objektu z `CSimpl
 
 [!code-cpp[NVC_ATLMFC_Utilities#112](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_7.cpp)]
 
-##  <a name="_dtorcstringt"></a>  CStringT:: ~ CStringT
+##  <a name="_dtorcstringt"></a>  CStringT::~CStringT
 
 Odstraní `CStringT` objektu.
 
@@ -709,7 +709,7 @@ Identifikátor prostředku řetězců obsahující řetězec řízení formátu.
 *pszFormat*<br/>
 Řetězec řízení formátu.
 
-*Argument*<br/>
+*argument*<br/>
 Volitelné argumenty
 
 ### <a name="remarks"></a>Poznámky
@@ -743,7 +743,7 @@ Identifikátor prostředku řetězce, který obsahuje text neformátovaný zprá
 *pszFormat*<br/>
 Odkazuje na řetězec řízení formátu. Bude vyhledávat vloží a ve formátu odpovídajícím způsobem. Formátovací řetězec je podobný funkci run-time *printf*– styl řetězce formátu, s výjimkou umožňuje parametry, které má být vložen v libovolném pořadí.
 
-*Argument*<br/>
+*argument*<br/>
 Volitelné argumenty
 
 ### <a name="remarks"></a>Poznámky
@@ -1040,16 +1040,16 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 
 ### <a name="parameters"></a>Parametry
 
-*CH1*<br/>
+*ch1*<br/>
 ANSI nebo Unicode znak pro řetězení s řetězcem.
 
-*CH2*<br/>
+*ch2*<br/>
 ANSI nebo Unicode znak pro řetězení s řetězcem.
 
-*Str1*<br/>
+*str1*<br/>
 A `CStringT` zřetězit s řetězec nebo znak.
 
-*řetězci Str2*<br/>
+*str2*<br/>
 A `CStringT` zřetězit s řetězec nebo znak.
 
 *psz1*<br/>
@@ -1141,16 +1141,16 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*CH1*<br/>
+*ch1*<br/>
 ANSI nebo Unicode znak pro porovnání.
 
-*CH2*<br/>
+*ch2*<br/>
 ANSI nebo Unicode znak pro porovnání.
 
-*Str1*<br/>
+*str1*<br/>
 A `CStringT` pro porovnání.
 
-*řetězci Str2*<br/>
+*str2*<br/>
 A `CStringT` pro porovnání.
 
 *psz1*<br/>
@@ -1183,16 +1183,16 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*CH1*<br/>
+*ch1*<br/>
 ANSI nebo Unicode znak pro řetězení s řetězcem.
 
-*CH2*<br/>
+*ch2*<br/>
 ANSI nebo Unicode znak pro řetězení s řetězcem.
 
-*Str1*<br/>
+*str1*<br/>
 A `CStringT` pro porovnání.
 
-*řetězci Str2*<br/>
+*str2*<br/>
 A `CStringT` pro porovnání.
 
 *psz1*<br/>
@@ -1221,10 +1221,10 @@ friend bool operator<(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Str1*<br/>
+*str1*<br/>
 A `CStringT` pro porovnání.
 
-*řetězci Str2*<br/>
+*str2*<br/>
 A `CStringT` pro porovnání.
 
 *psz1*<br/>
@@ -1259,10 +1259,10 @@ friend bool operator>(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Str1*<br/>
+*str1*<br/>
 A `CStringT` pro porovnání.
 
-*řetězci Str2*<br/>
+*str2*<br/>
 A `CStringT` pro porovnání.
 
 *psz1*<br/>
@@ -1297,10 +1297,10 @@ friend bool operator<=(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Str1*<br/>
+*str1*<br/>
 A `CStringT` pro porovnání.
 
-*řetězci Str2*<br/>
+*str2*<br/>
 A `CStringT` pro porovnání.
 
 *psz1*<br/>
@@ -1335,10 +1335,10 @@ friend bool operator>=(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Str1*<br/>
+*str1*<br/>
 A `CStringT` pro porovnání.
 
-*řetězci Str2*<br/>
+*str2*<br/>
 A `CStringT` pro porovnání.
 
 *psz1*<br/>
@@ -1428,7 +1428,7 @@ Pro `CString`, datový typ znak se určí v době kompilace, o tom, jestli jsou 
 |_UNICODE|Široké znaky|
 |_MBCS|Vícebajtové znaky|
 |Ani|Jednobajtové znaky|
-|Obojí|Nedefinovaný|
+|Obojí|Nedefinováno|
 
 ### <a name="example"></a>Příklad
 
@@ -1728,9 +1728,8 @@ Odebere koncové výskytů jedné z následujících akcí:
 
 [!code-cpp[NVC_ATLMFC_Utilities#138](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_42.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Sdílené třídy ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 [CSimpleStringT – třída](../../atl-mfc-shared/reference/csimplestringt-class.md)
-

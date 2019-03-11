@@ -4,14 +4,14 @@ ms.date: 09/17/2018
 helpviewer_keywords:
 - deployment for Visual C++
 ms.assetid: 66735cda-8fe3-4211-a19a-2cf717a12a3f
-ms.openlocfilehash: 3dc607ea082e31ba73f34ce1ca8acd3ebc78292a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2d83d45f1369e250b24708edd17f4004e030a17
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565591"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749123"
 ---
-# <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>Návod: Nasazení aplikace Visual C++ pomocí projektu instalace
+# <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>Návod: Nasazení aplikace v jazyce Visual C++ pomocí projektu instalace
 
 Popisuje, jak nasadit aplikace v jazyce Visual C++ pomocí projektu instalace.
 
@@ -31,10 +31,10 @@ K dokončení tohoto návodu budete potřebovat následující komponenty:
 
    > [!NOTE]
    > Pokud **aplikace knihovny MFC** chybí typ:<br/>
-   > **Visual Studio 2017**: vyberte **otevřít instalační program Visual Studio** v levém podokně **nový projekt** dialogové okno. Možnost umístěna ve složce instalace **vývoj desktopových aplikací pomocí C++** v **volitelné** součástí oddílu s názvem **Visual C++ MFC pro x86 a x64**.<br/>
-   > **Visual Studio 2015**: klikněte na tlačítko Windows Start a typ **přidat nebo odebrat programy**. Otevřete program ze seznamu výsledků a pak v seznamu nainstalovaných programů najít instalaci sady Microsoft Visual Studio 2015. Poklepejte na něj a pak zvolte **změnit** a vyberte **Microsoft Foundation Classes** komponentu pod **Visual C++**.
+   > **Visual Studio 2017**: Vyberte **otevřít instalační program Visual Studio** v levém podokně **nový projekt** dialogové okno. Možnost umístěna ve složce instalace **vývoj desktopových aplikací pomocí C++** v **volitelné** součástí oddílu s názvem **Visual C++ MFC pro x86 a x64**.<br/>
+   > **Visual Studio 2015**: Klikněte na tlačítko Windows Start a typ **přidat nebo odebrat programy**. Otevřete program ze seznamu výsledků a pak v seznamu nainstalovaných programů najít instalaci sady Microsoft Visual Studio 2015. Poklepejte na něj a pak zvolte **změnit** a vyberte **Microsoft Foundation Classes** komponentu pod **Visual C++**.
 
-1. Změňte konfiguraci aktivního řešení na **vydání**. Z **sestavení** nabídce vyberte možnost **Správce konfigurace**. Z **nástroje Configuration Manager** dialogu **vydání** z **konfigurace aktivního řešení** rozevíracího seznamu. Klikněte na tlačítko **Zavřít**.
+1. Změňte konfiguraci aktivního řešení na **vydání**. Z **sestavení** nabídce vyberte možnost **Správce konfigurace**. Z **nástroje Configuration Manager** dialogu **vydání** z **konfigurace aktivního řešení** rozevíracího seznamu. Klikněte na **Zavřít**.
 
 1. Stisknutím klávesy **Ctrl**+**Shift**+**B** k sestavení aplikace. Případně na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**. Sestavení aplikace umožňuje nastavení projektu používají výstup tohoto projektu aplikace knihovny MFC.
 
@@ -52,12 +52,12 @@ K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 1. Vyberte položku **primární výstup z ProjectName (aktivní)** klikněte pravým tlačítkem a zvolte **vytvořit zástupce na primární výstup z ProjectName (aktivní)**. Nová položka s názvem **zástupce primární výstup z ProjectName (aktivní)** se zobrazí. Vám může přejmenovat položky místní pak přetažení položky do **Uživatelská nabídka programy** uzlu na levé straně okna.
 
-1. V panelu nabídky zvolte **sestavení** > **nástroje Configuration Manager**. V **projektu** tabulky v části **sestavení** sloupců, zaškrtněte políčko u projektu nasazení. Klikněte na tlačítko **Zavřít**.
+1. V panelu nabídky zvolte **sestavení** > **nástroje Configuration Manager**. V **projektu** tabulky v části **sestavení** sloupců, zaškrtněte políčko u projektu nasazení. Klikněte na **Zavřít**.
 
 1. V panelu nabídky zvolte **sestavení** > **sestavit řešení** k sestavení projektu knihovny MFC a projekt nasazení.
 
 1. Ve složce řešení vyhledejte program setup.exe vytvořený z projektu nasazení. Můžete zkopírovat tento soubor (a tento soubor .msi) k instalaci aplikace a jeho požadovaných souborů knihovny v jiném počítači. Spusťte instalační program na druhém počítači, který nemá knihoven Visual C++.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Příklady nasazení](deployment-examples.md)<br/>

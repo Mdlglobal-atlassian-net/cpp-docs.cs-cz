@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Zařazování řetězců v kódu ANSI pomocí zprostředkovatele komunikace C++'
+title: 'Postupy: Zařazování řetězců ANSI pomocí zprostředkovatele komunikace C++'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - C++ Interop, strings
 - data marshaling [C++], strings
 ms.assetid: 5eda2eb6-5140-40f0-82cf-7ce171fffb45
-ms.openlocfilehash: 272e64a5dd8faf103daf3ab7fa17449bf3dbb7ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b73d8ed403ab0bbad7703f66f0d8d4ac23bb7766
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570495"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748031"
 ---
-# <a name="how-to-marshal-ansi-strings-using-c-interop"></a>Postupy: Zařazování řetězců v kódu ANSI pomocí zprostředkovatele komunikace C++
+# <a name="how-to-marshal-ansi-strings-using-c-interop"></a>Postupy: Zařazování řetězců ANSI pomocí zprostředkovatele komunikace C++
 
 Toto téma ukazuje, jak mohou být řetězce ANSI předaným pomocí zprostředkovatele komunikace C++, ale rozhraní .NET Framework <xref:System.String> představuje řetězce ve formátu Unicode, takže je převod na ANSI přidat další krok. Spolupráce s jinými typy řetězce, naleznete v následujících tématech:
 
@@ -96,6 +96,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

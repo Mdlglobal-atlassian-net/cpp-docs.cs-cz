@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Zařazení polí pomocí služby PInvoke'
+title: 'Postupy: Zařazování polí pomocí služby PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - interop [C++], arrays
 - data marshaling [C++], arrays
 ms.assetid: a1237797-a2da-4df4-984a-6333ed3af406
-ms.openlocfilehash: bd349fb1eca63fc336a30f4f23ae337d1191bb26
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60b49135928e3dadffc2a3c7a422646d2f3a768d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628511"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752308"
 ---
-# <a name="how-to-marshal-arrays-using-pinvoke"></a>Postupy: Zařazení polí pomocí služby PInvoke
+# <a name="how-to-marshal-arrays-using-pinvoke"></a>Postupy: Zařazování polí pomocí služby PInvoke
 
 Toto téma vysvětluje, jak nativní funkce, které přijímají řetězce ve stylu jazyka C lze volat pomocí řetězce typu CLR <xref:System.String> s využitím podpory nástroje nespravovaného kódu rozhraní .NET Framework. Programátoři jazyka Visual C++ jsou ukončena. doporučujeme místo toho použijte funkce zprostředkovatele komunikace C++ (Pokud je to možné), protože deklarace P/Invoke obsahuje malý kompilace zpráv o chybách, není typově bezpečný a může být pracná k implementaci. Pokud není k dispozici zdrojový kód nespravované rozhraní API je zabalený jako knihovnu DLL, P/Invoke je jedinou možností (jinak, naleznete v tématu [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)).
 
@@ -79,6 +79,6 @@ int main() {
 
 Všimněte si, že není žádná část knihovny DLL zpřístupněna spravovaného kódu pomocí tradiční #include. Ve skutečnosti, protože knihovna DLL je přístupná pouze za běhu, problémy s funkcemi, které se importují s <xref:System.Runtime.InteropServices.DllImportAttribute> nebudou zjištěna v době kompilace.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití explicitního volání PInvoke v jazyce C++ (atribut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

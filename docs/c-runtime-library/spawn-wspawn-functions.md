@@ -45,12 +45,12 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: caaa3fb40a75292bd32e14ddec33b504e0c1296b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 044aaee376be02d0d3734ea8982a8c4db47f7d39
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693711"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748044"
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn, _wspawn – funkce
 
@@ -226,7 +226,7 @@ child process output
 from SPAWN!
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Řízení procesů a prostředí](../c-runtime-library/process-and-environment-control.md)<br/>
 [abort](../c-runtime-library/reference/abort.md)<br/>

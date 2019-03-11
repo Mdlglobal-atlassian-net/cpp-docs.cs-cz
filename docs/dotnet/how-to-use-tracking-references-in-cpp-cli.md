@@ -1,17 +1,17 @@
 ---
-title: 'Postupy: Používání sledovacích odkazů v jazyce C++/CLI'
+title: 'Postupy: Používání sledovacích odkazů v jazyce C + +/ CLI'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
-ms.openlocfilehash: 8b95f6e3a5d98676134622e5c8805c6c031a1a80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf4d528fe23ee6959b770bfce859d24d2f3403cf
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454783"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746237"
 ---
-# <a name="how-to-use-tracking-references-in-ccli"></a>Postupy: Používání sledovacích odkazů v jazyce C++/CLI
+# <a name="how-to-use-tracking-references-in-ccli"></a>Postupy: Používání sledovacích odkazů v jazyce C + +/ CLI
 
 Tento článek ukazuje, jak použít sledovací odkaz (%) v jazyce C + +/ CLI předávání common language runtime (CLR) typy pomocí odkazu.
 
@@ -341,6 +341,6 @@ T %
 T &
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Operátor sledovacího odkazu](../windows/tracking-reference-operator-cpp-component-extensions.md)

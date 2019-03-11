@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C++ Support Library, marshaling
 - marshaling, about marshaling
 ms.assetid: 997dd4bc-5f98-408f-b890-f35de9ce3bb8
-ms.openlocfilehash: 9b4bdcb8a6e691d8f9f0f0f0c2e7d852b4885ea6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e3b8f561ce6609eb2afedb527a16c4803f69c53
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486278"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746822"
 ---
 # <a name="overview-of-marshaling-in-c"></a>Přehled zařazování v jazyku C++
 
@@ -23,7 +23,7 @@ Ve smíšeném režimu někdy musíte zařazování dat mezi nativními a spravo
 
 |Záhlaví|Popis|
 |---------------|-----------------|
-|Marshal.h|`marshal_context` třídy a volného kontext zařazování funkce|
+|marshal.h|`marshal_context` třídy a volného kontext zařazování funkce|
 |marshal_atl.h| Funkce pro zařazování typů knihovny ATL|
 |marshal_cppstd.h|Funkce pro zařazování typů standardní C++|
 |marshal_windows.h|Funkce pro zařazování typů Windows|
@@ -38,26 +38,26 @@ Můžete použít zařazovací knihovna, s nebo bez něj [marshal_context Class]
 
 |Z typu|Na typ|Zařazování – metoda|Zahrnout soubor|
 |---------------|-------------|--------------------|------------------|
-|System::String ^|const char \*|marshal_context –|Marshal.h|
-|const char \*|System::String ^|marshal_as|Marshal.h|
-|Char \*|System::String ^|marshal_as|Marshal.h|
-|System::String ^|Const wchar_t\*|marshal_context –|Marshal.h|
-|Const wchar_t \*|System::String ^|marshal_as|Marshal.h|
-|wchar_t \*|System::String ^|marshal_as|Marshal.h|
+|System::String ^|const char \*|marshal_context|marshal.h|
+|const char \*|System::String ^|marshal_as|marshal.h|
+|Char \*|System::String ^|marshal_as|marshal.h|
+|System::String ^|Const wchar_t\*|marshal_context|marshal.h|
+|const wchar_t \*|System::String ^|marshal_as|marshal.h|
+|wchar_t \*|System::String ^|marshal_as|marshal.h|
 |System::IntPtr|POPISOVAČ|marshal_as|marshal_windows.h|
 |POPISOVAČ|System::IntPtr|marshal_as|marshal_windows.h|
-|System::String ^|BSTR|marshal_context –|marshal_windows.h|
-|BSTR|System::String ^|marshal_as|Marshal.h|
+|System::String ^|BSTR|marshal_context|marshal_windows.h|
+|BSTR|System::String ^|marshal_as|marshal.h|
 |System::String ^|bstr_t|marshal_as|marshal_windows.h|
 |bstr_t|System::String ^|marshal_as|marshal_windows.h|
-|System::String ^|std::String|marshal_as|marshal_cppstd.h|
-|std::String|System::String ^|marshal_as|marshal_cppstd.h|
+|System::String ^|std::string|marshal_as|marshal_cppstd.h|
+|std::string|System::String ^|marshal_as|marshal_cppstd.h|
 |System::String ^|std::wstring|marshal_as|marshal_cppstd.h|
 |std::wstring|System::String ^|marshal_as|marshal_cppstd.h|
-|System::String ^|CStringT\<char >|marshal_as|marshal_atl.h|
-|CStringT\<char >|System::String ^|marshal_as|marshal_atl.h|
-|System::String ^|CStringT < wchar_t >|marshal_as|marshal_atl.h|
-|CStringT < wchar_t >|System::String ^|marshal_as|marshal_atl.h|
+|System::String ^|CStringT\<char>|marshal_as|marshal_atl.h|
+|CStringT\<char>|System::String ^|marshal_as|marshal_atl.h|
+|System::String ^|CStringT<wchar_t>|marshal_as|marshal_atl.h|
+|CStringT<wchar_t>|System::String ^|marshal_as|marshal_atl.h|
 |System::String ^|CComBSTR|marshal_as|marshal_atl.h|
 |CComBSTR|System::String ^|marshal_as|marshal_atl.h|
 
@@ -70,11 +70,11 @@ Tento příklad ukazuje, jak zahrnout adresář msclr – deklarace zahrnout zá
 
 `#include "msclr\marshal_cppstd.h"`
 
-Knihovna zařazování je rozšiřitelný, kde můžete přidat vlastní zařazování typů. Další informace o rozšíření knihovny zařazování, naleznete v tématu [postupy: rozšíření knihovny zařazování](../dotnet/how-to-extend-the-marshaling-library.md).
+Knihovna zařazování je rozšiřitelný, kde můžete přidat vlastní zařazování typů. Další informace o rozšíření knihovny zařazování, naleznete v tématu [jak: Rozšíření knihovny zařazování](../dotnet/how-to-extend-the-marshaling-library.md).
 
 V dřívějších verzích by mohla zařazování dat s využitím [vyvolání platformy](/dotnet/framework/interop/consuming-unmanaged-dll-functions). Další informace o `PInvoke`, naleznete v tématu [volání nativních funkcí ze spravovaného kódu](../dotnet/calling-native-functions-from-managed-code.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Knihovna podpory C++](../dotnet/cpp-support-library.md)<br/>
 [Postupy: Rozšíření knihovny zařazování](../dotnet/how-to-extend-the-marshaling-library.md)

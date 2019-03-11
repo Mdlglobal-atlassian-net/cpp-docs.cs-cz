@@ -8,12 +8,12 @@ helpviewer_keywords:
 - heap allocation, control flags
 - debug heap, control flags
 ms.assetid: 8dbd24a5-0633-42d1-9771-776db338465f
-ms.openlocfilehash: 45349099ed5c607468430d2f0a901c6374d88fc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ac5f239ea4d242618fb23ba617a3a6539492053
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475735"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750111"
 ---
 # <a name="control-flags"></a>Příznaky ovládacích prvků
 
@@ -27,6 +27,6 @@ Ladicí verze knihovny run-time Microsoft C používá následující příznaky
 
 Tyto příznaky mohou být definovány pomocí možnosti /D příkazového řádku nebo pomocí `#define` směrnice. Pokud je příznak definován s `#define`, direktiva musí být uvedena před příkaz pro běžné deklarace zahrnout soubor hlaviček.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Globální proměnné a standardní typy](../c-runtime-library/global-variables-and-standard-types.md)

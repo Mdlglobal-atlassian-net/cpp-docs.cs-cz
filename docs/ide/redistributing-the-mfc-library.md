@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, redistributing
 - redistributing MFC library
 ms.assetid: 72714ce1-385e-4c1c-afa5-96b03e873866
-ms.openlocfilehash: 891a11e02b60bf5337b02956e9562b2f4b45a6e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e7352306627722ff2921c2a46cb49b6318f10b6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659937"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746953"
 ---
 # <a name="redistributing-the-mfc-library"></a>Redistribuce knihovny MFC
 
@@ -25,7 +25,7 @@ Pokud jste aplikaci vytvořili pomocí starší verze knihovny MFC, musíte redi
 
 Pokud staticky propojíte aplikaci ke knihovně MFC (tj. Pokud zadáte **použít knihovnu MFC ve statické knihovně** na **Obecné** kartu **stránky vlastností** dialogové okno), není nutné Redistribuce knihovny MFC DLL. Nicméně i když statické propojení může fungovat pro testování a vnitřní nasazení aplikací, doporučujeme vám, že je velmi riskantní používat ji k redistribuci knihovny MFC. Další informace o doporučených strategiích nasazení knihoven Visual C++, naleznete v tématu [volba metody nasazení](../ide/choosing-a-deployment-method.md).
 
-Pokud vaše aplikace používá třídy knihovny MFC implementující ovládací prvek WebBrowser (například [CHtmlView – třída](../mfc/reference/chtmlview-class.md) nebo [CHtmlEditView – třída](../mfc/reference/chtmleditview-class.md)), doporučujeme také nainstalovat nejnovější verzi Microsoft Internet Explorer tak, aby cílový počítač obsahoval nejaktuálnější soubory obvyklých ovládacích prvků. (Minimálně je vyžadována aplikace Internet Explorer 4.0.) Informace o instalaci komponent aplikace Internet Explorer je k dispozici v "Článku 185375: jak na vytvoření jedné EXE instalace aplikace Internet Explorer" na webu Microsoft Support.
+Pokud vaše aplikace používá třídy knihovny MFC implementující ovládací prvek WebBrowser (například [CHtmlView – třída](../mfc/reference/chtmlview-class.md) nebo [CHtmlEditView – třída](../mfc/reference/chtmleditview-class.md)), doporučujeme také nainstalovat nejnovější verzi Microsoft Internet Explorer tak, aby cílový počítač obsahoval nejaktuálnější soubory obvyklých ovládacích prvků. (Minimálně je vyžadována aplikace Internet Explorer 4.0.) Informace o instalaci komponent aplikace Internet Explorer je k dispozici v "článku 185375: Jak k vytvoření jedné EXE instalace aplikace Internet Explorer"na webu Microsoft Support.
 
 Pokud vaše aplikace používá databázové třídy MFC (například [CRecordset – třída](../mfc/reference/crecordset-class.md) a [CRecordView – třída](../mfc/reference/crecordview-class.md)), musíte redistribuovat rozhraní ODBC a všechny ovladače rozhraní ODBC, které vaše aplikace používá.
 
@@ -41,10 +41,10 @@ Pokud se rozhodnete lokalizovat aplikaci instalací lokalizační knihovny DLL M
 
 Redistribuovatelné soubory MSM obsahují knihovny DLL, které se používají pro lokalizaci. Existuje jedna knihovna DLL pro každý podporovaný jazyk. Proces instalace nainstalujte tyto knihovny DLL do složky %windir%\system32\ v cílovém počítači.
 
-Další informace o tom, jak lokalizaci aplikací knihovny MFC naleznete v tématu [TN057: lokalizace komponent MFC](../mfc/tn057-localization-of-mfc-components.md).
+Další informace o tom, jak lokalizaci aplikací knihovny MFC naleznete v tématu [TN057: Lokalizace komponent MFC](../mfc/tn057-localization-of-mfc-components.md).
 
 Můžete redistribuovat lokalizační knihovny MFC nasazením knihovny MFC DLL v lokální složce vaší aplikace. Další informace o způsobu redistribuci knihoven Visual C++, naleznete v tématu [Redistribuce souborů Visual C++](../ide/redistributing-visual-cpp-files.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Redistribuce souborů Visual C++](../ide/redistributing-visual-cpp-files.md)

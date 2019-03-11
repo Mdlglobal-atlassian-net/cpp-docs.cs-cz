@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: e930702862149de4dae65aab2f880f35850e0687
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6522461cf1f08eee9187a8f739cb21fe01e755f5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597545"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747005"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Úvod do prostředí Visual C++ pro uživatele systému UNIX
 
@@ -19,7 +19,7 @@ Toto téma obsahuje informace pro uživatele systému UNIX, kteří se ještě s
 
 Kompilátor C++ z příkazového řádku můžete použít podobným způsobem použijete prostředí příkazového řádku systému UNIX. Při kompilaci z příkazového řádku pomocí příkazového řádku kompilátoru jazyka C a C++ (CL. Soubor EXE) linkeru (odkaz. Soubor EXE) a další nástroje, včetně NMAKE. Soubor EXE, Microsoft verze systémů UNIX Zkontrolujte nástroj.
 
-V systému UNIX příkazy jsou nainstalovány v běžné složky, například/usr/bin. V sadě Visual Studio nástroje příkazového řádku jsou nainstalovány v adresáři instalace sady Visual Studio v podadresáři VC\bin a jeho podadresářích. Na rozdíl od systému UNIX tyto nástroje nejsou k dispozici v okně prostý příkazového řádku. Použití nástrojů příkazového řádku, použijte zástupce příkazového řádku pro vývojáře nebo spustit příkaz vývojář souboru, například vcvarsall.bat. Tím se nastaví cesta i ostatním proměnným prostředí, které jsou nezbytné pro kompilaci programy v jazyce C++ z příkazového řádku. Další informace najdete v tématu [kódu sestavení C/C++ v příkazovém řádku](../build/building-on-the-command-line.md) a [návod: kompilace nativního programu C++ v příkazovém řádku](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).
+V systému UNIX příkazy jsou nainstalovány v běžné složky, například/usr/bin. V sadě Visual Studio nástroje příkazového řádku jsou nainstalovány v adresáři instalace sady Visual Studio v podadresáři VC\bin a jeho podadresářích. Na rozdíl od systému UNIX tyto nástroje nejsou k dispozici v okně prostý příkazového řádku. Použití nástrojů příkazového řádku, použijte zástupce příkazového řádku pro vývojáře nebo spustit příkaz vývojář souboru, například vcvarsall.bat. Tím se nastaví cesta i ostatním proměnným prostředí, které jsou nezbytné pro kompilaci programy v jazyce C++ z příkazového řádku. Další informace najdete v tématu [kódu sestavení C/C++ v příkazovém řádku](../build/building-on-the-command-line.md) a [názorný postup: Kompilace nativního programu C++ v příkazovém řádku](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).
 
 Chcete-li spustit nástroj zástupce příkazového řádku pro vývojáře, zadejte *příkazový řádek pro vývojáře* v desktopu hledat ovládací prvek a vyberte **Developer Command Prompt** výsledek pro vaši verzi sady Visual Studio. Chcete-li vyberte příkazový řádek pro vývojáře, který je předem konkrétního hostitele a Cílová architektura, otevřete **Start** nabídky (Windows ikonu v pravém rohu plochy) a přejděte do složky pro vaši verzi sady Visual Studio , jako například **Visual Studio 2017**. Otevřete složku a zvolte zástupce příkazového řádku pro upřednostňované hostitele a cílové architektury.
 
@@ -37,7 +37,7 @@ Aplikace, která se skládá z více knihoven a spustitelné soubory, každý po
 
 ## <a name="importing-your-existing-code"></a>Import existujícího kódu
 
-Kompilátor C++ můžete použít k sestavení existující kód, který je nastavený na kompilovat s nebo bez souboru pravidel a vložit ho do projektu sady Visual Studio. Další informace najdete v tématu [postupy: vytvoření projektu jazyka C++ z existujícího kódu](../ide/how-to-create-a-cpp-project-from-existing-code.md).
+Kompilátor C++ můžete použít k sestavení existující kód, který je nastavený na kompilovat s nebo bez souboru pravidel a vložit ho do projektu sady Visual Studio. Další informace najdete v tématu [jak: Vytvoření projektu jazyka C++ z existujícího kódu](../ide/how-to-create-a-cpp-project-from-existing-code.md).
 
 ## <a name="creating-a-new-project"></a>Vytvoření nového projektu
 
@@ -63,6 +63,6 @@ Ve výchozím nastavení je všechny předkompilovaný kód zadaný do souborů 
 
 Další informace najdete v tématu [Portování ze systému UNIX do Win32](../porting/porting-from-unix-to-win32.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)

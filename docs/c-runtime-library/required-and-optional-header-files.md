@@ -7,12 +7,12 @@ helpviewer_keywords:
 - include files, required in run time
 - header files, required in run time
 ms.assetid: f64d0bf5-e2c3-4b42-97d0-443b3d901d9f
-ms.openlocfilehash: db3b05edf1496d92eaed5c7f07b9961cdde351c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06f7ced45f8def05219d8869708f555a78f73cd3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539409"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744519"
 ---
 # <a name="required-and-optional-header-files"></a>Povinné a nepovinné hlavičkové soubory
 
@@ -26,6 +26,6 @@ Popis každou rutinu runtime obsahuje seznam povinných a volitelných zahrnout,
 
 Soubory hlaviček knihovny run-time poskytovat deklarace funkcí ve standardní doporučené stylu ANSI/ISO C. Kompilátor provede kontrolu na rutinní odkaz, ke které dojde po její deklaraci související funkce. Deklarace funkcí jsou obzvláště důležité pro rutiny, které vracejí hodnotu typu jiného než `int`, což je výchozí hodnota. Postupy, které není zadán odpovídající vrátit hodnotu v jeho deklaraci bude považovat za kompilátorem se vraťte `int`, což může vést k neočekávaným výsledkům. Zobrazit [kontroly typu](../c-runtime-library/type-checking-crt.md) Další informace.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Funkce knihovny CRT](../c-runtime-library/crt-library-features.md)

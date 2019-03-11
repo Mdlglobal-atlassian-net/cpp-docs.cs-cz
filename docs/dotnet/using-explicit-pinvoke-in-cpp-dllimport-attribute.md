@@ -8,12 +8,12 @@ helpviewer_keywords:
 - platform invoke [C++], marshaling in C++
 - data marshaling [C++], platform invoke
 ms.assetid: 18e5218c-6916-48a1-a127-f66e22ef15fc
-ms.openlocfilehash: 8ac9dac3ea90062b632358ade2cd99e9c67e446f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee9d77920f04f7eba5112c66a906b02b7fc4a658
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588705"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740534"
 ---
 # <a name="using-explicit-pinvoke-in-c-dllimport-attribute"></a>Použití explicitního volání PInvoke v jazyce C++ (atribut DllImport)
 
@@ -29,16 +29,16 @@ Výsledkem je spravovaný vstupní bod pro každý nativní funkce knihovny DLL,
 
 - [Postupy: Volání nativních knihoven DLL ze spravovaného kódu pomocí služby PInvoke](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md)
 
-- [Postupy: Zařazení řetězců pomocí služby PInvoke](../dotnet/how-to-marshal-strings-using-pinvoke.md)
+- [Postupy: Zařazování řetězců pomocí služby PInvoke](../dotnet/how-to-marshal-strings-using-pinvoke.md)
 
-- [Postupy: Zařazení struktur pomocí služby PInvoke](../dotnet/how-to-marshal-structures-using-pinvoke.md)
+- [Postupy: Zařazování struktur pomocí služby PInvoke](../dotnet/how-to-marshal-structures-using-pinvoke.md)
 
-- [Postupy: Zařazení polí pomocí služby PInvoke](../dotnet/how-to-marshal-arrays-using-pinvoke.md)
+- [Postupy: Zařazování polí pomocí služby PInvoke](../dotnet/how-to-marshal-arrays-using-pinvoke.md)
 
-- [Postupy: Zařazení ukazatelů na funkce pomocí služby PInvoke](../dotnet/how-to-marshal-function-pointers-using-pinvoke.md)
+- [Postupy: Zařazování ukazatelů na funkce pomocí služby PInvoke](../dotnet/how-to-marshal-function-pointers-using-pinvoke.md)
 
-- [Postupy: Zařazení vložených ukazatelů pomocí služby PInvoke](../dotnet/how-to-marshal-embedded-pointers-using-pinvoke.md)
+- [Postupy: Zařazování vložených ukazatelů pomocí služby PInvoke](../dotnet/how-to-marshal-embedded-pointers-using-pinvoke.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Volání nativních funkcí ze spravovaného kódu](../dotnet/calling-native-functions-from-managed-code.md)

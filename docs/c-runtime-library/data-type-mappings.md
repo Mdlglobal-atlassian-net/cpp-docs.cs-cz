@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _TEXT type
 - _T type
 ms.assetid: 4e573c05-8800-468b-ae5f-76ff7409835e
-ms.openlocfilehash: 3d6e43d8d39cb208efbb6010ef2591a2880fd584
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60dc4329ae4c908b9bd168584c71c42c12634bb2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647895"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749097"
 ---
 # <a name="data-type-mappings"></a>Mapování datového typu
 
@@ -56,7 +56,7 @@ Související informace naleznete v tématu [pomocí TCHAR. H datové typy s kó
 |`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|
 |`_T` Nebo `_TEXT`|Žádný vliv (odebral preprocesoru)|Žádný vliv (odebral preprocesoru)|`L` (převede následující znak nebo řetězec k jeho protějšku Unicode)|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Mapování obecného textu](../c-runtime-library/generic-text-mappings.md)<br/>
 [Mapování konstant a globálních proměnných](../c-runtime-library/constant-and-global-variable-mappings.md)<br/>

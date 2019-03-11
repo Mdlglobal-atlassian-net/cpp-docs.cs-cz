@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: přechod na / clr'
+title: 'Postupy: Přechod na / clr'
 ms.custom: get-started-article
 ms.date: 09/18/2018
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: d293b6c3795b9abe57da0c6bcb92dd3f1de810ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02e678f98773f9ae7bb4f611210329a7a1116f17
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454441"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749110"
 ---
-# <a name="how-to-migrate-to-clr"></a>Postupy: Migrace do prostředí /clr
+# <a name="how-to-migrate-to-clr"></a>Postupy: Přechod na/CLR
 
 Toto téma popisuje problémy, které vznikají při kompilace nativního kódu s **/CLR** (viz [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) Další informace). **/ CLR** umožňuje nativní kód C++ volání a vyvolat z .NET sestavení kromě jiných nativní kód C++. Zobrazit [smíšený (nativní a spravovaná) sestavení](../dotnet/mixed-native-and-managed-assemblies.md) a [nativní a vzájemná funkční spolupráce rozhraní .NET](../dotnet/native-and-dotnet-interoperability.md) Další informace o výhodách kompilace s **/CLR**.
 
@@ -114,7 +114,7 @@ Ale hlavně pro velké projekty, předkompilovaných hlaviček poskytuje mnohem 
 
 Kompilace s **/CLR** může vést k chybám kompilátoru, linkeru nebo modul runtime. Tato část popisuje nejběžnější problémy.
 
-### <a name="metadata-merge"></a>Slučování metadat
+### <a name="metadata-merge"></a>Metadata Merge
 
 Různé verze typů dat může způsobit linkeru se nezdařila, protože metadata generovaná pro dva typy neodpovídá. (To je obvykle nastává, když jsou členy typu podmíněně definovány, ale podmínky nejsou stejné pro všechny soubory CPP, které používají typ.) V tomto případě linkeru selže, pouze název symbolu a název druhý soubor OBJ, kde byl definován typ sestavy. Často je užitečné otočit pořadí, že odesílání souborů OBJ linkeru ke zjištění umístění jiné verze datového typu.
 
@@ -164,6 +164,6 @@ Informace o programování v jazyce Visual C++ .NET naleznete v tématu:
 
 - [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Smíšená (nativní a spravovaná) sestavení](../dotnet/mixed-native-and-managed-assemblies.md)

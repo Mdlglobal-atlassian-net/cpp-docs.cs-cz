@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: c50a726b0e5b6e175bd7256ab5a5d93d6b172601
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d227490944232e04c533b06a08f04a378d0239e0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583793"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741790"
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Přidání odkazů v projektech v jazyce Visual C++
 
@@ -88,7 +88,7 @@ Definujte následující vlastnosti *odkaz typu projekt projekt* z projektu, kte
 
    Pokud je tato vlastnost **True**, systém projektu propojeny do závislý projekt lib souborů, které jsou vytvářeny nezávislé projektem. Obvykle můžete zadat **True**.
 
-- **Identifikátor projektu**
+- **Project Identifier**
 
    Jednoznačně identifikuje nezávislé projektu. Hodnota vlastnosti je interní systém identifikátor GUID, který nemůže být upraven.
 
@@ -124,7 +124,7 @@ Následující vlastnosti se nacházejí na odkazy na sestavení modelu COM a .N
 
    Zobrazí popisek odkazu.
 
-- **Jméno**
+- **Název**
 
    Zobrazí název odkazu.
 
@@ -140,7 +140,7 @@ Následující vlastnosti se nacházejí na odkazy na sestavení modelu COM a .N
 
    Verze odkazovaného sestavení zobrazí.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Stránky vlastností](../ide/property-pages-visual-cpp.md)<br>
 [Práce s vlastnostmi projektu](../ide/working-with-project-properties.md)

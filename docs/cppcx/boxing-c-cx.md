@@ -2,12 +2,12 @@
 title: Zabalení (C + +/ CX)
 ms.date: 12/30/2016
 ms.assetid: edfb12fa-2a9b-42f6-bdac-d4d76cb8274e
-ms.openlocfilehash: 4a8812cb56cbbd684be953876d480e6e0c90841a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3c281229b509ef72d37400b2088a6663be1afe42
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420008"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750751"
 ---
 # <a name="boxing-ccx"></a>Zabalení (C + +/ CX)
 
@@ -36,7 +36,7 @@ V jazyce C# XAML klienta můžete ho využívat takto:
     var result = obj.Multiply(a,b); //result = null
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Systém typů (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
 [Přetypování (C++/CX)](../cppcx/casting-c-cx.md)<br/>

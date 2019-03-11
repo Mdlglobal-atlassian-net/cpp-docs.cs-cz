@@ -23,12 +23,12 @@ helpviewer_keywords:
 - shared classes, CTimeSpan
 - time, elapsed
 ms.assetid: ee1e42f6-1839-477a-8435-fb26ad475140
-ms.openlocfilehash: 6ab22b9a093a1aa9c8ae0249c036ea2bf89065f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c80260c1f57e49a34b4e9f3331f4d0d69ab30ce
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641869"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752321"
 ---
 # <a name="ctimespan-class"></a>Ctimespan – třída
 
@@ -104,7 +104,7 @@ bool operator>=(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*<br/>
+*span*<br/>
 Objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -345,7 +345,7 @@ CTimeSpan operator-(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*<br/>
+*span*<br/>
 Hodnota k přidání do `CTimeSpan` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -371,7 +371,7 @@ CTimeSpan& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*<br/>
+*span*<br/>
 Hodnota k přidání do `CTimeSpan` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -406,7 +406,7 @@ CArchive& Serialize64(CArchive& ar);
 
 Aktualizovaný `CArchive` objektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)<br/>
 [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)<br/>
@@ -416,4 +416,3 @@ Aktualizovaný `CArchive` objektu.
 [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Sdílené třídy ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

@@ -1,19 +1,19 @@
 ---
-title: 'Postupy: použití nativního typu v kompilaci - clr'
+title: 'Postupy: Použití nativního typu v kompilaci - clr'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - compilation, native types in /clr
 - /clr compiler option [C++], using native types
 ms.assetid: 3a505c90-4adb-4942-9cf9-7d1fdcbc01e7
-ms.openlocfilehash: 0079be21b474858684e1abaaeb363820764a701d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9979113ac4ffc062ddfe8654279af03036984f38
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459949"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746029"
 ---
-# <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>Postupy: Použití nativního typu v kompilaci /clr
+# <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>Postupy: Použití nativního typu v kompilaci/CLR
 
 Můžete definovat v nativním typu **/CLR** kompilace a veškeré jeho používání nativního typu v rámci sestavení je platný. Nativní typy však nebudou k dispozici pro použití z odkazovaných metadat.
 
@@ -61,6 +61,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

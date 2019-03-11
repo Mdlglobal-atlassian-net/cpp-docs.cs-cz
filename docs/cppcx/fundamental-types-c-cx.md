@@ -2,12 +2,12 @@
 title: Základní typy (C + +/ CX)
 ms.date: 01/22/2017
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
-ms.openlocfilehash: a6c068d58f0d7c173bff34726873b7a0f4f1d74c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bd5be01b868fd3086c2064edfd4ca343db425be
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529126"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752360"
 ---
 # <a name="fundamental-types-ccx"></a>Základní typy (C + +/ CX)
 
@@ -28,14 +28,14 @@ V následující tabulce jsou uvedeny předdefinované číselné typy. Číseln
 
 |C + +/ CX název|Definice|Standardní název jazyka C++|Rozsah hodnot|
 |-----------------------------------------------------------------------|----------------|-------------------------|---------------------|
-|Int8|8bitové podepsaný číselnou hodnotu.|podepsané char|-128 až 127.|
+|int8|8bitové podepsaný číselnou hodnotu.|podepsané char|-128 až 127.|
 |uint8|8bitové hodnoty bez znaménka číselná.|unsigned char|0 až 255|
-|Int16|16bitové celé číslo se znaménkem.|short|-32 768 až 32 767|
-|UInt16|16bitové celé číslo bez znaménka.|unsigned short|0 až 65535|
+|int16|16bitové celé číslo se znaménkem.|short|-32 768 až 32 767|
+|uint16|16bitové celé číslo bez znaménka.|unsigned short|0 až 65535|
 |int32|32bitové celé číslo se znaménkem.|int|-2,147,483,648 prostřednictvím 2 147 483 647|
-|UInt32|32bitové celé číslo bez znaménka.|unsigned int|0 až 4 294 967 295|
+|uint32|32bitové celé číslo bez znaménka.|unsigned int|0 až 4 294 967 295|
 |int64|64bitové celé číslo se znaménkem.|Long long - nebo - __int64|-9,223,372,036,854, 775,808 prostřednictvím 9,223,372,036,854,775,807|
-|UInt64|64bitové celé číslo bez znaménka.|unsigned long long - nebo - unsigned __int64|0 až 18,446,744,073,709,551,615|
+|uint64|64bitové celé číslo bez znaménka.|unsigned long long - nebo - unsigned __int64|0 až 18,446,744,073,709,551,615|
 |float32|IEEE 754 číslo s 32 bitů s plovoucí desetinnou čárkou|float|3, 4e +/-38 (7 číslic)|
 |float64|IEEE 754 číslo s 64bitovým kompilátorem s plovoucí desetinnou čárkou|double|1, 7E +/-308 (15 číslic)|
 
@@ -50,10 +50,10 @@ V následující tabulce jsou uvedeny některé další typy, které jsou defino
 |Rect|Sada s plovoucí desetinnou čárkou čtyři čísla, které představují, umístění a velikost obdélníku.|
 |SizeT|Uspořádaná dvojice čísel s plovoucí desetinnou čárkou, určíte výšku a šířku.|
 |Bod|Uspořádaná dvojice s plovoucí desetinnou čárkou souřadnice x a y souřadnic, které definují bod do dvourozměrné roviny.|
-|identifikátor GUID|Hodnota nečíselné 128-bit, který se používá jako jedinečný identifikátor.|
+|Guid|Hodnota nečíselné 128-bit, který se používá jako jedinečný identifikátor.|
 |UIntPtr|(Pouze pro interní použití.) Hodnoty bez znaménka 64-bit, který slouží jako ukazatel.|
 |IntPtr|(Pouze pro interní použití.)  Podepsané 64 bitů hodnotu, která slouží jako ukazatel.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Systém typů](../cppcx/type-system-c-cx.md)

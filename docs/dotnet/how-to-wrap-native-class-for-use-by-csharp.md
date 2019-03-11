@@ -1,19 +1,19 @@
 ---
-title: 'Postupy: Zabalení nativních tříd pro použití v jazyce C#'
+title: 'Postupy: Zabalení nativních tříd pro použitíC#'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - native code [C++], Visual C# and
 - classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
-ms.openlocfilehash: dc61c9749492f2f0dbe0c6b60abc2a9030cab4d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e58530577fdcc87f4ca168b6976a848cba29b372
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588094"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751632"
 ---
-# <a name="how-to-wrap-native-class-for-use-by-c"></a>Postupy: Zabalení nativních tříd pro použití v jazyce C#
+# <a name="how-to-wrap-native-class-for-use-by-c"></a>Postupy: Zabalení nativních tříd pro použitíC#
 
 Tento příklad ukazuje postup při zabalení nativních tříd jazyka C++, takže mohou být spotřebovány kód vytvořené v jazyce C# nebo jiném jazyce .NET.
 
@@ -67,6 +67,6 @@ private:
 };
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

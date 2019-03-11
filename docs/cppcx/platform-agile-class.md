@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-ms.openlocfilehash: 9350d94fdff615056fca193d654b2bb001d78d72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86a535bc106e17b276dc5f42a59773aa0de8c361
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471198"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749269"
 ---
 # <a name="platformagile-class"></a>Platform::agile – třída
 
@@ -48,7 +48,7 @@ Většina tříd v modulu Windows Runtime jsou agile. Agilní objekt lze volat n
 |Název|Popis|
 |----------|-----------------|
 |[Agile::Agile](#ctor)|Inicializuje novou instanci třídy Agile.|
-|[Agilní:: ~ agilní – destruktor](#dtor)|Odstraní aktuální instanci třídy Agile.|
+|[Agile::~Agile Destructor](#dtor)|Odstraní aktuální instanci třídy Agile.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -76,9 +76,9 @@ Většina tříd v modulu Windows Runtime jsou agile. Agilní objekt lze volat n
 
 **Minimální podporovaná klienta:** Windows 8
 
-**Minimální podporovaná serverem:** systému Windows Server 2012
+**Minimální podporovaná serveru:** Windows Server 2012
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 **Záhlaví:** agile.h
 
@@ -135,7 +135,7 @@ T^ Get() const;
 
 Popisovač pro objekt, který představuje aktuální objekt Agile.
 
-Typ vrácené hodnoty je ve skutečnosti utajované vnitřního typu. Pohodlný způsob pro uchování hodnoty vrácené je k ní přiřadit k proměnné, která je deklarována pomocí **automaticky** klíčovým slovem odvození typu. Například `auto x = myAgileTvariable->Get();`.
+Typ vrácené hodnoty je ve skutečnosti utajované vnitřního typu. Pohodlný způsob pro uchování hodnoty vrácené je k ní přiřadit k proměnné, která je deklarována pomocí **automaticky** klíčovým slovem odvození typu. Například, `auto x = myAgileTvariable->Get();`.
 
 ## <a name="getaddressof"></a>  Agile::GetAddressOf – metoda
 
@@ -234,7 +234,7 @@ Typ určený název typu šablony.
 *object*<br/>
 Objekt nebo popisovač pro objekt, který je zkopírovaný ani přesunutý do aktuálního objektu Agile.
 
-*LP*<br/>
+*lp*<br/>
 Ukazatel na rozhraní IUnknown objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -247,6 +247,6 @@ První verze operátoru přiřazení zkopíruje popisovač na typ odkazu na aktu
 
 Operace přiřazení automaticky opakuje kontextu aktuálního objektu Agile.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Platforma Namespace](platform-namespace-c-cx.md)

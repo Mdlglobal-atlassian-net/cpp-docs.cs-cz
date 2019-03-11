@@ -13,12 +13,12 @@ helpviewer_keywords:
 - standard input stream
 - stderr function
 ms.assetid: badd4735-596d-4498-857c-ec8b7e670e4c
-ms.openlocfilehash: f9ed1f842bd174c2b926572856152cd69ade5a56
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 5de1ff01282f30ad133f909cb87f5d7c8d521ae5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328016"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741941"
 ---
 # <a name="stdin-stdout-stderr"></a>stdin, stdout, stderr
 
@@ -49,7 +49,7 @@ Tyto ukazatele lze použít jako argumenty funkce. Některé funkce, jako např�
 
 Tyto ukazatele jsou konstanty a nelze jí přiřadit nové hodnoty. [Freopen](../c-runtime-library/reference/freopen-wfreopen.md) funkce lze přesměrovat datové proudy souborů na disku nebo s jinými zařízeními. Operační systém můžete přesměrovat standardní vstupní a výstupní na úrovni příkazu programu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Stream vstupně-výstupních operací](../c-runtime-library/stream-i-o.md)<br/>
 [Globální konstanty](../c-runtime-library/global-constants.md)

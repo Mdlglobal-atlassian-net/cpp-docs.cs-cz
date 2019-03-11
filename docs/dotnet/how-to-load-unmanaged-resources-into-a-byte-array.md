@@ -7,12 +7,12 @@ helpviewer_keywords:
 - unmanaged resources, loading into Byte array
 - native resources
 ms.assetid: cdada6cd-6d42-437a-a90f-44a0b18d6a93
-ms.openlocfilehash: d7d35af462a2d598995f222221a4023d09c73ff3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 641bdf4429bca35800e3fbbbb7622f2651bb3fee
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579879"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751567"
 ---
 # <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>Postupy: Načtení nespravovaných prostředků do bajtového pole
 
@@ -75,6 +75,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

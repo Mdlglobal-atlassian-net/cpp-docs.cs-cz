@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual C++, output files
 - output files, organizing
 ms.assetid: 521d95ea-2dcc-4da0-b5eb-ac3e57941446
-ms.openlocfilehash: 9dd70f52c79d00282122f935b19770b973901103
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7fc3f3aeffd40c1b455b743765d40f50abc03ecc
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575965"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742545"
 ---
 # <a name="how-to-organize-project-output-files-for-builds"></a>Postupy: Uspořádání výstupních souborů projektu pro sestavení
 
@@ -68,6 +68,6 @@ Umístění výstupních souborů může být závažný problém při nasazení
 
 1. Umístění projektu výstup, nastavení se dají najít v projektu **stránky vlastností**. Rozbalte uzel vedle **vlastnosti konfigurace** a vyberte **Obecné**. Umístění výstupu je určeno **výstupní adresář**. Další informace najdete v tématu [Obecná stránka vlastností (projekt)](../ide/general-property-page-project.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Typy projektů Visual C++](../ide/visual-cpp-project-types.md)

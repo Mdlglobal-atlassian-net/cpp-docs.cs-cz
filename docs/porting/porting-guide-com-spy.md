@@ -2,12 +2,12 @@
 title: 'Průvodce přenosem: COM Spy'
 ms.date: 11/04/2016
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
-ms.openlocfilehash: 67dbcc815404c26535763239eddb176fcecf03f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca81b240a102195109c0ad6ef05bfaed10306704
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441782"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751684"
 ---
 # <a name="porting-guide-com-spy"></a>Průvodce přenosem: COM Spy
 
@@ -164,8 +164,8 @@ private void button1_Click(object sender, EventArgs e)
 
 To běžel bez problémů a s COM Spy zprovozněný a konfiguruje pro monitorování `Dog` součástí, zobrazí se velké množství dat znázorňující aktivity.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Přenos a upgrade: Příklady a případové studie](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[Portování a upgradování: Příklady a případové studie](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Následující příklad: Spy ++](../porting/porting-guide-spy-increment.md)<br/>
 [Předchozí příklad: MFC Scribble](../porting/porting-guide-mfc-scribble.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [C++], redistributing
 - controls [C++], distributing
 ms.assetid: eefbb7e4-d28c-4c35-98bf-d9540cfaae83
-ms.openlocfilehash: 6c1f75665d43d927e21a1fd7d365e1bde46c57a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb4ef7b58f5ef596ac6484761ab891ceb8bb85ad
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551395"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744637"
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>Redistribuce souborů ovládacích prvků ActiveX jazyka Visual C++
 
@@ -39,6 +39,6 @@ Při použití ovládacího prvku ActiveX, který se připojuje k databázi, je 
 
 Některé distribuovatelné ovládací prvky ActiveX mají další závislosti. Pro každý .ocx soubor v adresáři Os\System na disku CD produktu Visual C++ 6.0 je také .dep soubor. Pro každý soubor .ocx, který chcete znovu distribuovat vyhledejte v odpovídajícím souboru .dep jednu nebo více položek používá. Pokud je uvedený soubor, ujistěte se, že soubor je v cílovém počítači. Všechny knihovny DLL přímo podporuje soubor .ocx musí být zaregistrovaní. (Pro úspěšné Regsvr32.exe, cílový počítač musí nejprve obsahovat všechny knihovny DLL staticky načte ovládacího prvku.) Kromě toho pokud knihovnu DLL, která je uvedena jako závislost také obsahuje soubor .dep v Os\System na disku CD Visual C++ 6.0, musíte také prozkoumat .dep soubor pro použití položky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Redistribuce souborů Visual C++](../ide/redistributing-visual-cpp-files.md)

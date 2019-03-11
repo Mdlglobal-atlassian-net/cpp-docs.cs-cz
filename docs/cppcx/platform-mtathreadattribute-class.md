@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
-ms.openlocfilehash: 07a20457df1bb9124b965cfae27d30e9f31d7531
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4564def412834ae0586292e8aa533d3b2bd0d679
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528073"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745259"
 ---
 # <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute – třída
 
@@ -52,7 +52,7 @@ Atribut MTAThreadAttribute dědí z [Platform::Object – třída](../cppcx/plat
 
 **Metadata:** platform.winmd
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 ## <a name="ctor"></a> MTAThreadAttribute konstruktor
 
@@ -111,6 +111,6 @@ public:String^ ToString();
 
 Řetězec, který představuje aktuální objekt.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Platforma Namespace](platform-namespace-c-cx.md)

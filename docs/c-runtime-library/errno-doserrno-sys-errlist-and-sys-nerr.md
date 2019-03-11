@@ -21,12 +21,12 @@ helpviewer_keywords:
 - _sys_nerr global variable
 - sys_nerr global variable
 ms.assetid: adbec641-6d91-4e19-8398-9a34046bd369
-ms.openlocfilehash: 50b44c659aac66dbaddad711cceef635f277d2c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57d04fe5867c6a969b6aeca40f26b18b5dcd7a61
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487722"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750777"
 ---
 # <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno, _doserrno, _sys_errlist, and _sys_nerr
 
@@ -51,9 +51,9 @@ Každý `errno` hodnota je přidružena chybovou zprávu ve `_sys_errlist` , kte
 
 |Globální – makro|Funkční ekvivalenty|
 |------------------|----------------------------|
-|`_doserrno`|[_get_doserrno –](../c-runtime-library/reference/get-doserrno.md), [_set_doserrno –](../c-runtime-library/reference/set-doserrno.md)|
-|`errno`|[_get_errno –](../c-runtime-library/reference/get-errno.md), [_set_errno –](../c-runtime-library/reference/set-errno.md)|
-|`_sys_errlist`, `_sys_nerr`|[strerror_s – _strerror_s –, _wcserror_s –, \__wcserror_s –](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)|
+|`_doserrno`|[_get_doserrno](../c-runtime-library/reference/get-doserrno.md), [_set_doserrno](../c-runtime-library/reference/set-doserrno.md)|
+|`errno`|[_get_errno](../c-runtime-library/reference/get-errno.md), [_set_errno](../c-runtime-library/reference/set-errno.md)|
+|`_sys_errlist`, `_sys_nerr`|[strerror_s, _strerror_s, _wcserror_s, \__wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)|
 
 Knihovna matematických rutin nastavuje `errno` voláním [_matherr](../c-runtime-library/reference/matherr.md). Chcete-li matematické chyby ošetřit jinak, napište vlastní rutinu podle `_matherr` a pojmenujte ho `_matherr`.
 
@@ -107,17 +107,17 @@ Všechny `errno` hodnoty v následující tabulce jsou předdefinované konstant
 |Globální – makro|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |------------------|---------------------|---------------------|
 |`errno`|\<errno.h > nebo \<stdlib.h >, \<cerrno – > nebo \<cstdlib – > (C++)||
-|`_doserrno`, `_sys_errlist`, `_sys_nerr`|\<stdlib.h >, \<cstdlib – > (C++)|\<errno.h >, \<cerrno – > (C++)|
+|`_doserrno`, `_sys_errlist`, `_sys_nerr`|\<stdlib.h>, \<cstdlib> (C++)|\<errno.h>, \<cerrno> (C++)|
 
 `_doserrno`, `_sys_errlist`, A `_sys_nerr` makra jsou rozšíření společnosti Microsoft. Další informace o kompatibilitě naleznete v tématu [kompatibility](../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Globální proměnné](../c-runtime-library/global-variables.md)<br/>
 [errno – konstanty](../c-runtime-library/errno-constants.md)<br/>
 [perror, _wperror](../c-runtime-library/reference/perror-wperror.md)<br/>
-[strerror _strerror –, _wcserror –, \__wcserror –](../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md)<br/>
-[strerror_s – _strerror_s –, _wcserror_s –, \__wcserror_s –](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)<br/>
+[strerror, _strerror, _wcserror, \__wcserror](../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md)<br/>
+[strerror_s, _strerror_s, _wcserror_s, \__wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)<br/>
 [_get_doserrno](../c-runtime-library/reference/get-doserrno.md)<br/>
 [_set_doserrno](../c-runtime-library/reference/set-doserrno.md)<br/>
 [_get_errno](../c-runtime-library/reference/get-errno.md)<br/>

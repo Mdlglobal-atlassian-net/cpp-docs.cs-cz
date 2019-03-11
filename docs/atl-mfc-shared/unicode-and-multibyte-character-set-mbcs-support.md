@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Unicode [C++], string objects
 - strings [C++], Unicode
 - strings [C++], character set support
-ms.openlocfilehash: 8a7f79f9a75c2be4ee855d89b47b6b8e59a67d15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59e8759ffbe61b80c74d8b5aba5bc50886d6b23d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596648"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743919"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Kódování Unicode a vícebajtových znaků (MBCS) podporu sady
 
@@ -35,11 +35,11 @@ Tyto knihovny ladicího programu a soubory DLL slouží k podpoře kódování U
 
 |||||
 |-|-|-|-|
-|UAFXCW.LIB|UAFXCW. SOUBOR PDB|UAFXCWD.LIB|UAFXCWD. SOUBOR PDB|
-|MFC*verze*U.LIB|MFC*verze*U.PDB|MFC*version*U.DLL|MFC*verze*UD. LIB|
-|MFC*verze*UD. SOUBOR PDB|MFC*version*UD.DLL|MFCS*verze*U.LIB|MFCS*verze*U.PDB|
-|MFCS*verze*UD. LIB|MFCS*verze*UD. SOUBOR PDB|MFCM*verze*U.LIB|MFCM*verze*U.PDB|
-|MFCM*verze*U.DLL|MFCM*verze*UD. LIB|MFCM*verze*UD. SOUBOR PDB|MFCM*version*UD.DLL|
+|UAFXCW.LIB|UAFXCW.PDB|UAFXCWD.LIB|UAFXCWD.PDB|
+|MFC*verze*U.LIB|MFC*version*U.PDB|MFC*version*U.DLL|MFC*version*UD.LIB|
+|MFC*version*UD.PDB|MFC*version*UD.DLL|MFCS*verze*U.LIB|MFCS*version*U.PDB|
+|MFCS*version*UD.LIB|MFCS*version*UD.PDB|MFCM*verze*U.LIB|MFCM*version*U.PDB|
+|MFCM*version*U.DLL|MFCM*version*UD.LIB|MFCM*version*UD.PDB|MFCM*version*UD.DLL|
 
 (*verze* představuje číslo verze souboru; například "140" znamená, že verze 14.0.)
 
@@ -93,7 +93,7 @@ Mapování obecného textu funkcí pro všechny rutiny zpracování řetězce za
 
 Obdobně `CString` metody jsou implementovány pomocí mapování obecného datového typu. Povolit znakovou sadu MBCS a Unicode, knihovna MFC používá TCHAR pro **char** nebo `wchar_t`, LPTSTR pro **char** <strong>\*</strong> nebo `wchar_t*`a LPCTSTR pro **const char** <strong>\*</strong> nebo `const wchar_t*`. Tyto zajistit správné mapování znakové sady MBCS a Unicode.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Řetězce (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [Zacházení s řetězci](../c-runtime-library/string-manipulation-crt.md)

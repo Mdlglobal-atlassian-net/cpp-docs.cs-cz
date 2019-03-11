@@ -3,12 +3,12 @@ title: Konfigurace projektu Linux CMake v sadě Visual Studio
 description: Konfigurace projektu Linux CMake v sadě Visual Studio
 ms.date: 11/01/2018
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 6f38cd3688281c0afa4d50f4bdc915b35ce24f16
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: f2186c14fbe2eb1273fceb4a378b359564eae327
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563092"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750595"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Konfigurace projektu Linux CMake
 
@@ -136,12 +136,12 @@ Vaší distribuce Linuxu mohou mít starší verzi CMake. Podpora CMake v sadě 
 **Visual Studio 2019**<br/>
 Pokud ve vzdáleném počítači nebyl nalezen platný CMake informačního panelu se zobrazí a poskytnout možnost výběru automaticky nasadit předem sestavené binární soubory CMake. Binární soubory se nainstalují pro `~/.vs/cmake`. Po nasazení binárních souborů, bude automaticky obnovit váš projekt. Mějte na paměti, že pokud CMake určené `cmakeExecutable` pole `CMakeSettings.json` je neplatný (neexistuje nebo má nepodporovanou verzi) a předem připravených binární soubory jsou k dispozici sady Visual Studio bude ignorovat `cmakeExecutable` a použijte předem sestavené binární soubory.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Práce s vlastnostmi projektu](../ide/working-with-project-properties.md)<br/>
 [CMake Tools for Visual C++](../ide/cmake-tools-for-visual-cpp.md)<br/>
 [Připojení ke vzdálenému počítači s Linuxem](connect-to-your-remote-linux-computer.md)<br/>
 [Přizpůsobení nastavení CMake](../ide/customize-cmake-settings.md)<br/>
-[Konfigurace CMake ladicími relacemi](../ide/configure-cmake-debugging-sessions.md)<br/>
+[Konfigurace ladicích relací CMake](../ide/configure-cmake-debugging-sessions.md)<br/>
 [Nasazení, spuštění a ladění projektu Linux](deploy-run-and-debug-your-linux-project.md)<br/>
 [Referenční dokumentace ke konfiguraci CMake předdefinované](../ide/cmake-predefined-configuration-reference.md)<br/>

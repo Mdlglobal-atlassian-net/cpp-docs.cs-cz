@@ -12,12 +12,12 @@ helpviewer_keywords:
 - user accounts [C++]
 - administrator (not running as) [C++]
 ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-ms.openlocfilehash: bb67c4cf2f166a8dd67d14b9f61b23241fe442fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc06e2dc58d28c34a646ccffc0be90368b3297f5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607880"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747031"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>Spuštění jako člen skupiny Users
 
@@ -51,6 +51,6 @@ Obecně tyto akce by měly být omezené na instalační programy aplikací. To 
 
 Můžete ladit všechny aplikace, které spustíte v sadě Visual Studio (nativní a nespravovaných) jako bez oprávnění správce, že se stanete součástí skupiny ladění. To zahrnuje možnost se připojit k běžící aplikaci příkazu připojit k procesu. Nicméně je nutné být členem skupiny Administrator, aby bylo možné ladit spravované nebo nativní aplikace, které byly spouštěny jiným uživatelem.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Osvědčené postupy zabezpečení](security-best-practices-for-cpp.md)

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: cb3e0c9fefd62b1af3c7dd6dda01278206d1bf49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a507f4115a48372706590eb61f9e3e77a0e3548
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595517"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752061"
 ---
 # <a name="outp-outpw-outpd"></a>_outp, _outpw, _outpd
 
@@ -89,9 +89,9 @@ Vzhledem k tomu, že tyto funkce zapisují přímo do portu I/O, nemohou být po
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|`_outp`|\<conio.h >|
-|`_outpw`|\<conio.h >|
-|`_outpd`|\<conio.h >|
+|`_outp`|\<conio.h>|
+|`_outpw`|\<conio.h>|
+|`_outpd`|\<conio.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../c-runtime-library/compatibility.md).
 
@@ -99,7 +99,7 @@ Další informace o kompatibilitě naleznete v tématu [kompatibility](../c-runt
 
 Všechny verze [běhových knihoven C](../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [I/O konzoly a portu](../c-runtime-library/console-and-port-i-o.md)<br/>
 [_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)

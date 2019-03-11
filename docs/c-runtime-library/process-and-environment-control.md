@@ -11,12 +11,12 @@ helpviewer_keywords:
 - environment control routines
 - process control routines
 ms.assetid: 7fde74c3-c2a6-4d15-84b8-092160d60c3e
-ms.openlocfilehash: df080d1ed8c5a00711468a159acb07159ad31930
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c837739d4954c65d45a590bd5c7f904e2375102e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329407"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742105"
 ---
 # <a name="process-and-environment-control"></a>Řízení procesů a prostředí
 
@@ -43,9 +43,9 @@ Pomocí rutiny řízení procesů ke spuštění, zastavení a spravovat procesy
 |[_execve, _wexecve](../c-runtime-library/reference/execve-wexecve.md)|Spuštění nového procesu s argumentem pole a mají prostředí|
 |[_execvp, _wexecvp](../c-runtime-library/reference/execvp-wexecvp.md)|Spuštění nového procesu pomocí **cesta** proměnných a argumentů pole|
 |[_execvpe, _wexecvpe](../c-runtime-library/reference/execvpe-wexecvpe.md)|Spuštění nového procesu pomocí **cesta** proměnné prostředí a pole argumentů|
-|[ukončení](../c-runtime-library/reference/exit-exit-exit.md)|Volání funkcí registrovaných **atexit** a **_onexit**, vyprázdní všechny vyrovnávací paměti, zavřete všechny otevřít soubory a ukončit proces|
+|[exit](../c-runtime-library/reference/exit-exit-exit.md)|Volání funkcí registrovaných **atexit** a **_onexit**, vyprázdní všechny vyrovnávací paměti, zavřete všechny otevřít soubory a ukončit proces|
 |[_exit](../c-runtime-library/reference/exit-exit-exit.md)|Ukončí proces okamžitě, bez volání **atexit** nebo **_onexit** nebo vyprazdňování vyrovnávací paměti|
-|[GETENV _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md), [getenv_s – _wgetenv_s –](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|Získat hodnotu proměnné prostředí|
+|[getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md), [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|Získat hodnotu proměnné prostředí|
 |[_getpid](../c-runtime-library/reference/getpid.md)|Získat číslo ID procesu|
 |[longjmp](../c-runtime-library/reference/longjmp.md)|Obnovení uložit prostředí zásobníku; použít ke spuštění nejsou místní **goto**|
 |[_onexit](../c-runtime-library/reference/onexit-onexit-m.md)|Rutiny plánu pro spuštění při ukončení programu; použijte pro kompatibilitu s Microsoft C/C++ version 7.0 a starší|
@@ -53,7 +53,7 @@ Pomocí rutiny řízení procesů ke spuštění, zastavení a spravovat procesy
 |[perror, _wperror](../c-runtime-library/reference/perror-wperror.md)|Tisk chybová zpráva|
 |[_pipe](../c-runtime-library/reference/pipe.md)|Vytvořit kanál pro čtení a zápis|
 |[_popen, _wpopen](../c-runtime-library/reference/popen-wpopen.md)|Vytvoření kanálu a spusťte příkaz|
-|[_putenv _wputenv](../c-runtime-library/reference/putenv-wputenv.md), [_putenv_s _wputenv_s –](../c-runtime-library/reference/putenv-s-wputenv-s.md)|Přidat nebo změnit hodnotu proměnné prostředí|
+|[_putenv, _wputenv](../c-runtime-library/reference/putenv-wputenv.md), [_putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md)|Přidat nebo změnit hodnotu proměnné prostředí|
 |[raise](../c-runtime-library/reference/raise.md)|Odesílání signálu do volajícího procesu|
 |[setjmp](../c-runtime-library/reference/setjmp.md)|Uložit prostředí zásobníku použít ke spuštění jiných místní **goto**|
 |[signal](../c-runtime-library/reference/signal.md)|Zpracování signálu přerušení|
@@ -78,14 +78,14 @@ Rozdíly mezi funkcemi v **_exec** řady, jakož i z těch, které v **_spawn** 
 |Funkce|Použít proměnnou cesty k souboru|Konvence předávání argumentů|Nastavení prostředí|
 |---------------|--------------------------------------|----------------------------------|--------------------------|
 |**_execl**, **_spawnl**|Ne|Seznam|Zděděno z volající proces.|
-|**_execle –**, **_spawnle**|Ne|Seznam|Ukazatel na tabulce prostředí pro nový proces, předá jako poslední argument|
-|**_execlp –**, **_spawnlp –**|Ano|Seznam|Zděděno z volající proces.|
+|**_execle**, **_spawnle**|Ne|Seznam|Ukazatel na tabulce prostředí pro nový proces, předá jako poslední argument|
+|**_execlp**, **_spawnlp**|Ano|Seznam|Zděděno z volající proces.|
 |**_execvpe**, **_spawnvpe**|Ano|Pole|Ukazatel na tabulce prostředí pro nový proces, předá jako poslední argument|
 |**_execlpe –**, **_spawnlpe –**|Ano|Seznam|Ukazatel na tabulce prostředí pro nový proces, předá jako poslední argument|
 |**_execv**, **_spawnv**|Ne|Pole|Zděděno z volající proces.|
-|**_execve**, **_spawnve –**|Ne|Pole|Ukazatel na tabulce prostředí pro nový proces, předá jako poslední argument|
-|**_execvp –**, **_spawnvp**|Ano|Pole|Zděděno z volající proces.|
+|**_execve**, **_spawnve**|Ne|Pole|Ukazatel na tabulce prostředí pro nový proces, předá jako poslední argument|
+|**_execvp**, **_spawnvp**|Ano|Pole|Zděděno z volající proces.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Rutiny UCRT (Universal C runtime) podle kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>

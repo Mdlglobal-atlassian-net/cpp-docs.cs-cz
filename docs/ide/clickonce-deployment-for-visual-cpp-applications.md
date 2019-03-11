@@ -6,16 +6,16 @@ helpviewer_keywords:
 - application deployment [C++], ClickOnce
 - ClickOnce deployment [C++], C++ applications
 ms.assetid: 9988c546-0936-452c-932f-9c76daa42157
-ms.openlocfilehash: 29395e5d7e4ba9e2c582d9e5c081a4f667dcaafa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1460f13226291e76d297b628d3542a1e147900f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467806"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742154"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>ClickOnce – nasazení pro aplikace Visual C++
 
-Visual Studio poskytuje dvě různé technologie pro nasazení aplikací pro Windows: nasazení ClickOnce nebo [Instalační služby systému Windows](/windows/desktop/Msi/windows-installer-portal) nasazení.
+Visual Studio poskytuje dvě různé technologie pro nasazení aplikací pro Windows: ClickOnce – nasazení nebo [Instalační služby systému Windows](/windows/desktop/Msi/windows-installer-portal) nasazení.
 
 ## <a name="clickonce-deployment-in-c"></a>ClickOnce – nasazení v jazyce C++
 
@@ -36,9 +36,9 @@ K nasazení budete potřebovat k instalaci všech knihoven Visual C++, na který
 
 Také můžete potřebovat sestavit zaváděcí nástroj (Instalační program předpokladů) pro vaši aplikaci k nasazení požadovaných komponent; informace týkající se zaváděcího nástroje naleznete v tématu [vytváření balíčků Bootstrapperu](/visualstudio/deployment/creating-bootstrapper-packages).
 
-Podrobnější popis technologie naleznete v tématu [ClickOnce – zabezpečení a nasazení](/visualstudio/deployment/clickonce-security-and-deployment). Podrobný příklad nasazení ClickOnce, naleznete v tématu [návod: Ruční nasazení aplikace ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).
+Podrobnější popis technologie naleznete v tématu [ClickOnce – zabezpečení a nasazení](/visualstudio/deployment/clickonce-security-and-deployment). Podrobný příklad nasazení ClickOnce, naleznete v tématu [názorný postup: Ruční nasazení aplikace ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Mage.exe (Manifest Generation and Editing Tool)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)<br>
 [MageUI.exe (Manifest Generation and Editing Tool, grafický klient)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)<br>

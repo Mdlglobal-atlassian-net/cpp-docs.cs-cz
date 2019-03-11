@@ -27,16 +27,16 @@ helpviewer_keywords:
 - UNICODE constant
 - _T type
 ms.assetid: 2848121c-e51f-4b9b-a2e6-833ece4b0cb3
-ms.openlocfilehash: b39e8563797ca0b57b54d2c85f851c8c45b29905
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa6827607430bf8f0db37997bac0223833fcd171
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471445"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747927"
 ---
 # <a name="using-generic-text-mappings"></a>Použití mapování obecného textu
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Pro zjednodušení vývoje kódu pro různé mezinárodní trhy knihovny run-time Microsoft poskytuje specifické pro společnost Microsoft "obecného textu" mapování pro mnoho typů dat, rutiny a dalších objektů. Tato mapování jsou definovány v TCHAR. H. Tato mapování názvu můžete použít k zápisu obecný kód, který může být zkompilovány pro všechny tři druhy znakových sad: ASCII (SBCS), znakové sady MBCS a Unicode, v závislosti na konstanta manifestu, který definujete pomocí `#define` příkazu. Mapování obecného textu jsou rozšíření společnosti Microsoft, které nejsou kompatibilní ANSI.
 
@@ -97,7 +97,7 @@ Můžete tak zapisovat, udržovat a kompilaci jednoho zdrojového kódu pro spu�
 
 **Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Mapování obecného textu](../c-runtime-library/generic-text-mappings.md)<br/>
 [Mapování datového typu](../c-runtime-library/data-type-mappings.md)<br/>

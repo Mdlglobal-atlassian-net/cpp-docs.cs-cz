@@ -17,12 +17,12 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-ms.openlocfilehash: fe3b5e3a887e4a440c3570750c569ec6c71ea611
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c61f3fdd434a1b746c024b1a98d1d71f04df7e5b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595956"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746914"
 ---
 # <a name="managed-types-ccli"></a>Spravované typy (C++/CLI)
 
@@ -58,7 +58,7 @@ V následující tabulce jsou uvedeny klíčová slova pro předdefinované typy
 |**unsigned __int64**|**System.UInt64**|
 |**krátký** a **podepsané krátké**|**System.Int16**|
 |**short bez znaménka**|**System.UInt16**|
-|**void**|**System.Void.**|
+|**void**|**System.Void**|
 
 ## <a name="version_issues"></a> Problémy s verzí u typů hodnot vnořených v nativních typech
 
@@ -125,7 +125,7 @@ S.i = 11
 
 Ale pokud chcete přidat jiného člena pro `struct S` v nested_value_types.cpp (například `double d;`) a znovu zkompilovat komponenty bez opětovné kompilace klienta, výsledek je k neošetřené výjimce (typu <xref:System.IO.FileLoadException?displayProperty=fullName>).
 
-## <a name="test_equality"></a> Postupy: testování rovnosti
+## <a name="test_equality"></a> Jak: Testování rovnosti
 
 V následujícím příkladu je test rovnosti, který používá spravovaného rozšíření jazyka C++ podle úchyty odkazovat na.
 
@@ -150,7 +150,7 @@ IL_0012:  call       bool [mscorlib]System.String::op_Equality(string,
                                                                string)
 ```
 
-## <a name="diagnose_fix"></a> Postupy: diagnostikování a odstranění potíží s kompatibilitou sestavení
+## <a name="diagnose_fix"></a> Jak: Diagnostika a řešení potíží s kompatibilitou sestavení
 
 Toto téma vysvětluje, co se může stát, pokud verze odkazovaného sestavení v době kompilace neodpovídá verzi sestavení odkazuje na modul runtime a o tom, abyste zabránili problémům.
 
@@ -225,7 +225,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 [Vzájemná funkční spolupráce s jinými jazyky rozhraní .NET (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)<br/>

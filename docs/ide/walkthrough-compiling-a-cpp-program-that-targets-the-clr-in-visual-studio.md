@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: 51e8b234792dea8dd7d61e4ac4b97a55bd5ea4e9
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 72a1a015b97c446a5f81d987c339d31467af9b3f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524622"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752126"
 ---
-# <a name="walkthrough-compiling-a-c-program-that-targets-the-clr-in-visual-studio"></a>Návod: Kompilace programu C++ pro CLR v aplikaci Visual Studio
+# <a name="walkthrough-compiling-a-c-program-that-targets-the-clr-in-visual-studio"></a>Návod: Kompilace programu v jazyce C++ pro CLR v sadě Visual Studio
 
 Můžete vytvořit programů aplikace Visual C++, které používají třídy rozhraní .NET a kompilovat s použitím vývojového prostředí sady Visual Studio.
 
@@ -51,7 +51,7 @@ Tato témata se předpokládá, že chápete základy jazyka C++.
 
 1. Klikněte na kartě nově vytvořené v sadě Visual Studio a zadejte platný program Visual C++, nebo zkopírujte a vložte jednu z ukázkových programů.
 
-   Například můžete použít [postupy: zápis do textového souboru (C + +/ CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md) ukázkový program (v **zpracování souborů a vstupně-výstupních operací** uzel Průvodce programováním).
+   Například můžete použít [jak: Zápis do textového souboru (C + +/ CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md) ukázkový program (v **zpracování souborů a vstupně-výstupních operací** uzel příručky pro programování).
 
    Pokud použijete ukázkový program, Všimněte si, že používáte `gcnew` – klíčové slovo místo `new` při vytváření objektů .NET a že `gcnew` vrátí popisovač (`^`) namísto ukazatel (`*`):
 
@@ -76,10 +76,10 @@ Tato témata se předpokládá, že chápete základy jazyka C++.
 
 ## <a name="whats-next"></a>Co se chystá
 
-**Předchozí:** [návod: kompilace nativního programu C++ v příkazovém řádku](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
-**Další krok:** [návod: kompilace programu C na příkazovém řádku](../build/walkthrough-compile-a-c-program-on-the-command-line.md)<br/>
+**Předchozí:** [Návod: Kompilace nativního programu C++ na příkazovém řádku](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
+**Další:** [Návod: Kompilace programu C na příkazovém řádku](../build/walkthrough-compile-a-c-program-on-the-command-line.md)<br/>
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)<br/>

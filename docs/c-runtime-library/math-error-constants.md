@@ -23,12 +23,12 @@ helpviewer_keywords:
 - _PLOSS constant
 - math error constants
 ms.assetid: 4be933a6-674e-45a5-8ac9-090023542f5b
-ms.openlocfilehash: b159d5dbe434f4ce63b7b93f60aca89b51437812
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 3267a5053cb2cd18cfcb07473bbcc4d6f8295f5d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220020"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751853"
 ---
 # <a name="math-error-constants"></a>Konstanty matematické chyby
 
@@ -53,7 +53,7 @@ Tyto chyby, následujícím způsobem popsané odpovídají typy výjimek, kter�
 |`_TLOSS`|Celkový počet ke ztrátě významu došlo k chybě.|
 |`_UNDERFLOW`|Výsledek je příliš malá, aby se dala vyjádřit.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [_matherr](../c-runtime-library/reference/matherr.md)<br/>
 [Globální konstanty](../c-runtime-library/global-constants.md)

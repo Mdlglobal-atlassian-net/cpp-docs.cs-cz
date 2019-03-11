@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, date and time
 - hour values representation
 ms.assetid: 695853ed-b614-4575-b793-b8c287372038
-ms.openlocfilehash: b8460d50a0c6cbd4b213e45c62d8d6cadae68544
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd63b400cad6efc3b3899c17a3bf835596b4008c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548184"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750387"
 ---
 # <a name="date-type"></a>DATE – typ
 
@@ -64,8 +64,7 @@ Při práci s tyto formáty data a času ve službě Automation potřeba pozname
 
 Další informace o problémy související s datem a `COleDateTime` typy najdete v části [COleDateTime – třída](../atl-mfc-shared/reference/coledatetime-class.md) a [datum a čas: Podpora automatizace](../atl-mfc-shared/date-and-time-automation-support.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Datum a čas](../atl-mfc-shared/date-and-time.md)<br/>
 [COleDateTime – třída](../atl-mfc-shared/reference/coledatetime-class.md)
-

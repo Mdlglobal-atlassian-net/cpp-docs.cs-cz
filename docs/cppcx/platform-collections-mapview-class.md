@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: cd1865320d56d71481cdaf7055f796bfab26eeab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e38865f1d43edac4fc895052f1ea1b5a54a34ab
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496375"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749253"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections:: mapview – třída
 
@@ -93,7 +93,7 @@ Iterátor, který určuje první prvek v zobrazení mapy.
 
 ### <a name="remarks"></a>Poznámky
 
-Praktický způsob uložení iterátorů vrácené First() je přiřadit návratovou hodnotu proměnné, která je deklarována s **automaticky** klíčovým slovem odvození typu. Například `auto x = myMapView->First();`.
+Praktický způsob uložení iterátorů vrácené First() je přiřadit návratovou hodnotu proměnné, která je deklarována s **automaticky** klíčovým slovem odvození typu. Například, `auto x = myMapView->First();`.
 
 ## <a name="haskey"></a>  MapView::HasKey – metoda
 
@@ -108,7 +108,7 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč používaná k nalezení MapView elementu. Typ *klíč* je typename *K*.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -127,7 +127,7 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč používaná k nalezení prvku v MapView. Typ `key` je typename *K*.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -162,7 +162,7 @@ MapView(
 *Inicializace*<br/>
 Typename aktuální MapView.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce, který může porovnat dvě hodnoty prvků jako klíče řazení pro určení jejich relativního pořadí v MapView.
 
 *m*<br/>
@@ -171,10 +171,10 @@ Odkaz nebo [hodnoty lvalue a rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) k
 *první*<br/>
 Vstupní iterátor první prvek v rozsahu prvků, které slouží k inicializaci aktuální MapView.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor první prvek po celou řadu prvků, které slouží k inicializaci aktuální MapView.
 
-*IL*<br/>
+*il*<br/>
 A [std::initializer_list < std::pair\<K, V >>](../standard-library/initializer-list-class.md) jehož prvky se vloží do MapView.
 
 ##  <a name="size"></a> MapView::Size – metoda
@@ -217,6 +217,6 @@ Druhá část na původní objekt MapView.
 
 Tato metoda není funkční; To nemá žádný účinek.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Platforma Namespace](platform-namespace-c-cx.md)

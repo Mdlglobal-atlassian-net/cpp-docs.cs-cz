@@ -7,12 +7,12 @@ helpviewer_keywords:
 - string conversion [C++], C++ Standard Library string
 - strings [C++], converting
 ms.assetid: 1fde79a0-9d0b-44e5-981b-e8f2676c199d
-ms.openlocfilehash: 5c09ac5e86066e4382c511dce45e4ec6e5301d54
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1fca0e8cb614c111af80324793cf8027be333a0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575562"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749969"
 ---
 # <a name="how-to-convert-standard-string-to-systemstring"></a>Postupy: Převod standardního řetězce na typ System::String
 
@@ -46,6 +46,6 @@ test
 test
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

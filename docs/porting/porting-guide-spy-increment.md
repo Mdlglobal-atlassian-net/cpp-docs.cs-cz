@@ -2,12 +2,12 @@
 title: 'Průvodce přenosem: Spy++'
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 5bd69853b13d58ff79910eafcc601b0507d5a9ad
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: b28de2396ba94578a8d06038a1191be42dce49ea
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177001"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751371"
 ---
 # <a name="porting-guide-spy"></a>Průvodce přenosem: Spy++
 
@@ -292,7 +292,7 @@ Po provedení změny máme následující kód:
 afx_msg LRESULT OnNcHitTest(CPoint point);
 ```
 
-Protože je přibližně deset výskyty této funkce v různé třídy odvozené z CWnd, je vhodné použít **přejít k definici** (klávesnice: **F12**) a **přejít na deklaraci** (Klávesnice: **Ctrl**+**F12**) když ukazatel zůstane na funkci v editoru a najděte tyto a přejděte k nim z **najít Symbol** panel nástrojů. **Přejít k definici** je obvykle další užitečné z nich. **Přejděte do deklarace** bude deklarace najít než definování deklarace, jako je například prohlášení třídy typu friend třídy nebo předávat odkazy.
+Protože je přibližně deset výskyty této funkce v různé třídy odvozené z CWnd, je vhodné použít **přejít k definici** (klávesnice: **F12**) a **přejít na deklaraci** (klávesnice: **CTRL**+**F12**) když ukazatel zůstane na funkci v editoru a najděte tyto a přejděte k nim z **najít Symbol** panelu nástrojů. **Přejít k definici** je obvykle další užitečné z nich. **Přejděte do deklarace** bude deklarace najít než definování deklarace, jako je například prohlášení třídy typu friend třídy nebo předávat odkazy.
 
 ##  <a name="mfc_changes"></a> Krok 9. Změny knihovny MFC
 
@@ -542,7 +542,7 @@ Abychom přidali \_T kolem řetězcový literál odebrat chyby.
 wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
 ```
 
-\_– Makro T má vliv na provádění řetězec literálu kompilovat jako **char** řetězec nebo **wchar_t** řetězec, v závislosti na nastavení znakové sady MBCS a UNICODE. Chcete-li nahradit všechny řetězce s \_T v sadě Visual Studio, otevřete nejprve **rychlého nahrazení** (klávesnice: **Ctrl**+**F**) pole nebo  **Nahrazování v souborech** (klávesnice: **Ctrl**+**Shift**+**H**), klikněte na tlačítko **použití Regulární výrazy** zaškrtávací políčko. Zadejte `((\".*?\")|('.+?'))` jako hledaný text a `_T($1)` jako náhradní text. Pokud už máte \_T – makro kolem některé řetězce, tento postup bude znovu přidat, a setkat i případy, kdy nechcete \_T, jako je například při použití `#include`, takže je vhodné použít **nahradit další**spíše než **Nahradit vše**.
+\_– Makro T má vliv na provádění řetězec literálu kompilovat jako **char** řetězec nebo **wchar_t** řetězec, v závislosti na nastavení znakové sady MBCS a UNICODE. Chcete-li nahradit všechny řetězce s \_T v sadě Visual Studio, otevřete nejprve **rychlého nahrazení** (klávesnice: **CTRL**+**F**) pole nebo **nahrazování v souborech** (klávesnice: **CTRL**+**Shift**+**H**), klikněte na tlačítko **pomocí regulárních výrazů** zaškrtávací políčko. Zadejte `((\".*?\")|('.+?'))` jako hledaný text a `_T($1)` jako náhradní text. Pokud už máte \_T – makro kolem některé řetězce, tento postup bude znovu přidat, a setkat i případy, kdy nechcete \_T, jako je například při použití `#include`, takže je vhodné použít **nahradit další**spíše než **Nahradit vše**.
 
 Tato funkce [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa), je ve skutečnosti definovány v záhlaví Windows a v dokumentaci pro doporučí, že se nepoužívají, z důvodu přetečení vyrovnávací paměti je to možné. Není uvedena velikost pro `szTmp` vyrovnávací paměti, takže neexistuje žádný způsob, jak funkce, zkontrolujte, že vyrovnávací paměti může obsahovat všechna data, která má být zapsán do něj. Viz následující část o převodu na zabezpečení CRT, ve kterém jsme podobnými problémy opravit. Jsme skončila jeho nahrazením [_stprintf_s –](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).
 
@@ -671,7 +671,7 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
 
 Portování nástroje Spy ++ od původního kódu Visual C++ 6.0 na nejnovější kompilátor trvalo asi 20 hodin kódování o týden v průběhu času. Budeme upgradovat přímo přes osm verzemi produktu Visual Studio 6.0 na Visual Studio 2015. Teď je to doporučený postup pro všechny upgrady na projektech malé i velké.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Přenos a upgrade: Příklady a případové studie](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[Portování a upgradování: Příklady a případové studie](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Předchozí Případová studie: COM Spy](../porting/porting-guide-com-spy.md)

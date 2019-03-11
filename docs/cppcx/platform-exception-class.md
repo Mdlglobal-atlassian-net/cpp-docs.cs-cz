@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-ms.openlocfilehash: 8579b3506d727f5c4faeb56a9c1f3ea88b7a4b6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d37d55c56e3c23d8d9129c985cb4272d2e3ee47a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464958"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743415"
 ---
 # <a name="platformexception-class"></a>Platform::Exception – třída
 
@@ -60,9 +60,9 @@ Třídy výjimek má také následující vlastnosti.
 
 **Minimální podporovaná klienta:** Windows 8
 
-**Minimální podporovaná serverem:** systému Windows Server 2012
+**Minimální podporovaná serveru:** Windows Server 2012
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 **Metadata:** platform.winmd
 
@@ -151,6 +151,6 @@ V výjimky vzniklé v modulu Windows Runtime je to poskytnuté systémem popis c
 
 V systému Windows 8 Tato vlastnost je jen pro čtení vzhledem k tomu, že jsou napříč ABI pouze jako HRESULTS přenosu výjimek v této verzi systému Windows Runtime. Ve Windows 8.1 bohatší informace o výjimkách přenosu napříč ABI a můžete zadat vlastní zprávu, ke kterému programově přístup jiných komponent. Další informace najdete v tématu [výjimky (C + +/ CX)](../cppcx/exceptions-c-cx.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - files [C++], text
 - text files, writing in C++
 ms.assetid: 3296fd59-a83a-40d4-bd4a-6096cc13101b
-ms.openlocfilehash: 332e1d6d292e32dcf129b37c8c4a7857f0b5985f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7009c0b017c403c3f0108aa84b8ddb25a1d1564f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424311"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749370"
 ---
 # <a name="file-handling-and-io-ccli"></a>Práce se soubory a vstupně-výstupní operace (C++/CLI)
 
@@ -332,10 +332,8 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
-
-[Souborová služba a Stream I/o](/dotnet/standard/io/index)
-
-<xref:System.IO>
+[Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
+[Vstup/výstup souborů a streamů](/dotnet/standard/io/index)<br/>
+[System.IO – obor názvů](/dotnet/api/system.io)

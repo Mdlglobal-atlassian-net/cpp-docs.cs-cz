@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Zařazení struktur pomocí služby PInvoke'
+title: 'Postupy: Zařazování struktur pomocí služby PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
-ms.openlocfilehash: e79eb343f81cf2d66e394be7561d2c9727c4c9ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d5c64a3e93cd85d7e38bac7c0ea3fa3c3301abc9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429107"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747992"
 ---
-# <a name="how-to-marshal-structures-using-pinvoke"></a>Postupy: Zařazení struktur pomocí služby PInvoke
+# <a name="how-to-marshal-structures-using-pinvoke"></a>Postupy: Zařazování struktur pomocí služby PInvoke
 
 Tento dokument popisuje, jak nativní funkce, které přijímají struktury stylu jazyka C lze volat z spravovaných funkcí pomocí pomocí deklarace P/Invoke. Přestože doporučujeme používat funkce zprostředkovatele komunikace C++ místo P/Invoke vzhledem k tomu, že P/Invoke obsahuje malý kompilace zpráv o chybách, není typově bezpečný a může být pracná implementovat, pokud nespravovaná rozhraní API je zabalený jako knihovnu DLL a zdrojový kód není k dispozici, P/Invoke je jedinou možností. V opačném případě najdete v následujících dokumentech:
 
 - [Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
 
-- [Postupy: Zařazení řetězců pomocí služby PInvoke](../dotnet/how-to-marshal-strings-using-pinvoke.md)
+- [Postupy: Zařazování řetězců pomocí služby PInvoke](../dotnet/how-to-marshal-strings-using-pinvoke.md)
 
 Ve výchozím nastavení nativní a spravovaná struktury jsou stanoveny odlišně v paměti, úspěšném předání struktury přes hranice spravovaného a nespravovaného vyžaduje další kroky k zachování integrity dat.
 
@@ -131,6 +131,6 @@ int main() {
 [managed] x=50 y=50
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití explicitního volání PInvoke v jazyce C++ (atribut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

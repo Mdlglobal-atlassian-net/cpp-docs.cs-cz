@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::OutOfMemoryException
 ms.assetid: 49c19f6b-f66c-4448-b861-91dcbf32de2c
-ms.openlocfilehash: bf13e1589f651b7791fe67f6061b06b1a0bd897f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae2a097bad5986805d6c796ebbcbaa8d9020241c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478179"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746992"
 ---
 # <a name="platformoutofmemoryexception-class"></a>Platform::OutOfMemoryException – třída
 
@@ -33,12 +33,12 @@ Další informace najdete v tématu [COMException](../cppcx/platform-comexceptio
 
 **Minimální podporovaná klienta:** Windows 8
 
-**Minimální podporovaná serverem:** systému Windows Server 2012
+**Minimální podporovaná serveru:** Windows Server 2012
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 **Metadata:** platform.winmd
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Platform::COMException – třída](../cppcx/platform-comexception-class.md)

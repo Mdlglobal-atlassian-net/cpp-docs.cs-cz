@@ -2,12 +2,12 @@
 title: Modifikátory specifické pro společnost Microsoft
 ms.date: 08/16/2018
 ms.assetid: 22c7178c-f854-47fa-9de6-07d23fda58e1
-ms.openlocfilehash: be126e90ca6f77ef43b49ccd5b83c0f307f7f307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 119e4d06d0235bbf637eefe8754668d3e90b0c52
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646027"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749721"
 ---
 # <a name="microsoft-specific-modifiers"></a>Modifikátory specifické pro společnost Microsoft
 
@@ -37,6 +37,6 @@ Mnoho klíčových slov specifických pro společnost Microsoft umožňuje změn
 |[__unaligned](unaligned.md)|Určuje, že ukazatel na typ nebo jiná data nejsou zarovnána...|Ne|
 |[__vectorcall](vectorcall.md)|Název, který následuje, deklaruje funkci, která používá registry, včetně registrů SSE, pokud je k dispozici, namísto zásobníku pro předání argumentu.|Ano|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace jazyka C++](cpp-language-reference.md)

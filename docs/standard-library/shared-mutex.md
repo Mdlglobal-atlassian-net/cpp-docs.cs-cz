@@ -45,12 +45,12 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: d54e054310b6077adb88c55b8923b6c13ce1c5ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9823b01048eece557a4d29904f223841b626bc9a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467324"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751814"
 ---
 # <a name="ltsharedmutex"></a>&lt;shared_mutex>
 
@@ -60,13 +60,13 @@ Záhlaví &lt;shared_mutex > definuje třídy `shared_mutex` a `shared_timed_mut
 
 |Třídy|Popis|
 |-------------|-----------------|
-|[shared_mutex třídy](../standard-library/shared-mutex.md#class_shared_mutex)|Typ sdíleného vzájemně vyloučený přístup, který může výhradně uzamčen jednoho agenta nebo jiných výhradně sdílí více agentů.|
-|[shared_timed_mutex třídy](../standard-library/shared-mutex.md#class_shared_timed_mutex)|Typ sdílené vypršel časový limit vzájemně vyloučený přístup, který může výhradně uzamčen jednoho agenta nebo jiných výhradně sdílí více agentů.|
-|[shared_lock třídy](../standard-library/shared-mutex.md#class_shared_lock)|Třída šablony, která obaluje sdílené vzájemně vyloučený přístup k podpoře neexkluzivní sdílení více agentů a operace vypršel časový limit zámku.|
+|[shared_mutex Class](../standard-library/shared-mutex.md#class_shared_mutex)|Typ sdíleného vzájemně vyloučený přístup, který může výhradně uzamčen jednoho agenta nebo jiných výhradně sdílí více agentů.|
+|[shared_timed_mutex Class](../standard-library/shared-mutex.md#class_shared_timed_mutex)|Typ sdílené vypršel časový limit vzájemně vyloučený přístup, který může výhradně uzamčen jednoho agenta nebo jiných výhradně sdílí více agentů.|
+|[shared_lock Class](../standard-library/shared-mutex.md#class_shared_lock)|Třída šablony, která obaluje sdílené vzájemně vyloučený přístup k podpoře neexkluzivní sdílení více agentů a operace vypršel časový limit zámku.|
 
 |Funkce|Popis|
 |---------------|-----------------|
-|[Prohození](../standard-library/shared-mutex.md#function_swap)|Zamění obsah objektů sdílené mutex odkazuje parametry funkce.|
+|[swap](../standard-library/shared-mutex.md#function_swap)|Zamění obsah objektů sdílené mutex odkazuje parametry funkce.|
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -135,7 +135,7 @@ public:
    };
 ```
 
-###  <a name="class_shared_timed_mutex"></a> shared_timed_mutex třídy
+###  <a name="class_shared_timed_mutex"></a> shared_timed_mutex Class
 
 Třída `shared_timed_mutex` implementuje nerekurzivní mutex se sémantikou sdílené vlastnictví, které splňuje požadavky na typ mutex vypršel časový limit.
 
@@ -232,7 +232,7 @@ Vymění obsahu dvou `shared_lock` objekty. Efektivně stejný jako `x.swap(y)`.
 
 **Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[&lt;mutex – >](../standard-library/mutex.md)
+[&lt;mutex>](../standard-library/mutex.md)

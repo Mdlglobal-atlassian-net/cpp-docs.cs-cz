@@ -2,12 +2,12 @@
 title: Možnosti kompilátoru a Linkeru (C + +/ CX)
 ms.date: 01/22/2017
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
-ms.openlocfilehash: 2165d802e6ff4bd530acac7c1ba6185c732a6499
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc1964c57d6700995bb283c245e4c63c8e9e313b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577281"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750907"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Možnosti kompilátoru a Linkeru (C + +/ CX)
 
@@ -41,6 +41,6 @@ Proměnné prostředí % % LIBPATH Určuje výchozí cestu pro hledání soubory
 
 Při použití **/ZW**, kompilátor automaticky propojí verzi knihovny DLL z modulu Runtime jazyka C (CRT). Odkazování na statickou knihovnu verze není povolen, a veškeré jeho používání funkce CRT, které nejsou povoleny v aplikaci pro univerzální platformu Windows způsobí chybu kompilace.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vytváření aplikací a knihoven](../cppcx/building-apps-and-libraries-c-cx.md)

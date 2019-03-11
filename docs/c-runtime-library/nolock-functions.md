@@ -5,12 +5,12 @@ helpviewer_keywords:
 - _nolock functions
 - nolock functions
 ms.assetid: 7d651d87-38d2-4303-9897-fdb5f7a3e899
-ms.openlocfilehash: 149c93c2488ae2b113af397c9e216aa1aeb4c6ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7bd0592fb8dc43307a902714723d1b1e43207d1c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551239"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746406"
 ---
 # <a name="nolock-functions"></a>Funkce jazyka _nolock
 
@@ -52,9 +52,9 @@ _Nolock – funkce použijte jenom v případě, že váš program je skutečně
 
 [_ungetc_nolock, _ungetwc_nolock](../c-runtime-library/reference/ungetc-nolock-ungetwc-nolock.md)
 
-[_ungetch_nolock – _ungetwch_nolock –](../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)
+[_ungetch_nolock, _ungetwch_nolock](../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vstup a výstup](../c-runtime-library/input-and-output.md)<br/>
 [Rutiny UCRT (Universal C runtime) podle kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>

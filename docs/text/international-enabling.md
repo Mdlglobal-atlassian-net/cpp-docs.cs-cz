@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MBCS [C++], enabling
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
-ms.openlocfilehash: 51d85991fdab273d1cdad4e99400d1ad8ed6324c
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 22f2dba49e894e93cb6791d76a65730f3269199e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627424"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748005"
 ---
 # <a name="international-enabling"></a>Podpora národních prostředí
 
@@ -38,7 +38,7 @@ Většina tradičních kód jazyka C a C++ díky předpoklady o znaků a práci 
 > [!NOTE]
 >  Znakové sady MBCS a Evropský mají některé znaky, jako je například písmena s diakritikou, s větší než 0x80 kódy znaků. Vzhledem k tomu, že většinu kódu používá podepsané znaky, tyto znaky, které jsou větší než 0x80 se rozšířen o znaménko při převodu na **int**. Jedná o problém pro indexování pole, protože rozšířen o znaménko znaky, je záporná, indexy mimo pole. Jazyky, které používají znakovou sadu MBCS, jako je například japonštinu, jsou také jedinečné. Protože znak může sestávat z 1 nebo 2 bajty, by měla vždy pracovat oba bajtů ve stejnou dobu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Unicode a MBCS](../text/unicode-and-mbcs.md)<br/>
 [Strategie internacionalizace](../text/internationalization-strategies.md)

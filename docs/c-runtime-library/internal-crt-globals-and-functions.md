@@ -848,12 +848,12 @@ helpviewer_keywords:
 - _Xbad_alloc
 - _Xlength_error
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
-ms.openlocfilehash: 291d509315a6825cd6b4e56c8bfe095f0149be4e
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: 462b9d80b61b8bda3afc5aec4d819e355adbbbd7
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211066"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746809"
 ---
 # <a name="internal-crt-globals-and-functions"></a>Interní CRT globální proměnné a funkce
 
@@ -1188,6 +1188,6 @@ Tyto funkce a funkce makra slouží k implementaci CRT a standardní knihovny C+
 |_Xbad_alloc|
 |_Xlength_error|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Rutiny UCRT (Universal C runtime) podle kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>

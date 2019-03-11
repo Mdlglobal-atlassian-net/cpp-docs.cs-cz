@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: 4f6ab15f80ac448b4e7383e2db92f22262c20d08
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: cab7aef6fab025174dedb0bf75ee43c49ead0d88
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178066"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740386"
 ---
 # <a name="cpoint-class"></a>Cpoint – třída
 
@@ -153,7 +153,7 @@ Určuje velikost odsazení `x` člena `CPoint`.
 *yOffset*<br/>
 Určuje velikost odsazení `y` člena `CPoint`.
 
-*Bod*<br/>
+*point*<br/>
 Určuje dobu ( [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) nebo `CPoint`) pro posun `CPoint`.
 
 *Velikost*<br/>
@@ -173,7 +173,7 @@ BOOL operator==(POINT point) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 Obsahuje [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury nebo `CPoint` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -194,7 +194,7 @@ BOOL operator!=(POINT point) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 Obsahuje [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury nebo `CPoint` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -219,7 +219,7 @@ void operator+=(POINT point) throw();
 *Velikost*<br/>
 Obsahuje [velikost](/windows/desktop/api/windef/ns-windef-tagsize) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.
 
-*Bod*<br/>
+*point*<br/>
 Obsahuje [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -248,7 +248,7 @@ void operator-=(POINT point) throw();
 *Velikost*<br/>
 Obsahuje [velikost](/windows/desktop/api/windef/ns-windef-tagsize) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.
 
-*Bod*<br/>
+*point*<br/>
 Obsahuje [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -278,10 +278,10 @@ CRect operator+(const RECT* lpRect) const throw();
 *Velikost*<br/>
 Obsahuje [velikost](/windows/desktop/api/windef/ns-windef-tagsize) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.
 
-*Bod*<br/>
+*point*<br/>
 Obsahuje [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Obsahuje ukazatel [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -311,13 +311,13 @@ CPoint operator-() const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 A [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.
 
 *Velikost*<br/>
 A [velikost](/windows/desktop/api/windef/ns-windef-tagsize) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Ukazatel [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -340,11 +340,10 @@ Operátor unární negate bod. Například použití s bodem unární operátor 
 
 [!code-cpp[NVC_ATLMFC_Utilities#34](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_7.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC MDI](../../visual-cpp-samples.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [POINT – struktura](/windows/desktop/api/windef/ns-windef-tagpoint)<br/>
 [CRect – třída](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CSize – třída](../../atl-mfc-shared/reference/csize-class.md)
-

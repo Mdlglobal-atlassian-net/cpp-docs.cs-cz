@@ -8,12 +8,12 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.OutputDocumentFile
 - VC.Project.VCXDCMakeTool.AdditionalDocumentFiles
 ms.assetid: 645912b5-197a-4c36-ba58-64df09444ca0
-ms.openlocfilehash: 3e97aa61715f0cda8e339a1aabc8e947170b2e90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 411bc96f00215ff9f90d8601387ab6bec5a7dc78
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594230"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740898"
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>Stránky vlastností nástroje Generátor dokumentů XML
 
@@ -40,7 +40,7 @@ Stránka vlastností nástroje Generátor dokumentů XML zpřístupňuje funkce 
 
    Pokud váš projekt obsahuje závislost na lib projekt v řešení, může zpracovat soubory z projektu .lib do souborů .xml pro aktuální projekt.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Stránky vlastností](../ide/property-pages-visual-cpp.md)<br>
 [Stránky vlastností](../ide/property-pages-visual-cpp.md)

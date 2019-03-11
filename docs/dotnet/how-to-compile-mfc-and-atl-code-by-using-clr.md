@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: kompilace kódu MFC a ATL s použitím - clr'
+title: 'Postupy: Kompilace kódu MFC a ATL s použitím - clr'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - interop [C++], /clr compiler option
 - extension DLLs [C++], /clr compiler option
 ms.assetid: 12464bec-33a4-482c-880a-c078de7f6ea5
-ms.openlocfilehash: e5e9f800d6316e3b4f1209ec62440ae42233fc13
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a24e82787eb0fce8ff668843e73de9f2d05e1ad
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638071"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751606"
 ---
-# <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>Postupy: Kompilování kódu knihovny MFC a knihovny ATL s použitím přepínače /clr
+# <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>Postupy: Zkompilujte knihovnu MFC a ATL kód pomocí/CLR
 
 Toto téma popisuje, jak kompilovat existující programy MFC a ATL cílit na modul Common Language Runtime.
 
@@ -78,6 +78,6 @@ Toto téma popisuje, jak kompilovat existující programy MFC a ATL cílit na mo
 
 1. Pro soubor, který obsahuje funkce DllMain a veškerých kódů, které volá, v **Průzkumníka řešení**, klikněte pravým tlačítkem na soubor a potom klikněte na tlačítko **vlastnosti**. V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **Obecné**. V pravém podokně v části **výchozí nastavení projektu**, nastavte **kompilovat s podporou Common Language Runtime** k **ne Common Language Runtime support**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Smíšená (nativní a spravovaná) sestavení](../dotnet/mixed-native-and-managed-assemblies.md)

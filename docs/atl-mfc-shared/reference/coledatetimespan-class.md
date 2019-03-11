@@ -26,12 +26,12 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: 7bcf4c50577cf7211f90415143edac9fd0df1d5b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: feef238be96d9a04c2c41e6955efec8b23cf6a89
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509328"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748486"
 ---
 # <a name="coledatetimespan-class"></a>Coledatetimespan – třída
 
@@ -207,7 +207,7 @@ Volání těchto funkcí k vytvoření formátovaného reprezentace hodnoty čas
 
 Následuje stručný popis formulářů pro tuto funkci:
 
-**Formát (** *pFormat* **)**<br/>
+**Format(** *pFormat* **)**<br/>
 Tento formulář naformátuje hodnotu pomocí řetězce formátu, který obsahuje speciální formátovacích kódech, které jsou uvozená znakem procent (%), stejně jako v `printf`. Formátovací řetězec je předat jako parametr funkce.
 
 **Formát (** *nID* **)**<br/>
@@ -239,7 +239,7 @@ Pro další funkce, které se dotazují hodnotu `COleDateTimeSpan` objektu, najd
 
 - [Getminutes –](#getminutes)
 
-- [Getseconds –](#getseconds)
+- [GetSeconds](#getseconds)
 
 - [GetTotalDays](#gettotaldays)
 
@@ -275,7 +275,7 @@ Pro další funkce, které se dotazují hodnotu `COleDateTimeSpan` objektu, najd
 
 - [Getminutes –](#getminutes)
 
-- [Getseconds –](#getseconds)
+- [GetSeconds](#getseconds)
 
 - [GetTotalDays](#gettotaldays)
 
@@ -311,7 +311,7 @@ Pro další funkce, které se dotazují hodnotu `COleDateTimeSpan` objektu, najd
 
 - [Gethours –](#gethours)
 
-- [Getseconds –](#getseconds)
+- [GetSeconds](#getseconds)
 
 - [GetTotalDays](#gettotaldays)
 
@@ -429,7 +429,7 @@ Pro další funkce, které se dotazují hodnotu `COleDateTimeSpan` objektu, najd
 
 - [Getminutes –](#getminutes)
 
-- [Getseconds –](#getseconds)
+- [GetSeconds](#getseconds)
 
 - [GetTotalHours](#gettotalhours)
 
@@ -465,7 +465,7 @@ Pro další funkce, které se dotazují hodnotu `COleDateTimeSpan` objektu, najd
 
 - [Getminutes –](#getminutes)
 
-- [Getseconds –](#getseconds)
+- [GetSeconds](#getseconds)
 
 - [GetTotalDays](#gettotaldays)
 
@@ -501,7 +501,7 @@ Pro další funkce, které se dotazují hodnotu `COleDateTimeSpan` objektu, najd
 
 - [Getminutes –](#getminutes)
 
-- [Getseconds –](#getseconds)
+- [GetSeconds](#getseconds)
 
 - [GetTotalDays](#gettotaldays)
 
@@ -537,7 +537,7 @@ Pro další funkce, které se dotazují hodnotu `COleDateTimeSpan` objektu, najd
 
 - [Getminutes –](#getminutes)
 
-- [Getseconds –](#getseconds)
+- [GetSeconds](#getseconds)
 
 - [GetTotalDays](#gettotaldays)
 
@@ -697,7 +697,7 @@ Pro funkce, které se dotazují hodnotu `COleDateTimeSpan` objektu, najdete v n�
 
 - [Getminutes –](#getminutes)
 
-- [Getseconds –](#getseconds)
+- [GetSeconds](#getseconds)
 
 - [GetTotalDays](#gettotaldays)
 
@@ -721,7 +721,7 @@ void SetStatus(DateTimeSpanStatus status) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Stav*<br/>
+*status*<br/>
 Nová hodnota pro tento stav `COleDateTimeSpan` objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -751,11 +751,10 @@ Stručný popis tyto hodnoty stavu najdete v následujícím seznamu:
 
 [!code-cpp[NVC_ATLMFC_Utilities#22](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_13.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [COleDateTime – třída](../../atl-mfc-shared/reference/coledatetime-class.md)<br/>
 [CTime – třída](../../atl-mfc-shared/reference/ctime-class.md)<br/>
 [CTimeSpan – třída](../../atl-mfc-shared/reference/ctimespan-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Sdílené třídy ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

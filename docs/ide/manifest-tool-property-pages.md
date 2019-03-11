@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Manifest Tool property pages
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: 734a34be11ec9ede78a9d5d3f434a949e438d5fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27612c93da6ad77ae7a787cbc0f4d9b18119bd4c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587912"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749996"
 ---
 # <a name="manifest-tool-property-pages"></a>Stránky vlastností nástroje manifest
 
@@ -25,6 +25,6 @@ Další informace o nástroji manifestu naleznete v tématu [Mt.exe](https://msd
 
 [Upřesnit, Nástroj Manifest, vlastnosti konfigurace, \<Projectname > dialogové okno stránky vlastností projektu](../ide/advanced-manifest-tool.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Stránky vlastností](../ide/property-pages-visual-cpp.md)

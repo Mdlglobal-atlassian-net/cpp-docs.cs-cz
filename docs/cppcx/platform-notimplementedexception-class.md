@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::NotImplementedException
 ms.assetid: 6da26cc2-dde8-4aea-aa85-67aac55cf97b
-ms.openlocfilehash: 26e8900a10b25507f5091d9cc1f724c73ece7dfd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5262aaf85c73e2ff09259fe350e8b5600c68be95
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467584"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749357"
 ---
 # <a name="platformnotimplementedexception-class"></a>Platform::NotImplementedException – třída
 
@@ -33,12 +33,12 @@ Další informace najdete v tématu [COMException](../cppcx/platform-comexceptio
 
 **Minimální podporovaná klienta:** Windows 8
 
-**Minimální podporovaná serverem:** systému Windows Server 2012
+**Minimální podporovaná serveru:** Windows Server 2012
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 **Metadata:** platform.winmd
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Platform::COMException – třída](../cppcx/platform-comexception-class.md)

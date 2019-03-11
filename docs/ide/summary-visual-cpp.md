@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <summary> C++ XML tag
 - summary C++ XML tag
 ms.assetid: cdeeefbb-1339-45d6-9002-10042a9a2726
-ms.openlocfilehash: 08d03d19355b89fa3c59ce5bede514d3ffa9b55b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32d939dc51e3e476e503f96995355fc78fb21ed0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509096"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744852"
 ---
 # <a name="ltsummarygt-visual-c"></a>&lt;Souhrn&gt; (Visual C++)
 
@@ -27,7 +27,7 @@ ms.locfileid: "50509096"
 
 #### <a name="parameters"></a>Parametry
 
-*Popis*<br/>
+*description*<br/>
 Přehled objektu.
 
 ## <a name="remarks"></a>Poznámky
@@ -57,6 +57,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Dokumentace XML](../ide/xml-documentation-visual-cpp.md)

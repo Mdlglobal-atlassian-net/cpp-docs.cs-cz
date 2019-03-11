@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Unicode, stream I/O routines
 - Unicode stream I/O
 ms.assetid: 68be0c3e-a9e6-4fd5-b34a-1b5207f0e7d6
-ms.openlocfilehash: e54f29292ae9e202cf27c354374132dda267aff8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c16d2f74856bb42dfd6ffc4e1af7306f6edd97fb
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469771"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745991"
 ---
 # <a name="unicode-stream-io-in-text-and-binary-modes"></a>I/O proudu kódování Unicode v textovém a binárním režimu
 
@@ -26,7 +26,7 @@ Když Unicode Streamovat rutina vstupně-výstupních operací (například **fw
 
 Ale pokud pracuje funkce datového proudu vstupně-Unicode v binárním režimu, soubor je považován za kódování Unicode a převod překladu nebo znak CR-LF spadá vstup nebo výstup. Použít _setmode (_fileno (stdin), _O_BINARY); instrukce, aby bylo možné správně používat wcin na textového souboru UNICODE.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Rutiny UCRT (Universal C runtime) podle kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
 [Vstup a výstup](../c-runtime-library/input-and-output.md)<br/>

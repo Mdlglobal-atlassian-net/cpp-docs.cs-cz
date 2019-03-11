@@ -15,12 +15,12 @@ helpviewer_keywords:
 - strings [C++], class CString
 - casting CString objects
 ms.assetid: 5048de8a-5298-4891-b8a0-c554b5a3ac1b
-ms.openlocfilehash: f68f021d16de7ad701ce20c3be59ed6958aa6893
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eee23296d9aac40849dacf58c3b3d9bdf583d1df
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528398"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743283"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>CString – operace týkající se řetězců ve stylu C
 
@@ -99,7 +99,7 @@ Formální parametr můžete také určit jako odkaz na konstanty typu řetězec
 
 Pro většinu funkcí výsledky, můžete jednoduše vrátit `CString` objektu podle hodnoty.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Řetězce (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [CString – předávání argumentů](../atl-mfc-shared/cstring-argument-passing.md)

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - .NET applications [C++]
 - Visual C++, .NET programming
 ms.assetid: 2c7f3b0f-a266-4f0e-b318-d6f1371e04a9
-ms.openlocfilehash: 40978bff010fbb1640398c3248c595b3ae04289f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21a45dbff2b02ccce5444706c158e5bdcc6e6cc2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470145"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749812"
 ---
 # <a name="net-programming-with-ccli-visual-c"></a>.NET – programování s C + +/ CLI (Visual C++)
 
-**Visual Studio 2015**: ve výchozím nastavení, CLR projekty vytvořené pomocí sady Visual Studio 2015 jsou určené pro rozhraní .NET Framework 4.5.2. Pro cílové rozhraní .NET Framework 4.6 při vytváření nového projektu v **nový projekt** dialogu změnit cílovou architekturu v rozevírací nabídce nahoře uprostřed dialogového okna. Chcete-li změnit cílový rámec pro existující projekt, Zavřít projekt, upravte soubor projektu (.vcxproj) a změňte hodnotu cílovou architekturu na verzi 4.6. Při příštím otevření projektu, nastavení se projeví.
+**Visual Studio 2015**: Ve výchozím nastavení CLR projekty vytvořené pomocí sady Visual Studio 2015 cíleny na rozhraní .NET Framework 4.5.2. Pro cílové rozhraní .NET Framework 4.6 při vytváření nového projektu v **nový projekt** dialogu změnit cílovou architekturu v rozevírací nabídce nahoře uprostřed dialogového okna. Chcete-li změnit cílový rámec pro existující projekt, Zavřít projekt, upravte soubor projektu (.vcxproj) a změňte hodnotu cílovou architekturu na verzi 4.6. Při příštím otevření projektu, nastavení se projeví.
 
 **Visual Studio 2017**: V sadě Visual Studio 2017, je výchozí framework 4.6.1 a výběru verze rozhraní Framework je v dolní části **dialogové okno nového projektu**. C + +/ CLI není nainstalovaný ve výchozím nastavení. Pro instalaci součásti, spusťte instalační program sady Visual Studio a zvolte C + +/ CLI komponenty v jazyce Visual C++.
 
@@ -60,6 +60,6 @@ ms.locfileid: "50470145"
 
 [Zabalení (C++/CLI)](../dotnet/boxing-cpp-cli.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nativní funkce a vzájemná funkční spolupráce rozhraní .NET](../dotnet/native-and-dotnet-interoperability.md)

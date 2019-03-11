@@ -5,12 +5,12 @@ helpviewer_keywords:
 - console applications, templates
 - CLR console applications, project template
 ms.assetid: e89bce3c-706f-4ae0-8a90-cb1a0f674e70
-ms.openlocfilehash: 9ce50266eeb17ad858891149489db85b03855aec
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d325bdc4122d85383ecaa49ca41c7709be869463
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426329"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747901"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>Postupy: Vytváření konzolových aplikací CLR (C + +/ CLI)
 
@@ -60,7 +60,6 @@ Projekt vytvořený pomocí šablony Konzolová aplikace automaticky přidá tyt
 
 1. Zvolte **OK** tlačítko.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Projekty CLR](../ide/files-created-for-clr-projects.md)
-

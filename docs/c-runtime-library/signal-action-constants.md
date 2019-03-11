@@ -9,12 +9,12 @@ helpviewer_keywords:
 - SIG_IGN constant
 - SIG_DFL constant
 ms.assetid: c3cb4f15-d39e-4d9d-84f9-0d33e3eb5993
-ms.openlocfilehash: 71c2eb796680e90cd16b1798fd478506ce7aa2c9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ff79626d576a05744336d36f99caf95d9b9902d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444652"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743868"
 ---
 # <a name="signal-action-constants"></a>signal – konstanty akce
 
@@ -38,7 +38,7 @@ Akce provedená při přijetí signál přerušení závisí na hodnotu `func`.
 | `SIG_ACK`  | Označuje, že bylo přijato potvrzení.  |
 | `SIG_ERR`  | Návratový typ z signál udávající chybu došlo k chybě.  |
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [signal](../c-runtime-library/reference/signal.md)<br/>
 [Globální konstanty](../c-runtime-library/global-constants.md)

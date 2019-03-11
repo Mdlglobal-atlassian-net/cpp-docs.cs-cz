@@ -8,12 +8,12 @@ helpviewer_keywords:
 - variables, global
 - global variables, Microsoft run-time library
 ms.assetid: 01d1551c-2f0c-4f72-935c-6442caccf84f
-ms.openlocfilehash: b66d77285cb601b30a89a313fa21b815f42775b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dfa78bd2c7aae7cc6059443066cbef58512755ce
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522535"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744364"
 ---
 # <a name="global-variables"></a>Globální proměnné
 
@@ -30,7 +30,7 @@ Knihovny run-time C společnosti Microsoft poskytuje tyto globální proměnné 
 |[_pctype, _pwctype, _wctype, _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md)|Obsahuje informace o používané funkce klasifikaci znaků.|
 |[_pgmptr, _wpgmptr](../c-runtime-library/pgmptr-wpgmptr.md)|Zastaralé Místo toho použijte `_get_pgmptr` nebo `_get_wpgmptr`.<br /><br /> Inicializovány při spuštění programu úplnou nebo relativní cestu k programu, celý název aplikace nebo název programu bez jeho příponu názvu souboru, v závislosti na tom, jak byl vyvolán program.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace knihovny CRT](../c-runtime-library/c-run-time-library-reference.md)<br/>
 [Globální konstanty](../c-runtime-library/global-constants.md)<br/>

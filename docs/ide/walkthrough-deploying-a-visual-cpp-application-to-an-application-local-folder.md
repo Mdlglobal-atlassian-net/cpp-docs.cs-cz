@@ -4,14 +4,14 @@ ms.date: 09/17/2018
 helpviewer_keywords:
 - deploying Visual C++ applications
 ms.assetid: 47a81c47-9dbe-47c6-96cc-fbb2fda5e6ad
-ms.openlocfilehash: 6715dacf6e00aacf3ba3ef7e6cd3773f48fd8e2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33edf4bb736fad62928e11dd0550af6640d411ac
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596908"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746757"
 ---
-# <a name="walkthrough-deploying-a-visual-c-application-to-an-application-local-folder"></a>Návod: Nasazení aplikace Visual C++ do místní složky aplikace
+# <a name="walkthrough-deploying-a-visual-c-application-to-an-application-local-folder"></a>Návod: Nasazení aplikace Visual C++ do složky místní aplikace
 
 Popisuje postup nasazení aplikace v jazyce Visual C++ pomocí kopírování souborů do jeho složky.
 
@@ -23,7 +23,7 @@ Popisuje postup nasazení aplikace v jazyce Visual C++ pomocí kopírování sou
 
 ### <a name="to-deploy-an-application-to-an-application-local-folder"></a>K nasazení aplikace do složky místní aplikace
 
-1. Vytvoření a sestavení aplikace knihovny MFC podle postupu v [návod: nasazení Visual C++ Application By Using a Setup Project](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
+1. Vytvoření a sestavení aplikace knihovny MFC podle postupu v [názorný postup: Nasazení aplikace v jazyce Visual C++ pomocí projektu instalace](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
 
 1. Zkopírujte příslušné soubory knihovny MFC a C Run-Time (CRT) z adresáře instalace sady Visual Studio v \\VC\\redist\\*verze* složky a pak je vložte do složky \Release\ projekt knihovny MFC. Další informace o další soubory, které možná budete muset zkopírovat najdete v tématu [Determining Which DLLs to Redistribute](determining-which-dlls-to-redistribute.md).
 
@@ -35,6 +35,6 @@ Popisuje postup nasazení aplikace v jazyce Visual C++ pomocí kopírování sou
 
    Spuštění aplikace je úspěšně, protože knihovny Visual C++ jsou k dispozici ve složce místní aplikace.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Příklady nasazení](deployment-examples.md)<br/>

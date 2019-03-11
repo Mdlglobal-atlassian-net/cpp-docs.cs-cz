@@ -19,12 +19,12 @@ helpviewer_keywords:
 - _setjmp3 function
 - setjmp3 function
 ms.assetid: 6129c2f3-8bac-4fdb-a827-44e1eebba500
-ms.openlocfilehash: 4509738f8e0128e2f9277e744a5965f557f65439
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2c89acf1de88b831d70a0f438cdf14148a48632
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564003"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741806"
 ---
 # <a name="setjmp3"></a>_setjmp3
 
@@ -61,7 +61,7 @@ Nepoužívejte tuto funkci v programu v jazyce C++. Je vnitřní funkce, která 
 
 ## <a name="requirements"></a>Požadavky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [setjmp](../c-runtime-library/reference/setjmp.md)

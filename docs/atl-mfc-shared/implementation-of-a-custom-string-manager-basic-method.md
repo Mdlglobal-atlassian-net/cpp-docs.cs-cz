@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: eac5d13e-cbb4-4e82-b01e-f5f2dbcb962a
-ms.openlocfilehash: 4e3ffcdcd034fea81734aaeb87e4c33d81647f66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c30c08217a09f600f8801bec9f50c4341e983a6b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537810"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752347"
 ---
 # <a name="implementation-of-a-custom-string-manager-basic-method"></a>Implementace z vlastního správce řetězců (základní způsob)
 
@@ -23,7 +23,7 @@ Nejjednodušší způsob, jak přizpůsobit schéma přidělení paměti pro dat
 
 - [Cglobalheap –](../atl/reference/cglobalheap-class.md) zabaluje rozhraní API Win32: [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc), [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree), a [GlobalRealloc](/windows/desktop/api/winbase/nf-winbase-globalrealloc).
 
-- [Ccomheap –](../atl/reference/ccomheap-class.md) zabalí rozhraní API modelu COM úloh Allocator: [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc), [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree), a [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc)
+- [Ccomheap –](../atl/reference/ccomheap-class.md) zabalí rozhraní API Allocator COM úloh: [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc), [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree), a [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc)
 
 Pro účely správy paměti řetězce, je nejužitečnější třídy `CWin32Heap` vzhledem k tomu, že umožňuje vytvořit více nezávislých haldy. Například Kdybyste chtěli použít samostatné haldy pouze pro řetězce, může provedete následující:
 
@@ -33,7 +33,6 @@ Používat ke správě paměti pro tohoto správce soukromého řetězce `CStrin
 
 [!code-cpp[NVC_ATLMFC_Utilities#181](../atl-mfc-shared/codesnippet/cpp/implementation-of-a-custom-string-manager-basic-method_2.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Správa paměti pomocí CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
-

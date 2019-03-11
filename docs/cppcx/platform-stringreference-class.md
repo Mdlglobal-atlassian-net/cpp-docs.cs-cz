@@ -9,12 +9,12 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-ms.openlocfilehash: 09b15a1530661ce537c9d2aab333a1a17fa52ff9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b6ab42dc630ce7e0014534064e8f1ce6da00857
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498381"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750920"
 ---
 # <a name="platformstringreference-class"></a>Platform::stringreference – třída
 
@@ -56,9 +56,9 @@ class StringReference
 
 **Minimální podporovaná klienta:** Windows 8
 
-**Minimální podporovaná serverem:** systému Windows Server 2012
+**Minimální podporovaná serveru:** Windows Server 2012
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 **Záhlaví:** vccorlib.h
 
@@ -193,6 +193,6 @@ Počet prvků v `__strArg`.
 
 První verze tento konstruktor je výchozí konstruktor. Druhá verze inicializuje novou `StringReference` instance třídy z objektu, která je zadána `__fstrArg` parametru. Třetí a čtvrtá přetížení inicializovat nový `StringReference` instanci char16 hodnoty z pole. char16 hodnota představuje znak UNICODE text 16 bitů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Platform::StringReference – třída](../cppcx/platform-stringreference-class.md)

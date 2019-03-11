@@ -1,19 +1,19 @@
 ---
-title: 'Postupy: Vytvoření uživatelského ovládacího prvku a vložení tohoto prvku do dialogového okna'
+title: 'Postupy: V dialogovém okně Vytvořit uživatelský ovládací prvek a hostitele'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: 03a53032-2f03-4fa2-b567-031615a26011
-ms.openlocfilehash: ccb7219b9c7b3a64da61a77097b147424a92a701
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bdf7e2f4961a16e6538c7bbcc690ef44ba87fcaf
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649992"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751489"
 ---
-# <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>Postupy: Vytvoření uživatelského ovládacího prvku a vložení tohoto prvku do dialogového okna
+# <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>Postupy: V dialogovém okně Vytvořit uživatelský ovládací prvek a hostitele
 
 V krocích v tomto článku se předpokládá, že vytváříte na dialogu založený ([CDialog – třída](../mfc/reference/cdialog-class.md)) projektu Microsoft Foundation Classes (MFC), ale můžete také přidat podporu pro ovládací prvek Windows Forms do existujícího dialogového okna knihovny MFC.
 
@@ -45,7 +45,7 @@ V krocích v tomto článku se předpokládá, že vytváříte na dialogu zalo�
 
    Na **souboru** nabídky, klikněte na tlačítko **nový** a potom klikněte na tlačítko **projektu**. V **Visual C++** složky, vyberte **aplikace knihovny MFC**.
 
-   V **název** zadejte `MFC01`. Změňte nastavení řešení na **přidat do řešení**. Klikněte na tlačítko **OK**.
+   V **název** zadejte `MFC01`. Změňte nastavení řešení na **přidat do řešení**. Klikněte na **OK**.
 
    V **Průvodce aplikací knihovny MFC**, jako typ aplikace vyberte **na bázi dialogu**. Potvrďte zbývající výchozí nastavení a klikněte na tlačítko **Dokončit**. Tím se vytvoří aplikace knihovny MFC, která má dialogového okna knihovny MFC.
 
@@ -115,6 +115,6 @@ V krocích v tomto článku se předpokládá, že vytváříte na dialogu zalo�
 
    Na **ladění** nabídky, klikněte na tlačítko **spustit bez ladění**. V dialogovém okně knihovny MFC zobrazeno ovládacího prvku Windows Forms.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Hostitelské poskytování uživatelského rozhraní Windows Form v dialogovém okně knihovny MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)

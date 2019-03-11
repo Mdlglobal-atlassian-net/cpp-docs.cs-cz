@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-ms.openlocfilehash: 59df523cc553881186921a878d131a109ae3cf27
-ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
+ms.openlocfilehash: 7197b5cdf551020f4bd964558b5b332b7022ffe6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978293"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750517"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Mapování obecného textu v souboru tchar.h
 
@@ -47,7 +47,7 @@ Například obecná textová funkce `_tcsrev`, která je definovaná v souboru t
 
 ### <a name="generic-text-data-type-mappings"></a>Mapování obecného textu datových typů
 
-|Obecného textu<br /> Název datového typu|_UNICODE &AMP;<br /> _MBCS nejsou definovány|_MBCS<br /> Definice|_UNICODE<br /> Definice|
+|Generic-Text<br /> Název datového typu|_UNICODE &AMP;<br /> _MBCS nejsou definovány|_MBCS<br /> Definice|_UNICODE<br /> Definice|
 |--------------------------------------|----------------------------------------|------------------------|---------------------------|
 |`_TCHAR`|**char**|**char**|**wchar_t**|
 |`_TINT`|**int**|**unsigned int**|`wint_t`|
@@ -91,7 +91,7 @@ RetVal = strrev(szString);
 
 Proto můžete psát, udržovat a zkompilujte soubor jeden zdrojový kód pro spuštění rutiny, které jsou specifické pro všechny tři druhy znakových sad.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Text a řetězce](../text/text-and-strings-in-visual-cpp.md)<br/>
 [Použití datových typů TCHAR.H s kódováním _MBCS](../text/using-tchar-h-data-types-with-mbcs-code.md)

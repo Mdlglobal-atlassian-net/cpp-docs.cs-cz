@@ -5,12 +5,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-ms.openlocfilehash: 697a246012544e6be1189b6cc40d6185e5ec26d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f289539807b1e9499cef51427d3f6a494545cc60
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569845"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750360"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>Postupy: Rozšíření knihovny zařazování
 
@@ -266,6 +266,6 @@ Native address: 123 Main Street
 Native zip code: 98111
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehled zařazování v jazyce C++](../dotnet/overview-of-marshaling-in-cpp.md)

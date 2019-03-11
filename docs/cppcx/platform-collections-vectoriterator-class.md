@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorIterator Class
 ms.assetid: d531cb42-27e0-48a6-bf5e-c265891a18ff
-ms.openlocfilehash: 8e776e0f5d479ee8633efa647ac41e6b1b5f9c0e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 448ce9e9c6c937d5f95640dca8fa2d2ed20bb4b8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595595"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743219"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections:: vectoriterator – třída
 
@@ -55,20 +55,20 @@ Vlastnost typename třídy VectorIterator šablony.
 |Název|Popis|
 |----------|-----------------|
 |[VectorIterator::operator-– operátor](#operator-minus)|Odečte buď zadaný počet prvků z aktuální iterace, což má za následek nové iterátor nebo iterátor zadané z aktuální iterace, což má za následek počet prvků mezi iterátory.|
-|[VectorIterator::operator--– operátor](#operator-decrement)|Sníží aktuální VectorIterator.|
+|[VectorIterator::operator-- Operator](#operator-decrement)|Sníží aktuální VectorIterator.|
 |[VectorIterator::operator! = – operátor](#operator-inequality)|Určuje, zda aktuální VectorIterator není roven zadané VectorIterator.|
 |[VectorIterator::operator * – operátor](#operator-dereference)|Získá odkaz na prvek určeném aktuálním VectorIterator.|
 |[VectorIterator::operator\[\]](#operator-at)|Získá odkaz na prvek, který je zadaný posun z aktuální VectorIterator.|
 |[VectorIterator::operator + – operátor](#operator-plus)|Vrátí VectorIterator, odkazující na prvek na zadané posunutí ze zadaného VectorIterator.|
 |[VectorIterator::operator ++ – operátor](#operator-increment)|Aktuální VectorIterator zvýší.|
-|[VectorIterator::operator += – operátor](#operator-plus-assign)|Zvětší aktuální VectorIterator podle zadaného posunu.|
+|[VectorIterator::operator+= Operator](#operator-plus-assign)|Zvětší aktuální VectorIterator podle zadaného posunu.|
 |[VectorIterator::operator < – operátor](#operator-less-than)|Označuje, zda aktuální VectorIterator je nižší než zadané VectorIterator.|
-|[VectorIterator::operator\<= – operátor](#operator-less-than-or-equals)|Označuje, zda aktuální VectorIterator je menší než nebo rovna hodnotě zadané VectorIterator.|
-|[VectorIterator::operator-= – operátor](#operator-subtract-assign)|Sníží aktuální VectorIterator podle zadaného posunu.|
-|[VectorIterator::operator == – operátor](#operator-equality)|Určuje, zda aktuální VectorIterator rovná zadané VectorIterator.|
+|[VectorIterator::operator\<= Operator](#operator-less-than-or-equals)|Označuje, zda aktuální VectorIterator je menší než nebo rovna hodnotě zadané VectorIterator.|
+|[VectorIterator::operator-= Operator](#operator-subtract-assign)|Sníží aktuální VectorIterator podle zadaného posunu.|
+|[VectorIterator::operator== Operator](#operator-equality)|Určuje, zda aktuální VectorIterator rovná zadané VectorIterator.|
 |[VectorIterator::operator > – operátor](#operator-greater-than)|Označuje, zda je aktuální VectorIterator větší než zadaný VectorIterator.|
-|[VectorIterator::operator -> – operátor](#operator-arrow)|Načte adresu elementu, který odkazuje aktuální VectorIterator.|
-|[VectorIterator::operator > = – operátor](#operator-greater-than-or-equal)|Určuje, zda aktuální VectorIterator je větší než nebo rovna hodnotě zadané VectorIterator.|
+|[VectorIterator::operator-> Operator](#operator-arrow)|Načte adresu elementu, který odkazuje aktuální VectorIterator.|
+|[VectorIterator::operator>= Operator](#operator-greater-than-or-equal)|Určuje, zda aktuální VectorIterator je větší než nebo rovna hodnotě zadané VectorIterator.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -408,6 +408,6 @@ IVector\<T > objektu.
 
 První příklad syntaxe je výchozí konstruktor. Druhý příklad syntaxe je explicitní konstruktor, který se používá ke konstrukci VectorIterator ze IVector\<T > objektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Platforma Namespace](platform-namespace-c-cx.md)

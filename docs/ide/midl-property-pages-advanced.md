@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - MIDL, property pages
 ms.assetid: d1c92e01-f403-4ed6-ab45-4043a3c9c6bb
-ms.openlocfilehash: 86152dd1ac0bb079a841efa2d27109ee92d48ea7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c94f6974a5b7cec4c50a900e790134b1b4b86d79
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440869"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744814"
 ---
 # <a name="midl-property-pages-advanced"></a>MIDL – stránky vlastností: Upřesnit
 
@@ -61,6 +61,6 @@ Informace o tom, jak získat přístup k **Upřesnit** stránku vlastností v **
 
 Informace o tom, jak programově přistupovat k MIDL pro projekty C++, naleznete v tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MIDL – stránky vlastností](../ide/midl-property-pages.md)

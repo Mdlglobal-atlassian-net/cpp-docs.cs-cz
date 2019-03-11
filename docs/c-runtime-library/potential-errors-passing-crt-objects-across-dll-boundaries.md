@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - DLL conflicts [C++]
 ms.assetid: c217ffd2-5d9a-4678-a1df-62a637a96460
-ms.openlocfilehash: c90303db63724bbcf584340147555814d9a92f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31f9d9aceba167b516c9d37724e240f1bc4586e1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562770"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749894"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Možné chyby při předávání objektů CRT přes hranice knihovny DLL
 
@@ -19,7 +19,7 @@ Související problém může vzniknout při přidělování paměti (buď expli
 
 Dalším symptomem tohoto problému může být chyba v okně Výstup během ladění, jako:
 
-[] HALDY: Neplatná adresa zadaná RtlValidateHeap(#,#)
+HEAP[]: Zadaná RtlValidateHeap(#,#) neplatná adresa
 
 ## <a name="causes"></a>Způsobí, že
 
@@ -122,6 +122,6 @@ Pokud soubor knihovny DLL a .exe jsou vytvořeny tak, / MD, tak, aby se použív
 New MYLIB variable is: c:\mylib;c:\yourlib
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Funkce knihovny CRT](../c-runtime-library/crt-library-features.md)

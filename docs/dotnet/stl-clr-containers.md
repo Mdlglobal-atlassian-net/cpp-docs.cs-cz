@@ -6,12 +6,12 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: 1787e18cb36c77429cd4957bab167c77d5e25d8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 511ea14d02b77e237ae9768776c4ff3eb97982ed
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496080"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744349"
 ---
 # <a name="stlclr-containers"></a>STL/CLR – kontejnery
 
@@ -310,6 +310,6 @@ Kontejnery v STL/CLR pracovat na hodnotu sémantiku. Pokaždé, když se vklád�
 
 Při volání nezašifrované podobě nebo vymazat metoda kontejner objektů popisovač, nejsou objekty, které je zachyceno uvolněna z paměti. Můžete explicitně odstraňte objekt, nebo, tyto objekty jsou umístěny na spravované haldě, povolit uvolňování paměti uvolnit paměť, jakmile se určí, že objekt již nejsou déle používány.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

@@ -2,12 +2,12 @@
 title: Visual C++ co&#39;s novou 2003 – 2015
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: bc0092aeb8910f960befc174c1f71ce05c4eb131
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: fdd1d2c2183d06defe413340b8aef05c5bd61750
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894351"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749149"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ co&#39;s novou 2003 – 2015
 
@@ -2197,7 +2197,7 @@ Rozbíjející změny v této verzi má kompilátor.
 
 - Informace o tom, jak spustit spravovaného rozšíření jazyka C++ aplikaci vytvořenou v aktuální verzi kompilátoru v předchozí verzi modulu runtime.
 - Spravovaná rozšíření pro C++ – nejčastější dotazy.
-- Byla přidána názorný postup ukazuje, jak přenést existující, nativní aplikace pro použití spravovaného rozšíření jazyka C++: Průvodce: Portování stávající nativní kód C++ aplikace pro spolupráci s součásti rozhraní .NET Framework.
+- Byla přidána názorný postup ukazuje, jak přenést existující, nativní aplikace pro použití spravovaného rozšíření jazyka C++: Návod: Portování stávající nativní kód C++ aplikace pro spolupráci s součásti rozhraní .NET Framework.
 - Nyní můžete vytvořit delegáta pro metodu hodnotového typu.
 - Kompilátoru soulad se standardem jazyka C++ je výrazně Vylepšená Visual C++ .NET 2003.
 - `/arch` – možnost kompilátoru je přidána.
@@ -2233,6 +2233,6 @@ Byly přidány následující přepínače linkeru:
 
 Na. SAFESEH – direktiva a `/safeseh` ml.exe možnost byly přidány.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Průvodce přenosem a upgradem Visual C++](visual-cpp-porting-and-upgrading-guide.md)

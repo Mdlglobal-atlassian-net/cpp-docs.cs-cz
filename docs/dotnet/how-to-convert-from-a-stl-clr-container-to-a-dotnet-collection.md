@@ -1,18 +1,18 @@
 ---
-title: 'Postupy: Převod kontejneru STL/CLR na typ .NET Collection'
+title: 'Postupy: Převod kontejneru STL/CLR na kolekci .NET'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 - STL/CLR, converting to .NET collections
 ms.assetid: 70b2dfd9-869c-4e0f-9a29-b1ee0cb0d107
-ms.openlocfilehash: 3444339f43f8000d8a9c9b8a6577adb286245dbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf67e362751dd164916cc94cd644d55110d88a5f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621621"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751580"
 ---
-# <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>Postupy: Převod kontejneru STL/CLR na typ .NET Collection
+# <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>Postupy: Převod kontejneru STL/CLR na kolekci .NET
 
 Toto téma ukazuje, jak převést kontejnery STL/CLR na jejich odpovídající kolekcí .NET. Jako příklad vám ukážeme, jak převést STL/CLR [vektoru](../dotnet/vector-stl-clr.md) k .NET <xref:System.Collections.Generic.ICollection%601> a jak převést STL/CLR [mapy](../dotnet/map-stl-clr.md) k .NET <xref:System.Collections.Generic.IDictionary%602>, ale postup je podobný pro všechny kolekce a kontejnery.
 
@@ -111,7 +111,7 @@ Key: 42.00 Value: 42
 Key: 74.00 Value: 74
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace knihoven STL/CLR](../dotnet/stl-clr-library-reference.md)<br/>
 [Postupy: Převod kolekce .NET na kontejner STL/CLR](../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md)<br/>

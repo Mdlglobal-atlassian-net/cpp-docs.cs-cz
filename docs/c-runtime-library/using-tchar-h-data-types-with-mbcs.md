@@ -8,16 +8,16 @@ helpviewer_keywords:
 - MBCS data type
 - _MBCS data type
 ms.assetid: 48f471e7-9d2b-4a39-b841-16a0e15c0a18
-ms.openlocfilehash: 487a73fae9380683e06e863f133e5e470635e0da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2c5031f0f1114bb7706dd8816729f661b78144d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432679"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743922"
 ---
 # <a name="using-tcharh-data-types-with-mbcs"></a>Použití datových typů TCHAR.H s kódováním _MBCS
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Jako označuje tabulky mapování rutin obecného textu (naleznete v tématu [mapování obecného textu](../c-runtime-library/generic-text-mappings.md)), když konstanta manifestu **_MBCS** je definován, daný obecné textové rutiny mapuje na jednu z následujících typů z rutiny:
 
@@ -66,7 +66,7 @@ Při volbě této možnosti musí být opatrní a zajistit, že příslušné da
 
 **Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Internacionalizace](../c-runtime-library/internationalization.md)<br/>
 [Rutiny UCRT (Universal C runtime) podle kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>

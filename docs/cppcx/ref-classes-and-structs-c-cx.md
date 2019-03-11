@@ -2,12 +2,12 @@
 title: Referenční třídy a struktury (C + +/ CX)
 ms.date: 01/22/2017
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
-ms.openlocfilehash: a817529f24f1df3a3258b4596cd4d14533356a02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9ac14762dba580967fbecd245a81a4ff4356b64
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456222"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741829"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Referenční třídy a struktury (C + +/ CX)
 
@@ -45,7 +45,7 @@ Následující příklad kódu ukazuje, jak kód klienta používá `Person` tř
 
 [!code-cpp[cx_classes#05](../cppcx/codesnippet/CPP/classesstructs/class1.cpp#05)]
 
-Můžete také sémantika zásobníku pro deklarování proměnné třídy lokálního odkazu. Takový objekt se chová jako proměnnou založenou na zásobníku, i v případě, že stále přidělení dynamické paměti. Jeden důležitý rozdíl je, že nemůžete přiřadit sledovacího odkazu (%) proměnné, která je deklarována pomocí – sémantika zásobníku; zaručí se tak, že je počet odkazů sníží na nulu, když funkce skončí. Tento příklad ukazuje základní referenční třídy `Uri`a funkce, která se používá s – sémantika zásobníku:
+Můžete také sémantika zásobníku pro deklarování proměnné třídy lokálního odkazu. Takový objekt se chová jako proměnnou založenou na zásobníku, i v případě, že stále přidělení dynamické paměti. Jeden důležitý rozdíl je, že nemůžete přiřadit sledovacího odkazu (%) na proměnnou, která je deklarována pomocí – sémantika zásobníku; zaručí se tak, že je počet odkazů sníží na nulu při ukončení funkce. Tento příklad ukazuje základní referenční třídy `Uri`a funkce, která se používá s – sémantika zásobníku:
 
 [!code-cpp[cx_classes#06](../cppcx/codesnippet/CPP/classesstructs/class1.cpp#06)]
 
@@ -127,7 +127,7 @@ Následující příklad ukazuje, jak vystavit třída public ref class, která 
 
 [!code-cpp[cx_classes#09](../cppcx/codesnippet/CPP/classesstructs/class1.h#09)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Systém typů](../cppcx/type-system-c-cx.md)<br/>
 [Hodnota třídy a struktury](../cppcx/value-classes-and-structs-c-cx.md)<br/>

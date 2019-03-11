@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: 4f4a5cbd2f1b6c06b339950307dbb333fc6392ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02b5e15a816ec057bfb0a8201b7591e628c3ea2c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658182"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745283"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections:: vectorview – třída
 
@@ -88,7 +88,7 @@ Iterátor, který určuje první prvek v VectorView.
 
 ### <a name="remarks"></a>Poznámky
 
-Praktický způsob uložení iterátorů vrácené First() je přiřadit návratovou hodnotu proměnné, která je deklarována s **automaticky** klíčovým slovem odvození typu. Například `auto x = myVectorView->First();`.
+Praktický způsob uložení iterátorů vrácené First() je přiřadit návratovou hodnotu proměnné, která je deklarována s **automaticky** klíčovým slovem odvození typu. Například, `auto x = myVectorView->First();`.
 
 ## <a name="getat"></a>  VectorView::GetAt – metoda
 
@@ -131,7 +131,7 @@ virtual unsigned int GetMany(
 *startIndex*<br/>
 Index založený na nule začátek položky, které chcete načíst.
 
-*cíl*<br/>
+*dest*<br/>
 Když tato operace dokončí, pole položek, které začíná v elementu určené `startIndex` a Konec po posledním prvku v VectorView.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -244,7 +244,7 @@ VectorView(
 *Inicializace*<br/>
 Typ kolekce objektů, které slouží k inicializaci aktuální VectorView.
 
-*IL*<br/>
+*il*<br/>
 A [std::initializer_list](../standard-library/initializer-list-class.md) jehož prvky se použije k inicializaci VectorView.
 
 *N*<br/>
@@ -262,7 +262,7 @@ Hodnota, která slouží k inicializaci každý prvek v aktuální VectorView.
 *ptr*<br/>
 Ukazatel `std::vector` , který slouží k inicializaci aktuální VectorView.
 
-*směrování žádostí na aplikace*<br/>
+*arr*<br/>
 A [Platform::Array](../cppcx/platform-array-class.md) objekt, který slouží k inicializaci aktuální VectorView.
 
 *a*<br/>
@@ -271,10 +271,10 @@ A [std::array](../standard-library/array-class-stl.md) objekt, který slouží k
 *první*<br/>
 První prvek v sekvenci objektů, které se používají k inicializaci aktuální VectorView. Typ `first` je předáno *perfektní přesměrování*. Další informace najdete v tématu [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-*poslední*<br/>
+*last*<br/>
 Po posledním prvku v sekvenci objektů, které se používají k inicializaci aktuální VectorView. Typ `last` je předáno *perfektní přesměrování*. Další informace najdete v tématu [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Platforma Namespace](platform-namespace-c-cx.md)<br/>
 [Vytváření komponent Windows Runtime v jazyce C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

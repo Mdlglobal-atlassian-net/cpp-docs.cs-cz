@@ -6,12 +6,12 @@ helpviewer_keywords:
 - resources [C++]
 - file types [C++], resource files
 ms.assetid: 338a4a0f-0c62-4ef1-a34f-5d86262d93a4
-ms.openlocfilehash: f9ead50c1c8761968ebad65f6a5289cfeea8fdaf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e19ad88a52467cd7ad2d5fa17dd964fd1bb38429
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622999"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747044"
 ---
 # <a name="resource-files-c"></a>Zdrojové soubory (C++)
 
@@ -28,8 +28,8 @@ Zobrazit [práci s nimi](../windows/working-with-resource-files.md) Další info
 |*Název_projektu*.ico|*Název_projektu*\res|Zdrojové soubory|Soubor ikony na projekt nebo ovládací prvek. Tato ikona se zobrazuje, když je minimalizován aplikace. Používá se také v aplikačním **o** pole. Ve výchozím nastavení knihovna MFC poskytuje ikonu knihovny MFC a ATL obsahuje ikonu ATL.|
 |*Název_projektu*Doc.ico|*Název_projektu*\res|Zdrojové soubory|Soubor ikony pro projekt knihovny MFC, včetně podpory pro architekturu document/view.|
 |Toolbar.bmp s tím|*Název_projektu*\res|Zdrojové soubory|Soubor rastrového obrázku představující aplikace nebo ovládací prvek v panelu nástrojů nebo z palety. Tento rastrový obrázek je součástí souboru prostředků projektu. Počáteční nástrojů a stavový řádek jsou vytvořeny v **CMainFrame** třídy.|
-|Ribbon.mfcribbon ms|*Název_projektu*\res|Zdrojové soubory|Soubor prostředků, která obsahuje kód XML, který definuje tlačítka, ovládací prvky a atributy pásu karet. Další informace najdete v tématu [Návrhář pásu karet (MFC)](../mfc/ribbon-designer-mfc.md).|
+|ribbon.mfcribbon-ms|*Název_projektu*\res|Zdrojové soubory|Soubor prostředků, která obsahuje kód XML, který definuje tlačítka, ovládací prvky a atributy pásu karet. Další informace najdete v tématu [Návrhář pásu karet (MFC)](../mfc/ribbon-designer-mfc.md).|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Typy souborů vytvořených pro projekty Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)

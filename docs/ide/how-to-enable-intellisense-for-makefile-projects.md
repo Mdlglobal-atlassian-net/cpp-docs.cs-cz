@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Makefile projects, IntelliSense
 - IntelliSense, Makefile projects
 ms.assetid: 9443f453-f18f-4f12-a9a1-ef9dbf8b188f
-ms.openlocfilehash: 80a4696856fea46c7749cfeb120535dcdab86282
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42f4799df0dff70c65cee77ca1db58bd8fd8edc0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434668"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748609"
 ---
 # <a name="how-to-enable-intellisense-for-makefile-projects"></a>Postupy: Povolení technologie IntelliSense pro projekty souborů pravidel
 
@@ -46,7 +46,7 @@ Technologie IntelliSense nebude moci pracovat v integrovaném vývojovém prost�
 
 Při příštím otevření projektu makefile ve vývojovém prostředí sady Visual Studio, spusťte **Vyčistit řešení** příkaz a potom **sestavit řešení** v projektu makefile příkaz. Technologie IntelliSense by měly fungovat správně v integrovaném vývojovém prostředí.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu IntelliSense](/visualstudio/ide/using-intellisense)<br>
 [NMAKE – referenční zdroje](../build/nmake-reference.md)<br>

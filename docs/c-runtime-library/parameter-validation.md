@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - parameters, validation
 ms.assetid: 019dd5f0-dc61-4d2e-b4e9-b66409ddf1f2
-ms.openlocfilehash: b0ccc589809fc5204659ad5af28ece0096855d30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c7b2ae50fdcbf59cd23cc309a4ddc4c0803e24e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677588"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748421"
 ---
 # <a name="parameter-validation"></a>Ověřování parametru
 
@@ -25,7 +25,7 @@ Funkce odeslání obslužná rutina neplatného parametru volá obslužnou rutin
 
 Toto chování lze změnit pomocí funkce [_set_invalid_parameter_handler –](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) nebo [_set_thread_local_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) nastavit vlastní funkce obslužnou rutinu neplatného parametru. Pokud funkce, které jste zadali neukončí aplikace, ovládací prvek vrátí na funkci, která se zobrazila neplatné parametry. V CRT, tyto funkce obvykle ukončí provádění funkce nastavte `errno` na kód chyby a vrátí chybový kód. V mnoha případech `errno` hodnotu a návratová hodnota jsou obě `EINVAL`, určující neplatný parametr. V některých případech konkrétnější vrácený kód chyby je, jako například `EBADF` pro nesprávný ukazatel souboru předaného jako parametr. Další informace o `errno`, naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Funkce zabezpečení v CRT](../c-runtime-library/security-features-in-the-crt.md)<br/>
 [Funkce knihovny CRT](../c-runtime-library/crt-library-features.md)

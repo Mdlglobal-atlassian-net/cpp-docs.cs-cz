@@ -10,14 +10,14 @@ helpviewer_keywords:
 - interop [C++], partially trusted applications
 - /clr compiler option [C++], partially trusted applications
 ms.assetid: 4760cd0c-4227-4f23-a7fb-d25b51bf246e
-ms.openlocfilehash: fb65c8ff3dc4c3b03fa319fd1e7a6eb95f11bef2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: afdfb8ca11753d7def9d7da6f431082b1a90c345
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445965"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743756"
 ---
-# <a name="how-to-create-a-partially-trusted-application-by-removing-dependency-on-the-crt-library-dll"></a>Postupy: Vytvoření částečně důvěryhodné aplikace odebráním závislosti na modulu DLL knihovny CRT
+# <a name="how-to-create-a-partially-trusted-application-by-removing-dependency-on-the-crt-library-dll"></a>Postupy: Vytvoření částečně důvěryhodné aplikace odebráním závislosti na knihovně DLL knihovny CRT
 
 Toto téma popisuje, jak vytvořit pomocí jazyka Visual C++ odebráním závislosti na msvcm90.dll částečně důvěryhodné aplikace Common Language Runtime.
 
@@ -34,7 +34,7 @@ Pokud chcete odebrat závislost na tuto knihovnu v kódu aplikace nepoužívá �
 
 1. Přidejte jeden z knihovny ptrustm vstupní závislostí linkeru. Pokud vytváříte aplikaci v režimu vydání, použijte ptrustm.lib. U režimu ladění použijte ptrustmd.lib. Informace o tom, jak to udělat pomocí vývojového prostředí sady Visual Studio nebo prostřednictvím kódu programu, najdete v článku [. Lib soubory jako vstup Linkeru](../build/reference/dot-lib-files-as-linker-input.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Smíšená (nativní a spravovaná) sestavení](../dotnet/mixed-native-and-managed-assemblies.md)<br/>
 [Inicializace smíšených sestavení](../dotnet/initialization-of-mixed-assemblies.md)<br/>

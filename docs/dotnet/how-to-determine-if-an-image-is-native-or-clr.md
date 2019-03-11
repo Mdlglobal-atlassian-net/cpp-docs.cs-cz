@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Určení, zda je bitová kopie nativní nebo CLR'
+title: 'Postupy: Určit, pokud je bitová kopie nativní nebo CLR'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - /clr compiler option [C++], detecting use in compilation
 - common language runtime, /clr compiler option
 ms.assetid: 5a854822-6172-4b22-b236-320165412568
-ms.openlocfilehash: ad8603827f5d1c951411403a62f8ffff58bfca88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 541581e0f172c8ce2601e2e476ccd03a49757f80
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637395"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747226"
 ---
-# <a name="how-to-determine-if-an-image-is-native-or-clr"></a>Postupy: Určení, zda je bitová kopie nativní nebo CLR
+# <a name="how-to-determine-if-an-image-is-native-or-clr"></a>Postupy: Určit, pokud je bitová kopie nativní nebo CLR
 
 Jeden ze způsobů, jak určit, jestli obrázek je vytvořený právě pro modul common language runtime, je použít **dumpbin**[/CLRHEADER](../build/reference/clrheader.md).
 
-Můžete také programově ověřit, zda byla vytvořena image pro modul common language runtime. Další informace najdete v tématu [postupy: zjištění kompilace/CLR](../dotnet/how-to-detect-clr-compilation.md).
+Můžete také programově ověřit, zda byla vytvořena image pro modul common language runtime. Další informace najdete v tématu [jak: Zjišťování kompilace/CLR](../dotnet/how-to-detect-clr-compilation.md).
 
 ## <a name="example"></a>Příklad
 
@@ -81,6 +81,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

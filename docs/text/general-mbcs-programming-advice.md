@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MBCS [C++], programming
 - dialog boxes [C++], fonts
 ms.assetid: 7b541235-f3e5-4af0-b2c2-a0112cd5fbfb
-ms.openlocfilehash: 800e94bfb8a52b806ad45368499f126fbf163389
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: e9d3c7612232cff60be831310dec04b8ba63a227
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626692"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743142"
 ---
 # <a name="general-mbcs-programming-advice"></a>Obecné rady k programování se znakovou sadou MBCS
 
@@ -36,7 +36,7 @@ Použijte následující tipy:
 
 - Při návrhu aplikace, rozhodněte, které řetězce může být lokalizována. Pokud máte pochybnosti, se předpokládá, že bude lokalizovaný libovolný daný řetězec. V důsledku toho Nekombinujte řetězce, které může být lokalizována s těmi, které nelze.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MBCS – tipy pro programování](../text/mbcs-programming-tips.md)<br/>
 [Inkrementace a dekrementace ukazatelů](../text/incrementing-and-decrementing-pointers.md)

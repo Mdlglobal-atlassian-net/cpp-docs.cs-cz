@@ -16,12 +16,12 @@ helpviewer_keywords:
 - is routines
 - isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
-ms.openlocfilehash: 65dc5bbfbaeab59e91cdca23c4f0f01b5ef7ebbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 961ad52070928ba755625747546c8dc7b1c215ba
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620168"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750817"
 ---
 # <a name="is-isw-routines"></a>is, isw – rutiny
 
@@ -32,7 +32,7 @@ ms.locfileid: "50620168"
 |[isascii, __isascii, iswascii](../c-runtime-library/reference/isascii-isascii-iswascii.md)|[islower, iswlower, _islower_l, _iswlower_l](../c-runtime-library/reference/islower-iswlower-islower-l-iswlower-l.md)|
 |[isblank, iswblank, _isblank_l, _iswblank_l](../c-runtime-library/reference/isblank-iswblank-isblank-l-iswblank-l.md)|[isprint, iswprint, _isprint_l, _iswprint_l](../c-runtime-library/reference/isprint-iswprint-isprint-l-iswprint-l.md)|
 |[iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l](../c-runtime-library/reference/iscntrl-iswcntrl-iscntrl-l-iswcntrl-l.md)|[ispunct, iswpunct, _ispunct_l, _iswpunct_l](../c-runtime-library/reference/ispunct-iswpunct-ispunct-l-iswpunct-l.md)|
-|[iscsym – iscsymf –, __iscsym –, \__iswcsym, \__iscsymf, \__iswcsymf _iscsym_l –, _iswcsym_l –, _iscsymf_l –, _iswcsymf_l –](../c-runtime-library/reference/iscsym-functions.md)|[isspace, iswspace, _isspace_l, _iswspace_l](../c-runtime-library/reference/isspace-iswspace-isspace-l-iswspace-l.md)|
+|[iscsym, iscsymf, __iscsym, \__iswcsym, \__iscsymf, \__iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l](../c-runtime-library/reference/iscsym-functions.md)|[isspace, iswspace, _isspace_l, _iswspace_l](../c-runtime-library/reference/isspace-iswspace-isspace-l-iswspace-l.md)|
 |[_isctype, iswctype, _isctype_l, _iswctype_l](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|[isupper, _isupper_l, iswupper, _iswupper_l](../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md)|
 |[isdigit, iswdigit, _isdigit_l, _iswdigit_l](../c-runtime-library/reference/isdigit-iswdigit-isdigit-l-iswdigit-l.md)|[isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l](../c-runtime-library/reference/isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)|
 
@@ -126,19 +126,19 @@ Znak má vlastnost určenou `desc` argument. Pro každou platnou hodnotu `desc` 
 
 |Hodnota *desc* argument|iswctype ( *c, desc* ) ekvivalentní|
 |------------------------------|----------------------------------------|
-|**ÚROVNĚ _ALPHA**|**iswalpha – (** `c` **)**|
-|**ÚROVNĚ _ALPHA** &AMP;#124; **_DIGIT**|**iswalnum – (** `c` **)**|
-|**_BLANK**|**iswblank (** `c` **)**|
-|**OVLÁDA_CÍHO PRVKU**|**iswcntrl – (** `c` **)**|
-|**_DIGIT**|**iswdigit – (** `c` **)**|
-|**ÚROVNĚ _ALPHA** &AMP;#124; **_DIGIT** &AMP;#124; **_PUNCT**|**iswgraph – (** `c` **)**|
+|**_ALPHA**|**iswalpha – (** `c` **)**|
+|**_ALPHA** &#124; **_DIGIT**|**iswalnum – (** `c` **)**|
+|**_BLANK**|**iswblank(** `c` **)**|
+|**_CONTROL**|**iswcntrl(** `c` **)**|
+|**_DIGIT**|**iswdigit(** `c` **)**|
+|**_ALPHA** &#124; **_DIGIT** &#124; **_PUNCT**|**iswgraph(** `c` **)**|
 |**_LOWER**|**iswlower – (** `c` **)**|
-|**ÚROVNĚ _ALPHA** &AMP;#124; **_BLANK** &AMP;#124; **_DIGIT** &AMP;#124; **_PUNCT**|**iswprint – (** `c` **)**|
-|**_PUNCT**|**iswpunct – (** `c` **)**|
-|**_BLANK**|**iswblank (** `c` **)**|
-|**_SPACE**|**iswspace – (** `c` **)**|
+|**_ALPHA** &#124; **_BLANK** &#124; **_DIGIT** &#124; **_PUNCT**|**iswprint(** `c` **)**|
+|**_PUNCT**|**iswpunct(** `c` **)**|
+|**_BLANK**|**iswblank(** `c` **)**|
+|**_SPACE**|**iswspace(** `c` **)**|
 |**_UPPER**|**iswupper – (** `c` **)**|
-|**_HEX**|**iswxdigit – (** `c` **)**|
+|**_HEX**|**iswxdigit(** `c` **)**|
 
 `iswdigit`<br/>
 Široký znak odpovídající znaku desítkové číslice.
@@ -335,7 +335,7 @@ int main( void )
 7f            AS  C                              .
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Klasifikace znaků](../c-runtime-library/character-classification.md)<br/>
 [Národní prostředí](../c-runtime-library/locale.md)<br/>

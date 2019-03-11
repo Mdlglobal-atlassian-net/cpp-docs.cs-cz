@@ -2,12 +2,12 @@
 title: Integrace modulu CLR (C + +/ CX)
 ms.date: 01/22/2017
 ms.assetid: 76e213cf-2f3d-4181-b35b-9fd25d5b307c
-ms.openlocfilehash: 7b14d8067625719b337e2c830b739269ef96dccd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df0c5e9cfaf9a4148c8d16b68ee04b4e9ce82e6a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461812"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749020"
 ---
 # <a name="clr-integration-ccx"></a>Integrace modulu CLR (C + +/ CX)
 
@@ -23,7 +23,7 @@ C + +/ CX také mapuje určité typy v oborech názvů Windows Runtime k vylepš
 
 Následující seznamy shrnují struktuře hodnot, které podporují nové konstruktory a metody helper. Pokud jste dřív napsali kód, který používá struktury inicializační seznamy, změňte ji na použití nově přidané konstruktory.
 
-**Windows::Foundation –**
+**Windows::Foundation**
 
 - Bod
 
@@ -35,7 +35,7 @@ Následující seznamy shrnují struktuře hodnot, které podporují nové konst
 
 - Barva
 
-**Windows::UI::XAML**
+**Windows::UI::Xaml**
 
 - CornerRadius
 
@@ -53,7 +53,7 @@ Následující seznamy shrnují struktuře hodnot, které podporují nové konst
 
 - matice
 
-**Windows::UI::XAML::Media::Animation**
+**Windows::UI::Xaml::Media::Animation**
 
 - KeyTime
 
@@ -69,6 +69,6 @@ Při čtení souboru .winmd kompilátory jazyka Visual C++ nebo C# mapují autom
 
 IReference\<T > v modulu Windows Runtime mapuje na Nullable\<T > v rozhraní .NET.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Spolupráce s jinými jazyky](../cppcx/interoperating-with-other-languages-c-cx.md)

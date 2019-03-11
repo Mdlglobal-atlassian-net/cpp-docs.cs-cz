@@ -11,12 +11,12 @@ helpviewer_keywords:
 - depends.exe
 - libraries [C++], application deployment issues
 ms.assetid: 62a44c95-c389-4c5f-82fd-07d7ef09dbf9
-ms.openlocfilehash: 8ed340bed62d3b2cfcf32e0b98f032c9146b6bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed510e0d289349b1d7a0129a1c586b0bf1715b7e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629265"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751476"
 ---
 # <a name="understanding-the-dependencies-of-a-visual-c-application"></a>Principy závislostí v aplikacích Visual C++
 
@@ -32,6 +32,6 @@ Při práci s nástrojem depends.exe je třeba si uvědomit, že knihovna DLL m
 
 Když víte, na kterých knihovnách DLL aplikace závisí, můžete určit knihovny, které je třeba distribuovat s aplikací při nasazování do jiného počítače. Ve většině případů není nutné znovu distribuovat systémové knihovny DLL, ale možná budete muset distribuovat knihovny DLL pro knihovny Visual C++. Další informace najdete v tématu [Determining Which DLLs to Redistribute](../ide/determining-which-dlls-to-redistribute.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nasazení aplikací klasické pracovní plochy](../ide/deploying-native-desktop-applications-visual-cpp.md)

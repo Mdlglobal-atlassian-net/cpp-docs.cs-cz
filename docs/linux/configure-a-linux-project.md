@@ -2,12 +2,12 @@
 title: Konfigurace projektu C++ Linux v sadě Visual Studio
 ms.date: 11/12/2018
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 0323ae57de1e03811b12fec7fea79b6bab954e44
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 0d0825a3aca8ca03759d7f7b42db90ce9700c10b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563339"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745185"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurace projektu Linux
 
@@ -87,7 +87,7 @@ Ke správě vaší mezipaměti hlaviček, přejděte na **nástroje > Možnosti,
 
 ![Vzdálené hlaviček IntelliSense](media/remote-header-intellisense.png)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Práce s vlastnostmi projektu](../ide/working-with-project-properties.md)<br/>
 [C++ obecné vlastnosti (Linux C++)](prop-pages/general-linux.md)<br/>

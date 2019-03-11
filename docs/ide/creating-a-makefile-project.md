@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Makefile projects, creating
 - project files [C++], Makefile projects
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: 0c64f6df342e82e3ea5409e2b07af1e591747d7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b205aa4c97e78dbb8c5bec28c0f4db638a36c8e5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494845"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750985"
 ---
 # <a name="creating-a-c-makefile-project"></a>Vytvoření projektu souboru pravidel C++
 
@@ -21,8 +21,8 @@ A *makefile* je textový soubor, který obsahuje pokyny, jak kompilovat a propoj
 Pokud máte existujícího projektu souboru pravidel, pokud chcete kód a/nebo ladění v rozhraní IDE sady Visual Studio mají tyto možnosti:
 
 - Vytvoření projektu souboru pravidel v sadě Visual Studio, který používá vaše existující soubor pravidel pro sestavení svého kódu v rozhraní IDE. (Není nutné všechny funkce integrovaného vývojového prostředí, které jste získali s nativní projektu nástroje MSBuild.) Zobrazit [vytvoření projektu souboru pravidel](#create_a_makefile_project) níže.
-- Použití **vytvořit nový projekt z existujících souborů kódu** průvodce vytvořit nativní projekt MSBuild ze zdrojového kódu. Další informace najdete v tématu [postupy: vytvoření projektu jazyka C++ z existujícího kódu](how-to-create-a-cpp-project-from-existing-code.md).
-- **Visual Studio 2017 a novější**: použijte **otevřít složku** funkce k otevření projektu souboru pravidel bez jeho převodu do MSBuild. Další informace najdete v tématu [projekty otevřít složku v jazyce Visual C++](non-msbuild-projects.md).
+- Použití **vytvořit nový projekt z existujících souborů kódu** průvodce vytvořit nativní projekt MSBuild ze zdrojového kódu. Další informace najdete v tématu [jak: Vytvoření projektu jazyka C++ z existujícího kódu](how-to-create-a-cpp-project-from-existing-code.md).
+- **Visual Studio 2017 a novější**: Použití **otevřít složku** funkce k otevření projektu souboru pravidel bez jeho převodu do MSBuild. Další informace najdete v tématu [projekty otevřít složku v jazyce Visual C++](non-msbuild-projects.md).
 
 ## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> Vytvoření projektu souboru pravidel se šablonou projektu souboru pravidel
 
@@ -42,7 +42,7 @@ Výstupní soubor zadaný v projektu nemá žádný vliv na název, který gene
 
 Na stránce vlastností projektu můžete zobrazit a upravit jeho vlastnosti. Zobrazit [nastavení vlastností projektu Visual C++](../ide/working-with-project-properties.md) informace o zobrazení stránky vlastností.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Průvodce projektem souboru pravidel](../ide/makefile-project-wizard.md)<br/>
 [Speciální znaky v souboru pravidel](../build/special-characters-in-a-makefile.md)<br/>

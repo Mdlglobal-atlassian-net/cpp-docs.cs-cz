@@ -15,16 +15,16 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-ms.openlocfilehash: 0015e0a7a81abbd3472a8c845a9b8c0d8caf4618
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0cfc7f192b65738984feb1933ea720fdf18fc6d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610534"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750712"
 ---
 # <a name="locales-and-code-pages"></a>Národní prostředí a kódové stránky
 
-ID národního prostředí odráží místní konvence a jazyk pro konkrétní zeměpisné oblasti. Daný jazyk může být používán ve více než jedné zemi nebo oblasti. Například portugalsky se hovoří v Brazílii stejně jako v Portugalsku. Naopak země nebo oblast může používat více než jeden úřední jazyk. Například Kanada používá dva jazyky: angličtinu a francouzštinu. Kanada má tedy dvě odlišná národní prostředí: kanadské s angličtinou a kanadské s francouzštinou. Ke kategoriím závislým na národním prostředí patří formátování dat nebo zobrazovací formát pro peněžní hodnoty.
+ID národního prostředí odráží místní konvence a jazyk pro konkrétní zeměpisné oblasti. Daný jazyk může být používán ve více než jedné zemi nebo oblasti. Například portugalsky se hovoří v Brazílii stejně jako v Portugalsku. Naopak země nebo oblast může používat více než jeden úřední jazyk. Například Kanada používá dva jazyky: Angličtinu a francouzštinu. Kanada má tedy dvě odlišná národní prostředí: Kanadské s angličtinou a Kanadské s francouzštinou. Ke kategoriím závislým na národním prostředí patří formátování dat nebo zobrazovací formát pro peněžní hodnoty.
 
 Jazyk určuje konvence formátování textu a data, zatímco země nebo oblast určuje místní konvence. Každý jazyk má jedinečný mapování reprezentována znakových stránek, který obsahuje jiné znaky než ty v abecedě (například čísla a interpunkční znaménka). Znaková stránka je znaková sada a má vztah k jazyku. V důsledku toho [národní prostředí](../c-runtime-library/locale.md) je jedinečná kombinace jazyka, země/oblast a znakovou stránku. Stránka nastavení národního prostředí a kód může změnit za běhu pomocí volání [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) funkce.
 
@@ -42,7 +42,7 @@ Podobně, když je vícebajtová znaková stránka změní, chování vícebajto
 
 Funkci run-time C `setlocale` nastaví, změní nebo dotazuje některých nebo všech informací o národním prostředí aktuálního programu. [_Wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) rutina je verze širokého znaku `setlocale`; argumenty a vrácené hodnoty `_wsetlocale` jsou širokoznaké řetězce.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Unicode a MBCS](../text/unicode-and-mbcs.md)<br/>
 [Výhody přenositelnosti znakové sady](../text/benefits-of-character-set-portability.md)

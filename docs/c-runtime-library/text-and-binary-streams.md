@@ -5,12 +5,12 @@ helpviewer_keywords:
 - binary streams
 - text streams
 ms.assetid: 57035e4a-955d-4e04-a560-fcf67ce68b4e
-ms.openlocfilehash: a47c0b79b10f685c1f43ae4bfbfc6e1b9ea2b508
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3754a62fa02bc532eb71eba6b0a8837791b179ea
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664903"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747706"
 ---
 # <a name="text-and-binary-streams"></a>Textové a binární proudy
 
@@ -36,6 +36,6 @@ Umístění v rámci binárnímu datovému proudu je proto dobře definované, s
 
 Datový proud bajtů zpracovává soubor jako sekvence bajtů. V rámci programu datového proudu vypadá jako stejnou sekvenci bajtů, s výjimkou případné změny, které je popsáno výše.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Soubory a proudy](../c-runtime-library/files-and-streams.md)

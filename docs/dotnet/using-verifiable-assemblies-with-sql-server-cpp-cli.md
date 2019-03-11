@@ -4,12 +4,12 @@ ms.date: 10/17/2018
 helpviewer_keywords:
 - verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
-ms.openlocfilehash: a977aa81a598e1698dfbc1c5679b85378b7ba6fc
-ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
+ms.openlocfilehash: 27dec67cc0932a784cdd041ba346bb8c635b280d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389926"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747693"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Použití ověřitelných sestavení se serverem SQL Server (C++/CLI)
 
@@ -19,9 +19,9 @@ Když klient provede rozšířené uložené procedury, vyhledávání systému 
 
 SQL Server poskytuje rozšíření příkazů jazyka Transact-SQL (T-SQL) k tomu, abyste k instalaci ověřitelných sestavení do systému SQL Server. Sada oprávnění systému SQL Server určuje kontext zabezpečení, s následující úrovní zabezpečení:
 
-- Neomezené režimu: spuštění kódu na vaše vlastní nebezpečí; kód nemusí být prokazatelně typově bezpečný.
+- Neomezené režim: Spuštění kódu na vaše vlastní nebezpečí; kód nemusí být prokazatelně typově bezpečný.
 
-- Nouzový režim: spuštění prokazatelně typově bezpečné kódu; Zkompilovaná/CLR: safe.
+- Nouzový režim: Spuštění prokazatelně typově bezpečné kódu; Zkompilovaná/CLR: safe.
 
 > [!IMPORTANT]
 > Zastaralé Visual Studio 2015 a Visual Studio 2017 se nepodporuje **/CLR: pure** a **/CLR: safe** Vytvoření ověřitelných projektů. Pokud budete potřebovat ověřitelný kód, doporučujeme že překlad kódu jazyka C#.
@@ -76,6 +76,6 @@ Skripty SQL lze spustit interaktivně v analyzátoru dotazů SQL nebo na příka
 sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy a struktury](../cpp/classes-and-structs-cpp.md)

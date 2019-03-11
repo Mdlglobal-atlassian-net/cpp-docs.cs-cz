@@ -1,17 +1,17 @@
 ---
-title: 'Postupy: Definice a používání výčtů v jazyce C++/CLI'
+title: 'Postupy: Definice a používání výčtů v jazyce C + +/ CLI'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-ms.openlocfilehash: 6dc70da0e3888ffee11a6378da5ea82efe58112b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0252c4b64690f6a2fb0fd97b97841fe45fcce244
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539656"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751450"
 ---
-# <a name="how-to-define-and-consume-enums-in-ccli"></a>Postupy: Definice a používání výčtů v jazyce C++/CLI
+# <a name="how-to-define-and-consume-enums-in-ccli"></a>Postupy: Definice a používání výčtů v jazyce C + +/ CLI
 
 Toto téma popisuje výčtů v jazyce C + +/ CLI.
 
@@ -135,6 +135,6 @@ int main() {
 True
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třída výčtu](../windows/enum-class-cpp-component-extensions.md)
