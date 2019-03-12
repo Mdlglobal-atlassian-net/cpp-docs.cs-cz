@@ -267,7 +267,7 @@
 #### [Zápis obslužné rutiny ukončení](writing-a-termination-handler.md)
 ##### [try-finally – příkaz](try-finally-statement.md)
 ##### [Vymazání prostředků](cleaning-up-resources.md)
-##### [Načasování zpracování výjimky: shrnutí](timing-of-exception-handling-a-summary.md)
+##### [Načasování zpracování výjimky: souhrn](timing-of-exception-handling-a-summary.md)
 ##### [Omezení obslužných rutin ukončení](restrictions-on-termination-handlers.md)
 ### [Převod výjimek mezi vlákny](transporting-exceptions-between-threads.md)
 ## [Kontrolní výraz a uživatelem zadané zprávy](assertion-and-user-supplied-messages-cpp.md)
@@ -416,4 +416,3 @@
 ## [Rozšíření Microsoft](microsoft-extensions.md)
 ## [Nestandardní chování](nonstandard-behavior.md)
 ### [Omezení kompilátoru](compiler-limits.md)
-
