@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
-ms.openlocfilehash: bc9aa57ffd68630d0a4209f8f8611882f8f36fc3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 75b58b7ce2b5c96e853c99f0827ee4de605a6f3d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524167"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748473"
 ---
 # <a name="xml-file-processing"></a>Zpracování souboru XML
 
@@ -27,7 +27,7 @@ Při generování ID řetězce, kompilátor dodržuje následující pravidla:
   |---------------|-----------------|
   | N | – obor názvů<br /><br /> Dokumentační komentáře nelze přidat do oboru názvů, je možné cref odkazy na obor názvů. |
   | T | Typ: třída, rozhraní, struktury, výčtu, delegát |
-  | D | – definice typedef |
+  | D |  – definice typedef |
   | F | pole |
   | P | vlastnosti (včetně indexery nebo jiných indexované vlastnosti) |
   | M | (včetně speciálních metod, jako konstruktory, operátory a tak dále) – metoda |
@@ -66,7 +66,7 @@ Při generování ID řetězce, kompilátor dodržuje následující pravidla:
 
   - Návratový typ
 
-  - TYP ELEMENT_TYPE_SENTINEL
+  - ELEMENT_TYPE_SENTINEL
 
 - Pro operátory převodu je návratová hodnota metody zakódován jako "~" a návratový typ jako již kódovaný.
 
@@ -178,6 +178,6 @@ namespace N {
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Dokumentace XML](../ide/xml-documentation-visual-cpp.md)
