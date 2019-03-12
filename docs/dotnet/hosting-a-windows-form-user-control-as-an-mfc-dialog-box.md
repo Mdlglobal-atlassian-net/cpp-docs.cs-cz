@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms [C++], hosting as MFC Dialog
 - hosting Windows Forms control [C++]
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
-ms.openlocfilehash: f6b7b7b3d1cb5ed9f3cd2b3655b45aaac8d8d195
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 4c4ee8c8b4570b598ba20b3bd5e1cf4c706ee885
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524921"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740776"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Hostitelské poskytování uživatelského ovládacího prvku modelu Windows Form jako dialogového okna knihovny MFC
 
@@ -35,7 +35,7 @@ Ukázková aplikace, která ukazuje použití s knihovnou MFC modelu Windows For
 
    V **Průzkumníka řešení**, klikněte pravým tlačítkem myši **MFC03** uzel projektu a zvolte **vlastnosti**. **Stránky vlastností** zobrazí se dialogové okno.
 
-   V **stránky vlastností** v dialogu **vlastnosti konfigurace** ovládacího prvku stromu, vyberte **Obecné**, pak v **výchozínastaveníprojektu**nastavte **Common Language Runtime support** k **Common Language Runtime Support (/ clr)**. Klikněte na tlačítko **OK**.
+   V **stránky vlastností** v dialogu **vlastnosti konfigurace** ovládacího prvku stromu, vyberte **Obecné**, pak v **výchozínastaveníprojektu**nastavte **Common Language Runtime support** k **Common Language Runtime Support (/ clr)**. Klikněte na **OK**.
 
 1. Přidejte odkaz na ovládací prvek .NET.
 
@@ -134,7 +134,7 @@ Ukázková aplikace, která ukazuje použití s knihovnou MFC modelu Windows For
 
 1. Sestavte a spusťte projekt.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 <xref:System.Windows.Forms.UserControl?displayProperty=fullName>
 [Použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)
