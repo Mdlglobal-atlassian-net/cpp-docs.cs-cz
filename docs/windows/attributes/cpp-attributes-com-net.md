@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: 4a37542bd69926572e44322c406862117560affe
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f9d339860e9d2bdb8d66f6b7f8f49d3993b2d5cf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175766"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820738"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Atributy C++ COM a .NET
 
@@ -49,7 +49,7 @@ Potom můžete nastavit `CMyReceiver` metody `handler1` a `handler2` zpracován�
 
 ## <a name="basic-mechanics-of-attributes"></a>Základní mechanismy atributů
 
-Existují tři způsoby, jak vložit atributy do projektu. Nejprve můžete je ručně do zdrojového kódu. Za druhé můžete vložit pomocí mřížky vlastností objektu ve vašem projektu. Nakonec můžete vložit pomocí různých průvodců. Další informace o používání **vlastnosti** okno a různých průvodců, najdete v části [vytváření a správa projektů Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md).
+Existují tři způsoby, jak vložit atributy do projektu. Nejprve můžete je ručně do zdrojového kódu. Za druhé můžete vložit pomocí mřížky vlastností objektu ve vašem projektu. Nakonec můžete vložit pomocí různých průvodců. Další informace o používání **vlastnosti** okno a různých průvodců, najdete v části [vytváření a správa projektů Visual C++](../../build/creating-and-managing-visual-cpp-projects.md).
 
 Jako dříve, při sestavení projektu, kompilátor analyzuje každý zdrojový soubor jazyka C++, vytváření soubor objektu. Ale když kompilátor narazí atribut, je analyzovat a syntakticky ověřit. Kompilátor poté zavolá dynamicky poskytovatele atributu vložení kódu a provádět další úpravy v době kompilace. Implementace zprostředkovatele se liší v závislosti na typu atributu. Například Atlprov.dll implementují související ATL atributy.
 
@@ -70,9 +70,9 @@ Poté, co vložíte do zdrojového kódu jazyka Visual C++ atributy, můžete ko
 
 - [/ IGNOREIDL](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
 
-- [/ MIDL](../../build/reference/midl-specify-midl-command-line-options.md)
+- [/MIDL](../../build/reference/midl-specify-midl-command-line-options.md)
 
-- [/ TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)
+- [/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)
 
 Některé projekty obsahují více souborů .idl nezávislé. Slouží k vytvoření dvou nebo více souborů .tlb a svázat ho Volitelně můžete do bloku prostředků. Tento scénář není aktuálně podporován v jazyce Visual C++.
 
