@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 6bdcf97c921dc45939ab9ddf18f1d624c2fd83b8
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 78b9ae467d3504f3922c540a3e4cd100322d8f4e
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850295"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57808388"
 ---
 # <a name="application-information-and-management"></a>Informace o aplikacích a správa aplikací
 
@@ -711,7 +711,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 
 Před Windows Vista, aplikace, které získat přístup k registru obvykle používají **HKEY_CLASSES_ROOT** uzlu. Windows Vista nebo novější operační systémy, však musíte spustit aplikaci v režimu se zvýšenými oprávněními pro zápis pro HKCR.
 
-Tato metoda umožňuje vaší aplikaci ke čtení a zápis do registru bez spuštění v režimu se zvýšenými oprávněními přesměrováním přístup k registru z HKCR do HKCU. Další informace najdete v tématu [stránky vlastností Linkeru](../../ide/linker-property-pages.md).
+Tato metoda umožňuje vaší aplikaci ke čtení a zápis do registru bez spuštění v režimu se zvýšenými oprávněními přesměrováním přístup k registru z HKCR do HKCU. Další informace najdete v tématu [stránky vlastností Linkeru](../../build/reference/linker-property-pages.md).
 
 Pokud povolíte registru přesměrování, rozhraní přesměrovává přístup k z HKCR **HKEY_CURRENT_USER\Software\Classes**. Pouze rozhraní MFC a ATL jsou ovlivněny přesměrování.
 

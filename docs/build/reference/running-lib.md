@@ -26,12 +26,12 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-ms.openlocfilehash: 8fdfeb16d41f51262cbd3a3814699a7b8dbc5fe4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e95427b571cd14ad39a7ba4f368b90e806f13862
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413326"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57820361"
 ---
 # <a name="running-lib"></a>Spuštění knihovny LIB
 
@@ -66,7 +66,7 @@ Tyto možnosti platí pro všechny druhy LIB:
 
 Pokud lib.exe selže v době běhu, můžete použít **/errorreport** odesílat informace společnosti Microsoft o tyto vnitřní chyby.
 
-Další informace o **/errorreport**, naleznete v tématu [/errorreport (sestava interními chybami kompilátoru)](../../build/reference/errorreport-report-internal-compiler-errors.md).
+Další informace o **/errorreport**, naleznete v tématu [/errorreport (sestava interními chybami kompilátoru)](errorreport-report-internal-compiler-errors.md).
 
 > **/LTCG**
 
@@ -90,10 +90,10 @@ Zobrazí podrobnosti o průběhu relace, včetně názvů přidávané soubory .
 
 > **/WX**[**:NO**]
 
-Zpracovávat upozornění jako chyby. Zobrazit [/WX (zpracovávat upozornění Linkeru jako chyb)](../../build/reference/wx-treat-linker-warnings-as-errors.md) Další informace.
+Zpracovávat upozornění jako chyby. Zobrazit [/WX (zpracovávat upozornění Linkeru jako chyb)](wx-treat-linker-warnings-as-errors.md) Další informace.
 
 Další možnosti platí jenom pro konkrétní druhy LIB. Tyto možnosti jsou popsány v části popisující oba režimy.
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace ke knihovně LIB](../../build/reference/lib-reference.md)
+[Referenční dokumentace ke knihovně LIB](lib-reference.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -analyze compiler option [C++]
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
-ms.openlocfilehash: 057fabe9612f84af07649d7a4f7bbf6d83e01f6c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 63cfd2bd206a361301c75110a684e1d2c642a1f2
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426209"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57819503"
 ---
 # <a name="analyze-code-analysis"></a>/analyze (Analýza kódu)
 
@@ -32,7 +32,7 @@ Umožňuje zadat parametry pro analýzu a řízení kódu.
 
 / analyze zapne na analýzu ve výchozím režimu. Výstup analýzy se zobrazuje **výstup** okna jako další chybové zprávy. Použití **/ analyze-** k explicitnímu vypnutí analýzy.
 
-/ analyze: WX-zadání **/ analyze: WX -** znamená, že upozornění analýzy kódu, které nemají být považována za chyby při kompilaci pomocí **/WX**. Další informace najdete v tématu [/w, /W0, /W1, /W2, w3, / W4, /w1, /w2, w3, / W4, / wall, WD, / we, Wo, WV, /WX (úroveň upozornění)](../../build/reference/compiler-option-warning-level.md).
+/ analyze: WX-zadání **/ analyze: WX -** znamená, že upozornění analýzy kódu, které nemají být považována za chyby při kompilaci pomocí **/WX**. Další informace najdete v tématu [/w, /W0, /W1, /W2, w3, / W4, /w1, /w2, w3, / W4, / wall, WD, / we, Wo, WV, /WX (úroveň upozornění)](compiler-option-warning-level.md).
 
 / analyze: log `filename` podrobné výsledky analýzy jsou zapsány jako XML soubor, který je určen `filename`.
 
@@ -79,7 +79,7 @@ Další informace najdete v tématu [analýzy kódu pro C/C++ přehled](/visuals
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Rozbalte **vlastnosti konfigurace** uzlu.
 
@@ -95,5 +95,5 @@ Další informace najdete v tématu [analýzy kódu pro C/C++ přehled](/visuals
 
 ## <a name="see-also"></a>Viz také:
 
-- [Možnosti kompilátoru](../../build/reference/compiler-options.md)
-- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+- [Možnosti kompilátoru MSVC](compiler-options.md)
+- [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-ms.openlocfilehash: cbb93bdba5853ed47bc3326d47bbb3c65ad7ce41
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef1bc46b64ccbe1374fd795a9b5d56e091b47f48
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472173"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57816422"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Kompilátor upozornění (úroveň 3) C4996
 
@@ -45,7 +45,7 @@ Můžete vypnout upozornění globálně v sestaveních příkazového řádku s
 
 Chcete-li vypnout upozornění pro celý projekt v integrovaném vývojovém prostředí sady Visual Studio:
 
-- Otevřít **stránky vlastností** dialogové okno pro váš projekt. Informace o tom, jak pomocí dialogového okna stránky vlastností naleznete v tématu [stránky vlastností](../../ide/property-pages-visual-cpp.md).
+- Otevřít **stránky vlastností** dialogové okno pro váš projekt. Informace o tom, jak pomocí dialogového okna stránky vlastností naleznete v tématu [stránky vlastností](../../build/reference/property-pages-visual-cpp.md).
 - Vyberte **vlastnosti konfigurace**, **C/C++**, **Upřesnit** stránky.
 - Upravit **zakázat specifická upozornění** vlastnost přidat `4996`. Zvolte **OK** změny.
 
@@ -53,7 +53,7 @@ Chcete-li vypnout určité konkrétní třídy upozornění na zastaralost použ
 
 Chcete-li definovat makro preprocesoru v sadě Visual Studio:
 
-- Otevřít **stránky vlastností** dialogové okno pro váš projekt. Informace o tom, jak pomocí dialogového okna stránky vlastností naleznete v tématu [stránky vlastností](../../ide/property-pages-visual-cpp.md).
+- Otevřít **stránky vlastností** dialogové okno pro váš projekt. Informace o tom, jak pomocí dialogového okna stránky vlastností naleznete v tématu [stránky vlastností](../../build/reference/property-pages-visual-cpp.md).
 - Rozbalte **vlastnosti konfigurace > C/C++ > preprocesor**.
 - V **Definice preprocesoru** vlastnost, přidejte název makra. Zvolte **OK** uložte a pak znovu sestavit projekt.
 
@@ -81,7 +81,7 @@ Microsoft se nepoužívá, některé funkce CRT a standardní knihovny C++ a glo
 
 Chcete-li vyřešit tento problém, doporučujeme, abyste použili funkci nebo proměnnou *safe_version* místo. Pokud jste ověřili, že není možné přepisování vyrovnávací paměti nebo overread vyskytuje v kódu a nelze změnit kód pro přenositelnost z důvodů, můžete vypnout upozornění.
 
-Chcete-li vypnout upozornění na zastaralost pro tyto funkce v CRT, definujte  **\_CRT\_SECURE\_ne\_upozornění**. Chcete-li vypnout upozornění na zastaralé globální proměnné, definujte  **\_CRT\_SECURE\_ne\_upozornění\_GLOBALS**. Další informace o těchto zastaralé funkce a globální prvky najdete v tématu [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md) a [bezpečné knihovny: standardní knihovny C++](../../standard-library/safe-libraries-cpp-standard-library.md).
+Chcete-li vypnout upozornění na zastaralost pro tyto funkce v CRT, definujte  **\_CRT\_SECURE\_ne\_upozornění**. Chcete-li vypnout upozornění na zastaralé globální proměnné, definujte  **\_CRT\_SECURE\_ne\_upozornění\_GLOBALS**. Další informace o těchto zastaralé funkce a globální prvky najdete v tématu [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md) a [bezpečné knihovny: Standardní knihovna C++](../../standard-library/safe-libraries-cpp-standard-library.md).
 
 ### <a name="unsafe-standard-library-functions"></a>Nezabezpečený funkce standardní knihovny
 

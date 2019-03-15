@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ASSEMBLYLINKRESOURCE linker option
 - /ASSEMBLYLINKRESOURCE linker option
 ms.assetid: 8b6ad184-1b33-47a4-8513-4803cf915b64
-ms.openlocfilehash: d2970f4e6d94cfa2e6315eeff85eb71a30dc032a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: fb707a2721ed40ee3ec37d01b2bbcfcc51f05c38
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422426"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57807803"
 ---
 # <a name="assemblylinkresource-link-to-net-framework-resource"></a>/ASSEMBLYLINKRESOURCE (Vytvořit odkaz na prostředek rozhraní .NET Framework)
 
@@ -29,11 +29,11 @@ Soubor prostředků rozhraní .NET Framework, na který chcete propojit ze sesta
 
 ## <a name="remarks"></a>Poznámky
 
-/ ASSEMBLYLINKRESOURCE vytvoří odkaz na prostředek rozhraní .NET Framework do výstupního souboru; soubor prostředků není umístěn do výstupního souboru. [/ ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md) do výstupního souboru vloží soubor prostředku.
+/ ASSEMBLYLINKRESOURCE vytvoří odkaz na prostředek rozhraní .NET Framework do výstupního souboru; soubor prostředků není umístěn do výstupního souboru. [/ ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md) do výstupního souboru vloží soubor prostředku.
 
 Propojené prostředky byly veřejné sestavení při vytvořené pomocí linkeru.
 
-/ ASSEMBLYLINKRESOURCE vyžaduje, aby kompilace [/CLR](../../build/reference/clr-common-language-runtime-compilation.md); [/LN](../../build/reference/ln-create-msil-module.md) nebo [parametr/noassembly](../../build/reference/noassembly-create-a-msil-module.md) není povolen u /ASSEMBLYLINKRESOURCE.
+/ ASSEMBLYLINKRESOURCE vyžaduje, aby kompilace [/CLR](clr-common-language-runtime-compilation.md); [/LN](ln-create-msil-module.md) nebo [parametr/noassembly](noassembly-create-a-msil-module.md) není povolen u /ASSEMBLYLINKRESOURCE.
 
 Pokud *filename* je soubor prostředků rozhraní .NET Framework vytvořený, například podle [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) nebo ve vývojovém prostředí, můžete přistupovat pomocí členů z **System.Resources** oboru názvů. Další informace najdete v tématu [System.Resources.ResourceManager](/dotnet/api/system.resources.resourcemanager). U všech ostatních prostředků, použijte **GetManifestResource** \* metody v **System.Reflection.Assembly** pro přístup k prostředku v době běhu.
 
@@ -41,23 +41,23 @@ Pokud *filename* je soubor prostředků rozhraní .NET Framework vytvořený, na
 
 Další možnosti linkeru, které ovlivňují generování sestavení jsou:
 
-- [/ ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)
+- [/ ASSEMBLYDEBUG](assemblydebug-add-debuggableattribute.md)
 
-- [/ ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)
+- [/ ASSEMBLYMODULE](assemblymodule-add-a-msil-module-to-the-assembly.md)
 
-- [/ ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)
+- [/ ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md)
 
-- [/ DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)
+- [/ DELAYSIGN](delaysign-partially-sign-an-assembly.md)
 
-- [/ KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)
+- [/ KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md)
 
-- [/ KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
+- [/ KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
 
-- [/ NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)
+- [/ NOASSEMBLY](noassembly-create-a-msil-module.md)
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **Linkeru** složky.
 
@@ -71,5 +71,5 @@ Další možnosti linkeru, které ovlivňují generování sestavení jsou:
 
 ## <a name="see-also"></a>Viz také:
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)
+[Odkaz na MSVC linkeru](linking.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)

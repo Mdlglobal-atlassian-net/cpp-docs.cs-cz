@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: 3b29b2e8b00aa436d1687cdbbd5f299f4787c71b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9586244c9e2293ba6b484efb158fc3a2529c0ea
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432355"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57814485"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>Přípony komponent pro .NET a UPW
 
@@ -49,7 +49,7 @@ Následující tabulka obsahuje seznam klíčových slov v rozšíření jazyka 
 
 ## <a name="override-specifiers"></a>override – specifikátory
 
-Následující klíčová slova můžete použít k určení chování přepsat pro odvození. I když **nové** – klíčové slovo není rozšířením jazyka C++, je vzhledem k tomu je možné v další kontext zde uvedena. Několik specifikátorů platí také pro nativní programování. Další informace najdete v tématu [jak: deklarovat specifikátorů Override v nativní kompilaci (C + +/ CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
+Následující klíčová slova můžete použít k určení chování přepsat pro odvození. I když **nové** – klíčové slovo není rozšířením jazyka C++, je vzhledem k tomu je možné v další kontext zde uvedena. Několik specifikátorů platí také pro nativní programování. Další informace najdete v tématu [jak: Deklarace specifikátorů Override v nativních kompilacích (C + +/ CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
 |Klíčové slovo|Závislá na kontextu|Účel|Odkaz|
 |-------------|-----------------------|-------------|---------------|
@@ -77,7 +77,7 @@ Následující klíčová slova jsou přidané do rozšíření C++.
 |**for each, in**|Ne|Vytvoří výčet prvků kolekce.|[for each, in](../dotnet/for-each-in.md)|
 |**gcnew**|Ne|Přidělí typy v haldě uvolňování paměti. Použít místo **nové** a **odstranit**.|[REF new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
 |**Nový odkaz**|Ano|Přidělí typ Windows Runtime. Použít místo **nové** a **odstranit**.|[REF new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
-|**InitOnly.**|Ano|Označuje, že člen se dá inicializovat jenom v deklaraci nebo statický konstruktor.|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
+|**initonly**|Ano|Označuje, že člen se dá inicializovat jenom v deklaraci nebo statický konstruktor.|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
 |**literál**|Ano|Vytvoří proměnnou literálu.|[literál](../windows/literal-cpp-component-extensions.md)|
 |**nullptr**|Ne|Označuje, že popisovač nebo ukazatel neukazuje na objekt.|[nullptr](../windows/nullptr-cpp-component-extensions.md)|
 
@@ -111,7 +111,7 @@ Tato část obsahuje další programovací konstrukce a témata, která se týka
 |[__identifier (C++/CLI)](../windows/identifier-cpp-cli.md)|(Windows Runtime a CLR) Umožňuje použít klíčová slova jako identifikátory.|
 |[Seznamy argumentů s proměnnou délkou (...) (C++/CLI)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Windows Runtime a CLR) Povolí funkci provést proměnný počet argumentů.|
 |[.NET Framework – ekvivalenty nativních typů C++ (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)|Seznam typů CLR, které se používají místo celočíselné typy C++.|
-|[doména AppDomain](../cpp/appdomain.md) **__declspec** modifikátor|**__declspec** modifikátor, který určuje, že existují statické a globální proměnné na doménu aplikace.|
+|[appdomain](../cpp/appdomain.md) **__declspec** modifier|**__declspec** modifikátor, který určuje, že existují statické a globální proměnné na doménu aplikace.|
 |[Přetypování C-Style s parametrem/CLR (C + +/ CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)|Popisuje, jak se interpretují přetypování C-style.|
 |[výraz __clrcall](../cpp/clrcall.md) konvence volání|Určuje konvence volání CLR nedodržující předpisy.|
 |`__cplusplus_cli`|[Předdefinovaná makra](../preprocessor/predefined-macros.md)|
@@ -128,7 +128,7 @@ Tato část obsahuje další programovací konstrukce a témata, která se týka
 |[Předávání typů (C++/CLI)](../windows/type-forwarding-cpp-cli.md)|Přesun typu do přesouvání sestavení na jiné sestavení umožňuje, aby se klientský kód nebude muset být překompilovány.|
 |[Uživatelsky definované atributy](../windows/user-defined-attributes-cpp-component-extensions.md)|Ukazuje, uživatelsky definované atributy.|
 |[#using – direktiva](../preprocessor/hash-using-directive-cpp.md)|Importuje externí sestavení.|
-|[Dokumentace XML](../ide/xml-documentation-visual-cpp.md)|Vysvětluje dokumentace kódu XML pomocí  [ /DOC (zpracování dokumentačních komentářů) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md)|
+|[Dokumentace XML](../build/reference/xml-documentation-visual-cpp.md)|Vysvětluje dokumentace kódu XML pomocí  [ /DOC (zpracování dokumentačních komentářů) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md)|
 
 ## <a name="see-also"></a>Viz také
 

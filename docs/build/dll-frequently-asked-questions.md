@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], frequently asked questions
 - FAQs [C++], DLLs
 ms.assetid: 09dd068e-fc33-414e-82f7-289c70680256
-ms.openlocfilehash: 17acde51d3fa9a7fabf14de748fd60b126b8b8f3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 33a0c9dd1abbfb9375ce1aef53fd152a521ac97d
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418838"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57821934"
 ---
 # <a name="dll-frequently-asked-questions"></a>DLL – nejčastější dotazy
 
@@ -59,9 +59,9 @@ Upozorňujeme, že `CWinApp::Run` mechanismus se nevztahují na knihovnu DLL, ap
 
 Pokud vaše knihovna DLL je běžné knihovny MFC DLL, která je staticky propojena s knihovnou MFC, změnu na běžný knihovny MFC DLL, která je dynamicky propojena s knihovnou MFC snižuje velikost souboru.
 
-Pokud má knihovna DLL mnoho exportovaných funkcí, použijte soubor .def export funkcí (namísto použití **__declspec(dllexport)**) a použijte soubor .def [NONAME – atribut](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md) na každém exportované funkce. NONAME – atribut způsobí, že pouze pořadové číslo a ne název funkce mají být uloženy v exportní tabulce knihovny DLL, což snižuje velikost souboru.
+Pokud má knihovna DLL mnoho exportovaných funkcí, použijte soubor .def export funkcí (namísto použití **__declspec(dllexport)**) a použijte soubor .def [NONAME – atribut](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md) na každém exportované funkce. NONAME – atribut způsobí, že pouze pořadové číslo a ne název funkce mají být uloženy v exportní tabulce knihovny DLL, což snižuje velikost souboru.
 
-Knihovny DLL, které jsou implicitně propojené do aplikace jsou načteny při načtení aplikace. Pro zlepšení výkonu při načítání, zkuste rozdělit do různých knihoven DLL knihovnu DLL. Všechny funkce, které potřebuje volající aplikace ihned po načtení do jedné knihovny DLL a je volající aplikace implicitně odkaz na tuto knihovnu DLL. Další funkce, které volající aplikace nemusí okamžitě do jiné knihovně DLL a mají aplikace explicitně odkaz na tuto knihovnu DLL. Další informace najdete v tématu [určit, kterou propojovací metodu použít](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use).
+Knihovny DLL, které jsou implicitně propojené do aplikace jsou načteny při načtení aplikace. Pro zlepšení výkonu při načítání, zkuste rozdělit do různých knihoven DLL knihovnu DLL. Všechny funkce, které potřebuje volající aplikace ihned po načtení do jedné knihovny DLL a je volající aplikace implicitně odkaz na tuto knihovnu DLL. Další funkce, které volající aplikace nemusí okamžitě do jiné knihovně DLL a mají aplikace explicitně odkaz na tuto knihovnu DLL. Další informace najdete v tématu [propojení spustitelného souboru s knihovnou DLL](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use).
 
 ## <a name="memory_leak"></a> Existuje&#39;vypadá dobře s nevracení paměti v Běžná knihovna DLL MFC, ale můj kód. Jak zjistím nevracení paměti?
 
@@ -69,4 +69,4 @@ Jednou z možných příčin nevracení paměti je, že knihovna MFC vytvoří d
 
 ## <a name="see-also"></a>Viz také:
 
-[Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)
+[Knihovny DLL v jazyce Visual C++](dlls-in-visual-cpp.md)

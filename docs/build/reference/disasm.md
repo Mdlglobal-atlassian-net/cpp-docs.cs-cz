@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -DISASM dumpbin option
 - DISASM dumpbin option
 - /DISASM dumpbin option
-ms.openlocfilehash: 77f6f05029ec4480afb2180eab0bb57838d643a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 10e8187e896b3922438a8cf2dafa0aec4c91f904
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462943"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57822532"
 ---
 # <a name="disasm"></a>/DISASM
 
@@ -36,8 +36,8 @@ Nezahrnuje bajtů instrukcí ve výstupu zpětný překlad.
 
 **/ DISASM** by měla sloužit pouze pro nativní, ne spravované Image. Je ekvivalentní nástroj pro spravovaný kód [ILDASM](/dotnet/framework/tools/ildasm-exe-il-disassembler).
 
-Pouze [/HEADERS](../../build/reference/headers.md) – možnost nástroje DUMPBIN je k dispozici pro použití na soubory vytvořené [/GL (celková optimalizace programu)](../../build/reference/gl-whole-program-optimization.md) – možnost kompilátoru.
+Pouze [/HEADERS](headers.md) – možnost nástroje DUMPBIN je k dispozici pro použití na soubory vytvořené [/GL (celková optimalizace programu)](gl-whole-program-optimization.md) – možnost kompilátoru.
 
 ## <a name="see-also"></a>Viz také:
 
-[DUMPBIN – možnosti](../../build/reference/dumpbin-options.md)
+[DUMPBIN – možnosti](dumpbin-options.md)

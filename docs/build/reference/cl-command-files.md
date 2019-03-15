@@ -8,18 +8,18 @@ helpviewer_keywords:
 - command files
 - command files, CL compiler
 ms.assetid: ec3cea06-2af0-4fe9-a94c-119c9d31b3a9
-ms.openlocfilehash: dae3238f24fc1ac4898aee0b23c3f1899f2e25fc
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9810f7b4308eab2b47a068072039335e59e19f5f
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420073"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57816071"
 ---
 # <a name="cl-command-files"></a>Soubory příkazů CL
 
-Soubor příkazů je textový soubor, který obsahuje možnosti a názvy souborů, které by v opačném případě zadejte na [příkazového řádku](../../build/reference/compiler-command-line-syntax.md) nebo zadat pomocí [proměnné prostředí CL](../../build/reference/cl-environment-variables.md). Příkazový soubor kompilátoru CL přijímá jako argument v proměnné prostředí CL nebo na příkazovém řádku. Na rozdíl od příkazového řádku nebo proměnné prostředí CL umožňuje soubor příkazů použít několik řádků parametrů a názvů souborů.
+Soubor příkazů je textový soubor, který obsahuje možnosti a názvy souborů, které by v opačném případě zadejte na [příkazového řádku](compiler-command-line-syntax.md) nebo zadat pomocí [proměnné prostředí CL](cl-environment-variables.md). Příkazový soubor kompilátoru CL přijímá jako argument v proměnné prostředí CL nebo na příkazovém řádku. Na rozdíl od příkazového řádku nebo proměnné prostředí CL umožňuje soubor příkazů použít několik řádků parametrů a názvů souborů.
 
-Možnosti a názvy souborů v souboru příkazů se zpracovávají podle umístění v rámci proměnné prostředí CL nebo na příkazovém řádku příkaz název souboru. Ale pokud možnost/Link se zobrazí v souboru příkazů, jsou předány všech možností na rest řádku linkeru. Možnosti v dalších řádcích v souboru příkazů a možnosti příkazového řádku po vyvolání příkazu souboru jsou stále přijímány jako možnosti kompilátoru. Další informace o vlivu pořadí možnosti jejich interpretaci najdete v tématu [pořadí možností CL](../../build/reference/order-of-cl-options.md).
+Možnosti a názvy souborů v souboru příkazů se zpracovávají podle umístění v rámci proměnné prostředí CL nebo na příkazovém řádku příkaz název souboru. Ale pokud možnost/Link se zobrazí v souboru příkazů, jsou předány všech možností na rest řádku linkeru. Možnosti v dalších řádcích v souboru příkazů a možnosti příkazového řádku po vyvolání příkazu souboru jsou stále přijímány jako možnosti kompilátoru. Další informace o vlivu pořadí možnosti jejich interpretaci najdete v tématu [pořadí možností CL](order-of-cl-options.md).
 
 Soubor příkazů nesmí obsahovat příkaz CL. Jednotlivé možnosti musí začínat a končit na stejném řádku; nelze použít zpětné lomítko (**\\**) ke sloučení volbu mezi dvěma řádky.
 
@@ -47,5 +47,5 @@ Mějte na paměti, efektivně kombinovat příkazového řádku a příkazy soub
 
 ## <a name="see-also"></a>Viz také:
 
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
+[Možnosti kompilátoru MSVC](compiler-options.md)

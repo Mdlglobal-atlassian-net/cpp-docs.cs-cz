@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -ALIGN linker option
 - section alignment
 - sections
-ms.openlocfilehash: b68ec42db9c927fe8f56dad8f5670059359a1843
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8d2e6a859c68af473d49dc04b76f0a15056aa56
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665787"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57809467"
 ---
 # <a name="align-section-alignment"></a>/ALIGN (zarovnání oddílů)
 
@@ -35,13 +35,13 @@ Hodnota zarovnání v bajtech.
 
 Pokud vytváříte aplikaci, jako jsou ovladače zařízení, neměli byste potřebovat změnit zarovnání.
 
-Je možné změnit zarovnání určitého oddílu s parametrem zarovnat [/SECTION](../../build/reference/section-specify-section-attributes.md) možnost.
+Je možné změnit zarovnání určitého oddílu s parametrem zarovnat [/SECTION](section-specify-section-attributes.md) možnost.
 
 Hodnota zarovnání, který zadáte, nemůže být menší než největšímu zarovnání oddílu.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Zvolte **vlastnosti konfigurace** > **Linkeru** > **příkazového řádku** stránku vlastností.
 
@@ -53,5 +53,5 @@ Hodnota zarovnání, který zadáte, nemůže být menší než největšímu za
 
 ## <a name="see-also"></a>Viz také:
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)
+[Odkaz na MSVC linkeru](linking.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)

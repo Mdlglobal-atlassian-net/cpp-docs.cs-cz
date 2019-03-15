@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: 998ec23d2d0f16069783529aebafc8b91bb15834
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: fc7a676059af17e7a42189c7c15ca157a081e08a
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418802"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57818359"
 ---
 # <a name="link-an-executable-to-a-dll"></a>Propojení spustitelného souboru s knihovnou DLL
 
@@ -30,7 +30,7 @@ Spustitelný soubor můžete použít jakoukoli metodou propojení odkaz na stej
 
 <a name="determining-which-linking-method-to-use"></a>
 
-## <a name="determine-which-linking-method-to-use"></a>Určit, kterou propojovací metodu použít
+## <a name="link-an-executable-to-a-dll"></a>Propojení spustitelného souboru s knihovnou DLL
 
 Jestli se má použít implicitní nebo explicitní propojení je rozhodnutí o architektuře, které musíte provést pro vaši aplikaci. Existují výhody a nevýhody každé metody.
 
@@ -70,13 +70,13 @@ Tady jsou dvě nebezpečí explicitní propojení zajímat:
 
 <a name="linking-implicitly"></a>
 
-## <a name="how-to-link-implicitly-to-a-dll"></a>Jak implicitní propojení s knihovnou DLL
+## <a name="link-an-executable-to-a-dll"></a>Propojení spustitelného souboru s knihovnou DLL
 
 Pomocí implicitní propojení s knihovnou DLL, musíte získat spustitelné soubory klienta tyto soubory z knihovny DLL zprostředkovatele:
 
 - Jeden nebo více soubory hlaviček (.h souborů), které obsahují deklarace exportovaná data, funkce a/nebo třídy jazyka C++ v knihovně DLL. Třídy, funkce a data exportovaná knihovnou DLL musí všechny být označeny `__declspec(dllimport)` v hlavičkovém souboru. Další informace najdete v tématu [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
-- Knihovnu importu propojit do spustitelného souboru. Propojovací program vytvoří knihovnu importu při vytváření knihovny DLL. Další informace najdete v tématu [. Soubory knihovny LIB](../build/reference/dot-lib-files-as-linker-input.md).
+- Knihovnu importu propojit do spustitelného souboru. Propojovací program vytvoří knihovnu importu při vytváření knihovny DLL. Další informace najdete v tématu [. Soubory knihovny LIB](reference/dot-lib-files-as-linker-input.md).
 
 - Skutečný soubor knihovny DLL.
 
@@ -139,10 +139,10 @@ Na rozdíl od v tomto příkladu, ve většině případů byste měli volat `Lo
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
 
-- [Práce s knihovnami importu a soubory exportu](../build/reference/working-with-import-libraries-and-export-files.md)
+- [Práce s knihovnami importu a soubory exportu](reference/working-with-import-libraries-and-export-files.md)
 
 - [Pořadí hledání knihoven DLL](/windows/desktop/Dlls/dynamic-link-library-search-order)
 
 ## <a name="see-also"></a>Viz také:
 
-[Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)
+[Knihovny DLL v jazyce Visual C++](dlls-in-visual-cpp.md)

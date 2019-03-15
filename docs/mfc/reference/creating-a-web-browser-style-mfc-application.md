@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web browsers
 - Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
-ms.openlocfilehash: 207a6e162da6bc14e27c575ac163b160ab8e1ac1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 12df36188bd858f73ff4834236a19583023e5f93
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265589"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57809870"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Vytváření aplikací MFC ve stylu webového prohlížeče
 
@@ -71,6 +71,7 @@ void CWebView::OnInitialUpdate()
 
 [Ukázky knihovny MFC MFCIE](https://github.com/Microsoft/VCSamples)<br/>
 [MFC – průvodce aplikací](../../mfc/reference/mfc-application-wizard.md)<br/>
-[Práce s vlastnostmi projektu](../../ide/working-with-project-properties.md)<br/>
-[Stránky vlastností](../../ide/property-pages-visual-cpp.md)<br/>
-[Práce s vlastnostmi projektu](../../ide/working-with-project-properties.md)
+[Nastavení kompilátoru a vlastnosti sestavení](../../build/working-with-project-properties.md)<br/>
+[Stránky vlastností](../../build/reference/property-pages-visual-cpp.md)<br/>
+[Nastavení kompilátoru a vlastnosti sestavení](../../build/working-with-project-properties.md)
+
