@@ -13,12 +13,12 @@ helpviewer_keywords:
 - suppress frame pointer creation
 - /Oy compiler option [C++]
 ms.assetid: c451da86-5297-4c5a-92bc-561d41379853
-ms.openlocfilehash: 7eb30a758f6888aa866620e8b419c9b4124475b0
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7884f52cc22766c6b1a864fc01abcd73f92cfabb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418112"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817956"
 ---
 # <a name="oy-frame-pointer-omission"></a>/Oy (vynechání ukazatele na rámec)
 
@@ -36,13 +36,13 @@ Tento parametr urychluje volání funkcí, protože není potřeba vytvářet a�
 
 Pokud váš kód vyžaduje adresování založených na snímcích, můžete zadat **/Oy-** za parametr **/Ox** nebo použitím [optimalizovat](../../preprocessor/optimize.md) s "**y**"a **vypnout** argumenty, které mají získat maximální optimalizaci s založených na snímcích adresování. Kompilátor rozpozná většinu situací, ve kterém se požaduje adresování pomocí založených na snímcích (například při `_alloca` a `setjmp` funkce a při zpracování strukturovaných výjimek).
 
-[/Ox (povolení většina optimalizací pro rychlost)](../../build/reference/ox-full-optimization.md) a [/O1, / O2 (minimalizovat velikost, maximální rychlost)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) možnosti implikují **/Oy**. Určení **/Oy-** po **/Ox**, **/O1**, nebo **/O2** zakáže **/Oy**, ať už jde o explicitní nebo implicitní.
+[/Ox (povolení většina optimalizací pro rychlost)](ox-full-optimization.md) a [/O1, / O2 (minimalizovat velikost, maximální rychlost)](o1-o2-minimize-size-maximize-speed.md) možnosti implikují **/Oy**. Určení **/Oy-** po **/Ox**, **/O1**, nebo **/O2** zakáže **/Oy**, ať už jde o explicitní nebo implicitní.
 
-**/Oy** díky – možnost kompilátoru pomocí ladicího programu obtížnější, protože kompilátor nezobrazuje informace o ukazateli na rámce. Pokud zadáte ladicí parametr kompilátoru ([/Z7, / zi, /ZI](../../build/reference/z7-zi-zi-debug-information-format.md)), doporučujeme vám, že zadáte **/Oy-** za jakékoli jiné optimalizační parametry kompilátoru.
+**/Oy** díky – možnost kompilátoru pomocí ladicího programu obtížnější, protože kompilátor nezobrazuje informace o ukazateli na rámce. Pokud zadáte ladicí parametr kompilátoru ([/Z7, / zi, /ZI](z7-zi-zi-debug-information-format.md)), doporučujeme vám, že zadáte **/Oy-** za jakékoli jiné optimalizační parametry kompilátoru.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **optimalizace** stránku vlastností.
 
@@ -54,6 +54,6 @@ Pokud váš kód vyžaduje adresování založených na snímcích, můžete zad
 
 ## <a name="see-also"></a>Viz také:
 
-[/O – možnosti (optimalizace kódu)](../../build/reference/o-options-optimize-code.md)<br/>
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
+[/O – možnosti (optimalizace kódu)](o-options-optimize-code.md)<br/>
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>

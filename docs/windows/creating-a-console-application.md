@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32, console applications
 - console applications, Win32
 ms.assetid: aedfb6b3-ca1f-4e8e-8439-1b680810ee47
-ms.openlocfilehash: b66117f64445c47cc37c25c6713815bd7daa0950
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3644878e0562f535489a64a8c490c8c755054ff6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538837"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820764"
 ---
 # <a name="creating-a-console-application"></a>Vytvoření konzolové aplikace
 
@@ -20,7 +20,7 @@ Nejjednodušší způsob, jak vytvořit konzolovou aplikaci Win32 je použít **
 
 ### <a name="to-create-a-win32-console-application"></a>K vytvoření konzolové aplikace Win32
 
-1. Postupujte podle pokynů v tématu nápovědy [vytvoření projektu pomocí Průvodce aplikací jazyka Visual C++](../ide/creating-desktop-projects-by-using-application-wizards.md).
+1. Postupujte podle pokynů v tématu nápovědy [vytvoření projektu aplikace konzoly C++](../get-started/tutorial-console-cpp.md).
 
 2. V **nový projekt** dialogu **projekt konzoly Win32** v **šablony** podokně otevřete průvodce.
 
@@ -35,4 +35,4 @@ Nejjednodušší způsob, jak vytvořit konzolovou aplikaci Win32 je použít **
 
 [Projekty konzoly](/visualstudio/debugger/debugging-preparation-console-projects)<br/>
 [Přidání funkce pomocí průvodců kódem](../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Stránky vlastností](../ide/property-pages-visual-cpp.md)
+[Stránky vlastností](../build/reference/property-pages-visual-cpp.md)

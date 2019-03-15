@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ordinal exports [C++]
 - GetProcAddress method
 ms.assetid: 48d14ae0-47ea-4c5d-96b1-2c158f1a26af
-ms.openlocfilehash: e20c9ad913744879dcc15a9b4c177799cc59f654
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5ee985da29e38bfb262c72315a57c0b588b2e82e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421334"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810169"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 
@@ -55,18 +55,18 @@ Můžete si opatřit pouze ordinální export Pokud odkazujete na knihovnu DLL s
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
-- [Jak implicitní propojení s knihovnou DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)
+- [Propojení spustitelného souboru s knihovnou DLL](linking-an-executable-to-a-dll.md#linking-implicitly)
 
-- [Určit, kterou propojovací metodu použít](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [Propojení spustitelného souboru s knihovnou DLL](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
 
-- [LoadLibrary a AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)
+- [LoadLibrary a AfxLoadLibrary](loadlibrary-and-afxloadlibrary.md)
 
 - [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
 
-- [Export z knihovny DLL pomocí souborů DEF](../build/exporting-from-a-dll-using-def-files.md)
+- [Export z knihovny DLL pomocí souborů DEF](exporting-from-a-dll-using-def-files.md)
 
 ## <a name="see-also"></a>Viz také:
 
-[Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)
+[Knihovny DLL v jazyce Visual C++](dlls-in-visual-cpp.md)

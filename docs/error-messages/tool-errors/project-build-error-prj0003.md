@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0003
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
-ms.openlocfilehash: 9a116f41efc791ed90fbac8065bc339172c9ea9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6530045870573921cf626ceeec4c1dca10cdbfb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572380"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816175"
 ---
 # <a name="project-build-error-prj0003"></a>Chyba sestavení projektu PRJ0003
 
@@ -27,7 +27,7 @@ Mezi možné důvody této chyby patří:
 
 - Nedostatečná oprávnění. Ověřte, že máte dostatečná oprávnění.
 
-- Spustitelný soubor cesty zadané v **adresáře VC ++** neobsahují cestu pro nástroj, který se pokoušíte spustit. Informace najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md)
+- Spustitelný soubor cesty zadané v **adresáře VC ++** neobsahují cestu pro nástroj, který se pokoušíte spustit. Informace najdete v tématu [nastavení kompilátoru a vlastnosti sestavení](../../build/working-with-project-properties.md)
 
 - Pro projekty souborů pravidel, jsou chybějící příkaz pro spuštění buď **sestavení příkazového řádku** nebo **opětovné sestavení příkazového řádku**.
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - extension DLLs [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
-ms.openlocfilehash: 28954ff1c77b7dcc530392fce095ed9df5c29cbf
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: eca33b60b8fa6ba812bf5fa68520f51ceb1d164b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414561"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820439"
 ---
 # <a name="mfc-extension-dlls"></a>MFC – rozšiřující knihovny DLL
 
@@ -116,7 +116,7 @@ Pokud vaše MFC – rozšiřující knihovny DLL je potřeba udržovat doplňuj�
 
 ### <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
-- [Inicializace rozšiřující knihovny DLL MFC](../build/run-time-library-behavior.md#initializing-extension-dlls)
+- [Inicializace rozšiřující knihovny DLL MFC](run-time-library-behavior.md#initializing-extension-dlls)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
 
@@ -124,12 +124,12 @@ Pokud vaše MFC – rozšiřující knihovny DLL je potřeba udržovat doplňuj�
 
 - [DLL verze knihovny MFC](../mfc/tn033-dll-version-of-mfc.md)
 
-- [Regulární knihovny MFC DLL staticky propojené do MFC](../build/regular-dlls-statically-linked-to-mfc.md)
+- [Regulární knihovny MFC DLL staticky propojené do MFC](regular-dlls-statically-linked-to-mfc.md)
 
-- [Regulární knihovny MFC DLL staticky propojené do MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [Regulární knihovny MFC DLL staticky propojené do MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [Používání databázových, OLE a soketových rozšiřujících knihoven MFC DLL v běžných knihovnách MFC DLL](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+- [Používání databázových, OLE a soketových rozšiřujících knihoven MFC DLL v běžných knihovnách MFC DLL](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
 ## <a name="see-also"></a>Viz také:
 
-[Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)
+[Knihovny DLL v jazyce Visual C++](dlls-in-visual-cpp.md)

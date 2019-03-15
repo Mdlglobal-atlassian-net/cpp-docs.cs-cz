@@ -7,19 +7,19 @@ helpviewer_keywords:
 - MFC Application Wizard
 - executable files, creating
 ms.assetid: 227ac090-921d-4b2f-be0a-66a5f4cab0d4
-ms.openlocfilehash: 3cdaba750060290fa25007d4097b6782d6f20fbf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 808e8364764dd826ee82e445627ba21b06946ed6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258629"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822662"
 ---
 # <a name="mfc-application-wizard"></a>MFC – průvodce aplikací
 
 Průvodce aplikací knihovny MFC generuje aplikaci, která při kompilaci, implementuje základní funkce spustitelný soubor (.exe) aplikace Windows. Startovní aplikace knihovny MFC zahrnuje C++ (CPP) zdrojové soubory, soubory prostředků (.rc), soubory hlaviček (.h) a soubor projektu (.vcxproj). Kód, který je vygenerován v těchto souborech starter je založena na knihovně MFC.
 
 > [!NOTE]
->  V závislosti na možnostech, které jste vybrali Průvodce vytvoří další soubory v projektu. Pokud vyberete třeba **kontextové nápovědy** na [rozšířené funkce](../../mfc/reference/advanced-features-mfc-application-wizard.md) stránce průvodce vytvoří soubory, které jsou nezbytné pro kompilaci soubory nápovědy projektu. Další informace o souborech vytvořených průvodcem najdete v tématu [typy souborů vytvořené pro projekty Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md)a najdete v souboru Readme.txt v projektu.
+>  V závislosti na možnostech, které jste vybrali Průvodce vytvoří další soubory v projektu. Pokud vyberete třeba **kontextové nápovědy** na [rozšířené funkce](../../mfc/reference/advanced-features-mfc-application-wizard.md) stránce průvodce vytvoří soubory, které jsou nezbytné pro kompilaci soubory nápovědy projektu. Další informace o souborech vytvořených průvodcem najdete v tématu [typy souborů vytvořené pro projekty Visual C++](../../build/reference/file-types-created-for-visual-cpp-projects.md)a najdete v souboru Readme.txt v projektu.
 
 ## <a name="overview"></a>Přehled
 

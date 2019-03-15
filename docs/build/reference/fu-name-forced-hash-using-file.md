@@ -10,12 +10,12 @@ helpviewer_keywords:
 - FU compiler option [C++]
 - /FU compiler option [C++]
 ms.assetid: 698f8603-457f-435a-baff-5ac9243d6ca1
-ms.openlocfilehash: 1a035be2080d9fe407799122f804668e0fc3ce76
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c47a45208ac5b5c7e0000516ed114c008feda7ca
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413157"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807509"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (soubor s vynuceným názvem #using)
 
@@ -36,11 +36,11 @@ Určuje soubor metadat má odkazovat v této kompilaci.
 
 Pokud používáte C + +/ CLI a jsou odkazuje na metadata k použití [přátelských sestavení](../../dotnet/friend-assemblies-cpp.md) funkci nelze použít **/FU**. Metadata v kódu musí odkazovat pomocí `#using`– spolu s `[as friend]` atribut. Přátelská sestavení nejsou podporované v rozšíření součásti Visual C++ C + +/ CX.
 
-Informace o tom, jak vytvořit sestavení nebo modul pro modul common language runtime (CLR), najdete v části [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md). Informace o tom, jak vytvořit v jazyce C + +/ CX, viz [sestavování aplikací a knihoven](../../cppcx/building-apps-and-libraries-c-cx.md).
+Informace o tom, jak vytvořit sestavení nebo modul pro modul common language runtime (CLR), najdete v části [/CLR (kompilace Common Language Runtime)](clr-common-language-runtime-compilation.md). Informace o tom, jak vytvořit v jazyce C + +/ CX, viz [sestavování aplikací a knihoven](../../cppcx/building-apps-and-libraries-c-cx.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **Upřesnit** stránku vlastností.
 
@@ -52,6 +52,6 @@ Informace o tom, jak vytvořit sestavení nebo modul pro modul common language r
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti výstupního souboru (/F)](../../build/reference/output-file-f-options.md)<br/>
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Možnosti výstupního souboru (/F)](output-file-f-options.md)<br/>
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

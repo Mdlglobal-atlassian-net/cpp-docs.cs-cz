@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: ea9ff51066c09e1e4a783b622248d9774a023172
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7678b975558b245fb730bff35fb156bf21d7f895
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417579"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814112"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Postupy: Použití událostí sestavení v projektech MSBuild
 
@@ -39,7 +39,7 @@ V následující tabulce jsou uvedeny jednotlivé *použít v sestavení* elemen
 
 ## <a name="example"></a>Příklad
 
-Následující příklad je možné přidat uvnitř elementu projektu MyProject.vcxproj za soubor vytvořený v [názorný postup: Vytvoření projektu jazyka Visual C++ pomocí nástroje MSBuild](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). A *před sestavením* události vytvoří kopii main.cpp; *před propojením* události vytvoří kopii main.obj; a s *po sestavení* události vytvoří kopii tohoto myproject.exe. Je-li projekt se vytvořil pomocí konfiguraci vydané verze, jsou spuštěny událostí sestavení. Pokud projekt se vytvořil pomocí konfiguraci ladění, nebudou provedeny události sestavení.
+Následující příklad je možné přidat uvnitř elementu projektu MyProject.vcxproj za soubor vytvořený v [názorný postup: Vytvoření projektu jazyka Visual C++ pomocí nástroje MSBuild](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). A *před sestavením* události vytvoří kopii main.cpp; *před propojením* události vytvoří kopii main.obj; a s *po sestavení* události vytvoří kopii tohoto myproject.exe. Je-li projekt se vytvořil pomocí konfiguraci vydané verze, jsou spuštěny událostí sestavení. Pokud projekt se vytvořil pomocí konfiguraci ladění, nebudou provedeny události sestavení.
 
 ```
 <ItemDefinitionGroup>
@@ -72,5 +72,5 @@ Následující příklad je možné přidat uvnitř elementu projektu MyProject.
 
 ## <a name="see-also"></a>Viz také:
 
-[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)<br/>
-[Návod: Vytvoření projektu jazyka Visual C++ pomocí nástroje MSBuild](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+[MSBuild na příkazovém řádku - C++](msbuild-visual-cpp.md)<br/>
+[Návod: Vytvoření projektu jazyka Visual C++ pomocí nástroje MSBuild](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

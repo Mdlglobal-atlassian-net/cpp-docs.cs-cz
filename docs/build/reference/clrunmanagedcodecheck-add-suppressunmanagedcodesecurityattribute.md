@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 73abc426-dab0-45e2-be85-0f9a14206cc2
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 3cefe34eef1a30274ba2e9e362e2f61458f10e38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb23106648e3325755a857d0b962112e9bdcfac4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565916"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822597"
 ---
 # <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/ CLRUNMANAGEDCODECHECK (odeberte SuppressUnmanagedCodeSecurityAttribute)
 
@@ -23,7 +23,7 @@ ms.locfileid: "50565916"
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/ CLRUNMANAGEDCODECHECK**[**: NO**]
+> **/CLRUNMANAGEDCODECHECK**[**:NO**]
 
 ## <a name="remarks"></a>Poznámky
 
@@ -39,7 +39,7 @@ Zobrazit [zabezpečené kódování pokyny pro nespravovaný kód](/dotnet/frame
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Rozbalte **vlastnosti konfigurace** uzlu.
 
@@ -55,5 +55,5 @@ Zobrazit [zabezpečené kódování pokyny pro nespravovaný kód](/dotnet/frame
 
 ## <a name="see-also"></a>Viz také:
 
-- [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)
-- [Možnosti linkeru](../../build/reference/linker-options.md)
+- [Odkaz na MSVC linkeru](linking.md)
+- [Možnosti Linkeru MSVC](linker-options.md)

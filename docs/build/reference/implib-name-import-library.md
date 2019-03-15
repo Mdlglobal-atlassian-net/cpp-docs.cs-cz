@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -IMPLIB linker option
 - import libraries, overriding default name
 ms.assetid: fe8f71ab-7055-41b5-8ef8-2b97cfa4a432
-ms.openlocfilehash: 8d3793b11e7bd0430c94d89f9d40ec3627c4eb20
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: dc9a9220d55f7831a00f70ec155cc5b57a695818
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413352"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821310"
 ---
 # <a name="implib-name-import-library"></a>/IMPLIB (knihovna importu názvů)
 
@@ -32,15 +32,15 @@ Tato možnost /IMPLIB přepíše výchozí název knihovny importu, který propo
 
 - [__Declspec(dllexport)](../../cpp/dllexport-dllimport.md) – klíčové slovo ve zdrojovém kódu
 
-- [EXPORTY](../../build/reference/exports.md) – příkaz souboru .def
+- [EXPORTY](exports.md) – příkaz souboru .def
 
-- [/EXPORT](../../build/reference/export-exports-a-function.md) specifikace v příkazu LINK
+- [/EXPORT](export-exports-a-function.md) specifikace v příkazu LINK
 
-ODKAZ ignoruje /IMPLIB při knihovnu importu se vytváří. Pokud nejsou zadány žádné exporty, nevytvoří odkaz knihovnu importu. Pokud soubor exportu se používá v sestavení, odkaz předpokládá, že knihovnu importu již existuje a nelze vytvořit. Informace o importovanými knihovnami a exportovanými soubory, naleznete v tématu [LIB Reference](../../build/reference/lib-reference.md).
+ODKAZ ignoruje /IMPLIB při knihovnu importu se vytváří. Pokud nejsou zadány žádné exporty, nevytvoří odkaz knihovnu importu. Pokud soubor exportu se používá v sestavení, odkaz předpokládá, že knihovnu importu již existuje a nelze vytvořit. Informace o importovanými knihovnami a exportovanými soubory, naleznete v tématu [LIB Reference](lib-reference.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **Linkeru** složky.
 
@@ -54,5 +54,5 @@ ODKAZ ignoruje /IMPLIB při knihovnu importu se vytváří. Pokud nejsou zadány
 
 ## <a name="see-also"></a>Viz také:
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)
+[Odkaz na MSVC linkeru](linking.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)

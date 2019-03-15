@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - error handling, and notification
 ms.assetid: b621cf60-d869-451a-b05e-dc86d78addaa
-ms.openlocfilehash: 7aae4d68b272a6c12233f283d4b263648062b7c1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 29fe46e15712609ec0c4f268749aaefed103117e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418942"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812938"
 ---
 # <a name="error-handling-and-notification"></a>Zpracování chyb a oznámení
 
 Další informace o zpracování chyb a oznámení, naleznete v tématu [základní informace o funkci pomocné rutiny](understanding-the-helper-function.md).
 
-Další informace o funkce háku najdete v tématu [struktura a definice konstant](../../build/reference/structure-and-constant-definitions.md).
+Další informace o funkce háku najdete v tématu [struktura a definice konstant](structure-and-constant-definitions.md).
 
 Pokud program používá odloženě zaváděné knihovny DLL, se musí zpracovávají chyby od neošetřené výjimky způsobí selhání, ke kterým je aplikace spuštěna. Zpracování selhání se skládá ze dvou částí:
 
@@ -27,12 +27,12 @@ Pokud vše, co je nezbytné pro zpracování chyby pro přerušení postup, je n
 
 Následující témata popisují zpracování chyb a oznámení:
 
-- [Háky oznámení](../../build/reference/notification-hooks.md)
+- [Háky oznámení](notification-hooks.md)
 
-- [Selhání háků](../../build/reference/failure-hooks.md)
+- [Selhání háků](failure-hooks.md)
 
-- [Výjimky](../../build/reference/exceptions-c-cpp.md)
+- [Výjimky](exceptions-c-cpp.md)
 
 ## <a name="see-also"></a>Viz také:
 
-[Podpora linkeru pro knihovny DLL s odloženým načtením](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+[Podpora linkeru pro knihovny DLL s odloženým načtením](linker-support-for-delay-loaded-dlls.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ERRORREPORT linker option
 - -ERRORREPORT linker option
 ms.assetid: f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28
-ms.openlocfilehash: 97d36e9db342e5873fc76a156b879e03af880dbf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26cc157cb7247a3a2ea7c10b415df1160540c9ad
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447236"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818021"
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT (sestava s interními chybami linkeru)
 
@@ -42,7 +42,7 @@ Možnost **/errorreport: send** automaticky odesílá informace o chybách spole
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete projekt **stránky vlastností** dialogové okno. Další informace najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete projekt **stránky vlastností** dialogové okno. Další informace najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Otevřít **vlastnosti konfigurace** > **Linkeru** > **Upřesnit** stránku vlastností.
 
@@ -54,6 +54,6 @@ Možnost **/errorreport: send** automaticky odesílá informace o chybách spole
 
 ## <a name="see-also"></a>Viz také:
 
-[/errorReport (vytvoření sestavy s interními chybami kompilátoru)](../../build/reference/errorreport-report-internal-compiler-errors.md)<br/>
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)
+[/errorReport (vytvoření sestavy s interními chybami kompilátoru)](errorreport-report-internal-compiler-errors.md)<br/>
+[Odkaz na MSVC linkeru](linking.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)

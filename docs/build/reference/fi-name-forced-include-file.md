@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /FI compiler option [C++]
 - preprocess header file compiler option [C++]
 ms.assetid: 07e79577-8152-4df9-a64c-aae08c603397
-ms.openlocfilehash: b91ca1ba6cc97157be0ab16fc18e065dc501d5fd
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2e85706a0266696b83fe1a1a6cdc45ba3399fc21
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422465"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809220"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI (Zahrnutý soubor s povinným názvem)
 
@@ -35,7 +35,7 @@ Tuto možnost má stejný účinek jako zadání dvojitých uvozovek nahoře v s
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **C/C++** složky.
 
@@ -49,7 +49,7 @@ Tuto možnost má stejný účinek jako zadání dvojitých uvozovek nahoře v s
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti výstupního souboru (/F)](../../build/reference/output-file-f-options.md)<br/>
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
-[Určení názvu cesty](../../build/reference/specifying-the-pathname.md)
+[Možnosti výstupního souboru (/F)](output-file-f-options.md)<br/>
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
+[Určení názvu cesty](specifying-the-pathname.md)

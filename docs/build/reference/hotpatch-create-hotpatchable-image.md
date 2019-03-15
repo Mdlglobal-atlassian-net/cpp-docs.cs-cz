@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /hotpatch compiler option [C++]
 - hotpatching
 ms.assetid: aad539b6-c053-4c78-8682-853d98327798
-ms.openlocfilehash: aca009b108eab8a9e7e9401aa14db4ab225d475a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 8830b26b8fdfc3db2aa5fe31a52e6226fd554946
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417850"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807478"
 ---
 # <a name="hotpatch-create-hotpatchable-image"></a>/hotpatch (Vytvořit bitovou kopii s možností provádění oprav za běhu)
 
@@ -31,13 +31,13 @@ Připravuje obrázek na horké záplatování.
 
 Když **/hotpatch** se používá v kompilaci kompilátor zajišťuje, že první instrukce pro každou funkci je minimálně o dva bajty, které jsou požadovány pro technologii hot patching.
 
-K dokončení přípravy pro zezáplatovatelnění obrazu, když použijete **/hotpatch** kompilace, je nutné použít [/FUNCTIONPADMIN (vytvoření Image vyměnitelné za provozu)](../../build/reference/functionpadmin-create-hotpatchable-image.md) propojení. Když kompilujete a propojujete obrázek s pomocí jednoho vyvolání cl.exe, **/hotpatch** znamená **/functionpadmin**.
+K dokončení přípravy pro zezáplatovatelnění obrazu, když použijete **/hotpatch** kompilace, je nutné použít [/FUNCTIONPADMIN (vytvoření Image vyměnitelné za provozu)](functionpadmin-create-hotpatchable-image.md) propojení. Když kompilujete a propojujete obrázek s pomocí jednoho vyvolání cl.exe, **/hotpatch** znamená **/functionpadmin**.
 
 Protože pokyny jsou vždy dva bajty nebo více v ARM architektuře a protože x64 kompilace je vždy brána jako **/hotpatch** byl zadán, není nutné zadat **/hotpatch** při kompilaci pro tyto cíle; však musí i nadále propojíte s použitím **/functionpadmin** k vytvoření Image vyměnitelné za provozu pro ně. **/Hotpatch** kompilátoru možnost pouze ovlivňuje x86 kompilace.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **C/C++** složky.
 
@@ -51,5 +51,5 @@ Protože pokyny jsou vždy dva bajty nebo více v ARM architektuře a protože x
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

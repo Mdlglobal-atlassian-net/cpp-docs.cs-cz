@@ -40,12 +40,12 @@ helpviewer_keywords:
 - LIST library manager option
 - /CONVERT library manager option
 ms.assetid: f56a8b85-fbdc-4c09-8d8e-00f0ffe1da53
-ms.openlocfilehash: fb06fdf0298d627f289448930b490fb0660e381d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 74b8cf198d46f83de327c68ac5f883bd75e5db80
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419605"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812041"
 ---
 # <a name="managing-a-library"></a>Správa knihovny
 
@@ -64,7 +64,7 @@ Ve výchozím nastavení, LIB názvy výstupního souboru pomocí základní ná
 Tyto možnosti platí pro vytváření a úpravy knihovny:
 
 **/ LIBPATH:** *dir*<br/>
-Přepíše cestu ke knihovně prostředí. Podrobnosti najdete v tématu Popis odkazu [/Libpath](../../build/reference/libpath-additional-libpath.md) možnost.
+Přepíše cestu ke knihovně prostředí. Podrobnosti najdete v tématu Popis odkazu [/Libpath](libpath-additional-libpath.md) možnost.
 
 **/LIST**<br/>
 Zobrazí informace o výstupní knihovně na standardním výstupu. Výstup je možné přesměrovat do souboru. / List můžete zjistit obsah stávající knihovny bez její změny.
@@ -73,7 +73,7 @@ Zobrazí informace o výstupní knihovně na standardním výstupu. Výstup je m
 Při sestavování knihovny importů Určuje název knihovny DLL pro kterou má být sestaven knihovny importu.
 
 **/ NODEFAULTLIB**<br/>
-Odebere jeden nebo více výchozích knihoven ze seznamu knihoven, které prohledává při překladu externích odkazů. Zobrazit [: / NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) Další informace.
+Odebere jeden nebo více výchozích knihoven ze seznamu knihoven, které prohledává při překladu externích odkazů. Zobrazit [: / NODEFAULTLIB](nodefaultlib-ignore-libraries.md) Další informace.
 
 **/ OUT:** *název souboru*<br/>
 Přepíše výchozí název výstupního souboru. Ve výchozím nastavení je výstupní knihovně vytvoří v aktuálním adresáři se základním názvem první knihovny objektu souboru nebo na příkazovém řádku a rozšíření. lib.
@@ -82,7 +82,7 @@ Přepíše výchozí název výstupního souboru. Ve výchozím nastavení je v�
 Vynechá zadaný *objekt* z výstupní knihovně. LIB vytvoří výstupní knihovnu tak, že zkombinuje všechny objekty (ať už v souborech objektů nebo knihoven) a poté odstraní všechny objekty zadané pomocí parametru/remove.
 
 **/ SUBSYSTEM:**{**KONZOLY** &AMP;#124; **EFI_APPLICATION** &AMP;#124; **BITOVÁ KOPIE EFI_BOOT_SERVICE_DRIVER** &AMP;#124; **EFI_ROM** &AMP;#124; **EFI_RUNTIME_DRIVER** &AMP;#124; **NATIVNÍ** &AMP;#124; **POSIX** &AMP;#124; **WINDOWS** &AMP;#124; **WINDOWSCE**} [, #[. ##]]<br/>
-Říká operačnímu systému, jak spustit program vytvořil připojování ke knihovně výstup. Další informace naleznete v popisu odkaz [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) možnost.
+Říká operačnímu systému, jak spustit program vytvořil připojování ke knihovně výstup. Další informace naleznete v popisu odkaz [/Subsystem](subsystem-specify-subsystem.md) možnost.
 
 Lib – možnosti zadané v příkazovém řádku se nerozlišují malá a velká písmena.
 
@@ -101,4 +101,4 @@ Můžete provádět následující úlohy správy knihovny LIB:
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace ke knihovně LIB](../../build/reference/lib-reference.md)
+[Referenční dokumentace ke knihovně LIB](lib-reference.md)

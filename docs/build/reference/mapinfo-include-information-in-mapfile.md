@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MAPINFO linker option
 - -MAPINFO linker option
 ms.assetid: 533d2bce-f9b7-4fea-ae1c-0b4864c9d10b
-ms.openlocfilehash: 57cbe3fa10e504d29dc9f72d7a5f1b3d0d8dc18d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 491df211856a9d7ceb02b6a401270f15b9da3b96
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425559"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812366"
 ---
 # <a name="mapinfo-include-information-in-mapfile"></a>/MAPINFO (Zahrnout informace do souboru mapování)
 
@@ -26,11 +26,11 @@ ms.locfileid: "57425559"
 
 ## <a name="remarks"></a>Poznámky
 
-Parametr/MapInfo přikazuje linkeru, aby začlenil zadané informace do souboru mapování, která je vytvořena při zadání [/MAP](../../build/reference/map-generate-mapfile.md) možnost.  Parametr EXPORTS přikazuje linkeru začlenit exportované funkce.
+Parametr/MapInfo přikazuje linkeru, aby začlenil zadané informace do souboru mapování, která je vytvořena při zadání [/MAP](map-generate-mapfile.md) možnost.  Parametr EXPORTS přikazuje linkeru začlenit exportované funkce.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **Linkeru** složky.
 
@@ -44,5 +44,5 @@ Parametr/MapInfo přikazuje linkeru, aby začlenil zadané informace do souboru 
 
 ## <a name="see-also"></a>Viz také:
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)
+[Odkaz na MSVC linkeru](linking.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)

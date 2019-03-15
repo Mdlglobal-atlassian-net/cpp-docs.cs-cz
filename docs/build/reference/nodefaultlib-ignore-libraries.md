@@ -13,12 +13,12 @@ helpviewer_keywords:
 - /NODEFAULTLIB linker option
 - ignore libraries linker option
 ms.assetid: 7270b673-6711-468e-97a7-c2925ac2be6e
-ms.openlocfilehash: d2bac6f62f7b1a692e5fc40fcf6dea1e10a50927
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: cacc1ef312065da5d6e62ddba1040e87fae9d709
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424350"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807452"
 ---
 # <a name="nodefaultlib-ignore-libraries"></a>/NODEFAULTLIB (Ignorovat knihovny)
 
@@ -35,19 +35,19 @@ Knihovna, která má linkeru, aby ignorovat při překladu externích odkazů.
 
 Parametr/NODEFAULTLIB přikazuje linkeru, aby odebral jednu nebo více výchozích knihoven ze seznamu knihoven, které prohledává při překladu externích odkazů.
 
-Soubor .obj, který obsahuje odkazy na výchozích knihoven, které vytvoříte pomocí [/Zl (vynechání názvu výchozí knihovny)](../../build/reference/zl-omit-default-library-name.md).
+Soubor .obj, který obsahuje odkazy na výchozích knihoven, které vytvoříte pomocí [/Zl (vynechání názvu výchozí knihovny)](zl-omit-default-library-name.md).
 
 Ve výchozím nastavení odebere se: / NODEFAULTLIB všechny výchozí knihovny ze seznamu knihoven, které prohledává při překladu externích odkazů. Volitelný *knihovny* parametr umožňuje odebrat zadanou knihovnu nebo knihoven ze seznamu knihoven, které prohledává při překladu externích odkazů. Zadejte jednu z možností: / NODEFAULTLIB. pro každou knihovnu, kterou chcete vyloučit.
 
 Linker řeší odkazy na externí definice tak, že nejprve v knihovnách, která explicitně zadáte, pak ve výchozích knihoven zadaný pomocí možnosti /DEFAULTLIB a ve výchozích knihoven, které s názvem v souborech .obj.
 
-/ NODEFAULTLIB:*knihovny* přepíše [/DEFAULTLIB:](../../build/reference/defaultlib-specify-default-library.md)*knihovny* při stejné *knihovny* název je zadán v obou.
+/ NODEFAULTLIB:*knihovny* přepíše [/DEFAULTLIB:](defaultlib-specify-default-library.md)*knihovny* při stejné *knihovny* název je zadán v obou.
 
-Pokud používáte parametr/NODEFAULTLIB, například k vytvoření programu bez knihovny run-time jazyka C, budete muset použít také [/Entry](../../build/reference/entry-entry-point-symbol.md) k určení vstupního bodu (funkce) ve svém programu. Další informace najdete v tématu [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md).
+Pokud používáte parametr/NODEFAULTLIB, například k vytvoření programu bez knihovny run-time jazyka C, budete muset použít také [/Entry](entry-entry-point-symbol.md) k určení vstupního bodu (funkce) ve svém programu. Další informace najdete v tématu [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **Linkeru** složky.
 
@@ -61,5 +61,5 @@ Pokud používáte parametr/NODEFAULTLIB, například k vytvoření programu bez
 
 ## <a name="see-also"></a>Viz také:
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)
+[Odkaz na MSVC linkeru](linking.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COFF files, displaying information about
 - binary file dumper
 ms.assetid: 4bc06822-5330-44b4-8a3f-6180dfd41dfb
-ms.openlocfilehash: b590d852e8139aa7a12d7a7913915cd7a3bdccc6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 45f6b9c71eaea93597e90de93c704d2ea260235e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416355"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821376"
 ---
 # <a name="dumpbin-reference"></a>DUMPBIN – odkaz
 
@@ -24,12 +24,12 @@ Microsoft COFF – Vypisovač binárních souborů (DUMPBIN. Soubor EXE) zobraz�
 > [!NOTE]
 >  Tento nástroj můžete spustit pouze z příkazového řádku sady Visual Studio. Nelze provést toto spuštění z příkazového řádku systému nebo Průzkumníka souborů.
 
-Pouze [/HEADERS](../../build/reference/headers.md) – možnost nástroje DUMPBIN je k dispozici pro použití se soubory vytvořenými pomocí [/GL](../../build/reference/gl-whole-program-optimization.md) – možnost kompilátoru.
+Pouze [/HEADERS](headers.md) – možnost nástroje DUMPBIN je k dispozici pro použití se soubory vytvořenými pomocí [/GL](gl-whole-program-optimization.md) – možnost kompilátoru.
 
-- [DUMPBIN – příkazový řádek](../../build/reference/dumpbin-command-line.md)
+- [DUMPBIN – příkazový řádek](dumpbin-command-line.md)
 
-- [DUMPBIN – možnosti](../../build/reference/dumpbin-options.md)
+- [DUMPBIN – možnosti](dumpbin-options.md)
 
 ## <a name="see-also"></a>Viz také:
 
-[Nástroje sestavení C/C++](../../build/reference/c-cpp-build-tools.md)
+[Nástroje pro vytváření dalších MSVC](c-cpp-build-tools.md)

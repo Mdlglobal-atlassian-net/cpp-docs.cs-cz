@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateWindowsMetadataFile
 ms.assetid: 062b41b3-14d6-432c-a361-fdb66e918931
-ms.openlocfilehash: 5532046f4284100c60bb82c12b4d47c721fc275e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5d24d1d1aad8442f549dcb1aa4bd6414070c282c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413079"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815980"
 ---
 # <a name="winmdfile-specify-winmd-file"></a>/WINMDFILE (Určení souboru winmd)
 
-Určuje název souboru výstupního souboru Windows Runtime Metadata (.winmd), který je generován [winmd](../../build/reference/winmd-generate-windows-metadata.md) – možnost linkeru.
+Určuje název souboru výstupního souboru Windows Runtime Metadata (.winmd), který je generován [winmd](winmd-generate-windows-metadata.md) – možnost linkeru.
 
 ```
 /WINMDFILE:filename
@@ -25,7 +25,7 @@ Použijte hodnotu ve stanoveném `filename` přepsat výchozí název souboru .w
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **Linkeru** složky.
 
@@ -35,6 +35,6 @@ Použijte hodnotu ve stanoveném `filename` přepsat výchozí název souboru .w
 
 ## <a name="see-also"></a>Viz také:
 
-[/WINMD (generování metadat Windows)](../../build/reference/winmd-generate-windows-metadata.md)<br/>
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)
+[/WINMD (generování metadat Windows)](winmd-generate-windows-metadata.md)<br/>
+[Odkaz na MSVC linkeru](linking.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)

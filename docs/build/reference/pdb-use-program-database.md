@@ -11,12 +11,12 @@ helpviewer_keywords:
 - PDB files, creating
 - .pdb files, creating
 ms.assetid: d23db0ce-10cb-427a-bc60-d6b2a852723d
-ms.openlocfilehash: 6a57e4eb23d40355094f4c8274a42ccb7e1b0e20
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ddcf83cafd5f499158f3116f04e40397b7f8d0a8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420632"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821505"
 ---
 # <a name="pdb-use-program-database"></a>/PDB (Použít databázi programu)
 
@@ -31,17 +31,17 @@ Uživatelem zadaný název databáze programu (PDB), který vytvoří linker. Na
 
 ## <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení když [/DEBUG](../../build/reference/debug-generate-debug-info.md) není zadán, linker vytvoří databázi programu (PDB), který obsahuje informace o ladění. Výchozí název souboru PDB má základní název programu a příponou PDB.
+Ve výchozím nastavení když [/DEBUG](debug-generate-debug-info.md) není zadán, linker vytvoří databázi programu (PDB), který obsahuje informace o ladění. Výchozí název souboru PDB má základní název programu a příponou PDB.
 
 Pomocí/pdb:*filename* zadat název souboru PDB. Pokud není zadán/Debug, / PDB možnost je ignorována.
 
 Soubor PDB může být až 2GB.
 
-Další informace najdete v tématu [soubory .pdb jako vstup Linkeru](../../build/reference/dot-pdb-files-as-linker-input.md).
+Další informace najdete v tématu [soubory .pdb jako vstup Linkeru](dot-pdb-files-as-linker-input.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **Linkeru** složky.
 
@@ -55,5 +55,5 @@ Další informace najdete v tématu [soubory .pdb jako vstup Linkeru](../../buil
 
 ## <a name="see-also"></a>Viz také:
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)
+[Odkaz na MSVC linkeru](linking.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)

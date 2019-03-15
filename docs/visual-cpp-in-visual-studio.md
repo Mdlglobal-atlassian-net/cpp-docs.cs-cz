@@ -1,5 +1,5 @@
 ---
-title: Visual C++ v sadě Visual Studio
+title: C++ v sadě Visual Studio
 description: Visual C++ je název pro kompilátor C++ společnosti Microsoft, editor kódu a související nástroje v integrovaném vývojovém prostředí sady Visual Studio. Použití jazyka Visual C++ pro vývoj aplikací pro Windows, Linux, Android a iOS.
 ms.date: 09/26/2018
 ms.technology: cpp-ide
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 0dd7cc2aebb9ff0f95d11c839a104b94b3d37db6
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: 475f9394d9a12d05c95bc73ec451fbfe6fc4b052
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809645"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814407"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ v sadě Visual Studio
 
@@ -71,11 +71,14 @@ Informace o ukázkách kódu.
 
 ## <a name="c-development-tools"></a>Vývojové nástroje C++
 
-[Integrované vývojové prostředí a nástroje pro vývoj](ide/ide-and-tools-for-visual-cpp-development.md)<br/>
+[Přehled o vývoji v jazyce C++ v sadě Visual Studio](overview-of-cpp-development.md)<br/>
 Tom, jak pomocí integrovaného vývojového prostředí sady Visual Studio můžete vytvářet projekty, úpravy kódu, propojit s knihovnami, kompilace, ladění, vytvořit testy jednotek, provést statické analýzy, nasazení a další.
 
-[Kompilátory a Build Tools](build/building-c-cpp-programs.md)<br/>
-Možnosti kompilátoru a linkeru C++ společnosti Microsoft, chybové zprávy, příkladech příkazového řádku, configurating pro různé platformy a sestavení referenčních témat.
+[Projekty a sestavení systémy](build/projects-and-build-systems-cpp.md)<br/>
+Jak vytvořit a nakonfigurovat možnosti kompilátoru a propojovacího programu MSVC projekty aplikace Visual Studio C++, projekty CMake a dalších typů projektů.
+
+[Psaní a refaktoring kódu jazyka C++](ide/writing-and-refactoring-code-cpp.md)<br/>
+Jak používat si produktivitu funkcí v editoru C++ refaktorace, přejděte a psaní kódu.
 
 [Ladění nativního kódu](/visualstudio/debugger/debugging-native-code)<br/>
 Pomocí ladicího programu sady Visual Studio s projekty C++.

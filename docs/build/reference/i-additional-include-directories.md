@@ -14,12 +14,12 @@ helpviewer_keywords:
 - set include directories
 - include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-ms.openlocfilehash: 72f871b99602c63e3edaea719faf5de6d4451515
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6ec8b15e77fec5214013c484e617904ed29e8197
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412845"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807634"
 ---
 # <a name="i-additional-include-directories"></a>/I (Další adresáře souborů k zahrnutí)
 
@@ -38,7 +38,7 @@ Adresář, který má být přidán do seznamu adresáře hledat vkládané soub
 
 Chcete-li přidat více než jeden adresář, použijte tuto možnost více než jednou. Jsou prohledány adresáře pouze do určeného zahrnutého souboru se nenašel.
 
-Můžete použít tuto možnost ([/X (Ignore Standard Include Paths)](../../build/reference/x-ignore-standard-include-paths.md)) možnost.
+Můžete použít tuto možnost ([/X (Ignore Standard Include Paths)](x-ignore-standard-include-paths.md)) možnost.
 
 Kompilátor vyhledá adresářů v následujícím pořadí:
 
@@ -50,7 +50,7 @@ Kompilátor vyhledá adresářů v následujícím pořadí:
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **Obecné** stránku vlastností.
 
@@ -70,5 +70,5 @@ CL /I \INCLUDE /I\MY\INCLUDE MAIN.C
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

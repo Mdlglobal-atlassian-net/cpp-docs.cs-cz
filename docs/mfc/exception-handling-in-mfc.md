@@ -33,12 +33,12 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: cb11a74932e44f94f481a2fdc48b8d6ee359f9e8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: afa49a4d54397cf79a3bd0af28e4a0f0a4c7639e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260540"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818632"
 ---
 # <a name="exception-handling-in-mfc"></a>Zpracování výjimek v prostředí MFC
 
@@ -55,7 +55,7 @@ Můžete snadno převést existující kód nahrazujícím maker výjimek prost�
 Pokud již jste vytvořili aplikaci pomocí maker výjimek prostředí MFC, můžete pokračovat v používání těchto maker v existujícím kódu při použití výjimek jazyka C++ v váš nový kód. Tento článek [výjimky: Změny maker pro výjimky ve verzi 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) poskytuje pokyny pro to udělat.
 
 > [!NOTE]
->  Pokud chcete povolit ve vašem kódu zpracování výjimek jazyka C++, vyberte na stránce vytváření kódu ve složce projektu na C/C++ povolit výjimky jazyka C++ [stránky vlastností](../ide/property-pages-visual-cpp.md) dialogového okna, nebo použijte [/EHsc](../build/reference/eh-exception-handling-model.md) – možnost kompilátoru.
+>  Pokud chcete povolit ve vašem kódu zpracování výjimek jazyka C++, vyberte na stránce vytváření kódu ve složce projektu na C/C++ povolit výjimky jazyka C++ [stránky vlastností](../build/reference/property-pages-visual-cpp.md) dialogového okna, nebo použijte [/EHsc](../build/reference/eh-exception-handling-model.md) – možnost kompilátoru.
 
 Tento článek obsahuje následující témata:
 

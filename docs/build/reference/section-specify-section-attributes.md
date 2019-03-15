@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SECTION linker option
 - section attributes
 - /SECTION linker option
-ms.openlocfilehash: d86dca297940da4978fe42270f444acc5f11fd82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fb73043c9c185adee0859bb81098eab022430c2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543694"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816552"
 ---
 # <a name="section-specify-section-attributes"></a>/SECTION (Určit atributy oddílu)
 
@@ -31,7 +31,7 @@ Nepoužívejte následující názvy, protože jsou v konfliktu s názvy standar
 
 - .arch
 
-- .BSS
+- .bss
 
 - .data
 
@@ -49,7 +49,7 @@ Nepoužívejte následující názvy, protože jsou v konfliktu s názvy standar
 
 - .sbss
 
-- .sdata.
+- .sdata
 
 - .srdata
 
@@ -71,15 +71,15 @@ Chcete-li negate – atribut, před jeho znak s vykřičníkem (!). Význam atri
 |K|Možné ukládat do mezipaměti|Označí oddílu jako není možné ukládat do mezipaměti|
 |P|Stránkované|Označí oddíl jako nejsou stránkované|
 
-K a P neobvyklá v tom, že část příznaky, které odpovídají na ně se používají v tom smyslu, záporná. Pokud zadáte jednu položku na části .text pomocí **/SECTION:.text, K** možnost, není žádný rozdíl v příznacích části při spuštění [DUMPBIN](../../build/reference/dumpbin-options.md) s [/HEADERS](../../build/reference/headers.md)možnost; v části již implicitně ukládá do mezipaměti. Chcete-li odebrat výchozí nastavení, zadejte **/SECTION:.text,! K** místo. DUMPBIN – zobrazí vlastnosti oddílu, včetně "Není v mezipaměti."
+K a P neobvyklá v tom, že část příznaky, které odpovídají na ně se používají v tom smyslu, záporná. Pokud zadáte jednu položku na části .text pomocí **/SECTION:.text, K** možnost, není žádný rozdíl v příznacích části při spuštění [DUMPBIN](dumpbin-options.md) s [/HEADERS](headers.md)možnost; v části již implicitně ukládá do mezipaměti. Chcete-li odebrat výchozí nastavení, zadejte **/SECTION:.text,! K** místo. DUMPBIN – zobrazí vlastnosti oddílu, včetně "Není v mezipaměti."
 
 Oddíl v souboru PE, která nemá E, R nebo W, nastavte je pravděpodobně neplatná.
 
-**ZAROVNAT =**_číslo_ argument umožňuje zadat hodnotu zarovnání pro konkrétní části. _Číslo_ argument je vyjádřen v bajtech a musí být mocninou čísla 2. Zobrazit [/ALIGN](../../build/reference/align-section-alignment.md) Další informace.
+**ZAROVNAT =**_číslo_ argument umožňuje zadat hodnotu zarovnání pro konkrétní části. _Číslo_ argument je vyjádřen v bajtech a musí být mocninou čísla 2. Zobrazit [/ALIGN](align-section-alignment.md) Další informace.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Zvolte **vlastnosti konfigurace** > **Linkeru** > **příkazového řádku** stránku vlastností.
 
@@ -91,5 +91,5 @@ Oddíl v souboru PE, která nemá E, R nebo W, nastavte je pravděpodobně nepla
 
 ## <a name="see-also"></a>Viz také:
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)
+[Odkaz na MSVC linkeru](linking.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)

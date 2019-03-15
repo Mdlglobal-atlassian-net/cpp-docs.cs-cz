@@ -16,12 +16,12 @@ helpviewer_keywords:
 - debugging [C++], linker option
 - program databases [C++]
 ms.assetid: 1af389ae-3f8b-4d76-a087-1cdf861e9103
-ms.openlocfilehash: bf87023e3417a922232af60d89a21c17ad6864cc
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ca7ef5d1935ddea0441f49e387e35184c6fd1fc6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424727"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810195"
 ---
 # <a name="debug-generate-debug-info"></a>/DEBUG (Generovat ladicí informace)
 
@@ -35,7 +35,7 @@ ms.locfileid: "57424727"
 
 Linker vloží informace o ladění do souboru databáze (PDB) programu. Během následujících sestaveních programu aktualizuje soubor PDB.
 
-Spustitelný soubor (soubor .exe nebo knihovny DLL) vytvořené pro ladění obsahuje název a cesta odpovídající souboru PDB. Ladicí program načte vložený název a použije soubor PDB při ladění programu. Propojovací program používá základní název programu a příponou PDB pro název databáze programu a vloží cestu, kde byl vytvořen. Chcete-li přepsat toto výchozí nastavení, nastavte [/PDB](../../build/reference/pdb-use-program-database.md) a zadejte jiný název souboru.
+Spustitelný soubor (soubor .exe nebo knihovny DLL) vytvořené pro ladění obsahuje název a cesta odpovídající souboru PDB. Ladicí program načte vložený název a použije soubor PDB při ladění programu. Propojovací program používá základní název programu a příponou PDB pro název databáze programu a vloží cestu, kde byl vytvořen. Chcete-li přepsat toto výchozí nastavení, nastavte [/PDB](pdb-use-program-database.md) a zadejte jiný název souboru.
 
 **/Debug: fastlink** možnost je k dispozici v sadě Visual Studio 2017 a novější. Tato možnost ponechá informace o privátních symbolů v jednotlivých kompilace produkty sloužící k sestavení spustitelného souboru. Generuje omezené, která indexuje do informací o ladění do souborů objektů a knihoven sloužící k sestavení spustitelného souboru místo vytvoření úplné kopie souboru PDB. Tuto možnost můžete propojit dvě pro čtyřikrát nejrychleji Úplné generování souborů PDB a doporučuje se při místním ladění a máte k dispozici sestavení produkty. Tato omezená PDB nelze použít pro ladění, když produkty požadované sestavení nejsou k dispozici, například když nasazená spustitelného souboru v jiném počítači. V příkazovém řádku pro vývojáře můžete použít nástroj mspdbcmf.exe Generovat úplný soubor PDB z této omezené PDB. V sadě Visual Studio použijte ke generování úplný soubor PDB vytvořit úplný soubor PDB pro projekt nebo řešení položky nabídky projekt nebo sestavení.
 
@@ -45,17 +45,17 @@ Spustitelný soubor (soubor .exe nebo knihovny DLL) vytvořené pro ladění obs
 
 Pokud zadáte **/DEBUG** bez jakýchkoli dalších možností linkeru výchozí hodnota je **/Debug: Full** příkazového řádku a soubor pravidel sestavení pro vydání verze sestavení v integrovaném vývojovém prostředí sady Visual Studio a pro ladění a vydání sestavení v sadě Visual Studio 2015 a starší verze. Od v sadě Visual Studio 2017, systém sestavení v integrovaném vývojovém prostředí standardně **/Debug: fastlink** při zadání **/DEBUG** možnost pro sestavení pro ladění. Pro zachování zpětné kompatibility jsou beze změny jiných výchozích hodnot.
 
-Kompilátoru [kompatibilní s C7](../../build/reference/z7-zi-zi-debug-information-format.md) (/ Z7) možnost způsobí, že kompilátor v souborech .obj opustit ladicí informace. Můžete také použít [databázi programu](../../build/reference/z7-zi-zi-debug-information-format.md) (/Zi) – možnost kompilátoru ukládat informace o ladění v souboru .obj souboru PDB. Propojovací program hledá PDB objektu nejprve absolutní cesta napsané v souboru .obj, a pak v adresáři, který obsahuje soubor .obj. Nelze zadat název souboru PDB nebo umístění do propojovacího programu objektu.
+Kompilátoru [kompatibilní s C7](z7-zi-zi-debug-information-format.md) (/ Z7) možnost způsobí, že kompilátor v souborech .obj opustit ladicí informace. Můžete také použít [databázi programu](z7-zi-zi-debug-information-format.md) (/Zi) – možnost kompilátoru ukládat informace o ladění v souboru .obj souboru PDB. Propojovací program hledá PDB objektu nejprve absolutní cesta napsané v souboru .obj, a pak v adresáři, který obsahuje soubor .obj. Nelze zadat název souboru PDB nebo umístění do propojovacího programu objektu.
 
-[/ INCREMENTAL](../../build/reference/incremental-link-incrementally.md) je zahrnuta, když je zadán/Debug.
+[/ INCREMENTAL](incremental-link-incrementally.md) je zahrnuta, když je zadán/Debug.
 
-/ DEBUG změní výchozí hodnoty [/OPT](../../build/reference/opt-optimizations.md) možnost z REF NOREF a ze brána NOICF, takže pokud chcete původní výchozí hodnoty, je nutné explicitně zadat OPT nebo /OPT:ICF.
+/ DEBUG změní výchozí hodnoty [/OPT](opt-optimizations.md) možnost z REF NOREF a ze brána NOICF, takže pokud chcete původní výchozí hodnoty, je nutné explicitně zadat OPT nebo /OPT:ICF.
 
 Není možné vytvořit s příponou .exe nebo .dll, který obsahuje informace o ladění. Ladit informace vždy umístěny v souboru .obj nebo .pdb.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **Linkeru** složky.
 
@@ -71,5 +71,5 @@ Není možné vytvořit s příponou .exe nebo .dll, který obsahuje informace o
 
 ## <a name="see-also"></a>Viz také:
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)
+[Odkaz na MSVC linkeru](linking.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)

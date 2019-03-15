@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /RELOCATIONS dumpbin option
 - -RELOCATIONS dumpbin option
 ms.assetid: 535eba3a-781a-4809-bf33-f67d3060b02c
-ms.openlocfilehash: 2e3e8e81de431dd7f28ed9eafa7c4e259096229f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b8671d61d1157be2d126fc71c46e76d6a4ba94b7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421399"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817984"
 ---
 # <a name="relocations"></a>/RELOCATIONS
 
@@ -25,8 +25,8 @@ ms.locfileid: "57421399"
 
 Tato možnost zobrazí všechny přemístění v objektu nebo image.
 
-Pouze [/HEADERS](../../build/reference/headers.md) – možnost nástroje DUMPBIN je k dispozici pro použití se soubory vytvořenými pomocí [/GL](../../build/reference/gl-whole-program-optimization.md) – možnost kompilátoru.
+Pouze [/HEADERS](headers.md) – možnost nástroje DUMPBIN je k dispozici pro použití se soubory vytvořenými pomocí [/GL](gl-whole-program-optimization.md) – možnost kompilátoru.
 
 ## <a name="see-also"></a>Viz také:
 
-[DUMPBIN – možnosti](../../build/reference/dumpbin-options.md)
+[DUMPBIN – možnosti](dumpbin-options.md)

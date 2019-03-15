@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-ms.openlocfilehash: 30fac6579d05eed276b60918b2417cd96044359a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 251275fd866ce7c9d697787c35c6207ef77862db
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292624"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818593"
 ---
 # <a name="creating-an-mfc-application"></a>Vytvoření aplikace MFC
 
@@ -36,7 +36,7 @@ Průvodce aplikací knihovny MFC generuje příslušné třídy a soubory pro v�
 
 ### <a name="to-create-an-mfc-application-using-the-mfc-application-wizard"></a>Vytvoření aplikace knihovny MFC pomocí Průvodce aplikací MFC
 
-1. Postupujte podle pokynů v tématu nápovědy [vytvoření projektu pomocí Průvodce aplikací jazyka Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).
+1. Postupujte podle pokynů v tématu nápovědy [vytvoření projektu aplikace konzoly C++](../../get-started/tutorial-console-cpp.md).
 
 1. V **nový projekt** dialogu **aplikace knihovny MFC** v podokně šablon a spusťte průvodce.
 
@@ -47,9 +47,10 @@ Průvodce aplikací knihovny MFC generuje příslušné třídy a soubory pro v�
 
 1. Klikněte na tlačítko **Dokončit** zavřete průvodce a otevření nového projektu ve vývojovém prostředí.
 
-Po vytvoření projektu lze zobrazit vytvořené soubory v **Průzkumníka řešení**. Další informace o souborech Průvodce vytvoří pro váš projekt, naleznete v generovaném souboru ReadMe.txt. Další informace o typech souborů naleznete v tématu [typy souborů vytvořené pro projekty Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).
+Po vytvoření projektu lze zobrazit vytvořené soubory v **Průzkumníka řešení**. Další informace o souborech Průvodce vytvoří pro váš projekt, naleznete v generovaném souboru ReadMe.txt. Další informace o typech souborů naleznete v tématu [typy souborů vytvořené pro projekty Visual C++](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>Viz také:
 
 [Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Stránky vlastností](../../ide/property-pages-visual-cpp.md)
+[Stránky vlastností](../../build/reference/property-pages-visual-cpp.md)
+

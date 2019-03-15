@@ -6,12 +6,12 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-ms.openlocfilehash: d9d3db9a3db1943581e5fd603ba85777cb49b863
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3fae232e6ca886195315002f4e65063d8a23ddc8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423310"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815419"
 ---
 # <a name="decorated-names"></a>Dekorované názvy
 
@@ -67,7 +67,7 @@ Upravené podobě název symbolu získáte po kompilaci zdrojového souboru, kte
 
 #### <a name="to-use-a-listing-to-view-decorated-names"></a>Seznam použijte k zobrazení dekorovaných názvů
 
-1. Vytvořte seznam tím, že kompilování zdrojového souboru, který obsahuje data, objektu, nebo definice funkce nebo prototypu se [výpis typu souboru](../../build/reference/fa-fa-listing-file.md) – možnost kompilátoru nastavena na sestavení se zdrojovým kódem (**/FAS**).
+1. Vytvořte seznam tím, že kompilování zdrojového souboru, který obsahuje data, objektu, nebo definice funkce nebo prototypu se [výpis typu souboru](fa-fa-listing-file.md) – možnost kompilátoru nastavena na sestavení se zdrojovým kódem (**/FAS**).
 
    Zadejte například `cl /c /FAs example.cpp` příkazového řádku pro vývojáře se vygenerovat soubor výpisu example.asm.
 
@@ -94,5 +94,5 @@ is :- "private: void __thiscall a::func1(int)"
 
 ## <a name="see-also"></a>Viz také:
 
-[Nástroje sestavení C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
+[Nástroje pro vytváření dalších MSVC](c-cpp-build-tools.md)<br/>
 [Používání příkazu extern pro specifikaci propojení](../../cpp/using-extern-to-specify-linkage.md)

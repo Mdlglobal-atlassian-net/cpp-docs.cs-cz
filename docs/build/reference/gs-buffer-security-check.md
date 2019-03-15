@@ -14,12 +14,12 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - buffers [C++], avoiding overruns
 ms.assetid: 8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e
-ms.openlocfilehash: 6681ff09b846011af1b500f88a535c208d0bc1c1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 10afa874092eb563903ba5f49c6add136afc869c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417576"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820231"
 ---
 # <a name="gs-buffer-security-check"></a>/GS (kontrola zabezpečení vyrovnávací paměti)
 
@@ -96,7 +96,7 @@ Kompilátor nevytváří kopie ohrožených parametrů v následujících situac
 
 - Funkce, které neobsahují vyrovnávací paměť GS.
 
-- Optimalizace ([možnosti /O](../../build/reference/o-options-optimize-code.md)) nejsou povoleny.
+- Optimalizace ([možnosti /O](o-options-optimize-code.md)) nejsou povoleny.
 
 - Funkce se proměnným seznamem argumentů (...).
 
@@ -116,7 +116,7 @@ I když používáte **/GS**, vždy snažte psát bezpečný kód, který nemá 
 
 1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt a potom klikněte na tlačítko **vlastnosti**.
 
-   Další informace najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+   Další informace najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. V **stránky vlastností** dialogové okno, klikněte na tlačítko **C/C++** složky.
 
@@ -157,5 +157,5 @@ int main() {
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

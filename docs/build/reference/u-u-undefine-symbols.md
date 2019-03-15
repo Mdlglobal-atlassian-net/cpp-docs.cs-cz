@@ -13,12 +13,12 @@ helpviewer_keywords:
 - /U compiler option [C++]
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
-ms.openlocfilehash: 59522b462f2393dd3fd4d8afefe9cbbe0e519203
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bfc03ebd5c900bf8bf81b4a50eed02111baf85ee
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413040"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822482"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (nedefinované symboly)
 
@@ -46,18 +46,18 @@ Ve výchozím nastavení kompilátor definuje následující symboly specifické
 
 |Symbol|Funkce|
 |------------|--------------|
-|_CHAR_UNSIGNED|Výchozí znakový typ není podepsaný. Definováno, pokud [/J](../../build/reference/j-default-char-type-is-unsigned.md) je zadána možnost.|
-|_CPPRTTI|Definováno pro kód zkompilovaný s [GR](../../build/reference/gr-enable-run-time-type-information.md) možnost.|
-|_CPPUNWIND|Definováno pro kód zkompilovaný s [/EHsc](../../build/reference/eh-exception-handling-model.md) možnost.|
-|_DLL|Definováno, pokud [/MD](../../build/reference/md-mt-ld-use-run-time-library.md) je zadána možnost.|
+|_CHAR_UNSIGNED|Výchozí znakový typ není podepsaný. Definováno, pokud [/J](j-default-char-type-is-unsigned.md) je zadána možnost.|
+|_CPPRTTI|Definováno pro kód zkompilovaný s [GR](gr-enable-run-time-type-information.md) možnost.|
+|_CPPUNWIND|Definováno pro kód zkompilovaný s [/EHsc](eh-exception-handling-model.md) možnost.|
+|_DLL|Definováno, pokud [/MD](md-mt-ld-use-run-time-library.md) je zadána možnost.|
 |_M_IX86|Ve výchozím nastavení, které jsou definované na 600 pro x86 cíle.|
 |_MSC_VER|Další informace najdete v tématu [předdefinovaná makra](../../preprocessor/predefined-macros.md).|
 |_WIN32|Definováno pro aplikace WIN32. Vždy definováno.|
-|_MT|Definováno, pokud [/MD nebo/MT](../../build/reference/md-mt-ld-use-run-time-library.md) je zadána možnost.|
+|_MT|Definováno, pokud [/MD nebo/MT](md-mt-ld-use-run-time-library.md) je zadána možnost.|
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **C/C++** složky.
 
@@ -71,9 +71,9 @@ Ve výchozím nastavení kompilátor definuje následující symboly specifické
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
-[/J (výchozí znakový typ není podepsaný)](../../build/reference/j-default-char-type-is-unsigned.md)<br/>
-[/GR (povolení informací o typu za běhu)](../../build/reference/gr-enable-run-time-type-information.md)<br/>
-[/EH (model ošetření výjimek)](../../build/reference/eh-exception-handling-model.md)<br/>
-[/MD, /MT, /LD (použití knihovny run-time)](../../build/reference/md-mt-ld-use-run-time-library.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
+[/J (výchozí znakový typ není podepsaný)](j-default-char-type-is-unsigned.md)<br/>
+[/GR (povolení informací o typu za běhu)](gr-enable-run-time-type-information.md)<br/>
+[/EH (model ošetření výjimek)](eh-exception-handling-model.md)<br/>
+[/MD, /MT, /LD (použití knihovny run-time)](md-mt-ld-use-run-time-library.md)

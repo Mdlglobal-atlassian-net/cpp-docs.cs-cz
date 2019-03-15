@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [C++/CLI], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-ms.openlocfilehash: b273ad71c3c6eaed69fc715401219200f26f87eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89c37b2fe81a414bdd02d73e3c3dfd5205a03831
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434980"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815876"
 ---
 # <a name="attribute-programming-faq"></a>Nejčastější dotazy k programování s atributy
 
@@ -122,7 +122,7 @@ Možná bude bez atributové projekt knihovny ATL, který má soubor .idl, a mů
 
 ##  <a name="vcconattributeprogrammmingfaqanchor6"></a> Použití souboru v projektu s atributy IDL
 
-Může mít soubor .idl, který chcete použít v projektu ATL s atributy. V takovém případě byste použili [importidl –](importidl.md) atribut, zkompilujte soubor .idl do souboru .h (najdete v článku [MIDL – stránky vlastností](../../ide/midl-property-pages.md) v projektu **stránky vlastností** dialogové okno), a soubor .h pak zahrňte do projektu.
+Může mít soubor .idl, který chcete použít v projektu ATL s atributy. V takovém případě byste použili [importidl –](importidl.md) atribut, zkompilujte soubor .idl do souboru .h (najdete v článku [MIDL – stránky vlastností](../../build/reference/midl-property-pages.md) v projektu **stránky vlastností** dialogové okno), a soubor .h pak zahrňte do projektu.
 
 ##  <a name="vcconattributeprogrammmingfaqanchor7"></a> Můžete upravit kód, který se vloží atributem?
 

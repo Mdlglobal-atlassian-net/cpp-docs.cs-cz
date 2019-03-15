@@ -11,12 +11,12 @@ helpviewer_keywords:
 - .pch files, use existing
 - precompiled header files, use existing
 ms.assetid: 24f1bd0e-b624-4296-a17e-d4b53e374e1f
-ms.openlocfilehash: 49cc7a67a8b25e515d352d481b6ede8d521e51e1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c0dcb045450d6e6eca31b8c76a92726e62400656
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424116"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810114"
 ---
 # <a name="yu-use-precompiled-header-file"></a>/Yu (Použít předkompilovaný hlavičkový soubor)
 
@@ -45,7 +45,7 @@ Kompilátor považuje veškerý kód, ke kterým došlo před souboru .h jako p�
 
 Na příkazovém řádku je povolen žádný prostor mezi **/Yu** a `filename`.
 
-Pokud zadáte **/Yu** možnost bez názvu souboru, zdrojový program musí obsahovat [#pragma hdrstop](../../preprocessor/hdrstop.md) – Direktiva pragma, který určuje název souboru předkompilované hlavičky souboru .pch. V tomto případě kompilátor použije předkompilované hlavičky (souboru .pch) s názvem podle [/Fp (název. Soubor pch)](../../build/reference/fp-name-dot-pch-file.md). Kompilátor přeskočí na umístění této direktivy pragma, obnoví zkompilovaný stav ze souboru předkompilované hlavičky zadaného pomocí direktivy pragma a poté kompiluje pouze kód, který následuje direktivu pragma. Pokud **#pragma hdrstop** neurčuje název souboru, hledá kompilátor soubor s názvem odvozené ze základní název zdrojového souboru s příponou .pch. Můžete také použít **/FP** můžete určit soubor .pch jiný.
+Pokud zadáte **/Yu** možnost bez názvu souboru, zdrojový program musí obsahovat [#pragma hdrstop](../../preprocessor/hdrstop.md) – Direktiva pragma, který určuje název souboru předkompilované hlavičky souboru .pch. V tomto případě kompilátor použije předkompilované hlavičky (souboru .pch) s názvem podle [/Fp (název. Soubor pch)](fp-name-dot-pch-file.md). Kompilátor přeskočí na umístění této direktivy pragma, obnoví zkompilovaný stav ze souboru předkompilované hlavičky zadaného pomocí direktivy pragma a poté kompiluje pouze kód, který následuje direktivu pragma. Pokud **#pragma hdrstop** neurčuje název souboru, hledá kompilátor soubor s názvem odvozené ze základní název zdrojového souboru s příponou .pch. Můžete také použít **/FP** můžete určit soubor .pch jiný.
 
 Pokud zadáte **/Yu** možnost bez názvu souboru a nepovedlo se určit **hdrstop** – Direktiva pragma, je vygenerována chybová zpráva a kompilace neproběhne úspěšně.
 
@@ -55,15 +55,15 @@ Protože soubory .pch obsahují informace o prostředí počítače a paměti ad
 
 Další informace o předkompilovaných hlaviček naleznete v tématu:
 
-- [/Y (předkompilované hlavičky)](../../build/reference/y-precompiled-headers.md)
+- [/Y (předkompilované hlavičky)](y-precompiled-headers.md)
 
-- [Vytváření předkompilovaných hlavičkových souborů](../../build/reference/creating-precompiled-header-files.md)
+- [Předkompilované soubory hlaviček](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Zadejte [/Yc (Vytvořit předkompilovaný hlavičkový soubor)](../../build/reference/yc-create-precompiled-header-file.md) v souboru s příponou .cpp v projektu.
+1. Zadejte [/Yc (Vytvořit předkompilovaný hlavičkový soubor)](yc-create-precompiled-header-file.md) v souboru s příponou .cpp v projektu.
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **C/C++** složky.
 
@@ -88,7 +88,7 @@ Pokud následující kód:
 
 je zkompilován s příkazovým řádkem `CL /YuMYAPP.H PROG.CPP`, kompilátor nezpracovává tři obsahují příkazy, ale používá předkompilovaný kód z MYAPP.pch, a tím ukládání čas potřebný při předběžném zpracování všechny tři soubory (a všechny soubory, které mohou zahrnovat).
 
-Můžete použít [/Fp (název. Soubor pch)](../../build/reference/fp-name-dot-pch-file.md) spolu s možností **/Yu** můžete zadat název souboru .pch, pokud je název liší od obou argument názvu souboru do **/Yc** nebo základní název zdrojového souboru, jako v následující:
+Můžete použít [/Fp (název. Soubor pch)](fp-name-dot-pch-file.md) spolu s možností **/Yu** můžete zadat název souboru .pch, pokud je název liší od obou argument názvu souboru do **/Yc** nebo základní název zdrojového souboru, jako v následující:
 
 ```
 CL /YuMYAPP.H /FpMYPCH.pch PROG.CPP
@@ -98,5 +98,5 @@ Tento příkaz určuje předkompilovaného hlavičkového souboru s názvem MYPC
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

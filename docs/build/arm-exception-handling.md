@@ -2,16 +2,16 @@
 title: Zpracování výjimek ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: f6df8afd453f7e71d1ecc2ebb188c079a3aad02a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: cbbec3f40df2765fa76399ce667ae30f4533b018
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694345"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814537"
 ---
 # <a name="arm-exception-handling"></a>Zpracování výjimek ARM
 
-Windows na ARM používá stejné strukturovaného zpracování mechanismus pro asynchronní výjimky generované hardwaru a synchronní výjimky generované softwarových výjimek. Obslužné rutiny výjimek specifické pro jazyk jsou postavené na Windows zpracování s použitím jazyka pomocné funkce strukturovaných výjimek. Tento dokument popisuje zpracování výjimek v Windows na ARM a pomocné rutiny jazyka, používané kódu, který je generován assembler Microsoft ARM a kompilátor Visual C++.
+Windows na ARM používá stejné strukturovaného zpracování mechanismus pro asynchronní výjimky generované hardwaru a synchronní výjimky generované softwarových výjimek. Obslužné rutiny výjimek specifické pro jazyk jsou postavené na Windows zpracování s použitím jazyka pomocné funkce strukturovaných výjimek. Tento dokument popisuje zpracování výjimek v Windows na ARM a pomocné rutiny jazyka, používané kódu, který je generován assembler Microsoft ARM a kompilátorem MSVC.
 
 ## <a name="arm-exception-handling"></a>Zpracování výjimek ARM
 
@@ -51,7 +51,7 @@ Mechanismus zpracování výjimek určitých předpokladů o kód, který násle
 
   - Analyzovat, jeden z několika typů jasně definovaných rámce.
 
-### <a name="pdata-records"></a>záznamy .pdata
+### <a name="pdata-records"></a>.pdata Records
 
 Záznamy .pdata formátu PE obrázku jsou uspořádaného pole pevnou délkou položek, které popisují každý manipulace s zásobníku funkce. Funkce typu list, které jsou funkce, které nevyžadují další funkce, nevyžadují .pdata záznamy při jejich nedochází zásobníku. (To znamená, se nevyžadují žádné místní úložiště a nemáte k uložení nebo obnovení registrů stálé.). Záznamy pro tyto funkce lze vynechat z části .pdata pro úsporu místa. Operace unwind z jednoho z těchto funkcí můžete stačí zkopírovat zpáteční adresu z na odkaz zaregistrovat (LR) k čítači programu (PC) na vypracovat tak, aby volající.
 
@@ -104,8 +104,8 @@ Prologů pro kanonické funkce může mít až 5 pokyny (Všimněte si, že se v
 
 |Instrukce|OpCode se předpokládá, že k dispozici pokud:|Velikost|Operační kód|Parsovat kódy unwind|
 |-----------------|-----------------------------------|----------|------------|------------------|
-|1|*H*== 1|16|`push {r0-r3}`|04|
-|2|*C*== 1 nebo *L*== 1 nebo *R*== 0 nebo PF == 1|16/32|`push {registers}`|80 BF/D0-DF/ES V:|
+|1|*H*==1|16|`push {r0-r3}`|04|
+|2|*C*== 1 nebo *L*== 1 nebo *R*== 0 nebo PF == 1|16/32|`push {registers}`|80-BF/D0-DF/EC-ED|
 |3a|*C*== 1 a (*L*== 0 a *R*== 1 a PF == 0)|16|`mov r11,sp`|C0-CF/FB|
 |3b|*C*== 1 a (*L*== 1 nebo *R*== 0 nebo PF = 1)|32|`add r11,sp,#xx`|FC|
 |4|*R*== 1 a *Reg* ! = 7|32|`vpush {d8-dE}`|E0-E7|
@@ -121,22 +121,22 @@ Pokyny, 2 a 4 jsou nastaveny podle toho, jestli je požadovaná oznámení. Tato
 
 |C|L|R|PF|Celočíselné registry vloženo|Zaregistruje VFP vloženo|
 |-------|-------|-------|--------|------------------------------|--------------------------|
-|0|0|0|0|R4 r*N*|žádná|
-|0|0|0|1|r*S*- r*N*|žádná|
-|0|0|1|0|žádná|D8 d*E*|
-|0|0|1|1|r*S*– r3|D8 d*E*|
-|0|1|0|0|R4 r*N*, LR|žádná|
-|0|1|0|1|r*S*- r*N*, LR|žádná|
-|0|1|1|0|LR|D8 d*E*|
-|0|1|1|1|r*S*– r3, LR|D8 d*E*|
-|1|0|0|0|R4 r*N*, r11|žádná|
-|1|0|0|1|r*S*- r*N*, r11|žádná|
-|1|0|1|0|R11|D8 d*E*|
-|1|0|1|1|r*S*– r3 r11|D8 d*E*|
-|1|1|0|0|R4 r*N*, r11, LR|žádná|
-|1|1|0|1|r*S*- r*N*, r11, LR|žádná|
-|1|1|1|0|R11, LR|D8 d*E*|
-|1|1|1|1|r*S*– r3 r11, LR|D8 d*E*|
+|0|0|0|0|r4-r*N*|žádná|
+|0|0|0|1|r*S*-r*N*|žádná|
+|0|0|1|0|žádná|d8-d*E*|
+|0|0|1|1|r*S*-r3|d8-d*E*|
+|0|1|0|0|r4-r*N*, LR|žádná|
+|0|1|0|1|r*S*-r*N*, LR|žádná|
+|0|1|1|0|LR|d8-d*E*|
+|0|1|1|1|r*S*-r3, LR|d8-d*E*|
+|1|0|0|0|r4-r*N*, r11|žádná|
+|1|0|0|1|r*S*-r*N*, r11|žádná|
+|1|0|1|0|r11|d8-d*E*|
+|1|0|1|1|r*S*-r3, r11|d8-d*E*|
+|1|1|0|0|r4-r*N*, r11, LR|žádná|
+|1|1|0|1|r*S*-r*N*, r11, LR|žádná|
+|1|1|1|0|r11, LR|d8-d*E*|
+|1|1|1|1|r*S*-r3, r11, LR|d8-d*E*|
 
 Epilogů slovem kanonické funkce podobné formuláře, ale v opačném pořadí a některé další možnosti. Epilogu mohou být dlouhé až 5 pokyny a jeho formuláře výhradně závisí formu prologu.
 
@@ -158,7 +158,7 @@ Pokud *H* je nastavena, pak instrukce 9a nebo 9b je k dispozici. 9a instrukcí s
 
 Pokud epilogu nebyla již byla ukončena, pak buď instrukce 10a nebo 10b je k dispozici, k označení 16bitové nebo 32bitové větev, na základě hodnoty z *Ret*.
 
-### <a name="xdata-records"></a>.xdata záznamů
+### <a name="xdata-records"></a>.xdata Records
 
 Když sbalené unwind formátu není dostatečná k popisu odvíjení funkce, je nutné vytvořit záznam proměnné délky .xdata. Adresa tento záznam je uložen v druhé slovo .pdata záznamu. Formát .xdata je sbalené proměnné délky sadu slov, která má čtyři části:
 
@@ -175,7 +175,7 @@ Když sbalené unwind formátu není dostatečná k popisu odvíjení funkce, je
    |0|28-31|*Kód slova* je 4 bitové pole, která určuje počet slov 32-bit musí obsahovat všechny kódy unwind sekce 4. Pokud se více než 15 slova jsou povinné pro více než 63 unwind kód bajtů, toto pole a *epilogu počet* pole musí obě být nastaveno na hodnotu 0 označující, že je vyžadována word rozšíření.|
    |1|0-15|*Rozšířené epilogu počet* je 16 bitů pole, která poskytuje více místa pro kódování neobvykle velký počet epilogů. Slovo rozšíření, která obsahuje toto pole je k dispozici pouze pokud *epilogu počet* a *slova kódu* obě pole v první slovo záhlaví jsou nastaveny na hodnotu 0.|
    |1|16-23|*Rozšířené slova kódu* je 8 bitů pole, která poskytuje více místa pro kódování neobvykle velký počet slov kód unwind. Slovo rozšíření, která obsahuje toto pole je k dispozici pouze pokud *epilogu počet* a *slova kódu* obě pole v první slovo záhlaví jsou nastaveny na hodnotu 0.|
-   |1|24-31|Rezervováno|
+   |1|24-31|Vyhrazeno|
 
 1. Po data výjimky (Pokud *E* bitu v hlavičce byl nastaven na hodnotu 0) je přehled informací o epilogu obory, které jsou zabaleny z nich se má u slov velká a uloženy v pořadí podle zvýšení počáteční posun. Každý obor obsahuje tato pole:
 
@@ -238,30 +238,30 @@ V následující tabulce jsou uvedeny mapování kódy unwind operační kódy. 
 
 |1 bajt|Bajtů 2|Bajtů 3|Bajtů 4|Opsize|Vysvětlení|
 |------------|------------|------------|------------|------------|-----------------|
-|00 7F||||16|`add   sp,sp,#X`<br /><br /> kde X je (kód & 0x7F) \* 4|
-|80 BF|00 FF|||32|`pop   {r0-r12, lr}`<br /><br /> kde LR záznam není vyjmut Pokud kód & 0x2000 a r r0 – 12 jsou odebrány-li odpovídající bit nastaven v 0x1FFF & kódu|
-|C0 CF||||16|`mov   sp,rX`<br /><br /> kde X je 0x0F & kódu|
-|D0 D7||||16|`pop   {r4-rX,lr}`<br /><br /> kde X je (kód & 0x03) + 4 a LR záznam není vyjmut Pokud 0x04 & kódu|
-|D8 DF||||32|`pop   {r4-rX,lr}`<br /><br /> kde X je (kód & 0x03) + 8 a LR záznam není vyjmut Pokud 0x04 & kódu|
+|00-7F||||16|`add   sp,sp,#X`<br /><br /> kde X je (kód & 0x7F) \* 4|
+|80-BF|00-FF|||32|`pop   {r0-r12, lr}`<br /><br /> kde LR záznam není vyjmut Pokud kód & 0x2000 a r r0 – 12 jsou odebrány-li odpovídající bit nastaven v 0x1FFF & kódu|
+|C0-CF||||16|`mov   sp,rX`<br /><br /> kde X je 0x0F & kódu|
+|D0-D7||||16|`pop   {r4-rX,lr}`<br /><br /> kde X je (kód & 0x03) + 4 a LR záznam není vyjmut Pokud 0x04 & kódu|
+|D8-DF||||32|`pop   {r4-rX,lr}`<br /><br /> kde X je (kód & 0x03) + 8 a LR záznam není vyjmut Pokud 0x04 & kódu|
 |E0-E7||||32|`vpop  {d8-dX}`<br /><br /> kde X je (kód & 0x07) + 8|
-|E8 EB|00 FF|||32|`addw  sp,sp,#X`<br /><br /> kde X je (kód & 0x03FF) \* 4|
-|ES ED|00 FF|||16|`pop   {r0-r7,lr}`<br /><br /> kde LR vyjmut, pokud kód & 0x0100 a r0 – r7 jsou odebrány-li odpovídající bit nastaven v 0x00FF & kódu|
-|EE|00 0F|||16|specifické pro společnost Microsoft|
+|E8-EB|00-FF|||32|`addw  sp,sp,#X`<br /><br /> kde X je (kód & 0x03FF) \* 4|
+|EC-ED|00-FF|||16|`pop   {r0-r7,lr}`<br /><br /> kde LR vyjmut, pokud kód & 0x0100 a r0 – r7 jsou odebrány-li odpovídající bit nastaven v 0x00FF & kódu|
+|EE|00-0F|||16|specifické pro společnost Microsoft|
 |EE|10-FF|||16|K dispozici|
-|EF|00 0F|||32|`ldr   lr,[sp],#X`<br /><br /> kde X je (kód & 0x000F) \* 4|
+|EF|00-0F|||32|`ldr   lr,[sp],#X`<br /><br /> kde X je (kód & 0x000F) \* 4|
 |EF|10-FF|||32|K dispozici|
-|F0 F4||||-|K dispozici|
-|F5|00 FF|||32|`vpop  {dS-dE}`<br /><br /> Pokud je S (kód & 0x00F0) >> 4 a E je 0x000F & kódu|
-|F6|00 FF|||32|`vpop  {dS-dE}`<br /><br /> Pokud je S ((Code & 0x00F0) >> 4) + 16 a E je (kód & 0x000F) + 16|
-|F7|00 FF|00 FF||16|`add   sp,sp,#X`<br /><br /> kde X je (kód & 0x00FFFF) \* 4|
-|F8|00 FF|00 FF|00 FF|16|`add   sp,sp,#X`<br /><br /> kde X je (kód & 0x00FFFFFF) \* 4|
-|F9|00 FF|00 FF||32|`add   sp,sp,#X`<br /><br /> kde X je (kód & 0x00FFFF) \* 4|
-|DM|00 FF|00 FF|00 FF|32|`add   sp,sp,#X`<br /><br /> kde X je (kód & 0x00FFFFFF) \* 4|
+|F0-F4||||-|K dispozici|
+|F5|00-FF|||32|`vpop  {dS-dE}`<br /><br /> Pokud je S (kód & 0x00F0) >> 4 a E je 0x000F & kódu|
+|F6|00-FF|||32|`vpop  {dS-dE}`<br /><br /> Pokud je S ((Code & 0x00F0) >> 4) + 16 a E je (kód & 0x000F) + 16|
+|F7|00-FF|00-FF||16|`add   sp,sp,#X`<br /><br /> kde X je (kód & 0x00FFFF) \* 4|
+|F8|00-FF|00-FF|00-FF|16|`add   sp,sp,#X`<br /><br /> kde X je (kód & 0x00FFFFFF) \* 4|
+|F9|00-FF|00-FF||32|`add   sp,sp,#X`<br /><br /> kde X je (kód & 0x00FFFF) \* 4|
+|FA|00-FF|00-FF|00-FF|32|`add   sp,sp,#X`<br /><br /> kde X je (kód & 0x00FFFFFF) \* 4|
 |FB||||16|Nop (16 bitů)|
 |FC||||32|Nop (32bitová verze)|
 |FD||||16|end + 16bitová nop v epilogu|
 |FE||||32|end + 32-bit nop v epilogu|
-|VYPNUTO||||-|end|
+|FF||||-|end|
 
 To ukazuje rozsah šestnáctkové hodnoty pro každý bajt v kód unwind *kód*, spolu s velikostí operační kód *Opsize* a odpovídající původní interpretace instrukce. U prázdných buněk označení kratší kódy unwind. Nejvýznamnější bity pokyny, které mají velké hodnoty, které pokrývají více bajtů, jsou uloženy nejprve. *Opsize* pole zobrazuje velikost implicitní operační kód související s každou operaci Thumb-2. Pozná duplicitní položky v tabulce s jiné kódování se používají k rozlišení mezi operační kód různých velikostí.
 
@@ -410,7 +410,7 @@ Pokud po jednoinstrukční epilogů jsou ignorovány, neexistují žádné zbýv
 
 V těchto příkladech je základní image na 0x00400000.
 
-### <a name="example-1-leaf-function-no-locals"></a>Příklad 1: Listu funkce žádné místní hodnoty
+### <a name="example-1-leaf-function-no-locals"></a>Příklad 1: Funkce typu list, žádné místní hodnoty
 
 ```asm
 Prologue:
@@ -576,7 +576,7 @@ Epilogues:
 
    - Unwind kód 2 = 0xFF: ukončení
 
-### <a name="example-5-function-with-dynamic-stack-and-inner-epilogue"></a>Příklad 5: Funkce s dynamické zásobníku a vnitřní epilogu
+### <a name="example-5-function-with-dynamic-stack-and-inner-epilogue"></a>Příklad 5: Funkce dynamické zásobníku a vnitřní epilogu
 
 ```asm
 Prologue:
@@ -626,7 +626,7 @@ Epilogue:
 
    - *Kód slova* = 0x01, určující kódy unwind o jedno slovo 32-bit
 
-- Word 1: Epilogu obor na posunu 0xC6 (= 0x18C/2), počáteční index kódu unwind 0x00 a s podmínkou 0x0E (vždy)
+- Word 1: Obor epilogu posunem 0xC6 (= 0x18C/2), počáteční index kódu unwind 0x00 a s podmínkou 0x0E (vždy)
 
 - Unwind kódy, počínaje slovo 2: (sdílené mezi prologu/epilogu)
 
@@ -698,7 +698,7 @@ Epilogue:
 
 - Slova 4 a novější se data vložená výjimky
 
-### <a name="example-7-funclet"></a>Příklad 7: funkce
+### <a name="example-7-funclet"></a>Příklad 7: Funkce
 
 ```asm
 Function:
@@ -739,5 +739,5 @@ Function:
 
 ## <a name="see-also"></a>Viz také:
 
-[Přehled konvencí ARM ABI](../build/overview-of-arm-abi-conventions.md)<br/>
-[Běžné problémy s migrací ARM v prostředí Visual C++](../build/common-visual-cpp-arm-migration-issues.md)
+[Přehled konvencí ARM ABI](overview-of-arm-abi-conventions.md)<br/>
+[Běžné problémy s migrací ARM v prostředí Visual C++](common-visual-cpp-arm-migration-issues.md)

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - line numbers only compiler option [C++]
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
-ms.openlocfilehash: d8aadca14f52432e3fccb168c213ae566b1baae2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1beab7cb1e8e654d25620eb59a9326f5628ce047
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421434"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816318"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (formát ladicích informací)
 
@@ -50,15 +50,15 @@ Ve výchozím nastavení Pokud není zadána žádná možnost formát informac�
 
 **/Z7** možnost vytvoří soubory objektů, které také obsahují úplné symbolické ladicí informace pro použití s ladicím programem. Tyto soubory objektů a připravené spustitelný soubor může být podstatně větší než soubory, které mají žádné ladicí informace. Symbolické ladicí informace obsahují názvy a typy proměnných a také funkce a čísla řádků. Není vytvořen žádný soubor PDB.
 
-Pro distributory ladicích verzí knihoven třetích stran je výhodné nemít soubor .pdb. Však soubory objektů pro předkompilované záhlaví jsou nezbytné během fáze propojení knihovny a pro ladění. Pokud existuje pouze typ informací (a žádný kód) do souboru .pch objektu, musíte taky použít [/Yl (Vložit referenci PCH knihovny ladění)](../../build/reference/yl-inject-pch-reference-for-debug-library.md) možnost, která je povolena ve výchozím nastavení, při sestavování knihovny.
+Pro distributory ladicích verzí knihoven třetích stran je výhodné nemít soubor .pdb. Však soubory objektů pro předkompilované záhlaví jsou nezbytné během fáze propojení knihovny a pro ladění. Pokud existuje pouze typ informací (a žádný kód) do souboru .pch objektu, musíte taky použít [/Yl (Vložit referenci PCH knihovny ladění)](yl-inject-pch-reference-for-debug-library.md) možnost, která je povolena ve výchozím nastavení, při sestavování knihovny.
 
-[/Gm (povolení minimálního opětovného sestavení)](../../build/reference/gm-enable-minimal-rebuild.md) možnost není k dispozici při **/Z7** určena.
+[/Gm (povolení minimálního opětovného sestavení)](gm-enable-minimal-rebuild.md) možnost není k dispozici při **/Z7** určena.
 
 ### <a name="zi"></a>/Zi
 
 **/Zi** možnost vytváří samostatný soubor PDB, který obsahuje všechny symbolické ladicí informace pro použití s ladicím programem. Informace o ladění není zahrnutý v objektových souborů nebo spustitelného souboru, který je mezi nimi vlastně mnohem menší.
 
-Použití **/zi** nemá vliv na optimalizaci. Ale **/zi** vyjadřuje **/debug**; viz [/Debug (Generovat ladicí informace)](../../build/reference/debug-generate-debug-info.md) Další informace.
+Použití **/zi** nemá vliv na optimalizaci. Ale **/zi** vyjadřuje **/debug**; viz [/Debug (Generovat ladicí informace)](debug-generate-debug-info.md) Další informace.
 
 Pokud zadáte obě **/zi** a **/CLR**, <xref:System.Diagnostics.DebuggableAttribute> atribut není umístěn v metadatech sestavení. Pokud chcete, zadejte ho ve zdrojovém kódu. Tento atribut může ovlivnit výkon modulu runtime aplikace. Další informace o tom, jak **Debuggable** atributy ovlivňují výkon a jak můžete upravit dopad na výkon, naleznete v tématu [usnadnění bitové kopie k ladění](/dotnet/framework/debug-trace-profile/making-an-image-easier-to-debug).
 
@@ -70,16 +70,16 @@ Pokud vytvoříte knihovnu z objektů, které byly zkompilovány pomocí **/zi**
 
 **/Zi** možnost je podobná **/zi**, vytvoří soubor .pdb ve formátu, který podporuje, ale [upravit a pokračovat](/visualstudio/debugger/edit-and-continue-visual-cpp) funkce. Pokud chcete použít ladění funkce upravit a pokračovat, musíte použít tuto možnost. Funkce upravit a pokračovat je užitečné pro produktivitu vývojářů, ale může způsobit problémy v kódu velikosti, výkon a kompilátoru shoda. Protože většina optimalizací nejsou kompatibilní s upravit a pokračovat, pomocí **/zi** zakáže všechny `#pragma optimize` příkazy ve vašem kódu. **/Zi** možnost je také kompatibilní s využitím [ &#95; &#95;řádku&#95; &#95; předdefinované makro](../../preprocessor/predefined-macros.md); kód zkompilovaný s **/zi** nelzepoužít.**&#95; &#95;Řádku&#95; &#95;** jako argumentu šablony bez typu, i když **&#95; &#95;řádku&#95; &#95;** lze použít v rozšíření makra.
 
-**/Zi** možnost vynutí i [/Gy (povolení funkce propojení na úrovni)](../../build/reference/gy-enable-function-level-linking.md) a [/FC (úplná cesta ze souboru zdrojového kódu v diagnostice)](../../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md) možnosti pro použití v kompilaci.
+**/Zi** možnost vynutí i [/Gy (povolení funkce propojení na úrovni)](gy-enable-function-level-linking.md) a [/FC (úplná cesta ze souboru zdrojového kódu v diagnostice)](fc-full-path-of-source-code-file-in-diagnostics.md) možnosti pro použití v kompilaci.
 
-**/ Zi** není kompatibilní s [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+**/ Zi** není kompatibilní s [/CLR (kompilace Common Language Runtime)](clr-common-language-runtime-compilation.md).
 
 > [!NOTE]
 > **/Zi** možnost je dostupná v kompilátorech, které cílí na procesory x86 a x64 jenom; tato možnost kompilátoru není k dispozici v kompilátorech, které cílí na procesory ARM.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Otevřít **vlastnosti konfigurace** > **C/C++** > **Obecné** stránku vlastností.
 
@@ -91,5 +91,6 @@ Pokud vytvoříte knihovnu z objektů, které byly zkompilovány pomocí **/zi**
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)
+

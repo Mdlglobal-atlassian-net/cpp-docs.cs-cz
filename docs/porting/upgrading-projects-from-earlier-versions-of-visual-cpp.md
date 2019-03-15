@@ -5,12 +5,12 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: dcbec57c75b4dc6fb72a3b35040e12cab0e7111e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8848dca10a75bec6f5ff6251a3af5be8e9a7b6e6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740874"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816370"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Upgradování projektů z dřívějších verzí aplikace Visual C++
 
@@ -33,9 +33,18 @@ Zdroje dat jsou obsaženy v samostatném databázovém projektu, takže lze sna
 
 Informace o tom, jak aktualizovat cílová verze Windows najdete v tématu [úpravy WINVER a _WIN32_WINNT](../porting/modifying-winver-and-win32-winnt.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="in-this-section"></a>V tomto oddílu
 
-[Změny systému sestavení](../build/build-system-changes.md)<br/>
+[Upgrade kódu na Universal CRT](upgrade-your-code-to-the-universal-crt.md)<br/>
+[Úpravy WINVER a _WIN32_WINNT](modifying-winver-and-win32-winnt.md)<br/>
+[Oprava závislostí u interních informací o knihovně](fix-your-dependencies-on-library-internals.md)<br/>
+[Problémy migrace s plovoucí desetinnou čárkou](floating-point-migration-issues.md)<br/>
+[Sestavení starých projektů v sadě Visual Studio pomocí nativního cílení na více verzí](use-native-multi-targeting.md)<br/>
+[Funkce Visual C++, které jsou ve verzi Preview sady Visual Studio 2019 zastaralé](features-deprecated-in-visual-studio.md)<br/>
+[Změny systému sestavení](build-system-changes.md)<br/>
+
+## <a name="see-also"></a>Viz také
+
 [Novinky v jazyce Visual C++ v sadě Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [Historie změn Visual C++ 2003–2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [Nestandardní chování](../cpp/nonstandard-behavior.md)

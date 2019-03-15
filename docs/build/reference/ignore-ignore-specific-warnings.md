@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - /IGNORE linker option
 ms.assetid: 37e77387-8838-4697-898f-d376ac641124
-ms.openlocfilehash: 4826ecae1f16cd3834cb6d47850fc686b3682614
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b374e0e73f9fc14fa32ea4f63fa71039a5cf3c7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479688"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815837"
 ---
 # <a name="ignore-ignore-specific-warnings"></a>/IGNORE (Ignorovat konkrétní varování)
 
@@ -54,7 +54,7 @@ Obecně platí představují upozornění linkeru, které nelze ignorovat chyby 
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. V **Linkeru** složky, vyberte **příkazového řádku** stránku vlastností.
 

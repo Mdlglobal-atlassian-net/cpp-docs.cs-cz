@@ -7,38 +7,38 @@ helpviewer_keywords:
 - .netmodules
 - modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
-ms.openlocfilehash: 050736e5536a1e38b73524f31491b3a01dc99193
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fcba363cff567c69ac0fbd0a541953dfe2c8e910
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443574"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818099"
 ---
 # <a name="netmodule-files-as-linker-input"></a>Soubory .netmodule jako vstup linkeru
 
 Link.exe přijímá jako vstup nyní .obj jazyka MSIL a modulů .NET. Výstupní soubor vytvořený pomocí linkeru je sestavení nebo modul .NET se bez závislostí za běhu na žádném z .obj nebo modulů .NET, které byly vstup do linkeru.
 
-modulů .NET jsou vytvořeny kompilátorem jazyka Visual C++ s [/LN (vytvoření modulu MSIL)](../../build/reference/ln-create-msil-module.md) nebo pomocí linkeru spuštěného s [parametr/noassembly (vytvoření modulu MSIL)](../../build/reference/noassembly-create-a-msil-module.md). .objs se vždy vytvářejí ve kompilace jazyka Visual C++. U dalších kompilátorů aplikace Visual Studio, použijte **/target: Module** – možnost kompilátoru.
+modulů .NET vytvářejí a kompilátorem MSVC s [/LN (vytvoření modulu MSIL)](ln-create-msil-module.md) nebo pomocí linkeru spuštěného s [parametr/noassembly (vytvoření modulu MSIL)](noassembly-create-a-msil-module.md). .objs se vždy vytvářejí ve kompilace jazyka Visual C++. U dalších kompilátorů aplikace Visual Studio, použijte **/target: Module** – možnost kompilátoru.
 
 Je nutné předat do linkeru soubor .obj z kompilace jazyka Visual C++, který vytvořili .netmodule. Předávání .netmodule se už nepodporuje, protože **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
 
-Informace o tom, jak vyvolání linkeru z příkazového řádku najdete v tématu [syntaxe příkazového řádku Linkeru](../../build/reference/linker-command-line-syntax.md), [kódu sestavení C/C++ v příkazovém řádku](../../build/building-on-the-command-line.md), a [nastavení cesty a proměnných prostředí pro Sestavení příkazového řádku](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md).
+Informace o tom, jak vyvolání linkeru z příkazového řádku najdete v tématu [syntaxe příkazového řádku Linkeru](linking.md), [použít MSVC nástrojů z příkazového řádku](../building-on-the-command-line.md), a [nastavení cesty a proměnných prostředí pro sestavení příkazového řádku](../setting-the-path-and-environment-variables-for-command-line-builds.md).
 
-Předání soubor .netmodule nebo DLL linkeru, který byl zkompilován kompilátorem jazyka Visual C++ s **/CLR** může vést k chybě propojovacího programu. Další informace najdete v tématu [výběr formátu vstupních souborů .netmodule](../../build/reference/choosing-the-format-of-netmodule-input-files.md).
+Předání soubor .netmodule nebo DLL linkeru, který byl zkompilován kompilátorem MSVC s **/CLR** může vést k chybě propojovacího programu. Další informace najdete v tématu [výběr formátu vstupních souborů .netmodule](choosing-the-format-of-netmodule-input-files.md).
 
 Linker přijímá nativní .obj soubory, jakož i soubory .obj jazyka MSIL zkompilována pomocí **/CLR**. Při předávání smíšených .objs ve stejném sestavení, je ověřitelnost výsledného výstupního souboru, ve výchozím nastavení, bude rovna nejnižší úrovni ověřitelnosti výstupních modulů.
 
 Pokud aktuálně máte aplikaci, která se skládá ze dvou nebo více sestavení a chcete, aby aplikace, které mají být obsažena v jednom sestavení, musíte znovu zkompilovat sestavení a potom propojte .objs nebo modulů .NET pro tvoří jedno sestavení.
 
-Je nutné zadat vstupní bod pomocí [/Entry (Symbol vstupního bodu)](../../build/reference/entry-entry-point-symbol.md) při vytváření spustitelné bitové kopie.
+Je nutné zadat vstupní bod pomocí [/Entry (Symbol vstupního bodu)](entry-entry-point-symbol.md) při vytváření spustitelné bitové kopie.
 
-Při propojování s soubor .obj nebo modul .NET MSIL, použijte [parametru/LTCG (generování kódu při propojování odkaz)](../../build/reference/ltcg-link-time-code-generation.md), v opačném případě pokud linker zjistí .obj jazyka MSIL nebo modul .NET, se restartuje propojení pomocí parametru/LTCG.
+Při propojování s soubor .obj nebo modul .NET MSIL, použijte [parametru/LTCG (generování kódu při propojování odkaz)](ltcg-link-time-code-generation.md), v opačném případě pokud linker zjistí .obj jazyka MSIL nebo modul .NET, se restartuje propojení pomocí parametru/LTCG.
 
 Soubory .obj nebo modul .NET MSIL může také předaných do cl.exe.
 
-Vstupní soubory .obj nebo modul .NET MSIL, nemůže mít vložené prostředky. Prostředek je vložen do výstupního souboru (modulu nebo sestavení) s [narozdíl od (vložení spravovaného prostředku)](../../build/reference/assemblyresource-embed-a-managed-resource.md) – možnost linkeru nebo se **/Resource** – možnost kompilátoru v dalších kompilátorů aplikace Visual Studio.
+Vstupní soubory .obj nebo modul .NET MSIL, nemůže mít vložené prostředky. Prostředek je vložen do výstupního souboru (modulu nebo sestavení) s [narozdíl od (vložení spravovaného prostředku)](assemblyresource-embed-a-managed-resource.md) – možnost linkeru nebo se **/Resource** – možnost kompilátoru v dalších kompilátorů aplikace Visual Studio.
 
-Při provádění MSIL propojování a také nezadáte [parametru/LTCG (generování kódu při propojování odkaz)](../../build/reference/ltcg-link-time-code-generation.md), zobrazí se informační zpráva oznámení, že propojení se restartuje. Tuto zprávu můžete ignorovat, ale chcete-li zlepšit výkon linkeru s propojení jazyka MSIL, explicitně určete **parametru/LTCG**.
+Při provádění MSIL propojování a také nezadáte [parametru/LTCG (generování kódu při propojování odkaz)](ltcg-link-time-code-generation.md), zobrazí se informační zpráva oznámení, že propojení se restartuje. Tuto zprávu můžete ignorovat, ale chcete-li zlepšit výkon linkeru s propojení jazyka MSIL, explicitně určete **parametru/LTCG**.
 
 ## <a name="example"></a>Příklad
 
@@ -98,5 +98,5 @@ caught non System exception in C++ source code file
 
 ## <a name="see-also"></a>Viz také:
 
-- [Vstupní soubory LINK](../../build/reference/link-input-files.md)
-- [Možnosti linkeru](../../build/reference/linker-options.md)
+- [Vstupní soubory LINK](link-input-files.md)
+- [Možnosti Linkeru MSVC](linker-options.md)

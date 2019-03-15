@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ERROR_SEVERITY_ERROR exception
 - ERROR_MOD_NOT_FOUND exception
 ms.assetid: c03be05d-1c39-4f35-84cf-00c9af3bae9a
-ms.openlocfilehash: 9c86d99b365994870b991967b6cab6e6ee5c5088
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f80b99943b103dcf90c05d59df3169e0e05d79f4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422985"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811664"
 ---
 # <a name="exceptions-cc"></a>Výjimky (C/C++)
 
@@ -41,8 +41,8 @@ Kódy výjimek vyvolána jsou standardní VcppException (error_severity_error �
 
 Kromě toho pokud jsou v poli grAttrs nesprávné bity, ERROR_INVALID_PARAMETER je vyvolána výjimka. Tato výjimka je pro veškeré záměry a úmysly, závažná.
 
-Zobrazit [struktura a definice konstant](../../build/reference/structure-and-constant-definitions.md) Další informace.
+Zobrazit [struktura a definice konstant](structure-and-constant-definitions.md) Další informace.
 
 ## <a name="see-also"></a>Viz také:
 
-[Zpracování chyb a oznámení](../../build/reference/error-handling-and-notification.md)
+[Zpracování chyb a oznámení](error-handling-and-notification.md)

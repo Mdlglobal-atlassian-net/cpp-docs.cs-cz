@@ -10,12 +10,12 @@ helpviewer_keywords:
 - delayimp.h
 - helper functions
 ms.assetid: 6279c12c-d908-4967-b0b3-cabfc3e91d3d
-ms.openlocfilehash: 955ae0ed8feac22da19eb13218e2332849477e29
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3ad193d0101507f43145c6af9f8e6200ab6fcdb5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421377"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817987"
 ---
 # <a name="understanding-the-helper-function"></a>Základní informace o podpůrné funkci
 
@@ -53,16 +53,16 @@ Kód pomocného objektu výchozí nacházely v Delayhlp.cpp a Delayimp.h (v vc\i
 
 Následující témata popisují pomocnou funkci:
 
-- [Změny v podpůrné funkci knihovny DLL s odloženým načtením od aplikace Visual C++ verze 6.0](../../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)
+- [Změny v podpůrné funkci knihovny DLL s odloženým načtením od aplikace Visual C++ verze 6.0](changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)
 
-- [Konvence volání, parametry a návratový typ](../../build/reference/calling-conventions-parameters-and-return-type.md)
+- [Konvence volání, parametry a návratový typ](calling-conventions-parameters-and-return-type.md)
 
-- [Struktura a definice konstant](../../build/reference/structure-and-constant-definitions.md)
+- [Struktura a definice konstant](structure-and-constant-definitions.md)
 
-- [Výpočet nezbytných hodnot](../../build/reference/calculating-necessary-values.md)
+- [Výpočet nezbytných hodnot](calculating-necessary-values.md)
 
-- [Uvolnění knihovny DLL s odloženým načtením](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)
+- [Uvolnění knihovny DLL s odloženým načtením](explicitly-unloading-a-delay-loaded-dll.md)
 
 ## <a name="see-also"></a>Viz také:
 
-[Podpora linkeru pro knihovny DLL s odloženým načtením](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+[Podpora linkeru pro knihovny DLL s odloženým načtením](linker-support-for-delay-loaded-dlls.md)

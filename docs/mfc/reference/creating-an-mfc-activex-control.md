@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
-ms.openlocfilehash: 031c8596e568f01cdecd7139d959a77923c341eb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b2dc48e2568e180820f8bca008c66878af4b575e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294951"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818541"
 ---
 # <a name="creating-an-mfc-activex-control"></a>Vytvoření ovládacího prvku ActiveX knihovny MFC
 
@@ -25,7 +25,7 @@ Nejjednodušší způsob, jak vytvořit ovládací prvek ActiveX knihovny MFC je
 
 ### <a name="to-create-an-mfc-activex-control-using-the-mfc-activex-control-wizard"></a>Chcete-li vytvořit ovládací prvek ActiveX knihovny MFC pomocí Průvodce ovládacím prvkem MFC ActiveX
 
-1. Postupujte podle pokynů v tématu nápovědy [vytvoření projektu pomocí Průvodce aplikací jazyka Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).
+1. Postupujte podle pokynů v tématu nápovědy [vytvoření projektu aplikace konzoly C++](../../get-started/tutorial-console-cpp.md).
 
 1. V **nový projekt** dialogové okno, vyberte **ovládací prvek ActiveX knihovny MFC** ikonu v podokně šablon a spusťte Průvodce pro ovládací prvek ActiveX knihovny MFC.
 
@@ -36,11 +36,12 @@ Nejjednodušší způsob, jak vytvořit ovládací prvek ActiveX knihovny MFC je
 
 1. Klikněte na tlačítko **Dokončit** zavřete průvodce a otevření nového projektu ve vývojovém prostředí.
 
-Po vytvoření projektu můžete zobrazit soubory vytvořené v **Průzkumníka řešení**. Další informace o souborech Průvodce vytvoří pro váš projekt, naleznete v generovaném souboru ReadMe.txt. Další informace o typech souborů naleznete v tématu [typy souborů vytvořené pro projekty Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).
+Po vytvoření projektu můžete zobrazit soubory vytvořené v **Průzkumníka řešení**. Další informace o souborech Průvodce vytvoří pro váš projekt, naleznete v generovaném souboru ReadMe.txt. Další informace o typech souborů naleznete v tématu [typy souborů vytvořené pro projekty Visual C++](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 Po vytvoření projektu, průvodci kódem můžete přidat [funkce](../../ide/add-member-function-wizard.md), [proměnné](../../ide/add-member-variable-wizard.md), [události](../../ide/add-event-wizard.md), [vlastnosti](../../ide/names-add-property-wizard.md), a [metody](../../ide/add-method-wizard.md). Další informace o přizpůsobení ovládacího prvku ActiveX naleznete v tématu [ovládací prvky MFC ActiveX](../../mfc/mfc-activex-controls.md).
 
 ## <a name="see-also"></a>Viz také:
 
 [Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Stránky vlastností](../../ide/property-pages-visual-cpp.md)
+[Stránky vlastností](../../build/reference/property-pages-visual-cpp.md)
+

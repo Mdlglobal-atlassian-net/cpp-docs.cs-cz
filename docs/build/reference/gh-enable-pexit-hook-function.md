@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _pexit function
 - -Gh compiler option [C++]
 ms.assetid: 93181453-2676-42e5-bf63-3b19e07299b6
-ms.openlocfilehash: 21649838ba81f3affdda3f3833de23e4d9e33746
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 077096cc296f2aa2128127493a84a91da9a067c5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422526"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822168"
 ---
 # <a name="gh-enable-pexit-hook-function"></a>/GH (Povolit funkce háku _pexit)
 
@@ -36,11 +36,11 @@ Pokud máte v úmyslu explicitně volat `_pexit`, není potřeba poskytovat prot
 void __declspec(naked) __cdecl _pexit( void );
 ```
 
-`_pexit` je podobný `_penter`; naleznete v tématu [/Gh (povolení _penter funkce háku)](../../build/reference/gh-enable-penter-hook-function.md) příklad toho, jak zapisovat `_pexit` funkce.
+`_pexit` je podobný `_penter`; naleznete v tématu [/Gh (povolení _penter funkce háku)](gh-enable-penter-hook-function.md) příklad toho, jak zapisovat `_pexit` funkce.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **C/C++** složky.
 
@@ -54,5 +54,5 @@ void __declspec(naked) __cdecl _pexit( void );
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

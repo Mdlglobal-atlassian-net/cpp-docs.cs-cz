@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Tc compiler option [C++]
 - /Tp compiler option [C++]
 - -Tp compiler option [C++]
-ms.openlocfilehash: e435b48359a708408ff8659e53c9e7c4f7e80261
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7ee51c858c9f90440cf0c2b21799ef7473cf6da
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619112"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813861"
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>/Tc, /Tp, /TC, /TP (zadání typu zdrojového souboru)
 
@@ -29,9 +29,9 @@ ms.locfileid: "50619112"
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/TC** _filename_
+> **/Tc** _filename_
 >  **/Tp** _filename_
->  **/TC** 
+>  **/TC**
 >  **/TP**
 
 ## <a name="arguments"></a>Arguments
@@ -43,11 +43,11 @@ Zdrojový soubor jazyka C nebo C++.
 
 Ve výchozím nastavení **CL** předpokládá, že jsou soubory s příponou .c zdrojových souborech jazyka C a C++ zdrojové soubory jsou soubory .cpp nebo .cxx rozšíření.
 
-Při buď **TC** nebo **Tc** je zadána možnost, všechny specifikace [/Zc: wchar_t (wchar_t je nativní typ)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) možnost je ignorována.
+Při buď **TC** nebo **Tc** je zadána možnost, všechny specifikace [/Zc: wchar_t (wchar_t je nativní typ)](zc-wchar-t-wchar-t-is-native-type.md) možnost je ignorována.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **Upřesnit** stránku vlastností.
 
@@ -69,5 +69,5 @@ Cl – příkazový řádek určuje, že TEST1.c, TEST2.cxx, TEST3.huh a TEST4.o
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

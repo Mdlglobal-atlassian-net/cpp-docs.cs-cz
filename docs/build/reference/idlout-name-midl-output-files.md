@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -IDLOUT linker option
 - IDLOUT linker option
 ms.assetid: 10d00a6a-85b4-4de1-8732-e422c6931509
-ms.openlocfilehash: 91c1a3642f157390e5a0d5c7e2f36d7adf3ca118
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3816bb85cb3c711075e3fefeec2d706c2f8cc2ff
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417629"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821466"
 ---
 # <a name="idlout-name-midl-output-files"></a>/IDLOUT (Pojmenovat výstupní soubory MIDL)
 
@@ -38,7 +38,7 @@ Určuje název souboru .idl vytvořený kompilátorem MIDL. Předpokládá se be
 
 / Idlout Určuje název a příponu souboru IDL.
 
-V kompilátoru MIDL je volán linkeru jazyka Visual C++ při propojování projekty, které mají [modulu](../../windows/module-cpp.md) atribut.
+V kompilátoru MIDL je volán linkeru MSVC při propojování projekty, které mají [modulu](../../windows/module-cpp.md) atribut.
 
 / IDLOUT určuje také názvy souborů ostatních výstupních souborů spojené s kompilátorem MIDL:
 
@@ -50,13 +50,13 @@ V kompilátoru MIDL je volán linkeru jazyka Visual C++ při propojování proje
 
 - *Název souboru*.h
 
-*Název souboru* je parametr, který můžete předat /IDLOUT. Pokud [/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md) není zadána, panelu /TLBOUT zobrazí jeho název souboru .tlb *filename*.
+*Název souboru* je parametr, který můžete předat /IDLOUT. Pokud [/TLBOUT](tlbout-name-dot-tlb-file.md) není zadána, panelu /TLBOUT zobrazí jeho název souboru .tlb *filename*.
 
 Pokud nezadáte /IDLOUT ani /TLBOUT, linker vytvoří vc70.tlb, vc70.idl, vc70_p.c, vc70_i.c a vc70.h.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **Linkeru** složky.
 
@@ -70,8 +70,8 @@ Pokud nezadáte /IDLOUT ani /TLBOUT, linker vytvoří vc70.tlb, vc70.idl, vc70_p
 
 ## <a name="see-also"></a>Viz také:
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)<br/>
-[/IGNOREIDL (nezpracovávat atributy do MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)<br/>
-[/MIDL (určení možností příkazového řádku MIDL)](../../build/reference/midl-specify-midl-command-line-options.md)<br/>
+[Odkaz na MSVC linkeru](linking.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)<br/>
+[/IGNOREIDL (nezpracovávat atributy do MIDL)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
+[/MIDL (určení možností příkazového řádku MIDL)](midl-specify-midl-command-line-options.md)<br/>
 [Sestavení programu s atributy](../../windows/building-an-attributed-program.md)

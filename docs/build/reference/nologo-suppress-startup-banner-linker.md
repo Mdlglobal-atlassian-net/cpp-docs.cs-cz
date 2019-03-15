@@ -13,12 +13,12 @@ helpviewer_keywords:
 - banners, suppressing startup
 - NOLOGO linker option
 ms.assetid: 3b20dddd-eca6-4545-a331-9f70bf720197
-ms.openlocfilehash: 1b966c1f7af556a85aadcafaa8ed43da5b3f75df
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0ef0c6f8e0073e7450daa8d0433ce4d6e82ceab8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422153"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812496"
 ---
 # <a name="nologo-suppress-startup-banner-linker"></a>/NOLOGO (Potlačit úvodní nápis při spouštění) (linker)
 
@@ -30,7 +30,7 @@ ms.locfileid: "57422153"
 
 Parametr/nologo zakazuje zobrazení čísla o autorských právech zprávu a verze.
 
-Tato možnost také potlačí zobrazování souborů příkazu. Podrobnosti najdete v tématu [soubory příkazů LINK](../../build/reference/link-command-files.md).
+Tato možnost také potlačí zobrazování souborů příkazu. Podrobnosti najdete v tématu [soubory příkazů LINK](linking.md).
 
 Ve výchozím nastavení tyto informace jsou odeslány pomocí linkeru, aby v okně výstup. Na příkazovém řádku je odeslán na standardní výstup a je možné přesměrovat do souboru.
 
@@ -44,5 +44,5 @@ Ve výchozím nastavení tyto informace jsou odeslány pomocí linkeru, aby v ok
 
 ## <a name="see-also"></a>Viz také:
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)
+[Odkaz na MSVC linkeru](linking.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)

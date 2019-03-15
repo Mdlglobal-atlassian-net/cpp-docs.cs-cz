@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -QIfist compiler option [C++]
 - /QIfist compiler option [C++]
 ms.assetid: 1afd32a5-f658-4b66-85f4-e0ce4cb955bd
-ms.openlocfilehash: 0b0dba0fec21b3c0ab03555ae90497f212ab6315
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7af88c91793688d23cf35177ae7a5250b04832a8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422205"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816591"
 ---
 # <a name="qifist-suppress-ftol"></a>/QIfist (Potlačit _ftol)
 
@@ -42,16 +42,16 @@ Kromě převod z typu s plovoucí desetinnou čárkou na celočíselný typ `_ft
 
 Můžete použít [_control87 _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) funkce C Run-Time pro úpravu zaokrouhlení chování FPU. Režim FPU zaokrouhlení výchozí hodnota je "Zaokrouhlit na nejbližší." Pomocí **/QIfist** může zlepšit výkon vaší aplikace, ale ne bez rizika. Měli byste důkladně otestovat části kódu, které jsou citlivé na režimech zaokrouhlení předtím, než spoléhání se na kód sestaven s **/QIfist** v produkčním prostředí.
 
-[/ arch (x86)](../../build/reference/arch-x86.md) a **/QIfist** nelze použít na stejném kompilace.
+[/ arch (x86)](arch-x86.md) a **/QIfist** nelze použít na stejném kompilace.
 
 > [!NOTE]
 >  **/ QIfist** je výsledkem bude ve výchozím nastavení protože zaokrouhlování bity také vliv plovoucí desetinná čárka s plovoucí desetinnou čárkou neukazuje zaokrouhlení (které dojde po každé výpočtu), tak když nastavíte příznaky pro zaokrouhlení C-style (směrem k nule), vaše plovoucí desetinnou čárkou výpočty se může lišit. **/ QIfist** neměl by se používat, pokud váš kód závisí na očekávané chování zkracování necelá část hodnoty číslo s plovoucí desetinnou čárkou. Pokud si nejste jistí, nepoužívejte **/QIfist**.
 
-**/QIfist** možnost je zastaralé od verze Visual Studio 2005. Kompilátor provedl významná vylepšení float k urychlení int převodu. Seznam zastaralých kompilátoru možnosti najdete v tématu **zastaralé a odebrat možnosti kompilátoru** v [možnosti kompilátoru seřazené podle kategorie](../../build/reference/compiler-options-listed-by-category.md).
+**/QIfist** možnost je zastaralé od verze Visual Studio 2005. Kompilátor provedl významná vylepšení float k urychlení int převodu. Seznam zastaralých kompilátoru možnosti najdete v tématu **zastaralé a odebrat možnosti kompilátoru** v [možnosti kompilátoru seřazené podle kategorie](compiler-options-listed-by-category.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **C/C++** složky.
 
@@ -65,6 +65,6 @@ Můžete použít [_control87 _controlfp, \__control87_2](../../c-runtime-librar
 
 ## <a name="see-also"></a>Viz také:
 
-[/Q – možnosti (operace nízké úrovně)](../../build/reference/q-options-low-level-operations.md)<br/>
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[/Q – možnosti (operace nízké úrovně)](q-options-low-level-operations.md)<br/>
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

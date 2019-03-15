@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -favor compiler option [C++]
 - /favor compiler option [C++]
 ms.assetid: ad264df2-e30f-4d68-8bd0-10d6bee71a2a
-ms.openlocfilehash: 1f76164468375e84380c6f02050c6c7a35b32412
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b914d3e6e7a2865ec610249ff51d320d7890adcb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418981"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820452"
 ---
 # <a name="favor-optimize-for-architecture-specifics"></a>/favor (Optimalizace pro konkrétní architekturu)
 
@@ -39,11 +39,11 @@ ms.locfileid: "57418981"
 > [!NOTE]
 > Intel64 architektury se dřív označovalo jako Extended Memory 64 Technology a byla odpovídající možnost kompilátoru **/favor:EM64T**.
 
-Informace o tom, jak programovat pro x64 architektury, najdete v článku [x64 softwarové konvence](../../build/x64-software-conventions.md).
+Informace o tom, jak programovat pro x64 architektury, najdete v článku [x64 softwarové konvence](../x64-software-conventions.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **C/C++** složky.
 
@@ -57,5 +57,5 @@ Informace o tom, jak programovat pro x64 architektury, najdete v článku [x64 s
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

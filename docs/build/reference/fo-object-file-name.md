@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Fo compiler option [C++]
 - -Fo compiler option [C++]
 ms.assetid: 0e6d593e-4e7f-4990-9e6e-92e1dcbcf6e6
-ms.openlocfilehash: bcb0f96eba277b65e3478843ca0e1666f9c404aa
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a8f2c1a196f18e6d310fd41d4dbed751440a4c20
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418357"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819660"
 ---
 # <a name="fo-object-file-name"></a>/Fo (název souboru objektů)
 
@@ -34,7 +34,7 @@ Pokud tuto možnost nepoužijete, soubor objektu používá základní název zd
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **C/C++** složky.
 
@@ -56,7 +56,7 @@ CL /FoB:\OBJECT\ THIS.C
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti výstupního souboru (/F)](../../build/reference/output-file-f-options.md)<br/>
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
-[Určení názvu cesty](../../build/reference/specifying-the-pathname.md)
+[Možnosti výstupního souboru (/F)](output-file-f-options.md)<br/>
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
+[Určení názvu cesty](specifying-the-pathname.md)

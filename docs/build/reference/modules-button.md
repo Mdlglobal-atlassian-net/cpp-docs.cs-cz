@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Modules button
 ms.assetid: 51552765-865a-4acc-aeae-f78afb73289a
-ms.openlocfilehash: ccce2db123422b18e3ff4a645a97a7b9aad0ebc9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: efe6859ead257201fea8577675a7b8e55b5f700e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419293"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811625"
 ---
 # <a name="modules-button"></a>Moduly – tlačítko
 
@@ -17,4 +17,4 @@ Klikněte na tlačítko **moduly** tlačítko, abyste vyvolali **další moduly 
 
 ## <a name="see-also"></a>Viz také:
 
-[Hodnota – textové pole](../../build/reference/value-edit-control.md)
+[Hodnota – textové pole](value-edit-control.md)

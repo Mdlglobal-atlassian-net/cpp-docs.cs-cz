@@ -1,13 +1,13 @@
 ---
-title: Microsoft Visual C++ optimalizace plovoucí desetinné čárky
+title: Optimalizace plovoucí bodu MSVC
 ms.date: 03/09/2018
 ms.topic: conceptual
-ms.openlocfilehash: 6e297cebb4982b293e86885815436c4120d903cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78c5c310f2f348b5cfa5a92feb65e265d28560d9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504296"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814368"
 ---
 # <a name="microsoft-visual-c-floating-point-optimization"></a>Microsoft Visual C++ s plovoucí desetinnou čárkou optimalizace
 
@@ -40,7 +40,7 @@ Kompilátor C++ naivní předpokládat, že aritmetické operace s plovoucí des
 
 To znamená, že zjištěné hodnota c je vždy nulovou konstantou. Tato konstanta je pak šířený do dalších výrazů, tělo smyčky se sníží jednoduchý souhrn. Abychom byli přesní,
 
-> Y = [i] - C == > Y = [i]<br/>T = sum + Y == > T = sum + [i]<br/>Součet = T == > součet = sum + [i]
+> Y = A[i] - C ==> Y = A[i]<br/>T = sum + Y ==> T = sum + A[i]<br/>sum = T ==> sum = sum + A[i]
 
 Proto pro kompilátor naivní logické transformace `KahanSum` by byla funkce:
 
@@ -951,12 +951,12 @@ Přepínače příkazového řádku jsou ve skutečnosti sdružená vlastnost na
 
 ||||||
 |-|-|-|-|-|
-||float_control(Precise)|float_control(EXCEPT)|fp_contract|fenv_access|
-|/ FP: strict|on|on|Vypnout|on|
-|/ FP: strict/FP: except-|on|Vypnout|Vypnout|on|
-|/ FP: precise|on|Vypnout|on|Vypnout|
-|/ FP: precise/FP: except|on|on|on|Vypnout|
-|Fast|Vypnout|Vypnout|on|Vypnout|
+||float_control(Precise)|float_control(except)|fp_contract|fenv_access|
+|/ FP: strict|on|on|vypnuto|on|
+|/fp:strict /fp:except-|on|vypnuto|vypnuto|on|
+|/ FP: precise|on|vypnuto|on|vypnuto|
+|/ FP: precise/FP: except|on|on|on|vypnuto|
+|Fast|vypnuto|vypnuto|on|vypnuto|
 
 Například následující explicitně povoluje sémantiku FP: Fast.
 
@@ -1088,4 +1088,4 @@ catch(float_exception)
 
 ## <a name="see-also"></a>Viz také:
 
-[Optimalizace kódu](optimizing-your-code.md)<br/>
+[Optimalizace kódu](../optimizing-your-code.md)<br/>

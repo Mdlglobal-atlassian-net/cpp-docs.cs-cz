@@ -5,12 +5,12 @@ helpviewer_keywords:
 - side-by-side assemblies [C++]
 - isolated assemblies [C++]
 ms.assetid: 945a885f-cb3e-4c8a-a0b9-2c2e3e02cc50
-ms.openlocfilehash: 332c78581d4a13c61c3adb7728b2b3ef2cf1a2a2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 61da61b4a213c01ca66e8978c78622fe8b2818d1
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420619"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817579"
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>Koncept izolovaných aplikací a souběžných sestavení
 
@@ -32,8 +32,8 @@ Po nasazení aplikace úpravou můžete změnit závislosti sestavení vedle seb
 
 ## <a name="visual-c-libraries"></a>Knihovny jazyka Visual C++
 
-V sadě Visual Studio 2005 a Visual Studio 2008 byly distribuovatelné knihovny (například ATL, MFC, CRT, Standard C++, OpenMP a MSDIA) nasazeny jako sdílená souběžná sestavení do mezipaměti nativních sestavení. V aktuální verzi používají distribuovatelné knihovny centrální nasazení. Všechny aplikace vytvořené pomocí jazyka Visual C++ jsou standardně sestaveny s manifestem vloženým do konečného binárního souboru, přičemž tento manifest popisuje závislosti binárního souboru na knihovnách jazyka Visual C++. Principy generování manifestu pro aplikace Visual C++, naleznete v tématu [Principy generování manifestu pro programy C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md). Manifest se nevyžaduje pro aplikace staticky propojené s knihovnami, které používají, nebo které používají místní nasazení. Další informace o nasazení naleznete v tématu [nasazení v jazyce Visual C++](../ide/deployment-in-visual-cpp.md).
+V sadě Visual Studio 2005 a Visual Studio 2008 byly distribuovatelné knihovny (například ATL, MFC, CRT, Standard C++, OpenMP a MSDIA) nasazeny jako sdílená souběžná sestavení do mezipaměti nativních sestavení. V aktuální verzi používají distribuovatelné knihovny centrální nasazení. Všechny aplikace vytvořené pomocí jazyka Visual C++ jsou standardně sestaveny s manifestem vloženým do konečného binárního souboru, přičemž tento manifest popisuje závislosti binárního souboru na knihovnách jazyka Visual C++. Principy generování manifestu pro aplikace Visual C++, naleznete v tématu [Principy generování manifestu pro programy C/C++](understanding-manifest-generation-for-c-cpp-programs.md). Manifest se nevyžaduje pro aplikace staticky propojené s knihovnami, které používají, nebo které používají místní nasazení. Další informace o nasazení naleznete v tématu [nasazení v jazyce Visual C++](../ide/deployment-in-visual-cpp.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Sestavení izolovaných aplikací C/C++ a souběžných sestavení](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+[Sestavení izolovaných aplikací C/C++ a souběžných sestavení](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

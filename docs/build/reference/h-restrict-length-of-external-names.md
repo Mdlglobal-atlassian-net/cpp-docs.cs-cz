@@ -10,12 +10,12 @@ helpviewer_keywords:
 - external names
 - -H compiler option [C++]
 ms.assetid: de701dd3-ed04-4c88-8195-960d2520ec2e
-ms.openlocfilehash: bb7821587d6c0bbe06eb6baa02227955582eb76d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bdd3da8d3a5165262c00bc3475122e31f5770726
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420411"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811261"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (Omezit délku externích názvů)
 
@@ -68,13 +68,13 @@ void func2(void) {}
 
 Musíte také být opatrní při použití **/H** možnost z důvodu identifikátory předdefinovaných kompilátoru. Pokud identifikátor maximální délka je příliš malá, budou některé předdefinované identifikátory nevyřešené také určité knihovna volání funkcí. Například pokud `printf` funkce se používá a možnost **/H5** určena v době kompilace, symbol **_prin** bude vytvořen, aby bylo možné odkazovat `printf`, a to nebude nalezena v knihovně.
 
-Použití **/H** není kompatibilní s [/GL (optimalizace celého programu)](../../build/reference/gl-whole-program-optimization.md).
+Použití **/H** není kompatibilní s [/GL (optimalizace celého programu)](gl-whole-program-optimization.md).
 
-**/H** od verze Visual Studio 2005 je zastaralá možnost; zvýšily se limity maximální délku a **/H** už nepotřebujete. Seznam zastaralých kompilátoru možnosti najdete v tématu **zastaralé a odebrat možnosti kompilátoru** v [možnosti kompilátoru seřazené podle kategorie](../../build/reference/compiler-options-listed-by-category.md).
+**/H** od verze Visual Studio 2005 je zastaralá možnost; zvýšily se limity maximální délku a **/H** už nepotřebujete. Seznam zastaralých kompilátoru možnosti najdete v tématu **zastaralé a odebrat možnosti kompilátoru** v [možnosti kompilátoru seřazené podle kategorie](compiler-options-listed-by-category.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
 
@@ -86,5 +86,5 @@ Použití **/H** není kompatibilní s [/GL (optimalizace celého programu)](../
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

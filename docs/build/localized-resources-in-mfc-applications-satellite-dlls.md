@@ -12,16 +12,16 @@ helpviewer_keywords:
 - resource-only DLLs [C++], MFC applications
 - satellite DLLs [C++]
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
-ms.openlocfilehash: d479599acceac29f0f2ee54857c663c81a919acf
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c593d0bae6fc23cfd765116c44b07caa2a6d8ccf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420398"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821323"
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Lokalizované prostředky v aplikacích MFC: Satelitní knihovny DLL
 
-Knihovna MFC verze 7.0 nebo novější poskytuje rozšířenou podporu pro satelitní knihovny DLL, funkci, která pomáhá při vytváření aplikací lokalizovaných do více jazyků. Satelitní knihovna DLL je [knihovny DLL pouze prostředků](../build/creating-a-resource-only-dll.md) , který obsahuje aplikace prostředky lokalizovanými pro konkrétní jazyk. Po zahájení provádění aplikace knihovny MFC automaticky načte lokalizované prostředky, které jsou nejvhodnější pro prostředí. Například můžete mít aplikace pomocí anglické jazykové prostředky se dvěma satelitní knihovny DLL, jedna obsahuje francouzské překlad svých prostředků a druhý obsahuje německý překlad. Při spuštění aplikace v anglickém jazyce systému používá anglické prostředky. Pokud je spuštěna ve francouzské systému, používá francouzské prostředků; Pokud je spuštěna v německé systému, používá německé prostředky.
+Knihovna MFC verze 7.0 nebo novější poskytuje rozšířenou podporu pro satelitní knihovny DLL, funkci, která pomáhá při vytváření aplikací lokalizovaných do více jazyků. Satelitní knihovna DLL je [knihovny DLL pouze prostředků](creating-a-resource-only-dll.md) , který obsahuje aplikace prostředky lokalizovanými pro konkrétní jazyk. Po zahájení provádění aplikace knihovny MFC automaticky načte lokalizované prostředky, které jsou nejvhodnější pro prostředí. Například můžete mít aplikace pomocí anglické jazykové prostředky se dvěma satelitní knihovny DLL, jedna obsahuje francouzské překlad svých prostředků a druhý obsahuje německý překlad. Při spuštění aplikace v anglickém jazyce systému používá anglické prostředky. Pokud je spuštěna ve francouzské systému, používá francouzské prostředků; Pokud je spuštěna v německé systému, používá německé prostředky.
 
 K podpoře lokalizovaných prostředků v aplikaci knihovny MFC, knihovny MFC se pokusí načíst satelitní knihovny DLL obsahující prostředky lokalizována pro konkrétní jazyk. Satelitní knihovny DLL jsou pojmenovány *NázevAplikaceXXX*.dll, kde *ApplicationName* je název .exe nebo .dll pomocí knihovny MFC, a *XXX* je třípísmenný kód jazyka prostředky (například "CSY" nebo "DEU").
 
@@ -53,5 +53,5 @@ Pokud se nenajdou žádné z těchto knihoven DLL, knihovna MFC používá prost
 
 ## <a name="see-also"></a>Viz také:
 
-[Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)<br/>
+[Knihovny DLL v jazyce Visual C++](dlls-in-visual-cpp.md)<br/>
 [TN057: Lokalizace komponent MFC](../mfc/tn057-localization-of-mfc-components.md)

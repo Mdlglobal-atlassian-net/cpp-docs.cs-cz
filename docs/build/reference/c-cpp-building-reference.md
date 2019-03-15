@@ -1,41 +1,38 @@
 ---
-title: Odkaz sestavení C/C++
-ms.date: 11/04/2016
+title: Reference sestavení C/C++ – Visual Studio
+description: Referenční obsah pro nástroje systému a sestavení projektů jazyka C/C++ v sadě Visual Studio.
+ms.date: 12/10/2018
 helpviewer_keywords:
 - compiling source code [C++], additional information
 - cl.exe compiler [C++], building programs
 - linker [C++], building reference
 - builds [C++], additional information
 ms.assetid: 100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d
-ms.openlocfilehash: 36f261ee993932d1a08d5cdb02e2d4681ae60f0c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c3f7aa598a9c43af04c148ed0d4b3f555566ec7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481728"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812483"
 ---
 # <a name="cc-building-reference"></a>Odkaz sestavení C/C++
 
-Visual C++ nabízí dva způsoby vytvoření programu v jazyce C/C++. Je nejjednodušší (a nejběžnější) způsobem [sestavení v rámci vývojového prostředí Visual C++](../../ide/building-cpp-projects-in-visual-studio.md). Druhý způsob je [sestavení z příkazového řádku pomocí nástroje příkazového řádku](../../build/building-on-the-command-line.md). V obou případech můžete vytvořit pomocí editoru zdrojového kódu jazyka Visual C++ nebo jiného editoru podle vašeho výběru zdrojových souborů.
-
-Pokud program používá souboru pravidel, spíše než soubor .vcxproj, můžete pořád vytvářet ho ve vývojovém prostředí jako [externí projekt](../../ide/building-external-projects.md).
+Visual C++ nabízí dva způsoby vytvoření programu v jazyce C/C++. Je nejjednodušší (a nejběžnější) způsobem [sestavení v integrovaném vývojovém prostředí sady Visual Studio](../creating-and-managing-visual-cpp-projects.md). Druhý způsob je [sestavení z příkazového řádku pomocí nástroje příkazového řádku](../building-on-the-command-line.md). V obou případech můžete vytvořit a upravit zdrojových souborů pomocí sady Visual Studio nebo jiného editoru podle vašeho výběru.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Kompilace programu v jazyce C/C++](../../build/reference/compiling-a-c-cpp-program.md)<br/>
-Popisuje kompilátor, který vytvoří objektový soubor obsahující strojového kódu, direktivy linkeru, oddíly, externí odkazy a funkce/dat názvy.
+[Referenční dokumentace nástroje MSBuild pro projekty v jazyce C++](msbuild-visual-cpp-overview.md)
 
-[Propojování](../../build/reference/linking.md)<br/>
+[Referenční dokumentace kompilátoru MSVC](compiling-a-c-cpp-program.md)<br/>
+Popisuje kompilátor MSVC, která vytvoří objektový soubor obsahující strojového kódu, direktivy linkeru, oddíly, externí odkazy a funkce/dat názvy.
+
+[Odkaz na MSVC linkeru](linking.md)<br/>
 Popisuje linkeru, která kombinuje kódu ze souborů objekt vytvořený kompilátorem a ze staticky propojených knihoven, překládá název odkazy a vytvoří spustitelný soubor.
 
-[Sestavení pro vydání](../../build/reference/release-builds.md)<br/>
-Uvede informace o tom, proč a kdy chcete změnit z ladění od sestavení k sestavení pro vydání a také popisuje některé z problémů, na které můžete narazit při změně z ladění na sestavení pro vydání.
+[Podpora kódování Unicode v kompilátoru a linkeru](unicode-support-in-the-compiler-and-linker.md)
 
-[Optimalizace kódu](../../build/reference/optimizing-your-code.md)<br/>
-Obsahuje odkazy na témata popisující mechanismy pro optimalizaci kódu:
-
-[Nástroje sestavení C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
-Poskytuje následující nástroje příkazového řádku pro zobrazení nebo manipulace s výstup sestavení:
+[Nástroje pro vytváření dalších MSVC](c-cpp-build-tools.md)<br/>
+Další nástroje příkazového řádku jazyka C++.
 
 [Chyby sestavení C/C++](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)<br/>
 Představuje oddíl chyby sestavení v tabulce obsahu.
@@ -45,35 +42,35 @@ Představuje oddíl chyby sestavení v tabulce obsahu.
 [C/C++ – referenční dokumentace preprocesoru](../../preprocessor/c-cpp-preprocessor-reference.md)<br/>
 Tento článek popisuje preprocesor, který připraví zdrojové soubory pro kompilátor překládá makra, operátory a direktivy.
 
-[Seznámení s kroky vlastního sestavení a s událostmi sestavení](../../ide/understanding-custom-build-steps-and-build-events.md)<br/>
+[Seznámení s kroky vlastního sestavení a s událostmi sestavení](../understanding-custom-build-steps-and-build-events.md)<br/>
 Tento článek popisuje přizpůsobení procesu sestavení.
 
-[Sestavení programu v jazyce C/C++](../../build/building-c-cpp-programs.md)<br/>
+[Sestavení programu v jazyce C/C++](../projects-and-build-systems-cpp.md)<br/>
 Obsahuje odkazy na témata popisující vytváření vaší aplikace z příkazového řádku nebo z integrovaného vývojového prostředí sady Visual Studio.
 
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
 Popisuje nastavení možnosti kompilátoru ve vývojovém prostředí nebo na příkazovém řádku.
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
 Obsahuje odkazy na témata popisující použití možnosti kompilátoru.
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
+[Odkaz na MSVC linkeru](linking.md)<br/>
 Popisuje nastavení možností linkeru uvnitř nebo mimo integrované vývojové prostředí.
 
-[Možnosti linkeru](../../build/reference/linker-options.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)<br/>
 Obsahuje odkazy na témata popisující použití možností propojovacího programu.
 
-[BSCMAKE – referenční dokumentace](../../build/reference/bscmake-reference.md)<br/>
+[BSCMAKE – referenční dokumentace](bscmake-reference.md)<br/>
 Popisuje nástroj údržba informací procházení Microsoft (BSCMAKE. Soubor EXE), která sestavení informačního souboru procházení (.bsc) z .sbr soubory vytvořené během kompilace.
 
-[Referenční dokumentace ke knihovně LIB](../../build/reference/lib-reference.md)<br/>
+[Referenční dokumentace ke knihovně LIB](lib-reference.md)<br/>
 Popisuje Správce knihovny Microsoft (LIB.exe), který vytváří a spravuje knihovnu objektových souborů Common Object File Format (COFF).
 
-[EDITBIN – referenční dokumentace](../../build/reference/editbin-reference.md)<br/>
+[EDITBIN – referenční dokumentace](editbin-reference.md)<br/>
 Popisuje binární soubor Editor COFF společnosti Microsoft (EDITBIN. Soubor EXE), který upravuje binárních souborů Common Object File Format (COFF).
 
-[DUMPBIN – odkaz](../../build/reference/dumpbin-reference.md)<br/>
+[DUMPBIN – odkaz](dumpbin-reference.md)<br/>
 Popisuje Microsoft COFF – Vypisovač binárních souborů (DUMPBIN. Soubor EXE), která zobrazí informace o binárních souborů Common Object File Format (COFF).
 
-[NMAKE – referenční zdroje](../../build/nmake-reference.md)<br/>
+[NMAKE – referenční zdroje](nmake-reference.md)<br/>
 Popisuje nástroj Údržba programu Microsoft (NMAKE. (EXE), což je nástroj, který sestavuje projekty založené na příkazy, které jsou obsaženy v souboru popisu.

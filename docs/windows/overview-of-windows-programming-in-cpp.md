@@ -2,12 +2,12 @@
 title: Přehled programování v C++ v systému Windows
 ms.date: 11/15/2018
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: b33236df6e4c7f679ff1dd9f9f8bc409c86e011a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 6338b390b11c58f3ebac2af1bb568ea3c3470cd1
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693855"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810442"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Přehled programování v C++ v systému Windows
 
@@ -21,7 +21,7 @@ Aplikace konzoly C++ spusťte z příkazového řádku v okně konzoly a může 
 
 Termín *nativní klientská aplikace* odkazuje na C nebo C++ oddílové aplikaci, která používá původní rozhraní Win32 API Windows pro přístup k operačním systémem. Tato rozhraní API představují samy o sobě převážně v C. Při vytváření tohoto typu aplikace, máte taky možnost výběru programovat přímo s smyčku zpráv ve stylu jazyka C, který zpracovává události v operačním systému, nebo s použitím *Microsoft Foundation Classes* (MFC), knihovnu C++, která obaluje Win32 způsobem, který je o něco objektově orientovaný. Žádný přístup se považuje za "moderní" ve srovnání s univerzální platformu Windows (viz níže), ale oba jsou stále plně podporované a mít miliony řádků kódu spuštěného v celém světě ještě dnes.
 
-Abyste mohli začít s programováním tradiční Windows C++, naleznete v tématu [Win32 a C++ vám začít](/windows/desktop/LearnWin32/learn-to-program-for-windows). Po získání některé znalost Win32 ji bude snazší naučit [desktopových aplikací knihovny MFC](/mfc/mfc-desktop-applications). Příklad tradiční desktopové aplikace C++, využívající sofistikované grafiky, naleznete v tématu [Hilo: vývoj aplikací C++ pro Windows](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx).
+Abyste mohli začít s programováním tradiční Windows C++, naleznete v tématu [Win32 a C++ vám začít](/windows/desktop/LearnWin32/learn-to-program-for-windows). Po získání některé znalost Win32 ji bude snazší naučit [desktopových aplikací knihovny MFC](/mfc/mfc-desktop-applications). Příklad tradiční desktopové aplikace C++, využívající sofistikované grafiky, naleznete v tématu [Hilo: Vývoj aplikací pro Windows v jazyce C++](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx).
 
 ### <a name="c-or-net"></a>.NET nebo C++? 
 
@@ -73,13 +73,13 @@ Můžete použít [Správce balíčků Vcpkg](../vcpkg.md) stovky open source kn
 
 Knihovny Microsoft patří:
 
-- Třídy knihovny MFC (Microsoft Foundation Classes): Objektově orientovaný rámec pro vytváření tradičních programů operačního systému Windows (zejména podnikových aplikací), které mají bohatá uživatelská rozhraní obsahující tlačítka, seznamy, stromová zobrazení a další ovládací prvky. Další informace najdete v tématu [desktopových aplikací knihovny MFC](../mfc/mfc-desktop-applications.md).
+- Microsoft Foundation Classes (MFC): Objektově orientovaný rámec pro vytváření tradičních programů Windows – zejména podnikových aplikací, které mají bohatá uživatelská rozhraní obsahující tlačítka, seznamy, stromová zobrazení a další ovládací prvky. Další informace najdete v tématu [desktopových aplikací knihovny MFC](../mfc/mfc-desktop-applications.md).
 
-- Knihovna ATL (Active Template Library): Výkonné pomocné knihovny pro vytváření komponent modelu COM. Další informace najdete v tématu [desktopové komponenty ATL COM](../atl/atl-com-desktop-components.md).
+- Knihovna aktivní šablony (knihovny ATL): Výkonné pomocné knihovny pro vytváření komponent COM. Další informace najdete v tématu [desktopové komponenty ATL COM](../atl/atl-com-desktop-components.md).
 
-- Knihovna C++ AMP (C++ Accelerated Massive Parallelism): Knihovna, která umožňuje vysoce výkonné obecné výpočetní práce na GPU. Další informace najdete v tématu [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md).
+- C++ AMP (C++ Accelerated Massive Parallelism): Knihovna, která umožňuje vysoce výkonné obecné výpočetní práce na GPU. Další informace najdete v tématu [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md).
 
-- Modul Concurrency Runtime: Knihovna, která zjednodušuje práci paralelního a asynchronního programování pro vícejádrová a mnohojádrová zařízení. Další informace najdete v tématu [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).
+- Modul Concurrency Runtime: Knihovna, která zjednodušuje práci paralelního a asynchronního programování pro Vícejádrová a mnohojádrová zařízení. Další informace najdete v tématu [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).
 
 Mnoho programovacích scénářů pro Windows navíc také vyžaduje sadu Windows SDK obsahující soubory hlaviček, které umožňují přístup ke komponentám operačního systému Windows. Ve výchozím nastavení nainstaluje Visual Studio jako součást sady funkcí C++ Desktop, umožňující vývoj aplikací pro Windows Universal Windows SDK. K vývoji aplikací pro UWP, musíte verzi sady Windows SDK pro Windows 10. Informace najdete v tématu [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk). (Další informace o sady Windows SDK u starších verzí systému Windows, najdete v článku [sady Windows SDK archivu](https://developer.microsoft.com/windows/downloads/sdk-archive)).
 
@@ -89,7 +89,7 @@ Jiné platformy, jako je například konzola Xbox a Azure mají své vlastní s
 
 ## <a name="development-tools"></a>Nástroje pro vývoj
 
-Systém Visual Studio obsahuje výkonný ladicí program pro nativní kód, nástroje pro statickou analýzu, nástroje pro ladění grafiky, úplný editor kódu, podporu pro testování částí a mnoho dalších nástrojů a pomůcek. Další informace najdete v tématu [začít s vývojem pomocí sady Visual Studio](/visualstudio/ide/get-started-developing-with-visual-studio), a [IDE a nástroje pro vývoj](../ide/ide-and-tools-for-visual-cpp-development.md).
+Systém Visual Studio obsahuje výkonný ladicí program pro nativní kód, nástroje pro statickou analýzu, nástroje pro ladění grafiky, úplný editor kódu, podporu pro testování částí a mnoho dalších nástrojů a pomůcek. Další informace najdete v tématu [začít s vývojem pomocí sady Visual Studio](/visualstudio/ide/get-started-developing-with-visual-studio), a [C++ přehled vývoje v sadě Visual Studio](../overview-of-cpp-development.md).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 |Název|Popis|

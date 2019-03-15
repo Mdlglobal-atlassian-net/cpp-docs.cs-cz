@@ -5,16 +5,16 @@ helpviewer_keywords:
 - resource-only DLLs [C++], creating
 - DLLs [C++], creating
 ms.assetid: e6b1d4da-7275-467f-a58c-a0a8a5835199
-ms.openlocfilehash: d2854c9ca993e9f1f27cab60cdd09e28ce2985f1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7f0bad94cf3f126d27cc29567bd4f6c4a846bf1e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412643"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814381"
 ---
 # <a name="creating-a-resource-only-dll"></a>Vytvoření knihovny DLL obsahující pouze prostředky
 
-Knihovny DLL pouze prostředků je knihovnu DLL, která obsahuje prostředky, jako jsou ikony, bitmapy, řetězce a dialogová okna. Použití knihovny DLL pouze prostředků je dobrým způsobem, jak sdílet stejnou sadu prostředků mezi více aplikacemi. Je také vhodný způsob aplikace s prostředky lokalizovanými pro více jazyků (viz [lokalizované prostředky v aplikacích MFC: Satelitní knihovny DLL](../build/localized-resources-in-mfc-applications-satellite-dlls.md)).
+Knihovny DLL pouze prostředků je knihovnu DLL, která obsahuje prostředky, jako jsou ikony, bitmapy, řetězce a dialogová okna. Použití knihovny DLL pouze prostředků je dobrým způsobem, jak sdílet stejnou sadu prostředků mezi více aplikacemi. Je také vhodný způsob aplikace s prostředky lokalizovanými pro více jazyků (viz [lokalizované prostředky v aplikacích MFC: Satelitní knihovny DLL](localized-resources-in-mfc-applications-satellite-dlls.md)).
 
 Pokud chcete vytvořit knihovnu DLL pouze prostředků, vytvořte nový projekt Win32 DLL (non-MFC) a přidat prostředky do projektu.
 
@@ -24,11 +24,11 @@ Pokud chcete vytvořit knihovnu DLL pouze prostředků, vytvořte nový projekt 
 
 - Na **projektu** nabídky, klikněte na tlačítko **přidat existující položku**a pak vloží nový soubor .rc do projektu.
 
-- Zadejte [NOENTRY](../build/reference/noentry-no-entry-point.md) – možnost linkeru. / NOENTRY brání linkeru v propojení odkazu na `_main` do knihovny DLL; tato možnost je vyžadována pro vytvoření knihovny DLL pouze prostředků.
+- Zadejte [NOENTRY](reference/noentry-no-entry-point.md) – možnost linkeru. / NOENTRY brání linkeru v propojení odkazu na `_main` do knihovny DLL; tato možnost je vyžadována pro vytvoření knihovny DLL pouze prostředků.
 
 - Sestavení knihovny DLL.
 
-Aplikace, která používá knihovnu DLL pouze prostředků by měly volat [LoadLibrary](../build/loadlibrary-and-afxloadlibrary.md) pro explicitní propojení ke knihovně DLL. Přístup k prostředkům, volání obecné funkce `FindResource` a `LoadResource`, pracovat na libovolný typ prostředku nebo volání jednoho z následujících funkcí specifických pro prostředky:
+Aplikace, která používá knihovnu DLL pouze prostředků by měly volat [LoadLibrary](loadlibrary-and-afxloadlibrary.md) pro explicitní propojení ke knihovně DLL. Přístup k prostředkům, volání obecné funkce `FindResource` a `LoadResource`, pracovat na libovolný typ prostředku nebo volání jednoho z následujících funkcí specifických pro prostředky:
 
 - `FormatMessage`
 
@@ -49,4 +49,4 @@ Aplikace by měly volat `FreeLibrary` po dokončení používání prostředků.
 ## <a name="see-also"></a>Viz také:
 
 [Práce se zdrojovými soubory](../windows/working-with-resource-files.md)<br/>
-[Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)
+[Knihovny DLL v jazyce Visual C++](dlls-in-visual-cpp.md)

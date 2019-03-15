@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - dynamically linked DLLs [C++]
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
-ms.openlocfilehash: 548fbde379937ab4d915f08a43a8b865e071d688
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3bfed5f75dab4c501708950fdb99f53c40ec142c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413170"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821297"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>Běžné knihovny MFC DLL staticky propojené do MFC
 
@@ -83,18 +83,18 @@ Příklad toho, jak zapisovat, vytvářet a využívat běžné knihovny MFC DLL
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
-- [Inicializovat obvyklé knihovny DLL MFC](../build/run-time-library-behavior.md#initializing-regular-dlls)
+- [Inicializovat obvyklé knihovny DLL MFC](run-time-library-behavior.md#initializing-regular-dlls)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
 
-- [Stavy modulů běžné knihovny MFC DLL dynamicky propojené do MFC](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)
+- [Stavy modulů běžné knihovny MFC DLL dynamicky propojené do MFC](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)
 
 - [Správa dat stavu modulů knihovny MFC](../mfc/managing-the-state-data-of-mfc-modules.md)
 
-- [Používání databázových, OLE a soketových rozšiřujících knihoven MFC DLL v běžných knihovnách MFC DLL](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+- [Používání databázových, OLE a soketových rozšiřujících knihoven MFC DLL v běžných knihovnách MFC DLL](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
 - [Použití prostředí MFC jako součásti knihovny DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
 ## <a name="see-also"></a>Viz také:
 
-[Typy knihoven DLL](../build/kinds-of-dlls.md)
+[Typy knihoven DLL](kinds-of-dlls.md)

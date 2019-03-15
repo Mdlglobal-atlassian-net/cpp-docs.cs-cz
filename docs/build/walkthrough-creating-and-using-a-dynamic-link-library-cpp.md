@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: fb77230d5cc27c1fba1f7df1404150fada36d43a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c1f59c704e96ade82295f4ae88265f549987e981
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416446"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813965"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Návod: Vytvoření a použití vlastní dynamické propojení knihovny (C++)
 
@@ -29,11 +29,11 @@ Tento návod pokrývá následující úkoly:
 
 - Spusťte dokončenou aplikaci.
 
-Staticky propojené knihovny, knihovny DLL, jako jsou _exportuje_ proměnné, funkce a prostředky podle názvu a vaše aplikace _importuje_ tyto názvy používat tyto proměnné, funkce a prostředky. Na rozdíl od staticky propojené knihovny Windows se připojí k exportů v knihovně DLL v okamžiku načtení nebo v době běhu, namísto připojení v době spojení importy ve vaší aplikaci. Windows vyžaduje dodatečné informace, které nejsou součástí standardní model kompilace C++ k vytvoření těchto připojení. Kompilátor Visual C++ implementuje některá rozšíření specifické pro společnost Microsoft c++ poskytuje tyto dodatečné informace. Tato rozšíření vám vysvětlíme, jak budeme.
+Staticky propojené knihovny, knihovny DLL, jako jsou _exportuje_ proměnné, funkce a prostředky podle názvu a vaše aplikace _importuje_ tyto názvy používat tyto proměnné, funkce a prostředky. Na rozdíl od staticky propojené knihovny Windows se připojí k exportů v knihovně DLL v okamžiku načtení nebo v době běhu, namísto připojení v době spojení importy ve vaší aplikaci. Windows vyžaduje dodatečné informace, které nejsou součástí standardní model kompilace C++ k vytvoření těchto připojení. Kompilátor MSVC implementuje některá rozšíření specifické pro společnost Microsoft c++ poskytuje tyto dodatečné informace. Tato rozšíření vám vysvětlíme, jak budeme.
 
 Tento návod vytvoří dvě řešení sady Visual Studio; ten, který vytvoří knihovnu DLL a ten, který sestaví klientské aplikace. Knihovnu DLL používá konvence volání jazyka C, takže může být volána z aplikace vytvořené pomocí jiných jazycích, za předpokladu, platformy a volání a konvence propojení shodovat. Tato aplikace používá klienta _implicitní propojení_, ve kterém Windows odkazy na knihovny DLL v okamžiku načtení aplikace. Toto propojení umožní aplikaci volání funkcí knihovny DLL zadaný stejně jako funkce v staticky propojené knihovny.
 
-Tento názorný postup nezahrnuje některé běžné situace. Použití knihovny DLL jazyka C++ jiné programovací jazyky nezobrazí. Vytvoření knihovny DLL pouze prostředků nezobrazí. Nezobrazí ani použití explicitní načtení knihovny DLL v době běhu, spíše než v okamžiku načtení. Buďte bez obav, můžete použít Visual C++ k provádění těchto akcí. Odkazy na další informace o knihovnách DLL naleznete v části [knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md). Další informace o implicitní a explicitní propojení najdete v tématu [určující, kterou propojovací metodu použít](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use). Informace o vytváření knihovny DLL C++ pro použití s programovací jazyky, které používají jazyk C konvence propojení najdete v tématu [export funkcí jazyka C++ pro použití ve spustitelných souborech jazyka C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md). Informace o tom, jak vytvořit knihovny DLL pro použití s jazyky rozhraní .NET najdete v tématu [volání funkcí knihovny DLL z aplikací Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md).
+Tento názorný postup nezahrnuje některé běžné situace. Použití knihovny DLL jazyka C++ jiné programovací jazyky nezobrazí. Vytvoření knihovny DLL pouze prostředků nezobrazí. Nezobrazí ani použití explicitní načtení knihovny DLL v době běhu, spíše než v okamžiku načtení. Buďte bez obav, můžete použít Visual C++ k provádění těchto akcí. Odkazy na další informace o knihovnách DLL naleznete v části [knihovny DLL v jazyce Visual C++](dlls-in-visual-cpp.md). Další informace o implicitní a explicitní propojení najdete v tématu [určující, kterou propojovací metodu použít](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use). Informace o vytváření knihovny DLL C++ pro použití s programovací jazyky, které používají jazyk C konvence propojení najdete v tématu [export funkcí jazyka C++ pro použití ve spustitelných souborech jazyka C](exporting-cpp-functions-for-use-in-c-language-executables.md). Informace o tom, jak vytvořit knihovny DLL pro použití s jazyky rozhraní .NET najdete v tématu [volání funkcí knihovny DLL z aplikací Visual Basic](calling-dll-functions-from-visual-basic-applications.md).
 
 Tento návod používá Visual Studio 2017, ale kód a většina pokyny platí pro starší verze. Postup pro vytváření nových projektů změnit, spouští se v sadě Visual Studio 2017 verze 15.3. Tento návod popisuje, jak vytvářet projekty pro novější i starší verze. Vyhledejte kroky, které odpovídají verzi sady Visual Studio.
 
@@ -400,7 +400,4 @@ Když nasadíte aplikaci, je nutné nasadit knihoven DLL, která používá. Nej
 
 ## <a name="see-also"></a>Viz také:
 
-[Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)<br/>
-[Nasazení aplikací klasické pracovní plochy](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
-[Návod: Nasazení programu (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
-[Volání funkcí knihovny DLL z aplikací Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md)
+[Volání funkcí knihovny DLL z aplikací Visual Basic](calling-dll-functions-from-visual-basic-applications.md)

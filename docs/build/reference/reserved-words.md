@@ -17,28 +17,28 @@ helpviewer_keywords:
 - linker [C++], reserved words
 - reserved words [C++]
 ms.assetid: 9b9f49e5-0739-45ab-a37e-81e3915ceb25
-ms.openlocfilehash: 360baf479f9100483fe694ca8860dfc1d7ebfe11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d51f599dfb81dfa860e1bdba86c4372e80379fb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502463"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822441"
 ---
 # <a name="reserved-words"></a>Vyhrazená slova
 
-Tato slova jsou vyhrazena linkerem. Tyto názvy můžete použít jako argumenty v [příkazy definice modulu](../../build/reference/module-definition-dot-def-files.md) pouze v případě, že je název uzavřen do dvojitých uvozovek ("").
+Tato slova jsou vyhrazena linkerem. Tyto názvy můžete použít jako argumenty v [příkazy definice modulu](module-definition-dot-def-files.md) pouze v případě, že je název uzavřen do dvojitých uvozovek ("").
 
 ||||
 |-|-|-|
-|**OBJEKTU APPLOADER**<sup>1</sup>|**INITINSTANCE –**<sup>2</sup>|**PŘEDBĚŽNÉ NAČTENÍ**|
+|**OBJEKTU APPLOADER**<sup>1</sup>|**INITINSTANCE –**<sup>2</sup>|**PRELOAD**|
 |**ZÁKLAD**|**IOPL**|**PRIVÁTNÍ**|
 |**KÓD**|**KNIHOVNA**<sup>1</sup>|**PROTMODE**<sup>2</sup>|
 |**VYHOVUJÍCÍ**|**LOADONCALL**<sup>1</sup>|**ČISTĚ**<sup>1</sup>|
-|**DATA**|**LONGNAMES**<sup>2</sup>|**JEN PRO ČTENÍ**|
+|**DATA**|**LONGNAMES**<sup>2</sup>|**READONLY**|
 |**POPIS**|**POHYBLIVÉ**<sup>1</sup>|**READWRITE**|
 |**DEV386**|**LZE PŘESUNOUT**<sup>1</sup>|**PODSLOŽEK REALMODE**<sup>1</sup>|
-|**DISCARDABLE**|**VÍCE**|**REZIDENTNÍ**|
-|**DYNAMICKÉ**|**JMÉNO**|**RESIDENTNAME**<sup>1</sup>|
+|**DISCARDABLE**|**MULTIPLE**|**REZIDENTNÍ**|
+|**DYNAMIC**|**JMÉNO**|**RESIDENTNAME**<sup>1</sup>|
 |**POUZE PRO SPUŠTĚNÍ**|**NEWFILES**<sup>2</sup>|**ODDÍLY**|
 |**EXECUTEONLY**|**NODATA**<sup>1</sup>|**SEGMENTY**|
 |**EXECUTEREAD**|**NOIOPL**<sup>1</sup>|**SDÍLET**|
@@ -49,7 +49,7 @@ Tato slova jsou vyhrazena linkerem. Tyto názvy můžete použít jako argumenty
 |**VELIKOST HALDY**|**NESDÍLENÉ**|**WINDOWAPI**|
 |**IMPORTY**|**NOTWINDOWCOMPAT**<sup>1</sup>|**WINDOWCOMPAT**|
 |**ZNEČIŠTĚNÁ**<sup>1</sup>|**OBJEKTY**|**SYSTÉM WINDOWS**|
-|**ZAHRNOUT**<sup>2</sup>|**STARÉ**<sup>1</sup>||
+|**ZAHRNOUT**<sup>2</sup>|**OLD**<sup>1</sup>||
 
 <sup>1</sup> linkeru vysílá varování ("ignoruje"), pokud se setká s tímto termínem. Je však stále rezervované slovo.
 
@@ -57,5 +57,5 @@ Tato slova jsou vyhrazena linkerem. Tyto názvy můžete použít jako argumenty
 
 ## <a name="see-also"></a>Viz také:
 
-- [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)
-- [Možnosti linkeru](../../build/reference/linker-options.md)
+- [Odkaz na MSVC linkeru](linking.md)
+- [Možnosti Linkeru MSVC](linker-options.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLLs [C++], building
 - DLL linker option [C++]
 ms.assetid: c7685aec-31d0-490f-9503-fb5171a23609
-ms.openlocfilehash: edad85b2890679e4247c7d34b4e19534e871f4dd
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5f7907d659ee3bedc590b88320df03edce005b06
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420060"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820504"
 ---
 # <a name="dll-build-a-dll"></a>/DLL (Sestavit knihovnu DLL)
 
@@ -29,9 +29,9 @@ Možnost/DLL sestavení a knihovny DLL jako hlavní výstupního souboru. Knihov
 
 1. [__declspec(dllexport)](../../cpp/dllexport-dllimport.md) ve zdrojovém kódu
 
-1. [EXPORTY](../../build/reference/exports.md) – příkaz souboru .def
+1. [EXPORTY](exports.md) – příkaz souboru .def
 
-1. [/EXPORT](../../build/reference/export-exports-a-function.md) specifikace v příkazu LINK
+1. [/EXPORT](export-exports-a-function.md) specifikace v příkazu LINK
 
 Program můžete použít více než jednu metodu.
 
@@ -43,7 +43,7 @@ Všimněte si, že když vytvoříte knihovny importu v předběžný krok před
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **vlastnosti konfigurace** složky.
 
@@ -57,5 +57,5 @@ Všimněte si, že když vytvoříte knihovny importu v předběžný krok před
 
 ## <a name="see-also"></a>Viz také:
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)
+[Odkaz na MSVC linkeru](linking.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)

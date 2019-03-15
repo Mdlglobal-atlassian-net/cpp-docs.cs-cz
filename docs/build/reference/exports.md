@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - EXPORTS .def file statement
 ms.assetid: dbcd7579-b855-44c4-bd27-931e157657f7
-ms.openlocfilehash: b12548bafa9a0c580c5976cd7c4c54d8726e5ace
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33b70c680bfc3db24f5326a2027fa9ec4740e3f2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435672"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814134"
 ---
 # <a name="exports"></a>EXPORTY
 
@@ -28,7 +28,7 @@ První *definice* může být na stejném řádku jako `EXPORTS` – klíčové 
 
 Syntaxe pro export *definice* je:
 
-> *název_položky*\[__=__*internal_name*|*other_module.exported_name*] \[ **\@** _ordinální_ \[ **NONAME**]] \[ \[ **PRIVÁTNÍ**] | \[ **DATA**]]
+> *entryname*\[__=__*internal_name*|*other_module.exported_name*] \[**\@**_ordinal_ \[**NONAME**] ] \[ \[**PRIVATE**] | \[**DATA**] ]
 
 *název_položky* je název funkce nebo proměnná, která chcete exportovat. Toto je povinné. Pokud se název, který exportujete liší od názvu v knihovně DLL, zadejte název pro export v knihovně DLL pomocí *internal_name*. Například, pokud vaše knihovna DLL exportuje funkce `func1` a chcete, aby volající použít ho jako `func2`, zadali byste:
 
@@ -51,9 +51,9 @@ EXPORTS
    func2=other_module.#42
 ```
 
-Protože kompilátor Visual C++ používá dekorování názvů pro funkce jazyka C++, je nutné použít upravený název *internal_name* nebo definovat exportovaných funkcí s použitím `extern "C"` ve zdrojovém kódu. Kompilátor také upraví funkcí jazyka C, které používají [__stdcall](../../cpp/stdcall.md) podtržítkem konvence volání (\_) předponu a příponu tvořený zavináč (\@) následovaný počtem bajtů (v desítkové soustavě) v Seznam argumentů.
+Protože kompilátor MSVC používá dekorování názvů pro funkce jazyka C++, je nutné použít upravený název *internal_name* nebo definovat exportovaných funkcí s použitím `extern "C"` ve zdrojovém kódu. Kompilátor také upraví funkcí jazyka C, které používají [__stdcall](../../cpp/stdcall.md) podtržítkem konvence volání (\_) předponu a příponu tvořený zavináč (\@) následovaný počtem bajtů (v desítkové soustavě) v Seznam argumentů.
 
-Pokud chcete zjistit dekorované názvy produkované kompilátorem, použijte [DUMPBIN](../../build/reference/dumpbin-reference.md) nástroje nebo linker [/MAP](../../build/reference/map-generate-mapfile.md) možnost. Dekorované názvy jsou specifické pro kompilátor. Pokud exportujete dekorované názvy ve. Soubor DEF spustitelné soubory, které na knihovnu DLL musí být sestaveny také pomocí stejné verze kompilátoru. Tím se zajistí, že dekorované názvy volajícího odpovídaly exportovaným názvům v. Soubor DEF.
+Pokud chcete zjistit dekorované názvy produkované kompilátorem, použijte [DUMPBIN](dumpbin-reference.md) nástroje nebo linker [/MAP](map-generate-mapfile.md) možnost. Dekorované názvy jsou specifické pro kompilátor. Pokud exportujete dekorované názvy ve. Soubor DEF spustitelné soubory, které na knihovnu DLL musí být sestaveny také pomocí stejné verze kompilátoru. Tím se zajistí, že dekorované názvy volajícího odpovídaly exportovaným názvům v. Soubor DEF.
 
 Můžete použít \@ *ordinální* k určení, že číslo a ne název funkce, přejde do tabulky exportu knihovny DLL. Mnoho knihoven DLL Windows exportovat řadové číslovky důvodu podpory původního kódu. Bylo běžné použití řadové číslovky v 16bitového kódu Windows, protože může pomoct minimalizovat velikost knihovny DLL. Nedoporučujeme export funkcí podle pořadových čísel, pokud ho vaše knihovna DLL klienti potřebovat pro stále podporuje starší verze. Vzhledem k tomu,. LIB soubor bude obsahovat mapování mezi řadová číslovka a funkci, můžete použít název funkce, jako byste normálně v projektech, které používají knihovnu DLL.
 
@@ -74,7 +74,7 @@ Existují čtyři způsoby, jak exportovat definici uvedené v doporučené poř
 
 1. `EXPORTS` Výroky. Soubor DEF
 
-1. [/EXPORT](../../build/reference/export-exports-a-function.md) specifikace v příkazu LINK
+1. [/EXPORT](export-exports-a-function.md) specifikace v příkazu LINK
 
 1. A [komentář](../../preprocessor/comment-c-cpp.md) směrnice ve zdrojovém kódu formuláře `#pragma comment(linker, "/export: definition ")`. Následující příklad ukazuje Direktiva #pragma komentář před deklarací funkce, kde `PlainFuncName` je nedekorovaný název a `_PlainFuncName@4` je upravený název funkce:
 
@@ -102,4 +102,4 @@ Při exportu proměnné z knihovny DLL pomocí. Soubor DEF, není nutné zadat `
 
 ## <a name="see-also"></a>Viz také:
 
-[Pravidla pro příkazy definice modulu](../../build/reference/rules-for-module-definition-statements.md)
+[Pravidla pro příkazy definice modulu](rules-for-module-definition-statements.md)
