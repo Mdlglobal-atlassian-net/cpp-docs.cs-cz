@@ -2,12 +2,12 @@
 title: Jazyk C/C++ a standardní knihovny
 ms.date: 11/04/2016
 ms.assetid: c26a6682-961a-43ef-ad33-2adc612f69ac
-ms.openlocfilehash: c071db1dcc6363e29f5dd7ca895330d738e021cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ec50a055db07514d10ac078030dd1878d033cc6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614419"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816383"
 ---
 # <a name="cc-language-and-standard-libraries"></a>Jazyk C/C++ a standardní knihovny
 
@@ -24,5 +24,5 @@ Tato část dokumentace obsahuje pokyny a referenční obsah pro implementaci Mi
 |[Referenční dokumentace knihovny CRT](../c-runtime-library/c-run-time-library-reference.md)|Referenční obsah pro implementaci Microsoft C Runtime (CRT).|
 |[SafeInt – knihovna](../windows/safeint-library.md)|Referenční obsah pro knihovnu funkcí, které zpracovávají celá čísla bez rizika přetečení.|
 |[Visual C++](../visual-cpp-in-visual-studio.md)|Popisuje klíčové funkce jazyka Visual C++ v systému Visual Studio a odkazy na zbytek dokumentace k jazyku Visual C++.|
-|[Integrované vývojové prostředí a nástroje pro vývoj](../ide/ide-and-tools-for-visual-cpp-development.md)|Odkazy na další články, které obsahují informace o tom, jak pomocí sady Visual Studio a jeho souvisejících nástrojů k vytvoření, sestavení a nasazení aplikací v jazyce C++.|
+|[Přehled o vývoji v jazyce C++ v sadě Visual Studio](../overview-of-cpp-development.md)|Odkazy na další články, které obsahují informace o tom, jak pomocí sady Visual Studio a jeho souvisejících nástrojů k vytvoření, sestavení a nasazení aplikací v jazyce C++.|
 |[Co je nového v aplikaci Visual C++](../what-s-new-for-visual-cpp-in-visual-studio.md)|Popisuje nové funkce a vylepšení v této verzi.|

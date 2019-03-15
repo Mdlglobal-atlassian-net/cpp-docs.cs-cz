@@ -14,16 +14,16 @@ helpviewer_keywords:
 - .pdb files, creating
 - FD compiler option [C++]
 ms.assetid: 3977a9ed-f0ac-45df-bf06-01cedd2ba85a
-ms.openlocfilehash: 2c64a4ec0d7799d7bad698808e959d11e87cdc85
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c686de7dc9c9c20c404240db558d2ff66078ceb7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422439"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808986"
 ---
 # <a name="fd-program-database-file-name"></a>/Fd (Název souboru databáze programu)
 
-Určuje název souboru pro soubor databáze (PDB) program vytvořil [/Z7, / zi, /ZI (formát informací o ladění)](../../build/reference/z7-zi-zi-debug-information-format.md).
+Určuje název souboru pro soubor databáze (PDB) program vytvořil [/Z7, / zi, /ZI (formát informací o ladění)](z7-zi-zi-debug-information-format.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,7 +43,7 @@ Tato možnost také názvy souboru stavu (IDB) používá pro minimální opěto
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **C/C++** složky.
 
@@ -65,7 +65,7 @@ CL /DDEBUG /Zi /FdPROG.PDB PROG.CPP
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti výstupního souboru (/F)](../../build/reference/output-file-f-options.md)<br/>
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
-[Určení názvu cesty](../../build/reference/specifying-the-pathname.md)
+[Možnosti výstupního souboru (/F)](output-file-f-options.md)<br/>
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
+[Určení názvu cesty](specifying-the-pathname.md)

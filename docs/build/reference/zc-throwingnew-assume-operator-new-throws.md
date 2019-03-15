@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 20ff0101-9677-4d83-8c7b-8ec9ca49f04f
-ms.openlocfilehash: 782cb55d30bfb11f55a0074a5c3245dd389323ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8c7b4e7246cc3bb1b3a73cde4f6830eb7178dd2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561223"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813510"
 ---
 # <a name="zcthrowingnew-assume-operator-new-throws"></a>/Zc:throwingNew (že operátor new vyvolá výjimku)
 
@@ -30,7 +30,7 @@ Když **/Zc:throwingNew** je zadána možnost, kompilátor optimalizuje volání
 
 Od verze ISO C ++ 98, má zadanou standardu, který výchozí [operátor new](../../standard-library/new-operators.md#op_new) vyvolá `std::bad_alloc` při selhání přidělení paměti. Verze aplikace Visual C++ do sady Visual Studio 6.0 vrátí ukazatel s hodnotou null na selhání přidělení. Od sady Visual Studio 2002, `operator new` odpovídá standardu a vyvolá výjimku při selhání. Kód, který používá starší styl přidělení, Visual Studio podporuje propojovací provádění `operator new` v nothrownew.obj, která vrací ukazatel s hodnotou null při selhání. Ve výchozím nastavení vygeneruje kompilátor také obranné kontroly hodnoty null, tyto starší styl alokátorů zabránit způsobí okamžité selhání při selhání. **/Zc:throwingNew** možnost instruuje kompilátor, aby vynechat tyto kontroly hodnoty null, za předpokladu, že všechny propojené paměti alokátorů řídí standardem. Tato akce není požadována k explicitní non-throwing. `operator new` přetížení, které jsou deklarovány pomocí další parametr typu `std::nothrow_t` a používat explicitní `noexcept` specifikace.
 
-Koncepčně, k vytvoření objektu ve volném úložišti, kompilátor vygeneruje kód pro přidělení paměti a potom k vyvolání konstruktoru inicializovat paměť. Protože kompilátor Visual C++ obvykle nemůže určit-li tento kód se propojí s alokátorem nonkonformní, které nevyvolají, ve výchozím nastavení také vygeneruje kontrolu hodnot null před voláním konstruktoru. To zabraňuje ukazatel s hodnotou null přistoupit přes ukazatel ve volání konstruktoru, pokud selže non-throwing. přidělení. Ve většině případů jsou tyto kontroly nezbytné, protože výchozí `operator new` alokátorů throw místo vrácení ukazatelé s hodnotou null. Kontroly také mít unfortunate vedlejší účinky. Jejich nafouknutí velikost kódu, že vyplnění prediktivní větev a jejich potlačení další optimalizace kompilátoru užitečné například devirtualization nebo const šíření mimo inicializaci objektu. Kontroly k dispozici pouze pro kód podpory, který odkazuje na *nothrownew.obj* nebo má vlastní nonkonformní `operator new` implementace. Pokud nepoužijete nonkonformní `operator new`, doporučujeme použít **/Zc:throwingNew** optimalizaci kódu.
+Koncepčně, k vytvoření objektu ve volném úložišti, kompilátor vygeneruje kód pro přidělení paměti a potom k vyvolání konstruktoru inicializovat paměť. Protože kompilátor MSVC obvykle nemůže určit-li tento kód se propojí s alokátorem nonkonformní, které nevyvolají, ve výchozím nastavení také vygeneruje kontrolu hodnot null před voláním konstruktoru. To zabraňuje ukazatel s hodnotou null přistoupit přes ukazatel ve volání konstruktoru, pokud selže non-throwing. přidělení. Ve většině případů jsou tyto kontroly nezbytné, protože výchozí `operator new` alokátorů throw místo vrácení ukazatelé s hodnotou null. Kontroly také mít unfortunate vedlejší účinky. Jejich nafouknutí velikost kódu, že vyplnění prediktivní větev a jejich potlačení další optimalizace kompilátoru užitečné například devirtualization nebo const šíření mimo inicializaci objektu. Kontroly k dispozici pouze pro kód podpory, který odkazuje na *nothrownew.obj* nebo má vlastní nonkonformní `operator new` implementace. Pokud nepoužijete nonkonformní `operator new`, doporučujeme použít **/Zc:throwingNew** optimalizaci kódu.
 
 **/Zc:throwingNew** možnost je vypnuto ve výchozím nastavení a nemá vliv [/ permissive-](permissive-standards-conformance.md) možnost.
 
@@ -44,7 +44,7 @@ Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete
 
 ## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Z **konfigurace** rozevírací nabídku, vyberte **všechny konfigurace**.
 
@@ -54,9 +54,9 @@ Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
-[/Zc (shoda)](../../build/reference/zc-conformance.md)<br/>
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
+[/Zc (shoda)](zc-conformance.md)<br/>
 [noexcept (C++)](../../cpp/noexcept-cpp.md)<br/>
 [Specifikace výjimek (throw) (C++)](../../cpp/exception-specifications-throw-cpp.md)<br/>
 [ukončit (výjimek)](../../standard-library/exception-functions.md#terminate)<br/>

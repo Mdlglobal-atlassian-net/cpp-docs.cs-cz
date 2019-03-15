@@ -9,12 +9,12 @@ helpviewer_keywords:
 - linker [C++], assembly signing
 - strong-named assemblies [C++]
 ms.assetid: c337cd3f-e5dd-4c6f-a1ad-437e85dba1cc
-ms.openlocfilehash: 762c95c3ecc60995e8d0e6f9e4f7bc95d179c26f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: ac46d069ece3c75af93f93497169d054b45267d0
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747498"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813926"
 ---
 # <a name="strong-name-assemblies-assembly-signing-ccli"></a>Sestavení se silným názvem (Podepisování sestavení) (C++/CLI)
 
@@ -34,7 +34,7 @@ Mezi důvody bez použití atributů patří skutečnost, že název klíče, kt
 
 Pokud podepsat sestavení pomocí možnosti propojovacího programu sestavení na příkazovém řádku a pak spusťte nástroj následného zpracování (například mt.exe), musíte znovu podepsat sestavení s sn.exe. Alternativně můžete vytvářet a zpoždění podepsání sestavení a po spuštění nástroje následného zpracování, dokončení podpisu.
 
-Pokud používáte podepisování atributů při sestavování ve vývojovém prostředí, můžete podepsat sestavení úspěšně explicitně voláním sn.exe ([Sn.exe (nástroj Strong Name)](/dotnet/framework/tools/sn-exe-strong-name-tool)) v události po sestavení. Další informace najdete v tématu [určení událostí sestavení](../ide/specifying-build-events.md). Dobu sestavení může být nižší, pokud používáte atributy a událost po sestavení, ve srovnání s použitím možnosti linkeru.
+Pokud používáte podepisování atributů při sestavování ve vývojovém prostředí, můžete podepsat sestavení úspěšně explicitně voláním sn.exe ([Sn.exe (nástroj Strong Name)](/dotnet/framework/tools/sn-exe-strong-name-tool)) v události po sestavení. Další informace najdete v tématu [určení událostí sestavení](../build/specifying-build-events.md). Dobu sestavení může být nižší, pokud používáte atributy a událost po sestavení, ve srovnání s použitím možnosti linkeru.
 
 Následující možnosti linkeru podporují podepisování sestavení:
 

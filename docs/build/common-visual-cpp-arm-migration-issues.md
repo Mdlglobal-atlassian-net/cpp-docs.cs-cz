@@ -2,12 +2,12 @@
 title: Běžné problémy s migrací ARM v prostředí Visual C++
 ms.date: 11/04/2016
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-ms.openlocfilehash: 6aea623bc9f096265decbe91ccdc5d5f1f6ecef1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a39e1d5e26a62cafa093067bb42f33178a1af6af
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618510"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816253"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Běžné problémy s migrací ARM v prostředí Visual C++
 
@@ -92,7 +92,7 @@ A pokud neexistuje závislost mezi `operator->(memory_handle)` a `operator*(p)`,
 
 ### <a name="volatile-keyword-default-behavior"></a>volatile – klíčové slovo výchozí chování
 
-Kompilátor MSVC podporuje dvě různé interpretaci `volatile` kvalifikátor úložiště, který určíte pomocí přepínače kompilátoru. [/Volatile:ms](../build/reference/volatile-volatile-keyword-interpretation.md) přepínač vybere rozšířená volatile sémantiku, která zaručí silné řazení, protože byl z důvodu model silného paměti na tyto architektury tradiční případ x86 a x64 společnosti Microsoft. [/Volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) přepínač vybere striktní C++ standardní volatile sémantiku, která nezaručují silné řazení.
+Kompilátor MSVC podporuje dvě různé interpretaci `volatile` kvalifikátor úložiště, který určíte pomocí přepínače kompilátoru. [/Volatile:ms](reference/volatile-volatile-keyword-interpretation.md) přepínač vybere rozšířená volatile sémantiku, která zaručí silné řazení, protože byl z důvodu model silného paměti na tyto architektury tradiční případ x86 a x64 společnosti Microsoft. [/Volatile:iso](reference/volatile-volatile-keyword-interpretation.md) přepínač vybere striktní C++ standardní volatile sémantiku, která nezaručují silné řazení.
 
 V architektuře ARM, výchozí hodnota je **/volatile:iso** protože slabě řazení paměti modelu mají procesory ARM a ARM softwaru nemá starší verze sady spoléhat na rozšířené sémantika **/volatile:ms**  a nemá obvykle rozhraní s software, který nemá. Je však stále někdy vhodné nebo dokonce muset kompilovat aplikace ARM k používání sémantiky rozšířené. Například může být příliš drahé port programu k používání sémantiky ISO C++ nebo ovladač může být nutné splnit tradiční sémantiku fungovat správně. V těchto případech můžete použít **/volatile:ms** přepínače; znovu vytvořit tradiční volatile sémantiky pro cíle ARM, však kompilátor musí vložit překážky paměti kolem každé čtení nebo zápis `volatile` proměnné k vynucení silné řazení, který může mít negativní dopad na výkon.
 
@@ -100,4 +100,4 @@ V architekturách x86 a x64, výchozí hodnota je **/volatile:ms** vzhledem k to
 
 ## <a name="see-also"></a>Viz také:
 
-[Konfigurace Visual C++ pro procesory ARM](../build/configuring-programs-for-arm-processors-visual-cpp.md)
+[Konfigurace Visual C++ pro procesory ARM](configuring-programs-for-arm-processors-visual-cpp.md)

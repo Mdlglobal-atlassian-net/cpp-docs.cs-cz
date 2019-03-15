@@ -9,16 +9,16 @@ helpviewer_keywords:
 - debugging [C++], debug information files
 - Yd compiler option [C++]
 ms.assetid: c5a699fe-65ce-461e-964c-7f5eb2a8320a
-ms.openlocfilehash: 55bb8197cd15243f65c90d7fbd2724f91fce23b4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e6719226d28088d10da6c4f0e6caf3bdb78bea27
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414873"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820153"
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (Umístit informace o ladění do souboru objektu)
 
-Úplné ladicí informace do všech objektových souborů mezery vytvořené ze souboru předkompilované hlavičky (pch) při použití s [/Yc](../../build/reference/yc-create-precompiled-header-file.md) a [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) možnosti. Zastaralé
+Úplné ladicí informace do všech objektových souborů mezery vytvořené ze souboru předkompilované hlavičky (pch) při použití s [/Yc](yc-create-precompiled-header-file.md) a [/Z7](z7-zi-zi-debug-information-format.md) možnosti. Zastaralé
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,9 +28,9 @@ ms.locfileid: "57414873"
 
 ## <a name="remarks"></a>Poznámky
 
-**/Yd** je zastaralá; Jazyk Visual C++ teď podporuje více objektů zápisu do souboru PDB jeden, použijte **/zi** místo. Seznam zastaralých kompilátoru možnosti najdete v tématu **zastaralé a odebrat možnosti kompilátoru** v [možnosti kompilátoru seřazené podle kategorie](../../build/reference/compiler-options-listed-by-category.md).
+**/Yd** je zastaralá; Jazyk Visual C++ teď podporuje více objektů zápisu do souboru PDB jeden, použijte **/zi** místo. Seznam zastaralých kompilátoru možnosti najdete v tématu **zastaralé a odebrat možnosti kompilátoru** v [možnosti kompilátoru seřazené podle kategorie](compiler-options-listed-by-category.md).
 
-Pokud budete muset distribuovat knihovny obsahuje ladicí informace, použijte [/zi](../../build/reference/z7-zi-zi-debug-information-format.md) možnost spíše než **/Z7** a **/Yd**.
+Pokud budete muset distribuovat knihovny obsahuje ladicí informace, použijte [/zi](z7-zi-zi-debug-information-format.md) možnost spíše než **/Z7** a **/Yd**.
 
 Ukládání kompletní informaci o ladění do každého souboru .obj je nezbytné pouze k distribuci knihoven, které obsahují informace o ladění. Zpomaluje kompilace a vyžaduje značné místo na disku. Když **/Yc** a **/Z7** použijí bez **/Yd**, kompilátor uloží v prvním souboru .obj vytvořeného ze souboru .pch běžných informací o ladění. Kompilátor nevkládá tyto informace do souborů obj následně vytvořené ze souboru .pch; Vloží křížové odkazy na informace. Bez ohledu na to, kolik souborů .obj používat soubor .pch obsahuje pouze jeden soubor .obj běžných informací o ladění.
 
@@ -38,13 +38,13 @@ I když toto výchozí chování výsledky v rychlejší doby sestavení a sniž
 
 Další informace o předkompilovaných hlaviček naleznete v tématu:
 
-- [/Y (předkompilované hlavičky)](../../build/reference/y-precompiled-headers.md)
+- [/Y (předkompilované hlavičky)](y-precompiled-headers.md)
 
-- [Vytváření předkompilovaných hlavičkových souborů](../../build/reference/creating-precompiled-header-files.md)
+- [Předkompilované soubory hlaviček](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **C/C++** složky.
 
@@ -83,5 +83,5 @@ Pokud předkompilované hlavičky se nezkompilovalo s **/Z7**, ji mohou dál pou
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

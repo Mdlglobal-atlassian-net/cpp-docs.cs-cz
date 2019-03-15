@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4075
 ms.assetid: f39ad3f9-c263-4cf0-9d70-259fc56ac96d
-ms.openlocfilehash: bba0fa85a3f2590c84cbb6f78fac7e49386d35a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf22e7c78dce6949c357d7ad4a0c76209c88eef3
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548249"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809896"
 ---
 # <a name="linker-tools-warning-lnk4075"></a>Upozornění linkerů LNK4075
 
@@ -21,7 +21,7 @@ Druhá možnost přepíše první.
 
 Jsou zadané linkeru vzájemně se vylučující možnosti.  Prozkoumejte možnosti linkeru.  Tam, kde jsou možnosti linkeru zadán závisí na tom, jak se sestavení projektu.
 
-- Pokud vytváříte ve vývojovém prostředí, podívejte se do stránky vlastností linkeru pro váš projekt a v tématu, kde jsou zadané obě možnosti linkeru.  Zobrazit [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md) Další informace.
+- Pokud vytváříte ve vývojovém prostředí, podívejte se do stránky vlastností linkeru pro váš projekt a v tématu, kde jsou zadané obě možnosti linkeru.  Zobrazit [nastavení kompilátoru a vlastnosti sestavení](../../build/working-with-project-properties.md) Další informace.
 
 - Při sestavování v příkazovém řádku, podívejte se na možnosti linkeru, existuje zadaná.
 

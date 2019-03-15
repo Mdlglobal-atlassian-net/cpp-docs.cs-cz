@@ -6,12 +6,12 @@ helpviewer_keywords:
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-ms.openlocfilehash: 15631b305246cbfd7dcd8081cb1ee488bf225fec
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: a85825eb49b1f8faab7862e902b226c1c1fb6d58
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264800"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812964"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>Konvence volání, parametry a návratový typ
 
@@ -29,7 +29,7 @@ FARPROC WINAPI __delayLoadHelper2(
 *pidd*<br/>
 A `const` ukazatel `ImgDelayDescr` posuny různých dat týkajících se importu, časové razítko pro informace o vazbě a sadu atributů, které poskytují další informace o obsahu, popisovač, který obsahuje. V současné době neexistuje pouze jeden atribut `dlattrRva`, což znamená, že jsou adresy v popisovači relativních virtuálních adres. Další informace najdete v tématu deklarace v *delayimp.h*.
 
-Pro definici `PCImgDelayDescr` struktury, přečtěte si téma [struktura a definice konstant](../../build/reference/structure-and-constant-definitions.md).
+Pro definici `PCImgDelayDescr` struktury, přečtěte si téma [struktura a definice konstant](structure-and-constant-definitions.md).
 
 *ppfnIATEntry*<br/>
 Ukazatel pozice v zpoždění načtení tabulky importních adres (IAT), který se aktualizuje s adresou importované funkce. Pomocná rutina musí ukládat stejnou hodnotu, která se vrátí do tohoto umístění.
@@ -137,4 +137,4 @@ const PfnDliHook __pfnDliNotifyHook2 = delayHook;
 
 ## <a name="see-also"></a>Viz také:
 
-[Základní informace o podpůrné funkci](../../build/reference/understanding-the-helper-function.md)
+[Základní informace o podpůrné funkci](understanding-the-helper-function.md)

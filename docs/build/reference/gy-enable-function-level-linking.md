@@ -13,12 +13,12 @@ helpviewer_keywords:
 - /Gy compiler option [C++]
 - packaged functions
 ms.assetid: 0d3cf14c-ed7d-4ad3-b4b6-104e56f61046
-ms.openlocfilehash: 368bd469a303222ef4d5177677de4940e402b6de
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9643b8b4b4b26b3f7a8a59ed0085601b1a53094d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413105"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817969"
 ---
 # <a name="gy-enable-function-level-linking"></a>/Gy (povolení propojení na úrovni funkcí)
 
@@ -34,18 +34,18 @@ Umožňuje kompilátoru vytvořit balíček individuálních funkcí ve formě z
 
 Propojovací program vyžaduje funkce, ke které balí samostatně jako sekvence Comdat vyloučit nebo pořadí jednotlivých funkcí v souboru DLL nebo .exe.
 
-Můžete použít možnost linkeru [/OPT (optimalizace)](../../build/reference/opt-optimizations.md) neodkazované zabalené funkce vyloučení ze souboru .exe.
+Můžete použít možnost linkeru [/OPT (optimalizace)](opt-optimizations.md) neodkazované zabalené funkce vyloučení ze souboru .exe.
 
-Můžete použít možnost linkeru [/Order (Put funkcí v pořadí)](../../build/reference/order-put-functions-in-order.md) zahrnout zabalené funkce v zadaném pořadí v souboru .exe.
+Můžete použít možnost linkeru [/Order (Put funkcí v pořadí)](order-put-functions-in-order.md) zahrnout zabalené funkce v zadaném pořadí v souboru .exe.
 
 Vložené funkce jsou vždy zabaleny, pokud jsou vytvořeny jako volání (které dojde, například pokud vkládání je vypnout nebo vzít adresu funkce). Kromě toho jsou zabaleny automaticky členských funkcí jazyka C++ definované v deklaraci třídy; Další funkce nejsou, a výběrem této možnosti je potřeba kompilovat jako zabalené funkce.
 
 > [!NOTE]
->  [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) možnost použít pro funkce upravit a pokračovat, automaticky nastaví **/Gy** možnost.
+>  [/Zi](z7-zi-zi-debug-information-format.md) možnost použít pro funkce upravit a pokračovat, automaticky nastaví **/Gy** možnost.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **C/C++** složky.
 
@@ -59,5 +59,5 @@ Vložené funkce jsou vždy zabaleny, pokud jsou vytvořeny jako volání (kter�
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

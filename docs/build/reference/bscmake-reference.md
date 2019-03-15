@@ -10,12 +10,12 @@ helpviewer_keywords:
 - bsc files, building
 - BSCMAKE
 ms.assetid: b97ad994-1355-4809-98db-6abc12c6fb13
-ms.openlocfilehash: 1dd89047b8fa6a415e7e19dd69ca3f499887299f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4303e48e3d02f0f69b177e8a888157a6f90aaa89
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416246"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822350"
 ---
 # <a name="bscmake-reference"></a>BSCMAKE – odkaz
 
@@ -33,18 +33,18 @@ Pokud vytváříte program mimo vývojové prostředí, můžete stále vytvoři
 
 Tento oddíl obsahuje následující témata:
 
-- [Sestavení souborů s informacemi o procházení: Přehled](../../build/reference/building-browse-information-files-overview.md)
+- [Sestavení souborů s informacemi o procházení: Přehled](building-browse-information-files-overview.md)
 
-- [Sestavení souboru .bsc](../../build/reference/building-a-dot-bsc-file.md)
+- [Sestavení souboru .bsc](building-a-dot-bsc-file.md)
 
-- [BscMake – příkazový řádek](../../build/reference/bscmake-command-line.md)
+- [BscMake – příkazový řádek](bscmake-command-line.md)
 
-- [Soubor příkazů BSCMAKE](../../build/reference/bscmake-command-file-response-file.md)
+- [Soubor příkazů BSCMAKE](bscmake-command-file-response-file.md)
 
-- [Možnosti BSCMAKE](../../build/reference/bscmake-options.md)
+- [Možnosti BSCMAKE](bscmake-options.md)
 
-- [BscMake – kódy ukončení](../../build/reference/bscmake-exit-codes.md)
+- [BscMake – kódy ukončení](bscmake-exit-codes.md)
 
 ## <a name="see-also"></a>Viz také:
 
-[Nástroje sestavení C/C++](../../build/reference/c-cpp-build-tools.md)
+[Nástroje pro vytváření dalších MSVC](c-cpp-build-tools.md)

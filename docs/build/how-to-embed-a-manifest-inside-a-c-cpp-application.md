@@ -6,16 +6,16 @@ helpviewer_keywords:
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-ms.openlocfilehash: b1bff23c91b465d697cc52a2b893ece5be3764b1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 332d6d75080be3fdde6b8238ab79b8e5b1d1121e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412897"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809779"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Postupy: Vložení manifestu do aplikace C/C++
 
-Doporučuje se, že aplikace C/C++ (nebo knihovna) mají manifest vložený v koncovém binárním souboru, protože zaručí se tak správný modul runtime chování ve většině scénářů. Ve výchozím nastavení Visual Studio se pokusí pro vložení manifestu při sestavení projektu ze zdrojových souborů. Zobrazit [generování manifestu v sadě Visual Studio](../build/manifest-generation-in-visual-studio.md) Další informace. Ale pokud je aplikace sestavena pomocí nmake, některé existující soubor pravidel jsou nutné změny. Tato část ukazuje, jak změnit existující soubory pravidel pro automatické vložení manifestu v koncovém binárním souboru.
+Doporučuje se, že aplikace C/C++ (nebo knihovna) mají manifest vložený v koncovém binárním souboru, protože zaručí se tak správný modul runtime chování ve většině scénářů. Ve výchozím nastavení Visual Studio se pokusí pro vložení manifestu při sestavení projektu ze zdrojových souborů. Zobrazit [generování manifestu v sadě Visual Studio](manifest-generation-in-visual-studio.md) Další informace. Ale pokud je aplikace sestavena pomocí nmake, některé existující soubor pravidel jsou nutné změny. Tato část ukazuje, jak změnit existující soubory pravidel pro automatické vložení manifestu v koncovém binárním souboru.
 
 ## <a name="two-approaches"></a>Dva přístupy
 
@@ -255,4 +255,4 @@ $(_VC_MANIFEST_BASENAME).auto.manifest :
 
 ## <a name="see-also"></a>Viz také:
 
-[Základní informace o generování manifestu pro programy C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+[Základní informace o generování manifestu pro programy C/C++](understanding-manifest-generation-for-c-cpp-programs.md)

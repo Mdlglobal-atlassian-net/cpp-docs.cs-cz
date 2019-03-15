@@ -2,16 +2,16 @@
 title: /arch (x86)
 ms.date: 11/04/2016
 ms.assetid: 9dd5a75d-06e4-4674-aade-33228486078d
-ms.openlocfilehash: e2aba6dc18db621710b5293f9f970fa5f453b8a9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a429824a7c22aa9aba460481394785d31b92a5ef
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421804"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812249"
 ---
 # <a name="arch-x86"></a>/arch (x86)
 
-Určuje architekturu pro generování kódu na x86. Viz také [/arch (x64)](../../build/reference/arch-x64.md) a [/arch (ARM)](../../build/reference/arch-arm.md).
+Určuje architekturu pro generování kódu na x86. Viz také [/arch (x64)](arch-x64.md) a [/arch (ARM)](arch-arm.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,9 +48,9 @@ Kromě použití instrukce SSE a SSE2, kompilátor používá také další poky
 
 Protože x86 kompilátor generuje kód, který používá SSE2 pokyny ve výchozím nastavení, je nutné zadat **/arch:IA32** zakázat generování instrukcí SSE a SSE2 x86 procesory.
 
-**/ arch** jen ovlivňuje generování kódu pro nativní funkce. Při použití [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) ke kompilaci, **/arch** nemá žádný vliv na generování kódu pro spravované funkce.
+**/ arch** jen ovlivňuje generování kódu pro nativní funkce. Při použití [/CLR](clr-common-language-runtime-compilation.md) ke kompilaci, **/arch** nemá žádný vliv na generování kódu pro spravované funkce.
 
-**/ arch** a [/QIfist](../../build/reference/qifist-suppress-ftol.md) nelze použít na stejném kompilace. Konkrétně, pokud nepoužijete `_controlfp` upravit řídicí slovo FP pak za běhu při spuštění kódu nastaví x87 FPU ovládací prvek slovo přesnost – ovládací prvek pole na 53 bitů. Proto všechny plovoucí desetinnou čárkou a double operace ve výrazu používá 53bitovou mantisy a exponentu 15-bit. Však všechny operace s jednoduchou přesností SSE používá 24-bit mantisy a exponentu 8 bitů a operace s dvojitou přesností SSE2 používají 53bitovou mantisy a 11bitový exponent. Další informace najdete v tématu [_control87 _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md). Tyto rozdíly jsou možné u strom výrazů, ale nejsou v případech, kde je zahrnuta přiřazení uživatelů po každé dílčí výraz. Zvažte použití těchto zdrojů:
+**/ arch** a [/QIfist](qifist-suppress-ftol.md) nelze použít na stejném kompilace. Konkrétně, pokud nepoužijete `_controlfp` upravit řídicí slovo FP pak za běhu při spuštění kódu nastaví x87 FPU ovládací prvek slovo přesnost – ovládací prvek pole na 53 bitů. Proto všechny plovoucí desetinnou čárkou a double operace ve výrazu používá 53bitovou mantisy a exponentu 15-bit. Však všechny operace s jednoduchou přesností SSE používá 24-bit mantisy a exponentu 8 bitů a operace s dvojitou přesností SSE2 používají 53bitovou mantisy a 11bitový exponent. Další informace najdete v tématu [_control87 _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md). Tyto rozdíly jsou možné u strom výrazů, ale nejsou v případech, kde je zahrnuta přiřazení uživatelů po každé dílčí výraz. Zvažte použití těchto zdrojů:
 
 ```cpp
 r = f1 * f2 + d;  // Different results are possible on SSE/SSE2.
@@ -66,7 +66,7 @@ r = t + d;     // This should produce the same overall result
 
 ### <a name="to-set-this-compiler-option-for-avx-avx2-ia32-sse-or-sse2-in-visual-studio"></a>Nastavení této možnosti kompilátoru pro AVX, AVX2, IA32, SSE nebo SSE2 v sadě Visual Studio
 
-1. Otevřít **stránky vlastností** dialogové okno pro projekt. Další informace najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřít **stránky vlastností** dialogové okno pro projekt. Další informace najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace**, **C/C++** složky.
 
@@ -80,6 +80,6 @@ r = t + d;     // This should produce the same overall result
 
 ## <a name="see-also"></a>Viz také:
 
-[/arch (minimální architektura procesoru)](../../build/reference/arch-minimum-cpu-architecture.md)<br/>
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[/arch (minimální architektura procesoru)](arch-minimum-cpu-architecture.md)<br/>
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

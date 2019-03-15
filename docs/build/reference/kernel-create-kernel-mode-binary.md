@@ -5,12 +5,12 @@ f1_keywords:
 - /kernel
 - /kernel-
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
-ms.openlocfilehash: 33a0f4019d8ad278f5850c499ee552ee72279455
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d065364cf6d3ae824098634c070f3651324aa52a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414752"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816448"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (vytvoření binárního režimu jádra)
 
@@ -46,7 +46,7 @@ Následující tabulka obsahuje seznam změn v chování kompilátoru při **/ke
 |RTTI|Zakázané. Všechny instance `dynamic_cast` a `typeid` klíčová slova generuje chybu kompilátoru, není-li `dynamic_cast` slouží staticky.|
 |`new` a `delete`|Je nutné explicitně definovat `new()` nebo `delete()` operátor; kompilátor ani modul runtime bude zadat výchozí definici.|
 
-Vlastní konvence volání, [/GS](../../build/reference/gs-buffer-security-check.md) možnost sestavení a všechny optimalizace jsou povolené při použití **/kernel** možnost. Vkládání je do značné míry není ovlivněn **/kernel**, se stejnou sémantikou kompilátorem respektovány. Pokud chcete, abyste měli jistotu, že `__forceinline` vkládání kvalifikátor zachovaný, ujistěte se, že upozornění [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) je povoleno, abyste věděli, když konkrétní `__forceinline` není vložená funkce.
+Vlastní konvence volání, [/GS](gs-buffer-security-check.md) možnost sestavení a všechny optimalizace jsou povolené při použití **/kernel** možnost. Vkládání je do značné míry není ovlivněn **/kernel**, se stejnou sémantikou kompilátorem respektovány. Pokud chcete, abyste měli jistotu, že `__forceinline` vkládání kvalifikátor zachovaný, ujistěte se, že upozornění [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) je povoleno, abyste věděli, když konkrétní `__forceinline` není vložená funkce.
 
 Pokud je předán kompilátoru **/kernel** přepínače, predefines preprocesorové makro s názvem `_KERNEL_MODE` a hodnotou **1**. Může být využit k podmíněné kompilaci kódu, podle toho, jestli prostředí pro spouštění v uživatelském režimu nebo v režimu jádra. Například následující kód určuje, že třída by měla být v segmentu-stránkované paměti při kompilaci pro spuštění režimu jádra.
 
@@ -88,7 +88,7 @@ Sestavování s **/kernel** také předá **/kernel** linkeru. Jí je, jak to ov
 
 ### <a name="to-set-the-kernel-compiler-option-in-visual-studio"></a>Nastavení možnosti kompilátoru/Kernel v sadě Visual Studio
 
-1. Otevřít **stránky vlastností** dialogové okno pro projekt. Další informace najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřít **stránky vlastností** dialogové okno pro projekt. Další informace najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **C/C++** složky.
 
@@ -98,5 +98,5 @@ Sestavování s **/kernel** také předá **/kernel** linkeru. Jí je, jak to ov
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

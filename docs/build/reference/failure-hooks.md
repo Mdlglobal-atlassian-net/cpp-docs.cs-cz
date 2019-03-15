@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, failure hooks
 ms.assetid: 12bb303b-ffe6-4471-bffe-9ef4f8bb2d30
-ms.openlocfilehash: 2cd691ed4514ac4073f90691ed731670fbd22477
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2fc22ae77d729868adbf8c37d40e450e35a8e866
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417941"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811989"
 ---
 # <a name="failure-hooks"></a>Selhání háků
 
-Selhání připojení je povoleno stejným způsobem jako [oznámení hook](../../build/reference/notification-hooks.md). Zavěšení rutinní musí vrátit vhodnou hodnotu tak, aby zpracování může pokračovat (HINSTANCE nebo FARPROC) nebo 0, která znamená, že by měl být vyvolána výjimka.
+Selhání připojení je povoleno stejným způsobem jako [oznámení hook](notification-hooks.md). Zavěšení rutinní musí vrátit vhodnou hodnotu tak, aby zpracování může pokračovat (HINSTANCE nebo FARPROC) nebo 0, která znamená, že by měl být vyvolána výjimka.
 
 Proměnné ukazatele, který odkazuje na uživatelem definované funkce je:
 
@@ -39,4 +39,4 @@ Pokud je oznámení **dliFailGetProc**, funkce háku může vrátit:
 
 ## <a name="see-also"></a>Viz také:
 
-[Zpracování chyb a oznámení](../../build/reference/error-handling-and-notification.md)
+[Zpracování chyb a oznámení](error-handling-and-notification.md)

@@ -13,16 +13,16 @@ helpviewer_keywords:
 - common subexpression elimination
 - Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
-ms.openlocfilehash: e8032d7dbd771ca1527c6515a779b0f532a2c658
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5e45273b6b609f1bf78504a519c1fb98e2147f76
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420866"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818528"
 ---
 # <a name="og-global-optimizations"></a>/Og (globální optimalizace)
 
-Zastaralé Poskytuje místní a globální optimalizace, automatické registrace přidělení a optimalizace smyčky. Doporučujeme použít buď [/O1 (minimalizaci velikosti)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) nebo [/O2 (maximalizovat rychlost)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) místo.
+Zastaralé Poskytuje místní a globální optimalizace, automatické registrace přidělení a optimalizace smyčky. Doporučujeme použít buď [/O1 (minimalizaci velikosti)](o1-o2-minimize-size-maximize-speed.md) nebo [/O2 (maximalizovat rychlost)](o1-o2-minimize-size-maximize-speed.md) místo.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,7 +30,7 @@ Zastaralé Poskytuje místní a globální optimalizace, automatické registrace
 
 ## <a name="remarks"></a>Poznámky
 
-**/Og** je zastaralý. Tyto optimalizace jsou nyní obecně k dispozici ve výchozím nastavení. Další informace o optimalizaci, naleznete v tématu [/O1, / O2 (minimalizovat velikost, maximální rychlost)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) nebo [/Ox (povolení většina optimalizací pro rychlost)](../../build/reference/ox-full-optimization.md).
+**/Og** je zastaralý. Tyto optimalizace jsou nyní obecně k dispozici ve výchozím nastavení. Další informace o optimalizaci, naleznete v tématu [/O1, / O2 (minimalizovat velikost, maximální rychlost)](o1-o2-minimize-size-maximize-speed.md) nebo [/Ox (povolení většina optimalizací pro rychlost)](ox-full-optimization.md).
 
 Tyto optimalizace jsou k dispozici v rámci **/og**:
 
@@ -76,11 +76,11 @@ Tyto optimalizace jsou k dispozici v rámci **/og**:
    > [!NOTE]
    > Můžete povolit nebo zakázat globální optimalizaci na jednotlivých podle funkcí pomocí `optimize` – Direktiva pragma spolu s `g` možnost.
 
-Související informace naleznete v tématu [/Oi (Generovat vnitřní funkce)](../../build/reference/oi-generate-intrinsic-functions.md) a [/Ox (povolení většina optimalizací pro rychlost)](../../build/reference/ox-full-optimization.md).
+Související informace naleznete v tématu [/Oi (Generovat vnitřní funkce)](oi-generate-intrinsic-functions.md) a [/Ox (povolení většina optimalizací pro rychlost)](ox-full-optimization.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **C/C++** složky.
 
@@ -94,8 +94,4 @@ Související informace naleznete v tématu [/Oi (Generovat vnitřní funkce)](.
 
 ## <a name="see-also"></a>Viz také:
 
-[/O – možnosti (optimalizace kódu)](../../build/reference/o-options-optimize-code.md)
-
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)
-
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

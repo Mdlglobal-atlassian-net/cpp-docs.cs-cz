@@ -6,12 +6,12 @@ helpviewer_keywords:
 - delayed loading of DLLs, constraints
 - DLLs [C++], constraints
 ms.assetid: 0097ff65-550f-4a4e-8ac3-39bf6404f926
-ms.openlocfilehash: 0be2c9e0681018bb61f433f77df8fdd77ba741a5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e37890fcd757a52ddeff0ccd79289bbc0c35e042
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420489"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816578"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>Omezení odloženého načítání knihoven DLL
 
@@ -21,7 +21,7 @@ Existují omezení týkající se načítání zpoždění importu.
 
 - S odloženým načtením Kernel32.dll se nepodporuje. Tato knihovna DLL je nezbytné pro rutiny odloženě zaváděné pomocné rutiny k provádění odloženého načítání.
 
-- [Vytvoření vazby](../../build/reference/binding-imports.md) vstupu body, které se předávají nepodporuje.
+- [Vytvoření vazby](binding-imports.md) vstupu body, které se předávají nepodporuje.
 
 - Zpoždění načítání knihovny DLL nemusí vést stejné chování proces, pokud existují na úrovni jednotlivého procesu inicializace, které se vyskytují ve vstupní bod knihovny DLL načtené se zpožděním. Ostatní případy zahrnují deklarované pomocí statických TLS (úložiště thread local), [__declspec(thread)](../../cpp/thread.md), která není zpracována při načtení knihovny DLL pomocí `LoadLibrary`. Dynamické TLS, pomocí `TlsAlloc`, `TlsFree`, `TlsGetValue`, a `TlsSetValue`, je stále k dispozici pro použití ve statické nebo odloženě zaváděné knihovny DLL.
 
@@ -33,7 +33,7 @@ Existují omezení týkající se načítání zpoždění importu.
 
 ## <a name="see-also"></a>Viz také:
 
-[Podpora linkeru pro knihovny DLL s odloženým načtením](../../build/reference/linker-support-for-delay-loaded-dlls.md)<br/>
+[Podpora linkeru pro knihovny DLL s odloženým načtením](linker-support-for-delay-loaded-dlls.md)<br/>
 [LoadLibrary – funkce](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)<br/>
 [Funkce GetModuleHandle](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea)<br/>
 [GetProcAddress – funkce](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)<br/>

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-ms.openlocfilehash: e8707ac716a010ea1d3dc0fa51740e76a5822462
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 9f5eed60ecb51abc1d8fbd3c38773bbf782b23a5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329297"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808256"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (model zpracování výjimek)
 
@@ -43,7 +43,7 @@ Instruuje kompilátor, aby vždy generovat kontroly ukončení za běhu pro vše
 
 ## <a name="remarks"></a>Poznámky
 
-**/EHa** – možnost kompilátoru je používá pro podporu zpracování asynchronních strukturovaných výjimek (SEH) s nativním kódu C++ `catch(...)` klauzuli. K implementaci SEH bez zadání **/EHa**, můžete použít **__try**, **__except**, a **__finally** syntaxe. I když Windows a Visual C++ podporují SEH, důrazně doporučujeme použít zpracování výjimek jazyka C++ podle standardu ISO (**/EHS** nebo **/EHsc**) totiž kód větší přenositelnosti a flexibility. Nicméně v existujícím kódu nebo v určitých typech programů – například v kódu kompilovaném pro podporu modul common language runtime ([/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)) – budete stále muset použít SEH. Další informace najdete v tématu [strukturovaného zpracování výjimek (C/C++)](../../cpp/structured-exception-handling-c-cpp.md).
+**/EHa** – možnost kompilátoru je používá pro podporu zpracování asynchronních strukturovaných výjimek (SEH) s nativním kódu C++ `catch(...)` klauzuli. K implementaci SEH bez zadání **/EHa**, můžete použít **__try**, **__except**, a **__finally** syntaxe. I když Windows a Visual C++ podporují SEH, důrazně doporučujeme použít zpracování výjimek jazyka C++ podle standardu ISO (**/EHS** nebo **/EHsc**) totiž kód větší přenositelnosti a flexibility. Nicméně v existujícím kódu nebo v určitých typech programů – například v kódu kompilovaném pro podporu modul common language runtime ([/CLR (kompilace Common Language Runtime)](clr-common-language-runtime-compilation.md)) – budete stále muset použít SEH. Další informace najdete v tématu [strukturovaného zpracování výjimek (C/C++)](../../cpp/structured-exception-handling-c-cpp.md).
 
 Určení **/EHa** pokus o zpracování všech výjimek pomocí `catch(...)` může být nebezpečné. Ve většině případů jsou asynchronní výjimky nenapravitelné a měly by se považovat za fatální. Jejich zachycení a zpracování může způsobit poškození procesu a vést k chybám, které lze jen těžko najít a opravit.
 
@@ -94,11 +94,11 @@ Možnost může být zrušena symbolem **-**. Například **/EHsc-** je interpre
 
 **/EHr** – možnost kompilátoru vynutí kontroly ukončení za běhu ve všech funkcí, které mají **noexcept** atribut. Ve výchozím nastavení, kontroly za běhu může být vypuštěn Pokud back-endu kompilátoru zjistí, že funkce jen volá *non-throwing.* funkce. Non-throwing. funkce jsou všechny funkce, které mají atribut, který určuje, že můžou být vyvolány žádné výjimky. To zahrnuje funkce označené **noexcept**, `throw()`, `__declspec(nothrow)`a kdy **parametr/EHC** není zadána, **extern "C"** funkce. Non-throwing. funkce také zahrnovat všechny, které kompilátor zjistil jsou non-throwing. pomocí kontroly. Výchozí hodnota je možné nastavit explicitně pomocí **/EHr-**.
 
-Atribut non-throwing. však není zaručeno, že funkce mohou být vyvolány žádné výjimky. Na rozdíl od chování **noexcept** funkce, kompilátor Visual C++ bude považovat za výjimka vyvolaná objektem funkce deklarovaná pomocí `throw()`, `__declspec(nothrow)`, nebo **extern "C"** jako nedefinovaná chování. Funkce, které používají tyto deklarace tři atributy Nevynucovat kontroly ukončení za běhu pro výjimky. Můžete použít **/EHr** možnost, abyste mohli snadno identifikovat toto nedefinované chování, můžete vynutit bude kompilátor generovat kontroly za běhu pro neošetřené výjimky, které řídicí **noexcept** funkce.
+Atribut non-throwing. však není zaručeno, že funkce mohou být vyvolány žádné výjimky. Na rozdíl od chování **noexcept** funkce, a kompilátorem MSVC bude považovat za výjimka vyvolaná objektem funkce deklarovaná pomocí `throw()`, `__declspec(nothrow)`, nebo **extern "C"** jako nedefinované chování. Funkce, které používají tyto deklarace tři atributy Nevynucovat kontroly ukončení za běhu pro výjimky. Můžete použít **/EHr** možnost, abyste mohli snadno identifikovat toto nedefinované chování, můžete vynutit bude kompilátor generovat kontroly za běhu pro neošetřené výjimky, které řídicí **noexcept** funkce.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **generování kódu**.
 
@@ -112,8 +112,8 @@ Atribut non-throwing. však není zaručeno, že funkce mohou být vyvolány ž�
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
 [Ošetření chyb a výjimek](../../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [Specifikace výjimek (throw)](../../cpp/exception-specifications-throw-cpp.md)<br/>
 [Strukturované zpracování výjimek (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LIBRARY .def file statement
 ms.assetid: 1d7ccc92-e088-4ef7-9ef0-25c3862cc051
-ms.openlocfilehash: 73609be698719da05fff357ba80200c49f598add
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b43f269726e8925abeefd41aab0edfd57b071035
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422661"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811781"
 ---
 # <a name="library"></a>KNIHOVNA
 
@@ -23,12 +23,12 @@ LIBRARY [library][BASE=address]
 
 ## <a name="remarks"></a>Poznámky
 
-*Knihovny* argument určuje název knihovny DLL. Můžete také použít [/OUT](../../build/reference/out-output-file-name.md) – možnost linkeru zadat název výstupní knihovnu DLL.
+*Knihovny* argument určuje název knihovny DLL. Můžete také použít [/OUT](out-output-file-name.md) – možnost linkeru zadat název výstupní knihovnu DLL.
 
-ZÁKLADNÍ =*adresu* argument nastaví základní adresu, operační systém používá k načtení knihovny DLL. Tento argument přepíše výchozí umístění knihovny DLL 0x10000000. Viz popis [/základní](../../build/reference/base-base-address.md) možnost Podrobnosti o základní adresy.
+ZÁKLADNÍ =*adresu* argument nastaví základní adresu, operační systém používá k načtení knihovny DLL. Tento argument přepíše výchozí umístění knihovny DLL 0x10000000. Viz popis [/základní](base-base-address.md) možnost Podrobnosti o základní adresy.
 
-Nezapomeňte použít [/dll](../../build/reference/dll-build-a-dll.md) – možnost linkeru při sestavování knihovny DLL.
+Nezapomeňte použít [/dll](dll-build-a-dll.md) – možnost linkeru při sestavování knihovny DLL.
 
 ## <a name="see-also"></a>Viz také:
 
-[Pravidla pro příkazy definice modulu](../../build/reference/rules-for-module-definition-statements.md)
+[Pravidla pro příkazy definice modulu](rules-for-module-definition-statements.md)

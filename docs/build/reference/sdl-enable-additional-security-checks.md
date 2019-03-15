@@ -4,12 +4,12 @@ ms.date: 11/26/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SDLCheck
 ms.assetid: 3dcf86a0-3169-4240-9f29-e04a9f535826
-ms.openlocfilehash: dd37dae4927531b86cfdac274493b945b066760a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0618b796d492395c3e0e5413047ac0260082baff
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413092"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814199"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (Povolit další kontroly zabezpečení)
 
@@ -23,7 +23,7 @@ Přidá doporučené kontroly Security Development Lifecycle (SDL). Mezi tyto ko
 
 ## <a name="remarks"></a>Poznámky
 
-**/ SDL** umožňuje nadmnožinou směrného plánu kontrol zabezpečení poskytované [/GS](../../build/reference/gs-buffer-security-check.md) a přepíše **/GS-**. Ve výchozím nastavení **/SDL** je vypnuté. **/SDL-** zakáže další bezpečnostní kontroly.
+**/ SDL** umožňuje nadmnožinou směrného plánu kontrol zabezpečení poskytované [/GS](gs-buffer-security-check.md) a přepíše **/GS-**. Ve výchozím nastavení **/SDL** je vypnuté. **/SDL-** zakáže další bezpečnostní kontroly.
 
 ## <a name="compile-time-checks"></a>Kontroly za kompilace
 
@@ -67,7 +67,7 @@ Další informace najdete v tématu [upozornění, / SDL a zlepšení neiniciali
 
 #### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **C/C++** složky.
 
@@ -75,5 +75,5 @@ Další informace najdete v tématu [upozornění, / SDL a zlepšení neiniciali
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

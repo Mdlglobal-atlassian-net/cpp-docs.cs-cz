@@ -10,12 +10,12 @@ helpviewer_keywords:
 - projects [C++], adding functionality
 - class wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: 028434d7404cc02121e9fd961d6566c28f458a0c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 87c46be17c20bf9d592dd2b5c537897fa629e9c2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739799"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822571"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Přidání funkce pomocí průvodců kódem (C++)
 
@@ -73,6 +73,5 @@ Existují tři umístění, kam máte přístup průvodců kódem jazyka Visual 
 
 [Přepisování virtuální funkce](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
 [Navigace strukturou třídy](../ide/navigating-the-class-structure-visual-cpp.md)<br>
-[Tvorba desktopových projektů pomocí průvodců aplikací](../ide/creating-desktop-projects-by-using-application-wizards.md)<br>
-[Typy projektů Visual C++](../ide/visual-cpp-project-types.md)<br>
-[Typy souborů vytvořených pro projekty Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)
+[Typy projektů Visual C++](../build/reference/visual-cpp-project-types.md)<br>
+[Typy souborů vytvořených pro projekty Visual C++](../build/reference/file-types-created-for-visual-cpp-projects.md)

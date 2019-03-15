@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dllimport attribute [C++], DEF files
 - DLLs [C++], DEF files
 ms.assetid: aefdbf50-f603-488a-b0d7-ed737bae311d
-ms.openlocfilehash: f6e553a85e6c17a3ea914365ad29ad5136e50629
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 13a6a375d6200f73dd9845d057d1954c2b65485c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424772"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815330"
 ---
 # <a name="importing-using-def-files"></a>Import pomocí souborů DEF
 
@@ -59,8 +59,8 @@ if (ulDataInDll == 0L)   /*sample code fragment*/
 
 Použití – KONSTANTA je více nebezpečné, protože pokud zapomenete používat vyšší úroveň dereference, může potenciálně zpřístupnit tabulky importních adres ukazatel na proměnnou, není proměnná. Tento druh problému může často manifestovat jako narušení přístupu, protože tabulky importních adres se aktuálně jen pro čtení v kompilátoru a propojovacího programu.
 
-Aktuální linkeru jazyka Visual C++ vyvolá upozornění, pokud nalezne CONSTANT v .def souboru pro tento případ. Pouze skutečný důvod pro použití – KONSTANTA je-li některý soubor objektu, kde hlavičkového souboru v seznamu nelze znovu zkompilovat **__declspec(dllimport)** na prototypu.
+Aktuální MSVC linker vydá upozornění, pokud nalezne CONSTANT v .def souboru pro tento případ. Pouze skutečný důvod pro použití – KONSTANTA je-li některý soubor objektu, kde hlavičkového souboru v seznamu nelze znovu zkompilovat **__declspec(dllimport)** na prototypu.
 
 ## <a name="see-also"></a>Viz také:
 
-[Import do aplikace](../build/importing-into-an-application.md)
+[Import do aplikace](importing-into-an-application.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - blank projects
 - files [C++], adding to projects
 ms.assetid: 070098e8-0396-49fe-a697-3daa2f1be6de
-ms.openlocfilehash: d5347a0693619e5db44b1087fc249c68b9227fb2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8facd371ad2dddbb8ce239af5ca536b21a606807
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568649"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818203"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>Přidávání souborů do prázdných aplikací Win32
 
@@ -24,12 +24,12 @@ ms.locfileid: "50568649"
 
 3. V **dialogové okno Přidat existující položku**, přejděte k souborům, které chcete přidat do projektu.
 
-4. Klikněte na tlačítko **OK**.
+4. Klikněte na **OK**.
 
 Přidat soubory, které jsou ani zdroje, Hlavička nebo souborů prostředků do vašeho projektu, klikněte pravým tlačítkem myši **řešení** uzel v **Průzkumníka řešení** a přidejte soubory do projektu stejným způsobem. A **různé** vytvoří složku pro uložení další soubory v projektu.
 
 > [!NOTE]
-> Před vytvořením projektu, je potřeba určit možnosti sestavení pro tyto soubory tak, že jsou správně součástí dokončenou aplikaci. Další informace najdete v tématu [určení nastavení projektu pomocí stránky vlastností](../ide/property-pages-visual-cpp.md) a [vytváření programu v jazyce C/C++](../build/building-c-cpp-programs.md).
+> Před vytvořením projektu, je potřeba určit možnosti sestavení pro tyto soubory tak, že jsou správně součástí dokončenou aplikaci. Další informace najdete v tématu [určení nastavení projektu pomocí stránky vlastností](../build/reference/property-pages-visual-cpp.md) a [vytváření programu v jazyce C/C++](../build/building-c-cpp-programs.md).
 
 ## <a name="see-also"></a>Viz také
 

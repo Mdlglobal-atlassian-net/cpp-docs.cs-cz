@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Zc:noexceptTypes
 - -Zc:noexceptTypes
 ms.assetid: 1cbf7e3c-0f82-4f91-84dd-612bcf26d2c6
-ms.openlocfilehash: f5f2fa3ef85e7ff15b28188e45a4ec397878873c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28e06f54049d36262134b6be7eadb0e6e5349a45
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462228"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812106"
 ---
 # <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/ Zc: noexcepttypes (pravidla c ++ 17 noexcept)
 
@@ -73,7 +73,7 @@ Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
 
@@ -81,6 +81,6 @@ Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete
 
 ## <a name="see-also"></a>Viz také:
 
-[/Zc (shoda)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (shoda)](zc-conformance.md)<br/>
 [noexcept](../../cpp/noexcept-cpp.md)<br/>
 [Specifikace výjimek (throw)](../../cpp/exception-specifications-throw-cpp.md)

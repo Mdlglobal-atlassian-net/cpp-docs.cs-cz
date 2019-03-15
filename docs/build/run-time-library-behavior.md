@@ -15,12 +15,12 @@ helpviewer_keywords:
 - run-time [C++], DLL startup sequence
 - DLLs [C++], startup sequence
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
-ms.openlocfilehash: 084741a3a408fe79e27c3fab81e1f5c4c9f06c4e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ea970f010e86d655963485339c48b8f7d36d6270
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414587"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811436"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Knihovny DLL a chování běhové knihovny jazyka Visual C++
 
@@ -32,10 +32,10 @@ Ve Windows, můžete všechny knihovny DLL obsahovat funkci vstupního bodu, obv
 
 Knihovna VCRuntime poskytuje funkci vstupního bodu `_DllMainCRTStartup` pro zpracování výchozí inicializace a ukončování operací. V procesu připojení, `_DllMainCRTStartup` funkce nastaví kontroly zabezpečení vyrovnávací paměti, inicializuje CRT a dalších knihoven, inicializuje informace běhového typu, inicializuje a volání konstruktorů pro statické a jiné než místní data, inicializuje místní úložiště vláken , zvýší interní statické čítače pro každé připojení a pak zavolá uživatelem nebo knihovna zadané `DllMain`. V procesu odpojit, funkce prochází tyto kroky v opačném pořadí. Volá `DllMain`, sníží čítač vnitřní volání destruktorů, ukončení volání CRT funkce a zaregistrován `atexit` funkce a upozorní knihovny ukončení. Pokud čítač přílohy sníží na nulu, vrátí funkce `FALSE` udávajících Windows, že knihovna DLL může být uvolněna. `_DllMainCRTStartup` Funkce se také nazývá během vlákno připojení a odpojení vlákna. V těchto případech VCRuntime kód nepodporuje žádné další inicializace nebo ukončení sama o sobě a jen volá `DllMain` k předání zprávy společně. Pokud `DllMain` vrátí `FALSE` z procesu připojení, signalizaci selhání `_DllMainCRTStartup` volání `DllMain` znovu a předává `DLL_PROCESS_DETACH` jako *důvod* argument, pak prochází zbytek ukončení procesu.
 
-Při sestavování knihovny DLL v jazyce Visual C++, výchozí vstupní bod `_DllMainCRTStartup` poskytnutých VCRuntime je automaticky propojena. Není potřeba specifikovat funkci vstupního bodu pro vaši knihovnu DLL pomocí [/Entry (symbol vstupního bodu)](../build/reference/entry-entry-point-symbol.md) – možnost linkeru.
+Při sestavování knihovny DLL v jazyce Visual C++, výchozí vstupní bod `_DllMainCRTStartup` poskytnutých VCRuntime je automaticky propojena. Není potřeba specifikovat funkci vstupního bodu pro vaši knihovnu DLL pomocí [/Entry (symbol vstupního bodu)](reference/entry-entry-point-symbol.md) – možnost linkeru.
 
 > [!NOTE]
-> I když je možné zadat jinou funkci vstupního bodu pro knihovnu DLL pomocí / Entry: – možnost linkeru, nedoporučujeme, protože by duplikovat všechno, co vaši funkci vstupního bodu, který `_DllMainCRTStartup` nemá ve stejném pořadí. VCRuntime poskytuje funkce, které umožňují duplicitní své chování. Například můžete volat [__security_init_cookie](../c-runtime-library/reference/security-init-cookie.md) okamžitě proces připojení k podpoře [/GS (Kontrola zabezpečení vyrovnávací paměti)](../build/reference/gs-buffer-security-check.md) možnost kontroly vyrovnávací paměti. Můžete volat `_CRT_INIT` funkci a předává stejné parametry jako funkci vstupního bodu, provádět zbývající inicializace nebo ukončení funkce knihovny DLL.
+> I když je možné zadat jinou funkci vstupního bodu pro knihovnu DLL pomocí / Entry: – možnost linkeru, nedoporučujeme, protože by duplikovat všechno, co vaši funkci vstupního bodu, který `_DllMainCRTStartup` nemá ve stejném pořadí. VCRuntime poskytuje funkce, které umožňují duplicitní své chování. Například můžete volat [__security_init_cookie](../c-runtime-library/reference/security-init-cookie.md) okamžitě proces připojení k podpoře [/GS (Kontrola zabezpečení vyrovnávací paměti)](reference/gs-buffer-security-check.md) možnost kontroly vyrovnávací paměti. Můžete volat `_CRT_INIT` funkci a předává stejné parametry jako funkci vstupního bodu, provádět zbývající inicializace nebo ukončení funkce knihovny DLL.
 
 <a name="initializing-a-dll"></a>
 
@@ -180,6 +180,6 @@ Funkce inicializace vzorku, který je součástí zpracovává multithreading [p
 
 ## <a name="see-also"></a>Viz také:
 
-[Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)<br/>
+[Knihovny DLL v jazyce Visual C++](dlls-in-visual-cpp.md)<br/>
 [Zpracování funkce DllMain vstupní bod](/windows/desktop/Dlls/dllmain)<br/>
 [Osvědčené postupy dynamická knihovna](/windows/desktop/Dlls/dynamic-link-library-best-practices)

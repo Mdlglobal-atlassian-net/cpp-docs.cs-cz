@@ -4,12 +4,12 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 4b64f79ea5a9566d2ad28216fbc5e736b622fe00
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 50b1005c7734b62941cbda087161d5ec41a0d026
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740245"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808037"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Postup ohlášení problému se sadou nástrojů Visual C++ nebo dokumentace
 
@@ -43,7 +43,7 @@ Budeme potřebovat informace o úplnou verzi a Cílová architektura sady nástr
 
 #### <a name="to-report-the-full-version-of-the-compiler-youre-using"></a>Do sestavy plnou verzi kompilátoru, které používáte
 
-1. Otevřít **Developer Command Prompt** , která odpovídá verzi a konfigurace architektury sady Visual Studio používá k sestavení projektu. Například, pokud vytvoříte pomocí sady Visual Studio 2017 na x64 x64 cíle, zvolte **x64 Native Tools Command Prompt pro VS 2017**. Další informace najdete v tématu [zkratky příkazového řádku pro vývojáře](build/building-on-the-command-line.md#developer-command-prompt-shortcuts).
+1. Otevřít **Developer Command Prompt** , která odpovídá verzi a konfigurace architektury sady Visual Studio používá k sestavení projektu. Například, pokud vytvoříte pomocí sady Visual Studio 2017 na x64 x64 cíle, zvolte **x64 Native Tools Command Prompt pro VS 2017**. Další informace najdete v tématu [zkratky příkazového řádku pro vývojáře](build/building-on-the-command-line.md#developer_command_prompt_shortcuts).
 
 1. V okně konzoly příkazového řádku pro vývojáře zadejte příkaz **cl /Bv**.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-ms.openlocfilehash: e93236f9bd08741bb757e43309cd59281f828da1
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: aa1af9cd355265214827527b986b8602a25e93f3
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744602"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808271"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Návod: Testování projektu (C++)
 
@@ -63,4 +63,4 @@ V tomto podrobném návodu sledovat hodnotu proměnné po spuštění programu a
 ## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
-[Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)<br/>
+[Projekty a sestavení systémy](../build/projects-and-build-systems-cpp.md)<br/>

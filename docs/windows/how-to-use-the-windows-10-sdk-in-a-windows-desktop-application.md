@@ -1,16 +1,16 @@
 ---
-title: 'Postupy: použití Windows 10 SDK v desktopové aplikaci Windows'
+title: 'Postupy: Použití sady Windows 10 SDK v desktopové aplikaci Windows'
 ms.custom: get-started-article
 ms.date: 07/12/2018
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-ms.openlocfilehash: ed860a229866991b01266093058b71cc2ae84986
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25ef3674a7ab741f20a07d6e65d1b5524fb88d5f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669115"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809922"
 ---
-# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Postupy: použití Windows 10 SDK v desktopové aplikaci Windows
+# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Postupy: Použití sady Windows 10 SDK v desktopové aplikaci Windows
 
 Při vytváření klasický desktopový projekt Windows v sadě Visual Studio 2017 je nastaven ve výchozím nastavení k sestavení s verzí Windows 10 SDK, která byla nainstalována při C++ Desktop workload byla nainstalována nebo naposledy aktualizována. Tato verze sady Windows SDK je kompatibilní s Windows 7 a novější. Zobrazit [pomocí hlavičky Windows](/windows/desktop/WinProg/using-the-windows-headers) Další informace o cílení na konkrétní verze Windows.
 
@@ -38,7 +38,7 @@ Od verze Visual Studio 2015 a sada Windows 10 SDK, knihovny CRT se rozdělené n
 
    `Retargeting End: 1 completed, 0 failed, 0 skipped`
 
-4. Otevřete vlastnosti projektu a **vlastnosti konfigurace, Obecné** části, Všimněte si, že hodnoty **verze cílové platformy Windows**. Změna hodnoty tady má stejný účinek jako tohoto postupu. Zobrazit [Obecná stránka vlastností (projekt)](../ide/general-property-page-project.md).
+4. Otevřete vlastnosti projektu a **vlastnosti konfigurace, Obecné** části, Všimněte si, že hodnoty **verze cílové platformy Windows**. Změna hodnoty tady má stejný účinek jako tohoto postupu. Zobrazit [Obecná stránka vlastností (projekt)](../build/reference/general-property-page-project.md).
 
    ![Cílit na verzi platformy](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")
 

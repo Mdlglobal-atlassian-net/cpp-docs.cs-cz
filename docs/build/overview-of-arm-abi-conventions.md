@@ -2,12 +2,12 @@
 title: Přehled konvencí ARM ABI
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: d25cba2800348ca1ae45c5bb59163816a4eefa02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17f2598912879d0eb54fd189e1fae541ba2f874f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436020"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810455"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Přehled konvencí ARM32 ABI
 
@@ -23,7 +23,7 @@ Podpora dělení celého čísla (UDIV/SDIV) je důrazně doporučujeme, ale nev
 
 ## <a name="endianness"></a>Ukládání významných bajtů
 
-Windows na ARM se spustí v režimu little endian. Kompilátor Visual C++ a prostředí Windows runtime očekávat, že data ve formátu little endian za všech okolností. I když sadu instrukcí SETEND v ARM instrukce architektury (ISA) umožňuje změnit aktuální endianitou kódu i uživatelského režimu, tím proto se nedoporučují, protože je nebezpečné pro aplikaci. Pokud je výjimka vygenerované v režimu formát big-endian chování nepředvídatelné a může vést selhání aplikace v uživatelském režimu nebo kontroly chyb v režimu jádra.
+Windows na ARM se spustí v režimu little endian. Kompilátor MSVC a prostředí Windows runtime očekávat, že data ve formátu little endian za všech okolností. I když sadu instrukcí SETEND v ARM instrukce architektury (ISA) umožňuje změnit aktuální endianitou kódu i uživatelského režimu, tím proto se nedoporučují, protože je nebezpečné pro aplikaci. Pokud je výjimka vygenerované v režimu formát big-endian chování nepředvídatelné a může vést selhání aplikace v uživatelském režimu nebo kontroly chyb v režimu jádra.
 
 ## <a name="alignment"></a>Zarovnání
 
@@ -55,15 +55,15 @@ Použití IT instrukcí v kód Thumb-2 je zakázáno, s výjimkou v takové situ
 
    |16bitové operační kódy|Třída|Omezení|
    |---------------------|-----------|------------------|
-   |MOV MVN|Přesunutí|Správce prostředků! = počítače, VP! = PC|
-   |OMEZENĚ DISTRIBUOVATELNÝCH OPRAV, OMEZENĚ DISTRIBUOVATELNÝCH OPRAV [S] B, H OMEZENĚ DISTRIBUOVATELNÝCH OPRAV [S]|Načtení z paměti|Ale ne literál formulářů omezeně distribuovatelných oprav|
+   |MOV MVN|Přesunout|Správce prostředků! = počítače, VP! = PC|
+   |LDR, LDR[S]B, LDR[S]H|Načtení z paměti|Ale ne literál formulářů omezeně distribuovatelných oprav|
    |STR STRB, STRH|Store do paměti.||
-   |PŘIDAT, ADC, RSB, ZAŘÍZENÍMI, SUB|Můžete přidávat nebo odebírat|Ale ne ADD/SUB SP, SP, imm7 formulářů<br /><br /> Správce prostředků! = PC, relativní rozlišující! = PC, Rdm! = PC|
-   |CMP CMN|Porovnat|Správce prostředků! = PC, Rn! = PC|
+   |ADD, ADC, RSB, SBC, SUB|Můžete přidávat nebo odebírat|Ale ne ADD/SUB SP, SP, imm7 formulářů<br /><br /> Správce prostředků! = PC, relativní rozlišující! = PC, Rdm! = PC|
+   |CMP, CMN|Porovnat|Správce prostředků! = PC, Rn! = PC|
    |MUL|Násobení||
-   |AZURE SITE RECOVERY, ZJEDNODUŠENÉHO NAČTENÍ ŘEŠENÍ, LSR, ZKOUŠENÉHO|Bitový posun||
+   |ASR, LSL, LSR, ROR|Bitový posun||
    |A BIC EOR, ORR TST|Aritmetický bitový||
-   |MX|Větev se má zaregistrovat|Správce prostředků! = PC|
+   |BX|Větev se má zaregistrovat|Správce prostředků! = PC|
 
 I když aktuální ARMv7 procesorů nelze sestavy pomocí formulářů zakázaného instrukce budoucí generace se očekává. Pokud jsou zjištěny tyto formuláře, žádný program, který používá je může skončit s výjimkou nedefinované instrukce.
 
@@ -78,21 +78,21 @@ Procesor ARM podporuje 16 registrů pro celé číslo:
 |Registr|Volatile?|Role|
 |--------------|---------------|----------|
 |r0|Volatile|Parametr, výsledek pomocné registrace 1|
-|R1|Volatile|Parametr, výsledek pomocné registru 2|
-|R2|Volatile|Parametr pomocné register 3|
-|R3|Volatile|Parametr pomocné register 4|
+|r1|Volatile|Parametr, výsledek pomocné registru 2|
+|r2|Volatile|Parametr pomocné register 3|
+|r3|Volatile|Parametr pomocné register 4|
 |R4|Non-volatile||
-|R5|Non-volatile||
-|R6|Non-volatile||
-|R7|Non-volatile||
+|r5|Non-volatile||
+|r6|Non-volatile||
+|r7|Non-volatile||
 |R8|Non-volatile||
-|R9|Non-volatile||
-|R10|Non-volatile||
-|R11|Non-volatile|Ukazatel na rámec|
-|r 12|Volatile|Volání procedury uvnitř pomocné registru|
-|R13 (SP)|Non-volatile|Ukazatel zásobníku|
-|R14 (LR)|Non-volatile|Registr odkaz|
-|R15 (PC)|Non-volatile|Čítač programu|
+|r9|Non-volatile||
+|r10|Non-volatile||
+|r11|Non-volatile|Ukazatel na rámec|
+|r12|Volatile|Volání procedury uvnitř pomocné registru|
+|r13 (SP)|Non-volatile|Ukazatel zásobníku|
+|r14 (LR)|Non-volatile|Registr odkaz|
+|r15 (PC)|Non-volatile|Čítač programu|
 
 Podrobnosti o tom, jak použít parametr a vrátí hodnotu registrů, najdete v části předávání parametru v tomto článku.
 
@@ -104,15 +104,15 @@ Windows podporuje jenom varianty ARM, které mají VFPv3 D32 koprocesoru podporu
 
 |Určené|Double – prvky|Quads|Volatile?|Role|
 |-------------|-------------|-----------|---------------|----------|
-|S0 s3|D0 d1|q0|Volatile|Pomocné parametry, výsledek, registr|
-|S4 s7|d2 d3|1.|Volatile|Pomocné parametry registrace|
-|s8 s.11|D4 d5|2. čtvrtletí|Volatile|Pomocné parametry registrace|
-|s.15 S12 na úrovni Standard|D6 d7|3. čtvrtletí|Volatile|Pomocné parametry registrace|
-|s 16 s19|D8 d9|4.|Non-volatile||
-|S20 s23|D10 d11|5|Non-volatile||
-|s24 s27|D12 d13|6|Non-volatile||
-|s28 s31|D14 d15|Dotaz č. 7|Non-volatile||
-||D16 d31|Dotaz 8-Otázka č. 15|Volatile||
+|s0-s3|d0-d1|q0|Volatile|Pomocné parametry, výsledek, registr|
+|s4-s7|d2-d3|q1|Volatile|Pomocné parametry registrace|
+|s8-s11|d4-d5|q2|Volatile|Pomocné parametry registrace|
+|s12-s15|d6-d7|q3|Volatile|Pomocné parametry registrace|
+|s16-s19|d8-d9|q4|Non-volatile||
+|s20-s23|d10-d11|q5|Non-volatile||
+|s24-s27|d12-d13|q6|Non-volatile||
+|s28-s31|d14-d15|q7|Non-volatile||
+||d16-d31|q8-q15|Volatile||
 
 Následující tabulka ukazuje stav s plovoucí desetinnou čárkou a bitová pole (FPSCR) se řídicí registr:
 
@@ -137,7 +137,7 @@ Většina ARM hardware nepodporuje výjimky s plovoucí desetinnou čárkou IEEE
 
 Pro jiné variadické funkce Windows na ARM ABI následuje ARM pravidla pro předávání parametrů – to zahrnuje rozšíření VFP a Advanced SIMD. Postupujte podle těchto pravidel [postup volání Standard pro architekturu ARM](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0042c/IHI0042C_aapcs.pdf)sloučeného pomocí rozšíření VFP. Ve výchozí, první čtyři celočíselné argumenty a až osm s plovoucí desetinnou čárkou nebo vektorové argumenty jsou předány v registrech a další argumenty jsou předány v zásobníku. Argumenty jsou přiřazeny k registry nebo zásobníku pomocí tohoto postupu:
 
-### <a name="stage-a-initialization"></a>Fáze inicializace A:
+### <a name="stage-a-initialization"></a>Fáze A: Inicializace
 
 Inicializace probíhá pouze jednou, před zahájením zpracování argumentů:
 
@@ -149,7 +149,7 @@ Inicializace probíhá pouze jednou, před zahájením zpracování argumentů:
 
 1. Pokud je volána funkce, která vrátí výsledek v paměti, adresu pro výsledek se umístí do r0 a je nastavena NCRN R1.
 
-### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Fáze B: předběžné odsazení a rozšíření argumentů
+### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Fáze B: Předem odsazení a rozšíření argumentů
 
 Pro každý argument v seznamu je použito první vyhovující pravidlo z následujícího seznamu:
 
@@ -159,7 +159,7 @@ Pro každý argument v seznamu je použito první vyhovující pravidlo z násle
 
 1. Pokud argument je složený typ, jeho velikost se zaokrouhluje na nejbližší násobek čísla 4.
 
-### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Fáze C: přiřazení argumentů, které mají registry a zásobníku
+### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Fáze C: Přiřazení argumentů, které mají registry a zásobníku
 
 Pro každý argument v seznamu následující pravidla se použijí pak dokud byl přidělen argument:
 
@@ -205,13 +205,13 @@ Výčty jsou typy 32bitové celé číslo, pokud alespoň jednu hodnotu ve výč
 
 ## <a name="stack-walking"></a>Procházení zásobníku
 
-Windows kód je zkompilován pomocí ukazatele na rámce povolené ([/Oy (vynechání ukazatele na rámec)](../build/reference/oy-frame-pointer-omission.md)) k povolení procházení zásobníku rychlé. Obecně platí, r11 zaregistrovat odkazuje na odkaz na další v řetězci, který je {r11, lr} pár, který určuje ukazatel na předchozí snímek zásobníku a zpáteční adresu. Doporučujeme, aby váš kód také povolit ukazatele na rámce lepší profilace a trasování.
+Windows kód je zkompilován pomocí ukazatele na rámce povolené ([/Oy (vynechání ukazatele na rámec)](reference/oy-frame-pointer-omission.md)) k povolení procházení zásobníku rychlé. Obecně platí, r11 zaregistrovat odkazuje na odkaz na další v řetězci, který je {r11, lr} pár, který určuje ukazatel na předchozí snímek zásobníku a zpáteční adresu. Doporučujeme, aby váš kód také povolit ukazatele na rámce lepší profilace a trasování.
 
 ## <a name="exception-unwinding"></a>Uvolňování výjimek
 
 Během zpracování výjimek uvolnění zásobníku je povoleno pomocí kódy unwind. Kódy unwind je posloupnost bajtů, které jsou uložené v části .xdata spustitelné bitové kopie. Popisují operace kód prologu a epilogu funkce abstraktní způsobem tak, aby efekty prologu funkce může být v rámci přípravy odvíjení rámce zásobníku volajícího vrátit zpět.
 
-ARM EABI určuje odvíjení model výjimek, který používá parsovat kódy unwind. Tato specifikace však není dostatečná pro uvolnění ve Windows, které musí zpracovat případy, ve kterém procesoru je uprostřed prologu nebo epilogu funkce. Další informace o Windows na ARM data výjimky a uvolnění, naleznete v tématu [zpracování výjimek ARM](../build/arm-exception-handling.md).
+ARM EABI určuje odvíjení model výjimek, který používá parsovat kódy unwind. Tato specifikace však není dostatečná pro uvolnění ve Windows, které musí zpracovat případy, ve kterém procesoru je uprostřed prologu nebo epilogu funkce. Další informace o Windows na ARM data výjimky a uvolnění, naleznete v tématu [zpracování výjimek ARM](arm-exception-handling.md).
 
 Doporučujeme, aby dynamicky generovaném kódu najdete pomocí dynamické funkce tabulky zadané ve volání do `RtlAddFunctionTable` a související funkce, tak, aby vygenerovaného kódu mohl podílet na zpracování výjimek.
 
@@ -223,5 +223,5 @@ Procesory ARM se systémem Windows jsou potřebné k podpoře cyklu čítač, al
 
 ## <a name="see-also"></a>Viz také:
 
-[Běžné problémy s migrací ARM v prostředí Visual C++](../build/common-visual-cpp-arm-migration-issues.md)<br/>
-[Zpracování výjimek ARM](../build/arm-exception-handling.md)
+[Běžné problémy s migrací ARM v prostředí Visual C++](common-visual-cpp-arm-migration-issues.md)<br/>
+[Zpracování výjimek ARM](arm-exception-handling.md)

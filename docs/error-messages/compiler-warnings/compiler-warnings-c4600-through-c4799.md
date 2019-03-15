@@ -1,5 +1,5 @@
 ---
-title: Upozornění kompilátoru C4600 až C4799
+title: Compiler Warnings C4600 Through C4799
 ms.date: 07/03/2018
 f1_keywords:
 - C4602
@@ -57,16 +57,15 @@ f1_keywords:
 - C4767
 - C4770
 - C4792
-- C4794
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
-ms.openlocfilehash: 02b679e3cfb91b09db381b014ba2f3d3d0e5b02a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4acc36fcf7508bdcfcc1bd936110df4c32c47ae2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553151"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810078"
 ---
-# <a name="compiler-warnings-c4600-through-c4799"></a>Upozornění kompilátoru C4600 až C4799
+# <a name="compiler-warnings-c4600-through-c4799"></a>Compiler Warnings C4600 Through C4799
 
 Články v této části dokumentace vysvětlují podmnožinu varovné zprávy, které jsou generovány kompilátorem.
 
@@ -147,7 +146,7 @@ ms.locfileid: "50553151"
 |Upozornění kompilátoru (úroveň 4) C4681|'class': Konstrukt coclass nespecifikuje výchozí rozhraní, který je zdrojem událostí|
 |Upozornění kompilátoru (úroveň 4) C4682|"parametr": žádný parametr směrového atributu zadán, výchozí [v]|
 |[Upozornění kompilátoru (úroveň 1) C4683](../../error-messages/compiler-warnings/compiler-warning-level-1-c4683.md)|'function': Zdroj události má "out"-parameter; Postupujte obezřetně při připojení více obslužných rutin událostí|
-|[Upozornění kompilátoru (úroveň 1) C4684](../../error-messages/compiler-warnings/compiler-warning-level-1-c4684.md)|'attribute': upozornění!! atribut může způsobit vygenerování neplatného kódu: používejte opatrně,|
+|[Upozornění kompilátoru (úroveň 1) C4684](../../error-messages/compiler-warnings/compiler-warning-level-1-c4684.md)|'attribute': UPOZORNĚNÍ! atribut může způsobit vygenerování neplatného kódu: používejte opatrně,|
 |Upozornění kompilátoru (úroveň 1) C4685|byl očekáván ' >> ' najít ' >> "při analýze parametrů šablony|
 |[Upozornění kompilátoru (úroveň 3) C4686](../../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)|'user-defined type': možné změny v chování, změna ve vrácení konvence volání uživatelem definovaného typu|
 |[Upozornění (chyba) kompilátoru C4687](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|'class': zapečetěná abstraktní třída nemůže implementovat rozhraní "rozhraní"|
@@ -194,7 +193,7 @@ ms.locfileid: "50553151"
 |[Upozornění kompilátoru (úroveň 1) C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|'type' má jinou velikost 'file1' a 'file2': číslo a počet bajtů|
 |[Upozornění kompilátoru (úroveň 1) C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|'příkaz var' má jiný typ v 'file1' a 'file2': 'type1' a 'type2'|
 |[Upozornění kompilátoru C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|přístup typu "*výraz*' / volatile:\<iso&#124;ms > nastavení; zvažte použití vnitřních funkcí Using __iso_volatile_load/store|
-|[Upozornění kompilátoru (úroveň 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|Volání spravované 'entrypoint': nastavený zámek zavaděče, včetně vstupního bodu DLL a volání dosáhlo ze vstupního bodu DLL se možná nespustí spravovaný kód|
+|[Upozornění kompilátoru (úroveň 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|Volání spravované 'entrypoint": Zámek zavaděče, včetně vstupního bodu DLL a volání dosáhlo ze vstupního bodu DLL se možná nespustí spravovaný kód|
 |Upozornění kompilátoru (úroveň 4) C4749|podmíněně podporováno: na které se netýkají nestandardním rozložením typu se použil offsetof '*typ*.|
 |Upozornění kompilátoru (úroveň 1) C4750|'identifier': funkce s: _alloca() je vložená do smyčky|
 |Upozornění kompilátoru (úroveň 4) C4751|/ arch: AVX se nevztahuje na Streaming SIMD Extensions Intel(R), která jsou ve vloženém kódu ASM|

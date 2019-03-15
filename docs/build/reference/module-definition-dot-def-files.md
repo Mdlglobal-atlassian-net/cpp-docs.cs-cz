@@ -6,46 +6,46 @@ helpviewer_keywords:
 - module definition files
 - .def files
 ms.assetid: 08c0bc28-c5d2-47aa-9624-7fc68bcaa4d8
-ms.openlocfilehash: 041894fa88527061d90399540bc29762bff66f81
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0047f24722644cd9a68bbbf827ced26ad085d4c1
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424532"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812236"
 ---
 # <a name="module-definition-def-files"></a>Soubory definice modulu (.Def)
 
-Soubory definice modulu (.def) poskytují linkeru s informacemi o vývozu, atributy a jiné informace o programu, který chcete propojit. Soubor .def je nejužitečnější při sestavování knihovny DLL. Protože jsou [možnosti linkeru](../../build/reference/linker-options.md) , který lze použít místo příkazy definice modulu .def soubory nejsou obecně nezbytné. Můžete také použít [__declspec(dllexport)](../../build/exporting-from-a-dll-using-declspec-dllexport.md) jako způsob, jak určit exportované funkce.
+Soubory definice modulu (.def) poskytují linkeru s informacemi o vývozu, atributy a jiné informace o programu, který chcete propojit. Soubor .def je nejužitečnější při sestavování knihovny DLL. Protože jsou [možnosti Linkeru MSVC](linker-options.md) , který lze použít místo příkazy definice modulu .def soubory nejsou obecně nezbytné. Můžete také použít [__declspec(dllexport)](../exporting-from-a-dll-using-declspec-dllexport.md) jako způsob, jak určit exportované funkce.
 
-Soubor .def můžete vyvolat během fáze linkeru s [def (zadat soubor definice modulu)](../../build/reference/def-specify-module-definition-file.md) – možnost linkeru.
+Soubor .def můžete vyvolat během fáze linkeru s [def (zadat soubor definice modulu)](def-specify-module-definition-file.md) – možnost linkeru.
 
 Pokud sestavujete soubor .exe, který nemá žádné exporty, pomocí souboru .def budou načítání vaše výstupní soubor pomalejší a větší.
 
-Příklad najdete v tématu [export z knihovny DLL pomocí souborů DEF](../../build/exporting-from-a-dll-using-def-files.md).
+Příklad najdete v tématu [export z knihovny DLL pomocí souborů DEF](../exporting-from-a-dll-using-def-files.md).
 
 Najdete v následujících částech Další informace:
 
-- [Pravidla pro příkazy definice modulu](../../build/reference/rules-for-module-definition-statements.md)
+- [Pravidla pro příkazy definice modulu](rules-for-module-definition-statements.md)
 
-- [EXPORTY](../../build/reference/exports.md)
+- [EXPORTY](exports.md)
 
-- [VELIKOST HALDY](../../build/reference/heapsize.md)
+- [VELIKOST HALDY](heapsize.md)
 
-- [KNIHOVNA](../../build/reference/library.md)
+- [KNIHOVNA](library.md)
 
-- [JMÉNO](../../build/reference/name-c-cpp.md)
+- [JMÉNO](name-c-cpp.md)
 
-- [ODDÍLY](../../build/reference/sections-c-cpp.md)
+- [ODDÍLY](sections-c-cpp.md)
 
-- [VELIKOST ZÁSOBNÍKU](../../build/reference/stacksize.md)
+- [VELIKOST ZÁSOBNÍKU](stacksize.md)
 
-- [ZÁSTUPNÁ PROCEDURA](../../build/reference/stub.md)
+- [ZÁSTUPNÁ PROCEDURA](stub.md)
 
-- [VERZE](../../build/reference/version-c-cpp.md)
+- [VERZE](version-c-cpp.md)
 
-- [Vyhrazená slova](../../build/reference/reserved-words.md)
+- [Vyhrazená slova](reserved-words.md)
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční zdroje k sestavení programu v jazyce C/C++](../../build/reference/c-cpp-building-reference.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)
+[Referenční zdroje k sestavení programu v jazyce C/C++](c-cpp-building-reference.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)

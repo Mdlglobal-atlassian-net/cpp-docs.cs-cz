@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Ox compiler option [C++]
 - -Ox compiler option [C++]
 ms.assetid: 3ad7c30b-c615-428c-b1d0-2e024f81c760
-ms.openlocfilehash: 9f93d67a24f254dff1604c11635c9fa2da7e4557
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e39905608087425fe5a445f4ef88434d73bb2ded
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414535"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811274"
 ---
 # <a name="ox-enable-most-speed-optimizations"></a>/OX (povolení většiny optimalizací pro rychlost)
 
@@ -28,35 +28,35 @@ ms.locfileid: "57414535"
 
 ## <a name="remarks"></a>Poznámky
 
-**/Ox** umožňuje – možnost kompilátoru **/O** upřednostnit rychlost možností kompilátoru. **/Ox** – možnost kompilátoru neobsahuje další [/GF (odstranění duplicitní řetězce)](../../build/reference/gf-eliminate-duplicate-strings.md) a [/Gy (povolení funkce propojení na úrovni)](../../build/reference/gy-enable-function-level-linking.md) možnosti umožněné [/O1 nebo/O2 (minimální velikost, maximální rychlost)](../../build/reference/o1-o2-minimize-size-maximize-speed.md). Další možnosti použil(a) **/O1** a **/O2** může způsobit, že ukazatele na řetězce nebo k funkcím sdílet cílovou adresu, která může mít vliv na ladění a striktní jazykem. **/Ox** možnost je snadný způsob, jak povolení většiny optimalizací pro bez zahrnutí **/GF** a **/Gy**. Další informace najdete v tématu popisy [/GF](../../build/reference/gf-eliminate-duplicate-strings.md) a [/Gy](../../build/reference/gy-enable-function-level-linking.md) možnosti.
+**/Ox** umožňuje – možnost kompilátoru **/O** upřednostnit rychlost možností kompilátoru. **/Ox** – možnost kompilátoru neobsahuje další [/GF (odstranění duplicitní řetězce)](gf-eliminate-duplicate-strings.md) a [/Gy (povolení funkce propojení na úrovni)](gy-enable-function-level-linking.md) možnosti umožněné [/O1 nebo/O2 (minimální velikost, maximální rychlost)](o1-o2-minimize-size-maximize-speed.md). Další možnosti použil(a) **/O1** a **/O2** může způsobit, že ukazatele na řetězce nebo k funkcím sdílet cílovou adresu, která může mít vliv na ladění a striktní jazykem. **/Ox** možnost je snadný způsob, jak povolení většiny optimalizací pro bez zahrnutí **/GF** a **/Gy**. Další informace najdete v tématu popisy [/GF](gf-eliminate-duplicate-strings.md) a [/Gy](gy-enable-function-level-linking.md) možnosti.
 
 **/Ox** – možnost kompilátoru je stejné jako v kombinaci s použitím následujících možností:
 
-- [/Ob (rozbalení vložené funkce)](../../build/reference/ob-inline-function-expansion.md), kde je parametr možnosti 2 (**/ob2**)
+- [/Ob (rozbalení vložené funkce)](ob-inline-function-expansion.md), kde je parametr možnosti 2 (**/ob2**)
 
-- [/Og (globální optimalizace)](../../build/reference/og-global-optimizations.md)
+- [/Og (globální optimalizace)](og-global-optimizations.md)
 
-- [/Oi (generování vnitřních funkcí)](../../build/reference/oi-generate-intrinsic-functions.md)
+- [/Oi (generování vnitřních funkcí)](oi-generate-intrinsic-functions.md)
 
-- [/Ot (upřednostnit rychlý kód)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)
+- [/Ot (upřednostnit rychlý kód)](os-ot-favor-small-code-favor-fast-code.md)
 
-- [/Oy (vynechání ukazatele na rámec)](../../build/reference/oy-frame-pointer-omission.md)
+- [/Oy (vynechání ukazatele na rámec)](oy-frame-pointer-omission.md)
 
 **/Ox** se vzájemně vylučuje od:
 
-- [/ O1 (pro minimalizaci velikosti)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)
+- [/ O1 (pro minimalizaci velikosti)](o1-o2-minimize-size-maximize-speed.md)
 
-- [/ O2 (maximální rychlost)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)
+- [/ O2 (maximální rychlost)](o1-o2-minimize-size-maximize-speed.md)
 
-- [/Od (zakázání (ladění))](../../build/reference/od-disable-debug.md)
+- [/Od (zakázání (ladění))](od-disable-debug.md)
 
-Můžete je zrušit Posun směrem k rychlosti **/Ox** – možnost kompilátoru při zadání **/Oxs**, které kombinuje **/Ox** – možnost kompilátoru s  [ /OS (upřednostnit malý Kód)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md). Kombinované možnosti upřednostnit menší velikost kódu.  **/Oxs** možnost je přesně stejné jako zadání **/Ox** **/Os** při možnosti se zobrazí v tomto pořadí.
+Můžete je zrušit Posun směrem k rychlosti **/Ox** – možnost kompilátoru při zadání **/Oxs**, které kombinuje **/Ox** – možnost kompilátoru s  [ /OS (upřednostnit malý Kód)](os-ot-favor-small-code-favor-fast-code.md). Kombinované možnosti upřednostnit menší velikost kódu.  **/Oxs** možnost je přesně stejné jako zadání **/Ox** **/Os** při možnosti se zobrazí v tomto pořadí.
 
-Použít všechny dostupné souboru úroveň optimalizace pro buildy vydaných verzí, doporučujeme vám určit [/O2 (maximalizovat rychlost)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) místo **/Ox**, a [/O1 (minimalizaci velikosti)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) místo z **/Oxs**. Pro ještě více optimalizace ve verzi sestavení, zvažte také [/GL (optimalizace celého programu)](../../build/reference/gl-whole-program-optimization.md) – možnost kompilátoru a [parametru/LTCG (generování kódu při propojování odkaz)](../../build/reference/ltcg-link-time-code-generation.md) – možnost linkeru.
+Použít všechny dostupné souboru úroveň optimalizace pro buildy vydaných verzí, doporučujeme vám určit [/O2 (maximalizovat rychlost)](o1-o2-minimize-size-maximize-speed.md) místo **/Ox**, a [/O1 (minimalizaci velikosti)](o1-o2-minimize-size-maximize-speed.md) místo z **/Oxs**. Pro ještě více optimalizace ve verzi sestavení, zvažte také [/GL (optimalizace celého programu)](gl-whole-program-optimization.md) – možnost kompilátoru a [parametru/LTCG (generování kódu při propojování odkaz)](ltcg-link-time-code-generation.md) – možnost linkeru.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. V části **vlastnosti konfigurace**, otevřete **C/C++** a klikněte na tlačítko **optimalizace** stránku vlastností.
 
@@ -68,6 +68,6 @@ Použít všechny dostupné souboru úroveň optimalizace pro buildy vydaných v
 
 ## <a name="see-also"></a>Viz také:
 
-[/O – možnosti (optimalizace kódu)](../../build/reference/o-options-optimize-code.md)<br/>
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[/O – možnosti (optimalizace kódu)](o-options-optimize-code.md)<br/>
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

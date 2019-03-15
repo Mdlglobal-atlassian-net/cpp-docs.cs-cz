@@ -6,12 +6,12 @@ ms.date: 12/12/2017
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 5722dcc06f5141818910e44a6160d12bcd4eaecd
-ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
+ms.openlocfilehash: 3bbbd40534e3e429d68dbb6205134c57db40c851
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977755"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817722"
 ---
 # <a name="create-a-c-console-app-project"></a>Vytvoření projektu aplikace konzoly C++
 
@@ -19,7 +19,7 @@ Obvyklým výchozím bodem pro programátor C++ je "Hello, world!" aplikace, kte
 
 ## <a name="prerequisites"></a>Požadavky
 
-- Sada Visual Studio s vývoj desktopových aplikací pomocí úlohy pro C++ nainstalovaný a spuštěný ve vašem počítači. Pokud ještě není nainstalovaný, přečtěte si téma [podpora instalace jazyka C++ v sadě Visual Studio 2017](../build/vscpp-step-0-installation.md).
+- Sada Visual Studio s vývoj desktopových aplikací pomocí úlohy pro C++ nainstalovaný a spuštěný ve vašem počítači. Pokud ještě není nainstalovaný, přečtěte si téma [podpora instalace jazyka C++ v sadě Visual Studio 2017](vscpp-step-0-installation.md).
 
 ## <a name="create-your-app-project"></a>Vytvoření projektu aplikace
 
@@ -27,11 +27,11 @@ Visual Studio používá *projekty* organizaci kódu pro aplikace, a *řešení*
 
 1. V sadě Visual Studio, otevřete **souboru** nabídku a zvolte **nový > projekt** otevřete **nový projekt** dialogového okna.
 
-   ![Otevřete dialogové okno Nový projekt](../build/media/vscpp-file-new-project.gif "otevřete dialogové okno Nový projekt")
+   ![Otevřete dialogové okno Nový projekt](media/vscpp-file-new-project.gif "otevřete dialogové okno Nový projekt")
 
 1. V **nový projekt** dialogového okna, vyberte **nainstalováno**, **Visual C++** Pokud již není vybraná a klikněte na tlačítko **prázdný projekt** Šablona. V **název** zadejte *HelloWorld*. Zvolte **OK** pro vytvoření projektu.
 
-   ![Název a vytvořte nový projekt](../build/media/vscpp-concierge-project-name-callouts.png "název a vytvořte nový projekt")
+   ![Název a vytvořte nový projekt](media/vscpp-concierge-project-name-callouts.png "název a vytvořte nový projekt")
 
 Visual Studio vytvoří nový, prázdný projekt, můžete specializovat pro typ aplikace, kterou chcete vytvořit a přidat soubory zdrojového kódu. Uděláte to teď.
 
@@ -45,7 +45,7 @@ Visual Studio můžete vytvářet všechny typy aplikací a součástí pro Wind
 
 1. V **stránky vlastností** dialogového okna, v části **vlastnosti konfigurace**vyberte **Linkeru**, **systému**a pak zvolte textové pole vedle **subsystému** vlastnost. V rozevírací nabídce vyberte **konzoly (/ SUBSYSTEM: CONSOLE)**. Zvolte **OK** uložte provedené změny.
 
-   ![Otevřete dialogové okno stránky vlastností](../build/media/vscpp-properties-linker-subsystem.gif "otevřete dialogové okno stránky vlastností")
+   ![Otevřete dialogové okno stránky vlastností](media/vscpp-properties-linker-subsystem.gif "otevřete dialogové okno stránky vlastností")
 
 Visual Studio nyní ví k sestavení projektu pro spuštění v okně konzoly. Budete v dalším kroku přidáte soubor zdrojového kódu a zadejte kód pro vaši aplikaci.
 
@@ -57,7 +57,7 @@ Visual Studio nyní ví k sestavení projektu pro spuštění v okně konzoly. B
 
 1. V **přidat novou položku** dialogového okna, vyberte **Visual C++** pod **nainstalováno** Pokud již není vybraná. V prostředním podokně vyberte **soubor C++ (.cpp)**. Změnit **název** k *HelloWorld.cpp*. Zvolte **přidat** a zavřete dialogové okno pro vytvoření souboru.
 
-   ![Přidání zdrojového souboru pro HelloWorld.cpp](../build/media/vscpp-add-new-item.gif "Přidání zdrojového souboru pro HelloWorld.cpp")
+   ![Přidání zdrojového souboru pro HelloWorld.cpp](media/vscpp-add-new-item.gif "Přidání zdrojového souboru pro HelloWorld.cpp")
 
 Visual studio vytvoří nový, prázdný zdrojový soubor kódu a otevře jej v okně editoru zadejte zdrojový kód jste připravení.
 
@@ -79,7 +79,7 @@ Visual studio vytvoří nový, prázdný zdrojový soubor kódu a otevře jej v 
 
    Kód by měl vypadat takto v okně editoru:
 
-   ![Hello World kódu v editoru](../build/media/vscpp-hello-world-editor.png "kódu Hello World v editoru")
+   ![Hello World kódu v editoru](media/vscpp-hello-world-editor.png "kódu Hello World v editoru")
 
 Když kód vypadá takto v editoru, jste připraveni přejít další krok a sestavení aplikace.
 

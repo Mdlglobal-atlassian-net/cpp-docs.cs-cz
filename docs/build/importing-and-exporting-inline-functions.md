@@ -12,12 +12,12 @@ helpviewer_keywords:
 - functions [C++], importing
 - functions [C++], exporting
 ms.assetid: 89f488f8-b078-40fe-afd7-80bd7840057b
-ms.openlocfilehash: fb117ce6c6088b9fdca57f7d4fd7d0193e1813c2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ed523d84228124d4a8d99e443c0c744f362f1c56
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425546"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822038"
 ---
 # <a name="importing-and-exporting-inline-functions"></a>Import a export vložených funkcí
 
@@ -30,20 +30,20 @@ Jednu funkci vložené importované funkce je, že může trvat adresy v jazyce 
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
-- [Export z knihovny DLL](../build/exporting-from-a-dll.md)
+- [Export z knihovny DLL](exporting-from-a-dll.md)
 
-- [Export z knihovny DLL pomocí. DEF soubory](../build/exporting-from-a-dll-using-def-files.md)
+- [Export z knihovny DLL pomocí. DEF soubory](exporting-from-a-dll-using-def-files.md)
 
-- [Export z knihovny DLL pomocí __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Export z knihovny DLL pomocí __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Export a import pomocí AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [Export a import pomocí AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Export funkcí jazyka C++ pro použití ve spustitelných souborech jazyka C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Export funkcí jazyka C++ pro použití ve spustitelných souborech jazyka C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Určit, kterou exportovací metodu použít](../build/determining-which-exporting-method-to-use.md)
+- [Určit, kterou exportovací metodu použít](determining-which-exporting-method-to-use.md)
 
-- [Import do aplikace s použitím deklarace __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Import do aplikace s použitím deklarace __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 ## <a name="see-also"></a>Viz také:
 
-[Import a export](../build/importing-and-exporting.md)
+[Import a export](importing-and-exporting.md)

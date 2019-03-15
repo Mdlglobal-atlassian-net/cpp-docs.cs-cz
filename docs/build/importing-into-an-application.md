@@ -6,12 +6,12 @@ helpviewer_keywords:
 - importing DLLs [C++], applications
 - applications [C++], importing into
 ms.assetid: 9d646466-e12e-4710-8ad9-c819c0375fcc
-ms.openlocfilehash: 41bd42ed51f1465db7487a120357fd27389f5b78
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 8fd15212a1ca5e31198c50ac2626755ac0171ae7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415543"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818463"
 ---
 # <a name="importing-into-an-application"></a>Import do aplikace
 
@@ -23,14 +23,14 @@ Funkce můžete importovat do aplikace pomocí dvou metod:
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
-- [Import do aplikace s použitím deklarace __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Import do aplikace s použitím deklarace __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Import volání funkcí pomocí deklarace __declspec(dllimport)](../build/importing-function-calls-using-declspec-dllimport.md)
+- [Import volání funkcí pomocí deklarace __declspec(dllimport)](importing-function-calls-using-declspec-dllimport.md)
 
-- [Import dat pomocí deklarace __declspec(dllimport)](../build/importing-data-using-declspec-dllimport.md)
+- [Import dat pomocí deklarace __declspec(dllimport)](importing-data-using-declspec-dllimport.md)
 
-- [Import pomocí souborů DEF](../build/importing-using-def-files.md)
+- [Import pomocí souborů DEF](importing-using-def-files.md)
 
 ## <a name="see-also"></a>Viz také:
 
-[Import a export](../build/importing-and-exporting.md)
+[Import a export](importing-and-exporting.md)

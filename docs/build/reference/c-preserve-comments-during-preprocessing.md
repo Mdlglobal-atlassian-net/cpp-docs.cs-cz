@@ -12,12 +12,12 @@ helpviewer_keywords:
 - c compiler option [C++]
 - /c compiler option [C++]
 ms.assetid: 944567ca-16bc-4728-befe-d414a7787f26
-ms.openlocfilehash: 5502cfda1afe05d8e4944de870349a8db2860f92
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c5854fd1255ab509d8778828de25638dd821d74b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416784"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821440"
 ---
 # <a name="c-preserve-comments-during-preprocessing"></a>/C (Zachovat komentáře při předběžném zpracování)
 
@@ -50,7 +50,7 @@ int i;   // a variable
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **C/C++** složky.
 
@@ -64,8 +64,8 @@ int i;   // a variable
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
-[/E (předzpracování do stdout)](../../build/reference/e-preprocess-to-stdout.md)<br/>
-[/P (předzpracování do souboru)](../../build/reference/p-preprocess-to-a-file.md)<br/>
-[/EP (předzpracování do stdout bez direktiv #line)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
+[/E (předzpracování do stdout)](e-preprocess-to-stdout.md)<br/>
+[/P (předzpracování do souboru)](p-preprocess-to-a-file.md)<br/>
+[/EP (předzpracování do stdout bez direktiv #line)](ep-preprocess-to-stdout-without-hash-line-directives.md)

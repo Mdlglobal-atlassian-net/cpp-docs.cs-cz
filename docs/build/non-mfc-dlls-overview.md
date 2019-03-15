@@ -5,12 +5,12 @@ helpviewer_keywords:
 - non-MFC DLLs [C++]
 - DLLs [C++], non-MFC
 ms.assetid: 1ed5d1ee-e20c-47d7-801d-87ea26a73842
-ms.openlocfilehash: 2363d9ab13e120ab72a30628a7c37c411e8de3a2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 14cbdadd8c66d6fdf282f644102a6d4a783893b5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414522"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809285"
 ---
 # <a name="non-mfc-dlls-overview"></a>Knihovny DLL mimo MFC: Přehled
 
@@ -20,22 +20,22 @@ Další informace o non - MFC knihovny DLL, naleznete v tématu [dynamické knih
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
-- [Návod: Vytvoření a použití dynamické knihovny DLL](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)
+- [Návod: Vytvoření a použití dynamické knihovny DLL](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)
 
-- [Export z knihovny DLL](../build/exporting-from-a-dll.md)
+- [Export z knihovny DLL](exporting-from-a-dll.md)
 
-- [Propojení spustitelného souboru s knihovnou DLL](../build/linking-an-executable-to-a-dll.md)
+- [Propojení spustitelného souboru s knihovnou DLL](linking-an-executable-to-a-dll.md)
 
-- [Inicializace knihovny DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Inicializace knihovny DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
 
-- [Regulární knihovny MFC DLL staticky propojené do MFC](../build/regular-dlls-statically-linked-to-mfc.md)
+- [Regulární knihovny MFC DLL staticky propojené do MFC](regular-dlls-statically-linked-to-mfc.md)
 
-- [Regulární knihovny MFC DLL staticky propojené do MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [Regulární knihovny MFC DLL staticky propojené do MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [Rozšiřující knihovny MFC DLL: Přehled](../build/extension-dlls-overview.md)
+- [Rozšiřující knihovny MFC DLL: Přehled](extension-dlls-overview.md)
 
 ## <a name="see-also"></a>Viz také:
 
-[Typy knihoven DLL](../build/kinds-of-dlls.md)
+[Typy knihoven DLL](kinds-of-dlls.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - module definition files
 - /DEF linker option
 ms.assetid: 6497fa68-65f0-48ca-8f66-b87166fc631a
-ms.openlocfilehash: 4b6490186e2faf289844f7fb6b84f5a1c27b10a5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c08412fb50835485e7941b2bb1db088943387b71
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423501"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807439"
 ---
 # <a name="def-specify-module-definition-file"></a>/DEF (Zadat soubor definice modulu)
 
@@ -31,11 +31,11 @@ Název souboru definice modulu (.def) má být předán linkeru.
 
 ## <a name="remarks"></a>Poznámky
 
-/ DEF předá linkeru soubor definice modulu (.def). K propojení lze zadat pouze jeden soubor def. Podrobnosti o .def souborech najdete v tématu [soubory definice modulu](../../build/reference/module-definition-dot-def-files.md).
+/ DEF předá linkeru soubor definice modulu (.def). K propojení lze zadat pouze jeden soubor def. Podrobnosti o .def souborech najdete v tématu [soubory definice modulu](module-definition-dot-def-files.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **Linkeru** složky.
 
@@ -51,5 +51,5 @@ Zadat soubor .def z vývojového prostředí, musí ho přidat do projektu spole
 
 ## <a name="see-also"></a>Viz také:
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)
+[Odkaz na MSVC linkeru](linking.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)

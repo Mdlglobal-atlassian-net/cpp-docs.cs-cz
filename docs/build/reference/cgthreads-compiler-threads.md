@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -CGTHREADS linker option
 - CGTHREADS linker option
 ms.assetid: 4b52cfdb-3702-470b-9580-fabeb1417488
-ms.openlocfilehash: e2e1a51dcff46601034ed18292e9c4dcf4bd7d5c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b778802d3fffcaafc0cf01ac46ae85c4efbef95c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413937"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809532"
 ---
 # <a name="cgthreads-compiler-threads"></a>/CGTHREADS (Vlákna kompilátoru)
 
@@ -30,13 +30,13 @@ Maximální počet vláken pro cl.exe pro použití v rozsahu 1 až 8.
 
 ## <a name="remarks"></a>Poznámky
 
-**/Cgthreads** možnost určuje maximální počet vláken cl.exe využívá paralelní fázích optimalizace a generování kódu při propojování kompilace generování kódu ([parametru/LTCG](../../build/reference/ltcg-link-time-code-generation.md)) je zadat. Ve výchozím nastavení používá cl.exe čtyři vlákna, jako kdyby **/CGTHREADS:4** byly zadány. Pokud jsou k dispozici více jader procesoru větší `number` hodnotu můžete zkrátit dobu sestavování.
+**/Cgthreads** možnost určuje maximální počet vláken cl.exe využívá paralelní fázích optimalizace a generování kódu při propojování kompilace generování kódu ([parametru/LTCG](ltcg-link-time-code-generation.md)) je zadat. Ve výchozím nastavení používá cl.exe čtyři vlákna, jako kdyby **/CGTHREADS:4** byly zadány. Pokud jsou k dispozici více jader procesoru větší `number` hodnotu můžete zkrátit dobu sestavování.
 
-Sestavení lze zadat více úrovní paralelismu. Přepínač msbuild.exe **/maxcpucount** určuje počet procesů MSBuild, které můžou běžet paralelně. [/MP (sestavení pomocí několika procesů)](../../build/reference/mp-build-with-multiple-processes.md) kompilátoru příznak určuje, kolik cl.exe procesy, které současně kompilaci zdrojové soubory. [/Cgthreads](../../build/reference/cgthreads-code-generation-threads.md) – možnost kompilátoru určuje počet vláken používaných každý proces cl.exe. Protože procesor může spustit pouze počet vláken ve stejnou dobu jako jader procesoru, není užitečné k určení vyšší hodnoty pro všechny tyto možnosti ve stejnou dobu a může být kontraproduktivní. Další informace o tom, jak vytvořit paralelně, naleznete v tématu [sestavování více projektů současně](/visualstudio/msbuild/building-multiple-projects-in-parallel-with-msbuild).
+Sestavení lze zadat více úrovní paralelismu. Přepínač msbuild.exe **/maxcpucount** určuje počet procesů MSBuild, které můžou běžet paralelně. [/MP (sestavení pomocí několika procesů)](mp-build-with-multiple-processes.md) kompilátoru příznak určuje, kolik cl.exe procesy, které současně kompilaci zdrojové soubory. [/Cgthreads](cgthreads-code-generation-threads.md) – možnost kompilátoru určuje počet vláken používaných každý proces cl.exe. Protože procesor může spustit pouze počet vláken ve stejnou dobu jako jader procesoru, není užitečné k určení vyšší hodnoty pro všechny tyto možnosti ve stejnou dobu a může být kontraproduktivní. Další informace o tom, jak vytvořit paralelně, naleznete v tématu [sestavování více projektů současně](/visualstudio/msbuild/building-multiple-projects-in-parallel-with-msbuild).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace**, **Linkeru** složky.
 
@@ -50,5 +50,5 @@ Sestavení lze zadat více úrovní paralelismu. Přepínač msbuild.exe **/maxc
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti linkeru](../../build/reference/linker-options.md)<br/>
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)
+[Možnosti Linkeru MSVC](linker-options.md)<br/>
+[Odkaz na MSVC linkeru](linking.md)

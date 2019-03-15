@@ -14,12 +14,12 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-ms.openlocfilehash: c2d34c54491bb4b85311be3ba1ebdaed87437246
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f01e69138a6ca1744645a1c2fa8525b7088e260d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420684"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814550"
 ---
 # <a name="mutual-imports"></a>Vzájemné importy
 
@@ -41,7 +41,7 @@ Obecné řešení pro zpracování vzájemné importy je:
 
 Následující obrázek znázorňuje řešení pro dva vzájemně importu knihovny DLL, DLL1 a DLL2. Krok 1 je ke spuštění knihovny LIB, sadou def – možnost na DLL1. Krok 1 vytváří DLL1.lib knihovnu importu a DLL1.exp. V kroku 2 knihovnu importu se používá k vytvoření DLL2, které pak vytvoří knihovnu importu DLL2 symbolů. Krok 3 sestavení DLL1 pomocí DLL1.exp a DLL2.lib jako vstup. Všimněte si, že soubor s .exp DLL2 není nezbytné, protože LIB nebyl použit k sestavení knihovny importu DLL2.
 
-![Vzájemné importy pomocí propojení dvou knihovny DLL](../build/media/vc37yj1.gif "propojit dvě knihovny DLL pomocí vzájemné importy")<br/>
+![Vzájemné importy pomocí propojení dvou knihovny DLL](media/vc37yj1.gif "propojit dvě knihovny DLL pomocí vzájemné importy")<br/>
 Propojení dvou knihoven DLL s vzájemné importy
 
 ## <a name="limitations-of-afxext"></a>Omezení _AFXEXT
@@ -109,24 +109,24 @@ class CExampleA : public CObject
 
 ### <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
-- [Export z knihovny DLL](../build/exporting-from-a-dll.md)
+- [Export z knihovny DLL](exporting-from-a-dll.md)
 
-- [Export z knihovny DLL pomocí. DEF soubory](../build/exporting-from-a-dll-using-def-files.md)
+- [Export z knihovny DLL pomocí. DEF soubory](exporting-from-a-dll-using-def-files.md)
 
-- [Export z knihovny DLL pomocí __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Export z knihovny DLL pomocí __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Export a import pomocí AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [Export a import pomocí AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Export funkcí jazyka C++ pro použití ve spustitelných souborech jazyka C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Export funkcí jazyka C++ pro použití ve spustitelných souborech jazyka C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Určit, kterou exportovací metodu použít](../build/determining-which-exporting-method-to-use.md)
+- [Určit, kterou exportovací metodu použít](determining-which-exporting-method-to-use.md)
 
-- [Import do aplikace s použitím deklarace __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Import do aplikace s použitím deklarace __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
 
-- [Nástroj LIB a parametr/def](../build/reference/lib-reference.md)
+- [Nástroj LIB a parametr/def](reference/lib-reference.md)
 
 ## <a name="see-also"></a>Viz také:
 
-[Import a export](../build/importing-and-exporting.md)
+[Import a export](importing-and-exporting.md)

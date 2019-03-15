@@ -4,7 +4,7 @@
 # [Vytvoření nového projektu Linux](create-a-new-linux-project.md)
 # [Připojení ke vzdálenému počítači s Linuxem](connect-to-your-remote-linux-computer.md)
 # [Nasazení, spuštění a ladění projektu Linux](deploy-run-and-debug-your-linux-project.md)
-# [Kurz: Vytváření projektů v jazyce C++ pro různé platformy v sadě Visual Studio](../ide/get-started-linux-cmake.md)
+# [Kurz: Vytváření projektů v jazyce C++ pro různé platformy v sadě Visual Studio](../build/get-started-linux-cmake.md)
 # [Odkaz na stránku vlastností projektu Linux](prop-pages-linux.md)
 ## [Obecné vlastnosti (Linux)](prop-pages/general-linux.md)
 ## [Vlastnosti ladění (Linux)](prop-pages/debugging-linux.md)

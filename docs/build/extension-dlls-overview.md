@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: eb5e10b7-d615-4bc7-908d-e3e99b7b1d5f
-ms.openlocfilehash: 0ad5c82d72a3cd9b4801274aefd40d96afdbcdd1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ab9b980cbb3e89eebee945e90c54f23d6717a1a4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425052"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816474"
 ---
 # <a name="mfc-extension-dlls-overview"></a>MFC – rozšiřující knihovny DLL: Přehled
 
@@ -27,22 +27,22 @@ Všimněte si, že v dokumentaci k Visual C++ se již nepoužívá termín AFXDL
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
-- [Inicializace rozšiřující knihovny DLL MFC](../build/run-time-library-behavior.md#initializing-extension-dlls)
+- [Inicializace rozšiřující knihovny DLL MFC](run-time-library-behavior.md#initializing-extension-dlls)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
 
-- [MFC – rozšiřující knihovny DLL](../build/extension-dlls.md)
+- [MFC – rozšiřující knihovny DLL](extension-dlls.md)
 
-- [Používání databázových, OLE a soketových rozšiřujících knihoven MFC DLL v běžných knihovnách MFC DLL](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+- [Používání databázových, OLE a soketových rozšiřujících knihoven MFC DLL v běžných knihovnách MFC DLL](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
-- [Knihovny DLL mimo MFC: Přehled](../build/non-mfc-dlls-overview.md)
+- [Knihovny DLL mimo MFC: Přehled](non-mfc-dlls-overview.md)
 
-- [Regulární knihovny MFC DLL staticky propojené do MFC](../build/regular-dlls-statically-linked-to-mfc.md)
+- [Regulární knihovny MFC DLL staticky propojené do MFC](regular-dlls-statically-linked-to-mfc.md)
 
-- [Regulární knihovny MFC DLL staticky propojené do MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [Regulární knihovny MFC DLL staticky propojené do MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
 - [Vytváření knihovny MFC DLL](../mfc/reference/mfc-dll-wizard.md)
 
 ## <a name="see-also"></a>Viz také:
 
-[Typy knihoven DLL](../build/kinds-of-dlls.md)
+[Typy knihoven DLL](kinds-of-dlls.md)

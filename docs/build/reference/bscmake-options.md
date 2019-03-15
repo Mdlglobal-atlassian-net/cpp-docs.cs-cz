@@ -29,24 +29,24 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-ms.openlocfilehash: 7727f433ae68f26075645b35ff5edad43159ec67
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bf4c3648079dff16481dbdd56b9a70093fd22d8d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415406"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812054"
 ---
 # <a name="bscmake-options"></a>Možnosti BSCMAKE
 
 Tato část popisuje dostupné možnosti pro řízení BSCMAKE. Několik možností, jak obsah informačního souboru procházení řízen vyloučení nebo zahrnutí určité informace. Možnosti vyloučení můžete povolit BSCMAKE běželo rychleji a může mít za následek menší soubor .bsc. Názvy možností jsou malá a velká písmena (s výjimkou **/HELP** a **/nologo**).
 
-Pouze **/nologo** a **/o** jsou dostupné v rámci vývojového prostředí sady Visual Studio.  Zobrazit [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md) o přístup k stránky vlastností projektu.
+Pouze **/nologo** a **/o** jsou dostupné v rámci vývojového prostředí sady Visual Studio.  Zobrazit [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md) o přístup k stránky vlastností projektu.
 
 **/Ei (** *filename*... **)**<br/>
 Obsah souboru určeného zahrnutého vyloučí z informačního souboru procházení. Chcete-li zadat více souborů, názvy oddělte mezerou a uvést v seznamu v závorkách. Závorky nejsou nezbytné, pokud zadáte pouze jeden *filename*. Použití **/Ei** spolu s **/Es** možnost vyloučit soubory není vyloučeno podle **/Es**.
 
 **/El**<br/>
-Vyloučí místní symboly. Ve výchozím nastavení je místní symboly. Další informace o místní symboly, naleznete v tématu [vytváření souboru .sbr](../../build/reference/creating-an-dot-sbr-file.md).
+Vyloučí místní symboly. Ve výchozím nastavení je místní symboly. Další informace o místní symboly, naleznete v tématu [vytváření souboru .sbr](creating-an-dot-sbr-file.md).
 
 **/Em**<br/>
 Vyloučí symboly v těle makra. Použití **/Em** mají být zahrnuty pouze názvy maker informačního souboru procházení. Ve výchozím nastavení je zahrnout názvy maker a výsledkem rozšíření makra.
@@ -60,7 +60,7 @@ Vyloučí z informačního souboru procházení každý soubor zahrnutí zadán 
 **/errorreport:**[**none** &#124; **prompt** &#124; **queue** &#124; **send**]<br/>
 Umožňuje odesílat informace společnosti Microsoft týkající se s interními chybami v bscmake.exe.
 
-Další informace o **/errorreport**, naleznete v tématu [/errorreport (sestava interními chybami kompilátoru)](../../build/reference/errorreport-report-internal-compiler-errors.md).
+Další informace o **/errorreport**, naleznete v tématu [/errorreport (sestava interními chybami kompilátoru)](errorreport-report-internal-compiler-errors.md).
 
 **/HELP**<br/>
 Zobrazí souhrn syntaxe příkazového řádku nástroje BSCMAKE.
@@ -69,7 +69,7 @@ Zobrazí souhrn syntaxe příkazového řádku nástroje BSCMAKE.
 Zahrnuje neodkazovaná symboly. Ve výchozím nastavení BSCMAKE nezaznamenává všechny symboly, které jsou definovány, ale neodkazuje. Pokud soubor .sbr byla zabalena, tato možnost nemá žádný účinek pro tento vstupní soubor, protože kompilátor už odebrala neodkazovaná symboly.
 
 **/n**<br/>
-Vynutí nepřírůstková sestavení. Použití **/n** vynutit na úplné sestavení informačního souboru procházení, jestli existuje soubor .bsc a zabránit soubory .sbr vedlo ke zkrácení. Zobrazit [postupy: sestavení souboru .BSC nástrojem BSCMAKE](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md).
+Vynutí nepřírůstková sestavení. Použití **/n** vynutit na úplné sestavení informačního souboru procházení, jestli existuje soubor .bsc a zabránit soubory .sbr vedlo ke zkrácení. Zobrazit [postupy: sestavení souboru .BSC nástrojem BSCMAKE](how-bscmake-builds-a-dot-bsc-file.md).
 
 **/NOLOGO**<br/>
 Potlačí zprávu o autorských právech nástroje BSCMAKE.
@@ -94,4 +94,4 @@ BSCMAKE /n /S toolbox.h /o main.bsc file1.sbr file2.sbr file3.sbr
 
 ## <a name="see-also"></a>Viz také:
 
-[BSCMAKE – referenční dokumentace](../../build/reference/bscmake-reference.md)
+[BSCMAKE – referenční dokumentace](bscmake-reference.md)

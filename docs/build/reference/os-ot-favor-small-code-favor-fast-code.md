@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Os compiler option [C++]
 - -Os compiler option [C++]
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
-ms.openlocfilehash: c2abf23c15e6550a6d115f2e2b41a9c59de5fa3a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d4e8d062685a543c428f0c86a22c17c8faf017ad
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424636"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814248"
 ---
 # <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os, /Ot (Upřednostnit malý kód, upřednostnit rychlý kód)
 
@@ -39,12 +39,12 @@ Minimalizuje nebo maximalizuje velikost souborů exe a DLL.
 
 **/OS** (upřednostnit malý kód) minimalizuje velikost souborů exe a DLL tím, že kompilátor, aby velikost upřednostnil před rychlostí. Kompilátor může snížit mnoho konstrukcí jazyka C a C++ funkčně podobné pořadí strojového kódu. Tyto rozdíly občas nabízet kompromisy velikost a rychlost. **/Os** a **/Ot** možností vám umožňují určit předvolby pro některého z nich:
 
-**/Ot** (upřednostnit rychlý kód) maximalizuje rychlost souborů exe a DLL tím, že kompilátor, aby rychlost upřednostnil před velikostí. (Toto je výchozí.) Kompilátor může snížit mnoho konstrukcí jazyka C a C++ funkčně podobné pořadí strojového kódu. Tyto rozdíly v některých případech nabízejí kompromisy velikost a rychlost. Maximalizovat rychlost předpokládá možnost /Ot ([/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md)) možnost. **/O2** možnost kombinuje několik možností, jak vytvořit velmi rychlý kód.
+**/Ot** (upřednostnit rychlý kód) maximalizuje rychlost souborů exe a DLL tím, že kompilátor, aby rychlost upřednostnil před velikostí. (Toto je výchozí.) Kompilátor může snížit mnoho konstrukcí jazyka C a C++ funkčně podobné pořadí strojového kódu. Tyto rozdíly v některých případech nabízejí kompromisy velikost a rychlost. Maximalizovat rychlost předpokládá možnost /Ot ([/O2](o1-o2-minimize-size-maximize-speed.md)) možnost. **/O2** možnost kombinuje několik možností, jak vytvořit velmi rychlý kód.
 
-Pokud používáte **/Os** nebo **/Ot**, pak musíte zadat také [/og](../../build/reference/og-global-optimizations.md) optimalizovat kód.
+Pokud používáte **/Os** nebo **/Ot**, pak musíte zadat také [/og](og-global-optimizations.md) optimalizovat kód.
 
 > [!NOTE]
->  Informace shromážděné z testovacích běhů profilování přepíšou optimalizace, které by jinak byly v vliv, pokud zadáte **/Ob**, **/Os**, nebo **/Ot**. Další informace najdete [Profile-Guided optimalizace](../../build/reference/profile-guided-optimizations.md).
+>  Informace shromážděné z testovacích běhů profilování přepíšou optimalizace, které by jinak byly v vliv, pokud zadáte **/Ob**, **/Os**, nebo **/Ot**. Další informace najdete [Profile-Guided optimalizace](../profile-guided-optimizations.md).
 
 **x86 konkrétní**
 
@@ -86,7 +86,7 @@ sub    eax, ecx
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **C/C++** složky.
 
@@ -100,6 +100,6 @@ sub    eax, ecx
 
 ## <a name="see-also"></a>Viz také:
 
-[/O – možnosti (optimalizace kódu)](../../build/reference/o-options-optimize-code.md)<br/>
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[/O – možnosti (optimalizace kódu)](o-options-optimize-code.md)<br/>
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

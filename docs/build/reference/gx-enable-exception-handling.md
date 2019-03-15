@@ -11,12 +11,12 @@ helpviewer_keywords:
 - enable exception handling compiler option [C++]
 - GX compiler option [C++]
 ms.assetid: 933b43ba-de77-4ff8-a48b-7074de90bc1c
-ms.openlocfilehash: 4ac2b86c19845a092c743c484ad48d0cd0b6fb35
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 43be8f6d0f080f0d85568ce5b089751fc68f0e8e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416030"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815460"
 ---
 # <a name="gx-enable-exception-handling"></a>/GX (povolení zpracování výjimek)
 
@@ -30,7 +30,7 @@ Zastaralé Povolí synchronní zpracování výjimek pomocí za předpokladu, ž
 
 ## <a name="remarks"></a>Poznámky
 
-**/GX** je zastaralý. Použít ekvivalent [/EHsc](../../build/reference/eh-exception-handling-model.md) místo něj parametr. Seznam možností kompilátoru zastaralé, najdete v článku **zastaralé a odebrat možnosti kompilátoru** tématu [možnosti kompilátoru seřazené podle kategorie](../../build/reference/compiler-options-listed-by-category.md).
+**/GX** je zastaralý. Použít ekvivalent [/EHsc](eh-exception-handling-model.md) místo něj parametr. Seznam možností kompilátoru zastaralé, najdete v článku **zastaralé a odebrat možnosti kompilátoru** tématu [možnosti kompilátoru seřazené podle kategorie](compiler-options-listed-by-category.md).
 
 Ve výchozím nastavení **/EHsc**, ekvivalent **/GX**, je v platnosti při kompilaci s použitím vývojového prostředí sady Visual Studio. Při použití nástroje příkazového řádku, je zadán bez ošetření výjimek. Toto je ekvivalentem **/GX-**.
 
@@ -38,7 +38,7 @@ Další informace najdete v tématu [zpracování výjimek jazyka C++](../../cpp
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. V navigačním podokně zvolte **vlastnosti konfigurace**, **C/C++**, **příkazového řádku**.
 
@@ -50,6 +50,6 @@ Další informace najdete v tématu [zpracování výjimek jazyka C++](../../cpp
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
-[/EH (model ošetření výjimek)](../../build/reference/eh-exception-handling-model.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
+[/EH (model ošetření výjimek)](eh-exception-handling-model.md)

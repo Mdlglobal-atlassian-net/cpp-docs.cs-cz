@@ -2,12 +2,12 @@
 title: /HIGHENTROPYVA (podpora 64bitové technologie ASLR)
 ms.date: 06/12/2018
 ms.assetid: fe35f9f7-d28e-4694-9aeb-a79db06168e0
-ms.openlocfilehash: a8bd1b2231530c0f1632b244edaf36ee14ed65b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ecbbf8bbd8e74f80f2f5b2d7df0d2ef544112fc
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534794"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821999"
 ---
 # <a name="highentropyva-support-64-bit-aslr"></a>/HIGHENTROPYVA (podpora 64bitové technologie ASLR)
 
@@ -27,7 +27,7 @@ Pro **/highentropyva** mají nějaký efekt v okamžiku načtení [možnost/Dyna
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Nastavení této možnosti linkeru v sadě Visual Studio
 
-1. Otevřete projekt **stránky vlastností** dialogové okno. Další informace najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete projekt **stránky vlastností** dialogové okno. Další informace najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **Linkeru** > **příkazového řádku** stránku vlastností.
 
@@ -35,8 +35,8 @@ Pro **/highentropyva** mají nějaký efekt v okamžiku načtení [možnost/Dyna
 
 ## <a name="see-also"></a>Viz také:
 
-- [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)
-- [Možnosti linkeru](../../build/reference/linker-options.md)
+- [Odkaz na MSVC linkeru](linking.md)
+- [Možnosti Linkeru MSVC](linker-options.md)
 - [/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)
 - [/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)
 - [Obrana zabezpečení ISV softwaru Windows](https://msdn.microsoft.com/library/bb430720.aspx)

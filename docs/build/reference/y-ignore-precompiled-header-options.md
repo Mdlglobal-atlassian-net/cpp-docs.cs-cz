@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -Y- compiler option [C++]
 - /Y- compiler option [C++]
 ms.assetid: cfaecb36-58db-46b8-b04d-cca6072b1b7a
-ms.openlocfilehash: 7a823457b0d372527488e646f0d2fa83bd7a4740
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c56c25d587d84e599718d2e1a74d469def3501f7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421516"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812353"
 ---
 # <a name="y--ignore-precompiled-header-options"></a>/Y- (Ignorovat možnosti předkompilovaných hlaviček)
 
@@ -29,13 +29,13 @@ Způsobí, že všechny ostatní `/Y` kompilátoru, které pokud chcete ignorova
 
 Další informace o předkompilovaných hlaviček naleznete v tématu:
 
-- [/Y (předkompilované hlavičky)](../../build/reference/y-precompiled-headers.md)
+- [/Y (předkompilované hlavičky)](y-precompiled-headers.md)
 
-- [Vytváření předkompilovaných hlavičkových souborů](../../build/reference/creating-precompiled-header-files.md)
+- [Předkompilované soubory hlaviček](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **C/C++** složky.
 
@@ -49,5 +49,5 @@ Další informace o předkompilovaných hlaviček naleznete v tématu:
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

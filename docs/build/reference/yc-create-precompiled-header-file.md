@@ -15,12 +15,12 @@ helpviewer_keywords:
 - /Yc compiler option [C++]
 - Yc compiler option [C++]
 ms.assetid: 47c2e555-b4f5-46e6-906e-ab5cf21f0678
-ms.openlocfilehash: 35b8bfb30a49efa35a3af3d3b76e75f8dede9fd7
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0d902b9ebb35bc7f267cb67861b7be0763f378a6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418968"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821427"
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc (Vytvořit předkompilovaný hlavičkový soubor)
 
@@ -40,23 +40,23 @@ Určuje soubor hlaviček (.h). Pokud tento argument se používá, kompilátor z
 
 Při **/Yc** je zadán bez argumentu, kompilátor zkompiluje veškerého kódu až po end základní zdrojového souboru nebo do bodu v souboru základní kde [hdrstop](../../preprocessor/hdrstop.md) vyvolá směrnice. Výsledný soubor .pch má stejný základní název jako základní zdrojový soubor, pokud neurčíte název jiného souboru pomocí **hdrstop** – Direktiva pragma nebo **/FP** možnost.
 
-Předkompilovaný kód je uloží do souboru s názvem vytvořené ze základní název souboru zadaný **/Yc** možnost a příponou .pch. Můžete také použít [/Fp (název. Soubor pch)](../../build/reference/fp-name-dot-pch-file.md) můžete zadat název předkompilovaného souboru hlaviček.
+Předkompilovaný kód je uloží do souboru s názvem vytvořené ze základní název souboru zadaný **/Yc** možnost a příponou .pch. Můžete také použít [/Fp (název. Soubor pch)](fp-name-dot-pch-file.md) můžete zadat název předkompilovaného souboru hlaviček.
 
-Pokud používáte __/Yc__*filename*, kompilátor zkompiluje veškerého kódu do a včetně zadaného souboru pro pozdější použití s [/Yu (Použít předkompilovaný hlavičkový soubor)](../../build/reference/yu-use-precompiled-header-file.md) možnost.
+Pokud používáte __/Yc__*filename*, kompilátor zkompiluje veškerého kódu do a včetně zadaného souboru pro pozdější použití s [/Yu (Použít předkompilovaný hlavičkový soubor)](yu-use-precompiled-header-file.md) možnost.
 
 Pokud možnosti __/Yc__*filename* a __/Yu__*filename* vyskytovat na stejném příkazovém řádku a obě odkazovat, ani z nich nevyplývají stejný název souboru __/Yc__*filename* přednost. Tato funkce zjednodušuje psaní soubory pravidel.
 
 Další informace o předkompilovaných hlaviček naleznete v tématu:
 
-- [/Y (předkompilované hlavičky)](../../build/reference/y-precompiled-headers.md)
+- [/Y (předkompilované hlavičky)](y-precompiled-headers.md)
 
-- [Vytváření předkompilovaných hlavičkových souborů](../../build/reference/creating-precompiled-header-files.md)
+- [Předkompilované soubory hlaviček](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
 1. Vyberte soubor .cpp. Soubor .cpp musí #include souboru .h, který obsahuje informace pro předkompilované hlavičky. V projektu **/Yc** nastavení můžete přepsat na úrovni souboru.
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Otevřít **vlastnosti konfigurace**, **C/C++**, **předkompilované hlavičky** stránku vlastností.
 
@@ -85,6 +85,6 @@ Když tento kód je zkompilován pomocí příkazu `CL /YcMYAPP.H PROG.CPP`, kom
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
-[Vytváření předkompilovaných hlavičkových souborů](../../build/reference/creating-precompiled-header-files.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
+[Předkompilované soubory hlaviček](../creating-precompiled-header-files.md)

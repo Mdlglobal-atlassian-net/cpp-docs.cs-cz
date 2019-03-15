@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -Wp64 compiler option [C++]
 - Wp64 compiler option [C++]
 ms.assetid: 331ae5aa-e627-4d03-8f63-dd2c2d76dadd
-ms.openlocfilehash: b158fb93cb5ea0b43124efe06edb53aebcc0d104
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5a3cdaf85fa4dc05ece54fc630cb69fc93650e6b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425572"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813939"
 ---
 # <a name="wp64-detect-64-bit-portability-issues"></a>/Wp64 (Zjištěny problémy s 64bitovou přenositelností)
 
@@ -30,10 +30,10 @@ Tato možnost kompilátoru je zastaralý. Ve verzích sady Visual Studio před V
 
 ## <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení ve verzích sady Visual Studio před Visual Studio 2013 **/Wp64** – možnost kompilátoru je vypnuté v kompilátoru jazyka Visual C++, který vytváří x86 32-bit kódu v kompilátoru jazyka Visual C++, která sestavení a 64-bit, x64 kódu.
+Ve výchozím nastavení ve verzích sady Visual Studio před Visual Studio 2013 **/Wp64** – možnost kompilátoru je vypnuté v, který vytváří x86 32-bit kompilátor MSVC kódu v kompilátoru MSVC, která sestavení a 64-bit, x64 kódu.
 
 > [!IMPORTANT]
->  [/Wp64](../../build/reference/wp64-detect-64-bit-portability-issues.md) – možnost kompilátoru a [__w64](../../cpp/w64.md) – klíčové slovo se považují za zastaralé v sadě Visual Studio 2010 a Visual Studio 2012 a nepodporuje se spouští v sadě Visual Studio 2013. Pokud převedete projekt, který používá tento přepínač, nebude se migrovat přepínač během převodu. Tato možnost dala použít v sadě Visual Studio 2010 nebo Visual Studio 2012, je nutné zadat přepínač kompilátoru pod **další možnosti** v **příkazového řádku** části Vlastnosti projektu. Pokud používáte **/Wp64** – možnost kompilátoru na příkazovém řádku, kompilátor vydá upozornění D9002 příkazového řádku. Namísto použití této možnosti a klíčového slova ke zjišťování problémů přenositelnosti na 64-bit, použijte kompilátor jazyka Visual C++, který cílí na 64bitovou platformu a zadejte [/W4](../../build/reference/compiler-option-warning-level.md) možnost. Další informace najdete v tématu [konfigurovat Visual C++ pro 64bitové, x64 cíle](../../build/configuring-programs-for-64-bit-visual-cpp.md).
+>  [/Wp64](wp64-detect-64-bit-portability-issues.md) – možnost kompilátoru a [__w64](../../cpp/w64.md) – klíčové slovo se považují za zastaralé v sadě Visual Studio 2010 a Visual Studio 2012 a nepodporuje se spouští v sadě Visual Studio 2013. Pokud převedete projekt, který používá tento přepínač, nebude se migrovat přepínač během převodu. Tato možnost dala použít v sadě Visual Studio 2010 nebo Visual Studio 2012, je nutné zadat přepínač kompilátoru pod **další možnosti** v **příkazového řádku** části Vlastnosti projektu. Pokud používáte **/Wp64** – možnost kompilátoru na příkazovém řádku, kompilátor vydá upozornění D9002 příkazového řádku. Namísto použití této možnosti a klíčového slova ke zjišťování problémů přenositelnosti na 64-bit, použijte kompilátor MSVC, který cílí na 64bitovou platformu a zadejte [/W4](compiler-option-warning-level.md) možnost. Další informace najdete v tématu [projekty konfigurace C++ pro 64bitové x64 cíle](../configuring-programs-for-64-bit-visual-cpp.md).
 
 Proměnné z následujících typů jsou testovány v 32bitové verzi operačního systému, jako kdyby byly používány na 64bitový operační systém:
 
@@ -43,13 +43,13 @@ Proměnné z následujících typů jsou testovány v 32bitové verzi operační
 
 - ukazatel
 
-Pokud kompilujete aplikace pravidelně pomocí kompilátoru, který vytváří 64-bit, x64 kódu, můžete jenom zakázat **/Wp64** do vaší 32bitové kompilace protože 64-bit kompilátor rozpozná všechny problémy. Další informace o tom, jak Windows 64-bit cílový operační systém najdete v tématu [konfigurovat Visual C++ pro 64bitové, x64 cíle](../../build/configuring-programs-for-64-bit-visual-cpp.md).
+Pokud kompilujete aplikace pravidelně pomocí kompilátoru, který vytváří 64-bit, x64 kódu, můžete jenom zakázat **/Wp64** do vaší 32bitové kompilace protože 64-bit kompilátor rozpozná všechny problémy. Další informace o tom, jak Windows 64-bit cílový operační systém najdete v tématu [projekty konfigurace C++ pro 64bitové x64 cíle](../configuring-programs-for-64-bit-visual-cpp.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
 1. Otevřete projekt **stránky vlastností** dialogové okno.
 
-   Další informace najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+   Další informace najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **C/C++** složky.
 
@@ -63,6 +63,6 @@ Pokud kompilujete aplikace pravidelně pomocí kompilátoru, který vytváří 6
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
-[Konfigurace Visual C++ pro 64bitové cíle x64](../../build/configuring-programs-for-64-bit-visual-cpp.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
+[Konfigurace projektů C++ pro 64bitové, x64 cíle](../configuring-programs-for-64-bit-visual-cpp.md)

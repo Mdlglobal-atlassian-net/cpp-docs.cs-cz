@@ -10,12 +10,12 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: 02e678f98773f9ae7bb4f611210329a7a1116f17
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8c4827891799d2c76a344e4c6da8f3d96333826e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749110"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816028"
 ---
 # <a name="how-to-migrate-to-clr"></a>Postupy: Přechod na/CLR
 
@@ -98,7 +98,7 @@ Tento krok má vliv jiné projekty, které používají soubory pravidel. V tomt
 **/ CLR** lze vybrat ve vývojovém prostředí pomocí pokynů v [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md). Jak už bylo zmíněno dříve, tento krok automaticky vypnout konfliktní nastavení projektu.
 
 > [!NOTE]
->  Při upgradu spravované knihovny nebo projektu webové služby z jazyka Visual C++ 2003, **/Zl** možnost kompilátoru bude přidána do **příkazového řádku** stránku vlastností. To způsobí, že LNK2001. Odebrat **/Zl** z **příkazového řádku** stránka vlastností řešení. Zobrazit [/Zl (vynechat název výchozí knihovny)](../build/reference/zl-omit-default-library-name.md) a [práce s vlastnostmi projektu](../ide/working-with-project-properties.md) Další informace. Nebo přidejte msvcrt.lib a msvcmrt.lib v linkeru **Další závislosti** vlastnost.
+>  Při upgradu spravované knihovny nebo projektu webové služby z jazyka Visual C++ 2003, **/Zl** možnost kompilátoru bude přidána do **příkazového řádku** stránku vlastností. To způsobí, že LNK2001. Odebrat **/Zl** z **příkazového řádku** stránka vlastností řešení. Zobrazit [/Zl (vynechat název výchozí knihovny)](../build/reference/zl-omit-default-library-name.md) a [nastavení kompilátoru a vlastnosti sestavení](../build/working-with-project-properties.md) Další informace. Nebo přidejte msvcrt.lib a msvcmrt.lib v linkeru **Další závislosti** vlastnost.
 
 Pro projekty vytvořené pomocí souborů pravidel, nekompatibilní možnosti kompilátoru musí být zakázána ruční **/CLR** je přidána. Zobrazit /[/CLR – omezení](../build/reference/clr-restrictions.md) o – možnosti kompilátoru, které nejsou kompatibilní s **/CLR**.
 

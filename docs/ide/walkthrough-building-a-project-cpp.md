@@ -6,12 +6,12 @@ helpviewer_keywords:
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: 1d5dbd8f83f501c3b68bad771089eab8acc6f8aa
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8aadb6983cc096ff75785c6bab7ace6bd5f0c632
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742497"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809002"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Návod: Sestavení projektu (C++)
 
@@ -60,4 +60,4 @@ V tomto podrobném návodu se záměrně zavést chybu syntaxe jazyka Visual C++
 ## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
-[Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)<br/>
+[Projekty a sestavení systémy](../build/projects-and-build-systems-cpp.md)<br/>

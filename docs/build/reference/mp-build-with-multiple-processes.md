@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MP compiler option (C++)
 - MP compiler option (C++)
 - cl.exe compiler, multi-process build
-ms.openlocfilehash: d0a3e50ca75535d505e46c0e454a8e0902b1ffb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a66f6f6f1f4ce77e33df992b915be9ca5dcce70
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562081"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808453"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (sestavení pomocí několika procesů)
 
@@ -50,10 +50,10 @@ Následující tabulka uvádí možnosti kompilátoru a funkce jazyka, které ne
 |Možnosti nebo funkce jazyka|Popis|
 |--------------------------------|-----------------|
 |[#import](../../preprocessor/hash-import-directive-cpp.md) direktivy preprocesoru|Převede typy v knihovně typů na třídy jazyka C++ a pak zapíše do souboru hlaviček těchto tříd.|
-|[/E](../../build/reference/e-preprocess-to-stdout.md), [/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)|Zkopíruje výstup předzpracování do standardního výstupu (**stdout**).|
-|[/Gm](../../build/reference/gm-enable-minimal-rebuild.md)|Umožňuje přírůstkové sestavení.|
-|[/ showincludes](../../build/reference/showincludes-list-include-files.md)|Zapíše seznam vložených souborů do standardní chyby (**stderr**).|
-|[/Yc](../../build/reference/yc-create-precompiled-header-file.md)|Zapíše soubor předkompilované hlavičky.|
+|[/E](e-preprocess-to-stdout.md), [/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Zkopíruje výstup předzpracování do standardního výstupu (**stdout**).|
+|[/Gm](gm-enable-minimal-rebuild.md)|Umožňuje přírůstkové sestavení.|
+|[/showIncludes](showincludes-list-include-files.md)|Zapíše seznam vložených souborů do standardní chyby (**stderr**).|
+|[/Yc](yc-create-precompiled-header-file.md)|Zapíše soubor předkompilované hlavičky.|
 
 ## <a name="diagnostic-messages"></a>Diagnostické zprávy
 
@@ -61,7 +61,7 @@ Pokud určíte funkci možnost v jakémkoli jazyce, který není kompatibilní s
 
 |Diagnostické zprávy|Popis|Chování kompilátoru|
 |------------------------|-----------------|-----------------------|
-|**C2813**|**#Import** – direktiva není kompatibilní s **/MP** možnost.|Kompilace se ukončí, není-li [úroveň upozornění kompilátoru](../../build/reference/compiler-option-warning-level.md) možnost neurčí jinak.|
+|**C2813**|**#Import** – direktiva není kompatibilní s **/MP** možnost.|Kompilace se ukončí, není-li [úroveň upozornění kompilátoru](compiler-option-warning-level.md) možnost neurčí jinak.|
 |**D9014**|Zadána neplatná hodnota pro *processMax* argument.|Kompilátor ignoruje neplatnou hodnotu a předpokládá hodnotu 1.|
 |**D9030**|Zadaná možnost není kompatibilní s **/MP**.|Kompilátor ignoruje **/MP** možnost.|
 
@@ -99,7 +99,7 @@ Zdrojové soubory nemusí být zkompilovány ve stejném pořadí, v jakém jsou
 
 Zdrojový soubor je zkompilován, když není k dispozici pro jeho kompilaci proces. Pokud existují další soubory než procesy, první sadu souborů je zkompilován s procesy k dispozici. Zbývající soubory se zpracovávají, pokud proces dokončí zpracování předchozí soubor a je k dispozici pro práci na jednom ze zbývajících souborů.
 
-Nezadávejte stejném zdrojovém souboru více než jednou v příkazovém řádku. Tato situace může nastat, například, pokud nástroj automaticky vytváří [makefile](../../build/contents-of-a-makefile.md) , který je založen na informace o závislostech v projektu. Pokud nezadáte **/MP** možnost, kompilátor zpracovává seznam souborů, které postupně a znovu zkompiluje každý výskyt souboru. Nicméně pokud zadáte **/MP** možnost, různými kompilátory může stejný soubor zkompilovat ve stejnou dobu. V důsledku toho různými kompilátory pokusí se zapsat do stejného výstupního souboru ve stejnou dobu. Jeden kompilátoru se získat výhradní přístup pro zápis do výstupního souboru a úspěšné, a jinými kompilátory se nezdaří s chybou přístup k souboru.
+Nezadávejte stejném zdrojovém souboru více než jednou v příkazovém řádku. Tato situace může nastat, například, pokud nástroj automaticky vytváří [makefile](contents-of-a-makefile.md) , který je založen na informace o závislostech v projektu. Pokud nezadáte **/MP** možnost, kompilátor zpracovává seznam souborů, které postupně a znovu zkompiluje každý výskyt souboru. Nicméně pokud zadáte **/MP** možnost, různými kompilátory může stejný soubor zkompilovat ve stejnou dobu. V důsledku toho různými kompilátory pokusí se zapsat do stejného výstupního souboru ve stejnou dobu. Jeden kompilátoru se získat výhradní přístup pro zápis do výstupního souboru a úspěšné, a jinými kompilátory se nezdaří s chybou přístup k souboru.
 
 ### <a name="using-type-libraries-import"></a>Použití knihoven typů (#import)
 

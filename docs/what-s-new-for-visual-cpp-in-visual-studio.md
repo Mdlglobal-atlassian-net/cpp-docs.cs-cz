@@ -5,12 +5,12 @@ ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 062052faf85b342629506a41c39b99a1b59502b9
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: b75a1903b3e0767f8aa009134a2b37a7d1a8e0d0
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809786"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810468"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Co je nového v aplikaci Visual C++ v sadě Visual Studio 2017
 
@@ -315,7 +315,7 @@ Jazyk C++ nyní podporuje Ctrl + kliknutí **přejít k definici**, usnadňuje n
 
 ## <a name="non-msbuild-projects-with-open-folder"></a>Projekty MSBuild bez pomocí otevřít složku
 
-Visual Studio 2017 zavádí **otevřít složku** funkci, která umožňuje kód, vytvářet a ladit ve složce obsahující zdrojový kód bez nutnosti vytvářet jakékoli řešení nebo projektů. Díky tomu je mnohem jednodušší, abyste mohli začít se sadou Visual Studio i v případě, že váš projekt není projektem založené na MSBuild. S **otevřít složku** získáte přístup k výkonné kódu principy, úpravy, sestavování a ladění funkcí, které již poskytuje Visual Studio pro projekty MSBuild. Další informace najdete v tématu [projekty otevřít složku v jazyce Visual C++](ide/non-msbuild-projects.md).
+Visual Studio 2017 zavádí **otevřít složku** funkci, která umožňuje kód, vytvářet a ladit ve složce obsahující zdrojový kód bez nutnosti vytvářet jakékoli řešení nebo projektů. Díky tomu je mnohem jednodušší, abyste mohli začít se sadou Visual Studio i v případě, že váš projekt není projektem založené na MSBuild. S **otevřít složku** získáte přístup k výkonné kódu principy, úpravy, sestavování a ladění funkcí, které již poskytuje Visual Studio pro projekty MSBuild. Další informace najdete v tématu [projekty otevřít složku pro jazyk C++](build/open-folder-projects-cpp.md).
 
 - Vylepšení prostředí Otevřít složku Přizpůsobte si prostředí pomocí tyto soubory .json:
   - CppProperties.json použijte k přizpůsobení technologie IntelliSense a prostředí procházení.
@@ -330,7 +330,7 @@ Visual Studio 2017 zavádí **otevřít složku** funkci, která umožňuje kód
 
 ## <a name="cmake-support-via-open-folder"></a>Podpora CMake prostřednictvím funkce Otevřít složku
 
-Visual Studio 2017 zavádí podporu pro práci s projekty CMake bez nutnosti dalších souborech projektu MSBuild (.vcxproj). Další informace najdete v tématu [projekty CMake v jazyce Visual C++](ide/cmake-tools-for-visual-cpp.md). Otevírání projektů CMake s **otevřít složku** automaticky nakonfiguruje prostředí pro úpravy, sestavování a ladění C++.
+Visual Studio 2017 zavádí podporu pro práci s projekty CMake bez nutnosti dalších souborech projektu MSBuild (.vcxproj). Další informace najdete v tématu [projekty CMake v jazyce Visual C++](build/cmake-projects-in-visual-studio.md). Otevírání projektů CMake s **otevřít složku** automaticky nakonfiguruje prostředí pro úpravy, sestavování a ladění C++.
 
 - Technologie IntelliSense jazyka C++ funguje bez nutnosti vytvoření souboru CppProperties.json v kořenové složce. Navíc jsme přidali novou rozevírací nabídku, která uživatelům umožňuje snadno přepínat mezi konfiguracemi poskytovanými soubory CMake a CppProperties.json.
 
@@ -342,7 +342,7 @@ Visual Studio 2017 zavádí podporu pro práci s projekty CMake bez nutnosti dal
 
 **Visual Studio 2017 version 15.5**: Byla přidána podpora pro import stávající mezipaměti CMake.
 
-**Visual Studio 2017 version 15.7**: Přidána podpora pro CMake 3.11, analýza kódu v projektech CMake, zobrazení cílů v Průzkumníku řešení, možnosti mezipaměti, kompilaci a generování jednoho souboru. Další informace najdete v tématu [podpora CMake v sadě Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) a [projekty CMake v jazyce Visual C++](ide/cmake-tools-for-visual-cpp.md).
+**Visual Studio 2017 version 15.7**: Přidána podpora pro CMake 3.11, analýza kódu v projektech CMake, zobrazení cílů v Průzkumníku řešení, možnosti mezipaměti, kompilaci a generování jednoho souboru. Další informace najdete v tématu [podpora CMake v sadě Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) a [projekty CMake v jazyce Visual C++](build/cmake-projects-in-visual-studio.md).
 
 ## <a name="windows-desktop-development-with-c"></a>Vývoj pro plochu Windows v C++
 

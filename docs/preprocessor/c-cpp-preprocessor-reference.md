@@ -5,12 +5,12 @@ helpviewer_keywords:
 - preprocessor
 - preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
-ms.openlocfilehash: 1ad46a1a3006cbca52336bf65bcfbafd37e59752
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9e5be5895d8a90d93d0060e2bd2a7d0a9f84dbd
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607659"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814420"
 ---
 # <a name="cc-preprocessor-reference"></a>C/C++ – referenční dokumentace preprocesoru
 *C/C++ Preprocessor Reference* popisuje preprocesor, jak je implementován v jazyce Microsoft C/C++. Preprocesor provádí předběžné operace v souborech C a C++ dříve, než jsou předány kompilátoru. Preprocesor můžete použít k podmíněné kompilaci kódu, vložení souborů, zadejte kompilace chybové zprávy a použití pravidel specifických pro části kódu.
@@ -40,5 +40,5 @@ Poskytuje referenční materiál pro implementaci jazyka C společnosti Microsof
 [Sestavení programu v jazyce C/C++](../build/reference/c-cpp-building-reference.md)<br/>
 Obsahuje odkazy na témata pojednávající možnosti kompilátoru a propojovacího programu.
 
-[Vytváření a spravování projektů Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)<br/>
+[Vytváření a spravování projektů Visual C++](../build/creating-and-managing-visual-cpp-projects.md)<br/>
 Popisuje uživatelské rozhraní v sadě Visual Studio, který umožňuje určit adresáře, které systém projektu prohledávat při vyhledávání souborů projektu v jazyce C++.

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], features that affect linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: e4c03896-c99c-4599-8502-e0f4bebe69d0
-ms.openlocfilehash: 3fed75b18ead80b8367eb1254793d632629efeff
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bc7a6cc596f138daa373042abca51642c24cf737
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426703"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822324"
 ---
 # <a name="compiler-controlled-link-options"></a>Možnosti LINK řízené kompilátorem
 
@@ -40,9 +40,9 @@ CL – kompilátor automaticky volá propojení, pokud nezadáte možnost /c. CL
 |Zi nebo/Z7|Předá/Debug|
 |/Zl|Vynechá výchozí název knihovny ze souboru .obj|
 
-Další informace najdete v tématu [– možnosti kompilátoru](../../build/reference/compiler-options.md).
+Další informace najdete v tématu [– možnosti kompilátoru MSVC](compiler-options.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)
+[Odkaz na MSVC linkeru](linking.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)

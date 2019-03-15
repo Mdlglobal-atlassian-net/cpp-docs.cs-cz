@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /F compiler option [C++]
 - stack, setting size
 ms.assetid: 17320b6f-8305-445b-9ec2-75833f4b29e0
-ms.openlocfilehash: 31d694c176afd3c79cde172248bfcd93d1346b54
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9db595daa7de7820b594a8515ece7481b4382c98
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414444"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820413"
 ---
 # <a name="f-set-stack-size"></a>/F (nastavení velikosti zásobníku)
 
@@ -38,13 +38,13 @@ Budete muset zvětšete velikost zásobníku, pokud se program dostane zprávy p
 
 Můžete také nastavit velikost zásobníku:
 
-- Použití **/STACK** – možnost linkeru. Další informace najdete v tématu [/STACK](../../build/reference/stack.md).
+- Použití **/STACK** – možnost linkeru. Další informace najdete v tématu [/STACK](stack.md).
 
-- Pomocí nástroje EDITBIN na soubor .exe. Další informace najdete v tématu [Editbin – referenční dokumentace](../../build/reference/editbin-reference.md).
+- Pomocí nástroje EDITBIN na soubor .exe. Další informace najdete v tématu [Editbin – referenční dokumentace](editbin-reference.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
 
@@ -56,5 +56,5 @@ Můžete také nastavit velikost zásobníku:
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

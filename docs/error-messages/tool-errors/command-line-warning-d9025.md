@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - D9025
 ms.assetid: 6edff72c-1508-46c2-99f4-0e4b3c5e60c9
-ms.openlocfilehash: fb9ab3152efe565501e91fbad5ebb279c4396968
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7090dda72868ad7ee4d5f8e4f1ba6a0ad121c98
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652423"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822457"
 ---
 # <a name="command-line-warning-d9025"></a>Upozornění příkazového řádku D9025
 
@@ -23,7 +23,7 @@ Pokud dvě možnosti zadat direktivy odporuje nebo nekompatibilní, je použít 
 
 Je-li získat toto upozornění při kompilaci z vývojového prostředí a nejste jisti, odkud jsou konfliktní možnosti, zvažte následující:
 
-- Možnost se dá nastavit v kódu nebo v nastavení projektu projekt. Když se podíváte na kompilátoru [stránky vlastností příkazového řádku](../../ide/command-line-property-pages.md) a pokud se zobrazí konfliktní možnosti v **všechny možnosti** pole a možnosti jsou nastaveny na stránkách vlastností projektu, jinak, možnosti jsou nastavené ve zdrojovém kódu.
+- Možnost se dá nastavit v kódu nebo v nastavení projektu projekt. Když se podíváte na kompilátoru [stránky vlastností příkazového řádku](../../build/reference/command-line-property-pages.md) a pokud se zobrazí konfliktní možnosti v **všechny možnosti** pole a možnosti jsou nastaveny na stránkách vlastností projektu, jinak, možnosti jsou nastavené ve zdrojovém kódu.
 
    Pokud jsou možnosti v stránky vlastností projektu, podívejte se na stránku vlastností preprocesoru kompilátoru (s uzlem projektu vybraného v Průzkumníkovi řešení).  Pokud nevidíte možnost nastavit existuje, zkontrolujte nastavení stránky preprocesoru vlastnost pro každý soubor zdrojového kódu (v Průzkumníku řešení), ujistěte se, že tam není přidaný existuje.
 

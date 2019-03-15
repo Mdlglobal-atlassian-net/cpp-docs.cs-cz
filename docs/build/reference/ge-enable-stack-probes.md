@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stack checking calls
 - Ge compiler option [C++]
 ms.assetid: 4b54deae-4e3c-4bfa-95f3-ba23590f7258
-ms.openlocfilehash: 34799529517e0263f71ce4f6f29537bf4b59056f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a785ec041370e0bcbb2ce8b698bfba89235a0a0c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415419"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812132"
 ---
 # <a name="ge-enable-stack-probes"></a>/Ge (Povolit sondy zásobníku)
 
@@ -31,15 +31,15 @@ Aktivuje sondy zásobníku pro každé volání funkce, která vyžaduje úloži
 
 ## <a name="remarks"></a>Poznámky
 
-Tento mechanismus je užitečné, pokud přepsání funkce sondy zásobníku. Doporučuje se, že používáte [/Gh (povolení _penter funkce háku)](../../build/reference/gh-enable-penter-hook-function.md) místo přepisování adres sondy zásobníku.
+Tento mechanismus je užitečné, pokud přepsání funkce sondy zásobníku. Doporučuje se, že používáte [/Gh (povolení _penter funkce háku)](gh-enable-penter-hook-function.md) místo přepisování adres sondy zásobníku.
 
-[/GS (ovládací prvek zásobníku kontrolu volání)](../../build/reference/gs-control-stack-checking-calls.md) má stejný účinek.
+[/GS (ovládací prvek zásobníku kontrolu volání)](gs-control-stack-checking-calls.md) má stejný účinek.
 
-**/Ge** je zastaralé; od v sadě Visual Studio 2005, kompilátor automaticky generuje kontrolou zásobníku. Seznam zastaralých kompilátoru možnosti najdete v tématu **zastaralé a odebrat možnosti kompilátoru** v [možnosti kompilátoru seřazené podle kategorie](../../build/reference/compiler-options-listed-by-category.md).
+**/Ge** je zastaralé; od v sadě Visual Studio 2005, kompilátor automaticky generuje kontrolou zásobníku. Seznam zastaralých kompilátoru možnosti najdete v tématu **zastaralé a odebrat možnosti kompilátoru** v [možnosti kompilátoru seřazené podle kategorie](compiler-options-listed-by-category.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **C/C++** složky.
 
@@ -53,5 +53,5 @@ Tento mechanismus je užitečné, pokud přepsání funkce sondy zásobníku. Do
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

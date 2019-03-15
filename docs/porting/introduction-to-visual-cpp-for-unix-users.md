@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: 6522461cf1f08eee9187a8f739cb21fe01e755f5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0cffdc2be00b4af9badbbbc80bcfef48b3f76e19
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747005"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818372"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Úvod do prostředí Visual C++ pro uživatele systému UNIX
 
@@ -37,7 +37,7 @@ Aplikace, která se skládá z více knihoven a spustitelné soubory, každý po
 
 ## <a name="importing-your-existing-code"></a>Import existujícího kódu
 
-Kompilátor C++ můžete použít k sestavení existující kód, který je nastavený na kompilovat s nebo bez souboru pravidel a vložit ho do projektu sady Visual Studio. Další informace najdete v tématu [jak: Vytvoření projektu jazyka C++ z existujícího kódu](../ide/how-to-create-a-cpp-project-from-existing-code.md).
+Kompilátor C++ můžete použít k sestavení existující kód, který je nastavený na kompilovat s nebo bez souboru pravidel a vložit ho do projektu sady Visual Studio. Další informace najdete v tématu [jak: Vytvoření projektu jazyka C++ z existujícího kódu](../build/how-to-create-a-cpp-project-from-existing-code.md).
 
 ## <a name="creating-a-new-project"></a>Vytvoření nového projektu
 
@@ -57,7 +57,7 @@ Pomocí můžete zakázat všechna rozšíření specifické pro společnost Mic
 
 Kompilátory Microsoft C a C++ poskytují možnosti pro předkompilaci kódu jakékoli jazyka C nebo C++, včetně vložený kód. Pomocí této výkonné funkce, můžete zkompilovat stabilní části kódu, uložit zkompilovaný kód do souboru a, při následných kompilací kombinovat předkompilovaný kód s kódem, který je stále ve vývoji. Každé následné kompilace je rychlejší, protože není potřeba překompilovat stabilní kód.
 
-Ve výchozím nastavení je všechny předkompilovaný kód zadaný do souborů stdafx.h a stdafx.cpp. **Nový projekt** průvodce automaticky vytvoří tyto soubory můžete pokud nezrušíte **Předkompilovaná hlavička** možnost. Další informace o předkompilovaných hlaviček, naleznete v tématu [vytváření Předkompilované soubory hlaviček](../build/reference/creating-precompiled-header-files.md).
+Ve výchozím nastavení je všechny předkompilovaný kód zadaný do souborů stdafx.h a stdafx.cpp. **Nový projekt** průvodce automaticky vytvoří tyto soubory můžete pokud nezrušíte **Předkompilovaná hlavička** možnost. Další informace o předkompilovaných hlaviček, naleznete v tématu [vytváření Předkompilované soubory hlaviček](../build/creating-precompiled-header-files.md).
 
 ## <a name="related-sections"></a>Související oddíly
 
@@ -65,4 +65,4 @@ Další informace najdete v tématu [Portování ze systému UNIX do Win32](../p
 
 ## <a name="see-also"></a>Viz také:
 
-[Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)
+[Projekty a sestavení systémy](../build/projects-and-build-systems-cpp.md)

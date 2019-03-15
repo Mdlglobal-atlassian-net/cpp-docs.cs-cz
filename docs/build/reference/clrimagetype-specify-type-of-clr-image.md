@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /CLRIMAGETYPE linker option
 - -CLRIMAGETYPE linker option
 ms.assetid: 04c60ee6-9dd7-4391-bc03-6926ad0fa116
-ms.openlocfilehash: c4cdb9a9ac3376762d6aa40fd4c13abbdc7b5487
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2a6df0f778ba079bffefeeacdad22cb398a529a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461630"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820673"
 ---
 # <a name="clrimagetype-specify-type-of-clr-image"></a>/CLRIMAGETYPE (Zadat typ obrázku CLR)
 
@@ -25,15 +25,15 @@ Nastavte typ bitové kopie CLR v propojený obrázek.
 
 ## <a name="remarks"></a>Poznámky
 
-Linker přijímá nativní objekty a také objekty jazyka MSIL, které jsou kompilovány pomocí [/CLR](../../build/reference/clr-common-language-runtime-compilation.md). **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru, byla vyřazena jako zastaralá v sadě Visual Studio 2015 a které nejsou podporované v sadě Visual Studio 2017. Při předávání smíšených objektů ve stejném sestavení je ověřitelnost výsledného výstupního souboru je ve výchozím nastavení rovna nejnižší úrovni ověřitelnosti výstupních modulů. Například pokud předáte nativní obraz a obraz smíšeného režimu (kompilované pomocí **/CLR**), bude výsledný obraz smíšeného režimu.
+Linker přijímá nativní objekty a také objekty jazyka MSIL, které jsou kompilovány pomocí [/CLR](clr-common-language-runtime-compilation.md). **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru, byla vyřazena jako zastaralá v sadě Visual Studio 2015 a které nejsou podporované v sadě Visual Studio 2017. Při předávání smíšených objektů ve stejném sestavení je ověřitelnost výsledného výstupního souboru je ve výchozím nastavení rovna nejnižší úrovni ověřitelnosti výstupních modulů. Například pokud předáte nativní obraz a obraz smíšeného režimu (kompilované pomocí **/CLR**), bude výsledný obraz smíšeného režimu.
 
 Můžete použít **/CLRIMAGETYPE** k určení nižší úroveň ověřitelnosti, pokud je to, co potřebujete.
 
-Informace o tom, jak určit typ bitové kopie CLR souboru najdete v tématu [/CLRHEADER](../../build/reference/clrheader.md).
+Informace o tom, jak určit typ bitové kopie CLR souboru najdete v tématu [/CLRHEADER](clrheader.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Rozbalte **vlastnosti konfigurace** uzlu.
 
@@ -49,5 +49,5 @@ Informace o tom, jak určit typ bitové kopie CLR souboru najdete v tématu [/CL
 
 ## <a name="see-also"></a>Viz také:
 
-- [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)
-- [Možnosti linkeru](../../build/reference/linker-options.md)
+- [Odkaz na MSVC linkeru](linking.md)
+- [Možnosti Linkeru MSVC](linker-options.md)

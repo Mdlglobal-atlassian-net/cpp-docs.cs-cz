@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - -Zc:__cplusplus compiler option (C++)
 - __cplusplus macro (C++)
-ms.openlocfilehash: 8e73d93ae0618a04bdcc8476fadb6cc2aab595b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89545f541f32374a47dce7f87958e61873c1b47c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623987"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810091"
 ---
 # <a name="zccplusplus-enable-updated-cplusplus-macro"></a>Přepínače/Zc: (Povolit aktualizované __cplusplus – makro)
 
@@ -19,20 +19,20 @@ ms.locfileid: "50623987"
 
 ## <a name="syntax"></a>Syntaxe
 
-> **Přepínače/Zc:**[**-**]
+> **/Zc:__cplusplus**[**-**]
 
 ## <a name="remarks"></a>Poznámky
 
-**\_ \_Cplusplus** preprocesor makro se běžně používá k podpoře sestavy pro konkrétní verzi standard jazyka C++. Vzhledem k tomu velké množství existujícího kódu se zdá, že budou záviset na hodnotě toto makro odpovídající "199711L", kompilátor nezmění hodnotu makra, pokud je výslovně vyjádřit výslovný souhlas s použitím **přepínače/Zc:** – možnost kompilátoru. **Přepínače/Zc:** možnost je k dispozici od verze Visual Studio 2017 verze 15.7. proto je vypnuto ve výchozím nastavení. V dřívějších verzích sady Visual Studio a ve výchozím nastavení nebo pokud **/Zc:__cplusplus-** je zadán, vrátí hodnotu "199711 L" Visual Studio pro  **\_ \_cplusplus** Makro preprocesoru. [/ Permissive-](permissive-standards-conformance.md) možnost nepovolíte **přepínače/Zc:**.
+ **\_ \_Cplusplus** preprocesor makro se běžně používá k podpoře sestavy pro konkrétní verzi standard jazyka C++. Vzhledem k tomu velké množství existujícího kódu se zdá, že budou záviset na hodnotě toto makro odpovídající "199711L", kompilátor nezmění hodnotu makra, pokud je výslovně vyjádřit výslovný souhlas s použitím **přepínače/Zc:** – možnost kompilátoru. **Přepínače/Zc:** možnost je k dispozici od verze Visual Studio 2017 verze 15.7. proto je vypnuto ve výchozím nastavení. V dřívějších verzích sady Visual Studio a ve výchozím nastavení nebo pokud **/Zc:__cplusplus-** je zadán, vrátí hodnotu "199711 L" Visual Studio pro  **\_ \_cplusplus** Makro preprocesoru. [/ Permissive-](permissive-standards-conformance.md) možnost nepovolíte **přepínače/Zc:**.
 
 Když **přepínače/Zc:** možnost povolená, hlášená hodnota ve  **\_ \_cplusplus** – makro závisí na [/std](std-specify-language-standard-version.md) přepínač verze nastavení. Tato tabulka uvádí možné hodnoty pro makra:
 
-|Přepínač přepínače/Zc:|/std:c++ přepínače|__cplusplus hodnota|
+|/Zc:__cplusplus switch|/std:c++ přepínače|__cplusplus hodnota|
 |-|-|-|
 Zc:__cplusplus|/ std: c ++ 14 (výchozí)|201402L
-Zc:__cplusplus|/ std: c ++ 17|201703L
+Zc:__cplusplus|/std:c++17|201703L
 Zc:__cplusplus|/ std: c ++ nejnovější|201704L
-Zc:__cplusplus-(zakázáno)|Libovolná hodnota|199711L
+Zc:__cplusplus- (disabled)|Libovolná hodnota|199711L
 Nezadáno|Libovolná hodnota|199711L
 
 Kompilátor nepodporuje přepínače standardy pro C ++ 98, C ++ 03 nebo C ++ 11.
@@ -41,7 +41,7 @@ Pro citlivější zjišťování změn do sady nástrojů kompilátoru, použijt
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Nastavení této možnosti kompilátoru v sadě Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
 

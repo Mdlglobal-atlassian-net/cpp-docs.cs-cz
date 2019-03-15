@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Disable Language Extensions compiler option
 - Ze compiler option [C++]
 ms.assetid: 65e49258-7161-4289-a176-7c5c0656b1a2
-ms.openlocfilehash: 71718aed7853e7d09b15734bad6a350f9a19fd5e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1db1dbdba4829ccf939cdc4f07ccfefe2474a35d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422829"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812301"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za, /Ze (Zakázat jazyková rozšíření)
 
@@ -51,7 +51,7 @@ Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. V navigačním podokně zvolte **vlastnosti konfigurace** > **C/C++** > **jazyka**.
 
@@ -64,7 +64,6 @@ Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DisableLanguag
 ## <a name="see-also"></a>Viz také:
 
 [Možnosti kompilátoru](compiler-options.md)<br/>
-[Nastavení možností kompilátoru](setting-compiler-options.md)<br/>
 [/Zc (shoda)](zc-conformance.md)<br/>
 [/permissive- (shoda se standardy)](permissive-standards-conformance.md)<br/>
 [/std (určení standardní jazykové verze)](std-specify-language-standard-version.md)<br/>

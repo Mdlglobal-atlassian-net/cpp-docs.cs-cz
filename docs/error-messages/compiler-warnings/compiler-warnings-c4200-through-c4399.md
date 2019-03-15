@@ -1,5 +1,5 @@
 ---
-title: Upozornění kompilátoru C4200 až C4399
+title: Compiler Warnings C4200 Through C4399
 ms.date: 11/17/2017
 f1_keywords:
 - C4203
@@ -31,16 +31,15 @@ f1_keywords:
 - C4380
 - C4387
 - C4388
-- C4396
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-ms.openlocfilehash: 02340234fc504773a29b3d83ae606cd1eb4e09f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cca32973ead1d7d88e37c4745491c8d5f181e0b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455991"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810507"
 ---
-# <a name="compiler-warnings-c4200-through-c4399"></a>Upozornění kompilátoru C4200 až C4399
+# <a name="compiler-warnings-c4200-through-c4399"></a>Compiler Warnings C4200 Through C4399
 
 Články v této části dokumentace vysvětlují podmnožinu varovné zprávy, které jsou generovány kompilátorem.
 
@@ -175,7 +174,7 @@ ms.locfileid: "50455991"
 |[Upozornění kompilátoru (úroveň 2) C4356](../../error-messages/compiler-warnings/compiler-warning-level-2-c4356.md)|"*člen*': Statický datový člen nejde inicializovat prostřednictvím odvozené třídy|
 |[Upozornění kompilátoru (úroveň 3) C4357](../../error-messages/compiler-warnings/compiler-warning-level-3-c4357.md)|Param array argument nalezena v seznamu formálních argumentů pro delegáta '*delegovat*"ignoruje při generování"*funkce*"|
 |[Upozornění kompilátoru (úroveň 1) C4358](../../error-messages/compiler-warnings/compiler-warning-level-1-c4358.md)|"*operátor*': návratový typ kombinovaných delegátů není"void"; vrácená hodnota není definována|
-|[Upozornění kompilátoru (úroveň 3) C4359](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)|"*typ*': specifikátor zarovnání je menší než skutečné zarovnání ("*zarovnání*") a budou ignorovány.|
+|[Upozornění kompilátoru (úroveň 3) C4359](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)|"*typ*": Specifikátor zarovnání je menší než skutečné zarovnání ("*zarovnání*") a budou ignorovány.|
 |Upozornění kompilátoru (úroveň 2) C4362|"*typ*': modul CLR nepodporuje zarovnání větší než 8 bajtů.|
 |[Upozornění kompilátoru (úroveň 1) C4364](../../error-messages/compiler-warnings/compiler-warning-level-1-c4364.md)|#using pro sestavení '*sestavení*"dřív zjištěné v:"*umístění*' ('*line_number*") bez jako\_atribut typu friend; protože\_friend není použít|
 |[Upozornění kompilátoru (úroveň 4) C4365](../../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md)|"*výraz*': převod z '*type1*"do"*type2*", podepsaný/unsigned – neshoda|
@@ -192,7 +191,7 @@ ms.locfileid: "50455991"
 |[Upozornění kompilátoru (úroveň 1) C4377](../../error-messages/compiler-warnings/compiler-warning-level-1-c4377.md)|nativní typy jsou privátní ve výchozím nastavení; -d1PrivateNativeTypes je zastaralá.|
 |[Upozornění kompilátoru (úroveň 1) C4378](../../error-messages/compiler-warnings/compiler-warning-level-1-c4378.md)|Musí se získat ukazatele funkce pro spouštění inicializačních; Vezměte v úvahu System::ModuleHandle::ResolveMethodHandle|
 |[Upozornění kompilátoru (úroveň 1) C4379](../../error-messages/compiler-warnings/compiler-warning-level-1-c4379.md)|Verze "*version_number*" common language runtime nepodporuje tento kompilátor. Pomocí této verze může vést k neočekávaným výsledkům|
-|Upozornění kompilátoru (úroveň 1, chyba) C4380|"*třídy*': konstruktor default nemůže být zastaralý.|
+|Upozornění kompilátoru (úroveň 1, chyba) C4380|"*třídy*": Výchozí konstruktor nemůže být zastaralý.|
 |[Upozornění kompilátoru (úroveň 1) C4381](../../error-messages/compiler-warnings/compiler-warning-level-1-c4381.md)|"*function1*': metoda rozhraní se nebude implementovat neveřejnou metodu '*function2*.|
 |[Upozornění kompilátoru (úroveň 1) C4382](../../error-messages/compiler-warnings/compiler-warning-level-1-c4382.md)|vyvolání "*typ*': typ s destruktorem __clrcall nebo kopírovacím konstuktorem se dá zachytit jedině v/CLR: pure modulu|
 |[Upozornění kompilátoru (úroveň 1) C4383](../../error-messages/compiler-warnings/compiler-warning-level-1-c4383.md)|"*instance_dereference_operator*': význam zrušení odkazu na popisovač může změnit, pokud uživatelem definované"*instance_dereference_operator*' existuje; zapište operátor jako statickou – operátor operand vyjádřit explicitně funkci|

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -PGD linker option
 - /PGD linker option
 ms.assetid: 9f312498-493b-461f-886f-92652257e443
-ms.openlocfilehash: 68d112c0a40289ba62e3fe5c37ae23f8f55f9209
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1d7c9fcb94a9351ce94b66e04b4bfc523248f4e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601289"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812197"
 ---
 # <a name="pgd-specify-database-for-profile-guided-optimizations"></a>/PGD (Určit databázi pro optimalizace na základě profilu)
 
@@ -29,15 +29,15 @@ Určuje název, který se používá k ukládání informací o spuštění prog
 
 ## <a name="remarks"></a>Poznámky
 
-Při použití zastaralá [/LTCG:PGINSTRUMENT](../../build/reference/ltcg-link-time-code-generation.md) možnost, použijte **/PGD** a zadejte jiný než výchozí název nebo umístění pro soubor .pgd. Pokud nezadáte **/PGD**, základní název souboru .pgd je stejný jako název výstupního souboru (.exe nebo .dll) základní a je vytvořena ve stejném adresáři, ze kterého byla vyvolána na odkaz.
+Při použití zastaralá [/LTCG:PGINSTRUMENT](ltcg-link-time-code-generation.md) možnost, použijte **/PGD** a zadejte jiný než výchozí název nebo umístění pro soubor .pgd. Pokud nezadáte **/PGD**, základní název souboru .pgd je stejný jako název výstupního souboru (.exe nebo .dll) základní a je vytvořena ve stejném adresáři, ze kterého byla vyvolána na odkaz.
 
 Při použití zastaralá **/LTCG:PGOPTIMIZE** možnost, použijte **/PGD** můžete zadat název souboru .pgd použít k vytvoření optimalizované bitové kopie. *Filename* argument by měl odpovídat *filename* zadaná **/LTCG:PGINSTRUMENT**.
 
-Další informace najdete v tématu [optimalizace na základě profilu](../../build/reference/profile-guided-optimizations.md).
+Další informace najdete v tématu [Profile-Guided optimalizace](../profile-guided-optimizations.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **Linkeru** > **optimalizace** stránku vlastností.
 
@@ -49,5 +49,5 @@ Další informace najdete v tématu [optimalizace na základě profilu](../../bu
 
 ## <a name="see-also"></a>Viz také:
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)<br/>
+[Odkaz na MSVC linkeru](linking.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)<br/>

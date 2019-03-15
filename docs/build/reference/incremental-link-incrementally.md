@@ -12,12 +12,12 @@ helpviewer_keywords:
 - LINK tool [C++], options for full linking
 - incremental linking
 ms.assetid: 135656ff-94fa-4ad4-a613-22e1a2a5d16b
-ms.openlocfilehash: 60cec41173afc9955bddf9df0bd6796b5df6285c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 189affe57694a8369e9cf7ac98815cc5888b69aa
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414080"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816136"
 ---
 # <a name="incremental-link-incrementally"></a>/INCREMENTAL (inkrementální odkaz)
 
@@ -54,7 +54,7 @@ Většinu programů lze propojit přírůstkově. Některé změny jsou ale př�
 
 - Je vybrán parametr /ORDER
 
-/ INCREMENTAL je vyjádřena, když [/DEBUG](../../build/reference/debug-generate-debug-info.md) je zadán.
+/ INCREMENTAL je vyjádřena, když [/DEBUG](debug-generate-debug-info.md) je zadán.
 
 Příkaz LINK navíc provede úplné propojení, pokud dojde k některé z následujících situací:
 
@@ -72,7 +72,7 @@ Příkaz LINK navíc provede úplné propojení, pokud dojde k některé z ná
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **Linkeru** složky.
 
@@ -86,5 +86,5 @@ Příkaz LINK navíc provede úplné propojení, pokud dojde k některé z ná
 
 ## <a name="see-also"></a>Viz také:
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)
+[Odkaz na MSVC linkeru](linking.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)

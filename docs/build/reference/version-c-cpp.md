@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - VERSION .def file statement
 ms.assetid: 3533b97c-5183-45f9-9ca8-4e63462b5d26
-ms.openlocfilehash: 6d275e1e191e0550143dd5e7a828b734bba0fc96
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: abc0b751440d09dcaad7e449d7b151b479c51911
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414054"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815148"
 ---
 # <a name="version-cc"></a>VERZE (C/C++)
 
@@ -25,8 +25,8 @@ VERSION major[.minor]
 
 *Hlavní* a *menší* argumenty jsou desetinná čísla v rozsahu 0 až 65535. Výchozí hodnota je verze 0,0.
 
-Je ekvivalentní umožňuje zadat číslo verze [informace o verzi](../../build/reference/version-version-information.md) (/ verze) možnost.
+Je ekvivalentní umožňuje zadat číslo verze [informace o verzi](version-version-information.md) (/ verze) možnost.
 
 ## <a name="see-also"></a>Viz také:
 
-[Pravidla pro příkazy definice modulu](../../build/reference/rules-for-module-definition-statements.md)
+[Pravidla pro příkazy definice modulu](rules-for-module-definition-statements.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __delayLoadHelper2 function
 - helper functions, what's changed
 ms.assetid: 99f0be69-105d-49ba-8dd5-3be7939c0c72
-ms.openlocfilehash: 25c59d37b753c80014b566fd925363cae71798be
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: cd6e842fd6d35e05f2d5a9f906713f0d85d3b80d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426521"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807998"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Změny v podpůrné funkci knihovny DLL s odloženým načtením od aplikace Visual C++ verze 6.0
 
@@ -33,7 +33,7 @@ Pokud máte více verzí jazyka Visual C++ v počítači nebo pokud jste definov
 
 Pokud máte více verzí jazyka Visual C++ v počítači, ujistěte se, že má linker odpovídá delayimp.lib. Pokud dojde k neshodě, zobrazí se chyba linkeru, buď reporting `___delayLoadHelper2@8` nebo `___delayLoadHelper@8` jako nerozpoznaný externí symbol. Předchozí zahrnuje nové linkeru spuštěného s původní delayimp.lib a ten starý linkeru spuštěného s novou delayimp.lib znamená.
 
-Pokud dojde k chybě nevyřešené linkeru, spusťte [dumpbin /linkermember](../../build/reference/linkermember.md): 1 na delayimp.lib, který očekáváte, že obsahují pomocnou funkci zobrazíte, které pomocná funkce je definována místo. Pomocná funkce mohou být také definovány v souboru objektů; Spustit [dumpbin /symbols](../../build/reference/symbols.md) a hledejte `delayLoadHelper(2)`.
+Pokud dojde k chybě nevyřešené linkeru, spusťte [dumpbin /linkermember](linkermember.md): 1 na delayimp.lib, který očekáváte, že obsahují pomocnou funkci zobrazíte, které pomocná funkce je definována místo. Pomocná funkce mohou být také definovány v souboru objektů; Spustit [dumpbin /symbols](symbols.md) a hledejte `delayLoadHelper(2)`.
 
 Pokud víte, že máte linker Visual C++ 6.0, pak:
 
@@ -51,7 +51,7 @@ Je-li definovány vlastní pomocné funkce a používáte aktuální verzi jazyk
 
 ## <a name="load-all-imports-for-a-delay-loaded-dll"></a>Načtení všech importů pro knihovnu DLL se zpožděným načtením
 
-Propojovací program můžete načíst všechny importy z knihovny DLL, který jste zadali jako zpožděné načtení. Zobrazit [načtení všech importů pro knihovnu DLL Delay-Loaded](../../build/reference/loading-all-imports-for-a-delay-loaded-dll.md) Další informace.
+Propojovací program můžete načíst všechny importy z knihovny DLL, který jste zadali jako zpožděné načtení. Zobrazit [načtení všech importů pro knihovnu DLL Delay-Loaded](loading-all-imports-for-a-delay-loaded-dll.md) Další informace.
 
 ## <a name="see-also"></a>Viz také:
 

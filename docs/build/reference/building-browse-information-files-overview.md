@@ -7,12 +7,12 @@ helpviewer_keywords:
 - browse information files (.bsc)
 - browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-ms.openlocfilehash: 02f2107469e2fbbc4ea3591e1211e600d16fb9e9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4f12bd25ca3ab718a845dbb04aba3169cc6d4b19
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413014"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820605"
 ---
 # <a name="building-browse-information-files-overview"></a>Sestavení souborů informací o procházení: Přehled
 
@@ -20,18 +20,18 @@ K vytvoření informací o procházení pro procházení symbolů, kompilátor v
 
 Generují se soubory .sbr a .bsc zabere určitý čas, takže Visual C++ vypne tyto funkce ve výchozím nastavení. Pokud chcete aktuální informace o procházení, musíte zapnout možnosti procházení a sestavte projekt znovu.
 
-Použití [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) nebo [/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md) říct kompilátor vytvoří soubory .sbr. Pokud chcete vytvořit soubory .bsc, můžete volat [BSCMAKE](../../build/reference/bscmake-command-line.md) z příkazového řádku. Pomocí nástroje BSCMAKE z příkazového řádku poskytuje přesnější kontrolu nad zpracování souborů informací o procházení. Zobrazit [BscMake – referenční dokumentace](../../build/reference/bscmake-reference.md) Další informace.
+Použití [/FR](fr-fr-create-dot-sbr-file.md) nebo [/Fr](fr-fr-create-dot-sbr-file.md) říct kompilátor vytvoří soubory .sbr. Pokud chcete vytvořit soubory .bsc, můžete volat [BSCMAKE](bscmake-command-line.md) z příkazového řádku. Pomocí nástroje BSCMAKE z příkazového řádku poskytuje přesnější kontrolu nad zpracování souborů informací o procházení. Zobrazit [BscMake – referenční dokumentace](bscmake-reference.md) Další informace.
 
 > [!TIP]
 >  Můžete zapnout generování souboru .sbr ale ponechte generování souboru .bsc vypnuté. Tento postup umožňuje rychlé sestavení, ale také umožňuje rychle vytvořit soubor .bsc čerstvé zapnutím generování souboru .bsc a sestavením projektu.
 
 Můžete snížit čas, paměť a místo na disku potřebné k sestavení souboru .bsc snížením velikosti souboru .bsc.
 
-Zobrazit [Obecná stránka vlastností (projekt)](../../ide/general-property-page-project.md) informace o tom, jak vytvořit soubor prohlížeče ve vývojovém prostředí.
+Zobrazit [Obecná stránka vlastností (projekt)](general-property-page-project.md) informace o tom, jak vytvořit soubor prohlížeče ve vývojovém prostředí.
 
 ### <a name="to-create-a-smaller-bsc-file"></a>Chcete-li vytvořit menší soubor .bsc
 
-1. Použití [bscmakee – možnosti příkazového řádku](../../build/reference/bscmake-options.md) vyloučit informace z informačního souboru procházení.
+1. Použití [bscmakee – možnosti příkazového řádku](bscmake-options.md) vyloučit informace z informačního souboru procházení.
 
 1. Vynechte lokální symboly v jedné nebo více soubory .sbr při kompilaci nebo sestavení.
 
@@ -45,5 +45,5 @@ Zobrazit [Obecná stránka vlastností (projekt)](../../ide/general-property-pag
 
 ## <a name="see-also"></a>Viz také:
 
-[Nástroje sestavení C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
-[BSCMAKE – referenční dokumentace](../../build/reference/bscmake-reference.md)
+[Nástroje pro vytváření dalších MSVC](c-cpp-build-tools.md)<br/>
+[BSCMAKE – referenční dokumentace](bscmake-reference.md)

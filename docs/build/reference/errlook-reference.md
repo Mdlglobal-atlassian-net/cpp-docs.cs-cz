@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ErrLook tool
 - Error lookup tool
 ms.assetid: 6040ffc1-2355-4a45-8998-84cbcba4ca91
-ms.openlocfilehash: 598e3d938645e3d024b2409d97b4b8f082ee2d85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8afcafa7d1b8cd666eb5b02f09a14782f8621ca
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621465"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813367"
 ---
 # <a name="errlook-reference"></a>ERRLOOK – odkaz
 
@@ -20,19 +20,19 @@ Klíče akcelerátoru pro kopírování (CTRL + C), vyjmutí (CTRL + X) a vlože
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Hodnota – textové pole](../../build/reference/value-edit-control.md)<br/>
+[Hodnota – textové pole](value-edit-control.md)<br/>
 Popisuje hodnoty upravit ovládací prvek v aplikaci ERRLOOK.
 
-[Chybová zpráva – textové pole](../../build/reference/error-message-edit-control.md)<br/>
+[Chybová zpráva – textové pole](error-message-edit-control.md)<br/>
 Popisuje chybová zpráva upravit ovládací prvek v aplikaci ERRLOOK.
 
-[Moduly – tlačítko](../../build/reference/modules-button.md)<br/>
+[Moduly – tlačítko](modules-button.md)<br/>
 Popisuje moduly – tlačítko v aplikaci ERRLOOK.
 
-[Hledat – tlačítko](../../build/reference/look-up-button.md)<br/>
+[Hledat – tlačítko](look-up-button.md)<br/>
 Popisuje tlačítko Hledat v aplikaci ERRLOOK.
 
 ## <a name="related-sections"></a>Související oddíly
 
-[Nástroje sestavení C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
+[Nástroje pro vytváření dalších MSVC](c-cpp-build-tools.md)<br/>
 Poskytuje odkazy na témata popisující C/C++ sestavení nástrojů sady Visual C++.

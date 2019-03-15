@@ -9,16 +9,16 @@ helpviewer_keywords:
 - /Fi compiler option (C++)
 - preprocessing output files, file name
 ms.assetid: 6d0ba983-a8b7-41ec-84f5-b4688ef8efee
-ms.openlocfilehash: 02d2a27f0a3d6b6aee6c2cd6f7161c9de718446d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 990c48a72c3f6017d893ddf9b46bcbb737bfb634
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414019"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820192"
 ---
 # <a name="fi-preprocess-output-file-name"></a>/Fi (předběžné zpracování názvu výstupního souboru)
 
-Určuje název výstupního souboru, do kterého [/P (předběžné zpracování souboru)](../../build/reference/p-preprocess-to-a-file.md) – možnost kompilátoru zapíše Předzpracovaný výstup.
+Určuje název výstupního souboru, do kterého [/P (předběžné zpracování souboru)](p-preprocess-to-a-file.md) – možnost kompilátoru zapíše Předzpracovaný výstup.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,6 +48,6 @@ CL /P /FiMYPROCESS.I PROGRAM.CPP
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[/P (předzpracování do souboru)](../../build/reference/p-preprocess-to-a-file.md)<br/>
-[Určení názvu cesty](../../build/reference/specifying-the-pathname.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[/P (předzpracování do souboru)](p-preprocess-to-a-file.md)<br/>
+[Určení názvu cesty](specifying-the-pathname.md)

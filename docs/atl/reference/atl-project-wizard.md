@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, creating
 - ATL Project Wizard
 ms.assetid: 564d2aaf-5b8e-4c2a-a925-ca40a283ea34
-ms.openlocfilehash: c9d69b6ca8cf1cff45098f0d63b452238db7ddfe
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4059961d70e6486f7417a5eff034b194d9860558
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259760"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807790"
 ---
 # <a name="atl-project-wizard"></a>Průvodce projektem ATL
 
@@ -44,13 +44,12 @@ Kromě toho zvažte tyto úkoly při vytváření a vylepšit projekt knihovny A
 
 - [Optimalizace kompilátoru pro projekt knihovny ATL](../../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)
 
-Můžete určit vlastnosti projektu (například [, jestli se má propojit staticky CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) v [vlastnosti projektu](../../ide/general-property-page-project.md) stránku kde můžete nastavit [konfigurace sestavení](/visualstudio/ide/understanding-build-configurations) pro Projekt knihovny ATL.
+Můžete určit vlastnosti projektu (například [, jestli se má propojit staticky CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) v [vlastnosti projektu](../../build/reference/general-property-page-project.md) stránku kde můžete nastavit [konfigurace sestavení](/visualstudio/ide/understanding-build-configurations) pro Projekt knihovny ATL.
 
 ## <a name="see-also"></a>Viz také:
 
-[Vytváření a spravování projektů Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)<br/>
-[Typy projektů Visual C++](../../ide/visual-cpp-project-types.md)<br/>
-[Tvorba desktopových projektů pomocí průvodců aplikací](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Vytváření a spravování projektů Visual C++](../../build/creating-and-managing-visual-cpp-projects.md)<br/>
+[Typy projektů Visual C++](../../build/reference/visual-cpp-project-types.md)<br/>
 [Základy ATL – objekty COM](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Programování s použitím knihovny ATL a běhového kódu jazyka C](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Kurz](../../atl/active-template-library-atl-tutorial.md)

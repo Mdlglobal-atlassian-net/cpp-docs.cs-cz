@@ -1,6 +1,6 @@
 ---
-title: Knihovny DLL v jazyce Visual C++
-ms.date: 11/04/2016
+title: Vytvoření knihovny DLL jazyka C/C++ v sadě Visual Studio
+ms.date: 12/10/2018
 helpviewer_keywords:
 - executable files [C++]
 - dynamic linking [C++]
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - DLLs [C++]
 - DLLs [C++], about DLLs
 ms.assetid: 5216bca4-51e2-466b-b221-0e3e776056f0
-ms.openlocfilehash: be653be42b1905f1edbcf8d50f7aef2b343c2691
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bd30c84ba202c3f772ad4451368efde10285e6c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667191"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815811"
 ---
-# <a name="dlls-in-visual-c"></a>Knihovny DLL v jazyce Visual C++
+# <a name="create-cc-dlls-in-visual-studio"></a>Vytvoření knihovny DLL jazyka C/C++ v sadě Visual Studio
 
 Dynamická knihovna (DLL) ve Windows, je druh spustitelný soubor, který funguje jako sdílená knihovna funkcí a prostředků. Dynamické propojení je operační systém schopností, který umožňuje spustitelného souboru k volání funkce nebo prostředkům uloženým v samostatném souboru. Může být sestaven a nasazují samostatně z spustitelné soubory, které používají tyto funkce a prostředky. Knihovny DLL není samostatně spustitelná; spuštění v rámci aplikace, která je volá. Operační systém můžete načíst knihovnu DLL do aplikace paměťového prostoru při načtení aplikace (*implicitní propojení*), nebo na vyžádání za běhu (*explicitní propojení*). Knihovny DLL také usnadňují sdílení funkce a prostředky v spustitelné soubory. Více aplikací můžete přístup k obsahu jedné kopie knihovny DLL v paměti ve stejnou dobu.
 
@@ -61,61 +61,61 @@ Potenciální nevýhodou použití knihoven DLL je, že aplikace není samostatn
 
 Následující témata obsahují podrobné informace o tom, na program knihovny DLL v jazyce Visual C++.
 
-[Návod: Vytvoření a použití dynamické knihovny DLL (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
+[Návod: Vytvoření a použití dynamické knihovny DLL (C++)](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
 Popisuje, jak vytvořit a použít knihovnu DLL v sadě Visual Studio.
 
-[Typy knihoven DLL](../build/kinds-of-dlls.md)<br/>
+[Typy knihoven DLL](kinds-of-dlls.md)<br/>
 Poskytuje informace o různých typech knihoven DLL, které lze vytvořit.
 
-[Nejčastější dotazy ke knihovnám DLL](../build/dll-frequently-asked-questions.md)<br/>
+[Nejčastější dotazy ke knihovnám DLL](dll-frequently-asked-questions.md)<br/>
 Poskytuje odpovědi na nejčastější dotazy týkající se knihoven DLL.
 
-[Propojení spustitelného souboru s knihovnou DLL](../build/linking-an-executable-to-a-dll.md)<br/>
+[Propojení spustitelného souboru s knihovnou DLL](linking-an-executable-to-a-dll.md)<br/>
 Popisuje explicitní a implicitní propojení s knihovnou DLL.
 
-[Inicializace knihovny DLL](../build/run-time-library-behavior.md#initializing-a-dll)<br/>
+[Inicializace knihovny DLL](run-time-library-behavior.md#initializing-a-dll)<br/>
 Tento článek popisuje inicializační kód knihovny DLL, která musí být spuštěn při načtení knihovny DLL.
 
-[Knihovny DLL a chování běhové knihovny v jazyce Visual C++](../build/run-time-library-behavior.md)<br/>
+[Knihovny DLL a chování běhové knihovny v jazyce Visual C++](run-time-library-behavior.md)<br/>
 Popisuje, jakým způsobem provádí knihovna runtime spouštěcí sekvenci knihovny DLL.
 
-[LoadLibrary a AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)<br/>
+[LoadLibrary a AfxLoadLibrary](loadlibrary-and-afxloadlibrary.md)<br/>
 Popisuje použití **LoadLibrary** a `AfxLoadLibrary` pro explicitní propojení ke knihovně DLL za běhu.
 
-[GetProcAddress](../build/getprocaddress.md)<br/>
+[GetProcAddress](getprocaddress.md)<br/>
 Popisuje použití **GetProcAddress** pro získání adresy exportované funkce v knihovně DLL.
 
-[FreeLibrary a AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md)<br/>
+[FreeLibrary a AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)<br/>
 Popisuje použití **FreeLibrary** a `AfxFreeLibrary` při modul knihovny DLL je už je nepotřebujete.
 
 [Pořadí hledání knihoven DLL](/windows/desktop/Dlls/dynamic-link-library-search-order)<br/>
 Popisuje vyhledávací cestu, operační systém Windows používá k nalezení knihovny DLL v systému.
 
-[Stavy modulů běžné knihovny MFC DLL dynamicky propojené do MFC](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)<br/>
+[Stavy modulů běžné knihovny MFC DLL dynamicky propojené do MFC](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)<br/>
 Popisuje stavy modulů běžné, které knihovny MFC DLL staticky propojené do MFC.
 
-[MFC – rozšiřující knihovny DLL](../build/extension-dlls-overview.md)<br/>
+[MFC – rozšiřující knihovny DLL](extension-dlls-overview.md)<br/>
 Popisuje knihovny DLL, které obvykle implementují opakovaně použitelné třídy odvozené z existujících tříd knihovny Microsoft Foundation Class.
 
-[Vytvoření knihovny DLL obsahující jen prostředky](../build/creating-a-resource-only-dll.md)<br/>
+[Vytvoření knihovny DLL obsahující jen prostředky](creating-a-resource-only-dll.md)<br/>
 Popisuje knihovnu DLL, která obsahuje pouze prostředky jako ikony, bitmapy, řetězce a dialogová okna.
 
-[Lokalizované prostředky v aplikacích MFC: Satelitní knihovny DLL](../build/localized-resources-in-mfc-applications-satellite-dlls.md)<br/>
+[Lokalizované prostředky v aplikacích MFC: Satelitní knihovny DLL](localized-resources-in-mfc-applications-satellite-dlls.md)<br/>
 Rozšiřuje podporu pro satelitní knihovny DLL, funkci, která pomáhá při vytváření aplikací lokalizovaných do více jazyků.
 
-[Import a export](../build/importing-and-exporting.md)<br/>
+[Import a export](importing-and-exporting.md)<br/>
 Popisuje import veřejných symbolů do aplikace nebo export funkcí z knihovny DLL.
 
-[Aktivní technologie a knihovny DLL](../build/active-technology-and-dlls.md)<br/>
+[Aktivní technologie a knihovny DLL](active-technology-and-dlls.md)<br/>
 Umožňuje objektových serverů uvnitř knihovny DLL implementovat.
 
-[Automatizace v knihovně DLL](../build/automation-in-a-dll.md)<br/>
+[Automatizace v knihovně DLL](automation-in-a-dll.md)<br/>
 Popisuje, co nabízí možnost automatizace v průvodci knihovny MFC DLL.
 
 [Zásady vytváření názvů pro knihovny MFC DLL](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)<br/>
 Popisuje, jak se knihovny DLL a knihovny zahrnuté v MFC drží zásady strukturovaného vytváření názvů.
 
-[Volání funkcí knihovny DLL z aplikací Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md)<br/>
+[Volání funkcí knihovny DLL z aplikací Visual Basic](calling-dll-functions-from-visual-basic-applications.md)<br/>
 Popisuje způsob, jak volat funkce knihovny DLL z aplikací Visual Basic.
 
 ## <a name="related-sections"></a>Související oddíly

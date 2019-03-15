@@ -1,16 +1,16 @@
 ---
 title: Zpracování výjimek ARM64
 ms.date: 11/19/2018
-ms.openlocfilehash: a4d4adcc365c1e9caf7faa0e225fabe133d0a6eb
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 921029704e4bf5adabfbe0a82387dadc911b9036
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176676"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816149"
 ---
 # <a name="arm64-exception-handling"></a>Zpracování výjimek ARM64
 
-Windows pro ARM64 se používá stejné strukturovaného zpracování výjimek mechanismus pro asynchronní výjimky generované hardwaru a synchronní výjimky generované softwaru. Obslužné rutiny výjimek specifické pro jazyk jsou postavené na Windows zpracování s použitím jazyka pomocné funkce strukturovaných výjimek. Tento dokument popisuje zpracování výjimek v Windows na ARM64 a pomocné rutiny jazyka, používané kódu, který je generován assembler Microsoft ARM a kompilátor Visual C++.
+Windows pro ARM64 se používá stejné strukturovaného zpracování výjimek mechanismus pro asynchronní výjimky generované hardwaru a synchronní výjimky generované softwaru. Obslužné rutiny výjimek specifické pro jazyk jsou postavené na Windows zpracování s použitím jazyka pomocné funkce strukturovaných výjimek. Tento dokument popisuje zpracování výjimek v Windows na ARM64 a pomocné rutiny jazyka, používané kódu, který je generován assembler Microsoft ARM a kompilátorem MSVC.
 
 ## <a name="goals-and-motivation"></a>Cíle a motivace
 
@@ -44,7 +44,7 @@ Následují předpoklady v popisu zpracování výjimek:
 
 1. V epilogů není žádný podmíněný kód.
 
-1. Vyhrazené registr ukazatelů rámce: Pokud sp je uložen v registru jiného (r29) v prologu, registru zůstane beze změny v rámci funkce, tak, aby původní sp může být kdykoli obnoven.
+1. Registr ukazatelů vyhrazené rámce: Pokud sp je uložen v registru jiného (r29) v prologu, který registraci zůstane beze změny v rámci funkce, tak, aby původní sp může být kdykoli obnoven.
 
 1. Pokud sp je uložen v registru jiné, všech manipulaci s ukazatel zásobníku dojde k výhradně v rámci kódu prologu a epilogu.
 
@@ -52,7 +52,7 @@ Následují předpoklady v popisu zpracování výjimek:
 
 ## <a name="arm64-stack-frame-layout"></a>Rozložení rámce zásobníku ARM64
 
-![rozložení rámce zásobníku](../build/media/arm64-exception-handling-stack-frame.png "rozložení rámce zásobníku")
+![rozložení rámce zásobníku](media/arm64-exception-handling-stack-frame.png "rozložení rámce zásobníku")
 
 Pro funkce rámce zřetězené lze uložit dvojice fp a lr v jakékoliv pozici v oblasti místní proměnné v závislosti na důležité informace o optimalizaci. Cílem je maximalizovat počet místních hodnot, které mohou být dosažitelný podle jedna jediná instrukce založené na ukazatel na rámec (r29) nebo ukazatel zásobníku (sp). Ale pro `alloca` funkce, musí být zřetězené a r29 musí odkazovat na konec zásobníku. Umožňující lepší pokrytí register pár – adresování – režim, zaregistrujte stálé aave, které oblasti jsou umístěny v horní části zásobníku místní síti. Tady jsou příklady, které ilustrují několik nejúčinnější sekvence prologu. Z důvodu přehlednosti a lepší umístění mezipaměti pořadí ukládání volaný – uložené registry ve všech canonical Prology je popořadě "rostoucí up". `#framesz` níže představuje velikost vším, co (s výjimkou oblasti alloca). `#localsz` a `#outsz` označení velikost místní síti (včetně uložení oblast pro \<r29, lr > pár) a odchozí velikost parametru v uvedeném pořadí.
 
@@ -187,7 +187,7 @@ Záznamy .pdata jsou uspořádaného pole položek pevné délky, které popisuj
 
 Každý záznam .pdata pro ARM64 se délku 8 bajtů. Obecný formát jednotlivých záznamů míst RVA 32-bit funkce spustit v první slovo, a druhý s, který obsahuje ukazatel na .xdata proměnné délky bloku nebo sbalené aplikace word popisující odvíjení pořadí kanonické funkce.
 
-![rozložení záznamu .pdata](../build/media/arm64-exception-handling-pdata-record.png ".pdata záznam rozložení")
+![rozložení záznamu .pdata](media/arm64-exception-handling-pdata-record.png ".pdata záznam rozložení")
 
 Pole jsou následující:
 
@@ -203,7 +203,7 @@ Pole jsou následující:
 
 Když sbalené unwind formátu není dostatečná k popisu odvíjení funkce, je nutné vytvořit záznam proměnné délky .xdata. Adresa tento záznam je uložen v druhé slovo .pdata záznamu. Formát .xdata je sbalené proměnné délky množinu slov:
 
-![rozložení záznamu .xdata](../build/media/arm64-exception-handling-xdata-record.png ".xdata záznam rozložení")
+![rozložení záznamu .xdata](media/arm64-exception-handling-xdata-record.png ".xdata záznam rozložení")
 
 Tato data rozdělená do čtyř oddílů:
 
@@ -311,11 +311,11 @@ Podle následující tabulky jsou kódovány kódy unwind. Všechny kódy unwind
 |`arithmetic(eor)`|    11100111' 010zxxxx: eor lr pomocí souboru cookie reg(z) (0 = x28, 1 = sp); eor lr, lr, reg(z) |
 |`arithmetic(rol)`|    11100111' 0110xxxx: simulované rol lr pomocí souboru cookie reg (x28); xip0 = neg x28; zkoušeného lr, xip0 |
 |`arithmetic(ror)`|    11100111' 100zxxxx: zkoušeného lr pomocí souboru cookie reg(z) (0 = x28, 1 = sp); zkoušeného lr, lr, reg(z) |
-| |            11100111: xxxz---:---vyhrazené |
+| |            11100111: xxxz----: ---- reserved |
 | |              11101xxx: vyhrazené pro níže uvedené případy vlastní zásobníku, generují jenom pro asm rutiny |
-| |              11101001: vlastní zásobníku pro MSFT_OP_TRAP_FRAME |
-| |              11101010: vlastní zásobníku pro MSFT_OP_MACHINE_FRAME |
-| |              11101011: vlastní zásobníku pro MSFT_OP_CONTEXT |
+| |              11101001: Vlastní zásobníku pro MSFT_OP_TRAP_FRAME |
+| |              11101010: Vlastní zásobníku pro MSFT_OP_MACHINE_FRAME |
+| |              11101011: Vlastní zásobníku pro MSFT_OP_CONTEXT |
 | |              1111xxxx: vyhrazené |
 
 Nejvýznamnější bity pokyny s velkými hodnotami, které pokrývají více bajtů, jsou uloženy nejprve. Kódy unwind výše jsou navržené tak, aby jednoduše vyhledá první bajt kód, je možné vědět, celková velikost v bajtech kódu unwind. Vzhledem k tomu, že jednotlivé kódy unwind přesně je namapována na instrukce v kódu prologu/epilogu, Vypočítat velikost kódu prologu nebo epilogu, vše, co je potřeba udělat je pro vás od samého začátku pořadí za účelem použití vyhledávací tabulky nebo podobné zařízení k určení, jak dlouho se oprava odpovídá operační kód je.
@@ -334,7 +334,7 @@ Pro funkce, jejíž Prology a epilogu funkce použijte kanonický tvar je popsá
 
 Formát záznamu .pdata se komprimovat komprimovaný objekt unwind dat vypadá nějak takto:
 
-![unwind data .pdata záznam se komprimovat komprimovaný objekt](../build/media/arm64-exception-handling-packed-unwind-data.png ".pdata záznam se komprimovat komprimovaný objekt unwind dat")
+![unwind data .pdata záznam se komprimovat komprimovaný objekt](media/arm64-exception-handling-packed-unwind-data.png ".pdata záznam se komprimovat komprimovaný objekt unwind dat")
 
 Pole jsou následující:
 
@@ -357,30 +357,30 @@ Pole jsou následující:
 
 Canonical Prology, které spadají do kategorie 1, 2 (bez odchozí oblasti parametrů), 3 a 4 výše v části může být reprezentována sbalené unwind formátu.  Epilogů kanonické funkce podle velmi podobné formuláře, s výjimkou **H** nemá žádný vliv `set_fp` instrukce je vynechán, a jsou v epilogu obrácený pořadí kroků, jakož i pokyny v každém kroku. Algoritmus pro komprimovaný xdata následující postup podrobně popsané v následující tabulce:
 
-Krok 0: Proveďte předběžné výpočet velikosti každé oblasti.
+Krok 0: Proveďte před výpočet velikosti každé oblasti.
 
-Krok 1: Uložení Int volaný – uložené registry.
+Krok 1: Uložte Int volaný – uložené registry.
 
-Krok 2: Tento krok je specifické pro typ 4 v dřívější části. LR je uložen na konci Int oblasti.
+Krok 2: Tento krok je specifická pro typ 4 v dřívější části. LR je uložen na konci Int oblasti.
 
-Krok 3: Uložení FP volaný – uložené registry.
+Krok 3: Uložte FP volaný – uložené registry.
 
-Krok 4: Uložení vstupní argumenty v oblasti domovské parametrů.
+Krok 4: V oblasti domovské parametrů uložte vstupní argumenty.
 
 Krok 5: Přidělit zbývající problematiku, včetně místních, \<r29, lr > párování a odchozí oblasti parametrů. 5a odpovídá typu kanonickém 1. 5b a 5c jsou určené pro kanonický typu 2. 5d a 5e jsou pro oba typy 3 a 4 zadejte.
 
 Krok #|Nastavení příznaku|# instrukcí|Operační kód|Uvolnění kódu
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
-1|0 < **regI** < = 10|RegI / 2 + **RegI** % 2|`stp r19,r20,[sp,#savsz]!`<br/>`stp r21,r22,[sp,16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
+1|0 < **RegI** <= 10|RegI / 2 + **RegI** % 2|`stp r19,r20,[sp,#savsz]!`<br/>`stp r21,r22,[sp,16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
 2|**ZNAK CR**== 01 *|1|`str lr,[sp, #intsz-8]`\*|`save_reg`
-3|0 < **RegF** < = 7|(RegF + 1) / 2 +<br/>(RegF + 1) % 2).|`stp d8,d9,[sp, #intsz]`\*\*<br/>`stp d10,d11,[sp, #intsz+16]`<br/>`...`<br/>`str d(8+RegF),[sp, #intsz+#fpsz-8]`|`save_fregp`<br/>`...`<br/>`save_freg`
+3|0 < **RegF** < = 7|(RegF + 1) / 2 +<br/>(RegF + 1) % 2)|`stp d8,d9,[sp, #intsz]`\*\*<br/>`stp d10,d11,[sp, #intsz+16]`<br/>`...`<br/>`str d(8+RegF),[sp, #intsz+#fpsz-8]`|`save_fregp`<br/>`...`<br/>`save_freg`
 4|**H** == 1|4|`stp r0,r1,[sp, #intsz+#fpsz]`<br/>`stp r2,r3,[sp, #intsz+#fpsz+16]`<br/>`stp r4,r5,[sp, #intsz+#fpsz+32]`<br/>`stp r6,r7,[sp, #intsz+#fpsz+48]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
-5a|**Znak CR** == 11 & & #locsz<br/> < = 512|2|`stp r29,lr,[sp,-#locsz]!`<br/>`mov r29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
-5b|**ZNAK CR** == 11 &AMP; &AMP;<br/>512 < #locsz < =. 4088|3|`sub sp,sp, #locsz`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5c|**Znak CR** == 11 & &. #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5d|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz < =. 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
-5e|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz >. 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
+5a|**Znak CR** == 11 & & #locsz<br/> <= 512|2|`stp r29,lr,[sp,-#locsz]!`<br/>`mov r29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
+5b|**CR** == 11 &&<br/>512 < #locsz <= 4088|3|`sub sp,sp, #locsz`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5c|**CR** == 11 && #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5d|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz <= 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
+5e|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
 \* Pokud **CR** == 01 a **RegI** je číslo liché, krok 2 a poslední save_rep v kroku 1 jsou sloučeny do jednoho save_regp.
 
@@ -531,7 +531,7 @@ Pokud je fragment bez kódu prologu a epilogu žádné, nadále vyžaduje svou v
 
 ## <a name="examples"></a>Příklady
 
-### <a name="example-1-frame-chained-compact-form"></a>Příklad 1: Zřetězená rámce compact tvaru
+### <a name="example-1-frame-chained-compact-form"></a>Příklad 1: Zřetězené rámce, compact formuláře
 
 ```asm
 |Foo|     PROC
@@ -549,7 +549,7 @@ Pokud je fragment bez kódu prologu a epilogu žádné, nadále vyžaduje svou v
     ;Flags[SingleProEpi] functionLength[492] RegF[0] RegI[1] H[0] frameChainReturn[Chained] frameSize[2080]
 ```
 
-### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>Příklad 2: Zřetězená rámce úplném tvaru s zrcadlení kódu prologu a epilogu
+### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>Příklad 2: Zřetězené rámce úplném tvaru pomocí zrcadlení kódu prologu a epilogu
 
 ```asm
 |Bar|     PROC
@@ -583,7 +583,7 @@ Pokud je fragment bez kódu prologu a epilogu žádné, nadále vyžaduje svou v
 
 Všimněte si, že EpilogStart Index [0] odkazuje na stejnou sekvenci kódu prologu unwind.
 
-### <a name="example-3-variadic-unchained-function"></a>Příklad 3: Unchained Variadické funkce
+### <a name="example-3-variadic-unchained-function"></a>Příklad 3: Variadické unchained – funkce
 
 ```asm
 |Delegate| PROC
@@ -627,4 +627,4 @@ Poznámka: EpilogStart Index [4] odkazuje na uprostřed unwind kód prologu (č�
 ## <a name="see-also"></a>Viz také:
 
 [Přehled konvencí ARM64 ABI](arm64-windows-abi-conventions.md)<br/>
-[Zpracování výjimek ARM](../build/arm-exception-handling.md)
+[Zpracování výjimek ARM](arm-exception-handling.md)

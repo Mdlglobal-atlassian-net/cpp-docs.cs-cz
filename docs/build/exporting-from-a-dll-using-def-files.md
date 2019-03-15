@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .def files [C++], exporting from DLLs
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-ms.openlocfilehash: bed47c2c69b154c6bab996299eaeb4173c8298f3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 35f55ea525bd03c5b0b1b1750d25c1223bc608fc
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416546"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816994"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>Export z knihovny DLL pomocí souborů .DEF
 
@@ -21,7 +21,7 @@ Minimální soubor DEF musí obsahovat následující příkazy definice modulu:
 
 - Prvním příkazem v souboru musí být příkaz LIBRARY. Tento příkaz určuje soubor DEF jako patřící do knihovny DLL. Příkaz LIBRARY je následován názvem knihovny DLL. Propojovací program umístí tento název v knihovně importu knihovny DLL.
 
-- Příkaz EXPORTS uvádí seznam názvů a volitelně pořadové hodnoty funkcí exportovaných knihovnou DLL. Funkci přiřadíte pořadové hodnoty podle názvu funkce zavináč (@) a číslo. Zadané pořadové hodnoty musí být v rozsahu 1 až N, kde N je počet funkcí exportovaných knihovnou DLL. Pokud chcete exportovat funkce podle řádu, přečtěte si téma [export funkcí z DLL Knihovny podle řádu, než podle názvu](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md) stejně jako v tomto tématu.
+- Příkaz EXPORTS uvádí seznam názvů a volitelně pořadové hodnoty funkcí exportovaných knihovnou DLL. Funkci přiřadíte pořadové hodnoty podle názvu funkce zavináč (@) a číslo. Zadané pořadové hodnoty musí být v rozsahu 1 až N, kde N je počet funkcí exportovaných knihovnou DLL. Pokud chcete exportovat funkce podle řádu, přečtěte si téma [export funkcí z DLL Knihovny podle řádu, než podle názvu](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md) stejně jako v tomto tématu.
 
 Například knihovnu DLL, která obsahuje kód pro implementaci binárního vyhledávacího stromu, může vypadat takto:
 
@@ -56,32 +56,32 @@ Všimněte si, že knihovna MFC sama používá soubory DEF pro export funkcí a
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
-- [Export z knihovny DLL pomocí __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Export z knihovny DLL pomocí __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Export a import pomocí AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [Export a import pomocí AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Export funkcí jazyka C++ pro použití ve spustitelných souborech jazyka C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Export funkcí jazyka C++ pro použití ve spustitelných souborech jazyka C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Export funkcí jazyka C pro použití ve spustitelných souborech jazyka C nebo C++ – jazyk](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Export funkcí jazyka C pro použití ve spustitelných souborech jazyka C nebo C++ – jazyk](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Určit, kterou exportovací metodu použít](../build/determining-which-exporting-method-to-use.md)
+- [Určit, kterou exportovací metodu použít](determining-which-exporting-method-to-use.md)
 
-- [Import do aplikace s použitím deklarace __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Import do aplikace s použitím deklarace __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Inicializace knihovny DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Inicializace knihovny DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
 
-- [soubory .def](../build/reference/module-definition-dot-def-files.md)
+- [soubory .def](reference/module-definition-dot-def-files.md)
 
-- [Pravidla pro příkazy definice modulu](../build/reference/rules-for-module-definition-statements.md)
+- [Pravidla pro příkazy definice modulu](reference/rules-for-module-definition-statements.md)
 
-- [Dekorované názvy](../build/reference/decorated-names.md)
+- [Dekorované názvy](reference/decorated-names.md)
 
-- [Import a export vložených funkcí](../build/importing-and-exporting-inline-functions.md)
+- [Import a export vložených funkcí](importing-and-exporting-inline-functions.md)
 
-- [Vzájemné importy](../build/mutual-imports.md)
+- [Vzájemné importy](mutual-imports.md)
 
 ## <a name="see-also"></a>Viz také:
 
-[Export z knihovny DLL](../build/exporting-from-a-dll.md)
+[Export z knihovny DLL](exporting-from-a-dll.md)

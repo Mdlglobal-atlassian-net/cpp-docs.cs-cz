@@ -10,16 +10,16 @@ helpviewer_keywords:
 - GZ compiler option [C++]
 - debug builds, catch release-build errors
 ms.assetid: b3efeeff-d5e3-4057-91c9-f6fc73d0270c
-ms.openlocfilehash: 35475b87b8f59fbb0fb24e62690f8fc24c7cb4e9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3e6ffce487cc8183e45f3a911e7060ea22b28216
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423466"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810494"
 ---
 # <a name="gz-enable-stack-frame-run-time-error-checking"></a>/GZ (Povolit běhovou kontrolu chyb rámce zásobníku)
 
-Provede stejné operace jako [/RTC (kontroly chyb za běhu)](../../build/reference/rtc-run-time-error-checks.md) možnost. Zastaralé
+Provede stejné operace jako [/RTC (kontroly chyb za běhu)](rtc-run-time-error-checks.md) možnost. Zastaralé
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,13 +29,13 @@ Provede stejné operace jako [/RTC (kontroly chyb za běhu)](../../build/referen
 
 ## <a name="remarks"></a>Poznámky
 
-**/GZ** platí pouze pro použití v nonoptimized ([/Od (zakázat (ladění))](../../build/reference/od-disable-debug.md)) sestavení.
+**/GZ** platí pouze pro použití v nonoptimized ([/Od (zakázat (ladění))](od-disable-debug.md)) sestavení.
 
-**/GZ** se už nepoužívá od sady Visual Studio 2005; použijte [/RTC (kontroly chyb za běhu)](../../build/reference/rtc-run-time-error-checks.md) místo. Seznam zastaralých kompilátoru možnosti najdete v tématu **zastaralé a odebrat možnosti kompilátoru** v [možnosti kompilátoru seřazené podle kategorie](../../build/reference/compiler-options-listed-by-category.md).
+**/GZ** se už nepoužívá od sady Visual Studio 2005; použijte [/RTC (kontroly chyb za běhu)](rtc-run-time-error-checks.md) místo. Seznam zastaralých kompilátoru možnosti najdete v tématu **zastaralé a odebrat možnosti kompilátoru** v [možnosti kompilátoru seřazené podle kategorie](compiler-options-listed-by-category.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **C/C++** složky.
 
@@ -49,5 +49,5 @@ Provede stejné operace jako [/RTC (kontroly chyb za běhu)](../../build/referen
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

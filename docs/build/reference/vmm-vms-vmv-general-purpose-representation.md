@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Single Inheritance compiler option
 - -vmv compiler option [C++]
 ms.assetid: 0fcd7ae0-3031-4c62-a2a8-e154c8685dae
-ms.openlocfilehash: 3c11572880a0b58a1ba82f2e794c9dbfbd521c44
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7a46cecdbf96ad891ce218df4769a60590e562a9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425208"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810039"
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms, /vmv (obecná reprezentace)
 
-Kdy použít [/vmb, / vmg (metoda reprezentace)](../../build/reference/vmb-vmg-representation-method.md) je zvolen jako [metoda reprezentace](../../build/reference/vmb-vmg-representation-method.md). Tyto možnosti označení model dědičnosti definice třídy není dosud došlo.
+Kdy použít [/vmb, / vmg (metoda reprezentace)](vmb-vmg-representation-method.md) je zvolen jako [metoda reprezentace](vmb-vmg-representation-method.md). Tyto možnosti označení model dědičnosti definice třídy není dosud došlo.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,7 +52,7 @@ Pokud chcete zadat jednu z těchto možností model dědičnosti, tohoto modelu 
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **C/C++** složky.
 
@@ -66,6 +66,6 @@ Pokud chcete zadat jednu z těchto možností model dědičnosti, tohoto modelu 
 
 ## <a name="see-also"></a>Viz také:
 
-[/vmb, /vmg (metoda reprezentace)](../../build/reference/vmb-vmg-representation-method.md)<br/>
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[/vmb, /vmg (metoda reprezentace)](vmb-vmg-representation-method.md)<br/>
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

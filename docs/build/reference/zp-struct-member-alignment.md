@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zp compiler option [C++]
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-ms.openlocfilehash: d1821d8dc5eab202a918893a1e7895151629b551
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: d30e61137fc5ff8f6a5501ac7815edafc18f7680
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627524"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807686"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (zarovnání členů struktury)
 
@@ -24,7 +24,7 @@ Určuje, jak členy struktury jsou zkomprimována do paměti a určuje stejný k
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/ Zp**[**1**|**2**|**4**|**8** | **16**]
+> **/Zp**[**1**|**2**|**4**|**8**|**16**]
 
 ## <a name="remarks"></a>Poznámky
 
@@ -53,11 +53,11 @@ Můžete také použít [pack](../../preprocessor/pack.md) na balení struktury 
 
 - [__unaligned](../../cpp/unaligned.md)
 
-- [Příklady zarovnání struktur](../../build/x64-software-conventions.md#examples-of-structure-alignment) (x64 konkrétní)
+- [/ALIGN (zarovnání oddílů)](align-section-alignment.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **C/C++** > **generování kódu** stránku vlastností.
 
@@ -69,5 +69,5 @@ Můžete také použít [pack](../../preprocessor/pack.md) na balení struktury 
 
 ## <a name="see-also"></a>Viz také:
 
-- [Možnosti kompilátoru](../../build/reference/compiler-options.md)
-- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+- [Možnosti kompilátoru MSVC](compiler-options.md)
+- [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

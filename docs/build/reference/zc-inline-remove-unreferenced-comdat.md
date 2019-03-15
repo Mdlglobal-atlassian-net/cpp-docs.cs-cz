@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Zc compiler options (C++)
 - /Zc:inline
 ms.assetid: a4c94224-1d73-4bea-a9d5-4fa73dc924df
-ms.openlocfilehash: 6855773c6ec807a7488fa5604ddee7fd43983135
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06bdb3300aae88c6c4c8f7e66af658f47548ac5a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441233"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820517"
 ---
 # <a name="zcinline-remove-unreferenced-comdat"></a>/Zc:inline (Odebrat neodkazované sekvence COMDAT)
 
@@ -27,7 +27,7 @@ Odebere neodkazovaná funkce nebo data, která jsou sekvence Comdat nebo pouze m
 
 ## <a name="remarks"></a>Poznámky
 
-Když **/Zc: Inline** není zadán, kompilátor negeneruje informace o symbolech pro neodkazované sekvence COMDAT funkce nebo data, nebo pro funkce nebo data, která mají jenom vnitřní vazby. Tato optimalizace zjednodušuje některé akce prováděné v linkeru v sestaveních pro vydání a kdy možností propojovacího programu [OPT](../../build/reference/opt-optimizations.md) je zadán. Když kompilátor provádí tyto optimalizace, může výrazně zmenšit velikost souboru .obj a zvýšení rychlosti linkeru. Tato možnost kompilátoru není povolena, pokud jsou zakázané optimalizace ([/Od](../../build/reference/od-disable-debug.md)) nebo když [/GL (optimalizace celého programu)](../../build/reference/gl-whole-program-optimization.md) určena.
+Když **/Zc: Inline** není zadán, kompilátor negeneruje informace o symbolech pro neodkazované sekvence COMDAT funkce nebo data, nebo pro funkce nebo data, která mají jenom vnitřní vazby. Tato optimalizace zjednodušuje některé akce prováděné v linkeru v sestaveních pro vydání a kdy možností propojovacího programu [OPT](opt-optimizations.md) je zadán. Když kompilátor provádí tyto optimalizace, může výrazně zmenšit velikost souboru .obj a zvýšení rychlosti linkeru. Tato možnost kompilátoru není povolena, pokud jsou zakázané optimalizace ([/Od](od-disable-debug.md)) nebo když [/GL (optimalizace celého programu)](gl-whole-program-optimization.md) určena.
 
 Ve výchozím nastavení, tato možnost je vypnuta (**/Zc:inline-**). [/ Permissive-](permissive-standards-conformance.md) možnost nepovolíte **/Zc: Inline**.
 
@@ -123,7 +123,7 @@ Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **jazyk** stránku vlastností.
 
@@ -131,4 +131,4 @@ Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete
 
 ## <a name="see-also"></a>Viz také:
 
-[/Zc (shoda)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (shoda)](zc-conformance.md)<br/>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /openmp compiler option [C++]
 - -openmp compiler option [C++]
 ms.assetid: 9082b175-18d3-4378-86a7-c0eb95664e13
-ms.openlocfilehash: bea51c7af41df666fd441555daa0d8d8387377ac
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f1edcc6d29a5b84106b3a5fd91d2446c34e0f7b9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414132"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807465"
 ---
 # <a name="openmp-enable-openmp-20-support"></a>/openmp (Povolit podporu OpenMP 2.0)
 
@@ -29,7 +29,7 @@ Způsobí, že kompilátor zpracování `#pragma` [omp](../../preprocessor/omp.m
 
 `#pragma omp` slouží k určení [direktivy](../../parallel/openmp/reference/openmp-directives.md) a [klauzule](../../parallel/openmp/reference/openmp-clauses.md). Pokud **/OpenMP** není zadán v kompilaci Kompilátor ignoruje OpenMP – klauzule a direktivy. [OpenMP – funkce](../../parallel/openmp/reference/openmp-functions.md) i když kompilátor zpracovává volání **/OpenMP** není zadán.
 
-Zkompilovaná aplikace **/OpenMP** a **/CLR** lze spustit pouze v jedné aplikace domény procesu, se nepodporují více domén aplikace. To znamená, že při spuštění modulu konstruktoru (.cctor) zjistí procesu je zkompilován s **/OpenMP** a pokud načítání aplikace do jiné než výchozí modul runtime. Další informace najdete v tématu [appdomain](../../cpp/appdomain.md), [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md), a [inicializace smíšených sestavení](../../dotnet/initialization-of-mixed-assemblies.md).
+Zkompilovaná aplikace **/OpenMP** a **/CLR** lze spustit pouze v jedné aplikace domény procesu, se nepodporují více domén aplikace. To znamená, že při spuštění modulu konstruktoru (.cctor) zjistí procesu je zkompilován s **/OpenMP** a pokud načítání aplikace do jiné než výchozí modul runtime. Další informace najdete v tématu [appdomain](../../cpp/appdomain.md), [/CLR (kompilace Common Language Runtime)](clr-common-language-runtime-compilation.md), a [inicializace smíšených sestavení](../../dotnet/initialization-of-mixed-assemblies.md).
 
 Při pokusu o načtení aplikace kompilována s **/OpenMP** a **/CLR** do domény aplikace jiné než výchozí, <xref:System.TypeInitializationException> mimo ladicí program, bude vyvolána výjimka a Bude vyvolána výjimka OpenMPWithMultipleAppdomainsException v ladicím programu.
 
@@ -45,7 +45,7 @@ Vás Microsoft informuje o tom, že nenapíšete **/OpenMP** aplikace, které um
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Rozbalte **vlastnosti konfigurace** uzlu.
 
@@ -113,5 +113,5 @@ int main(int argc, char* argv[]) {
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

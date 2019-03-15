@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -Oi compiler option [C++]
 - generate intrinsic functions compiler option [C++]
 ms.assetid: fa4a3bf6-0ed8-481b-91c0-add7636132b4
-ms.openlocfilehash: 1dc7f5f183e7dffb65c31ebb9bc47b30776b81e3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f3afedade6f99129c21069e5117daa4ceb616cc2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422114"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811885"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (Generovat vnitřní funkce)
 
@@ -41,7 +41,7 @@ Zobrazit [vnitřní](../../preprocessor/intrinsic.md) Další informace, na kter
 
 Vnitřní funkce s plovoucí desetinnou čárkou nejsou provádět žádné zvláštní kontroly vstupních hodnot tak pracovat s omezeným přístupem rozsahy vstupu a mít jinou výjimku zpracování a podmínky hranice než rutiny knihovny se stejným názvem. Použití skutečné vnitřní formy znamená ztráty IEEE zpracování výjimek a ke ztrátě `_matherr` a `errno` funkce; ten znamená ztráty ANSI – shoda. Ale vnitřní formy může výrazně urychlit plovoucí desetinnou náročné programy a pro mnoho aplikací, problémech přizpůsobení jsou malé praktickým přínosem.
 
-Můžete použít [Za](../../build/reference/za-ze-disable-language-extensions.md) přepsat generování možností skutečně vnitřních plovoucích – možnost kompilátoru. V tomto případě jsou funkce generovány jako rutiny knihoven, které předávají argumenty přímo do čipu plovoucí desetinné čárky namísto jejich ukládání do zásobníku programu.
+Můžete použít [Za](za-ze-disable-language-extensions.md) přepsat generování možností skutečně vnitřních plovoucích – možnost kompilátoru. V tomto případě jsou funkce generovány jako rutiny knihoven, které předávají argumenty přímo do čipu plovoucí desetinné čárky namísto jejich ukládání do zásobníku programu.
 
 **END x86 konkrétní**
 
@@ -49,7 +49,7 @@ Můžete také použít [vnitřní](../../preprocessor/intrinsic.md) vytvořit v
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **C/C++** složky.
 
@@ -63,7 +63,7 @@ Můžete také použít [vnitřní](../../preprocessor/intrinsic.md) vytvořit v
 
 ## <a name="see-also"></a>Viz také:
 
-[/O – možnosti (optimalizace kódu)](../../build/reference/o-options-optimize-code.md)<br/>
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
+[/O – možnosti (optimalizace kódu)](o-options-optimize-code.md)<br/>
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
 [Vnitřní funkce kompilátoru](../../intrinsics/compiler-intrinsics.md)

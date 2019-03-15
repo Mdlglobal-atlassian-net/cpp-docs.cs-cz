@@ -20,12 +20,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - at sign symbol for base address
 ms.assetid: 00b9f6fe-0bd2-4772-a69c-7365eb199069
-ms.openlocfilehash: 87fdceea4ac71fe4bf0a53d7ae8e473bc97a01d7
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: dc6380903af0be2e6696ca3589813c249f71dd05
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416745"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812275"
 ---
 # <a name="base-base-address"></a>/BASE (základní adresa)
 
@@ -38,9 +38,9 @@ Určuje základní adresu programu.
 ## <a name="remarks"></a>Poznámky
 
 > [!NOTE]
-> Z bezpečnostních důvodů se společnost Microsoft doporučuje, můžete použít [možnost/DynamicBase](../../build/reference/dynamicbase-use-address-space-layout-randomization.md) možnost místo určení základní adresy pro vaše spustitelné soubory. Tím se vygeneruje spustitelnou bitovou kopii, která lze náhodně změnit základ v okamžiku načtení pomocí funkce adresu místo rozložení náhodné (technologie ASLR) systému Windows. Možnost/DynamicBase možnost je ve výchozím.
+> Z bezpečnostních důvodů se společnost Microsoft doporučuje, můžete použít [možnost/DynamicBase](dynamicbase-use-address-space-layout-randomization.md) možnost místo určení základní adresy pro vaše spustitelné soubory. Tím se vygeneruje spustitelnou bitovou kopii, která lze náhodně změnit základ v okamžiku načtení pomocí funkce adresu místo rozložení náhodné (technologie ASLR) systému Windows. Možnost/DynamicBase možnost je ve výchozím.
 
-/ ZÁKLADNÍ možnosti nastavit základní adresu pro program přepisuje výchozí umístění pro soubor .exe nebo knihovny DLL. Výchozí základní adresa pro soubor s příponou .exe je 0x400000 pro 32bitové obrázky nebo 0x140000000 pro 64bitové obrazy. Pro knihovny DLL je výchozí základní adresa 0x10000000 pro 32bitové obrázky nebo 0x180000000 pro 64bitové obrazy. V operačních systémech, které nepodporují náhodného generování rozložení prostoru adres (ASLR), nebo pokud byla nastavena možnost kopii operačního systému nejdřív pokusí se načíst program na jeho zadaný nebo výchozí základní adresa. Pokud není dostatek místa k dispozici existuje, systém přemístí program. Chcete-li zabránit přemístění, použijte [/FIXED](../../build/reference/fixed-fixed-base-address.md) možnost.
+/ ZÁKLADNÍ možnosti nastavit základní adresu pro program přepisuje výchozí umístění pro soubor .exe nebo knihovny DLL. Výchozí základní adresa pro soubor s příponou .exe je 0x400000 pro 32bitové obrázky nebo 0x140000000 pro 64bitové obrazy. Pro knihovny DLL je výchozí základní adresa 0x10000000 pro 32bitové obrázky nebo 0x180000000 pro 64bitové obrazy. V operačních systémech, které nepodporují náhodného generování rozložení prostoru adres (ASLR), nebo pokud byla nastavena možnost kopii operačního systému nejdřív pokusí se načíst program na jeho zadaný nebo výchozí základní adresa. Pokud není dostatek místa k dispozici existuje, systém přemístí program. Chcete-li zabránit přemístění, použijte [/FIXED](fixed-fixed-base-address.md) možnost.
 
 Linker vyvolá chybu, pokud *adresu* není násobkem 64 kB. Volitelně můžete zadat velikost programu. linker vydá upozornění, pokud program se nemůže vejít do velikosti, který jste zadali.
 
@@ -62,11 +62,11 @@ Pokud soubor, který obsahuje tyto řádky se nazývá DLLS.txt, příkaz v nás
 link dlltwo.obj /dll /base:@dlls.txt,two
 ```
 
-Dalším způsobem, jak nastavit základní adresu, je pomocí *základní* argument v [název](../../build/reference/name-c-cpp.md) nebo [KNIHOVNY](../../build/reference/library.md) příkaz. Propojovacího a [/dll](../../build/reference/dll-build-a-dll.md) možnosti společně odpovídají **KNIHOVNY** příkazu.
+Dalším způsobem, jak nastavit základní adresu, je pomocí *základní* argument v [název](name-c-cpp.md) nebo [KNIHOVNY](library.md) příkaz. Propojovacího a [/dll](dll-build-a-dll.md) možnosti společně odpovídají **KNIHOVNY** příkazu.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **Linkeru** > **Upřesnit** stránku vlastností.
 
@@ -78,5 +78,5 @@ Dalším způsobem, jak nastavit základní adresu, je pomocí *základní* argu
 
 ## <a name="see-also"></a>Viz také:
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)
+[Odkaz na MSVC linkeru](linking.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)

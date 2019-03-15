@@ -10,12 +10,12 @@ helpviewer_keywords:
 - LIB [C++]
 - 32-Bit Library Manager
 ms.assetid: ecc7f643-bbd4-47a3-8dc6-b360f880db91
-ms.openlocfilehash: 382810fd418dbc49b20885f487ca9a35b0889a5f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 8e0c2815fdc3ab9ab171d3ebb94480393c8815ed
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415328"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813809"
 ---
 # <a name="lib-reference"></a>Referenční dokumentace ke knihovně LIB
 
@@ -24,18 +24,18 @@ Správce knihovny Microsoft (LIB.exe) vytváří a spravuje knihovnu objektovýc
 > [!NOTE]
 >  Tento nástroj můžete spustit pouze z příkazového řádku sady Visual Studio. Nelze provést toto spuštění z příkazového řádku systému nebo Průzkumníka souborů.
 
-- [Přehled knihovny LIB](../../build/reference/overview-of-lib.md)
+- [Přehled knihovny LIB](overview-of-lib.md)
 
-- [Postupy: Nastavení možností LIB.EXE ve vývojovém prostředí sady Visual Studio](../../build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)
+- [Postupy: Nastavení možností LIB.EXE ve vývojovém prostředí sady Visual Studio](how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)
 
-- [Spuštění knihovny LIB](../../build/reference/running-lib.md)
+- [Spuštění knihovny LIB](running-lib.md)
 
-- [Správa knihovny](../../build/reference/managing-a-library.md)
+- [Správa knihovny](managing-a-library.md)
 
-- [Extrahování člena knihovny](../../build/reference/extracting-a-library-member.md)
+- [Extrahování člena knihovny](extracting-a-library-member.md)
 
-- [Práce s knihovnami importu a soubory exportu](../../build/reference/working-with-import-libraries-and-export-files.md)
+- [Práce s knihovnami importu a soubory exportu](working-with-import-libraries-and-export-files.md)
 
 ## <a name="see-also"></a>Viz také:
 
-[Nástroje sestavení C/C++](../../build/reference/c-cpp-build-tools.md)
+[Nástroje pro vytváření dalších MSVC](c-cpp-build-tools.md)

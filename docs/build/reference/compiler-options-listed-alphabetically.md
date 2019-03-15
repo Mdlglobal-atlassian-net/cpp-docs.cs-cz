@@ -3,12 +3,12 @@ title: Možnosti kompilátoru (abecední pořadí)
 ms.date: 08/20/2018
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 73236485026b82895426a2651b48a83fc35ce8b7
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6175d62938534e790fb60b300ff55ad031da5801
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415874"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811937"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Možnosti kompilátoru (abecední pořadí)
 
@@ -164,6 +164,5 @@ Následuje úplný abecední seznam – možnosti kompilátoru. Seznam kategori�
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční zdroje k sestavení programu v jazyce C/C++](c-cpp-building-reference.md)<br/>
-[Možnosti kompilátoru](compiler-options.md)<br/>
-[Nastavení možností kompilátoru](setting-compiler-options.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

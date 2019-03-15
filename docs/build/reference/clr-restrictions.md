@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-ms.openlocfilehash: 205345a4261f5db8eb80b3bda6e5ea55544a33d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2205740aea5a2e557b8d93c3c60045435c4b71d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639342"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816097"
 ---
 # <a name="clr-restrictions"></a>/clr – omezení
 
@@ -17,7 +17,7 @@ Mějte na paměti následující omezení týkající se použití **/CLR**:
 
 - Strukturovanou obslužnou rutinou, existují omezení používání `_alloca` při kompilaci s **/CLR**. Další informace najdete v tématu [_alloca](../../c-runtime-library/reference/alloca.md).
 
-- Použití kontroly chyb za běhu není platná s **/CLR**. Další informace najdete v tématu [postupy: použití nativních kontrol za běhu](/visualstudio/debugger/how-to-use-native-run-time-checks).
+- Použití kontroly chyb za běhu není platná s **/CLR**. Další informace najdete v tématu [jak: Použití nativních kontrol za běhu](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
 - Když **/CLR** se používá ke kompilaci program, který se používá pouze standardní syntaxe jazyka C++, následující pokyny se vztahují na užívání vložené sestavení:
 
@@ -37,36 +37,36 @@ Mějte na paměti následující omezení týkající se použití **/CLR**:
 
 - Následující možnosti kompilátoru nepodporuje **/CLR**:
 
-  - **/ EHsc** a **/EHS** (**/CLR** znamená **/EHa** (viz [/EH (Model zpracování výjimek)](../../build/reference/eh-exception-handling-model.md))
+  - **/ EHsc** a **/EHS** (**/CLR** znamená **/EHa** (viz [/EH (Model zpracování výjimek)](eh-exception-handling-model.md))
 
-  - **/ FP: strict** a **/FP: except** (viz [/fp (určení chování plovoucí desetinné čárky)](../../build/reference/fp-specify-floating-point-behavior.md))
+  - **/ FP: strict** a **/FP: except** (viz [/fp (určení chování plovoucí desetinné čárky)](fp-specify-floating-point-behavior.md))
 
-  - [/Zd](../../build/reference/z7-zi-zi-debug-information-format.md)
+  - [/Zd](z7-zi-zi-debug-information-format.md)
 
-  - [/Gm](../../build/reference/gm-enable-minimal-rebuild.md)
+  - [/Gm](gm-enable-minimal-rebuild.md)
 
-  - [/MT](../../build/reference/md-mt-ld-use-run-time-library.md)
+  - [/MT](md-mt-ld-use-run-time-library.md)
 
-  - [/RTC](../../build/reference/rtc-run-time-error-checks.md)
+  - [/RTC](rtc-run-time-error-checks.md)
 
-  - [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)
+  - [/ZI](z7-zi-zi-debug-information-format.md)
 
-- Kombinace `_STATIC_CPPLIB` Definice preprocesoru (`/D_STATIC_CPPLIB`) a **/CLR** – možnost kompilátoru není podporován. Důvodem je, že definice by způsobit, že aplikace k propojení s statické s více vlákny standardní knihovny C++, což není podporováno. Další informace najdete v tématu [/ / MD, / MT, /LD (použití knihovny Run-Time)](../../build/reference/md-mt-ld-use-run-time-library.md) tématu.
+- Kombinace `_STATIC_CPPLIB` Definice preprocesoru (`/D_STATIC_CPPLIB`) a **/CLR** – možnost kompilátoru není podporován. Důvodem je, že definice by způsobit, že aplikace k propojení s statické s více vlákny standardní knihovny C++, což není podporováno. Další informace najdete v tématu [/ / MD, / MT, /LD (použití knihovny Run-Time)](md-mt-ld-use-run-time-library.md) tématu.
 
-- Při použití **/zi** s **/CLR**, existují vliv na výkon. Další informace najdete v tématu [/zi](../../build/reference/z7-zi-zi-debug-information-format.md).
+- Při použití **/zi** s **/CLR**, existují vliv na výkon. Další informace najdete v tématu [/zi](z7-zi-zi-debug-information-format.md).
 
-- Široký znak předá do rozhraní .NET Framework výstupu rutiny zároveň neurčí [/Zc: wchar_t](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) nebo bez přetypování znak, který má `__wchar_t` způsobí, že výstup jako `unsigned short int`. Příklad:
+- Široký znak předá do rozhraní .NET Framework výstupu rutiny zároveň neurčí [/Zc: wchar_t](zc-wchar-t-wchar-t-is-native-type.md) nebo bez přetypování znak, který má `__wchar_t` způsobí, že výstup jako `unsigned short int`. Příklad:
 
     ```cpp
     Console::WriteLine(L' ')              // Will output 32.
     Console::WriteLine((__wchar_t)L' ')   // Will output a space.
     ```
 
-- [/GS](../../build/reference/gs-buffer-security-check.md) je ignorována při kompilaci s **/CLR**, pokud je funkce v rámci `#pragma` [nespravované](../../preprocessor/managed-unmanaged.md) nebo pokud funkce musí být zkompilována pro nativní, v takovém případě bude kompilátor generovat upozornění C4793, což je vypnuto ve výchozím nastavení.
+- [/GS](gs-buffer-security-check.md) je ignorována při kompilaci s **/CLR**, pokud je funkce v rámci `#pragma` [nespravované](../../preprocessor/managed-unmanaged.md) nebo pokud funkce musí být zkompilována pro nativní, v takovém případě bude kompilátor generovat upozornění C4793, což je vypnuto ve výchozím nastavení.
 
-- Zobrazit [/Entry](../../build/reference/entry-entry-point-symbol.md) pro požadavky na podpis funkce spravované aplikace.
+- Zobrazit [/Entry](entry-entry-point-symbol.md) pro požadavky na podpis funkce spravované aplikace.
 
-- Zkompilovaná aplikace **/OpenMP** a **/CLR** lze spustit pouze v procesu jedinou doménu appdomain.  Zobrazit [/OpenMP (povolit podporu OpenMP 2.0)](../../build/reference/openmp-enable-openmp-2-0-support.md) Další informace.
+- Zkompilovaná aplikace **/OpenMP** a **/CLR** lze spustit pouze v procesu jedinou doménu appdomain.  Zobrazit [/OpenMP (povolit podporu OpenMP 2.0)](openmp-enable-openmp-2-0-support.md) Další informace.
 
 - Jako nativní funkce se vygeneruje funkcí, které přijímají proměnný počet argumentů (vararg). Všechny spravované datové typy argumentů s proměnnou délkou pozici bude zařazeno do nativních typů. Všimněte si, že <xref:System.String?displayProperty=fullName> typy jsou ve skutečnosti širokoznaké řetězce, ale jsou zařazeny do jednobajtové znakové řetězce. Proto u printf specifikátor %S (wchar_t *) se ho budou zařazování na řetězec %s místo.
 
@@ -88,4 +88,4 @@ Mějte na paměti následující omezení týkající se použití **/CLR**:
 
 ## <a name="see-also"></a>Viz také:
 
-- [/clr (kompilace modulu Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
+- [/clr (kompilace modulu Common Language Runtime)](clr-common-language-runtime-compilation.md)

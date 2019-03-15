@@ -11,12 +11,12 @@ helpviewer_keywords:
 - XML documentation, comments in source files
 - -doc compiler option [C++]
 ms.assetid: b54f7e2c-f28f-4f46-9ed6-0db09be2cc63
-ms.openlocfilehash: 94d10718ac47c984f8254d2c7b7f32fc6189fee3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 90f63a972245114424b64d4131420dcb4e1e925a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415393"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809792"
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc (zpracování dokumentačních komentářů) (C/C++)
 
@@ -33,15 +33,15 @@ Název, který kompilátor vytvoří soubor .xdc. Platné jen v případě jeden
 
 ## <a name="remarks"></a>Poznámky
 
-Zpracování souborů .xdc do souboru XML s xdcmake.exe. Další informace najdete v tématu [referenční dokumentace nástroje XDCMake](../../ide/xdcmake-reference.md).
+Zpracování souborů .xdc do souboru XML s xdcmake.exe. Další informace najdete v tématu [referenční dokumentace nástroje XDCMake](xdcmake-reference.md).
 
-Můžete přidat komentáře dokumentace do souborů se zdrojovým kódem. Další informace najdete v tématu [doporučené značky pro dokumentační komentáře](../../ide/recommended-tags-for-documentation-comments-visual-cpp.md).
+Můžete přidat komentáře dokumentace do souborů se zdrojovým kódem. Další informace najdete v tématu [doporučené značky pro dokumentační komentáře](recommended-tags-for-documentation-comments-visual-cpp.md).
 
 Použít soubor .xml generovaný s podporou technologie IntelliSense, ujistěte se, název souboru souboru .xml, který je stejný jako sestavení, které chcete podporovat a vložit ho do XML je ve stejném adresáři jako sestavení. Při sestavení se odkazuje v projektu sady Visual Studio, je také najít soubor .xml. Další informace najdete v tématu [pomocí technologie IntelliSense](/visualstudio/ide/using-intellisense) a [zadávání komentářů ke kódu XML](/visualstudio/ide/supplying-xml-code-comments).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **výstupní soubory** stránku vlastností.
 
@@ -53,5 +53,5 @@ Použít soubor .xml generovaný s podporou technologie IntelliSense, ujistěte 
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

@@ -4,12 +4,12 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 128b477a2c4252c841990e2a2462029abe5a3bbb
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: d3ebfbc3661ba648c2fdb73c697db42735faf422
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746966"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816331"
 ---
 # <a name="compiler-options-listed-by-category"></a>Možnosti kompilátoru uvedené podle kategorie
 
@@ -218,5 +218,5 @@ Tento článek obsahuje seznam kategorií možností kompilátoru. Abecední sez
 ## <a name="see-also"></a>Viz také:
 
 [Referenční zdroje k sestavení programu v jazyce C/C++](c-cpp-building-reference.md)<br/>
-[Možnosti kompilátoru](compiler-options.md)<br/>
-[Nastavení možností kompilátoru](setting-compiler-options.md)<br/>
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>

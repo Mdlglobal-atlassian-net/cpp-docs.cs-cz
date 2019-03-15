@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Value edit control
 ms.assetid: 129d8f74-2629-4a29-981f-ddb3c1e174cd
-ms.openlocfilehash: 916fe01f1f39ff1cd756f8e57c36492496d20f86
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2638b904482503ae4645302264f1b06bf6ba3ded
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426742"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820607"
 ---
 # <a name="value-edit-control"></a>Hodnota – textové pole
 
@@ -17,4 +17,4 @@ Použití ovládacího prvku, zadejte hodnotu, vložte ze schránky nebo přetá
 
 ## <a name="see-also"></a>Viz také:
 
-[ERRLOOK – odkaz](../../build/reference/errlook-reference.md)
+[ERRLOOK – odkaz](errlook-reference.md)

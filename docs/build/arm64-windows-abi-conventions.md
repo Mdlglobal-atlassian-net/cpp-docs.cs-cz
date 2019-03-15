@@ -1,12 +1,12 @@
 ---
 title: Přehled konvencí ARM64 ABI
 ms.date: 07/11/2018
-ms.openlocfilehash: c5c928dcb77729f5b79433d3be1b552664a0d211
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 537f8cf5bb8db61854bea7f4624e3dd3176c6a59
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599781"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816539"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Přehled konvencí ARM64 ABI
 
@@ -58,11 +58,11 @@ Architektura AArch64 podporuje 32 registrů pro celé číslo, shrnuté dole:
 |Registr|Volatile?|Role|
 |-|-|-|
 x0|Volatile|Parametr/začátku registrace 1, výsledek registrace
-x1 x7|Volatile|Parametr/začátku registrace 2 až 8
-x8 x15|Volatile|Pomocné registrů
-x16 x17|Volatile|Volání procedury uvnitř pomocné registrů
+x1-x7|Volatile|Parametr/začátku registrace 2 až 8
+x8-x15|Volatile|Pomocné registrů
+x16-x17|Volatile|Volání procedury uvnitř pomocné registrů
 x18|Non-volatile|Platforma registrace: v režimu jádra, odkazuje na KPCR aktuální procesoru; v uživatelském režimu odkazuje na TEB
-x19 x28|Non-volatile|Pomocné registrů
+x19-x28|Non-volatile|Pomocné registrů
 x29/fp|Non-volatile|Ukazatel na rámec
 x30/lr|Non-volatile|Zaregistruje odkaz
 
@@ -80,10 +80,10 @@ Architektura AArch64 také podporuje 32 registrů plovoucí desetinnou/SIMD shrn
 
 Registr|Volatile?|Role
 |-|-|-|
-V0|Volatile|Parametr/začátku registrace 1, výsledek registrace
-V1 v7|Volatile|Parametr/začátku zaregistruje 2 až 8
-v8 v15|Non-volatile|Pomocný registrů (Všimněte si, že pouze s nízkou 64 bity není typu volatile)
-V16 v31|Volatile|Pomocné registrů
+v0|Volatile|Parametr/začátku registrace 1, výsledek registrace
+v1-v7|Volatile|Parametr/začátku zaregistruje 2 až 8
+v8-v15|Non-volatile|Pomocný registrů (Všimněte si, že pouze s nízkou 64 bity není typu volatile)
+v16-v31|Volatile|Pomocné registrů
 
 Každý registr přístupná jako úplné hodnotu 128-bit (prostřednictvím v0-v31 nebo q0-Dotaz č. 31), jako hodnotu 64-bit (prostřednictvím d0-d31), jako hodnotu 32-bit (prostřednictvím s0-s31), jako hodnotu 16 bitů (prostřednictvím h0 h31) nebo jako hodnota 8 bitů (prostřednictvím b0 b31). Přístupy menší než 128 bitů přístup k nižší bity register úplné 128 bitů a ponechte zbývající bity beze změny, pokud není uvedeno jinak. (Všimněte si, že tím se značně liší od AArch32, ve kterém byly menší registrů zabaleny nad větší registrů.)
 
@@ -95,7 +95,7 @@ Bity|Význam|Volatile?|Role
 25|ROZLIŠUJÍCÍ NÁZEV|Není typu Volatile.|Výchozí NaN režimu ovládací prvek
 24|FZ|Non-volatile|Vyprázdnění nula režim ovládacího prvku
 23-22|RMode|Non-volatile|Ovládací prvek režimu zaokrouhlení
-15,12-8|Integrované vývojové prostředí/IXE/atd.|Není typu Volatile.|Výjimku zachytit povolit bits, musí být vždy 0.
+15,12-8|IDE/IXE/etc|Není typu Volatile.|Výjimku zachytit povolit bits, musí být vždy 0.
 
 ## <a name="system-registers"></a>Registrů systému
 
@@ -103,7 +103,7 @@ Stejně jako AArch32 specifikace AArch64 poskytuje tři systém řídí "ID vlá
 
 Registr|Role
 |-|-|
-TPIDR_EL0|Rezervováno
+TPIDR_EL0|Vyhrazeno
 TPIDRRO_EL0|Obsahuje číslo procesoru pro aktuální procesoru
 TPIDR_EL1|Odkazuje na strukturu KPCR pro aktuální procesoru
 
@@ -203,7 +203,7 @@ Výchozím zásobníku režimu jádra ve Windows je šest stránek (24 kb). Tře
 
 ## <a name="stack-walking"></a>Procházení zásobníku
 
-Kód v rámci Windows je zkompilován pomocí ukazatele na rámce povolené ([/Oy-](../build/reference/oy-frame-pointer-omission.md)) k povolení procházení zásobníku rychlé. Upshot tohoto je, že x29 (fp) obecně odkazuje na další článek v řetězci, tedy {fp, lr} pár označující ukazatel na předchozí rámec v zásobníku a zpáteční adresu. Kód třetích stran je doporučujeme povolit ukazatele na rámce a aby bylo možné povolit pro zlepšení profilování a trasování.
+Kód v rámci Windows je zkompilován pomocí ukazatele na rámce povolené ([/Oy-](reference/oy-frame-pointer-omission.md)) k povolení procházení zásobníku rychlé. Upshot tohoto je, že x29 (fp) obecně odkazuje na další článek v řetězci, tedy {fp, lr} pár označující ukazatel na předchozí rámec v zásobníku a zpáteční adresu. Kód třetích stran je doporučujeme povolit ukazatele na rámce a aby bylo možné povolit pro zlepšení profilování a trasování.
 
 ## <a name="exception-unwinding"></a>Uvolňování výjimek
 
@@ -221,5 +221,5 @@ Nezapomeňte ale, že čítač cyklus je true cyklu čítače, není wall hodina
 
 ## <a name="see-also"></a>Viz také:
 
-[Běžné problémy s migrací ARM v prostředí Visual C++](../build/common-visual-cpp-arm-migration-issues.md)<br/>
-[Zpracování výjimek ARM64](../build/arm64-exception-handling.md)
+[Běžné problémy s migrací ARM v prostředí Visual C++](common-visual-cpp-arm-migration-issues.md)<br/>
+[Zpracování výjimek ARM64](arm64-exception-handling.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: 17255a5671880063f030ed0087c1fa839c5a14ef
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 21c812efd101c64e250a545d2a40df6adc31c414
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421366"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813952"
 ---
 # <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>Postupy: Konfigurace projektů Visual C++ pro cílení 64-Bit, x64 platformy
 
@@ -21,7 +21,7 @@ Konfigurace projektu v integrovaném vývojovém prostředí sady Visual Studio 
 
 1. Otevřete projekt C++, který chcete konfigurovat.
 
-1. Otevření stránek vlastností pro daný projekt. Další informace najdete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).
+1. Otevření stránek vlastností pro daný projekt. Další informace najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](working-with-project-properties.md).
 
    > [!NOTE]
    > Pro projekty .NET, ujistěte se, že **vlastnosti konfigurace** uzlu nebo jeden z jeho podřízených uzlů, je vybrán v  **\<Projectname > stránky vlastností** dialogové okno; v opačném případě  **Nástroj Configuration Manager** tlačítko zůstane k dispozici.
@@ -43,21 +43,20 @@ Konfigurace projektu v integrovaném vývojovém prostředí sady Visual Studio 
 
 - Když **nová platforma řešení** dialogové okno je otevřený, když nastavíte projekt, aby mířil 64bitové platformě v **Kopírovat nastavení z:** rozevíracího seznamu vyberte **Win32**. Tato nastavení projektu se automaticky aktualizují na úrovni projektu:
 
-  - [/MACHINE](../build/reference/machine-specify-target-platform.md) – možnost linkeru nastavená na **/MACHINE:X 64**.
+  - [/MACHINE](reference/machine-specify-target-platform.md) – možnost linkeru nastavená na **/MACHINE:X 64**.
 
-  - **Registrovat výstup** je vypnuté. Další informace najdete v tématu [stránky vlastností Linkeru](../ide/linker-property-pages.md).
+  - **Registrovat výstup** je vypnuté. Další informace najdete v tématu [stránky vlastností Linkeru](reference/linker-property-pages.md).
 
-  - **Cílové prostředí** je nastavena na **/env x64**. Další informace najdete v tématu [MIDL – stránky vlastností: Obecné](../ide/midl-property-pages-general.md).
+  - **Cílové prostředí** je nastavena na **/env x64**. Další informace najdete v tématu [MIDL – stránky vlastností: Obecné](reference/midl-property-pages-general.md).
 
-  - **Ověřit parametry** je vymazána a resetovat na výchozí hodnotu. Další informace najdete v tématu [MIDL – stránky vlastností: Pokročilé](../ide/midl-property-pages-advanced.md).
+  - **Ověřit parametry** je vymazána a resetovat na výchozí hodnotu. Další informace najdete v tématu [MIDL – stránky vlastností: Pokročilé](reference/midl-property-pages-advanced.md).
 
-  - Pokud **formát informací o ladění** byl nastaven na **/zi** v konfiguraci projektu Win32, pak bude nastaven **/zi** v konfiguraci projektu 64-bit. Další informace najdete v tématu [/Z7, / zi, /ZI (formát informací o ladění)](../build/reference/z7-zi-zi-debug-information-format.md).
+  - Pokud **formát informací o ladění** byl nastaven na **/zi** v konfiguraci projektu Win32, pak bude nastaven **/zi** v konfiguraci projektu 64-bit. Další informace najdete v tématu [/Z7, / zi, /ZI (formát informací o ladění)](reference/z7-zi-zi-debug-information-format.md).
 
   > [!NOTE]
   > Žádná z těchto vlastností projektu se změní, pokud jsou přepsány na úrovni souboru.
 
 ## <a name="see-also"></a>Viz také:
 
-[64bitové aplikace rozhraní .NET framework](/dotnet/framework/64-bit-apps)<br/>
-[Konfigurace Visual C++ pro 64bitové cíle x64](../build/configuring-programs-for-64-bit-visual-cpp.md)<br/>
+[Konfigurace projektů C++ pro 64bitové, x64 cíle](configuring-programs-for-64-bit-visual-cpp.md)<br/>
 [Ladění 64bitových aplikací](/visualstudio/debugger/debug-64-bit-applications)

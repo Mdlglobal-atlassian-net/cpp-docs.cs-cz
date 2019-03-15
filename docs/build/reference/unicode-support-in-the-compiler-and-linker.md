@@ -8,12 +8,12 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles
 helpviewer_keywords:
 - Unicode, Visual C++
-ms.openlocfilehash: cb21165e51960c0ca2f728381413c1a7260c9f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71458ab345670c0a5715576a7da80c4e6ff2955b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494975"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807499"
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>Podpora kódování Unicode v kompilátoru a linkeru
 
@@ -45,8 +45,8 @@ Soubory odpovědí a soubory DEF mohou být buď UTF-16 s BOM nebo ANSI.
 
 ## <a name="asm-and-cod-dumps"></a>výpisy .asm a .cod
 
-výpisy .asm a .cod jsou ve výchozím nastavení pro kompatibilitu s MASM ve standardu ANSI. Použití [/fau vytvořte](../../build/reference/fa-fa-listing-file.md) pro výstup kódování UTF-8. Všimněte si, že pokud zadáte **/FAS**, smíšené zdroje budou pouze přímo vytištěny a mohou vypadat neúhledně, například pokud zdrojový kód je UTF-8 a jste neurčili, nevložily **/FAsu**.
+výpisy .asm a .cod jsou ve výchozím nastavení pro kompatibilitu s MASM ve standardu ANSI. Použití [/fau vytvořte](fa-fa-listing-file.md) pro výstup kódování UTF-8. Všimněte si, že pokud zadáte **/FAS**, smíšené zdroje budou pouze přímo vytištěny a mohou vypadat neúhledně, například pokud zdrojový kód je UTF-8 a jste neurčili, nevložily **/FAsu**.
 
 ## <a name="see-also"></a>Viz také:
 
-[Sestavení kódu C/C++ na příkazovém řádku](../../build/building-on-the-command-line.md)
+[Použití nástrojů MSVC z příkazového řádku](../building-on-the-command-line.md)

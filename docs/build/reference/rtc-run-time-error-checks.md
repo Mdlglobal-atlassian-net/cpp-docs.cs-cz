@@ -25,12 +25,12 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: 3ac70904332f5f05463b317f02a2ab8d3bfc7bb3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a830ff5b8ba4b7fcd95eb462f899f2eadce6de11
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424610"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815889"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (kontrola chyb za běhu)
 
@@ -75,7 +75,7 @@ Umožňuje zásobníku rámce běhové kontroly chyb, následujícím způsobem:
 
 - Inicializace lokálních proměnných na nenulovou hodnotu. To pomáhá identifikovat chyby, které nejsou zobrazeny při spuštění v režimu ladění. Je větší pravděpodobnost, že proměnné zásobníku stále bude nula v sestavení pro ladění ve srovnání s sestavení pro vydání z důvodu optimalizace kompilátoru proměnných zásobníku v sestavení pro vydání. Jakmile program použil oblast svůj zásobník, se nikdy nastaven na hodnotu 0 kompilátorem. Zásobník následné, neinicializované proměnné, které dojde k použití stejné oblasti zásobníku proto může vrátit hodnoty, které zbyly z předchozího použití této paměti zásobníku.
 
-- Detekce přetečení a underruns lokálních proměnných, například pole. **/ RTC** `s` nerozpozná přetečení při přístupu k paměti, která je výsledkem kompilátoru odsazení v rámci struktury. Odsazení může dojít k pomocí [zarovnat](../../cpp/align-cpp.md), [/Zp (zarovnání členů struktury)](../../build/reference/zp-struct-member-alignment.md), nebo [pack](../../preprocessor/pack.md), nebo pokud uspořádat prvky struktury tak, že to vyžaduje kompilátor, aby přidat odsazení.
+- Detekce přetečení a underruns lokálních proměnných, například pole. **/ RTC** `s` nerozpozná přetečení při přístupu k paměti, která je výsledkem kompilátoru odsazení v rámci struktury. Odsazení může dojít k pomocí [zarovnat](../../cpp/align-cpp.md), [/Zp (zarovnání členů struktury)](zp-struct-member-alignment.md), nebo [pack](../../preprocessor/pack.md), nebo pokud uspořádat prvky struktury tak, že to vyžaduje kompilátor, aby přidat odsazení.
 
 - Ověřování ukazatel zásobníku, které detekuje poškození ukazatel zásobníku. Poškození ukazatel zásobníku může být způsobeno neshodou konvence volání. Například pomocí ukazatele na funkci, volání funkce v knihovně DLL, který je exportován jako [__stdcall](../../cpp/stdcall.md) deklarovat ukazatel na funkci, ale [__cdecl](../../cpp/cdecl.md).
 
@@ -99,13 +99,13 @@ Kontrola chyb za běhu jsou způsob, jak můžete najít problémy v kódu spuš
 
 Pokud kompilujete aplikace příkazového řádku pomocí kteréhokoli z **/RTC** – možnosti kompilátoru, všechny – Direktiva pragma [optimalizovat](../../preprocessor/optimize.md) podle pokynů v kódu se bez upozornění nepodaří. Je to proto, že nejsou platné v sestavení pro vydání (optimalizované) Kontrola chyb za běhu.
 
-Měli byste použít **/RTC** pro vývoj sestavení; **/RTC** nemělo používat pro sestavení prodejní verze. **/ RTC** nelze použít s optimalizace kompilátoru ([/O možnosti (Optimalizace kódu)](../../build/reference/o-options-optimize-code.md)). Sestavován bitové kopie programu **/RTC** širší a o něco pomalejší než image vytvořené pomocí **/Od** (až o 5 procent pomalejší než **/Od** sestavení).
+Měli byste použít **/RTC** pro vývoj sestavení; **/RTC** nemělo používat pro sestavení prodejní verze. **/ RTC** nelze použít s optimalizace kompilátoru ([/O možnosti (Optimalizace kódu)](o-options-optimize-code.md)). Sestavován bitové kopie programu **/RTC** širší a o něco pomalejší než image vytvořené pomocí **/Od** (až o 5 procent pomalejší než **/Od** sestavení).
 
-Direktivy preprocesoru __MSVC_RUNTIME_CHECKS bude definovat, když použijete některou **/RTC** možnost nebo [/GZ](../../build/reference/gz-enable-stack-frame-run-time-error-checking.md).
+Direktivy preprocesoru __MSVC_RUNTIME_CHECKS bude definovat, když použijete některou **/RTC** možnost nebo [/GZ](gz-enable-stack-frame-run-time-error-checking.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **C/C++** složky.
 
@@ -119,6 +119,6 @@ Direktivy preprocesoru __MSVC_RUNTIME_CHECKS bude definovat, když použijete n�
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
 [Postupy: Použití nativních kontrol za běhu](/visualstudio/debugger/how-to-use-native-run-time-checks)

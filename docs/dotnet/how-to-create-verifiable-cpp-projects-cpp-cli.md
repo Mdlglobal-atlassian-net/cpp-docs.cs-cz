@@ -1,17 +1,17 @@
 ---
-title: 'Postupy: Vytvoření ověřitelných projektů jazyka C++ (C++/CLI)'
+title: 'Postupy: Vytvoření ověřitelných projektů jazyka C++ (C + +/ CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - verifiable assemblies [C++], creating
 - conversions, C++ projects
 - Visual C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
-ms.openlocfilehash: acd37469f0702b73cdb1386fcf43091c8d27aebb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de3742717bf55c53ab4007aaed18b6ce687fbede
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630435"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817372"
 ---
 # <a name="how-to-create-verifiable-c-projects-ccli"></a>Postupy: Vytvoření ověřitelných projektů jazyka C++ (C + +/ CLI)
 
@@ -28,7 +28,7 @@ Ve výchozím nastavení projekty .NET pomocí příznaku/CLR kompilátoru a lin
 
 ### <a name="to-change-the-compiler-and-linker-settings"></a>Chcete-li změnit nastavení kompilátoru a linkeru
 
-1. Zobrazte stránku vlastností projektu. Další informace najdete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).
+1. Zobrazte stránku vlastností projektu. Další informace najdete v tématu [nastavení kompilátoru a vlastnosti sestavení](../build/working-with-project-properties.md).
 
 1. Na **Obecné** stránky **vlastnosti konfigurace** sady uzlů, **Common Language Runtime Support** vlastnost **bezpečné společný jazyk MSIL Podpora modulu CLR (/ CLR: safe)**.
 
@@ -56,7 +56,7 @@ Protože ověřitelné aplikace nemůže používat knihovny run-time C (CRT), n
 
 1. Změňte _tmain() Main() v souboru hlavní .cpp v projektu.
 
-1. Zobrazte stránku vlastností projektu. Další informace najdete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).
+1. Zobrazte stránku vlastností projektu. Další informace najdete v tématu [nastavení kompilátoru a vlastnosti sestavení](../build/working-with-project-properties.md).
 
 1. Na **Upřesnit** stránky **Linkeru** uzlu, zadejte `Main` jako **vstupní bod** hodnotu vlastnosti.
 

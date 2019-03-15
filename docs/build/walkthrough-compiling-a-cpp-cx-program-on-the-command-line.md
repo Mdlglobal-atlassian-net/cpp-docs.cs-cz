@@ -2,12 +2,12 @@
 title: 'Průvodce: Kompilování programu C++/CX na příkazovém řádku'
 ms.date: 09/24/2018
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: 7f6716b379a11f88adb5c75643e325a9b2856eac
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ad718a2eb876430d7721d0cd20cfd5b952750f8b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413794"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809506"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Návod: Kompilování programu C++/CX na příkazovém řádku
 
@@ -24,11 +24,11 @@ Rozumíte základům jazyka C++.
 
 ## <a name="compiling-a-ccx-program"></a>Kompilace jazyka C + +/ CX programu
 
-Chcete-li povolit kompilace pro C + +/ CX, je nutné použít [/ZW](../build/reference/zw-windows-runtime-compilation.md) – možnost kompilátoru. Kompilátor Visual C++ generuje soubor .exe, zaměřuje na modul Windows Runtime, který obsahuje odkazy na požadované knihovny.
+Chcete-li povolit kompilace pro C + +/ CX, je nutné použít [/ZW](reference/zw-windows-runtime-compilation.md) – možnost kompilátoru. Kompilátor MSVC generuje soubor .exe, zaměřuje na modul Windows Runtime, který obsahuje odkazy na požadované knihovny.
 
 #### <a name="to-compile-a-ccx-application-on-the-command-line"></a>Chcete-li zkompilovat a C + +/ CX aplikace v příkazovém řádku
 
-1. Otevřít **Developer Command Prompt** okna. (Na **Start** otevřené okno **aplikace**. Otevřít **Visual Studio Tools** ve složce vaší verze sady Visual Studio a klikněte na tlačítko **Developer Command Prompt** zástupce.) Další informace o tom, jak otevřít okno příkazového řádku pro vývojáře najdete v tématu [kódu sestavení C/C++ v příkazovém řádku](../build/building-on-the-command-line.md).
+1. Otevřít **Developer Command Prompt** okna. (Na **Start** otevřené okno **aplikace**. Otevřít **Visual Studio Tools** ve složce vaší verze sady Visual Studio a klikněte na tlačítko **Developer Command Prompt** zástupce.) Další informace o tom, jak otevřít okno příkazového řádku pro vývojáře najdete v tématu [použít MSVC nástrojů z příkazového řádku](building-on-the-command-line.md).
 
    Přihlašovací údaje správce, může být nutné úspěšně kompilaci kódu, v závislosti na operačním systému a konfigurace počítače. Chcete-li spustit okno příkazového řádku jako správce, otevřete místní nabídku pro **Developer Command Prompt** a klikněte na tlačítko **spustit jako správce**.
 
@@ -51,7 +51,7 @@ Chcete-li povolit kompilace pro C + +/ CX, je nutné použít [/ZW](../build/ref
 
    Vytvoření zdrojového souboru jazyka Visual C++, který používá prostředí Windows Runtime [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md) oboru názvů.
 
-1. Na příkazovém řádku zadejte **/Link /ZW basiccx.cpp cl/EHsc/Subsystem: Console**. Cl.exe – kompilátor zkompiluje zdrojový kód do souboru .obj a pak spustí linkeru, aby generoval spustitelný program s názvem basiccx.exe. ( [/EHsc](../build/reference/eh-exception-handling-model.md) – možnost kompilátoru Určuje model zpracování výjimek jazyka C++ a [/link](../build/reference/link-pass-options-to-linker.md) příznak určuje konzolové aplikace.)
+1. Na příkazovém řádku zadejte **/Link /ZW basiccx.cpp cl/EHsc/Subsystem: Console**. Cl.exe – kompilátor zkompiluje zdrojový kód do souboru .obj a pak spustí linkeru, aby generoval spustitelný program s názvem basiccx.exe. ( [/EHsc](reference/eh-exception-handling-model.md) – možnost kompilátoru Určuje model zpracování výjimek jazyka C++ a [/link](reference/link-pass-options-to-linker.md) příznak určuje konzolové aplikace.)
 
 1. Chcete-li spustit basiccx.exe program příkazového řádku, zadejte **basiccx**.
 
@@ -63,6 +63,5 @@ Chcete-li povolit kompilace pro C + +/ CX, je nutné použít [/ZW](../build/ref
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
-[Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)<br/>
-[Možnosti kompilátoru](../build/reference/compiler-options.md)
+[Projekty a sestavení systémy](projects-and-build-systems-cpp.md)<br/>
+[Možnosti kompilátoru MSVC](reference/compiler-options.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - porting to Win32 [C++]
 - Win32 applications [C++], migrating from UNIX
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: 1cf5660d1ad2f0fdde02837eeffb642c4a74e5ea
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 325cdb86f61f658776c69057022c005c389492d3
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744500"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813900"
 ---
 # <a name="porting-from-unix-to-win32"></a>Portování ze systému UNIX do Win32
 
@@ -81,4 +81,4 @@ Možnost UNIX programátoři podívat je subsystém Windows POSIX. Však podporu
 
 [Průvodce přenosem a upgradem Visual C++](visual-cpp-change-history-2003-2015.md)<br/>
 [UNIX](../c-runtime-library/unix.md)<br/>
-[Odvozená pravidla](../build/inference-rules.md)
+[Odvozená pravidla](../build/reference/inference-rules.md)

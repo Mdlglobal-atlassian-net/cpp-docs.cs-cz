@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - D9041
 ms.assetid: ada8815f-4246-4e25-b57d-a7f16fa107cc
-ms.openlocfilehash: 79bdafcd4ed6af061b9c0ee27aae6eed6bc981a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2311c61c4d661d58302308f06b08971f94cdacab
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513916"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816305"
 ---
 # <a name="command-line-warning-d9041"></a>Upozornění příkazového řádku D9041
 
@@ -32,4 +32,4 @@ Chcete-li opravit toto upozornění, přidejte **/ analyze** možnost příkazov
 ## <a name="see-also"></a>Viz také
 
 [Chyby příkazového řádku D8000 až D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)<br/>
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)
+[Možnosti kompilátoru MSVC](../../build/reference/compiler-options.md)

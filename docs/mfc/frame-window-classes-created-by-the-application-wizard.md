@@ -14,16 +14,16 @@ helpviewer_keywords:
 - frame window classes [MFC], created by application wizards
 - CMainFrame class [MFC]
 ms.assetid: 9947df73-4470-49a0-ac61-7b6ee401a74e
-ms.openlocfilehash: a0610ae901b817a1c8f7707d9ba87c15d634e134
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 46da8fc0cb98406bdf97285d7c6f824afd61c4bb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298058"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808349"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>Třídy oken s rámečkem vytvořené průvodcem aplikací
 
-Při použití [Průvodce aplikací](../ide/creating-desktop-projects-by-using-application-wizards.md) vytvoření kostru aplikace, kromě aplikace, dokumentů a zobrazení tříd, Průvodce aplikací vytvoří třídu odvozenou oken s rámečkem pro okna hlavního rámce aplikace. Třída se nazývá `CMainFrame` ve výchozím nastavení a soubory, které obsahují jsou pojmenovány MAINFRM. H a MAINFRM. CPP.
+Při vytvoření nové knihovny MFC projekt **nový projekt** dialogového okna, kromě aplikace, dokumentů a zobrazení tříd, Průvodce aplikací vytvoří třídu odvozenou oken s rámečkem pro oknu hlavního rámce. Třída se nazývá `CMainFrame` ve výchozím nastavení a soubory, které obsahují jsou pojmenovány MAINFRM. H a MAINFRM. CPP.
 
 Pokud je vaše aplikace SDI, vaše `CMainFrame` třída je odvozena od třídy [CFrameWnd](../mfc/reference/cframewnd-class.md).
 
@@ -36,4 +36,5 @@ Tyto třídy oken s rámečkem práci při vytváření, ale k rozšíření sv�
 ## <a name="see-also"></a>Viz také:
 
 [Třídy oken s rámečkem](../mfc/frame-window-classes.md)<br/>
-[Program knihovny MFC nebo zdroj ovládacího prvku a soubory hlaviček](../ide/mfc-program-or-control-source-and-header-files.md)
+[Program knihovny MFC nebo zdroj ovládacího prvku a soubory hlaviček](../build/reference/mfc-program-or-control-source-and-header-files.md)
+

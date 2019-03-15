@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-ms.openlocfilehash: 8eba665e34fc3b949283557461e33348106fd532
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c4f7e6edb020f5c8d2abf80f14df33e18a915c5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451507"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817462"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (Konvence volání)
 
@@ -35,7 +35,7 @@ Tyto možnosti určují pořadí ve funkci, která argumenty jsou vloženy do z�
 ## <a name="syntax"></a>Syntaxe
 
 > **/Gd**<br/>
-> **/GR**<br/>
+> **/Gr**<br/>
 > **/Gv**<br/>
 > **/Gz**<br/>
 
@@ -51,14 +51,14 @@ Tyto možnosti určují pořadí ve funkci, která argumenty jsou vloženy do z�
 
 Funkce vyžadující proměnný počet argumentů musí být označen `__cdecl`.
 
-**/GD –**, **GR**, **/Gv** a **/Gz** nejsou kompatibilní s [/CLR: safe](../../build/reference/clr-common-language-runtime-compilation.md) nebo   **/CLR: pure**. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
+**/GD –**, **GR**, **/Gv** a **/Gz** nejsou kompatibilní s [/CLR: safe](clr-common-language-runtime-compilation.md) nebo   **/CLR: pure**. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
 
 > [!NOTE]
 > Ve výchozím nastavení pro x86 procesory, členské funkce C++ použijí [klíčové slovo __thiscall](../../cpp/thiscall.md).
 
 Pro všechny procesory, členská funkce, která je explicitně označena jako `__cdecl`, `__fastcall`, `__vectorcall`, nebo `__stdcall` používá zadané konvence volání, pokud není ignorována u této architektury. Členská funkce, která přijímá proměnný počet argumentů, vždy používá `__cdecl` konvence volání.
 
-Tyto možnosti kompilátoru nemají žádný vliv na názvovou dekoraci metod C++ a funkcí. Pokud nejsou deklarovány jako `extern "C"`, používají jiné schéma dekorování C++ metody a funkce. Další informace najdete v tématu [dekorované názvy](../../build/reference/decorated-names.md).
+Tyto možnosti kompilátoru nemají žádný vliv na názvovou dekoraci metod C++ a funkcí. Pokud nejsou deklarovány jako `extern "C"`, používají jiné schéma dekorování C++ metody a funkce. Další informace najdete v tématu [dekorované názvy](decorated-names.md).
 
 Další informace o konvencích volání naleznete v tématu [konvence volání](../../cpp/calling-conventions.md).
 
@@ -66,7 +66,7 @@ Další informace o konvencích volání naleznete v tématu [konvence volání]
 
 Na x86 procesory, všechny argumenty jsou předány v zásobníku zprava doleva. Na ARM a x64 některé argumenty jsou předány registrem a ostatní jsou předány v zásobníku zprava doleva. Rutina volání vezme argumenty ze zásobníku POP.
 
-Pro jazyk C `__cdecl` používá konvence pojmenování název funkce začínající podtržítkem ( `_` ); provádí se žádný překlad případu. Pokud nejsou deklarovány jako `extern "C"`, používají funkce jazyka C++ jiné schéma dekorování. Další informace najdete v tématu [dekorované názvy](../../build/reference/decorated-names.md).
+Pro jazyk C `__cdecl` používá konvence pojmenování název funkce začínající podtržítkem ( `_` ); provádí se žádný překlad případu. Pokud nejsou deklarovány jako `extern "C"`, používají funkce jazyka C++ jiné schéma dekorování. Další informace najdete v tématu [dekorované názvy](decorated-names.md).
 
 ## <a name="fastcall-specifics"></a>Specifikace __fastcall
 
@@ -99,7 +99,7 @@ Pro jazyk C `__vectorcall` zásady vytváření názvů používá název funkce
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **C/C++** > **Upřesnit** stránku vlastností.
 
@@ -111,5 +111,5 @@ Pro jazyk C `__vectorcall` zásady vytváření názvů používá název funkce
 
 ## <a name="see-also"></a>Viz také:
 
-- [Možnosti kompilátoru](../../build/reference/compiler-options.md)
-- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+- [Možnosti kompilátoru MSVC](compiler-options.md)
+- [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

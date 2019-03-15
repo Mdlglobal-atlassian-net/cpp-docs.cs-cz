@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '@ linker option'
 - response files, C/C++ linker
 ms.assetid: 5530014f-17d0-4f6b-a6b0-a6ba34f34cfd
-ms.openlocfilehash: 32c100a5b7388c71081c46200ec8aea047ccf0d4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9e595857a6089c59aa6638ed51acacae3a0eb5e9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412468"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816500"
 ---
 # <a name="-specify-a-linker-response-file"></a>@ (Zadat soubor odpovědí linkeru)
 
@@ -32,7 +32,7 @@ Určení linkeru příkazy textového souboru.
 
 ## <a name="remarks"></a>Poznámky
 
-Zobrazit [@ (zadat soubor odezvy kompilátoru)](../../build/reference/at-specify-a-compiler-response-file.md) Další informace.
+Zobrazit [@ (zadat soubor odezvy kompilátoru)](at-specify-a-compiler-response-file.md) Další informace.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
@@ -44,5 +44,5 @@ Zobrazit [@ (zadat soubor odezvy kompilátoru)](../../build/reference/at-specify
 
 ## <a name="see-also"></a>Viz také:
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)
+[Odkaz na MSVC linkeru](linking.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)

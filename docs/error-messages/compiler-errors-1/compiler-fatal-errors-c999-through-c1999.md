@@ -160,14 +160,13 @@ helpviewer_keywords:
 - C1852
 - C1901
 - C1903
-- C1904
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: edf2227bd0a542ce9ca5e8a6a3f908347bd816e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1159a635f0c7a61e591b4d96c4e55bd2baf44782
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677328"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814446"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Závažné chyby kompilátoru C999 až C1999
 
@@ -224,7 +223,7 @@ ms.locfileid: "50677328"
 |Závažná chyba C1063|limit kompilátoru: přetečení zásobníku kompilátoru|
 |[Závažná chyba C1064](../../error-messages/compiler-errors-1/fatal-error-c1064.md)|limit kompilátoru: token způsobil přetečení vnitřní vyrovnávací paměť|
 |[Závažná chyba C1065](../../error-messages/compiler-errors-1/fatal-error-c1065.md)|limit kompilátoru: došly značky|
-|[Závažná chyba C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|limit kompilátoru: došlo k překročení 64 kB omezení velikosti záznamu typu|
+|[Závažná chyba C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|limit kompilátoru: Došlo k překročení 64 kB omezení velikosti záznamu typu|
 |Závažná chyba C1068|Nelze otevřít soubor "*souboru*.|
 |Závažná chyba C1069|nejde číst příkazový řádek kompilátoru|
 |Závažná chyba C1070|Neshoda #if / #endif spárovat v souboru '*souboru*.|
@@ -234,7 +233,7 @@ ms.locfileid: "50677328"
 |[Závažná chyba C1075](../../error-messages/compiler-errors-1/fatal-error-c1075.md)|levé straně *token* byl bezkonkurenční na konci souboru|
 |[Závažná chyba C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md)|limit kompilátoru: dosažen; vnitřní limit haldy pomocí parametru /Zm nastavte vyšší limit|
 |Závažná chyba C1077|limit kompilátoru: nelze mít více než *číslo* možnosti příkazového řádku|
-|[Závažná chyba C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|limit kompilátoru: překročil limit velikosti souboru PCH|
+|[Závažná chyba C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|limit kompilátoru: Překročen limit velikosti souboru PCH|
 |[Závažná chyba C1080](../../error-messages/compiler-errors-1/fatal-error-c1080.md)|limit kompilátoru: příkazového řádku možnost překročil limit *číslo* znaků|
 |[Závažná chyba C1081](../../error-messages/compiler-errors-1/fatal-error-c1081.md)|"*souboru*': název souboru je příliš dlouhý|
 |Závažná chyba C1082|nelze zavřít *typ* souboru: "*souboru*': *zprávy*|
@@ -265,7 +264,7 @@ ms.locfileid: "50677328"
 |Závažná chyba C1111|příliš mnoho parametrů šablony nebo generické|
 |Závažná chyba C1112|limit kompilátoru: `'number`"příliš mnoho argumentů makra; je pouze *číslo* povoleno|
 |[Závažná chyba C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#using selhalo na '*souboru*.|
-|Závažná chyba C1114|"*souboru*': WinRT nepodporuje #using spravovaného sestavení|
+|Závažná chyba C1114|"*souboru*": WinRT nepodporuje #using spravovaného sestavení|
 |[Závažná chyba C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|Volání GetProcAddress selhalo pro "*funkce*.|
 |[Závažná chyba C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|volání CryptoAPI selhalo.|
 |[Závažná chyba C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|automatické přidělování překračuje *velikost*|

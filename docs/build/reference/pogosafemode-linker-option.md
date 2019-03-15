@@ -3,12 +3,12 @@ title: / POGOSAFEMODE (spustit PGO v nouzovém režimu vlákno)
 ms.date: 03/14/2018
 f1_keywords:
 - POGOSAFEMODE
-ms.openlocfilehash: f210884d693ef0d778943580b9c5a7b2ec2ea336
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bbb328bf67d7823305a43f1d61252747cf5ea29e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544427"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821284"
 ---
 # <a name="pogosafemode-run-pgo-in-thread-safe-mode"></a>/ POGOSAFEMODE (spustit PGO v nouzovém režimu vlákno)
 
@@ -26,11 +26,11 @@ Profilově řízené optimalizace (PGO) má během fáze vytváření profilů d
 
 Ve výchozím nastavení PGO profilování pracuje v rychlém režimu. **/ POGOSAFEMODE** je vyžadováno pouze pokud budete chtít použít nouzový režim.
 
-Pokud chcete spustit profilování PGO v nouzovém režimu, je nutné použít buď **/genprofile: přesné** (upřednostňováno), nebo použít proměnnou prostředí [PogoSafeMode](environment-variables-for-profile-guided-optimizations.md) nebo přepínač linker **/POGOSAFEMODE**, v závislosti na systému. Pokud provádíte profilaci na x x64 počítače, je potřeba použít přepínač linkeru. Pokud provádíte profilaci na x x86 počítače, můžete použít přepínač linkeru nebo definovat proměnné prostředí na libovolnou hodnotu před zahájením procesu instrumentace PGO.
+Pokud chcete spustit profilování PGO v nouzovém režimu, je nutné použít buď **/genprofile: přesné** (upřednostňováno), nebo použít proměnnou prostředí [PogoSafeMode](../environment-variables-for-profile-guided-optimizations.md) nebo přepínač linker **/POGOSAFEMODE**, v závislosti na systému. Pokud provádíte profilaci na x x64 počítače, je potřeba použít přepínač linkeru. Pokud provádíte profilaci na x x86 počítače, můžete použít přepínač linkeru nebo definovat proměnné prostředí na libovolnou hodnotu před zahájením procesu instrumentace PGO.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **Linkeru** > **optimalizace** stránku vlastností.
 
@@ -48,5 +48,5 @@ Pokud chcete spustit profilování PGO v nouzovém režimu, je nutné použít b
 
 [/ GENPROFILE a /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/LTCG](ltcg-link-time-code-generation.md)<br/>
-[Optimalizace na základě profilu](../../build/reference/profile-guided-optimizations.md)<br/>
-[Proměnné prostředí pro optimalizace na základě profilu](../../build/reference/environment-variables-for-profile-guided-optimizations.md)<br/>
+[Optimalizace na základě profilu](../profile-guided-optimizations.md)<br/>
+[Proměnné prostředí pro optimalizace na základě profilu](../environment-variables-for-profile-guided-optimizations.md)<br/>

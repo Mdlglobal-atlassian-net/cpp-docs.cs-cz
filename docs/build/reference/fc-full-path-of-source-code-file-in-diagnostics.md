@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /FC compiler option [C++]
 - -FC compiler option [C++]
 ms.assetid: 1f11414e-cb42-421b-be68-9d369aab036b
-ms.openlocfilehash: 96809f09efd068b80f04a70d4356c1ceaf5f113c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 190174e1e2ac4d160140ddc54f9cc1c3a1b31709
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422478"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809025"
 ---
 # <a name="fc-full-path-of-source-code-file-in-diagnostics"></a>/FC (úplná cesta k souboru zdrojového kódu v diagnostice)
 
@@ -44,13 +44,13 @@ S **/FC**, by vypadalo podobně jako tento diagnostický text diagnostického te
 
 **/FC** je také potřeba, pokud chcete zobrazit úplnou cestu název souboru při použití &#95; &#95;souboru&#95; &#95; – makro. Zobrazit [předdefinovaná makra](../../preprocessor/predefined-macros.md) Další informace o &#95; &#95;souboru&#95;&#95;.
 
-**/FC** možnost předpokládá **/zi**. Další informace o **/zi**, naleznete v tématu [/Z7, / zi, /ZI (formát informací o ladění)](../../build/reference/z7-zi-zi-debug-information-format.md).
+**/FC** možnost předpokládá **/zi**. Další informace o **/zi**, naleznete v tématu [/Z7, / zi, /ZI (formát informací o ladění)](z7-zi-zi-debug-information-format.md).
 
 **/FC** výstupy úplné cesty v malými písmeny.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **Upřesnit** stránku vlastností.
 
@@ -62,5 +62,5 @@ S **/FC**, by vypadalo podobně jako tento diagnostický text diagnostického te
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

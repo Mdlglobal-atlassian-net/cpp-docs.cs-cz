@@ -3,12 +3,12 @@ title: Konfigurace projektu Linux CMake v sadě Visual Studio
 description: Konfigurace projektu Linux CMake v sadě Visual Studio
 ms.date: 11/01/2018
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: f2186c14fbe2eb1273fceb4a378b359564eae327
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 22de2f7a7b5374f781a032f5152610d7a97feb16
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750595"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815863"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Konfigurace projektu Linux CMake
 
@@ -22,7 +22,7 @@ Nejprve zkontrolujte, zda máte **vývoj pro Linux v C++** nainstalovaná, úloh
 
 Podpora CMake v sadě Visual Studio vyžaduje režim podporu serveru, která byla zavedena v CMake 3.8. Hodnotu typu variant CMake poskytovaný společností Microsoft, stáhněte si nejnovější předem připravených binární soubory na [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases).
 
-Toto téma předpokládá, že jste si přečetli [nástroje CMake pro Visual Studio](../ide/cmake-tools-for-visual-cpp.md). 
+Toto téma předpokládá, že jste si přečetli [nástroje CMake pro Visual Studio](../build/cmake-projects-in-visual-studio.md). 
 
 > [!NOTE]
 > Podpora CMake v sadě Visual Studio vyžaduje režim podporu serveru, která byla zavedena v CMake 3.8. Hodnotu typu variant poskytovaný společností Microsoft CMake stáhnout nejnovější předem připravených binární soubory na [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases). V aplikaci Visual Studio 2019 předem připravených binární soubory dají automaticky nasazovat (viz [stažení předem připravených binární soubory CMake](#download-prebuilt-cmake-binaries)).
@@ -67,11 +67,11 @@ K zajištění podpory IntelliSense pro vzdálených hlaviček, Visual Studio au
 
 Ladění kódu ve vzdáleném systému, nastavte zarážku, vyberte cíl CMake jako položku při spuštění v nabídce nástrojů vedle nastavení projektu a zvolte  **&#x23f5; Start** na panelu nástrojů nebo stisknete klávesu F5.
 
-Přizpůsobení vašeho programu argumenty příkazového řádku, klikněte pravým tlačítkem na spustitelný soubor **Průzkumníka řešení** a vyberte **nastavení ladění a spouštění**. Tím se otevře nebo vytvoří launch.vs.json konfigurační soubor, který obsahuje informace o programu. Pokud chcete zadat další argumenty, přidejte je `args` pole JSON. Další informace najdete v tématu [projekty otevřít složku v jazyce Visual C++](../ide/non-msbuild-projects.md) a [konfigurace CMake ladicími relacemi](../ide/configure-cmake-debugging-sessions.md).
+Přizpůsobení vašeho programu argumenty příkazového řádku, klikněte pravým tlačítkem na spustitelný soubor **Průzkumníka řešení** a vyberte **nastavení ladění a spouštění**. Tím se otevře nebo vytvoří launch.vs.json konfigurační soubor, který obsahuje informace o programu. Pokud chcete zadat další argumenty, přidejte je `args` pole JSON. Další informace najdete v tématu [projekty otevřít složku pro jazyk C++](../build/open-folder-projects-cpp.md) a [konfigurace CMake ladicími relacemi](../build/configure-cmake-debugging-sessions.md).
 
 ## <a name="configure-cmake-settings-for-linux"></a>Konfigurace nastavení CMake pro Linux
 
-V projektu CMake Linux souboru CMakeSettings.json můžete určit všechny vlastnosti, které jsou uvedeny v [nastavení přizpůsobení CMake](../ide/customize-cmake-settings.md), plus další vlastnosti, které řídí nastavení sestavení na vzdáleném počítači s Linuxem. Chcete-li změnit výchozí nastavení CMake, zvolte **CMake | Změnit nastavení CMake | Soubor CMakeLists.txt** z hlavní nabídky, nebo klikněte pravým tlačítkem na CMakeSettings.txt v **Průzkumníka řešení** a zvolte **změnit nastavení CMake**. Visual Studio vytvoří nový `CMakeSettings.json` soubor v kořenové složce projektu. Můžete otevřít soubor pomocí **nastavení CMake** editor nebo přímo upravit soubor. 
+V projektu CMake Linux souboru CMakeSettings.json můžete určit všechny vlastnosti, které jsou uvedeny v [nastavení přizpůsobení CMake](../build/customize-cmake-settings.md), plus další vlastnosti, které řídí nastavení sestavení na vzdáleném počítači s Linuxem. Chcete-li změnit výchozí nastavení CMake, zvolte **CMake | Změnit nastavení CMake | Soubor CMakeLists.txt** z hlavní nabídky, nebo klikněte pravým tlačítkem na CMakeSettings.txt v **Průzkumníka řešení** a zvolte **změnit nastavení CMake**. Visual Studio vytvoří nový `CMakeSettings.json` soubor v kořenové složce projektu. Můžete otevřít soubor pomocí **nastavení CMake** editor nebo přímo upravit soubor. 
 
 Následující příklad ukazuje, že výchozí konfigurace pro ladění Linux podle předchozí příklad kódu:
 
@@ -138,10 +138,10 @@ Pokud ve vzdáleném počítači nebyl nalezen platný CMake informačního pane
 
 ## <a name="see-also"></a>Viz také:
 
-[Práce s vlastnostmi projektu](../ide/working-with-project-properties.md)<br/>
-[CMake Tools for Visual C++](../ide/cmake-tools-for-visual-cpp.md)<br/>
+[Práce s vlastnostmi projektu](../build/working-with-project-properties.md)<br/>
+[Projekty CMake v sadě Visual Studio](../build/cmake-projects-in-visual-studio.md)<br/>
 [Připojení ke vzdálenému počítači s Linuxem](connect-to-your-remote-linux-computer.md)<br/>
-[Přizpůsobení nastavení CMake](../ide/customize-cmake-settings.md)<br/>
-[Konfigurace ladicích relací CMake](../ide/configure-cmake-debugging-sessions.md)<br/>
+[Přizpůsobení nastavení CMake](../build/customize-cmake-settings.md)<br/>
+[Konfigurace ladicích relací CMake](../build/configure-cmake-debugging-sessions.md)<br/>
 [Nasazení, spuštění a ladění projektu Linux](deploy-run-and-debug-your-linux-project.md)<br/>
-[Referenční dokumentace ke konfiguraci CMake předdefinované](../ide/cmake-predefined-configuration-reference.md)<br/>
+[Referenční dokumentace ke konfiguraci CMake předdefinované](../build/cmake-predefined-configuration-reference.md)<br/>

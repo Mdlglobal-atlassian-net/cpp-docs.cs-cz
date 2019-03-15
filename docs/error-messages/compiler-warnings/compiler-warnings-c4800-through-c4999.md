@@ -1,5 +1,5 @@
 ---
-title: Upozornění kompilátoru C4800 až C5999
+title: Compiler Warnings C4800 Through C5999
 ms.date: 10/24/2018
 f1_keywords:
 - C4806
@@ -97,15 +97,14 @@ f1_keywords:
 - C5043
 - C5044
 - C5045
-- C5046
-ms.openlocfilehash: 672aa1b0e298be3b6754b1706e721ad6798230ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70a0eee4e0a7774c1c92a44ad1e8eaa480ce84d3
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642855"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816344"
 ---
-# <a name="compiler-warnings-c4800-through-c5999"></a>Upozornění kompilátoru C4800 až C5999
+# <a name="compiler-warnings-c4800-through-c5999"></a>Compiler Warnings C4800 Through C5999
 
 Články v této části dokumentace vysvětlují podmnožinu varovné zprávy, které jsou generovány kompilátorem.
 
@@ -144,7 +143,7 @@ ms.locfileid: "50642855"
 |[Upozornění kompilátoru (úroveň 4) C4840](compiler-warning-level-4-c4840.md)|nepřenositelné použití třídy*typ*"jako argumentu variadické funkce|
 |Upozornění kompilátoru (úroveň 4) C4841|nestandardní rozšíření: v offsetof použilo složené označení člena|
 |Upozornění kompilátoru (úroveň 4) C4842|není zaručeno, že výsledek offsetof použitý pro typ pomocí vícenásobného dědění bude konzistentní napříč verzemi kompilátoru.|
-|Kompilátor varování C4843|"*type1*': Obslužná rutina výjimky odkazu na pole nebo typ funkce není dostupná, použijte '*type2*' místo toho|
+|Kompilátor varování C4843|"*type1*": Obslužná rutina výjimky odkazu na pole nebo typ funkce není dostupná, použijte '*type2*' místo toho|
 |Kompilátor varování C4844|"export module *module_name*;" je teď preferovanou syntaxí pro deklaraci rozhraní modulu|
 |[Upozornění kompilátoru (úroveň 4) C4866](c4866.md)| Kompilátor nemůže vynutit pořadí vyhodnocování zleva doprava pro volání *operator_name*|
 |[Upozornění (chyba) kompilátoru C4867](compiler-warning-c4867.md)|"*funkce*': chybí seznam argumentů volání funkce; použijte"*volání*' vytvořte ukazatel na člena|
@@ -176,7 +175,7 @@ ms.locfileid: "50642855"
 |Upozornění kompilátoru (úroveň 1) C4935|specifikátor přístupu sestavení změnit "*přístup*.|
 |Upozornění kompilátoru (úroveň 1, chyba) C4936|Tato možnost __declspec je podporovaná jenom při kompilaci s parametrem/CLR nebo/CLR: pure|
 |Upozornění kompilátoru (úroveň 4) C4937|"*text1*"a"*text2*jsou nejde rozlišit jako argumenty, které mají*směrnice*.|
-|Upozornění kompilátoru (úroveň 4) C4938|"*var*': plovoucího bodu redukční proměnná může způsobit nekonzistentní výsledky v/FP: strict nebo #pragma fenv_access|
+|Upozornění kompilátoru (úroveň 4) C4938|"*var*": Plovoucího bodu redukční proměnná může způsobit nekonzistentní výsledky v/FP: strict nebo #pragma fenv_access|
 |Kompilátor varování C4939|#pragma vtordisp je zastaralá a v příští verzi Visual C++ se odebere|
 |Upozornění kompilátoru (úroveň 1) C4944|"*symbol*': nejde naimportovat symbol z:"*assembly1*': jako*symbol*"již existuje v aktuálním rozsahu.|
 |[Upozornění kompilátoru (úroveň 1) C4945](compiler-warning-level-1-c4945.md)|"*symbol*': nejde naimportovat symbol z:"*assembly1*': jako*symbol*"již byl importován z jiného sestavení"*assembly2* '|
@@ -196,7 +195,7 @@ ms.locfileid: "50642855"
 |Upozornění kompilátoru (úroveň 1, chyba) C4959|nejde definovat nespravovaný typ "*typ*" v/CLR: safe vzhledem k tomu, že přístup k jeho členům vrací neověřitelný kód|
 |Upozornění kompilátoru (úroveň 4) C4960|"*funkce*" je moc velké, aby se dalo Profilovat.|
 |Upozornění kompilátoru (úroveň 1) C4961|Žádná data profilu se nesloučila do .pgd souboru, optimalizace na základě profilu zakázáno|
-|Upozornění kompilátoru (úroveň 4) C4962|"*funkce*': profilováním řízené optimalizace zakázány, protože optimalizace způsobily nekonzistenci dat profilu|
+|Upozornění kompilátoru (úroveň 4) C4962|"*funkce*": Optimalizace na základě profilu zakázáno, protože optimalizace způsobily nekonzistenci dat profilu|
 |Upozornění kompilátoru (úroveň 1) C4963|"*popis*': nenašla se žádná data profilu; jiné parametry kompilátoru v instrumentovaném buildu|
 |[Upozornění kompilátoru (úroveň 1) C4964](compiler-warning-level-1-c4964.md)|Nebyly zadány žádné možnosti optimalizace; informace o profilu se nebudou shromažďovat.|
 |[Upozornění kompilátoru (úroveň 1) C4965](compiler-warning-level-1-c4965.md)|implicitní pole celé číslo 0; Použijte nullptr nebo explicitní přetypování.|
@@ -226,7 +225,7 @@ ms.locfileid: "50642855"
 |Upozornění kompilátoru (úroveň 4) C5025|"*typ*': Přesuňte operátor přiřazení je implicitně definovaný jako odstraněný|
 |Upozornění kompilátoru (úroveň 1 a 4) C5026|"*typ*': přesunout konstruktor byl implicitně definovaný jako odstraněný|
 |Upozornění kompilátoru (úroveň 1 a 4) C5027|"*typ*': Přesuňte operátor přiřazení je implicitně definovaný jako odstraněný|
-|Upozornění kompilátoru (úroveň 1) C5028|"*název*': zarovnání zadané před deklarací (*číslo*) není zadané v definici|
+|Upozornění kompilátoru (úroveň 1) C5028|"*název*": Zarovnání zadané před deklarací (*číslo*) není zadané v definici|
 |Upozornění kompilátoru (úroveň 4) C5029|používá se nestandardní rozšíření: atributy zarovnání v C++ použít pro proměnné, datové členy a pouze typy značek|
 |Upozornění kompilátoru (úroveň 3) C5030|atribut '*atribut*' nebyla rozpoznána|
 |Upozornění kompilátoru (úroveň 4) C5031|#pragma warning(pop): pravděpodobně o neshodu, stav automaticky otevíraného upozornění vložil do jiného souboru|
@@ -244,4 +243,4 @@ ms.locfileid: "50642855"
 |Upozornění kompilátoru (úroveň 2) C5043|"*specifikace*': specifikace výjimky se neshoduje s předchozí deklarací.|
 |Upozornění kompilátoru (úroveň 4) C5044|Argument pro možnost příkazového řádku *možnost* odkazuje na cestu "*cesta*", která neexistuje|
 |[Kompilátor varování C5045](c5045.md)|Kompilátor vloží zmírnění hrozby Spectre pro zatížení paměti, pokud přepínač/qspectre zadané|
-|[Upozornění kompilátoru (úroveň 2) C5046](c5046.md)|"*funkce*': typ zahrnující s vnitřním propojením není definovaný Symbol|
+|[Upozornění kompilátoru (úroveň 2) C5046](c5046.md)|"*funkce*": Symbol, zahrnující typ s vnitřním propojením nedefinovaná.|

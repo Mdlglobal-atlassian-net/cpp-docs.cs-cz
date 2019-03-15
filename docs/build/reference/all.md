@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -ALL dumpbin option
 - ALL dumpbin option
 ms.assetid: aa7eb74a-33ba-4d77-8620-3d7ea8b19952
-ms.openlocfilehash: 4289f256886abad87266e1ad82a6b6f4c6efb0a0
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4b02a13be70963d8c2dcf934cf2c750daf8052a9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412754"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818086"
 ---
 # <a name="all"></a>/ALL
 
@@ -23,10 +23,10 @@ ms.locfileid: "57412754"
 
 ## <a name="remarks"></a>Poznámky
 
-Tato možnost zobrazí všechny dostupné informace, s výjimkou zpětný překlad kódu. Použití [/DISASM](../../build/reference/disasm.md) zobrazit zpětný překlad. Můžete použít [/RAWDATA](../../build/reference/rawdata.md): žádný/vše do vynechat Nezpracovaná binární podrobnosti o souboru.
+Tato možnost zobrazí všechny dostupné informace, s výjimkou zpětný překlad kódu. Použití [/DISASM](disasm.md) zobrazit zpětný překlad. Můžete použít [/RAWDATA](rawdata.md): žádný/vše do vynechat Nezpracovaná binární podrobnosti o souboru.
 
-Pouze [/HEADERS](../../build/reference/headers.md) – možnost nástroje DUMPBIN je k dispozici pro použití se soubory vytvořenými pomocí [/GL](../../build/reference/gl-whole-program-optimization.md) – možnost kompilátoru.
+Pouze [/HEADERS](headers.md) – možnost nástroje DUMPBIN je k dispozici pro použití se soubory vytvořenými pomocí [/GL](gl-whole-program-optimization.md) – možnost kompilátoru.
 
 ## <a name="see-also"></a>Viz také:
 
-[DUMPBIN – možnosti](../../build/reference/dumpbin-options.md)
+[DUMPBIN – možnosti](dumpbin-options.md)

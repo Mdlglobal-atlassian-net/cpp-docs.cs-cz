@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, versions
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 3d3c6e25594eb3bb01ad3fc995a24cdc723d5726
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 3e5b173741700ed6cccf95b479eb5693a62ed02e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751892"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810481"
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Nástroje Visual C++ a funkcí v edicích sady Visual Studio
 
@@ -176,5 +176,5 @@ Následující tabulky popisují funkce Visual C++, které jsou k dispozici v sa
 
 [Instalace sady Visual Studio](/visualstudio/install/install-visual-studio)<br/>
 [Co je nového v sadě Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
-[Typy projektů Visual C++](../ide/visual-cpp-project-types.md)<br/>
+[Typy projektů Visual C++](../build/reference/visual-cpp-project-types.md)<br/>
 [SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686)<br/>

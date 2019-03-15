@@ -2,12 +2,12 @@
 title: Konfigurace projektu C++ Linux v sadě Visual Studio
 ms.date: 11/12/2018
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 0d0825a3aca8ca03759d7f7b42db90ce9700c10b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 84b9242ad5af79ed48d716fb5a35db56428e9a98
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745185"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808362"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurace projektu Linux
 
@@ -89,8 +89,8 @@ Ke správě vaší mezipaměti hlaviček, přejděte na **nástroje > Možnosti,
 
 ## <a name="see-also"></a>Viz také:
 
-[Práce s vlastnostmi projektu](../ide/working-with-project-properties.md)<br/>
-[C++ obecné vlastnosti (Linux C++)](prop-pages/general-linux.md)<br/>
-[Adresáře VC ++ (Linux C++)](prop-pages/directories-linux.md)<br/>
-[Kopírovat projekt vlastností zdrojů (Linux C++)](prop-pages/copy-sources-project.md)<br/>
-[Vytvořit událost vlastnosti (Linux C++)](prop-pages/build-events-linux.md)
+[Nastavení kompilátoru a vlastnosti sestavení](../build/working-with-project-properties.md)<br/>
+[C++ obecné vlastnosti (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
+[Adresáře VC ++ (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
+[Kopírovat projekt vlastností zdrojů (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
+[Vytvořit událost vlastnosti (Linux C++)](../linux/prop-pages/build-events-linux.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - side-by-side applications [C++]
 - builds [C++], side-by-side assemblies
 ms.assetid: 9465904e-76f7-48bd-bb3f-c55d8f1699b6
-ms.openlocfilehash: 5d487e8a124d2edd7ce5a658d4965f1567756d5a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: e3c39595008d92b390b03a56bdcf5fc8990b2103
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694150"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807553"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>Sestavení izolovaných aplikací C/C++ a souběžných sestavení
 
@@ -26,19 +26,19 @@ Tato část popisuje, jak můžete svou aplikaci C/C++ jako izolované aplikace 
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Koncept izolovaných aplikací a souběžných sestavení](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)
+[Koncept izolovaných aplikací a souběžných sestavení](concepts-of-isolated-applications-and-side-by-side-assemblies.md)
 
-[Sestavení izolovaných aplikací C/C++](../build/building-c-cpp-isolated-applications.md)
+[Sestavení izolovaných aplikací C/C++](building-c-cpp-isolated-applications.md)
 
-[Sestavení souběžných sestavení C/C++](../build/building-c-cpp-side-by-side-assemblies.md)
+[Sestavení souběžných sestavení C/C++](building-c-cpp-side-by-side-assemblies.md)
 
-[Postupy: Sestavení součástí modelu COM bez registrace](../build/how-to-build-registration-free-com-components.md)
+[Postupy: Sestavení součástí modelu COM bez registrace](how-to-build-registration-free-com-components.md)
 
-[Postupy: Sestavení izolovaných aplikací pro zpracování součástí modelu COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)
+[Postupy: Sestavení izolovaných aplikací pro zpracování součástí modelu COM](how-to-build-isolated-applications-to-consume-com-components.md)
 
-[Základní informace o generování manifestu pro programy C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+[Základní informace o generování manifestu pro programy C/C++](understanding-manifest-generation-for-c-cpp-programs.md)
 
-[Řešení potíží s izolovanými aplikacemi C/C++ a souběžnými sestaveními](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+[Řešení potíží s izolovanými aplikacemi C/C++ a souběžnými sestaveními](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
 
 ## <a name="related-sections"></a>Související oddíly
 

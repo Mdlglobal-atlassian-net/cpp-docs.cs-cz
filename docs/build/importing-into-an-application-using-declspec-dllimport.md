@@ -1,5 +1,5 @@
 ---
-title: Import do aplikace s použitím deklarace __declspec(dllimport)
+title: Import do aplikace s použitím deklarace __declspec(dllimport)
 ms.date: 11/04/2016
 f1_keywords:
 - __declspec
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 - importing DLLs [C++], __declspec(dllimport)
 ms.assetid: edb4da4e-f83a-44cf-a668-9239d49dbe42
-ms.openlocfilehash: ef01c2905dea215a1a52333ae5611ec58c5f5af4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 30e0f6517f2d749962c5cf49dddb1662c9ccf129
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419215"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810221"
 ---
-# <a name="importing-into-an-application-using-declspecdllimport"></a>Import do aplikace s použitím deklarace __declspec(dllimport)
+# <a name="import-into-an-application-using-declspecdllimport"></a>Import do aplikace s použitím deklarace __declspec(dllimport)
 
 Program, který používá veřejné symboly definované knihovnou DLL se říká, že je importovat. Když vytvoříte soubory hlaviček pro aplikace, které používají vaše DLL knihovny k sestavení, použijte **__declspec(dllimport)** deklarace veřejných symbolů. Klíčové slovo **__declspec(dllimport)** funguje, jestli exportujete pomocí souborů .def nebo se **__declspec(dllexport)** – klíčové slovo.
 
@@ -45,14 +45,14 @@ class CLASS_DECLSPEC CExampleA : public CObject
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
-- [Inicializace knihovny DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Inicializace knihovny DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
 
-- [Import a export vložených funkcí](../build/importing-and-exporting-inline-functions.md)
+- [Import a export vložených funkcí](importing-and-exporting-inline-functions.md)
 
-- [Vzájemné importy](../build/mutual-imports.md)
+- [Vzájemné importy](mutual-imports.md)
 
 ## <a name="see-also"></a>Viz také:
 
-[Import do aplikace](../build/importing-into-an-application.md)
+[Import do aplikace](importing-into-an-application.md)

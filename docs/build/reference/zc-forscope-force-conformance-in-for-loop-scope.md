@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: 3031f02d-3b14-4ad0-869e-22b0110c3aed
-ms.openlocfilehash: b800bdcc36c82dabe13418244782e82737ad9171
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f98667d3a771994d1b4e54b429f42cb566c102c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502021"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810248"
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope (Vynutit dodržování standardu pro obor cyklu for)
 
-Používaný k implementaci standardního chování jazyka C++ pro [pro](../../cpp/for-statement-cpp.md) cykly s rozšířeními společnosti Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).
+Používaný k implementaci standardního chování jazyka C++ pro [pro](../../cpp/for-statement-cpp.md) cykly s rozšířeními společnosti Microsoft ([/Ze](za-ze-disable-language-extensions.md)).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,7 +28,7 @@ Používaný k implementaci standardního chování jazyka C++ pro [pro](../../c
 
 ## <a name="remarks"></a>Poznámky
 
-Standardní chování je umožnit **pro** smyčky inicializátor dostanou mimo rozsah po **pro** smyčky. V části **/Zc:forScope-** a [/Ze](../../build/reference/za-ze-disable-language-extensions.md), **pro** smyčky inicializátor zůstává v oboru až do ukončení místní rozsah.
+Standardní chování je umožnit **pro** smyčky inicializátor dostanou mimo rozsah po **pro** smyčky. V části **/Zc:forScope-** a [/Ze](za-ze-disable-language-extensions.md), **pro** smyčky inicializátor zůstává v oboru až do ukončení místní rozsah.
 
 **/Zc: forscope** možnost zapnutá ve výchozím nastavení. **/ Zc: forscope** při nemá vliv [/ permissive-](permissive-standards-conformance.md) je zadána možnost.
 
@@ -55,13 +55,13 @@ Pokud používáte **/Zc:forScope-**, upozornění C4288 (ve výchozím nastaven
 
 Můžete změnit chování za běhu **/Zc: forscope** pomocí [odpovídat](../../preprocessor/conform.md) direktivy pragma.
 
-Pokud používáte **/Zc:forScope-** v projektu, který má existující soubor .pch, vygeneruje se upozornění, **/Zc:forScope-** se ignoruje, a pokračuje v kompilaci pomocí existující soubory .pch. Pokud chcete vygenerovat nový soubor .pch, použijte [/Yc (Vytvořit předkompilovaný hlavičkový soubor)](../../build/reference/yc-create-precompiled-header-file.md).
+Pokud používáte **/Zc:forScope-** v projektu, který má existující soubor .pch, vygeneruje se upozornění, **/Zc:forScope-** se ignoruje, a pokračuje v kompilaci pomocí existující soubory .pch. Pokud chcete vygenerovat nový soubor .pch, použijte [/Yc (Vytvořit předkompilovaný hlavičkový soubor)](yc-create-precompiled-header-file.md).
 
 Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete v tématu [nestandardní chování](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **jazyk** stránku vlastností.
 
@@ -73,5 +73,5 @@ Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete
 
 ## <a name="see-also"></a>Viz také:
 
-[/Zc (shoda)](../../build/reference/zc-conformance.md)<br/>
-[/Za, /Ze (zakázání jazykových rozšíření)](../../build/reference/za-ze-disable-language-extensions.md)<br/>
+[/Zc (shoda)](zc-conformance.md)<br/>
+[/Za, /Ze (zakázání jazykových rozšíření)](za-ze-disable-language-extensions.md)<br/>

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - symbols, add to symbol table
 - -INCLUDE linker option
 ms.assetid: 4a039677-360a-480f-bd0b-448e239b449c
-ms.openlocfilehash: 389bd16829c2466b02cb879c8bc8d43c9efa6fb4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1f7a443e32ed20550e3017c7e6ce70f4adf5137d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421217"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810975"
 ---
 # <a name="include-force-symbol-references"></a>/INCLUDE (Vynutit odkazy na symboly)
 
@@ -38,11 +38,11 @@ Pokud chcete zadat více symbolů, zadejte čárku (,), středník (;) nebo meze
 
 Linker řeší `symbol` přidáním objekt, který obsahuje definici symbolu do programu. Tato funkce je užitečná pro zahrnutí knihovny objekt, který by jinak propojit do programu.
 
-Zadání symbolu pomocí této možnosti přepsání odebrání tohoto symbolu pomocí [OPT](../../build/reference/opt-optimizations.md).
+Zadání symbolu pomocí této možnosti přepsání odebrání tohoto symbolu pomocí [OPT](opt-optimizations.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **Linkeru** složky.
 
@@ -56,5 +56,5 @@ Zadání symbolu pomocí této možnosti přepsání odebrání tohoto symbolu p
 
 ## <a name="see-also"></a>Viz také:
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)
+[Odkaz na MSVC linkeru](linking.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)

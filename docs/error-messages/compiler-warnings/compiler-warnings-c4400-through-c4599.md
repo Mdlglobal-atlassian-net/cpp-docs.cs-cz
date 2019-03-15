@@ -1,5 +1,5 @@
 ---
-title: Upozornění kompilátoru C4400 až C4599
+title: Compiler Warnings C4400 Through C4599
 ms.date: 05/30/2018
 f1_keywords:
 - C4413
@@ -30,7 +30,6 @@ f1_keywords:
 - C4455
 - C4456
 - C4457
-- C4458
 - C4459
 - C4472
 - C4474
@@ -99,7 +98,6 @@ helpviewer_keywords:
 - C4455
 - C4456
 - C4457
-- C4458
 - C4459
 - C4472
 - C4474
@@ -140,14 +138,14 @@ helpviewer_keywords:
 - C4594
 - C4595
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
-ms.openlocfilehash: 14195271fa0e5e399b801fd36803db4731e690f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 990560e2c05f66a010382f736735c19c17d4dc28
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491296"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816617"
 ---
-# <a name="compiler-warnings-c4400-through-c4599"></a>Upozornění kompilátoru C4400 až C4599
+# <a name="compiler-warnings-c4400-through-c4599"></a>Compiler Warnings C4400 Through C4599
 
 Články v této části dokumentace vysvětlují podmnožinu varovné zprávy, které jsou generovány kompilátorem.
 
@@ -186,10 +184,10 @@ ms.locfileid: "50491296"
 |Upozornění kompilátoru (úroveň 1) C4426|příznaky optimalizace se po včetně záhlaví, může být #pragma optimize().|
 |Upozornění kompilátoru (úroveň 1) C4427|"*operátor*': přetečení v dělení konstantou; nedefinované chování|
 |[Upozornění kompilátoru (úroveň 4) C4429](../../error-messages/compiler-warnings/compiler-warning-level-4-c4429.md)|je to možné neúplný nebo nesprávně vytvořený universal-character-name|
-|[Upozornění (chyba) kompilátoru C4430](../../error-messages/compiler-warnings/compiler-warning-c4430.md)|chybějící specifikátor typu: předpokládá se int Poznámka: C++ nepodporuje typ default int.|
-|[Upozornění kompilátoru (úroveň 4) C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)|chybějící specifikátor typu: předpokládá se int Poznámka: C již nepodporuje výchozí int.|
+|[Upozornění (chyba) kompilátoru C4430](../../error-messages/compiler-warnings/compiler-warning-c4430.md)|chybějící specifikátor typu: předpokládá se int Poznámka: Jazyk C++ nepodporuje typ default int.|
+|[Upozornění kompilátoru (úroveň 4) C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)|chybějící specifikátor typu: předpokládá se int Poznámka: C už nepodporuje typ default int.|
 |[Upozornění kompilátoru (úroveň 4) C4434](../../error-messages/compiler-warnings/compiler-warning-level-4-c4434.md)|Statický konstruktor musí mít přístupnost private; Změna na soukromý přístup|
-|[Upozornění kompilátoru (úroveň 4) C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|"*derived_class*': rozložení objektu pod: / vd2 se změní z důvodu virtuální base '*$base_class*.|
+|[Upozornění kompilátoru (úroveň 4) C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|"*derived_class*": Rozložení objektu pod: / vd2 se změní z důvodu virtuální base '*$base_class*.|
 |[Upozornění kompilátoru (úroveň 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)|dynamické\_přetypování z virtuální base '*$base_class*"do"*derived_class*"v konstruktoru nebo destruktoru by mohlo selhat s částečně vytvořeným objektem.|
 |[Upozornění kompilátoru (úroveň 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)|dynamické\_přetypování z virtuální base '*$base_class*"do"*derived_class*' může v některých kontextech selhat|
 |Kompilátor varování C4438|"*funkce*': nejde volat bezpečně / await: clrcompat režimu. Pokud se*funkce*"volání do modulu CLR může způsobit poškození hlavičky CLR|
@@ -205,9 +203,9 @@ ms.locfileid: "50491296"
 |Kompilátor varování C4448|"*typ*1 nemá v metadatech zadané výchozí rozhraní. Vybere: "*type2*", která může při běhu selhat.|
 |Kompilátor varování C4449|"*typ*" nezapečetěný typ musí být označené jako [WebHostHidden].|
 |Kompilátor varování C4450|"*type1*"musí být označené jako [WebHostHidden]' protože se odvozuje od"*type2*.|
-|Upozornění kompilátoru (úroveň 4) C4451|'classname1::member': použití třídy ref class 'classname2::member"uvnitř tohoto kontextu může vést k neplatnému zařazování objektu napříč kontexty|
+|Upozornění kompilátoru (úroveň 4) C4451|"classname1::member": Použití třídy ref class 'classname2::member"uvnitř tohoto kontextu může vést k neplatnému zařazování objektu napříč kontexty|
 |Upozornění kompilátoru (úroveň 1) C4452|"*identifikátor*': typ public nemůže být v globálním oboru. Musí být v oboru názvů, který je podřízený názvu výstupního souboru .winmd.|
-|Upozornění kompilátoru (úroveň 1) C4453|"*typ*': Typ [WebHostHidden] by neměl používat na publikované ploše typu public, který není [WebHostHidden].|
+|Upozornění kompilátoru (úroveň 1) C4453|"*typ*": [WebHostHidden] by se neměl používat na publikované ploše typu public, který není [WebHostHidden].|
 |Upozornění kompilátoru (úroveň 1) C4454|"*funkce*" je přetížené o větší než počet vstupních parametrů bez nastavení [defaultoverload] zadaná. Výběr "*deklarace*' jako výchozí přetížení|
 |Upozornění kompilátoru (úroveň 1) C4455|' operator *– operátor*': identifikátory přípon literálů, které nezačínají podtržítkem jsou vyhrazené.|
 |[Upozornění kompilátoru (úroveň 4) C4456](compiler-warning-level-4-c4456.md)|deklarace "*identifikátor*' skryje předchozí místní deklaraci|
@@ -242,7 +240,7 @@ ms.locfileid: "50491296"
 |Upozornění kompilátoru (úroveň 1) C4491|"*název*': má neplatný formát verze IDL|
 |Upozornění kompilátoru (úroveň 1, chyba) C4492|"*function1*': odpovídá metodě base ref class '*function2*", ale není označené jako override.|
 |Upozornění kompilátoru (úroveň 3, chyby) C4493|odstranit výraz nemá žádný účinek, jako je destruktor "*typ*' nemá přístupnost public.|
-|Upozornění kompilátoru (úroveň 1) C4494|"*funkce*': __declspec(Allocator) se ignoruje protože návratový typ funkce není ukazatel nebo odkaz|
+|Upozornění kompilátoru (úroveň 1) C4494|"*funkce*": __Declspec(Allocator) se ignoruje protože návratový typ funkce není ukazatel nebo odkaz|
 |Kompilátor varování C4495|používá se nestandardní rozšíření: __super: nahraďte explicitním názvem základní třídy|
 |Kompilátor varování C4496|používá se nestandardní rozšíření 'for each' používá: nahraďte rozsahové pro příkaz|
 |Kompilátor varování C4497|používá se nestandardní rozšíření 'sealed': nahraďte hodnotou final.|
@@ -273,7 +271,7 @@ ms.locfileid: "50491296"
 |[Upozornění kompilátoru (úroveň 1) C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md)|'příkaz continue': skok z bloku ' __finally/finally' má během zpracování ukončení nedefinované chování|
 |[Upozornění kompilátoru (úroveň 1) C4533](../../error-messages/compiler-warnings/compiler-warning-level-1-c4533.md)|Inicializace "*proměnnou*"je přeskočených"*popisek goto*.|
 |[Upozornění kompilátoru (úroveň 3) C4534](../../error-messages/compiler-warnings/compiler-warning-level-3-c4534.md)|"*konstruktor*"nesmí být výchozí konstruktor pro – třída/struktura"*identifikátor*' z důvodu výchozího argumentu|
-|[Upozornění kompilátoru (úroveň 3) C4535](../../error-messages/compiler-warnings/compiler-warning-level-3-c4535.md)|Calling _set_se_translator() vyžaduje/EHa.|
+|[Upozornění kompilátoru (úroveň 3) C4535](../../error-messages/compiler-warnings/compiler-warning-level-3-c4535.md)|calling _set_se_translator() requires /EHa|
 |[Upozornění kompilátoru (úroveň 4) C4536](../../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md)|"*typename*': název typu překračuje limit metadat '*character_limit*" znaky|
 |[Upozornění kompilátoru (úroveň 1) C4537](../../error-messages/compiler-warnings/compiler-warning-level-1-c4537.md)|"*objekt*": "." u-uživatelem Definovaný typ|
 |[Upozornění kompilátoru (úroveň 3) C4538](../../error-messages/compiler-warnings/compiler-warning-level-3-c4538.md)|"*typ*': kvalifikátory const/volatile pro tento typ nejsou podporované|
@@ -306,7 +304,7 @@ ms.locfileid: "50491296"
 |Upozornění kompilátoru (úroveň 3) C4569|"*funkce*': podpisu explicitního přepsání neodpovídají žádné členy|
 |[Upozornění kompilátoru (úroveň 3) C4570](../../error-messages/compiler-warnings/compiler-warning-level-3-c4570.md)|"*typ*': není explicitně deklarované jako abstraktní, ale má abstraktní funkce|
 |[Upozornění kompilátoru (úroveň 4) C4571](../../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md)|Informační: sémantika catch(...) se od verze Visual C++ 7.1; změnila strukturované výjimky (SEH) už se nezachycují.|
-|[Upozornění kompilátoru (úroveň 1) C4572](../../error-messages/compiler-warnings/compiler-warning-level-1-c4572.md)|Atribut [ParamArray] je zastaralá pod parametrem/CLR, použijte tři tečky. místo toho|
+|[Upozornění kompilátoru (úroveň 1) C4572](../../error-messages/compiler-warnings/compiler-warning-level-1-c4572.md)|Atribut [ParamArray] je zastaralá pod parametrem/CLR, použijte '...' Místo toho|
 |Upozornění kompilátoru (úroveň 1) C4573|použití "*funkci lambda*' vyžaduje, aby kompilátor zachytil 'this' ale aktuální výchozí režim zachycování to neumožňuje|
 |Upozornění kompilátoru (úroveň 4) C4574|"*Identifikátor*'je definován jako ' 0': chtěli jste použít '#if identifier'?|
 |Upozornění kompilátoru (úroveň 1) C4575|"__vectorcall" kompatibilní s "/ clr' možnost: převod na: __stdcall.|
@@ -318,8 +316,8 @@ ms.locfileid: "50491296"
 |Upozornění kompilátoru (úroveň 4) C4582|"*typ*': konstruktor se nevolá implicitně|
 |Upozornění kompilátoru (úroveň 4) C4583|"*typ*': destructor se nevolá implicitně|
 |[Upozornění kompilátoru (úroveň 1) C4584](../../error-messages/compiler-warnings/compiler-warning-level-1-c4584.md)|"*class1*': základní třídy*class2*'je již třídou base'*class3*.|
-|Upozornění kompilátoru (úroveň 1, chyba) C4585|"*třídy*': A WinRT musí být buď zapečetěná třída public ref class nebo odvozovat od existující nezapečetěné třídy|
-|Upozornění kompilátoru (úroveň 1, chyba) C4586|"*typ*': veřejný typ nemůže být deklarovaný v nejvyšší úrovni obor názvů s názvem"Windows"|
+|Upozornění kompilátoru (úroveň 1, chyba) C4585|"*třídy*": WinRT "public ref class' musí být buď zapečetěné nebo odvozovat od existující nezapečetěné třídy|
+|Upozornění kompilátoru (úroveň 1, chyba) C4586|"*typ*": Veřejný typ nemůže být deklarovaný v nejvyšší úrovni obor názvů s názvem "Windows"|
 |Upozornění kompilátoru (úroveň 1) C4587|"*anonymous_structure*': Změna chování: konstruktor se nevolá implicitně už|
 |Upozornění kompilátoru (úroveň 1) C4588|"*anonymous_structure*': Změna chování: destruktor je už nevolá implicitně|
 |Upozornění kompilátoru (úroveň 1) C4591|'constexpr' se limit hloubky volání *číslo* překročena (/ constexpr: Depth\<číslo >)|

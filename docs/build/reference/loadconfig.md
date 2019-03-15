@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -LOADCONFIG dumpbin option
 - /LOADCONFIG dumpbin option
 ms.assetid: 24667afe-9bee-4f6e-ae72-f534c0050428
-ms.openlocfilehash: c34132f1f9cb5de9f28e83c401fe53145068975d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 689fd64e3d13cd609f709a3e4d3e9035ca711274
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426330"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813848"
 ---
 # <a name="loadconfig"></a>/LOADCONFIG
 
@@ -25,8 +25,8 @@ ms.locfileid: "57426330"
 
 Tato možnost vypíše struktuře IMAGE_LOAD_CONFIG_DIRECTORY volitelné strukturu, která se budou používat zavaděčem Windows NT a definované v WINNT. H.
 
-Pouze [/HEADERS](../../build/reference/headers.md) – možnost nástroje DUMPBIN je k dispozici pro použití se soubory vytvořenými pomocí [/GL](../../build/reference/gl-whole-program-optimization.md) – možnost kompilátoru.
+Pouze [/HEADERS](headers.md) – možnost nástroje DUMPBIN je k dispozici pro použití se soubory vytvořenými pomocí [/GL](gl-whole-program-optimization.md) – možnost kompilátoru.
 
 ## <a name="see-also"></a>Viz také:
 
-[DUMPBIN – možnosti](../../build/reference/dumpbin-options.md)
+[DUMPBIN – možnosti](dumpbin-options.md)

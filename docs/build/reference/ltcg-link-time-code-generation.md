@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -LTCG linker option
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
-ms.openlocfilehash: 68c12cc7666da489870da1cacacc5053aeca5b51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40fb591952180735de3a2c226a3953a303c7d90f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523211"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810312"
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (vytváření kódu v době propojování)
 
@@ -26,7 +26,7 @@ Použití **parametru/LTCG** provádět optimalizaci celého programu, nebo k vy
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/ LTCG**[**:**{**PŘÍRŮSTKOVÉ**|**NOSTATUS**|**STAV** | **OFF**}]<br/>
+> **/LTCG**[**:**{**INCREMENTAL**|**NOSTATUS**|**STATUS**|**OFF**}]<br/>
 
 Tyto možnosti jsou zastaralé od verze Visual Studio 2015:
 
@@ -40,61 +40,61 @@ Tyto možnosti jsou zastaralé od verze Visual Studio 2015:
 **NOSTATUS** &AMP;#124; **STAV**<br/>
 (Volitelné) Určuje, zda linker zobrazí indikátor průběhu, který ukazuje, jaké je procento odkazu je dokončena. Ve výchozím nastavení nezobrazí tato informace o stavu.
 
-**VYPNOUT**<br/>
+**OFF**<br/>
 (Volitelné) Zakáže generování kódu při propojování. Toto chování je stejné jako při **parametru/LTCG** není zadán v příkazovém řádku.
 
 **PGINSTRUMENT**<br/>
-(Volitelné) Tato možnost je zastaralé od verze Visual Studio 2015. Místo toho použijte **parametru/LTCG** a [/genprofile nebo /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) ke generování instrumentované sestavení pro optimalizace na základě profilu. Data, která se shromažďují ze spuštění instrumentované slouží k vytvoření optimalizované bitové kopie. Další informace najdete v tématu [optimalizace na základě profilu](profile-guided-optimizations.md). Je zkratka pro tuto možnost **/LTCG:PGI**.
+(Volitelné) Tato možnost je zastaralé od verze Visual Studio 2015. Místo toho použijte **parametru/LTCG** a [/genprofile nebo /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) ke generování instrumentované sestavení pro optimalizace na základě profilu. Data, která se shromažďují ze spuštění instrumentované slouží k vytvoření optimalizované bitové kopie. Další informace najdete v tématu [Profile-Guided optimalizace](../profile-guided-optimizations.md). Je zkratka pro tuto možnost **/LTCG:PGI**.
 
 **PGOPTIMIZE**<br/>
-(Volitelné) Tato možnost je zastaralé od verze Visual Studio 2015. Místo toho použijte **parametru/LTCG** a [/useprofile](useprofile.md) k vytvoření optimalizované bitové kopie. Další informace najdete v tématu [optimalizace na základě profilu](../../build/reference/profile-guided-optimizations.md). Je zkratka pro tuto možnost **/LTCG:PGO**.
+(Volitelné) Tato možnost je zastaralé od verze Visual Studio 2015. Místo toho použijte **parametru/LTCG** a [/useprofile](useprofile.md) k vytvoření optimalizované bitové kopie. Další informace najdete v tématu [Profile-Guided optimalizace](../profile-guided-optimizations.md). Je zkratka pro tuto možnost **/LTCG:PGO**.
 
 **PGUPDATE**<br/>
-(Volitelné) Tato možnost je zastaralé od verze Visual Studio 2015. Místo toho použijte **parametru/LTCG** a **/useprofile** optimalizovanou bitovou kopii znovu sestavit. Další informace najdete v tématu [optimalizace na základě profilu](../../build/reference/profile-guided-optimizations.md). Je zkratka pro tuto možnost **/LTCG:PGU**.
+(Volitelné) Tato možnost je zastaralé od verze Visual Studio 2015. Místo toho použijte **parametru/LTCG** a **/useprofile** optimalizovanou bitovou kopii znovu sestavit. Další informace najdete v tématu [Profile-Guided optimalizace](../profile-guided-optimizations.md). Je zkratka pro tuto možnost **/LTCG:PGU**.
 
 ## <a name="remarks"></a>Poznámky
 
-**Parametru/LTCG** přikazuje linkeru, volání kompilátoru a provádět optimalizaci celého programu. Můžete také provést profilově řízené optimalizace. Další informace najdete v tématu [optimalizace na základě profilu](../../build/reference/profile-guided-optimizations.md).
+**Parametru/LTCG** přikazuje linkeru, volání kompilátoru a provádět optimalizaci celého programu. Můžete také provést profilově řízené optimalizace. Další informace najdete v tématu [Profile-Guided optimalizace](../profile-guided-optimizations.md).
 
 S následujícími výjimkami, nelze přidat možnosti linkeru pro PGO kombinací **parametru/LTCG** a **/useprofile** , který není zadané v předchozím PGO inicializace kombinace  **/ LTCG** a **/genprofile** možnosti:
 
-- [/ BASE](../../build/reference/base-base-address.md)
+- [/ BASE](base-base-address.md)
 
-- [/ FIXED](../../build/reference/fixed-fixed-base-address.md)
+- [/ FIXED](fixed-fixed-base-address.md)
 
 - **/LTCG**
 
-- [/MAP](../../build/reference/map-generate-mapfile.md)
+- [/MAP](map-generate-mapfile.md)
 
-- [/ MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md)
+- [/MAPINFO](mapinfo-include-information-in-mapfile.md)
 
-- [/NOLOGO](../../build/reference/nologo-suppress-startup-banner-linker.md)
+- [/NOLOGO](nologo-suppress-startup-banner-linker.md)
 
-- [/ OUT](../../build/reference/out-output-file-name.md)
+- [/ OUT](out-output-file-name.md)
 
-- [/PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)
+- [/PGD](pgd-specify-database-for-profile-guided-optimizations.md)
 
-- [/PDB](../../build/reference/pdb-use-program-database.md)
+- [/PDB](pdb-use-program-database.md)
 
-- [/ PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)
+- [/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)
 
-- [/STUB](../../build/reference/stub-ms-dos-stub-file-name.md)
+- [/STUB](stub-ms-dos-stub-file-name.md)
 
-- [/ VERBOSE](../../build/reference/verbose-print-progress-messages.md)
+- [/ VERBOSE](verbose-print-progress-messages.md)
 
 Všechny možnosti linkeru, které jsou zadány společně s **parametru/LTCG** a **/genprofile** není potřeba zadat při sestavení s použitím možnosti, jak inicializovat PGO **parametru/LTCG** a **/Useprofile**; jsou implicitní.
 
 Zbývající část tohoto článku popisuje **parametru/LTCG** z hlediska generování kódu při propojování.
 
-**/ LTCG** je vyjádřena pomocí [/GL](../../build/reference/gl-whole-program-optimization.md).
+**/ LTCG** je vyjádřena pomocí [/GL](gl-whole-program-optimization.md).
 
-Linker vyvolá generování kódu při propojování, je-li předán modulu, který byl zkompilován pomocí **/GL** nebo modul MSIL (viz [soubory .netmodule jako vstup Linkeru](../../build/reference/netmodule-files-as-linker-input.md)). Pokud explicitně neurčíte **parametru/LTCG** při předání **/GL** nebo moduly jazyka MSIL do linkeru, linker nakonec to zjistí a restartuje propojení s použitím **parametru/LTCG**. Explicitně zadat **parametru/LTCG** při předání **/GL** a výkon sestavení jazyka MSIL moduly linkeru pro nejrychlejší možné.
+Linker vyvolá generování kódu při propojování, je-li předán modulu, který byl zkompilován pomocí **/GL** nebo modul MSIL (viz [soubory .netmodule jako vstup Linkeru](netmodule-files-as-linker-input.md)). Pokud explicitně neurčíte **parametru/LTCG** při předání **/GL** nebo moduly jazyka MSIL do linkeru, linker nakonec to zjistí a restartuje propojení s použitím **parametru/LTCG**. Explicitně zadat **parametru/LTCG** při předání **/GL** a výkon sestavení jazyka MSIL moduly linkeru pro nejrychlejší možné.
 
 Pro ještě rychlejší výkon použijte **parametru/LTCG: PŘÍRŮSTKOVÉ**. Tato možnost přikazuje linkeru, aby pouze znovu optimalizovat sadu souborů, které jsou ovlivněny změnu zdrojového souboru, namísto celého projektu. To může výrazně zkrátit čas odkaz vyžaduje. Nejedná se o stejné možnosti jako přírůstkové propojení.
 
-**/ LTCG** není platná pro použití s [/INCREMENTAL](../../build/reference/incremental-link-incrementally.md).
+**/ LTCG** není platná pro použití s [/INCREMENTAL](incremental-link-incrementally.md).
 
-Když **parametru/LTCG** slouží k propojení modulech zkompilovaných pomocí [/og](../../build/reference/og-global-optimizations.md), [/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md), [/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md), nebo [/Ox](../../build/reference/ox-full-optimization.md), jsou prováděny následující optimalizace:
+Když **parametru/LTCG** slouží k propojení modulech zkompilovaných pomocí [/og](og-global-optimizations.md), [/O1](o1-o2-minimize-size-maximize-speed.md), [/O2](o1-o2-minimize-size-maximize-speed.md), nebo [/Ox](ox-full-optimization.md), jsou prováděny následující optimalizace:
 
 - Vkládání napříč moduly
 
@@ -130,7 +130,7 @@ Pokud funkce je volána pomocí ukazatele na funkci nebo funkce je volána z mim
 
 ### <a name="ltcg-and-msil-modules"></a>/ LTCG a jazyk MSIL moduly
 
-Moduly, které jsou kompilovány pomocí [/GL](../../build/reference/gl-whole-program-optimization.md) a [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) lze použít jako vstup do linkeru při **parametru/LTCG** určena.
+Moduly, které jsou kompilovány pomocí [/GL](gl-whole-program-optimization.md) a [/CLR](clr-common-language-runtime-compilation.md) lze použít jako vstup do linkeru při **parametru/LTCG** určena.
 
 - **/ LTCG** může přijmout nativní objekt soubory a soubory smíšené nativního/spravovaného objektu (zkompilován s použitím **/CLR**). **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
 
@@ -138,7 +138,7 @@ Moduly, které jsou kompilovány pomocí [/GL](../../build/reference/gl-whole-pr
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete projekt **stránky vlastností** dialogové okno. Zobrazit [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete projekt **stránky vlastností** dialogové okno. Zobrazit [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **Obecné** stránku vlastností.
 
@@ -152,5 +152,5 @@ Můžete také použít **parametru/LTCG** konkrétní sestavení výběrem **se
 
 ## <a name="see-also"></a>Viz také:
 
-- [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)
-- [Možnosti linkeru](../../build/reference/linker-options.md)
+- [Odkaz na MSVC linkeru](linking.md)
+- [Možnosti Linkeru MSVC](linker-options.md)

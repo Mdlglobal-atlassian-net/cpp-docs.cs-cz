@@ -7,34 +7,34 @@ helpviewer_keywords:
 - Q compiler option [C++]
 - -Q compiler option [C++]
 - /Q compiler option [C++]
-ms.openlocfilehash: a6dcbd256fa3510955884d3adba4855b23cdbfab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bbb63b4f437f8aefd5c84c1c1c4bd20bdb965cb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514250"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819906"
 ---
 # <a name="q-options-low-level-operations"></a>/Q – možnosti (operace nízké úrovně)
 
 Můžete použít **/Q** – možnosti kompilátoru k provedení následujících operací nízké úrovně kompilátoru:
 
-- [/ Qfast_transcendentals (vynucení rychlých transcendentních objektů)](../../build/reference/qfast-transcendentals-force-fast-transcendentals.md): vytvoří rychlé transcendentals.
+- [/ Qfast_transcendentals (vynucení rychlých transcendentních objektů)](qfast-transcendentals-force-fast-transcendentals.md): Vytvoří rychlé transcendentals.
 
-- [/ QIfist (potlačit _ftol)](../../build/reference/qifist-suppress-ftol.md): potlačí `_ftol` při převodu z typu s plovoucí desetinnou čárkou na celočíselný typ je povinné (jenom x86).
+- [/ QIfist (potlačit _ftol)](qifist-suppress-ftol.md): Potlačí `_ftol` při převodu z typu s plovoucí desetinnou čárkou na celočíselný typ je povinné (jenom x86).
 
-- [/ Qimprecise_fwaits (odebrání příkazů fwaits z bloků Try)](../../build/reference/qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): Odebere `fwait` příkazy uvnitř `try` bloky.
+- [/ Qimprecise_fwaits (odebrání příkazů fwaits z bloků Try)](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): Odebere `fwait` příkazy uvnitř `try` bloky.
 
-- [/ Qpar (Automatická paralelizace)](../../build/reference/qpar-auto-parallelizer.md): Povolí automatickou paralelizaci smyček, které jsou označeny [#pragma loop()](../../preprocessor/loop.md) směrnice.
+- [/ Qpar (Automatická paralelizace)](qpar-auto-parallelizer.md): Povolí automatickou paralelizaci smyček, které jsou označeny [#pragma loop()](../../preprocessor/loop.md) směrnice.
 
-- [/ Qpar-report (úroveň sestav automatický Paralelizér)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md): Povolí protokolování úrovní pro automatickou paralelizaci.
+- [/ Qpar-report (úroveň sestav automatický Paralelizér)](qpar-report-auto-parallelizer-reporting-level.md): Povolí protokolování úrovní pro automatickou paralelizaci.
 
-- [/ Qsafe_fp_loads](../../build/reference/qsafe-fp-loads.md): registr s plovoucí desetinnou čárkou načte a zaregistruje pro přesuny mezi pamětí a MMX potlačuje optimalizace.
+- [/ Qsafe_fp_loads](qsafe-fp-loads.md): Potlačuje optimalizace pro registr s plovoucí desetinnou čárkou zatížením a pro přesuny mezi pamětí a MMX registrů.
 
-- [/ Qspectre](../../build/reference/qspectre.md): vygeneruje instrukce ke zmírnění určité chyby zabezpečení Spectre.
+- [/ Qspectre](qspectre.md): Vygeneruje instrukce ke zmírnění určité chyby zabezpečení Spectre.
 
-- [/ Qvec-report (úroveň sestav automatickou vektorizací)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md): Povolí protokolování úrovní pro automatickou vektorizaci.
+- [/ Qvec-report (úroveň sestav automatickou vektorizací)](qvec-report-auto-vectorizer-reporting-level.md): Povolí protokolování úrovní pro automatickou vektorizaci.
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

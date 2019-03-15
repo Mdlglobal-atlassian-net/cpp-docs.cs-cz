@@ -10,12 +10,12 @@ helpviewer_keywords:
 - LoadLibrary method
 - explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-ms.openlocfilehash: 7c0b63d80a8b4b03b55d6e50af6c08a8de0937de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96b8c0ce1116dbb08260573f25f941ca54169127
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596541"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822415"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary a AfxLoadLibrary
 
@@ -30,22 +30,22 @@ Pro aplikace MFC, které načítají rozšiřující knihovny MFC DLL, doporuču
 Pokud Windows nemůže načíst knihovnu DLL, proces se může pokusit obnovit z chyby. Například proces by mohl oznámit uživateli chybu a požádat uživatele o určení jiné cesty k souboru DLL.
 
 > [!IMPORTANT]
-> Nezapomeňte zadat úplnou cestu všech knihoven DLL. Aktuální adresář je nejprve prohledán, když jsou soubory načteny. Pokud nemáte kvalifikovanou cestu k souboru, může být načten soubor, který není určený. Dalším způsobem, jak tomu je použít [/DEPENDENTLOADFLAG](../build/reference/dependentloadflag.md) – možnost linkeru.
+> Nezapomeňte zadat úplnou cestu všech knihoven DLL. Aktuální adresář je nejprve prohledán, když jsou soubory načteny. Pokud nemáte kvalifikovanou cestu k souboru, může být načten soubor, který není určený. Dalším způsobem, jak tomu je použít [/DEPENDENTLOADFLAG](reference/dependentloadflag.md) – možnost linkeru.
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
-- [Jak implicitní propojení s knihovnou DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)
+- [Propojení spustitelného souboru s knihovnou DLL](linking-an-executable-to-a-dll.md#linking-implicitly)
 
-- [Určit, kterou propojovací metodu použít](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [Propojení spustitelného souboru s knihovnou DLL](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
 
 - [Pořadí hledání knihoven DLL](/windows/desktop/Dlls/dynamic-link-library-search-order)
 
-- [FreeLibrary a AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md)
+- [FreeLibrary a AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)
 
-- [GetProcAddress](../build/getprocaddress.md)
+- [GetProcAddress](getprocaddress.md)
 
 ## <a name="see-also"></a>Viz také:
 
-- [Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)
+- [Knihovny DLL v jazyce Visual C++](dlls-in-visual-cpp.md)

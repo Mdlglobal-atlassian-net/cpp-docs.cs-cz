@@ -2,16 +2,16 @@
 title: Výběr formátu vstupních souborů .netmodule
 ms.date: 11/04/2016
 ms.assetid: 4653d1bd-300f-4083-86f5-d1a06f44e61c
-ms.openlocfilehash: ed492e47c09c05fc8ce2af3e19822cc5dde47b63
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d48bfe84210143db333d1e6b081acf1aa66980cf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420047"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807322"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>Výběr formátu vstupních souborů .netmodule
 
-Soubor .obj jazyka MSIL (zkompilovaná [/CLR](../../build/reference/clr-common-language-runtime-compilation.md)) může také sloužit jako soubor .netmodule.  soubory .obj obsahovat metadata a nativních symbolů.  modulů .NET obsahují pouze metadata.
+Soubor .obj jazyka MSIL (zkompilovaná [/CLR](clr-common-language-runtime-compilation.md)) může také sloužit jako soubor .netmodule.  soubory .obj obsahovat metadata a nativních symbolů.  modulů .NET obsahují pouze metadata.
 
 Můžete předat soubor .obj jazyka MSIL do jiných kompilátoru Visual Studio prostřednictvím možnost kompilátoru/addmodule (ale mějte na paměti, že soubor .obj stane součástí výsledného sestavení a musí být součástí sestavení).  Možnost kompilátoru/addmodule mít například Visual C# a Visual Basic.
 
@@ -22,11 +22,11 @@ soubory .obj, včetně jejich přidružených .h souborů, které odkazují pros
 
 Jiné kompilátory sady Visual Studio může využívat pouze spravované typy z modulu.
 
-Použijte následující postup k určení, jestli je potřeba použít .netmodule nebo .obj souboru jako modul vstup do linkeru jazyka Visual C++:
+Použijte následující postup k určení, jestli je potřeba použít .netmodule nebo soubor .obj jako vstup modulu MSVC linkeru:
 
 - Pokud vytváříte s kompilátorem Visual Studio než Visual C++, .netmodule vytvářet a používat .netmodule jako vstup do linkeru.
 
-- Používáte-li vytvořit moduly a pokud moduly se použije k vytvoření něco jiného než knihovny kompilátoru jazyka Visual C++, použijte soubory .obj jako vstup linkeru; modulu produkované kompilátorem Nepoužívejte soubor .netmodule jako vstup.
+- Pokud používáte a kompilátorem MSVC vytvářet moduly a moduly se použije k vytvoření něco jiného než knihovnu,-li používat soubory .obj jako vstup linkeru; modulu produkované kompilátorem Nepoužívejte soubor .netmodule jako vstup.
 
 - Pokud moduly se použije k vytvoření knihovny nativní (není spravované), použijte soubory .obj jako vstup modulu do linkeru a vygenerovat soubor knihovny LIB.
 
@@ -36,4 +36,4 @@ Použijte následující postup k určení, jestli je potřeba použít .netmodu
 
 ## <a name="see-also"></a>Viz také:
 
-[Soubory .netmodule jako vstup linkeru](../../build/reference/netmodule-files-as-linker-input.md)
+[Soubory .netmodule jako vstup linkeru](netmodule-files-as-linker-input.md)

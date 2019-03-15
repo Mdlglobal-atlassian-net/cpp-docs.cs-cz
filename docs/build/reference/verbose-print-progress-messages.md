@@ -13,12 +13,12 @@ helpviewer_keywords:
 - dependencies [C++], dependency information in linker output
 - VERBOSE linker option
 ms.assetid: 9c347d98-4c37-4724-a39e-0983934693ab
-ms.openlocfilehash: 290d2e5c5c5a87042ee805cdaed90cce4418a389
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7aed1e17034b40ffdad4da4136fc5a64361b3d77
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423748"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809142"
 ---
 # <a name="verbose-print-progress-messages"></a>/VERBOSE (tisk zpráv průběhu)
 
@@ -33,16 +33,16 @@ Linker odesílá informace o průběhu relace propojení do **výstup** okna. Na
 |Možnost|Popis|
 |------------|-----------------|
 |/ VERBOSE|Zobrazí podrobnosti o procesu propojení.|
-|/ VERBOSE: ICF|Zobrazení informací o činnosti linkeru, která je výsledkem použití [/OPT:ICF](../../build/reference/opt-optimizations.md).|
+|/ VERBOSE: ICF|Zobrazení informací o činnosti linkeru, která je výsledkem použití [/OPT:ICF](opt-optimizations.md).|
 |/ VERBOSE: INCR|Zobrazí informace o zpracování dílčích propojení.|
 |/ VERBOSE: LIB|Zobrazuje zprávy o průběhu označující jenom knihovny prohledávat.<br /><br /> Zobrazené informace obsahuje proces hledání knihovny a uvádí názvy jednotlivých knihoven a objektů (s úplnou cestou), symbolu překládaného z knihovny a seznam objektů, které odkazují na symbol.|
-|/ VERBOSE: REF|Zobrazí informace o činnosti linkeru, která je výsledkem použití [OPT](../../build/reference/opt-optimizations.md).|
-|/ VERBOSE: SAFESEH|Zobrazí informace o modulech, které nejsou kompatibilní s bezpečného při zpracování výjimek [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md) není zadán.|
+|/ VERBOSE: REF|Zobrazí informace o činnosti linkeru, která je výsledkem použití [OPT](opt-optimizations.md).|
+|/ VERBOSE: SAFESEH|Zobrazí informace o modulech, které nejsou kompatibilní s bezpečného při zpracování výjimek [/SAFESEH](safeseh-image-has-safe-exception-handlers.md) není zadán.|
 |/ VERBOSE: UNUSEDLIBS|Zobrazí informace o všech souborech knihoven, které nejsou používány při vytvoření image.|
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Rozbalte **Linkeru** složky.
 
@@ -56,5 +56,5 @@ Linker odesílá informace o průběhu relace propojení do **výstup** okna. Na
 
 ## <a name="see-also"></a>Viz také:
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)
+[Odkaz na MSVC linkeru](linking.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)

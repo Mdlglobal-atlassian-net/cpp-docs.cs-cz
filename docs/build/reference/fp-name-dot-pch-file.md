@@ -15,12 +15,12 @@ helpviewer_keywords:
 - precompiled header files, naming
 - /Fp compiler option [C++]
 ms.assetid: 0fcd9cbd-e09f-44d3-9715-b41efb5d0be2
-ms.openlocfilehash: 8384aa1ee27fee0bc42e023b78b948d9acd384e8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 95506e17dff47e51cb7a3d83b629880f63422d26
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414093"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820387"
 ---
 # <a name="fp-name-pch-file"></a>/Fp (název souboru .Pch)
 
@@ -32,7 +32,7 @@ Poskytuje název cesty pro předkompilované hlavičky místo použití výchoz�
 
 ## <a name="remarks"></a>Poznámky
 
-Tuto možnost použijte spolu s [/Yc (Vytvořit předkompilovaný hlavičkový soubor)](../../build/reference/yc-create-precompiled-header-file.md) nebo [/Yu (Použít předkompilovaný hlavičkový soubor)](../../build/reference/yu-use-precompiled-header-file.md) k zadání názvu cesty pro předkompilované hlavičky místo použití výchozí název cesty. Můžete také použít **/FP** s **/Yc** zadat použití předkompilovaného hlavičkového souboru, který se liší od **/Yc**<em>filename</em> argument a Základní název zdrojového souboru.
+Tuto možnost použijte spolu s [/Yc (Vytvořit předkompilovaný hlavičkový soubor)](yc-create-precompiled-header-file.md) nebo [/Yu (Použít předkompilovaný hlavičkový soubor)](yu-use-precompiled-header-file.md) k zadání názvu cesty pro předkompilované hlavičky místo použití výchozí název cesty. Můžete také použít **/FP** s **/Yc** zadat použití předkompilovaného hlavičkového souboru, který se liší od **/Yc**<em>filename</em> argument a Základní název zdrojového souboru.
 
 Pokud nezadáte rozšíření jako součást názvu cesty, předpokládá se příponou .pch. Pokud chcete zadat adresář bez názvu souboru, výchozí název souboru je VC*x*0.pch, kde *x* je hlavní verze Visual C++ používá.
 
@@ -40,7 +40,7 @@ Můžete také použít **/FP** spolu s možností **/Yu**.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **C/C++** složky.
 
@@ -70,7 +70,7 @@ CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti výstupního souboru (/F)](../../build/reference/output-file-f-options.md)<br/>
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
-[Určení názvu cesty](../../build/reference/specifying-the-pathname.md)
+[Možnosti výstupního souboru (/F)](output-file-f-options.md)<br/>
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
+[Určení názvu cesty](specifying-the-pathname.md)

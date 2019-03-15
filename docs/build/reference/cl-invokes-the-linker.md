@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], compiling without linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
-ms.openlocfilehash: 4e65801fcddef739f3fabe88b2b940602fde965a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f8d8c5e1b0ca4d2a35a57683fea2e6de12747860
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412728"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821479"
 ---
 # <a name="cl-invokes-the-linker"></a>CL vyvolává linker
 
@@ -28,7 +28,7 @@ CL vyvolává linker automaticky po kompilaci, pokud se nepoužije možnost /c. 
 |/Zg|Generovat prototypy funkcí|
 |/Zs|Zkontrolovat syntaxi|
 
-Další informace o propojení naleznete v tématu [možnosti Linkeru](../../build/reference/linker-options.md).
+Další informace o propojení naleznete v tématu [možnosti Linkeru MSVC](linker-options.md).
 
 ## <a name="example"></a>Příklad
 
@@ -46,7 +46,7 @@ K vytvoření tohoto programu, proveďte kompilaci s následujícím příkazov�
 CL MAIN.c MOD1.C MOD2.C MYGRAPH.lib
 ```
 
-CL nejprve zkompiluje zdrojové soubory jazyka C a vytvoří soubory objektů MAIN.obj MOD1.obj a MOD2.obj. Kompilátor umístí do každého souboru .obj název standardní knihovny. Další podrobnosti najdete v tématu [použití knihovny Run-Time](../../build/reference/md-mt-ld-use-run-time-library.md).
+CL nejprve zkompiluje zdrojové soubory jazyka C a vytvoří soubory objektů MAIN.obj MOD1.obj a MOD2.obj. Kompilátor umístí do každého souboru .obj název standardní knihovny. Další podrobnosti najdete v tématu [použití knihovny Run-Time](md-mt-ld-use-run-time-library.md).
 
 CL názvy souborů .obj, spolu s názvem MYGRAPH.lib, předá linkeru. Linker překladu externích odkazů následujícím způsobem:
 
@@ -58,5 +58,5 @@ CL názvy souborů .obj, spolu s názvem MYGRAPH.lib, předá linkeru. Linker p�
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Nastavení možností kompilátoru](compiler-command-line-syntax.md)
