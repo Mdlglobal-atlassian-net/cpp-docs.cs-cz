@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: 5fda93951918357de5441022f1cc6ea81a522ef6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b13313d57226719086cb73584543488f842057c1
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415133"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820491"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
@@ -65,10 +65,10 @@ Volitelný `major` a `minor` hodnoty určují minimální požadovanou verzi zad
 
 - Hodnoty `major` a `minor` musí být v rozsahu 0 až 65535.
 
-Volba subsystému ovlivňuje výchozí počáteční adresu programu. Další informace najdete v tématu [/Entry (Symbol vstupního bodu)](../../build/reference/entry-entry-point-symbol.md), linker/Entry:*funkce* možnost.
+Volba subsystému ovlivňuje výchozí počáteční adresu programu. Další informace najdete v tématu [/Entry (Symbol vstupního bodu)](entry-entry-point-symbol.md), linker/Entry:*funkce* možnost.
 
-Další informace, včetně minimální a výchozí hodnoty pro číslo hlavní verze a podverze pro každý subsystém naleznete v tématu [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) – možnost linkeru.
+Další informace, včetně minimální a výchozí hodnoty pro číslo hlavní verze a podverze pro každý subsystém naleznete v tématu [/Subsystem](subsystem-specify-subsystem.md) – možnost linkeru.
 
 ## <a name="see-also"></a>Viz také:
 
-[EDITBIN – možnosti](../../build/reference/editbin-options.md)
+[EDITBIN – možnosti](editbin-options.md)

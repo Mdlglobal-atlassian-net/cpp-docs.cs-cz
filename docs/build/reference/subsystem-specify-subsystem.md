@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -SUBSYSTEM linker option
 - subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
-ms.openlocfilehash: 0b6a8a841cefcd519cbeeae9f3355d72e1bbf286
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ecda3443d0422af4d5ceec9282d86590c53af2f5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417005"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821258"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (Zadat subsystém)
 
@@ -42,7 +42,7 @@ Aplikace znakového režimu systému Win32. Operační systém poskytuje konzolu
 Subsystémy Extensible Firmware Interface. V tématu Specifikace rozhraní EFI pro další informace. Příklady naleznete v tématu na webu společnosti Intel. Minimální verze a výchozí verze je 1.0.
 
 **NATIVNÍ**<br/>
-Ovladače režimu jádra Windows NT. Tato možnost je obvykle vyhrazena pro součásti systému Windows. Pokud [/DRIVER:WDM](../../build/reference/driver-windows-nt-kernel-mode-driver.md) není zadán, výchozí hodnota je NATIVNÍ.
+Ovladače režimu jádra Windows NT. Tato možnost je obvykle vyhrazena pro součásti systému Windows. Pokud [/DRIVER:WDM](driver-windows-nt-kernel-mode-driver.md) není zadán, výchozí hodnota je NATIVNÍ.
 
 **POSIX**<br/>
 Aplikace, která běží v subsystému POSIX v systému Windows NT.
@@ -73,7 +73,7 @@ Volitelné minimální a výchozí *hlavní* a *menší* čísla verzí pro subs
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte složku Linkeru.
 
@@ -87,5 +87,5 @@ Volitelné minimální a výchozí *hlavní* a *menší* čísla verzí pro subs
 
 ## <a name="see-also"></a>Viz také:
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)
+[Odkaz na MSVC linkeru](linking.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)

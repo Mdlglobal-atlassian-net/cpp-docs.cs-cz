@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _penter function
 - -Gh compiler option [C++]
 ms.assetid: 1510a082-8a0e-486e-a309-6add814b494f
-ms.openlocfilehash: 9a2b662ac8cbada8893a8799e35f1e51250baf62
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bf7734a7b81c9550c060d43c2eabf5cb05332407
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416524"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820530"
 ---
 # <a name="gh-enable-penter-hook-function"></a>/Gh (povolení funkce háku _penter)
 
@@ -40,7 +40,7 @@ Tato deklarace není k dispozici pro projekty 64-bit.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **C/C++** složky.
 
@@ -100,5 +100,5 @@ In a function!
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

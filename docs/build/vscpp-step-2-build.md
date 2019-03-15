@@ -6,12 +6,12 @@ ms.date: 12/12/2017
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
-ms.openlocfilehash: 09780d5823190eb4cb3b4ad13bb60e33808e4987
-ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
+ms.openlocfilehash: 59813a553a9034503d8bf432400db31e6e3d9478
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977729"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813542"
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Sestavení a spuštění projektu aplikace konzoly C++
 
@@ -19,23 +19,23 @@ Když máte vytvořený projekt konzolové aplikace jazyka C++ a zadali kódu, s
 
 ## <a name="prerequisites"></a>Požadavky
 
-- Sada Visual Studio s vývoj desktopových aplikací pomocí úlohy pro C++ nainstalovaný a spuštěný ve vašem počítači. Pokud ještě není nainstalovaný, postupujte podle kroků v [podpora instalace jazyka C++ v sadě Visual Studio](../build/vscpp-step-0-installation.md).
+- Sada Visual Studio s vývoj desktopových aplikací pomocí úlohy pro C++ nainstalovaný a spuštěný ve vašem počítači. Pokud ještě není nainstalovaný, postupujte podle kroků v [podpora instalace jazyka C++ v sadě Visual Studio](vscpp-step-0-installation.md).
 
-- Vytvoření "Hello, World!" projekt a zadejte jeho zdrojový kód. Pokud jste to ještě neudělali, postupujte podle kroků v [vytvoření projektu aplikace konzoly C++](../build/vscpp-step-1-create.md).
+- Vytvoření "Hello, World!" projekt a zadejte jeho zdrojový kód. Pokud jste to ještě neudělali, postupujte podle kroků v [vytvoření projektu aplikace konzoly C++](vscpp-step-1-create.md).
 
 Pokud aplikace Visual Studio vypadá to, jste připraveni k sestavení a spuštění aplikace:
 
-   ![Průvodce je připraven vytvořit nový projekt](../build/media/vscpp-ready-to-build.png "Průvodce je připraven vytvořit nový projekt")
+   ![Průvodce je připraven vytvořit nový projekt](media/vscpp-ready-to-build.png "Průvodce je připraven vytvořit nový projekt")
 
 ## <a name="build-and-run-your-code-in-visual-studio"></a>Sestavení a spuštění kódu v sadě Visual Studio
 
 1. Chcete-li projekt sestavit, zvolte **sestavit řešení** z **sestavení** nabídky. **Výstup** okno zobrazuje výsledky procesu sestavení.
 
-   ![Sestavte projekt](../build/media/vscpp-build-solution.gif "sestavení projektu")
+   ![Sestavte projekt](media/vscpp-build-solution.gif "sestavení projektu")
 
 1. Chcete-li spustit kód, na panelu nabídek, zvolte **ladění**, **spustit bez ladění**.
 
-   ![Spustit projekt](../build/media/vscpp-start-without-debugging.gif "spustit projekt")
+   ![Spustit projekt](media/vscpp-start-without-debugging.gif "spustit projekt")
 
    Okno konzoly otevře a spustí vaši aplikaci. Když spustíte aplikaci konzoly v sadě Visual Studio, spustí váš kód a pak vypíše "stisknutím libovolné klávesy, abyste mohli pokračovat. . ." získáte možnost zobrazit výstup.
 
@@ -55,7 +55,7 @@ Za normálních okolností spuštění aplikace konzoly příkazového řádku, 
 
 1. V okně příkazového řádku klikněte pravým tlačítkem a vložte cestu do vaší aplikace do příkazového řádku. Stiskněte klávesu Enter pro spuštění vaší aplikace.
 
-   ![Spuštění aplikace příkazového řádku](../build/media/vscpp-run-in-cmd.gif "spuštění aplikace příkazového řádku")
+   ![Spuštění aplikace příkazového řádku](media/vscpp-run-in-cmd.gif "spuštění aplikace příkazového řádku")
 
 Blahopřejeme, právě jste vytvořili a spustíte aplikaci konzoly v sadě Visual Studio.
 

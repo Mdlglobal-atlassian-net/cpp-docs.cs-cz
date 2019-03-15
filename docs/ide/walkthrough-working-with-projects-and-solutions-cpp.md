@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Práce s projekty a řešeními (C++)'
+title: 'Návod: Práce s projekty a řešeními (C++)'
 ms.date: 09/14/2018
 helpviewer_keywords:
 - solutions [C++]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: 968e4981a28d646b75335ee380635fd8f8e863e3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9408938b670d8130305f2e1c1258fc6fcb9875bb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519228"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820062"
 ---
-# <a name="walkthrough-working-with-projects-and-solutions-c"></a>Návod: Práce s projekty a řešeními (C++)
+# <a name="walkthrough-working-with-projects-and-solutions-c"></a>Návod: Práce s projekty a řešeními (C++)
 
 Toto téma shrnuje postup, jak vytvořit projekt jazyka C++ v sadě Visual Studio, přidat kód a poté projekt sestavit a spustit. V tomto návodu používáme jako příklad projektu program, který sleduje, kolik hráčů hraje různé karetní hry.
 
@@ -22,7 +22,7 @@ V sadě Visual Studio je práce organizována do projektů a řešení. Řešen�
 
 ## <a name="before-you-start"></a>Než začnete
 
-K dokončení tohoto návodu, třeba Visual Studio 2017 verze 15.3 nebo novější. Pokud potřebujete kopii, zde je krátké průvodce: [podpora instalace jazyka C++ v sadě Visual Studio](../build/vscpp-step-0-installation.md). Pokud jste to ještě neudělali, postupujte podle dalších kroků po instalaci prostřednictvím kurz "Hello, World", abyste měli jistotu, že je správně nainstalovaný Visual C++ a všechny funguje.
+K dokončení tohoto návodu, třeba Visual Studio 2017 verze 15.3 nebo novější. Pokud potřebujete kopii, zde je krátké průvodce: [Instalace podpory jazyka C++ v sadě Visual Studio](../build/vscpp-step-0-installation.md). Pokud jste to ještě neudělali, postupujte podle dalších kroků po instalaci prostřednictvím kurz "Hello, World", abyste měli jistotu, že je správně nainstalovaný Visual C++ a všechny funguje.
 
 To pomáhá porozumět základům jazyka C++ a vědět, co kompilátoru, linkeru a ladicí program se používají pro. Kurz předpokládá také, že jste obeznámeni s Windows a použití nabídek, dialogová okna,
 
@@ -83,11 +83,13 @@ Tato část návodu ukazuje, jak přidat třídu do projektu. Při přidání t�
 
       Upravte konstruktor pro přijímat jeden parametr typu `int`s názvem *hráči*.
 
-      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]-->`Cardgame(int players);`
+      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]-->
+      `Cardgame(int players);`
 
    - Za výchozí destruktor přidejte vloženou deklaraci `static int` členskou funkci s názvem *GetParticipants* , která nepřijímá žádné parametry a vrátí `totalParticipants` hodnotu.
 
-      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]-->`static int GetParticipants() { return totalParticipants; }`
+      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]-->
+      `static int GetParticipants() { return totalParticipants; }`
 
    Soubor Cardgame.h měl vypadat kód uvedený níže, po změnách by:
 
@@ -215,10 +217,10 @@ Blahopřejeme, úspěšně jste vytvořili řešení a projekt aplikace. Další
 
 ## <a name="next-steps"></a>Další kroky
 
-**Předchozí:** [pomocí sady Visual Studio IDE pro C++ Desktop Development](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)<br/>
-**Další krok:** [návod: sestavení projektu (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
+**Předchozí:** [Použití prostředí IDE sady Visual Studio pro vývoj aplikací klasické pracovní plochy v jazyce C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)<br/>
+**Další:** [Návod: Sestavení projektu (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
-[Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)<br/>
+[Projekty a sestavení systémy](../build/projects-and-build-systems-cpp.md)<br/>

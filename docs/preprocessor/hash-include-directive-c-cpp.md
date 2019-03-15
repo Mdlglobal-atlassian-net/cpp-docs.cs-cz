@@ -8,12 +8,12 @@ helpviewer_keywords:
 - '#include directive'
 - include directive (#include)
 ms.assetid: 17067dc0-8db1-4f2d-b43e-ec12ecf83238
-ms.openlocfilehash: da68f71d2a3830cdd86870d8ef072c3fb04933db
-ms.sourcegitcommit: 45835842604602a011813d0cd70abc5df91b89ed
+ms.openlocfilehash: 67a44574a5a72a7b7addc0ed3d7b51cd3eb5b984
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750402"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821385"
 ---
 # <a name="include-directive-cc"></a>#include – direktiva (C++)
 
@@ -49,7 +49,7 @@ Zahrnuté soubory mohou být "vnořené"; To znamená **#include** – direktiva
 
 Při vnoření souborů a jsou při kompilaci na příkazovém řádku, hledání začne s adresářem nadřazeného souboru a pak pokračuje přes adresáře všech souborů výše nadřazených. Hledání tedy začíná relativně vzhledem k adresáři obsahujícímu zdroj, který se právě zpracovává. Pokud soubor není nalezen, hledání se přesune do adresáře, které jsou určeny [/I (Další adresáře souborů k zahrnutí)](../build/reference/i-additional-include-directories.md) – možnost kompilátoru. Nakonec jsou prohledány adresáře určené proměnnou prostředí INCLUDE.
 
-Z vývojového prostředí sady Visual Studio je proměnná prostředí INCLUDE ignorována. Informace o tom, jak nastavit adresáře, které se budou hledat vkládané soubory – to platí také pro proměnné prostředí LIB – viz [VC ++ Directories Property Page](../ide/vcpp-directories-property-page.md).
+Z vývojového prostředí sady Visual Studio je proměnná prostředí INCLUDE ignorována. Informace o tom, jak nastavit adresáře, které se budou hledat vkládané soubory – to platí také pro proměnné prostředí LIB – viz [VC ++ Directories Property Page](../build/reference/vcpp-directories-property-page.md).
 
 Tento příklad ukazuje začlenění souboru pomocí ostrých závorek:
 
@@ -69,7 +69,7 @@ V tomto příkladu přidá obsah souboru určeného DEFS. H do zdrojového progr
 
 Vnoření vložených souborů může pokračovat až do 10 úrovně. Když ve vnořeném **#include** je zpracována, bude preprocesor nadále vkládat vnořené soubory do původního zdrojového souboru.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Pro nalezení zahrnutelných zdrojových souborů, že preprocesor nejprve prohledá adresáře, které jsou určeny **/I** – možnost kompilátoru. Pokud **/I** možnost není k dispozici nebo se nezdaří, preprocesor použije proměnnou prostředí INCLUDE k nalezení všech souborů include v lomených závorkách. Proměnná prostředí INCLUDE a **/I** – možnost kompilátoru může obsahovat několik cest oddělených středníky (**;**). Pokud více než jeden adresář zobrazí jako součást **/I** možnost nebo v rámci proměnná prostředí INCLUDE, preprocesor je hledá v pořadí, v jakém jsou uvedeny.
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: c571bf104fd7e8f6a287c3dd35c444d904b4b7e8
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 616efc0980c6ddadfee078dbe7a382372c5636ec
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894091"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818164"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (zadání chování plovoucí desetinné čárky)
 
@@ -51,7 +51,7 @@ V části **/FP: strict**, kompilátor generuje kód, který umožňuje program 
 
 #### <a name="fast"></a>Rychlé
 
-**Fast** možnost umožňuje kompilátoru změnit pořadí, kombinovat nebo zjednodušují operace s plovoucí desetinnou čárkou k optimalizaci plovoucí desetinné čárky kód rychlost a místa. Kompilátor může vynechat zaokrouhlení přiřazovací příkazy, zaokrouhlovat nebo volání funkce. Může změnit pořadí operací nebo provádět algebraické transformace, například pomocí asociativních a distributivních zákony, i v případě, že takové transformace za následek viditelně různé chování se zaokrouhlováním. Z důvodu tyto rozšířené optimalizace výsledek některé výpočtů s plovoucí desetinnou čárkou mohou lišit od těch vytvořené pomocí jiných **/FP** možnosti. Zvláštní hodnoty (NaN, + nekonečno, - nekonečno,-0.0) nemusí být rozšířena nebo chovat přesně podle standardu IEEE 754. V části mohou být generovány s plovoucí desetinnou čárkou staženiny **Fast**. Kompilátor je stále vázané základní architektuře v rámci **Fast**, a další optimalizace může být k dispozici prostřednictvím použití [/arch](../../build/reference/arch-minimum-cpu-architecture.md) možnost.
+**Fast** možnost umožňuje kompilátoru změnit pořadí, kombinovat nebo zjednodušují operace s plovoucí desetinnou čárkou k optimalizaci plovoucí desetinné čárky kód rychlost a místa. Kompilátor může vynechat zaokrouhlení přiřazovací příkazy, zaokrouhlovat nebo volání funkce. Může změnit pořadí operací nebo provádět algebraické transformace, například pomocí asociativních a distributivních zákony, i v případě, že takové transformace za následek viditelně různé chování se zaokrouhlováním. Z důvodu tyto rozšířené optimalizace výsledek některé výpočtů s plovoucí desetinnou čárkou mohou lišit od těch vytvořené pomocí jiných **/FP** možnosti. Zvláštní hodnoty (NaN, + nekonečno, - nekonečno,-0.0) nemusí být rozšířena nebo chovat přesně podle standardu IEEE 754. V části mohou být generovány s plovoucí desetinnou čárkou staženiny **Fast**. Kompilátor je stále vázané základní architektuře v rámci **Fast**, a další optimalizace může být k dispozici prostřednictvím použití [/arch](arch-minimum-cpu-architecture.md) možnost.
 
 V části **Fast**, kompilátor generuje kód určený ke spuštění ve výchozím prostředí s plovoucí desetinnou čárkou a předpokládá, že není prostředí s plovoucí desetinnou čárkou otevřeny nebo upraveny za běhu. To znamená předpokládá, že kód není odmaskování výjimek s plovoucí desetinnou čárkou, číst nebo zapisovat stav s plovoucí desetinnou čárkou registry nebo změnit režimech zaokrouhlení.
 
@@ -67,7 +67,7 @@ Všimněte si, že **/FP: except** nepovolí všechny výjimky s plovoucí deset
 
 Více **/FP** možnosti lze zadat na stejném příkazovém řádku kompilátoru. Pouze jeden z **/FP: strict**, **Fast**, a **/FP: precise** možnosti mohou být v platnosti v čase. Pokud na příkazovém řádku je zadán více než jednu z těchto možností, má přednost před pozdější možnost a kompilátor vygeneruje upozornění. **/FP: strict** a **/FP: except** možnosti nejsou kompatibilní s **/CLR**.
 
-[/Za](../../build/reference/za-ze-disable-language-extensions.md) (Kompatibilita s ANSI) možnost není kompatibilní s **/FP**.
+[/Za](za-ze-disable-language-extensions.md) (Kompatibilita s ANSI) možnost není kompatibilní s **/FP**.
 
 ### <a name="using-pragmas-to-control-floating-point-behavior"></a>Pomocí direktivy pragma pro řízení chování plovoucí desetinné čárky
 
@@ -256,7 +256,7 @@ V části **/O2** **Fast** generovaný kód zjednodušen, protože všechny pře
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **generování kódu** stránku vlastností.
 
@@ -268,6 +268,6 @@ V části **/O2** **Fast** generovaný kód zjednodušen, protože všechny pře
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](compiler-options.md)<br/>
-[Nastavení možností kompilátoru](setting-compiler-options.md)<br/>
-[Microsoft Visual C++ optimalizace plovoucí desetinné čárky](floating-point-optimization.md)<br/>
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
+[Optimalizace plovoucí bodu MSVC](floating-point-optimization.md)<br/>

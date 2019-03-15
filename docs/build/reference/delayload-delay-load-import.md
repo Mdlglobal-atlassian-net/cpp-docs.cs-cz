@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /DELAYLOAD linker option
 - delayed loading of DLLs, /DELAYLOAD option
 ms.assetid: 39ea0f1e-5c01-450f-9c75-2d9761ff9b28
-ms.openlocfilehash: aa8cc5a565b4af625a1ee85f67ca1c82e065486b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e92b470b7b5e76b39371f333cbbda150e7f6e8c7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416277"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817644"
 ---
 # <a name="delayload-delay-load-import"></a>/DELAYLOAD (import odloženého načtení)
 
@@ -28,13 +28,13 @@ Název knihovny DLL, kterou chcete zpožděně načíst.
 
 ## <a name="remarks"></a>Poznámky
 
-Možnost/delayload způsobí, že knihovna DLL, která je určená `dllname` načtení pouze při prvním volání funkce v této knihovně DLL programem. Další informace najdete v tématu [podpora Linkeru pro knihovny DLL Delay-Loaded](../../build/reference/linker-support-for-delay-loaded-dlls.md). Tuto možnost můžete použít tolikrát, kolikrát podle potřeby k určení tolika knihoven DLL dle libosti. Delayimp.lib je třeba použít při propojení programu nebo můžete implementovat vlastní odloženě zaváděné pomocné funkce.
+Možnost/delayload způsobí, že knihovna DLL, která je určená `dllname` načtení pouze při prvním volání funkce v této knihovně DLL programem. Další informace najdete v tématu [podpora Linkeru pro knihovny DLL Delay-Loaded](linker-support-for-delay-loaded-dlls.md). Tuto možnost můžete použít tolikrát, kolikrát podle potřeby k určení tolika knihoven DLL dle libosti. Delayimp.lib je třeba použít při propojení programu nebo můžete implementovat vlastní odloženě zaváděné pomocné funkce.
 
-[/DELAY](../../build/reference/delay-delay-load-import-settings.md) určuje možnost vazby a načítání pro každou knihovnu DLL načtené se zpožděním.
+[/DELAY](delay-delay-load-import-settings.md) určuje možnost vazby a načítání pro každou knihovnu DLL načtené se zpožděním.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. V **Linkeru** složky, vyberte **vstup** stránku vlastností.
 
@@ -46,5 +46,5 @@ Možnost/delayload způsobí, že knihovna DLL, která je určená `dllname` na�
 
 ## <a name="see-also"></a>Viz také:
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)
+[Odkaz na MSVC linkeru](linking.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)

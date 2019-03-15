@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -MANIFESTFILE linker option
 - /MANIFESTFILE linker option
 ms.assetid: befa5ab2-a9cf-4c9b-969a-e7b4a930f08d
-ms.openlocfilehash: b30e0239eaca365e738ae6568f159715673fd139
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e75c6d8171aae22312ba6aaa2d4304d831ec6d0f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424545"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813835"
 ---
 # <a name="manifestfile-name-manifest-file"></a>/MANIFESTFILE (název souboru manifestu)
 
@@ -25,11 +25,11 @@ ms.locfileid: "57424545"
 
 / MANIFESTFILE umožňuje změnit výchozí název souboru manifestu.  Výchozí název souboru manifestu je název souboru s příponou .manifest.
 
-/ MANIFESTFILE nebude mít žádný vliv, pokud také nepropojíte s [/MANIFEST](../../build/reference/manifest-create-side-by-side-assembly-manifest.md).
+/ MANIFESTFILE nebude mít žádný vliv, pokud také nepropojíte s [/MANIFEST](manifest-create-side-by-side-assembly-manifest.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Rozbalte **vlastnosti konfigurace** uzlu.
 
@@ -45,5 +45,5 @@ ms.locfileid: "57424545"
 
 ## <a name="see-also"></a>Viz také:
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)
+[Odkaz na MSVC linkeru](linking.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)

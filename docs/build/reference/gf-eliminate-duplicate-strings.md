@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GF compiler option [C++]
 - strings [C++], pooling
 ms.assetid: bb7b5d1c-8e1f-453b-9298-8fcebf37d16c
-ms.openlocfilehash: c85379cf1a514cafcd2f840673fc9c7b2d415ba4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2f2bec446fcec522857b4c05a34311e6c26c9b75
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425663"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812314"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (odstranění duplicitních řetězců)
 
@@ -45,16 +45,16 @@ char *t = "This is a character buffer";
 ```
 
 > [!NOTE]
->  [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) možnost použít pro funkce upravit a pokračovat, automaticky nastaví **/GF** možnost.
+>  [/Zi](z7-zi-zi-debug-information-format.md) možnost použít pro funkce upravit a pokračovat, automaticky nastaví **/GF** možnost.
 
 > [!NOTE]
->  **/GF** – možnost kompilátoru vytvoří adresovatelný sekci pro každý jedinečný řetězec. A ve výchozím objektový soubor může obsahovat až 65 536 adresovatelných sekcí. Pokud váš program obsahuje více než 65 536 řetězce, použijte [/bigobj](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md) – možnost kompilátoru vytvořit víc oddílů.
+>  **/GF** – možnost kompilátoru vytvoří adresovatelný sekci pro každý jedinečný řetězec. A ve výchozím objektový soubor může obsahovat až 65 536 adresovatelných sekcí. Pokud váš program obsahuje více než 65 536 řetězce, použijte [/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md) – možnost kompilátoru vytvořit víc oddílů.
 
-**/GF** je v účinku po [/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md) nebo **/O2** se používá.
+**/GF** je v účinku po [/O1](o1-o2-minimize-size-maximize-speed.md) nebo **/O2** se používá.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **C/C++** složky.
 
@@ -68,5 +68,5 @@ char *t = "This is a character buffer";
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _ATL_MIN_CRT macro
 - distributing files with ATL components
 ms.assetid: 061d5f98-f669-440e-9380-42f017a0f9e8
-ms.openlocfilehash: f83e56e3e9b8468b71534d225080ff5874731b74
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d44434a36c8d757fb8f79d36a672c4c77de64ade
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268886"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820322"
 ---
 # <a name="creating-an-atl-project"></a>Vytvoření projektu ATL
 
@@ -22,7 +22,7 @@ Nejjednodušší způsob, jak vytvořit projekt knihovny ATL je použití Průvo
 
 ## <a name="to-create-an-atl-project-using-the-atl-project-wizard"></a>Chcete-li vytvořit projekt knihovny ATL pomocí Průvodce projektem ATL
 
-1. Postupujte podle pokynů v tématu [vytvoření projektu pomocí Průvodce aplikací jazyka Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).
+1. V sadě Visual Studio, zvolte **soubor > Nový > projekt** z hlavní nabídky.
 
 1. Vyberte **projekt knihovny ATL** ikonu **šablony** podokně otevřete **Průvodce projektem ATL**.
 
@@ -33,9 +33,9 @@ Nejjednodušší způsob, jak vytvořit projekt knihovny ATL je použití Průvo
 
 1. Klikněte na tlačítko **Dokončit** zavřete průvodce a otevření nového projektu ve vývojovém prostředí.
 
-Po vytvoření projektu lze zobrazit vytvořené soubory v **Průzkumníka řešení**. Další informace o souborech Průvodce vytvoří pro váš projekt, naleznete v generovaném souboru ReadMe.txt. Další informace o typech souborů naleznete v tématu [typy souborů vytvořené pro projekty Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md). Další informace o konfiguraci pro nový projekt knihovny ATL a jejich změny najdete v tématu [výchozí konfigurace projektu ATL](../../atl/reference/default-atl-project-configurations.md).
+Po vytvoření projektu lze zobrazit vytvořené soubory v **Průzkumníka řešení**. Další informace o souborech Průvodce vytvoří pro váš projekt, naleznete v generovaném souboru ReadMe.txt. Další informace o typech souborů naleznete v tématu [typy souborů vytvořené pro projekty Visual C++](../../build/reference/file-types-created-for-visual-cpp-projects.md). Další informace o konfiguraci pro nový projekt knihovny ATL a jejich změny najdete v tématu [výchozí konfigurace projektu ATL](../../atl/reference/default-atl-project-configurations.md).
 
 ## <a name="see-also"></a>Viz také:
 
 [Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Stránky vlastností](../../ide/property-pages-visual-cpp.md)
+[Stránky vlastností](../../build/reference/property-pages-visual-cpp.md)

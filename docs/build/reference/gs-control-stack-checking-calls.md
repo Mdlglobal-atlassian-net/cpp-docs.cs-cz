@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - stack checking calls
 ms.assetid: 40daed7c-f942-4085-b872-01e12b37729e
-ms.openlocfilehash: 49433cd0c84b05248bacf1e930dd5ec78bc3cd1b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e31b42c1d9422d44c5f106f40c4a60a38f23425b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418825"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818562"
 ---
 # <a name="gs-control-stack-checking-calls"></a>/Gs (kontrola volání ověření zásobníku)
 
@@ -55,7 +55,7 @@ Sondy zásobníku zapnutí nebo vypnutí můžete vypnout pomocí [check_stack �
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
 
@@ -67,5 +67,5 @@ Sondy zásobníku zapnutí nebo vypnutí můžete vypnout pomocí [check_stack �
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

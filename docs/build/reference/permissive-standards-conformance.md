@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 85439598ae4c3e0f9ef923f21e701e0399aefa70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5590996c7598016365bb122977084835830f95ab
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619294"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820790"
 ---
 # <a name="permissive--standards-conformance"></a>/ permissive-(shoda se standardy)
 
@@ -23,27 +23,27 @@ Zadejte režim přizpůsobení standardy pro kompilátor. Pomocí této možnost
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/ permissive-**
+> **/permissive-**
 
 ## <a name="remarks"></a>Poznámky
 
 Tato možnost je podporována v sadě Visual Studio 2017 nebo novější.
 
-Můžete použít **/ permissive-** – možnost kompilátoru k určení chování kompilátoru vyhovující standardům. Tato možnost zakáže povolující chování a nastaví [/Zc](../../build/reference/zc-conformance.md) – možnosti kompilátoru pro striktní shodu. V integrovaném vývojovém prostředí tato možnost také vytvoří podtržení nonkonformní kódu technologie IntelliSense modul.
+Můžete použít **/ permissive-** – možnost kompilátoru k určení chování kompilátoru vyhovující standardům. Tato možnost zakáže povolující chování a nastaví [/Zc](zc-conformance.md) – možnosti kompilátoru pro striktní shodu. V integrovaném vývojovém prostředí tato možnost také vytvoří podtržení nonkonformní kódu technologie IntelliSense modul.
 
 Ve výchozím nastavení **/ permissive-** v nové projekty vytvořené pomocí sady Visual Studio 2017 verze 15.5 a novějších verzích je nastavená možnost. Ve výchozím nastavení v dřívějších verzích není nastavena. Když je tato možnost nastavená, kompilátor vygeneruje diagnostických chyby nebo upozornění při nestandardní jazykové konstrukce jsou zjištěny ve vašem kódu, včetně některých běžných chyb v pre-C ++ 11 kódu.
 
 **/ Permissive-** možnost je kompatibilní s téměř všechny soubory hlavičky z nejnovější sady Windows, jako je například Software Development Kit (SDK) nebo Windows Driver Kit (WDK), od Windows Fall Creators SDK (10.0.16299.0). Starší verze sady SDK se pravděpodobně nezdaří zkompilovat v rámci **/ permissive-** různé zdroje důvodů shodu kódu. Kompilátor a sady SDK příjemce na časové ose jinou verzi, proto nejsou některé zbývající problémy. Problémy s konkrétní záhlaví souboru, naleznete v tématu [problémy záhlaví Windows](#windows-header-issues) níže.
 
-**/ Permissive-** sady možností [/Zc: strictstrings](../../build/reference/zc-conformance.md) a [/Zc: rvaluecast](../../build/reference/zc-conformance.md) možnosti vyhovující chování. Použije se výchozí hodnota nonkonformní chování. Můžete předat konkrétní **/Zc** možnosti po **/ permissive-** na příkazový řádek pro toto chování přepsat.
+**/ Permissive-** sady možností [/Zc: strictstrings](zc-conformance.md) a [/Zc: rvaluecast](zc-conformance.md) možnosti vyhovující chování. Použije se výchozí hodnota nonkonformní chování. Můžete předat konkrétní **/Zc** možnosti po **/ permissive-** na příkazový řádek pro toto chování přepsat.
 
-Ve verzích od kompilátoru v sadě Visual Studio 2017 verze 15.3 **/ permissive-** sady možností [/Zc: ternary](../../build/reference/zc-ternary.md) možnost. Kompilátor také implementuje další požadavky na název pro dvoufázové vyhledávání. Když **/ permissive-** nastavena možnost, kompilátor analyzuje funkce a třídy definice šablon identifikace nezávislé a závislé názvů používaných v šablonách. V této verzi se provádí pouze název analýzu závislostí.
+Ve verzích od kompilátoru v sadě Visual Studio 2017 verze 15.3 **/ permissive-** sady možností [/Zc: ternary](zc-ternary.md) možnost. Kompilátor také implementuje další požadavky na název pro dvoufázové vyhledávání. Když **/ permissive-** nastavena možnost, kompilátor analyzuje funkce a třídy definice šablon identifikace nezávislé a závislé názvů používaných v šablonách. V této verzi se provádí pouze název analýzu závislostí.
 
 Rozšíření specifické pro prostředí a jazyk oblastí, které standardní opustí až po provedení nejsou ovlivněny **/ permissive-**. Například specifické pro společnost Microsoft `__declspec`, konvence volání a klíčová slova a direktivy pragma specifických pro kompilátor nebo atributy zpracování strukturovaných výjimek nejsou označeny příznakem kompilátorem v **/ permissive-** režimu.
 
-**/ Permissive-** možnost využívá podporu shoda v aktuální verzi kompilátoru k určení, které jazykové konstrukce jsou nevyhovující. Možnost určí, jestli váš kód odpovídá na konkrétní verzi jazyka C++ standard. Chcete-li povolit všechny implementované kompilátoru podporu pro nejnovější koncept standardu, použijte [/std:latest](../../build/reference/std-specify-language-standard-version.md) možnost. Chcete-li omezit podporu kompilátoru aktuální implementace standardu C ++ 17, použijte [/std: c ++ 17](../../build/reference/std-specify-language-standard-version.md) možnost. Chcete-li omezit podporu kompilátoru tak, aby lépe odpovídaly standard C ++ 14, použijte [/std: c ++ 14](../../build/reference/std-specify-language-standard-version.md) možnost, která je výchozí nastavení.
+**/ Permissive-** možnost využívá podporu shoda v aktuální verzi kompilátoru k určení, které jazykové konstrukce jsou nevyhovující. Možnost určí, jestli váš kód odpovídá na konkrétní verzi jazyka C++ standard. Chcete-li povolit všechny implementované kompilátoru podporu pro nejnovější koncept standardu, použijte [/std:latest](std-specify-language-standard-version.md) možnost. Chcete-li omezit podporu kompilátoru aktuální implementace standardu C ++ 17, použijte [/std: c ++ 17](std-specify-language-standard-version.md) možnost. Chcete-li omezit podporu kompilátoru tak, aby lépe odpovídaly standard C ++ 14, použijte [/std: c ++ 14](std-specify-language-standard-version.md) možnost, která je výchozí nastavení.
 
-Ne všechny C ++ 11, C ++ 14 nebo C ++ 17 vyhovující standardům kódu je podporována kompilátorem jazyka Visual C++ v sadě Visual Studio 2017. V závislosti na verzi sady Visual Studio **/ permissive-** možnost nemusí rozpoznat problémy týkající se některé aspekty dvoufázové vyhledávání názvů vazby nekonstantní odkaz na dočasný, zpracuje kopírování inicializace jako přímé init, povolení více uživatelem definovaných převodů inicializace nebo alternativní tokeny pro logické operátory a dalších oblastí shoda není podporováno. Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete v tématu [nestandardní chování](../../cpp/nonstandard-behavior.md). Chcete-li získat maximum z **/ permissive-**, aktualizujte na nejnovější verzi sady Visual Studio.
+Ne všechny C ++ 11, C ++ 14 nebo C ++ 17 vyhovující standardům kódu je podporována kompilátorem MSVC v sadě Visual Studio 2017. V závislosti na verzi sady Visual Studio **/ permissive-** možnost nemusí rozpoznat problémy týkající se některé aspekty dvoufázové vyhledávání názvů vazby nekonstantní odkaz na dočasný, zpracuje kopírování inicializace jako přímé init, povolení více uživatelem definovaných převodů inicializace nebo alternativní tokeny pro logické operátory a dalších oblastí shoda není podporováno. Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete v tématu [nestandardní chování](../../cpp/nonstandard-behavior.md). Chcete-li získat maximum z **/ permissive-**, aktualizujte na nejnovější verzi sady Visual Studio.
 
 ### <a name="how-to-fix-your-code"></a>Postup opravy kódu
 
@@ -425,7 +425,7 @@ Tyto problémy jsou specifické pro záhlaví uživatelského režimu ve Windows
    typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
    ```
 
-   Dopředná deklarace výčtu mimo obor je rozšířením společnosti Microsoft. Chcete-li tento problém vyřešit, kompilovat soubory, které zahrnují cellularapi_oem.h bez **/ permissive-** , nebo použitím [/wd](../../build/reference/compiler-option-warning-level.md) možnost nečinnosti upozornění C4471.
+   Dopředná deklarace výčtu mimo obor je rozšířením společnosti Microsoft. Chcete-li tento problém vyřešit, kompilovat soubory, které zahrnují cellularapi_oem.h bez **/ permissive-** , nebo použitím [/wd](compiler-option-warning-level.md) možnost nečinnosti upozornění C4471.
 
 - Problém při um/omscript.h
 
@@ -464,5 +464,5 @@ Ve verzích před Visual Studio 2017 verze 15.5 použijte tento postup:
 
 ## <a name="see-also"></a>Viz také:
 
-- [Možnosti kompilátoru](../../build/reference/compiler-options.md)
-- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+- [Možnosti kompilátoru MSVC](compiler-options.md)
+- [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

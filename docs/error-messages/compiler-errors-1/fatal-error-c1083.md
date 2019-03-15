@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-ms.openlocfilehash: ae4c6a9f6c41d94aa1e36ba4a79226b49df08b49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 522bc4a36be59d4e2c9425e50b1238eb9f4aba61
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628004"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822194"
 ---
 # <a name="fatal-error-c1083"></a>Závažná chyba C1083
 
@@ -71,11 +71,11 @@ I, když jsou hlavičkové soubory uvedeny v **Průzkumníku řešení** v rámc
 
 Chcete-li tento problém vyřešit, opravte cestu, kterou kompilátor používá k hledání vkládaného nebo importovaného souboru. Nový projekt používá výchozí vyhledávací cesty zahrnutí. Budete muset změnit cestu vyhledávání přidat adresář projektu. Pokud kompilujete na příkazovém řádku, přidejte cestu k **zahrnout** proměnné prostředí nebo **/I** – možnost kompilátoru chcete zadat cestu k souboru.
 
-Chcete-li nastavit cestu k adresáři vkládaných v sadě Visual Studio, otevřete v projektu **stránky vlastností** dialogové okno. Vyberte **adresáře VC ++** pod **vlastnosti konfigurace** v levém podokně a pak upravit **adresáře souborů k zahrnutí** vlastnost. Další informace o uživatelských a projektových adresářích prohledávat pomocí kompilátoru v sadě Visual Studio najdete v tématu [VC ++ Directories Property Page](../../ide/vcpp-directories-property-page.md). Další informace o **/I** – možnost kompilátoru, naleznete v tématu [/I (další vložené adresáře)](../../build/reference/i-additional-include-directories.md).
+Chcete-li nastavit cestu k adresáři vkládaných v sadě Visual Studio, otevřete v projektu **stránky vlastností** dialogové okno. Vyberte **adresáře VC ++** pod **vlastnosti konfigurace** v levém podokně a pak upravit **adresáře souborů k zahrnutí** vlastnost. Další informace o uživatelských a projektových adresářích prohledávat pomocí kompilátoru v sadě Visual Studio najdete v tématu [VC ++ Directories Property Page](../../build/reference/vcpp-directories-property-page.md). Další informace o **/I** – možnost kompilátoru, naleznete v tématu [/I (další vložené adresáře)](../../build/reference/i-additional-include-directories.md).
 
 ## <a name="the-command-line-include-or-lib-environment-is-not-set"></a>Není nastaven na příkazovém řádku zahrnout nebo prostředí LIB
 
-Při vyvolání kompilátoru z příkazového řádku se k určení vyhledávací cesty často používají proměnné prostředí. Pokud vyhledávací cesta popsaná **zahrnout** nebo **LIB** proměnná prostředí není nastavená správně, je možné generovat chybu C1083. Důrazně doporučujeme použití zástupce příkazového řádku pro vývojáře k nastavení základní prostředí pro příkazový řádek sestavení. Další informace najdete v tématu [sestavení C/C++ v příkazovém řádku](../../build/building-on-the-command-line.md). Další informace o tom, jak použít proměnné prostředí najdete v tématu [postupy: použití proměnných prostředí v sestavení](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build).
+Při vyvolání kompilátoru z příkazového řádku se k určení vyhledávací cesty často používají proměnné prostředí. Pokud vyhledávací cesta popsaná **zahrnout** nebo **LIB** proměnná prostředí není nastavená správně, je možné generovat chybu C1083. Důrazně doporučujeme použití zástupce příkazového řádku pro vývojáře k nastavení základní prostředí pro příkazový řádek sestavení. Další informace najdete v tématu [sestavení C/C++ v příkazovém řádku](../../build/building-on-the-command-line.md). Další informace o tom, jak použít proměnné prostředí najdete v tématu [jak: Použití proměnných prostředí v sestavení](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build).
 
 ## <a name="the-file-may-be-locked-or-in-use"></a>Soubor může být uzamčen nebo používá
 
@@ -87,7 +87,7 @@ Chyba C1083 může také označovat, že je vložena chybná verze souboru. Sest
 
 ## <a name="the-precompiled-headers-are-not-yet-precompiled"></a>Předkompilované hlavičky ještě nejsou předkompilovány
 
-Pokud se v projektu používají předkompilované hlavičky, musí být vytvořeny relevantní soubory .pch, aby bylo možné zkompilovat soubory, které používají obsah těchto hlaviček. Například soubor stdafx.cpp se automaticky vytvoří v adresáři projektu pro nové projekty. Tento soubor zkompilujte jako první, abyste vytvořili předkompilované hlavičkové soubory. V typickém návrhu procesu sestavení je to automaticky. Další informace najdete v tématu [vytváření předkompilovaných hlavičkových souborů](../../build/reference/creating-precompiled-header-files.md).
+Pokud se v projektu používají předkompilované hlavičky, musí být vytvořeny relevantní soubory .pch, aby bylo možné zkompilovat soubory, které používají obsah těchto hlaviček. Například soubor stdafx.cpp se automaticky vytvoří v adresáři projektu pro nové projekty. Tento soubor zkompilujte jako první, abyste vytvořili předkompilované hlavičkové soubory. V typickém návrhu procesu sestavení je to automaticky. Další informace najdete v tématu [vytváření předkompilovaných hlavičkových souborů](../../build/creating-precompiled-header-files.md).
 
 ## <a name="additional-causes"></a>Další příčiny
 
@@ -116,7 +116,7 @@ Následující příklad vygeneruje chybu C1083 při hlavičkový soubor `"test.
 #include "stdio.h"  // OK
 ```
 
-Informace o tom, jak vytvářet projekty C/C++ v integrovaném vývojovém prostředí nebo na příkazovém řádku a informace o nastavení proměnných prostředí, najdete v části [sestavování programů jazyka C/C++](../../build/building-c-cpp-programs.md).
+Informace o tom, jak vytvářet projekty C/C++ v integrovaném vývojovém prostředí nebo na příkazovém řádku a informace o nastavení proměnných prostředí, najdete v části [projekty a sestavení systémy](../../build/projects-and-build-systems-cpp.md).
 
 ## <a name="see-also"></a>Viz také:
 

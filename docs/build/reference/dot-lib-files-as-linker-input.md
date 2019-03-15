@@ -14,22 +14,22 @@ helpviewer_keywords:
 - defaults [C++], libraries
 - .lib files
 ms.assetid: dc5d2b1c-2487-41fa-aa71-ad1e0647958b
-ms.openlocfilehash: f3b2ae0d82e682cc89243b7b527ee6e0b51d4c3d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 02f719b3101b04ad6b219bf882a50a994061af0c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426768"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822610"
 ---
 # <a name="lib-files-as-linker-input"></a>Soubory .Lib jako vstup linkeru
 
-ODKAZ přijímá standardních knihoven COFF a COFF import knihoven, které obvykle s příponou. lib. Standardní knihovny obsahují objekty a jsou vytvářeny nástroj LIB. Import knihovny obsahují informace o exportech v jiných aplikacích a vytvoří se buď podle propojení vytvoří program, který obsahuje exporty nebo nástroj LIB. Informace o používání LIB vytvořit standardní nebo importovat knihovny najdete v tématu [LIB Reference](../../build/reference/lib-reference.md). Podrobnosti o použití odkazu pro vytvoření knihovny importu, najdete v článku [/dll](../../build/reference/dll-build-a-dll.md) možnost.
+ODKAZ přijímá standardních knihoven COFF a COFF import knihoven, které obvykle s příponou. lib. Standardní knihovny obsahují objekty a jsou vytvářeny nástroj LIB. Import knihovny obsahují informace o exportech v jiných aplikacích a vytvoří se buď podle propojení vytvoří program, který obsahuje exporty nebo nástroj LIB. Informace o používání LIB vytvořit standardní nebo importovat knihovny najdete v tématu [LIB Reference](lib-reference.md). Podrobnosti o použití odkazu pro vytvoření knihovny importu, najdete v článku [/dll](dll-build-a-dll.md) možnost.
 
-Knihovny je zadán odkaz jako argument název souboru nebo výchozí knihovny. ODKAZ překladu externích odkazů tak, že nejprve v knihovnách zadané na příkazovém řádku a potom ve výchozích knihoven zadaným [/DEFAULTLIB](../../build/reference/defaultlib-specify-default-library.md) možnost, a potom ve výchozích knihoven s názvem v souborech .obj. Pokud je cesta zadaná s parametrem knihovnu s názvem, hledá odkaz knihovny v tomto adresáři. Pokud není zadaná žádná cesta, odkaz vyhledá první v adresáři, propojení se službou z a pak v jakékoli adresáře určené v proměnné prostředí LIB.
+Knihovny je zadán odkaz jako argument název souboru nebo výchozí knihovny. ODKAZ překladu externích odkazů tak, že nejprve v knihovnách zadané na příkazovém řádku a potom ve výchozích knihoven zadaným [/DEFAULTLIB](defaultlib-specify-default-library.md) možnost, a potom ve výchozích knihoven s názvem v souborech .obj. Pokud je cesta zadaná s parametrem knihovnu s názvem, hledá odkaz knihovny v tomto adresáři. Pokud není zadaná žádná cesta, odkaz vyhledá první v adresáři, propojení se službou z a pak v jakékoli adresáře určené v proměnné prostředí LIB.
 
 ## <a name="to-add-lib-files-as-linker-input-in-the-development-environment"></a>Chcete-li přidat soubory .lib jako vstup linkeru ve vývojovém prostředí
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Zvolte **vstup** stránku vlastností v **Linkeru** složky.
 
@@ -69,5 +69,5 @@ int main() {
 
 ## <a name="see-also"></a>Viz také:
 
-[Vstupní soubory LINK](../../build/reference/link-input-files.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)
+[Vstupní soubory LINK](link-input-files.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)
