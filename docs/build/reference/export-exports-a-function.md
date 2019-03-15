@@ -9,12 +9,12 @@ helpviewer_keywords:
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-ms.openlocfilehash: 86e2dadbfcdc31d5d5f5fe3121c33f9011c14ab5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7c4f4621bbccd4285bcf4eca07d2544d53d14f6c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414380"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819847"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (export funkce)
 
@@ -36,7 +36,7 @@ Existují čtyři způsoby pro export definice, uvedené v doporučené pořadí
 
 1. [__declspec(dllexport)](../../cpp/dllexport-dllimport.md) ve zdrojovém kódu
 
-1. [EXPORTY](../../build/reference/exports.md) – příkaz souboru .def
+1. [EXPORTY](exports.md) – příkaz souboru .def
 
 1. Specifikaci/Export je přebytečný v příkazu LINK
 
@@ -44,7 +44,7 @@ Existují čtyři způsoby pro export definice, uvedené v doporučené pořadí
 
 Všechny tyto metody můžete použít ve stejném programu. Při propojení buildů program, který obsahuje exporty, také vytvoří knihovnu importu, pokud souboru .exp se používá v sestavení.
 
-ODKAZ použití dekorovaných formy identifikátory. Když se vytvoří soubor .obj, upraví kompilátor identifikátor. Pokud *Název_položky* je zadán v linkeru v jeho nedekorovaných formuláře (jak se zobrazí ve zdrojovém kódu), odkaz se pokusí shodovat s názvem. Pokud ji nemůžete najít unikátní shoda, odkaz vydá chybovou zprávu. Použití [DUMPBIN](../../build/reference/dumpbin-reference.md) nástroj zobrazíte [dekorovaného názvu](../../build/reference/decorated-names.md) forma identifikátoru, když je potřeba zadat do propojovacího programu.
+ODKAZ použití dekorovaných formy identifikátory. Když se vytvoří soubor .obj, upraví kompilátor identifikátor. Pokud *Název_položky* je zadán v linkeru v jeho nedekorovaných formuláře (jak se zobrazí ve zdrojovém kódu), odkaz se pokusí shodovat s názvem. Pokud ji nemůžete najít unikátní shoda, odkaz vydá chybovou zprávu. Použití [DUMPBIN](dumpbin-reference.md) nástroj zobrazíte [dekorovaného názvu](decorated-names.md) forma identifikátoru, když je potřeba zadat do propojovacího programu.
 
 > [!NOTE]
 > Nezadávejte upravené podobě identifikátory jazyka C, které jsou deklarovány `__cdecl` nebo `__stdcall`.
@@ -58,7 +58,7 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **Linkeru** > **příkazového řádku** stránku vlastností.
 
@@ -70,5 +70,5 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 ## <a name="see-also"></a>Viz také:
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)
+[Odkaz na MSVC linkeru](linking.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)

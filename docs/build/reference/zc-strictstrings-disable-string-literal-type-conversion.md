@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: b7eb3f3b-82c1-48a2-8e63-66bad7397b46
-ms.openlocfilehash: d0fe7a7aa956ebc7662754b039389983d75ff590
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 954088955a3f1530bb298aadbc35c7dd74150b7a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668712"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822303"
 ---
 # <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>/Zc:strictStrings (Zakázání převodů typů řetězcových literálů)
 
@@ -64,7 +64,7 @@ Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
 
@@ -72,4 +72,4 @@ Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete
 
 ## <a name="see-also"></a>Viz také:
 
-[/Zc (shoda)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (shoda)](zc-conformance.md)<br/>

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - volatile compiler option
 - -volatile compiler option [C++]
 ms.assetid: 9d08fcc6-5bda-44c8-8151-8d8d54f164b8
-ms.openlocfilehash: da2d981d9fcca6be66a7fd495e7c76670ed8e3ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02871622242930d7419fda16f4d106fccb2056f0
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502515"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819490"
 ---
 # <a name="volatile-volatile-keyword-interpretation"></a>/volatile (Interpretace klíčového slova volatile)
 
@@ -46,7 +46,7 @@ Neexistuje žádná `#pragma` ekvivalentní pro ovládání této možnosti.
 
 ### <a name="to-set-the-volatile-compiler-option-in-visual-studio"></a>Chcete-li nastavit možnosti/volatilní – možnost kompilátoru v sadě Visual Studio
 
-1. Otevřít **stránky vlastností** dialogové okno pro projekt. Další informace najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřít **stránky vlastností** dialogové okno pro projekt. Další informace najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
 
@@ -55,5 +55,5 @@ Neexistuje žádná `#pragma` ekvivalentní pro ovládání této možnosti.
 ## <a name="see-also"></a>Viz také:
 
 [volatile](../../cpp/volatile-cpp.md)<br/>
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

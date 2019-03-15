@@ -3,12 +3,12 @@ title: / USEPROFILE (použití PGO dat pomocí LTCG)
 ms.date: 03/14/2018
 f1_keywords:
 - USEPROFILE
-ms.openlocfilehash: 4b780bed3b92b874f2bf18fb0235e8e2baf95ae9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7bc0033ae5ef512cbd2e2063c5cb9bd9b061c180
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550628"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816526"
 ---
 # <a name="useprofile-run-pgo-in-thread-safe-mode"></a>/ USEPROFILE (spustit PGO v nouzovém režimu vlákno)
 
@@ -38,7 +38,7 @@ Volitelný **AGGRESSIVE** argument zakáže velikost související heuristiku k 
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **Linkeru** > **optimalizace** stránku vlastností.
 
@@ -56,5 +56,5 @@ Volitelný **AGGRESSIVE** argument zakáže velikost související heuristiku k 
 
 [/ GENPROFILE a /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/LTCG](ltcg-link-time-code-generation.md)<br/>
-[Optimalizace na základě profilu](../../build/reference/profile-guided-optimizations.md)<br/>
-[Proměnné prostředí pro optimalizace na základě profilu](../../build/reference/environment-variables-for-profile-guided-optimizations.md)<br/>
+[Optimalizace na základě profilu](../profile-guided-optimizations.md)<br/>
+[Proměnné prostředí pro optimalizace na základě profilu](../environment-variables-for-profile-guided-optimizations.md)<br/>

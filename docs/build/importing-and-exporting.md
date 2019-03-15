@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++], exporting from
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
-ms.openlocfilehash: 1aaf18003f831ca94ecd90dafb472ecb894b8a60
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 882010cd28c291e9f49ca0f7dd9d646c70130184
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424792"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815824"
 ---
 # <a name="importing-and-exporting"></a>Import a export
 
@@ -27,7 +27,7 @@ Chcete-li import veřejných symbolů do aplikace nebo export funkcí z knihovny
 
 Soubor definice modulu (.def) je textový soubor obsahující jeden nebo více příkazů modulu, které popisují různé atributy knihovny DLL. Pokud nepoužijete **__declspec(dllimport)** nebo **__declspec(dllexport)** pro export funkcí knihovny DLL, pak vyžaduje knihovna DLL .def souboru.
 
-Pomocí souborů .def k [import do aplikace](../build/importing-using-def-files.md) nebo [export z knihovny DLL](../build/exporting-from-a-dll-using-def-files.md).
+Pomocí souborů .def k [import do aplikace](importing-using-def-files.md) nebo [export z knihovny DLL](exporting-from-a-dll-using-def-files.md).
 
 ## <a name="using-declspec"></a>Pomocí __declspec
 
@@ -41,10 +41,10 @@ Ve formátu přenosného spustitelného souboru Win32 je určená k minimalizaci
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
-- [Import do aplikace](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Import do aplikace](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Export z knihovny DLL](../build/exporting-from-a-dll.md)
+- [Export z knihovny DLL](exporting-from-a-dll.md)
 
 ## <a name="see-also"></a>Viz také:
 
-[Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)
+[Knihovny DLL v jazyce Visual C++](dlls-in-visual-cpp.md)

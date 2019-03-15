@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /Fe compiler option [C++]
 - Fe compiler option [C++]
 ms.assetid: 49f594fd-5e94-45fe-a1bf-7c9f2abb6437
-ms.openlocfilehash: cac4dc0908c86574ef5b57c4436f734f94c0bb49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5901ef1997cfea84c97b6d91b30335ff7dbc1d9f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473408"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818047"
 ---
 # <a name="fe-name-exe-file"></a>/Fe (název souboru EXE)
 
@@ -40,7 +40,7 @@ Pokud zadáte [/c (Kompilovat bez propojení)](c-compile-without-linking.md) mo�
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Otevřít **vlastnosti konfigurace** > **Linkeru** > **Obecné** stránku vlastností.
 
@@ -68,7 +68,7 @@ CL /FeC:\BIN\ *.C
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti výstupního souboru (/F)](../../build/reference/output-file-f-options.md)<br/>
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
-[Určení názvu cesty](../../build/reference/specifying-the-pathname.md)<br/>
+[Možnosti výstupního souboru (/F)](output-file-f-options.md)<br/>
+[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
+[Určení názvu cesty](specifying-the-pathname.md)<br/>

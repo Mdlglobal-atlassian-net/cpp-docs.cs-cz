@@ -11,16 +11,16 @@ helpviewer_keywords:
 - executable files [C++], importing classes
 - exporting DLLs [C++], AFX_EXT_CLASS macro
 ms.assetid: 6b72cb2b-e92e-4ecd-bcab-c335e1d1cfde
-ms.openlocfilehash: 1451b452c5e2dc62e83e5b8f473248fa7c231877
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bcfdc94e8db80daec227d77c20ecec6b14d5af11
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421191"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821219"
 ---
 # <a name="exporting-and-importing-using-afxextclass"></a>Export a import pomocí třídy AFX_EXT_CLASS
 
-[MFC – rozšiřující knihovny DLL](../build/extension-dlls-overview.md) použijte makro **AFX_EXT_CLASS** export tříd; spustitelné soubory, které jsou propojeny do MFC – rozšiřující knihovny DLL použijte makro postup importu tříd. S **AFX_EXT_CLASS** – makro, stejné soubory hlaviček, které se používají k vytvoření MFC – rozšiřující knihovny DLL lze použít s spustitelné soubory, které odkazují na knihovny DLL.
+[MFC – rozšiřující knihovny DLL](extension-dlls-overview.md) použijte makro **AFX_EXT_CLASS** export tříd; spustitelné soubory, které jsou propojeny do MFC – rozšiřující knihovny DLL použijte makro postup importu tříd. S **AFX_EXT_CLASS** – makro, stejné soubory hlaviček, které se používají k vytvoření MFC – rozšiřující knihovny DLL lze použít s spustitelné soubory, které odkazují na knihovny DLL.
 
 V souboru hlaviček pro vaši knihovnu DLL, přidejte **AFX_EXT_CLASS** – klíčové slovo k deklaraci vaší třídy následujícím způsobem:
 
@@ -104,28 +104,28 @@ Vzhledem k tomu vždy používá MFC `AFX_DATA` symbolu na datových položek de
 
 ### <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
-- [Export z knihovny DLL pomocí souborů .def](../build/exporting-from-a-dll-using-def-files.md)
+- [Export z knihovny DLL pomocí souborů .def](exporting-from-a-dll-using-def-files.md)
 
-- [Export z knihovny DLL pomocí __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Export z knihovny DLL pomocí __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Export funkcí jazyka C++ pro použití ve spustitelných souborech jazyka C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Export funkcí jazyka C++ pro použití ve spustitelných souborech jazyka C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Export funkcí jazyka C pro použití ve spustitelných souborech jazyka C nebo C++ – jazyk](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Export funkcí jazyka C pro použití ve spustitelných souborech jazyka C nebo C++ – jazyk](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Určit, kterou exportovací metodu použít](../build/determining-which-exporting-method-to-use.md)
+- [Určit, kterou exportovací metodu použít](determining-which-exporting-method-to-use.md)
 
-- [Import do aplikace s použitím deklarace __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Import do aplikace s použitím deklarace __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Inicializace knihovny DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Inicializace knihovny DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
 
-- [Dekorované názvy](../build/reference/decorated-names.md)
+- [Dekorované názvy](reference/decorated-names.md)
 
-- [Import a export vložených funkcí](../build/importing-and-exporting-inline-functions.md)
+- [Import a export vložených funkcí](importing-and-exporting-inline-functions.md)
 
-- [Vzájemné importy](../build/mutual-imports.md)
+- [Vzájemné importy](mutual-imports.md)
 
 ## <a name="see-also"></a>Viz také:
 
-[Export z knihovny DLL](../build/exporting-from-a-dll.md)
+[Export z knihovny DLL](exporting-from-a-dll.md)

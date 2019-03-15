@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-ms.openlocfilehash: fe31763c5da21a724f0c9242e6eb8429a2379ecd
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f6ed6184f8ae4b3a0f9db3c1f962a2918a185138
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421490"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816942"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (Vytvořit aplikace s detekcí terminálového serveru)
 
@@ -34,15 +34,15 @@ Pokud aplikaci terminál terminálového serveru, musí, ani využívají soubor
 
 Pokud používáte parametr/TSAWARE a vaše aplikace stále používá soubory INI, budou všichni uživatelé systému sdílet soubory. Pokud je to přijatelné, můžete stále propojit aplikaci se parametr/TSAWARE; jinak budete muset použít podporu.
 
-Parametr/TSAWARE je povolené ve výchozím nastavení pro Windows a konzolových aplikací. Zobrazit [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) a [/Version](../../build/reference/version-version-information.md) informace.
+Parametr/TSAWARE je povolené ve výchozím nastavení pro Windows a konzolových aplikací. Zobrazit [/Subsystem](subsystem-specify-subsystem.md) a [/Version](version-version-information.md) informace.
 
 / TSAWARE není platný pro ovladače, ovladače VxD nebo knihovny DLL.
 
-Pokud byla aplikace propojené s parametr/TSAWARE, DUMPBIN [/HEADERS](../../build/reference/headers.md) se zobrazí informace o tom.
+Pokud byla aplikace propojené s parametr/TSAWARE, DUMPBIN [/HEADERS](headers.md) se zobrazí informace o tom.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na tlačítko **Linkeru** složky.
 
@@ -56,7 +56,7 @@ Pokud byla aplikace propojené s parametr/TSAWARE, DUMPBIN [/HEADERS](../../buil
 
 ## <a name="see-also"></a>Viz také:
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)<br/>
+[Odkaz na MSVC linkeru](linking.md)<br/>
+[Možnosti Linkeru MSVC](linker-options.md)<br/>
 [Ukládání informací specifických pro uživatele](/windows/desktop/TermServ/storing-user-specific-information)<br/>
 [Starší verze aplikace v prostředí Terminálové služby](https://msdn.microsoft.com/library/aa382957.aspx)
