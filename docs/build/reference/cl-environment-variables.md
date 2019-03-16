@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - environment variables, CL compiler
 ms.assetid: 2606585b-a681-42ee-986e-1c9a2da32108
-ms.openlocfilehash: 47d6966cdc821cee4bd9ffd61b36c0c79143b6c2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a15bedc0a5aa8215356a98c3635a2edd1f3cfc5f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412455"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807959"
 ---
 # <a name="cl-environment-variables"></a>Proměnné prostředí CL
 
@@ -30,13 +30,13 @@ Můžete nastavit CL nebo \_CL\_ proměnnou prostředí pomocí následující s
 
 > Nastavte CL = [[*možnost*]... [*souboru*]...] [/ link *optimalizované odkaz* ...] Nastavte \_CL\_= [[*možnost*]... [*souboru*]...] [/ link *optimalizované odkaz* ...]
 
-Podrobnosti o argumenty, které mají CL a \_CL\_ proměnné prostředí, najdete v článku [syntaxe příkazového řádku kompilátoru](../../build/reference/compiler-command-line-syntax.md).
+Podrobnosti o argumenty, které mají CL a \_CL\_ proměnné prostředí, najdete v článku [syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md).
 
 Můžete použít k definování souborů a možnosti, které nejčastěji používáte tyto proměnné prostředí a pomocí příkazového řádku k definování určité soubory a možnosti pro konkrétní účely. CL a \_CL\_ proměnné prostředí jsou omezená na 1024 znaků (příkazový řádek vstupu omezení).
 
 Možnosti/d. nelze použít k definici symbolu, který používá rovnítko (=). Můžete nahradit křížku (#) pro znaménko rovná se. Tímto způsobem můžete použít CL nebo \_CL\_ proměnné prostředí pro definování preprocesoru konstant s explicitní hodnoty – například `/DDEBUG#1` k definování `DEBUG=1`.
 
-Související informace naleznete v tématu [nastavit proměnné prostředí](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md).
+Související informace naleznete v tématu [nastavit proměnné prostředí](../setting-the-path-and-environment-variables-for-command-line-builds.md).
 
 ## <a name="examples"></a>Příklady
 
@@ -58,5 +58,5 @@ To má stejný účinek jako následující příkazový řádek:
 
 ## <a name="see-also"></a>Viz také:
 
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)
+[Nastavení možností kompilátoru](compiler-command-line-syntax.md)<br/>
+[Možnosti kompilátoru MSVC](compiler-options.md)
