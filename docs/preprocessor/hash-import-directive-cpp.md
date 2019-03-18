@@ -12,12 +12,12 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: 8029adfd5b4f27e097df693c85ee0d711a13dc4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7dc30d3e5869e9b0f534a4769d4517a0514c144
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612365"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822623"
 ---
 # <a name="import-directive-c"></a>#import – direktiva (C++)
 
@@ -72,7 +72,7 @@ Jeden nebo více [atributů #import](#_predir_the_23import_directive_import_attr
 #import "..\drawctl\drawctl.tlb" no_namespace, raw_interfaces_only
 ```
 
-\-nebo –
+\-or-
 
 ```cpp
 #import "..\drawctl\drawctl.tlb" no_namespace raw_interfaces_only
@@ -121,16 +121,16 @@ Součástí následující optimalizace kompilátoru **#import** – direktiva:
 
 - Když **#import** je zpracována, kompilátor nejprve zkontroluje, zda záhlaví existuje a je aktuální. Pokud ano, pak nemusí být znovu vytvořen.
 
-**#Import** – direktiva také účastní minimálního opětovného sestavení a je možné použít v souboru předkompilované hlavičky. Zobrazit [vytváření předkompilovaných hlavičkových souborů](../build/reference/creating-precompiled-header-files.md) Další informace.
+**#Import** – direktiva také účastní minimálního opětovného sestavení a je možné použít v souboru předkompilované hlavičky. Zobrazit [vytváření předkompilovaných hlavičkových souborů](../build/creating-precompiled-header-files.md) Další informace.
 
 ###  <a name="_predir_the_primary_type_library_header_file"></a> Hlavičkový soubor primární typ knihovny
 Hlavičkový soubor primární typ knihovny se skládá ze sedmi částí:
 
-- Nadpisu: tvořen komentáři, `#include` příkaz pro COMDEF. H (definující některá standardní makra použitá v záhlaví) a další informace o.
+- Často používaný text nadpisu: Tvořen komentáři, `#include` příkaz pro COMDEF. H (definující některá standardní makra použitá v záhlaví) a další informace o.
 
-- Dopředné odkazy a funkce TypeDef: se skládá ze struktur deklarací jako `struct IMyInterface` a definice TypeDef.
+- Dopředné odkazy a funkce TypeDef: Se skládá ze struktur deklarací jako `struct IMyInterface` a definice TypeDef.
 
-- Deklarace inteligentního ukazatele: třída šablony `_com_ptr_t` implementaci inteligentního ukazatele, který zapouzdřuje ukazatele rozhraní a eliminuje nutnost volání `AddRef`, `Release`, `QueryInterface` funkce. Navíc skryje `CoCreateInstance` volat při vytváření nového objektu COM. Tento oddíl používá příkaz Makro `_COM_SMARTPTR_TYPEDEF` k vytvoření funkcí TypeDef rozhraní modelu COM, aby byly specializovanými z [_com_ptr_t](../cpp/com-ptr-t-class.md) šablony třídy. Například pro rozhraní `IMyInterface`,. TLH soubor bude obsahovat:
+- Deklarace inteligentního ukazatele: Třída šablony `_com_ptr_t` implementaci inteligentního ukazatele, který zapouzdřuje ukazatele rozhraní a eliminuje nutnost volání `AddRef`, `Release`, `QueryInterface` funkce. Navíc skryje `CoCreateInstance` volat při vytváření nového objektu COM. Tento oddíl používá příkaz Makro `_COM_SMARTPTR_TYPEDEF` k vytvoření funkcí TypeDef rozhraní modelu COM, aby byly specializovanými z [_com_ptr_t](../cpp/com-ptr-t-class.md) šablony třídy. Například pro rozhraní `IMyInterface`,. TLH soubor bude obsahovat:
 
     ```TLH
     _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
@@ -144,13 +144,13 @@ Hlavičkový soubor primární typ knihovny se skládá ze sedmi částí:
 
    Typ `IMyInterfacePtr` můžete použít namísto nezpracovaného ukazatele rozhraní `IMyInterface*`. V důsledku toho není nutné volat různé `IUnknown` členské funkce
 
-- Deklarace TypeInfo: primárně se skládá z definic tříd a ostatních položek vystavovaných individuálním položkám typeinfo vrácených `ITypeLib:GetTypeInfo`. V této části se každá vlastnost typeinfo z knihovny typů odráží v záhlaví ve formě závislé na `TYPEKIND` informace.
+- Deklarace TypeInfo: Primárně se skládá z definic tříd a ostatních položek vystavovaných individuálním položkám typeinfo vrácených `ITypeLib:GetTypeInfo`. V této části se každá vlastnost typeinfo z knihovny typů odráží v záhlaví ve formě závislé na `TYPEKIND` informace.
 
-- Volitelné definice GUID starého stylu: obsahuje inicializaci pojmenovaných konstant identifikátoru GUID. Jedná se o názvy formuláře `CLSID_CoClass` a `IID_Interface`, podobné těm, které jsou generovány v kompilátoru MIDL.
+- Volitelné definice GUID starého typu: Obsahuje inicializaci pojmenovaných konstant identifikátoru GUID. Jedná se o názvy formuláře `CLSID_CoClass` a `IID_Interface`, podobné těm, které jsou generovány v kompilátoru MIDL.
 
 - `#include` příkaz pro sekundární hlavičku knihovny typů.
 
-- Často používaný text zápatí: nyní zahrnuje `#pragma pack(pop)`.
+- Často používaný text zápatí: Nyní zahrnuje `#pragma pack(pop)`.
 
 Všechny oddíly s výjimkou záhlaví často používaný text zápatí často používaný text části a jsou uzavřeny v oboru názvů určeném podle `library` příkaz v původním souboru IDL. Můžete použít názvy v záhlaví typu knihovny k explicitní kvalifikaci s oborem názvů nebo zahrnutím následujícího příkazu:
 
