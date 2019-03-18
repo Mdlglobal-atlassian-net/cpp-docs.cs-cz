@@ -4,16 +4,16 @@ ms.date: 10/24/2018
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: ae5d1957694abe09d1e04fba5ccfd2cd87d36940
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79cf78de865f480530df89c778e9fe432b0bbf33
+ms.sourcegitcommit: a901c4acbfc80ca10663d37c09921f04c5b6dd17
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530179"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58142526"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Upozornění kompilátoru podle verze kompilátoru
 
-Kompilátor může potlačit upozornění, která byla zavedená po verzi určíte pomocí [/WV:](../../build/reference/compiler-option-warning-level.md) – možnost kompilátoru. To je užitečné při správě procesu sestavení při zavedení nové verze sady nástrojů a chcete dočasně potlačení nové upozornění. Tato možnost nepotlačuje nové chybové zprávy. Nedoporučujeme, potlačí všechna nová upozornění trvale! Doporučujeme vždy kompilaci na nejvyšší úrovni regulární upozornění __/W4__a odeberte __/WV:__ možnost ve vašem buildu co nejdříve.
+Kompilátor může potlačit upozornění, která byla zavedená po verzi určíte pomocí [/WV:](../../build/reference/compiler-option-warning-level.md) – možnost kompilátoru. Tato možnost je užitečná pro správu vašeho procesu sestavení, když představují novou verzi sady nástrojů a chcete dočasně potlačení nové upozornění. Tato možnost nepotlačuje nové chybové zprávy. Nedoporučujeme, potlačí všechna nová upozornění trvale! Doporučujeme vždy kompilaci na nejvyšší úrovni regulární upozornění __/W4__a odeberte __/WV:__ možnost ve vašem buildu co nejdříve.
 
 Tyto verze kompilátoru zavedená nová upozornění:
 
@@ -36,10 +36,26 @@ Tyto verze kompilátoru zavedená nová upozornění:
 | Visual C++ 2017 verze 15.6 | 19.13.26128.0 |
 | Visual C++ 2017 verze 15.7 | 19.14.26428.0 |
 | Visual C++ 2017 verze 15.8 | 19.15.26726.0 |
+| Visual C++ 2017 verzi 15.9 | 19.16.26926.0 |
+| Visual C++ 2019 RTM | 19.20.27004.0 |
 
 Můžete zadat pouze hlavní číslo, číslo hlavní a dílčí nebo hlavní, vedlejší verzi a čísla do sestavení __/WV:__ možnost. Kompilátor oznámí všechna upozornění, které odpovídají verze, které začínat zadaným číslem a potlačí všechna upozornění pro větší než zadané číslo verze. Například __/Wv:17__ sestavy všech upozornění zavedená v rámci nebo před jakoukoli verzi nástroje Visual Studio 2012 a potlačí všechny upozornění zavedená jakékoli kompilátorem z Visual Studio 2013 (verzi 18) nebo novější. Potlačit upozornění zavedená v sadě Visual Studio 2015 update 2 a novější, je možné použít __/Wv:19.00.23506__. Použití __/Wv:19.11__ hlášení všechna upozornění zavedená v libovolné verzi sady Visual Studio před Visual Studio 2017 verze 15.5, ale potlačí upozornění zavedená v sadě Visual Studio 2017 verze 15.5 nebo novější.
 
 V následujících oddílech najdete seznam upozornění zavedená ve všech verzích Visual C++, který můžete potlačit pomocí __/WV:__ – možnost kompilátoru. __/WV:__ možnost nelze potlačit upozornění, které nejsou uvedené, které jsou staršího data než zadanou verzí kompilátoru.
+
+::: moniker range=">= vs-2019"
+
+## <a name="warnings-introduced-in-visual-c-2019-rc-compiler-version-1920270040"></a>Upozornění zavedená v sadě Visual C++ 2019 RC (verze kompilátoru 19.20.27004.0)
+
+Tato upozornění a všechna upozornění v pozdějších verzích jsou potlačeny pomocí možnosti kompilátoru __/Wv:19.15__.
+
+|||
+|-|-|
+C4848 | Podpora pro standardní atribut "žádné\_jedinečný\_adres v C ++ 17 a starších verzích je rozšířením dodavatele
+
+::: moniker-end
+::: moniker range=">= vs-2017"
+
 
 ## <a name="warnings-introduced-in-visual-c-2017-version-158-compiler-version-1915267260"></a>Upozornění zavedená ve Visual C++ 2017 verze 15.8 (verze kompilátoru 19.15.26726.0)
 
@@ -47,7 +63,25 @@ Tato upozornění a všechna upozornění v pozdějších verzích jsou potlače
 
 |||
 |-|-|
-C5046|"*funkce*': typ zahrnující s vnitřním propojením není definovaný Symbol|
+C4643 | Předat dál deklarace "*identifikátor*' v oboru názvů std není povolen podle standardu jazyka C++.
+C4644 | použití offsetof – makro na základě vzoru v konstantních výrazech je nestandardní; použití offsetof místo toho definované ve standardní knihovně C++
+C4845 | "\_\_declspec (ne\_init\_all)" se ignoruje, pokud "/ d1initall\[0\|1\|2\|3]' nebyl zadán v příkazovém řádku
+C4846 | "*hodnotu*" není platným argumentem pro ' / d1initall': příkazového řádku příznak, ignorováno
+C4847 | "\_\_declspec (ne\_init\_all)" může používat jedině pro funkce, typ třídy nebo místní proměnná: ignoruje
+C4866 | Kompilátor nemůže vynutit pořadí vyhodnocování zleva doprava pro volání '*funkce*.
+C5046 | "*funkce*": Symbol, zahrnující typ s vnitřním propojením nedefinovaná.
+C5047 | nestandardní použití \_ \_Pokud\_existuje s moduly se nepodporuje
+C5048 | Použití makra "*makro*' může způsobit nedeterministické výstupu
+C5049 | "*řetězec*": Vkládání úplnou cestu může vést k výstupu závislé na počítači
+C5050 | Je to možné kompatibilní prostředí při importování modulu '*module_name*': *problém*
+C5100 | \_\_Posouzení ohrožení zabezpečení\_ARGS\_ \_ je vyhrazená pro použití v variadická makra
+C5101 | použití direktivy preprocesoru v seznamu argumentů funkci podobnou makru je nedefinované chování
+C5102 | ignoruje se neplatná příkazového řádku definice makra "*hodnota*.
+C5103 | vkládání "*token1*"a"*token2*' nemá za následek platný token předběžného zpracování
+C5104 | nenašel se*řetězec1*#*řetězec2*'v seznamu nahrazení makra, měli jste na mysli'*řetězec1*"" #*řetězec2*"?
+C5105 | rozšíření makra vytváření "definice" má nedefinované chování
+C5106 | předefinovalo se různé názvy parametrů – makro
+C5107 | chybí ukončení "*char*" znak
 
 ## <a name="warnings-introduced-in-visual-c-2017-version-157-compiler-version-1914264280"></a>Upozornění zavedená v sadě Visual C++ 2017 verze 15.7 (verze kompilátoru 19.14.26428.0)
 
@@ -72,7 +106,7 @@ Tato upozornění a všechna upozornění v pozdějších verzích jsou potlače
 
 |||
 |-|-|
-C4843|"*type1*': Obslužná rutina výjimky odkazu na pole nebo typ funkce není dostupná, použijte '*type2*' místo toho
+C4843|"*type1*": Obslužná rutina výjimky odkazu na pole nebo typ funkce není dostupná, použijte '*type2*' místo toho
 C4844|"export module *module_name*;" je teď preferovanou syntaxí pro deklaraci rozhraní modulu
 C5039|"*funkce*': ukazatel nebo odkaz na potenciální vyvolávací funkci předán do funkce extern C v - EHc. Pokud tato funkce vyvolá výjimku, může dojít k nedefinovanému chování.
 C5040|Specifikace dynamických výjimek jsou platné jenom v C ++ 14 a dřívějších verzích; zpracuje jako noexcept(false).
@@ -111,6 +145,8 @@ C4468|'fallthrough': atribut musí následovat popisek případu nebo výchozí 
 C4698|"*funkce*" je pro účely vyhodnocení pouze a může změnit v budoucích aktualizacích nebo odebrání.
 C4839|nestandardní použití třídy*třídy*"jako argumentu variadické funkce
 C4840|nepřenositelné použití třídy*třídy*"jako argumentu variadické funkce
+
+::: moniker-end
 
 ## <a name="warnings-introduced-in-visual-c-2015-update-3-compiler-version-1900242151"></a>Upozornění zavedená ve Visual C++ 2015 Update 3 (verze kompilátoru 19.00.24215.1)
 
@@ -166,7 +202,7 @@ C4475|"*funkce*': modifikátor délky '*modifikátor*'nelze použít se znakem p
 C4476|"*funkce*': Neznámý znak pole typů '*znak*" ve specifikátoru formátu
 C4477|"*funkce*': řetězec formátu"*řetězec*"vyžaduje argument typu"*typ*", ale variadický argument *číslo* má typ"*typ*.
 C4478|"*funkce*': nejde směšovat poziční a nepoziční zástupné symboly ve stejném formátovacím řetězci
-C4494|"*typ*': __declspec(Allocator) se ignoruje protože návratový typ funkce není ukazatel nebo odkaz
+C4494|"*typ*": __Declspec(Allocator) se ignoruje protože návratový typ funkce není ukazatel nebo odkaz
 C4495|používá se nestandardní rozšíření: __super: nahraďte explicitním názvem základní třídy
 C4496|používá se nestandardní rozšíření 'for each' používá: nahraďte rozsahové pro příkaz
 C4497|používá se nestandardní rozšíření 'sealed': nahraďte hodnotou final.
@@ -200,7 +236,7 @@ C5024|"*deklarace*': přesunout konstruktor byl implicitně definovaný jako ods
 C5025|"*deklarace*': Přesuňte operátor přiřazení je implicitně definovaný jako odstraněný
 C5026|"*typ*': přesunout konstruktor byl implicitně definovaný jako odstraněný
 C5027|"*typ*': Přesuňte operátor přiřazení je implicitně definovaný jako odstraněný
-C5028|"*název*': zarovnání zadané před deklarací (*číslo*) není zadané v definici
+C5028|"*název*": Zarovnání zadané před deklarací (*číslo*) není zadané v definici
 C5029|používá se nestandardní rozšíření: atributy zarovnání v C++ použít pro proměnné, datové členy a pouze typy značek
 C5030|atribut '*atribut*' nebyla rozpoznána
 
@@ -212,7 +248,7 @@ Tato upozornění a všechna upozornění v pozdějších verzích jsou potlače
 |-|-|
 C4301|"*typ*': přepisující virtuální funkce jenom se liší od"*deklarace*"v kvalifikátoru const/volatile
 C4316|"*typ*': objekt přidělený do haldy nemusí být zarovnáním *číslo*
-C4380|"*typ*': konstruktor default nemůže být zastaralý.
+C4380|"*typ*": Výchozí konstruktor nemůže být zastaralý.
 C4388|"*token*': podepsané/unsigned – neshoda
 C4423|'std::bad_alloc': zachytí se třídou ("*typ*") na řádku *číslo*
 C4424|zachycení pro "*typ*"před"*typ*' na řádku *číslo*; nepředvídatelné chování může dojít, pokud" předcházelo:
@@ -245,7 +281,7 @@ C4416|__declspec(code_seg(...)) obsahuje prázdný řetězec: ignoruje
 C4417|explicitní vytváření instancí šablon nemůže mít __declspec(code_seg(...)): ignoruje
 C4418|__declspec(code_seg(...)) se pro výčet ignoruje.
 C4419|"*název*'nemá žádný vliv při použití u privátního ref class'*typ*".
-C4435|"*typ*': rozložení objektu pod: / vd2 se změní z důvodu virtuální base '*typ*.
+C4435|"*typ*": Rozložení objektu pod: / vd2 se změní z důvodu virtuální base '*typ*.
 C4436|přetypování dynamic_cast z virtuální base '*typ*"do"*typ*"v konstruktoru nebo destruktoru by mohlo selhat s částečně vytvořeným objektem.
 C4437|přetypování dynamic_cast z virtuální base '*typ*"do"*typ*' může v některých kontextech selhat
 C4443|Parametr očekávané pragma bude mít '0', '1' nebo '2'
@@ -254,16 +290,16 @@ C4447|"hlavní" podpis nalezen bez model vláken. Zvažte použití ' int main (
 C4448|"*typ*' nemá v metadatech zadané výchozí rozhraní. Vybere: "*typ*", která může při běhu selhat.
 C4449|"*typ*" nezapečetěný typ musí být označené jako [WebHostHidden].
 C4450|"*typ*"musí být označené jako [WebHostHidden]' protože se odvozuje od"*typ*.
-C4451|"*typ*': použití třídy ref class*typ*" uvnitř tohoto kontextu může vést k neplatnému zařazování objektu napříč kontexty
+C4451|"*typ*": Použití třídy ref class*typ*"uvnitř tohoto kontextu může vést k neplatnému zařazování objektu napříč kontexty
 C4452|"*typ*': typ public nemůže být v globálním oboru. Musí být v oboru názvů, který je podřízený názvu výstupního souboru .winmd.
-C4453|"*typ*': Typ [WebHostHidden] by neměl používat na publikované ploše typu public, který není [WebHostHidden].
+C4453|"*typ*": [WebHostHidden] by se neměl používat na publikované ploše typu public, který není [WebHostHidden].
 C4454|"*typ*" je přetížené o větší než počet vstupních parametrů bez nastavení [defaultoverload] zadaná. Výběr "*deklarace*' jako výchozí přetížení
 C4471|"*název*': Dopředná deklarace výčtu bez oboru musí mít základní typ (předpokládá se int)
 C4472|"*název*' je nativní výčet: přidejte specifikátor přístupu (private/public) Chcete-li deklarovat výčet spravované/WinRT
 C4492|"*typ*': odpovídá metodě base ref class '*typ*", ale není označené jako override.
 C4493|odstranit výraz nemá žádný účinek, jako je destruktor "*typ*' nemá přístupnost public.
-C4585|"*typ*': A WinRT musí být buď zapečetěná třída public ref class nebo odvozovat od existující nezapečetěné třídy
-C4586|"*typ*': veřejný typ nemůže být deklarovaný v nejvyšší úrovni obor názvů s názvem"Windows"
+C4585|"*typ*": WinRT "public ref class' musí být buď zapečetěné nebo odvozovat od existující nezapečetěné třídy
+C4586|"*typ*": Veřejný typ nemůže být deklarovaný v nejvyšší úrovni obor názvů s názvem "Windows"
 C4695|#pragma execution_character_set: "*argument*' není podporovaný argument: momentálně se podporuje jenom"UTF-8' je podporován.
 C4703|potenciálně neinicializovaná lokální proměnná ukazatele "*název*" použít
 C4728|/ Yl-se ignoruje, protože je vyžadován odkaz na soubor PCH
@@ -322,7 +358,7 @@ C4342|Změna chování: "*typ*" volá se, ale operátor členu byl zavolán v p�
 C4350|Změna chování: "*deklarace*"volá namísto"*deklarace*.
 C4357|Param array argument nalezena v seznamu formálních argumentů pro delegáta '*deklarace*"ignoruje při generování"*typ*.
 C4358|"*výraz*': návratový typ kombinovaných delegátů není"void"; vrácená hodnota není definována
-C4359|"*typ*': specifikátor zarovnání je menší než skutečné zarovnání (*číslo*) a budou ignorovány.
+C4359|"*typ*": Specifikátor zarovnání je menší než skutečné zarovnání (*číslo*) a budou ignorovány.
 C4362|"*typ*': modul CLR nepodporuje zarovnání větší než 8 bajtů.
 C4364|#using pro sestavení '*název*"dřív zjištěné v: *popis*(*číslo*) bez atributu as_friend; atribut as_friend Nepoužito
 C4365|"*výraz*': převod z '*typ*"do"*typ*", podepsaný/unsigned – neshoda
@@ -349,8 +385,8 @@ C4399|"*typ*': symbol na úrovni jednotlivého procesu nesmí být označené __
 C4400|"*typ*': kvalifikátory const/volatile pro tento typ nejsou podporované
 C4412|"*deklarace*': podpis funkce obsahuje typ"*typ*'; Jsou objekty C++ není bezpečné předávat mezi čistým kódem a kombinovaným nebo nativním kódem.
 C4429|je to možné neúplný nebo nesprávně vytvořený universal-character-name
-C4430|chybějící specifikátor typu: předpokládá se int Poznámka: C++ nepodporuje typ default int.
-C4431|chybějící specifikátor typu: předpokládá se int Poznámka: C již nepodporuje výchozí int.
+C4430|chybějící specifikátor typu: předpokládá se int Poznámka: Jazyk C++ nepodporuje typ default int.
+C4431|chybějící specifikátor typu: předpokládá se int Poznámka: C už nepodporuje typ default int.
 C4434|Statický konstruktor musí mít přístupnost private; Změna na soukromý přístup
 C4439|"*typ*': definice funkce se spravovaným typem v podpisu musí mít konvenci volání __clrcall
 C4441|konvence volání '*konvence*se ignoruje; "*konvence*' místo toho použita
@@ -377,19 +413,19 @@ C4568|"*typ*': podpisu explicitního přepsání neodpovídají žádné členy
 C4569|"*typ*': podpisu explicitního přepsání neodpovídají žádné členy
 C4570|"*typ*': není explicitně deklarované jako abstraktní, ale má abstraktní funkce
 C4571|Informační: sémantika catch(...) se od verze Visual C++ 7.1; změnila strukturované výjimky (SEH) už se nezachycují.
-C4572|Atribut [ParamArray] je zastaralá pod parametrem/CLR, použijte tři tečky. místo toho
+C4572|Atribut [ParamArray] je zastaralá pod parametrem/CLR, použijte '...' Místo toho
 C4580|[attribute] je zastaralá; Místo toho zadejte *zadané*atribut jako základní třída
 C4581|zastaralé chování: ' "*název*" "nahradit"*název*"atributu procesu
 C4606|#pragma warning: "*číslo*se ignoruje; Upozornění analýzy kódu nejsou přidružená k úrovním upozornění
-C4631|MSXML nebo XPath není k dispozici, dokument XML, který nezpracují se komentáře. *Popis*
+C4631|MSXML nebo XPath není k dispozici, dokument XML, který nezpracují se komentáře. *description*
 C4632|Komentář k dokumentu XML: *popis* -přístup byl odepřen: *popis*
-C4633|Komentář k dokumentu XML*popis*: Chyba: *popis*
-C4634|Komentář k dokumentu XML*popis*: nelze použít: *popis*
-C4635|Komentář k dokumentu XML*popis*: chybně vytvořený kód XML: *popis*
-C4636|Komentář k dokumentu XML*popis*: značka vyžaduje neprázdný "*popis*" atribut.
-C4637|Komentář k dokumentu XML*popis*: \<zahrnout > značky zahozeny. *Popis*
-C4638|Komentář k dokumentu XML*popis*: odkaz na neznámý symbol "*popis*".
-C4639|Chyba MSXML; dokumentu XML, který nezpracují se komentáře. *Popis*
+C4633|Komentář k dokumentu XML *popis*: Chyba: *popis*
+C4634|Komentář k dokumentu XML *popis*: nelze použít: *popis*
+C4635|Komentář k dokumentu XML *popis*: chybně vytvořený kód XML: *popis*
+C4636|Komentář k dokumentu XML *popis*: značka vyžaduje neprázdný "*popis*" atribut.
+C4637|Komentář k dokumentu XML *popis*: \<zahrnout > značky zahozeny. *description*
+C4638|Komentář k dokumentu XML *popis*: odkaz na neznámý symbol "*popis*".
+C4639|Chyba MSXML; dokumentu XML, který nezpracují se komentáře. *description*
 C4641|Komentář k dokumentu XML má nejednoznačný křížový odkaz:
 C4678|Základní třída*deklarace*'je méně dostupný než'*název*.
 C4679|"*popis*': nepovedlo se naimportovat člen
@@ -417,7 +453,7 @@ C4740|Flow nebo z vloženého kódu asm potlačuje globální optimalizaci.
 C4742|"*proměnnou*"má jiné zarovnání v"*umístění*"a"*umístění*': *číslo* a *číslo*
 C4743|"*název*"má jinou velikost v"*umístění*"a"*umístění*': *číslo* a *číslo* bajtů
 C4744|"*název*"má jiný typ v"*umístění*"a"*umístění*": "*typ*"a"*typ*.
-C4747|Volání spravované '*typ*': nastavený zámek zavaděče, včetně vstupního bodu DLL a volání dosáhlo ze vstupního bodu DLL se možná nespustí spravovaný kód
+C4747|Volání spravované '*typ*": Zámek zavaděče, včetně vstupního bodu DLL a volání dosáhlo ze vstupního bodu DLL se možná nespustí spravovaný kód
 C4761|Neshoda celočíselné velikosti v argumentu; Zadaný převod.
 C4764|Nelze zarovnat objekty catch na hodnotu větší než 16 bajtů.
 C4788|"*identifikátor*': identifikátor se zkrátil na"*číslo*"znaky
@@ -430,7 +466,7 @@ C4835|"*typ*': inicializátor pro exportovaná data se nespustí, dokud se v hos
 C4867|"*typ*': nestandardní syntaxe; pomocí '&' vytvořte ukazatel na člena
 C4936|Tato možnost __declspec je podporovaná jenom při kompilaci s parametrem/CLR nebo/CLR: pure
 C4937|"*název*"a"*název*jsou nejde rozlišit jako argumenty, které mají*možnost*.
-C4938|"*typ*': plovoucího bodu redukční proměnná může způsobit nekonzistentní výsledky v/FP: strict nebo #pragma fenv_access
+C4938|"*typ*": Plovoucího bodu redukční proměnná může způsobit nekonzistentní výsledky v/FP: strict nebo #pragma fenv_access
 C4939|#pragma vtordisp je zastaralá a v příští verzi Visual C++ se odebere
 C4947|"*typ*': označené jako zastaralé
 C4949|direktivy pragma "spravované" a 'nespravované' mají smysl jenom při kompilaci s "/ clr [: možnost]"
@@ -442,7 +478,7 @@ C4958|"*výraz*': není možné ověřit aritmetiku ukazatele
 C4959|nejde definovat *třídy* "*typ*" v/CLR: safe vzhledem k tomu, že přístup k jeho členům vrací neověřitelný kód
 C4960|"*popis*" je moc velké, aby se dalo Profilovat.
 C4961|Žádná data profilu se nesloučila do:*umístění*", optimalizace na základě profilu zakázáno
-C4962|"*popis*': profilováním řízené optimalizace zakázány, protože optimalizace způsobily nekonzistenci dat profilu
+C4962|"*popis*": Optimalizace na základě profilu zakázáno, protože optimalizace způsobily nekonzistenci dat profilu
 C4963|"*popis*': nenašla se žádná data profilu; jiné parametry kompilátoru v instrumentovaném buildu
 C4964|Nebyly zadány žádné možnosti optimalizace; informace o profilu se nebudou shromažďovat.
 C4965|implicitní pole celé číslo 0; Použijte nullptr nebo explicitní přetypování.
@@ -496,7 +532,7 @@ C4096|"*typ*': rozhraní není rozhraní COM; nebude se emitovat do IDL
 C4097|byl očekáván parametr pragma bude mít "obnovit" nebo hodnotu off.
 C4165|"HRESULT" je převáděn na 'bool'; jste si jisti, že je to, co chcete?
 C4183|"*název*': chybí návratový typ; předpokládá se, že členská funkce vrátí"int"
-C4199|*Popis*
+C4199|*description*
 C4255|"*název*': zadaný žádný prototyp funkce: převod '(') '(void).
 C4256|"*deklarace*': konstruktor pro třídu s virtuálními základy má '...'; volání nemusí být kompatibilní se staršími verzemi Visual C++
 C4258|"*název*': definice z for loop se ignoruje; je použita definice z nadřazeného oboru
@@ -555,7 +591,7 @@ C4531|Zpracování výjimek jazyka C++ není k dispozici ve Windows CE. Použit�
 C4532|"*popis*': přechod z *nakonec* blok má během zpracování ukončení nedefinované chování
 C4533|Inicializace "*deklarace*" je přeskočených ' goto *deklarace*.
 C4534|"*deklarace*' nesmí být výchozí konstruktor pro *třídy* "*typ*"kvůli výchozího argumentu
-C4535|Calling _set_se_translator() vyžaduje/EHa.
+C4535|calling _set_se_translator() requires /EHa
 C4536|"*popis*': název typu překračuje limit metadat '*číslo*" znaky
 C4537|"*deklarace*": "." u-uživatelem Definovaný typ
 C4542|Přeskakuje se generování sloučeného vloženého textového souboru nelze zapisovat *typ* souboru: "*filename*': *chyba*
@@ -584,7 +620,7 @@ C4680|"*typ*': Konstrukt coclass nespecifikuje výchozí rozhraní
 C4681|"*typ*': Konstrukt coclass nespecifikuje výchozí rozhraní, který je zdrojem událostí
 C4682|"*typ*': žádný parametr směrového atributu zadán, výchozí [v]
 C4683|"*deklarace*': Zdroj události má"out"-parametr; postupujte obezřetně při připojení více obslužných rutin událostí
-C4684|"*popis*': upozornění!! atribut může způsobit vygenerování neplatného kódu: používejte opatrně,
+C4684|"*popis*": UPOZORNĚNÍ! atribut může způsobit vygenerování neplatného kódu: používejte opatrně,
 C4685|byl očekáván ' >> ' najít ' >> "při analýze parametrů šablony
 C4700|Neinicializovaná lokální proměnná '*název*"použít
 C4701|potenciální neinicializovaná lokální proměnná '*název*"použít

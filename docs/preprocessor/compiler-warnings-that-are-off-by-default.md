@@ -5,15 +5,16 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: 48c18ce5af758e1329f149bc49969dad733af88f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e189ead864fe2be6e0ccb3bc76a58f2441740076
+ms.sourcegitcommit: a901c4acbfc80ca10663d37c09921f04c5b6dd17
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651370"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58142557"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Upozornění kompilátoru, které jsou ve výchozím nastavení vypnuta
-Kompilátor obsahuje upozornění, která jsou vypnuté ve výchozím nastavení, protože většina vývojářů nechcete k jejich zobrazení. V některých případech, představují stylistické podle vlastní volby, nebo jsou společné idiomy ve starším kódu nebo využít výhod rozšíření společnosti Microsoft pro jazyk. V ostatních případech označují oblast, ve které programátoři často vytvářet nesprávné předpoklady, které mohou vést k neočekávaným nebo nedefinované chování. Některá tato upozornění může být velmi hlučného v záhlaví knihovny. Knihovny runtime jazyka C a standardní knihovny C++ jsou určeny k emitování žádná upozornění pouze na úrovni upozornění [/W4](../build/reference/compiler-option-warning-level.md).
+
+Kompilátor podporuje upozornění, která jsou vypnuté ve výchozím nastavení, protože většina vývojářů nenajdete je užitečné. V některých případech upozorňují stylistické možnost volby, ani s společné idiomy ve starším kódu. Další varování jsou týkajících se používání rozšíření společnosti Microsoft pro jazyk. V ostatních případech označují oblast, ve které programátoři často vytvářet nesprávné předpoklady, které mohou vést k neočekávaným nebo nedefinované chování. Pokud je povoleno, může některá tato upozornění se zobrazí v mnoha případech v záhlaví knihovny. Knihovny runtime jazyka C a standardní knihovny C++ jsou určeny k emitování žádná upozornění pouze na úrovni upozornění [/W4](../build/reference/compiler-option-warning-level.md).
 
 ## <a name="enable-warnings-that-are-off-by-default"></a>Povolit upozornění, které jsou ve výchozím nastavení vypnuta
 
@@ -33,7 +34,7 @@ Můžete povolit upozornění, která jsou obvykle vypnuto ve výchozím nastave
 
 - [/w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
 
-   To umožňuje upozornění *nnnn* na úrovni *L*.
+   Tato možnost povolí upozornění *nnnn* na úrovni *L*.
 
 ## <a name="warnings-that-are-off-by-default"></a>Upozornění, která jsou ve výchozím nastavení vypnuta
 
@@ -43,7 +44,8 @@ Následující upozornění jsou vypnuté ve výchozím nastavení v sadě Visua
 |-|-|
 |[C4061](../error-messages/compiler-warnings/compiler-warning-level-4-c4061.md) (úroveň 4)|Enumerátor "*identifikátor*"v přepnutí výčtu'*výčet*' není explicitně zpracován popisek případu|
 |[C4062](../error-messages/compiler-warnings/compiler-warning-level-4-c4062.md) (úroveň 4)|Enumerátor "*identifikátor*"v přepnutí výčtu'*výčet*' není zpracován|
-|C4191 (úroveň 3)|"*operátor*': nebezpečný převod z '*type_of_expression*"do"*type_required*"|
+| [C4165](../error-messages/compiler-warnings/compiler-warning-level-1-c4165.md) (úroveň 1) | "HRESULT" je převáděn na 'bool'; jste si jisti, že je to, co chcete? |
+| [C4191](../error-messages/compiler-warnings/compiler-warning-level-3-c4191.md) (úroveň 3)|"*operátor*': nebezpečný převod z '*type_of_expression*"do"*type_required*"|
 |[C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md) (úroveň 4)|"*identifikátor*': převod z '*type1*"do"*type2*", může dojít ke ztrátě dat.|
 |[C4254](../error-messages/compiler-warnings/compiler-warning-level-4-c4254.md) (úroveň 4)|"*operátor*': převod z '*type1*"do"*type2*", může dojít ke ztrátě dat|
 |[C4255](../error-messages/compiler-warnings/compiler-warning-level-4-c4255.md) (úroveň 4)|"*funkce*': zadaný žádný prototyp funkce: převod '(') '(void).|
@@ -64,7 +66,7 @@ Následující upozornění jsou vypnuté ve výchozím nastavení v sadě Visua
 |C4388 (úroveň 4)|neshoda se znaménkem, nebo bez znaménka|
 |[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) (úroveň 2)|"*funkce*': podpis funkce obsahuje typ"*typ*'; Jsou objekty C++ není bezpečné předávat mezi čistým kódem a kombinovaným nebo nativním kódem|
 |C4426 (úroveň 1)|příznaky optimalizace se nemění, včetně záhlaví, může být #pragma optimize() <sup>14.1</sup>|
-|[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (úroveň 4)|"*class1*': rozložení objektu pod: / vd2 se změní z důvodu virtuální base '*class2*.|
+|[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (úroveň 4)|"*class1*": Rozložení objektu pod: / vd2 se změní z důvodu virtuální base '*class2*.|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) (úroveň 4)|přetypování dynamic_cast z virtuální base '*class1*"do"*class2*' může v některých kontextech selhat|
 |C4444 (úroveň 3)|v tomto kontextu není implementována nejvyšší úroveň '__unaligned'|
 |[C4464](../error-messages/compiler-warnings/c4464.md) (úroveň 4)|relativní cestu zahrnutí obsahuje '..'|
@@ -97,6 +99,7 @@ Následující upozornění jsou vypnuté ve výchozím nastavení v sadě Visua
 |[C4626](../error-messages/compiler-warnings/compiler-warning-level-4-c4626.md) (úroveň 4)|'derived class': operátor přiřazení nelze generovat, protože operátor přiřazení základní třídy je nedostupný|
 |[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md) (úroveň 1)|spřežky nejsou podporovány se -Ze. Posloupnosti znaků "*digraph*'není interpretována jako alternativní token pro'*char*.|
 |[C4640 týkajícího](../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md) (úroveň 3)|"*instance*': konstrukce lokálního statického objektu není bezpečná pro vlákno|
+| C4643 (úroveň 4) | Předat dál deklarace "*identifikátor*' v oboru názvů std není povolen podle standardu jazyka C++. <sup>15.8</sup> |
 |C4647 (úroveň 3)|Změna chování: __is_pod (*typ*) má jinou hodnotu v předchozích verzích|
 |C4654 (úroveň 4)|Kód umístěný před vložení předkompilované hlavičky řádku budou ignorovány. Přidejte kód do předkompilované hlavičky. <sup>14.1</sup>|
 |[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) (úroveň 4)|"*symbol*'není definován jako preprocesor makro, nahraďte '0' pro'*direktivy*.|
@@ -112,7 +115,9 @@ Následující upozornění jsou vypnuté ve výchozím nastavení v sadě Visua
 |C4774 (úroveň 4)|"*řetězec*': formátovací řetězec očekávaný v argumentu *číslo* není řetězcový literál|
 |C4777 (úroveň 4)|"*funkce*': řetězec formátu"*řetězec*"vyžaduje argument typu"*type1*", ale variadický argument *číslo* má typ"*type2*.|
 |C4786 (úroveň 3)|"*symbol*': název objektu byl zkrácen na"*číslo*"znaky v informacích o ladění|
+| [C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md) (úroveň 4) | Implicitní převod z '*typ*' na typ bool. Ztráty informací možné <sup>16.0</sup> |
 |[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md) (úroveň 4)|"*bajtů*"bajtů výplně se přidalo po konstrukci"*member_name*.|
+| [C4822](../error-messages/compiler-warnings/compiler-warning-level-1-c4822.md) (úroveň 1) | "*člen*': členská funkce lokální třídy nemá tělo. |
 |C4826 (úroveň 2)|Převod z '*type1*"do"*type2*"je rozšířen o znaménko. To může způsobit neočekávané chování za běhu.|
 |C4837 (úroveň 4)|zjistil se trigraph: "?? *znak*"nahrazuje"*znak*.|
 |C4841 (úroveň 4)|nestandardní rozšíření: v offsetof použilo složené označení člena|
@@ -150,6 +155,10 @@ Následující upozornění jsou vypnuté ve výchozím nastavení v sadě Visua
 <sup>15.3</sup> toto upozornění je k dispozici od verze Visual Studio 2017 verze 15.3.<br/>
 <sup>15.5</sup> toto upozornění je k dispozici od verze Visual Studio 2017 verze 15.5.<br/>
 <sup>15.7</sup> toto upozornění je k dispozici od verze Visual Studio 2017 verze 15.7.<br/>
+<sup>15.8</sup> toto upozornění je k dispozici od verze Visual Studio 2017 verze 15.8.<br/>
+::: moniker range=">= vs-2019"
+<sup>16.0</sup> toto upozornění je k dispozici od verze Visual Studio. 2019 RTM.<br/>
+::: moniker-end
 <sup>Jako trvalé</sup> toto upozornění je vypnuté, pokud [/ permissive-](../build/reference/permissive-standards-conformance.md) – možnost kompilátoru je nastavena.<br/>
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Upozornění vypnuto ve výchozím nastavení v dřívějších verzích
@@ -167,7 +176,7 @@ Toto upozornění je vypnuto ve výchozím nastavení ve verzích kompilátoru p
 
 |||
 |-|-|
-|[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) (úroveň 4)|chybějící specifikátor typu: předpokládá se int Poznámka: C již nepodporuje výchozí int.|
+|[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) (úroveň 4)|chybějící specifikátor typu: předpokládá se int Poznámka: C už nepodporuje typ default int.|
 
 ## <a name="see-also"></a>Viz také
 
