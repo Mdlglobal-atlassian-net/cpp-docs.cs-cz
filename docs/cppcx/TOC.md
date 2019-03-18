@@ -1,4 +1,4 @@
-# [Referenční dokumentace jazyka Visual C++ (C++/CX)](visual-c-language-reference-c-cx.md)
+# [Referenční zdroje k jazyku C++/CX](visual-c-language-reference-c-cx.md)
 ## [Stručná referenční dokumentace (C++/CX)](quick-reference-c-cx.md)
 ## [Systém typů (C++/CX)](type-system-c-cx.md)
 ### [Obory názvů a viditelnost typů (C++/CX )](namespaces-and-type-visibility-c-cx.md)
