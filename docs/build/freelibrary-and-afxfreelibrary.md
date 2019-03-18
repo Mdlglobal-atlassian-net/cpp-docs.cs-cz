@@ -13,12 +13,12 @@ helpviewer_keywords:
 - explicit linking [C++]
 - DLLs [C++], unloading
 ms.assetid: 4a48d290-3971-43e9-8e97-ba656cd0c8f8
-ms.openlocfilehash: 51d14b86a92f3acb76dc54d1bade2d2cd0baa055
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 709e4fdbc24d6fbbac44944e686a6fecf8c9b8db
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419943"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808141"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary a AfxFreeLibrary
 
@@ -28,18 +28,18 @@ V aplikaci MFC pomocí [AfxFreeLibrary](../mfc/reference/application-information
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
-- [Jak implicitní propojení s knihovnou DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)
+- [Propojení spustitelného souboru s knihovnou DLL](linking-an-executable-to-a-dll.md#linking-implicitly)
 
-- [Určit, kterou propojovací metodu použít](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [Propojení spustitelného souboru s knihovnou DLL](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
 
-- [LoadLibrary a AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)
+- [LoadLibrary a AfxLoadLibrary](loadlibrary-and-afxloadlibrary.md)
 
-- [GetProcAddress](../build/getprocaddress.md)
+- [GetProcAddress](getprocaddress.md)
 
 ## <a name="see-also"></a>Viz také:
 
-[Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)<br/>
+[Knihovny DLL v jazyce Visual C++](dlls-in-visual-cpp.md)<br/>
 [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
 [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)
