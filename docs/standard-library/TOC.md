@@ -405,7 +405,6 @@
 #### [<system_error> – funkce](system-error-functions.md)
 #### [<system_error> – operátory](system-error-operators.md)
 #### [<system_error> – výčty](system-error-enums.md)
-#### [<system_error> – definice Typedef](system-error-typedefs.md)
 #### [error_category – třída](error-category-class.md)
 #### [error_code – třída](error-code-class.md)
 #### [error_condition – třída](error-condition-class.md)
