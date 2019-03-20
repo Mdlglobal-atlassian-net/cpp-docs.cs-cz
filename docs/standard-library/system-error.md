@@ -1,18 +1,18 @@
 ---
 title: '&lt;system_error&gt;'
-ms.date: 11/04/2016
+ms.date: 03/15/2019
 f1_keywords:
 - <system_error>
 - system_error
 helpviewer_keywords:
 - system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-ms.openlocfilehash: cb4870a22fd06039751f87f26dfa40e8ddcf2500
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9bba893f63ca935e0feeb891faa4e141e1958306
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662758"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58172982"
 ---
 # <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
 
@@ -28,14 +28,8 @@ Zahrnout hlavičku \<system_error > Chcete-li definovat třídu výjimky `system
 
 |||
 |-|-|
-|[generic_category –](../standard-library/system-error-functions.md#generic_category)|Představuje konkrétní kategorii obecné chyby.|
+|[generic_category](../standard-library/system-error-functions.md#generic_category)|Představuje konkrétní kategorii obecné chyby.|
 |[system_category](../standard-library/system-error-functions.md#system_category)|Představuje konkrétní kategorii chyby způsobené nižší úrovně systému přetečení.|
-
-### <a name="typedefs"></a>Typedefs
-
-|Název typu|Popis|
-|-|-|
-|[generic_errno](../standard-library/system-error-typedefs.md#generic_errno)|Typ, který představuje výčet, který poskytuje symbolické názvy pro všechna makra kód chyby definované v rámci specifikace Posix v `<errno.h>`.|
 
 ### <a name="functions"></a>Funkce
 
@@ -62,11 +56,11 @@ Zahrnout hlavičku \<system_error > Chcete-li definovat třídu výjimky `system
 
 |||
 |-|-|
-|[error_category –](../standard-library/error-category-class.md)|Představuje abstraktní, běžné základ pro objekty, které popisují kategorie kódů chyb.|
-|[error_code –](../standard-library/error-code-class.md)|Reprezentuje chyby nízké úrovně systému, které jsou specifické pro implementaci.|
+|[error_category](../standard-library/error-category-class.md)|Představuje abstraktní, běžné základ pro objekty, které popisují kategorie kódů chyb.|
+|[error_code](../standard-library/error-code-class.md)|Reprezentuje chyby nízké úrovně systému, které jsou specifické pro implementaci.|
 |[error_condition](../standard-library/error-condition-class.md)|Představuje uživatelem definované chybové kódy.|
 |[is_error_code_enum](../standard-library/is-error-code-enum-class.md)|Představuje typ predikát, který testuje [error_code – třída](../standard-library/error-code-class.md) výčtu.|
-|[is_error_condition_enum –](../standard-library/is-error-condition-enum-class.md)|Představuje typ predikát, který testuje [error_condition – třída](../standard-library/error-condition-class.md) výčtu.|
+|[is_error_condition_enum](../standard-library/is-error-condition-enum-class.md)|Představuje typ predikát, který testuje [error_condition – třída](../standard-library/error-condition-class.md) výčtu.|
 |[system_error](../standard-library/system-error-class.md)|Představuje základní třídu pro všechny výjimky vyvolané hlášení nižší úrovně systému přetečení.|
 
 ## <a name="requirements"></a>Požadavky

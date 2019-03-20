@@ -1,6 +1,6 @@
 ---
-title: '&lt;system_error –&gt; funkce'
-ms.date: 11/04/2016
+title: '&lt;system_error&gt; functions'
+ms.date: 03/15/2019
 f1_keywords:
 - system_error/std::generic_category
 - system_error/std::make_error_code
@@ -12,26 +12,26 @@ helpviewer_keywords:
 - std::make_error_code
 - std::make_error_condition
 - std::system_category
-ms.openlocfilehash: 24890830456e3c1026b02960aa650a43da3b6067
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78be83af678b553babbf1cde3d96c1507940b611
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554379"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58172904"
 ---
-# <a name="ltsystemerrorgt-functions"></a>&lt;system_error –&gt; funkce
+# <a name="ltsystemerrorgt-functions"></a>&lt;system_error&gt; functions
 
 ||||
 |-|-|-|
-|[generic_category –](#generic_category)|[make_error_code](#make_error_code)|[make_error_condition](#make_error_condition)|
-|[system_category](#system_category)|
+|[generic_category](#generic_category)|[make_error_code](#make_error_code)|[make_error_condition](#make_error_condition)|
+|[system_category](#system_category)|||
 
-## <a name="generic_category"></a>  generic_category –
+## <a name="generic_category"></a> generic_category –
 
 Představuje konkrétní kategorii obecné chyby.
 
 ```cpp
-extern const error_category& generic_category();
+const error_category& generic_category() noexcept;
 ```
 
 ### <a name="remarks"></a>Poznámky
@@ -43,14 +43,13 @@ extern const error_category& generic_category();
 Vytváří objekt error kódu.
 
 ```cpp
-error_code make_error_code(generic_errno _Errno);
+error_code make_error_code(std::errc error) noexcept;
 ```
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|---------------|-----------------|
-|*_Errno*|Hodnota výčtu k uložení objektu kód chyby.|
+*Chyba*\
+`std::errc` Hodnotu výčtu pro uložení objektu kód chyby.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -58,19 +57,18 @@ Objekt kódu chyby.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="make_error_condition"></a>  make_error_condition –
+## <a name="make_error_condition"></a>  make_error_condition
 
 Vytváří objekt error podmínku.
 
 ```cpp
-error_condition make_error_condition(generic_errno _Errno);
+error_condition make_error_condition(std::errc error) noexcept;
 ```
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|---------------|-----------------|
-|*_Errno*|Hodnota výčtu k uložení objektu chybová podmínka.|
+*Chyba*\
+`std::errc` Hodnotu výčtu pro uložení objektu kód chyby.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -83,7 +81,7 @@ Objekt, podmínku chyby.
 Představuje konkrétní kategorii chyby způsobené nižší úrovně systému přetečení.
 
 ```cpp
-extern const error_category& system_category();
+const error_category& system_category() noexcept;
 ```
 
 ### <a name="remarks"></a>Poznámky
@@ -92,4 +90,4 @@ extern const error_category& system_category();
 
 ## <a name="see-also"></a>Viz také:
 
-[<system_error>](../standard-library/system-error.md)<br/>
+[\<system_error>](../standard-library/system-error.md)<br/>

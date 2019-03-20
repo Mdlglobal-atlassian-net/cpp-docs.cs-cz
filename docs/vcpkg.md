@@ -3,15 +3,15 @@ title: vcpkg – Správce balíčků jazyka C++ A součásti pro Windows, Linux 
 description: vcpkg je Správce balíčků příkazového řádku, který výrazně zjednodušuje pořízení a instalaci všech knihoven C++ open source na Windows.
 author: mikeblome
 ms.author: mblome
-ms.date: 02/22/2019
+ms.date: 03/18/2019
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: dc07086f271c9789629b335b58758b88e8e3d4e8
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: 2ca1b88f492d96f8a08d296cab7f35f3b72409c9
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809708"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58172878"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Správce balíčků jazyka C++ pro Windows, Linux a MacOS
 
@@ -19,7 +19,7 @@ vcpkg je Správce balíčků příkazového řádku, který výrazně zjednoduš
 
 ## <a name="simple-yet-flexible"></a>Jednoduché a přitom flexibilní
 
-Pomocí jediného příkazu můžete stáhnout zdrojů a vytvoří knihovnu. vcpkg samotného je opensourcový projekt, k dispozici na Githubu. Můžete přizpůsobit, vašeho privátního clone(s) žádným způsobem, který vám vyhovuje. Můžete například zadat různé knihovny nebo různé verze knihoven, než jaké jsou součástí veřejného katalogu. Na jednom počítači může mít více klonech vcpkg, každý z nich vytváření vlastních sad knihovny a/nebo kompilaci přepínače atd. Každou duplicitu je samostatná, x kopírovatelné prostředí s vlastní kopii z vcpkg.exe, která funguje pouze na své vlastní hierarchie. vcpkg není přidán do proměnných prostředí a nemá žádné závislosti na registru Windows nebo Visual Studio.
+Pomocí jediného příkazu můžete stáhnout zdrojů a vytvoří knihovnu. vcpkg samotného je opensourcový projekt, k dispozici na Githubu. Můžete přizpůsobit, vašeho privátního clone(s) žádným způsobem, který vám vyhovuje. Můžete například zadat různé knihovny nebo různé verze knihoven, než jaké jsou součástí veřejného katalogu. Na jednom počítači může mít více klonech vcpkg, každý z nich vytváření vlastních sad knihovny a/nebo kompilaci přepínače atd. Každou duplicitu je samostatná prostředí s vlastní kopii vcpkg.exe, která funguje pouze na své vlastní hierarchie. vcpkg není přidán do proměnných prostředí a nemá žádné závislosti na registru Windows nebo Visual Studio.
 
 ## <a name="sources-not-binaries"></a>Zdroje není binární soubory
 
