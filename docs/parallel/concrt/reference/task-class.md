@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-ms.openlocfilehash: c1dc146f03b4ed5c0d9d82736959df3097f41199
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 99676ac0fff9584cd8453562f8918f6cadd66666
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289296"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278529"
 ---
 # <a name="task-class-concurrency-runtime"></a>task – třída (Concurrency Runtime)
 
@@ -112,7 +112,7 @@ Výsledek úkolu.
 Pokud dojde ke zrušení úlohy, volání `get` vyvolá výjimku [task_canceled](task-canceled-class.md) výjimky. Pokud úloha zjistila jinou výjimku nebo byla výjimka rozšířena z předchozí úlohy, volání `get` vyvolá tuto výjimku.
 
 > [!IMPORTANT]
->  V aplikaci pro univerzální platformu Windows (UPW), nevolejte [Concurrency::Task:: wait](#wait) nebo `get` ( `wait` volání `get`) v kódu, který běží v STA. V opačném případě modul runtime vyvolá [concurrency::invalid_operation](invalid-operation-class.md) vzhledem k tomu, že tyto metody blokují aktuální vlákno a může způsobit, že aplikace přestane reagovat. Můžete však volat `get` metody pro získání výsledku předchozího úkolu v pokračování založeném na úkolech, protože výsledek je ihned k dispozici.
+>  V aplikaci pro univerzální platformu Windows (UPW), nevolejte [Concurrency::Task:: wait](#wait) nebo `get` ( `wait` volání `get`) v kódu, který běží na vlákně uživatelského rozhraní. V opačném případě modul runtime vyvolá [concurrency::invalid_operation](invalid-operation-class.md) vzhledem k tomu, že tyto metody blokují aktuální vlákno a může způsobit, že aplikace přestane reagovat. Můžete však volat `get` metody pro získání výsledku předchozího úkolu v pokračování založeném na úkolech, protože výsledek je ihned k dispozici.
 
 ##  <a name="is_apartment_aware"></a> is_apartment_aware
 
@@ -344,7 +344,7 @@ A `task_status` hodnotu, která by mohla být `completed` nebo `canceled`. Pokud
 ### <a name="remarks"></a>Poznámky
 
 > [!IMPORTANT]
->  V aplikaci pro univerzální platformu Windows (UPW), nevolejte `wait` v kódu, který běží v STA. V opačném případě modul runtime vyvolá [concurrency::invalid_operation](invalid-operation-class.md) vzhledem k tomu, že tato metoda blokuje aktuální vlákno a může způsobit, že aplikace přestane reagovat. Můžete však volat [Concurrency::Task:: Get](#get) metody pro získání výsledku předchozího úkolu v pokračování založeném na úkolech.
+>  V aplikaci pro univerzální platformu Windows (UPW), nevolejte `wait` v kódu, který běží na vlákně uživatelského rozhraní. V opačném případě modul runtime vyvolá [concurrency::invalid_operation](invalid-operation-class.md) vzhledem k tomu, že tato metoda blokuje aktuální vlákno a může způsobit, že aplikace přestane reagovat. Můžete však volat [Concurrency::Task:: Get](#get) metody pro získání výsledku předchozího úkolu v pokračování založeném na úkolech.
 
 ## <a name="see-also"></a>Viz také:
 

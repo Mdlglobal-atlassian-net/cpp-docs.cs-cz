@@ -10,12 +10,12 @@ helpviewer_keywords:
 - porting to Win32 [C++]
 - Win32 applications [C++], migrating from UNIX
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: 325cdb86f61f658776c69057022c005c389492d3
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 3146c94879532a5c58208369bb6d131a3a027c33
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813900"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278473"
 ---
 # <a name="porting-from-unix-to-win32"></a>Portování ze systému UNIX do Win32
 
@@ -38,12 +38,6 @@ Následující seznam uvádí Microsoft a třetích stran pro přenos a podpora 
 [Průvodce migrací aplikace vlastní UNIX](https://technet.microsoft.com/library/bb656290.aspx) poskytuje technickou pomoc s migrace kódu ze systému UNIX do Win32 prostředí.
 
 [Průvodce projektem migrace Unix](https://technet.microsoft.com/library/bb656287.aspx) doplňuje Průvodce migrací systému UNIX vlastní aplikace tím, že poskytuje základní nápovědy na migraci podstatné projekty ze systému UNIX do Win32. Průvodce poskytuje Rady na problémy, které je třeba zvážit v každé fázi migrace projektu.
-
-### <a name="microsoft-windows-services-for-unix-sfu"></a>Služby Microsoft Windows pro UNIX (SFU)
-
-Služby systému Windows pro UNIX (SFU) poskytuje celou řadu multiplatformních služby pro integraci Windows do existující prostředí založené na systému UNIX. Služby pro systém UNIX poskytuje sdílení souborů, vzdálený přístup a správu, synchronizaci hesel, běžné správy adresáře, společnou sadu nástrojů a prostředí.
-
-[Služby Windows pro systém UNIX](http://www.microsoft.com/downloads/details.aspx?FamilyID=896c9688-601b-44f1-81a4-02878ff11778&displaylang=en)
 
 ### <a name="interopsystemscom"></a>InteropSystems.com
 

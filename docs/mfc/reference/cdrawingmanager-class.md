@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: a729c8d32c851c4401a0af7dd7323912a476530f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f14b21c97e5a36d5107e7db526e4153446ae2a01
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293443"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278528"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager Class
 
@@ -617,7 +617,7 @@ Reprezentuje RGB barvu HLS k dispozici.
 
 ### <a name="remarks"></a>Poznámky
 
-Barvy může být reprezentován jako HSV (odstín, sytost a hodnota), HSL (hue, sytosti a světlosti) nebo RGB (červené, zelené a modré). Další informace o různých reprezentace barvy, naleznete v tématu [barva](http://go.microsoft.com/fwlink/p/?linkid=119126).
+Barvy může být reprezentován jako HSV (odstín, sytost a hodnota), HSL (hue, sytosti a světlosti) nebo RGB (červené, zelené a modré). Další informace o různých reprezentace barvy, naleznete v tématu [barva](/windows/desktop/uxguide/vis-color).
 
 Tato metoda a `CDrawingManager::HLStoRGB_TWO` metoda provádět stejnou operaci, ale vyžadují různé hodnoty *H* parametru. V této metodě *H* je procento kruhu. V `CDrawingManager::HLStoRGB_TWO` metody *H* míru hodnota od 0 do 360, které obě představují červenou. Třeba index Mei `HLStoRGB_ONE`, hodnota 0,25 pro *H* je rovna hodnotě 90 s `HLStoRGB_TWO`.
 
@@ -649,7 +649,7 @@ Reprezentuje RGB barvu HLS k dispozici.
 
 ### <a name="remarks"></a>Poznámky
 
-Barvy může být reprezentován jako HSV (odstín, sytost a hodnota), HSL (hue, sytosti a světlosti) nebo RGB (červené, zelené a modré). Další informace o různých reprezentace barvy, naleznete v tématu [barva](http://go.microsoft.com/fwlink/p/?linkid=119126).
+Barvy může být reprezentován jako HSV (odstín, sytost a hodnota), HSL (hue, sytosti a světlosti) nebo RGB (červené, zelené a modré). Další informace o různých reprezentace barvy, naleznete v tématu [barva](/windows/desktop/uxguide/vis-color).
 
 Tato metoda a [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) metoda provádět stejnou operaci, ale vyžadují různé hodnoty *H* parametru. V této metodě *H* míru hodnota od 0 do 360, které obě představují červenou. V [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) metody *H* je procento kruhu. Třeba index Mei `HLStoRGB_ONE`, hodnota 0,25 pro *H* je rovna hodnotě 90 s `HLStoRGB_TWO`.
 
@@ -679,7 +679,7 @@ Reprezentuje RGB barvu HSV k dispozici.
 
 ### <a name="remarks"></a>Poznámky
 
-Barvy může být reprezentován jako HSV (odstín, sytost a hodnota), HSL (hue, sytosti a světlosti) nebo RGB (červené, zelené a modré). Další informace o různých reprezentace barvy, naleznete v tématu [barva](http://go.microsoft.com/fwlink/p/?linkid=119126).
+Barvy může být reprezentován jako HSV (odstín, sytost a hodnota), HSL (hue, sytosti a světlosti) nebo RGB (červené, zelené a modré). Další informace o různých reprezentace barvy, naleznete v tématu [barva](/windows/desktop/uxguide/vis-color).
 
 ##  <a name="huetorgb"></a>  CDrawingManager::HuetoRGB
 
@@ -864,7 +864,7 @@ static void __stdcall RGBtoHSL(
 
 ### <a name="remarks"></a>Poznámky
 
-Barvy může být reprezentován jako HSV (odstín, sytost a hodnota), HSL (hue, sytosti a světlosti) nebo RGB (červené, zelené a modré). Další informace o různých reprezentace barvy, naleznete v tématu [barva](http://go.microsoft.com/fwlink/p/?linkid=119126).
+Barvy může být reprezentován jako HSV (odstín, sytost a hodnota), HSL (hue, sytosti a světlosti) nebo RGB (červené, zelené a modré). Další informace o různých reprezentace barvy, naleznete v tématu [barva](/windows/desktop/uxguide/vis-color).
 
 Vrácená hodnota pro *H* je reprezentována jako desetinné číslo mezi 0 a 1, kde 0 a 1 představují červenou. Vrácené hodnoty pro *S* a *L* jsou čísla od 0 do 1.
 
@@ -896,7 +896,7 @@ static void __stdcall RGBtoHSV(
 
 ### <a name="remarks"></a>Poznámky
 
-Barvy může být reprezentován jako HSV (odstín, sytost a hodnota), HSL (hue, sytosti a světlosti) nebo RGB (červené, zelené a modré). Další informace o různých reprezentace barvy, naleznete v tématu [barva](http://go.microsoft.com/fwlink/p/?linkid=119126).
+Barvy může být reprezentován jako HSV (odstín, sytost a hodnota), HSL (hue, sytosti a světlosti) nebo RGB (červené, zelené a modré). Další informace o různých reprezentace barvy, naleznete v tématu [barva](/windows/desktop/uxguide/vis-color).
 
 Vrácená hodnota pro *H* je číslo v rozsahu od 0 do 360, kde 0 až 360 označuje červenou. Vrácení hodnoty *S* a *V* jsou čísla od 0 do 1.
 

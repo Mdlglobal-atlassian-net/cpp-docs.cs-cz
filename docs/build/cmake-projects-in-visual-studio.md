@@ -4,12 +4,12 @@ ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 67bf20248933b28e9c7c0d87c598c0449d6bed0b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: b055a1e3ca1d43cc0a1633401c1a08a3d54c1a31
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823159"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278447"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Projekty CMake v sadě Visual Studio
 
@@ -80,7 +80,7 @@ Ne vše, co v mezipaměti je importován.  Vlastnosti, jako je generátor kódu 
 
 Pokud chcete vytvořit projekt CMake, máte tyto možnosti:
 
-1. Vyberte cíl **ladění** rozevírací seznam a stiskněte klávesu **F5**, nebo klikněte na tlačítko **spustit** tlačítko (zeleným trojúhelníkem). Automaticky sestavení projektu nejprve, stejně jako řešení sady Visual Studio.
+1. Na panelu nástrojů obecné najít **konfigurace** rozevírací seznam; ve výchozím nastavení je vybrané pravděpodobně "Linux-Debug" nebo "x64-Debug". Vyberte požadované konfigurace a stiskněte klávesu **F5**, nebo klikněte na tlačítko **spustit** (zeleným trojúhelníkem) tlačítko na panelu nástrojů. Automaticky sestavení projektu nejprve, stejně jako řešení sady Visual Studio.
 
 1. Klikněte pravým tlačítkem na soubor CMakeLists.txt a vyberte **sestavení** v místní nabídce. Pokud máte více cílů ve struktuře složek, můžete všechna nebo jenom jeden konkrétní cíl sestavení.
 

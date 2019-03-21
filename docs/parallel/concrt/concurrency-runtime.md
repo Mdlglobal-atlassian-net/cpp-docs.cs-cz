@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: 245984d9702c997f16601bf5e2a9bd049ae5fed9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6f7b70dcbee639bdd44a195709bddde9e06dee21
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258330"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278551"
 ---
 # <a name="concurrency-runtime"></a>Concurrency Runtime
 
@@ -99,7 +99,6 @@ Odkaz na dokumentaci najdete v tématu [odkaz](../../parallel/concrt/reference/r
 |||
 |-|-|
 |[Vzory asynchronního programování a v Hilo (aplikace Windows Store pomocí jazyka C++ a XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Zjistěte, jak můžete využít modul Concurrency Runtime pro implementaci asynchronních operací v Hilo, aplikace v jazyce prostředí Windows Runtime pomocí jazyka C++ a XAML.|
-|[Ukázky kódu pro Concurrency Runtime a knihovna paralelních vzorů v sadě Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Poskytuje vzorové aplikace a nástroje, které ukazují modulu Runtime souběžnosti.|
 |[Paralelní programování v blogu nativního kódu](http://go.microsoft.com/fwlink/p/?linkid=183873)|Poskytuje podrobný blogový další články o paralelním programování v modulu Runtime souběžnosti.|
 |[V C++ a nativním kódu fórum pro paralelní výpočty](http://go.microsoft.com/fwlink/p/?linkid=183874)|Umožňuje účast v komunitě diskuse o modulu Runtime souběžnosti.|
 |[Paralelní programování](/dotnet/standard/parallel-programming/index)|Naučíte se o paralelní programovací model, který je k dispozici v rozhraní .NET Framework.|

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /FI compiler option [C++]
 - preprocess header file compiler option [C++]
 ms.assetid: 07e79577-8152-4df9-a64c-aae08c603397
-ms.openlocfilehash: 2e85706a0266696b83fe1a1a6cdc45ba3399fc21
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: e047ecc5266a898f2c6dc24be3c204f8ddf94386
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809220"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278367"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI (Zahrnutý soubor s povinným názvem)
 
@@ -41,7 +41,7 @@ Tuto možnost má stejný účinek jako zadání dvojitých uvozovek nahoře v s
 
 1. Klikněte na tlačítko **Upřesnit** stránku vlastností.
 
-1. Upravit **platnost zahrnuje** vlastnost.
+1. Upravit **soubor vynuceného zahrnutí** vlastnost.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
@@ -50,6 +50,6 @@ Tuto možnost má stejný účinek jako zadání dvojitých uvozovek nahoře v s
 ## <a name="see-also"></a>Viz také:
 
 [Možnosti výstupního souboru (/F)](output-file-f-options.md)<br/>
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
 [Určení názvu cesty](specifying-the-pathname.md)

@@ -2,12 +2,12 @@
 title: Přenos aplikací do Univerzální platformy Windows (C++)
 ms.date: 11/04/2016
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-ms.openlocfilehash: 06543ce27fe4fed839a6f6b885259e8cc1b180c6
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6bda600abfea04e1158f6ff993e04e5076e4c24b
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518538"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278460"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Přenos aplikací do Univerzální platformy Windows (C++)
 
@@ -21,7 +21,7 @@ Toto téma obsahuje následující postupy pro přenos kódu pro UPW.
 
 - [Portování součásti modulu Runtime Windows 8.1 na UPW.](#BK_81Component)
 
-Pokud máte knihovnu DLL Win32 klasické plochy a chcete ji volat z aplikace pro UPW, Uděláte to také. Pomocí těchto postupů můžete vytvořit vrstvu UPW uživatelské rozhraní pro existující desktopu klasické Windows C++ aplikace nebo kódu C++ standard pro různé platformy. Zobrazit [postupy: použití existujícího kódu C++ v aplikaci pro Universal Windows Platform](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).
+Pokud máte knihovnu DLL Win32 klasické plochy a chcete ji volat z aplikace pro UPW, Uděláte to také. Pomocí těchto postupů můžete vytvořit vrstvu UPW uživatelské rozhraní pro existující desktopu klasické Windows C++ aplikace nebo kódu C++ standard pro různé platformy. Zobrazit [jak: Použití existujícího kódu C++ v aplikaci pro Universal Windows Platform](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).
 
 ## <a name="BK_81StoreApp"></a> Přenesení aplikace pro UPW s Windows 8.1 Store
 
@@ -74,7 +74,7 @@ Pokud máte knihovnu DLL nebo komponenty Windows Runtime, která už funguje s a
 
 ### <a name="to-port-a-windows-81-runtime-component-to-the-uwp"></a>Port součásti modulu Runtime Windows 8.1 na UPW.
 
-1. V **nový projekt** dialogového okna v sadě Visual Studio 2017, vyhledejte **Windows Universal** uzlu. Pokud nevidíte tento uzel, nainstalujte [nástroje pro Windows 10](http://go.microsoft.com/fwlink/p/?LinkID=617903) první. Zvolte **součást prostředí Windows Runtime** šablony, zadejte název pro komponentu a vyberte **OK** tlačítko. Název komponenty se použije jako název oboru názvů, takže můžete chtít použít stejný název jako vaše staré projekty obor názvů. To je potřeba, abyste vytvořili projekt v jiné složce než ten starý. Pokud zvolíte jiný název, můžete aktualizovat název oboru názvů v souboru generovaného kódu.
+1. V **nový projekt** dialogového okna v sadě Visual Studio 2017, vyhledejte **Windows Universal** uzlu. Pokud nevidíte tento uzel, nainstalujte [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) první. Zvolte **součást prostředí Windows Runtime** šablony, zadejte název pro komponentu a vyberte **OK** tlačítko. Název komponenty se použije jako název oboru názvů, takže můžete chtít použít stejný název jako vaše staré projekty obor názvů. To je potřeba, abyste vytvořili projekt v jiné složce než ten starý. Pokud zvolíte jiný název, můžete aktualizovat název oboru názvů v souboru generovaného kódu.
 
 1. Zavřete projekt.
 

@@ -1,6 +1,6 @@
 ---
 title: locale – třída
-ms.date: 11/04/2016
+ms.date: 03/19/2019
 f1_keywords:
 - xlocale/std::locale
 - xlocale/std::locale::category
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 888aeff3e8661338d1a017c06325108a4240ace3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1f5ace58af427645a0ad4eb8706506cc52ab08c
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677913"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278512"
 ---
 # <a name="locale-class"></a>locale – třída
 
@@ -154,14 +154,14 @@ Pravidla číselného formátování pro následná vložení do `cout` zůstáv
 
 |Členská funkce|Popis|
 |-|-|
-|[kombinování](#combine)|Vloží omezující vlastnost ze zadaného národního prostředí do cílového národního prostředí.|
+|[combine](#combine)|Vloží omezující vlastnost ze zadaného národního prostředí do cílového národního prostředí.|
 |[Jméno](#name)|Vrátí název uloženého národního prostředí.|
 
 ### <a name="static-functions"></a>Statické funkce
 
 |||
 |-|-|
-|[Classic](#classic)|Statická funkce členu vrátí objekt národního prostředí, který představuje klasické národní prostředí jazyka C.|
+|[classic](#classic)|Statická funkce členu vrátí objekt národního prostředí, který představuje klasické národní prostředí jazyka C.|
 |[global](#global)|Obnoví výchozí národní prostředí pro program.|
 
 ### <a name="operators"></a>Operátory
@@ -291,7 +291,7 @@ locale combine(const locale& Loc) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Umístění*<br/>
+*Loc*<br/>
 Národní prostředí obsahující omezující vlastnosti má být vložen do cílového národního prostředí.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -360,7 +360,7 @@ static locale global(const locale& Loc);
 
 ### <a name="parameters"></a>Parametry
 
-*Umístění*<br/>
+*Loc*<br/>
 Národní prostředí pro program používá jako výchozí národní prostředí.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -403,8 +403,14 @@ The previous locale was: C
 
 Třída členu poskytuje jedinečnou identifikaci omezující podmínky, která se používá jako index při vyhledávání omezujících vlastností v národním prostředí.
 
-id třídy {chráněné: id(); privátní: id(const id&) / / není definována void operator =(const id&) / / nedefinovaná.};
-
+```cpp
+class id 
+{
+   protected:    id();
+   private:      id(const id&)
+   void operator=(const id&)  // not defined    
+};
+```
 ### <a name="remarks"></a>Poznámky
 
 Člen třídy popisuje statického členu objektu vyžaduje každý omezující vlastnost národního prostředí jedinečná. Všimněte si, že nelze kopírovat ani přiřadit objekt třídy `id`.
@@ -431,7 +437,7 @@ locale(const locale& Loc, const Facet* Fac);
 *Locname*<br/>
 Název národního prostředí.
 
-*Umístění*<br/>
+*Loc*<br/>
 Národní prostředí, které se mají zkopírovat při konstrukci nové národní prostředí.
 
 *Jiné*<br/>
