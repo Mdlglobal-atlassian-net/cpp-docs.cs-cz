@@ -17,12 +17,12 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-ms.openlocfilehash: c61f3fdd434a1b746c024b1a98d1d71f04df7e5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b91918d526d83d4cf47436d02b7c67038576bafb
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746914"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356176"
 ---
 # <a name="managed-types-ccli"></a>Spravované typy (C++/CLI)
 
@@ -46,19 +46,21 @@ V následující tabulce jsou uvedeny klíčová slova pro předdefinované typy
 
 |Typ Visual C++|Typ rozhraní .NET Framework|
 |-----------------------|-------------------------|
-|**bool**|**System.Boolean**|
-|**podepsané char** (viz [/J](../build/reference/j-default-char-type-is-unsigned.md) Další informace)|**System.SByte**|
-|**unsigned char**|**System.Byte**|
-|**wchar_t**|**System.Char**|
-|**dvojité** a **long double**|**System.Double**|
-|**float**|**System.Single**|
-|**int**, **znaménkem**, **dlouhé**, a **podepsané dlouho**|**System.Int32**|
-|**unsigned int** a **unsigned long**|**System.UInt32**|
-|**__int64** a **signed __int64**|**System.Int64**|
-|**unsigned __int64**|**System.UInt64**|
-|**krátký** a **podepsané krátké**|**System.Int16**|
-|**short bez znaménka**|**System.UInt16**|
-|**void**|**System.Void**|
+|**void**|<xref:System.Void?displayProperty=nameWithType>|
+|**bool**|<xref:System.Boolean?displayProperty=nameWithType>|
+|**podepsané char** |<xref:System.SByte?displayProperty=nameWithType>|
+|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|
+|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|
+|**krátký** a **podepsané krátké**|<xref:System.Int16?displayProperty=nameWithType>|
+|**short bez znaménka**|<xref:System.UInt16?displayProperty=nameWithType>|
+|**int**, **znaménkem**, **dlouhé**, a **podepsané dlouho**|<xref:System.Int32?displayProperty=nameWithType>|
+|**unsigned int** a **unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|
+|**__int64** a **signed __int64**|<xref:System.Int64?displayProperty=nameWithType>|
+|**unsigned __int64**|<xref:System.UInt64?displayProperty=nameWithType>|
+|**float**|<xref:System.Single?displayProperty=nameWithType>|
+|**dvojité** a **long double**|<xref:System.Double?displayProperty=nameWithType>|
+
+Další informace o kompilátoru možnosti výchozí na podepsaný nebo nepodepsaný **char**, naleznete v tématu [/J (výchozí znakový typ není podepsaný)](../build/reference/j-default-char-type-is-unsigned.md).
 
 ## <a name="version_issues"></a> Problémy s verzí u typů hodnot vnořených v nativních typech
 

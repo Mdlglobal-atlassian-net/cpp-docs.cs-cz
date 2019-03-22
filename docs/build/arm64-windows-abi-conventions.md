@@ -1,12 +1,12 @@
 ---
 title: Přehled konvencí ARM64 ABI
-ms.date: 07/11/2018
-ms.openlocfilehash: 537f8cf5bb8db61854bea7f4624e3dd3176c6a59
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.date: 03/22/2019
+ms.openlocfilehash: 5dddc26285606b771a3939be19dff5b9ad53f3c7
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816539"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356189"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Přehled konvencí ARM64 ABI
 
@@ -191,7 +191,7 @@ Pro návrat podle hodnot, který nemůže být předány prostřednictvím regis
 
 Následující Komisí iaasb ARM ABI musí zásobníku zůstat 16 bajtů zarovnána za všech okolností. AArch64 obsahuje funkce hardwaru, který generuje zarovnání zásobník chyb pokaždé, když se provádí relativní SP load nebo store a SP není 16 bajtů zarovnána. Tato funkce povolena po celou dobu spuštění Windows.
 
-Funkce, které přidělit 4 kB nebo více vhodné zásobníku musí zajistit, aby každá stránka před poslední stránky je dotčená v pořadí, zajistila žádný kód můžete "leap přes" ochranné stránky, které Windows používá rozšíření zásobníku. Obvykle se to provádí `__chkstk` pomocné rutiny, která má vlastní konvence volání, které předává celkové přidělení zásobníku dělený 16 v x8.
+Funkce, které přidělit 4 kB nebo více vhodné zásobníku musí zajistit, aby každá stránka před poslední stránky je dotčená v pořadí, zajistila žádný kód můžete "leap přes" ochranné stránky, které Windows používá rozšíření zásobníku. Obvykle se to provádí `__chkstk` pomocné rutiny, která má vlastní konvence volání, které předává celkové přidělení zásobníku dělený 16 v x15.
 
 ## <a name="red-zone"></a>Červené zóny
 

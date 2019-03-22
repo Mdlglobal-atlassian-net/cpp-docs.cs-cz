@@ -37,12 +37,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HString::Set method
 - Microsoft::WRL::Wrappers::HString::~HString, destructor
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-ms.openlocfilehash: 9d660f507f50c00c8ccd6f19505f09285ede9e60
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 19ef11a5d33e69bb77049e450df1b386528b7f7b
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893597"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356228"
 ---
 # <a name="hstring-class"></a>HString – třída
 
@@ -62,14 +62,14 @@ Modul Runtime Windows poskytuje přístup k řetězcům prostřednictvím [HSTRI
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Název                                | Popis
+Name                                | Popis
 ----------------------------------- | -----------------------------------------------------
 [Hstring::hstring –](#hstring)        | Inicializuje novou instanci třídy `HString` třídy.
 [HString:: ~ HString](#tilde-hstring) | Odstraní aktuální instanci aplikace `HString` třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Název                                     | Popis
+Name                                     | Popis
 ---------------------------------------- | -------------------------------------------------------------------------------------------------------------
 [Hstring::Attach –](#attach)               | Přidruží zadaný `HString` objektu s aktuálním `HString` objektu.
 [Hstring::CopyTo –](#copyto)               | Zkopíruje aktuální `HString` objektu na objekt HSTRING.
@@ -83,7 +83,7 @@ Název                                     | Popis
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-Název                                         | Popis
+Name                                         | Popis
 -------------------------------------------- | ----------------------------------------------------------------------------
 [HString::operator =](#operator-assign)       | Přesune hodnotu jiného `HString` objektů na aktuální `HString` objektu.
 [HString::operator ==](#operator-equality)    | Určuje, zda se tyto dva parametry rovnají.
@@ -187,7 +187,7 @@ Po provedení této operace je zničen řetězcovou hodnotu podkladového popiso
 Inicializuje novou instanci třídy `HString` třídy.
 
 ```cpp
-HString(HSTRING hstr = nullptr) throw();
+HString() throw();
 HString(HString&& other) throw();
 ```
 

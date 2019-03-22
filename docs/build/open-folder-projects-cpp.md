@@ -1,15 +1,15 @@
 ---
 title: Podpora otevírání složek pro systémy sestavení C++ v sadě Visual Studio
-ms.date: 01/21/2019
+ms.date: 03/21/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual C++
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: a7e352d7978ba5c973d779224639006fa984e4f0
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 2dedd56759b6bb49260221e22218da6f4300a970
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823165"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356085"
 ---
 # <a name="open-folder-projects-for-c"></a>Otevřete složku projekty jazyka C++
 
@@ -49,7 +49,7 @@ Technologie IntelliSense a procházení chování částečně závisí na konfi
       "includePath": [ "include" ],
       "defines": [ "_DEBUG" ],
       "compilerSwitches": "/std:c++17",
-      "intelliSenseMode": "msvc-x64",
+      "intelliSenseMode": "windows-msvc-x64",
       "forcedInclude": [ "pch.h" ],
       "undefines": []
     }
@@ -64,7 +64,7 @@ Můžete automatizovat skripty sestavení ani žádné jiné externí operace se
 
 ![Konfigurace funkce Otevřít složku úloh](media/open-folder-config-tasks.png)
 
-To vytvoří (nebo se otevře) `tasks.vs.json` souboru ve složce .vs, který sada Visual Studio vytvoří v kořenové složce projektu. Můžete definovat všechny libovolné úlohy v tomto souboru a poté vyvolat z **Průzkumníka řešení** kontextové nabídky. Následující příklad ukazuje tasks.vs.json soubor, který definuje jeden úkol. `taskName` Definuje název, který se zobrazí v místní nabídce. `appliesTo` Definuje soubory, které lze příkaz provést na. `command` Vlastnost odkazuje na proměnnou prostředí COMSPEC, který určuje cestu pro konzolu (cmd.exe ve Windows). Můžete také odkazovat na proměnné prostředí, které jsou deklarovány v CppProperties.json a CMakeSettings.json. `args` Určuje vlastnosti příkazového řádku, který má být volána. `${file}` Makra obnoví na vybraný soubor na **Průzkumníka řešení**. V následujícím příkladu se zobrazí název souboru aktuálně vybraného .cpp.
+To vytvoří (nebo se otevře) **tasks.vs.json** souboru ve složce .vs, který sada Visual Studio vytvoří v kořenové složce projektu. Můžete definovat všechny libovolné úlohy v tomto souboru a poté vyvolat z **Průzkumníka řešení** kontextové nabídky. Následující příklad ukazuje tasks.vs.json soubor, který definuje jeden úkol. `taskName` Definuje název, který se zobrazí v místní nabídce. `appliesTo` Definuje soubory, které lze příkaz provést na. `command` Vlastnost odkazuje na proměnnou prostředí COMSPEC, který určuje cestu pro konzolu (cmd.exe ve Windows). Můžete také odkazovat na proměnné prostředí, které jsou deklarovány v CppProperties.json a CMakeSettings.json. `args` Určuje vlastnosti příkazového řádku, který má být volána. `${file}` Makra obnoví na vybraný soubor na **Průzkumníka řešení**. V následujícím příkladu se zobrazí název souboru aktuálně vybraného .cpp.
 
 ```json
 {
@@ -87,7 +87,7 @@ Další informace najdete v tématu [referenční dokumentace schématu Tasks.vs
 
 ### <a name="configure-debugging-parameters-with-launchvsjson"></a>Konfigurace ladění parametrů pomocí launch.vs.json
 
-Přizpůsobení vašeho programu argumenty příkazového řádku, klikněte pravým tlačítkem na spustitelný soubor **Průzkumníka řešení** a vyberte **nastavení ladění a spouštění**. Tím otevřete existující `launch.vs.json` souboru, nebo pokud žádný neexistuje, vytvoří nový soubor naplněna informacemi o programu, který jste vybrali.
+Přizpůsobení vašeho programu argumenty příkazového řádku, klikněte pravým tlačítkem na spustitelný soubor **Průzkumníka řešení** a vyberte **nastavení ladění a spouštění**. Tím otevřete existující **souboru launch.vs.json** souboru, nebo pokud žádný neexistuje, vytvoří nový soubor naplněna informacemi o programu, který jste vybrali.
 
 Pokud chcete zadat další argumenty, jednoduše je přidejte do `args` pole JSON, jak je znázorněno v následujícím příkladu:
 

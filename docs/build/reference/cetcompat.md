@@ -1,21 +1,21 @@
 ---
-title: / CETCOMPAT (kompatibilní s implementační technologie struktury toku řízení)
+title: / CETCOMPAT (kompatibilní s CET stínový zásobník)
 ms.date: 02/19/2019
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 1a01dd45667f64dbcbe11acaf1180835bd0d6e31
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 0ed5d9d4f9f4f4dc5cd4fc19df4179e86e430187
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809844"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356012"
 ---
-# <a name="cetcompat-control-flow-enforcement-technology-compatible"></a>/ CETCOMPAT (kompatibilní s implementační technologie struktury toku řízení)
+# <a name="cetcompat-cet-shadow-stack-compatible"></a>/ CETCOMPAT (kompatibilní s CET stínový zásobník)
 
-Určuje, jestli se má označit jako kompatibilní s tok řízení výkonu technologie (CET) spustitelnou bitovou kopii.
+Určuje, jestli se má označit jako kompatibilní se tok řízení technologie vynucení (CET) stínový zásobník spustitelnou bitovou kopii.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -24,13 +24,13 @@ Určuje, jestli se má označit jako kompatibilní s tok řízení výkonu techn
 ## <a name="arguments"></a>Arguments
 
 **NE**<br/>
-Určuje, že spustitelný soubor by neměl být označen jako kompatibilní s CET.
+Určuje, že spustitelný soubor by neměl být označen jako kompatibilní s CET stínový zásobník.
 
 ## <a name="remarks"></a>Poznámky
 
-Technologie vynucení toku řízení (CET) je funkce procesoru počítače, který nabízí možnosti, které braňte se proti určité druhy malwarových útoků. Další informace najdete v tématu [Intel tok řízení vynucení Technology Preview](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf).
+Tok řízení technologie vynucení (CET) stínový zásobník je funkce procesoru počítače, který poskytuje funkce pro ochranu před návratový orientované programování (mohli) založený na malwarových útoků. Další informace najdete v tématu [Intel tok řízení vynucení Technology Preview](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf).
 
-**/CETCOMPAT** – možnost linkeru přikazuje linkeru, aby označit jako kompatibilní s CET binárního souboru. **/CETCOMPAT:No** označí jako není kompatibilní s CET binárního souboru. Pokud obě možnosti jsou zadané na příkazovém řádku, použije se poslední z nich zadat. Tento přepínač je teď jenom pro architekturu x86 a x64.
+**/CETCOMPAT** – možnost linkeru přikazuje linkeru, aby označit binárního souboru jako kompatibilního s CET stín zásobníku. **/CETCOMPAT:No** označí jako není kompatibilní s CET stínový zásobník binárního souboru. Pokud obě možnosti jsou zadané na příkazovém řádku, použije se poslední z nich zadat. Tento přepínač je teď jenom pro architekturu x86 a x64.
 
 **/CETCOMPAT** možnost je k dispozici od verze sady nástrojů Visual Studio. 2019 ve verzi Preview 3.
 

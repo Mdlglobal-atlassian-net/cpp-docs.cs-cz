@@ -1,14 +1,14 @@
 ---
 title: Konfigurace CMake ladicími relacemi v sadě Visual Studio
-ms.date: 03/05/2019
+ms.date: 03/21/2019
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 9a4dd009544a4590c336697ba2162eec45718869
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 712728247c439c38d5e640118fc153cf89647c80
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823409"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356163"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Konfigurace CMake ladicími relacemi
 
@@ -20,7 +20,7 @@ Můžete také spustit relaci ladění z nabídky CMake.
 
 ## <a name="customize-debugger-settings"></a>Přizpůsobení nastavení ladicího programu
 
-Chcete-li přizpůsobit nastavení ladicího programu pro libovolný spustitelný cíl CMake ve vašem projektu, klikněte pravým tlačítkem na konkrétní soubor CMakeLists.txt a vyberte **nastavení ladění a spouštění**. Při výběru cílové CMake v podnabídce soubor s názvem `launch.vs.json` se vytvoří. Tento soubor se předem načtou informace o cílové CMake, které jste vybrali a můžete zadat další parametry jako argumenty programu nebo typ ladicího programu. K odkazování v libovolné klávesy `CMakeSettings.json` soubor, adresa s `cmake.` v `launch.vs.json`. Následující příklad ukazuje jednoduchý `launch.vs.json` soubor, který si vyžádá hodnotu `remoteCopySources` klíče v `CMakeSettings.json` souboru pro aktuálně vybranou konfiguraci:
+Chcete-li přizpůsobit nastavení ladicího programu pro libovolný spustitelný cíl CMake ve vašem projektu, klikněte pravým tlačítkem na konkrétní soubor CMakeLists.txt a vyberte **nastavení ladění a spouštění**. (Nebo vyberte cílovou třídu v **zobrazení cílů** v **Průzkumníka řešení**.) Při výběru cílové CMake v podnabídce soubor s názvem **souboru launch.vs.json** se vytvoří. Tento soubor se předem načtou informace o cílové CMake, které jste vybrali a můžete zadat další parametry jako argumenty programu nebo typ ladicího programu. Odkazovat v libovolné klávesy **CMakeSettings.json** soubor, adresa s `cmake.` v **souboru launch.vs.json**. Následující příklad ukazuje jednoduchý **souboru launch.vs.json** soubor, který si vyžádá hodnotu `remoteCopySources` klíče v **CMakeSettings.json** souboru pro aktuálně vybranou konfiguraci:
 
 ```json
 {
@@ -38,11 +38,11 @@ Chcete-li přizpůsobit nastavení ladicího programu pro libovolný spustiteln�
 }
 ```
 
-Po uložení `launch.vs.json` souboru, bude vytvořena položka ve **položku při spuštění** rozevírací seznam s novým názvem. Úpravou `launch.vs.json` soubor, můžete vytvořit mnoho konfiguraci ladění, kolik potřebujete pro libovolný počet cílů CMake.
+Po uložení **souboru launch.vs.json** souboru, bude vytvořena položka ve **položku při spuštění** rozevírací seznam s novým názvem. Úpravou **souboru launch.vs.json** soubor, můžete vytvořit mnoho konfiguraci ladění, kolik potřebujete pro libovolný počet cílů CMake.
 
 ## <a name="support-for-cmakesettings-variables"></a>Podpora pro proměnné cmakesettings na pozici
 
- `Launch.vs.json` podporuje proměnné, které jsou deklarovány v `CMakeSettings.json` (viz níže) a, která se vztahují na aktuálně vybrané konfigurace. Je také klíč s názvem `currentDir`, který nastaví aktuální adresář spouštění aplikace:
+ **Launch.vs.JSON** podporuje proměnné, které jsou deklarovány v **CMakeSettings.json** (viz níže) a, která se vztahují na aktuálně vybrané konfigurace. Je také klíč s názvem `currentDir`, který nastaví aktuální adresář spouštění aplikace:
 
 ```json
 {

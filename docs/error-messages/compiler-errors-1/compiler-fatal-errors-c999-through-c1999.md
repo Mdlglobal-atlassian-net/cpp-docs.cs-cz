@@ -52,12 +52,12 @@ helpviewer_keywords:
 - C1505
 - C1901
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: 6809ef1640c324e247bd20c83d4622fe27987ae6
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 17c456f6ab248964cbd19cd9695da290254ccf1b
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328243"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356215"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Závažné chyby kompilátoru C999 až C1999
 
@@ -70,7 +70,7 @@ ms.locfileid: "58328243"
 |Chyba|Zpráva|
 |-----------|-------------|
 |[Závažná chyba C999](../../error-messages/compiler-errors-1/fatal-error-c999.md)|Neznámá zpráva Zvolte prosím příkaz technická podpora v nabídce Nápověda pro Visual C++, nebo otevřete soubor nápovědy technické podpory pro další informace|
-|[Závažná chyba C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)|V kompilátoru došlo k vnitřní chybě.<br /><br /> (soubor kompilátoru "*souboru*!, řádek *číslo*)<br /><br /> Chcete-li tento problém vyřešit, zkuste zjednodušit nebo změnit program v blízkosti míst uvedených výše. Zvolte prosím příkaz technická podpora v nabídce Nápověda pro Visual C++, nebo otevřete soubor nápovědy technické podpory pro další informace|
+|[Závažná chyba C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)|V kompilátoru došlo k vnitřní chybě.<br /> (soubor kompilátoru "*souboru*!, řádek *číslo*)<br /> Chcete-li tento problém vyřešit, zkuste zjednodušit nebo změnit program v blízkosti míst uvedených výše. Zvolte prosím příkaz technická podpora v nabídce Nápověda pro Visual C++, nebo otevřete soubor nápovědy technické podpory pro další informace|
 |[Závažná chyba C1002](../../error-messages/compiler-errors-1/fatal-error-c1002.md)|kompilátoru je nedostatek místa v haldě při průchodu 2|
 |[Závažná chyba C1003](../../error-messages/compiler-errors-1/fatal-error-c1003.md)|Počet chyb překračuje *číslo*; kompilace se zastavuje|
 |[Závažná chyba C1004](../../error-messages/compiler-errors-1/fatal-error-c1004.md)|neočekávané ukončení souboru nalezen|
@@ -78,7 +78,7 @@ ms.locfileid: "58328243"
 |[Závažná chyba C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|nerozpoznaný příznak "*řetězec*"in"*možnost*.|
 |[Závažná chyba C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|zadané žádné vstupní soubory|
 |[Závažná chyba C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|limit kompilátoru: makra jsou vnořená moc hluboko|
-|[Závažná chyba C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|Neočekávaný konec souboru při hledání předkompilované hlavičky. Nezapomněli jste přidat ' #include <*souboru*> "ke zdroji?|
+|[Závažná chyba C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|Neočekávaný konec souboru při hledání předkompilované hlavičky. Nezapomněli jste přidat ' #include \< *souboru*> "ke zdroji?|
 |[Závažná chyba C1012](fatal-error-c1012.md)|Neshoda závorek: chybí "*znak*"|
 |[Závažná chyba C1013](fatal-error-c1013.md)|limit kompilátoru: moc velký počet levých závorek|
 |[Závažná chyba C1014](fatal-error-c1014.md)|moc velký počet vložených souborů: hloubka = *číslo*|
