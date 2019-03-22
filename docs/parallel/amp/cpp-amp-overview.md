@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: da77e2ba93554cb65d4cc92353d05d54467b50d4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a4bd8546ba551ee37b9c03b5965a4079a3bd9f98
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269640"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328880"
 ---
 # <a name="c-amp-overview"></a>Přehled produktu C++ AMP
 
@@ -21,11 +21,15 @@ C++ Accelerated Massive Parallelism (C++ AMP) urychluje provádění kódu jazyk
 
 ## <a name="system-requirements"></a>Požadavky na systém
 
-- Windows 7, Windows 8, Windows Server 2008 R2 nebo Windows Server 2012
+- Windows 7 nebo novější
+
+- Windows Server 2008 R2 nebo novější
 
 - Rozhraní DirectX 11 úroveň funkce 11.0 nebo novější hardware
 
 - Pro ladění v softwarovém emulátoru se vyžaduje systém Windows 8 nebo Windows Server 2012. Pro ladění na hardwaru, je nutné nainstalovat ovladače pro grafickou kartu. Další informace najdete v tématu [ladění kódu GPU](/visualstudio/debugger/debugging-gpu-code).
+
+- Poznámka: AMP není aktuálně podporována u ARM64.
 
 ## <a name="introduction"></a>Úvod
 

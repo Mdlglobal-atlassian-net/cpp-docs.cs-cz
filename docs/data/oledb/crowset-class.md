@@ -238,12 +238,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: cb79bfe7cf0a30e0ff4ed2a4a6860bc3042983ee
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4a24dada2f1211138449e65a8865810a46230970
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416537"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329010"
 ---
 # <a name="crowset-class"></a>CRowset – třída
 
@@ -275,7 +275,7 @@ Třídu přistupujícího objektu. Výchozí hodnota je `CAccessorBase`.
 |[Zavřít](#close)|Uvolní řádků a aktuální `IRowset` rozhraní.|
 |[Compare](#compare)|Porovná dvě záložky pomocí [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).|
 |[CRowset](#crowset)|Vytvoří novou `CRowset` objektu a přidruží ji k (volitelně) `IRowset` rozhraní zadanou jako parametr.|
-|[Delete](#delete)|Odstraní řádky z řádků pomocí [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)).|
+|[Delete](#delete)|Odstraní řádky z řádků pomocí [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)).|
 |[FindNextRow](#findnextrow)|Vyhledá další odpovídající řádek po zadanou záložkou.|
 |[GetApproximatePosition](#getapproximateposition)|Vrátí přibližné pozici řádku odpovídající záložku.|
 |[GetData](#getdata)|Načte data z dané sadě řádků kopii řádku.|
@@ -386,7 +386,7 @@ CRowset(IRowset* pRowset);
 
 ## <a name="delete"></a> CRowset::Delete
 
-Volání [IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)) odstranit aktuální řádek ze sady řádků.
+Volání [IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)) odstranit aktuální řádek ze sady řádků.
 
 ### <a name="syntax"></a>Syntaxe
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CComMultiThreadModel class
 - threading [ATL]
 ms.assetid: db8f1662-2f7a-44b3-b341-ffbfb6e422a3
-ms.openlocfilehash: 6b77efffca127c79c665cb8dedb916b0874de038
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2ec83fc320d65f5f51c14f9523544972cd69c66c
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290726"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328685"
 ---
 # <a name="ccommultithreadmodel-class"></a>CComMultiThreadModel – třída
 
@@ -35,7 +35,7 @@ class CComMultiThreadModel
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CComMultiThreadModel::AutoCriticalSection](#autocriticalsection)|Odkazuje na třídu [ccomautocriticalsection –](../../atl/reference/ccomautocriticalsection-class.md).|
 |[CComMultiThreadModel::CriticalSection](#criticalsection)|Odkazuje na třídu [ccomautocriticalsection –](../../atl/reference/ccomcriticalsection-class.md).|
@@ -43,7 +43,7 @@ class CComMultiThreadModel
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CComMultiThreadModel::Decrement](#decrement)|(Statické) Sníží hodnotu zadanou proměnnou způsobem bezpečným pro vlákno.|
 |[CComMultiThreadModel::Increment](#increment)|(Statické) Zvýší hodnotu zadanou proměnnou způsobem bezpečným pro vlákno.|
@@ -52,7 +52,7 @@ class CComMultiThreadModel
 
 Obvykle použijete `CComMultiThreadModel` prostřednictvím jednoho ze dvou **– typedef** názvy, buď [CComObjectThreadModel] (atl – typedefs.md #ccomobjectthreadmodel nebo [CComGlobalsThreadModel] (atl – typedefs.md #ccomglobalsthreadmodel. Třída odkazovaná každou **typedef** závisí na model vláken použít, jak je znázorněno v následující tabulce:
 
-| – definice typedef|Jeden dělení na vlákna|Práce s vlákny typu Apartment|Bezplatné dělení na vlákna|
+|– definice typedef|Jeden dělení na vlákna|Práce s vlákny typu Apartment|Bezplatné dělení na vlákna|
 |-------------|----------------------|-------------------------|--------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
@@ -157,7 +157,7 @@ Zobrazit [CComMultiThreadModel::AutoCriticalSection](#autocriticalsection).
 
 ##  <a name="decrement"></a>  CComMultiThreadModel::Decrement
 
-Tato statická funkce volá funkci Win32 [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement), které sníží hodnotu proměnné, na které odkazuje *p*.
+Tato statická funkce volá funkci Win32 [InterlockedDecrement](/windows/desktop/api/winnt/nf-winnt-interlockeddecrement), které sníží hodnotu proměnné, na které odkazuje *p*.
 
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw ();
@@ -178,7 +178,7 @@ Pokud výsledek snížení je 0, `Decrement` vrátí hodnotu 0. Pokud je výsled
 
 ##  <a name="increment"></a>  CComMultiThreadModel::Increment
 
-Tato statická funkce volá funkci Win32 [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement), který zvýší hodnotu proměnné, na které odkazuje *p*.
+Tato statická funkce volá funkci Win32 [InterlockedIncrement](/windows/desktop/api/winnt/nf-winnt-interlockedincrement), který zvýší hodnotu proměnné, na které odkazuje *p*.
 
 ```
 static ULONG WINAPI Increment(LPLONG p) throw ();

@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-ms.openlocfilehash: 0e523b2a145254cd9b7adf2b066605a679349f6c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ebc36d82af9bfe12ab30a86214e58610b5eaab95
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273442"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328997"
 ---
 # <a name="cdatabase-class"></a>CDatabase – třída
 
@@ -71,7 +71,7 @@ class CDatabase : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDatabase::CDatabase](#cdatabase)|Vytvoří `CDatabase` objektu. Je třeba inicializovat objekt voláním `OpenEx` nebo `Open`.|
 
@@ -192,7 +192,7 @@ void Cancel();
 
 ### <a name="remarks"></a>Poznámky
 
-Mějte na paměti, že třídy knihovny MFC rozhraní ODBC již nebudete používat asynchronní zpracování. k provádění asynchronní operace, musíte přímo zavolat funkci rozhraní API ODBC [SQLSetConnectOption](/previous-versions/windows/desktop/ms713564). Další informace najdete v tématu [asynchronní provádění](/previous-versions/windows/desktop/ms713563) v sadě Windows SDK.
+Mějte na paměti, že třídy knihovny MFC rozhraní ODBC již nebudete používat asynchronní zpracování. k provádění asynchronní operace, musíte přímo zavolat funkci rozhraní API ODBC [SQLSetConnectOption](/sql/odbc/reference/syntax/sqlsetconnectoption-function). Další informace najdete v tématu [asynchronní provádění](/sql/odbc/reference/develop-app/asynchronous-execution).
 
 ##  <a name="cantransact"></a>  CDatabase::CanTransact
 

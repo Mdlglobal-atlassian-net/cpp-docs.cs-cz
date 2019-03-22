@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-ms.openlocfilehash: caec1ae10db273b6ed604af29b20a1908b1313cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 185c2de5dc21dd305a2792d4ee8e6baf69c35b28
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614640"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328906"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Deklarátor odkazu hodnoty r: &amp;&amp;
 
@@ -61,7 +61,7 @@ Chcete-li využít výhod sémantiky přesunutí v `vector` příkladu můžete 
 
 Další informace o úvodu sémantiky přesunutí do standardní knihovny C++ ve Visual C++ 2010 v tématu [standardní knihovny C++](../standard-library/cpp-standard-library-reference.md).
 
-## <a name="perfect-forwarding"></a>Perfektní přesměrování
+## <a name="perfect-forwarding"></a>Perfect Forwarding
 
 Perfektní přesměrování snižuje potřebu přetížených funkcí a pomáhá vyhnout se problému s předáváním. *Problém s předáváním* může dojít při psaní obecné funkce, která přebírá odkazy jako svoje parametry a odesílá (nebo *předává*) tyto parametry jiné funkci. Například, pokud obecná funkce má parametr typu `const T&`, pak volaná funkce nemůže změnit hodnotu tohoto parametru. Pokud obecná funkce má parametr typu `T&`, pak funkci nelze volat pomocí rvalue (například dočasný objekt nebo literál celého čísla).
 
@@ -220,7 +220,7 @@ void g(MemoryBlock&&)
 MemoryBlock&& f(MemoryBlock&& block)
 {
    g(block);
-   return block;
+   return move(block);
 }
 
 int main()
@@ -409,6 +409,6 @@ Odkazy rvalue rozlišují mezi hodnotami lvalue od rvalue. Mohou pomoci zvýšit
 
 [Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)<br/>
 [Deklarátor odkazu l-hodnoty: &](../cpp/lvalue-reference-declarator-amp.md)<br/>
-[Hodnoty lvalue a rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)<br/>
+[L-hodnoty a r-hodnoty](../cpp/lvalues-and-rvalues-visual-cpp.md)<br/>
 [Konstruktory a operátory přiřazení pro přesunutí (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)<br/>
 [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)
