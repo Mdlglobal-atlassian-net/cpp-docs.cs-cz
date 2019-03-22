@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: bd0aae1c968135da445595d48823e4840f084a2d
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.openlocfilehash: 20920a5f1a1cdf2a4e10263a7b1de3010f24f9c0
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278577"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329036"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>2003 – 2015 historie změn Visual C++
 
@@ -447,7 +447,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
    `/Zg` – Možnost kompilátoru (Generovat prototypy funkcí) už nejsou k dispozici. Tato možnost kompilátoru dříve byla zrušena.
 
-- Jednotkové testy můžete spustit již s C + +/ CLI z příkazového řádku pomocí mstest.exe. Místo toho používejte vstest.console.exe. Zobrazit [možnosti příkazového řádku VSTest.Console.exe](/devops-test-docs/test/vstest-console-exe-command-line-options).
+- Jednotkové testy můžete spustit již s C + +/ CLI z příkazového řádku pomocí mstest.exe. Místo toho používejte vstest.console.exe. Zobrazit [možnosti příkazového řádku VSTest.Console.exe](/visualstudio/test/vstest-console-options).
 
 - **Mutable – klíčové slovo**
 

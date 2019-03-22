@@ -3,12 +3,12 @@ title: 'Postupy: Vytváření souborů .h z metadat windows pomocí winmdidl.exe
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-ms.openlocfilehash: b81f6901e60f27ada27f14d7dbc7c10fa3faec34
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: b9016f05b82e3eb04474d370bd069e8008de5278
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54334713"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328711"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Postupy: Vytváření souborů .h z metadat windows pomocí winmdidl.exe a midlrt.exe
 
@@ -18,7 +18,7 @@ Pomocí těchto nástrojů v dva základní scénáře:
 
 - Vytváření vlastních IDL a soubory hlaviček, tak, aby aplikace v jazyce C++ zapsány pomocí Windows Runtime šablony knihovny (WRL) můžou využívat vlastní součásti prostředí Windows Runtime.
 
-- Generování proxy a zástupných procedur souborů pro typy definované uživatelem událostí v komponentě Windows Runtime. Další informace najdete v tématu [vlastní události a přístupových objektů událostí v součástech Runtime Windows](/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components).
+- Generování proxy a zástupných procedur souborů pro typy definované uživatelem událostí v komponentě Windows Runtime. Další informace najdete v tématu [vlastní události a přístupových objektů událostí v součástech Runtime Windows](/windows/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components).
 
 Tyto nástroje se vyžadují pouze pro analýzu soubory vlastní .winmd. Soubory .idl a .h pro součásti operačního systému Windows jsou již vygenerován za vás. Ve výchozím nastavení ve Windows 8.1, se nacházejí v \Program soubory (x86) \Windows Kits\8.1\Include\winrt\\.
 
@@ -75,4 +75,4 @@ V dalším kroku midlrt spouštět generovaného souboru IDL. Všimněte si, **m
 
 Výstupní soubor z operace winmdidl má stejný název jako vstupní soubor, ale má příponu názvu souboru IDL.
 
-Pokud vyvíjíte komponenty prostředí Windows Runtime, která budou mít přístup z WRL, můžete zadat winmdidl.exe a midlrt.exe ke spuštění jako kroky po sestavení tak, aby IDL a .h souborů se generují u každého sestavení. Příklad najdete v tématu [Raising Events v součástech Runtime Windows](/uwp/winrt-components/raising-events-in-windows-runtime-components).
+Pokud vyvíjíte komponenty prostředí Windows Runtime, která budou mít přístup z WRL, můžete zadat winmdidl.exe a midlrt.exe ke spuštění jako kroky po sestavení tak, aby IDL a .h souborů se generují u každého sestavení. Příklad najdete v tématu [Raising Events v součástech Runtime Windows](/windows/uwp/winrt-components/raising-events-in-windows-runtime-components).

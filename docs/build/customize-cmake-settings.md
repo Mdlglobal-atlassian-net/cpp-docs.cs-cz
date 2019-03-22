@@ -3,12 +3,12 @@ title: Vlastní nastavení sestavení CMake v sadě Visual Studio
 ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: aa840dd41ee6843afae80343e42ba62741bbcd80
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: dd34fbefcbc89c7c4aa93105ae5bad31ae4d5f01
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822995"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328295"
 ---
 # <a name="customize-cmake-build-settings"></a>Vlastní nastavení sestavení CMake
 
@@ -53,19 +53,19 @@ Můžete také přímo upravit `CMakeSettings.json` k vytvoření vlastních kon
 
 - **Generátor**: mapuje na CMake **- G** přepnutí a určuje generátor, který se má použít. Tato vlastnost slouží také jako makra, `${generator}`, při vytváření dalších hodnot vlastností. Visual Studio v současné době podporuje následující generátorů CMake:
 
-    - "Ninja"
-    - "Visual Studio 14 2015"
-    - "Visual Studio 14 2015 ARM"
-    - "Visual Studio 14 2015 Win64"
-    - "Visual Studio 15 2017"
-    - "Visual Studio 15 2017 ARM"
-    - "Visual Studio 15 2017 Win64"
+  - "Ninja"
+  - "Visual Studio 14 2015"
+  - "Visual Studio 14 2015 ARM"
+  - "Visual Studio 14 2015 Win64"
+  - "Visual Studio 15 2017"
+  - "Visual Studio 15 2017 ARM"
+  - "Visual Studio 15 2017 Win64"
 
-    Protože Ninja je určená pro rychlé sestavení rychlosti místo flexibilitu a funkce, je nastavit jako výchozí. Některé projekty CMake, ale možná nebudete moct správně programujte Ninja. Pokud k tomu dojde, můžete dát pokyn CMake pro generování projektu sady Visual Studio místo.
+  Protože Ninja je určená pro rychlé sestavení rychlosti místo flexibilitu a funkce, je nastavit jako výchozí. Některé projekty CMake, ale možná nebudete moct správně programujte Ninja. Pokud k tomu dojde, můžete dát pokyn CMake pro generování projektu sady Visual Studio místo.
 
-    Chcete-li zadat generátoru Visual Studio, otevřete `CMakeSettings.json` v hlavní nabídce výběrem **CMake | Změnit nastavení CMake**. Odstraňte "Ninja" a zadejte "V". Tím se aktivuje technologii IntelliSense, která vám umožní vybrat generátor, který chcete.
+  Chcete-li zadat generátoru Visual Studio, otevřete `CMakeSettings.json` v hlavní nabídce výběrem **CMake | Změnit nastavení CMake**. Odstraňte "Ninja" a zadejte "V". Tím se aktivuje technologii IntelliSense, která vám umožní vybrat generátor, který chcete.
 
-    Pokud aktivní konfigurace určuje generátoru Visual Studio, ve výchozím nastavení je MSBuild.exe volána s `-m -v:minimal` argumenty. Přizpůsobení sestavení, uvnitř `CMakeSettings.json` souboru, můžete zadat další [argumenty příkazového řádku MSBuild](../build/msbuild-visual-cpp-overview.md) mají být předány prostřednictvím systému sestavení `buildCommandArgs` vlastnost:
+  Pokud aktivní konfigurace určuje generátoru Visual Studio, ve výchozím nastavení je MSBuild.exe volána s `-m -v:minimal` argumenty. Přizpůsobení sestavení, uvnitř `CMakeSettings.json` souboru, můžete zadat další [argumenty příkazového řádku MSBuild](../build/reference/msbuild-visual-cpp-overview.md) mají být předány prostřednictvím systému sestavení `buildCommandArgs` vlastnost:
     
     ```json
     "buildCommandArgs": "-m:8 -v:minimal -p:PreferredToolArchitecture=x64"
@@ -132,7 +132,7 @@ usage: ninja [options] [targets...]
 |   -n       | suší spuštění (nemusíte spouštět příkazy, ale fungovala tak, jako jsou proběhlo úspěšně)|
 |   -v       | Zobrazit všechny příkazových řádků během sestavování|
 |   -d režimu  | povolte ladění (použití -d režimy seznamu)|
-|   t – nástroj  | Spusťte subtool (použijte -t seznamu podřízených nástrojích). Ukončí toplevel možnosti; Další příznaky jsou předány do nástroje|
+|   t – nástroj  | Spusťte subtool (použijte -t seznamu podřízených nástrojích). Ukončí nejvyšší úrovně možnosti; Další příznaky jsou předány do nástroje|
 |   -w příznak  | Upravte upozornění (použijte -w seznamu upozornění)|
 
 ## <a name="inherited-environments"></a>Zděděných prostředí

@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: 31f9ba4e16fa1216db4fb66c7b7faeca333f2c43
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e50e5da5ea24d59131f123bb0c772897f9a30218
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520307"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329023"
 ---
 # <a name="storage-classes-c"></a>Třídy úložiště (C++)
 
@@ -24,7 +24,7 @@ A *třídu úložiště* deklarace proměnných v rámci jazyka C++ je specifik�
 
 1. [Proměnlivé](../cpp/mutable-data-members-cpp.md) – klíčové slovo lze považovat za specifikátor paměťové třídy. Je však pouze k dispozici v sezamu členů definice třídy.
 
-1. **Visual C++ 2010 nebo novějším:** **automaticky** – klíčové slovo již není specifikátorem třídy úložiště jazyka C++ a **zaregistrovat** – klíčové slovo je zastaralý. **Visual Studio 2017 verze 15.7 nebo novější:** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **zaregistrovat** – klíčové slovo se odebere z jazyka C++.
+1. **Visual C++ 2010 nebo novějším:** **Automaticky** – klíčové slovo již není specifikátorem třídy úložiště jazyka C++ a **zaregistrovat** – klíčové slovo je zastaralý. **Visual Studio 2017 verze 15.7 nebo novější:** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **Zaregistrovat** – klíčové slovo se odebere z jazyka C++.
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
@@ -34,7 +34,7 @@ A *třídu úložiště* deklarace proměnných v rámci jazyka C++ je specifik�
 
 - [static](#static)
 - [extern](#extern)
-- [možnost thread_local](#thread_local)
+- [thread_local](#thread_local)
 
 ## <a name="static"></a> Statická
 
@@ -167,7 +167,7 @@ Objekty a proměnné deklarované jako **extern** deklarovat objekt, který je d
 
 Deklarace **const** proměnné **extern** třídu úložiště vynutí vnější propojení u proměnné. Inicializace proměnné **extern const** proměnná je povolený v definici jednotky překladu. Inicializace v jednotkách překladu, které jsou jiné než definující jednotka překladu, vytvářejí nedefinované výsledky. Další informace najdete v tématu [používání příkazu extern pro specifikaci propojení](../cpp/using-extern-to-specify-linkage.md)
 
-[/Zc: externconstexpr](../build/reference/zc-externconstexpr.md) – možnost kompilátoru způsobí, že kompilátor použije [vnější propojení]() k proměnné deklarované s použitím `extern constexpr`. V dřívějších verzích sady Visual Studio a ve výchozím nastavení nebo pokud **/Zc:externConstexpr-** není zadána, Visual Studio použije vnitřní propojení k **constexpr** i pokud proměnné **extern** klíčové slovo se používá. **/Zc: externconstexpr** možnost je k dispozici od verze Visual Studio 2017 Update 15.6. a je vypnuto ve výchozím nastavení. /Permissive-option/Zc: externconstexpr nepovolí.
+[/Zc: externconstexpr](../build/reference/zc-externconstexpr.md) – možnost kompilátoru způsobí, že kompilátor použije [vnější propojení](../c-language/external-linkage.md) k proměnné deklarované s použitím `extern constexpr`. V dřívějších verzích sady Visual Studio a ve výchozím nastavení nebo pokud **/Zc:externConstexpr-** není zadána, Visual Studio použije vnitřní propojení k **constexpr** i pokud proměnné **extern** klíčové slovo se používá. **/Zc: externconstexpr** možnost je k dispozici od verze Visual Studio 2017 Update 15.6. a je vypnuto ve výchozím nastavení. /Permissive-option/Zc: externconstexpr nepovolí.
 
 Následující kód ukazuje dva **extern** deklarace, `DefinedElsewhere` (odkazuje na název definovaný v jiné jednotce překladu) a `DefinedHere` (odkazuje na název definovaný v ohraničujícím oboru):
 
@@ -221,7 +221,7 @@ Na Windows `thread_local` je funkčně srovnatelný s [__declspec(thread)](../cp
 
 ##  <a name="register"></a>  Registrace
 
-**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **zaregistrovat** – klíčové slovo již není podporovanou třídou úložiště. Klíčové slovo je stále vyhrazené ve standardu pro budoucí použití.
+**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **Zaregistrovat** – klíčové slovo již není podporovanou třídou úložiště. Klíčové slovo je stále vyhrazené ve standardu pro budoucí použití.
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class

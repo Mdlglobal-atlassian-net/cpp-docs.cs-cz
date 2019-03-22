@@ -4,16 +4,16 @@ description: Integrované vývojové prostředí sady Visual Studio podporuje v�
 ms.date: 03/08/2019
 helpviewer_keywords:
 - Visual C++, development tools
-ms.openlocfilehash: cb64891b18fcf309fd217240012e4ad35c644902
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: dfbe98cdbae6df7dacdc2f3076891971ba86927e
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823449"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328120"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Přehled o vývoji v jazyce C++ v sadě Visual Studio
 
-Microsoft C++ (MSVC) jako součást sady Visual Studio integrované vývojové prostředí (IDE), sdílí mnoho windows a nástroje společné s jiných jazycích. Mnoho z nich, včetně **Průzkumníka řešení**, editor kódu a ladicí program, jsou popsány v části [Visual Studio IDE](/visualstudbuild/visual-studio-ide). Často sdílené nástroje nebo okno má mírně odlišnou sadu funkcí jazyka C++ než pro jazyky .NET nebo JavaScript. Několik windows nebo nástroje jsou k dispozici pouze v edicích Visual Studio Professional nebo Visual Studio Enterprise.
+Microsoft C++ (MSVC) jako součást sady Visual Studio integrované vývojové prostředí (IDE), sdílí mnoho windows a nástroje společné s jiných jazycích. Mnoho z nich, včetně **Průzkumníka řešení**, editor kódu a ladicí program, jsou popsány v části [Visual Studio IDE](/visualstudio/get-started/visual-studio-ide). Často sdílené nástroje nebo okno má mírně odlišnou sadu funkcí jazyka C++ než pro jazyky .NET nebo JavaScript. Několik windows nebo nástroje jsou k dispozici pouze v edicích Visual Studio Professional nebo Visual Studio Enterprise.
 
 Kromě sdílené nástroje v integrovaném vývojovém prostředí sady Visual Studio MSVC má několik nástrojů pro vývoj nativního kódu. Tyto nástroje jsou také uvedené v tomto článku. Seznam, které jsou k dispozici v každé edici sady Visual Studio tools najdete v tématu [nástroje C++ a funkcí v edicích nástroje Visual Studio](ide/visual-cpp-tools-and-features-in-visual-studio-editions.md).
 

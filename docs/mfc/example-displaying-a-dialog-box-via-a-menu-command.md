@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: 8c60469747c24b4c295348a14cb569c4118c76d9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1e730125e47609f0bf87814b32962336cb752b04
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260475"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328256"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Příklad: Zobrazení dialogového okna pomocí příkazu nabídky
 
@@ -50,11 +50,16 @@ Postupy použijte následující názvy a hodnoty:
 
 1. Přidejte následující include příkaz CDisplayDialogDoc.cpp (nebo CDisplayDialogApp.cpp) po existující #include:
 
-   [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]
+   ```cpp
+   #include "TestDialog.h"
+   ```
 
 1. Přidejte následující kód, který `OnViewTest` implementovat funkci:
 
-   [!code-cpp[NVC_MFCControlLadenDialog#43](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_2.cpp)]
+   ```cpp
+   CTestDialog testdlg;
+   testdlg.DoModal();  
+   ```
 
 ### <a name="to-display-a-modeless-dialog-box"></a>Chcete-li zobrazit dialogové okno nemodální
 
@@ -64,29 +69,46 @@ Postupy použijte následující názvy a hodnoty:
 
    - Deklarace pole třídy dialogového okna, předchozí deklaraci první třídy:
 
-         [!code-cpp[NVC_MFCControlLadenDialog#44](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_3.h)]
+   ```cpp
+   class CTestDialog;
+   ```
 
    - Deklarujte ukazatel na dialogovém okně za veřejnou část atributy:
 
-         [!code-cpp[NVC_MFCControlLadenDialog#45](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_4.h)]
+   ```cpp
+   CTestDialog* m_pTestDlg;
+   ```
 
 1. Edit DisplayDialogView.cpp:
 
    - Přidejte že následující příkazu #include po existující #include:
 
-         [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]
+   ```cpp
+   #include "TestDialog.h"
+   ```
 
    - Přidejte následující kód do konstruktoru:
 
-         [!code-cpp[NVC_MFCControlLadenDialog#46](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_5.cpp)]
+   ```cpp
+   m_pTestDlg = NULL;
+   ```
 
    - Destruktor přidejte následující kód:
 
-         [!code-cpp[NVC_MFCControlLadenDialog#47](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_6.cpp)]
+   ```cpp
+   delete m_pTestDlg;
+   ```
 
    - Přidejte následující kód, který `OnViewTest` implementovat funkci:
 
-         [!code-cpp[NVC_MFCControlLadenDialog#48](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_7.cpp)]
+   ```cpp
+   if (NULL == m_pTestDlg)
+   {
+      m_pTestDlg = new CTestDialog(this);
+      m_pTestDlg->Create(CTestDialog::IDD, this);
+   }
+   m_pTestDlg->ShowWindow(SW_SHOW); 
+   ```
 
 ## <a name="see-also"></a>Viz také:
 

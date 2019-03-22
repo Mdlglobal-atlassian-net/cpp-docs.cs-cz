@@ -44,18 +44,18 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: d180ed8d416483d1be5e2bbd52f1a8752996f3f9
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: e2816d99991fcd051c5bbfbe6f4be6a43db2ef2e
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627428"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328555"
 ---
 # <a name="interlockeddecrement-intrinsic-functions"></a>Vnitřní funkce _InterlockedDecrement
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
-Poskytuje vnitřní podporu kompilátoru pro sadu SDK Windows Win32 [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement) funkce.
+Poskytuje vnitřní podporu kompilátoru pro sadu SDK Windows Win32 [InterlockedDecrement](/windows/desktop/api/winnt/nf-winnt-interlockeddecrement) funkce.
 
 ## <a name="syntax"></a>Syntaxe
 

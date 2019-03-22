@@ -12,16 +12,16 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: 2a519c0606a7df6e0ce55997a055d78865afafbf
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 0f10b4867b443f0db69743d7ff23bb059290b0a5
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694410"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328958"
 ---
 # <a name="add-a-member-variable"></a>Přidání členské proměnné
 
-Můžete přidat členské proměnné třídy pomocí zobrazení tříd. Členské proměnné může být buď pro [výměny dat a ověřování dat](../mfc/dialog-data-exchange-and-validation.md), nebo mohou být obecné. Průvodce data členské proměnné slouží k provést příslušné informace a použít ho ke vkládání prvků ve zdrojových souborech na příslušných místech. Můžete členské proměnné z přidat [editoru dialogového okna](../windows/dialog-editor.md) v [zobrazení prostředků](../windows/resource-view-window.md), nebo z [zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code).
+Můžete přidat členské proměnné třídy pomocí zobrazení tříd. Členské proměnné může být buď pro [výměny dat a ověřování dat](../mfc/dialog-data-exchange-and-validation.md), nebo mohou být obecné. Průvodce data členské proměnné slouží k provést příslušné informace a použít ho ke vkládání prvků ve zdrojových souborech na příslušných místech. Můžete členské proměnné z přidat [editoru dialogového okna](../windows/dialog-editor.md) v [zobrazení prostředků](../windows/how-to-create-a-resource-script-file.md#create-resources), nebo z [zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code).
 
 > [!NOTE]
 > Při navrhování a implementace dialogového okna, může pro vás výhodnější používat dialogové okno editor k přidávání ovládacích prvků dialogového okna pole a potom implementovat ovládací prvky členské proměnné.
@@ -129,7 +129,7 @@ Tento průvodce přidá deklaraci členské proměnné do souboru hlaviček. V z
 
   K dispozici pouze v případě, že je typ proměnné `BOOL`, `int`, `UINT`, `long`, `DWORD`, `float`, `double`, `BYTE`, `short`, `COLECurrency`, nebo `CTime`. Určuje přijatelné pro změnu nebo rozsah nejvyšší hodnotu.
 
-- **soubor .h**
+- **.h file**
 
   Pro ovládací prvky ActiveX, jejíž členské proměnné vyžadují obálkovou třídu. Nastaví název souboru hlavičky k přidání deklarace třídy.
 
@@ -147,16 +147,16 @@ Můžete použít [Průvodce přidáním členské proměnné](#add-member-varia
 
 Následující tabulka popisuje všechny dialogové okno typy ovládacích prvků, které jsou podporovány v prostředí MFC a [editoru dialogového okna](../windows/dialog-editor.md). Zobrazí také jejich dostupné typy a hodnoty.
 
-|Ovládací prvek|Typ ovládacího prvku|Typ řídicí proměnné|Typ hodnoty proměnné|Minimální/maximální hodnoty (pouze typ hodnoty)|
+|Control|Typ ovládacího prvku|Typ řídicí proměnné|Typ hodnoty proměnné|Minimální/maximální hodnoty (pouze typ hodnoty)|
 |-------------|------------------|---------------------------|-------------------------|-----------------------------------------|
 |Animace ovládacího prvku|SysAnimate32|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|None; pouze ovládací prvek|Není k dispozici|
 |Tlačítko|TLAČÍTKO|[CButton](../mfc/reference/cbutton-class.md)|None; pouze ovládací prvek|Není k dispozici|
 |Zaškrtávací políčko|KONTROLA|[CButton](../mfc/reference/cbutton-class.md)|`BOOL`|Minimální hodnota/maximální hodnoty|
-|Pole se seznamem|POLE SE SEZNAMEM|[CComboBox](../mfc/reference/ccombobox-class.md)|[CString –](../atl-mfc-shared/reference/cstringt-class.md)|Maximální počet znaků|
+|Pole se seznamem|COMBOBOX|[CComboBox](../mfc/reference/ccombobox-class.md)|[CString –](../atl-mfc-shared/reference/cstringt-class.md)|Maximální počet znaků|
 |Ovládací prvek pro výběr data|SysDateTimePick32|[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)|[CTime –](../atl-mfc-shared/reference/ctime-class.md)|Minimální hodnota/maximální hodnoty|
-|Textové pole|UPRAVIT|[Cedit –](../mfc/reference/cedit-class.md)|`CString`, int, UINT, long, DWORD, float, double, BYTE, short, BOOL, `COleDateTime`, nebo `COleCurrency`|Minimální hodnota/maximální hodnoty; maximální počet znaků: některé podpory|
+|Textové pole|UPRAVIT|[CEdit](../mfc/reference/cedit-class.md)|`CString`, int, UINT, long, DWORD, float, double, BYTE, short, BOOL, `COleDateTime`, nebo `COleCurrency`|Minimální hodnota/maximální hodnoty; maximální počet znaků: některé podpory|
 |Ovládacího prvku klávesová zkratka|msctls_hotkey32|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|None; pouze ovládací prvek|Není k dispozici|
-|Pole se seznamem|LISTBOX|[Clistbox –](../mfc/reference/clistbox-class.md)|`CString`|Maximální počet znaků|
+|Pole se seznamem|LISTBOX|[CListBox](../mfc/reference/clistbox-class.md)|`CString`|Maximální počet znaků|
 |Ovládací prvek seznamu|SysListView32|[CListCtrl](../mfc/reference/clistctrl-class.md)|None; pouze ovládací prvek|Není k dispozici|
 |Ovládací prvek měsíční kalendář|SysMonthCal32|[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)|`CTime`|Minimální hodnota/maximální hodnoty|
 |Ovládací prvek průběh|msctls_progress32|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|None; pouze ovládací prvek|Není k dispozici|
@@ -164,6 +164,6 @@ Následující tabulka popisuje všechny dialogové okno typy ovládacích prvk�
 |Ovládací prvek pro úpravy s formátováním|RICHEDIT|`CRichEditCtrl`|`CString`|Maximální počet znaků|
 |Posuvník (svislý nebo vodorovný|POSUVNÍK|[CScrollBar](../mfc/reference/cscrollbar-class.md)|`int`|Minimální hodnota/maximální hodnoty|
 |Posuvník|msctls_trackbar32|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|`int`|Minimální hodnota/maximální hodnoty|
-|Ovládací prvek typu číselník|msctls_updown32|[Cspinbuttonctrl –](../mfc/reference/cspinbuttonctrl-class.md)|None; pouze ovládací prvek|Není k dispozici|
+|Ovládací prvek typu číselník|msctls_updown32|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|None; pouze ovládací prvek|Není k dispozici|
 |Ovládací prvek karty|SysTabControl32|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|None; pouze ovládací prvek|Není k dispozici|
 |Ovládací prvek stromu|SysTreeView32|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|None; pouze ovládací prvek|Není k dispozici|

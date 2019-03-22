@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB consumer templates [C++]
 - databases [C++], consumers
 ms.assetid: d3e42612-0bc0-4d65-9c32-0e8a7b219e82
-ms.openlocfilehash: f3b247660e65975630b9434685d0a12caf0fc257
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a93b0a48bc5996cbb96194762b9c03ea143556e2
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419166"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328720"
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB – šablony příjemce (C++)
 
@@ -24,7 +24,7 @@ ms.locfileid: "57419166"
 
 - Nativní datových typů jazyka C/C++ pro programování technologie OLE DB.
 
-Použití šablony technologie OLE DB, byste měli vědět, jak šablon jazyka C++, COM a rozhraní OLE DB. Pokud nejste obeznámeni s OLE DB, přečtěte si téma [OLE DB referenční informace pro programátory](/previous-versions/windows/desktop/ms718124(v=vs.85)).
+Použití šablony technologie OLE DB, byste měli vědět, jak šablon jazyka C++, COM a rozhraní OLE DB. Pokud nejste obeznámeni s OLE DB, přečtěte si téma [ovladač Microsoft OLE DB pro SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server).
 
 Šablony technologie OLE DB podporovat existující objektový model OLE DB místo přidání nového objektu modelu. Horní vrstva tříd v šablony příjemce technologie OLE DB paralelní součásti definovaných ve specifikaci OLE DB. Návrh šablony příjemce technologie OLE DB zahrnuje pokročilé funkce, jako je několik přístupových objektů pro sadu řádků. Použití šablon a vícenásobná dědičnost činí knihovnu malé a flexibilní.
 
@@ -61,4 +61,4 @@ Další informace naleznete v následujících tématech:
 [Programování v architektuře OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Přístup k datům](../data-access-in-cpp.md)<br/>
 [Dokumentace k sadě SDK technologie OLE DB](/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
-[Referenční informace pro OLE DB programátory](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)
+[Ovladač Microsoft OLE DB pro SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)

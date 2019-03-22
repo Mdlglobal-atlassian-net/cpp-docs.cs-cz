@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 0de53b102cf06d8b4541f54f961f84408664caed
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: f2edafb0b60cfafcf7ad53b8402ffc39a6fc2f7c
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562793"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328841"
 ---
 # <a name="how-to-manage-symbols"></a>Postupy: Správa symbolů
 
@@ -85,7 +85,7 @@ Názvy symbolů mají popisný předpony, které označují typ prostředku nebo
 
 ### <a name="to-change-a-symbol-name-id"></a>Chcete-li změnit název symbolu (ID)
 
-1. V [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources), vyberte prostředek.
+1. V [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources), vyberte prostředek.
 
 1. V **vlastnosti** okno, zadejte nový název symbolu nebo vyberte ze seznamu existující symboly v **ID** pole.
 
@@ -129,7 +129,7 @@ Některá omezení hodnoty symbolu jsou:
 
 ### <a name="to-change-a-symbol-value"></a>Chcete-li změnit hodnotu symbolu
 
-1. V [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources), vyberte prostředek.
+1. V [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources), vyberte prostředek.
 
 1. V **vlastnosti** okno, zadejte název symbolu následovaný symbolem rovná a typ integer v **ID** pole, například:
 
@@ -185,7 +185,7 @@ Prostředí se správně interpretovat tyto počítané symboly, pokud:
 
 ### <a name="to-include-shared-read-only-symbols-in-your-resource-file"></a>Zahrnout do souboru prostředků sdílené symboly (pouze pro čtení)
 
-1. V [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources), klikněte pravým tlačítkem na váš *.rc* a vyberte možnost [prostředek zahrnuje](../windows/resource-includes-dialog-box.md).
+1. V [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources), klikněte pravým tlačítkem na váš *.rc* a vyberte možnost [prostředek zahrnuje](../windows/resource-includes-dialog-box.md).
 
 1. V **měrnice souborů jen pro čtení** pole, použijte `#include` direktivy kompilátoru k určení souboru, kam chcete uchovávat symbolů jen pro čtení.
 
@@ -204,7 +204,7 @@ Prostředí se správně interpretovat tyto počítané symboly, pokud:
 
 ### <a name="to-change-the-name-of-the-resource-symbol-header-file"></a>Chcete-li změnit název hlavičkový soubor symbolů prostředků
 
-1. V [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources), klikněte pravým tlačítkem na váš *.rc* soubor a zvolte [prostředek zahrnuje](../windows/resource-includes-dialog-box.md).
+1. V [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources), klikněte pravým tlačítkem na váš *.rc* soubor a zvolte [prostředek zahrnuje](../windows/resource-includes-dialog-box.md).
 
 1. V **hlavičkový soubor symbolů** zadejte nový název pro tento soubor.
 

@@ -87,12 +87,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 92eac69e6802a824c4b6e107d2ff3393e931a542
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 4191b1bd495a8908610b6e49c3dff676de2304dc
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563053"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328490"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>Postupy: Vytvoření ikony nebo jiného obrázku
 
@@ -167,7 +167,7 @@ Použití **otevřete &lt;zařízení&gt; Image** dialogové okno otevřete obr�
 
 #### <a name="to-create-a-new-icon-or-cursor"></a>Chcete-li vytvořit nové ikony nebo kurzoru
 
-1. V [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources), klikněte pravým tlačítkem na váš *.rc* souboru a pak zvolte **vložit prostředků**. Pokud už máte existující prostředek obrázku vaše *.rc* souboru, jako je například kurzor, můžete kliknout pravým tlačítkem **kurzor** a pak zvolte položku **vložení kurzoru**.
+1. V [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources), klikněte pravým tlačítkem na váš *.rc* souboru a pak zvolte **vložit prostředků**. Pokud už máte existující prostředek obrázku vaše *.rc* souboru, jako je například kurzor, můžete kliknout pravým tlačítkem **kurzor** a pak zvolte položku **vložení kurzoru**.
 
 1. V [vložit prostředek – dialogové okno](../windows/add-resource-dialog-box.md)vyberte **ikonu** nebo **kurzor** a zvolte **nový**. U ikon tato akce vytvoří prostředek s ikonou s 32 × 32, ikona 16 barev. Pro ukazatele, 32 × 32, bude vytvořena monochromatický obrázek (barvami. 2).
 
@@ -228,7 +228,7 @@ Použití **Editor obrázků**, ikony a kurzory mohou být velikosti velké (64 
 
 #### <a name="to-create-a-256-color-icon-or-cursor"></a>Chcete-li vytvořit 256barevných ikony nebo kurzoru
 
-1. V [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources), klikněte pravým tlačítkem na váš *.rc* souboru a pak zvolte **vložit prostředků**. Pokud už máte existující prostředek obrázku vaše *.rc* souboru, jako je například kurzor, můžete kliknout pravým tlačítkem **kurzor** a pak zvolte položku **vložení kurzoru**.
+1. V [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources), klikněte pravým tlačítkem na váš *.rc* souboru a pak zvolte **vložit prostředků**. Pokud už máte existující prostředek obrázku vaše *.rc* souboru, jako je například kurzor, můžete kliknout pravým tlačítkem **kurzor** a pak zvolte položku **vložení kurzoru**.
 
 1. V [vložit prostředek – dialogové okno](../windows/add-resource-dialog-box.md)vyberte **ikonu** nebo **kurzor** a zvolte **nový**.
 
@@ -295,7 +295,7 @@ Můžete otevřít ve formátu GIF nebo JPEG imagí v **Editor obrázků** a ulo
 
 ### <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>Chcete-li přidat nový prostředek obrázku do nespravované projektu C++
 
-1. V [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources), klikněte pravým tlačítkem na váš *.rc* souboru a pak zvolte **vložit prostředků**. Pokud už máte existující prostředek obrázku vaše *.rc* souboru, jako je například kurzor, můžete jednoduše klikněte pravým tlačítkem **kurzor** a pak zvolte položku **vložení kurzoru**.
+1. V [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources), klikněte pravým tlačítkem na váš *.rc* souboru a pak zvolte **vložit prostředků**. Pokud už máte existující prostředek obrázku vaše *.rc* souboru, jako je například kurzor, můžete jednoduše klikněte pravým tlačítkem **kurzor** a pak zvolte položku **vložení kurzoru**.
 
 1. V [vložit prostředek – dialogové okno](../windows/add-resource-dialog-box.md), vyberte typ, který chcete vytvořit prostředek obrázku (**rastrový obrázek**, například) klikněte na tlačítko **nový**.
 
@@ -315,7 +315,7 @@ Můžete otevřít ve formátu GIF nebo JPEG imagí v **Editor obrázků** a ulo
 
 ## <a name="requirements"></a>Požadavky
 
-Žádná
+Žádné
 
 ## <a name="see-also"></a>Viz také
 

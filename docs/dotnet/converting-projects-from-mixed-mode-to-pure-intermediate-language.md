@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 46a12e6204113b00c209696bbdfd1093232d7521
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93eff646fb582e25ad70549afc714c5321e56079
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559672"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328581"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Převod projektů ze smíšeného režimu do čistého IL
 
@@ -80,16 +80,16 @@ Pokud používáte starší verzi sady nástrojů kompilátoru Visual C++, kter�
    |[Datový typ Boolean](/dotnet/api/system.boolean)|Představuje logickou hodnotu.|
    |[Bajtů](/dotnet/api/system.byte)|Představuje celé číslo bez znaménka 8 bitů.|
    |[Char](/dotnet/api/system.char)|Hodnota představuje znak Unicode.|
-   |[Datum a čas](/dotnet/api/system.datetime.datetime.aspx)|Představuje okamžik v čase, obvykle vyjádřený jako datum a čas.|
+   |[Datum a čas](/dotnet/api/system.datetime)|Představuje okamžik v čase, obvykle vyjádřený jako datum a čas.|
    |[Decimal](/dotnet/api/system.decimal)|Představuje desetinné číslo.|
    |[Double](/dotnet/api/system.double)|Představuje číslo s plovoucí desetinnou čárkou dvojitou přesností.|
    |[identifikátor GUID](/dotnet/api/system.guid)|Představuje globálně jedinečný identifikátor (GUID).|
    |[Int16](/dotnet/api/system.int16)|Představuje 16bitové celé číslo se znaménkem.|
-   |[Datový typ Int32](/dotnet/api/system.int32)|Představuje 32bitové celé číslo se znaménkem.|
+   |[Int32](/dotnet/api/system.int32)|Představuje 32bitové celé číslo se znaménkem.|
    |[Int64](/dotnet/api/system.int64)|Představuje 64bitové celé číslo se znaménkem.|
    |[IntPtr](/dotnet/api/system.intptr)|Typ specifické pro platformu, která se používá k reprezentaci ukazatele nebo popisovače.|
-   |[SByte –](/dotnet/api/system.byte.aspx)|Představuje 8bitové celé číslo se znaménkem.|
-   |[Jeden](/dotnet/api/system.single.aspx)|Představuje číslo s plovoucí desetinnou čárkou jednoduchou přesností.|
+   |[SByte –](/dotnet/api/system.byte)|Představuje 8bitové celé číslo se znaménkem.|
+   |[Jeden](/dotnet/api/system.single)|Představuje číslo s plovoucí desetinnou čárkou jednoduchou přesností.|
    |[TimeSpan](/dotnet/api/system.timespan)|Představuje časový interval.|
    |[UInt16](/dotnet/api/system.uint16)|Představuje celé číslo bez znaménka 16 bitů.|
    |[UInt32](/dotnet/api/system.uint32)|Představuje celé číslo bez znaménka 32-bit.|

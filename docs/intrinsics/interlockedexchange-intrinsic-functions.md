@@ -1,5 +1,5 @@
 ---
-title: Vnitřní funkce _InterlockedExchange
+title: _InterlockedExchange Intrinsic Functions
 ms.date: 12/17/2018
 f1_keywords:
 - _InterlockedExchange_rel
@@ -44,16 +44,16 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: ecf69b1e910dab9824131f26d8db1eb5615d6e18
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: bccf9f46a886a622c493485818601044afff232d
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627173"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328516"
 ---
-# <a name="interlockedexchange-intrinsic-functions"></a>Vnitřní funkce _InterlockedExchange
+# <a name="interlockedexchange-intrinsic-functions"></a>_InterlockedExchange Intrinsic Functions
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Generuje instrukce atomic nastavit zadanou hodnotu.
 
@@ -158,13 +158,13 @@ Vrátí počáteční hodnotu, na které odkazuje `Target`.
 
 |Vnitřní|Architektura|Záhlaví|
 |---------------|------------------|------------|
-|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|x86, ARM, x64|\<intrin.h >|
-|`_InterlockedExchange_acq`, `_InterlockedExchange_nf`, `_InterlockedExchange_rel`, `_InterlockedExchange8_acq`, `_InterlockedExchange8_nf`, `_InterlockedExchange8_rel`, `_InterlockedExchange16_acq`, `_InterlockedExchange16_nf`, `_InterlockedExchange16_rel`, `_InterlockedExchange64_acq`, `_InterlockedExchange64_nf`, `_InterlockedExchange64_rel`,|ARM|\<intrin.h >|
-|`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`, `_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|x86, x64|\<immintrin.h >|
+|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|x86, ARM, x64|\<intrin.h>|
+|`_InterlockedExchange_acq`, `_InterlockedExchange_nf`, `_InterlockedExchange_rel`, `_InterlockedExchange8_acq`, `_InterlockedExchange8_nf`, `_InterlockedExchange8_rel`, `_InterlockedExchange16_acq`, `_InterlockedExchange16_nf`, `_InterlockedExchange16_rel`, `_InterlockedExchange64_acq`, `_InterlockedExchange64_nf`, `_InterlockedExchange64_rel`,|ARM|\<intrin.h>|
+|`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`, `_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|x86, x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Poznámky
 
-`_InterlockedExchange` poskytuje vnitřní podporu kompilátoru pro sadu SDK Windows Win32 [InterlockedExchange](/windows/desktop/api/winbase/nf-winbase-interlockedexchange) funkce.
+`_InterlockedExchange` poskytuje vnitřní podporu kompilátoru pro sadu SDK Windows Win32 [InterlockedExchange](/windows/desktop/api/winnt/nf-winnt-interlockedexchange) funkce.
 
 Existuje několik variant na `_InterlockedExchange` , která se liší v závislosti na datové typy, které zahrnují a zda specifické pro procesor získat nebo se používá sémantiku vydání.
 

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: bea53c33ef723cf8c98d0c542d24389e730c092a
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 6c855986d98f265f876f2acdd085eea46e057c93
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563300"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328893"
 ---
 # <a name="string-editor-c"></a>Editor řetězců (C++)
 
@@ -56,7 +56,7 @@ Tabulky řetězců umožňují snadno lokalizovat vaši aplikaci do různých ja
 
 ### <a name="to-find-a-string-resource-in-the-string-table"></a>Chcete-li nalézt zdroj řetězce v tabulce řetězců
 
-1. Otevřete poklepáním na ikonu v tabulce řetězců [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Otevřete poklepáním na ikonu v tabulce řetězců [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Přejděte do nabídky **upravit** > **najít a nahradit** a zvolte **najít**.
 
@@ -79,7 +79,7 @@ Můžete rychle vložení nebo odstranění položek do řetězce pomocí tabulk
 
 #### <a name="to-add-a-string-table-entry"></a>Přidání položky tabulky řetězců
 
-1. Otevřete poklepáním na ikonu v tabulce řetězců [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Otevřete poklepáním na ikonu v tabulce řetězců [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Klikněte pravým tlačítkem v rámci tabulky řetězců a zvolte **nový řetězec**.
 
@@ -124,7 +124,7 @@ Můžete použít místní úpravy. Chcete-li změnit **ID**, **hodnotu**, a **t
 
 #### <a name="to-change-a-string-or-its-identifier"></a>Chcete-li změnit její identifikátor nebo řetězec
 
-1. Otevřete poklepáním na ikonu v tabulce řetězců [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Otevřete poklepáním na ikonu v tabulce řetězců [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Vyberte řetězec, který chcete upravit a dvakrát klikněte **ID**, **hodnotu**, nebo **titulek** sloupec a pak můžete:
 
@@ -136,7 +136,7 @@ Můžete použít místní úpravy. Chcete-li změnit **ID**, **hodnotu**, a **t
 
 #### <a name="to-change-the-caption-property-of-multiple-string-resources"></a>Změna vlastnosti titulku více řetězcové prostředky
 
-1. Otevřete poklepáním na ikonu v tabulce řetězců [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Otevřete poklepáním na ikonu v tabulce řetězců [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Vyberte řetězců, které chcete změnit současným **Ctrl** klíče při výběru každé z nich.
 
@@ -146,7 +146,7 @@ Můžete použít místní úpravy. Chcete-li změnit **ID**, **hodnotu**, a **t
 
 ### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>Přidání formátovacích nebo speciálních znaků do řetězce prostředků
 
-1. Otevřete poklepáním na ikonu v tabulce řetězců [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Otevřete poklepáním na ikonu v tabulce řetězců [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Vyberte řetězec, který chcete upravit.
 

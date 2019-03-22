@@ -23,12 +23,12 @@ helpviewer_keywords:
 - symbols [C++], finding
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: 74c70db5c04a6b56ec7bb2630c8d829151ec4225
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: cd2f05b4944e26d8a96b3f96e4e39fda0ad8ee48
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562832"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328386"
 ---
 # <a name="how-to-include-resources-at-compile-time-c"></a>Postupy: Zahrnutí prostředků v době kompilace (C++)
 
@@ -48,7 +48,7 @@ Pokud máte oddíly v existujících souborech .rc, které splňují kterákoli 
 
 Můžete přidat prostředky z jiných souborů do projektu v době kompilace v jejich uvedení v seznamu **směrnice času kompilace** pole **prostředek zahrnuje** dialogové okno. Použití **prostředek zahrnuje** dialogové okno Upravit prostředí projektu normální funkční uspořádání ukládání všech prostředků v projektu soubor .rc a všechny [symboly](../windows/symbols-resource-identifiers.md) v `Resource.h`.
 
-Chcete-li začít, otevřete **prostředek zahrnuje** dialogové okno kliknutím pravým tlačítkem myši v souboru .rc [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources)vyberte **prostředek zahrnuje** a mějte na paměti následující vlastnosti:
+Chcete-li začít, otevřete **prostředek zahrnuje** dialogové okno kliknutím pravým tlačítkem myši v souboru .rc [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources)vyberte **prostředek zahrnuje** a mějte na paměti následující vlastnosti:
 
 | Vlastnost | Popis |
 |---|---|
@@ -65,7 +65,7 @@ Po provedení změn pomocí souboru prostředků **prostředek zahrnuje** dialog
 
 1. Umístíte prostředky v souboru skriptu prostředků s jedinečným názvem souboru. Nepoužívejte *projectname.rc*, protože jde o název souboru pro soubor skriptu hlavní prostředku.
 
-1. Klikněte pravým tlačítkem myši *.rc* ve [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources) a vyberte **prostředek zahrnuje**.
+1. Klikněte pravým tlačítkem myši *.rc* ve [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources) a vyberte **prostředek zahrnuje**.
 
 1. V **směrnice času kompilace** přidejte [#include](../preprocessor/hash-include-directive-c-cpp.md) direktivy kompilátoru zahrnout nový soubor prostředků hlavního souboru prostředku ve vývojovém prostředí.
 

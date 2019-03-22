@@ -21,12 +21,12 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: df693e87bc9a370409eb43155d3f976a9f00cdac
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 0adcefe2af9d17a1c42f64f25636e220f53706fc
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562858"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328750"
 ---
 # <a name="binary-editor-c"></a>Binární Editor (C++)
 
@@ -53,7 +53,7 @@ Jenom konkrétní hodnoty ASCII jsou reprezentovány v **binární Editor** (0x2
 
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>Chcete-li otevřít prostředek klasické pracovní plochy Windows pro binární úpravy
 
-1. V [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources), vyberte soubor konkrétní prostředek, který chcete upravit.
+1. V [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources), vyberte soubor konkrétní prostředek, který chcete upravit.
 
 1. Klikněte pravým tlačítkem na zdroj a vyberte **Open binární Data**.
 
@@ -123,7 +123,7 @@ Dalším způsobem, jak vytvořit vlastní prostředek se má importovat jako vl
 
 ## <a name="requirements"></a>Požadavky
 
-Žádná
+Žádné
 
 ## <a name="see-also"></a>Viz také
 

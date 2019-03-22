@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 28127ea89fdba1b70988ced1d6004c0f914c66e2
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 9867fdf260750d47421e699cdd0d7a58b02ce947
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563040"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328620"
 ---
 # <a name="how-to-manage-resources-c"></a>Postupy: Správa prostředků (C++)
 
@@ -52,7 +52,7 @@ Nelze přetáhnout a vyřadit, kopírování, vyjmutí nebo vložte mezi soubory
 
 ### <a name="to-copy-resources"></a>Chcete-li kopírovat zdroje
 
-1. Otevřete oba samostatné soubory prostředků (naleznete v tématu Jak [k otevření souboru skriptu prostředků](/how-to-create-a-resource-script-file#use-resource-script-files)). Například otevřete *Source1.rc* a *Source2.rc*.
+1. Otevřete oba samostatné soubory prostředků. (Viz [použijte soubory skriptu prostředků](how-to-create-a-resource-script-file.md#use-resource-script-files)). Například otevřete *Source1.rc* a *Source2.rc*.
 
 1. V prvním .rc souboru, buď:
 
@@ -88,7 +88,7 @@ IDD_AboutBox (Finnish - XX33)
 
 ### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Kopírovat existující prostředek a změnit jeho jazyka nebo podmínky
 
-V *.rc* souboru nebo [zobrazení prostředků](../windows/resource-view-window.md) okna, klikněte pravým tlačítkem na požadovaný prostředek zkopírovat a zvolte **vložit kopii**. Potom nastavte následující:
+V *.rc* souboru nebo [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources) okna, klikněte pravým tlačítkem na požadovaný prostředek zkopírovat a zvolte **vložit kopii**. Potom nastavte následující:
 
 - Pro **jazyk** seznamu, vyberte jazyk.
 
@@ -107,7 +107,7 @@ Můžete importovat grafických prostředků (rastrové obrázky, ikony, kurzory
 
 ### <a name="to-import-a-resource-into-the-resource-script-file"></a>Pro import prostředku do souboru skriptu prostředků
 
-1. V [zobrazení prostředků](../windows/resource-view-window.md) klikněte pravým tlačítkem na uzel skriptů (.rc) soubor prostředků, ke kterému chcete přidat prostředek a vyberte **Import**.
+1. V [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources) klikněte pravým tlačítkem na uzel skriptů (.rc) soubor prostředků, ke kterému chcete přidat prostředek a vyberte **Import**.
 
 1. Vyhledejte a vyberte název souboru rastrového obrázku (BMP), ikony (ICO), kurzoru (.cur), soubor ve formátu html (.htm) nebo jiný soubor k importu.
 
@@ -118,7 +118,7 @@ Můžete importovat grafických prostředků (rastrové obrázky, ikony, kurzory
 
 ### <a name="to-export-a-resource-for-use-outside-of-visual-c"></a>Chcete-li exportovat prostředek pro použití mimo aplikaci Visual C++
 
-1. V [zobrazení prostředků](../windows/resource-view-window.md), klikněte pravým tlačítkem na požadovaný prostředek k exportu a vyberte **exportovat**. Můžete přijmout aktuální název souboru nebo zadejte nový.
+1. V [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources), klikněte pravým tlačítkem na požadovaný prostředek k exportu a vyberte **exportovat**. Můžete přijmout aktuální název souboru nebo zadejte nový.
 
 1. Přejděte do složky, kam chcete uložit soubor a vyberte **exportovat**.
 

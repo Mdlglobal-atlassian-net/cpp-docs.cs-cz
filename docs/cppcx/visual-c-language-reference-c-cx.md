@@ -2,12 +2,12 @@
 title: Referenční dokumentace jazyka Visual C++ (C + +/ CX)
 ms.date: 09/15/2017
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-ms.openlocfilehash: 319374447ba08dbf18fba91e4c24c0874d3b6ce2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ce0272499b653b9077a891e39e9b29797e7e051d
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422959"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328412"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Referenční dokumentace jazyka Visual C++ (C + +/ CX)
 
@@ -24,7 +24,7 @@ S použitím C + +/ CX, můžete vytvořit:
 
 - Součásti modulu Windows Runtime C++, které mohou být spotřebovány aplikacemi Windows založené na jazyce JavaScript. Další informace najdete v tématu [vytváření komponent Windows Runtime v jazyce C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
-- Hry rozhraní DirectX pro Windows a aplikace náročné na grafiku. Další informace najdete v tématu [vytvořit jednoduché hře pro UPW s rozhraním DirectX](/windows/uwp/gaming/tutorial--create-your-first-metro-style-directx-game).
+- Hry rozhraní DirectX pro Windows a aplikace náročné na grafiku. Další informace najdete v tématu [vytvořit jednoduché hře pro UPW s rozhraním DirectX](/windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game).
 
 ## <a name="related-articles"></a>Související články
 
@@ -32,7 +32,7 @@ S použitím C + +/ CX, můžete vytvořit:
 |-|-|
 |[Stručná referenční příručka](../cppcx/quick-reference-c-cx.md)|Tabulka klíčových slov a operátory pro C + +/ CX.|
 |[Systém typů](../cppcx/type-system-c-cx.md)|Popisuje základní C + +/ CX typy a programovací konstrukce a jak využívat C + +/ CX využívat a vytvořit typy Windows Runtime.|
-|[Vytváření aplikací a knihoven](../cppcx/building-apps-and-libraries-c-cx.md)|Popisuje, jak vytvářet aplikace a odkaz na aned statické knihovny DLL pomocí integrovaného vývojového prostředí.|
+|[Vytváření aplikací a knihoven](../cppcx/building-apps-and-libraries-c-cx.md)|Popisuje, jak použít rozhraní IDE k sestavování aplikací a propojit statických knihoven a knihovny DLL.|
 |[Spolupráce s jinými jazyky](../cppcx/interoperating-with-other-languages-c-cx.md)|Popisuje, jak komponenty, které jsou vytvořené pomocí jazyka C + +/ CX lze použít s komponentami, které jsou napsány v jazyce JavaScript, žádné spravované jazyka nebo knihovna šablon C++ Windows Runtime.|
 |[Práce s vlákny a zařazování](../cppcx/threading-and-marshaling-c-cx.md)|Popisuje, jak můžete určit chování vláken a zařazování komponent, které vytvoříte.|
 |[Odkaz na obory názvů](../cppcx/namespaces-reference-c-cx.md)|Referenční dokumentace pro výchozí obor názvů, obor názvů Platform, Platform::Collections – a související obory názvů.|

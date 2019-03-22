@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CDBVariant [MFC], m_pstringA
 - CDBVariant [MFC], m_pstringW
 ms.assetid: de23609c-c560-4b24-bd6b-9d8903fd5b49
-ms.openlocfilehash: 41ea20bcddc53142773d474af41021e9c71af1aa
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 48a2e08d056e3bfef8a06b80ae6607947923cbcb
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289855"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328945"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant – třída
 
@@ -55,13 +55,13 @@ class CDBVariant
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDBVariant::CDBVariant](#cdbvariant)|Vytvoří `CDBVariant` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDBVariant::Clear](#clear)|Vymaže `CDBVariant` objektu.|
 
@@ -73,7 +73,7 @@ class CDBVariant
 
 ### <a name="public-union-members"></a>Veřejné členy sjednocení.
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDBVariant::m_boolVal](#m_boolval)|Obsahuje hodnotu typu **BOOL**.|
 |[CDBVariant::m_chVal](#m_chval)|Obsahuje hodnotu typu **unsigned char**.|
@@ -216,7 +216,7 @@ Uchovává ukazatel na objekt typu TIMESTAMP_STRUCT z.
 
 `m_pdate` Patří datový člen sjednocení. Před použitím `m_pdate`, nejprve zkontrolujte hodnotu [CDBVariant::m_dwType](#m_dwtype). Pokud `m_dwType` nastavena na DBVT_DATE, pak `m_pdate` obsahuje platný ukazatel; v opačném případě přístupu k `m_pdate` vytvoří nespolehlivé výsledky.
 
-Další informace o typu TIMESTAMP_STRUCT z dat, naleznete v tématu [datové typy jazyka C](/previous-versions/windows/desktop/ms714556) v dodatku D *ODBC programátora* v sadě Windows SDK.
+Další informace o typu TIMESTAMP_STRUCT z dat, naleznete v tématu [datové typy jazyka C](/sql/odbc/reference/appendixes/c-data-types) v dodatku D *ODBC programátora* v sadě Windows SDK.
 
 ##  <a name="m_pstring"></a>  CDBVariant::m_pstring
 

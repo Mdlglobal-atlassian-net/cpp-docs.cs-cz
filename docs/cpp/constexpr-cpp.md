@@ -4,34 +4,32 @@ ms.date: 04/06/2018
 f1_keywords:
 - constexpr_cpp
 ms.assetid: c6458ccb-51c6-4a16-aa61-f69e6f4e04f7
-ms.openlocfilehash: afe883bf74ae2d6115dc7bdcd92d09616dde0ae6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ab3b75589864c95cb345be57db39c028a02f8db
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605731"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328672"
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 
-Klíčové slovo **constexpr** byla zavedena v C ++ 11 a vylepšení v C ++ 14. To znamená, že *konstantní výraz*. Stejně jako **const**, ho můžete použít u proměnné tak, že pokud se žádný kód se pokusí změnit hodnotu, bude vyvolána chyba kompilátoru. Na rozdíl od **const**, **constexpr** můžete také použít pro funkce a třídy konstruktory. **constexpr** označuje, že hodnota nebo návratová hodnota je konstantní a, pokud je to možné, budou mít vypočítána v době kompilace.
+Klíčové slovo **constexpr** byla zavedena v C ++ 11 a vylepšení v C ++ 14. To znamená, že *konstantní výraz*. Stejně jako **const**, ho můžete použít u proměnné tak, aby veškerý kód se pokusí změnit hodnotu se generuje chybu kompilátoru. Na rozdíl od **const**, **constexpr** můžete také použít pro funkce a třídy konstruktory. **constexpr** označuje, že hodnota nebo návratová hodnota je konstantní a, pokud je to možné, je vypočítána v době kompilace.
 
 A **constexpr** celočíselnou hodnotu je možné, bez ohledu na to se nevyžadují, jako například argumenty šablony a deklarace pole konstantní celé číslo. A pokud hodnotu nelze vypočítat v době kompilace místo běhu, pomáhají aplikace rychleji a použít méně paměti.
 
-Pokud chcete omezit složitost výpočetní konstanty z doby kompilace a jejich potenciální dopad čas kompilace, C ++ 14 standard vyžaduje, aby typech účastnících konstantní výrazy s omezeným přístupem k [typy literálu](trivial-standard-layout-and-pod-types.md#literal_types).
+Pokud chcete omezit složitost kompilace konstantní výpočty a jejich potenciální dopad na čas kompilace, vyžaduje C ++ 14 standardní typy v konstantních výrazech bude [typy literálu](trivial-standard-layout-and-pod-types.md#literal_types).
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-constexpr  literal-type  identifier = constant-expression;
-constexpr  literal-type  identifier { constant-expression };
-constexpr literal-type identifier(params );
-constexpr ctor (params);
-```
+> **constexpr** *typem literálu* *identifikátor* ** = ** *konstantní výraz* **;** 
+>  **constexpr** *typem literálu* *identifikátor* **{** *konstantního výrazu. * **}** **;** 
+>  **constexpr** *typem literálu* *identifikátor* **(** *params* **)** **;** 
+>  **constexpr** *ctor* **(** *params* **)** **;**
 
 ## <a name="parameters"></a>Parametry
 
 *params*<br/>
-Jeden nebo více parametrů, které musí být typu literálu a samotné musí být konstantní výraz.
+Jeden nebo více parametrů, každý z nich musí být typu literálu a samotné musí být konstantní výraz.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -39,7 +37,7 @@ Proměnná constexpr nebo funkce musí vracet [typ literálu](trivial-standard-l
 
 ## <a name="constexpr-variables"></a>proměnné constexpr
 
-Hlavní rozdíl mezi const a proměnné constexpr je inicializace konstantní proměnné může být odložena až do doby běhu, zatímco proměnné constexpr musí inicializovat v době kompilace.  Všechny proměnné constexpr jsou const.
+Hlavní rozdíl mezi const a proměnné constexpr je, že inicializace konstantní proměnné může být odložena až do spuštění. Proměnná constexpr musí inicializovat v době kompilace.  Všechny proměnné constexpr jsou const.
 
 - Proměnné mohou být deklarovány s **constexpr**, pokud má typ literálu a je inicializován. Pokud se inicializace provádí pomocí konstruktoru, konstruktor musí být deklarována jako **constexpr**.
 
@@ -58,7 +56,7 @@ constexpr int k = j + 1; //Error! j not a constant expression
 
 ## <a name="constexpr_functions"></a> Funkce constexpr.
 
-A **constexpr** funkce je taková, jejíž návratovou hodnotu nelze vypočítat při kompilaci při využívání kód vyžaduje.  Pokud argumenty jsou **constexpr** hodnoty a časově náročný kód vyžaduje hodnotu vrácenou v době kompilace, třeba když chcete inicializovat **constexpr** proměnné nebo zadat argument šablony bez typu, je Vytvoří konstantu kompilace. Při volání s jinou hodnotu než**constexpr** argumenty, nebo když jeho hodnota není vyžadována v době kompilace, vytvoří hodnotu v době běhu jako normální funkce.  (Toto chování duální vám ušetří od nutnosti psát **constexpr** a jiných-**constexpr** verze stejné funkce.)
+A **constexpr** funkce je taková, jejíž návratovou hodnotu nelze vypočítat v době kompilace při použití kódu vyžaduje. Využívání kódu vyžaduje, vrácená hodnota v době kompilace, například k inicializaci **constexpr** proměnné nebo zadat jako argument šablony bez typu. Pokud argumenty jsou **constexpr** hodnoty, **constexpr** funkce vytvoří konstantu kompilace. Při volání s jinou hodnotu než**constexpr** argumenty, nebo když jeho hodnota se vyžaduje v době kompilace, vytvoří hodnotu v době běhu jako normální funkce. (Toto chování duální vám ušetří od nutnosti psát **constexpr** a jiných-**constexpr** verze stejné funkce.)
 
 A **constexpr** funkce nebo konstruktoru je implicitně **vložené**.
 
@@ -68,7 +66,7 @@ Funkce constexpr platí následující pravidla:
 
 - A **constexpr** funkce mohou být rekurzivní.
 
-- Nemůže být [virtuální](../cpp/virtual-cpp.md). A konstruktor nelze definovat jako constexpr, pokud má všechny virtuální základní třídy nadřazené třídy.
+- Nemůže být [virtuální](../cpp/virtual-cpp.md). Konstruktor nelze definovat jako constexpr, pokud má všechny virtuální základní třídy nadřazené třídy.
 
 - Text může být definován jako `= default` nebo `= delete`.
 
@@ -96,15 +94,15 @@ constexpr float exp(float x, int n)
 ```
 
 > [!TIP]
-> Poznámka: V ladicím programu sady Visual Studio při ladění jiných úsporné laděné sestavení, můžete zjistit, jestli **constexpr** vyhodnocení funkce v době kompilace vložením zarážky dovnitř. Pokud je zarážka dosažena, byla volána funkce v době běhu.  Pokud ne, pak byla volána funkce v době kompilace.
+> V ladicím programu sady Visual Studio při ladění jiných úsporné laděné sestavení, můžete zjistit, jestli **constexpr** vyhodnocení funkce v době kompilace vložením zarážky dovnitř. Pokud je zarážka dosažena, byla volána funkce v době běhu.  Pokud ne, pak byla volána funkce v době kompilace.
 
 ## <a name="extern-constexpr"></a>extern constexpr
 
-[/Zc: externconstexpr](../build/reference/zc-externconstexpr.md) – možnost kompilátoru způsobí, že kompilátor použije [vnější propojení]() k proměnné deklarované s použitím **extern constexpr**. V dřívějších verzích sady Visual Studio a ve výchozím nastavení nebo pokud **/Zc:externConstexpr-** není zadána, Visual Studio použije vnitřní propojení k **constexpr** i pokud proměnné **extern** klíčové slovo se používá. **/Zc: externconstexpr** možnost je k dispozici od verze Visual Studio 2017 Update 15.6. a je vypnuto ve výchozím nastavení. /Permissive-option/Zc: externconstexpr nepovolí.
+[/Zc: externconstexpr](../build/reference/zc-externconstexpr.md) – možnost kompilátoru způsobí, že kompilátor použije [vnější propojení](../c-language/external-linkage.md) k proměnné deklarované s použitím **extern constexpr**. V dřívějších verzích sady Visual Studio a ve výchozím nastavení nebo pokud **/Zc:externConstexpr-** není zadána, Visual Studio použije vnitřní propojení k **constexpr** i pokud proměnné **extern** klíčové slovo se používá. **/Zc: externconstexpr** možnost je k dispozici od verze Visual Studio 2017 Update 15.6. a je vypnuto ve výchozím nastavení. /Permissive-option/Zc: externconstexpr nepovolí.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje **constexpr** proměnné, funkce a uživatelem definovaného typu. Všimněte si, že se v poslední příkaz v main(), **constexpr** členská funkce GetValue() je volání za běhu, protože hodnota nemusí být v době kompilace znám.
+Následující příklad ukazuje **constexpr** proměnné, funkce a uživatelem definovaného typu. V poslední příkaz v main() **constexpr** členská funkce GetValue() je volání za běhu, protože hodnota není nutné, aby v době kompilace znám.
 
 ```cpp
 #include <iostream>
@@ -127,7 +125,7 @@ constexpr float exp2(const float& x, const int& n)
         exp2(x * x, (n - 1) / 2) * x;
 };
 
-// Compile time computation of array length
+// Compile-time computation of array length
 template<typename T, int N>
 constexpr int length(const T(&ary)[N])
 {
@@ -155,11 +153,11 @@ private:
 
 int main()
 {
-    //foo is const:
+    // foo is const:
     constexpr Foo foo(5);
     // foo = Foo(6); //Error!
 
-    //Compile time:
+    // Compile time:
     constexpr float x = exp(5, 3);
     constexpr float y { exp(2, 5) };
     constexpr int val = foo.GetValue();
@@ -167,7 +165,7 @@ int main()
     const int nums[] { 1, 2, 3, 4 };
     const int nums2[length(nums) * 2] { 1, 2, 3, 4, 5, 6, 7, 8 };
 
-    //Run time:
+    // Run time:
     cout << "The value of foo is " << foo.GetValue() << endl;
 
 }

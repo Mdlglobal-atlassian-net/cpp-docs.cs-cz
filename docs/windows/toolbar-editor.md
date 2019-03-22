@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: a138eb5aa40429696ca2efa4a67e1a1c5490f4fa
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 83402159d19f07cf94a0d00ccd79d68549b124e9
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563248"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328854"
 ---
 # <a name="toolbar-editor-c"></a>Editor panelu nástrojů (C++)
 
@@ -128,7 +128,7 @@ Tlačítka panelu nástrojů má následující vlastnosti:
 
 #### <a name="to-create-a-new-toolbar-button"></a>K vytvoření nového tlačítka panelu nástrojů
 
-1. V [zobrazení prostředků](../windows/resource-view-window.md) rozbalte složku prostředků (například *Project1.rc*).
+1. V [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources) rozbalte složku prostředků (například *Project1.rc*).
 
 1. Rozbalte **nástrojů** a pak zvolte položku panelu nástrojů pro úpravy, udělejte jednu z následujících akcí:
 
@@ -138,7 +138,7 @@ Tlačítka panelu nástrojů má následující vlastnosti:
 
 #### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Chcete-li přidat bitovou kopii na panelu nástrojů jako tlačítko
 
-1. V [zobrazení prostředků](../windows/resource-view-window.md), otevřete poklepáním panelu nástrojů.
+1. V [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources), otevřete poklepáním panelu nástrojů.
 
 1. Dále otevřete image, kterou chcete přidat na panel nástrojů.
 

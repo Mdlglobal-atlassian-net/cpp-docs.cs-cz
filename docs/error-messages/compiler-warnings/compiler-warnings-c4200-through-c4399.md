@@ -3,7 +3,6 @@ title: Compiler Warnings C4200 Through C4399
 ms.date: 11/17/2017
 f1_keywords:
 - C4203
-- C4274
 - C4277
 - C4279
 - C4298
@@ -12,7 +11,6 @@ f1_keywords:
 - C4303
 - C4314
 - C4315
-- C4316
 - C4317
 - C4318
 - C4321
@@ -22,22 +20,20 @@ f1_keywords:
 - C4328
 - C4330
 - C4338
-- C4343
 - C4352
 - C4362
 - C4367
 - C4370
-- C4373
 - C4380
 - C4387
 - C4388
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-ms.openlocfilehash: 9cca32973ead1d7d88e37c4745491c8d5f181e0b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d79c9c12664f9920f03490b8cb53ec671d3d78a3
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810507"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328262"
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>Compiler Warnings C4200 Through C4399
 
@@ -103,7 +99,7 @@ ms.locfileid: "57810507"
 |[Upozornění kompilátoru (úroveň 1) C4269](../../error-messages/compiler-warnings/compiler-warning-level-1-c4269.md)|"*identifikátor*': 'const' automatické data inicializovaná s konstruktorem default generovaným kompilátorem vytvoří nespolehlivé výsledky|
 |[Upozornění kompilátoru (úroveň 1) C4272](../../error-messages/compiler-warnings/compiler-warning-level-1-c4272.md)|"*funkce*": je označené jako __declspec(dllimport); při importu funkce musí specifikovat nativní konvence volání.|
 |[Upozornění kompilátoru (úroveň 1) C4273](../../error-messages/compiler-warnings/compiler-warning-level-1-c4273.md)|"*funkce*': nekonzistentní propojení dll|
-|Upozornění kompilátoru (úroveň 1) C4274|#ident ignorovány; najdete v dokumentaci #pragma Comment (exestr, 'řetězec')|
+|[Upozornění kompilátoru (úroveň 1) C4274](compiler-warning-level-1-c4274.md)|#ident ignorovány; najdete v dokumentaci #pragma Comment (exestr, 'řetězec')|
 |[Upozornění kompilátoru (úroveň 2) C4275](../../error-messages/compiler-warnings/compiler-warning-level-2-c4275.md)|bez rozhraní dll '*classkey*""*identifier1*'použít jako základ pro rozhraní dll'*classkey*""*identifier2*.|
 |[Upozornění kompilátoru (úroveň 1) C4276](../../error-messages/compiler-warnings/compiler-warning-level-1-c4276.md)|"*funkce*': k dispozici žádný prototyp; předpokládá, že žádné parametry.|
 |Upozornění kompilátoru (úroveň 1) C4277|importovaná položka "*classname*::*člen*' existuje jako datový člen i jako funkční člen; datový člen ignorovat|
@@ -140,7 +136,7 @@ ms.locfileid: "57810507"
 |[Upozornění kompilátoru (úroveň 1) C4313](../../error-messages/compiler-warnings/compiler-warning-level-1-c4313.md)|"*funkce*": "*format_specifier*'ve formátu řetězce je v konfliktu s argumentem'*argument_number*"typu"*typ*"|
 |Kompilátor varování C4314|Parametr očekávané pragma bude mít hodnotu 32, nebo hodnotu 64.|
 |Upozornění kompilátoru (úroveň 4) C4315|"*classname*': 'this' ukazatele pro člena '*člen*"nemusí být zarovnáním"*zarovnání*" jak očekává konstruktor|
-|Upozornění kompilátoru (úroveň 3) C4316|"*identifikátor*': objekt přidělený do haldy nemusí být zarovnáním"*zarovnání*.|
+|[Upozornění kompilátoru (úroveň 3) C4316](compiler-warning-level-3-c4316.md)|"*identifikátor*': objekt přidělený do haldy nemusí být zarovnáním"*zarovnání*.|
 |Upozornění kompilátoru (úroveň 1) C4317|"*printf_family*': není dostatečný počet argumentů předaný pro formátovací řetězec|
 |Kompilátor varování C4318|Předejte nulovou konstantou jako délka do memset.|
 |[Upozornění kompilátoru (úroveň 1) C4319](../../error-messages/compiler-warnings/compiler-warning-level-1-c4319.md)|"*operátor*': nulové rozšíření"*type1*"do"*type2*' větší velikosti|
@@ -163,7 +159,7 @@ ms.locfileid: "57810507"
 |[Upozornění kompilátoru (úroveň 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|"*typ*': použití nedefinovaného typu v" WinRT&#124;CLR' meta-data - použití tohoto typu může vést k výjimce modulu runtime|
 |[Upozornění kompilátoru (úroveň 1) C4340](../../error-messages/compiler-warnings/compiler-warning-level-1-c4340.md)|"*hodnotu*': Obálka hodnoty z kladné na zápornou hodnotu.|
 |[Upozornění kompilátoru (úroveň 1) C4342](../../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md)|Změna chování: "*funkce*" volá se, ale operátor členu byl zavolán v předchozích verzích|
-|Upozornění kompilátoru (úroveň 4) C4343|#pragma optimize("g",off) přepíše/og – možnost|
+|[Upozornění kompilátoru (úroveň 4) C4343](compiler-warning-level-4-c4343.md)|#pragma optimize("g",off) přepíše/og – možnost|
 |[Upozornění kompilátoru (úroveň 1) C4344](../../error-messages/compiler-warnings/compiler-warning-level-1-c4344.md)|Změna chování: použití výsledků šablony explicitní argumenty při volání funkce "*funkce*.|
 |[Upozornění kompilátoru (úroveň 1) C4346](../../error-messages/compiler-warnings/compiler-warning-level-1-c4346.md)|"*název*': závislý název není typ|
 |[Upozornění kompilátoru (úroveň 1) C4348](../../error-messages/compiler-warnings/compiler-warning-level-1-c4348.md)|"*typ*': předefinování výchozího parametru: parametr"*parameter_number*.|
@@ -184,7 +180,7 @@ ms.locfileid: "57810507"
 |[Upozornění kompilátoru (úroveň 1) C4369](../../error-messages/compiler-warnings/compiler-warning-level-1-c4369.md)|"*enumerátor*': hodnota výčtu '*hodnotu*"nemůže být reprezentovaná jako"*typ*', hodnota je'*nová_hodnota*"|
 |Kompilátor varování C4370|"*classname*': má ke změně rozložení třídy z předchozí verze kompilátoru z důvodu lepšího balení|
 |[Upozornění kompilátoru (úroveň 3) C4371](../../error-messages/compiler-warnings/c4371.md)|"*classname*': může mít ke změně rozložení třídy z předchozí verze kompilátoru z důvodu lepšího balení člena '*člen*.|
-|Upozornění kompilátoru (úroveň 3) C4373|"*derived_class*::*funkce*': přepsání virtuální funkce *$base_class*::*funkce*", předchozí verze kompilátoru. nepřepsala při parametry lišily jenom podle kvalifikátory const/volatile|
+|[Upozornění kompilátoru (úroveň 3) C4373](compiler-warning-level-3-c4373.md)|"*derived_class*::*funkce*': přepsání virtuální funkce *$base_class*::*funkce*", předchozí verze kompilátoru. nepřepsala při parametry lišily jenom podle kvalifikátory const/volatile|
 |[Upozornění kompilátoru (úroveň 1) C4374](../../error-messages/compiler-warnings/compiler-warning-level-1-c4374.md)|"*function1*': metoda rozhraní se nebude implementovat nevirtuální metody"*function2*.|
 |[Upozornění kompilátoru (úroveň 1) C4375](../../error-messages/compiler-warnings/compiler-warning-level-1-c4375.md)|oprávnění neveřejné metody "*method2*"nepřepisuje"*method2*.|
 |[Upozornění kompilátoru (úroveň 1) C4376](../../error-messages/compiler-warnings/compiler-warning-level-1-c4376.md)|přístup k specifikátor "*old_specifier*:" už není podporovaná: použijte "*new_specifier*:" místo|
@@ -205,7 +201,7 @@ ms.locfileid: "57810507"
 |[Upozornění kompilátoru (úroveň 1) C4393](../../error-messages/compiler-warnings/compiler-warning-level-1-c4393.md)|"*proměnnou*': const nemá žádný vliv"*literálu*"datový člen; ignorováno|
 |[Upozornění kompilátoru C4394](../../error-messages/compiler-warnings/compiler-warning-c4394.md)|"*funkce*': symbol na úrovni appdomain by neměl být označeny atributem __declspec('dllexport')|
 |[Upozornění kompilátoru (úroveň 1) C4395](../../error-messages/compiler-warnings/compiler-warning-level-1-c4395.md)|"*funkce*': členská funkce se bude volat pro kopii datového členu initonly"*člen*.|
-|Upozornění kompilátoru (úroveň 2) C4396|"*funkce*': specifikátor inline nejde použít, když deklarace friend odkazuje na specializaci šablony funkce|
+|[Upozornění kompilátoru (úroveň 2) C4396](compiler-warning-level-2-c4396.md)|"*funkce*': specifikátor inline nejde použít, když deklarace friend odkazuje na specializaci šablony funkce|
 |[Upozornění kompilátoru (úroveň 1) C4397](../../error-messages/compiler-warnings/compiler-warning-level-1-c4397.md)|DefaultCharSetAttribute se ignoruje.|
 |[Upozornění kompilátoru (úroveň 3) C4398](../../error-messages/compiler-warnings/compiler-warning-level-3-c4398.md)|"*proměnnou*': globální objekt na úrovni jednotlivého procesu nemusí fungovat správně s více objektů třídy appdomains; zvažte použití možnosti __declspec(appdomain)|
 |[Upozornění kompilátoru (úroveň 1) C4399](../../error-messages/compiler-warnings/compiler-warning-level-1-c4399.md)|"*symbol*': symbol na úrovni jednotlivého procesu nesmí být označené __declspec('dllimport') při kompilaci s parametrem/CLR: pure|

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 73fd4a8996bcfbaaf6fdd4018e524b66913d11cd
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 22fe458a72d970bb09687a53232f94b171e14a45
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563079"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328425"
 ---
 # <a name="image-editor-for-icons-c"></a>Editor obrázků pro ikony (C++)
 
@@ -60,7 +60,7 @@ Grafické prostředky jsou obrázky, které definujete pro vaši aplikaci. Můž
 
 Můžete také použít **Editor obrázků** a [binární Editor](binary-editor.md) pro práci se soubory prostředků ve spravovaných projektech. Všechny spravované prostředky, které chcete upravit, musí být propojené prostředky. Editory prostředků Visual Studio nepodporují úpravy vložených prostředků.
 
-Kromě vytvoření nové grafické prostředky, můžete [import existujících imagí](/windows/how-to-copy-resources#import-and-export-resources) pro úpravy a poté je přidejte do projektu. Můžete také otevřít a upravit bitové kopie, které nejsou součástí projektu pro [samostatný obrázek úpravy](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md).
+Kromě vytvoření nové grafické prostředky, můžete [import existujících imagí](../windows/how-to-copy-resources.md#import-and-export-resources) pro úpravy a poté je přidejte do projektu. Můžete také otevřít a upravit bitové kopie, které nejsou součástí projektu pro [samostatný obrázek úpravy](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md).
 
 Informace o tom, **Editor obrázků**, naleznete v tématu Jak [vytvoření ikony nebo jiný obrázek](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), [upravit obrázek](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), [pomocí nástroje kreslení](../windows/using-a-drawing-tool-image-editor-for-icons.md), [Pracovat s barvou](../windows/working-with-color-image-editor-for-icons.md), a [klávesové zkratky](../windows/accelerator-keys-image-editor-for-icons.md).
 
@@ -151,7 +151,7 @@ Chcete-li získat přístup k tomuto dialogovému oknu, vyberte **písmo** tlač
 
 Tady je příklad toho, jak přidat text do ikony v aplikaci Windows a manipulaci s písmo textu.
 
-1. Vytvoření aplikace C++ Windows Forms. Podrobnosti najdete v tématu [vytvoření projektu aplikace Windows](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5). *App.ico* ve výchozím nastavení se přidá do projektu soubor.
+1. Vytvoření aplikace C++ Windows Forms. Podrobnosti najdete v tématu [jak: Vytvoření aplikace Windows Forms](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90)). *App.ico* ve výchozím nastavení se přidá do projektu soubor.
 
 1. V **Průzkumníka řešení**, poklikejte na soubor *app.ico*. **Editor obrázků** se otevře.
 
@@ -215,7 +215,7 @@ Pro všechny **Editor obrázků** podoken s faktor zvětšení 4 nebo vyšší, 
 
 ## <a name="requirements"></a>Požadavky
 
-Žádná
+Žádné
 
 ## <a name="see-also"></a>Viz také
 

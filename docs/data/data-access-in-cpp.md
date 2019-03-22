@@ -8,18 +8,18 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: 3f1597ab4947329d6103b417a0f4b5bd6664b110
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 7a222100cc7e13ee78f01cf4bb9c376af15f9b0e
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692759"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328776"
 ---
 # <a name="data-access-in-visual-c"></a>Přístup k datům v jazyce Visual C++
 
 Téměř všechny databáze, SQL a NoSQL, a nabízejí rozhraní pro nativní aplikace C++. Standardní rozhraní odvětví je rozhraní ODBC, které podporuje všechny hlavní produkty SQL database a řada produktů NoSQL. Pro produkty jiných výrobců najdete dodavatele pro další informace. Knihovny třetích stran s různými podmínkami licence jsou také k dispozici.
 
-Microsoft má od roku 2011 zarovnány na rozhraní ODBC jako standard pro nativní aplikace pro připojení k databázím serveru Microsoft SQL Server, v místním prostředí i v cloudu. Další informace najdete v tématu [programování přístupu dat \(MFC-ATL\)](data-access-programming-mfc-atl.md). C + +/ CLI knihovny můžete použít buď nativních ovladačů rozhraní ODBC nebo ADO.NET. Další informace najdete v tématu [Data přístupu pomocí ADO.NET (C + +/ CLI)](/dotnet/data-access-using-adonet-cpp-cli.md) a [přístup k datům v sadě Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/accessing-data-in-visual-studio).
+Microsoft má od roku 2011 zarovnány na rozhraní ODBC jako standard pro nativní aplikace pro připojení k databázím serveru Microsoft SQL Server, v místním prostředí i v cloudu. Další informace najdete v tématu [programování přístupu dat \(MFC-ATL\)](data-access-programming-mfc-atl.md). C + +/ CLI knihovny můžete použít buď nativních ovladačů rozhraní ODBC nebo ADO.NET. Další informace najdete v tématu [Data přístupu pomocí ADO.NET (C + +/ CLI)](../dotnet/data-access-using-adonet-cpp-cli.md) a [přístup k datům v sadě Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/accessing-data-in-visual-studio).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
@@ -53,7 +53,7 @@ Azure usnadňuje vývoj aplikací v C++ se zvýšenou flexibilitou, škálovatel
 Azure Blob storage je služba, která ukládá Nestrukturovaná data v cloudu jako objektů BLOB. BLOB storage dokáže ukládat jakýkoli druh textu nebo binárních dat, jako je například dokument, soubor médií nebo instalační program aplikace. Úložiště objektů blob se taky označuje jako úložiště objektů.
 
 [ Referenční informace pro programátory ODBC](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)<br/>
-Rozhraní ODBC je určen pro použití s programovací jazyk C. Použití rozhraní ODBC zahrnuje tři oblasti: volání a programování v jazyce C funkce příkazy SQL, rozhraní ODBC.
+Rozhraní ODBC je určen pro použití s programovací jazyk C. Použití rozhraní ODBC zahrnuje tři oblasti: Příkazy SQL, volání funkcí rozhraní ODBC a programování v jazyce C.
 
 ## <a name="see-also"></a>Viz také
 

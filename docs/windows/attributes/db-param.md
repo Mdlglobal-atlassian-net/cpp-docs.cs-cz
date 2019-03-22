@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
-ms.openlocfilehash: 58d6fa5026395b4be6663ab253cf9ffdfea01788
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2de051b099da5f179a7634cddfb359d85f4b1f83
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505037"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328789"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -37,17 +37,17 @@ Přidruží zadaný členskou proměnnou vstupní nebo výstupní parametr a odd
 
 - DBPARAMIO_NOTPARAM přistupující objekt nemá žádné parametry. Nastavení `eParamIO` na tuto hodnotu v řádku přistupující objekty upozorňuje uživatele, že parametry budou ignorovány.
 
-*Hodnota DbType*<br/>
-(Volitelné) OLE DB [indikátor typu](/previous-versions/windows/desktop/ms711251) pro vstupní sloupec.
+*dbtype*<br/>
+(Volitelné) OLE DB [indikátor typu](/previous-versions/windows/desktop/ms711251(v=vs.85)) pro vstupní sloupec.
 
-*Přesnost*<br/>
-(Volitelné) Přesnost, který má být použit pro vstupní sloupec. Podrobnosti najdete v tématu Popis `bPrecision` elementu [DBBINDING struktura](/previous-versions/windows/desktop/ms716845)
+*precision*<br/>
+(Volitelné) Přesnost, který má být použit pro vstupní sloupec. Podrobnosti najdete v tématu Popis `bPrecision` elementu [DBBINDING struktura](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *Škálování*<br/>
-(Volitelné) Škálování, která má být použit pro vstupní sloupec. Podrobnosti najdete v tématu Popis `bScale` elementu [DBBINDING struktura](/previous-versions/windows/desktop/ms716845)
+(Volitelné) Škálování, která má být použit pro vstupní sloupec. Podrobnosti najdete v tématu Popis `bScale` elementu [DBBINDING struktura](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*Stav*<br/>
-(Volitelné) Členské proměnné používané pro udržení stavu daného sloupce. Stav označuje, zda je hodnota sloupce datovou hodnotu nebo jinou hodnotu, jako je NULL. Možné hodnoty najdete v části [stav](/previous-versions/windows/desktop/ms722617) v *OLE DB referenční informace pro programátory*.
+*status*<br/>
+(Volitelné) Členské proměnné používané pro udržení stavu daného sloupce. Stav označuje, zda je hodnota sloupce datovou hodnotu nebo jinou hodnotu, jako je NULL. Možné hodnoty najdete v části [stav](/previous-versions/windows/desktop/ms722617(v=vs.85)) v *OLE DB referenční informace pro programátory*.
 
 *Délka*<br/>
 (Volitelné) Členské proměnné používané pro udržení velikost sloupce v bajtech.

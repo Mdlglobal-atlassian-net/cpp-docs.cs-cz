@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MSBuild, properties
 - event handler wizard [C++]
 ms.assetid: 050bebf0-a9e0-474b-905c-796fe5ac8fc3
-ms.openlocfilehash: 8e6b2511b00b7f949718e5b0d9fd793ac53d0d8b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 96e5b8777bb8b0c976277a06e8ad49b3334921fb
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694514"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328568"
 ---
 # <a name="add-an-event-handler"></a>Přidání obslužné rutiny událostí
 
@@ -25,7 +25,7 @@ Událost můžete přidat do třídy implementující pomocí dialogového okna 
 
 **Chcete-li přidat obslužnou rutinu události pro ovládací prvek dialogového okna:**
 
-1. Dvakrát klikněte na pole prostředku dialogového okna v [zobrazení prostředků](../windows/resource-view-window.md) otevřete dialogové okno prostředků pole, která obsahuje ovládací prvek v [editoru dialogového okna](../windows/dialog-editor.md).
+1. Dvakrát klikněte na pole prostředku dialogového okna v [zobrazení prostředků](../windows/how-to-create-a-resource-script-file.md#create-resources) otevřete dialogové okno prostředků pole, která obsahuje ovládací prvek v [editoru dialogového okna](../windows/dialog-editor.md).
 
 1. Klikněte pravým tlačítkem na ovládací prvek, pro kterou chcete zpracovat událost oznámení.
 

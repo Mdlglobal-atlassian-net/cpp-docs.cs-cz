@@ -1,6 +1,6 @@
 ---
-title: Běžná makra pro příkazy a vlastnosti sestavení
-ms.date: 05/29/2018
+title: Běžná makra pro příkazy MSBuild a vlastnosti
+ms.date: 03/20/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
 - VC.Project.VCCLCompilerTool.XMLDocumentationFileName
@@ -90,26 +90,29 @@ helpviewer_keywords:
 - builds [C++], macros
 - $(FrameworkDir) macro
 - $(PlatformName) macro
+- $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: 669114691bc89c1e8136e07a949be57cda3d71b9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 46fdd5e356ded96388a154ff459ef4cc3c02267f
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823047"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58327675"
 ---
-# <a name="common-macros-for-build-commands-and-properties"></a>Běžná makra pro příkazy a vlastnosti sestavení
+# <a name="common-macros-for-msbuild-commands-and-properties"></a>Běžná makra pro příkazy MSBuild a vlastnosti
 
-V závislosti na možnostech instalace sady Visual Studio můžete zpřístupňují stovky makra. Tyto příkazy odpovídají vlastnosti nástroje MSBuild, které jsou nastaveny ve výchozím nastavení, nebo v souborech .props nebo .targets nebo v nastavení projektu. Tato makra lze použít kdekoli v projektu **stránky vlastností** dialogovému oknu, kde se přijímají řetězce. Tato makra se nerozlišují malá a velká písmena.
+V závislosti na možnostech instalace sady Visual Studio můžete zpřístupnit stovky makra je v projektu sady Visual Studio (založené na MSBuild). Tyto příkazy odpovídají vlastnosti nástroje MSBuild, které jsou nastaveny ve výchozím nastavení, nebo v souborech .props nebo .targets nebo v nastavení projektu. Tato makra lze použít kdekoli v projektu **stránky vlastností** dialogovému oknu, kde se přijímají řetězce. Tato makra se nerozlišují malá a velká písmena.
 
 ## <a name="view-the-current-properties-and-macros"></a>Zobrazit aktuální vlastnosti a makra
 
-K zobrazení maker aktuálně k dispozici, na stránce vlastností **stránky vlastností** dialogového okna, klikněte na šipku rozevíracího seznamu na konci řádku vlastnost. Pokud **upravit** je k dispozici, zvolte jej a pak v dialogovém okně upravit, zvolte **makra** tlačítko. Aktuální sadu vlastností a makra, které jsou viditelné pro Visual Studio je uveden spolu s aktuální hodnotou pro všechny. Další informace najdete v tématu **Specifying User-Defined hodnoty** část [odkaz na stránku vlastností projektu C++](property-pages-visual-cpp.md).
+Zobrazit všechny aktuálně dostupná makra v **stránky vlastností** dialogového okna, v části **adresáře VC ++**, klikněte na šipku rozevíracího seznamu na konci řádku vlastnost. Klikněte na **upravit** a poté v dialogovém okně upravit, vyberte **makra** tlačítko. Aktuální sadu vlastností a makra, které jsou viditelné pro Visual Studio je uveden spolu s aktuální hodnotou pro všechny. Další informace najdete v tématu **Specifying User-Defined hodnoty** část [odkaz na stránku vlastností projektu C++](property-pages-visual-cpp.md).
+
+![Tlačítko makra VC ++](../media/vcppdir_libdir_macros.png "nabídky makra")
 
 ## <a name="list-of-common-macros"></a>Seznam běžných makra
 
-Tato tabulka popisuje běžně používané podmnožinou dostupná makra. Tento seznam je daleko od vyčerpávající. Podrobnosti o definice vlastností MSBuild jsou vytvořeny a použít jako maker v .props .targets a souborů VCXPROJ najdete v tématu [vlastnosti nástroje MSBuild](/visualstudio/msbuild/msbuild-properties).
+Tato tabulka popisuje běžně používané podmnožinou dostupná makra; Existuje mnoho více nejsou uvedené tady. Přejděte **makra** dialogovém okně můžete zobrazit všechny vlastnosti a jejich aktuálními hodnotami ve vašem projektu. Podrobnosti o definice vlastností MSBuild jsou vytvořeny a použít jako maker v .props .targets a souborů VCXPROJ najdete v tématu [vlastnosti nástroje MSBuild](/visualstudio/msbuild/msbuild-properties).
 
 |– Makro|Popis|
 |-----------|-----------------|
@@ -122,6 +125,7 @@ Tato tabulka popisuje běžně používané podmnožinou dostupná makra. Tento 
 |**$(IntDir)**|Cesta do adresáře určeného pro zprostředkující soubory. Pokud je relativní cesta, zprostředkující soubory přejděte k této cestě se připojí k adresáři projektu. Tato cesta by měla mít koncové lomítko. To řeší na hodnotu **zprostředkující adresář** vlastnost. Nepoužívejte **$(OutDir)** definovat tuto vlastnost.|
 |**$(OutDir)**|Cesta k adresáři výstupního souboru. Pokud je relativní cesta, výstupní soubory přejděte k této cestě se připojí k adresáři projektu. Tato cesta by měla mít koncové lomítko. To řeší na hodnotu **výstupní adresář** vlastnost. Nepoužívejte **$(IntDir)** definovat tuto vlastnost.|
 |**$(Platform)**|Název aktuální platformy projektu, například "Win32".|
+|**$(PlatformShortName)**|Krátký název aktuální architekturu, například "x86" nebo "x64".|
 |**$(ProjectDir)**|Adresář projektu (definované jako jednotka + cesta); zahrnuje koncové lomítko "\\".|
 |**$(ProjectExt)**|Přípona souboru projektu. Zahrnuje "." před příponu souboru.|
 |**$(ProjectFileName)**|Název souboru projektu (definované jako základní název a příponu souboru).|
@@ -162,6 +166,6 @@ Systém sestavení pro C++ se významně změnil mezi Visual Studio 2008 a sadu 
 
 ## <a name="see-also"></a>Viz také:
 
-- [Visual Studio Projects - C++](../creating-and-managing-visual-cpp-projects.md)
+- [Projekty sady Visual Studio – C++](../creating-and-managing-visual-cpp-projects.md)
 - [Visual C++ Průvodce přenosem a upgradem](../../porting/visual-cpp-porting-and-upgrading-guide.md)
 - [Přehled potenciálních problémů s upgradem](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md)

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 461322076e2de4e2cd89c6d39592989aecc75361
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: a0b5e3905daf72307702dbe4f05c2871cf768ac0
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563014"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328802"
 ---
 # <a name="resource-editors-c"></a>Editory prostředků (C++)
 
@@ -63,13 +63,13 @@ Prostředky může být také upravena mimo projekt bez nutnosti otevřít proje
 > [!NOTE]
 > Vlastnosti prostředku může být upraveno pomocí **vlastnosti** okna.
 
-- Chcete-li upravit vlastnosti prostředku, v [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources), klikněte pravým tlačítkem na prostředku, kterou chcete upravit a zvolte **vlastnosti**.  Potom v [okno vlastností](/visualstudio/ide/reference/properties-window), změna vlastností prostředku.
+- Chcete-li upravit vlastnosti prostředku, v [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources), klikněte pravým tlačítkem na prostředku, kterou chcete upravit a zvolte **vlastnosti**.  Potom v [okno vlastností](/visualstudio/ide/reference/properties-window), změna vlastností prostředku.
 
 - Pokud chcete vrátit zpět změny provedené na vlastnosti prostředku, ujistěte se, že váš prostředek má fokus **zobrazení prostředků** a zvolte **zpět** z **upravit** nabídky.
 
 ### <a name="win32-resources"></a>Prostředky Win32
 
-Budete mít přístup k prostředkům Win32 v [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources) podokně.
+Budete mít přístup k prostředkům Win32 v [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources) podokně.
 
 #### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>Chcete-li zobrazit prostředek systému Win32 v editoru prostředků
 
@@ -113,7 +113,7 @@ Následující prostředky neposkytují visual ve verzi preview: Akcelerátor, i
 
 ### <a name="to-preview-resources"></a>Náhled prostředků
 
-1. V [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources) nebo okno dokumentu, vyberte prostředek, třeba **IDD_ABOUTBOX**.
+1. V [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources) nebo okno dokumentu, vyberte prostředek, třeba **IDD_ABOUTBOX**.
 
 1. V [okno vlastností](/visualstudio/ide/reference/properties-window), vyberte **stránky vlastností** tlačítko.
 
@@ -124,7 +124,7 @@ Následující prostředky neposkytují visual ve verzi preview: Akcelerátor, i
 
 ## <a name="requirements"></a>Požadavky
 
-Žádná
+Žádné
 
 ## <a name="see-also"></a>Viz také
 

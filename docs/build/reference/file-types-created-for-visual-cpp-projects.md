@@ -14,18 +14,18 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: c05dd9da5dd17b0e06ace750d34f2c5abcf94380
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 7ef8127b829b60d84af72874292c33ae1c7c4636
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823329"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58327578"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Typy souborů vytvořených pro projekty C++ pro Visual Studio
 
 Toto téma popisuje všechny typy souborů, které jsou spojeny s projekty aplikace Visual Studio pro klasické desktopové aplikace. Skutečné soubory zahrnuté ve vašem projektu závisí na typu projektu a možnostech, které jste vybrali při používání průvodce.
 
-- [Soubory projektu a řešení]()
+- [Soubory projektu a řešení](project-and-solution-files.md)
 
 - [Projekty CLR](files-created-for-clr-projects.md)
 
@@ -47,14 +47,14 @@ Projekty vytvářejí obvykle buď aplikace EXE nebo knihovny DLL. Projekty moho
 
 Následující tabulka uvádí běžné soubory v projektu sady Visual Studio a identifikuje jejich přípony souboru.
 
-|Přípona souboru|Typ|Obsah|
+|Přípona souboru|Type|Obsah|
 |--------------------|----------|--------------|
 |asmx|Zdroj|Nasazení souboru.|
 |.asp|Zdroj|Stránka ASP.|
 |.atp|Project|Soubor šablony projektu aplikace.|
 |.bmp, .dib, .gif, .jpg, .jpe, PNG|Prostředek|Obecné obrazových souborů.|
 |.bsc|Kompilace|Soubor kódu prohlížeče.|
-|.cpp; .c|Zdroj|Soubory hlavní zdrojového kódu pro vaši aplikaci.|
+|.cpp, .c|Zdroj|Soubory hlavní zdrojového kódu pro vaši aplikaci.|
 |.cur|Prostředek|Rastrový obrázek kurzoru.|
 |.dbp|Project|Soubor projektu databáze.|
 |.disco|Zdroj|Dynamicky zpřístupněný soubor dokumentu. Zpracovává zjišťování XML webové služby.|
@@ -78,8 +78,8 @@ Následující tabulka uvádí běžné soubory v projektu sady Visual Studio a 
 |.Vap|Project|Soubor projektu Visual Studio Analyzer.|
 |.vbg|Řešení|Soubor projektu kompatibilní skupiny.|
 |.VBP, .vip, .vbproj|Project|Soubor projektu jazyka Visual Basic.|
-|.vcxitems|Project|Projekt sdílené položky ke sdílení souborů kód mezi více projekty C++. Zobrazit [soubory projektu a souborů pravidel]() Další informace.|
-|.vcxproj|Project|Soubor projektu sady Visual Studio. Zobrazit [soubory projektu a souborů pravidel]() Další informace.|
+|.vcxitems|Project|Projekt sdílené položky ke sdílení souborů kód mezi více projekty C++. Zobrazit [soubory projektu a řešení](project-and-solution-files.md) Další informace.|
+|.vcxproj|Project|Soubor projektu sady Visual Studio. Zobrazit [soubory projektu a řešení](project-and-solution-files.md) Další informace.|
 |.vcxproj.filters|Project|Pokud Průzkumník řešení se používá k přidání souboru do projektu, soubor filtrů definuje kde ve stromovém zobrazení Průzkumníka řešení se přidá soubor, na základě jeho přípony názvu souboru.|
 |.vdproj|Project|Soubor projektu nasazení sady Visual Studio.|
 |.VMX|Project|Makro souboru projektu.|

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: f57c09d549a4ceb92db21c06499b4f6e71fc6a52
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 4ed283b9be2afdacfbc93c647c7633fb7802e7fd
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562936"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328399"
 ---
 # <a name="accelerator-editor-c"></a>Editor akcelerátorů (C++)
 
@@ -116,7 +116,7 @@ Použití standardních stránkách vlastností najdete v níže uvedených post
 
 ### <a name="to-edit-in-an-accelerator-table"></a>Úprava v tabulce akcelerátorů
 
-1. Otevřete poklepáním na ikonu v tabulce akcelerátorů [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Otevřete poklepáním na ikonu v tabulce akcelerátorů [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Vyberte položku v tabulce a vybrat, zda chcete aktivovat místní úpravy.
 
@@ -132,7 +132,7 @@ Použití standardních stránkách vlastností najdete v níže uvedených post
 
 ### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>Chcete-li najít záznam v tabulce akcelerátorů otevřít
 
-1. Otevřete poklepáním na ikonu v tabulce akcelerátorů [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Otevřete poklepáním na ikonu v tabulce akcelerátorů [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Vyberte sloupec head k řazení obsahu sloupce podle abecedy. Vyberte například **ID** zobrazíte všechna ID v tabulce akcelerátorů podle abecedy.
 
@@ -140,7 +140,7 @@ Použití standardních stránkách vlastností najdete v níže uvedených post
 
 ### <a name="to-add-an-entry-to-an-accelerator-table"></a>Přidání záznamu do tabulky akcelerátorů
 
-1. Otevřete poklepáním na ikonu v tabulce akcelerátorů [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Otevřete poklepáním na ikonu v tabulce akcelerátorů [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Klikněte pravým tlačítkem v tabulce akcelerátorů a zvolte **nový akcelerátor**, nebo vyberte položku prázdný řádek v tabulce dole.
 
@@ -155,7 +155,7 @@ Použití standardních stránkách vlastností najdete v níže uvedených post
 
 ### <a name="to-delete-an-entry-from-an-accelerator-table"></a>Chcete-li odstranit záznam z tabulky akcelerátorů
 
-1. Otevřete poklepáním na ikonu v tabulce akcelerátorů [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Otevřete poklepáním na ikonu v tabulce akcelerátorů [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Vyberte položku, kterou chcete odstranit nebo podržte stisknutou klávesu **Ctrl** nebo **Shift** klíče při výběru k výběru více položek.
 
@@ -177,7 +177,7 @@ Použití standardních stránkách vlastností najdete v níže uvedených post
 
 ### <a name="to-change-the-properties-of-multiple-accelerator-keys"></a>Změna vlastností vícenásobných kláves akcelerátoru
 
-1. Otevřete poklepáním na ikonu v tabulce akcelerátorů [zobrazení prostředků](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Otevřete poklepáním na ikonu v tabulce akcelerátorů [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Vyberte klávesy akcelerátoru chcete změnit tím, že se **Ctrl** klíče při výběru každé z nich.
 
