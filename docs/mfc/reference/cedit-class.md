@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 6af054ea27233de2cc3b551bbec69c0ab3b4be9e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e1ca69382591dc7d3afe9b5871dfdebd64aedce4
+ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289959"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58416998"
 ---
 # <a name="cedit-class"></a>Cedit – třída
 
@@ -115,13 +115,13 @@ class CEdit : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CEdit::CEdit](#cedit)|Vytvoří `CEdit` objekt ovládacího prvku.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CEdit::CanUndo](#canundo)|Určuje, jestli operace edit-control je možné vrátit zpět.|
 |[CEdit::CharFromPos](#charfrompos)|Načte indexy řádku a znak nejblíže určené pozici znaku.|
@@ -570,11 +570,11 @@ UINT GetLimitText() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktuální text limit, v bajtech pro tuto `CEdit` objektu.
+Aktuální text limit, v TCHARs, to `CEdit` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Limit textu je maximální množství textu v bajtech, které přijímají ovládací prvek pro úpravy.
+Limit textu je maximální velikost textu v TCHARs, které ovládací prvek pro úpravy může přijmout.
 
 > [!NOTE]
 >  Tato členská funkce je k dispozici od verze Windows 95 a Windows NT 4.0.
@@ -606,14 +606,14 @@ int GetLine(
 Určuje číslo řádku k načtení z řádku více ovládacích prvků pro úpravy. Čísla řádků jsou počítány od nuly; Hodnota 0 určuje první řádek. Tento parametr je ignorován v jednořádkové textové pole.
 
 *lpszBuffer*<br/>
-Body do vyrovnávací paměti, která obdrží kopii řádku. První slovo vyrovnávací paměti musí určit maximální počet znaků, které je možné zkopírovat do vyrovnávací paměti.
+Body do vyrovnávací paměti, která obdrží kopii řádku. První slovo vyrovnávací paměti musí určit maximální počet TCHARs, které je možné zkopírovat do vyrovnávací paměti.
 
 *nMaxLength*<br/>
-Určuje maximální počet bajtů, které je možné zkopírovat do vyrovnávací paměti. `GetLine` umístí tato hodnota první slovo *lpszBuffer* před provedením volání do Windows.
+Určuje maximální počet znaků TCHAR, které je možné zkopírovat do vyrovnávací paměti. `GetLine` umístí tato hodnota první slovo *lpszBuffer* před provedením volání do Windows.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet bajtů ve skutečnosti zkopírovány. Vrácená hodnota je 0, pokud určené číslo řádku *nIndex* je větší než počet řádků v textovém poli.
+Počet znaků, které skutečně zkopírovány. Vrácená hodnota je 0, pokud určené číslo řádku *nIndex* je větší než počet řádků v textovém poli.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -800,7 +800,7 @@ void LimitText(int nChars = 0);
 ### <a name="parameters"></a>Parametry
 
 *nChars*<br/>
-Určuje délku (v bajtech), který může uživatel zadat text. Pokud má parametr hodnotu 0, délka textu je nastavena na UINT_MAX bajtů. Toto je výchozí chování.
+Určuje délku (v TCHARs), který může uživatel zadat text. Pokud má parametr hodnotu 0, délka textu je nastavena na UINT_MAX bajtů. Toto je výchozí chování.
 
 ### <a name="remarks"></a>Poznámky
 

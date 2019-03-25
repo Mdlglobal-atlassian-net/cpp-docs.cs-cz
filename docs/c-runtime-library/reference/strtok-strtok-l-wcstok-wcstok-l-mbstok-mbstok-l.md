@@ -45,12 +45,12 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: b984460d5b87e6a1d195e4127234479f8f7c8b0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb791c7049379f62b99804fa8f1cf3a57fe0b749
+ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649472"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58416959"
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
@@ -66,15 +66,25 @@ char *strtok(
    char *strToken,
    const char *strDelimit
 );
+char *strtok_l(
+   char *strToken,
+   const char *strDelimit,
+   _locale_t locale
+);
 wchar_t *wcstok(
    wchar_t *strToken,
    const wchar_t *strDelimit
+);
+wchar_t *wcstok_l(
+   wchar_t *strToken,
+   const wchar_t *strDelimit,
+   _locale_t locale
 );
 unsigned char *_mbstok(
    unsigned char*strToken,
    const unsigned char *strDelimit
 );
-unsigned char *_mbstok(
+unsigned char *_mbstok_l(
    unsigned char*strToken,
    const unsigned char *strDelimit,
    _locale_t locale
@@ -83,7 +93,7 @@ unsigned char *_mbstok(
 
 ### <a name="parameters"></a>Parametry
 
-*tokenu %{strtoken/*<br/>
+*strToken*<br/>
 Řetězec obsahující token nebo tokeny.
 
 *strDelimit*<br/>
@@ -114,16 +124,16 @@ Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie 
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcstok –**|**strtok –**|**_mbstok –**|**wcstok –**|
-|**_tcstok –**|**_strtok_l**|**_mbstok_l**|**_wcstok_l**|
+|**_tcstok**|**strtok**|**_mbstok**|**wcstok**|
+|**_tcstok**|**_strtok_l**|**_mbstok_l**|**_wcstok_l**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strtok –**|\<String.h >|
-|**wcstok –**|\<String.h > nebo \<wchar.h >|
-|**_mbstok –**, **_mbstok_l –**|\<Mbstring.h >|
+|**strtok**|\<string.h>|
+|**wcstok**|\<String.h > nebo \<wchar.h >|
+|**_mbstok**, **_mbstok_l**|\<Mbstring.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

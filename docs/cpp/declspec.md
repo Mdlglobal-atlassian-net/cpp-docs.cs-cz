@@ -1,22 +1,22 @@
 ---
 title: __declspec
-ms.date: 10/09/2018
+ms.date: 03/21/2019
 f1_keywords:
 - __declspec_cpp
 - __declspec
 - _declspec
 helpviewer_keywords:
 - __declspec keyword [C++]
-ms.openlocfilehash: 3ee83203cc992ba8c5d05b7bb6974d3576baf59c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e924f3e4a038f900e084dbf84d85430d815c8e8f
+ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645091"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58416946"
 ---
 # <a name="declspec"></a>__declspec
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Syntaxe rozšířeného atributu pro určení informací o třídě úložiště používá **__declspec** – klíčové slovo, které určuje, že instance daného typu uloží v rámci níže uvedeného atributu třídy úložiště specifické pro společnost Microsoft. Příklady dalších modifikátorů na úložiště **statické** a **extern** klíčová slova. Tato klíčová slova jsou však součástí specifikace ANSI jazyků C a C++ a jako taková nejsou zahrnuta v syntaxi doplňkového atributu. Syntaxe rozšířeného atributu zjednodušuje a standardizuje rozšíření specifické pro společnost Microsoft v rámci jazyků C a C++.
 
@@ -25,17 +25,18 @@ Syntaxe rozšířeného atributu pro určení informací o třídě úložiště
 *decl-specifier*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__declspec (**  *extended-decl-modifier-seq*  **)**
 
-*Extended-decl-modifier-seq*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl modifikátor*<sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl modifikátor* *extended-decl-modifier-seq*
+*extended-decl-modifier-seq*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier* *extended-decl-modifier-seq*
 
-*Extended-decl modifikátor*:<br/>
+*extended-decl-modifier*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**zarovnání (** *#* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**přidělit ("** *segname* **")**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**domény aplikace**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**code_seg ("** *segname* **")**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Allocator –**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**appdomain**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**code_seg("** *segname* **")**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**zastaralé**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**DllImport**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**jitintrinsic**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
@@ -45,7 +46,7 @@ Syntaxe rozšířeného atributu pro určení informací o třídě úložiště
 &nbsp;&nbsp;&nbsp;&nbsp;**nothrow**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**novtable**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Proces**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**vlastnosti (** { **získat =**_get_func_name_ &#124; **, vložení =**_put_func_name_ } **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**property(** { **get=**_get_func_name_ &#124; **,put=**_put_func_name_ } **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**omezení**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**selectany**<br/>
@@ -55,7 +56,7 @@ Syntaxe rozšířeného atributu pro určení informací o třídě úložiště
 
 Mezera odděluje sekvenci modifikátoru deklarace. Příklady se zobrazí v pozdějších oddílech.
 
-Rozšířený atribut gramatiky podporuje tyto atributy třídy úložiště specifické pro společnost Microsoft: [zarovnat](../cpp/align-cpp.md), [přidělit](../cpp/allocate.md), [appdomain](../cpp/appdomain.md), [code_seg](../cpp/code-seg-declspec.md), [zastaralé](../cpp/deprecated-cpp.md), [dllexport](../cpp/dllexport-dllimport.md), [dllimport](../cpp/dllexport-dllimport.md), [jitintrinsic](../cpp/jitintrinsic.md), [naked](../cpp/naked-cpp.md), [noalias](../cpp/noalias.md), [noinline](../cpp/noinline.md), [noreturn](../cpp/noreturn.md), [nothrow](../cpp/nothrow-cpp.md), [novtable](../cpp/novtable.md) , [procesu](../cpp/process.md), [omezit](../cpp/restrict.md), [safebuffers](../cpp/safebuffers.md), [selectany](../cpp/selectany.md), [chyby zabezpečení spectre](../cpp/spectre.md), a [vlákno](../cpp/thread.md). Také podporuje tyto atributy objektu COM: [vlastnost](../cpp/property-cpp.md) a [uuid](../cpp/uuid-cpp.md).
+Rozšířený atribut gramatiky podporuje tyto atributy třídy úložiště specifické pro společnost Microsoft: [zarovnat](../cpp/align-cpp.md), [přidělit](../cpp/allocate.md), [alokátoru](../cpp/allocator.md), [appdomain](../cpp/appdomain.md), [code_seg](../cpp/code-seg-declspec.md), [zastaralé](../cpp/deprecated-cpp.md), [dllexport](../cpp/dllexport-dllimport.md), [dllimport](../cpp/dllexport-dllimport.md), [jitintrinsic](../cpp/jitintrinsic.md), [naked](../cpp/naked-cpp.md), [noalias](../cpp/noalias.md), [noinline](../cpp/noinline.md), [noreturn](../cpp/noreturn.md), [nothrow](../cpp/nothrow-cpp.md), [novtable](../cpp/novtable.md), [procesu](../cpp/process.md), [omezit](../cpp/restrict.md), [safebuffers](../cpp/safebuffers.md), [selectany](../cpp/selectany.md), [chyby zabezpečení spectre](../cpp/spectre.md), a [vlákno](../cpp/thread.md). Také podporuje tyto atributy objektu COM: [vlastnost](../cpp/property-cpp.md) a [uuid](../cpp/uuid-cpp.md).
 
 **Code_seg**, **dllexport**, **dllimport**, **naked**, **noalias**, **nothrow** , **vlastnost**, **omezit**, **selectany**, **vlákno**, a **uuid**atributy třídy úložiště jsou vlastnosti pouze prohlášení objektu nebo funkce, do které se použijí. **Vlákno** atribut má vliv na data a pouze objekty. **Naked** a **chyby zabezpečení spectre** atributy ovlivňují pouze funkce. **Dllimport** a **dllexport** ovlivňují atributy funkce, data a objekty. **Vlastnost**, **selectany**, a **uuid** objekty COM ovlivňují atributy.
 
