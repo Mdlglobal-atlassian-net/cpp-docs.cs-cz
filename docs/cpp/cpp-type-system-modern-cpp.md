@@ -3,12 +3,12 @@ title: C++ – systém typů (moderní verze jazyka C++)
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: ea4d8da9af10df2fb930daaad8374d70b6704d28
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220670"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476900"
 ---
 # <a name="c-type-system-modern-c"></a>C++ – systém typů (moderní verze jazyka C++)
 
@@ -63,7 +63,7 @@ Následující ilustrace znázorňuje relativní velikosti předdefinovaných ty
 
 V následující tabulce jsou uvedeny nejčastěji používané základní typy:
 
-|Typ|Velikost|Komentář|
+|Type|Velikost|Komentář|
 |----------|----------|-------------|
 |int|4 bajty|Výchozí volba pro integrální hodnoty.|
 |double|8 bajtů|Výchozí volba pro hodnoty s plovoucí desetinnou čárkou.|
@@ -102,9 +102,7 @@ Při definování **třídy**, **struktura**, **sjednocení**, nebo **výčtu**,
 
 - Kompilátor neobsahuje žádné předdefinované informace o uživatelském typu. Pokud se setká poprvé definici během kompilace, učí se typu.
 
-- Jako uživatel určujete, jaké operace lze s vaším typem provádět a jak ho lze převést na další typy. K tomu definujete (pomocí přetížení) příslušné operátory, buď jako členy třídy nebo jako nečlenské funkce. Další informace najdete v tématu [přetížení funkce](function-overloading.md).
-
-- Není nutné zadávat typy staticky (pravidlo, že typ objektu se nikdy nemění). Prostřednictvím mechanismů *dědičnosti* a *polymorfismus*, proměnná definovaná jako uživatelem definovaný typ třídy (dále jako instance objektu třídy) může mít jiný typ v době běhu, než na Doba kompilace. Další informace najdete v tématu [dědičnosti](../cpp/inheritance-cpp.md).
+- Jako uživatel určujete, jaké operace lze s vaším typem provádět a jak ho lze převést na další typy. K tomu definujete (pomocí přetížení) příslušné operátory, buď jako členy třídy nebo jako nečlenské funkce. Další informace najdete v tématu [přetížení funkcí](function-overloading.md)
 
 ## <a name="pointer-types"></a>Typy ukazatelů
 

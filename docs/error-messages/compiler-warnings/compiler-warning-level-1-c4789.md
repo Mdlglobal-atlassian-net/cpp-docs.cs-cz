@@ -1,17 +1,17 @@
 ---
 title: Kompilátor upozornění (úroveň 1) C4789
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 f1_keywords:
 - C4789
 helpviewer_keywords:
 - C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
-ms.openlocfilehash: f489915f07eefd0909cbcd806a590f93f674c258
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36a5032098c5caabb1b050833e487fd58679a782
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677393"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476849"
 ---
 # <a name="compiler-warning-level-1-c4789"></a>Kompilátor upozornění (úroveň 1) C4789
 
@@ -19,9 +19,11 @@ ms.locfileid: "50677393"
 
 ## <a name="remarks"></a>Poznámky
 
-Upozorní při použití konkrétních funkcí (CRT) jazyka C za běhu přetečení vyrovnávací paměti parametry jsou předány a přiřazení provádějí, tak, aby objemy dat je známo, že v době kompilace. Toto upozornění se používá v situacích, které může elude typické neshoda velikost dat zjišťování.
+**C4789** upozorní o přetečení vyrovnávací paměti, když se používají konkrétní funkce jazyka C za běhu (CRT). Když jsou předávány parametry nebo přiřazení dojde ke ho může také nahlásit neshody velikost. Upozornění je možné, pokud jsou velikosti dat v době kompilace znám. Toto upozornění se používá v situacích, které může elude typické neshoda velikost dat zjišťování.
 
-Upozornění se zobrazí, když data, jejichž délka je znám v době kompilace, je zkopírován a umístit do bloku dat, jejíž velikost je v době kompilace znám příliš malá pro data. Kopie musíte to provést pomocí jedné z následujících funkcí CRT vnitřní formuláře:
+**C4789** vás upozorní, když se data zkopírovala do bloku dat, který je známý jako moc malé v době kompilace.
+
+Upozornění v případě kopírování používá vnitřní formu některou z těchto funkcí CRT:
 
 - [strcpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)
 
@@ -29,18 +31,18 @@ Upozornění se zobrazí, když data, jejichž délka je znám v době kompilace
 
 - [memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md), [wmemcpy –](../../c-runtime-library/reference/memcpy-wmemcpy.md)
 
-Upozornění se zobrazí také při datový typ parametru se neshoduje s použitím přetypování, a pak pokus o přiřazení kopie z reference na lvalue.
+Upozornění se zobrazí také při přetypování parametr větší datový typ a pak proveďte přiřazení kopie z reference na lvalue.
 
-Visual C++ může vytvořit toto upozornění pro cestu kódu, který se nikdy nespustí. Upozornění můžete dočasně zakázat s použitím `#pragma`, jak je znázorněno v tomto příkladu:
+Visual C++ může vytvořit toto upozornění pro cestu kódu, který se nikdy neprovede. Upozornění můžete dočasně zakázat s použitím `#pragma`, jak je znázorněno v tomto příkladu:
 
 ```cpp
-#pragma(push)
-#pragma warning ( disable : 4789 )
+#pragma warning( push )
+#pragma warning( disable : 4789 )
 // unused code that generates compiler warning C4789`
-#pragma(pop)
+#pragma warning( pop )
 ```
 
-Visual C++ se takto zachová generování upozornění pro tento konkrétní blok kódu. `#pragma(push)` Zachová stávající stav před `#pragma warning(disable: 4789)` změní. `#pragma(pop)` Obnoví vložené stavu a odebere účinky `#pragma warning(disable:4789)`. Další informace o direktivě preprocesoru C++ `#pragma`, naleznete v tématu [upozornění](../../preprocessor/warning.md) a [direktivy Pragma a klíčové slovo __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
+Tohoto idiomu uchovává Visual C++ ze generování upozornění pro tento konkrétní blok kódu. `#pragma warning(push)` Zachová stávající stav před `#pragma warning(disable: 4789)` změní. `#pragma warning(pop)` Obnoví vložené stavu a odebere účinky `#pragma warning(disable:4789)`. Další informace o direktivě preprocesoru C++ `#pragma`, naleznete v tématu [upozornění](../../preprocessor/warning.md) a [direktivy Pragma a klíčové slovo __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
 ## <a name="example"></a>Příklad
 

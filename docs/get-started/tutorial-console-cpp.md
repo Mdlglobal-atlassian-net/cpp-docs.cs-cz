@@ -2,16 +2,16 @@
 title: Vytvoření projektu aplikace konzoly C++
 description: Vytvoření konzolové aplikace Hello World v jazyce Visual C++
 ms.custom: mvc
-ms.date: 12/12/2017
+ms.date: 03/25/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 49fc20f3040f50ddc1b8014cc4dcf8df20f7af87
-ms.sourcegitcommit: 966e4466f10c93fc12faf33d28e03b39489423fc
+ms.openlocfilehash: 1b2fe7b95ec27a559de73673412cb2d28507b656
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "55987063"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476874"
 ---
 # <a name="create-a-c-console-app-project"></a>Vytvoření projektu aplikace konzoly C++
 
@@ -23,7 +23,7 @@ Obvyklým výchozím bodem pro programátor C++ je "Hello, world!" aplikace, kte
 
 ## <a name="create-your-app-project"></a>Vytvoření projektu aplikace
 
-Visual Studio používá *projekty* organizaci kódu pro aplikace, a *řešení* k uspořádání vašich projektů. Projekt obsahuje všechny možnosti, konfigurace a pravidla používaná k vytváření aplikací a spravuje vztah mezi všechny projektových souborů a externí soubory. Pokud chcete vytvořit aplikaci, nejprve vytvoříte nový projekt a řešení.
+Visual Studio používá *projekty* organizaci kódu pro aplikace, a *řešení* k uspořádání vašich projektů. Projekt obsahuje všechny možnosti, konfigurace a pravidla používaná k vytváření aplikací. Spravuje také vztah mezi všechny projektové soubory a soubory s externí. Pokud chcete vytvořit aplikaci, nejprve vytvoříte nový projekt a řešení.
 
 1. V řádku nabídek v sadě Visual Studio, zvolte **souboru** > **nový** > **projektu**. **Nový projekt** otevře se okno.
 
@@ -33,7 +33,7 @@ Visual Studio používá *projekty* organizaci kódu pro aplikace, a *řešení*
 
    ![Dialogové okno Nový projekt](./media/calculator-new-project-dialog.png "dialogového okna Nový projekt")
 
-   Tím se vytvoří prázdný Windows C++ konzolové aplikace. Konzolové aplikace pomocí okna konzoly Windows a zobrazte výstup přijímají vstup uživatele. V sadě Visual Studio okno editoru se otevře a zobrazí vygenerovaný kód, který by měl vypadat takto:
+   Vytvoří prázdnou aplikaci konzoly Windows C++. Konzolové aplikace pomocí okna konzoly Windows a zobrazte výstup přijímají vstup uživatele. V sadě Visual Studio okno editoru se otevře a zobrazí vygenerovaný kód:
 
     ```cpp
     // CalculatorTutorial.cpp : This file contains the 'main' function. Program execution begins and ends there.
@@ -58,8 +58,6 @@ Visual Studio používá *projekty* organizaci kódu pro aplikace, a *řešení*
     //   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
     //   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
     ```
-
-[Můžu narazili na problém.](#create-your-app-project-issues)
 
 ## <a name="verify-that-your-new-app-builds-and-runs"></a>Ověřte, že vaše nová aplikace se vytvoří a spustí
 
@@ -124,13 +122,11 @@ Teď obraťme kód v této šabloně do aplikace kalkulačku.
 
 1. Chcete-li uložit soubor, zadejte **Ctrl + S**, nebo zvolte **Uložit** ikonu v horní části rozhraní IDE, ikonu diskety v panelu nástrojů v řádku nabídek.
 
-1. Chcete-li aplikaci spustit, stiskněte **Ctrl + F5** nebo přejděte na **ladění** nabídky a zvolte **spustit bez ladění**. Pokud se zobrazí **tento projekt není aktuální** automaticky otevíraném okně můžete vybrat **tento dialog již příště nezobrazovat**a klikněte na tlačítko **Ano** k sestavení aplikace. Měli byste vidět okno konzoly okno s textem zadaným v kódu.
+1. Chcete-li aplikaci spustit, stiskněte **Ctrl + F5** nebo přejděte na **ladění** nabídky a zvolte **spustit bez ladění**. Pokud se zobrazí automaticky otevírané okno s upozorněním **tento projekt není aktuální**, můžete vybrat **tento dialog již příště nezobrazovat**a klikněte na tlačítko **Ano** k sestavení aplikace. Měli byste vidět okno konzoly zobrazí zobrazí text uvedený v kódu.
 
    ![Sestavte a spusťte aplikaci](./media/calculator-first-launch.gif "sestavit a spustit aplikaci")
 
 1. Jakmile budete hotovi, zavřete okno konzoly.
-
-[Můžu narazili na problém.](#edit-the-code-issues)
 
 ## <a name="add-code-to-do-some-math"></a>Přidejte kód pro procvičili matematiku
 
@@ -138,15 +134,15 @@ Je čas na přidání některých matematických logiku.
 
 ### <a name="to-add-a-calculator-class"></a>Přidání třídy Kalkulačka
 
-1. Přejděte **projektu** nabídku a zvolte **přidat třídu**. V **název třídy** textové pole, zadejte *Kalkulačka*. Zvolte **OK**. To přidá dva nové soubory do projektu. Chcete-li uložit všechny změněné soubory najednou, stiskněte **Ctrl + Shift + S**. Toto je klávesová zkratka **souboru** > **Uložit vše**. Je také tlačítko panelu nástrojů pro **Uložit vše**, ikona dvou disket nenašel vedle **Uložit** tlačítko. Obecně je vhodné provést **Uložit vše** často, takže můžete Nenechte si ujít všechny soubory při uložení.
+1. Přejděte **projektu** nabídku a zvolte **přidat třídu**. V **název třídy** textové pole, zadejte *Kalkulačka*. Zvolte **OK**. Dva nové soubory nechejte se přidat do projektu. Chcete-li uložit všechny změněné soubory najednou, stiskněte **Ctrl + Shift + S**. Je klávesová zkratka **souboru** > **Uložit vše**. Je také tlačítko panelu nástrojů pro **Uložit vše**, ikona dvou disket nenašel vedle **Uložit** tlačítko. Obecně je vhodné provést **Uložit vše** často, takže můžete Nenechte si ujít všechny soubory při uložení.
 
    ![Vytvořte třídu Kalkulačka](./media/calculator-create-class.gif "vytvořit třídu Kalkulačka")
 
-   Třída je jako matrice objektu, která něco dělá. V takovém případě definujeme kalkulačku a jak by mělo fungovat. **Přidat třídu** Průvodce využité nad vytvořené soubory .h a .cpp, které mají stejný název jako třída. Můžete zobrazit úplný seznam souborů v projektu **Průzkumníka řešení** okno zobrazené na straně rozhraní IDE. Pokud v okně není zobrazena, lze jej otevřít z řádku nabídek: Zvolte **zobrazení** > **Průzkumníka řešení**.
+   Třída je jako matrice objektu, která něco dělá. V takovém případě definujeme kalkulačku a jak by mělo fungovat. **Přidat třídu** Průvodce využité nad vytvořené soubory .h a .cpp, které mají stejný název jako třída. Můžete zobrazit úplný seznam souborů v projektu **Průzkumníka řešení** okno viditelné Toolbar integrovaného vývojového prostředí. Pokud v okně není zobrazena, lze jej otevřít z řádku nabídek: Zvolte **zobrazení** > **Průzkumníka řešení**.
 
    ![Průzkumník řešení](./media/calculator-solution-explorer.png "Průzkumníka řešení")
 
-   Teď byste měli mít tři karty, které se otevře v editoru: *CalculatorTutorial.cpp*, *Calculator.h*, a *Calculator.cpp*. Pokud jste omylem zavřete jeden z nich, můžete ji znovu otevřete poklepáním v **Průzkumníka řešení** okna.
+   Teď byste měli mít tři karty, které se otevře v editoru: *CalculatorTutorial.cpp*, *Calculator.h*, a *Calculator.cpp*. Pokud omylem uzavřete jeden z nich, můžete znovu otevřít jej dvojitým kliknutím v **Průzkumníka řešení** okna.
 
 1. V **Calculator.h**, odeberte `Calculator();` a `~Calculator();` řádky, které byly vytvořeny, protože je nebudete potřebovat tady. Dále přidejte následující řádek kódu, takže ho teď vypadá takto:
 
@@ -166,7 +162,7 @@ Je čas na přidání některých matematických logiku.
    > - Dva řádky odstraněné deklarované *konstruktor* a *destruktor* pro třídu. Pro jednoduchou třídu, jako je ten kompilátor vytvoří za vás a jejich použití jsou nad rámec tohoto kurzu.
    > - Je dobrým zvykem organizovat kód do různých souborů podle jeho význam, tak, aby byl snadno najít kód, který budete potřebovat později. V našem případě definujeme `Calculator` třídy nezávisle na soubor obsahující `main()` funkce, ale doporučujeme naplánovat tak, aby odkazovaly `Calculator` třídy v `main()`.
 
-1. Zobrazí se zelená vlnovku se zobrazí v rámci `Calculate`. Důvodem je, že jsme ještě nebyl definován `Calculate` funkce v souboru .cpp. Najeďte myší aplikaci word, klikněte na žárovku, která se zobrazí a zvolte **vytvoření definice "Vypočítat" v Calculator.cpp**. Se zobrazí automaticky otevírané okno, které poskytuje náhled změn kódu, která byla vytvořena v jiném souboru. Kód byl přidán do *Calculator.cpp*.
+1. Zobrazí se zelená vlnovku se zobrazí v rámci `Calculate`. Je proto, že jsme ještě nebyl definován `Calculate` funkce v souboru .cpp. Najeďte myší aplikaci word, klikněte na žárovku, která se zobrazí a zvolte **vytvoření definice "Vypočítat" v Calculator.cpp**. Se zobrazí automaticky otevírané okno, které poskytuje náhled změn kódu, která byla vytvořena v jiném souboru. Kód byl přidán do *Calculator.cpp*.
 
    ![Vytvoření definice Calculate](./media/calculator-create-definition.gif "vytvořit definici vypočítat")
 
@@ -268,51 +264,51 @@ Vzhledem k tomu, že uživateli je zadarmo zadávat nic do okna konzoly, se ujis
 
 ### <a name="to-run-the-app-in-the-debugger"></a>Spusťte aplikaci v ladicím programu
 
-1. Nastavit zarážku na `result = c.Calculate(x, oper, y);` řádku, bezprostředně po uživateli se zobrazí výzva pro vstup. Chcete-li to provést, klikněte na tlačítko v šedé svislá čára sledovat levému okraji okna editoru vedle řádku, zobrazí se červená tečka.
+1. Nastavit zarážku na `result = c.Calculate(x, oper, y);` řádku, bezprostředně po uživateli se zobrazí výzva pro vstup. Chcete-li nastavit zarážku, klikněte na tlačítko vedle řádku v šedé svislá čára sledovat levému okraji okna editoru. Zobrazí se červená tečka.
 
    ![Nastavit zarážku](./media/calculator-set-breakpoint.gif "nastavte zarážku")
 
-   Nyní když jsme ladění programu, vždy pozastaví provádění na tento řádek. Ale už máme přibližnou představu, který pro jednoduché případů bude program, a nechceme pozastavit provádění pokaždé, když, Pojďme vytvořit podmíněné zarážky.
+   Nyní když jsme ladění programu, vždy pozastaví provádění na tento řádek. Už máme přibližnou představu, který pro jednoduché případů bude program. Protože nechceme pozastavit provádění pokaždé, když, vytvoříme zarážka podmíněný.
 
-1. Klikněte pravým tlačítkem na červenou tečku představující zarážku a zvolte **podmínky**. Do textového pole podmínky, zadejte `(y == 0) && (oper == '/')`. Zvolte **Zavřít** tlačítko až budete hotovi, podmínka se automaticky uloží.
+1. Klikněte pravým tlačítkem na červenou tečku představující zarážku a zvolte **podmínky**. Do textového pole podmínky, zadejte `(y == 0) && (oper == '/')`. Zvolte **Zavřít** tlačítko až budete hotovi. Podmínka se automaticky uloží.
 
    ![Nastavení podmíněné zarážky](./media/calculator-conditional-breakpoint.gif "nastavení podmíněné zarážky")
 
    Nyní jsme pozastavit provádění na zarážce, konkrétně, pokud dojde k pokusu o dělení hodnotou 0.
 
-1. Chcete-li program ladit, stiskněte **F5** nebo zvolte **místní ladicí program Windows** (tlačítko panelu nástrojů, který má ikonu zelená šipka). Ve vaší aplikaci konzoly Pokud něco jako "5-0", zadejte program se chovat normálně a stále spuštěný. Nicméně pokud zadáte "10 / 0", jeho pozastavení na zarážce. Můžete dokonce vložit libovolný počet mezer mezi operátor a čísla. `cin` je dostatečně inteligentní, aby správně analyzovat vstup.
+1. Pokud chcete program ladit, stiskněte **F5**, nebo zvolte **místní ladicí program Windows** tlačítka panelu nástrojů, který má ikonu zelenou šipku. Ve vaší aplikaci konzoly Pokud něco jako "5-0", zadejte program se chovat normálně a stále spuštěný. Nicméně pokud zadáte "10 / 0", jeho pozastavení na zarážce. Můžete dokonce vložit libovolný počet mezer mezi operátor a čísla. `cin` je dostatečně inteligentní, aby správně analyzovat vstup.
 
    ![Pozastavení na zarážce podmíněného](./media/calculator-debug-conditional.gif "pozastavení na zarážce podmíněné")
 
 ### <a name="useful-windows-in-the-debugger"></a>Užitečné windows v ladicím programu
 
-Pokaždé, když se při ladění kódu, můžete si všimnout, že se zobrazí několik nových oknech. Možnosti ladění můžou pomoct tato okna. Podívejte se na **automatické hodnoty** okna. **Automatické hodnoty** okno se zobrazuje aktuální hodnoty proměnné slouží aspoň 3 řádky před a až do aktuálního řádku.
+Pokaždé, když se při ladění kódu, můžete si všimnout, že se zobrazí několik nových oknech. Možnosti ladění můžou pomoct tato okna. Podívejte se na **automatické hodnoty** okna. **Automatické hodnoty** okno se zobrazuje aktuální hodnoty proměnných použít minimálně tři řádky před a až do aktuálního řádku.
 
    ![V okně Automatické hodnoty](./media/calculator-autos.png "okno Automatické hodnoty")
 
-Chcete-li zobrazit všechny proměnné z této funkce, přepněte **lokální** okna. Hodnoty těchto proměnných v reálném čase při ladění, můžete upravit ve skutečnosti zobrazíte jaký vliv bude mít v programu. V tomto případě Ponecháme je samostatně.
+Chcete-li zobrazit všechny proměnné z této funkce, přepněte **lokální** okna. Hodnoty těchto proměnných při ladění, můžete upravit ve skutečnosti zobrazíte jaký vliv bude mít v programu. V tomto případě Ponecháme je samostatně.
 
    ![V okně místních hodnot](./media/calculator-locals.png "okno oknech místní hodnoty")
 
-Můžete také pouze najetí myší na proměnné v samotném zobrazíte jejich aktuálními hodnotami, kde je momentálně pozastavený provádění kódu. Ujistěte se, že okno editoru fokus kliknutím na první před pokusem o to.
+Můžete také pouze najetí myší na proměnné v samotném zobrazíte jejich aktuálními hodnotami, kde je momentálně pozastavený provádění kódu. Ujistěte se, že okno editoru fokus nejprve kliknutím na ni.
 
    ![Najetím myší zobrazíte aktuální hodnoty proměnných](./media/calculator-hover-tooltip.gif "při najetí myší, chcete-li zobrazit aktuální hodnoty proměnných")
 
 ### <a name="to-continue-debugging"></a>Pro pokračování v ladění
 
-1. Žlutá čára na levé straně se zobrazí aktuální bod provádění. Tato funkce je momentálně na řádek, který volá `Calculate`, takže stiskněte **F11** k **Krokovat s vnořením** funkce. Zorientujete se v těle `Calculate` funkce. Buďte opatrní při používání **Krokovat s vnořením**; Pokud máte příliš mnoho vám může odpad spoustu času, jak se ukládá do jakéhokoli kódu můžete použít na řádku, který používáte, včetně funkce standardní knihovny.
+1. Žlutá čára na levé straně se zobrazí aktuální bod provádění. Aktuální řádek volání `Calculate`, takže stiskněte **F11** k **Krokovat s vnořením** funkce. Zorientujete se v těle `Calculate` funkce. Buďte opatrní při používání **Krokovat s vnořením**; Pokud tak učiníte příliš mnoho může odpad spoustu času. Přejde na jakýkoli kód, který používáte na řádek, který používáte, včetně funkce standardní knihovny.
 
-1. Teď, když bod provádění na začátku `Calculate` funkci, stiskněte klávesu **F10** přesunout na další řádek při provádění programu. Tím se taky říká **Krokovat s přeskočením**. Můžete použít **Krokovat s přeskočením** přesunout řádcích, bez seznamovat s podrobnostmi o co se děje v jednotlivých součástí řádku. Obecně byste měli použít **Krokovat s přeskočením** místo **Krokovat s vnořením**, pokud nechcete Ponořte se hlouběji do kódu, která je volána z jinde (stejně jako k dosažení tělo `Calculate`).
+1. Teď, když bod provádění na začátku `Calculate` funkci, stiskněte klávesu **F10** přesunout na další řádek při provádění programu. **F10** se taky říká **Krokovat s přeskočením**. Můžete použít **Krokovat s přeskočením** přesunout řádcích, bez seznamovat s podrobnostmi o co se děje v jednotlivých součástí řádku. Obecně byste měli použít **Krokovat s přeskočením** místo **Krokovat s vnořením**, pokud nechcete Ponořte se hlouběji do kódu, která je volána z jinde (stejně jako k dosažení tělo `Calculate`).
 
 1. Pokračovat v používání **F10** k **Krokovat s přeskočením** každého řádku, dokud se nevrátíte se zpátky do `main()` fungovat v jiném souboru a zastaví se na `cout` řádku.
 
    ![Vystoupení ze Calculate a zkontrolujte výsledek](./media/calculator-undefined-zero.gif "vystoupení ze Calculate a zkontrolovat výsledky")
 
-1. Vypadá to program provádí, co se očekává: přijímá první číslo a rozděluje po sekundách. Na `cout` řádek, najeďte myší `result` proměnné nebo se podívejte na `result` v **automatické hodnoty** okna. Uvidíte, že její hodnota je uveden jako "informace". Toto nevypadá moc správně, takže tento problém vyřešit. `cout` Řádku právě výstupy, ať hodnota je uložená v `result`, takže když vejdete další řádek předávání pomocí **F10**, v okně konzoly se zobrazí toto:
+1. Vypadá to program provádí, co se očekává: přijímá první číslo a rozděluje po sekundách. Na `cout` řádek, najeďte myší `result` proměnné nebo se podívejte na `result` v **automatické hodnoty** okna. Uvidíte, že její hodnota je uveden jako "informace", který nevypadá moc správně, takže ho opravit. `cout` Řádku právě výstupy, ať hodnota je uložená v `result`, takže když vejdete další řádek předávání pomocí **F10**, v okně konzoly se zobrazí:
 
    ![Výsledek dělení nulou](./media/calculator-divide-by-zero-fail.png "výsledek dělení nulou")
 
-   K tomu dochází, protože dělení nulou není definován, takže program neobsahuje numerické odpověď na požadovanou operaci.
+   Tento výsledek dochází dělení nulou není definováno, takže program neobsahuje numerické odpověď na požadovanou operaci.
 
 ### <a name="to-fix-the-divide-by-zero-error"></a>Chcete-li vyřešit chybu "dělení nulou"
 
@@ -332,9 +328,9 @@ Pojďme dělení nulou více elegantně zpracovat, to uživateli umožní pochop
 
     int main()
     {
-        double x = 0.0
-        double y = 0.0
-        double result = 0.0
+        double x = 0.0;
+        double y = 0.0;
+        double result = 0.0;
         char oper = '+';
 
         cout << "Calculator Console Application" << endl << endl;
@@ -360,7 +356,7 @@ Pojďme dělení nulou více elegantně zpracovat, to uživateli umožní pochop
     }
     ```
 
-1. Nyní stiskněte **F5** po. Tento program pokračuje v provádění kódu úplně, dokud má pozastavit požádat pro uživatelský vstup. Zadejte `10 / 0` znovu. Nyní je užitečnější zpráva vytištěna. Zobrazí se uživateli výzva pro další vstup a program pokračuje v provádění normálně.
+1. Nyní stiskněte **F5** po. Program pokračuje tímto způsobem, dokud má pozastavit požádat pro uživatelský vstup. Zadejte `10 / 0` znovu. Nyní je užitečnější zpráva vytištěna. Zobrazí se uživateli výzva pro další vstup a program pokračuje v provádění normálně.
 
    ![Konečný výsledek po změně](./media/calculator-final-verification.gif "konečný výsledek po provedení změn")
 

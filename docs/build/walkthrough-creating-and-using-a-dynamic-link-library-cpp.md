@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: c1f59c704e96ade82295f4ae88265f549987e981
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 44a2f1da6a02444c79247178c34281e39731f0f3
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813965"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476926"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Návod: Vytvoření a použití vlastní dynamické propojení knihovny (C++)
 
@@ -296,9 +296,11 @@ V dalším kroku k volání funkce MathLibrary ve zdrojovém kódu, váš projek
 
 1. V horním podokně dvakrát klikněte **další adresáře souborů k zahrnutí** dialogové okno Povolit ovládacího prvku pro úpravy.
 
-1. V textovém poli zadejte cestu k umístění **MathLibrary.h** hlavičkový soubor. V takovém případě můžete použít relativní cesty:
+1. V textovém poli zadejte cestu k umístění **MathLibrary.h** hlavičkový soubor. V takovém případě můžete použít relativní cestu ze složky obsahující soubory .cpp v projektu klienta do složky, která obsahuje soubor hlaviček v projektu knihovny DLL. Pokud klientský projekt je v samostatném řešení ve stejné složce jako knihovna DLL řešení, relativní cestu by měl vypadat takto:
 
    `..\..\MathLibrary\MathLibrary`
+
+   Pokud vaše projekty knihovny DLL a klienta jsou ve stejném řešení nebo řešení v různých složkách, pak musíte nastavit relativní cestu odpovídajícím způsobem.
 
    ![Přidat hlavičku umístění k vlastnosti další adresáře souborů k zahrnutí](media/mathclient-additional-include-directories.png "přidat hlavičku umístění k vlastnosti další adresáře souborů k zahrnutí")
 

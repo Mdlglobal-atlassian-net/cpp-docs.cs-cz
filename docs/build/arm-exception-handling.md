@@ -2,12 +2,12 @@
 title: Zpracování výjimek ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: cbbec3f40df2765fa76399ce667ae30f4533b018
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 8a2bae8e42ac6a624bebe7c185ac7e0ade8d5491
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814537"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476939"
 ---
 # <a name="arm-exception-handling"></a>Zpracování výjimek ARM
 
@@ -220,7 +220,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 }
 ```
 
-Athough prologu a každý epilogu má index do kódy unwind, v tabulce se sdílí mezi nimi. Není, že můžou všechny sdílet stejné kódy unwind. Doporučujeme vám, že autorům optimalizovat pro tento případ, protože nejvyšší index, který se dá nastavit je 255 a, který omezí se celkový počet kódy unwind možné pro konkrétní funkci.
+I když prologu a epilogu každý index do kódy unwind, je mezi nimi sdílet v tabulce. Není, že můžou všechny sdílet stejné kódy unwind. Doporučujeme vám, že autorům optimalizovat pro tento případ, protože nejvyšší index, který se dá nastavit je 255 a, který omezí se celkový počet kódy unwind možné pro konkrétní funkci.
 
 ### <a name="unwind-codes"></a>Parsovat kódy unwind
 

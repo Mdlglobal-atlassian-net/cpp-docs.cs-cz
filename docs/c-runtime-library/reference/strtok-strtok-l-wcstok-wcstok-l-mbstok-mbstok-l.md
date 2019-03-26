@@ -1,6 +1,6 @@
 ---
 title: strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 apiname:
 - _mbstok_l
 - _mbstok
@@ -45,12 +45,12 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: bb791c7049379f62b99804fa8f1cf3a57fe0b749
-ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
+ms.openlocfilehash: 22dd01a0b2558c83ca1e25875a2ace7dd4ee15c0
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58416959"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476913"
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
@@ -81,11 +81,11 @@ wchar_t *wcstok_l(
    _locale_t locale
 );
 unsigned char *_mbstok(
-   unsigned char*strToken,
+   unsigned char *strToken,
    const unsigned char *strDelimit
 );
 unsigned char *_mbstok_l(
-   unsigned char*strToken,
+   unsigned char *strToken,
    const unsigned char *strDelimit,
    _locale_t locale
 );
@@ -104,7 +104,7 @@ Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrací ukazatel na další token v parametru *tokenu %{strtoken/*. Vrátí **NULL** když nejsou nalezeny žádné další tokeny. Každé volání upraví parametr *tokenu %{strtoken/* nahrazením znaku null prvního oddělovače, ke které dojde po vráceném tokenu.
+Vrací ukazatel na další token v parametru *tokenu %{strtoken/*. Funkce vrací **NULL** když nejsou nalezeny žádné další tokeny. Každé volání upraví parametr *tokenu %{strtoken/* nahrazením znaku null prvního oddělovače, ke které dojde po vráceném tokenu.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -115,7 +115,9 @@ Vrací ukazatel na další token v parametru *tokenu %{strtoken/*. Vrátí **NUL
 
 Při prvním volání **strtok –**, funkce Přeskočí úvodní oddělovače a vrátí ukazatel na první token v *tokenu %{strtoken/*, ukončí token znakem null. Další tokeny lze zjistit ze zbytku parametru *tokenu %{strtoken/* řadou volání **strtok –**. Každé volání **strtok –** upraví *tokenu %{strtoken/* vložením znaku null za **token** vrácený tímto voláním. Přečíst další token z *tokenu %{strtoken/*, volání **strtok –** s **NULL** hodnota *tokenu %{strtoken/* argument. **NULL** *tokenu %{strtoken/* způsobí, že argument **strtok –** k vyhledání další token v upraveném *tokenu %{strtoken/*. *StrDelimit* argument přijímá jakoukoli hodnotu z jednoho volání na další tak, aby se sada oddělovačů může lišit.
 
-Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze těchto funkcí bez **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí místo něho předán v. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí. Další informace najdete v tématu [setlocale](setlocale-wsetlocale.md).
+
+Verze těchto funkcí bez **_l** přípona používají aktuální národní prostředí pro toto chování závislé na národním prostředí. Verze s **_l** přípona jsou stejné s tím rozdílem, že používají Předaný parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 > [!NOTE]
 > Každá funkce používá statická proměnná místního vlákna k analýze řetězec do tokenů. Proto více vláken může současně volání těchto funkcí bez nežádoucí účinky. Nicméně v jednom vlákně, prokládání volání jedné z těchto funkcí je velmi pravděpodobné vytvářejí poškození dat a jejich výsledky. Při analýze různých řetězců, dokončete parsování jeden řetězec před zahájením k další analýze. Navíc být vědomi potenciální nebezpečí při volání jedné z těchto funkcí z v rámci smyčky, kde je volán jiné funkci. Pokud jiná funkce končí pomocí jedné z těchto funkcí, budou výsledkem prokládané posloupnost volání, aktivuje poškození dat.

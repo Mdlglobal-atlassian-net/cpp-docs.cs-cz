@@ -1,15 +1,15 @@
 ---
 title: Syntaxe výrazu lambda
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 helpviewer_keywords:
 - lambda expressions [C++], syntax
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
-ms.openlocfilehash: 030960cf8a301575396231cec1a37ff7bed2667f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2df2c203024e1b50cffdcb15af834fe09effaae2
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577465"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476857"
 ---
 # <a name="lambda-expression-syntax"></a>Syntaxe výrazu lambda
 
@@ -23,7 +23,7 @@ Výraz lambda kombinuje výhody ukazatelů na funkce a objektů funkce a předch
 
 Následující příklady porovnávají použití výrazu lambda a objektu funkce. První příklad pomocí výrazu lambda zapisuje do konzole, zda každý prvek `vector` objekt je sudý, nebo lichý. Druhý příklad používá objekt funkce k provedení stejné úlohy.
 
-## <a name="example-1-using-a-lambda"></a>Příklad 1: Použití výrazu lambda
+## <a name="example-1-using-a-lambda"></a>Příklad 1: Použití výrazu Lambda
 
 Tento příklad předává lambda **for_each** funkce. Výraz lambda vytiskne výsledek, který uvádí, zda každý prvek v `vector` objekt je sudý, nebo lichý.
 
@@ -39,7 +39,7 @@ using namespace std;
 
 int main()
 {
-   // Create a vector object that contains 10 elements.
+   // Create a vector object that contains 9 elements.
    vector<int> v;
    for (int i = 1; i < 10; ++i) {
       v.push_back(i);
@@ -63,8 +63,6 @@ int main()
         << " even numbers in the vector." << endl;
 }
 ```
-
-### <a name="output"></a>Výstup
 
 ```Output
 1 is odd
@@ -129,7 +127,7 @@ private:
 
 int main()
 {
-    // Create a vector object that contains 10 elements.
+    // Create a vector object that contains 9 elements.
     vector<int> v;
     for (int i = 1; i < 10; ++i) {
         v.push_back(i);
@@ -145,8 +143,6 @@ int main()
         << " even numbers in the vector." << endl;
 }
 ```
-
-## <a name="output"></a>Výstup
 
 ```Output
 1 is odd

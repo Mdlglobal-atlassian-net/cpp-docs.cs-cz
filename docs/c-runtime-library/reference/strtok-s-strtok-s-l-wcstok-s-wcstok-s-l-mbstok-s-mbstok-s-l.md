@@ -1,6 +1,6 @@
 ---
 title: strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 apiname:
 - _wcstok_s_l
 - _mbstok_s_l
@@ -48,12 +48,12 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-ms.openlocfilehash: 0020d4944ffb379584a044023bc34169b4a5c983
-ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
+ms.openlocfilehash: e2c237927aa133d33085be40b88789c1024d6b34
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58416972"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476887"
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
@@ -137,13 +137,15 @@ Pokud *str* je **NULL** ale *kontextu* je ukazatel na platný ukazatel kontextu,
 
 **Strtok_s –** rodinu funkcí vyhledá další token v *str*. Sady znaků v *oddělovače* Určuje možné oddělovače tokenu, který má být vyhledána v *str* při aktuálním volání. **wcstok_s –** a **_mbstok_s –** jsou širokoznaké a vícebajtové verze **strtok_s –**. Argumenty a vrácené hodnoty **wcstok_s –** a **_wcstok_s_l –** jsou širokoznaké řetězce **_mbstok_s –** a **_mbstok_s_l –** jsou vícebajtové znakové řetězce. Tyto funkce chovají identicky jinak.
 
-Tato funkce ověřuje své parametry. Pokud dojde k chybě, stejně jako v tabulce chybové podmínky vyvolán obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tyto funkce nastaví **errno** k **EINVAL** a vrátit **NULL**.
+Tato funkce ověřuje své parametry. Když dojde k chybě, stejně jako v tabulce chybové podmínky vyvolán obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tyto funkce nastaví **errno** k **EINVAL** a vrátit **NULL**.
 
-Při prvním volání **strtok_s –** funkce Přeskočí úvodní oddělovače a vrátí ukazatel na první token v *str*, ukončí token znakem null. Další tokeny lze zjistit ze zbytku parametru *str* řadou volání **strtok_s –**. Každé volání **strtok_s –** upraví *str* vložením znaku null za token vrácený tímto voláním. *Kontextu* ukazatel uchovává informace o který řetězec se čte a kde v řetězci další token ke čtení. Přečíst další token z *str*, volání **strtok_s –** s **NULL** hodnota *str* argument a předejte stejný  *kontext* parametru. **NULL** *str* způsobí, že argument **strtok_s –** k vyhledání další token v upraveném *str*. *Oddělovače* argument přijímá jakoukoli hodnotu z jednoho volání na další tak, aby se sada oddělovačů může lišit.
+Při prvním volání **strtok_s –**, funkce Přeskočí úvodní oddělovače a vrátí ukazatel na první token v *str*, ukončí token znakem null. Další tokeny lze zjistit ze zbytku parametru *str* řadou volání **strtok_s –**. Každé volání **strtok_s –** upraví *str* vložením znaku null za token vrácený tímto voláním. *Kontextu* ukazatel uchovává informace o který řetězec se čte a kde v řetězci další token ke čtení. Přečíst další token z *str*, volání **strtok_s –** s **NULL** hodnota *str* argument a předejte stejný  *kontext* parametru. **NULL** *str* způsobí, že argument **strtok_s –** k vyhledání další token v upraveném *str*. *Oddělovače* argument přijímá jakoukoli hodnotu z jednoho volání na další tak, aby se sada oddělovačů může lišit.
 
 Vzhledem k tomu, *kontextu* parametr nahrazuje statické vyrovnávací paměti používané **strtok –** a **_strtok_l –**, je možné analyzovat dva řetězce současně ve stejném vlákně.
 
-Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze těchto funkcí bez **_l** přípona použití národního prostředí aktuálního vlákna pro toto chování závislé na národním prostředí. Verze s **_l** přípona jsou stejné s tím rozdílem, že místo toho používají *národní prostředí* parametru. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí. Další informace najdete v tématu [setlocale](setlocale-wsetlocale.md).
+
+Verze těchto funkcí bez **_l** přípona použití národního prostředí aktuálního vlákna pro toto chování závislé na národním prostředí. Verze s **_l** přípona jsou stejné s tím rozdílem, že místo toho používají národní prostředí určené *národní prostředí* parametru. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Požadavky
 
