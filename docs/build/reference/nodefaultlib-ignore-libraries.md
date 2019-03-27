@@ -1,6 +1,6 @@
 ---
 title: /NODEFAULTLIB (Ignorovat knihovny)
-ms.date: 11/04/2016
+ms.date: 03/26/2019
 f1_keywords:
 - VC.Project.VCLinkerTool.OVERWRITEAllDefaultLibraries
 - VC.Project.VCLinkerTool.OVERWRITEDefaultLibraryNames
@@ -13,18 +13,16 @@ helpviewer_keywords:
 - /NODEFAULTLIB linker option
 - ignore libraries linker option
 ms.assetid: 7270b673-6711-468e-97a7-c2925ac2be6e
-ms.openlocfilehash: cacc1ef312065da5d6e62ddba1040e87fae9d709
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 24528eb4c387c4cd0921ab089370d72b076ad640
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807452"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508751"
 ---
 # <a name="nodefaultlib-ignore-libraries"></a>/NODEFAULTLIB (Ignorovat knihovny)
 
-```
-/NODEFAULTLIB[:library]
-```
+> **/ NODEFAULTLIB**[__:__*knihovny*]
 
 ## <a name="arguments"></a>Arguments
 
@@ -35,25 +33,23 @@ Knihovna, která má linkeru, aby ignorovat při překladu externích odkazů.
 
 Parametr/NODEFAULTLIB přikazuje linkeru, aby odebral jednu nebo více výchozích knihoven ze seznamu knihoven, které prohledává při překladu externích odkazů.
 
-Soubor .obj, který obsahuje odkazy na výchozích knihoven, které vytvoříte pomocí [/Zl (vynechání názvu výchozí knihovny)](zl-omit-default-library-name.md).
+K vytvoření souboru .obj, který neobsahuje žádné odkazy na výchozí knihovny, použijte [/Zl (vynechání názvu výchozí knihovny)](zl-omit-default-library-name.md).
 
-Ve výchozím nastavení odebere se: / NODEFAULTLIB všechny výchozí knihovny ze seznamu knihoven, které prohledává při překladu externích odkazů. Volitelný *knihovny* parametr umožňuje odebrat zadanou knihovnu nebo knihoven ze seznamu knihoven, které prohledává při překladu externích odkazů. Zadejte jednu z možností: / NODEFAULTLIB. pro každou knihovnu, kterou chcete vyloučit.
+Ve výchozím nastavení odebere se: / NODEFAULTLIB všechny výchozí knihovny ze seznamu knihoven, které prohledává při překladu externích odkazů. Volitelný *knihovny* parametr umožňuje odebrat zadanou knihovnu ze seznamu knihoven, které prohledává při překladu externích odkazů. Zadejte jednu z možností: / NODEFAULTLIB. pro každou knihovnu, kterou chcete vyloučit.
 
-Linker řeší odkazy na externí definice tak, že nejprve v knihovnách, která explicitně zadáte, pak ve výchozích knihoven zadaný pomocí možnosti /DEFAULTLIB a ve výchozích knihoven, které s názvem v souborech .obj.
+Linker řeší odkazy na externí definice tak, že nejprve v knihovnách, která explicitně zadáte, pak ve výchozích knihoven zadaným [/DEFAULTLIB:](defaultlib-specify-default-library.md) možnost, a potom ve výchozích knihoven s názvem v souboru .obj soubory.
 
-/ NODEFAULTLIB:*knihovny* přepíše [/DEFAULTLIB:](defaultlib-specify-default-library.md)*knihovny* při stejné *knihovny* název je zadán v obou.
+/ NODEFAULTLIB:*knihovny* přepíše /DEFAULTLIB:*knihovny* při stejné *knihovny* název je zadán v obou.
 
-Pokud používáte parametr/NODEFAULTLIB, například k vytvoření programu bez knihovny run-time jazyka C, budete muset použít také [/Entry](entry-entry-point-symbol.md) k určení vstupního bodu (funkce) ve svém programu. Další informace najdete v tématu [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md).
+Pokud používáte parametr/NODEFAULTLIB k vytvoření programu bez knihovny run-time jazyka C, bude pravděpodobně nutné použít také [/Entry](entry-entry-point-symbol.md) k určení funkce vstupního bodu ve svém programu. Další informace najdete v tématu [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
 1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Klikněte na tlačítko **Linkeru** složky.
+1. Vyberte **vlastnosti konfigurace** > **Linkeru** > **vstup** stránku vlastností.
 
-1. Klikněte na tlačítko **vstup**stránku vlastností.
-
-1. Vyberte **ignorovat všechny výchozí knihovny** vlastnost, nebo zadejte seznam knihoven chcete ignorovat v **ignorovat konkrétní knihovnu** vlastnost. **Příkazového řádku** stránky vlastností zobrazí změny provedené v těchto vlastností.
+1. Vyberte **ignorovat všechny výchozí knihovny** vlastnost. Nebo zadejte středníkem oddělený seznam knihoven, které chcete ignorovat v **ignorovat konkrétní výchozí knihovny** vlastnost. **Příkazového řádku** stránka vlastností zobrazuje změny provedené v těchto vlastností.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
@@ -61,5 +57,5 @@ Pokud používáte parametr/NODEFAULTLIB, například k vytvoření programu bez
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)

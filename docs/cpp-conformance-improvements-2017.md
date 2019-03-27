@@ -1,18 +1,18 @@
 ---
 title: Vylepšení shody C++
-ms.date: 10/31/2018
+ms.date: 03/26/2019
 ms.technology: cpp-language
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 855322f09c9c8f5292c6e299f946c3cec5d9949a
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: b2c014534ce24b9796510195d6ae5a922fb484d8
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809747"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508868"
 ---
-# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159update159"></a>Vylepšení shody C++ v sadě Visual Studio 2017 verze 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158), [15.9](#update_159)
+# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159improvements159"></a>Vylepšení shody C++ v sadě Visual Studio 2017 verze 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158), [15.9](#improvements_159)
 
 Podporu pro generalizovaný specifikátor constexpr a NSDMI pro agregace je kompilátor jazyka Microsoft Visual C++ teď kompletní pro funkce přidané ve 14 standardu C ++. Mějte na paměti, že v kompilátoru stále chybí několik funkcí ze standardů C++11 a C++98. Zobrazit [shoda jazyka Visual C++](visual-cpp-language-conformance.md) pro tabulku, která se zobrazuje aktuální stav kompilátoru.
 
@@ -335,6 +335,45 @@ void bar(A<0> *p)
 ### <a name="c17-constexpr-for-chartraits-partial"></a>C ++ 17 constexpr pro char_traits (částečná podpora)
 
 [P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html) změny `std::traits_type` členské funkce `length`, `compare`, a `find` aby `std::string_view` použít v konstantních výrazech. (V sadě Visual Studio 2017 verze 15.6 podporovaná Clang/LLVM jenom pro. Ve verzi 15.7 Preview 2, podpora je téměř dokončení pro ClXX stejně.)
+
+## <a name="improvements_159"></a> Vylepšení v sadě Visual Studio 2017 verze 15.9
+
+### <a name="left-to-right-evaluation-order-for-operators-----and-"></a>Pořadí vyhodnocování zleva doprava pro operátory -> *, [], >>, a <<
+
+Od verze C ++ 17, operandy operátory -> *, [], >>, a \< \< musí vyhodnocují v pořadí zleva doprava. Existují dva případy, ve kterých kompilátor nedokáže zaručit toto pořadí:
+- Pokud jeden z výrazů operand je objekt, předán podle hodnoty nebo obsahuje objekt, předán podle hodnoty, nebo
+- Při kompilaci pomocí **/CLR**, a jeden z operandů je pole objektu nebo k elementu pole.
+
+Kompilátor vydá upozornění [C4866](https://docs.microsoft.com/cpp/error-messages/compiler-warnings/c4866?view=vs-2017) při nezaručuje vyhodnocování zleva doprava. Toto upozornění je generováno pouze pokud **/std: c ++ 17** nebo vyšší není zadán, jak z těchto operátorů požadavek na pořadí zleva doprava byla zavedena v C ++ 17.
+
+Pokud chcete vyřešit toto varování, nejprve vezměte v úvahu, jestli je nezbytné, například při vyhodnocování operandů může vrátit vedlejší účinky závislé na pořadí vyhodnocení operandů zleva doprava. V mnoha případech nemá pořadí, ve kterém jsou vyhodnoceny operandy pozorovatelných vliv. Pokud musí pořadí vyhodnocování zleva doprava, zvažte, zda lze předat operandy podle odkazu const místo. Tato změna eliminuje upozornění v následujícím příkladu kódu.
+
+```cpp
+// C4866.cpp
+// compile with: /w14866 /std:c++17
+
+class HasCopyConstructor
+{
+public:
+    int x;
+
+    HasCopyConstructor(int x) : x(x) {}
+    HasCopyConstructor(const HasCopyConstructor& h) : x(h.x) { }
+};
+
+int operator>>(HasCopyConstructor a, HasCopyConstructor b) { return a.x >> b.x; }
+
+// This version of operator>> does not trigger the warning:
+// int operator>>(const HasCopyConstructor& a, const HasCopyConstructor& b) { return a.x >> b.x; }
+
+int main()
+{
+    HasCopyConstructor a{ 1 };
+    HasCopyConstructor b{ 2 };
+
+    a>>b;        // C4866 for call to operator>>
+};
+```
 
 ## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-157update157-158update158-and-159update159"></a>Opravy chyb v sadě Visual Studio verze 15.0, [15.3](#update_153), [15.5](#update_155), [15.7](#update_157), [15.8](#update_158), a [15.9](#update_159)
 

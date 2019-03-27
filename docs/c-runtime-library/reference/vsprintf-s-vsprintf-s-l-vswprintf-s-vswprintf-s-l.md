@@ -1,6 +1,6 @@
 ---
 title: vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l
-ms.date: 11/04/2016
+ms.date: 03/26/2019
 apiname:
 - _vswprintf_s_l
 - vsprintf_s
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - _vswprintf_s_l function
 ms.assetid: 60e90518-57f0-4f1b-b732-f62a69702833
-ms.openlocfilehash: 055b2279be923712528463cb23ab3fd6b52897d7
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: 469a823d0f033a2f140d78a65cb0e69a3ef16d5c
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211027"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508787"
 ---
 # <a name="vsprintfs-vsprintfsl-vswprintfs-vswprintfsl"></a>vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l
 
@@ -109,7 +109,7 @@ Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**vsprintf_s –** a **vswprintf_s –** vrátí počet napsaných znaků, nikoli včetně ukončujícího znaku null, nebo zápornou hodnotu, pokud dojde k chybě výstupu. Pokud *vyrovnávací paměti* nebo *formátu* je ukazatel s hodnotou null, pokud je počet nula nebo pokud řetězec formátu obsahuje neplatné formátovací znaky, vyvolán obslužnou rutinu neplatného parametru, jak je popsáno v [ Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a nastaví **errno** k **EINVAL**.
+**vsprintf_s –** a **vswprintf_s –** vrátí počet napsaných znaků, nikoli včetně ukončujícího znaku null, nebo zápornou hodnotu, pokud dojde k chybě výstupu. Pokud *vyrovnávací paměti* nebo *formátu* je ukazatel s hodnotou null, pokud *numberOfElements* je nula, nebo pokud řetězec formátu obsahuje neplatné formátováním znaků, obslužná rutina neplatného parametru je vyvolána, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a nastaví **errno** k **EINVAL**.
 
 Informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

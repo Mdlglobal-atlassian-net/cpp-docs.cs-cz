@@ -13,12 +13,12 @@ helpviewer_keywords:
 - FR compiler option [C++]
 - symbolic browser information
 ms.assetid: 3fd8f88b-3924-4feb-9393-287036a28896
-ms.openlocfilehash: a75a9d143012dee7946591d708921d6734b2acda
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 73642baba77a62cac531ae7b2842ec9953b338ec
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811872"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508699"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR, /Fr (Vytvořit soubor .Sbr)
 
@@ -32,6 +32,9 @@ Vytvoří soubory .sbr.
 ```
 
 ## <a name="remarks"></a>Poznámky
+
+> [!WARNING]
+> Přestože BSCMAKE je stále instalace sady Visual Studio, se už používá integrovaným vývojovým prostředím. Od verze Visual Studio 2008 je automaticky uloženy informace o procházení a symbol v soubor SDF SQL serveru ve složce řešení.
 
 Během procesu sestavení, nástroje Microsoft procházet informace souboru údržby Utility (BSCMAKE) používá k vytvoření těchto souborů. Soubor BSC, který se používá k zobrazení informací o procházení.
 
@@ -61,6 +64,6 @@ Pokud nezadáte `filename`, soubor .sbr získá stejný základní název zdrojo
 ## <a name="see-also"></a>Viz také:
 
 [Možnosti výstupního souboru (/F)](output-file-f-options.md)<br/>
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
 [Určení názvu cesty](specifying-the-pathname.md)

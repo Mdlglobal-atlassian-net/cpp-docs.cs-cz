@@ -9,14 +9,17 @@ helpviewer_keywords:
 - response files
 - command files
 ms.assetid: abdffeea-35c7-4f2d-8c17-7d0d80bac314
-ms.openlocfilehash: beb3d5696957f6b1af8168e3194e3943a1574be8
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 6a55fd616a00aeb3ade229bf7cff8220f86085b7
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820309"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508816"
 ---
 # <a name="bscmake-command-file-response-file"></a>Soubor příkazů BSCMAKE (soubor odezvy)
+
+> [!WARNING]
+> Přestože BSCMAKE je stále instalace sady Visual Studio, se už používá integrovaným vývojovým prostředím. Od verze Visual Studio 2008 je automaticky uloženy informace o procházení a symbol v soubor SDF SQL serveru ve složce řešení.
 
 Můžete zadat část nebo všechny z příkazového řádku vstup v souboru příkazů. Zadejte soubor příkazů, použijte tuto syntaxi:
 
