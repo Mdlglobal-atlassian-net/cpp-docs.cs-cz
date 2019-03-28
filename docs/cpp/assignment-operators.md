@@ -1,6 +1,6 @@
 ---
 title: Operátory přiřazení
-ms.date: 03/05/2018
+ms.date: 03/27/2019
 f1_keywords:
 - =
 - '*='
@@ -31,18 +31,18 @@ helpviewer_keywords:
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-ms.openlocfilehash: 44211e43a0449c8a50ff03cac31eeed1fcc49a28
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 758c82f02d2b113f6c750f7f0ede662c97b646b0
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328471"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565477"
 ---
 # <a name="assignment-operators"></a>Operátory přiřazení
 
 ## <a name="syntax"></a>Syntaxe
 
-*výraz* *operátor přiřazení* *výraz*
+*expression* *assignment-operator* *expression*
 
 *operátor přiřazení* : jeden z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>=&nbsp;&nbsp;&nbsp;*=&nbsp;&nbsp;&nbsp;/=&nbsp;&nbsp;&nbsp;%=&nbsp;&nbsp;&nbsp;+=&nbsp;&nbsp;&nbsp;-=&nbsp;&nbsp;&nbsp;\<\<=&nbsp;&nbsp;&nbsp;>>=&nbsp;&nbsp;&nbsp;&=&nbsp;&nbsp;&nbsp;^=&nbsp;&nbsp;&nbsp;\|=</strong>
@@ -57,7 +57,7 @@ Operátory přiřazení ukládají hodnotu v objektu určeném levým operandem.
 
 Všechny operátory přiřazení v následující tabulce, s výjimkou operátoru =, jsou operátory složeného přiřazení.
 
-### <a name="assignment-operators"></a>Operátory přiřazení
+### <a name="assignment-operators-table"></a>Tabulky operátory přiřazení
 
 |Operátor|Význam|
 |--------------|-------------|
@@ -73,7 +73,7 @@ Všechny operátory přiřazení v následující tabulce, s výjimkou operátor
 |**^=**|Získá bitový exkluzivní OR prvního a druhého operandu a uloží výsledek v objektu určeném prvním operandem.|
 |**\|=**|Získá bitový inkluzivní OR prvního a druhého operandu a uloží výsledek v objektu určeném prvním operandem.|
 
-**Klíčová slova operátorů**
+### <a name="operator-keywords"></a>Klíčová slova operátorů
 
 Tři operátory složeného přiřazení mají textové ekvivalenty. Možnosti jsou následující:
 
@@ -180,7 +180,7 @@ mít jednu z následujících funkcí:
 
 ## <a name="compound-assignment"></a>Složené přiřazení
 
-Operátory složeného přiřazení, uvedené v tabulce v [operátory přiřazení](#assignment-operators), jsou uvedeny ve tvaru *e1* *op*= *e2*, kde *e1* je upravitelná l hodnota není **const** typ a *e2* je jedním z následujících akcí:
+Operátory složeného přiřazení, je znázorněno [tabulky operátorů přiřazení](#assignment-operators-table), jsou uvedeny ve tvaru *e1* *op*= *e2*, kde *e1* je upravitelná l hodnota není **const** typ a *e2* je jedním z následujících akcí:
 
 - Aritmetický typ
 

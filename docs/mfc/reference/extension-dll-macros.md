@@ -1,15 +1,15 @@
 ---
 title: Makra a funkce pro správu knihoven DLL
-ms.date: 04/03/2017
+ms.date: 03/27/2019
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 863350067c39fbc9cdb3d9d3a6c4448348d977de
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: b27f8763b60dc7ce3ee074cad1365e7e1de3a7e6
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328763"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565422"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>Makra a funkce pro správu knihoven DLL
 
@@ -20,10 +20,10 @@ ms.locfileid: "58328763"
 |[AfxOleInitModule](#afxoleinitmodule)|Poskytuje podporu technologie OLE z běžné knihovny MFC DLL staticky propojené do MFC.|
 |[AfxNetInitModule](#afxnetinitmodule)|Poskytuje podporu soketů knihovny MFC z běžné knihovny MFC DLL staticky propojené do MFC.|
 |[AfxGetAmbientActCtx](#afxgetambientactctx)|Získá aktuální stav příznaku-module stavu.|
-|[AfxGetStaticModuleState](#afxgetstaticmodulestate)|Nastaví stav modulu před inicializací a/nebo po vyčištění obnovit předchozí stav modulu.|
+|[AfxGetStaticModuleState](#afxgetstaticmodulestate)|Nastaví stav modulu před inicializací a/nebo obnovit předchozí stav modulu po vyčištění.|
 |[AfxInitExtensionModule](#afxinitextensionmodule)|Inicializuje knihovnu DLL.|
 |[AfxSetAmbientActCtx](#afxsetambientactctx)|nastavte příznak stavu na modul, který má vliv na chování WinSxS knihovny MFC.|
-|[AfxTermExtensionModule](#afxtermextensionmodule)|Umožňuje MFC vyčištění MFC – rozšiřující knihovny DLL při každém odpojení procesu z knihovny DLL.|
+|[AfxTermExtensionModule](#afxtermextensionmodule)|Umožňuje vyčistit MFC – rozšiřující knihovny DLL při každém odpojení procesu z knihovny DLL MFC.|
 
 ## <a name="afx_ext_class"></a>  AFX_EXT_CLASS
 
@@ -79,7 +79,7 @@ To Zamění aktuální stav modulu se stavem vrácená [afxgetstaticmodulestate 
 Další informace o stavy modulů a knihovna MFC naleznete v části "Správa the stav dat modulů knihovny MFC" v [vytváření nových dokumentů, Windows a zobrazení](../creating-new-documents-windows-and-views.md) a [technická Poznámka: 58](../tn058-mfc-module-state-implementation.md).
 
 > [!NOTE]
->  Knihovna MFC vytvoří aktivační kontext pro sestavení, používá [afxwininit –](#afxwininit) k vytvoření kontextu a `AFX_MANAGE_STATE` aktivovat a deaktivovat. Všimněte si také, že `AFX_MANAGE_STATE` je povolený pro statické knihovny MFC, knihovny DLL MFC, aby bylo možné povolit MFC kód pro spuštění ve správné aktivační kontext zvolila DLL uživatele. Další informace najdete v tématu [podpora kontextů aktivace ve stavu modulu MFC](../support-for-activation-contexts-in-the-mfc-module-state.md).
+>  Knihovna MFC vytvoří aktivační kontext pro sestavení, používá [afxwininit –](application-information-and-management.md#afxwininit) k vytvoření kontextu a `AFX_MANAGE_STATE` aktivovat a deaktivovat. Všimněte si také, že `AFX_MANAGE_STATE` je povolený pro statické knihovny MFC, knihovny DLL MFC, aby bylo možné povolit MFC kód pro spuštění ve správné aktivační kontext zvolila DLL uživatele. Další informace najdete v tématu [podpora kontextů aktivace ve stavu modulu MFC](../support-for-activation-contexts-in-the-mfc-module-state.md).
 
 ### <a name="requirements"></a>Požadavky
 
@@ -151,7 +151,7 @@ Kontext modulu je určen z manifestu, obvykle vložený do prostředků modulu.
 
 ## <a name="afxgetstaticmodulestate"></a> AfxGetStaticModuleState
 
-Voláním této funkce nastavit stav modulu před inicializací a/nebo po vyčištění obnovit předchozí stav modulu.
+Voláním této funkce pro nastavení modulu stavu před inicializací a/nebo obnovit předchozí stav modulu po vyčištění.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -181,7 +181,7 @@ Další informace o stavy modulů a knihovna MFC naleznete v části "Správa th
 
 **Záhlaví:** afxstat_.h
 
-## <a name="afxinitextensionmodule"></a> AfxInitExtensionModule
+## <a name="afxinitextensionmodule"></a>AfxInitExtensionModule
 
 Volejte tuto funkce ve rozšiřující knihovny DLL MFC na `DllMain` inicializace knihovny DLL.
 
@@ -228,7 +228,7 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 `AfxInitExtensionModule` Vytvoří kopii HMODULE knihovny DLL a zachytává knihovnu DLL modulu runtime – třídy (`CRuntimeClass` struktury) i jeho objekty pro vytváření objektů (`COleObjectFactory` objektů) pro použití novější při `CDynLinkLibrary` je vytvořen objekt.
 MFC – rozšiřující knihovny DLL je potřeba udělat dvě věci v jejich `DllMain` funkce:
 
-- Volání [AfxInitExtensionModule](#_mfc_afxinitextensionmodule) a ověřte návratovou hodnotu.
+- Volání [AfxInitExtensionModule](#afxinitextensionmodule) a ověřte návratovou hodnotu.
 
 - Vytvoření `CDynLinkLibrary` objektu, pokud se Export knihovny DLL [CRuntimeClass – struktura](cruntimeclass-structure.md) objekty nebo má svůj vlastní vlastní prostředky.
 
@@ -289,7 +289,7 @@ void AFXAPI AfxTermExtensionModule(  AFX_EXTENSION_MODULE& state,  BOOL bAll  = 
 Odkaz na [AFX_EXTENSION_MODULE](afx-extension-module-structure.md) struktura, která obsahuje informace o stavu modulu MFC DLL rozšíření.
 
 *Koule*<br/>
-Pokud TRUE, vyčistit všechny moduly knihoven DLL rozšíření MFC. Jinak, čištění aktuální modul knihovny DLL.
+Při hodnotě TRUE se vyčistěte všechny moduly knihoven DLL rozšíření MFC. V opačném případě odstraňte aktuální modul knihovny DLL.
 
 ### <a name="remarks"></a>Poznámky
 

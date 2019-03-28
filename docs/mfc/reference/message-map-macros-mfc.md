@@ -1,6 +1,6 @@
 ---
 title: Makra map zpráv (MFC)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - AFXWIN/DECLARE_MESSAGE_MAP
 - AFXWIN/BEGIN_MESSAGE_MAP
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 09c023f6dcbf1fd33a0caac17af75f449d80c509
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: b1cc721ed994ae1c6704011199ac635ee462ded8
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850269"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565532"
 ---
 # <a name="message-map-macros-mfc"></a>Makra map zpráv (MFC)
 
@@ -45,7 +45,7 @@ Pro podporu mapy zpráv, knihovna MFC poskytuje následující makra:
 |-|-|
 |[DECLARE_MESSAGE_MAP](#declare_message_map)|Deklaruje, že mapy zpráv se použije ve třídě pro mapování zpráv na funkce (musí se použít v deklaraci třídy).|
 |[BEGIN_MESSAGE_MAP](#begin_message_map)|Začíná definici mapy zpráv (musí být použitý v implementaci třídy).|
-|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_interface_map)|Začíná definici mapy zpráv na typ třídy obsahující jednu šablonu argumentu. |
+|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_message_map)|Začíná definici mapy zpráv na typ třídy obsahující jednu šablonu argumentu. |
 |[END_MESSAGE_MAP](#end_message_map)|Ukončí definici mapy zpráv (musí být použitý v implementaci třídy).|
 
 ### <a name="message-mapping-macros"></a>Makra mapování zpráv
@@ -67,7 +67,7 @@ Pro podporu mapy zpráv, knihovna MFC poskytuje následující makra:
 |||
 |-|-|
 |[ON_COMMAND_RANGE](#on_command_range)|Určuje funkci, která bude zpracovávat rozsah ID příkazů zadaný v prvních dvou parametrů do makra.|
-|[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|Určuje, které obslužná rutina aktualizace bude zpracovávat rozsah ID příkazů zadaný v prvních dvou pa] rametry do makra.|
+|[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|Určuje, které obslužná rutina aktualizace bude zpracovávat rozsah ID příkazů zadaný v prvních dvou parametrů do makra.|
 |[ON_CONTROL_RANGE](#on_control_range)|Určuje funkci, která bude zpracovávat upozornění z rozsahu ID zadané v druhý a třetí parametry makro ovládacích prvků. První parametr je zpráva oznámení ovládacího prvku, jako je například BN_CLICKED.|
 
 Další informace o mapy zpráv, map zpráv deklarace a rozhraničení makra a makra mapování zpráv, najdete v části [mapy zpráv](../../mfc/reference/message-maps-mfc.md) a [zpracování zpráv a mapování témata](../../mfc/message-handling-and-mapping.md). Další informace o oblasti map zpráv najdete v tématu [obslužné rutiny pro oblasti Map zpráv](../../mfc/handlers-for-message-map-ranges.md).
@@ -108,7 +108,7 @@ END_MESSAGE_MAP()
 
 **Záhlaví:** afxwin.h
 
-##  <a name="begin_template_message_map"></a>BEGIN_TEMPLATE_MESSAGE_MAP
+## <a name="begintemplatemessagemap"></a>BEGIN_TEMPLATE_MESSAGE_MAP
 
 Začíná definici mapy zpráv na typ třídy obsahující jednu šablonu argumentu.
 
@@ -199,12 +199,12 @@ Toto makro mapuje zprávou příkazu na členskou funkci.
 ### <a name="syntax"></a>Syntaxe
 
 ```
-ON_COMMAND( id, memberFxn )
+ON_COMMAND( commandId, memberFxn )
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*id*<br/>
+*commandId*<br/>
 ID příkazu.
 
 *memberFxn*<br/>
@@ -216,7 +216,7 @@ Označuje funkci, která zpracuje příkaz zprávu od objektu uživatelského ro
 
 Wm_command – Windows zprávu se zadaným ID přijetí příkazu cílový objekt ON_COMMAND bude volat členské funkce `memberFxn` ke zpracování zprávy.
 
-ON_COMMAND používejte k mapování jediným příkazem na členskou funkci. Použití [ON_COMMAND_RANGE](#on_command_range) mapovat celou řadu ID příkazů na jednu členskou funkci. Pouze jedna položka mapování zpráv může odpovídat id daného příkazu. Příkaz tedy nelze mapovat na více než jednu obslužnou rutinu. Další informace a příklady najdete v tématu [zpracování zpráv a mapování témata](../../mfc/message-handling-and-mapping.md).
+ON_COMMAND používejte k mapování jediným příkazem na členskou funkci. Použití [ON_COMMAND_RANGE](#on_command_range) mapovat celou řadu ID příkazů na jednu členskou funkci. Pouze jedna položka mapování zpráv může odpovídat ID daného příkazu. Příkaz tedy nelze mapovat na více než jednu obslužnou rutinu. Další informace a příklady najdete v tématu [zpracování zpráv a mapování témata](../../mfc/message-handling-and-mapping.md).
 
 ### <a name="example"></a>Příklad
 
@@ -237,12 +237,12 @@ Rozšířené obslužná rutina příkazu členskou funkci.
 ### <a name="syntax"></a>Syntaxe
 
 ```
-ON_COMMAND_EX(id, memberFxn);
+ON_COMMAND_EX(commandId, memberFxn);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*id*<br/>
+*commandId*<br/>
 ID příkazu.
 
 *memberFxn*<br/>
@@ -265,7 +265,7 @@ Určuje funkci, která bude zpracovávat zprávu oznámení na vlastní ovládac
 ### <a name="syntax"></a>Syntaxe
 
 ```
-ON_CONTROL( wNotifyCode, id, memberFxn )
+ON_CONTROL( wNotifyCode, commandId, memberFxn )
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -273,7 +273,7 @@ ON_CONTROL( wNotifyCode, id, memberFxn )
 *wNotifyCode*<br/>
 Kód upozornění ovládacího prvku.
 
-*id*<br/>
+*commandId*<br/>
 ID příkazu.
 
 *memberFxn*<br/>
@@ -356,7 +356,7 @@ Směrovat příkazy přes rozhraní příkazového řádku odeslání `IOleComma
 ### <a name="syntax"></a>Syntaxe
 
 ```
-ON_OLECMD( pguid, olecmdid, id )
+ON_OLECMD( pguid, olecmdid, commandId )
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -367,7 +367,7 @@ Identifikátor příkazu skupiny, ke kterému patří tento příkaz. Použijte 
 *olecmdid*<br/>
 Identifikátor příkazu OLE.
 
-*id*<br/>
+*commandId*<br/>
 ID nabídky, ID nástrojů, tlačítko ID nebo jiné ID prostředku nebo objekt příkazu.
 
 ### <a name="remarks"></a>Poznámky
@@ -575,12 +575,12 @@ Toto makro označuje funkci, která bude zpracovávat zprávou příkazu aktuali
 ### <a name="syntax"></a>Syntaxe
 
 ```
-ON_UPDATE_COMMAND_UI( id, memberFxn )
+ON_UPDATE_COMMAND_UI( messageId, memberFxn )
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*id*<br/>
+*ID zprávy*<br/>
 ID zprávy.
 
 *memberFxn*<br/>

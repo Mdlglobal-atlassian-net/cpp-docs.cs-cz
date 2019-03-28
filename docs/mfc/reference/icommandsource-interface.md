@@ -1,6 +1,6 @@
 ---
 title: Icommandsource – rozhraní
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ICommandSource
 - AFXWINFORMS/ICommandSource
@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandSource interface [MFC]
 ms.assetid: a4b1f698-c09f-4ba8-9b13-0e74a0a4967e
-ms.openlocfilehash: 21c4f4544a6ccf2342580bc5859739fc1f50d0c2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: eed7abbbb40c532ad596f683b6ed2c98a0cadf9b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296017"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565607"
 ---
 # <a name="icommandsource-interface"></a>Icommandsource – rozhraní
 
@@ -179,7 +179,7 @@ ID příkazu.
 
 Tato metoda odstraní obslužná rutina příkazu namapované na cmdID ze zdrojového objektu příkazu.
 
-## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler
+## <a name="removecommandrangehandler"></a> ICommandSource::RemoveCommandRangeHandler
 
 Odebere skupinu obslužné rutiny příkazů ze zdrojového objektu příkazu.
 ```
@@ -196,7 +196,7 @@ Počáteční index rozsahu ID příkazu.
 Poslední index rozsahu ID příkazu.
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda odstraní skupinu z namapované na zadaný příkaz ID cmdIDMin a cmdIDMax, ze zdrojového objektu příkazu obslužné rutiny zpráv.
+Tato metoda odstraní skupinu z namapované na ID příkazů určené cmdIDMin a cmdIDMax ze zdrojového objektu příkazu obslužné rutiny zpráv.
 
 ## <a name="removecommandrangeuihandler"></a> ICommandSource::RemoveCommandRangeUIHandler
 
@@ -215,7 +215,7 @@ Počáteční index rozsahu ID příkazu.
 Poslední index rozsahu ID příkazu.
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda odstraní skupinu uživatelské rozhraní příkaz obslužné rutiny zpráv, mapovat na ID zadaný příkaz cmdIDMin a cmdIDMax, ze zdrojového objektu příkazu.
+Tato metoda odstraní skupinu uživatelské rozhraní příkaz obslužné rutiny zpráv, mapovat na ID příkazů určené cmdIDMin a cmdIDMax ze zdrojového objektu příkazu.
 
 ## <a name="removecommanduihandler"></a> ICommandSource::RemoveCommandUIHandler
 

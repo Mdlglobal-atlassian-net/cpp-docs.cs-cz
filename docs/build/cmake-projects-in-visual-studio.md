@@ -1,15 +1,15 @@
 ---
 title: Projekty CMake v sadě Visual Studio
-ms.date: 03/05/2019
+ms.date: 03/27/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 84511c0712fffcacc1f90d4bde808620e0a0ab0f
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 479179d94a0534f5f0c790fea18e281053b686e2
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356138"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565292"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Projekty CMake v sadě Visual Studio
 
@@ -58,7 +58,7 @@ Pokud potřebujete předat argumenty do spustitelného souboru chvíli ladění,
 
 ## <a name="import-an-existing-cache"></a>Importovat stávající mezipaměti
 
-Při importu stávajícího souboru CMakeCache.txt sady Visual Studio automaticky vybere vlastní proměnné a vytvoří předem naplněných [ **CMakeSettings.json** ](#cmake_settings) na jejich základě souboru. Původní mezipaměti není žádným způsobem upravit a je stále možné z příkazového řádku nebo pomocí libovolné nástrojů nebo integrovaného vývojového prostředí byla použita k jeho vygenerování. Nové **CMakeSettings.json** soubor umístěn společně s projektu kořenový soubor CMakeLists.txt. Visual Studio vygeneruje nové mezipaměti na základě souboru nastavení. Můžete přepsat generování automatických mezipaměti v **nástroje | Možnosti | CMake | Obecné** dialogového okna.
+Při importu stávajícího souboru CMakeCache.txt sady Visual Studio automaticky vybere vlastní proměnné a vytvoří předem naplněných **CMakeSettings.json** na jejich základě souboru. Původní mezipaměti není žádným způsobem upravit a je stále možné z příkazového řádku nebo pomocí libovolné nástrojů nebo integrovaného vývojového prostředí byla použita k jeho vygenerování. Nové **CMakeSettings.json** soubor umístěn společně s projektu kořenový soubor CMakeLists.txt. Visual Studio vygeneruje nové mezipaměti na základě souboru nastavení. Můžete přepsat generování automatických mezipaměti v **nástroje | Možnosti | CMake | Obecné** dialogového okna.
 
 Ne vše, co v mezipaměti je importován.  Vlastnosti, jako je generátor kódu a umístění kompilátory jsou nahrazeny výchozích hodnot, které se ví, že dobře fungují s integrovaného vývojového prostředí.
 
@@ -132,7 +132,7 @@ Abyste omezili sestavení a ladění relace dílčích projektů v pracovním pr
 
 Pokud potřebujete další informace o stavu mezipaměti CMake k diagnostice problému, otevřete **CMake** hlavní nabídky nebo **CMakeLists.txt** kontextové nabídky **Průzkumníka řešení**na některou z těchto příkazů:
 
-- **Zobrazení mezipaměti** otevře soubor CMakeCache.txt z kořenové složky sestavení v editoru. (Veškeré úpravy provedené tady CMakeCache.txt jsou dojde k vymazání Pokud vyčištění mezipaměti. Pokud chcete provést změny, které se zachovávají po vyčištění mezipaměti, naleznete v tématu [CMake nastavení a vlastní konfigurace](#cmake_settings) dříve v tomto článku.)
+- **Zobrazení mezipaměti** otevře soubor CMakeCache.txt z kořenové složky sestavení v editoru. (Veškeré úpravy provedené tady CMakeCache.txt jsou dojde k vymazání Pokud vyčištění mezipaměti. Pokud chcete provést změny, které se zachovávají po vyčištění mezipaměti, naleznete v tématu [nastavení přizpůsobení CMake](customize-cmake-settings.md).)
 
 - **Otevřít složku mezipaměti** se otevře okno Průzkumníka ke kořenové složce sestavení.
 

@@ -1,6 +1,6 @@
 ---
 title: CStringT Class
-ms.date: 10/18/2018
+ms.date: 03/27/2019
 f1_keywords:
 - CStringT
 - ATLSTR/ATL::CStringT
@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 9566830de4d3af8f34e8efa5e5ef468acae1fba5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 327ffc40a9b7e41004bc5aac7ecc320076de537f
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750868"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565815"
 ---
 # <a name="cstringt-class"></a>CStringT Class
 
@@ -134,7 +134,7 @@ Určuje, zda třída string, potřebuje podpora knihovny Run-Time C (CRT) a kde 
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CStringT::CStringT](#cstringt)|Vytvoří `CStringT` objekt různými způsoby.|
 |[CStringT::~CStringT](#_dtorcstringt)|Odstraní `CStringT` objektu.|
@@ -182,7 +182,7 @@ Určuje, zda třída string, potřebuje podpora knihovny Run-Time C (CRT) a kde 
 
 |||
 |-|-|
-|[operátor =](#operator_eq)|Přiřadí novou hodnotu `CStringT` objektu.|
+|[CStringT::operator =](#operator_eq)|Přiřadí novou hodnotu `CStringT` objektu.|
 |[CStringT::operator +](#operator_add)|Spojuje dva řetězce nebo řetězce a znak.|
 |[CStringT::operator +=](#operator_add_eq)|Zřetězí nový řetězec na konci existujícího řetězce.|
 |[CStringT::operator ==](#operator_eq_eq)|Určuje, jestli jsou dva řetězce logicky stejné.|
@@ -251,7 +251,7 @@ Následující typy řetězců jsou k dispozici v projektech, kde není definov�
 
 Protože `CStringT` používá argument šablony pro definování tyto typy znaků (buď [wchar_t](../../c-runtime-library/standard-types.md) nebo [char](../../c-runtime-library/standard-types.md)) podporovány typy parametrů metody mohou být složité čas od času. Pro zjednodušení tento problém, sada předdefinovaných typů definovaná a použitá v průběhu `CStringT` třídy. V následující tabulce jsou uvedeny různé typy:
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |`XCHAR`|Jeden znak (buď **wchar_t** nebo **char**) se stejným typem znak jako `CStringT` objektu.|
 |`YCHAR`|Jeden znak (buď **wchar_t** nebo **char**) s opačný typ znaku, jako `CStringT` objektu.|
@@ -1023,6 +1023,56 @@ Tato funkce není k dispozici, pokud je _UNICODE definováno.
 ### <a name="example"></a>Příklad
 
 Podívejte se na příklad pro [CStringT::AnsiToOem](#ansitooem).
+
+##  <a name="operator_eq"></a>  CStringT::operator =
+
+Přiřadí novou hodnotu na řetězec.
+
+```
+CStringT& operator=(const CStringT& strSrc);
+
+template<bool bMFCDLL>
+CStringT& operator=(const CSimpleStringT<BaseType, bMFCDLL>& str);
+
+CStringT& operator=(PCXSTR pszSrc);
+CStringT& operator=(PCYSTR pszSrc);
+CStringT& operator=(const unsigned char* pszSrc);
+CStringT& operator=(XCHAR ch);
+CStringT& operator=(YCHAR ch);
+CStringT& operator=(const VARIANT& var);
+```
+
+### <a name="parameters"></a>Parametry
+
+*strSrc*<br/>
+A `CStringT` přiřadit tento řetězec.
+
+*str*<br/>
+Odkaz na `CThisSimpleString` objektu.
+
+*bMFCDLL*<br/>
+Logická hodnota určující, zda je projekt knihovny MFC DLL, nebo ne.
+
+*BaseType*<br/>
+Základní typ řetězec.
+
+*var*<br/>
+Varianty objekt přiřadit tento řetězec.
+
+*ch*<br/>
+ANSI nebo Unicode znak přiřadit na řetězec.
+
+*pszSrc*<br/>
+Ukazatel na původní řetězec přiřazením.
+
+### <a name="remarks"></a>Poznámky
+
+Operátor přiřazení přijímá Další `CStringT` objekt, ukazatel znaku nebo jeden znak. Je třeba si uvědomit, tato paměť při každém použití tohoto operátoru, protože může být přiděleno nové úložiště, může dojít k výjimkám.
+
+Informace o `CThisSimpleString`, najdete v části poznámky [CStringT::CStringT](#cstringt).
+
+> [!NOTE]
+> I když je možné vytvořit `CStringT` instancí, které obsahují vložené znaky null, doporučujeme před ním. Při volání metody a operátory na `CStringT` objektů, které obsahují vložené znaky null může způsobit nežádoucí výsledky.
 
 ##  <a name="operator_add"></a>  CStringT::operator +
 

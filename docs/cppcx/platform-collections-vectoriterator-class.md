@@ -1,18 +1,18 @@
 ---
 title: 'Platform::Collections:: vectoriterator – třída'
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorIterator::VectorIterator
 helpviewer_keywords:
 - VectorIterator Class
 ms.assetid: d531cb42-27e0-48a6-bf5e-c265891a18ff
-ms.openlocfilehash: 448ce9e9c6c937d5f95640dca8fa2d2ed20bb4b8
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 55f4e7f1d9367779d131796fdf29e6098eb6aa0f
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743219"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565768"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections:: vectoriterator – třída
 
@@ -36,7 +36,7 @@ Vlastnost typename třídy VectorIterator šablony.
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |`difference_type`|Rozdíl ukazatelů (ptrdiff_t).|
 |`iterator_category`|Kategorie iterátor náhodného přístupu (:: std::random_access_iterator_tag).|
@@ -46,13 +46,13 @@ Vlastnost typename třídy VectorIterator šablony.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[VectorIterator::VectorIterator](#ctor)|Inicializuje novou instanci třídy VectorIterator.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[VectorIterator::operator-– operátor](#operator-minus)|Odečte buď zadaný počet prvků z aktuální iterace, což má za následek nové iterátor nebo iterátor zadané z aktuální iterace, což má za následek počet prvků mezi iterátory.|
 |[VectorIterator::operator-- Operator](#operator-decrement)|Sníží aktuální VectorIterator.|
@@ -64,11 +64,11 @@ Vlastnost typename třídy VectorIterator šablony.
 |[VectorIterator::operator+= Operator](#operator-plus-assign)|Zvětší aktuální VectorIterator podle zadaného posunu.|
 |[VectorIterator::operator < – operátor](#operator-less-than)|Označuje, zda aktuální VectorIterator je nižší než zadané VectorIterator.|
 |[VectorIterator::operator\<= Operator](#operator-less-than-or-equals)|Označuje, zda aktuální VectorIterator je menší než nebo rovna hodnotě zadané VectorIterator.|
-|[VectorIterator::operator-= Operator](#operator-subtract-assign)|Sníží aktuální VectorIterator podle zadaného posunu.|
+|[VectorIterator::operator-= Operator](#operator-minus-equals)|Sníží aktuální VectorIterator podle zadaného posunu.|
 |[VectorIterator::operator== Operator](#operator-equality)|Určuje, zda aktuální VectorIterator rovná zadané VectorIterator.|
 |[VectorIterator::operator > – operátor](#operator-greater-than)|Označuje, zda je aktuální VectorIterator větší než zadaný VectorIterator.|
 |[VectorIterator::operator-> Operator](#operator-arrow)|Načte adresu elementu, který odkazuje aktuální VectorIterator.|
-|[VectorIterator::operator>= Operator](#operator-greater-than-or-equal)|Určuje, zda aktuální VectorIterator je větší než nebo rovna hodnotě zadané VectorIterator.|
+|[VectorIterator::operator>= Operator](#operator-greater-than-or-equals)|Určuje, zda aktuální VectorIterator je větší než nebo rovna hodnotě zadané VectorIterator.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 

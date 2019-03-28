@@ -1,32 +1,32 @@
 ---
 title: accelerator_view – třída
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - accelerator_view
 - AMPRT/accelerator_view
-- AMPRT/Concurrency::accelerator_view:accelerator_view
-- AMPRT/Concurrency::accelerator_view:create_marker
-- AMPRT/Concurrency::accelerator_view:flush
-- AMPRT/Concurrency::accelerator_view:get_accelerator
-- AMPRT/Concurrency::accelerator_view:get_is_auto_selection
-- AMPRT/Concurrency::accelerator_view:get_is_debug
-- AMPRT/Concurrency::accelerator_view:get_queuing_mode
-- AMPRT/Concurrency::accelerator_view:get_version
-- AMPRT/Concurrency::accelerator_view:wait
-- AMPRT/Concurrency::accelerator_view:accelerator
-- AMPRT/Concurrency::accelerator_view:is_auto_selection
-- AMPRT/Concurrency::accelerator_view:is_debug
-- AMPRT/Concurrency::accelerator_view:queuing_mode
-- AMPRT/Concurrency::accelerator_view:version
+- AMPRT/Concurrency::accelerator_view::accelerator_view
+- AMPRT/Concurrency::accelerator_view::create_marker
+- AMPRT/Concurrency::accelerator_view::flush
+- AMPRT/Concurrency::accelerator_view::get_accelerator
+- AMPRT/Concurrency::accelerator_view::get_is_auto_selection
+- AMPRT/Concurrency::accelerator_view::get_is_debug
+- AMPRT/Concurrency::accelerator_view::get_queuing_mode
+- AMPRT/Concurrency::accelerator_view::get_version
+- AMPRT/Concurrency::accelerator_view::wait
+- AMPRT/Concurrency::accelerator_view::accelerator
+- AMPRT/Concurrency::accelerator_view::is_auto_selection
+- AMPRT/Concurrency::accelerator_view::is_debug
+- AMPRT/Concurrency::accelerator_view::queuing_mode
+- AMPRT/Concurrency::accelerator_view::version
 helpviewer_keywords:
 - accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-ms.openlocfilehash: 6f95efb17b95dc55cb6f6977439760fa7ea1afe9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4075051ec07fc1331d815534a715c0411160fe14
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264844"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566023"
 ---
 # <a name="acceleratorview-class"></a>accelerator_view – třída
 
@@ -42,14 +42,14 @@ class accelerator_view;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[accelerator_view Constructor](#ctor)|Inicializuje novou instanci třídy `accelerator_view` třídy.|
 |[~ accelerator_view – destruktor](#dtor)|Odstraní `accelerator_view` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[create_marker](#create_marker)|Vrátí objekt future ke sledování dokončení všech příkazů dosud zaslaných tomuto `accelerator_view` objektu.|
 |[Vyprázdnění](#flush)|Odešle všechny příkazy čekající ve frontě `accelerator_view` objekt akcelerátoru ke spuštění.|
@@ -62,7 +62,7 @@ class accelerator_view;
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[operator!=](#operator_neq)|Porovná tento `accelerator_view` objekt s jiným a vrátí **false** případě, že jsou totožné; v opačném případě vrátí **true**.|
 |[operátor =](#operator_eq)|Zkopíruje obsah zadaného `accelerator_view` do tohoto objektu.|
@@ -113,15 +113,15 @@ Inicializuje novou instanci třídy accelerator_view zkopírováním existujíc�
 ### <a name="syntax"></a>Syntaxe
 
 ```
-accelerator_view( const accelerator_view & _Other );
+accelerator_view( const accelerator_view & other );
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Ji_né*<br/>
+*Ostatní*<br/>
 `accelerator_view` Objektu, který chcete zkopírovat.
 
-## <a name="accelerator_view__create_marker"></a> create_marker
+## <a name="createmarker"></a>create_marker
 
 Vrátí objekt future ke sledování dokončení všech příkazů dosud zaslaných tomuto `accelerator_view` objektu.
 
@@ -135,7 +135,7 @@ concurrency::completion_future create_marker();
 
 Objekt future ke sledování dokončení všech příkazů dosud zaslaných tomuto `accelerator_view` objektu.
 
-## <a name="flush"></a> Vyprázdnění
+## <a name="flush"></a>flush
 
 Odesílá se, že všechny příkazy čekající ve frontě objektu accelerator_view akcelerátoru ke spuštění.
 
@@ -149,7 +149,7 @@ void flush();
 
 Vrátí `void`.
 
-## <a name="accelerator_view__get_accelerator"></a> get_accelerator –
+## <a name="getaccelerator"></a>get_accelerator
 
 Vrátí objekt akcelerátoru pro objekt accelerator_view.
 ### <a name="syntax"></a>Syntaxe
@@ -162,7 +162,7 @@ accelerator get_accelerator() const;
 
 Objekt akcelerátoru pro objekt accelerator_view.
 
-## <a name="accelerator_view__get_is_auto_selection"></a> get_is_auto_selection
+## <a name="getisautoselection"></a>get_is_auto_selection
 
 Vrátí logickou hodnotu, která určuje, zda modul runtime automaticky vybere odpovídající akcelerátor Pokud je předán accelerator_view [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).
 
@@ -176,7 +176,7 @@ bool get_is_auto_selection() const;
 
 **Hodnota TRUE** Pokud modul runtime automaticky vybere odpovídající akcelerátor; v opačném případě **false**.
 
-## <a name="accelerator_view__get_is_debug"></a> get_is_debug
+## <a name="getisdebug"></a>get_is_debug
 
 Vrátí logickou hodnotu, která určuje, zda má objekt accelerator_view povolenu vrstvu DEBUG pro rozsáhlé hlášení chyb.
 
@@ -190,7 +190,7 @@ bool get_is_debug() const;
 
 Logická hodnota, která určuje, zda `accelerator_view` objekt má povolenu vrstvu DEBUG pro rozsáhlé hlášení chyb.
 
-## <a name="accelerator_view__get_queuing_mode"></a> get_queuing_mode –
+## <a name="getqueuingmode"></a>get_queuing_mode
 
 Vrátí režim zařazování do fronty pro daný objekt accelerator_view.
 
@@ -204,7 +204,7 @@ queuing_mode get_queuing_mode() const;
 
 Režim zařazování do fronty pro `accelerator_view` objektu.
 
-## <a name="accelerator_view__get_version"></a> get_version –
+## <a name="getversion"></a>get_version
 
 Vrátí verzi objektu accelerator_view.
 
@@ -218,7 +218,7 @@ unsigned int get_version() const;
 
 Verze `accelerator_view`.
 
-## <a name="accelerator_view__is_auto_selection"></a> is_auto_selection
+## <a name="isautoselection"></a>is_auto_selection
 
 Získá logickou hodnotu, která určuje, zda modul runtime automaticky vybere odpovídající akcelerátor Pokud je předán accelerator_view [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).
 
@@ -228,7 +228,7 @@ Získá logickou hodnotu, která určuje, zda modul runtime automaticky vybere o
 __declspec(property(get= get_is_auto_selection)) bool is_auto_selection;
 ```
 
-## <a name="accelerator_view__is_debug"></a> is_debug –
+## <a name="isdebug"></a>is_debug
 
 Získá logickou hodnotu, která určuje, zda má objekt accelerator_view povolenu vrstvu DEBUG pro rozsáhlé hlášení chyb.
 
@@ -238,64 +238,64 @@ Získá logickou hodnotu, která určuje, zda má objekt accelerator_view povole
 __declspec(property(get= get_is_debug)) bool is_debug;
 ```
 
-## <a name="accelerator_view__operator_neq"></a> Operator! =
+## <a name="operator_neq"></a> Operator! =
 
 Porovná tento objekt accelerator_view s jiným a vrátí **false** případě, že jsou totožné; v opačném případě vrátí **true**.
 
 ### <a name="syntax"></a>Syntaxe
 
 ```
-bool operator!= (    const accelerator_view & _Other ) const;
+bool operator!= ( const accelerator_view & other ) const;
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Ji_né*<br/>
+*Ostatní*<br/>
 `accelerator_view` Objekt k porovnání s touto položkou.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 **false** Pokud jsou oba objekty stejné; jinak **true**.
 
-## <a name="accelerator_view__operator_eq"></a> operátor =
+## <a name="operator_eq"></a> operátor =
 
 Zkopíruje obsah objektu pro zadaný accelerator_view do tohoto objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
 ```
-accelerator_view & operator= (    const accelerator_view & _Other );
+accelerator_view & operator= ( const accelerator_view & other );
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Ji_né*<br/>
+*Ostatní*<br/>
 `accelerator_view` Objektu, který chcete kopírovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Odkaz na upravené `accelerator_view` objektu.
 
-## <a name="accelerator_view__operator_eq_eq"></a> Operator ==
+## <a name="operator_eq_eq"></a> Operator ==
 
 Porovná tento objekt accelerator_view s jiným a vrátí **true** případě, že jsou totožné; v opačném případě vrátí **false**.
 
 ### <a name="syntax"></a>Syntaxe
 
 ```
-bool operator= = (    const accelerator_view & _Other ) const;
+bool operator== ( const accelerator_view & other ) const;
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Ji_né*<br/>
+*Ostatní*<br/>
 `accelerator_view` Objekt k porovnání s touto položkou.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 **Hodnota TRUE** Pokud jsou oba objekty stejné; jinak **false**.
 
-## <a name="accelerator_view__queuing_mode"></a> queuing_mode –
+## <a name="queuingmode"></a>queuing_mode
 
 Načte režim zařazování do fronty pro objekt accelerator_view.
 
@@ -305,7 +305,7 @@ Načte režim zařazování do fronty pro objekt accelerator_view.
 __declspec(property(get= get_queuing_mode)) Concurrency::queuing_mode queuing_mode;
 ```
 
-## <a name="accelerator_view__version"></a> Verze
+## <a name="version"></a>verze
 
 Získá verzi accelerator_view.
 
@@ -315,7 +315,7 @@ Získá verzi accelerator_view.
 __declspec(property(get= get_version)) unsigned int version;
 ```
 
-## <a name="accelerator_view__wait"></a> Počkej
+## <a name="wait"></a>Počkej
 
 Čeká se na všech příkazů zaslaných objektu accelerator_view dokončit.
 
@@ -325,11 +325,11 @@ __declspec(property(get= get_version)) unsigned int version;
 void wait();
 ```
 
-#### <a name="return-value"></a>Návratová hodnota
+### <a name="return-value"></a>Návratová hodnota
 
 Vrátí `void`.
 
-#### <a name="remarks"></a>Poznámky
+### <a name="remarks"></a>Poznámky
 
 Pokud [queuing_mode –](concurrency-namespace-enums-amp.md#queuing_mode) je `immediate`, tato metoda vrátí hodnotu okamžitě bez blokování.
 
@@ -337,13 +337,11 @@ Pokud [queuing_mode –](concurrency-namespace-enums-amp.md#queuing_mode) je `im
 
 Odstraní objekt accelerator_view.
 
-#### <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
 ```
 ~accelerator_view();
 ```
-
-### <a name="return-value"></a>Návratová hodnota
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,6 +1,6 @@
 ---
 title: duration – třída
-ms.date: 11/04/2016
+ms.date: 03/27/2016
 f1_keywords:
 - chrono/std::chrono::duration
 - chrono/std::chrono::duration::duration
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
 helpviewer_keywords:
 - std::chrono [C++], duration
-ms.openlocfilehash: 2b710de6275933b5dc05814664caef92cf251da4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49c68b1650ced36ebcf949ae2594508480e15136
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568884"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565568"
 ---
 # <a name="duration-class"></a>duration – třída
 
@@ -41,7 +41,7 @@ Argument šablony `Rep` popisuje typ, který se používá k ukládání počtu 
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |DURATION::period – Typedef|Představuje synonymum pro parametr šablony `Period`.|
 |DURATION::rep – Typedef|Představuje synonymum pro parametr šablony `Rep`.|
@@ -54,7 +54,7 @@ Argument šablony `Rep` popisuje typ, který se používá k ukládání počtu 
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[Počet](#count)|Vrátí počet taktů v časovém intervalu.|
 |[max](#max)|Statické. Vrátí maximální povolenou hodnotou parametru šablony `Ref`.|
@@ -63,7 +63,7 @@ Argument šablony `Rep` popisuje typ, který se používá k ukládání počtu 
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[DURATION::Operator-](#operator-)|Vrátí kopii objektu `duration` společně s negovaným čítačem značek.|
 |[DURATION::Operator--](#operator--)|Sníží počet uložených impulzů.|
@@ -159,7 +159,7 @@ static constexpr duration min();
 
 V důsledku toho vrátí `duration(duration_values<rep>::min())`.
 
-## <a name="duration__operator-"></a>  DURATION::Operator-
+## <a name="operator-"></a>  DURATION::Operator-
 
 Vrátí kopii objektu `duration` společně s negovaným čítačem značek.
 
@@ -167,7 +167,7 @@ Vrátí kopii objektu `duration` společně s negovaným čítačem značek.
 constexpr duration operator-() const;
 ```
 
-## <a name="duration__operator--"></a>  DURATION::Operator--
+## <a name="operator--"></a>  DURATION::Operator--
 
 Sníží počet uložených impulzů.
 
@@ -277,7 +277,7 @@ A `duration` objektu.
 
 `duration` Objektu po provedení sčítání.
 
-## <a name="duration__operator-_eq"></a>  DURATION::Operator-=
+## <a name="operator-_eq"></a>  DURATION::Operator-=
 
 Odečte počet impulsů zadaného `duration` objekt od uloženého počtu impulsů.
 

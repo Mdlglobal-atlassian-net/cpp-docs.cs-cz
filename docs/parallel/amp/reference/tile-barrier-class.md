@@ -1,6 +1,6 @@
 ---
 title: tile_barrier – třída
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - tile_barrier
 - AMP/tile_barrier
@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
-ms.openlocfilehash: 4336a4cc317344c881f60e5ed4c5bdf8328a34b8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f0e742a0cc1a0809fc08b3862cadb7e3deb36fa8
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301165"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564980"
 ---
 # <a name="tilebarrier-class"></a>tile_barrier – třída
 
@@ -33,13 +33,13 @@ class tile_barrier;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[tile_barrier – konstruktor](#ctor)|Inicializuje novou instanci třídy `tile_barrier` třídy.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[Počkej](#wait)|Nařídí všem vláknům ve skupině vláken (bloku) pozastavit spuštění, dokud všechna vlákna v bloku nedokončila čekání.|
 |[wait_with_all_memory_fence](#wait_with_all_memory_fence)|Pozastaví spuštění všech vláken v dlaždici, dokud nejsou dokončeny všechny přístupy do paměti a dokud všechna vlákna v dlaždici nedosáhnou tohoto volání.|
@@ -56,7 +56,7 @@ class tile_barrier;
 
 **Namespace:** Souběžnost
 
-## <a name="tile_barrier__ctor"></a>  tile_barrier – konstruktor
+## <a name="ctor"></a>  tile_barrier – konstruktor
 
 Inicializuje novou instanci třídy zkopírováním existující.
 
@@ -72,7 +72,7 @@ tile_barrier(
 *Ji_né*<br/>
 `tile_barrier` Objektu, který chcete zkopírovat.
 
-## <a name="wait"></a>  Počkej
+## <a name="wait"></a>Počkej
 
 Nařídí všem vláknům ve skupině vláken (bloku) pro zastavení provádění, dokud všechna vlákna v bloku nedokončila čekání.
 
@@ -82,7 +82,7 @@ Nařídí všem vláknům ve skupině vláken (bloku) pro zastavení prováděn�
 void wait() const restrict(amp);
 ```
 
-## <a name="wait_with_all_memory_fence"></a>  wait_with_all_memory_fence –
+## <a name="waitwithallmemoryfence"></a>wait_with_all_memory_fence
 
 Pozastaví spuštění všech vláken v dlaždici, dokud všechna vlákna v dlaždici nedosáhnou tohoto volání. Tím se zajistí, že všechny přístupy do paměti viditelné pro ostatní vlákna v dlaždici vlákna a že byly provedeny v pořadí programu.
 
@@ -92,7 +92,7 @@ Pozastaví spuštění všech vláken v dlaždici, dokud všechna vlákna v dla�
 void wait_with_all_memory_fence() const restrict(amp);
 ```
 
-## <a name="wait_with_global_memory_fence"></a>  wait_with_global_memory_fence –
+## <a name="waitwithglobalmemoryfence"></a>wait_with_global_memory_fence –
 
 Pozastaví spuštění všech vláken v dlaždici, dokud všechna vlákna v dlaždici nedosáhnou tohoto volání. Tím se zajistí, že všechny přístupy do globální paměti viditelné pro ostatní vlákna v dlaždici vlákna a že byly provedeny v pořadí programu.
 
@@ -102,7 +102,7 @@ Pozastaví spuštění všech vláken v dlaždici, dokud všechna vlákna v dla�
 void wait_with_global_memory_fence() const  restrict(amp);
 ```
 
-## <a name="wait_with_tile_static_memory_fence"></a>  wait_with_tile_static_memory_fence –
+## <a name="waitwithtilestaticmemoryfence"></a>wait_with_tile_static_memory_fence
 
 Pozastaví spuštění všech vláken v dlaždici, dokud všechna vlákna v dlaždici nedosáhnou tohoto volání. To zajistí, že `tile_static` paměti přístupy jsou viditelné pro ostatní vlákna v dlaždici vlákna a že byly provedeny v pořadí programu.
 

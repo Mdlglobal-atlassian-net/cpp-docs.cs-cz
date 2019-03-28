@@ -1,6 +1,6 @@
 ---
 title: 'Platform::Collections:: map – třída'
-ms.date: 01/18/2018
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: cbe0b5e422c05cee46bff85e816ecc726c667749
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: ce50290217c7c06e26f26fc50564d3e37c873157
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745173"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565279"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections:: map – třída
 
@@ -47,7 +47,7 @@ Typ hodnoty v páru klíč hodnota.
 *C*<br/>
 Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v objektu Map. Ve výchozím nastavení [std::less\<K >](../standard-library/less-struct.md).
 
-*__is_valid_winrt_type()* generovaný kompilátorem funkci, která ověřuje typu *K* a *V* a poskytuje uživatelsky přívětivou chybovou zprávu, pokud typ nelze ukládat v objektu Map.
+*__is_valid_winrt_type()* vygenerovaný kompilátorem funkci, která ověřuje typu *K* a *V* a poskytuje uživatelsky přívětivou chybovou zprávu, pokud typ nelze ukládat v objektu Map.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -71,13 +71,13 @@ Další informace najdete v tématu [kolekce](../cppcx/collections-c-cx.md).
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[Map::map](#ctor)|Inicializuje novou instanci třídy Map.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[Map::clear](#clear)|Odebere všechny páry klíč hodnota z aktuálního objektu Map.|
 |[Map::First](#first)|Vrátí iterátor, který určuje první prvek v objektu map.|
@@ -93,7 +93,7 @@ Další informace najdete v tématu [kolekce](../cppcx/collections-c-cx.md).
 |||
 |-|-|
 |Název|Popis|
-|[Map::mapchanged –](#mapchanged-event.md) `event`|Nastane, pokud se změní na mapě.|
+|[Map::mapchanged –](#mapchanged) událostí|Nastane, pokud se změní na mapě.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -238,7 +238,7 @@ Typename aktuální mapování.
 Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v objektu Map.
 
 *m*<br/>
-Odkaz nebo [hodnoty lvalue a rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) k `map Class` , který slouží k inicializaci aktuální mapování.
+Odkaz nebo [rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) k `map Class` , který slouží k inicializaci aktuální mapování.
 
 *první*<br/>
 Vstupní iterátor první prvek v rozsahu prvků, které slouží k inicializaci aktuální mapování.

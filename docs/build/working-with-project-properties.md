@@ -1,19 +1,19 @@
 ---
 title: Nastavení kompilátoru jazyka C++ a vlastnosti v sadě Visual Studio sestavení
 description: Pomocí integrovaného vývojového prostředí sady Visual Studio můžete změnit možnosti kompilátoru a linkeru C++ a další nastavení buildu.
-ms.date: 12/10/2018
+ms.date: 03/27/2019
 helpviewer_keywords:
 - project properties [C++], modifying
 - properties [C++]
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 55adb6dc91919bda9c2827a89e5de536667085c1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: ab5456bfc8a1b8305813f4ee4a4399091de15aee
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823401"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564907"
 ---
 # <a name="set-compiler-and-build-properties"></a>Nastavení kompilátoru a vlastnosti sestavení
 
@@ -65,7 +65,7 @@ Následující obrázek znázorňuje stránky vlastností projektu jazyka Visual
 
 ![Stránky vlastností projektu](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 
-Chcete-li zobrazit hodnoty všech dostupných maker slouží Editor vlastností. Makra jsou popsány v [makra stránky vlastností](#bkmkPropertiesVersusMacros) části dále v tomto článku.)
+Chcete-li zobrazit hodnoty všech dostupných maker slouží Editor vlastností.
 
 ### <a name="predefined-macros"></a>Předdefinovaná makra
 
@@ -79,7 +79,7 @@ Má syntaxi `%(name)`. U souboru je makro položky platné pouze pro daný soubo
 
 Můžete vytvořit *uživatelská makra* pro použití jako proměnných při sestavování projektu. Můžete například vytvořit uživatelem definované makro poskytující hodnotu pro vlastní krok sestavení nebo pro vlastní nástroj sestavení. Uživatelem definované makro je pár název/hodnota. V souboru projektu, použijte **$(**<em>název</em>**)** zápisu pro přístup k hodnotě.
 
-Uživatelem definované makro je uloženo v seznamu vlastností. Pokud váš projekt zatím neobsahuje seznam vlastností, můžete vytvořit podle pokynů v části [sdílené složky nebo resuse nastavení projektu Visual Studio C++](#bkmkPropertySheets).
+Uživatelem definované makro je uloženo v seznamu vlastností. Pokud váš projekt zatím neobsahuje seznam vlastností, můžete vytvořit podle pokynů v části [sdílené složky nebo opakované použití nastavení projektu Visual Studio](create-reusable-property-configurations.md).
 
 #### <a name="to-create-a-user-defined-macro"></a>Vytvoření uživatelem definovaného makra
 
@@ -128,17 +128,17 @@ V pravém podokně upravte **prostředí** nebo **sloučit prostředí** nastave
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Sdílené složky nebo resuse nastavení projektu Visual Studio](create-reusable-property-configurations.md)<br/>
+[Sdílení a opakované použití nastavení projektu sady Visual Studio](create-reusable-property-configurations.md)<br/>
 Jak vytvořit soubor PROPS se nastavení vlastního sestavení, které je možné sdílet nebo resused.
 
-[Dědičnost vlastnosti projektu](project-property-inheritance.md)<br/>
+[Dědičnost vlastností projektu](project-property-inheritance.md)<br/>
 Popisuje pořadí vyhodnocování .props, .targets, souborů .vcxproj a proměnných prostředí v procesu sestavení.
 
-[Úprava vlastností a cílů beze změny souboru projektu](modify-project-properties-without-changing-project-file.md)<br/>
+[Změna vlastností a cílů beze změny souboru projektu](modify-project-properties-without-changing-project-file.md)<br/>
 Jak vytvořit dočasné sestavení nastavení, aniž byste museli upravovat soubor projektu. 
 
 ## <a name="see-also"></a>Viz také:
 
-[Visual Studio Projects - C++](creating-and-managing-visual-cpp-projects.md)<br/>
+[Projekty sady Visual Studio – C++](creating-and-managing-visual-cpp-projects.md)<br/>
 [Struktura souborů .vcxproj a .props](reference/vcxproj-file-structure.md)<br/>
 [Soubory XML stránky vlastností](reference/property-page-xml-files.md)<br/>

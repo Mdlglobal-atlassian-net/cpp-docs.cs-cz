@@ -1,6 +1,6 @@
 ---
 title: CMultiPageDHtmlDialog Class
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CMultiPageDHtmlDialog
 - AFXDHTML/CMultiPageDHtmlDialog
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMultiPageDHtmlDialog [MFC], CMultiPageDHtmlDialog
 ms.assetid: 971accc1-824d-4df4-b4c1-b1a20e0f7e4f
-ms.openlocfilehash: 66ab996a810c7409d689d600758828130d4237f1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 404b1b8bb1c96c2b244a6cfaee7f2f2c77800f31
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283745"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565997"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>CMultiPageDHtmlDialog Class
 
@@ -29,10 +29,10 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Vytvoří vícestránkové dialogové okno objekt DHTML (Průvodce style).|
-|[CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|Odstraní objekt vícestránkové dialogové okno DHTML.|
+|[CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog](#_dtorcmultipagedhtmldialog)|Odstraní objekt vícestránkové dialogové okno DHTML.|
 
 ## <a name="remarks"></a>Poznámky
 

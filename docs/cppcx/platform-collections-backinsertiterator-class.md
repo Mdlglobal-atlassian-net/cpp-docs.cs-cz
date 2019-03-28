@@ -1,18 +1,18 @@
 ---
 title: 'Platform::Collections:: backinsertiterator – třída'
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::BackInsertIterator::BackInsertIterator
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: 7478555b19bbe5c984fcbe531d2d8be1a0b865a9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 02aee3101156b28dbd59ccd51c071e6774ca1e7a
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739538"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564720"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections:: backinsertiterator – třída
 
@@ -39,13 +39,13 @@ Třída BackInsertIterator implementuje pravidla vyžadované [back_insert_itera
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[BackInsertIterator::BackInsertIterator](#ctor)|Inicializuje novou instanci třídy BackInsertIterator.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[BackInsertIterator::operator * – operátor](#operator-dereference)|Získá odkaz na aktuální BackInsertIterator.|
 |[BackInsertIterator::operator++ Operator](#operator-increment)|Vrátí odkaz na aktuální BackInsertIterator. Iterátor zůstává nezměněna.|
@@ -141,7 +141,7 @@ Odkaz na aktuální BackInsertIterator.
 
 Návrh první příklad syntaxe předem zvýší aktuální BackInsertIterator a druhá syntaxe po zvětší aktuální BackInsertIterator. `int` v druhé syntaxi označuje operaci po přírůstku není skutečný celočíselný operand.
 
-Ale tento operátor neprovede žádné změny ve skutečnosti BackInsertIterator. Místo toho tento operátor vrátí odkaz na iterátor bez úprav, aktuální. Jedná se o stejné chování jako [operátor *](#dereference-operator).
+Ale tento operátor neprovede žádné změny ve skutečnosti BackInsertIterator. Místo toho tento operátor vrátí odkaz na iterátor bez úprav, aktuální. Jedná se o stejné chování jako [operátor *](#operator-dereference).
 
 ## <a name="see-also"></a>Viz také:
 

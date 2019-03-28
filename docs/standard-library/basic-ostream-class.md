@@ -1,6 +1,6 @@
 ---
 title: basic_ostream – třída
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ostream/std::basic_ostream
 - ostream/std::basic_ostream::flush
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::basic_ostream [C++], tellp
 - std::basic_ostream [C++], write
 ms.assetid: 5baadc65-b662-4fab-8c9f-94457c58cda1
-ms.openlocfilehash: dce4911bd4b7abe6c73551d6a0b178d9b2700dbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64a32513e9dc151e64fccdb0ef678a75588f0a41
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543634"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565724"
 ---
 # <a name="basicostream-class"></a>basic_ostream – třída
 
@@ -48,7 +48,7 @@ Znak `traits_type`.
 
 ## <a name="remarks"></a>Poznámky
 
-Většinu člena funkce, které přetěžují [operátor <<](#op_lt_lt) jsou formátovaný výstup functions. Jsou podle tohoto vzoru vytvořené:
+Většinu člena funkce, které přetěžují [operátor <<](#basic_ostream_operator_lt_lt) jsou formátovaný výstup functions. Jsou podle tohoto vzoru vytvořené:
 
 ```cpp
 iostate state = goodbit;
@@ -112,7 +112,7 @@ Podívejte se na příklad pro [basic_ofstream – třída](../standard-library/
 
 |Konstruktor|Popis|
 |-|-|
-|[basic_ostream –](#basic_ostream)|Vytvoří `basic_ostream` objektu.|
+|[basic_ostream](#basic_ostream)|Vytvoří `basic_ostream` objektu.|
 
 ### <a name="member-functions"></a>Členské funkce
 
@@ -120,17 +120,17 @@ Podívejte se na příklad pro [basic_ofstream – třída](../standard-library/
 |-|-|
 |[Vyprázdnění](#flush)|Vyprázdní vyrovnávací paměť.|
 |[Vložit](#put)|Vloží znak do datového proudu.|
-|[seekp –](#seekp)|Resetovat pozici v výstupního datového proudu.|
-|[SENTRY](#sentry)|Vnořené třídy popisuje objekt, jehož deklarace struktur formátovaný výstup functions a funkce neformátovaný výstup.|
-|[Prohození](#op_eq)|Vymění hodnoty tohoto `basic_ostream` objektu pro ty ze zadaných `basic_ostream` objektu.|
-|[tellp –](#tellp)|Umístění sestavy ve výstupní datový proud.|
+|[seekp](#seekp)|Resetovat pozici v výstupního datového proudu.|
+|[sentry](#sentry)|Vnořené třídy popisuje objekt, jehož deklarace struktur formátovaný výstup functions a funkce neformátovaný výstup.|
+|[swap](#swap)|Vymění hodnoty tohoto `basic_ostream` objektu pro ty ze zadaných `basic_ostream` objektu.|
+|[tellp](#tellp)|Umístění sestavy ve výstupní datový proud.|
 |[write](#write)|Převádí znaky v datovém proudu.|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[operátor =](#basic_ostream_operator_eq)|Přiřadí hodnotu ze zadaných `basic_ostream` objektu parametr s tímto objektem.|
+|[operátor =](#op_eq)|Přiřadí hodnotu ze zadaných `basic_ostream` objektu parametr s tímto objektem.|
 |[operátor <<](#basic_ostream_operator_lt_lt)|Zapíše do datového proudu.|
 
 ## <a name="requirements"></a>Požadavky
@@ -139,7 +139,7 @@ Podívejte se na příklad pro [basic_ofstream – třída](../standard-library/
 
 **Namespace:** std
 
-## <a name="basic_ostream"></a>  basic_ostream::basic_ostream –
+## <a name="basic_ostream"></a>  basic_ostream::basic_ostream
 
 Vytvoří `basic_ostream` objektu.
 
@@ -205,7 +205,7 @@ int main( )
 test
 ```
 
-## <a name="basic_ostream_operator_lt_lt"></a>  basic_ostream::Operator&lt;&lt;
+## <a name="basic_ostream_operator_lt_lt"></a>  basic_ostream::operator&lt;&lt;
 
 Zapíše do datového proudu.
 
@@ -237,7 +237,7 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 
 ### <a name="parameters"></a>Parametry
 
-*pfn*<br/>
+*Pfn*<br/>
 Ukazatel na funkci.
 
 *strbuf*<br/>
@@ -466,7 +466,7 @@ int main()
 7
 ```
 
-## <a name="sentry"></a>  basic_ostream::SENTRY
+## <a name="sentry"></a>  basic_ostream::sentry
 
 Vnořené třídy popisuje objekt, jehož deklarace struktur formátovaný výstup functions a funkce neformátovaný výstup.
 

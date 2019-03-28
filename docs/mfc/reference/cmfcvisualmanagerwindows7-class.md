@@ -1,6 +1,6 @@
 ---
 title: CMFCVisualManagerWindows7 Class
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CMFCVisualManagerWindows7
 - AFXVISUALMANAGERWINDOWS7/CMFCVisualManagerWindows7
@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerWindows7 Class [MFC]
 ms.assetid: e8d87df1-0c09-4b58-8ade-4e911f796e42
-ms.openlocfilehash: 296ccc0accdf2937406d9965118c1807aeb2604c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e729201f1a6b6fd41286cc6af2b8c08fc7ee697c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269393"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565516"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 Class
 
@@ -31,18 +31,18 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCVisualManagerWindows7::CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7)|Výchozí konstruktor.|
-|[CMFCVisualManagerWindows7::~CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7__~cmfcvisualmanagerwindows7)|Výchozí destruktor.|
+|[CMFCVisualManagerWindows7::~CMFCVisualManagerWindows7](#_dtorcmfcvisualmanagerwindows7)|Výchozí destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |`CMFCVisualManagerWindows7::CleanStyle`|Vymaže aktuální vizuální styl a obnoví výchozí vzhled.|
 |`CMFCVisualManagerWindows7::CleanUp`|Vymaže všechny objekty v uživatelském rozhraní a obnoví v nabídkách.|
-|`CMFCVisualManagerWindows7::DrawNcBtn`|V rámci nakreslí tlačítko v neklientské oblasti. Rozhraní používá tuto metodu za účelem vykreslení minimalizovat, maximalizovat, zavřete a obnovení tlačítka v pravém horním rohu okna rámce. Tato metoda není volána, když program použije motiv Aero.|
+|`CMFCVisualManagerWindows7::DrawNcBtn`|V rámci nakreslí tlačítko v neklientské oblasti. Rozhraní používá tuto metodu za účelem vykreslení minimalizovat, maximalizovat, zavřete a obnovení tlačítka v pravém horním rohu okna rámce. Tato metoda je volána, pouze pokud program používá `Aero` motiv.|
 |`CMFCVisualManagerWindows7::DrawNcText`|Kreslení textu v jiné klientské oblasti na snímku. Rozhraní používá tuto metodu pro kreslení název aplikace v záhlaví v horní části okna rámce.|
 |`CMFCVisualManagerWindows7::DrawSeparator`|Nakreslí na oddělovač [cmfctoolbar – třída](../../mfc/reference/cmfctoolbar-class.md).|
 |`CMFCVisualManagerWindows7::GetRibbonBar`|Načte [CMFCRibbonBar – třída](../../mfc/reference/cmfcribbonbar-class.md) související s uživatelským rozhraním.|
@@ -173,7 +173,7 @@ Rozhraní volá tuto metodu při vyplní oblast kolem obrázku položky nabídky
 virtual void OnFillMenuImageRect(
     CDC* pDC,
     CMFCToolBarButton* pButton,
-    CRect rect,
+    CRect rectangle,
     CMFCVisualManager::AFX_BUTTON_STATE state);
 ```
 
@@ -185,7 +185,7 @@ virtual void OnFillMenuImageRect(
 *pButton*<br/>
 [in] Ukazatel `CMFCToolBarButton`. Rozhraní framework výplně pozadí pro toto tlačítko.
 
-*Rect*<br/>
+*Obdélník*<br/>
 [in] Obdélník, který určuje hranice oblasti obrázek tlačítka nabídky.
 
 *state*<br/>

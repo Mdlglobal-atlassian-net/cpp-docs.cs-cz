@@ -1,6 +1,6 @@
 ---
 title: Globální funkce registrace a TypeLib
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - atlbase/ATL::AtlGetPerUserRegistration
 - afxpriv/ATL::AfxRegCreateKey
@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-ms.openlocfilehash: f94dd1770ff194e47e2e38cc3a9b5cf0cbaebe58
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c5fdaceb47b6cd09dd9d66f26af1337a8dc6bbae
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301828"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566010"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Globální funkce registrace a TypeLib
 
@@ -33,8 +33,8 @@ Tyto funkce poskytují podporu pro načítání a registraci knihovny typů.
 
 |||
 |-|-|
-|[AfxRegCreateKey](#afxrefcreatekey)|Vytvoří zadaného klíče registru.|
-|[AfxRegDeleteKey](#afxrefdeletekey)|Odstraní zadaný klíč registru.|
+|[AfxRegCreateKey](#afxregcreatekey)|Vytvoří zadaného klíče registru.|
+|[AfxRegDeleteKey](#afxregdeletekey)|Odstraní zadaný klíč registru.|
 |[AfxRegisterPreviewHandler](#afxregisterpreviewhandler)|Pomocné rutiny zaregistrovat obslužnou rutinu ve verzi preview.|
 |[AfxUnregisterPreviewHandler](#afxunregisterpreviewhandler)| Pomocné rutiny se zrušit registraci obslužné rutiny náhledu. |
 |[AtlRegisterTypeLib](#atlregistertypelib)|Voláním této funkce se zaregistruje knihovna typů.|
@@ -343,7 +343,7 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato pomocná funkce je využíváno [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) a [AtlComModuleUnregisterServer](#atlcommoduleunregisterserver).
+Tato pomocná funkce je využíváno [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) a [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver).
 
 ### <a name="requirements"></a>Požadavky
 

@@ -1,17 +1,17 @@
 ---
 title: raw_method_prefix
-ms.date: 10/18/2018
+ms.date: 03/27/2019
 f1_keywords:
 - raw_method_prefix
 helpviewer_keywords:
 - raw_method_prefix attribute
 ms.assetid: 71490313-af78-4bb2-b28a-eee67950d30b
-ms.openlocfilehash: 4169b4e23049bf1cf2c61eaefba619169e0ce377
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c3015cf8b51646d25fd8f36a7336c63dc8fe492b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467759"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565594"
 ---
 # <a name="rawmethodprefix"></a>raw_method_prefix
 
@@ -27,7 +27,7 @@ raw_method_prefix("Prefix")
 
 ### <a name="parameters"></a>Parametry
 
-*Předpona*<br/>
+*Prefix*<br/>
 Předpona, která má být použit.
 
 ## <a name="remarks"></a>Poznámky
@@ -35,7 +35,7 @@ Předpona, která má být použit.
 Nízké úrovně vlastnosti a metody vystaveny členským funkcím pojmenovaným s předponou výchozí **raw_** k vyhnete kolize názvů s vysoké úrovně členské funkce zpracování chyb.
 
 > [!NOTE]
-> Účinky **raw_method_prefix –** atribut se nezmění přítomností [raw_interfaces_only](#_predir_raw_interfaces_only) atribut. **Raw_method_prefix –** vždy má přednost před `raw_interfaces_only` v určeném předponu. Pokud oba atributy jsou používány ve stejném `#import` příkaz a pak podle Zadaná předpona **raw_method_prefix –** atribut se používá.
+> Účinky **raw_method_prefix –** atribut se nezmění přítomností [raw_interfaces_only](raw-interfaces-only.md) atribut. **Raw_method_prefix –** vždy má přednost před `raw_interfaces_only` v určeném předponu. Pokud oba atributy jsou používány ve stejném `#import` příkaz a pak podle Zadaná předpona **raw_method_prefix –** atribut se používá.
 
 **Specifické pro END C++**
 

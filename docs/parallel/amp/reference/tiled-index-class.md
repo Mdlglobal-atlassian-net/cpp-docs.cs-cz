@@ -1,6 +1,6 @@
 ---
 title: tiled_index – třída
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - tiled_index
 - AMP/tiled_index
@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-ms.openlocfilehash: cea1ac1d500a9cf3bcbdc1f5dde33a0002cbd363
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: dd8b6d7a0e174c88ad229da2d08a9ec8a11fb0aa
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57257901"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565214"
 ---
 # <a name="tiledindex-class"></a>tiled_index – třída
 
@@ -73,7 +73,7 @@ Velikost nejméně významného rozměru.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[get_tile_extent](#tiled_index__get_tile_extent)|Vrátí [rozsahu](extent-class.md) objekt, který obsahuje hodnoty `tiled_index` argumenty šablony `_Dim0`, `_Dim1`, a `_Dim2`.|
 
@@ -94,7 +94,7 @@ Velikost nejméně významného rozměru.
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[tile_extent](#tile_extent)|Získá [rozsahu](extent-class.md) objekt, který obsahuje hodnoty `tiled_index` argumenty šablony `tiled_index` argumenty šablony `_Dim0`, `_Dim1`, a `_Dim2`.|
 
@@ -110,7 +110,7 @@ Velikost nejméně významného rozměru.
 
 **Namespace:** Souběžnost
 
-## <a name="tiled_index__ctor"></a>  tiled_index – konstruktor
+## <a name="ctor"></a>  tiled_index – konstruktor
 
 Inicializuje novou instanci třídy `tiled_index` třídy.
 

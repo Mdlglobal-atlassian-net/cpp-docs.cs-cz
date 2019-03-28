@@ -1,6 +1,6 @@
 ---
 title: '&lt;valarray –&gt; operátory'
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - valarray/std::operator!=
 - valarray/std::operator%
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: daaddf6de79411aea58b79feb0fbfd0f8ff56f5c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 6de4b4ad75f9240fb86ff5e363f4a7d9062925d9
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332605"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565919"
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray –&gt; operátory
 
@@ -268,7 +268,7 @@ Valarray, jehož prvky jsou element-wise kombinací bitové operace AND z *levé
 
 Bitová operace jde použít jenom k manipulaci s bity v **char** a **int** datových typů a variant a ne v **float**, **double**, **longdouble**, **void**, **bool** nebo jiné, komplexnější datové typy.
 
-Bitový `AND` má stejné tabulky pravdivých informací jako logický `AND` ale platí pro typ dat na úrovni jednotlivých bitů. [Operator & &](../standard-library/valarray-operators.md#amp) se vztahuje na úroveň element počítání všechny nenulové hodnoty jako true a výsledek je valarray z logické hodnoty. Bitový **ANDoperator &**, naopak může vést k valarray hodnot než 0 nebo 1, v závislosti na výsledcích bitová operace.
+Bitový `AND` má stejné tabulky pravdivých informací jako logický `AND` ale platí pro typ dat na úrovni jednotlivých bitů. [Operator & &](#op_amp_amp) se vztahuje na úroveň element počítání všechny nenulové hodnoty jako true a výsledek je valarray z logické hodnoty. Bitový `AND` [operátor &](#op_amp), naopak může vést k valarray hodnot než 0 nebo 1, v závislosti na výsledcích bitová operace.
 
 ### <a name="example"></a>Příklad
 
@@ -356,7 +356,7 @@ Valarray –, jehož prvky jsou z typu bool a element-wise kombinace logické `A
 
 ### <a name="remarks"></a>Poznámky
 
-Logický `ANDoperator&&` se vztahuje na úroveň element počítání všechny nenulové hodnoty jako true a výsledek je valarray z logické hodnoty. Bitové verzi `AND`, [operátor &,](../standard-library/valarray-operators.md#op_amp), naopak může vést k valarray hodnot než 0 nebo 1, v závislosti na výsledcích bitová operace.
+Logický `ANDoperator&&` se vztahuje na úroveň element počítání všechny nenulové hodnoty jako true a výsledek je valarray z logické hodnoty. Bitové verzi `AND`, [operátor &,](#op_amp), naopak může vést k valarray hodnot než 0 nebo 1, v závislosti na výsledcích bitová operace.
 
 ### <a name="example"></a>Příklad
 
@@ -1430,7 +1430,7 @@ Valarray, jehož prvky jsou element-wise kombinaci bitového **XOR** fungování
 
 Bitová operace jde použít jenom k manipulaci s bity v **char** a **int** datových typů a variant a ne v **float**, **double**, **long double**, **void**, **bool** nebo jiné, komplexnější datové typy.
 
-Bitový exkluzivní `OR` ( **XOR**) tuto sémantiku: Zadaný bits *b*1 a *b*2, *b*1  **XOR** *b*2 je **true** Pokud právě jeden z bitů je true. **false** pokud obě bity jsou false nebo pokud jsou splněny obě bits.
+Bitový exkluzivní `OR` ( **XOR**) tuto sémantiku: Zadaný bits *b*1 a *b*2, *b*1 **XOR** *b*2 je **true** Pokud právě jeden z bitů je true. **false** pokud obě bity jsou false nebo pokud jsou splněny obě bits.
 
 ### <a name="example"></a>Příklad
 

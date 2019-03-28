@@ -1,6 +1,6 @@
 ---
 title: CAnimationController Class
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CAnimationController
 - AFXANIMATIONCONTROLLER/CAnimationController
@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: 114b6bffdc63ecadc951965f8f199b229f0f7672
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a3a533b876b9ca245c0553c4c24a815ef3cabca1
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270277"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565958"
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController Class
 
@@ -124,10 +124,10 @@ class CAnimationController : public CObject;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAnimationController::CAnimationController](#canimationcontroller)|Vytvoří řadič animace.|
-|[CAnimationController::~CAnimationController](#canimationcontroller__~canimationcontroller)|Destruktor. Volá se, když se likviduje objektu řadiče animace.|
+|[CAnimationController::~CAnimationController](#_dtorcanimationcontroller)|Destruktor. Volá se, když se likviduje objektu řadiče animace.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -140,7 +140,7 @@ class CAnimationController : public CObject;
 |[CAnimationController::CreateKeyframe](#createkeyframe)|Přetíženo. Vytvoří klíčový snímek, který závisí na přechod a přidá ji do zadané skupiny.|
 |[CAnimationController::EnableAnimationManagerEvent](#enableanimationmanagerevent)|Nastaví nebo uvolní obslužné rutiny má volat při změně stavu Správce animace.|
 |[CAnimationController::EnableAnimationTimerEventHandler](#enableanimationtimereventhandler)|Nastaví nebo uvolní obslužnou rutinu události časování a obslužné rutiny pro časování aktualizací.|
-|[CAnimationController::EnablePriorityComparisonHandler](#enableprioritycomparisonhandler)|Nastaví nebo uvolní obslužná rutina porovnání priority volání za účelem určení, zda naplánované scénáře může být zrušena, dospělo k závěru, oříznut nebo komprimované.|
+|[CAnimationController::EnablePriorityComparisonHandler](#enableprioritycomparisonhandler)|Nastaví nebo uvolní obslužná rutina porovnání prioritu pro volání k určení, zda naplánované scénář možné zrušit, dospělo k závěru, oříznuta nebo komprimované.|
 |[CAnimationController::EnableStoryboardEventHandler](#enablestoryboardeventhandler)|Nastaví nebo uvolní obslužnou rutinu události stavu a aktualizaci scénáře.|
 |[CAnimationController::FindAnimationGroup](#findanimationgroup)|Přetíženo. Vyhledá skupinu animace podle jeho scénáře.|
 |[CAnimationController::FindAnimationObject](#findanimationobject)|Vyhledá objekt animace, který obsahuje proměnné zadané animace.|
@@ -181,7 +181,7 @@ class CAnimationController : public CObject;
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAnimationController::gkeyframeStoryboardStart](#g_keyframestoryboardstart)|Klíčový snímek, který reprezentuje začátek scénáře.|
 |[CAnimationController::m_bIsValid](#m_bisvalid)|Určuje, zda je řadič animace platná nebo ne. Tento člen je nastavený na hodnotu FALSE, pokud aktuální operační systém nepodporuje rozhraní API animace Windows.|
@@ -402,7 +402,7 @@ Když obslužné rutiny jsou nastaveny (povoleno) volání API animace Windows O
 
 ##  <a name="enableprioritycomparisonhandler"></a>  CAnimationController::EnablePriorityComparisonHandler
 
-Nastaví nebo uvolní obslužná rutina porovnání priority volání za účelem určení, zda naplánované scénáře může být zrušena, dospělo k závěru, oříznut nebo komprimované.
+Nastaví nebo uvolní obslužná rutina porovnání prioritu pro volání k určení, zda naplánované scénář možné zrušit, dospělo k závěru, oříznuta nebo komprimované.
 
 ```
 virtual BOOL EnablePriorityComparisonHandler(DWORD dwHandlerType);

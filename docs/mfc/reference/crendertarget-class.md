@@ -1,6 +1,6 @@
 ---
 title: Crendertarget – třída
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CRenderTarget
 - AFXRENDERTARGET/CRenderTarget
@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 112bd4422a1fa6b9b97239228dc586a0555ddc96
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a14a1fba25c8c38c4bcf441dda566f14dc790f76
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259877"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565754"
 ---
 # <a name="crendertarget-class"></a>Crendertarget – třída
 
@@ -135,14 +135,14 @@ class CRenderTarget : public CObject;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CRenderTarget::CRenderTarget](#crendertarget)|Vytvoří objekt crendertarget –.|
-|[CRenderTarget::~CRenderTarget](#crendertarget__~crendertarget)|Destruktor. Volá se při vykreslení cílový objekt je zničen.|
+|[CRenderTarget::~CRenderTarget](#_dtorcrendertarget)|Destruktor. Volá se při vykreslení cílový objekt je zničen.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CRenderTarget::Attach](#attach)|Bude k obrazci existující vykreslení rozhraní cílového objektu|
 |[CRenderTarget::BeginDraw](#begindraw)|Inicializuje na tento cíl vykreslování.|
@@ -202,13 +202,13 @@ class CRenderTarget : public CObject;
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CRenderTarget::operator ID2D1RenderTarget*](#operator_id2d1rendertarget_star)|Vrátí ID2D1RenderTarget rozhraní|
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CRenderTarget::m_lstResources](#m_lstresources)|Seznam ukazatelů na objekty cd2dresource –.|
 |[CRenderTarget::m_pRenderTarget](#m_prendertarget)|Ukazatel na objekt ID2D1RenderTarget.|
@@ -502,7 +502,7 @@ Nakreslí osnovy obdélník, který má zadané dimenze a styl tahu.
 
 ```
 void DrawRectangle(
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pBrush,
     FLOAT fStrokeWidth = 1.0,
     ID2D1StrokeStyle* strokeStyle = NULL);
@@ -510,7 +510,7 @@ void DrawRectangle(
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
+*Obdélník*<br/>
 Dimenze obdélník k vykreslení v pixelech nezávislých na zařízení
 
 *pBrush*<br/>
@@ -555,7 +555,7 @@ Vykreslí zadaný text pomocí formát na základě informací poskytnutých IDW
 ```
 void DrawText(
     const CString& strText,
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pForegroundBrush,
     CD2DTextFormat* textFormat = NULL,
     D2D1_DRAW_TEXT_OPTIONS options = D2D1_DRAW_TEXT_OPTIONS_NONE,
@@ -567,7 +567,7 @@ void DrawText(
 *strText*<br/>
 Ukazatel na pole znaků Unicode pro kreslení.
 
-*Rect*<br/>
+*Obdélník*<br/>
 Velikost a umístění v oblasti, ve které je vykresleno text.
 
 *pForegroundBrush*<br/>
@@ -714,13 +714,13 @@ Vybarví vnitřek zadané obdélník.
 
 ```
 void FillRectangle(
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pBrush);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
+*Obdélník*<br/>
 Dimenze obdélník k vykreslení v pixelech nezávislých na zařízení.
 
 *pBrush*<br/>
@@ -999,7 +999,7 @@ void PushAxisAlignedClip(
 Velikost a umístění oblasti výstřižek v pixelech nezávislých na zařízení.
 
 *Režim*<br/>
-Režim vyhlazování, který se používá k vykreslení hrany klip obdélníky, které mají subpixel hranice a přizpůsobte galerie s obsahem scény. Prolnutí provádí po při PopAxisAlignedClip metoda je volána a se nedá použít u každého primitivní ve vrstvě.
+Režim vyhlazování, který se používá k vykreslení hrany klip obdélníky subpixel hranice a přizpůsobte galerie s obsahem scény. Prolnutí provádí po při PopAxisAlignedClip metoda je volána a se nedá použít u každého primitivní ve vrstvě.
 
 ##  <a name="pushlayer"></a>  CRenderTarget::PushLayer
 

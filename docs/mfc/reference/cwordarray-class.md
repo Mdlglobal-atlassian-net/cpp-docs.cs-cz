@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 2ba2c194-2c6c-40ff-9db4-e9dbe57e1f57
-ms.openlocfilehash: c21f89215e08523188eb32490d7b1d5506299fb5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9b2888c82ad9522925ffbd53923d3988863f56ca
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259448"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565357"
 ---
 # <a name="cwordarray-class"></a>CWordArray Class
 
@@ -71,7 +71,7 @@ například se přeloží na
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|Vytvoří prázdné pole.|
 
@@ -292,7 +292,7 @@ Poslední index rozsahu ID příkazu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda odstraní skupinu z namapované na zadaný ID příkazu ve obslužné rutiny zpráv *cmdIDMin* a *cmdIDMax*, ze zdrojového objektu příkazu.
+Tato metoda odstraní skupinu z namapované na ID příkazů určené obslužné rutiny zpráv *cmdIDMin* a *cmdIDMax*, ze zdrojového objektu příkazu.
 
 ##  <a name="removecommandrangeuihandler"></a>  ICommandSource::RemoveCommandRangeUIHandler
 
@@ -314,7 +314,7 @@ Poslední index rozsahu ID příkazu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda odstraní skupinu uživatelské rozhraní příkaz obslužné rutiny zpráv, mapovat na ID zadaný příkaz podle *cmdIDMin* a *cmdIDMax*, ze zdrojového objektu příkazu.
+Tato metoda odstraní skupinu uživatelské rozhraní příkaz obslužné rutiny zpráv, mapovat na ID příkazů určené *cmdIDMin* a *cmdIDMax*, ze zdrojového objektu příkazu.
 
 ##  <a name="removecommanduihandler"></a>  ICommandSource::RemoveCommandUIHandler
 

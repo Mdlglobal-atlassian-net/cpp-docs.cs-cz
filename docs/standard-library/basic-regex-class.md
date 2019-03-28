@@ -1,17 +1,17 @@
 ---
 title: basic_regex – třída
-ms.date: 09/10/2018
+ms.date: 03/27/2019
 f1_keywords:
 - regex/std::basic_regex
 helpviewer_keywords:
 - basic_regex class
 ms.assetid: 8a18c6b4-f22a-4cfd-bc16-b4267867ebc3
-ms.openlocfilehash: 0799bbcbfb7cdbc1ee1755cf387de2aee46db027
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3a38dc186a52c8431442d58bb10e56837396b07
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633399"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565448"
 ---
 # <a name="basicregex-class"></a>basic_regex – třída
 
@@ -59,12 +59,12 @@ Tyto členské funkce také přijímají argument `flags` , který určuje různ
 |Veřejné statické icase flag_type const|regex_constants::icase|
 |Veřejné statické nosubs flag_type const|regex_constants::nosubs|
 |Veřejné statické const flag_type optimalizace|regex_constants::optimize|
-|COLLATE – veřejné statické flag_type const|regex_constants::COLLATE|
+|COLLATE – veřejné statické flag_type const|regex_constants::collate|
 |Veřejné statické const flag_type ECMAScript|regex_constants::ECMAScript|
-|Veřejné statické const flag_type základní|regex_constants::Basic|
-|Veřejné statické const flag_type rozšířené|regex_constants::Extended|
-|Veřejné statické awk flag_type const|regex_constants::AWK|
-|Veřejné statické grep flag_type const|regex_constants::GREP|
+|Veřejné statické const flag_type základní|regex_constants::basic|
+|Veřejné statické const flag_type rozšířené|regex_constants::extended|
+|Veřejné statické awk flag_type const|regex_constants::awk|
+|Veřejné statické grep flag_type const|regex_constants::grep|
 |Veřejné statické egrep flag_type const|regex_constants::egrep|
 |privátní RXtraits osobnostní rysy||
 
@@ -86,12 +86,12 @@ Tyto členské funkce také přijímají argument `flags` , který určuje různ
 
 |Členská funkce|Popis|
 |-|-|
-|[přiřazení](#assign)|Přiřadí hodnotu k objektu regulárního výrazu.|
+|[assign](#assign)|Přiřadí hodnotu k objektu regulárního výrazu.|
 |[příznaky](#flags)|Vrátí syntaxe možnost příznaky.|
-|[get_loc](#get_loc)|Vrátí objekt uloženého národního prostředí.|
-|[imbue –](#imbue)|Změní objekt uloženého národního prostředí.|
-|[mark_count –](#mark_count)|Vrátí počet dílčích výrazů neodpovídají.|
-|[Prohození](#swap)|Prohodí dva objekty regulárních výrazů.|
+|[getloc](#getloc)|Vrátí objekt uloženého národního prostředí.|
+|[imbue](#imbue)|Změní objekt uloženého národního prostředí.|
+|[mark_count](#mark_count)|Vrátí počet dílčích výrazů neodpovídají.|
+|[swap](#swap)|Prohodí dva objekty regulárních výrazů.|
 
 ### <a name="operators"></a>Operátory
 
@@ -257,7 +257,7 @@ Délka sekvence ke kopírování.
 *první*<br/>
 Začátek pořadí ke kopírování.
 
-*poslední*<br/>
+*last*<br/>
 Konec pořadí ke kopírování.
 
 *IList*<br/>
@@ -331,7 +331,7 @@ Délka sekvence ke kopírování.
 *první*<br/>
 Začátek pořadí ke kopírování.
 
-*poslední*<br/>
+*last*<br/>
 Konec pořadí ke kopírování.
 
 *IList*<br/>
@@ -391,7 +391,7 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parametry
 
-*Umístění*<br/>
+*loc*<br/>
 Objekt národního prostředí pro uložení.
 
 ### <a name="remarks"></a>Poznámky

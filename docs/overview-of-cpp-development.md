@@ -4,12 +4,14 @@ description: Integrované vývojové prostředí sady Visual Studio podporuje v�
 ms.date: 03/08/2019
 helpviewer_keywords:
 - Visual C++, development tools
-ms.openlocfilehash: dfbe98cdbae6df7dacdc2f3076891971ba86927e
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+author: corob-msft
+ms.author: corob
+ms.openlocfilehash: 85f19d7bb28b4bd5dfd324999e59205f5dcf55ab
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328120"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565471"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Přehled o vývoji v jazyce C++ v sadě Visual Studio
 

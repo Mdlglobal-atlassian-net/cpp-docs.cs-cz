@@ -1,6 +1,6 @@
 ---
 title: Převody z nepodepsaných integrálních typů
-ms.date: 01/29/2018
+ms.date: 03/27/2019
 helpviewer_keywords:
 - integers, converting
 - type casts, involving integers
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - type conversion [C++], signed and unsigned integers
 - integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
-ms.openlocfilehash: d7653c545601d10b159f10a8a3c8f60f9128f944
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f6136a721f84332451184baa648ebc7c909d5d7
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579683"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565019"
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>Převody z nepodepsaných integrálních typů
 
-Celé číslo bez znaménka se převede na kratší bez znaménka nebo podepsané celé číslo zkrácením nejvyšších bitů nebo na již bez znaménka nebo podepsané celé číslo rozšířením nula (viz [převody z nepodepsaných integrálních typů](#_clang_table_4..3) tabulky).
+Celé číslo bez znaménka je rozšířením nula převést na kratší celé číslo bez znaménka nebo podepsaný zkrácením nejvyšších bitů nebo na již bez znaménka nebo podepsané celé číslo. Další informace najdete v tématu [převody z celočíselných typů bez znaménka tabulky](#conversions-from-unsigned-integral-types-table).
 
 Pokud hodnoty celočíselného typu převeden na celé číslo se znaménkem s menší velikostí, nebo celé číslo bez znaménka, je převedena na jeho odpovídající celé číslo se znaménkem, hodnota je beze změny, pokud můžou být vyjádřeny v novém typu. Nicméně hodnota představuje změny, pokud je bit znaménka nastavená jako v následujícím příkladu.
 
@@ -35,7 +35,7 @@ Nepodepsané hodnoty se převedou tak, aby zachovává jejich hodnota a není re
 
 Následující tabulka shrnuje převody z nepodepsaných integrálních typů.
 
-## <a name="conversions-from-unsigned-integral-types"></a>Převody z nepodepsaných integrálních typů
+## <a name="conversions-from-unsigned-integral-types-table"></a>Převody z celočíselných typů bez znaménka tabulky
 
 |From|Chcete-li|Metoda|
 |----------|--------|------------|
@@ -64,7 +64,7 @@ Následující tabulka shrnuje převody z nepodepsaných integrálních typů.
 |**unsigned long**|**double**|Převést přímo na **double**|
 |**unsigned long**|**typ long double**|Převést na **dlouhé**; převod **dlouhé** k **double**|
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Kompilátor Microsoft C **unsigned int** je ekvivalentem typu **unsigned long** typu. Převod **unsigned int** hodnotu pokračuje stejným způsobem jako převod **unsigned long**. Převody z **unsigned long** hodnoty **float** nejsou přesné, pokud je převáděná hodnota větší než maximální pozitivní podepsané **dlouhé** hodnotu.
 

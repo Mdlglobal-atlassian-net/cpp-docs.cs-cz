@@ -1,6 +1,6 @@
 ---
 title: CDataConnection – třída
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ATL::CDataConnection
 - ATL.CDataConnection
@@ -65,12 +65,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: 8a419a19c04b579c72df9938151f9ada657178f2
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 769dfc99f431cb5ba803075e28176713f9bd7092
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326534"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565503"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection – třída
 
@@ -92,10 +92,10 @@ class CDataConnection
 
 |||
 |-|-|
-|[Cdataconnection –](#cdataconnection)|Konstruktor Vytvoří a inicializuje `CDataConnection` objektu.|
+|[CDataConnection](#cdataconnection)|Konstruktor Vytvoří a inicializuje `CDataConnection` objektu.|
 |[kopírování](#copy)|Vytvoří kopii existující datové připojení.|
 |[Otevřít](#open)|Otevře připojení ke zdroji dat pomocí inicializačního řetězce.|
-|[Opennewsession –](#opennewsession)|Otevře se nová relace pro aktuální připojení.|
+|[OpenNewSession](#opennewsession)|Otevře se nová relace pro aktuální připojení.|
 
 ### <a name="operators"></a>Operátory
 
@@ -119,7 +119,7 @@ S `CDataConnection`, je třeba pouze vytvořit objekt připojení, předat ji in
 > [!NOTE]
 >  Pokud vytváříte databázovou aplikaci, kterou je potřeba zpracovat více relací, budete muset použít [opennewsession –](../../data/oledb/cdataconnection-opennewsession.md).
 
-## <a name="#cdataconnection"></a> CDataConnection::CDataConnection
+## <a name="cdataconnection"></a> CDataConnection::CDataConnection
 
 Vytvoří a inicializuje `CDataConnection` objektu.
 
@@ -132,7 +132,7 @@ CDataConnection(const CDataConnection &ds);
 
 #### <a name="parameters"></a>Parametry
 
-*adresářové služby*<br/>
+*ds*<br/>
 [in] Odkaz na existující datové připojení.
 
 ### <a name="remarks"></a>Poznámky
@@ -141,7 +141,7 @@ Vytvoří novou první přepsání `CDataConnection` objektu s výchozím nastav
 
 Druhý přepsání vytvoří novou `CDataConnection` objekt s ekvivalentní objekt datového připojení, můžete zadat nastavení.
 
-## <a name="#copy"></a> CDataConnection::Copy
+## <a name="copy"></a> CDataConnection::Copy
 
 Vytvoří kopii existující datové připojení.
 
@@ -153,10 +153,10 @@ CDataConnection& Copy(const CDataConnection & ds) throw();
 
 #### <a name="parameters"></a>Parametry
 
-*adresářové služby*<br/>
+*ds*<br/>
 [in] Odkaz na existující datové připojení ke kopírování.
 
-## <a name="#open"></a> CDataConnection::Open
+## <a name="open"></a> CDataConnection::Open
 
 Otevře připojení ke zdroji dat pomocí inicializačního řetězce.
 
@@ -175,7 +175,7 @@ HRESULT Open(LPCOLESTR szInitString) throw();
 
 Standardní HRESULT.
 
-## <a name="#opennewsession"></a> CDataConnection::OpenNewSession
+## <a name="opennewsession"></a> CDataConnection::OpenNewSession
 
 Otevře se nová relace pomocí zdroje dat aktuální objekt připojení.
 

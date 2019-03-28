@@ -1,6 +1,6 @@
 ---
 title: reverse_iterator – třída
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - xutility/std::reverse_iterator
 - iterator/std::reverse_iterator::difference_type
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::reverse_iterator [C++], base
 - std::reverse_iterator [C++], operator_star
 ms.assetid: c0b34d04-ae9a-4999-9aff-28b313897ffa
-ms.openlocfilehash: c865caa6d47d68462740fb4e9b2f6b712d9b6df9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae4a3da8f15f838900cb5a4324fbaeda01d918a2
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640216"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565633"
 ---
 # <a name="reverseiterator-class"></a>reverse_iterator – třída
 
@@ -64,7 +64,7 @@ V praxi to znamená, že v obrácené sekvenci bude iterátor reverse_iterator u
 |-|-|
 |[difference_type](#difference_type)|Typ, který obsahuje rozdíl mezi dvěma `reverse_iterator`odkazují na prvky v rámci stejného kontejneru.|
 |[iterator_type](#iterator_type)|Typ, který poskytuje základní iterátor pro `reverse_iterator`.|
-|[Ukazatel](#pointer)|Typ, který poskytuje ukazatel na prvek řešený třídou `reverse_iterator`.|
+|[pointer](#pointer)|Typ, který poskytuje ukazatel na prvek řešený třídou `reverse_iterator`.|
 |[Referenční dokumentace](#reference)|Typ, který poskytuje odkaz na prvek řešený třídou `reverse_iterator`.|
 
 ### <a name="member-functions"></a>Členské funkce
@@ -82,9 +82,9 @@ V praxi to znamená, že v obrácené sekvenci bude iterátor reverse_iterator u
 |[Operator ++](#op_add_add)|Zvýší `reverse_iterator` na další prvek.|
 |[operator+=](#op_add_eq)|Přidá zadaný posun z `reverse_iterator`.|
 |[Operator-](#operator-)|Odečte posun od `reverse_iterator` a vrátí `reverse_iterator` adresující prvek na pozici posunu.|
-|[Operator--](#operator--)|Sníží `reverse_iterator` na předchozí prvek.|
-|[operátor-=](#operator-_eq)|Odečte zadaný posun z `reverse_iterator`.|
-|[Operator ->](#operator-_gt)|Vrací ukazatel na prvek řešený třídou `reverse_iterator`.|
+|[operator--](#operator--)|Sníží `reverse_iterator` na předchozí prvek.|
+|[operator-=](#operator-_eq)|Odečte zadaný posun z `reverse_iterator`.|
+|[operator->](#op-arrow)|Vrací ukazatel na prvek řešený třídou `reverse_iterator`.|
 |[– operátor&#91;&#93;](#op_at)|Vrátí odkaz na posun prvku z prvku odkazovaného `reverse_iterator` zadaný počet pozic.|
 
 ## <a name="requirements"></a>Požadavky
@@ -265,7 +265,7 @@ reverse_iterator<RandomIterator> operator+(difference_type Off) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Vypnout*<br/>
+*Off*<br/>
 Posun přidávaného do "reverse iterator".
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -414,7 +414,7 @@ reverse_iterator<RandomIterator>& operator+=(difference_type Off);
 
 ### <a name="parameters"></a>Parametry
 
-*Vypnout*<br/>
+*Off*<br/>
 Posun, podle kterého se zvýší iterátor.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -477,7 +477,7 @@ After the +2 offset, the iterator rVPOS1 now points
 to the third element in the reversed sequence: 6.
 ```
 
-## <a name="reverse_iterator__operator-"></a>  reverse_iterator::Operator-
+## <a name="operator-"></a>  reverse_iterator::Operator-
 
 Odečte posun od `reverse_iterator` a vrátí `reverse_iterator` adresující prvek na pozici posunu.
 
@@ -487,7 +487,7 @@ reverse_iterator<RandomIterator> operator-(difference_type Off) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Vypnout*<br/>
+*Off*<br/>
 Posun k mít odečíst od bude iterátor reverse_iterator ukazovat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -554,7 +554,7 @@ After the -2 offset, the iterator rVPOS2 points
 to the 2nd element from the last in the reversed sequence: 9.
 ```
 
-## <a name="reverse_iterator__operator--"></a>  reverse_iterator::Operator--
+## <a name="operator--"></a>  reverse_iterator::Operator--
 
 Sníží bude iterátor reverse_iterator ukazovat na předchozí prvek.
 
@@ -627,7 +627,7 @@ After the decrement, the iterator rVPOS1 points
 to the next-to-last element in the reversed sequence: 3.
 ```
 
-## <a name="reverse_iterator__operator-_eq"></a>  reverse_iterator::Operator-=
+## <a name="operator-_eq"></a>  reverse_iterator::Operator-=
 
 Odečte zadaný posun z `reverse_iterator`.
 
@@ -637,7 +637,7 @@ reverse_iterator<RandomIterator>& operator-=(difference_type Off);
 
 ### <a name="parameters"></a>Parametry
 
-*Vypnout*<br/>
+*Off*<br/>
 Posun k mít odečíst od `reverse_iterator`.
 
 ### <a name="remarks"></a>Poznámky
@@ -702,7 +702,7 @@ After the -2 offset, the iterator rVPOS1 now points
 to the 2nd element from the last in the reversed sequence: 9.
 ```
 
-## <a name="op_arrow"></a>  reverse_iterator::Operator-&gt;
+## <a name="op-arrow"></a>  reverse_iterator::Operator-&gt;
 
 Vrací ukazatel na prvek řešený třídou `reverse_iterator`.
 
@@ -791,7 +791,7 @@ reference operator[](difference_type Off) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Vypnout*<br/>
+*Off*<br/>
 Posun od `reverse_iterator` adresu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1021,6 +1021,6 @@ int main( )
 
 ## <a name="see-also"></a>Viz také:
 
-[\<iterátor >](../standard-library/iterator.md)<br/>
+[\<iterator>](../standard-library/iterator.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

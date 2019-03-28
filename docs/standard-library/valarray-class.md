@@ -1,6 +1,6 @@
 ---
 title: valarray – třída
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - valarray/std::valarray
 - valarray/std::valarray::value_type
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::valarray [C++], sum
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
-ms.openlocfilehash: f38d431248c524a65b4a7a7126ba73b767a64173
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: efb186753de0e04bd01f9cc6e81c487084b88ac2
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525304"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565737"
 ---
 # <a name="valarray-class"></a>valarray – třída
 
@@ -59,7 +59,7 @@ Konkrétně se žádné lišila mohou existovat mezi konstrukci kopie a výchoz�
 
 |Konstruktor|Popis|
 |-|-|
-|[valarray –](#valarray)|Vytvoří `valarray` určité velikosti nebo s elementy s konkrétní hodnotou nebo jako kopii jiného `valarray` nebo podsady jiné `valarray`.|
+|[valarray](#valarray)|Vytvoří `valarray` určité velikosti nebo s elementy s konkrétní hodnotou nebo jako kopii jiného `valarray` nebo podsady jiné `valarray`.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -71,16 +71,16 @@ Konkrétně se žádné lišila mohou existovat mezi konstrukci kopie a výchoz�
 
 |Členská funkce|Popis|
 |-|-|
-|[Použít](#apply)|Použije zadanou funkci na každý prvek `valarray`.|
-|[cshift –](#cshift)|Cyklicky přesouvá všechny prvky `valarray` zadaný počet pozic.|
+|[apply](#apply)|Použije zadanou funkci na každý prvek `valarray`.|
+|[cshift](#cshift)|Cyklicky přesouvá všechny prvky `valarray` zadaný počet pozic.|
 |[free](#free)|Uvolní paměť používanou `valarray`.|
 |[max](#max)|Vyhledá největšího prvku ve `valarray`.|
 |[min](#min)|Vyhledá nejnižší prvek v `valarray`.|
-|[Změna velikosti](#resize)|Počet prvků v změní `valarray` na zadané číslo, přidání nebo odebrání prvků podle potřeby.|
-|[SHIFT](#shift)|Posune všechny prvky `valarray` zadaný počet pozic.|
+|[resize](#resize)|Počet prvků v změní `valarray` na zadané číslo, přidání nebo odebrání prvků podle potřeby.|
+|[shift](#shift)|Posune všechny prvky `valarray` zadaný počet pozic.|
 |[Velikost](#size)|Zjistí počet prvků v `valarray`.|
 |[Součet](#sum)|Určuje součet všech prvků v `valarray` nenulovou délkou.|
-|[Prohození](#swap)||
+|[swap](#swap)||
 
 ### <a name="operators"></a>Operátory
 
@@ -88,18 +88,18 @@ Konkrétně se žádné lišila mohou existovat mezi konstrukci kopie a výchoz�
 |-|-|
 |[operátor!](#op_not)|Unární operátor, který získá logické `NOT` hodnoty každého prvku `valarray`.|
 |[operator%=](#op_mod_eq)|Získá zbytek po dělení element-wise prvků pole, buď pomocí zadaného `valarray` nebo podle hodnoty typu elementu.|
-|[operátor & =](#op_amp_eq)|Získá bitový `AND` prvků v poli buď pomocí odpovídajících prvků v zadané `valarray` nebo s hodnotou typu elementu.|
-|[operátor >> =](#op_gt_gt_eq)|Vpravo staffhubu bity pro každý prvek z `valarray` zadaný počet pozic, nebo částku element-wise určené Druhý operand `valarray`.|
-|[operátor << =](#op_lt_lt_eq)|Vlevo staffhubu bity pro každý prvek z `valarray` zadaný počet pozic, nebo částku element-wise určené Druhý operand `valarray`.|
+|[operátor & =](#op_and_eq)|Získá bitový `AND` prvků v poli buď pomocí odpovídajících prvků v zadané `valarray` nebo s hodnotou typu elementu.|
+|[operator>>=](#op_gt_gt_eq)|Vpravo staffhubu bity pro každý prvek z `valarray` zadaný počet pozic, nebo částku element-wise určené Druhý operand `valarray`.|
+|[operator<<=](#op_lt_lt_eq)|Vlevo staffhubu bity pro každý prvek z `valarray` zadaný počet pozic, nebo částku element-wise určené Druhý operand `valarray`.|
 |[Operator * =](#op_star_eq)|Vynásobí prvky zadaného `valarray` nebo hodnota typu prvku element-wise operandem `valarray`.|
 |[Operator +](#op_add)|Unární operátor, který se vztahuje na každý prvek v plus `valarray`.|
 |[operator+=](#op_add_eq)|Přidá prvky zadaného `valarray` nebo hodnota typu prvku element-wise operandem `valarray`.|
 |[Operator-](#operator-)|Unární operátor, který se vztahuje na každý prvek v minus `valarray`.|
-|[operátor-=](#operator-_eq)|Odečte prvky zadaného `valarray` nebo hodnota typu prvku element-wise z operand `valarray`.|
+|[operator-=](#operator-_eq)|Odečte prvky zadaného `valarray` nebo hodnota typu prvku element-wise z operand `valarray`.|
 |[/ = – operátor](#op_div_eq)|Vydělí operand `valarray` element-wise elementy zadaného `valarray` nebo hodnota typu elementu.|
 |[operátor =](#op_eq)|Přiřadí prvků, které mají `valarray` jehož hodnoty jsou specifikované buď přímo, nebo jako součást některých dalších `valarray` , nebo `slice_array`, `gslice_array`, `mask_array`, nebo `indirect_array`.|
 |[– operátor&#91;&#93;](#op_at)|Vrátí odkaz na prvek nebo její hodnotu na zadaný index nebo podmnožinu zadané.|
-|[operátor ^ =](#op_xor_eq)|Získá element-wise exkluzivní logický or – operátor ( `XOR`) pomocí zadané valarray nebo hodnoty na typ prvku pole.|
+|[operator^=](#op_xor_eq)|Získá element-wise exkluzivní logický or – operátor ( `XOR`) pomocí zadané valarray nebo hodnoty na typ prvku pole.|
 |[operator&#124;=](#op_or_eq)|Získá bitový `OR` prvků v poli buď pomocí odpovídajících prvků v zadané `valarray` nebo s hodnotou typu elementu.|
 |[operator~](#op_dtor)|Unární operátor, který získá bitový `NOT` hodnoty každého prvku `valarray`.|
 
@@ -508,7 +508,7 @@ valarray: ( 0 -3 4 -7 1 -3 ).
 */
 ```
 
-## <a name="and_eq"></a>  valarray::Operator&amp;=
+## <a name="op_and_eq"></a>  valarray::Operator&amp;=
 
 Získá bitový **a** prvků v poli s odpovídající prvky v zadané valarray nebo s hodnotou typu elementu.
 
@@ -906,7 +906,7 @@ valarray: ( 2 0 4 2 6 4 8 6 ).
 */
 ```
 
-## <a name="valarray__operator-"></a>  valarray::Operator-
+## <a name="operator-"></a>  valarray::Operator-
 
 Unární operátor minus se vztahuje na každý prvek valarray.
 
@@ -958,7 +958,7 @@ valarray: ( 0 0 2 -2 4 -4 6 -6 8 -8 ).
 */
 ```
 
-## <a name="valarray__operator-_eq"></a>  valarray::Operator-=
+## <a name="operator-_eq"></a>  valarray::Operator-=
 
 Odečte prvků zadaného valarray nebo hodnotu na typ prvku element-wise, ze valarray operand.
 
@@ -1276,7 +1276,7 @@ Valarray, jehož prvky jsou logické element-wise, exkluzivní **XOR** z operand
 
 ### <a name="remarks"></a>Poznámky
 
-Exkluzivní logické, nebo jen **XOR**, tuto sémantiku: uvedeny prvky *e*1 a *e*2, *e*1  **XOR** *e*2 je **true** Pokud přesně jeden z elementů je true. **false** Pokud oba prvky jsou false nebo pokud jsou pravdivé oba prvky.
+Exkluzivní logické, nebo jen **XOR**, tuto sémantiku: Daný prvek *e*1 a *e*2, *e*1 **XOR** *e*2 je **true** Pokud přesně jeden z elementů je true. **false** Pokud oba prvky jsou false nebo pokud jsou pravdivé oba prvky.
 
 ### <a name="example"></a>Příklad
 
@@ -1852,7 +1852,7 @@ Počet prvků, které mají být v valarray.
 *Val*<br/>
 Hodnota se použije při inicializaci prvků v valarray.
 
-*PTR*<br/>
+*Ptr*<br/>
 Ukazatele na hodnoty, které se použijí k inicializaci prvků v valarray.
 
 *doprava*<br/>

@@ -1,6 +1,6 @@
 ---
 title: move_iterator – třída
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - iterator/std::move_iterator
 - iterator/std::move_iterator::iterator_type
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::move_iterator [C++], reference
 - std::move_iterator [C++], base
 ms.assetid: a5e5cdd8-a264-4c6b-9f9c-68b0e8edaab7
-ms.openlocfilehash: c9ff9385d43ac1c53f91a548ea01c04c1c67dc18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e2e62946325c082e761b6997ae584419175f8fe
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656128"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565042"
 ---
 # <a name="moveiterator-class"></a>move_iterator – třída
 
@@ -57,7 +57,7 @@ A `move_iterator` může být provádět operace, které nejsou definovány zaba
 |[iterator_category](#iterator_category)|Synonymum pro delší **typename** výraz se stejným názvem, `iterator_category` určuje obecné vlastnosti iterátoru.|
 |[value_type](#value_type)|Synonymum pro delší **typename** výraz se stejným názvem, `value_type` popisuje typ prvků iterátoru.|
 |[difference_type](#difference_type)|Synonymum pro delší **typename** výraz se stejným názvem, `difference_type` popisuje typ integrálu požadovaný k vyjádření rozdílných hodnot mezi prvky.|
-|[Ukazatel](#pointer)|Synonymum pro parametr šablony `RandomIterator`.|
+|[pointer](#pointer)|Synonymum pro parametr šablony `RandomIterator`.|
 |[Referenční dokumentace](#reference)|Synonymum pro `rvalue` odkaz `value_type&&`.|
 
 ### <a name="member-functions"></a>Členské funkce
@@ -86,7 +86,7 @@ A `move_iterator` může být provádět operace, které nejsou definovány zaba
 
 **Namespace:** std
 
-## <a name="base"></a>  move_iterator::Base
+## <a name="base"></a>  move_iterator::base
 
 Vrátí uložený iterátor pro tuto `move_iterator`.
 
@@ -175,7 +175,7 @@ Vrátí nový aktuální prvek.
 
 Operátor, který se přidá *_Off* k uloženému iterátoru. Vrátí `*this`.
 
-## <a name="move_iterator__operator-_eq"></a>  move_iterator::Operator-=
+## <a name="operator-_eq"></a>  move_iterator::Operator-=
 
 Přesune se do zadaného počtu předchozí prvky. Tento operátor odečte posun od uloženého iterátoru.
 
@@ -234,7 +234,7 @@ reference operator[](difference_type _Off) const;
 
 Vrátí operátor `(reference)*(*this + _Off)`.
 
-## <a name="move_iterator__operator--"></a>  move_iterator::Operator--
+## <a name="operator--"></a>  move_iterator::Operator--
 
 Provedení před instrumentací a snížení členské operátory provádějí snížení na uloženém iterátoru.
 
@@ -251,7 +251,7 @@ První sníží – operátor (predekrement) člen uložený iterátor. Vrátí 
 
 Druhý operátor (postdekrement) vytvoří kopii tohoto `*this`, vyhodnotí `--*this`. Vrátí kopii.
 
-## <a name="move_iterator__operator-"></a>  move_iterator::Operator-
+## <a name="operator-"></a>  move_iterator::Operator-
 
 Sníží uložený iterátor a vrátí uvedenou hodnotu.
 
@@ -327,7 +327,7 @@ Typ je synonymum pro vlastnost iterátoru `typename iterator_traits<RandomIterat
 
 ## <a name="see-also"></a>Viz také:
 
-[\<iterátor >](../standard-library/iterator.md)<br/>
-[Hodnoty lvalue a rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)<br/>
+[\<iterator>](../standard-library/iterator.md)<br/>
+[L-hodnoty a r-hodnoty](../cpp/lvalues-and-rvalues-visual-cpp.md)<br/>
 [Konstruktory a operátory přiřazení pro přesunutí (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

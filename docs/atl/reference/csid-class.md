@@ -1,6 +1,6 @@
 ---
 title: CSID – třída
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CSid
 - ATLSECURITY/ATL::CSid
@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 02b7cbb9e66e1e8297699503fc510247efed1629
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4c8d05fd193254f2431bbec7692ff25420c1bf05
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301893"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565867"
 ---
 # <a name="csid-class"></a>CSID – třída
 
@@ -45,20 +45,20 @@ class CSid
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CSid::CSidArray](#csidarray)|Pole `CSid` objekty.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CSid::CSid](#csid)|Konstruktor|
 |[CSid::~CSid](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CSid::AccountName](#accountname)|Vrátí název účtu přidruženého k `CSid` objektu.|
 |[CSid::Domain](#domain)|Vrátí název domény přidružené k `CSid` objektu.|
@@ -86,8 +86,8 @@ class CSid
 |-|-|
 |[Operator ==](#operator_eq_eq)|Testuje dva objekty popisovač zabezpečení pro rovnost|
 |[Operator! =](#operator_neq)|Testuje dva objekty popisovač zabezpečení pro nerovnost|
-|[– Operátor \<](#operator_lt_)|Porovná relativní hodnotu dvou objektů popisovač zabezpečení.|
-|[Operator >](#operator_gt_)|Porovná relativní hodnotu dvou objektů popisovač zabezpečení.|
+|[– Operátor \<](#operator_lt)|Porovná relativní hodnotu dvou objektů popisovač zabezpečení.|
+|[Operator >](#operator_gt)|Porovná relativní hodnotu dvou objektů popisovač zabezpečení.|
 |[– Operátor \<=](#operator_lt__eq)|Porovná relativní hodnotu dvou objektů popisovač zabezpečení.|
 |[Operator > =](#operator_gt__eq)|Porovná relativní hodnotu dvou objektů popisovač zabezpečení.|
 
@@ -119,7 +119,7 @@ Vrátí LPCTSTR odkazující na název účtu.
 
 Tato metoda se pokusí najít název zadaného `SID` (security identifier). Úplné podrobnosti najdete v tématu [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).
 
-Pokud žádný název účtu pro `SID` najdete, `AccountName` vrátí prázdný řetězec. Tato situace může nastat, pokud vypršel časový limit sítě zabraňuje tato metoda vyhledání názvu. Dojde k také pro identifikátory zabezpečení bez odpovídající názvu účtu, jako je například přihlášení `SID` identifikující přihlašovací relace.
+Pokud žádný název účtu pro `SID` najdete, `AccountName` vrátí prázdný řetězec. Tato situace může nastat, pokud vypršel časový limit sítě zabraňuje tato metoda vyhledání názvu. Je také dojde k pro identifikátory zabezpečení bez odpovídající názvu účtu, jako například `SID` identifikující přihlašovací relace.
 
 ##  <a name="csid"></a>  CSid::CSid
 
@@ -210,7 +210,7 @@ Vrátí `LPCTSTR` odkazující na doménu.
 
 Tato metoda se pokusí najít název zadaného `SID` (security identifier). Úplné podrobnosti najdete v tématu [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).
 
-Pokud žádný název účtu pro `SID` najdete, `Domain` vrátí název domény jako prázdný řetězec. Tato situace může nastat, pokud vypršel časový limit sítě zabraňuje tato metoda vyhledání názvu. Dojde k také pro identifikátory zabezpečení bez odpovídající názvu účtu, jako je například přihlášení `SID` identifikující přihlašovací relace.
+Pokud žádný název účtu pro `SID` najdete, `Domain` vrátí název domény jako prázdný řetězec. Tato situace může nastat, pokud vypršel časový limit sítě zabraňuje tato metoda vyhledání názvu. Je také dojde k pro identifikátory zabezpečení bez odpovídající názvu účtu, jako například `SID` identifikující přihlašovací relace.
 
 ##  <a name="equalprefix"></a>  CSid::EqualPrefix
 

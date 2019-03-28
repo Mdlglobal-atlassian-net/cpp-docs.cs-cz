@@ -1,6 +1,6 @@
 ---
 title: CDHtmlDialog – třída
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CDHtmlDialog
 - AFXDHTML/CDHtmlDialog
@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 5b3e34987b5d6b63ee302ba53e456c448ac3c3d2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bda980c26f9791e1d4f03026f7e118e69a4ab881
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413950"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565802"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog – třída
 
@@ -137,10 +137,10 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDHtmlDialog::CDHtmlDialog](#cdhtmldialog)|Vytvoří objekt CDHtmlDialog.|
-|[CDHtmlDialog::~CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|Odstraní objekt CDHtmlDialog.|
+|[CDHtmlDialog::~CDHtmlDialog](#_dtorcdhtmldialog)|Odstraní objekt CDHtmlDialog.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -352,7 +352,7 @@ Výměna dat mezi členské proměnné a hodnotu vlastnosti ovládacího prvku A
 void DDX_DHtml_AxControl(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     VARIANT& var);
 
 void DDX_DHtml_AxControl(
@@ -370,7 +370,7 @@ Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.
 *szId*<br/>
 Hodnota parametru ID značky object ve zdroji HTML pro ovládací prvek ActiveX.
 
-*dispid*<br/>
+*dispId*<br/>
 ID odbavení vlastnosti, se kterým se má pro výměnu dat.
 
 *szPropName*<br/>
@@ -417,43 +417,43 @@ Výměna dat mezi členskou proměnnou a všechny vlastnosti elementu HTML na st
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     CString& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     short& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     int& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     long& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     DWORD& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     float& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     double& value);
 ```
 
@@ -465,7 +465,7 @@ Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.
 *szId*<br/>
 Hodnota zadaná pro parametr ID ovládacího prvku HTML.
 
-*dispid*<br/>
+*dispId*<br/>
 Dispatch ID elementu HTML, který chcete pro výměnu dat.
 
 *value*<br/>
@@ -510,7 +510,7 @@ void DDX_DHtml_SelectIndex(
 Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.
 
 *szId*<br/>
-Hodnota zadaná pro parametr id ovládacího prvku HTML.
+Hodnota, která jste zadali pro ovládací prvek HTML `id` parametru.
 
 *value*<br/>
 Hodnota, která se vyměňují.
@@ -651,11 +651,11 @@ VARIANT GetControlProperty(
 
 VARIANT GetControlProperty(
     LPCTSTR szId,
-    DISPID dispid);
+    DISPID dispId);
 
 VARIANT GetControlProperty(
     IDispatch* pdispControl,
-    DISPID dispid);
+    DISPID dispId);
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -669,7 +669,7 @@ Název vlastnosti ve výchozím nastavení národního prostředí aktuálního 
 *pdispControl*<br/>
 `IDispatch` Ukazatel ovládacího prvku ActiveX.
 
-*dispid*<br/>
+*dispId*<br/>
 ID odbavení vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -802,7 +802,7 @@ template <class Q> HRESULT GetElementInterface(
 
 HRESULT GetElementInterface(
     LPCTSTR szElementId,
-    REFIID riid,
+    REFIID refiid,
     void** ppvObj);
 ```
 
@@ -814,7 +814,7 @@ ID elementu HTML.
 *ppvObj*<br/>
 Adresa ukazatel, který bude vyplněn ukazatel požadované rozhraní Pokud je nalezen element a dotaz bude úspěšná.
 
-*riid*<br/>
+*refiid*<br/>
 ID rozhraní (IID) požadovaný rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -827,12 +827,12 @@ Standardní hodnoty HRESULT.
 
 ##  <a name="getelementproperty"></a>  CDHtmlDialog::GetElementProperty
 
-Načte hodnotu vlastnosti určený podle *dispid* z prvku HTML, který je identifikován *szElementId*.
+Načte hodnotu vlastnosti určený podle *dispId* z prvku HTML, který je identifikován *szElementId*.
 
 ```
 VARIANT GetElementProperty(
     LPCTSTR szElementId,
-    DISPID dispid);
+    DISPID dispId);
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -840,7 +840,7 @@ VARIANT GetElementProperty(
 *szElementId*<br/>
 ID elementu HTML.
 
-*dispid*<br/>
+*dispId*<br/>
 ID odbavení vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1151,7 +1151,7 @@ Vrátí E_NOTIMPL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je od CDHtmlDialog čerpat ze [IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
 
 ##  <a name="onframewindowactivate"></a>  CDHtmlDialog::OnFrameWindowActivate
 
@@ -1245,12 +1245,12 @@ Nastaví vlastnost ovládacího prvku ActiveX na novou hodnotu.
 ```
 void SetControlProperty(
     LPCTSTR szElementId,
-    DISPID dispid,
+    DISPID dispId,
     VARIANT* pVar);
 
 void SetControlProperty(
     IDispatch* pdispControl,
-    DISPID dispid,
+    DISPID dispId,
     VARIANT* pVar);
 
 void SetControlProperty(
@@ -1264,7 +1264,7 @@ void SetControlProperty(
 *szElementId*<br/>
 ID HTML ovládacího prvku ActiveX.
 
-*dispid*<br/>
+*dispId*<br/>
 ID odbavení vlastnosti chcete nastavit.
 
 *pVar*<br/>
@@ -1308,7 +1308,7 @@ Nastaví vlastnost elementu HTML.
 ```
 void SetElementProperty(
     LPCTSTR szElementId,
-    DISPID dispid,
+    DISPID dispId,
     VARIANT* pVar);
 ```
 
@@ -1317,7 +1317,7 @@ void SetElementProperty(
 *szElementId*<br/>
 ID elementu HTML.
 
-*dispid*<br/>
+*dispId*<br/>
 ID odbavení vlastnosti chcete nastavit.
 
 *pVar*<br/>

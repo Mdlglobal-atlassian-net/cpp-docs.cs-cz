@@ -1,6 +1,6 @@
 ---
 title: uint_4 – třída
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::ywx
 - amp_short_vectors/Concurrency::graphics::uint_4::get_yxw
@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::rba
 - amp_short_vectors/Concurrency::graphics::uint_4::set_yzx
 ms.assetid: 1cda9e2c-5970-4ced-ae54-d7ff3c6746f4
-ms.openlocfilehash: e5c0482854a08973593e9c67f2f51d5706304831
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 413edb5c83dba465aff804658afc6931c7181e73
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266806"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565841"
 ---
 # <a name="uint4-class"></a>uint_4 – třída
 
@@ -289,7 +289,7 @@ class uint_4;
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |`value_type`||
 
@@ -301,7 +301,7 @@ class uint_4;
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |uint_4::get_w||
 |uint_4::get_wx||
@@ -442,7 +442,7 @@ class uint_4;
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |uint_4::operator-||
 |uint_4::operator--||
@@ -455,13 +455,13 @@ class uint_4;
 
 ### <a name="public-constants"></a>Veřejné konstanty
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[velikost – konstanta](#size)||
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |uint_4::a||
 |uint_4::ab||
@@ -606,7 +606,7 @@ class uint_4;
 
 Výchozí konstruktor, inicializuje všechny prvky na 0.
 
-## <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
 ```
 uint_4() restrict(amp,cpu);
@@ -659,9 +659,9 @@ Hodnota inicializace.
 *Ji_né*<br/>
 Objekt použitý k inicializaci.
 
-## <a name=""></a> Velikost
+## <a name="size"></a>velikost
 
-## <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
 ```
 static const int size = 4;

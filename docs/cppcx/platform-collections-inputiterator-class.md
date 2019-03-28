@@ -1,18 +1,18 @@
 ---
 title: 'Platform::Collections:: inputiterator – třída'
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::InputIterator::InputIterator
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-ms.openlocfilehash: f5cd6afa591ba2a03fbfe492e566b0fc938ae396
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 49b131b01fe3d9cad5f8366fd4cc0c110b5d060c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745802"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565136"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections:: inputiterator – třída
 
@@ -34,7 +34,7 @@ Vlastnost typename třídy InputIterator šablony.
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |`difference_type`|Rozdíl ukazatelů (ptrdiff_t).|
 |`iterator_category`|Kategorie vstupní iterátor (:: std::input_iterator_tag).|
@@ -44,7 +44,7 @@ Vlastnost typename třídy InputIterator šablony.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[InputIterator::InputIterator](#ctor)|Inicializuje novou instanci třídy InputIterator.|
 
@@ -53,7 +53,7 @@ Vlastnost typename třídy InputIterator šablony.
 |Název|Popis|
 |----------|-----------------|
 |[InputIterator::operator! = – operátor](#operator-inequality)|Určuje, zda aktuální InputIterator není roven zadané InputIterator.|
-|[InputIterator::operator * – operátor](#operator-decrement)|Získá odkaz na prvek určeném aktuálním InputIterator.|
+|[InputIterator::operator * – operátor](#operator-dereference)|Získá odkaz na prvek určeném aktuálním InputIterator.|
 |[InputIterator::operator ++ – operátor](#operator-increment)|Aktuální InputIterator zvýší.|
 |[InputIterator::operator == – operátor](#operator-equality)|Určuje, zda aktuální InputIterator rovná zadané InputIterator.|
 |[InputIterator::operator-> Operator](#operator-arrow)|Načte adresu elementu, který odkazuje aktuální InputIterator.|
@@ -76,12 +76,12 @@ Inicializuje novou instanci třídy InputIterator.
 
 ```
 InputIterator();
-explicit InputIterator(Windows::Foundation::Collections<X>^ iter);
+explicit InputIterator(Windows::Foundation::Collections<X>^ iterator);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*iter*<br/>
+*iterator*<br/>
 Objekt iterátoru.
 
 ## <a name="operator-arrow"></a>  InputIterator::operator -&gt; – operátor

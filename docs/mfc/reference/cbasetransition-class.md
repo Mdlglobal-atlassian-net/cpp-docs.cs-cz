@@ -1,6 +1,6 @@
 ---
 title: Cbasetransition – třída
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CBaseTransition
 - AFXANIMATIONCONTROLLER/CBaseTransition
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-ms.openlocfilehash: 1f9bc3708974511506741a35c11676df2b0be592
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 37bf536403d0edfc16b098929a4758a6c6958cf1
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258369"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565906"
 ---
 # <a name="cbasetransition-class"></a>Cbasetransition – třída
 
@@ -65,20 +65,20 @@ class CBaseTransition : public CObject;
 
 ### <a name="public-enumerations"></a>Veřejné výčty
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[Výčet CBaseTransition::TRANSITION_TYPE](#transition_type_enumeration)|Definuje typy přechod aktuálně podporováno implementací MFC rozhraní Windows API animace.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CBaseTransition::CBaseTransition](#cbasetransition)|Vytvoří základní transtion objekt.|
-|[CBaseTransition::~CBaseTransition](#cbasetransition__~cbasetransition)|Destruktor. Volá se při přechodu objekt je zničen.|
+|[CBaseTransition::CBaseTransition](#cbasetransition)|Vytvoří objekt základní přechod.|
+|[CBaseTransition::~CBaseTransition](#_dtorcbasetransition)|Destruktor. Volá se při přechodu objekt je zničen.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CBaseTransition::AddToStoryboard](#addtostoryboard)|Přidá přechod do scénáře.|
 |[CBaseTransition::AddToStoryboardAtKeyframes](#addtostoryboardatkeyframes)|Přidá přechod do scénáře.|
@@ -95,7 +95,7 @@ class CBaseTransition : public CObject;
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CBaseTransition::m_bAdded](#m_badded)|Určuje, zda přechodu je přidaný do scénáře.|
 |[CBaseTransition::m_pEndKeyframe](#m_pendkeyframe)|Uchovává ukazatel na klíčový snímek, který určuje konci přechodu.|
@@ -170,7 +170,7 @@ Přechod platí pro proměnnou související ve scénáři. Pokud nebyla zadána
 
 ##  <a name="cbasetransition"></a>  CBaseTransition::CBaseTransition
 
-Vytvoří základní transtion objekt.
+Vytvoří objekt základní přechod.
 
 ```
 CBaseTransition();

@@ -1,6 +1,6 @@
 ---
 title: fpos – třída
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - iosfwd/std::fpos
 - iosfwd/std::fpos::seekpos
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - std::fpos [C++], seekpos
 - std::fpos [C++], state
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
-ms.openlocfilehash: bf15cdf0ec4df1301b074ba2ae179dee3619d30d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78b136d72067fa5fff58e8a7acc044fb4e1a409e
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564200"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565059"
 ---
 # <a name="fpos-class"></a>fpos – třída
 
@@ -50,8 +50,8 @@ Informace o stavu.
 
 |Členská funkce|Popis|
 |-|-|
-|[seekpos –](#seekpos)|Interně jej využívá standardní knihovny C++ pouze. Nevolejte tuto metodu v kódu.|
-|[Stav](#state)|Nastaví nebo vrátí stav převodu.|
+|[seekpos](#seekpos)|Interně jej využívá standardní knihovny C++ pouze. Nevolejte tuto metodu v kódu.|
+|[state](#state)|Nastaví nebo vrátí stav převodu.|
 
 ### <a name="operators"></a>Operátory
 
@@ -61,7 +61,7 @@ Informace o stavu.
 |[Operator +](#op_add)|Zvýší Indikátor pozice v souboru.|
 |[operator+=](#op_add_eq)|Zvýší Indikátor pozice v souboru.|
 |[Operator-](#operator-)|Indikátor pozice souboru sníží.|
-|[operátor-=](#operator-_eq)|Indikátor pozice souboru sníží.|
+|[operator-=](#operator-_eq)|Indikátor pozice souboru sníží.|
 |[operator==](#op_eq_eq)|Ukazatele pozice v souboru testy pro rovnost.|
 |[streamoff – operátor](#op_streamoff)|Objekt přetypování typu `fpos` na objekt typu `streamoff`.|
 
@@ -221,7 +221,7 @@ Přidá členskou funkci *_Off* uložené posunu členský objekt a vrátí  **\
 
 Zobrazit [operátor! =](#op_neq) ukázku použití `operator+=`.
 
-## <a name="fpos__operator-"></a>  fpos::Operator-
+## <a name="operator-"></a>  fpos::Operator-
 
 Indikátor pozice souboru sníží.
 
@@ -247,7 +247,7 @@ První členská funkce vrátí `(streamoff)*this - (streamoff) right`. Druhá �
 
 Zobrazit [operátor! =](#op_neq) ukázku použití `operator-`.
 
-## <a name="fpos__operator-_eq"></a>  fpos::Operator-=
+## <a name="operator-_eq"></a>  fpos::Operator-=
 
 Indikátor pozice souboru sníží.
 

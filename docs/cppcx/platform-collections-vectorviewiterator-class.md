@@ -1,18 +1,18 @@
 ---
 title: 'Platform::Collections:: vectorviewiterator – třída'
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorViewIterator::VectorViewIterator
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-ms.openlocfilehash: 4d4a591c6febdf6e34757251c4de5d01a9e2fa87
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0de4ffb8e72c21490f07ae164aa23ffcd524c2b8
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743739"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565659"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections:: vectorviewiterator – třída
 
@@ -36,7 +36,7 @@ Vlastnost typename třídy VectorViewIterator šablony.
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |`difference_type`|Rozdíl ukazatelů (ptrdiff_t).|
 |`iterator_category`|Kategorie iterátor náhodného přístupu (:: std::random_access_iterator_tag).|
@@ -46,13 +46,13 @@ Vlastnost typename třídy VectorViewIterator šablony.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[VectorViewIterator::VectorViewIterator](#ctor)|Inicializuje novou instanci třídy VectorViewIterator.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[VectorViewIterator::operator-– operátor](#operator-minus)|Odečte buď zadaný počet prvků z aktuální iterace, což má za následek nové iterátor nebo iterátor zadané z aktuální iterace, což má za následek počet prvků mezi iterátory.|
 |[VectorViewIterator::operator-- Operator](#operator-decrement)|Sníží aktuální VectorViewIterator.|
@@ -61,7 +61,7 @@ Vlastnost typename třídy VectorViewIterator šablony.
 |[VectorViewIterator::operator\[\]](#operator-at)|Získá odkaz na prvek, který je zadaný posun z aktuální VectorViewIterator.|
 |[VectorViewIterator::operator + – operátor](#operator-plus)|Vrátí VectorViewIterator, odkazující na prvek na zadané posunutí ze zadaného VectorViewIterator.|
 |[VectorViewIterator::operator ++ – operátor](#operator-increment)|Aktuální VectorViewIterator zvýší.|
-|[VectorViewIterator::operator+= Operator](#operator-plus-assign)|Zvětší aktuální VectorViewIterator podle zadaného posunu.|
+|[VectorViewIterator::operator+= Operator](#operator-plus-equals)|Zvětší aktuální VectorViewIterator podle zadaného posunu.|
 |[VectorViewIterator::operator < – operátor](#operator-less-than)|Označuje, zda aktuální VectorViewIterator je nižší než zadané VectorViewIterator.|
 |[VectorViewIterator::operator\<= Operator](#operator-less-than-or-equals)|Označuje, zda aktuální VectorViewIterator je menší než nebo rovna hodnotě zadané VectorViewIterator.|
 |[VectorViewIterator::operator-= Operator](#operator-minus-assign)|Sníží aktuální VectorViewIterator podle zadaného posunu.|

@@ -1,16 +1,16 @@
 ---
-title: Sdílené složky nebo resuse nastavení sady Visual Studio project - C++
-ms.date: 11/28/2018
+title: Nastavení projektu Visual Studio – C++ opakovaně používat nebo sdílet
+ms.date: 03/27/2019
 helpviewer_keywords:
 - project properties [C++], reusable
-ms.openlocfilehash: 50e3795a4708a3c15ed25ee7ff6565470ef6989a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: b49c125e0341a2de68bbcd992dd8f9afaa99233d
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823412"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565123"
 ---
-# <a name="share-or-resuse-visual-studio-project-settings"></a>Sdílené složky nebo resuse nastavení projektu Visual Studio
+# <a name="share-or-reuse-visual-studio-project-settings"></a>Nastavení projektu Visual Studio opakovaně používat nebo sdílet
 
 Chcete-li vytvořit vlastní skupiny nastavení, které můžete sdílet s ostatními uživateli nebo znovu použít ve více projektech, použijte **Správce vlastností** k vytvoření *vlastností* (soubor PROPS) k uložení nastavení pro každý druh projekt, který chcete moci opakovaně používat nebo sdílet s ostatními. Pomocí vlastnosti stylů je mnohem méně náchylný než jiné způsoby vytvoření "globální" nastavení. 
 

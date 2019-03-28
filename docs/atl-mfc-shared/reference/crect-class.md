@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: fadb430d570e516d915d520f06e4c247b131c3db
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 6e87d77eec526cbfcfe5c1e6e78b0287226f0613
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739426"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565694"
 ---
 # <a name="crect-class"></a>Crect – třída
 
@@ -55,13 +55,13 @@ class CRect : public tagRECT
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CRect::CRect](#crect)|Vytvoří `CRect` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CRect::BottomRight](#bottomright)|Vrátí bod vpravo dole `CRect`.|
 |[CRect::CenterPoint](#centerpoint)|Vrátí centerpoint z `CRect`.|
@@ -89,7 +89,7 @@ class CRect : public tagRECT
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CRect::operator-](#operator_-)|Odečte daný posun od `CRect` nebo vyfoukne `CRect` a vrátí výsledný `CRect`.|
 |[CRect::operator lpcrect –](#operator_lpcrect)|Převede `CRect` do `LPCRECT`.|
@@ -950,7 +950,7 @@ Odkazuje na [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo
 
 Parametr *x* a *y* (nebo `cx` a `cy`) přidání hodnot do `CRect`.
 
-Tento třetí přetížení `CRect` podle počtu jednotek zadaný v parametru každého člena.
+Tento třetí přetížení `CRect` podle počtu jednotek určená v parametru každého člena.
 
 ### <a name="example"></a>Příklad
 
@@ -988,7 +988,7 @@ Odkazuje [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo `C
 
 Parametr *x* a *y* (nebo `cx` a `cy`) jsou hodnoty odečtena od `CRect`.
 
-Třetí přetížení vyfoukne `CRect` podle počtu jednotek zadaný v parametru každého člena. Všimněte si, že toto přetížení funkce jako [DeflateRect](#deflaterect).
+Třetí přetížení vyfoukne `CRect` podle počtu jednotek určená v parametru každého člena. Všimněte si, že toto přetížení funkce jako [DeflateRect](#deflaterect).
 
 ### <a name="example"></a>Příklad
 
@@ -1085,7 +1085,7 @@ Odkazuje na [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo
 
 Parametr *x* a *y* (nebo `cx` a `cy`) parametry jsou přidány do `CRect`je umístit.
 
-Vrátí nový třetí přetížení `CRect` , který je roven `CRect` zvětšený podle počtu jednotek zadaný v parametru každého člena.
+Vrátí nový třetí přetížení `CRect` , který je roven `CRect` zvětšený podle počtu jednotek určená v parametru každého člena.
 
 ### <a name="example"></a>Příklad
 
@@ -1128,7 +1128,7 @@ Odkazuje na [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo
 
 Parametr *x* a *y* (nebo `cx` a `cy`) jsou parametry odečtena od `CRect`je umístit.
 
-Vrátí nový třetí přetížení `CRect` , který je roven `CRect` zmenšený podle počtu jednotek zadaný v parametru každého člena. Všimněte si, že toto přetížení funkce jako [DeflateRect](#deflaterect), nikoli [SubtractRect](#subtractrect).
+Vrátí nový třetí přetížení `CRect` , který je roven `CRect` zmenšený podle počtu jednotek určená v parametru každého člena. Všimněte si, že toto přetížení funkce jako [DeflateRect](#deflaterect), nikoli [SubtractRect](#subtractrect).
 
 ### <a name="example"></a>Příklad
 

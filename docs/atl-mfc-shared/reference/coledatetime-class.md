@@ -1,6 +1,6 @@
 ---
 title: COleDateTime – třída
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - COleDateTime
 - ATLCOMTIME/ATL::COleDateTime
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 6644e4e10916068a91e48611338d79bbb9d0d75b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 46b5f15a2f6048745a12b8c3a8c8a63404f71aa2
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740527"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565932"
 ---
 # <a name="coledatetime-class"></a>COleDateTime – třída
 
@@ -85,7 +85,7 @@ class COleDateTime
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleDateTime::operator == COleDateTime::operator < atd.](#coledatetime_relational_operators)|Porovnat dva `COleDateTime` hodnoty.|
 |[COleDateTime::operator + COleDateTime::operator-](#operator_add_-)|Sčítání a odečítání `COleDateTime` hodnoty.|
@@ -117,7 +117,7 @@ Je jedním z možných typů [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagva
 |1. ledna 1900, 6: 00|2.25|
 
 > [!CAUTION]
-> Poznámka: v předchozí tabulce, i když v hodnotách dní záporný before midnight 30. prosince 1899, denní dobu hodnoty to nejde. Příklad 6:00:00 je vždy označena desetinná hodnota 0,25 bez ohledu na to, zda je celé číslo představující den (po 30. prosince 1899) kladná nebo záporná (před 30. prosince 1899). To znamená, že by jednoduché porovnání s plovoucí desetinnou čárkou bodu chybně řazení `COleDateTime` představující 6:00:00 na 12/29 nebo 1899 jako **později** než jedna představující 7:00 stejného dne.
+> V tabulce výše, i když v hodnotách dní záporný before midnight 30. prosince 1899, denní dobu hodnoty to nejde. Příklad 6:00:00 je vždy označena desetinná hodnota 0,25 bez ohledu na to, zda je celé číslo představující den (po 30. prosince 1899) kladná nebo záporná (před 30. prosince 1899). To znamená, že by jednoduché porovnání s plovoucí desetinnou čárkou bodu chybně řazení `COleDateTime` představující 6:00:00 na 12/29 nebo 1899 jako **později** než jedna představující 7:00 stejného dne.
 
 `COleDateTime` Třídy kalendářní data od 1. leden 100, do 31. prosince 9999. `COleDateTime` Třída používá gregoriánský kalendář; nepodporuje juliánský data. `COleDateTime` ignoruje letního času. (Viz [datum a čas: Podpora automatizace](../../atl-mfc-shared/date-and-time-automation-support.md).)
 
@@ -195,7 +195,7 @@ COleDateTime(int nYear,
 
 COleDateTime(WORD wDosDate,
     WORD wDosTime) throw();
-COleDateTime(const DBTIMESTAMP& dbts) throw();
+COleDateTime(const DBTIMESTAMP& timeStamp) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -216,7 +216,7 @@ A `time_t` nebo `__time64_t` hodnota, která má být převedena na hodnotu data
 A `SYSTEMTIME` struktura bude převeden na hodnotu data a času a zkopírovány do nového `COleDateTime` objektu.
 
 *filetimeSrc*<br/>
-A `FILETIME` struktura bude převeden na hodnotu data a času a zkopírovány do nového `COleDateTime` objektu. Všimněte si, že `FILETIME` používá koordinovaný světový čas (UTC), takže pokud předáte místní čas ve struktuře, vaše výsledky budou nesprávné. Zobrazit [časy](/windows/desktop/SysInfo/file-times) v sadě Windows SDK pro další informace.
+A `FILETIME` struktura bude převeden na hodnotu data a času a zkopírovány do nového `COleDateTime` objektu. A `FILETIME` používá koordinovaný světový čas (UTC), takže pokud předáte místní čas ve struktuře, vaše výsledky budou nesprávné. Zobrazit [časy](/windows/desktop/SysInfo/file-times) v sadě Windows SDK pro další informace.
 
 *nYear*, *nMonth*, *Nden*, *Nhodina*, *Nminimum*, *nSec*<br/>
 Označení hodnoty data a času, které se mají zkopírovat do nové `COleDateTime` objektu.
@@ -224,7 +224,7 @@ Označení hodnoty data a času, které se mají zkopírovat do nové `COleDateT
 *wDosDate*, *wDosTime*<br/>
 Hodnoty data a času zástupného kódu MS-DOS převést na hodnotu data a času a zkopírovány do nového `COleDateTime` objektu.
 
-*dbts*<br/>
+*timeStamp*<br/>
 Odkaz na [DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) struktury obsahující aktuální místní čas.
 
 ### <a name="remarks"></a>Poznámky
@@ -256,7 +256,7 @@ Tady je stručný popis jednotlivých konstruktor:
 
 - `COleDateTime(` *systimeSrc* **)** sestaví `COleDateTime` objektu z `SYSTEMTIME` hodnotu.
 
-- `COleDateTime(` `filetimeSrc` **)** Sestaví `COleDateTime` objektu z `FILETIME` hodnotu. . Všimněte si, že `FILETIME` používá koordinovaný světový čas (UTC), takže pokud předáte místní čas ve struktuře, vaše výsledky budou nesprávné. Zobrazit [časy](/windows/desktop/SysInfo/file-times) v sadě Windows SDK pro další informace.
+- `COleDateTime(` `filetimeSrc` **)** Sestaví `COleDateTime` objektu z `FILETIME` hodnotu. . A `FILETIME` používá koordinovaný světový čas (UTC), takže pokud předáte místní čas ve struktuře, vaše výsledky budou nesprávné. Další informace najdete v tématu [časy](/windows/desktop/SysInfo/file-times) v sadě Windows SDK.
 
 - `COleDateTime(` `nYear``nMonth`, `nDay`, `nHour`, `nMin`, `nSec` **)** Sestaví `COleDateTime` objekt ze zadaného číselné hodnoty.
 
@@ -300,7 +300,7 @@ Určuje jeden z následujících příznaků národní prostředí:
 Určuje ID národního prostředí pro převod. Další informace o identifikátorech jazyka najdete v tématu [identifikátory jazyka](/windows/desktop/Intl/language-identifiers).
 
 *lpszFormat*<br/>
-Formátování řetězců podobně jako `printf` formátovací řetězec. Každý formátování kódu, předchází procento ( `%`) podepsat, se nahradí odpovídající `COleDateTime` komponenty. Jiné znaky v řetězci formátování se zkopírují do vráceném řetězci beze změny. Zobrazit funkci run-time [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) Další informace. Hodnota a význam kódů formátování pro `Format` jsou:
+Formátování řetězců podobně jako `printf` formátovací řetězec. Každý formátování kódu, předchází procento ( `%`) podepsat, se nahradí odpovídající `COleDateTime` komponenty. Jiné znaky v řetězci formátování se zkopírují do vráceném řetězci beze změny. Další informace najdete v tématu funkci run-time [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md). Hodnota a význam kódů formátování pro `Format` jsou:
 
 - `%H` Hodin aktuálního dne
 
@@ -341,12 +341,12 @@ Tento formulář naformátuje hodnotu pomocí formátovacího řetězce, který 
 Volejte tuto metodu za účelem získání čas v `COleDateTime` objektu jako `DBTIMESTAMP` datové struktury.
 
 ```
-bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
+bool GetAsDBTIMESTAMP(DBTIMESTAMP& timeStamp) const throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*dbts*<br/>
+*timeStamp*<br/>
 Odkaz na [DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) struktury.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -355,7 +355,7 @@ Nenulové, pokud je úspěšná. jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Uloží výsledný čas v odkazované *dbts* struktury. `DBTIMESTAMP` Datová struktura inicializovat touto funkcí bude mít jeho `fraction` člen nastaven na hodnotu nula.
+Uloží výsledný čas v odkazované *časové razítko* struktury. `DBTIMESTAMP` Datová struktura inicializovat touto funkcí bude mít jeho `fraction` člen nastaven na hodnotu nula.
 
 ### <a name="example"></a>Příklad
 
@@ -382,19 +382,19 @@ Vrátí hodnotu TRUE v případě úspěchu; FALSE, pokud převod selže nebo po
 
 `GetAsSystemTime` uloží výsledný čas v odkazované *systime –* objektu. `SYSTEMTIME` Datová struktura inicializovat touto funkcí bude mít jeho `wMilliseconds` člen nastaven na hodnotu nula.
 
-Zobrazit [GetStatus](#getstatus) pro další informace o informace o stavu uložené v `COleDateTime` objektu.
+Pro další informace o informace o stavu uložené v `COleDateTime` objektu, najdete v článku [GetStatus](#getstatus).
 
 ##  <a name="getasudate"></a>  COleDateTime::GetAsUDATE
 
 Volejte tuto metodu za účelem získání čas v `COleDateTime` objektu jako `UDATE` datové struktury.
 
 ```
-bool GetAsUDATE(UDATE& udate) const throw();
+bool GetAsUDATE(UDATE& uDate) const throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*AKT.rev.aukce*<br/>
+*uDate*<br/>
 Odkaz na `UDATE` strukturu pro příjem hodnota převedená data a času z `COleDateTime` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -684,7 +684,7 @@ DateTimeStatus GetStatus() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí stav této `COleDateTime` hodnotu. Při volání `GetStatus` na `COleDateTime` objekt vytvořen s výchozím, vrátí platný. Při volání `GetStatus` na `COleDateTime` objekt je inicializován pomocí konstruktoru nastavený na hodnotu null, `GetStatus` vrátí hodnotu null. Zobrazit **poznámky** Další informace.
+Vrátí stav této `COleDateTime` hodnotu. Při volání `GetStatus` na `COleDateTime` objekt vytvořen s výchozím, vrátí platný. Při volání `GetStatus` na `COleDateTime` objekt je inicializován pomocí konstruktoru nastavený na hodnotu null, `GetStatus` vrátí hodnotu null.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -803,7 +803,7 @@ DateTimeStatus m_status;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ tomuto datovému členu je výčtového typu `DateTimeStatus`, který je definován v rámci `COleDateTime` třídy. Zobrazit [COleDateTime::GetStatus](#getstatus) podrobnosti.
+Typ tomuto datovému členu je výčtového typu `DateTimeStatus`, který je definován v rámci `COleDateTime` třídy. Další informace najdete v tématu [COleDateTime::GetStatus](#getstatus).
 
 > [!CAUTION]
 >  Pro pokročilé situacích programování je tomuto datovému členu. Používejte vložené členské funkce [GetStatus](#getstatus) a [SetStatus](#setstatus). Zobrazit `SetStatus` pro další upozornění týkající se explicitním nastavením tomuto datovému členu.
@@ -819,7 +819,7 @@ COleDateTime& operator=(const time_t& timeSrc) throw();
 COleDateTime& operator=(const __time64_t& timeSrc) throw();
 COleDateTime& operator=(const SYSTEMTIME& systimeSrc) throw();
 COleDateTime& operator=(const FILETIME& filetimeSrc) throw();
-COleDateTime& operator=(const UDATE& udate) throw();
+COleDateTime& operator=(const UDATE& uDate) throw();
 ```
 
 ### <a name="remarks"></a>Poznámky
@@ -836,9 +836,9 @@ Zkopírování těchto přetížených operátorech přiřazení zdrojová hodno
 
 - **Operator = (** *systimeSrc* **)** [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) hodnota převedena a zkopírovány do tohoto `COleDateTime` objektu. Pokud převod není úspěšné, stav tohoto objektu nastavena platná. Pokud úspěšné, je nastaven na neplatný.
 
-- **Operator = (** `udate` **)** `UDATE` hodnota převedena a zkopírovány do tohoto `COleDateTime` objektu. Pokud převod není úspěšné, stav tohoto objektu nastavena platná. Pokud úspěšné, je nastaven na neplatný. A `UDATE` struktura představuje "rozbalené" datum. Podívat se na funkci [VarDateFromUdate](/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate) další podrobnosti.
+- **Operator = (** `uDate` **)** `UDATE` hodnota převedena a zkopírovány do tohoto `COleDateTime` objektu. Pokud převod není úspěšné, stav tohoto objektu nastavena platná. Pokud úspěšné, je nastaven na neplatný. A `UDATE` struktura představuje "rozbalené" datum. Další informace najdete v tématu funkce [VarDateFromUdate](/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate).
 
-- **Operator = (** `filetimeSrc` **)** [hodnota FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) hodnota převedena a zkopírovány do tohoto `COleDateTime` objektu. Pokud převod není úspěšné, stav tohoto objektu nastavena platná. v opačném případě je nastavena na neplatný. `FILETIME` Koordinovaný světový čas (UTC), používá, pokud předáte čas UTC ve struktuře, vaše výsledky se převedou na místní čas od času UTC, takže se budou ukládat jako varianty čas. Toto chování je stejné jako v aplikaci Visual C++ 6.0 a Visual C++ .NET 2003 SP2. Zobrazit [časy](/windows/desktop/SysInfo/file-times) v sadě Windows SDK pro další informace.
+- **Operator = (** `filetimeSrc` **)** [hodnota FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) hodnota převedena a zkopírovány do tohoto `COleDateTime` objektu. Pokud převod není úspěšné, stav tohoto objektu nastavena platná. v opačném případě je nastavena na neplatný. `FILETIME` Koordinovaný světový čas (UTC), používá, pokud předáte čas UTC ve struktuře, vaše výsledky se převedou na místní čas od času UTC, takže se budou ukládat jako varianty čas. Toto chování je stejné jako v aplikaci Visual C++ 6.0 a Visual C++ .NET 2003 SP2. Další informace najdete v tématu [časy](/windows/desktop/SysInfo/file-times) v sadě Windows SDK.
 
 Další informace najdete v tématu [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) položku v sadě Windows SDK.
 
@@ -968,7 +968,7 @@ Pokud řetězec byl úspěšně převeden na datum/čas hodnotu, hodnota tohoto 
 
 `"1/25/1996 8:30:00"  // always specify the full year, even in a 'short date' format`
 
-Všimněte si, že ID národního prostředí ovlivní také, zda řetězec formát je přijatelné pro převod na hodnotu data/času.
+ID národního prostředí ovlivní také, zda řetězec formát je přijatelné pro převod na hodnotu data/času.
 
 V případě VAR_DATEVALUEONLY časová hodnota nastavena na 0 nebo půlnoc. V případě VAR_TIMEVALUEONLY hodnoty date nastavena na data 0, což znamená 30 1899 dne.
 
@@ -1149,7 +1149,7 @@ Nová hodnota pro tento stav `COleDateTime` objektu.
 *Stav* hodnota parametru je definována `DateTimeStatus` Výčtový typ, který je definován v rámci `COleDateTime` třídy. Zobrazit [COleDateTime::GetStatus](#getstatus) podrobnosti.
 
 > [!CAUTION]
->  Tato funkce je pro pokročilé situacích programování. Tato funkce nezmění data v tomto objektu. Nejčastěji se používají se nastavit stav na **null** nebo **neplatný**. Všimněte si, že operátor přiřazení ( [operátoru =](#eq)) a [SetDateTime](#setdatetime) nastavit stav objektu podle hodnoty, které zdroj.
+>  Tato funkce je pro pokročilé situacích programování. Tato funkce nezmění data v tomto objektu. Nejčastěji se používají se nastavit stav na **null** nebo **neplatný**. Operátor přiřazení ([operátoru =](#operator_eq)) a [SetDateTime](#setdatetime) nastavit stav objektu podle hodnoty, které zdroj.
 
 ### <a name="example"></a>Příklad
 

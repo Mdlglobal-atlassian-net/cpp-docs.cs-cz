@@ -1,6 +1,6 @@
 ---
 title: checked_array_iterator – třída
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - iterator/checked_array_iterator
 - iterator/stdext::checked_array_iterator::difference_type
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stdext::checked_array_iterator [C++], reference
 - stdext::checked_array_iterator [C++], base
 ms.assetid: 7f07185e-d588-4ae3-9c4f-84ec4aa25a28
-ms.openlocfilehash: 2d7788a33321f794af6b395de3188bc51f662ad0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 688b93902da5b4492812b4715a248db9561ec258
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476595"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565711"
 ---
 # <a name="checkedarrayiterator-class"></a>checked_array_iterator – třída
 
@@ -150,7 +150,7 @@ int main()
 |Název typu|Popis|
 |-|-|
 |[difference_type](#difference_type)|Typ, který obsahuje rozdíl mezi dvěma `checked_array_iterator`odkazují na prvky v rámci stejného kontejneru.|
-|[Ukazatel](#pointer)|Typ, který poskytuje ukazatel na prvek řešený třídou `checked_array_iterator`.|
+|[pointer](#pointer)|Typ, který poskytuje ukazatel na prvek řešený třídou `checked_array_iterator`.|
 |[Referenční dokumentace](#reference)|Typ, který poskytuje odkaz na prvek řešený třídou `checked_array_iterator`.|
 
 ### <a name="member-functions"></a>Členské funkce
@@ -166,16 +166,16 @@ int main()
 |[operator==](#op_eq_eq)|Testuje dva `checked_array_iterator`s rovnosti.|
 |[operator!=](#op_neq)|Testuje dva `checked_array_iterator`nerovnost.|
 |[Operator <](#op_lt)|Testuje, zda `checked_array_iterator` na levé straně operátoru menší než `checked_array_iterator` na pravé straně.|
-|[Operator >](#op_gt)|Testuje, zda `checked_array_iterator` je na levé straně operátoru větší než `checked_array_iterator` na pravé straně.|
-|[Operator < =](#op_lt_eq)|Testuje, zda `checked_array_iterator` na levé straně operátoru je menší než nebo rovna hodnotě `checked_array_iterator` na pravé straně.|
+|[operator>](#op_gt)|Testuje, zda `checked_array_iterator` je na levé straně operátoru větší než `checked_array_iterator` na pravé straně.|
+|[operator<=](#op_lt_eq)|Testuje, zda `checked_array_iterator` na levé straně operátoru je menší než nebo rovna hodnotě `checked_array_iterator` na pravé straně.|
 |[operator>=](#op_gt_eq)|Testuje, zda `checked_array_iterator` na levé straně operátoru je větší než nebo rovna hodnotě `checked_array_iterator` na pravé straně.|
 |[Operator *](#op_star)|Vrátí element `checked_array_iterator` adresy.|
-|[Operator ->](#op_arrow)|Vrací ukazatel na prvek řešený třídou `checked_array_iterator`.|
+|[operator->](#op_arrow)|Vrací ukazatel na prvek řešený třídou `checked_array_iterator`.|
 |[Operator ++](#op_add_add)|Zvýší `checked_array_iterator` na další prvek.|
-|[Operator--](#operator--)|Sníží `checked_array_iterator` na předchozí prvek.|
+|[operator--](#operator--)|Sníží `checked_array_iterator` na předchozí prvek.|
 |[operator+=](#op_add_eq)|Přidá zadaný posun k `checked_array_iterator`.|
 |[Operator +](#op_add)|Přidá posun do iterátoru a vrátí nový `checked_array_iterator` adresující vložený prvek na nové pozici posunu.|
-|[operátor-=](#operator-_eq)|Sníží zadaný posun z `checked_array_iterator`.|
+|[operator-=](#operator-_eq)|Sníží zadaný posun z `checked_array_iterator`.|
 |[Operator-](#operator-)|Sníží posun z iterátoru a vrátí nový `checked_array_iterator` adresující vložený prvek na nové pozici posunu.|
 |[– operátor&#91;&#93;](#op_at)|Vrátí odkaz na posun prvku z prvku odkazovaného `checked_array_iterator` zadaný počet pozic.|
 
@@ -495,7 +495,7 @@ Zobrazit [checked_array_iterator::operator&lt; ](#op_lt) ukázku kódu.
 
 Další informace najdete v tématu [Checked Iterators](../standard-library/checked-iterators.md).
 
-## <a name="lt_eq"></a>  checked_array_iterator::Operator&lt;=
+## <a name="op_lt_eq"></a>  checked_array_iterator::Operator&lt;=
 
 Testuje, zda `checked_array_iterator` na levé straně operátoru je menší než nebo rovna hodnotě `checked_array_iterator` na pravé straně.
 
@@ -514,7 +514,7 @@ Zobrazit [checked_array_iterator::operator&gt; = ](#op_gt_eq) ukázku kódu.
 
 Další informace najdete v tématu [Checked Iterators](../standard-library/checked-iterators.md).
 
-## <a name="gt_eq"></a>  checked_array_iterator::Operator&gt;=
+## <a name="op_gt_eq"></a>  checked_array_iterator::Operator&gt;=
 
 Testuje, zda `checked_array_iterator` na levé straně operátoru je větší než nebo rovna hodnotě `checked_array_iterator` na pravé straně.
 
@@ -697,7 +697,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iterator__operator--"></a>  checked_array_iterator::Operator--
+## <a name="operator--"></a>  checked_array_iterator::Operator--
 
 Sníží `checked_array_iterator` na předchozí prvek.
 
@@ -841,7 +841,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iterator__operator-_eq"></a>  checked_array_iterator::Operator-=
+## <a name="operator-_eq"></a>  checked_array_iterator::Operator-=
 
 Sníží zadaný posun z `checked_array_iterator`.
 
@@ -890,7 +890,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iterator__operator-"></a>  checked_array_iterator::Operator-
+## <a name="operator-"></a>  checked_array_iterator::Operator-
 
 Sníží posun z iterátoru a vrátí nový `checked_array_iterator` adresující vložený prvek na nové pozici posunu.
 
@@ -910,8 +910,6 @@ Posun k se snižují podle výše `checked_array_iterator`.
 A `checked_array_iterator` adresování posunutí elementu.
 
 ### <a name="remarks"></a>Poznámky
-
-Zobrazit [checked_array_iterator::operator -](#operator-) ukázku kódu.
 
 Další informace najdete v tématu [Checked Iterators](../standard-library/checked-iterators.md).
 
@@ -995,5 +993,5 @@ Další informace najdete v tématu [Checked Iterators](../standard-library/chec
 
 ## <a name="see-also"></a>Viz také:
 
-[\<iterátor >](../standard-library/iterator.md)<br/>
+[\<iterator>](../standard-library/iterator.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

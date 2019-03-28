@@ -1,6 +1,6 @@
 ---
 title: Cd2dsolidcolorbrush – třída
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CD2DSolidColorBrush
 - AFXRENDERTARGET/CD2DSolidColorBrush
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CD2DSolidColorBrush [MFC], m_colorSolid
 - CD2DSolidColorBrush [MFC], m_pSolidColorBrush
 ms.assetid: d4506637-acce-4f74-8a9b-f0a45571a735
-ms.openlocfilehash: 41d1d1b8c28335ae6207e41d696359295a83e646
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f225198193443c11d0294010a5fb71858514c81e
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291233"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565409"
 ---
 # <a name="cd2dsolidcolorbrush-class"></a>Cd2dsolidcolorbrush – třída
 
@@ -47,14 +47,14 @@ class CD2DSolidColorBrush : public CD2DBrush;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CD2DSolidColorBrush::CD2DSolidColorBrush](#cd2dsolidcolorbrush)|Přetíženo. Vytvoří objekt cd2dsolidcolorbrush –.|
-|[CD2DSolidColorBrush::~CD2DSolidColorBrush](#cd2dsolidcolorbrush__~cd2dsolidcolorbrush)|Destruktor. Volá se, když se likviduje štětec objektu D2D.|
+|[CD2DSolidColorBrush::~CD2DSolidColorBrush](#_dtorcd2dsolidcolorbrush)|Destruktor. Volá se, když se likviduje štětec objektu D2D.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CD2DSolidColorBrush::Attach](#attach)|Bude k obrazci existujících prostředků rozhraní pro objekt|
 |[CD2DSolidColorBrush::Create](#create)|Vytvoří cd2dsolidcolorbrush –. (Přepíše [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
@@ -66,13 +66,13 @@ class CD2DSolidColorBrush : public CD2DBrush;
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CD2DSolidColorBrush::Operator ID2D1SolidColorBrush *](#operator_id2d1solidcolorbrush_star)|Vrátí ID2D1SolidColorBrush rozhraní|
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CD2DSolidColorBrush::m_colorSolid](#m_colorsolid)|Plnobarevné štětce.|
 |[CD2DSolidColorBrush::m_pSolidColorBrush](#m_psolidcolorbrush)|Uchovává ukazatel na objekt ID2D1SolidColorBrush.|

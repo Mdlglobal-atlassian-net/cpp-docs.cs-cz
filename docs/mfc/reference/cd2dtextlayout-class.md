@@ -1,6 +1,6 @@
 ---
 title: CD2DTextLayout Class
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CD2DTextLayout
 - AFXRENDERTARGET/CD2DTextLayout
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CD2DTextLayout [MFC], SetLocaleName
 - CD2DTextLayout [MFC], m_pTextLayout
 ms.assetid: 724bd13c-f2ef-4e55-a775-8cb04b7b7908
-ms.openlocfilehash: aa51b050543b6a027e354afa18b5e9c002c6bca1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ca89d12c6aeed33be740aa9f999e7c11d6c32056
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283966"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565266"
 ---
 # <a name="cd2dtextlayout-class"></a>CD2DTextLayout Class
 
@@ -49,14 +49,14 @@ class CD2DTextLayout : public CD2DResource;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CD2DTextLayout::CD2DTextLayout](#cd2dtextlayout)|Vytvoří objekt cd2dtextlayout –.|
-|[CD2DTextLayout::~CD2DTextLayout](#cd2dtextlayout__~cd2dtextlayout)|Destruktor. Volá se, když se likviduje rozložení objektu D2D text.|
+|[CD2DTextLayout::~CD2DTextLayout](#_dtorcd2dtextlayout)|Destruktor. Volá se, když se likviduje rozložení objektu D2D text.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CD2DTextLayout::Create](#create)|Vytvoří cd2dtextlayout –. (Přepíše [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
 |[CD2DTextLayout::Destroy](#destroy)|Odstraní objekt cd2dtextlayout –. (Přepíše [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
@@ -70,13 +70,13 @@ class CD2DTextLayout : public CD2DResource;
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CD2DTextLayout::operator IDWriteTextLayout*](#operator_idwritetextlayout_star)|Vrátí IDWriteTextLayout rozhraní|
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CD2DTextLayout::m_pTextLayout](#m_ptextlayout)|Ukazatel IDWriteTextLayout.|
 

@@ -1,6 +1,6 @@
 ---
 title: Canimationbaseobject – třída
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CAnimationBaseObject
 - AFXANIMATIONCONTROLLER/CAnimationBaseObject
@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CAnimationBaseObject [MFC], m_nObjectID
 - CAnimationBaseObject [MFC], m_pParentController
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
-ms.openlocfilehash: 18b2319ea3c51edf79b6a90095b8363db830d66c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e9c5ed98d654eb37be7ab8523d44c9da6eecd9c7
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258915"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565880"
 ---
 # <a name="canimationbaseobject-class"></a>Canimationbaseobject – třída
 
@@ -71,14 +71,14 @@ class CAnimationBaseObject : public CObject;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAnimationBaseObject::CAnimationBaseObject](#canimationbaseobject)|Přetíženo. Vytvoří objekt animace.|
-|[CAnimationBaseObject::~CAnimationBaseObject](#canimationbaseobject__~canimationbaseobject)|Destruktor. Volá se, když se likviduje objekt animace.|
+|[CAnimationBaseObject::~CAnimationBaseObject](#_dtorcanimationbaseobject)|Destruktor. Volá se, když se likviduje objekt animace.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAnimationBaseObject::ApplyTransitions](#applytransitions)|Přidá přechody do scénáře s proměnnou zapouzdřený animace.|
 |[CAnimationBaseObject::ClearTransitions](#cleartransitions)|Odebere všechny související přechody.|
@@ -91,20 +91,20 @@ class CAnimationBaseObject : public CObject;
 |[CAnimationBaseObject::GetGroupID](#getgroupid)|Vrátí ID aktuální skupiny.|
 |[CAnimationBaseObject::GetObjectID](#getobjectid)|Vrací ID aktuálního objektu.|
 |[CAnimationBaseObject::GetUserData](#getuserdata)|Vrátí data definovaná uživatelem.|
-|[CAnimationBaseObject::SetAutodestroyTransitions](#setautodestroytransitions)|Nastaví příznak, který řadí automaticky zničit přechodů.|
+|[CAnimationBaseObject::SetAutodestroyTransitions](#setautodestroytransitions)|Nastaví příznak, který automaticky zničit přechodů.|
 |[CAnimationBaseObject::SetID](#setid)|Nastaví nové identifikátory.|
 |[CAnimationBaseObject::SetUserData](#setuserdata)|Uživatelem definované datové sady.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAnimationBaseObject::GetAnimationVariableList](#getanimationvariablelist)|Shromažďuje ukazatelů na proměnné omezením animace.|
 |[CAnimationBaseObject::SetParentAnimationObjects](#setparentanimationobjects)|Vytvoří vztah mezi proměnné animace, obsažené v objektu animace a jejich kontejneru.|
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAnimationBaseObject::m_bAutodestroyTransitions](#m_bautodestroytransitions)|Určuje, zda související přechody by měl automaticky odstraní.|
 |[CAnimationBaseObject::m_dwUserData](#m_dwuserdata)|Uživatelem definované datové úložiště.|
@@ -114,7 +114,7 @@ class CAnimationBaseObject : public CObject;
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída implementuje základní metody pro všechny objekty animace. Animace objektu může představovat hodnotu, bod, velikost, obdélníku nebo barvy v aplikaci, stejně jako všechny vlastní entity. Animace objektů jsou uložené ve skupinách animace (viz canimationgroup –). Každá skupina lze animovat samostatně a lze považovat za analogové scénáře. Animace objektu zapouzdřuje jednu nebo více animace proměnných (viz canimationvariable –), v závislosti na jeho logický reprezentací. Canimationrect – například obsahuje čtyři proměnné animace – jednu proměnnou pro každé straně obdélník. Každá třída objektu animace zpřístupňuje přetěžované metody AddTransition, která se má použít přechody vyrovnat animace zapouzdřené proměnné. Animace objektu lze identifikovat podle ID objektu (volitelně) a ID skupiny. ID skupiny je nutné, aby umístit objekt animace ke správné skupině, ale pokud není zadané ID skupiny, je objekt umístěný ve výchozí skupině s ID 0. Při volání ID sady s jinou GroupID, objekt animace se přesune do jiné skupiny (Nová skupina se vytvoří v případě potřeby).
+Tato třída implementuje základní metody pro všechny objekty animace. Animace objektu může představovat hodnotu, bod, velikost, obdélníku nebo barvy v aplikaci, stejně jako všechny vlastní entity. Animace objektů jsou uložené ve skupinách animace (viz canimationgroup –). Každá skupina lze animovat samostatně a lze považovat za analogie scénáře. Animace objektu zapouzdřuje jednu nebo více animace proměnných (viz canimationvariable –), v závislosti na jeho logický reprezentací. Canimationrect – například obsahuje čtyři proměnné animace – jednu proměnnou pro každé straně obdélník. Každá třída objektu animace zpřístupňuje přetěžované metody AddTransition, která se má použít přechody vyrovnat animace zapouzdřené proměnné. Animace objektu lze identifikovat podle ID objektu (volitelně) a ID skupiny. ID skupiny je nutné, aby umístit objekt animace ke správné skupině, ale pokud není zadané ID skupiny, je objekt umístěný ve výchozí skupině s ID 0. Při volání ID sady s jinou GroupID, objekt animace se přesune do jiné skupiny (Nová skupina se vytvoří v případě potřeby).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -150,7 +150,7 @@ virtual BOOL ApplyTransitions(
 Ukazatel na scénáře.
 
 *bDependOnKeyframes*<br/>
-Tato metoda přidá s FALSE pouze přechody, která nezávisí na klíčové snímky.
+Pokud má hodnotu NEPRAVDA, tato metoda přidá pouze přechody, která nezávisí na klíčové snímky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -305,17 +305,17 @@ Shromažďuje ukazatelů na proměnné omezením animace.
 ```
 virtual void GetAnimationVariableList(
     CList<CAnimationVariable*,
-    CAnimationVariable*>& lst) = 0;
+    CAnimationVariable*>& list) = 0;
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*lst*<br/>
+*list*<br/>
 Seznam, který musí být vyplněn proměnné animace obsažená v objektu animace.
 
 ### <a name="remarks"></a>Poznámky
 
-To se čistě virtuální metody, které se musí přepsat v odvozené třídě. Objekt animace, v závislosti na jeho typu, obsahuje jeden nebo více proměnné animace. Canimationpoint – například obsahuje dvě proměnné, pro souřadnice v uvedeném pořadí X a Y. Canimationbaseobject – základní třída implementuje některé obecné metody, které mohly reagovat na seznam animace proměnné: ApplyTransitions, ClearTransitions EnableValueChangedEvent, EnableIntegerValueChangedEvent. Tyto metody volat GetAnimationVariableList, což je vyplněna v odvozené třídě skutečné animace proměnné obsažené v objektu konkrétní animace, pak v seznamu ve smyčce a provádět potřebné akce. Pokud vytvoříte vlastní animace objektu, musíte přidat do obrázků všechny proměnné animace obsažené v tomto objektu.
+Tato metoda čistě virtuální musí přepsat v odvozené třídě. Objekt animace, v závislosti na jeho typu, obsahuje jeden nebo více proměnné animace. Canimationpoint – například obsahuje dvě proměnné, pro souřadnice v uvedeném pořadí X a Y. Canimationbaseobject – základní třída implementuje některé obecné metody, které mohly reagovat na seznam animace proměnné: ApplyTransitions, ClearTransitions EnableValueChangedEvent, EnableIntegerValueChangedEvent. Tyto metody volat GetAnimationVariableList, což je vyplněna v odvozené třídě skutečné animace proměnné obsažené v objektu konkrétní animace, pak v seznamu ve smyčce a provádět potřebné akce. Pokud vytvoříte vlastní animace objektu, musíte přidat do *seznamu* všechny proměnné animace obsažené v tomto objektu.
 
 ##  <a name="getautodestroytransitions"></a>  CAnimationBaseObject::GetAutodestroyTransitions
 
@@ -423,7 +423,7 @@ CAnimationController* m_pParentController;
 
 ##  <a name="setautodestroytransitions"></a>  CAnimationBaseObject::SetAutodestroyTransitions
 
-Nastaví příznak, který řadí automaticky zničit přechodů.
+Nastaví příznak, který automaticky zničit přechodů.
 
 ```
 void SetAutodestroyTransitions(BOOL bValue);
@@ -470,7 +470,7 @@ virtual void SetParentAnimationObjects();
 
 ### <a name="remarks"></a>Poznámky
 
-Toto je pomocné rutiny, který slouží k navázání vztahu mezi proměnné animace, obsažené v objektu animace a jejich kontejneru. Cyklickému proměnné animace a nastaví zpětný ukazatel na nadřazený objekt animace ke každé proměnné animace. V aktuální implementaci navazovat v CAnimationBaseObject::ApplyTransitions skutečný vztah proto back ukazatele nejsou nastavená, až do okamžiku volání CAnimationGroup::Animate. Znalost vztahů mohou být užitečné, když je zpracování událostí a nemusí, aby získali animace nadřazeného objektu z canimationvariable – (použijte CAnimationVariable::GetParentAnimationObject).
+Tato pomocná lze použít k vytvoření vztahu mezi proměnné animace obsažené v objektu animace a jejich kontejneru. Cyklickému proměnné animace a nastaví zpětný ukazatel na nadřazený objekt animace ke každé proměnné animace. V aktuální implementaci skutečný vztah navázaný v CAnimationBaseObject::ApplyTransitions, proto nejsou nastavené back ukazatele, až do okamžiku volání CAnimationGroup::Animate. Znalost vztahů mohou být užitečné, když je zpracování událostí a nemusí, aby získali animace nadřazeného objektu z canimationvariable –. Použijte CAnimationVariable::GetParentAnimationObject.
 
 ##  <a name="setuserdata"></a>  CAnimationBaseObject::SetUserData
 

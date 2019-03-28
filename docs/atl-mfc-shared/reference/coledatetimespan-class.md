@@ -1,6 +1,6 @@
 ---
 title: Coledatetimespan – třída
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - COleDateTimeSpan
 - ATLCOMTIME/ATL::COleDateTimeSpan
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: feef238be96d9a04c2c41e6955efec8b23cf6a89
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b68a984488f37326f3b0c1249a5f17a3eb76548b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748486"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565646"
 ---
 # <a name="coledatetimespan-class"></a>Coledatetimespan – třída
 
@@ -47,13 +47,13 @@ class COleDateTimeSpan
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleDateTimeSpan::COleDateTimeSpan](#coledatetimespan)|Vytvoří `COleDateTimeSpan` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleDateTimeSpan::Format](#format)|Generuje formátovaný řetězec představující `COleDateTimeSpan` objektu.|
 |[COleDateTimeSpan::GetDays](#getdays)|Vrátí část pro den rozpětí to `COleDateTimeSpan` objekt představuje.|
@@ -80,7 +80,7 @@ class COleDateTimeSpan
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleDateTimeSpan::m_span](#m_span)|Obsahuje základní **double** to `COleDateTimeSpan` objektu.|
 |[COleDateTimeSpan::m_status](#m_status)|Obsahuje stav tohoto `COleDateTimeSpan` objektu.|
@@ -745,7 +745,7 @@ Stručný popis tyto hodnoty stavu najdete v následujícím seznamu:
 - `COleDateTimeSpan::null` Označuje, že tento `COleDateTimeSpan` objekt má hodnotu null, to znamená, že byla zadána žádná hodnota pro tento objekt. (To je v tom smyslu databáze "mít žádnou hodnotu" na rozdíl od C++ NULL "null".)
 
    > [!CAUTION]
-   > Tato funkce je pro pokročilé situacích programování. Tato funkce nezmění data v tomto objektu. Nejčastěji se používají se nastavit stav na **null** nebo **neplatný**. Všimněte si, že operátor přiřazení ( [operátoru =](#eq)) a [SetDateTimeSpan](#setdatetimespan) nastavit stav objektu podle hodnoty, které zdroj.
+   > Tato funkce je pro pokročilé situacích programování. Tato funkce nezmění data v tomto objektu. Nejčastěji se používají se nastavit stav na **null** nebo **neplatný**. Všimněte si, že operátor přiřazení ([operátoru =](#operator_eq)) a [SetDateTimeSpan](#setdatetimespan) nastavit stav objektu podle hodnoty, které zdroj.
 
 ### <a name="example"></a>Příklad
 
