@@ -1,12 +1,12 @@
 ---
 title: Přehled konvencí ARM64 ABI
 ms.date: 03/27/2019
-ms.openlocfilehash: 2695ba69c642b2100ec041d1f85debb4ad7041c8
-ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
+ms.openlocfilehash: 4c0f89f97529d4cd70e1449c90b131d25d30f9ee
+ms.sourcegitcommit: ac5c04b347e817eeece6e2c98e60236fc0e307a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58508855"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58639443"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Přehled konvencí ARM64 ABI
 
@@ -187,27 +187,21 @@ Integrální hodnoty jsou vráceny v x0.
 
 Hodnoty s plovoucí desetinnou čárkou jsou vráceny v s0/d0/v0 podle potřeby.
 
-Typy vrácené hodnoty jsou zpracovány jinak v závislosti na tom, zda mají určité vlastnosti.
+Typy vrácené hodnoty jsou zpracovány jinak v závislosti na tom, zda mají určité vlastnosti. Typy, které mají všechny tyto vlastnosti
 
-Typy jsou uvedena v každém vrácení styl "C" Pokud se agregovaná C ++ 14 standardní definice. To je
+- jsou to *agregační* v C ++ 14 standardní definici, to znamená, že mají žádné uživatelem zadané konstruktory, žádné soukromé nebo chráněné nestatické datové členy, žádné základní třídy a žádné virtuální funkce, a
+- operátor přiřazení kopie triviální mají a
+- mají triviální destruktor
 
-- nemají žádné uživatelem zadané konstruktory, žádné soukromé nebo chráněné nestatické datové členy, žádné základní třídy a žádné virtuální funkce
-- mají triviální kopírovací konstruktor, a
-- mají triviální destruktor.
+použijte následující návratové styl:
 
-Všechny ostatní typy jsou uvedeny návratový styl "C++".
+- Menší než 8 bajtů se vrátí v x0 typy.
+- Typy menší než nebo rovno 16 bajtů se vrátí v x0 a x1 s x0 obsahující 8 bajtů nižšího řádu.
+- U typů větší než 16 bajtů se volající rezervovat blok paměti dostatečnou velikost a zarovnání pro uchování výsledku. Adresa bloku paměti se jako další argument předána funkci v x8. Volaný může změnit výsledek blok paměti v libovolném bodě během spuštění podprogramu. Volaný vyžadovat zachovávaní hodnotu uloženou v x8.
 
-### <a name="c-return-style"></a>Návratový stylu C
+Všechny ostatní typy Tato konvence:
 
-Menší než 8 bajtů se vrátí v x0 typy.
-
-Typy menší než nebo rovno 16 bajtů se vrátí v x0 a x1 s x0 obsahující 8 bajtů nižšího řádu.
-
-U typů větší než 16 bajtů se volající rezervovat blok paměti dostatečnou velikost a zarovnání pro uchování výsledku. Adresa bloku paměti se jako další argument předána funkci v x8. Volaný může změnit výsledek blok paměti v libovolném bodě během spuštění podprogramu. Volaný vyžadovat zachovávaní hodnotu uloženou v x8.
-
-### <a name="c-return-style"></a>Návratový stylu C++
-
-Volající musí rezervovat blok paměti dostatečnou velikost a zarovnání pro uchování výsledku. Adresa bloku paměti se předat jako další argument funkce v x0 nebo x1 Pokud $ předá se x0. Volaný může změnit výsledek blok paměti v libovolném bodě během spuštění podprogramu. Volaný vrátí adresu blok paměti v x0.
+- Volající musí rezervovat blok paměti dostatečnou velikost a zarovnání pro uchování výsledku. Adresa bloku paměti se předat jako další argument funkce v x0 nebo x1 Pokud $ předá se x0. Volaný může změnit výsledek blok paměti v libovolném bodě během spuštění podprogramu. Volaný vrátí adresu blok paměti v x0.
 
 ## <a name="stack"></a>Rámec
 
