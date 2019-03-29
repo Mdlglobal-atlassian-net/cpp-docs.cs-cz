@@ -1,17 +1,17 @@
 ---
 title: Paralelní kontejnery a objekty
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 helpviewer_keywords:
 - parallel objects
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-ms.openlocfilehash: b406bc194735a2796f03f1e9d6cf0cf2ae2e6f86
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: bcf3ead9fe945ecb2246fdb28b7f67cd51b1238b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333283"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565945"
 ---
 # <a name="parallel-containers-and-objects"></a>Paralelní kontejnery a objekty
 
@@ -27,13 +27,13 @@ Toto téma popisuje následující paralelní kontejnery a objekty v podrobnost�
 
 Souběžné kontejnery:
 
-- [concurrent_vector – třída](#ctor)
+- [concurrent_vector – třída](#vector)
 
-   - [Rozdíly mezi concurrent_vector – a vektoru](#ctor)
+   - [Rozdíly mezi concurrent_vector – a vektoru](#vector-differences)
 
-   - [Operace bezpečné na souběžnosti](#ctor)
+   - [Operace bezpečné na souběžnosti](#vector-safety)
 
-   - [Bezpečnost výjimek](#ctor)
+   - [Bezpečnost výjimek](#vector-exceptions)
 
 - [concurrent_queue – třída](#queue)
 
@@ -97,7 +97,7 @@ V následující tabulce jsou uvedeny běžné `concurrent_vector` metody a oper
 |-|-|-|
 |[at](reference/concurrent-vector-class.md#at)|[ukončení](reference/concurrent-vector-class.md#end)|[– operátor&#91;&#93;](reference/concurrent-vector-class.md#operator_at)|
 |[začít](reference/concurrent-vector-class.md#begin)|[Přední](reference/concurrent-vector-class.md#front)|[push_back](reference/concurrent-vector-class.md#push_back)|
-|[Zpět](reference/concurrent-vector-class.md#back)|[grow_by –](reference/concurrent-vector-class.md#grow_by)|[rbegin –](reference/concurrent-vector-class.md#rbegin)|
+|[Zpět](reference/concurrent-vector-class.md#back)|[grow_by](reference/concurrent-vector-class.md#grow_by)|[rbegin](reference/concurrent-vector-class.md#rbegin)|
 |[Kapacita](reference/concurrent-vector-class.md#capacity)|[grow_to_at_least](reference/concurrent-vector-class.md#grow_to_at_least)|[rend –](reference/concurrent-vector-class.md#rend)|
 |[prázdný](reference/concurrent-vector-class.md#empty)|[max_size](reference/concurrent-vector-class.md#max_size)|[Velikost](reference/concurrent-vector-class.md#size)|
 
@@ -105,8 +105,8 @@ Operace, které poskytuje modul runtime pro kompatibilitu s standardní knihovny
 
 |||
 |-|-|
-|[přiřazení](reference/concurrent-vector-class.md#assign)|[Rezervovat](reference/concurrent-vector-class.md#reserve)|
-|[Vymazat](reference/concurrent-vector-class.md#clear)|[Změna velikosti](reference/concurrent-vector-class.md#resize)|
+|[assign](reference/concurrent-vector-class.md#assign)|[reserve](reference/concurrent-vector-class.md#reserve)|
+|[clear](reference/concurrent-vector-class.md#clear)|[resize](reference/concurrent-vector-class.md#resize)|
 |[operátor =](reference/concurrent-vector-class.md#operator_eq)|[shrink_to_fit](reference/concurrent-vector-class.md#shrink_to_fit)|
 
 Operace, které mění hodnotu prvků existující nejsou bezpečná pro souběžnost. Například použít objekt synchronizace [reader_writer_lock –](../../parallel/concrt/reference/reader-writer-lock-class.md) objektu, který chcete synchronizovat souběžné čtení a operací zápisu na stejný datový element. Další informace o synchronizaci objektů najdete v tématu [synchronizačních datových struktur](../../parallel/concrt/synchronization-data-structures.md).
@@ -164,7 +164,7 @@ V následující tabulce jsou uvedeny běžné metody a operátory, které nejso
 
 |||
 |-|-|
-|[Vymazat](reference/concurrent-queue-class.md#clear)|[unsafe_end](reference/concurrent-queue-class.md#unsafe_end)|
+|[clear](reference/concurrent-queue-class.md#clear)|[unsafe_end](reference/concurrent-queue-class.md#unsafe_end)|
 |[unsafe_begin](reference/concurrent-queue-class.md#unsafe_begin)|[unsafe_size](reference/concurrent-queue-class.md#unsafe_size)|
 
 ###  <a name="queue-iterators"></a> Iterator Support
@@ -181,7 +181,7 @@ A `concurrent_queue` iterátoru prochází přes prvky ve směru dopředu pouze.
 
 [[Horní](#top)]
 
-##  <a name="unordered_map"></a> concurrent_unordered_map – třída
+##  <a name="unordered_map"></a> concurrent_unordered_map Class
 
 [Concurrency::concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md) třídy je třída asociativní kontejner, který, stejně jako [std::unordered_map](../../standard-library/unordered-map-class.md) třídy, řídí různé délky sekvence elementů typu [std::pair\<const Key, Ty >](../../standard-library/pair-structure.md). Neuspořádanou mapu můžete představit jako slovník, který můžete přidat dvojici klíče a hodnoty do nebo vyhledat hodnotu podle klíče. Tato třída je užitečná, když máte více vláken nebo úloh, které mají přístup k sdílené kontejner souběžně, vložte do ní nebo ji aktualizovat.
 
@@ -189,7 +189,7 @@ Následující příklad ukazuje základní strukturu pro používání `concurr
 
 [!code-cpp[concrt-unordered-map-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_2.cpp)]
 
-Příklad, který používá `concurrent_unordered_map` provádění mapování a snížit operace paralelně najdete v tématu [jak: snížit operace paralelně a provádět mapování](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
+Příklad, který používá `concurrent_unordered_map` provádění mapování a snížit operace paralelně najdete v tématu [jak: Proveďte mapování a redukční operace paralelně](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
 
 ###  <a name="map-differences"></a> Rozdíly mezi concurrent_unordered_map – a unordered_map
 
@@ -229,7 +229,7 @@ Kromě těchto metod jakoukoli metodu, která začíná `unsafe_` není bezpečn
 
 [[Horní](#top)]
 
-##  <a name="unordered_multimap"></a> concurrent_unordered_multimap – třída
+##  <a name="unordered_multimap"></a> concurrent_unordered_multimap Class
 
 [Concurrency::concurrent_unordered_multimap](../../parallel/concrt/reference/concurrent-unordered-multimap-class.md) třídy připomíná `concurrent_unordered_map` třídy s tím rozdílem, že umožňuje více hodnot pro mapování na stejný klíč. Se také liší od `concurrent_unordered_map` následujícími způsoby:
 
@@ -243,7 +243,7 @@ Následující příklad ukazuje základní strukturu pro používání `concurr
 
 [[Horní](#top)]
 
-##  <a name="unordered_set"></a> concurrent_unordered_set – třída
+##  <a name="unordered_set"></a> concurrent_unordered_set Class
 
 [Concurrency::concurrent_unordered_set](../../parallel/concrt/reference/concurrent-unordered-set-class.md) třídy připomíná `concurrent_unordered_map` třídy s tím rozdílem, že spravuje hodnot namísto páry klíč-hodnota. `concurrent_unordered_set` Třída neposkytuje `operator[]` ani `at` metody.
 
@@ -253,7 +253,7 @@ Následující příklad ukazuje základní strukturu pro používání `concurr
 
 [[Horní](#top)]
 
-##  <a name="unordered_multiset"></a> concurrent_unordered_multiset – třída
+##  <a name="unordered_multiset"></a> concurrent_unordered_multiset Class
 
 [Concurrency::concurrent_unordered_multiset](../../parallel/concrt/reference/concurrent-unordered-multiset-class.md) třídy připomíná `concurrent_unordered_set` třídy s tím rozdílem, že umožňuje duplicitní hodnoty. Se také liší od `concurrent_unordered_set` následujícími způsoby:
 
@@ -280,8 +280,8 @@ V následující tabulce jsou uvedeny některé důležité metody `combinable` 
 |Metoda|Popis|
 |------------|-----------------|
 |[local](reference/combinable-class.md#local)|Získá odkaz na místní proměnnou, která je přidružena aktuální kontext vlákna.|
-|[Vymazat](reference/combinable-class.md#clear)|Odebere všechny místní proměnné vlákna z `combinable` objektu.|
-|[kombinování](reference/combinable-class.md#combine)<br /><br /> [combine_each](reference/combinable-class.md#combine_each)|Zadané kombinační funkcí používá ke generování konečnou hodnotu ze sady všechny výpočty místního vlákna.|
+|[clear](reference/combinable-class.md#clear)|Odebere všechny místní proměnné vlákna z `combinable` objektu.|
+|[combine](reference/combinable-class.md#combine)<br /><br /> [combine_each](reference/combinable-class.md#combine_each)|Zadané kombinační funkcí používá ke generování konečnou hodnotu ze sady všechny výpočty místního vlákna.|
 
 `combinable` Třídy je třída šablony, která je na konečný výsledek sloučení s parametry. Při volání výchozího konstruktoru `T` typ parametru šablony musí mít výchozí konstruktor a kopírovací konstruktor. Pokud `T` typ šablony parametr nemá výchozí konstruktor, volání přetížené verze konstruktoru, který přijímá jako svůj parametr inicializační funkce.
 

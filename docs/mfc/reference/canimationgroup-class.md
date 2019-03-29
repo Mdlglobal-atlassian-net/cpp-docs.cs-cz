@@ -1,6 +1,6 @@
 ---
 title: Canimationgroup – třída
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CAnimationGroup
 - AFXANIMATIONCONTROLLER/CAnimationGroup
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_nGroupID
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
-ms.openlocfilehash: 9be0a5b76f91ddf4dc3d1c4ff2816b7ffd5a1986
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 32b2adfee2a36139a11caa12fa98bd240b0732dd
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304376"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565984"
 ---
 # <a name="canimationgroup-class"></a>Canimationgroup – třída
 
@@ -67,14 +67,14 @@ class CAnimationGroup;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAnimationGroup::CAnimationGroup](#canimationgroup)|Vytvoří skupinu animace.|
-|[CAnimationGroup::~CAnimationGroup](#canimationgroup__~canimationgroup)|Destruktor. Volá se, když se likviduje skupinu animace.|
+|[CAnimationGroup::~CAnimationGroup](#_dtorcanimationgroup)|Destruktor. Volá se, když se likviduje skupinu animace.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAnimationGroup::Animate](#animate)|Animuje skupinu.|
 |[CAnimationGroup::ApplyTransitions](#applytransitions)|Přechody se vztahuje na objekty animace.|
@@ -95,7 +95,7 @@ class CAnimationGroup;
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAnimationGroup::m_bAutoclearTransitions](#m_bautocleartransitions)|Určuje, jak vymazat přechody ze animace objektů, které patří do skupiny. Pokud tato vlastnost hodnotu TRUE, se automaticky odeberou přechody, když je naplánovaná animace. Jinak budete muset ručně odebrat přechodů.|
 |[CAnimationGroup::m_bAutodestroyAnimationObjects](#m_bautodestroyanimationobjects)|Určuje, jak zničit objekty animace. Pokud tento parametr má hodnotu TRUE, objekty animace zničí automaticky při zničení skupině. Animace objektů v opačném případě musí být zničený ručně. Výchozí hodnota je FALSE. Nastavte tuto hodnotu na TRUE jenom v případě, že všechny objekty animace, které patří do skupiny se přidělují dynamicky pomocí operátoru new.|
@@ -106,7 +106,7 @@ class CAnimationGroup;
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAnimationGroup::m_nGroupID](#m_ngroupid)|Jedinečný identifikátor skupiny animace.|
 |[CAnimationGroup::m_pParentController](#m_pparentcontroller)|Ukazatel na řadič animace, do které tato skupina patří.|

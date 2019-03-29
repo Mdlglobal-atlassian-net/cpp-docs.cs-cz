@@ -1,6 +1,6 @@
 ---
 title: task_handle – třída
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - task_handle
 - PPL/concurrency::task_handle
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-ms.openlocfilehash: 4193c2d1e08c1b5a43dc728edd24efd19be87268
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8528bc212603484be9325ed967e9475e4faa1348
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298084"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565097"
 ---
 # <a name="taskhandle-class"></a>task_handle – třída
 
@@ -37,14 +37,14 @@ Typ objektu funkce, která bude volána k provedení práce reprezentována `tas
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[task_handle](#ctor)|Sestaví nový `task_handle` objektu. Pracovní úloha provádí volání funkce zadat jako parametr do konstruktoru.|
+|[task_handle](#task_handle)|Sestaví nový `task_handle` objektu. Pracovní úloha provádí volání funkce zadat jako parametr do konstruktoru.|
 |[~task_handle Destructor](#dtor)|Odstraní `task_handle` objektu.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[operator()](#task_handle__operator_call)|Operátor volání funkce, která volá modul runtime pro provedení úlohy popisovače.|
 
@@ -76,7 +76,7 @@ Operátor volání funkce, která volá modul runtime pro provedení úlohy popi
 void operator()() const;
 ```
 
-##  <a name="task_handle__ctor"></a> task_handle –
+## <a name="taskhandle"></a>task_handle
 
 Sestaví nový `task_handle` objektu. Pracovní úloha provádí volání funkce zadat jako parametr do konstruktoru.
 

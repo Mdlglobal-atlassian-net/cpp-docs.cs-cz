@@ -1,25 +1,27 @@
 ---
 title: CDocObjectServerItem Class
-ms.date: 09/12/2018
+ms.date: 03/27/2019
 f1_keywords:
 - CDocObjectServerItem
 - AFXDOCOB/CDocObjectServerItem
 - AFXDOCOB/CDocObjectServerItem::CDocObjectServerItem
 - AFXDOCOB/CDocObjectServerItem::GetDocument
+- AFXDOCOB/CDocObjectServerItem::OnDoVerb
 - AFXDOCOB/CDocObjectServerItem::OnHide
 - AFXDOCOB/CDocObjectServerItem::OnShow
 helpviewer_keywords:
 - CDocObjectServerItem [MFC], CDocObjectServerItem
 - CDocObjectServerItem [MFC], GetDocument
+- CDocObjectServerItem [MFC], OnDoVerb
 - CDocObjectServerItem [MFC], OnHide
 - CDocObjectServerItem [MFC], OnShow
 ms.assetid: 530f7156-50c8-4806-9328-602c9133f622
-ms.openlocfilehash: f11c202e85453897f6ebf04d8dc165d2b733a406
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 66ff2326cd3d08b3f6c8399d7e948d6aab5074c3
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275261"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565620"
 ---
 # <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem Class
 
@@ -35,21 +37,21 @@ class CDocObjectServerItem : public COleServerItem
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDocObjectServerItem::CDocObjectServerItem](#cdocobjectserveritem)|Vytvoří `CDocObjectServerItem` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDocObjectServerItem::GetDocument](#getdocument)|Načte ukazatel na dokument, který obsahuje položku.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CDocObjectServerItem::OnDoVerb](#ondoverb)|Vyvolá výjimku, pokud framework se snaží skrýt položku DocObject.|
+|[CDocObjectServerItem::OnDoVerb](#ondoverb)|Volá se, aby provést operaci.|
 |[CDocObjectServerItem::OnHide](#onhide)|Vyvolá výjimku, pokud framework se snaží skrýt položku DocObject.|
 |[CDocObjectServerItem::OnShow](#onshow)|Volá se rozhraním, aby vytisknout položky na místě aktivní. Pokud položka není DocObject, zavolá [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow).|
 
@@ -108,6 +110,23 @@ Ukazatel na dokument, který obsahuje položky; Hodnota NULL, pokud položka nen
 ### <a name="remarks"></a>Poznámky
 
 To umožňuje přístup k dokumentu na serveru, který je předán jako argument [cdocobjectserveritem –](#cdocobjectserveritem) konstruktoru.
+
+##  <a name="ondoverb"></a>  CDocObjectServerItem::OnDoVerb
+
+Volá se rozhraním, aby provedla Zadaná operace.
+
+```
+virtual void OnDoVerb(LONG iVerb);
+```
+
+### <a name="parameters"></a>Parametry
+
+*iVerb*<br/>
+Určuje příkaz pro spuštění. Možné hodnoty najdete v části [Funkce IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) v sadě Windows SDK.
+
+### <a name="remarks"></a>Poznámky
+
+Výchozí implementace volá [viditelnost](#onshow) členskou funkci, pokud je položka DocObject a OLEIVERB_INPLACEACTIVATE nebo OLEIVERB_SHOW určena. Pokud položka není DocObject nebo jinou operací je zadán, výchozí implementace volá [COleServerItem::OnDoVerb](../../mfc/reference/coleserveritem-class.md#ondoverb).
 
 ##  <a name="onhide"></a>  CDocObjectServerItem::OnHide
 

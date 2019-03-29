@@ -1,6 +1,6 @@
 ---
 title: Cd2dresource – třída
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CD2DResource
 - AFXRENDERTARGET/CD2DResource
@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CD2DResource [MFC], m_bIsAutoDestroy
 - CD2DResource [MFC], m_pParentTarget
 ms.assetid: 34e3ee18-aab6-4c39-9294-de869e1f7820
-ms.openlocfilehash: 04d1fa57e34528f96f505fa20abb9b1131f80689
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e2cc6be7119a2df193aa2af415a9c8d4054f537c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284863"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564772"
 ---
 # <a name="cd2dresource-class"></a>Cd2dresource – třída
 
@@ -46,11 +46,11 @@ class CD2DResource : public CObject;
 |Název|Popis|
 |----------|-----------------|
 |[CD2DResource::CD2DResource](#cd2dresource)|Vytvoří objekt cd2dresource –.|
-|[CD2DResource::~CD2DResource](#cd2dresource__~cd2dresource)|Destruktor. Volá se, když se likviduje prostředků objektu D2D.|
+|[CD2DResource::~CD2DResource](#_dtorcd2dresource)|Destruktor. Volá se, když se likviduje prostředků objektu D2D.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CD2DResource::Create](#create)|Vytvoří cd2dresource –.|
 |[CD2DResource::Destroy](#destroy)|Odstraní objekt cd2dresource –.|
@@ -58,7 +58,7 @@ class CD2DResource : public CObject;
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CD2DResource::IsAutoDestroy](#isautodestroy)|Kontrola automaticky zničit příznak.|
 |[CD2DResource::ReCreate](#recreate)|Znovu vytvoří cd2dresource –.|
@@ -67,7 +67,7 @@ class CD2DResource : public CObject;
 
 |Název|Popis|
 |----------|-----------------|
-|[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|Prostředek bude destoyed vlastníkem (crendertarget –)|
+|[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|Zničení prostředků vlastníkem (crendertarget –)|
 |[CD2DResource::m_pParentTarget](#m_pparenttarget)|Ukazatel na hodnotu parent crendertarget –)|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
@@ -157,7 +157,7 @@ Hodnota TRUE, pokud prostředek je platná. v opačném případě FALSE.
 
 ##  <a name="m_bisautodestroy"></a>  CD2DResource::m_bIsAutoDestroy
 
-Prostředek bude destoyed vlastníkem (crendertarget –)
+Zničení prostředků vlastníkem (crendertarget –)
 
 ```
 BOOL m_bIsAutoDestroy;

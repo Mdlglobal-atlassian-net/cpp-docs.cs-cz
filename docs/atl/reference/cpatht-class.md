@@ -1,6 +1,6 @@
 ---
 title: Cpatht – třída
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CPathT
 - ATLPATH/ATL::CPathT
@@ -49,19 +49,19 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: 36d8710bd7bb055d8629dec57ec4d8c3602c8f79
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 109f9baefd0e6775db05eeba8cb78542bf60a9ac
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273020"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565785"
 ---
 # <a name="cpatht-class"></a>Cpatht – třída
 
 Tato třída reprezentuje cestu.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+> Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -79,7 +79,7 @@ Třídy ATL/MFC řetězec určený pro danou cestu (viz [CStringT](../../atl-mfc
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CPathT::PCXSTR](#pcxstr)|Typ konstanty typu řetězec.|
 |[CPathT::PXSTR](#pxstr)|Typ řetězec.|
@@ -135,11 +135,11 @@ Třídy ATL/MFC řetězec určený pro danou cestu (viz [CStringT](../../atl-mfc
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CPathT::operator const StringType &](#operator_const_stringtype_amp)|Tento operátor umožňuje objekt, který má zacházet jako řetězec.|
 |[CPathT::operator CPathT::PCXSTR](#operator_cpatht__pcxstr)|Tento operátor umožňuje objekt, který má zacházet jako řetězec.|
-|[CPathT::operator StringType &](#operator_stringtype)|Tento operátor umožňuje objekt, který má zacházet jako řetězec.|
+|[CPathT::operator StringType &](#operator_stringtype_amp)|Tento operátor umožňuje objekt, který má zacházet jako řetězec.|
 |[CPathT::operator +=](#operator_add_eq)|Tento operátor přidá řetězec do cesty.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
@@ -653,7 +653,7 @@ Vrátí aktualizovanou cestu.
 Tento operátor umožňuje objekt, který má zacházet jako řetězec.
 
 ```
-operatorconst StringType&() const throw();
+operator const StringType&() const throw();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -665,19 +665,19 @@ Vrátí řetězec představující aktuální cestu spravovaných tímto objekte
 Tento operátor umožňuje objekt, který má zacházet jako řetězec.
 
 ```
-operatorPCXSTR() const throw();
+operator PCXSTR() const throw();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí řetězec představující aktuální cestu spravovaných tímto objektem.
 
-##  <a name="operator_stringtype__amp"></a>  CPathT::operator StringType &amp;
+##  <a name="operator_stringtype_amp"></a>  CPathT::operator StringType &amp;
 
 Tento operátor umožňuje objekt, který má zacházet jako řetězec.
 
 ```
-operatorStringType&() throw();
+operator StringType&() throw();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
