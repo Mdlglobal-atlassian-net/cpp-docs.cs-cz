@@ -1,2 +1,0 @@
-> [!IMPORTANT]
-> Ukázkový kód je určen k objasnění konceptu a zobrazuje pouze kód, který je pro daný koncept podstatný. Nemusí splňovat požadavky zabezpečení pro jakékoli konkrétní prostředí a neměl by být použit přesně tak, jak je zobrazen. V zájmu maximalizace zabezpečení a odolnosti kódu doporučujeme přidat do vašich projektů kód pro ošetření chyb a zabezpečení. Společnost Microsoft poskytuje ukázkový kód „tak, jak je,“ bez jakýchkoli záruk.
