@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-ms.openlocfilehash: ad3431f78d3637bcdfdb0266c8abdb43047ca28d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b1a74fef743592d3d052226dac926fc7ddc58578
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279332"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770340"
 ---
 # <a name="menus-and-resources-container-additions"></a>Nabídky a prostředky: Kontejnerové doplňky
 
@@ -29,7 +29,7 @@ Tento článek vysvětluje změny, které je třeba provést, nabídky a jiné p
 
 V kontejneru aplikace potřeba provést dva druhy změny: změny stávajících prostředků, abyste podporují vizuální úpravy OLE a přidání nové prostředky používané pro aktivace na místě. Pokud používáte Průvodce aplikací k vytvoření aplikace v kontejneru, tyto kroky se provede za vás, ale vyžadují určité přizpůsobení.
 
-Pokud je velmi riskantní používat Průvodce aplikací, můžete se podívat na OCLIENT. RC, skript prostředků pro OCLIENT ukázkovou aplikaci, pokud chcete zobrazit, jak se implementují tyto změny. Najdete v ukázce MFC OLE [OCLIENT](../visual-cpp-samples.md).
+Pokud je velmi riskantní používat Průvodce aplikací, můžete se podívat na OCLIENT. RC, skript prostředků pro OCLIENT ukázkovou aplikaci, pokud chcete zobrazit, jak se implementují tyto změny. Najdete v ukázce MFC OLE [OCLIENT](../overview/visual-cpp-samples.md).
 
 V tomto článku probíraná témata zahrnují:
 
@@ -58,13 +58,13 @@ Pokud chcete, aby podporoval aktivaci na místě upravovat položky, je nutné v
 
 Malé změny aplikace typu kontejner prostředků tabulky akcelerátorů jsou nezbytné, pokud podporujete aktivace na místě. První změna umožňuje uživateli stisknout klávesu escape (ESC) pro zrušení režim úprav na místě. Přidejte následující položku do tabulky hlavní akcelerátoru:
 
-|ID|Key|Typ|
+|ID|Key|Type|
 |--------|---------|----------|
 |ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|
 
-Druhý změnu je vytvoření nové tabulky akcelerátoru, která odpovídá na nový prostředek nabídky, které jsou vytvořené pro aktivace na místě. Tato tabulka obsahuje záznamy pro nabídky soubor a okno kromě výše uvedených vk_escape – zadání. V následujícím příkladu je tabulka akcelerátoru vytvořena pro aktivace na místě v ukázce MFC [KONTEJNERU](../visual-cpp-samples.md):
+Druhý změnu je vytvoření nové tabulky akcelerátoru, která odpovídá na nový prostředek nabídky, které jsou vytvořené pro aktivace na místě. Tato tabulka obsahuje záznamy pro nabídky soubor a okno kromě výše uvedených vk_escape – zadání. V následujícím příkladu je tabulka akcelerátoru vytvořena pro aktivace na místě v ukázce MFC [KONTEJNERU](../overview/visual-cpp-samples.md):
 
-|ID|Key|Typ|
+|ID|Key|Type|
 |--------|---------|----------|
 |ID_FILE_NEW|CTRL + N|**VIRTKEY**|
 |ID_FILE_OPEN|CTRL+O|**VIRTKEY**|

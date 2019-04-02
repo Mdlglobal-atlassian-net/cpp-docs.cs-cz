@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CCreateContext structure [MFC]
 ms.assetid: 337a0e44-d910-49a8-afc0-c7207666a9dc
-ms.openlocfilehash: f84c0da7530a774ebe2b33aea0bddc5b0bf0fe17
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 795b20cba41eeca8cc1a32e312edf065b718f364
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326345"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768483"
 ---
 # <a name="ccreatecontext-structure"></a>Ccreatecontext – struktura
 
@@ -31,7 +31,7 @@ Při vytváření okna hodnoty v této struktuře poskytují informace použité
 
 A `CCreateContext` struktura obsahuje odkazy na dokument, okno rámce, zobrazení a šablony dokumentu. Také obsahuje ukazatel `CRuntimeClass` , který určuje typ zobrazení vytvořit. Informace o třídě za běhu a ukazatel na aktuální dokument slouží k vytvoření nového zobrazení dynamicky. Následující tabulce najdete doporučení, jak a kdy každý `CCreateContext` člena může použít:
 
-|Člen|Typ|Co je pro|
+|Člen|Type|Co je pro|
 |------------|----------|--------------------|
 |`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass` k vytvoření nového zobrazení.|
 |`m_pCurrentDoc`|`CDocument*`|K existujícímu dokumentu, který se má přidružit nové zobrazení.|
@@ -56,7 +56,7 @@ Tady je pár obecné pokyny:
 
 Obecně platí, pokud použijete výchozí nastavení rozhraní framework, můžete ignorovat `CCreateContext`. Pokud se pokusíte pokročilejší úpravy, zdrojový kód knihovny Microsoft Foundation Class nebo ukázkové programy, jako je například VIEWEX, vás provede. Pokud zapomenete povinný parametr, kontrolní výraz framework říct, co jste zapomněli.
 
-Další informace o `CCreateContext`, najdete v ukázce MFC [VIEWEX](../../visual-cpp-samples.md).
+Další informace o `CCreateContext`, najdete v ukázce MFC [VIEWEX](../../overview/visual-cpp-samples.md).
 
 ## <a name="requirements"></a>Požadavky
 

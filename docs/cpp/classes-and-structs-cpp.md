@@ -8,12 +8,12 @@ helpviewer_keywords:
 - classes [C++]
 - user-defined types, C++ classes
 ms.assetid: 516dd496-13fb-4f17-845a-e9ca45437873
-ms.openlocfilehash: 44736b9515363d1406b124858f72f12f8f7f552a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c28f83e7853ffb09bba7721ec71ab43c85aedb0c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562744"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779388"
 ---
 # <a name="classes-and-structs-c"></a>Třídy a struktury (C++)
 
@@ -51,7 +51,7 @@ Jsou zahrnuty v následujících tématech:
 
 Třída tři typy jsou struktury, třídy a sjednocení. Jsou deklarovány pomocí [struktura](../cpp/struct-cpp.md), [třídy](../cpp/class-cpp.md), a [sjednocení](../cpp/unions.md) klíčová slova. V následující tabulce jsou uvedeny rozdíly mezi typy tři třídy.
 
-Další informace o sjednocení, naleznete v tématu [sjednocení](../cpp/unions.md). Informace o spravovaných třídách a strukturách naleznete v tématu [třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md).
+Další informace o sjednocení, naleznete v tématu [sjednocení](../cpp/unions.md). Informace o třídách a strukturách v jazyce C + +/ CLI a C + +/ CX, viz [třídy a struktury](../extensions/classes-and-structs-cpp-component-extensions.md).
 
 ### <a name="access-control-and-constraints-of-structures-classes-and-unions"></a>Řízení přístupu a omezení struktury, třídy a sjednocení
 

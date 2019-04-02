@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 42913ddea7818636dce8d630ed2d79d13c19ce81
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302101"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781442"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd – třída
 
@@ -99,7 +99,7 @@ class CSplitterWnd : public CWnd
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CSplitterWnd::ActivateNext](#activatenext)|Provede příkaz Další podokno nebo předchozí podokno.|
 |[CSplitterWnd::CanActivateNext](#canactivatenext)|Kontroluje, jestli je aktuálně možné příkaz Další podokno nebo předchozí podokno.|
@@ -133,7 +133,7 @@ class CSplitterWnd : public CWnd
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CSplitterWnd::OnDraw](#ondraw)|Volá se rozhraním, chcete-li nakreslit okna s rozdělovačem.|
 |[CSplitterWnd::OnDrawSplitter](#ondrawsplitter)|Vykreslí obrázek rozděleného okna.|
@@ -175,9 +175,9 @@ Další informace o rozdělovače oken, naleznete v tématu [Technická poznámk
 
 Další informace o tom, jak vytvořit dynamické rozdělovače oken, najdete tady:
 
-- Ukázky knihovny MFC [Scribble](../../visual-cpp-samples.md)
+- Ukázky knihovny MFC [Scribble](../../overview/visual-cpp-samples.md)
 
-- Ukázky knihovny MFC [VIEWEX](../../visual-cpp-samples.md).
+- Ukázky knihovny MFC [VIEWEX](../../overview/visual-cpp-samples.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -1036,7 +1036,7 @@ Ukazatel na kontext zařízení.
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC VIEWEX](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC VIEWEX](../../overview/visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CView – třída](../../mfc/reference/cview-class.md)<br/>

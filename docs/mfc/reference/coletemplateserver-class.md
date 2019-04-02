@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-ms.openlocfilehash: bcc79f781be3a0292398e4f211ea55f5403b6b8f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3abdf1dc2da5ef9a111371b501d5cd8ce208825d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302877"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781208"
 ---
 # <a name="coletemplateserver-class"></a>Coletemplateserver – třída
 
@@ -35,13 +35,13 @@ class COleTemplateServer : public COleObjectFactory
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleTemplateServer::COleTemplateServer](#coletemplateserver)|Vytvoří `COleTemplateServer` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleTemplateServer::ConnectTemplate](#connecttemplate)|Šablona dokumentu se připojí k základní `COleObjectFactory` objektu.|
 |[COleTemplateServer::Unregister](#unregister)|Zruší registraci přidružený dokument šablony.|
@@ -171,7 +171,7 @@ Další informace najdete v tématu [implementace rozhraní IDispatch](/previous
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC HIERSVR](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [COleObjectFactory – třída](../../mfc/reference/coleobjectfactory-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [COleServerDoc – třída](../../mfc/reference/coleserverdoc-class.md)<br/>

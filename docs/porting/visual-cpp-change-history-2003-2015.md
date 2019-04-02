@@ -4,18 +4,18 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 20920a5f1a1cdf2a4e10263a7b1de3010f24f9c0
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 9be4db9e0f7c50054dc6e6ca498b1c9d49715a8d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329036"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775410"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>2003 – 2015 historie změn Visual C++
 
 Tento článek popisuje zásadní změny z Visual Studia 2015, když se vrátíme k Visual Studio 2003 a v tomto článku podmínky "nové chování" nebo "teď" odkazovat do sady Visual Studio 2015 a novější. Podmínky "staré chování" a "před" odkazovat na Visual Studio 2013 a dřívějších verzích.
 
-Informace o sadě Visual Studio 2017 najdete v tématu [co je nového v aplikaci Visual C++ v sadě Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) a [vylepšení v aplikaci Visual C++ v sadě Visual Studio 2017](../cpp-conformance-improvements-2017.md).
+Informace o sadě Visual Studio 2017 najdete v tématu [co je nového v aplikaci Visual C++ v sadě Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) a [vylepšení v aplikaci Visual C++ v sadě Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md).
 
 > [!NOTE]
 > Neexistují žádná binární rozbíjející změny mezi Visual Studio 2015 a Visual Studio 2017.
@@ -3524,4 +3524,4 @@ Kompilátor C++ v sadě Visual Studio 2013 zjistí neshody v makru _ITERATOR_DEB
 
 ## <a name="see-also"></a>Viz také:
 
-[Co je nového v aplikaci Visual C++ v sadě Visual Studio](../what-s-new-for-visual-cpp-in-visual-studio.md)
+[Co je nového v aplikaci Visual C++ v sadě Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)

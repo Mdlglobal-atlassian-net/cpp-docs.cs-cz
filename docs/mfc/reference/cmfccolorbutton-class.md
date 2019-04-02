@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 05a4ad17feea20c67069e65c5c5df43d543e2377
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c0c9ad79342f2013aa071240c684fce168e55c9e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293482"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779999"
 ---
 # <a name="cmfccolorbutton-class"></a>Cmfccolorbutton – třída
 
@@ -86,7 +86,7 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCColorButton::IsDrawXPTheme](#isdrawxptheme)|Určuje, zda aktuální barva – tlačítko se zobrazí v vizuálního stylu Windows XP.|
 |[CMFCColorButton::OnDraw](#ondraw)|Volá se rozhraním pro zobrazení obrázku tlačítka.|
@@ -98,7 +98,7 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="data-members"></a>Datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |`m_bAltColorDlg`|Logická hodnota. Při hodnotě TRUE se zobrazí rozhraní [cmfccolordialog –](../../mfc/reference/cmfccolordialog-class.md) Barva dialogové okno při *jiných* po kliknutí na tlačítko, nebo pokud je hodnota FALSE, systém barvy dialogové okno. Výchozí hodnota je TRUE. Další informace najdete v tématu [CMFCColorButton::EnableOtherButton](#enableotherbutton).|
 |`m_bAutoSetFocus`|Logická hodnota. Při hodnotě TRUE se rozhraní nastaví fokus v nabídce barvy v případě, že v nabídce se zobrazí, nebo pokud je hodnota FALSE, zaměřuje nezmění. Výchozí hodnota je TRUE.|
@@ -126,7 +126,7 @@ Dialogové okno Výběr barvy ( [cmfccolorbar – třída](../../mfc/reference/c
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak nakonfigurovat pomocí různých metod v barevné tlačítko `CMFCColorButton` třídy. Metody, nastavit barvu bude tlačítko barev a jeho počet sloupců a povolit automatické a další tlačítka. V tomto příkladu je součástí [stav panelu demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak nakonfigurovat pomocí různých metod v barevné tlačítko `CMFCColorButton` třídy. Metody, nastavit barvu bude tlačítko barev a jeho počet sloupců a povolit automatické a další tlačítka. V tomto příkladu je součástí [stav panelu demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#10](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_1.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#11](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_2.cpp)]

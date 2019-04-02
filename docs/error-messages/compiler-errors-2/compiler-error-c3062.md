@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3062
 ms.assetid: 78632e6d-255f-42c3-b124-31a9194ff86d
-ms.openlocfilehash: ac45847c94e7d2dc731eba71b0a38105eb915e53
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f4157db4a2a1b1864446a082deddc73df2e2fe9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590408"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776367"
 ---
 # <a name="compiler-error-c3062"></a>Chyba kompilátoru C3062
 
@@ -19,7 +19,7 @@ ms.locfileid: "50590408"
 
 Můžete určit nadřízený typ výčtu. Nicméně některé typy vyžadují, abyste přiřadit hodnoty pro každý čítač.
 
-Další informace o výčtech naleznete v tématu [výčet tříd](../../windows/enum-class-cpp-component-extensions.md).
+Další informace o výčtech naleznete v tématu [výčet tříd](../../extensions/enum-class-cpp-component-extensions.md).
 
 Následující ukázka generuje C3062:
 

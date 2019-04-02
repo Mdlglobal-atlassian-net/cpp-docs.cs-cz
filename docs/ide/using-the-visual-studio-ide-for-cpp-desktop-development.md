@@ -1,16 +1,16 @@
 ---
 title: Použití prostředí IDE sady Visual Studio pro vývoj aplikací klasické pracovní plochy v jazyce C++
-ms.date: 06/08/2018
+ms.date: 03/14/2019
 helpviewer_keywords:
 - IDE [C++]
 - Visual Studio IDE [C++]
 ms.assetid: d985c230-8e81-49d6-92be-2db9cac8d023
-ms.openlocfilehash: 45dcf185f57f7deedb3734d31ce17a6201c81959
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7417c46097b1f0c6282e3684a7556880c21be42a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612274"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773564"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>Použití prostředí IDE sady Visual Studio pro vývoj aplikací klasické pracovní plochy v jazyce C++
 
@@ -24,11 +24,11 @@ Tyto kurzy se předpokládá, že jste nainstalovali aplikaci Visual Studio a ja
 
 Pokud jste dosud nenainstalovali aplikaci Visual Studio, teď je čas.
 
-**Instalace sady Visual Studio 2017**
+**Visual Studio 2017 Installation**
 
-Pokud chcete získat Visual Studio 2017, můžete sadu stáhnout z [stahování sady Visual Studio](http://www.visualstudio.com/downloads/download-visual-studio-vs.aspx). Nezapomeňte zahrnout nástroje Visual C++ pro vývoj, při instalaci sady Visual Studio, protože nejsou nainstalovány ve výchozím nastavení. Další informace o tom, jak nainstalovat sadu Visual Studio najdete v tématu [instalace sady Visual Studio](/visualstudio/install/install-visual-studio).
+Pokud chcete získat Visual Studio 2017, můžete sadu stáhnout z [stahování sady Visual Studio](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx). Nezapomeňte zahrnout nástroje Visual C++ pro vývoj, při instalaci sady Visual Studio, protože nejsou nainstalovány ve výchozím nastavení. Další informace o tom, jak nainstalovat sadu Visual Studio najdete v tématu [instalace sady Visual Studio](/visualstudio/install/install-visual-studio).
 
-**Instalace sady Visual Studio 2015**
+**Visual Studio 2015 Installation**
 
 Chcete-li nainstalovat sadu Visual Studio 2015, přejděte na [starší verze sady Visual Studio si můžete stáhnout](https://www.visualstudio.com/vs/older-downloads/). Spusťte instalační program a zvolte **vlastní instalace** a klikněte na tlačítko komponent C++.
 
@@ -40,19 +40,19 @@ Po dokončení instalace sady Visual Studio budete chtít pokračovat.
 
 Abyste mohli začít používat Visual Studio IDE pro vytváření aplikací C++, seznámení se základními každý z těchto témat v pořadí. Každé z nich je založena na práci, kterou jste dokončili v předchozích tématech:
 
-- [Návod: Práce s projekty a řešeními (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)
+- [Návod: Práce s projekty a řešeními (C++)](walkthrough-working-with-projects-and-solutions-cpp.md)
 
-- [Návod: Sestavení projektu (C++)](../ide/walkthrough-building-a-project-cpp.md)
+- [Návod: Sestavení projektu (C++)](walkthrough-building-a-project-cpp.md)
 
-- [Návod: Testování projektu (C++)](../ide/walkthrough-testing-a-project-cpp.md)
+- [Návod: Testování projektu (C++)](walkthrough-testing-a-project-cpp.md)
 
-- [Návod: Ladění projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md)
+- [Návod: Ladění projektu (C++)](walkthrough-debugging-a-project-cpp.md)
 
-- [Návod: Nasazení programu (C++)](../ide/walkthrough-deploying-your-program-cpp.md)
+- [Návod: Nasazení programu (C++)](walkthrough-deploying-your-program-cpp.md)
 
 ## <a name="next-steps"></a>Další kroky
 
-Po dokončení těchto kurzů, jste připraveni začít vytvářet svoje vlastní projekty. Další informace a zdroje informací pro vývoj v jazyce Visual C++, naleznete v tématu [Visual C++ v sadě Visual Studio](../visual-cpp-in-visual-studio.md).
+Po dokončení těchto kurzů, jste připraveni začít vytvářet svoje vlastní projekty. Další informace a zdroje informací pro vývoj v jazyce Visual C++, naleznete v tématu [Visual C++ v sadě Visual Studio](../overview/visual-cpp-in-visual-studio.md).
 
 ## <a name="see-also"></a>Viz také:
 

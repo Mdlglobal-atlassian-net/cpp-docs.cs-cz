@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ATL, reference
 - ATL, about ATL
 ms.assetid: 291f38d1-d2de-4687-86a9-99b4fd35706c
-ms.openlocfilehash: 65b8631560ec1b768521d917256c32c75c531fab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1ee9364cfcd382c8699014fd2ef4a807b63bb0f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644181"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780428"
 ---
 # <a name="atl-com-desktop-components"></a>COM desktopové komponenty ATL
 
@@ -47,7 +47,7 @@ Obsahuje témata o tom, jak programovat pomocí aktivní šablony knihovny (ATL)
 [ATL – tutoriál](../atl/active-template-library-atl-tutorial.md)<br/>
 Vás provede vytvořením ovládacího prvku a ukazuje některé ATL – principy vytváření v procesu.
 
-[Ukázky knihovny ATL](../visual-cpp-samples.md)<br/>
+[Ukázky knihovny ATL](../overview/visual-cpp-samples.md)<br/>
 Ukázkový kód, který ukazuje způsob použití knihovny ATL pro zápis objektů COM.
 
 [Šablony OLE DB](../data/oledb/ole-db-templates.md)<br/>

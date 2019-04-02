@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CClientDC [MFC], CClientDC
 - CClientDC [MFC], m_hWnd
 ms.assetid: 8a871d6b-06f8-496e-9fa3-9a5780848369
-ms.openlocfilehash: 1c506e1fe3d36b9f356f8ef250e0310a10a917cc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a67af5d7d82b8bd7d0490d4ae6f9535bf3283ea2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284109"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766765"
 ---
 # <a name="cclientdc-class"></a>Cclientdc – třída
 
@@ -31,7 +31,7 @@ class CClientDC : public CDC
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CClientDC::CClientDC](#cclientdc)|Vytvoří `CClientDC` připojen k objektu `CWnd`.|
 
@@ -100,7 +100,7 @@ HWND m_hWnd;
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC MDI](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC MDI](../../overview/visual-cpp-samples.md)<br/>
 [CDC – třída](../../mfc/reference/cdc-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CDC – třída](../../mfc/reference/cdc-class.md)

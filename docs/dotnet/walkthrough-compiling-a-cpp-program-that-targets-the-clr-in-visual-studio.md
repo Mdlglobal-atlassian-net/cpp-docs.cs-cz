@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: a65ccdb4d2f031a70ba03719b58fb439407cdfc8
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d0a006c6928bf42c3e6f4adfbc3d1fdde7ff7c87
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823143"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773044"
 ---
 # <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Návod: Kompilace jazyka C + +/ CLI programu CLR v sadě Visual Studio
 
@@ -57,7 +57,7 @@ Tato témata se předpokládá, že chápete základy jazyka C++.
 
    `StreamWriter^ sw = gcnew StreamWriter(fileName);`
 
-   Další informace o novou syntaxi jazyka Visual C++, naleznete v tématu [přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md).
+   Další informace o novou syntaxi jazyka Visual C++, naleznete v tématu [přípony komponent pro platformy běhového prostředí](../extensions/component-extensions-for-runtime-platforms.md).
 
 1. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
 
@@ -77,4 +77,4 @@ Tato témata se předpokládá, že chápete základy jazyka C++.
 ## <a name="see-also"></a>Viz také
 
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
-[Projekty a sestavení systémy](../build/projects-and-build-systems-cpp.md)<br/>
+[Projekty a systémy sestavení](../build/projects-and-build-systems-cpp.md)<br/>

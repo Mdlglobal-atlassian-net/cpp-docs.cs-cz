@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-ms.openlocfilehash: 07178597e66975a006a0ea5293192ee7ea099e42
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 39309408c6d1fc6cbb4223eda22c511865f14498
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286462"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772511"
 ---
 # <a name="tn031-control-bars"></a>TN031: Ovládací pruhy
 
@@ -136,7 +136,7 @@ Všechna rastrového obrázku tlačítka na panelu nástrojů pocházejí z jedn
 
 Každé tlačítko musí mít stejnou velikost. Výchozí hodnota je standardní 24 × 22 pixelů. Každá image/piktogramu musí mít stejnou velikost a musí být vedle sebe v rastrového obrázku. Výchozí velikost image/piktogram je 16 × 15 pixelů. Proto pro panel nástrojů s 10 tlačítka (pomocí standardní velikosti), je nutné rastrový obrázek, který je 160 pixelů na šířku a 15 pixelů na výšku.
 
-Každé tlačítko má jeden a pouze jeden image/glyfů. Jiné tlačítko stavy a styly (třeba, stisknutí snižování kapacity, zakázat, zakázané dolů, neurčitý) algorithmically generují z jedné image/piktogram. Teoreticky lze použít libovolné barvy rastrového obrázku nebo DIB. Algoritmus pro generování jiné tlačítko stavy funguje nejlíp odstíny šedé při původní bitové kopie. Podívejte se na standardním panelu nástrojů tlačítka a klipart tlačítko panelu nástrojů k dispozici v ukázce MFC Obecné [klipart](../visual-cpp-samples.md) příklady.
+Každé tlačítko má jeden a pouze jeden image/glyfů. Jiné tlačítko stavy a styly (třeba, stisknutí snižování kapacity, zakázat, zakázané dolů, neurčitý) algorithmically generují z jedné image/piktogram. Teoreticky lze použít libovolné barvy rastrového obrázku nebo DIB. Algoritmus pro generování jiné tlačítko stavy funguje nejlíp odstíny šedé při původní bitové kopie. Podívejte se na standardním panelu nástrojů tlačítka a klipart tlačítko panelu nástrojů k dispozici v ukázce MFC Obecné [klipart](../overview/visual-cpp-samples.md) příklady.
 
 Barvy používané v panelu nástrojů jsou také v souladu s doporučením Průvodce návrhem aplikace rozhraní Windows. Tyto barvy nejsou pevně zakódované a se dynamicky mění v reakci na vlastní uživatelské nastavení v Ovládacích panelech.
 

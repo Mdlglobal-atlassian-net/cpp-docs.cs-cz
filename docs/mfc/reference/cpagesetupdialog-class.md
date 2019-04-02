@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 9a8940aa23b23281a6de6ce7e75bb1e43341b14a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 01a320fbcd9760bab484f3c75553613852ca9aed
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277882"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778088"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog Class
 
@@ -51,13 +51,13 @@ class CPageSetupDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog)|Vytvoří `CPageSetupDialog` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CPageSetupDialog::CreatePrinterDC](#createprinterdc)|Vytvoří kontext zařízení pro tisk.|
 |[CPageSetupDialog::DoModal](#domodal)|Zobrazí dialogové okno a umožňuje vytvořit uživatele s výběrem.|
@@ -405,6 +405,6 @@ Přepsání této funkce můžete přizpůsobit kreslení obrázku. Je-li přeps
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC WORDPAD](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [CCommonDialog – třída](../../mfc/reference/ccommondialog-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

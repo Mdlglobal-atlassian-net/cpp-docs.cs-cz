@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: 86ac5984f5d21e0077c15027ac7a8d8daab08945
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c4f6cc19897b66bfe26c6d53ccb87c35dbed82c9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414002"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777646"
 ---
 # <a name="csession-class"></a>CSession – třída
 
@@ -216,6 +216,6 @@ Další informace najdete v tématu [ITransactionLocal::StartTransaction](/previ
 
 ## <a name="see-also"></a>Viz také
 
-[CatDB](../../visual-cpp-samples.md)<br/>
+[CatDB](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

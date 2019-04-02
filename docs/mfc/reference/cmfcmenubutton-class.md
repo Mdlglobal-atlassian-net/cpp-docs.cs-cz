@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_hMenu
 - CMFCMenuButton [MFC], m_nMenuResult
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
-ms.openlocfilehash: bacd8726fd4c833f956f763cca81a88d41d1f167
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cbdf4005ee1a0249e7ed2b5f1d50621fb951f64f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298201"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777360"
 ---
 # <a name="cmfcmenubutton-class"></a>Cmfcmenubutton – třída
 
@@ -43,7 +43,7 @@ class CMFCMenuButton : public CMFCButton
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCMenuButton::CMFCMenuButton](#cmfcmenubutton)|Vytvoří `CMFCMenuButton` objektu.|
 
@@ -56,7 +56,7 @@ class CMFCMenuButton : public CMFCButton
 
 ### <a name="data-members"></a>Datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|Určuje, zda chcete zobrazit výchozí rozbalovací nabídky systému nebo použít [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).|
 |[CMFCMenuButton::m_bRightArrow](#m_brightarrow)|Určuje, zda v rozbalovací nabídce se zobrazí pod nebo napravo od panelu.|
@@ -72,7 +72,7 @@ Když vytvoříte `CMFCMenuButton`, je nutné předat v popisovač do přidruže
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak nastavit popisovač nabídky připojeno k tlačítku, změňte velikost tlačítka podle velikosti jeho textu a obrázků a nastavit v rozbalovací nabídce, která se zobrazí v rámci rozhraní. Tento fragment kódu je součástí [nové ovládací prvky ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak nastavit popisovač nabídky připojeno k tlačítku, změňte velikost tlačítka podle velikosti jeho textu a obrázků a nastavit v rozbalovací nabídce, která se zobrazí v rámci rozhraní. Tento fragment kódu je součástí [nové ovládací prvky ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#38](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#39](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_2.cpp)]

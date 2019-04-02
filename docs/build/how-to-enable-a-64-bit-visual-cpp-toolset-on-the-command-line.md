@@ -12,19 +12,19 @@ helpviewer_keywords:
 - IPF, command-line compiler
 - x64 [C++], command-line compiler
 ms.assetid: 4da93a19-e20d-4778-902a-5eee9a6a90b5
-ms.openlocfilehash: b30b831522016ce61f138f7e0521c42ff44e04d9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 8436254a3d8c5c1dae018c2309ceaad7bd5b2408
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809766"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769274"
 ---
 # <a name="how-to-enable-a-64-bit-x64-hosted-msvc-toolset-on-the-command-line"></a>Postupy: Povolit 64-Bit, x64 hostované MSVC sady nástrojů v příkazovém řádku
 
 Visual Studio obsahuje kompilátory C++, linkers a dalších nástrojů, které vám umožní vytvářet specifické pro platformu verze aplikací, které poběží v operačních systémech Windows 32bitové, 64bitové nebo založené na ARM. Další volitelné úlohy sady Visual Studio umožňují použijte nástroje C++ k cílení na jiných platformách, jako je iOS, Androidu a Linuxu. Výchozí architektura sestavení používá 32bitové, hostované x86 nástroje k vytvoření 32-bit, x86 nativní kód Windows. Ale pravděpodobně máte 64bitový počítač. Můžete využít výhod procesoru a paměti k dispozici pro 64bitový kód pomocí nástrojů 64-bit, hostované x64 při sestavování kódu pro x86, x64 nebo procesory ARM.
 
 > [!NOTE]
-> Informace o konkrétních nástrojích, které jsou součástí každé edici sady Visual Studio najdete v tématu [nástrojů Visual C++ a funkcí v edicích nástroje Visual Studio](../ide/visual-cpp-tools-and-features-in-visual-studio-editions.md).
+> Informace o konkrétních nástrojích, které jsou součástí každé edici sady Visual Studio najdete v tématu [nástrojů Visual C++ a funkcí v edicích nástroje Visual Studio](../overview/visual-cpp-tools-and-features-in-visual-studio-editions.md).
 >
 > Informace o tom, jak použít rozhraní IDE sady Visual Studio k vytvoření 64bitových aplikací naleznete v tématu [jak: Konfigurace projektů Visual C++ pro cílení 64-Bit, x64 platformy](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).
 

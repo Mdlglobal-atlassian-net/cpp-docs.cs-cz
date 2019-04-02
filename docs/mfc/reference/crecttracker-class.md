@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: 1834c378246835314002cdf05fe9a294b609c4e4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c54cdfecfa6c4ff0eef7e16003ab2097553953d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259578"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775683"
 ---
 # <a name="crecttracker-class"></a>Crecttracker – třída
 
@@ -59,13 +59,13 @@ class CRectTracker
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CRectTracker::CRectTracker](#crecttracker)|Vytvoří `CRectTracker` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CRectTracker::AdjustRect](#adjustrect)|Volá se při změně velikosti obdélníku.|
 |[CRectTracker::Draw](#draw)|Vykresluje obdélník.|
@@ -481,8 +481,8 @@ Sledování probíhá s typ pružné pásma výběr z pravého dolního popisova
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC sledovací modul](../../visual-cpp-samples.md)<br/>
-[Ukázky knihovny MFC DRAWCLI](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC sledovací modul](../../overview/visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [COleResizeBar – třída](../../mfc/reference/coleresizebar-class.md)<br/>
 [CRect – třída](../../atl-mfc-shared/reference/crect-class.md)

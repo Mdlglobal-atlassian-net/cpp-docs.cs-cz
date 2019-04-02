@@ -6,12 +6,12 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: 0e335c20464d8ea71fd75ce2e67f67ca14edacb0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8999f6469e420fa86cb1267675f10dc173d45ff0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299319"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776244"
 ---
 # <a name="implementing-property-pages"></a>Implementace stránek vlastností
 
@@ -48,4 +48,4 @@ Implementace stránky vlastností příklad naleznete v tématu [příkladu: Imp
 ## <a name="see-also"></a>Viz také:
 
 [Stránky vlastností](../atl/atl-com-property-pages.md)<br/>
-[Ukázka ATLPages](../visual-cpp-samples.md)
+[Ukázka ATLPages](../overview/visual-cpp-samples.md)

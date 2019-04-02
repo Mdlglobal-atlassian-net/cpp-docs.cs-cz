@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCTabToolTipInfo struct
 ms.assetid: 9c3b3fb9-1497-4d59-932b-0da9348dd5e2
-ms.openlocfilehash: 1e10e74729a1a4bde90ca22abdcc1a75b41c95db
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 87c8820bc33f3a344933faa797a9fc60d2422b13
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260814"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773161"
 ---
 # <a name="cmfctabtooltipinfo-structure"></a>CMFCTabToolTipInfo Structure
 
@@ -27,7 +27,7 @@ struct CMFCTabToolTipInfo
 
 ### <a name="data-members"></a>Datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCTabToolTipInfo::m_nTabIndex](#m_ntabindex)|Určuje index ovládacího prvku karta.|
 |[CMFCTabToolTipInfo::m_pTabWnd](#m_ptabwnd)|Ukazatel na ovládací prvek karty.|
@@ -39,7 +39,7 @@ Ukazatel `CMFCTabToolTipInfo` struktura je předán jako parametr AFX_WM_ON_GET_
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje jak `CMFCTabToolTipInfo` je používán [MDITabsDemo vzorku: Knihovny MFC s kartami MDI aplikaci](../../visual-cpp-samples.md).
+Následující příklad ukazuje jak `CMFCTabToolTipInfo` je používán [MDITabsDemo vzorku: Knihovny MFC s kartami MDI aplikaci](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -65,7 +65,7 @@ Index karty nad tím, které uživatel umístěný kurzor.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje jak `m_nTabIndex` je používán [MDITabsDemo vzorku: Knihovny MFC s kartami MDI aplikaci](../../visual-cpp-samples.md).
+Následující příklad ukazuje jak `m_nTabIndex` je používán [MDITabsDemo vzorku: Knihovny MFC s kartami MDI aplikaci](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -79,7 +79,7 @@ CMFCBaseTabCtrl* m_pTabWnd;
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje jak `m_pTabWnd` je používán [MDITabsDemo vzorku: Knihovny MFC s kartami MDI aplikaci](../../visual-cpp-samples.md).
+Následující příklad ukazuje jak `m_pTabWnd` je používán [MDITabsDemo vzorku: Knihovny MFC s kartami MDI aplikaci](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -97,7 +97,7 @@ Pokud je řetězec prázdný, popisek se nezobrazí.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje jak `m_strText` je používán [MDITabsDemo vzorku: Knihovny MFC s kartami MDI aplikaci](../../visual-cpp-samples.md).
+Následující příklad ukazuje jak `m_strText` je používán [MDITabsDemo vzorku: Knihovny MFC s kartami MDI aplikaci](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 

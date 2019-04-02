@@ -1,13 +1,13 @@
 ---
 title: Přehled programování v C++ v systému Windows
-ms.date: 11/15/2018
+ms.date: 03/28/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 6338b390b11c58f3ebac2af1bb568ea3c3470cd1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 35842ae73e59685946afe31e88729a36a6431768
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810442"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772901"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Přehled programování v C++ v systému Windows
 
@@ -19,13 +19,13 @@ Aplikace konzoly C++ spusťte z příkazového řádku v okně konzoly a může 
  
 ## <a name="native-desktop-client-applications"></a>Nativní klientská aplikace
 
-Termín *nativní klientská aplikace* odkazuje na C nebo C++ oddílové aplikaci, která používá původní rozhraní Win32 API Windows pro přístup k operačním systémem. Tato rozhraní API představují samy o sobě převážně v C. Při vytváření tohoto typu aplikace, máte taky možnost výběru programovat přímo s smyčku zpráv ve stylu jazyka C, který zpracovává události v operačním systému, nebo s použitím *Microsoft Foundation Classes* (MFC), knihovnu C++, která obaluje Win32 způsobem, který je o něco objektově orientovaný. Žádný přístup se považuje za "moderní" ve srovnání s univerzální platformu Windows (viz níže), ale oba jsou stále plně podporované a mít miliony řádků kódu spuštěného v celém světě ještě dnes.
+Termín *nativní klientská aplikace* odkazuje na C nebo C++ oddílové aplikaci, která používá původní nativní [rozhraní API Windows C a/nebo rozhraní API modelu COM](/windows/desktop/apiindex/windows-api-list) pro přístup k operačním systémem. Tato rozhraní API představují samy o sobě převážně v C. Při vytváření tohoto typu aplikace, máte taky možnost výběru programovat přímo s smyčku zpráv ve stylu jazyka C, který zpracovává události v operačním systému, nebo s použitím *Microsoft Foundation Classes* (MFC), knihovnu C++, která obaluje Win32 způsobem, který je o něco objektově orientovaný. Žádný přístup se považuje za "moderní" ve srovnání s univerzální platformu Windows (viz níže), ale oba jsou stále plně podporované a mít miliony řádků kódu spuštěného v celém světě ještě dnes. Aplikace Win32, na kterém běží v okně vyžaduje pro vývojáře pro práci s zpráv Windows uvnitř procedury funkce Windows explicitně. Bez ohledu na název můžete jako (x86) 32bitové nebo 64bitové (x64) binární zkompilovat aplikaci Win32. V sadě Visual Studio IDE je shodný podmínky x86 a Win32.
 
 Abyste mohli začít s programováním tradiční Windows C++, naleznete v tématu [Win32 a C++ vám začít](/windows/desktop/LearnWin32/learn-to-program-for-windows). Po získání některé znalost Win32 ji bude snazší naučit [desktopových aplikací knihovny MFC](/mfc/mfc-desktop-applications). Příklad tradiční desktopové aplikace C++, využívající sofistikované grafiky, naleznete v tématu [Hilo: Vývoj aplikací pro Windows v jazyce C++](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx).
 
 ### <a name="c-or-net"></a>.NET nebo C++? 
 
-Pro scénáře nejvíce desktopové aplikace (jinými slovy, UPW ne cílení), zvažte použití C# a .NET. Je to proto, že je obecně méně složitý, méně náchylný programování rozhraní .NET a má Modernější objektově orientované rozhraní API než Win32 nebo MFC. Ve většině případů je více než odpovídající jeho výkon. Windows Presentation Foundation (WPF) pro bohaté grafické funkce rozhraní .NET, a může využívat Win32, jakož i moderní Windows rozhraní API modulu Runtime (viz níže UPW). Obecně platí doporučujeme pomocí jazyka C++ pro desktopové aplikace, když budete potřebovat:
+Pro scénáře nejvíce desktopové aplikace (jinými slovy, UPW ne cílení), zvažte použití C# k vytvoření uživatelského rozhraní. Je to proto, že je obecně méně složitý, méně náchylný programování rozhraní .NET a má Modernější objektově orientované rozhraní API než Win32 nebo MFC. Ve většině případů je více než odpovídající jeho výkon. Windows Presentation Foundation (WPF) pro bohaté grafické funkce rozhraní .NET, a může využívat Win32, jakož i moderní Windows rozhraní API modulu Runtime (viz níže UPW). Obecně platí doporučujeme pomocí jazyka C++ pro desktopové aplikace, když budete potřebovat:
 
 - mít naprostou kontrolu nad využití paměti
 - co nejvíce ekonomiku spotřeby energie
@@ -33,9 +33,11 @@ Pro scénáře nejvíce desktopové aplikace (jinými slovy, UPW ne cílení), z
 - přístup k rozhraní DirectX
 - Silná použití standardních knihovnách jazyka C++
 
+Můžete vytvořit uživatelské rozhraní v C# a použití jazyka C + +/ CLI pro povolení aplikací pro používání nativních knihoven jazyka C++. Další informace najdete v tématu [.NET programování v jazyce C + +/ CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
+
 ## <a name="com-components"></a>Komponenty modelu COM
 
-Mnoho částí operačního systému Windows jsou založeny na modelu COM (Component Object) definující binární standard, která umožňuje komponentě využívat z klientské aplikace napsané v libovolném jazyce počítače. V jazyce C++ můžete aktivní šablony knihovny (ATL) zjednodušují vytváření komponenty modelu COM. Další informace najdete v tématu [modelu COM (Component Object)](/windows/desktop/com/component-object-model--com--portal) a [desktopové komponenty ATL COM](../atl/atl-com-desktop-components.md).
+[Modelu COM (Component Object)](/windows/desktop/com/the-component-object-model) je specifikace, které umožňuje programy napsané v různých jazycích, aby mezi sebou komunikovat. Řada Windows komponenty jsou implementovány jako objekty modelu COM a pravidlům standardní modelu COM pro vytváření objektů rozhraní zničení objektu a zjišťování.  Použití objektů COM v aplikacích klasické pracovní plochy jazyka C++ je poměrně přímočarý, ale zápis objektu modelu COM je složitější. [Aktivní šablony knihovny (ATL)](../atl/atl-com-desktop-components.md) poskytuje makra a pomocných funkcí, které zjednodušují vývoj COM. Další informace najdete v tématu [desktopové komponenty ATL COM](../atl/atl-com-desktop-components.md).
 
 ## <a name="windows-universal-apps"></a>Univerzální aplikace pro Windows
 
@@ -43,15 +45,15 @@ Univerzální platforma Windows (UPW) je moderní rozhraní Windows API. U aplik
 
 Původní podpora C++ pro UPW se skládal z (1) C + +/ CX, dialekt jazyka C++ s rozšíření syntaxe nebo (2) Windows Runtime knihovny (WRL) která je založena na standardní C++ a modelu COM. Jazyce C + +/ CX a WRL jsou stále podporovány. Pro nové projekty doporučujeme [C + +/ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) který je zcela založená na standard C++ a poskytuje vyšší výkon. 
 
-Pro Windows 10, můžete zabalit existující aplikace klasické pracovní plochy jazyka C++ jako-je pro nasazení přes Microsoft Store. Další informace najdete v tématu [balíček aplikací klasické pracovní plochy (přemostění na Desktop)](/windows/uwp/porting/desktop-to-uwp-root).
+## <a name="desktop-bridge"></a>Přemostění na Desktop
+
+Ve Windows 10 můžete zabalit existující aplikace klasické pracovní plochy nebo objekt modelu COM jako aplikace pro UPW a přidat UPW funkce, jako je touch nebo volání rozhraní API ze sady moderní rozhraní Windows API. Můžete také přidat aplikace pro UPW pro desktop řešení v sadě Visual Studio a balíček je společně v jednom balíčku a používat rozhraní Windows API pro komunikaci mezi nimi.
+
+V sadě Visual Studio 2017 verze 15.4 nebo novější můžete vytvořit projekt Windows Application balíček výrazně zjednodušit práci při balení aplikace klasické pracovní plochy. S ohledem na jaké registru volá platí několik omezení nebo používá rozhraní API pro aplikace klasické pracovní plochy, ale v mnoha případech můžete vytvořit kód alternativní cesty dosáhnout podobné funkce jako při spuštění v balíčku aplikace. Další informace najdete v tématu [přemostění na Desktop](/windows-uwp/porting/desktop-to-uwp-root).
 
 ## <a name="games"></a>Hry
 
 Hry rozhraní DirectX můžete spustit na PC nebo konzolách Xbox. Další informace najdete v tématu [grafika DirectX a hraní her](/windows/desktop/directx).
-
-## <a name="net-wrappers-for-c-libraries"></a>.NET obálky pro knihovny C++
-
-Můžete použít C + +/ CLI k vytvoření spolupráce vrstvy, která umožňuje kódu .NET do nativních knihoven jazyka C++. Další informace najdete v tématu [.NET programování v jazyce C + +/ CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
 
 ## <a name="sql-server-database-clients"></a>Klienti databáze systému SQL Server
 
@@ -69,7 +71,7 @@ Windows *služby* je program, který může běžet na pozadí bez zásahu uživ
 
 Visual Studio obsahuje knihovny Runtime jazyka C (CRT), standardní knihovny C++ a další knihovny specifické pro společnost Microsoft. Zahrnout složky obsahující soubory hlaviček těchto knihoven jsou umístěny v adresáři instalace sady Visual Studio ve složce \VC\ nebo v případě CRT v instalační složce Nástroje sady Windows SDK.
 
-Můžete použít [Správce balíčků Vcpkg](../vcpkg.md) stovky open source knihoven třetích stran jednoduše instalace pro Windows.
+Můžete použít [Správce balíčků Vcpkg](../build/vcpkg.md) stovky open source knihoven třetích stran jednoduše instalace pro Windows.
 
 Knihovny Microsoft patří:
 
@@ -89,22 +91,34 @@ Jiné platformy, jako je například konzola Xbox a Azure mají své vlastní s
 
 ## <a name="development-tools"></a>Nástroje pro vývoj
 
-Systém Visual Studio obsahuje výkonný ladicí program pro nativní kód, nástroje pro statickou analýzu, nástroje pro ladění grafiky, úplný editor kódu, podporu pro testování částí a mnoho dalších nástrojů a pomůcek. Další informace najdete v tématu [začít s vývojem pomocí sady Visual Studio](/visualstudio/ide/get-started-developing-with-visual-studio), a [C++ přehled vývoje v sadě Visual Studio](../overview-of-cpp-development.md).
+Systém Visual Studio obsahuje výkonný ladicí program pro nativní kód, nástroje pro statickou analýzu, nástroje pro ladění grafiky, úplný editor kódu, podporu pro testování částí a mnoho dalších nástrojů a pomůcek. Další informace najdete v tématu [začít s vývojem pomocí sady Visual Studio](/visualstudio/ide/get-started-developing-with-visual-studio), a [C++ přehled vývoje v sadě Visual Studio](../overview/overview-of-cpp-development.md).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 |Název|Popis|
 |-----------|-----------------|
-|[Desktopové aplikace pro Windows v C++](desktop-applications-visual-cpp.md)| Postup vytvoření tradiční desktopové aplikace.|
+|[Návod: Vytvoření standardního programu C++](walkthrough-creating-a-standard-cpp-program-cpp.md)| Vytvořte konzolovou aplikaci Windows.|
+|[Návod: Vytváření desktopových aplikací Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Vytvoření jednoduché aplikace klasické pracovní plochy Windows.|
+|[Desktopový Průvodce pro Windows](windows-desktop-wizard.md)|Chcete-li vytvořit nové projekty Windows pomocí průvodce.|
 |[Knihovna ATL (Active Template Library)](../atl/TOC.md)|Použití knihovny ATL vytváření komponent modelu COM v jazyce C++.|
 |[Knihovna MFC (Microsoft Foundation Classes)](../mfc/TOC.md)|Použití knihovny MFC k vytvoření velké nebo malé aplikací Windows pomocí dialogových oken a ovládacích prvků|
 |[Sdílené třídy knihoven ATL a MFC](../atl-mfc-shared/TOC.md)|Pomocí třídy například CString, které jsou sdíleny v ATL a MFC.|
-|[Vývoj pro .NET v C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Vytváření obálek pro nativní knihovny C++, které umožňují komunikaci s aplikacemi .NET a součásti.|
-|[Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)|Referenční informace pro prvky syntaxe sdílí C + +/ CX a C + +/ CLI.|
-|[Univerzální aplikace pro Windows (C++)](universal-windows-apps-cpp.md)|Psaní aplikací UPW pomocí C + +/ CX nebo Windows Runtime šablony knihovny (WRL).|
-|[Atributy C++ pro COM a .NET](attributes/cpp-attributes-com-net.md)|Nestandardní atributy Windows – pouze pro programování pomocí rozhraní .NET nebo modelu COM.|
+|[Přístup k datům](../data/data-access-in-cpp.md)| OLE DB a rozhraní ODBC|
+|[Text a řetězce](../text/text-and-strings-in-visual-cpp.md)|Různými typy řetězců na Windows.|
+|[Prostředky pro vytvoření hry s použitím rozhraní DirectX](resources-for-creating-a-game-using-directx.md)
+|[Postupy: Použití sady Windows 10 SDK v desktopové aplikaci Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows SDK|
+|[Práce se zdrojovými soubory](working-with-resource-files.md)|Jak přidat obrázky, ikony, tabulek řetězců a dalších prostředků pro aplikace klasické pracovní plochy.|
+|[Prostředky pro vytvoření hry s použitím rozhraní DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Obsahuje odkazy na obsah pro vytváření her v C++.|
+|[Postupy: Použití sady Windows 10 SDK v desktopové aplikaci Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Obsahuje kroky pro vytvoření projektu pro sestavení pomocí Windows 10 SDK.|
+|[Nasazení nativních aplikací klasické pracovní plochy](deploying-native-desktop-applications-visual-cpp.md)|Nasazení nativních aplikací pro Windows.|
+
 
 ## <a name="related-articles"></a>Související články
 
 |Název|Popis|
 |-----------|-----------------|
-|[Visual C++](../visual-cpp-in-visual-studio.md)|Nadřazené téma pro obsah pro vývojáře v jazyce Visual C++.|
+|[Visual C++](../overview/visual-cpp-in-visual-studio.md)|Nadřazené téma pro obsah pro vývojáře v jazyce Visual C++.|
+[Vývoj pro .NET v C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Vytváření obálek pro nativní knihovny C++, které umožňují komunikaci s aplikacemi .NET a součásti.|
+|[Přípony komponent pro .NET a UPW](../extensions/component-extensions-for-runtime-platforms.md)|Referenční informace pro prvky syntaxe sdílí C + +/ CX a C + +/ CLI.|
+|[Univerzální aplikace pro Windows (C++)](universal-windows-apps-cpp.md)|Psaní aplikací UPW pomocí C + +/ CX nebo Windows Runtime šablony knihovny (WRL).|
+|[Atributy C++ pro COM a .NET](attributes/cpp-attributes-com-net.md)|Nestandardní atributy Windows – pouze pro programování pomocí rozhraní .NET nebo modelu COM.|
+

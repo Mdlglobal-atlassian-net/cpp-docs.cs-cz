@@ -5,12 +5,12 @@ helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: f29bf419ca19ce1bbe45e36adb08d7f4e5629f5a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: cd0748993b6ac92bbf9f66fa868ac6e814e21bb5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739291"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781624"
 ---
 # <a name="how-to-use-properties-in-ccli"></a>Postupy: Používání vlastností v jazyce C + +/ CLI
 
@@ -259,7 +259,7 @@ int main() {
 
 ## <a name="abstract-and-sealed-properties"></a>Abstraktní a uzavřené vlastnosti
 
-I když [abstraktní](../windows/abstract-cpp-component-extensions.md) a [zapečetěné](../windows/sealed-cpp-component-extensions.md) klíčová slova jsou určené jako platná v s ECMA C + +/ specifikace rozhraní příkazového řádku pro kompilátor Visual C++ nelze zadat jejich na triviální vlastnosti ani na vlastnost deklarace netriviální vlastnosti.
+I když [abstraktní](../extensions/abstract-cpp-component-extensions.md) a [zapečetěné](../extensions/sealed-cpp-component-extensions.md) klíčová slova jsou určené jako platná v s ECMA C + +/ specifikace rozhraní příkazového řádku pro kompilátor Visual C++ nelze zadat jejich na triviální vlastnosti ani na vlastnost deklarace netriviální vlastnosti.
 
 Chcete-li deklarovat zapečetěné nebo abstraktní vlastnost, musí definovat netriviální vlastnosti a pak zadejte `abstract` nebo `sealed` – klíčové slovo na získat a nastavit přístupové funkce.
 
@@ -409,4 +409,4 @@ int main() {
 
 ## <a name="see-also"></a>Viz také:
 
-[property](../windows/property-cpp-component-extensions.md)
+[property](../extensions/property-cpp-component-extensions.md)

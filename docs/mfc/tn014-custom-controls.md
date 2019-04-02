@@ -7,18 +7,18 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-ms.openlocfilehash: d529b235daa1c6aa889b69e8d6bb2f02a58436bb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c68b60f065e69213b3ab32c887bc7af129a70fef
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297486"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772121"
 ---
 # <a name="tn014-custom-controls"></a>TN014: Vlastní ovládací prvky
 
 Tato poznámka popisuje podporu knihovny MFC pro vlastní vykreslování a vlastní ovládací prvky. Také popisuje dynamické vytváření podtříd a popisuje vztah mezi [CWnd](../mfc/reference/cwnd-class.md) objekty a `HWND`s.
 
-Ukázkové aplikace knihovny MFC CTRLTEST ukazuje, jak použít mnoho vlastních ovládacích prvků. Zobrazit zdrojový kód ukázkové MFC Obecné [CTRLTEST](../visual-cpp-samples.md) a online nápovědy.
+Ukázkové aplikace knihovny MFC CTRLTEST ukazuje, jak použít mnoho vlastních ovládacích prvků. Zobrazit zdrojový kód ukázkové MFC Obecné [CTRLTEST](../overview/visual-cpp-samples.md) a online nápovědy.
 
 ## <a name="owner-draw-controlsmenus"></a>Owner Draw ovládacích prvků či nabídek
 
@@ -104,7 +104,7 @@ Pro vlastní kreslení seznamy a pole se seznamem, `OnDeleteItem` není obvykle 
 
 ## <a name="examples-of-self-drawing-controls-and-menus"></a>Příkladem samoobslužné vykreslení ovládacích prvků a v nabídkách
 
-Ukázky knihovny MFC Obecné [CTRLTEST](../visual-cpp-samples.md) obsahuje ukázky nabídky svým kreslení a místním vykreslení seznamu.
+Ukázky knihovny MFC Obecné [CTRLTEST](../overview/visual-cpp-samples.md) obsahuje ukázky nabídky svým kreslení a místním vykreslení seznamu.
 
 Většina Typickým příkladem samoobslužné výkresu tlačítko je tlačítko rastrového obrázku. Rastrový obrázek tlačítko je tlačítko, které zobrazuje jeden, dva nebo tři bitmapové obrázky pro různé stavy. Příkladem je součástí třídy knihovny MFC [cbitmapbutton –](../mfc/reference/cbitmapbutton-class.md).
 
@@ -130,7 +130,7 @@ Dynamické vytváření podtříd lze dosáhnout pomocí metod [CWnd::SubclassWi
 
 Obě rutiny připojit `CWnd` objektu do existujícího `HWND`. `SubclassWindow` přijímá `HWND` přímo. `SubclassDlgItem` je pomocná funkce, která přijímá ID ovládacího prvku a nadřazeného okna. `SubclassDlgItem` je určená pro objekty C++ se připojuje k ovládací prvky dialogového okna, které jsou vytvořené ze šablony dialogového okna.
 
-Zobrazit [CTRLTEST](../visual-cpp-samples.md) příklad pro několik příkladů použití `SubclassWindow` a `SubclassDlgItem`.
+Zobrazit [CTRLTEST](../overview/visual-cpp-samples.md) příklad pro několik příkladů použití `SubclassWindow` a `SubclassDlgItem`.
 
 ## <a name="see-also"></a>Viz také:
 

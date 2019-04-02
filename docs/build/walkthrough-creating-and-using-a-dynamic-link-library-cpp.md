@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: 44a2f1da6a02444c79247178c34281e39731f0f3
-ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
+ms.openlocfilehash: 248b423659d026774d4945ee6330a39dc4c6e16e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58476926"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770145"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Návod: Vytvoření a použití vlastní dynamické propojení knihovny (C++)
 
@@ -398,7 +398,7 @@ Stisknutím jakékoli klávesy zavřete příkazové okno.
 
 Teď, když jste vytvořili knihovnu DLL a klientské aplikace, můžete experimentovat. Zkuste nastavení zarážek v kódu klientské aplikace a spusťte aplikaci v ladicím programu. Podívejte se, co se stane při krokování s vnořením volání knihovny. Přidání dalších funkcí do knihovny nebo zápis jinou klientskou aplikaci, která používá vaše knihovna DLL.
 
-Když nasadíte aplikaci, je nutné nasadit knihoven DLL, která používá. Nejjednodušší způsob, jak zpřístupnit knihovny DLL, který jste vytvořili nebo které zahrnete od jiných výrobců do vaší aplikace je jejich umístění ve stejném adresáři jako aplikace, označované také jako *nasazení aplikace – místní*. Další informace o nasazení naleznete v tématu [nasazení v jazyce Visual C++](../ide/deployment-in-visual-cpp.md).
+Když nasadíte aplikaci, je nutné nasadit knihoven DLL, která používá. Nejjednodušší způsob, jak zpřístupnit knihovny DLL, který jste vytvořili nebo které zahrnete od jiných výrobců do vaší aplikace je jejich umístění ve stejném adresáři jako aplikace, označované také jako *nasazení aplikace – místní*. Další informace o nasazení naleznete v tématu [nasazení v jazyce Visual C++](../windows/deployment-in-visual-cpp.md).
 
 ## <a name="see-also"></a>Viz také:
 

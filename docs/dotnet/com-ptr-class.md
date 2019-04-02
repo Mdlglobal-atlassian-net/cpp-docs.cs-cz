@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-ms.openlocfilehash: 8909f91e31279f1fc1395610aea4708b79731113
-ms.sourcegitcommit: 9813e146a4eb30929d8352872859e8fcb7ff6d2f
+ms.openlocfilehash: 342c222b837e179e2e13dbbd27c88efc18b12332
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805965"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774167"
 ---
 # <a name="comptr-class"></a>com::ptr – třída
 
@@ -43,7 +43,7 @@ Rozhraní COM.
 
 A `com::ptr` lze také jako funkce místní proměnnou ke zjednodušení různé úlohy COM a automatizují správu životního cyklu.
 
-A `com::ptr` nelze použít přímo jako parametr funkce; použijte [operátor odkazu sledování](../windows/tracking-reference-operator-cpp-component-extensions.md) nebo [operátor popisovače objektu (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) místo.
+A `com::ptr` nelze použít přímo jako parametr funkce; použijte [operátor odkazu sledování](../extensions/tracking-reference-operator-cpp-component-extensions.md) nebo [operátor popisovače objektu (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) místo.
 
 A `com::ptr` nemůže být vráceny přímo z funkce; místo toho použijte popisovač.
 
@@ -167,14 +167,14 @@ int main() {
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis| 
+|Name|Popis| 
 |---------|-----------| 
 |[ptr::ptr](#ptr)|Vytvoří `com::ptr` zabalit objekt modelu COM.| 
 |[ptr::~ptr](#tilde-ptr)|Destructs `com::ptr`.| 
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |---------|-----------| 
 |[ptr::Attach](#attach)|Připojí objektu modelu COM `com::ptr`.| 
 |[ptr::CreateInstance](#createInstance)|Vytvoří instanci objektu modelu COM v rámci `com::ptr`.| 
@@ -185,7 +185,7 @@ int main() {
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |---------|-----------| 
 |[PTR::Operator-&gt;](#operator-arrow)|Operátor přístupu členů použít k volání metody na vlastní objekt modelu COM.| 
 |[ptr::operator=](#operator-assign)|Připojí objektu modelu COM `com::ptr`.| 

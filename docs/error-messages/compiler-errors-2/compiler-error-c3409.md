@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: b6ceb6f2e8700a5459dbd01db443ef90de314b5e
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: a4d9271153618fab47a8b5b9cb11b2a5eed35230
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330083"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769300"
 ---
 # <a name="compiler-error-c3409"></a>Chyba kompilátoru C3409
 
@@ -19,7 +19,7 @@ ms.locfileid: "51330083"
 
 ## <a name="remarks"></a>Poznámky
 
-Hranaté závorky byly interpretovány kompilátorem jako [atribut](../../windows/cpp-attributes-reference.md) nebyly nalezeny bloku, ale žádné atributy.
+Hranaté závorky byly interpretovány kompilátorem jako [atribut](../../windows/attributes-alphabetical-reference.md) nebyly nalezeny bloku, ale žádné atributy.
 
 Kompilátor může vygenerovat tuto chybu při použití hranaté závorky jako součást definice výraz lambda. Tato chyba nastane, pokud kompilátor nemůže určit, zda jsou hranaté závorky definici lambda výrazu nebo z bloku atributu. Další informace o výrazech lambda naleznete v tématu [výrazy Lambda](../../cpp/lambda-expressions-in-cpp.md).
 
@@ -69,6 +69,6 @@ int main()
 
 ## <a name="see-also"></a>Viz také
 
-[attribute](../../windows/cpp-attributes-reference.md)<br/>
+[attribute](../../windows/attributes-alphabetical-reference.md)<br/>
 [Výrazy lambda](../../cpp/lambda-expressions-in-cpp.md)<br/>
 [Syntaxe výrazů lambda](../../cpp/lambda-expression-syntax.md)

@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - ICollectionOnSTLImpl interface
 ms.assetid: 6d49f819-1957-4813-b074-3f12c494d8ca
-ms.openlocfilehash: 90583f34c9e9fb500bb48fdbd3c1a17d343d865f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 609ec2547cf7a8ab93ef757f7a8e460542c9de28
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292918"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779245"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>Implementace kolekce založené na knihovně Standard jazyka C++
 
 Knihovna ATL poskytuje `ICollectionOnSTLImpl` rozhraní, které umožňují rychle implementovat rozhraní kolekcí založených na standardní knihovny C++ na objekty. Vysvětlení fungování této třídy, bude fungovat přes jednoduchý příklad (dole), který používá tuto třídu pro implementaci kolekce jen pro čtení zaměřené na klientům automatizace.
 
-Ukázkový kód je z [ATLCollections ukázka](../visual-cpp-samples.md).
+Ukázkový kód je z [ATLCollections ukázka](../overview/visual-cpp-samples.md).
 
 K dokončení tohoto postupu provedete následující:
 
@@ -75,7 +75,7 @@ Definice TypeDef, které jste vytvořili zatím poskytují všechny informace, k
 
 [!code-cpp[NVC_ATL_COM#26](../atl/codesnippet/cpp/implementing-an-stl-based-collection_3.h)]
 
-V tomto příkladu můžete použít vlastní `GenericCopy` třídy definované v VCUE_Copy.h a VCUE_CopyString.h z [ATLCollections](../visual-cpp-samples.md) vzorku. Tuto třídu můžete použít v jiném kódu, ale budete muset definovat další specializace `GenericCopy` pro podporu datové typy používané ve své vlastní kolekce. Další informace najdete v tématu [třídy zásady kopírování ATL](../atl/atl-copy-policy-classes.md).
+V tomto příkladu můžete použít vlastní `GenericCopy` třídy definované v VCUE_Copy.h a VCUE_CopyString.h z [ATLCollections](../overview/visual-cpp-samples.md) vzorku. Tuto třídu můžete použít v jiném kódu, ale budete muset definovat další specializace `GenericCopy` pro podporu datové typy používané ve své vlastní kolekce. Další informace najdete v tématu [třídy zásady kopírování ATL](../atl/atl-copy-policy-classes.md).
 
 ##  <a name="vcconenumeration_and_collection"></a> Vytvoření definice TypeDef pro výčet a kolekce
 
@@ -102,5 +102,5 @@ Teď můžete otestovat kód s klientem nástroje podle vašeho výběru.
 ## <a name="see-also"></a>Viz také:
 
 [Kolekce a výčty](../atl/atl-collections-and-enumerators.md)<br/>
-[Ukázka ATLCollections](../visual-cpp-samples.md)<br/>
+[Ukázka ATLCollections](../overview/visual-cpp-samples.md)<br/>
 [Třídy zásady kopírování ATL](../atl/atl-copy-policy-classes.md)

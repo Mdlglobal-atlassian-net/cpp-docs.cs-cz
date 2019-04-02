@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: 81d227c241adf0ce72ccd4a554134d7d858b4a6d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b24afd943f2168657c6b4437fed65b0a45689b52
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275425"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778556"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx – třída
 
@@ -177,7 +177,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMDIFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Přepočítá rozložení aktivní položky.|
 |`CMDIFrameWndEx::AddDockSite`|Tato metoda se nepoužívá.|
@@ -270,7 +270,7 @@ Abyste mohli využívat funkce Rozšířená přizpůsobení v aplikaci MDI, odv
 
 ## <a name="example"></a>Příklad
 
-V následujícím příkladu je odvozena z třídy `CMDIFrameWndEx`. Tento fragment kódu se segmenty Convenience [DrawClient vzorku: Aplikace kreslení objektu OLE založené na pásu karet MFC](../../visual-cpp-samples.md).
+V následujícím příkladu je odvozena z třídy `CMDIFrameWndEx`. Tento fragment kódu se segmenty Convenience [DrawClient vzorku: Aplikace kreslení objektu OLE založené na pásu karet MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#1](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_1.h)]
 
@@ -449,7 +449,7 @@ Potlačí tuto metodu, chcete-li vytvořit dokumenty, když jsou načítány z r
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje jak `CreateDocumentWindow` je používán [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../visual-cpp-samples.md).
+Následující příklad ukazuje jak `CreateDocumentWindow` je používán [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 V tomto příkladu `g_strStartViewName` může být název "virtuální dokument" (například "Úvodní stránka"), který není ve skutečnosti načtena ze souboru na disku. Proto budeme potřebovat speciální zpracování pro zpracovávat tento případ.
 
@@ -505,7 +505,7 @@ Tato metoda ukotvené zadaný v podokně na jednu ze strany okna rámce, který 
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje použití `DockPane` metody. Tento fragment kódu se segmenty Convenience [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../visual-cpp-samples.md).
+Následující příklad ukazuje použití `DockPane` metody. Tento fragment kódu se segmenty Convenience [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#4](../../mfc/codesnippet/cpp/cmdiframewndex-class_3.cpp)]
 
@@ -537,7 +537,7 @@ Voláním této metody lze ukotvit několik podokno objekty v předdefinovaném 
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob, jak `DockPaneLeftOf` metoda se používá [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../visual-cpp-samples.md).
+Následující příklad ukazuje způsob, jak `DockPaneLeftOf` metoda se používá [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#5](../../mfc/codesnippet/cpp/cmdiframewndex-class_4.cpp)]
 
@@ -568,7 +568,7 @@ Voláním této funkce povolit režim automatického skrytí podokna doku na zad
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob, jak `EnableAutoHidePanes` metoda se používá [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../visual-cpp-samples.md).
+Následující příklad ukazuje způsob, jak `EnableAutoHidePanes` metoda se používá [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#6](../../mfc/codesnippet/cpp/cmdiframewndex-class_5.cpp)]
 
@@ -595,7 +595,7 @@ Voláním této funkce umožňující ukotvení podoken, které patří `CMDIFra
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob, jak `EnableDocking` metoda se používá [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../visual-cpp-samples.md).
+Následující příklad ukazuje způsob, jak `EnableDocking` metoda se používá [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#7](../../mfc/codesnippet/cpp/cmdiframewndex-class_6.cpp)]
 
@@ -686,7 +686,7 @@ Další informace o tom, jak použít rozhraní MDI s kartami skupiny, najdete v
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje jak `EnableMDITabbedGroups` je používán [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../visual-cpp-samples.md).
+Následující příklad ukazuje jak `EnableMDITabbedGroups` je používán [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#8](../../mfc/codesnippet/cpp/cmdiframewndex-class_7.cpp)]
 
@@ -738,7 +738,7 @@ Pokud *bTabCustomTooltips* má hodnotu TRUE, odešle zprávu o AFX_WM_ON_GET_TAB
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje jak `EnableMDITabs` je používán [MDITabsDemo vzorku: Knihovny MFC s kartami MDI aplikaci](../../visual-cpp-samples.md).
+Následující příklad ukazuje jak `EnableMDITabs` je používán [MDITabsDemo vzorku: Knihovny MFC s kartami MDI aplikaci](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#3](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_8.cpp)]
 
@@ -807,7 +807,7 @@ V rozbalovací nabídky zobrazí seznam podoken vaší aplikace a umožňuje už
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje jak `EnablePaneMenu` je používán [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../visual-cpp-samples.md).
+Následující příklad ukazuje jak `EnablePaneMenu` je používán [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#9](../../mfc/codesnippet/cpp/cmdiframewndex-class_9.cpp)]
 
@@ -849,7 +849,7 @@ Tuto metodu použijte, chcete-li vložit položku nabídky, jehož příkaz vol�
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje jak `EnableWindowsDialog` je používán [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../visual-cpp-samples.md).
+Následující příklad ukazuje jak `EnableWindowsDialog` je používán [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#10](../../mfc/codesnippet/cpp/cmdiframewndex-class_10.cpp)]
 
@@ -1224,7 +1224,7 @@ K načtení nebo uložení stavu karet MDI a skupiny a seznam otevřených dokum
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje jak `LoadMDIState` je používán [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../visual-cpp-samples.md).
+Následující příklad ukazuje jak `LoadMDIState` je používán [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#11](../../mfc/codesnippet/cpp/cmdiframewndex-class_11.cpp)]
 
@@ -1260,7 +1260,7 @@ Pomocí této funkce můžete vytvořit nový s kartami okno (Nová skupina s ka
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje jak `MDITabNewGroup` je používán [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../visual-cpp-samples.md).
+Následující příklad ukazuje jak `MDITabNewGroup` je používán [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#12](../../mfc/codesnippet/cpp/cmdiframewndex-class_12.cpp)]
 
@@ -1280,7 +1280,7 @@ Výchozí hodnota je `FALSE`.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje jak `m_bCanCovertControlBarToMDIChild` je používán [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../visual-cpp-samples.md).
+Následující příklad ukazuje jak `m_bCanCovertControlBarToMDIChild` je používán [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#13](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]
 
@@ -1621,7 +1621,7 @@ Pokud nezpracovává `OnShowMDITabContextMenu`, se nezobrazí v místní nabídc
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje jak `OnShowMDITabContextMenu` je používán [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../visual-cpp-samples.md).
+Následující příklad ukazuje jak `OnShowMDITabContextMenu` je používán [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#14](../../mfc/codesnippet/cpp/cmdiframewndex-class_13.cpp)]
 
@@ -1856,7 +1856,7 @@ K načtení nebo uložení stavu karet MDI a skupiny a seznam otevřených dokum
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje jak `SaveMDIState` je používán [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../visual-cpp-samples.md).
+Následující příklad ukazuje jak `SaveMDIState` je používán [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#15](../../mfc/codesnippet/cpp/cmdiframewndex-class_14.cpp)]
 
@@ -1939,7 +1939,7 @@ Voláním této metody lze zobrazit nebo skrýt podokno. Nepoužívejte `ShowWin
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje jak `ShowPane` je používán [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../visual-cpp-samples.md).
+Následující příklad ukazuje jak `ShowPane` je používán [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#16](../../mfc/codesnippet/cpp/cmdiframewndex-class_15.cpp)]
 
@@ -1953,7 +1953,7 @@ void ShowWindowsDialog();
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje jak `ShowWindowsDialog` je používán [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../visual-cpp-samples.md).
+Následující příklad ukazuje jak `ShowWindowsDialog` je používán [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#18](../../mfc/codesnippet/cpp/cmdiframewndex-class_16.cpp)]
 
@@ -1980,7 +1980,7 @@ Pomocí této metody můžete převést dokument s kartami do ukotvitelného pod
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje jak `TabbedDocumentToControlBar` je používán [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../visual-cpp-samples.md).
+Následující příklad ukazuje jak `TabbedDocumentToControlBar` je používán [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#19](../../mfc/codesnippet/cpp/cmdiframewndex-class_17.cpp)]
 

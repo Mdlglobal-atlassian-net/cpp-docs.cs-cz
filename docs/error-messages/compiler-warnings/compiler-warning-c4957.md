@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4957
 ms.assetid: a18c52d4-23e2-44f1-b4b5-f7fa5a7f3987
-ms.openlocfilehash: 9afdd213baadd907afacde0ff7f14f3c78bc60a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79a1b516db1508c755693b67ca2e4070095839da
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528255"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769339"
 ---
 # <a name="compiler-warning-c4957"></a>Upozornění kompilátoru C4957
 
@@ -21,7 +21,7 @@ ms.locfileid: "50528255"
 
 Přetypování způsobí bitovou kopii nelze ověřit.
 
-Některá přetypování je bezpečné (například `static_cast` , který aktivuje uživatelem definované převody a `const_cast`). A [safe_cast](../../windows/safe-cast-cpp-component-extensions.md) je zaručeno, že vytvoří ověřitelný kód.
+Některá přetypování je bezpečné (například `static_cast` , který aktivuje uživatelem definované převody a `const_cast`). A [safe_cast](../../extensions/safe-cast-cpp-component-extensions.md) je zaručeno, že vytvoří ověřitelný kód.
 
 Další informace najdete v tématu [prázdná a ověřitelný kód (C + +/ CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 

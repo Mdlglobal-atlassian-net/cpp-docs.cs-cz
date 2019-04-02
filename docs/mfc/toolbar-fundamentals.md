@@ -20,12 +20,12 @@ helpviewer_keywords:
 - frame window classes [MFC], toolbar embedded in
 - LoadToolBar method [MFC]
 ms.assetid: cc00aaff-8a56-433b-b0c0-b857d76b4ffd
-ms.openlocfilehash: 39e790e5152dd07ab40901140ecdd8f8791a446e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c784db2e1a482b313147e6837d6bbbd16d0ecb4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258395"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775488"
 ---
 # <a name="toolbar-fundamentals"></a>Principy panelů nástrojů
 
@@ -62,7 +62,7 @@ Dojde k vytvoření panelu nástrojů v `CMainFrame::OnCreate`. Volání knihovn
 1. Volání funkce umožňující ukotvení s plovoucí desetinnou čárkou a popisy tlačítek. Podrobnosti o těchto volání, najdete v článku [ukotvení a plovoucí panely nástrojů](../mfc/docking-and-floating-toolbars.md).
 
 > [!NOTE]
->  Ukázky knihovny MFC Obecné [DOCKTOOL](../visual-cpp-samples.md) zahrnuje obrázky starých i nových panelů nástrojů MFC. Panely nástrojů, které používají `COldToolbar` vyžadují volání v kroku 2 `LoadBitmap` (spíše než `LoadToolBar`) a `SetButtons`. Nových panelů nástrojů vyžaduje volání `LoadToolBar`.
+>  Ukázky knihovny MFC Obecné [DOCKTOOL](../overview/visual-cpp-samples.md) zahrnuje obrázky starých i nových panelů nástrojů MFC. Panely nástrojů, které používají `COldToolbar` vyžadují volání v kroku 2 `LoadBitmap` (spíše než `LoadToolBar`) a `SetButtons`. Nových panelů nástrojů vyžaduje volání `LoadToolBar`.
 
 Ukotvení s plovoucí desetinnou čárkou a tipy k volání nástroje jsou volitelné. Můžete odebrat tyto řádky z `OnCreate` Pokud dáváte přednost. Výsledkem je zůstane pevný, nelze plovoucí desetinnou čárkou nebo redock a nedá se zobrazit popisy tlačítek panelu nástrojů.
 

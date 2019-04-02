@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3612
 ms.assetid: aa6e3a2b-4afa-481c-98c1-1b6d1f82f869
-ms.openlocfilehash: a6084632ac0a84cc058ea73eb3c2b632208792eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab18381d3f263e3207662e1667ac5c835983412f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475930"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781403"
 ---
 # <a name="compiler-error-c3612"></a>Chyba kompilátoru C3612
 
@@ -19,7 +19,7 @@ ms.locfileid: "50475930"
 
 Typy definované pomocí `value` jsou zapečetěné. ve výchozím nastavení, a pokud implementuje všechny metody své základní je abstraktní třídu. Zapečetěná abstraktní třída nemůže být základní třídu ani se dá vytvořit instance.
 
-Další informace najdete v tématu [třídy a struktury](../../windows/classes-and-structs-cpp-component-extensions.md).
+Další informace najdete v tématu [třídy a struktury](../../extensions/classes-and-structs-cpp-component-extensions.md).
 
 ## <a name="example"></a>Příklad
 

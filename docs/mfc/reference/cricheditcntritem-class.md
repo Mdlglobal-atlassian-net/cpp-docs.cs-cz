@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CRichEditCntrItem [MFC], CRichEditCntrItem
 - CRichEditCntrItem [MFC], SyncToRichEditObject
 ms.assetid: 6c0b4efe-0fb8-4621-b5e1-fdcb8ec48c3b
-ms.openlocfilehash: 0f71607147b353c5071830bdce481f1e5e5d4717
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 674937df9b4ecef0d159a47a45a716d1175ad5d9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268483"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773837"
 ---
 # <a name="cricheditcntritem-class"></a>CRichEditCntrItem Class
 
@@ -31,13 +31,13 @@ class CRichEditCntrItem : public COleClientItem
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CRichEditCntrItem::CRichEditCntrItem](#cricheditcntritem)|Vytvoří `CRichEditCntrItem` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CRichEditCntrItem::SyncToRichEditObject](#synctoricheditobject)|Aktivuje položku jako jiného typu.|
 
@@ -49,7 +49,7 @@ class CRichEditCntrItem : public COleClientItem
 
 Tento ovládací prvek Windows běžné (a tedy [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) a související třídy) je dostupná jenom pro programy spuštěné v rámci Windows 95/98 a Windows NT verze 3.51 a vyšší.
 
-Příklad použití RichEdit kontejner položek v aplikaci knihovny MFC, najdete v článku [WORDPAD](../../visual-cpp-samples.md) ukázkovou aplikaci.
+Příklad použití RichEdit kontejner položek v aplikaci knihovny MFC, najdete v článku [WORDPAD](../../overview/visual-cpp-samples.md) ukázkovou aplikaci.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -110,7 +110,7 @@ Další informace najdete v tématu [DVASPECT](/windows/desktop/api/wtypes/ne-wt
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC WORDPAD](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [COleClientItem – třída](../../mfc/reference/coleclientitem-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CRichEditDoc – třída](../../mfc/reference/cricheditdoc-class.md)<br/>

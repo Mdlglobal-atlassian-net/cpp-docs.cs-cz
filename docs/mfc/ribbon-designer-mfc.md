@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 0972cdfbb80129b0c87c96fa7daf6768d18aa0c4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5740b2f93f451a74407483c98ce5bf547b79bf35
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288777"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769482"
 ---
 # <a name="ribbon-designer-mfc"></a>Návrhář pásu karet (MFC)
 
@@ -107,7 +107,7 @@ Následující témata popisují, jak používat funkce v Návrháři pásu kare
 
 - **Panel:** Oblast na pásu karet, který se zobrazuje skupina souvisejících ovládacích prvků. Každá kategorie pásu karet obsahuje jeden nebo více panelů pásu karet.
 
-- **Prvky pásu karet:** Ovládací prvky na panelech, například tlačítka a pole se seznamem. Různé ovládací prvky, které mohou být hostovány na pásu karet najdete v tématu [vzorek RibbonGadgets: Aplikace pro miniaplikace na pásu karet](../visual-cpp-samples.md).
+- **Prvky pásu karet:** Ovládací prvky na panelech, například tlačítka a pole se seznamem. Různé ovládací prvky, které mohou být hostovány na pásu karet najdete v tématu [vzorek RibbonGadgets: Aplikace pro miniaplikace na pásu karet](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Viz také:
 

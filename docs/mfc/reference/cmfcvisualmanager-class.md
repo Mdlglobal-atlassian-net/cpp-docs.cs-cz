@@ -344,12 +344,12 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetMenuShadowDepth
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
-ms.openlocfilehash: 594e727a091cbb7b2999e540ae8da7ddec2a7a14
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7b4d6a31e69e75af240e0e58cbfbb7d2d24291aa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294327"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775163"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager Class
 
@@ -373,7 +373,7 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCVisualManager::AdjustFrames](#adjustframes)||
 |[CMFCVisualManager::AdjustToolbars](#adjusttoolbars)||
@@ -587,7 +587,7 @@ void CMFCSkinsApp::SetSkin (int iIndex)
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak načíst výchozí hodnoty `CMFCVisualManager` objektu. Tento fragment kódu je součástí [podokno úlohy ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak načíst výchozí hodnoty `CMFCVisualManager` objektu. Tento fragment kódu je součástí [podokno úlohy ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_TasksPane#1](../../mfc/reference/codesnippet/cpp/cmfcvisualmanager-class_1.h)]
 
@@ -4331,7 +4331,7 @@ Výchozí implementace této metody výplně pozadí panelu 3d barvou pozadí z 
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití `OnFillBarBackground` v `CMFCVisualManager` třídy. Tento fragment kódu je součástí [Outlook demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje způsob použití `OnFillBarBackground` v `CMFCVisualManager` třídy. Tento fragment kódu je součástí [Outlook demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookDemo#4](../../mfc/reference/codesnippet/cpp/cmfcvisualmanager-class_2.cpp)]
 

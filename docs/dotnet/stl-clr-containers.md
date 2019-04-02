@@ -6,12 +6,12 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: 511ea14d02b77e237ae9768776c4ff3eb97982ed
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: dc2e5ce3263c61839a1ba434ab0d2a39e6a9078f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744349"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774539"
 ---
 # <a name="stlclr-containers"></a>STL/CLR – kontejnery
 
@@ -37,7 +37,7 @@ Pevně určené typy hodnot nelze vložit do některé z kontejnerů STL/CLR.
 
 ### <a name="handles-to-reference-types"></a>Obslužné rutiny na typy odkazu
 
-Popisovač pro typ odkazu můžete vložit do kontejneru STL/CLR. Popisovač v jazyce C++ pro CLR je obdobou ukazatel v nativním kódu C++. Další informace najdete v tématu [operátor popisovače objektu (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md).
+Popisovač pro typ odkazu můžete vložit do kontejneru STL/CLR. Popisovač v jazyce C++ pro CLR je obdobou ukazatel v nativním kódu C++. Další informace najdete v tématu [operátor popisovače objektu (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md).
 
 #### <a name="example"></a>Příklad
 
@@ -229,7 +229,7 @@ int main()
 
 Můžete také vložit hodnotový typ bez unboxingu do kontejneru STL/CLR. Hodnotový typ bez unboxingu je hodnotový typ, který nebyl *boxed* do typu odkazu.
 
-Element type hodnotu může být jeden z typů standardní hodnotu například `int`, nebo může být typ hodnoty definované uživatelem, například `value class`. Další informace najdete v tématu [třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md)
+Element type hodnotu může být jeden z typů standardní hodnotu například `int`, nebo může být typ hodnoty definované uživatelem, například `value class`. Další informace najdete v tématu [třídy a struktury](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 #### <a name="example"></a>Příklad
 

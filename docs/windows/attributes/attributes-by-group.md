@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: 9f4dd43f-9909-43d6-91d2-05734643876e
-ms.openlocfilehash: 7452ad3db642e132f4e46c1688d429dbaf78419a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe78a4c5a1773cf621d6554969b1c41c333bc5aa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532764"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778582"
 ---
 # <a name="attributes-by-group"></a>Atributy podle skupin
 
@@ -24,7 +24,7 @@ Atributy C++ jsou uspořádány do následujících skupin funkční.
 |[Atributy příjemce technologie OLE DB](ole-db-consumer-attributes.md)|Vložení kódu – na základě [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-reference.md)– Chcete-li vytvořit pracovní technologie OLE DB příjemce, který provádí úlohy, jako je otevření tabulek, provádění příkazů a přístup k datům.|
 |[Atributy kompilátoru](compiler-attributes.md)|Poskytl kompilátor C++ společnosti Microsoft.|
 
-Informace o tom, jak definovat vlastní atributy pro aplikaci rozhraní .NET Framework najdete v tématu [uživatelem definované atributy](../user-defined-attributes-cpp-component-extensions.md).
+Informace o tom, jak definovat vlastní atributy pro aplikaci rozhraní .NET Framework najdete v tématu [uživatelem definované atributy](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="see-also"></a>Viz také
 

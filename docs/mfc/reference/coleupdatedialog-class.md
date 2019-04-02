@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleUpdateDialog [MFC], COleUpdateDialog
 - COleUpdateDialog [MFC], DoModal
 ms.assetid: 699ca980-52b1-4cf8-9ab1-ac6767ad5b0e
-ms.openlocfilehash: 74607a2a145025533c660ae68f20ffb8e59d3fad
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b8e580130b025f07b8f85a624b7f5a224a00e49e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281730"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771100"
 ---
 # <a name="coleupdatedialog-class"></a>Coleupdatedialog – třída
 
@@ -31,13 +31,13 @@ class COleUpdateDialog : public COleLinksDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleUpdateDialog::COleUpdateDialog](#coleupdatedialog)|Vytvoří `COleUpdateDialog` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleUpdateDialog::DoModal](#domodal)|Zobrazí **upravit odkazy** dialogové okno v režimu aktualizace.|
 
@@ -121,7 +121,7 @@ Pokud uživatel vybere tlačítko Storno, se aktualizují všechny odkazy a/nebo
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [COleLinksDialog – třída](../../mfc/reference/colelinksdialog-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [COleLinksDialog – třída](../../mfc/reference/colelinksdialog-class.md)

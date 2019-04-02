@@ -8,12 +8,12 @@ helpviewer_keywords:
 - language reference, Visual C++
 - Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 4d184e70e6a7284d07e706ce8b8c247c96442750
-ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
+ms.openlocfilehash: 8da5a4f7113bbb4256e45e7ec3c91a9c6677643c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031262"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774032"
 ---
 # <a name="c-language-reference"></a>Reference jazyka C++
 
@@ -59,7 +59,7 @@ Specifikátory paměťových tříd, definice funkce, inicializace, výčty, **t
 [Odvozené třídy](../cpp/inheritance-cpp.md)<br/>
 Jednotná a vícenásobná dědičnost, **virtuální** funkce, více základních tříd, **abstraktní** třídy, pravidla rozsahu. Také **__super** a **__interface** klíčová slova.
 
-[Řízení přístupu členů](../cpp/member-access-control-cpp.md)<br/>
+[Member-Access Control](../cpp/member-access-control-cpp.md)<br/>
 Řízení přístupu ke členům třídy: **veřejné**, **privátní**, a **chráněné** klíčová slova. Přátelské funkce a třídy.
 
 [Přetížení](operator-overloading.md)<br/>
@@ -97,8 +97,8 @@ Přehled o moderním programování C++ postupů pro psaní programů bezpečné
 
 ## <a name="related-sections"></a>Související oddíly
 
-[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)<br/>
-Referenční materiál pro používání jazyka Visual C++ k cílení modulu CLR.
+[Přípony komponent pro platformy běhového prostředí](../extensions/component-extensions-for-runtime-platforms.md)<br/>
+Referenční materiál pro používání Visual C++ pro cílové rozhraní .NET.
 
 [Referenční zdroje k sestavení programu v jazyce C/C++](../build/reference/c-cpp-building-reference.md)<br/>
 Možnosti kompilátoru, možnosti linkeru a další nástroje sestavení.

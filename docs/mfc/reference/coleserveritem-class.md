@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: f774a8db1121dd293db8e58f7cd92aaabaeabada
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c4c026975e9884ac2a0e6aaef31e799c2b5b09bf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270550"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777373"
 ---
 # <a name="coleserveritem-class"></a>COleServerItem Class
 
@@ -101,7 +101,7 @@ class COleServerItem : public CDocItem
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleServerItem::AddOtherClipboardData](#addotherclipboarddata)|Umístí v prezentaci a převod formátů `COleDataSource` objektu.|
 |[COleServerItem::CopyToClipboard](#copytoclipboard)|Kopíruje položku do schránky.|
@@ -134,7 +134,7 @@ class COleServerItem : public CDocItem
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleServerItem::GetDataSource](#getdatasource)|Získá objekt použitý k uložení převod formátů.|
 |[COleServerItem::OnHide](#onhide)|Volá se rozhraním, chcete-li skrýt položky OLE.|
@@ -143,7 +143,7 @@ class COleServerItem : public CDocItem
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleServerItem::m_sizeExtent](#m_sizeextent)|Informuje o tom, jak velká část položky OLE je viditelné server.|
 
@@ -997,7 +997,7 @@ Název musí být jedinečný v rámci dokumentu. Při volání serverovou aplik
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC HIERSVR](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [CDocItem – třída](../../mfc/reference/cdocitem-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [COleClientItem – třída](../../mfc/reference/coleclientitem-class.md)<br/>

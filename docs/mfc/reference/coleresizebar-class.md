@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleResizeBar [MFC], COleResizeBar
 - COleResizeBar [MFC], Create
 ms.assetid: 56a708d9-28c5-4eb0-9404-77b688d91c63
-ms.openlocfilehash: 631276a065652ec991c4c1b5264e87b7244fb7b9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0b950e7533ba6f95c76ef8d4569980a9a82ea591
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275945"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769149"
 ---
 # <a name="coleresizebar-class"></a>Coleresizebar – třída
 
@@ -37,7 +37,7 @@ class COleResizeBar : public CControlBar
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleResizeBar::Create](#create)|Vytvoří a inicializuje podřízeného okna Windows a přidruží ji k `COleResizeBar` objektu.|
 
@@ -105,7 +105,7 @@ Nenulové, pokud byl vytvořen příčku; jinak 0.
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC SUPERPAD](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar – třída](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [COleServerDoc – třída](../../mfc/reference/coleserverdoc-class.md)

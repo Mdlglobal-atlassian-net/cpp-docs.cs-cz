@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: 97854a554be729b75d50f09b0627ffc94b1b093f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 92f5adcea50e660ecfad131313247e118312e609
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424480"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781260"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl Class
 
@@ -203,13 +203,13 @@ class CToolBarCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CToolBarCtrl::CToolBarCtrl](#ctoolbarctrl)|Vytvoří `CToolBarCtrl` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CToolBarCtrl::AddBitmap](#addbitmap)|Přidá jednu nebo víc imagí rastrového obrázku tlačítka na seznam obrázky tlačítek, které jsou k dispozici pro ovládací prvek panelu nástrojů.|
 |[CToolBarCtrl::AddButtons](#addbuttons)|Přidá jednu nebo více tlačítek do ovládacího prvku toolbar.|
@@ -2386,8 +2386,8 @@ Tato členská funkce emuluje funkčnost [TB_SETWINDOWTHEME](/windows/desktop/Co
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázka CMNCTRL1 knihovny MFC](../../visual-cpp-samples.md)<br/>
-[Ukázky knihovny MFC MFCIE](../../visual-cpp-samples.md)<br/>
+[Ukázka CMNCTRL1 knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC MFCIE](../../overview/visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CToolBar – třída](../../mfc/reference/ctoolbar-class.md)

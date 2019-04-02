@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CMFCRibbonLinkCtrl [MFC], OpenLink
 - CMFCRibbonLinkCtrl [MFC], SetLink
 ms.assetid: 77ae1941-e0ab-4a9d-911e-1752d34c079b
-ms.openlocfilehash: 9f47e5a3a25120370bd618ac3a89de76761fa61a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bc13cf29fd9fed9f91221f00d4b605b3d9c3506f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287788"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772394"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl Class
 
@@ -60,7 +60,7 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCRibbonLinkCtrl::CopyFrom](#copyfrom)|(Přepíše `CMFCRibbonButton::CopyFrom`.)|
 |[CMFCRibbonLinkCtrl::GetCompactSize](#getcompactsize)|(Přepíše [CMFCRibbonButton::GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|
@@ -113,7 +113,7 @@ CMFCRibbonLinkCtrl(
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití konstruktoru `CMFCRibbonLinkCtrl` třídy. Tento fragment kódu je součástí [miniaplikace na pásu karet ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje způsob použití konstruktoru `CMFCRibbonLinkCtrl` třídy. Tento fragment kódu je součástí [miniaplikace na pásu karet ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_RibbonGadgets#1](../../mfc/reference/codesnippet/cpp/cmfcribbonlinkctrl-class_1.cpp)]
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data types [C++], enumerating
 - public members [C++]
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-ms.openlocfilehash: 769ba87f64a8096ac8c7f14cc091119345177b3b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a17910e0288b81723aa837ba9204bb40713d5d49
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426443"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770791"
 ---
 # <a name="reflection-ccli"></a>Reflexe (C++/CLI)
 
@@ -79,7 +79,7 @@ type of i = 'System.Int32'
 
 ## <a name="example-typeid"></a>Příklad: identifikátor typeid.
 
-Stejně jako u `GetType` metody [typeid](../windows/typeid-cpp-component-extensions.md) operátor vrací ukazatel na **typ** objektu, takže tento kód označuje název typu **System.Int32**. Zobrazení názvů typů je nejzákladnější funkce reflexe, ale potenciálně užitečnější technikou je kontrola nebo zjištění platné hodnoty pro výčtové typy. To můžete udělat pomocí statické **Enum::GetNames** funkce, která vrací pole řetězců, každý obsahující hodnotu výčtu v textové podobě.  Následující příklad načte pole řetězců, které popisuje hodnoty výčtu hodnoty pro **možnosti** výčtu (CLR) a zobrazí je ve smyčce.
+Stejně jako u `GetType` metody [typeid](../extensions/typeid-cpp-component-extensions.md) operátor vrací ukazatel na **typ** objektu, takže tento kód označuje název typu **System.Int32**. Zobrazení názvů typů je nejzákladnější funkce reflexe, ale potenciálně užitečnější technikou je kontrola nebo zjištění platné hodnoty pro výčtové typy. To můžete udělat pomocí statické **Enum::GetNames** funkce, která vrací pole řetězců, každý obsahující hodnotu výčtu v textové podobě.  Následující příklad načte pole řetězců, které popisuje hodnoty výčtu hodnoty pro **možnosti** výčtu (CLR) a zobrazí je ve smyčce.
 
 Pokud je přidána čtvrtá možnost **možnosti** výčet, tento kód bude hlásit nové možnost bez nutnosti rekompilace, i když výčtu je definována v samostatném sestavení.
 

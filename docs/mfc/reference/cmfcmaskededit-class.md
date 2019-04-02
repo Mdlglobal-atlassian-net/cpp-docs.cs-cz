@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], SetWindowText
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
-ms.openlocfilehash: 88a9c49b55dca9d98976924127efff67c479a96a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c1dcf89811fa5225283cb5bec120d3bd2fdfb003
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276962"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773785"
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit Class
 
@@ -45,7 +45,7 @@ class CMFCMaskedEdit : public CEdit
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |`CMFCMaskedEdit::CMFCMaskedEdit`|Výchozí konstruktor.|
 |`CMFCMaskedEdit::~CMFCMaskedEdit`|Destruktor.|
@@ -66,7 +66,7 @@ class CMFCMaskedEdit : public CEdit
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCMaskedEdit::IsMaskedChar](#ismaskedchar)|Volá se rozhraním pro ověření zadaného znaku podle odpovídajícího znaku masky.|
 
@@ -88,7 +88,7 @@ Pokud nebude volat jednu nebo více metod se inicializovat maska, platné znaky 
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak nastavit masku (například telefonní číslo) pomocí `EnableMask` metodu pro vytvoření maska pro maskované upravit ovládací prvek, `SetValidChars` metoda zadat řetězec platné znaky, které může uživatel zadat a `SetWindowText` metodu pro zobrazení výzvy v maskovaný ovládací prvek textové pole. V tomto příkladu je součástí [nové ovládací prvky ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak nastavit masku (například telefonní číslo) pomocí `EnableMask` metodu pro vytvoření maska pro maskované upravit ovládací prvek, `SetValidChars` metoda zadat řetězec platné znaky, které může uživatel zadat a `SetWindowText` metodu pro zobrazení výzvy v maskovaný ovládací prvek textové pole. V tomto příkladu je součástí [nové ovládací prvky ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#11](../../mfc/reference/codesnippet/cpp/cmfcmaskededit-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#12](../../mfc/reference/codesnippet/cpp/cmfcmaskededit-class_2.cpp)]

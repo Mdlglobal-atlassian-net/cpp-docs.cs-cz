@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: 22ba71bc0abaefd20cb68d82d4fefe06ab7fa929
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c0c1fd14105bae3b5413f92b547339ccabf3bb91
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274571"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774773"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver – třída
 
@@ -47,7 +47,7 @@ class COleDispatchDriver
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleDispatchDriver::COleDispatchDriver](#coledispatchdriver)|Vytvoří `COleDispatchDriver` objektu.|
 
@@ -65,14 +65,14 @@ class COleDispatchDriver
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleDispatchDriver::operator =](#operator_eq)|Zkopíruje zdrojovou hodnotou do `COleDispatchDriver` objektu.|
 |[COleDispatchDriver::operator LPDISPATCH](#operator_lpdispatch)|Přistupuje k podkladovým `IDispatch` ukazatele.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleDispatchDriver::m_bAutoRelease](#m_bautorelease)|Určuje, jestli se má uvolnit `IDispatch` během `ReleaseDispatch` nebo zničení objektu.|
 |[COleDispatchDriver::m_lpDispatch](#m_lpdispatch)|Označuje ukazatel `IDispatch` rozhraní připojené k tomuto `COleDispatchDriver`.|
@@ -408,7 +408,7 @@ Jeden parametr typu určeného *vtProp*.
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC CALCDRIV](../../visual-cpp-samples.md)<br/>
-[Ukázky knihovny MFC acdual –](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC acdual –](../../overview/visual-cpp-samples.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CCmdTarget – třída](../../mfc/reference/ccmdtarget-class.md)

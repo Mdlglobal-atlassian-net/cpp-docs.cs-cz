@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCRibbonProgressBar [MFC], SetPos
 - CMFCRibbonProgressBar [MFC], SetRange
 ms.assetid: de3d9f2e-ed59-480e-aa7d-08a33ab36c67
-ms.openlocfilehash: 626666a8f03a8312bd26fceca745f82ad1ab89b1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7c16217378cb8825ca4605687770de177e720c1d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285916"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778166"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Cmfcribbonprogressbar – třída
 
@@ -47,13 +47,13 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCRibbonProgressBar::CMFCRibbonProgressBar](#cmfcribbonprogressbar)|Vytvoří a inicializuje `CMFCRibbonProgressBar` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCRibbonProgressBar::GetPos](#getpos)|Vrátí aktuální průběh.|
 |[CMFCRibbonProgressBar::GetRangeMax](#getrangemax)|Vrátí maximální hodnotu aktuálního rozsahu.|
@@ -71,7 +71,7 @@ A `CMFCRibbonProgressBar` můžete pracovat ve dvou režimech: pravidelné a nek
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít různé metody v `CMFCRibbonProgressBar` třídy. Příklad ukazuje, jak nastavit indikátoru průběhu pro práci v nekonečné režimu (kde čas dokončení operace neznámá), nastavit minimální a maximální hodnoty pro indikátor průběhu a nastavit aktuální pozici indikátor průběhu. Tento fragment kódu je součástí [MS Office 2007 demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak použít různé metody v `CMFCRibbonProgressBar` třídy. Příklad ukazuje, jak nastavit indikátoru průběhu pro práci v nekonečné režimu (kde čas dokončení operace neznámá), nastavit minimální a maximální hodnoty pro indikátor průběhu a nastavit aktuální pozici indikátor průběhu. Tento fragment kódu je součástí [MS Office 2007 demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#11](../../mfc/reference/codesnippet/cpp/cmfcribbonprogressbar-class_1.cpp)]
 

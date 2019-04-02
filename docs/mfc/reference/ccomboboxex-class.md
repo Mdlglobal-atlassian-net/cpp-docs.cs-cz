@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: 44943803fdb422ccbf77302e7c81f23c34cc7433
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c3fd57510a38d597b827f80ab98a0be280ad31e3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420755"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767766"
 ---
 # <a name="ccomboboxex-class"></a>Ccomboboxex – třída
 
@@ -57,7 +57,7 @@ class CComboBoxEx : public CComboBox
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CComboBoxEx::CComboBoxEx](#ccomboboxex)|Vytvoří `CComboBoxEx` objektu.|
 
@@ -470,7 +470,7 @@ Tato členská funkce emuluje funkčnost [CBEM_SETWINDOWTHEME](/windows/desktop/
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC MFCIE](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC MFCIE](../../overview/visual-cpp-samples.md)<br/>
 [CComboBox – třída](../../mfc/reference/ccombobox-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CComboBox – třída](../../mfc/reference/ccombobox-class.md)

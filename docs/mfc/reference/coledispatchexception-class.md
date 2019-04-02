@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleDispatchException [MFC], m_strSource
 - COleDispatchException [MFC], m_wCode
 ms.assetid: 0e95c8be-e21a-490c-99ec-181c6a9a26d0
-ms.openlocfilehash: f6440ef202d0eafc4730b1e63ca4627d5dab61bc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2d5b9d2a0dc1e716ea8cb20f0d0dcb4c5d765079
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299956"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769053"
 ---
 # <a name="coledispatchexception-class"></a>Coledispatchexception – třída
 
@@ -37,7 +37,7 @@ class COleDispatchException : public CException
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleDispatchException::m_dwHelpContext](#m_dwhelpcontext)|Kontextové nápovědy pro chybu.|
 |[COleDispatchException::m_strDescription](#m_strdescription)|Popis slovní chyby.|
@@ -131,7 +131,7 @@ Tento člen je nastavený podle funkce [afxthrowoledispatchexception –](except
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC CALCDRIV](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
 [CException – třída](../../mfc/reference/cexception-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [COleDispatchDriver – třída](../../mfc/reference/coledispatchdriver-class.md)<br/>

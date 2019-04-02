@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-ms.openlocfilehash: 01effb8cb1142db0bcae6f9c456e4a3b3abd69e8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c791f3988c7257ed7d188917394e74a6dbeca98b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269934"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776801"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>Cmfcoutlookbartabctrl – třída
 
@@ -65,14 +65,14 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |`CMFCOutlookBarTabCtrl::CMFCOutlookBarTabCtrl`|Výchozí konstruktor.|
 |`CMFCOutlookBarTabCtrl::~CMFCOutlookBarTabCtrl`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCOutlookBarTabCtrl::AddControl](#addcontrol)|Přidá ovládací prvek Windows jako novou kartu na panelu aplikace Outlook.|
 |`CMFCOutlookBarTabCtrl::CalcRectEdit`|Volá se rozhraním, k určení velikosti pole pro úpravy, které se zobrazí, když se uživatel přejmenuje na kartě. (Přepíše `CMFCBaseTabCtrl::CalcRectEdit`.)|
@@ -109,7 +109,7 @@ Chcete-li vytvořit panel aplikace Outlook s podporou ukotvení, použijte `CMFC
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak inicializovat `CMFCOutlookBarTabCtrl` objektu a použít různé metody v `CMFCOutlookBarTabCtrl` třídy. Tento příklad ukazuje, jak povolit místní úpravy textu popisku na kartu stránky tlačítka panelu aplikace Outlook, povolení animace a povolit posouvání popisovačů, které uživateli umožňuje procházet tlačítka na podokno panelu aplikace Outlook, nastavit velikost ohraničení pokračování kartu aplikace Outlook Rol a nastavte zarovnání popisků text na tlačítkách kartu panelu aplikace Outlook. Tento fragment kódu je součástí [Outlook demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak inicializovat `CMFCOutlookBarTabCtrl` objektu a použít různé metody v `CMFCOutlookBarTabCtrl` třídy. Tento příklad ukazuje, jak povolit místní úpravy textu popisku na kartu stránky tlačítka panelu aplikace Outlook, povolení animace a povolit posouvání popisovačů, které uživateli umožňuje procházet tlačítka na podokno panelu aplikace Outlook, nastavit velikost ohraničení pokračování kartu aplikace Outlook Rol a nastavte zarovnání popisků text na tlačítkách kartu panelu aplikace Outlook. Tento fragment kódu je součástí [Outlook demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookDemo#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_1.cpp)]
 [!code-cpp[NVC_MFC_OutlookDemo#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_2.cpp)]
@@ -170,7 +170,7 @@ Pokud nastavíte *bDetachable* na hodnotu TRUE, `AddControl` interně vytvoří 
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití `AddControl` metodu `CMFCOutlookBarTabCtrl` třídy. Tento fragment kódu je součástí [Outlook demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje způsob použití `AddControl` metodu `CMFCOutlookBarTabCtrl` třídy. Tento fragment kódu je součástí [Outlook demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookDemo#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_3.cpp)]
 

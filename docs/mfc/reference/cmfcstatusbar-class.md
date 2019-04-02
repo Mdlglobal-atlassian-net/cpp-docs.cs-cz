@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: 94876dcf6549842a5fedbd96a93ef2cc760225ce
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 87f75769e2f400a7721a8c9089d6c5596c31a4e3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326748"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775956"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar Class
 
@@ -138,26 +138,26 @@ class CMFCStatusBar : public CPane
 
 ## <a name="remarks"></a>Poznámky
 
-Následující diagram znázorňuje obrázek ve stavovém řádku z [stav panelu demonstrační ukázka](../../visual-cpp-samples.md) aplikace.
+Následující diagram znázorňuje obrázek ve stavovém řádku z [stav panelu demonstrační ukázka](../../overview/visual-cpp-samples.md) aplikace.
 
 ![Příklad CMFCStatusBar –](../../mfc/reference/media/cmfcstatusbar.png "CMFCStatusBar – příklad")
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje místní proměnné, které aplikace používá k volání různých metodách `CMFCStatusBar` třídy. Tyto proměnné jsou deklarovány v StatusBarDemoView.h. Hlavního rámce je deklarován v MainFrm.h, dokument je deklarován v StatusBarDemoDoc.h a zobrazení je deklarován v StatusBarDemoView.h. Tento fragment kódu je součástí [stav panelu demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje místní proměnné, které aplikace používá k volání různých metodách `CMFCStatusBar` třídy. Tyto proměnné jsou deklarovány v StatusBarDemoView.h. Hlavního rámce je deklarován v MainFrm.h, dokument je deklarován v StatusBarDemoDoc.h a zobrazení je deklarován v StatusBarDemoView.h. Tento fragment kódu je součástí [stav panelu demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#9](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_1.h)]
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak získat odkaz na `CMFCStatusBar` objekt zavedením `GetStatusBar` metoda MainFrm.h a následným voláním této metody z `GetStatusBar` metoda ve StatusBarDemoView.h. Tento fragment kódu je součástí [stav panelu demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak získat odkaz na `CMFCStatusBar` objekt zavedením `GetStatusBar` metoda MainFrm.h a následným voláním této metody z `GetStatusBar` metoda ve StatusBarDemoView.h. Tento fragment kódu je součástí [stav panelu demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#7](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_2.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#8](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_3.h)]
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob volání různých metodách `CMFCStatusBar` třídy v StatusBarDemoView.cpp. Konstanty jsou deklarovány v MainFrm.h. Tento příklad ukazuje, jak nastavit ikonu, nastaví text popisu tlačítka panelu stavového řádku stav, zobrazí indikátor průběhu na zadané podokně, přiřadit animace do podokna zadaný, nastavit text a šířku panelu stavového řádku stav a nastavit aktuální indikátoru průběhu progr panel upu pro podokno panelu Stav. Tento fragment kódu je součástí [stav panelu demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje způsob volání různých metodách `CMFCStatusBar` třídy v StatusBarDemoView.cpp. Konstanty jsou deklarovány v MainFrm.h. Tento příklad ukazuje, jak nastavit ikonu, nastaví text popisu tlačítka panelu stavového řádku stav, zobrazí indikátor průběhu na zadané podokně, přiřadit animace do podokna zadaný, nastavit text a šířku panelu stavového řádku stav a nastavit aktuální indikátoru průběhu progr panel upu pro podokno panelu Stav. Tento fragment kódu je součástí [stav panelu demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#6](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_4.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#1](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_5.cpp)]

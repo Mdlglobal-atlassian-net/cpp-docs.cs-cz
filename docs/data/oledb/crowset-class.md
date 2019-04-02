@@ -238,12 +238,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: 4a24dada2f1211138449e65a8865810a46230970
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: eda4bb09865698a657828c6d4684a8df92ffe9b6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329010"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779453"
 ---
 # <a name="crowset-class"></a>CRowset – třída
 
@@ -534,7 +534,7 @@ Standardní HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Příklad toho, jak tuto funkci použít, najdete v článku [MultiRead ukázka](../../visual-cpp-samples.md).
+Příklad toho, jak tuto funkci použít, najdete v článku [MultiRead ukázka](../../overview/visual-cpp-samples.md).
 
 ## <a name="getoriginaldata"></a> CRowset::GetOriginalData
 
@@ -937,8 +937,8 @@ Standardní HRESULT.
 
 ## <a name="see-also"></a>Viz také
 
-[Ukázka DBViewer](../../visual-cpp-samples.md)<br/>
-[MultiRead vzorku](../../visual-cpp-samples.md)<br/>
-[Ukázka multiRead atributů](../../visual-cpp-samples.md)<br/>
+[Ukázka DBViewer](../../overview/visual-cpp-samples.md)<br/>
+[MultiRead vzorku](../../overview/visual-cpp-samples.md)<br/>
+[Ukázka multiRead atributů](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: e1ca69382591dc7d3afe9b5871dfdebd64aedce4
-ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
+ms.openlocfilehash: 45c03d142c34186660aa2715081ffb0f45e85ccc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58416998"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773746"
 ---
 # <a name="cedit-class"></a>Cedit – třída
 
@@ -121,7 +121,7 @@ class CEdit : public CWnd
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CEdit::CanUndo](#canundo)|Určuje, jestli operace edit-control je možné vrátit zpět.|
 |[CEdit::CharFromPos](#charfrompos)|Načte indexy řádku a znak nejblíže určené pozici znaku.|
@@ -1449,8 +1449,8 @@ Další informace najdete v tématu [EM_UNDO](/windows/desktop/Controls/em-undo)
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC CALCDRIV](../../visual-cpp-samples.md)<br/>
-[Ukázka CMNCTRL2 knihovny MFC](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
+[Ukázka CMNCTRL2 knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CWnd – třída](cwnd-class.md)<br/>

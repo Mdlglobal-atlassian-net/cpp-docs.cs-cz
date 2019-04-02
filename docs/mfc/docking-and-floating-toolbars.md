@@ -21,12 +21,12 @@ helpviewer_keywords:
 - toolbars [MFC], wrapping
 - floating palettes
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
-ms.openlocfilehash: 93d1e067777b1c6f4430fe9cc44ae531559b6962
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 01450dca56ad662c8db0a35f89749c4a288109b3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294668"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768131"
 ---
 # <a name="docking-and-floating-toolbars"></a>Ukotvitelné a plovoucí panely nástrojů
 
@@ -50,7 +50,7 @@ Další témata popsaná v tomto článku zahrnují:
 
 - [Nastavení obtékání pozice pro panel nástrojů-style](#_core_setting_wrap_positions_for_a_fixed_style_toolbar)
 
-Najdete v ukázce MFC Obecné [DOCKTOOL](../visual-cpp-samples.md) příklady.
+Najdete v ukázce MFC Obecné [DOCKTOOL](../overview/visual-cpp-samples.md) příklady.
 
 ##  <a name="_core_enabling_docking_in_a_frame_window"></a> Povolení ukotvení v okně s rámečkem
 
@@ -104,7 +104,7 @@ Panel nástrojů s velikostí oprava styl určete panelu nástrojů tlačítko i
 
 [!code-cpp[NVC_MFCDocViewSDI#10](../mfc/codesnippet/cpp/docking-and-floating-toolbars_1.cpp)]
 
-Ukázky knihovny MFC Obecné [DOCKTOOL](../visual-cpp-samples.md) ukazuje, jak můžete členské funkce tříd [ccontrolbar –](../mfc/reference/ccontrolbar-class.md) a [ctoolbar –](../mfc/reference/ctoolbar-class.md) ke správě dynamických rozložení panelu nástrojů. Naleznete v souboru EDITBAR. CPP v DOCKTOOL.
+Ukázky knihovny MFC Obecné [DOCKTOOL](../overview/visual-cpp-samples.md) ukazuje, jak můžete členské funkce tříd [ccontrolbar –](../mfc/reference/ccontrolbar-class.md) a [ctoolbar –](../mfc/reference/ctoolbar-class.md) ke správě dynamických rozložení panelu nástrojů. Naleznete v souboru EDITBAR. CPP v DOCKTOOL.
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
 

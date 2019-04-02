@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: ee1820601f80ed270221b3186188793f7fdcbe08
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: aa49ebed2d48d9818c2d39ae4894d8caf1fbbf81
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301451"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773135"
 ---
 # <a name="ctoolbar-class"></a>Ctoolbar – třída
 
@@ -71,7 +71,7 @@ class CToolBar : public CControlBar
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CToolBar::CommandToIndex](#commandtoindex)|Vrátí index tlačítko s ID daného příkazu.|
 |[CToolBar::Create](#create)|Vytvoří panel nástrojů Windows a připojí ho k `CToolBar` objektu.|
@@ -717,9 +717,9 @@ Voláním této členské funkce jenom pro panely nástrojů, které se neříd�
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC CTRLBARS](../../visual-cpp-samples.md)<br/>
-[Ukázka DLGCBR32 knihovny MFC](../../visual-cpp-samples.md)<br/>
-[Ukázky knihovny MFC DOCKTOOL](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
+[Ukázka DLGCBR32 knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC DOCKTOOL](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar – třída](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CToolBarCtrl – třída](../../mfc/reference/ctoolbarctrl-class.md)<br/>

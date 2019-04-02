@@ -6,16 +6,16 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], control-notification messages
 - dialog classes [MFC], commonly added member functions
 ms.assetid: f6bd50e8-872a-4039-9996-a85bfccea18d
-ms.openlocfilehash: 51b7b3f093d451f1fbd1f0aaa8b3db836a8d6ec0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 080f5f162d1e0542e392c39995e1c5e5ae303298
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287996"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772707"
 ---
 # <a name="commonly-added-member-functions"></a>Běžně přidávané členské funkce
 
-Pokud vaše dialogové okno obsahuje tlačítek než OK nebo zrušit, budete muset zapsat popisovač zpráv členské funkce ve vlastní třídy dialogového okna, reagovat na zprávy s oznámením ovládacího prvku, které generují. Příklad najdete v tématu [Scribble](../visual-cpp-samples.md) ukázkový program. Můžete také zpracování zpráv s oznámením ovládacího prvku z jiných ovládacích prvků ve vašem dialogovém okně.
+Pokud vaše dialogové okno obsahuje tlačítek než OK nebo zrušit, budete muset zapsat popisovač zpráv členské funkce ve vlastní třídy dialogového okna, reagovat na zprávy s oznámením ovládacího prvku, které generují. Příklad najdete v tématu [Scribble](../overview/visual-cpp-samples.md) ukázkový program. Můžete také zpracování zpráv s oznámením ovládacího prvku z jiných ovládacích prvků ve vašem dialogovém okně.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1000
 ms.assetid: 86421b9a-460a-4285-8dce-9b8257d78122
-ms.openlocfilehash: 8e53dc898addb4adeec63027c358b42a6a836b50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b0e6eb3ba44216e9300506eb84adb61a6529903d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501722"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781494"
 ---
 # <a name="linker-tools-error-lnk1000"></a>Chyba linkerů LNK1000
 
 > Neznámá chyba; v dokumentaci pro možnosti odborné pomoci
 
-Mějte na paměti okolností chyby a zkuste to na problém a vytvořit reprodukovatelnou testovací případ. Informace o tom, jak prozkoumat a těchto chybách naleznete v tématu [postup ohlášení problému se sadou nástrojů Visual C++ nebo dokumentaci](../../how-to-report-a-problem-with-the-visual-cpp-toolset.md).
+Mějte na paměti okolností chyby a zkuste to na problém a vytvořit reprodukovatelnou testovací případ. Informace o tom, jak prozkoumat a těchto chybách naleznete v tématu [postup ohlášení problému se sadou nástrojů Visual C++ nebo dokumentaci](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).
 
 Tato chyba může zobrazit, pokud kombinujete standardní hlavičku soubory (například Windows.h) a vlastní. Zahrňte předkompilované hlavičky, pokud některý, první a pak standardními záhlavími, za nímž následuje souborů hlaviček.

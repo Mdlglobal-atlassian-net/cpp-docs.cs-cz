@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComHeap class
 ms.assetid: c74183ce-98ae-46fb-b186-93ea4cf0222b
-ms.openlocfilehash: 7f8966c215ed53279f1391ce00adfc783f34f2d1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1a8618bd5146f2906f18cfbaa33894d34598776a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276157"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770743"
 ---
 # <a name="ccomheap-class"></a>Ccomheap – třída
 
@@ -35,7 +35,7 @@ class CComHeap : public IAtlMemMgr
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CComHeap::Allocate](#allocate)|Volejte tuto metodu za účelem přidělení bloku paměti.|
 |[CComHeap::Free](#free)|Volejte tuto metodu pro uvolnění bloku paměti přidělené tomuto správci paměti.|
@@ -149,7 +149,7 @@ Implementované pomocí [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-co
 
 ## <a name="see-also"></a>Viz také:
 
-[Příklad DynamicConsumer](../../visual-cpp-samples.md)<br/>
+[Příklad DynamicConsumer](../../overview/visual-cpp-samples.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [CWin32Heap – třída](../../atl/reference/cwin32heap-class.md)<br/>
 [CLocalHeap – třída](../../atl/reference/clocalheap-class.md)<br/>

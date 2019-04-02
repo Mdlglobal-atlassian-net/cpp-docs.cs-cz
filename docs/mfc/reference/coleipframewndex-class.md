@@ -94,12 +94,12 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], WinHelpA
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
-ms.openlocfilehash: 8ebf63e6cf31f3852434926c3559774e7b4b46d3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ce0e3a8ecf4774bc0d259c0304b1e88532336bd1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285344"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771146"
 ---
 # <a name="coleipframewndex-class"></a>Coleipframewndex – třída
 
@@ -170,7 +170,7 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak podtřídy instance `COleIPFrameWndEx` třídy a přes jízdní její metody. Tento příklad ukazuje, jak více než svézt `OnDestory` metody, `RepositionFrame` metody `RecalcLayout` metoda a `CalcWindowRect` – metoda. Tento fragment kódu je součástí [slovo panel vzorku](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak podtřídy instance `COleIPFrameWndEx` třídy a přes jízdní její metody. Tento příklad ukazuje, jak více než svézt `OnDestory` metody, `RepositionFrame` metody `RecalcLayout` metoda a `CalcWindowRect` – metoda. Tento fragment kódu je součástí [slovo panel vzorku](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#1](../../mfc/reference/codesnippet/cpp/coleipframewndex-class_1.cpp)]
 

@@ -2,12 +2,12 @@
 title: Desktopové aplikace (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-ms.openlocfilehash: 80b85afc52819a742c85512e8e6031b9b2e26e9a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 090180062139642d8a686e9f1bf063f3e65aee88
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694566"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771916"
 ---
 # <a name="desktop-applications-visual-c"></a>Desktopové aplikace (Visual C++)
 
@@ -56,4 +56,4 @@ Všechny aplikace klasické pracovní plochy v jazyce C++ můžete použít C Ru
 
 ## <a name="see-also"></a>Viz také
 
-[Visual C++](../visual-cpp-in-visual-studio.md)
+[Visual C++](../overview/visual-cpp-in-visual-studio.md)

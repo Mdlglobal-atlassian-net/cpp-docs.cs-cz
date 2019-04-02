@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCToolBarFontSizeComboBox [MFC], RebuildFontSizes
 - CMFCToolBarFontSizeComboBox [MFC], SetTwipSize
 ms.assetid: 72e0c44c-6a0e-4194-a71f-ab64e3afb9b5
-ms.openlocfilehash: a1dd85ed7bf80f5307bf0bd07ef5ef74875c8562
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 43832f6c9b02c43fbe4a05cbea3add8783150113
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258941"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767662"
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>Cmfctoolbarfontsizecombobox – třída
 
@@ -35,13 +35,13 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox](#cmfctoolbarfontsizecombobox)|Vytvoří `CMFCToolBarFontSizeComboBox` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCToolBarFontSizeComboBox::GetTwipSize](#gettwipsize)|Vrátí hodnotu zadejte v twipech velikost vybraného písma.|
 |[CMFCToolBarFontSizeComboBox::RebuildFontSizes](#rebuildfontsizes)|Vyplní seznamu pole se seznamem všech velikostí podporovanou písma pro zadaný font.|
@@ -57,7 +57,7 @@ Když uživatel vybere nový písma v `CMFCToolBarFontComboBox` objektu, můžet
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít různé metody v `CMFCToolBarFontSizeComboBox` třída ke konfiguraci `CMFCToolBarFontSizeComboBox` objektu. Tento příklad ukazuje, jak načíst velikost písma, zadejte v twipech, v textovém poli, vyplnit všechna platná velikost písma daného pole se seznamem velikost písma a velikost písma zadejte v twipech. Tento fragment kódu je součástí [slovo panel vzorku](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak použít různé metody v `CMFCToolBarFontSizeComboBox` třída ke konfiguraci `CMFCToolBarFontSizeComboBox` objektu. Tento příklad ukazuje, jak načíst velikost písma, zadejte v twipech, v textovém poli, vyplnit všechna platná velikost písma daného pole se seznamem velikost písma a velikost písma zadejte v twipech. Tento fragment kódu je součástí [slovo panel vzorku](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#8](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontsizecombobox-class_1.cpp)]
 

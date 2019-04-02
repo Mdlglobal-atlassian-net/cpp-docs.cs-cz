@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: e2027d967aebe68618e44e454ec268770b53ee4b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: cad88af9e81a60857fbbd6c90cf81cdcafbd7a12
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694059"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781468"
 ---
 # <a name="constructors-c"></a>Konstruktory (C++)
 
@@ -636,7 +636,7 @@ Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
 ```
 
-**Visual Studio 2017 verze 15.7 nebo novější**: **pomocí** výroky **/std: c ++ 17** režimu přináší do oboru všechny konstruktory ze základní třídy s výjimkou těch, které mají stejnou signaturu jako konstruktorů v odvozené třídě. Obecně je nejvhodnější použít dědičné konstruktorů nebo konstruktorů při odvozená třída nedeklaruje žádné nové datové členy. Viz také [vylepšení v sadě Visual Studio 2017 verze 15.7](../cpp-conformance-improvements-2017.md#improvements_157).
+**Visual Studio 2017 verze 15.7 nebo novější**: **Pomocí** výroky **/std: c ++ 17** režimu přináší do oboru všechny konstruktory ze základní třídy s výjimkou těch, které mají stejnou signaturu jako konstruktorů v odvozené třídě. Obecně je nejvhodnější použít dědičné konstruktorů nebo konstruktorů při odvozená třída nedeklaruje žádné nové datové členy. Viz také [vylepšení v sadě Visual Studio 2017 verze 15.7](../overview/cpp-conformance-improvements-2017.md#improvements_157).
 
 Šablony třídy lze dědit všechny konstruktory z argumentu typu, pokud tento typ určuje základní třídu:
 

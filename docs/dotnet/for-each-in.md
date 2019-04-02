@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: c5ee72e557c62e3db2eeb5dac4811133719183f6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b1dfe3a32f88c0e9456e3d73c31c533911f8d3ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746303"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770688"
 ---
 # <a name="for-each-in"></a>for each, in
 
@@ -35,7 +35,7 @@ Prochází skrze pole nebo kolekci. Toto nestandardní klíčové slovo je k di
 Typ `identifier`.
 
 *identifier*<br/>
-Iterační proměnná, která představuje prvek kolekce.  Když `identifier` je [Tracking Reference Operator](../windows/tracking-reference-operator-cpp-component-extensions.md), lze tento prvek upravit.
+Iterační proměnná, která představuje prvek kolekce.  Když `identifier` je [Tracking Reference Operator](../extensions/tracking-reference-operator-cpp-component-extensions.md), lze tento prvek upravit.
 
 *Výraz*<br/>
 Výraz pole nebo kolekce. Prvek kolekce musí být tak, aby kompilátor mohl převést tak, `identifier` typu.
@@ -49,7 +49,7 @@ Jeden nebo více příkazů ke spuštění.
 
 *Příkazy* jsou spouštěny pro každý prvek v poli nebo kolekci. Po dokončení iterace u všech prvků v kolekci je kontrola předána příkazu následujícímu `for each` bloku.
 
-`for each` a `in` jsou [kontextově závislá klíčová slova](../windows/context-sensitive-keywords-cpp-component-extensions.md).
+`for each` a `in` jsou [kontextově závislá klíčová slova](../extensions/context-sensitive-keywords-cpp-component-extensions.md).
 
 Další informace:
 
@@ -159,4 +159,4 @@ Testing
 
 ## <a name="see-also"></a>Viz také:
 
-[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+[Přípony komponent pro platformy běhového prostředí](../extensions/component-extensions-for-runtime-platforms.md)

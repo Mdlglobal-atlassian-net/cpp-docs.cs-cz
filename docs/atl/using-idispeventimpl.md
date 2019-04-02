@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - IDispEventImpl class, using
 ms.assetid: 82d53b61-9d0d-45c5-aff9-2fafa468a9ca
-ms.openlocfilehash: 59f8e7d095f3d514ab41b28dc37f5d3c707bbd08
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: c532164788d359c7834759de01407d49c19463ca
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820296"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769326"
 ---
 # <a name="using-idispeventimpl"></a>Idispeventimpl – použití
 
@@ -29,7 +29,7 @@ Při použití `IDispEventImpl` zpracování událostí, budete muset:
 
 Následující příklad ukazuje, jak zpracovat `DocumentChange` události vyvolané Wordu **aplikace** objektu. Tato událost je definována jako metody na `ApplicationEvents` dispinterface.
 
-Příklad je z [ATLEventHandling ukázka](../visual-cpp-samples.md).
+Příklad je z [ATLEventHandling ukázka](../overview/visual-cpp-samples.md).
 
 ```cpp
 [ uuid(000209F7-0000-0000-C000-000000000046), hidden ]
@@ -58,4 +58,4 @@ Následující kód se zobrazí v NotSoSimple.h. Příslušný kód je uvedeno v
 ## <a name="see-also"></a>Viz také:
 
 [Zpracování událostí](../atl/event-handling-and-atl.md)<br/>
-[Ukázka ATLEventHandling](../visual-cpp-samples.md)
+[Ukázka ATLEventHandling](../overview/visual-cpp-samples.md)

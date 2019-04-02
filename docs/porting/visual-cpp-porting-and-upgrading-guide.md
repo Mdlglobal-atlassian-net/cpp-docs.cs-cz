@@ -2,12 +2,12 @@
 title: Průvodce přenosem a upgradováním Visual C++
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 1b3f7142b5240d8b4a94040d5cda7d033e50e39d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: d1ee00ab1e869e37a5bf19809df964f1e4085819
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752425"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767675"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Průvodce přenosem a upgradováním Visual C++
 
@@ -76,16 +76,16 @@ Případně třeba Teď máte nové požadavky nebo můžou předvídat potřebu
 |Název|Popis|
 |-----------|-----------------|
 |[Upgrade projektů z dřívějších verzí Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Popisuje, jak používat projekty vytvořené v dřívějších verzích Visual C++.|
-|[Co je nového pro kompilátor jazyka C++ v sadě Visual Studio 2017 RC](../what-s-new-for-visual-cpp-in-visual-studio.md)|Změny v prostředí IDE a nástroje z Visual Studia 2015 do sady Visual Studio 2017|
-|[Vylepšení shody C++ se sadou Visual Studio 2017](../cpp-conformance-improvements-2017.md)|Vylepšení ze sady Visual Studio 2015 do sady Visual Studio 2017|
+|[Co je nového pro kompilátor jazyka C++ v sadě Visual Studio 2017 RC](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Změny v prostředí IDE a nástroje z Visual Studia 2015 do sady Visual Studio 2017|
+|[Vylepšení shody C++ se sadou Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md)|Vylepšení ze sady Visual Studio 2015 do sady Visual Studio 2017|
 |[Historie změn Visual C++ 2003–2015](visual-cpp-change-history-2003-2015.md)|Seznam všech změn v Visual C++ knihovny a nástroje sestavení ze sady Visual Studio 2003 do 2015, které mohou vyžadovat změny v kódu.|
 |[Novinky Visual C++ 2003–2015](visual-cpp-what-s-new-2003-through-2015.md)|Všechny "Novinky" informace pro jazyk Visual C++ ze sady Visual Studio 2003 do Visual Studio 2015.|
 |[Přenos knihoven třetích stran](porting-third-party-libraries.md)|Jak používat **vcpkg** nástroj příkazového řádku k portu starší knihovny open-source verze kompilován s novější sady nástrojů Visual C++.|
-|[Portování a upgradování: Příklady a případové studie](porting-and-upgrading-examples-and-case-studies.md)|Pro tento oddíl přenáší a upgraduje několik ukázek a aplikací jsme probírali prostředí a výsledky. Můžete zjistit, že čtení těchto poskytuje vás o tom, co se tak zapojí v portování a upgradování procesu. Během tohoto procesu jsme popisují tipy a triky pro upgrade a zobrazit jak se konkrétní chyby byly opraveny.|
+|[Přenos a upgrade: Příklady a případové studie](porting-and-upgrading-examples-and-case-studies.md)|Pro tento oddíl přenáší a upgraduje několik ukázek a aplikací jsme probírali prostředí a výsledky. Můžete zjistit, že čtení těchto poskytuje vás o tom, co se tak zapojí v portování a upgradování procesu. Během tohoto procesu jsme popisují tipy a triky pro upgrade a zobrazit jak se konkrétní chyby byly opraveny.|
 |[Přenos aplikací do platformy Universal Windows](porting-to-the-universal-windows-platform-cpp.md)|Obsahuje informace o převodu kódu pro Windows 10|
 |[Úvod do prostředí Visual C++ pro uživatele systému UNIX](introduction-to-visual-cpp-for-unix-users.md)|Poskytuje informace pro uživatele systému UNIX, kteří začínají s Visual C++ a chcete se s ním být produktivní.|
 |[Přenos ze systému UNIX do Win32](porting-from-unix-to-win32.md)|Tento článek popisuje možnosti pro migraci systému UNIX aplikací pro Windows.|
 
 ## <a name="see-also"></a>Viz také:
 
-[Visual C++](../visual-cpp-in-visual-studio.md)
+[Visual C++](../overview/visual-cpp-in-visual-studio.md)

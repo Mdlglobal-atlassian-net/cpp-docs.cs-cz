@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Apply button in property sheet
 - property sheets, Apply button
 ms.assetid: 7e977015-59b8-406f-b545-aad0bfd8d55b
-ms.openlocfilehash: eb438351d273c872def8c98a67b7010cec0b4d76
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 30ee549a334a684deeb4a845f2fc49ee8bbe11db
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279442"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770834"
 ---
 # <a name="handling-the-apply-button"></a>Ošetření tlačítka Použít
 
@@ -30,7 +30,7 @@ Měli byste zavolat [CPropertyPage::SetModified](../mfc/reference/cpropertypage-
 
 K implementaci vliv na tlačítko použít, seznam vlastností zjistit její vlastník nebo jiné externí objekt v aplikaci, aby mohl použít aktuální nastavení na stránkách vlastností. Seznam vlastností ve stejnou dobu, měli zakázat tlačítko použít voláním `CPropertyPage::SetModified( FALSE )` pro všechny stránky, které použije jejich změny do externího objektu.
 
-Příklad tohoto procesu, najdete v ukázce MFC Obecné [PROPDLG](../visual-cpp-samples.md).
+Příklad tohoto procesu, najdete v ukázce MFC Obecné [PROPDLG](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Viz také:
 

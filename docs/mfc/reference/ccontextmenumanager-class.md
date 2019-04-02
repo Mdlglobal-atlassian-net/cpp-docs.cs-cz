@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], ShowPopupMenu
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
-ms.openlocfilehash: 594b78fd36dcb1ff92c63867688c38eac7520eba
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c8a51a33c69b09d0ecd61520b5f1c9ff18c290a0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304327"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779791"
 ---
 # <a name="ccontextmenumanager-class"></a>CContextMenuManager Class
 
@@ -49,14 +49,14 @@ class CContextMenuManager : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CContextMenuManager::CContextMenuManager](#ccontextmenumanager)|Vytvoří `CContextMenuManager` objektu.|
 |`CContextMenuManager::~CContextMenuManager`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CContextMenuManager::AddMenu](#addmenu)|Přidá novou nabídku.|
 |[CContextMenuManager::GetMenuById](#getmenubyid)|Vrátí popisovač do nabídky přidružené k ID zadaného prostředku.|
@@ -81,7 +81,7 @@ Můžete vytvořit místní nabídky za běhu pomocí volání `AddMenu`. Pokud 
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak přidat nabídku `CContextMenuManager` objektu a jak není zavřít aktivní rozbalovací nabídky při `CContextMenuManager` objekt zobrazuje nové místní nabídky. Tento fragment kódu je součástí [ukázková vlastní stránky](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak přidat nabídku `CContextMenuManager` objektu a jak není zavřít aktivní rozbalovací nabídky při `CContextMenuManager` objekt zobrazuje nové místní nabídky. Tento fragment kódu je součástí [ukázková vlastní stránky](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#4](../../mfc/reference/codesnippet/cpp/ccontextmenumanager-class_1.cpp)]
 

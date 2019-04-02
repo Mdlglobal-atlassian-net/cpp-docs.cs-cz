@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: f14b21c97e5a36d5107e7db526e4153446ae2a01
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.openlocfilehash: 506ab7a06653942ecff05043a7e7efabd535115f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278528"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781689"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager Class
 
@@ -77,7 +77,7 @@ class CDrawingManager : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDrawingManager::CDrawingManager](#cdrawingmanager)|Vytvoří `CDrawingManager` objektu.|
 |`CDrawingManager::~CDrawingManager`|Destruktor.|
@@ -389,7 +389,7 @@ Pokud nastavíte *bRightShadow* na hodnotu FALSE, bude vykreslen stínu pod a na
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití `DrawShadow` metodu `CDrawingManager` třídy. Tento fragment kódu je součástí [Prop list demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje způsob použití `DrawShadow` metodu `CDrawingManager` třídy. Tento fragment kódu je součástí [Prop list demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_PropSheetDemo#1](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_1.cpp)]
 
@@ -473,7 +473,7 @@ void FillGradient(
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití `FillGradient` metodu `CDrawingManager` třídy. Tento fragment kódu je součástí [MS Office 2007 demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje způsob použití `FillGradient` metodu `CDrawingManager` třídy. Tento fragment kódu je součástí [MS Office 2007 demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#12](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_2.cpp)]
 
@@ -509,7 +509,7 @@ Použití *nAngle* k určení směru barev přechodu. Při zadávání směr bar
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití `FillGradient2` metodu `CDrawingManager` třídy. Tento fragment kódu je součástí [nové ovládací prvky ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje způsob použití `FillGradient2` metodu `CDrawingManager` třídy. Tento fragment kódu je součástí [nové ovládací prvky ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#37](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_3.cpp)]
 

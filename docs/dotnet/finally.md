@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - finally keyword [C++]
 ms.assetid: b55f3c8e-1af0-43e8-bcfb-99c3685d2578
-ms.openlocfilehash: cb2bbdb36a102c7ef8974a9ac210473f2306f5d6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: f7db4320cf901412e3a9e3de682d0cfbcc9f23bc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746770"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771510"
 ---
 # <a name="finally"></a>finally
 
@@ -19,7 +19,7 @@ Kromě `try` a `catch` klauzule, podporuje pro zpracování výjimek CLR `finall
 
 Účelem `finally` bloku je vyčistit všechny prostředky zbývající po došlo k výjimce. Všimněte si, `finally` bloku je vždy spuštěn, i v případě, že byla vyvolána žádná výjimka. `catch` Blok se spustí pouze, pokud je spravované výjimky vyvolána v rámci přidruženého `try` bloku.
 
-`finally` je kontextové klíčové slovo; Zobrazit [Context-Sensitive Keywords](../windows/context-sensitive-keywords-cpp-component-extensions.md) Další informace.
+`finally` je kontextové klíčové slovo; Zobrazit [Context-Sensitive Keywords](../extensions/context-sensitive-keywords-cpp-component-extensions.md) Další informace.
 
 ## <a name="example"></a>Příklad
 
@@ -58,4 +58,4 @@ in finally
 
 ## <a name="see-also"></a>Viz také:
 
-[Zpracování výjimek](../windows/exception-handling-cpp-component-extensions.md)
+[Zpracování výjimek](../extensions/exception-handling-cpp-component-extensions.md)

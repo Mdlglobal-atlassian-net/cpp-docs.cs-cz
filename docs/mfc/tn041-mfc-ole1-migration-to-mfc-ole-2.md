@@ -13,14 +13,14 @@ helpviewer_keywords:
 - upgrading Visual C++ applications [MFC], OLE1 to OLE2
 - TN041
 ms.assetid: 67f55552-4b04-4ddf-af0b-4d9eaf5da957
-ms.openlocfilehash: 2bdf0c353151c8e932b3e8641a72b2116c45f3f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b398a1adbf2f47343eed076f32ade5bb2564cd52
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568517"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767974"
 ---
-# <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041: Migrace z prostředí MFC/OLE1 do MFC/OLE2
+# <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041: Migrace MFC/OLE1 do MFC/OLE2
 
 > [!NOTE]
 > Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
@@ -29,7 +29,7 @@ ms.locfileid: "50568517"
 
 Jedním z cílů návrhu pro třídy OLE 2 v MFC 2.5 (a vyšší) bylo zachovat velkou část stejnou architekturu zavedený ve verzi MFC 2.0 OLE 1.0 podporu. V důsledku toho řadu stejné třídy OLE v MFC 2.0 stále existují v této verzi knihovny MFC (`COleDocument`, `COleServerDoc`, `COleClientItem`, `COleServerItem`). Kromě toho řadu rozhraní API v těchto tříd jsou stejné. OLE 2 je ale výrazně liší od OLE 1.0, takže můžete očekávat, že některé podrobnosti změnit. Pokud jste se seznámili s podporou OLE1 MFC 2.0, budete mít pocit, během chvilky se 2.0 podpory knihovny MFC.
 
-Pokud trvá existující aplikaci MFC/OLE1 a přidání do funkce OLE 2, byste si měli přečíst tato poznámka nejprve. Tato poznámka popisuje některé obecné problémy mohou nastat při přenesení vaší funkce OLE1 do MFC/OLE 2 a pak tento článek popisuje problémů zjištěných při přenesení dvě aplikace, které jsou zahrnuté v MFC 2.0: ukázky MFC OLE [OCLIENT](../visual-cpp-samples.md) a [HIERSVR](../visual-cpp-samples.md).
+Pokud trvá existující aplikaci MFC/OLE1 a přidání do funkce OLE 2, byste si měli přečíst tato poznámka nejprve. Tato poznámka popisuje některé obecné problémy mohou nastat při přenesení vaší funkce OLE1 do MFC/OLE 2 a pak tento článek popisuje problémů zjištěných při přenesení dvě aplikace, které jsou zahrnuté v MFC 2.0: ukázky MFC OLE [OCLIENT](../overview/visual-cpp-samples.md) a [HIERSVR](../overview/visual-cpp-samples.md).
 
 ## <a name="mfc-documentview-architecture-is-important"></a>Je důležité architektury dokument/zobrazení MFC
 
@@ -45,19 +45,19 @@ Třídy MFC "konzervované implementace" jako `CToolBar`, `CStatusBar`, a `CScro
 
 Existuje mnoho z ukázek MFC, které zahrnují funkce OLE. Každá z těchto aplikací implementuje OLE z různých úhel:
 
-- [HIERSVR](../visual-cpp-samples.md) určena především pro použití jako server aplikace. Je zahrnutý v MFC 2.0 jako aplikace MFC/OLE1 a bylo přenést do MFC/OLE 2 a pak rozšířit tak, že implementuje mnoho funkcí dostupných ve OLE 2 OLE.
+- [HIERSVR](../overview/visual-cpp-samples.md) určena především pro použití jako server aplikace. Je zahrnutý v MFC 2.0 jako aplikace MFC/OLE1 a bylo přenést do MFC/OLE 2 a pak rozšířit tak, že implementuje mnoho funkcí dostupných ve OLE 2 OLE.
 
-- [OCLIENT](../visual-cpp-samples.md) Toto je samostatná aplikace typu kontejner pro, určená k předvedení řadu funkcí, OLE z hlediska kontejneru. To byla příliš přenést z knihovny MFC 2.0 a pak rozšířit pro zajištění podpory řadu pokročilejší funkce OLE, jako je například formáty vlastní schránky a odkazy na vložené položky.
+- [OCLIENT](../overview/visual-cpp-samples.md) Toto je samostatná aplikace typu kontejner pro, určená k předvedení řadu funkcí, OLE z hlediska kontejneru. To byla příliš přenést z knihovny MFC 2.0 a pak rozšířit pro zajištění podpory řadu pokročilejší funkce OLE, jako je například formáty vlastní schránky a odkazy na vložené položky.
 
-- [DRAWCLI](../visual-cpp-samples.md) tato aplikace implementuje podporu kontejneru OLE mnohem jako OCLIENT, s tím rozdílem, že provádí v rámci existující program výkresu objektově orientovaný. To se dozvíte, jak implementovat podporu kontejneru OLE a integrovat do své existující aplikace.
+- [DRAWCLI](../overview/visual-cpp-samples.md) tato aplikace implementuje podporu kontejneru OLE mnohem jako OCLIENT, s tím rozdílem, že provádí v rámci existující program výkresu objektově orientovaný. To se dozvíte, jak implementovat podporu kontejneru OLE a integrovat do své existující aplikace.
 
-- [SUPERPAD](../visual-cpp-samples.md) této aplikace, stejně jako se bez problémů samostatné aplikace, je také OLE server. Podpora serveru, který implementuje je minimalist ještě nejsme u konce. Zajímavé především je způsob používání mechanismu služeb OLE schránky pro kopírování dat do schránky, ale používá funkce, které jsou integrované do ovládacího prvku Windows "edit" k implementaci funkcionality schránky vložit. Ukazuje to zajímavé kombinaci tradiční použití rozhraní API Windows, stejně jako integraci s nových OLE rozhraní API.
+- [SUPERPAD](../overview/visual-cpp-samples.md) této aplikace, stejně jako se bez problémů samostatné aplikace, je také OLE server. Podpora serveru, který implementuje je minimalist ještě nejsme u konce. Zajímavé především je způsob používání mechanismu služeb OLE schránky pro kopírování dat do schránky, ale používá funkce, které jsou integrované do ovládacího prvku Windows "edit" k implementaci funkcionality schránky vložit. Ukazuje to zajímavé kombinaci tradiční použití rozhraní API Windows, stejně jako integraci s nových OLE rozhraní API.
 
 Další informace o ukázkových aplikací najdete v článku "Knihovnu MFC ukázky Nápověda".
 
 ## <a name="case-study-oclient-from-mfc-20"></a>Případová studie: OCLIENT z knihovny MFC 2.0
 
-Jak je popsáno výše, [OCLIENT](../visual-cpp-samples.md) byl součástí knihovny MFC 2.0 a implementovaná pomocí knihovny MFC/OLE1 OLE. Kroky, podle kterých byl zpočátku převeden této aplikace použít třídy MFC/OLE 2 jsou popsané níže. Po dokončení počáteční port abychom vám lépe předvedli MFC/OLE – třídy byly přidány celou řadu funkcí. Tato funkce není součástí tohoto odkazovat na samotný vzorku pro další informace o těchto pokročilých funkcí.
+Jak je popsáno výše, [OCLIENT](../overview/visual-cpp-samples.md) byl součástí knihovny MFC 2.0 a implementovaná pomocí knihovny MFC/OLE1 OLE. Kroky, podle kterých byl zpočátku převeden této aplikace použít třídy MFC/OLE 2 jsou popsané níže. Po dokončení počáteční port abychom vám lépe předvedli MFC/OLE – třídy byly přidány celou řadu funkcí. Tato funkce není součástí tohoto odkazovat na samotný vzorku pro další informace o těchto pokročilých funkcí.
 
 > [!NOTE]
 > Chyby kompilátoru a podrobný postup vytvoření s Visual C++ 2.0. Konkrétní chybové zprávy a umístění, může se změnila s Visual C++ 4.0, ale zůstává v platnosti koncepční informace.
@@ -291,7 +291,7 @@ V tomto okamžiku OCLIENT je funkční aplikace kontejneru OLE. Je možné vlož
 
 Jedním z nejzajímavějších funkce OLE je aktivace na místě (nebo "Vizuální úpravy"). Tato funkce umožňuje se serverová aplikace mohla převzít kontrolu nad částí uživatelského rozhraní na kontejner, poskytuje pohodlnější editační rozhraní pro uživatele. K implementaci místní aktivaci za účelem OCLIENT, je potřeba přidat, a také další kód některé speciální prostředky. Tyto prostředky a kód se obvykle poskytované AppWizard – ve skutečnosti byla velkou část kódu tady si přímo z aplikace čerstvé AppWizard podpora "Kontejnerů".
 
-Za prvé je potřeba přidat nabídce prostředků chcete použít, když je položka, která je na místě aktivní. Tento prostředek doplňující nabídky v jazyce Visual C++ můžete vytvořit zkopírováním IDR_OCLITYPE prostředků a odebírá všechny kromě souborů a okno automaticky otevíraná okna. Mezi souboru a okno automaticky otevíraná okna k označení oddělení skupiny jsou vloženy dvě oddělovacích pruhů (by měl vypadat: soubor &#124; &#124; okno). Další informace o významu těchto oddělovače a jak slučování nabídek serveru a kontejneru najdete v části [nabídky a prostředky: sloučení nabídky](../mfc/menus-and-resources-menu-merging.md).
+Za prvé je potřeba přidat nabídce prostředků chcete použít, když je položka, která je na místě aktivní. Tento prostředek doplňující nabídky v jazyce Visual C++ můžete vytvořit zkopírováním IDR_OCLITYPE prostředků a odebírá všechny kromě souborů a okno automaticky otevíraná okna. Mezi souboru a okno automaticky otevíraná okna k označení oddělení skupiny jsou vloženy dvě oddělovacích pruhů (by měl vypadat: Soubor &#124; &#124; okno). Další informace o významu těchto oddělovače a jak slučování nabídek serveru a kontejneru najdete v části [nabídky a prostředky: Slučování nabídek](../mfc/menus-and-resources-menu-merging.md).
 
 Jakmile máte těchto nabídek, které vytvořili, musíte nechat informovat o rámci. To se provádí voláním `CDocTemplate::SetContainerInfo` pro šablonu dokumentu, předtím, než přidáte na seznam šablon dokumentů do funkce InitInstance. vaše. Nový kód pro registraci šablonu dokumentu vypadá takto:
 
@@ -422,7 +422,7 @@ void CMainView::OnSize(UINT nType, int cx, int cy)
 
 ## <a name="case-study-hiersvr-from-mfc-20"></a>Případová studie: HIERSVR z knihovny MFC 2.0
 
-[HIERSVR](../visual-cpp-samples.md) byl také součástí knihovny MFC 2.0 a implementovaná pomocí knihovny MFC/OLE1 OLE. Tato poznámka stručně popisuje kroky, podle kterých byl zpočátku převeden této aplikace použít třídy MFC/OLE 2. Po dokončení počáteční port abychom vám lépe předvedli třídy MFC/OLE 2 byly přidány celou řadu funkcí. Tato funkce není součástí tohoto odkazovat na samotný vzorku pro další informace o těchto pokročilých funkcí.
+[HIERSVR](../overview/visual-cpp-samples.md) byl také součástí knihovny MFC 2.0 a implementovaná pomocí knihovny MFC/OLE1 OLE. Tato poznámka stručně popisuje kroky, podle kterých byl zpočátku převeden této aplikace použít třídy MFC/OLE 2. Po dokončení počáteční port abychom vám lépe předvedli třídy MFC/OLE 2 byly přidány celou řadu funkcí. Tato funkce není součástí tohoto odkazovat na samotný vzorku pro další informace o těchto pokročilých funkcí.
 
 > [!NOTE]
 > Chyby kompilátoru a podrobný postup vytvoření s Visual C++ 2.0. Konkrétní chybové zprávy a umístění, může se změnila s Visual C++ 4.0, ale zůstává v platnosti koncepční informace.
@@ -600,7 +600,7 @@ CSize CServerItem::CalcNodeSize()
 }
 ```
 
-Také přepisuje CServerItem `COleServerItem::OnGetTextData`. Tato funkce je zastaralá v prostředí MFC/OLE a je nahrazen jiným způsobem. Verze MFC 3.0 ukázky MFC OLE [HIERSVR](../visual-cpp-samples.md) implementuje tuto funkci tak, že přepíšete `COleServerItem::OnRenderFileData`. Tato funkce není důležité pro tento základní port, abyste mohli odstranit OnGetTextData přepsání.
+Také přepisuje CServerItem `COleServerItem::OnGetTextData`. Tato funkce je zastaralá v prostředí MFC/OLE a je nahrazen jiným způsobem. Verze MFC 3.0 ukázky MFC OLE [HIERSVR](../overview/visual-cpp-samples.md) implementuje tuto funkci tak, že přepíšete `COleServerItem::OnRenderFileData`. Tato funkce není důležité pro tento základní port, abyste mohli odstranit OnGetTextData přepsání.
 
 Existuje mnoho další chyby v svritem.cpp, které dosud nebylo řešeno. Nejsou "real" chyby – pouze chyby způsobené předchozí chyby.
 
@@ -644,7 +644,7 @@ Přidat do této aplikace serveru "Úpravy s náhledem" (nebo aktivace na míst�
 
 - Budete muset o tyto speciální prostředky a třídy informování rozhraní framework.
 
-Nabídce prostředků je snadné vytvořit. Spusťte Visual C++, kopírování prostředků nabídky IDR_HIERSVRTYPE do nabídky prostředek s názvem IDR_HIERSVRTYPE_SRVR_IP. V nabídce upravte tak, aby zůstaly jenom upravit a nápovědu nabídky automaticky otevíraná okna. Přidejte dva oddělovače do nabídky mezi nabídky Úpravy a nápovědy (by měl vypadat: Upravit &#124; &#124; Nápověda). Další informace o významu těchto oddělovače a jak slučování nabídek serveru a kontejneru najdete v tématu [nabídky a prostředky: sloučení nabídky](../mfc/menus-and-resources-menu-merging.md).
+Nabídce prostředků je snadné vytvořit. Spusťte Visual C++, kopírování prostředků nabídky IDR_HIERSVRTYPE do nabídky prostředek s názvem IDR_HIERSVRTYPE_SRVR_IP. V nabídce upravte tak, aby zůstaly jenom upravit a nápovědu nabídky automaticky otevíraná okna. Přidejte dva oddělovače do nabídky mezi nabídky Úpravy a nápovědy (by měl vypadat: Upravit &#124; &#124; Nápověda). Další informace o významu těchto oddělovače a jak slučování nabídek serveru a kontejneru najdete v tématu [nabídky a prostředky: Slučování nabídek](../mfc/menus-and-resources-menu-merging.md).
 
 Rastrový obrázek pro panel nástrojů dílčí můžete snadno vytvořit zkopírováním z čerstvého AppWizard vygeneruje aplikace s možností "Server" zaškrtnuté. Tento rastrový obrázek jde pak importovat do Visual C++. Je potřeba poskytnout ID IDR_HIERSVRTYPE_SRVR_IP rastrového obrázku.
 

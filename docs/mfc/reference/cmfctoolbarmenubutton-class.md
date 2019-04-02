@@ -92,12 +92,12 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], DrawDocumentIcon
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
-ms.openlocfilehash: 775d977fa1c995c42cc85660b1c9d13aea40a01e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7733969a0218dacf481ac82c764911c61ecabbbf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281518"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769144"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton Class
 
@@ -120,7 +120,7 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCToolBarMenuButton::CompareWith](#comparewith)|Porovná tuto instanci za poskytnutý `CMFCToolBarButton` objektu. (Přepíše [CMFCToolBarButton::CompareWith](../../mfc/reference/cmfctoolbarbutton-class.md#comparewith).)|
 |[CMFCToolBarMenuButton::CopyFrom](#copyfrom)|Zkopíruje aktuální tlačítko Vlastnosti jiné tlačítko panelu nástrojů. (Přepíše [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|
@@ -165,13 +165,13 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCToolBarMenuButton::DrawDocumentIcon](#drawdocumenticon)|Nakreslí ikonu na tlačítko nabídky.|
 
 ### <a name="data-members"></a>Datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw](#m_balwayscallownerdraw)|Při hodnotě TRUE se vždy volá framework [CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) při vykreslované tlačítko.|
 
@@ -183,7 +183,7 @@ Vlastní třída odvozená z `CMFCToolbarMenuButton` třída musí použít [DEC
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak nakonfigurovat `CMFCToolBarMenuButton` objektu. Kód ukazuje, jak určit, že v rozevírací nabídce je v režimu palety a určete ID pro přemístitelný panel, který je vytvořen, když uživatel přetáhne tlačítko nabídky z řádku nabídek. Tento fragment kódu je součástí [slovo panel vzorku](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak nakonfigurovat `CMFCToolBarMenuButton` objektu. Kód ukazuje, jak určit, že v rozevírací nabídce je v režimu palety a určete ID pro přemístitelný panel, který je vytvořen, když uživatel přetáhne tlačítko nabídky z řádku nabídek. Tento fragment kódu je součástí [slovo panel vzorku](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#10](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_1.cpp)]
 
@@ -241,7 +241,7 @@ Pokud *uiID* je platné ID příkazu, na tlačítko provádí příkaz, když na
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vytvořit objekt `CMFCToolBarMenuButton` třídy. Tento fragment kódu je součástí [slovo panel vzorku](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak vytvořit objekt `CMFCToolBarMenuButton` třídy. Tento fragment kódu je součástí [slovo panel vzorku](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#9](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_2.cpp)]
 

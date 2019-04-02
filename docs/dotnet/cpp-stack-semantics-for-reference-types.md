@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: 6ba17a56c5274295c44cdc5aa651380d1e6c83d3
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 69771de120dc413496a3b7b0613e51a13d208e22
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740922"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772602"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>C++ – sémantika zásobníku pro odkazové typy
 
-Před Visual C++ 2005, instanci typu odkazu může vytvořit pouze pomocí `new` haldě operátor, který vytvořil objekt na uvolňování paměti. Můžete však nyní vytvořit instanci typu odkazu pomocí stejné syntaxe, které můžete použít k vytvoření instance nativního typu v zásobníku. Proto není potřeba použít [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) pro vytvoření objektu typu odkazu. A když objekt dostane mimo rozsah, kompilátor vyvolá destruktor objektu.
+Před Visual C++ 2005, instanci typu odkazu může vytvořit pouze pomocí `new` haldě operátor, který vytvořil objekt na uvolňování paměti. Můžete však nyní vytvořit instanci typu odkazu pomocí stejné syntaxe, které můžete použít k vytvoření instance nativního typu v zásobníku. Proto není potřeba použít [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) pro vytvoření objektu typu odkazu. A když objekt dostane mimo rozsah, kompilátor vyvolá destruktor objektu.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -41,9 +41,9 @@ Kompilátor poskytuje také `%` unární operátor převodu instance typu odkazu
 
 Následující typy odkazu nejsou k dispozici pro použití s – sémantika zásobníku:
 
-- [delegate (rozšíření komponent C++)](../windows/delegate-cpp-component-extensions.md)
+- [delegate (rozšíření komponent C++)](../extensions/delegate-cpp-component-extensions.md)
 
-- [Pole](../windows/arrays-cpp-component-extensions.md)
+- [Pole](../extensions/arrays-cpp-component-extensions.md)
 
 - <xref:System.String>
 
@@ -113,4 +113,4 @@ int main() {
 
 ## <a name="see-also"></a>Viz také:
 
-[Třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md)
+[Třídy a struktury](../extensions/classes-and-structs-cpp-component-extensions.md)

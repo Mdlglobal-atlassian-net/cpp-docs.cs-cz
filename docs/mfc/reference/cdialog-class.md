@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: d3c3bca7932b9e9c7e7723b286c83ca3694a9968
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9918b1ae38caacf2b2355ace6337e8e5e6260605
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305091"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771349"
 ---
 # <a name="cdialog-class"></a>CDialog – třída
 
@@ -67,7 +67,7 @@ class CDialog : public CWnd
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDialog::Create](#create)|Inicializuje `CDialog` objektu. Vytvoří nemodální dialogové okno a připojí ho k `CDialog` objektu.|
 |[CDialog::CreateIndirect](#createindirect)|Vytvoří nemodální dialogové okno z šablony dialog-box v paměti (ne založené na prostředcích).|
@@ -558,7 +558,7 @@ Určuje ID kontextové nápovědy.
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázka DLGCBR32 knihovny MFC](../../visual-cpp-samples.md)<br/>
-[Ukázky knihovny MFC DLGTEMPL](../../visual-cpp-samples.md)<br/>
+[Ukázka DLGCBR32 knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC DLGTEMPL](../../overview/visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

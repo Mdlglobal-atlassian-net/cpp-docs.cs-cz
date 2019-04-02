@@ -4,12 +4,12 @@ ms.date: 09/20/2018
 helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
-ms.openlocfilehash: 9314eec7c02ed0286a7ae3fcf14bae6572dd710c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ef0e4856a844503f8d13b7b6ed37318b76b6af69
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288785"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772147"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Návod: Použití nových ovládacích prvků prostředí MFC
 
@@ -166,7 +166,7 @@ Tento názorný průvodce předpokládá, že jste nastavili sady Visual Studio,
 
 - Průvodce vytvoří panel aplikace Outlook s oběma **složky** podokně a **kalendáře** podokně. Pravděpodobně nemá smysl mít **kalendáře** v podokně **Explorer** okno, proto teď odebrat toto podokno.
 
-- `CMFCShellListCtrl` Podporuje zobrazení souborů v různých režimech, jako například **velké ikony**, **malé ikony**, **seznamu**, a **podrobnosti**. Aktualizace aplikace pro implementaci této funkce. Tip: viz [Visual C++ – ukázky](../visual-cpp-samples.md).
+- `CMFCShellListCtrl` Podporuje zobrazení souborů v různých režimech, jako například **velké ikony**, **malé ikony**, **seznamu**, a **podrobnosti**. Aktualizace aplikace pro implementaci této funkce. Tip: viz [Visual C++ – ukázky](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Viz také:
 

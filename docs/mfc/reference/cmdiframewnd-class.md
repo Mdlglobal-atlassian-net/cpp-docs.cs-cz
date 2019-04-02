@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: d3fc71c3e294b26aea405b8800199cf88120fa08
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9f5289491a7c14749865cfd163417440bc542aba
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282445"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776528"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd – třída
 
@@ -55,13 +55,13 @@ class CMDIFrameWnd : public CFrameWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMDIFrameWnd::CMDIFrameWnd](#cmdiframewnd)|Vytvoří `CMDIFrameWnd`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMDIFrameWnd::CreateClient](#createclient)|Vytvoří okno Windows MDICLIENT pro tento `CMDIFrameWnd`. Volá `OnCreate` členskou funkci `CWnd`.|
 |[CMDIFrameWnd::CreateNewChild](#createnewchild)|Vytvoří nové podřízené okno.|
@@ -459,9 +459,9 @@ Podívejte se na příklad pro [CMDIFrameWnd::MDICascade](#mdicascade).
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC MDI](../../visual-cpp-samples.md)<br/>
-[Ukázky knihovny MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
-[Ukázky knihovny MFC SNAPVW](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC MDI](../../overview/visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [CFrameWnd – třída](../../mfc/reference/cframewnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>

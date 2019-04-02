@@ -22,12 +22,12 @@ helpviewer_keywords:
 - handler functions [MFC], declaring
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
-ms.openlocfilehash: b587064625178c520338e4253e812e8f84275257
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d2bc961486d9bc686e1ca0d5feb0fe01d65f9512
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266364"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773993"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Obslužné rutiny pro oblasti map zpráv
 
@@ -95,7 +95,7 @@ Další informace o požadavcích na parametr funkce obslužné rutiny aktualiza
 
 ##  <a name="_core_example_for_a_range_of_command_ids"></a> Příklad pro příkaz rozsah ID
 
-Při může být použití rozsahů, jedním z příkladů je při zpracování příkazů, jako jsou příkazu zvětšení v ukázce MFC [HIERSVR](../visual-cpp-samples.md). Tento příkaz zvětší nebo zmenší zobrazení měřítka až 300 % normální velikosti 25 %. Třída zobrazení HIERSVR společnosti používá rozsah zpracovává příkazy přiblížení s položkou mapování zpráv podobné to:
+Při může být použití rozsahů, jedním z příkladů je při zpracování příkazů, jako jsou příkazu zvětšení v ukázce MFC [HIERSVR](../overview/visual-cpp-samples.md). Tento příkaz zvětší nebo zmenší zobrazení měřítka až 300 % normální velikosti 25 %. Třída zobrazení HIERSVR společnosti používá rozsah zpracovává příkazy přiblížení s položkou mapování zpráv podobné to:
 
 [!code-cpp[NVC_MFCMessageHandling#8](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_3.cpp)]
 

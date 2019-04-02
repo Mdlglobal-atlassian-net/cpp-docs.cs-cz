@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditDoc [MFC], IsModified
 - CHtmlEditDoc [MFC], OpenURL
 ms.assetid: b2cca61f-e5d6-4099-b0d1-46bf85f0bd64
-ms.openlocfilehash: f468de46cf6d8a8bfcd60521df8b1076a98f0735
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c2a00b2501647f6101fed8ed1d4cd23dad7ab209
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285331"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767057"
 ---
 # <a name="chtmleditdoc-class"></a>CHtmlEditDoc Class
 
@@ -41,7 +41,7 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CHtmlEditDoc::GetView](#getview)|Načte `CHtmlEditView` objekt připojené k tomuto dokumentu.|
 |[CHtmlEditDoc::IsModified](#ismodified)|Vrátí, zda ovládací prvek WebBrowser přidružené zobrazení obsahuje dokument, který byl změněn uživatelem.|
@@ -108,5 +108,5 @@ Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázka HTMLEdit](../../visual-cpp-samples.md)<br/>
+[Ukázka HTMLEdit](../../overview/visual-cpp-samples.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

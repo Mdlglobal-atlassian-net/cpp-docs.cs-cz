@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCColorDialog [MFC], SetPageOne
 - CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
-ms.openlocfilehash: d94c223ed1e0b236ae8565d13a9f2c9652b6eb84
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1b9f57e46d5ac74dd52f7ddb7ebd90f8888891e3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270296"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772748"
 ---
 # <a name="cmfccolordialog-class"></a>Cmfccolordialog – třída
 
@@ -43,14 +43,14 @@ class CMFCColorDialog : public CDialogEx
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCColorDialog::CMFCColorDialog](#cmfccolordialog)|Vytvoří `CMFCColorDialog` objektu.|
 |`CMFCColorDialog::~CMFCColorDialog`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCColorDialog::GetColor](#getcolor)|Vrátí aktuální vybraná barva.|
 |[CMFCColorDialog::GetPalette](#getpalette)|Vrátí hodnotu barvy palety.|
@@ -100,7 +100,7 @@ Můžete vytvořit `CMFCColorDialog` objektu do zásobníku a následně zavolat
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak nakonfigurovat pomocí různých metod v dialogovém okně barev `CMFCColorDialog` třídy. Příklad ukazuje, jak nastavit aktuální a nové barev dialogového okna a jak nastavit komponenty červené, zelené a modré vybraná barva na stránkách dvou vlastností barev dialogového okna. V tomto příkladu je součástí [nové ovládací prvky ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak nakonfigurovat pomocí různých metod v dialogovém okně barev `CMFCColorDialog` třídy. Příklad ukazuje, jak nastavit aktuální a nové barev dialogového okna a jak nastavit komponenty červené, zelené a modré vybraná barva na stránkách dvou vlastností barev dialogového okna. V tomto příkladu je součástí [nové ovládací prvky ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#3](../../mfc/reference/codesnippet/cpp/cmfccolordialog-class_1.cpp)]
 

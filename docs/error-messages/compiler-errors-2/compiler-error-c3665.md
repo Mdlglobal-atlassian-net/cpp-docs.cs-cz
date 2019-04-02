@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3665
 ms.assetid: 893bb47e-8de1-43aa-af7d-fa47ad149ee9
-ms.openlocfilehash: 30aaf67ac9f912059bb5726681e61feabc1e557d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40de7a7b1ede5e6dbbc20d2128b782c0ad6f798b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644116"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781026"
 ---
 # <a name="compiler-error-c3665"></a>Chyba kompilátoru C3665
 
@@ -19,7 +19,7 @@ ms.locfileid: "50644116"
 
 Klíčové slovo se použil, který není povolený u destruktoru nebo finalizační metodu.
 
-Například nový slot nelze požadovat u destruktoru nebo finalizační metodu.  Další informace najdete v tématu [explicitní přepsání](../../windows/explicit-overrides-cpp-component-extensions.md) a [destruktory a finalizační metody](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Například nový slot nelze požadovat u destruktoru nebo finalizační metodu.  Další informace najdete v tématu [explicitní přepsání](../../extensions/explicit-overrides-cpp-component-extensions.md) a [destruktory a finalizační metody](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 Následující ukázka generuje C3665:
 

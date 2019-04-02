@@ -20,12 +20,12 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: b26a08bbe9ef9b9151910871201abe05a44d2f6c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7818aa708a762f2a284be029a6c3f3facd971d9a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265559"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767727"
 ---
 # <a name="automation"></a>Automatizace
 
@@ -55,17 +55,17 @@ Jeden potíže při vytváření metod automatizace pomáhá poskytovat jednotn�
 
 ## <a name="automation-samples"></a>Ukázky služby Automation
 
-- [AUTOCLIK](../visual-cpp-samples.md) fungování této ukázky se dozvíte postupy automatizace a jako základ pro výuku vzdálené automatizace.
+- [AUTOCLIK](../overview/visual-cpp-samples.md) fungování této ukázky se dozvíte postupy automatizace a jako základ pro výuku vzdálené automatizace.
 
-- [Acdual –](../visual-cpp-samples.md) přidává dvojí rozhraní do aplikaci automatizačního serveru.
+- [Acdual –](../overview/visual-cpp-samples.md) přidává dvojí rozhraní do aplikaci automatizačního serveru.
 
-- [CALCDRIV](../visual-cpp-samples.md) řízení MFCCALC aplikace klienta automatizace.
+- [CALCDRIV](../overview/visual-cpp-samples.md) řízení MFCCALC aplikace klienta automatizace.
 
-- [INPROC](../visual-cpp-samples.md) ukazuje aplikaci automatizačního v procesu serveru.
+- [INPROC](../overview/visual-cpp-samples.md) ukazuje aplikaci automatizačního v procesu serveru.
 
-- [IPDRIVE](../visual-cpp-samples.md) aplikace klienta automatizace řízení INPROC.
+- [IPDRIVE](../overview/visual-cpp-samples.md) aplikace klienta automatizace řízení INPROC.
 
-- [MFCCALC](../visual-cpp-samples.md) ukazuje aplikace klienta automatizace.
+- [MFCCALC](../overview/visual-cpp-samples.md) ukazuje aplikace klienta automatizace.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
 

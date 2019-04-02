@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2978
 ms.assetid: 5e7bee82-e266-4ccd-ad2e-ee89606ec5bf
-ms.openlocfilehash: 25798e793bec7d09ea1f307ec1e2d9a63b9dbe27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf682bf14246754cca74a43dffc39761ff6125c1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428103"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780298"
 ---
 # <a name="compiler-error-c2978"></a>Chyba kompilátoru C2978
 
 Chyba syntaxe: byl očekáván "keyword1" nebo 'keyword2'; našel se typ 'keyword3'; v obecných typech nejsou podporované netypové parametry
 
-Obecné třídy byl deklarován nesprávně. Zobrazit [obecných typů](../../windows/generics-cpp-component-extensions.md)Další informace.
+Obecné třídy byl deklarován nesprávně. Zobrazit [obecných typů](../../extensions/generics-cpp-component-extensions.md)Další informace.
 
 ## <a name="example"></a>Příklad
 

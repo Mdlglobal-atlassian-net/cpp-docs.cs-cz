@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: ec3048e7bd033e5c296b558dd2083c648bc377e7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2687dfc9941a512523a7cb771cb872c78b97ce2d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295354"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773980"
 ---
 # <a name="coleclientitem-class"></a>Coleclientitem – třída
 
@@ -185,13 +185,13 @@ class COleClientItem : public CDocItem
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleClientItem::COleClientItem](#coleclientitem)|Vytvoří `COleClientItem` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleClientItem::Activate](#activate)|Otevře položku OLE pro operace a pak spustí zadaný příkaz.|
 |[COleClientItem::ActivateAs](#activateas)|Aktivuje položku jako jiného typu.|
@@ -2187,8 +2187,8 @@ Další informace najdete v tématu [IOleLink::Update](/windows/desktop/api/olei
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC MFCBIND](../../visual-cpp-samples.md)<br/>
-[Ukázky knihovny MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC MFCBIND](../../overview/visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [CDocItem – třída](../../mfc/reference/cdocitem-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [COleServerItem – třída](../../mfc/reference/coleserveritem-class.md)

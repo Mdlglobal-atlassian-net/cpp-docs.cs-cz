@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-ms.openlocfilehash: 2c9238eab1627b0494c4073c88032c488fdfb828
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: db74ef226242ec8f4f70f2769fbc8ba102a808c8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752382"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777178"
 ---
 # <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Postupy: Deklarace specifikátorů Override v nativních kompilacích (C + +/ CLI)
 
-[zapečetěné](../windows/sealed-cpp-component-extensions.md), [abstraktní](../windows/abstract-cpp-component-extensions.md), a [přepsat](../windows/override-cpp-component-extensions.md) jsou k dispozici v kompilaci, které nepoužívají **/ZW** nebo [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
+[zapečetěné](../extensions/sealed-cpp-component-extensions.md), [abstraktní](../extensions/abstract-cpp-component-extensions.md), a [přepsat](../extensions/override-cpp-component-extensions.md) jsou k dispozici v kompilaci, které nepoužívají **/ZW** nebo [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
 
 > [!NOTE]
 >  C ++ 11 jazyka podle standardu ISO má [přepsat](../cpp/override-specifier.md) identifikátor a [konečné](../cpp/final-specifier.md) identifikátor a obě jsou podporovány v aplikaci Visual Studio pomocí `final` místo `sealed` v kódu, který slouží k zkompilovat jako nativní.
@@ -88,4 +88,4 @@ int main() {
 
 ## <a name="see-also"></a>Viz také:
 
-[Override – specifikátory](../windows/override-specifiers-cpp-component-extensions.md)
+[Override – specifikátory](../extensions/override-specifiers-cpp-component-extensions.md)

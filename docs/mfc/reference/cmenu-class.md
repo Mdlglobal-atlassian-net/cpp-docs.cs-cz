@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: bdc5f2ebf20949f63b3892ee8e8c6eedf05e2838
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 464b59f7e598ea1901cf88c47c5887cbbf308607
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293859"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770847"
 ---
 # <a name="cmenu-class"></a>Cmenu – třída
 
@@ -111,7 +111,7 @@ class CMenu : public CObject
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMenu::AppendMenu](#appendmenu)|Přidá novou položku na konec této nabídky.|
 |[CMenu::Attach](#attach)|Připojí popisovač nabídky Windows `CMenu` objektu.|
@@ -153,7 +153,7 @@ class CMenu : public CObject
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMenu::operator HMENU](#operator_hmenu)|Načte popisovač objekt nabídky.|
 |[CMenu::operator! =](#operator_neq)|Určuje, pokud dva objekty nabídky nejsou stejné.|
@@ -561,7 +561,7 @@ Zobrazit [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) popis 
 
 ### <a name="example"></a>Příklad
 
-Následující kód je z knihovny MFC [CTRLTEST](../../visual-cpp-samples.md) vzorku:
+Následující kód je z knihovny MFC [CTRLTEST](../../overview/visual-cpp-samples.md) vzorku:
 
 [!code-cpp[NVC_MFCWindowing#24](../../mfc/reference/codesnippet/cpp/cmenu-class_4.cpp)]
 
@@ -1094,7 +1094,7 @@ Zobrazit [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) 
 
 ### <a name="example"></a>Příklad
 
-Následující kód je z knihovny MFC [CTRLTEST](../../visual-cpp-samples.md) vzorku:
+Následující kód je z knihovny MFC [CTRLTEST](../../overview/visual-cpp-samples.md) vzorku:
 
 [!code-cpp[NVC_MFCWindowing#31](../../mfc/reference/codesnippet/cpp/cmenu-class_11.cpp)]
 
@@ -1484,8 +1484,8 @@ Místní nabídka s plovoucí desetinnou čárkou může vyskytovat kdekoli na o
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC CTRLTEST](../../visual-cpp-samples.md)<br/>
-[Ukázky knihovny MFC DYNAMENU](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC DYNAMENU](../../overview/visual-cpp-samples.md)<br/>
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CObject – třída](../../mfc/reference/cobject-class.md)

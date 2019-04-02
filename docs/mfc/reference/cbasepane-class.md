@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: 30a5eff8b18df8372c23b5f400c90ff85bdad0eb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e0d6b844ba4a5c373dd69c0435bbb9972db3b49b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259808"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774474"
 ---
 # <a name="cbasepane-class"></a>CBasePane Class
 
@@ -187,14 +187,14 @@ class CBasePane : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |`CBasePane::CBasePane`|Výchozí konstruktor.|
 |`CBasePane::~CBasePane`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |`CBasePane::accHitTest`|Volá se rozhraním, načtěte podřízený element nebo podřízený objekt v daném bodě na obrazovce. (Přepíše [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|
 |`CBasePane::accLocation`|Volá se rozhraním, aby načíst aktuální polohu na obrazovce pro zadaný objekt. (Přepíše [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|
@@ -302,7 +302,7 @@ class CBasePane : public CWnd
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CBasePane::DoPaint](#dopaint)|Vyplní pozadí podokna.|
 
@@ -342,7 +342,7 @@ Následující tipy k přizpůsobení se týkají `CBasePane Class` a všechny t
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít různé metody v `CBasePane` třídy. Tento příklad ukazuje, jak načíst podokno z `CFrameWndEx` třídy a jak nastavit dokovací režimu, zarovnání podokně a podokně stylu. Kód je z [slovo panel vzorku](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak použít různé metody v `CBasePane` třídy. Tento příklad ukazuje, jak načíst podokno z `CFrameWndEx` třídy a jak nastavit dokovací režimu, zarovnání podokně a podokně stylu. Kód je z [slovo panel vzorku](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#2](../../mfc/reference/codesnippet/cpp/cbasepane-class_1.cpp)]
 

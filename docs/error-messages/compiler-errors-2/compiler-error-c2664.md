@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
-ms.openlocfilehash: d9ebea5c955dcf89308654feec9866d4fdc924cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cffd178e1736358333ee27d4572d3531de23f527
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501358"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774604"
 ---
 # <a name="compiler-error-c2664"></a>Chyba kompilátoru C2664
 
@@ -31,7 +31,7 @@ Chcete-li vyřešit upozornění C2664
 
 K upozornění C2664 může rovněž dojít, pokud třída skrývá člena v jedné ze svých základních tříd.
 
-Další informace najdete v tématu [postupy: převod typu System::String na wchar_t * nebo char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md).
+Další informace najdete v tématu [jak: Převod typu System::String na wchar_t * nebo char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md).
 
 ## <a name="example"></a>Příklad
 
@@ -189,7 +189,7 @@ int main( ) {
 
 ## <a name="example"></a>Příklad
 
-Proměnná výčtu není převedena na svůj podkladový typ tak, aby bylo splněno volání funkce. Další informace najdete v tématu [výčet tříd](../../windows/enum-class-cpp-component-extensions.md). Následující ukázka vygeneruje upozornění C2664 a ukazuje, jak ho opravit.
+Proměnná výčtu není převedena na svůj podkladový typ tak, aby bylo splněno volání funkce. Další informace najdete v tématu [výčet tříd](../../extensions/enum-class-cpp-component-extensions.md). Následující ukázka vygeneruje upozornění C2664 a ukazuje, jak ho opravit.
 
 ```
 // C2664f.cpp

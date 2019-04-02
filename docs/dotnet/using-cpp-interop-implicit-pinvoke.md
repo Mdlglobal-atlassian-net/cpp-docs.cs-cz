@@ -20,12 +20,12 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-ms.openlocfilehash: ffe4aaeecc3e0f65851a87840cd21f81c4806fb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aaa07373b7dd22807290ceefa9197b4013c61fe5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464581"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778231"
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)
 
@@ -59,7 +59,7 @@ Bez ohledu na to, zda COM se používají přímo nebo prostřednictvím CRCW mu
 
 ## <a name="blittable-types"></a>Přenositelné typy
 
-Pro nespravovaná rozhraní API, používat jednoduché a vnitřní typy (viz [přenositelné a Non-přenositelné typy](/dotnet/framework/interop/blittable-and-non-blittable-types)), není vyžadováno žádné zvláštní kódování, protože tyto typy dat mají stejnou reprezentaci v paměti, ale vyžadují komplexnější datové typy explicitní zařazování dat. Příklad najdete v tématu [postupy: volání nativních knihoven DLL ze spravovaného kódu pomocí PInvoke](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md).
+Pro nespravovaná rozhraní API, používat jednoduché a vnitřní typy (viz [přenositelné a Non-přenositelné typy](/dotnet/framework/interop/blittable-and-non-blittable-types)), není vyžadováno žádné zvláštní kódování, protože tyto typy dat mají stejnou reprezentaci v paměti, ale vyžadují komplexnější datové typy explicitní zařazování dat. Příklad najdete v tématu [jak: Volání nativních knihoven DLL ze spravovaného kódu pomocí služby PInvoke](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md).
 
 ## <a name="example"></a>Příklad
 
@@ -103,47 +103,47 @@ Done
 
 - [Postupy: Zařazování polí pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-arrays-using-cpp-interop.md)
 
-- [Postupy: Zařazování zpětných volání a delegátů pomocí funkcí interoperability C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)
+- [Postupy: Zařazování zpětných volání a delegátů pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)
 
-- [Postupy: Zařazení vložených ukazatelů pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)
+- [Postupy: Zařazování vložených ukazatelů pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)
 
-- [Postupy: Přístup ke znakům v datech třídy System::String](../dotnet/how-to-access-characters-in-a-system-string.md)
+- [Postupy: Přístup ke znakům v System::String](../dotnet/how-to-access-characters-in-a-system-string.md)
 
 - [Postupy: Převod řetězce typu char * na pole System::Byte](../dotnet/how-to-convert-char-star-string-to-system-byte-array.md)
 
-- [Postupy: převod typu System::String na wchar_t * nebo char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)
+- [Postupy: Převod typu System::String na wchar_t * nebo char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)
 
 - [Postupy: Převod typu System::String na standardní řetězec](../dotnet/how-to-convert-system-string-to-standard-string.md)
 
 - [Postupy: Převod standardního řetězce na typ System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)
 
-- [Postupy: Získání ukazatele na pole bajtů](../dotnet/how-to-obtain-a-pointer-to-byte-array.md)
+- [Postupy: Získání ukazatele na bajtové pole](../dotnet/how-to-obtain-a-pointer-to-byte-array.md)
 
 - [Postupy: Načtení nespravovaných prostředků do bajtového pole](../dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md)
 
 - [Postupy: Změna referenční třídy v nativní funkci](../dotnet/how-to-modify-reference-class-in-a-native-function.md)
 
-- [Postupy: Určení, zda je bitová kopie nativní nebo CLR](../dotnet/how-to-determine-if-an-image-is-native-or-clr.md)
+- [Postupy: Určení, jestli je image nativní nebo CLR](../dotnet/how-to-determine-if-an-image-is-native-or-clr.md)
 
 - [Postupy: Přidání nativní knihovny DLL do globální mezipaměti sestavení](../dotnet/how-to-add-native-dll-to-global-assembly-cache.md)
 
-- [Postupy: Uložení odkazu na typ hodnoty v nativním typu](../dotnet/how-to-hold-reference-to-value-type-in-native-type.md)
+- [Postupy: Uchování odkazu na typ hodnoty v nativním typu](../dotnet/how-to-hold-reference-to-value-type-in-native-type.md)
 
 - [Postupy: Uchování odkazu na objekt v nespravované paměti](../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md)
 
-- [Postupy: zjištění kompilace/CLR](../dotnet/how-to-detect-clr-compilation.md)
+- [Postupy: Zjišťování kompilace/CLR](../dotnet/how-to-detect-clr-compilation.md)
 
 - [Postupy: Převody mezi hodnotami System::Guid a _GUID](../dotnet/how-to-convert-between-system-guid-and-guid.md)
 
 - [Postupy: Určení výstupního parametru](../dotnet/how-to-specify-an-out-parameter.md)
 
-- [Postupy: použití nativního typu v kompilaci/CLR](../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md)
+- [Postupy: Použití nativního typu v kompilaci/CLR](../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md)
 
 - [Postupy: Deklarace obslužných rutin v nativních typech](../dotnet/how-to-declare-handles-in-native-types.md)
 
 - [Postupy: Zabalení nativních tříd pro použití v jazyce C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
-Informace o použití delegátů ve scénáři spolupráce naleznete v tématu [delegate (rozšíření komponent C++)](../windows/delegate-cpp-component-extensions.md).
+Informace o použití delegátů ve scénáři spolupráce naleznete v tématu [delegate (rozšíření komponent C++)](../extensions/delegate-cpp-component-extensions.md).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: f194879cf4a1388fc156fa4e92f4f9bea5056191
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 93ace0388981f429ac4a422947fbdaae8cdb8f24
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296004"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781975"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl Class
 
@@ -173,7 +173,7 @@ class CMFCPropertyGridCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl)|Vytvoří `CMFCPropertyGridCtrl` objektu.|
 |`CMFCPropertyGridCtrl::~CMFCPropertyGridCtrl`|Destruktor.|
@@ -253,7 +253,7 @@ class CMFCPropertyGridCtrl : public CWnd
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCPropertyGridCtrl::AdjustLayout](#adjustlayout)|Překreslí ovládací prvek mřížky vlastností a její vlastnosti.|
 |[CMFCPropertyGridCtrl::CompareProps](#compareprops)|Je voláno ovládací prvek mřížky vlastností seřadit vlastnosti.|
@@ -297,7 +297,7 @@ Následující ilustrace znázornění ovládací prvek mřížky vlastnosti, kt
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak nakonfigurovat pomocí různých metod v objekt ovládacího prvku mřížky vlastností `CMFCPropertyGridCtrl` třídy. Tento příklad ukazuje, jak povolte stažení ovládacího prvku záhlaví, povolte oblast popisu a nastavte vzhled ovládacího prvku mřížky vlastností. Příklad také ukazuje, jak nastavit abecední režimu pro ovládací prvek, kterým ovládacího prvku seřadí všechny vlastnosti, které obsahuje podle názvu jejich vlastnosti a jak nastavit vlastní barvy pro různé prvky ovládací prvek mřížky vlastností. V tomto příkladu je součástí [nové ovládací prvky ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak nakonfigurovat pomocí různých metod v objekt ovládacího prvku mřížky vlastností `CMFCPropertyGridCtrl` třídy. Tento příklad ukazuje, jak povolte stažení ovládacího prvku záhlaví, povolte oblast popisu a nastavte vzhled ovládacího prvku mřížky vlastností. Příklad také ukazuje, jak nastavit abecední režimu pro ovládací prvek, kterým ovládacího prvku seřadí všechny vlastnosti, které obsahuje podle názvu jejich vlastnosti a jak nastavit vlastní barvy pro různé prvky ovládací prvek mřížky vlastností. V tomto příkladu je součástí [nové ovládací prvky ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#14](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#16](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_2.cpp)]
@@ -480,7 +480,7 @@ Chcete-li vytvořit ovládací prvek mřížky vlastností, první volání [CMF
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití `Create` metoda ve `CMFCPropertyGridCtrl` třídy. V tomto příkladu je součástí [nové ovládací prvky ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje způsob použití `Create` metoda ve `CMFCPropertyGridCtrl` třídy. V tomto příkladu je součástí [nové ovládací prvky ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#15](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_6.cpp)]
 

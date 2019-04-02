@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 03f9e5e0cac9cc71080bfe97d6a3115fd3cc99b5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0e5194a356684f2ff86d74a0ed1f37f332bcffeb
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418994"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781650"
 ---
 # <a name="cpropertysheet-class"></a>Cpropertysheet – třída
 
@@ -73,13 +73,13 @@ class CPropertySheet : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CPropertySheet::CPropertySheet](#cpropertysheet)|Vytvoří `CPropertySheet` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CPropertySheet::AddPage](#addpage)|Na stránce se přidá do seznamu vlastností.|
 |[CPropertySheet::Construct](#construct)|Vytvoří `CPropertySheet` objektu.|
@@ -105,7 +105,7 @@ class CPropertySheet : public CWnd
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CPropertySheet::m_psh](#m_psh)|Windows [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2) struktury. Poskytuje přístup k základní vlastnost seznamu parametrů.|
 
@@ -830,9 +830,9 @@ Volání `SetWizardMode` před voláním [DoModal](#domodal). Po zavolání `Set
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázka CMNCTRL1 knihovny MFC](../../visual-cpp-samples.md)<br/>
-[Ukázka CMNCTRL2 knihovny MFC](../../visual-cpp-samples.md)<br/>
-[Ukázky knihovny MFC PROPDLG](../../visual-cpp-samples.md)<br/>
-[Ukázky knihovny MFC SNAPVW](../../visual-cpp-samples.md)<br/>
+[Ukázka CMNCTRL1 knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
+[Ukázka CMNCTRL2 knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC PROPDLG](../../overview/visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

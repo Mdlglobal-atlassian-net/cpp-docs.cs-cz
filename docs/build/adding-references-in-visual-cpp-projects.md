@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: 8daba00432d7f14c8517da3ed4dc506cfd80865a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: eb4d970527ba919af10eadab7c907f5108767b9b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823160"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780467"
 ---
 # <a name="consuming-libraries-and-components"></a>Používání knihovny a součásti
 
@@ -20,7 +20,7 @@ ms.locfileid: "57823160"
 
 ## <a name="consuming-libraries-downloaded-via-vcpkg"></a>Použití knihovny stáhli prostřednictvím vcpkg
 
-Používat knihovnu, kterou jste si stáhli s použitím **vcpkg** Správce balíčků, můžete ignorovat podle následujících pokynů. See [vcpkg: Správce balíčků jazyka C++ pro Windows, Linux a MacOS](../vcpkg.md#integrate-with-visual-studio-windows) pro další informace.
+Používat knihovnu, kterou jste si stáhli s použitím **vcpkg** Správce balíčků, můžete ignorovat podle následujících pokynů. See [vcpkg: Správce balíčků jazyka C++ pro Windows, Linux a MacOS](vcpkg.md#integrate-with-visual-studio-windows) pro další informace.
 
 ## <a name="consuming-static-libraries"></a>Použití statické knihovny
 
@@ -167,4 +167,4 @@ Následující vlastnosti se nacházejí na odkazy na sestavení modelu COM a .N
 ## <a name="see-also"></a>Viz také
 
 [Odkaz na stránku vlastností projektu jazyka C++](reference/property-pages-visual-cpp.md)<br>
-[Nastavení kompilátoru jazyka C++ a vlastnosti v sadě Visual Studio sestavení](working-with-project-properties.md)
+[Nastavení vlastností kompilátoru a sestavení C++ v sadě Visual Studio](working-with-project-properties.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - message classes [MFC], MFC
 - structures, MFC
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
-ms.openlocfilehash: ffa57be45ca3b5626d78f495ed5ab5f658b62fb9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a5f0be66cdcb5c4a37d16b1e83cbc40cf023df32
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301919"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780194"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>Struktury, styly, zpětná volání a mapy zpráv
 
@@ -39,5 +39,5 @@ Popisuje makra mapování zpráv a `CWnd` položky v mapování zprávy.
 [Přehled knihovny tříd](../../mfc/class-library-overview.md)<br/>
 Seznam tříd v knihovně MFC podle kategorie.
 
-[Ukázky knihovny MFC](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
 Obsahuje odkazy na ukázky, které demonstrují použití knihovny MFC.

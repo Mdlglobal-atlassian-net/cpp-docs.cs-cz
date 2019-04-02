@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: b34891c4f46679e43aea36a9b52d6399e020ef71
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c649dd979b28e2b545a797c5453a2ec9aa6d0dc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273059"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768039"
 ---
 # <a name="cchecklistbox-class"></a>Cchecklistbox – třída
 
@@ -55,7 +55,7 @@ class CCheckListBox : public CListBox
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CCheckListBox::Create](#create)|Vytvoří pole kontrolního seznamu Windows a připojí ho k `CCheckListBox` objektu.|
 |[CCheckListBox::DrawItem](#drawitem)|Volá se rozhraním při úpravě vizuálního aspektu uživatelem nakreslený seznam se změní.|
@@ -379,7 +379,7 @@ Informace o těchto stylů, najdete v části [styly](../../mfc/reference/styles
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC lze kontejner TSTCON](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC lze kontejner TSTCON](../../overview/visual-cpp-samples.md)<br/>
 [CListBox – třída](../../mfc/reference/clistbox-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CListBox – třída](../../mfc/reference/clistbox-class.md)

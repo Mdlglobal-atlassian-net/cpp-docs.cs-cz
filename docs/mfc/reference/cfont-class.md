@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CFont [MFC], FromHandle
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
-ms.openlocfilehash: 60a717136f69b29df48dd8f449ddaffe5c15ccbf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 04136b3550675f0e50f905047fee551e27da7069
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271863"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768105"
 ---
 # <a name="cfont-class"></a>Cfont – třída
 
@@ -47,7 +47,7 @@ class CFont : public CGdiObject
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CFont::CreateFont](#createfont)|Inicializuje `CFont` se zadané vlastnosti.|
 |[CFont::CreateFontIndirect](#createfontindirect)|Inicializuje `CFont` objekt s vlastnostmi podle `LOGFONT` struktury.|
@@ -58,7 +58,7 @@ class CFont : public CGdiObject
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CFont::operator HFONT](#operator_hfont)|Vrátí popisovač písem Windows GDI připojené k `CFont` objektu.|
 
@@ -359,6 +359,6 @@ Další informace o použití grafických objektů najdete v tématu [objektů g
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC HIERSVR](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [CGdiObject – třída](../../mfc/reference/cgdiobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

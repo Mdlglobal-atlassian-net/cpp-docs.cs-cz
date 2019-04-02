@@ -5,12 +5,12 @@ helpviewer_keywords:
 - 3rd-party libraries
 - vspkg
 ms.assetid: b055ed20-8a9e-45b2-ac2a-e3d94271c009
-ms.openlocfilehash: 51c1634aade159e095b5957a15783e40ec0284d0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: e1aefc82eb23a8479035dd3372fa9ec24ab8feb1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750959"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774201"
 ---
 # <a name="porting-third-party-libraries"></a>Přenos knihoven třetích stran
 
@@ -18,7 +18,7 @@ Při upgradu projektu na aktuální verzi jazyka Visual C++, musíte také upgra
 
 ## <a name="introducing-vcpkg"></a>Představujeme vcpkg
 
-V minulosti byl někdy netriviální úkolů hledání a upgrade knihovny 3. stran. Do usnadňují získání a znovu sestavte C++ 3. stran open source knihoven Visual C++ tým vytvořil nástroj příkazového řádku, volá se, **balení nástrojů VC ++** nebo **vcpkg**. Vcpkg má katalog mnoho oblíbených open source knihoven C++. V katalogu přímo z příkazového řádku vcpkg můžete nainstalovat všechny knihovny. Při instalaci knihovny Vcpkg vytvoří stromu adresáře na počítači a přidá .h, .lib a binární soubory v této složce. Můžete použít tuto složku v příkazovém řádku kompilace, nebo ji integrovat do sady Visual Studio 2015 nebo později pomocí vcpkg integrace instalačního příkazu. Po integraci umístění knihovny sady Visual Studio můžete najít ho a přidat ho do nového projektu, který vytvoříte. Pro použití knihovny, právě `#include` a sady Visual Studio bude automaticky přidat cestu .lib do nastavení projektu a kopírování knihovny dll do složky řešení. Další informace najdete v tématu [vcpkg: Správce balíčků pro C++](../vcpkg.md).
+V minulosti byl někdy netriviální úkolů hledání a upgrade knihovny 3. stran. Do usnadňují získání a znovu sestavte C++ 3. stran open source knihoven Visual C++ tým vytvořil nástroj příkazového řádku, volá se, **balení nástrojů VC ++** nebo **vcpkg**. Vcpkg má katalog mnoho oblíbených open source knihoven C++. V katalogu přímo z příkazového řádku vcpkg můžete nainstalovat všechny knihovny. Při instalaci knihovny Vcpkg vytvoří stromu adresáře na počítači a přidá .h, .lib a binární soubory v této složce. Můžete použít tuto složku v příkazovém řádku kompilace, nebo ji integrovat do sady Visual Studio 2015 nebo později pomocí vcpkg integrace instalačního příkazu. Po integraci umístění knihovny sady Visual Studio můžete najít ho a přidat ho do nového projektu, který vytvoříte. Pro použití knihovny, právě `#include` a sady Visual Studio bude automaticky přidat cestu .lib do nastavení projektu a kopírování knihovny dll do složky řešení. Další informace najdete v tématu [vcpkg: Správce balíčků pro C++](../build/vcpkg.md).
 
 ## <a name="reporting-issues"></a>Hlášení problémů s
 

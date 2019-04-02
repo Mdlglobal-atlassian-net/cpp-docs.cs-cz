@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndInfo [MFC], m_strText
 - CMFCDesktopAlertWndInfo [MFC], m_strURL
 ms.assetid: 5c9bb84e-6c96-4748-8e74-6951b6ae8e84
-ms.openlocfilehash: 3c40424a1aba81a7048ba89781fe6c4324f86ccd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a4b3d8769b3d267c0bd3f81269dd3b8ab3cf3184
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301633"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768286"
 ---
 # <a name="cmfcdesktopalertwndinfo-class"></a>Cmfcdesktopalertwndinfo – třída
 
@@ -41,7 +41,7 @@ class CMFCDesktopAlertWndInfo
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCDesktopAlertWndInfo::operator=](#operator_eq)||
 
@@ -68,7 +68,7 @@ Pokud výchozí dialogové okno není dostatečná, můžete vytvořit vlastní 
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak využívat různé členy v `CMFCDesktopAlertWndInfo` třídy. Tento příklad ukazuje, jak nastavit úchyt na ikonu, která se zobrazí text, který se zobrazuje na okno výstrah plochy, na odkaz, který se zobrazí na okno výstrah plochy a ID příkazu, který je spojen s odkazem na okno výstrah plochy. V tomto příkladu je součástí [Desktopu výstrah demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak využívat různé členy v `CMFCDesktopAlertWndInfo` třídy. Tento příklad ukazuje, jak nastavit úchyt na ikonu, která se zobrazí text, který se zobrazuje na okno výstrah plochy, na odkaz, který se zobrazí na okno výstrah plochy a ID příkazu, který je spojen s odkazem na okno výstrah plochy. V tomto příkladu je součástí [Desktopu výstrah demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#3](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndinfo-class_1.cpp)]
 

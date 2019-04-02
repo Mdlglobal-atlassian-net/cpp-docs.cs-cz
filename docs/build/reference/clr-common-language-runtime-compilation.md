@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: 124f54f46e71ac8fb8511d12fba43ab77d04c32e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 1946fdabe66934e64cf95d3c3f12e16bc98ba664
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822458"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779349"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Common Language Runtime)
 
@@ -67,13 +67,13 @@ Jeden nebo více z následujících parametrů oddělených čárkou.
 
 Spravovaný kód je kód, který je možné ho zkontrolovat a spravovat pomocí modulu CLR. Spravovaný kód může přistupovat k spravovaných objektů. Další informace najdete v tématu [/CLR – omezení](clr-restrictions.md).
 
-Informace o tom, jak vyvíjet aplikace, které definice a používání spravovaných typů najdete v tématu [přípony komponent pro platformy běhového prostředí](../../windows/component-extensions-for-runtime-platforms.md).
+Informace o tom, jak vyvíjet aplikace, které definice a používání spravovaných typů najdete v tématu [přípony komponent pro platformy běhového prostředí](../../extensions/component-extensions-for-runtime-platforms.md).
 
 Aplikace kompilované pomocí **/CLR** může nebo nemusí obsahovat spravovaná data.
 
 Chcete-li povolit ladění na spravované aplikace, přečtěte si téma [/assemblydebug (přidání atributu DebuggableAttribute)](assemblydebug-add-debuggableattribute.md).
 
-Pouze typy CLR bude vytvořena na haldě uvolňování. Další informace najdete v tématu [třídy a struktury](../../windows/classes-and-structs-cpp-component-extensions.md). Chcete-li zkompilovat funkci do nativního kódu, použijte `unmanaged` direktivy pragma. Další informace najdete v tématu [spravované, nespravované](../../preprocessor/managed-unmanaged.md).
+Pouze typy CLR bude vytvořena na haldě uvolňování. Další informace najdete v tématu [třídy a struktury](../../extensions/classes-and-structs-cpp-component-extensions.md). Chcete-li zkompilovat funkci do nativního kódu, použijte `unmanaged` direktivy pragma. Další informace najdete v tématu [spravované, nespravované](../../preprocessor/managed-unmanaged.md).
 
 Ve výchozím nastavení **/CLR** není platná. Když **/CLR** je ve skutečnosti **/MD** platí také. Další informace najdete v tématu [/ / MD, / MT, /LD (použití knihovny Run-Time)](md-mt-ld-use-run-time-library.md). **/ MD** zajistí, že jsou vybrány dynamicky propojené s více vlákny verze rutin modulu runtime ze souborů standardní záhlaví (.h). Multithreading je požadovaná u spravovaného programování, protože CLR systému uvolňování paměti spustí finalizační metody v pomocné vlákno.
 
@@ -105,5 +105,5 @@ Umožňuje zobrazit metadata ildasm.exe.
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

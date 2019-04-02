@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCReBar [MFC], OnUpdateCmdUI
 - CMFCReBar [MFC], SetPaneAlignment
 ms.assetid: 02a60e29-6224-49c1-9e74-e0a7d9f8d023
-ms.openlocfilehash: b221abf772df06541ecde247a9db9401c0ed3c3a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7776bf504d502feee8ef51949b8adc8e44f94c8e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278012"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772290"
 ---
 # <a name="cmfcrebar-class"></a>Cmfcrebar – třída
 
@@ -71,7 +71,7 @@ Objekt matrice chová podobně jako objekt panelu nástrojů. Ovládacím prvkem
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít různé metody v `CMFCReBar` třídy. Příklad ukazuje, jak vytvořit ovládacím prvkem matrice a přidejte do ní pásmo. Funkce vzdálené jako vnitřní panel nástrojů. Tento fragment kódu je součástí [testovací matrice – ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak použít různé metody v `CMFCReBar` třídy. Příklad ukazuje, jak vytvořit ovládacím prvkem matrice a přidejte do ní pásmo. Funkce vzdálené jako vnitřní panel nástrojů. Tento fragment kódu je součástí [testovací matrice – ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_RebarTest#1](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_1.h)]
 [!code-cpp[NVC_MFC_RebarTest#2](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_2.cpp)]

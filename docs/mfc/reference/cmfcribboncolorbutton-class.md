@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCRibbonColorButton [MFC], SetPalette
 - CMFCRibbonColorButton [MFC], UpdateColor
 ms.assetid: 6b4b4ee3-8cc0-41b4-a4eb-93e8847008e1
-ms.openlocfilehash: a7901619110652423a2ab00d8088d6b9213fe202
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ceb686a9aca4ac126c4d61dd45975c65a9376ce9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266273"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769964"
 ---
 # <a name="cmfcribboncolorbutton-class"></a>Cmfcribboncolorbutton – třída
 
@@ -61,7 +61,7 @@ class CMFCRibbonColorButton : public CMFCRibbonGallery
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCRibbonColorButton::CMFCRibbonColorButton](#cmfcribboncolorbutton)||
 
@@ -92,7 +92,7 @@ Tlačítko Barva pásu karet zobrazí pruhu barev, když uživatel stiskne ho. V
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít různé metody v `CMFCRibbonColorButton` třídy. Tento příklad ukazuje, jak vytvořit `CMFCRibbonColorButton` objektu, nastavte velký obrázek, povolte **automatické** tlačítko, povolte **jiných** tlačítko, nastavte počet sloupců, nastavit velikost všech prvků Barva který se zobrazí na panelu barev., přidejte skupinu barev do oblasti regulární barva a zadat seznam hodnoty RGB zobrazíte v oblasti barev dokumentu. Tento fragment kódu je součástí [nakreslit Client sample](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak použít různé metody v `CMFCRibbonColorButton` třídy. Tento příklad ukazuje, jak vytvořit `CMFCRibbonColorButton` objektu, nastavte velký obrázek, povolte **automatické** tlačítko, povolte **jiných** tlačítko, nastavte počet sloupců, nastavit velikost všech prvků Barva který se zobrazí na panelu barev., přidejte skupinu barev do oblasti regulární barva a zadat seznam hodnoty RGB zobrazíte v oblasti barev dokumentu. Tento fragment kódu je součástí [nakreslit Client sample](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#3](../../mfc/reference/codesnippet/cpp/cmfcribboncolorbutton-class_1.cpp)]
 

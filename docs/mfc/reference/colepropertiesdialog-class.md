@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_psh
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
-ms.openlocfilehash: 37197ee20b31564c589099b10e0f8d3f0d1f7e86
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e574f535609ec9401bd76badf11fa7e05cc0c619
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263868"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781858"
 ---
 # <a name="colepropertiesdialog-class"></a>Colepropertiesdialog – třída
 
@@ -43,20 +43,20 @@ class COlePropertiesDialog : public COleDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COlePropertiesDialog::COlePropertiesDialog](#colepropertiesdialog)|Vytvoří `COlePropertiesDialog` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COlePropertiesDialog::DoModal](#domodal)|Zobrazí dialogové okno a umožňuje uživatelům provést výběr.|
 |[COlePropertiesDialog::OnApplyScale](#onapplyscale)|Volá se rozhraním, při škálování položka dokumentu.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COlePropertiesDialog::m_gp](#m_gp)|Struktury použité k inicializaci stránku "Obecné" `COlePropertiesDialog` objektu.|
 |[COlePropertiesDialog::m_lp](#m_lp)|Struktury použité k inicializaci stránky na "Propojení" `COlePropertiesDialog` objektu.|
@@ -261,7 +261,7 @@ Výchozí implementace nemá žádný účinek. Tato funkce umožňuje škálov�
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC KR](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC KR](../../overview/visual-cpp-samples.md)<br/>
 [COleDialog – třída](../../mfc/reference/coledialog-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [COleDialog – třída](../../mfc/reference/coledialog-class.md)<br/>

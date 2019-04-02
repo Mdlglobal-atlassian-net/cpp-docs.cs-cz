@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CTraits classes
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-ms.openlocfilehash: 11da1dd7d72951d421d2600e3825e7cafe189240
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 70ca283468a51b4214273698a532ce2a85d52b44
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272097"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774974"
 ---
 # <a name="atl-collection-classes"></a>ATL – třídy kolekce
 
@@ -116,13 +116,13 @@ Následující diagram znázorňuje hierarchii tříd pro ctraits – třídy.
 
 Následující ukázky ukazují třídy kolekcí:
 
-- [MMXSwarm Sample](../visual-cpp-samples.md)
+- [MMXSwarm Sample](../overview/visual-cpp-samples.md)
 
-- [Příklad DynamicConsumer](../visual-cpp-samples.md)
+- [Příklad DynamicConsumer](../overview/visual-cpp-samples.md)
 
 - [Příklad UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)
 
-- [Výběr ukázky](../visual-cpp-samples.md)
+- [Výběr ukázky](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>Viz také:
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-ms.openlocfilehash: 63e97c3b9260465259d76cf6996d1d389f65ee41
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7e9fda44e2af4ec32bae6299fbcc0eda17984f9b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326449"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769729"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: Použití prostředí MFC jako součásti knihovny DLL
 
@@ -57,7 +57,7 @@ Musíte také definovat tyto symboly a použijte tyto přepínače kompilátoru 
 
 Rozhraní (API) mezi aplikace a knihovny DLL musí být explicitně exportován. Doporučujeme definovat vaše rozhraní být s malou šířkou pásma a používat pouze C rozhraní, pokud je to možné. Přímé rozhraní jazyka C jsou snadněji udržovat než složitější třídy jazyka C++.
 
-Umístěte svoje rozhraní API v samostatné záhlaví, který může obsahovat soubory C a C++. Zobrazit záhlaví ScreenCap.h v ukázce MFC Advanced Concepts [DLLScreenCap](../visual-cpp-samples.md) příklad. Pokud chcete exportovat funkce, zadejte je `EXPORTS` části souboru definice modulu (. DEF) nebo zahrnout `__declspec(dllexport)` na vaše definice funkce. Použití `__declspec(dllimport)` naimportujte tyto funkce klientský spustitelný soubor.
+Umístěte svoje rozhraní API v samostatné záhlaví, který může obsahovat soubory C a C++. Zobrazit záhlaví ScreenCap.h v ukázce MFC Advanced Concepts [DLLScreenCap](../overview/visual-cpp-samples.md) příklad. Pokud chcete exportovat funkce, zadejte je `EXPORTS` části souboru definice modulu (. DEF) nebo zahrnout `__declspec(dllexport)` na vaše definice funkce. Použití `__declspec(dllimport)` naimportujte tyto funkce klientský spustitelný soubor.
 
 Na začátku exportované funkce v běžných knihovnách MFC DLL, která dynamicky propojené ke knihovně MFC, je nutné přidat makro AFX_MANAGE_STATE. Toto makro nastaví aktuální stav modulu pro knihovnu DLL. Pokud chcete použít toto makro, přidejte následující řádek kódu na začátek funkcí exportovaných z knihovny DLL:
 

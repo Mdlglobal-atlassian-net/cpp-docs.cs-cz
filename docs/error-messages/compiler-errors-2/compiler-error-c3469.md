@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3469
 ms.assetid: e23b0e5c-c704-4e67-a868-bf02c2055d85
-ms.openlocfilehash: 7ae0b7b779749a9787601a6046eadd80c2ba49d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e935fb90c93d6f301226f3e9029c04929f179ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571064"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773278"
 ---
 # <a name="compiler-error-c3469"></a>Chyba kompilátoru C3469
 
@@ -19,7 +19,7 @@ ms.locfileid: "50571064"
 
 Předávání typů nelze použít na obecné třídě.
 
-Další informace najdete v tématu [předávání typů (C + +/ CLI)](../../windows/type-forwarding-cpp-cli.md).
+Další informace najdete v tématu [předávání typů (C + +/ CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Příklad
 

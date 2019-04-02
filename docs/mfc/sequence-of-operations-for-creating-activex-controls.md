@@ -8,12 +8,12 @@ helpviewer_keywords:
 - OLE controls [MFC], MFC
 - sequence [MFC]
 ms.assetid: 7d868c53-a0af-4ef6-a89c-e1c03c583a53
-ms.openlocfilehash: fdfa2333681c988c0e7bceab01eab24b118f1a5a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 020c044cc0b3b96df102a5ab6625c945f1033f67
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275984"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781338"
 ---
 # <a name="sequence-of-operations-for-creating-activex-controls"></a>Posloupnost operací při vytváření ovládacích prvků ActiveX
 
@@ -24,7 +24,7 @@ V následující tabulce jsou uvedeny vaši roli a roli v rámci při vytvářen
 |Úloha|Můžete provést|Nepodporuje rozhraní framework|
 |----------|------------|------------------------|
 |Vytvoření rozšiřovatelnou platformu pro ovládací prvek ActiveX.|Spusťte průvodce ovládací prvek ActiveX knihovny MFC k vytvoření ovládacího prvku. Zadejte požadované možnosti na stránkách možností. Mezi možnosti patří typ a název ovládacího prvku v projektu, licencování, vytváření podtříd a metodu o pole.|Průvodce pro ovládací prvek ActiveX knihovny MFC vytvoří soubory pro ovládací prvek ActiveX se základní funkčností, včetně zdrojových souborů pro aplikace, ovládací prvek a stránku vlastností nebo stránky. soubor prostředků; soubor projektu; a jiné, všechny přizpůsobené vašich požadavků.|
-|Zjistěte, co ovládací prvek a Průvodce ovládacím prvkem ActiveX bez přidání psát vlastní kód.|Vytváření ovládacího prvku ActiveX a testování s aplikací Internet Explorer nebo [lze kontejner TSTCON ukázka](../visual-cpp-samples.md).|Spuštěné ovládací prvek má schopnost velikost a umístění. Je také **pole o** – metoda (Pokud je vybrána), který lze vyvolat.|
+|Zjistěte, co ovládací prvek a Průvodce ovládacím prvkem ActiveX bez přidání psát vlastní kód.|Vytváření ovládacího prvku ActiveX a testování s aplikací Internet Explorer nebo [lze kontejner TSTCON ukázka](../overview/visual-cpp-samples.md).|Spuštěné ovládací prvek má schopnost velikost a umístění. Je také **pole o** – metoda (Pokud je vybrána), který lze vyvolat.|
 |Implementace metod a vlastností ovládacího prvku.|Implementace metody specifické pro ovládací prvek a vlastnosti přidáním členské funkce a poskytuje vystavené rozhraní pro data ovládacího prvku. Přidání členské proměnné, která bude uchovávat datových struktur a použití obslužných rutin událostí k vyvolání události při zjišťování.|Rozhraní již definována mapu, která podporují události, vlastnosti a metody, které byste museli opustit vám umožní zaměřit se na tom, jak jsou implementované vlastnosti a metody ovládacího prvku. Výchozí stránky vlastností je možné zobrazit a není zadána výchozí metoda o pole.|
 |Vytvoření ovládacího prvku stránku nebo stránky vlastností.|Pomocí editory prostředků Visual C++ lze upravit vizuálně rozhraní stránky vlastností ovládacího prvku:<br /><br />-Vytvořte další stránky vlastností.<br />– Vytvoření a úprava rastrové obrázky, ikony a kurzory.<br /><br /> V editoru dialogového okna můžete také testovat stránky vlastností.|Výchozí soubor prostředků vytvořený pomocí Průvodce aplikací knihovny MFC poskytuje mnoho prostředků, které potřebujete. Visual C++ umožňuje upravovat existující prostředky a snadno a vizuálně přidat nové prostředky.|
 |Otestujte události, metody a vlastnosti ovládacího prvku.|Znovu sestavte ovládací prvek a použít kontejner testu k otestování vaší obslužné rutiny fungovat správně.|Můžete volat metody ovládacího prvku a manipulaci s jeho vlastnosti prostřednictvím rozhraní stránky vlastností nebo pomocí testovacího kontejneru. Kromě toho pomocí testovacího kontejneru sledování událostí vyvolaných z ovládacího prvku a oznámení přijímaná kontejneru ovládacího prvku.|

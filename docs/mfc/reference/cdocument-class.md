@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-ms.openlocfilehash: b7358c2206c15660b9ffb283802283ee71e57f03
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2d87ff67000fb5b70c0a5c965638875e6f50b22c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299072"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774180"
 ---
 # <a name="cdocument-class"></a>CDocument – třída
 
@@ -207,7 +207,7 @@ class CDocument : public CCmdTarget
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDocument::m_bGetThumbnailMode](#m_bgetthumbnailmode)|Určuje, že `CDocument` objekt byl vytvořen dllhost pro miniatury. By měl být vráceny se změnami `CView::OnDraw`.|
 |[CDocument::m_bPreviewHandlerMode](#m_bpreviewhandlermode)|Určuje, že `CDocument` objekt byl vytvořen prevhost pro `Rich Preview`. By měl být vráceny se změnami `CView::OnDraw`.|
@@ -1254,9 +1254,9 @@ Tato funkce volá [CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate)
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
-[Ukázky knihovny MFC SNAPVW](../../visual-cpp-samples.md)<br/>
-[Ukázky knihovny MFC agent NPP](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC agent NPP](../../overview/visual-cpp-samples.md)<br/>
 [CCmdTarget – třída](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CCmdTarget – třída](../../mfc/reference/ccmdtarget-class.md)<br/>

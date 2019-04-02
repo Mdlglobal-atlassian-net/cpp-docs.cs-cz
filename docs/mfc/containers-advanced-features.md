@@ -12,12 +12,12 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-ms.openlocfilehash: 9d83ba601766f4b6fb84576571239a250169abb1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 350431975a4335fc06e436237b7e0d3388faab64
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278701"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769560"
 ---
 # <a name="containers-advanced-features"></a>Kontejnery: Pokročilé funkce
 
@@ -39,7 +39,7 @@ Tento článek [serverů: Implementace serveru](../mfc/servers-implementing-a-se
 
 - Přepsat `COleClientItem::CanActivate` nechcete úpravu položky na místě samotný server se používá k úpravě na místě.
 
-   Například MFC OLE ukázky [OCLIENT](../visual-cpp-samples.md) obsahuje vložené položky vytvořené aplikace typu server/kontejner. Otevřete aplikaci OCLIENT a místní úpravy položky vytvořené aplikace typu server/kontejner. Při úpravách položky vaší aplikace, rozhodnete chcete vložit položky vytvořené v rámci MFC OLE ukázky [HIERSVR](../visual-cpp-samples.md). Chcete-li to provést, nelze použít aktivace na místě. Je nutné otevřít plně HIERSVR k aktivaci této položky. Protože knihovny Microsoft Foundation Class nepodporuje tuto funkci OLE, přepisování `COleClientItem::CanActivate` můžete zkontrolovat v této situaci a zabránit možných chyb za běhu ve vaší aplikaci.
+   Například MFC OLE ukázky [OCLIENT](../overview/visual-cpp-samples.md) obsahuje vložené položky vytvořené aplikace typu server/kontejner. Otevřete aplikaci OCLIENT a místní úpravy položky vytvořené aplikace typu server/kontejner. Při úpravách položky vaší aplikace, rozhodnete chcete vložit položky vytvořené v rámci MFC OLE ukázky [HIERSVR](../overview/visual-cpp-samples.md). Chcete-li to provést, nelze použít aktivace na místě. Je nutné otevřít plně HIERSVR k aktivaci této položky. Protože knihovny Microsoft Foundation Class nepodporuje tuto funkci OLE, přepisování `COleClientItem::CanActivate` můžete zkontrolovat v této situaci a zabránit možných chyb za běhu ve vaší aplikaci.
 
 Pokud vytváříte novou aplikaci a chcete, aby fungovala jako aplikace typu server/kontejner, zvolte možnost v dialogovém okně Možnosti OLE v Průvodci aplikací a tato podpora se vytvoří automaticky. Další informace najdete v článku [přehled: Vytvoření kontejneru ovládacího prvku ActiveX](../mfc/reference/creating-an-mfc-activex-control-container.md). Informace o ukázky knihovny MFC naleznete v tématu ukázky knihovny MFC.
 
@@ -69,7 +69,7 @@ Odkazy na vložené objekty funkce umožňuje uživateli vytvoření dokumentu p
 
          If the application is launched with the "/Embedded" switch, it should not show its main window, similar to a server application.
 
-Ukázky knihovny MFC OLE [OCLIENT](../visual-cpp-samples.md) implementuje tuto funkci. Příklad, jak to lze provést, najdete v článku `InitInstance` fungovat v *OCLIENT. CPP* souboru této ukázkové aplikaci.
+Ukázky knihovny MFC OLE [OCLIENT](../overview/visual-cpp-samples.md) implementuje tuto funkci. Příklad, jak to lze provést, najdete v článku `InitInstance` fungovat v *OCLIENT. CPP* souboru této ukázkové aplikaci.
 
 ## <a name="see-also"></a>Viz také:
 

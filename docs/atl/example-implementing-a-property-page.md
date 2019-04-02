@@ -4,18 +4,18 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: a86393954cdebec59bd2c6a50cd5e547ef06acb7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9aaf75916196f33904a51289d0a49725e042aa9e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267235"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777035"
 ---
 # <a name="example-implementing-a-property-page"></a>Příklad: Implementace stránky vlastností
 
 Tento příklad ukazuje, jak vytvořit stránku vlastnost, která zobrazuje (a je možné změnit) vlastnosti [třídy dokumentů](../mfc/document-classes.md) rozhraní.
 
-Tento příklad vychází [ATLPages ukázka](../visual-cpp-samples.md).
+Tento příklad vychází [ATLPages ukázka](../overview/visual-cpp-samples.md).
 
 Abyste mohli absolvovat tento příklad, provedete následující:
 
@@ -164,4 +164,4 @@ Když spustíte toto makro, na stránce vlastností zobrazí zobrazuje název so
 ## <a name="see-also"></a>Viz také:
 
 [Stránky vlastností](../atl/atl-com-property-pages.md)<br/>
-[Ukázka ATLPages](../visual-cpp-samples.md)
+[Ukázka ATLPages](../overview/visual-cpp-samples.md)

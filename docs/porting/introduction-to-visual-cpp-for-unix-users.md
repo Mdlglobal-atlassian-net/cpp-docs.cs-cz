@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: 0cffdc2be00b4af9badbbbc80bcfef48b3f76e19
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 2b0736bca9cc0b67f9ea8ac83dc18fadaeefdb3c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818372"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780818"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Úvod do prostředí Visual C++ pro uživatele systému UNIX
 
@@ -51,7 +51,7 @@ Když vytvoříte projekt, je třeba zadat název projektu. Ve výchozím nastav
 
 Kompilátor jazyka Microsoft Visual C++ implementuje několik rozšíření pro standardní programovací jazyk C++ pro podporu programování pro operační systémy Windows. Tato rozšíření se používají k určení atributů třídy úložiště, konvence volání funkce a adresování, mimo jiné. Úplný seznam všech podporovaných rozšíření jazyka C++, naleznete v tématu [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-Pomocí můžete zakázat všechna rozšíření specifické pro společnost Microsoft c++ `/Za` – možnost kompilátoru. Tato možnost se doporučuje, pokud chcete napsat kód, který spouští na více platformách. Další informace o `/Za` – možnost kompilátoru, naleznete v tématu [/Za, /Ze (zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md). Další informace o přizpůsobení kompilátoru C++, naleznete v tématu [shoda jazyka Visual C++](../visual-cpp-language-conformance.md) a [nestandardní chování](../cpp/nonstandard-behavior.md).
+Pomocí můžete zakázat všechna rozšíření specifické pro společnost Microsoft c++ `/Za` – možnost kompilátoru. Tato možnost se doporučuje, pokud chcete napsat kód, který spouští na více platformách. Další informace o `/Za` – možnost kompilátoru, naleznete v tématu [/Za, /Ze (zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md). Další informace o přizpůsobení kompilátoru C++, naleznete v tématu [shoda jazyka Visual C++](../overview/visual-cpp-language-conformance.md) a [nestandardní chování](../cpp/nonstandard-behavior.md).
 
 ## <a name="precompiled-headers"></a>Předkompilované hlavičky
 
@@ -65,4 +65,4 @@ Další informace najdete v tématu [Portování ze systému UNIX do Win32](../p
 
 ## <a name="see-also"></a>Viz také:
 
-[Projekty a sestavení systémy](../build/projects-and-build-systems-cpp.md)
+[Projekty a systémy sestavení](../build/projects-and-build-systems-cpp.md)

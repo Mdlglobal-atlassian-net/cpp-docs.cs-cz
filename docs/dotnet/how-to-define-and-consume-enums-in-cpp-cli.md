@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-ms.openlocfilehash: 0252c4b64690f6a2fb0fd97b97841fe45fcce244
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 9787b7b96f83b2926c65209254c88eb56fe1a8ab
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751450"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774734"
 ---
 # <a name="how-to-define-and-consume-enums-in-ccli"></a>Postupy: Definice a používání výčtů v jazyce C + +/ CLI
 
@@ -92,7 +92,7 @@ Operátory &#124; ^ & ~ ++--je definovaná pouze pro výčty celočíselný zák
 Kompilátor nemá žádné statické nebo dynamické kontrolu výsledku operace výčtu; operace můžou výsledkem hodnota není v rozsahu výčtu platná enumerátory.
 
 > [!NOTE]
->  C ++ 11 zavádí výčet typů třídy v nespravovaném kódu, které se můžou výrazně lišit od třídy spravovaného výčtu v jazyce C + +/ CLI. Konkrétně se na typ třídy C ++ 11 výčtu nepodporuje stejné operátory jako typ třídy spravovaného výčtu v jazyce C + +/ CLI a C + +/ CLI zdrojový kód musí poskytovat usnadnění specifikátor v spravovaného výčtu deklarace tříd aby bylo možné odlišit od nespravovaných (C++ 11) deklarace třídy výčtu. Další informace o výčet tříd v jazyce C + +/ CLI, C + +/ CX a C ++ 11, najdete v části [výčet tříd](../windows/enum-class-cpp-component-extensions.md).
+>  C ++ 11 zavádí výčet typů třídy v nespravovaném kódu, které se můžou výrazně lišit od třídy spravovaného výčtu v jazyce C + +/ CLI. Konkrétně se na typ třídy C ++ 11 výčtu nepodporuje stejné operátory jako typ třídy spravovaného výčtu v jazyce C + +/ CLI a C + +/ CLI zdrojový kód musí poskytovat usnadnění specifikátor v spravovaného výčtu deklarace tříd aby bylo možné odlišit od nespravovaných (C++ 11) deklarace třídy výčtu. Další informace o výčet tříd v jazyce C + +/ CLI, C + +/ CX a C ++ 11, najdete v části [výčet tříd](../extensions/enum-class-cpp-component-extensions.md).
 
 ```
 // mcppv2_enum_5.cpp
@@ -137,4 +137,4 @@ True
 
 ## <a name="see-also"></a>Viz také:
 
-[Třída výčtu](../windows/enum-class-cpp-component-extensions.md)
+[Třída výčtu](../extensions/enum-class-cpp-component-extensions.md)

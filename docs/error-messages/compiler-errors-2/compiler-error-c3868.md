@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3868
 ms.assetid: f0e45c2a-2149-4885-a03b-0d230069f03a
-ms.openlocfilehash: 15152ee2e6535010b7045fe2d1362ba0064e3fbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d759d8e527bf38c7408f3497b27287e030d387e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529191"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771848"
 ---
 # <a name="compiler-error-c3868"></a>Chyba kompilátoru C3868
 
 'type': omezení pro obecný parametr "parametr" se liší od omezení v deklaraci
 
-Více deklarací musí mít stejná obecná omezení.  Další informace najdete v tématu [obecných typů](../../windows/generics-cpp-component-extensions.md).
+Více deklarací musí mít stejná obecná omezení.  Další informace najdete v tématu [obecných typů](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Příklad
 

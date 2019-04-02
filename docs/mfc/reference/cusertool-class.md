@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CUserTool [MFC], m_strInitialDirectory
 - CUserTool [MFC], m_strLabel
 ms.assetid: 7c287d3e-d012-488d-b4e1-aa0f83f294bb
-ms.openlocfilehash: ca9035ecfcde0c2e82628c5509a16557a487b8cc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5bb0ae073b722c97e8e30158f8f7832fd88b2fbc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290453"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779037"
 ---
 # <a name="cusertool-class"></a>Cusertool – třída
 
@@ -51,7 +51,7 @@ class CUserTool : public CObject
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CUserTool::CopyIconToClipboard](#copyicontoclipboard)||
 |[CUserTool::DrawToolIcon](#drawtoolicon)|Kreslení v obdélníku zadaného ikonu uživatele nástroje.|
@@ -64,7 +64,7 @@ class CUserTool : public CObject
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CUserTool::LoadDefaultIcon](#loaddefaulticon)|Načte výchozí ikonu pro uživatelský nástroj.|
 
@@ -82,7 +82,7 @@ Další informace o tom, jak povolit uživatelské nástroje ve své aplikaci na
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vytvořit nástroj z `CUserToolsManager` objektu, nastaven `m_strLabel` členské proměnné a sadu aplikací, na kterém běží nástroj uživatele. Tento fragment kódu je součástí [Visual Studio demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak vytvořit nástroj z `CUserToolsManager` objektu, nastaven `m_strLabel` členské proměnné a sadu aplikací, na kterém běží nástroj uživatele. Tento fragment kódu je součástí [Visual Studio demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#35](../../mfc/codesnippet/cpp/cusertool-class_1.cpp)]
 

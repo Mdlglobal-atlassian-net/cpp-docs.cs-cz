@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - typeid operator
 ms.assetid: 8871cee6-d6b9-4301-a5cb-bf3dc9798d61
-ms.openlocfilehash: dfbf5275391e2820c94d2827c9b2c3eb252365c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1185f48df4a941eb2a5d81bfa67d07cdf4387d0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571922"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780883"
 ---
 # <a name="typeid-operator"></a>typeid – operátor
 
@@ -26,7 +26,7 @@ typeid(expression)
 
 Výsledek **typeid** je `const type_info&`. Hodnota je odkaz na `type_info` objekt, který představuje buď *id typu* nebo typu *výraz*podle toho, jaký tvar operátoru **typeid** se používá. Zobrazit [type_info – třída](../cpp/type-info-class.md) Další informace.
 
-**Typeid** operátor nepracuje se spravovanými typy (abstraktní deklarátory nebo instance), najdete v článku [typeid](../windows/typeid-cpp-component-extensions.md) Další informace o získání <xref:System.Type> zadaného typu.
+**Typeid** operátor nepracuje se spravovanými typy (abstraktní deklarátory nebo instance), najdete v článku [typeid](../extensions/typeid-cpp-component-extensions.md) Další informace o získání <xref:System.Type> zadaného typu.
 
 **Typeid** operátor provádí kontrolu za běhu při použití na l hodnotu polymorfního typu třídy, kde nelze určit skutečný typ objektu pomocí poskytnutých statických údajů. Takové případy jsou:
 

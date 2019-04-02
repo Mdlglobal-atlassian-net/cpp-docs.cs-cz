@@ -7,12 +7,12 @@ helpviewer_keywords:
 - enumerators, ATL classes
 - collection interfaces
 ms.assetid: b2d37119-3ab2-4e0a-b65b-f377f07e4098
-ms.openlocfilehash: 690fc023b72b2606efc190aceb7c266a35a4ebb4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ebf7be8b2c80a714a27567ce0334475519a69454
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283045"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768013"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL – kolekce a výčty
 
@@ -40,7 +40,7 @@ Rozšířený příklad, který vás provede implementace kolekce založené na 
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Obsahuje odkazy na koncepční témata o tom, jak programovat pomocí knihovnu Active Template Library.
 
-[Ukázka ATLCollections](../visual-cpp-samples.md)<br/>
+[Ukázka ATLCollections](../overview/visual-cpp-samples.md)<br/>
 Ukázka, která demonstruje použití `ICollectionOnSTLImpl` a `CComEnumOnSTL`a implementaci vlastních tříd zásad kopírování.
 
 ## <a name="see-also"></a>Viz také:

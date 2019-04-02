@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3622
 ms.assetid: 02836f78-0cf2-4947-b87e-710187d81014
-ms.openlocfilehash: 69565a1a2d159623bca927a94543834d18c13299
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed307f46db1261d79d5b0ec6b36852cac2e6d13e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518089"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781910"
 ---
 # <a name="compiler-error-c3622"></a>Chyba kompilátoru C3622
 
 'class': pro třídu deklarovanou jako '– klíčové slovo' nelze vytvořit instanci
 
-Byl proveden pokus o vytvoření instance třídy označené jako [abstraktní](../../windows/abstract-cpp-component-extensions.md). Třída označena jako `abstract` může být základní třídy, ale nemůže být vytvořena instance.
+Byl proveden pokus o vytvoření instance třídy označené jako [abstraktní](../../extensions/abstract-cpp-component-extensions.md). Třída označena jako `abstract` může být základní třídy, ale nemůže být vytvořena instance.
 
 ## <a name="example"></a>Příklad
 

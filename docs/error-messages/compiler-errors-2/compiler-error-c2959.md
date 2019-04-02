@@ -1,23 +1,23 @@
 ---
-title: Chyba kompilátoru C2959
+title: Compiler Error C2959
 ms.date: 11/04/2016
 f1_keywords:
 - C2959
 helpviewer_keywords:
 - C2959
 ms.assetid: d66bb2a8-70c3-4209-a358-b0c47f111a50
-ms.openlocfilehash: c45466fdf8d0c4bec67779943a5868299f05cf79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3465c3275783a625c172b711e9c41789b6f36713
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535730"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770224"
 ---
-# <a name="compiler-error-c2959"></a>Chyba kompilátoru C2959
+# <a name="compiler-error-c2959"></a>Compiler Error C2959
 
 Obecná třída nebo funkce nemůže být členem šablony
 
-Další informace najdete v tématu [Windows Runtime a spravované šablony](../../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md) a [obecných typů](../../windows/generics-cpp-component-extensions.md).
+Další informace najdete v tématu [Windows Runtime a spravované šablony](../../extensions/windows-runtime-and-managed-templates-cpp-component-extensions.md) a [obecných typů](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Příklad
 

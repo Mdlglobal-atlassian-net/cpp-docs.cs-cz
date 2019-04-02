@@ -2,12 +2,12 @@
 title: Upgrade kódu na Universal CRT
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: ba987c6c88a3b559b8fe6224fd27dfbfe8c9d821
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 368b61820310135f14cbe4225b9315e62d3686a7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741344"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769183"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Upgrade kódu na Universal CRT
 
@@ -35,9 +35,9 @@ Při aktualizaci vašich projektů Visual C++, pokud jste nastavili v projektu *
 
 Vzhledem k tomu, UCRT je teď součástí operačního systému Microsoft Windows, je součástí operačního systému ve Windows 10 a je dostupná prostřednictvím služby Windows Update pro starší operační systémy Windows Vista až Windows 8.1. Redistributable verze je k dispozici pro Windows XP. Jako součást operačního systému se službou Windows Update spravují UCRT aktualizace a údržba, bez ohledu na jejich verze kompilátoru Visual Studio a Microsoft C++. Vzhledem k tomu, UCRT je komponenta Windows pro zabezpečení a snadné aktualizací a menší velikost obrázku, důrazně doporučujeme centrální nasazení UCRT pro vaši aplikaci.
 
-Můžete použít UCRT na libovolnou verzi systému Windows podporuje Visual Studio 2015 nebo Visual Studio 2017. Můžete znovu distribuovat pomocí balíčku pro balíček vcredist pro podporované verze systému Windows než Windows 10. Balíčky vcredist UCRT komponenty a automaticky nainstalují operačních systémech Windows, které nemají je ve výchozím nastavení nainstalovaná. Další informace najdete v tématu [Redistribuce souborů Visual C++](../ide/redistributing-visual-cpp-files.md).
+Můžete použít UCRT na libovolnou verzi systému Windows podporuje Visual Studio 2015 nebo Visual Studio 2017. Můžete znovu distribuovat pomocí balíčku pro balíček vcredist pro podporované verze systému Windows než Windows 10. Balíčky vcredist UCRT komponenty a automaticky nainstalují operačních systémech Windows, které nemají je ve výchozím nastavení nainstalovaná. Další informace najdete v tématu [Redistribuce souborů Visual C++](../windows/redistributing-visual-cpp-files.md).
 
-Aplikace – místní nasazení UCRT se podporuje, ale nedoporučuje se z důvodů výkonu a zabezpečení. Knihovny DLL pro nasazení místní aplikace jsou zahrnuté jako součást sady Windows SDK, v části **redist** podadresáře. Požadované knihovny DLL obsahovat ucrtbase.dll a sadu **APISet předávání** knihovny DLL s názvem rozhraní api-ms-win -_dílčí_.dll. Sadu knihoven DLL vyžaduje na všech operačních systémech liší, proto je vhodné zahrnout všechny knihovny DLL při použití aplikace místní nasazení. Upozornění o nasazení aplikace místní a další podrobnosti najdete v tématu [nasazení v jazyce Visual C++](../ide/deployment-in-visual-cpp.md).
+Aplikace – místní nasazení UCRT se podporuje, ale nedoporučuje se z důvodů výkonu a zabezpečení. Knihovny DLL pro nasazení místní aplikace jsou zahrnuté jako součást sady Windows SDK, v části **redist** podadresáře. Požadované knihovny DLL obsahovat ucrtbase.dll a sadu **APISet předávání** knihovny DLL s názvem rozhraní api-ms-win -_dílčí_.dll. Sadu knihoven DLL vyžaduje na všech operačních systémech liší, proto je vhodné zahrnout všechny knihovny DLL při použití aplikace místní nasazení. Upozornění o nasazení aplikace místní a další podrobnosti najdete v tématu [nasazení v jazyce Visual C++](../windows/deployment-in-visual-cpp.md).
 
 ## <a name="changes-to-the-universal-crt-functions-and-macros"></a>Změny na Universal CRT funkcemi a makry
 
@@ -49,4 +49,4 @@ Mnoho funkcí přidaná nebo aktualizovaná UCRT ke zlepšení ISO C99 shoda a �
 [Přehled potenciálních problémů s upgradem (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Upgrade projektů z dřívějších verzí Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Historie změn Visual C++ 2003–2015](visual-cpp-change-history-2003-2015.md)<br/>
-[Vylepšení shody C++ se sadou Visual Studio 2017](../cpp-conformance-improvements-2017.md)
+[Vylepšení shody C++ se sadou Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md)

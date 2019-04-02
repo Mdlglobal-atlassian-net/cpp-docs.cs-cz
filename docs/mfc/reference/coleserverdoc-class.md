@@ -82,12 +82,12 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: 3069c5f53b37984cbeae8bee1379bb8b0c36ccc3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4cada70723c7fadc9c91c40380b8a7e9fc46a07a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285279"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777256"
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc Class
 
@@ -103,7 +103,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleServerDoc::COleServerDoc](#coleserverdoc)|Vytvoří `COleServerDoc` objektu.|
 
@@ -140,7 +140,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleServerDoc::CreateInPlaceFrame](#createinplaceframe)|Volá se rozhraním, chcete-li vytvořit okno rámce pro místní úpravy.|
 |[COleServerDoc::DestroyInPlaceFrame](#destroyinplaceframe)|Volá se rozhraním zničit okno rámce pro místní úpravy.|
@@ -943,7 +943,7 @@ Tato funkce volá `OnUpdate` členskou funkci pro všechny položky dokumentu s 
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC HIERSVR](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [COleLinkingDoc – třída](../../mfc/reference/colelinkingdoc-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [COleDocument – třída](../../mfc/reference/coledocument-class.md)<br/>

@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDraw
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
-ms.openlocfilehash: 64d61cc9464ef0877baad33a8685cee1482f240d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5fccfbca9fe8c31070f3eb9f208c09cb3722b9b9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301334"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780220"
 ---
 # <a name="cmfccolormenubutton-class"></a>Cmfccolormenubutton – třída
 
@@ -65,7 +65,7 @@ class CMFCColorMenuButton : public CMFCToolBarMenuButton
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCColorMenuButton::CMFCColorMenuButton](#cmfccolormenubutton)|Vytvoří `CMFCColorMenuButton` objektu.|
 
@@ -105,7 +105,7 @@ Dialogové okno Výběr barvy se vytvoří během zpracování [CMFCColorMenuBut
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vytvořit a nakonfigurovat pomocí různých metod v barva tlačítek nabídky `CMFCColorMenuButton` třídy. V příkladu `CPalette` objektu se nejprve vytvoří a použije k vytvoření objektu `CMFCColorMenuButton` třídy. `CMFCColorMenuButton` Objektu je nakonfigurovaný tak, že povolit jeho automatické a další tlačítka a nastavení jeho barvu a počet sloupců. Tento kód je součástí [slovo panel vzorku](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak vytvořit a nakonfigurovat pomocí různých metod v barva tlačítek nabídky `CMFCColorMenuButton` třídy. V příkladu `CPalette` objektu se nejprve vytvoří a použije k vytvoření objektu `CMFCColorMenuButton` třídy. `CMFCColorMenuButton` Objektu je nakonfigurovaný tak, že povolit jeho automatické a další tlačítka a nastavení jeho barvu a počet sloupců. Tento kód je součástí [slovo panel vzorku](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#5](../../mfc/reference/codesnippet/cpp/cmfccolormenubutton-class_1.h)]
 [!code-cpp[NVC_MFC_WordPad#6](../../mfc/reference/codesnippet/cpp/cmfccolormenubutton-class_2.cpp)]

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLL version of MFC [MFC]
 - TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
-ms.openlocfilehash: 17ffc8b46060e742449c9612424b1cd06dd8a9d3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 4bfc60e20a073dd34945b91dd48ba82cdf4ab9f3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523959"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767779"
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033: DLL verze knihovny MFC
 
@@ -31,18 +31,18 @@ Tato technická Poznámka popisuje tři aspekty knihovny DLL. Poslední dva jsou
 
 Pokud vás zajímá vytváření knihovny DLL pomocí knihovny MFC, který lze použít s aplikacemi non-MFC (tomu se říká běžné knihovny MFC DLL), podívejte se na [Technická poznámka 11](../mfc/tn011-using-mfc-as-part-of-a-dll.md).
 
-## <a name="overview-of-mfcxxdll-support-terminology-and-files"></a>Přehled podpory knihovny MFCxx.DLL: terminologie a soubory
+## <a name="overview-of-mfcxxdll-support-terminology-and-files"></a>Přehled knihovny MFCxx.DLL podpory: Terminologie a soubory
 
-**Běžné knihovny MFC DLL**: použít běžné knihovny MFC DLL vytvářet samostatné knihovny DLL pomocí některé z třídy knihovny MFC. Rozhraní hranice aplikace/DLL jsou rozhraní "C" a klientská aplikace nemusí být aplikace knihovny MFC.
+**Běžné knihovny MFC DLL**: Běžné knihovny MFC DLL použijete k sestavení samostatné knihovny DLL pomocí některé z třídy knihovny MFC. Rozhraní hranice aplikace/DLL jsou rozhraní "C" a klientská aplikace nemusí být aplikace knihovny MFC.
 
-Toto je verze podpora DLL, které jsou podporované ve verzi 1.0 knihovny MFC. Je popsána v [Technická poznámka 11](../mfc/tn011-using-mfc-as-part-of-a-dll.md) a ukázce MFC Advanced Concepts [DLLScreenCap](../visual-cpp-samples.md).
+Toto je verze podpora DLL, které jsou podporované ve verzi 1.0 knihovny MFC. Je popsána v [Technická poznámka 11](../mfc/tn011-using-mfc-as-part-of-a-dll.md) a ukázce MFC Advanced Concepts [DLLScreenCap](../overview/visual-cpp-samples.md).
 
 > [!NOTE]
 > Od verze Visual C++ verze 4.0 termín **USRDLL** je zastaralá a nahradila ji běžné knihovny MFC DLL, která staticky propojuje ke knihovně MFC. Může také vytvořit standardní knihovny MFC DLL, která dynamicky propojuje ke knihovně MFC.
 
 MFC 3.0 (a vyšší) podporuje běžných knihovnách MFC DLL se všechny nové funkce, včetně tříd OLE a databáze.
 
-**AFXDLL –**: to se také označuje jako sdílenou verzi knihovny MFC. Toto je novou podporu knihovny DLL do MFC 2.0. Samotné knihovny MFC je v řadě knihoven DLL (popsaných níže) a klientská aplikace nebo knihovny DLL dynamicky propojuje knihovny DLL, které jsou potřeba. Rozhraní hranice aplikace/DLL jsou C + +/ rozhraní třídy knihovny MFC. Klientská aplikace musí být aplikace knihovny MFC. Tento atribut podporuje všechny funkce MFC 3.0 (výjimka: UNICODE není podporován pro databázové třídy).
+**AFXDLL**: To se také označuje jako sdílenou verzi knihovny MFC. Toto je novou podporu knihovny DLL do MFC 2.0. Samotné knihovny MFC je v řadě knihoven DLL (popsaných níže) a klientská aplikace nebo knihovny DLL dynamicky propojuje knihovny DLL, které jsou potřeba. Rozhraní hranice aplikace/DLL jsou C + +/ rozhraní třídy knihovny MFC. Klientská aplikace musí být aplikace knihovny MFC. Tento atribut podporuje všechny funkce MFC 3.0 (výjimka: UNICODE není podporován pro databázové třídy).
 
 > [!NOTE]
 > Od verze Visual C++ verze 4.0 tento druh knihovny DLL se označuje jako "Rozšiřující knihovny DLL."
@@ -51,7 +51,7 @@ Tato poznámka bude používat knihovny MFCxx.DLL jako reference pro celou nasta
 
 - Ladění: MFCxxD.DLL (kombinace) a MFCSxxD.LIB (static).
 
-- Verze: MFCxx.DLL (kombinace) a MFCSxx.LIB (static).
+- Verze: (Kombinace) knihovny MFCxx.DLL a MFCSxx.LIB (static).
 
 - Ladění Unicode: MFCxxUD.DLL (kombinace) a MFCSxxD.LIB (static).
 
@@ -98,7 +98,7 @@ Rozšiřující knihovna DLL MFC je knihovna DLL obsahující třídy a funkce z
 
 - Rozšiřující knihovna DLL MFC obvykle poskytne inicializační rutina pro vytvoření `CDynLinkLibrary` MFC – rozšiřující knihovny DLL chce export-li `CRuntimeClass`no nebo prostředky do aplikace. Odvozená třída `CDynLinkLibrary` mohou být použity, pokud na aplikační data musí být udržuje MFC – rozšiřující knihovny DLL.
 
-Tyto aspekty jsou popsány podrobněji níže. Také byste měli použít k ukázce MFC Advanced Concepts [DLLHUSK](../visual-cpp-samples.md) protože ilustruje:
+Tyto aspekty jsou popsány podrobněji níže. Také byste měli použít k ukázce MFC Advanced Concepts [DLLHUSK](../overview/visual-cpp-samples.md) protože ilustruje:
 
 - Vytvoření aplikace pomocí sdílené knihovny. (DLLHUSK. Soubor EXE je aplikace knihovny MFC, která dynamicky propojuje ke knihovnám MFC také další knihovny DLL).
 
@@ -274,7 +274,7 @@ class CExampleA : public CObject
 #define AFX_DATA
 ```
 
-### <a name="dllmain"></a>Zpracování funkce DllMain
+### <a name="dllmain"></a>DllMain
 
 Následuje přesný kód, který byste měli umístit do hlavní zdrojový soubor pro rozšíření MFC DLL. Poté, co obsahuje standardní by měl mít. Všimněte si, že při použití AppWizard vytvořit počáteční soubory pro rozšiřující knihovny DLL MFC, poskytne `DllMain` za vás.
 
@@ -324,7 +324,7 @@ Dynamické vytváření objektů jazyka C++ název třídy C++ se podobá. Mecha
 
 Pokud chcete, aby klientská aplikace použít třídy v rozšíření MFC DLL, které jsou `DECLARE_SERIAL`, je nutné exportovat třídy bude viditelná pro klientské aplikace. Tím se taky dělá návod `CDynLinkLibrary` seznamu.
 
-V případě ukázce MFC Advanced Concepts [DLLHUSK](../visual-cpp-samples.md), seznamu vypadá přibližně takto:
+V případě ukázce MFC Advanced Concepts [DLLHUSK](../overview/visual-cpp-samples.md), seznamu vypadá přibližně takto:
 
 ```Example
 head ->   DLLHUSK.EXE   - or - DLLHUSK.EXE
@@ -339,7 +339,7 @@ head ->   DLLHUSK.EXE   - or - DLLHUSK.EXE
 
 Knihovny MFCxx.DLL je obvykle poslední v seznamu prostředků a třídy. Knihovny MFCxx.DLL zahrnuje všechny standardní prostředky MFC, včetně řetězce výzev pro všechny identifikátory standardních příkazů. Uvedení na konec seznamu umožňuje knihovny DLL a vlastní klientské aplikace nebudete chtít své vlastní kopii standardní prostředky MFC, ale chcete-li využívají sdílené prostředky do knihovny MFCxx.DLL místo.
 
-Sloučení prostředků tak názvy tříd všech knihoven DLL do oboru názvů klientské aplikace má nevýhodou, že budete muset pečlivě jaké ID nebo názvy, které vyberete. Můžete samozřejmě tuto funkci můžete zakázat tak, že vyexportujete buď není prostředky nebo `CDynLinkLibrary` objektu do klientské aplikace. [DLLHUSK](../visual-cpp-samples.md) ukázka spravuje sdílený prostředek oboru názvů pomocí více souborů záhlaví. Zobrazit [Technická poznámka 35](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md) další tipy pro používání souborů sdílených prostředků.
+Sloučení prostředků tak názvy tříd všech knihoven DLL do oboru názvů klientské aplikace má nevýhodou, že budete muset pečlivě jaké ID nebo názvy, které vyberete. Můžete samozřejmě tuto funkci můžete zakázat tak, že vyexportujete buď není prostředky nebo `CDynLinkLibrary` objektu do klientské aplikace. [DLLHUSK](../overview/visual-cpp-samples.md) ukázka spravuje sdílený prostředek oboru názvů pomocí více souborů záhlaví. Zobrazit [Technická poznámka 35](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md) další tipy pro používání souborů sdílených prostředků.
 
 ### <a name="initializing-the-dll"></a>Inicializace knihovny DLL
 
@@ -411,7 +411,7 @@ Pokud používáte externí soubor pravidel funkce jazyka Visual C++, nebo použ
 
 Požadované příznaky kompilátoru:
 
-- **/ / / D_AFXDLL MD**
+- **/D_AFXDLL /MD**
    **/D_AFXDLL**
 
 Tento symbol, který má být definována musí standardní záhlaví knihovny MFC:
@@ -432,7 +432,7 @@ Většina ukázkové programy MFC může být sestaven z jazyka Visual C++, nebo
 
 Některé z těchto ukázek použití knihovny MFCxx.DLL převést, můžete načíst. Klíč k vícenásobné aktivaci souboru do Visual C++ a nastavit možnosti projektu, jak je popsáno výše. Pokud používáte NMAKE sestavení, můžete zadat "AFXDLL = 1" na NMAKE příkazového řádku a že bude vytvoření vzorku pomocí sdílené knihovny MFC.
 
-Ukázce MFC Advanced Concepts [DLLHUSK](../visual-cpp-samples.md) využívá rozhraní DLL verze knihovny MFC. Tato ukázka nejen ukazuje, jak sestavit aplikaci propojit s MFCxx.DLL, ale také ukazuje další funkce knihovny DLL MFC možnost balení například rozšiřující knihovny DLL MFC je popsáno dále v tomto Technická poznámka.
+Ukázce MFC Advanced Concepts [DLLHUSK](../overview/visual-cpp-samples.md) využívá rozhraní DLL verze knihovny MFC. Tato ukázka nejen ukazuje, jak sestavit aplikaci propojit s MFCxx.DLL, ale také ukazuje další funkce knihovny DLL MFC možnost balení například rozšiřující knihovny DLL MFC je popsáno dále v tomto Technická poznámka.
 
 ### <a name="packaging-notes"></a>Poznámky k vytváření balíčků
 

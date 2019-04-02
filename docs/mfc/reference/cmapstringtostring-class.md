@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
-ms.openlocfilehash: d18cad73f9cf42ffd04ecbcde840d50f6167743a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ed717497866076681e39cdee7803a45eb8e097d3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266221"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780363"
 ---
 # <a name="cmapstringtostring-class"></a>CMapStringToString Class
 
@@ -71,13 +71,13 @@ například se přeloží na
 
 ### <a name="public-structures"></a>Veřejné struktury
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMapStringToString::CPair](#cpair)|Vnořené struktury obsahující hodnotu klíče a hodnoty objektu přidruženými řetězcovými.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMapStringToOb::CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Konstruktor|
 
@@ -104,7 +104,7 @@ například se přeloží na
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMapStringToOb::operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Vloží prvek do mapy – operátor nahrazení pro `SetAt`.|
 
@@ -226,6 +226,6 @@ Volejte tuto metodu za účelem vyhledání prvek mapy s klíčem, který přesn
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC shromažďování](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC shromažďování](../../overview/visual-cpp-samples.md)<br/>
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

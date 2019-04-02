@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-ms.openlocfilehash: 7ca0c657872bb2a3c56c9406a88f8c674cb46938
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e8b88f2722f5a4379276f13c2ef159aa4d120533
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260631"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776502"
 ---
 # <a name="ctooltipmanager-class"></a>CTooltipManager Class
 
@@ -37,7 +37,7 @@ class CTooltipManager : public CObject
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CTooltipManager::CreateToolTip](#createtooltip)|Vytvoří ovládací prvek tooltip pro zadaný ovládací prvek typy Windows.|
 |[CTooltipManager::DeleteToolTip](#deletetooltip)|Odstraní ovládací prvek tooltip.|
@@ -156,7 +156,7 @@ Při volání této metody, všichni stávající vlastníci popisek AFX_WM_UPDA
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití `SetTooltipParams` metodu `CTooltipManager` třídy. Tento fragment kódu je součástí [nakreslit Client sample](../../visual-cpp-samples.md).
+Následující příklad ukazuje způsob použití `SetTooltipParams` metodu `CTooltipManager` třídy. Tento fragment kódu je součástí [nakreslit Client sample](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#11](../../mfc/reference/codesnippet/cpp/ctooltipmanager-class_1.cpp)]
 

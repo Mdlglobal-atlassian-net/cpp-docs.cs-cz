@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: fe9b282fd248f8dd03a6a7f078c03866d1b14b2d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 06c6d4dff28399f3d8e6ac7f46d9ed751850036f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305013"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775306"
 ---
 # <a name="cview-class"></a>CView – třída
 
@@ -73,7 +73,7 @@ class AFX_NOVTABLE CView : public CWnd
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CView::CView](#cview)|Vytvoří `CView` objektu.|
 
@@ -97,7 +97,7 @@ class AFX_NOVTABLE CView : public CWnd
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CView::OnActivateFrame](#onactivateframe)|Volá se, když se aktivuje nebo deaktivuje okno rámce obsahující zobrazení.|
 |[CView::OnActivateView](#onactivateview)|Volá se, když se aktivuje zobrazení.|
@@ -351,7 +351,7 @@ Maximum DROPEFFECT Výčtový typ, který označuje typ přetažení, ke kterým
 
 - DROPEFFECT_MOVE pro MK_ALT vytvoří kopii přetažený objekt a odstranění původního objektu. To je obvykle výchozí odkládací efekt, pokud zobrazení může přijmout tímto datovým objektem.
 
-Další informace najdete v ukázce MFC Advanced Concepts [OCLIENT](../../visual-cpp-samples.md).
+Další informace najdete v ukázce MFC Advanced Concepts [OCLIENT](../../overview/visual-cpp-samples.md).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -405,7 +405,7 @@ Maximum DROPEFFECT Výčtový typ, který označuje typ přetažení, ke kterým
 
 - DROPEFFECT_MOVE pro MK_ALT vytvoří kopii přetažený objekt a odstranění původního objektu. To je obvykle výchozí odkládací efekt, pokud zobrazení může přijmout datový objekt.
 
-Další informace najdete v ukázce MFC Advanced Concepts [OCLIENT](../../visual-cpp-samples.md).
+Další informace najdete v ukázce MFC Advanced Concepts [OCLIENT](../../overview/visual-cpp-samples.md).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -445,7 +445,7 @@ Maximum DROPEFFECT Výčtový typ, který označuje typ přetažení, ke kterým
 
 - DROPEFFECT_SCROLL znamená, že operace přetažení posuvníku se použije nebo ke kterým dochází v cílové zobrazení.
 
-Další informace najdete v ukázce MFC Advanced Concepts [OCLIENT](../../visual-cpp-samples.md).
+Další informace najdete v ukázce MFC Advanced Concepts [OCLIENT](../../overview/visual-cpp-samples.md).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -871,7 +871,7 @@ Pokud *lHint* je 0 a *pHint* má hodnotu NULL, dokument odeslala oznámení obec
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-ms.openlocfilehash: af6d866298309f5ddb8eb21a5caeb3d1526b166a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 382960b4dc4dcfa61c836a87044dd14585756174
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276283"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769638"
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem Class
 
@@ -51,7 +51,7 @@ class COleDocObjectItem : public COleClientItem
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleDocObjectItem::DoDefaultPrinting](#dodefaultprinting)|Vytiskne dokument aplikace typu kontejner pomocí výchozích nastavení tiskárny.|
 |[COleDocObjectItem::ExecCommand](#execcommand)|Provede příkaz specifikovaných uživatelem.|
@@ -305,7 +305,7 @@ Nezničí klientské položky.
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC MFCBIND](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC MFCBIND](../../overview/visual-cpp-samples.md)<br/>
 [COleClientItem – třída](../../mfc/reference/coleclientitem-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [COleClientItem – třída](../../mfc/reference/coleclientitem-class.md)<br/>

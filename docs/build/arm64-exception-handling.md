@@ -1,12 +1,12 @@
 ---
 title: Zpracování výjimek ARM64
 ms.date: 11/19/2018
-ms.openlocfilehash: 921029704e4bf5adabfbe0a82387dadc911b9036
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 78d3d7d206adcb123c9537e91c2d5976b8be5baa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816149"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770067"
 ---
 # <a name="arm64-exception-handling"></a>Zpracování výjimek ARM64
 
@@ -54,7 +54,7 @@ Následují předpoklady v popisu zpracování výjimek:
 
 ![rozložení rámce zásobníku](media/arm64-exception-handling-stack-frame.png "rozložení rámce zásobníku")
 
-Pro funkce rámce zřetězené lze uložit dvojice fp a lr v jakékoliv pozici v oblasti místní proměnné v závislosti na důležité informace o optimalizaci. Cílem je maximalizovat počet místních hodnot, které mohou být dosažitelný podle jedna jediná instrukce založené na ukazatel na rámec (r29) nebo ukazatel zásobníku (sp). Ale pro `alloca` funkce, musí být zřetězené a r29 musí odkazovat na konec zásobníku. Umožňující lepší pokrytí register pár – adresování – režim, zaregistrujte stálé aave, které oblasti jsou umístěny v horní části zásobníku místní síti. Tady jsou příklady, které ilustrují několik nejúčinnější sekvence prologu. Z důvodu přehlednosti a lepší umístění mezipaměti pořadí ukládání volaný – uložené registry ve všech canonical Prology je popořadě "rostoucí up". `#framesz` níže představuje velikost vším, co (s výjimkou oblasti alloca). `#localsz` a `#outsz` označení velikost místní síti (včetně uložení oblast pro \<r29, lr > pár) a odchozí velikost parametru v uvedeném pořadí.
+Pro funkce rámce zřetězené lze uložit dvojice fp a lr v jakékoliv pozici v oblasti místní proměnné v závislosti na důležité informace o optimalizaci. Cílem je maximalizovat počet místních hodnot, které mohou být dosažitelný podle jedna jediná instrukce založené na ukazatel na rámec (r29) nebo ukazatel zásobníku (sp). Ale pro `alloca` funkce, musí být zřetězené a r29 musí odkazovat na konec zásobníku. Umožňující lepší pokrytí register pár – adresování – režim stálé registru oblasti jsou umístěny v horní části zásobníku místní síti. Tady jsou příklady, které ilustrují několik nejúčinnější sekvence prologu. Z důvodu přehlednosti a lepší umístění mezipaměti pořadí ukládání volaný – uložené registry ve všech canonical Prology je popořadě "rostoucí up". `#framesz` níže představuje velikost vším, co (s výjimkou oblasti alloca). `#localsz` a `#outsz` označení velikost místní síti (včetně uložení oblast pro \<r29, lr > pár) a odchozí velikost parametru v uvedeném pořadí.
 
 1. Zřetězené #localsz \<= 512
 
@@ -267,7 +267,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 }
 ```
 
-Je třeba poznamenat, že i když prologu a epilogu každý má své vlastní se budou indexovat kódy unwind, v tabulce se sdílí mezi nimi a je šíři (a ne úplně neobvyklé), můžete všechny sdílejí stejné kódy (viz příklad 2 v dodatku A níže). Autorům by měla optimalizovat pro tento případ, zejména protože nejvyšší index, který se dá nastavit je 255, tím omezíte celkový počet kódy unwind pro určité funkce.
+Je třeba poznamenat, že i když prologu a epilogu každý má své vlastní se budou indexovat kódy unwind, v tabulce se sdílí mezi nimi a je šíři (a ne úplně neobvyklé), můžete všechny sdílejí stejné kódy (viz příklad 2 v oddílu bel příklady Ak). Autorům by měla optimalizovat pro tento případ, zejména protože nejvyšší index, který se dá nastavit je 255, tím omezíte celkový počet kódy unwind pro určité funkce.
 
 ### <a name="unwind-codes"></a>Parsovat kódy unwind
 
@@ -340,7 +340,7 @@ Pole jsou následující:
 
 - **Funkce spuštění RVA** je adresa RVA 32-bit zahájení funkce.
 - **Příznak** je 2 bitové pole, jak je popsáno výše, s následující význam:
-  - 00 = sbalené unwind dat nepoužívá; zbývající bity přejděte na záznam .xdata níže
+  - 00 = sbalené unwind dat nepoužívá; přejděte na záznam .xdata zbývající bity
   - 01 = sbalené unwind dat použít, jak je popsáno níže pomocí jednoho kódu prologu a epilogu na začátek a konec rozsahu
   - 10 = sbalené unwind dat použít, jak je popsáno níže pro kód bez jakékoli kódu prologu a epilogu; To je užitečné pro popis segmentů oddělených funkce.
   - 11 = vyhrazené;
@@ -353,7 +353,7 @@ Pole jsou následující:
   - 11 = zřetězené funkce instrukce pár úložiště/zatížení se používá v kódu prologu/epilogu \<r29, lr >
 - **H** ukládání na začátku funkce je 1bitový příznak označující, zda funkce homes parametr celočíselné registry (r0 – r7). (0 = není domácí registrů, 1 = domovů Registry).
 - **RegI** je 4 bitového pole určující počet stálé INT registrů (r19 r28) uloží do umístění zásobníku canonical.
-- **RegF** je 3bitová pole určující počet FP stálé registrů (d8 d15) uloží do umístění zásobníku canonical. (0 = žádný FP registr uložen, m > 0: m + 1 FP registrů se uloží). Pro funkci uložit jenom jeden registr FP zabaleny unwind dat nelze použít.
+- **RegF** je 3bitová pole určující počet FP stálé registrů (d8 d15) uloží do umístění zásobníku canonical. (RegF = 0: žádné registr FP bude uloženo. RegF > 0: RegF + 1 FP registrů se uloží). Provedené zabalené unwind dat nelze použít pro funkci, která uložit jenom jeden registr FP.
 
 Canonical Prology, které spadají do kategorie 1, 2 (bez odchozí oblasti parametrů), 3 a 4 výše v části může být reprezentována sbalené unwind formátu.  Epilogů kanonické funkce podle velmi podobné formuláře, s výjimkou **H** nemá žádný vliv `set_fp` instrukce je vynechán, a jsou v epilogu obrácený pořadí kroků, jakož i pokyny v každém kroku. Algoritmus pro komprimovaný xdata následující postup podrobně popsané v následující tabulce:
 
@@ -386,7 +386,7 @@ Krok #|Nastavení příznaku|# instrukcí|Operační kód|Uvolnění kódu
 
 \*\* Pokud **RegI** == **CR** == 0, a **RegF** ! = 0, první stp pro plovoucí desetinné čárky snížením.
 
-\*\*\* Žádné instrukce odpovídající `mov r29, sp` je k dispozici v epilogu. Provedené zabalené funkce vyžaduje obnovení sp z r29, využijeme nelze-li vrátit se zpět data.
+\*\*\* Žádné instrukce odpovídající `mov r29, sp` je k dispozici v epilogu. Provedené zabalené unwind dat nelze použít, pokud funkci vyžaduje obnovení sp z r29.
 
 ### <a name="unwinding-partial-prologs-and-epilogs"></a>Odvíjení částečné Prology a epilogu funkce
 

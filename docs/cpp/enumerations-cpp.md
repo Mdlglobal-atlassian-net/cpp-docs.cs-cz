@@ -10,19 +10,19 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
-ms.openlocfilehash: 3ed135c0fc32f9218783c964ed4ce79a9b3ec067
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: caec9ea7ac5482ff23b73676a3fd7b3d25ad293f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332410"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772562"
 ---
 # <a name="enumerations-c"></a>Výčty (C++)
 
 Výčet je uživatelem definovaný typ, který se skládá z sadu pojmenovaných integrálních konstant nazývaných enumerátory.
 
 > [!NOTE]
->  Tento článek se týká jazyka C++ podle standardu ISO **výčtu** typu a rozsahu (nebo silný) **výčet tříd** typ, který je uveden v C ++ 11. Informace o **veřejný výčet tříd** nebo **soukromý výčet tříd** typy v jazyce C + +/ CLI a C + +/ CX, naleznete v tématu [výčet tříd](../windows/enum-class-cpp-component-extensions.md).
+>  Tento článek se týká jazyka C++ podle standardu ISO **výčtu** typu a rozsahu (nebo silný) **výčet tříd** typ, který je uveden v C ++ 11. Informace o **veřejný výčet tříd** nebo **soukromý výčet tříd** typy v jazyce C + +/ CLI a C + +/ CX, naleznete v tématu [výčet tříd](../extensions/enum-class-cpp-component-extensions.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,10 +46,10 @@ enum class C : short;  // ... may have any integral underlying type
 
 ## <a name="parameters"></a>Parametry
 
-*identifikátor*<br/>
+*identifier*<br/>
 Název typu daný pro výčet.
 
-*Typ*<br/>
+*type*<br/>
 Základní typ čítačů; všechny čítače mají stejný základní typ. Může být libovolný integrální typ.
 
 *seznam výčtu*<br/>
@@ -145,7 +145,7 @@ Všimněte si, že na řádku `hand = account_num;` stále způsobuje chybu, ke 
 
 ## <a name="no_enumerators"></a> Výčty pomocí žádné čítače
 
-**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): definuje výčet (pravidelných nebo s vymezeným oborem) s explicitní nadřazeného typu a žádné čítače, můžete platit zavést nový celočíselný typ, který nemá implicitní převod do jakéhokoli jiného typu. Pomocí tohoto typu namísto integrovaných základního typu může eliminovat riziko drobné chyby způsobené zvyšuje ochranu před nechtěnými implicitní převody.
+**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Definuje výčet (pravidelných nebo s vymezeným oborem) s explicitní nadřazeného typu a žádné čítače, můžete platit zavést nové integrální typ, který nemá žádný implicitní převod na jiný typ. Pomocí tohoto typu namísto integrovaných základního typu může eliminovat riziko drobné chyby způsobené zvyšuje ochranu před nechtěnými implicitní převody.
 
 ```cpp
 enum class byte : unsigned char { };

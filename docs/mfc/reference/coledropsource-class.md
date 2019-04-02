@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-ms.openlocfilehash: 587aa0730502d5e8f90c4fec57bb87886b79fb3f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a2773333ea1dd89f73e7bdf3c5dc2f36945e0810
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304974"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778504"
 ---
 # <a name="coledropsource-class"></a>COleDropSource Class
 
@@ -35,13 +35,13 @@ class COleDropSource : public CCmdTarget
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleDropSource::COleDropSource](#coledropsource)|Vytvoří `COleDropSource` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleDropSource::GiveFeedback](#givefeedback)|Změní kurzor během operace přetažení myší.|
 |[COleDropSource::OnBeginDrag](#onbegindrag)|Zpracovává zachycení myši během operace přetažení myší.|
@@ -163,7 +163,7 @@ Protože tato funkce je volána často, to by mělo být optimalizované co nejv
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC HIERSVR](../../visual-cpp-samples.md)<br/>
-[Ukázky knihovny MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [CCmdTarget – třída](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

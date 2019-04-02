@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: 550f238ae66bcaf7d5afc245b709c42c78769949
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: aa88cc2d4ee915b970157ee6ed280512e2352bcc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305065"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779024"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty Class
 
@@ -189,14 +189,14 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty)|Vytvoří `CMFCPropertyGridProperty` objektu.|
 |`CMFCPropertyGridProperty::~CMFCPropertyGridProperty`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::AddOption](#addoption)|Přidá novou položku seznamu do ovládacího prvku seznamu vlastností.|
 |[CMFCPropertyGridProperty::AddSubItem](#addsubitem)|Přidá podřízenou položku Vlastnosti.|
@@ -269,7 +269,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::CreateCombo](#createcombo)|Volá se rozhraním, chcete-li přidat pole se seznamem na vlastnost.|
 |[CMFCPropertyGridProperty::HasButton](#hasbutton)|Určuje, zda vlastnost obsahuje tlačítko.|
@@ -297,7 +297,7 @@ Objekt vlastnosti může představovat datové typy, například řetězce, data
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vytvořit `CMFCPropertyGridProperty` objektu. Tento příklad také ukazuje, jak použít různé metody v `CMFCPropertyGridProperty` třídy přidejte možnost Přidat podřízenou položku, povolte vlastnost a zobrazit vlastnosti. V tomto příkladu je součástí [nové ovládací prvky ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak vytvořit `CMFCPropertyGridProperty` objektu. Tento příklad také ukazuje, jak použít různé metody v `CMFCPropertyGridProperty` třídy přidejte možnost Přidat podřízenou položku, povolte vlastnost a zobrazit vlastnosti. V tomto příkladu je součástí [nové ovládací prvky ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#27](../../mfc/reference/codesnippet/cpp/cmfcpropertygridproperty-class_1.cpp)]
 

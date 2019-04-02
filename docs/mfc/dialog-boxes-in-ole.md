@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], OLE
 - Insert object
 ms.assetid: 73c41eb8-738a-4d02-9212-d3395bb09a3a
-ms.openlocfilehash: 1081a831cc2b9fc0ab22e2c80a4f657466534d86
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fa3d87e2cc17e297c3e6387920c6d527d8ddbe39
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270888"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767649"
 ---
 # <a name="dialog-boxes-in-ole"></a>Dialogová okna v prostředí OLE
 
@@ -31,7 +31,7 @@ Toto dialogové okno umožňuje uživateli řídit formát používaný při vkl
 Toto dialogové okno umožňuje uživateli vybrat, jaká ikona se zobrazí pro reprezentaci propojené nebo vložené položky. Zobrazte toto dialogové okno, když uživatel vybere ikonu změnit z nabídky Úpravy nebo vybere změnit ikonu tlačítka Vložit jinak nebo převést dialogových oknech. Také zobrazte jeho když uživatel otevře dialogové okno Vložit objekt a vybere zobrazit jako ikonu. Použití [colechangeicondialog –](../mfc/reference/colechangeicondialog-class.md) třídu dialogovému oknu.
 
 *Převést*<br/>
-Toto dialogové okno umožňuje uživateli změnit typ vložené nebo propojené položky. Například pokud s vloženými metasoubor ve složeném dokumentu a později budete chtít použít jinou aplikaci k úpravě vložený metasoubor, můžete použít dialogové okno Převést. Toto dialogové okno se obvykle zobrazí kliknutím *typ položky* objektu v nabídce Úpravy a potom v nabídce kaskádové příkaz převést. Použití [coleconvertdialog –](../mfc/reference/coleconvertdialog-class.md) třídu dialogovému oknu. Například spuštění ukázky MFC OLE [OCLIENT](../visual-cpp-samples.md).
+Toto dialogové okno umožňuje uživateli změnit typ vložené nebo propojené položky. Například pokud s vloženými metasoubor ve složeném dokumentu a později budete chtít použít jinou aplikaci k úpravě vložený metasoubor, můžete použít dialogové okno Převést. Toto dialogové okno se obvykle zobrazí kliknutím *typ položky* objektu v nabídce Úpravy a potom v nabídce kaskádové příkaz převést. Použití [coleconvertdialog –](../mfc/reference/coleconvertdialog-class.md) třídu dialogovému oknu. Například spuštění ukázky MFC OLE [OCLIENT](../overview/visual-cpp-samples.md).
 
 *Upravit odkazy nebo aktualizovat odkazy*<br/>
 Dialogové okno Upravit propojení umožňuje uživatelům změnit informace o zdroji propojeného objektu. Dialogové okno Aktualizovat odkazy ověří zdroje všechny propojené položky v aktuálním dialogovém okně a zobrazí dialogové okno úpravy odkazů v případě potřeby. Zobrazte dialogové okno Upravit odkazy, když se uživatel rozhodne odkazy z nabídky Úpravy. Zobrazí dialogové okno Aktualizovat odkazy se obvykle při prvním otevření složeného dokumentu. Použijte buď [colelinksdialog –](../mfc/reference/colelinksdialog-class.md) nebo [coleupdatedialog –](../mfc/reference/coleupdatedialog-class.md) třídy, v závislosti na tom, které dialogové okno, které chcete zobrazit.

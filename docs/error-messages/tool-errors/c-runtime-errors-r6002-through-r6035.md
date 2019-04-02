@@ -4,12 +4,12 @@ ms.date: 11/17/2017
 f1_keywords:
 - c.errors
 ms.assetid: 78019050-9a30-4b61-8250-a5702e0e2393
-ms.openlocfilehash: 74494a92d9ac8d84da64af7a896f3c32913afc40
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: b1a4aa5114965451791f44d88eb9e5ca61ff9c57
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178253"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766882"
 ---
 # <a name="c-runtime-errors-r6002-through-r6035"></a>C Runtime chyby R6002 až R6035
 
@@ -17,7 +17,7 @@ Tato část se odkaz na chyby, které mohou být generovány pomocí knihovny C 
 
 Můžete zjistit další pomoc pro chyby a upozornění na veřejných fórech od Microsoftu. Můžete vyhledat chyby nebo číslo upozornění na [komunity vývojářů](https://developercommunity.visualstudio.com) lokality. [Visual C++ General](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vcgeneral) je fórum pro otázky týkající se jazyka Visual C++, které nejsou popsány na jiných fórech. Můžete také vyhledat chyby a upozornění a Ptejte se na [Stack Overflow](http://stackoverflow.com/) najít řešení.
 
-Odkazy na další pomoc a zdroje poskytované komunitou, naleznete v části [Nápověda pro Visual C++ a komunity](../../visual-cpp-help-and-community.md).
+Odkazy na další pomoc a zdroje poskytované komunitou, naleznete v části [Nápověda pro Visual C++ a komunity](../../overview/visual-cpp-help-and-community.md).
 
 ## <a name="c-runtime-errors"></a>Chyby modulu C Runtime
 

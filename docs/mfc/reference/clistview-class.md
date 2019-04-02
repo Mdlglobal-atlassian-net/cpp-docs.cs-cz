@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CListView [MFC], GetListCtrl
 - CListView [MFC], RemoveImageList
 ms.assetid: 7626bdb2-a1b8-4eab-b631-6743710a8432
-ms.openlocfilehash: 4507c2a640296c2d2619b1da7a0ebae2bc6ef401
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 698e37b2853a2ca3698ee0a426c8ded688c99c58
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291275"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776619"
 ---
 # <a name="clistview-class"></a>CListView – třída
 
@@ -33,19 +33,19 @@ class CListView : public CCtrlView
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CListView::CListView](#clistview)|Vytvoří `CListView` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CListView::GetListCtrl](#getlistctrl)|Vrátí ovládací prvek seznamu, který je přidružený k zobrazení.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CListView::RemoveImageList](#removeimagelist)|Odebere seznam zadané bitové kopie ze zobrazení seznamu.|
 
@@ -110,7 +110,7 @@ Z nuly vycházející index bitové kopie k odebrání.
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC ROWLIST](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC ROWLIST](../../overview/visual-cpp-samples.md)<br/>
 [CCtrlView – třída](../../mfc/reference/cctrlview-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CCtrlView – třída](../../mfc/reference/cctrlview-class.md)

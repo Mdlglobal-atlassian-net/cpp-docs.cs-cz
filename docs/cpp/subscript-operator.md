@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '[] operator'
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
-ms.openlocfilehash: 5921b89c7637f1a4d1171c8835bb1b5300b718fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d55c18d2c9faa1a704bea129f2551937e76133c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572910"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767922"
 ---
 # <a name="subscript-operator-"></a>Operátor dolního indexu]
 
@@ -28,7 +28,7 @@ postfix-expression [ expression ]
 
 Výraz přípony (může to také být primární výraz) za nímž následuje operátor dolního indexu **[] č.**, určuje indexování pole.
 
-Informace o spravovaných polí naleznete v tématu [pole](../windows/arrays-cpp-component-extensions.md).
+Informace o spravovaných polí v jazyce C + +/ CLI, najdete v článku [pole](../extensions/arrays-cpp-component-extensions.md).
 
 Obvykle hodnota reprezentovaná *postfix-expression* je hodnota ukazatele, jako je například identifikátor pole a *výraz* je celé číslo (včetně výčtových typů). Všechny možnosti, které je však vyžaduje syntakticky je jeden z výrazů být typu ukazatele a druhý být celočíselného typu. Proto může být celočíselná hodnota v *postfix-expression* pozice a hodnota ukazatele může být v závorkách v *výraz* nebo dolní index pozice. Předpokládejme následující fragment kódu:
 

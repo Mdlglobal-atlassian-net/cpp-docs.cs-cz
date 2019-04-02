@@ -9,12 +9,12 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-ms.openlocfilehash: 16e949973ff621b1e4e36475d95763ac47b4a00d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 182abe71ccc9552c113ebb114b4351178e48b096
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280215"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766844"
 ---
 # <a name="clipboard-adding-other-formats"></a>Schránka: Přidání dalších formátů
 
@@ -36,7 +36,7 @@ Chcete-li přidat další formáty těm, které jsou umístěny do schránky, je
 
 1. Přidání standardní formáty voláním `COleDataSource::CacheGlobalData` pro každé standardní formát, které chcete podporovat.
 
-Tento postup se používá v MFC OLE ukázkový program [HIERSVR](../visual-cpp-samples.md) (Prozkoumat `OnGetClipboardData` členskou funkci **CServerItem** třídy). V této ukázce jediným rozdílem je, daný krok tři není implementovat, protože HIERSVR podporuje žádné standardní formáty.
+Tento postup se používá v MFC OLE ukázkový program [HIERSVR](../overview/visual-cpp-samples.md) (Prozkoumat `OnGetClipboardData` členskou funkci **CServerItem** třídy). V této ukázce jediným rozdílem je, daný krok tři není implementovat, protože HIERSVR podporuje žádné standardní formáty.
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
 

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetButtonsFont
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
-ms.openlocfilehash: be11bcd4cdbcd8448cc54f688d7dab9b61f49a57
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fc1281db0271393ec0538e26c2a2d2af09c99f7a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304077"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775254"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar – třída
 
@@ -89,7 +89,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ## <a name="remarks"></a>Poznámky
 
-Příklad panel aplikace Outlook, najdete v článku [OutlookDemo vzorku: Aplikace MFC OutlookDemo](../../visual-cpp-samples.md).
+Příklad panel aplikace Outlook, najdete v článku [OutlookDemo vzorku: Aplikace MFC OutlookDemo](../../overview/visual-cpp-samples.md).
 
 ## <a name="implementing-the-outlook-bar"></a>Implementace panelu aplikace Outlook
 
@@ -294,7 +294,7 @@ Zobrazit [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) 
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití `Create` metodu `CMFCOutlookBar` třídy. Tento fragment kódu je součástí [ukázkové aplikace Outlook s více zobrazení](../../visual-cpp-samples.md).
+Následující příklad ukazuje způsob použití `Create` metodu `CMFCOutlookBar` třídy. Tento fragment kódu je součástí [ukázkové aplikace Outlook s více zobrazení](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookMultiViews#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_1.h)]
 [!code-cpp[NVC_MFC_OutlookMultiViews#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_2.cpp)]

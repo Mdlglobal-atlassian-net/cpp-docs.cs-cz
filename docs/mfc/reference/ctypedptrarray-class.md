@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-ms.openlocfilehash: 8a6fc0786a169f9c1e73eb8acadfc51d063334c9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 080e47746b83b6ff12db9f6df0fc27bcd202bb51
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275334"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768682"
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray Class
 
@@ -52,7 +52,7 @@ Typ prvků uložených v poli základní třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CTypedPtrArray::Add](#add)|Přidá nový prvek na konec pole. V případě potřeby roste pole|
 |[CTypedPtrArray::Append](#append)|Přidá na konec jiné obsah jedno pole. V případě potřeby roste pole|
@@ -65,7 +65,7 @@ Typ prvků uložených v poli základní třídy.
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CTypedPtrArray::operator \[ \]](#operator_at)|Nastaví nebo získá prvek na zadaném indexu.|
 
@@ -328,7 +328,7 @@ Podrobné poznámky, naleznete v tématu [CObArray::SetAtGrow](../../mfc/referen
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC shromažďování](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC shromažďování](../../overview/visual-cpp-samples.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CPtrArray – třída](../../mfc/reference/cptrarray-class.md)<br/>
 [CObArray – třída](../../mfc/reference/cobarray-class.md)

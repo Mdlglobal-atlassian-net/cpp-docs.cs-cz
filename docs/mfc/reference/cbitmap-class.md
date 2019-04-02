@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 97d4561da12492c158673c4cc79c2baefd973c75
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 11e210680bdf68f1a1dcbfaed18ae56ce006c8ad
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296721"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769898"
 ---
 # <a name="cbitmap-class"></a>Cbitmap – třída
 
@@ -61,7 +61,7 @@ class CBitmap : public CGdiObject
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CBitmap::CreateBitmap](#createbitmap)|Inicializuje objekt, který má nastavená šířka, výška a bitový vzor bitmapa paměti závislé na zařízení.|
 |[CBitmap::CreateBitmapIndirect](#createbitmapindirect)|Inicializuje objekt s rastrový obrázek šířku, výšku a bitový vzor (Pokud je zadaná) podle `BITMAP` struktury.|
@@ -79,7 +79,7 @@ class CBitmap : public CGdiObject
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CBitmap::operator HBITMAP](#operator_hbitmap)|Vrátí popisovač Windows připojené k `CBitmap` objektu.|
 
@@ -521,6 +521,6 @@ Rozhraní GDI nepoužívá tyto hodnoty s výjimkou a vracet je aplikace zavolá
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC MDI](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC MDI](../../overview/visual-cpp-samples.md)<br/>
 [CGdiObject – třída](../../mfc/reference/cgdiobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

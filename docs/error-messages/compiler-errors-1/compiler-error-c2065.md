@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
-ms.openlocfilehash: ae7f582de5d6c45df34c42164756356a9c794d31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3daf2cd532cd07225b822c80b46fc28274d4e2a8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482511"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778751"
 ---
 # <a name="compiler-error-c2065"></a>Chyba kompilátoru C2065
 
@@ -205,7 +205,7 @@ int main() {
 
 ## <a name="example-ccli-type-deduction-failure"></a>Příklad: C + +/ CLI chyba odvození typu
 
-Této chybě může dojít při volání obecné funkce, pokud argument určený typ nelze odvodit z parametrů použitých. Další informace najdete v tématu [obecné funkce (C + +/ CLI)](../../windows/generic-functions-cpp-cli.md).
+Této chybě může dojít při volání obecné funkce, pokud argument určený typ nelze odvodit z parametrů použitých. Další informace najdete v tématu [obecné funkce (C + +/ CLI)](../../extensions/generic-functions-cpp-cli.md).
 
 ```cpp
 // C2065_b.cpp

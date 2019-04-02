@@ -15,12 +15,12 @@ helpviewer_keywords:
 - destruction [MFC], data objects
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
-ms.openlocfilehash: 74119d7ea33eef68f0cb4a67c8419514cbb73c10
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 68ee5fbfec554df8865ca50c265ca2fa2f226a29
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304431"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775241"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>Datové objekty a zdroje dat: Vytváření a likvidace
 
@@ -68,7 +68,7 @@ Zdroje dat se vytvoří, když aplikace potřebuje ke kopírování dat do schr�
 
 1. Pokud se jedná **Vyjmout** operace nebo `DoDragDrop` vrátí **DROPEFFECT_MOVE**, vybrali v kroku 1, data se odstraní z dokumentu.
 
-Tento scénář je implementováno ukázky MFC OLE [OCLIENT](../visual-cpp-samples.md) a [HIERSVR](../visual-cpp-samples.md). Podívejte se na zdroje pro každou aplikaci `CView`-odvozené třídy pro všechny kromě na `GetClipboardData` a `OnGetClipboardData` funkce. Tyto dvě funkce jsou buď `COleClientItem` nebo `COleServerItem`– implementace třídy odvozené. Tyto ukázkové programy poskytují dobrý příklad toho, jak implementovat tyto koncepty.
+Tento scénář je implementováno ukázky MFC OLE [OCLIENT](../overview/visual-cpp-samples.md) a [HIERSVR](../overview/visual-cpp-samples.md). Podívejte se na zdroje pro každou aplikaci `CView`-odvozené třídy pro všechny kromě na `GetClipboardData` a `OnGetClipboardData` funkce. Tyto dvě funkce jsou buď `COleClientItem` nebo `COleServerItem`– implementace třídy odvozené. Tyto ukázkové programy poskytují dobrý příklad toho, jak implementovat tyto koncepty.
 
 Jeden další situace, ve kterém můžete chtít vytvořit `COleDataSource` objekt nastane, pokud chcete upravit výchozí chování operace přetažení myší. Další informace najdete v tématu [přetažení: Přizpůsobení](../mfc/drag-and-drop-customizing.md) článku.
 

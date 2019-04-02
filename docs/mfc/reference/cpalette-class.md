@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CPalette [MFC], ResizePalette
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
-ms.openlocfilehash: 8abd03ff2b133eb6040799eff6879a19a64783ef
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f0105a8ee33a57f7431a9c6a97b4b132f291f42a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274658"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770793"
 ---
 # <a name="cpalette-class"></a>CPalette Class
 
@@ -47,13 +47,13 @@ class CPalette : public CGdiObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CPalette::CPalette](#cpalette)|Vytvoří `CPalette` objekt se žádné připojené palety Windows. Je třeba inicializovat `CPalette` objekt s jedním z inicializace členských funkcí předtím, než je možné.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CPalette::AnimatePalette](#animatepalette)|Nahradí položky v logickou paletu identifikován `CPalette` objektu. Aplikace nemá klientské oblasti, aktualizovat, protože Windows mapuje nové položky do systémové palety okamžitě.|
 |[CPalette::CreateHalftonePalette](#createhalftonepalette)|Vytvoří barevnou paletu polotónování pro kontext zařízení a připojí ho k `CPalette` objektu.|
@@ -326,7 +326,7 @@ Další informace o struktuře Windows `PALETTEENTRY`, naleznete v tématu [PALE
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC DIBLOOK](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
 [CGdiObject – třída](../../mfc/reference/cgdiobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CPalette::GetPaletteEntries](#getpaletteentries)<br/>

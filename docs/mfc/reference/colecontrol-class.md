@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 8587eb76f38c07d54234c810dfd6ab79f487e740
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 30d73d546ee68a25f1e59776020477d038da65e8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283420"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771497"
 ---
 # <a name="colecontrol-class"></a>COleControl – třída
 
@@ -355,13 +355,13 @@ class COleControl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleControl::COleControl](#colecontrol)|Vytvoří `COleControl` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleControl::AmbientAppearance](#ambientappearance)|Načte aktuální vzhled ovládacího prvku.|
 |[COleControl::AmbientBackColor](#ambientbackcolor)|Vrátí hodnotu vlastnosti BackColor okolí.|
@@ -525,7 +525,7 @@ class COleControl : public CWnd
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleControl::DrawContent](#drawcontent)|Volá se rozhraním, když je potřeba aktualizovat vzhled ovládacího prvku.|
 |[COleControl::DrawMetafile](#drawmetafile)|Volá se rozhraním, když se používá kontextu zařízení metasouboru.|
@@ -4209,8 +4209,8 @@ Voláním této funkce odesílají konkrétní zprávy přes mapu zpráv ovláda
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC Circ3 –](../../visual-cpp-samples.md)<br/>
-[Ukázky knihovny MFC TESTHELP](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC Circ3 –](../../overview/visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC TESTHELP](../../overview/visual-cpp-samples.md)<br/>
 [COlePropertyPage – třída](../../mfc/reference/colepropertypage-class.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

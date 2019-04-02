@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TN023
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
-ms.openlocfilehash: b4edc00f77152b8d677f3113e0ed6386569b0988
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d29f0ab2254a52e01f2016f64a37ddfce47955bb
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277674"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780311"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023: Standardní prostředky MFC
 
@@ -23,7 +23,7 @@ Tato poznámka popisuje standardní prostředky aplikace součástí a vyžadova
 
 Nabízí dvě kategorie předdefinované prostředky, které můžete použít v aplikaci knihovny MFC: klipart prostředky a standardních prostředcích rozhraní.
 
-Klipart prostředky jsou další prostředky, které nezávisí na rozhraní, ale které můžete chtít přidat do vaší aplikace uživatelského rozhraní. Následující prostředky klipart jsou obsaženy v ukázce MFC Obecné [klipart](../visual-cpp-samples.md):
+Klipart prostředky jsou další prostředky, které nezávisí na rozhraní, ale které můžete chtít přidat do vaší aplikace uživatelského rozhraní. Následující prostředky klipart jsou obsaženy v ukázce MFC Obecné [klipart](../overview/visual-cpp-samples.md):
 
 - Common.rc: Jeden soubor prostředků, který obsahuje:
 

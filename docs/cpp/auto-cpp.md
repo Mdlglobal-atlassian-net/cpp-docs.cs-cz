@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: f4d17069ed4e06a85b80d2027433ff87be6d1521
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 3d77a17d490f8d7680f095367c309ce0e4f366b7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518564"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776333"
 ---
 # <a name="auto-c"></a>Automatické (C++)
 
@@ -34,13 +34,13 @@ auto declarator initializer;
 
 Doporučujeme použít **automaticky** – klíčové slovo pro většinu situací – Pokud Opravdu chcete převod – protože tato funkce nabízí tyto výhody:
 
-- **Odolnost:** při změně typu výrazu – jedná se o návratový typ funkce se při změně – prostě to funguje.
+- **Odolnosti:** Pokud se změní typ výrazu – jedná se o návratový typ funkce se při změně – prostě to funguje.
 
-- **Výkon:** je zaručeno, že bude žádný převod.
+- **Výkon:** Je zaručeno, že bude žádný převod.
 
-- **Použitelnost:** nemusíte starat o typ název pravopisu potíže a překlepy.
+- **Použitelnost:** Nemusíte se starat o typ název pravopisu potíže a překlepy.
 
-- **Efektivita:** psaní kódu může být efektivnější.
+- **Efektivita:** Psaní kódu může být efektivnější.
 
 Převod případy, ve kterých není vhodné používat **automaticky**:
 
@@ -52,7 +52,7 @@ Použít **automaticky** – klíčové slovo, použijte místo typu k deklaraci
 
 Inicializační výraz může být přiřazením (syntaxe znaménka rovnosti), přímou inicializací (syntaxe stylu funkce), [operátor new](new-operator-cpp.md) může být výraz nebo výraz inicializace  *deklarace pro rozsah* parametr [Range-based for Statement (C++)](../cpp/range-based-for-statement-cpp.md) příkazu. Další informace najdete v tématu [inicializátory](../cpp/initializers.md) a příklady kódu dále v tomto dokumentu.
 
-**Automaticky** – klíčové slovo je zástupný symbol pro typ, ale není samotného typu. Proto **automaticky** – klíčové slovo nelze použít v přetypování nebo operátorů, jako [sizeof](../cpp/sizeof-operator.md) a [typeid](../windows/typeid-cpp-component-extensions.md).
+**Automaticky** – klíčové slovo je zástupný symbol pro typ, ale není samotného typu. Proto **automaticky** – klíčové slovo nelze použít v přetypování nebo operátorů, jako [sizeof](../cpp/sizeof-operator.md) a (pro C + +/ CLI) [typeid](../extensions/typeid-cpp-component-extensions.md).
 
 ## <a name="usefulness"></a>Užitečnost
 
@@ -133,7 +133,7 @@ Následující tabulka uvádí omezení týkající se použití **automaticky**
 |[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|Symbol nelze použít před inicializací. V praxi to znamená, že proměnné nelze inicializovat.|
 |[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|Nelze přetypovat na typ, který je deklarován s **automaticky** – klíčové slovo.|
 |[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|Všechny symboly, která je deklarována pomocí deklarátoru seznam **automaticky** – klíčové slovo musí překládat stejného typu. Další informace najdete v tématu [deklarace a definice](declarations-and-definitions-cpp.md).|
-|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md) a [typeid](../windows/typeid-cpp-component-extensions.md) operátory nejde použít u symbolu, který je deklarován s **automaticky** – klíčové slovo.|
+|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md) a [typeid](../extensions/typeid-cpp-component-extensions.md) operátory nejde použít u symbolu, který je deklarován s **automaticky** – klíčové slovo.|
 
 ## <a name="examples"></a>Příklady
 
@@ -225,7 +225,7 @@ int main()
 [Klíčová slova](../cpp/keywords-cpp.md)<br/>
 [/Zc:auto (odvození typu proměnné)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
 [sizeof – operátor](../cpp/sizeof-operator.md)<br/>
-[identifikátor TypeId.](../windows/typeid-cpp-component-extensions.md)<br/>
+[identifikátor TypeId.](../extensions/typeid-cpp-component-extensions.md)<br/>
 [new – operátor](new-operator-cpp.md)<br/>
 [Deklarace a definice](declarations-and-definitions-cpp.md)<br/>
 [Příklady výrazů lambda](../cpp/examples-of-lambda-expressions.md)<br/>

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
-ms.openlocfilehash: eabd488e581357ec1386b20597c1987e4c8b2c19
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: f055e3d16dfc0ea4320883210458ae10daebdc45
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809727"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781676"
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Generování manifestu v aplikaci Visual Studio
 
@@ -27,7 +27,7 @@ Systém sestavení v sadě Visual Studio umožňuje manifest vložený do soubor
 
 1. Je-li manifest vložen do binárního souboru je stejný jako v manifestu generované nástroj manifest, sestavení bude pokračovat na další kroky sestavení.
 
-Je manifest vložený v koncovém binárním souboru jako prostředek text a bude možné dokument zobrazit tak, že otevřete koncovém binárním souboru jako soubor v sadě Visual Studio. Aby bylo zajištěno, že manifest se odkazuje na správný knihovny, postupujte podle kroků popsaných v [Principy závislostí v aplikacích Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md) nebo postupujte podle doporučení podle [Poradce při potížích s](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) oddílu.
+Je manifest vložený v koncovém binárním souboru jako prostředek text a bude možné dokument zobrazit tak, že otevřete koncovém binárním souboru jako soubor v sadě Visual Studio. Aby bylo zajištěno, že manifest se odkazuje na správný knihovny, postupujte podle kroků popsaných v [Principy závislostí v aplikacích Visual C++](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md) nebo postupujte podle doporučení podle [Poradce při potížích s](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) oddílu.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - collection classes [MFC], lists
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
-ms.openlocfilehash: 5b74ee8a779ad2fffa801749d9818f985bc8c352
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f3dea68deaae73313fe389be49e8bbed7da3c93a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273306"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767179"
 ---
 # <a name="collections"></a>Kolekce
 
@@ -55,7 +55,7 @@ Každá ze tří tvarů zadané kolekci je popsána stručně dále v tomto tém
 
 ##  <a name="_core_the_template_based_collection_classes"></a> Třídy kolekce založené na šablonách
 
-Nejjednodušší způsob, jak implementovat typově bezpečné kolekce, která obsahuje objekty z libovolného typu je použití jedné ze tříd knihovny MFC založené na šabloně. Příklady těchto tříd, najdete v ukázce MFC [SHROMAŽĎOVAT](../visual-cpp-samples.md).
+Nejjednodušší způsob, jak implementovat typově bezpečné kolekce, která obsahuje objekty z libovolného typu je použití jedné ze tříd knihovny MFC založené na šabloně. Příklady těchto tříd, najdete v ukázce MFC [SHROMAŽĎOVAT](../overview/visual-cpp-samples.md).
 
 MFC – třídy kolekce založené na šablonách naleznete v následující tabulce.
 

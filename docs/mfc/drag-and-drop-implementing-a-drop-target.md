@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE drag and drop [MFC], drop target
 - drag and drop [MFC], drop target
 ms.assetid: 0689f1ec-5326-4008-b226-4b373c881358
-ms.openlocfilehash: da04fa7fa84e7e5014d574583c9c95992db10f88
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 46501193569d7f3098e23c67c68c76ce20a82ea3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281942"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766674"
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>Přetažení: Implementace cíle přetažení
 
@@ -33,7 +33,7 @@ Tento článek popisuje, jak se vaše aplikace cíl přetažení. Implementace c
     |`OnDrop`|Zpracování dat probíhá vyřazování do určené okno.|
     |`OnScrollBy`|Zvláštní chování při posouvání je nezbytné v okně cíl.|
 
-Podívejte se MAINVIEW. CPP souboru, který je součástí ukázky MFC OLE [OCLIENT](../visual-cpp-samples.md) pro příklad, jak tyto funkce fungují společně.
+Podívejte se MAINVIEW. CPP souboru, který je součástí ukázky MFC OLE [OCLIENT](../overview/visual-cpp-samples.md) pro příklad, jak tyto funkce fungují společně.
 
 Další informace naleznete v tématu:
 

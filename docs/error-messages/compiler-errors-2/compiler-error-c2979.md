@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2979
 ms.assetid: 98bd9043-ec44-451e-a482-3a8e35fc7464
-ms.openlocfilehash: 5d9b8e025d96e448ec9494834eb1766cafd8b677
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9b0af0d17ef57f19e051165b16632e3180159cd
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531029"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767052"
 ---
 # <a name="compiler-error-c2979"></a>Chyba kompilátoru C2979
 
 explicitní specializace nejsou v obecných typech podporované.
 
-Obecné třídy byl deklarován nesprávně.  Zobrazit [obecných typů](../../windows/generics-cpp-component-extensions.md) Další informace.
+Obecné třídy byl deklarován nesprávně.  Zobrazit [obecných typů](../../extensions/generics-cpp-component-extensions.md) Další informace.
 
 ## <a name="example"></a>Příklad
 

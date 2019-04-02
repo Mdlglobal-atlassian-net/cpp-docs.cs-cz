@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: fdfc0888e7d6213fb7c04a5257358da8f5dae138
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: eea37d03ca5a4fab450fbca0c4c3f6c76fefb407
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425091"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780610"
 ---
 # <a name="clistctrl-class"></a>CListCtrl Class
 
@@ -285,13 +285,13 @@ class CListCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CListCtrl::CListCtrl](#clistctrl)|Vytvoří `CListCtrl` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CListCtrl::ApproximateViewRect](#approximateviewrect)|Určuje šířku a výšku vyžadována k zobrazení položek ovládacího prvku zobrazení seznamu.|
 |[CListCtrl::Arrange](#arrange)|Zarovnává položky v mřížce.|
@@ -4422,7 +4422,7 @@ Tato funkce také uspořádá ovládací prvek zobrazení seznamu, pokud má LVS
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC ROWLIST](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC ROWLIST](../../overview/visual-cpp-samples.md)<br/>
 [CWnd – třída](cwnd-class.md)<br/>
 [Graf hierarchie](../hierarchy-chart.md)<br/>
 [CImageList – třída](cimagelist-class.md)

@@ -3,12 +3,12 @@ title: C++ vás vítá zpět (moderní verze jazyka C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 08563f6a67ec7105da688d566d71d8ea15cb8cec
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: 5b2868d20c047eef7762256ff8c9bf43de7a0de0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54334622"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771783"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>C++ vás vítá zpět (moderní verze jazyka C++)
 
@@ -132,4 +132,4 @@ Další informace najdete v článku Stack Overflow [idiomy v jazyce C++ která 
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Výrazy lambda](../cpp/lambda-expressions-in-cpp.md)<br/>
 [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)<br/>
-[Shoda jazyka Visual C++](../visual-cpp-language-conformance.md)
+[Shoda jazyka Visual C++](../overview/visual-cpp-language-conformance.md)

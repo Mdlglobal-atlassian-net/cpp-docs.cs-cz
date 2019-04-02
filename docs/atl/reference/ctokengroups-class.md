@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-ms.openlocfilehash: 842ceab1630fc7bc08b5c27dc769a25d029886f3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 934d746dafafb39c2ffc3477c59c95914d270196
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274515"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772823"
 ---
 # <a name="ctokengroups-class"></a>CTokenGroups Class
 
@@ -40,7 +40,7 @@ class CTokenGroups
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CTokenGroups::CTokenGroups](#ctokengroups)|Konstruktor|
 |[CTokenGroups::~CTokenGroups](#dtor)|Destruktor.|
@@ -273,7 +273,7 @@ Přetypování na ukazatel na hodnotu [TOKEN_GROUPS](/windows/desktop/api/winnt/
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázka zabezpečení](../../visual-cpp-samples.md)<br/>
+[Ukázka zabezpečení](../../overview/visual-cpp-samples.md)<br/>
 [CSid – třída](../../atl/reference/csid-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)

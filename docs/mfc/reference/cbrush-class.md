@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CBrush [MFC], FromHandle
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
-ms.openlocfilehash: 38f9c6953999e07f1a72ed6a9c0661184f075ea0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f2a2e385a9f210b3644d7fade00b72c4befa47ef
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303072"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778868"
 ---
 # <a name="cbrush-class"></a>Cbrush – třída
 
@@ -45,7 +45,7 @@ class CBrush : public CGdiObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CBrush::CBrush](#cbrush)|Vytvoří `CBrush` objektu.|
 
@@ -435,7 +435,7 @@ Další informace o použití grafických objektů najdete v tématu [objektů g
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC PROPDLG](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC PROPDLG](../../overview/visual-cpp-samples.md)<br/>
 [CGdiObject – třída](../../mfc/reference/cgdiobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CBitmap – třída](../../mfc/reference/cbitmap-class.md)<br/>

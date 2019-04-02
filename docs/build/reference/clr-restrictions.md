@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-ms.openlocfilehash: e2205740aea5a2e557b8d93c3c60045435c4b71d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 21b7ead553871854c73021756eb2086f9e6e7393
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816097"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777815"
 ---
 # <a name="clr-restrictions"></a>/clr – omezení
 
@@ -29,7 +29,7 @@ Mějte na paměti následující omezení týkající se použití **/CLR**:
 
 - [Naked](../../cpp/naked-cpp.md) [__declspec](../../cpp/declspec.md) modifikátor se ignoruje pod parametrem/CLR.
 
-- Funkce translator nastavil [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) ovlivní pouze přetáhněte aktivity catch v nespravovaném kódu. Zobrazit [zpracování výjimek](../../windows/exception-handling-cpp-component-extensions.md) Další informace.
+- Funkce translator nastavil [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) ovlivní pouze přetáhněte aktivity catch v nespravovaném kódu. Zobrazit [zpracování výjimek](../../extensions/exception-handling-cpp-component-extensions.md) Další informace.
 
 - Porovnání ukazatelů na funkce není povolená v rámci **/CLR**.
 

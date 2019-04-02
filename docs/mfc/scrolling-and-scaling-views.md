@@ -8,18 +8,18 @@ helpviewer_keywords:
 - scroll bars [MFC], messages
 - scrolling views [MFC]
 ms.assetid: f98a3421-c336-407e-97ee-dbb2ffd76fbd
-ms.openlocfilehash: 2baa89f233eb6df93cde3adbde35ba1e6d35c093
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7d26bc656dec3fdcbb8fc5ea4918ec7d59bc5afc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283706"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777574"
 ---
 # <a name="scrolling-and-scaling-views"></a>Posouvání a změna měřítka zobrazení
 
 MFC podporuje zobrazení, která posuňte zobrazení a zobrazení, které se automaticky upraví tak velikost okna rámce, který zobrazí je. Třída `CScrollView` podporuje oba typy zobrazení.
 
-Další informace o posouvání a změna měřítka, naleznete v tématu třídy [cscrollview –](../mfc/reference/cscrollview-class.md) v *odkaz knihovny MFC*. Posouvání příklad naleznete v tématu [ukázky Scribble](../visual-cpp-samples.md).
+Další informace o posouvání a změna měřítka, naleznete v tématu třídy [cscrollview –](../mfc/reference/cscrollview-class.md) v *odkaz knihovny MFC*. Posouvání příklad naleznete v tématu [ukázky Scribble](../overview/visual-cpp-samples.md).
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
 

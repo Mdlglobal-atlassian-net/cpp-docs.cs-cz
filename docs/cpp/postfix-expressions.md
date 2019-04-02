@@ -6,12 +6,12 @@ helpviewer_keywords:
 - postfix expressions
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
-ms.openlocfilehash: 6230cc161d7b7fc011d4f3082cc7b9452e136280
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: eb6e6e8914cf260df09581232066caf3f873c04e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332436"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779258"
 ---
 # <a name="postfix-expressions"></a>Výrazy přípony
 
@@ -149,7 +149,7 @@ Symbol tří teček označuje, že argumenty mohou být požadovány, ale že po
 
 Symbol tří teček, pokud se používá, musí být deklarován poslední v seznamu argumentů. Další informace o předávání proměnný počet argumentů, najdete v diskuzi o [va_arg, va_start a va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) v *Run-Time Library Reference*.
 
-Informace o výchozích argumentech v CLR programování naleznete v tématu [seznamy argumentů proměnných (...) (C + +/ CLI) ](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+Informace o výchozích argumentech v CLR programování naleznete v tématu [seznamy argumentů proměnných (...) (C + +/ CLI) ](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
 Výchozí argumenty umožňují zadat hodnotu, kterou by měl předpokládat argument, pokud žádná není zadána ve volání funkce. Následující fragment kódu ukazuje, jak pracuje výchozí argument. Další informace o omezeních na určení výchozích argumentů naleznete v tématu [výchozí argumenty](../cpp/default-arguments.md).
 

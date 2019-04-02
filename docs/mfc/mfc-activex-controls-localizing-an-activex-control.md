@@ -10,12 +10,12 @@ helpviewer_keywords:
 - LocaleID ambient property [MFC]
 - LOCALIZE sample [MFC]
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
-ms.openlocfilehash: 4e9ef9a2f79bda5d41c01984f063622b3b73fb51
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 13c8ff545763017b01685e012ab2d497eaf7084a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268210"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767545"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>MFC – ovládací prvky ActiveX: Lokalizace ovládacího prvku ActiveX
 
@@ -28,7 +28,7 @@ Pokud chcete přizpůsobit ovládací prvek ActiveX na mezinárodní trh, může
 
 Obecně platí ovládací prvky ActiveX musí vždy vycházet své prostředí vedlejší vlastnost identifikátor národního prostředí. Existují tři způsoby, jak to udělat:
 
-- Načtení prostředků, vždy na vyžádání, na základě aktuální hodnoty vedlejší vlastnost identifikátor národního prostředí. Ukázka ovládací prvky MFC ActiveX [LOCALIZE](../visual-cpp-samples.md) používá tuto strategii.
+- Načtení prostředků, vždy na vyžádání, na základě aktuální hodnoty vedlejší vlastnost identifikátor národního prostředí. Ukázka ovládací prvky MFC ActiveX [LOCALIZE](../overview/visual-cpp-samples.md) používá tuto strategii.
 
 - Načíst prostředky, pokud je instance první ovládací prvek, na základě okolí LocaleID – vlastnosti a tyto prostředky používat u všech ostatních instancích. Tento článek předvádí použití této strategie.
 
@@ -40,7 +40,7 @@ Obecně platí ovládací prvky ActiveX musí vždy vycházet své prostředí v
     > [!NOTE]
     >  To bude fungovat pro ovládací prvek, ale knihovny runtime DLL nebude aktualizovat dynamicky vlastní prostředky při změně vlastnosti okolí identifikátor národního prostředí. Kromě toho DLL knihovny runtime ovládacích prvků ActiveX pomocí národní prostředí pro vlákno k určení národního prostředí pro její prostředky.
 
-Zbývající část tohoto článku popisuje dva lokalizace strategie. První strategií [lokalizováno programovatelnosti rozhraní ovládacího prvku](#_core_localizing_your_control.92.s_programmability_interface) (názvy vlastností, metod a událostí). Druhou strategií [lokalizováno ovládacího prvku uživatelského rozhraní](#_core_localizing_the_control.92.s_user_interface), pomocí kontejneru vedlejší vlastnost identifikátor národního prostředí. Ukázka lokalizace ovládacího prvku, najdete v ukázce ovládací prvky ActiveX knihovny MFC [LOCALIZE](../visual-cpp-samples.md).
+Zbývající část tohoto článku popisuje dva lokalizace strategie. První strategií [lokalizováno programovatelnosti rozhraní ovládacího prvku](#_core_localizing_your_control.92.s_programmability_interface) (názvy vlastností, metod a událostí). Druhou strategií [lokalizováno ovládacího prvku uživatelského rozhraní](#_core_localizing_the_control.92.s_user_interface), pomocí kontejneru vedlejší vlastnost identifikátor národního prostředí. Ukázka lokalizace ovládacího prvku, najdete v ukázce ovládací prvky ActiveX knihovny MFC [LOCALIZE](../overview/visual-cpp-samples.md).
 
 ##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a> Lokalizace programovatelnosti rozhraní ovládacího prvku
 
@@ -88,7 +88,7 @@ Následující příklad kódu ukazuje jedním z přístupů k vyhledání a na�
 
 [!code-cpp[NVC_MFC_AxLoc#3](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_3.cpp)]
 
-Všimněte si, že ID dílčího může být vráceny se změnami každý případ příkazu switch, k poskytování více specializované lokalizace. Ukázku této funkce najdete v článku `GetResourceHandle` funkce v MFC ActiveX řídí ukázková [LOCALIZE](../visual-cpp-samples.md).
+Všimněte si, že ID dílčího může být vráceny se změnami každý případ příkazu switch, k poskytování více specializované lokalizace. Ukázku této funkce najdete v článku `GetResourceHandle` funkce v MFC ActiveX řídí ukázková [LOCALIZE](../overview/visual-cpp-samples.md).
 
 Když ovládací prvek nejprve načte samotné do kontejneru, můžete volat [COleControl::AmbientLocaleID](../mfc/reference/colecontrol-class.md#ambientlocaleid) načíst ID národního prostředí. Ovládací prvek můžete předat hodnotu ID vráceného národní prostředí `GetLocalizedResourceHandle` funkce, která načte odpovídající prostředek knihovny. Ovládací prvek by měl předat výsledný popisovač, pokud existuje, chcete [afxsetresourcehandle –](../mfc/reference/application-information-and-management.md#afxsetresourcehandle):
 

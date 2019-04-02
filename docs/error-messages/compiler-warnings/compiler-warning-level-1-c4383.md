@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4383
 ms.assetid: 96c0e52d-874e-4b57-a154-0e49b6a00fae
-ms.openlocfilehash: 61bc3951a7d57a5a4eefb69b5a0c4399df99160a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2510dda59047632e2a4823f734feeffd0c0a5b02
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548794"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778036"
 ---
 # <a name="compiler-warning-level-1-c4383"></a>Kompilátor upozornění (úroveň 1) C4383
 
@@ -19,7 +19,7 @@ ms.locfileid: "50548794"
 
 Když chcete přidat uživatelské instance přepsání metody operátor zrušení odkazu v spravovaného typu, potenciálně přepsat možnost operátor zrušení odkazu typ vrátit popisovač objektu. Vezměte v úvahu zápis statická, uživatelem definovaný operátor zrušení odkazu.
 
-Další informace najdete v tématu [operátor popisovače objektu (^)](../../windows/handle-to-object-operator-hat-cpp-component-extensions.md) a [Tracking Reference Operator](../../windows/tracking-reference-operator-cpp-component-extensions.md).
+Další informace najdete v tématu [operátor popisovače objektu (^)](../../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) a [Tracking Reference Operator](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
 
 Operátor instance není k dispozici pro jiné kompilátory jazyka prostřednictvím odkazovaných metadat. Další informace najdete v tématu [uživatelem definované operátory (C + +/ CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
 

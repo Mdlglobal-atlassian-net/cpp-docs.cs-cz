@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TN029
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
-ms.openlocfilehash: 0c27545c6f425eda952e87c80ed1d37de9e1093a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6c2f619d9cd619ca598c66ca657faa1b9dccaaa2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294990"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781728"
 ---
 # <a name="tn029-splitter-windows"></a>TN029: Rozdělovač Windows
 
@@ -46,7 +46,7 @@ Maximální počet podoken, které zadáte pro dynamické příčky je 2 řádky
 
 ## <a name="splitter-examples"></a>Příklady rozdělovač
 
-Řadu ukázek programů MFC přímo nebo nepřímo použít rozdělovače oken. Ukázky knihovny MFC Obecné [VIEWEX](../visual-cpp-samples.md) ukazuje několik použití statické příčky, včetně postupu, které mají být umístěny rozdělovač rozdělovač.
+Řadu ukázek programů MFC přímo nebo nepřímo použít rozdělovače oken. Ukázky knihovny MFC Obecné [VIEWEX](../overview/visual-cpp-samples.md) ukazuje několik použití statické příčky, včetně postupu, které mají být umístěny rozdělovač rozdělovač.
 
 K vytvoření nového více dokumentu rozhraní (MDI) třída podřízeného rámce okna obsahující okno s rozdělovačem. můžete také použít ClassWizard. Další informace o rozdělovače oken, naleznete v tématu [více typů dokumentů, zobrazení a rámečku Windows](../mfc/multiple-document-types-views-and-frame-windows.md).
 

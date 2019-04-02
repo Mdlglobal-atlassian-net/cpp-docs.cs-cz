@@ -230,12 +230,12 @@ helpviewer_keywords:
 - CMFCVisualManagerOffice2007 [MFC], OnUpdateSystemColors
 - CMFCVisualManagerOffice2007 [MFC], SetResourceHandle
 ms.assetid: fb687c74-6d08-4c72-8acf-27f75dda6d6b
-ms.openlocfilehash: 28e0c1f3ca593fed939b0cf3fa0fa3085d79d156
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4ea04ece6f381fb2bce1c33716c7e7248bca5b7b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282432"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778933"
 ---
 # <a name="cmfcvisualmanageroffice2007-class"></a>Cmfcvisualmanageroffice2007 – třída
 
@@ -253,7 +253,7 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCVisualManagerOffice2007::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)||
 |[CMFCVisualManagerOffice2007::CleanStyle](#cleanstyle)||
@@ -376,7 +376,7 @@ Použití `CMFCVisualManagerOffice2007` změnit vzhled vaší aplikace tak, aby 
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít Správce vzhledu Office 2007. Tento fragment kódu je součástí [Desktopu výstrah demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak použít Správce vzhledu Office 2007. Tento fragment kódu je součástí [Desktopu výstrah demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#7](../../mfc/reference/codesnippet/cpp/cmfcvisualmanageroffice2007-class_1.cpp)]
 

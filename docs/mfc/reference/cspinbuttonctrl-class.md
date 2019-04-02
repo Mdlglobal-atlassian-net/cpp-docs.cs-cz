@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: ff61fb4f918e25d430fc31ae55c3ad8794ce39f1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6f864a37c46158ab98776cd96d9f50d7cfaeb13d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425026"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776346"
 ---
 # <a name="cspinbuttonctrl-class"></a>Cspinbuttonctrl – třída
 
@@ -59,7 +59,7 @@ class CSpinButtonCtrl : public CWnd
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CSpinButtonCtrl::Create](#create)|Ovládací prvek číselníku vytvoří a připojí ho k `CSpinButtonCtrl` objektu.|
 |[CSpinButtonCtrl::CreateEx](#createex)|Vytvoří ovládací prvek číselníku se zadaným rozšířené styly Windows a připojí ho k `CSpinButtonCtrl` objektu.|
@@ -399,7 +399,7 @@ Horní a dolní limity pro ovládací prvek. Pro `SetRange`, ani jedno z těchto
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázka CMNCTRL2 knihovny MFC](../../visual-cpp-samples.md)<br/>
+[Ukázka CMNCTRL2 knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CSliderCtrl – třída](../../mfc/reference/csliderctrl-class.md)

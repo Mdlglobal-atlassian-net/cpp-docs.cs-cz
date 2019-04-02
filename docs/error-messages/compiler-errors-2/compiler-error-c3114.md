@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3114
 ms.assetid: b5d2df4f-87d0-4292-9981-25c6a6013c05
-ms.openlocfilehash: 6ce5b9860cd75619f26a3585981af5807c33535a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5a4feae5c8805a27c020b532fd58e0562e46b6b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606671"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773772"
 ---
 # <a name="compiler-error-c3114"></a>Chyba kompilátoru C3114
 
@@ -19,7 +19,7 @@ ms.locfileid: "50606671"
 
 Aby datový člen třídy atributu platný pojmenovaný argument, nesmí být označené `static`, `const`, nebo `literal`. Pokud vlastnost nesmí být vlastnost `static` a musí mít get a přístupové objekty set.
 
-Další informace najdete v tématu [vlastnost](../../windows/property-cpp-component-extensions.md) a [uživatelem definované atributy](../../windows/user-defined-attributes-cpp-component-extensions.md).
+Další informace najdete v tématu [vlastnost](../../extensions/property-cpp-component-extensions.md) a [uživatelem definované atributy](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Příklad
 

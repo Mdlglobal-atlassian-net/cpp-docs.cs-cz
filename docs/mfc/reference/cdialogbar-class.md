@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CDialogBar [MFC], CDialogBar
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
-ms.openlocfilehash: 2ae7c941b527a7cbaa01bf43ef4d41c9a4975dac
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: af84c5239a9cb3cbddb1ab4f0230e5b1a3373573
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302400"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768299"
 ---
 # <a name="cdialogbar-class"></a>CDialogBar – třída
 
@@ -31,13 +31,13 @@ class CDialogBar : public CControlBar
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDialogBar::CDialogBar](#cdialogbar)|Vytvoří `CDialogBar` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDialogBar::Create](#create)|Vytvoří panel dialogového okna Windows a připojí ho k `CDialogBar` objektu.|
 
@@ -143,7 +143,7 @@ Pokud zadáte CBRS_TOP nebo CBRS_BOTTOM styl zarovnání, je panel dialogového 
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC CTRLBARS](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar – třída](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CFormView – třída](../../mfc/reference/cformview-class.md)<br/>

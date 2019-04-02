@@ -112,12 +112,12 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: 625104ecddd9e14ac77aa05ac54cb578c4d62f85
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e12cf9f65e6fd6dd7f68edc4a94103baa5a8df62
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293418"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781754"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx – třída
 
@@ -135,7 +135,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMDIChildWndEx::ActivateTopLevelFrame](#activatetoplevelframe)|Rozhraní volá interně k aktivaci rámce, když aplikace by měl být aktivován z karty hlavním panelu.|
 |`CMDIChildWndEx::AddDockSite`|Tato metoda není použít nebo implementovat.|
@@ -201,7 +201,7 @@ Využívat rozšířenou dokovací funkcí v aplikace MDI, jsou odvozeny podří
 
 ## <a name="example"></a>Příklad
 
-V následujícím příkladu je odvozena z třídy `CMDIChildWndEx`. Tento fragment kódu se segmenty Convenience [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../visual-cpp-samples.md).
+V následujícím příkladu je odvozena z třídy `CMDIChildWndEx`. Tento fragment kódu se segmenty Convenience [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#3](../../mfc/codesnippet/cpp/cmdichildwndex-class_1.h)]
 
@@ -431,7 +431,7 @@ Když rozhraní framework je obnovení novější stavu, název dokumentu je čt
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje použití `GetDocumentName` metody. Tento fragment kódu se segmenty Convenience [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../visual-cpp-samples.md).
+Následující příklad ukazuje použití `GetDocumentName` metody. Tento fragment kódu se segmenty Convenience [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#17](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]
 
@@ -602,7 +602,7 @@ Tato funkce umožňuje zabránit ukládání dokumentů jen pro čtení.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje přepsání `IsReadOnly` metody. Tento fragment kódu se segmenty Convenience [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../visual-cpp-samples.md).
+Následující příklad ukazuje přepsání `IsReadOnly` metody. Tento fragment kódu se segmenty Convenience [VisualStudioDemo vzorku: Aplikace Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#2](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]
 

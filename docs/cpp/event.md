@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __event keyword [C++]
 - events [C++], __event
 ms.assetid: d3019b3e-722e-48df-8536-c05878461f9e
-ms.openlocfilehash: bd5f53e5d2b80b22c3a38f413c4fa79b27fa7026
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a837e30d3cd66f7caa9b44971f432e00b0917ae
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606476"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778257"
 ---
 # <a name="event"></a>__event
 
@@ -62,7 +62,7 @@ Zobrazit [zpracování událostí v nativním kódu C++](../cpp/event-handling-i
 
 Události modelu COM jsou rozhraní. Parametry metody v rozhraní zdroje událostí musí být *v* parametry (ale to se nevynucuje přísně), protože *si* parametr není užitečné, když vícesměrové vysílání. Bude vydáno upozornění úrovně 1, pokud používáte *si* parametru.
 
-Návratový typ je obvykle HRESULT nebo **void**, ale může být libovolný integrální typ, včetně **výčtu**. Při události používá integrálních návratový typ a vrací nenulovou hodnotu, obslužná rutina události, je chybový stav, ve kterém případ vyvolanou událost zruší volání delegáty. Všimněte si, že kompilátor automaticky označí jako rozhraní zdroje událostí [zdroj](../windows/source-cpp.md) v generované IDL.
+Návratový typ je obvykle HRESULT nebo **void**, ale může být libovolný integrální typ, včetně **výčtu**. Při události používá integrálních návratový typ a vrací nenulovou hodnotu, obslužná rutina události, je chybový stav, ve kterém případ vyvolanou událost zruší volání delegáty. Všimněte si, že kompilátor automaticky označí jako rozhraní zdroje událostí [zdroj](../windows/attributes/source-cpp.md) v generované IDL.
 
 [__Interface](../cpp/interface.md) – klíčové slovo je vždy vyžadován po **__event** pro zdroj události COM.
 
@@ -75,7 +75,7 @@ Zobrazit [zpracování událostí v modulu COM](../cpp/event-handling-in-com.md)
 
 ## <a name="managed-events"></a>Spravované události
 
-Informace týkající se kódování události v nové syntaxi naleznete v tématu [události](../windows/event-cpp-component-extensions.md).
+Informace týkající se kódování události v nové syntaxi naleznete v tématu [události](../extensions/event-cpp-component-extensions.md).
 
 Spravované události jsou datové členy a metody. Při použití s událostí, návratový typ delegáta musí být kompatibilní s [Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components). Návratový typ obslužné rutiny události musí odpovídat návratový typ delegáta. Další informace o delegátech naleznete v tématu [Delegáti a události](../dotnet/delegates-and-events.md). Pokud je spravovaná událost datový člen, jeho typ musí být ukazatel na konstruktor delegate.
 
@@ -101,7 +101,7 @@ public:
 };
 ```
 
-## <a name="example-com-events"></a>Příklad: Události modelu COM
+## <a name="example-com-events"></a>Příklad: Události COM
 
 ```cpp
 // EventHandling_COM_Event.cpp
@@ -131,8 +131,8 @@ public:
 
 [Klíčová slova](../cpp/keywords-cpp.md)<br/>
 [Zpracování událostí](../cpp/event-handling.md)<br/>
-[event_source](../windows/event-source.md)<br/>
-[event_receiver](../windows/event-receiver.md)<br/>
+[event_source](../windows/attributes/event-source.md)<br/>
+[event_receiver](../windows/attributes/event-receiver.md)<br/>
 [__hook](../cpp/hook.md)<br/>
 [__unhook](../cpp/unhook.md)<br/>
 [__raise](../cpp/raise.md)

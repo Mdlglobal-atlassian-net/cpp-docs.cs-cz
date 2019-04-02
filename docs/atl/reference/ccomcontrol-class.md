@@ -19,12 +19,12 @@ helpviewer_keywords:
 - ambient properties
 - controls [ATL], properties
 ms.assetid: 55368c27-bd16-45a7-b701-edb36157c8e8
-ms.openlocfilehash: 29eeb31c0823a0614fa1404cf7efc1c281bab3a4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ffbec7c1a83c0dd829878f4c73340528d32fb852
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261580"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771549"
 ---
 # <a name="ccomcontrol-class"></a>Ccomcontrol – třída
 
@@ -53,7 +53,7 @@ Základní třída, která implementuje okny. Výchozí hodnota je [CWindowImpl]
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CComControl::CComControl](#ccomcontrol)|Konstruktor|
 
@@ -73,7 +73,7 @@ Základní třída, která implementuje okny. Výchozí hodnota je [CWindowImpl]
 
 Další informace o vytvoření ovládacího prvku, naleznete v tématu [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md). Další informace o Průvodce projektem ATL naleznete v článku [vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md).
 
-Pro ukázku `CComControl` metody a datové členy, najdete v článku [KR](../../visual-cpp-samples.md) vzorku.
+Pro ukázku `CComControl` metody a datové členy, najdete v článku [KR](../../overview/visual-cpp-samples.md) vzorku.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 

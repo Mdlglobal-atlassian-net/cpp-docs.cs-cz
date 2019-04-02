@@ -6,12 +6,12 @@ helpviewer_keywords:
 - notifications [MFC], socket
 - sockets [MFC], notifications
 ms.assetid: 87d5bf70-6e77-49a9-9a64-aaadee2ad018
-ms.openlocfilehash: c08305b8aeeca00eaf41e4f1c24b51a46a8c4254
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: df7bfe8a95221682d0f7f4ebb123bd15b79144d5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289907"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774331"
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows Sockets: Oznámení soketů
 
@@ -43,7 +43,7 @@ Během operace, jako je příjem a odesílání dat `CSocket` objekt se stane sy
 > [!NOTE]
 >  V `CSocket`, `OnConnect` nebude nikdy volána funkce oznámení. Pro připojení, můžete volat `Connect`, která vrátí po dokončení připojení (ať už úspěšně nebo s chybou). Zpracování oznámení připojení je podrobnosti implementace MFC.
 
-Podrobnosti o jednotlivých funkcích notification, najdete v části funkce v rámci třídy `CAsyncSocket` v *odkaz knihovny MFC*. Zdrojový kód a informace o ukázky knihovny MFC naleznete v tématu [ukázky knihovny MFC](../visual-cpp-samples.md).
+Podrobnosti o jednotlivých funkcích notification, najdete v části funkce v rámci třídy `CAsyncSocket` v *odkaz knihovny MFC*. Zdrojový kód a informace o ukázky knihovny MFC naleznete v tématu [ukázky knihovny MFC](../overview/visual-cpp-samples.md).
 
 Další informace naleznete v tématu:
 

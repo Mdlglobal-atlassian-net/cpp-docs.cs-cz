@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: a2ce38dcd8879378f7d0e4ea3f074e461c51db75
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3ab276e83e8642aa5de2fd96305cb6d7b648fc40
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269848"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781234"
 ---
 # <a name="ceditview-class"></a>Ceditview – třída
 
@@ -61,13 +61,13 @@ class CEditView : public CCtrlView
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CEditView::CEditView](#ceditview)|Vytvoří objekt typu `CEditView`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CEditView::FindText](#findtext)|Vyhledá řetězec v textu.|
 |[CEditView::GetBufferLength](#getbufferlength)|Získá délku vyrovnávací paměti pro znaky.|
@@ -83,7 +83,7 @@ class CEditView : public CCtrlView
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CEditView::OnFindNext](#onfindnext)|Najít další výskyty textového řetězce.|
 |[CEditView::OnReplaceAll](#onreplaceall)|Nový řetězec nahradí všechny výskyty daného řetězce.|
@@ -92,7 +92,7 @@ class CEditView : public CCtrlView
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CEditView::dwStyleDefault](#dwstyledefault)|Výchozí styl pro objekty typu `CEditView`.|
 
@@ -492,7 +492,7 @@ Volání `UnlockBuffer` po dokončení používání ukazatele vrácené [LockBu
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC SUPERPAD](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
 [CCtrlView – třída](../../mfc/reference/cctrlview-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CEdit – třída](../../mfc/reference/cedit-class.md)<br/>

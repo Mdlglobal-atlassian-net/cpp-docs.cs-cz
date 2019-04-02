@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 5e4de39b0352f33ad59950754df7c0815d6038c3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9314717fab53b1a89b87d657ec617a4c6bd45b8b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417902"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776190"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget – třída
 
@@ -67,13 +67,13 @@ class CCmdTarget : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CCmdTarget::CCmdTarget](#ccmdtarget)|Vytvoří `CCmdTarget` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CCmdTarget::BeginWaitCursor](#beginwaitcursor)|Zobrazí kurzor přesýpacích hodin kurzoru.|
 |[CCmdTarget::DoOleVerb](#dooleverb)|Způsobí, že určený operaci OLE provést akci.|
@@ -524,7 +524,7 @@ void RestoreWaitCursor();
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC acdual –](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC acdual –](../../overview/visual-cpp-samples.md)<br/>
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CCmdUI – třída](../../mfc/reference/ccmdui-class.md)<br/>

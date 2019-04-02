@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 81a15f7a34ebe6c4c101932074c63cb1c7f7fd26
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: bc449d0bbf222391868dc7586e0245fd6e8cd2ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742465"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769859"
 ---
 # <a name="security-best-practices-for-c"></a>Doporučené postupy zabezpečení pro jazyk C++
 
@@ -46,7 +46,7 @@ Knihovna Runtime jazyka C (CRT) má rozšířený zahrnout bezpečné verze funk
 
 ## <a name="safeint-library"></a>SafeInt – knihovna
 
-[SafeInt – knihovna](../windows/safeint-library.md) pomáhá zabránit přetečení celého čísla a jiné zneužitelné chyby, které mohou nastat při používání matematických operací. `SafeInt` Knihovna obsahuje [SafeInt – třída](../windows/safeint-class.md), [SafeIntException – třída](../windows/safeintexception-class.md)a několik [SafeInt – funkce](../windows/safeint-functions.md).
+[SafeInt – knihovna](../safeint/safeint-library.md) pomáhá zabránit přetečení celého čísla a jiné zneužitelné chyby, které mohou nastat při používání matematických operací. `SafeInt` Knihovna obsahuje [SafeInt – třída](../safeint/safeint-class.md), [SafeIntException – třída](../safeint/safeintexception-class.md)a několik [SafeInt – funkce](../safeint/safeint-functions.md).
 
 `SafeInt` Třídy chrání proti přetečení celého čísla a zneužije dělení nulou. Slouží ke zpracování porovnání hodnoty různých typů. Poskytuje dvě zásady zpracování chyb. Výchozí zásada je určená pro `SafeInt` třídy na výjimku `SafeIntException` třídy výjimky do sestavy, proč matematické operaci nejde dokončit. Druhá zásada je určená pro `SafeInt` třídy k zastavení vykonávání programu. Můžete také definovat vlastní zásady.
 

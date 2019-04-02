@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4965
 ms.assetid: 47f3f6dc-459b-4a25-9947-f394c8966cb5
-ms.openlocfilehash: 7d77df395d680b467d1a04a3f59c9822842f99f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2e93fdeba7f9b5b10340ccd1920807a3fcb345a0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653099"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771055"
 ---
 # <a name="compiler-warning-level-1-c4965"></a>Kompilátor upozornění (úroveň 1) C4965
 
@@ -19,7 +19,7 @@ implicitní pole celé číslo 0; Použijte nullptr nebo explicitní přetypová
 
 Visual C++ poskytuje implicitní zabalení typů hodnot. Instrukce, jejímž výsledkem bylo null přiřazení pomocí Správce rozšíření pro C++ teď bude přiřazení na zabalený int
 
-Další informace najdete v tématu [zabalení](../../windows/boxing-cpp-component-extensions.md).
+Další informace najdete v tématu [zabalení](../../extensions/boxing-cpp-component-extensions.md).
 
 ## <a name="example"></a>Příklad
 

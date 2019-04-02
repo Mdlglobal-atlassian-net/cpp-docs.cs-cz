@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3282
 ms.assetid: bac2ac89-c360-4c24-bb81-c20c62ece9ba
-ms.openlocfilehash: 7092ddc3bf6859212cbb143572de1ef3604a13d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 46be1f5250c1ca787909c48646d59180d62bd899
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491504"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780844"
 ---
 # <a name="compiler-error-c3282"></a>Chyba kompilátoru C3282
 
 obecný parametr seznamy se může vyskytovat jenom u spravované nebo WinRTclasses, struktury nebo funkcí
 
-Seznam obecných parametrů nebyl použit správně.  Další informace najdete v tématu [obecných typů](../../windows/generics-cpp-component-extensions.md).
+Seznam obecných parametrů nebyl použit správně.  Další informace najdete v tématu [obecných typů](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Příklad
 

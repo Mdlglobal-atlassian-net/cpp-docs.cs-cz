@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: e4aaede3eb2d5c922c196e2bdfbbe533c4e65e47
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e1dd6fff9fa4f03dbf93510da26c78c73e86c6ab
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295029"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780961"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>Cmfctoolbarscustomizedialog – třída
 
@@ -47,14 +47,14 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCToolBarsCustomizeDialog::CMFCToolBarsCustomizeDialog](#cmfctoolbarscustomizedialog)|Vytvoří `CMFCToolBarsCustomizeDialog` objektu.|
 |`CMFCToolBarsCustomizeDialog::~CMFCToolBarsCustomizeDialog`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddButton](#addbutton)|Vloží tlačítka panelu nástrojů do seznamu příkazů na **příkazy** stránky|
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddMenu](#addmenu)|Načte nabídky z prostředků a volání [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands) na přidání této nabídky do seznamu příkazů **příkazy** stránky.|
@@ -96,7 +96,7 @@ Zatímco **vlastní** se dialogové okno, aplikace pracuje, jak do zvláštního
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít různé metody v `CMFCToolBarsCustomizeDialog` třídy. Tento příklad ukazuje, jak nahradit tlačítka panelu nástrojů v rozevíracím seznamu příkazů na **příkazy** stránce, povolit vytváření nových panelů nástrojů pomocí **vlastní** dialogové okno a zobrazení  **Přizpůsobení** dialogové okno. Tento fragment kódu je součástí [IE demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak použít různé metody v `CMFCToolBarsCustomizeDialog` třídy. Tento příklad ukazuje, jak nahradit tlačítka panelu nástrojů v rozevíracím seznamu příkazů na **příkazy** stránce, povolit vytváření nových panelů nástrojů pomocí **vlastní** dialogové okno a zobrazení  **Přizpůsobení** dialogové okno. Tento fragment kódu je součástí [IE demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#4](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_1.cpp)]
 
@@ -158,7 +158,7 @@ Pokud `iInsertBefore` se -1, na tlačítko se připojí k seznamu kategorií; v 
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití `AddButton` metodu `CMFCToolBarsCustomizeDialog` třídy. Tento fragment kódu je součástí [posuvník ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje způsob použití `AddButton` metodu `CMFCToolBarsCustomizeDialog` třídy. Tento fragment kódu je součástí [posuvník ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_Slider#1](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_2.cpp)]
 
@@ -246,7 +246,7 @@ Hodnota TRUE, pokud je metoda úspěšná. v opačném případě FALSE.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití `AddToolBar` metodu `CMFCToolBarsCustomizeDialog` třídy. Tento fragment kódu je součástí [slovo panel vzorku](../../visual-cpp-samples.md).
+Následující příklad ukazuje způsob použití `AddToolBar` metodu `CMFCToolBarsCustomizeDialog` třídy. Tento fragment kódu je součástí [slovo panel vzorku](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#11](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_3.cpp)]
 
@@ -327,7 +327,7 @@ Další informace o hodnoty, které můžete předat *uiFlags* parametr, nalezne
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vytvořit objekt `CMFCToolBarsCustomizeDialog` třídy. Tento fragment kódu je součástí [ukázková vlastní stránky](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak vytvořit objekt `CMFCToolBarsCustomizeDialog` třídy. Tento fragment kódu je součástí [ukázková vlastní stránky](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#3](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_4.cpp)]
 
@@ -725,7 +725,7 @@ Když [CMFCToolBarsCustomizeDialog::AddMenu](#addmenu), [CMFCToolBarsCustomizeDi
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití `ReplaceButton` metodu `CMFCToolBarsCustomizeDialog` třídy. Tento fragment kódu je součástí [Visual Studio demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje způsob použití `ReplaceButton` metodu `CMFCToolBarsCustomizeDialog` třídy. Tento fragment kódu je součástí [Visual Studio demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#34](../../mfc/codesnippet/cpp/cmfctoolbarscustomizedialog-class_5.cpp)]
 

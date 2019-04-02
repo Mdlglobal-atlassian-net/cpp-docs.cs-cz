@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: c78634c93bda94940b2834a61d276f63522e4aeb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a9d7c4ea941884435c9ecfac54a1d42649c6dbd5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271903"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769690"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -229,7 +229,7 @@ class CDockablePane : public CPane
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDockablePane::CheckAutoHideCondition](#checkautohidecondition)|Určuje, zda je ukotvené podokno skrytý (v režimu automatického skrytí).|
 |[CDockablePane::CheckStopSlideCondition](#checkstopslidecondition)|Určuje, kdy ukotvené podokno automatického schovávání by se měla zastavit klouzavé.|
@@ -239,7 +239,7 @@ class CDockablePane : public CPane
 
 ### <a name="data-members"></a>Datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDockablePane::m_bDisableAnimation](#m_bdisableanimation)|Určuje, zda je animace automatického skrytí podokna ukotvitelné zakázaný.|
 |[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)|Určuje chování v podokně, když je podokno v režimu automatického skrytí.|
@@ -290,7 +290,7 @@ Použijte následující tipy k `CDockablePane` objekty:
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak nakonfigurovat `CDockablePane` pomocí různých metod v objektu `CDockablePane` třídy. Tento příklad ukazuje, jak povolit automatického skrytí všech funkci pro podokna ukotvitelné, povolit popisek nebo úchytu, povolit režim automatického schovávání, zobrazení podokna a animace podokno, které je v režimu automatického skrytí. Tento fragment kódu je součástí [Visual Studio demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak nakonfigurovat `CDockablePane` pomocí různých metod v objektu `CDockablePane` třídy. Tento příklad ukazuje, jak povolit automatického skrytí všech funkci pro podokna ukotvitelné, povolit popisek nebo úchytu, povolit režim automatického schovávání, zobrazení podokna a animace podokno, které je v režimu automatického skrytí. Tento fragment kódu je součástí [Visual Studio demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#27](../../mfc/codesnippet/cpp/cdockablepane-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#28](../../mfc/codesnippet/cpp/cdockablepane-class_2.cpp)]

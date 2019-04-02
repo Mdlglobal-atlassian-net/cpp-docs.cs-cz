@@ -17,12 +17,12 @@ helpviewer_keywords:
 - toolbars [MFC]
 - toolbars [MFC], implementing MFC toolbars
 ms.assetid: af3319ad-c430-4f90-8361-e6a2c06fd084
-ms.openlocfilehash: ce3b373bab67ba49a1f7aa41f2a9456ae7199028
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 55c43c47b93cd21d86293706fc7c3eb5145c39fd
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267807"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773174"
 ---
 # <a name="mfc-toolbar-implementation"></a>Implementace panelu nástrojů v prostředí MFC
 
@@ -84,7 +84,7 @@ Tato patřící třídě výsledků v menším množstvím kódu knihovny MFC pr
 > [!TIP]
 >  Pokud budete mít výrazně investovali do starší implementace MFC `CToolBar`, že je stále dostupná podpora. Přečtěte si článek [pomocí Your starých panelů nástrojů](../mfc/using-your-old-toolbars.md).
 
-Také najdete v ukázce MFC Obecné [DOCKTOOL](../visual-cpp-samples.md).
+Také najdete v ukázce MFC Obecné [DOCKTOOL](../overview/visual-cpp-samples.md).
 
 ##  <a name="_core_the_toolbar_bitmap"></a> Rastrový obrázek panelu nástrojů
 

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 56a3289d5546db21c42d22b5e8544913bdaa78cf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1215c66f1f40cfbc96b813d4eb5084f07698bc01
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283654"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778296"
 ---
 # <a name="cregkey-class"></a>Cregkey – třída
 
@@ -66,14 +66,14 @@ class CRegKey
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CRegKey::CRegKey](#cregkey)|Konstruktor|
 |[CRegKey::~CRegKey](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CRegKey::Attach](#attach)|Volejte tuto metodu za účelem připojení HKEY k `CRegKey` objektu tak, že nastavíte [m_hKey](#m_hkey) popisovač člena `hKey`.|
 |[CRegKey::Close](#close)|Volejte tuto metodu za účelem uvolnění [m_hKey](#m_hkey) člen zpracování a nastavte ho na hodnotu NULL.|
@@ -106,7 +106,7 @@ class CRegKey
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CRegKey::operator HKEY](#operator_hkey)|Převede `CRegKey` objekt HKEY.|
 |[CRegKey::operator =](#operator_eq)|Operátor přiřazení.|
@@ -1058,5 +1058,5 @@ Třetí volání metody [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-re
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázkový model DCOM](../../visual-cpp-samples.md)<br/>
+[Ukázkový model DCOM](../../overview/visual-cpp-samples.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

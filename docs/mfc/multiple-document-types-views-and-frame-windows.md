@@ -15,12 +15,12 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-ms.openlocfilehash: e64ea6701c5e3ec594c705e8995b5ba605ab0b79
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 154fc67dc35d5e5633c72c27100da9be56c0c68c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301191"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779674"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Více typů dokumentů, zobrazení a oken s rámečkem
 
@@ -67,9 +67,9 @@ Na následujícím obrázku je rozdělena na oddíly a, b a c, ukazuje tři mode
 ![Více&#45;uživatelské rozhraní zobrazit](../mfc/media/vc37a71.gif "více&#45;zobrazení uživatelského rozhraní") <br/>
 Více zobrazení uživatelského rozhraní
 
-Rozhraní poskytuje tyto modely pomocí implementace příkazu nové okno a tím, že poskytuje třídy [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), jak je popsáno v [rozdělovač Windows](#_core_splitter_windows). Můžete implementovat další modely využít jako výchozí bod. Pro ukázkové programy, které demonstrují různé konfigurace najdete v zobrazení oken s rámečkem a příčky, [ukázky knihovny MFC](../visual-cpp-samples.md).
+Rozhraní poskytuje tyto modely pomocí implementace příkazu nové okno a tím, že poskytuje třídy [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), jak je popsáno v [rozdělovač Windows](#_core_splitter_windows). Můžete implementovat další modely využít jako výchozí bod. Pro ukázkové programy, které demonstrují různé konfigurace najdete v zobrazení oken s rámečkem a příčky, [ukázky knihovny MFC](../overview/visual-cpp-samples.md).
 
-Další informace o `UpdateAllViews`, naleznete v tématu třídy [CView](../mfc/reference/cview-class.md) v *odkaz knihovny MFC* a [ukázky Scribble](../visual-cpp-samples.md).
+Další informace o `UpdateAllViews`, naleznete v tématu třídy [CView](../mfc/reference/cview-class.md) v *odkaz knihovny MFC* a [ukázky Scribble](../overview/visual-cpp-samples.md).
 
 ##  <a name="_core_multiple_frame_windows"></a> Více rámce Windows
 
@@ -79,11 +79,11 @@ Nové okno příkaz v nabídce okno pro aplikace MDI můžete vytvořit druhý o
 
 V okně rozdělovač v okně je nebo lze rozdělit na dvě nebo více posuvný podoken. Rozdělování ovládací prvek (nebo "rozdělit pole") v rámci okna vedle posuvníky umožňuje uživateli upravit relativní velikosti podoken. Každé podokno je zobrazení na stejný dokument. V "dynamické" příčky zobrazení mají stejné třídy, jak je uvedeno v části b obrázek více zobrazení uživatelského rozhraní. V "statických" příčky může být zobrazení různých tříd. Rozdělovače oken oba typy podporovaných třídou [CSplitterWnd](../mfc/reference/csplitterwnd-class.md).
 
-Dynamické rozdělovače oken pomocí zobrazení stejné třídy, umožnit uživatelům rozdělení okna do několika podoken budete a posuňte různými podokny zobrazíte různých částech tohoto dokumentu. Uživatele můžete také zrušit rozdělení okna odebrat další zobrazení. Rozdělovače oken do [ukázky Scribble](../visual-cpp-samples.md) jsou příkladem. Toto téma popisuje postup pro vytvoření dynamické rozdělovače oken. Dynamické okno s rozdělovačem se zobrazí v části b obrázek více zobrazení uživatelského rozhraní.
+Dynamické rozdělovače oken pomocí zobrazení stejné třídy, umožnit uživatelům rozdělení okna do několika podoken budete a posuňte různými podokny zobrazíte různých částech tohoto dokumentu. Uživatele můžete také zrušit rozdělení okna odebrat další zobrazení. Rozdělovače oken do [ukázky Scribble](../overview/visual-cpp-samples.md) jsou příkladem. Toto téma popisuje postup pro vytvoření dynamické rozdělovače oken. Dynamické okno s rozdělovačem se zobrazí v části b obrázek více zobrazení uživatelského rozhraní.
 
 Statické rozdělovače oken se zobrazeními z různých tříd, spusťte v okně Rozdělit do několika podoken, každý s jiným způsobem. Například v editoru rastrových obrázků Visual C++, image okno zobrazuje dvě podokna vedle sebe. V levém podokně se zobrazí life-sized obraz bitmapy. V pravém podokně se zobrazí obrázek přiblíženou nebo zvětšenou stejné rastrového obrázku. Podokna jsou odděleny "rozdělovač bar", který uživatel můžete přetáhnout do změnit tak relativní velikosti podoken. Statický rozdělovač okna se zobrazí v části c obrázek více zobrazení uživatelského rozhraní.
 
-Další informace najdete v tématu třídy [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) v *odkaz knihovny MFC* a [ukázky knihovny MFC](../visual-cpp-samples.md).
+Další informace najdete v tématu třídy [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) v *odkaz knihovny MFC* a [ukázky knihovny MFC](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Viz také:
 

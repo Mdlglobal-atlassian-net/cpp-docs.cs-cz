@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-ms.openlocfilehash: 275119b2343c4d13b6a32f939fc8c3b2b5d5890c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c5076ceef0c6626fac0232fadf6818edd78b4ccf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300401"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773551"
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc Class
 
@@ -37,27 +37,27 @@ class COleLinkingDoc : public COleDocument
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleLinkingDoc::COleLinkingDoc](#colelinkingdoc)|Vytvoří `COleLinkingDoc` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleLinkingDoc::Register](#register)|Registruje dokumentu OLE systémové knihovny DLL.|
 |[COleLinkingDoc::Revoke](#revoke)|Odvolá registrace dokumentu.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleLinkingDoc::OnFindEmbeddedItem](#onfindembeddeditem)|Vyhledá určitou vloženou položku.|
 |[COleLinkingDoc::OnGetLinkedItem](#ongetlinkeditem)|Vyhledá určitou propojenou položku.|
 
 ## <a name="remarks"></a>Poznámky
 
-Aplikace typu kontejner, který podporuje propojování vložené položky se nazývá "kontejner propojení". [OCLIENT](../../visual-cpp-samples.md) ukázkové aplikace je příkladem kontejner odkaz.
+Aplikace typu kontejner, který podporuje propojování vložené položky se nazývá "kontejner propojení". [OCLIENT](../../overview/visual-cpp-samples.md) ukázkové aplikace je příkladem kontejner odkaz.
 
 Pokud je zdrojem propojená položka vložená položka v jiném dokumentu, obsahující dokumentu musí být načten v pořadí pro vloženou položku upravit. Z tohoto důvodu musí být schopni spustit jinou aplikací kontejneru, když chce uživatel upravit zdroj propojená položka kontejner odkaz. Aplikaci musíte taky použít [COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) třídy tak, že může vytvářet dokumenty při spuštění prostřednictvím kódu programu.
 
@@ -75,7 +75,7 @@ Připojení vaší `COleTemplateServer` objektu do dokumentu šablon voláním o
 
 [!code-cpp[NVC_MFCOleContainer#25](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]
 
-Pro ukázku `CWinApp`-odvozené třídy definice a `InitInstance` funkce naleznete v tématu OCLIENT. H a OCLIENT. CPP v ukázce MFC [OCLIENT](../../visual-cpp-samples.md).
+Pro ukázku `CWinApp`-odvozené třídy definice a `InitInstance` funkce naleznete v tématu OCLIENT. H a OCLIENT. CPP v ukázce MFC [OCLIENT](../../overview/visual-cpp-samples.md).
 
 Další informace o používání `COleLinkingDoc`, najdete v článcích [kontejnerů: Implementace kontejneru](../../mfc/containers-implementing-a-container.md) a [kontejnerů: Pokročilé funkce](../../mfc/containers-advanced-features.md).
 
@@ -193,7 +193,7 @@ Při zavírání souboru s názvem byste měli volat tuto funkci, ale obvykle ne
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [COleDocument – třída](../../mfc/reference/coledocument-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CDocTemplate – třída](../../mfc/reference/cdoctemplate-class.md)

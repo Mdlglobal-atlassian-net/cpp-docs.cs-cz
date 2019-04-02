@@ -6,12 +6,12 @@ helpviewer_keywords:
 - troubleshooting isolated applications
 - troubleshooting Visual C++
 ms.assetid: 3257257a-1f0b-4ede-8564-9277a7113a35
-ms.openlocfilehash: d23662d6dd6d2f241c48e0c83f2fa5ed9532c3f7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 32896939ddc7fd0b841e1b6904124b06c9bc51c9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807946"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766052"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Řešení potíží s izolovanými aplikacemi C/C++ a souběžnými sestaveními
 
@@ -31,7 +31,7 @@ Pokud vaše aplikace nemá žádný manifest a závisí na knihovnu DLL, která 
 
 Pokud vaše aplikace bude nasazena na počítač, který nemá aplikaci Visual Studio a jeho dojde k chybě s chybovými zprávami, které se podobají předchozích balíčcích, zkontrolujte tyto věci:
 
-1. Postupujte podle kroků, které jsou popsány v [Principy závislostí v aplikacích Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). Prohlížeč závislostí můžete zobrazit většina závislosti pro aplikaci nebo knihovny DLL. Pokud zjistíte, že chybí některé knihovny DLL, instalaci na počítač, na které se pokoušíte spustit aplikaci.
+1. Postupujte podle kroků, které jsou popsány v [Principy závislostí v aplikacích Visual C++](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md). Prohlížeč závislostí můžete zobrazit většina závislosti pro aplikaci nebo knihovny DLL. Pokud zjistíte, že chybí některé knihovny DLL, instalaci na počítač, na které se pokoušíte spustit aplikaci.
 
 1. Zavaděč operačního systému používá manifestu aplikace se načíst sestavení, na kterých aplikace závisí. Manifest můžete být vloženy do binárního souboru jako prostředek, nebo nainstalovat jako samostatný soubor ve složce aplikace. Pokud chcete zkontrolovat, zda je manifest vložený do binárního souboru, otevřete panel binárního souboru v sadě Visual Studio a hledejte RT_MANIFEST ve svém seznamu zdrojů. Pokud nelze nalézt vložený manifest, podívejte se ve složce aplikace soubor s názvem podobným < binary_name >. \<přípona > .manifest.
 

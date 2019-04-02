@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CPaneContainerManager [MFC], SetResizeMode
 - CPaneContainerManager [MFC], StoreRecentDockSiteInfo
 ms.assetid: 3d974c15-a62f-4648-bb5b-cc31ab7950af
-ms.openlocfilehash: 7e0c55981b895540d490e2e38f43eb68abf48e32
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 887b771ee76034256c77aa3d038da96696eca6ed
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294652"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774586"
 ---
 # <a name="cpanecontainermanager-class"></a>CPaneContainerManager Class
 
@@ -128,7 +128,7 @@ class CPaneContainerManager : public CObject
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CPaneContainerManager::AddPane](#addpane)||
 |[CPaneContainerManager::AddPaneContainerManager](#addpanecontainermanager)||
@@ -189,7 +189,7 @@ Rozhraní automaticky vytváří instance `CPaneContainerManager` objekty a vkl�
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak získat odkaz na `CPaneContainerManager` objektu. Tento fragment kódu je součástí [nastavit velikost podokna ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak získat odkaz na `CPaneContainerManager` objektu. Tento fragment kódu je součástí [nastavit velikost podokna ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_SetPaneSize#5](../../mfc/reference/codesnippet/cpp/cpanecontainermanager-class_1.cpp)]
 

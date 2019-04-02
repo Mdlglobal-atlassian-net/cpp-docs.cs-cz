@@ -2,12 +2,12 @@
 title: Rozhraní MFC a knihovna ATL
 ms.date: 01/24/2018
 ms.assetid: 31b1a3a8-4154-4c4a-af10-fafc23ecdc5c
-ms.openlocfilehash: 620d514e1bc1bad6c33eab16577639c4053cdf10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2cfb77f0e3885e0b315ddfe38bf942ec157375a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486356"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780246"
 ---
 # <a name="mfc-and-atl"></a>Rozhraní MFC a knihovna ATL
 
@@ -27,4 +27,4 @@ V sadě Visual Studio 2017 a novější knihovny MFC a ATL jsou volitelné díl�
 |[Desktopové komponenty ATL objektů COM](../atl/atl-com-desktop-components.md)|Knihovna ATL poskytuje šablony tříd a konstrukce pro zjednodušení vytváření objektů modelu COM v jazyce C++ jiné použití.|
 |[Sdílené třídy ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)|Odkazy [cstringt – třída](../atl-mfc-shared/reference/cstringt-class.md) a jiné třídy, které jsou sdílené mezi MFC a ATL.|
 |[Práce se zdrojovými soubory](../windows/working-with-resource-files.md)|Editor prostředků umožňuje upravovat prostředky uživatelského prostředí, jako jsou řetězce, obrázky a dialogových oknech.|
-|[Visual C++](../visual-cpp-in-visual-studio.md)|Nadřazené téma pro veškerý obsah jazyka C++ v knihovně MSDN.|
+|[Visual C++](../overview/visual-cpp-in-visual-studio.md)|Nadřazené téma pro veškerý obsah jazyka C++ v knihovně MSDN.|

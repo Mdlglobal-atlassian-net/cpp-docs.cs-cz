@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 81b52d6876b0691c09db0e9dcf7fa7d491f999ca
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 58f9efb19988be8487ec87ce0c63d90ee1a97911
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305169"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769833"
 ---
 # <a name="cmap-class"></a>Cmap – třída
 
@@ -73,7 +73,7 @@ Datový typ používaný pro *hodnotu* argumenty; obvykle odkaz na *hodnota*.
 
 ### <a name="public-structures"></a>Veřejné struktury
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMap::CPair](#cpair)|Vnořené struktury obsahující hodnotu klíče a hodnoty přidruženého objektu.|
 
@@ -85,7 +85,7 @@ Datový typ používaný pro *hodnotu* argumenty; obvykle odkaz na *hodnota*.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMap::GetCount](#getcount)|Vrátí počet prvků, které na této mapě.|
 |[CMap::GetHashTableSize](#gethashtablesize)|Vrátí počet prvků v zatřiďovací tabulce.|
@@ -104,7 +104,7 @@ Datový typ používaný pro *hodnotu* argumenty; obvykle odkaz na *hodnota*.
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMap::operator \[ \]](#operator_at)|Vloží prvek do mapy – operátor nahrazení pro `SetAt`.|
 
@@ -538,6 +538,6 @@ Nejprve je klíč vyhledávat. Pokud je nalezen klíč, pak odpovídající hodn
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC shromažďování](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC shromažďování](../../overview/visual-cpp-samples.md)<br/>
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

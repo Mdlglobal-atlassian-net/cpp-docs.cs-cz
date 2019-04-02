@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: 1a18e235c9f5875a977f740c26b917a3567a678d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c6385cb6bd3eec3ce5fefe0475d771c774777820
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264986"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781871"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar – třída
 
@@ -87,7 +87,7 @@ class CMFCCaptionBar : public CPane
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCCaptionBar::Create](#create)|Vytvoří ovládací prvek panel titulek a připojí ho k `CMFCCaptionBar` objektu.|
 |[CMFCCaptionBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Určuje, zda jiný podokně můžete dynamicky vložen mezi záhlaví a jeho nadřazeného rámce. (Přepíše [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|
@@ -124,7 +124,7 @@ class CMFCCaptionBar : public CPane
 
 ### <a name="data-members"></a>Datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground)|Barva pozadí záhlaví.|
 |[CMFCCaptionBar::m_clrBarBorder](#m_clrbarborder)|Barva ohraničení záhlaví.|
@@ -148,7 +148,7 @@ Chcete-li povolit režim panel zpráv, zavolejte [CMFCCaptionBar::Create](#creat
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít různé metody v `CMFCCaptionBar` třídy. Tento příklad ukazuje, jak vytvořit ovládací prvek panel titulek, nastavte 3D okraj záhlaví, nastavte vzdálenost v pixelech mezi hraniční titulek panelu elementy a okrajem ovládacího prvku panelu titulek, nastavení tlačítka pro záhlaví , nastavit popisu tlačítka pro tlačítko, nastavte textový popisek pro záhlaví, nastavit rastrový obrázek pro záhlaví a nastavit popis bitové kopie v záhlaví. Tento fragment kódu je součástí [MS Office 2007 demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak použít různé metody v `CMFCCaptionBar` třídy. Tento příklad ukazuje, jak vytvořit ovládací prvek panel titulek, nastavte 3D okraj záhlaví, nastavte vzdálenost v pixelech mezi hraniční titulek panelu elementy a okrajem ovládacího prvku panelu titulek, nastavení tlačítka pro záhlaví , nastavit popisu tlačítka pro tlačítko, nastavte textový popisek pro záhlaví, nastavit rastrový obrázek pro záhlaví a nastavit popis bitové kopie v záhlaví. Tento fragment kódu je součástí [MS Office 2007 demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#1](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_1.h)]
 [!code-cpp[NVC_MFC_MSOffice2007Demo#2](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_2.cpp)]

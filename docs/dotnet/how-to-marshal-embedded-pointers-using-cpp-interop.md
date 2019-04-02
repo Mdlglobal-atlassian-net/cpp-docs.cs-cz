@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pointers [C++], marshaling
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-ms.openlocfilehash: 89194dabb4b124aa7cbd4d1d34a74de491fba66f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: c6d622060aaf700b6ea1a3bfe797ab3190eee797
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738485"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780233"
 ---
 # <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Postupy: Zařazení vložených ukazatelů pomocí zprostředkovatele komunikace C++
 
@@ -23,7 +23,7 @@ Následující příklady kódu používají [spravované, nespravované](../pre
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak lze volat nespravovanou funkci, která přebírá strukturu obsahující ukazatele ze spravované funkce. Spravované funkce vytvoří instanci struktury a inicializuje ukazatel vložené pomocí klíčového slova new (místo [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) – klíčové slovo). Protože toto přidělí paměť na nativních haldách, není nutné pro Připnutí pole, které chcete potlačit uvolňování paměti. Ale paměti se musí explicitně odstranit aby se zabránilo úniku paměti.
+Následující příklad ukazuje, jak lze volat nespravovanou funkci, která přebírá strukturu obsahující ukazatele ze spravované funkce. Spravované funkce vytvoří instanci struktury a inicializuje ukazatel vložené pomocí klíčového slova new (místo [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) – klíčové slovo). Protože toto přidělí paměť na nativních haldách, není nutné pro Připnutí pole, které chcete potlačit uvolňování paměti. Ale paměti se musí explicitně odstranit aby se zabránilo úniku paměti.
 
 ```
 // marshal_embedded_pointer.cpp

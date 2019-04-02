@@ -6,16 +6,16 @@ helpviewer_keywords:
 - boxing, implicit
 - value types, creating
 ms.assetid: ceb48841-d6bd-47be-a167-57f44c961603
-ms.openlocfilehash: 4b7d0560d8a80d0c09e7f8d0fce83748ec1f2f28
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: c67f8e0b9511f4ed1610e72e4a7df41c949b1d27
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739278"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770794"
 ---
 # <a name="how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing"></a>Postupy: Pomocí výrazu gcnew vytváření typů hodnot s použitím implicitního zabalení
 
-Pomocí [gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) na hodnotě se vytvoří typ hodnotový typ, který pak může být umístěna na haldě spravované, uvolňování.
+Pomocí [gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) na hodnotě se vytvoří typ hodnotový typ, který pak může být umístěna na haldě spravované, uvolňování.
 
 ## <a name="example"></a>Příklad
 
@@ -46,4 +46,4 @@ int main() {
 
 ## <a name="see-also"></a>Viz také:
 
-[Zabalení](../windows/boxing-cpp-component-extensions.md)
+[Zabalení](../extensions/boxing-cpp-component-extensions.md)

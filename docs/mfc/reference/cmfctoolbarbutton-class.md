@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: 94d7ba14e01b2965a0fe788162726d1019e847de
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0a3af2b13eeb2775671ee89019b1562010acc059
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275230"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776385"
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton Class
 
@@ -188,7 +188,7 @@ class CMFCToolBarButton : public CObject
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCToolBarButton::CanBeDropped](#canbedropped)|Určuje, zda uživatele lze umístit na tlačítko na panelu nástrojů nebo nabídce během přizpůsobování.|
 |[CMFCToolBarButton::CanBeStored](#canbestored)|Určuje, zda mohou být uloženy na tlačítko.|
@@ -260,7 +260,7 @@ class CMFCToolBarButton : public CObject
 
 ### <a name="data-members"></a>Datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCToolBarButton::m_bImage](#m_bimage)|Určuje, jestli obrázek je zobrazený na tlačítku.|
 |[CMFCToolBarButton::m_bText](#m_btext)|Určuje, zda je textový popisek zobrazený na tlačítku.|
@@ -287,7 +287,7 @@ Když uživatel klikne na tlačítko panelu nástrojů, jeho nadřazeného panel
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak nakonfigurovat `CMFCToolBarButton` pomocí různých metod v objektu `CMFCToolBarButton` třídy. Tento příklad ukazuje, jak povolit myší a vstup z klávesnice, nastavit index obrázku tlačítka, nastavte ohraničující obdélník na tlačítko a zviditelnění na tlačítko. Tento fragment kódu je součástí [Ukázka ovládacího prvku karta](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak nakonfigurovat `CMFCToolBarButton` pomocí různých metod v objektu `CMFCToolBarButton` třídy. Tento příklad ukazuje, jak povolit myší a vstup z klávesnice, nastavit index obrázku tlačítka, nastavte ohraničující obdélník na tlačítko a zviditelnění na tlačítko. Tento fragment kódu je součástí [Ukázka ovládacího prvku karta](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_TabControl#1](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_TabControl#2](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_2.cpp)]

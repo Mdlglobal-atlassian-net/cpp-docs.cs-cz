@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonMiniToolBar [MFC], Show
 - CMFCRibbonMiniToolBar [MFC], ShowWithContextMenu
 ms.assetid: 7017e963-aeaf-4fe9-b540-e15a7ed41e94
-ms.openlocfilehash: 462a4aa04ddc542db8aba734ed93ab0fae905dad
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 394182aa0f9c967524ed0db510d0b9cc0739118e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283836"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777152"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>Cmfcribbonminitoolbar – třída
 
@@ -44,7 +44,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |`CMFCRibbonMiniToolBar::CreateObject`|Rozhraní používá k vytvoření dynamické instance tohoto typu třídy.|
 |`CMFCRibbonMiniToolBar::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|
@@ -106,7 +106,7 @@ Pomocí této funkce můžete nastavit seznam příkazů, který se má zobrazit
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití `SetCommands` metodu `CMFCRibbonMiniToolBar` třídy. Tento fragment kódu je součástí [MS Office 2007 demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje způsob použití `SetCommands` metodu `CMFCRibbonMiniToolBar` třídy. Tento fragment kódu je součástí [MS Office 2007 demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#9](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]
 

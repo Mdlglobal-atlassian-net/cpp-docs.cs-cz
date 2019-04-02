@@ -9,12 +9,12 @@ helpviewer_keywords:
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: 60c50eb25132a38c72be762ab96d8ee262f5b349
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 042412000ba59c8400c5a3a64edae5d60756116a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328828"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766492"
 ---
 # <a name="mfc-desktop-applications"></a>Běžné aplikace knihovny MFC
 
@@ -79,7 +79,7 @@ Popisuje graf hierarchie MFC podle kategorie.
 [Sdílené třídy ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 Obsahuje odkazy na třídy, které jsou sdíleny mezi MFC a ATL.
 
-[Ukázky knihovny MFC](../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC](../overview/visual-cpp-samples.md)<br/>
 Obsahuje odkazy na ukázky, které ukazují, jak použít knihovnu MFC.
 
 [Knihovny Visual C++ – referenční informace](../standard-library/cpp-standard-library-reference.md)<br/>

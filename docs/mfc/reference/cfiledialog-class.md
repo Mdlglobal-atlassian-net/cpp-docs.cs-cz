@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: aaa05fc3e97fe690e8d6a0cd9eba826c482b410d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f74d883fa0dcdce025345848caf49069736ee0fa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262100"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779206"
 ---
 # <a name="cfiledialog-class"></a>Cfiledialog – třída
 
@@ -153,7 +153,7 @@ class CFileDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CFileDialog::CFileDialog](#cfiledialog)|Vytvoří `CFileDialog` objektu.|
 
@@ -230,7 +230,7 @@ class CFileDialog : public CCommonDialog
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CFileDialog::m_ofn](#m_ofn)|Windows `OPENFILENAME` struktury. Poskytuje přístup k základní soubor dialogové okno pole parametrů.|
 
@@ -251,7 +251,7 @@ Některé `CFileDialog` metody nejsou podporovány v rámci Windows Vista nebo n
 
 - [CDialog::OnSetFont](../../mfc/reference/cdialog-class.md#onsetfont)
 
-Zprávy windows `CFileDialog` třídy se liší v závislosti na který operační systém používáte. Například Windows XP není podporováno [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) a [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) pro `CFileDialog` třídy. Nicméně Windows Vista a novějších operačních systémech je podporují. Další informace o různých zpráv, které jsou generovány a pořadí, ve kterém jsou přijímány, naleznete v tématu [CFileDialog vzorku: Protokolování pořadí událostí](../../visual-cpp-samples.md).
+Zprávy windows `CFileDialog` třídy se liší v závislosti na který operační systém používáte. Například Windows XP není podporováno [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) a [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) pro `CFileDialog` třídy. Nicméně Windows Vista a novějších operačních systémech je podporují. Další informace o různých zpráv, které jsou generovány a pořadí, ve kterém jsou přijímány, naleznete v tématu [CFileDialog vzorku: Protokolování pořadí událostí](../../overview/visual-cpp-samples.md).
 
 Použití `CFileDialog` objektu, nejprve vytvořte objekt s použitím `CFileDialog` konstruktoru. Poté, co byl vytvořen dialogových oken, můžete nastavit nebo změnit všechny hodnoty v [CFileDialog::m_ofn](#m_ofn) struktury k inicializaci hodnoty nebo stavy ovládací prvky dialogového okna. `m_ofn` Struktury je typu `OPENFILENAME`. Další informace najdete v tématu [LPSTRFILE](/windows/desktop/api/commdlg/ns-commdlg-tagofna) struktura v sadě Windows SDK.
 

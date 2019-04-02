@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interop [C++], MFC
 - Windows Forms [C++], MFC support
 ms.assetid: 63fb099b-1dff-469c-9e34-dab52e122fcd
-ms.openlocfilehash: d36932a3edc0129f0497cb8db4095283650c5c96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 38c5c37712b430b137934d441056e60f2c130f78
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494156"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773096"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>Použití uživatelského ovládacího prvku Windows Form v prostředí MFC
 
@@ -34,7 +34,7 @@ Následující části popisují, jak:
 > [!NOTE]
 > Když vytváříte aplikaci pomocí privátního (upravené) kopírování z rozhraní Windows Forms knihovny MFC DLL (mfcmifc80.dll), dojde k instalaci v mezipaměti GAC, není-li nahradit klíč Microsoftu s vlastním klíčem dodavatele. Další informace o podepisování sestavení naleznete v tématu [programování se sestaveními](/dotnet/framework/app-domains/programming-with-assemblies) a [sestavení se silným názvem (podepisování sestavení) (C + +/ CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
-Pokud vaše aplikace knihovny MFC používá Windows Forms, musíte redistribuovat mfcmifc80.dll s vaší aplikací. Další informace najdete v tématu [Redistribuce knihovny MFC](../ide/redistributing-the-mfc-library.md).
+Pokud vaše aplikace knihovny MFC používá Windows Forms, musíte redistribuovat mfcmifc80.dll s vaší aplikací. Další informace najdete v tématu [Redistribuce knihovny MFC](../windows/redistributing-the-mfc-library.md).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 

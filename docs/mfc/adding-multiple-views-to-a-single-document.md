@@ -7,19 +7,19 @@ helpviewer_keywords:
 - single document interface (SDI), adding views
 - views [MFC], SDI applications
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
-ms.openlocfilehash: b665f090fc680221be70f170452d756dd5f68dc5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 593c59c73b58b4364c9d652ce8eb415c17af496c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284278"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767584"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Přidání více zobrazení do jednoho dokumentu
 
 V aplikaci SDI (SDI) vytvořené pomocí knihovny Microsoft Foundation Class (MFC) je přidružený k typu jedno zobrazení každý typ dokumentu. V některých případech je třeba mít možnost přepnout aktuální zobrazení dokumentu pomocí nové zobrazení.
 
 > [!TIP]
->  Další postupy při implementaci více zobrazení pro jednotlivý dokument najdete v tématu [CDocument::AddView](../mfc/reference/cdocument-class.md#addview) a [SHROMAŽĎOVAT](../visual-cpp-samples.md) vzorek MFC.
+>  Další postupy při implementaci více zobrazení pro jednotlivý dokument najdete v tématu [CDocument::AddView](../mfc/reference/cdocument-class.md#addview) a [SHROMAŽĎOVAT](../overview/visual-cpp-samples.md) vzorek MFC.
 
 Tuto funkci můžete implementovat přidáním nového `CView`-odvozené třídy a další kód pro přepínání zobrazení dynamicky k existující aplikaci MFC.
 

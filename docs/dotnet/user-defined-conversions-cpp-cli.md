@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined conversions [C++]
 ms.assetid: 8010fd59-2775-4e9a-a6ed-58055032d66f
-ms.openlocfilehash: cd3b27e0667b5ab9707db4b2cce2d7eef4611219
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8f168582e56e77f1ec848928b7ffd36879ba341a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743181"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772420"
 ---
 # <a name="user-defined-conversions-ccli"></a>Uživatelem definované převody (C++/CLI)
 
@@ -21,7 +21,7 @@ Uživatelem definovaný převod může být implicitní nebo explicitní.  UDC b
 
 Konstruktor nativních tříd lze použít pro převod na nativních tříd typu odkazu nebo hodnoty.
 
-Další informace o převodech viz [zabalení](../windows/boxing-cpp-component-extensions.md) a [standardní převody](../cpp/standard-conversions.md).
+Další informace o převodech viz [zabalení](../extensions/boxing-cpp-component-extensions.md) a [standardní převody](../cpp/standard-conversions.md).
 
 ```
 // mcpp_User_Defined_Conversions.cpp
@@ -321,4 +321,4 @@ int main() {
 
 ## <a name="see-also"></a>Viz také:
 
-[Třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md)
+[Třídy a struktury](../extensions/classes-and-structs-cpp-component-extensions.md)

@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: f1f7610fc315da65145798058fdcf9752e7873d0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4eee24eb93be446f6b4f2631b70736c13a02f45c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283251"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771404"
 ---
 # <a name="cmfccolorbar-class"></a>Cmfccolorbar – třída
 
@@ -95,13 +95,13 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCColorBar::CMFCColorBar](#cmfccolorbar)|Vytvoří `CMFCColorBar` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCColorBar::ContextToSize](#contexttosize)|Vypočítá vertikálním a horizontálním okraje, které jsou nutné tak, aby obsahovala tlačítek v ovládacím prvku pruhu barev a pak nastaví umístění těchto tlačítek.|
 |[CMFCColorBar::CreateControl](#createcontrol)|Vytvoří okno Ovládací prvek pruhu barev, připojí se k `CMFCColorBar` objektu a změní velikost ovládacího prvku tak, aby obsahovala zadaný palety barev.|
@@ -123,7 +123,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCColorBar::AdjustLocations](#adjustlocations)|Upraví pozice barvu tlačítka v ovládacím prvku pruhu barev.|
 |[CMFCColorBar::AllowChangeTextLabels](#allowchangetextlabels)|Označuje, zda lze změnit označení textového barvu tlačítka.|
@@ -202,7 +202,7 @@ Když uživatel klikne na tlačítko pro ovládací prvek pruhu barev, systém p
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak nakonfigurovat pomocí různých metod v pruhu barev `CMFCColorBar` třídy. Metody nastavení vodorovného a svislého okrajů, povolte na tlačítko, vytvoření okna pro ovládací prvek pruhu barev a nastavuje barvu aktuálně vybraný. V tomto příkladu je součástí [nové ovládací prvky ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak nakonfigurovat pomocí různých metod v pruhu barev `CMFCColorBar` třídy. Metody nastavení vodorovného a svislého okrajů, povolte na tlačítko, vytvoření okna pro ovládací prvek pruhu barev a nastavuje barvu aktuálně vybraný. V tomto příkladu je součástí [nové ovládací prvky ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#1](../../mfc/reference/codesnippet/cpp/cmfccolorbar-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#2](../../mfc/reference/codesnippet/cpp/cmfccolorbar-class_2.cpp)]

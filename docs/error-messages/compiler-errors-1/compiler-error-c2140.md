@@ -1,25 +1,25 @@
 ---
-title: Chyba kompilátoru C2140
+title: Compiler Error C2140
 ms.date: 11/04/2016
 f1_keywords:
 - C2140
 helpviewer_keywords:
 - C2140
 ms.assetid: d44a0500-002c-4632-9e5e-c71c3a473ec4
-ms.openlocfilehash: e04a44007161fcfae5bab948584809590edbc095
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35b6e38290acddb41bdf53d9663a058259300ee8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668699"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771887"
 ---
-# <a name="compiler-error-c2140"></a>Chyba kompilátoru C2140
+# <a name="compiler-error-c2140"></a>Compiler Error C2140
 
 'type': typ, který je závislý na parametru obecného typu není povolený jako argument vlastnosti kompilátoru vnitřního typu 'vlastnosti'
 
 Vlastnost typu byl předán neplatná specifikace typu.
 
-Další informace najdete v tématu [podpora kompilátoru pro typové vlastnosti](../../windows/compiler-support-for-type-traits-cpp-component-extensions.md).
+Další informace najdete v tématu [podpora kompilátoru pro typové vlastnosti](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md).
 
 ## <a name="example"></a>Příklad
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - MFC, wizards
 - Class View tool, managing Windows messages
 ms.assetid: f5dd4d13-9dc1-4a49-b6bf-5b3cb45fa8ba
-ms.openlocfilehash: 5316899b7eb8828847af6d7db95edf3d8ba3822a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 41cbb86b4245bd78baecd222b5573ba5e877243a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265519"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773824"
 ---
 # <a name="wizards-and-the-resource-editors"></a>Průvodci a editory prostředků
 
@@ -46,7 +46,7 @@ V okně Vlastnosti vytvoří prázdný popisovač zpráv členské funkce a pou�
 
 Použití jazyka Visual C++ [editory prostředků](../windows/resource-editors.md) vytvářet a upravovat nabídek, dialogová okna, vlastní ovládací prvky, klávesové zkratky, rastrové obrázky, ikony, kurzory, řetězce a verze zdroje. Od verze Visual C++ verze 4.0 editor panelu nástrojů jednodušší vytváření panelů nástrojů.
 
-To vám pomůže i, poskytuje knihovny Microsoft Foundation Class soubor s názvem COMMON. RES, který obsahuje "klipart" prostředky, které můžete zkopírovat z běžné. RES a vložit do souboru prostředků. BĚŽNÉ. RES obsahuje tlačítka na panelu nástrojů, běžné kurzorů, ikony a další. Můžete použít, upravit a distribuovat tyto prostředky ve vaší aplikaci. Další informace o běžné. RES, najdete v článku [klipart ukázka](../visual-cpp-samples.md).
+To vám pomůže i, poskytuje knihovny Microsoft Foundation Class soubor s názvem COMMON. RES, který obsahuje "klipart" prostředky, které můžete zkopírovat z běžné. RES a vložit do souboru prostředků. BĚŽNÉ. RES obsahuje tlačítka na panelu nástrojů, běžné kurzorů, ikony a další. Můžete použít, upravit a distribuovat tyto prostředky ve vaší aplikaci. Další informace o běžné. RES, najdete v článku [klipart ukázka](../overview/visual-cpp-samples.md).
 
 Průvodce aplikací MFC, průvodců aplikace Visual C++, editory prostředků a rozhraní MFC dělat spoustu práce za vás a ujistěte se, správa kódu mnohem jednodušší. Hromadné kódu specifické pro aplikaci se dokument a zobrazení tříd.
 

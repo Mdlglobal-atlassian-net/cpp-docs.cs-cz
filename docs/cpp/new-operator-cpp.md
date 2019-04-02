@@ -4,19 +4,19 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-ms.openlocfilehash: 83800f823ffd14fd61a9735b09b12d2f07f6d0a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcb7784e59966510970bd9b3ae0157ae982e462d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477984"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768065"
 ---
 # <a name="new-operator-c"></a>new – operátor (C++)
 
 Přiděluje paměť pro objekt nebo pole objektů *název typu* z volného úložiště a vrací vhodně typovaný nenulový ukazatel na objekt.
 
 > [!NOTE]
->  Rozšíření komponenty Microsoft C++ poskytuje podporu pro **nové** – klíčové slovo přidat položky vtable slot. Další informace najdete v tématu [new (nový slot v tabulce vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)
+>  Rozšíření komponenty Microsoft C++ poskytuje podporu pro **nové** – klíčové slovo přidat položky vtable slot. Další informace najdete v tématu [new (nový slot v tabulce vtable)](../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,7 +29,7 @@ Přiděluje paměť pro objekt nebo pole objektů *název typu* z volného úlo�
 
 Pokud není úspěšné, **nové** vrátí hodnotu 0 nebo vyvolá výjimku, naleznete v tématu [nové a odstranit operátory](../cpp/new-and-delete-operators.md) Další informace. Můžete změnit toto výchozí chování psaní vlastních rutin zpracování výjimek a volání [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) funkce knihovny run-time s názvem funkce jako svůj argument.
 
-Informace o tom, jak vytvořit objekt na spravované haldě, naleznete v tématu [gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md).
+Informace o tom, jak vytvořit objekt na spravované haldě, naleznete v tématu [gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md).
 
 Když **nové** se používá k přidělení paměti pro objekt třídy jazyka C++, objekt konstruktoru se volá, když je přidělena paměť.
 
@@ -61,13 +61,13 @@ Pokud použijete operátor **nové** bez dalších argumentů a kompilujete s [/
 
 Následující seznam popisuje gramatické prvky parametru **nové**:
 
-*umístění*<br/>
+*placement*<br/>
 Poskytuje způsob předání dalších argumentů, pokud přetížíte **nové**.
 
 *Název typu*<br/>
 Určuje typ má být přidělen. může se jednat vestavěný nebo uživatelem definovaný typ. Pokud je specifikace typu složitá, může být uzavřen v závorkách k vynucení pořadí vazeb.
 
-*Inicializátor*<br/>
+*initializer*<br/>
 Poskytuje hodnotu pro inicializaci objektu. Inicializátory nelze zadat pro pole. **Nové** operátor vytvoří pole objektů pouze v případě, třída nemá výchozí konstruktor.
 
 ## <a name="example"></a>Příklad

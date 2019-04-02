@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleInsertDialog [MFC], GetSelectionType
 - COleInsertDialog [MFC], m_io
 ms.assetid: a9ec610b-abde-431e-bd01-c40159a66dbb
-ms.openlocfilehash: 750243ddf6494ecc4a6a28c0cb47b05ca7089c33
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 27bf98ea4fe6951624873c1463d50f37558c9234
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260683"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781481"
 ---
 # <a name="coleinsertdialog-class"></a>Coleinsertdialog – třída
 
@@ -45,13 +45,13 @@ class COleInsertDialog : public COleDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleInsertDialog::COleInsertDialog](#coleinsertdialog)|Vytvoří `COleInsertDialog` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleInsertDialog::CreateItem](#createitem)|Vytvoří položky vybrané v dialogovém okně.|
 |[COleInsertDialog::DoModal](#domodal)|Zobrazí dialogové okno vložení objektu OLE.|
@@ -304,7 +304,7 @@ Další informace najdete v tématu [OLEUIINSERTOBJECT](/windows/desktop/api/ole
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [COleDialog – třída](../../mfc/reference/coledialog-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [COleDialog – třída](../../mfc/reference/coledialog-class.md)

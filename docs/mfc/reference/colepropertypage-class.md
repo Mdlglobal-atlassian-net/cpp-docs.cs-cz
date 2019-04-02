@@ -38,12 +38,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: 55f4b7304d0b50004585b55142804e0bb4234c16
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8253b2c2fa6b93ec51c7ede983ef710eed039970
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271252"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776983"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage – třída
 
@@ -59,13 +59,13 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COlePropertyPage::COlePropertyPage](#colepropertypage)|Vytvoří `COlePropertyPage` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COlePropertyPage::GetControlStatus](#getcontrolstatus)|Určuje, zda má uživatel změnil hodnotu v ovládacím prvku.|
 |[COlePropertyPage::GetObjectArray](#getobjectarray)|Vrátí pole objektů editován stránky vlastností.|
@@ -385,8 +385,8 @@ Ukazatel na řetězec obsahující název vlastnosti stránky.
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC Circ3 –](../../visual-cpp-samples.md)<br/>
-[Ukázky knihovny MFC TESTHELP](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC Circ3 –](../../overview/visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC TESTHELP](../../overview/visual-cpp-samples.md)<br/>
 [CDialog – třída](../../mfc/reference/cdialog-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CDialog – třída](../../mfc/reference/cdialog-class.md)

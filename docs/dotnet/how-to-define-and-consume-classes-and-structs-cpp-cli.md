@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 2c43234ca05c661d8f3d920b1129256a7550a5e2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 090259a4ad6b46eccf66dca6c99b4eb532b7ae5c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751827"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774916"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Postupy: Definice a používání tříd a struktur (C + +/ CLI)
 
@@ -97,7 +97,7 @@ int main() {
 
 *Implicitně abstraktní třídy* se nedá vytvořit instance. Třída je implicitně abstraktní, pokud je základní typ třídy, rozhraní a třídy neimplementuje všechny funkce člena rozhraní.
 
-Pokud se nemůžete k vytvoření objektů ze třídy, který je odvozen z rozhraní, důvodem může být, že je implicitně abstraktní třídy. Další informace o abstraktních tříd naleznete v tématu [abstraktní](../windows/abstract-cpp-component-extensions.md).
+Pokud se nemůžete k vytvoření objektů ze třídy, který je odvozen z rozhraní, důvodem může být, že je implicitně abstraktní třídy. Další informace o abstraktních tříd naleznete v tématu [abstraktní](../extensions/abstract-cpp-component-extensions.md).
 
 Následující příklad kódu ukazuje, že `MyClass` třídy nejde vytvořit, protože funkce `MyClass::func2` není implementována. Chcete-li příklad zkompilovat, zrušte komentář u `MyClass::func2`.
 
@@ -229,7 +229,7 @@ Tato tabulka shrnuje vliv různých specifikátory přístupu:
 |public|Člen je přístupný uvnitř i mimo sestavení.  Zobrazit [veřejné](../cpp/public-cpp.md) Další informace.|
 |private|Člen není přístupný, ani mimo sestavení.  Zobrazit [privátní](../cpp/private-cpp.md) Další informace.|
 |protected|Člen je přístupný uvnitř i mimo sestavení, ale pouze pro odvozené typy.  Zobrazit [chráněné](../cpp/protected-cpp.md) Další informace.|
-|internal|Člen je veřejné uvnitř sestavení, ale privátní mimo sestavení.  `internal` je kontextové klíčové slovo.  Další informace najdete v tématu [Context-Sensitive Keywords](../windows/context-sensitive-keywords-cpp-component-extensions.md).|
+|internal|Člen je veřejné uvnitř sestavení, ale privátní mimo sestavení.  `internal` je kontextové klíčové slovo.  Další informace najdete v tématu [Context-Sensitive Keywords](../extensions/context-sensitive-keywords-cpp-component-extensions.md).|
 |veřejné chráněný - nebo - chráněné veřejné|Člen je veřejné uvnitř sestavení, ale chráněný mimo sestavení.|
 |privátní chráněný - nebo - chráněné privátní|Člen je chráněný v sestavení, ale privátní mimo sestavení.|
 
@@ -499,9 +499,9 @@ Tyto různé sémantiky `this` ukazatelů může způsobit neočekávané chová
 
 Další informace naleznete v tématu
 
-- [Operátor popisovače objektu (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)
+- [Operátor popisovače objektu (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)
 
-- [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)
+- [interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)
 
 ```cpp
 // compile with: /clr
@@ -797,7 +797,7 @@ Kód, který má napsaný v jazyce Visual C++ a zkompilován s použitím **/CLR
 
 - Objekt je člen v objektu, jehož destruktor je spuštěná.
 
-- Volání [odstranit](../cpp/delete-operator-cpp.md) operátor na popisovač ([operátor popisovače objektu (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)).
+- Volání [odstranit](../cpp/delete-operator-cpp.md) operátor na popisovač ([operátor popisovače objektu (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)).
 
 - Explicitně zavolat destruktor.
 
@@ -844,7 +844,7 @@ Po spuštění finalizační metodu objektu finalizační metody v žádné zák
 
 Pokud finalizační metody odstraní nativní ukazatel v spravovaného typu, musíte zajistit, že odkazy na nebo prostřednictvím nativní ukazatel se neshromažďují předčasně; Zavolejte destruktor na spravovaný typ namísto použití <xref:System.GC.KeepAlive%2A>.
 
-V době kompilace můžete zjistit, zda má typ finalizační metodu nebo destruktor. Další informace najdete v tématu [podpora kompilátoru pro typové vlastnosti](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).
+V době kompilace můžete zjistit, zda má typ finalizační metodu nebo destruktor. Další informace najdete v tématu [podpora kompilátoru pro typové vlastnosti](../extensions/compiler-support-for-type-traits-cpp-component-extensions.md).
 
 Další příklad ukazuje dva typy, ten, který má nespravované prostředky a jeden, který se má spravovat prostředky, které se vydávají nedeterministicky.
 
@@ -914,5 +914,5 @@ int main() {
 
 ## <a name="see-also"></a>Viz také:
 
-[Třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md)<br/>
-[Třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md)
+[Třídy a struktury](../extensions/classes-and-structs-cpp-component-extensions.md)<br/>
+[Třídy a struktury](../extensions/classes-and-structs-cpp-component-extensions.md)

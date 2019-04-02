@@ -9,12 +9,12 @@ helpviewer_keywords:
 - zooming and in-place activation
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
-ms.openlocfilehash: e2f6c6acfefaae877790fd2cc0926bc2474c79b8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c2cb25388184ac969bec7c01d8077a458c03a03a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283758"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775280"
 ---
 # <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040: MFC/OLE – místní změny velikosti a měřítka
 
@@ -40,7 +40,7 @@ Většinu zatížení se přikládá implementátora server, musí server mějte
 
 Aktuální lupy se dají určit pomocí volání `COleServerDoc::GetZoomFactor`. Toto volání při dokument není aktivní místní vždy způsobí faktor zvětšení na 100 % (nebo poměr 1:1). Volání při místní aktivní může vracely něco jiného než 100 %.
 
-Změna měřítka zobrazení správně příklad najdete v ukázce MFC OLE [HIERSVR](../visual-cpp-samples.md). Přiblížit HIERSVR ztěžuje skutečnost, že se zobrazí text a text, většinou nejsou adekvátní lineárně (pomocných parametrů, typografických zásad daného, návrh šířky a výšky všech zkomplikovat věci). Stále, HIERSVR přiměřené odkaz pro implementaci správně přibližování a tak je kurzu MFC [SCRIBBLE](../visual-cpp-samples.md) (krok 7).
+Změna měřítka zobrazení správně příklad najdete v ukázce MFC OLE [HIERSVR](../overview/visual-cpp-samples.md). Přiblížit HIERSVR ztěžuje skutečnost, že se zobrazí text a text, většinou nejsou adekvátní lineárně (pomocných parametrů, typografických zásad daného, návrh šířky a výšky všech zkomplikovat věci). Stále, HIERSVR přiměřené odkaz pro implementaci správně přibližování a tak je kurzu MFC [SCRIBBLE](../overview/visual-cpp-samples.md) (krok 7).
 
 `COleServerDoc::GetZoomFactor` Určuje, na faktor zvětšování založené na celé řadě různých metrik dostupných z kontejneru nebo z provádění vaší `COleServerItem` a `COleServerDoc` třídy. Stručně řečeno aktuální faktor zvětšování závisí na následující vzorec:
 

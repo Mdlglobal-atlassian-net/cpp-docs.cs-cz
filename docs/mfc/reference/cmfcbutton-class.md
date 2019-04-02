@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: 804c3219356d36f6a0a733937c5e354822a4be83
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0659e5335e1ebc495280a4e0cb5c0167f3b45e1d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269809"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768210"
 ---
 # <a name="cmfcbutton-class"></a>Cmfcbutton – třída
 
@@ -101,14 +101,14 @@ class CMFCButton : public CButton
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |`CMFCButton::CMFCButton`|Výchozí konstruktor.|
 |`CMFCButton::~CMFCButton`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCButton::CleanUp](#cleanup)|Obnoví vnitřních proměnných a uvolní přidělené prostředky, jako jsou obrázky, rastrové obrázky a ikony.|
 |`CMFCButton::CreateObject`|Rozhraní používá k vytvoření dynamické instance tohoto typu třídy.|
@@ -154,7 +154,7 @@ class CMFCButton : public CButton
 
 ### <a name="data-members"></a>Datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCButton::m_nAlignStyle](#m_nalignstyle)|Určuje zarovnání textu tlačítka.|
 |[CMFCButton::m_bDontUseWinXPTheme](#m_bDontUseWinXPTheme)|Určuje, jestli se má použít motivy Windows XP.|
@@ -180,7 +180,7 @@ Pro zpracování zpráv s oznámením v aplikaci pole dialogového okna přidát
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje postup konfigurace vlastností tlačítka pomocí různých metod v `CMFCButton` třídy. V příkladu je součástí [nové ovládací prvky ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje postup konfigurace vlastností tlačítka pomocí různých metod v `CMFCButton` třídy. V příkladu je součástí [nové ovládací prvky ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#31](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]
@@ -542,7 +542,7 @@ Následující tabulce jsou uvedeny `CMFCButton::m_nFlatStyle` hodnot výčtu, k
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak nastavit hodnoty `m_nFlatStyle` členské proměnné v `CMFCButton` třídy. V tomto příkladu je součástí [nové ovládací prvky ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak nastavit hodnoty `m_nFlatStyle` členské proměnné v `CMFCButton` třídy. V tomto příkladu je součástí [nové ovládací prvky ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#29](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_5.cpp)]
@@ -867,7 +867,7 @@ void SetImage(
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak používat různé verze `SetImage` metodu `CMFCButton` třídy. V příkladu je součástí [nové ovládací prvky ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak používat různé verze `SetImage` metodu `CMFCButton` třídy. V příkladu je součástí [nové ovládací prvky ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#31](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]
@@ -891,7 +891,7 @@ Pomocí této metody můžete přidružit obrázek kurzoru, jako je například 
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití `SetMouseCursor` metodu `CMFCButton` třídy. V příkladu je část kódu v [nové ovládací prvky ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje způsob použití `SetMouseCursor` metodu `CMFCButton` třídy. V příkladu je část kódu v [nové ovládací prvky ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#30](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_6.cpp)]

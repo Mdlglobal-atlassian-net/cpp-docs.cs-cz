@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom attributes
 - custom attributes, defining
 ms.assetid: af9998a5-aa12-4b94-9a43-97ce99026e29
-ms.openlocfilehash: c16337e15fedca25bbba31503026358e39a66026
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bfd09ee0a53b0677bc53bede918b9a4972a3abba
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567177"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777386"
 ---
 # <a name="custom-attributes-c"></a>Vlastní atributy (C++)
 
@@ -18,7 +18,7 @@ Vlastní atribut je technika silného typu, který umožňuje uživateli rozší
 
 Informace o definování nových vlastních atributů najdete v článku,
 
-- [Uživatelsky definované atributy](../user-defined-attributes-cpp-component-extensions.md)
+- [Uživatelsky definované atributy](../../extensions/user-defined-attributes-cpp-component-extensions.md)
 
 - [atribut](attribute.md) (zastaralé syntaxe).
 

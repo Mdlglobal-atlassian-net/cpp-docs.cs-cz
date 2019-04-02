@@ -1,19 +1,19 @@
 ---
-title: Chyba kompilátoru C2144
+title: Compiler Error C2144
 ms.date: 11/04/2016
 f1_keywords:
 - C2144
 helpviewer_keywords:
 - C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
-ms.openlocfilehash: f6472fc70ee4a86bed1422941e758127009f14cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a75330d26b0924e60f7e46d10d617341709d7e23
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483327"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778283"
 ---
-# <a name="compiler-error-c2144"></a>Chyba kompilátoru C2144
+# <a name="compiler-error-c2144"></a>Compiler Error C2144
 
 > Chyba syntaxe: "*typ*"musí předcházet párový příkaz"*token*.
 
@@ -23,7 +23,7 @@ Tato chyba může být způsobeno chybí pravá složená závorka, pravá závo
 
 C2144 může dojít také při pokusu o vytvoření makra z – klíčové slovo CLR, který obsahuje prázdný znak.
 
-C2144 také může zobrazit, pokud se pokoušíte předávání typů. Zobrazit [předávání typu (C + +/ CLI)](../../windows/type-forwarding-cpp-cli.md) Další informace.
+C2144 také může zobrazit, pokud se pokoušíte předávání typů. Zobrazit [předávání typu (C + +/ CLI)](../../extensions/type-forwarding-cpp-cli.md) Další informace.
 
 ## <a name="examples"></a>Příklady
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE applications [MFC], implementing OLE
 - applications [OLE], implementing OLE
 ms.assetid: 0875ddae-99df-488c-82c6-164074a81058
-ms.openlocfilehash: 40c74d48b76921f770740602a39d28804a7e3c09
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 83a1089ecaaaa9bd0dd1d928cd3d1869e5017a4a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284811"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774383"
 ---
 # <a name="ole-background-implementation-strategies"></a>OLE – pozadí: Strategie implementace
 
@@ -23,7 +23,7 @@ V závislosti na vaší aplikace jsou čtyři možnou implementaci strategie pro
 
 - Je nutné programu, vytvořeném pomocí knihovny tříd Foundation Microsoft verze 2.0 nebo novější, který nepodporuje OLE.
 
-   Vytvoření nové aplikace pomocí Průvodce aplikací MFC, jak už jsme zmínili a pak zkopírujte a vložte kód z nové aplikace do existující aplikace. To bude fungovat pro servery, kontejnery nebo automatizované aplikací. Knihovny MFC naleznete v tématu [SCRIBBLE](../visual-cpp-samples.md) Vzorový příklad této strategie.
+   Vytvoření nové aplikace pomocí Průvodce aplikací MFC, jak už jsme zmínili a pak zkopírujte a vložte kód z nové aplikace do existující aplikace. To bude fungovat pro servery, kontejnery nebo automatizované aplikací. Knihovny MFC naleznete v tématu [SCRIBBLE](../overview/visual-cpp-samples.md) Vzorový příklad této strategie.
 
 - Máte knihovny Microsoft Foundation Class program, který implementuje podporu verze 1.0 OLE.
 
@@ -33,7 +33,7 @@ V závislosti na vaší aplikace jsou čtyři možnou implementaci strategie pro
 
    Tato situace vyžaduje nejvíce práce. Jedním z přístupů je vytvoření nové aplikace, stejně jako v prvním strategie a pak zkopírujte a vložte do něj existující kód. Pokud váš stávající kód je napsán v jazyce C, budete muset upravit ho tak lze kompilovat jako kód jazyka C++. Pokud váš kód C volá rozhraní Windows API, není nutné změňte ji na použití tříd Microsoft Foundation. Tento postup, pravděpodobně bude vyžadovat některé restrukturalizaci programu pro podporu architektury dokument/zobrazení používané verze 2.0 a vyšší tříd Microsoft Foundation. Další informace na této architektuře, najdete v části [Technická poznámka 25](../mfc/tn025-document-view-and-frame-creation.md).
 
-Jakmile jste se rozhodli strategii, měli byste buď čtení [kontejnery](../mfc/containers.md) nebo [servery](../mfc/servers.md) články (v závislosti na typu aplikace, kterou píšete) nebo prozkoumat ukázkové aplikace, nebo obojí. Ukázky knihovny MFC OLE [OCLIENT](../visual-cpp-samples.md) a [HIERSVR](../visual-cpp-samples.md) ukazují, jak provádět různé aspekty kontejnery a servery, v uvedeném pořadí. V různých okamžicích v těchto článcích bude odkazovat na určité funkce v těchto ukázkách jako příklady techniky diskutovány.
+Jakmile jste se rozhodli strategii, měli byste buď čtení [kontejnery](../mfc/containers.md) nebo [servery](../mfc/servers.md) články (v závislosti na typu aplikace, kterou píšete) nebo prozkoumat ukázkové aplikace, nebo obojí. Ukázky knihovny MFC OLE [OCLIENT](../overview/visual-cpp-samples.md) a [HIERSVR](../overview/visual-cpp-samples.md) ukazují, jak provádět různé aspekty kontejnery a servery, v uvedeném pořadí. V různých okamžicích v těchto článcích bude odkazovat na určité funkce v těchto ukázkách jako příklady techniky diskutovány.
 
 ## <a name="see-also"></a>Viz také:
 

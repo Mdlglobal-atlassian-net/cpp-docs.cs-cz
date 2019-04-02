@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3902
 ms.assetid: feb3bb29-f836-4d77-ba71-3876f7f4f216
-ms.openlocfilehash: 22536f380187c6dceac3e355224d9d118cd1a2df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d90bf299c566ce72e3d1cbfeb545def0a43d6cbf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564525"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776294"
 ---
 # <a name="compiler-error-c3902"></a>Chyba kompilátoru C3902
 
 'přístupového objektu': typ posledního parametru musí být 'type'
 
-Typ posledního parametru alespoň jednu metodu set musí odpovídat typu vlastnosti. Další informace najdete v tématu [vlastnost](../../windows/property-cpp-component-extensions.md).
+Typ posledního parametru alespoň jednu metodu set musí odpovídat typu vlastnosti. Další informace najdete v tématu [vlastnost](../../extensions/property-cpp-component-extensions.md).
 
 Následující ukázka generuje C3902:
 

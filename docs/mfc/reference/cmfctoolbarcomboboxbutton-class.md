@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: fae70e44657023b7a7b93f72599bef4ba6faf307
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e3c124103aa95d9db5095e438a6b21d46c7cb35d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303167"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772069"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton Class
 
@@ -85,7 +85,7 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCToolBarComboBoxButton::CMFCToolBarComboBoxButton](#cmfctoolbarcomboboxbutton)|Vytvoří `CMFCToolBarComboBoxButton`.|
 
@@ -136,7 +136,7 @@ Další informace najdete v tématu [názorný postup: Vkládání ovládacích 
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít různé metody v `CMFCToolBarComboBoxButton` třídy. Tento příklad ukazuje, jak povolit úpravy a pole se seznamem polí, nastaví svislou pozici polí se seznamem, tlačítka pole v aplikaci, nastavení výšky pole se seznamem, když se rozbalil, nastavte plochý vzhled tlačítka pole se seznamem v aplikaci a nastavit text podle pole pro úpravy pole se seznamem tlačítko pole. Tento fragment kódu je součástí [Visual Studio demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak použít různé metody v `CMFCToolBarComboBoxButton` třídy. Tento příklad ukazuje, jak povolit úpravy a pole se seznamem polí, nastaví svislou pozici polí se seznamem, tlačítka pole v aplikaci, nastavení výšky pole se seznamem, když se rozbalil, nastavte plochý vzhled tlačítka pole se seznamem v aplikaci a nastavit text podle pole pro úpravy pole se seznamem tlačítko pole. Tento fragment kódu je součástí [Visual Studio demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#36](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#37](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_2.cpp)]

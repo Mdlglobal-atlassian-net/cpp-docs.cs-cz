@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3722
 ms.assetid: 3cb28363-5eff-4548-bd0d-d5c615846353
-ms.openlocfilehash: d3c721490e0af32d91fcc51412e3c02b6a2d7f67
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9a8c9cc26aeedf49484bb1f7357a76d0eb42bb5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450996"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768603"
 ---
 # <a name="compiler-error-c3722"></a>Chyba kompilátoru C3722
 
 Obecná událost není povolená
 
-Kompilátor se povoluje jenom v obecných tříd, struktur a funkce.  Další informace najdete v tématu [obecných typů](../../windows/generics-cpp-component-extensions.md).
+Kompilátor se povoluje jenom v obecných tříd, struktur a funkce.  Další informace najdete v tématu [obecných typů](../../extensions/generics-cpp-component-extensions.md).
 
 Následující ukázka generuje C3722:
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-ms.openlocfilehash: e3ac2742f2c57c01c645c72c933234a96ece773a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5689e314c2ba94068619a066e5f458e06819b2b7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288282"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773473"
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028: Podpora kontextové nápovědy
 
@@ -148,7 +148,7 @@ HID_MY_COMMAND    0x10096
 
 Tento formát je kompatibilní se zařízením kompilátor nápovědy, který mapuje identifikátory kontextu (čísla na pravé straně) s názvy témat (symboly na levé straně).
 
-Zdrojový kód pro makehm – je dostupný v ukázce MFC programovací nástroje [makehm –](../visual-cpp-samples.md).
+Zdrojový kód pro makehm – je dostupný v ukázce MFC programovací nástroje [makehm –](../overview/visual-cpp-samples.md).
 
 ## <a name="adding-help-support-after-running-the-mfc-application-wizard"></a>Přidání podpory nápovědy po spuštění Průvodce aplikací MFC
 

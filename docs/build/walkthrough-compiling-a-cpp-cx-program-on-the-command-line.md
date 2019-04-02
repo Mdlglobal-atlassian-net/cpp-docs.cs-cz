@@ -1,17 +1,17 @@
 ---
-title: 'Průvodce: Kompilování programu C++/CX na příkazovém řádku'
+title: 'Návod: Kompilování programu C++/CX na příkazovém řádku'
 ms.date: 09/24/2018
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: ad718a2eb876430d7721d0cd20cfd5b952750f8b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 099bef402d22abc12a31f105f63e5405c65a1d82
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809506"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766056"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Návod: Kompilování programu C++/CX na příkazovém řádku
 
-Můžete vytvořit programy v jazyce Visual C++, které se zaměřují na modul Windows Runtime je v příkazovém řádku. Jazyk Visual C++ podporuje rozšíření součásti Visual C++ (C + +/ CX), který má další typy a operátory cílení programovacího modelu Windows Runtime. Můžete použít C + +/ CX a vytvářejte aplikace pro univerzální platformu Windows (UPW), Windows Phone 8.1 a Windows desktop. Další informace najdete v tématu [A prohlídku vyhodnocování +/ CX](https://msdn.microsoft.com/magazine/dn166929.aspx) a [přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md).
+Můžete vytvořit programy v jazyce Visual C++, které se zaměřují na modul Windows Runtime je v příkazovém řádku. Jazyk Visual C++ podporuje rozšíření součásti Visual C++ (C + +/ CX), který má další typy a operátory cílení programovacího modelu Windows Runtime. Můžete použít C + +/ CX a vytvářejte aplikace pro univerzální platformu Windows (UPW), Windows Phone 8.1 a Windows desktop. Další informace najdete v tématu [A prohlídku vyhodnocování +/ CX](https://msdn.microsoft.com/magazine/dn166929.aspx) a [přípony komponent pro platformy běhového prostředí](../extensions/component-extensions-for-runtime-platforms.md).
 
 V tomto názorném postupu pomocí textového editoru, vytvořte základní C + +/ CX programu a jeho následnou kompilaci v příkazovém řádku. (Můžete použít vlastní C + +/ CX program místo zadání ten, který se zobrazí, nebo můžete použít C + +/ CX vzorového kódu z jiného článku nápovědy. Tato technika je užitečná pro vytváření a testování malé moduly, které mají bez prvků uživatelského rozhraní.)
 
@@ -63,5 +63,5 @@ Chcete-li povolit kompilace pro C + +/ CX, je nutné použít [/ZW](reference/zw
 
 ## <a name="see-also"></a>Viz také:
 
-[Projekty a sestavení systémy](projects-and-build-systems-cpp.md)<br/>
-[Možnosti kompilátoru MSVC](reference/compiler-options.md)
+[Projekty a systémy sestavení](projects-and-build-systems-cpp.md)<br/>
+[Parametry kompilátoru MSVC](reference/compiler-options.md)

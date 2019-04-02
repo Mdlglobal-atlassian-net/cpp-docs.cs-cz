@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 80975047b300f270c0ac58c8b8abfc59ff2b17ef
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1821532a4d5a3078202f180273b02945b8d8e4ba
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293781"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774552"
 ---
 # <a name="catlmap-class"></a>Catlmap – třída
 
@@ -76,7 +76,7 @@ Kód použitý má zkopírovat nebo přesunout elementy hodnotu.
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAtlMap::KINARGTYPE](#kinargtype)|Typ použitý klíč je předána jako vstupní argument|
 |[CAtlMap::KOUTARGTYPE](#koutargtype)|Typ použitý při klíč se vrátí jako výstup argument.|
@@ -85,7 +85,7 @@ Kód použitý má zkopírovat nebo přesunout elementy hodnotu.
 
 ### <a name="public-classes"></a>Veřejné třídy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAtlMap::CPair Class](#cpair_class)|Třída obsahující prvky klíč a hodnotu.|
 
@@ -98,7 +98,7 @@ Kód použitý má zkopírovat nebo přesunout elementy hodnotu.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAtlMap::CAtlMap](#catlmap)|Konstruktor|
 |[CAtlMap::~CAtlMap](#dtor)|Destruktor.|
@@ -782,6 +782,6 @@ Typ elementu hodnota.
 
 ## <a name="see-also"></a>Viz také:
 
-[Výběr ukázky](../../visual-cpp-samples.md)<br/>
+[Výběr ukázky](../../overview/visual-cpp-samples.md)<br/>
 [Příklad UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

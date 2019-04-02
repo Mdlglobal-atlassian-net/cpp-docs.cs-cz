@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-ms.openlocfilehash: 3cf1c773c96a2bf1bc6c67420d72052e68ee2a53
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 33c5b48c88a6fc7a4ed18a93e874d318a16a20dd
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297590"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775436"
 ---
 # <a name="caxwindow-class"></a>CAxWindow Class
 
@@ -367,7 +367,7 @@ Externí `IDocHostUIHandlerDispatch` rozhraní používá ovládací prvky, kter
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázka ATLCON](../../visual-cpp-samples.md)<br/>
+[Ukázka ATLCON](../../overview/visual-cpp-samples.md)<br/>
 [CWindow – třída](../../atl/reference/cwindow-class.md)<br/>
 [Principy vytváření složených prvků](../../atl/atl-composite-control-fundamentals.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)<br/>

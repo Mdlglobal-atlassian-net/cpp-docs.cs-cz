@@ -9,19 +9,19 @@ helpviewer_keywords:
 - ACDUAL sample [MFC]
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
-ms.openlocfilehash: 5a04c2712182fe9c9ed3fd9e5fe4548404f96a5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33828f3979fb938ae6e88fa3cb0d6ee24daa958c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575211"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776671"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065: Podpora duálního rozhraní u automatizačních serverů OLE
 
 > [!NOTE]
 > Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
 
-Tato poznámka popisuje, jak přidat podpora duálního rozhraní založené na knihovně MFC OLE aplikaci automatizačního serveru. [Acdual –](../visual-cpp-samples.md) ukázka ilustruje podpora duálního rozhraní a vzorový kód v této poznámky je převzat z acdual –. Makra popsané v této poznámky, jako je například DECLARE_DUAL_ERRORINFO DUAL_ERRORINFO_PART a IMPLEMENT_DUAL_ERRORINFO, jsou součástí vzorku acdual – a lze nalézt v MFCDUAL. H.
+Tato poznámka popisuje, jak přidat podpora duálního rozhraní založené na knihovně MFC OLE aplikaci automatizačního serveru. [Acdual –](../overview/visual-cpp-samples.md) ukázka ilustruje podpora duálního rozhraní a vzorový kód v této poznámky je převzat z acdual –. Makra popsané v této poznámky, jako je například DECLARE_DUAL_ERRORINFO DUAL_ERRORINFO_PART a IMPLEMENT_DUAL_ERRORINFO, jsou součástí vzorku acdual – a lze nalézt v MFCDUAL. H.
 
 ## <a name="dual-interfaces"></a>Duální rozhraní
 
@@ -43,7 +43,7 @@ Duální rozhraní je odvozena z vlastně jenom vlastní rozhraní `IDispatch`. 
 
 Nejprve upravte soubor ODL pro váš server k definování duální rozhraní pro objekty. Chcete-li definovat duální rozhraní, musíte použít příkaz rozhraní místo `DISPINTERFACE` příkaz, který generovat průvodců aplikace Visual C++. Místo odstranění existující `DISPINTERFACE` příkaz, přidejte nový příkaz rozhraní. Tak, že zachová `DISPINTERFACE` formuláře, můžete nadále používat ClassWizard přidávat vlastnosti a metody do objektu, ale musíte přidat odpovídající vlastnosti a metody pro váš výpis z rozhraní.
 
-Interface – příkaz pro duální rozhraní musí mít *OLEAUTOMATION* a *DUÁLNÍ* atributy a rozhraní musí být odvozen od `IDispatch`. Můžete použít [Guidgen –](../visual-cpp-samples.md) vzorek k vytvoření **IID** pro duální rozhraní:
+Interface – příkaz pro duální rozhraní musí mít *OLEAUTOMATION* a *DUÁLNÍ* atributy a rozhraní musí být odvozen od `IDispatch`. Můžete použít [Guidgen –](../overview/visual-cpp-samples.md) vzorek k vytvoření **IID** pro duální rozhraní:
 
 ```IDL
 [ uuid(0BDD0E81-0DD7-11cf-BBA8-444553540000), // IID_IDualAClick
@@ -310,7 +310,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 }
 ```
 
-`CATCH_ALL_DUAL` postará o vrácení kódu chyby opravte, když dojde k výjimce. `CATCH_ALL_DUAL` převádí výjimku MFC OLE Automation zpracování chyb informací pomocí `ICreateErrorInfo` rozhraní. (Příklad `CATCH_ALL_DUAL` – makro je v souboru MFCDUAL. H [acdual –](../visual-cpp-samples.md) vzorku. Funkce, které volá pro zpracování výjimek, `DualHandleException`, je umístěný v souboru MFCDUAL. CPP.) `CATCH_ALL_DUAL` Určuje kód chyby se vraťte na základě typu výjimky, ke které došlo:
+`CATCH_ALL_DUAL` postará o vrácení kódu chyby opravte, když dojde k výjimce. `CATCH_ALL_DUAL` převádí výjimku MFC OLE Automation zpracování chyb informací pomocí `ICreateErrorInfo` rozhraní. (Příklad `CATCH_ALL_DUAL` – makro je v souboru MFCDUAL. H [acdual –](../overview/visual-cpp-samples.md) vzorku. Funkce, které volá pro zpracování výjimek, `DualHandleException`, je umístěný v souboru MFCDUAL. CPP.) `CATCH_ALL_DUAL` Určuje kód chyby se vraťte na základě typu výjimky, ke které došlo:
 
 - [Coledispatchexception –](../mfc/reference/coledispatchexception-class.md) – v takovém případě `HRESULT` je vytvořená pomocí následujícího kódu:
 
@@ -332,7 +332,7 @@ Za druhé, přidání kódu do mapy rozhraní klientská automatizační třída
 
 Nakonec implementace třídy definované pro podporu `ISupportErrorInfo`.
 
-( [Acdual –](../visual-cpp-samples.md) ukázka obsahuje tři makra umožňující provádět tyto tři kroky `DECLARE_DUAL_ERRORINFO`, `DUAL_ERRORINFO_PART`, a `IMPLEMENT_DUAL_ERRORINFO`, všechny obsažené v MFCDUAL. H.)
+( [Acdual –](../overview/visual-cpp-samples.md) ukázka obsahuje tři makra umožňující provádět tyto tři kroky `DECLARE_DUAL_ERRORINFO`, `DUAL_ERRORINFO_PART`, a `IMPLEMENT_DUAL_ERRORINFO`, všechny obsažené v MFCDUAL. H.)
 
 Následující příklad implementuje třída definována pro podporu `ISupportErrorInfo`. `CAutoClickDoc` je název třídy automatizace a `IID_IDualAClick` je **IID** rozhraní, které je zdrojem chyby ohlášení chyby objekt automatizace OLE:
 

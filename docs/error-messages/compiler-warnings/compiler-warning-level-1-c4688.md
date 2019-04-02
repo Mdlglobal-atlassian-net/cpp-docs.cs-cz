@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4688
 ms.assetid: a027df3c-b2b8-4c49-8539-c2bc42db74e8
-ms.openlocfilehash: f37b5ed43d375c5ee31eb233ce49f7ec88200155
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1c94198eca0a88174c8655e0d571c37f82a2df36
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559923"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781962"
 ---
 # <a name="compiler-warning-level-1-c4688"></a>Kompilátor upozornění (úroveň 1) C4688
 
 "omezení": seznam omezení obsahuje typ sestavení private 'type'
 
-Seznam omezení obsahuje privátní typ sestavení, což znamená, že nebude k dispozici při typu přistupuje z mimo sestavení. Další informace najdete v tématu [obecných typů](../../windows/generics-cpp-component-extensions.md).
+Seznam omezení obsahuje privátní typ sestavení, což znamená, že nebude k dispozici při typu přistupuje z mimo sestavení. Další informace najdete v tématu [obecných typů](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Příklad
 

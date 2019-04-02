@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: b5fb9ac87547578f101676d4cf424c7065155842
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: a3ddafab143224b6e20a3e01d1d643c42bbe19e0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823101"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775319"
 ---
 # <a name="visual-studio-projects---c"></a>Projekty Visual Studio – C++
 
@@ -26,7 +26,7 @@ A *projektu sady Visual Studio* je projekt založený na systému sestavení ná
 
 Můžete vytvářet projekty C++ výběrem **souboru &#124; nový &#124; projektu**, pak v levém podokně vyberete Visual C++. V prostředním podokně se zobrazí seznam šablon projektů: 
 
-   ![Šablony projektů](../media/vs2017-new-project.png "Visual Studio 2017 projektu nové dialogové okno")
+   ![Šablony projektů](../overview/media/vs2017-new-project.png "Visual Studio 2017 projektu nové dialogové okno")
 
 Další informace o všechny výchozí šablony projektů, které jsou zahrnuty v sadě Visual Studio najdete v tématu [šablony projektů C++ v sadě Visual Studio](reference/visual-cpp-project-types.md). Můžete vytvořit vlastní šablony projektu. Další informace najdete v tématu [jak: Vytváření šablon projektu](/visualstudio/ide/how-to-create-project-templates).
 
@@ -42,7 +42,7 @@ Přidání souborů se zdrojovým kódem, ikony nebo jiné položky do projektu 
 
 ## <a name="add-third-party-libraries"></a>Přidání knihovny třetích stran
 
-Chcete-li přidat knihovny třetích stran, použijte [vcpkg](../vcpkg.md) Správce balíčků. Spusťte krok integrace sady Visual Studio k nastavení cesty k této knihovně při odkazování z libovolného projektu sady Visual Studio. 
+Chcete-li přidat knihovny třetích stran, použijte [vcpkg](vcpkg.md) Správce balíčků. Spusťte krok integrace sady Visual Studio k nastavení cesty k této knihovně při odkazování z libovolného projektu sady Visual Studio. 
 
 ## <a name="set-compiler-options-and-other-build-properties"></a>Nastavit možnosti kompilátoru a další vlastnosti sestavení
 
@@ -54,22 +54,22 @@ Chcete-li zkompilovat a spustit nový projekt, stiskněte **F5** nebo klikněte 
 
 Nový projekt zkompiluje bez chyb. Při přidávání vlastního kódu, mohou čas od času zavést chybu nebo aktivovat upozornění. Chyba zabrání dokončení; sestavení upozornění je nepodporuje. Všechny chyby a upozornění se zobrazí v okně Výstup a v seznamu chyb při sestavení projektu. 
 
-   ![Výstupní okno a seznamu chyb](../media/vs2017-output-error-list.png)
+   ![Výstupní okno a seznamu chyb](../overview/media/vs2017-output-error-list.png)
 
 V seznamu chyb, můžete stisknout **F1** na zvýrazněné chyby, přejděte na téma dokumentace týkající se jeho.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Nastavení kompilátoru jazyka C++ a vlastnosti v sadě Visual Studio sestavení](working-with-project-properties.md)<br/>
+[Nastavení vlastností kompilátoru a sestavení C++ v sadě Visual Studio](working-with-project-properties.md)<br/>
 Jak používat stránky vlastností a vlastností k určení nastavení projektu.
 
-[Referenční dokumentace knihoven a komponenty v okamžiku sestavení](adding-references-in-visual-cpp-projects.md)<br/>
+[Referenční knihovny a komponenty v okamžiku sestavení](adding-references-in-visual-cpp-projects.md)<br/>
 Postup zahrnutí knihovny DLL, komponenty COM a .NET v projektu.
  
 [Uspořádání výstupních souborů projektu](how-to-organize-project-output-files-for-builds.md)<br/>
 Postup přizpůsobení umístění spustitelné soubory vytvořené během procesu sestavení.
 
-[Vlastní kroky sestavení a s událostmi sestavení](understanding-custom-build-steps-and-build-events.md)<br/>
+[Postup vlastního sestavení a události sestavení](understanding-custom-build-steps-and-build-events.md)<br/>
 Postup přidání jakékoli libovolný příkaz do procesu sestavení na zadané body.
 
 [Vytvoření projektu z existujícího kódu](how-to-create-a-cpp-project-from-existing-code.md)<br/>
@@ -77,4 +77,4 @@ Jak vytvořit nový projekt sady Visual Studio z kolekce dojde ke ztrátě zdroj
 
 ## <a name="see-also"></a>Viz také
 
-[Projekty a sestavení systémy](projects-and-build-systems-cpp.md)<br>
+[Projekty a systémy sestavení](projects-and-build-systems-cpp.md)<br>

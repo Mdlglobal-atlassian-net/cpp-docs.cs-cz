@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handlers [C++], dissociating events
 - __unhook keyword [C++]
 ms.assetid: 953a14f3-5199-459d-81e5-fcf015a19878
-ms.openlocfilehash: f6e5031cb77729ede053b275c90fa93bf251fcb6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8f42c35024995c026ae10fc7f0ab3db77d1e5dc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486772"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769521"
 ---
 # <a name="unhook"></a>__unhook
 
@@ -41,14 +41,14 @@ long  __unhook(
 
 **&** *SourceClass* `::` *EventMethod* ukazatel na metodu události, ze kterého vyjmutí metodu obslužné rutiny události:
 
-- Nativní události C++: *SourceClass* je třídě zdroje události a *EventMethod* je událost.
+- Nativní C++ události: *SourceClass* je třídě zdroje události a *EventMethod* je událost.
 
 - Události modelu COM: *SourceClass* je rozhraní zdroje událostí a *EventMethod* je jedna z jeho metod.
 
 - Spravované události: *SourceClass* je třídě zdroje události a *EventMethod* je událost.
 
 *interface*<br/>
-Název rozhraní se unhooked z *příjemce*, pouze pro přijímače událostí modelu COM, ve kterém *layout_dependent* parametr [event_receiver](../windows/event-receiver.md) atribut je **true**.
+Název rozhraní se unhooked z *příjemce*, pouze pro přijímače událostí modelu COM, ve kterém *layout_dependent* parametr [event_receiver](../windows/attributes/event-receiver.md) atribut je **true**.
 
 *source*<br/>
 Ukazatel na instanci zdroje událostí. V závislosti na kód `type` zadané v poli `event_receiver`, *zdroj* může být jedna z následujících akcí:
@@ -61,7 +61,7 @@ Ukazatel na instanci zdroje událostí. V závislosti na kód `type` zadané v p
 
 **&** *ReceiverClass* `::` `HandlerMethod` ukazatel na metodu obslužné rutiny události bude unhooked z události. Obslužná rutina je zadán jako metoda třídy nebo odkaz na stejné. Pokud není zadán název třídy **__unhook** předpokládá třídě může být, ve kterém je volána.
 
-- Nativní události C++: *ReceiverClass* je přijímače událostí a `HandlerMethod` je obslužná rutina.
+- Nativní C++ události: *ReceiverClass* je přijímače událostí a `HandlerMethod` je obslužná rutina.
 
 - Události modelu COM: *ReceiverClass* je rozhraní příjemce události a `HandlerMethod` je jedním z jeho obslužné rutiny.
 
@@ -89,7 +89,7 @@ S výjimkou událostí modelu COM **__hook** a **__unhook** lze volat mimo pří
 
 O alternativu k použití **__unhook** je použití operátoru-=.
 
-Informace týkající se kódování spravované události v nové syntaxi naleznete v tématu [události](../windows/event-cpp-component-extensions.md).
+Informace týkající se kódování spravované události v nové syntaxi naleznete v tématu [události](../extensions/event-cpp-component-extensions.md).
 
 > [!NOTE]
 >  Třída šablony nebo struktura nemohou obsahovat události.
@@ -101,8 +101,8 @@ Zobrazit [zpracování událostí v nativním kódu C++](../cpp/event-handling-i
 ## <a name="see-also"></a>Viz také:
 
 [Klíčová slova](../cpp/keywords-cpp.md)<br/>
-[event_source](../windows/event-source.md)<br/>
-[event_receiver](../windows/event-receiver.md)<br/>
+[event_source](../windows/attributes/event-source.md)<br/>
+[event_receiver](../windows/attributes/event-receiver.md)<br/>
 [__event](../cpp/event.md)<br/>
 [__hook](../cpp/hook.md)<br/>
 [__raise](../cpp/raise.md)

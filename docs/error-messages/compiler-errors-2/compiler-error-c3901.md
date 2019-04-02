@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3901
 ms.assetid: 19af4141-39ad-4c16-a68f-3ae76f648186
-ms.openlocfilehash: 0c5b561f0e650ace69e09d33942f2036b9ee91ac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31fbb1e89a0619b4dc8b3f6c86f7f6bc748b80d6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677263"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780116"
 ---
 # <a name="compiler-error-c3901"></a>Chyba kompilátoru C3901
 
 'accessor_function': musí mít návratový typ 'type'
 
-Návratový typ metody alespoň jeden get musí odpovídat typu vlastnosti. Další informace najdete v tématu [vlastnost](../../windows/property-cpp-component-extensions.md).
+Návratový typ metody alespoň jeden get musí odpovídat typu vlastnosti. Další informace najdete v tématu [vlastnost](../../extensions/property-cpp-component-extensions.md).
 
 Následující ukázka generuje C3901:
 

@@ -17,18 +17,18 @@ helpviewer_keywords:
 - server applications [MFC], OLE menus and resources
 - OLE initialization failure [MFC]
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
-ms.openlocfilehash: 0cf5b495ca1e3f6e7b0ae434c09e014a29eadb00
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 85c7b6059a868e93c6c6a7ebbd7b08dac3233612
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281946"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767196"
 ---
 # <a name="menus-and-resources-server-additions"></a>Nabídky a prostředky: Serverové doplňky
 
 Tento článek vysvětluje změny, které je třeba provést, nabídky a jiné prostředky ve vizuální úpravy aplikace (součást). Serverová aplikace požaduje mnoha funkcemi struktura nabídky a jiné prostředky, protože může být spuštěný v jednom ze tří režimů: stát samostatně, embedded, nebo na místě. Jak je popsáno v [nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md) článek, jsou maximálně čtyři sady nabídek. Všechny čtyři se používají pro aplikace MDI úplný server, jsou pro miniserver využít pouze tři. Průvodce aplikace vytvoří rozložení nabídky nezbytné pro typ serveru, který chcete. Určité přizpůsobení, může být nutné.
 
-Pokud je velmi riskantní používat Průvodce aplikací, můžete se podívat na HIERSVR. RC, skript prostředků pro ukázkovou aplikaci knihovny MFC [HIERSVR](../visual-cpp-samples.md), pokud chcete zobrazit, jak se implementují tyto změny.
+Pokud je velmi riskantní používat Průvodce aplikací, můžete se podívat na HIERSVR. RC, skript prostředků pro ukázkovou aplikaci knihovny MFC [HIERSVR](../overview/visual-cpp-samples.md), pokud chcete zobrazit, jak se implementují tyto změny.
 
 V tomto článku probíraná témata zahrnují:
 
@@ -56,7 +56,7 @@ Dvě nové zdroje tabulky akcelerátoru, musí být přidané do serverové apli
 
 Druhá tabulka je téměř přesnou kopii tabulky akcelerátorů zobrazení. Případné rozdíly paralelní změny provedené v plně otevřít nabídku podle [přidání do nabídky Server](#_core_server_menu_additions).
 
-Příklad tyto změny tabulky akcelerátoru porovnejte IDR_HIERSVRTYPE_SRVR_IP a IDR_HIERSVRTYPE_SRVR_EMB tabulek akcelerátorů IDR_MAINFRAME v HIERSVR. Soubor RC, které jsou zahrnuté v ukázce MFC OLE [HIERSVR](../visual-cpp-samples.md). Přesné kopie jsou vložené tabulky a akcelerátory souboru a okno chybí v tabulce místní.
+Příklad tyto změny tabulky akcelerátoru porovnejte IDR_HIERSVRTYPE_SRVR_IP a IDR_HIERSVRTYPE_SRVR_EMB tabulek akcelerátorů IDR_MAINFRAME v HIERSVR. Soubor RC, které jsou zahrnuté v ukázce MFC OLE [HIERSVR](../overview/visual-cpp-samples.md). Přesné kopie jsou vložené tabulky a akcelerátory souboru a okno chybí v tabulce místní.
 
 ##  <a name="_core_string_table_additions_for_server_applications"></a> Přidání tabulky řetězců pro serverové aplikace
 

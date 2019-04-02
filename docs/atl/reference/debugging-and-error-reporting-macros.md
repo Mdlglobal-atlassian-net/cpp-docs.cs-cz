@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 24ab589ae19bd2027e2527ebefbf48dbf24e399d
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 0d5010f913521848675987b145a1277c7b00decf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565032"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775039"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Makra ladění a hlášení chyb
 
@@ -220,7 +220,7 @@ ATLTRACE2(
 
 ### <a name="remarks"></a>Poznámky
 
-Krátký tvar ATLTRACE2 zapíše řetězec do okna výstup ladicího programu. Tedy o druhou podobu ATLTRACE2 také zapíše výstup do okna výstup ladicího programu, ale je v souladu s nastavení trasovací nástroj ATL/MFC (viz [ATLTraceTool ukázka](../../visual-cpp-samples.md)). Například pokud nastavíte *úroveň* na 4 a nástroj trasování ATL/MFC na úrovni 0, nebudou se zobrazí zpráva. *úroveň* může být 0, 1, 2, 3 nebo 4. Výchozí hodnotou 0, hlásí pouze nejzávažnější problémy.
+Krátký tvar ATLTRACE2 zapíše řetězec do okna výstup ladicího programu. Tedy o druhou podobu ATLTRACE2 také zapíše výstup do okna výstup ladicího programu, ale je v souladu s nastavení trasovací nástroj ATL/MFC (viz [ATLTraceTool ukázka](../../overview/visual-cpp-samples.md)). Například pokud nastavíte *úroveň* na 4 a nástroj trasování ATL/MFC na úrovni 0, nebudou se zobrazí zpráva. *úroveň* může být 0, 1, 2, 3 nebo 4. Výchozí hodnotou 0, hlásí pouze nejzávažnější problémy.
 
 *Kategorie* parametrů jsou uvedeny příznaky trasování pro nastavení. Tyto příznaky odpovídají typům metod, pro které chcete do sestavy. V tabulce dole najdete seznam příznaků platný trasování můžete použít pro *kategorie* parametru.
 

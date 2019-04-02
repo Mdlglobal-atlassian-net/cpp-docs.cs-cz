@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-ms.openlocfilehash: 438fc753e91092502c84acfc491ec64c15133023
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1ba7057405da2ebd7fd1bf699a69f97a650fa47c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305052"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773200"
 ---
 # <a name="cmfcribbonpanel-class"></a>Cmfcribbonpanel – třída
 
@@ -143,7 +143,7 @@ class CMFCRibbonPanel : public CObject
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCRibbonPanel::Add](#add)|Přidá prvek pásu karet na panelu.|
 |[CMFCRibbonPanel::AddSeparator](#addseparator)|Oddělovač přidá do panelu pásu karet.|
@@ -207,7 +207,7 @@ Pásu karet můžete získat panely, které je součástí kategorie pásu karet
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak nakonfigurovat `CMFCRibbonPanel` pomocí různých metod v objektu `CMFCRibbonPanel` třídy. Tento příklad ukazuje, jak nastavení klávesové zkratky, které se zobrazí panel pásu karet, Zarovnat elementy panelu vertikálně podle sloupce a povolení sloupec odůvodnění. Tento fragment kódu je součástí [MS Office 2007 demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak nakonfigurovat `CMFCRibbonPanel` pomocí různých metod v objektu `CMFCRibbonPanel` třídy. Tento příklad ukazuje, jak nastavení klávesové zkratky, které se zobrazí panel pásu karet, Zarovnat elementy panelu vertikálně podle sloupce a povolení sloupec odůvodnění. Tento fragment kódu je součástí [MS Office 2007 demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#10](../../mfc/reference/codesnippet/cpp/cmfcribbonpanel-class_1.cpp)]
 

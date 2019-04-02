@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3451
 ms.assetid: a4897a69-e3e7-40bb-bb1c-598644904012
-ms.openlocfilehash: 041c0c22b7ae842073bfd6656d9cbb3b2a20af9c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ef4352101541391a7cda88471fbaa6aeae4ffb4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430053"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770366"
 ---
 # <a name="compiler-error-c3451"></a>Chyba kompilátoru C3451
 
 'attribute': nelze použít nespravovaný atribut na "typ"
 
-Na typ CLR nelze použít atribut jazyka C++. Zobrazit [referenční dokumentace k atributům C++](../../windows/cpp-attributes-reference.md) Další informace.
+Na typ CLR nelze použít atribut jazyka C++. Zobrazit [referenční dokumentace k atributům C++](../../windows/attributes/attributes-alphabetical-reference.md) Další informace.
 
-Další informace najdete v tématu [uživatelem definované atributy](../../windows/user-defined-attributes-cpp-component-extensions.md).
+Další informace najdete v tématu [uživatelem definované atributy](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 Tuto chybu mohou být generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual C++ 2005: [uuid](../../windows/uuid-cpp-attributes.md) atribut již není povolena u atributu uživatelem definované pomocí CLR programování. Místo nich se používá <xref:System.Runtime.InteropServices.GuidAttribute>.
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMFCToolBarFontComboBox [MFC], GetFontDesc
 - CMFCToolBarFontComboBox [MFC], SetFont
 ms.assetid: 25f8e08c-aadd-4cb5-9581-a99d49d444b1
-ms.openlocfilehash: 4ab4eece67406b1c5a52669beafc9bfd8acd32e6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 89767a3ed6880703c3c754700ea5669c0cc183e5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283719"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779193"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>Cmfctoolbarfontcombobox – třída
 
@@ -33,13 +33,13 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCToolBarFontComboBox::CMFCToolBarFontComboBox](#cmfctoolbarfontcombobox)|Vytvoří `CMFCToolBarFontComboBox` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc)|Vrací ukazatel `CMFCFontInfo` objekt pro zadaný index v poli se seznamem.|
 |[CMFCToolBarFontComboBox::SetFont](#setfont)|Vybere písmo v poli se seznamem písma podle buď název písma nebo předpona a znaková sada písmo.|
@@ -142,7 +142,7 @@ Obvykle `CMFCToolBarFontComboBox` objekty uložení seznamu dostupných písem v
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vytvořit `CMFCToolBarFontComboBox` objektu. Tento fragment kódu je součástí [slovo panel vzorku](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak vytvořit `CMFCToolBarFontComboBox` objektu. Tento fragment kódu je součástí [slovo panel vzorku](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#7](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontcombobox-class_1.cpp)]
 

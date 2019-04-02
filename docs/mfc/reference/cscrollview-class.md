@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: ea95de2bceab290f94bb7c0e7bbc94a90048ee13
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d60082092bd42fbe220eee08953ad5fda0ff0a85
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259253"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774150"
 ---
 # <a name="cscrollview-class"></a>CScrollView Class
 
@@ -49,13 +49,13 @@ class CScrollView : public CView
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CScrollView::CScrollView](#cscrollview)|Vytvoří `CScrollView` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CScrollView::CheckScrollBars](#checkscrollbars)|Označuje, jestli se posuvníky zobrazení vodorovného a svislého posuvníku.|
 |[CScrollView::FillOutsideRect](#filloutsiderect)|Vyplní oblast zobrazení mimo oblast posouvání.|
@@ -82,7 +82,7 @@ V reakci na zprávy z klávesnice, posouvání automaticky, přidejte je zpráva
 
 Dokáže zpracovat kolečko myši posouvání sami tak, že přepíšete mapované zpráva [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) a [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) členské funkce. Protože jde o pro `CScrollView`, tyto členské funkce podporují doporučené chování pro [WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel), zpráva otočení kolečka.
 
-Abyste mohli využívat automatické posouvání, odvodit třídu vaše zobrazení z `CScrollView` namísto z `CView`. Když je zobrazení nejprve vytvořit, pokud chcete vypočítat velikost zobrazení posuvný na základě velikosti dokumentu, volání `SetScrollSizes` členskou funkci ze přepsání buď [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) nebo [ CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (Musíte napsat vlastní kód pro dotazování velikost dokumentu. Příklad najdete v tématu [ukázky Scribble](../../visual-cpp-samples.md).)
+Abyste mohli využívat automatické posouvání, odvodit třídu vaše zobrazení z `CScrollView` namísto z `CView`. Když je zobrazení nejprve vytvořit, pokud chcete vypočítat velikost zobrazení posuvný na základě velikosti dokumentu, volání `SetScrollSizes` členskou funkci ze přepsání buď [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) nebo [ CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (Musíte napsat vlastní kód pro dotazování velikost dokumentu. Příklad najdete v tématu [ukázky Scribble](../../overview/visual-cpp-samples.md).)
 
 Volání `SetScrollSizes` členská funkce nastaví režim mapování zobrazení, celkový počet rozměrů posuvníky zobrazení a množství posouvat vodorovně a svisle. Všechny velikosti jsou v logických jednotkách. Logická velikost zobrazení se obvykle počítá z dat uložených v dokumentu, ale v některých případech můžete chtít určit pevnou velikost. Příklady oba přístupy poskytují, naleznete v tématu [CScrollView::SetScrollSizes](#setscrollsizes).
 
@@ -376,7 +376,7 @@ Režim mapování musí nastavit na některou z mapování režimy Windows s vý
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC DIBLOOK](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
 [CView – třída](../../mfc/reference/cview-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CView – třída](../../mfc/reference/cview-class.md)<br/>

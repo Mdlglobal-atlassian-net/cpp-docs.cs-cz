@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnumOnSTL class
 ms.assetid: befe1a44-7a00-4f28-9a2e-cc0fa526643c
-ms.openlocfilehash: 56d0de1131791def3ea536c6e5a7f5ce0bef9617
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f9bf9c227984b2fdbf460f970357f395934b238c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290505"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779856"
 ---
 # <a name="ccomenumonstl-class"></a>Ccomenumonstl – třída
 
@@ -102,7 +102,7 @@ Tento kód vytvoří **typedef** pro `CComEnumOnSTL` , která zveřejní vektor 
 ## <a name="see-also"></a>Viz také:
 
 [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)<br/>
-[Ukázka ATLCollections: Ukazuje ICollectionOnSTLImpl a CComEnumOnSTL, vlastních tříd zásad kopírování](../../visual-cpp-samples.md)<br/>
+[Ukázka ATLCollections: Ukazuje ICollectionOnSTLImpl a CComEnumOnSTL, vlastních tříd zásad kopírování](../../overview/visual-cpp-samples.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [CComObjectRootEx – třída](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)<br/>

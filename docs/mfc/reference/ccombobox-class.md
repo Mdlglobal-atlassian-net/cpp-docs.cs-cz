@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 847927a36bac8540dd95307ae3c0259d0adba12a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a76be4be87471f26970a5b517d9993ae324b56c5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304467"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778517"
 ---
 # <a name="ccombobox-class"></a>CComboBox – třída
 
@@ -135,7 +135,7 @@ class CComboBox : public CWnd
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CComboBox::AddString](#addstring)|Přidá řetězec do konce seznamu v poli seznamu pole se seznamem, nebo na seřazený pozici pro pole se seznamem se stylem CBS_SORT.|
 |[CComboBox::Clear](#clear)|Odstraní (vymaže) aktuální výběr, pokud existuje, v textovém poli.|
@@ -1557,7 +1557,7 @@ Tato členská funkce nemá žádný vliv na vytvořené pomocí pole se sezname
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC CTRLBARS](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>

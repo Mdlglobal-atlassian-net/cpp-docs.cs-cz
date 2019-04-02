@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3675
 ms.assetid: 87461613-6633-430b-b95d-c7cb1bb63776
-ms.openlocfilehash: c154a0fe1989c92bb5e07c0710d3846883d1a113
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e29e536bf89aef887dc043327e4b4596703d0538
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546311"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775189"
 ---
 # <a name="compiler-error-c3675"></a>Chyba kompilátoru C3675
 
@@ -19,7 +19,7 @@ ms.locfileid: "50546311"
 
 Když deklarujete jednoduchou vlastnost, kompilátor vygeneruje get a set přístupové metody a ty názvy jsou k dispozici v rámci programu.  Názvy generované kompilátorem jsou vytvářena předřazení get_ a set_ název vlastnosti.  Proto nelze deklarovat funkce se stejným názvem jako přístupové objekty generovaný kompilátorem.
 
-Zobrazit [vlastnost](../../windows/property-cpp-component-extensions.md) Další informace.
+Zobrazit [vlastnost](../../extensions/property-cpp-component-extensions.md) Další informace.
 
 ## <a name="example"></a>Příklad
 

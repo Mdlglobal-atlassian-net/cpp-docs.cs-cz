@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: e4b1a7eba31ef28578c515c437978bc59cbd08f1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 87844e843057bb295c904b5f1b3d7dd03fa4d797
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267365"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775891"
 ---
 # <a name="cmfcmenubar-class"></a>Cmfcmenubar – třída
 
@@ -191,7 +191,7 @@ Použití `CMFCMenuBar` objektu, ji vložit do objektu hlavní okno rámce. Při
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít různé metody v `CMFCMenuBar` třídy. Tento příklad ukazuje, jak nastavit styl panelu, povolit tlačítko přizpůsobit, povolit nápovědy pole, povolit stíny pro místní nabídky a aktualizaci řádku nabídek. Tento fragment kódu je součástí [IE demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak použít různé metody v `CMFCMenuBar` třídy. Tento příklad ukazuje, jak nastavit styl panelu, povolit tlačítko přizpůsobit, povolit nápovědy pole, povolit stíny pro místní nabídky a aktualizaci řádku nabídek. Tento fragment kódu je součástí [IE demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#3](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_2.cpp)]
@@ -395,7 +395,7 @@ Seznam dalších stylů, najdete v části [ovládací prvek panelu nástrojů a
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití `CreateEx` metodu `CMFCMenuBar` třídy. Tento fragment kódu je součástí [IE demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje způsob použití `CreateEx` metodu `CMFCMenuBar` třídy. Tento fragment kódu je součástí [IE demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#2](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_3.cpp)]

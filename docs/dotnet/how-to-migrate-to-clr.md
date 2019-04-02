@@ -10,12 +10,12 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: 8c4827891799d2c76a344e4c6da8f3d96333826e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 6ac470b85a14bfe32c7f3fe47168180687669ec6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816028"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781312"
 ---
 # <a name="how-to-migrate-to-clr"></a>Postupy: Přechod na/CLR
 
@@ -152,7 +152,7 @@ V některých případech můžete CLR vypnutí před dokončením spravovaný k
 
 ## <a name="using-new-visual-c-features"></a>Pomocí nové funkce Visual C++
 
-Po aplikaci zkompiluje, odkazy a spuštění, můžete začít používat funkce rozhraní .NET v jakékoli Modul zkompilovaný pomocí **/CLR**. Další informace najdete v tématu [přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md).
+Po aplikaci zkompiluje, odkazy a spuštění, můžete začít používat funkce rozhraní .NET v jakékoli Modul zkompilovaný pomocí **/CLR**. Další informace najdete v tématu [přípony komponent pro platformy běhového prostředí](../extensions/component-extensions-for-runtime-platforms.md).
 
 Pokud jste použili spravovaných rozšíření jazyka C++, můžete převést kód Refaktorovat pro použití nové syntaxe. Podrobnosti o převodu spravovaných rozšíření jazyka C++, naleznete v tématu [C + +/ CLI Základy migrace](../dotnet/cpp-cli-migration-primer.md).
 
@@ -162,7 +162,7 @@ Informace o programování v jazyce Visual C++ .NET naleznete v tématu:
 
 - [Nativní funkce a vzájemná funkční spolupráce rozhraní .NET](../dotnet/native-and-dotnet-interoperability.md)
 
-- [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+- [Přípony komponent pro platformy běhového prostředí](../extensions/component-extensions-for-runtime-platforms.md)
 
 ## <a name="see-also"></a>Viz také:
 

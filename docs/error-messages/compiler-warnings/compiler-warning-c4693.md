@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4693
 ms.assetid: 72d8db01-5e6f-4794-8731-76107e8f064a
-ms.openlocfilehash: 49d101ea56cd868e18489b6c74724a2d106c9265
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cac5918eb4a1689fd215e07272958eeca48247ad
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536650"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781897"
 ---
 # <a name="compiler-warning-c4693"></a>Upozornění kompilátoru C4693
 
 > 'class': zapečetěná abstraktní třída nemůže mít žádné členy instancí "Test"
 
-Pokud je typ označen [zapečetěné](../../windows/sealed-cpp-component-extensions.md) a [abstraktní](../../windows/abstract-cpp-component-extensions.md), může mít jenom statické členy.
+Pokud je typ označen [zapečetěné](../../extensions/sealed-cpp-component-extensions.md) a [abstraktní](../../extensions/abstract-cpp-component-extensions.md), může mít jenom statické členy.
 
 Toto upozornění je automaticky povýšen na chybu. Pokud chcete toto chování upravit, použijte [varování #pragma](../../preprocessor/warning.md).
 

@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
-ms.openlocfilehash: 3891741cb6998ec8621795801ce409aa40ab6d1d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 87e526a10c9bcd6a52f4544c50344c5145cfa732
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270381"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769547"
 ---
 # <a name="catlexemodulet-class"></a>Catlexemodulet – třída
 
@@ -49,14 +49,14 @@ Vaše třída odvozena od `CAtlExeModuleT`.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAtlExeModuleT::CAtlExeModuleT](#catlexemodulet)|Konstruktor|
 |[CAtlExeModuleT::~CAtlExeModuleT](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAtlExeModuleT::InitializeCom](#initializecom)|Inicializuje model COM.|
 |[CAtlExeModuleT::ParseCommandLine](#parsecommandline)|Analyzuje příkazového řádku a provádí registraci v případě potřeby.|
@@ -72,7 +72,7 @@ Vaše třída odvozena od `CAtlExeModuleT`.
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAtlExeModuleT::m_bDelayShutdown](#m_bdelayshutdown)|Příznak označující, že by měl být zpoždění vypnutí modulu.|
 |[CAtlExeModuleT::m_dwPause](#m_dwpause)|Pozastavit hodnota používá k zajištění, že všechny objekty jsou vydané před vypnutím.|
@@ -353,7 +353,7 @@ Tato metoda může být přepsána. Pokud přepisuje [CAtlExeModuleT::PreMessage
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázka ATLDuck](../../visual-cpp-samples.md)<br/>
+[Ukázka ATLDuck](../../overview/visual-cpp-samples.md)<br/>
 [CAtlModuleT – třída](../../atl/reference/catlmodulet-class.md)<br/>
 [CAtlDllModuleT – třída](../../atl/reference/catldllmodulet-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

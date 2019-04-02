@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-ms.openlocfilehash: da589743e98b2ac020e006aedb0ccc0415998f17
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cff9094315dc97e2040eb4dbad25d044c7c51a81
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270732"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776099"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Schránka: Kopírování a vkládání dat
 
@@ -32,7 +32,7 @@ Než budete moct implementovat kopírování nebo vkládání, je nutné zadat f
 
 1. Pokud uživatel vybral vyjmutí operace místo operace kopírování, odstranění vybraných dat z vaší aplikace.
 
-Příklad této sekvence najdete v tématu `OnEditCut` a `OnEditCopy` funkce v MFC OLE ukázkové programy [OCLIENT](../visual-cpp-samples.md) a [HIERSVR](../visual-cpp-samples.md). Všimněte si, že tyto ukázky údržbu ukazatel aktuálně vybraného data, aby bylo kroku 1 je již dokončena.
+Příklad této sekvence najdete v tématu `OnEditCut` a `OnEditCopy` funkce v MFC OLE ukázkové programy [OCLIENT](../overview/visual-cpp-samples.md) a [HIERSVR](../overview/visual-cpp-samples.md). Všimněte si, že tyto ukázky údržbu ukazatel aktuálně vybraného data, aby bylo kroku 1 je již dokončena.
 
 ##  <a name="_core_pasting_data"></a> Vkládání dat
 
@@ -50,7 +50,7 @@ Vkládání dat je složitější než zkopírováním, protože je nutné zvoli
 
 1. Operace vložení formátu.
 
-Příklad toho, jak to funguje, najdete v části implementace `OnEditPaste` členské funkce v zobrazení tříd definovaných v aplikacích MFC OLE ukázka [OCLIENT](../visual-cpp-samples.md) a [HIERSVR](../visual-cpp-samples.md).
+Příklad toho, jak to funguje, najdete v části implementace `OnEditPaste` členské funkce v zobrazení tříd definovaných v aplikacích MFC OLE ukázka [OCLIENT](../overview/visual-cpp-samples.md) a [HIERSVR](../overview/visual-cpp-samples.md).
 
 > [!TIP]
 >  Hlavní výhodou oddělení operaci vložení do samostatné funkce je, že stejný kód pro vložení je možné při přetažení dat ve vaší aplikaci během operace přetažení myší. Stejně jako v OCLIENT a HIERSVR vaše `OnDrop` funkce může volat také `DoPasteItem`, opětovné použití kódu napsaného pro implementaci operace vložení.

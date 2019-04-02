@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-ms.openlocfilehash: cb52f1138ba7ff01c6fbf2f7ec13d5f39e9422d8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d714159aa9fd52df682b1e5f3dbf3957bbef1b91
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413391"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777334"
 ---
 # <a name="cstatusbar-class"></a>Cstatusbar – třída
 
@@ -57,7 +57,7 @@ class CStatusBar : public CControlBar
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CStatusBar::CStatusBar](#cstatusbar)|Vytvoří `CStatusBar` objektu.|
 
@@ -506,8 +506,8 @@ Po zavolání `SetPaneText`, je nutné přidat obslužnou rutinu aktualizace už
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC CTRLBARS](../../visual-cpp-samples.md)<br/>
-[Ukázka DLGCBR32 knihovny MFC](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
+[Ukázka DLGCBR32 knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar – třída](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CStatusBarCtrl – třída](../../mfc/reference/cstatusbarctrl-class.md)<br/>

@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: 1f92afa4f40a5a37f32e1bc86418056c8591625f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 523e89859a6726bdff1dd27975077263abe481c4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283134"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775624"
 ---
 # <a name="cmfctoolbar-class"></a>Cmfctoolbar – třída
 
@@ -334,14 +334,14 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |`CMFCToolBar::CMFCToolBar`|Výchozí konstruktor.|
 |`CMFCToolBar::~CMFCToolBar`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCToolBar::AddBasicCommand](#addbasiccommand)|Přidá příkaz nabídky do seznamu příkazů, které se zobrazují vždy, když uživatel otevře nabídku.|
 |[CMFCToolBar::AddCommandUsage](#addcommandusage)|Zvýší o jedna čítač, který je přidružen daný příkaz.|
@@ -493,7 +493,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCToolBar::AllowShowOnList](#allowshowonlist)|Určuje, zda panel nástrojů se zobrazí v seznamu v **panely nástrojů** podokně **vlastní** dialogové okno.|
 |[CMFCToolBar::CalcMaxButtonHeight](#calcmaxbuttonheight)|Vypočítá maximální výšku tlačítka na panelu nástrojů.|
@@ -504,7 +504,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ### <a name="data-members"></a>Datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCToolBar::m_bDontScaleImages](#m_bdontscaleimages)|Určuje, jestli se má změnit velikost nebo obrázky panelu nástrojů nejsou v režimu vysoké rozlišení DPI.|
 |[CMFCToolBar::m_dblLargeImageRatio](#m_dbllargeimageratio)|Určuje poměr mezi rozměr (výšky a šířky) velké obrázky a dimenze běžných bitových kopií.|
@@ -525,7 +525,7 @@ Vložit speciální tlačítko, jako je například pole se seznamem a rozevíra
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít různé metody v `CMFCToolBar` třídy. Tento příklad ukazuje, jak nastavit text popisku okno panelu nástrojů, nastavit ohraničení, nastavit styl v podokně a povolte **přidat nebo odebrat tlačítka** tlačítko, které se zobrazí na konci tohoto panelu nástrojů. Tento fragment kódu je součástí [IE demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak použít různé metody v `CMFCToolBar` třídy. Tento příklad ukazuje, jak nastavit text popisku okno panelu nástrojů, nastavit ohraničení, nastavit styl v podokně a povolte **přidat nebo odebrat tlačítka** tlačítko, které se zobrazí na konci tohoto panelu nástrojů. Tento fragment kódu je součástí [IE demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#8](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_2.cpp)]
@@ -1031,7 +1031,7 @@ Volání této metody místo [CMFCToolBar::Create](#create) když chcete poskytn
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití `CreateEx` metodu `CMFCToolBar` třídy. Tento fragment kódu je součástí [IE demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje způsob použití `CreateEx` metodu `CMFCToolBar` třídy. Tento fragment kódu je součástí [IE demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]
@@ -1799,7 +1799,7 @@ virtual void GetItemRect(
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití `GetItemRect` metodu `CMFCToolBar` třídy. Tento fragment kódu je součástí [IE demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje způsob použití `GetItemRect` metodu `CMFCToolBar` třídy. Tento fragment kódu je součástí [IE demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#9](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_4.cpp)]
@@ -2737,7 +2737,7 @@ Rozhraní volá tuto metodu během inicializace k načtení bitové kopie, kter�
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití `LoadToolBar` metodu `CMFCToolBar` třídy. Tento fragment kódu je součástí [IE demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje způsob použití `LoadToolBar` metodu `CMFCToolBar` třídy. Tento fragment kódu je součástí [IE demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]
@@ -3079,7 +3079,7 @@ Tuto metodu volejte, pokud chcete přidat tlačítka na panelu nástrojů, kter�
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití `ReplaceButton` metodu `CMFCToolBar` třídy. Tento fragment kódu je součástí [IE demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje způsob použití `ReplaceButton` metodu `CMFCToolBar` třídy. Tento fragment kódu je součástí [IE demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#10](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_5.cpp)]

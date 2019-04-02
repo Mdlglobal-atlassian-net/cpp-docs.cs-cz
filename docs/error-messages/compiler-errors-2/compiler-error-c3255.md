@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3255
 ms.assetid: 877ffca2-fd92-44b6-9060-6091b928b1c1
-ms.openlocfilehash: a5b483f3aaa82e543d561cb7c550495069a19f7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 129d2698a782d2b98267877e8d575a6ee641b94b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519935"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772043"
 ---
 # <a name="compiler-error-c3255"></a>Chyba kompilátoru C3255
 
 Typ hodnoty: nejde dynamicky přidělit tento objekt hodnotového typu na nativní halda
 
-Instance hodnotového typu (viz [třídy a struktury](../../windows/classes-and-structs-cpp-component-extensions.md)), které obsahují spravované členy lze vytvořit v zásobníku, ale ne na haldě.
+Instance hodnotového typu (viz [třídy a struktury](../../extensions/classes-and-structs-cpp-component-extensions.md)), které obsahují spravované členy lze vytvořit v zásobníku, ale ne na haldě.
 
 Následující ukázka generuje C3255:
 

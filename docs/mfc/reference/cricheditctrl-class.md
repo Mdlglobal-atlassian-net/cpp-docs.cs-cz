@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 634aa4adbe4e7084266be43ef932074373835c10
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5517efca66744c43eeccd3fb91b97a6fedc8180e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414288"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779271"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl Class
 
@@ -179,7 +179,7 @@ class CRichEditCtrl : public CWnd
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CRichEditCtrl::CanPaste](#canpaste)|Určuje, pokud lze vložit obsah schránky do tohoto ovládacího prvku RichEdit.|
 |[CRichEditCtrl::CanRedo](#canredo)|Určuje, zda jsou všechny akce ve frontě znovu ovládacího prvku.|
@@ -269,7 +269,7 @@ Další informace o používání `CRichEditCtrl`, naleznete v tématu:
 
 - [Používání atributu CRichEditCtrl](../../mfc/using-cricheditctrl.md)
 
-Příklad použití ovládacího prvku v aplikaci knihovny MFC, najdete v článku [WORDPAD](../../visual-cpp-samples.md) ukázkovou aplikaci.
+Příklad použití ovládacího prvku v aplikaci knihovny MFC, najdete v článku [WORDPAD](../../overview/visual-cpp-samples.md) ukázkovou aplikaci.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -2198,7 +2198,7 @@ Další informace najdete v tématu [EM_UNDO](/windows/desktop/Controls/em-undo)
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC WORDPAD](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CEdit – třída](../../mfc/reference/cedit-class.md)<br/>

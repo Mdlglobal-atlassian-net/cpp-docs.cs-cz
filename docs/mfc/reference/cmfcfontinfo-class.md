@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CMFCFontInfo [MFC], m_strName
 - CMFCFontInfo [MFC], m_strScript
 ms.assetid: f88329b2-d74e-4921-9441-a3bb6536a049
-ms.openlocfilehash: 2377b7f6afdf78a0e8b7c8ac97a36a4920c06bb8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 930aceb4514195f0e844c35d326b52d9cd8d31fa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281184"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781325"
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo Class
 
@@ -45,7 +45,7 @@ class CMFCFontInfo : public CObject
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCFontInfo::GetFullName](#getfullname)|Načte nastavení zřetězených názvy písmo a jeho znak (skript).|
 
@@ -65,7 +65,7 @@ Můžete připojit `CMFCFontInfo` objekt položka [cmfctoolbarfontcombobox – t
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak využívat různé členy `CMFCFontInfo` třídy. Tento příklad ukazuje, jak získat `CMFCFontInfo` objektu z `CMFCRibbonFontComboBox`a jak přistupovat ke své místní proměnné. V tomto příkladu je součástí [MSOffice 2007 demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak využívat různé členy `CMFCFontInfo` třídy. Tento příklad ukazuje, jak získat `CMFCFontInfo` objektu z `CMFCRibbonFontComboBox`a jak přistupovat ke své místní proměnné. V tomto příkladu je součástí [MSOffice 2007 demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#6](../../mfc/reference/codesnippet/cpp/cmfcfontinfo-class_1.cpp)]
 

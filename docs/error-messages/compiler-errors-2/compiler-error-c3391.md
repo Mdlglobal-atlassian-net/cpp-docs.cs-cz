@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3391
 ms.assetid: c32532b9-7db4-4ccd-84b9-479e5a1a19d1
-ms.openlocfilehash: cac397e4588c493fb8c47932feb97a5f12cf2583
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32ba1ca63a3a6fafa3290946a976e6845385126f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578214"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772589"
 ---
 # <a name="compiler-error-c3391"></a>Chyba kompilátoru C3391
 
 'type_arg': Neplatný argument typu pro obecný parametr 'param' z obecného "generic_type", musí být typu hodnotu Null
 
-Byla nesprávně vytvořena instance obecného typu. Zkontrolujte definici typu. Další informace najdete v tématu <xref:System.Nullable> a [obecných typů](../../windows/generics-cpp-component-extensions.md).
+Byla nesprávně vytvořena instance obecného typu. Zkontrolujte definici typu. Další informace najdete v tématu <xref:System.Nullable> a [obecných typů](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Příklad
 

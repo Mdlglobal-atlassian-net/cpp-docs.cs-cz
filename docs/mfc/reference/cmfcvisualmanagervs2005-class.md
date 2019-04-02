@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCVisualManagerVS2005 [MFC], OnFillMiniFrameCaption
 - CMFCVisualManagerVS2005 [MFC], OnUpdateSystemColors
 ms.assetid: ea39b9ae-327e-4a51-bce7-dc84c78f005b
-ms.openlocfilehash: 212ef69350fbc85e6e0cc76bd505b2a895e75c8e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4d1ef0c9087e876f3e8f43430b58fc80f3923ba6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279962"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773460"
 ---
 # <a name="cmfcvisualmanagervs2005-class"></a>CMFCVisualManagerVS2005 Class
 
@@ -59,7 +59,7 @@ class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCVisualManagerVS2005::GetDockingTabsBordersSize](#getdockingtabsborderssize)|Rozhraní volá tuto metodu při kreslení podokno, které je ukotvena a oddělené tabulátory. (Přepíše [CMFCVisualManager::GetDockingTabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getdockingtabsborderssize).)|
 |[CMFCVisualManagerVS2005::GetMDITabsBordersSize](#getmditabsborderssize)|Rozhraní volá tuto metodu za účelem určení velikost ohraničení okna MDITabs předtím, než se vykreslí v okně. (Přepíše [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize).)|
@@ -86,7 +86,7 @@ Všichni členové této třídy jsou virtuální funkce, které jsou odvozeny z
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít Správce vzhledu VS 2005. Tento fragment kódu je součástí [Desktopu výstrah demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak použít Správce vzhledu VS 2005. Tento fragment kódu je součástí [Desktopu výstrah demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#9](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagervs2005-class_1.cpp)]
 

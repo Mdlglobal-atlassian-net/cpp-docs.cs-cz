@@ -8,12 +8,12 @@ helpviewer_keywords:
 - _Copy class
 - _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
-ms.openlocfilehash: 24d81506f1518f980576899a4a104bbfdc0a1438
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 73bec31b4ae140797c85a06ee7c5023c9e0c4446
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296342"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776957"
 ---
 # <a name="atl-copy-policy-classes"></a>Třídy zásady kopírování ATL
 
@@ -62,7 +62,7 @@ Knihovna ATL poskytuje dvě třídy zásady kopírování ve formě `_Copy` a `_
 
 ## <a name="custom-implementations"></a>Vlastní implementace
 
-Obvykle budete potřebovat k definování vlastních tříd zásad kopírování pro heterogenní kopírování (to znamená, převodu mezi datovými typy). Některé příklady užitečných vlastních tříd zásad kopírování, podívejte se na soubory VCUE_Copy.h a VCUE_CopyString.h v [ATLCollections](../visual-cpp-samples.md) vzorku. Tyto soubory obsahují dvě třídy zásady kopírování šablony `GenericCopy` a `MapCopy`, plus počet specializace `GenericCopy` pro různé datové typy.
+Obvykle budete potřebovat k definování vlastních tříd zásad kopírování pro heterogenní kopírování (to znamená, převodu mezi datovými typy). Některé příklady užitečných vlastních tříd zásad kopírování, podívejte se na soubory VCUE_Copy.h a VCUE_CopyString.h v [ATLCollections](../overview/visual-cpp-samples.md) vzorku. Tyto soubory obsahují dvě třídy zásady kopírování šablony `GenericCopy` a `MapCopy`, plus počet specializace `GenericCopy` pro různé datové typy.
 
 ### <a name="genericcopy"></a>GenericCopy
 
@@ -81,4 +81,4 @@ VCUE_Copy.h také obsahuje následující specializace této třídy: `GenericCo
 ## <a name="see-also"></a>Viz také:
 
 [Implementace kolekce založené na standardní knihovně C++](../atl/implementing-an-stl-based-collection.md)<br/>
-[Ukázka ATLCollections](../visual-cpp-samples.md)
+[Ukázka ATLCollections](../overview/visual-cpp-samples.md)

@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 9cedcfbfb662d7d4d635a02b82ea45828c54b958
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 60eeaa2a37dd824ae418b25e95743c21c65ae7ce
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259513"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773720"
 ---
 # <a name="cricheditview-class"></a>Cricheditview – třída
 
@@ -121,13 +121,13 @@ class CRichEditView : public CCtrlView
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CRichEditView::CRichEditView](#cricheditview)|Vytvoří `CRichEditView` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CRichEditView::AdjustDialogPosition](#adjustdialogposition)|Přesune dialogovému oknu, takže ho nebude skryl aktuálního výběru.|
 |[CRichEditView::CanPaste](#canpaste)|Určuje, zda schránky obsahuje data, která lze vložit do zobrazení RichEdit.|
@@ -164,7 +164,7 @@ class CRichEditView : public CCtrlView
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CRichEditView::GetClipboardData](#getclipboarddata)|Načte objekt Clipboard pro rozsah v tomto zobrazení RichEdit.|
 |[CRichEditView::GetContextMenu](#getcontextmenu)|Načte místní nabídku pro použití na pravé tlačítko myši dolů.|
@@ -194,7 +194,7 @@ class CRichEditView : public CCtrlView
 
 Tento ovládací prvek Windows běžné (a tedy [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) a související třídy) je dostupná jenom pro programy spuštěné v rámci Windows 95/98 a Windows NT verze 3.51 a vyšší.
 
-Příklad použití zobrazení RichEdit v aplikaci knihovny MFC, najdete v článku [WORDPAD](../../visual-cpp-samples.md) ukázkovou aplikaci.
+Příklad použití zobrazení RichEdit v aplikaci knihovny MFC, najdete v článku [WORDPAD](../../overview/visual-cpp-samples.md) ukázkovou aplikaci.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -1284,7 +1284,7 @@ Přepsání této funkce můžete upravit způsob zobrazení pro úpravy s form�
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC WORDPAD](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [CCtrlView – třída](../../mfc/reference/cctrlview-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CRichEditDoc – třída](../../mfc/reference/cricheditdoc-class.md)<br/>

@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: 6ba0c2b5449cb0058c1b274d9d9c0d7ae33bcd7f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d336e85020d8d2e855afb0568058057594ec8829
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302977"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769644"
 ---
 # <a name="cframewndex-class"></a>Cframewndex – třída
 
@@ -199,7 +199,7 @@ class CFrameWndEx : public CFrameWnd
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Upraví rozložení klientskou položku OLE a klientskou oblast rámce.|
 |`CFrameWndEx::AddDockSite`|Tato metoda se nepoužívá.|
@@ -291,7 +291,7 @@ class CFrameWndEx : public CFrameWnd
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak dědit z třídy `CFrameWndEx` třídy. Příklad ukazuje podpisy metod v podtřídy a jak přepsat `OnShowPopupMenu` metody. Tento fragment kódu je součástí [slovo panel vzorku](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak dědit z třídy `CFrameWndEx` třídy. Příklad ukazuje podpisy metod v podtřídy a jak přepsat `OnShowPopupMenu` metody. Tento fragment kódu je součástí [slovo panel vzorku](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#3](../../mfc/reference/codesnippet/cpp/cframewndex-class_1.h)]
 [!code-cpp[NVC_MFC_WordPad#4](../../mfc/reference/codesnippet/cpp/cframewndex-class_2.cpp)]

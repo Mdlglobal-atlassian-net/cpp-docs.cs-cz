@@ -2,16 +2,16 @@
 title: Mapy příkazů DHTML pro úpravy
 ms.date: 11/04/2016
 ms.assetid: c1b49876-039e-4a26-bb24-ea98ccf254a1
-ms.openlocfilehash: 1f84a56876f1108e9b02d44f6ef0dec50f065c57
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7f420619983283c225ca8fca23c5ea349def1d1b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278259"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776151"
 ---
 # <a name="dhtml-editing-command-maps"></a>Mapy příkazů DHTML pro úpravy
 
-Následující makra lze použít k mapování DHTML pro úpravy příkazy v [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-odvozené třídy. Příklad použití, naleznete v tématu [HTMLEdit ukázka](../../visual-cpp-samples.md).
+Následující makra lze použít k mapování DHTML pro úpravy příkazy v [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-odvozené třídy. Příklad použití, naleznete v tématu [HTMLEdit ukázka](../../overview/visual-cpp-samples.md).
 
 ### <a name="dhtml-editing-command-map-macros"></a>Makra Map DHTML pro úpravy příkaz
 
@@ -46,7 +46,7 @@ Použití [BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap) k implementaci
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [HTMLEdit ukázka](../../visual-cpp-samples.md).
+Zobrazit [HTMLEdit ukázka](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Požadavky
 
@@ -89,7 +89,7 @@ Použití ve spojení s [BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap).
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [HTMLEdit ukázka](../../visual-cpp-samples.md).
+Zobrazit [HTMLEdit ukázka](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Požadavky
 
@@ -113,7 +113,7 @@ Příkaz, ke kterému pro úpravu kódu HTML *cmdID* mapuje (například IDM_COP
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [HTMLEdit ukázka](../../visual-cpp-samples.md).
+Zobrazit [HTMLEdit ukázka](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Požadavky
 
@@ -140,7 +140,7 @@ Název funkce obslužná rutina zprávy, ke které je mapován tento příkaz.
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [HTMLEdit ukázka](../../visual-cpp-samples.md).
+Zobrazit [HTMLEdit ukázka](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Požadavky
 
@@ -167,7 +167,7 @@ Typ prvku uživatelského rozhraní; jeden z AFX_UI_ELEMTYPE_NORMAL, AFX_UI_ELEM
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [HTMLEdit ukázka](../../visual-cpp-samples.md).
+Zobrazit [HTMLEdit ukázka](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Požadavky
 
@@ -197,7 +197,7 @@ Typ prvku uživatelského rozhraní; jeden z AFX_UI_ELEMTYPE_NORMAL, AFX_UI_ELEM
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [HTMLEdit ukázka](../../visual-cpp-samples.md).
+Zobrazit [HTMLEdit ukázka](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Požadavky
 

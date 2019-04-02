@@ -15,12 +15,12 @@ helpviewer_keywords:
 - custom events [MFC]
 - FireEvent method, adding custom events
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
-ms.openlocfilehash: 626aae04e0b19dc951814e4741cad3729acd3b72
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 48c5ddbc8a3bcf6f74c251820e83cdebcef05bc9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263010"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781000"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>MFC – ovládací prvky ActiveX: Přidání vlastních událostí
 
@@ -92,7 +92,7 @@ Teď, když jste přidali vlastní událost clickin – pomocí Průvodce přid�
 
 1. Dvakrát klikněte na novou funkci obslužné rutiny v zobrazení tříd pro přechod na kód obslužné rutiny zprávy v implementaci (. Soubor CPP) ovládacího prvku ActiveX.
 
-Následující kód volá ukázka `InCircle` pracovat pokaždé, když dojde ke kliknutí na levé tlačítko myši v rámci okna ovládacího prvku. Tato ukázka najdete ve funkci obslužné rutiny WM_LBUTTONDOWN `OnLButtonDown`v [KR ukázka](../visual-cpp-samples.md) abstraktní.
+Následující kód volá ukázka `InCircle` pracovat pokaždé, když dojde ke kliknutí na levé tlačítko myši v rámci okna ovládacího prvku. Tato ukázka najdete ve funkci obslužné rutiny WM_LBUTTONDOWN `OnLButtonDown`v [KR ukázka](../overview/visual-cpp-samples.md) abstraktní.
 
 [!code-cpp[NVC_MFC_AxUI#10](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_4.cpp)]
 

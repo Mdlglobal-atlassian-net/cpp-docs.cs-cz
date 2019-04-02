@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CMFCPopupMenuBar [MFC], StartPopupMenuTimer
 - CMFCPopupMenuBar [MFC], m_bDisableSideBarInXPMode
 ms.assetid: 4c93c459-7f70-4240-8c63-280bb811e374
-ms.openlocfilehash: 14f1636917244efe4decc0108579f81fbad2f457
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: acb1e2be7d40e5e0c569fffcc92c57c750be8f91
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300775"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776775"
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar Class
 
@@ -91,7 +91,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
 
 ### <a name="data-members"></a>Datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCPopupMenuBar::m_bDisableSideBarInXPMode](#m_bdisablesidebarinxpmode)|Určuje, zda šedé postranního panelu se zobrazí, když má aplikace vzhledu Windows XP.|
 
@@ -101,7 +101,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak inicializovat `CMFCPopupMenuBar` objektu z `CMFCPopupMenu` objektu. Tento fragment kódu je součástí [nakreslit Client sample](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak inicializovat `CMFCPopupMenuBar` objektu z `CMFCPopupMenu` objektu. Tento fragment kódu je součástí [nakreslit Client sample](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#7](../../mfc/reference/codesnippet/cpp/cmfcpopupmenubar-class_1.cpp)]
 

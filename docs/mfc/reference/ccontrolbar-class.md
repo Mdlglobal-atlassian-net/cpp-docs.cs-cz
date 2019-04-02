@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-ms.openlocfilehash: 9ac9ad66a076202113f0c59dafae243b6951ee4c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 41e40b3da7b4a294fe396a9d93f7c6a93593ff95
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291623"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773239"
 ---
 # <a name="ccontrolbar-class"></a>Ccontrolbar – třída
 
@@ -65,7 +65,7 @@ class CControlBar : public CWnd
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CControlBar::CControlBar](#ccontrolbar)|Vytvoří `CControlBar` objektu.|
 
@@ -92,7 +92,7 @@ class CControlBar : public CWnd
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CControlBar::m_bAutoDelete](#m_bautodelete)|Pokud nenulovou hodnotu, `CControlBar` objektu se odstraní při zničení ovládacím panelu Windows.|
 |[CControlBar::m_pInPlaceOwner](#m_pinplaceowner)|Místní vlastník ovládacího panelu.|
@@ -543,7 +543,7 @@ Ukazatel `CWnd` objektu.
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC CTRLBARS](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CToolBar – třída](../../mfc/reference/ctoolbar-class.md)<br/>

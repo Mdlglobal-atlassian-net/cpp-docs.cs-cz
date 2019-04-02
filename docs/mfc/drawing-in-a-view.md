@@ -11,12 +11,12 @@ helpviewer_keywords:
 - paint messages in view class [MFC]
 - device contexts, screen drawings
 ms.assetid: e3761db6-0f19-4482-a4cd-ac38ef7c4d3a
-ms.openlocfilehash: 77844ebd31f624229870d27c72b08a987b7533bd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bc461347b56379976cdf62014507e3a15529f081
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280768"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772550"
 ---
 # <a name="drawing-in-a-view"></a>Kreslení v zobrazení
 
@@ -42,7 +42,7 @@ V tomto příkladu byste definovali `GetData` fungovat jako člen třídy odvoze
 
 Tento příklad vytiskne jakýkoli řetězec získá z dokumentu, zarovnání na střed v zobrazení. Pokud `OnDraw` volání je pro vykreslování obrazovky `CDC` objekt předaný v *primárního řadiče domény* je `CPaintDC` jejíž konstruktor již volána `BeginPaint`. Volání funkce vykreslování se provádějí přes ukazatel kontextu zařízení. Informace o volání kreslení a kontexty zařízení najdete v tématu třídy [CDC](../mfc/reference/cdc-class.md) v *odkaz knihovny MFC* a [práce s objekty oken](../mfc/working-with-window-objects.md).
 
-Další příklady o tom, jak psát `OnDraw`, najdete v článku [ukázky knihovny MFC](../visual-cpp-samples.md).
+Další příklady o tom, jak psát `OnDraw`, najdete v článku [ukázky knihovny MFC](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Viz také:
 

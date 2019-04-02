@@ -7,12 +7,12 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: 68444b337710515ccf8ecb98157d144493978ecd
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 6b9e30a18ab1d2b8463ccccae0b265bc20904020
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738459"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775969"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>Postupy: Přístupy ke znakům v datech třídy System::String
 
@@ -22,7 +22,7 @@ Dostanete znaků <xref:System.String> objekt pro vysoce výkonné volání nespr
 
 `PtrToStringChars` Vrátí <xref:System.Char>, což je vnitřní ukazatel (označované také jako `byref`). V důsledku toho se časovač uvolněn z paměti. Není nutné tento ukazatel Připnutí, pokud se chystáte předat nativní funkce.
 
-Uvažujme následující kód.  Připnutí není nutné, protože `ppchar` je vnitřní ukazatel, a pokud uvolňování paměti přesune odkazuje na řetězec, bude také aktualizovat `ppchar`. Bez [pin_ptr (C + +/ CLI)](../windows/pin-ptr-cpp-cli.md), kód bude fungovat a nebude mít potenciální výkon, což je způsobeno připnutím.
+Uvažujme následující kód.  Připnutí není nutné, protože `ppchar` je vnitřní ukazatel, a pokud uvolňování paměti přesune odkazuje na řetězec, bude také aktualizovat `ppchar`. Bez [pin_ptr (C + +/ CLI)](../extensions/pin-ptr-cpp-cli.md), kód bude fungovat a nebude mít potenciální výkon, což je způsobeno připnutím.
 
 Pokud předáte `ppchar` nativní funkcí, pak musí být ukazatel Připnutí; systému uvolňování paměti nebude možné aktualizovat všechny ukazatele na rámce zásobníku nespravované.
 

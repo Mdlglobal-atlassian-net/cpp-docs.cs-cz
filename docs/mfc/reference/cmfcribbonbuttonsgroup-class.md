@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCRibbonButtonsGroup [MFC], SetImages
 - CMFCRibbonButtonsGroup [MFC], SetParentCategory
 ms.assetid: b993d93e-fc1a-472f-a87f-1d7b7b499845
-ms.openlocfilehash: 3a0806d5c45f429f975b7b8ef0085252fe2b2528
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 39979d48eb7b0f7aba9dbe7bd42c2f91845af968
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295887"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781988"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>Cmfcribbonbuttonsgroup – třída
 
@@ -51,13 +51,13 @@ class CMFCRibbonButtonsGroup : public CMFCRibbonBaseElement
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup](#cmfcribbonbuttonsgroup)|Vytvoří `CMFCRibbonButtonsGroup` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCRibbonButtonsGroup::AddButton](#addbutton)|Přidá tlačítko do skupiny.|
 |[CMFCRibbonButtonsGroup::AddButtons](#addbuttons)|Seznam tlačítek, přidá do skupiny.|
@@ -77,7 +77,7 @@ Skupiny je odvozen z [CMFCBaseRibbonElement](../../mfc/reference/cmfcribbonbasee
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít různé metody v `CMFCRibbonButtonsGroup` třídy. Tento příklad ukazuje, jak vytvořit `CMFCRibbonButtonsGroup` objekt, přiřaďte imagí skupina tlačítek na pásu karet a přidejte do skupiny tlačítek na pásu karet tlačítko. Tento fragment kódu je součástí [nakreslit Client sample](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak použít různé metody v `CMFCRibbonButtonsGroup` třídy. Tento příklad ukazuje, jak vytvořit `CMFCRibbonButtonsGroup` objekt, přiřaďte imagí skupina tlačítek na pásu karet a přidejte do skupiny tlačítek na pásu karet tlačítko. Tento fragment kódu je součástí [nakreslit Client sample](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#2](../../mfc/reference/codesnippet/cpp/cmfcribbonbuttonsgroup-class_1.cpp)]
 

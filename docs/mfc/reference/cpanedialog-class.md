@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CPaneDialog [MFC], HandleInitDialog
 - CPaneDialog [MFC], SetOccDialogInfo
 ms.assetid: 48a6bb91-4b92-40f5-8907-b3270b146cf6
-ms.openlocfilehash: 16aa707792cc1289ced380e54abef3f15289e7cf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c78b8f2cd19e87fa559c3f9bbd24d07543d887c5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274554"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769742"
 ---
 # <a name="cpanedialog-class"></a>CPaneDialog Class
 
@@ -33,14 +33,14 @@ class CPaneDialog : public CDockablePane
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |`CPaneDialog::CPaneDialog`|Výchozí konstruktor.|
 |`CPaneDialog::~CPaneDialog`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CPaneDialog::Create](#create)|Vytvoří ukotvitelné dialogové okno a připojí ho k `CPaneDialog` objektu.|
 |`CPaneDialog::CreateObject`|Rozhraní používá k vytvoření dynamické instance tohoto typu třídy.|
@@ -150,7 +150,7 @@ Hodnota TRUE, pokud metoda uspěje; v opačném případě hodnota FALSE.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití `Create` metodu `CPaneDialog` třídy. V tomto příkladu je součástí [nastavit velikost podokna ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje způsob použití `Create` metodu `CPaneDialog` třídy. V tomto příkladu je součástí [nastavit velikost podokna ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanedialog-class_1.h)]
 [!code-cpp[NVC_MFC_SetPaneSize#3](../../mfc/reference/codesnippet/cpp/cpanedialog-class_2.cpp)]

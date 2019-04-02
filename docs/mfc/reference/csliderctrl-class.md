@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 0179d69726f49f2df02979264da4966b35178434
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4db27112daf65b2c3f477527cd7b4351b91d7f18
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421997"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776632"
 ---
 # <a name="csliderctrl-class"></a>Csliderctrl – třída
 
@@ -95,13 +95,13 @@ class CSliderCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CSliderCtrl::CSliderCtrl](#csliderctrl)|Vytvoří `CSliderCtrl` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CSliderCtrl::ClearSel](#clearsel)|Zruší aktuální výběr v ovládacím prvku posuvník.|
 |[CSliderCtrl::ClearTics](#cleartics)|Zruší aktuální osové značky ovládacího prvku slider.|
@@ -801,7 +801,7 @@ Tato členská funkce implementuje chování zprávy Win32 [TBM_SETTOOLTIPS](/wi
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázka CMNCTRL2 knihovny MFC](../../visual-cpp-samples.md)<br/>
+[Ukázka CMNCTRL2 knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CProgressCtrl – třída](../../mfc/reference/cprogressctrl-class.md)

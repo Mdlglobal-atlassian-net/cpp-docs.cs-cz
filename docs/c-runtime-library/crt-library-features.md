@@ -18,12 +18,12 @@ helpviewer_keywords:
 - libraries [C++], run-time
 - linking [C++], libraries
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
-ms.openlocfilehash: 08d85cd6993a2f3558ddb501dacac671c0d5d797
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b9a2691d492a277ffe0018b6e86b00cd245840ed
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540267"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767688"
 ---
 # <a name="crt-library-features"></a>Funkce knihovny CRT
 
@@ -33,27 +33,27 @@ Toto téma popisuje různé soubory LIB, které tvoří běhové knihovny jazyka
 
 Knihovny Run-time jazyka C (CRT) je součástí standardní knihovny C++, který zahrnuje knihovny standard ISO C99. Knihovny Visual C++, které implementují CRT podporují vývoj nativního kódu a obě Smíšeného nativního a spravovaného kódu. Všechny verze CRT podporují vícevláknové. Většina knihoven podporuje jak statické propojení, propojit knihovnu přímo do kódu, nebo dynamické propojení umožňuje kódu použít běžné soubory DLL.
 
-Spouští se v sadě Visual Studio 2015, CRT byla refaktorována, do nové binární soubory. Universal CRT (UCRT) obsahuje funkce a globální prvky exportovat ve standardní knihovně C99 CRT. UCRT je teď součástí Windows a dodává v rámci Windows 10. Statickou knihovnu, knihovna DLL knihovny importu a soubory hlaviček pro UCRT jsou teď součástí Windows 10 SDK. Při instalaci Visual C++ instaluje instalační program sady Visual Studio dílčí sadu Windows 10 SDK, aby jeho používání UCRT. Můžete použít UCRT na libovolnou verzi systému Windows podporuje Visual Studio 2015 a novější verze. Můžete znovu distribuovat pomocí vcredist pro podporované verze systému Windows než Windows 10. Další informace najdete v tématu [Redistribuce souborů Visual C++](../ide/redistributing-visual-cpp-files.md).
+Spouští se v sadě Visual Studio 2015, CRT byla refaktorována, do nové binární soubory. Universal CRT (UCRT) obsahuje funkce a globální prvky exportovat ve standardní knihovně C99 CRT. UCRT je teď součástí Windows a dodává v rámci Windows 10. Statickou knihovnu, knihovna DLL knihovny importu a soubory hlaviček pro UCRT jsou teď součástí Windows 10 SDK. Při instalaci Visual C++ instaluje instalační program sady Visual Studio dílčí sadu Windows 10 SDK, aby jeho používání UCRT. Můžete použít UCRT na libovolnou verzi systému Windows podporuje Visual Studio 2015 a novější verze. Můžete znovu distribuovat pomocí vcredist pro podporované verze systému Windows než Windows 10. Další informace najdete v tématu [Redistribuce souborů Visual C++](../windows/redistributing-visual-cpp-files.md).
 
 V následující tabulce jsou uvedeny knihoven, které implementují UCRT.
 
-|Knihovna|Přidružené knihovny DLL|Vlastnosti|Možnost|Direktivy preprocesoru|
+|Knihovna|Associated DLL|Vlastnosti|Možnost|Direktivy preprocesoru|
 |-------------|--------------------|---------------------|------------|-----------------------------|
 |libucrt.lib|Žádné|Staticky odkazuje UCRT do kódu.|**/MT**|_MT|
 |libucrtd.lib|Žádné|Ladicí verze UCRT pro statické propojování. Redistributable.|**/MTd**|_DEBUG, _MT|
-|ucrt.lib|ucrtbase.dll|Importovat knihovny DLL pro UCRT.|**/ MD**|_MT, _DLL|
-|ucrtd.lib|ucrtbased.dll|Importní knihovny DLL, pro ladicí verzi UCRT. Redistributable.|**/ MDd**|_DEBUG, _MT, _DLL|
+|ucrt.lib|ucrtbase.dll|Importovat knihovny DLL pro UCRT.|**/MD**|_MT, _DLL|
+|ucrtd.lib|ucrtbased.dll|Importní knihovny DLL, pro ladicí verzi UCRT. Redistributable.|**/MDd**|_DEBUG, _MT, _DLL|
 
 Knihovna vcruntime obsahuje kód specifický pro implementaci Visual C++ CRT, jako je zpracování výjimek a ladění, podpora, kontroly za běhu a informace o typu, podrobnosti implementace a určité funkce, rozšířené knihovny. Tato knihovna je specifické pro verzi kompilátoru použít.
 
 Tato tabulka shrnuje, které implementují knihovnu vcruntime knihoven.
 
-|Knihovna|Přidružené knihovny DLL|Vlastnosti|Možnost|Direktivy preprocesoru|
+|Knihovna|Associated DLL|Vlastnosti|Možnost|Direktivy preprocesoru|
 |-------------|--------------------|---------------------|------------|-----------------------------|
 |libvcruntime.lib|Žádné|Staticky propojené do kódu.|**/MT**|_MT|
 |libvcruntimed.lib|Žádné|Ladicí verze pro statické propojování. Redistributable.|**/MTd**|_MT, _DEBUG|
-|vcruntime.lib|vcruntime\<verze > .dll|Importovat knihovny DLL pro vcruntime.|**/ MD**|_MT, _DLL|
-|vcruntimed.lib|vcruntime\<version>d.dll|Importovat knihovny DLL pro ladění vcruntime. Redistributable.|**/ MDd**|_DEBUG, _MT, _DLL|
+|vcruntime.lib|vcruntime\<version>.dll|Importovat knihovny DLL pro vcruntime.|**/MD**|_MT, _DLL|
+|vcruntimed.lib|vcruntime\<version>d.dll|Importovat knihovny DLL pro ladění vcruntime. Redistributable.|**/MDd**|_DEBUG, _MT, _DLL|
 
 > [!NOTE]
 > Kdy UCRT refaktoring došlo k chybě, funkce modulu Runtime souběžnosti se přesunuly do concrt140.dll, která byla přidána do Distribuovatelný balíček C++. Tato knihovna DLL je požadovaná pro C++ paralelní kontejnery a algoritmy, jako `concurrency::parallel_for`. Kromě toho standardní knihovny C++ potřebuje tuto knihovnu DLL na Windows XP pro podporu synchronizace primitiv, protože Windows XP nemá podmínku proměnné.
@@ -66,8 +66,8 @@ Tato tabulka obsahuje seznam knihoven, které implementují CRT inicializace a u
 |-------------|---------------------|------------|-----------------------------|
 |libcmt.lib|Staticky odkazuje nativní spuštění CRT do kódu.|**/MT**|_MT|
 |libcmtd.lib|Staticky odkazuje ladicí verzi nativní spuštění CRT. Redistributable.|**/MTd**|_DEBUG, _MT|
-|msvcrt.lib|Statická knihovna pro nativní spuštění CRT pro použití s UCRT knihovny DLL a vcruntime.|**/ MD**|_MT, _DLL|
-|msvcrtd.lib|Statická knihovna pro nativní spuštění CRT pro použití s UCRT knihovny DLL a vcruntime ladicí verzi. Redistributable.|**/ MDd**|_DEBUG, _MT, _DLL|
+|msvcrt.lib|Statická knihovna pro nativní spuštění CRT pro použití s UCRT knihovny DLL a vcruntime.|**/MD**|_MT, _DLL|
+|msvcrtd.lib|Statická knihovna pro nativní spuštění CRT pro použití s UCRT knihovny DLL a vcruntime ladicí verzi. Redistributable.|**/MDd**|_DEBUG, _MT, _DLL|
 |msvcmrt.lib|Statické knihovny pro smíšená nativní a spravované CRT po spuštění pro použití s UCRT knihovny DLL a vcruntime.|**/ CLR**||
 |msvcmrtd.lib|Statické knihovny pro smíšená nativní a spravované CRT po spuštění pro použití s UCRT knihovny DLL a vcruntime ladicí verzi. Redistributable.|**/ CLR**||
 |msvcurt.lib|**Zastaralé** statickou knihovnu, čistě spravované CRT.|**/ CLR: pure**||
@@ -92,9 +92,9 @@ Tato verze CRT není plně splňující podmínky standardu C99. Konkrétně se 
 |Standardní knihovna C++|Vlastnosti|Možnost|Direktivy preprocesoru|
 |----------------------------|---------------------|------------|-----------------------------|
 |libcpmt.lib|S více vlákny, statické propojení|**/MT**|_MT|
-|msvcprt.lib|Odkaz s více vlákny, dynamické (Importovat knihovny pro MSVCP*verze*.dll)|**/ MD**|_MT, _DLL|
+|msvcprt.lib|Odkaz s více vlákny, dynamické (Importovat knihovny pro MSVCP*verze*.dll)|**/MD**|_MT, _DLL|
 |libcpmtd.lib|S více vlákny, statické propojení|**/MTd**|_DEBUG, _MT|
-|msvcprtd.lib|Odkaz s více vlákny, dynamické (Importovat knihovny pro MSVCP*verze*D.DLL)|**/ MDd**|_DEBUG, _MT, _DLL|
+|msvcprtd.lib|Odkaz s více vlákny, dynamické (Importovat knihovny pro MSVCP*verze*D.DLL)|**/MDd**|_DEBUG, _MT, _DLL|
 
 Při sestavování projektu verzi jednu základní knihovny jazyka C za běhu (libcmt.lib, msvcmrt.lib, msvcrt.lib) je propojený ve výchozím nastavení, v závislosti na možnosti kompilátoru zvolíte (s více vlákny, knihovny DLL, / CLR). Zadáte-li jeden z [souborech hlaviček standardní knihovny C++](../standard-library/cpp-standard-library-header-files.md) ve vašem kódu, standardní knihovna C++ se propojí v automaticky Visual c++ v době kompilace. Příklad:
 

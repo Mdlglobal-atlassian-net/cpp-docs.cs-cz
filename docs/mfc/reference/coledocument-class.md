@@ -52,12 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-ms.openlocfilehash: 7f36557a4a993e8abd3004dc59372cc5a089e044
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d1922c2f2d804c2a93d30dc0708b2d3ae037414d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259747"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768702"
 ---
 # <a name="coledocument-class"></a>Coledocument – třída
 
@@ -73,13 +73,13 @@ class COleDocument : public CDocument
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleDocument::COleDocument](#coledocument)|Vytvoří `COleDocument` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleDocument::AddItem](#additem)|Přidá položku do seznamu položek udržuje dokumentu.|
 |[COleDocument::ApplyPrintDevice](#applyprintdevice)|Nastaví tiskové cílovému zařízení pro všechny klientské položky v dokumentu.|
@@ -544,7 +544,7 @@ To umožňuje rozhraní pro výzvu uživateli uložit dokument před jeho zavře
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC KONTEJNERU](../../visual-cpp-samples.md)<br/>
-[Ukázky knihovny MFC MFCBIND](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC KONTEJNERU](../../overview/visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC MFCBIND](../../overview/visual-cpp-samples.md)<br/>
 [CDocument – třída](../../mfc/reference/cdocument-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
