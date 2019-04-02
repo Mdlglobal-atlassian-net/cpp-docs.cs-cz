@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: 268a46e1bdecc1ea468c152fd0ed480873c36591
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6d3bbafa15ada97f53710f0faf6a18ea8e892f6c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260384"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771308"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager Class
 
@@ -181,7 +181,7 @@ class CDockingManager : public CObject
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDockingManager::AddDockSite](#adddocksite)|Vytvoří dock podokno a přidá ji do seznamu Ovládací panely.|
 |[CDockingManager::AddHiddenMDITabbedBar](#addhiddenmditabbedbar)|Přidá na panel popisovač podokno do seznamu skrytých panelu podokna s kartami MDI.|
@@ -258,7 +258,7 @@ class CDockingManager : public CObject
 
 ### <a name="data-members"></a>Datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDockingManager::m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)|Určuje, zda dokovací správce skryje podokna v režimu kontejneru OLE.|
 |[CDockingManager::m_dockModeGlobal](#m_dockmodeglobal)|Určuje režim globální ukotvení.|
@@ -292,7 +292,7 @@ Použijte následující tipy k `CDockingManager` objekty:
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít různé metody v `CDockingManager` třída ke konfiguraci `CDockingManager` objektu. Příklad ukazuje, jak zobrazit další tlačítka, které otevře místní nabídku na popisky všechny ukotvitelných podoken a jak nastavit dokovací režim objektu. Tento fragment kódu je součástí [Visual Studio demonstrační ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak použít různé metody v `CDockingManager` třída ke konfiguraci `CDockingManager` objektu. Příklad ukazuje, jak zobrazit další tlačítka, které otevře místní nabídku na popisky všechny ukotvitelných podoken a jak nastavit dokovací režim objektu. Tento fragment kódu je součástí [Visual Studio demonstrační ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#24](../../mfc/codesnippet/cpp/cdockingmanager-class_1.cpp)]
 

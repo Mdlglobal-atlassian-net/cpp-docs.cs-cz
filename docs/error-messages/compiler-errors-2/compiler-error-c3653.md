@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3653
 ms.assetid: 316549d7-f7ef-4578-a2ba-57adc8aac527
-ms.openlocfilehash: d7936303dab4fbb273a01f98def5b9af99f89dac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75e2c061190b24019491db7a625ecafb5ac82b6b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477620"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776645"
 ---
 # <a name="compiler-error-c3653"></a>Chyba kompilátoru C3653
 
 'function': nelze použít jako pojmenované přepsání: přepisovaná funkce se nebyl nalezen; Nezapomněli jste funkci pojmenovat explicitně, použití:: operator?
 
-Explicitní přepsání zadaná funkce, která nebyla nalezena v libovolném rozhraní. Další informace najdete v tématu [explicitní přepsání](../../windows/explicit-overrides-cpp-component-extensions.md).
+Explicitní přepsání zadaná funkce, která nebyla nalezena v libovolném rozhraní. Další informace najdete v tématu [explicitní přepsání](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 Následující ukázka generuje C3653:
 

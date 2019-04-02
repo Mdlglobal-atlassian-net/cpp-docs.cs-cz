@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: cab7aef6fab025174dedb0bf75ee43c49ead0d88
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 85e469e1f52a22917580ce8616aaba5ff57d08ed
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740386"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768026"
 ---
 # <a name="cpoint-class"></a>Cpoint – třída
 
@@ -38,13 +38,13 @@ class CPoint : public tagPOINT
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CPoint::Offset](#offset)|Přidá hodnoty `x` a `y` členy `CPoint`.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CPoint::operator-](#operator_-)|Vrátí rozdíl `CPoint` a velikost nebo negace bod nebo rozdíl velikosti mezi dvěma body nebo offset zápornou velikostí.|
 |[CPoint::operator! =](#operator_neq)|Kontroly pro nerovnost mezi dvěma body.|
@@ -342,7 +342,7 @@ Operátor unární negate bod. Například použití s bodem unární operátor 
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC MDI](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC MDI](../../overview/visual-cpp-samples.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [POINT – struktura](/windows/desktop/api/windef/ns-windef-tagpoint)<br/>
 [CRect – třída](../../atl-mfc-shared/reference/crect-class.md)<br/>
