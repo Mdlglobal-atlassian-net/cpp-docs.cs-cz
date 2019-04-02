@@ -78,12 +78,12 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], SetPaletteID
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
-ms.openlocfilehash: aa2996cba7d4839387d5801d2bab70b428134db4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 818ce55e44d91520e568308a1a1e8a1fa0c8658d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298630"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780389"
 ---
 # <a name="cmfcribbongallery-class"></a>Cmfcribbongallery – třída
 
@@ -145,7 +145,7 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCRibbonGallery::OnDrawPaletteIcon](#ondrawpaletteicon)|Volá se rozhraním při vykreslení ikonu galerie.|
 
@@ -155,7 +155,7 @@ Tlačítko Galerie se chová stejně jako regulární nabídky tlačítka s tím
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít různé metody v `CMFCRibbonGallery` třída ke konfiguraci `CMFCRibbonGallery` objektu. Tento příklad ukazuje, jak určit počet položek na řádek v galerii, povolit změnu velikosti panelu nabídky, povolit bočním panelu vlevo od rozbalovací nabídky a Galerie pásu karet se zobrazí jako barevnou paletu přímo na panelu pásu karet. Tento fragment kódu je součástí [nakreslit Client sample](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak použít různé metody v `CMFCRibbonGallery` třída ke konfiguraci `CMFCRibbonGallery` objektu. Tento příklad ukazuje, jak určit počet položek na řádek v galerii, povolit změnu velikosti panelu nabídky, povolit bočním panelu vlevo od rozbalovací nabídky a Galerie pásu karet se zobrazí jako barevnou paletu přímo na panelu pásu karet. Tento fragment kódu je součástí [nakreslit Client sample](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#6](../../mfc/reference/codesnippet/cpp/cmfcribbongallery-class_1.cpp)]
 

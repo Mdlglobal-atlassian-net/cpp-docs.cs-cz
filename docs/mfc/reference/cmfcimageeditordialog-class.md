@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCImageEditorDialog [MFC], CMFCImageEditorDialog
 ms.assetid: 6a7d08f3-1ec2-4062-9b79-a0c2776b58d1
-ms.openlocfilehash: 57b1df49616967841a433a36a504beed0b900cde
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 97f16fa00b2e90fd9c43bf9b6792b4eafe7d7b88
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278532"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780442"
 ---
 # <a name="cmfcimageeditordialog-class"></a>CMFCImageEditorDialog Class
 
@@ -99,7 +99,7 @@ Chcete-li upravit obrázek, předejte ukazatel image na `CMFCImageEditorDialog` 
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vytvořit objekt `CMFCImageEditorDialog` třídy. V tomto příkladu je součástí [nové ovládací prvky ukázka](../../visual-cpp-samples.md).
+Následující příklad ukazuje, jak vytvořit objekt `CMFCImageEditorDialog` třídy. V tomto příkladu je součástí [nové ovládací prvky ukázka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#8](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_1.cpp)]
 [!code-cpp[NVC_MFC_NewControls#40](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_2.cpp)]

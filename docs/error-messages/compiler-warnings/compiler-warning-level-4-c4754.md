@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-ms.openlocfilehash: 82036017188acc3f882e9751096af8ab268fd9db
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 203f2b97547c7ff8b1d68e3640e62d531b2600e9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525168"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780350"
 ---
 # <a name="compiler-warning-level-4-c4754"></a>Kompilátor upozornění (úroveň 4) C4754
 
@@ -19,7 +19,7 @@ Pravidla převodu pro aritmetické operace v porovnání se rozumí, že jednu v
 
 Objeví se upozornění C4754, protože výsledkem porovnání je vždy stejný. To znamená, že jeden z větve podmínka není nikdy proveden, pravděpodobně protože přidružené celočíselný výraz není správná. Tato vada kódu často dochází v kontroly přetečení celých nesprávné na 64bitové architektury.
 
-Pravidla převodu celého čísla jsou komplexní a existuje mnoho drobným nástrahy. Jako alternativu k opravě každý C4754 upozornění, můžete aktualizovat kód, který použije [SafeInt – knihovna](../../windows/safeint-library.md).
+Pravidla převodu celého čísla jsou komplexní a existuje mnoho drobným nástrahy. Jako alternativu k opravě každý C4754 upozornění, můžete aktualizovat kód, který použije [SafeInt – knihovna](../../safeint/safeint-library.md).
 
 ## <a name="example"></a>Příklad
 

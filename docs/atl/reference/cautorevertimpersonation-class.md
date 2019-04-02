@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoRevertImpersonation class
 ms.assetid: 43732849-1940-4bd4-9d52-7a5698bb8838
-ms.openlocfilehash: c8ab7fed8f1560054eb023cbd4e47c43c4c6f0cc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 78488fba080e397b06eb67ebe8039fb3e8d5e035
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299098"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779375"
 ---
 # <a name="cautorevertimpersonation-class"></a>Cautorevertimpersonation – třída
 
@@ -32,14 +32,14 @@ class CAutoRevertImpersonation
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAutoRevertImpersonation::CAutoRevertImpersonation](#cautorevertimpersonation)|Vytvoří `CAutoRevertImpersonation` objektu|
 |[CAutoRevertImpersonation::~CAutoRevertImpersonation](#dtor)|Odstraní objekt a vrátí token zosobnění přístup.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAutoRevertImpersonation::Attach](#attach)|Automatizuje k zosobnění obnovení tokenu přístupu.|
 |[CAutoRevertImpersonation::Detach](#detach)|Zruší k obnovení automatické zosobnění.|
@@ -137,6 +137,6 @@ Pokud tato metoda je volána pro účely, které patří k obnovení zosobnění
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázka ATLSecurity](../../visual-cpp-samples.md)<br/>
+[Ukázka ATLSecurity](../../overview/visual-cpp-samples.md)<br/>
 [Přístupové tokeny](/windows/desktop/SecAuthZ/access-tokens)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)
