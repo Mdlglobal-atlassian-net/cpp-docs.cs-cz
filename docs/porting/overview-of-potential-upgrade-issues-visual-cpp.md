@@ -2,12 +2,12 @@
 title: Přehled potenciálních problémů s upgradem (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: 16918a70d4ce56a7415c3a807485e72c085d1194
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 1dac6ad201656dc83428aa5182a59cb8ff824651
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58775034"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898827"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Přehled potenciálních problémů s upgradem (Visual C++)
 
@@ -111,7 +111,7 @@ Například `/Zc:forScope` přepínače byla zavedena v rané fázi historie MSV
 
 Jedním z příkladů běžné chyby kompilátoru, které se můžete setkat při upgradu je při nekonstantní argument je předán parametr const. Starší verze kompilátoru není vždy příznakem to za chybu. Další informace najdete v tématu [přísnější převody kompilátoru](porting-guide-spy-increment.md#stricter_conversions).
 
-Další informace o konkrétní vylepšení naleznete v tématu [změn Visual C++ 2003 – 2015 historie](visual-cpp-change-history-2003-2015.md) a [vylepšení shody C++ v sadě Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md).
+Další informace o konkrétní vylepšení naleznete v tématu [změn Visual C++ 2003 – 2015 historie](visual-cpp-change-history-2003-2015.md) a [vylepšení shody C++ v sadě Visual Studio](../overview/cpp-conformance-improvements.md).
 
 ## <a name="errors-involving-stdinth-integral-types"></a>Chyby zahrnující \<stdint.h > celočíselných typů
 
@@ -127,7 +127,7 @@ Stisknutím klávesy **F12** (**přejít k definici**) zobrazíte, kde je defino
 
 Mnoho změny byly provedeny na modul runtime jazyka C v průběhu let. Byly přidány bezpečné verze funkcí a některé byly odebrány. Také jak je popsáno výše v tomto článku, výlučně implementace Microsoftu CRT se teď vyčleněný v sadě Visual Studio 2015 do nové binární soubory a soubory .lib přidružené.
 
-Pokud k chybě zahrnuje funkce CRT, Hledat [změn Visual C++ 2003 – 2015 historie](visual-cpp-change-history-2003-2015.md) nebo [vylepšení shody C++ v sadě Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md) zobrazíte, pokud tato témata obsahují jakékoli další informace. Pokud je chyba LNK2019 nevyřešené externí, zkontrolujte, zda že funkce nebyla odebrána. Jinak, pokud jste si jistí, že stále existuje funkce a volající kód je správný, zkontrolujte, zda váš projekt používá `/NODEFAULTLIB`. V takovém případě musíte aktualizovat seznam knihoven tak, aby projekt využívá nový univerzální knihovny (UCRT). Knihovny a závislosti pro další informace najdete v části výše.
+Pokud k chybě zahrnuje funkce CRT, Hledat [změn Visual C++ 2003 – 2015 historie](visual-cpp-change-history-2003-2015.md) nebo [vylepšení shody C++ v sadě Visual Studio](../overview/cpp-conformance-improvements.md) zobrazíte, pokud tato témata obsahují jakékoli další informace. Pokud je chyba LNK2019 nevyřešené externí, zkontrolujte, zda že funkce nebyla odebrána. Jinak, pokud jste si jistí, že stále existuje funkce a volající kód je správný, zkontrolujte, zda váš projekt používá `/NODEFAULTLIB`. V takovém případě musíte aktualizovat seznam knihoven tak, aby projekt využívá nový univerzální knihovny (UCRT). Knihovny a závislosti pro další informace najdete v části výše.
 
 Pokud chyba zahrnuje `printf` nebo `scanf`, ujistěte se, že jste nejsou definování soukromě buď funkce bez zahrnutí stdio.h. Pokud ano, buď odeberte privátní definice, nebo odkaz na starší verzi\_stdio\_definitions.lib. Tento parametr můžete nastavit **stránky vlastností** dialogového okna v části **vlastnosti konfigurace** > **Linkeru** > **vstup**v **Další závislosti** vlastnost. Pokud se propojení s Windows SDK 8.1 nebo starší, přidejte starší verze\_stdio\_definitions.lib.
 
@@ -161,7 +161,7 @@ Další informace najdete v tématu [aktualizuje cílovou verzi Windows](porting
 
 ## <a name="atl--mfc"></a>ATL / MFC
 
-ATL a MFC jsou poměrně stabilní rozhraní API, ale v některých změn. Najdete v článku [změn Visual C++ 2003 – 2015 historie](visual-cpp-change-history-2003-2015.md) Další informace a [co je nového v jazyce Visual c++ v sadě Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) a [vylepšení shody C++ v sadě Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md).
+ATL a MFC jsou poměrně stabilní rozhraní API, ale v některých změn. Najdete v článku [změn Visual C++ 2003 – 2015 historie](visual-cpp-change-history-2003-2015.md) Další informace a [co je nového v jazyce Visual c++ v sadě Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) a [vylepšení shody C++ v sadě Visual Studio](../overview/cpp-conformance-improvements.md).
 
 ### <a name="lnk-2005-dllmain12-already-defined-in-msvcrtdlib"></a>LNK 2005 _DllMain@12 již definována v MSVCRTD.lib
 
@@ -181,5 +181,5 @@ Další informace najdete v tématu [Portování ze znakové sady MBCS do kódu 
 
 ## <a name="see-also"></a>Viz také:
 
-[Upgrade projektů z dřívějších verzí Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
-[Vylepšení shody C++ se sadou Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md)
+[Upgradování projektů z dřívějších verzí aplikace Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Vylepšení shody C++ v sadě Visual Studio](../overview/cpp-conformance-improvements.md)

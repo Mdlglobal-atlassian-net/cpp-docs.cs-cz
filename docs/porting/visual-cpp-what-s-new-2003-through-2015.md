@@ -2,19 +2,19 @@
 title: Visual C++ co&#39;s novou 2003 – 2015
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: e2a785871d85ce742bee7b78586756cced38986e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: ae21a81869bd68c5a2641dba47b89d7e10b67567
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58768676"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898853"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ co&#39;s novou 2003 – 2015
 
 Tato stránka obsahuje všechny "Novinky" stránky pro všechny verze sady Visual C++ ze sady Visual Studio 2015 zpět do 2003. Tyto informace jsou poskytovány v zájmu usnadnění práce v případě, že může být užitečné při upgradu ze starší verze jazyka Visual C++.
 
 > [!NOTE]
-> Informace o sadě Visual Studio 2017 najdete v tématu [co je nového v aplikaci Visual C++ v sadě Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) a [vylepšení v aplikaci Visual C++ v sadě Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md).
+> Informace o aktuální verzi sady Visual Studio najdete v tématu [co je nového v aplikaci Visual C++ v sadě Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) a [vylepšení v aplikaci Visual C++ v sadě Visual Studio](../overview/cpp-conformance-improvements.md).
 
 ## <a name="whats-new-for-c-in-visual-studio-2015"></a>Co je nového v C++ v sadě Visual Studio 2015
 
@@ -1104,7 +1104,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     };
    ```
 
-- `volatile` **Členské proměnné zabránit implicitně definované konstruktory a operátory přiřazení** třídu, která má povolené předchozí verze kompilátoru **volatile** kopírovat nebo přesunout členské proměnné mají výchozí konstruktory a Výchozí kopírování/operátory přiřazení pro přesunutí automaticky generovány. Toto chování staré bylo nesprávné a není v souladu s standardu jazyka C++. Kompilátor nyní brány v úvahu třídu, která má volatile členské proměnné nejsou v netriviálních konstrukce a operátory přiřazení, který brání automatickému generování výchozí implementace těchto operátorů. Pokud takové třídy je člen sjednocení (nebo anonymní sjednocení uvnitř třídy), zkopírovat nebo přesunout konstruktory a operátory přiřazení kopie nebo přesunout sjednocení (nebo třídy obsahující unonymous sjednocení) bude možné implicitně definovaný jako odstraněný. Pokus o vytvoření nebo zkopírujte sjednocení (nebo třídu obsahující anonymní sjednocení) bez nutnosti explicitně definovat jejich je chyba a Chyba kompilátoru problémy kompilátoru C2280 ve výsledku.
+- `volatile` ***Členské proměnné zabránit implicitně definované konstruktory a operátory přiřazení** třídu, která má povolené předchozí verze kompilátoru **volatile** kopírovat nebo přesunout členské proměnné mají výchozí konstruktory a Výchozí kopírování/operátory přiřazení pro přesunutí automaticky generovány.TToto chování staré bylo nesprávné a není v souladu s standardu jazyka C++.TKompilátor nyní brány v úvahu třídu, která má volatile členské proměnné nejsou v netriviálních konstrukce a operátory přiřazení, který brání automatickému generování výchozí implementace těchto operátorů.WPokud takové třídy je člen sjednocení (nebo anonymní sjednocení uvnitř třídy), zkopírovat nebo přesunout konstruktory a operátory přiřazení kopie nebo přesunout sjednocení (nebo třídy obsahující unonymous sjednocení) bude možné implicitně definovaný jako odstraněný.APokus o vytvoření nebo zkopírujte sjednocení (nebo třídu obsahující anonymní sjednocení) bez nutnosti explicitně definovat jejich je chyba a Chyba kompilátoru problémy kompilátoru C2280 ve výsledku.
 
    ```Output
     error C2280: 'B::B(const B &)': attempting to reference a deleted function
@@ -1733,7 +1733,7 @@ Kromě **paralelní úlohy** okno a **paralelní zásobníky** okně Visual Stud
 
 **C + +/ CLI IntelliSense.** C + +/ CLI nyní obsahuje plnou podporu technologie IntelliSense. Funkce technologie IntelliSense, jako je rychlé informace, parametr nápovědy, seznam členů a automatické dokončování prováděna pro C + +/ CLI. Kromě toho další technologie IntelliSense a prostředí IDE vylepšení uvedených v tomto dokumentu fungovat i pro C + +/ CLI.
 
-**Richer IntelliSense Tooltips.** Popisky rychlé informace technologie IntelliSense jazyka C++ nyní zobrazit informace o stylu bohatší dokumentační komentáře XML. Pokud používáte rozhraní API z knihovny – například C++ AMP –, který se dokumentační komentáře XML a popisu tlačítka technologie IntelliSense zobrazí další informace než jenom deklarace. Také pokud váš kód obsahuje komentáře dokumentace XML, popisy technologie IntelliSense se zobrazí podrobnější informace.
+**Podrobnější popisy technologie IntelliSense.** Popisky rychlé informace technologie IntelliSense jazyka C++ nyní zobrazit informace o stylu bohatší dokumentační komentáře XML. Pokud používáte rozhraní API z knihovny – například C++ AMP –, který se dokumentační komentáře XML a popisu tlačítka technologie IntelliSense zobrazí další informace než jenom deklarace. Také pokud váš kód obsahuje komentáře dokumentace XML, popisy technologie IntelliSense se zobrazí podrobnější informace.
 
 **Konstrukce kódu jazyka C++.** Kostru kód je k dispozici pro přepínač, if-else, smyčky a další základní konstrukcí, v rozevíracím seznamu pro seznam členů. Vyberte část kódu, ze seznamu a vložit ho do svého kódu a potom vyplňte požadované logiku. Můžete také vytvořit vlastní vlastní části kódu pro použití v editoru.
 
@@ -1785,7 +1785,7 @@ Pokrytí kódu je aktualizovaná na dynamicky instrumentace binárních souborů
 
 **Odkazy rvalue.** Deklarátor odkazu r-hodnoty (& &) deklaruje odkaz na r-hodnoty. Rvalue reference vám umožňuje používat přesunutí sémantiky a dokonalé předávání k tvorbě efektivnější konstruktory, funkcí a šablony.
 
-**static_assert Declaration.** A **static_assert** deklarace testuje výraz softwaru v době kompilace, na rozdíl od jiných kontrolní výraz mechanismů, které testují v době běhu. Pokud výraz se nezdaří, kompilace se nezdaří a vydává zadanou chybovou zprávou.
+**static_assert deklarace.** A **static_assert** deklarace testuje výraz softwaru v době kompilace, na rozdíl od jiných kontrolní výraz mechanismů, které testují v době běhu. Pokud výraz se nezdaří, kompilace se nezdaří a vydává zadanou chybovou zprávou.
 
 **klíčová slova nullptr a __nullptr.** Kompilátor Visual C++ vám umožní používat **nullptr** – klíčové slovo nativního kódu nebo spravovaného kódu. **Nullptr** – klíčové slovo určuje, že popisovač objektu, vnitřní ukazatel nebo typ nativní ukazatel neukazuje na objekt. Kompilátor interpretuje **nullptr** být při použití spravovaného kódu `/clr` – možnost kompilátoru a nativní kód, když použijete `/clr` možnost.
 Specifické pro Microsoft **__nullptr** – klíčové slovo má stejný význam jako **nullptr**, ale se vztahuje pouze na nativní kód. Pokud kompilujete pomocí nativního kódu C/C++ `/clr` – možnost kompilátoru, kompilátor nemůže určit, jestli **nullptr** – klíčové slovo je nativní nebo spravovaný termín. Aby váš záměr vymazat pro kompilátor pomocí klíčového slova nullptr můžete zadat jako spravované a **__nullptr** k určení nativní termínu.
@@ -1858,7 +1858,7 @@ MFC teď podporuje animace a grafické rozhraní Direct2D. Knihovna MFC má něk
 
 ### <a name="ide"></a>IDE – integrované vývojové prostředí
 
-**Vylepšená technologie IntelliSense.** Rychlejší, přesnější a schopna zpracovávat větší projektů byl zcela přepracován technologie IntelliSense jazyka Visual C++. K dosažení toto vylepšení integrovaného vývojového prostředí rozlišuje mezi jak vývojář, zobrazení a upraví zdrojový kód a použití zdrojový kód a projekt nastavení rozhraní IDE k vytvoření řešení.
+**Vylepšená technologie IntelliSense** Rychlejší, přesnější a schopna zpracovávat větší projektů byl zcela přepracován technologie IntelliSense jazyka Visual C++. K dosažení toto vylepšení integrovaného vývojového prostředí rozlišuje mezi jak vývojář, zobrazení a upraví zdrojový kód a použití zdrojový kód a projekt nastavení rozhraní IDE k vytvoření řešení.
 Z důvodu tohoto oddělení povinností, procházení funkce **zobrazení tříd** a nové **přejít na** dialogové okno jsou zpracovány systémem, který je založen na nový Server SQL database klasické pracovní plochy (SDF) souboru, který nahradí původní soubor Procházet (.ncb) bez kompilace. Funkce technologie IntelliSense, jako je rychlé informace, automatické dokončování a parametr pomůžou analyzovat jednotky překladu pouze v případě potřeby. Funkcích pro hybridní nasazení jako je například nový **hierarchie volání** okno použijte kombinaci funkcí IntelliSense a procházení.
 Vzhledem k tomu, že IntelliSense zpracovává pouze informace, které budete potřebovat v okamžiku, rozhraní IDE je rychlejší reakce. Protože jsou více aktuální informace, integrované vývojové prostředí zobrazení a windows jsou také přesnější. Protože integrovaného vývojového prostředí infrastruktury je lépe uspořádat, více možností a větší škálovatelnost, je zpracovat větší projekty.
 
@@ -2059,9 +2059,9 @@ Rozbíjející změny v této verzi má kompilátor.
 - __CLR_VER přidat předdefinované makro.
 - Pragmatu komentáře (C/C++) nyní přijímá `/MANIFESTDEPENDENCY` jako komentář linkeru. Možnost exestr komentář je nyní zastaralá.
 - `embedded_idl` atribut ( `#import` – direktiva) nyní přijímá volitelný parametr.
-- `fenv_access` Direktiva pragma
-- `float_control` Direktiva pragma
-- `fp_contract` Direktiva pragma
+- `fenv_access` pragma
+- `float_control` pragma
+- `fp_contract` pragma
 - Globální proměnné nelze inicializovat v pořadí, ve kterém jsou deklarovány, pokud máte v direktivy pragma managed, spravované a nespravované části globální proměnné. To je potenciální rozbíjející změny, pokud například nespravované globální proměnná je inicializována s spravované globální proměnné a na úplně konstruovaný objekt spravovaný je povinný.
 - Zadaný init_seg – oddíly jsou nyní jen pro čtení a není pro čtení a zápis stejně jako v předchozích verzích.
 - inline_depth výchozí hodnota je nyní 16. Výchozí hodnota je 16 byl také v platnosti v jazyce Visual C++ .NET 2003.
@@ -2069,7 +2069,7 @@ Rozbíjející změny v této verzi má kompilátor.
 - _M_CEE _M_CEE_PURE a _M_CEE_SAFE předdefinovaná makra přidali, najdete v článku předdefinovaná makra.
 - _M_IX86_FP přidat předdefinované makro.
 - _M_X64 přidat předdefinované makro.
-- `make_public` Direktiva pragma
+- `make_public` pragma
 - `managed`, `unmanaged` aktualizovat syntaxe direktivy pragma (má teď `push` a `pop`)
 - soubor mscorlib.dll je nyní implicitně odkazováno `#using` direktiv ve všech `/clr` kompilace.
 - _OPENMP přidat předdefinované makro.
@@ -2235,4 +2235,4 @@ Na. SAFESEH – direktiva a `/safeseh` ml.exe možnost byly přidány.
 
 ## <a name="see-also"></a>Viz také:
 
-[Průvodce přenosem a upgradem Visual C++](visual-cpp-porting-and-upgrading-guide.md)
+[Průvodce přenosem a upgradováním Visual C++](visual-cpp-porting-and-upgrading-guide.md)

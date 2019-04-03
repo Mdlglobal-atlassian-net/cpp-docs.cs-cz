@@ -9,12 +9,12 @@ helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-ms.openlocfilehash: b9e94f131448cb9be6c31962ecd19607ceb1b708
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 5f990181fd1e606cf9d7dd33242752bed33aa456
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58776034"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898749"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase-(zakázání dvoufázového vyhledávání názvů)
 
@@ -158,7 +158,7 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 
 V části **/Zc:twoPhase-** a ve starších kompilátory, kompilátor vyžaduje pouze `template` – klíčové slovo na řádku 2. Ve výchozím nastavení a režim přizpůsobení, kompilátor nyní také vyžaduje `template` – klíčové slovo na řádku 4, která označuje, že `T::X<T>` je šablona. Vyhledejte kód, který neobsahuje toto klíčové slovo a zadat ho tak, aby váš kód se řídí standardem.
 
-Další informace o problémech přizpůsobení najdete v tématu [vylepšení shody C++ v sadě Visual Studio](../../overview/cpp-conformance-improvements-2017.md) a [nestandardní chování](../../cpp/nonstandard-behavior.md).
+Další informace o problémech přizpůsobení najdete v tématu [vylepšení shody C++ v sadě Visual Studio](../../overview/cpp-conformance-improvements.md) a [nestandardní chování](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 

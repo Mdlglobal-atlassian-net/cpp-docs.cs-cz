@@ -4,18 +4,18 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 9be4db9e0f7c50054dc6e6ca498b1c9d49715a8d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: b381a2b7cc9a4ad4749f382838bdec5872a3decf
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58775410"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898879"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>2003 – 2015 historie změn Visual C++
 
 Tento článek popisuje zásadní změny z Visual Studia 2015, když se vrátíme k Visual Studio 2003 a v tomto článku podmínky "nové chování" nebo "teď" odkazovat do sady Visual Studio 2015 a novější. Podmínky "staré chování" a "před" odkazovat na Visual Studio 2013 a dřívějších verzích.
 
-Informace o sadě Visual Studio 2017 najdete v tématu [co je nového v aplikaci Visual C++ v sadě Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) a [vylepšení v aplikaci Visual C++ v sadě Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md).
+Informace o nejnovější verzi sady Visual Studio najdete v tématu [co je nového v aplikaci Visual C++ v sadě Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) a [vylepšení v aplikaci Visual C++ v sadě Visual Studio](../overview/cpp-conformance-improvements.md).
 
 > [!NOTE]
 > Neexistují žádná binární rozbíjející změny mezi Visual Studio 2015 a Visual Studio 2017.
@@ -62,7 +62,7 @@ Kromě toho probíhající vylepšení shoda s kompilátorem prostředí můžet
 
    Pro vyřešení chyb, zahrnují \<cmath > Chcete-li získat deklarace funkce, které byly odebrány z \<math.h >. Tyto funkce se přesunuly:
 
-  - `double abs(double)` a `float abs(float)`
+  - `double abs(double)` and `float abs(float)`
 
   - `double pow(double, int)`, `float pow(float, float)`, `float pow(float, int)`, `long double pow(long double, long double)`, `long double pow(long double, int)`
 
@@ -285,7 +285,7 @@ Kromě toho probíhající vylepšení shoda s kompilátorem prostředí můžet
 
    V sadě Visual Studio 2013 byl opraven problém v **_stat** řadu funkcí, ale s podobnými problémy v **fstat –** a **_utime** nebyly oprava rodinách funkcí. Tato částečná oprava vedlo k problémům kvůli nekonzistencí mezi funkcemi. **Fstat –** a **_utime** rodinách funkcí teď jsme opravili, takže všechny tyto funkce nyní zpracovávají letní čas správnou a konzistentní.
 
-- **asctime**
+- **asctime –**
 
    V předchozích verzích [asctime –](../c-runtime-library/reference/asctime-wasctime.md) funkce by vyplnění řádu dnů s počáteční nulou, například: `Fri Jun 06 08:00:00 2014`. Specifikace vyžaduje, aby těchto dnů bude doplněn s přední místa, stejně jako v `Fri Jun  6 08:00:00 2014`. Tento problém byl opraven.
 
@@ -387,7 +387,7 @@ Pokud byte chtěli povolit nové optimalizace a kontroly ladění, implementace 
 
 ####  <a name="BK_MFC"></a> Knihovna MFC a ATL
 
-- **Knihovna MFC (Microsoft Foundation Classes)**
+- **Microsoft Foundation Classes (MFC)**
 
    je již součástí "Typické" instalací sady Visual Studio z důvodu jeho velikost. Chcete-li nainstalovat knihovny MFC, zvolte **vlastní** možnost instalace v instalačním programu sady Visual Studio 2015. Pokud už máte nainstalovanou sadu Visual Studio 2015, můžete nainstalovat MFC spuštěním **sady Visual Studio** znovu instalační program. Zvolte **vlastní** možnost instalace a klikněte na tlačítko **Microsoft Foundation Classes**. Můžete spustit **sady Visual Studio** nastavení z **ovládací panely** ovládací prvek **programy a funkce**, nebo z instalačního média.
 
@@ -443,7 +443,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     }
     ```
 
-- `/Zg` – možnost kompilátoru
+- `/Zg` možnost kompilátoru
 
    `/Zg` – Možnost kompilátoru (Generovat prototypy funkcí) už nejsou k dispozici. Tato možnost kompilátoru dříve byla zrušena.
 

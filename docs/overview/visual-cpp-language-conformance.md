@@ -5,18 +5,18 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 151ffecc0a9497d84b23a631477827ed2e86711a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 69591186550a915edb49889617740e454817f154
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786792"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898801"
 ---
 # <a name="visual-c-language-conformance"></a>Shoda jazyka Visual C++
 
 Toto téma shrnuje ISO C ++ 03, C ++ 11, C ++ 14, C ++ 17 a koncept C ++ 20 jazyk shoda se standardy funkce kompilátoru a standardní knihovna funkcí pro kompilátor jazyka C++ v sadě Visual Studio 2017 a dřívějších verzích. Každý kompilátor a standardní knihovny funkce název odkazy na standardu ISO C++ papíru návrh, který popisuje funkci, pokud je k dispozici v době publikace. Podporované sloupec uvádí verze sady Visual Studio, ve které podporují, pro funkci se poprvé objevil.
 
-Podrobnosti o vylepšení a jiné změny v sadě Visual Studio 2017 najdete v tématu [vylepšení shody C++ v sadě Visual Studio 2017](cpp-conformance-improvements-2017.md) a [co je nového v jazyce Visual c++ v sadě Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md). Změny přizpůsobení v dřívějších verzích, najdete v části [historie změn Visual C++](../porting/visual-cpp-change-history-2003-2015.md) a [Visual C++ co na nový 2003 – 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md). Aktuální novinky od týmu, C++, přejděte [blogu týmu Visual C++](https://blogs.msdn.microsoft.com/vcblog/).
+Podrobnosti o vylepšení a jiné změny v sadě Visual Studio 2017 najdete v tématu [vylepšení shody C++ v sadě Visual Studio 2017](cpp-conformance-improvements.md) a [co je nového v jazyce Visual c++ v sadě Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md). Změny přizpůsobení v dřívějších verzích, najdete v části [historie změn Visual C++](../porting/visual-cpp-change-history-2003-2015.md) a [Visual C++ co na nový 2003 – 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md). Aktuální novinky od týmu, C++, přejděte [blogu týmu Visual C++](https://blogs.msdn.microsoft.com/vcblog/).
 
 > [!NOTE]
 > Neexistují žádná binární rozbíjející změny mezi Visual Studio 2015 a Visual Studio 2017.
@@ -25,13 +25,13 @@ Podrobnosti o vylepšení a jiné změny v sadě Visual Studio 2017 najdete v t�
 
 |Oblast funkcí| |
 |----|---|
-|__C ++ 03/11 základní funkce jazyka__|__Podporuje se__|
+|__C ++ 03/11 základní funkce jazyka__|__Podporováno__|
 |&nbsp;&nbsp;Všechno ostatní|VS 2015 <sup>[A](#note_A)</sup>|
 |&nbsp;&nbsp;Dvoufázové vyhledávání názvů|VS 2017 15.7 <sup>[B](#note_B)</sup>|
 |&nbsp;&nbsp;[N2634 Expression SFINAE](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2634.html)|VS 2017 15.7|
 |&nbsp;&nbsp;[Preprocesor C99 N1653](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1653.htm)|Partial <sup>[D](#note_D)</sup>|
 |&nbsp;&nbsp;[N1988 rozšířené celočíselné typy](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2006/n1988.pdf)|NENÍ K DISPOZICI <sup> [E](#note_E)</sup>|
-|__C ++ 14 základní funkce jazyka__|__Podporuje se__|
+|__C ++ 14 základní funkce jazyka__|__Podporováno__|
 |&nbsp;&nbsp;[N3323 Tweaked formulace pro kontextové převody](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3323.pdf)|VS 2013|
 |&nbsp;&nbsp;[N3472 binární literály:](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3472.pdf)|VS 2015|
 |&nbsp;&nbsp;[Automaticky N3638 a decltype(auto) návratové typy](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3638.html)|VS 2015|
@@ -44,7 +44,7 @@ Podrobnosti o vylepšení a jiné změny v sadě Visual Studio 2017 najdete v t�
 |&nbsp;&nbsp;[Rozšířené N3652 constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html)|VS 2017|
 |&nbsp;&nbsp;[N3653 Nsdmi pro agregace](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3653.html)|VS 2017|
 |&nbsp;&nbsp;[N3664 Jak se vyhnout virům/znamená začlenění přidělení](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3664.html)|NENÍ K DISPOZICI <sup> [F](#note_F)</sup>|
-|__C ++ 17 základní funkce jazyka__|__Podporuje se__|
+|__C ++ 17 základní funkce jazyka__|__Podporováno__|
 |&nbsp;&nbsp;[Odebrání N4086 trigraphs](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4086.html)|VS 2010 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[N3922 nová pravidla pro automatické s braced-init-lists](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[N4051 typename v šabloně parametrů šablony](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4051.html)|VS 2015 <sup>[14](#note_14)</sup>|
@@ -88,7 +88,7 @@ Podrobnosti o vylepšení a jiné změny v sadě Visual Studio 2017 najdete v t�
 
 |Oblast funkcí| |
 |----|---|
-|__C ++ 17 základních funkcí jazyka (zprávy o chybách)__|__Podporuje se__|
+|__C ++ 17 základních funkcí jazyka (zprávy o chybách)__|__Podporováno__|
 |&nbsp;&nbsp;[Oprava P0702R1 třídy odvození argumentu šablony pro konstruktory seznam inicializátorů](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[Zjednodušení P0588R1 zachycení lambdy implicitní](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0588r1.html)|Ne|
 |&nbsp;&nbsp;[CWG 1581: Když jsou definovány členské funkce constexpr.](https://wg21.cmeerw.net/cwg/issue1581)|Ne|
@@ -98,7 +98,7 @@ Podrobnosti o vylepšení a jiné změny v sadě Visual Studio 2017 najdete v t�
 
 |Oblast funkcí| |
 |----|---|
-|__20 základní funkce jazyka c ++__|__Podporuje se__|
+|__20 základní funkce jazyka c ++__|__Podporováno__|
 |&nbsp;&nbsp;[Přidání P0306R4 &#95; &#95;VA_OPT&#95; &#95; pro vynechání čárkami a odstranění čárkami](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0306r4.html)|Ne|
 |&nbsp;&nbsp;[Určený P0329R4 inicializace](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf)|Ne|
 |&nbsp;&nbsp;[Povolení P0409R2 lambda-capture [=, tato]](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html)|Ne|
@@ -111,7 +111,7 @@ Podrobnosti o vylepšení a jiné změny v sadě Visual Studio 2017 najdete v t�
 
 |Oblast funkcí| |
 |---|---|
-|__Funkce c ++ 20 standardní knihovny__|__Podporuje se__|
+|__Funkce c ++ 20 standardní knihovny__|__Podporováno__|
 |&nbsp;&nbsp; [P0777R1, jak se vyhnout zbytečným Decay](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0777r1.pdf)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0463R1 endian](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html)|Ne|
 |&nbsp;&nbsp;[P0674R1 make_shared() pro pole](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0674r1.html)|Ne|
@@ -135,7 +135,7 @@ Podrobnosti o vylepšení a jiné změny v sadě Visual Studio 2017 najdete v t�
 |&nbsp;&nbsp; [Is_pod – P0767R1 ukončení podpory](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0767r1.html)|Ne|
 |&nbsp;&nbsp; [Podpora knihovny P0768R1 pro operátor porovnání kosmické lodě \<=>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0768r1.pdf)|Ne|
 |&nbsp;&nbsp; [P0966R1 řetězec:: reserve() by měl není zmenšit.](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0966r1.html)|Ne|
-|__Funkce c ++ 17 standardní knihovny__|__Podporuje se__|
+|__Funkce c ++ 17 standardní knihovny__|__Podporováno__|
 |&nbsp;&nbsp;[Integrace P0433R2 odvození šablony pro šablony třídy do standardní knihovny](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0433r2.html)<br />&nbsp;&nbsp;[Zlepšení P0739R0 třídy šablony argument odvození integrace do standardní knihovny](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0739r0.html)|VS 2017 15.7|
 |&nbsp;&nbsp;[P0426R1 constexpr pro char_traits](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html)|VS 2017 15.7|
 |&nbsp;&nbsp;[P0030R1 hypot(x, y, z)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0030r1.pdf)|VS 2017 15.7|
@@ -214,7 +214,7 @@ Podrobnosti o vylepšení a jiné změny v sadě Visual Studio 2017 najdete v t�
 |&nbsp;&nbsp;[N4389 bool_constant](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4389.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[Standardní knihovna P0063R3 C11](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0063r3.html)|VS 2015 <sup>[C11](#note_C11), [14](#note_14)</sup>|
 |&nbsp;&nbsp;[N4510 podpora nekompletní typy ve vektoru/list/forward_list –](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4510.html)|VS 2013 <sup>[14](#note_14)</sup>|
-|__Funkce c ++ 14 standardní knihovny__|__Podporuje se__|
+|__Funkce c ++ 14 standardní knihovny__|__Podporováno__|
 |&nbsp;&nbsp;[Result_of – N3462 přívětivá SFINAE](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3462.html)|VS 2015.2|
 |&nbsp;&nbsp;[N3302 constexpr pro \<komplexní >](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2011/n3302.html)|VS 2015|
 |&nbsp;&nbsp;[N3469 constexpr pro \<chrono >](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3469.html)|VS 2015|
@@ -313,10 +313,10 @@ Následující není paralelizovaná v současné době:
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
+[Reference jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)<br/>
-[Vylepšení shody C++ se sadou Visual Studio 2017](cpp-conformance-improvements-2017.md)<br/>
-[Novinky v jazyce Visual C++ v sadě Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[Vylepšení shody C++ v sadě Visual Studio](cpp-conformance-improvements.md)<br/>
+[Co je nového v aplikaci Visual C++ v sadě Visual Studio](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [Historie změn Visual C++ 2003 – 2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
-[Novinky Visual C++ 2003–2015](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
+[Visual C++ Co je nového 2003 – 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
 [Blog týmu Visual C++](https://blogs.msdn.microsoft.com/vcblog/)
