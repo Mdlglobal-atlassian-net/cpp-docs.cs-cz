@@ -11,12 +11,12 @@ helpviewer_keywords:
 - build steps [C++], build events
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
-ms.openlocfilehash: 5bc402ad8999f1864c7e6b1155da3c68862dda97
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: fc12689148e3bf23c233e4656249625d1156f9a7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823372"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028503"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Seznámení s kroky vlastního sestavení a s událostmi sestavení
 
@@ -71,7 +71,7 @@ Události sestavení a vlastní kroky v uvedeném pořadí společně s další 
 [Řešení potíží s přizpůsobením sestavení](troubleshooting-build-customizations.md)<br/>
 [Formát výstupu vlastního kroku sestavení nebo události sestavení](formatting-the-output-of-a-custom-build-step-or-build-event.md)<br/>
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Visual Studio Projects - C++](creating-and-managing-visual-cpp-projects.md)<br>
 [Běžná makra pro příkazy a vlastnosti sestavení](reference/common-macros-for-build-commands-and-properties.md)

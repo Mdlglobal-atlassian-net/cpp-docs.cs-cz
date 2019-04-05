@@ -21,12 +21,12 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-ms.openlocfilehash: 76b8be265145896105490a82946c50bc576e6f9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90fbab45c6408c30198c2a52a42545718002cc11
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520419"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028088"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>Direktivy #if, #elif, #else a #endif (C/C++)
 
@@ -37,7 +37,7 @@ ms.locfileid: "50520419"
 *Podmíněné* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*část IF části elif*<sub>optimalizované</sub> *část else*<sub>optimalizované</sub> *řádek endif*
 
-*část IF* :<br/>
+*if-part* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*text řádku IF*
 
 *řádek IF* :<br/>
@@ -65,7 +65,7 @@ Každý **#if** směrnice ve zdrojovém souboru musí mít odpovídající uzav�
 
 **#If**, **#elif**, **#else**, a **#endif** direktiv lze vnořit do jiné části textu jiné **#if**direktivy. Každá vnořená **#else**, **#elif**, nebo **#endif** směrnice patří k nejbližší předchozí **#if** směrnice.
 
-Všechny direktivy podmíněné kompilace, jako například **#if** a **#ifdef**, musí mít odpovídající uzavírací **#endif** direktivy před koncem souboru; jinak chyba zpráva je vygenerována. Když direktivy podmíněné kompilace jsou obsaženy v souborech, musí splňovat stejné podmínky: musí existovat žádné neporovnané direktivy podmíněné kompilace na konci souboru začlenění.
+Všechny direktivy podmíněné kompilace, jako například **#if** a **#ifdef**, musí mít odpovídající uzavírací **#endif** direktivy před koncem souboru; jinak chyba zpráva je vygenerována. Když direktivy podmíněné kompilace jsou obsaženy v vkládané soubory, musí splňovat stejné podmínky: Musí existovat žádné neporovnané direktivy podmíněné kompilace na konci souboru začlenění.
 
 Náhrada makra se provádí v rámci části příkazového řádku, který následuje **#elif** , takže volání makra lze použít v příkazu *konstantní výraz*.
 
@@ -97,7 +97,7 @@ Operátor preprocesoru **definované** lze použít ve speciálních výrazech k
 
 definovaný ( `identifier` )
 
-Definice `identifier`
+definováno `identifier`
 
 Tento konstantní výraz je považován za hodnotu true (nenulový), pokud *identifikátor* je aktuálně definován; v opačném případě je podmínka NEPRAVDA (0). Identifikátor definovaný jako prázdný text je považován za definovaný. **Definované** – direktiva je možné v **#if** a **#elif** směrnice, ale nikde jinde.
 
@@ -174,7 +174,7 @@ Předchozí kód zkontroluje, zda Symbolická konstanta `EXAMPLE_H` je definová
 
 ## <a name="hasinclude"></a>__has_include
 
-**Visual Studio 2017 verze 15.3 nebo novější**: Určuje, zda je k dispozici pro zahrnutí hlavičku knihovny:
+**Visual Studio 2017 verze 15.3 nebo novější**:  Určuje, zda je k dispozici pro zahrnutí hlavičku knihovny:
 
 ```cpp
 #ifdef __has_include
@@ -191,6 +191,6 @@ Předchozí kód zkontroluje, zda Symbolická konstanta `EXAMPLE_H` je definová
 #endif
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Preprocesor – direktivy](../preprocessor/preprocessor-directives.md)

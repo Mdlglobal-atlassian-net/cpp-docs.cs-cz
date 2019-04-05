@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-ms.openlocfilehash: 30d334f58f0eb91c9ca44ba5a5b6b8edf3970510
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f02f6b69b31f10b41d5c920cfc2ad62dfa1cef2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509951"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023955"
 ---
 # <a name="dual"></a>dual
 
@@ -59,18 +59,18 @@ __interface IStatic : IDispatch
 
 |||
 |-|-|
-|**Platí pro**|**interface**|
+|**Platí pro**|**rozhraní**|
 |**Opakovatelné**|Ne|
 |**Vyžadované atributy**|Žádné|
 |**Neplatné atributy**|`dispinterface`|
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy podle použití](attributes-by-usage.md)<br/>
-[custom](custom-cpp.md)<br/>
+[vlastní](custom-cpp.md)<br/>
 [dispinterface](dispinterface.md)<br/>
-[object](object-cpp.md)<br/>
+[odkazy objektů](object-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

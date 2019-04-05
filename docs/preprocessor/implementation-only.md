@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - implementation_only attribute
 ms.assetid: d8cabc86-4425-45a0-9587-d57536980088
-ms.openlocfilehash: 9bc083b78cd0c3bd39241de2815580c9eca6a207
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1435ca74ac2b5a73c308592b1affe6fca097d1b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654438"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026648"
 ---
 # <a name="implementationonly"></a>implementation_only
 **Specifické pro C++**
@@ -37,7 +37,7 @@ Pokud tento atribut je zadána, je obsah hlavičky tli v stejný obor názvů, j
 
 **Specifické pro END C++**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import – atributy](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

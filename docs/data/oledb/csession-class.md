@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: c4f6cc19897b66bfe26c6d53ccb87c35dbed82c9
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: b34a6300473db94621360f1d04fd73ddd7e8bd69
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58777646"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041455"
 ---
 # <a name="csession-class"></a>CSession – třída
 
@@ -67,7 +67,7 @@ class CSession
 
 |||
 |-|-|
-|[Abort](#abort)|Zruší (končí) transakce.|
+|[Přerušení](#abort)|Zruší (končí) transakce.|
 |[Zavřít](#close)|Ukončení relace.|
 |[Potvrzení změn](#commit)|potvrzení transakce.|
 |[GetTransactionInfo](#gettransactioninfo)|Vrátí informace o transakci.|
@@ -214,7 +214,7 @@ Standardní HRESULT.
 
 Další informace najdete v tématu [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85)) v *OLE DB referenční informace pro programátory*.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [CatDB](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

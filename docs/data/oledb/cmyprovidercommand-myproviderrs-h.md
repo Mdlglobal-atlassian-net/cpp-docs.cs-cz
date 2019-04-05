@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CMyProviderCommand class in MyProviderRS.H
 - CCustomCommand class in CustomRS.H
 ms.assetid: b30b956e-cc91-4cf5-9fe6-f8b1ce9cc2a5
-ms.openlocfilehash: a2261d62775c8063d166c664a02fdf3be0d70d17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b10d7bccae6fa9b86d072b8e13791f23516b2c63
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651201"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028558"
 ---
 # <a name="ccustomcommand-customrsh"></a>CCustomCommand (CustomRS.H)
 
@@ -41,6 +41,6 @@ Objekt příkazu také poskytuje implementaci `IColumnsInfo`. OLE DB vyžaduje `
 
 Zprostředkovatel také obsahuje rozhraní volá `IObjectWithSite`. `IObjectWithSite` Rozhraní bylo implementováno v knihovně ATL 2.0 a umožňuje implementátora k předávání informací o samotné do jeho podřízených. Objekt příkazu používá `IObjectWithSite` informace zjistit všechny generují rozhraní objektu sady řádků je vytvořil.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Soubory generované průvodcem zprostředkovatele](../../data/oledb/provider-wizard-generated-files.md)
+[Poskytovatel souborů vytvořených průvodcem](../../data/oledb/provider-wizard-generated-files.md)

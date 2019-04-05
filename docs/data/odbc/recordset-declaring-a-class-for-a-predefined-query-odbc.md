@@ -1,5 +1,5 @@
 ---
-title: 'Sada záznamů: Deklarování třídy pro předdefinovaný dotaz (ODBC)'
+title: 'Recordset: Deklarování třídy pro předdefinovaný dotaz (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC recordsets, queries
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - recordsets, predefined queries
 - recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-ms.openlocfilehash: e83bf2ecb24a9abfd8dc9800a3a10d2d65025336
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4ae9f21c4bd53a8050d6f8c3765bb9823d077ba
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611260"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026524"
 ---
-# <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>Sada záznamů: Deklarování třídy pro předdefinovaný dotaz (ODBC)
+# <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>Recordset: Deklarování třídy pro předdefinovaný dotaz (ODBC)
 
 Toto téma platí pro třídy knihovny MFC rozhraní ODBC.
 
 Toto téma vysvětluje, jak vytvořit sadu záznamů třídy pro předdefinovaný dotaz (říká se jim uložené procedury, stejně jako v systému Microsoft SQL Server).
 
 > [!NOTE]
->  Toto téma se vztahuje na objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud hromadné načítání řádků je implementováno, je velmi podobné. Rozdíly mezi sadách záznamů implementujících hromadné načítání řádků a ty, které nejsou najdete v tématu [sada záznamů: načítání hromadné záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Toto téma se vztahuje na objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud hromadné načítání řádků je implementováno, je velmi podobné. Rozdíly mezi sadách záznamů implementujících hromadné načítání řádků a ty, které nejsou najdete v tématu [sada záznamů: Načítání záznamů (ODBC) hromadné](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Některé systémy správy databáze (DBMS) umožňují vytvořit předdefinovaný dotaz a jeho volání z aplikace jako funkce. Dotaz s názvem, mohou mít parametry a může vrátit záznamů. Postup v tomto tématu popisuje, jak volat předdefinovaný dotaz, který vrací záznamy (a možná parametry).
 
@@ -150,9 +150,9 @@ Tento kód vytvoří snímek, předává je parametr, který jste dříve získa
 > [!TIP]
 >  Můžete chtít zpracovat návratovou hodnotu (výstupní parametr) z uložené procedury. Další informace a příklad najdete v tématu [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Sada záznamů: Opětovné spuštění dotazu na sadu záznamů (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
-[Sada záznamů: Deklarování třídy pro tabulku (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
-[Sada záznamů: Provedení spojení (rozhraní ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+[Recordset: Opětovné spuštění dotazu na sadu záznamů (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
+[Recordset: Deklarování třídy pro tabulku (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[Recordset: Provedení spojení (rozhraní ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

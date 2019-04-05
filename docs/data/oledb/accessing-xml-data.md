@@ -9,18 +9,18 @@ helpviewer_keywords:
 - rowsets [C++], retrieving XML data
 - CStreamRowset class, retrieving XML data
 ms.assetid: 6b693d55-a554-4846-8118-e8773b79b572
-ms.openlocfilehash: 8f77ebf41e741d74443fbae3398589c77fbf6c01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b5704c10393026a14ac66b632559fc376f008f8b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665540"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041533"
 ---
 # <a name="accessing-xml-data"></a>Přístup k datům XML
 
 Existují dvě samostatné metody načítání dat XML ze zdroje dat: jeden používá [CStreamRowset](../../data/oledb/cstreamrowset-class.md) a jiné účely [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md).
 
-|Funkce|CStreamRowset –|CXMLAccessor –|
+|Funkce|CStreamRowset|CXMLAccessor|
 |-------------------|-------------------|------------------|
 |Přenesené množství dat.|Načte data ze všech sloupců a řádků najednou.|Načte data ze všech sloupců, ale pouze jeden řádek v čase. Je nutné přejít řádky pomocí metod, jako například `MoveNext`.|
 |Formátování řetězce|SQL Server formáty řetězec XML a odešle ji příjemci.|Načte sada řádků data v nativním formátu (počet požadavků, které zprostředkovatel odeslat ho jako řetězce Unicode) a poté sestaví řetězec uchovávající data ve formátu XML.|
@@ -86,6 +86,6 @@ while(SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )
 
 Můžete použít [GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md) načíst informace o sloupci (datový typ) jako řetězec ve formátu XML data.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití přístupových objektů](../../data/oledb/using-accessors.md)

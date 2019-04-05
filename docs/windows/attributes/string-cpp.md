@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-ms.openlocfilehash: 8bf708067341ecde4fb18d565b7d72866312decd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1b528fb922a15655de403c6099ee1d36e2fb3de
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603187"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023929"
 ---
 # <a name="string-c"></a>string (C++)
 
@@ -53,11 +53,11 @@ __interface IFireTabCtrl
 |**Platí pro**|Pole nebo ukazatel pole, rozhraní parametrů, metody rozhraní|
 |**Opakovatelné**|Ne|
 |**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádné|
+|**Neplatné atributy**|Žádný|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy pole](array-attributes.md)<br/>

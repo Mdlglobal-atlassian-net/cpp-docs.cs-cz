@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-ms.openlocfilehash: cab261724399107c57b36a9020906a96697f7eca
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: b45337ef773f93968570f62ab73c02d11fae88ff
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786551"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028244"
 ---
 # <a name="make-function"></a>Make – funkce
 
@@ -235,6 +235,6 @@ Zobrazit [jak: Vytvoření instance komponenty přímo ke knihovně WRL](how-to-
 
 **Namespace:** Microsoft::WRL
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Microsoft::WRL – obor názvů](microsoft-wrl-namespace.md)

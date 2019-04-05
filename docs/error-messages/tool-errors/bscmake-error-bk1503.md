@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - BK1503
 ms.assetid: e6582344-b91e-486f-baf3-4f9028d83c3b
-ms.openlocfilehash: 2c8ca005922c3c94b557e2f1052e8811099d9948
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c81e955b912e03b322c0429097410fae74713b9d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555788"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031589"
 ---
 # <a name="bscmake-error-bk1503"></a>Chyba nástroje BSCMAKE BK1503
 
@@ -23,6 +23,6 @@ Je-li tento problém je více než 4092 soubory .sbr, je třeba zmenšit počet 
 
 Je-li tento problém souboru .BSC nástrojem, který je větší než 64MB, snížení počtu soubory .sbr jako vstup se zmenší velikost výsledného souboru .bsc. Kromě toho množství informací o procházení, může být snížena prostřednictvím /Em (vyloučit – makro rozšířit symboly), /El (vyloučit lokální proměnné) a /Es (soubory vyloučit).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[BSCMAKEE – možnosti](../../build/reference/bscmake-options.md)
+[Možnosti BSCMAKE](../../build/reference/bscmake-options.md)

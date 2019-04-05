@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - includelib attribute
 ms.assetid: cd90ea6e-5ae8-4f11-b8d1-662db95412b2
-ms.openlocfilehash: 4cfadc84b9131aa787323b4967ae9cfc4baabbcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57f039eeae527dd03884b12e7d9eb424d87f597f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570414"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029997"
 ---
 # <a name="includelib-c"></a>includelib (C++)
 
@@ -52,11 +52,11 @@ Následující kód můžete vidět v souboru s příponou .cpp:
 |**Platí pro**|Kdekoli|
 |**Opakovatelné**|Ano|
 |**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádné|
+|**Neplatné atributy**|Žádný|
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Samostatné atributy](stand-alone-attributes.md)<br/>

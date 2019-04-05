@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultbind attribute
 ms.assetid: b20a8437-24e6-4b6d-a2df-09fe5e1006e0
-ms.openlocfilehash: 43d5a1c827824f64ad1376a2461cfec6b9405fe7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0dd9101966f22253e6c4098c3c64d22d0a0cba6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458393"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041361"
 ---
 # <a name="defaultbind"></a>defaultbind
 
@@ -39,12 +39,12 @@ Podívejte se na příklad pro [umožňujících vazbu](bindable.md) příklad, 
 |-|-|
 |**Platí pro**|Metoda rozhraní|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**Vyžadované atributy**|Žádný|
 |**Neplatné atributy**|Žádné|
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy metody](method-attributes.md)<br/>

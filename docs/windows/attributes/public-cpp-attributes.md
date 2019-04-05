@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - public attribute
 ms.assetid: c42e1fd5-6cb1-48fe-8a03-95f2a2e0137c
-ms.openlocfilehash: d89df014beae5a62a035c3156b92d3337ecd2c14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a12ab0905064a72057dffac03340b667f07b3ae5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579332"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59022824"
 ---
 # <a name="public-c-attributes"></a>public (atributy C++)
 
@@ -51,14 +51,14 @@ __interface IFireTabCtrl : IDispatch
 
 |||
 |-|-|
-|**Platí pro**|**Definice TypeDef**|
+|**Platí pro**|**– definice typedef**|
 |**Opakovatelné**|Ne|
 |**Vyžadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy klíčových slov typedef, enum, union a struct](typedef-enum-union-and-struct-attributes.md)

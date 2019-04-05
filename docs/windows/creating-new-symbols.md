@@ -19,12 +19,12 @@ helpviewer_keywords:
 - View Use button
 - resource editors [C++], resource symbols
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-ms.openlocfilehash: c2e2f67a6547b05fca198a54b13776a1d3fafecf
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 8bb73c1a9e8d253492a7068c444dd7ddea8417da
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328919"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026354"
 ---
 # <a name="how-to-create-symbols-c"></a>Postupy: Vytvoření symboly (C++)
 
@@ -39,12 +39,12 @@ Dialogové okno obsahuje následující vlastnosti:
 
 |Vlastnost|Popis|
 |--------------------------|------------------------------------------|
-|**Název**|Zobrazí název symbolu.<br/><br/>Další informace najdete v tématu [omezení názvu symbolu](../windows/symbol-name-restrictions.md).|
-|**Hodnota**|Zobrazí číselnou hodnotu symbolu.<br/><br/>Další informace najdete v tématu [omezení hodnoty symbolu](../windows/symbol-value-restrictions.md).|
+|**Name**|Zobrazí název symbolu.<br/><br/>Další informace najdete v tématu [omezení názvu symbolu](../windows/symbol-name-restrictions.md).|
+|**Value**|Zobrazí číselnou hodnotu symbolu.<br/><br/>Další informace najdete v tématu [omezení hodnoty symbolu](../windows/symbol-value-restrictions.md).|
 |**Používá**|Pokud je vybráno, určuje, že symbol je používán jeden nebo více prostředků.<br/><br/>Prostředek nebo prostředky jsou uvedeny v **používané** pole.|
 |**Zobrazit jen pro čtení symbolů**|Pokud je vybráno, zobrazí prostředky jen pro čtení.<br/><br/>Ve výchozím nastavení **Symbol prostředku** dialogové okno zobrazí jenom upravitelné prostředky v souboru skriptu prostředku, ale tato možnost aktivní, lze měnit prostředky se zobrazí tučným písmem a prostředky jen pro čtení se zobrazí ve formátu prostého textu.|
 |**Používá**|Zobrazí prostředek nebo prostředky pomocí symbolu vybrali v seznamu symboly.<br/><br/>Přejděte do editoru pro daný prostředek vyberte prostředek v **používané** pole a tlačítko **zobrazit použití**.|
-|**Nové**|Otevře **nový Symbol** dialogové okno, které vám umožní definovat název a v případě potřeby, hodnotu pro nový identifikátor symbolické prostředků.|
+|**Nový**|Otevře **nový Symbol** dialogové okno, které vám umožní definovat název a v případě potřeby, hodnotu pro nový identifikátor symbolické prostředků.|
 |**Změna**|Otevře **změnit Symbol** dialogové okno, které vám umožní změnit název nebo hodnotu symbolu.<br/><br/>Pokud je symbol pro ovládací prvek nebo prostředek používá, symbol lze změnit pouze z editoru odpovídající prostředek. Další informace najdete v tématu [spravovat symboly](../windows/changing-unassigned-symbols.md).|
 |**Použití zobrazení**|Otevře se na prostředek, který obsahuje symbol v editoru odpovídající prostředek.|
 
@@ -86,8 +86,8 @@ Při procházení symbolů v **symbolů prostředků**, můžete další informa
 
 Win32
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Identifikátory prostředků (symboly)](../windows/symbols-resource-identifiers.md)<br/>
+[Identifikátory prostředků (symbolů)](../windows/symbols-resource-identifiers.md)<br/>
 [Postupy: Správa symbolů](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
 [ID předdefinovaných symbolů](../windows/predefined-symbol-ids.md)<br/>

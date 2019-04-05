@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aggregate objects [C++], aggregates attribute
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-ms.openlocfilehash: aaf138ab3b0fa69f2a8c201eed631569b33b079f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12e6af31c2714095cf2ecf51e4f067081789a9e0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486785"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028695"
 ---
 # <a name="aggregates"></a>aggregates
 
@@ -90,11 +90,11 @@ struct CObject : IObject
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [COM – atributy](com-attributes.md)<br/>
 [Atributy třídy](class-attributes.md)<br/>
 [Atributy klíčových slov typedef, enum, union a struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Agregace](/windows/desktop/com/aggregation)<br/>
+[Aggregation](/windows/desktop/com/aggregation)<br/>
 [Agregovatelné](/windows/desktop/Midl/aggregatable)<br/>
 [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)

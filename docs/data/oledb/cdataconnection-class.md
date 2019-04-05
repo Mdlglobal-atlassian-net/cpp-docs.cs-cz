@@ -65,12 +65,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: 769dfc99f431cb5ba803075e28176713f9bd7092
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 94c7025185a24b07d5968157d49c856d4359b33a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565503"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021628"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection – třída
 
@@ -93,7 +93,7 @@ class CDataConnection
 |||
 |-|-|
 |[CDataConnection](#cdataconnection)|Konstruktor Vytvoří a inicializuje `CDataConnection` objektu.|
-|[kopírování](#copy)|Vytvoří kopii existující datové připojení.|
+|[Kopírovat](#copy)|Vytvoří kopii existující datové připojení.|
 |[Otevřít](#open)|Otevře připojení ke zdroji dat pomocí inicializačního řetězce.|
 |[OpenNewSession](#opennewsession)|Otevře se nová relace pro aktuální připojení.|
 
@@ -102,11 +102,11 @@ class CDataConnection
 |||
 |-|-|
 |[BOOL – operátor](#op_bool)|Určuje, zda aktuální relace je otevřený, nebo ne.|
-|[bool – operátor](#op_bool_ole)|Určuje, zda aktuální relace je otevřený, nebo ne.|
+|[operátor bool](#op_bool_ole)|Určuje, zda aktuální relace je otevřený, nebo ne.|
 |[operátor CDataSource &](#op_cdata_amp)|Vrátí odkaz na obsaženého objektu `CDataSource` objektu.|
 |[operátor CDataSource *](#op_cdata_star)|Vrací ukazatel na obsaženého objektu `CDataSource` objektu.|
-|[operátor CSession &](#op_csession_amp)|Vrátí odkaz na obsaženého objektu `CSession` objektu.|
-|[operátor CSession *](#op_csession_star)|Vrací ukazatel na obsaženého objektu `CSession` objektu.|
+|[operátor CSession&](#op_csession_amp)|Vrátí odkaz na obsaženého objektu `CSession` objektu.|
+|[operátor CSession*](#op_csession_star)|Vrací ukazatel na obsaženého objektu `CSession` objektu.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -304,7 +304,7 @@ Tento operátor vrátí ukazatel obsaženého objektu `CSession` objektu, abyste
 
 Zobrazit [operátor CSession &](../../data/oledb/cdataconnection-operator-csession-amp.md) například využití.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

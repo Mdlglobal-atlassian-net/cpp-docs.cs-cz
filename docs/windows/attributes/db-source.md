@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_source attribute
 ms.assetid: 0ec8bbf7-ade2-4899-bf4c-8608b92779bc
-ms.openlocfilehash: a171e6a7eea5e10b47bf680545bc14618893b155
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 884cab78d64c20bef00958f0cc0319281fd69921
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328984"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026328"
 ---
 # <a name="dbsource"></a>db_source
 
@@ -28,7 +28,7 @@ Vytvoří připojení ke zdroji dat.
 *db_source*<br/>
 Připojovací řetězec použitý pro připojení ke zdroji dat. Formát připojovacího řetězce, naleznete v tématu [připojovací řetězce a propojení dat](/previous-versions/windows/desktop/ms718376(v=vs.85)) v Microsoft Data Access Components (MDAC) SDK.
 
-*Jméno*<br/>
+*name*<br/>
 (Volitelné) Při použití **db_source** na třídu, *název* je instance objektu zdroje dat, který má **db_source** byt aplikovaný atribut (viz Příklad 1). Při použití **db_source** vložené v implementaci metody, *název* je proměnná (místní počítač do metody), který slouží pro přístup k datům zdroje (viz příklad 2). To předat *název* k *source_name* parametr `db_command` ke zdroji dat pomocí příkazu.
 
 *Hodnota HRESULT*<br/>
@@ -75,10 +75,10 @@ class CMyCommand {};
 |**Platí pro**|**Třída**, **struktura**, člen, metoda, místní|
 |**Opakovatelné**|Ne|
 |**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádné|
+|**Neplatné atributy**|Žádný|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Atributy příjemce technologie OLE DB](ole-db-consumer-attributes.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedure calls
 - procedure calls, stored procedures
 ms.assetid: 4f7c2700-1c2d-42f3-8c9f-7e83962b2442
-ms.openlocfilehash: 575bc2c347275bfb96f64e60f35379629b4eac18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 196c50ea62c3e3188b61a3b35a9e2752740c4ad5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614536"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027451"
 ---
 # <a name="output-parameters"></a>Výstupní parametry
 
@@ -55,6 +55,6 @@ return 0
 
 `@_rowcount` Výstupní zprávy, kolik řádků vrácených z tabulky testu. Tuto uloženou proceduru však omezuje počet řádků na 50. Například pokud byly nějaké 100 řádků v testu, rowcount by 50 (protože je tento kód načte jenom prvních 50 řádků). Pokud byly nějaké pouze 30 řádky v tabulce, by rowcount 30. Nezapomeňte volat `Close` nebo `CloseAll` k naplnění výstupní před načíst jeho hodnotu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití uložených procedur](../../data/oledb/using-stored-procedures.md)

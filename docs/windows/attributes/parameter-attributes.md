@@ -5,12 +5,12 @@ helpviewer_keywords:
 - attributes [C++/CLI], parameter attributes
 - parameter attributes
 ms.assetid: 024c2dd5-49d7-4ced-a17a-c56c1bc485b6
-ms.openlocfilehash: 56c168975c9b8a6fcf7462c26eefd07b4499d149
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e89542027c2187a77c18637432a5b60f47377c10
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619628"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029548"
 ---
 # <a name="parameter-attributes"></a>Atributy parametru
 
@@ -18,7 +18,7 @@ Následující atributy se vztahují na parametry metody ve třídě nebo rozhra
 
 |Atribut|Popis|
 |---------------|-----------------|
-|[custom](custom-cpp.md)|Umožňuje definovat vlastní atribut.|
+|[vlastní](custom-cpp.md)|Umožňuje definovat vlastní atribut.|
 |[defaultvalue](defaultvalue.md)|Umožňuje specifikace výchozí hodnotu pro zadaný nepovinný parametr.|
 |[first_is](first-is.md)|Určuje index první prvek pole předávají.|
 |[iid_is](iid-is.md)|Určuje index první prvek pole předávají.|
@@ -37,6 +37,6 @@ Následující atributy se vztahují na parametry metody ve třídě nebo rozhra
 |[size_is](size-is.md)|Určuje velikost paměti přidělené pro velikosti ukazatele, velikosti ukazatele na velikosti ukazatele a single - nebo vícedimenzionální pole.|
 |[unique](unique-cpp.md)|Určuje jedinečný ukazatel.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Atributy podle použití](attributes-by-usage.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __readpmc intrinsic
 - rdpmc instruction
 ms.assetid: 14ed45a6-28b6-4635-8437-a597c04b43d4
-ms.openlocfilehash: 059d9344fa329e69666abaca4d73122ab29f8d2a
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 848c880e76d6d431ee56a0bb30a33b276837ce76
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326430"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029340"
 ---
 # <a name="readpmc"></a>__readpmc
 
@@ -31,7 +31,7 @@ unsigned __int64 __readpmc(
 
 #### <a name="parameters"></a>Parametry
 
-*Čítač*<br/>
+*counter*<br/>
 [in] Čítač výkonu ke čtení.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -50,8 +50,8 @@ Hodnotu zadaný čítač výkonu.
 
 Tomto vnitřní je k dispozici v pouze v režimu jádra a rutina je dostupný jenom jako vnitřní.
 
-**Specifické pro END Microsoft**
+**END Specifické pro Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

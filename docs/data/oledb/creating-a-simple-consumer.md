@@ -4,12 +4,12 @@ ms.date: 11/06/2018
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
-ms.openlocfilehash: 4346bca99d3744657072a4940776934e3c03e9de
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 060a39a8436ff73900ebfaea7d1c882b9862ee7e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326638"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025127"
 ---
 # <a name="creating-a-simple-consumer"></a>Vytvoření jednoduchého příjemce
 
@@ -19,11 +19,11 @@ Použití **Průvodce projektem ATL** a **průvodce příjemcem ATL OLE DB** ke 
 
 1. Na **souboru** nabídky, klikněte na tlačítko **nový**a potom klikněte na tlačítko **projektu**.
 
-   **Nový projekt** zobrazí se dialogové okno.
+   Zobrazí se dialogové okno **Nový projekt**.
 
 1. V **typy projektů** podokně klikněte na tlačítko **nainstalováno** > **Visual C++** > **Windows Desktop** složce a pak klikněte na tlačítko **desktopový Průvodce pro Windows** ikonu **šablony** podokně. V **název** zadejte název projektu, například *MyCons*.
 
-1. Klikněte na tlačítko **OK**.
+1. Klikněte na **OK**.
 
    **Desktopový projekt Windows** průvodce se zobrazí.
 
@@ -39,7 +39,7 @@ Pak pomocí **průvodce příjemcem ATL OLE DB** přidání objektu příjemce t
 
 1. V místní nabídce klikněte na tlačítko **přidat**a potom klikněte na tlačítko **nová položka**.
 
-   **Přidat novou položku** zobrazí se dialogové okno.
+   Zobrazí se dialogové okno **Přidat novou položku**.
 
 1. V **kategorie** podokně klikněte na tlačítko **nainstalováno** > **Visual C++** > **ATL**, klikněte na tlačítko **Spotřebitele OLEDB knihovny ATL** ikonu **šablony** podokně a pak klikněte na tlačítko **přidat**.
 
@@ -56,7 +56,7 @@ Pak pomocí **průvodce příjemcem ATL OLE DB** přidání objektu příjemce t
    1. Na **připojení** kartu, zadejte požadované informace, jako je například název serveru, přihlašovací jméno a heslo pro zdroj dat a databáze na serveru.
 
       > [!NOTE]
-      > Existuje problém zabezpečení s **povolit uložení hesla** funkce **vlastnosti propojení dat** dialogové okno. V **zadejte informace pro přihlášení k serveru**, existují dva přepínače: **integrované zabezpečení Windows NT použití** a **použít konkrétní uživatelské jméno a heslo**.
+      > Existuje problém zabezpečení s **povolit uložení hesla** funkce **vlastnosti propojení dat** dialogové okno. V **zadejte informace pro přihlášení k serveru**, existují dva přepínače: **Použití Windows NT integrované zabezpečení** a **použít konkrétní uživatelské jméno a heslo**.
 
       > [!NOTE]
       > Pokud vyberete **použít konkrétní uživatelské jméno a heslo**, máte možnost uložení hesla (pomocí **povolit uložení hesla** zaškrtávací políčko), ale tato možnost není zabezpečený. Doporučuje se, že vyberete **integrované zabezpečení Windows NT použití**; tato možnost používá k ověření vaší identity systému Windows NT.
@@ -70,7 +70,7 @@ Pak pomocí **průvodce příjemcem ATL OLE DB** přidání objektu příjemce t
 
 1. Výběr tabulky, zobrazení nebo uložené procedury pomocí ovládacího prvku stromu. V tomto příkladu vyberte `Products` tabulce `Northwind` databáze.
 
-1. Klikněte na tlačítko **OK**. Tím se vrátíte do **průvodce příjemcem ATL OLE DB**.
+1. Klikněte na **OK**. Tím se vrátíte do **průvodce příjemcem ATL OLE DB**.
 
 1. Názvy pro dokončení průvodce `Class` a **souboru .h** na základě názvu tabulky, zobrazení nebo uložené procedury, kterou jste vybrali. Pokud chcete, můžete upravit tyto názvy.
 
@@ -98,6 +98,6 @@ Průvodce vygeneruje třídu příkazu nebo třída záznamů uživatelů, jak j
 > [!NOTE]
 > Tento řádek znemožňuje spotřebitele aplikaci v kompilaci a vám připomene zkontrolovat pevně kódovaná hesla v připojovacím řetězci. Po kontrole připojovací řetězec, můžete odebrat tento řádek kódu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Vytvoření příjemce OLE DB pomocí průvodce](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+[Vytvoření příjemce technologie OLE DB pomocí průvodce](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

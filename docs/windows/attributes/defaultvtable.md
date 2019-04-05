@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-ms.openlocfilehash: 40f901345601193db9752ea6c6dca980ded0625d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 813fb9dd4edf2f6e522e7310ba1e8bfcd55ed2b9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579930"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028344"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
@@ -25,7 +25,7 @@ Definuje rozhraní jako výchozího rozhraní vtable pro objekt modelu COM.
 
 ### <a name="parameters"></a>Parametry
 
-*interface*<br/>
+*rozhraní*<br/>
 Určené rozhraní, které mají mít výchozí vtable pro objekt modelu COM.
 
 ## <a name="remarks"></a>Poznámky
@@ -75,7 +75,7 @@ class CMyC3 : public IMyI3 {};
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy třídy](class-attributes.md)

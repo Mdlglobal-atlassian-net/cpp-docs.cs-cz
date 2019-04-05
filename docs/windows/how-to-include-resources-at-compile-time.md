@@ -23,12 +23,12 @@ helpviewer_keywords:
 - symbols [C++], finding
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: cd2f05b4944e26d8a96b3f96e4e39fda0ad8ee48
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: ca24a10f905e61feb2b090ba3966c752db3d4444
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328386"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041498"
 ---
 # <a name="how-to-include-resources-at-compile-time-c"></a>Postupy: Zahrnutí prostředků v době kompilace (C++)
 
@@ -95,8 +95,8 @@ Prostředky v souborech tímto způsobem jsou prováděny pouze část spustitel
 
 Win32
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Soubory prostředků](../windows/resource-files-visual-studio.md)<br/>
-[Postupy: Vytvořit prostředky](../windows/how-to-create-a-resource-script-file.md)<br/>
-[Postupy: Spravovat prostředky](../windows/how-to-copy-resources.md)<br/>
+[Zdrojové soubory](../windows/resource-files-visual-studio.md)<br/>
+[Postupy: Vytvoření prostředků](../windows/how-to-create-a-resource-script-file.md)<br/>
+[Postupy: Správa prostředků](../windows/how-to-copy-resources.md)<br/>

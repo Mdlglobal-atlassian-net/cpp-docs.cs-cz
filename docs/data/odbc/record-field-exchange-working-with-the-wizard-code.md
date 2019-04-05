@@ -1,5 +1,5 @@
 ---
-title: 'Výměna polí záznamu: Práce s kódem průvodce'
+title: 'Výměna polí záznamu: Práce s kódem průvodce'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - DoFieldExchange method, overriding
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-ms.openlocfilehash: c0e1a35e5476c9e2e335c6f2863429d89e4fa28a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82f0d946cac3429150250e2df5d1bfd674ec30ee
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492115"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041288"
 ---
-# <a name="record-field-exchange-working-with-the-wizard-code"></a>Výměna polí záznamu: Práce s kódem průvodce
+# <a name="record-field-exchange-working-with-the-wizard-code"></a>Výměna polí záznamu: Práce s kódem průvodce
 
 Toto téma popisuje kód, který Průvodce aplikací knihovny MFC a **přidat třídu** (jak je popsáno v [přidání příjemce ODBC knihovny MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) zápisu pro podporu RFX a jak můžete chtít změnit kód.
 
 > [!NOTE]
->  Toto téma platí pro třídy odvozené od `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud používáte hromadné načítání řádků, je implementováno Hromadná výměna pole záznamu (Bulk RFX). Hromadné funkce RFX je podobný RFX. Pokud chcete znát rozdíly, přečtěte si téma [sada záznamů: načítání hromadné záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Toto téma platí pro třídy odvozené od `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud používáte hromadné načítání řádků, je implementováno Hromadná výměna pole záznamu (Bulk RFX). Hromadné funkce RFX je podobný RFX. Pokud chcete znát rozdíly, přečtěte si téma [sada záznamů: Načítání záznamů (ODBC) hromadné](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Při vytváření třídy sady záznamů pomocí Průvodce aplikací knihovny MFC nebo **přidat třídu**, Průvodce provádí zápis následující elementy související s RFX je založené na zdroji dat tabulky a sloupce volby provedené v průvodci:
 
@@ -99,7 +99,7 @@ Všimněte si, že následující klíčové funkce funkce:
 
 - Volání `CFieldExchange::SetFieldType`, až `pFX` ukazatele. Toto volání Určuje, že všechny funkce RFX se volá na konec `DoFieldExchange` nebo další volání `SetFieldType` výstupní sloupce. Další informace najdete v tématu [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
 
-- Několik volání `RFX_Text` globální funkce – jeden do každého pole datového člena (vše jejíž `CString` proměnné v příkladu). Tato volání určit vztah mezi název sloupce ve zdroji dat a pole datového člena. Funkce RFX provést přenos skutečná data. Knihovna tříd poskytuje funkce RFX pro všechny běžné typy dat. Další informace o funkce RFX najdete v tématu [výměna polí záznamu: použití funkcí RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).
+- Několik volání `RFX_Text` globální funkce – jeden do každého pole datového člena (vše jejíž `CString` proměnné v příkladu). Tato volání určit vztah mezi název sloupce ve zdroji dat a pole datového člena. Funkce RFX provést přenos skutečná data. Knihovna tříd poskytuje funkce RFX pro všechny běžné typy dat. Další informace o funkce RFX najdete v tématu [výměna polí záznamu: Použití funkcí RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).
 
     > [!NOTE]
     >  Pořadí sloupců v sadě výsledků musí odpovídat pořadí volání funkcí RFX v `DoFieldExchange`.
@@ -138,6 +138,6 @@ m_nFields += 3;
 
 Toto je kód pro přidání tři nová pole. Pokud chcete přidat všechny parametry datových členů, musí se inicializovat [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams) datový člen, který obsahuje číslo parametru datové členy. Vložit `m_nParams` inicializace mimo závorky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Výměna polí záznamu (Record Field Exchange – RFX)](../../data/odbc/record-field-exchange-rfx.md)
+[Výměna pole záznamu (Record Field Exchange – RFX)](../../data/odbc/record-field-exchange-rfx.md)

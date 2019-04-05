@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-ms.openlocfilehash: d292dd53ff3009a571dd5b0a1ba102e75b648e4d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6df5b63291fbc54d6c12a116fccd8372e8ced9a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533598"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026107"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
@@ -61,7 +61,7 @@ __interface IMyI
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy rozhraní](interface-attributes.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - importidl attribute
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
-ms.openlocfilehash: 8d0d891f74da8df2351b0a861fb7501e72f5e2de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9db62d4f2a36b8cc0592c924b113077a758915c0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587165"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029911"
 ---
 # <a name="importidl"></a>importidl
 
@@ -52,11 +52,11 @@ Můžete chtít použít **importidl –**, například, pokud chcete použít s
 |**Platí pro**|Kdekoli|
 |**Opakovatelné**|Ne|
 |**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádné|
+|**Neplatné atributy**|Žádný|
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Atributy kompilátoru](compiler-attributes.md)<br/>
 [Samostatné atributy](stand-alone-attributes.md)<br/>

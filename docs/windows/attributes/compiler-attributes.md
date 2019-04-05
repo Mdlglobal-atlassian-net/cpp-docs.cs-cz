@@ -5,12 +5,12 @@ helpviewer_keywords:
 - cl.exe compiler, attributes
 - attributes [C++/CLI], compiler
 ms.assetid: 53cd9bee-1521-48ec-b171-80feac2096cc
-ms.openlocfilehash: 8fef953a520572b42e69a48ea391282c7b70ba44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea4d3119a640c0642664210384c297e011104411
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667360"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030814"
 ---
 # <a name="compiler-attributes"></a>Atributy kompilátoru
 
@@ -29,8 +29,8 @@ Atributy kompilátoru poskytují širokou škálu funkcí.
 |[library_block](library-block.md)|Umístí konstrukci uvnitř bloku knihovny souboru IDL.|
 |[no_injected_text](no-injected-text.md)|Zabrání kompilátoru vkládání kódu v důsledku použití atributu.|
 |[satype](satype.md)|Určuje datový typ `SAFEARRAY`.|
-|[version](version-cpp.md)|Určuje konkrétní verzi napříč několika verzemi rozhraní nebo tříd.|
+|[verze](version-cpp.md)|Určuje konkrétní verzi napříč několika verzemi rozhraní nebo tříd.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Atributy podle skupin](attributes-by-group.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ll_lshift intrinsic
 - __ll_lshift intrinsic
 ms.assetid: fe98f733-426d-44b3-8f24-5d0d6d44bd94
-ms.openlocfilehash: 2f0c8f257188dbd3b03ece4269b8c353c7fa26f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a91ce5db46b19be570f8d48a584a2caeabcc163
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625976"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024462"
 ---
 # <a name="lllshift"></a>__ll_lshift
 
@@ -85,9 +85,9 @@ int main()
 
 **Poznámka:** není bez znaménka verze operaci posunutí doleva. Důvodem je, že `__ll_lshift` již používá nepodepsané vstupního parametru. Na rozdíl od posunutí doprava není žádný znak závislost pro posunutí doleva, protože nejméně významných bitů ve výsledku je vždycky nastavený na hodnotu nula, bez ohledu na znaménko hodnoty posunutí.
 
-**Specifické pro END Microsoft**
+**END Specifické pro Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [__ll_rshift](../intrinsics/ll-rshift.md)<br/>
 [__ull_rshift](../intrinsics/ull-rshift.md)<br/>

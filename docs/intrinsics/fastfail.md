@@ -2,16 +2,16 @@
 title: __fastfail
 ms.date: 11/04/2016
 ms.assetid: 9cd32639-e395-4c75-9f3a-ac3ba7f49921
-ms.openlocfilehash: e96d981be5c5186d6cc472cc8f4dffcbf1c2b7bf
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: a9f75cbf3c572401ef26fb16ced221eb24d35534
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849473"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041497"
 ---
 # <a name="fastfail"></a>__fastfail
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
 Okamžitě ukončí volající proces s minimální režií.
 
@@ -23,7 +23,7 @@ void __fastfail(unsigned int code);
 
 #### <a name="parameters"></a>Parametry
 
-*code*<br/>
+*kód*<br/>
 [in] A `FAST_FAIL_<description>` Symbolická konstanta ze souboru winnt.h nebo wdm.h, který označuje důvod ukončení procesu.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -61,8 +61,8 @@ Podpora pro nativní rychlé převzetí služeb při mechanismus začalo v syst�
 
 **Soubor hlaviček** \<intrin.h >
 
-**Specifické pro END Microsoft**
+**END Specifické pro Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

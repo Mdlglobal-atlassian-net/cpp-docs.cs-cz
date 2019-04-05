@@ -8,12 +8,12 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 0b29f435ab91b10e010e956d26fb8d2d116edc6e
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 45afdf4b3b557b560d7597b1bb4330c36a1fc84d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563118"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025082"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>Klávesy akcelerátoru (C++ Editor obrázků pro ikony)
 
@@ -40,7 +40,7 @@ V následující tabulce jsou klávesy akcelerátoru pro editor příkazy bitov�
 |Image.LineTool|**Ctrl** + **L**|Kreslení rovné čáry s vybraný tvar, velikostí a barvou.|
 |Image.MagnificationTool|**Ctrl** + **M**|Aktivuje **Magnify** nástroj, který umožňuje zvětšit konkrétní část obrázku.|
 |Image.Magnify|**CTRL** + **Shift** + **M**|Přepíná mezi aktuálním zvětšení a zvětšením 1:1.|
-|Image.NewImageType|**Vložit**|Spustí [nový \<zařízení > obrázku dialogové okno](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md) pomocí které můžete vytvořit image pro typ jinou image.|
+|Image.NewImageType|**Insert**|Spustí [nový \<zařízení > obrázku dialogové okno](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md) pomocí které můžete vytvořit image pro typ jinou image.|
 |Image.NextColor|**Ctrl** + **]**<br /><br /> - nebo -<br /><br /> **CTRL** + **šipka doprava**|Změní vykreslení barvy popředí na následující barvu z palety.|
 |Image.NextRightColor|**Ctrl** + **Shift** + **]**<br /><br /> - nebo -<br /><br /> **SHIFT** + **Ctrl** + **šipka doprava**|Změní vykreslení barvy pozadí na následující barvu z palety.|
 |Image.OutlinedEllipseTool|**SHIFT** + **Alt** + **P**|Kreslení plné elipsy s ohraničením.|
@@ -64,12 +64,12 @@ V následující tabulce jsou klávesy akcelerátoru pro editor příkazy bitov�
 
 ## <a name="requirements"></a>Požadavky
 
-Žádná
+Žádné
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Editor obrázků pro ikony](../windows/image-editor-for-icons.md)<br/>
 [Postupy: Vytvoření ikony nebo jiného obrázku](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
-[Postupy: Úprava obrázku](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[Postupy: Použití nástroje pro kreslení](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
-[Postupy: Práce s barvou](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[Postupy: Upravit obrázek](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Postupy: Použití nástroje kreslení](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Postupy: Pracovat s barvou](../windows/working-with-color-image-editor-for-icons.md)<br/>

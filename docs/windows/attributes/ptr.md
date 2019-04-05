@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ptr attribute
 ms.assetid: 95eaea57-a5be-45f6-a612-ba2c9bc4645a
-ms.openlocfilehash: 7ed08403f32e5e4609266975c5c479a7b758fe89
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c712a2d9c85e0fe8fd8c4dbad5c7f48812ab1a2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506207"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030125"
 ---
 # <a name="ptr"></a>ptr
 
@@ -40,11 +40,11 @@ Podívejte se na příklad pro [defaultvalue](defaultvalue.md) ukázkový použ�
 |**Platí pro**|Rozhraní parametrů, metody rozhraní **– typedef**|
 |**Opakovatelné**|Ne|
 |**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádné|
+|**Neplatné atributy**|Žádný|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy rozhraní](interface-attributes.md)<br/>

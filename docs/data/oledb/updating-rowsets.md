@@ -7,12 +7,12 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: fb915a2f61c2adfedc41630e637f6b5beee30768
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7151d897469993b2f9be3575eb11a08844af3c69
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424359"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028357"
 ---
 # <a name="updating-rowsets"></a>Aktualizace sad řádků
 
@@ -203,7 +203,7 @@ Například pokud první `Update` volání chyběly výše uvedený kód, řáde
 
 Nakonec jeden z hlavních důvodů odložit změny je možné vrátit zpět, je. Volání [CRowset::Undo](../../data/oledb/crowset-undo.md) vrátí zpět stav změna v místní mezipaměti na stav úložiště dat než čekající změny byly provedeny. Je důležité si uvědomit, že `Undo` nelze vrátit zpět stav místní mezipaměti o jeden krok (stavu před pouze nejnovější změny); místo toho vymaže místní mezipaměť pro tento řádek. Navíc `Undo` má vliv jenom na aktuálním řádku.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Práce s šablonami příjemců OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
 [CRowset – třída](../../data/oledb/crowset-class.md)<br/>

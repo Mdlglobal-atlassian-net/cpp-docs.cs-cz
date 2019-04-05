@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, const_seg
 - const_seg pragma
 ms.assetid: 1eb58ee2-fb0e-4a39-9621-699c8f5ef957
-ms.openlocfilehash: ce932b068f5751b7cf1ceab969312defd18336f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c58f154f5e1ab6906b45d59f454a7dc2b5c0bfbe
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648341"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029619"
 ---
 # <a name="constseg"></a>const_seg
 Určuje segment kde [const](../cpp/const-cpp.md) proměnné, které jsou uloženy v souboru .obj.
@@ -26,7 +26,7 @@ Určuje segment kde [const](../cpp/const-cpp.md) proměnné, které jsou uložen
 
 ### <a name="parameters"></a>Parametry
 
-**push**<br/>
+**nabízených oznámení**<br/>
 (Volitelné) Vloží záznam do zásobníku vnitřního kompilátoru. A **nabízených** může mít *identifikátor* a *segment-name*.
 
 **POP**<br/>
@@ -40,7 +40,7 @@ Pomocí *identifikátor* vyjmout několik záznamů lze jedním z jedné **pop**
 "*segment-name*"<br/>
 (Volitelné) Název segmentu. Při použití s **pop**, je zásobník odebrán a *segment-name* stane aktivním názvem segmentu.
 
-"*segmentu třídy*"<br/>
+"*segment-class*"<br/>
 (Volitelné) Zahrnuto z důvodu kompatibility s jazykem C++ starším než verze 2.0. Ignorováno.
 
 ## <a name="remarks"></a>Poznámky
@@ -95,6 +95,6 @@ Zobrazit [/SECTION](../build/reference/section-specify-section-attributes.md) se
 
 Můžete také určit oddíly pro inicializovaná data ([data_seg](../preprocessor/data-seg.md)), neinicializovaná data ([bss_seg](../preprocessor/bss-seg.md)) a funkce ([code_seg](../preprocessor/code-seg.md)).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

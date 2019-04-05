@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
-ms.openlocfilehash: c22d04f7a799ea720fb7d69ffc1aa21ddf9db55c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f051fe577087d81515ddf0b44dfb15ad0fb2c616
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468429"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041374"
 ---
 # <a name="ref-c"></a>ref (C++)
 
@@ -56,7 +56,7 @@ __interface IFireTabCtrl
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy klíčových slov typedef, enum, union a struct](typedef-enum-union-and-struct-attributes.md)<br/>
