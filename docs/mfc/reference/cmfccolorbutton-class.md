@@ -45,10 +45,10 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
 ms.openlocfilehash: c0c9ad79342f2013aa071240c684fce168e55c9e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58779999"
 ---
 # <a name="cmfccolorbutton-class"></a>Cmfccolorbutton – třída
@@ -65,13 +65,13 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCColorButton::CMFCColorButton](#cmfccolorbutton)|Sestaví nový `CMFCColorButton` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCColorButton::EnableAutomaticButton](#enableautomaticbutton)|Povolí nebo zakáže "automatické" tlačítko, které je umístěn nad regulární barvy tlačítka. (Standardní systém automatické tlačítko má název **automatické**.)|
 |[CMFCColorButton::EnableOtherButton](#enableotherbutton)|Povolí nebo zakáže "other" tlačítko, který je umístěn pod regulární barvy tlačítka. (Standardní systém je označené jako "other" tlačítko **Další barvy**.)|
@@ -263,7 +263,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] Odkazuje na kontext zařízení, která se použije k vykreslení obrázku tlačítku.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Obdélník, který vazeb na tlačítko.
 
 *uiState*<br/>
@@ -355,7 +355,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*color*<br/>
+*barva*<br/>
 [in] Hodnota RGB.
 
 ### <a name="remarks"></a>Poznámky
@@ -372,10 +372,10 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Parametry
 
-*color*<br/>
+*barva*<br/>
 [in] Hodnota barvy RGB.
 
-*strName*<br/>
+*%{strName/*<br/>
 [in] Název barvy.
 
 ### <a name="remarks"></a>Poznámky
@@ -465,7 +465,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*color*<br/>
+*barva*<br/>
 [in] Barva vybraná uživatelem.
 
 ### <a name="remarks"></a>Poznámky
@@ -476,11 +476,11 @@ virtual void UpdateColor(COLORREF color);
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCButton – třída](../../mfc/reference/cmfcbutton-class.md)<br/>
-[CMFCColorBar – třída](../../mfc/reference/cmfccolorbar-class.md)<br/>
+[Cmfcbutton – třída](../../mfc/reference/cmfcbutton-class.md)<br/>
+[Cmfccolorbar – třída](../../mfc/reference/cmfccolorbar-class.md)<br/>
 [CMFCColorButton::OnShowColorPopup](#onshowcolorpopup)<br/>
 [COLORREF](/windows/desktop/gdi/colorref)<br/>
-[CPalette – třída](../../mfc/reference/cpalette-class.md)<br/>
-[CArray – třída](../../mfc/reference/carray-class.md)<br/>
+[CPalette Class](../../mfc/reference/cpalette-class.md)<br/>
+[Carray – třída](../../mfc/reference/carray-class.md)<br/>
 [CList – třída](../../mfc/reference/clist-class.md)<br/>
 [CString –](../../atl-mfc-shared/reference/cstringt-class.md)

@@ -25,10 +25,10 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
 ms.openlocfilehash: c1dcf89811fa5225283cb5bec120d3bd2fdfb003
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58773785"
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit Class
@@ -52,7 +52,7 @@ class CMFCMaskedEdit : public CEdit
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCMaskedEdit::DisableMask](#disablemask)|Zakáže ověřování uživatelského vstupu.|
 |[CMFCMaskedEdit::EnableGetMaskedCharsOnly](#enablegetmaskedcharsonly)|Určuje, zda `GetWindowText` metoda načte pouze maskované znaků.|
@@ -95,13 +95,13 @@ Následující příklad ukazuje, jak nastavit masku (například telefonní č�
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CEdit](../../mfc/reference/cedit-class.md)
+[Cedit –](../../mfc/reference/cedit-class.md)
 
 [CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md)
 
@@ -340,4 +340,4 @@ Tato metoda předefinuje [CWnd::SetWindowText](../../mfc/reference/cwnd-class.md
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CEdit – třída](../../mfc/reference/cedit-class.md)
+[Cedit – třída](../../mfc/reference/cedit-class.md)

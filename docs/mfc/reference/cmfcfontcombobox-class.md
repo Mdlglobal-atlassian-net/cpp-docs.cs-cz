@@ -17,10 +17,10 @@ helpviewer_keywords:
 - CMFCFontComboBox [MFC], m_bDrawUsingFont
 ms.assetid: 9a53fb0c-7b45-486d-8187-2a4c723d9fbb
 ms.openlocfilehash: ccc4e545b2274d6dbb9989cfb9c047de819b8d32
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781299"
 ---
 # <a name="cmfcfontcombobox-class"></a>Cmfcfontcombobox – třída
@@ -44,7 +44,7 @@ class CMFCFontComboBox : public CComboBox
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |`CMFCFontComboBox::CompareItem`|Volá se rozhraním, aby určení relativní pozice nové položky v poli seřazený seznam aktuální prvek pole se seznamem písma. (Přepíše [CComboBox::CompareItem](../../mfc/reference/ccombobox-class.md#compareitem).)|
 |`CMFCFontComboBox::DrawItem`|Volá se rozhraním, chcete-li nakreslit zadanou položku v aktuální prvek pole se seznamem písma. (Přepíše [CComboBox::DrawItem](../../mfc/reference/ccombobox-class.md#drawitem).)|
@@ -66,13 +66,13 @@ Použití `CMFCFontComboBox` objektu v dialogovém okně, přidejte `CMFCFontCom
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CComboBox](../../mfc/reference/ccombobox-class.md)
+[CComboBox –](../../mfc/reference/ccombobox-class.md)
 
 [CMFCFontComboBox](../../mfc/reference/cmfcfontcombobox-class.md)
 
@@ -197,5 +197,5 @@ Následující příklad ukazuje způsob použití `Setup` metodu `CMFCFontCombo
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCToolBarFontComboBox – třída](../../mfc/reference/cmfctoolbarfontcombobox-class.md)<br/>
-[CMFCFontInfo – třída](../../mfc/reference/cmfcfontinfo-class.md)
+[Cmfctoolbarfontcombobox – třída](../../mfc/reference/cmfctoolbarfontcombobox-class.md)<br/>
+[CMFCFontInfo Class](../../mfc/reference/cmfcfontinfo-class.md)

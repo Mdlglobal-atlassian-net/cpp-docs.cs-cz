@@ -1,6 +1,6 @@
 ---
 title: memchr, wmemchr
-ms.date: 11/04/2016
+ms.date: 03/31/2019
 apiname:
 - wmemchr
 - memchr
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: cbd8b80ed42a6532fb7161fab7217a772a2cb777
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: 00a1f0d12047cc388b56074a657ffd739e986827
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57209896"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58866913"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
@@ -78,7 +78,7 @@ Ukazatel do vyrovnávací paměti.
 *c*<br/>
 Znak k vyhledání.
 
-*Počet*<br/>
+*count*<br/>
 Počet znaků ke kontrole.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -87,9 +87,9 @@ Pokud je úspěšná, vrátí ukazatel na první umístění *c* v *vyrovnávac�
 
 ## <a name="remarks"></a>Poznámky
 
-`memchr` a `wmemchr` vyhledá první výskyt *c* v prvním *počet* bajtů *vyrovnávací paměti*. Zastaví najde *c* nebo kdy se má ohlásilo první *počet* bajtů.
+`memchr` a `wmemchr` vyhledá první výskyt *c* v prvním *počet* znaků *vyrovnávací paměti*. Zastaví najde *c* nebo kdy se má ohlásilo první *počet* znaků.
 
-V jazyce C, tyto funkce přijímají **const** ukazatele pro první argument. V jazyce C++ jsou k dispozici dvě přetížení. Přetížení přijímající ukazatel na **const** vrací ukazatel na **const**; verze, která přijímá ukazatel na jinou hodnotu než**const** vrací ukazatel na jinou hodnotu než**const** . _CRT_CONST_CORRECT_OVERLOADS – makro je definováno, pokud **const** a jiných-**const** verze těchto funkcí jsou k dispozici. Pokud budete potřebovat non -**const** chování pro obě overloadsin C++ jazyka C++, definujte symbol _CONST_RETURN.
+V jazyce C, tyto funkce přijímají **const** ukazatele pro první argument. V jazyce C++ jsou k dispozici dvě přetížení. Přetížení přijímající ukazatel na **const** vrací ukazatel na **const**; verze, která přijímá ukazatel na jinou hodnotu než**const** vrací ukazatel na jinou hodnotu než**const** . Makro \_CRT\_CONST\_OPRAVTE\_PŘETÍŽENÍ je definováno, pokud **const** a jiných-**const** verze těchto funkcí jsou k dispozici. Pokud budete potřebovat non -**const** chování pro obě přetížení C++ v jazyce C++, definujte symbol \_CONST\_vrátit.
 
 ## <a name="requirements"></a>Požadavky
 

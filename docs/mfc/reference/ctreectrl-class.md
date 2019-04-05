@@ -163,10 +163,10 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
 ms.openlocfilehash: 3819e861b7a5e6ff27fe632a33413b588a5a4835
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58782001"
 ---
 # <a name="ctreectrl-class"></a>Ctreectrl – třída
@@ -183,13 +183,13 @@ class CTreeCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CTreeCtrl::CTreeCtrl](#ctreectrl)|Vytvoří `CTreeCtrl` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CTreeCtrl::Create](#create)|Vytvoří ovládací prvek stromového zobrazení a připojí ho k `CTreeCtrl` objektu.|
 |[CTreeCtrl::CreateDragImage](#createdragimage)|Vytvoří přetahování rastrového obrázku pro položku zobrazení domény stromové struktury.|
@@ -285,9 +285,9 @@ Další informace o používání `CTreeCtrl`, naleznete v tématu:
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -314,7 +314,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Určuje styl ovládacího prvku zobrazení stromu. Použít styly oken, je popsáno v [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)a libovolnou kombinaci [stromové zobrazení – styly ovládacích prvků](/windows/desktop/Controls/tree-view-control-window-styles) jak je popsáno v sadě Windows SDK.
 
-*Rect*<br/>
+*rect*<br/>
 Určuje velikost a umístění ovládací prvek zobrazení stromové struktury. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 *pParentWnd*<br/>
@@ -360,7 +360,7 @@ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené s
 *dwStyle*<br/>
 Určuje styl ovládacího prvku zobrazení stromu. Použít styly oken, je popsáno v [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)a libovolnou kombinaci [stromové zobrazení – styly ovládacích prvků](/windows/desktop/Controls/tree-view-control-window-styles) jak je popsáno v sadě Windows SDK.
 
-*Rect*<br/>
+*rect*<br/>
 Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -850,7 +850,7 @@ BOOL GetItemImage(
 *: hItem*<br/>
 Popisovač položky, jejichž bitové kopie má být načtena.
 
-*nImage*<br/>
+*nvybrán Nobrázek*<br/>
 Celé číslo, které přijímá index obrázku položky v seznamu obrázků ovládací prvek zobrazení stromové struktury.
 
 *nSelectedImage*<br/>
@@ -1347,7 +1347,7 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pt*<br/>
+*PT*<br/>
 Souřadnice klienta bodu k testování.
 
 *pFlags*<br/>
@@ -1366,7 +1366,7 @@ Při volání této funkce je *pt* parametr určuje souřadnice bodu k testován
 
 |||
 |-|-|
-|Hodnota|Význam|
+|Value|Význam|
 |TVHT_ABOVE|Nad oblastí klienta.|
 |TVHT_BELOW|Pod klientské oblasti.|
 |TVHT_NOWHERE|V oblasti klienta, ale pod poslední položkou.|
@@ -1427,13 +1427,13 @@ Celé číslo určující atributy, které chcete nastavit. Zobrazit `TVITEM` st
 *lpszItem*<br/>
 Adresa řetězec obsahující text položky.
 
-*nImage*<br/>
+*nvybrán Nobrázek*<br/>
 Index obrázku položky v seznamu obrázků ovládací prvek zobrazení stromové struktury.
 
 *nSelectedImage*<br/>
 Index obrázku vybrané položky v seznamu obrázků ovládací prvek zobrazení stromové struktury.
 
-*nState*<br/>
+*nInformace*<br/>
 Určuje hodnoty pro položky stavy. Viz Zobrazení stavů ovládacího prvku strom položek v sadě Windows SDK pro seznam příslušné stavy.
 
 *nStateMask*<br/>
@@ -1713,7 +1713,7 @@ COLORREF SetBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parametry
 
-*CLR*<br/>
+*clr*<br/>
 COLORREF hodnotu, která obsahuje novou barvou pozadí. Pokud je tato hodnota -1, ovládací prvek se vrátí k použití systémových barev pro barvu pozadí.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1739,7 +1739,7 @@ BOOL SetCheck(
 *: hItem*<br/>
 HTREEITEM přijímat změny stavu zaškrtnutí.
 
-*fCheck*<br/>
+*Podívejte se*<br/>
 Označuje, zda je položka ovládací prvek stromu bude zaškrtnuto nebo nezaškrtnuto. Ve výchozím nastavení `SetCheck` nastaví položku, která se má zkontrolovat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1925,13 +1925,13 @@ Celé číslo určující atributy, které chcete nastavit. Najdete v článku `
 *lpszItem*<br/>
 Adresa řetězec obsahující text položky.
 
-*nImage*<br/>
+*nvybrán Nobrázek*<br/>
 Index obrázku položky v seznamu obrázků ovládací prvek zobrazení stromové struktury. Najdete v článku `iImage` člena `TVITEM` struktury.
 
 *nSelectedImage*<br/>
 Index obrázku vybrané položky v seznamu obrázků ovládací prvek zobrazení stromové struktury. Najdete v článku `iSelectedImage` člena `TVITEM` struktury.
 
-*nState*<br/>
+*nInformace*<br/>
 Určuje hodnoty pro položky stavy. Najdete v článku `State` člena `TVITEM` struktury.
 
 *nStateMask*<br/>
@@ -2054,7 +2054,7 @@ BOOL SetItemImage(
 *: hItem*<br/>
 Popisovač položky, jejichž bitové kopie má být nastavena.
 
-*nImage*<br/>
+*nvybrán Nobrázek*<br/>
 Index obrázku položky v seznamu obrázků ovládací prvek zobrazení stromové struktury.
 
 *nSelectedImage*<br/>
@@ -2092,7 +2092,7 @@ BOOL SetItemState(
 *: hItem*<br/>
 Popisovač položky, jejichž stav je nastavit.
 
-*nState*<br/>
+*nInformace*<br/>
 Určuje nové stavy položky.
 
 *nStateMask*<br/>
@@ -2229,7 +2229,7 @@ COLORREF SetTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parametry
 
-*CLR*<br/>
+*clr*<br/>
 COLORREF hodnotu, která obsahuje novou barvu textu. Pokud je tento argument -1, ovládací prvek se vrátí k použití systémových barev pro barvu textu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2342,6 +2342,6 @@ Funkce porovnání struktura, `lpfnCompare`, musí vracet zápornou hodnotu. Pok
 ## <a name="see-also"></a>Viz také:
 
 [Ukázka CMNCTRL1 knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
-[CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
+[Třída CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CImageList – třída](../../mfc/reference/cimagelist-class.md)
+[Cimagelist – třída](../../mfc/reference/cimagelist-class.md)

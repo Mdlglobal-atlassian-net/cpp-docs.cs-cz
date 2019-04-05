@@ -31,10 +31,10 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
 ms.openlocfilehash: 01a320fbcd9760bab484f3c75553613852ca9aed
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58778088"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog Class
@@ -72,7 +72,7 @@ class CPageSetupDialog : public CCommonDialog
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CPageSetupDialog::m_psd](#m_psd)|Struktura používané k úpravám `CPageSetupDialog` objektu.|
 
@@ -91,9 +91,9 @@ Pokud `DoModal` vrátí IDOK, můžete použít několik `CPageSetupDialog`pro �
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -325,7 +325,7 @@ virtual UINT OnDrawPage(
 *pDC*<br/>
 Ukazatel na kontext zařízení tiskárny.
 
-*nMessage*<br/>
+*nZpráva*<br/>
 Určuje zprávu, s upozorněním oblasti na stránce se vykreslí. Může být jedna z následujících akcí:
 
 - WM_PSD_FULLPAGERECT oblasti celou stránku.
@@ -406,5 +406,5 @@ Přepsání této funkce můžete přizpůsobit kreslení obrázku. Je-li přeps
 ## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
-[CCommonDialog – třída](../../mfc/reference/ccommondialog-class.md)<br/>
+[Ccommondialog – třída](../../mfc/reference/ccommondialog-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

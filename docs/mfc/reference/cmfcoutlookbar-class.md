@@ -39,10 +39,10 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
 ms.openlocfilehash: fc1281db0271393ec0538e26c2a2d2af09c99f7a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58775254"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar – třída
@@ -59,14 +59,14 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |`CMFCOutlookBar::CMFCOutlookBar`|Výchozí konstruktor.|
 |`CMFCOutlookBar::~CMFCOutlookBar`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCOutlookBar::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Určuje, zda lze zničit prázdné podokno s kartami. (Přepíše [CBaseTabbedPane::AllowDestroyEmptyTabbedPane](../../mfc/reference/cbasetabbedpane-class.md#allowdestroyemptytabbedpane).)|
 |[CMFCOutlookBar::CanAcceptPane](#canacceptpane)|Určuje, zda lze ukotvit jiného podokna na podokno panelu aplikace Outlook. (Přepíše CDockablePane::CanAcceptPane.)|
@@ -165,9 +165,9 @@ Použití [CMFCOutlookBar::SetMode2003](#setmode2003) pro povolení režimu Outl
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -267,7 +267,7 @@ virtual BOOL Create(
 *pParentWnd*<br/>
 [in] Určuje ukazatel do nadřazeného okna. Nesmí být NULL.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Určuje velikost a pozice v pixelech panelu aplikace outlook.
 
 *nID*<br/>
@@ -511,7 +511,7 @@ BOOL RemoveCustomPage(
 
 ### <a name="parameters"></a>Parametry
 
-*uiPage*<br/>
+*Element uiPage*<br/>
 [in] Z nuly vycházející index stránky v nadřazené okno aplikace Outlook.
 
 *pTargetWnd*<br/>
@@ -577,6 +577,6 @@ Tento režim je ve výchozím nastavení zakázána.
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CBaseTabbedPane – třída](../../mfc/reference/cbasetabbedpane-class.md)<br/>
-[CMFCOutlookBarTabCtrl – třída](../../mfc/reference/cmfcoutlookbartabctrl-class.md)<br/>
-[CMFCOutlookBarPane – třída](../../mfc/reference/cmfcoutlookbarpane-class.md)
+[Cbasetabbedpane – třída](../../mfc/reference/cbasetabbedpane-class.md)<br/>
+[Cmfcoutlookbartabctrl – třída](../../mfc/reference/cmfcoutlookbartabctrl-class.md)<br/>
+[Cmfcoutlookbarpane – třída](../../mfc/reference/cmfcoutlookbarpane-class.md)

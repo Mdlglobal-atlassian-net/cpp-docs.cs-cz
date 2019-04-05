@@ -47,10 +47,10 @@ helpviewer_keywords:
 - CMFCPopupMenuBar [MFC], m_bDisableSideBarInXPMode
 ms.assetid: 4c93c459-7f70-4240-8c63-280bb811e374
 ms.openlocfilehash: acb1e2be7d40e5e0c569fffcc92c57c750be8f91
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776775"
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar Class
@@ -67,7 +67,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCPopupMenuBar::AdjustSizeImmediate](#adjustsizeimmediate)|Okamžitě přepočítá rozložení na stavového řádku. (Přepíše [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate).)|
 |[CMFCPopupMenuBar::BuildOrigItems](#buildorigitems)|Načte položky místní nabídky z nabídky prostředků.|
@@ -107,9 +107,9 @@ Následující příklad ukazuje, jak inicializovat `CMFCPopupMenuBar` objektu z
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -195,7 +195,7 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*point*<br/>
+*Bod*<br/>
 [in] Bod na obrazovce.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -446,5 +446,5 @@ void StartPopupMenuTimer(
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCColorBar – třída](../../mfc/reference/cmfccolorbar-class.md)<br/>
-[CMFCPopupMenu – třída](../../mfc/reference/cmfcpopupmenu-class.md)
+[Cmfccolorbar – třída](../../mfc/reference/cmfccolorbar-class.md)<br/>
+[CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md)

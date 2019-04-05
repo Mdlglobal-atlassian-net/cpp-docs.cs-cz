@@ -121,10 +121,10 @@ helpviewer_keywords:
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
 ms.openlocfilehash: 2d87ff67000fb5b70c0a5c965638875e6f50b22c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58774180"
 ---
 # <a name="cdocument-class"></a>CDocument – třída
@@ -141,13 +141,13 @@ class CDocument : public CCmdTarget
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDocument::CDocument](#cdocument)|Vytvoří `CDocument` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDocument::AddView](#addview)|Zobrazení se připojí k tomuto dokumentu.|
 |[CDocument::BeginReadChunks](#beginreadchunks)|Inicializuje bloku dat čtení.|
@@ -200,7 +200,7 @@ class CDocument : public CCmdTarget
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDocument::OnFileSendMail](#onfilesendmail)|Odešle e-mailovou zprávu se na dokument připojený.|
 |[CDocument::OnUpdateFileSendMail](#onupdatefilesendmail)|Povolit příkaz Odeslat e-mailu, pokud je k dispozici podpora e-mailu.|
@@ -246,9 +246,9 @@ Další informace o `CDocument`, naleznete v tématu [serializace](../../mfc/ser
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
 
 `CDocument`
 
@@ -375,7 +375,7 @@ virtual POSITION FindChunk(
 *identifikátor GUID*<br/>
 Určuje identifikátor GUID blok, který se má najít.
 
-*pid*<br/>
+*Identifikátor PID*<br/>
 Určuje identifikátor PID blok k vyhledání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -734,7 +734,7 @@ Události dokumentu může ovlivnit více tříd. Tato metoda je zodpovědná za
 
 V následující tabulce jsou uvedeny možné hodnoty pro *deEvent* a události, které odpovídají.
 
-|Hodnota|Odpovídající události|
+|Value|Odpovídající události|
 |-----------|-------------------------|
 |`onAfterNewDocument`|Vytvořil se nový dokument.|
 |`onAfterOpenDocument`|Byl otevřen nový dokument.|
@@ -753,7 +753,7 @@ virtual void OnDrawThumbnail(
 
 ### <a name="parameters"></a>Parametry
 
-*dc*<br/>
+*řadič domény*<br/>
 Odkaz na kontext zařízení.
 
 *lprcBounds*<br/>
@@ -1070,10 +1070,10 @@ virtual void RemoveChunk(
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor GUID*<br/>
+*Guid*<br/>
 Určuje identifikátor GUID blok, který se má odebrat.
 
-*Pid*<br/>
+*Identifikátor PID*<br/>
 Určuje identifikátor PID blok má být odebrán.
 
 ### <a name="remarks"></a>Poznámky

@@ -37,10 +37,10 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
 ms.openlocfilehash: d714159aa9fd52df682b1e5f3dbf3957bbef1b91
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58777334"
 ---
 # <a name="cstatusbar-class"></a>Cstatusbar – třída
@@ -63,7 +63,7 @@ class CStatusBar : public CControlBar
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CStatusBar::CommandToIndex](#commandtoindex)|Získá index pro ID daného indikátoru.|
 |[CStatusBar::Create](#create)|Vytvoří stavového řádku, připojí se k `CStatusBar` objekt a nastaví počáteční výška písma a panelem.|
@@ -112,9 +112,9 @@ Další informace o používání `CStatusBar`, najdete v článku [stav panelu 
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -508,7 +508,7 @@ Po zavolání `SetPaneText`, je nutné přidat obslužnou rutinu aktualizace už
 
 [Ukázky knihovny MFC CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [Ukázka DLGCBR32 knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
-[CControlBar – třída](../../mfc/reference/ccontrolbar-class.md)<br/>
+[Ccontrolbar – třída](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CStatusBarCtrl – třída](../../mfc/reference/cstatusbarctrl-class.md)<br/>
-[CControlBar – třída](../../mfc/reference/ccontrolbar-class.md)
+[CStatusBarCtrl Class](../../mfc/reference/cstatusbarctrl-class.md)<br/>
+[Ccontrolbar – třída](../../mfc/reference/ccontrolbar-class.md)

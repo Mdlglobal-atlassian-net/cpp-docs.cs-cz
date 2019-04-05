@@ -33,10 +33,10 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
 ms.openlocfilehash: 6f864a37c46158ab98776cd96d9f50d7cfaeb13d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776346"
 ---
 # <a name="cspinbuttonctrl-class"></a>Cspinbuttonctrl – třída
@@ -53,7 +53,7 @@ class CSpinButtonCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CSpinButtonCtrl::CSpinButtonCtrl](#cspinbuttonctrl)|Vytvoří `CSpinButtonCtrl` objektu.|
 
@@ -90,9 +90,9 @@ Další informace o používání `CSpinButtonCtrl`, naleznete v tématu [ovlád
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -119,7 +119,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Určuje styl tlačítka číselníku. Použijte libovolnou kombinaci styly ovládací prvek typu číselník tlačítek do ovládacího prvku. Tyto styly jsou popsány v [– styly ovládacího prvku číselník](/windows/desktop/Controls/up-down-control-styles) v sadě Windows SDK.
 
-*Rect*<br/>
+*rect*<br/>
 Určuje velikost a umístění tlačítko číselníku. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura
 
 *pParentWnd*<br/>
@@ -159,7 +159,7 @@ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířených
 *dwStyle*<br/>
 Určuje styl tlačítka číselníku. Použijte libovolnou kombinaci styly ovládací prvek typu číselník tlačítek do ovládacího prvku. Tyto styly jsou popsány v [– styly ovládacího prvku číselník](/windows/desktop/Controls/up-down-control-styles) v sadě Windows SDK.
 
-*Rect*<br/>
+*rect*<br/>
 Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -271,10 +271,10 @@ void GetRange32(
 
 ### <a name="parameters"></a>Parametry
 
-*lower*<br/>
+*Nižší*<br/>
 Odkaz na celé číslo, které přijímá dolní mez pro ovládací prvek.
 
-*upper*<br/>
+*horní*<br/>
 Odkaz na celé číslo, které přijímá horní mez pro ovládací prvek.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -400,6 +400,6 @@ Horní a dolní limity pro ovládací prvek. Pro `SetRange`, ani jedno z těchto
 ## <a name="see-also"></a>Viz také:
 
 [Ukázka CMNCTRL2 knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
-[CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
+[Třída CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CSliderCtrl – třída](../../mfc/reference/csliderctrl-class.md)
+[Csliderctrl – třída](../../mfc/reference/csliderctrl-class.md)

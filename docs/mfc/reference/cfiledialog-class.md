@@ -133,10 +133,10 @@ helpviewer_keywords:
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
 ms.openlocfilehash: f74d883fa0dcdce025345848caf49069736ee0fa
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58779206"
 ---
 # <a name="cfiledialog-class"></a>Cfiledialog – třída
@@ -159,7 +159,7 @@ class CFileDialog : public CCommonDialog
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CFileDialog::AddCheckButton](#addcheckbutton)|Přidá tlačítko zaškrtnutí do dialogového okna.|
 |[CFileDialog::AddComboBox](#addcombobox)|Přidá pole se seznamem do dialogového okna.|
@@ -214,7 +214,7 @@ class CFileDialog : public CCommonDialog
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CFileDialog::OnButtonClicked](#onbuttonclicked)|Volá se, když dojde ke kliknutí na tlačítko.|
 |[CFileDialog::OnCheckButtonToggled](#oncheckbuttontoggled)|Volá se, když je toto políčko zaškrtnuto a nezaškrtnuto.|
@@ -286,9 +286,9 @@ Další informace o tom, jak používat `CFileDialog`, naleznete v tématu [spol
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -893,7 +893,7 @@ CString GetNextPathName(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pos*<br/>
+*POS*<br/>
 Odkaz na POZICI hodnotu vrácenou předchozím `GetNextPathName` nebo `GetStartPosition` volání funkce. Hodnota NULL, pokud bylo dosaženo konce seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1640,5 +1640,5 @@ Tento příklad aktualizuje `CFileDialog` před zobrazením. Před aktualizací 
 
 ## <a name="see-also"></a>Viz také:
 
-[CCommonDialog – třída](../../mfc/reference/ccommondialog-class.md)<br/>
+[Ccommondialog – třída](../../mfc/reference/ccommondialog-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

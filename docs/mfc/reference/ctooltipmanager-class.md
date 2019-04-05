@@ -17,10 +17,10 @@ helpviewer_keywords:
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
 ms.openlocfilehash: e8b88f2722f5a4379276f13c2ef159aa4d120533
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776502"
 ---
 # <a name="ctooltipmanager-class"></a>CTooltipManager Class
@@ -51,7 +51,7 @@ Použití [cmfctooltipctrl – třída](../../mfc/reference/cmfctooltipctrl-clas
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)
 
@@ -208,5 +208,5 @@ void UpdateTooltips();
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCToolTipCtrl – třída](../../mfc/reference/cmfctooltipctrl-class.md)<br/>
-[CMFCToolTipInfo – třída](../../mfc/reference/cmfctooltipinfo-class.md)
+[CMFCToolTipCtrl Class](../../mfc/reference/cmfctooltipctrl-class.md)<br/>
+[CMFCToolTipInfo Class](../../mfc/reference/cmfctooltipinfo-class.md)

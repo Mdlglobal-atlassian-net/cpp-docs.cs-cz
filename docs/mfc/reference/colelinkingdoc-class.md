@@ -17,10 +17,10 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
 ms.openlocfilehash: c5076ceef0c6626fac0232fadf6818edd78b4ccf
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58773551"
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc Class
@@ -81,13 +81,13 @@ Další informace o používání `COleLinkingDoc`, najdete v článcích [konte
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
 
 [CDocument](../../mfc/reference/cdocument-class.md)
 
-[COleDocument](../../mfc/reference/coledocument-class.md)
+[Coledocument –](../../mfc/reference/coledocument-class.md)
 
 `COleLinkingDoc`
 
@@ -194,6 +194,6 @@ Při zavírání souboru s názvem byste měli volat tuto funkci, ale obvykle ne
 ## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
-[COleDocument – třída](../../mfc/reference/coledocument-class.md)<br/>
+[Coledocument – třída](../../mfc/reference/coledocument-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CDocTemplate – třída](../../mfc/reference/cdoctemplate-class.md)

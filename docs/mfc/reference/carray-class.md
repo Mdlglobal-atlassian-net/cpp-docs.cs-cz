@@ -43,10 +43,10 @@ helpviewer_keywords:
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
 ms.openlocfilehash: f82dbf7dce2e14bf760bb76d23d23f667797ee0f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58779843"
 ---
 # <a name="carray-class"></a>Carray – třída
@@ -72,13 +72,13 @@ Parametr šablony určující typ argumentu, který se používá pro přístup 
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CArray::CArray](#carray)|Vytvoří prázdné pole.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CArray::Add](#add)|Přidá prvek na konec pole. v případě potřeby se zvětší pole.|
 |[CArray::Append](#append)|Připojí další pole k poli; v případě potřeby roste pole|
@@ -100,7 +100,7 @@ Parametr šablony určující typ argumentu, který se používá pro přístup 
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[– operátor&#91;&#93;](#operator_at)|Nastaví nebo získá prvek na zadaném indexu.|
 
@@ -126,7 +126,7 @@ Další informace o tom, jak používat `CArray`, najdete v článku [kolekce](.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 `CArray`
 
@@ -633,5 +633,5 @@ Pomocí této funkce můžete nastavit velikost vašeho pole, než začnete pou�
 [Ukázky knihovny MFC shromažďování](../../overview/visual-cpp-samples.md)<br/>
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CObArray – třída](../../mfc/reference/cobarray-class.md)<br/>
+[Cobarray – třída](../../mfc/reference/cobarray-class.md)<br/>
 [Pomocné rutiny třídy kolekce](../../mfc/reference/collection-class-helpers.md)

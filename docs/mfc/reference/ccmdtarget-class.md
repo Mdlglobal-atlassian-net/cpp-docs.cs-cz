@@ -47,10 +47,10 @@ helpviewer_keywords:
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
 ms.openlocfilehash: 9314717fab53b1a89b87d657ec617a4c6bd45b8b
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776190"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget – třída
@@ -109,7 +109,7 @@ Mapy, podobně jako mapy zpráv odesílání, se používají k vystavení autom
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 `CCmdTarget`
 
@@ -527,11 +527,11 @@ void RestoreWaitCursor();
 [Ukázky knihovny MFC acdual –](../../overview/visual-cpp-samples.md)<br/>
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CCmdUI – třída](../../mfc/reference/ccmdui-class.md)<br/>
+[Ccmdui – třída](../../mfc/reference/ccmdui-class.md)<br/>
 [CDocument – třída](../../mfc/reference/cdocument-class.md)<br/>
 [CDocTemplate – třída](../../mfc/reference/cdoctemplate-class.md)<br/>
 [CWinApp – třída](../../mfc/reference/cwinapp-class.md)<br/>
-[CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
+[Třída CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [CView – třída](../../mfc/reference/cview-class.md)<br/>
 [CFrameWnd – třída](../../mfc/reference/cframewnd-class.md)<br/>
 [COleDispatchDriver – třída](../../mfc/reference/coledispatchdriver-class.md)

@@ -3,10 +3,10 @@ title: Přehled programování v C++ v systému Windows
 ms.date: 03/28/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
 ms.openlocfilehash: 35842ae73e59685946afe31e88729a36a6431768
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58772901"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Přehled programování v C++ v systému Windows
@@ -97,17 +97,17 @@ Systém Visual Studio obsahuje výkonný ladicí program pro nativní kód, nás
 |Název|Popis|
 |-----------|-----------------|
 |[Návod: Vytvoření standardního programu C++](walkthrough-creating-a-standard-cpp-program-cpp.md)| Vytvořte konzolovou aplikaci Windows.|
-|[Návod: Vytváření desktopových aplikací Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Vytvoření jednoduché aplikace klasické pracovní plochy Windows.|
+|[Návod: Vytváření aplikací klasické pracovní plochy Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Vytvoření jednoduché aplikace klasické pracovní plochy Windows.|
 |[Desktopový Průvodce pro Windows](windows-desktop-wizard.md)|Chcete-li vytvořit nové projekty Windows pomocí průvodce.|
-|[Knihovna ATL (Active Template Library)](../atl/TOC.md)|Použití knihovny ATL vytváření komponent modelu COM v jazyce C++.|
-|[Knihovna MFC (Microsoft Foundation Classes)](../mfc/TOC.md)|Použití knihovny MFC k vytvoření velké nebo malé aplikací Windows pomocí dialogových oken a ovládacích prvků|
-|[Sdílené třídy knihoven ATL a MFC](../atl-mfc-shared/TOC.md)|Pomocí třídy například CString, které jsou sdíleny v ATL a MFC.|
+|[Knihovna aktivní šablony (knihovny ATL)](../atl/TOC.md)|Použití knihovny ATL vytváření komponent modelu COM v jazyce C++.|
+|[Microsoft Foundation Classes (MFC)](../mfc/TOC.md)|Použití knihovny MFC k vytvoření velké nebo malé aplikací Windows pomocí dialogových oken a ovládacích prvků|
+|[Třídy sdílené knihovny ATL a MFC](../atl-mfc-shared/TOC.md)|Pomocí třídy například CString, které jsou sdíleny v ATL a MFC.|
 |[Přístup k datům](../data/data-access-in-cpp.md)| OLE DB a rozhraní ODBC|
 |[Text a řetězce](../text/text-and-strings-in-visual-cpp.md)|Různými typy řetězců na Windows.|
-|[Prostředky pro vytvoření hry s použitím rozhraní DirectX](resources-for-creating-a-game-using-directx.md)
+|[Prostředky pro vytvoření hry s použitím rozhraní DirectX](resources-for-creating-a-game-using-directx.md)
 |[Postupy: Použití sady Windows 10 SDK v desktopové aplikaci Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows SDK|
 |[Práce se zdrojovými soubory](working-with-resource-files.md)|Jak přidat obrázky, ikony, tabulek řetězců a dalších prostředků pro aplikace klasické pracovní plochy.|
-|[Prostředky pro vytvoření hry s použitím rozhraní DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Obsahuje odkazy na obsah pro vytváření her v C++.|
+|[Prostředky pro vytvoření hry s použitím rozhraní DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Obsahuje odkazy na obsah pro vytváření her v C++.|
 |[Postupy: Použití sady Windows 10 SDK v desktopové aplikaci Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Obsahuje kroky pro vytvoření projektu pro sestavení pomocí Windows 10 SDK.|
 |[Nasazení nativních aplikací klasické pracovní plochy](deploying-native-desktop-applications-visual-cpp.md)|Nasazení nativních aplikací pro Windows.|
 
@@ -117,8 +117,8 @@ Systém Visual Studio obsahuje výkonný ladicí program pro nativní kód, nás
 |Název|Popis|
 |-----------|-----------------|
 |[Visual C++](../overview/visual-cpp-in-visual-studio.md)|Nadřazené téma pro obsah pro vývojáře v jazyce Visual C++.|
-[Vývoj pro .NET v C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Vytváření obálek pro nativní knihovny C++, které umožňují komunikaci s aplikacemi .NET a součásti.|
+[Vývoj pro .NET v jazyce C + +/ CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Vytváření obálek pro nativní knihovny C++, které umožňují komunikaci s aplikacemi .NET a součásti.|
 |[Přípony komponent pro .NET a UPW](../extensions/component-extensions-for-runtime-platforms.md)|Referenční informace pro prvky syntaxe sdílí C + +/ CX a C + +/ CLI.|
 |[Univerzální aplikace pro Windows (C++)](universal-windows-apps-cpp.md)|Psaní aplikací UPW pomocí C + +/ CX nebo Windows Runtime šablony knihovny (WRL).|
-|[Atributy C++ pro COM a .NET](attributes/cpp-attributes-com-net.md)|Nestandardní atributy Windows – pouze pro programování pomocí rozhraní .NET nebo modelu COM.|
+|[Atributy C++ COM a .NET](attributes/cpp-attributes-com-net.md)|Nestandardní atributy Windows – pouze pro programování pomocí rozhraní .NET nebo modelu COM.|
 

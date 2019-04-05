@@ -25,10 +25,10 @@ helpviewer_keywords:
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
 ms.openlocfilehash: f2a2e385a9f210b3644d7fade00b72c4befa47ef
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58778868"
 ---
 # <a name="cbrush-class"></a>Cbrush – třída
@@ -51,7 +51,7 @@ class CBrush : public CGdiObject
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CBrush::CreateBrushIndirect](#createbrushindirect)|Inicializuje štětce styl, barvu a vzoru určenému v [logbrush –](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) struktury.|
 |[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|Inicializuje štětcem pomocí vzoru určené bitmap nezávislých na zařízení (DIB).|
@@ -64,7 +64,7 @@ class CBrush : public CGdiObject
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CBrush::operator HBRUSH](#operator_hbrush)|Vrátí popisovač Windows připojené k `CBrush` objektu.|
 
@@ -78,7 +78,7 @@ Další informace o `CBrush`, naleznete v tématu [grafické objekty](../../mfc/
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CGdiObject](../../mfc/reference/cgdiobject-class.md)
 
@@ -436,7 +436,7 @@ Další informace o použití grafických objektů najdete v tématu [objektů g
 ## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC PROPDLG](../../overview/visual-cpp-samples.md)<br/>
-[CGdiObject – třída](../../mfc/reference/cgdiobject-class.md)<br/>
+[Cgdiobject – třída](../../mfc/reference/cgdiobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CBitmap – třída](../../mfc/reference/cbitmap-class.md)<br/>
+[Cbitmap – třída](../../mfc/reference/cbitmap-class.md)<br/>
 [CDC – třída](../../mfc/reference/cdc-class.md)

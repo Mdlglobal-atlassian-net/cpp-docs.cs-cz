@@ -35,10 +35,10 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
 ms.openlocfilehash: 9f5289491a7c14749865cfd163417440bc542aba
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776528"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd – třída
@@ -117,9 +117,9 @@ Další informace o `CMDIFrameWnd`, naleznete v tématu [rámce Windows](../../m
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -194,7 +194,7 @@ CMDIChildWnd* CreateNewChild(
 *pClass*<br/>
 Run-time Třída podřízeného okna, který se má vytvořit.
 
-*nResource*<br/>
+*Prostředků*<br/>
 ID sdílené prostředky přidružené k podřízené okno.
 
 *hMenu*<br/>
@@ -464,5 +464,5 @@ Podívejte se na příklad pro [CMDIFrameWnd::MDICascade](#mdicascade).
 [Ukázky knihovny MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [CFrameWnd – třída](../../mfc/reference/cframewnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
+[Třída CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [CMDIChildWnd – třída](../../mfc/reference/cmdichildwnd-class.md)

@@ -79,10 +79,10 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
 ms.openlocfilehash: 818ce55e44d91520e568308a1a1e8a1fa0c8658d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780389"
 ---
 # <a name="cmfcribbongallery-class"></a>Cmfcribbongallery – třída
@@ -100,13 +100,13 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCRibbonGallery::CMFCRibbonGallery](#cmfcribbongallery)|Vytvoří a inicializuje `CMFCRibbonGallery` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCRibbonGallery::AddGroup](#addgroup)|Přidá novou skupinu do galerie.|
 |[CMFCRibbonGallery::AddSubItem](#addsubitem)|Přidá novou položku nabídky do rozevírací nabídky.|
@@ -820,5 +820,5 @@ Chcete-li zjistit, konkrétní položku, uživatel vybral v galerii, zavolejte [
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCRibbonButton – třída](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
-[CMFCRibbonGalleryMenuButton – třída](../../mfc/reference/cmfcribbongallerymenubutton-class.md)
+[Cmfcribbonbutton – třída](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
+[Cmfcribbongallerymenubutton – třída](../../mfc/reference/cmfcribbongallerymenubutton-class.md)

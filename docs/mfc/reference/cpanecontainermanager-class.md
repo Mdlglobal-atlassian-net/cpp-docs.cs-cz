@@ -107,10 +107,10 @@ helpviewer_keywords:
 - CPaneContainerManager [MFC], StoreRecentDockSiteInfo
 ms.assetid: 3d974c15-a62f-4648-bb5b-cc31ab7950af
 ms.openlocfilehash: 887b771ee76034256c77aa3d038da96696eca6ed
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58774586"
 ---
 # <a name="cpanecontainermanager-class"></a>CPaneContainerManager Class
@@ -195,7 +195,7 @@ Následující příklad ukazuje, jak získat odkaz na `CPaneContainerManager` o
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md)
 
@@ -881,5 +881,5 @@ virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
-[CPaneContainer – třída](../../mfc/reference/cpanecontainer-class.md)<br/>
-[CPaneDivider – třída](../../mfc/reference/cpanedivider-class.md)
+[CPaneContainer Class](../../mfc/reference/cpanecontainer-class.md)<br/>
+[Cpanedivider – třída](../../mfc/reference/cpanedivider-class.md)

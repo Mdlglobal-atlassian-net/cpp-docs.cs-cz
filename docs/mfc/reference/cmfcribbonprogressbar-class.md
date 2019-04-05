@@ -27,10 +27,10 @@ helpviewer_keywords:
 - CMFCRibbonProgressBar [MFC], SetRange
 ms.assetid: de3d9f2e-ed59-480e-aa7d-08a33ab36c67
 ms.openlocfilehash: 7c16217378cb8825ca4605687770de177e720c1d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58778166"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Cmfcribbonprogressbar – třída
@@ -77,7 +77,7 @@ Následující příklad ukazuje, jak použít různé metody v `CMFCRibbonProgr
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [Cmfcribbonbaseelement –](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
@@ -250,7 +250,7 @@ void SetRange(
 
 ### <a name="parameters"></a>Parametry
 
-*nMin*<br/>
+*Nminimum*<br/>
 [in] Určuje minimální hodnotu rozsahu.
 
 *nMax*<br/>
@@ -264,5 +264,5 @@ Tuto metodu použijte k definování rozsahu indikátoru průběhu nastavením m
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCRibbonBaseElement – třída](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
+[Cmfcribbonbaseelement – třída](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
 [CMFCRibbonBar – třída](../../mfc/reference/cmfcribbonbar-class.md)

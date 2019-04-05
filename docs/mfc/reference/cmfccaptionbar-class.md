@@ -67,10 +67,10 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
 ms.openlocfilehash: c6385cb6bd3eec3ce5fefe0475d771c774777820
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781871"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar – třída
@@ -114,7 +114,7 @@ class CMFCCaptionBar : public CPane
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCCaptionBar::OnDrawBackground](#ondrawbackground)|Volá se rozhraním, aby vyplnit pozadí záhlaví.|
 |[CMFCCaptionBar::OnDrawBorder](#ondrawborder)|Volá se rozhraním, chcete-li nakreslit ohraničení záhlaví.|
@@ -155,9 +155,9 @@ Následující příklad ukazuje, jak použít různé metody v `CMFCCaptionBar`
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -356,7 +356,7 @@ virtual void OnDrawBackground(
 *pDC*<br/>
 [in] Ukazatel na kontext zařízení záhlaví.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ohraničující obdélník tak, aby vyplnil.
 
 ### <a name="remarks"></a>Poznámky
@@ -380,7 +380,7 @@ virtual void OnDrawBorder(
 *pDC*<br/>
 [in] Kontext zařízení, která se používá k zobrazení ohraničení.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ohraničující obdélník.
 
 ### <a name="remarks"></a>Poznámky
@@ -406,7 +406,7 @@ virtual void OnDrawButton(
 *pDC*<br/>
 [in] Ukazatel na kontext zařízení, který se používá k zobrazení tlačítka.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ohraničující obdélník na tlačítko.
 
 *strButton*<br/>
@@ -434,7 +434,7 @@ virtual void OnDrawImage(
 *pDC*<br/>
 [in] Ukazatel na kontext zařízení, který se používá k zobrazení obrázku.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Určuje ohraničující obdélník bitové kopie.
 
 ### <a name="remarks"></a>Poznámky
@@ -457,7 +457,7 @@ virtual void OnDrawText(
 *pDC*<br/>
 [in] Ukazatel na kontext zařízení, který se používá k zobrazení tlačítka.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ohraničující obdélník textu.
 
 *strText*<br/>

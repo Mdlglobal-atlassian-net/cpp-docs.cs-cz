@@ -25,10 +25,10 @@ helpviewer_keywords:
 - COleInsertDialog [MFC], m_io
 ms.assetid: a9ec610b-abde-431e-bd01-c40159a66dbb
 ms.openlocfilehash: 27bf98ea4fe6951624873c1463d50f37558c9234
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781481"
 ---
 # <a name="coleinsertdialog-class"></a>Coleinsertdialog – třída
@@ -63,7 +63,7 @@ class COleInsertDialog : public COleDialog
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleInsertDialog::m_io](#m_io)|Struktura typu OLEUIINSERTOBJECT, které ovládá chování dialogového okna.|
 
@@ -80,9 +80,9 @@ Další informace o dialogových oken OLE konkrétní, najdete v článku [dialo
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -305,6 +305,6 @@ Další informace najdete v tématu [OLEUIINSERTOBJECT](/windows/desktop/api/ole
 ## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
-[COleDialog – třída](../../mfc/reference/coledialog-class.md)<br/>
+[Coledialog – třída](../../mfc/reference/coledialog-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[COleDialog – třída](../../mfc/reference/coledialog-class.md)
+[Coledialog – třída](../../mfc/reference/coledialog-class.md)

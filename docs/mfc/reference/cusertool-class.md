@@ -31,10 +31,10 @@ helpviewer_keywords:
 - CUserTool [MFC], m_strLabel
 ms.assetid: 7c287d3e-d012-488d-b4e1-aa0f83f294bb
 ms.openlocfilehash: 5bb0ae073b722c97e8e30158f8f7832fd88b2fbc
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58779037"
 ---
 # <a name="cusertool-class"></a>Cusertool – třída
@@ -70,7 +70,7 @@ class CUserTool : public CObject
 
 ### <a name="data-members"></a>Datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CUserTool::m_strArguments](#m_strarguments)|Argumenty příkazového řádku pro nástroj pro uživatele.|
 |[CUserTool::m_strInitialDirectory](#m_strinitialdirectory)|Počáteční adresář pro nástroj pro uživatele.|
@@ -88,7 +88,7 @@ Následující příklad ukazuje, jak vytvořit nástroj z `CUserToolsManager` o
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CUserTool](../../mfc/reference/cusertool-class.md)
 
@@ -268,4 +268,4 @@ Voláním této metody lze načíst ikonu zobrazený na položku nabídky. Tato 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
 [CWinAppEx – třída](../../mfc/reference/cwinappex-class.md)<br/>
-[CUserToolsManager – třída](../../mfc/reference/cusertoolsmanager-class.md)
+[CUserToolsManager Class](../../mfc/reference/cusertoolsmanager-class.md)

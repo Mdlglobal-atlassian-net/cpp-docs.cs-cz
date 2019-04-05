@@ -51,10 +51,10 @@ helpviewer_keywords:
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
 ms.openlocfilehash: 383222e4892bccc653f010ce4939bca23f2adc93
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780948"
 ---
 # <a name="clist-class"></a>CList – třída
@@ -78,7 +78,7 @@ class CList : public CObject
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CList::AddHead](#addhead)|Přidá k začátku seznamu (novou vedoucí díky) elementu (nebo všechny prvky v jiném seznamu).|
 |[CList::AddTail](#addtail)|Přidá na konec seznamu (umožňuje nové funkce tail) elementu (nebo všechny prvky v jiném seznamu).|
@@ -130,7 +130,7 @@ Další informace o používání `CList`, najdete v článku [kolekce](../../mf
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 `CList`
 
@@ -291,7 +291,7 @@ const TYPE& GetAt(POSITION position) const;
 *TYP*<br/>
 Parametr šablony určující typ objektu v seznamu.
 
-*Pozice*<br/>
+*umístění*<br/>
 Pozice prvku, který chcete získat v seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -515,7 +515,7 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parametry
 
-*Pozice*<br/>
+*umístění*<br/>
 Hodnota pozice vrácené předchozím `GetNext`, `GetPrev`, nebo `Find` volání členské funkce.
 
 *ARG_TYPE*<br/>
@@ -542,7 +542,7 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parametry
 
-*Pozice*<br/>
+*umístění*<br/>
 Hodnota pozice vrácené předchozím `GetNext`, `GetPrev`, nebo `Find` volání členské funkce.
 
 *ARG_TYPE*<br/>
@@ -605,7 +605,7 @@ void RemoveAt(POSITION position);
 
 ### <a name="parameters"></a>Parametry
 
-*Pozice*<br/>
+*umístění*<br/>
 Pozice prvku, který chcete odebrat ze seznamu.
 
 ### <a name="remarks"></a>Poznámky
@@ -676,7 +676,7 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parametry
 
-*pos*<br/>
+*POS*<br/>
 Pozice prvku, který chcete nastavit.
 
 *ARG_TYPE*<br/>
@@ -700,5 +700,5 @@ Ujistěte se, že hodnota pozice představuje platná pozice v seznamu. Pokud je
 [Ukázky knihovny MFC shromažďování](../../overview/visual-cpp-samples.md)<br/>
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CMap – třída](../../mfc/reference/cmap-class.md)<br/>
-[CArray – třída](../../mfc/reference/carray-class.md)
+[Cmap – třída](../../mfc/reference/cmap-class.md)<br/>
+[Carray – třída](../../mfc/reference/carray-class.md)

@@ -15,10 +15,10 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
 ms.openlocfilehash: bc164125f867cf3e2f27b74e69b826cbed31ff1d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781793"
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap Class
@@ -47,7 +47,7 @@ Třída objekt uložený v objektu map.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CTypedPtrMap::GetNextAssoc](#getnextassoc)|Získá další prvek pro iterace.|
 |[CTypedPtrMap::Lookup](#lookup)|Vrátí `KEY` na základě `VALUE`.|
@@ -56,7 +56,7 @@ Třída objekt uložený v objektu map.
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CTypedPtrMap::operator \[ \]](#operator_at)|Vloží prvek do objektu map.|
 
@@ -103,7 +103,7 @@ Určuje vrácené klíč načtený elementu.
 *HODNOTA*<br/>
 Parametr šablony určující typ hodnoty na mapě.
 
-*rValue*<br/>
+*r-hodnoty*<br/>
 Určuje, vrácená hodnota elementu načtený.
 
 ### <a name="remarks"></a>Poznámky
@@ -127,13 +127,13 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 *BASE_CLASS*<br/>
 Parametr šablony určující základní třídy tuto mapu třídy.
 
-*key*<br/>
+*klíč*<br/>
 Klíč elementu, který chcete vyhledávat.
 
 *HODNOTA*<br/>
 Parametr šablony určující typ hodnot uložených na této mapě.
 
-*rValue*<br/>
+*r-hodnoty*<br/>
 Určuje, vrácená hodnota elementu načtený.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -160,7 +160,7 @@ Parametr šablony určující typ hodnot uložených na této mapě.
 *BASE_CLASS*<br/>
 Parametr šablony určující základní třídy tuto mapu třídy.
 
-*key*<br/>
+*klíč*<br/>
 Klíč elementu, který chcete vyhledávat nebo vytvořili v objektu map.
 
 ### <a name="remarks"></a>Poznámky
@@ -180,7 +180,7 @@ BOOL RemoveKey(KEY key);
 *KEY*<br/>
 Parametr šablony určující typ klíče na mapě.
 
-*key*<br/>
+*klíč*<br/>
 Klíč elementu, který chcete odebrat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -204,7 +204,7 @@ void SetAt(KEY key, VALUE newValue);
 *KEY*<br/>
 Parametr šablony určující typ klíče na mapě.
 
-*key*<br/>
+*klíč*<br/>
 Určuje hodnotu klíče newValue.
 
 *newValue*<br/>
@@ -218,7 +218,7 @@ Podrobné poznámky, naleznete v tématu [CMapStringToOb::SetAt](../../mfc/refer
 
 [Ukázky knihovny MFC shromažďování](../../overview/visual-cpp-samples.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CMapPtrToPtr – třída](../../mfc/reference/cmapptrtoptr-class.md)<br/>
-[CMapPtrToWord – třída](../../mfc/reference/cmapptrtoword-class.md)<br/>
-[CMapWordToPtr – třída](../../mfc/reference/cmapwordtoptr-class.md)<br/>
-[CMapStringToPtr – třída](../../mfc/reference/cmapstringtoptr-class.md)
+[CMapPtrToPtr Class](../../mfc/reference/cmapptrtoptr-class.md)<br/>
+[CMapPtrToWord Class](../../mfc/reference/cmapptrtoword-class.md)<br/>
+[CMapWordToPtr Class](../../mfc/reference/cmapwordtoptr-class.md)<br/>
+[CMapStringToPtr Class](../../mfc/reference/cmapstringtoptr-class.md)

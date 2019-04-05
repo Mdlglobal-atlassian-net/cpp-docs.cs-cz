@@ -45,10 +45,10 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
 ms.openlocfilehash: 5fccfbca9fe8c31070f3eb9f208c09cb3722b9b9
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780220"
 ---
 # <a name="cmfccolormenubutton-class"></a>Cmfccolormenubutton – třída
@@ -71,7 +71,7 @@ class CMFCColorMenuButton : public CMFCToolBarMenuButton
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCColorMenuButton::EnableAutomaticButton](#enableautomaticbutton)|Povolí nebo zakáže "automatické" tlačítko, které je umístěn nad regulární barvy tlačítka. (Standardní systém automatické tlačítko má název **automatické**.)|
 |[CMFCColorMenuButton::EnableDocumentColors](#enabledocumentcolors)|Umožňuje zobrazovat konkrétní dokumenty barvy místo systémových barev.|
@@ -89,7 +89,7 @@ class CMFCColorMenuButton : public CMFCToolBarMenuButton
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCColorMenuButton::CopyFrom](#copyfrom)|Zkopíruje jiné tlačítko panelu nástrojů na tlačítko aktuální.|
 |[CMFCColorMenuButton::CreatePopupMenu](#createpopupmenu)|Vytvoří dialogové okno Výběr barvy.|
@@ -112,7 +112,7 @@ Následující příklad ukazuje, jak vytvořit a nakonfigurovat pomocí různý
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)
 
@@ -390,7 +390,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Obdélník, který oblasti, ke které se měl překreslit za rozsahem.
 
 *pImages*<br/>
@@ -429,7 +429,7 @@ virtual int OnDrawOnCustomizeList(
 *pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Obdélník, který za rozsahem tlačítko, které chcete kreslit.
 
 *bSelected*<br/>
@@ -481,7 +481,7 @@ virtual void SetColor(
 
 ### <a name="parameters"></a>Parametry
 
-*CLR*<br/>
+*clr*<br/>
 [in] Hodnota barvy RGB.
 
 *bNotify*<br/>
@@ -506,7 +506,7 @@ static void SetColorByCmdID(
 *uiCmdID*<br/>
 [in] ID prostředku barva tlačítek nabídky.
 
-*color*<br/>
+*barva*<br/>
 [in] Hodnota barvy RGB.
 
 ##  <a name="setcolorname"></a>  CMFCColorMenuButton::SetColorName
@@ -521,10 +521,10 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Parametry
 
-*color*<br/>
+*barva*<br/>
 [in] Hodnota RGB barvy, jehož název se změní.
 
-*strName*<br/>
+*%{strName/*<br/>
 [in] Nový název barvy.
 
 ### <a name="remarks"></a>Poznámky
@@ -548,7 +548,7 @@ void SetColumnsNumber(int nColumns);
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCColorBar – třída](../../mfc/reference/cmfccolorbar-class.md)<br/>
-[CMFCToolBar – třída](../../mfc/reference/cmfctoolbar-class.md)<br/>
-[CMFCToolBarsCustomizeDialog – třída](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)<br/>
-[CMFCColorButton – třída](../../mfc/reference/cmfccolorbutton-class.md)
+[Cmfccolorbar – třída](../../mfc/reference/cmfccolorbar-class.md)<br/>
+[Cmfctoolbar – třída](../../mfc/reference/cmfctoolbar-class.md)<br/>
+[Cmfctoolbarscustomizedialog – třída](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)<br/>
+[Cmfccolorbutton – třída](../../mfc/reference/cmfccolorbutton-class.md)

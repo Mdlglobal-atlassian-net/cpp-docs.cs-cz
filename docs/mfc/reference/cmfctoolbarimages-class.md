@@ -141,10 +141,10 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
 ms.openlocfilehash: 210432b8ec193efccc0bf2338089dbccca310726
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776411"
 ---
 # <a name="cmfctoolbarimages-class"></a>Cmfctoolbarimages – třída
@@ -259,7 +259,7 @@ Následující příklad ukazuje, jak nakonfigurovat `CMFCToolBarImages` pomocí
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 `CMFCToolBarImages`
 
@@ -326,7 +326,7 @@ int AddImage(
 *bSetBitPerPixel*<br/>
 [in] Hodnota TRUE, pokud `CMFCToolBarImages` objekt používá barevnou hloubku (bitů na pixel) novou image; FALSE v případě `CMFCToolbarImages` udržuje aktuální barevnou hloubku objektu.
 
-*imageList*<br/>
+*Ovládací prvek ImageList*<br/>
 [in] Odkaz na `CMFCToolbarImages` objekt, který obsahuje bitovou kopii přidat.
 
 *nIndex*<br/>
@@ -402,7 +402,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
 
 ### <a name="parameters"></a>Parametry
 
-*imageList*<br/>
+*Ovládací prvek ImageList*<br/>
 [in] Seznam obrázků použitého jako zdroj pro obrázky panelu nástrojů.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -585,7 +585,7 @@ static void FillDitheredRect(
 *pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Souřadnice obdélník tak, aby vyplnil.
 
 ### <a name="remarks"></a>Poznámky
@@ -1180,7 +1180,7 @@ static void SetDisabledImageAlpha(BYTE nValue);
 
 ### <a name="parameters"></a>Parametry
 
-*nValue*<br/>
+*nHodnota*<br/>
 [in] Nová hodnota alfa kanálu.
 
 ### <a name="remarks"></a>Poznámky
@@ -1386,5 +1386,5 @@ Hodnota TRUE v případě změny velikosti úspěšně. v opačném případě F
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
-[CMFCToolBar – třída](../../mfc/reference/cmfctoolbar-class.md)<br/>
-[CMFCToolBarButton – třída](../../mfc/reference/cmfctoolbarbutton-class.md)
+[Cmfctoolbar – třída](../../mfc/reference/cmfctoolbar-class.md)<br/>
+[CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md)

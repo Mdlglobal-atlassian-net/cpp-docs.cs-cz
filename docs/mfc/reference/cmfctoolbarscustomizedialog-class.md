@@ -25,10 +25,10 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
 ms.openlocfilehash: e1dd6fff9fa4f03dbf93510da26c78c73e86c6ab
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780961"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>Cmfctoolbarscustomizedialog – třída
@@ -80,7 +80,7 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::CheckToolsValidity](#checktoolsvalidity)|Volá se rozhraním, které určuje, jestli je platný seznam uživatelem definované nástroje.|
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::OnAfterChangeTool](#onafterchangetool)|Volá se rozhraním, když se změní vlastnosti uživatelsky definovaného nástroje.|
@@ -102,9 +102,9 @@ Následující příklad ukazuje, jak použít různé metody v `CMFCToolBarsCus
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -586,7 +586,7 @@ virtual BOOL OnEditToolbarMenuImage(
 *pWndParent*<br/>
 [in] Ukazatel do nadřazeného okna.
 
-*bitmap*<br/>
+*bitmapa*<br/>
 [in] Odkaz na objekt bitmap upravit.
 
 *nBitsPerPixel*<br/>
@@ -754,4 +754,4 @@ Kategorie nastavení hlavního názvu uživatele není aktuálně používané r
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CPropertySheet – třída](../../mfc/reference/cpropertysheet-class.md)
+[Cpropertysheet – třída](../../mfc/reference/cpropertysheet-class.md)

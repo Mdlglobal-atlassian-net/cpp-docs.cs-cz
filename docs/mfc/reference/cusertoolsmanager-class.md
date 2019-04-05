@@ -45,10 +45,10 @@ helpviewer_keywords:
 - CUserToolsManager [MFC], SetFilter
 ms.assetid: bdfa37ae-efca-4616-abb5-9d0dcd2d335b
 ms.openlocfilehash: 857e86184e1b7ea399787520e9c4701547185133
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58777087"
 ---
 # <a name="cusertoolsmanager-class"></a>CUserToolsManager Class
@@ -71,7 +71,7 @@ class CUserToolsManager : public CObject
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CUserToolsManager::CreateNewTool](#createnewtool)|Vytvoří nový uživatelský nástroj.|
 |[CUserToolsManager::FindTool](#findtool)|Vrací ukazatel `CMFCUserTool` objekt, který je přidružen ID zadaného příkazu.|
@@ -114,7 +114,7 @@ Následující příklad ukazuje, jak načíst odkaz na `CUserToolsManager` obje
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 `CUserToolsManager`
 
@@ -491,4 +491,4 @@ void SetFilter(const CString& strFilter);
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
 [CWinAppEx – třída](../../mfc/reference/cwinappex-class.md)<br/>
-[CUserTool – třída](../../mfc/reference/cusertool-class.md)
+[Cusertool – třída](../../mfc/reference/cusertool-class.md)

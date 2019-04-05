@@ -151,10 +151,10 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
 ms.openlocfilehash: 93ace0388981f429ac4a422947fbdaae8cdb8f24
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781975"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl Class
@@ -180,7 +180,7 @@ class CMFCPropertyGridCtrl : public CWnd
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |`CMFCPropertyGridCtrl::accHitTest`|Volá se rozhraním, načtěte podřízený element nebo podřízený objekt v daném bodě na obrazovce. (Přepíše [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|
 |`CMFCPropertyGridCtrl::accLocation`|Volá se rozhraním, k načtení zadaného objektu aktuální umístění na obrazovce. (Přepíše [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|
@@ -284,10 +284,10 @@ V následující tabulce jsou uvedeny čtyři typy vlastností výběr:
 
 |Třída|Popis|
 |-----------|-----------------|
-|[CMFCPropertyGridProperty – třída](../../mfc/reference/cmfcpropertygridproperty-class.md)|Vlastnost obecné účely, která se používá k určení hodnotu řetězce, logické hodnoty, kalendářní data a tak dále.|
-|[CMFCPropertyGridColorProperty – třída](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)|Vlastnost, která slouží k výběru hodnotu barvy.|
-|[CMFCPropertyGridFileProperty – třída](../../mfc/reference/cmfcpropertygridfileproperty-class.md)|Vlastnost, která slouží k výběru souboru.|
-|[CMFCPropertyGridFontProperty – třída](../../mfc/reference/cmfcpropertygridfontproperty-class.md)|Vlastnost, která slouží k výběru písma.|
+|[CMFCPropertyGridProperty Class](../../mfc/reference/cmfcpropertygridproperty-class.md)|Vlastnost obecné účely, která se používá k určení hodnotu řetězce, logické hodnoty, kalendářní data a tak dále.|
+|[CMFCPropertyGridColorProperty Class](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)|Vlastnost, která slouží k výběru hodnotu barvy.|
+|[CMFCPropertyGridFileProperty Class](../../mfc/reference/cmfcpropertygridfileproperty-class.md)|Vlastnost, která slouží k výběru souboru.|
+|[CMFCPropertyGridFontProperty Class](../../mfc/reference/cmfcpropertygridfontproperty-class.md)|Vlastnost, která slouží k výběru písma.|
 
 ## <a name="illustrations"></a>Obrázky
 
@@ -307,9 +307,9 @@ Následující příklad ukazuje, jak nakonfigurovat pomocí různých metod v o
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -461,7 +461,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 [in] Bitová kombinace (nebo) [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Souřadnice ohraničující obdélník, který určuje velikost a umístění okna v klientovi *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -1053,7 +1053,7 @@ CMFCPropertyGridProperty* HitTest(
 
 ### <a name="parameters"></a>Parametry
 
-*pt*<br/>
+*PT*<br/>
 [in] Bod, v souřadnicích klienta.
 
 *pnArea*<br/>
@@ -1272,7 +1272,7 @@ virtual void OnClickButton(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*point*<br/>
+*Bod*<br/>
 [in] Bod, v souřadnicích klienta.
 
 ### <a name="remarks"></a>Poznámky
@@ -1309,7 +1309,7 @@ virtual void OnDrawDescription(
 *pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Obdélník, který určuje, kam se nakreslila oblast popisu.
 
 ### <a name="remarks"></a>Poznámky
@@ -1608,7 +1608,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*color*<br/>
+*barva*<br/>
 [in] Hodnota barvy RGB.
 
 ### <a name="remarks"></a>Poznámky

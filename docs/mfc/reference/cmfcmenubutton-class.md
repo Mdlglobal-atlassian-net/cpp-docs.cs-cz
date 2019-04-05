@@ -23,10 +23,10 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_nMenuResult
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
 ms.openlocfilehash: cbdf4005ee1a0249e7ed2b5f1d50621fb951f64f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58777360"
 ---
 # <a name="cmfcmenubutton-class"></a>Cmfcmenubutton – třída
@@ -49,7 +49,7 @@ class CMFCMenuButton : public CMFCButton
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCMenuButton::PreTranslateMessage](#pretranslatemessage)|Volá se rozhraním před odesláním přeložit zprávy okna. (Přepíše `CMFCButton::PreTranslateMessage`.)|
 |[CMFCMenuButton::SizeToContent](#sizetocontent)|Změní velikost tlačítka podle velikosti jeho textu a obrázků.|
@@ -79,9 +79,9 @@ Následující příklad ukazuje, jak nastavit popisovač nabídky připojeno k 
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -211,4 +211,4 @@ Nová velikost tlačítka se počítá podle textu tlačítka, image a šipky. R
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCButton – třída](../../mfc/reference/cmfcbutton-class.md)
+[Cmfcbutton – třída](../../mfc/reference/cmfcbutton-class.md)

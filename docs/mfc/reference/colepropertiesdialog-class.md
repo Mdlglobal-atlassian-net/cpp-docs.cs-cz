@@ -23,10 +23,10 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
 ms.openlocfilehash: e574f535609ec9401bd76badf11fa7e05cc0c619
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781858"
 ---
 # <a name="colepropertiesdialog-class"></a>Colepropertiesdialog – třída
@@ -76,9 +76,9 @@ Další informace o dialogových oken OLE, najdete v článku [dialogová okna v
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -262,7 +262,7 @@ Výchozí implementace nemá žádný účinek. Tato funkce umožňuje škálov�
 ## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC KR](../../overview/visual-cpp-samples.md)<br/>
-[COleDialog – třída](../../mfc/reference/coledialog-class.md)<br/>
+[Coledialog – třída](../../mfc/reference/coledialog-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[COleDialog – třída](../../mfc/reference/coledialog-class.md)<br/>
+[Coledialog – třída](../../mfc/reference/coledialog-class.md)<br/>
 [CPropertyPage – třída](../../mfc/reference/cpropertypage-class.md)

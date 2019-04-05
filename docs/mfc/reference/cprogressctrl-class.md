@@ -43,10 +43,10 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
 ms.openlocfilehash: 15241485278f09d16c86fc7274f2fc1d85a7a2f7
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58778946"
 ---
 # <a name="cprogressctrl-class"></a>Cprogressctrl – třída
@@ -63,13 +63,13 @@ class CProgressCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CProgressCtrl::CProgressCtrl](#cprogressctrl)|Vytvoří `CProgressCtrl` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CProgressCtrl::Create](#create)|Vytvoří ovládací prvek indikátoru průběhu a připojí ho k `CProgressCtrl` objektu.|
 |[CProgressCtrl::CreateEx](#createex)|Vytvoří ovládací prvek průběh se zadaným rozšířené styly Windows a připojí ho k `CProgressCtrl` objektu.|
@@ -99,9 +99,9 @@ Další informace o používání `CProgressCtrl`, naleznete v tématu [ovládac
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -148,7 +148,7 @@ Určuje ovládací prvek indikátoru průběhu stylu. Použít libovolnou kombin
 
 - Pbs_smooth – zobrazí postupné, technologie smooth vyplníte ovládací prvek indikátoru průběhu. Bez tohoto příznaku ovládací prvek vyplní bloky.
 
-*Rect*<br/>
+*rect*<br/>
 Určuje ovládací prvek indikátoru průběhu velikost a umístění. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury. Vzhledem k tomu, ovládací prvek musí být podřízené okno, zadaných souřadnic jsou vzhledem ke klientské oblasti *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -190,7 +190,7 @@ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené s
 *dwStyle*<br/>
 Určuje ovládací prvek indikátoru průběhu stylu. Použít libovolnou kombinaci styly oken, které jsou popsané v [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) v sadě Windows SDK.
 
-*Rect*<br/>
+*rect*<br/>
 Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -297,7 +297,7 @@ int GetState() const;
 
 Stav aktuální ovládací prvek indikátoru průběhu, který je jedním z následujících hodnot:
 
-|Hodnota|Stav|
+|Value|Stav|
 |-----------|-----------|
 |PBST_NORMAL|V průběhu|
 |PBST_ERROR|Chyba|
@@ -605,5 +605,5 @@ Přírůstek krok nastavuje `CProgressCtrl::SetStep` členskou funkci.
 ## <a name="see-also"></a>Viz také:
 
 [Ukázka CMNCTRL2 knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
-[CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
+[Třída CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

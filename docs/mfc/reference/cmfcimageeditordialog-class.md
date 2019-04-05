@@ -9,10 +9,10 @@ helpviewer_keywords:
 - CMFCImageEditorDialog [MFC], CMFCImageEditorDialog
 ms.assetid: 6a7d08f3-1ec2-4062-9b79-a0c2776b58d1
 ms.openlocfilehash: 97f16fa00b2e90fd9c43bf9b6792b4eafe7d7b88
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780442"
 ---
 # <a name="cmfcimageeditordialog-class"></a>CMFCImageEditorDialog Class
@@ -29,7 +29,7 @@ class CMFCImageEditorDialog : public CDialogEx
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCImageEditorDialog::CMFCImageEditorDialog](#cmfcimageeditordialog)|Vytvoří `CMFCImageEditorDialog` objektu.|
 
@@ -53,15 +53,15 @@ Jeden ze způsobů použití `CMFCImageEditorDialog` objekt je komunikace `CBitm
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
 [CDialog](../../mfc/reference/cdialog-class.md)
 
-[CDialogEx](../../mfc/reference/cdialogex-class.md)
+[Cdialogex –](../../mfc/reference/cdialogex-class.md)
 
 [CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md)
 
@@ -108,4 +108,4 @@ Následující příklad ukazuje, jak vytvořit objekt `CMFCImageEditorDialog` t
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCToolBar – třída](../../mfc/reference/cmfctoolbar-class.md)
+[Cmfctoolbar – třída](../../mfc/reference/cmfctoolbar-class.md)

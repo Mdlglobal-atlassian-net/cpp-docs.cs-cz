@@ -91,10 +91,10 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
 ms.openlocfilehash: bd062a4e0d4db364c9cb628608c6af165dc0edc2
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58777165"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl Class
@@ -111,13 +111,13 @@ class CMonthCalCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMonthCalCtrl::CMonthCalCtrl](#cmonthcalctrl)|Vytvoří `CMonthCalCtrl` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMonthCalCtrl::Create](#create)|Vytvoří ovládací prvek měsíční kalendář a připojí ho k `CMonthCalCtrl` objektu.|
 |[CMonthCalCtrl::GetCalendarBorder](#getcalendarborder)|Zjišťuje šířku ohraničení ovládacího prvku kalendáři aktuálního měsíce.|
@@ -179,9 +179,9 @@ Další informace o použití ovládací prvek měsíční kalendář, naleznete
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -226,10 +226,10 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Určuje kombinaci styly Windows použité pro ovládací prvek měsíční kalendář. Zobrazit [– styly ovládacích prvků kalendáře měsíce](/windows/desktop/Controls/month-calendar-control-styles) v sadě Windows SDK pro další informace o stylech.
 
-*Rect*<br/>
+*rect*<br/>
 Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury. Obsahuje umístění a velikost ovládací prvek měsíční kalendář.
 
-*pt*<br/>
+*PT*<br/>
 Odkaz na [bodu](/previous-versions/dd162805\(v=vs.85\)) strukturu, která identifikuje umístění ovládací prvek měsíční kalendář.
 
 *pParentWnd*<br/>
@@ -634,7 +634,7 @@ Ukazatel na `COleDateTime` objektu, `CTime` objektu, nebo [SYSTEMTIME](/windows/
 
 DWORD, který může být nula (bez omezení jsou nastavené) nebo ke kombinaci komponent následující hodnoty, které určují informace o limitu.
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |GDTR_MAX|Maximální limit nastavený pro ovládací prvek; *pMaxRange* je platný a obsahuje informace o příslušné datum.|
 |GDTR_MIN|Minimální omezení je nastavena pro ovládací prvek; *pMinRange* je platný a obsahuje informace o příslušné datum.|
@@ -917,7 +917,7 @@ COLORREF SetColor(
 *nRegion*<br/>
 Celočíselná hodnota, kterou barvu kalendáře měsíce nastavit zadání. Tato hodnota může být jedna z následujících akcí.
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |MCSC_BACKGROUND|Barva pozadí zobrazená mezi měsíců.|
 |MCSC_MONTHBK|Barva pozadí zobrazená v rámci měsíce.|
@@ -1305,6 +1305,6 @@ Tato metoda odesílá [MCM_SIZERECTTOMIN](/windows/desktop/Controls/mcm-sizerect
 ## <a name="see-also"></a>Viz také:
 
 [Ukázka CMNCTRL1 knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
-[CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
+[Třída CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CDateTimeCtrl – třída](../../mfc/reference/cdatetimectrl-class.md)
+[Cdatetimectrl – třída](../../mfc/reference/cdatetimectrl-class.md)

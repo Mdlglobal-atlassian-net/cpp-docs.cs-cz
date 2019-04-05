@@ -13,10 +13,10 @@ helpviewer_keywords:
 - COleIPFrameWnd [MFC], RepositionFrame
 ms.assetid: 24abb2cb-826c-4dda-a287-d8a8900a5763
 ms.openlocfilehash: 34388e635ba89d732ae3993074a2c8268e2289a3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58779609"
 ---
 # <a name="coleipframewnd-class"></a>Coleipframewnd – třída
@@ -39,7 +39,7 @@ class COleIPFrameWnd : public CFrameWnd
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleIPFrameWnd::OnCreateControlBars](#oncreatecontrolbars)|Volá se rozhraním, když se položka aktivuje pro místní úpravy.|
 |[COleIPFrameWnd::RepositionFrame](#repositionframe)|Volá se rozhraním, aby přemístění okna pro úpravy na místě.|
@@ -52,9 +52,9 @@ Další informace o používání `COleIPFrameWnd`, najdete v článku [aktivace
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
