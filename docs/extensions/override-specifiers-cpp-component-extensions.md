@@ -6,12 +6,12 @@ helpviewer_keywords:
 - override specifiers, C++
 - override specifiers
 ms.assetid: 155bbf6f-4722-4654-afb1-9cb52af799fb
-ms.openlocfilehash: 9640270caa50f53c106bb7b970959f0c092a47df
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: c1e8e7db2879b0226eaff562f5b5b826bce14caf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786722"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029931"
 ---
 # <a name="override-specifiers--ccli-and-ccx"></a>Override – specifikátory (C + +/ CLI a C + +/ CX)
 
@@ -25,7 +25,7 @@ Další informace o specifikátorech přepisu naleznete v tématu:
 
 - [abstract](abstract-cpp-component-extensions.md)
 
-- [New (nový slot v tabulce vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)
+- [new (nový slot v tabulce vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)
 
 - [override](override-cpp-component-extensions.md)
 
@@ -53,6 +53,6 @@ Informace o explicitním přepsání funkcí základní třídy naleznete v tém
 
 – Možnost kompilátoru: `/clr`
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - progid attribute
 ms.assetid: afcf559c-e432-481f-aa9a-bd3bb72c02a8
-ms.openlocfilehash: cb4802fbf4d647f11298848e3dac1b1d92300ce8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b0c688ad4d9b607cc1f5fb6b1c6d536a1c7888e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654737"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031127"
 ---
 # <a name="progid"></a>progid
 
@@ -25,7 +25,7 @@ Určuje identifikátor pro objekt modelu COM ProgID.
 
 ### <a name="parameters"></a>Parametry
 
-*Jméno*<br/>
+*name*<br/>
 Identifikátor ProgID reprezentující objekt.
 
 ProgID prezentovat čitelná verze identifikátor třídy (CLSID) slouží k identifikaci objektů modelu COM a ActiveX.
@@ -55,11 +55,11 @@ Podívejte se na příklad pro [coclass](coclass.md) ukázkový používání **
 |**Platí pro**|**Třída**, **– struktura**|
 |**Opakovatelné**|Ne|
 |**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádné|
+|**Neplatné atributy**|Žádný|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy třídy](class-attributes.md)<br/>

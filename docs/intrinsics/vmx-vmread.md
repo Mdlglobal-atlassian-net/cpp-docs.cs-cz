@@ -7,12 +7,12 @@ helpviewer_keywords:
 - VMREAD instruction
 - __vmx_vmread intrinsic
 ms.assetid: 08bdd7a0-6435-4ea6-b9a0-f592d870e5aa
-ms.openlocfilehash: 0a4528bed4426ce5b611e986a69f4b0b8c750548
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c7b72ba3bf1bd60324704b774bcedaf5612240f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499096"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028383"
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
 
@@ -38,7 +38,7 @@ unsigned char __vmx_vmread(
 
 ## <a name="return-value"></a>Návratová hodnota
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |0|Operace byla úspěšná.|
 |1|Operace se nezdařila s rozšířenou stav k dispozici v `VM-instruction error field` z aktuální VMCS.|
@@ -56,9 +56,9 @@ unsigned char __vmx_vmread(
 
 **Soubor hlaviček** \<intrin.h >
 
-**Specifické pro END Microsoft**
+**END Specifické pro Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
 [__vmx_vmwrite](../intrinsics/vmx-vmwrite.md)

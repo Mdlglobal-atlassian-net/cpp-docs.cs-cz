@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - WRL namespace
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
-ms.openlocfilehash: d402f2a1292088b52ce921bbc0007ab96554189e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 749469c7ae2acf3a0da92d24a51bbfca9b68971d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786555"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033518"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL – obor názvů
 
@@ -50,7 +50,7 @@ namespace Microsoft::WRL;
 |[DeferrableEventArgs – třída](deferrableeventargs-class.md)|Třída šablony použité pro typy argumentů událostí pro odložení.|
 |[EventSource – třída](eventsource-class.md)|Představuje událost. `EventSource` Členské funkce přidání, odebrání a vyvolání obslužných rutin událostí.|
 |[FtmBase – třída](ftmbase-class.md)|Představuje objekt s volným zařazováním vláken.|
-|[Module – třída](module-class.md)|Představuje kolekci souvisejících objektů.|
+|[Modul – třída](module-class.md)|Představuje kolekci souvisejících objektů.|
 |[RuntimeClass – třída](runtimeclass-class.md)|Představuje instance třídy, která dědí určený počet rozhraní a poskytuje zadaného modulu Windows Runtime, klasické rozhraní COM a slabou podporu odkazu.|
 |[SimpleActivationFactory – třída](simpleactivationfactory-class.md)|Poskytuje základní mechanismus pro vytvoření prostředí Windows Runtime nebo klasického modelu COM základní třídy.|
 |[SimpleClassFactory – třída](simpleclassfactory-class.md)|Poskytuje základní mechanismus pro vytvoření základní třídy.|
@@ -58,17 +58,17 @@ namespace Microsoft::WRL;
 
 ### <a name="structures"></a>Struktury
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[ChainInterfaces – struktura](chaininterfaces-structure.md)|Určuje, ověřování a Inicializace funkce, které mohou být použity na sadu rozhraní ID.|
 |[CloakedIid – struktura](cloakediid-structure.md)|Pozná, `RuntimeClass`, `Implements` a `ChainInterfaces` šablony, že zadané rozhraní není v seznamu IID k dispozici.|
-|[Implements – struktura](implements-structure.md)|Implementuje `QueryInterface` a `GetIid` pro zadaných rozhraní.|
+|[Implementuje strukturu](implements-structure.md)|Implementuje `QueryInterface` a `GetIid` pro zadaných rozhraní.|
 |[MixIn – struktura](mixin-structure.md)|Zajišťuje, že runtime třídy je odvozen z rozhraní Windows Runtime, pokud existuje a potom klasické rozhraní COM.|
 |[RuntimeClassFlags – struktura](runtimeclassflags-structure.md)|Obsahuje typ pro instanci [RuntimeClass](runtimeclass-class.md).|
 
 ### <a name="enumerations"></a>Výčty
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[AsyncResultType – výčet](asyncresulttype-enumeration.md)|Určuje typ výsledku vrácený `GetResults()` metody.|
 |[ModuleType – výčet](moduletype-enumeration.md)|Určuje, zda modul by měl podporovat v procesový server nebo server mimo proces.|
@@ -76,10 +76,10 @@ namespace Microsoft::WRL;
 
 ### <a name="functions"></a>Funkce
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[AsWeak – funkce](asweak-function.md)|Získá nestálý odkaz pro zadanou instanci.|
-|[Zpětné volání – funkce (WRL)](callback-function-wrl.md)|Vytvoří objekt, jehož členská funkce je metoda zpětného volání.|
+|[Funkce zpětného volání (WRL)](callback-function-wrl.md)|Vytvoří objekt, jehož členská funkce je metoda zpětného volání.|
 |[CreateActivationFactory – funkce](createactivationfactory-function.md)|Vytvoří objekt factory, který vytvoří instance dané třídy, které mohou být aktivovány modulem Windows Runtime.|
 |[CreateClassFactory – funkce](createclassfactory-function.md)|Vytvoří objekt factory, který vytvoří instance dané třídy.|
 |[Make – funkce](make-function.md)|Inicializuje zadanou třídu Windows Runtime.|
@@ -90,6 +90,6 @@ namespace Microsoft::WRL;
 
 **Namespace:** Microsoft::WRL
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Microsoft::WRL::Wrappers – obor názvů](microsoft-wrl-wrappers-namespace.md)

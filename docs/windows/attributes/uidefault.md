@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - uidefault attribute
 ms.assetid: 200de0e0-2e34-40a2-bae4-8d485a62264d
-ms.openlocfilehash: 61297ecea1137c2247077e3d3ac2f3c4718b13a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5bb8d3ad869d9ee60b2ab04743f5a926a10dd2a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608713"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027672"
 ---
 # <a name="uidefault"></a>uidefault
 
@@ -57,11 +57,11 @@ __interface ICustom{
 |**Platí pro**|Metoda rozhraní|
 |**Opakovatelné**|Ne|
 |**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádné|
+|**Neplatné atributy**|Žádný|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy metody](method-attributes.md)

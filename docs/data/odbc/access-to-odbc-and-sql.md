@@ -9,12 +9,12 @@ helpviewer_keywords:
 - SQL [C++], calling ODBC API functions
 - ODBC [C++], API functions
 ms.assetid: 5613d7dc-00b7-4646-99ae-1116c05c52b4
-ms.openlocfilehash: 97aa0f6318a47a93b0079a81dea772b900b5484b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a539d911bbf4f4d9582da0ebedaeffaa0d8fa7b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441766"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030151"
 ---
 # <a name="access-to-odbc-and-sql"></a>Přístup k rozhraní ODBC a jazyku SQL
 
@@ -22,8 +22,8 @@ Knihovny Microsoft Foundation Class zapouzdřuje mnoho volání Windows API a st
 
 Obdobně databázové třídy vás chrání před nutností pracovat s příliš [SQL](../../data/odbc/sql.md), ale pokud chcete, můžete můžete přímo použít. Můžete přizpůsobit objekty sady záznamů předáním vlastní příkaz jazyka SQL (ani jeho části Nastavení výchozího příkazu) při otevření sady záznamů. Můžete provést také přímo pomocí volání SQL [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) členské funkce třídy [CDatabase](../../mfc/reference/cdatabase-class.md).
 
-Další informace najdete v tématu [ODBC: volání rozhraní ODBC API funkce přímo](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) a [SQL: provádění přístupem SQL volání (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md).
+Další informace najdete v tématu [ODBC: Funkce volání rozhraní API ODBC přímo](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) a [SQL: Přímá volání SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Rozhraní ODBC a knihovna MFC](../../data/odbc/odbc-and-mfc.md)

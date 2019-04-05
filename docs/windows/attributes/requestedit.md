@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - requestedit attribute
 ms.assetid: b3c24790-3c4a-4646-8722-03d7b51172ee
-ms.openlocfilehash: 27e6190cbb5908d46150acb758e2b4d5efaff1bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 30b0c5ec807865280c8e538ea701c3d1a5c4ef9c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611586"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033888"
 ---
 # <a name="requestedit"></a>requestedit
 
@@ -40,11 +40,11 @@ Podívejte se na příklad pro [umožňujících vazbu](bindable.md) ukázkový 
 |**Platí pro**|Metoda rozhraní|
 |**Opakovatelné**|Ne|
 |**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádné|
+|**Neplatné atributy**|Žádný|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy metody](method-attributes.md)<br/>

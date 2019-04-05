@@ -3,12 +3,12 @@ title: Microsoft::WRL::Details – obor názvů
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: d71fe149-d804-4c6f-961d-43fe21ef8630
-ms.openlocfilehash: 149b78a20061dc9083c62df4e58d638009c5e0a2
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: fce6e620600164e73d3708d98d8a7fa979e8ab42
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786757"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027470"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details – obor názvů
 
@@ -24,7 +24,7 @@ namespace Microsoft::WRL::Details;
 
 ### <a name="classes"></a>Třídy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[ComPtrRef – třída](comptrref-class.md)|Představuje odkaz na objekt typu ComPtr\<T >.|
 |[ComPtrRefBase – třída](comptrrefbase-class.md)|Představuje základní třídu pro [comptrref –](comptrref-class.md) třídy.|
@@ -72,7 +72,7 @@ namespace Microsoft::WRL::Details;
 |Name|Popis|
 |----------|-----------------|
 |[ActivationFactoryCallback – funkce](activationfactorycallback-function.md)|Získá objekt factory aktivace pro ID zadaná aktivace.|
-|[Move – funkce](move-function.md)|Zadaný argument přesune z jednoho umístění do druhého.|
+|[Přesunout – funkce](move-function.md)|Zadaný argument přesune z jednoho umístění do druhého.|
 |[RaiseException – funkce](raiseexception-function.md)|Vyvolá výjimku v volajícího vlákna.|
 |[Swap – funkce (WRL)](swap-function-wrl.md)|Vymění hodnoty dvou zadaných argumentů.|
 |[TerminateMap – funkce](terminatemap-function.md)|Třída továrny v zadaném modulu vypne.|
@@ -83,7 +83,7 @@ namespace Microsoft::WRL::Details;
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Microsoft::WRL – obor názvů](microsoft-wrl-namespace.md)<br/>
 [Microsoft::WRL::Wrappers – obor názvů](microsoft-wrl-wrappers-namespace.md)

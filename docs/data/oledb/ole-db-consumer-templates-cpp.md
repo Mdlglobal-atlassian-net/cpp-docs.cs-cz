@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB consumer templates [C++]
 - databases [C++], consumers
 ms.assetid: d3e42612-0bc0-4d65-9c32-0e8a7b219e82
-ms.openlocfilehash: a93b0a48bc5996cbb96194762b9c03ea143556e2
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: d2697c955d2063bb075e06536b083c0b138aa4ac
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328720"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031956"
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB – šablony příjemce (C++)
 
@@ -52,13 +52,13 @@ Jeden důležitý koncept při práci se zákazníky, je deklarovat dvě třídy
 
 Další informace naleznete v následujících tématech:
 
-- [Vytvoření příjemce OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)
+- [Vytvoření příjemce technologie OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)
 
 - [Běžné technologie OLE DB scénáře (příklady)](../../data/oledb/working-with-ole-db-consumer-templates.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Programování v architektuře OLE DB](../../data/oledb/ole-db-programming.md)<br/>
+[OLE DB – programování](../../data/oledb/ole-db-programming.md)<br/>
 [Přístup k datům](../data-access-in-cpp.md)<br/>
 [Dokumentace k sadě SDK technologie OLE DB](/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
 [Ovladač Microsoft OLE DB pro SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)

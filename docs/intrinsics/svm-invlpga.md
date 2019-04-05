@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __svm_invlpga intrinsic
 - INVLPGA instruction
 ms.assetid: aa6578ce-8278-464b-8815-a0fc45330915
-ms.openlocfilehash: 2d356cf7426c558c8ac0312eff02c0cb9de9c859
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e470fc12ad47aa156c513b293543fa356398d5e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544297"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031130"
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
 
@@ -30,12 +30,12 @@ void __svm_invlpga(void *Va, int ASID);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*posouzení ohrožení zabezpečení*|[in] Virtuální adresa stránky zrušit platnost.|
+|*Va*|[in] Virtuální adresa stránky zrušit platnost.|
 |*ASID*|[in] Adresa místa identifikátor (ASID) na stránce zrušit platnost.|
 
 ## <a name="remarks"></a>Poznámky
 
-`__svm_invlpga` Funkce je ekvivalentní volání `INVLPGA` strojové instrukce. Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace vyhledejte dokument, "programátor architektury AMD64 ruční svazek 2: programování v systému," číslo 24593 revize 3.11, v dokumentu [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) lokality.
+`__svm_invlpga` Funkce je ekvivalentní volání `INVLPGA` strojové instrukce. Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace vyhledejte dokument, "ruční svazek programátor architektury AMD64 2: Číslo 24593 revize 3.11, systém programování,"dokumentu na [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) lokality.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -45,8 +45,8 @@ void __svm_invlpga(void *Va, int ASID);
 
 **Soubor hlaviček** \<intrin.h >
 
-**Specifické pro END Microsoft**
+**END Specifické pro Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

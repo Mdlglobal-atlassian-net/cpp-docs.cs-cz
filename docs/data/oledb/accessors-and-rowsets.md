@@ -17,12 +17,12 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-ms.openlocfilehash: d29c409f2ed410d9f697419e9a98b675eee7a69d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 21043e22b37084fa543bf6b8a0fc176c3b8be788
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175710"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030021"
 ---
 # <a name="accessors-and-rowsets"></a>Přístupové objekty a sady řádků
 
@@ -68,6 +68,6 @@ Třídy sady řádků
 
 [Sady řádků schématu](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) nemáte přístup k datům v data ukládat, ale místo toho přístup k informacím o úložišti dat označovaném jako metadata. Sady řádků schématu se obvykle používá v situacích, ve kterých struktura databáze není v době kompilace znám a musí být získány v době běhu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)

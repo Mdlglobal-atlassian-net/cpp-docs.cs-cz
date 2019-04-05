@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - vi_progid attribute
 ms.assetid: a52449be-b93e-4111-b883-44bb8da53261
-ms.openlocfilehash: 1045c240a283a8a534c2266186f941312216f206
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7050543c9acf3801a99d3e32e119325900bdb050
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544271"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033586"
 ---
 # <a name="viprogid"></a>vi_progid
 
@@ -25,7 +25,7 @@ Určuje verzi nezávislé formu ProgID.
 
 ### <a name="parameters"></a>Parametry
 
-*Jméno*<br/>
+*name*<br/>
 Nezávislé na verze ProgID reprezentující objekt.
 
 ProgID prezentovat čitelná verze identifikátor třídy (CLSID) slouží k identifikaci objektů modelu COM a ActiveX.
@@ -57,7 +57,7 @@ Zobrazit [coclass](coclass.md) příklad ukázkový používání **vi_progid �
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy klíčových slov typedef, enum, union a struct](typedef-enum-union-and-struct-attributes.md)<br/>

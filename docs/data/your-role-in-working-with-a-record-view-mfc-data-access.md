@@ -5,18 +5,18 @@ helpviewer_keywords:
 - record views, customizing default code
 - MFC, record views
 ms.assetid: 691e89a5-ff21-4ca3-9278-69d4678288bb
-ms.openlocfilehash: 1f1361baafa5bb3dc884adcc464a3571aee04dd3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5c35208f654cff90e3cdf87e697e654bdfbe307
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478634"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033002"
 ---
 # <a name="your-role-in-working-with-a-record-view--mfc-data-access"></a>Vaše Role při práci se zobrazením záznamu (přístup k datům MFC)
 
 Následující tabulka uvádí, co je obvykle nutné udělat pro práci se zobrazením záznamu a rozhraní udělá za vás.
 
-### <a name="working-with-a-record-view-you-and-the-framework"></a>Práce se zobrazením záznamu: jste a rozhraní
+### <a name="working-with-a-record-view-you-and-the-framework"></a>Práce se zobrazením záznamu: Vy a architektura
 
 |Vy|Rozhraní framework|
 |---------|-------------------|
@@ -29,9 +29,9 @@ Následující tabulka uvádí, co je obvykle nutné udělat pro práci se zobra
 |[Volitelné] Napište kód pro žádné zvláštní ověření.||
 |[Volitelné] Napsání kódu pro přidání nebo odstranění záznamů.||
 
-Programování založené na formulářích je pouze jedním z přístupů k práci s databází. Informace o aplikacích pomocí některé jiné uživatelské rozhraní nebo žádné uživatelské rozhraní, naleznete v tématu [knihovny MFC: použití databázových tříd s dokumenty a zobrazeními](../data/mfc-using-database-classes-with-documents-and-views.md) a [knihovny MFC: použití třídy databáze bez dokumentů a zobrazení](../data/mfc-using-database-classes-without-documents-and-views.md). Alternativní přístupy k zobrazení záznamů v databázi, naleznete v tématu třídy [CListView](../mfc/reference/clistview-class.md) a [CTreeView](../mfc/reference/ctreeview-class.md).
+Programování založené na formulářích je pouze jedním z přístupů k práci s databází. Informace o aplikacích pomocí některé jiné uživatelské rozhraní nebo žádné uživatelské rozhraní, naleznete v tématu [knihovny MFC: Použití databázových tříd s dokumenty a zobrazeními](../data/mfc-using-database-classes-with-documents-and-views.md) a [knihovny MFC: Použití databázových tříd bez dokumentů a zobrazení](../data/mfc-using-database-classes-without-documents-and-views.md). Alternativní přístupy k zobrazení záznamů v databázi, naleznete v tématu třídy [CListView](../mfc/reference/clistview-class.md) a [CTreeView](../mfc/reference/ctreeview-class.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zobrazení záznamů (přístup k datům MFC)](../data/record-views-mfc-data-access.md)<br/>
 [Seznam ovladačů ODBC](../data/odbc/odbc-driver-list.md)

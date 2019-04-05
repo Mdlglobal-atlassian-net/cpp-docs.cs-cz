@@ -13,12 +13,12 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: 152113200fd7aa9ee87b749380e370fe4e6ad9ff
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 563cf73299c00413889ada2520b1bf4fcd86f2be
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563352"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023695"
 ---
 # <a name="dialog-box-controls-c"></a>Dialogové okno Ovládací prvky (C++)
 
@@ -38,7 +38,7 @@ K dispozici ve standardní ovládací prvky **nástrojů** s výchozí události
 
 |Název ovládacího prvku|Výchozí událost|
 |---|---|
-|[Ovládací prvek tlačítko](../mfc/reference/cbutton-class.md)|BN_CLICKED|
+|[ovládací prvek Tlačítko](../mfc/reference/cbutton-class.md)|BN_CLICKED|
 |[Ovládací prvek zaškrtávací políčko](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
 |[Ovládací prvek pole se seznamem](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
 |[Ovládací prvek textové pole](../mfc/reference/cedit-class.md)|EN_CHANGE|
@@ -57,7 +57,7 @@ K dispozici ve standardní ovládací prvky **nástrojů** s výchozí události
 
 |Název ovládacího prvku|Výchozí událost|
 |---|---|
-|[Ovládací prvek posuvníku](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
+|[Posuvník](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
 |[Ovládací prvek typu číselník](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
 |[Ovládací prvek průběh](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
 |[Ovládací prvek výměně klíče](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
@@ -99,7 +99,7 @@ Pro tyto ovládací prvky jste omezeni na:
 
 Win32
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Editor dialogových oken](../windows/dialog-editor.md)<br/>
 

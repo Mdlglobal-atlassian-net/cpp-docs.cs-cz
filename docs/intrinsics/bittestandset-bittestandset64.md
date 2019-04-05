@@ -1,5 +1,5 @@
 ---
-title: _bittestandset _bittestandset64
+title: _bittestandset, _bittestandset64
 ms.date: 11/04/2016
 f1_keywords:
 - _bittestandset_cpp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - _bittestandset intrinsic
 - _bittestandset64 intrinsic
 ms.assetid: 6d6c8670-fea0-4c1c-9aad-2bb842715203
-ms.openlocfilehash: 95acb833b05b67e7781973d6b3bd6fdcfe97615b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dadeeae23b1808bbee13940727a3bdbace1dad54
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513019"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028584"
 ---
-# <a name="bittestandset-bittestandset64"></a>_bittestandset _bittestandset64
+# <a name="bittestandset-bittestandset64"></a>_bittestandset, _bittestandset64
 
 **Specifické pro Microsoft**
 
@@ -147,8 +147,8 @@ Flags: 0x4
 Flags: 0x0
 ```
 
-**Specifické pro END Microsoft**
+**END Specifické pro Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

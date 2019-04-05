@@ -1,17 +1,17 @@
 ---
-title: 'Transakce: Provádění transakcí v sadě záznamů (ODBC)'
+title: 'Transakce: Provádění transakcí v sadě záznamů (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - transactions, updating recordsets
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
-ms.openlocfilehash: df7c28ebfbb68f3e0163368247b90ff69058726d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e06d61d3d86233e136b0b3fe78f149a6778649b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659580"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035238"
 ---
-# <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>Transakce: Provádění transakcí v sadě záznamů (ODBC)
+# <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>Transakce: Provádění transakcí v sadě záznamů (ODBC)
 
 Toto téma vysvětluje, jak k provádění transakcí v sadě záznamů.
 
@@ -22,7 +22,7 @@ Toto téma vysvětluje, jak k provádění transakcí v sadě záznamů.
 
 1. Volání `CDatabase` objektu `BeginTrans` členskou funkci.
 
-1. Pokud jste neimplementovali hromadné načítání řádků, zavolejte `AddNew/Update`, `Edit/Update`, a `Delete` členské funkce jeden nebo více objektů sady záznamů ze stejné databáze tolikrát, kolikrát podle potřeby. Další informace najdete v tématu [sada záznamů: přidávání, aktualizace a odstranění záznamů (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Pokud jste implementovali hromadné načítání řádků, musíte napsat vlastní funkce k aktualizaci zdroje dat.
+1. Pokud jste neimplementovali hromadné načítání řádků, zavolejte `AddNew/Update`, `Edit/Update`, a `Delete` členské funkce jeden nebo více objektů sady záznamů ze stejné databáze tolikrát, kolikrát podle potřeby. Další informace najdete v tématu [sada záznamů: Přidání, aktualizace nebo odstranění záznamů (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Pokud jste implementovali hromadné načítání řádků, musíte napsat vlastní funkce k aktualizaci zdroje dat.
 
 1. Nakonec proveďte volání `CDatabase` objektu `CommitTrans` členskou funkci. Pokud dojde k chybě v jedné aktualizace nebo se rozhodnete zrušit změny, zavolejte jeho `Rollback` členskou funkci.
 
@@ -81,7 +81,7 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 > [!NOTE]
 >  Volání `BeginTrans` znovu bez volání `CommitTrans` nebo `Rollback` chybu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Transakce (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
 [Transakce: Vliv transakcí na aktualizace (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)<br/>

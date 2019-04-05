@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetPropertyInfo method
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-ms.openlocfilehash: 13c41b97190ff13b87361b6e8344b8f17798708a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 807cdf55a5a2fa6e0cc063c22b1685d8156c41a5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413339"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031336"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl – třída
 
@@ -142,7 +142,7 @@ Zobrazit [IDBProperties::SetProperties](/previous-versions/windows/desktop/ms723
 
 Pokud zprostředkovatele je inicializována, tato metoda nastaví hodnoty vlastností v DBPROPSET_DATASOURCE DBPROPSET_DATASOURCEINFO, DBPROPSET_DBINIT skupiny vlastností pro objekt zdroje dat. Pokud zprostředkovatele není inicializován, nastaví DBPROPSET_DBINIT skupiny pouze vlastnosti.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

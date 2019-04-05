@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: 1cd03e6a-8d59-4eca-a8c6-1010582d5e67
-ms.openlocfilehash: 96f4694e8aa321dc5844fc413ae9740bec5a416c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 259f0e2afa61096e4529a50ee2ba7de07b293c46
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643076"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034128"
 ---
 # <a name="odbc-configuring-an-odbc-data-source"></a>ODBC: Konfigurace zdroje dat ODBC
 
@@ -24,7 +24,7 @@ Správce rozhraní ODBC se automaticky nainstaluje se podpory databáze knihovny
 
 Informace o tom, jak psát programy ODBC nastavení a správa pro databázové aplikace MFC[Technická poznámka 48](../../mfc/tn048-writing-odbc-setup-and-administration-programs.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [ODBC – základy](../../data/odbc/odbc-basics.md)<br/>
 [ODBC: Přímé volání funkcí rozhraní API ODBC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)

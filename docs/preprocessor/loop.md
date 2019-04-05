@@ -5,12 +5,12 @@ f1_keywords:
 - loop_CPP
 - vc-pragma.loop
 ms.assetid: 6d5bb428-cead-47e7-941d-7513bbb162c7
-ms.openlocfilehash: 716f9a626766b62cdf37a3da50c79ba0cf5418fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1640881d98073381a941478f4b78177a95698d7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605436"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023163"
 ---
 # <a name="loop"></a>loop
 
@@ -41,7 +41,7 @@ Dá pokyn kompilátoru ignorovat závislosti vektorů pro tuto smyčku. Toto pou
 
 Použít **smyčky** – Direktiva pragma, umístěte ji těsně před – není v – definici smyčky. Tato direktiva pragma se projeví v rozsahu smyčky, která ji následuje. Smyčce lze zadat více direktiv pragma v libovolném pořadí, ale je nutné každou z nich uvést v samostatném výrazu direktivy pragma.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Automatická paralelizace a automatická vektorizace](../parallel/auto-parallelization-and-auto-vectorization.md)<br/>
 [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

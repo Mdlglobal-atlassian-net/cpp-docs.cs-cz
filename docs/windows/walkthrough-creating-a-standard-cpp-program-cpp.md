@@ -9,12 +9,12 @@ helpviewer_keywords:
 - command-line applications [C++], standard
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-ms.openlocfilehash: 78d19a277f8bedcdbd098a662c69d6fc622a7cff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d58d23e757a97402985ef60badf551523c0a275e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647463"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030618"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Návod: Vytvoření programu ve standardním C++ (C++)
 
@@ -73,10 +73,10 @@ Předpokladem práce s tímto návodem je znalost základů jazyka C++.
 
 ## <a name="next-steps"></a>Další kroky
 
-**Předchozí:** [konzolové aplikace v jazyce Visual C++](../windows/console-applications-in-visual-cpp.md)<br/>
-**Další krok:** [návod: kompilace nativního programu C++ v příkazovém řádku](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
+**Předchozí:** [Konzolové aplikace v jazyku Visual C++](../windows/console-applications-in-visual-cpp.md)<br/>
+**Další:** [Návod: Kompilace nativního programu C++ na příkazovém řádku](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
+[Reference jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)<br/>

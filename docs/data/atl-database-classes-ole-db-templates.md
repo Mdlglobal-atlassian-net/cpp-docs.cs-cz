@@ -6,12 +6,12 @@ helpviewer_keywords:
 - database classes [C++], OLE DB
 - database classes [C++], ATL
 ms.assetid: 219766aa-e18a-405f-9e36-d7a0fdb31b2b
-ms.openlocfilehash: 4304c350ce6a9303a7542809fa85fb0cd2560031
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2ecde060f10a7c2a056869525f58d0bb4da67963
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522066"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023435"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Databázové třídy ATL (šablony OLE DB)
 
@@ -31,10 +31,10 @@ Všimněte si, že knihovna MFC obsahuje jednu třídu, [COleDBRecordView](../mf
 
 Další informace najdete v tématu [programování technologie OLE DB](../data/oledb/ole-db-programming.md) a [Příručka programátora technologie OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Vytvoření příjemce OLE DB](../data/oledb/creating-an-ole-db-consumer.md)<br/>
+[Vytvoření příjemce technologie OLE DB](../data/oledb/creating-an-ole-db-consumer.md)<br/>
 [Vytvoření zprostředkovatele OLE DB](../data/oledb/creating-an-ole-db-provider.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-[Referenční dokumentace k šablonám zprostředkovatelů OLE DB](../data/oledb/ole-db-provider-templates-reference.md)<br/>
+[Referenční dokumentace k šablonám zprostředkovatelů OLE DB](../data/oledb/ole-db-provider-templates-reference.md)<br/>
 [OLE DB – Ukázky šablon](https://github.com/Microsoft/VCSamples)

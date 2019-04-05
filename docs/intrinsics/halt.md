@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __halt intrinsic
 - HLT instruction
 ms.assetid: a074f44a-101c-45a5-8a5e-cfd223c34002
-ms.openlocfilehash: d99a87b1f3fd70d1fffb724629e9acded025732a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dd68c88a13035ca25f89304bcd84267a73978420
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617175"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025948"
 ---
 # <a name="halt"></a>__halt
 
@@ -37,10 +37,10 @@ void __halt( void );
 
 ## <a name="remarks"></a>Poznámky
 
-`__halt` Funkce je ekvivalentní volání `HLT` strojové instrukce a je k dispozici pouze v režimu jádra. Další informace vyhledejte dokument, "ruční architektury Intel softwarový vývojář, svazek 2: odkaz na sadu instrukcí," na [společnosti Intel Corporation](https://software.intel.com/articles/intel-sdm) lokality.
+`__halt` Funkce je ekvivalentní volání `HLT` strojové instrukce a je k dispozici pouze v režimu jádra. Další informace vyhledejte dokument, "ruční architektury Intel softwarový vývojář, svazek 2: Instrukce nastavit odkaz,"na [společnosti Intel Corporation](https://software.intel.com/articles/intel-sdm) lokality.
 
-**Specifické pro END Microsoft**
+**END Specifické pro Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

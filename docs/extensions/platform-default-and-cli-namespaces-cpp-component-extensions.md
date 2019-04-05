@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lang namespace
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
-ms.openlocfilehash: a899d4384944af628c3fc24d6821b489b8c6f646
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: a7599e2987d27626e6f5c9d049d9a3bd4509c3ff
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786616"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028513"
 ---
 # <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Platform, default a cli obory názvů (C + +/ CLI a C + +/ CX)
 
@@ -78,6 +78,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)

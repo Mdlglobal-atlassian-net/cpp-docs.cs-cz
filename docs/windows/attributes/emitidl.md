@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - emitidl attribute
 ms.assetid: 85b80c56-578e-4392-ac03-8443c74ebb7d
-ms.openlocfilehash: 4270c760c0d9d0ab833ee96dfbbaa9d6205026f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c4055e0f14bced1e5047fc502a4bf274126f804
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437944"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031631"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -25,7 +25,7 @@ Určuje, zda jsou všechny následné IDL – atributy zpracovat a umístí do g
 
 ### <a name="parameters"></a>Parametry
 
-*Stav*<br/>
+*state*<br/>
 Jednu z těchto hodnot: `true`, `false`, `forced`, `restricted`, `push`, nebo `pop`.
 
 - Pokud `true`, atributy IDL kategorie v souboru zdrojového kódu jsou umístěny v souboru generovaného IDL. Toto je výchozí nastavení pro **emitidl**.
@@ -60,12 +60,12 @@ Pokaždé, když kompilátor narazí nový soubor **emitidl** implicitně nastav
 |-|-|
 |**Platí pro**|Kdekoli|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**Vyžadované atributy**|Žádný|
 |**Neplatné atributy**|Žádné|
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Atributy kompilátoru](compiler-attributes.md)<br/>
 [Samostatné atributy](stand-alone-attributes.md)

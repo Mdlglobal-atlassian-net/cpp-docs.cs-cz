@@ -17,12 +17,12 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: 62249bff7a278963ea67b2d2015ff52f22fcfc85
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: c9abf46907c473d4cf6d9e945038f70aa75bfc48
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562923"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026276"
 ---
 # <a name="menu-commands-c"></a>Příkazy (C++)
 
@@ -35,10 +35,10 @@ Níže uvedené informace jsou uspořádané podle **nabídky** vlastnosti, kter
 |**Zaškrtnuto**|Pokud **True**, je příkaz nabídky hesla implicitně zaškrtnuto. Zadejte: **BOOL**. Výchozí hodnota: **False**.|
 |**Povoleno**|Pokud **False**, položka nabídky je zakázána.|
 |**Šedý**|Pokud **True**, příkaz nabídky je zpočátku šedě a neaktivní. Zadejte: **BOOL**. Výchozí hodnota: **False**.|
-|**Pomoc**|Zarovná položky nabídky na pravé straně. Výchozí hodnota: **False**.<br/><br/>Například **pomáhají** příkazu nabídky je vždy na pravé straně ve všech aplikacích pro Windows. Pokud tuto vlastnost nastavíte na položku nabídky, této položky se zobrazí velmi úplně vpravo a na konci velmi nabídky. Platí pro položky nejvyšší úrovně.|
+|**Nápověda**|Zarovná položky nabídky na pravé straně. Výchozí hodnota: **False**.<br/><br/>Například **pomáhají** příkazu nabídky je vždy na pravé straně ve všech aplikacích pro Windows. Pokud tuto vlastnost nastavíte na položku nabídky, této položky se zobrazí velmi úplně vpravo a na konci velmi nabídky. Platí pro položky nejvyšší úrovně.|
 |**ID**|Symbol definovaný v souboru hlaviček. Zadejte: **Symbol**, **celé číslo**, nebo **řetězec v uvozovkách**.<br/><br/>Můžete použít libovolný symbol, který je běžně k dispozici v editorech, i když [okno vlastností](/visualstudio/ide/reference/properties-window) neposkytuje rozevíracího seznamu pro výběr z.|
-|**Popup**|Pokud **True**, příkaz nabídky je rozbalovací nabídky. Zadejte: **BOOL**. Výchozí hodnota: **Hodnota TRUE** pro nejvyšší úrovně nabídky na řádku nabídek, jinak **False**.|
-|**Zeptat se**|Obsahuje text, který se zobrazí ve stavovém řádku, když je zvýrazněn tento příkaz. Text je umístěn v tabulce řetězců se stejným identifikátorem příkazu nabídky.<br/><br/>Tato vlastnost je k dispozici pro každý typ projektu, ale funkce za běhu je konkrétní knihovny MFC.|
+|**Překryvný**|Pokud **True**, příkaz nabídky je rozbalovací nabídky. Zadejte: **BOOL**. Výchozí hodnota: **Hodnota TRUE** pro nejvyšší úrovně nabídky na řádku nabídek, jinak **False**.|
+|**Výzva**|Obsahuje text, který se zobrazí ve stavovém řádku, když je zvýrazněn tento příkaz. Text je umístěn v tabulce řetězců se stejným identifikátorem příkazu nabídky.<br/><br/>Tato vlastnost je k dispozici pro každý typ projektu, ale funkce za běhu je konkrétní knihovny MFC.|
 |**Zarovnat zprava doleva.**|Zarovnává doprava příkaz nabídky na řádku nabídek v době běhu. Zadejte: **BOOL**. Výchozí hodnota: **False**.|
 |**Right to Left Order**|Umožňuje zobrazovat zprava doleva, pokud rozhraní je lokalizován pro libovolný jazyk, který čte doleva, jako je například hebrejština nebo arabštině příkazů místní nabídky.|
 |**Oddělovač**|Pokud **True**, příkaz nabídky je oddělovač. Zadejte: **BOOL**. Výchozí hodnota: **False**.|
@@ -86,7 +86,7 @@ V projektu v jazyce C++ můžete přiřadit přístupový klíč (symbol, který
 
 Win32
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Editor nabídek](../windows/menu-editor.md)<br/>
 

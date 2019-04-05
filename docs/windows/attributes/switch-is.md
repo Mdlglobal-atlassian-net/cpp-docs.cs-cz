@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - switch_is attribute
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
-ms.openlocfilehash: e70f7d3d7419c25f0c5f9df8006e1d795c8b4361
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccac405480e415df17b42f02dce74759f578d025
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467286"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031086"
 ---
 # <a name="switchis"></a>switch_is
 
@@ -37,14 +37,14 @@ Najdete v článku [případ](case-cpp.md) příklad ukázkový používání **
 
 |||
 |-|-|
-|**Platí pro**|**Definice TypeDef**|
+|**Platí pro**|**– definice typedef**|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**Vyžadované atributy**|Žádný|
 |**Neplatné atributy**|Žádné|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy klíčových slov typedef, enum, union a struct](typedef-enum-union-and-struct-attributes.md)<br/>

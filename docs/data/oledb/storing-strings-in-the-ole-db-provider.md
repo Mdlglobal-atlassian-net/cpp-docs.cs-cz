@@ -4,12 +4,12 @@ ms.date: 10/26/2018
 helpviewer_keywords:
 - user records, editing
 ms.assetid: 36cb9635-067c-4cad-8f85-962f28026f6a
-ms.openlocfilehash: 54dfdb347c621cf6f8645feb6d13742f32503f9f
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: 5dce7dac84ef69da17baac135a68bd78698c4456
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51264616"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026406"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>Ukládání řetězců ve zprostředkovateli OLE DB
 
@@ -52,6 +52,6 @@ Datové členy `szCommand` a `szText` představují dva řetězce s `szCommand2`
 
 Když to uděláte, můžete přidat funkce [načtení řetězců do zprostředkovatele OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Implementace jednoduchého zprostředkovatele pouze pro čtení](../../data/oledb/implementing-the-simple-read-only-provider.md)<br/>

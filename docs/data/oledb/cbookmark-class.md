@@ -67,12 +67,12 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: b59d4de6751dd2a7f90c5de766b5f95cb7e7b330
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fb2e3ec99471405f9c6521e0b70672c1da1b755c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525181"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030138"
 ---
 # <a name="cbookmark-class"></a>CBookmark – třída
 
@@ -103,9 +103,9 @@ Velikost vyrovnávací paměti záložek v bajtech. Když *nSize* je nula, vyrov
 
 |||
 |-|-|
-|[CBookmark](#cbookmark)|Konstruktor|
-|[Getbuffer –](#getbuffer)|Načte ukazatel do vyrovnávací paměti.|
-|[GetSize](#getsize)|Získá velikost vyrovnávací paměti v bajtech.|
+|[CBookmark –](#cbookmark)|Konstruktor|
+|[GetBuffer](#getbuffer)|Načte ukazatel do vyrovnávací paměti.|
+|[Getsize –](#getsize)|Získá velikost vyrovnávací paměti v bajtech.|
 |[SetBookmark](#setbookmark)|Nastaví hodnotu záložku.|
 
 ### <a name="operators"></a>Operátory
@@ -209,7 +209,7 @@ CBookmark& operator =(const CBookmark& bookmark) throw();
 
 Tento operátor je nutný pouze v `CBookmark<0>`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

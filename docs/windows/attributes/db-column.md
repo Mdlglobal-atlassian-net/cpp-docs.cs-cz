@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: 7ceb0b93f37133ccbbf89ed659f74b632e45bcb1
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: e0e2c873452884275e97663ae2d9d6df2f790ffd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328932"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024839"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -33,19 +33,19 @@ Připojí zadaný sloupec proměnné v dané sadě řádků.
 [db_column(L"city_name")] TCHAR szCity[30];
 ```
 
-*dbtype*<br/>
+*Hodnota DbType*<br/>
 (Volitelné) OLE DB [indikátor typu](/previous-versions/windows/desktop/ms711251(v=vs.85)) pro vstupní sloupec.
 
-*precision*<br/>
+*přesnost*<br/>
 (Volitelné) Přesnost, který má být použit pro vstupní sloupec. Podrobnosti najdete v tématu Popis `bPrecision` elementu [DBBINDING struktura](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*Škálování*<br/>
+*měřítko*<br/>
 (Volitelné) Škálování, která má být použit pro vstupní sloupec. Podrobnosti najdete v tématu Popis `bScale` elementu [DBBINDING struktura](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*status*<br/>
+*stav*<br/>
 (Volitelné) Členské proměnné používané pro udržení stavu daného sloupce. Stav označuje, zda je hodnota sloupce datovou hodnotu nebo jinou hodnotu, jako je NULL. Možné hodnoty najdete v části [stav](/previous-versions/windows/desktop/ms722617(v=vs.85)) v *OLE DB referenční informace pro programátory*.
 
-*Délka*<br/>
+*length*<br/>
 (Volitelné) Členské proměnné používané pro udržení velikost sloupce v bajtech.
 
 ## <a name="remarks"></a>Poznámky
@@ -106,12 +106,12 @@ class CProducts {
 |-|-|
 |**Platí pro**|**Třída**, **struktura**, člen, – metoda|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádné|
+|**Vyžadované atributy**|Žádný|
+|**Neplatné atributy**|Žádný|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Atributy příjemce technologie OLE DB](ole-db-consumer-attributes.md)<br/>
 [Atributy třídy](class-attributes.md)

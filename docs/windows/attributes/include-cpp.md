@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
-ms.openlocfilehash: 6fb385877285602c1eb6649d11e16558d7fb07ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9c68601bea4cecd92b371dada5fb086aeb7657f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544752"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033694"
 ---
 # <a name="include-c"></a>include (C++)
 
@@ -58,7 +58,7 @@ Následující kód ukazuje příklad, jak používat **zahrnují**. V tomto př
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Samostatné atributy](stand-alone-attributes.md)<br/>

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - resources [C++], templates
 - .rct files [C++]
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
-ms.openlocfilehash: a18c24685ff0d5f65970a094730d1587abffb601
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: c22df99240c0fa076124e33224a4f6f4ab9a957e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563027"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028519"
 ---
 # <a name="how-to-create-resources-c"></a>Postupy: Vytvoření prostředků (C++)
 
@@ -118,7 +118,7 @@ Klikněte pravým tlačítkem můžete použít také u **zobrazení prostředk�
 | Vlastnost | Popis |
 |---|---|
 | **Typ prostředku** | Zadejte typ prostředku, který chcete vytvořit.<br/><br/>Můžete rozbalit kategorie prostředků kurzoru a dialogového okna pole čímž odhalíte další prostředky, které jsou umístěny v *... \Microsoft visual Studio \<verze\>\VC\VCResourceTemplates\\< LCID\>\mfc.rct*. Pokud je potřeba přidat soubory .rct, sem vložte nebo zadejte jiný [zahrnout cestu](../windows/how-to-specify-include-directories-for-resources.md). Prostředky zobrazené na nejvyšší úrovni stromové struktury jsou výchozí prostředky poskytovaný sadou Visual Studio. Prostředky v souborech .rct objeví na druhé úrovni pod příslušnou kategorií. Není nijak omezený počet souborů .rct, můžete přidat.<br/><br/> |
-| **Nové** | Vytvořit prostředek v závislosti na typu vybraného v **typ prostředku** pole a otevřít prostředek ve vhodném editoru.<br/><br/>Například pokud vytvoříte prostředek dialogového okna, otevře se v prostředku [editoru dialogového okna](../windows/dialog-editor.md). |
+| **Nový** | Vytvořit prostředek v závislosti na typu vybraného v **typ prostředku** pole a otevřít prostředek ve vhodném editoru.<br/><br/>Například pokud vytvoříte prostředek dialogového okna, otevře se v prostředku [editoru dialogového okna](../windows/dialog-editor.md). |
 | **Import** | Otevřít **importovat** dialogové okno Přejít k prostředku, kterou chcete importovat do aktuálního projektu.<br/><br/>Můžete importovat bitmapy, ikony, kurzor, HTML, zvuku (. WAV), nebo soubory vlastních prostředků. |
 | **Vlastní** | Otevřít **nový vlastní prostředek** dialogové okno vytvořit vlastní prostředek.<br/><br/>Zahrnuje také **typ prostředku** vlastnost, která obsahuje textové pole pro zadání názvu typu vlastního prostředku. Visual C++ automaticky změní na velké název při ukončení. Upravit vlastní prostředky jen v [binární Editor](../windows/binary-editor.md). |
 
@@ -187,8 +187,8 @@ Pomocí souboru skriptu prostředků v nabídce otevřít, přejděte na **soubo
 
 Win32
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Soubory prostředků](../windows/resource-files-visual-studio.md)<br/>
-[Postupy: Spravovat prostředky](../windows/how-to-copy-resources.md)<br/>
-[Postupy: Zahrnutí prostředků v čase kompilace](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[Zdrojové soubory](../windows/resource-files-visual-studio.md)<br/>
+[Postupy: Správa prostředků](../windows/how-to-copy-resources.md)<br/>
+[Postupy: Zahrnutí prostředků v době kompilace](../windows/how-to-include-resources-at-compile-time.md)<br/>

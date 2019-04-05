@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE DB, record views
 - MFC, record views
 ms.assetid: 1cd3e595-ce08-43d8-a0a9-d03b5d3e24ce
-ms.openlocfilehash: 631e78e1a397ec360b1f3b2d94d7340e96925e23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 83f4d64252ab5c2b80d62419ea448c1ffd0cdd69
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582709"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025863"
 ---
 # <a name="using-ole-db-record-views"></a>Použití zobrazení záznamů technologie OLE DB
 
@@ -31,7 +31,7 @@ Zobrazí pole `CRowset` objektu v ovládacích prvcích v dialogovém okně. `CO
 
 Můžete použít funkce DDX s `COleDbRecordView` získat data přímo ze sady záznamů databáze a zobrazit je v ovládacím prvku dialogu. Použití **DDX_** <strong>\*</strong> metody (například `DDX_Text`), nikoli **DDX_Field** <strong>\*</strong> funkcí ( například `DDX_FieldText`) s `COleDbRecordView`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Použití přístupových objektů](../../data/oledb/using-accessors.md)<br/>
-[COleDBRecordView – třída](../../mfc/reference/coledbrecordview-class.md)<br/>
+[COleDBRecordView Class](../../mfc/reference/coledbrecordview-class.md)<br/>

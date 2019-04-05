@@ -1,12 +1,12 @@
 ---
 title: Zpracování výjimek ARM64
 ms.date: 11/19/2018
-ms.openlocfilehash: 43e43beae5ee02f9ef4537da08a1c9915056b777
-ms.sourcegitcommit: 5fc76f5b3c4c3ee49f38f05b37261a324591530b
+ms.openlocfilehash: ec81374f9a20cf5d23edda7d925705b6a4d5e2e6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58870790"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031724"
 ---
 # <a name="arm64-exception-handling"></a>Zpracování výjimek ARM64
 
@@ -219,15 +219,15 @@ Tato data rozdělená do čtyř oddílů:
 
    e. **Počet epilogu** je 5 bitové pole, která má dvě význam, v závislosti na stavu **E** bit:
 
-      1. Pokud **E** je nastavena na hodnotu 0: Určuje počet celkový počet výjimek obory, které je popsáno v části 2. Pokud existuje více než 31 oborů ve funkci, pak bude **slova kódu** pole musí být nastaveno na hodnotu 0 označující, že je vyžadována word rozšíření.
+      1. Pokud **E** je nastavena na hodnotu 0: Určuje počet celkový počet rozsahů epilogu je popsáno v části 2. Pokud existuje více než 31 oborů ve funkci, pak bude **slova kódu** pole musí být nastaveno na hodnotu 0 označující, že je vyžadována word rozšíření.
 
       2. Pokud **E** je nastavená na 1, pak toto pole určuje index první unwind kód, který popisuje jeden a pouze epilogu.
 
-   f. **Kód slova** je 5 bitové pole, která určuje počet slov 32-bit potřeby tak, aby obsahovala všechny kódy unwind sekce 4. Pokud potřebujete více než 31 slov (tj, více než 124 unwind bajtů kódu), pak toto pole musí být nastaveno na hodnotu 0 označující, že je vyžadována word rozšíření.
+   f. **Kód slova** je 5 bitové pole, která určuje počet slov 32-bit potřeby tak, aby obsahovala všechny kódy unwind v oddílu 3. Pokud potřebujete více než 31 slov (tj, více než 124 unwind bajtů kódu), pak toto pole musí být nastaveno na hodnotu 0 označující, že je vyžadována word rozšíření.
 
    g. **Rozšířené epilogu počet** a **rozšířené slova kódu** jsou pole 16 bitů a 8 bitů, respektive, které poskytují více místa pro kódování neobvykle velký počet epilogů nebo neobvykle velký počet unwind slova kódu. Word rozšíření obsahující tato pole se nachází pouze pokud **epilogu počet** a **slova kódu** pole v první slovo záhlaví jsou nastavena na hodnotu 0.
 
-1. Po data výjimky Pokud **epilogu počet** není nula, je seznam informací o oborech epilogu zabaleny z nich se má u slov velká a uloženy v pořadí podle zvýšení počáteční posun. Každý obor obsahuje následující bits:
+1. Po záhlaví a nepovinné hlavičkové rozšířené popsané výš, pokud **epilogu počet** není nula, je seznam informací o oborech epilogu zabaleny z nich se má u slov velká a uloženy v pořadí podle zvýšení počáteční posun. Každý obor obsahuje následující bits:
 
    a. **Posun Start epilogu** je 18 bitové pole s popisem posun v bajtech, dělený 4 epilogu vzhledem ke spuštění funkce
 
@@ -237,7 +237,7 @@ Tato data rozdělená do čtyř oddílů:
 
 1. Po vstupu do seznamu oborů epilogu pole bajtů, které obsahují kódy unwind podrobně popsány v další části. Toto pole je, aby bylo vytvořeno po uplynutí na nejbližší hranici úplné slovo. Bajty jsou uloženy v pořadí little endian, takže může být přímo načíst v režimu little endian.
 
-1. Nakonec po unwind kód bajtů (a pokud **X** bitu v hlavičce byla nastavena na 1) obsahuje informace o výjimce obslužné rutiny. Tento postup se skládá z jednoho **RVA obslužné rutiny výjimek** poskytuje adresu obslužná rutina výjimky, okamžitě následován proměnné délky množství dat nutnému obslužnou rutinou výjimky.
+1. Nakonec po uvolnění kódu bajtů Pokud **X** bitu v hlavičce byl nastaven na hodnotu 1, obsahuje informace o výjimce obslužné rutiny. Tento postup se skládá z jednoho **RVA obslužné rutiny výjimek** poskytuje adresu obslužná rutina výjimky, okamžitě následován proměnné délky množství dat nutnému obslužnou rutinou výjimky.
 
 Výše uvedené .xdata záznamu je navržená tak, že je možné načíst první 8 bajtů a z té compute na plnou velikost záznamu (minus délka data výjimky proměnlivé velikosti, který následuje). Následující fragment kódu vypočítá velikost záznamu:
 

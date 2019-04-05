@@ -62,12 +62,12 @@ helpviewer_keywords:
 - images [C++], colors
 - colors [C++], inverting
 ms.assetid: d34ff96f-241d-494f-abdd-13811ada8cd3
-ms.openlocfilehash: f50d734ab35968aa107e23b8450d60f316b6002e
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: c424d2e613c51f901def13c4bf42a066797cc65c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563144"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034141"
 ---
 # <a name="how-to-work-with-color"></a>Postupy: Pracovat s barvou
 
@@ -223,12 +223,12 @@ Invertovat barvy v aktuálním výběru, přejděte do nabídky **Image** > **In
 
 ## <a name="requirements"></a>Požadavky
 
-Žádná
+Žádné
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Editor obrázků pro ikony](../windows/image-editor-for-icons.md)<br/>
 [Postupy: Vytvoření ikony nebo jiného obrázku](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
-[Postupy: Úprava obrázku](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[Postupy: Použití nástroje pro kreslení](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Postupy: Upravit obrázek](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Postupy: Použití nástroje kreslení](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
 [Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

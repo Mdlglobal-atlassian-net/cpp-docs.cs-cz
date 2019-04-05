@@ -33,12 +33,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 01b9012a2b32c22b86968b1ea0895bdc9ceabb13
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b58c0262d361ede37bc3db68784177ec4c29f3a4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417720"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034232"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet – třída
 
@@ -60,7 +60,7 @@ class CDBPropSet : public tagDBPROPSET
 
 |||
 |-|-|
-|[addProperty](#addproperty)|Přidá vlastnost sady vlastností.|
+|[AddProperty](#addproperty)|Přidá vlastnost sady vlastností.|
 |[CDBPropSet](#cdbpropset)|Konstruktor|
 |[SetGUID](#setguid)|Nastaví `guidPropertySet` pole `DBPROPSET` struktury.|
 
@@ -109,7 +109,7 @@ bool AddProperty(DWORD dwPropertyID,
 *bValue*<br/>
 [in] A `BYTE` nebo logická hodnota, které se používají k inicializaci hodnoty vlastnosti pro `DBPROP` struktury přidána do sady vlastností.
 
-*nValue*<br/>
+*nHodnota*<br/>
 [in] Celočíselná hodnota použitý k inicializaci hodnoty vlastnosti pro `DBPROP` struktury přidána do sady vlastností.
 
 *fltValue*<br/>
@@ -144,7 +144,7 @@ CDBPropSet();
 *identifikátor GUID*<br/>
 [in] Identifikátor GUID použitý k inicializaci `guidPropertySet` pole.
 
-*propset*<br/>
+*Sada vlastností*<br/>
 [in] Jiné `CDBPropSet` objekt pro konstrukci kopie.
 
 ## <a name="setguid"></a> CDBPropSet::SetGUID
@@ -176,7 +176,7 @@ Přiřadí obsah jednu vlastnost nastavena na jinou sadu vlastností.
 CDBPropSet& operator =(CDBPropSet& propset) throw();
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

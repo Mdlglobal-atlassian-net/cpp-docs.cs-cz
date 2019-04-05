@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - record views, customizing default code
 ms.assetid: 91f2828f-0666-4273-ae28-e4703fd98521
-ms.openlocfilehash: a051394fd79dfb84801a1fb9e700a7ce49ed1c7b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d64fc26e1c78bad0431bc9b10dd5117c4866159
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605176"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029353"
 ---
 # <a name="using-a-record-view--mfc-data-access"></a>Použití zobrazení záznamů (přístup k datům MFC)
 
 Toto téma vysvětluje, jak může často přizpůsobit výchozí kód pro zobrazení záznamů, které průvodce zapíše za vás. Obvykle je vhodné omezit výběr záznamu [filtr](../data/odbc/recordset-filtering-records-odbc.md) nebo [parametry](../data/odbc/recordset-parameterizing-a-recordset-odbc.md), možná [řazení](../data/odbc/recordset-sorting-records-odbc.md) záznamy, přizpůsobení příkazu SQL.
 
-Pomocí `CRecordView` je skoro stejné jako při použití [CFormView](../mfc/reference/cformview-class.md). Základní přístupem je použití zobrazení záznamů pro zobrazení a případně k aktualizaci záznamů z jedné sady záznamů. Kromě toho můžete chtít použít jiné sady záznamů také, jak je popsáno v [zobrazení záznamů: naplnění seznamu druhou sadou záznamů](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).
+Pomocí `CRecordView` je skoro stejné jako při použití [CFormView](../mfc/reference/cformview-class.md). Základní přístupem je použití zobrazení záznamů pro zobrazení a případně k aktualizaci záznamů z jedné sady záznamů. Kromě toho můžete chtít použít jiné sady záznamů také, jak je popsáno v [zobrazení záznamů: Naplnění seznamu druhou sadou záznamů](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zobrazení záznamů (přístup k datům MFC)](../data/record-views-mfc-data-access.md)<br/>
 [Seznam ovladačů ODBC](../data/odbc/odbc-driver-list.md)

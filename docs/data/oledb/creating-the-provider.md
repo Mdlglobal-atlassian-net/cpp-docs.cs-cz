@@ -4,12 +4,12 @@ ms.date: 10/15/2018
 helpviewer_keywords:
 - OLE DB providers, creating
 ms.assetid: 2506ba8f-010d-4231-aac1-387432f7b6b9
-ms.openlocfilehash: 05ab045e104e3035f8ccd2fa1924b6959164b8d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6258b5247e4d9d027e0f03bc133dff1a059665bd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538183"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032346"
 ---
 # <a name="creating-the-provider"></a>Vytvoření zprostředkovatele
 
@@ -25,14 +25,14 @@ ms.locfileid: "50538183"
 
 1. V případě potřeby upravte další pole názvů. Kromě názvů objektu a souboru můžete upravit následující:
 
-   - **Coclass**: název, který COM používá k vytvoření poskytovatele.
+   - **Coclass**: Název, který COM používá k vytvoření poskytovatele.
 
-   - **ProgID**: programový identifikátor, který je textový řetězec, který je možné použít místo identifikátoru GUID.
+   - **ProgID**: Programový identifikátor, který je textový řetězec, který je možné použít místo identifikátoru GUID.
 
-   - **Verze**: sloužícího ke generování programový identifikátor závislé na verzi s identifikátorem ProgID a Coclass
+   - **Verze**: ProgID a Coclass sloužícího ke generování programový identifikátor závislé na verzi
 
 1. Klikněte na tlačítko **Dokončit**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vytvoření zprostředkovatele OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

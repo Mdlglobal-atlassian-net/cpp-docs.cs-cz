@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-ms.openlocfilehash: edfeb18053f3ae4fa8c45211833e0ceaa037cf79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd7455298c9a1b69926d85766b6cd7f96bd374cc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595569"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037114"
 ---
 # <a name="idlquote"></a>idl_quote
 
@@ -25,7 +25,7 @@ Umožňuje použít IDL konstrukce, které nejsou podporovány v aktuální verz
 
 ### <a name="parameters"></a>Parametry
 
-*Text*<br/>
+*text*<br/>
 Název atributu, který máte v úmyslu kompilátor Visual C++ pro převedení na generovaného souboru bez vrácení chybu kompilátoru.
 
 ## <a name="remarks"></a>Poznámky
@@ -79,12 +79,12 @@ Tento kód způsobí, že `MYFLOT` a `MYDUB` a *text* položky budou umístěny 
 |-|-|
 |**Platí pro**|Kdekoli|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádné|
+|**Vyžadované atributy**|Žádný|
+|**Neplatné atributy**|Žádný|
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Samostatné atributy](stand-alone-attributes.md)
