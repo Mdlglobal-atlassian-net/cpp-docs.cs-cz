@@ -10,12 +10,12 @@ helpviewer_keywords:
 - overriding, SQL statements
 - SQL, opening recordsets
 ms.assetid: 72293a08-cef2-4be2-aa1c-30565fcfbaf9
-ms.openlocfilehash: 84ce18ccbf3cc59dd9c94826366595d2f128784f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eabaab019ee94b0c5617573c534d920ec710e9b2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459923"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036192"
 ---
 # <a name="sql-customizing-your-recordsets-sql-statement-odbc"></a>SQL: Přizpůsobení příkazu SQL sady záznamů (ODBC)
 
@@ -56,7 +56,7 @@ Chcete-li přepsat výchozí **vyberte** prohlášení, vložte řetězec obsahu
 > [!NOTE]
 >  Pokud používáte řetězcových literálů v filtry (nebo jiné části příkazu jazyka SQL), budete muset "nabídka" (uzavřete do zadaných oddělovačů) tyto řetězce literálu předpona specifická pro DBMS a literálu přípony znak (nebo znaky).
 
-Speciální syntaktickými požadavky pro operace, jako je vnější spojení, může dojít také v závislosti na vaší DBMS. Funkce ODBC pro získání těchto informací z vašich ovladače pro správce databáze. Například volání `::SQLGetTypeInfo` pro konkrétní datový typ, jako například `SQL_VARCHAR`, požádat o LITERAL_PREFIX a LITERAL_SUFFIX znaků. Pokud píšete kód nezávislý na databázi, naleznete v tématu [gramatika SQL příloha C:](/sql/odbc/reference/appendixes/appendix-c-sql-grammar) v [ODBC programátora](/sql/odbc/reference/odbc-programmer-s-reference) pro podrobné informace o syntaxi.
+Speciální syntaktickými požadavky pro operace, jako je vnější spojení, může dojít také v závislosti na vaší DBMS. Funkce ODBC pro získání těchto informací z vašich ovladače pro správce databáze. Například volání `::SQLGetTypeInfo` pro konkrétní datový typ, jako například `SQL_VARCHAR`, požádat o LITERAL_PREFIX a LITERAL_SUFFIX znaků. Pokud píšete kód nezávislý na databázi, naleznete v tématu [příloha C: Gramatika SQL](/sql/odbc/reference/appendixes/appendix-c-sql-grammar) v [ODBC programátora](/sql/odbc/reference/odbc-programmer-s-reference) pro podrobné informace o syntaxi.
 
 Objekt sady záznamů sestavuje příkaz SQL, který se používá k výběru záznamů, pokud nepředáte vlastní příkaz jazyka SQL. Jak se to závisí hlavně na hodnotu můžete předat *Ipszsql* parametr `Open` členskou funkci.
 
@@ -144,11 +144,11 @@ Seznam sloupců je zadat ručně nespoléhat se na funkce RFX vytvořit automati
 
    Můžete například umístit nové sloupce, které zákazník vaší aplikace přidat do tabulky databáze po byla distribuována aplikace. Budete muset přidat tyto dodatečné datové členy, kterých se ví, v době deklarována třída pomocí průvodce.
 
-   Sloupec seznamu by měl odpovídat názvy sloupců a typy ve stejném pořadí, jak jsou uvedeny v `DoFieldExchange`následovaný názvy ručně svázané sloupce. Další informace najdete v tématu [sada záznamů: dynamické vazby dat sloupců (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
+   Sloupec seznamu by měl odpovídat názvy sloupců a typy ve stejném pořadí, jak jsou uvedeny v `DoFieldExchange`následovaný názvy ručně svázané sloupce. Další informace najdete v tématu [sada záznamů: Dynamické vazby datových sloupců (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
 
 - Chcete-li tabulky mají spojit, tak, že zadáte více tabulek v **FROM** klauzuli.
 
-   Informace a příklad najdete v tématu [sada záznamů: provedení do připojení (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
+   Informace a příklad najdete v tématu [sada záznamů: Provedení spojení (rozhraní ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
 
 ### <a name="case-4---lpszsql--selectfrom-plus-where-andor-order-by"></a>Případ 4 Ipszsql = vyberte / z Plus WHERE a ORDER BY
 
@@ -158,9 +158,9 @@ Všechno, co zadáte: seznam sloupců (podle RFX v `DoFieldExchange`), seznam ta
 
 Pokud je potřeba volat předdefinovaný dotaz (jako jsou uložené procedury v databázi Microsoft SQL Server), je nutné napsat **volání** příkaz v řetězci, který předáte *Ipszsql*. Průvodci nepodporují deklarace třídy sady záznamů pro volání předdefinovaného dotazu. Ne všechny předdefinované dotazy vrací záznamy.
 
-Je-li předdefinovaný dotaz nevrací záznamy, můžete použít `CDatabase` členskou funkci `ExecuteSQL` přímo. Pro předdefinovaný dotaz, který vrátí záznamy, je nutné také ručně napsat volání RFX v `DoFieldExchange` pro všechny sloupce postup vrátí. Volání funkce RFX musí být ve stejném pořadí a vrátí stejné typy, jako předdefinovaný dotaz. Další informace najdete v tématu [sada záznamů: deklarování třídy pro předdefinovaný dotaz (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).
+Je-li předdefinovaný dotaz nevrací záznamy, můžete použít `CDatabase` členskou funkci `ExecuteSQL` přímo. Pro předdefinovaný dotaz, který vrátí záznamy, je nutné také ručně napsat volání RFX v `DoFieldExchange` pro všechny sloupce postup vrátí. Volání funkce RFX musí být ve stejném pořadí a vrátí stejné typy, jako předdefinovaný dotaz. Další informace najdete v tématu [sada záznamů: Deklarování třídy pro předdefinovaný dotaz (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[SQL: Datové typy SQL a C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)<br/>
+[SQL: SQL a datové typy C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)<br/>
 [SQL: Přímá volání SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)

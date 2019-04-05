@@ -5,12 +5,12 @@ helpviewer_keywords:
 - standalone attributes
 - attributes [C++/CLI], standalone
 ms.assetid: 0d72e84e-236c-43b3-ac9a-d9b91fcd6794
-ms.openlocfilehash: 1183d2b171a25b3b2d1aef14c19f81be65effc6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7dd1f35add3b23dbd81e32a1600481eec79fe7d7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640818"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033054"
 ---
 # <a name="stand-alone-attributes"></a>Samostatné atributy
 
@@ -21,7 +21,7 @@ Samostatný atribut nepracuje se klíčové slovo C++ ale se víc na řádek kó
 |Atribut|Popis|
 |---------------|-----------------|
 |[cpp_quote](cpp-quote.md)|Zadaný řetězec bez uvozovek znaků, vysílá do vygenerovaného souboru hlavičky.|
-|[custom](custom-cpp.md)|Umožňuje definovat vlastní atribut.|
+|[vlastní](custom-cpp.md)|Umožňuje definovat vlastní atribut.|
 |[db_command](db-command.md)|Vytvoří příkaz OLE DB.|
 |[emitidl](emitidl.md)|Určuje, zda všechny následné IDL – atributy zpracování, který se umístí do generovaného souboru.|
 |[idl_module](idl-module.md)|Určuje vstupní bod v knihovně DLL.|
@@ -36,6 +36,6 @@ Samostatný atribut nepracuje se klíčové slovo C++ ale se víc na řádek kó
 |[no_injected_text](no-injected-text.md)|Zabrání kompilátoru vkládání kódu v důsledku použití atributu.|
 |[pragma](pragma.md)|Zadaný řetězec bez uvozovek znaků, vysílá do generovaného souboru.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Atributy podle použití](attributes-by-usage.md)

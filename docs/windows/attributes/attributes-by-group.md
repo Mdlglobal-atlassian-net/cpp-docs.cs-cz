@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: 9f4dd43f-9909-43d6-91d2-05734643876e
-ms.openlocfilehash: fe78a4c5a1773cf621d6554969b1c41c333bc5aa
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: bab7013f2c5fd48ef1a22b990499d79c9c217ca9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58778582"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038223"
 ---
 # <a name="attributes-by-group"></a>Atributy podle skupin
 
@@ -26,8 +26,8 @@ Atributy C++ jsou uspořádány do následujících skupin funkční.
 
 Informace o tom, jak definovat vlastní atributy pro aplikaci rozhraní .NET Framework najdete v tématu [uživatelem definované atributy](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Atributy C++ pro COM a .NET](cpp-attributes-com-net.md)<br/>
+[Atributy C++ COM a .NET](cpp-attributes-com-net.md)<br/>
 [Atributy podle použití](attributes-by-usage.md)<br/>
 [Abecedně řazená referenční dokumentace k atributům](attributes-alphabetical-reference.md)

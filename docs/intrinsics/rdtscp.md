@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __rdtscp intrinsic
 - rdtscp instruction
 ms.assetid: f17d9a9c-88bb-44e0-b69d-d516bc1c93ee
-ms.openlocfilehash: 813f13e20e74890cfcb52ae25234aa348e1d522d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b28052fbe0a1ab0e1a6f037ce61f43abea5cf771
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496292"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028477"
 ---
 # <a name="rdtscp"></a>__rdtscp
 
@@ -31,7 +31,7 @@ unsigned __int64 __rdtscp(
 
 #### <a name="parameters"></a>Parametry
 
-*AUX*<br/>
+*Aux*<br/>
 [out] Ukazatel na umístění, která bude obsahovat obsah registru specifické pro počítač `TSC_AUX[31:0]`.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -77,11 +77,11 @@ printf_s("TSC_AUX was %x\n", ui);
 TSC_AUX was 0
 ```
 
-**Specifické pro END Microsoft**
+**END Specifické pro Microsoft**
 
-Copyright 2007 pokročilé zařízení Micro, Inc. Všechna práva vyhrazena. Reprodukovat se svolením rozšířené Micro zařízení, Inc.
+Copyright 2007 by Advanced Micro Devices, Inc. Všechna práva vyhrazena. Reprodukovat se svolením rozšířené Micro zařízení, Inc.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [__rdtsc](../intrinsics/rdtsc.md)<br/>
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

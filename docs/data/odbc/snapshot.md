@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cursor library [ODBC], snapshots
 - snapshots
 ms.assetid: b5293a52-0657-43e9-bd71-fe3785b21c7e
-ms.openlocfilehash: 99e1d76f8d65def326b0514f3219cef43f695220
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5999f89156d895ff0c87c892be892c6a614a0132
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512668"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037643"
 ---
 # <a name="snapshot"></a>Snímek
 
@@ -44,6 +44,6 @@ Snímky jsou k dispozici pouze v případě, že byla načtena knihovna kurzorů
 
 Další informace o sdílené složce snímků vlastnosti s všechny sady záznamů najdete v tématu [sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md). Další informace o rozhraní ODBC a snímky, včetně knihovna kurzorů rozhraní ODBC, naleznete v tématu [ODBC](../../data/odbc/odbc-basics.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+[ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Sada záznamů: Jak sady záznamů aktualizují záznamy (ODBC)'
+title: 'Recordset: Jak sady záznamů aktualizují záznamy (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records, updating
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
-ms.openlocfilehash: 3b9bea1cc8fc0a11773d2392f88fff333eb7084f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf71f562714e2dacfe75540e1e532219b3eb307f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510003"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034479"
 ---
-# <a name="recordset-how-recordsets-update-records-odbc"></a>Sada záznamů: Jak sady záznamů aktualizují záznamy (ODBC)
+# <a name="recordset-how-recordsets-update-records-odbc"></a>Recordset: Jak sady záznamů aktualizují záznamy (ODBC)
 
 Toto téma platí pro třídy knihovny MFC rozhraní ODBC.
 
@@ -25,7 +25,7 @@ Kromě schopnosti vyberte záznamy ze zdroje dat sady záznamů můžete (volite
 >  SQL, na kterém vaše `CRecordset` podle objektu může ovlivnit aktualizovatelnosti sady záznamů. Například pokud vaše SQL obsahuje spojení nebo **Group** klauzule MFC nastaví aktualizovatelnosti na hodnotu FALSE.
 
 > [!NOTE]
->  Toto téma se vztahuje na objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud používáte hromadné načítání řádků, přečtěte si téma [sada záznamů: načítání hromadné záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Toto téma se vztahuje na objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud používáte hromadné načítání řádků, přečtěte si téma [sada záznamů: Načítání záznamů (ODBC) hromadné](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Toto téma vysvětluje:
 
@@ -33,15 +33,15 @@ Toto téma vysvětluje:
 
 - [Sada záznamů jako vyrovnávací paměť úprav](#_core_the_edit_buffer) a [rozdíly v dynamických sadách a snímky](#_core_dynasets_and_snapshots).
 
-[Sada záznamů: Jak funkce operací AddNew, Edit a Delete práce (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md) popisuje akce, které z těchto funkcí z hlediska sady záznamů.
+[Recordset: Jak funkce operací AddNew, Edit a Delete práce (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md) popisuje akce, které z těchto funkcí z hlediska sady záznamů.
 
-[Sada záznamů: Další informace o aktualizace (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) poslední částí scénáře aktualizace sady záznamů a s vysvětlením vliv transakcí na aktualizace, jak uzavírání sady záznamů nebo posouvání ovlivňuje Probíhá aktualizace a jak aktualizace využívat aktualizace jiných uživatelé.
+[Recordset: Další informace o aktualizace (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) poslední částí scénáře aktualizace sady záznamů a s vysvětlením vliv transakcí na aktualizace, jak uzavírání sady záznamů nebo posouvání ovlivňuje Probíhá aktualizace a způsob aktualizace interakce s aktualizacemi jiných uživatelů.
 
 ##  <a name="_core_your_role_in_recordset_updating"></a> Vaše Role při aktualizaci sady záznamů
 
 Následující tabulka uvádí vaši roli v použití sad záznamů přidat, upravit nebo odstranit záznamy, spolu s rozhraní udělá za vás.
 
-### <a name="recordset-updating-you-and-the-framework"></a>Aktualizace sady záznamů: Jste a rozhraní
+### <a name="recordset-updating-you-and-the-framework"></a>Aktualizace sady záznamů: Vy a architektura
 
 |Vy|Rozhraní framework|
 |---------|-------------------|
@@ -70,7 +70,7 @@ Při volání [AddNew](../../mfc/reference/crecordset-class.md#addnew) nebo [upr
 
 [Dynamické sady](../../data/odbc/dynaset.md) aktualizace záznamu obsah při posunutí se záznam. [Snímky](../../data/odbc/snapshot.md) jsou statické reprezentace záznamy, takže obsah záznamů se neobnovily Pokud zavoláte [Requery](../../mfc/reference/crecordset-class.md#requery). Pokud chcete používat všechny funkce dynamické sady, musí pracovat prostřednictvím ovladače ODBC, který odpovídá správnou úroveň podpory rozhraní API ODBC. Další informace najdete v tématu [ODBC](../../data/odbc/odbc-basics.md) a [dynamická sada](../../data/odbc/dynaset.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Sada záznamů: Jak fungují operace AddNew, Edit a Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)
+[Recordset: Jak funkce operací AddNew, Edit a odstranit pracovní (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3541
 ms.assetid: 252cfd4c-5fd2-415e-a17d-6b0c254350db
-ms.openlocfilehash: c56be16504dbdad0c441ad90182fa99ef0445dcf
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 03361fa3e8d4ecb9647d354dd402a9f2b0865eb6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58772628"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037682"
 ---
 # <a name="compiler-error-c3541"></a>Chyba kompilátoru C3541
 
@@ -35,8 +35,8 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Auto – klíčové slovo](../../cpp/auto-keyword.md)<br/>
+[auto – klíčové slovo](../../cpp/auto-keyword.md)<br/>
 [/Zc:auto (odvození typu proměnné)](../../build/reference/zc-auto-deduce-variable-type.md)<br/>
-[identifikátor TypeId.](../../extensions/typeid-cpp-component-extensions.md)
+[typeid](../../extensions/typeid-cpp-component-extensions.md)

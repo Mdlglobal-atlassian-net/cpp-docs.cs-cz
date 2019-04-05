@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - Functions with interior and native pointers, overloading
 ms.assetid: d70df625-4aad-457c-84f5-70a0a290cc1f
-ms.openlocfilehash: bd2bc59d85854dedd0f1a349885312d4346aa925
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: f84a7efc87985f23b62139f0547c292989537aa6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787008"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038548"
 ---
 # <a name="how-to-overload-functions-with-interior-pointers-and-native-pointers-ccli"></a>Postupy: Přetížení funkcí s vnitřními a nativními ukazateli (C + +/ CLI)
 
@@ -63,6 +63,6 @@ in f( int* pi )
 in f( interior_ptr<int> pi )
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)

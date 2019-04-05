@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CCustomWindowsFile class
 ms.assetid: 0e9e72ac-1e1e-445f-a7ac-690c20031f9d
-ms.openlocfilehash: 008fe318ee96248dfca0c3c87bf660726beb3092
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4af302d8a391de359f3b8ac66d41b5d7198fd8f6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660822"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033108"
 ---
 # <a name="ccustomwindowsfile"></a>CCustomWindowsFile
 
@@ -77,6 +77,6 @@ Adresář, který má hledání je zobrazen objektem `m_strCommandText`; obsahuj
 
 Metoda vytvoří jeden záznam pro každý soubor (odpovídající řádek) a umístí jej do `m_rgRowData` datový člen. `CRowsetImpl` Třída definuje `m_rgRowData` datový člen. Data v tomto poli se zobrazí celou tabulku a používá se v rámci šablony.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Soubory generované průvodcem zprostředkovatele](../../data/oledb/provider-wizard-generated-files.md)<br/>
+[Poskytovatel souborů vytvořených průvodcem](../../data/oledb/provider-wizard-generated-files.md)<br/>

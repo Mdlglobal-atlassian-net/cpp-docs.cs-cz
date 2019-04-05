@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ODBC Administrator [C++]
 - drivers [C++], ODBC
 ms.assetid: b8652790-3437-4e7d-bc83-6ea6981f008b
-ms.openlocfilehash: 5e83657462952be12a6a2d086aa2419093e06d0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac893981ff8c697dc090f1e6ad5ac61886a69f99
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454791"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035861"
 ---
 # <a name="odbc-administrator"></a>Správce rozhraní ODBC
 
@@ -50,7 +50,7 @@ Pokud chcete instalaci ovladače rozhraní ODBC, které se nedodává s jazykem 
 
 Při instalaci ovladače, můžete nakonfigurovat zdroj dat pomocí Správce rozhraní ODBC. Ikona ODBC zjistíte v Ovládacích panelech.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
+[ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [Zdroj dat (ODBC)](../../data/odbc/data-source-odbc.md)

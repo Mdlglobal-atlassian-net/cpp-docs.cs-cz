@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application wizards [C++], creating record view classes
 - designing record views
 ms.assetid: 1d6f5439-754f-4b8b-a19d-841a4657827b
-ms.openlocfilehash: b97ac5e61530742280dd8ee2183ec54229fb4441
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15a8afde8c86d3dae8198e8f42b2b7c3b49f0dfa
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613444"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035540"
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>Návrh a vytváření zobrazení záznamů (přístup k datům MFC)
 
@@ -36,11 +36,11 @@ Následující témata vysvětlují, další podrobnosti o použití zobrazení 
 
 - [Zobrazení záznamů: Podpora navigace v zobrazení záznamu](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
 
-- [Zobrazení záznamu: Použití zobrazení záznamů](../data/using-a-record-view-mfc-data-access.md)
+- [Zobrazení záznamů: Použití zobrazení záznamů](../data/using-a-record-view-mfc-data-access.md)
 
-- [Zobrazení záznamů: Naplnění seznamu druhou sadou záznamů](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)
+- [Zobrazení záznamů: Naplnění seznamu z druhé sady záznamů](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zobrazení záznamů (přístup k datům MFC)](../data/record-views-mfc-data-access.md)<br/>
 [Sada záznamů (ODBC)](../data/odbc/recordset-odbc.md)<br/>

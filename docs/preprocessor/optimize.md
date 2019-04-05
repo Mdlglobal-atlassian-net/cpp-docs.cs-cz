@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, optimize
 - optimize pragma
 ms.assetid: cb13c1cc-186a-45bc-bee7-95a8de7381cc
-ms.openlocfilehash: 65948f2b466bdd40bd753dbba99e2e235c57b0f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f5240fc59f59a71ddb3d18b67fadf3463a0d1ea
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615862"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035397"
 ---
 # <a name="optimize"></a>optimize
 
@@ -35,7 +35,7 @@ Určuje optimalizace, které provádí na základě funkce funkce.
 
 |Parametry|Typ optimalizace|
 |--------------------|--------------------------|
-|*g*|Povolte globální optimalizace.|
+|*G*|Povolte globální optimalizace.|
 |*s* nebo *t*|Zadejte krátký nebo rychlý sekvence strojového kódu.|
 |*y*|Generovat ukazatelů rámců v zásobníku programu.|
 
@@ -59,6 +59,6 @@ Při použití *na* parametr resetuje optimalizace na ty, které jste zadali pom
 #pragma optimize( "", on )
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

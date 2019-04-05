@@ -6,12 +6,12 @@ helpviewer_keywords:
 - preprocessor, macros
 - Visual C++, preprocessor macros
 ms.assetid: a7bfc5d4-2537-4fe0-bef0-70cec0b43388
-ms.openlocfilehash: eb576fae7a2a895b88aa958c61b3170e58fbb070
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 281aaf686c07894b5cb1fab187ba903179c51de8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656297"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032177"
 ---
 # <a name="macros-cc"></a>Makra (C/C++)
 Předzpracování rozbalí makra na všech řádcích, které nejsou direktivami preprocesoru (řádky, které nemají **#** jako první znak prázdné znaky) a v částech některých direktiv, jež nejsou vynechány jako součást podmíněné kompilace. Direktivy „podmíněné kompilace“ umožňují potlačit kompilace částí zdrojového souboru testováním konstantního výrazu nebo identifikátoru k určení, které textové bloky jsou předány kompilátoru a které textové bloky jsou odstraněny ze zdrojového souboru během předběžného zpracování.
@@ -34,6 +34,6 @@ Další informace najdete v tématu,
 
 - [Předdefinovaná makra](../preprocessor/predefined-macros.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [C/C++ – referenční dokumentace preprocesoru](../preprocessor/c-cpp-preprocessor-reference.md)

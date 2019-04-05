@@ -1,5 +1,5 @@
 ---
-title: 'Sada záznamů: Zamykání záznamů (ODBC)'
+title: 'Recordset: Zamykání záznamů (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - locks [C++], recordsets
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], locking records
 - data [C++], locking
 ms.assetid: 8fe8fcfe-b55a-41a8-9136-94a7cd1e4806
-ms.openlocfilehash: 08d7ca1db474a5735ccaabaa7d7d87b359730bb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1265899e7060527d7e586689eb4c3148eebc4080
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438694"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037286"
 ---
-# <a name="recordset-locking-records-odbc"></a>Sada záznamů: Zamykání záznamů (ODBC)
+# <a name="recordset-locking-records-odbc"></a>Recordset: Zamykání záznamů (ODBC)
 
 Toto téma platí pro třídy knihovny MFC rozhraní ODBC.
 
@@ -30,7 +30,7 @@ Toto téma vysvětluje:
 Při aktualizaci záznamu ve zdroji dat pomocí sady záznamů, aplikace uzamknout záznam, aby žádný jiný uživatel upravovat záznam ve stejnou dobu. Stav záznamu aktualizovat ve stejnou dobu dva uživatele není definováno, pokud systém nemůže zaručit, že dva uživatele nejde aktualizovat záznam současně.
 
 > [!NOTE]
->  Toto téma se vztahuje na objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud jste implementovali hromadné načítání řádků, některé informace se nevztahují. Například nelze volat `Edit` a `Update` členské funkce. Další informace o hromadném načítání řádků naleznete v tématu [sada záznamů: načítání hromadné záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Toto téma se vztahuje na objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud jste implementovali hromadné načítání řádků, některé informace se nevztahují. Například nelze volat `Edit` a `Update` členské funkce. Další informace o hromadném načítání řádků naleznete v tématu [sada záznamů: Načítání záznamů (ODBC) hromadné](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_record.2d.locking_modes"></a> Režimy zamykání záznamů
 
@@ -63,8 +63,8 @@ Nový režim uzamčení zůstává v platnosti, dokud nebude znovu změnit nebo 
 > [!NOTE]
 >  Relativně málo ovladače rozhraní ODBC aktuálně podporují pesimistické zamykání.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Sada záznamů: Provedení spojení (rozhraní ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)<br/>
-[Sada záznamů: Přidávání, aktualizace a odstranění záznamů (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+[Recordset: Provedení spojení (rozhraní ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)<br/>
+[Recordset: Přidání, aktualizace nebo odstranění záznamů (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

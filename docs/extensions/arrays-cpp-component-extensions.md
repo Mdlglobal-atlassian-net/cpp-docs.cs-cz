@@ -12,12 +12,12 @@ helpviewer_keywords:
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-ms.openlocfilehash: 0fb3f9423fd4ca44ac5d5f17624caa7966916c16
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: e4173c16e13c08a54b36e42183e6e18b6ed4fdc2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786620"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035339"
 ---
 # <a name="arrays-ccli-and-ccx"></a>Pole (C + +/ CLI a C + +/ CX)
 
@@ -32,7 +32,7 @@ Na rozdíl od standardní C++ vytváření dolních indexů není synonymum pro 
 
 Další informace o polích naleznete v tématu:
 
-- [Postupy: Používání polí v jazyce C++/CLI](../dotnet/how-to-use-arrays-in-cpp-cli.md)
+- [Postupy: Používání polí v jazyce C + +/ CLI](../dotnet/how-to-use-arrays-in-cpp-cli.md)
 
 - [Seznamy argumentů s proměnnou délkou (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)
 
@@ -55,13 +55,13 @@ První příklad syntaxe používá **ref nové** agregační – klíčové slo
 *Kvalifikátory*<br/>
 (Volitelné) Jeden nebo více těchto specifikátorů třídy úložiště: [proměnlivé](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statické](../cpp/static-members-cpp.md).
 
-*array-type*<br/>
+*Typ pole*<br/>
 Typ proměnné pole. Platné typy jsou třídy Windows Runtime a základní typy, referenční třídy a struktury, hodnota třídy a struktury a nativními ukazateli (`type*`).
 
-*pořadí*<br/>
+*rozsah*<br/>
 (Volitelné) Počet rozměrů pole. Musí být 1.
 
-*identifier*<br/>
+*identifikátor*<br/>
 Název proměnné pole.
 
 *typ inicializace*<br/>
@@ -111,13 +111,13 @@ První příklad syntaxe používá **gcnew** – klíčové slovo pro přiděle
 *Kvalifikátory*<br/>
 (Volitelné) Jeden nebo více těchto specifikátorů třídy úložiště: [proměnlivé](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statické](../cpp/static-members-cpp.md).
 
-*array-type*<br/>
+*Typ pole*<br/>
 Typ proměnné pole. Platné typy jsou třídy Windows Runtime a základní typy, referenční třídy a struktury, hodnota třídy a struktury, nativními ukazateli (`type*`) a nativní typy POD (obyčejná stará data).
 
-*pořadí*<br/>
+*rozsah*<br/>
 (Volitelné) Počet rozměrů pole. Výchozí hodnota je 1; maximální počet je 32. Každé dimenze pole je pole.
 
-*identifier*<br/>
+*identifikátor*<br/>
 Název proměnné pole.
 
 *typ inicializace*<br/>
@@ -168,6 +168,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)

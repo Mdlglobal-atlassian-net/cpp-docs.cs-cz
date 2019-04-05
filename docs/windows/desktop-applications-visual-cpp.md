@@ -2,12 +2,12 @@
 title: Desktopové aplikace (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-ms.openlocfilehash: 090180062139642d8a686e9f1bf063f3e65aee88
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 1242878c6b79616aaadb6a176cd29deeb89a7daf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58771916"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033102"
 ---
 # <a name="desktop-applications-visual-c"></a>Desktopové aplikace (Visual C++)
 
@@ -37,12 +37,12 @@ Všechny aplikace klasické pracovní plochy v jazyce C++ můžete použít C Ru
 
 |Název|Popis|
 |-----------|-----------------|
-|[Konzolové aplikace pro Windows v C++](console-applications-in-visual-cpp.md)|Obsahuje informace o konzolových aplikacích. Konzolová aplikace Win32 (nebo Win64) nemá žádná vlastní okna ani žádnou smyčku zpráv. Spustí se v okně konzoly a vstup a výstup se provádí prostřednictvím příkazového řádku.|
-|[Návod: Vytváření desktopových aplikací Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Vytvoření jednoduché aplikace klasické pracovní plochy Windows.|
-|[Vytvoření prázdné desktopové aplikace Windows](creating-an-empty-windows-desktop-application.md)|Jak vytvořit projekt klasické pracovní plochy Windows, který nemá žádný výchozí soubory.|
+|[Windows konzolové aplikace v jazyce C++](console-applications-in-visual-cpp.md)|Obsahuje informace o konzolových aplikacích. Konzolová aplikace Win32 (nebo Win64) nemá žádná vlastní okna ani žádnou smyčku zpráv. Spustí se v okně konzoly a vstup a výstup se provádí prostřednictvím příkazového řádku.|
+|[Návod: Vytváření aplikací klasické pracovní plochy Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Vytvoření jednoduché aplikace klasické pracovní plochy Windows.|
+|[Vytváření aplikací klasické pracovní plochy Windows prázdný](creating-an-empty-windows-desktop-application.md)|Jak vytvořit projekt klasické pracovní plochy Windows, který nemá žádný výchozí soubory.|
 |[Přidávání souborů do prázdných aplikací Win32](adding-files-to-an-empty-win32-applications.md)|Postup přidání souborů do projektu prázdný.|
 |[Práce se zdrojovými soubory](working-with-resource-files.md)|Jak přidat obrázky, ikony, tabulek řetězců a dalších prostředků pro aplikace klasické pracovní plochy.|
-|[Prostředky pro vytvoření hry s použitím rozhraní DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Obsahuje odkazy na obsah pro vytváření her v C++.|
+|[Prostředky pro vytvoření hry s použitím rozhraní DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Obsahuje odkazy na obsah pro vytváření her v C++.|
 |[Návod: Vytvoření a použití statické knihovny](walkthrough-creating-and-using-a-static-library-cpp.md)|Jak vytvořit binární soubor LIB.|
 |[Postupy: Použití sady Windows 10 SDK v desktopové aplikaci Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Obsahuje kroky pro vytvoření projektu pro sestavení pomocí Windows 10 SDK.|
 
@@ -54,6 +54,6 @@ Všechny aplikace klasické pracovní plochy v jazyce C++ můžete použít C Ru
 |[Hilo: Vývoj aplikací v jazyce C++ pro Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Popisuje, jak vytvořit aplikaci klasické pracovní plochy plně funkčním klientovi Windows, která používá k vytvoření kolotočového uživatelského rozhraní Windows Animation a Direct2D.  V tomto kurzu se neaktualizoval od verze Windows 7, ale stále obsahuje důkladný Úvod k programování v systému Win32.|
 |[Přehled programování v C++ v systému Windows](overview-of-windows-programming-in-cpp.md)|Popisuje klíčové funkce Windows desktop programování v jazyce C++.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Visual C++](../overview/visual-cpp-in-visual-studio.md)

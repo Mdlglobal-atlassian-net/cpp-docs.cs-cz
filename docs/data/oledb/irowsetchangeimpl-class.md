@@ -32,12 +32,12 @@ helpviewer_keywords:
 - SetData method
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-ms.openlocfilehash: 452bd28e3ea061ecc30ef802290242e4cb830792
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 8b2a92fdefd965d4b87e0a9ed411cc1b5c89b8f9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328594"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036796"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl – třída
 
@@ -83,7 +83,7 @@ Jednotky úložiště pro všechny popisovačů řádků uchovávat zprostředko
 |||
 |-|-|
 |[DeleteRows](#deleterows)|Odstraní řádky ze sady řádků.|
-|[InsertRow](#insertrow)|Vloží řádek do sady řádků.|
+|[Insertrow –](#insertrow)|Vloží řádek do sady řádků.|
 |[SetData](#setdata)|Nastaví hodnoty dat v jedné nebo více sloupců.|
 
 ### <a name="implementation-method-callback"></a>Implementace metody (zpětného volání)
@@ -182,7 +182,7 @@ HRESULT FlushData(HROW hRowToFlush,
 
 Standardní HRESULT.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

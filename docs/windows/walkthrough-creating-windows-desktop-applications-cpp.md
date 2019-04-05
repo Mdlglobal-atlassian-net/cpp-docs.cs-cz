@@ -1,19 +1,19 @@
 ---
-title: 'Průvodce: Vytvořte tradiční aplikace klasické pracovní plochy Windows (C++)'
+title: 'Návod: Vytvořte tradiční aplikace klasické pracovní plochy Windows (C++)'
 ms.custom: get-started-article
 ms.date: 09/18/2018
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 07da91ea092b4e7bee974b0387e72ea0cacaec8e
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: cb6d09acc00f2e38ee41180c81c1877bc53027c2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893896"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037953"
 ---
-# <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Průvodce: Vytvořte tradiční aplikace klasické pracovní plochy Windows (C++)
+# <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Návod: Vytvořte tradiční aplikace klasické pracovní plochy Windows (C++)
 
 Tento návod ukazuje, jak vytvořit tradiční desktopové aplikace Windows v sadě Visual Studio. Ukázková aplikace, které vytvoříte pomocí rozhraní API Windows zobrazí "Hello, plochu Windows!" v okně. Můžete použít kód vyvinutý v tomto názorném postupu jako vzor pro vytvoření jiných aplikací klasické pracovní plochy Windows.
 
@@ -559,6 +559,6 @@ Jak jsme slíbili, tady je kompletní kód pro funkční aplikaci.
 
 Blahopřejeme! Dokončení tohoto návodu a integrované tradiční desktopové aplikace Windows.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Desktopové aplikace Windows](../windows/windows-desktop-applications-cpp.md)

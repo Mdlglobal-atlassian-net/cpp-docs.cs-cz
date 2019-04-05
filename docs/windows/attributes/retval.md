@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
-ms.openlocfilehash: 4ac6b72095620a3e857f2877d776e91b273e8f33
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f5ad86a289f8904278a58636e66809ae0edd55b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566644"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035088"
 ---
 # <a name="retval"></a>retval
 
@@ -46,7 +46,7 @@ Podívejte se na příklad pro [umožňujících vazbu](bindable.md) ukázkový 
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy parametru](parameter-attributes.md)<br/>

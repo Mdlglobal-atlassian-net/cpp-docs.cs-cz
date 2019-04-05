@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: f2edafb0b60cfafcf7ad53b8402ffc39a6fc2f7c
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: ebf10ade734d321c5a83644110d3511e4b6c827a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328841"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033992"
 ---
 # <a name="how-to-manage-symbols"></a>Postupy: Správa symbolů
 
@@ -212,8 +212,8 @@ Prostředí se správně interpretovat tyto počítané symboly, pokud:
 
 Win32
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Identifikátory prostředků (symboly)](../windows/symbols-resource-identifiers.md)<br/>
+[Identifikátory prostředků (symbolů)](../windows/symbols-resource-identifiers.md)<br/>
 [Postupy: Vytváření symbolů](../windows/creating-new-symbols.md)<br/>
 [ID předdefinovaných symbolů](../windows/predefined-symbol-ids.md)<br/>

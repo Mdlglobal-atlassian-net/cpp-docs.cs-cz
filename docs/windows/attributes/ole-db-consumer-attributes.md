@@ -9,12 +9,12 @@ helpviewer_keywords:
 - database attributes [C++/CLI]
 - attributes [C++/CLI], OLE DB consumer
 ms.assetid: 017b591f-8f9a-42b4-84d5-cc42a21ab0cc
-ms.openlocfilehash: 036ac539fcac715ba12e4c7cf7fc83edd7a23c38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f89af963c9c49a8a94b2a4f0c8930ab714926e7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662936"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035728"
 ---
 # <a name="ole-db-consumer-attributes"></a>Atributy příjemce technologie OLE DB
 Atributy příjemce technologie OLE DB vložit kód, na základě [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-reference.md), chcete-li vytvořit pracovní technologie OLE DB příjemce, který provádí úlohy, jako je otevření tabulek, provádění příkazů a přístup k datům.
@@ -28,6 +28,6 @@ Atributy příjemce technologie OLE DB vložit kód, na základě [OLE DB – š
 |[db_source](db-source.md)|Vytvoří a zapouzdřuje připojení prostřednictvím poskytovatele ke zdroji dat.|
 |[db_table](db-table.md)|Otevře se tabulku OLE DB.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Atributy podle skupin](attributes-by-group.md)

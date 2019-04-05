@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Makefile projects, creating
 - project files [C++], Makefile projects
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: bb28d76b0ec459b5fd63f6a00dedff723274e90f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 9c2edfe35233672e8117d336ba40cfea497b1a22
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823341"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035595"
 ---
 # <a name="create-a-c-makefile-project"></a>Vytvoření projektu souboru pravidel C++
 
@@ -84,10 +84,10 @@ Technologie IntelliSense se nezdaří v projekty souborů pravidel při určitý
 
 Při příštím otevření projektu makefile ve vývojovém prostředí sady Visual Studio, spusťte **Vyčistit řešení** příkaz a potom **sestavit řešení** v projektu makefile příkaz. Technologie IntelliSense by měly fungovat správně v integrovaném vývojovém prostředí.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání atributu IntelliSense](/visualstudio/ide/using-intellisense)<br>
-[NMAKE – referenční zdroje](nmake-reference.md)<br>
+[NMAKE – odkaz](nmake-reference.md)<br>
 [Postupy: Vytvoření projektu jazyka C++ z existujícího kódu](../how-to-create-a-cpp-project-from-existing-code.md)
 [speciální znaky v souboru pravidel](special-characters-in-a-makefile.md)<br/>
 [Obsah souboru pravidel](contents-of-a-makefile.md)<br/>

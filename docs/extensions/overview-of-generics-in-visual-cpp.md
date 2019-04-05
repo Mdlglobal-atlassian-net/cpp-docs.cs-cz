@@ -12,12 +12,12 @@ helpviewer_keywords:
 - open constructed types [C++]
 - constructed types, closed [C++]
 ms.assetid: 21f10637-0fce-4916-b925-6c86a126d3aa
-ms.openlocfilehash: 0f265fcbbbaa708c4c7347bd8002c105b46060d7
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 38d33faec3610495e8cc5e97db2e81bd74be8b8b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786766"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034703"
 ---
 # <a name="overview-of-generics-in-ccli"></a>Přehled obecných typů v jazyce C + +/ CLI
 
@@ -130,6 +130,6 @@ Výchozí instance parametru typu mohou být vytvořeny pomocí `()` operátor. 
 
 kde `T` je parametr typu v definici třídy nebo metody obecného, inicializuje proměnnou na výchozí hodnotu. Pokud `T` je třída ref je ukazatel s hodnotou null; Pokud `T` hodnotová třída je objekt je inicializován na hodnotu nula. Jedná se *výchozí inicializátor*.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Obecné typy](generics-cpp-component-extensions.md)

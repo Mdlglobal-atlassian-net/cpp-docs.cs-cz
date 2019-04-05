@@ -37,12 +37,12 @@ helpviewer_keywords:
 - GetBindings method
 - ReleaseAccessor method
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-ms.openlocfilehash: c410efbbd0ce51bcaca2ba43a835bf88e1cdbc54
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a4f98cdfea9ea1e82ec0a3de09e292604a6c199f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419167"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032112"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl – třída
 
@@ -84,10 +84,10 @@ Jednotky úložiště pro informace o sloupci. Výchozí hodnota je [catlmap –
 
 |||
 |-|-|
-|[AddRefAccessor](#addrefaccessor)|Přidá počet odkazů na existující přistupující objekt.|
+|[Addrefaccessor –](#addrefaccessor)|Přidá počet odkazů na existující přistupující objekt.|
 |[CreateAccessor](#createaccessor)|Vytvoří ze sady vazby přistupující objekt.|
 |[Getbindings –](#getbindings)|Vrátí vazby přistupující objekt.|
-|[ReleaseAccessor](#releaseaccessor)|Uvolní přistupující objekt.|
+|[Releaseaccessor –](#releaseaccessor)|Uvolní přistupující objekt.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -169,7 +169,7 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
 
 Zobrazit [IAccessor::ReleaseAccessor](/previous-versions/windows/desktop/ms719717(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

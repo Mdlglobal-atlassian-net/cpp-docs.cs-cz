@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++ debugger, debugging providers
 - Visual C++ debugger
 ms.assetid: 90d4e7db-06ea-4de0-a7f4-4f3751d50d93
-ms.openlocfilehash: 15e9df58d4b31a8e69999c9ec7c22af158d08b38
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: 21d4cb455413c3f7cbcbed02cdd4c364a469426d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265084"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033866"
 ---
 # <a name="debugging-your-provider"></a>Ladění zprostředkovatele
 
@@ -34,6 +34,6 @@ Chcete-li ladit poskytovatele dvěma způsoby:
 
 1. Nastavit zarážky a ladění obvyklým způsobem.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Práce s šablonami zprostředkovatele OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

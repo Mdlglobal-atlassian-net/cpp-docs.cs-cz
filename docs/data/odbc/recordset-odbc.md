@@ -13,12 +13,12 @@ helpviewer_keywords:
 - snapshots, ODBC recordsets
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
-ms.openlocfilehash: d16087722752b7bbdabd37410908c7ea2ae18ceb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b201e152d83d3812253aa4803eebe715d726219d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435253"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034492"
 ---
 # <a name="recordset-odbc"></a>Sada záznamů (ODBC)
 
@@ -69,60 +69,60 @@ Existují dva hlavní typy sad záznamů: [snímky](../../data/odbc/snapshot.md)
 
 ##  <a name="_core_your_recordsets"></a> Vaše sady záznamů
 
-Pro každou odlišné tabulky, zobrazení nebo uložené procedury, jež chcete získat přístup, obvykle definují třídy odvozené od `CRecordset`. (Výjimkou je připojení k databázi, ve které jedna sada záznamů představuje sloupci ze dvou nebo více tabulek). Při odvození třídy sady záznamů, povolíte mechanismus pole záznamu (RFX) systému exchange nebo hromadné mechanismem výměny (Bulk RFX) pole záznamu, které jsou podobné mechanismem výměny (DDX) dat dialogového okna. Přenos dat ze zdroje dat do sady záznamů; Zjednodušte RFX a Bulk RFX RFX navíc přenáší data ze sady záznamů ke zdroji dat. Další informace najdete v tématu [výměna pole záznamu (RFX)](../../data/odbc/record-field-exchange-rfx.md) a [sada záznamů: načítání hromadné záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Pro každou odlišné tabulky, zobrazení nebo uložené procedury, jež chcete získat přístup, obvykle definují třídy odvozené od `CRecordset`. (Výjimkou je připojení k databázi, ve které jedna sada záznamů představuje sloupci ze dvou nebo více tabulek). Při odvození třídy sady záznamů, povolíte mechanismus pole záznamu (RFX) systému exchange nebo hromadné mechanismem výměny (Bulk RFX) pole záznamu, které jsou podobné mechanismem výměny (DDX) dat dialogového okna. Přenos dat ze zdroje dat do sady záznamů; Zjednodušte RFX a Bulk RFX RFX navíc přenáší data ze sady záznamů ke zdroji dat. Další informace najdete v tématu [výměna pole záznamu (RFX)](../../data/odbc/record-field-exchange-rfx.md) a [sada záznamů: Načítání záznamů (ODBC) hromadné](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-Objekt sady záznamů poskytuje přístup do všech vybraných záznamech. Při procházení několika vybraných záznamů pomocí `CRecordset` členské funkce, jako například `MoveNext` a `MovePrev`. Objekt sady záznamů ve stejnou dobu, představuje pouze jednu z vybraných záznamů aktuální záznam. Pole aktuální záznam můžete zkoumat deklarováním záznamů členské proměnné třídy, které odpovídají sloupcům tabulky nebo záznamy, které jsou výsledkem databázového dotazu. Informace o datových členů sady záznamů najdete v tématu [sada záznamů: architektura (ODBC)](../../data/odbc/recordset-architecture-odbc.md).
+Objekt sady záznamů poskytuje přístup do všech vybraných záznamech. Při procházení několika vybraných záznamů pomocí `CRecordset` členské funkce, jako například `MoveNext` a `MovePrev`. Objekt sady záznamů ve stejnou dobu, představuje pouze jednu z vybraných záznamů aktuální záznam. Pole aktuální záznam můžete zkoumat deklarováním záznamů členské proměnné třídy, které odpovídají sloupcům tabulky nebo záznamy, které jsou výsledkem databázového dotazu. Informace o datových členů sady záznamů najdete v tématu [sada záznamů: Architektura (ODBC)](../../data/odbc/recordset-architecture-odbc.md).
 
 Následující témata popisují podrobnosti o použití objektů sady záznamů. Témata jsou uvedeny v funkčních kategorií a přirozeném pořadí tak, aby povolovala sekvenční čtení.
 
 ### <a name="topics-about-the-mechanics-of-opening-reading-and-closing-recordsets"></a>Témata o mechanismu otevření, čtení a uzavírání sad záznamů
 
-- [Sada záznamů: Architektura (ODBC)](../../data/odbc/recordset-architecture-odbc.md)
+- [Recordset: Architektura (ODBC)](../../data/odbc/recordset-architecture-odbc.md)
 
-- [Sada záznamů: Deklarování třídy pro tabulku (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
+- [Recordset: Deklarování třídy pro tabulku (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
 
-- [Sada záznamů: Vytváření a uzavírání sad záznamů (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
+- [Recordset: Vytváření a uzavírání sad záznamů (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
 
-- [Sada záznamů: Posouvání (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)
+- [Recordset: Posouvání (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)
 
-- [Sada záznamů: Záložky a absolutní umístění (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)
+- [Recordset: Záložky a absolutní umístění (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)
 
-- [Sada záznamů: Filtrování záznamů (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
+- [Recordset: Filtrování záznamů (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
 
-- [Sada záznamů: Řazení záznamů (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)
+- [Recordset: Řazení záznamů (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)
 
-- [Sada záznamů: Parametrizace sady záznamů (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
+- [Recordset: Parametrizace sady záznamů (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
 
 ### <a name="topics-about-the-mechanics-of-modifying-recordsets"></a>Témata týkající se způsobu úpravy sad záznamů
 
-- [Sada záznamů: Přidávání, aktualizace a odstranění záznamů (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+- [Recordset: Přidání, aktualizace nebo odstranění záznamů (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
 
-- [Sada záznamů: Zamykání záznamů (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+- [Recordset: Zamykání záznamů (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
 
-- [Sada záznamů: Opětovné spuštění dotazu na sadu záznamů (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+- [Recordset: Opětovné spuštění dotazu na sadu záznamů (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
 
 ### <a name="topics-about-somewhat-more-advanced-techniques"></a>Témata o trochu více pokročilé techniky
 
-- [Sada záznamů: Provedení spojení (rozhraní ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+- [Recordset: Provedení spojení (rozhraní ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
 
-- [Sada záznamů: Deklarace třídy předdefinovaného dotazu (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
+- [Recordset: Deklarování třídy pro předdefinovaný dotaz (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
 
-- [Sada záznamů: Dynamické vazby datových sloupců (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
+- [Recordset: Dynamické vazby datových sloupců (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
 
-- [Sada záznamů: Hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
+- [Recordset: (ODBC) hromadné načítání záznamů](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-- [Sada záznamů: Práce s velkými datovými položkami (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
+- [Recordset: Práce s velkými datovými položkami (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
 
-- [Sada záznamů: Získávání součtů a jiných souhrnných výsledků (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
+- [Recordset: Získávání součtů a jiných agregačních výsledků (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
 
 ### <a name="topics-about-how-recordsets-work"></a>Témata týkající se fungování sad záznamů
 
-- [Sada záznamů: Jak sady záznamů vybírají záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+- [Recordset: Jak sady záznamů vybírají záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
 
-- [Sada záznamů: Jak sady záznamů aktualizují záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
+- [Recordset: Jak sady záznamů aktualizují záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
-[Knihovny MFC rozhraní ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
+[ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
+[Příjemce knihovny MFC rozhraní ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [Transakce (ODBC)](../../data/odbc/transaction-odbc.md)

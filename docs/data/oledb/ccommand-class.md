@@ -49,12 +49,12 @@ helpviewer_keywords:
 - SetParameterInfo method
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-ms.openlocfilehash: 7db2d3d71deecda06e39772541658dfada72ae3b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 406a78ff1958d565fcc74781f6a63d4784f48bfc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415263"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039725"
 ---
 # <a name="ccommand-class"></a>CCommand – třída
 
@@ -101,12 +101,12 @@ Chcete-li použít technologie OLE DB příkaz, který může vrátit více výs
 
 |||
 |-|-|
-|[Vytvoření](#create)|Vytvoří nový příkaz pro zadaná relace a pak nastaví text příkazu.|
+|[Create](#create)|Vytvoří nový příkaz pro zadaná relace a pak nastaví text příkazu.|
 |[CreateCommand](#createcommand)|Vytvoří nový příkaz.|
 |[GetParameterInfo](#getparameterinfo)|Získá seznam parametrů příkazu, jejich názvy a jejich typy.|
 |[Příprava](#prepare)|Ověří a optimalizuje aktuální příkaz.|
 |[ReleaseCommand](#releasecommand)|Uvolní parametr přistupujícím objektu v případě potřeby a uvolní příkazu.|
-|[SetParameterInfo](#setparameterinfo)|Určuje nativní typ každý parametr příkazu.|
+|[SetParameterInfo –](#setparameterinfo)|Určuje nativní typ každý parametr příkazu.|
 |[Unprepare –](#unprepare)|Zahodí aktuální plán provádění příkazu.|
 
 ## <a name="remarks"></a>Poznámky
@@ -414,7 +414,7 @@ Standardní HRESULT.
 
 Tato metoda zabalí metodu OLE DB [ICommandPrepare::Unprepare](/previous-versions/windows/desktop/ms719635(v=vs.85)).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

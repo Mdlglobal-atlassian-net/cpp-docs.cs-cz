@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - embedded_idl attribute
 ms.assetid: f1c1c2e8-3872-4172-8795-8d1288a20452
-ms.openlocfilehash: 202d5b23a5e2e8e673e3c220b9618cfe6cd4f0d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c46924d2757d01a934c21a70f23e6556f6a10fd3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525603"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034086"
 ---
 # <a name="embeddedidl"></a>embedded_idl
 
@@ -30,9 +30,9 @@ embedded_idl[("param")]
 *Param*<br/>
 Může být jedna ze dvou hodnot:
 
-- **emitidl**: informace o typu naimportované z knihovny typelib bude k dispozici v generované projektu s atributy IDL.  Toto je výchozí nastavení a bude platit, pokud nezadáte parametr `embedded_idl`.
+- **emitidl**: Informace o typu naimportované z knihovny typelib bude k dispozici v generované projektu s atributy IDL.  Toto je výchozí nastavení a bude platit, pokud nezadáte parametr `embedded_idl`.
 
-- **no_emitidl**: informace o typu naimportované z knihovny typelib nemusí být v generované projektu s atributy IDL.
+- **no_emitidl**: Informace o typu naimportované z knihovny typelib nebudou k dispozici v generované projektu s atributy IDL.
 
 ## <a name="example"></a>Příklad
 
@@ -48,7 +48,7 @@ Může být jedna ze dvou hodnot:
 
 **Specifické pro END C++**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import – atributy](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - float_control pragma
 - pragmas, float_control
 ms.assetid: 4f4ba5cf-3707-413e-927d-5ecdbc0a9a43
-ms.openlocfilehash: 63e27e992778776e186345da07937d1a88844e5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a7829252cebb726363c67c990a94d08b0d6467a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611013"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032307"
 ---
 # <a name="floatcontrol"></a>float_control
 
@@ -32,7 +32,7 @@ Pokud *hodnotu* je **striktní**, nastavení pro obě **striktní** a **s výjim
 
 Pokud volitelný **nabízených** token se přidá, aktuální nastavení pro *hodnotu* je vloženo do zásobníku vnitřního kompilátoru.
 
-**push**<br/>
+**nabízených oznámení**<br/>
 Nabízená aktuální **float_control** nastavení do vnitřního zásobníku kompilátoru
 
 **POP**<br/>
@@ -106,6 +106,6 @@ int main( ) {
 Pass
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

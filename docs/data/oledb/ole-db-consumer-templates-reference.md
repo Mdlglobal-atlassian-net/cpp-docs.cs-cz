@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB consumer templates, classes
 ms.assetid: cfc7f698-1a0e-4a09-a4d3-ccb99e6654fe
-ms.openlocfilehash: a476fefa4338e73bf6eaf70fa16a5328a427b56d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb0b24798b3f2682bbbec7624df34b40a2a9f4cc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649238"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032268"
 ---
 # <a name="ole-db-consumer-templates-reference"></a>Referenční dokumentace k šablonám příjemců OLE DB
 
@@ -25,16 +25,16 @@ ms.locfileid: "50649238"
 
 ## <a name="session-classes"></a>Třídy relace
 
-[Cdataconnection –](../../data/oledb/cdataconnection-class.md)<br/>
+[CDataConnection](../../data/oledb/cdataconnection-class.md)<br/>
 Spravuje připojení ke zdroji dat. To je užitečné třída pro vytvoření klientů, protože zapouzdřuje nezbytných objektů (zdroj dat a relace) a některé činnosti, které je třeba provést při připojování ke zdroji dat.
 
-[CDataSource –](../../data/oledb/cdatasource-class.md)<br/>
+[CDataSource](../../data/oledb/cdatasource-class.md)<br/>
 Zdrojový objekt OLE DB data, představující připojení prostřednictvím poskytovatele ke zdroji dat odpovídá. Jeden nebo více relace databáze, každý je znázorněn `CSession` objektu, může proběhnout na jedno připojení.
 
 [CEnumerator –](../../data/oledb/cenumerator-class.md)<br/>
 Objekt enumerátoru OLE DB, který načte informace o sadách řádků o dostupných zdrojích dat odpovídá.
 
-[Cenumeratoraccessor –](../../data/oledb/cenumeratoraccessor-class.md)<br/>
+[CEnumeratorAccessor](../../data/oledb/cenumeratoraccessor-class.md)<br/>
 Používá `CEnumerator` pro přístup k datům z enumerátor sady řádků. Tato sada řádků se skládá z zdroje dat a enumerátory viditelné z aktuálního výčtu.
 
 [CSession –](../../data/oledb/csession-class.md)<br/>
@@ -42,7 +42,7 @@ Představuje relaci izolovanou databázi přístup. Jeden nebo více relací mů
 
 ## <a name="accessor-classes"></a>Přístupový objekt třídy
 
-[CAccessor –](../../data/oledb/caccessor-class.md)<br/>
+[CAccessor](../../data/oledb/caccessor-class.md)<br/>
 Používá se pro záznamy, které jsou staticky svázán se zdrojem dat. Pokud znáte struktury zdroje dat, použijte tuto třídu přistupujícího objektu.
 
 [CAccessorBase –](../../data/oledb/caccessorbase-class.md)<br/>
@@ -63,13 +63,13 @@ Podobně jako `CDynamicStringAccessor` s tím rozdílem, že tato třída vyžá
 [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md)<br/>
 Podobně jako `CDynamicStringAccessor` s tím rozdílem, že tato třída vyžádá data z úložiště dat jako řetězce data ve formátu UNICODE.
 
-[CManualAccessor –](../../data/oledb/cmanualaccessor-class.md)<br/>
+[CManualAccessor](../../data/oledb/cmanualaccessor-class.md)<br/>
 Přístupové metody pro zpracování sloupců a parametry příkazu. Pomocí této třídy můžete použít všechny datové typy jako poskytovatel můžete převést typ.
 
-[Cnoaccessor –](../../data/oledb/cnoaccessor-class.md)<br/>
+[CNoAccessor](../../data/oledb/cnoaccessor-class.md)<br/>
 Můžete použít jako argument šablony když nechcete, aby třídu tak, aby podporovala parametry nebo výstupní sloupce.
 
-[CXMLAccessor –](../../data/oledb/cxmlaccessor-class.md)<br/>
+[CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)<br/>
 Podobně jako `CDynamicStringAccessor` s tím rozdílem, že tato třída převede všechna data z úložiště dat jako ve formátu XML (označené) data.
 
 ## <a name="rowset-classes"></a>Třídy sady řádků
@@ -89,13 +89,13 @@ Můžete použít jako argument šablony v případě, že příkaz nevrací sad
 [cRestrictions –](../../data/oledb/crestrictions-class.md)<br/>
 Slouží k určení omezení pro sad řádků schématu.
 
-[CRowset –](../../data/oledb/crowset-class.md)<br/>
+[CRowset](../../data/oledb/crowset-class.md)<br/>
 Používá k manipulaci s, nastavení a načtení dat sady řádků.
 
 [CStreamRowset](../../data/oledb/cstreamrowset-class.md)<br/>
 Vrátí `ISequentialStream` objektu místo sady řádků; potom použijete `Read` metodu pro načtení dat ve formátu XML. (SQL Server 2000 nemá formátování, mějte na paměti, že tato funkce funguje se serverem SQL Server 2000 jenom)
 
-[IRowsetNotifyImpl –](../../data/oledb/irowsetnotifyimpl-class.md)<br/>
+[IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md)<br/>
 Poskytuje implementaci pro fiktivní `IRowsetNotify`, s prázdné funkce pro `IRowsetNotify` metody `OnFieldChange`, `OnRowChange`, a `OnRowsetChange`.
 
 [Třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)
@@ -110,7 +110,7 @@ Použít k nastavení a provedení příkazu založeného na parametru OLE DB. C
 [CMultipleResults –](../../data/oledb/cmultipleresults-class.md)<br/>
 Použít jako argument šablony pro `CCommand` šablony, pokud chcete, aby příkaz pro zpracování více sad výsledků dotazu.
 
-[Cnoaccessor –](../../data/oledb/cnoaccessor-class.md)<br/>
+[CNoAccessor](../../data/oledb/cnoaccessor-class.md)<br/>
 Použít jako argument šablony pro šablony třídy, jako například `CCommand` a `CTable`, které přijímají argument třídy přístupový objekt. Použití `CNoAccessor` Pokud nechcete, aby třídu tak, aby podporovala parametry nebo výstupní sloupce.
 
 [Cnomultipleresults –](../../data/oledb/cnomultipleresults-class.md)<br/>
@@ -124,7 +124,7 @@ Používá pro přístup k jednoduché sady řádků bez parametrů.
 
 ## <a name="property-classes"></a>Vlastnosti třídy
 
-[Cdbpropidset –](../../data/oledb/cdbpropidset-class.md)<br/>
+[CDBPropIDSet](../../data/oledb/cdbpropidset-class.md)<br/>
 Sloužící k předávání pole ID vlastnost, pro které chce příjemce informace o vlastnosti. Vlastnosti patří do sady jednu vlastnost.
 
 [CDBPropSet](../../data/oledb/cdbpropset-class.md)<br/>
@@ -132,7 +132,7 @@ Slouží k nastavení vlastností ve zprostředkovateli.
 
 ## <a name="bookmark-class"></a>Třídy (záložky)
 
-[CBookmark](../../data/oledb/cbookmark-class.md)<br/>
+[CBookmark –](../../data/oledb/cbookmark-class.md)<br/>
 Používá jako index pro přístup k datům v sadě řádků.
 
 ## <a name="error-class"></a>Třída chyb
@@ -140,7 +140,7 @@ Používá jako index pro přístup k datům v sadě řádků.
 [Cdberrorinfo –](../../data/oledb/cdberrorinfo-class.md)<br/>
 Umožňuje načíst informace o chybě technologie OLE DB.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace k šablonám zprostředkovatelů OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
+[Referenční dokumentace k šablonám zprostředkovatelů OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
 [Šablony OLE DB](../../data/oledb/ole-db-templates.md)

@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ODBC classes
 ms.assetid: 155c092b-3577-4cb8-b00e-f1adf4cb2adc
-ms.openlocfilehash: 42f8a066728b1800ce245435584dd5e61f786440
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96286fc7a60a6ab43190dae6262948ac99ca30d6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440336"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035186"
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>Další výklad o třídách knihovny MFC rozhraní ODBC
 
 Dále v následujících tématech se vysvětlují konceptech a technikách představenými v tomto tématu:
 
-- [Podpora databáze, Průvodce aplikací MFC](../../mfc/reference/database-support-mfc-application-wizard.md)
+- [Podpora databáze, Průvodce aplikací knihovny MFC](../../mfc/reference/database-support-mfc-application-wizard.md)
 
-- [Přidání příjemce ODBC knihovny MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)
+- [Přidání příjemce rozhraní ODBC knihovny MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)
 
 - [Zdroj dat (ODBC)](../../data/odbc/data-source-odbc.md)
 
@@ -25,7 +25,7 @@ Dále v následujících tématech se vysvětlují konceptech a technikách pře
 
 - [Výjimky: Výjimky databáze](../../mfc/exceptions-database-exceptions.md)
 
-- [MFC: Použití databázových tříd s dokumenty a zobrazeními](../../data/mfc-using-database-classes-with-documents-and-views.md)
+- [MFC: Použití databázových tříd s dokumenty a zobrazeními](../../data/mfc-using-database-classes-with-documents-and-views.md)
 
 - [MFC: Použití databázových tříd bez dokumentů a zobrazení](../../data/mfc-using-database-classes-without-documents-and-views.md)
 
@@ -33,13 +33,13 @@ Dále v následujících tématech se vysvětlují konceptech a technikách pře
 
 - [Správce rozhraní ODBC](../../data/odbc/odbc-administrator.md)
 
-- [Výměna polí záznamu (Record Field Exchange – RFX)](../../data/odbc/record-field-exchange-rfx.md)
+- [Výměna pole záznamu (Record Field Exchange – RFX)](../../data/odbc/record-field-exchange-rfx.md)
 
 - [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)
 
 - [Zobrazení záznamů](../../data/record-views-mfc-data-access.md)
 
-- [Serializace: Porovnání serializace a Databázový vstup/výstup](../../mfc/serialization-serialization-vs-database-input-output.md)
+- [Serializace: Serializace vs. Databázový vstup/výstup](../../mfc/serialization-serialization-vs-database-input-output.md)
 
 - [Snímek](../../data/odbc/snapshot.md)
 
@@ -51,7 +51,7 @@ Je dobrým začátkem čtením [sada záznamů (ODBC)](../../data/odbc/recordset
 
 V *odkaz knihovny MFC*, naleznete v tématu [CDatabase](../../mfc/reference/cdatabase-class.md), [CRecordset](../../mfc/reference/crecordset-class.md), [CRecordView](../../mfc/reference/crecordview-class.md), [CFieldExchange](../../mfc/reference/cfieldexchange-class.md), a [CDBException](../../mfc/reference/cdbexception-class.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Rozhraní ODBC a knihovna MFC](../../data/odbc/odbc-and-mfc.md)<br/>
 [Přístup k datům programování knihovny MFC nebo ATL)](../../data/data-access-programming-mfc-atl.md)

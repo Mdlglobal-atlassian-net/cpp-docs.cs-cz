@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: d0a006c6928bf42c3e6f4adfbc3d1fdde7ff7c87
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: fcac0079185b6ceef981b9acfeb555ef29d464e0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58773044"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034667"
 ---
 # <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Návod: Kompilace jazyka C + +/ CLI programu CLR v sadě Visual Studio
 
@@ -74,7 +74,7 @@ Tato témata se předpokládá, že chápete základy jazyka C++.
    > [!NOTE]
    > Výběr prázdný CLR šablonu projektu automaticky nastaví `/clr` – možnost kompilátoru. To pokud chcete ověřit, klikněte pravým tlačítkem na projekt v **Průzkumníku řešení** a kliknete na **vlastnosti**a potom zaškrtněte políčko **Common Language Runtime support** možnost  **Obecné** uzlu **vlastnosti konfigurace**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
-[Projekty a systémy sestavení](../build/projects-and-build-systems-cpp.md)<br/>
+[Reference jazyka C++](../cpp/cpp-language-reference.md)<br/>
+[Projekty a sestavení systémy](../build/projects-and-build-systems-cpp.md)<br/>

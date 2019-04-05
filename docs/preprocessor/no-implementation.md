@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - no_implementation attribute
 ms.assetid: bdc67785-e131-409c-87bc-f4d2f4abb07b
-ms.openlocfilehash: d4e55d06bef823d28c5deb3467654bc530a3853e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26527ca69c66c73f5d41084dc42df5faa34481d3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456781"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030538"
 ---
 # <a name="noimplementation"></a>no_implementation
 **Specifické pro C++**
@@ -32,7 +32,7 @@ Tento atribut se používá ve spojení s [implementation_only –](../preproces
 
 **Specifické pro END C++**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import – atributy](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

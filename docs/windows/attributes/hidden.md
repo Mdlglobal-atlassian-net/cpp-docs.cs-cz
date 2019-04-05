@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - hidden attribute
 ms.assetid: 199c96dd-fc07-46c7-af93-92020aebebe7
-ms.openlocfilehash: c1d8c8d894ed9a54c0dd3af775d6fbfda0385906
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1d87ea057b22984a0e0f8f5518899e36f7d0221
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597610"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038418"
 ---
 # <a name="hidden"></a>hidden
 
@@ -40,11 +40,11 @@ Podívejte se na příklad pro [umožňujících vazbu](bindable.md) příklad, 
 |**Platí pro**|**rozhraní**, **třídy**, **struktura**, metoda, vlastnost|
 |**Opakovatelné**|Ne|
 |**Vyžadované atributy**|**coclass** (při použití u **třídy** nebo **struktura**)|
-|**Neplatné atributy**|Žádné|
+|**Neplatné atributy**|Žádný|
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy rozhraní](interface-attributes.md)<br/>

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ActivatableClass
 - ActivatableClassWithFactoryEx
 ms.assetid: 9bd64709-ec2c-4678-8c96-ea5982622bdd
-ms.openlocfilehash: eee8267e2e76eead267eb2486836dbcc38a90231
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 7d38db9e7d3fa94c89195b6379e14692f26f7ee5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786899"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037591"
 ---
 # <a name="activatableclass-macros"></a>ActivatableClass – makra
 
@@ -49,7 +49,7 @@ Název třídy pro vytvoření.
 *objekt pro vytváření*<br/>
 Objekt Factory, který vytvoří instanci dané třídy.
 
-*serverName*<br/>
+*název_serveru*<br/>
 Název, který určuje podmnožinu objektů pro vytváření v modulu.
 
 ## <a name="remarks"></a>Poznámky
@@ -62,6 +62,6 @@ Nepoužívejte tato makra pomocí klasického modelu COM, pokud nechcete použí
 
 **Namespace:** Microsoft::WRL
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Module – třída](module-class.md)
+[Modul – třída](module-class.md)

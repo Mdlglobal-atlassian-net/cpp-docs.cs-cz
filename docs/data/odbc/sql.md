@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-ms.openlocfilehash: c9ea15520f98a86f8af7c278bfc77463689a4606
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f93d97530068695359273b523e7d2ae46de01cb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576809"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037854"
 ---
 # <a name="sql"></a>SQL
 
@@ -49,10 +49,10 @@ Databázové třídy použijte část SQL označované jako jazyk manipulace dat
 |-----------------|---------------------------------------------|
 |**SELECT**|Chcete-li určit, které tabulky a sloupce ve zdroji dat se mají použít.|
 |**WHERE**|Chcete-li použít filtr, který způsobí zúžení výběru.|
-|**ORDER BY**|Chcete-li použít pořadí řazení na sadu záznamů.|
-|**VLOŽIT**|Přidání nových záznamů do sady záznamů.|
-|**ODSTRANIT**|Chcete-li odstranit záznamy ze sady záznamů.|
-|**AKTUALIZACE**|Chcete-li změnit pole záznamu.|
+|**ŘADIT PODLE**|Chcete-li použít pořadí řazení na sadu záznamů.|
+|**INSERT**|Přidání nových záznamů do sady záznamů.|
+|**DELETE**|Chcete-li odstranit záznamy ze sady záznamů.|
+|**UPDATE**|Chcete-li změnit pole záznamu.|
 
 Kromě toho databázové třídy rozpoznat ODBC **volání** příkazy, které můžete použít pro volání předdefinovaný dotaz (nebo uložená procedura) na některé zdroje dat. Ovladač ODBC databáze interpretuje tyto příkazy a nahradí příkazu vhodného pro každý systém DBMS.
 
@@ -61,7 +61,7 @@ Kromě toho databázové třídy rozpoznat ODBC **volání** příkazy, které m
 
 Pokud třídy nelze rozpoznat uživatelem zadané v příkazu `CRecordset::Open`, je interpretován jako název tabulky.
 
-Vysvětlení, jak rozhraní sestavují SQL příkazy, najdete v článku [sada záznamů: Jak sady záznamů vybírají záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) a [SQL: SQL příkazu přizpůsobení sady záznamů (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+Vysvětlení, jak rozhraní sestavují SQL příkazy, najdete v článku [sada záznamů: Jak sady záznamů vybírají záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) a [SQL: Přizpůsobení příkazu SQL sady záznamů (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
 Databáze SQL pomocí datových typů, které jsou podobné těm, které jsou použity v jazyce C a C++. Informace o těchto podobnost, naleznete v tématu [SQL: SQL a datové typy C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
 
@@ -79,11 +79,11 @@ Další informace o použití databázových tříd SQL naleznete v následujíc
 
 - [SQL: Přizpůsobení příkazu SQL sady záznamů (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
 
-- [SQL: Datové typy SQL a C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
+- [SQL: SQL a datové typy C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
 
 - [SQL: Přímá volání SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
+[ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [ODBC – základy](../../data/odbc/odbc-basics.md)

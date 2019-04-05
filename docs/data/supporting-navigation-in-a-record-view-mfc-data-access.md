@@ -6,12 +6,12 @@ helpviewer_keywords:
 - record views, navigation
 - navigation [C++], in record view
 ms.assetid: 227f2a6d-87c9-4656-807a-8e246965bcce
-ms.openlocfilehash: 86e98cd8b29b0056966f6f201589ded3347c9779
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88c76d31ae542d35476473888ad6282e3693405f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450658"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029508"
 ---
 # <a name="supporting-navigation-in-a-record-view--mfc-data-access"></a>Podpora navigace v zobrazení záznamu (přístup k datům MFC)
 
@@ -21,7 +21,7 @@ Toto téma vysvětluje, jak podporovat přesunu mezi záznamy v vaše [CRecordVi
 
 - [Obslužné rutiny aktualizace uživatelského rozhraní pro posouvání](../data/user-interface-updating-for-record-views-mfc-data-access.md) příkazy.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zobrazení záznamů (přístup k datům MFC)](../data/record-views-mfc-data-access.md)<br/>
 [Seznam ovladačů ODBC](../data/odbc/odbc-driver-list.md)

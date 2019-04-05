@@ -9,12 +9,12 @@ helpviewer_keywords:
 - components [C++]
 - components [C++], redistributing
 ms.assetid: 17b065b4-a307-4b89-99ac-d05831cfab87
-ms.openlocfilehash: cfbe6b2c440f84a4c470255bc964adf6c5145cf1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a6ec6f5fdd3c32080d357ca58d31ccea271b7a4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676782"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040083"
 ---
 # <a name="redistributing-odbc-components-to-your-customers"></a>Redistribuce součástí rozhraní ODBC vašim zákazníkům
 
@@ -32,7 +32,7 @@ Další informace o použití rozhraní ODBC s databázovými třídami naleznet
 
 - [ODBC: Přímé volání funkcí rozhraní API ODBC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [ODBC – základy](../../data/odbc/odbc-basics.md)<br/>
 [Správce rozhraní ODBC](../../data/odbc/odbc-administrator.md)

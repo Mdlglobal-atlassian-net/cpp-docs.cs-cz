@@ -1,5 +1,5 @@
 ---
-title: 'Transakce: Vliv transakcí na aktualizace (rozhraní ODBC)'
+title: 'Transakce: Vliv transakcí na aktualizace (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - transactions, updating recordsets
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - CommitTrans method
 - Rollback method, ODBC transactions
 ms.assetid: 9e00bbf4-e9fb-4332-87fc-ec8ac61b3f68
-ms.openlocfilehash: 68ff6970243b36b56ab206b16bb2c3608cef71e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 996b8410366661cb91cf82cfff823f17d3aad8b4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437853"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033100"
 ---
-# <a name="transaction-how-transactions-affect-updates-odbc"></a>Transakce: Vliv transakcí na aktualizace (rozhraní ODBC)
+# <a name="transaction-how-transactions-affect-updates-odbc"></a>Transakce: Vliv transakcí na aktualizace (ODBC)
 
 Aktualizuje [zdroj dat](../../data/odbc/data-source-odbc.md) jsou spravovány během transakce prostřednictvím vyrovnávací paměti (stejnou metodu používá mimo transakce). Pole datových členů sady záznamů společně slouží jako vyrovnávací paměť úprav, který obsahuje aktuální záznam, který sada záznamů zálohuje dočasně během `AddNew` nebo `Edit`. Během `Delete` operaci, aktuální záznam nejsou zálohovány v rámci transakce. Další informace o vyrovnávací paměť pro úpravu a jak aktualizace uložit aktuální záznam najdete v tématu [sada záznamů: Jak sady záznamů aktualizují záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
 
 > [!NOTE]
->  Pokud jste implementovali hromadné načítání řádků, nelze volat `AddNew`, `Edit`, nebo `Delete`. Místo toho musíte napsat vlastní funkce pro provádění aktualizací ke zdroji dat. Další informace o hromadném načítání řádků naleznete v tématu [sada záznamů: načítání hromadné záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Pokud jste implementovali hromadné načítání řádků, nelze volat `AddNew`, `Edit`, nebo `Delete`. Místo toho musíte napsat vlastní funkce pro provádění aktualizací ke zdroji dat. Další informace o hromadném načítání řádků naleznete v tématu [sada záznamů: Načítání záznamů (ODBC) hromadné](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Během transakce `AddNew`, `Edit`, a `Delete` operace může být potvrzena nebo vrácena zpět. Účinky `CommitTrans` a `Rollback` může způsobit, že aktuální záznam obnoven do vyrovnávací paměti pro úpravy. Pokud chcete mít jistotu, že aktuální záznam správné obnovení, je důležité pochopit, jak `CommitTrans` a `Rollback` členské funkce `CDatabase` pracovat s funkcí aktualizace `CRecordset`.
 
@@ -48,14 +48,14 @@ Následující tabulka popisuje účinky `Rollback` transakcí.
 |---------------|------------------------------|-------------------|---------------------------|
 |`AddNew` a `Update`, pak `Rollback`|Obsah aktuální záznam jsou ukládána dočasně, aby uvolnil prostor pro nový záznam. Nový záznam se zadá do vyrovnávací paměti pro úpravy. Po `Update` nazývá aktuální záznam, budou obnoveny do vyrovnávací paměti pro úpravy.||Přidání zdroje dat od `Update` je obrácený.|
 |`AddNew` (bez `Update`), pak `Rollback`|Obsah aktuální záznam jsou ukládána dočasně, aby uvolnil prostor pro nový záznam. Upravit vyrovnávací paměť obsahuje nový záznam.|Volání `AddNew` obnovíte vyrovnávací paměť pro úpravu prázdný nového záznamu. Nebo se telefonicky `Move`(0) k obnovení původních hodnot do vyrovnávací paměti pro úpravy.|Protože `Update` nebyla volána, nejsou žádné změny provedené na zdroj dat.|
-|`Edit` a `Update`, pak `Rollback`|Neupravenou verzi aktuální záznam jsou ukládána dočasně. Na obsah upravit vyrovnávací paměti jsou provedeny změny. Po `Update` je volána, označují bitem verze záznamu je stále dočasně ukládají.|*Dynamická sada*: přejděte mimo aktuální záznam pak se vrátit na obnovení neupravenou verzi záznamu vyrovnávací paměti pro úpravy.<br /><br /> *Snímek*: volání `Requery` k aktualizaci záznamů ze zdroje dat.|Změny do zdroje dat od `Update` se vrátit zpět.|
+|`Edit` a `Update`, pak `Rollback`|Neupravenou verzi aktuální záznam jsou ukládána dočasně. Na obsah upravit vyrovnávací paměti jsou provedeny změny. Po `Update` je volána, označují bitem verze záznamu je stále dočasně ukládají.|*Dynaset*: Posuňte se mimo aktuální záznam pak se vrátit na obnovení neupravenou verzi záznamu vyrovnávací paměti pro úpravy.<br /><br /> *Snímek*: Volání `Requery` k aktualizaci záznamů ze zdroje dat.|Změny do zdroje dat od `Update` se vrátit zpět.|
 |`Edit` (bez `Update`), pak `Rollback`|Neupravenou verzi aktuální záznam jsou ukládána dočasně. Na obsah upravit vyrovnávací paměti jsou provedeny změny.|Volání `Edit` znovu obnovíte neupravenou verzi záznamu vyrovnávací paměti pro úpravy.|Protože `Update` nebyla volána, nejsou žádné změny provedené na zdroj dat.|
 |`Delete` Potom `Rollback`|Obsah aktuální záznam je odstraněn.|Volání `Requery` obnovit obsah aktuální záznam ze zdroje dat.|Odstranění dat ze zdroje dat je obrácený.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Transakce (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
 [Transakce (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
-[Transakce: Provádění transakcí v sadě záznamů (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)<br/>
+[Transakce: Provádění transakcí v sadě záznamů (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)<br/>
 [CDatabase – třída](../../mfc/reference/cdatabase-class.md)<br/>
 [CRecordset – třída](../../mfc/reference/crecordset-class.md)

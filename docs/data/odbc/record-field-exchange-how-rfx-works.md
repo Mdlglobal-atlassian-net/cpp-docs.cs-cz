@@ -10,12 +10,12 @@ helpviewer_keywords:
 - scrolling [C++], RFX
 - RFX (ODBC) [C++], binding fields and parameters
 ms.assetid: e647cacd-62b0-4b80-9e20-b392deca5a88
-ms.openlocfilehash: efc08736f1b61bc634b819fc62545d886134cd35
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7da9d480f16dcb6bc5ded0a1dff559b1b1ac4b38
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534703"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032674"
 ---
 # <a name="record-field-exchange-how-rfx-works"></a>Výměna polí záznamu: Jak funkce RFX pracuje
 
@@ -26,7 +26,7 @@ Toto téma vysvětluje proces RFX. To je moderní tématu, mezi které patří:
 - [Proces RFX](#_core_the_record_field_exchange_process)
 
 > [!NOTE]
->  Toto téma platí pro třídy odvozené od `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud používáte hromadné načítání řádků, je implementováno Hromadná výměna pole záznamu (Bulk RFX). Hromadné funkce RFX je podobný RFX. Pokud chcete znát rozdíly, přečtěte si téma [sada záznamů: načítání hromadné záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Toto téma platí pro třídy odvozené od `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud používáte hromadné načítání řádků, je implementováno Hromadná výměna pole záznamu (Bulk RFX). Hromadné funkce RFX je podobný RFX. Pokud chcete znát rozdíly, přečtěte si téma [sada záznamů: Načítání záznamů (ODBC) hromadné](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_rfx_and_the_recordset"></a> RFX a sady záznamů
 
@@ -68,7 +68,7 @@ V následující tabulce jsou uvedeny sekvence operací RFX při otevření sady
 
 Sady záznamů pomocí připraveného provádění ODBC umožňující rychlé opakování stejný příkaz jazyka SQL. Další informace o provádění připravený, najdete v části sada SDK rozhraní ODBC *referenční informace pro programátory* v knihovně MSDN.
 
-###  <a name="_mfc_rfx.3a_.scrolling"></a> RFX: posouvání.
+###  <a name="_mfc_rfx.3a_.scrolling"></a> RFX: Posouvání
 
 Posunete-li z jednoho záznamu do jiného, volá framework `DoFieldExchange` k nahrazení hodnoty dříve uložené v datové členy pole s hodnotami pro nový záznam.
 
@@ -116,14 +116,14 @@ V následující tabulce jsou uvedeny sekvence operací RFX při přidání nov�
 |||8. Odešlete SQL.|
 ||9. Pro `AddNew`, obnovíte jeho obsah zálohovaných vyrovnávací paměť pro úpravu. Pro `Edit`, odstranit zálohy.||
 
-### <a name="rfx-deleting-existing-records"></a>RFX: Odstranění existujících záznamů.
+### <a name="rfx-deleting-existing-records"></a>RFX: Odstraňuje se existující záznamy
 
 Při odstranění záznamu RFX nastaví všechna pole na hodnotu NULL jako připomenutí, že záznam odstranit a musí přesunout mimo něj. Není nutné nějakých jiných informací RFX pořadí.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Výměna polí záznamu (Record Field Exchange – RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
-[Knihovny MFC rozhraní ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
+[Výměna pole záznamu (Record Field Exchange – RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
+[Příjemce knihovny MFC rozhraní ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [Makra, globální funkce a globální proměnné](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [CFieldExchange – třída](../../mfc/reference/cfieldexchange-class.md)<br/>
 [CRecordset::DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)

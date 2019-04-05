@@ -1,5 +1,5 @@
 ---
-title: 'Sada záznamů: Dynamické vazby datových sloupců (ODBC)'
+title: 'Recordset: Dynamické vazby datových sloupců (ODBC)'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - ODBC recordsets [C++], binding columns dynamically
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: c2fc870ba08bbec0a886b3d77281f3c697ae09fe
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: c2f2a6a6696f46fb5b8f2777c6c911269c9e7a80
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175662"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035115"
 ---
-# <a name="recordset-dynamically-binding-data-columns-odbc"></a>Sada záznamů: Dynamické vazby datových sloupců (ODBC)
+# <a name="recordset-dynamically-binding-data-columns-odbc"></a>Recordset: Dynamické vazby datových sloupců (ODBC)
 
 Toto téma platí pro třídy knihovny MFC rozhraní ODBC.
 
@@ -26,7 +26,7 @@ Spravovat sady záznamů vazeb sloupců tabulky, které zadáte v době návrhu,
 - [Jak vytvořit vazbu sloupců dynamicky za běhu](#_core_how_to_bind_columns_dynamically).
 
 > [!NOTE]
->  Toto téma se vztahuje na objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Technik popsaných obecně se doporučuje, pokud používáte hromadné načítání řádků. Další informace o hromadném načítání řádků naleznete v tématu [sada záznamů: načítání hromadné záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Toto téma se vztahuje na objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Technik popsaných obecně se doporučuje, pokud používáte hromadné načítání řádků. Další informace o hromadném načítání řádků naleznete v tématu [sada záznamů: Načítání záznamů (ODBC) hromadné](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_when_you_might_bind_columns_dynamically"></a> Když může svázat sloupců dynamicky
 
@@ -140,7 +140,7 @@ Potom si nastavte umístění úložiště pro sloupce, které mají být vázan
 
    V případě nejběžnějších dynamické hodnoty sloupce s prvky typu `CString`. Pokud pracujete s různými datovými typy sloupců, potřebujete seznam, který může obsahovat prvky různých typů.
 
-Výsledek předchozích postupů jsou dva hlavní seznamy: sloupce do dynamickou vazbu obsahující názvy sloupců a dynamických sloupec hodnot obsahující hodnoty ve sloupcích pro požadovaný aktuální záznam.
+Výsledek předchozích postupů jsou dva hlavní seznamy: Sloupce na dynamickou vazbu obsahující názvy sloupců a dynamických sloupec hodnot obsahující hodnoty ve sloupcích pro požadovaný aktuální záznam.
 
 > [!TIP]
 > Pokud nové sloupce nejsou všechny stejného typu dat, můžete navíc paralelní seznam obsahující položky, které nějakým způsobem definování typu každý odpovídající element v seznamu sloupců. (Můžete použít hodnoty AFX_RFX_BOOL AFX_RFX_BYTE, a tak dále, pokud chcete. Tyto konstanty jsou definovány v AFXDB. H.) Vyberte typ seznamu závislosti na tom, jak reprezentaci datové typy sloupce.
@@ -168,7 +168,7 @@ Další informace o funkce RFX najdete v tématu [makra a globální prvky](../.
 
 Když volá framework `DoFieldExchange` během `Open` procesu vazba sloupce na sadu záznamů, volání funkce RFX pro statické sloupce svázat těchto sloupců. Potom smyčku opakovaně volání funkcí RFX pro dynamické sloupce.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Sada záznamů: Práce s velkými datovými položkami (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
+[Recordset: Práce s velkými datovými položkami (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)

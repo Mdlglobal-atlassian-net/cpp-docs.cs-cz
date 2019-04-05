@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: a0b5e3905daf72307702dbe4f05c2871cf768ac0
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 774575e978a8e7f94868eb1b5dad90c6ac345460
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328802"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038652"
 ---
 # <a name="resource-editors-c"></a>Editory prostředků (C++)
 
@@ -126,8 +126,8 @@ Následující prostředky neposkytují visual ve verzi preview: Akcelerátor, i
 
 Žádné
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Práce se zdrojovými soubory](../windows/working-with-resource-files.md)<br/>
-[Soubory prostředků](../windows/resource-files-visual-studio.md)<br/>
-[Identifikátory prostředků (symboly)](../windows/symbols-resource-identifiers.md)<br/>
+[Zdrojové soubory](../windows/resource-files-visual-studio.md)<br/>
+[Identifikátory prostředků (symbolů)](../windows/symbols-resource-identifiers.md)<br/>

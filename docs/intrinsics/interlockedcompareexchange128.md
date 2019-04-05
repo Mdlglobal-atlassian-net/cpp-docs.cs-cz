@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cmpxchg16b instruction
 - _InterlockedCompareExchange128 intrinsic
 ms.assetid: f05918fc-716a-4f6d-b746-1456d6b96c56
-ms.openlocfilehash: 3cfe9d650b66dc08a96599652b52f0b153198afa
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 9330b1405ca247364cd04d3ab399f66e4f332273
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627355"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037867"
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
 
@@ -34,7 +34,7 @@ unsigned char _InterlockedCompareExchange128(
 
 #### <a name="parameters"></a>Parametry
 
-*cíl*<br/>
+*Cíl*<br/>
 [out v] Ukazatel na cílový, což je pole dvou celých čísel 64-bit považují za 128bitového pole. Cíl dat musí být 16 bajtů v souladu, aby obecnou chybu ochrany.
 
 *ExchangeHigh*<br/>
@@ -123,12 +123,12 @@ int main(void)
 BigInt.Int[1] = 34, BigInt.Int[0] = 12
 ```
 
-**Specifické pro END Microsoft**
+**END Specifické pro Microsoft**
 
-Copyright 2007 pokročilé zařízení Micro, Inc. Všechna práva vyhrazena. Reprodukovat se svolením rozšířené Micro zařízení, Inc.
+Copyright 2007 by Advanced Micro Devices, Inc. Všechna práva vyhrazena. Reprodukovat se svolením rozšířené Micro zařízení, Inc.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
-[Vnitřní funkce _InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)<br/>
+[_InterlockedCompareExchange Intrinsic Functions](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)<br/>
 [Konflikty s kompilátorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

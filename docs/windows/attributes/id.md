@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-ms.openlocfilehash: b7bcbd9229529ec00a3b778cafd5678d47af950c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5faf08418771deda3086a434cff6b1900a37e36e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630027"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034693"
 ---
 # <a name="id"></a>id
 
@@ -25,7 +25,7 @@ Určuje *dispid* parametr pro členské funkce (vlastnost nebo metoda v rozhran�
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor DISPID*<br/>
+*dispid*<br/>
 Identifikátor odeslání pro metody rozhraní.
 
 ## <a name="remarks"></a>Poznámky
@@ -44,12 +44,12 @@ Podívejte se na příklad pro [umožňujících vazbu](bindable.md) příklad, 
 |-|-|
 |**Platí pro**|Metoda rozhraní|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**Vyžadované atributy**|Žádný|
 |**Neplatné atributy**|Žádné|
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy metody](method-attributes.md)<br/>

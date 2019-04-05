@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-ms.openlocfilehash: 0feb258941993ff9776bb9f94f61a556d7d4caec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cdebf06a62ebbd1d8648b9777fe200bc7a373261
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449839"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038275"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -25,7 +25,7 @@ Určuje model vláken pro objekt modelu COM.
 
 ### <a name="parameters"></a>Parametry
 
-*Model*<br/>
+*model*<br/>
 (Volitelné) Jeden z následujících modely dělení na vlákna:
 
 - `apartment` (podprocesový model apartment)
@@ -61,14 +61,14 @@ Najdete v článku [licenci](licensed.md) příklad ukázkový používání **d
 |**Platí pro**|**Třída**, **– struktura**|
 |**Opakovatelné**|Ne|
 |**Vyžadované atributy**|**coclass**|
-|**Neplatné atributy**|Žádné|
+|**Neplatné atributy**|Žádný|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [COM – atributy](com-attributes.md)<br/>
 [Atributy klíčových slov typedef, enum, union a struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atributy třídy](class-attributes.md)<br/>
-[Podpora multithreadingu ve starším kódu (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)<br/>
+[Podpora více vláken ve starším kódu (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)<br/>
 [Neutrální bytů](/windows/desktop/cossdk/neutral-apartments)

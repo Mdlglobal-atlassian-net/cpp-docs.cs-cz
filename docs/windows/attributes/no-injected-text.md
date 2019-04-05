@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - no_injected_text attribute
 ms.assetid: 5256f808-e41e-4f4a-9ea5-e447919f5696
-ms.openlocfilehash: af4bb4b07439c0a5dacfa0d4956db564d2dccefe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 354643020e704a87daa2e56e923b6a0a704bf0b5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618114"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038366"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
 
@@ -25,7 +25,7 @@ Zabrání kompilátoru vkládání kódu v důsledku použití atributu.
 
 ### <a name="parameters"></a>Parametry
 
-*Datový typ Boolean*<br/>
+*Logická hodnota*<br/>
 (Volitelné) **true** žádný kód vložený, chcete-li **false** umožňující kódu vložit. **Hodnota TRUE** je výchozí nastavení.
 
 ## <a name="remarks"></a>Poznámky
@@ -41,10 +41,10 @@ Nejběžnější použití nástroje **no_injected_text –** atributů C++, je 
 |**Platí pro**|Kdekoli|
 |**Opakovatelné**|Ne|
 |**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádné|
+|**Neplatné atributy**|Žádný|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Atributy kompilátoru](compiler-attributes.md)

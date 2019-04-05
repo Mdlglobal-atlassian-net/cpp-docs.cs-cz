@@ -3,12 +3,12 @@ title: Vlastní nastavení sestavení CMake v sadě Visual Studio
 ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: dd34fbefcbc89c7c4aa93105ae5bad31ae4d5f01
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 1bdf4ef3e20b055b6fa3d5449a880ddb7aab44a0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328295"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037520"
 ---
 # <a name="customize-cmake-build-settings"></a>Vlastní nastavení sestavení CMake
 
@@ -234,11 +234,11 @@ V následujícím příkladu definuje konfiguraci ladění x86 jeho vlastní hod
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Projekty CMake v sadě Visual Studio](cmake-projects-in-visual-studio.md)<br/>
 [Konfigurace projektu Linux CMake](../linux/cmake-linux-project.md)<br/>
 [Připojení ke vzdálenému počítači s Linuxem](../linux/connect-to-your-remote-linux-computer.md)<br/>
-[Konfigurace ladicích relací CMake](configure-cmake-debugging-sessions.md)<br/>
+[Konfigurace CMake ladicími relacemi](configure-cmake-debugging-sessions.md)<br/>
 [Nasazení, spuštění a ladění projektu Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [Referenční dokumentace ke konfiguraci CMake předdefinované](cmake-predefined-configuration-reference.md)<br/>

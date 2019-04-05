@@ -8,12 +8,12 @@ helpviewer_keywords:
 - conformance testing [OLE DB]
 - OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
-ms.openlocfilehash: 7365176df314baf40ac1cc1ed53936598f05c79e
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: 9f78b16bc30651560137a39286460a8e5ceccd40
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265071"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036994"
 ---
 # <a name="passing-ole-db-conformance-tests"></a>Předávání testů shodnosti technologie OLE DB
 
@@ -54,6 +54,6 @@ Kód nejprve zkontroluje, zda je vlastnost propojený na jiný. Pokud vlastnosti
 
 Můžete také přidat `IsValidValue` rutiny do vašeho kódu. Volání šablony `IsValidValue` při pokusu o nastavení vlastnosti. Tato metoda by se mělo přepsat, pokud vyžadují další zpracování při nastavení hodnoty vlastnosti. Můžete mít jednu z těchto metod pro každou sadu vlastností.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Pokročilé techniky zprostředkování](../../data/oledb/advanced-provider-techniques.md)

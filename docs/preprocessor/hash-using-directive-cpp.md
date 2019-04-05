@@ -12,12 +12,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
-ms.openlocfilehash: d69b06d29c366d0ff9c525421311001cab4e501c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ddae6137e94e10f5701e1e7d0f8f7a7514b18662
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501094"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034258"
 ---
 # <a name="using-directive-ccli"></a>#using – direktiva (C + +/ CLI)
 
@@ -31,12 +31,12 @@ Importuje metadata do programu kompilovaného s [/CLR](../build/reference/clr-co
 
 ### <a name="parameters"></a>Parametry
 
-*Soubor*<br/>
+*soubor*<br/>
 Knihovna DLL, .exe, .netmodule, nebo .obj jazyka MSIL. Například
 
 `#using <MyComponent.dll>`
 
-*zadání as_friend se*<br/>
+*as_friend*<br/>
 Určuje, že všechny typy v *soubor* jsou k dispozici. Další informace najdete v tématu [přátelská sestavení (C++)](../dotnet/friend-assemblies-cpp.md).
 
 ## <a name="remarks"></a>Poznámky
@@ -111,6 +111,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Preprocesor – direktivy](../preprocessor/preprocessor-directives.md)

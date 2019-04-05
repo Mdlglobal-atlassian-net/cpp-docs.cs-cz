@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: a3ddafab143224b6e20a3e01d1d643c42bbe19e0
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: b4772b9bd625a542a18039386fefe42840ab65b1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58775319"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038035"
 ---
 # <a name="visual-studio-projects---c"></a>Projekty Visual Studio – C++
 
@@ -60,21 +60,21 @@ V seznamu chyb, můžete stisknout **F1** na zvýrazněné chyby, přejděte na 
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Nastavení vlastností kompilátoru a sestavení C++ v sadě Visual Studio](working-with-project-properties.md)<br/>
+[Nastavení kompilátoru jazyka C++ a vlastnosti v sadě Visual Studio sestavení](working-with-project-properties.md)<br/>
 Jak používat stránky vlastností a vlastností k určení nastavení projektu.
 
-[Referenční knihovny a komponenty v okamžiku sestavení](adding-references-in-visual-cpp-projects.md)<br/>
+[Referenční dokumentace knihoven a komponenty v okamžiku sestavení](adding-references-in-visual-cpp-projects.md)<br/>
 Postup zahrnutí knihovny DLL, komponenty COM a .NET v projektu.
  
 [Uspořádání výstupních souborů projektu](how-to-organize-project-output-files-for-builds.md)<br/>
 Postup přizpůsobení umístění spustitelné soubory vytvořené během procesu sestavení.
 
-[Postup vlastního sestavení a události sestavení](understanding-custom-build-steps-and-build-events.md)<br/>
+[Vlastní kroky sestavení a s událostmi sestavení](understanding-custom-build-steps-and-build-events.md)<br/>
 Postup přidání jakékoli libovolný příkaz do procesu sestavení na zadané body.
 
 [Vytvoření projektu z existujícího kódu](how-to-create-a-cpp-project-from-existing-code.md)<br/>
 Jak vytvořit nový projekt sady Visual Studio z kolekce dojde ke ztrátě zdrojových souborů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Projekty a systémy sestavení](projects-and-build-systems-cpp.md)<br>
+[Projekty a sestavení systémy](projects-and-build-systems-cpp.md)<br>

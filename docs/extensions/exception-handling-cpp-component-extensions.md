@@ -10,12 +10,12 @@ helpviewer_keywords:
 - exception handling, types of
 - System::Exception class in managed applications
 ms.assetid: ccb11fe8-6938-41ac-b477-a183e85865b9
-ms.openlocfilehash: ee784130c5a6d7fc72d2b2ad61980089260d217e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: b477f7355ee1f4f70a0ad3df8b85c4276c07d397
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786945"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037176"
 ---
 # <a name="exception-handling--ccli-and-ccx"></a>Zpracování výjimek (C + +/ CLI a C + +/ CX)
 
@@ -23,7 +23,7 @@ Zkompilovaná aplikace `/ZW` – možnost kompilátoru nebo `/clr` – možnost 
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Základní koncepty při práci se spravovanými výjimkami](../dotnet/basic-concepts-in-using-managed-exceptions.md)<br/>
+[Základní koncepce při práci se spravovanými výjimkami](../dotnet/basic-concepts-in-using-managed-exceptions.md)<br/>
 Popisuje generování výjimek a pomocí **zkuste**/**catch** bloky.
 
 [Rozdíly v chování zpracování výjimek v/CLR](../dotnet/differences-in-exception-handling-behavior-under-clr.md)<br/>
@@ -35,7 +35,7 @@ Tento článek popisuje způsob použití finally – klíčové slovo.
 [Postupy: Definování a instalace globální obslužné rutiny výjimek](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
 Ukazuje, jak neošetřené výjimky mohou být zachyceny.
 
-[Postupy: Zachycení výjimek v nativním kódu vyvolaných z prostředí MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)<br/>
+[Postupy: Zachycení výjimek v nativním kódu vyvolaných z prostředí MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)<br/>
 Popisuje, jak zachytávat výjimky CLR a C++ v nativním kódu.
 
 [Postupy: Definování a instalace globální obslužné rutiny výjimek](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
@@ -46,6 +46,6 @@ Ukazuje, jak zachytit všechny neošetřené výjimky.
 [Zpracování výjimek](../cpp/exception-handling-in-visual-cpp.md)<br/>
 Popisuje zpracování výjimek v standardním jazyce C++.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)

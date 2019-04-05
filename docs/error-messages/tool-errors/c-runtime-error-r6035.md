@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6035
 ms.assetid: f8fb50b8-18bf-4258-b96a-b0a9de468d16
-ms.openlocfilehash: bb215668fc13ecf84efdbf5f7ec6bb25c922181b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cbade3ce8686c8c293b8d40a73c546805e42215d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668247"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034018"
 ---
 # <a name="c-runtime-error-r6035"></a>C Runtime chyba R6035
 
@@ -68,6 +68,6 @@ V tomto případě vstupní bod DllEntryPoint není chráněn proti přetečení
 > [!NOTE]
 >  Chybová zpráva R6035 se vygeneruje pouze při ladění CRT platformy x86 a pouze pro strukturované zpracování výjimek. Tato podmínka je však chybou na všech platformách a pro všechny formy zpracování výjimek, například zpracování výjimek jazyka C++ EH.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Funkce zabezpečení v MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/06/28/security-features-in-microsoft-visual-c/)

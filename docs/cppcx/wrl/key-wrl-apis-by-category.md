@@ -3,12 +3,12 @@ title: Nejdůležitější rozhraní API knihovny WRL podle kategorie
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 7367bacf-6b7c-4ecd-a0ce-a662db46fc66
-ms.openlocfilehash: fd4bebf9c823079c3bdb4c4182bf3f30cdf105a7
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: f3065323c567c944dab12fc1ebbcbd6bb57127e9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786685"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039050"
 ---
 # <a name="key-wrl-apis-by-category"></a>Nejdůležitější rozhraní API knihovny WRL podle kategorie
 
@@ -28,7 +28,7 @@ V následujících tabulkách jsou uvedeny primární knihovna šablon C++ Windo
 |[HandleT – třída](handlet-class.md)|Reprezentuje popisovač objektu.|
 |[HString – třída](hstring-class.md)|Poskytuje podporu pro práci s popisovači HSTRING.|
 |[HStringReference – třída](hstringreference-class.md)|Představuje HSTRING, který je vytvořený z existujícího řetězce.|
-|[Module – třída](module-class.md)|Představuje kolekci souvisejících objektů.|
+|[Modul – třída](module-class.md)|Představuje kolekci souvisejících objektů.|
 |[Module::GenericReleaseNotifier – třída](module-genericreleasenotifier-class.md)|Vyvolá obslužnou rutinu události po vydání poslední objekt v aktuálním modulu. Obslužná rutina události je zadaný ve výrazu lambda, funktor nebo ukazatel na funkci.|
 |[Module::MethodReleaseNotifier – třída](module-methodreleasenotifier-class.md)|Vyvolá obslužnou rutinu události po vydání poslední objekt v aktuálním modulu. Obslužná rutina události je zadaný objekt a jejího člena ukazatel na metodu.|
 |[Module::ReleaseNotifier – třída](module-releasenotifier-class.md)|Vyvolá obslužnou rutinu události po vydání poslední objekt v modulu.|
@@ -44,7 +44,7 @@ V následujících tabulkách jsou uvedeny primární knihovna šablon C++ Windo
 |-----------|-----------------|
 |[ChainInterfaces – struktura](chaininterfaces-structure.md)|Určuje, ověřování a Inicializace funkce, které mohou být použity na sadu rozhraní ID.|
 |[CloakedIid – struktura](cloakediid-structure.md)|Pozná, `RuntimeClass`, `Implements` a `ChainInterfaces` šablony, že zadané rozhraní není v seznamu IID k dispozici.|
-|[Implements – struktura](implements-structure.md)|Implementuje `QueryInterface` a `GetIid` pro zadaných rozhraní.|
+|[Implementuje strukturu](implements-structure.md)|Implementuje `QueryInterface` a `GetIid` pro zadaných rozhraní.|
 |[MixIn – struktura](mixin-structure.md)|Zajišťuje, že runtime třídy je odvozen z rozhraní Windows Runtime, pokud existuje a potom klasické rozhraní COM.|
 
 ## <a name="functions"></a>Funkce
@@ -53,7 +53,7 @@ V následujících tabulkách jsou uvedeny primární knihovna šablon C++ Windo
 |-----------|-----------------|
 |[ActivateInstance – funkce](activateinstance-function.md)|Zaregistruje a načte instanci zadaného typu definované v ID zadané třídy.|
 |[AsWeak – funkce](asweak-function.md)|Získá nestálý odkaz pro zadanou instanci.|
-|[Funkce zpětného volání](callback-function-wrl.md)|Vytvoří objekt, jehož členská funkce je metoda zpětného volání.|
+|[Zpětné volání – funkce](callback-function-wrl.md)|Vytvoří objekt, jehož členská funkce je metoda zpětného volání.|
 |[CreateActivationFactory – funkce](createactivationfactory-function.md)|Vytvoří objekt factory, který vytvoří instance dané třídy, které mohou být aktivovány modulem Windows Runtime.|
 |[CreateClassFactory – funkce](createclassfactory-function.md)|Vytvoří objekt factory, který vytvoří instance dané třídy.|
 |[GetActivationFactory – funkce](getactivationfactory-function.md)|Načte objekt factory pro aktivaci pro typ zadaný v parametru šablony.|
@@ -66,6 +66,6 @@ V následujících tabulkách jsou uvedeny primární knihovna šablon C++ Windo
 |[ActivatableClass – makra](activatableclass-macros.md)|Naplní interní mezipaměť, která obsahuje objekt factory, který můžete vytvořit instanci dané třídy.|
 |[InspectableClass – makro](inspectableclass-macro.md)|Nastaví runtime název a vztah důvěryhodnosti na úrovni třídy.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Knihovna šablon C++ prostředí Windows Runtime (WRL)](windows-runtime-cpp-template-library-wrl.md)

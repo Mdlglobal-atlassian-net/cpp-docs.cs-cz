@@ -3,12 +3,12 @@ title: Konfigurace CMake ladicími relacemi v sadě Visual Studio
 ms.date: 03/21/2019
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 712728247c439c38d5e640118fc153cf89647c80
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 9899f99994935ec419fff400670644b7d78a190a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356163"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035345"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Konfigurace CMake ladicími relacemi
 
@@ -42,7 +42,7 @@ Po uložení **souboru launch.vs.json** souboru, bude vytvořena položka ve **p
 
 ## <a name="support-for-cmakesettings-variables"></a>Podpora pro proměnné cmakesettings na pozici
 
- **Launch.vs.JSON** podporuje proměnné, které jsou deklarovány v **CMakeSettings.json** (viz níže) a, která se vztahují na aktuálně vybrané konfigurace. Je také klíč s názvem `currentDir`, který nastaví aktuální adresář spouštění aplikace:
+ **Launch.vs.JSON** podporuje proměnné, které jsou deklarovány v **CMakeSettings.json** (viz níže) a, která se vztahují na aktuálně vybrané konfigurace. Je také klíč s názvem `currentDir`, který nastaví aktuální adresář spouštění aplikace pro místní projekt:
 
 ```json
 {
@@ -59,12 +59,19 @@ Při spuštění aplikace, hodnota `currentDir` je podobný
 ```cmd
 C:\Users\satyan\7f14809a-2626-873e-952e-cdf038211175\
 ```
+
+Aktuální adresář spouštění aplikace pro vzdálený projekt nastaví klíč "cwd". Výchozí hodnota je '${debugInfo.defaultWorkingDirectory}' která je vyhodnocena na 
+
+```cmd
+/var/tmp/src/bfc6f7f4-4f0f-8b35-80d7-9198fa973fb9/Linux-Debug
+```
+
 ## <a name="see-also"></a>Viz také:
 
 [Projekty CMake v sadě Visual Studio](cmake-projects-in-visual-studio.md)<br/>
 [Konfigurace projektu Linux CMake](../linux/cmake-linux-project.md)<br/>
 [Připojení ke vzdálenému počítači s Linuxem](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [Vlastní nastavení sestavení CMake](customize-cmake-settings.md)<br/>
-[Konfigurace ladicích relací CMake](configure-cmake-debugging-sessions.md)<br/>
+[Konfigurace CMake ladicími relacemi](configure-cmake-debugging-sessions.md)<br/>
 [Nasazení, spuštění a ladění projektu Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [Referenční dokumentace ke konfiguraci CMake předdefinované](cmake-predefined-configuration-reference.md)<br/>

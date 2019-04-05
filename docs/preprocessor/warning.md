@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: 53f79061ded358c9cb895fd7e8e245c46ed99fd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1341472af22582635207a2bdff93b4367fd59330
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631718"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037747"
 ---
 # <a name="warning-pragma"></a>– Direktiva Pragma upozornění
 Umožňuje selektivní úpravy chování zprávy upozornění kompilátoru.
@@ -38,7 +38,7 @@ K dispozici jsou následující parametry upozornění specifier.
 |*1, 2, 3, 4*|Platí pro zadaný počet upozornění: na dané úrovni. To také zapne zadané upozornění, která je ve výchozím nastavení vypnuté.|
 |*default*|Chování upozornění resetovat na výchozí hodnotu. To také zapne zadané upozornění, která je ve výchozím nastavení vypnuté. Upozornění se vygeneruje při jeho výchozí, zdokumentovat, úroveň.<br /><br /> Další informace najdete v tématu [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
 |*Zakázat*|Zadaná zpráva nebo zprávy upozornění bez vyvolání.|
-|*Chyba*|Sestavy určených upozornění jako chyby.|
+|*error*|Sestavy určených upozornění jako chyby.|
 |*once*|Zobrazení zadané zprávy pouze jednou.|
 |*potlačení*|Posune aktuální stav direktivy pragma v zásobníku, zakáže zadané upozornění pro další řádek a potom zobrazí zásobník upozornění tak, aby se resetuje stav direktivy pragma.|
 
@@ -116,6 +116,6 @@ Při zápisu hlavičkové soubory, můžete použít *nabízených* a *pop* zaru
 
 Další informace o kompilátoru, možnosti, které vám pomůžou potlačit upozornění, najdete v části [/FI](../build/reference/fi-name-forced-include-file.md) a [/w](../build/reference/compiler-option-warning-level.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

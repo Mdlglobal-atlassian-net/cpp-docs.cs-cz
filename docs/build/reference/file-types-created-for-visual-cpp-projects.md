@@ -14,12 +14,12 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: 7ef8127b829b60d84af72874292c33ae1c7c4636
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: b0f780b122b147d633d5d7cd949da805d267f757
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58327578"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033372"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Typy souborů vytvořených pro projekty C++ pro Visual Studio
 
@@ -27,7 +27,7 @@ Toto téma popisuje všechny typy souborů, které jsou spojeny s projekty aplik
 
 - [Soubory projektu a řešení](project-and-solution-files.md)
 
-- [Projekty CLR](files-created-for-clr-projects.md)
+- [CLR – projekty](files-created-for-clr-projects.md)
 
 - [Program knihovny ATL nebo zdroj ovládacího prvku a soubory hlaviček](atl-program-or-control-source-and-header-files.md)
 
@@ -35,7 +35,7 @@ Toto téma popisuje všechny typy souborů, které jsou spojeny s projekty aplik
 
 - [Předkompilované soubory hlaviček](../creating-precompiled-header-files.md)
 
-- [Soubory prostředků](resource-files-cpp.md)
+- [Zdrojové soubory](resource-files-cpp.md)
 
 - [Soubory nápovědy (WinHelp)](help-files-winhelp.md)
 
@@ -91,7 +91,7 @@ Soubory projektu jsou uspořádány do složek v Průzkumníku řešení. Visual
 
 Při přidání položky do projektu přidat položku do všechny konfigurace pro tento projekt, bez ohledu na to, zda je položka sestavitelná. Například pokud máte projekt s názvem MyProject přidání položky přidá ji do i konfigurace Debug a Release projektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vytváření a správa projektů sady Visual Studio C++](../creating-and-managing-visual-cpp-projects.md)<br>
 [Typy projektů C++ v sadě Visual Studio](visual-cpp-project-types.md)<br>

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-ms.openlocfilehash: eedaf81a52fc28de4a640de7345ff3486c5f4a3a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 29bf305ed5e4845437b90ed672d1ab0c0de9ced6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786878"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036949"
 ---
 # <a name="delegate--ccli-and-ccx"></a>Delegate (C + +/ CLI a C + +/ CX)
 
@@ -56,7 +56,7 @@ Návratový typ prototypu funkce.
 *delegate-type-identifier*<br/>
 Název typu deklarovaného delegáta.
 
-*parameters*<br/>
+*parametry*<br/>
 (Volitelné) Typy a identifikátory prototypu funkce.
 
 ### <a name="remarks"></a>Poznámky
@@ -119,9 +119,9 @@ Při vytvoření delegáta, kterého globální nebo statické funkce, se vyžad
 
 Další informace o delegátech naleznete v tématu
 
-- [Postupy: Definice a používání delegátů (C++/CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
+- [Postupy: Definice a používání delegátů (C + +/ CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
 
-- [Obecní delegáti (C++/CLI)](generic-delegates-visual-cpp.md)
+- [Obecní delegáti (C + +/ CLI)](generic-delegates-visual-cpp.md)
 
 ### <a name="requirements"></a>Požadavky
 
@@ -200,6 +200,6 @@ in func2 10
 in static func3 11
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)

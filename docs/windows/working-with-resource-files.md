@@ -6,12 +6,12 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 0a13fb05f0e6e8582d5e476eb889e307458f528d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: a08c7ecb153b790f06da386ac93d1f05f5981e61
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58767298"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037727"
 ---
 # <a name="working-with-resource-files"></a>Práce se zdrojovými soubory
 
@@ -38,10 +38,10 @@ Globalizace a lokalizace prostředků ve spravovaných aplikací najdete v téma
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Soubory prostředků](../windows/resource-files-visual-studio.md)<br/>
+[Zdrojové soubory](../windows/resource-files-visual-studio.md)<br/>
 Popisuje soubory prostředků a jak se používají v aplikacích klasické pracovní plochy Windows. Obsahuje také odkazy na články, které popisují způsob použití souborů prostředků.
 
-[Identifikátory prostředků (symboly)](../windows/symbols-resource-identifiers.md)<br/>
+[Identifikátory prostředků (symbolů)](../windows/symbols-resource-identifiers.md)<br/>
 Popisuje symboly a poskytuje informace o používání **symbolů prostředků** dialogové okno ke správě symbolů ve vašich projektech.
 
 [Editory prostředků](../windows/resource-editors.md)<br/>
@@ -55,7 +55,7 @@ Obsahuje odkazy na dokumentaci jazyka Visual C++.
 [Kontaktujte nás](/visualstudio/ide/talk-to-us)<br/>
 Obsahuje odkazy na informace o používání sady dokumentace, kontaktovat podporu produktů a použití funkce pro usnadnění přístupu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Desktopové aplikace Windows](../windows/windows-desktop-applications-cpp.md)<br/>
 [Nabídky a ostatní prostředky](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

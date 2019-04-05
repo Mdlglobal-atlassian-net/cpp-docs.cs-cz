@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, vtordisp
 - vtordisp pragma
 ms.assetid: 05b7d73c-43fa-4b62-8c8a-170a9e427391
-ms.openlocfilehash: 075f00ad8a4071af57014638707503847b58756d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67c6c329bcee75012f6075334760925eca945501
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557180"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034375"
 ---
 # <a name="vtordisp"></a>vtordisp
 
@@ -32,7 +32,7 @@ ms.locfileid: "50557180"
 
 ### <a name="parameters"></a>Parametry
 
-*push*<br/>
+*nabízených oznámení*<br/>
 Posune aktuální nastavení vtordisp na vnitřního zásobníku kompilátoru a nastaví nové nastavení vtordisp na *n*.  Pokud *n* není zadán, aktuální nastavení vtordisp není změněno.
 
 *POP*<br/>
@@ -44,7 +44,7 @@ Určuje novou hodnotu nastavení vtordisp. Možné hodnoty jsou 0, 1 nebo 2, kte
 *on*<br/>
 Ekvivalentní `#pragma vtordisp(1)`.
 
-*Vypnout*<br/>
+*vypnuto*<br/>
 Ekvivalentní `#pragma vtordisp(0)`.
 
 ## <a name="remarks"></a>Poznámky
@@ -57,7 +57,7 @@ Určení 1 nebo *na*, standardně povoleno použití skrytých **vtordisp** čle
 
 Určení 2 povoleno použití skrytých **vtordisp** členů pro všechny virtuální základy s virtuálními funkcemi.  `vtordisp(2)` může být nezbytné pro zajištění správné činnosti **dynamic_cast** na částečně vytvořeným objektem. Další informace najdete v tématu [upozornění kompilátoru (úroveň 1) C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md).
 
-Direktiva `#pragma vtordisp()` bez argumentů obnoví nastavení vtordisp na počáteční nastavení.
+`#pragma vtordisp()`, bez argumentů obnoví nastavení vtordisp na počáteční nastavení.
 
 ```cpp
 #pragma vtordisp(push, 2)
@@ -67,6 +67,6 @@ class GetReal : virtual public VBase { ... };
 
 **Specifické pro END C++**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

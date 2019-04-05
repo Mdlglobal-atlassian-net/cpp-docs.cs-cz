@@ -1,5 +1,5 @@
 ---
-title: 'Sada záznamů: Funkce operací AddNew, Edit a Delete (ODBC)'
+title: 'Recordset: Jak funkce operací AddNew, Edit a odstranit pracovní (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records [C++], updating
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
-ms.openlocfilehash: 84d4c2f1128f7b73189f69b056eee96619c31ef5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e5fc6ad2a1fe00367cd8a0b1c53ac914b95018ab
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331968"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033201"
 ---
-# <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Sada záznamů: Funkce operací AddNew, Edit a Delete (ODBC)
+# <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Recordset: Jak funkce operací AddNew, Edit a odstranit pracovní (ODBC)
 
 Toto téma platí pro třídy knihovny MFC rozhraní ODBC.
 
@@ -39,9 +39,9 @@ Toto téma vysvětluje, jak `AddNew`, `Edit`, a `Delete` členské funkce tříd
 - [Princip odstranění záznamů](#_core_deleting_a_record)
 
 > [!NOTE]
->  Toto téma se vztahuje na objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud používáte hromadné načítání řádků, přečtěte si téma [sada záznamů: načítání hromadné záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Toto téma se vztahuje na objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud používáte hromadné načítání řádků, přečtěte si téma [sada záznamů: Načítání záznamů (ODBC) hromadné](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-Jako doplněk, můžete chtít číst [výměna polí záznamu: jak funkce RFX pracuje](../../data/odbc/record-field-exchange-how-rfx-works.md), která popisuje odpovídající role RFX v operacích aktualizace.
+Jako doplněk, můžete chtít číst [výměna polí záznamu: Jak funkce RFX pracuje](../../data/odbc/record-field-exchange-how-rfx-works.md), která popisuje odpovídající role RFX v operacích aktualizace.
 
 ##  <a name="_core_adding_a_record"></a> Přidání záznamu
 
@@ -118,7 +118,7 @@ Při volání `Update` upravovaného záznamu:
 
    1. Pokud existují změny, `Update` konstrukce SQL **aktualizace** příkazu. Sloupce uvedené v **aktualizace** příkazu jsou založeny na datové členy polí, které se změnily.
 
-   1. `Update` potvrdí změny – provede **aktualizace** příkaz – záznam se změní na zdroj dat, ale není potvrzená, pokud transakce je v průběhu (naleznete v tématu [transakce: provádění transakcí v sadě záznamů (rozhraní ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md) informace o tom, jak transakce ovlivňuje aktualizace). Rozhraní ODBC uchovává kopii tohoto záznamu, který se také změní.
+   1. `Update` potvrdí změny – provede **aktualizace** příkaz – záznam se změní na zdroj dat, ale není potvrzená, pokud transakce je v průběhu (naleznete v tématu [transakce: Provádění transakcí v sadě záznamů (rozhraní ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md) informace o tom, jak transakce ovlivňuje aktualizace). Rozhraní ODBC uchovává kopii tohoto záznamu, který se také změní.
 
    1. Na rozdíl od procesu pro `AddNew`, `Edit` procesu neobnoví uložený záznam. Upravený záznam zůstává na místě jako aktuální záznam.
 
@@ -157,8 +157,8 @@ Při volání `Delete`:
 
 Informace o dotazech SQL použitých v operacích aktualizace najdete v tématu [SQL](../../data/odbc/sql.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Sada záznamů: Další informace o aktualizacích (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
-[Výměna polí záznamu (Record Field Exchange – RFX)](../../data/odbc/record-field-exchange-rfx.md)
+[Recordset: Informace o aktualizacích (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
+[Výměna pole záznamu (Record Field Exchange – RFX)](../../data/odbc/record-field-exchange-rfx.md)

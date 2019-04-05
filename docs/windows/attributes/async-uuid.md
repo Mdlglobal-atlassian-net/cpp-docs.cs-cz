@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - async_uuid attribute
 ms.assetid: 235cb0d7-be58-4dd9-983c-e2a21bbc42c6
-ms.openlocfilehash: 559500a1390e0d1bac8344d0ffcfc1bdd9ad55f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c2bca9165d8b23f8cfa4f0f5523c882fd2f52bf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490906"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035793"
 ---
 # <a name="asyncuuid"></a>async_uuid
 
@@ -54,12 +54,12 @@ __interface ICustom {
 |-|-|
 |**Platí pro**|`interface`|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|**duální**, **dispinterface**|
+|**Vyžadované atributy**|Žádný|
+|**Neplatné atributy**|**dual**, **dispinterface**|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy rozhraní](interface-attributes.md)

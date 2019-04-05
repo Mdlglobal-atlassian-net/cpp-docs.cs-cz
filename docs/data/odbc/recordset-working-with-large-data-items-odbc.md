@@ -1,5 +1,5 @@
 ---
-title: 'Sada záznamů: Práce s velkými datovými položkami (ODBC)'
+title: 'Recordset: Práce s velkými datovými položkami (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - BLOB (binary large object), recordsets
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - binary large objects
 - CLongBinary class, using in recordsets
 ms.assetid: 3e80b5a8-b6e7-43c6-a816-e54befc513a3
-ms.openlocfilehash: 8ef32621821d731d9137a446bea220564cb7f92f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ba8d4af5b0781c425dd3b1223e2208b279f055e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460369"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033041"
 ---
-# <a name="recordset-working-with-large-data-items-odbc"></a>Sada záznamů: Práce s velkými datovými položkami (ODBC)
+# <a name="recordset-working-with-large-data-items-odbc"></a>Recordset: Práce s velkými datovými položkami (ODBC)
 
 Toto téma platí pro třídy knihovny MFC rozhraní ODBC a tříd DAO knihovny MFC.
 
 > [!NOTE]
->  Pokud používáte tříd DAO knihovny MFC, spravovat vaše velkými datovými položkami s třídou [CByteArray](../../mfc/reference/cbytearray-class.md) namísto třídy [CLongBinary](../../mfc/reference/clongbinary-class.md). Pokud používáte třídy knihovny MFC rozhraní ODBC s hromadné načítání řádků, použijte `CLongBinary` spíše než `CByteArray`. Další informace o hromadném načítání řádků naleznete v tématu [sada záznamů: načítání hromadné záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Pokud používáte tříd DAO knihovny MFC, spravovat vaše velkými datovými položkami s třídou [CByteArray](../../mfc/reference/cbytearray-class.md) namísto třídy [CLongBinary](../../mfc/reference/clongbinary-class.md). Pokud používáte třídy knihovny MFC rozhraní ODBC s hromadné načítání řádků, použijte `CLongBinary` spíše než `CByteArray`. Další informace o hromadném načítání řádků naleznete v tématu [sada záznamů: Načítání záznamů (ODBC) hromadné](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Předpokládejme, že databáze můžete ukládat velké časti dat, jako je například rastrové obrázky (zaměstnance fotografie, map, obrázků produktů, objekty OLE a tak dále). Tento typ dat je často označovány jako binárních rozsáhlých objektů (nebo objektů BLOB), protože:
 
@@ -59,8 +59,8 @@ Pak použijete `HGLOBAL` zpracování, `m_hData`, pracovat s daty, provozující
 > [!CAUTION]
 >  CLongBinary – objekty nelze použít jako parametry volání funkce. Kromě toho, jejich implementaci, která volá `::SQLGetData`, nemusí být zpomaluje výkonu posunování posuvný snímku. To může také být pravdivá, když použijete `::SQLGetData` volání sami načíst dynamické schéma sloupce.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Sada záznamů: Získávání součtů a jiných souhrnných výsledků (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
-[Výměna polí záznamu (Record Field Exchange – RFX)](../../data/odbc/record-field-exchange-rfx.md)
+[Recordset: Získávání součtů a jiných agregačních výsledků (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
+[Výměna pole záznamu (Record Field Exchange – RFX)](../../data/odbc/record-field-exchange-rfx.md)

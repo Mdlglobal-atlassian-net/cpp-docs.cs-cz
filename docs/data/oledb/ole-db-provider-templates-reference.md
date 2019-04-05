@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB provider templates
 ms.assetid: 518358f0-bab1-4de9-bce9-4062cc87c11f
-ms.openlocfilehash: 7c4088d676406c855ed910a4aad35c62a6957333
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e1d6be9687085361edd9141d8fb471e21b6f6376
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420097"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038673"
 ---
 # <a name="ole-db-provider-templates-reference"></a>Referenční dokumentace k šablonám zprostředkovatelů OLE DB
 
@@ -77,7 +77,7 @@ Implementuje rozhraní OLE DB [IRowsetUpdate](/previous-versions/windows/desktop
 
 ## <a name="command-classes"></a>Třídy příkazů
 
-[ICommandImpl](../../data/oledb/icommandimpl-class.md)<br/>
+[Icommandimpl –](../../data/oledb/icommandimpl-class.md)<br/>
 Poskytuje implementaci `ICommand` rozhraní. Toto rozhraní není viditelný, ale zařizuje služba `ICommandTextImpl`. Povinné rozhraní pro objekt příkazu.
 
 [ICommandPropertiesImpl](../../data/oledb/icommandpropertiesimpl-class.md)<br/>
@@ -111,7 +111,7 @@ Implementuje vlastnosti pro celou řadu vlastností rozhraní technologie OLE DB
 
 Implementuje rozhraní OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112(v=vs.85)) rozhraní, přidání záznamů do a načtení záznamů z datového členu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Šablony OLE DB](../../data/oledb/ole-db-templates.md)

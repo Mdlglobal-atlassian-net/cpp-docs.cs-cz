@@ -6,20 +6,20 @@ helpviewer_keywords:
 - OLE DB providers, projects
 - projects [C++], creating
 ms.assetid: 076a75de-1d4b-486a-bcf8-9c0f6b049fa2
-ms.openlocfilehash: f63b09d47dd8f3ebe8750275bb005be89ca8fde8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc085b1f663369033947ed2a5577f334dd79c0aa
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677107"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030735"
 ---
 # <a name="creating-a-project-for-the-provider"></a>Vytvoření projektu pro zprostředkovatele
 
 ## <a name="to-create-a-project-in-which-the-ole-db-provider-will-reside"></a>Chcete-li vytvořit projekt, ve kterém se bude nacházet zprostředkovatele OLE DB
 
-1. Z **souboru** nabídky, klikněte na tlačítko **nový**a potom klikněte na tlačítko **projektu**.
+1. V nabídce **Soubor** klikněte na položku **Nový** a potom klikněte na položku **Projekt**.
 
-   **Nový projekt** zobrazí se dialogové okno.
+   Zobrazí se dialogové okno **Nový projekt**.
 
 1. V **typy projektů** podokně klikněte na tlačítko **nainstalováno** > **Visual C++** > **MFC nebo ATL** složky. V **šablony** podokně klikněte na tlačítko **projekt knihovny ATL**.
 
@@ -34,6 +34,6 @@ ms.locfileid: "50677107"
 
 1. Klikněte na tlačítko **Dokončit**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vytvoření zprostředkovatele OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

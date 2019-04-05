@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Move function
 ms.assetid: c9525426-97e8-4d8c-9877-b689d8a0dc67
-ms.openlocfilehash: 1a03216197462090f38d3bc2065fe227f0667919
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 8d7c959ecb2d3c06872871ba062d2be603489141
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786770"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031271"
 ---
 # <a name="move-function"></a>Přesunout – funkce
 
@@ -51,6 +51,6 @@ Další informace najdete v tématu **přesunutí sémantiky** část [Rvalue Re
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Microsoft::WRL::Details – obor názvů](microsoft-wrl-details-namespace.md)

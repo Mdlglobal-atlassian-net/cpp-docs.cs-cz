@@ -3,12 +3,12 @@ title: 'Návod: Vytvoření aplikace UPW s použitím knihovny WRL a platformy M
 ms.date: 09/17/2018
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-ms.openlocfilehash: e6d240152c3740b59c34ae8e0f5aa818ce8be638
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: e0254be8c6fa185f75c46898d4da51742195550a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786676"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036033"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Návod: Vytvoření aplikace UPW s použitím knihovny WRL a platformy Media Foundation
 
@@ -119,7 +119,7 @@ Je vidět na následujícím obrázku `MediaCapture app`.
 
 Tento příklad ukazuje, jak zachytit fotky z výchozí webovou kameru, jeden po druhém. [Ukázkové rozšíření Media](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096) více. Ukazuje, jak vytvořit výčet webová kamera zařízení a pracovat s obslužnými rutinami místní schéma a ukazuje účinky dalšího média, pracující na jednotlivé fotografie a datových proudů videa.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Knihovna šablon C++ prostředí Windows Runtime (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
 [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk)<br/>

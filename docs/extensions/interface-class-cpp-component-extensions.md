@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-ms.openlocfilehash: 3d6f559360b25cef118d9fee35a0a221a4074889
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 60e8965e3ef2538554d8c664b35bd0849bd5e69e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786929"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035855"
 ---
 # <a name="interface-class--ccli-and-ccx"></a>Třída rozhraní (C + +/ CLI a C + +/ CX)
 
@@ -34,7 +34,7 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 *interface_access*<br/>
 Usnadnění rozhraní mimo sestavení.  Možné hodnoty jsou **veřejné** a **privátní**.  **privátní** je výchozí nastavení. Vnořené rozhraní nemůže mít *interface_access* specifikátor.
 
-*Jméno*<br/>
+*name*<br/>
 Název rozhraní.
 
 *inherit_access*<br/>
@@ -57,7 +57,7 @@ Další informace naleznete v tématu:
 
 - [Statický konstruktor rozhraní](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)
 
-- [Obecná rozhraní (C++/CLI)](generic-interfaces-visual-cpp.md)
+- [Obecná rozhraní (C + +/ CLI)](generic-interfaces-visual-cpp.md)
 
 Informace o dalších typech CLR naleznete v tématu [třídy a struktury](classes-and-structs-cpp-component-extensions.md).
 
@@ -218,6 +218,6 @@ ref struct R : I, J {
 };
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)

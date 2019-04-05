@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-ms.openlocfilehash: 519bbe0bdbef786c95ca3f6711b344b7a4f6b641
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 9425f998f0e8fbe5f16e6eb136e00ba3fb7bd5d9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329879"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033680"
 ---
 # <a name="implements-c"></a>implements (C++)
 
@@ -26,7 +26,7 @@ Určuje odesílajících rozhraních, které se musí být členy třídy typu I
 
 ### <a name="parameters"></a>Parametry
 
-*Rozhraní*<br/>
+*rozhraní*<br/>
 Čárkami oddělený seznam rozhraní, které budou členem třídy typu IDL coclass. Metoda Zkrácený tvar vlastností pro zadání jednoho rozhraní je **implementuje (** *interface_name* **)**.
 
 *odesílacích rozhraních*<br/>
@@ -45,7 +45,7 @@ Ve výchozím nastavení, pouze rozhraní modelu COM, které jsou základní tř
 |**Platí pro**|**Třída**, **– struktura**|
 |**Opakovatelné**|Ano|
 |**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádné|
+|**Neplatné atributy**|Žádný|
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
@@ -484,7 +484,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Atributy kompilátoru](compiler-attributes.md)<br/>
 [Atributy třídy](class-attributes.md)

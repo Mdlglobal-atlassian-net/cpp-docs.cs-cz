@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ODBC, about ODBC
 - ODBC, components
 ms.assetid: ec529702-0fb2-4754-b8de-d1efa8eca18f
-ms.openlocfilehash: 81b1f6d06d909b5b046703b97c4574270efbdd46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e14f5d051b9684cd79a34f5fb50feeb785d2f927
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591721"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033238"
 ---
 # <a name="odbc-basics"></a>ODBC – základy
 
@@ -39,7 +39,7 @@ ODBC je část databáze systému Microsoft Windows otevřete služby architektu
 
 Tady jsou součástí rozhraní ODBC:
 
-- ROZHRANÍ API ODBC
+- ODBC API
 
    Knihovna volání funkcí, sada kódů chyb a standardní [SQL](../../data/odbc/sql.md) syntaxi pro přístup k datům v systémech DBMS.
 
@@ -65,6 +65,6 @@ Databázové třídy podporu libovolný zdroj dat, pro který máte ovladač roz
 
 Seznam ovladačů ODBC zahrnuté v této verzi systému Visual C++ a informace o získání dalších ovladačů najdete v tématu [seznam ovladačů ODBC](../../data/odbc/odbc-driver-list.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+[ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)
