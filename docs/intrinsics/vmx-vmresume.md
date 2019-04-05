@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __vmx_vmresume intrinsic
 - VMRESUME instruction
 ms.assetid: 233fe1b6-c727-493a-a484-1b2363732281
-ms.openlocfilehash: 4be197566f32c5edf49a9036b1ac641416d28fc4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2bfe9a8f98b8a03a82768177217d70674708c39
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616850"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040590"
 ---
 # <a name="vmxvmresume"></a>__vmx_vmresume
 
@@ -49,9 +49,9 @@ Aplikace může provádět operace, která virtuálního počítače zadejte bu�
 
 **Soubor hlaviček** \<intrin.h >
 
-**Specifické pro END Microsoft**
+**END Specifické pro Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
 [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)<br/>

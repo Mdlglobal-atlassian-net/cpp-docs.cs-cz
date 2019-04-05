@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __svm_vmrun intrinsic
 - VMRUN instruction
 ms.assetid: ae98a781-fc17-47b2-b40f-86fcebf1867b
-ms.openlocfilehash: ffedf366453a800ce420914376b8d9bb441a602a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40e53b2ebd54fc109b47f3067e5f89ce50b327de
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603553"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041056"
 ---
 # <a name="svmvmrun"></a>__svm_vmrun
 
@@ -38,7 +38,7 @@ void __svm_vmrun(
 
 `__svm_vmrun` Funkce používá minimální množství informací VMCB zahájíte spuštěním kódu hosta virtuálního počítače. Použití [__svm_vmsave](../intrinsics/svm-vmsave.md) nebo [__svm_vmload](../intrinsics/svm-vmload.md) fungovat, pokud potřebujete další informace pro zpracování složitých přerušení nebo přepněte do jiného typu Host.
 
-`__svm_vmrun` Funkce je ekvivalentní volání `VMRUN` strojové instrukce. Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace vyhledejte dokument, "programátor architektury AMD64 ruční svazek 2: programování systému" dokument s číslem 24593, revize 3.11 nebo novější, na [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) lokality.
+`__svm_vmrun` Funkce je ekvivalentní volání `VMRUN` strojové instrukce. Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace vyhledejte dokument, "ruční svazek programátor architektury AMD64 2: Číslo 24593 revize 3.11 nebo novější na systému programování,"dokumentu [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) lokality.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -48,9 +48,9 @@ void __svm_vmrun(
 
 **Soubor hlaviček** \<intrin.h >
 
-**Specifické pro END Microsoft**
+**END Specifické pro Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
 [__svm_vmsave](../intrinsics/svm-vmsave.md)<br/>

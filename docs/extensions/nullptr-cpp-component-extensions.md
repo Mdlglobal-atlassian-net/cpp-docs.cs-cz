@@ -6,12 +6,12 @@ helpviewer_keywords:
 - __nullptr keyword (C++)
 - nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-ms.openlocfilehash: b8ce6748a6fe82bb7d2432044458f93ff642d10e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 05aaaa8a0d0056e0f5318f5e9329d90824760728
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786790"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040826"
 ---
 # <a name="nullptr--ccli-and-ccx"></a>nullptr (C + +/ CLI a C + +/ CX)
 
@@ -31,7 +31,7 @@ Použití **nullptr** se spravovaným nebo nativním kódem. Kompilátor vydá o
 
 - [sizeof](../cpp/sizeof-operator.md)
 
-- [identifikátor TypeId.](../cpp/typeid-operator.md)
+- [typeid](../cpp/typeid-operator.md)
 
 - `throw nullptr` (i když `throw (Object^)nullptr;` bude fungovat)
 
@@ -223,7 +223,7 @@ int main() {
 
 – Možnost kompilátoru: (Není vyžadováno; podporuje všechny možnosti generování kódu, včetně `/ZW` a `/clr`)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)<br/>
 [nullptr](../cpp/nullptr.md)

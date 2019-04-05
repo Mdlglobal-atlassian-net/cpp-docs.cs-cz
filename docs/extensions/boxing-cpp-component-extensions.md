@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - boxing, C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-ms.openlocfilehash: c37d9e67424e8ef5082ac7129956f8577d9c745e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 0b41cacba8c279447e1e944cc3214ca1ba607665
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786894"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038697"
 ---
 # <a name="boxing--ccli-and-ccx"></a>Zabalení (C + +/ CLI a C + +/ CX)
 
@@ -82,11 +82,11 @@ Zabalení a rozbalení povolit typy hodnot jsou považovány za objekty. Typy ho
 
 Další informace naleznete v tématu:
 
-- [Postupy: Explicitní žádost o zabalení](../dotnet/how-to-explicitly-request-boxing.md)
+- [Postupy: Explicitní žádost o zabalení](../dotnet/how-to-explicitly-request-boxing.md)
 
-- [Postupy: Vytváření typů hodnot pomocí výrazu gcnew s použitím implicitního zabalení](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)
+- [Postupy: Pomocí výrazu gcnew vytváření typů hodnot s použitím implicitního zabalení](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)
 
-- [Postupy: Rozbalení](../dotnet/how-to-unbox.md)
+- [Postupy: rozbalení](../dotnet/how-to-unbox.md)
 
 - [Standardní převody a implicitní zabalení](../dotnet/standard-conversions-and-implicit-boxing.md)
 
@@ -188,6 +188,6 @@ in func2(System::ValueType^)
 in func2(System::ValueType^)
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - EventTraits structure
 ms.assetid: 2cf308a4-50e3-4321-bafc-4c7c0364e148
-ms.openlocfilehash: 84f535648e06905b6669a0c74c9607363aa318de
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: cb54bce8f271b01ee838cfecb891b78c5a9eb6e6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786791"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027282"
 ---
 # <a name="eventtraits-structure"></a>EventTraits – struktura
 
@@ -38,6 +38,6 @@ struct EventTraits : HANDLENullTraits;
 
 **Namespace:** Microsoft::WRL::Wrappers::HandleTraits
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Microsoft::WRL::Wrappers::HandleTraits – obor názvů](microsoft-wrl-wrappers-handletraits-namespace.md)

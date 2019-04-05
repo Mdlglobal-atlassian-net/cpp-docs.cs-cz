@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - raw_dispinterfaces attribute
 ms.assetid: f762864d-29bf-445b-825a-ba7b29a95409
-ms.openlocfilehash: 8a6c335c7afe2cc56613f06abf5c181f05f6bfec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef8ed3992c77df0f1d551e923ddc90c2d1bb9b0b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585390"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027920"
 ---
 # <a name="rawdispinterfaces"></a>raw_dispinterfaces
 **Specifické pro C++**
@@ -30,7 +30,7 @@ Pokud tento atribut není zadaný, pouze vysoké úrovně jsou generovány obál
 
 **Specifické pro END C++**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import – atributy](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

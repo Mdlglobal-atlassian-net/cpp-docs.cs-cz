@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic interfaces
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-ms.openlocfilehash: b37cf7fee6dba46d99788bd91c42a8e36846b1bd
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 035636f2723cd949f5a1852b3d5500a20f5fb493
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786698"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021505"
 ---
 # <a name="generic-interfaces-ccli"></a>Obecná rozhraní (C + +/ CLI)
 
@@ -32,10 +32,10 @@ Další informace o rozhraní najdete v tématu [třída rozhraní](interface-cl
 
 ## <a name="remarks"></a>Poznámky
 
-*Atributy*<br/>
+*atributy*<br/>
 (Volitelné) Další informace o deklarativní. Další informace o atributy a třídy atributů najdete v tématu **atributy**.
 
-*class-key*<br/>
+*klíč třídy*<br/>
 **Třída** nebo **typename**
 
 *Typ – parametr-identifikátory*<br/>
@@ -44,19 +44,19 @@ Seznam identifikátorů oddělených čárkou.
 *type-parameter-constraints-clauses*<br/>
 Má podobu podle [omezení parametrů obecných typů (C + +/ CLI)](constraints-on-generic-type-parameters-cpp-cli.md)
 
-*accessibility-modifiers*<br/>
+*Modifikátory dostupnosti*<br/>
 (Volitelné) Modifikátory (třeba **veřejné, privátní**).
 
-*identifier*<br/>
+*identifikátor*<br/>
 Název rozhraní.
 
-*base-list*<br/>
+*Base-list*<br/>
 (Volitelné) Seznam, který obsahuje jedno nebo více explicitní základní rozhraní oddělených čárkami.
 
-*interface-body*<br/>
+*tělo rozhraní*<br/>
 Deklarace členů rozhraní.
 
-*declarators*<br/>
+*deklarátory*<br/>
 (Volitelné) Deklarace proměnných na základě tohoto typu.
 
 ## <a name="example"></a>Příklad
@@ -313,6 +313,6 @@ The integer field contains: 1234
 The String field contains: My string
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Obecné typy](generics-cpp-component-extensions.md)

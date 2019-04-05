@@ -4,12 +4,12 @@ ms.date: 12/08/2018
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: e8d5e5379a60128ace9502712a1d240f947ddcd5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 6c8e891f6bf6ed6b3bb3d1c84dbc13b64ab7b868
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823011"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021901"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>Interní informace o MSBuild pro projekty v jazyce C++
 
@@ -88,14 +88,14 @@ V následující tabulce jsou uvedeny některé užitečné cíle zaměřených 
 > [!NOTE]
 > V sadě Visual Studio 2017, projekt C++ podpora **xsd** zastaralé soubory. Můžete dál používat **Microsoft.VisualC.CppCodeProvider** přidáním **CppCodeProvider.dll** ručně do mezipaměti GAC.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace úlohy nástroje MSBuild](/visualstudio/msbuild/msbuild-task-reference)<br/>
 [BscMake – úloha](/visualstudio/msbuild/bscmake-task)<br/>
 [CL – úloha](/visualstudio/msbuild/cl-task)<br/>
 [CPPClean – úloha](/visualstudio/msbuild/cppclean-task)<br/>
 [LIB – úloha](/visualstudio/msbuild/lib-task)<br/>
-[Odkaz – úloha](/visualstudio/msbuild/link-task)<br/>
+[Úloha odkazu](/visualstudio/msbuild/link-task)<br/>
 [MIDL – úloha](/visualstudio/msbuild/midl-task)<br/>
 [MT – úloha](/visualstudio/msbuild/mt-task)<br/>
 [RC – úloha](/visualstudio/msbuild/rc-task)<br/>

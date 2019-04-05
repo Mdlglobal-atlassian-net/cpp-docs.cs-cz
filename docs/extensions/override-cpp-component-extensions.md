@@ -6,12 +6,12 @@ helpviewer_keywords:
 - overriding, override keyword [C++]
 - override keyword [C++]
 ms.assetid: 34d19257-1686-4fcd-96f5-af07c70ba914
-ms.openlocfilehash: 291766ade1397fee433198dce1a704949c8223c8
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 8dc7a0a0e6cf759d956fd701d033bd773e572af3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787000"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025673"
 ---
 # <a name="override--ccli-and-ccx"></a>override (C + +/ CLI a C + +/ CX)
 
@@ -81,7 +81,7 @@ ref struct X : public I1 {
 
 – Možnost kompilátoru: `/clr`
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [override – specifikátor](../cpp/override-specifier.md)<br/>
-[Override – specifikátory](override-specifiers-cpp-component-extensions.md)
+[override – specifikátory](override-specifiers-cpp-component-extensions.md)

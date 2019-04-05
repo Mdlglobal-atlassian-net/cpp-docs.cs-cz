@@ -11,12 +11,12 @@ helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CCustomSession class in CustomSess.H
 ms.assetid: d37ad471-cf05-49c5-aa47-cd10824d777f
-ms.openlocfilehash: 75d0c8d871ca736be5e2c33829296b2760092e14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5cb462aba671e79450e9ee7b8447410252f8edc9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568009"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023461"
 ---
 # <a name="ccustomsession-customsessh"></a>CCustomSession (CustomSess.H)
 
@@ -41,6 +41,6 @@ Průvodce také vytvoří tři třídy relace: `CCustomSessionColSchema`, `CCust
 
 Specifikaci OLE DB vyžaduje, aby implementace zprostředkovatele `IDBSchemaRowset` typy sada řádků schématu rozhraní podporu tři: DBSCHEMA_COLUMNS DBSCHEMA_PROVIDER_TYPES a DBSCHEMA_TABLES. Průvodce vytvoří implementacemi pro každý sada řádků schématu. Každá třída generované průvodcem knihovnou obsahuje `Execute` metody. V tomto `Execute` metoda může vrátit data poskytovatele, o které tabulky, sloupce a datové typy, které podporujete. Tato data je známá v době kompilace.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Soubory generované průvodcem zprostředkovatele](../../data/oledb/provider-wizard-generated-files.md)<br/>
+[Poskytovatel souborů vytvořených průvodcem](../../data/oledb/provider-wizard-generated-files.md)<br/>

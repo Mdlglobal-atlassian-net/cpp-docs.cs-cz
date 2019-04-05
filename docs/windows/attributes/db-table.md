@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
-ms.openlocfilehash: d0b67bae643698b6d4f09a75dd2e4ec6a23a5d28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ab548261d6ebcb9d3d7f7e352c8afe3b33db06f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607269"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023864"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -28,7 +28,7 @@ Otevře se tabulku OLE DB.
 *db_table*<br/>
 Řetězec určující název databázové tabulky (například "produktů").
 
-*Jméno*<br/>
+*name*<br/>
 (Volitelné) Název popisovače, který slouží pro práci s tabulkou. Tento parametr musíte zadat, pokud se chcete vrátit více než jeden řádek výsledků. **db_table** generuje proměnné se zadaným *název* , který slouží k procházení řádků nebo spustit více dotazů akce.
 
 *source_name*<br/>
@@ -75,6 +75,6 @@ Příklad tohoto atributu použijí v aplikaci, najdete v ukázkách [AtlAgent](
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Atributy příjemce technologie OLE DB](ole-db-consumer-attributes.md)

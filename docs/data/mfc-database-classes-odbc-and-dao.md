@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ODBC, ODBC classes
 - MFC, database applications
 ms.assetid: 88aabe65-84e3-4122-b636-5d334a5fe570
-ms.openlocfilehash: c6baa07b5bc5e63927f00ecf912c69f8c96a34f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf0aa11a020a5d15cd23463c31f2713aba38a037
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520377"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039369"
 ---
 # <a name="mfc-database-classes"></a>MFC – databázové třídy
 
@@ -29,6 +29,6 @@ Další informace naleznete v následujících tématech:
 
 - [Použití databázových tříd bez dokumentů a zobrazení](../data/mfc-using-database-classes-without-documents-and-views.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přístup k datům programování knihovny MFC nebo ATL)](../data/data-access-programming-mfc-atl.md)

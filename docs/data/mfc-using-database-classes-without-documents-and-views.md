@@ -1,5 +1,5 @@
 ---
-title: 'MFC: Použití databázových tříd bez objektů Document a View'
+title: 'MFC: Použití databázových tříd bez dokumentů a zobrazení'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC applications [C++], without views
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - database applications [C++], without documents
 - user interface [C++], drawing information
 ms.assetid: 15bf52d4-91cf-4b1d-8b37-87c3ae70123a
-ms.openlocfilehash: 558917f1a1485f1a886356b3c272842579f6b03e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab9946609fa20c4644873a684a754cbc8a41742f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602212"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024631"
 ---
-# <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC: Použití databázových tříd bez objektů Document a View
+# <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC: Použití databázových tříd bez dokumentů a zobrazení
 
 Někdy není vhodné používat v rámci architektury dokumentu/zobrazení v databázových aplikacích. Toto téma vysvětluje:
 
@@ -54,7 +54,7 @@ Průvodce aplikací MFC obsahuje celou řadu možností **vyberte Podpora datab�
 
 |Možnost|Zobrazit|Dokument|
 |------------|----------|--------------|
-|**None**|Odvozené od `CView`.|Poskytuje podporu žádné databáze. Toto je výchozí možnost.<br /><br /> Pokud vyberete **podpora architektury Document/view** možnost [typ aplikace, Průvodce aplikací knihovny MFC](../mfc/reference/application-type-mfc-application-wizard.md) stránky, získáte plnou podporu dokumentu včetně serializace a **nový** , **Otevřít**, **Uložit**, a **uložit jako** příkazy na **souboru** nabídky. Zobrazit [aplikace bez dokumentu](#_core_applications_with_no_document).|
+|**Žádné**|Odvozené od `CView`.|Poskytuje podporu žádné databáze. Toto je výchozí možnost.<br /><br /> Pokud vyberete **podpora architektury Document/view** možnost [typ aplikace, Průvodce aplikací knihovny MFC](../mfc/reference/application-type-mfc-application-wizard.md) stránky, získáte plnou podporu dokumentu včetně serializace a **nový** , **Otevřít**, **Uložit**, a **uložit jako** příkazy na **souboru** nabídky. Zobrazit [aplikace bez dokumentu](#_core_applications_with_no_document).|
 |**Jenom hlavičkové soubory**|Odvozené od `CView`.|Poskytuje základní úroveň podpory databáze pro vaši aplikaci.<br /><br /> Obsahuje Afxdb.h. Přidá knihoven, ale nevytvoří všechny třídy specifické pro databázi. Můžete vytvořit později sady záznamů a použít k prozkoumání a aktualizaci záznamů.|
 |**Zobrazení databází bez podpory souborů**|Odvozený z `CRecordView`|Poskytuje podporu dokumentu, ale nepodporuje serializaci. Dokument můžete ukládat sady záznamů a koordinaci více zobrazení; nepodporuje serializaci nebo **nový**, **otevřít**, **Uložit**, a **uložit jako** příkazy. Zobrazit [aplikace s minimálními dokumenty](#_core_applications_with_minimal_documents). Pokud zahrnete zobrazení databáze, musíte zadat zdroj dat.<br /><br /> Obsahuje databázové soubory hlaviček, knihovnách, zobrazení záznamů a záznamů. (K dispozici pouze pro aplikace s **podpora architektury Document/view** možnosti vybrané v [typ aplikace, Průvodce aplikací knihovny MFC](../mfc/reference/application-type-mfc-application-wizard.md) stránky.)|
 |**Zobrazení databází s podporou souborů**|Odvozený z `CRecordView`|Poskytuje plnou podporu dokumentu, včetně serializace a související dokument **souboru** příkazů nabídky. Databázové aplikace je obvykle fungují na základě jednotlivé záznamy, nikoli na jednotlivé – soubor základ a proto není nutné serializace. Může však mít speciální použití pro serializaci. Zobrazit [aplikace s minimálními dokumenty](#_core_applications_with_minimal_documents). Pokud zahrnete zobrazení databáze, musíte zadat zdroj dat.<br /><br /> Obsahuje databázové soubory hlaviček, knihovnách, zobrazení záznamů a záznamů. (K dispozici pouze pro aplikace s **podpora architektury Document/view** možnosti vybrané v [typ aplikace, Průvodce aplikací knihovny MFC](../mfc/reference/application-type-mfc-application-wizard.md) stránky.)|
@@ -119,6 +119,6 @@ Protože vlastní žádný dokument `CRecordset` objektu, budete pravděpodobně
 
 - Použití objektů sady záznamů, stejně jako v rámci dokumentu, nebo v náhledu. Vytvoření sady záznamů v člen funkce svou aplikaci nebo objekty oken s rámečkem.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – databázové třídy](../data/mfc-database-classes-odbc-and-dao.md)

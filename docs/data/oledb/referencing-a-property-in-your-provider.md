@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references, to properties in providers
 - referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-ms.openlocfilehash: d8c775af8f887deb7bf49016f9716fa0a76d2439
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c3e620cd760aa04df7d7d2209ef009a606675276
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415939"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028452"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>Odkazování na vlastnost ve zprostředkovateli
 
@@ -66,6 +66,6 @@ if (pPropSet)
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Práce s šablonami zprostředkovatele OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

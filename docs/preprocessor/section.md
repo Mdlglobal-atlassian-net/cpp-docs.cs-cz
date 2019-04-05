@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, section
 - section pragma
 ms.assetid: c67215e9-2c4a-4b0f-b691-2414d2e2d96f
-ms.openlocfilehash: cd8eee564fa17b21d5421a3471fd676af921f444
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41479d7d8767438d0e59fbe6beb7e435459dcb1b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462137"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023240"
 ---
 # <a name="section"></a>section
 
@@ -40,7 +40,7 @@ Jakmile je definován oddíl, zůstane v platnosti pro zbývající část kompi
 |**read**|Umožňuje čtení operací s daty.|
 |**write**|Umožňuje operací zápisu na data.|
 |**Spuštění**|Umožňuje spuštění kódu.|
-|**Sdílet**|Sdílené složky v části mezi všechny procesy, které načíst obrázek.|
+|**shared**|Sdílené složky v části mezi všechny procesy, které načíst obrázek.|
 |**nopage**|Označí oddíl jako nejsou stránkované; užitečné pro ovladače zařízení Win32.|
 |**NoCache**|Označí oddílu jako není možné ukládat do mezipaměti; užitečné pro ovladače zařízení Win32.|
 |**Zahození**|Označí oddílu jako discardable; užitečné pro ovladače zařízení Win32.|
@@ -63,6 +63,6 @@ int i = 0;
 int main(){}
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

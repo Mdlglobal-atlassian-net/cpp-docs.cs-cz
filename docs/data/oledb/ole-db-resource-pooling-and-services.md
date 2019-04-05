@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE DB services [OLE DB]
 - OLE DB providers, resource pooling
 ms.assetid: 360c36e2-25ae-4caf-8ee7-d4a6b6898f68
-ms.openlocfilehash: 1fb5164b9e744175f60c920a1d92278e9d5213f2
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: f46c6f493ae41570c75c384fcc836707faeab99f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51264655"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023747"
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>Sdružování prostředků OLE DB a služby
 
@@ -28,6 +28,6 @@ Vlastnost DBPROP_CONNECTIONSTATUS by měla podporovat poskytovatelé, kteří p�
 
 Nakonec automatický zápis do transakce obecně nebude fungovat pokud je implementováno na stejné úrovni, ke které dochází sdružování. Poskytovatelé, které podporují automatické transakce zařazení by měly podporovat zákaz tomuto zařazení ve vystavení vlastnost DBPROP_INIT_OLEDBSERVICES a zakázání zařazení, pokud DBPROPVAL_OS_TXNENLISTMENT není vybraná.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Pokročilé techniky zprostředkování](../../data/oledb/advanced-provider-techniques.md)

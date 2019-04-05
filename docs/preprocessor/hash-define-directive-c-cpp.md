@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '#define directive, syntax'
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
-ms.openlocfilehash: dec555de64a3ebd166bdff5558957f09e1c2755e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a0cc7e7836a0c82c72055fe8d9e7497995485d0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653749"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039495"
 ---
 # <a name="define-directive-cc"></a>#define – direktiva (C++)
 
@@ -80,7 +80,7 @@ Na druhé straně následující dvě makra nejsou stejné a vygeneruje upozorn�
 #define multiply( a1, a2 ) ( b1 * b2 )
 ```
 
-**Specifické pro END Microsoft**
+**END Specifické pro Microsoft**
 
 Tento příklad ukazuje, **#define** – direktiva:
 
@@ -113,8 +113,8 @@ které vyhodnocuje 280.
 
 Definování maker a konstant pomocí [/D](../build/reference/d-preprocessor-definitions.md) – možnost kompilátoru má stejný účinek jako použití **#define** direktiva předzpracování na začátku souboru. Pomocí možnosti /D lze definovat až 30 maker.
 
-**Specifické pro END Microsoft**
+**END Specifické pro Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Preprocesor – direktivy](../preprocessor/preprocessor-directives.md)

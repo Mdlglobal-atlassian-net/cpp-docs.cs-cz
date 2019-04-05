@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - raw_method_prefix attribute
 ms.assetid: 71490313-af78-4bb2-b28a-eee67950d30b
-ms.openlocfilehash: c3015cf8b51646d25fd8f36a7336c63dc8fe492b
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 963e04752dcb797343550d9b89f778bfe0e8a593
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565594"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021408"
 ---
 # <a name="rawmethodprefix"></a>raw_method_prefix
 
@@ -27,7 +27,7 @@ raw_method_prefix("Prefix")
 
 ### <a name="parameters"></a>Parametry
 
-*Prefix*<br/>
+*Předpona*<br/>
 Předpona, která má být použit.
 
 ## <a name="remarks"></a>Poznámky
@@ -39,7 +39,7 @@ Nízké úrovně vlastnosti a metody vystaveny členským funkcím pojmenovaným
 
 **Specifické pro END C++**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import – atributy](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

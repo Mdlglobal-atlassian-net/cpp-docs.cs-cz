@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, detect_mismatch
 - detect_mismatch pragma
 ms.assetid: ddb13ac9-0e2f-40ce-be69-7e44c04f5a12
-ms.openlocfilehash: fb6f147f1591f010298e84cb28f05b40dafaeb63
-ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
+ms.openlocfilehash: 42a3ba61cefe3b2db01aef24b802e3a51fed55d9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/21/2019
-ms.locfileid: "54417626"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026703"
 ---
 # <a name="detectmismatch"></a>detect_mismatch
 Umístí do objektu záznam. Linker zkontroluje tyto záznamy a vyhledá potenciální problémy.
@@ -48,6 +48,6 @@ int main ()
 
 Jsou-li oba soubory zkompilovány pomocí příkazového řádku `cl pragma_directive_detect_mismatch_a.cpp pragma_directive_detect_mismatch_b.cpp`, dojde k chybě `LNK2038`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -102,12 +102,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: 776123baa0d53ac2a1777849b60d35cf0d93a172
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ba6b41a708cd854e398cbaa80609472ebbe167e8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426222"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023227"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset – třída
 
@@ -139,7 +139,7 @@ Třídu přistupujícího objektu.
 |[CBulkRowset](#cbulkrowset)|Konstruktor|
 |[MoveFirst](#movefirst)|Načte první řádek dat, provádění nové hromadné načítání, v případě potřeby.|
 |[MoveLast](#movelast)|Přejde na poslední řádek.|
-|[MoveNext](#movenext)|Načte další řádek dat.|
+|[Metoda MoveNext](#movenext)|Načte další řádek dat.|
 |[MovePrev](#moveprev)|Přesune se na předchozí řádek.|
 |[MoveToBookmark](#movetobookmark)|Načte řádek označený záložkou nebo řádek na zadaný posun z tuto záložku.|
 |[MoveToRatio](#movetoratio)|Načte řádky začínající od desetinné pozice v dané sadě řádků.|
@@ -319,7 +319,7 @@ void SetRows(DBROWCOUNT nRows) throw();
 
 Při volání této funkce, musí být před otevřením v sadě řádků.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

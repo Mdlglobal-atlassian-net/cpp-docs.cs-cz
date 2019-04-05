@@ -1,5 +1,5 @@
 ---
-title: Vnitřní funkce _InterlockedCompareExchangePointer
+title: _InterlockedCompareExchangePointer Intrinsic Functions
 ms.date: 11/04/2016
 f1_keywords:
 - _InterlockedCompareExchangePointer_HLERelease
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_nf intrinsic
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
-ms.openlocfilehash: b58af33e13609dcb9a51f7d2b3075427f538a2d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2db18c73f7765454d29e2dfdbd9408f62c51d32a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445029"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024813"
 ---
-# <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>Vnitřní funkce _InterlockedCompareExchangePointer
+# <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer Intrinsic Functions
 
 **Specifické pro Microsoft**
 
@@ -79,7 +79,7 @@ long _InterlockedCompareExchangePointer_rel (
 
 #### <a name="parameters"></a>Parametry
 
-*cíl*<br/>
+*Cíl*<br/>
 [out v] Ukazatel na ukazatel na cílové hodnoty. Znaménko se ignoruje.
 
 *Exchange*<br/>
@@ -96,9 +96,9 @@ Vrácená hodnota je počáteční hodnota cíle.
 
 |Vnitřní|Architektura|Záhlaví|
 |---------------|------------------|------------|
-|`_InterlockedCompareExchangePointer`|x86, ARM, x64|\<intrin.h >|
-|`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h >|
-|`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86, x64|\<immintrin.h >|
+|`_InterlockedCompareExchangePointer`|x86, ARM, x64|\<intrin.h>|
+|`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h>|
+|`_InterlockedCompareExchangePointer_HLEAcquire`,  `_InterlockedCompareExchangePointer_HLERelease`|x86, x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -116,9 +116,9 @@ Na platformách Intel, které podporují pokyny Elize zámek hardwaru (HLE), vni
 
 Tyto rutiny jsou dostupné jenom jako vnitřní funkce.
 
-**Specifické pro END Microsoft**
+**END Specifické pro Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
-[Klíčová slova](../cpp/keywords-cpp.md)
+[klíčová slova](../cpp/keywords-cpp.md)

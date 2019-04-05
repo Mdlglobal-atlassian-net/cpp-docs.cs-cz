@@ -8,12 +8,12 @@ helpviewer_keywords:
 - undef directive (#undef)
 - preprocessor, directives
 ms.assetid: 88900e0e-2c19-4a63-b681-f3d3133c24ca
-ms.openlocfilehash: cb3a08165e41f336df0e141f50310f191cd83257
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4f4f5ce244be6d7f4e13d7a2abc5d21232c08d9d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537264"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039004"
 ---
 # <a name="undef-directive-cc"></a>#undef – direktiva (C++)
 Odebere (zruší definici) název dříve vytvořený pomocí direktivy `#define`.
@@ -49,8 +49,8 @@ V následujícím příkladu **#undef** odebere direktiva definice Symbolické k
 
 Lze zrušit definici z příkazového řádku pomocí maker `/U` možnost, následované názvy maker mají být zrušeny. Účinek tohoto příkazu odpovídá sekvenci `#undef` *název makra* příkazy na začátku souboru.
 
-**Specifické pro END Microsoft**
+**END Specifické pro Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Preprocesor – direktivy](../preprocessor/preprocessor-directives.md)

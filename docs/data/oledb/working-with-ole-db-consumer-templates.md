@@ -5,12 +5,12 @@ helpviewer_keywords:
 - sample applications [C++], OLE DB Templates
 - OLE DB consumer templates, about consumer templates
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
-ms.openlocfilehash: 79eb11a2a9d6403eb267098bb4f893b4424d6a67
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81bb80446ef3df09eaed7a8728e789de67c27122
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466336"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040803"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>Práce s šablonami příjemců OLE DB
 
@@ -18,7 +18,7 @@ Následující témata obsahují příklady, jak používat šablony příjemce 
 
 - [Zjednodušení přístupu k datům s použitím atributů databáze](../../data/oledb/simplifying-data-access-with-database-attributes.md)
 
-- [Datové členy stavu pole v přístupových objektech generovaných průvodcem](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)
+- [Datoví členové stavu pole v přístupových objektech generovaných průvodcem](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)
 
 - [Procházení jednoduché sady řádků](../../data/oledb/traversing-a-simple-rowset.md)
 
@@ -36,7 +36,7 @@ Následující témata obsahují příklady, jak používat šablony příjemce 
 
 - [Podpora transakcí v prostředí OLE DB](../../data/oledb/supporting-transactions-in-ole-db.md)
 
-- [Použití zobrazení záznamů OLE DB](../../data/oledb/using-ole-db-record-views.md)
+- [Použití zobrazení záznamů technologie OLE DB](../../data/oledb/using-ole-db-record-views.md)
 
 - [Použití existující sady záznamů ADO](../../data/oledb/using-an-existing-ado-recordset.md)
 
@@ -58,6 +58,6 @@ Můžete také najít příklady použití šablony příjemce technologie OLE D
 
 - [MultiRead](https://github.com/Microsoft/VCSamples)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)

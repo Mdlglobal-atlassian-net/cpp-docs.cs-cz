@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: a56c15f76b83620e4f67c188450a6b5d2f68c22f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 142d067b6fbc9e2357ff8fc23fd931a1194477e9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58766037"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041251"
 ---
 # <a name="data-access-in-visual-c"></a>Přístup k datům v jazyce Visual C++
 
@@ -26,10 +26,10 @@ Microsoft má od roku 2011 zarovnány na rozhraní ODBC jako standard pro nativn
 [Přístup k datům programování knihovny MFC nebo ATL)](data-access-programming-mfc-atl.md)<br/>
 Popisuje programování s jazykem Visual C++, kde je upřednostňovaným způsobem pomocí knihoven tříd, jako je například aktivní šablony třídy knihovny (ATL) nebo knihovny Microsoft Foundation Class (MFC), které zjednodušují práci s databází rozhraní API přístupu k datům starší verze.
 
-[Open Database Connectivity (ODBC)](odbc/open-database-connectivity-odbc.md)<br/>
+[ODBC (Open Database Connectivity)](odbc/open-database-connectivity-odbc.md)<br/>
 Knihovny Microsoft Foundation Classes (MFC) poskytuje třídy pro programování s připojením ODBC (Open Database).
 
-[Programování v architektuře OLE DB](oledb/ole-db-programming.md)<br/>
+[OLE DB – programování](oledb/ole-db-programming.md)<br/>
 Většinou starší verze rozhraní, které se stále vyžaduje v některých případech, zejména pokud jsou programové ošetření propojené servery.
 
 ## <a name="related-topics"></a>Související témata
@@ -55,6 +55,6 @@ Azure Blob storage je služba, která ukládá Nestrukturovaná data v cloudu ja
 [ Referenční informace pro programátory ODBC](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)<br/>
 Rozhraní ODBC je určen pro použití s programovací jazyk C. Použití rozhraní ODBC zahrnuje tři oblasti: Příkazy SQL, volání funkcí rozhraní ODBC a programování v jazyce C.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Visual C++](../overview/visual-cpp-in-visual-studio.md)

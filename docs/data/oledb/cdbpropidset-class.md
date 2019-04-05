@@ -33,12 +33,12 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: d51b1bf6862aebda34586518be6501f57f119590
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9e878af3acf4c4d3a6ca785454c4bb072f17cf09
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419952"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59022408"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet – třída
 
@@ -140,7 +140,7 @@ Přiřadí obsah jedno ID vlastnosti nastavena na jinou sadu vlastnost ID.
 CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

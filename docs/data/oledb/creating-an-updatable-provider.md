@@ -6,12 +6,12 @@ helpviewer_keywords:
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-ms.openlocfilehash: 04db02bc8ad4db0c669e07a0bcf1b60ffa22e8ad
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d3f8314e7cd57617e35e50a67a4562d4055cb93a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521398"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024735"
 ---
 # <a name="creating-an-updatable-provider"></a>Vytvoření aktualizovatelného zprostředkovatele
 
@@ -111,7 +111,7 @@ Všimněte si, že `IRowsetUpdateImpl` je odvozena z `IRowsetChangeImpl`. Proto 
 
    - `DBPROP_IRowsetChange`: Nastavení tomto automaticky nastaví `DBPROP_IRowsetChange`.
 
-   - `DBPROP_UPDATABILITY`: Bitová maska zadání podporovaných metod na `IRowsetChange`: `SetData`, `DeleteRows`, nebo `InsertRow`.
+   - `DBPROP_UPDATABILITY`: Určení podporovaných metod na bitová maska `IRowsetChange`: `SetData`, `DeleteRows`, nebo `InsertRow`.
 
    - `DBPROP_CHANGEINSERTEDROWS`: Příjemce může volat `IRowsetChange::DeleteRows` nebo `SetData` nově vložených řádků.
 
@@ -434,6 +434,6 @@ m_rgRowData.Add(trData[0]);
 
 Tento kód určuje, mimo jiné, že sloupec podporuje výchozí hodnotu 0, že být zapisovatelná, a že všechna data ve sloupci mít stejnou délku. Pokud chcete data ve sloupci mít proměnné délky, nebude tento příznak nastavit.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vytvoření zprostředkovatele OLE DB](creating-an-ole-db-provider.md)

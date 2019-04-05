@@ -14,12 +14,12 @@ helpviewer_keywords:
 - IConvertTypeImpl class
 - CanConvert method
 ms.assetid: 7f81e79e-7d3f-4cbe-b93c-d632a94b15f6
-ms.openlocfilehash: e1117cfb8e68cbdc5432355315213faad903ea35
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 546a5a007f9e4c1c2a0e581eff2e7984947bdbb5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424649"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023721"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl – třída
 
@@ -48,7 +48,7 @@ Vaše třída odvozena od `IConvertTypeImpl`.
 
 |||
 |-|-|
-|[CanConvert](#canconvert)|Poskytuje informace o dostupnosti převody typů příkazu nebo pro sadu řádků.|
+|[Canconvert –](#canconvert)|Poskytuje informace o dostupnosti převody typů příkazu nebo pro sadu řádků.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -74,7 +74,7 @@ Zobrazit [IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224(
 
 Používá převodu dat OLE DB v `MSADC.DLL`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

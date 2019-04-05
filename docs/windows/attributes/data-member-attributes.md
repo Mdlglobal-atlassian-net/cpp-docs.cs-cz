@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data members [C++], attributes
 - data members [C++]
 ms.assetid: 95b2397d-1daf-4ae4-8cd0-06956d005b13
-ms.openlocfilehash: e188f4d9ad2c553ff142e45ec84bc0a04630b816
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad21ed16eee8cd14e8f798450ff385d5f429a280
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512928"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041147"
 ---
 # <a name="data-member-attributes"></a>Atributy datového členu
 
@@ -33,6 +33,6 @@ Následující atributy se vztahují na datové členy ve třídě, coclass nebo
 |[readonly](readonly-cpp.md)|Zakáže přiřazení na datový člen.|
 |[requestedit](requestedit.md)|Označuje, že vlastnost podporuje `OnRequestEdit` oznámení.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Atributy podle použití](attributes-by-usage.md)

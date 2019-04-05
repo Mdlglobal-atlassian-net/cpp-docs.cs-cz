@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-ms.openlocfilehash: 0162105e0d05ec2be925241c7d1c30c2afdc7a37
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 199fda710a077998c6b10f101f6ebc15573e675e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786674"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038878"
 ---
 # <a name="safecast-ccli-and-ccx"></a>safe_cast (C + +/ CLI a C + +/ CX)
 
@@ -45,7 +45,7 @@ ms.locfileid: "58786674"
 *id typu*<br/>
 Typ, který chcete převést *výraz* k. Popisovač pro odkaz nebo typ hodnoty, typ hodnoty nebo odkaz sledování na typ odkazu nebo hodnoty.
 
-*Výraz*<br/>
+*výraz*<br/>
 Výraz, který se vyhodnotí jako popisovač pro odkaz nebo typ hodnoty, typ hodnoty nebo odkaz sledování na typ odkazu nebo hodnoty.
 
 ### <a name="remarks"></a>Poznámky
@@ -105,7 +105,7 @@ Caught expected exception: InvalidCastException
 *id typu*<br/>
 Popisovač pro odkaz nebo typ hodnoty, typ hodnoty nebo odkaz sledování na typ odkazu nebo hodnoty.
 
-*Výraz*<br/>
+*výraz*<br/>
 Výraz, který se vyhodnotí jako popisovač pro odkaz nebo typ hodnoty, typ hodnoty nebo odkaz sledování na typ odkazu nebo hodnoty.
 
 ### <a name="remarks"></a>Poznámky
@@ -124,9 +124,9 @@ Další informace o přetypování, naleznete v tématu [operátory přetypován
 
 Další informace o **safe_cast**, naleznete v tématu:
 
-- [Přetypování C-Style s parametrem/CLR (C + +/ CLI)](c-style-casts-with-clr-cpp-cli.md)
+- [Přetypování ve stylu jazyka pomocí možnosti /clr (C++/CLI)](c-style-casts-with-clr-cpp-cli.md)
 
-- [Postupy: Používání operátoru safe_cast v jazyce C++/CLI](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)
+- [Postupy: Používání operátoru safe_cast v jazyce C + +/ CLI](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)
 
 ### <a name="requirements"></a>Požadavky
 
@@ -164,6 +164,6 @@ int main() {
 Caught expected exception
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)

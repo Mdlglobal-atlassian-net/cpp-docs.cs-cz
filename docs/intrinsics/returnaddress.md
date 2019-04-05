@@ -7,12 +7,12 @@ helpviewer_keywords:
 - _ReturnAddress intrinsic
 - ReturnAddress intrinsic
 ms.assetid: 7f4a5811-35e6-4f64-ba7c-21203380eeda
-ms.openlocfilehash: 01916a9306faa4159f54225b745fd56c35b5ae16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5013b20f9e7ed0349d940d9be61cc1b4afc95d4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641780"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041134"
 ---
 # <a name="returnaddress"></a>_ReturnAddress
 
@@ -20,7 +20,7 @@ ms.locfileid: "50641780"
 
 `_ReturnAddress` Vnitřní poskytuje adresu podle pokynů ve volání funkce, která se spustí po ovládací prvek vrátí volajícímu.
 
-Vytvářejte následující program a procházet ji krok v ladicím programu. Jak krokovat programem, poznamenejte si adresu, která je vrácena z `_ReturnAddress`. Potom ihned po vrácení z funkce kde `_ReturnAddress` byl použit, otevřete [postupy: použití okna zpětného překladu](/visualstudio/debugger/how-to-use-the-disassembly-window) a Všimněte si, že adresa má být proveden další pokyn odpovídá adrese vrácená `_ReturnAddress`.
+Vytvářejte následující program a procházet ji krok v ladicím programu. Jak krokovat programem, poznamenejte si adresu, která je vrácena z `_ReturnAddress`. Pak ihned po vrácení z funkce, kde `_ReturnAddress` byl použit, otevřete [jak: Použití okna zpětného překladu](/visualstudio/debugger/how-to-use-the-disassembly-window) a Všimněte si, že adresa má být proveden další pokyn odpovídá adrese vrácená `_ReturnAddress`.
 
 Optimalizace, například vkládání může mít vliv na návratovou adresu. Například, pokud je uvedený ukázkový program kompilován [/Ob1](../build/reference/ob-inline-function-expansion.md), `inline_func` budou vloženy do volání funkce `main`. Proto volání `_ReturnAddress` z `inline_func` a `main` bude každý vytváří stejnou hodnotu.
 
@@ -61,10 +61,10 @@ int main(void)
 }
 ```
 
-**Specifické pro END Microsoft**
+**END Specifické pro Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)<br/>
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
-[Klíčová slova](../cpp/keywords-cpp.md)
+[klíčová slova](../cpp/keywords-cpp.md)

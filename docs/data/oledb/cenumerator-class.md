@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: 2a54770e3c5c2bc3805024b237f9875bded1ab26
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 23467caf46d38175a74dab061f60e11009f1f481
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58772381"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030177"
 ---
 # <a name="cenumerator-class"></a>CEnumerator – třída
 
@@ -50,7 +50,7 @@ class CEnumerator :
 
 |||
 |-|-|
-|[Najít](#find)|Hledá v rámci (zdroje dat) dostupných poskytovatelů vyhledávání pro jeden se zadaným názvem.|
+|[Vyhledávání](#find)|Hledá v rámci (zdroje dat) dostupných poskytovatelů vyhledávání pro jeden se zadaným názvem.|
 |[GetMoniker](#getmoniker)|Načte `IMoniker` rozhraní pro požadovaný aktuální záznam.|
 |[Otevřít](#open)|Otevře se enumerátor.|
 
@@ -135,7 +135,7 @@ HRESULT Open(const CEnumerator& enumerator) throw();
 
 Standardní HRESULT.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

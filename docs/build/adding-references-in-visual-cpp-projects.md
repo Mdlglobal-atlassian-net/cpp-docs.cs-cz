@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: eb4d970527ba919af10eadab7c907f5108767b9b
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: dff057977e6b6ff0c36d3a888bc4d5c3aa778576
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58780467"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038759"
 ---
 # <a name="consuming-libraries-and-components"></a>Používání knihovny a součásti
 
@@ -112,7 +112,7 @@ Definujte následující vlastnosti *odkaz typu projekt projekt* z projektu, kte
 
    Pokud je tato vlastnost **True**, systém projektu propojeny do závislý projekt lib souborů, které jsou vytvářeny nezávislé projektem. Obvykle můžete zadat **True**.
 
-- **Project Identifier**
+- **Identifikátor projektu**
 
    Jednoznačně identifikuje nezávislé projektu. Hodnota vlastnosti je interní systém identifikátor GUID, který nemůže být upraven.
 
@@ -148,7 +148,7 @@ Následující vlastnosti se nacházejí na odkazy na sestavení modelu COM a .N
 
    Zobrazí popisek odkazu.
 
-- **Název**
+- **Name**
 
    Zobrazí název odkazu.
 
@@ -160,11 +160,11 @@ Následující vlastnosti se nacházejí na odkazy na sestavení modelu COM a .N
 
    `true` Pokud má odkazované sestavení silný název. Silně pojmenované sestavení mají je jedinečné verze.
 
-- **Verze**
+- **Version**
 
    Verze odkazovaného sestavení zobrazí.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na stránku vlastností projektu jazyka C++](reference/property-pages-visual-cpp.md)<br>
-[Nastavení vlastností kompilátoru a sestavení C++ v sadě Visual Studio](working-with-project-properties.md)
+[Nastavení kompilátoru jazyka C++ a vlastnosti v sadě Visual Studio sestavení](working-with-project-properties.md)

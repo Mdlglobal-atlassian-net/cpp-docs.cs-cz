@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - object attribute
 ms.assetid: f2d3c231-630d-4b4c-bd15-b1c30df362dd
-ms.openlocfilehash: 1cae9e6b014f33dfbbcccdeb4172d6f35349e307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0f544e84e5110761dfd01e25abef4352f055ff5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526157"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59022356"
 ---
 # <a name="object-c"></a>object (C++)
 
@@ -39,18 +39,18 @@ Zobrazit [nonbrowsable](nonbrowsable.md) příklad, jak používat **objekt**.
 
 |||
 |-|-|
-|**Platí pro**|**interface**|
+|**Platí pro**|**rozhraní**|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádné|
+|**Vyžadované atributy**|Žádný|
+|**Neplatné atributy**|Žádný|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy rozhraní](interface-attributes.md)<br/>
 [dual](dual.md)<br/>
 [dispinterface](dispinterface.md)<br/>
-[custom](custom-cpp.md)<br/>
+[vlastní](custom-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

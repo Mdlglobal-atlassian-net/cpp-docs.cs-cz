@@ -32,12 +32,12 @@ helpviewer_keywords:
 - Hash method
 - m_rgbookmarks
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-ms.openlocfilehash: c5954aefaff2cdacb1aa1712f8b4bda93c9e434e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e3513084697a60a33b9fa2ab02222a9b332cce79
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420372"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039816"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl – třída
 
@@ -94,10 +94,10 @@ Jednotky úložiště pro všechny popisovačů řádků uchovávat záložkou.
 
 |||
 |-|-|
-|[Compare](#compare)|Porovná dva záložky.|
+|[Porovnat](#compare)|Porovná dva záložky.|
 |[GetRowsAt](#getrowsat)|Načte řádky od řádku určený posun od záložku.|
 |[GetRowsByBookmark](#getrowsbybookmark)|Načte řádky, které odpovídají zadaným záložky.|
-|[Hash](#hash)|Vrátí hodnotu hash hodnoty pro zadaný záložky.|
+|[Hodnota hash](#hash)|Vrátí hodnotu hash hodnoty pro zadaný záložky.|
 
 ### <a name="data-members"></a>Datové členy
 
@@ -233,7 +233,7 @@ Pole záložky.
 CAtlArray<DBROWCOUNT> m_rgBookmarks;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

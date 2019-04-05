@@ -44,16 +44,16 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: 91e9c6dac1b6f13997bb7e4f2727a743a9177083
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: b41ce5c744bde7cd89cabed6c829cfb06da75129
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328607"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039355"
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>Vnitřní funkce _InterlockedIncrement
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
 Poskytuje vnitřní podporu kompilátoru pro sadu SDK Windows Win32 [InterlockedIncrement](/windows/desktop/api/winnt/nf-winnt-interlockedincrement) funkce.
 
@@ -132,10 +132,10 @@ Tyto rutiny jsou dostupné jenom jako vnitřní funkce.
 
 Pro ukázku toho, jak používat `_InterlockedIncrement`, naleznete v tématu [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
-**Specifické pro END Microsoft**
+**END Specifické pro Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
-[Klíčová slova](../cpp/keywords-cpp.md)<br/>
+[klíčová slova](../cpp/keywords-cpp.md)<br/>
 [Konflikty s kompilátorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpfile attribute
 ms.assetid: d75161c1-1363-4019-ae09-e7e3b8a3971e
-ms.openlocfilehash: 594ab4d02065e9b4efe1142c5ced9b76642e5481
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7aff6addffb13d2d45953d190eeaac518fe48d6d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488046"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039292"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -25,7 +25,7 @@ Nastaví název souboru nápovědy pro knihovnu typů.
 
 ### <a name="parameters"></a>Parametry
 
-*Název souboru*<br/>
+*filename*<br/>
 Název souboru, který obsahuje témata nápovědy.
 
 ## <a name="remarks"></a>Poznámky
@@ -49,7 +49,7 @@ Podívejte se na příklad pro [modulu](module-cpp.md) příklad, jak používat
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy rozhraní](interface-attributes.md)<br/>

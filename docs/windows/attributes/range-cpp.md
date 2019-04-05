@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: b75915b901f55ce7ef8d295531ab5148c6535c93
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ce941fe95f2bbef3895c039984db1e1d2985ae1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644966"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029535"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -60,11 +60,11 @@ __interface ICustom {
 |**Platí pro**|Metoda rozhraní parametr rozhraní|
 |**Opakovatelné**|Ne|
 |**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádné|
+|**Neplatné atributy**|Žádný|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy metody](method-attributes.md)<br/>

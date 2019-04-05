@@ -6,12 +6,12 @@ helpviewer_keywords:
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-ms.openlocfilehash: 83b254b67cb2a7e09fbf57597996097a7afb5d76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67206e63d163b489c5087e6bc6759cde30a3d6c4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654764"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026192"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>Abecední seznam vnitřních funkcí
 
@@ -75,23 +75,23 @@ V následujících částech jsou specifické pro společnost Microsoft vnitřn�
 
 [Vnitřní funkce _InterlockedAnd](../intrinsics/interlockedand-intrinsic-functions.md)
 
-[Vnitřní funkce _interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
+[vnitřní funkce _interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
 
-[Vnitřní funkce _interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
+[vnitřní funkce _interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
 
-[Vnitřní funkce _InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)
+[_InterlockedCompareExchange Intrinsic Functions](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)
 
 [_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)
 
-[Vnitřní funkce _InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)
+[_InterlockedCompareExchangePointer Intrinsic Functions](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)
 
 [Vnitřní funkce _InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)
 
-[Vnitřní funkce _InterlockedExchange](../intrinsics/interlockedexchange-intrinsic-functions.md)
+[_InterlockedExchange Intrinsic Functions](../intrinsics/interlockedexchange-intrinsic-functions.md)
 
 [Vnitřní funkce _InterlockedExchangeAdd](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)
 
-[Vnitřní funkce _InterlockedExchangePointer](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)
+[_InterlockedExchangePointer Intrinsic Functions](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)
 
 [Vnitřní funkce _InterlockedIncrement](../intrinsics/interlockedincrement-intrinsic-functions.md)
 
@@ -193,7 +193,7 @@ V následujících částech jsou specifické pro společnost Microsoft vnitřn�
 
 [_rotl8, _rotl16](../intrinsics/rotl8-rotl16.md)
 
-[_rotr8, _rotr16](../intrinsics/rotr8-rotr16.md)
+[_rotr8 _rotr16](../intrinsics/rotr8-rotr16.md)
 
 [__segmentlimit](../intrinsics/segmentlimit.md)
 
@@ -273,6 +273,6 @@ V následujících částech jsou specifické pro společnost Microsoft vnitřn�
 
 [__writemsr](../intrinsics/writemsr.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

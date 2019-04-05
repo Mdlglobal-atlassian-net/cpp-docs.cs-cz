@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DDX (dialog data exchange), record views
 - RFX (record field exchange)
 ms.assetid: abc52ca7-6997-47a7-98f3-f347f52b1f72
-ms.openlocfilehash: bf9f32e970becd1ef8dc4e347512dcfaa7cf62ac
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: a7c6714218b5891e078e750a974faed274e113c9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175405"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023591"
 ---
 # <a name="data-exchange-for-record-views---mfc-data-access"></a>Výměna dat pro zobrazení záznamů (přístup k datům MFC)
 
@@ -28,7 +28,7 @@ Výměna dat dialogových oken a výměna pole záznamu
 
 Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových oken a ověření](../mfc/dialog-data-exchange-and-validation.md). Další informace o RFX najdete v tématu [výměna pole záznamu (RFX)](../data/odbc/record-field-exchange-rfx.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zobrazení záznamů (přístup k datům MFC)](../data/record-views-mfc-data-access.md)<br/>
 [Seznam ovladačů ODBC](../data/odbc/odbc-driver-list.md)

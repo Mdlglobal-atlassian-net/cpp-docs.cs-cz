@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-ms.openlocfilehash: 326a52805cb78a3f31141d3eac6a0942a7fee477
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: 207dcc92cd308052e4e5e7265bf0632c5096bed4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51264720"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041069"
 ---
 # <a name="provider-support-for-bookmarks"></a>Podpora zprostředkovatele pro záložky
 
@@ -264,6 +264,6 @@ END_ACCESSOR_MAP()
 
 Když jste aktualizovali kód, byste měli moct sestavit a spustit poskytovatele se `IRowsetLocate` rozhraní.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Pokročilé techniky zprostředkování](../../data/oledb/advanced-provider-techniques.md)

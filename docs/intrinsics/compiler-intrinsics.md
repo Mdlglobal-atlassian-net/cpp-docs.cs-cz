@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cl.exe compiler, performance
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
-ms.openlocfilehash: f66c6247aba92a1528489dcf689239c9341b7d2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a014e870d731d7e7d443c3bfefd66884aa50d5d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560014"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029275"
 ---
 # <a name="compiler-intrinsics"></a>Vnitřní funkce kompilátoru
 
@@ -44,9 +44,9 @@ V následujících částech všechny vnitřní objekty, které jsou k dispozici
 
 - [Abecední seznam vnitřních funkcí](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace assembleru ARM](../assembler/arm/arm-assembler-reference.md)<br/>
 [Microsoft Macro Assembler – referenční dokumentace](../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
-[Klíčová slova](../cpp/keywords-cpp.md)<br/>
-[Referenční dokumentace knihovny CRT](../c-runtime-library/c-run-time-library-reference.md)
+[klíčová slova](../cpp/keywords-cpp.md)<br/>
+[Referenční dokumentace běhové knihovny jazyka C](../c-runtime-library/c-run-time-library-reference.md)

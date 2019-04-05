@@ -1,5 +1,5 @@
 ---
-title: 'Sada záznamů: Architektura (ODBC)'
+title: 'Recordset: Architektura (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets, data members
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - m_nParams data member
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
-ms.openlocfilehash: fc44f2b4fcae51cef78d6b660f0cc86ee516e5e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5904a69f81dd1fbf22171a46040da5d4f5511588
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651188"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039647"
 ---
-# <a name="recordset-architecture-odbc"></a>Sada záznamů: Architektura (ODBC)
+# <a name="recordset-architecture-odbc"></a>Recordset: Architektura (ODBC)
 
 Toto téma platí pro třídy knihovny MFC rozhraní ODBC.
 
@@ -33,7 +33,7 @@ Toto téma popisuje datové členy, které tvoří architektura objekt sady záz
 - [Pomocí m_nFields a m_nParams datové členy](#_core_using_m_nfields_and_m_nparams)
 
 > [!NOTE]
->  Toto téma se vztahuje na objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud je implementovaná hromadné načítání řádků, se podobá architektuře. Pokud chcete znát rozdíly, přečtěte si téma [sada záznamů: načítání hromadné záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Toto téma se vztahuje na objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud je implementovaná hromadné načítání řádků, se podobá architektuře. Pokud chcete znát rozdíly, přečtěte si téma [sada záznamů: Načítání záznamů (ODBC) hromadné](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_a_sample_class"></a> Ukázkový – třída
 
@@ -89,10 +89,10 @@ Definuje parametry datových členů, informování rozhraní framework o parame
 
 Když průvodce zapíše konstruktor pro třídu, také inicializuje [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) datového člena, který určuje, kolik [pole datových členů](#_core_field_data_members) ve třídě. Pokud chcete přidat všechny [parametry](#_core_parameter_data_members) do vaší třídy, musíte taky přidat inicializace pro [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams) datového člena, který určuje, kolik parametry datových členů. Rozhraní používá tyto hodnoty pro práci s datové členy.
 
-Další informace a příklady najdete v tématu [výměna polí záznamu: použití funkce RFX](../../data/odbc/record-field-exchange-using-rfx.md).
+Další informace a příklady najdete v tématu [výměna polí záznamu: Použití funkce RFX](../../data/odbc/record-field-exchange-using-rfx.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Sada záznamů: Deklarování třídy pro tabulku (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
-[Výměna polí záznamu (Record Field Exchange – RFX)](../../data/odbc/record-field-exchange-rfx.md)
+[Recordset: Deklarování třídy pro tabulku (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[Výměna pole záznamu (Record Field Exchange – RFX)](../../data/odbc/record-field-exchange-rfx.md)

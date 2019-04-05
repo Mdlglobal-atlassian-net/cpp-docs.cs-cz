@@ -57,12 +57,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: cb92c19dd839fc09ed803e170a2762e4ac7cd494
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 2564d4d9b0a2e5df1f575d6f2627ce80f48533c1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58770792"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021914"
 ---
 # <a name="cdatasource-class"></a>CDataSource – třída
 
@@ -240,7 +240,7 @@ HRESULT Open(LPCSTR szProgID,
 
 #### <a name="parameters"></a>Parametry
 
-*clsid*<br/>
+*identifikátor CLSID*<br/>
 [in] `CLSID` Data zprostředkovatele.
 
 *pPropSet*<br/>
@@ -392,7 +392,7 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 
 #### <a name="parameters"></a>Parametry
 
-*clsid*<br/>
+*identifikátor CLSID*<br/>
 [in] `CLSID` Data zprostředkovatele.
 
 *szProgID*<br/>
@@ -412,7 +412,7 @@ Standardní HRESULT.
 
 Tato metoda se otevře objekt zdroje dat pomocí služby komponent v oledb32.dll; Tato knihovna DLL obsahuje implementaci funkce součásti služby, jako je sdílení prostředků ve fondech, automatické zařazení transakce a tak dále. Další informace najdete v tématu "OLE DB služby" v OLE DB programátora odkaz na [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

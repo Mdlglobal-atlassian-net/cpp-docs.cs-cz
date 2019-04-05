@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-ms.openlocfilehash: e5cccd337514df34729fc916900a7b16a15596fc
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: d37e6fdd2521f07728305bfbf5441cebb363030a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786548"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041387"
 ---
 # <a name="callback-function-wrl"></a>Funkce zpětného volání (WRL)
 
@@ -227,13 +227,13 @@ Parametr šablony, který určuje typ osmého argumentu metody zpětného volán
 *TArg9*<br/>
 Parametr šablony, který určuje typ devátého argumentu metody zpětného volání.
 
-*callback*<br/>
+*zpětné volání*<br/>
 Objekt představující objekt zpětného volání a jeho členskou funkci.
 
-*object*<br/>
+*odkazy objektů*<br/>
 Objekt, jehož členská funkce je volána, když dojde k události.
 
-*– Metoda*<br/>
+*– metoda*<br/>
 Členská funkci volat při výskytu události.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -250,6 +250,6 @@ Základ objektu delegáta musí být `IUnknown`, nikoli `IInspectable`.
 
 **Namespace:** Microsoft::WRL
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Microsoft::WRL – obor názvů](microsoft-wrl-namespace.md)

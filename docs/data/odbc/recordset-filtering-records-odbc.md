@@ -1,5 +1,5 @@
 ---
-title: 'Sada záznamů: Filtrování záznamů (ODBC)'
+title: 'Recordset: Filtrování záznamů (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data [MFC], filtering
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], filtering records
 - filters [C++], recordset object
 ms.assetid: 5c075f37-c837-464d-90c1-d028a9d1c175
-ms.openlocfilehash: 47ac2b83df4da5fcfe0cbe5e9546571a50ecdfac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 050524df840be28d661da89d04b685a44238f88c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514748"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041212"
 ---
-# <a name="recordset-filtering-records-odbc"></a>Sada záznamů: Filtrování záznamů (ODBC)
+# <a name="recordset-filtering-records-odbc"></a>Recordset: Filtrování záznamů (ODBC)
 
 Toto téma platí pro třídy knihovny MFC rozhraní ODBC.
 
@@ -82,15 +82,15 @@ Všimněte si použití jednoduché uvozovky znaků. Pokud nastavíte řetězec 
 m_strFilter = "StudentID = 100";   // incorrect for some drivers
 ```
 
-Uvozovky u výše uvedené odpovídá specifikaci rozhraní ODBC, ale některé systémy DBMS můžou vyžadovat další znaky uvozovek. Další informace najdete v tématu [SQL: SQL příkazu přizpůsobení sady záznamů (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+Uvozovky u výše uvedené odpovídá specifikaci rozhraní ODBC, ale některé systémy DBMS můžou vyžadovat další znaky uvozovek. Další informace najdete v tématu [SQL: Přizpůsobení příkazu SQL sady záznamů (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
 > [!NOTE]
->  Pokud budete chtít přepsat výchozí řetězec SQL sady záznamů předáním vlastní řetězec SQL `Open`, by neměla nastavit filtr, pokud má váš vlastní řetězec **kde** klauzuli. Další informace o přepsání výchozího SQL najdete v tématu [SQL: SQL příkazu přizpůsobení sady záznamů (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+>  Pokud budete chtít přepsat výchozí řetězec SQL sady záznamů předáním vlastní řetězec SQL `Open`, by neměla nastavit filtr, pokud má váš vlastní řetězec **kde** klauzuli. Další informace o přepsání výchozího SQL najdete v tématu [SQL: Přizpůsobení příkazu SQL sady záznamů (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Sada záznamů: Řazení záznamů (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
-[Sada záznamů: Jak sady záznamů vybírají záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
-[Sada záznamů: Jak sady záznamů aktualizují záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
-[Sada záznamů: Zamykání záznamů (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[Recordset: Řazení záznamů (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
+[Recordset: Jak sady záznamů vybírají záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[Recordset: Jak sady záznamů aktualizují záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
+[Recordset: Zamykání záznamů (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - _BitScanReverse intrinsic
 - BitScanReverse intrinsic
 ms.assetid: 2520a207-af8b-4aad-9ae7-831abeadf376
-ms.openlocfilehash: f1c33f90fc8e44388068f0588d33effd80fc203c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3639aac38f4c7df82cbbdb23ed9038ac86ba2cc0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586417"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021964"
 ---
 # <a name="bitscanreverse-bitscanreverse64"></a>_BitScanReverse, _BitScanReverse64
 
@@ -53,7 +53,7 @@ Nenulovou hodnotu, pokud `Index` byl sady, nebo 0, pokud nebyly nalezeny žádn�
 
 |Vnitřní|Architektura|Záhlaví|
 |---------------|------------------|------------|
-|`_BitScanReverse`|x86, ARM, x64|\<intrin.h >|
+|`_BitScanReverse`|x86, ARM, x64|\<intrin.h>|
 |`_BitScanReverse64`|ARM, x64||
 
 ## <a name="example"></a>Příklad
@@ -100,8 +100,8 @@ Enter a positive integer as the mask:
 Mask: 12 Index: 3
 ```
 
-**Specifické pro END Microsoft**
+**END Specifické pro Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

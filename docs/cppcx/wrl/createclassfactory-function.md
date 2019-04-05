@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CreateClassFactory function
 ms.assetid: 772d5d1b-8872-4745-81ca-521a39564713
-ms.openlocfilehash: e7e213d1b0679f17ce070de85ee9410ff9546716
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 323fce053707d6d00d1e17b641613d15607ab6f8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786779"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040751"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory – funkce
 
@@ -58,6 +58,6 @@ Chyba vyhodnocení je vygenerován, pokud parametr šablony *Factory* není odvo
 
 **Namespace:** Microsoft::WRL
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Microsoft::WRL::Wrappers::Details – obor názvů](microsoft-wrl-wrappers-details-namespace.md)

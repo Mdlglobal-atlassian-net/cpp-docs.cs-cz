@@ -7,18 +7,18 @@ helpviewer_keywords:
 - ODBC data sources, creating tables in
 - tables [C++], creating programmatically
 ms.assetid: 9ca68fb5-c3df-424a-a75c-e3fb01cc1b18
-ms.openlocfilehash: 139efb7a34baacb2bb6ad424d13f2d337eb12af6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61d3f3e39362db27d1e3abc00fa3cb9ea82b86e2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661653"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028396"
 ---
 # <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>Zdroj dat: Programové vytvoření tabulky ve zdroji dat rozhraní ODBC
 
 Toto téma vysvětluje, jak vytvořit tabulku pro vaše data zdroj, pomocí `ExecuteSQL` členské funkce třídy `CDatabase`, předáním funkci, která obsahuje řetězec **CREATE TABLE** příkaz jazyka SQL.
 
-Obecné informace o zdrojích dat rozhraní ODBC v prostředí MFC naleznete v tématu [datové zdroje (ODBC)](../../data/odbc/data-source-odbc.md). V tématu [zdroj dat: programové nakonfigurování zdroje dat ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md) popisuje vytváření datového zdroje.
+Obecné informace o zdrojích dat rozhraní ODBC v prostředí MFC naleznete v tématu [datové zdroje (ODBC)](../../data/odbc/data-source-odbc.md). Téma [zdroj dat: Programová konfigurace zdroje dat ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md) popisuje vytváření datového zdroje.
 
 Až budete mít zdroj dat navázat, můžete snadno vytvářet tabulky pomocí `ExecuteSQL` členské funkce a **CREATE TABLE** příkaz jazyka SQL. Pokud jste měli třeba `CDatabase` objektu s názvem `myDB`, můžete použít následující kód knihovny MFC vytvořte tabulku:
 
@@ -32,6 +32,6 @@ Tento příklad kódu vytvoří tabulky nazvané "Pobočky" ve zdroji dat Micros
 > [!NOTE]
 >  Pole typů uvedených v **CREATE TABLE** příkaz SQL se může lišit podle ovladač rozhraní ODBC, kterou používáte. Program Microsoft Query (distribuovat s jazykem Visual C++ 1.5) je jeden způsob, jak zjistit, jaké typy pole jsou k dispozici pro zdroj dat. V aplikaci Microsoft Query, klikněte na tlačítko **souboru**, klikněte na tlačítko **Table_Definition**, vyberte tabulku ze zdroje dat a podívejte se na typ, který ukazuje **typ** – pole se seznamem. Syntaxe SQL existuje také k vytváření indexů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zdroj dat (ODBC)](../../data/odbc/data-source-odbc.md)

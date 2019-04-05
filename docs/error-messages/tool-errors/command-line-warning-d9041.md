@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - D9041
 ms.assetid: ada8815f-4246-4e25-b57d-a7f16fa107cc
-ms.openlocfilehash: 2311c61c4d661d58302308f06b08971f94cdacab
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d9a32fbf961e980633635f277a76955a706a4b0e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816305"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021453"
 ---
 # <a name="command-line-warning-d9041"></a>Upozornění příkazového řádku D9041
 
@@ -29,7 +29,7 @@ cl /EHsc /LD /wd6001 filename.cpp
 
 Chcete-li opravit toto upozornění, přidejte **/ analyze** možnost příkazového řádku. Pokud **/ analyze** se nepodporuje na vaší verzi kompilátoru, odeberte neplatné číslo upozornění z **/wd** možnost.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Chyby příkazového řádku D8000 až D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)<br/>
 [Možnosti kompilátoru MSVC](../../build/reference/compiler-options.md)

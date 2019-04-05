@@ -7,12 +7,12 @@ helpviewer_keywords:
 - version attribute
 - version information, version attribute
 ms.assetid: db6ce5d8-82c2-4329-b1a8-8ca2f67342cb
-ms.openlocfilehash: 01c4cca846326d237fdacd19187a44e21bd15913
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe1df9e12b9adbf9ce55978fd3479f7e740ddc96
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519311"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025749"
 ---
 # <a name="version-c"></a>version (C++)
 
@@ -26,7 +26,7 @@ Určuje konkrétní verzi napříč několika verzemi třídu.
 
 ### <a name="parameters"></a>Parametry
 
-*version*<br/>
+*verze*<br/>
 Číslo verze `coclass`. Pokud není zadán, umístí 1.0 v souboru IDL.
 
 ## <a name="remarks"></a>Poznámky
@@ -50,7 +50,7 @@ Najdete v článku [umožňujících vazbu](bindable.md) příklad ukázkový po
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Atributy kompilátoru](compiler-attributes.md)<br/>
 [Atributy třídy](class-attributes.md)

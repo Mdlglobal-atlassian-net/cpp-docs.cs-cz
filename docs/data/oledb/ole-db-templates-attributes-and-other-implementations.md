@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB templates, about OLE DB templates
 - OLE DB templates
 ms.assetid: 0c780c1b-9bba-4788-8c33-8552d9f120ac
-ms.openlocfilehash: 079ec68afe2e538a40920fb2c6524f8d5b8aae89
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 0e6b5dbc97f6a7bea1df342d6a792ea43907ca33
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520634"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039582"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>OLE DB – šablony, atributy a jiné implementace technologie
 
@@ -51,7 +51,7 @@ Knihovna MFC má jednu třídu, [COleDBRecordView](../../mfc/reference/coledbrec
 
 V případech, kdy šablony technologie OLE DB nepodporují funkci OLE DB budete muset použít samotné rozhraní OLE DB. Další informace najdete v tématu [OLE DB referenční informace pro programátory](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming) v sadě Windows SDK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Programování v architektuře OLE DB](../../data/oledb/ole-db-programming.md)<br/>
+[OLE DB – programování](../../data/oledb/ole-db-programming.md)<br/>
 [Přehled programování v architektuře OLE DB](../../data/oledb/ole-db-programming-overview.md)

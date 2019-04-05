@@ -1,5 +1,5 @@
 ---
-title: 'Sada záznamů: Opětovné spuštění dotazu na sadu záznamů (ODBC)'
+title: 'Recordset: Opětovné spuštění dotazu na sadu záznamů (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets, requerying
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ODBC recordsets, requerying
 - refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
-ms.openlocfilehash: b8e7de569a8310fdad0273ae70449d2da544f6e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7edc1c04da617f96165b25a47ce169b266ae0003
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482739"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024592"
 ---
-# <a name="recordset-requerying-a-recordset-odbc"></a>Sada záznamů: Opětovné spuštění dotazu na sadu záznamů (ODBC)
+# <a name="recordset-requerying-a-recordset-odbc"></a>Recordset: Opětovné spuštění dotazu na sadu záznamů (ODBC)
 
 Toto téma platí pro třídy knihovny MFC rozhraní ODBC.
 
@@ -48,15 +48,15 @@ Protože dynamické sady jsou určené k vytvoření sady záznamů s dynamický
 
 Alternativně můžete zavřete a znovu původní sadu záznamů. V obou případech se nová sada záznamů představuje aktuální stav datového zdroje.
 
-Příklad najdete v tématu [zobrazení záznamů: naplnění seznamu druhou sadou záznamů](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).
+Příklad najdete v tématu [zobrazení záznamů: Naplnění seznamu druhou sadou záznamů](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).
 
 > [!TIP]
 >  K optimalizaci `Requery` výkonu, neměňte sady záznamů [filtr](../../data/odbc/recordset-filtering-records-odbc.md) nebo [řazení](../../data/odbc/recordset-sorting-records-odbc.md). Změňte hodnotu parametru pouze před voláním `Requery`.
 
 Pokud `Requery` volání selže, můžete opakovat volání; v opačném případě by měla řádně ukončit aplikaci. Volání `Requery` nebo `Open` může selhat z mnoha důvodů. Pravděpodobně dojde k chybě sítě; nebo během volání, po vydání existující data, ale předtím, než je získat nová data, získat jiný uživatel možná výhradní přístup; nebo v tabulce, na kterém závisí sady záznamů není možné odstranit.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Sada záznamů: Dynamické vazby datových sloupců (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
-[Sada záznamů: Vytváření a uzavírání sad záznamů (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
+[Recordset: Dynamické vazby datových sloupců (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
+[Recordset: Vytváření a uzavírání sad záznamů (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-ms.openlocfilehash: 0b21e94ce3c54c0234dd7883aac3ef5cadbbc009
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2790c3de01d21242daee73fc442ad22d88739355
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677874"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023877"
 ---
 # <a name="rdx"></a>rdx
 
@@ -25,7 +25,7 @@ Vytvoří klíč registru nebo upraví stávající klíč registru.
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*klíč*<br/>
 Název klíče, který má být vytvořen nebo otevřen.
 
 *Název hodnoty*<br/>
@@ -48,8 +48,8 @@ Tento atribut lze použít ve spojení s [coclass](coclass.md), [progid](progid.
 |-|-|
 |**Platí pro**|**Třída** nebo **struktura** člena|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádné|
+|**Vyžadované atributy**|Žádný|
+|**Neplatné atributy**|Žádný|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
@@ -76,7 +76,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [COM – atributy](com-attributes.md)<br/>
 [registration_script](registration-script.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - recordsets [C++], dynasets
 - dynasets
 ms.assetid: 2867e6be-208e-4fe7-8bbe-b8697cb1045c
-ms.openlocfilehash: 66db216b92132638f04627ccf341e2e4ce20e429
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21c47546d14d9a121bdd0698fe96eb133dbc44a0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585689"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040407"
 ---
 # <a name="dynaset"></a>Dynamická sada
 
@@ -71,6 +71,6 @@ Na rozdíl od snímků, které používají udržuje sloužící jako přechodn�
 
 Seznam ovladačů ODBC zahrnuté v této verzi systému Visual C++ a informace o získání dalších ovladačů najdete v tématu [seznam ovladačů ODBC](../../data/odbc/odbc-driver-list.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+[ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)

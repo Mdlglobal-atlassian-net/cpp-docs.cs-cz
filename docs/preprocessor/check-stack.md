@@ -9,12 +9,12 @@ helpviewer_keywords:
 - pragmas, check_stack
 - pragmas, check_stack usage table
 ms.assetid: f18e20cc-9abb-48b7-ad62-8d384875b996
-ms.openlocfilehash: 93ded20bde98cc4e7b0fc15fd8332195d38f2543
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49477a3b39db17047f349e341bd05c04954c964c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451984"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023370"
 ---
 # <a name="checkstack"></a>check_stack
 Instruuje kompilátor, chcete-li vypnout sondy zásobníku, pokud `off` (nebo `-`) je zadán, nebo chcete zapnout sondy zásobníku, pokud `on` (nebo `+`) je zadán.
@@ -36,11 +36,11 @@ Pokud není argument **check_stack –** – Direktiva pragma, kontrolou zásobn
 
 |Syntaxe|Zkompilovaná<br /><br /> /GS – možnost?|Akce|
 |------------|------------------------------------|------------|
-|`#pragma check_stack( )` Nebo<br /><br /> `#pragma check_stack`|Ano|Vypne kontroly zásobníku pro funkce, které následují|
-|`#pragma check_stack( )` Nebo<br /><br /> `#pragma check_stack`|Ne|Zapne kontroly zásobníku pro funkce, které následují|
-|`#pragma check_stack(on)`<br /><br /> Nebo `#pragma check_stack +`|Ano nebo ne|Zapne kontroly zásobníku pro funkce, které následují|
-|`#pragma check_stack(off)`<br /><br /> Nebo `#pragma check_stack -`|Ano nebo ne|Vypne kontroly zásobníku pro funkce, které následují|
+|`#pragma check_stack( )` or<br /><br /> `#pragma check_stack`|Ano|Vypne kontroly zásobníku pro funkce, které následují|
+|`#pragma check_stack( )` or<br /><br /> `#pragma check_stack`|Ne|Zapne kontroly zásobníku pro funkce, které následují|
+|`#pragma check_stack(on)`<br /><br /> or `#pragma check_stack +`|Ano nebo Ne|Zapne kontroly zásobníku pro funkce, které následují|
+|`#pragma check_stack(off)`<br /><br /> or `#pragma check_stack -`|Ano nebo Ne|Vypne kontroly zásobníku pro funkce, které následují|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

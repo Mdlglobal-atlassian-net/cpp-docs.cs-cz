@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: ff2a139c16b6678bedf38c64a16dce28fa53c5fe
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: fab1ba2e496f4945eb56c0a67b833f6bf063404e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425195"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038764"
 ---
 # <a name="ctable-class"></a>CTable – třída
 
@@ -91,7 +91,7 @@ HRESULT Open(const CSession& session,
 *szTableName*<br/>
 [in] Název tabulky, pokud chcete otevřít, je předán jako řetězec ANSI.
 
-*dbid*<br/>
+*DBID*<br/>
 [in] `DBID` Tabulky otevřete.
 
 *pPropSet*<br/>
@@ -108,7 +108,7 @@ Standardní HRESULT.
 
 Další podrobnosti najdete v tématu [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) v *OLE DB referenční informace pro programátory*.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

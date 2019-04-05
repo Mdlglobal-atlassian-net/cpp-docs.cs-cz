@@ -5,12 +5,12 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: e189ead864fe2be6e0ccb3bc76a58f2441740076
-ms.sourcegitcommit: a901c4acbfc80ca10663d37c09921f04c5b6dd17
+ms.openlocfilehash: ee2b6097a62a8f1030dc631354f96ec7a33d2f11
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58142557"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039394"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Upozornění kompilátoru, které jsou ve výchozím nastavení vypnuta
 
@@ -28,7 +28,7 @@ Můžete povolit upozornění, která jsou obvykle vypnuto ve výchozím nastave
 
    Zadané upozornění (*warning_number*) je na zadané úrovni povoleno (*warning_level*).
 
-- [/ Wall](../build/reference/compiler-option-warning-level.md)
+- [/Wall](../build/reference/compiler-option-warning-level.md)
 
    `/Wall` Povolí všechna upozornění, které jsou ve výchozím nastavení vypnuta. Pokud použijete tuto možnost, můžete vypnout jednotlivých upozornění pomocí [/wd](../build/reference/compiler-option-warning-level.md) možnost.
 
@@ -178,6 +178,6 @@ Toto upozornění je vypnuto ve výchozím nastavení ve verzích kompilátoru p
 |-|-|
 |[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) (úroveň 4)|chybějící specifikátor typu: předpokládá se int Poznámka: C už nepodporuje typ default int.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[warning](../preprocessor/warning.md)
+[upozornění](../preprocessor/warning.md)

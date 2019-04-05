@@ -10,12 +10,12 @@ helpviewer_keywords:
 - recordsets [C++], transactions
 - ODBC recordsets [C++], transactions
 ms.assetid: a2ec0995-2029-45f2-8092-6efd6f2a77f4
-ms.openlocfilehash: 0deb21a43ff17ca94efe29bdec37db7611331a86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a151ec5ca2b4bdc19bfa7dc626aebda0740a2c9e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615810"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023667"
 ---
 # <a name="transaction-odbc"></a>Transakce (ODBC)
 
@@ -29,7 +29,7 @@ Transakce je způsob, jak seskupit nebo dávka, řadu aktualizací služby [zdro
 Volání `AddNew` a `Edit` členské funkce `CRecordset` ovlivní zdroj dat okamžitě při volání objektu `Update`. `Delete` volání také projeví okamžitě. Naproti tomu můžete použít transakci, který se skládá z více volání `AddNew`, `Edit`, `Update`, a `Delete`, které jsou prováděny, ale nikoli potvrdit až do okamžiku volání `CommitTrans` explicitně. Tím, že transakce, můžete provést řadu těchto volání při zachování možnost vrátit zpět změny. Pokud kritické prostředek není dostupný nebo některých jiných podmínek brání celá transakce nebránily dokončení, můžete místo jeho potvrzení transakce vrátit zpět. V takovém případě žádná ze změn, které patří k transakci ovlivní zdroj dat.
 
 > [!NOTE]
->  V současné době třídy `CRecordset` nepodporuje aktualizace ke zdroji dat, pokud jste implementovali hromadné načítání řádků. To znamená, že nemůžete provádět volání `AddNew`, `Edit`, `Delete`, nebo `Update`. Můžete je ale napsat vlastní funkce pro provádění aktualizací a potom volání těchto funkcí v rámci dané transakce. Další informace o hromadném načítání řádků naleznete v tématu [sada záznamů: načítání hromadné záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  V současné době třídy `CRecordset` nepodporuje aktualizace ke zdroji dat, pokud jste implementovali hromadné načítání řádků. To znamená, že nemůžete provádět volání `AddNew`, `Edit`, `Delete`, nebo `Update`. Můžete je ale napsat vlastní funkce pro provádění aktualizací a potom volání těchto funkcí v rámci dané transakce. Další informace o hromadném načítání řádků naleznete v tématu [sada záznamů: Načítání záznamů (ODBC) hromadné](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 > [!NOTE]
 >  Kromě by to ovlivnilo sady záznamů, transakce ovlivňují příkazy SQL, které můžete provést přímo za předpokladu, použijte rozhraní ODBC **HDBC** přidružené k vaší `CDatabase` objektu nebo ODBC **HSTMT** na základě který **HDBC**.
@@ -43,10 +43,10 @@ V databázové třídy provádět transakce prostřednictvím `CDatabase` objekt
 
 Další informace o tom, jak se transakce provádějí v následujících tématech:
 
-- [Transakce: Provádění transakcí v sadě záznamů (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
+- [Transakce: Provádění transakcí v sadě záznamů (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
 
 - [Transakce: Vliv transakcí na aktualizace (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+[ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)

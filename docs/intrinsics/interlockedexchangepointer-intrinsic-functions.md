@@ -1,5 +1,5 @@
 ---
-title: Vnitřní funkce _InterlockedExchangePointer
+title: _InterlockedExchangePointer Intrinsic Functions
 ms.date: 12/17/2018
 f1_keywords:
 - _InterlockedExchangePointer_cpp
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - InterlockedExchangePointer_acq intrinsic
 - InterlockedExchangePointer intrinsic
 ms.assetid: 0eaca0b0-d79e-406b-892d-b3b462c50bbb
-ms.openlocfilehash: 021c754436d6abe877e6b7dd372ba235869d8975
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 1f6e66ae4d5524518c3388f5af843cc15f65da50
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627440"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024527"
 ---
-# <a name="interlockedexchangepointer-intrinsic-functions"></a>Vnitřní funkce _InterlockedExchangePointer
+# <a name="interlockedexchangepointer-intrinsic-functions"></a>_InterlockedExchangePointer Intrinsic Functions
 
 **Specifické pro Microsoft**
 
@@ -64,10 +64,10 @@ void * _InterlockedExchangePointer_HLERelease(
 
 #### <a name="parameters"></a>Parametry
 
-*Cíl*<br/>
+*Target*<br/>
 [out v] Ukazatel na ukazatel na hodnotu k exchangi. Funkce nastaví hodnotu `Value` a vrátí původní hodnotu.
 
-*Hodnota*<br/>
+*Value*<br/>
 [in] Hodnota mají vyměnit s hodnotou odkazované `Target`.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -78,9 +78,9 @@ Funkce vrátí počáteční hodnotu, na které odkazuje `Target`.
 
 |Vnitřní|Architektura|Záhlaví|
 |---------------|------------------|------------|
-|`_InterlockedExchangePointer`|x86, ARM, x64|\<intrin.h >|
-|`_InterlockedExchangePointer_acq`, `_InterlockedExchangePointer_rel`, `_InterlockedExchangePointer_nf`|ARM|\<intrin.h >|
-|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|x64 s podporou HLE|\<immintrin.h >|
+|`_InterlockedExchangePointer`|x86, ARM, x64|\<intrin.h>|
+|`_InterlockedExchangePointer_acq`, `_InterlockedExchangePointer_rel`, `_InterlockedExchangePointer_nf`|ARM|\<intrin.h>|
+|`_InterlockedExchangePointer_HLEAcquire`,  `_InterlockedExchangePointer_HLERelease`|x64 s podporou HLE|\<immintrin.h>|
 
 Na x86 architektury, `_InterlockedExchangePointer` je makro, které volá `_InterlockedExchange`.
 
@@ -94,9 +94,9 @@ Na platformách Intel, které podporují pokyny Elize zámek hardwaru (HLE), vni
 
 Tyto rutiny jsou dostupné jenom jako vnitřní funkce.
 
-**Specifické pro END Microsoft**
+**END Specifické pro Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
 [Konflikty s kompilátorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

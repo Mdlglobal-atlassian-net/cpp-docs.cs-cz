@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: 4ed283b9be2afdacfbc93c647c7633fb7802e7fd
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: f5ae9880719a3a8b799ea8deb751b6f0a85542bd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328399"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041121"
 ---
 # <a name="accelerator-editor-c"></a>Editor akcelerátorů (C++)
 
@@ -69,10 +69,10 @@ Každý akcelerátor **ID** má tři vlastnosti: **Modifikátor**, **klíč**, a
 
 Následují platné položky **modifikátor** vlastnost v tabulce akcelerátorů:
 
-   |Hodnota|Popis|
+   |Value|Popis|
    |-----------|-----------------|
    |**Žádné**|Jakmile uživatel stiskne pouze **klíč** hodnotu.<br/><br/>Tato hodnota se nejefektivněji používá s hodnotami standardu ASCII a ANSI 001 prostřednictvím 026, což je interpretován jako ^ A až ^ Z (**Ctrl + A** prostřednictvím **Ctrl + Z**).|
-   |**ALT**|Uživatel musí stisknout klávesu **Alt** před **klíč** hodnotu.|
+   |**Alt**|Uživatel musí stisknout klávesu **Alt** před **klíč** hodnotu.|
    |**Ctrl**|Uživatel musí stisknout klávesu **Ctrl** před **klíč** hodnota není platná s typem ASCII.|
    |**SHIFT**|Uživatel musí stisknout klávesu **Shift** před **klíč** hodnotu.|
    |**Ctrl+Alt**|Uživatel musí stisknout klávesu **Ctrl** a **Alt** před **klíč** hodnota není platná s typem ASCII.|
@@ -84,7 +84,7 @@ Následují platné položky **modifikátor** vlastnost v tabulce akcelerátorů
 
 Následují platné položky **klíč** vlastnost v tabulce akcelerátorů:
 
-   |Hodnota|Popis|
+   |Value|Popis|
    |-----------|-----------------|
    |Celé číslo mezi 0 a 255 ve formátu desetinného čísla.|Hodnota určuje, zda hodnota je považován za ASCII a ANSI následujícím způsobem:<br/><br/>   -Jednociferné čísla jsou vždy interpretováno jako odpovídajícího klíče, nikoli jako hodnot ASCII a ANSI.<br/>   -Hodnoty 1 až 26, když párový příkaz nulami, jsou interpretovány jako ^ A až ^ Z, která představuje hodnotu ASCII písmena abecedy při stisknutí klávesy **Ctrl** klávesa stisknuta.<br/>   -Hodnoty z 27. až 32 jsou vždy interpretován jako trojmístný desetinné hodnoty 027 prostřednictvím 032.<br/>   -Hodnot z 033 až 255, ať už před uživatele 0 nebo nejsou vyhodnocena jako hodnoty ANSI.|
    |Klávesnice jeden znak.|Velká písmena A – Z nebo čísla 0 – 9 může být ASCII nebo virtuální hodnoty klíče. Jakýkoli jiný znak ASCII je pouze.|
@@ -190,7 +190,7 @@ Použití standardních stránkách vlastností najdete v níže uvedených post
 
 Win32
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Editory prostředků](../windows/resource-editors.md)<br/>
 [Klávesy akcelerátoru](../windows/predefined-accelerator-keys.md)<br/>

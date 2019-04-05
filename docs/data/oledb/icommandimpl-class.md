@@ -52,12 +52,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: e1f461cc850a2122af7902babfad8f1e14ac3e33
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d890b62e4e4aabb9f8ca7ebb9d3051c53febd91f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424844"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026789"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl – třída
 
@@ -88,12 +88,12 @@ Příkaz rozhraní. Výchozí hodnota je `ICommand`.
 
 |||
 |-|-|
-|[Zrušení](#cancel)|Zruší aktuální provedení příkazu.|
-|[CancelExecution](#cancelexecution)|Zruší aktuální provedení příkazu.|
+|[Zrušit](#cancel)|Zruší aktuální provedení příkazu.|
+|[Cancelexecution –](#cancelexecution)|Zruší aktuální provedení příkazu.|
 |[CreateRowset](#createrowset)|Vytvoří objekt sady řádků.|
-|[Execute](#execute)|Vykoná příkaz.|
+|[Spuštění](#execute)|Vykoná příkaz.|
 |[GetDBSession](#getdbsession)|Vrátí ukazatel rozhraní na relaci, která vytvoří příkaz.|
-|[ICommandImpl](#icommandimpl)|Konstruktor|
+|[Icommandimpl –](#icommandimpl)|Konstruktor|
 
 ### <a name="data-members"></a>Datové členy
 
@@ -275,7 +275,7 @@ unsigned m_bIsExecuting:1;
 
 `Execute` Metoda třídy příkazu můžete tuto proměnnou nastavit na **true**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

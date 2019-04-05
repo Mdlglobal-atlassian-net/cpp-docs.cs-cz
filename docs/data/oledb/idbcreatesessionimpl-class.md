@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IDBCreateSessionImpl class
 - CreateSession method
 ms.assetid: 48c02c5c-8362-45ac-af8e-bb119cf8c5c7
-ms.openlocfilehash: 36f5a359051dbd5035a73514f84fb2c61ff13176
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ae59abc542a4599d289c099801fc34d56b2b13d4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412923"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028532"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl – třída
 
@@ -71,7 +71,7 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
 
 Zobrazit [IDBCreateSession::CreateSession](/previous-versions/windows/desktop/ms714942(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

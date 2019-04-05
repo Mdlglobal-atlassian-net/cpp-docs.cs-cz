@@ -91,12 +91,12 @@ helpviewer_keywords:
 - m_iRowset
 - m_rgRowHandles
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-ms.openlocfilehash: d7d7797e0e1ac69ef114a251fbcee9fbe29cd7e9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 47b03a542933c6223e098bc9d8fa8d45bf5e047b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420892"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024449"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl – třída
 
@@ -147,7 +147,7 @@ Jednotky úložiště pro všechny popisovačů řádků uchovávat zprostředko
 |[IRowsetImpl](#irowsetimpl)|Konstruktor Nebyla volána přímo uživatelem.|
 |[RefRows](#refrows)|Volané [addrefrows –](../../data/oledb/irowsetimpl-addrefrows.md) a [releaserows –](../../data/oledb/irowsetimpl-releaserows.md). Nebyla volána přímo uživatelem.|
 |[ReleaseRows](#releaserows)|Verze řádků.|
-|[RestartPosition](#restartposition)|Přemístí pozici na počáteční pozici; To znamená vytvořit svůj postoj při první sadu řádků.|
+|[Volání metody RestartPosition](#restartposition)|Přemístí pozici na počáteční pozici; To znamená vytvořit svůj postoj při první sadu řádků.|
 |[SetDBStatus](#setdbstatus)|Nastaví stav příznaky pro zadané pole.|
 
 ### <a name="data-members"></a>Datové členy
@@ -198,7 +198,7 @@ HRESULT CreateRow(DBROWOFFSET lRowsOffset,
 *lRowsOffset*<br/>
 Pozice kurzoru řádku, který vytváří.
 
-*cRowsObtained*<br/>
+*získaná hodnota cRowsObtained*<br/>
 Odkaz se předá zpět do uživatele udávající počet řádků, které vytvořili.
 
 *rgRows*<br/>
@@ -250,7 +250,7 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
 *currentRow*<br/>
 [in] Na aktuálním řádku.
 
-*columnNames*<br/>
+*názvy sloupců*<br/>
 [in] Sloupec, pro který je požadovaný stav.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -367,7 +367,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
 *currentRow*<br/>
 Na aktuálním řádku.
 
-*columnInfo*<br/>
+*Vlastnost columnInfo*<br/>
 Sloupec, pro který je nastaven stav.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -444,7 +444,7 @@ MapClass m_rgRowHandles;
 
 Popisovačů řádků se odeberou voláním `ReleaseRows`. Zobrazit [IRowsetImpl – přehled](../../data/oledb/irowsetimpl-class.md) pro definici *MapClass*.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

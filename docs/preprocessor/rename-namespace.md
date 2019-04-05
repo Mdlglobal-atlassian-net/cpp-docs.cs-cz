@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - rename_namespace attribute
 ms.assetid: 45006d2b-36cd-4bec-98b9-3b8ec45299e3
-ms.openlocfilehash: 6521fe0a5bfbe482bf2aed8f5a32221abdc6d6d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b3917a7114ca44d092f10a7831bb35bc64e9387
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531592"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039870"
 ---
 # <a name="renamenamespace"></a>rename_namespace
 
@@ -38,7 +38,7 @@ Chcete-li odebrat obor názvů, použijte [no_namespace](../preprocessor/no-name
 
 **Specifické pro END C++**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import – atributy](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

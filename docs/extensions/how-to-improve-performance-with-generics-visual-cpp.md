@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++, generics
 - generics [C++], performance
 ms.assetid: f14a175b-301f-46cc-86e4-c82d35f9aa3e
-ms.openlocfilehash: e2a038790c1605b97f144684ac2e8b6e731ef2d8
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 958da08716022bedaa8d0fe217814fa2bd86c065
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786716"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038781"
 ---
 # <a name="how-to-improve-performance-with-generics-ccli"></a>Postupy: Zlepšení výkonu pomocí obecných typů (C + +/ CLI)
 
@@ -124,6 +124,6 @@ int main()
 14
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Obecné typy](generics-cpp-component-extensions.md)

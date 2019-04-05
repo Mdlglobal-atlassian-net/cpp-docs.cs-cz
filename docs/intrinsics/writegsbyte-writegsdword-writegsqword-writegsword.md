@@ -12,12 +12,12 @@ helpviewer_keywords:
 - __writegsword intrinsic
 - __writegsdword intrinsic
 ms.assetid: 7746cf6d-2259-4139-9aab-c07dd75c8037
-ms.openlocfilehash: 9276c727d93491e3d85cbae26f6b3df9c0384c59
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: dbd3fff75107ae61f7680dee84b72ff3153bfa8e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220241"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041429"
 ---
 # <a name="writegsbyte-writegsdword-writegsqword-writegsword"></a>__writegsbyte, __writegsdword, __writegsqword, __writegsword
 
@@ -69,9 +69,9 @@ void __writegsqword(
 
 Tyto rutiny jsou dostupné jenom jako vnitřní.
 
-**Specifické pro END Microsoft**
+**END Specifické pro Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)<br/>
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

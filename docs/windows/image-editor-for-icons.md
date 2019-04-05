@@ -42,12 +42,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 22fe458a72d970bb09687a53232f94b171e14a45
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: dd7da76d3df68fa63c87f64610524accfd4302ef
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328425"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041546"
 ---
 # <a name="image-editor-for-icons-c"></a>Editor obrázků pro ikony (C++)
 
@@ -145,7 +145,7 @@ Chcete-li získat přístup k tomuto dialogovému oknu, vyberte **písmo** tlač
 |**Styl písma**|Zobrazí seznam dostupných stylů pro zadaný font.|
 |**Velikost**|Umožňuje zobrazit seznam velikostí bod k dispozici pro zadaný font.|
 |**Ukázka**|Zobrazuje ukázku toho, jak se text zobrazí s nastavením zadaný font.|
-|**skript**|Zobrazí seznam dostupný jazyk skriptů pro zadaný font.<br/><br/>Když vyberete jiný jazyk skriptu, znaková sada, bude k dispozici pro vytvoření vícejazyčné dokumenty jazyka.|
+|**Skript**|Zobrazí seznam dostupný jazyk skriptů pro zadaný font.<br/><br/>Když vyberete jiný jazyk skriptu, znaková sada, bude k dispozici pro vytvoření vícejazyčné dokumenty jazyka.|
 
 #### <a name="to-change-the-font-of-text-on-an-image"></a>Změna písma textu obrázku
 
@@ -217,7 +217,7 @@ Pro všechny **Editor obrázků** podoken s faktor zvětšení 4 nebo vyšší, 
 
 Žádné
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Editory prostředků](../windows/resource-editors.md)<br/>
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - once pragma
 - pragmas, once
 ms.assetid: c7517556-6403-4b16-8898-f2aa0a6f685f
-ms.openlocfilehash: 3adb7ab30b445ab3223246d247be006d24475afa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6061fe77960aa64e2dcb39db05897ef0e7fb5f2e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534599"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039874"
 ---
 # <a name="once"></a>once
 Určuje, že soubor bude pomocí kompilátoru při kompilaci souboru zdrojového kódu obsažen (otevřen) pouze jednou.
@@ -54,6 +54,6 @@ Doporučujeme, abyste `#include guard` idiom, když kód musí být nepřenosite
 
 Dejte pozor, abyste pomocí `#pragma once` nebo `#include guard` idiom v souborech hlaviček, které jsou určeny mají být zahrnuty více než jednou, pomocí symboly preprocesoru řídit jejich důsledky. Příklad tohoto návrhu, najdete v článku \<assert.h > soubor hlaviček. Také být opatrní při správě zahrnout cesty do Vyhněte se vytváření více cest k zahrnuté soubory, které, aby zhatila více obsahoval optimalizace, které pro obě `#include guard`s a `#pragma once`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Sada záznamů: Posouvání (ODBC)'
+title: 'Recordset: Posouvání (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets [C++], end of
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - scrolling [C++], recordsets
 - Move method (recordsets)
 ms.assetid: f38d2dcb-1e88-4e41-af25-98b00c276be4
-ms.openlocfilehash: e41b526b86922bafd1d923fa5848a5ef8ed4825e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5df8151664bd7e726087cb5323c1e4622264ad23
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579590"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040053"
 ---
-# <a name="recordset-scrolling-odbc"></a>Sada záznamů: Posouvání (ODBC)
+# <a name="recordset-scrolling-odbc"></a>Recordset: Posouvání (ODBC)
 
 Toto téma platí pro třídy knihovny MFC rozhraní ODBC.
 
@@ -32,7 +32,7 @@ Toto téma vysvětluje:
 
 ##  <a name="_core_scrolling_from_one_record_to_another"></a> Posunutí z jednoho záznamu
 
-Třída `CRecordset` poskytuje `Move` členské funkce pro posouvání v rámci sady záznamů. Tyto funkce přesunout aktuální záznam sady řádků. Pokud jste implementovali hromadné načítání řádků, `Move` operace přemístí sadu záznamů na velikosti dané sadě řádků. Pokud jste neimplementovali hromadné načítání, volání řádků `Move` funkce přemístí záznamů podle jednoho záznamu pokaždé, když. Další informace o hromadném načítání řádků naleznete v tématu [sada záznamů: načítání hromadné záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Třída `CRecordset` poskytuje `Move` členské funkce pro posouvání v rámci sady záznamů. Tyto funkce přesunout aktuální záznam sady řádků. Pokud jste implementovali hromadné načítání řádků, `Move` operace přemístí sadu záznamů na velikosti dané sadě řádků. Pokud jste neimplementovali hromadné načítání, volání řádků `Move` funkce přemístí záznamů podle jednoho záznamu pokaždé, když. Další informace o hromadném načítání řádků naleznete v tématu [sada záznamů: Načítání záznamů (ODBC) hromadné](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 > [!NOTE]
 >  Při procházení záznamů, nemusí být přeskočeny odstraněné záznamy. Další informace najdete v tématu [IsDeleted](../../mfc/reference/crecordset-class.md#isdeleted) členskou funkci.
@@ -89,7 +89,7 @@ rsCustSet.MoveFirst( );
 
 `IsEOF` vrací nenulovou hodnotu, pokud sada záznamů je umístěn za poslední záznam. `IsBOF` vrací nenulovou hodnotu, pokud sada záznamů je umístěn před první záznam (před všechny záznamy). V obou případech neexistuje aktuální záznam se má operace provést. Při volání `MovePrev` při `IsBOF` je již hodnotu TRUE nebo volání `MoveNext` při `IsEOF` už je hodnota TRUE, rozhraní vyvolá `CDBException`. Můžete také použít `IsBOF` a `IsEOF` ke kontrole prázdnou sadu záznamů.
 
-Další informace o navigaci v sadě záznamů najdete v tématu [sada záznamů: záložky a absolutní pozice (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
+Další informace o navigaci v sadě záznamů najdete v tématu [sada záznamů: Záložky a absolutní umístění (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
 
 ##  <a name="_core_when_scrolling_is_supported"></a> Když se podporuje posouvání.
 
@@ -101,9 +101,9 @@ Jako původně navržený SQL k dispozici posouváním pouze vpřed, ale ODBC ro
 > [!NOTE]
 >  Na rozdíl od tříd DAO knihovny MFC, třídy knihovny MFC rozhraní ODBC se neposkytuje sadu `Find` funkce pro vyhledání záznam další (nebo staršího), splňující zadaná kritéria.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [CRecordset::CanScroll](../../mfc/reference/crecordset-class.md#canscroll)<br/>
 [CRecordset::CheckRowsetError](../../mfc/reference/crecordset-class.md#checkrowseterror)<br/>
-[Sada záznamů: Filtrování záznamů (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
+[Recordset: Filtrování záznamů (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)

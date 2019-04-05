@@ -44,12 +44,12 @@ helpviewer_keywords:
 - GetErrorParameters method
 - GetErrorRecords method
 ms.assetid: 9a5c18a2-ee3e-40f5-ab4c-581288d7f737
-ms.openlocfilehash: 9a047263022c45ddc2fcb98dc618a4c6075bfd75
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: bc13137a4222ba51cf3745f9706353d48068a072
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58778348"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021537"
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo – třída
 
@@ -73,7 +73,7 @@ class CDBErrorInfo
 |-|-|
 |[GetAllErrorInfo](#getallerrorinfo)|Vrátí všechny informace o chybě obsažené v záznamu o chybě.|
 |[GetBasicErrorInfo](#getbasicerrorinfo)|Volání [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) vrátit základní informace o zadané chybě.|
-|[GetCustomErrorObject](#getcustomerrorobject)|Volání [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) k vrací ukazatel rozhraní na objekt vlastních chyb.|
+|[Getcustomerrorobject –](#getcustomerrorobject)|Volání [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) k vrací ukazatel rozhraní na objekt vlastních chyb.|
 |[GetErrorInfo](#geterrorinfo)|Volání [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) se vraťte `IErrorInfo` ukazatel rozhraní na zadaný záznam.|
 |[Geterrorparameters –](#geterrorparameters)|Volání [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) vrátit parametry chyby.|
 |[GetErrorRecords](#geterrorrecords)|Získá záznamy o chybách pro zadaný objekt.|
@@ -241,7 +241,7 @@ Standardní HRESULT.
 
 Pokud chcete zkontrolovat získat informace o chybě, ze které rozhraní, použijte formuláři první funkce. V opačném případě použijte druhý formulář.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
