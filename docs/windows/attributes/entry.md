@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - entry attribute
 ms.assetid: ba4843e3-d7ad-4b86-9a15-0b4192f0f698
-ms.openlocfilehash: b6c34a603f3ba8abaf070759a22ddf2b8e9c2106
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 703a55ee7c56b64a5b168016770508508bab09e0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663252"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036299"
 ---
 # <a name="entry"></a>entry
 
@@ -42,13 +42,13 @@ Podívejte se na příklad pro [možnost idl_module](idl-module.md) pro příkla
 
 |||
 |-|-|
-|**Platí pro**|`idl_module` Atribut|
+|**Platí pro**|`idl_module`  – atribut|
 |**Opakovatelné**|Ne|
 |**Vyžadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IDL – atributy](idl-attributes.md)

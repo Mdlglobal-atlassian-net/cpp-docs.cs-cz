@@ -5,12 +5,12 @@ helpviewer_keywords:
 - union attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-ms.openlocfilehash: 289935c3651535b5f935624dc33246fbe83a4ceb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b56ada13a0c597866d538991ed1e83078924ac9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631059"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029580"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Atributy klíčových slov typedef, enum, union a struct
 
@@ -21,7 +21,7 @@ Následující atributy se vztahují na [typedef](../../cpp/aliases-and-typedefs
 |Atribut|Popis|
 |---------------|-----------------|
 |[case](case-cpp.md)|Použít s [switch_type –](switch-type.md) atribut **sjednocení**.|
-|[custom](custom-cpp.md)|Umožňuje definovat vlastní atribut.|
+|[vlastní](custom-cpp.md)|Umožňuje definovat vlastní atribut.|
 |[export](export.md)|Způsobí, že datová struktura budou umístěny v souboru IDL.|
 |[first_is](first-is.md)|Určuje index první prvek pole předávají.|
 |[helpcontext](helpcontext.md)|Určuje ID kontextu, který umožňuje uživateli zobrazit informace o tomto prvku v souboru nápovědy.|
@@ -40,7 +40,7 @@ Následující atributy se vztahují na [typedef](../../cpp/aliases-and-typedefs
 
 |Atribut|Popis|
 |---------------|-----------------|
-|[custom](custom-cpp.md)|Umožňuje definovat vlastní atribut.|
+|[vlastní](custom-cpp.md)|Umožňuje definovat vlastní atribut.|
 |[export](export.md)|Způsobí, že datová struktura budou umístěny v souboru IDL.|
 |[uuid](uuid-cpp-attributes.md)|Určuje jedinečné ID pro třídu nebo rozhraní.|
 |[v1_enum](v1-enum.md)|Určí, že zadaný výčtového typu předávají jako 32-bit entity, spíše než výchozí 16 bitů.|
@@ -49,7 +49,7 @@ Následující atributy se vztahují na [typedef](../../cpp/aliases-and-typedefs
 
 |Atribut|Popis|
 |---------------|-----------------|
-|[custom](custom-cpp.md)|Umožňuje definovat vlastní atribut.|
+|[vlastní](custom-cpp.md)|Umožňuje definovat vlastní atribut.|
 |[export](export.md)|Způsobí, že datová struktura budou umístěny v souboru IDL.|
 |[first_is](first-is.md)|Určuje index první prvek pole předávají.|
 |[last_is](last-is.md)|Určuje index posledního prvku pole předávají.|
@@ -75,8 +75,8 @@ Následující atributy se vztahují na [typedef](../../cpp/aliases-and-typedefs
 |[appobject](appobject.md)|Identifikuje coclass jako objekt aplikace, který je přidružen k aplikaci úplné .exe a označuje, že funkce a vlastnosti třídy typu coclass jsou globálně k dispozici v této knihovně typů.|
 |[coclass](coclass.md)|Vytvoří ovládací prvek ActiveX.|
 |[com_interface_entry](com-interface-entry-cpp.md)|Přidá položku do rozhraní COM mapy.|
-|[control](control.md)|Určuje, jestli je typ uživatelského ovládacího prvku.|
-|[custom](custom-cpp.md)|Umožňuje definovat vlastní atribut.|
+|[ – ovládací prvek](control.md)|Určuje, jestli je typ uživatelského ovládacího prvku.|
+|[vlastní](custom-cpp.md)|Umožňuje definovat vlastní atribut.|
 |[db_column](db-column.md)|Zadaný sloupec se váže k dané sadě řádků.|
 |[db_command](db-command.md)|Vytvoří příkaz OLE DB.|
 |[db_param](db-param.md)|Přidruží zadaný členskou proměnnou vstupní nebo výstupní parametr a odděluje citaci proměnné.|
@@ -99,9 +99,9 @@ Následující atributy se vztahují na [typedef](../../cpp/aliases-and-typedefs
 |[threading](threading-cpp.md)|Určuje model vláken pro objekt modelu COM.|
 |[unique](unique-cpp.md)|Určuje jedinečný ukazatel.|
 |[uuid](uuid-cpp-attributes.md)|Určuje jedinečné ID pro třídu nebo rozhraní.|
-|[version](version-cpp.md)|Určuje konkrétní verzi napříč několika verzemi třídu.|
+|[verze](version-cpp.md)|Určuje konkrétní verzi napříč několika verzemi třídu.|
 |[vi_progid](vi-progid.md)|Určuje verzi nezávislé formu ProgID.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Atributy podle použití](attributes-by-usage.md)

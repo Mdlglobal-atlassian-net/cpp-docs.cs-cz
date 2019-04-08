@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-ms.openlocfilehash: a0e3ffbd4bce156ea4bf04e1524d2e778d24de79
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 26bfc3bb9892486353f55a71cfd86a17f2de98b5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786568"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033090"
 ---
 # <a name="event--ccli-and-ccx"></a>události (C + +/ CLI a C + +/ CX)
 
@@ -40,19 +40,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parametry
 
-*modifier*<br/>
+* – modifikátor*<br/>
 Modifikátor, který lze použít v deklaraci události nebo metodu přistupujícího objektu události.  Možné hodnoty jsou **statické** a **virtuální**.
 
-*delegate*<br/>
+*delegát*<br/>
 [Delegovat](delegate-cpp-component-extensions.md), jehož předpis obslužná rutina události se musí shodovat.
 
 *EVENT_NAME*<br/>
 Název události
 
-*return_value*<br/>
+*return_ value*<br/>
 Na návratový typ metody přistupujícího objektu události.  Chcete-li ověřit, návratový typ musí být **void**.
 
-*parameters*<br/>
+*parametry*<br/>
 (volitelné) Parametry pro `raise` metodu, která odpovídá podpisu *delegovat* parametru.
 
 ### <a name="remarks"></a>Poznámky
@@ -104,19 +104,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parametry
 
-*modifier*<br/>
+* – modifikátor*<br/>
 Modifikátor, který lze použít v deklaraci události nebo metodu přistupujícího objektu události.  Možné hodnoty jsou **statické** a **virtuální**.
 
-*delegate*<br/>
+*delegát*<br/>
 [Delegovat](delegate-cpp-component-extensions.md), jehož předpis obslužná rutina události se musí shodovat.
 
 *EVENT_NAME*<br/>
 Název události
 
-*return_value*<br/>
+*return_ value*<br/>
 Na návratový typ metody přistupujícího objektu události.  Chcete-li ověřit, návratový typ musí být **void**.
 
-*parameters*<br/>
+*parametry*<br/>
 (volitelné) Parametry pro `raise` metodu, která odpovídá podpisu *delegovat* parametru.
 
 ### <a name="remarks"></a>Poznámky
@@ -270,6 +270,6 @@ int main() {
 688
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)

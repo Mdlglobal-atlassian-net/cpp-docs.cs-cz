@@ -1,5 +1,5 @@
 ---
-title: 'Sada záznamů: Další informace o aktualizacích (ODBC)'
+title: 'Recordset: Informace o aktualizacích (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records, updating
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 0353a742-d226-4fe2-8881-a7daeffe86cd
-ms.openlocfilehash: b34f6f51c6ff3a0995f4cf6044ddd7949644f42c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c29ff110fc507c4e449b2f3d082d98c159a35107
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665293"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040765"
 ---
-# <a name="recordset-more-about-updates-odbc"></a>Sada záznamů: Další informace o aktualizacích (ODBC)
+# <a name="recordset-more-about-updates-odbc"></a>Recordset: Informace o aktualizacích (ODBC)
 
 Toto téma platí pro třídy knihovny MFC rozhraní ODBC.
 
@@ -30,7 +30,7 @@ Toto téma vysvětluje:
 - [Další informace o členské funkce Update a Delete](#_core_more_about_update_and_delete).
 
 > [!NOTE]
->  Toto téma se vztahuje na objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud jste implementovali hromadné načítání řádků, některé informace se nevztahují. Například nelze volat `AddNew`, `Edit`, `Delete`, a `Update` členské funkce; však může provádět transakce. Další informace o hromadném načítání řádků naleznete v tématu [sada záznamů: načítání hromadné záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Toto téma se vztahuje na objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud jste implementovali hromadné načítání řádků, některé informace se nevztahují. Například nelze volat `AddNew`, `Edit`, `Delete`, a `Update` členské funkce; však může provádět transakce. Další informace o hromadném načítání řádků naleznete v tématu [sada záznamů: Načítání záznamů (ODBC) hromadné](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_how_other_operations_affect_updates"></a> Vliv na ostatní operace aktualizace
 
@@ -53,7 +53,7 @@ Pokud zavřete sadě záznamů nebo jeho přidružené `CDatabase` objektu s tra
 
 ###  <a name="_core_how_scrolling_affects_updates"></a> Posouvání vliv aktualizace
 
-Pokud jste [sada záznamů: posouvání (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) v sadě záznamů vyrovnávací paměť pro úpravu zaplněný s každým novým záznamem (předchozí záznam není uložen). Posouvání přeskakuje dříve odstraněné záznamy. Pokud se posunete za `AddNew` nebo `Edit` volání bez volání `Update`, `CommitTrans`, nebo `Rollback` nejprve, všechny změny budou ztraceny (bez upozornění) jako nový záznam přenese do vyrovnávací paměti pro úpravy. Vyrovnávací paměť pro úpravu je vyplněn záznam přechod na uložený záznam je uvolněn a nedošlo k žádné změně ve zdroji dat. To platí pro obě `AddNew` a `Edit`.
+Pokud jste [sada záznamů: Posouvání (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) v sadě záznamů vyrovnávací paměť pro úpravu zaplněný s každým novým záznamem (předchozí záznam není uložen). Posouvání přeskakuje dříve odstraněné záznamy. Pokud se posunete za `AddNew` nebo `Edit` volání bez volání `Update`, `CommitTrans`, nebo `Rollback` nejprve, všechny změny budou ztraceny (bez upozornění) jako nový záznam přenese do vyrovnávací paměti pro úpravy. Vyrovnávací paměť pro úpravu je vyplněn záznam přechod na uložený záznam je uvolněn a nedošlo k žádné změně ve zdroji dat. To platí pro obě `AddNew` a `Edit`.
 
 ##  <a name="_core_your_updates_and_the_updates_of_other_users"></a> Vaše aktualizace a aktualizace jiných uživatelů
 
@@ -94,7 +94,7 @@ Na `Update` nebo `Delete` operace, je třeba aktualizovat jenom jeden záznam. T
 
 - AFX_SQL_ERROR_NO_ROWS_AFFECTED
 
-- AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED, KTERÁ
+- AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED
 
 Při vyvolání těchto výjimek, zůstanou v `AddNew` nebo `Edit` stavu byly jste volali `Update` nebo `Delete`. Tady jsou nejběžnějších scénářů, ve kterých uvidíte tyto výjimky. Budete nejpravděpodobněji naleznete v tématu:
 
@@ -102,10 +102,10 @@ Při vyvolání těchto výjimek, zůstanou v `AddNew` nebo `Edit` stavu byly js
 
 - Při aktualizaci tabulky AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED, která nemá primární klíč nebo jedinečný index a nemáte dostatek sloupců v sadě záznamů k jedinečné identifikaci řádků tabulky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Sada záznamů: Jak sady záznamů vybírají záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
-[Výměna polí záznamu (Record Field Exchange – RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
+[Recordset: Jak sady záznamů vybírají záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[Výměna pole záznamu (Record Field Exchange – RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [SQL](../../data/odbc/sql.md)<br/>
 [Výjimky: Výjimky databáze](../../mfc/exceptions-database-exceptions.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 34158b8d4ff2c052543328767ea928bbe5788ef0
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: fcc50109ce521e005e32a8c19b13aabe2230989b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786901"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029733"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>třídy ref class a struktura ref (C + +/ CLI a C + +/ CX)
 
@@ -38,10 +38,10 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 *class_access*<br/>
 (Volitelné) Usnadnění přístupu z dané třídy nebo struktury mimo sestavení. Možné hodnoty jsou **veřejné** a **privátní** (**privátní** je výchozí nastavení). Nemůže obsahovat vnořené třídy nebo struktury *class_access* specifikátor.
 
-*Jméno*<br/>
+*name*<br/>
 Název třídy nebo struktury.
 
-*modifier*<br/>
+* – modifikátor*<br/>
 (Volitelné) [abstraktní](abstract-cpp-component-extensions.md) a [zapečetěné](sealed-cpp-component-extensions.md) jsou platné modifikátory.
 
 *inherit_access*<br/>
@@ -64,9 +64,9 @@ Další informace o třídách a strukturách naleznete v tématu
 
 - [Vytvoření instance třídy a struktury](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md)
 
-- [Sémantika zásobníku C++ pro typy odkazů](../dotnet/cpp-stack-semantics-for-reference-types.md)
+- [C++ – sémantika zásobníku pro odkazové typy](../dotnet/cpp-stack-semantics-for-reference-types.md)
 
-- [Třídy, struktury a sjednocení](../cpp/classes-and-structs-cpp.md)
+- [Třídy, struktury a spojení](../cpp/classes-and-structs-cpp.md)
 
 - [Destruktory a finalizační metody v tom, jak: Definice a používání tříd a struktur (C + +/ CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
 
@@ -74,7 +74,7 @@ Další informace o třídách a strukturách naleznete v tématu
 
 - [Uživatelem definované převody (C++/CLI)](../dotnet/user-defined-conversions-cpp-cli.md)
 
-- [Postupy: Zabalení nativních tříd pro použití v jazyce C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
+- [Postupy: Zabalení nativních tříd pro použitíC#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
 - [Obecné třídy (C++/CLI)](generic-classes-cpp-cli.md)
 
@@ -116,6 +116,6 @@ V následující tabulce jsou uvedeny rozdíly v syntaxi uvedenou v **všechny m
 
 – Možnost kompilátoru: `/clr`
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)

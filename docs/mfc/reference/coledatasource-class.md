@@ -37,10 +37,10 @@ helpviewer_keywords:
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
 ms.openlocfilehash: 37de6fd74f1e9210dcd9b9a356719436814c0c7f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776827"
 ---
 # <a name="coledatasource-class"></a>COleDataSource Class
@@ -57,7 +57,7 @@ class COleDataSource : public CCmdTarget
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleDataSource::COleDataSource](#coledatasource)|Vytvoří `COleDataSource` objektu.|
 
@@ -90,9 +90,9 @@ Další informace o zdrojích dat a přenos dat, najdete v článku [datové obj
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
 
 `COleDataSource`
 
@@ -492,4 +492,4 @@ void SetClipboard();
 [Ukázky knihovny MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [CCmdTarget – třída](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[COleDataObject – třída](../../mfc/reference/coledataobject-class.md)
+[Coledataobject – třída](../../mfc/reference/coledataobject-class.md)

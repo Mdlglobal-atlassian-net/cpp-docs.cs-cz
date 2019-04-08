@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-ms.openlocfilehash: 64b50505104b2f4ee9e5aade4f9bca104c1d5565
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 7d36793e4467f9454aca1eb207f3c3dfbd483bff
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786753"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021421"
 ---
 # <a name="explicit-overrides--ccli-and-ccx"></a>Explicitní přepsání (C + +/ CLI a C + +/ CX)
 
@@ -30,13 +30,13 @@ overriding-function-declarator = function { overriding-function-definition }
 *overriding-function-declarator*<br/>
 Návratový typ, název a argumentu seznamu přepisující funkce.  Všimněte si, že není nutné mít stejný název jako funkce přepsání přepisující funkce.
 
-*type*<br/>
+* – typ*<br/>
 Základní typ, který obsahuje funkci, kterou chcete přepsat.
 
-*– funkce*<br/>
+* – funkce*<br/>
 Čárkami oddělený seznam jednoho nebo více názvy funkcí, které chcete přepsat.
 
-*overriding-function-definition*<br/>
+*přepsání definice funkce*<br/>
 Příkazy tělo funkce, které definují přepisující funkce.
 
 ### <a name="remarks"></a>Poznámky
@@ -172,6 +172,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)

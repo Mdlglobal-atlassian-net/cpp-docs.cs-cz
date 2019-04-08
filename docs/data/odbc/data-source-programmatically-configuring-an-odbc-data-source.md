@@ -1,5 +1,5 @@
 ---
-title: 'Zdroj dat: Programové nakonfigurování zdroje dat ODBC'
+title: 'Zdroj dat: Programová konfigurace zdroje dat ODBC'
 ms.date: 11/04/2016
 f1_keywords:
 - SQLConfigDataSource
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
-ms.openlocfilehash: 3d02a19d6c61e79fffd31b67ef1b8f7ea9007fcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33269b65835812a6e1a03e091833831781d97b6d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677367"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037950"
 ---
-# <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Zdroj dat: Programové nakonfigurování zdroje dat ODBC
+# <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Zdroj dat: Programová konfigurace zdroje dat ODBC
 
 Toto téma vysvětluje, jak nakonfigurovat názvy zdroje dat připojení ODBC (Open Database) prostřednictvím kódu programu. To vám nabídne flexibilitu pro přístup k datům bez explicitního uživatelského specifikování názvů zdrojů dat explicitně pomocí Správce rozhraní ODBC nebo jiných programů.
 
@@ -78,7 +78,7 @@ Seznam atributů ve formě "Název_klíče = hodnota". Tyto řetězce jsou oddě
 
 1. Spusťte správce rozhraní ODBC.
 
-1. Klikněte na tlačítko **přidat**.
+1. Klikněte na **Přidat**.
 
 To poskytuje seznam nainstalovaných ovladačů a jejich popisy. Použijte tento popis jako *lpszDriver* parametru. Všimněte si, že používáte celý popis, jako je například "Souborů aplikace Excel (*.XLS)", včetně příponu názvu souboru a kulaté závorky, pokud existují v popisu.
 
@@ -94,7 +94,7 @@ Jeden ze způsobů, jak najít názvy klíčů a hodnot pro *lpszAttributes* par
 
    - U 32bitové verze vyhledejte klíč **HKEY_CURRENT_USER\Software\ODBC\ODBC. Zdroje dat INI\ODBC** v levém podokně.
 
-      V pravém podokně jsou uvedeny položky ve formátu: "pub: REG_SZ:*<data source name>*", kde *<data source name>* je zdroj dat, která je už nakonfigurovaná s požadovaným nastavením ovladače určené pro instalaci k použití. Vyberte zdroj dat, které potřebujete, třeba SQL Server. Položky následující za řetězcem "pub:" jsou v pořadí, název klíče a hodnoty pro použití v vaše *lpszAttributes* parametru.
+      V pravém podokně jsou uvedeny položky ve formátu: "pub: REG_SZ:*<data source name>*", kde *<data source name>* je zdroj dat, která je už nakonfigurovaná s požadovaným nastavením pro ovladač, kterou chcete použít. Vyberte zdroj dat, které potřebujete, třeba SQL Server. Položky následující za řetězcem "pub:" jsou v pořadí, název klíče a hodnoty pro použití v vaše *lpszAttributes* parametru.
 
    - U 16bitové verze, najděte část do souboru Odbc.ini označeny [*\<název zdroje dat >*].
 
@@ -106,14 +106,14 @@ Můžete také prozkoumat dokumentaci pro konkrétní ovladač, který se chyst�
 
 1. Spusťte správce rozhraní ODBC.
 
-1. Klikněte na tlačítko **přidat**.
+1. Klikněte na **Přidat**.
 
 1. Vyberte název ovladače.
 
-1. Klikněte na tlačítko **OK**.
+1. Klikněte na **OK**.
 
 Jakmile správce rozhraní ODBC zobrazí informace o vytváření nového zdroje dat pro tento konkrétní ovladač, klepněte na tlačítko **pomáhají**. Otevře se v souboru nápovědy pro tento konkrétní ovladač, který obvykle obsahuje důležité informace týkající se použití ovladače.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zdroj dat (ODBC)](../../data/odbc/data-source-odbc.md)

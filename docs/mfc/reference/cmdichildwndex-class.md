@@ -113,10 +113,10 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
 ms.openlocfilehash: e12cf9f65e6fd6dd7f68edc4a94103baa5a8df62
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781754"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx – třída
@@ -207,9 +207,9 @@ V následujícím příkladu je odvozena z třídy `CMDIChildWndEx`. Tento fragm
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -567,7 +567,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parametry
 
-*point*<br/>
+*Bod*<br/>
 [in] Zadaný bod.
 
 *dwBarAlignment*<br/>
@@ -686,7 +686,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parametry
 
-*point*<br/>
+*Bod*<br/>
 [in] Určuje bod, v souřadnicovém systému obrazovky, chcete-li zkontrolovat.
 
 *nSensitivity*<br/>
@@ -828,7 +828,7 @@ virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
+*rect*<br/>
 Určuje novou obdélník oříznutí. Pokud obdélníku je prázdný nebo mít hodnotu null, odeberou se obsah schránky.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -941,7 +941,7 @@ Určuje ukazatel na nejvyšší úrovni nadřazené okno okna aktivuje. Ukazatel
 *nHitTest*<br/>
 Určuje kód oblasti spuštění testu. Ověření pozice je test, který určuje umístění kurzoru.
 
-*message*<br/>
+* – zpráva*<br/>
 Určuje číslo zprávy myši.
 
 ### <a name="remarks"></a>Poznámky
@@ -961,7 +961,7 @@ virtual void OnTaskbarTabThumbnailActivate(
 
 ### <a name="parameters"></a>Parametry
 
-*nState*<br/>
+*nInformace*<br/>
 Určuje, zda `CWnd` je se aktivuje nebo deaktivuje.
 
 *pWndOther*<br/>
@@ -1188,5 +1188,5 @@ virtual void ActivateTopLevelFrame();
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
 [CMDIChildWnd – třída](../../mfc/reference/cmdichildwnd-class.md)<br/>
-[CMFCWindowsManagerDialog – třída](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)<br/>
+[CMFCWindowsManagerDialog Class](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)<br/>
 [CMDIFrameWndEx – třída](../../mfc/reference/cmdiframewndex-class.md)

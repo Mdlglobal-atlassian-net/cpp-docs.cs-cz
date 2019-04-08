@@ -12,12 +12,12 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: 72fd1d025ab19b7db9521e08655d00936b77581e
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 98a0f9f66fb209bb41215fc1e86a9682a4fed023
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58564950"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031982"
 ---
 # <a name="import-directive-c"></a>#import – direktiva (C++)
 
@@ -34,7 +34,7 @@ Používá se k opatření informací z knihovny typů. Obsah knihovny typů je 
 
 ### <a name="parameters"></a>Parametry
 
-*Název souboru*<br/>
+*filename*<br/>
 Určuje knihovnu typů pro import. *Název souboru* může být jedna z následujících akcí:
 
 - Název souboru obsahujícího knihovnu typů, jako je například soubor olb, TLB nebo DLL. Klíčové slovo **souboru:**, může předcházet každý název souboru.
@@ -65,7 +65,7 @@ Určuje knihovnu typů pro import. *Název souboru* může být jedna z následu
 
 - Další formáty souborů, který může být srozumitelné **LoadTypeLib** rozhraní API.
 
-*Atributy*<br/>
+*atributy*<br/>
 Jeden nebo více [atributů #import](#_predir_the_23import_directive_import_attributes). Samostatné atributy s mezerami nebo čárkami. Příklad:
 
 ```cpp
@@ -191,7 +191,7 @@ Další informace najdete v tématu [atributů #import](../preprocessor/hash-imp
 
 **Specifické pro END C++**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Preprocesor – direktivy](../preprocessor/preprocessor-directives.md)<br/>
-[Podpora kompilátoru COM](../cpp/compiler-com-support.md)
+[Podpora kompilátoru modelu COM](../cpp/compiler-com-support.md)

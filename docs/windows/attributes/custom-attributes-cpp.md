@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom attributes
 - custom attributes, defining
 ms.assetid: af9998a5-aa12-4b94-9a43-97ce99026e29
-ms.openlocfilehash: bfd09ee0a53b0677bc53bede918b9a4972a3abba
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: fbb1c629f23c5d70a78d62db2a3634cbfc489967
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58777386"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034047"
 ---
 # <a name="custom-attributes-c"></a>Vlastní atributy (C++)
 
@@ -22,7 +22,7 @@ Informace o definování nových vlastních atributů najdete v článku,
 
 - [atribut](attribute.md) (zastaralé syntaxe).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[attribute](attribute.md)<br/>
+[ – atribut](attribute.md)<br/>
 [Vlastní atributy (C++)](custom-attributes-cpp.md)

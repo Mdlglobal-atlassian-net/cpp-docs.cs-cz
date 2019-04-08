@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: bafdb65f255ddf33964d22e5ea80a62446c2ad45
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 5c69e0aa9e3444ec9b43470f8feb4d1f870dc9c8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893519"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040577"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -25,7 +25,7 @@ Bloku knihovny definuje v souboru IDL.
 
 ### <a name="parameters"></a>Parametry
 
-*type*<br/>
+* – typ*<br/>
 (Volitelné) Může být jedna z následujících akcí:
 
 - `dll` Přidá se funkcí a tříd, které umožňují výslednou knihovnu DLL, aby fungoval jako server COM v procesu. Jedná se o výchozí hodnotu.
@@ -36,10 +36,10 @@ Bloku knihovny definuje v souboru IDL.
 
 - `unspecified` Zakáže injektáž kódu ATL související s atributem module: injektáž modulu ATL – třídy, globální instanci _AtlModule a vstupní bod funkce. Injektáž kódu ATL kvůli dalším atributům v projektu není zakázána.
 
-*Jméno*<br/>
+*name*<br/>
 (Volitelné) Název bloku knihovny.
 
-*version*<br/>
+*verze*<br/>
 (Volitelné) Číslo verze, kterou chcete přiřadit k bloku knihovny. Výchozí hodnota je 1.0.
 
 *uuid*<br/>
@@ -48,7 +48,7 @@ Jedinečné ID pro knihovnu. Pokud tento parametr vynecháte, ID budou automatic
 *lcid*<br/>
 Parametr lokalizace. Zobrazit [lcid](/windows/desktop/Midl/lcid) Další informace.
 
-*control*<br/>
+* – ovládací prvek*<br/>
 (Volitelné) Určuje, že jsou všechny třídy typu coclass v knihovně ovládací prvky.
 
 *helpstring*<br/>
@@ -72,7 +72,7 @@ Určuje knihovnu typů.
 *restricted*<br/>
 (Volitelné) Členové knihovny nejde volat libovolně. Zobrazit [s omezeným přístupem](/windows/desktop/Midl/restricted) atribut MIDL pro další informace.
 
-*custom*<br/>
+*vlastní*<br/>
 (Volitelné) Jeden nebo více atributů; podobá se to [vlastní](custom-cpp.md) atribut. První parametr *vlastní* je identifikátor GUID atributu. Příklad:
 
 ```
@@ -95,7 +95,7 @@ Jeden blok knihovny je povolen v souboru IDL. Několik záznamů modulu ve zdroj
 
 Pokud tento atribut se používá v rámci projektu, který používá knihovny ATL, chování změny atributů. Kromě výše uvedených chování atribut také vloží globální objekt (volá `_AtlModule`) správný typ a další podporu kód. Pokud je atribut samostatné, vloží třídy odvozené z typu správný modul. Pokud je atribut aplikován na třídu, přidá základní třídu typu správný modul. Správný typ je určen hodnotou *typ* parametr:
 
-- `type` = **knihovny DLL**
+- `type` = **dll**
 
    [Catldllmodulet –](../../atl/reference/catldllmodulet-class.md) slouží jako základní třídu a standardní knihovny DLL vstupní body požadované pro COM server. Tyto vstupní body jsou [DllMain](/windows/desktop/Dlls/dllmain), [DllRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllregisterserver), [DllUnRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllunregisterserver), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), a [ DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891).
 
@@ -154,20 +154,20 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 |-|-|
 |**Platí pro**|Kdekoli|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádná|
-|**Neplatné atributy**|Žádná|
+|**Vyžadované atributy**|Žádné|
+|**Neplatné atributy**|Žádný|
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy třídy](class-attributes.md)<br/>
 [Samostatné atributy](stand-alone-attributes.md)<br/>
 [Atributy klíčových slov typedef, enum, union a struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [usesgetlasterror](usesgetlasterror.md)<br/>
-[Knihovna](/windows/desktop/Midl/library)<br/>
+[knihovna](/windows/desktop/Midl/library)<br/>
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)<br/>
 [helpfile](helpfile.md)<br/>
-[version](version-cpp.md)
+[verze](version-cpp.md)

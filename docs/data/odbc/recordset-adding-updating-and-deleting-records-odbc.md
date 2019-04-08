@@ -1,5 +1,5 @@
 ---
-title: 'Seznam záznamů: Přidávání, aktualizace a odstranění záznamů (ODBC).'
+title: 'Recordset: Přidání, aktualizace nebo odstranění záznamů (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records [C++], updating
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: 760c8889-bec4-482b-a8f2-319792a6af98
-ms.openlocfilehash: a13bffdc79f01c49c290b8b5d4388f06ce777105
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28c885119816c1df662cc0b941e02cb3cf747f3d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512369"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024605"
 ---
-# <a name="recordset-adding-updating-and-deleting-records-odbc"></a>Seznam záznamů: Přidávání, aktualizace a odstranění záznamů (ODBC).
+# <a name="recordset-adding-updating-and-deleting-records-odbc"></a>Recordset: Přidání, aktualizace nebo odstranění záznamů (ODBC)
 
 Toto téma platí pro třídy knihovny MFC rozhraní ODBC.
 
 > [!NOTE]
->  Nyní můžete přidat záznamy hromadné efektivněji. Další informace najdete v tématu [sada záznamů: přidávání hromadné záznamů (ODBC)](../../data/odbc/recordset-adding-records-in-bulk-odbc.md).
+>  Nyní můžete přidat záznamy hromadné efektivněji. Další informace najdete v tématu [sada záznamů: Přidání záznamů (ODBC) hromadné](../../data/odbc/recordset-adding-records-in-bulk-odbc.md).
 
 > [!NOTE]
->  Toto téma se vztahuje na objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud používáte hromadné načítání řádků, přečtěte si téma [sada záznamů: načítání hromadné záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Toto téma se vztahuje na objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud používáte hromadné načítání řádků, přečtěte si téma [sada záznamů: Načítání záznamů (ODBC) hromadné](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Aktualizovatelné a dynamické sady umožňují přidat, upravit (Aktualizovat) a odstraňování záznamů. Toto téma vysvětluje:
 
@@ -51,11 +51,11 @@ Následující tabulka shrnuje možnosti dostupné pro sady záznamů s různým
 
 ### <a name="recordset-readupdate-options"></a>Číst/aktualizovat možnosti sady záznamů
 
-|Typ|Číst|Úprava záznamu|Odstranit záznam|Přidat nový (připojit)|
+|Type|Číst|Úprava záznamu|Odstranit záznam|Přidat nový (připojit)|
 |----------|----------|-----------------|-------------------|------------------------|
-|jen pro čtení|A|N|N|N|
-|Jen pro připojení|A|N|N|A|
-|Plně aktualizovat|A|A|A|A|
+|jen pro čtení|Ano|N|N|N|
+|Jen pro připojení|Ano|N|N|Ano|
+|Plně aktualizovat|Ano|Ano|Ano|Ano|
 
 ##  <a name="_core_determining_whether_your_recordset_is_updatable"></a> Určení, zda sady záznamů je aktualizovatelná
 
@@ -104,7 +104,7 @@ Sada záznamů můžete přidat nové záznamy, pokud jeho [CanAppend](../../mfc
 
    `Update` zápisem nový záznam do zdroje dat se dokončí přidání. Pro informace o se stane, když převezmete služby volat `Update`, naleznete v tématu [sada záznamů: Jak sady záznamů aktualizují záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
 
-Informace o jak přidat záznamy a kdy jsou viditelné ve vaší sadě záznamů přidání záznamů najdete v tématu [sada záznamů: jak funkce operací AddNew, Edit a odstranit pracovní (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md).
+Informace o jak přidat záznamy a kdy jsou viditelné ve vaší sadě záznamů přidání záznamů najdete v tématu [sada záznamů: Jak funkce operací AddNew, Edit a odstranit pracovní (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md).
 
 Následující příklad ukazuje, jak přidat nový záznam:
 
@@ -199,7 +199,7 @@ rsStudent.MoveNext( );
 
 Další informace o důsledcích `AddNew`, `Edit`, a `Delete` členské funkce, najdete v článku [sada záznamů: Jak sady záznamů aktualizují záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Sada záznamů: Zamykání záznamů (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[Recordset: Zamykání záznamů (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

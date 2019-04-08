@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ODBC, timestamp
 - positioning cursors
 ms.assetid: 6608db92-82b1-4164-bb08-78153c227be3
-ms.openlocfilehash: e175a9b27cb19b0c2a67a08751b7a7717226ac55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 862303a0dc66fbd49bfcba83336ab29dfc7145c0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435136"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032229"
 ---
 # <a name="odbc-the-odbc-cursor-library"></a>ODBC: Knihovna kurzorů rozhraní ODBC
 
@@ -65,6 +65,6 @@ Druhý problém se týká omezení třídy [CTime](../../atl-mfc-shared/referenc
 
 Když se připojíte ke zdroji dat – voláním [CDatabase::OpenEx](../../mfc/reference/cdatabase-class.md#openex) nebo [CDatabase::Open](../../mfc/reference/cdatabase-class.md#open) – můžete určit, jestli se má použít pro zdroj dat knihovna kurzorů rozhraní. Pokud budete vytvářet snímky na tomto zdroji dat, zadejte `CDatabase::useCursorLib` možnost `dwOptions` parametr `OpenEx` nebo zadejte hodnotu PRAVDA pro *bUseCursorLib* parametr `Open` (výchozí hodnota je HODNOTA TRUE.) Pokud ovladač rozhraní ODBC podporuje dynamické a chcete otevřít dynamické ve zdroji dat, není použití knihovny kurzorů (zakrývá některé funkce, které potřebují pro dynamické sady). V tomto případě nezadávejte `CDatabase::useCursorLib` v `OpenEx` nebo zadat hodnotu FALSE pro *bUseCursorLib* parametr `Open`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [ODBC – základy](../../data/odbc/odbc-basics.md)

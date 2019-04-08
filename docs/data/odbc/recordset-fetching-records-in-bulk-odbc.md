@@ -1,5 +1,5 @@
 ---
-title: 'Sada záznamů: Hromadné načítání záznamů (ODBC)'
+title: 'Recordset: (ODBC) hromadné načítání záznamů'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - bulk row fetching, implementing
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - rowsets, bulk row fetching
 - RFX (ODBC), bulk row fetching
 ms.assetid: 20d10fe9-c58a-414a-b675-cdf9aa283e4f
-ms.openlocfilehash: 55a89a66b36d12e6341b85d7dfa655b299638fcd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2fdcbf18fcb0d97ba7b2a39aa9bbbd79e65a4112
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628199"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027763"
 ---
-# <a name="recordset-fetching-records-in-bulk-odbc"></a>Sada záznamů: Hromadné načítání záznamů (ODBC)
+# <a name="recordset-fetching-records-in-bulk-odbc"></a>Recordset: (ODBC) hromadné načítání záznamů
 
 Toto téma platí pro třídy knihovny MFC rozhraní ODBC.
 
@@ -49,7 +49,7 @@ V následující tabulce jsou uvedeny členské funkce poskytované `CRecordset`
 |[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)|Implementuje Hromadná výměna polí záznamu. Volá se, automaticky se přenosy několik řádků dat ze zdroje dat do objektu sady záznamů.|
 |[GetRowsetSize](../../mfc/reference/crecordset-class.md#getrowsetsize)|Načte aktuální nastavení pro velikost řádků.|
 |[GetRowsFetched](../../mfc/reference/crecordset-class.md#getrowsfetched)|Určuje, kolik řádků ve skutečnosti načetlo po daném načtení. Ve většině případů je velikost řádků, pokud se načetla neúplné sady řádků.|
-|[GetRowStatus –](../../mfc/reference/crecordset-class.md#getrowstatus)|Vrátí stav načítání pro konkrétního řádku v rámci sady řádků.|
+|[GetRowStatus](../../mfc/reference/crecordset-class.md#getrowstatus)|Vrátí stav načítání pro konkrétního řádku v rámci sady řádků.|
 |[RefreshRowset](../../mfc/reference/crecordset-class.md#refreshrowset)|Aktualizuje data a stav konkrétního řádku v rámci sady řádků.|
 |[SetRowsetCursorPosition](../../mfc/reference/crecordset-class.md#setrowsetcursorposition)|Přesune kurzor na konkrétní řádek v rámci sady řádků.|
 |[SetRowsetSize](../../mfc/reference/crecordset-class.md#setrowsetsize)|Virtuální funkce, která změní nastavení velikosti sady řádků se zadanou hodnotou.|
@@ -137,9 +137,9 @@ void MultiRowSet::DoBulkFieldExchange( CFieldExchange* pFX )
 > [!NOTE]
 >  Je třeba zavolat `Close` členskou funkci před vaší odvozené `CRecordset` třídy dostane mimo rozsah. Tím se zajistí, že jsou uvolněny rámec přidělení paměti. Vždy explicitně volat při programování je dobrým `Close`, bez ohledu na to, zda jste implementovali hromadné načítání řádků.
 
-Další informace o výměna pole záznamu (RFX) najdete v tématu [výměna polí záznamu: jak funkce RFX pracuje](../../data/odbc/record-field-exchange-how-rfx-works.md). Další informace o použití parametrů najdete v tématu [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) a [sada záznamů: Parametrizace sady záznamů (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+Další informace o výměna pole záznamu (RFX) najdete v tématu [výměna polí záznamu: Jak funkce RFX pracuje](../../data/odbc/record-field-exchange-how-rfx-works.md). Další informace o použití parametrů najdete v tématu [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) a [sada záznamů: Parametrizace sady záznamů (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [CRecordset::m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)<br/>

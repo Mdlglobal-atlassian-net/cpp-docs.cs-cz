@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-ms.openlocfilehash: 529f8e8f8da58ea7990b51f582f5c8db1e06397f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: ec64388d5f71cff01207129e337cf20bb151db1a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786554"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031515"
 ---
 # <a name="typeid--ccli-and-ccx"></a>typeid (C + +/ CLI a C + +/ CX)
 
@@ -63,7 +63,7 @@ type::typeid
 
 ### <a name="parameters"></a>Parametry
 
-*type*<br/>
+* – typ*<br/>
 Název typu (abstraktní deklarátor), pro které chcete `System::Type` objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -188,6 +188,6 @@ int::typeid != pointer_to_int::typeid, as expected
 int::typeid == handle_to_int::typeid, as expected
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)

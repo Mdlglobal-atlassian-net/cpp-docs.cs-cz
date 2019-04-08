@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - Control attribute
 ms.assetid: 3d046bb2-4afe-4cb8-a762-233b296e1975
-ms.openlocfilehash: 9a0aec5ec2142159feb592419056da0f100914d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 223acf774d1cc90d84aed2d0d0c8cb59fc778fa1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482092"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034709"
 ---
-# <a name="control"></a>– ovládací prvek
+# <a name="control"></a> – ovládací prvek
 
 Určuje, jestli je typ uživatelského ovládacího prvku.
 
@@ -52,12 +52,12 @@ class CTest : public ICustom {};
 |-|-|
 |**Platí pro**|**Třída**, **– struktura**|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádné|
+|**Vyžadované atributy**|Žádný|
+|**Neplatné atributy**|Žádný|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy třídy](class-attributes.md)<br/>

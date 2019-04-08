@@ -18,12 +18,12 @@ helpviewer_keywords:
 - ODBC data sources [C++], connections
 - database connections [C++], MFC ODBC classes
 ms.assetid: c0adbcdd-c000-40c6-b199-09ffdc7b6ef2
-ms.openlocfilehash: 0f10dd1053819cb201385098b0125042ad556a47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b646ca0eb86d3addabaad59ca23f56cfe914114
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568503"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041160"
 ---
 # <a name="data-source-managing-connections-odbc"></a>Zdroj dat: Správa připojení (ODBC)
 
@@ -136,8 +136,8 @@ Můžete opakovaně použít `CDatabase` objektu po odpojení od ho, ať už pou
 
 1. Namísto zničení objektu zavolejte jeho `OpenEx` nebo `Open` členskou funkci znovu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zdroj dat (ODBC)](../../data/odbc/data-source-odbc.md)<br/>
-[Zdroj dat: Stanovení schématu zdroje dat (rozhraní ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)<br/>
+[Zdroj dat: Stanovení schématu zdroje dat (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)<br/>
 [CRecordset – třída](../../mfc/reference/crecordset-class.md)

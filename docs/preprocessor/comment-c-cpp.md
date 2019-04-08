@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pragmas, comment
 - comment pragma
 ms.assetid: 20f099ff-6303-49b3-9c03-a94b6aa69b85
-ms.openlocfilehash: ec80e8cf177becdc25bdf49d6dfa9ad9c7794b88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb9bfef2ae751529b8424143cde020e78f17ec72
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612820"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025267"
 ---
 # <a name="comment-cc"></a>comment (C/C++)
 
@@ -31,7 +31,7 @@ Umístí záznam komentář do objektu souboru nebo spustitelný soubor.
 
 *Typů komentář* je jedním z předdefinované identifikátory, které jsou popsané níže, který určuje typ záznamu komentář. Volitelný *commentstring* není řetězcový literál, který poskytuje další informace o některých typů komentář. Protože *commentstring* je textový literál, dodržuje všechna pravidla pro řetězcové literály s ohledem na řídicí znaky, uvozovky (`"`) a zřetězení.
 
-### <a name="compiler"></a>– kompilátor
+### <a name="compiler"></a> – kompilátor
 
 Umístí název a číslo verze kompilátoru do souboru objektu. Tento záznam komentář se ignoruje linkerem. Pokud zadáte *commentstring* parametr pro tento typ záznamu, kompilátor vygeneruje upozornění.
 
@@ -65,9 +65,9 @@ Pouze následující (*typů komentář*) jsou k dispozici identifikátor propoj
 
 - [/ MANIFESTDEPENDENCY](../build/reference/manifestdependency-specify-manifest-dependencies.md)
 
-- [/MERGE](../build/reference/merge-combine-sections.md)
+- [/ MERGE](../build/reference/merge-combine-sections.md)
 
-- [/ SECTION](../build/reference/section-specify-section-attributes.md)
+- [/SECTION](../build/reference/section-specify-section-attributes.md)
 
 ### <a name="user"></a>uživatel
 
@@ -92,6 +92,6 @@ Následující direktivy pragma způsobí, že kompilátor umístí název a č�
 #pragma comment( user, "Compiled on " __DATE__ " at " __TIME__ )
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

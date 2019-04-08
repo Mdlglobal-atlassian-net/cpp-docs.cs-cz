@@ -3,12 +3,12 @@ title: Výčet tříd (C + +/ CLI a C + +/ CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: 0c93bc6b8994b8a02050466a1dcba5bc77fddd32
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: da9097a02de08fd1615f5401d08c438c5f64c139
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786704"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037030"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>Výčet tříd (C + +/ CLI a C + +/ CX)
 
@@ -40,12 +40,12 @@ Usnadnění výčet, který může být **veřejné** nebo **privátní**.
 *Identifikátor výčtu*<br/>
 Název výčtu.
 
-*underlying-type*<br/>
+*Základní typ*<br/>
 (Volitelné) Základní typ výčtu.
 
 (Volitelné. Pouze Windows Runtime) základní typ výčtu, který může být **bool**, **char**, `char16`, `int16`, `uint16`, **int**, `uint32`, `int64`, nebo `uint64`.
 
-*enumerator-list*<br/>
+*seznam výčtu*<br/>
 Čárkami oddělený seznam názvů enumerátor.
 
 Hodnota každého výčtu je konstantní výraz, který je buď definován implicitně kompilátorem, nebo explicitně zápisu, *enumerátor*`=`*konstantní výraz*. Ve výchozím nastavení hodnota první čítače výčtu je nula, pokud je implicitně definovaný. Hodnotu každé následné implicitně definovaný enumerátor je hodnota z předchozího výčtu + 1.
@@ -85,13 +85,13 @@ accessenum structname [:type] { enumerator-list } var;
 *access*<br/>
 Přístupnost člena výčtu. Může být buď **veřejné** nebo **privátní**.
 
-*enumerator-list*<br/>
+*seznam výčtu*<br/>
 Čárkou oddělený seznam identifikátorů (enumerátory) ve výčtu.
 
-*Jméno*<br/>
+*name*<br/>
 Název výčtu. Anonymní výčty spravované nejsou povoleny.
 
-*type*<br/>
+* – typ*<br/>
 (Volitelné) Základní typ *identifikátory*. To může být libovolného skalárního typu, jako je například podepsaná nebo nepodepsaná verze z **int**, **krátký**, nebo **dlouhé**.  **BOOL** nebo **char** je také povolena.
 
 *var*<br/>
@@ -219,6 +219,6 @@ convert to int: 1
 1
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)

@@ -4,12 +4,12 @@ ms.date: 10/02/2018
 helpviewer_keywords:
 - attributes [C++/CLI], class attributes
 ms.assetid: fad04ea1-d8ff-46d4-bb42-2b4500a6ab60
-ms.openlocfilehash: bdc689107eb973b9701e3f1fbe37a10aa6ae8d85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0913d09c51734f5255271c0d06e639810e0cb58
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448864"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025413"
 ---
 # <a name="class-attributes"></a>Atributy třídy
 
@@ -23,8 +23,8 @@ Následující atributy se vztahují na [třídy](../../cpp/class-cpp.md) – kl
 |[case](case-cpp.md)|Používá se [switch_type –](switch-type.md) atribut ve sjednocení.|
 |[coclass](coclass.md)|Vytvoří ovládací prvek ActiveX.|
 |[com_interface_entry](com-interface-entry-cpp.md)|Přidá položku do rozhraní COM mapy.|
-|[control](control.md)|Určuje, jestli je typ uživatelského ovládacího prvku.|
-|[custom](custom-cpp.md)|Umožňuje definovat vlastní atribut.|
+|[ – ovládací prvek](control.md)|Určuje, jestli je typ uživatelského ovládacího prvku.|
+|[vlastní](custom-cpp.md)|Umožňuje definovat vlastní atribut.|
 |[db_command](db-command.md)|Vytvoří příkaz OLE DB.|
 |[db_param](db-param.md)|Přidruží zadaný členskou proměnnou vstupní nebo výstupní parametr a odděluje citaci proměnné.|
 |[db_source](db-source.md)|Vytvoří připojení ke zdroji dat.|
@@ -49,9 +49,9 @@ Následující atributy se vztahují na [třídy](../../cpp/class-cpp.md) – kl
 |[support_error_info](support-error-info.md)|Podporuje odesílání sestav chyb pro cílový objekt.|
 |[threading](threading-cpp.md)|Určuje model vláken pro ovládací prvek.|
 |[uuid](uuid-cpp-attributes.md)|Určuje jedinečné ID pro třídu nebo rozhraní.|
-|[version](version-cpp.md)|Určuje konkrétní verzi napříč několika verzemi třídu.|
+|[verze](version-cpp.md)|Určuje konkrétní verzi napříč několika verzemi třídu.|
 |[vi_progid](vi-progid.md)|Určuje verzi nezávislé formu ProgID.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Atributy podle použití](attributes-by-usage.md)

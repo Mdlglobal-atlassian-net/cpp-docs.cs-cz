@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - interior_ptr keyword [C++]
 ms.assetid: 25160f74-569e-492d-9e3c-67ece7486baa
-ms.openlocfilehash: 573c78def0b5bbe790f3b8fec1ff70b907f9d820
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 0fba04efeaa634f5e21600768297aee0d999d1c6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786705"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028325"
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
 
@@ -47,13 +47,13 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 *cv_qualifier*<br/>
 **Const** nebo **volatile** kvalifikátory.
 
-*type*<br/>
+* – typ*<br/>
 Typ *inicializátor*.
 
 *var*<br/>
 Název **interior_ptr** proměnné.
 
-*initializer*<br/>
+*Inicializátor*<br/>
 Člen typu odkazu, element spravovaného pole nebo jakýkoli jiný objekt, který můžete přiřadit na nativní ukazatel.
 
 ### <a name="remarks"></a>Poznámky
@@ -74,13 +74,13 @@ Informace o tom, jak deklarovat vnitřní ukazatel, který odkazuje na objekt, k
 
 Další informace o vnitřních ukazatelů naleznete v tématu
 
-- [Postupy: Deklarace a použití vnitřních ukazatelů a spravovaných polí (C++/CLI)](how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)
+- [Postupy: Deklarování a použití vnitřních ukazatelů a spravovaných polí (C + +/ CLI)](how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)
 
-- [Postupy: Deklarace typů hodnot s použitím klíčového slova interior_ptr (C++/CLI)](how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)
+- [Postupy: Deklarace hodnotových typů s použitím klíčového slova interior_ptr (C + +/ CLI)](how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)
 
-- [Postupy: Přetížení funkcí s vnitřními a nativními ukazateli (C++/CLI)](how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md)
+- [Postupy: Přetížení funkcí s vnitřními a nativními ukazateli (C + +/ CLI)](how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md)
 
-- [Postupy: Deklarace vnitřních ukazatelů s použitím klíčového slova const (C++/CLI)](how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)
+- [Postupy: Deklarace vnitřních ukazatelů s použitím klíčového slova const (C + +/ CLI)](how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)
 
 ### <a name="requirements"></a>Požadavky
 
@@ -122,6 +122,6 @@ int main() {
 3
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)

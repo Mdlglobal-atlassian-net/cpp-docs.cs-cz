@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, code_seg
 - code_seg pragma
 ms.assetid: bf4faac1-a511-46a6-8d9e-456851d97d56
-ms.openlocfilehash: 80edcb709073021ccf024aaf14c9a914bd8d8939
-ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
+ms.openlocfilehash: e566fb01bf70b343b75254a10466bdda2bc7ce1b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597700"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041238"
 ---
 # <a name="codeseg"></a>code_seg
 Určuje textový segment, kde jsou funkce uloženy v souboru .obj.
@@ -26,7 +26,7 @@ Určuje textový segment, kde jsou funkce uloženy v souboru .obj.
 
 ### <a name="parameters"></a>Parametry
 
-**push**<br/>
+**nabízených oznámení**<br/>
 (Volitelné) Vloží záznam do zásobníku vnitřního kompilátoru. A **nabízených** může mít *identifikátor* a *segment-name*.
 
 **POP**<br/>
@@ -40,7 +40,7 @@ Určuje textový segment, kde jsou funkce uloženy v souboru .obj.
 "*segment-name*"<br/>
 (Volitelné) Název segmentu. Při použití s **pop**, je zásobník odebrán a *segment-name* stane názvem textového segmentu.
 
-"*segmentu třídy*"<br/>
+"*segment-class*"<br/>
 (Volitelné) Ignorováno, ale zahrnuto pro kompatibilitu s verzemi jazyka C++ před verzí 2.0.
 
 ## <a name="remarks"></a>Poznámky
@@ -84,7 +84,7 @@ Seznam názvů, které by neměly být použít k vytvoření oddílu, naleznete
 
 Můžete také určit oddíly pro inicializovaná data ([data_seg](../preprocessor/data-seg.md)), neinicializovaná data ([bss_seg](../preprocessor/bss-seg.md)) a proměnné const ([const_seg](../preprocessor/const-seg.md)).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [code_seg (__declspec)](../cpp/code-seg-declspec.md)<br/>
 [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

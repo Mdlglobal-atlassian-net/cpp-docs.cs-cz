@@ -1,5 +1,5 @@
 ---
-title: 'Sada záznamů: Vytváření a uzavírání sad záznamů (rozhraní ODBC)'
+title: 'Recordset: Vytváření a uzavírání sad záznamů (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC recordsets, creating
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: d98f7e59e52b86a1b9b1c3ffac5c3e7160e6c36d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d5dae5bc766c0cfc31b4fb76f7fe104be0dbd74
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581503"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041264"
 ---
-# <a name="recordset-creating-and-closing-recordsets-odbc"></a>Sada záznamů: Vytváření a uzavírání sad záznamů (rozhraní ODBC)
+# <a name="recordset-creating-and-closing-recordsets-odbc"></a>Recordset: Vytváření a uzavírání sad záznamů (ODBC)
 
 Toto téma platí pro třídy knihovny MFC rozhraní ODBC.
 
@@ -71,7 +71,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-Po zavolání `Open`, můžete členské funkce a datovým členům objektu práci se záznamy. V některých případech můžete chtít spustit dotaz nebo aktualizovat sadu záznamů na změny, ke kterým došlo ve zdroji dat. Další informace najdete v tématu [sada záznamů: opětovné spuštění dotazu sadu záznamů (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
+Po zavolání `Open`, můžete členské funkce a datovým členům objektu práci se záznamy. V některých případech můžete chtít spustit dotaz nebo aktualizovat sadu záznamů na změny, ke kterým došlo ve zdroji dat. Další informace najdete v tématu [sada záznamů: Opětovné spuštění dotazu na sadu záznamů (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
 
 > [!TIP]
 >  Připojovací řetězec, který můžete použít při vývoji nemusí být stejný řetězec připojení, který konečné uživatelé potřebují. Zobecňování vaší aplikace v tomto ohledu, naleznete v tématu [zdroj dat: Správa připojení (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
@@ -107,8 +107,8 @@ Po dokončení sady záznamů, musíte vyřadit a uvolnění paměti.
 
 `Close` sady záznamů se uvolní `HSTMT` zpracovat. Tato možnost nezničí objekt jazyka C++.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Sada záznamů: Posouvání (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
-[Sada záznamů: Přidávání, aktualizace a odstranění záznamů (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+[Recordset: Posouvání (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
+[Recordset: Přidání, aktualizace nebo odstranění záznamů (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

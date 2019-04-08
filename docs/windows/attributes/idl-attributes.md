@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IDL files [C++], attributes
 - .idl files [C++]
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-ms.openlocfilehash: 6e88edf114e180a118d0467d5425d16e50d7c216
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a699e327eec056bbb36747840990bb9c7ccc259b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593489"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039496"
 ---
 # <a name="idl-attributes"></a>IDL – atributy
 
@@ -38,7 +38,7 @@ Všimněte si, že [idl_quote –](idl-quote.md) umožňuje použít MIDL konstr
 |[call_as](call-as.md)|Povolí funkci nonremotable namapovat na vzdálenou funkci.|
 |[case](case-cpp.md)|Používá se [switch_type –](switch-type.md) atribut ve sjednocení.|
 |[coclass](coclass.md)|Definici souboru IDL jako coclass třídy místech.|
-|[control](control.md)|Určuje, jestli je typ uživatelského ovládacího prvku.|
+|[ – ovládací prvek](control.md)|Určuje, jestli je typ uživatelského ovládacího prvku.|
 |[cpp_quote](cpp-quote.md)|Zadaný řetězec bez uvozovek znaků, vysílá do vygenerovaného souboru hlavičky.|
 |[defaultbind](defaultbind.md)|Označuje vlastnost podporující vazby, jednu, která nejlíp reprezentuje objekt.|
 |[defaultcollelem](defaultcollelem.md)|Používá pro optimalizaci kódu jazyka Visual Basic.|
@@ -70,7 +70,7 @@ Všimněte si, že [idl_quote –](idl-quote.md) umožňuje použít MIDL konstr
 |[lcid](lcid.md)|Umožňuje předat funkci identifikátor národního prostředí.|
 |[length_is](length-is.md)|Určuje počet elementů pole předávají.|
 |[licensed](licensed.md)|Označuje, že je licencován coclass, ke kterému se vztahuje a musí být vytvořena pomocí `IClassFactory2`.|
-|[local](local-cpp.md)|Umožňuje používat v kompilátoru MIDL jako generátor záhlaví při použití v záhlaví rozhraní. Při použití jednotlivých funkcí, určuje místní postupu, pro které jsou generovány žádné zástupné procedury.|
+|[místní](local-cpp.md)|Umožňuje používat v kompilátoru MIDL jako generátor záhlaví při použití v záhlaví rozhraní. Při použití jednotlivých funkcí, určuje místní postupu, pro které jsou generovány žádné zástupné procedury.|
 |[max_is](max-is.md)|Určuje maximální hodnotu pro pole platný index.|
 |[module](module-cpp.md)|Bloku knihovny definuje v souboru IDL.|
 |[ms_union](ms-union.md)|Určuje zarovnání reprezentace dat sítě nonencapsulated sjednocení.|
@@ -78,7 +78,7 @@ Všimněte si, že [idl_quote –](idl-quote.md) umožňuje použít MIDL konstr
 |[nonbrowsable](nonbrowsable.md)|Označuje, že člen rozhraní, nebude se zobrazovat v prohlížeči vlastností.|
 |[noncreatable](noncreatable.md)|Definuje objekt, který se nedá vytvořit instance samostatně.|
 |[nonextensible](nonextensible.md)|Určuje, že `IDispatch` implementace obsahuje pouze vlastnosti a metody uvedené v popisu rozhraní a nejde prodloužit s další členy v době běhu.|
-|[object](object-cpp.md)|Určuje vlastní rozhraní; synonymem vlastního atributu.|
+|[odkazy objektů](object-cpp.md)|Určuje vlastní rozhraní; synonymem vlastního atributu.|
 |[odl](odl.md)|Označí rozhraní jako objekt popis jazyka (ODL) rozhraní.|
 |[oleautomation](oleautomation.md)|Označuje, že je kompatibilní s automatizací rozhraní.|
 |[optional](optional-cpp.md)|Určuje volitelný parametr pro členské funkce.|
@@ -99,7 +99,7 @@ Všimněte si, že [idl_quote –](idl-quote.md) umožňuje použít MIDL konstr
 |[retval](retval.md)|Označí parametr, který přijímá návratovou hodnotu člena.|
 |[size_is](size-is.md)|Určuje velikost paměti přidělené pro velikosti ukazatele, velikosti ukazatele na velikosti ukazatele a single - nebo vícedimenzionální pole.|
 |[source](source-cpp.md)|Označuje, že je členem třídy, vlastnosti nebo metody zdroj událostí.|
-|[string](string-cpp.md)|Označuje, že jednorozměrné pole **char**, **wchar_t**, `byte`, nebo ekvivalentní pole nebo ukazatel na takové pole musí být považované za řetězec.|
+|[odkazy řetězců](string-cpp.md)|Označuje, že jednorozměrné pole **char**, **wchar_t**, `byte`, nebo ekvivalentní pole nebo ukazatel na takové pole musí být považované za řetězec.|
 |[switch_is](switch-is.md)|Určuje výraz nebo identifikátor, který funguje jako sjednocení discriminant, který vybere člen sjednocení.|
 |[switch_type](switch-type.md)|Určuje typ proměnné použité jako sjednocení discriminant.|
 |[transmit_as](transmit-as.md)|Instruuje kompilátor, aby přidružení uvedený typ, manipulovat s které klientské a serverové aplikace, přenášená typu.|
@@ -112,6 +112,6 @@ Všimněte si, že [idl_quote –](idl-quote.md) umožňuje použít MIDL konstr
 |[vi_progid](vi-progid.md)|Určuje verzi nezávislé formu ProgID.|
 |[wire_marshal](wire-marshal.md)|Určuje datový typ, který se použije pro přenos místo typu dat pro konkrétní aplikace.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Atributy podle skupin](attributes-by-group.md)

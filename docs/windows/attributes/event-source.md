@@ -11,12 +11,12 @@ helpviewer_keywords:
 - event sources
 - event handling, creating event source
 ms.assetid: 0983e36a-6127-4fbb-8a22-8dfec6564c16
-ms.openlocfilehash: e7a58abc617fcfed69020bdace60758a6bf75337
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81eba3c032a3556d1c69ad02652455ebc07ab6be
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510562"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035929"
 ---
 # <a name="eventsource"></a>event_source
 
@@ -30,7 +30,7 @@ Vytvoří zdroj událostí.
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*<br/>
+* – typ*<br/>
 Výčet jedné z následujících hodnot:
 
 - `native` pro nespravovaný kód jazyka C/C++ (výchozí nastavení pro nespravované třídy).
@@ -71,7 +71,7 @@ Když *typ* je `native`, můžete zadat `decorate=false`, pro indikaci, že rozb
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Atributy kompilátoru](compiler-attributes.md)<br/>
 [event_receiver](event-receiver.md)<br/>
