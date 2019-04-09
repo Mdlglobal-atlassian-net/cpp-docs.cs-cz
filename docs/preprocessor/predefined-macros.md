@@ -1,7 +1,7 @@
 ---
 title: Předdefinovaná makra
 ms.custom: update_every_version
-ms.date: 11/12/2018
+ms.date: 04/05/2019
 f1_keywords:
 - _ATL_VER
 - __ATOM__
@@ -143,18 +143,18 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: 9dcc0922f3715d1e583605a071535f51fa8b2f57
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.openlocfilehash: dedcab9b0addd3696749b50fef92b70081981c03
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59032450"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237208"
 ---
 # <a name="predefined-macros"></a>Předdefinovaná makra
 
-Kompilátor Visual C++ predefines určité makra preprocesoru, v závislosti na jazyk (C nebo C++), cíl kompilace a možnosti zvolené kompilátoru.
+Kompilátor Microsoft C/C++ (MSVC) predefines určité makra preprocesoru, v závislosti na jazyk (C nebo C++), cíl kompilace a možnosti zvolené kompilátoru.
 
-Jazyk Visual C++ podporuje požadované předdefinované preprocesoru makra podle standardu ANSI/ISO C99 a ISO C ++ 14, standardní. Implementace podporuje také několik Další makra preprocesoru specifické pro společnost Microsoft. Některé makra jsou definována pouze pro prostředí konkrétní sestavení nebo možnosti kompilátoru. Pokud není uvedeno, makra jsou definována v jednotce překladu, jako kdyby byly zadány jako **/D** argumenty – možnost kompilátoru. Když je definován, jsou makra analyzována pomocí preprocesoru před kompilací do zadaných hodnot. Předdefinovaná makra nepřebírají žádné argumenty a nejde předefinovat.
+MSVC podporuje předdefinovaná makra preprocesoru vyžadované standardu ANSI/ISO C99 a ISO C ++ 14 a standardů C ++ 17. Implementace podporuje také několik Další makra preprocesoru specifické pro společnost Microsoft. Některé makra jsou definována pouze pro prostředí konkrétní sestavení nebo možnosti kompilátoru. S výjimkou toho, pokud jste si poznamenali, makra jsou definována v jednotce překladu, jako kdyby byly zadány jako **/D** argumenty – možnost kompilátoru. Když je definován, jsou makra analyzována pomocí preprocesoru před kompilací do zadaných hodnot. Předdefinovaná makra nepřebírají žádné argumenty a nejde předefinovat.
 
 ## <a name="standard-predefined-identifier"></a>Standardní předdefinovaný identifikátor
 
@@ -174,7 +174,7 @@ Kompilátor podporuje těchto předdefinovaných makrech určené ISO C ++ 17 st
 
 - **&#95;&#95;cplusplus** definován jako celočíselnou hodnotu literálu při kompilaci jednotky překladu jako C++. V opačném případě undefined.
 
-- **&#95;&#95;DATUM&#95; &#95;**  datum kompilace aktuálního zdrojového souboru. Datum je řetězec o délce konstantní literál ve formátu *Mmm dd, rrrr*. Název měsíce *Mmm* je stejné jako zkrácený název měsíce v kalendářní data vygenerovaná běhové knihovny jazyka C [asctime –](../c-runtime-library/reference/asctime-wasctime.md) funkce. První znak datum *dd* je místo, pokud je hodnota menší než 10. Toto makro je vždy definováno.
+- **&#95;&#95;DATUM&#95; &#95;**  datum kompilace aktuálního zdrojového souboru. Datum je řetězec o délce konstantní literál ve formátu *Mmm dd, rrrr*. Název měsíce *Mmm* je stejné jako zkrácený název měsíce vygenerované pomocí knihovny C Runtime (CRT) [asctime –](../c-runtime-library/reference/asctime-wasctime.md) funkce. První znak datum *dd* je místo, pokud je hodnota menší než 10. Toto makro je vždy definováno.
 
 - **&#95;&#95;SOUBOR&#95; &#95;**  název aktuálního zdrojového souboru. **&#95;&#95;SOUBOR&#95; &#95;**  rozbalí na řetězcový literál znaku. Chcete-li zajistit, že se zobrazí úplnou cestu k souboru, použijte [/FC (úplná cesta ze souboru zdrojového kódu v diagnostice)](../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md). Toto makro je vždy definováno.
 
@@ -186,11 +186,11 @@ Kompilátor podporuje těchto předdefinovaných makrech určené ISO C ++ 17 st
 
 - **&#95;&#95;STDCPP&#95;vlákna&#95; &#95;**  definováno jako 1 pouze v případě program může mít více než jedno vlákno provádění a zkompilovat jako C++. V opačném případě undefined.
 
-- **&#95;&#95;ČAS&#95; &#95;**  doby překladu jednotky předzpracovaná překladu. Čas je řetězec znaků literálu ve formátu *hh: mm:*, stejné jako čas vrácený běhové knihovny jazyka C [asctime –](../c-runtime-library/reference/asctime-wasctime.md) funkce. Toto makro je vždy definováno.
+- **&#95;&#95;ČAS&#95; &#95;**  doby překladu jednotky předzpracovaná překladu. Čas je řetězec znaků literálu ve formátu *hh: mm:*, stejné jako čas vrácený CRT [asctime –](../c-runtime-library/reference/asctime-wasctime.md) funkce. Toto makro je vždy definováno.
 
 ## <a name="microsoft-specific-predefined-macros"></a>Předdefinovaná makra specifická pro společnost Microsoft
 
-Microsoft Visual C++ podporuje tyto dodatečné předdefinovaná makra.
+MSVC podporuje tyto dodatečné předdefinovaná makra.
 
 - **&#95;&#95;ATOM&#95; &#95;**  definována jako 1, pokud [/favor:ATOM](../build/reference/favor-optimize-for-architecture-specifics.md) – možnost kompilátoru je nastavená a je cílem kompilátoru je x86 nebo x64. V opačném případě undefined.
 
@@ -198,9 +198,9 @@ Microsoft Visual C++ podporuje tyto dodatečné předdefinovaná makra.
 
 - **&#95;&#95;AVX2&#95; &#95;**  definována jako 1, pokud [/arch: avx2](../build/reference/arch-x86.md) – možnost kompilátoru je nastavená a je cílem kompilátoru je x86 nebo x64. V opačném případě undefined.
 
-- **&#95;CHAR&#95;UNSIGNED char** definována jako 1, pokud výchozí **char** typ není podepsaný. To je nastavena, když [/J (výchozí znakový typ není podepsán)](../build/reference/j-default-char-type-is-unsigned.md) – možnost kompilátoru je nastavena. V opačném případě undefined.
+- **&#95;CHAR&#95;UNSIGNED char** definována jako 1, pokud výchozí **char** typ není podepsaný. Tato hodnota je definována při [/J (výchozí znakový typ není podepsán)](../build/reference/j-default-char-type-is-unsigned.md) – možnost kompilátoru je nastavena. V opačném případě undefined.
 
-- **&#95;&#95;CLR&#95;VER** definován jako celočíselného literálu, který představuje verzi CLR použitého při kompilaci aplikace. Hodnota je kódovány ve formě `Mmmbbbbb`, kde `M` je hlavní verzí modulu runtime, `mm` je dílčí verzí modulu runtime a `bbbbb` je číslo sestavení. **&#95;&#95;CLR&#95;VER** je definováno, pokud [/CLR](../build/reference/clr-common-language-runtime-compilation.md) – možnost kompilátoru je nastavena. V opačném případě undefined.
+- **&#95;&#95;CLR&#95;VER** definované jako celočíselný literál, který představuje verze Common Language Runtime (CLR) použít ke kompilaci aplikace. Hodnota je kódovány ve formě `Mmmbbbbb`, kde `M` je hlavní verzí modulu runtime, `mm` je dílčí verzí modulu runtime a `bbbbb` je číslo sestavení. **&#95;&#95;CLR&#95;VER** je definováno, pokud [/CLR](../build/reference/clr-common-language-runtime-compilation.md) – možnost kompilátoru je nastavena. V opačném případě undefined.
 
     ```cpp
     // clr_ver.cpp
@@ -213,7 +213,7 @@ Microsoft Visual C++ podporuje tyto dodatečné předdefinovaná makra.
 
 - **&#95;Ovládací PRVEK&#95;TOK&#95;GUARD** definována jako 1, pokud [/Guard: CF (povolení ochrany toku řízení)](../build/reference/guard-enable-control-flow-guard.md) – možnost kompilátoru je nastavena. V opačném případě undefined.
 
-- **&#95;&#95;Čítač&#95; &#95;**  Expands literálu s celým číslem, který začíná na 0 a zvyšuje o 1 pokaždé, když se používá ve zdrojovém souboru nebo záhlaví zahrnutém ve zdrojového souboru. **&#95;&#95;Čítač&#95; &#95;**  si pamatuje svůj stav při použití předkompilovaných hlaviček. Toto makro je vždy definováno.
+- **&#95;&#95;Čítač&#95; &#95;**  Expands na celé literál, který začíná hodnotou 0. Hodnota se zvyšuje o 1 pokaždé, když se používá ve zdrojovém souboru nebo v záhlaví zahrnutém ve zdrojového souboru. **&#95;&#95;Čítač&#95; &#95;**  si pamatuje svůj stav při použití předkompilovaných hlaviček. Toto makro je vždy definováno.
 
   Tento příklad používá `__COUNTER__` pro přiřazení jedinečných identifikátorů pro tři různé objekty stejného typu. `exampleClass` Konstruktoru přijímá jako parametr celé číslo. V `main`, aplikace deklaruje především tři objekty typu `exampleClass`pomocí `__COUNTER__` jako parametrem jedinečného identifikátoru:
 
@@ -302,7 +302,7 @@ Microsoft Visual C++ podporuje tyto dodatečné předdefinovaná makra.
    }
    ```
 
-- **&#95;&#95;Technologie INTELLISENSE&#95; &#95;**  definovaný jako předat 1 během kompilátoru technologie IntelliSense v integrovaném vývojovém prostředí sady Visual Studio. V opačném případě undefined. Toto makro můžete použít pro ochranu kódu technologie IntelliSense kompilátor neobsahuje pochopit, nebo můžete přepínat mezi sestavení a technologie IntelliSense kompilátoru. Další informace najdete v tématu [řešení potíží s tipy pro IntelliSense pomalost](https://blogs.msdn.microsoft.com/vcblog/2011/03/29/troubleshooting-tips-for-intellisense-slowness/).
+- **&#95;&#95;Technologie INTELLISENSE&#95; &#95;**  definovaný jako předat 1 během kompilátoru technologie IntelliSense v integrovaném vývojovém prostředí sady Visual Studio. V opačném případě undefined. Toto makro můžete použít pro ochranu kódu kompilátoru IntelliSense nebude pochopit, nebo pomocí něho můžete přepínat mezi sestavení a technologie IntelliSense kompilátoru. Další informace najdete v tématu [řešení potíží s tipy pro IntelliSense pomalost](https://devblogs.microsoft.com/cppblog/troubleshooting-tips-for-intellisense-slowness/).
 
 - **&#95;ISO&#95;VOLATILE** definována jako 1, pokud [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) – možnost kompilátoru je nastavena. V opačném případě undefined.
 
@@ -314,13 +314,13 @@ Microsoft Visual C++ podporuje tyto dodatečné předdefinovaná makra.
 
 - **&#95;M&#95;ARM&#95;ARMV7VE** definována jako 1, pokud [/arch:ARMv7VE](../build/reference/arch-arm.md) – možnost kompilátoru je nastaven pro kompilaci, které se zaměřují procesory ARM. V opačném případě undefined.
 
-- **&#95;M&#95;ARM&#95;FP** definován jako literál celočíselnou hodnotu, která označuje, které [/arch](../build/reference/arch-arm.md) – možnost kompilátoru byl nastaven, pokud je cíl kompilace s procesorem ARM. V opačném případě undefined.
+- **&#95;M&#95;ARM&#95;FP** definován jako literál celočíselnou hodnotu, která označuje, které [/arch](../build/reference/arch-arm.md) byl nastaven – možnost kompilátoru pro cíle procesoru ARM. V opačném případě undefined.
 
-  - V rozsahu 30-39, pokud žádné `/arch` byla zadána možnost ARM, určující výchozí architektura pro ARM byl nastaven (`VFPv3`).
+  - Číslo v rozsahu 30-39, pokud žádné `/arch` byla zadána možnost ARM, určující výchozí architektura pro ARM byl nastaven (`VFPv3`).
 
-  - V rozsahu 40-49 if `/arch:VFPv4` byl nastaven.
+  - Hodnota v rozsahu 40-49 if `/arch:VFPv4` byl nastaven.
 
-  - Zobrazit [/arch (ARM)](../build/reference/arch-arm.md) Další informace.
+  - Další informace najdete v tématu [/arch (ARM)](../build/reference/arch-arm.md).
 
 - **&#95;M&#95;ARM64** definována jako 1 pro soubory, které se zaměřují na 64bitové procesory ARM. V opačném případě undefined.
 
@@ -346,23 +346,23 @@ Microsoft Visual C++ podporuje tyto dodatečné předdefinovaná makra.
 
   - 1, pokud `/arch:SSE` – možnost kompilátoru byl nastaven.
 
-  - Pokud 2 `/arch:SSE2`, `/arch:AVX` nebo `/arch:AVX2` – možnost kompilátoru byl nastaven. Tato hodnota je výchozí, pokud `/arch` – možnost kompilátoru nebyl zadán. Když `/arch:AVX` není zadána, makro **&#95; &#95;AVX&#95; &#95;** je také definováno. Když `/arch:AVX2` není zadána, obě **&#95; &#95;AVX&#95; &#95;** a **&#95; &#95;AVX2&#95; &#95;** jsou také definovány.
+  - Pokud 2 `/arch:SSE2`, `/arch:AVX`, nebo `/arch:AVX2` – možnost kompilátoru byl nastaven. Tato hodnota je výchozí, pokud `/arch` – možnost kompilátoru nebyl zadán. Když `/arch:AVX` není zadána, makro **&#95; &#95;AVX&#95; &#95;** je také definováno. Když `/arch:AVX2` není zadána, obě **&#95; &#95;AVX&#95; &#95;** a **&#95; &#95;AVX2&#95; &#95;** jsou také definovány.
 
-  - Zobrazit [/arch (x86)](../build/reference/arch-x86.md) Další informace.
+  - Další informace najdete v tématu [/arch (x86)](../build/reference/arch-x86.md).
 
 - **&#95;M&#95;X64** definovaný jako celočíselný literál hodnotu 100 kompilací této cílové x64 procesory. V opačném případě undefined.
 
 - **&#95;SPRAVOVANÉ** definována jako 1, pokud [/CLR](../build/reference/clr-common-language-runtime-compilation.md) – možnost kompilátoru je nastavena. V opačném případě undefined.
 
-- **&#95;MSC&#95;sestavení** definován jako celočíselného literálu, který obsahuje element číslo revize čísla verze kompilátoru. Číslo revize je čtvrtý prvek čísla verze odděleného tečkou. Pokud číslo verze kompilátoru jazyka Visual C++ je 15.00.20706.01, například  **&#95;MSC&#95;sestavení** – makro vyhodnotí na hodnotu 1. Toto makro je vždy definováno.
+- **&#95;MSC&#95;sestavení** definován jako celočíselného literálu, který obsahuje element číslo revize čísla verze kompilátoru. Číslo revize je čtvrtý prvek čísla verze odděleného tečkou. Pokud číslo verze kompilátoru Microsoft C/C++ je 15.00.20706.01, například  **&#95;MSC&#95;sestavení** – makro vyhodnotí na hodnotu 1. Toto makro je vždy definováno.
 
-- **&#95;MSC&#95;rozšíření** definována jako 1, pokud [/Ze (Povolit jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md) – možnost kompilátoru je nastavena, což je výchozí hodnota. V opačném případě undefined.
+- **&#95;MSC&#95;rozšíření** definována jako 1, pokud ve výchozím nastavení [/Ze (Povolit jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md) – možnost kompilátoru je nastavena. V opačném případě undefined.
 
-- **&#95;MSC&#95;úplné&#95;VER** definován jako literál celého čísla, který kóduje hlavní, podverze a sestavení počet prvků číslo verze kompilátoru. Hlavní číslo je první prvek čísla verze odděleného tečkou, vedlejší číslo je druhý prvek a číslo sestavení je třetí prvek. Pokud číslo verze kompilátoru jazyka Visual C++ je 15.00.20706.01, například  **&#95;MSC&#95;úplné&#95;VER** 150020706 vyhodnotí jako makra. Zadejte `cl /?` příkazového řádku, chcete-li zobrazit číslo verze kompilátoru. Toto makro je vždy definováno.
+- **&#95;MSC&#95;úplné&#95;VER** definován jako literál celého čísla, který kóduje hlavní, podverze a sestavení počet prvků číslo verze kompilátoru. Hlavní číslo je první prvek čísla verze odděleného tečkou, vedlejší číslo je druhý prvek a číslo sestavení je třetí prvek. Pokud číslo verze kompilátoru Microsoft C/C++ je 15.00.20706.01, například  **&#95;MSC&#95;úplné&#95;VER** 150020706 vyhodnotí jako makra. Zadejte `cl /?` příkazového řádku, chcete-li zobrazit číslo verze kompilátoru. Toto makro je vždy definováno.
 
-- **&#95;MSC&#95;VER** definován jako literál celého čísla, který kóduje hlavní a dílčí číslo prvky číslo verze kompilátoru. Hlavní číslo je první prvek čísla verze odděleného tečkou a vedlejší číslo je druhá část. Pokud číslo verze kompilátoru jazyka Visual C++ je 17.00.51106.1, například  **&#95;MSC&#95;VER** – makro vyhodnotí jako 1700. Zadejte `cl /?` příkazového řádku, chcete-li zobrazit číslo verze kompilátoru. Toto makro je vždy definováno.
+- **&#95;MSC&#95;VER** definován jako literál celého čísla, který kóduje hlavní a dílčí číslo prvky číslo verze kompilátoru. Hlavní číslo je první prvek čísla verze odděleného tečkou a vedlejší číslo je druhá část. Pokud číslo verze kompilátoru Microsoft C/C++ je 17.00.51106.1, například  **&#95;MSC&#95;VER** – makro vyhodnotí jako 1700. Zadejte `cl /?` příkazového řádku, chcete-li zobrazit číslo verze kompilátoru. Toto makro je vždy definováno.
 
-   |Verze Visual Studio|&#95;MSC&#95;VER|
+   |Verze Visual Studio|**&#95;MSC&#95;VER**|
    |-|-|
    |Visual Studio 6.0|1200|
    |Visual Studio .NET 2002 (7.0)|1300|
@@ -380,22 +380,23 @@ Microsoft Visual C++ podporuje tyto dodatečné předdefinovaná makra.
    |Visual Studio 2017 verze 15.7|1914|
    |Visual Studio 2017 verze 15.8|1915|
    |Visual Studio 2017 verze 15.9|1916|
+   |Visual Studio RTW 2019 (16.0)|1920|
 
-   K otestování verzemi kompilátoru. nebo aktualizace v dané verzi sady Visual Studio nebo později, použijte **>=** – operátor (větší nebo rovno) k porovnání  **&#95;MSC&#95;VER** proti, který označuje verze. Pokud máte několik verzí pro porovnání vzájemně se vylučující způsobem, doporučujeme, abyste že si objednat vaše porovnání v sestupném pořadí podle čísla verze. Například tento kód kontroluje kompilátory, které jsou všeobecně dostupné v sadě Visual Studio 2015 a novější, pak kompilátory vydané v nebo po sadu Visual Studio 2013, pak provede akci pro všechny kompilátory vydané dřív než Visual Studio 2013:
+   K otestování verzemi kompilátoru. nebo aktualizace v dané verzi sady Visual Studio nebo později, použijte **>=** operátor. Vám pomůže ho v podmíněnou direktivu porovnání  **&#95;MSC&#95;VER** proti této známé verze. Pokud máte několik verzí vzájemně se vylučující k porovnání, pořadí vaše porovnání v sestupném pořadí podle čísla verze. Například tento kód kontroluje kompilátory, které jsou všeobecně dostupné v sadě Visual Studio 2017 nebo novější. V dalším kroku kontroluje kompilátory vydané v nebo po sadu Visual Studio 2015. Potom vyhledá všechny kompilátory vydané dřív než Visual Studio 2015:
 
    ```cpp
-   #if _MSC_VER >= 1900
+   #if _MSC_VER >= 1910
    // . . .
-   #elif _MSC_VER >= 1800
+   #elif _MSC_VER >= 1900
    // . . .
    #else
    // . . .
    #endif
    ```
 
-   Další informace najdete v tématu [verze kompilátoru Visual C++](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/visual-c-compiler-version/) v blogu týmu Visual C++.
+   Další informace najdete v tématu [verze kompilátoru Visual C++](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/) na blogu týmu Microsoft C++.
 
-- **&#95;MSVC&#95;LANG** definován jako celočíselného literálu, který určuje standard jazyka C++, který je cílem kompilátoru. Při kompilaci jako C++, makro je literál celočíselnou hodnotu 201402L, pokud [/std: c ++ 14](../build/reference/std-specify-language-standard-version.md) – možnost kompilátoru je nastavena, nebo ve výchozím nastavení; to je nastaven na 201703 L-li [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md) – možnost kompilátoru je nastavena; a je nastaven na hodnotu vyšší, Neurčeno hodnotu v případě [/std: c ++ nejnovější](../build/reference/std-specify-language-standard-version.md). V opačném případě makro není definováno.  **&#95;MSVC&#95;LANG** – makro a [/STD (určení standardní jazykové verze)](../build/reference/std-specify-language-standard-version.md) jsou k dispozici od verze Visual Studio 2015 Update 3 – možnosti kompilátoru.
+- **&#95;MSVC&#95;LANG** definován jako celočíselného literálu, který určuje standard jazyka C++, který je cílem kompilátoru. Je nastavena pouze v kódu zkompilovaném jako C++. Celočíselný literál je makro hodnota 201402L ve výchozím nastavení, nebo když [/std: c ++ 14](../build/reference/std-specify-language-standard-version.md) je zadána možnost kompilátoru. Makra je nastavena na 201703L, pokud [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md) je zadána možnost kompilátoru. Je nastavena na hodnotu vyšší, Neurčeno při [/std: c ++ nejnovější](../build/reference/std-specify-language-standard-version.md) je zadána možnost. V opačném případě makro není definováno.  **&#95;MSVC&#95;LANG** – makro a [/STD (určení standardní jazykové verze)](../build/reference/std-specify-language-standard-version.md) jsou k dispozici od verze Visual Studio 2015 Update 3 – možnosti kompilátoru.
 
 - **&#95;&#95;MSVC&#95;RUNTIME&#95;KONTROLUJE** definována jako 1, pokud jeden z [/RTC](../build/reference/rtc-run-time-error-checks.md) nastavit možnosti kompilátoru. V opačném případě undefined.
 
@@ -403,7 +404,7 @@ Microsoft Visual C++ podporuje tyto dodatečné předdefinovaná makra.
 
 - **&#95;NATIVNÍ&#95;WCHAR&#95;T&#95;definované** definována jako 1, pokud [/Zc: wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) – možnost kompilátoru je nastavena. V opačném případě undefined.
 
-- **&#95;OpenMP –** definované jako celé číslo literálu 200203 představující datum specifikace OpenMP implementované ve Visual C++, pokud [/OpenMP (povolit podporu OpenMP 2.0)](../build/reference/openmp-enable-openmp-2-0-support.md) – možnost kompilátoru je nastavena. V opačném případě undefined.
+- **&#95;OpenMP –** definované jako celé číslo literálu 200203, pokud [/OpenMP (povolit podporu OpenMP 2.0)](../build/reference/openmp-enable-openmp-2-0-support.md) – možnost kompilátoru je nastavena. Tato hodnota představuje datum specifikace OpenMP implementované ve MSVC. V opačném případě undefined.
 
    ```cpp
    // _OPENMP_dir.cpp
@@ -416,7 +417,7 @@ Microsoft Visual C++ podporuje tyto dodatečné předdefinovaná makra.
 
 - **&#95;Nástroj PREFAST&#95;**  definována jako 1, pokud [/ analyze](../build/reference/analyze-code-analysis.md) – možnost kompilátoru je nastavena. V opačném případě undefined.
 
-- **&#95;&#95;Časové razítko&#95; &#95;**  definovaný jako řetězec literálu, který obsahuje datum a čas poslední změny aktuálního zdrojového souboru, ve formuláři zkrácený, konstantní délka vrácený běhové knihovny jazyka C [asctime –](../c-runtime-library/reference/asctime-wasctime.md) funkce, například `Fri 19 Aug 13:32:58 2016`. Toto makro je vždy definováno.
+- **&#95;&#95;Časové razítko&#95; &#95;**  definovaný jako řetězec literálu, který obsahuje datum a čas poslední změny aktuálního zdrojového souboru, ve formuláři zkrácený, konstantní délka vrácený CRT [asctime –](../c-runtime-library/reference/asctime-wasctime.md) Funkce, například `Fri 19 Aug 13:32:58 2016`. Toto makro je vždy definováno.
 
 - **&#95;VC&#95;NODEFAULTLIB** definována jako 1, pokud [/Zl (vynechat název výchozí knihovny)](../build/reference/zl-omit-default-library-name.md) – možnost kompilátoru je nastavena. V opačném případě undefined.
 
@@ -428,7 +429,7 @@ Microsoft Visual C++ podporuje tyto dodatečné předdefinovaná makra.
 
 - **&#95;WINRT&#95;DLL** definována jako 1, pokud zkompilovat jako C++ a obě [/ZW (kompilace Windows Runtime)](../build/reference/zw-windows-runtime-compilation.md) a [/LD nebo /LDd](../build/reference/md-mt-ld-use-run-time-library.md) jsou nastavené možnosti kompilátoru. V opačném případě undefined.
 
-Makra preprocesoru používá k určení verze knihovny ATL nebo MFC nejsou předdefinovaná v nástroji kompilátor. Tato makra jsou definovány v záhlaví knihovny, proto nejsou definovaná v direktivách preprocesoru, předtím, než je součástí požadované záhlaví.
+Kompilátorem jsou předdefinovány žádné makra preprocesoru, které určují verzi knihovny ATL nebo MFC. Záhlaví knihovny MFC a ATL definice maker tyto verze interně. Se už není definována v direktivách preprocesoru před požadované záhlaví je součástí.
 
 - **&#95;ATL –&#95;VER** definované v \<atldef.h > jako celočíselného literálu, který binárně kóduje ATL číslo verze.
 
