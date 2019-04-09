@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: 2dada25ea712b7bb6d48d80525c824a0457b18cf
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 37ebcc646864774b15513c9e1891ba14e0705298
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220545"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237195"
 ---
 # <a name="how-to-design-for-exception-safety"></a>Postupy: Návrh pro bezpečnost výjimek
 
@@ -23,7 +23,7 @@ Bez ohledu na to, jak funkce výjimku zpracovává, musí být navržena podle n
 
 ### <a name="keep-resource-classes-simple"></a>Třídy prostředků ponechejte jednoduché
 
-Když ve třídách zapouzdříte ruční správu prostředků, použijte třídu, která kromě správy jednotlivých prostředků nedělá nic jiného, jinak může dojít ke vzniku úniků. Použití [inteligentní ukazatele](../cpp/smart-pointers-modern-cpp.md) Pokud je to možné, jak je znázorněno v následujícím příkladu. Tento příklad je záměrně umělý a zjednodušený, aby byly zvýrazněny rozdíly při použití `shared_ptr`.
+Při ruční resource management ve třídách zapouzdříte, použijte třídu, která nemá žádný účinek kromě správy na jediný prostředek. Udržováním třídy jednoduché, snížíte riziko zavlečení nedostatku prostředků. Použití [inteligentní ukazatele](../cpp/smart-pointers-modern-cpp.md) Pokud je to možné, jak je znázorněno v následujícím příkladu. Tento příklad je záměrně umělý a zjednodušený, aby byly zvýrazněny rozdíly při použití `shared_ptr`.
 
 ```cpp
 // old-style new/delete version

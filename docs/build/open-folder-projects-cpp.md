@@ -4,12 +4,12 @@ ms.date: 03/21/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual C++
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 2dedd56759b6bb49260221e22218da6f4300a970
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 380a96bcb1a119b2b6d4104d60936217d1350fbb
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356085"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237130"
 ---
 # <a name="open-folder-projects-for-c"></a>Otevřete složku projekty jazyka C++
 
@@ -107,7 +107,3 @@ Pokud chcete zadat další argumenty, jednoduše je přidejte do `args` pole JSO
 ```
 
 Při ukládání tohoto souboru, nová konfigurace se zobrazí v rozevíracím seznamu cíl ladění a vyberte spuštění ladicího programu. Můžete vytvořit mnoho konfiguraci ladění, jak můžete pro libovolný počet spustitelné soubory. Pokud stisknete **F5** teď ladicí program spustí a přístupů všechny zarážky, možná jste už nastavili. Všechny známé ladicí program systému windows a jejich funkci jsou teď k dispozici.
-
-## <a name="see-also"></a>Viz také:
-
-

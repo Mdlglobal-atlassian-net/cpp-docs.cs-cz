@@ -1,6 +1,6 @@
 ---
 title: /Zp (zarovnání členů struktury)
-ms.date: 12/17/2018
+ms.date: 04/04/2019
 f1_keywords:
 - /zp
 - VC.Project.VCCLCompilerTool.StructMemberAlignment
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zp compiler option [C++]
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-ms.openlocfilehash: d30e61137fc5ff8f6a5501ac7815edafc18f7680
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d76cd93c7af4228bff8f73fa3bcbf40fa149b0be
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807686"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237161"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (zarovnání členů struktury)
 
@@ -28,7 +28,7 @@ Určuje, jak členy struktury jsou zkomprimována do paměti a určuje stejný k
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud zadáte **/zp**_n_ možnost, každý člen struktury po prvním uložen velikosti typ člena nebo *n*-hranice (kde *n* je 1, 2, 4, 8 nebo 16), podle toho, co je menší.
+**/Zp**_n_ možnost instruuje kompilátor, kam se mají ukládat každý člen struktury. Kompilátor ukládá členy po první z nich na hranici, která je menší velikosti typ člena nebo *n*-bajtovou hranici.
 
 K dispozici balení hodnoty jsou popsány v následující tabulce:
 
@@ -37,13 +37,13 @@ K dispozici balení hodnoty jsou popsány v následující tabulce:
 |1|Sbalí struktury na 1bajtových hranicích. Stejné jako **/zp**.|
 |2|Sbalí struktury na 2bajtových hranicích.|
 |4|Sbalí struktury na 4bajtových hranicích.|
-|8|Sbalí struktury na 8bajtových hranicích (výchozí).|
-|16| Sbalí struktury na 16bajtových hranicích.|
+|8|Sbalí struktury na 8bajtových hranicích (výchozí nastavení pro x86, ARM a ARM64).|
+|16| Sbalí struktury na 16bajtových hranicích (výchozí nastavení pro x64).|
 
-Tuto možnost nepoužívejte, pokud nemáte konkrétní souvislost požadavky.
+Nepoužívejte tuto možnost, pokud máte požadavky na konkrétní souvislost.
 
 > [!WARNING]
-> Předpokládejme hlaviček jazyka C++ v sadě Windows SDK **/zp8** balení. Pokud může dojít k poškození paměti **/zp** nastavení se změní při použití sady Windows SDK záhlaví.
+> Nastavení hlaviček jazyka C++ v sadě Windows SDK a předpokládají **/zp8** balení interně. Pokud může dojít k poškození paměti **/zp** nastavení se změní v záhlaví Windows SDK. Záhlaví neovlivní žádné **/zp** možnost nastavíte na příkazovém řádku.
 
 Můžete také použít [pack](../../preprocessor/pack.md) na balení struktury ovládacího prvku. Další informace o zarovnání naleznete v následujících tématech:
 
@@ -59,7 +59,7 @@ Můžete také použít [pack](../../preprocessor/pack.md) na balení struktury 
 
 1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Vyberte **C/C++** > **generování kódu** stránku vlastností.
+1. Vyberte **vlastnosti konfigurace** > **C/C++** > **generování kódu** stránku vlastností.
 
 1. Upravit **zarovnání členů struktury** vlastnost.
 
@@ -69,5 +69,5 @@ Můžete také použít [pack](../../preprocessor/pack.md) na balení struktury 
 
 ## <a name="see-also"></a>Viz také:
 
-- [Možnosti kompilátoru MSVC](compiler-options.md)
-- [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)
+[Možnosti kompilátoru MSVC](compiler-options.md) \
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)
