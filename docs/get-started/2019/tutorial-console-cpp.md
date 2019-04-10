@@ -6,12 +6,12 @@ ms.date: 03/25/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: b558b2e0c381b8521fe0ba5f18647a933175ce07
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.openlocfilehash: f1e6b06c3212ae3ff192fdf402c0167575161656
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58867091"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59430785"
 ---
 # <a name="create-a-c-console-app-project"></a>Vytvoření projektu aplikace konzoly C++
 
@@ -34,6 +34,9 @@ Visual Studio používá *projekty* organizaci kódu pro aplikace, a *řešení*
 1. V seznamu šablon projektu vyberte **konzolovou aplikaci**, klikněte na tlačítko **Další**.
 
    ![Vyberte šablonu Konzolová aplikace](./media/calc-vs2019-choose-console-app.png "vyberte šablonu Konzolová aplikace")
+
+   > [!Important]
+   > Ujistěte se, že zvolíte C++ verzi **konzolovou aplikaci** šablony. Má **C++**, **Windows**, a **konzoly** značky a ikona má "++" v horním.
 
 1. V **konfigurovat nový projekt** dialogové okno, vyberte **název projektu** textové pole, pojmenujte svůj projekt nové *CalculatorTutorial*, klikněte na tlačítko **Create** .
 
