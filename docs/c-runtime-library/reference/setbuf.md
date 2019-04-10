@@ -1,6 +1,6 @@
 ---
 title: setbuf
-ms.date: 11/04/2016
+ms.date: 04/08/2019
 apiname:
 - setbuf
 apilocation:
@@ -22,12 +22,12 @@ helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: 3b5fbccd304d406131b0c4f7d16a289f80484642
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89f8a4d8eb853c774f4f7299ceaa9b9eb6177b42
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440493"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424167"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -44,7 +44,7 @@ void setbuf(
 
 ### <a name="parameters"></a>Parametry
 
-*Stream*<br/>
+*datový proud*<br/>
 Ukazatel na **souboru** struktury.
 
 *Vyrovnávací paměti*<br/>
@@ -52,9 +52,9 @@ Uživatel přidělené vyrovnávací paměti.
 
 ## <a name="remarks"></a>Poznámky
 
-**Setbuf –** ovládacích prvků do vyrovnávací paměti pro funkci *stream*. *Stream* argument musí odkazovat na otevřený soubor, který nebyl číst nebo zapisovat. Pokud *vyrovnávací paměti* argument je **NULL**, je ve špatném vyrovnávací paměti datového proudu. Pokud ne, vyrovnávací paměti musí odkazovat na pole znaků o délce **BUFSIZ**, kde **BUFSIZ** je velikost vyrovnávací paměti, jak jsou definovány v STDIO. H. Uživatel zadal vyrovnávací paměť, místo výchozí systému přidělené vyrovnávací paměti pro daný datový proud, se používá pro vstupně-výstupní operace ukládání do vyrovnávací paměti. **Stderr** zrušení ve vyrovnávací paměti ve výchozím nastavení je ale můžete použít **setbuf –** přiřadit vyrovnávací paměti do **stderr**.
+**Setbuf –** ovládacích prvků do vyrovnávací paměti pro funkci *stream*. *Stream* argument musí odkazovat na otevřený soubor, který nebyl číst nebo zapisovat. Pokud *vyrovnávací paměti* argument je **NULL**, je datový proud bez vyrovnávací paměti. Pokud ne, vyrovnávací paměti musí odkazovat na pole znaků o délce **BUFSIZ**, kde **BUFSIZ** je velikost vyrovnávací paměti, jak jsou definovány v STDIO. H. Uživatel zadal vyrovnávací paměť, místo výchozí systému přidělené vyrovnávací paměti pro daný datový proud, se používá pro vstupně-výstupní operace ukládání do vyrovnávací paměti. **Stderr** datový proud je bez vyrovnávací paměti ve výchozím nastavení, ale můžete použít **setbuf –** přiřadit vyrovnávací paměti do **stderr**.
 
-**setbuf –** nahradila ji [setvbuf –](setvbuf.md), což je upřednostňovaný rutiny pro nový kód. **setbuf –** je zachován z důvodu kompatibility s existujícím kódem.
+**setbuf –** nahradila ji [setvbuf –](setvbuf.md), což je upřednostňovaný rutiny pro nový kód. Na rozdíl od **setvbuf –**, **setbuf –** nemá možnost nijak hlášení chyb. **setvbuf –** také umožňuje řídit režimu vyrovnávací paměti a velikost vyrovnávací paměti. **setbuf –** existuje z důvodu kompatibility s existujícím kódem.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -105,7 +105,7 @@ stream2 buffering disabled
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[I/O proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>
 [fflush](fflush.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>

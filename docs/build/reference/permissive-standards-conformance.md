@@ -1,6 +1,6 @@
 ---
 title: / permissive-(shoda se standardy)
-ms.date: 06/21/2018
+ms.date: 03/08/2019
 f1_keywords:
 - /permissive
 - VC.Project.VCCLCompilerTool.ConformanceMode
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 5590996c7598016365bb122977084835830f95ab
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 05089ef4f0a516f932d82f13be979da572701ae2
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820790"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424128"
 ---
 # <a name="permissive--standards-conformance"></a>/ permissive-(shoda se standardy)
 
@@ -35,15 +35,15 @@ Ve výchozím nastavení **/ permissive-** v nové projekty vytvořené pomocí 
 
 **/ Permissive-** možnost je kompatibilní s téměř všechny soubory hlavičky z nejnovější sady Windows, jako je například Software Development Kit (SDK) nebo Windows Driver Kit (WDK), od Windows Fall Creators SDK (10.0.16299.0). Starší verze sady SDK se pravděpodobně nezdaří zkompilovat v rámci **/ permissive-** různé zdroje důvodů shodu kódu. Kompilátor a sady SDK příjemce na časové ose jinou verzi, proto nejsou některé zbývající problémy. Problémy s konkrétní záhlaví souboru, naleznete v tématu [problémy záhlaví Windows](#windows-header-issues) níže.
 
-**/ Permissive-** sady možností [/Zc: strictstrings](zc-conformance.md) a [/Zc: rvaluecast](zc-conformance.md) možnosti vyhovující chování. Použije se výchozí hodnota nonkonformní chování. Můžete předat konkrétní **/Zc** možnosti po **/ permissive-** na příkazový řádek pro toto chování přepsat.
+**/ Permissive-** sady možností [/Zc: referencebinding](zc-referencebinding-enforce-reference-binding-rules.md), [/Zc: strictstrings](zc-strictstrings-disable-string-literal-type-conversion.md), a [/Zc: rvaluecast](zc-rvaluecast-enforce-type-conversion-rules.md) možnosti vyhovující chování. Výchozí chování nonkonformní tyto možnosti. Můžete předat konkrétní **/Zc** možnosti po **/ permissive-** na příkazový řádek pro toto chování přepsat.
 
-Ve verzích od kompilátoru v sadě Visual Studio 2017 verze 15.3 **/ permissive-** sady možností [/Zc: ternary](zc-ternary.md) možnost. Kompilátor také implementuje další požadavky na název pro dvoufázové vyhledávání. Když **/ permissive-** nastavena možnost, kompilátor analyzuje funkce a třídy definice šablon identifikace nezávislé a závislé názvů používaných v šablonách. V této verzi se provádí pouze název analýzu závislostí.
+Ve verzích od kompilátoru v sadě Visual Studio 2017 verze 15.3 **/ permissive-** sady možností [/Zc: ternary](zc-ternary.md) možnost. Kompilátor také implementuje další požadavky na název pro dvoufázové vyhledávání. Když **/ permissive-** nastavena možnost, kompilátor analyzuje definice šablony funkce a třídy a identifikuje nezávislé a závislé názvů používaných v šablonách. V této verzi se provádí pouze název analýzu závislostí.
 
 Rozšíření specifické pro prostředí a jazyk oblastí, které standardní opustí až po provedení nejsou ovlivněny **/ permissive-**. Například specifické pro společnost Microsoft `__declspec`, konvence volání a klíčová slova a direktivy pragma specifických pro kompilátor nebo atributy zpracování strukturovaných výjimek nejsou označeny příznakem kompilátorem v **/ permissive-** režimu.
 
 **/ Permissive-** možnost využívá podporu shoda v aktuální verzi kompilátoru k určení, které jazykové konstrukce jsou nevyhovující. Možnost určí, jestli váš kód odpovídá na konkrétní verzi jazyka C++ standard. Chcete-li povolit všechny implementované kompilátoru podporu pro nejnovější koncept standardu, použijte [/std:latest](std-specify-language-standard-version.md) možnost. Chcete-li omezit podporu kompilátoru aktuální implementace standardu C ++ 17, použijte [/std: c ++ 17](std-specify-language-standard-version.md) možnost. Chcete-li omezit podporu kompilátoru tak, aby lépe odpovídaly standard C ++ 14, použijte [/std: c ++ 14](std-specify-language-standard-version.md) možnost, která je výchozí nastavení.
 
-Ne všechny C ++ 11, C ++ 14 nebo C ++ 17 vyhovující standardům kódu je podporována kompilátorem MSVC v sadě Visual Studio 2017. V závislosti na verzi sady Visual Studio **/ permissive-** možnost nemusí rozpoznat problémy týkající se některé aspekty dvoufázové vyhledávání názvů vazby nekonstantní odkaz na dočasný, zpracuje kopírování inicializace jako přímé init, povolení více uživatelem definovaných převodů inicializace nebo alternativní tokeny pro logické operátory a dalších oblastí shoda není podporováno. Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete v tématu [nestandardní chování](../../cpp/nonstandard-behavior.md). Chcete-li získat maximum z **/ permissive-**, aktualizujte na nejnovější verzi sady Visual Studio.
+Ne všechny C ++ 11, C ++ 14 nebo C ++ 17 vyhovující standardům kódu je podporována kompilátorem MSVC se všemi verzemi sady Visual Studio 2017. V závislosti na verzi sady Visual Studio **/ permissive-** možnost nemusí rozpoznat problémy týkající se některé aspekty dvoufázové vyhledávání názvů vazby nekonstantní odkaz na dočasný, zpracuje kopírování inicializace jako přímé init, povolení více uživatelem definovaných převodů inicializace nebo alternativní tokeny pro logické operátory a dalších oblastí shoda není podporováno. Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete v tématu [nestandardní chování](../../cpp/nonstandard-behavior.md). Chcete-li získat maximum z **/ permissive-**, aktualizujte na nejnovější verzi sady Visual Studio.
 
 ### <a name="how-to-fix-your-code"></a>Postup opravy kódu
 
@@ -56,7 +56,7 @@ void func(int default); // Error C2321: 'default' is a keyword, and
                         // cannot be used in this context
 ```
 
-#### <a name="lookup-members-in-dependent-base"></a>Vyhledávání členy v základním závislé
+#### <a name="look-up-members-in-dependent-base"></a>Vyhledání členy v závislé base
 
 ```cpp
 template <typename T>
@@ -237,7 +237,7 @@ class ATL_NO_VTABLE CFooImpl : public ICustom,
 
 Ve verzích kompilátoru před Visual Studio 2017 verze 15.3, kompilátor přijmout argumenty pro podmíněný operátor (nebo tříhodnotový operátor) `?:` , které jsou považovány za nejednoznačné Standard. V **/ permissive-** režimu, kompilátor nyní vyvolá jednu nebo více diagnostiky v případech, kdy se zkompiloval bez diagnostiky v dřívějších verzích.
 
-Commmon chyby, které mohou být důsledkem této změny patří:
+Běžné chyby, které mohou být důsledkem této změny patří:
 
 - Chyba C2593: 'operator'? je nejednoznačný
 
@@ -247,7 +247,7 @@ Commmon chyby, které mohou být důsledkem této změny patří:
 
 - Chyba C2446: ":": žádný převod z "B" na "A"
 
-Vzor typické kód, který může způsobit potíže při některých tříd jazyka C poskytuje z jiného typu T neexplicitní konstruktor a operátor bez explicitního převodu typu T. V takovém případě argument 2. převod na typ 3. a převod 3. argument typu 2. jsou platné převody, které je nejednoznačné podle standardu.
+Vzor typické kód, který může způsobit potíže při některých tříd jazyka C poskytuje z jiného typu T neexplicitní konstruktor a operátor bez explicitního převodu typu T. Platné převody jsou v tomto případě převodu druhý argument typu třetí argument a třetí argument převodu na typ druhého argumentu. Protože obě jsou platné, je nejednoznačný podle standardu.
 
 ```cpp
 // Example 1: class that provides conversion to and initialization from some type T
@@ -313,7 +313,7 @@ const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary
 
 #### <a name="two-phase-name-look-up"></a>Název pro dvoufázové vyhledávání
 
-Když **/ permissive-** nastavena možnost, kompilátor analyzuje funkce a třídy definice šablon identifikace nezávislé a závislé názvů používaných v šablonách podle potřeby pro název pro dvoufázové vyhledávání. V sadě Visual Studio 2017 verze 15.3 se provádí analýzu závislostí název. Nezávislé názvy, které nejsou deklarovány v rámci definice šablony zejména způsobit diagnostickou zprávu znamének podle normy ISO C++. V sadě Visual Studio 2017 verze 15.7 se taky dělá vazby závislé na jiné názvy, které vyžadují argument závislé vyhledávání v rámci definice.
+Když **/ permissive-** nastavena možnost, kompilátor analyzuje funkce a třídy definice šablon identifikace nezávislé a závislé názvů používaných v šablonách podle potřeby pro název pro dvoufázové vyhledávání. V sadě Visual Studio 2017 verze 15.3 se provádí analýzu závislostí název. Nezávislé názvy, které nejsou deklarovány v rámci definice šablony zejména způsobit diagnostickou zprávu znamének podle normy ISO C++. V sadě Visual Studio 2017 verze 15.7 se taky dělá vazby závislé na jiné názvy, které vyžadují vyhledávání závislého na argumentu v rámci definice.
 
 ```cpp
 // dependent base

@@ -1,6 +1,6 @@
 ---
 title: /MP (sestavení pomocí několika procesů)
-ms.date: 02/22/2018
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.MultiProcessorCompilation
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MP compiler option (C++)
 - MP compiler option (C++)
 - cl.exe compiler, multi-process build
-ms.openlocfilehash: 8a66f6f6f1f4ce77e33df992b915be9ca5dcce70
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: e005b0314e87270e81dbb155dfdaa67be067cd3f
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808453"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424141"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (sestavení pomocí několika procesů)
 
@@ -51,7 +51,7 @@ Následující tabulka uvádí možnosti kompilátoru a funkce jazyka, které ne
 |--------------------------------|-----------------|
 |[#import](../../preprocessor/hash-import-directive-cpp.md) direktivy preprocesoru|Převede typy v knihovně typů na třídy jazyka C++ a pak zapíše do souboru hlaviček těchto tříd.|
 |[/E](e-preprocess-to-stdout.md), [/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Zkopíruje výstup předzpracování do standardního výstupu (**stdout**).|
-|[/Gm](gm-enable-minimal-rebuild.md)|Umožňuje přírůstkové sestavení.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Zastaralé Umožňuje přírůstkové sestavení.|
 |[/showIncludes](showincludes-list-include-files.md)|Zapíše seznam vložených souborů do standardní chyby (**stderr**).|
 |[/Yc](yc-create-precompiled-header-file.md)|Zapíše soubor předkompilované hlavičky.|
 
@@ -125,12 +125,8 @@ Pokyny pro rozhodování o tom, jestli se má použít nástroj MSBuild nebo **/
 
 - Pokud se rovnováha počet projektů a souborů na projektu, použijte MSBuild a **/MP**. Na začátku nastavit **/maxcpucount** možnost počet projektů k sestavení a **/MP** možnost počet procesorů v počítači. Měření výkonu a pak upravte nastavení výnosu z nejlepších výsledků. Opakujte tento cyklus, dokud nebudete s časem celkový počet sestavení.
 
-#### <a name="the-gm-compiler-option"></a>/Gm – možnost kompilátoru
-
-Ve výchozím nastavení, sestavení projektu umožňuje **/Gm** – možnost kompilátoru (přírůstková sestavení) pro sestavení pro ladění a zakáže ho pro verzi sestavení. Proto **/MP** – možnost kompilátoru je automaticky zakázáno v sestavení ladění, protože je v konfliktu s výchozí **/Gm** – možnost kompilátoru.
-
 ## <a name="see-also"></a>Viz také:
 
 [#import – direktiva](../../preprocessor/hash-import-directive-cpp.md)<br/>
-[Referenční dokumentace k příkazovému řádku](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
-[/Zf (rychlejší generování souborů PDB)](zf.md)<br/>
+[Referenční dokumentace pro použití v příkazovém řádku](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
+[/ZF (rychlejší generování souborů PDB)](zf.md)<br/>

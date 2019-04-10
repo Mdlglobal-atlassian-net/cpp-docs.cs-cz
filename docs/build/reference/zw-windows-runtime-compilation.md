@@ -1,6 +1,6 @@
 ---
 title: /ZW (kompilace Windows Runtime)
-ms.date: 11/04/2016
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.CompileAsWinRT
 - /zw
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - -ZW
 - Windows Runtime compiler option
 ms.assetid: 0fe362b0-9526-498b-96e0-00d7a965a248
-ms.openlocfilehash: a16482cf8d21651db9486ab19c347a4ccadf5279
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 73295866004fd506fd5f06ff25c048d14b821016
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809428"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424037"
 ---
 # <a name="zw-windows-runtime-compilation"></a>/ZW (kompilace Windows Runtime)
 
-Zkompiluje zdrojového kódu, který podporuje rozšíření součásti Visual C++ C + +/ CX pro vytváření aplikací pro univerzální platformu Windows (UPW).
+Zkompiluje zdrojový kód pro podporu Visual C++ rozšíření komponent C++/CX pro vytváření aplikací pro univerzální platformu Windows (UPW).
 
 Při použití **/ZW** ke kompilaci, vždy zadejte **/EHsc** také.
 
@@ -44,7 +44,7 @@ Pokud zadáte **/ZW** možnost, kompilátor podporuje tyto funkce:
 
 - Automatické počítání odkazů objektů prostředí Windows Runtime a automatické zrušení objektu při jeho počet odkazů dosáhne nuly.
 
-Protože přírůstkový linker nepodporuje metadat Windows zahrnuty v souborech .obj pomocí **/ZW** možnost, [/Gm (povolení minimálního opětovného sestavení)](gm-enable-minimal-rebuild.md) možnost není kompatibilní s **/ZW** .
+Protože přírůstkový linker nepodporuje metadat Windows zahrnuty v souborech .obj pomocí **/ZW** možnost, nepoužívané [/Gm (povolení minimálního opětovného sestavení)](gm-enable-minimal-rebuild.md) možnost není kompatibilní s **/ZW**.
 
 Další informace najdete v tématu [referenční dokumentace jazyka Visual C++](../../cppcx/visual-c-language-reference-c-cx.md).
 

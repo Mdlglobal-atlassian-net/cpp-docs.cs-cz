@@ -1,14 +1,14 @@
 ---
 title: Možnosti kompilátoru (abecední pořadí)
-ms.date: 08/20/2018
+ms.date: 04/08/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 6175d62938534e790fb60b300ff55ad031da5801
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d8ab1cbac7ad8eb44f16c7829ccac20a6d3e73ff
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811937"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424115"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Možnosti kompilátoru (abecední pořadí)
 
@@ -19,13 +19,13 @@ Následuje úplný abecední seznam – možnosti kompilátoru. Seznam kategori�
 |[@](at-specify-a-compiler-response-file.md)|Určuje soubor odpovědí.|
 |[/?](help-compiler-command-line-help.md)|Vypíše nastavení kompilátoru.|
 |[/AI](ai-specify-metadata-directories.md)|Určuje adresář pro vyhledávání pro přeložení referencí souboru předaných [#using](../../preprocessor/hash-using-directive-cpp.md) směrnice.|
-|[/ analyze](analyze-code-analysis.md)|Povolte analýzu kódu.|
+|[/analyze](analyze-code-analysis.md)|Povolte analýzu kódu.|
 |[/ arch](arch-minimum-cpu-architecture.md)|Určuje architekturu pro generování kódu.|
 |[/ await](await-enable-coroutine-support.md)|Povolte rozšíření korutin (funkcí resumable).|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|Zvýší počet adresovatelných sekcí v souboru .obj.|
 |[/C](c-preserve-comments-during-preprocessing.md)|Zachová komentáře při předzpracování.|
 |[/c](c-compile-without-linking.md)|Zkompiluje bez propojení.|
-|[/cgthreads](cgthreads-code-generation-threads.md)|Určuje počet vláken cl.exe pro optimalizace a generování kódu.|
+|[/ cgthreads](cgthreads-code-generation-threads.md)|Určuje počet vláken cl.exe pro optimalizace a generování kódu.|
 |[/ CLR](clr-common-language-runtime-compilation.md)|Vytvoří výstupní soubor pro spuštění na modulu common language runtime.|
 |[/constexpr](constexpr-control-constexpr-evaluation.md)|Kontrolní vyhodnocení constexpr v době kompilace.|
 |[/D](d-preprocessor-definitions.md)|Definuje konstanty a makra.|
@@ -45,9 +45,9 @@ Následuje úplný abecední seznam – možnosti kompilátoru. Seznam kategori�
 |[/FE](fe-name-exe-file.md)|Přejmenuje spustitelný soubor.|
 |[/FI](fi-name-forced-include-file.md)|Předzpracuje určeného zahrnutého souboru.|
 |[/Fi](fi-preprocess-output-file-name.md)|Nastaví název předzpracovaného výstupního souboru.|
-|[/Fm](fm-name-mapfile.md)|Vytvoří soubor mapfile.|
-|[/Fo](fo-object-file-name.md)|Vytvoří objektový soubor.|
-|[/fp](fp-specify-floating-point-behavior.md)|Zadejte chování plovoucí desetinné čárky.|
+|[/Fm](fm-name-mapfile.md)|Vytvoří soubor mapy.|
+|[/FO](fo-object-file-name.md)|Vytvoří objektový soubor.|
+|[/ fp](fp-specify-floating-point-behavior.md)|Zadejte chování plovoucí desetinné čárky.|
 |[/Fp](fp-name-dot-pch-file.md)|Určuje název souboru předkompilované hlavičky.|
 |[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/Fr](fr-fr-create-dot-sbr-file.md)|Vytvoří soubory prohlížeče. **/FR** je zastaralý.|
 |[/FS](fs-force-synchronous-pdb-writes.md)|Vynutí zápisy do souboru databáze (PDB) programu k serializaci pomocí MSPDBSRV. SOUBOR EXE.|
@@ -58,13 +58,13 @@ Následuje úplný abecední seznam – možnosti kompilátoru. Seznam kategori�
 |[/Ge](ge-enable-stack-probes.md)|Zastaralé Aktivuje sondy zásobníku.|
 |[/GF](gf-eliminate-duplicate-strings.md)|Umožňuje sdružování řetězců.|
 |[/GH](gh-enable-pexit-hook-function.md)|Zavolá funkci připojení `_pexit`.|
-|[/Gh](gh-enable-penter-hook-function.md)|Zavolá funkci připojení `_penter`.|
+|[/GH](gh-enable-penter-hook-function.md)|Zavolá funkci připojení `_penter`.|
 |[/GL](gl-whole-program-optimization.md)|Povolí optimalizaci celého programu.|
-|[/Gm](gm-enable-minimal-rebuild.md)|Povolí minimální opětovné sestavení.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Zastaralé Povolí minimální opětovné sestavení.|
 |[/GR](gr-enable-run-time-type-information.md)|Povolí informace běhového typu (RTTI).|
-|[/Gr](gd-gr-gv-gz-calling-convention.md)|Používá `__fastcall` (pouze x86) konvence volání.|
+|[/GR](gd-gr-gv-gz-calling-convention.md)|Používá `__fastcall` (pouze x86) konvence volání.|
 |[/GS](gs-buffer-security-check.md)|Kontrola zabezpečení vyrovnávací paměti.|
-|[/Gs](gs-control-stack-checking-calls.md)|Řídí sondu zásobníku.|
+|[/GS](gs-control-stack-checking-calls.md)|Řídí sondu zásobníku.|
 |[/GT](gt-support-fiber-safe-thread-local-storage.md)|Podporuje bezpečnost vlákna pro data Alokovaná pomocí statického úložiště lokálního vlákna.|
 |[/guard:cf](guard-enable-control-flow-guard.md)|Přidá kontroly zabezpečení ochrany toku řízení.|
 |[/Gv](gd-gr-gv-gz-calling-convention.md)|Používá `__vectorcall` konvence volání. (x86 a pouze x64)|
@@ -74,13 +74,13 @@ Následuje úplný abecední seznam – možnosti kompilátoru. Seznam kategori�
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Zastaralé Stejné jako [RTC1](rtc-run-time-error-checks.md).|
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|Používá `__stdcall` (pouze x86) konvence volání.|
 |[/H](h-restrict-length-of-external-names.md)|Zastaralé Omezí délku externích (veřejných) názvů.|
-|[/HELP](help-compiler-command-line-help.md)|Vypíše nastavení kompilátoru.|
+|[/ HELP](help-compiler-command-line-help.md)|Vypíše nastavení kompilátoru.|
 |[/ homeparams](homeparams-copy-register-parameters-to-stack.md)|Přinutí parametry předané do registrů k zápisu do jejich umístění v zásobníku při vstupu funkce. Tato možnost kompilátoru je pouze pro x64 kompilátory (nativní a křížové kompilování).|
-|[/hotpatch](hotpatch-create-hotpatchable-image.md)|Vytvoří bitovou kopii opravitelnou za provozu.|
+|[/ hotpatch](hotpatch-create-hotpatchable-image.md)|Vytvoří horkou-kopii opravitelnou za provozu.|
 |[/I](i-additional-include-directories.md)|Vyhledá v adresáři vkládané soubory.|
 |[/J](j-default-char-type-is-unsigned.md)|Změní výchozí `char` typu.|
 |[/JMC](jmc.md)|Podporuje nativní ladění pouze můj kód C++.|
-|[/kernel](kernel-create-kernel-mode-binary.md)|Kompilátor a propojovací program vytvoří binární soubor, který lze spustit v jádru Windows.|
+|[možností/Kernel.](kernel-create-kernel-mode-binary.md)|Kompilátor a propojovací program vytvoří binární soubor, který lze spustit v jádru Windows.|
 |[/LD](md-mt-ld-use-run-time-library.md)|Vytvoří dynamickou knihovnu.|
 |[/LDd](md-mt-ld-use-run-time-library.md)|Vytvoří dynamickou knihovnu ladění.|
 |[/link](link-pass-options-to-linker.md)|Předá zadané nastavení do LINK.|
@@ -97,7 +97,7 @@ Následuje úplný abecední seznam – možnosti kompilátoru. Seznam kategori�
 |[/Od](od-disable-debug.md)|Zakáže optimalizaci.|
 |[/Og](og-global-optimizations.md)|Zastaralé Používá globální optimalizace.|
 |[/Oi](oi-generate-intrinsic-functions.md)|Vytváří vnitřní funkce.|
-|[/ OpenMP](openmp-enable-openmp-2-0-support.md)|Umožňuje [#pragma omp](../../preprocessor/omp.md) ve zdrojovém kódu.|
+|[/ OpenMP](openmp-enable-openmp-2-0-support.md)|Umožňuje [ `#pragma omp` ](../../preprocessor/omp.md) směrnice ve zdrojovém kódu.|
 |[/ OS](os-ot-favor-small-code-favor-fast-code.md)|Upřednostní malý kód.|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|Upřednostní rychlý kód.|
 |[/OX](ox-full-optimization.md)|Použije maximální optimalizaci (/ Ob2gity /Gs).|
@@ -106,10 +106,10 @@ Následuje úplný abecední seznam – možnosti kompilátoru. Seznam kategori�
 |[/permissive-](permissive-standards-conformance.md)|Nastavit režim přizpůsobení standard.|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Vytvoří rychlé transcendentals.|
 |[/ QIfist](qifist-suppress-ftol.md)|Zastaralé Potlačí `_ftol` při převodu z typu s plovoucí desetinnou čárkou na celočíselný typ je povinné (jenom x86).|
-|[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Odebere `fwait` příkazy uvnitř `try` bloky.|
-|[/Qpar (automatická paralelizace)](qpar-auto-parallelizer.md)|Povolí automatickou paralelizaci smyček, které jsou označeny [#pragma loop()](../../preprocessor/loop.md) směrnice.|
+|[/ Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Odebere `fwait` příkazy uvnitř `try` bloky.|
+|[/Qpar (automatický modul pro paralelní zpracování)](qpar-auto-parallelizer.md)|Povolí automatickou paralelizaci smyček, které jsou označeny [#pragma loop()](../../preprocessor/loop.md) směrnice.|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Použije instrukce přesunu celého čísla pro hodnoty s plovoucí desetinnou čárkou a zakáže některé optimalizace zátěže bod s plovoucí čárkou.|
-|[/Qpar-report (úroveň generování sestav s automatickou vektorizací)](qvec-report-auto-vectorizer-reporting-level.md)|Povolí protokolování úrovní pro automatickou vektorizaci.|
+|[/Qvec-report (Úroveň sestavy s automatickou vektorizací)](qvec-report-auto-vectorizer-reporting-level.md)|Povolí protokolování úrovní pro automatickou vektorizaci.|
 |[/RTC](rtc-run-time-error-checks.md)|Povolí kontrolu chyb za běhu.|
 |[/sdl](sdl-enable-additional-security-checks.md)|Povolí další funkce zabezpečení a upozornění.|
 |[/showIncludes](showincludes-list-include-files.md)|Zobrazí seznam vložených souborů během kompilace.|
@@ -126,7 +126,7 @@ Následuje úplný abecední seznam – možnosti kompilátoru. Seznam kategori�
 |[/validate-charset](validate-charset-validate-for-compatible-characters.md)|Ověří soubory ve formátu UTF-8 jenom kompatibilních znaků.|
 |[/vd](vd-disable-construction-displacements.md)|Potlačí nebo povolí skryté členy třídy vtordisp.|
 |[/vmb](vmb-vmg-representation-method.md)|Použije nejlepší základ pro ukazatele na členy.|
-|[/vmg](vmb-vmg-representation-method.md)|Použije úplnou všeobecnost pro ukazatele na členy.|
+|[/ vmg](vmb-vmg-representation-method.md)|Použije úplnou všeobecnost pro ukazatele na členy.|
 |[/vmm](vmm-vms-vmv-general-purpose-representation.md)|Deklaruje vícenásobnou dědičnost.|
 |[/vms](vmm-vms-vmv-general-purpose-representation.md)|Deklaruje jednoduchou dědičnost.|
 |[/vmv](vmm-vms-vmv-general-purpose-representation.md)|Deklaruje virtuální dědičnost.|
@@ -134,7 +134,7 @@ Následuje úplný abecední seznam – možnosti kompilátoru. Seznam kategori�
 |[/w](compiler-option-warning-level.md)|Zakáže všechna upozornění.|
 |[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|Nastaví jaké úroveň pro upozornění do výstupu.|
 |[/w1, /w2, /w3, /w4](compiler-option-warning-level.md)|Nastaví úroveň upozornění pro zadané upozornění.|
-|[/ Wall](compiler-option-warning-level.md)|Povolí všechna upozornění včetně upozornění, která jsou ve výchozím nastavení zakázané.|
+|[/Wall](compiler-option-warning-level.md)|Povolí všechna upozornění včetně upozornění, která jsou ve výchozím nastavení zakázané.|
 |[/wd](compiler-option-warning-level.md)|Zakáže zadaný upozornění.|
 |[/we](compiler-option-warning-level.md)|Zadané upozornění se považuje za chybu.|
 |[/WL](wl-enable-one-line-diagnostics.md)|Umožňuje jednořádkové diagnostiky pro chybové zprávy a upozornění při kompilaci zdrojového kódu jazyka C++ z příkazového řádku.|

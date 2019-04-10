@@ -1,6 +1,6 @@
 ---
 title: /Z7, /Zi, /ZI (formát ladicích informací)
-ms.date: 02/22/2018
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.DebugInformationFormat
 - /ZI
@@ -23,12 +23,12 @@ helpviewer_keywords:
 - line numbers only compiler option [C++]
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
-ms.openlocfilehash: 1beab7cb1e8e654d25620eb59a9326f5628ce047
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: e809c7af7465cde98db11eac8628b76d04f7e8b5
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816318"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424076"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (formát ladicích informací)
 
@@ -42,7 +42,7 @@ Určuje typ ladicích informací vytvářených pro program a zda tyto informace
 
 Pokud kód je zkompilován a vytvořené v režimu ladění, kompilátor vytvoří názvy symbolů pro funkce a proměnné, informace o typu a umístění číslo řádku pro použití ladicím programem. Symbolickém ladění může být zahrnuté v souborech objektů (soubory .obj) produkované kompilátorem nebo v samostatném souboru PDB (soubor typu .pdb) pro spustitelný soubor.  Možnosti formátování informace o ladění jsou popsány v následujících částech.
 
-### <a name="none"></a>Žádná
+### <a name="none"></a>Žádný
 
 Ve výchozím nastavení Pokud není zadána žádná možnost formát informací ladění, kompilátor nevytváří žádné ladicí informace, kompilace je proto rychlejší.
 
@@ -52,7 +52,7 @@ Ve výchozím nastavení Pokud není zadána žádná možnost formát informac�
 
 Pro distributory ladicích verzí knihoven třetích stran je výhodné nemít soubor .pdb. Však soubory objektů pro předkompilované záhlaví jsou nezbytné během fáze propojení knihovny a pro ladění. Pokud existuje pouze typ informací (a žádný kód) do souboru .pch objektu, musíte taky použít [/Yl (Vložit referenci PCH knihovny ladění)](yl-inject-pch-reference-for-debug-library.md) možnost, která je povolena ve výchozím nastavení, při sestavování knihovny.
 
-[/Gm (povolení minimálního opětovného sestavení)](gm-enable-minimal-rebuild.md) možnost není k dispozici při **/Z7** určena.
+Zastaralá [/Gm (povolení minimálního opětovného sestavení)](gm-enable-minimal-rebuild.md) možnost není k dispozici při **/Z7** určena.
 
 ### <a name="zi"></a>/Zi
 

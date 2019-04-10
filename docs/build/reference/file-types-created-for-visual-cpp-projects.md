@@ -1,6 +1,6 @@
 ---
 title: Typy souborů vytvořených pro projekty Visual C++
-ms.date: 11/04/2016
+ms.date: 04/08/2019
 helpviewer_keywords:
 - header files [C++], Visual Studio projects
 - ActiveX controls [C++], Help files
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: b0f780b122b147d633d5d7cd949da805d267f757
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.openlocfilehash: eee53acbb8b0b8432a7d5819fb773b616f0e8897
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59033372"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424090"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Typy souborů vytvořených pro projekty C++ pro Visual Studio
 
-Toto téma popisuje všechny typy souborů, které jsou spojeny s projekty aplikace Visual Studio pro klasické desktopové aplikace. Skutečné soubory zahrnuté ve vašem projektu závisí na typu projektu a možnostech, které jste vybrali při používání průvodce.
+Mnoho typů souborů jsou spojeny s projekty aplikace Visual Studio pro klasické desktopové aplikace. Skutečné soubory zahrnuté ve vašem projektu závisí na typu projektu a možnostech, které jste vybrali při používání průvodce.
 
 - [Soubory projektu a řešení](project-and-solution-files.md)
 
@@ -41,9 +41,9 @@ Toto téma popisuje všechny typy souborů, které jsou spojeny s projekty aplik
 
 - [Soubory pokynů](hint-files.md)
 
-Když vytvoříte projekt sady Visual Studio, vytvoření nového řešení, nebo může přidání objektu project do řešení. Rozsáhlé aplikace obecně jsou vyvíjeny pomocí více projektů v řešení.
+Když vytvoříte projekt sady Visual Studio, můžete například vytvořit v novém řešení nebo projektu můžete přidat do existujícího řešení. Rozsáhlé aplikace obecně jsou vyvíjeny pomocí více projektů v řešení.
 
-Projekty vytvářejí obvykle buď aplikace EXE nebo knihovny DLL. Projekty mohou být závislé na sobě navzájem; prostředí sady Visual Studio během procesu sestavení, zkontroluje závislosti uvnitř i mezi projekty. Každý projekt obsahuje základní zdrojový kód a v závislosti na typ projektu, může mít mnoho souborů obsahující různé aspekty projektu. Obsah těchto souborů jsou označeny příponu souboru. Vývojové prostředí sady Visual Studio používá přípony souborů k určení způsobu zpracování obsahu souborů během sestavování.
+Projekty vytvářejí obvykle buď aplikace EXE nebo knihovny DLL. Projekty mohou být závislé na sobě navzájem; prostředí sady Visual Studio během procesu sestavení, zkontroluje závislosti uvnitř i mezi projekty. Každý projekt má obvykle core zdrojového kódu. V závislosti na typ projektu může mít mnoho souborů obsahující různé aspekty projektu. Obsah těchto souborů jsou označeny příponu souboru. Vývojové prostředí sady Visual Studio používá přípony souborů k určení způsobu zpracování obsahu souborů během sestavování.
 
 Následující tabulka uvádí běžné soubory v projektu sady Visual Studio a identifikuje jejich přípony souboru.
 
@@ -63,11 +63,11 @@ Následující tabulka uvádí běžné soubory v projektu sady Visual Studio a 
 |htm, HTML, .xsp, ASP, HTC, HTA, .xml|Prostředek|Běžné webové soubory.|
 |.HxC|Project|Projekt soubor nápovědy.|
 |.ico|Prostředek|Rastrový obrázek ikony.|
-|.idb|Kompilace|Stav soubor obsahující informace o závislostech mezi zdrojovými soubory a definice tříd, které je možné použít kompilátor během minimálního opětovného sestavení a přírůstková kompilace. Použití [/Fd](fd-program-database-file-name.md) – možnost kompilátoru zadat název souboru IDB. Zobrazit [/Gm (povolení minimálního opětovného sestavení)](gm-enable-minimal-rebuild.md) Další informace.|
-|IDL|Kompilace|Soubor definice jazyka rozhraní. Zobrazit [soubor Interface Definition (IDL)](/windows/desktop/Rpc/the-interface-definition-language-idl-file) v sadě Windows SDK pro další informace.|
-|.ilk|Propojení|Soubor přírůstkové propojení. Zobrazit [/INCREMENTAL](incremental-link-incrementally.md) Další informace.|
-|.map|Propojení|Textový soubor obsahující informace linkeru. Použití [/Fm](fm-name-mapfile.md) pojmenovat soubor mapování – možnost kompilátoru. Zobrazit [/MAP](map-generate-mapfile.md) Další informace.|
-|.mfcribbon-ms|Prostředek|Soubor prostředků, která obsahuje kód XML, který definuje tlačítka, ovládací prvky a atributy pásu karet. Další informace najdete v tématu [Návrhář pásu karet (MFC)](../../mfc/ribbon-designer-mfc.md).|
+|.idb|Kompilace|Stav soubor obsahující informace o závislostech mezi zdrojovými soubory a definice tříd. Lze použít kompilátor během přírůstková kompilace. Použití [/Fd](fd-program-database-file-name.md) – možnost kompilátoru zadat název souboru IDB.|
+|IDL|Kompilace|Soubor definice jazyka rozhraní. Další informace najdete v tématu [soubor Interface Definition (IDL)](/windows/desktop/Rpc/the-interface-definition-language-idl-file) v sadě Windows SDK.|
+|.ilk|Propojení|Soubor přírůstkové propojení. Další informace najdete v tématu [/INCREMENTAL](incremental-link-incrementally.md).|
+|.map|Propojení|Textový soubor obsahující informace linkeru. Použití [/Fm](fm-name-mapfile.md) pojmenovat soubor mapování – možnost kompilátoru. Další informace najdete v tématu [/MAP](map-generate-mapfile.md).|
+|.mfcribbon-ms|Prostředek|Soubor prostředků, která obsahuje kód XML, který definuje tlačítka, ovládací prvky a atributy MFC na pásu karet. Další informace najdete v tématu [Návrháře pásu karet](../../mfc/ribbon-designer-mfc.md).|
 |obj, .o||Objektové soubory zkompilovány, ale není propojená.|
 |.pch|Ladit|Soubor předkompilované hlavičky.|
 |.rc, .rc2|Prostředek|[Soubory skriptu prostředků](../../windows/working-with-resource-files.md) pro generování prostředků.|
@@ -78,18 +78,18 @@ Následující tabulka uvádí běžné soubory v projektu sady Visual Studio a 
 |.Vap|Project|Soubor projektu Visual Studio Analyzer.|
 |.vbg|Řešení|Soubor projektu kompatibilní skupiny.|
 |.VBP, .vip, .vbproj|Project|Soubor projektu jazyka Visual Basic.|
-|.vcxitems|Project|Projekt sdílené položky ke sdílení souborů kód mezi více projekty C++. Zobrazit [soubory projektu a řešení](project-and-solution-files.md) Další informace.|
-|.vcxproj|Project|Soubor projektu sady Visual Studio. Zobrazit [soubory projektu a řešení](project-and-solution-files.md) Další informace.|
-|.vcxproj.filters|Project|Pokud Průzkumník řešení se používá k přidání souboru do projektu, soubor filtrů definuje kde ve stromovém zobrazení Průzkumníka řešení se přidá soubor, na základě jeho přípony názvu souboru.|
+|.vcxitems|Project|Projekt sdílené položky ke sdílení souborů kód mezi více projekty C++. Další informace najdete v tématu [soubory projektu a řešení](project-and-solution-files.md).|
+|.vcxproj|Project|Soubor projektu sady Visual Studio. Další informace najdete v tématu [soubory projektu a řešení](project-and-solution-files.md).|
+|.vcxproj.filters|Project|Při přidání souboru do projektu používáte Průzkumníka řešení. Soubor filtrů definuje where ve stromovém zobrazení Průzkumníka řešení přidáte soubor, na základě jeho přípony názvu souboru.|
 |.vdproj|Project|Soubor projektu nasazení sady Visual Studio.|
 |.VMX|Project|Makro souboru projektu.|
 |.Vup|Project|Soubor projektu nástroje.|
 
 Informace o dalších soubory přidružené k sadě Visual Studio, naleznete v tématu [typy souborů a přípony souborů v sadě Visual Studio .NET](/visualstudio/ide/reference/project-and-solution-file-types).
 
-Soubory projektu jsou uspořádány do složek v Průzkumníku řešení. Visual Studio vytvoří složku pro zdrojové soubory, soubory hlaviček a soubory prostředků, ale můžete změnit uspořádání těchto složek nebo vytvořit nové. Složky slouží k uspořádání explicitně logických skupin souborů v rámci hierarchie projektu. Může například vytváření složek tak, aby obsahovala všechny zdrojové soubory uživatelského rozhraní, nebo specifikace, dokumentaci, nebo testovacím sadám. Názvy souborů musí být jedinečné.
+Soubory projektu jsou uspořádány do složek v Průzkumníku řešení. Visual Studio vytvoří složku pro zdrojové soubory, soubory hlaviček a soubory prostředků, ale můžete změnit uspořádání těchto složek nebo vytvořit nové. Složky slouží k uspořádání explicitně logických skupin souborů v rámci hierarchie projektu. Například můžete vytvořit složky tak, aby obsahovala všechny soubory zdroje uživatelského rozhraní. Nebo složky pro specifikace, dokumentace ke službě nebo testovacím sadám. Názvy souborů musí být jedinečné.
 
-Při přidání položky do projektu přidat položku do všechny konfigurace pro tento projekt, bez ohledu na to, zda je položka sestavitelná. Například pokud máte projekt s názvem MyProject přidání položky přidá ji do i konfigurace Debug a Release projektu.
+Při přidání položky do projektu přidat položku do všech konfigurací pro daný projekt. Je položka přidána, zda je sestavitelnou nebo ne. Například pokud máte projekt s názvem MyProject přidání položky přidá ji do i konfigurace Debug a Release projektu.
 
 ## <a name="see-also"></a>Viz také:
 
