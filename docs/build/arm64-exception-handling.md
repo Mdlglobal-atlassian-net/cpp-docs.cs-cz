@@ -1,12 +1,12 @@
 ---
 title: Zpracování výjimek ARM64
 ms.date: 11/19/2018
-ms.openlocfilehash: ec81374f9a20cf5d23edda7d925705b6a4d5e2e6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.openlocfilehash: 55476119499a3216f6801877dba692b2a0d1d9ee
+ms.sourcegitcommit: 88631cecbe3e3fa752eae3ad05b7f9d9f9437b4d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59031724"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59534120"
 ---
 # <a name="arm64-exception-handling"></a>Zpracování výjimek ARM64
 
@@ -44,7 +44,7 @@ Následují předpoklady v popisu zpracování výjimek:
 
 1. V epilogů není žádný podmíněný kód.
 
-1. Registr ukazatelů vyhrazené rámce: Pokud sp je uložen v registru jiného (r29) v prologu, který registraci zůstane beze změny v rámci funkce, tak, aby původní sp může být kdykoli obnoven.
+1. Registr ukazatelů vyhrazené rámce: Pokud sp je uložen v registru jiné (x29) v prologu, který registraci zůstane beze změny v rámci funkce, tak, aby původní sp může být kdykoli obnoven.
 
 1. Pokud sp je uložen v registru jiné, všech manipulaci s ukazatel zásobníku dojde k výhradně v rámci kódu prologu a epilogu.
 
@@ -54,90 +54,90 @@ Následují předpoklady v popisu zpracování výjimek:
 
 ![rozložení rámce zásobníku](media/arm64-exception-handling-stack-frame.png "rozložení rámce zásobníku")
 
-Pro funkce rámce zřetězené lze uložit dvojice fp a lr v jakékoliv pozici v oblasti místní proměnné v závislosti na důležité informace o optimalizaci. Cílem je maximalizovat počet místních hodnot, které mohou být dosažitelný podle jedna jediná instrukce založené na ukazatel na rámec (r29) nebo ukazatel zásobníku (sp). Ale pro `alloca` funkce, musí být zřetězené a r29 musí odkazovat na konec zásobníku. Umožňující lepší pokrytí register pár – adresování – režim stálé registru oblasti jsou umístěny v horní části zásobníku místní síti. Tady jsou příklady, které ilustrují několik nejúčinnější sekvence prologu. Z důvodu přehlednosti a lepší umístění mezipaměti pořadí ukládání volaný – uložené registry ve všech canonical Prology je popořadě "rostoucí up". `#framesz` níže představuje velikost vším, co (s výjimkou oblasti alloca). `#localsz` a `#outsz` označení velikost místní síti (včetně uložení oblast pro \<r29, lr > pár) a odchozí velikost parametru v uvedeném pořadí.
+Pro funkce rámce zřetězené lze uložit dvojice fp a lr v jakékoliv pozici v oblasti místní proměnné v závislosti na důležité informace o optimalizaci. Cílem je maximalizovat počet místních hodnot, které mohou být dosažitelný podle jedna jediná instrukce založené na ukazatel na rámec (x29) nebo ukazatel zásobníku (sp). Ale pro `alloca` funkce, musí být zřetězené a x29 musí odkazovat na konec zásobníku. Umožňující lepší pokrytí register pár – adresování – režim stálé registru oblasti jsou umístěny v horní části zásobníku místní síti. Tady jsou příklady, které ilustrují několik nejúčinnější sekvence prologu. Z důvodu přehlednosti a lepší umístění mezipaměti pořadí ukládání volaný – uložené registry ve všech canonical Prology je popořadě "rostoucí up". `#framesz` níže představuje velikost vším, co (s výjimkou oblasti alloca). `#localsz` a `#outsz` označení velikost místní síti (včetně uložení oblast pro \<x29, lr > pár) a odchozí velikost parametru v uvedeném pořadí.
 
 1. Zřetězené #localsz \<= 512
 
     ```asm
-        stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
-        stp    d8,d9,[sp,16]            // save in FP regs (optional)
-        stp    r0,r1,[sp,32]            // home params (optional)
-        stp    r2,r3,[sp, 48]
-        stp    r4,r5,[sp,64]
-        stp    r6,r7,[sp,72]
-        stp    r29, lr, [sp, -#localsz]!    // save <r29,lr> at bottom of local area
-        mov    r29,sp                   // r29 points to bottom of local
-        sub    sp, #outsz               // (optional for #outsz != 0)
+        stp    x19,x20,[sp,#-96]!        // pre-indexed, save in 1st FP/INT pair
+        stp    d8,d9,[sp,#16]            // save in FP regs (optional)
+        stp    x0,x1,[sp,#32]            // home params (optional)
+        stp    x2,x3,[sp,#48]
+        stp    x4,x5,[sp,#64]
+        stp    x6,x7,[sp,#72]
+        stp    x29,lr,[sp,#-localsz]!   // save <x29,lr> at bottom of local area
+        mov    x29,sp                   // x29 points to bottom of local
+        sub    sp,sp,#outsz             // (optional for #outsz != 0)
     ```
 
 1. Zřetězené #localsz > 512
 
     ```asm
-        stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
-        stp    d8,d9,[sp,16]            // save in FP regs (optional)
-        stp    r0,r1,[sp,32]            // home params (optional)
-        stp    r2,r3,[sp, 48]
-        stp    r4,r5,[sp,64]
-        stp    r6,r7,[sp,72]
-        sub    sp,#localsz+#outsz       // allocate remaining frame
-        stp    r29, lr, [sp, #outsz]    // save <r29,lr> at bottom of local area
-        add    r29,sp, #outsz           // setup r29 points to bottom of local area
+        stp    x19,x20,[sp,#-96]!        // pre-indexed, save in 1st FP/INT pair
+        stp    d8,d9,[sp,#16]            // save in FP regs (optional)
+        stp    x0,x1,[sp,#32]            // home params (optional)
+        stp    x2,x3,[sp,#48]
+        stp    x4,x5,[sp,#64]
+        stp    x6,x7,[sp,#72]
+        sub    sp,sp,#(localsz+outsz)   // allocate remaining frame
+        stp    x29,lr,[sp,#outsz]       // save <x29,lr> at bottom of local area
+        add    x29,sp,#outsz            // setup x29 points to bottom of local area
     ```
 
 1. Funkce unchained, typu list (lr neuložené)
 
     ```asm
-        stp    r19,r20,[sp, -72]!       // pre-indexed, save in 1st FP/INT reg-pair
-        stp    r21,r22,[sp, 16]
-        str    r23 [sp,32]
-        stp    d8,d9,[sp,40]            // save FP regs (optional)
-        stp    d10,d11,[sp,56]
-        sub    sp,#framesz-72           // allocate the remaining local area
+        stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
+        stp    x21,x22,[sp,#16]
+        str    x23,[sp,#32]
+        stp    d8,d9,[sp,#40]           // save FP regs (optional)
+        stp    d10,d11,[sp,#56]
+        sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   Všechny místní hodnoty jsou přístupné podle SP. \<R29, lr > odkazuje na předchozí snímek. Pro velikost rámce \<= 512, "sub sp,..." lze vypuštěn když oblasti regs uložit se přesune do dolní části zásobníku. Nevýhodou, který je, že to není konzistentní s jiné rozložení výše a uložené regs trvat součástí rozsahu pro dvojice regs a provedení před instrumentací a po ní indexované režim odsazení adresování.
+   Všechny místní hodnoty jsou přístupné podle SP. \<x29, lr > odkazuje na předchozí snímek. Pro velikost rámce \<= 512, "sub sp,..." lze vypuštěn když oblasti regs uložit se přesune do dolní části zásobníku. Nevýhodou, který je, že to není konzistentní s jiné rozložení výše a uložené regs trvat součástí rozsahu pro dvojice regs a provedení před instrumentací a po ní indexované režim odsazení adresování.
 
 1. Funkce unchained, mimo úroveň listu (lr je uložen v oblasti Int uložit)
 
     ```asm
-        stp    r19,r20,[sp,-80]!        // pre-indexed, save in 1st FP/INT reg-pair
-        stp    r21,r22,[sp,16]          // ...
-        stp    r23, lr,[sp, 32]         // save last Int reg and lr
-        stp    d8,d9,[sp, 48]           // save FP reg-pair (optional)
-        stp    d10,d11,[sp,64]          // ...
-        sub    sp,#framesz-80           // allocate the remaining local area
+        stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
+        stp    x21,x22,[sp,#16]         // ...
+        stp    x23,lr,[sp,#32]          // save last Int reg and lr
+        stp    d8,d9,[sp,#48]           // save FP reg-pair (optional)
+        stp    d10,d11,[sp,#64]         // ...
+        sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
    Nebo se sudým číslem uložené registry Int
 
     ```asm
-        stp    r19,r20,[sp,-72]!        // pre-indexed, save in 1st FP/INT reg-pair
-        stp    r21,r22,[sp,16]          // ...
-        str    lr,[sp, 32]              // save lr
-        stp    d8,d9,[sp, 40]           // save FP reg-pair (optional)
-        stp    d10,d11,[sp,56]          // ...
-        sub    sp,#framesz-72           // allocate the remaining local area
+        stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
+        stp    x21,x22,[sp,#16]         // ...
+        str    lr,[sp,#32]              // save lr
+        stp    d8,d9,[sp,#40]           // save FP reg-pair (optional)
+        stp    d10,d11,[sp,#56]         // ...
+        sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   Pouze r19 uložit:
+   Pouze x19 uložit:
 
     ```asm
-        sub    sp, sp, #16              // reg save area allocation*
-        stp    r19,lr,[sp,0]            // save r19, lr
-        sub    sp,#framesz-16           // allocate the remaining local area
+        sub    sp,sp,#16                // reg save area allocation*
+        stp    x19,lr,[sp]              // save x19, lr
+        sub    sp,sp,#(framesz-16)      // allocate the remaining local area
     ```
 
    \* Reg uložit přidělení oblast není složeny do stp, protože předem indexované reg-lr stp nejde reprezentovat kódy unwind.
 
-   Všechny místní hodnoty jsou přístupné podle SP. \<R29 > odkazuje na předchozí snímek.
+   Všechny místní hodnoty jsou přístupné podle SP. \<x29 > odkazuje na předchozí snímek.
 
 1. Zřetězené #framesz \<= 512 #outsz = 0
 
     ```asm
-        stp    r29, lr, [sp, -#framesz]!    // pre-indexed, save <r29,lr>
-        mov    r29,sp                       // r29 points to bottom of stack
-        stp    r19,r20,[sp, #framesz -32]   // save INT pair
-        stp    d8,d9,[sp, #framesz -16]     // save FP pair
+        stp    x29,lr,[sp,#-framesz]!       // pre-indexed, save <x29,lr>
+        mov    x29,sp                       // x29 points to bottom of stack
+        stp    x19,x20,[sp,#(framesz-32)]   // save INT pair
+        stp    d8,d9,[sp,#(framesz-16)]     // save FP pair
     ```
 
    Porovnejte prologu #1 výše, výhodou je, se všechny registrace uložit pokyny se spustí hned po pouze jeden zásobníku přidělením pokyn. Proto není proti závislost na sp, která zabrání instrukce úrovně paralelismu.
@@ -145,38 +145,38 @@ Pro funkce rámce zřetězené lze uložit dvojice fp a lr v jakékoliv pozici v
 1. Zřetězené, velikost rámce > 512 (volitelné pro funkce bez alloca)
 
     ```asm
-        stp    r29, lr, [sp, -80]!          // pre-indexed, save <r29,lr>
-        stp    r19,r20,[sp,16]              // save in INT regs
-        stp    r21,r22,[sp,32]              // ...
-        stp    d8,d9,[sp,48]                // save in FP regs
-        stp    d10,d11,[sp,64]
-        mov    r29,sp                       // r29 points to top of local area
-        sub    sp,#framesz-80               // allocate the remaining local area
+        stp    x29,lr,[sp,#-80]!            // pre-indexed, save <x29,lr>
+        stp    x19,x20,[sp,#16]             // save in INT regs
+        stp    x21,x22,[sp,#32]             // ...
+        stp    d8,d9,[sp,#48]               // save in FP regs
+        stp    d10,d11,[sp,#64]
+        mov    x29,sp                       // x29 points to top of local area
+        sub    sp,sp,#(framesz-80)          // allocate the remaining local area
     ```
 
-   Za účelem optimalizace r29 můžete umístit na libovolné pozici v místní síti a poskytuje lepší pokrytí pro "reg dvojice" a předprodukční/po-indexed posun režim adresování. Místní hodnoty níže ukazatele na rámce je přístupný podle SP.
+   Za účelem optimalizace x29 můžete umístit na libovolné pozici v místní síti a poskytuje lepší pokrytí pro "reg dvojice" a předprodukční/po-indexed posun režim adresování. Místní hodnoty níže ukazatele na rámce je přístupný podle SP.
 
 1. Zřetězené, velikost rámce > 4 kB, s nebo bez něj alloca(),
 
     ```asm
-        stp    r29, lr, [sp, -80]!          // pre-indexed, save <r29,lr>
-        stp    r19,r20,[sp,16]              // save in INT regs
-        stp    r21,r22,[sp,32]              // ...
-        stp    d8,d9,[sp,48]                // save in FP regs
-        stp    d10,d11,[sp,64]
-        mov    r29,sp                       // r29 points to top of local area
-        mov    r8, #framesz/16
-        bl     chkstk
-        sub    sp, r8*16                    // allocate remaining frame
+        stp    x29,lr,[sp,#-80]!            // pre-indexed, save <x29,lr>
+        stp    x19,x20,[sp,#16]             // save in INT regs
+        stp    x21,x22,[sp,#32]             // ...
+        stp    d8,d9,[sp,#48]               // save in FP regs
+        stp    d10,d11,[sp,#64]
+        mov    x29,sp                       // x29 points to top of local area
+        mov    x15,#(framesz/16)
+        bl     __chkstk
+        sub    sp,sp,x15,lsl#4              // allocate remaining frame
                                             // end of prolog
         ...
-        sp = alloca                         // more alloca() in body
+        sub    sp,sp,#alloca                // more alloca() in body
         ...
                                             // beginning of epilog
-        mov    sp,r29                       // sp points to top of local area
-        ldp    d10,d11, [sp,64],
+        mov    sp,x29                       // sp points to top of local area
+        ldp    d10,d11,[sp,#64]
         ...
-        ldp    r29, lr, [sp], -80           // post-indexed, reload <r29,lr>
+        ldp    x29,lr,[sp],#80              // post-indexed, reload <x29,lr>
     ```
 
 ## <a name="arm64-exception-handling-information"></a>Informace o zpracování výjimky ARM64
@@ -235,7 +235,7 @@ Tato data rozdělená do čtyř oddílů:
 
    c. **Start Index epilogu** je 10-bit (2 většího počtu bitů než **rozšířené slova kódu**) označující bajtový index prvního pole unwind kód, který popisuje toto epilogu.
 
-1. Po vstupu do seznamu oborů epilogu pole bajtů, které obsahují kódy unwind podrobně popsány v další části. Toto pole je, aby bylo vytvořeno po uplynutí na nejbližší hranici úplné slovo. Bajty jsou uloženy v pořadí little endian, takže může být přímo načíst v režimu little endian.
+1. Po vstupu do seznamu oborů epilogu pole bajtů, které obsahují kódy unwind podrobně popsány v další části. Toto pole je, aby bylo vytvořeno po uplynutí na nejbližší hranici úplné slovo. Unwind kódy jsou zapsány do tohoto pole, počínaje nejblíže tělo funkce, přesun směrem k okrajům funkce. Bajtů pro jednotlivé kódy unwind jsou uloženy v pořadí formát big-endian tak jejich můžete načíst přímo, nejprve, počínaje nejvýznamnější bajt, které identifikuje operaci a délka zbytek kódu.
 
 1. Nakonec po uvolnění kódu bajtů Pokud **X** bitu v hlavičce byl nastaven na hodnotu 1, obsahuje informace o výjimce obslužné rutiny. Tento postup se skládá z jednoho **RVA obslužné rutiny výjimek** poskytuje adresu obslužná rutina výjimky, okamžitě následován proměnné délky množství dat nutnému obslužnou rutinou výjimky.
 
@@ -286,22 +286,22 @@ Podle následující tabulky jsou kódovány kódy unwind. Všechny kódy unwind
 |Uvolnění kódu|Služba BITS a interpretace|
 |-|-|
 |`alloc_s`|000xxxxx: přidělovat malé zásobníku s velikostí \< 512 (2 ^ 5 * 16).|
-|`save_r19r20_x`|    001zzzzz: Uložit \<r19 r20 > pár [Z sp-# * 8]!, posun předem indexované > =-248 |
-|`save_fplr`|        01zzzzzz: Uložit \<r29, lr > spárovat na [sp + #Z * 8], posun \<= 504. |
-|`save_fplr_x`|        10zzzzzz: Uložit \<r29, lr > spárovat na [sp-(#Z + 1) * 8]!, posun předem indexované > = – 512 |
+|`save_r19r20_x`|    001zzzzz: Uložit \<x19, x20 > pár [Z sp-# * 8]!, posun předem indexované > =-248 |
+|`save_fplr`|        01zzzzzz: Uložit \<x29, lr > spárovat na [sp + #Z * 8], posun \<= 504. |
+|`save_fplr_x`|        10zzzzzz: Uložit \<x29, lr > spárovat na [sp-(#Z + 1) * 8]!, posun předem indexované > = – 512 |
 |`alloc_m`|        11000xxx "xxxxxxxx: přidělit velké zásobníku s velikostí \< 16 kB (2 ^ 11 * 16). |
-|`save_regp`|        110010xx "xxzzzzzz: uložit dvojice r(19+#X) na [sp + #Z * 8], posun \<= 504 |
-|`save_regp_x`|        110011xx "xxzzzzzz: uložit dvojice r(19+#X) na [sp-(#Z + 1) * 8]!, posun předem indexované > = – 512 |
-|`save_reg`|        110100xx "xxzzzzzz: uložit reg r(19+#X) na [sp + #Z * 8], posun \<= 504 |
-|`save_reg_x`|        1101010 x'xxxzzzzz: uložit reg r(19+#X) na [sp-(#Z + 1) * 8]!, posun předem indexované > =-256 |
-|`save_lrpair`|         1101011 x'xxzzzzzz: uložit dvojice \<r19 + 2 *#X, lr > na [sp + #Z*8], posun \<= 504 |
+|`save_regp`|        110010xx "xxzzzzzz: uložit dvojice x(19+#X) na [sp + #Z * 8], posun \<= 504 |
+|`save_regp_x`|        110011xx "xxzzzzzz: uložit dvojice x(19+#X) na [sp-(#Z + 1) * 8]!, posun předem indexované > = – 512 |
+|`save_reg`|        110100xx "xxzzzzzz: uložit reg x(19+#X) na [sp + #Z * 8], posun \<= 504 |
+|`save_reg_x`|        1101010 x'xxxzzzzz: uložit reg x(19+#X) na [sp-(#Z + 1) * 8]!, posun předem indexované > =-256 |
+|`save_lrpair`|         1101011 x'xxzzzzzz: uložit dvojice \<x (19 + 2 *#X), lr > na [sp + #Z*8], posun \<= 504 |
 |`save_fregp`|        1101100 x'xxzzzzzz: uložit dvojice d(8+#X) na [sp + #Z * 8], posun \<= 504 |
 |`save_fregp_x`|        1101101 x'xxzzzzzz: uložit dvojice d(8+#X) na [sp-(#Z + 1) * 8]!, posun předem indexované > = – 512 |
 |`save_freg`|        1101110 x'xxzzzzzz: uložit reg d(8+#X) na [sp + #Z * 8], posun \<= 504 |
 |`save_freg_x`|        11011110' xxxzzzzz: uložit reg d(8+#X) na [sp-(#Z + 1) * 8]!, posun předem indexované > =-256 |
 |`alloc_l`|         'xxxxxxxx"xxxxxxxx xxxxxxxx 11100000': přidělit velké zásobníku s velikostí \< 256 M (2 ^ 24 * 16) |
-|`set_fp`|        11100001: nastavení r29: s: mov r29 sp |
-|`add_fp`|        11100010' xxxxxxxx: nastavení r29 s: Přidat r29, sp, #x * 8 |
+|`set_fp`|        11100001: nastavení x29: s: mov x29, sp |
+|`add_fp`|        11100010' xxxxxxxx: nastavení x29 s: sp, přidejte x29, #x * 8 |
 |`nop`|            11100011: žádné unwind operace je povinný. |
 |`end`|            11100100: konec unwind kód. Zahrnuje ret v epilogu. |
 |`end_c`|        11100101: konec unwind kódu v aktuálním oboru zřetězených. |
@@ -347,12 +347,12 @@ Pole jsou následující:
 - **Funkce délka** je pole 11bitový poskytuje délka celou funkci bajtovou hodnotou 4. Pokud funkce je větší než 8 kB, záznam úplné .xdata musí použít.
 - **Velikost rámce** je pole 9bitové označující počet bajtů zásobníku, který je přidělen pro tuto funkci dělený 16. Funkce, které přidělují větší (8 kb – 16) bajtů zásobníku musí používat úplnou .xdata záznam. To zahrnuje proměnné místní, odchozí oblasti parametrů, volaný – uložené Int a FP oblasti a oblasti domovské parametrů, s výjimkou oblasti dynamického přidělení.
 - **Znak CR** je 2bitový příznak označující, zda funkce zahrnuje další pokyny k nastavení rámce řetězec a vrácení odkazu:
-  - 00 = unchained funkce \<r29, lr > pár není uložená v zásobníku.
+  - 00 = unchained funkce \<x29, lr > pár není uložená v zásobníku.
   - 01 = unchained funkce \<lr > je uloženo v zásobníku
   - 10 = vyhrazené;
-  - 11 = zřetězené funkce instrukce pár úložiště/zatížení se používá v kódu prologu/epilogu \<r29, lr >
-- **H** ukládání na začátku funkce je 1bitový příznak označující, zda funkce homes parametr celočíselné registry (r0 – r7). (0 = není domácí registrů, 1 = domovů Registry).
-- **RegI** je 4 bitového pole určující počet stálé INT registrů (r19 r28) uloží do umístění zásobníku canonical.
+  - 11 = zřetězené funkce instrukce pár úložiště/zatížení se používá v kódu prologu/epilogu \<x29, lr >
+- **H** je 1bitový příznak označující, zda funkce homes parametr celé číslo (x0 x7) zaregistruje jejich uložením na začátku funkce. (0 = není domácí registrů, 1 = domovů Registry).
+- **RegI** je 4 bitového pole určující počet stálé INT registrů (x19 x28) uloží do umístění zásobníku canonical.
 - **RegF** je 3bitová pole určující počet FP stálé registrů (d8 d15) uloží do umístění zásobníku canonical. (RegF = 0: žádné registr FP bude uloženo. RegF > 0: RegF + 1 FP registrů se uloží). Provedené zabalené unwind dat nelze použít pro funkci, která uložit jenom jeden registr FP.
 
 Canonical Prology, které spadají do kategorie 1, 2 (bez odchozí oblasti parametrů), 3 a 4 výše v části může být reprezentována sbalené unwind formátu.  Epilogů kanonické funkce podle velmi podobné formuláře, s výjimkou **H** nemá žádný vliv `set_fp` instrukce je vynechán, a jsou v epilogu obrácený pořadí kroků, jakož i pokyny v každém kroku. Algoritmus pro komprimovaný xdata následující postup podrobně popsané v následující tabulce:
@@ -367,26 +367,26 @@ Krok 3: Uložte FP volaný – uložené registry.
 
 Krok 4: V oblasti domovské parametrů uložte vstupní argumenty.
 
-Krok 5: Přidělit zbývající problematiku, včetně místních, \<r29, lr > párování a odchozí oblasti parametrů. 5a odpovídá typu kanonickém 1. 5b a 5c jsou určené pro kanonický typu 2. 5d a 5e jsou pro oba typy 3 a 4 zadejte.
+Krok 5: Přidělit zbývající problematiku, včetně místních, \<x29, lr > párování a odchozí oblasti parametrů. 5a odpovídá typu kanonickém 1. 5b a 5c jsou určené pro kanonický typu 2. 5d a 5e jsou pro oba typy 3 a 4 zadejte.
 
 Krok #|Nastavení příznaku|# instrukcí|Operační kód|Uvolnění kódu
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
-1|0 < **RegI** <= 10|RegI / 2 + **RegI** % 2|`stp r19,r20,[sp,#savsz]!`<br/>`stp r21,r22,[sp,16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
-2|**ZNAK CR**== 01 *|1|`str lr,[sp, #intsz-8]`\*|`save_reg`
-3|0 < **RegF** < = 7|(RegF + 1) / 2 +<br/>(RegF + 1) % 2)|`stp d8,d9,[sp, #intsz]`\*\*<br/>`stp d10,d11,[sp, #intsz+16]`<br/>`...`<br/>`str d(8+RegF),[sp, #intsz+#fpsz-8]`|`save_fregp`<br/>`...`<br/>`save_freg`
-4|**H** == 1|4|`stp r0,r1,[sp, #intsz+#fpsz]`<br/>`stp r2,r3,[sp, #intsz+#fpsz+16]`<br/>`stp r4,r5,[sp, #intsz+#fpsz+32]`<br/>`stp r6,r7,[sp, #intsz+#fpsz+48]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
-5a|**Znak CR** == 11 & & #locsz<br/> <= 512|2|`stp r29,lr,[sp,-#locsz]!`<br/>`mov r29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
-5b|**CR** == 11 &&<br/>512 < #locsz <= 4088|3|`sub sp,sp, #locsz`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5c|**CR** == 11 && #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5d|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz <= 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
-5e|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
+1|0 < **RegI** <= 10|RegI / 2 + **RegI** % 2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
+2|**ZNAK CR**== 01 *|1|`str lr,[sp,#(intsz-8)]`\*|`save_reg`
+3|0 < **RegF** < = 7|(RegF + 1) / 2 +<br/>(RegF + 1) % 2)|`stp d8,d9,[sp,#intsz]`\*\*<br/>`stp d10,d11,[sp,#(intsz+16)]`<br/>`...`<br/>`str d(8+RegF),[sp,#(intsz+fpsz-8)]`|`save_fregp`<br/>`...`<br/>`save_freg`
+4|**H** == 1|4|`stp x0,x1,[sp,#(intsz+fpsz)]`<br/>`stp x2,x3,[sp,#(intsz+fpsz+16)]`<br/>`stp x4,x5,[sp,#(intsz+fpsz+32)]`<br/>`stp x6,x7,[sp,#(intsz+fpsz+48)]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
+5a|**Znak CR** == 11 & & #locsz<br/> <= 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
+5b|**CR** == 11 &&<br/>512 < #locsz <= 4080|3|`sub sp,sp,#locsz`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5c|**Znak CR** == 11 & & #locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5d|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz <= 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
+5e|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
 \* Pokud **CR** == 01 a **RegI** je číslo liché, krok 2 a poslední save_rep v kroku 1 jsou sloučeny do jednoho save_regp.
 
 \*\* Pokud **RegI** == **CR** == 0, a **RegF** ! = 0, první stp pro plovoucí desetinné čárky snížením.
 
-\*\*\* Žádné instrukce odpovídající `mov r29, sp` je k dispozici v epilogu. Provedené zabalené unwind dat nelze použít, pokud funkci vyžaduje obnovení sp z r29.
+\*\*\* Žádné instrukce odpovídající `mov x29,sp` je k dispozici v epilogu. Provedené zabalené unwind dat nelze použít, pokud funkci vyžaduje obnovení sp z x29.
 
 ### <a name="unwinding-partial-prologs-and-epilogs"></a>Odvíjení částečné Prology a epilogu funkce
 
@@ -397,16 +397,16 @@ Je obtížné správně vrátit se zpět v případě, kdy k výjimce nebo přer
 Jako příklad může postupujte této sekvence prologu a epilogu:
 
 ```asm
-0000:    stp    r29, lr, [sp, -256]!        // save_fplr_x  256 (pre-indexed store)
-0004:    stp    d8,d9,[sp,224]              // save_fregp 0, 224
-0008:    stp    r19,r20,[sp,240]            // save_regp 0, 240
-000c:    mov    r29,sp                      // set_fp
+0000:    stp    x29,lr,[sp,#-256]!          // save_fplr_x  256 (pre-indexed store)
+0004:    stp    d8,d9,[sp,#224]             // save_fregp 0, 224
+0008:    stp    x19,x20,[sp,#240]           // save_regp 0, 240
+000c:    mov    x29,sp                      // set_fp
          ...
-0100:    mov    sp,r29                      // set_fp
-0104:    ldp    r19,r20,[sp,240]            // save_regp 0, 240
+0100:    mov    sp,x29                      // set_fp
+0104:    ldp    x19,x20,[sp,#240]           // save_regp 0, 240
 0108:    ldp    d8,d9,[sp,224]              // save_fregp 0, 224
-010c:    ldp    r29, lr, [sp, -256]!        // save_fplr_x  256 (post-indexed load)
-0110:    ret     lr                         // end
+010c:    ldp    x29,lr,[sp],#256            // save_fplr_x  256 (post-indexed load)
+0110:    ret    lr                          // end
 ```
 
 Vedle každé operační kód je vhodné unwind kód, který popisuje tuto operaci. První věc, kterou si je, že se série kódy unwind pro prologu přesné zrcadlový obraz unwind kódy epilog (nepočítají poslední instrukce epilogu). To je běžné situace a z tohoto důvodu unwind kódy pro prologu jsou vždy předpokládá, že mají být uloženy v obráceném pořadí z pořadí zpracování prologu.
@@ -442,9 +442,9 @@ Je obvyklý případ z funkce fragmenty "code oddělení" s, kterou kompilátor 
 - (oblast 1: začněte)
 
     ```asm
-        stp     r29, lr, [sp, -256]!    // save_fplr_x  256 (pre-indexed store)
-        stp     r19,r20,[sp,240]        // save_regp 0, 240
-        mov     r29,sp                  // set_fp
+        stp     x29,lr,[sp,#-256]!      // save_fplr_x  256 (pre-indexed store)
+        stp     x19,x20,[sp,#240]       // save_regp 0, 240
+        mov     x29,sp                  // set_fp
         ...
     ```
 
@@ -460,9 +460,9 @@ Je obvyklý případ z funkce fragmenty "code oddělení" s, kterou kompilátor 
 
     ```asm
     ...
-        mov     sp,r29                  // set_fp
-        ldp     r19,r20,[sp,240]        // save_regp 0, 240
-        ldp     r29, lr, [sp, -256]!    // save_fplr_x  256 (post-indexed load)
+        mov     sp,x29                  // set_fp
+        ldp     x19,x20,[sp,#240]       // save_regp 0, 240
+        ldp     x29,lr,[sp],#256        // save_fplr_x  256 (post-indexed load)
         ret     lr                      // end
     ```
 
@@ -489,27 +489,27 @@ Další možnost je složitější funkce fragmentů, ve kterých je "zmenšují
 - (oblast 1: začněte)
 
     ```asm
-        stp     r29, lr, [sp, -256]!    // save_fplr_x  256 (pre-indexed store)
-        stp     r19,r20,[sp,240]        // save_regp 0, 240
-        mov     r29,sp                  // set_fp
+        stp     x29,lr,[sp,#-256]!      // save_fplr_x  256 (pre-indexed store)
+        stp     x19,x20,[sp,#240]       // save_regp 0, 240
+        mov     x29,sp                  // set_fp
         ...
     ```
 
 - (2 oblasti: začněte)
 
     ```asm
-        stp     r21,r22,[sp,224]        // save_regp 2, 224
+        stp     x21,x22,[sp,#224]       // save_regp 2, 224
         ...
-        ldp     r21,r22,[sp,224]        // save_regp 2, 224
+        ldp     x21,x22,[sp,#224]       // save_regp 2, 224
     ```
 
 - (2 oblasti: ukončení)
 
     ```asm
         ...
-        mov     sp,r29                  // set_fp
-        ldp     r19,r20,[sp,240]        // save_regp 0, 240
-        ldp     r29, lr, [sp, -256]!    // save_fplr_x  256 (post-indexed load)
+        mov     sp,x29                  // set_fp
+        ldp     x19,x20,[sp,#240]       // save_regp 0, 240
+        ldp     x29,lr,[sp],#256        // save_fplr_x  256 (post-indexed load)
         ret     lr                      // end
     ```
 
