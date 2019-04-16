@@ -5,10 +5,10 @@ helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
 ms.openlocfilehash: b381a2b7cc9a4ad4749f382838bdec5872a3decf
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 88631cecbe3e3fa752eae3ad05b7f9d9f9437b4d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/15/2019
 ms.locfileid: "58898879"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>2003 – 2015 historie změn Visual C++
@@ -62,7 +62,7 @@ Kromě toho probíhající vylepšení shoda s kompilátorem prostředí můžet
 
    Pro vyřešení chyb, zahrnují \<cmath > Chcete-li získat deklarace funkce, které byly odebrány z \<math.h >. Tyto funkce se přesunuly:
 
-  - `double abs(double)` and `float abs(float)`
+  - `double abs(double)` a `float abs(float)`
 
   - `double pow(double, int)`, `float pow(float, float)`, `float pow(float, int)`, `long double pow(long double, long double)`, `long double pow(long double, int)`
 
@@ -104,7 +104,7 @@ Kromě toho probíhající vylepšení shoda s kompilátorem prostředí můžet
 
 - **va_start a referenční typy**
 
-   Při kompilaci kódu jazyka C++ [va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) nyní ověří v době kompilace, které do něho předaný argument není typu odkazu. Argumenty typu odkazu jsou zakázány podle standardu jazyka C++.
+   Při kompilaci C++ kódu, [va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) nyní ověří v době kompilace, které do něho předaný argument není typu odkazu. Argumenty typu odkazu jsou zakázány podle standardu jazyka C++.
 
 #### <a name="stdioh-and-conioh"></a>\<stdio.h > a \<conio.h >
 
@@ -285,7 +285,7 @@ Kromě toho probíhající vylepšení shoda s kompilátorem prostředí můžet
 
    V sadě Visual Studio 2013 byl opraven problém v **_stat** řadu funkcí, ale s podobnými problémy v **fstat –** a **_utime** nebyly oprava rodinách funkcí. Tato částečná oprava vedlo k problémům kvůli nekonzistencí mezi funkcemi. **Fstat –** a **_utime** rodinách funkcí teď jsme opravili, takže všechny tyto funkce nyní zpracovávají letní čas správnou a konzistentní.
 
-- **asctime –**
+- **asctime**
 
    V předchozích verzích [asctime –](../c-runtime-library/reference/asctime-wasctime.md) funkce by vyplnění řádu dnů s počáteční nulou, například: `Fri Jun 06 08:00:00 2014`. Specifikace vyžaduje, aby těchto dnů bude doplněn s přední místa, stejně jako v `Fri Jun  6 08:00:00 2014`. Tento problém byl opraven.
 
@@ -313,7 +313,7 @@ Pokud byte chtěli povolit nové optimalizace a kontroly ladění, implementace 
 
 - **steady_clock**
 
-   \<Chrono > provádění [steady_clock](../standard-library/steady-clock-struct.md) došlo ke změně pro splnění požadavků standardu C++ steadiness a monotonicity. `steady_clock` je teď na základě [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) a `high_resolution_clock` je nyní definice typu `steady_clock`. V důsledku toho v sadě Visual Studio `steady_clock::time_point` je nyní definice typu `chrono::time_point<steady_clock>`; však není nutně případ v jiných implementacích.
+   \<Chrono > provádění [steady_clock](../standard-library/steady-clock-struct.md) se změnila na splnění C++ standardní požadavky na steadiness a monotonicity. `steady_clock` je teď na základě [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) a `high_resolution_clock` je nyní definice typu `steady_clock`. V důsledku toho v sadě Visual Studio `steady_clock::time_point` je nyní definice typu `chrono::time_point<steady_clock>`; však není nutně případ v jiných implementacích.
 
 - **alokátorů a const**
 
@@ -387,7 +387,7 @@ Pokud byte chtěli povolit nové optimalizace a kontroly ladění, implementace 
 
 ####  <a name="BK_MFC"></a> Knihovna MFC a ATL
 
-- **Microsoft Foundation Classes (MFC)**
+- **Knihovna MFC (Microsoft Foundation Classes)**
 
    je již součástí "Typické" instalací sady Visual Studio z důvodu jeho velikost. Chcete-li nainstalovat knihovny MFC, zvolte **vlastní** možnost instalace v instalačním programu sady Visual Studio 2015. Pokud už máte nainstalovanou sadu Visual Studio 2015, můžete nainstalovat MFC spuštěním **sady Visual Studio** znovu instalační program. Zvolte **vlastní** možnost instalace a klikněte na tlačítko **Microsoft Foundation Classes**. Můžete spustit **sady Visual Studio** nastavení z **ovládací panely** ovládací prvek **programy a funkce**, nebo z instalačního média.
 
@@ -443,11 +443,11 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     }
     ```
 
-- `/Zg` možnost kompilátoru
+- `/Zg` – možnost kompilátoru
 
    `/Zg` – Možnost kompilátoru (Generovat prototypy funkcí) už nejsou k dispozici. Tato možnost kompilátoru dříve byla zrušena.
 
-- Jednotkové testy můžete spustit již s C + +/ CLI z příkazového řádku pomocí mstest.exe. Místo toho používejte vstest.console.exe. Zobrazit [možnosti příkazového řádku VSTest.Console.exe](/visualstudio/test/vstest-console-options).
+- Už můžete spustit testy jednotek s C++vyhodnocovací z příkazového řádku pomocí mstest.exe. Místo toho používejte vstest.console.exe. Zobrazit [možnosti příkazového řádku VSTest.Console.exe](/visualstudio/test/vstest-console-options).
 
 - **Mutable – klíčové slovo**
 
@@ -2926,7 +2926,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
 ### <a name="standard-library"></a>Standardní knihovna
 
-Kompilátor C++ v sadě Visual Studio 2013 zjistí neshody v makru _ITERATOR_DEBUG_LEVEL, které bylo implementováno v sadě Visual Studio 2010, a neshody RuntimeLibrary. Tyto problémy dojít při – možnosti kompilátoru `/MT` (statická vydaná verze), `/MTd` (statické ladění), `/MD` (dynamická vydaná verze), a `/MDd` (dynamické ladění) jsou smíšené.
+C++ Kompilátor v sadě Visual Studio 2013 zjistí neshody v makru _ITERATOR_DEBUG_LEVEL, které bylo implementováno v sadě Visual Studio 2010, a se neshoduje s RuntimeLibrary. Tyto problémy dojít při – možnosti kompilátoru `/MT` (statická vydaná verze), `/MTd` (statické ladění), `/MD` (dynamická vydaná verze), a `/MDd` (dynamické ladění) jsou smíšené.
 
 - Pokud váš kód potvrzuje předchozí verze šablony simulované aliasů, musíte ho změnit. Například namísto z `allocator_traits<A>::rebind_alloc<U>::other`, nyní musíte napsat `allocator_traits<A>::rebind_alloc<U>`. I když `ratio_add<R1, R2>::type` již není nezbytné a můžeme nyní doporučit, abyste říkali `ratio_add<R1, R2>`, první bude stále kompilovat, protože `ratio<N, D>` musí mít "typ" typedef pro snížení poměru, který bude stejného typu, pokud je již snížen.
 
@@ -3032,7 +3032,7 @@ Kompilátor C++ v sadě Visual Studio 2013 zjistí neshody v makru _ITERATOR_DEB
 
 ### <a name="ide"></a>IDE – integrované vývojové prostředí
 
-- Přestože doporučujeme nevytvářet aplikace Windows Forms v jazyce C + +/ CLI, údržba existující C + +/ podporované aplikace uživatelského rozhraní příkazového řádku. Pokud máte pro vytvoření aplikace modelu Windows Forms nebo jakékoli jiné aplikace uživatelského rozhraní .NET, pomocí C# nebo Visual Basic. Pomocí C + +/ CLI pro interoperabilitu mají jenom.
+- Přestože doporučujeme vytvářet aplikace Windows Forms v C++vyhodnocovací, údržba stávajících C++podporované aplikace uživatelského rozhraní příkazového řádku. Pokud máte pro vytvoření aplikace modelu Windows Forms nebo jakékoli jiné aplikace uživatelského rozhraní .NET, pomocí C# nebo Visual Basic. Použití C++vyhodnocovací interoperability mají jenom.
 
 ### <a name="parallel-patterns-library-and-concurrency-runtime-library"></a>Knihovna paralelních vzorů a knihovny modulu Runtime souběžnosti
 
@@ -3046,15 +3046,15 @@ Kompilátor C++ v sadě Visual Studio 2013 zjistí neshody v makru _ITERATOR_DEB
 
 - Visual C++ 2010 simulované variadické šablony – například `make_shared<T>(arg1, arg2, argN)`– až po limit 10 argumentů, orazítkování přetížení a specializace preprocesoru zařízení. V sadě Visual Studio 2012 je tento limit snížena na pět argumentů zlepšit dobu potřebnou ke kompilaci a spotřebu paměti kompilátoru pro většinu uživatelů. Předchozí limit však můžete nastavit tak, že explicitně definujete příkaz _VARIADIC_MAX jako 10 celého projektu.
 
-- C ++ 11 17.6.4.3.1 [macro.names]/2 zakazuje nahrazení makra klíčových slov, když hlavičky standardní knihovny C++ jsou zahrnuty. Záhlaví nyní generuje chyby kompilátoru při detekci makra nahrazeny klíčová slova. (Definování _ALLOW_KEYWORD_MACROS umožňuje takový kód mohl zkompilovat, ale důrazně budeme bránit tohle využívání.) Jako výjimku – makro formu `new` je povolené ve výchozím nastavení, protože záhlaví komplexně chránit s použitím `#pragma push_macro("new")` / `#undef new` / `#pragma pop_macro("new")`. Definování _ENFORCE_BAN_OF_MACRO_NEW nemá přesně jak název napovídá.
+- C ++ 11 17.6.4.3.1 [macro.names]/2 zakazuje nahrazení makra klíčových slov při C++ hlavičky standardní knihovny, které jsou zahrnuty. Záhlaví nyní generuje chyby kompilátoru při detekci makra nahrazeny klíčová slova. (Definování _ALLOW_KEYWORD_MACROS umožňuje takový kód mohl zkompilovat, ale důrazně budeme bránit tohle využívání.) Jako výjimku – makro formu `new` je povolené ve výchozím nastavení, protože záhlaví komplexně chránit s použitím `#pragma push_macro("new")` / `#undef new` / `#pragma pop_macro("new")`. Definování _ENFORCE_BAN_OF_MACRO_NEW nemá přesně jak název napovídá.
 
-- Pokud chcete implementovat různých optimalizací a kontroly ladění, implementace standardní knihovny C++ záměrně neumožňuje binární kompatibilitu mezi verzemi sady Visual Studio (2005, 2008, 2010, 2012). Při použití standardní knihovny C++ zakazuje kombinování souborů objektů a statických knihoven, které jsou kompilovány pomocí různých verzí na jednom binárním souboru (EXE nebo DLL) a zakazuje předávání objektů standardní knihovny C++ mezi binárními soubory, které jsou kompilovány pomocí pomocí různých verzí. Kombinování souborů objektů a statických knihoven (pomocí standardní knihovny C++, které byly zkompilovány pomocí Visual C++ 2010 těmi, které byly zkompilovány pomocí C++ v sadě Visual Studio 2012 kompilátor chyby linkeru týkající se neshoda _MSC_VER, kde je _MSC_VER makra, které obsahuje hlavní verzi kompilátoru (1700 jazyka Visual C++ v sadě Visual Studio 2012). Tato kontrola nezjistí směšování knihoven DLL a nelze zjišťovat kombinace, která zahrnuje Visual C++ 2008 nebo dřívější.
+- Pokud chcete implementovat různých optimalizací a kontroly ladění, implementace standardní knihovny C++ záměrně neumožňuje binární kompatibilitu mezi verzemi sady Visual Studio (2005, 2008, 2010, 2012). Při použití standardní knihovny C++ zakazuje kombinování souborů objektů a statických knihoven, které jsou kompilovány pomocí různých verzí na jednom binárním souboru (EXE nebo DLL) a zakazuje předávání objektů standardní knihovny C++ mezi binárními soubory, které jsou kompilovány pomocí pomocí různých verzí. Kombinování souborů objektů a statických knihoven (pomocí C++ standardní knihovny, které byly zkompilovány pomocí Visual C++ 2010 těmi, které byly zkompilovány pomocí C++ kompilátor v sadě Visual Studio 2012 chyby linkeru týkající se neshoda _MSC_VER kde _MSC_VER je makro, které obsahuje hlavní verzi kompilátoru (1 700 vizuálu C++ v sadě Visual Studio 2012). Tato kontrola nezjistí směšování knihoven DLL a nelze zjišťovat kombinace, která zahrnuje Visual C++ 2008 nebo dřívější.
 
-- Kromě zjišťování neshody _ITERATOR_DEBUG_LEVEL, které bylo implementováno ve Visual C++ 2010, kompilátor jazyka C++ v sadě Visual Studio 2012 zjistí neshody knihovny prostředí Runtime. Tyto problémy dojít při možnosti kompilátoru `/MT` (statická vydaná verze), `/MTd` (statické ladění), `/MD` (dynamická vydaná verze), a `/MDd` (dynamické ladění) jsou smíšené.
+- Kromě zjišťování neshody _ITERATOR_DEBUG_LEVEL, které bylo implementováno ve Vizuálu C++ 2010, C++ kompilátor v sadě Visual Studio 2012 zjistí neshody knihovny prostředí Runtime. Tyto problémy dojít při možnosti kompilátoru `/MT` (statická vydaná verze), `/MTd` (statické ladění), `/MD` (dynamická vydaná verze), a `/MDd` (dynamické ladění) jsou smíšené.
 
 - `operator<()`, `operator>()`, `operator<=()`, a `operator>=()` byly dříve k dispozici pro `std::unordered_map` a `stdext::hash_map` rodiny kontejnerů, i když jejich implementace nebylo užitečné. Tyto operátory nestandardní jsme odebrali v jazyce Visual C++ v sadě Visual Studio 2012. Kromě toho provádění `operator==()` a `operator!=()` pro `std::unordered_map` řady rozšířilo a zahrnují `stdext::hash_map` řady. (Doporučujeme, abyste se vyhněte použití `stdext::hash_map` řady v novém kódu.)
 
-- C ++ 11 22.4.1.4 [locale.codecvt] Určuje, že `codecvt::length()` a `codecvt::do_length()` zabere upravitelná `stateT&` parametry, ale jazyk Visual C++ 2010 trvalo `const stateT&`. Kompilátor C++ v sadě Visual Studio 2012 trvá `stateT&` podle zákonného standard. Tento rozdíl je důležité pro každého, kdo se pokouší přepsat virtuální funkci `do_length()`.
+- C ++ 11 22.4.1.4 [locale.codecvt] Určuje, že `codecvt::length()` a `codecvt::do_length()` zabere upravitelná `stateT&` parametry, ale Visual C++ 2010 trvalo `const stateT&`. Kompilátor C++ v sadě Visual Studio 2012 trvá `stateT&` podle zákonného standard. Tento rozdíl je důležité pro každého, kdo se pokouší přepsat virtuální funkci `do_length()`.
 
 ### <a name="crt"></a>CRT
 
@@ -3266,7 +3266,7 @@ Kompilátor C++ v sadě Visual Studio 2013 zjistí neshody v makru _ITERATOR_DEB
 
 - Dialogové okno ukončení aplikace už ukončí aplikaci. V předchozích verzích když `abort()` nebo `terminate()` funkce zavřené sestavení prodejní verze aplikace, knihovny Run-Time jazyka C v okně konzoly se okně nebo dialogovém okně zobrazí zprávu o ukončení aplikace. Zpráva říká, že v části "Tato aplikace vydala požadavek modulu Runtime, aby ji ukončil neobvyklým způsobem. Kontaktujte prosím tým podpory vaší aplikace pro další informace." Zpráva ukončení aplikace byla redundantní, protože Windows následně zobrazit aktuální rutinu ukončení, které se obvykle Windows hlášení chyb (zotavení po havárii. Dialogové okno programu Watson) nebo ladicího programu sady Visual Studio. Spouští se v sadě Visual Studio 2010, knihovny Run-Time jazyka C nezobrazuje zpráva. Kromě toho modul runtime zabrání aplikaci v končí před spuštěním ladicí program. Toto je zásadní změna pouze v případě, že závisí na předchozím chování zpráva ukončení aplikace.
 
-- Konkrétně pro sadu Visual Studio 2010, nefunguje technologie IntelliSense pro C + +/ CLI kód nebo atributy, **najít všechny odkazy** nefunguje pro místní proměnné, a modelu kódu nelze načíst názvy typů z importované sestavení nebo řešení typy k jejich plně kvalifikovaných názvů.
+- Konkrétně pro sadu Visual Studio 2010, nefunguje technologie IntelliSense pro C++vyhodnocovací kódu nebo atributy, **najít všechny odkazy** nefunguje pro místní proměnné a Model kódu není načíst názvy typů z importované sestavení nebo typy přeložit na jejich plně kvalifikovaných názvů.
 
 ### <a name="libraries"></a>Knihovny
 
@@ -3386,7 +3386,7 @@ Kompilátor C++ v sadě Visual Studio 2013 zjistí neshody v makru _ITERATOR_DEB
 
 ### <a name="atl"></a>ATL
 
-- Knihovny ATL nelze sestavit bez závislosti na CRT. V dřívějších verzích sady Visual Studio, můžete použít #define ATL_MIN_CRT projektu ATL, aby minimálně závislé na CRT. V aplikaci Visual C++ 2008 jsou všechny projekty knihovny ATL minimálně závislé na CRT bez ohledu na to, zda je definován ATL_MIN_CRT.
+- Knihovny ATL nelze sestavit bez závislosti na CRT. V dřívějších verzích sady Visual Studio, můžete použít #define ATL_MIN_CRT projektu ATL, aby minimálně závislé na CRT. Ve Vizuálu C++ 2008, jsou všechny projekty knihovny ATL minimálně závislé na CRT bez ohledu na to, zda je definován ATL_MIN_CRT.
 
 - Základ kódu serveru ATL byla uvedena jako sdílený zdrojový projekt na webu CodePlex a není nainstalován jako součást sady Visual Studio. Kódování a dekódování z funkce atlenc.h a nástroje a třídy z atlutil.h a atlpath.h dat byla držena a jsou teď součástí knihovny ATL. Několik souborů, které jsou přidružené k serveru knihovny ATL už nejsou součástí sady Visual Studio.
 
@@ -3396,7 +3396,7 @@ Kompilátor C++ v sadě Visual Studio 2013 zjistí neshody v makru _ITERATOR_DEB
 
 ### <a name="atlmfc-shared-classes"></a>Sdílené třídy ATL/MFC
 
-- Knihovny ATL nelze sestavit bez závislosti na CRT. V dřívějších verzích sady Visual Studio, můžete použít `#define ATL_MIN_CRT` do projektu ATL, aby minimálně závislé na CRT. V aplikaci Visual C++ 2008 jsou všechny projekty knihovny ATL minimálně závislé na CRT bez ohledu na to, zda je definován ATL_MIN_CRT.
+- Knihovny ATL nelze sestavit bez závislosti na CRT. V dřívějších verzích sady Visual Studio, můžete použít `#define ATL_MIN_CRT` do projektu ATL, aby minimálně závislé na CRT. Ve Vizuálu C++ 2008, jsou všechny projekty knihovny ATL minimálně závislé na CRT bez ohledu na to, zda je definován ATL_MIN_CRT.
 
 - Základ kódu serveru ATL byla uvedena jako sdílený zdrojový projekt na webu CodePlex a není nainstalován jako součást sady Visual Studio. Kódování a dekódování z funkce atlenc.h a nástroje a třídy z atlutil.h a atlpath.h dat byla držena a jsou teď součástí knihovny ATL. Několik souborů, které jsou přidružené k serveru knihovny ATL už nejsou součástí sady Visual Studio.
 
