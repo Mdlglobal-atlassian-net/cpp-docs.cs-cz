@@ -30,10 +30,10 @@ helpviewer_keywords:
 - CBindStatusCallback class
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
 ms.openlocfilehash: 6e5e55a23ee678bbedf76f608bc4fdf562cc1822
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773122"
 ---
 # <a name="cbindstatuscallback-class"></a>Cbindstatuscallback – třída
@@ -64,7 +64,7 @@ Určuje příznaky vazby, které jsou vráceny pomocí [GetBindInfo](#getbindinf
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CBindStatusCallback::CBindStatusCallback](#cbindstatuscallback)|Konstruktor|
 |[CBindStatusCallback::~CBindStatusCallback](#dtor)|Destruktor.|
@@ -86,7 +86,7 @@ Určuje příznaky vazby, které jsou vráceny pomocí [GetBindInfo](#getbindinf
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CBindStatusCallback::m_dwAvailableToRead](#m_dwavailabletoread)|Počet bajtů ke čtení k dispozici.|
 |[CBindStatusCallback::m_dwTotalRead](#m_dwtotalread)|Celkový počet bajtů ke čtení.|

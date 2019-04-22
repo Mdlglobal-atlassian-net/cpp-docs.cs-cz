@@ -39,10 +39,10 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
 ms.openlocfilehash: 9c54cdfecfa6c4ff0eef7e16003ab2097553953d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775683"
 ---
 # <a name="crecttracker-class"></a>Crecttracker – třída
@@ -81,7 +81,7 @@ class CRectTracker
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CRectTracker::m_nHandleSize](#m_nhandlesize)|Určuje velikost úchyty pro změnu velikosti.|
 |[CRectTracker::m_nStyle](#m_nstyle)|Aktuální style(s) sledovacímu modulu.|

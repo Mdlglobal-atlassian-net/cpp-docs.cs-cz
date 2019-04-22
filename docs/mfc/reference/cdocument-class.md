@@ -121,10 +121,10 @@ helpviewer_keywords:
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
 ms.openlocfilehash: 2d87ff67000fb5b70c0a5c965638875e6f50b22c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774180"
 ---
 # <a name="cdocument-class"></a>CDocument – třída
@@ -246,9 +246,9 @@ Další informace o `CDocument`, naleznete v tématu [serializace](../../mfc/ser
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 `CDocument`
 
@@ -375,7 +375,7 @@ virtual POSITION FindChunk(
 *identifikátor GUID*<br/>
 Určuje identifikátor GUID blok, který se má najít.
 
-*Identifikátor PID*<br/>
+*pid*<br/>
 Určuje identifikátor PID blok k vyhledání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -753,7 +753,7 @@ virtual void OnDrawThumbnail(
 
 ### <a name="parameters"></a>Parametry
 
-*řadič domény*<br/>
+*dc*<br/>
 Odkaz na kontext zařízení.
 
 *lprcBounds*<br/>
@@ -1070,10 +1070,10 @@ virtual void RemoveChunk(
 
 ### <a name="parameters"></a>Parametry
 
-*Guid*<br/>
+*identifikátor GUID*<br/>
 Určuje identifikátor GUID blok, který se má odebrat.
 
-*Identifikátor PID*<br/>
+*Pid*<br/>
 Určuje identifikátor PID blok má být odebrán.
 
 ### <a name="remarks"></a>Poznámky

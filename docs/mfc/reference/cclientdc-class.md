@@ -11,10 +11,10 @@ helpviewer_keywords:
 - CClientDC [MFC], m_hWnd
 ms.assetid: 8a871d6b-06f8-496e-9fa3-9a5780848369
 ms.openlocfilehash: a67af5d7d82b8bd7d0490d4ae6f9535bf3283ea2
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58766765"
 ---
 # <a name="cclientdc-class"></a>Cclientdc – třída
@@ -37,7 +37,7 @@ class CClientDC : public CDC
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CClientDC::m_hWnd](#m_hwnd)|HWND okno, pro které bude tato `CClientDC` je platný.|
 

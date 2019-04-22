@@ -37,10 +37,10 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
 ms.openlocfilehash: c3fd57510a38d597b827f80ab98a0be280ad31e3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767766"
 ---
 # <a name="ccomboboxex-class"></a>Ccomboboxex – třída
@@ -63,7 +63,7 @@ class CComboBoxEx : public CComboBox
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CComboBoxEx::Create](#create)|Vytvoří pole se seznamem a připojí ho k `CComboBoxEx` objektu.|
 |[CComboBoxEx::CreateEx](#createex)|Vytvoří pole se seznamem se zadaným rozšířené styly Windows a připojí ho k `ComboBoxEx` objektu.|

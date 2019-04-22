@@ -1,17 +1,17 @@
 ---
-title: 'Postupy: Používání událostí v jazyce C + +/ CLI'
+title: 'Postupy: Používání událostí v C++vyhodnocovací'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
 ms.openlocfilehash: 6b4ecbba5651341965d2cf4df5b5ad2ead7f9f26
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58770991"
 ---
-# <a name="how-to-use-events-in-ccli"></a>Postupy: Používání událostí v jazyce C + +/ CLI
+# <a name="how-to-use-events-in-ccli"></a>Postupy: Používání událostí v C++vyhodnocovací
 
 Tento článek ukazuje, jak použít rozhraní, který deklaruje událost a funkce, která se má vyvolat tuto událost a obslužnou rutinu třídy a události, které implementují rozhraní.
 

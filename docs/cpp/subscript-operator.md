@@ -10,10 +10,10 @@ helpviewer_keywords:
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
 ms.openlocfilehash: 2d55c18d2c9faa1a704bea129f2551937e76133c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767922"
 ---
 # <a name="subscript-operator-"></a>Operátor dolního indexu]
@@ -28,7 +28,7 @@ postfix-expression [ expression ]
 
 Výraz přípony (může to také být primární výraz) za nímž následuje operátor dolního indexu **[] č.**, určuje indexování pole.
 
-Informace o spravovaných polí v jazyce C + +/ CLI, najdete v článku [pole](../extensions/arrays-cpp-component-extensions.md).
+Informace o spravovaných polí v C++vyhodnocovací, naleznete v tématu [pole](../extensions/arrays-cpp-component-extensions.md).
 
 Obvykle hodnota reprezentovaná *postfix-expression* je hodnota ukazatele, jako je například identifikátor pole a *výraz* je celé číslo (včetně výčtových typů). Všechny možnosti, které je však vyžaduje syntakticky je jeden z výrazů být typu ukazatele a druhý být celočíselného typu. Proto může být celočíselná hodnota v *postfix-expression* pozice a hodnota ukazatele může být v závorkách v *výraz* nebo dolní index pozice. Předpokládejme následující fragment kódu:
 
@@ -77,7 +77,7 @@ int main() {
 
 ## <a name="positive-and-negative-subscripts"></a>Kladné a záporné dolní indexy
 
-První prvek pole je prvek 0. Rozsah pole jazyka C++ je od *pole*[0] do *pole*[*velikost* - 1]. Jazyk C++ však podporuje kladné a záporné dolní indexy. Záporné dolní indexy musí spadat do hranice pole; Pokud tomu tak není, jsou výsledky nepředvídatelné. Následující kód ukazuje pole kladné a záporné dolní indexy:
+První prvek pole je prvek 0. Rozsah C++ pole je z *pole*[0] do *pole*[*velikost* - 1]. Jazyk C++ však podporuje kladné a záporné dolní indexy. Záporné dolní indexy musí spadat do hranice pole; Pokud tomu tak není, jsou výsledky nepředvídatelné. Následující kód ukazuje pole kladné a záporné dolní indexy:
 
 ```cpp
 #include <iostream>

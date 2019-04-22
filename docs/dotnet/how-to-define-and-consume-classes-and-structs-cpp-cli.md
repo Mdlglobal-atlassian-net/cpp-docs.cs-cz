@@ -1,20 +1,20 @@
 ---
-title: 'Postupy: Definice a používání tříd a struktur (C + +/ CLI)'
+title: 'Postupy: Definice a používání tříd a struktur (C++vyhodnocovací)'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
 ms.openlocfilehash: 090259a4ad6b46eccf66dca6c99b4eb532b7ae5c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774916"
 ---
-# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Postupy: Definice a používání tříd a struktur (C + +/ CLI)
+# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Postupy: Definice a používání tříd a struktur (C++vyhodnocovací)
 
-Tento článek popisuje, jak definovat a využívat typy odkazů definované uživatelem a typů hodnot v jazyce C + +/ CLI.
+Tento článek popisuje, jak definovat a využívat typy odkazů definované uživatelem a typů hodnot v C++vyhodnocovací.
 
 ##  <a name="BKMK_Contents"></a> Obsah
 
@@ -455,7 +455,7 @@ Kompilátor nemůže provést vložení volání konstruktoru Pokud třída má 
 
 Definujte statický konstruktor jako funkci soukromého členu, protože je určená k volání pouze platformou CLR.
 
-Další informace o statické konstruktory, naleznete v tématu [jak: Definování statického konstruktoru (C + +/ CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) .
+Další informace o statické konstruktory, naleznete v tématu [jak: Definování statického konstruktoru (C++vyhodnocovací)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) .
 
 ```cpp
 // compile with: /clr

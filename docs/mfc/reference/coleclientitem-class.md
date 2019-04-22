@@ -165,10 +165,10 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
 ms.openlocfilehash: 2687dfc9941a512523a7cb771cb872c78b97ce2d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773980"
 ---
 # <a name="coleclientitem-class"></a>Coleclientitem – třída
@@ -294,11 +294,11 @@ Další informace o použití rozhraní kontejneru, najdete v článcích [konte
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[Cdocitem –](../../mfc/reference/cdocitem-class.md)
+[CDocItem](../../mfc/reference/cdocitem-class.md)
 
 `COleClientItem`
 
@@ -627,7 +627,7 @@ BOOL CreateFromClipboard(
 
 ### <a name="parameters"></a>Parametry
 
-*Vykreslení*<br/>
+*render*<br/>
 Příznak určující, jak server bude vykreslení položky OLE. Možné hodnoty najdete v části [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) v sadě Windows SDK.
 
 *cfFormat*<br/>
@@ -663,7 +663,7 @@ BOOL CreateFromData(
 *pDataObject*<br/>
 Ukazatel [coledataobject –](../../mfc/reference/coledataobject-class.md) objektu, ze kterého se má vytvořit položky OLE.
 
-*Vykreslení*<br/>
+*render*<br/>
 Příznak určující, jak server bude vykreslení položky OLE. Možné hodnoty najdete v části [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) v sadě Windows SDK.
 
 *cfFormat*<br/>
@@ -700,10 +700,10 @@ BOOL CreateFromFile(
 *lpszFileName*<br/>
 Ukazatel na název souboru, ze kterého se má vytvořit položky OLE.
 
-*identifikátor CLSID*<br/>
+*clsid*<br/>
 Vyhrazeno pro budoucí použití.
 
-*Vykreslení*<br/>
+*render*<br/>
 Příznak určující, jak server bude vykreslení položky OLE. Možné hodnoty najdete v části [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) v sadě Windows SDK.
 
 *cfFormat*<br/>
@@ -735,7 +735,7 @@ BOOL CreateLinkFromClipboard(
 
 ### <a name="parameters"></a>Parametry
 
-*Vykreslení*<br/>
+*render*<br/>
 Příznak určující, jak server bude vykreslení položky OLE. Možné hodnoty najdete v části [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) v sadě Windows SDK.
 
 *cfFormat*<br/>
@@ -771,7 +771,7 @@ BOOL CreateLinkFromData(
 *pDataObject*<br/>
 Ukazatel [coledataobject –](../../mfc/reference/coledataobject-class.md) objektu, ze kterého se má vytvořit položky OLE.
 
-*Vykreslení*<br/>
+*render*<br/>
 Příznak určující, jak server bude vykreslení položky OLE. Možné hodnoty najdete v části [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) v sadě Windows SDK.
 
 *cfFormat*<br/>
@@ -807,7 +807,7 @@ BOOL CreateLinkFromFile(
 *lpszFileName*<br/>
 Ukazatel na název souboru, ze kterého se má vytvořit položky OLE.
 
-*Vykreslení*<br/>
+*render*<br/>
 Příznak určující, jak server bude vykreslení položky OLE. Možné hodnoty najdete v části [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) v sadě Windows SDK.
 
 *cfFormat*<br/>
@@ -840,10 +840,10 @@ BOOL CreateNewItem(
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor CLSID*<br/>
+*clsid*<br/>
 ID, které jednoznačně identifikuje typ položky OLE. Chcete-li vytvořit.
 
-*Vykreslení*<br/>
+*render*<br/>
 Příznak určující, jak server bude vykreslení položky OLE. Možné hodnoty najdete v části [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) v sadě Windows SDK.
 
 *cfFormat*<br/>
@@ -875,7 +875,7 @@ BOOL CreateStaticFromClipboard(
 
 ### <a name="parameters"></a>Parametry
 
-*Vykreslení*<br/>
+*render*<br/>
 Příznak určující, jak server bude vykreslení položky OLE. Možné hodnoty najdete v části [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) v sadě Windows SDK.
 
 *cfFormat*<br/>
@@ -911,7 +911,7 @@ BOOL CreateStaticFromData(
 *pDataObject*<br/>
 Ukazatel [coledataobject –](../../mfc/reference/coledataobject-class.md) objektu, ze kterého se má vytvořit položky OLE.
 
-*Vykreslení*<br/>
+*render*<br/>
 Příznak určující, jak server bude vykreslení položky OLE. Možné hodnoty najdete v části [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) v sadě Windows SDK.
 
 *cfFormat*<br/>
@@ -1045,7 +1045,7 @@ virtual BOOL DoVerb(
 *nVerb*<br/>
 Určuje příkaz pro spuštění. Může obsahovat jednu z následujících akcí:
 
-|Hodnota|Význam|Symbol|
+|Value|Význam|Symbol|
 |-----------|-------------|------------|
 |- 0|primární požadavek|OLEIVERB_PRIMARY|
 |- 1|Sekundární příkaz|(Žádné)|
@@ -1273,7 +1273,7 @@ static HICON GetIconFromRegistry(CLSID& clsid);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor CLSID*<br/>
+*clsid*<br/>
 Odkaz na identifikátor CLSID pro server spojený s ikonou.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2024,7 +2024,7 @@ void SetExtent(
 
 ### <a name="parameters"></a>Parametry
 
-*velikost*<br/>
+*Velikost*<br/>
 A [CSize](../../atl-mfc-shared/reference/csize-class.md) objekt, který obsahuje informace o velikosti.
 
 *nDrawAspect*<br/>
@@ -2147,7 +2147,7 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
 
 ### <a name="parameters"></a>Parametry
 
-*PTD*<br/>
+*ptd*<br/>
 Ukazatel [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) datová struktura, která obsahuje informace o nové tiskové cílové zařízení. Může mít hodnotu NULL.
 
 *ppd*<br/>
@@ -2189,6 +2189,6 @@ Další informace najdete v tématu [IOleLink::Update](/windows/desktop/api/olei
 
 [Ukázky knihovny MFC MFCBIND](../../overview/visual-cpp-samples.md)<br/>
 [Ukázky knihovny MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
-[Cdocitem – třída](../../mfc/reference/cdocitem-class.md)<br/>
+[CDocItem – třída](../../mfc/reference/cdocitem-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[COleServerItem Class](../../mfc/reference/coleserveritem-class.md)
+[COleServerItem – třída](../../mfc/reference/coleserveritem-class.md)

@@ -233,10 +233,10 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
 ms.openlocfilehash: 6daa5b6249c7ff18a8bc01c2309ffb94d3fb88ce
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773070"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Cmfcribbonbaseelement – třída
@@ -401,7 +401,7 @@ Následující příklad ukazuje, jak použít různé metody v `CMFCRibbonBaseE
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
 [Cmfcribbonbaseelement –](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
@@ -580,7 +580,7 @@ virtual void DrawImage(
 *pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
-* – typ*<br/>
+*type*<br/>
 [in] Typ image vytvořit výčet hodnoty. V části poznámky pro seznam možných hodnot.
 
 *rectImage*<br/>
@@ -893,7 +893,7 @@ RibbonElementLocation GetLocationInGroup() const;
 
 A `RibbonElementLocation` hodnotu výčtu. V následující tabulce jsou uvedeny možné hodnoty.
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |`RibbonElementNotInGroup`|Prvek pásu karet není součástí skupiny pásu karet.|
 |`RibbonElementSingleInGroup`|Prvek pásu karet se zobrazí jako jedinou položku do skupiny pásu karet.|
@@ -1199,7 +1199,7 @@ virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Tento parametr se nepoužívá.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1700,7 +1700,7 @@ virtual void OnDrawKeyTip(
 *pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Ohraničení rámečku klávesovou zkratku.
 
 *bIsMenu*<br/>
@@ -1723,7 +1723,7 @@ virtual BOOL OnDrawMenuImage(
 *pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Nabídka image obdélník.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1757,7 +1757,7 @@ virtual void OnDrawOnList(
 *nTextOffset*<br/>
 [in] Vzdálenost v pixelech na levé straně pole se seznamem k zobrazení textu.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Obdélník zobrazení pro prvek pásu karet.
 
 *bIsSelected*<br/>
@@ -2135,7 +2135,7 @@ void SetRect(CRect rect);
 
 ### <a name="parameters"></a>Parametry
 
-*rect*<br/>
+*Rect*<br/>
 [in] Rozměry obdélníku.
 
 ### <a name="remarks"></a>Poznámky

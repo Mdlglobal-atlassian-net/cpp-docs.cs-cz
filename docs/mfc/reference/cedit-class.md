@@ -95,10 +95,10 @@ helpviewer_keywords:
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
 ms.openlocfilehash: 45c03d142c34186660aa2715081ffb0f45e85ccc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773746"
 ---
 # <a name="cedit-class"></a>Cedit – třída
@@ -219,9 +219,9 @@ Další informace o `CEdit`, naleznete v tématu [ovládací prvky](../../mfc/co
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](cobject-class.md)
+[Třídy CObject](cobject-class.md)
 
-[CCmdTarget –](ccmdtarget-class.md)
+[CCmdTarget](ccmdtarget-class.md)
 
 [CWnd](cwnd-class.md)
 
@@ -277,7 +277,7 @@ int CharFromPos(CPoint pt) const;
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pt*<br/>
 Souřadnice bodu v klientské oblasti tohoto `CEdit` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -348,7 +348,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Určuje styl textové pole. Použít libovolnou kombinaci [styly pro úpravy](styles-used-by-mfc.md#edit-styles) do ovládacího prvku.
 
-*rect*<br/>
+*Rect*<br/>
 Určuje velikost a umístění textové pole. Může být `CRect` objektu nebo `RECT` struktury.
 
 *pParentWnd*<br/>
@@ -1451,12 +1451,12 @@ Další informace najdete v tématu [EM_UNDO](/windows/desktop/Controls/em-undo)
 
 [Ukázky knihovny MFC CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
 [Ukázka CMNCTRL2 knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
-[Třída CWnd](../../mfc/reference/cwnd-class.md)<br/>
+[CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[Třída CWnd](cwnd-class.md)<br/>
+[CWnd – třída](cwnd-class.md)<br/>
 [CButton – třída](cbutton-class.md)<br/>
 [CComboBox – třída](ccombobox-class.md)<br/>
-[Clistbox – třída](clistbox-class.md)<br/>
-[CScrollBar Class](cscrollbar-class.md)<br/>
-[Cstatic – třída](cstatic-class.md)<br/>
+[CListBox – třída](clistbox-class.md)<br/>
+[CScrollBar – třída](cscrollbar-class.md)<br/>
+[CStatic – třída](cstatic-class.md)<br/>
 [CDialog – třída](cdialog-class.md)

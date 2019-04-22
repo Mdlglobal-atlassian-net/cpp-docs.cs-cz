@@ -14,10 +14,10 @@ helpviewer_keywords:
 - TN041
 ms.assetid: 67f55552-4b04-4ddf-af0b-4d9eaf5da957
 ms.openlocfilehash: b398a1adbf2f47343eed076f32ade5bb2564cd52
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767974"
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041: Migrace MFC/OLE1 do MFC/OLE2
@@ -291,7 +291,7 @@ V tomto okamžiku OCLIENT je funkční aplikace kontejneru OLE. Je možné vlož
 
 Jedním z nejzajímavějších funkce OLE je aktivace na místě (nebo "Vizuální úpravy"). Tato funkce umožňuje se serverová aplikace mohla převzít kontrolu nad částí uživatelského rozhraní na kontejner, poskytuje pohodlnější editační rozhraní pro uživatele. K implementaci místní aktivaci za účelem OCLIENT, je potřeba přidat, a také další kód některé speciální prostředky. Tyto prostředky a kód se obvykle poskytované AppWizard – ve skutečnosti byla velkou část kódu tady si přímo z aplikace čerstvé AppWizard podpora "Kontejnerů".
 
-Za prvé je potřeba přidat nabídce prostředků chcete použít, když je položka, která je na místě aktivní. Tento prostředek doplňující nabídky v jazyce Visual C++ můžete vytvořit zkopírováním IDR_OCLITYPE prostředků a odebírá všechny kromě souborů a okno automaticky otevíraná okna. Mezi souboru a okno automaticky otevíraná okna k označení oddělení skupiny jsou vloženy dvě oddělovacích pruhů (by měl vypadat: Soubor &#124; &#124; okno). Další informace o významu těchto oddělovače a jak slučování nabídek serveru a kontejneru najdete v části [nabídky a prostředky: Slučování nabídek](../mfc/menus-and-resources-menu-merging.md).
+Za prvé je potřeba přidat nabídce prostředků chcete použít, když je položka, která je na místě aktivní. Ve Vizuálu můžete vytvořit tento prostředek doplňující nabídky C++ zkopírováním IDR_OCLITYPE prostředků a odebírá všechny kromě souborů a okno automaticky otevíraná okna. Mezi souboru a okno automaticky otevíraná okna k označení oddělení skupiny jsou vloženy dvě oddělovacích pruhů (by měl vypadat: Soubor &#124; &#124; okno). Další informace o významu těchto oddělovače a jak slučování nabídek serveru a kontejneru najdete v části [nabídky a prostředky: Slučování nabídek](../mfc/menus-and-resources-menu-merging.md).
 
 Jakmile máte těchto nabídek, které vytvořili, musíte nechat informovat o rámci. To se provádí voláním `CDocTemplate::SetContainerInfo` pro šablonu dokumentu, předtím, než přidáte na seznam šablon dokumentů do funkce InitInstance. vaše. Nový kód pro registraci šablonu dokumentu vypadá takto:
 
@@ -307,7 +307,7 @@ pTemplate->SetContainerInfo(IDR_OLECLITYPE_INPLACE);
 AddDocTemplate(pTemplate);
 ```
 
-Prostředek IDR_OLECLITYPE_INPLACE je speciální místní prostředku vytvořeného v jazyce Visual C++.
+Prostředek IDR_OLECLITYPE_INPLACE je speciální místní prostředku vytvořeného ve Vizuálu C++.
 
 Pokud chcete povolit aktivace na místě, se několik věcí, které je potřeba změnit v obou `CView` (CMainView) odvozené třídy i na `COleClientItem` odvozenou třídou (CRectItem). Všechna tato přepsání jsou k dispozici přes AppWizard a implementaci přijde přímo z aplikace AppWizard výchozí.
 
@@ -353,7 +353,7 @@ BOOL CRectItem::OnChangeItemPosition(const CRect& rectPos)
 
 V tomto okamžiku není dostatek kód umožňující položka aktivována na místě a změny velikosti a přesunutí položky, když je aktivní, ale žádný kód vám umožní uživateli ukončení relace úprav. I když některé servery se poskytují tuto funkci sami zpracováním klávesou ESC, doporučuje se, že kontejnery poskytují dva způsoby, jak deaktivovat položku: (1) kliknutím mimo položky a (2) stisknutím klávesy ESC.
 
-Pro klávesu ESCAPE přidejte akcelerátor s jazykem Visual C++, který mapuje vk_escape – klíč k příkazu, ID_CANCEL_EDIT se přidá k prostředkům. Následující obslužná rutina tohoto příkazu:
+Klávesou ESC přidejte akcelerátor s Vizuálem C++ vk_escape – klíč, který mapuje k příkazu, ID_CANCEL_EDIT se přidá k prostředkům. Následující obslužná rutina tohoto příkazu:
 
 ```cpp
 // The following command handler provides the standard
@@ -527,7 +527,7 @@ BOOL COLEServerApp::InitInstance()
 
 Můžete si všimnout, že výše uvedený kód odkazuje nové ID prostředku, IDR_HIERSVRTYPE_SRVR_EMB. Toto je nabídka prostředek má být použit při úpravě dokumentu, který je vložený v jiném kontejneru. V MFC/OLE1 specifické pro úpravu položky vložené položky nabídky byly změněny v reálném čase. Pomocí struktury úplně jiné nabídky při úpravách vložená položka. místo pro úpravy dokument založený na souboru, je mnohem jednodušší předat různých uživatelských rozhraní pro tyto dvě samostatné režimy. Jak uvidíte později, prostředek zcela samostatné nabídky se používá při úpravách vložený objekt místní.
 
-Chcete-li vytvořit tento prostředek, načtení skriptu prostředku do jazyka Visual C++ a zkopírovat existující prostředek IDR_HIERSVRTYPE nabídky. Přejmenujte nový prostředek na IDR_HIERSVRTYPE_SRVR_EMB (je to stejné zásady vytváření názvů, který používá AppWizard). Dále změňte "Uložit soubor" na "File Update"; Zadejte příkaz id_file_update – ID. Také změňte "Uložit jako" na "Soubor uložit kopii jako"; Zadejte příkaz id_file_save_copy_as – ID. Rozhraní poskytuje provádění oba tyto příkazy.
+Chcete-li vytvořit tento prostředek, načíst skript prostředků do Vizuálu C++ a zkopírovat existující prostředek IDR_HIERSVRTYPE nabídky. Přejmenujte nový prostředek na IDR_HIERSVRTYPE_SRVR_EMB (je to stejné zásady vytváření názvů, který používá AppWizard). Dále změňte "Uložit soubor" na "File Update"; Zadejte příkaz id_file_update – ID. Také změňte "Uložit jako" na "Soubor uložit kopii jako"; Zadejte příkaz id_file_save_copy_as – ID. Rozhraní poskytuje provádění oba tyto příkazy.
 
 ```Output
 \hiersvr\svritem.h(60) : error C2433: 'OLESTATUS' : 'virtual' not permitted on data declarations
@@ -644,7 +644,7 @@ Přidat do této aplikace serveru "Úpravy s náhledem" (nebo aktivace na míst�
 
 - Budete muset o tyto speciální prostředky a třídy informování rozhraní framework.
 
-Nabídce prostředků je snadné vytvořit. Spusťte Visual C++, kopírování prostředků nabídky IDR_HIERSVRTYPE do nabídky prostředek s názvem IDR_HIERSVRTYPE_SRVR_IP. V nabídce upravte tak, aby zůstaly jenom upravit a nápovědu nabídky automaticky otevíraná okna. Přidejte dva oddělovače do nabídky mezi nabídky Úpravy a nápovědy (by měl vypadat: Upravit &#124; &#124; Nápověda). Další informace o významu těchto oddělovače a jak slučování nabídek serveru a kontejneru najdete v tématu [nabídky a prostředky: Slučování nabídek](../mfc/menus-and-resources-menu-merging.md).
+Nabídce prostředků je snadné vytvořit. Spuštění Vizuálu C++, kopírování prostředků nabídky IDR_HIERSVRTYPE do nabídky prostředek s názvem IDR_HIERSVRTYPE_SRVR_IP. V nabídce upravte tak, aby zůstaly jenom upravit a nápovědu nabídky automaticky otevíraná okna. Přidejte dva oddělovače do nabídky mezi nabídky Úpravy a nápovědy (by měl vypadat: Upravit &#124; &#124; Nápověda). Další informace o významu těchto oddělovače a jak slučování nabídek serveru a kontejneru najdete v tématu [nabídky a prostředky: Slučování nabídek](../mfc/menus-and-resources-menu-merging.md).
 
 Rastrový obrázek pro panel nástrojů dílčí můžete snadno vytvořit zkopírováním z čerstvého AppWizard vygeneruje aplikace s možností "Server" zaškrtnuté. Tento rastrový obrázek jde pak importovat do Visual C++. Je potřeba poskytnout ID IDR_HIERSVRTYPE_SRVR_IP rastrového obrázku.
 

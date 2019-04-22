@@ -11,10 +11,10 @@ helpviewer_keywords:
 - callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
 ms.openlocfilehash: f8088bf90162fd2177599c252b0eee6332d61289
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58766934"
 ---
 # <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Postupy: Zařazování zpětných volání a delegátů pomocí zprostředkovatele komunikace C++
@@ -27,7 +27,7 @@ Následující příklady kódu používají [spravované, nespravované](../pre
 
 Následující příklad ukazuje, jak nakonfigurovat nespravovaného rozhraní API pro spuštění spravovaného delegáta. Vytvořili spravovaných delegáta a jednu z metod interoperability <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, slouží k načtení základní vstupní bod pro delegáta. Tato adresa je pak předán nespravovanou funkci, která volá bez znalosti skutečnost, že je implementovaný jako spravované funkce.
 
-Všimněte si, že je to možné, ale není nezbytné, PIN kód delegáta pomocí [pin_ptr (C + +/ CLI)](../extensions/pin-ptr-cpp-cli.md) zabránit, aby ji znovu umístěný nebo odstraněny pomocí systému uvolňování paměti. Ochrana před předčasné uvolňování paměti je potřeba, ale připnutí poskytuje větší ochranu než je nezbytné, protože brání kolekce, ale také zabraňuje přemístění.
+Všimněte si, že je to možné, ale není nezbytné, PIN kód delegáta pomocí [pin_ptr (C++vyhodnocovací)](../extensions/pin-ptr-cpp-cli.md) zabránit, aby ji znovu umístěný nebo odstraněny pomocí systému uvolňování paměti. Ochrana před předčasné uvolňování paměti je potřeba, ale připnutí poskytuje větší ochranu než je nezbytné, protože brání kolekce, ale také zabraňuje přemístění.
 
 Pokud delegát je přemístěn podle kolekce uvolnění paměti, nebude to mít vliv podkladové zpětné volání, takže <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> se používá k přidání odkazu na delegáta, což přemístění delegáta, ale brání vyřazení. Popisovač GCHandle místo pin_ptr snižuje potenciální fragmentace spravované haldy.
 

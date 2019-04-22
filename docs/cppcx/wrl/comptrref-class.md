@@ -26,10 +26,10 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ComPtrRef::ReleaseAndGetAddressOf method
 ms.assetid: d6bdfd20-e977-45b4-9ac1-1b8efbdb77de
 ms.openlocfilehash: 281e02d85e70a84530e6980d31669a73091448d5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58786570"
 ---
 # <a name="comptrref-class"></a>ComPtrRef – třída
@@ -62,7 +62,7 @@ Name                               | Popis
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Název                                                         | Popis
+Name                                                         | Popis
 ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------
 [ComPtrRef::GetAddressOf](#getaddressof)                     | Načte adresu ukazatel rozhraní reprezentované aktuální `ComPtrRef` objektu.
 [ComPtrRef::ReleaseAndGetAddressOf](#releaseandgetaddressof) | Odstraní aktuální `ComPtrRef` objekt a vrátí ukazatel na ukazatel rozhraní, která je reprezentována `ComPtrRef` objektu.

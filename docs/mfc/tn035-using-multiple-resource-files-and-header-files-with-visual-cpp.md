@@ -8,10 +8,10 @@ helpviewer_keywords:
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
 ms.openlocfilehash: 0493dd45caf5eb78da435987a4590442a908a5a3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772761"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Použití více zdrojových souborů a hlavičkových souborů v jazyce Visual C++
@@ -286,7 +286,7 @@ Visual C++ obchází závislost na prostředek. H zahrnutím následujícího ko
 
 Vývojové prostředí interpretuje tento komentář ignorováním změn do prostředku. H tak závislé. Soubory CPP nebudou muset být překompilovány.
 
-Visual C++ vždy přidá //{{NO_DEPENDENCIES}} komentář řádek. Soubor RC při uložení souboru. V některých případech obcházení závislosti sestavení na prostředku. H může vést k chybám za běhu v době spojení. Například pokud použijete prohlížeč symbolů ke změně číselné hodnoty přiřazené k symbolu pro prostředek, prostředek nebude správně nalezen a načten aplikace za běhu, jestliže. Soubor CPP vztahující se k prostředku není znovu zkompilován. V takovém případě by měly explicitně opětovné kompilaci žádné. Souborů CPP, o kterých víte jsou ovlivněny změnami v prostředku. H nebo vyberte **sestavit vše znovu**. Pokud potřebujete často měnit hodnoty symbolů pro určitou skupinu prostředků, pravděpodobně zjistíte ji pohodlnější a bezpečnější rozdělit tyto symboly do samostatného záhlaví jen pro čtení souboru, jak je popsáno výše v části [včetně Další souborů záhlaví](#_mfcnotes_tn035_including).
+Vizuální C++ vždy přidá //{{NO_DEPENDENCIES}} komentář řádek, který. Soubor RC při uložení souboru. V některých případech obcházení závislosti sestavení na prostředku. H může vést k chybám za běhu v době spojení. Například pokud použijete prohlížeč symbolů ke změně číselné hodnoty přiřazené k symbolu pro prostředek, prostředek nebude správně nalezen a načten aplikace za běhu, jestliže. Soubor CPP vztahující se k prostředku není znovu zkompilován. V takovém případě by měly explicitně opětovné kompilaci žádné. Souborů CPP, o kterých víte jsou ovlivněny změnami v prostředku. H nebo vyberte **sestavit vše znovu**. Pokud potřebujete často měnit hodnoty symbolů pro určitou skupinu prostředků, pravděpodobně zjistíte ji pohodlnější a bezpečnější rozdělit tyto symboly do samostatného záhlaví jen pro čtení souboru, jak je popsáno výše v části [včetně Další souborů záhlaví](#_mfcnotes_tn035_including).
 
 ## <a name="_mfcnotes_tn035_set_includes"></a> Jak spravuje Visual C++ sada obsahuje informace o **
 
