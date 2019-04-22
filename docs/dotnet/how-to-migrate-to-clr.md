@@ -11,10 +11,10 @@ helpviewer_keywords:
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
 ms.openlocfilehash: 6ac470b85a14bfe32c7f3fe47168180687669ec6
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781312"
 ---
 # <a name="how-to-migrate-to-clr"></a>Postupy: Přechod na/CLR
@@ -154,7 +154,7 @@ V některých případech můžete CLR vypnutí před dokončením spravovaný k
 
 Po aplikaci zkompiluje, odkazy a spuštění, můžete začít používat funkce rozhraní .NET v jakékoli Modul zkompilovaný pomocí **/CLR**. Další informace najdete v tématu [přípony komponent pro platformy běhového prostředí](../extensions/component-extensions-for-runtime-platforms.md).
 
-Pokud jste použili spravovaných rozšíření jazyka C++, můžete převést kód Refaktorovat pro použití nové syntaxe. Podrobnosti o převodu spravovaných rozšíření jazyka C++, naleznete v tématu [C + +/ CLI Základy migrace](../dotnet/cpp-cli-migration-primer.md).
+Pokud jste použili spravovaných rozšíření jazyka C++, můžete převést kód Refaktorovat pro použití nové syntaxe. Další informace o převodu spravovaných rozšíření pro C++, naleznete v tématu [ C++Základy rozhraní příkazového řádku migrace](../dotnet/cpp-cli-migration-primer.md).
 
 Informace o programování v jazyce Visual C++ .NET naleznete v tématu:
 

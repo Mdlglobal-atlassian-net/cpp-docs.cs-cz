@@ -7,10 +7,10 @@ ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 ms.openlocfilehash: 739da0b6e5400117c0b09a3d4c3335bd44529a25
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898775"
 ---
 # <a name="create-a-c-console-app-project"></a>Vytvoření projektu aplikace konzoly C++
@@ -132,7 +132,7 @@ Pokud nevidíte **Linkeru** uvedené v části **vlastnosti konfigurace**, zvolt
 
 Ovládací prvek dropdown se nezobrazují v **subsystému** vlastnost textové pole, dokud nevyberete vlastnost. Můžete určit pomocí ukazatele nebo stisknete klávesu Tab k cyklování skrze ovládací prvky dialogového okna do **subsystému** je zvýrazněn. Zvolte ovládací prvek dropdown nebo stisknutím klávesy Alt + Šipka dolů a otevřete ho.
 
-[Zpět](#make-your-project-a-console-app)
+[Vrať se](#make-your-project-a-console-app)
 
 ### <a name="add-a-source-code-file-issues"></a>Přidat potíže s zdrojový kód souboru
 

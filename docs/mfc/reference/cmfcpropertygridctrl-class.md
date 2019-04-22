@@ -151,10 +151,10 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
 ms.openlocfilehash: 93ace0388981f429ac4a422947fbdaae8cdb8f24
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781975"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl Class
@@ -284,10 +284,10 @@ V následující tabulce jsou uvedeny čtyři typy vlastností výběr:
 
 |Třída|Popis|
 |-----------|-----------------|
-|[CMFCPropertyGridProperty Class](../../mfc/reference/cmfcpropertygridproperty-class.md)|Vlastnost obecné účely, která se používá k určení hodnotu řetězce, logické hodnoty, kalendářní data a tak dále.|
-|[CMFCPropertyGridColorProperty Class](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)|Vlastnost, která slouží k výběru hodnotu barvy.|
-|[CMFCPropertyGridFileProperty Class](../../mfc/reference/cmfcpropertygridfileproperty-class.md)|Vlastnost, která slouží k výběru souboru.|
-|[CMFCPropertyGridFontProperty Class](../../mfc/reference/cmfcpropertygridfontproperty-class.md)|Vlastnost, která slouží k výběru písma.|
+|[CMFCPropertyGridProperty – třída](../../mfc/reference/cmfcpropertygridproperty-class.md)|Vlastnost obecné účely, která se používá k určení hodnotu řetězce, logické hodnoty, kalendářní data a tak dále.|
+|[CMFCPropertyGridColorProperty – třída](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)|Vlastnost, která slouží k výběru hodnotu barvy.|
+|[CMFCPropertyGridFileProperty – třída](../../mfc/reference/cmfcpropertygridfileproperty-class.md)|Vlastnost, která slouží k výběru souboru.|
+|[CMFCPropertyGridFontProperty – třída](../../mfc/reference/cmfcpropertygridfontproperty-class.md)|Vlastnost, která slouží k výběru písma.|
 
 ## <a name="illustrations"></a>Obrázky
 
@@ -307,9 +307,9 @@ Následující příklad ukazuje, jak nakonfigurovat pomocí různých metod v o
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -461,7 +461,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 [in] Bitová kombinace (nebo) [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*rect*<br/>
+*Rect*<br/>
 [in] Souřadnice ohraničující obdélník, který určuje velikost a umístění okna v klientovi *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -1053,7 +1053,7 @@ CMFCPropertyGridProperty* HitTest(
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pt*<br/>
 [in] Bod, v souřadnicích klienta.
 
 *pnArea*<br/>
@@ -1074,7 +1074,7 @@ Termín *oblast vlastnosti* odkazuje na libovolný název, hodnotu, nebo rozbalt
 
 Tato metoda nastaví hodnotu proměnné, která *pnArea* parametr odkazuje na. V následující tabulce jsou uvedeny možné hodnoty a odpovídající oblasti.
 
-|Hodnota|Oblast|
+|Value|Oblast|
 |-----------|----------|
 |`ClickArea::ClickExpandBox`|Vlastnost rozbalit ovládací prvek pole.|
 |`ClickArea::ClickName`|Název vlastnosti.|
@@ -1272,7 +1272,7 @@ virtual void OnClickButton(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Bod, v souřadnicích klienta.
 
 ### <a name="remarks"></a>Poznámky
@@ -1309,7 +1309,7 @@ virtual void OnDrawDescription(
 *pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Obdélník, který určuje, kam se nakreslila oblast popisu.
 
 ### <a name="remarks"></a>Poznámky
@@ -1608,7 +1608,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*barva*<br/>
+*color*<br/>
 [in] Hodnota barvy RGB.
 
 ### <a name="remarks"></a>Poznámky

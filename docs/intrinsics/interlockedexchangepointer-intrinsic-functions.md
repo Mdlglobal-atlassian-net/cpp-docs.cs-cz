@@ -21,15 +21,15 @@ helpviewer_keywords:
 - InterlockedExchangePointer intrinsic
 ms.assetid: 0eaca0b0-d79e-406b-892d-b3b462c50bbb
 ms.openlocfilehash: 1f6e66ae4d5524518c3388f5af843cc15f65da50
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024527"
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>_InterlockedExchangePointer Intrinsic Functions
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Proveďte operaci atomické exchange, který zkopíruje adresu předanou jako druhý argument první a vrátí původní adresu první.
 
@@ -64,10 +64,10 @@ void * _InterlockedExchangePointer_HLERelease(
 
 #### <a name="parameters"></a>Parametry
 
-*Target*<br/>
+*Cíl*<br/>
 [out v] Ukazatel na ukazatel na hodnotu k exchangi. Funkce nastaví hodnotu `Value` a vrátí původní hodnotu.
 
-*Value*<br/>
+*Hodnota*<br/>
 [in] Hodnota mají vyměnit s hodnotou odkazované `Target`.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -80,7 +80,7 @@ Funkce vrátí počáteční hodnotu, na které odkazuje `Target`.
 |---------------|------------------|------------|
 |`_InterlockedExchangePointer`|x86, ARM, x64|\<intrin.h>|
 |`_InterlockedExchangePointer_acq`, `_InterlockedExchangePointer_rel`, `_InterlockedExchangePointer_nf`|ARM|\<intrin.h>|
-|`_InterlockedExchangePointer_HLEAcquire`,  `_InterlockedExchangePointer_HLERelease`|x64 s podporou HLE|\<immintrin.h>|
+|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|x64 s podporou HLE|\<immintrin.h>|
 
 Na x86 architektury, `_InterlockedExchangePointer` je makro, které volá `_InterlockedExchange`.
 
@@ -94,7 +94,7 @@ Na platformách Intel, které podporují pokyny Elize zámek hardwaru (HLE), vni
 
 Tyto rutiny jsou dostupné jenom jako vnitřní funkce.
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

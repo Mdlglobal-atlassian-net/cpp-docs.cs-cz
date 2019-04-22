@@ -1,5 +1,5 @@
 ---
-title: v1_enum – (atribut C++ COM)
+title: v1_enum – (C++ atributů COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.v1_enum
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - v1_enum attribute
 ms.assetid: 2fe92d92-81b9-4a1c-b6ce-437d0eb770ca
 ms.openlocfilehash: 08654eed7ad467dc22d2cbbf811c9169e5292f16
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024559"
 ---
 # <a name="v1enum"></a>v1_enum
@@ -50,7 +50,7 @@ enum eList {
 |-|-|
 |**Platí pro**|Výčtový typ|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
+|**Vyžadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).

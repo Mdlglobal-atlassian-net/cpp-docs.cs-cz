@@ -16,10 +16,10 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::MakeAllocator::~MakeAllocator, destructor
 ms.assetid: a1114615-abd7-4a56-9bc3-750c118f0fa1
 ms.openlocfilehash: 805f0c09b0490d8cec1a0be96dcb1fc99a051371
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58786545"
 ---
 # <a name="makeallocator-class"></a>MakeAllocator – třída
@@ -71,7 +71,7 @@ Name                                                  | Popis
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Název                                 | Popis
+Name                                 | Popis
 ------------------------------------ | -----------------------------------------------------------------------------------------------------------
 [Makeallocator::allocate –](#allocate) | Přidělí paměť a přidruží ji k aktuální `MakeAllocator` objektu.
 [MakeAllocator::Detach](#detach)     | Zruší přidružení paměť přidělenou [přidělení](#allocate) metodu z aktuální `MakeAllocator` objektu.

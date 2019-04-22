@@ -15,10 +15,10 @@ helpviewer_keywords:
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
 ms.openlocfilehash: 45e0214cafb80c3e00a7e888a3170040f46113f1
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58770275"
 ---
 # <a name="cbitmapbutton-class"></a>Cbitmapbutton – třída
@@ -41,7 +41,7 @@ class CBitmapButton : public CButton
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CBitmapButton::AutoLoad](#autoload)|Přidruží tlačítko v dialogovém okně objektu `CBitmapButton` třídy, načte bitmap(s) podle názvu a velikosti tlačítko Přizpůsobit rastrový obrázek.|
 |[CBitmapButton::LoadBitmaps](#loadbitmaps)|Inicializuje objekt načtením jeden nebo více prostředků pojmenovaných rastrový obrázek ze souboru prostředků aplikace a připojení rastrové obrázky do objektu.|

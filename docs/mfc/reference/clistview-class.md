@@ -13,10 +13,10 @@ helpviewer_keywords:
 - CListView [MFC], RemoveImageList
 ms.assetid: 7626bdb2-a1b8-4eab-b631-6743710a8432
 ms.openlocfilehash: 698e37b2853a2ca3698ee0a426c8ded688c99c58
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776619"
 ---
 # <a name="clistview-class"></a>CListView – třída
@@ -55,9 +55,9 @@ Další informace na této architektuře, najdete v přehledu pro [CView](../../
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -111,6 +111,6 @@ Z nuly vycházející index bitové kopie k odebrání.
 ## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC ROWLIST](../../overview/visual-cpp-samples.md)<br/>
-[Cctrlview – třída](../../mfc/reference/cctrlview-class.md)<br/>
+[CCtrlView – třída](../../mfc/reference/cctrlview-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[Cctrlview – třída](../../mfc/reference/cctrlview-class.md)
+[CCtrlView – třída](../../mfc/reference/cctrlview-class.md)

@@ -27,15 +27,15 @@ helpviewer_keywords:
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
 ms.openlocfilehash: 348e936bb05796e36ae45095f25b943076cec464
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040952"
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>Vnitřní funkce _InterlockedAdd
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Tyto funkce provádět atomické toho, které zajišťuje, že operace úspěšně dokončí po více než jedno vlákno má přístup do sdílené proměnné.
 
@@ -81,7 +81,7 @@ __int64 _InterlockedAdd64_rel(
 *Sčítanec*<br/>
 [out v] Ukazatel na celé číslo, které mají být přidány do; výsledek součtu nahrazena.
 
-*Value*<br/>
+*Hodnota*<br/>
 [in] Hodnota k přidání.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -167,7 +167,7 @@ ff0000000000 + ff0000ffffffff = ffff00ffffffff
 Return value: ffff00ffffffff
 ```
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

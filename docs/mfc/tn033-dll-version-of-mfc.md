@@ -11,10 +11,10 @@ helpviewer_keywords:
 - TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
 ms.openlocfilehash: 4bfc60e20a073dd34945b91dd48ba82cdf4ab9f3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767779"
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033: DLL verze knihovny MFC
@@ -42,7 +42,7 @@ Toto je verze podpora DLL, které jsou podporované ve verzi 1.0 knihovny MFC. J
 
 MFC 3.0 (a vyšší) podporuje běžných knihovnách MFC DLL se všechny nové funkce, včetně tříd OLE a databáze.
 
-**AFXDLL**: To se také označuje jako sdílenou verzi knihovny MFC. Toto je novou podporu knihovny DLL do MFC 2.0. Samotné knihovny MFC je v řadě knihoven DLL (popsaných níže) a klientská aplikace nebo knihovny DLL dynamicky propojuje knihovny DLL, které jsou potřeba. Rozhraní hranice aplikace/DLL jsou C + +/ rozhraní třídy knihovny MFC. Klientská aplikace musí být aplikace knihovny MFC. Tento atribut podporuje všechny funkce MFC 3.0 (výjimka: UNICODE není podporován pro databázové třídy).
+**AFXDLL**: To se také označuje jako sdílenou verzi knihovny MFC. Toto je novou podporu knihovny DLL do MFC 2.0. Samotné knihovny MFC je v řadě knihoven DLL (popsaných níže) a klientská aplikace nebo knihovny DLL dynamicky propojuje knihovny DLL, které jsou potřeba. Rozhraní hranice aplikace/DLL jsou C++/MFC třídy rozhraní. Klientská aplikace musí být aplikace knihovny MFC. Tento atribut podporuje všechny funkce MFC 3.0 (výjimka: UNICODE není podporován pro databázové třídy).
 
 > [!NOTE]
 > Od verze Visual C++ verze 4.0 tento druh knihovny DLL se označuje jako "Rozšiřující knihovny DLL."
@@ -476,7 +476,7 @@ Aplikace pomocí knihovny MFCxx.DLL používá běžné přidělení paměti pos
 
 ### <a name="ordinals-and-class-declspecdllexport-and-dll-naming"></a>Řadové číslovky a třída __declspec(dllexport) a pojmenování knihovny DLL
 
-Nepoužijeme `class` **__declspec(dllexport)** funkce kompilátoru jazyka C++. Místo toho seznam exporty je součástí zdroje knihovny tříd (MFCxx.DEF a MFCxxD.DEF). Exportují se jenom tyto vybrané sady vstupní body (funkce a data). Jiné symboly, jako je například knihovny MFC privátní implementace funkcí nebo tříd, se nebudou exportovat všechny exporty provádí ordinální číslo bez názvu řetězce v tabulce rezidenční nebo jiných rezidentní název.
+Nepoužijeme `class` **__declspec(dllexport)** funkce C++ kompilátoru. Místo toho seznam exporty je součástí zdroje knihovny tříd (MFCxx.DEF a MFCxxD.DEF). Exportují se jenom tyto vybrané sady vstupní body (funkce a data). Jiné symboly, jako je například knihovny MFC privátní implementace funkcí nebo tříd, se nebudou exportovat všechny exporty provádí ordinální číslo bez názvu řetězce v tabulce rezidenční nebo jiných rezidentní název.
 
 Pomocí `class` **__declspec(dllexport)** může být reálnou alternativu pro vytváření knihovny DLL menší, ale v případě velké knihovny DLL jako knihovny MFC, výchozí export mechanismus má efektivitu a kapacitu omezení.
 

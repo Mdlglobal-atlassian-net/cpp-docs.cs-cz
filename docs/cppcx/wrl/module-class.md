@@ -44,10 +44,10 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::UnregisterWinRTObject method
 ms.assetid: dd67e3b8-c2e1-4f53-8c0f-565a140ba649
 ms.openlocfilehash: db3eb123382ac70f6198d094c5eb3fe44d3bbcd9
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58786879"
 ---
 # <a name="module-class"></a>Modul – třída
@@ -84,7 +84,7 @@ Name                                                                            
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Název                             | Popis
+Name                             | Popis
 -------------------------------- | -----------------------------------------------------------
 [Module::~Module](#tilde-module) | Zruší inicializaci aktuální instance `Module` třídy.
 
@@ -115,13 +115,13 @@ Name                                                    | Popis
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-Název                      | Popis
+Name                      | Popis
 ------------------------- | --------------------------------
 [Module::Create –](#create) | Vytvoří instanci modulu.
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-Název                                         | Popis
+Name                                         | Popis
 -------------------------------------------- | --------------------------------------------------------------------------------------------------------
 [Module::objectcount_ –](#objectcount)         | Uchovává informace o tom, kolik třídy byly vytvořeny s [zkontrolujte](make-function.md) funkce.
 [Module::releasenotifier_ –](#releasenotifier) | Uchovává ukazatel `ReleaseNotifier` objektu.

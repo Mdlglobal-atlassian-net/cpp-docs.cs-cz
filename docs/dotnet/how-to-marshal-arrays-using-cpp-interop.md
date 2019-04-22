@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
 ms.openlocfilehash: 91fd86a547a0241f0cfcca7cfc36c204429d80ac
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776892"
 ---
 # <a name="how-to-marshal-arrays-using-c-interop"></a>Postupy: Zařazování polí pomocí interoperability C++
@@ -24,7 +24,7 @@ Následující příklady kódu používají [spravované, nespravované](../pre
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak předat spravovaného pole nespravované funkci. Spravované funkce používá [pin_ptr (C + +/ CLI)](../extensions/pin-ptr-cpp-cli.md) potlačit uvolnění pro pole před voláním nespravované funkci. Poskytnutím nespravovanou funkci s připnutou ukazatel do haldy uvolňování paměti se lze vyvarovat nároky na vytvoření kopie pole. K prokázání, že nespravovanou funkci je přístup k paměti haldy uvolňování paměti, upraví obsah pole a změny se projeví při spravované funkce obnoví ovládací prvek.
+Následující příklad ukazuje, jak předat spravovaného pole nespravované funkci. Spravované funkce používá [pin_ptr (C++vyhodnocovací)](../extensions/pin-ptr-cpp-cli.md) potlačit uvolnění pro pole před voláním nespravované funkci. Poskytnutím nespravovanou funkci s připnutou ukazatel do haldy uvolňování paměti se lze vyvarovat nároky na vytvoření kopie pole. K prokázání, že nespravovanou funkci je přístup k paměti haldy uvolňování paměti, upraví obsah pole a změny se projeví při spravované funkce obnoví ovládací prvek.
 
 ```
 // PassArray1.cpp

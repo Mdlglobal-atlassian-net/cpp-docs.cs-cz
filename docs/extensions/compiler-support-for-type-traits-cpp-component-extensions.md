@@ -1,5 +1,5 @@
 ---
-title: Podpora kompilátoru pro typové vlastnosti (C + +/ CLI a C + +/ CX)
+title: Podpora kompilátoru pro typové vlastnosti (C++vyhodnocovací a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -62,15 +62,15 @@ helpviewer_keywords:
 - __has_trivial_constructor keyword [C++]
 ms.assetid: cd440630-0394-48c0-a16b-1580b6ef5844
 ms.openlocfilehash: d068917a02fef0f1d4b7fd46fd6978da2d358872
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026890"
 ---
-# <a name="compiler-support-for-type-traits-ccli-and-ccx"></a>Podpora kompilátoru pro typové vlastnosti (C + +/ CLI a C + +/ CX)
+# <a name="compiler-support-for-type-traits-ccli-and-ccx"></a>Podpora kompilátoru pro typové vlastnosti (C++vyhodnocovací a C++/CX)
 
-Microsoft C++ podporuje kompilátoru *zadejte vlastnosti* pro C + +/ CLI a C + +/ CX rozšíření, které označují různé vlastnosti typu v době kompilace.
+Microsoft C++ kompilátor podporuje *zadejte vlastnosti* pro C++vyhodnocovací a C++/CX rozšíření, které označují různé vlastnosti typu v době kompilace.
 
 ## <a name="all-runtimes"></a>Všechny moduly runtime
 
@@ -80,9 +80,9 @@ Typové vlastnosti jsou zvláště užitečné pro programátory, kteří vytvá
 
 Následující seznam obsahuje typové, které jsou podporovány kompilátorem. Zadejte všechny vlastnosti vrátit **false** Pokud není splněná podmínka uvedená v názvu vlastnosti typu.
 
-(V seznamu následující příklady kódu byly vytvořeny pouze v jazyce C + +/ CLI. Ale odpovídající vlastnost typu je podporováno také v jazyce C + +/ CX Pokud není uvedeno jinak. Termín, "typ platformy" odkazuje na typy Windows Runtime nebo běžné language runtime typy.)
+(V seznamu následující příklady kódu byly vytvořeny pouze v C++vyhodnocovací. Ale odpovídající typ vlastnosti je podporováno také v C++/CX Pokud není uvedeno jinak. Termín, "typ platformy" odkazuje na typy Windows Runtime nebo běžné language runtime typy.)
 
-- `__has_assign(` * – typ* `)`
+- `__has_assign(` *Typ* `)`
 
    Vrátí **true** Pokud platformy nebo nativní typ má operátor přiřazení kopie.
 
@@ -96,7 +96,7 @@ Následující seznam obsahuje typové, které jsou podporovány kompilátorem. 
     }
     ```
 
-- `__has_copy(` * – typ* `)`
+- `__has_copy(` *Typ* `)`
 
    Vrátí **true** Pokud platformy nebo nativní typ má konstruktor kopie.
 
@@ -110,9 +110,9 @@ Následující seznam obsahuje typové, které jsou podporovány kompilátorem. 
     }
     ```
 
-- `__has_finalizer(` * – typ* `)`
+- `__has_finalizer(` *Typ* `)`
 
-   (Není podporováno v jazyce C + +/ CX.) Vrátí **true** Pokud typ CLR má finalizační metodu. Zobrazit [destruktory a finalizační metody v tom, jak: Definice a používání tříd a struktur (C + +/ CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) Další informace.
+   (Není podporováno v C++/CX.) Vrátí **true** Pokud typ CLR má finalizační metodu. Zobrazit [destruktory a finalizační metody v tom, jak: Definice a používání tříd a struktur (C++vyhodnocovací)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) Další informace.
 
     ```cpp
     using namespace System;
@@ -127,7 +127,7 @@ Následující seznam obsahuje typové, které jsou podporovány kompilátorem. 
     }
     ```
 
-- `__has_nothrow_assign(` * – typ* `)`
+- `__has_nothrow_assign(` *Typ* `)`
 
    Vrátí **true** Pokud operátor přiřazení kopie má specifikaci výjimky prázdný.
 
@@ -143,7 +143,7 @@ Následující seznam obsahuje typové, které jsou podporovány kompilátorem. 
     }
     ```
 
-- `__has_nothrow_constructor(` * – typ* `)`
+- `__has_nothrow_constructor(` *Typ* `)`
 
    Vrátí **true** Pokud výchozí konstruktor má specifikaci výjimky prázdný.
 
@@ -159,7 +159,7 @@ Následující seznam obsahuje typové, které jsou podporovány kompilátorem. 
     }
     ```
 
-- `__has_nothrow_copy(` * – typ* `)`
+- `__has_nothrow_copy(` *Typ* `)`
 
    Vrátí **true** Pokud konstruktor kopie je specifikaci výjimky prázdný.
 
@@ -175,7 +175,7 @@ Následující seznam obsahuje typové, které jsou podporovány kompilátorem. 
     }
     ```
 
-- `__has_trivial_assign(` * – typ* `)`
+- `__has_trivial_assign(` *Typ* `)`
 
    Vrátí **true** Pokud má typ přiřazení triviální, vygeneruje kompilátor operátor.
 
@@ -189,7 +189,7 @@ Následující seznam obsahuje typové, které jsou podporovány kompilátorem. 
     }
     ```
 
-- `__has_trivial_constructor(` * – typ* `)`
+- `__has_trivial_constructor(` *Typ* `)`
 
    Vrátí **true** Pokud má typ jednoduchého dotazu, vygeneruje kompilátor konstruktor.
 
@@ -203,7 +203,7 @@ Následující seznam obsahuje typové, které jsou podporovány kompilátorem. 
     }
     ```
 
-- `__has_trivial_copy(` * – typ* `)`
+- `__has_trivial_copy(` *Typ* `)`
 
    Vrátí **true** Pokud typ má konstruktor kopie triviální, generovaný kompilátorem.
 
@@ -217,7 +217,7 @@ Následující seznam obsahuje typové, které jsou podporovány kompilátorem. 
     }
     ```
 
-- `__has_trivial_destructor(` * – typ* `)`
+- `__has_trivial_destructor(` *Typ* `)`
 
    Vrátí **true** Pokud má typ jednoduchého dotazu, vygeneruje kompilátor destruktor.
 
@@ -232,7 +232,7 @@ Následující seznam obsahuje typové, které jsou podporovány kompilátorem. 
     }
     ```
 
-- `__has_user_destructor(` * – typ* `)`
+- `__has_user_destructor(` *Typ* `)`
 
    Vrátí **true** Pokud platformy nebo nativní typ má destruktor uživatelem deklarované.
 
@@ -249,7 +249,7 @@ Následující seznam obsahuje typové, které jsou podporovány kompilátorem. 
     }
     ```
 
-- `__has_virtual_destructor(` * – typ* `)`
+- `__has_virtual_destructor(` *Typ* `)`
 
    Vrátí **true** Pokud typ má virtuální destruktor.
 
@@ -268,7 +268,7 @@ Následující seznam obsahuje typové, které jsou podporovány kompilátorem. 
     }
     ```
 
-- `__is_abstract(` * – typ* `)`
+- `__is_abstract(` *Typ* `)`
 
    Vrátí **true** Pokud abstraktní typ je typ. Další informace o nativní abstraktní typy, najdete v části [abstraktní třídy](../cpp/abstract-classes-cpp.md).
 
@@ -308,7 +308,7 @@ Následující seznam obsahuje typové, které jsou podporovány kompilátorem. 
     }
     ```
 
-- `__is_class(` * – typ* `)`
+- `__is_class(` *Typ* `)`
 
    Vrátí **true** Pokud je typ nativní třídy nebo struktury.
 
@@ -340,9 +340,9 @@ Následující seznam obsahuje typové, které jsou podporovány kompilátorem. 
     }
     ```
 
-- `__is_delegate(` * – typ* `)`
+- `__is_delegate(` *Typ* `)`
 
-   Vrátí **true** Pokud `type` je delegát. Další informace najdete v tématu [delegáta (C + +/ CLI a C + +/ CX)](delegate-cpp-component-extensions.md).
+   Vrátí **true** Pokud `type` je delegát. Další informace najdete v tématu [delegáta (C++vyhodnocovací a C++/CX)](delegate-cpp-component-extensions.md).
 
     ```cpp
     delegate void MyDel();
@@ -351,7 +351,7 @@ Následující seznam obsahuje typové, které jsou podporovány kompilátorem. 
     }
     ```
 
-- `__is_empty(` * – typ* `)`
+- `__is_empty(` *Typ* `)`
 
    Vrátí **true** Pokud typ nemá žádné datové členy instance.
 
@@ -367,7 +367,7 @@ Následující seznam obsahuje typové, které jsou podporovány kompilátorem. 
     }
     ```
 
-- `__is_enum(` * – typ* `)`
+- `__is_enum(` *Typ* `)`
 
    Vrátí **true** typ je nativní výčet.
 
@@ -389,7 +389,7 @@ Následující seznam obsahuje typové, které jsou podporovány kompilátorem. 
     }
     ```
 
-- `__is_interface_class(` * – typ* `)`
+- `__is_interface_class(` *Typ* `)`
 
    Vrátí **true** Pokud předaná rozhraní platformy. Další informace najdete v tématu [třída rozhraní](interface-class-cpp-component-extensions.md).
 
@@ -403,7 +403,7 @@ Následující seznam obsahuje typové, které jsou podporovány kompilátorem. 
     }
     ```
 
-- `__is_pod(` * – typ* `)`
+- `__is_pod(` *Typ* `)`
 
    Vrátí **true** Pokud je typ třídy nebo sjednocení se žádný konstruktor nebo soukromé nebo chráněné nestatické členy žádné základní třídy a žádné virtuální funkce. C++ standard, oddíly 8.5.1/1, 9 nebo 4 a 3.9/10 pro další informace naleznete na tyto Pody.
 
@@ -419,7 +419,7 @@ Následující seznam obsahuje typové, které jsou podporovány kompilátorem. 
     }
     ```
 
-- `__is_polymorphic(` * – typ* `)`
+- `__is_polymorphic(` *Typ* `)`
 
    Vrátí **true** pokud nativní typ má virtuální funkce.
 
@@ -435,7 +435,7 @@ Následující seznam obsahuje typové, které jsou podporovány kompilátorem. 
     }
     ```
 
-- `__is_ref_array(` * – typ* `)`
+- `__is_ref_array(` *Typ* `)`
 
    Vrátí **true** Pokud předaná pole platformy. Další informace najdete v tématu [pole](arrays-cpp-component-extensions.md).
 
@@ -447,7 +447,7 @@ Následující seznam obsahuje typové, které jsou podporovány kompilátorem. 
     }
     ```
 
-- `__is_ref_class(` * – typ* `)`
+- `__is_ref_class(` *Typ* `)`
 
    Vrátí **true** předán referenční třídy. Další informace o typy odkazů definované uživatelem, naleznete v tématu [třídy a struktury](classes-and-structs-cpp-component-extensions.md).
 
@@ -460,7 +460,7 @@ Následující seznam obsahuje typové, které jsou podporovány kompilátorem. 
     }
     ```
 
-- `__is_sealed(` * – typ* `)`
+- `__is_sealed(` *Typ* `)`
 
    Vrátí **true** předán platformy nebo nativní typ označen zapečetěné. Další informace najdete v tématu [zapečetěné](sealed-cpp-component-extensions.md).
 
@@ -471,7 +471,7 @@ Následující seznam obsahuje typové, které jsou podporovány kompilátorem. 
     }
     ```
 
-- `__is_simple_value_class(` * – typ* `)`
+- `__is_simple_value_class(` *Typ* `)`
 
    Vrátí **true** předán hodnotový typ, který neobsahuje žádné odkazy na haldě uvolňování. Další informace o typech hodnotu definovanou uživatelem, naleznete v tématu [třídy a struktury](classes-and-structs-cpp-component-extensions.md).
 
@@ -489,7 +489,7 @@ Následující seznam obsahuje typové, které jsou podporovány kompilátorem. 
     }
     ```
 
-- `__is_union(` * – typ* `)`
+- `__is_union(` *Typ* `)`
 
    Vrátí **true** Pokud je typ sjednocení.
 
@@ -506,7 +506,7 @@ Následující seznam obsahuje typové, které jsou podporovány kompilátorem. 
     }
     ```
 
-- `__is_value_class(` * – typ* `)`
+- `__is_value_class(` *Typ* `)`
 
    Vrátí **true** předán typ hodnoty. Další informace o typech hodnotu definovanou uživatelem, naleznete v tématu [třídy a struktury](classes-and-structs-cpp-component-extensions.md).
 

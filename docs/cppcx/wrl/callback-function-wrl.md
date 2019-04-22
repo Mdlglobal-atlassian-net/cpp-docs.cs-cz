@@ -6,10 +6,10 @@ f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
 ms.openlocfilehash: d37e6fdd2521f07728305bfbf5441cebb363030a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041387"
 ---
 # <a name="callback-function-wrl"></a>Funkce zpětného volání (WRL)
@@ -227,13 +227,13 @@ Parametr šablony, který určuje typ osmého argumentu metody zpětného volán
 *TArg9*<br/>
 Parametr šablony, který určuje typ devátého argumentu metody zpětného volání.
 
-*zpětné volání*<br/>
+*callback*<br/>
 Objekt představující objekt zpětného volání a jeho členskou funkci.
 
-*odkazy objektů*<br/>
+*object*<br/>
 Objekt, jehož členská funkce je volána, když dojde k události.
 
-*– metoda*<br/>
+*– Metoda*<br/>
 Členská funkci volat při výskytu události.
 
 ## <a name="return-value"></a>Návratová hodnota

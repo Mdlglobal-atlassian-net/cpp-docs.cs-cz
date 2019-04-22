@@ -5,10 +5,10 @@ helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
 ms.openlocfilehash: 69771de120dc413496a3b7b0613e51a13d208e22
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772602"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>C++ – sémantika zásobníku pro odkazové typy
@@ -27,7 +27,7 @@ Kompilátor nevygeneruje kopírovacího konstruktoru pro typ odkazu. Proto pokud
 
 Kompilátor nevygeneruje výchozí operátor přiřazení pro typ odkazu. Operátor přiřazení můžete vytvořit objekt pomocí – sémantika zásobníku a inicializujte ji s existující objekt vytvořený pomocí – sémantika zásobníku. Operátor přiřazení pro typ odkazu nemá podpis v následujícím formátu: `void operator=( R% ){}`.
 
-Pokud váš typ destruktor uvolní důležitých prostředků a použít – sémantika zásobníku pro odkazové typy, není potřeba explicitně zavolat destruktor (nebo volat `delete`). Další informace o destruktorech v referenčních typech najdete v tématu [destruktory a finalizační metody v tom, jak: Definice a používání tříd a struktur (C + +/ CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Pokud váš typ destruktor uvolní důležitých prostředků a použít – sémantika zásobníku pro odkazové typy, není potřeba explicitně zavolat destruktor (nebo volat `delete`). Další informace o destruktorech v referenčních typech najdete v tématu [destruktory a finalizační metody v tom, jak: Definice a používání tříd a struktur (C++vyhodnocovací)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 Operátor přiřazení vygenerované kompilátorem bude postupovat podle obvyklých pravidel C++ standard s těmito přídavky:
 

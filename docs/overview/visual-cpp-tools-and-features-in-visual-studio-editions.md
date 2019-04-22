@@ -1,5 +1,5 @@
 ---
-title: Nástroje Visual C++ a funkcí v edicích sady Visual Studio
+title: Nástroje a funkce Visual C++ v různých edicích sady Visual Studio
 ms.date: 02/28/2018
 helpviewer_keywords:
 - versions [C++]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
 ms.openlocfilehash: 3e5b173741700ed6cccf95b479eb5693a62ed02e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58786959"
 ---
-# <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Nástroje Visual C++ a funkcí v edicích sady Visual Studio
+# <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Nástroje a funkce Visual C++ v různých edicích sady Visual Studio
 
 Následující tabulky popisují funkce Visual C++, které jsou k dispozici v sadě Visual Studio. X v buňce znamená, že funkce je k dispozici. prázdná buňka znamená, že tato funkce není k dispozici. Poznámky v závorkách označují, že funkce je k dispozici, ale s omezeným přístupem.
 

@@ -30,10 +30,10 @@ helpviewer_keywords:
 - Microsoft::WRL::RuntimeClass::~RuntimeClass, destructor
 ms.assetid: d52f9d1a-98e5-41f2-a143-8fb629dd0727
 ms.openlocfilehash: d45fe7c6d794f216da93ffbd95dbb7058d3336f3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58786938"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass – třída
@@ -64,14 +64,14 @@ Funkce, která inicializuje objekt, pokud `MakeAndInitialize` šablony funkce se
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-| Název                                               | Popis                                                     |
+| Name                                               | Popis                                                     |
 | -------------------------------------------------- | --------------------------------------------------------------- |
 | [Runtimeclass::runtimeclass –](#runtimeclass)        | Inicializuje aktuální instanci aplikace `RuntimeClass` třídy.   |
 | [RuntimeClass:: ~ runtimeclass –](#tilde-runtimeclass) | Zruší inicializaci aktuální instance `RuntimeClass` třídy. |
 
 ### <a name="public-methods"></a>Veřejné metody
 
-| Název                                                      | Popis                                                                                        |
+| Name                                                      | Popis                                                                                        |
 | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | [Runtimeclass::addref –](#addref)                           | Zvýší počet odkazů pro aktuální `RuntimeClass` objektu.                              |
 | [Runtimeclass::decrementreference –](#decrementreference)   | Sníží počet odkaz pro aktuální `RuntimeClass` objektu.                              |

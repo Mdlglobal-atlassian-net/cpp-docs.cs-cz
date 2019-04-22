@@ -7,10 +7,10 @@ helpviewer_keywords:
 - static_cast keyword [C++]
 ms.assetid: 1f7c0c1c-b288-476c-89d6-0e2ceda5c293
 ms.openlocfilehash: dca6d5297379e6ddc1c70dba80f35f2f55672e49
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776918"
 ---
 # <a name="staticcast-operator"></a>static_cast – operátor
@@ -103,7 +103,7 @@ Libovolný výraz může být explicitně převeden na typ void **static_cast** 
 
 **Static_cast** operátor nemůže přetypovat **const**, **volatile**, nebo **__unaligned** atributy. Zobrazit [operátor const_cast](../cpp/const-cast-operator.md) informace o odebírání těchto atributů.
 
-**C + +/ CLI:** Z důvodu nebezpečí provádění nekontrolovaného přetypování nad relokačním kolektorem uvolnění paměti, použití **static_cast** by měly být pouze v kód kritickém pro výkon když jste si jisti, že bude správně fungovat. Pokud je nutné použít **static_cast** v režimu vydání, nahraďte ji [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) v sestavení ladění, aby byl zajištěn úspěch.
+**C++/ CLI:** Z důvodu nebezpečí provádění nekontrolovaného přetypování nad relokačním kolektorem uvolnění paměti, použití **static_cast** by měly být pouze v kód kritickém pro výkon když jste si jisti, že bude správně fungovat. Pokud je nutné použít **static_cast** v režimu vydání, nahraďte ji [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) v sestavení ladění, aby byl zajištěn úspěch.
 
 ## <a name="see-also"></a>Viz také:
 

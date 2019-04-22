@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Windows Forms [C++], MFC support
 ms.assetid: 63fb099b-1dff-469c-9e34-dab52e122fcd
 ms.openlocfilehash: 38c5c37712b430b137934d441056e60f2c130f78
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773096"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>Použití uživatelského ovládacího prvku Windows Form v prostředí MFC
@@ -32,7 +32,7 @@ Následující části popisují, jak:
 > Integrace formulářů Windows MFC funguje jenom v projektech, které dynamicky propojit s knihovnou MFC (projekty, ve kterém `_AFXDLL` je definována).
 
 > [!NOTE]
-> Když vytváříte aplikaci pomocí privátního (upravené) kopírování z rozhraní Windows Forms knihovny MFC DLL (mfcmifc80.dll), dojde k instalaci v mezipaměti GAC, není-li nahradit klíč Microsoftu s vlastním klíčem dodavatele. Další informace o podepisování sestavení naleznete v tématu [programování se sestaveními](/dotnet/framework/app-domains/programming-with-assemblies) a [sestavení se silným názvem (podepisování sestavení) (C + +/ CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+> Když vytváříte aplikaci pomocí privátního (upravené) kopírování z rozhraní Windows Forms knihovny MFC DLL (mfcmifc80.dll), dojde k instalaci v mezipaměti GAC, není-li nahradit klíč Microsoftu s vlastním klíčem dodavatele. Další informace o podepisování sestavení naleznete v tématu [programování se sestaveními](/dotnet/framework/app-domains/programming-with-assemblies) a [sestavení se silným názvem (podepisování sestavení) (C++vyhodnocovací)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
 Pokud vaše aplikace knihovny MFC používá Windows Forms, musíte redistribuovat mfcmifc80.dll s vaší aplikací. Další informace najdete v tématu [Redistribuce knihovny MFC](../windows/redistributing-the-mfc-library.md).
 

@@ -1,5 +1,5 @@
 ---
-title: pointer_default – (atribut C++ COM)
+title: pointer_default – (C++ atributů COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.pointer_default
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
 ms.openlocfilehash: 37bd2b16fb7a7c1c186f59897898e08cc73fffae
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59022663"
 ---
 # <a name="pointerdefault"></a>pointer_default
@@ -42,7 +42,7 @@ Podívejte se na příklad pro [defaultvalue](defaultvalue.md) ukázkový použ�
 
 |||
 |-|-|
-|**Platí pro**|**rozhraní**|
+|**Platí pro**|**interface**|
 |**Opakovatelné**|Ne|
 |**Vyžadované atributy**|Žádný|
 |**Neplatné atributy**|Žádné|

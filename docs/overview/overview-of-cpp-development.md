@@ -1,5 +1,5 @@
 ---
-title: Přehled o vývoji v jazyce C++ v sadě Visual Studio
+title: Přehled vývoje v jazyce C++ v sadě Visual Studio
 description: Integrované vývojové prostředí sady Visual Studio podporuje vývoj v jazyce C++ ve Windows, Linux, Android a iOS pomocí editoru kódu, ladicí program, testovacích architektur, statické analyzátory a jiných programovacích nástrojích.
 ms.date: 03/08/2019
 helpviewer_keywords:
@@ -7,13 +7,13 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 ms.openlocfilehash: 207d99419499187715cf9088652d64b79b7ba34d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58787043"
 ---
-# <a name="overview-of-c-development-in-visual-studio"></a>Přehled o vývoji v jazyce C++ v sadě Visual Studio
+# <a name="overview-of-c-development-in-visual-studio"></a>Přehled vývoje v jazyce C++ v sadě Visual Studio
 
 Microsoft C++ (MSVC) jako součást sady Visual Studio integrované vývojové prostředí (IDE), sdílí mnoho windows a nástroje společné s jiných jazycích. Mnoho z nich, včetně **Průzkumníka řešení**, editor kódu a ladicí program, jsou popsány v části [Visual Studio IDE](/visualstudio/get-started/visual-studio-ide). Často sdílené nástroje nebo okno má mírně odlišnou sadu funkcí jazyka C++ než pro jazyky .NET nebo JavaScript. Několik windows nebo nástroje jsou k dispozici pouze v edicích Visual Studio Professional nebo Visual Studio Enterprise.
 
@@ -86,7 +86,7 @@ Další informace najdete v tématu [ladění v sadě Visual Studio](/visualstud
 
 ## <a name="test"></a>Test
 
-Visual Studio obsahuje rozhraní pro testování jednotek native C++ a C + +/ CLI. Boost.Test, Google Test a CTest jsou také podporovány. Spuštění testů z **Průzkumník testů** okno:
+Visual Studio obsahuje rozhraní pro testování částí pro nativní C++ a C++vyhodnocovací. Boost.Test, Google Test a CTest jsou také podporovány. Spuštění testů z **Průzkumník testů** okno:
 
 ![Test Explorer](media/cpp-test-explorer-passed.png "Visual Studio 2017 Test Explorer")
 
@@ -102,7 +102,7 @@ Tradiční desktopové aplikace a aplikací pro UWP můžete nasadit pro zákazn
 
 Můžete taky nasadit nativní C++ desktop do jiného počítače pro další informace najdete v článku [nasazení desktopových aplikací](../windows/deploying-native-desktop-applications-visual-cpp.md).
 
-Další informace o nasazení a C + +/ CLI programu, najdete v článku [Průvodce nasazením pro vývojáře](/dotnet/framework/deployment/deployment-guide-for-developers),
+Další informace o nasazení C++vyhodnocovací programu, najdete v článku [Průvodce nasazením pro vývojáře](/dotnet/framework/deployment/deployment-guide-for-developers),
 
 ## <a name="next-steps"></a>Další kroky
 

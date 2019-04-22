@@ -3,10 +3,10 @@ title: Přehled potenciálních problémů s upgradem (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
 ms.openlocfilehash: 1dac6ad201656dc83428aa5182a59cb8ff824651
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898827"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Přehled potenciálních problémů s upgradem (Visual C++)
@@ -83,7 +83,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t (wchar_t je nativní typ)
 
-(V aplikaci Microsoft Visual C++ 6.0 a starší, **wchar_t** nebyl implementován jako předdefinovaný typ, ale byl deklarován v souboru wchar.h jako definice typu pro unsigned short.) Standard jazyka C++ vyžaduje, aby **wchar_t** předdefinovaným typem. Pomocí typedef verze může způsobit problémy s přenositelností. Pokud upgradujete ze starší verze sady Visual Studio a dojde k chybě kompilátoru C2664 protože kód se snaží implicitně převést **wchar_t** k **unsigned short**, doporučujeme vám, že změníte Kód opravit chybu, nikoli nastavením parametru `/Zc:wchar_t-`. Další informace najdete v tématu [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+(V Microsoft Visual C++ 6.0 a starší, **wchar_t** nebyl implementován jako předdefinovaný typ, ale byl deklarován v souboru wchar.h jako definice typu pro unsigned short.) C++ Standard vyžaduje, aby **wchar_t** předdefinovaným typem. Pomocí typedef verze může způsobit problémy s přenositelností. Pokud upgradujete ze starší verze sady Visual Studio a dojde k chybě kompilátoru C2664 protože kód se snaží implicitně převést **wchar_t** k **unsigned short**, doporučujeme vám, že změníte Kód opravit chybu, nikoli nastavením parametru `/Zc:wchar_t-`. Další informace najdete v tématu [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>Upgrade pomocí možnosti linkeru: / NODEFAULTLIB/Entry a NOENTRY
 
@@ -181,5 +181,5 @@ Další informace najdete v tématu [Portování ze znakové sady MBCS do kódu 
 
 ## <a name="see-also"></a>Viz také:
 
-[Upgradování projektů z dřívějších verzí aplikace Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Upgrade projektů z dřívějších verzí Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Vylepšení shody C++ v sadě Visual Studio](../overview/cpp-conformance-improvements.md)

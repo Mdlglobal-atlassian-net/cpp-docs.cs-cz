@@ -24,10 +24,10 @@ helpviewer_keywords:
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
 ms.openlocfilehash: ca24a10f905e61feb2b090ba3966c752db3d4444
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041498"
 ---
 # <a name="how-to-include-resources-at-compile-time-c"></a>Postupy: Zahrnutí prostředků v době kompilace (C++)
@@ -97,6 +97,6 @@ Win32
 
 ## <a name="see-also"></a>Viz také:
 
-[Zdrojové soubory](../windows/resource-files-visual-studio.md)<br/>
-[Postupy: Vytvoření prostředků](../windows/how-to-create-a-resource-script-file.md)<br/>
-[Postupy: Správa prostředků](../windows/how-to-copy-resources.md)<br/>
+[Soubory prostředků](../windows/resource-files-visual-studio.md)<br/>
+[Postupy: Vytvořit prostředky](../windows/how-to-create-a-resource-script-file.md)<br/>
+[Postupy: Spravovat prostředky](../windows/how-to-copy-resources.md)<br/>

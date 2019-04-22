@@ -25,10 +25,10 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
 ms.openlocfilehash: c1dcf89811fa5225283cb5bec120d3bd2fdfb003
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773785"
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit Class
@@ -95,13 +95,13 @@ Následující příklad ukazuje, jak nastavit masku (například telefonní č�
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[Cedit –](../../mfc/reference/cedit-class.md)
+[CEdit](../../mfc/reference/cedit-class.md)
 
 [CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md)
 
@@ -340,4 +340,4 @@ Tato metoda předefinuje [CWnd::SetWindowText](../../mfc/reference/cwnd-class.md
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[Cedit – třída](../../mfc/reference/cedit-class.md)
+[CEdit – třída](../../mfc/reference/cedit-class.md)

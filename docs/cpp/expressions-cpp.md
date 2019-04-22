@@ -6,10 +6,10 @@ helpviewer_keywords:
 - expressions [C++]
 ms.assetid: aaa1f250-7185-4113-b682-3f5e995943d1
 ms.openlocfilehash: c2dc4f1654b7e76bf9506f82d6d613684258c174
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58771367"
 ---
 # <a name="expressions-c"></a>Výrazy (C++)
@@ -48,7 +48,7 @@ Témata operátorů v dalších částech:
 
 - [Přetížené operátory](../cpp/operator-overloading.md)
 
-- [typeid](../extensions/typeid-cpp-component-extensions.md) (C + +/ CLI)
+- [typeid](../extensions/typeid-cpp-component-extensions.md) (C++vyhodnocovací)
 
     > [!NOTE]
     >  Nemohou být přetíženy operátory pro vestavěné typy; jejich chování je předdefinovaná.

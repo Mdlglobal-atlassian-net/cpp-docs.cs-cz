@@ -9,10 +9,10 @@ helpviewer_keywords:
 - code_seg pragma
 ms.assetid: bf4faac1-a511-46a6-8d9e-456851d97d56
 ms.openlocfilehash: e566fb01bf70b343b75254a10466bdda2bc7ce1b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041238"
 ---
 # <a name="codeseg"></a>code_seg
@@ -26,13 +26,13 @@ Určuje textový segment, kde jsou funkce uloženy v souboru .obj.
 
 ### <a name="parameters"></a>Parametry
 
-**nabízených oznámení**<br/>
+**push**<br/>
 (Volitelné) Vloží záznam do zásobníku vnitřního kompilátoru. A **nabízených** může mít *identifikátor* a *segment-name*.
 
-**POP**<br/>
+**pop**<br/>
 (Volitelné) Odstraní záznam z vrcholu vnitřního zásobníku kompilátoru.
 
-*identifikátor*<br/>
+*identifier*<br/>
 (Volitelné) Při použití s **nabízených**, přiřadí název záznamu ve vnitřním zásobníku kompilátoru. Při použití s **pop**, vyjme všechny záznamy z vnitřního zásobníku až do *identifikátor* li *identifikátor* nebyl nalezen v interním zásobníku, nic nevezme.
 
 *identifikátor* vyjmout několik záznamů pro odebrání pouze s jedním **pop** příkazu.

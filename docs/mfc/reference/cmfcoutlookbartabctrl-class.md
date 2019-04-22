@@ -45,10 +45,10 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
 ms.openlocfilehash: c791f3988c7257ed7d188917394e74a6dbeca98b
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776801"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>Cmfcoutlookbartabctrl – třída
@@ -116,9 +116,9 @@ Následující příklad ukazuje, jak inicializovat `CMFCOutlookBarTabCtrl` obje
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -219,7 +219,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-*rect*<br/>
+*Rect*<br/>
 [in] Určuje počáteční velikost a umístění v pixelech.
 
 *pParentWnd*<br/>
@@ -508,6 +508,6 @@ void SetVisiblePageButtons(int nVisiblePageButtons);
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[Cmfcbasetabctrl – třída](../../mfc/reference/cmfcbasetabctrl-class.md)<br/>
+[CMFCBaseTabCtrl – třída](../../mfc/reference/cmfcbasetabctrl-class.md)<br/>
 [CMFCOutlookBar – třída](../../mfc/reference/cmfcoutlookbar-class.md)<br/>
-[Cmfcoutlookbarpane – třída](../../mfc/reference/cmfcoutlookbarpane-class.md)
+[CMFCOutlookBarPane – třída](../../mfc/reference/cmfcoutlookbarpane-class.md)

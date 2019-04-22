@@ -38,10 +38,10 @@ helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
 ms.openlocfilehash: 1821532a4d5a3078202f180273b02945b8d8e4ba
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774552"
 ---
 # <a name="catlmap-class"></a>Catlmap – třída
@@ -91,7 +91,7 @@ Kód použitý má zkopírovat nebo přesunout elementy hodnotu.
 
 ### <a name="cpair-data-members"></a>CPair datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CPair::m_key](#m_key)|Datový člen ukládání klíčovým prvkem.|
 |[CPair::m_value](#m_value)|Datový člen ukládání prvku hodnoty.|
@@ -105,7 +105,7 @@ Kód použitý má zkopírovat nebo přesunout elementy hodnotu.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAtlMap::AssertValid](#assertvalid)|Volejte tuto metodu za účelem způsobit ASSERT, pokud `CAtlMap` není platný.|
 |[CAtlMap::DisableAutoRehash](#disableautorehash)|Voláním této metody lze zakázat automatické rehashing z `CAtlMap` objektu.|
@@ -133,7 +133,7 @@ Kód použitý má zkopírovat nebo přesunout elementy hodnotu.
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAtlMap::operator\[\]](catlmap-class.md#operator_at)|Nahradí nebo přidá nový prvek do `CAtlMap`.|
 

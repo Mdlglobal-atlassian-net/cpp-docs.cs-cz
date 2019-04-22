@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
 ms.openlocfilehash: 43a47366475b227ccfc5918b07760cc582326e82
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041468"
 ---
 # <a name="windows-desktop-wizard"></a>Desktopový Průvodce pro Windows
@@ -27,9 +27,9 @@ Následující tabulka uvádí, jaké možnosti jsou k dispozici pro všechny ty
 |---------------------|-------------------------|----------------------------------------|---------------------------|--------------------|
 |**Prázdný projekt**|Ano|Ano|Ano|Ne|
 |**Symboly exportu**|Ne|Ne|Ano|Ne|
-|**Předkompilovaná hlavička**|Ne|Ne|Ne|Ano|
-|**Podpora ATL**|Ano|Ne|Ne|Ne|
-|**Podpora MFC**|Ano|Ne|Ne|Ano|
+|**Předkompilované hlavičky**|Ne|Ne|Ne|Ano|
+|**ATL – podpora**|Ano|Ne|Ne|Ne|
+|**Podpora knihovny MFC**|Ano|Ne|Ne|Ano|
 
 ## <a name="overview"></a>Přehled
 
@@ -52,7 +52,7 @@ Vytvoří určený typ aplikace.
 |Možnost|Popis|
 |------------|-----------------|
 |**Konzolová aplikace**|Vytvoří konzolovou aplikaci. Programy konzoly jsou vyvíjeny pomocí [funkce konzoly](https://msdn.microsoft.com/library/ms813137.aspx), které poskytují podporu znakového režimu v oknech konzoly. Visual C++ [běhové knihovny](../c-runtime-library/c-run-time-library-reference.md) také poskytují výstup a vstup z okna konzoly se standardních vstupních/výstupních funkcí, jako například `printf_s()` a `scanf_s()`. Konzolová aplikace nemá žádné grafické uživatelské rozhraní. Zkompiluje se do souboru .exe a lze ji spustit jako samostatnou aplikaci z příkazového řádku.<br /><br /> Do konzolové aplikace je možné přidat podporu knihovny MFC a knihovny ATL.|
-|**Aplikace pro systém Windows**|Vytvoří program systému Win32. Program systému Win32 je spustitelná aplikace (EXE) napsaná v C nebo C++, využívající volání rozhraní API systému Win32 k vytvoření grafického uživatelského rozhraní.<br /><br /> Do aplikace pro systém Windows není možné přidat podporu knihovny MFC nebo knihovny ATL.|
+|**Aplikace Windows**|Vytvoří program systému Win32. Program systému Win32 je spustitelná aplikace (EXE) napsaná v C nebo C++, využívající volání rozhraní API systému Win32 k vytvoření grafického uživatelského rozhraní.<br /><br /> Do aplikace pro systém Windows není možné přidat podporu knihovny MFC nebo knihovny ATL.|
 |**Dynamické knihovny DLL**|Vytvoří dynamickou knihovnu (DLL) systému Win32. Knihovna DLL systému Win32 je binární soubor napsaný v C nebo C++, který používá volání rozhraní API systému Win32, nikoli tříd knihovny MFC, a funguje jako sdílená knihovna funkcí, které lze použít více aplikacemi současně.<br /><br /> Nelze přidat podporu knihovny MFC nebo ATL DLL aplikace vytvořené pomocí tohoto průvodce, ale můžete vytvořit knihovny MFC DLL vybrat **nový > Projekt > MFC DLL**.|
 |**Statická knihovna**|Vytvoří statickou knihovnu. Statická knihovna je soubor obsahující objekty a jejich funkce a data, které jsou propojeny do programu při vytvoření spustitelného souboru. Toto téma vysvětluje, jak vytvořit počáteční soubory a [vlastnosti projektu](../build/reference/property-pages-visual-cpp.md) pro statické knihovny. Soubor statické knihovny poskytuje následující výhody:<br /><br />-Statická knihovna systému Win32 je užitečná, pokud aplikace, kterou právě pracujete provede volání rozhraní API systému Win32, nikoli tříd knihovny MFC.<br />-Proces propojení je stejný, ať zbytek aplikace Windows napsán v jazyce C nebo C++.<br />-Můžete propojit statickou knihovnu pro aplikace založené na knihovně MFC nebo do programu bez knihovny MFC.|
 
@@ -64,8 +64,8 @@ Definuje podporu a možnosti pro aplikaci v závislosti na jejím typu.
 |------------|-----------------|
 |**Prázdný projekt**|Určuje, že soubory projektu jsou prázdné. Máte-li sadu zdrojových souborů (například soubory .cpp, soubory hlaviček, ikony, panely nástrojů, dialogová okna atd.) a chcete vytvořit projekt ve vývojovém prostředí Visual C++, je nutné nejprve vytvořit prázdný projekt a potom přidat soubory do projektu.<br /><br /> Tato možnost není k dispozici pro projekty statických knihoven.|
 |**Symboly exportu**|Určuje, že projekt knihovny DLL exportuje symboly.|
-|**Předkompilovaná hlavička**|Určuje, že projekt statické knihovny používá předkompilovanou hlavičku.|
-|**Kontroly životního cyklu bezpečnostního vývoje (SDL)**|Další informace o SDL najdete v tématu [pokyny k procesu Microsoft Security Development Lifecycle (SDL)](../build/reference/sdl-enable-additional-security-checks.md)|
+|**Předkompilované hlavičky**|Určuje, že projekt statické knihovny používá předkompilovanou hlavičku.|
+|**Zkontroluje Security Development Lifecycle (SDL)**|Další informace o SDL najdete v tématu [pokyny k procesu Microsoft Security Development Lifecycle (SDL)](../build/reference/sdl-enable-additional-security-checks.md)|
 
 ## <a name="add-common-headers-for"></a>Přidáte společné hlavičky pro:
 

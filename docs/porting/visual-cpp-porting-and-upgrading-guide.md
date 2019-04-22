@@ -3,10 +3,10 @@ title: Průvodce přenosem a upgradováním Visual C++
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
 ms.openlocfilehash: 8798d8b3da5a91adfc6f77912d4f34bf62549f54
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898788"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Průvodce přenosem a upgradováním Visual C++
@@ -67,7 +67,7 @@ Po upgradu a testování projektu, může být také vhodné zvažte vylepšení
 
 A co uživatelského rozhraní? Pokud používáte knihovnu MFC, můžete chtít aktualizovat uživatelské rozhraní. Používáte novější funkce MFC, které byly zavedeny v 2008 jako Feature Pack? Pokud chcete poskytnout novější vzhled a chování vaší aplikace bez přepsání celé aplikace, můžete zvážit použití rozhraní API na pásu karet v prostředí MFC, nebo pomocí některé z nových funkcí knihovny MFC.
 
-Pokud chcete svůj program poskytnout uživatelské rozhraní XAML, ale nechtějí vytvářet aplikace pro UPW, můžete použít C# s WPF vytvořit vrstvě uživatelského rozhraní a Refaktorujte logiky standard C++ do knihoven DLL. Vytvoření vrstvy vzájemná funkční spolupráce v jazyce C + +/ CLI pro připojení k C# pomocí nativního kódu. Další možností je vytvořit aplikaci UPW pomocí [C + +/ CX](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx) nebo [C + +/ WinRT](https://github.com/microsoft/cppwinrt). Ve Windows 10, můžete použít [Desktop App Converter](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter) chcete zabalit desktopové aplikace jako aplikace pro UPW bez nutnosti upravit veškerý kód.
+Pokud chcete svůj program poskytnout uživatelské rozhraní XAML, ale nechtějí vytvářet aplikace pro UPW, můžete použít C# s WPF vytvořit vrstvě uživatelského rozhraní a Refaktorujte logiky standard C++ do knihoven DLL. Vytvoření vrstvy vzájemná funkční spolupráce v C++vyhodnocovací připojit C# s nativním kódem. Další možností je vytvořit aplikaci UPW pomocí [ C++/CX](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx) nebo [ C++/WinRT](https://github.com/microsoft/cppwinrt). Ve Windows 10, můžete použít [Desktop App Converter](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter) chcete zabalit desktopové aplikace jako aplikace pro UPW bez nutnosti upravit veškerý kód.
 
 Případně třeba Teď máte nové požadavky nebo můžou předvídat potřebu cílení na jiných platformách než Windows desktop, jako jsou Windows Phone nebo zařízení s Androidem. Může přeneste kód uživatelského rozhraní pro multiplatformní knihovna uživatelského rozhraní. Tyto architektury uživatelského rozhraní můžete cílit na více zařízení a dál používat Visual Studio a ladicím programu sady Visual Studio jako vývojové prostředí.
 
@@ -75,16 +75,16 @@ Případně třeba Teď máte nové požadavky nebo můžou předvídat potřebu
 
 |Název|Popis|
 |-----------|-----------------|
-|[Upgradování projektů z dřívějších verzí aplikace Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Popisuje, jak používat projekty vytvořené v dřívějších verzích Visual C++.|
+|[Upgrade projektů z dřívějších verzí Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Popisuje, jak používat projekty vytvořené v dřívějších verzích Visual C++.|
 |[Co je nového pro kompilátor jazyka C++ v sadě Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Změny v prostředí IDE a nástroje pro aktuální verzi sady Visual Studio|
 |[Vylepšení shody C++ v sadě Visual Studio](../overview/cpp-conformance-improvements.md)|Vylepšení ze sady Visual Studio 2015 se sadou Visual Studio|
-|[2003 – 2015 historie změn Visual C++](visual-cpp-change-history-2003-2015.md)|Seznam všech změn v Visual C++ knihovny a nástroje sestavení ze sady Visual Studio 2003 do 2015, které mohou vyžadovat změny v kódu.|
-|[Visual C++ Co je nového 2003 – 2015](visual-cpp-what-s-new-2003-through-2015.md)|Všechny "Novinky" informace pro jazyk Visual C++ ze sady Visual Studio 2003 do Visual Studio 2015.|
-|[Přenos knihoven 3rd třetích stran](porting-third-party-libraries.md)|Jak používat **vcpkg** nástroj příkazového řádku k portu starší knihovny open-source verze kompilován s novější sady nástrojů Visual C++.|
-|[Portování a upgradování: Příklady a případové studie](porting-and-upgrading-examples-and-case-studies.md)|Pro tento oddíl přenáší a upgraduje několik ukázek a aplikací jsme probírali prostředí a výsledky. Můžete zjistit, že čtení těchto poskytuje vás o tom, co se tak zapojí v portování a upgradování procesu. Během tohoto procesu jsme popisují tipy a triky pro upgrade a zobrazit jak se konkrétní chyby byly opraveny.|
-|[Přenos aplikací do Univerzální platformy Windows](porting-to-the-universal-windows-platform-cpp.md)|Obsahuje informace o převodu kódu pro Windows 10|
+|[Historie změn Visual C++ 2003–2015](visual-cpp-change-history-2003-2015.md)|Seznam všech změn v Visual C++ knihovny a nástroje sestavení ze sady Visual Studio 2003 do 2015, které mohou vyžadovat změny v kódu.|
+|[Novinky Visual C++ 2003–2015](visual-cpp-what-s-new-2003-through-2015.md)|Všechny "Novinky" informace pro jazyk Visual C++ ze sady Visual Studio 2003 do Visual Studio 2015.|
+|[Přenos knihoven třetích stran](porting-third-party-libraries.md)|Jak používat **vcpkg** nástroj příkazového řádku k portu starší knihovny open-source verze kompilován s novější sady nástrojů Visual C++.|
+|[Přenos a upgrade: Příklady a případové studie](porting-and-upgrading-examples-and-case-studies.md)|Pro tento oddíl přenáší a upgraduje několik ukázek a aplikací jsme probírali prostředí a výsledky. Můžete zjistit, že čtení těchto poskytuje vás o tom, co se tak zapojí v portování a upgradování procesu. Během tohoto procesu jsme popisují tipy a triky pro upgrade a zobrazit jak se konkrétní chyby byly opraveny.|
+|[Přenos aplikací do platformy Universal Windows](porting-to-the-universal-windows-platform-cpp.md)|Obsahuje informace o převodu kódu pro Windows 10|
 |[Úvod do prostředí Visual C++ pro uživatele systému UNIX](introduction-to-visual-cpp-for-unix-users.md)|Poskytuje informace pro uživatele systému UNIX, kteří začínají s Visual C++ a chcete se s ním být produktivní.|
-|[Portování ze systému UNIX do Win32](porting-from-unix-to-win32.md)|Tento článek popisuje možnosti pro migraci systému UNIX aplikací pro Windows.|
+|[Přenos ze systému UNIX do Win32](porting-from-unix-to-win32.md)|Tento článek popisuje možnosti pro migraci systému UNIX aplikací pro Windows.|
 
 ## <a name="see-also"></a>Viz také:
 

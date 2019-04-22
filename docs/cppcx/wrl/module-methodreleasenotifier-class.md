@@ -16,10 +16,10 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::MethodReleaseNotifier::object_ data member
 ms.assetid: 5c2902be-964b-488f-9f1c-adf504995cbc
 ms.openlocfilehash: 41b7cfb2601cd2023e895dbcf1a56e85fe65b35d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58786553"
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Module::MethodReleaseNotifier – třída
@@ -42,7 +42,7 @@ Typ objektu, jehož členská funkce je obslužnou rutinu události.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Název                                                                                                 | Popis
+Name                                                                                                 | Popis
 ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------
 [Module::methodreleasenotifier:: methodreleasenotifier –](#methodreleasenotifier-methodreleasenotifier) | Inicializuje novou instanci třídy `Module::MethodReleaseNotifier` třídy.
 
@@ -54,7 +54,7 @@ Name                                                                   | Popis
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-Název                                                                    | Popis
+Name                                                                    | Popis
 ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------
 [Module::methodreleasenotifier:: method_ –](#methodreleasenotifier-method) | Uchovává ukazatel na obslužnou rutinu události pro aktuální `Module::MethodReleaseNotifier` objektu.
 [Module::methodreleasenotifier:: object_ –](#methodreleasenotifier-object) | Uchovává ukazatel na objekt, jehož členská funkce je obslužnou rutinu události pro aktuální `Module::MethodReleaseNotifier` objektu.

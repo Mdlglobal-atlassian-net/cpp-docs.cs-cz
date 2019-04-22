@@ -265,10 +265,10 @@ helpviewer_keywords:
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
 ms.openlocfilehash: eea37d03ca5a4fab450fbca0c4c3f6c76fefb407
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780610"
 ---
 # <a name="clistctrl-class"></a>CListCtrl Class
@@ -504,9 +504,9 @@ Ve výchozím nastavení ovládací prvek zobrazení seznamu odstraní přiřaze
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](cobject-class.md)
+[Třídy CObject](cobject-class.md)
 
-[CCmdTarget –](ccmdtarget-class.md)
+[CCmdTarget](ccmdtarget-class.md)
 
 [CWnd](cwnd-class.md)
 
@@ -618,7 +618,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Určuje styl ovládacího prvku seznamu. Použijte libovolnou kombinaci – styly ovládacího prvku seznamu do ovládacího prvku. Zobrazit [styly oken zobrazení seznamu](/windows/desktop/Controls/list-view-window-styles) v sadě Windows SDK pro úplný seznam z těchto stylů vyplývají. Rozšířené styly specifické pro ovládací prvek pomocí sady [SetExtendedStyle](#setextendedstyle).
 
-*rect*<br/>
+*Rect*<br/>
 Určuje velikost a umístění ovládacího prvku seznamu. Může být buď `CRect` objektu nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 *pParentWnd*<br/>
@@ -666,7 +666,7 @@ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené s
 *dwStyle*<br/>
 Určuje styl ovládacího prvku seznamu. Použijte libovolnou kombinaci – styly ovládacího prvku seznamu do ovládacího prvku. Úplný seznam těchto stylů, najdete v části [styly oken zobrazení seznamu](/windows/desktop/Controls/list-view-window-styles) v sadě Windows SDK.
 
-*rect*<br/>
+*Rect*<br/>
 Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -2116,7 +2116,7 @@ int GetNextSelectedItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Odkaz na POZICI hodnotu vrácenou příkazem předchozí volání `GetNextSelectedItem` nebo `GetFirstSelectedItemPosition`. Hodnota je aktualizovat na další pozici tohoto volání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2556,7 +2556,7 @@ void GetWorkAreas(
 *nWorkAreas*<br/>
 Počet `RECT` obsažené ve strukturách *ČLR* pole.
 
-*Čínská lidová republika*<br/>
+*prc*<br/>
 Ukazatel na pole `RECT` struktury (nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekty), který zobrazí pracovní oblasti ovládacího prvku zobrazení seznamu. Hodnoty v těchto struktur jsou souřadnice klienta.
 
 ### <a name="remarks"></a>Poznámky
@@ -2605,7 +2605,7 @@ int HitTest(
 *pHitTestInfo*<br/>
 Adresa `LVHITTESTINFO` strukturu, která obsahuje pozici pro spuštění testu a, která obdrží informace o výsledcích testu přístupů.
 
-*PT*<br/>
+*pt*<br/>
 Bod má být testována.
 
 *pFlags*<br/>
@@ -2774,13 +2774,13 @@ Index položky má být vložen.
 *lpszItem*<br/>
 Adresa řetězec obsahující popisek položky nebo LPSTR_TEXTCALLBACK, pokud je položka položka zpětného volání. Informace o položky zpětného volání, naleznete v tématu [CListCtrl::GetCallbackMask](#getcallbackmask).
 
-*nvybrán Nobrázek*<br/>
+*nImage*<br/>
 Index položky obrázku nebo I_IMAGECALLBACK, pokud je položka položka zpětného volání. Informace o položky zpětného volání, naleznete v tématu [CListCtrl::GetCallbackMask](#getcallbackmask).
 
 *nMask*<br/>
 *NMask* parametr určuje, která položka předány jako parametry jsou platné. Může to být jeden nebo více hodnot maska je popsáno v [LVITEM struktura](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) v sadě Windows SDK. Platné hodnoty lze spojovat pomocí bitového operátoru OR.
 
-*nInformace*<br/>
+*nState*<br/>
 Označuje stav, stav image a image překrytí položky. Najdete v tématech Windows SDK [LVITEM struktura](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) Další informace a [stavů zobrazení seznamu položek](/windows/desktop/Controls/list-view-item-states) seznam platné příznaky.
 
 *nStateMask*<br/>
@@ -3040,7 +3040,7 @@ BOOL RedrawItems(
 
 ### <a name="parameters"></a>Parametry
 
-*Nprvní*<br/>
+*nFirst*<br/>
 Index první položky na překreslen.
 
 *Nposlední*<br/>
@@ -3097,7 +3097,7 @@ BOOL Scroll(CSize size);
 
 ### <a name="parameters"></a>Parametry
 
-*velikost*<br/>
+*Velikost*<br/>
 A `CSize` určující množství vodorovné a svislé posouvání v pixelech. `y` Členem *velikost* , je vyděleno hodnotou výšku v pixelech, ovládací prvek zobrazení seznamu řádku a ovládací prvek možnosti posouvat určitý objekt výsledný počet řádků.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3114,7 +3114,7 @@ BOOL SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parametry
 
-*znak CR*<br/>
+*cr*<br/>
 Barva pozadí pro nastavení, nebo hodnota CLR_NONE žádné barvu pozadí. Ovládací prvky zobrazení seznamu s barvy pozadí ho překreslit sami výrazně rychlejší než ty, které bez barvy pozadí. Informace najdete v tématu [COLORREF](/windows/desktop/gdi/colorref) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3225,7 +3225,7 @@ BOOL SetCheck(
 *nItem*<br/>
 Index založený na nule položku ovládacího prvku seznamu.
 
-*Podívejte se*<br/>
+*fCheck*<br/>
 Určuje, zda má nebo nemá být viditelné obrázku stavu položky. Ve výchozím nastavení *podívejte* hodnotu TRUE a je viditelný obrázku stavu. Pokud *podívejte* má hodnotu FALSE, nezobrazí se.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3493,10 +3493,10 @@ CSize SetIconSpacing(CSize size);
 *cx*<br/>
 Distance (v pixelech) mezi ikony na ose x.
 
-*CY*<br/>
+*cy*<br/>
 Distance (v pixelech) mezi ikony na ose y.
 
-*velikost*<br/>
+*Velikost*<br/>
 A `CSize` určující vzdálenosti (v pixelech) mezi ikonami v x - a osami y.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3598,7 +3598,7 @@ COLORREF SetInsertMarkColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*barva*<br/>
+*color*<br/>
 A [COLORREF](/windows/desktop/gdi/colorref) struktura určující barvu k nastavení kurzoru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3655,10 +3655,10 @@ Určuje atributy, které se mají nastavit (viz poznámky).
 *lpszItem*<br/>
 Adresa řetězec zakončený hodnotou null zadání popisku položky.
 
-*nvybrán Nobrázek*<br/>
+*nImage*<br/>
 Index obrázku položky v seznamu obrázků.
 
-*nInformace*<br/>
+*nState*<br/>
 Určuje hodnoty pro jednotlivé státy změnit (viz poznámky).
 
 *nStateMask*<br/>
@@ -3853,7 +3853,7 @@ BOOL SetItemPosition(
 *nItem*<br/>
 Index položky, jejichž pozice je nastavit.
 
-*PT*<br/>
+*pt*<br/>
 A [bodu](/previous-versions/dd162805\(v=vs.85\)) koordinuje struktury zadáte novou pozici v zobrazení levého horního rohu položky.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3893,7 +3893,7 @@ Index položky, jejichž stav je nastavit.
 *pItem*<br/>
 Adresa [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) struktury, jak je popsáno v sadě Windows SDK. Nastavení struktury `stateMask` člen Určuje, které stav bitů změn a struktuře vaší `state` člena obsahuje nové hodnoty pro tyto služby bits. Ostatní členové jsou ignorovány.
 
-*nInformace*<br/>
+*nState*<br/>
 Nové hodnoty bitů stavu. Seznam možných hodnot najdete v tématu [CListCtrl::GetNextItem](#getnextitem) a [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) stav člena.
 
 *nMask*<br/>
@@ -3955,7 +3955,7 @@ COLORREF SetOutlineColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*barva*<br/>
+*color*<br/>
 Nové [COLORREF](/windows/desktop/gdi/colorref) struktury obsahující obrysovou barvu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4022,7 +4022,7 @@ BOOL SetTextBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parametry
 
-*znak CR*<br/>
+*cr*<br/>
 COLORREF, zadáte novou barvu pozadí textu. Informace najdete v tématu [COLORREF](/windows/desktop/gdi/colorref) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4048,7 +4048,7 @@ BOOL SetTextColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parametry
 
-*znak CR*<br/>
+*cr*<br/>
 COLORREF, zadáte novou barvu textu. Informace najdete v tématu [COLORREF](/windows/desktop/gdi/colorref) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4423,6 +4423,6 @@ Tato funkce také uspořádá ovládací prvek zobrazení seznamu, pokud má LVS
 ## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC ROWLIST](../../overview/visual-cpp-samples.md)<br/>
-[Třída CWnd](cwnd-class.md)<br/>
+[CWnd – třída](cwnd-class.md)<br/>
 [Graf hierarchie](../hierarchy-chart.md)<br/>
-[Cimagelist – třída](cimagelist-class.md)
+[CImageList – třída](cimagelist-class.md)

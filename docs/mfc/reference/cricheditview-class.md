@@ -101,10 +101,10 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
 ms.openlocfilehash: 60eeaa2a37dd824ae418b25e95743c21c65ae7ce
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773720"
 ---
 # <a name="cricheditview-class"></a>Cricheditview – třída
@@ -198,9 +198,9 @@ Příklad použití zobrazení RichEdit v aplikaci knihovny MFC, najdete v člá
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -1226,7 +1226,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 
 ### <a name="parameters"></a>Parametry
 
-*PF*<br/>
+*pf*<br/>
 [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) atributů formátování odstavce struktury obsahující nové výchozí nastavení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1285,7 +1285,7 @@ Přepsání této funkce můžete upravit způsob zobrazení pro úpravy s form�
 ## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
-[Cctrlview – třída](../../mfc/reference/cctrlview-class.md)<br/>
+[CCtrlView – třída](../../mfc/reference/cctrlview-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CRichEditDoc Class](../../mfc/reference/cricheditdoc-class.md)<br/>
-[CRichEditCntrItem Class](../../mfc/reference/cricheditcntritem-class.md)
+[CRichEditDoc – třída](../../mfc/reference/cricheditdoc-class.md)<br/>
+[CRichEditCntrItem – třída](../../mfc/reference/cricheditcntritem-class.md)

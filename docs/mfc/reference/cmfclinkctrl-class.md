@@ -15,10 +15,10 @@ helpviewer_keywords:
 - CMFCLinkCtrl [MFC], OnDrawFocusRect
 ms.assetid: 80f3874d-7cc8-410e-9ff1-62a225f5034b
 ms.openlocfilehash: 839448694cee17f5bc1a1e47f7c113026a1a4006
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776424"
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl Class
@@ -60,9 +60,9 @@ Následující příklad ukazuje, jak nastavit velikost `CMFCLinkCtrl` objekt a 
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -158,5 +158,5 @@ A [CSize](../../atl-mfc-shared/reference/csize-class.md) objekt, který obsahuje
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[Clinkctrl – třída](../../mfc/reference/clinkctrl-class.md)<br/>
-[Cmfcbutton – třída](../../mfc/reference/cmfcbutton-class.md)
+[CLinkCtrl – třída](../../mfc/reference/clinkctrl-class.md)<br/>
+[CMFCButton – třída](../../mfc/reference/cmfcbutton-class.md)

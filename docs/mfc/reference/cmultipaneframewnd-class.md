@@ -81,10 +81,10 @@ helpviewer_keywords:
 - CMultiPaneFrameWnd [MFC], StoreRecentTabRelatedInfo
 ms.assetid: 989a548e-0d70-46b7-a513-8cf740e1be3e
 ms.openlocfilehash: 9c23d76e8f3ea54fe34e7956ad5b4e7dc9780def
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773057"
 ---
 # <a name="cmultipaneframewnd-class"></a>Cmultipaneframewnd – třída
@@ -161,9 +161,9 @@ Následující příklad ukazuje, jak načíst ukazatel `CMultiPaneFrameWnd` obj
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -640,4 +640,4 @@ virtual void StoreRecentTabRelatedInfo(
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[Cpaneframewnd – třída](../../mfc/reference/cpaneframewnd-class.md)
+[CPaneFrameWnd – třída](../../mfc/reference/cpaneframewnd-class.md)

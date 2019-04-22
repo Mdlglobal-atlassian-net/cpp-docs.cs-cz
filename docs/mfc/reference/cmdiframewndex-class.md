@@ -157,10 +157,10 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
 ms.openlocfilehash: b24afd943f2168657c6b4437fed65b0a45689b52
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778556"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx – třída
@@ -276,9 +276,9 @@ V následujícím příkladu je odvozena z třídy `CMDIFrameWndEx`. Tento fragm
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -719,7 +719,7 @@ Určuje umístění popisků kartu.
 *bTabCloseButton*<br/>
 Určuje, jestli se má zobrazovat karta tlačítka Zavřít.
 
-* – styl*<br/>
+*style*<br/>
 Určuje styl karty. Použijte STYLE_3D_SCROLLED pro běžné karty nebo STYLE_3D_ONENOTE pro aplikaci Microsoft OneNote karty.
 
 *bTabCustomTooltips*<br/>
@@ -1132,7 +1132,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Zadaný bod v souřadnicovém systému obrazovky.
 
 *dwBarAlignment*<br/>
@@ -1592,7 +1592,7 @@ virtual BOOL OnShowMDITabContextMenu(
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Umístění v nabídce v souřadnicovém systému obrazovky.
 
 *dwAllowedItems*<br/>
@@ -1745,7 +1745,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Bod (v souřadnicovém systému obrazovky).
 
 *nSensitivity*<br/>
@@ -1888,7 +1888,7 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>Parametry
 
-*menu*<br/>
+*Nabídky*<br/>
 [in] Odkaz na [cmenu – třída](../../mfc/reference/cmenu-class.md) objektu, který chcete upravit.
 
 *uiViewUserToolbarCmdFirst*<br/>

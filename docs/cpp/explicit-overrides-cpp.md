@@ -9,10 +9,10 @@ helpviewer_keywords:
 - explicit override of virtual function
 ms.assetid: ee583234-5cda-4e90-b55e-3f9fbf079ced
 ms.openlocfilehash: dbaf8b0d78093df522cfbc63bf20dd0acb6c477c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774253"
 ---
 # <a name="explicit-overrides-c"></a>Explicitní přepsání (C++)
@@ -21,7 +21,7 @@ ms.locfileid: "58774253"
 
 Pokud je stejná virtuální funkce deklarována ve dvou nebo více [rozhraní](../cpp/interface.md) a je-li třída odvozena z těchto rozhraní, můžete explicitně přepsat každou virtuální funkci.
 
-Informace o explicitním přepsání ve spravovaném kódu použitím C + +/ CLI, najdete v článku [explicitní přepsání](../extensions/explicit-overrides-cpp-component-extensions.md).
+Informace o explicitním přepsání ve spravovaném kódu použitím C++vyhodnocovací, naleznete v tématu [explicitní přepsání](../extensions/explicit-overrides-cpp-component-extensions.md).
 
 **Specifické pro END Microsoft**
 

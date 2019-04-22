@@ -9,27 +9,27 @@ helpviewer_keywords:
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
 ms.openlocfilehash: 142d067b6fbc9e2357ff8fc23fd931a1194477e9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041251"
 ---
 # <a name="data-access-in-visual-c"></a>Přístup k datům v jazyce Visual C++
 
 Téměř všechny databáze, SQL a NoSQL, a nabízejí rozhraní pro nativní aplikace C++. Standardní rozhraní odvětví je rozhraní ODBC, které podporuje všechny hlavní produkty SQL database a řada produktů NoSQL. Pro produkty jiných výrobců najdete dodavatele pro další informace. Knihovny třetích stran s různými podmínkami licence jsou také k dispozici.
 
-Microsoft má od roku 2011 zarovnány na rozhraní ODBC jako standard pro nativní aplikace pro připojení k databázím serveru Microsoft SQL Server, v místním prostředí i v cloudu. Další informace najdete v tématu [programování přístupu dat \(MFC-ATL\)](data-access-programming-mfc-atl.md). C + +/ CLI knihovny můžete použít buď nativních ovladačů rozhraní ODBC nebo ADO.NET. Další informace najdete v tématu [Data přístupu pomocí ADO.NET (C + +/ CLI)](../dotnet/data-access-using-adonet-cpp-cli.md) a [přístup k datům v sadě Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/accessing-data-in-visual-studio).
+Microsoft má od roku 2011 zarovnány na rozhraní ODBC jako standard pro nativní aplikace pro připojení k databázím serveru Microsoft SQL Server, v místním prostředí i v cloudu. Další informace najdete v tématu [programování přístupu dat \(MFC-ATL\)](data-access-programming-mfc-atl.md). C++/ Rozhraní příkazového řádku knihovny můžete použít buď nativních ovladačů rozhraní ODBC nebo ADO.NET. Další informace najdete v tématu [Data přístupu pomocí ADO.NET (C++vyhodnocovací)](../dotnet/data-access-using-adonet-cpp-cli.md) a [přístup k datům v sadě Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/accessing-data-in-visual-studio).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
 [Přístup k datům programování knihovny MFC nebo ATL)](data-access-programming-mfc-atl.md)<br/>
 Popisuje programování s jazykem Visual C++, kde je upřednostňovaným způsobem pomocí knihoven tříd, jako je například aktivní šablony třídy knihovny (ATL) nebo knihovny Microsoft Foundation Class (MFC), které zjednodušují práci s databází rozhraní API přístupu k datům starší verze.
 
-[ODBC (Open Database Connectivity)](odbc/open-database-connectivity-odbc.md)<br/>
+[Open Database Connectivity (ODBC)](odbc/open-database-connectivity-odbc.md)<br/>
 Knihovny Microsoft Foundation Classes (MFC) poskytuje třídy pro programování s připojením ODBC (Open Database).
 
-[OLE DB – programování](oledb/ole-db-programming.md)<br/>
+[Programování v architektuře OLE DB](oledb/ole-db-programming.md)<br/>
 Většinou starší verze rozhraní, které se stále vyžaduje v některých případech, zejména pokud jsou programové ošetření propojené servery.
 
 ## <a name="related-topics"></a>Související témata

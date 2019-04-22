@@ -41,10 +41,10 @@ helpviewer_keywords:
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
 ms.openlocfilehash: 9d4100037c5a6cd2eeef1a50fb2d5a46b2cb6505
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772720"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage – třída
@@ -61,13 +61,13 @@ class CPropertyPage : public CDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CPropertyPage::CPropertyPage](#cpropertypage)|Vytvoří `CPropertyPage` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CPropertyPage::CancelToClose](#canceltoclose)|Změní na tlačítko OK číst zavřít a zakáže tlačítko Storno po neopravitelné změnit na stránce modální seznam vlastností.|
 |[CPropertyPage::Construct](#construct)|Vytvoří `CPropertyPage` objektu. Použití `Construct` Pokud chcete zadat parametry v době běhu, nebo pokud používáte pole.|
@@ -87,7 +87,7 @@ class CPropertyPage : public CDialog
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CPropertyPage::m_psp](#m_psp)|Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2) struktury. Poskytuje přístup k základní vlastnost parametry stránky.|
 

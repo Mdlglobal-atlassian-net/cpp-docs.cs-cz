@@ -52,10 +52,10 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
 ms.openlocfilehash: 9e5b2419f070ead17e72b1642f510f74bad8260e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58786636"
 ---
 # <a name="comptr-class"></a>ComPtr – třída
@@ -90,7 +90,7 @@ Další informace o inteligentních ukazatelích naleznete v tématu "Chytrých 
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-Název            | Popis
+Name            | Popis
 --------------- | ---------------------------------------------------------------
 `InterfaceType` | Synonymum pro typ zadaný *T* parametr šablony.
 
@@ -126,7 +126,7 @@ Name                                        | Popis
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-Název                                                                                           | Popis
+Name                                                                                           | Popis
 ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------
 [ComPtr::operator &](#operator-ampersand)                                                       | Načte adresu aktuálního `ComPtr`.
 [ComPtr::operator->](#operator-arrow)                                                          | Načte ukazatel na typ určený v parametru aktuální šablony.

@@ -75,10 +75,10 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
 ms.openlocfilehash: 4eee24eb93be446f6b4f2631b70736c13a02f45c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58771404"
 ---
 # <a name="cmfccolorbar-class"></a>Cmfccolorbar – třída
@@ -144,7 +144,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |`m_bInternal`|Logická pole, která určuje, zda se zpracovávají události myši. Události myši se zpracovávají obvykle, když toto pole je PRAVDA a režim úprav je FALSE.|
 |`m_bIsEnabled`|Logická hodnota, která určuje, zda je ovládací prvek povolený.|

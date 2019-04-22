@@ -57,10 +57,10 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
 ms.openlocfilehash: 506ab7a06653942ecff05043a7e7efabd535115f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781689"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager Class
@@ -118,7 +118,7 @@ class CDrawingManager : public CObject
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)<br/>
+[Třídy CObject](../../mfc/reference/cobject-class.md)<br/>
 `CDrawingManager`
 
 ## <a name="requirements"></a>Požadavky
@@ -135,7 +135,7 @@ CDrawingManager(CDC& dc);
 
 ### <a name="parameters"></a>Parametry
 
-*řadič domény*<br/>
+*dc*<br/>
 [in] Odkaz na kontext zařízení. `CDrawingManager` Používá tento kontext pro kreslení.
 
 ##  <a name="createbitmap_32"></a>  CDrawingManager::CreateBitmap_32
@@ -157,9 +157,9 @@ static HBITMAP __stdcall CreateBitmap_32(
 |||
 |-|-|
 |Parametr|Popis|
-|*velikost*|[in] A [CSize](../../atl-mfc-shared/reference/csize-class.md) parametr, který označuje velikost rastrového obrázku.|
+|*Velikost*|[in] A [CSize](../../atl-mfc-shared/reference/csize-class.md) parametr, který označuje velikost rastrového obrázku.|
 |*pBits*|[out] Ukazatel na ukazatel na data, která přijímá umístění DIB bitové hodnoty.|
-|*bitmapa*|Popisovač pro původní rastrový obrázek|
+|*bitmap*|Popisovač pro původní rastrový obrázek|
 |*clrTransparent*|Hodnota RGB zadání průhlednou barvu původní rastrového obrázku.|
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -213,7 +213,7 @@ void DrawEllipse(
 
 ### <a name="parameters"></a>Parametry
 
-*rect*<br/>
+*Rect*<br/>
 [in] Ohraničující obdélník elipsy.
 
 *clrFill*<br/>
@@ -243,7 +243,7 @@ BOOL DrawGradientRing(
 
 ### <a name="parameters"></a>Parametry
 
-*rect*<br/>
+*Rect*<br/>
 [in] A [crect –](../../atl-mfc-shared/reference/crect-class.md) parametr, který určuje hranice pro přechod aktualizačního kanálu.
 
 *colorStart*<br/>
@@ -320,7 +320,7 @@ void DrawRect(
 
 ### <a name="parameters"></a>Parametry
 
-*rect*<br/>
+*Rect*<br/>
 [in] Hranice obdélníku.
 
 *clrFill*<br/>
@@ -351,7 +351,7 @@ BOOL DrawShadow(
 
 ### <a name="parameters"></a>Parametry
 
-*rect*<br/>
+*Rect*<br/>
 [in] Obdélníkovou oblast ve vaší aplikaci. Kreslení správce nakreslí stínu pod tuto oblast.
 
 *nDepth*<br/>
@@ -410,7 +410,7 @@ void Fill4ColorsGradient(
 
 ### <a name="parameters"></a>Parametry
 
-*rect*<br/>
+*Rect*<br/>
 [in] Obdélník tak, aby vyplnil.
 
 *colorStart1*<br/>
@@ -453,7 +453,7 @@ void FillGradient(
 
 ### <a name="parameters"></a>Parametry
 
-*rect*<br/>
+*Rect*<br/>
 [in] Obdélníkovou oblast k vyplnění.
 
 *colorStart*<br/>
@@ -491,7 +491,7 @@ void FillGradient2 (
 
 ### <a name="parameters"></a>Parametry
 
-*rect*<br/>
+*Rect*<br/>
 [in] Obdélníkovou oblast k vyplnění.
 
 *colorStart*<br/>
@@ -527,7 +527,7 @@ BOOL GrayRect(
 
 ### <a name="parameters"></a>Parametry
 
-*rect*<br/>
+*Rect*<br/>
 [in] Obdélníkovou oblast k vyplnění.
 
 *nPercentage*<br/>
@@ -564,7 +564,7 @@ BOOL HighlightRect(
 
 ### <a name="parameters"></a>Parametry
 
-*rect*<br/>
+*Rect*<br/>
 [in] Obdélníkovou oblast, abyste měli na očích.
 
 *nPercentage*<br/>
@@ -714,7 +714,7 @@ static BYTE __stdcall HueToRGB(
 *rm2*<br/>
 [in] Viz poznámky.
 
-*Rh*<br/>
+*rh*<br/>
 [in] Viz poznámky.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -745,7 +745,7 @@ void MirrorRect(
 
 ### <a name="parameters"></a>Parametry
 
-*rect*<br/>
+*Rect*<br/>
 [in] Ohraničující obdélník oblasti k převrácení
 
 *bHorz*<br/>
@@ -781,7 +781,7 @@ static COLORREF __stdcall PixelAlpha(
 *srcPixel*<br/>
 [in] Počáteční barva je pixel.
 
-*Procent*<br/>
+*percent*<br/>
 [in] Číslo mezi 0 a 100, které představuje procento průhlednost. Hodnota 100 značí, že je počáteční barva zcela transparentní.
 
 *percentR*<br/>
@@ -857,7 +857,7 @@ static void __stdcall RGBtoHSL(
 |||
 |-|-|
 |Parametr|Popis|
-|*RGB*|[in] Barva RGB hodnoty.|
+|*rgb*|[in] Barva RGB hodnoty.|
 |*H*|[out] Ukazatel na hodnotu double, kde Metoda ukládá odstín barvy.|
 |*S*|[out] Ukazatel na hodnotu double, kde Metoda ukládá sytost pro barvu.|
 |*L*|[out] Ukazatel na hodnotu double, kde Metoda ukládá světlosti barvy.|
@@ -882,7 +882,7 @@ static void __stdcall RGBtoHSV(
 
 ### <a name="parameters"></a>Parametry
 
-*RGB*<br/>
+*rgb*<br/>
 [in] Barva pro převod v reprezentaci RGB.
 
 *H*<br/>
@@ -921,7 +921,7 @@ static void __stdcall SetAlphaPixel(
 *pBits*<br/>
 [in] Ukazatel na bitové hodnoty rastrového obrázku.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Obdélníkovou oblast ve vaší aplikaci. Kreslení správce vykreslí stín pod a napravo od této oblasti.
 
 *x*<br/>
@@ -930,7 +930,7 @@ static void __stdcall SetAlphaPixel(
 *y*<br/>
 [in] Svislé souřadnice barvu pixelu.
 
-*Procent*<br/>
+*percent*<br/>
 [in] Procento průhlednost.
 
 *iShadowSize*<br/>
@@ -969,10 +969,10 @@ static void __stdcall SetPixel(
 |Parametr|Popis|
 |*pBits*|[in] Ukazatel na bitové hodnoty rastrového obrázku.|
 |*cx*|[in] Celková šířka rastrového obrázku.|
-|*CY*|[in] Celkový počet výšku rastrového obrázku.|
+|*cy*|[in] Celkový počet výšku rastrového obrázku.|
 |*x*|[in] Souřadnice x pixelu rastrového obrázku nastaven, chcete-li změnit.|
 |*y*|[in] Souřadnice y pixelu rastrového obrázku nastaven, chcete-li změnit.|
-|*barva*|[in] Nová barva pixel identifikovaný zadané souřadnice.|
+|*color*|[in] Nová barva pixel identifikovaný zadané souřadnice.|
 
 ##  <a name="smartmixcolors"></a>  CDrawingManager::SmartMixColors
 
@@ -992,8 +992,8 @@ static COLORREF __stdcall SmartMixColors(
 |||
 |-|-|
 |Parametr|Popis|
-|*barvou1*|[in] První barva kombinovat.|
-|*barva2*|[in] Druhá barva kombinovat.|
+|*color1*|[in] První barva kombinovat.|
+|*color2*|[in] Druhá barva kombinovat.|
 |*dblLumRatio*|[in] Poměr světelnost novou barvu. `SmartMixColors` Vynásobí světelnost smíšené barvy tento poměr před určení konečné barvy.|
 |*k1*|[in] Vážený poměr první barvou.|
 |*k2*|[in] Vážený poměr pro druhou barvou.|

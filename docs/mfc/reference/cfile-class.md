@@ -61,10 +61,10 @@ helpviewer_keywords:
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
 ms.openlocfilehash: db499ffa5f1d82b6e3622287f86132930a929102
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58768548"
 ---
 # <a name="cfile-class"></a>Cfile – třída
@@ -81,7 +81,7 @@ class CFile : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CFile::CFile](#cfile)|Vytvoří `CFile` objekt z cesty nebo souboru popisovače.|
 
@@ -128,7 +128,7 @@ class CFile : public CObject
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CFile::m_pTM](#m_ptm)|Ukazatel na `CAtlTransactionManager` objektu.|
 
@@ -221,7 +221,7 @@ Zvolte pouze jeden z následujících možností režim přístupu k souboru. Je
 
 Zvolte jednu z následujících možností režimu znak.
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |`CFile::typeBinary`|Nastaví binárním režimu (používané pouze odvozené třídy).|
 |`CFile::typeText`|Nastaví režim text s speciální zpracování pro návrat na začátek řádku dvojice návratový znak odřádkování (používané pouze odvozené třídy).|
@@ -229,7 +229,7 @@ Zvolte jednu z následujících možností režimu znak.
 
 Zvolte pouze jeden z následujících možností režimu sdílené složky souboru. Je výchozí režim sdílené složky souboru `CFile::shareExclusive`, což je exkluzivní.
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |`CFile::shareDenyNone`|Žádná omezení sdílení.|
 |`CFile::shareDenyRead`|Odepřít přístup pro čtení pro všechny ostatní.|
@@ -245,7 +245,7 @@ Zvolte první, nebo obě z následujících možností vytvoření režim soubor
 
 Vyberte následující soubor ukládání do mezipaměti možnosti, jak je popsáno. Ve výchozím nastavení používá systém obecné schéma, které není k dispozici možnost ukládání do mezipaměti.
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |`CFile::osNoBuffer`|Systém nepoužívá zprostředkující mezipaměti souboru. Tato volba zruší následující 2 možnosti.|
 |`CFile::osRandomAccess`|Soubor mezipaměti je optimalizované pro náhodný přístup. Nepoužívejte tuto možnost a možnost kontroly sekvenční.|
@@ -254,7 +254,7 @@ Vyberte následující soubor ukládání do mezipaměti možnosti, jak je pops�
 
 Vyberte následující možnost zabezpečení zabránit děděny popisovač souboru. Ve výchozím nastavení můžete použít všechny nové podřízené procesy popisovač souboru.
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |`CFile::modeNoInherit`|Všechny podřízené procesy bránit v použití popisovače souboru.|
 

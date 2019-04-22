@@ -9,10 +9,10 @@ helpviewer_keywords:
 - section pragma
 ms.assetid: c67215e9-2c4a-4b0f-b691-2414d2e2d96f
 ms.openlocfilehash: 41479d7d8767438d0e59fbe6beb7e435459dcb1b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023240"
 ---
 # <a name="section"></a>section
@@ -39,11 +39,11 @@ Jakmile je definován oddíl, zůstane v platnosti pro zbývající část kompi
 |-|-|
 |**read**|Umožňuje čtení operací s daty.|
 |**write**|Umožňuje operací zápisu na data.|
-|**Spuštění**|Umožňuje spuštění kódu.|
-|**shared**|Sdílené složky v části mezi všechny procesy, které načíst obrázek.|
+|**execute**|Umožňuje spuštění kódu.|
+|**Sdílet**|Sdílené složky v části mezi všechny procesy, které načíst obrázek.|
 |**nopage**|Označí oddíl jako nejsou stránkované; užitečné pro ovladače zařízení Win32.|
-|**NoCache**|Označí oddílu jako není možné ukládat do mezipaměti; užitečné pro ovladače zařízení Win32.|
-|**Zahození**|Označí oddílu jako discardable; užitečné pro ovladače zařízení Win32.|
+|**nocache**|Označí oddílu jako není možné ukládat do mezipaměti; užitečné pro ovladače zařízení Win32.|
+|**discard**|Označí oddílu jako discardable; užitečné pro ovladače zařízení Win32.|
 |**remove**|Označí oddíl jako nejsou rezidentní; virtuální ovladače zařízení (V*x*D) pouze.|
 
 Pokud nezadáte atributy, budou mít číst části a Zapisovat atributy.

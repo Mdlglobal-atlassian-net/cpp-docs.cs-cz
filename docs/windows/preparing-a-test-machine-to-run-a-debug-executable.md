@@ -5,10 +5,10 @@ helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
 ms.openlocfilehash: 9598d7a0480ee762892d1026a1eb64dcc5c64399
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58786875"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Příprava testovacího počítače ke spuštění ladicího spustitelného souboru
@@ -22,7 +22,7 @@ Ladicí verze knihoven DLL jazyka Visual C++ lze spolu s ladicí verzí aplikace
 
 - Pomocí centrálního nasazení nainstalujte ladicí verzi konkrétní knihovny DLL jazyka Visual C++ do adresáře %windir%\system32\ prostřednictvím Projektu instalace, který obsahuje slučovací moduly pro správnou verzi knihovny a architekturu aplikace. Slučovací moduly se nacházejí ve složce Program Files nebo Program Files (x86) adresáře v \Common moduly\\. Ladicí verze slučovacího modulu obsahuje ve svém názvu řetězec Debug, například Microsoft_VC110_DebugCRT_x86.msm. Příklad tohoto nasazení lze nalézt v [názorný postup: Nasazení aplikace v jazyce Visual C++ pomocí projektu instalace](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
 
-- Pomocí místního nasazení nainstalujte ladicí verzi konkrétní knihovny DLL jazyka Visual C++ v adresáři instalace aplikace pomocí souborů, které jsou k dispozici ve složce Program Files nebo Program Files (x86) adresáře v \Microsoft Visual Studio \<verze > \VC\redist\Debug_NonRedist\\.
+- Pomocí místního nasazení nainstalujte ladicí verzi konkrétní vizuál C++ knihovny DLL v adresáři instalace aplikace pomocí souborů, které jsou k dispozici ve složce Program Files nebo Program Files (x86) adresáře v \Microsoft Visual Studio \< verze > \VC\redist\Debug_NonRedist\\.
 
     > [!NOTE]
     >  Chcete-li vzdáleně ladit aplikaci sestavenou aplikací Visual C++ 2005 nebo Visual C++ 2008 na jiném počítači, je zapotřebí nasadit ladicí verze knihoven DLL jazyka Visual C++ jako sdílená sestavení vedle sebe. Odpovídající slučovací moduly lze nainstalovat pomocí Projektu instalace nebo pomocí Instalační služby systému Windows.

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - __inbyte intrinsic
 ms.assetid: 03b61799-2a08-474d-adc4-2cbf7c81a4d5
 ms.openlocfilehash: 20c583b874c2bdb56affc6a90c8464b82c4824f0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040832"
 ---
 # <a name="inbyte"></a>__inbyte
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Generuje `in` instrukce, vrací jeden bajt čtení z portu určené `Port`.
 
@@ -46,7 +46,7 @@ unsigned char __inbyte(
 
 **Soubor hlaviček** \<intrin.h >
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="remarks"></a>Poznámky
 

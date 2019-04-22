@@ -1,14 +1,14 @@
 ---
-title: Postup ohlášení problému se sadou nástrojů pro Visual C++
+title: Postup nahlášení problému se sadou nástrojů Visual C++
 ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
 ms.openlocfilehash: 266ea37510b636cd1dc1cfa5909552ace50df1bc
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58786952"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Postup ohlášení problému se sadou nástrojů Visual C++ nebo dokumentace
@@ -245,7 +245,7 @@ A *předzpracovaná reprodukci* je jeden zdrojový soubor, který ukazuje probl�
 
 1. V okně konzoly příkazového řádku pro vývojáře zadejte příkaz **cl /P** *argumenty* *filename.cpp*, kde *argumenty* je Seznam argumentů, které jsou zachyceny výše, a *filename.cpp* je název zdrojového souboru reprodukovat. Tento příkaz replikuje příkazovým řádkem použitým pro reprodukci, ale přeruší kompilaci po průchodu preprocesoru a vypíše předzpracovaná zdrojový kód a *filename*. jsem.
 
-Pokud jsou předzpracování jazyka C + +/ CX souboru se zdrojovým kódem, nebo použití funkce moduly C++, jsou nutné některé další kroky. Další informace najdete v níže uvedených částech.
+Pokud se předběžné zpracování C++/CX souboru se zdrojovým kódem, nebo používáte C++ funkce moduly, některé další kroky jsou povinné. Další informace najdete v níže uvedených částech.
 
 Po vygenerování předzpracovaného souboru, je vhodné Ujistěte se, že stále reprodukce problémů pomocí předzpracovaného souboru.
 
@@ -257,11 +257,11 @@ Po vygenerování předzpracovaného souboru, je vhodné Ujistěte se, že stál
 
 Nakonec připojit předzpracovaná reprodukci *filename*.i do sestavy.
 
-### <a name="preprocessed-ccx-winrtuwp-code-repros"></a>Předzpracovaná C + +/ CX WinRT/UPW reprodukce kódu
+### <a name="preprocessed-ccx-winrtuwp-code-repros"></a>Předzpracovaná C++/CX reprodukce kód WinRT a UPW
 
-Pokud používáte C + +/ CX sestavit spustitelný soubor, existují některé další kroky potřebné k vytvoření a ověření předzpracovaná reprodukovat.
+Pokud používáte C++/CX sestavit spustitelný soubor, existují některé další kroky potřebné k vytvoření a ověření předzpracovaná reprodukovat.
 
-#### <a name="to-preprocess-ccx-source-code"></a>Chcete-li předzpracování jazyka C + +/ CX zdrojového kódu
+#### <a name="to-preprocess-ccx-source-code"></a>Se předběžně zpracovat C++/CX zdrojového kódu
 
 1. Vytvoření předzpracovaného zdrojového souboru, jak je popsáno v [se předběžně zpracovat soubor zdrojového kódu](#to-preprocess-a-source-code-file).
 

@@ -51,10 +51,10 @@ helpviewer_keywords:
 - CObList [MFC], SetAt
 ms.assetid: 310a7edb-263c-4bd2-ac43-0bfbfddc5a33
 ms.openlocfilehash: 08e481f010be688fb0b9c219caa1954c9960846f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767272"
 ---
 # <a name="cstringlist-class"></a>CStringList – třída
@@ -87,13 +87,13 @@ přeloží na
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)|Vytvoří prázdný seznam.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CObList::AddHead](../../mfc/reference/coblist-class.md#addhead)|Přidá k začátku seznamu (novou vedoucí díky) elementu (nebo všechny prvky v jiném seznamu).|
 |[CObList::AddTail](../../mfc/reference/coblist-class.md#addtail)|Přidá na konec seznamu (umožňuje nové funkce tail) elementu (nebo všechny prvky v jiném seznamu).|

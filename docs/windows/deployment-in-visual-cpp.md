@@ -6,10 +6,10 @@ helpviewer_keywords:
 - application deployment [C++]
 ms.assetid: d4b4ffc0-d2bd-4e4a-84a6-62f1c26f6a09
 ms.openlocfilehash: 8dccf581cff88dc2e8c4a889bed8b47fc140eb7c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58786781"
 ---
 # <a name="deployment-in-visual-c"></a>Nasazení ve Visual C++
@@ -28,7 +28,7 @@ K centrálnímu nasazení knihoven Visual C++, slouží jedna z těchto dvou zdr
 
 - *Distribuovatelné slučovací moduly* (soubory .msm), který můžete použít k nasazení konkrétních knihoven a které zahrnete do souboru Instalační služby systému Windows (.msi) vaší aplikace.
 
-Soubor distribuovatelného balíčku nainstaluje všechny knihovny Visual C++ pro určitou architekturu systému. Například pokud vaše aplikace je sestavená pro x64, můžete použít Distribuovatelný balíček vcredist_x64.exe k instalaci všech knihoven Visual C++, které vaše aplikace používá. Můžete naprogramovat instalačním programem vaší aplikace ke spuštění Distribuovatelný balíček rozhraní jako předpoklad před instalací aplikace.
+Soubor distribuovatelného balíčku nainstaluje všechny knihovny Visual C++ pro určitou architekturu systému. Například pokud vaše aplikace je sestavená pro x64, můžete použít vcredist_x64.exe Distribuovatelný balíček nainstalovat tento vizuál C++ vaše aplikace používá knihovny. Můžete naprogramovat instalačním programem vaší aplikace ke spuštění Distribuovatelný balíček rozhraní jako předpoklad před instalací aplikace.
 
 Slučovací modul umožňuje zařadit logiku nastavení pro konkrétní knihovnu Visual C++ v souboru instalačního programu aplikace Instalační služby systému Windows. Mohou obsahovat libovolný počet nebo jako několik slučovací moduly, jak vaše aplikace vyžaduje. Používejte slučovací moduly, když budete chtít pro minimalizaci velikosti vašeho nasazení binárních souborů.
 

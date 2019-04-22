@@ -9,10 +9,10 @@ helpviewer_keywords:
 - MP compiler option (C++)
 - cl.exe compiler, multi-process build
 ms.openlocfilehash: e005b0314e87270e81dbb155dfdaa67be067cd3f
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424141"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (sestavení pomocí několika procesů)
@@ -128,5 +128,5 @@ Pokyny pro rozhodování o tom, jestli se má použít nástroj MSBuild nebo **/
 ## <a name="see-also"></a>Viz také:
 
 [#import – direktiva](../../preprocessor/hash-import-directive-cpp.md)<br/>
-[Referenční dokumentace pro použití v příkazovém řádku](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
-[/ZF (rychlejší generování souborů PDB)](zf.md)<br/>
+[Referenční dokumentace k příkazovému řádku](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
+[/Zf (rychlejší generování souborů PDB)](zf.md)<br/>

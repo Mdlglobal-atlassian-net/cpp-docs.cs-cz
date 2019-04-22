@@ -3,30 +3,30 @@ title: 'Návod: Kompilování programu C++/CX na příkazovém řádku'
 ms.date: 09/24/2018
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
 ms.openlocfilehash: 099bef402d22abc12a31f105f63e5405c65a1d82
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58766056"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Návod: Kompilování programu C++/CX na příkazovém řádku
 
-Můžete vytvořit programy v jazyce Visual C++, které se zaměřují na modul Windows Runtime je v příkazovém řádku. Jazyk Visual C++ podporuje rozšíření součásti Visual C++ (C + +/ CX), který má další typy a operátory cílení programovacího modelu Windows Runtime. Můžete použít C + +/ CX a vytvářejte aplikace pro univerzální platformu Windows (UPW), Windows Phone 8.1 a Windows desktop. Další informace najdete v tématu [A prohlídku vyhodnocování +/ CX](https://msdn.microsoft.com/magazine/dn166929.aspx) a [přípony komponent pro platformy běhového prostředí](../extensions/component-extensions-for-runtime-platforms.md).
+Můžete vytvořit programy v jazyce Visual C++, které se zaměřují na modul Windows Runtime je v příkazovém řádku. Vizuální C++ podporuje Visual C++ rozšíření komponent (C++/CX), který má další typy a operátory cílení programovacího modelu Windows Runtime. Můžete použít C++/CX k vytváření aplikací pro univerzální platformu Windows (UPW), Windows Phone 8.1 a Windows desktop. Další informace najdete v tématu [A prohlídku vyhodnocování +/ CX](https://msdn.microsoft.com/magazine/dn166929.aspx) a [přípony komponent pro platformy běhového prostředí](../extensions/component-extensions-for-runtime-platforms.md).
 
-V tomto názorném postupu pomocí textového editoru, vytvořte základní C + +/ CX programu a jeho následnou kompilaci v příkazovém řádku. (Můžete použít vlastní C + +/ CX program místo zadání ten, který se zobrazí, nebo můžete použít C + +/ CX vzorového kódu z jiného článku nápovědy. Tato technika je užitečná pro vytváření a testování malé moduly, které mají bez prvků uživatelského rozhraní.)
+V tomto názorném postupu použijete k vytvoření základního textového editoru C++/CX programu a jeho následnou kompilaci v příkazovém řádku. (Můžete použít vlastní C++/CX program místo zadání ten, který se zobrazí, nebo můžete použít C++/CX vzorového kódu z jiného článku nápovědy. Tato technika je užitečná pro vytváření a testování malé moduly, které mají bez prvků uživatelského rozhraní.)
 
 > [!NOTE]
-> Můžete také integrovaného vývojového prostředí sady Visual Studio ke kompilaci C + +/ CX programy. Integrované vývojové prostředí zahrnuje návrhu, ladění, emulace a podpoře nasazení, která není k dispozici v příkazovém řádku, a proto doporučujeme použít integrovaného vývojového prostředí pro vytváření aplikací univerzální platformy Windows (UPW). Další informace najdete v tématu [vytvoření aplikace pro UPW v jazyce C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).
+> Můžete také integrovaného vývojového prostředí sady Visual Studio ke kompilaci C++/CX programy. Integrované vývojové prostředí zahrnuje návrhu, ladění, emulace a podpoře nasazení, která není k dispozici v příkazovém řádku, a proto doporučujeme použít integrovaného vývojového prostředí pro vytváření aplikací univerzální platformy Windows (UPW). Další informace najdete v tématu [vytvoření aplikace pro UPW v jazyce C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).
 
 ## <a name="prerequisites"></a>Požadavky
 
 Rozumíte základům jazyka C++.
 
-## <a name="compiling-a-ccx-program"></a>Kompilace jazyka C + +/ CX programu
+## <a name="compiling-a-ccx-program"></a>Kompilování C++/CX programu
 
-Chcete-li povolit kompilace pro C + +/ CX, je nutné použít [/ZW](reference/zw-windows-runtime-compilation.md) – možnost kompilátoru. Kompilátor MSVC generuje soubor .exe, zaměřuje na modul Windows Runtime, který obsahuje odkazy na požadované knihovny.
+Povolit kompilace pro C++/CX, je nutné použít [/ZW](reference/zw-windows-runtime-compilation.md) – možnost kompilátoru. Kompilátor MSVC generuje soubor .exe, zaměřuje na modul Windows Runtime, který obsahuje odkazy na požadované knihovny.
 
-#### <a name="to-compile-a-ccx-application-on-the-command-line"></a>Chcete-li zkompilovat a C + +/ CX aplikace v příkazovém řádku
+#### <a name="to-compile-a-ccx-application-on-the-command-line"></a>Chcete-li zkompilovat C++/CX aplikace v příkazovém řádku
 
 1. Otevřít **Developer Command Prompt** okna. (Na **Start** otevřené okno **aplikace**. Otevřít **Visual Studio Tools** ve složce vaší verze sady Visual Studio a klikněte na tlačítko **Developer Command Prompt** zástupce.) Další informace o tom, jak otevřít okno příkazového řádku pro vývojáře najdete v tématu [použít MSVC nástrojů z příkazového řádku](building-on-the-command-line.md).
 

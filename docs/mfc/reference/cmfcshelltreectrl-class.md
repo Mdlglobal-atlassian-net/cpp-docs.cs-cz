@@ -29,10 +29,10 @@ helpviewer_keywords:
 - CMFCShellTreeCtrl [MFC], SetRelatedList
 ms.assetid: 3d1da715-9554-4ed7-968c-055c48146267
 ms.openlocfilehash: 1fc422c3aca3efe1fb177e7a3567530d70c27119
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779752"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl Class
@@ -70,9 +70,9 @@ Tato třída rozšiřuje `CTreeCtrl` třídy tím, že váš program zahrnout pr
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -294,5 +294,5 @@ Pomocí této metody [CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist) načí
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[Ctreectrl – třída](../../mfc/reference/ctreectrl-class.md)<br/>
-[CMFCShellListCtrl Class](../../mfc/reference/cmfcshelllistctrl-class.md)
+[CTreeCtrl – třída](../../mfc/reference/ctreectrl-class.md)<br/>
+[CMFCShellListCtrl – třída](../../mfc/reference/cmfcshelllistctrl-class.md)

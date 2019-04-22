@@ -11,10 +11,10 @@ helpviewer_keywords:
 - pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
 ms.openlocfilehash: a8c6733a9f6e5c9650333f96a92ff18eedb9c356
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58786736"
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
@@ -87,7 +87,7 @@ Přídavných ukazatelů nelze použít jako:
 
 **pin_ptr** probíhá `cli` oboru názvů. Další informace najdete v tématu [Platform, default a cli obory názvů](platform-default-and-cli-namespaces-cpp-component-extensions.md).
 
-Další informace o vnitřních ukazatelů naleznete v tématu [interior_ptr (C + +/ CLI)](interior-ptr-cpp-cli.md).
+Další informace o vnitřních ukazatelů naleznete v tématu [interior_ptr (C++vyhodnocovací)](interior-ptr-cpp-cli.md).
 
 Další informace o přídavné ukazatele, naleznete v tématu [jak: Připnutí ukazatelů a polí](how-to-pin-pointers-and-arrays.md) a [jak: Deklarace přídavných ukazatelů a typů hodnot](how-to-declare-pinning-pointers-and-value-types.md).
 

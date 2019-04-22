@@ -4,10 +4,10 @@ ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
 ms.openlocfilehash: 5c1a4e7df424499f400dbd70d675956deef6bc5d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58786610"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Knihovna šablon C++ prostředí Windows Runtime (WRL)
@@ -15,21 +15,21 @@ ms.locfileid: "58786610"
 Windows Runtime C++ šablony knihovny (WRL) je knihovna šablon, která poskytuje nízké úrovně způsob vytváření a používání komponent prostředí Windows Runtime.
 
 > [!NOTE]
-> WRL je nyní nahrazena C + +/ WinRT, standard C ++ 17 jazyk projekci pro rozhraní API Windows Runtime. C + +/ WinRT je k dispozici v sadě SDK Windows 10 verze 1803 dále. C + +/ WinRT je implementované jenom v souborech hlaviček a navržená tak, aby poskytují přístup k prvotřídní moderní rozhraní Windows API.
+> WRL je nyní nahrazena C++/WinRT, standard C ++ 17 jazyk projekci pro rozhraní API Windows Runtime. C++/ WinRT je k dispozici v sadě SDK Windows 10 verze 1803 dále. C++/ WinRT je implementována zcela v souborech hlaviček a navržená tak, aby poskytují přístup k prvotřídní moderní rozhraní Windows API.
 >
-> Pomocí C + +/ WinRT, můžete současně využívat a vytvářet rozhraní API Windows Runtime pomocí jakékoli standardům C ++ 17 kompilátoru. C + +/ WinRT obvykle vrací lepší výsledky a vytváří menší binárních souborů než jakékoli jiné možnosti jazyka prostředí Windows Runtime. Budeme dál podporovat C + +/ CX a WRL, ale důrazně doporučujeme, aby nové aplikace pomocí C + +/ WinRT. Další informace najdete v tématu [C + +/ WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
+> S C++/WinRT, můžete současně využívat a vytvářet rozhraní API Windows Runtime pomocí jakékoli standardům C ++ 17 kompilátoru. C++/ WinRT obvykle vrací lepší výsledky a vytváří menší binárních souborů než jakékoli jiné možnosti jazyka prostředí Windows Runtime. Budeme dál podporovat C++/CX a WRL, ale důrazně doporučujeme, aby nové aplikace pomocí C++/WinRT. Další informace najdete v tématu [ C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
 
 ## <a name="benefits"></a>Výhody
 
 Knihovna šablon C++ Windows Runtime umožňuje snadněji implementovat a používat komponenty modelu COM (Component Object). Poskytuje metody údržby pořádku jako počítání odkazů ke správě životnosti objektů a testování hodnoty HRESULT k určení, zda operace bylo úspěšné nebo neúspěšné. Pro úspěšné fungování knihovna šablon C++ Windows Runtime, je třeba pečlivě dodržovat tato pravidla a postupy.
 
-C + +/ CX se vysoké úrovně, založený na jazyce způsob použití součásti prostředí Windows Runtime. Knihovna šablon C++ Runtime Windows i C + +/ CX zjednodušit psaní kódu pro Windows Runtime automatickým prováděním údržby pořádku za vás.
+C++/CX je vysoké úrovně, založený na jazyce způsob použití součásti prostředí Windows Runtime. Windows Runtime C++ knihovny šablon a C++/CX zjednodušit psaní kódu pro Windows Runtime automatickým prováděním údržby pořádku za vás.
 
-Knihovna šablon C++ Windows Runtime a C + +/ CX poskytují různé výhody. Tady jsou některé důvody může být vhodné nahrazujícím knihovna šablon C++ Windows Runtime jazyka C + +/ CX:
+Modul Windows Runtime C++ knihovny šablon a C++/CX poskytují různé výhody. Tady jsou některé důvody, které můžete chtít použít modul Windows Runtime C++ knihovna šablon místo C++/CX:
 
 - Knihovna šablon C++ Runtime Windows přidá trochu abstrakce přes Windows Runtime aplikace binární rozhraní (ABI), získáte možnost ovládat základní kód pro lepší tvorbu nebo zpracování rozhraní API Windows Runtime.
 
-- C + +/ CX představuje hodnoty HRESULT modelu COM jako výjimky. Jestliže jste zdědili základ kódu, který používá COM, nebo který výjimky nepoužívá, můžete zjistit, že knihovna šablon C++ Windows Runtime je přirozenější způsob, jak pracovat s modulem Windows Runtime, protože není nutné používat výjimky.
+- C++/CX představuje hodnoty HRESULT modelu COM jako výjimky. Jestliže jste zdědili základ kódu, který používá COM, nebo který výjimky nepoužívá, můžete zjistit, že knihovna šablon C++ Windows Runtime je přirozenější způsob, jak pracovat s modulem Windows Runtime, protože není nutné používat výjimky.
 
    > [!NOTE]
    > Knihovna šablon C++ Windows Runtime používá hodnoty HRESULT a nevyvolává výjimky. Kromě toho knihovna šablon C++ Windows Runtime používá inteligentní ukazatele a vzorek RAII, aby k zajištění, že objekty jsou správně zničeny, když kód aplikace vyvolá výjimku. Další informace o inteligentních ukazatelích a RAII naleznete v tématu [inteligentní ukazatele](../../cpp/smart-pointers-modern-cpp.md) a [objekty vlastní prostředky (RAII)](../../cpp/objects-own-resources-raii.md).
@@ -71,7 +71,7 @@ Ukazuje způsob použití [IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxm
 Používá `HttpRequest` třídu, která je definována v [názorný postup: Připojení pomocí úloh a žádostí XML HTTP](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) v souvislosti s kompletní aplikace pro UPW.
 
 [Vytváření součásti modulu Windows Runtime s ukázkou jazyka C++](https://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
-Ukazuje, jak pomocí šablony knihovna Windows Runtime C++ vytvořit komponentu knihovny DLL v procesu a používat ji v jazyce C + +/ CX, JavaScriptu a C#.
+Ukazuje, jak pomocí prostředí Windows Runtime C++ knihovna šablon, chcete-li vytvořit komponentu knihovny DLL v procesu a používat ji z C++/CX, JavaScript, a C#.
 
 [Ukázka hry mramorového bludiště DirectX](https://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
 Popisuje způsob použití knihovny šablon jazyka C++ Runtime Windows ke správě životnosti komponent modelu COM, jako je rozhraní DirectX a platformy Media Foundation v souvislosti s kompletní 3D hrou.
@@ -147,5 +147,5 @@ A `WeakRef` objekt obvykle představuje objekt, jehož existence je řízena vn�
 |-|-|
 |[Nejdůležitější rozhraní API podle kategorie](key-wrl-apis-by-category.md)|Zvýrazní primární typy knihovna šablon C++ Windows Runtime, funkcemi a makry.|
 |[Referenční informace](wrl-reference.md)|Obsahuje referenční informace pro knihovna šablon C++ Windows Runtime.|
-|[Stručná referenční příručka (Windows Runtime a Visual C++)](../../cppcx/quick-reference-c-cx.md)|Stručně popisuje C + +/ CX funkce, které podporují prostředí Windows Runtime.|
-|[Použití součástí prostředí Windows Runtime v jazyce Visual C++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|Ukazuje, jak použít C + +/ CX pro vytvoření základní komponenty prostředí Windows Runtime.|
+|[Stručná referenční příručka (Windows Runtime a Visual C++)](../../cppcx/quick-reference-c-cx.md)|Stručně popisuje C++/CX funkce, které podporují prostředí Windows Runtime.|
+|[Použití součástí prostředí Windows Runtime v jazyce Visual C++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|Ukazuje, jak používat C++/CX pro vytvoření základní komponenty prostředí Windows Runtime.|

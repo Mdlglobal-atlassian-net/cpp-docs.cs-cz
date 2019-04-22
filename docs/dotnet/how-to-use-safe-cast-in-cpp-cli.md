@@ -1,19 +1,19 @@
 ---
-title: 'Postupy: Používání operátoru safe_cast v jazyce C + +/ CLI'
+title: 'Postupy: Používání operátoru safe_cast v C++vyhodnocovací'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - safe_cast keyword [C++], upcasting
 ms.assetid: 0fbc87d8-ecdf-4cd5-81f4-0d8cc18e2aff
 ms.openlocfilehash: 66faadba9530bc7f3c12513277582e405e1b1b34
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781832"
 ---
-# <a name="how-to-use-safecast-in-ccli"></a>Postupy: Používání operátoru safe_cast v jazyce C + +/ CLI
+# <a name="how-to-use-safecast-in-ccli"></a>Postupy: Používání operátoru safe_cast v C++vyhodnocovací
 
-Tento článek popisuje, jak pomocí operátoru safe_cast v jazyce C + +/ CLI aplikací. Informace o operátoru safe_cast v jazyce C + +/ CX, viz [safe_cast](../extensions/safe-cast-cpp-component-extensions.md).
+Tento článek popisuje, jak pomocí operátoru safe_cast v C++vyhodnocovací aplikací. Informace o operátoru safe_cast v C++/CX, naleznete v tématu [safe_cast](../extensions/safe-cast-cpp-component-extensions.md).
 
 ## <a name="upcasting"></a>Upcasting
 

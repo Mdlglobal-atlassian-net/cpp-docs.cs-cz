@@ -13,10 +13,10 @@ helpviewer_keywords:
 - libraries [C++], application deployment issues
 ms.assetid: fd8eb956-f4a0-4ffb-b401-328c73e66986
 ms.openlocfilehash: 5ca1f33a809bc81b7dcc090231e507ba66775205
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58787016"
 ---
 # <a name="choosing-a-deployment-method"></a>Volba metody nasazení
@@ -34,9 +34,9 @@ Protože knihovny Visual C++ instaluje Instalační služba sady Visual Studio d
 
 Ve svých nasazeních můžete distribuovat jakoukoli verzi knihovny Visual C++, která disponuje licencí pro distribuci. Můžete je nasadit třemi způsoby:
 
-- Centrální nasazení pomocí distribuovatelných balíčků, které nainstalují knihovny Visual C++ jako sdílených DLL v %windir%\system32\\. (Instalace do této složky vyžaduje oprávnění správce.) Můžete vytvořit skript nebo instalační program, který spustí distribuovatelný balíček před instalací aplikace do cílového počítače. Distribuovatelné balíčky jsou k dispozici pro platformy x86, x64 a ARM (VCRedist_x86.exe, VCRedist_x64.exe nebo VCRedist_arm.exe). Visual Studio obsahuje tyto balíčky v % ProgramFiles (x86) %\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\. Můžete také stáhnout z [Microsoft Download Center](https://www.microsoft.com/download). (Použijte vyhledávací pole pro hledání v Centru pro stahování "Distribuovatelný balíček Visual C++ *verze sady Visual Studio a aktualizace*", který odpovídá vaší aplikace. For example, pokud jste k sestavení aplikace použili Visual Studio 2015 update 3, vyhledejte "Visual C++ Redistributable Package 2015 update 3".) Informace o tom, jak pomocí distribuovatelných balíčků naleznete v tématu [názorný postup: Nasazení aplikace v jazyce Visual C++ s použitím redistribuovatelného balíčku Visual C++](deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).
+- Centrální nasazení pomocí distribuovatelných balíčků, který se nainstaluje Visual C++ knihoven jako sdílené knihovny DLL do %windir%\system32\\. (Instalace do této složky vyžaduje oprávnění správce.) Můžete vytvořit skript nebo instalační program, který spustí distribuovatelný balíček před instalací aplikace do cílového počítače. Distribuovatelné balíčky jsou k dispozici pro platformy x86, x64 a ARM (VCRedist_x86.exe, VCRedist_x64.exe nebo VCRedist_arm.exe). Visual Studio obsahuje tyto balíčky v % ProgramFiles (x86) %\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\. Můžete také stáhnout z [Microsoft Download Center](https://www.microsoft.com/download). (Použijte vyhledávací pole pro hledání v Centru pro stahování "Distribuovatelný balíček Visual C++ *verze sady Visual Studio a aktualizace*", který odpovídá vaší aplikace. For example, pokud jste k sestavení aplikace použili Visual Studio 2015 update 3, vyhledejte "Visual C++ Redistributable Package 2015 update 3".) Informace o tom, jak pomocí distribuovatelných balíčků naleznete v tématu [názorný postup: Nasazení aplikace v jazyce Visual C++ s použitím redistribuovatelného balíčku Visual C++](deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).
 
-- Centrální nasazení pomocí slučovacích modulů, z nichž každý nainstaluje konkrétní knihovnu Visual C++ jako sdílenou knihovnu DLL do %windir%\system32\\. (Instalace do této složky vyžaduje oprávnění správce.) Slučovací moduly se stanou součástí instalačního souboru .msi pro vaši aplikaci. Visual C++ distribuovatelné slučovací moduly jsou zahrnuty v sadě Visual Studio v \Program soubory (x86) \Common moduly\\. Další informace najdete v tématu [Redistribuce podle pomocí slučovacích modulů](redistributing-components-by-using-merge-modules.md).
+- Centrální nasazení pomocí slučovacích modulů, z nichž každý nainstaluje konkrétní vizuál C++ knihovny jako sdílenou knihovnu DLL do %windir%\system32\\. (Instalace do této složky vyžaduje oprávnění správce.) Slučovací moduly se stanou součástí instalačního souboru .msi pro vaši aplikaci. Visual C++ distribuovatelné slučovací moduly jsou zahrnuty v sadě Visual Studio v \Program soubory (x86) \Common moduly\\. Další informace najdete v tématu [Redistribuce podle pomocí slučovacích modulů](redistributing-components-by-using-merge-modules.md).
 
 - Místní nasazení, ve kterém zkopírujete konkrétní knihovny DLL jazyka Visual C++ v instalaci sady Visual Studio – obvykle v \Program Files (x86) \Microsoft Visual Studio `version`\VC\Redist\\`platform`\\`library`\—and nainstalují do cílových počítačů do stejné složky jako spustitelný soubor aplikace. Tuto metodu nasazení můžete využít k tomu, abyste povolili instalaci uživatelům, kteří nemají oprávnění správce, případně u aplikací, které lze spouštět ze sdíleného umístění v síti.
 

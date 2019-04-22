@@ -28,10 +28,10 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleT::~HandleT, destructor
 ms.assetid: 3822b32a-a426-4d94-a54d-919d4df60ee2
 ms.openlocfilehash: 6e5824da03fb85e52f413f5678ea6e0fd6c77ddd
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58786986"
 ---
 # <a name="handlet-class"></a>HandleT – třída
@@ -54,13 +54,13 @@ Instance [handletraits –](handletraits-structure.md) stucture, který definuje
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-Název     | Popis
+Name     | Popis
 -------- | -----------------------------
 `Traits` | Synonymum pro `HandleTraits`.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Název                                | Popis
+Name                                | Popis
 ----------------------------------- | --------------------------------------------------
 [Handlet::handlet –](#handlet)        | Inicializuje novou instanci třídy `HandleT` třídy.
 [HandleT:: ~ handlet –](#tilde-handlet) | Uvolní instanci `HandleT` třídy.

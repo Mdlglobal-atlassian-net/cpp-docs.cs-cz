@@ -45,10 +45,10 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
 ms.openlocfilehash: c0c9ad79342f2013aa071240c684fce168e55c9e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779999"
 ---
 # <a name="cmfccolorbutton-class"></a>Cmfccolorbutton – třída
@@ -263,7 +263,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] Odkazuje na kontext zařízení, která se použije k vykreslení obrázku tlačítku.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Obdélník, který vazeb na tlačítko.
 
 *uiState*<br/>
@@ -355,7 +355,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*barva*<br/>
+*color*<br/>
 [in] Hodnota RGB.
 
 ### <a name="remarks"></a>Poznámky
@@ -372,10 +372,10 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Parametry
 
-*barva*<br/>
+*color*<br/>
 [in] Hodnota barvy RGB.
 
-*%{strName/*<br/>
+*strName*<br/>
 [in] Název barvy.
 
 ### <a name="remarks"></a>Poznámky
@@ -465,7 +465,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*barva*<br/>
+*color*<br/>
 [in] Barva vybraná uživatelem.
 
 ### <a name="remarks"></a>Poznámky
@@ -476,11 +476,11 @@ virtual void UpdateColor(COLORREF color);
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[Cmfcbutton – třída](../../mfc/reference/cmfcbutton-class.md)<br/>
-[Cmfccolorbar – třída](../../mfc/reference/cmfccolorbar-class.md)<br/>
+[CMFCButton – třída](../../mfc/reference/cmfcbutton-class.md)<br/>
+[CMFCColorBar – třída](../../mfc/reference/cmfccolorbar-class.md)<br/>
 [CMFCColorButton::OnShowColorPopup](#onshowcolorpopup)<br/>
 [COLORREF](/windows/desktop/gdi/colorref)<br/>
-[CPalette Class](../../mfc/reference/cpalette-class.md)<br/>
-[Carray – třída](../../mfc/reference/carray-class.md)<br/>
+[CPalette – třída](../../mfc/reference/cpalette-class.md)<br/>
+[CArray – třída](../../mfc/reference/carray-class.md)<br/>
 [CList – třída](../../mfc/reference/clist-class.md)<br/>
 [CString –](../../atl-mfc-shared/reference/cstringt-class.md)

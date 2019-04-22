@@ -1,20 +1,20 @@
 ---
-title: 'Postupy: Používání vlastností v jazyce C + +/ CLI'
+title: 'Postupy: Pomocí vlastností v C++vyhodnocovací'
 ms.date: 07/21/2017
 helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
 ms.openlocfilehash: cd0748993b6ac92bbf9f66fa868ac6e814e21bb5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781624"
 ---
-# <a name="how-to-use-properties-in-ccli"></a>Postupy: Používání vlastností v jazyce C + +/ CLI
+# <a name="how-to-use-properties-in-ccli"></a>Postupy: Pomocí vlastností v C++vyhodnocovací
 
-Tento článek popisuje, jak používat vlastnosti v jazyce C + +/ CLI.
+Tento článek popisuje, jak používat vlastnosti v C++vyhodnocovací.
 
 ## <a name="basic-properties"></a>Základní vlastnosti
 
@@ -88,7 +88,7 @@ Indexovaná vlastnost obvykle poskytuje datová struktura, která se využívaj�
 
 Pokud používáte výchozí indexovanou vlastnost, dostanete strukturu dat tak, že odkazují na název třídy, ale pokud používáte indexované vlastnosti definované uživatelem, je nutné zadat název vlastnosti pro přístup k datová struktura.
 
-Informace o tom, jak využívat indexer, který je napsán v C#, naleznete v tématu [jak: Využití C# Indexer (C + +/ CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).
+Informace o tom, jak využívat indexer, který je napsán v C#, naleznete v tématu [jak: Využití C# Indexer (C++vyhodnocovací)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).
 
 Tento vzorový kód ukazuje, jak používat výchozí a uživatelem definované indexované vlastnosti:
 
@@ -259,7 +259,7 @@ int main() {
 
 ## <a name="abstract-and-sealed-properties"></a>Abstraktní a uzavřené vlastnosti
 
-I když [abstraktní](../extensions/abstract-cpp-component-extensions.md) a [zapečetěné](../extensions/sealed-cpp-component-extensions.md) klíčová slova jsou určené jako platná v s ECMA C + +/ specifikace rozhraní příkazového řádku pro kompilátor Visual C++ nelze zadat jejich na triviální vlastnosti ani na vlastnost deklarace netriviální vlastnosti.
+I když [abstraktní](../extensions/abstract-cpp-component-extensions.md) a [zapečetěné](../extensions/sealed-cpp-component-extensions.md) klíčová slova jsou určené jako platná ECMA C++vyhodnocovací specifikace pro tento vizuál C++ kompilátoru, nelze zadat jejich na triviální vlastnosti ani na deklarace vlastnosti netriviální vlastnosti.
 
 Chcete-li deklarovat zapečetěné nebo abstraktní vlastnost, musí definovat netriviální vlastnosti a pak zadejte `abstract` nebo `sealed` – klíčové slovo na získat a nastavit přístupové funkce.
 

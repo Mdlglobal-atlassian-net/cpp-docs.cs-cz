@@ -29,10 +29,10 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
 ms.openlocfilehash: 9c649dd979b28e2b545a797c5453a2ec9aa6d0dc
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58768039"
 ---
 # <a name="cchecklistbox-class"></a>Cchecklistbox – třída
@@ -49,7 +49,7 @@ class CCheckListBox : public CListBox
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CCheckListBox::CCheckListBox](#cchecklistbox)|Vytvoří `CCheckListBox` objektu.|
 
@@ -240,7 +240,7 @@ Index založený na nule zaškrtávacího políčka, která je součástí pole 
 
 Stav zadaného zaškrtávacího políčka. V následující tabulce jsou uvedeny možné hodnoty.
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |BST_CHECKED|Zaškrtávací políčko.|
 |BST_UNCHECKED|Zaškrtávací políčko není zaškrtnuto.|
@@ -344,7 +344,7 @@ Stav tlačítka pro zadaný zaškrtávací políčko. Možné hodnoty v části 
 
 V následující tabulce jsou uvedeny možné hodnoty pro *nZkontrolujte* parametru.
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |BST_CHECKED|Vyberte zaškrtávací pole zadané.|
 |BST_UNCHECKED|Zrušte zaškrtnutí políčka zadané.|

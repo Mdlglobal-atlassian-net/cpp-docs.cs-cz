@@ -1,18 +1,18 @@
 ---
-title: Cíle atributů (C + +/ CLI a C + +/ CX)
+title: Atribut cíle (C++vyhodnocovací a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
 ms.openlocfilehash: 502f5ba2e5bbb5bd5a5fcceca16acaa3987db4bc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026679"
 ---
-# <a name="attribute-targets-ccli-and-ccx"></a>Cíle atributů (C + +/ CLI a C + +/ CX)
+# <a name="attribute-targets-ccli-and-ccx"></a>Atribut cíle (C++vyhodnocovací a C++/CX)
 
 Specifikátory použití atributů umožňují zadat atribut cíle.  Každý atribut je definován použít některé prvky jazyka. Atribut může například definovat pouze pro třídy a struktury.  Následující seznam uvádí možné syntaktické prvky, na kterých je možné vlastní atribut. Kombinace těchto hodnot (pomocí logické nebo) může být použit.
 

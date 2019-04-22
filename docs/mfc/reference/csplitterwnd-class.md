@@ -73,10 +73,10 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
 ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781442"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd – třída
@@ -181,9 +181,9 @@ Další informace o tom, jak vytvořit dynamické rozdělovače oken, najdete ta
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -391,7 +391,7 @@ virtual BOOL CreateView(
 *Řádek*<br/>
 Určuje řádku rozdělovač okna ve kterém je umístí nové zobrazení.
 
-*sloupec*<br/>
+*col*<br/>
 Určuje sloupec rozdělovač okna, ve kterém k umístění nového zobrazení.
 
 *pViewClass*<br/>
@@ -478,7 +478,7 @@ virtual void DeleteView(
 *Řádek*<br/>
 Určuje řádku rozdělovač okna ve kterém se má odstranit zobrazení.
 
-*sloupec*<br/>
+*col*<br/>
 Určuje sloupec rozdělovač okna na kterou chcete odstranit zobrazení.
 
 ### <a name="remarks"></a>Poznámky
@@ -628,7 +628,7 @@ void GetColumnInfo(
 
 ### <a name="parameters"></a>Parametry
 
-*sloupec*<br/>
+*col*<br/>
 Určuje sloupec.
 
 *cxCur*<br/>
@@ -652,7 +652,7 @@ CWnd* GetPane(
 *Řádek*<br/>
 Určuje řádek.
 
-*sloupec*<br/>
+*col*<br/>
 Určuje sloupec.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -730,7 +730,7 @@ int IdFromRowCol(
 *Řádek*<br/>
 Určuje řádku rozdělovač okna.
 
-*sloupec*<br/>
+*col*<br/>
 Určuje sloupec rozdělovač okna.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -818,7 +818,7 @@ Hodnota `enum ESplitType`, což může být jeden z následujících akcí:
 
     - `splitBorder` Rozdělit okno ohraničení.
 
-*rect*<br/>
+*Rect*<br/>
 Odkaz na [crect –](../../atl-mfc-shared/reference/crect-class.md) určující velikost a tvar rozdělených oken.
 
 ### <a name="remarks"></a>Poznámky
@@ -837,7 +837,7 @@ virtual void OnInvertTracker(const CRect& rect);
 
 ### <a name="parameters"></a>Parametry
 
-*rect*<br/>
+*Rect*<br/>
 Odkaz `CRect` určující sledování obdélník.
 
 ### <a name="remarks"></a>Poznámky
@@ -880,7 +880,7 @@ virtual void SetActivePane(
 *Řádek*<br/>
 Pokud *pWnd* má hodnotu NULL, určuje řádku v podokně, které bude aktivní.
 
-*sloupec*<br/>
+*col*<br/>
 Pokud *pWnd* má hodnotu NULL, určuje sloupec v podokně, které bude aktivní.
 
 *pWnd*<br/>
@@ -905,7 +905,7 @@ void SetColumnInfo(
 
 ### <a name="parameters"></a>Parametry
 
-*sloupec*<br/>
+*col*<br/>
 Určuje sloupec rozdělovač okna.
 
 *cxIdeal*<br/>
@@ -1037,7 +1037,7 @@ Ukazatel na kontext zařízení.
 ## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC VIEWEX](../../overview/visual-cpp-samples.md)<br/>
-[Třída CWnd](../../mfc/reference/cwnd-class.md)<br/>
+[CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CView – třída](../../mfc/reference/cview-class.md)<br/>
-[Třída CWnd](../../mfc/reference/cwnd-class.md)
+[CWnd – třída](../../mfc/reference/cwnd-class.md)

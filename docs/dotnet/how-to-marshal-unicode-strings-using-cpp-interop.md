@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
 ms.openlocfilehash: 37b56834e000cff686557730252f3d425f642772
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777672"
 ---
 # <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Postupy: Zařazování řetězců v kódu Unicode pomocí zprostředkovatele komunikace C++
@@ -30,7 +30,7 @@ Toto téma ukazuje, jak můžete řetězců v kódu Unicode být předán ze spr
 
 ## <a name="example"></a>Příklad
 
-Předat řetězec s kódováním Unicode ze spravované na nespravované funkci, PtrToStringChars – funkce (deklarované v Vcclr.h) slouží k přístupu do paměti, kde spravované řetězec uložen. Tato adresa se předají do nativní funkce, proto je důležité, že je paměť připnout s [pin_ptr (C + +/ CLI)](../extensions/pin-ptr-cpp-cli.md) Pokud chcete zakázat data řetězce se přemístění, by měla cyklu uvolňování paměti kolekce probíhat během nespravovanou funkci provede.
+Předat řetězec s kódováním Unicode ze spravované na nespravované funkci, PtrToStringChars – funkce (deklarované v Vcclr.h) slouží k přístupu do paměti, kde spravované řetězec uložen. Tato adresa se předají do nativní funkce, proto je důležité, že je paměť připnout s [pin_ptr (C++vyhodnocovací)](../extensions/pin-ptr-cpp-cli.md) Pokud chcete zakázat data řetězce se přemístění, by měla cyklu uvolňování paměti kolekce probíhat během nespravovanou funkci provede.
 
 ```
 // MarshalUnicode1.cpp

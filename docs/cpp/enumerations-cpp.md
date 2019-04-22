@@ -11,10 +11,10 @@ helpviewer_keywords:
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
 ms.openlocfilehash: caec9ea7ac5482ff23b73676a3fd7b3d25ad293f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772562"
 ---
 # <a name="enumerations-c"></a>Výčty (C++)
@@ -22,7 +22,7 @@ ms.locfileid: "58772562"
 Výčet je uživatelem definovaný typ, který se skládá z sadu pojmenovaných integrálních konstant nazývaných enumerátory.
 
 > [!NOTE]
->  Tento článek se týká jazyka C++ podle standardu ISO **výčtu** typu a rozsahu (nebo silný) **výčet tříd** typ, který je uveden v C ++ 11. Informace o **veřejný výčet tříd** nebo **soukromý výčet tříd** typy v jazyce C + +/ CLI a C + +/ CX, naleznete v tématu [výčet tříd](../extensions/enum-class-cpp-component-extensions.md).
+>  Tento článek se týká jazyka C++ podle standardu ISO **výčtu** typu a rozsahu (nebo silný) **výčet tříd** typ, který je uveden v C ++ 11. Informace o **veřejný výčet tříd** nebo **soukromý výčet tříd** napíše C++vyhodnocovací a C++/CX, naleznete v tématu [výčet tříd](../extensions/enum-class-cpp-component-extensions.md).
 
 ## <a name="syntax"></a>Syntaxe
 

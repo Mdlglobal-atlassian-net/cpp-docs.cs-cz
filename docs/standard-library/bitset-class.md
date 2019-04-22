@@ -1,6 +1,6 @@
 ---
 title: bitset – třída
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - bitset/std::bitset
 - bitset/std::bitset::element_type
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::bitset [C++], to_ulong
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
-ms.openlocfilehash: 5e5d1e14e6cdf35c907b2bb1f7816fc07bbd416f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f580e56efe1db42e464deedfa66da861ff897bcb
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562835"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "58566114"
 ---
 # <a name="bitset-class"></a>bitset – třída
 
@@ -67,7 +67,7 @@ Bit je nastavit, pokud její hodnota je 1 a obnovit, pokud její hodnota je 0. P
 
 |Konstruktor|Popis|
 |-|-|
-|[bitset –](#bitset)|Vytvoří objekt třídy `bitset\<N>` a inicializuje bity na nulu, některé zadané hodnoty nebo hodnoty získané ze znaků v řetězci.|
+|[bitset](#bitset)|Vytvoří objekt třídy `bitset\<N>` a inicializuje bity na nulu, některé zadané hodnoty nebo hodnoty získané ze znaků v řetězci.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -84,10 +84,10 @@ Bit je nastavit, pokud její hodnota je 1 a obnovit, pokud její hodnota je 0. P
 |[Počet](#count)|Členská funkce vrátí počet bitů, nastavte v pořadí verze.|
 |[Převrátit na ose](#flip)|Obrátí všechny bity v hodnotu `bitset` nebo Invertuje jeden bit na určené pozici.|
 |[None](#none)|Testuje, zda žádná verze je nastavená na 1 `bitset` objektu.|
-|[Resetovat](#reset)|Obnoví všechny bity v `bitset` na hodnotu 0 nebo obnoví trochu na určené pozici na hodnotu 0.|
+|[reset](#reset)|Obnoví všechny bity v `bitset` na hodnotu 0 nebo obnoví trochu na určené pozici na hodnotu 0.|
 |[set](#set)|Nastaví všechny bity `bitset` na 1 nebo sady trochu na určenou pozici do 1.|
 |[Velikost](#size)|Vrátí počet bitů `bitset` objektu.|
-|[Test](#test)|Testy, jestli je bit na určené pozici v `bitset` je nastavená na 1.|
+|[test](#test)|Testy, jestli je bit na určené pozici v `bitset` je nastavená na 1.|
 |[to_string](#to_string)|Převede `bitset` objektu na řetězcovou reprezentaci.|
 |[to_ullong](#to_ullong)|Vrátí součet hodnot bit do `bitset` jako **unsigned long long**.|
 |[to_ulong](#to_ulong)|Převede `bitset` objektu **unsigned long** , který vygeneruje pořadí bitů, pokud je použita k inicializaci `bitset`.|
@@ -105,14 +105,14 @@ Bit je nastavit, pokud její hodnota je 1 a obnovit, pokud její hodnota je 0. P
 |[operator!=](#op_neq)|Testuje cílový `bitset` nerovnost se zadaným `bitset`.|
 |[operátor & =](#op_and_eq)|Provádí bitová kombinace hodnot bitsets s logické `AND` operace.|
 |[operátor <<](#op_lshift)|Posune bity `bitset` doleva o zadaný počet pozic a vrátí výsledek do nového `bitset`.|
-|[operátor << =](#op_lshift_eq)|Posune bity `bitset` doleva o zadaný počet pozic a vrátí výsledek na cílovou `bitset`.|
+|[operator<<=](#op_lshift_eq)|Posune bity `bitset` doleva o zadaný počet pozic a vrátí výsledek na cílovou `bitset`.|
 |[operator==](#op_eq_eq)|Testuje cílový `bitset` rovnosti se zadaným `bitset`.|
-|[operátor >>](#op_rshift)|Posune bity `bitset` doprava o zadaný počet pozic a vrátí výsledek do nového `bitset`.|
-|[operátor >> =](#op_rshift_eq)|Posune bity `bitset` doprava o zadaný počet pozic a vrátí výsledek na cílovou `bitset`.|
+|[operator>>](#op_rshift)|Posune bity `bitset` doprava o zadaný počet pozic a vrátí výsledek do nového `bitset`.|
+|[operator>>=](#op_rshift_eq)|Posune bity `bitset` doprava o zadaný počet pozic a vrátí výsledek na cílovou `bitset`.|
 |[– operátor&#91;&#93;](#op_at)|Vrátí odkaz na bit na určené pozici v `bitset` Pokud `bitset` upravitelné; jinak vrátí hodnotu bit na této pozici.|
-|[operátor ^ =](#op_xor_eq)|Bitová kombinace hodnot bitsets s exkluzivní provádí `OR` operace.|
-|[operator&#124;=](#op_or_eq')|Bitová kombinace hodnot bitsets s také zahrnuto provádí `OR` operace.|
-|[operator~](#op_dtor)|Obrátí všechny bity v cíli `bitset` a vrátí výsledek.|
+|[operator^=](#op_xor_eq)|Bitová kombinace hodnot bitsets s exkluzivní provádí `OR` operace.|
+|[operator&#124;=](#op_or_eq)|Bitová kombinace hodnot bitsets s také zahrnuto provádí `OR` operace.|
+|[operator~](#op_not)|Obrátí všechny bity v cíli `bitset` a vrátí výsledek.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -396,7 +396,7 @@ The collection of flipped bits in the modified bitset is: ( 11011 )
 The number of bits in the bitset set to 1 is: 4.
 ```
 
-## <a name="element_type"></a>  bitset::ELEMENT_TYPE
+## <a name="element_type"></a>  bitset::element_type
 
 Typ, který je synonymum pro typ dat **bool** a je možné odkazovat na element bity bitset –.
 
@@ -1082,7 +1082,7 @@ the target bitset b1 becomes:   ( 01100 ).
 The parameter bitset b2 remains: ( 01011 ).
 ```
 
-## <a name="op_or_eq"></a>  bitset::Operator&#124;=
+## <a name="op_or_eq"></a>  bitset::operator&#124;=
 
 Bitová kombinace hodnot bitsets s také zahrnuto provádí `OR` operace.
 
@@ -1149,7 +1149,7 @@ the target bitset b1 becomes:   ( 01111 ).
 The parameter bitset b2 remains: ( 01011 ).
 ```
 
-## <a name="op_dtor"></a>  bitset::Operator ~
+## <a name="op_not"></a>  bitset::Operator ~
 
 Obrátí všechny bity v bitset – cíl a vrátí výsledek.
 
@@ -1506,3 +1506,129 @@ Pozici bitu v bitset – má být testována pro jeho hodnotu.
 ### <a name="remarks"></a>Poznámky
 
 Členská funkce vyvolá [out_of_range –](../standard-library/out-of-range-class.md)
+
+## <a name="to_string"></a> bitset::to_string
+
+Převede objekt bitset – na řetězcovou reprezentaci.
+
+```
+template <class charT = char, class traits = char_traits<charT>, class Allocator = allocator<charT> >
+   basic_string<charT, traits, Allocator> to_string(charT zero = charT('0'), charT one = charT('1')) const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Objekt string třídy `basic_string`, kde každý bit sady v bitset – nemá odpovídající znak, 1, a znak 0, pokud je bit není nastavena.
+
+### <a name="example"></a>Příklad
+
+```cpp
+// bitset_to_string.cpp
+// compile with: /EHsc
+#include <bitset>
+#include <iostream>
+#include <string>
+
+int main( )
+{
+   using namespace std;
+
+   bitset<5> b1 ( 7 );
+
+   cout << "The ordered set of bits in the bitset<5> b1( 7 )"
+        << "\n  that was generated by the number 7 is: ( "
+        << b1 << " )" << endl;
+
+   string s1;
+   s1 =  b1.template to_string<char, 
+   char_traits<char>, allocator<char> >( );
+   cout << "The string returned from the bitset b1"
+        << "\n  by the member function to_string( ) is: "
+        << s1 << "." << endl;
+}
+```
+
+```Output
+The ordered set of bits in the bitset<5> b1( 7 )
+  that was generated by the number 7 is: ( 00111 )
+The string returned from the bitset b1
+  by the member function to_string( ) is: 00111.
+```
+
+## <a name="to_ullong"></a> bitset::to_ullong
+
+Vrátí **unsigned long long.** hodnotu, která obsahuje stejné bitů nastaven jako obsah objektu bitset –.
+
+```
+unsigned long long to_ullong() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí součet bitové hodnoty, které jsou v pořadí verze jako **unsigned long long.**. To **unsigned long long.** hodnotu by znovu vytvořit stejnou sadu bitů, pokud je použita k inicializaci bitset –.
+
+### <a name="exceptions"></a>Výjimky
+
+Vyvolá [overflow_error –](overflow-error-class.md) objektu, pokud všechny bity v pořadí bitů má bitová hodnota, která nemůže být reprezentovaná jako hodnotu typu **unsigned long long.**.
+
+### <a name="remarks"></a>Poznámky
+
+Vrátí součet bitové hodnoty, které jsou v pořadí verze jako **unsigned long long.**.
+
+## <a name="to_ulong"></a> bitset::to_ulong
+
+Bitset – objekt převede na číslo, které vygenerují pořadí bitů, pokud je použita k inicializaci bitset –.
+
+```
+unsigned long to_ulong( ) const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Celé číslo, které by generovat bity bitset – Pokud se používá při inicializaci bitset –.
+
+### <a name="remarks"></a>Poznámky
+
+Použití členská funkce vrátí celé číslo, který má stejné posloupností číslic 0 a 1, protože se nachází v pořadí bitů bitset –.
+
+Členská funkce vyvolá [overflow_error –](overflow-error-class.md) objektu, pokud všechny bity v pořadí bitů má bitová hodnota, která nemůže být reprezentovaná jako hodnotu typu **unsigned long**.
+
+### <a name="example"></a>Příklad
+
+```cpp
+// bitset_to_ulong.cpp
+// compile with: /EHsc
+#include <bitset>
+#include <iostream>
+
+int main( )
+{
+   using namespace std;
+
+   bitset<5> b1 ( 7 );
+
+   cout << "The ordered set of bits in the bitset<5> b1( 7 )"
+        << "\n  that was generated by the number 7 is: ( "
+        << b1 << " )" << endl;
+
+   unsigned long int i;
+   i = b1.to_ulong( );
+   cout << "The integer returned from the bitset b1,"
+        << "\n  by the member function to_long( ), that"
+        << "\n  generated the bits as a base two number is: "
+        << i << "." << endl;
+}
+```
+
+```Output
+The ordered set of bits in the bitset<5> b1( 7 )
+  that was generated by the number 7 is: ( 00111 )
+The integer returned from the bitset b1,
+  by the member function to_long( ), that
+  generated the bits as a base two number is: 7.
+```
+
+## <a name="see-also"></a>Viz také:
+
+[\<bitset>](bitset.md)<br/>
+[bitset – operátory](bitset-operators.md)<br/>

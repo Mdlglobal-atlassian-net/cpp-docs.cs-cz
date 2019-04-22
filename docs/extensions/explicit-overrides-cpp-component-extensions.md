@@ -1,18 +1,18 @@
 ---
-title: Explicitní přepsání (C + +/ CLI a C + +/ CX)
+title: Explicitní přepsání (C++vyhodnocovací a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
 ms.openlocfilehash: 7d36793e4467f9454aca1eb207f3c3dfbd483bff
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021421"
 ---
-# <a name="explicit-overrides--ccli-and-ccx"></a>Explicitní přepsání (C + +/ CLI a C + +/ CX)
+# <a name="explicit-overrides--ccli-and-ccx"></a>Explicitní přepsání (C++vyhodnocovací a C++/CX)
 
 Toto téma popisuje postup explicitní přepsání člena základní třídy nebo rozhraní. Pojmenované přepsání (explicitně) by měla sloužit pouze k přepsání metody s Odvozená metoda, která má jiný název.
 
@@ -30,13 +30,13 @@ overriding-function-declarator = function { overriding-function-definition }
 *overriding-function-declarator*<br/>
 Návratový typ, název a argumentu seznamu přepisující funkce.  Všimněte si, že není nutné mít stejný název jako funkce přepsání přepisující funkce.
 
-* – typ*<br/>
+*type*<br/>
 Základní typ, který obsahuje funkci, kterou chcete přepsat.
 
-* – funkce*<br/>
+*– funkce*<br/>
 Čárkami oddělený seznam jednoho nebo více názvy funkcí, které chcete přepsat.
 
-*přepsání definice funkce*<br/>
+*overriding-function-definition*<br/>
 Příkazy tělo funkce, které definují přepisující funkce.
 
 ### <a name="remarks"></a>Poznámky

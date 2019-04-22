@@ -81,10 +81,10 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
 ms.openlocfilehash: 0659e5335e1ebc495280a4e0cb5c0167f3b45e1d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58768210"
 ---
 # <a name="cmfcbutton-class"></a>Cmfcbutton – třída
@@ -143,7 +143,7 @@ class CMFCButton : public CButton
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCButton::OnDraw](#ondraw)|Volá se rozhraním, chcete-li nakreslit tlačítko.|
 |[CMFCButton::OnDrawBorder](#ondrawborder)|Volá se rozhraním, chcete-li nakreslit ohraničení tlačítka.|
@@ -503,7 +503,7 @@ AlignStyle m_nAlignStyle;
 
 Použijte jednu z následujících `CMFCButton::AlignStyle` hodnot výčtu k určení zarovnání textu tlačítka:
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |ALIGN_CENTER|(Výchozí) Zarovná text tlačítka na střed tlačítka.|
 |ALIGN_LEFT|Zarovná text tlačítka na levé straně tlačítka.|
@@ -531,7 +531,7 @@ FlatStyle  m_nFlatStyle;
 
 Následující tabulce jsou uvedeny `CMFCButton::m_nFlatStyle` hodnot výčtu, které určují vzhled tlačítka.
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |BUTTONSTYLE_3D|(Výchozí) Zdá se, že tlačítko má vysokou, trojrozměrného strany. Při kliknutí na tlačítko na tlačítko se zobrazí na zavedeny do hloubkové odsazení.|
 |BUTTONSTYLE_FLAT|Při pozastavení nad tlačítko myši, na tlačítko se zdá být dvourozměrné a není nutné vyvolanou strany. Při pozastavení ukazatele myši nad tlačítkem, tlačítko mít nízká, trojrozměrného strany. Při kliknutí na tlačítko na tlačítko se zobrazí na zavedeny do bez podstruktury odsazení.|

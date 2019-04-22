@@ -183,10 +183,10 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
 ms.openlocfilehash: 92f5adcea50e660ecfad131313247e118312e609
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781260"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl Class
@@ -341,9 +341,9 @@ Další informace o používání `CToolBarCtrl`, naleznete v tématu [ovládac�
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -626,7 +626,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Určuje styl ovládacího prvku toolbar. Panely nástrojů musí mít vždy WS_CHILD style. Kromě toho můžete zadat libovolnou kombinaci toolbar – styly a styly oken, jak je popsáno v části **poznámky**.
 
-*rect*<br/>
+*Rect*<br/>
 Volitelně určuje velikost a umístění ovládacího prvku toolbar. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 *pParentWnd*<br/>
@@ -680,7 +680,7 @@ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené s
 *dwStyle*<br/>
 Určuje styl ovládacího prvku toolbar. Panely nástrojů musí mít vždy WS_CHILD style. Kromě toho můžete zadat libovolnou kombinaci toolbar – styly a styly oken, jak je popsáno v **poznámky** část [vytvořit](#create).
 
-*rect*<br/>
+*Rect*<br/>
 Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -1266,7 +1266,7 @@ int GetString(
 
 ### <a name="parameters"></a>Parametry
 
-*Nřetězce*<br/>
+*nString*<br/>
 Index řetězce.
 
 *lpstrString*<br/>
@@ -1817,7 +1817,7 @@ BOOL SetBitmapSize(CSize size);
 
 ### <a name="parameters"></a>Parametry
 
-*velikost*<br/>
+*Velikost*<br/>
 Šířku a výšku v pixelech, rastrovými obrázky.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1864,7 +1864,7 @@ BOOL SetButtonSize(CSize size);
 
 ### <a name="parameters"></a>Parametry
 
-*velikost*<br/>
+*Velikost*<br/>
 Šířka a výška v pixelech, tlačítek.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2326,7 +2326,7 @@ BOOL SetState(
 *nID*<br/>
 Identifikátor příkazu tlačítka.
 
-*nInformace*<br/>
+*nState*<br/>
 Příznaky stavu. Může být kombinací hodnot pro stavy tlačítka v uvedené [CToolBarCtrl::AddButtons](#addbuttons).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2388,6 +2388,6 @@ Tato členská funkce emuluje funkčnost [TB_SETWINDOWTHEME](/windows/desktop/Co
 
 [Ukázka CMNCTRL1 knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
 [Ukázky knihovny MFC MFCIE](../../overview/visual-cpp-samples.md)<br/>
-[Třída CWnd](../../mfc/reference/cwnd-class.md)<br/>
+[CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[Ctoolbar – třída](../../mfc/reference/ctoolbar-class.md)
+[CToolBar – třída](../../mfc/reference/ctoolbar-class.md)

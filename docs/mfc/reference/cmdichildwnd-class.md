@@ -23,10 +23,10 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
 ms.openlocfilehash: 13f027e68184a4869e88883ff8b8d3b123b94e3e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774578"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd – třída
@@ -95,9 +95,9 @@ Další informace o `CMDIChildWnd`, naleznete v tématu [rámce Windows](../../m
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -150,7 +150,7 @@ Odkazuje na řetězec znaků zakončené znakem null představující název okn
 *dwStyle*<br/>
 Určuje, okno [styl](../../mfc/reference/styles-used-by-mfc.md#window-styles) atributy. Styl WS_CHILD je povinný.
 
-*rect*<br/>
+*Rect*<br/>
 Obsahuje velikost a umístění okna. `rectDefault` Hodnota umožňuje Windows zadejte velikost a umístění nového `CMDIChildWnd`.
 
 *pParentWnd*<br/>
@@ -292,5 +292,5 @@ Voláním této funkce nastavíte nabídky a akcelerátor prostředky používan
 [Ukázky knihovny MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [CFrameWnd – třída](../../mfc/reference/cframewnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[Třída CWnd](../../mfc/reference/cwnd-class.md)<br/>
+[CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [CMDIFrameWnd – třída](../../mfc/reference/cmdiframewnd-class.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - redistributing applications [C++], about redistributing applications
 ms.assetid: d201b2ce-36f1-44e5-a96c-0db81a1ba652
 ms.openlocfilehash: 2bf4297a6c61d16c68d6a9cb893aed78b9d7609d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58786578"
 ---
 # <a name="redistributing-visual-c-files"></a>Redistribuce souborů Visual C++
@@ -40,7 +40,7 @@ Chcete-li vyřešit tento druh chyby, ujistěte se, že instalačním programem 
 
 |Název|Popis|
 |-----------|-----------------|
-|[Redistribuce s použitím modulů sloučení](redistributing-components-by-using-merge-modules.md)|Popisuje, jak využít distribuovatelné slučovací moduly Visual C++ k instalaci knihoven modulu runtime Visual C++ jako sdílených knihoven DLL do složky %windir%\system32\.|
+|[Redistribuce s použitím modulů sloučení](redistributing-components-by-using-merge-modules.md)|Popisuje, jak používat Visual C++ distribuovatelné slučovací moduly pro instalaci vizuál C++ knihoven modulu runtime jako sdílené knihovny DLL do složky %windir%\system32\.|
 |[Redistribuce souborů ovládacích prvků ActiveX jazyka Visual C++](redistributing-visual-cpp-activex-controls.md)|Popisuje, jak distribuovat aplikaci používající ovládací prvky technologie ActiveX.|
 |[Redistribuce knihovny MFC](redistributing-the-mfc-library.md)|Popisuje, jak distribuovat aplikaci používající knihovnu MFC.|
 |[Redistribuce aplikace ATL](redistributing-an-atl-application.md)|Popisuje, jak distribuovat aplikaci, která používá knihovnu ATL. Od verze Visual Studio 2012, je požadována žádná redistributable knihovna pro knihovnu ATL.|

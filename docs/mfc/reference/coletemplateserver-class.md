@@ -15,10 +15,10 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
 ms.openlocfilehash: 3abdf1dc2da5ef9a111371b501d5cd8ce208825d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781208"
 ---
 # <a name="coletemplateserver-class"></a>Coletemplateserver – třída
@@ -57,9 +57,9 @@ Další informace o serverech, najdete v článku [serverů: Implementace server
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md)
 
@@ -94,7 +94,7 @@ void ConnectTemplate(
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor CLSID*<br/>
+*clsid*<br/>
 Odkaz na ID třídy OLE, který požaduje šablony.
 
 *pDocTemplate*<br/>
@@ -174,5 +174,5 @@ Další informace najdete v tématu [implementace rozhraní IDispatch](/previous
 [Ukázky knihovny MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [COleObjectFactory – třída](../../mfc/reference/coleobjectfactory-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[COleServerDoc Class](../../mfc/reference/coleserverdoc-class.md)<br/>
-[COleServerItem Class](../../mfc/reference/coleserveritem-class.md)
+[COleServerDoc – třída](../../mfc/reference/coleserverdoc-class.md)<br/>
+[COleServerItem – třída](../../mfc/reference/coleserveritem-class.md)

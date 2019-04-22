@@ -15,10 +15,10 @@ helpviewer_keywords:
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
 ms.openlocfilehash: eee53acbb8b0b8432a7d5819fb773b616f0e8897
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424090"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Typy souborů vytvořených pro projekty C++ pro Visual Studio
@@ -27,7 +27,7 @@ Mnoho typů souborů jsou spojeny s projekty aplikace Visual Studio pro klasick�
 
 - [Soubory projektu a řešení](project-and-solution-files.md)
 
-- [CLR – projekty](files-created-for-clr-projects.md)
+- [Projekty CLR](files-created-for-clr-projects.md)
 
 - [Program knihovny ATL nebo zdroj ovládacího prvku a soubory hlaviček](atl-program-or-control-source-and-header-files.md)
 
@@ -35,7 +35,7 @@ Mnoho typů souborů jsou spojeny s projekty aplikace Visual Studio pro klasick�
 
 - [Předkompilované soubory hlaviček](../creating-precompiled-header-files.md)
 
-- [Zdrojové soubory](resource-files-cpp.md)
+- [Soubory prostředků](resource-files-cpp.md)
 
 - [Soubory nápovědy (WinHelp)](help-files-winhelp.md)
 
@@ -49,17 +49,17 @@ Následující tabulka uvádí běžné soubory v projektu sady Visual Studio a 
 
 |Přípona souboru|Type|Obsah|
 |--------------------|----------|--------------|
-|asmx|Zdroj|Nasazení souboru.|
-|.asp|Zdroj|Stránka ASP.|
+|asmx|Source|Nasazení souboru.|
+|.asp|Source|Stránka ASP.|
 |.atp|Project|Soubor šablony projektu aplikace.|
 |.bmp, .dib, .gif, .jpg, .jpe, PNG|Prostředek|Obecné obrazových souborů.|
 |.bsc|Kompilace|Soubor kódu prohlížeče.|
-|.cpp, .c|Zdroj|Soubory hlavní zdrojového kódu pro vaši aplikaci.|
+|.cpp, .c|Source|Soubory hlavní zdrojového kódu pro vaši aplikaci.|
 |.cur|Prostředek|Rastrový obrázek kurzoru.|
 |.dbp|Project|Soubor projektu databáze.|
-|.disco|Zdroj|Dynamicky zpřístupněný soubor dokumentu. Zpracovává zjišťování XML webové služby.|
+|.disco|Source|Dynamicky zpřístupněný soubor dokumentu. Zpracovává zjišťování XML webové služby.|
 |.exe, .dll|Project|Soubory knihoven DLL nebo spustitelného souboru.|
-|.h|Zdroj|Záhlaví (zahrnout) souboru.|
+|.h|Source|Záhlaví (zahrnout) souboru.|
 |htm, HTML, .xsp, ASP, HTC, HTA, .xml|Prostředek|Běžné webové soubory.|
 |.HxC|Project|Projekt soubor nápovědy.|
 |.ico|Prostředek|Rastrový obrázek ikony.|

@@ -18,10 +18,10 @@ helpviewer_keywords:
 - Microsoft::WRL::ClassFactory::Release method
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
 ms.openlocfilehash: ccc1c43e8c68053a773883c25704cdea086bd0b1
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58786569"
 ---
 # <a name="classfactory-class"></a>ClassFactory – třída
@@ -79,7 +79,7 @@ Name                                        | Popis
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Název                                            | Popis
+Name                                            | Popis
 ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------
 [ClassFactory::AddRef](#addref)                 | Zvýší počet odkazů pro aktuální `ClassFactory` objektu.
 [ClassFactory::LockServer](#lockserver)         | Zvýší nebo sníží počet podkladových objektů, které jsou sledovány aktuální `ClassFactory` objektu.

@@ -1,17 +1,17 @@
 ---
-title: C Runtime chyby R6002 až R6035
+title: Chyby modulu C runtime R6002 až R6035
 ms.date: 11/17/2017
 f1_keywords:
 - c.errors
 ms.assetid: 78019050-9a30-4b61-8250-a5702e0e2393
 ms.openlocfilehash: b1a4aa5114965451791f44d88eb9e5ca61ff9c57
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58766882"
 ---
-# <a name="c-runtime-errors-r6002-through-r6035"></a>C Runtime chyby R6002 až R6035
+# <a name="c-runtime-errors-r6002-through-r6035"></a>Chyby modulu C runtime R6002 až R6035
 
 Tato část se odkaz na chyby, které mohou být generovány pomocí knihovny C Runtime (CRT), když je načíst nebo spuštěné aplikace. I v případě, že zprávy se odkazuje na modul runtime Microsoft Visual C++, tyto chyby označuje chybu v kódu vaší aplikace nebo podmínku, která nemůže zpracovat knihovny runtime, jako je nedostatek paměti. Koncovým uživatelům vaší aplikace může zobrazit tyto chyby Pokud není kód vaší aplikaci, aby zabránila podmínky, které způsobit nebo psaní kódu a zaznamenat tyto chyby uživatelům k dispozici přátelskou zprávou.
 

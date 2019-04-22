@@ -21,10 +21,10 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
 ms.openlocfilehash: 89cb8ddcdd42643f52f755516e8845109163c57a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780337"
 ---
 # <a name="cdatapathproperty-class"></a>CDataPathProperty Class
@@ -64,15 +64,15 @@ Třída `CDataPathProperty` je odvozen z `CAysncMonikerFile`. K implementaci asy
 
 Další informace o tom, jak použít asynchronní monikery a ovládací prvky ActiveX v internetových aplikací najdete v následujících článcích:
 
-- [První kroky Internetu: ActiveX – ovládací prvky](../../mfc/activex-controls-on-the-internet.md)
+- [První kroky Internetu: Ovládací prvky ActiveX](../../mfc/activex-controls-on-the-internet.md)
 
 - [První kroky Internetu: Asynchronní Monikery](../../mfc/asynchronous-monikers-on-the-internet.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cfile –](../../mfc/reference/cfile-class.md)
+[CFile](../../mfc/reference/cfile-class.md)
 
 [COleStreamFile](../../mfc/reference/colestreamfile-class.md)
 
@@ -218,6 +218,6 @@ Cesta, která může být absolutní nebo relativní k vlastnosti načítán asy
 ## <a name="see-also"></a>Viz také:
 
 [Obrázek ukázky knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
-[CAsyncMonikerFile Class](../../mfc/reference/casyncmonikerfile-class.md)<br/>
+[CAsyncMonikerFile – třída](../../mfc/reference/casyncmonikerfile-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CAsyncMonikerFile Class](../../mfc/reference/casyncmonikerfile-class.md)
+[CAsyncMonikerFile – třída](../../mfc/reference/casyncmonikerfile-class.md)

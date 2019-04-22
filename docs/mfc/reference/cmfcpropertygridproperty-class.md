@@ -167,10 +167,10 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
 ms.openlocfilehash: aa88cc2d4ee915b970157ee6ed280512e2352bcc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779024"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty Class
@@ -303,7 +303,7 @@ Následující příklad ukazuje, jak vytvořit `CMFCPropertyGridProperty` objek
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
 [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)
 
@@ -439,7 +439,7 @@ CMFCPropertyGridProperty(
 *dwData*<br/>
 [in] Specifická data, jako je například celé číslo nebo ukazatel na další data, která souvisí s vlastností. Výchozí hodnota je 0.
 
-*%{strName/*<br/>
+*strName*<br/>
 [in] Název vlastnosti.
 
 *varValue*<br/>
@@ -477,7 +477,7 @@ virtual CComboBox* CreateCombo(
 *pWndParent*<br/>
 [in] Ukazatel do nadřazeného okna pole se seznamem.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Ohraničující obdélník pole se seznamem.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -566,7 +566,7 @@ void EnableSpinControl(
 *bEnable*<br/>
 [in] TRUE, pokud chcete povolit otočný ovládací prvek tlačítka; FALSE, pokud chcete zakázat otočný ovládací prvek tlačítko. Výchozí hodnota je TRUE.
 
-*Nminimum*<br/>
+*nMin*<br/>
 [in] Minimální hodnota otočný ovládací prvek tlačítko. Výchozí hodnota je 0.
 
 *nMax*<br/>
@@ -880,10 +880,10 @@ CMFCPropertyGridProperty* HitTest(
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Bod, který chcete otestovat, v souřadnicích klienta. Tento parametr je obvykle aktuální umístění ukazatele myši.
 
-*PT*<br/>
+*pt*<br/>
 [in] Bod, který chcete otestovat, v souřadnicích klienta.
 
 *pnArea*<br/>
@@ -1129,7 +1129,7 @@ virtual void OnClickButton(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Bod, v souřadnicích klienta.
 
 ### <a name="remarks"></a>Poznámky
@@ -1169,7 +1169,7 @@ virtual BOOL OnClickValue(
 *uiMsg*<br/>
 [in] Zpráva myši.
 
-*Bod*<br/>
+*point*<br/>
 [in] Bod, v souřadnicích klienta.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1224,7 +1224,7 @@ virtual BOOL OnDblClk(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Bod, v souřadnicích klienta.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1280,7 +1280,7 @@ virtual void OnDrawDescription(
 *pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Ohraničující obdélník, který určuje, kde chcete-li nakreslit vlastnost Popis.
 
 ### <a name="remarks"></a>Poznámky
@@ -1324,7 +1324,7 @@ virtual void OnDrawName(
 *pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Ohraničující obdélník, který určuje, kde stanovit název vlastnosti.
 
 ### <a name="remarks"></a>Poznámky
@@ -1344,7 +1344,7 @@ virtual void OnDrawValue(
 *pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Ohraničující obdélník, který určuje, kde stanovit hodnotu vlastnosti.
 
 ### <a name="remarks"></a>Poznámky
@@ -1714,4 +1714,4 @@ void Show(
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md)
+[CMFCPropertyGridCtrl – třída](../../mfc/reference/cmfcpropertygridctrl-class.md)

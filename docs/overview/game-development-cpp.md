@@ -2,11 +2,11 @@
 title: Vývoj herních aplikací v jazyce C++
 ms.date: 02/26/2019
 ms.openlocfilehash: b9c5296f5a89a51797be5981b2592fe22267a154
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786771"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59775889"
 ---
 # <a name="game-development-with-c"></a>Vývoj herních aplikací v jazyce C++
 
