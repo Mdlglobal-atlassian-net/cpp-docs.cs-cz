@@ -1,1 +1,0 @@
-Sestavení Team Foundation

@@ -1,1 +1,0 @@
-Visual C++ v Visual Studio 2017

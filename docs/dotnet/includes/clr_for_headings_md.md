@@ -1,1 +1,0 @@
-CLR (Common Language Runtime)

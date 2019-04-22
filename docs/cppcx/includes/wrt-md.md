@@ -1,1 +1,0 @@
-prostředí Windows Runtime

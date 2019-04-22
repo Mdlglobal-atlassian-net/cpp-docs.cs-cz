@@ -1,7 +1,0 @@
-# [OpenMP – direktivy](openmp-directives.md)
-# [OpenMP – klauzule](openmp-clauses.md)
-# [OpenMP – referenční dokumentace knihoven](openmp-library-reference.md)
-## [OpenMP – knihovny](openmp-libraries.md)
-## [OpenMP – datové typy](openmp-data-types.md)
-## [OpenMP – proměnné prostředí](openmp-environment-variables.md)
-## [OpenMP – funkce](openmp-functions.md)
