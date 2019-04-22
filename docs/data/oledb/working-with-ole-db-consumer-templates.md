@@ -6,10 +6,10 @@ helpviewer_keywords:
 - OLE DB consumer templates, about consumer templates
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
 ms.openlocfilehash: 81bb80446ef3df09eaed7a8728e789de67c27122
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040803"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>Práce s šablonami příjemců OLE DB
@@ -18,7 +18,7 @@ Následující témata obsahují příklady, jak používat šablony příjemce 
 
 - [Zjednodušení přístupu k datům s použitím atributů databáze](../../data/oledb/simplifying-data-access-with-database-attributes.md)
 
-- [Datoví členové stavu pole v přístupových objektech generovaných průvodcem](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)
+- [Datové členy stavu pole v přístupových objektech generovaných průvodcem](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)
 
 - [Procházení jednoduché sady řádků](../../data/oledb/traversing-a-simple-rowset.md)
 
@@ -36,7 +36,7 @@ Následující témata obsahují příklady, jak používat šablony příjemce 
 
 - [Podpora transakcí v prostředí OLE DB](../../data/oledb/supporting-transactions-in-ole-db.md)
 
-- [Použití zobrazení záznamů technologie OLE DB](../../data/oledb/using-ole-db-record-views.md)
+- [Použití zobrazení záznamů OLE DB](../../data/oledb/using-ole-db-record-views.md)
 
 - [Použití existující sady záznamů ADO](../../data/oledb/using-an-existing-ado-recordset.md)
 

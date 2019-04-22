@@ -21,10 +21,10 @@ helpviewer_keywords:
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
 ms.openlocfilehash: d2a1c63f686b46aad4e174c86895f6f9fc00d260
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778335"
 ---
 # <a name="try-finally-statement"></a>try-finally – příkaz
@@ -49,7 +49,7 @@ Následující syntaxe popisuje **try-finally** – příkaz:
 
 **Try-finally** příkaz je rozšířením společnosti Microsoft pro jazyky C a C++, které umožňuje cílovým aplikacím zaručit spuštění kódu čištění, když dojde k přerušení vykonání bloku kódu. Čištění se skládá z úlohy, jako jsou rušení přidělení paměti, zavírání souborů a uvolněním popisovačů souborů. **Try-finally** příkaz je užitečné hlavně pro rutiny, které mají několika místech, kde se provede kontrola pro chybu, která by mohla způsobit předčasné vrátit z rutiny.
 
-Související informace a ukázky kódu najdete v tématu [zkuste-except – příkaz](../cpp/try-except-statement.md). Další informace o obecně zpracování strukturovaných výjimek naleznete v tématu [strukturovaného zpracování výjimek](../cpp/structured-exception-handling-c-cpp.md). Další informace o zpracování výjimek ve spravovaných aplikacích s C + +/ CLI, najdete v článku [zpracování výjimek v/CLR](../extensions/exception-handling-cpp-component-extensions.md).
+Související informace a ukázky kódu najdete v tématu [zkuste-except – příkaz](../cpp/try-except-statement.md). Další informace o obecně zpracování strukturovaných výjimek naleznete v tématu [strukturovaného zpracování výjimek](../cpp/structured-exception-handling-c-cpp.md). Další informace o zpracování výjimek ve spravovaných aplikacích s C++vyhodnocovací, naleznete v tématu [zpracování výjimek v/CLR](../extensions/exception-handling-cpp-component-extensions.md).
 
 > [!NOTE]
 > Strukturované zpracování výjimek funguje na architektuře Win32 pro zdrojové soubory jazyka C i C++. Pro jazyk C++ však není výslovně navrženo. Větší přenositelnost kódu lze zajistit použitím zpracování výjimek jazyka C++. Zpracování výjimek jazyka C++ je také více flexibilní, jelikož dokáže zpracovat výjimky libovolného typu. Pro programy C++ je doporučeno použití mechanismu zpracování výjimek jazyka C++ ([try, catch a throw](../cpp/try-throw-and-catch-statements-cpp.md) příkazů).

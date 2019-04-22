@@ -27,10 +27,10 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
 ms.openlocfilehash: 0c6fb39e17e22bcac60d50b87f7370c6a9f91db9
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58770675"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Cmfceditbrowsectrl – třída
@@ -207,7 +207,7 @@ Jedna z hodnot výčtu, které určuje aktuální režim úpravy procházet ovl�
 
 Následující tabulka obsahuje seznam možných vrácených hodnot.
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |`BrowseMode_Default`|**vlastní režim**. Programátorem definované akce je provedena.|
 |`BrowseMode_File`|**režim souboru**. Zobrazí se dialogové okno Prohlížeč standardní soubor.|

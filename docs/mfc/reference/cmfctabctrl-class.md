@@ -105,10 +105,10 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
 ms.openlocfilehash: 43eb171ce9b3ea3454855dc1f92d9aa1b74645d4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778452"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
@@ -231,9 +231,9 @@ Příklad toho, jak vytvořit okno s kartami jako dokovací panel ovládacího p
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -310,10 +310,10 @@ BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-* – styl*<br/>
+*style*<br/>
 [in] Styl ovládacího prvku karta. Další informace najdete v části poznámky.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Obdélník, který ovládací prvek karty za rozsahem.
 
 *pParentWnd*<br/>
@@ -322,7 +322,7 @@ BOOL Create(
 *nID*<br/>
 [in] ID ovládacího prvku karta.
 
-*umístění*<br/>
+*location*<br/>
 [in] Umístění karty. Výchozí hodnota je LOCATION_BOTTOM. Další informace najdete v části poznámky.
 
 *bCloseBtn*<br/>
@@ -564,7 +564,7 @@ virtual void GetTabsRect(CRect& rect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*rect*<br/>
+*Rect*<br/>
 [out] Po návratu tato metoda *rect* parametr obsahuje obdélníku, který za rozsahem oblasti karet.
 
 ##  <a name="getwndarea"></a>  CMFCTabCtrl::GetWndArea
@@ -577,7 +577,7 @@ void GetWndArea(CRect& rect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*rect*<br/>
+*Rect*<br/>
 [out v] Po návratu tato metoda obsahuje tento parametr obdélníku, který vazeb aktuální ovládací prvek karty.
 
 ### <a name="remarks"></a>Poznámky
@@ -835,7 +835,7 @@ BOOL ModifyTabStyle(Style style);
 
 ### <a name="parameters"></a>Parametry
 
-* – styl*<br/>
+*style*<br/>
 [in] Jedna z hodnot výčtu, která určuje vzhled ovládacího prvku karta. Další informace najdete v tabulce v poznámky.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -876,7 +876,7 @@ virtual DROPEFFECT OnDragEnter(
 *dwKeyState*<br/>
 [in] Obsahuje informace o stavu modifikační klávesy. Tento parametr je bitová kombinace (nebo) z následujících hodnot: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON. Další informace najdete v tématu **parametry zpráv** část [o vstup z myši](/windows/desktop/inputdev/about-mouse-input).
 
-*Bod*<br/>
+*point*<br/>
 [in] Obsahuje aktuální umístění kurzoru v souřadnicích klienta.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -908,7 +908,7 @@ virtual DROPEFFECT OnDragOver(
 *dwKeyState*<br/>
 [in] Stav modifikační klávesy, která je bitová kombinace (nebo) MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON. Další informace najdete v tématu "Parametry zpráv" [o vstup z myši](/windows/desktop/inputdev/about-mouse-input).
 
-*Bod*<br/>
+*point*<br/>
 [in] Aktuální pozice myši.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -929,7 +929,7 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Souřadnice místa zobrazení místní nabídky.
 
 ### <a name="remarks"></a>Poznámky
@@ -1139,6 +1139,6 @@ Tato metoda má vliv pouze ovládacího prvku karta, která zobrazuje plochý ka
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CDockablePane Class](../../mfc/reference/cdockablepane-class.md)<br/>
-[CDockablePane Class](../../mfc/reference/cdockablepane-class.md)<br/>
-[Cmfcbasetabctrl – třída](../../mfc/reference/cmfcbasetabctrl-class.md)
+[CDockablePane – třída](../../mfc/reference/cdockablepane-class.md)<br/>
+[CDockablePane – třída](../../mfc/reference/cdockablepane-class.md)<br/>
+[CMFCBaseTabCtrl – třída](../../mfc/reference/cmfcbasetabctrl-class.md)

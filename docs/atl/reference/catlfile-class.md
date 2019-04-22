@@ -21,10 +21,10 @@ helpviewer_keywords:
 - CAtlFile class
 ms.assetid: 93ed160b-af2a-448c-9cbe-e5fa46c199bb
 ms.openlocfilehash: 0faae50afcd26948bdcb4d4333efb25d5cca33ea
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772966"
 ---
 # <a name="catlfile-class"></a>Catlfile – třída
@@ -44,13 +44,13 @@ class CAtlFile : public CHandle
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAtlFile::CAtlFile](#catlfile)|Konstruktor|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAtlFile::Create](#create)|Volejte tuto metodu za účelem vytvoření nebo otevření souboru.|
 |[CAtlFile::Flush](#flush)|Voláním této metody lze vymazat vyrovnávací paměť pro soubor a způsobit, že všechna data ve vyrovnávací paměti k zápisu do souboru.|

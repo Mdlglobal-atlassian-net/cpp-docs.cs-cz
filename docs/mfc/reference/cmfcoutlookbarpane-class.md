@@ -41,10 +41,10 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
 ms.openlocfilehash: b23aa9e30c130cea8c84290b62cc19794376d4c1
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773434"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Cmfcoutlookbarpane – třída
@@ -70,7 +70,7 @@ class CMFCOutlookBarPane : public CMFCToolBar
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCOutlookBarPane::AddButton](#addbutton)|Přidá tlačítko do podokno panelu aplikace Outlook.|
 |[CMFCOutlookBarPane::CanBeAttached](#canbeattached)|Určuje, zda lze ukotvit podokna Další podokno nebo rámec okna. (Přepíše [CBasePane::CanBeAttached](../../mfc/reference/cbasepane-class.md#canbeattached).)|

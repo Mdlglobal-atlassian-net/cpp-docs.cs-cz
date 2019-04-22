@@ -75,10 +75,10 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
 ms.openlocfilehash: 4db27112daf65b2c3f477527cd7b4351b91d7f18
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776632"
 ---
 # <a name="csliderctrl-class"></a>Csliderctrl – třída
@@ -153,9 +153,9 @@ Další informace o používání `CSliderCtrl`, naleznete v tématu [ovládací
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -208,7 +208,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Určuje styl ovládacího prvku posuvník. Použít libovolnou kombinaci [– styly ovládacích prvků posuvník](/windows/desktop/Controls/trackbar-control-styles), které jsou popsány v sadě Windows SDK do ovládacího prvku.
 
-*rect*<br/>
+*Rect*<br/>
 Určuje velikost a umístění v ovládacím prvku posuvník. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 *pParentWnd*<br/>
@@ -250,7 +250,7 @@ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené s
 *dwStyle*<br/>
 Určuje styl ovládacího prvku posuvník. Použít libovolnou kombinaci [– styly ovládacích prvků posuvník](/windows/desktop/Controls/trackbar-control-styles), které jsou popsány v sadě Windows SDK do ovládacího prvku.
 
-*rect*<br/>
+*Rect*<br/>
 Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -385,7 +385,7 @@ void GetRange(
 
 ### <a name="parameters"></a>Parametry
 
-*Nminimum*<br/>
+*nMin*<br/>
 Odkaz na celé číslo, které přijímá minimální pozici.
 
 *nMax*<br/>
@@ -431,7 +431,7 @@ void GetSelection(
 
 ### <a name="parameters"></a>Parametry
 
-*Nminimum*<br/>
+*nMin*<br/>
 Odkaz na celé číslo, které přijímá počáteční pozici aktuálního výběru.
 
 *nMax*<br/>
@@ -630,7 +630,7 @@ void SetRange(
 
 ### <a name="parameters"></a>Parametry
 
-*Nminimum*<br/>
+*nMin*<br/>
 Minimální pozice pro posuvník.
 
 *nMax*<br/>
@@ -669,7 +669,7 @@ void SetRangeMin(
 
 ### <a name="parameters"></a>Parametry
 
-*Nminimum*<br/>
+*nMin*<br/>
 Minimální pozice pro posuvník.
 
 *bRedraw*<br/>
@@ -687,7 +687,7 @@ void SetSelection(
 
 ### <a name="parameters"></a>Parametry
 
-*Nminimum*<br/>
+*nMin*<br/>
 Počáteční pozice pro posuvník.
 
 *nMax*<br/>
@@ -771,7 +771,7 @@ int SetTipSide(int nLocation);
 
 ### <a name="parameters"></a>Parametry
 
-*Numístění*<br/>
+*nLocation*<br/>
 Hodnota představující umístění, kam chcete-li zobrazit ovládací prvek tooltip. Seznam možných hodnot, zobrazí zpráva Win32 [TBM_SETTIPSIDE](/windows/desktop/Controls/tbm-settipside), jak je popsáno v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -802,6 +802,6 @@ Tato členská funkce implementuje chování zprávy Win32 [TBM_SETTOOLTIPS](/wi
 ## <a name="see-also"></a>Viz také:
 
 [Ukázka CMNCTRL2 knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
-[Třída CWnd](../../mfc/reference/cwnd-class.md)<br/>
+[CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[Cprogressctrl – třída](../../mfc/reference/cprogressctrl-class.md)
+[CProgressCtrl – třída](../../mfc/reference/cprogressctrl-class.md)

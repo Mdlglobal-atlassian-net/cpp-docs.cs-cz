@@ -1,5 +1,5 @@
 ---
-title: Obecná rozhraní (C + +/ CLI)
+title: Obecná rozhraní (C++vyhodnocovací)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
 ms.openlocfilehash: 035636f2723cd949f5a1852b3d5500a20f5fb493
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021505"
 ---
-# <a name="generic-interfaces-ccli"></a>Obecná rozhraní (C + +/ CLI)
+# <a name="generic-interfaces-ccli"></a>Obecná rozhraní (C++vyhodnocovací)
 
-Omezení, které se vztahují na třídy zadejte parametry jsou stejné jako ty, které se vztahují na parametry typu rozhraní (viz [obecné třídy (C + +/ CLI)](generic-classes-cpp-cli.md)).
+Omezení, které se vztahují na třídy zadejte parametry jsou stejné jako ty, které se vztahují na parametry typu rozhraní (viz [obecné třídy (C++vyhodnocovací)](generic-classes-cpp-cli.md)).
 
 Pravidla, která řídí funkce přetížení jsou stejné pro funkce v rámci obecných tříd nebo obecná rozhraní.
 
@@ -32,31 +32,31 @@ Další informace o rozhraní najdete v tématu [třída rozhraní](interface-cl
 
 ## <a name="remarks"></a>Poznámky
 
-*atributy*<br/>
+*Atributy*<br/>
 (Volitelné) Další informace o deklarativní. Další informace o atributy a třídy atributů najdete v tématu **atributy**.
 
-*klíč třídy*<br/>
+*class-key*<br/>
 **Třída** nebo **typename**
 
 *Typ – parametr-identifikátory*<br/>
 Seznam identifikátorů oddělených čárkou.
 
 *type-parameter-constraints-clauses*<br/>
-Má podobu podle [omezení parametrů obecných typů (C + +/ CLI)](constraints-on-generic-type-parameters-cpp-cli.md)
+Má podobu podle [omezení parametrů obecných typů (C++vyhodnocovací)](constraints-on-generic-type-parameters-cpp-cli.md)
 
-*Modifikátory dostupnosti*<br/>
+*accessibility-modifiers*<br/>
 (Volitelné) Modifikátory (třeba **veřejné, privátní**).
 
-*identifikátor*<br/>
+*identifier*<br/>
 Název rozhraní.
 
-*Base-list*<br/>
+*base-list*<br/>
 (Volitelné) Seznam, který obsahuje jedno nebo více explicitní základní rozhraní oddělených čárkami.
 
-*tělo rozhraní*<br/>
+*interface-body*<br/>
 Deklarace členů rozhraní.
 
-*deklarátory*<br/>
+*declarators*<br/>
 (Volitelné) Deklarace proměnných na základě tohoto typu.
 
 ## <a name="example"></a>Příklad

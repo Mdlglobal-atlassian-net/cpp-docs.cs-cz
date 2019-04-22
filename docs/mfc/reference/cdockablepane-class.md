@@ -133,10 +133,10 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
 ms.openlocfilehash: a9d7c4ea941884435c9ecfac54a1d42649c6dbd5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769690"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
@@ -153,13 +153,13 @@ class CDockablePane : public CPane
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDockablePane::CDockablePane](#cdockablepane)|Vytvoří a inicializuje `CDockablePane` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDockablePane::AttachToTabWnd](#attachtotabwnd)|Připojí do podokna Další podokno. Tím se vytvoří podokna s kartami.|
 |[CDockablePane::CalcFixedLayout](#calcfixedlayout)|Vrátí velikost podokna obdélník.|
@@ -664,7 +664,7 @@ Tato metoda vrací ukazatel na nově vytvořený oddělovač nebo hodnota NULL, 
 
 *dwAlignment* může být kterýkoli z následujících hodnot:
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |CBRS_ALIGN_TOP|V podokně se ukotven k hornímu okraji klientské oblasti okna rámce.|
 |CBRS_ALIGN_BOTTOM|V podokně se ukotven k dolnímu okraji klientské oblasti okna rámce.|
@@ -783,7 +783,7 @@ Hodnota TRUE, pokud kontejner byl úspěšně ukotveno podokna. v opačném př�
 
 *dwAlignment* může být kterýkoli z následujících hodnot:
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |CBRS_ALIGN_TOP|Kontejner je ukotven horní části podokna.|
 |CBRS_ALIGN_BOTTOM|Kontejner je právě ukotven k dolní části podokna.|

@@ -3,10 +3,10 @@ title: Visual C++ co&#39;s novou 2003 – 2015
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
 ms.openlocfilehash: ae21a81869bd68c5a2641dba47b89d7e10b67567
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898853"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ co&#39;s novou 2003 – 2015
@@ -61,7 +61,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
    `/Zg` – Možnost kompilátoru (Generovat prototypy funkcí) už nejsou k dispozici. Tato možnost kompilátoru dříve byla zrušena.
 
-- Jednotkové testy můžete spustit již s C + +/ CLI z příkazového řádku pomocí mstest.exe. Místo toho používá příkaz vstest.console.exe
+- Už můžete spustit testy jednotek s C++vyhodnocovací z příkazového řádku pomocí mstest.exe. Místo toho používá příkaz vstest.console.exe
 
 - **Mutable – klíčové slovo.**
 
@@ -1104,7 +1104,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     };
    ```
 
-- `volatile` ***Členské proměnné zabránit implicitně definované konstruktory a operátory přiřazení** třídu, která má povolené předchozí verze kompilátoru **volatile** kopírovat nebo přesunout členské proměnné mají výchozí konstruktory a Výchozí kopírování/operátory přiřazení pro přesunutí automaticky generovány.TToto chování staré bylo nesprávné a není v souladu s standardu jazyka C++.TKompilátor nyní brány v úvahu třídu, která má volatile členské proměnné nejsou v netriviálních konstrukce a operátory přiřazení, který brání automatickému generování výchozí implementace těchto operátorů.WPokud takové třídy je člen sjednocení (nebo anonymní sjednocení uvnitř třídy), zkopírovat nebo přesunout konstruktory a operátory přiřazení kopie nebo přesunout sjednocení (nebo třídy obsahující unonymous sjednocení) bude možné implicitně definovaný jako odstraněný.APokus o vytvoření nebo zkopírujte sjednocení (nebo třídu obsahující anonymní sjednocení) bez nutnosti explicitně definovat jejich je chyba a Chyba kompilátoru problémy kompilátoru C2280 ve výsledku.
+- `volatile` **Členské proměnné zabránit implicitně definované konstruktory a operátory přiřazení** třídu, která má povolené předchozí verze kompilátoru **volatile** kopírovat nebo přesunout členské proměnné mají výchozí konstruktory a Výchozí kopírování/operátory přiřazení pro přesunutí automaticky generovány. Toto chování staré bylo nesprávné a není v souladu s standardu jazyka C++. Kompilátor nyní brány v úvahu třídu, která má volatile členské proměnné nejsou v netriviálních konstrukce a operátory přiřazení, který brání automatickému generování výchozí implementace těchto operátorů. Pokud takové třídy je člen sjednocení (nebo anonymní sjednocení uvnitř třídy), zkopírovat nebo přesunout konstruktory a operátory přiřazení kopie nebo přesunout sjednocení (nebo třídy obsahující unonymous sjednocení) bude možné implicitně definovaný jako odstraněný. Pokus o vytvoření nebo zkopírujte sjednocení (nebo třídu obsahující anonymní sjednocení) bez nutnosti explicitně definovat jejich je chyba a Chyba kompilátoru problémy kompilátoru C2280 ve výsledku.
 
    ```Output
     error C2280: 'B::B(const B &)': attempting to reference a deleted function
@@ -1534,7 +1534,7 @@ Kompilátor jazyka Microsoft Visual C++ podporuje tyto funkce ISO C ++ 11 jazyka
 - Určené inicializátory.
 - Míchání deklarací s kódem.
 - Řetězec převod literálu na upravitelné hodnoty můžou být zakázáno pomocí nové možnosti kompilátoru `/Zc:strictStrings`. V C ++ 98 převod z řetězcových literálů na `char*` (a široký řetězec literálů na `wchar_t*`) byla zrušena. V C ++ 11 byl převod úplně odebrán. Ačkoli kompilátor může důsledně splňovat normy, místo toho poskytuje `/Zc:strictStrings` možnost tak, aby mohli převod řídit. Ve výchozím nastavení je možnost je vypnuta. Všimněte si, že při použití této možnosti v režimu ladění, STL nebude kompilovat.
-- Přetypování rvalue/lvalue. S odkazy rvalue může C ++ 11 jasně rozlišovat mezi lvalues a rvalues. Dříve kompilátor toto neposkytl v konkrétních scénářích obsazení. Nová možnost kompilátoru `/Zc:rvalueCast`, byla přidána, aby splňovaly kompilátoru Paper(see section 5.4, [expr.cast]/1) práce jazyka C++. Výchozí chování, pokud není tato možnost zadána, je stejné jako v sadě Visual Studio 2012.
+- Přetypování rvalue/lvalue. S odkazy rvalue může C ++ 11 jasně rozlišovat mezi lvalues a rvalues. Dříve kompilátor toto neposkytl v konkrétních scénářích obsazení. Nová možnost kompilátoru `/Zc:rvalueCast`, byla přidána, aby splňovaly kompilátoru C++ Paper(see section 5.4, [expr.cast]/1) práce jazyka. Výchozí chování, pokud není tato možnost zadána, je stejné jako v sadě Visual Studio 2012.
 
 > [!NOTE]
 > Pro výchozí funkce pomocí = default k vyžádání konstruktorů s přesouváním a operátory přiřazení nepodporuje přesun.
@@ -1586,7 +1586,7 @@ Tato vylepšená podpora standardů ISO C/C++ mohou vyžadovat změny existujíc
 
 - **Podrobnější informace o výjimce.**
 
-   C + +/ CX podporuje nový model chyb Windows, který umožňuje zachycení a propagaci bohatých informací o výjimkách napříč binárním rozhraním aplikace (ABI); To zahrnuje volání zásobníku a o vlastní řetězce zpráv.
+   C++/CX podporuje nový model chyb Windows, který umožňuje zachycení a propagaci bohatých informací o výjimkách napříč binárním rozhraním aplikace (ABI); To zahrnuje volání zásobníku a o vlastní řetězce zpráv.
 
 - **Object:: ToString() je nyní virtuální.**
 
@@ -1648,7 +1648,7 @@ Tato vylepšená podpora standardů ISO C/C++ mohou vyžadovat změny existujíc
 
 **V okně vlastností umožňující změnu velikosti projektu C++**
 
-**Automatické generování kódu obslužné rutiny události v jazyce C + +/ CX a C + +/ CLI.**  Když píšete kód k přidání obslužné rutiny události v jazyce C + +/ CX nebo C + +/ CLI soubor kódu, editor může automaticky generovat definice delegáta instance a obslužnou rutinu události. Okno popisku se zobrazí, pokud automaticky generovaný kód obslužné rutiny události.
+**Automatické generování kódu obslužné rutiny události v C++/CX a C++vyhodnocovací.**  Když píšete kód k přidání obslužné rutiny události v C++/CX nebo C++vyhodnocovací soubor kódu, editor může automaticky generovat definice delegáta instance a obslužnou rutinu události. Okno popisku se zobrazí, pokud automaticky generovaný kód obslužné rutiny události.
 
 **Zvýšení povědomí o dpi.** Nastavení sledování DPI v souborech manifestu aplikace nyní podporuje nastavení "Za sledování vysoké rozlišení DPI".
 
@@ -1682,7 +1682,7 @@ Tato vylepšená podpora standardů ISO C/C++ mohou vyžadovat změny existujíc
 ### <a name="windows-runtime-app-development-support"></a>Podpora pro vývoj aplikací pro modul Runtime Windows
 
 - **Nativní uživatelské rozhraní založené na XAML model**. Pro aplikace Windows Runtime můžete použít nový model nativního uživatelského rozhraní založeného na XAML.
-- **Rozšíření Visual C++ komponent**. Tato rozšíření zjednodušit využití objektů prostředí Windows Runtime, které jsou nezbytnou součástí aplikace Windows Runtime. Další informace najdete v tématu [plán pro prostředí Windows Runtime aplikací pomocí C++](../windows/universal-windows-apps-cpp.md) a [referenční dokumentace jazyka Visual C++ (C + +/ CX)](../cppcx/visual-c-language-reference-c-cx.md)
+- **Rozšíření Visual C++ komponent**. Tato rozšíření zjednodušit využití objektů prostředí Windows Runtime, které jsou nezbytnou součástí aplikace Windows Runtime. Další informace najdete v tématu [plán pro prostředí Windows Runtime aplikace s využitím C++ ](../windows/universal-windows-apps-cpp.md) a [Visual C++ referenční informace k jazyku (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)
 - **Hry rozhraní DirectX**. Zajímavé hry můžete vyvíjet s využitím nových rozhraní DirectX podpory pro aplikace Windows Runtime.
 - **Zprostředkovatele komunikace XAML nebo DirectX**. Aplikace Windows Runtime, používající XAML a rozhraní DirectX nyní efektivně spolupracovat.
 - **Vývoj DLL komponenty Windows Runtime**. Součást knihovny DLL vývoj díky rozšiřitelné prostředí Windows Runtime.
@@ -1731,9 +1731,9 @@ Kromě **paralelní úlohy** okno a **paralelní zásobníky** okně Visual Stud
 
 **Automatické nasazení pro vzdálené ladění.** Zjednodušili jsme nasazení soubory pro vzdálené ladění v jazyce Visual C++. **Nasadit** možnost v místní nabídce projektu automaticky zkopíruje do vzdáleného počítače soubory, které jsou určené ve vlastnostech ladění konfigurace. Ruční kopírování souborů do vzdáleného počítače se už nevyžaduje.
 
-**C + +/ CLI IntelliSense.** C + +/ CLI nyní obsahuje plnou podporu technologie IntelliSense. Funkce technologie IntelliSense, jako je rychlé informace, parametr nápovědy, seznam členů a automatické dokončování prováděna pro C + +/ CLI. Kromě toho další technologie IntelliSense a prostředí IDE vylepšení uvedených v tomto dokumentu fungovat i pro C + +/ CLI.
+**C++/ Rozhraní příkazového řádku IntelliSense.** C++/ CLI nyní obsahuje plnou podporu technologie IntelliSense. Funkce technologie IntelliSense, jako je rychlé informace, parametr nápovědy, seznam členů a automatické dokončování prováděna pro C++vyhodnocovací. Kromě toho další technologie IntelliSense a prostředí IDE vylepšení uvedených v tomto dokumentu fungovat i pro C++vyhodnocovací.
 
-**Podrobnější popisy technologie IntelliSense.** Popisky rychlé informace technologie IntelliSense jazyka C++ nyní zobrazit informace o stylu bohatší dokumentační komentáře XML. Pokud používáte rozhraní API z knihovny – například C++ AMP –, který se dokumentační komentáře XML a popisu tlačítka technologie IntelliSense zobrazí další informace než jenom deklarace. Také pokud váš kód obsahuje komentáře dokumentace XML, popisy technologie IntelliSense se zobrazí podrobnější informace.
+**Richer IntelliSense Tooltips.** Popisky rychlé informace technologie IntelliSense jazyka C++ nyní zobrazit informace o stylu bohatší dokumentační komentáře XML. Pokud používáte rozhraní API z knihovny – například C++ AMP –, který se dokumentační komentáře XML a popisu tlačítka technologie IntelliSense zobrazí další informace než jenom deklarace. Také pokud váš kód obsahuje komentáře dokumentace XML, popisy technologie IntelliSense se zobrazí podrobnější informace.
 
 **Konstrukce kódu jazyka C++.** Kostru kód je k dispozici pro přepínač, if-else, smyčky a další základní konstrukcí, v rozevíracím seznamu pro seznam členů. Vyberte část kódu, ze seznamu a vložit ho do svého kódu a potom vyplňte požadované logiku. Můžete také vytvořit vlastní vlastní části kódu pro použití v editoru.
 
@@ -1785,7 +1785,7 @@ Pokrytí kódu je aktualizovaná na dynamicky instrumentace binárních souborů
 
 **Odkazy rvalue.** Deklarátor odkazu r-hodnoty (& &) deklaruje odkaz na r-hodnoty. Rvalue reference vám umožňuje používat přesunutí sémantiky a dokonalé předávání k tvorbě efektivnější konstruktory, funkcí a šablony.
 
-**static_assert deklarace.** A **static_assert** deklarace testuje výraz softwaru v době kompilace, na rozdíl od jiných kontrolní výraz mechanismů, které testují v době běhu. Pokud výraz se nezdaří, kompilace se nezdaří a vydává zadanou chybovou zprávou.
+**static_assert Declaration.** A **static_assert** deklarace testuje výraz softwaru v době kompilace, na rozdíl od jiných kontrolní výraz mechanismů, které testují v době běhu. Pokud výraz se nezdaří, kompilace se nezdaří a vydává zadanou chybovou zprávou.
 
 **klíčová slova nullptr a __nullptr.** Kompilátor Visual C++ vám umožní používat **nullptr** – klíčové slovo nativního kódu nebo spravovaného kódu. **Nullptr** – klíčové slovo určuje, že popisovač objektu, vnitřní ukazatel nebo typ nativní ukazatel neukazuje na objekt. Kompilátor interpretuje **nullptr** být při použití spravovaného kódu `/clr` – možnost kompilátoru a nativní kód, když použijete `/clr` možnost.
 Specifické pro Microsoft **__nullptr** – klíčové slovo má stejný význam jako **nullptr**, ale se vztahuje pouze na nativní kód. Pokud kompilujete pomocí nativního kódu C/C++ `/clr` – možnost kompilátoru, kompilátor nemůže určit, jestli **nullptr** – klíčové slovo je nativní nebo spravovaný termín. Aby váš záměr vymazat pro kompilátor pomocí klíčového slova nullptr můžete zadat jako spravované a **__nullptr** k určení nativní termínu.
@@ -1858,7 +1858,7 @@ MFC teď podporuje animace a grafické rozhraní Direct2D. Knihovna MFC má něk
 
 ### <a name="ide"></a>IDE – integrované vývojové prostředí
 
-**Vylepšená technologie IntelliSense** Rychlejší, přesnější a schopna zpracovávat větší projektů byl zcela přepracován technologie IntelliSense jazyka Visual C++. K dosažení toto vylepšení integrovaného vývojového prostředí rozlišuje mezi jak vývojář, zobrazení a upraví zdrojový kód a použití zdrojový kód a projekt nastavení rozhraní IDE k vytvoření řešení.
+**Vylepšená technologie IntelliSense.** Rychlejší, přesnější a schopna zpracovávat větší projektů byl zcela přepracován technologie IntelliSense jazyka Visual C++. K dosažení toto vylepšení integrovaného vývojového prostředí rozlišuje mezi jak vývojář, zobrazení a upraví zdrojový kód a použití zdrojový kód a projekt nastavení rozhraní IDE k vytvoření řešení.
 Z důvodu tohoto oddělení povinností, procházení funkce **zobrazení tříd** a nové **přejít na** dialogové okno jsou zpracovány systémem, který je založen na nový Server SQL database klasické pracovní plochy (SDF) souboru, který nahradí původní soubor Procházet (.ncb) bez kompilace. Funkce technologie IntelliSense, jako je rychlé informace, automatické dokončování a parametr pomůžou analyzovat jednotky překladu pouze v případě potřeby. Funkcích pro hybridní nasazení jako je například nový **hierarchie volání** okno použijte kombinaci funkcí IntelliSense a procházení.
 Vzhledem k tomu, že IntelliSense zpracovává pouze informace, které budete potřebovat v okamžiku, rozhraní IDE je rychlejší reakce. Protože jsou více aktuální informace, integrované vývojové prostředí zobrazení a windows jsou také přesnější. Protože integrovaného vývojového prostředí infrastruktury je lépe uspořádat, více možností a větší škálovatelnost, je zpracovat větší projekty.
 
@@ -2059,9 +2059,9 @@ Rozbíjející změny v této verzi má kompilátor.
 - __CLR_VER přidat předdefinované makro.
 - Pragmatu komentáře (C/C++) nyní přijímá `/MANIFESTDEPENDENCY` jako komentář linkeru. Možnost exestr komentář je nyní zastaralá.
 - `embedded_idl` atribut ( `#import` – direktiva) nyní přijímá volitelný parametr.
-- `fenv_access` pragma
-- `float_control` pragma
-- `fp_contract` pragma
+- `fenv_access` Direktiva pragma
+- `float_control` Direktiva pragma
+- `fp_contract` Direktiva pragma
 - Globální proměnné nelze inicializovat v pořadí, ve kterém jsou deklarovány, pokud máte v direktivy pragma managed, spravované a nespravované části globální proměnné. To je potenciální rozbíjející změny, pokud například nespravované globální proměnná je inicializována s spravované globální proměnné a na úplně konstruovaný objekt spravovaný je povinný.
 - Zadaný init_seg – oddíly jsou nyní jen pro čtení a není pro čtení a zápis stejně jako v předchozích verzích.
 - inline_depth výchozí hodnota je nyní 16. Výchozí hodnota je 16 byl také v platnosti v jazyce Visual C++ .NET 2003.
@@ -2069,7 +2069,7 @@ Rozbíjející změny v této verzi má kompilátor.
 - _M_CEE _M_CEE_PURE a _M_CEE_SAFE předdefinovaná makra přidali, najdete v článku předdefinovaná makra.
 - _M_IX86_FP přidat předdefinované makro.
 - _M_X64 přidat předdefinované makro.
-- `make_public` pragma
+- `make_public` Direktiva pragma
 - `managed`, `unmanaged` aktualizovat syntaxe direktivy pragma (má teď `push` a `pop`)
 - soubor mscorlib.dll je nyní implicitně odkazováno `#using` direktiv ve všech `/clr` kompilace.
 - _OPENMP přidat předdefinované makro.
@@ -2185,7 +2185,7 @@ Rozbíjející změny v této verzi má kompilátor.
 - V každé téma funkce byla přidána část věnovanou ekvivalentech rozhraní .NET Framework.
 - Několik funkcí řetězce mají nyní možnost zkracování řetězců a ne selhání při výstupní vyrovnávací paměti je příliš malý. Zobrazit **_TRUNCATE**.
 - `_set_se_translator` nyní vyžaduje použití `/EHa` – možnost kompilátoru.
-- `fpos_t` Nyní je **__int64** pod `/Za` (pro kód jazyka C) a kdy __STDC__ je nastavit ručně (pro kód jazyka C++). Používá se **struktura**.
+- `fpos_t` Nyní je **__int64** pod `/Za` (pro kód jazyka C) a kdy __STDC__ je nastavit ručně (pro C++ kód). Používá se **struktura**.
 - _CRT_DISABLE_PERFCRIT_LOCKS může zlepšit výkon vstupně-výstupních operací s jedním vláknem programů.
 - POSIX – názvy jsou zastaralé a místo toho použití názvů splňující podmínky ISO C++ (například použít `_getch` spíše než `getch`).
 - Nové soubory .obj odkaz Možnosti jsou k dispozici pro režim čisté
@@ -2235,4 +2235,4 @@ Na. SAFESEH – direktiva a `/safeseh` ml.exe možnost byly přidány.
 
 ## <a name="see-also"></a>Viz také:
 
-[Průvodce přenosem a upgradováním Visual C++](visual-cpp-porting-and-upgrading-guide.md)
+[Průvodce přenosem a upgradem Visual C++](visual-cpp-porting-and-upgrading-guide.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
 ms.openlocfilehash: 8da5a4f7113bbb4256e45e7ec3c91a9c6677643c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774032"
 ---
 # <a name="c-language-reference"></a>Reference jazyka C++
@@ -81,7 +81,7 @@ Deklarování událostí a obslužných rutin událostí.
 Modifikátory specifické pro jazyk C++ společnosti Microsoft. Paměť adresování, konvence volání, **naked** funkce, rozšířené atributy třídy úložiště (**__declspec**), **__w64**.
 
 [Vkládaný assembler](../assembler/inline/inline-assembler.md)<br/>
-Použití jazyku sestavení a C++ v **__asm** bloky.
+Použití jazyka sestavení a C++ v **__asm** bloky.
 
 [Podpora kompilátoru COM](../cpp/compiler-com-support.md)<br/>
 Odkaz na třídy specifické pro společnost Microsoft a globální funkce používané pro podporu typů modelu COM.

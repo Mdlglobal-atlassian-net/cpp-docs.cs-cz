@@ -1,19 +1,19 @@
 ---
-title: 'Postupy: Používání sledovacích odkazů v jazyce C + +/ CLI'
+title: 'Postupy: Používání sledovacích odkazů v C++vyhodnocovací'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
 ms.openlocfilehash: 8be575bd39bc3b2e6512ba1bcb40d9206731f83a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777048"
 ---
-# <a name="how-to-use-tracking-references-in-ccli"></a>Postupy: Používání sledovacích odkazů v jazyce C + +/ CLI
+# <a name="how-to-use-tracking-references-in-ccli"></a>Postupy: Používání sledovacích odkazů v C++vyhodnocovací
 
-Tento článek ukazuje, jak použít sledovací odkaz (%) v jazyce C + +/ CLI předávání common language runtime (CLR) typy pomocí odkazu.
+Tento článek ukazuje, jak použít sledovací odkaz (%) v C++vyhodnocovací předávání common language runtime (CLR) typy pomocí odkazu.
 
 ## <a name="to-pass-clr-types-by-reference"></a>Předávání typů CLR pomocí odkazu
 
@@ -70,7 +70,7 @@ int main() {
 zip == 20100
 ```
 
-Další příklad ukazuje tento přebírání adresy odkazu sledování vrátí [interior_ptr (C + +/ CLI)](../extensions/interior-ptr-cpp-cli.md)a ukazuje, jak upravit a přístup k datům prostřednictvím odkazem sledování.
+Další příklad ukazuje tento přebírání adresy odkazu sledování vrátí [interior_ptr (C++vyhodnocovací)](../extensions/interior-ptr-cpp-cli.md)a ukazuje, jak upravit a přístup k datům prostřednictvím odkazem sledování.
 
 ```cpp
 // tracking_reference_data.cpp

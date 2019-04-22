@@ -5,10 +5,10 @@ description: Další informace o použití jazyka C++ pro vývoj aplikací, slu�
 author: mikeblome
 ms.author: mblome
 ms.openlocfilehash: f402087b101487a444996e7e27b186382c4874fd
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898671"
 ---
 <div id="main" class="v2">
@@ -74,10 +74,10 @@ ms.locfileid: "58898671"
         <h1>Dokumentace k Visual C++</h1>
         <ul class="pivots">
             <li>
-                <a href="#workloads">Úkoly</a>
+                <a href="#workloads">Úlohy</a>
                 <ul id="workloads">
                     <li>
-                        <a href="#workloads1">Úkoly</a>
+                        <a href="#workloads1">Úlohy</a>
                         <ul id="workloads1" class="cardsC">
                             <li>
                                 <a href="/cpp/cppcx/universal-windows-apps-cpp">
@@ -110,7 +110,7 @@ ms.locfileid: "58898671"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Vývoj pro Windows v C++</h3>
-                                                    <p>Vytvoření klasické desktopové aplikace pro Windows, statické knihovny a knihovny DLL pomocí Win32, MFC, ATL, COM, nebo C + +/ CLI.</p>
+                                                    <p>Vytvoření klasické desktopové aplikace pro Windows, statické knihovny a použití Win32, MFC, ATL, COM, knihoven DLL a/nebo C++vyhodnocovací.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -377,7 +377,7 @@ ms.locfileid: "58898671"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Rozšíření komponent</h3>
-                                                    <p>Rozšíření komponent c++: C + +/ CLI pro .NET – programování a C + +/ CX pro UPW programování.</p>
+                                                    <p>Rozšíření komponent c++: C++/ Rozhraní příkazového řádku pro .NET – programování a C++/CX pro UPW programování.</p>
                                                 </div>
                                             </div>
                                         </div>

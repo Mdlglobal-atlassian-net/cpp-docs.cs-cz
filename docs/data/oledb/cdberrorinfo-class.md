@@ -45,10 +45,10 @@ helpviewer_keywords:
 - GetErrorRecords method
 ms.assetid: 9a5c18a2-ee3e-40f5-ab4c-581288d7f737
 ms.openlocfilehash: bc13137a4222ba51cf3745f9706353d48068a072
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021537"
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo – třída
@@ -73,7 +73,7 @@ class CDBErrorInfo
 |-|-|
 |[GetAllErrorInfo](#getallerrorinfo)|Vrátí všechny informace o chybě obsažené v záznamu o chybě.|
 |[GetBasicErrorInfo](#getbasicerrorinfo)|Volání [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) vrátit základní informace o zadané chybě.|
-|[Getcustomerrorobject –](#getcustomerrorobject)|Volání [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) k vrací ukazatel rozhraní na objekt vlastních chyb.|
+|[GetCustomErrorObject](#getcustomerrorobject)|Volání [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) k vrací ukazatel rozhraní na objekt vlastních chyb.|
 |[GetErrorInfo](#geterrorinfo)|Volání [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) se vraťte `IErrorInfo` ukazatel rozhraní na zadaný záznam.|
 |[Geterrorparameters –](#geterrorparameters)|Volání [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) vrátit parametry chyby.|
 |[GetErrorRecords](#geterrorrecords)|Získá záznamy o chybách pro zadaný objekt.|

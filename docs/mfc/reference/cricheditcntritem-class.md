@@ -11,10 +11,10 @@ helpviewer_keywords:
 - CRichEditCntrItem [MFC], SyncToRichEditObject
 ms.assetid: 6c0b4efe-0fb8-4621-b5e1-fdcb8ec48c3b
 ms.openlocfilehash: 674937df9b4ecef0d159a47a45a716d1175ad5d9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773837"
 ---
 # <a name="cricheditcntritem-class"></a>CRichEditCntrItem Class
@@ -53,11 +53,11 @@ Příklad použití RichEdit kontejner položek v aplikaci knihovny MFC, najdete
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[Cdocitem –](../../mfc/reference/cdocitem-class.md)
+[CDocItem](../../mfc/reference/cdocitem-class.md)
 
 [COleClientItem](../../mfc/reference/coleclientitem-class.md)
 
@@ -111,7 +111,7 @@ Další informace najdete v tématu [DVASPECT](/windows/desktop/api/wtypes/ne-wt
 ## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
-[Coleclientitem – třída](../../mfc/reference/coleclientitem-class.md)<br/>
+[COleClientItem – třída](../../mfc/reference/coleclientitem-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CRichEditDoc Class](../../mfc/reference/cricheditdoc-class.md)<br/>
-[Cricheditview – třída](../../mfc/reference/cricheditview-class.md)
+[CRichEditDoc – třída](../../mfc/reference/cricheditdoc-class.md)<br/>
+[CRichEditView – třída](../../mfc/reference/cricheditview-class.md)

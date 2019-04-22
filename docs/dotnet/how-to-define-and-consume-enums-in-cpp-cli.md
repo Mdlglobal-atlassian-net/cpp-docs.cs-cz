@@ -1,19 +1,19 @@
 ---
-title: 'Postupy: Definice a používání výčtů v jazyce C + +/ CLI'
+title: 'Postupy: Definice a používání výčtů v C++vyhodnocovací'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
 ms.openlocfilehash: 9787b7b96f83b2926c65209254c88eb56fe1a8ab
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774734"
 ---
-# <a name="how-to-define-and-consume-enums-in-ccli"></a>Postupy: Definice a používání výčtů v jazyce C + +/ CLI
+# <a name="how-to-define-and-consume-enums-in-ccli"></a>Postupy: Definice a používání výčtů v C++vyhodnocovací
 
-Toto téma popisuje výčtů v jazyce C + +/ CLI.
+Toto téma popisuje výčtů v C++vyhodnocovací.
 
 ## <a name="specifying-the-underlying-type-of-an-enum"></a>Zadání podkladového typu výčtu
 
@@ -77,7 +77,7 @@ a and day2 are the same
 
 ## <a name="operators-and-enums"></a>Operátory a výčty
 
-Následující operátory jsou platné pro výčty v jazyce C + +/ CLI:
+Následující operátory jsou platné pro výčty v C++vyhodnocovací:
 
 |Operátor|
 |--------------|
@@ -92,7 +92,7 @@ Operátory &#124; ^ & ~ ++--je definovaná pouze pro výčty celočíselný zák
 Kompilátor nemá žádné statické nebo dynamické kontrolu výsledku operace výčtu; operace můžou výsledkem hodnota není v rozsahu výčtu platná enumerátory.
 
 > [!NOTE]
->  C ++ 11 zavádí výčet typů třídy v nespravovaném kódu, které se můžou výrazně lišit od třídy spravovaného výčtu v jazyce C + +/ CLI. Konkrétně se na typ třídy C ++ 11 výčtu nepodporuje stejné operátory jako typ třídy spravovaného výčtu v jazyce C + +/ CLI a C + +/ CLI zdrojový kód musí poskytovat usnadnění specifikátor v spravovaného výčtu deklarace tříd aby bylo možné odlišit od nespravovaných (C++ 11) deklarace třídy výčtu. Další informace o výčet tříd v jazyce C + +/ CLI, C + +/ CX a C ++ 11, najdete v části [výčet tříd](../extensions/enum-class-cpp-component-extensions.md).
+>  C ++ 11 zavádí výčet typů třídy v nespravovaném kódu, které se můžou výrazně lišit od třídy spravovaného výčtu v C++vyhodnocovací. Konkrétně se na typ třídy C ++ 11 výčtu nepodporuje stejné operátory jako typ třídy spravovaného výčtu v C++vyhodnocovací, a C++/CLI zdrojový kód musí poskytovat usnadnění specifikátor v spravovaného výčtu deklarace tříd aby bylo možné odlišit od nespravované (C ++ 11) deklarace třídy výčtu. Další informace o výčet tříd v C++vyhodnocovací, C++/CX a C ++ 11, najdete v části [výčet tříd](../extensions/enum-class-cpp-component-extensions.md).
 
 ```
 // mcppv2_enum_5.cpp
@@ -137,4 +137,4 @@ True
 
 ## <a name="see-also"></a>Viz také:
 
-[Třída výčtu](../extensions/enum-class-cpp-component-extensions.md)
+[enum class](../extensions/enum-class-cpp-component-extensions.md)

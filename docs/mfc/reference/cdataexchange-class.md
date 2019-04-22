@@ -21,10 +21,10 @@ helpviewer_keywords:
 - CDataExchange [MFC], m_pDlgWnd
 ms.assetid: 84ed6113-325d-493e-a75d-223f03a992b8
 ms.openlocfilehash: 0e7a9d429acb1acd72942e5f10ac0815232ddc69
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776307"
 ---
 # <a name="cdataexchange-class"></a>CDataExchange Class
@@ -41,7 +41,7 @@ class CDataExchange
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDataExchange::CDataExchange](#cdataexchange)|Vytvoří `CDataExchange` objektu.|
 
@@ -56,7 +56,7 @@ class CDataExchange
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDataExchange::m_bSaveAndValidate](#m_bsaveandvalidate)|Příznak směru DDX a DDV.|
 |[CDataExchange::m_pDlgWnd](#m_pdlgwnd)|Dialogové okno nebo okno, kde data exchange probíhá.|

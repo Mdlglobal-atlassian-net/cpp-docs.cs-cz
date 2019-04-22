@@ -39,10 +39,10 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
 ms.openlocfilehash: fc1281db0271393ec0538e26c2a2d2af09c99f7a
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775254"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar – třída
@@ -165,9 +165,9 @@ Použití [CMFCOutlookBar::SetMode2003](#setmode2003) pro povolení režimu Outl
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -267,7 +267,7 @@ virtual BOOL Create(
 *pParentWnd*<br/>
 [in] Určuje ukazatel do nadřazeného okna. Nesmí být NULL.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Určuje velikost a pozice v pixelech panelu aplikace outlook.
 
 *nID*<br/>
@@ -511,7 +511,7 @@ BOOL RemoveCustomPage(
 
 ### <a name="parameters"></a>Parametry
 
-*Element uiPage*<br/>
+*uiPage*<br/>
 [in] Z nuly vycházející index stránky v nadřazené okno aplikace Outlook.
 
 *pTargetWnd*<br/>
@@ -577,6 +577,6 @@ Tento režim je ve výchozím nastavení zakázána.
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[Cbasetabbedpane – třída](../../mfc/reference/cbasetabbedpane-class.md)<br/>
-[Cmfcoutlookbartabctrl – třída](../../mfc/reference/cmfcoutlookbartabctrl-class.md)<br/>
-[Cmfcoutlookbarpane – třída](../../mfc/reference/cmfcoutlookbarpane-class.md)
+[CBaseTabbedPane – třída](../../mfc/reference/cbasetabbedpane-class.md)<br/>
+[CMFCOutlookBarTabCtrl – třída](../../mfc/reference/cmfcoutlookbartabctrl-class.md)<br/>
+[CMFCOutlookBarPane – třída](../../mfc/reference/cmfcoutlookbarpane-class.md)

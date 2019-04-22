@@ -8,10 +8,10 @@ helpviewer_keywords:
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
 ms.openlocfilehash: 21006f19f7c811f87f3f75e346983f7a8e7e0bf5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778322"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Postupy: Převést mezi různými typy řetězců
@@ -803,7 +803,7 @@ Hello, World! (basic_string)
 ## <a name="see-also"></a>Viz také:
 
 [ATL a MFC – makra převodu řetězců](../atl/reference/string-conversion-macros.md)<br/>
-[CString – operace týkající se řetězců ve stylu C](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
+[CString – operace týkající se řetězců ve stylu jazyka C](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
 [Postupy: Převod standardního řetězce na typ System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
 [Postupy: Převod typu System::String na standardní řetězec](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
 [Postupy: Převod typu System::String na wchar_t * nebo char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>

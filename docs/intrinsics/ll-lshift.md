@@ -9,15 +9,15 @@ helpviewer_keywords:
 - __ll_lshift intrinsic
 ms.assetid: fe98f733-426d-44b3-8f24-5d0d6d44bd94
 ms.openlocfilehash: 5a91ce5db46b19be570f8d48a584a2caeabcc163
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024462"
 ---
 # <a name="lllshift"></a>__ll_lshift
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Přesouvá se zadanou hodnotou 64-bit na levé straně zadaný počet bitů.
 
@@ -85,7 +85,7 @@ int main()
 
 **Poznámka:** není bez znaménka verze operaci posunutí doleva. Důvodem je, že `__ll_lshift` již používá nepodepsané vstupního parametru. Na rozdíl od posunutí doprava není žádný znak závislost pro posunutí doleva, protože nejméně významných bitů ve výsledku je vždycky nastavený na hodnotu nula, bez ohledu na znaménko hodnoty posunutí.
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

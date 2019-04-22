@@ -1,5 +1,5 @@
 ---
-title: event_receiver (atribut C++ COM)
+title: event_receiver (C++ atributů COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.event_receiver
@@ -13,10 +13,10 @@ helpviewer_keywords:
 - event sinks
 ms.assetid: bf8fe770-3ea2-4128-b46b-166222ee4097
 ms.openlocfilehash: 81a3ec88c336ddeb550f133e657854b3b6f89d96
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023292"
 ---
 # <a name="eventreceiver"></a>event_receiver
@@ -32,7 +32,7 @@ Vytvoří přijímače událostí (jímky).
 
 ### <a name="parameters"></a>Parametry
 
-* – typ*<br/>
+*type*<br/>
 Výčet jedné z následujících hodnot:
 
 - `native` pro nespravovaný kód jazyka C/C++ (výchozí pro nativní třídy).
@@ -45,7 +45,7 @@ Výčet jedné z následujících hodnot:
     #include <atlcom.h>
     ```
 
-*má*<br/>
+*layout_dependent*<br/>
 Zadejte *layout_dependent* pouze tehdy, pokud `type` = **com**. *layout_dependent* je logická hodnota:
 
 - **Hodnota TRUE** znamená, že podpis delegáty, v případě, že příjemce musí přesně odpovídat těch, ke kterým jsou připojeny události zdroje. Názvy obslužných rutin událostí příjemce musí shodovat s názvy zadané v zdrojové rozhraní relevantní události. Je nutné použít `coclass` při *layout_dependent* je **true**. Je efektivnější zadejte **true**.
@@ -54,7 +54,7 @@ Zadejte *layout_dependent* pouze tehdy, pokud `type` = **com**. *layout_dependen
 
 ## <a name="remarks"></a>Poznámky
 
-**Event_receiver** C++ atribut určuje, zda třídu nebo strukturu, do které se použije přijímače událostí pomocí sjednocené události modelu Visual C++.
+**Event_receiver** C++ atribut určuje, zda třídu nebo strukturu, do které se použije přijímače událostí pomocí Vizuálu C++ jednotné události modelu.
 
 **event_receiver** se používá s [event_source](event-source.md) atribut a [__hook](../../cpp/hook.md) a [__unhook](../../cpp/unhook.md) klíčová slova. Použití `event_source` k vytvoření zdroje událostí. Použití **__hook** v rámci metod přijímače událostí k přidružení metody příjemce událostí ("připojení") na události zdroje událostí. Použití **__unhook** zrušení jejich přidružení.
 
