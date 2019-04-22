@@ -29,10 +29,10 @@ helpviewer_keywords:
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
 ms.openlocfilehash: 24d79c684226d57839161946255781c3bdd5a043
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779089"
 ---
 # <a name="coledataobject-class"></a>Coledataobject – třída
@@ -341,6 +341,6 @@ void Release();
 [Ukázky knihovny MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [Ukázky knihovny MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[COleDataSource Class](../../mfc/reference/coledatasource-class.md)<br/>
-[Coleclientitem – třída](../../mfc/reference/coleclientitem-class.md)<br/>
-[COleServerItem Class](../../mfc/reference/coleserveritem-class.md)
+[COleDataSource – třída](../../mfc/reference/coledatasource-class.md)<br/>
+[COleClientItem – třída](../../mfc/reference/coleclientitem-class.md)<br/>
+[COleServerItem – třída](../../mfc/reference/coleserveritem-class.md)

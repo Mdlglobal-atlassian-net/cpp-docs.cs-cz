@@ -17,15 +17,15 @@ helpviewer_keywords:
 - __incgsdword intrinsic
 ms.assetid: 06bfdf4f-7643-4fe0-8455-60ce3068073e
 ms.openlocfilehash: 3b96fbdb343fa40b6615ac7f91f83099a294624c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023344"
 ---
 # <a name="incgsbyte-incgsword-incgsdword-incgsqword"></a>__incgsbyte __incgsword, __incgsdword, __incgsqword
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Přidejte jej na hodnotu v paměti umístění určené posun vzhledem k začátku `GS` segmentu.
 
@@ -64,7 +64,7 @@ void __incgsqword(
 
 Tyto rutiny jsou dostupné jenom jako vnitřní.
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

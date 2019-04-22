@@ -7,10 +7,10 @@ helpviewer_keywords:
 - helpstringdll attribute [C++]
 ms.assetid: 121271fa-f061-492b-b87f-bbfcf4b02e7b
 ms.openlocfilehash: 72f5926018e3ac7ec4770f83d7a2c3438b67d861
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025202"
 ---
 # <a name="helpstringdll"></a>helpstringdll
@@ -25,7 +25,7 @@ Určuje název knihovny DLL použít k provádění vyhledání řetězce dokume
 
 ### <a name="parameters"></a>Parametry
 
-*odkazy řetězců*<br/>
+*string*<br/>
 Knihovny DLL použít k provádění vyhledání řetězce dokumentu.
 
 ## <a name="remarks"></a>Poznámky
@@ -55,8 +55,8 @@ __interface IMyI
 |-|-|
 |**Platí pro**|**Třída**, **rozhraní**, rozhraní – metoda|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádný|
+|**Vyžadované atributy**|Žádný|
+|**Neplatné atributy**|Žádné|
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 

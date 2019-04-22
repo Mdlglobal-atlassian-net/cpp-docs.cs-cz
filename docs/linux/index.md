@@ -2,8 +2,13 @@
 layout: LandingPage
 title: Vývoj pro Linux v dokumentaci k C++
 description: Vytvářet a ladit aplikace běžící na Linuxu.
+ms.openlocfilehash: 516b57ca976ddd89081581978c6ac5f86c64876e
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.translationtype: MT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58779765"
 ---
-
 # <a name="linux-development-with-c-documentation"></a>Vývoj pro Linux v dokumentaci k C++
 
 Visual Studio 2017 umožňuje vytvářet a ladit aplikace běžící na Linuxu.

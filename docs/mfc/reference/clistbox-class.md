@@ -103,10 +103,10 @@ helpviewer_keywords:
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
 ms.openlocfilehash: b448f725bac68c2b67dc44d660c664c075aa86da
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778764"
 ---
 # <a name="clistbox-class"></a>Clistbox – třída
@@ -227,9 +227,9 @@ Pokud přidělení paměti v `CListBox` objektu, přepsat `CListBox` destruktor 
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -374,7 +374,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Určuje styl pole se seznamem. Použít libovolnou kombinaci [styly seznamů](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) do pole.
 
-*rect*<br/>
+*Rect*<br/>
 Určuje velikost pole se seznamem a umístění. Může být buď `CRect` objektu nebo `RECT` struktury.
 
 *pParentWnd*<br/>
@@ -478,7 +478,7 @@ int Dir(
 *attr*<br/>
 Může být libovolná kombinace **výčtu** podle hodnoty `CFile::GetStatu` [s](../../mfc/reference/cfile-class.md#getstatus), nebo libovolnou kombinaci následujícího:
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |0x0000|Soubor může číst nebo zapisovat do.|
 |0x0001|Soubor můžete číst z ale nezapíše se do.|
@@ -1039,7 +1039,7 @@ UINT ItemFromPoint(
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pt*<br/>
 Bod, pro kterou se má vyhledat nejbližší položky určen ve vztahu k levého horního rohu klientské oblasti pole se seznamem.
 
 *bOutside*<br/>
@@ -1242,7 +1242,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>Parametry
 
-*nVyberte*<br/>
+*nSelect*<br/>
 Určuje řetězec, který má být vybrán index založený na nule. Pokud *nVyberte* se -1, pole se seznamem je nastavena na mít žádný výběr.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1539,11 +1539,11 @@ Vrácená hodnota 0 nebo větší Určuje index položky v seznamu a označuje, 
 ## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
-[Třída CWnd](../../mfc/reference/cwnd-class.md)<br/>
+[CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[Třída CWnd](../../mfc/reference/cwnd-class.md)<br/>
+[CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [CButton – třída](../../mfc/reference/cbutton-class.md)<br/>
 [CComboBox – třída](../../mfc/reference/ccombobox-class.md)<br/>
-[Cedit – třída](../../mfc/reference/cedit-class.md)<br/>
-[CScrollBar Class](../../mfc/reference/cscrollbar-class.md)<br/>
-[Cstatic – třída](../../mfc/reference/cstatic-class.md)
+[CEdit – třída](../../mfc/reference/cedit-class.md)<br/>
+[CScrollBar – třída](../../mfc/reference/cscrollbar-class.md)<br/>
+[CStatic – třída](../../mfc/reference/cstatic-class.md)

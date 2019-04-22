@@ -9,15 +9,15 @@ helpviewer_keywords:
 - __movsb intrinsic
 ms.assetid: ba5469f6-f797-4cd2-bee8-74c7666c26d4
 ms.openlocfilehash: 42124743c27b297c723780c1bc19038fb54e638d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024991"
 ---
 # <a name="movsb"></a>__movsb
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Z nich generuje řetězec přesunout (`rep movsb`) instrukce.
 
@@ -33,7 +33,7 @@ void __movsb(
 
 #### <a name="parameters"></a>Parametry
 
-*Cíl*<br/>
+*cíl*<br/>
 [out] Ukazatel na cíl kopírování.
 
 *Zdroj*<br/>
@@ -80,7 +80,7 @@ int main()
 A big black dog. A big black dog.
 ```
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

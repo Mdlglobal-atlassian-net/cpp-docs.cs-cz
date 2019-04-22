@@ -7,10 +7,10 @@ helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
 ms.openlocfilehash: 2790c3de01d21242daee73fc442ad22d88739355
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023877"
 ---
 # <a name="rdx"></a>rdx
@@ -25,7 +25,7 @@ Vytvoří klíč registru nebo upraví stávající klíč registru.
 
 ### <a name="parameters"></a>Parametry
 
-*klíč*<br/>
+*key*<br/>
 Název klíče, který má být vytvořen nebo otevřen.
 
 *Název hodnoty*<br/>
@@ -48,8 +48,8 @@ Tento atribut lze použít ve spojení s [coclass](coclass.md), [progid](progid.
 |-|-|
 |**Platí pro**|**Třída** nebo **struktura** člena|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
-|**Neplatné atributy**|Žádný|
+|**Vyžadované atributy**|Žádné|
+|**Neplatné atributy**|Žádné|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 

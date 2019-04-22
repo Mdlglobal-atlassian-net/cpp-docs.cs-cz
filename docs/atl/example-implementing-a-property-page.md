@@ -5,10 +5,10 @@ helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
 ms.openlocfilehash: 9aaf75916196f33904a51289d0a49725e042aa9e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777035"
 ---
 # <a name="example-implementing-a-property-page"></a>Příklad: Implementace stránky vlastností
@@ -127,7 +127,7 @@ Chcete-li zobrazit tuto stránku, je potřeba vytvořit jednoduché pomocný obj
 
 Použít [dialogové okno Přidat třídu](../ide/add-class-dialog-box.md) a [Průvodce jednoduchý objekt knihovny ATL](../atl/reference/atl-simple-object-wizard.md) pro vygenerování nové třídy a použití `Helper` jako jeho krátký název. Po vytvoření, přidejte metodu, jak je znázorněno v následující tabulce.
 
-|Položka|Hodnota|
+|Položka|Value|
 |----------|-----------|
 |Název metody|`ShowPage`|
 |Parametry|`[in] BSTR bstrCaption, [in] BSTR bstrID, [in] IUnknown* pUnk`|

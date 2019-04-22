@@ -6,10 +6,10 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: b2313352-480d-488b-8c35-6242ffd3a549
 ms.openlocfilehash: aa67d45dfc0fadd300caeaaeb8a7c25bb1c38bcb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023565"
 ---
 # <a name="method-attributes"></a>Atributy metody
@@ -20,7 +20,7 @@ Následující atributy se vztahují na metody ve třídě, coclass nebo rozhran
 |---------------|-----------------|
 |[bindable](bindable.md)|Označuje, že vlastnost podporuje datové vazby.|
 |[call_as](call-as.md)|Povolí funkci nonremotable namapovat na vzdálenou funkci.|
-|[vlastní](custom-cpp.md)|Umožňuje definovat vlastní atribut.|
+|[custom](custom-cpp.md)|Umožňuje definovat vlastní atribut.|
 |[db_column](db-column.md)|Zadaný sloupec se váže k dané sadě řádků.|
 |[db_command](db-command.md)|Vytvoří příkaz OLE DB.|
 |[db_param](db-param.md)|Přidruží zadaný členskou proměnnou vstupní nebo výstupní parametr a odděluje citaci proměnné.|
@@ -38,7 +38,7 @@ Následující atributy se vztahují na metody ve třídě, coclass nebo rozhran
 |[id](id.md)|Určuje identifikátor DISPID pro členské funkce (vlastnost nebo metoda v rozhraní nebo dispinterface).|
 |[immediatebind](immediatebind.md)|Označuje, že databázi budou okamžitě oznamovat všechny změny vlastnosti objektu vázané na data.|
 |[in](in-cpp.md)|Označuje, že je parametr předat z volající procedury do volané procedury.|
-|[místní](local-cpp.md)|Umožňuje používat v kompilátoru MIDL jako generátor záhlaví při použití v záhlaví rozhraní. Při použití jednotlivých funkcí, určuje místní postupu, pro které jsou generovány žádné zástupné procedury.|
+|[local](local-cpp.md)|Umožňuje používat v kompilátoru MIDL jako generátor záhlaví při použití v záhlaví rozhraní. Při použití jednotlivých funkcí, určuje místní postupu, pro které jsou generovány žádné zástupné procedury.|
 |[nonbrowsable](nonbrowsable.md)|Označuje, že člen rozhraní, nebude se zobrazovat v prohlížeči vlastností.|
 |[propget](propget.md)|Určuje funkci, která přistupujícího objektu vlastnosti.|
 |[propput](propput.md)|Určuje funkci, která nastavení vlastnosti.|

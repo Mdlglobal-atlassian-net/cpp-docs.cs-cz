@@ -35,15 +35,15 @@ helpviewer_keywords:
 - _InterlockedXor intrinsic
 ms.assetid: faef1796-cb5a-4430-b1e2-9d5eaf9b4a91
 ms.openlocfilehash: c86a743df84df37ffe3234d82d79abd987a4dcda
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023128"
 ---
 # <a name="interlockedxor-intrinsic-functions"></a>Vnitřní funkce _InterlockedXor
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Proveďte Atomický bitový exkluzivní or (XOR) operace na proměnnou sdíleny více vlákny.
 
@@ -202,7 +202,7 @@ int main()
 0xffff0000 0xffff00 0xff00ff00
 ```
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

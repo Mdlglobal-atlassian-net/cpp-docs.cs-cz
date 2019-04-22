@@ -8,15 +8,15 @@ helpviewer_keywords:
 - movntsd instruction
 ms.assetid: 2b4bea5e-e64e-45fa-9afc-88a2e4b82cfc
 ms.openlocfilehash: 3555b71e15d6f9c618a83f573d6da3cda9e7b705
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023513"
 ---
 # <a name="mmstreamsd"></a>_mm_stream_sd
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Zapíše data 64-bit do umístění v paměti bez zahlcení mezipamětí.
 
@@ -81,7 +81,7 @@ int main()
 d[0] = -1, d[1] = 1
 ```
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 Copyright 2007 by Advanced Micro Devices, Inc. Všechna práva vyhrazena. Reprodukovat se svolením rozšířené Micro zařízení, Inc.
 

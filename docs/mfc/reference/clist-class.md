@@ -51,10 +51,10 @@ helpviewer_keywords:
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
 ms.openlocfilehash: 383222e4892bccc653f010ce4939bca23f2adc93
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780948"
 ---
 # <a name="clist-class"></a>CList – třída
@@ -130,7 +130,7 @@ Další informace o používání `CList`, najdete v článku [kolekce](../../mf
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
 `CList`
 
@@ -291,7 +291,7 @@ const TYPE& GetAt(POSITION position) const;
 *TYP*<br/>
 Parametr šablony určující typ objektu v seznamu.
 
-*umístění*<br/>
+*Pozice*<br/>
 Pozice prvku, který chcete získat v seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -515,7 +515,7 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parametry
 
-*umístění*<br/>
+*Pozice*<br/>
 Hodnota pozice vrácené předchozím `GetNext`, `GetPrev`, nebo `Find` volání členské funkce.
 
 *ARG_TYPE*<br/>
@@ -542,7 +542,7 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parametry
 
-*umístění*<br/>
+*Pozice*<br/>
 Hodnota pozice vrácené předchozím `GetNext`, `GetPrev`, nebo `Find` volání členské funkce.
 
 *ARG_TYPE*<br/>
@@ -605,7 +605,7 @@ void RemoveAt(POSITION position);
 
 ### <a name="parameters"></a>Parametry
 
-*umístění*<br/>
+*Pozice*<br/>
 Pozice prvku, který chcete odebrat ze seznamu.
 
 ### <a name="remarks"></a>Poznámky
@@ -676,7 +676,7 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Pozice prvku, který chcete nastavit.
 
 *ARG_TYPE*<br/>
@@ -700,5 +700,5 @@ Ujistěte se, že hodnota pozice představuje platná pozice v seznamu. Pokud je
 [Ukázky knihovny MFC shromažďování](../../overview/visual-cpp-samples.md)<br/>
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[Cmap – třída](../../mfc/reference/cmap-class.md)<br/>
-[Carray – třída](../../mfc/reference/carray-class.md)
+[CMap – třída](../../mfc/reference/cmap-class.md)<br/>
+[CArray – třída](../../mfc/reference/carray-class.md)

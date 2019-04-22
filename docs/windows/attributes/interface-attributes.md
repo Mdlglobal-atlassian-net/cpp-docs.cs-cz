@@ -6,20 +6,20 @@ helpviewer_keywords:
 - interface attributes
 ms.assetid: 27fcdfee-abce-4585-8b53-ee31635356e8
 ms.openlocfilehash: 8218ccb66c6be9edef5d7de751a73bf4753d069f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027202"
 ---
 # <a name="interface-attributes"></a>Atributy rozhraní
 
-Následující atributy se vztahují na [rozhraní (nebo __interface)](../../cpp/interface.md) – klíčové slovo C++.
+Následující atributy se vztahují na [rozhraní (nebo __interface)](../../cpp/interface.md) C++ – klíčové slovo.
 
 |Atribut|Popis|
 |---------------|-----------------|
 |[async_uuid](async-uuid.md)|Určuje UUID, který nasměruje definovat synchronní a asynchronní verze rozhraní modelu COM kompilátoru MIDL.|
-|[vlastní](custom-cpp.md)|Umožňuje definovat vlastní atributy.|
+|[custom](custom-cpp.md)|Umožňuje definovat vlastní atributy.|
 |[dispinterface](dispinterface.md)|Umístí rozhraní v souboru IDL jako rozhraní odbavení.|
 |[dual](dual.md)|Umístí rozhraní v souboru IDL jako duální rozhraní.|
 |[export](export.md)|Způsobí, že datová struktura budou umístěny v souboru IDL.|
@@ -30,10 +30,10 @@ Následující atributy se vztahují na [rozhraní (nebo __interface)](../../cpp
 |[helpstringdll](helpstringdll.md)|Určuje název knihovny DLL použít k provádění vyhledání řetězce dokumentu (lokalizace).|
 |[hidden](hidden.md)|Označuje, že položka existuje, ale nebude se zobrazovat v prohlížeči uživatele.|
 |[library_block](library-block.md)|Umístí konstrukci uvnitř bloku knihovny souboru IDL.|
-|[místní](local-cpp.md)|Umožňuje používat v kompilátoru MIDL jako generátor záhlaví při použití v záhlaví rozhraní. Při použití jednotlivých funkcí, určuje místní postupu, pro které jsou generovány žádné zástupné procedury.|
+|[local](local-cpp.md)|Umožňuje používat v kompilátoru MIDL jako generátor záhlaví při použití v záhlaví rozhraní. Při použití jednotlivých funkcí, určuje místní postupu, pro které jsou generovány žádné zástupné procedury.|
 |[nonextensible](nonextensible.md)|Určuje, že `IDispatch` implementace obsahuje pouze vlastnosti a metody uvedené v popisu rozhraní a nejde prodloužit s další členy v době běhu. Tento atribut je platný jenom pro [duální](dual.md) rozhraní.|
 |[odl](odl.md)|Označí rozhraní jako objekt popis jazyka (ODL) rozhraní.|
-|[odkazy objektů](object-cpp.md)|Určuje vlastní rozhraní.|
+|[object](object-cpp.md)|Určuje vlastní rozhraní.|
 |[oleautomation](oleautomation.md)|Označuje, že je kompatibilní s automatizací rozhraní.|
 |[pointer_default](pointer-default.md)|Určuje výchozí atribut ukazatele pro všechny odkazy s výjimkou ukazatelů nejvyšší úrovně, které se zobrazí v seznamech parametrů.|
 |[ptr](ptr.md)|Ukazatel se označí jako úplné ukazatel.|

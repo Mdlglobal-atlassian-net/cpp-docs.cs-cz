@@ -75,10 +75,10 @@ helpviewer_keywords:
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
 ms.openlocfilehash: c4c026975e9884ac2a0e6aaef31e799c2b5b09bf
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777373"
 ---
 # <a name="coleserveritem-class"></a>COleServerItem Class
@@ -95,7 +95,7 @@ class COleServerItem : public CDocItem
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleServerItem::COleServerItem](#coleserveritem)|Vytvoří `COleServerItem` objektu.|
 
@@ -509,7 +509,7 @@ virtual void OnDoVerb(LONG iVerb);
 *iVerb*<br/>
 Určuje příkaz pro spuštění. Může být některý z následujících akcí:
 
-|Hodnota|Význam|Symbol|
+|Value|Význam|Symbol|
 |-----------|-------------|------------|
 |0|primární požadavek|OLEIVERB_PRIMARY|
 |1|Sekundární příkaz|(Žádné)|

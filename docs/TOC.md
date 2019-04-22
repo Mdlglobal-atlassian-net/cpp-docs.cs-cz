@@ -40,7 +40,7 @@
 ### [Standardní knihovna C++](standard-library/cpp-standard-library-reference.md)
 ### [SafeInt – knihovna](safeint/safeint-library.md)
 #### [SafeInt – třída](safeint/safeint-class.md)
-#### [Funkce jazyka SafeInt](safeint/safeint-functions.md)
+#### [SafeInt – funkce](safeint/safeint-functions.md)
 #### [SafeIntException – třída](safeint/safeintexception-class.md)
 ### [OpenMP](parallel/openmp/openmp-in-visual-cpp.md)
 ### [MFC/ATL](mfc/mfc-and-atl.md)

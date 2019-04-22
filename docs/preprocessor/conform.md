@@ -10,10 +10,10 @@ helpviewer_keywords:
 - pragmas, conform
 ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
 ms.openlocfilehash: 35c3b06106779a9056f682ff76c6ed4b4ab1ab41
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026575"
 ---
 # <a name="conform"></a>conform
@@ -27,22 +27,22 @@ Určuje chování za běhu [/Zc: forscope](../build/reference/zc-forscope-force-
 
 ### <a name="parameters"></a>Parametry
 
-*name*<br/>
+*Jméno*<br/>
 Určuje název možnosti kompilátoru, který má být upraven. Jediné platné *název* je `forScope`.
 
-**Show**<br/>
+**show**<br/>
 (Volitelné) Způsobí, že aktuální nastavení *název* (true nebo false), který se má zobrazit pomocí upozornění v průběhu kompilace. Například, `#pragma conform(forScope, show)`.
 
 **on**, **off**<br/>
 (Volitelné) Nastavení *název* k **na** umožňuje [/Zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) – možnost kompilátoru. Výchozí hodnota je **vypnout**.
 
-**nabízených oznámení**<br/>
+**push**<br/>
 (Volitelné) Posune aktuální hodnotu *název* do zásobníku vnitřního kompilátoru. Pokud zadáte *identifikátor*, můžete zadat **na** nebo **vypnout** hodnota *název* doručí do zásobníku. Například, `#pragma conform(forScope, push, myname, on)`.
 
-**POP**<br/>
+**pop**<br/>
 (Volitelné) Nastaví hodnotu *název* hodnotu v horní části vnitřního zásobníku kompilátoru a potom vezme zásobníku. Pokud je zadaný identifikátor s **pop**, zásobníku bude odebrán, zpět, dokud najde záznam s *identifikátor*, které budou také být odebrány; aktuální hodnota pro *název* v Další záznam do zásobníku stane novou hodnotu *název*. Pokud zadáte **pop** s *identifikátor* , který není v záznamu v zásobníku, **pop** se ignoruje.
 
-*identifikátor*<br/>
+*identifier*<br/>
 (Volitelné) Může být součástí **nabízených** nebo **pop** příkazu. Pokud *identifikátor* se používá, pak **na** nebo **vypnout** specifikátor je také možné.
 
 ## <a name="example"></a>Příklad

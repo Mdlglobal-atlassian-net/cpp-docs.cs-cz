@@ -37,10 +37,10 @@ helpviewer_keywords:
 - GetSchemas method
 ms.assetid: bd7bf0d7-a1c6-4afa-88e3-cfdbdf560703
 ms.openlocfilehash: b764b571aae81f6225028cbe0d052d817d93d183
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024358"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl – třída
@@ -108,7 +108,7 @@ HRESULT CheckRestrictions(REFGUID rguidSchema,
 *rguidSchema*<br/>
 [in] Odkaz na identifikátor GUID sady řádků požadované schéma (například `DBSCHEMA_TABLES`).
 
-*cRestrictions –*<br/>
+*cRestrictions*<br/>
 [in] Počet omezení, které příjemce předaný pro sadu řádků schématu.
 
 *rgRestrictions*<br/>
@@ -145,7 +145,7 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
 *pUnkOuter*<br/>
 [in] Vnější [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) pro agregaci, jinak hodnota NULL.
 
-*cRestrictions –*<br/>
+*cRestrictions*<br/>
 [in] Počet omezení použitých na sady řádků schématu.
 
 *rgRestrictions*<br/>
@@ -188,7 +188,7 @@ void SetRestrictions(ULONG cRestrictions,
 
 #### <a name="parameters"></a>Parametry
 
-*cRestrictions –*<br/>
+*cRestrictions*<br/>
 [in] Počet omezení *rgRestrictions* pole a počet identifikátory GUID *rguidSchema* pole.
 
 *rguidSchema*<br/>
@@ -234,7 +234,7 @@ STDMETHOD (GetRowset)(IUnknown *pUnkOuter,
 *rguidSchema*<br/>
 [in] Odkaz na identifikátor GUID sady řádků požadované schéma (například `DBSCHEMA_TABLES`).
 
-*cRestrictions –*<br/>
+*cRestrictions*<br/>
 [in] Počet omezení použít v sadě řádků.
 
 *rgRestrictions*<br/>

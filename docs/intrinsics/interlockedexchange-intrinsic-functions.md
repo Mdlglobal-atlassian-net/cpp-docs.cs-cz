@@ -45,15 +45,15 @@ helpviewer_keywords:
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
 ms.openlocfilehash: 3945b8a7516962531050e999e96bdef31b179bbb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021492"
 ---
 # <a name="interlockedexchange-intrinsic-functions"></a>_InterlockedExchange Intrinsic Functions
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Generuje instrukce atomic nastavit zadanou hodnotu.
 
@@ -144,10 +144,10 @@ __int64 _InterlockedExchange64_rel(
 
 #### <a name="parameters"></a>Parametry
 
-*Target*<br/>
+*Cíl*<br/>
 [out v] Ukazatel na hodnotu, která bude vyměněn. Funkce nastaví tuto proměnnou na `Value` a vrátí jeho předchozí hodnotu.
 
-*Value*<br/>
+*Hodnota*<br/>
 [in] Hodnota mají vyměnit s hodnotou odkazované `Target`.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -180,10 +180,10 @@ Tyto rutiny jsou dostupné jenom jako vnitřní funkce.
 
 Pro ukázku toho, jak používat `_InterlockedExchange`, naleznete v tématu [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
-[klíčová slova](../cpp/keywords-cpp.md)<br/>
+[Klíčová slova](../cpp/keywords-cpp.md)<br/>
 [Konflikty s kompilátorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

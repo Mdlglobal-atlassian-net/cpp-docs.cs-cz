@@ -1,5 +1,5 @@
 ---
-title: call_as (atribut C++ COM)
+title: call_as (C++ atributů COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.call_as
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
 ms.openlocfilehash: a0051cdca6673800b37d5733c0b849da24010fcb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023916"
 ---
 # <a name="callas"></a>call_as
@@ -25,7 +25,7 @@ Umožňuje [místní](local-cpp.md) funkce mají být namapovány na vzdálenou 
 
 ### <a name="parameters"></a>Parametry
 
-* – funkce*<br/>
+*– funkce*<br/>
 Lokální funkce, kterou chcete volat při vyvolání vzdálenou funkci.
 
 ## <a name="remarks"></a>Poznámky
@@ -56,8 +56,8 @@ __interface IMInterface {
 |-|-|
 |**Platí pro**|Metoda rozhraní|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádné|
+|**Vyžadované atributy**|Žádný|
+|**Neplatné atributy**|Žádný|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
@@ -65,4 +65,4 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](cp
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy metody](method-attributes.md)<br/>
-[místní](local-cpp.md)
+[local](local-cpp.md)

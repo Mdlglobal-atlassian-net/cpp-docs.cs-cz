@@ -79,10 +79,10 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
 ms.openlocfilehash: 818ce55e44d91520e568308a1a1e8a1fa0c8658d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780389"
 ---
 # <a name="cmfcribbongallery-class"></a>Cmfcribbongallery – třída
@@ -820,5 +820,5 @@ Chcete-li zjistit, konkrétní položku, uživatel vybral v galerii, zavolejte [
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[Cmfcribbonbutton – třída](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
-[Cmfcribbongallerymenubutton – třída](../../mfc/reference/cmfcribbongallerymenubutton-class.md)
+[CMFCRibbonButton – třída](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
+[CMFCRibbonGalleryMenuButton – třída](../../mfc/reference/cmfcribbongallerymenubutton-class.md)

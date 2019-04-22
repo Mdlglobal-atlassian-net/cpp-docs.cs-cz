@@ -29,10 +29,10 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
 ms.openlocfilehash: 9c31ed6f82f4280206bf233999fac74981636db3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776905"
 ---
 # <a name="colepastespecialdialog-class"></a>Colepastespecialdialog – třída
@@ -83,9 +83,9 @@ Další informace o dialogových oken OLE konkrétní, najdete v článku [dialo
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -384,6 +384,6 @@ Další informace najdete v tématu [OLEUIPASTESPECIAL](/windows/desktop/api/ole
 ## <a name="see-also"></a>Viz také:
 
 [Ukázky knihovny MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
-[Coledialog – třída](../../mfc/reference/coledialog-class.md)<br/>
+[COleDialog – třída](../../mfc/reference/coledialog-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[Coledialog – třída](../../mfc/reference/coledialog-class.md)
+[COleDialog – třída](../../mfc/reference/coledialog-class.md)

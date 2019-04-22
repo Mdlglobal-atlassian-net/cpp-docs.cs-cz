@@ -8,10 +8,10 @@ helpviewer_keywords:
 - TerminateMap function
 ms.assetid: 1c314a61-da5d-49bb-ac44-c34ee3c23b66
 ms.openlocfilehash: 2a451bf68bfb543ee5e82a9a48097cac7e8a9821
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026640"
 ---
 # <a name="terminatemap-function"></a>TerminateMap – funkce
@@ -32,7 +32,7 @@ inline bool TerminateMap(
 *module*<br/>
 A [modulu](module-class.md).
 
-*název_serveru*<br/>
+*serverName*<br/>
 Název dílčí sady objekty pro vytváření tříd v modulu určené parametrem *modulu*.
 
 *forceTerminate*<br/>

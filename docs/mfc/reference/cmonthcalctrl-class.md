@@ -91,10 +91,10 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
 ms.openlocfilehash: bd062a4e0d4db364c9cb628608c6af165dc0edc2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777165"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl Class
@@ -179,9 +179,9 @@ Další informace o použití ovládací prvek měsíční kalendář, naleznete
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -226,10 +226,10 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Určuje kombinaci styly Windows použité pro ovládací prvek měsíční kalendář. Zobrazit [– styly ovládacích prvků kalendáře měsíce](/windows/desktop/Controls/month-calendar-control-styles) v sadě Windows SDK pro další informace o stylech.
 
-*rect*<br/>
+*Rect*<br/>
 Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury. Obsahuje umístění a velikost ovládací prvek měsíční kalendář.
 
-*PT*<br/>
+*pt*<br/>
 Odkaz na [bodu](/previous-versions/dd162805\(v=vs.85\)) strukturu, která identifikuje umístění ovládací prvek měsíční kalendář.
 
 *pParentWnd*<br/>
@@ -373,7 +373,7 @@ DWORD GetCurrentView() const;
 
 Aktuální zobrazení, který je označen pomocí jedné z následujících hodnot:
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |MCMV_MONTH|Měsíční zobrazení|
 |MCMV_YEAR|Roční zobrazení|
@@ -587,7 +587,7 @@ Ukazatel `SYSTEMTIME` struktury obsahující datum v nejvyšší konec rozsahu.
 *dwFlags*<br/>
 Hodnota, která určuje obor omezení rozsahu, který se má načíst. Tato hodnota musí být jeden z následujících akcí.
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |GMR_DAYSTATE|Zahrnout před a koncové měsíců viditelný rozsah, které jsou zobrazeny pouze částečně.|
 |GMR_VISIBLE|Zahrnout jenom v měsících, které jsou zcela zobrazeny.|
@@ -1305,6 +1305,6 @@ Tato metoda odesílá [MCM_SIZERECTTOMIN](/windows/desktop/Controls/mcm-sizerect
 ## <a name="see-also"></a>Viz také:
 
 [Ukázka CMNCTRL1 knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
-[Třída CWnd](../../mfc/reference/cwnd-class.md)<br/>
+[CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[Cdatetimectrl – třída](../../mfc/reference/cdatetimectrl-class.md)
+[CDateTimeCtrl – třída](../../mfc/reference/cdatetimectrl-class.md)

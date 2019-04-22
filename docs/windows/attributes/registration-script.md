@@ -1,5 +1,5 @@
 ---
-title: registration_script – (atribut C++ COM)
+title: registration_script – (C++ atributů COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.registration_script
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - registration_script attribute
 ms.assetid: 786f8072-9187-4163-a979-7a604dd4c888
 ms.openlocfilehash: 0b2c4d576a699dea7772821b5635944b2663c57c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024371"
 ---
 # <a name="registrationscript"></a>registration_script
@@ -25,7 +25,7 @@ Provede zadanou registraci vlastní skript.
 
 ### <a name="parameters"></a>Parametry
 
-*skript*<br/>
+*script*<br/>
 Úplná cesta k souboru registrace vlastní skript (.rgs). Hodnota **žádný**, jako například `script = "none"`, označuje, že coclass nemá žádné požadavky na registraci.
 
 ## <a name="remarks"></a>Poznámky

@@ -45,10 +45,10 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
 ms.openlocfilehash: 3ff74f5025d888077b51f8191f043237597dfdbe
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776970"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>Cmfcdesktopalertwnd – třída
@@ -66,7 +66,7 @@ class CMFCDesktopAlertWnd : public CWnd
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCDesktopAlertWnd::Create](#create)|Vytvoří a inicializuje okno výstrah plochy.|
 |[CMFCDesktopAlertWnd::GetAnimationSpeed](#getanimationspeed)|Vrátí rychlost animace.|

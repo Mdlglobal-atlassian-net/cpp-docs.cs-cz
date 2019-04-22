@@ -35,10 +35,10 @@ helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
 ms.openlocfilehash: aadaa64a936aee867766dfc0f7a6e190c9691ca6
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778023"
 ---
 # <a name="csecuritydesc-class"></a>Csecuritydesc – třída
@@ -58,7 +58,7 @@ class CSecurityDesc
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CSecurityDesc::CSecurityDesc](#csecuritydesc)|Konstruktor|
 |[CSecurityDesc::~CSecurityDesc](#dtor)|Destruktor.|
@@ -688,7 +688,7 @@ Jakmile popisovač zabezpečení je ve formátu řetězce, ho lze snadněji ulo�
 
 *Si* parametr může obsahovat následující příznaky SECURITY_INFORMATION:
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |OWNER_SECURITY_INFORMATION|Zahrnovat vlastníka.|
 |GROUP_SECURITY_INFORMATION|Zahrnují primární skupinu.|

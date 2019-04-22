@@ -4,10 +4,10 @@ ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: d71fe149-d804-4c6f-961d-43fe21ef8630
 ms.openlocfilehash: fce6e620600164e73d3708d98d8a7fa979e8ab42
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027470"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details – obor názvů
@@ -72,7 +72,7 @@ namespace Microsoft::WRL::Details;
 |Name|Popis|
 |----------|-----------------|
 |[ActivationFactoryCallback – funkce](activationfactorycallback-function.md)|Získá objekt factory aktivace pro ID zadaná aktivace.|
-|[Přesunout – funkce](move-function.md)|Zadaný argument přesune z jednoho umístění do druhého.|
+|[Move – funkce](move-function.md)|Zadaný argument přesune z jednoho umístění do druhého.|
 |[RaiseException – funkce](raiseexception-function.md)|Vyvolá výjimku v volajícího vlákna.|
 |[Swap – funkce (WRL)](swap-function-wrl.md)|Vymění hodnoty dvou zadaných argumentů.|
 |[TerminateMap – funkce](terminatemap-function.md)|Třída továrny v zadaném modulu vypne.|

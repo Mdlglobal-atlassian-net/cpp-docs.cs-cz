@@ -74,10 +74,10 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
 ms.openlocfilehash: 80ee43ae32416f9f62df419c4afbd46a0aa63cc8
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780480"
 ---
 # <a name="cmfcribbonedit-class"></a>Cmfcribbonedit – třída
@@ -187,7 +187,7 @@ CMFCRibbonEdit();
 *lpszLabel*<br/>
 [in] Popisek `CMFCRibbonEdit` ovládacího prvku.
 
-*nvybrán Nobrázek*<br/>
+*nImage*<br/>
 [in] Index malý obrázek pro `CMFCRibbonEdit` ovládacího prvku. Kolekce malé obrázky se spravuje pomocí nadřazené kategorie pásu karet.
 
 ### <a name="remarks"></a>Poznámky
@@ -283,7 +283,7 @@ void EnableSpinButtons(
 
 ### <a name="parameters"></a>Parametry
 
-*Nminimum*<br/>
+*nMin*<br/>
 [in] Minimální hodnotu číselníku.
 
 *nMax*<br/>
@@ -532,7 +532,7 @@ virtual void OnDrawOnList(
 *nTextOffset*<br/>
 [in] Vzdálenost v pixelech na levé straně pole se seznamem k zobrazení textu.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Obdélník zobrazení pro `CMFCRibbonEdit` ovládacího prvku.
 
 *bIsSelected*<br/>
@@ -604,7 +604,7 @@ virtual void OnLButtonDown(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Tento parametr se nepoužívá.
 
 ### <a name="remarks"></a>Poznámky
@@ -619,7 +619,7 @@ virtual void OnLButtonUp(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 [in] Tento parametr se nepoužívá.
 
 ### <a name="remarks"></a>Poznámky
@@ -754,5 +754,5 @@ TRUE, pokud chcete nastavit šířku pro režim s plovoucí desetinnou čárkou.
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[Cmfcribbonbutton – třída](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
+[CMFCRibbonButton – třída](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
 [CMFCRibbonBar – třída](../../mfc/reference/cmfcribbonbar-class.md)

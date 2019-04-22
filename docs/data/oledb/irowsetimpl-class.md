@@ -92,10 +92,10 @@ helpviewer_keywords:
 - m_rgRowHandles
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
 ms.openlocfilehash: 47b03a542933c6223e098bc9d8fa8d45bf5e047b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024449"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl – třída
@@ -147,7 +147,7 @@ Jednotky úložiště pro všechny popisovačů řádků uchovávat zprostředko
 |[IRowsetImpl](#irowsetimpl)|Konstruktor Nebyla volána přímo uživatelem.|
 |[RefRows](#refrows)|Volané [addrefrows –](../../data/oledb/irowsetimpl-addrefrows.md) a [releaserows –](../../data/oledb/irowsetimpl-releaserows.md). Nebyla volána přímo uživatelem.|
 |[ReleaseRows](#releaserows)|Verze řádků.|
-|[Volání metody RestartPosition](#restartposition)|Přemístí pozici na počáteční pozici; To znamená vytvořit svůj postoj při první sadu řádků.|
+|[RestartPosition](#restartposition)|Přemístí pozici na počáteční pozici; To znamená vytvořit svůj postoj při první sadu řádků.|
 |[SetDBStatus](#setdbstatus)|Nastaví stav příznaky pro zadané pole.|
 
 ### <a name="data-members"></a>Datové členy
@@ -198,7 +198,7 @@ HRESULT CreateRow(DBROWOFFSET lRowsOffset,
 *lRowsOffset*<br/>
 Pozice kurzoru řádku, který vytváří.
 
-*získaná hodnota cRowsObtained*<br/>
+*cRowsObtained*<br/>
 Odkaz se předá zpět do uživatele udávající počet řádků, které vytvořili.
 
 *rgRows*<br/>
@@ -250,7 +250,7 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
 *currentRow*<br/>
 [in] Na aktuálním řádku.
 
-*názvy sloupců*<br/>
+*columnNames*<br/>
 [in] Sloupec, pro který je požadovaný stav.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -367,7 +367,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
 *currentRow*<br/>
 Na aktuálním řádku.
 
-*Vlastnost columnInfo*<br/>
+*columnInfo*<br/>
 Sloupec, pro který je nastaven stav.
 
 ### <a name="return-value"></a>Návratová hodnota

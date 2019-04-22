@@ -9,15 +9,15 @@ helpviewer_keywords:
 - __writemsr intrinsic
 ms.assetid: 938b1553-51a8-4822-a818-6bed79b0fde5
 ms.openlocfilehash: ac57bac1d132c581ee12048b89d13ed1d1fdb7da
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026341"
 ---
 # <a name="writemsr"></a>__writemsr
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Generuje zápisu pro konkrétní registraci modelu (`wrmsr`) instrukce.
 
@@ -32,7 +32,7 @@ void __writemsr(
 
 #### <a name="parameters"></a>Parametry
 
-*Registr*<br/>
+*Register*<br/>
 [in] Model konkrétním registru.
 
 *Hodnota*<br/>
@@ -50,7 +50,7 @@ void __writemsr(
 
 Tato funkce slouží pouze v režimu jádra a tato rutina je dostupný jenom jako vnitřní.
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

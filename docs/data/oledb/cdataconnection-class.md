@@ -66,10 +66,10 @@ helpviewer_keywords:
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
 ms.openlocfilehash: 94c7025185a24b07d5968157d49c856d4359b33a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021628"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection – třída
@@ -93,7 +93,7 @@ class CDataConnection
 |||
 |-|-|
 |[CDataConnection](#cdataconnection)|Konstruktor Vytvoří a inicializuje `CDataConnection` objektu.|
-|[Kopírovat](#copy)|Vytvoří kopii existující datové připojení.|
+|[kopírování](#copy)|Vytvoří kopii existující datové připojení.|
 |[Otevřít](#open)|Otevře připojení ke zdroji dat pomocí inicializačního řetězce.|
 |[OpenNewSession](#opennewsession)|Otevře se nová relace pro aktuální připojení.|
 
@@ -102,11 +102,11 @@ class CDataConnection
 |||
 |-|-|
 |[BOOL – operátor](#op_bool)|Určuje, zda aktuální relace je otevřený, nebo ne.|
-|[operátor bool](#op_bool_ole)|Určuje, zda aktuální relace je otevřený, nebo ne.|
+|[bool – operátor](#op_bool_ole)|Určuje, zda aktuální relace je otevřený, nebo ne.|
 |[operátor CDataSource &](#op_cdata_amp)|Vrátí odkaz na obsaženého objektu `CDataSource` objektu.|
 |[operátor CDataSource *](#op_cdata_star)|Vrací ukazatel na obsaženého objektu `CDataSource` objektu.|
-|[operátor CSession&](#op_csession_amp)|Vrátí odkaz na obsaženého objektu `CSession` objektu.|
-|[operátor CSession*](#op_csession_star)|Vrací ukazatel na obsaženého objektu `CSession` objektu.|
+|[operátor CSession &](#op_csession_amp)|Vrátí odkaz na obsaženého objektu `CSession` objektu.|
+|[operátor CSession *](#op_csession_star)|Vrací ukazatel na obsaženého objektu `CSession` objektu.|
 
 ## <a name="remarks"></a>Poznámky
 

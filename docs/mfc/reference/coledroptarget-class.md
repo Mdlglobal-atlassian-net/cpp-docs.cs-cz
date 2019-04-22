@@ -25,10 +25,10 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
 ms.openlocfilehash: 9a1633ed48c763b986f3421c33589a05f8bba126
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781637"
 ---
 # <a name="coledroptarget-class"></a>COleDropTarget Class
@@ -72,9 +72,9 @@ Další informace o operací přetažení myší pomocí OLE, najdete v článku
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 `COleDropTarget`
 
@@ -117,7 +117,7 @@ Odkazuje na datový objekt, který obsahuje data, která se dá přetáhnout.
 *dwKeyState*<br/>
 Obsahuje informace o stavu modifikační klávesy. Jedná se o kombinaci libovolný počet následující: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON.
 
-*Bod*<br/>
+*point*<br/>
 Obsahuje aktuální umístění kurzoru v souřadnicích klienta.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -182,7 +182,7 @@ Odkazuje na datový objekt, který obsahuje data, která mají být vyřazeny.
 *dwKeyState*<br/>
 Obsahuje informace o stavu modifikační klávesy. Jedná se o kombinaci libovolný počet následující: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON.
 
-*Bod*<br/>
+*point*<br/>
 Obsahuje aktuální umístění kurzoru v souřadnicích klienta.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -228,7 +228,7 @@ Odkazuje na okno, které se ukazatel myši momentálně nachází.
 *dwKeyState*<br/>
 Obsahuje informace o stavu modifikační klávesy. Jedná se o kombinaci libovolný počet následující: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON.
 
-*Bod*<br/>
+*point*<br/>
 Obsahuje umístění kurzoru v pixelech, vzhledem k obrazovce.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -278,7 +278,7 @@ Efekt, který uživatel vybral pro operaci přetažení. Může být jeden nebo 
 
 - Odkaz A DROPEFFECT_LINK z vyřazené dat na původní data by byla založena.
 
-*Bod*<br/>
+*point*<br/>
 Obsahuje umístění kurzoru v pixelech, vzhledem k obrazovce.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -317,10 +317,10 @@ Odkazuje na datový objekt, který obsahuje data, která mají být vyřazeny.
 *dropDefault*<br/>
 Efekt, který uživatel vybral pro operaci přetažení výchozí na základě aktuálního stavu klíče. Může být DROPEFFECT_NONE. Přetažení efekty jsou popsány v části poznámky.
 
-*rozevíracího seznamu*<br/>
+*dropList*<br/>
 Seznam rozevírací efekty, které podporuje zdroje přemístění. Přetažení efekt hodnoty lze spojovat pomocí bitový operátor OR (**&#124;**) operace. Přetažení efekty jsou popsány v části poznámky.
 
-*Bod*<br/>
+*point*<br/>
 Obsahuje umístění kurzoru v pixelech, vzhledem k obrazovce.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -390,4 +390,4 @@ Další informace najdete v tématu [RevokeDragDrop](/windows/desktop/api/ole2/n
 [Ukázky knihovny MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [CCmdTarget – třída](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[COleDropSource Class](../../mfc/reference/coledropsource-class.md)
+[COleDropSource – třída](../../mfc/reference/coledropsource-class.md)

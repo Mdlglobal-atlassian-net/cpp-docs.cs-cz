@@ -8,10 +8,10 @@ f1_keywords:
 helpviewer_keywords:
 - AgileEventSource class
 ms.openlocfilehash: 095c61dcef208028bf1c0f4b3443ba10110da8ed
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025859"
 ---
 # <a name="agileeventsource-class"></a>Agileeventsource – třída
@@ -40,7 +40,7 @@ Rozhraní pro delegáta, který představuje obslužnou rutinu události.
 
 ## <a name="remarks"></a>Poznámky
 
-Většinu komponent v prostředí Windows Runtime jsou agilní komponenty. Další informace najdete v tématu [vláken a zařazování (C + +/ CX)](../../cppcx/threading-and-marshaling-c-cx.md).
+Většinu komponent v prostředí Windows Runtime jsou agilní komponenty. Další informace najdete v tématu [vláken a zařazování (C++/CX)](../../cppcx/threading-and-marshaling-c-cx.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -80,7 +80,7 @@ HRESULT Add(
 *delegateInterface*<br/>
 Rozhraní pro objekt delegáta, který představuje obslužnou rutinu události.
 
-*Token*<br/>
+*token*<br/>
 Po dokončení této operace, popisovač, který představuje událost. Používat tento token parametru `Remove()` metoda zahodíte obslužné rutiny události.
 
 ### <a name="return-value"></a>Návratová hodnota

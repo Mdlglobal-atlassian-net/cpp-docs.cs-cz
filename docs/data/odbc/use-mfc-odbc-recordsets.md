@@ -6,10 +6,10 @@ helpviewer_keywords:
 - ODBC recordsets
 ms.assetid: ebde4180-e3de-474a-a5ab-6135e41763a7
 ms.openlocfilehash: 9d6a2b49f518fd9eaacf589e893bc240d1409a4b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023890"
 ---
 # <a name="use-mfc-odbc-recordsets"></a>Použití sad záznamů rozhraní MFC ODBC
@@ -78,4 +78,4 @@ Tato témata vysvětlují, jak pracovat s sad záznamů rozhraní ODBC prostřed
 
 ## <a name="see-also"></a>Viz také:
 
-[ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)
+[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

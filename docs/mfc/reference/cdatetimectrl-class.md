@@ -41,10 +41,10 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
 ms.openlocfilehash: 8c69473ab813c2fa692044fddc406a74a5aeb197
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779817"
 ---
 # <a name="cdatetimectrl-class"></a>Cdatetimectrl – třída
@@ -96,9 +96,9 @@ Ovládací prvek Výběr data a času také používá oznámení a zpětná vol
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget –](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -157,7 +157,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Určuje kombinaci – styly ovládacího prvku datum čas. Zobrazit [datum a čas – styly ovládacího prvku pro výběr](/windows/desktop/Controls/date-and-time-picker-control-styles) v sadě Windows SDK pro další informace o stylech výběr data a času.
 
-*rect*<br/>
+*Rect*<br/>
 Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury, což je umístění a velikost prvku Výběr data a času.
 
 *pParentWnd*<br/>
@@ -446,7 +446,7 @@ COLORREF SetMonthCalColor(
 *iColor*<br/>
 **int** hodnotu určující, které oblasti ovládací prvek měsíční kalendář nastavit. Tato hodnota může být jedna z následujících akcí.
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
 |MCSC_BACKGROUND|Nastavte barvu pozadí zobrazují mezi měsíců.|
 |MCSC_MONTHBK|Nastavte barvu pozadí zobrazí během jednoho měsíce.|
@@ -600,6 +600,6 @@ Tato členská funkce implementuje chování zprávy Win32 [DTM_SETSYSTEMTIME](/
 ## <a name="see-also"></a>Viz také:
 
 [Ukázka CMNCTRL1 knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
-[Třída CWnd](../../mfc/reference/cwnd-class.md)<br/>
+[CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CMonthCalCtrl Class](../../mfc/reference/cmonthcalctrl-class.md)
+[CMonthCalCtrl – třída](../../mfc/reference/cmonthcalctrl-class.md)

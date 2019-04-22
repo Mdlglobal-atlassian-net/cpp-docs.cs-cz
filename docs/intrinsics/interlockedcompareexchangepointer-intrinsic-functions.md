@@ -25,15 +25,15 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
 ms.openlocfilehash: 2db18c73f7765454d29e2dfdbd9408f62c51d32a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024813"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer Intrinsic Functions
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Provádí atomické operace, která ukládá `Exchange` adresa v `Destination` řešit, pokud `Comparand` a `Destination` adresa jsou stejné.
 
@@ -79,7 +79,7 @@ long _InterlockedCompareExchangePointer_rel (
 
 #### <a name="parameters"></a>Parametry
 
-*Cíl*<br/>
+*cíl*<br/>
 [out v] Ukazatel na ukazatel na cílové hodnoty. Znaménko se ignoruje.
 
 *Exchange*<br/>
@@ -98,7 +98,7 @@ Vrácená hodnota je počáteční hodnota cíle.
 |---------------|------------------|------------|
 |`_InterlockedCompareExchangePointer`|x86, ARM, x64|\<intrin.h>|
 |`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h>|
-|`_InterlockedCompareExchangePointer_HLEAcquire`,  `_InterlockedCompareExchangePointer_HLERelease`|x86, x64|\<immintrin.h>|
+|`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86, x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -116,9 +116,9 @@ Na platformách Intel, které podporují pokyny Elize zámek hardwaru (HLE), vni
 
 Tyto rutiny jsou dostupné jenom jako vnitřní funkce.
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
-[klíčová slova](../cpp/keywords-cpp.md)
+[Klíčová slova](../cpp/keywords-cpp.md)

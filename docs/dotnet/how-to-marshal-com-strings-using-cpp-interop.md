@@ -10,10 +10,10 @@ helpviewer_keywords:
 - COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
 ms.openlocfilehash: e86cf0b3e57eda9a0f4fa5fe2337d0c42de5669f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780870"
 ---
 # <a name="how-to-marshal-com-strings-using-c-interop"></a>Postupy: Zařazování řetězců modelu COM pomocí zprostředkovatele komunikace C++
@@ -28,7 +28,7 @@ Následující příklady kódu používají [spravované, nespravované](../pre
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak mohou být předány BSTR (formátu řetězce programování v modelu COM) ze spravované na nespravované funkci. Volání spravované funkce používá <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> pro získání adresy BSTR reprezentace obsahu .NET System.String. Tento ukazatel je připnutá pomocí [pin_ptr (C + +/ CLI)](../extensions/pin-ptr-cpp-cli.md) zajistit, že jeho fyzické adresy se nemění během cyklu uvolňování paměti kolekce při nespravovanou funkci provede. Uvolňování paměti je zakázáno přesouvat paměť, dokud [pin_ptr (C + +/ CLI)](../extensions/pin-ptr-cpp-cli.md) dostane mimo rozsah.
+Následující příklad ukazuje, jak mohou být předány BSTR (formátu řetězce programování v modelu COM) ze spravované na nespravované funkci. Volání spravované funkce používá <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> pro získání adresy BSTR reprezentace obsahu .NET System.String. Tento ukazatel je připnutá pomocí [pin_ptr (C++vyhodnocovací)](../extensions/pin-ptr-cpp-cli.md) zajistit, že jeho fyzické adresy se nemění během cyklu uvolňování paměti kolekce při nespravovanou funkci provede. Uvolňování paměti je zakázáno přesouvat paměť, dokud [pin_ptr (C++vyhodnocovací)](../extensions/pin-ptr-cpp-cli.md) dostane mimo rozsah.
 
 ```
 // MarshalBSTR1.cpp

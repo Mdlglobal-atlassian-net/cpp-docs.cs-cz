@@ -7,10 +7,10 @@ helpviewer_keywords:
 - helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
 ms.openlocfilehash: 623b2c7fb4ce7c3e5de87d21f012d008720fdee2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59022202"
 ---
 # <a name="helpstring"></a>helpstring
@@ -25,7 +25,7 @@ Určuje řetězec znaků, který se používá k popisu elementu, ke kterému se
 
 ### <a name="parameters"></a>Parametry
 
-*odkazy řetězců*<br/>
+*string*<br/>
 Textový řetězec nápovědy.
 
 ## <a name="remarks"></a>Poznámky
@@ -44,8 +44,8 @@ Podívejte se na příklad pro [defaultvalue](defaultvalue.md) příklad, jak po
 |-|-|
 |**Platí pro**|**rozhraní**, **typedef**, **třída**, metoda, vlastnost|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
-|**Neplatné atributy**|Žádné|
+|**Vyžadované atributy**|Žádné|
+|**Neplatné atributy**|Žádný|
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 

@@ -43,10 +43,10 @@ helpviewer_keywords:
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
 ms.openlocfilehash: 1215c66f1f40cfbc96b813d4eb5084f07698bc01
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778296"
 ---
 # <a name="cregkey-class"></a>Cregkey – třída
@@ -113,7 +113,7 @@ class CRegKey
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CRegKey::m_hKey](#m_hkey)|Obsahuje popisovač klíče registru přidružené `CRegKey` objektu.|
 |[CRegKey::m_pTM](#m_ptm)|Ukazatel na `CAtlTransactionManager` objektu|
@@ -414,7 +414,7 @@ Určuje příznak, který označuje, jestli se oznámit změny v se zadaným kl�
 *dwNotifyFilter*<br/>
 Určuje, že by se měly hlásit sada příznaků, které řídí, jaké změny. Tento parametr může být kombinací následujícího:
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |REG_NOTIFY_CHANGE_NAME|Oznámit volajícího podklíč je přidána nebo odstraněna.|
 |REG_NOTIFY_CHANGE_ATTRIBUTES|Oznámit volajícímu změny atributů klíče, jako jsou informace popisovač zabezpečení.|
@@ -887,7 +887,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 *si*<br/>
 Určuje součásti nastavit popisovač zabezpečení. Hodnota může být kombinací následujícího:
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |DACL_SECURITY_INFORMATION|Nastaví seznam klíče volitelný řízení přístupu (DACL). Klíč musí mít přístup WRITE_DAC nebo volající proces musí být vlastníkem daného objektu.|
 |GROUP_SECURITY_INFORMATION|Nastaví identifikátor klíče primární skupinu zabezpečení (SID). Klíč musí mít přístup zápis_vlastníka nebo volající proces musí být vlastníkem daného objektu.|

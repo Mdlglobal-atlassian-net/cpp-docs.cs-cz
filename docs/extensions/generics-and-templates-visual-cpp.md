@@ -1,5 +1,5 @@
 ---
-title: Obecné typy a šablony (C + +/ CLI)
+title: Obecné typy a šablony (C++vyhodnocovací)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - templates, C++
 ms.assetid: 63adec79-b1dc-4a1a-a21d-b8a72a8fce31
 ms.openlocfilehash: 74cfd791e8400b788d38f272eed3d421ca4230e3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021502"
 ---
-# <a name="generics-and-templates-ccli"></a>Obecné typy a šablony (C + +/ CLI)
+# <a name="generics-and-templates-ccli"></a>Obecné typy a šablony (C++vyhodnocovací)
 
 Obecné typy a šablony jsou obě vlastnosti jazyka, které poskytují podporu pro parametrizované typy. Nicméně se liší a mít různá použití. Toto téma obsahuje přehled o spoustu rozdílů.
 
@@ -51,7 +51,7 @@ Základní rozdíl v obecných typech má vliv na pro vytváření aplikací, kt
 
 Následující příklad ukazuje jednoduchý příklad dohromady pomocí šablon a obecné typy. V tomto příkladu třída šablony předá svůj parametr prostřednictvím obecného typu. Opak není možné.
 
-Tohoto idiomu může použít, pokud chcete na stávajících obecného rozhraní API s kód šablony, který je místní C + +/ CLI sestavení, nebo pokud potřebujete přidat další úroveň Parametrizace do obecného typu, abyste mohli využívat některé funkce šablony není podporováno b Obecné typy y.
+Tohoto idiomu může použít, pokud chcete na stávajících obecného rozhraní API pomocí šablony kód, který je lokální vzhledem k C++vyhodnocovací sestavení, nebo když potřebujete přidat další úroveň Parametrizace do obecného typu, abyste mohli využívat některé funkce šablony není supp orted podle obecných typů.
 
 ### <a name="code"></a>Kód
 

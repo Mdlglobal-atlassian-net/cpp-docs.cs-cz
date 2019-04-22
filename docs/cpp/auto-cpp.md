@@ -8,10 +8,10 @@ helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
 ms.openlocfilehash: 3d77a17d490f8d7680f095367c309ce0e4f366b7
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776333"
 ---
 # <a name="auto-c"></a>Automatické (C++)
@@ -52,7 +52,7 @@ Použít **automaticky** – klíčové slovo, použijte místo typu k deklaraci
 
 Inicializační výraz může být přiřazením (syntaxe znaménka rovnosti), přímou inicializací (syntaxe stylu funkce), [operátor new](new-operator-cpp.md) může být výraz nebo výraz inicializace  *deklarace pro rozsah* parametr [Range-based for Statement (C++)](../cpp/range-based-for-statement-cpp.md) příkazu. Další informace najdete v tématu [inicializátory](../cpp/initializers.md) a příklady kódu dále v tomto dokumentu.
 
-**Automaticky** – klíčové slovo je zástupný symbol pro typ, ale není samotného typu. Proto **automaticky** – klíčové slovo nelze použít v přetypování nebo operátorů, jako [sizeof](../cpp/sizeof-operator.md) a (pro C + +/ CLI) [typeid](../extensions/typeid-cpp-component-extensions.md).
+**Automaticky** – klíčové slovo je zástupný symbol pro typ, ale není samotného typu. Proto **automaticky** – klíčové slovo nelze použít v přetypování nebo operátorů, jako [sizeof](../cpp/sizeof-operator.md) a (pro C++vyhodnocovací) [typeid](../extensions/typeid-cpp-component-extensions.md).
 
 ## <a name="usefulness"></a>Užitečnost
 
@@ -225,7 +225,7 @@ int main()
 [Klíčová slova](../cpp/keywords-cpp.md)<br/>
 [/Zc:auto (odvození typu proměnné)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
 [sizeof – operátor](../cpp/sizeof-operator.md)<br/>
-[identifikátor TypeId.](../extensions/typeid-cpp-component-extensions.md)<br/>
+[typeid](../extensions/typeid-cpp-component-extensions.md)<br/>
 [new – operátor](new-operator-cpp.md)<br/>
 [Deklarace a definice](declarations-and-definitions-cpp.md)<br/>
 [Příklady výrazů lambda](../cpp/examples-of-lambda-expressions.md)<br/>

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - BitScanForward intrinsic
 ms.assetid: 405e60fb-0815-42a7-9b02-6fc035122203
 ms.openlocfilehash: 8b09aeee485611ddd20d51b4c1e36ec98c03c26e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59022564"
 ---
 # <a name="bitscanforward-bitscanforward64"></a>_BitScanForward, _BitScanForward64
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Hledat maskování dat z nejméně významných bitů (LSB) na nejvýznamnější bit (MSB) nastaveného bitu (1).
 
@@ -106,7 +106,7 @@ Enter a positive integer as the mask:
 Mask: 12 Index: 2
 ```
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

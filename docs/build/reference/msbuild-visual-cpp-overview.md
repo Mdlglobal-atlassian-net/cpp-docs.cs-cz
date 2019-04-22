@@ -5,10 +5,10 @@ helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
 ms.openlocfilehash: 6c8e891f6bf6ed6b3bb3d1c84dbc13b64ab7b868
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021901"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>Interní informace o MSBuild pro projekty v jazyce C++
@@ -95,7 +95,7 @@ V následující tabulce jsou uvedeny některé užitečné cíle zaměřených 
 [CL – úloha](/visualstudio/msbuild/cl-task)<br/>
 [CPPClean – úloha](/visualstudio/msbuild/cppclean-task)<br/>
 [LIB – úloha](/visualstudio/msbuild/lib-task)<br/>
-[Úloha odkazu](/visualstudio/msbuild/link-task)<br/>
+[Odkaz – úloha](/visualstudio/msbuild/link-task)<br/>
 [MIDL – úloha](/visualstudio/msbuild/midl-task)<br/>
 [MT – úloha](/visualstudio/msbuild/mt-task)<br/>
 [RC – úloha](/visualstudio/msbuild/rc-task)<br/>

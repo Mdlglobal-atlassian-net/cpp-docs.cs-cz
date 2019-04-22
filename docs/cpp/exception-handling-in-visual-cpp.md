@@ -5,10 +5,10 @@ helpviewer_keywords:
 - try-catch keyword [C++], exception handling
 ms.assetid: a6aa08de-669d-4ce8-9ec3-ec20d1354fcf
 ms.openlocfilehash: 506ead1b6e96f59717a92b6b0c48db0270b1822f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779518"
 ---
 # <a name="exception-handling-in-visual-c"></a>Zpracování výjimek v jazyce Visual C++
@@ -33,7 +33,7 @@ Jazyk Visual C++ podporuje tři druhy zpracování výjimek:
 
 Použít [/EH](../build/reference/eh-exception-handling-model.md) – možnost kompilátoru k určení typu zpracování výjimek pro použití v projektu. Zpracování výjimek jazyka C++ je výchozí hodnota. Nekombinujte mechanismy; zpracování chyb výjimky jazyka C++ například nepoužívejte při zpracování strukturovaných výjimek. Pomocí zpracování výjimek jazyka C++ činí váš kód a umožňuje zpracovat výjimky libovolného typu. Další informace o nevýhod strukturované zpracování výjimek naleznete v tématu [strukturovaného zpracování výjimek](../cpp/structured-exception-handling-c-cpp.md). Nápovědu o kombinování maker MFC a výjimek jazyka C++, naleznete v tématu [výjimky: Použití maker MFC a výjimek jazyka C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
 
-Informace o zpracování výjimek v aplikacích CLR naleznete v tématu [zpracování výjimek (C + +/ CLI a C + +/ CX)](../extensions/exception-handling-cpp-component-extensions.md).
+Informace o zpracování výjimek v aplikacích CLR naleznete v tématu [zpracování výjimek (C++vyhodnocovací a C++/CX)](../extensions/exception-handling-cpp-component-extensions.md).
 
 Informace o zpracování výjimek na x64 procesory, naleznete v tématu [x64 zpracování výjimek](../build/exception-handling-x64.md).
 
