@@ -239,10 +239,10 @@ helpviewer_keywords:
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
 ms.openlocfilehash: dc4f619fb0dba924693682c927247e809fe2cfe9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032320"
 ---
 # <a name="crowset-class"></a>CRowset – třída
@@ -273,20 +273,20 @@ Třídu přistupujícího objektu. Výchozí hodnota je `CAccessorBase`.
 |-|-|
 |[Addrefrows –](#addrefrows)|Zvýší počet odkazů spojené s aktuálním řádku.|
 |[Zavřít](#close)|Uvolní řádků a aktuální `IRowset` rozhraní.|
-|[Porovnat](#compare)|Porovná dvě záložky pomocí [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).|
+|[Compare](#compare)|Porovná dvě záložky pomocí [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).|
 |[CRowset](#crowset)|Vytvoří novou `CRowset` objektu a přidruží ji k (volitelně) `IRowset` rozhraní zadanou jako parametr.|
-|[Odstranit](#delete)|Odstraní řádky z řádků pomocí [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)).|
+|[Delete](#delete)|Odstraní řádky z řádků pomocí [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)).|
 |[FindNextRow](#findnextrow)|Vyhledá další odpovídající řádek po zadanou záložkou.|
 |[GetApproximatePosition](#getapproximateposition)|Vrátí přibližné pozici řádku odpovídající záložku.|
 |[GetData](#getdata)|Načte data z dané sadě řádků kopii řádku.|
 |[GetDataHere](#getdatahere)|Načte data ze zadané vyrovnávací paměti.|
 |[GetOriginalData](#getoriginaldata)|Načte data naposledy načtených z nebo přeneseno do zdroje dat, ignoruje se čekající změny.|
 |[GetRowStatus](#getrowstatus)|Vrátí stav všech řádků.|
-|[Insert](#insert)|Vytvoří a vloží nový řádek pomocí [IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)).|
+|[Vložit](#insert)|Vytvoří a vloží nový řádek pomocí [IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)).|
 |[Issamerow –](#issamerow)|Porovná zadaný řádek s aktuálním řádkem.|
 |[MoveFirst](#movefirst)|Přemístí další načtení umístění na počáteční pozici.|
 |[MoveLast](#movelast)|Přejde na poslední záznam.|
-|[Metoda MoveNext](#movenext)|Načte data z dalšího řádku sekvenční nebo určený počet pozic za další řádek.|
+|[MoveNext](#movenext)|Načte data z dalšího řádku sekvenční nebo určený počet pozic za další řádek.|
 |[MovePrev](#moveprev)|Přesune na předchozí záznam.|
 |[MoveToBookmark](#movetobookmark)|Načte řádek označený záložkou nebo řádek na zadaný posun z tuto záložku.|
 |[MoveToRatio](#movetoratio)|Načte řádky začínající od desetinné pozice v dané sadě řádků.|

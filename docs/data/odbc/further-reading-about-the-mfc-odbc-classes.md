@@ -5,19 +5,19 @@ helpviewer_keywords:
 - MFC ODBC classes
 ms.assetid: 155c092b-3577-4cb8-b00e-f1adf4cb2adc
 ms.openlocfilehash: 96286fc7a60a6ab43190dae6262948ac99ca30d6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035186"
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>Další výklad o třídách knihovny MFC rozhraní ODBC
 
 Dále v následujících tématech se vysvětlují konceptech a technikách představenými v tomto tématu:
 
-- [Podpora databáze, Průvodce aplikací knihovny MFC](../../mfc/reference/database-support-mfc-application-wizard.md)
+- [Podpora databáze, Průvodce aplikací MFC](../../mfc/reference/database-support-mfc-application-wizard.md)
 
-- [Přidání příjemce rozhraní ODBC knihovny MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)
+- [Přidání příjemce ODBC knihovny MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)
 
 - [Zdroj dat (ODBC)](../../data/odbc/data-source-odbc.md)
 
@@ -33,7 +33,7 @@ Dále v následujících tématech se vysvětlují konceptech a technikách pře
 
 - [Správce rozhraní ODBC](../../data/odbc/odbc-administrator.md)
 
-- [Výměna pole záznamu (Record Field Exchange – RFX)](../../data/odbc/record-field-exchange-rfx.md)
+- [Výměna polí záznamu (Record Field Exchange – RFX)](../../data/odbc/record-field-exchange-rfx.md)
 
 - [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)
 

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - __outdword intrinsic
 ms.assetid: ed1e4994-a84b-4759-8bf9-cd48fb073f4d
 ms.openlocfilehash: 236c4812f62cb092876b400051248425ee1b13e7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034220"
 ---
 # <a name="outdword"></a>__outdword
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Generuje `out` pokyn k odeslání doubleword `Data` z portu `Port`.
 
@@ -50,7 +50,7 @@ void __outdword(
 
 Tato rutina je k dispozici pouze jako vnitřní objekt.
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

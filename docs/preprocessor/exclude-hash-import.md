@@ -7,10 +7,10 @@ helpviewer_keywords:
 - exclude attribute
 ms.assetid: 0883248a-d4bf-420e-9848-807b28fa976e
 ms.openlocfilehash: d6a320089d5954b2cf1d0d96ae1f37656f2ddd58
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032385"
 ---
 # <a name="exclude-import"></a>vyloučit (\#import)
@@ -41,5 +41,5 @@ Knihovny typů mohou obsahovat definice položek definovaných v systémových h
 
 ## <a name="see-also"></a>Viz také:
 
-[#import – atributy](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

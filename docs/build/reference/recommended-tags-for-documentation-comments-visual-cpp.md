@@ -3,10 +3,10 @@ title: Doporučené značky pro dokumentační komentáře (C++ dokumentačních
 ms.date: 11/04/2016
 ms.assetid: 6548e798-5235-4a38-9482-bdc7b88f40a9
 ms.openlocfilehash: 2a6a2c3983c10579a6cd96b69be81aa7df8b8ee7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027893"
 ---
 # <a name="recommended-tags-for-documentation-comments"></a>Doporučené značky pro komentáře dokumentace
@@ -24,12 +24,12 @@ Kompilátor bude zpracovávat všechny značky, který je platný kód XML. Nás
 
 ||||
 |-|-|-|
-|[\<c>](c-visual-cpp.md)|[\<kód >](code-visual-cpp.md)|[\<Příklad >](example-visual-cpp.md)|
+|[\<c>](c-visual-cpp.md)|[\<code>](code-visual-cpp.md)|[\<example>](example-visual-cpp.md)|
 |[\<exception>](exception-visual-cpp.md)1|[\<include>](include-visual-cpp.md)1|[\<list>](list-visual-cpp.md)|
 |[\<para>](para-visual-cpp.md)|[\<Param >](param-visual-cpp.md)1|[\<paramref>](paramref-visual-cpp.md)1|
-|[\<permission>](permission-visual-cpp.md)1|[\<REMARKS >](remarks-visual-cpp.md)|[\<Vrátí >](returns-visual-cpp.md)|
+|[\<permission>](permission-visual-cpp.md)1|[\<remarks>](remarks-visual-cpp.md)|[\<returns>](returns-visual-cpp.md)|
 |[\<see>](see-visual-cpp.md)1|[\<seealso>](seealso-visual-cpp.md)1|[\<summary>](summary-visual-cpp.md)|
-|[\<Hodnota >](value-visual-cpp.md)|||
+|[\<value>](value-visual-cpp.md)|||
 
 1. Kompilátor ověří syntaxi.
 
@@ -37,4 +37,4 @@ V aktuální verzi se nepodporuje a kompilátorem MSVC `<paramref>`, značky, kt
 
 ## <a name="see-also"></a>Viz také:
 
-[dokumentace XML](xml-documentation-visual-cpp.md)
+[Dokumentace XML](xml-documentation-visual-cpp.md)

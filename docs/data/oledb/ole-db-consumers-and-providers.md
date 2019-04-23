@@ -9,10 +9,10 @@ helpviewer_keywords:
 - OLE DB, data model
 ms.assetid: 886cb39d-652b-4557-93f0-4b1b0754d8bc
 ms.openlocfilehash: f5940ca65e42787c3156a9537cb3f3f6694339c0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031310"
 ---
 # <a name="ole-db-consumers-and-providers"></a>Příjemci a zprostředkovatelé technologie OLE DB
@@ -27,5 +27,5 @@ Protože tyto role není vždy dávat smysl, zejména v situacích, n vrstvá se
 
 ## <a name="see-also"></a>Viz také:
 
-[OLE DB – programování](../../data/oledb/ole-db-programming.md)<br/>
+[Programování v architektuře OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Přehled programování v architektuře OLE DB](../../data/oledb/ole-db-programming-overview.md)

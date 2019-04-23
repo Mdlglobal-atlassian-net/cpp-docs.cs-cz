@@ -8,15 +8,15 @@ helpviewer_keywords:
 - _mm_stream_ss intrinsic
 ms.assetid: c53dffe9-0dfe-4063-85d3-e8987b870fce
 ms.openlocfilehash: 76c6c848351df773b9857b2f83726b64db982d9f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031194"
 ---
 # <a name="mmstreamss"></a>_mm_stream_ss
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Zapíše data 32-bit do umístění v paměti bez zahlcení mezipamětí.
 
@@ -87,7 +87,7 @@ f[0] = -1, f[1] = -2
 f[2] = -3, f[3] = 3
 ```
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 Copyright 2007 by Advanced Micro Devices, Inc. Všechna práva vyhrazena. Reprodukovat se svolením rozšířené Micro zařízení, Inc.
 

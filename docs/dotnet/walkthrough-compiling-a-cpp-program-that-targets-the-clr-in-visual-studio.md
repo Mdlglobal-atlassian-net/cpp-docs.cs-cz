@@ -1,5 +1,5 @@
 ---
-title: Kompilace jazyka C + +/ CLI programu CLR
+title: Kompilovat C++vyhodnocovací programu CLR
 ms.date: 09/17/2018
 helpviewer_keywords:
 - command-line applications [C++], managed code
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
 ms.openlocfilehash: fcac0079185b6ceef981b9acfeb555ef29d464e0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034667"
 ---
-# <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Návod: Kompilace jazyka C + +/ CLI programu CLR v sadě Visual Studio
+# <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Návod: Kompilovat C++vyhodnocovací programu CLR v sadě Visual Studio
 
-S použitím C + +/ CLI jazyková rozšíření, můžete vytvořit programy v jazyce C++, které používají třídy rozhraní .NET a kompilovat s použitím vývojového prostředí sady Visual Studio.
+S použitím C++/jazyková rozšíření rozhraní příkazového řádku můžete vytvářet C++ programy, které používají třídy .NET a kompilovat s použitím vývojového prostředí sady Visual Studio.
 
 Tento postup můžete zadat vlastní program C++ nebo použijte jednu z ukázkových programů. Ukázkový program, který používáme v tomto postupu vytváří textový soubor s názvem textfile.txt a uloží jej do adresáře projektu.
 
@@ -31,7 +31,7 @@ Tato témata se předpokládá, že chápete základy jazyka C++.
 1. Typy projektů jazyka Visual C++, klikněte na **CLR**a potom klikněte na tlačítko **prázdný projekt CLR**.
 
    > [!NOTE]
-   > Pokud **prázdný projekt CLR** chybí typ (Visual Studio 2017 pouze), vyberte **otevřít instalační program Visual Studio** v levém podokně **nový projekt** dialogové okno. Možnost umístěna ve složce instalace **vývoj desktopových aplikací pomocí C++** v **volitelné** součástí oddílu s názvem **C + +/ podpora rozhraní příkazového řádku**.<br/>
+   > Pokud **prázdný projekt CLR** chybí typ (Visual Studio 2017 pouze), vyberte **otevřít instalační program Visual Studio** v levém podokně **nový projekt** dialogové okno. Možnost umístěna ve složce instalace **vývoj desktopových aplikací pomocí C++**  v **volitelné** součástí oddílu s názvem  **C++podpora rozhraní příkazového řádku**.<br/>
 
 1. Zadejte název projektu.
 
@@ -51,7 +51,7 @@ Tato témata se předpokládá, že chápete základy jazyka C++.
 
 1. Klikněte na kartě nově vytvořené v sadě Visual Studio a zadejte platný program Visual C++, nebo zkopírujte a vložte jednu z ukázkových programů.
 
-   Například můžete použít [jak: Zápis do textového souboru (C + +/ CLI)](how-to-write-a-text-file-cpp-cli.md) ukázkový program (v **zpracování souborů a vstupně-výstupních operací** uzel příručky pro programování).
+   Například můžete použít [jak: Zápis do textového souboru (C++vyhodnocovací)](how-to-write-a-text-file-cpp-cli.md) ukázkový program (v **zpracování souborů a vstupně-výstupních operací** uzel Programming Guide).
 
    Pokud použijete ukázkový program, Všimněte si, že používáte `gcnew` – klíčové slovo místo `new` při vytváření objektů .NET a že `gcnew` vrátí popisovač (`^`) namísto ukazatel (`*`):
 
@@ -76,5 +76,5 @@ Tato témata se předpokládá, že chápete základy jazyka C++.
 
 ## <a name="see-also"></a>Viz také:
 
-[Reference jazyka C++](../cpp/cpp-language-reference.md)<br/>
-[Projekty a sestavení systémy](../build/projects-and-build-systems-cpp.md)<br/>
+[Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
+[Projekty a systémy sestavení](../build/projects-and-build-systems-cpp.md)<br/>

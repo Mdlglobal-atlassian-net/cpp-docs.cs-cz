@@ -6,10 +6,10 @@ helpviewer_keywords:
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
 ms.openlocfilehash: 41cac1b23d5ab16825891ef654341016958ab826
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034910"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Upgradování projektů z dřívějších verzí aplikace Visual C++
@@ -36,15 +36,15 @@ Informace o tom, jak aktualizovat cílová verze Windows najdete v tématu [úpr
 ## <a name="in-this-section"></a>V tomto oddílu
 
 [Upgrade kódu na Universal CRT](upgrade-your-code-to-the-universal-crt.md)<br/>
-[Úpravy maker WINVER a _WIN32_WINNT](modifying-winver-and-win32-winnt.md)<br/>
+[Úpravy WINVER a _WIN32_WINNT](modifying-winver-and-win32-winnt.md)<br/>
 [Oprava závislostí u interních informací o knihovně](fix-your-dependencies-on-library-internals.md)<br/>
 [Problémy migrace s plovoucí desetinnou čárkou](floating-point-migration-issues.md)<br/>
-[Pomocí nativního cílení na více platforem v sadě Visual Studio sestavení starých projektů](use-native-multi-targeting.md)<br/>
-[Funkce Visual C++, které jsou zastaralé ve verzi preview. 2019 Visual Studio](features-deprecated-in-visual-studio.md)<br/>
+[Sestavení starých projektů v sadě Visual Studio pomocí nativního cílení na více verzí](use-native-multi-targeting.md)<br/>
+[Funkce Visual C++, které jsou ve verzi Preview sady Visual Studio 2019 zastaralé](features-deprecated-in-visual-studio.md)<br/>
 [Změny systému sestavení](build-system-changes.md)<br/>
 
 ## <a name="see-also"></a>Viz také:
 
-[Co je nového v aplikaci Visual C++ v sadě Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
-[2003 – 2015 historie změn Visual C++](../porting/visual-cpp-change-history-2003-2015.md)<br/>
+[Novinky v jazyce Visual C++ v sadě Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[Historie změn Visual C++ 2003–2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [Nestandardní chování](../cpp/nonstandard-behavior.md)

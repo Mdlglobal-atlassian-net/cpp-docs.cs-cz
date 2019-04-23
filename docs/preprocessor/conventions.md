@@ -6,10 +6,10 @@ helpviewer_keywords:
 - preprocessor, conventions
 ms.assetid: 469ce448-dc6c-4d0e-ba2b-e2e7a10155e1
 ms.openlocfilehash: c84be60938752e7401e2178dbcbf98c6ed32b1cc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034271"
 ---
 # <a name="conventions"></a>Konvence
@@ -17,7 +17,7 @@ ms.locfileid: "59034271"
 
 |Atribut|Popis|
 |---------------|-----------------|
-|*neterminál*|Kurzíva označuje neterminály.|
+|*neterminálu*|Kurzíva označuje neterminály.|
 |#include|Terminály tučného typu jsou slova a symboly vyhrazená literály, které je nutné zadat tak, jak je znázorněno. Znaky v tomto kontextu vždy rozlišují velká a malá písmena.|
 |opt|Neterminály následované <sub>optimalizované</sub> jsou vždy volitelné.|
 |výchozí písmo|Znaky ze sady, které jsou popsány nebo uvedeny v tomto písmu, lze použít jako terminály v příkazech.|

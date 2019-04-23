@@ -7,15 +7,15 @@ helpviewer_keywords:
 - __readcr2 intrinsic
 ms.assetid: d02c97d8-1953-46e7-a79e-a781e2c5bf27
 ms.openlocfilehash: e26ccbb3db1dfc113f84210314379b06dae93542
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031099"
 ---
 # <a name="readcr2"></a>__readcr2
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Čtení registru CR2 a vrátí jeho hodnotu.
 
@@ -41,7 +41,7 @@ Hodnota registru CR2.
 
 Tomto vnitřní je k dispozici pouze v režimu jádra a rutina je dostupný jenom jako vnitřní.
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

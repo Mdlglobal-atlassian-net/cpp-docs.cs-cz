@@ -6,10 +6,10 @@ helpviewer_keywords:
 - parameter attributes
 ms.assetid: 024c2dd5-49d7-4ced-a17a-c56c1bc485b6
 ms.openlocfilehash: e89542027c2187a77c18637432a5b60f47377c10
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029548"
 ---
 # <a name="parameter-attributes"></a>Atributy parametru
@@ -18,7 +18,7 @@ Následující atributy se vztahují na parametry metody ve třídě nebo rozhra
 
 |Atribut|Popis|
 |---------------|-----------------|
-|[vlastní](custom-cpp.md)|Umožňuje definovat vlastní atribut.|
+|[custom](custom-cpp.md)|Umožňuje definovat vlastní atribut.|
 |[defaultvalue](defaultvalue.md)|Umožňuje specifikace výchozí hodnotu pro zadaný nepovinný parametr.|
 |[first_is](first-is.md)|Určuje index první prvek pole předávají.|
 |[iid_is](iid-is.md)|Určuje index první prvek pole předávají.|

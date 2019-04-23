@@ -11,10 +11,10 @@ helpviewer_keywords:
 - database connections [C++], MFC ODBC classes
 ms.assetid: 98f02fd7-1235-437b-89a9-edfd0fc797f7
 ms.openlocfilehash: 9b7d04e2eb8bbb1adf96e05282861ef33e20434a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031177"
 ---
 # <a name="odbc-and-mfc"></a>Rozhraní ODBC a knihovna MFC
@@ -40,4 +40,4 @@ Databázových tříd MFC založených na rozhraní ODBC jsou navržené pro pos
 
 ## <a name="see-also"></a>Viz také:
 
-[ODBC (Open Database Connectivity)](open-database-connectivity-odbc.md)
+[Open Database Connectivity (ODBC)](open-database-connectivity-odbc.md)

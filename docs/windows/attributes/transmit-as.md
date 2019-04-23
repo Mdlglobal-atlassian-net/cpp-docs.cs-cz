@@ -1,5 +1,5 @@
 ---
-title: transmit_as – (atribut C++ COM)
+title: transmit_as – (C++ atributů COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.transmit_as
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
 ms.openlocfilehash: e432d1a8f39cbc5e12f192ed7b07c29421bc403e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032096"
 ---
 # <a name="transmitas"></a>transmit_as
@@ -25,7 +25,7 @@ Instruuje kompilátor, aby přidružení uvedený typ, který manipulovat s klie
 
 ### <a name="parameters"></a>Parametry
 
-* – typ*<br/>
+*type*<br/>
 Určuje typ dat, která se přenášejí mezi klientem a serverem.
 
 ## <a name="remarks"></a>Poznámky
@@ -70,7 +70,7 @@ struct _TREE_NODE_TYPE * right;
 
 |||
 |-|-|
-|**Platí pro**|**– definice typedef**|
+|**Platí pro**|**Definice TypeDef**|
 |**Opakovatelné**|Ne|
 |**Vyžadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|

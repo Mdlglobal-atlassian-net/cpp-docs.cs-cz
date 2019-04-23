@@ -9,15 +9,15 @@ helpviewer_keywords:
 - rdpmc instruction
 ms.assetid: 14ed45a6-28b6-4635-8437-a597c04b43d4
 ms.openlocfilehash: 848c880e76d6d431ee56a0bb30a33b276837ce76
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029340"
 ---
 # <a name="readpmc"></a>__readpmc
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Generuje `rdpmc` instrukce, který čte určené čítače sledování výkonu `counter`.
 
@@ -50,7 +50,7 @@ Hodnotu zadaný čítač výkonu.
 
 Tomto vnitřní je k dispozici v pouze v režimu jádra a rutina je dostupný jenom jako vnitřní.
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

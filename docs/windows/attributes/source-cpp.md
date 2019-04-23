@@ -7,10 +7,10 @@ helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
 ms.openlocfilehash: 699ea64de49a4383bc8fb62b2f3b2133d7c496c9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030242"
 ---
 # <a name="source-c"></a>source (C++)
@@ -25,7 +25,7 @@ Třídy určuje rozhraní zdrojového objektu modelu COM pro spojovací body. Na
 
 ### <a name="parameters"></a>Parametry
 
-*rozhraní*<br/>
+*interfaces*<br/>
 Jedno nebo více rozhraní, zadejte, pokud použijete zdrojové atribut třídy. Tento parametr se nepoužívá při použití u zdroj vlastnosti nebo metody.
 
 ## <a name="remarks"></a>Poznámky
@@ -77,7 +77,7 @@ class NN : public b
 |**Platí pro**|**Třída**, **struktura**, **rozhraní**|
 |**Opakovatelné**|Ne|
 |**Vyžadované atributy**|`coclass` (při použití u třídy nebo struktury)|
-|**Neplatné atributy**|Žádné|
+|**Neplatné atributy**|Žádný|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 

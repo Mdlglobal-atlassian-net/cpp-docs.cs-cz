@@ -1,18 +1,18 @@
 ---
-title: typeid (C + +/ CLI a C + +/ CX)
+title: typeid (C++vyhodnocovací a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
 ms.openlocfilehash: ec64388d5f71cff01207129e337cf20bb151db1a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031515"
 ---
-# <a name="typeid--ccli-and-ccx"></a>typeid (C + +/ CLI a C + +/ CX)
+# <a name="typeid--ccli-and-ccx"></a>typeid (C++vyhodnocovací a C++/CX)
 
 Získá hodnotu, která určuje typ objektu.
 
@@ -47,7 +47,7 @@ Název typu.
 
 ### <a name="remarks"></a>Poznámky
 
-V jazyce C + +/ CX, vrátí typeid [Platform::type –](../cppcx/platform-type-class.md) , který je vytvořen z informací o typu modulu runtime.
+V C++/vrátí typeid CX [Platform::type –](../cppcx/platform-type-class.md) , který je vytvořen z informací o typu modulu runtime.
 
 ### <a name="requirements"></a>Požadavky
 
@@ -63,7 +63,7 @@ type::typeid
 
 ### <a name="parameters"></a>Parametry
 
-* – typ*<br/>
+*type*<br/>
 Název typu (abstraktní deklarátor), pro které chcete `System::Type` objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -74,7 +74,7 @@ Název typu (abstraktní deklarátor), pro které chcete `System::Type` objektu.
 
 `typeid` musí mít k vyhodnocení názvu typu (typ) v době kompilace, zatímco GetType vyhodnocen jako typ určený k vrácení v době běhu.
 
-`typeid` může trvat nativní typ název nebo common language runtime alias pro nativní typ name; Zobrazit [rozhraní .NET Framework – ekvivalenty nativních typů C++ (C + +/ CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) Další informace.
+`typeid` může trvat nativní typ název nebo common language runtime alias pro nativní typ name; Zobrazit [rozhraní .NET Framework – ekvivalenty k C++ nativních typech (C++vyhodnocovací)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) Další informace.
 
 `typeid` taky spolupracuje s nativní typy, i když stále vrátí System::Type.  Type_info – struktura, použijte [typeid – operátor](../cpp/typeid-operator.md).
 

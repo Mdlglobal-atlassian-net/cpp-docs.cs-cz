@@ -12,10 +12,10 @@ helpviewer_keywords:
 - '#ifndef directive'
 ms.assetid: 2b0be69d-9e72-45d8-8e24-e4130fb2455b
 ms.openlocfilehash: d7a6a1604df03f0607f33e42880270cbdcd62e8b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027227"
 ---
 # <a name="ifdef-and-ifndef-directives-cc"></a>#ifdef a #ifndef – direktivy (C/C++)
@@ -40,7 +40,7 @@ Tyto směrnice jsou poskytovány pouze pro kompatibilitu s předchozími verzemi
 
 **#Ifndef** směrnice hledá opak podmínky ověřované direktivou **#ifdef**. Pokud nebyl definován identifikátor (nebo byla odebrána jeho definice s `#undef`), podmínka je PRAVDA (nenulové). V opačném případě je podmínka NEPRAVDA (0).
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 *Identifikátor* lze předávat z příkazového řádku pomocí `/D` možnost. Až 30 maker je možné zadat při `/D`.
 
@@ -54,7 +54,7 @@ To je užitečné pro kontrolu, jestli existuje definice, protože definice mů�
 #endif
 ```
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

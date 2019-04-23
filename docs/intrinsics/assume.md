@@ -9,15 +9,15 @@ helpviewer_keywords:
 - __assume keyword [C++]
 ms.assetid: d8565123-b132-44b1-8235-5a8c8bff85a7
 ms.openlocfilehash: 1d84e9306dcd468153f38cc0c3085b43388e1dbd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029418"
 ---
 # <a name="assume"></a>__assume
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Optimalizátor předá pomocného parametru.
 
@@ -31,7 +31,7 @@ __assume(
 
 #### <a name="parameters"></a>Parametry
 
-*výraz*<br/>
+*Výraz*<br/>
 Libovolný výraz, který předpokládá, že je vyhodnocen na hodnotu true.
 
 ## <a name="remarks"></a>Poznámky
@@ -114,9 +114,9 @@ Bohužel toto použití `assert` kompilátor zabraňuje provedení výchozí př
       NODEFAULT;
 ```
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
-[klíčová slova](../cpp/keywords-cpp.md)
+[Klíčová slova](../cpp/keywords-cpp.md)

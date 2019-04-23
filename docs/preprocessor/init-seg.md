@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
 ms.openlocfilehash: 801496739fd9bd2b8a14e699ca4da9fe79f3a28d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026627"
 ---
 # <a name="initseg"></a>init_seg
@@ -36,13 +36,13 @@ Inicializace globálních statických objektů může zahrnovat provádění kó
 
 Možnosti **init_seg –** – Direktiva pragma jsou:
 
-* – kompilátor*<br/>
+*compiler*<br/>
 Vyhrazeno pro inicializaci knihovny run-time C společnosti Microsoft. Objekty v této skupině jsou vytvořeny jako první.
 
 *lib*<br/>
 K dispozici pro třídy knihovny třetí strany dodavatelů inicializace. Objekty v této skupině jsou vytvořeny po těch označen jako *kompilátoru* , ale před všechny ostatní.
 
-*uživatel*<br/>
+*Uživatel*<br/>
 Přístupné všem uživatelům. Objekty v této skupině jsou vytvořeny jako poslední.
 
 *Název oddílu* umožňuje explicitní specifikaci části inicializace. Objekty v zadané uživatelem *název oddílu* nejsou implicitně vytvořený, ale jejich adresy jsou umístěné v části s názvem podle *název oddílu*.

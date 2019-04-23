@@ -9,10 +9,10 @@ helpviewer_keywords:
 - __identifier keyword [C++]
 ms.assetid: 348428af-afa7-4ff3-b571-acf874301cf2
 ms.openlocfilehash: 80aade53bf1d1c9aa30c4b8c8fe59c2247fe3cfb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034515"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
@@ -41,7 +41,7 @@ Použití **__identifier** – klíčové slovo pro identifikátory, které nejs
 
 **Příklad**
 
-V následujícím příkladu třída s názvem **šablony** se vytvoří v jazyce C# a distribuuje jako knihovnu DLL. V jazyce C + +/ program rozhraní příkazového řádku, který používá **šablony** třídy, **__identifier** – klíčové slovo ukrývá fakt, který **šablony** je standardní – klíčové slovo C++.
+V následujícím příkladu třída s názvem **šablony** se vytvoří v jazyce C# a distribuuje jako knihovnu DLL. V C++vyhodnocovací program, který používá **šablony** třídy, **__identifier** – klíčové slovo ukrývá fakt, který **šablony** je standard C++ – klíčové slovo.
 
 ```cs
 // identifier_template.cs
@@ -73,7 +73,7 @@ int main() {
 
 ### <a name="examples"></a>Příklady
 
-V následujícím příkladu třída s názvem **šablony** se vytvoří v jazyce C# a distribuuje jako knihovnu DLL. V jazyce C + +/ program rozhraní příkazového řádku, který používá **šablony** třídy, **__identifier** – klíčové slovo ukrývá fakt, který **šablony** je standardní – klíčové slovo C++.
+V následujícím příkladu třída s názvem **šablony** se vytvoří v jazyce C# a distribuuje jako knihovnu DLL. V C++vyhodnocovací program, který používá **šablony** třídy, **__identifier** – klíčové slovo ukrývá fakt, který **šablony** je standard C++ – klíčové slovo.
 
 ```cs
 // identifier_template.cs

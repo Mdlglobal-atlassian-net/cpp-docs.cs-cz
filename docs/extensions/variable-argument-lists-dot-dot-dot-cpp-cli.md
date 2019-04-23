@@ -7,18 +7,18 @@ helpviewer_keywords:
 - parameter arrays
 ms.assetid: db1a27f4-02a8-4318-8690-1f2893f52b38
 ms.openlocfilehash: ec1e2cefa33bc9d749d0f05e170c2f2db9b25f02
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031612"
 ---
 # <a name="variable-argument-lists--ccli"></a>Seznamy argumentů s proměnnou délkou (...) (C++/CLI)
 
-Tento příklad ukazuje, jak můžete použít `...` syntaxe v jazyce C + +/ CLI k implementaci funkcí, které mají variabilní počet argumentů.
+Tento příklad ukazuje, jak můžete použít `...` syntaxe v poznámce C++vyhodnocovací k implementaci funkcí, které mají variabilní počet argumentů.
 
 > [!NOTE]
-> Toto téma se vztahuje k C + +/ CLI. Informace o používání `...` ve standardu ISO C++ naleznete v tématu [tři tečky a Variadické šablony](../cpp/ellipses-and-variadic-templates.md) a symbol tří teček a výchozí argumenty v [výrazy přípony](../cpp/postfix-expressions.md).
+> Toto téma se věnuje C++vyhodnocovací. Informace o používání `...` ve standardu ISO C++ naleznete v tématu [tři tečky a Variadické šablony](../cpp/ellipses-and-variadic-templates.md) a symbol tří teček a výchozí argumenty v [výrazy přípony](../cpp/postfix-expressions.md).
 
 Parametr, který používá `...` musí být posledním parametrem v seznamu parametrů.
 

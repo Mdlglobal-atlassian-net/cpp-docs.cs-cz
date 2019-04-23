@@ -10,15 +10,15 @@ helpviewer_keywords:
 - _mm_inserti_si64 intrinsic
 ms.assetid: 897a4b36-8b08-4b00-a18f-7850f5732d7d
 ms.openlocfilehash: f8c8f2f9b33588513e25b2290772aac464f46808
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033015"
 ---
 # <a name="mminsertsi64-mminsertisi64"></a>_mm_insert_si64, _mm_inserti_si64
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Generuje `insertq` pokyny, jak vložit bits ze svým druhým operandem do jeho prvním operandem.
 
@@ -118,7 +118,7 @@ result2 = 0xfffffffff3210fff
 result3 = 0xfffffffff3210fff
 ```
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 Copyright 2007 by Advanced Micro Devices, Inc. Všechna práva vyhrazena. Reprodukovat se svolením rozšířené Micro zařízení, Inc.
 

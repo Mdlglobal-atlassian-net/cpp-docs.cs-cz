@@ -66,10 +66,10 @@ helpviewer_keywords:
 - m_rgErrors
 ms.assetid: dea8e938-c5d8-45ab-86de-eb8fbf534ffb
 ms.openlocfilehash: b1ab6b0984cbf84690d69a3ffe7eb3931bf59563
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029470"
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl – třída
@@ -105,7 +105,7 @@ Třída, která představuje objekt error OLE DB.
 |[GetErrorGUID](#geterrorguid)|Získá chybu identifikátoru GUID z záznam chyby.|
 |[Geterrorhelpcontext –](#geterrorhelpcontext)|Získá ID kontextové nápovědy z záznam chyby.|
 |[Geterrorhelpfile –](#geterrorhelpfile)|Získá úplnou cestu v souboru nápovědy z záznam chyby.|
-|[Geterrorsource –](#geterrorsource)|Získá zdrojový kód chyby z záznam chyby.|
+|[GetErrorSource](#geterrorsource)|Získá zdrojový kód chyby z záznam chyby.|
 
 ### <a name="interface-methods"></a>Metody rozhraní
 
@@ -113,7 +113,7 @@ Třída, která představuje objekt error OLE DB.
 |-|-|
 |[AddErrorRecord](#adderrorrecord)|Přidá záznam do objektu Chyba OLE DB.|
 |[GetBasicErrorInfo](#getbasicerrorinfo)|Vrátí základní informace o této chybě, jako je například návratový kód a číslo chyby specifické pro zprostředkovatele.|
-|[Getcustomerrorobject –](#getcustomerrorobject)|Vrací ukazatel na rozhraní pro objekt vlastních chyb.|
+|[GetCustomErrorObject](#getcustomerrorobject)|Vrací ukazatel na rozhraní pro objekt vlastních chyb.|
 |[GetErrorInfo](#geterrorinfo)|Vrátí [IErrorInfo](/previous-versions/windows/desktop/ms718112(v=vs.85)) ukazatel rozhraní na zadaný záznam.|
 |[Geterrorparameters –](#geterrorparameters)|Vrátí parametry chyby.|
 |[GetRecordCount](#getrecordcount)|Vrátí počet záznamů v záznamu objektu OLE DB.|

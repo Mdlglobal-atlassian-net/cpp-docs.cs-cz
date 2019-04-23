@@ -13,10 +13,10 @@ helpviewer_keywords:
 - OLE DB consumer templates, classes
 ms.assetid: cfc7f698-1a0e-4a09-a4d3-ccb99e6654fe
 ms.openlocfilehash: fb0b24798b3f2682bbbec7624df34b40a2a9f4cc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032268"
 ---
 # <a name="ole-db-consumer-templates-reference"></a>Referenční dokumentace k šablonám příjemců OLE DB
@@ -45,7 +45,7 @@ Představuje relaci izolovanou databázi přístup. Jeden nebo více relací mů
 [CAccessor](../../data/oledb/caccessor-class.md)<br/>
 Používá se pro záznamy, které jsou staticky svázán se zdrojem dat. Pokud znáte struktury zdroje dat, použijte tuto třídu přistupujícího objektu.
 
-[CAccessorBase –](../../data/oledb/caccessorbase-class.md)<br/>
+[CAccessorBase](../../data/oledb/caccessorbase-class.md)<br/>
 Základní třída pro všechny třídy přistupujícího objektu.
 
 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)<br/>
@@ -119,7 +119,7 @@ Použít jako argument šablony pro `CCommand` šablony, pokud chcete, aby pří
 [CNoRowset](../../data/oledb/cnorowset-class.md)<br/>
 Použít jako argument šablony pro `CCommand` nebo `CTable` Pokud příkazu nebo tabulky nevrací sadu řádků.
 
-[CTable –](../../data/oledb/ctable-class.md)<br/>
+[CTable](../../data/oledb/ctable-class.md)<br/>
 Používá pro přístup k jednoduché sady řádků bez parametrů.
 
 ## <a name="property-classes"></a>Vlastnosti třídy
@@ -132,15 +132,15 @@ Slouží k nastavení vlastností ve zprostředkovateli.
 
 ## <a name="bookmark-class"></a>Třídy (záložky)
 
-[CBookmark –](../../data/oledb/cbookmark-class.md)<br/>
+[CBookmark](../../data/oledb/cbookmark-class.md)<br/>
 Používá jako index pro přístup k datům v sadě řádků.
 
 ## <a name="error-class"></a>Třída chyb
 
-[Cdberrorinfo –](../../data/oledb/cdberrorinfo-class.md)<br/>
+[CDBErrorInfo](../../data/oledb/cdberrorinfo-class.md)<br/>
 Umožňuje načíst informace o chybě technologie OLE DB.
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace k šablonám zprostředkovatelů OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
+[Referenční dokumentace k šablonám zprostředkovatelů OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
 [Šablony OLE DB](../../data/oledb/ole-db-templates.md)

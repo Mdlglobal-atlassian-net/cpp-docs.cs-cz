@@ -11,10 +11,10 @@ helpviewer_keywords:
 - RFX (ODBC) [C++], binding fields and parameters
 ms.assetid: e647cacd-62b0-4b80-9e20-b392deca5a88
 ms.openlocfilehash: 7da9d480f16dcb6bc5ded0a1dff559b1b1ac4b38
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032674"
 ---
 # <a name="record-field-exchange-how-rfx-works"></a>Výměna polí záznamu: Jak funkce RFX pracuje
@@ -90,7 +90,7 @@ Pokud chcete přidat nový záznam, záznamů funguje jako vyrovnávací paměť
 
 1. `AddNew` nebo `Edit` připraví pole ve vyrovnávací paměti pro úpravy, takže RFX může zjistit změny pole datových členů.
 
-   Vzhledem k tomu, že nový záznam nemá žádné předchozí hodnoty k porovnání s `AddNew` nastaví na hodnotu PSEUDO_NULL hodnotu každého pole datového člena. Později, když voláte `Update`, porovnává hodnotu datový člen s hodnotou PSEUDO_NULL RFX. Pokud existuje rozdíl, datový člen se nastavilo. (PSEUDO_NULL není stejný jako sloupec záznamů s hodnotou true Null ani jeden z následujících není stejná jako hodnota NULL C++.)
+   Vzhledem k tomu, že nový záznam nemá žádné předchozí hodnoty k porovnání s `AddNew` nastaví na hodnotu PSEUDO_NULL hodnotu každého pole datového člena. Později, když voláte `Update`, porovnává hodnotu datový člen s hodnotou PSEUDO_NULL RFX. Pokud existuje rozdíl, datový člen se nastavilo. (PSEUDO_NULL není stejný jako sloupec záznamů s hodnotou true Null ani jeden z následujících není stejný jako C++ hodnotu NULL.)
 
    Na rozdíl od `Update` zavolat `AddNew`, `Update` zavolat `Edit` porovná aktualizované hodnoty se dříve uložené hodnoty spíš než PSEUDO_NULL. Rozdíl je, že `AddNew` neobsahuje žádné dříve uložené hodnoty pro porovnání.
 
@@ -122,8 +122,8 @@ Při odstranění záznamu RFX nastaví všechna pole na hodnotu NULL jako přip
 
 ## <a name="see-also"></a>Viz také:
 
-[Výměna pole záznamu (Record Field Exchange – RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
-[Příjemce knihovny MFC rozhraní ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
+[Výměna polí záznamu (Record Field Exchange – RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
+[Knihovny MFC rozhraní ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [Makra, globální funkce a globální proměnné](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [CFieldExchange – třída](../../mfc/reference/cfieldexchange-class.md)<br/>
 [CRecordset::DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)

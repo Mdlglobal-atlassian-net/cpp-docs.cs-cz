@@ -8,10 +8,10 @@ helpviewer_keywords:
 - HandleTraits namespace
 ms.assetid: 2fb5c6d1-bfc2-4e09-91eb-31705064ffb3
 ms.openlocfilehash: 6ed8156b6a0e71d40d1579fc9a33912f698e1773
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030382"
 ---
 # <a name="microsoftwrlwrappershandletraits-namespace"></a>Microsoft::WRL::Wrappers::HandleTraits – obor názvů
@@ -34,7 +34,7 @@ namespace Microsoft::WRL::Wrappers::HandleTraits;
 |[EventTraits – struktura](eventtraits-structure.md)|Definuje vlastnosti `Event` popisovač třídy.|
 |[FileHandleTraits – struktura](filehandletraits-structure.md)|Definuje vlastnosti popisovače souboru.|
 |[HANDLENullTraits – struktura](handlenulltraits-structure.md)|Definuje běžné vlastnosti neinicializovaný popisovač.|
-|[Struktura HANDLETraits](handletraits-structure.md)|Definuje běžné vlastnosti popisovač.|
+|[HANDLETraits – struktura](handletraits-structure.md)|Definuje běžné vlastnosti popisovač.|
 |[MutexTraits – struktura](mutextraits-structure.md)|Definuje běžné vlastnosti [Mutex](mutex-class.md) třídy.|
 |[SemaphoreTraits – struktura](semaphoretraits-structure.md)|Definuje běžné vlastnosti objektu pro spolupráci.|
 |[SRWLockExclusiveTraits – struktura](srwlockexclusivetraits-structure.md)|Popisuje běžné vlastnosti `SRWLock` třídy ve výhradním režimu zámku.|

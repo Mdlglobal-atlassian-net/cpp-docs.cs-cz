@@ -8,10 +8,10 @@ helpviewer_keywords:
 ms.assetid: 3cc36411-7d66-4240-851e-dacb9a8fd6ac
 ms.author: corob
 ms.openlocfilehash: 0d527681abb077a01b3d902c092a21de7a052867
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031505"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>Návod: Vytvoření a použití statické knihovny (C++)
@@ -146,5 +146,5 @@ Porozumění základům jazyka C++.
 
 ## <a name="see-also"></a>Viz také:
 
-[Návod: Vytvoření a použití dynamické knihovny (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
+[Návod: Vytvoření a použití dynamické knihovny DLL (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
 [Desktopové aplikace (Visual C++)](../windows/desktop-applications-visual-cpp.md)<br/>

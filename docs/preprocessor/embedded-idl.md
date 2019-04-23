@@ -7,10 +7,10 @@ helpviewer_keywords:
 - embedded_idl attribute
 ms.assetid: f1c1c2e8-3872-4172-8795-8d1288a20452
 ms.openlocfilehash: c46924d2757d01a934c21a70f23e6556f6a10fd3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034086"
 ---
 # <a name="embeddedidl"></a>embedded_idl
@@ -27,7 +27,7 @@ embedded_idl[("param")]
 
 ### <a name="parameters"></a>Parametry
 
-*Param*<br/>
+*param*<br/>
 Může být jedna ze dvou hodnot:
 
 - **emitidl**: Informace o typu naimportované z knihovny typelib bude k dispozici v generované projektu s atributy IDL.  Toto je výchozí nastavení a bude platit, pokud nezadáte parametr `embedded_idl`.
@@ -50,5 +50,5 @@ Může být jedna ze dvou hodnot:
 
 ## <a name="see-also"></a>Viz také:
 
-[#import – atributy](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

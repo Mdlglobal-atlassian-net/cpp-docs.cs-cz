@@ -1,5 +1,5 @@
 ---
-title: částečné (C + +/ CLI a C + +/ CX)
+title: částečné (C++vyhodnocovací a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - C++/CX, partial
 ms.assetid: 43adf1f5-10c5-44aa-a66f-7507e2bdabf8
 ms.openlocfilehash: eb9b3907008147cb21f04aec5f42e4896fa35b3c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029950"
 ---
-# <a name="partial--ccli-and-ccx"></a>částečné (C + +/ CLI a C + +/ CX)
+# <a name="partial--ccli-and-ccx"></a>částečné (C++vyhodnocovací a C++/CX)
 
 **Částečné** – klíčové slovo umožňuje různé části stejné třídy ref nebylo vytvořeno nezávisle a v různých souborech.
 
@@ -43,10 +43,10 @@ class-key identifier {
 
 ### <a name="parameters"></a>Parametry
 
-*klíč třídy*<br/>
+*class-key*<br/>
 Klíčové slovo, který deklaruje třídy nebo struktury, která je podporována modulem Windows Runtime. Buď **třídy ref class**, **hodnotu třídy**, **ref struct**, nebo **hodnotu struktury**.
 
-*identifikátor*<br/>
+*identifier*<br/>
 Název definovaný typ.
 
 ### <a name="remarks"></a>Poznámky
@@ -67,7 +67,7 @@ Počet a pořadí: Může být nula nebo více definicí částečné třídy pr
 
 Obecné typy: Částečné třídy může být obecný, pokud je úplná definice může být obecný. Ale každý úplné a částečné třídy musí mít přesně stejné obecné parametry, včetně názvy formálních parametrů.
 
-Další informace o tom, jak používat **částečné** – klíčové slovo, naleznete v tématu [částečné třídy (C + +/ CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023).
+Další informace o tom, jak používat **částečné** – klíčové slovo, naleznete v tématu [částečné třídy (C++/CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023).
 
 ### <a name="requirements"></a>Požadavky
 
@@ -79,4 +79,4 @@ Další informace o tom, jak používat **částečné** – klíčové slovo, n
 
 ## <a name="see-also"></a>Viz také:
 
-[Částečné třídy (C + +/ CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023)
+[Částečné třídy (C++/CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023)

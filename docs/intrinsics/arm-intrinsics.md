@@ -1932,10 +1932,10 @@ helpviewer_keywords:
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
 ms.openlocfilehash: 47fd2f449568494bafde993e035d3ec37c44f6fe
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027624"
 ---
 # <a name="arm-intrinsics"></a>ARM – vnitřní prvky
@@ -2155,10 +2155,10 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
 
 #### <a name="parameters"></a>Parametry
 
-*Umístění*<br/>
+*Poloha*<br/>
 Adresa umístění v paměti a číst nebo zapisovat.
 
-*Value*<br/>
+*Hodnota*<br/>
 Hodnota k zápisu na zadaném umístění v paměti (pouze vnitřních úložiště objektů).
 
 #### <a name="return-value-load-intrinsics-only"></a>Vrátí hodnotu (pouze pro zatížení vnitřní)
@@ -2211,7 +2211,7 @@ Koprocesor konkrétní operační kód v rozsahu 0 až 7
 *crn*<br/>
 Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje první operand podle pokynů.
 
-*CRM*<br/>
+*crm*<br/>
 Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje další zdrojové nebo cílové operand.
 
 *opcode2*<br/>
@@ -2247,7 +2247,7 @@ Koprocesor číslo v rozsahu 0 až 15.
 *opcode1*<br/>
 Koprocesor konkrétní operační kód v rozsahu 0 až 15.
 
-*CRM*<br/>
+*crm*<br/>
 Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje další zdrojové nebo cílové operand.
 
 **Vrací hodnotu**
@@ -2298,7 +2298,7 @@ Koprocesor konkrétní operační kód v rozsahu 0 až 7.
 *crn*<br/>
 Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje první operand podle pokynů.
 
-*CRM*<br/>
+*crm*<br/>
 Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje další zdrojové nebo cílové operand.
 
 *opcode2*<br/>
@@ -2335,7 +2335,7 @@ Koprocesor číslo v rozsahu 0 až 15.
 *opcode1*<br/>
 Koprocesor konkrétní operační kód v rozsahu 0 až 15.
 
-*CRM*<br/>
+*crm*<br/>
 Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje další zdrojové nebo cílové operand.
 
 #### <a name="return-value"></a>Návratová hodnota
@@ -2398,15 +2398,15 @@ Následující tabulka shrnuje podporu ARM – vnitřní prvky bez bittest propo
 
 ||8|16|32|64|P|
 |-|-------|--------|--------|--------|-------|
-|Přidejte|Žádné|Žádné|Do bloku|Do bloku|Žádné|
-|A|Do bloku|Do bloku|Do bloku|Do bloku|Žádné|
+|Přidejte|Žádné|Žádný|Do bloku|Do bloku|Žádný|
+|A|Do bloku|Do bloku|Do bloku|Do bloku|Žádný|
 |CompareExchange|Do bloku|Do bloku|Do bloku|Do bloku|Do bloku|
-|Snížení|Žádné|Do bloku|Do bloku|Do bloku|Žádné|
+|Snížení|Žádné|Do bloku|Do bloku|Do bloku|Žádný|
 |Exchange|Částečné|Částečné|Částečné|Částečné|Částečné|
-|ExchangeAdd|Do bloku|Do bloku|Do bloku|Do bloku|Žádný|
-|Přírůstek|Žádné|Do bloku|Do bloku|Do bloku|Žádný|
-|Nebo|Do bloku|Do bloku|Do bloku|Do bloku|Žádné|
-|XOR|Do bloku|Do bloku|Do bloku|Do bloku|Žádný|
+|ExchangeAdd|Do bloku|Do bloku|Do bloku|Do bloku|Žádné|
+|Přírůstek|Žádné|Do bloku|Do bloku|Do bloku|Žádné|
+|Nebo|Do bloku|Do bloku|Do bloku|Do bloku|Žádný|
+|XOR|Do bloku|Do bloku|Do bloku|Do bloku|Žádné|
 
 Klíč:
 
@@ -2579,4 +2579,4 @@ Vnitřní objekty prostý propojené bittest jsou společné pro všechny platfo
 
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
 [Referenční dokumentace assembleru ARM](../assembler/arm/arm-assembler-reference.md)<br/>
-[Reference jazyka C++](../cpp/cpp-language-reference.md)
+[Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)

@@ -45,15 +45,15 @@ helpviewer_keywords:
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
 ms.openlocfilehash: 525c40f4260d59f370f0580d2cb7d9e8f184ee4c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035079"
 ---
 # <a name="interlockeddecrement-intrinsic-functions"></a>Vnitřní funkce _InterlockedDecrement
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Poskytuje vnitřní podporu kompilátoru pro sadu SDK Windows Win32 [InterlockedDecrement](/windows/desktop/api/winnt/nf-winnt-interlockeddecrement) funkce.
 
@@ -199,5 +199,5 @@ void __cdecl SimpleThread(void* pParam) {
 ## <a name="see-also"></a>Viz také:
 
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
-[klíčová slova](../cpp/keywords-cpp.md)<br/>
+[Klíčová slova](../cpp/keywords-cpp.md)<br/>
 [Konflikty s kompilátorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

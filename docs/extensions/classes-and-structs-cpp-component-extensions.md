@@ -1,5 +1,5 @@
 ---
-title: třídy ref class a struktura ref (C + +/ CLI a C + +/ CX)
+title: třídy ref class a struktura ref (C++vyhodnocovací a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
 ms.openlocfilehash: fcc50109ce521e005e32a8c19b13aabe2230989b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029733"
 ---
-# <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>třídy ref class a struktura ref (C + +/ CLI a C + +/ CX)
+# <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>třídy ref class a struktura ref (C++vyhodnocovací a C++/CX)
 
 **Třídy ref class** nebo **ref struct** rozšíření deklaraci třídy nebo struktury jehož *doba života objektu* je spravována automaticky. Když objekt již není dostupný nebo dostane mimo rozsah, se uvolní paměť.
 
@@ -38,10 +38,10 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 *class_access*<br/>
 (Volitelné) Usnadnění přístupu z dané třídy nebo struktury mimo sestavení. Možné hodnoty jsou **veřejné** a **privátní** (**privátní** je výchozí nastavení). Nemůže obsahovat vnořené třídy nebo struktury *class_access* specifikátor.
 
-*name*<br/>
+*Jméno*<br/>
 Název třídy nebo struktury.
 
-* – modifikátor*<br/>
+*modifier*<br/>
 (Volitelné) [abstraktní](abstract-cpp-component-extensions.md) a [zapečetěné](sealed-cpp-component-extensions.md) jsou platné modifikátory.
 
 *inherit_access*<br/>
@@ -64,17 +64,17 @@ Další informace o třídách a strukturách naleznete v tématu
 
 - [Vytvoření instance třídy a struktury](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md)
 
-- [C++ – sémantika zásobníku pro odkazové typy](../dotnet/cpp-stack-semantics-for-reference-types.md)
+- [Sémantika zásobníku C++ pro typy odkazů](../dotnet/cpp-stack-semantics-for-reference-types.md)
 
-- [Třídy, struktury a spojení](../cpp/classes-and-structs-cpp.md)
+- [Třídy, struktury a sjednocení](../cpp/classes-and-structs-cpp.md)
 
-- [Destruktory a finalizační metody v tom, jak: Definice a používání tříd a struktur (C + +/ CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
+- [Destruktory a finalizační metody v tom, jak: Definice a používání tříd a struktur (C++vyhodnocovací)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
 
 - [Uživatelem definované operátory (C++/CLI)](../dotnet/user-defined-operators-cpp-cli.md)
 
 - [Uživatelem definované převody (C++/CLI)](../dotnet/user-defined-conversions-cpp-cli.md)
 
-- [Postupy: Zabalení nativních tříd pro použitíC#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
+- [Postupy: Zabalení nativních tříd pro použití v jazyce C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
 - [Obecné třídy (C++/CLI)](generic-classes-cpp-cli.md)
 
@@ -101,7 +101,7 @@ Pokud deklarujete objekt s použitím **hodnotu třídy** nebo **hodnotu struktu
 
 ### <a name="remarks"></a>Poznámky
 
-V následující tabulce jsou uvedeny rozdíly v syntaxi uvedenou v **všechny moduly runtime** části, která jsou specifická pro C + +/ CLI.
+V následující tabulce jsou uvedeny rozdíly v syntaxi uvedenou v **všechny moduly runtime** části, která jsou specifická pro C++vyhodnocovací.
 
 ### <a name="parameters"></a>Parametry
 

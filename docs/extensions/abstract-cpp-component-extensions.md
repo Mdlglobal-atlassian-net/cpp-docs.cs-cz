@@ -1,5 +1,5 @@
 ---
-title: abstraktní (C + +/ CLI a C + +/ CX)
+title: abstraktní (C++vyhodnocovací a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - abstract keyword [C++]
 ms.assetid: cbae3408-0378-4ac8-b70d-c016b381a6d5
 ms.openlocfilehash: d5060f1a0950b9b2ac2638b99ff157983944a3bb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031190"
 ---
-# <a name="abstract--ccli-and-ccx"></a>abstraktní (C + +/ CLI a C + +/ CX)
+# <a name="abstract--ccli-and-ccx"></a>abstraktní (C++vyhodnocovací a C++/CX)
 
 **Abstraktní** deklaruje klíčové slovo:
 

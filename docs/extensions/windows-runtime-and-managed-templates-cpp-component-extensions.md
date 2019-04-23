@@ -1,18 +1,18 @@
 ---
-title: Windows Runtime a spravované šablony (C + +/ CLI a C + +/ CX)
+title: Windows Runtime a spravované šablony (C++vyhodnocovací a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - templates, with CLR types
 ms.assetid: cf59d16b-5514-448b-9a95-e0b4fcb616a6
 ms.openlocfilehash: a8cc429763d042ba262d5543f4a2d85bbf8aa29a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029558"
 ---
-# <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Windows Runtime a spravované šablony (C + +/ CLI a C + +/ CX)
+# <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Windows Runtime a spravované šablony (C++vyhodnocovací a C++/CX)
 
 Šablony vám umožní definovat prototyp modulu Windows Runtime nebo společný typ modulu runtime jazyka a potom vytvořte instanci variace tohoto typu pomocí parametrů typu jinou šablonu.
 
@@ -40,7 +40,7 @@ Existují některá omezení k vytvoření šablony třídy ze spravovaných typ
 
 ### <a name="examples"></a>Příklady
 
-Je možné vytvořit instanci obecného typu s parametrem šablony spravovaného typu, ale nelze vytvořit instanci šablony spravované pomocí obecného typu parametru šablony. Je to proto obecné typy jsou vyřešeny za běhu. Další informace najdete v tématu [obecné typy a šablony (C + +/ CLI)](generics-and-templates-visual-cpp.md).
+Je možné vytvořit instanci obecného typu s parametrem šablony spravovaného typu, ale nelze vytvořit instanci šablony spravované pomocí obecného typu parametru šablony. Je to proto obecné typy jsou vyřešeny za běhu. Další informace najdete v tématu [obecné typy a šablony (C++vyhodnocovací)](generics-and-templates-visual-cpp.md).
 
 ```cpp
 // managed_templates.cpp
@@ -73,7 +73,7 @@ template<class T> public ref class R {
 };
 ```
 
-Nejde získat přístup šablony definovaný v odkazovaném sestavení s C + +/ syntaxi jazyka rozhraní příkazového řádku, ale můžete použít reflexe. Pokud šablona není vytvořena instance, není aktivováno v metadatech. Pokud dojde k vytvoření šablony, zobrazí se pouze odkazované členské funkce v metadatech.
+Nejde získat přístup šablony definovaný v odkazovaném sestavení s C++/syntaxi jazyka rozhraní příkazového řádku, ale můžete použít reflexe. Pokud šablona není vytvořena instance, není aktivováno v metadatech. Pokud dojde k vytvoření šablony, zobrazí se pouze odkazované členské funkce v metadatech.
 
 ```cpp
 // managed_templates_3.cpp

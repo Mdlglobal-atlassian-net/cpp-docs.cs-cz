@@ -7,10 +7,10 @@ helpviewer_keywords:
 - includelib attribute
 ms.assetid: cd90ea6e-5ae8-4f11-b8d1-662db95412b2
 ms.openlocfilehash: 57f039eeae527dd03884b12e7d9eb424d87f597f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029997"
 ---
 # <a name="includelib-c"></a>includelib (C++)
@@ -52,7 +52,7 @@ Následující kód můžete vidět v souboru s příponou .cpp:
 |**Platí pro**|Kdekoli|
 |**Opakovatelné**|Ano|
 |**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádný|
+|**Neplatné atributy**|Žádné|
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 

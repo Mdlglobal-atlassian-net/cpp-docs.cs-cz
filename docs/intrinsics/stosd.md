@@ -9,15 +9,15 @@ helpviewer_keywords:
 - __stosd intrinsic
 ms.assetid: 03104247-1cea-49f6-b6f8-287917bf5680
 ms.openlocfilehash: 43a0efcfb94b7e53dacec16caccdacf86a96f5bb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032164"
 ---
 # <a name="stosd"></a>__stosd
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Generuje instrukce řetězec úložiště (`rep stosd`).
 
@@ -85,7 +85,7 @@ printf_s( "%u %u %u %u",
 0 99999 99999 0
 ```
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - __outbyte intrinsic
 ms.assetid: c4cd1a34-8a02-4e37-993d-3201bc17901a
 ms.openlocfilehash: 234892369572a2ee315687f5d70533a0c8cf4b59
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033914"
 ---
 # <a name="outbyte"></a>__outbyte
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Generuje `out` instrukce, která odesílá 1 bajtu určeného pomocí `Data` portu vstupně-výstupní operace určené `Port`.
 
@@ -49,7 +49,7 @@ void __outbyte(
 
 Tato rutina je k dispozici pouze jako vnitřní objekt.
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - progid attribute
 ms.assetid: afcf559c-e432-481f-aa9a-bd3bb72c02a8
 ms.openlocfilehash: 5b0c688ad4d9b607cc1f5fb6b1c6d536a1c7888e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031127"
 ---
 # <a name="progid"></a>progid
@@ -25,7 +25,7 @@ Určuje identifikátor pro objekt modelu COM ProgID.
 
 ### <a name="parameters"></a>Parametry
 
-*name*<br/>
+*Jméno*<br/>
 Identifikátor ProgID reprezentující objekt.
 
 ProgID prezentovat čitelná verze identifikátor třídy (CLSID) slouží k identifikaci objektů modelu COM a ActiveX.
@@ -54,8 +54,8 @@ Podívejte se na příklad pro [coclass](coclass.md) ukázkový používání **
 |-|-|
 |**Platí pro**|**Třída**, **– struktura**|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádný|
+|**Vyžadované atributy**|Žádný|
+|**Neplatné atributy**|Žádné|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Wrappers namespace
 ms.assetid: 36ac38c7-1fc3-42da-a879-5c68661dc9e1
 ms.openlocfilehash: 4b88ad0da31321a696c1238f1c9838d3b3a1c927
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030112"
 ---
 # <a name="microsoftwrlwrappers-namespace"></a>Microsoft::WRL::Wrappers – obor názvů
@@ -44,7 +44,7 @@ namespace Microsoft::WRL::Wrappers;
 |[Mutex – třída](mutex-class.md)|Představuje objekt synchronizace, který řídí výhradně sdíleného prostředku.|
 |[RoInitializeWrapper – třída](roinitializewrapper-class.md)|Inicializuje modul Windows Runtime.|
 |[Semaphore – třída](semaphore-class.md)|Představuje objekt synchronizace, který řídí sdíleného prostředku, který podporuje omezený počet uživatelů.|
-|[Třída SRWLock](srwlock-class.md)|Představuje zámek tenký čtení/zápis.|
+|[SRWLock – třída](srwlock-class.md)|Představuje zámek tenký čtení/zápis.|
 
 ## <a name="requirements"></a>Požadavky
 

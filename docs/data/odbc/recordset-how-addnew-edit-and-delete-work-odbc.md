@@ -18,10 +18,10 @@ helpviewer_keywords:
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
 ms.openlocfilehash: e5fc6ad2a1fe00367cd8a0b1c53ac914b95018ab
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033201"
 ---
 # <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Recordset: Jak funkce operací AddNew, Edit a odstranit pracovní (ODBC)
@@ -161,4 +161,4 @@ Informace o dotazech SQL použitých v operacích aktualizace najdete v tématu 
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Recordset: Informace o aktualizacích (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
-[Výměna pole záznamu (Record Field Exchange – RFX)](../../data/odbc/record-field-exchange-rfx.md)
+[Výměna polí záznamu (Record Field Exchange – RFX)](../../data/odbc/record-field-exchange-rfx.md)

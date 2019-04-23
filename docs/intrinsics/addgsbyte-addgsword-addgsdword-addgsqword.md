@@ -17,15 +17,15 @@ helpviewer_keywords:
 - __addgsbyte intrinsic
 ms.assetid: 4fa03e69-d849-49ed-ba37-1d3aa23c2a21
 ms.openlocfilehash: 61fff704e600296443964ab62a0b58799c87b51b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031219"
 ---
 # <a name="addgsbyte-addgsword-addgsdword-addgsqword"></a>__addgsbyte, __addgsword, __addgsdword, __addgsqword
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Přidat hodnotu do umístění v paměti určený posun vzhledem k začátku `GS` segmentu.
 
@@ -71,7 +71,7 @@ void __addgsqword(
 
 Tyto rutiny jsou dostupné jenom jako vnitřní.
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

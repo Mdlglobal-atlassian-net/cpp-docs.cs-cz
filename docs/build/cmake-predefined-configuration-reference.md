@@ -5,10 +5,10 @@ ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake redefined configurations
 ms.openlocfilehash: cecadaec2e409dfba3b1929e406c36df3e498307
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031443"
 ---
 # <a name="cmake-predefined-build-configurations"></a>Konfigurace sestavení CMake předdefinované
@@ -349,6 +349,6 @@ Tyto možnosti umožňují spouštět příkazy ve vzdáleném systému, před a
 [Projekty CMake v sadě Visual Studio](cmake-projects-in-visual-studio.md)<br/>
 [Konfigurace projektu Linux CMake](../linux/cmake-linux-project.md)<br/>
 [Připojení ke vzdálenému počítači s Linuxem](../linux/connect-to-your-remote-linux-computer.md)<br/>
-[Konfigurace CMake ladicími relacemi](configure-cmake-debugging-sessions.md)<br/>
+[Konfigurace ladicích relací CMake](configure-cmake-debugging-sessions.md)<br/>
 [Nasazení, spuštění a ladění projektu Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [Referenční dokumentace ke konfiguraci CMake předdefinované](cmake-predefined-configuration-reference.md)<br/>

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
 ms.openlocfilehash: d9c68601bea4cecd92b371dada5fb086aeb7657f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033694"
 ---
 # <a name="include-c"></a>include (C++)
@@ -25,7 +25,7 @@ Určuje jeden nebo více souborů záhlaví mají být zahrnuty v souboru genero
 
 ### <a name="parameters"></a>Parametry
 
-*HEADER_FILE*<br/>
+*header_file*<br/>
 Název souboru, který chcete, aby zahrnuté v souboru generovaného IDL.
 
 ## <a name="remarks"></a>Poznámky
@@ -53,7 +53,7 @@ Následující kód ukazuje příklad, jak používat **zahrnují**. V tomto př
 |-|-|
 |**Platí pro**|Kdekoli|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**Vyžadované atributy**|Žádný|
 |**Neplatné atributy**|Žádné|
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).

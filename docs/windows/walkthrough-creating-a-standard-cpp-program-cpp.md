@@ -10,10 +10,10 @@ helpviewer_keywords:
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
 ms.openlocfilehash: d58d23e757a97402985ef60badf551523c0a275e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030618"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Návod: Vytvoření programu ve standardním C++ (C++)
@@ -22,7 +22,7 @@ Visual C++ v sadě Visual Studio integrované vývojové prostředí (IDE) slou�
 
 Můžete zadat vlastní program C++, nebo použijte jednu z ukázkových programů. Ukázkový program v tomto návodu je konzolová aplikace. Tato aplikace používá `set` kontejneru ve standardní knihovně jazyka C++.
 
-Následuje Visual C++ 2003 C++ Standard, s následujícími hlavními výjimkami: vyhledávání dvoufázová názvu, specifikace výjimek a export. Kromě toho Visual C++ podporuje několik funkcí C ++ 0 x, například výrazy lambda, auto, static_assert, odkazy rvalue a externí šablony.
+Následuje Visual C++ 2003 C++ Standard, s následujícími hlavními výjimkami: vyhledávání dvoufázová názvu, specifikace výjimek a export. Kromě toho Visual C++ podporuje několik funkcí C ++ 0 x, například: výrazy lambda, auto, static_assert, odkazy rvalue a externí šablony.
 
 > [!NOTE]
 > Pokud dodržování standardu je potřeba použít `/Za` – možnost kompilátoru zakázat rozšíření Microsoft pro standardní. Další informace najdete v tématu [/Za, /Ze (zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md).
@@ -78,5 +78,5 @@ Předpokladem práce s tímto návodem je znalost základů jazyka C++.
 
 ## <a name="see-also"></a>Viz také:
 
-[Reference jazyka C++](../cpp/cpp-language-reference.md)<br/>
+[Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)<br/>

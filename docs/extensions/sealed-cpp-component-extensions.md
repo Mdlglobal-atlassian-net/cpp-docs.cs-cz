@@ -1,5 +1,5 @@
 ---
-title: sealed (C + +/ CLI a C + +/ CX)
+title: sealed (C++vyhodnocovací a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - sealed keyword [C++]
 ms.assetid: 3d0d688a-41aa-45f5-a25a-65c44206521e
 ms.openlocfilehash: 493f6597d146480714848b37154cc8bacd37113a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030453"
 ---
-# <a name="sealed--ccli-and-ccx"></a>sealed (C + +/ CLI a C + +/ CX)
+# <a name="sealed--ccli-and-ccx"></a>sealed (C++vyhodnocovací a C++/CX)
 
 **zapečetěné** jako kontextové klíčové slovo pro referenční třídy, která označuje, že virtuální člen nelze přepsat, nebo typ nelze použít jako základní typ.
 
@@ -33,7 +33,7 @@ virtual return-type identifier() sealed {...};
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor*<br/>
+*identifier*<br/>
 Název třídy nebo funkce.
 
 *Návratový typ*<br/>

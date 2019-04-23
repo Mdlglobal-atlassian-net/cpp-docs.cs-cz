@@ -26,10 +26,10 @@ helpviewer_keywords:
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
 ms.openlocfilehash: 34c92f9057f2273d57b69bdb42c49a81923c3d2a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034949"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase – třída
@@ -50,9 +50,9 @@ Všechny přistupující objekty v šablonách technologie OLE DB odvozovat z t�
 |-|-|
 |[Zavřít](#close)|Zavře přístupové objekty.|
 |[GetHAccessor](#geth)|Načte popisovač přistupujícího objektu.|
-|[Getnumaccessors –](#getnum)|Získá počet přistupující objekty vytvořené třídy.|
+|[GetNumAccessors](#getnum)|Získá počet přistupující objekty vytvořené třídy.|
 |[IsAutoAccessor](#isauto)|Ověřuje, zda je zadaný přistupující objekt automaticky přistupující objekt.|
-|[Releaseaccessors –](#release)|Uvolní přístupové objekty.|
+|[ReleaseAccessors](#release)|Uvolní přístupové objekty.|
 
 ## <a name="requirements"></a>Požadavky
 

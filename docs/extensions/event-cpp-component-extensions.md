@@ -1,5 +1,5 @@
 ---
-title: události (C + +/ CLI a C + +/ CX)
+title: události (C++vyhodnocovací a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
 ms.openlocfilehash: 26bfc3bb9892486353f55a71cfd86a17f2de98b5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033090"
 ---
-# <a name="event--ccli-and-ccx"></a>události (C + +/ CLI a C + +/ CX)
+# <a name="event--ccli-and-ccx"></a>události (C++vyhodnocovací a C++/CX)
 
 **Události** deklaruje klíčové slovo *události*, který je registrovaný odběratelům oznámení (*obslužné rutiny událostí*), která něco zájmu došlo k chybě.
 
 ## <a name="all-runtimes"></a>Všechny moduly runtime
 
-C + +/ CX podporuje deklarace *člen události* nebo *bloku událostí*. Člen události představuje zkratku pro deklarování blok události. Ve výchozím nastavení, deklaruje člen události `add()`, `remove()`, a `raise()` funkce, které jsou explicitně deklarované v bloku události. K přizpůsobení funkcí v člen události, místo toho Deklarujte blok události a pak přepsání funkce, které budete potřebovat.
+C++/CX podporuje deklarace *člen události* nebo *bloku událostí*. Člen události představuje zkratku pro deklarování blok události. Ve výchozím nastavení, deklaruje člen události `add()`, `remove()`, a `raise()` funkce, které jsou explicitně deklarované v bloku události. K přizpůsobení funkcí v člen události, místo toho Deklarujte blok události a pak přepsání funkce, které budete potřebovat.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -40,19 +40,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parametry
 
-* – modifikátor*<br/>
+*modifier*<br/>
 Modifikátor, který lze použít v deklaraci události nebo metodu přistupujícího objektu události.  Možné hodnoty jsou **statické** a **virtuální**.
 
-*delegát*<br/>
+*delegate*<br/>
 [Delegovat](delegate-cpp-component-extensions.md), jehož předpis obslužná rutina události se musí shodovat.
 
 *EVENT_NAME*<br/>
 Název události
 
-*return_ value*<br/>
+*return_value*<br/>
 Na návratový typ metody přistupujícího objektu události.  Chcete-li ověřit, návratový typ musí být **void**.
 
-*parametry*<br/>
+*parameters*<br/>
 (volitelné) Parametry pro `raise` metodu, která odpovídá podpisu *delegovat* parametru.
 
 ### <a name="remarks"></a>Poznámky
@@ -75,7 +75,7 @@ Můžete použít **operátory +=** a **operator-=** přidávat a odebírat udá
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [události (C + +/ CX)](https://msdn.microsoft.com/library/windows/apps/hh755799.aspx).
+Další informace najdete v tématu [události (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755799.aspx).
 
 Pokud chcete přidat a pak odebrat obslužnou rutinu události, je nutné uložit, který je vrácen operace přidání struktury EventRegistrationToken. V operaci odebrání pak musíte použít uložené struktura EventRegistrationToken k identifikaci obslužná rutina události, která se má odebrat.
 
@@ -104,19 +104,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parametry
 
-* – modifikátor*<br/>
+*modifier*<br/>
 Modifikátor, který lze použít v deklaraci události nebo metodu přistupujícího objektu události.  Možné hodnoty jsou **statické** a **virtuální**.
 
-*delegát*<br/>
+*delegate*<br/>
 [Delegovat](delegate-cpp-component-extensions.md), jehož předpis obslužná rutina události se musí shodovat.
 
 *EVENT_NAME*<br/>
 Název události
 
-*return_ value*<br/>
+*return_value*<br/>
 Na návratový typ metody přistupujícího objektu události.  Chcete-li ověřit, návratový typ musí být **void**.
 
-*parametry*<br/>
+*parameters*<br/>
 (volitelné) Parametry pro `raise` metodu, která odpovídá podpisu *delegovat* parametru.
 
 ### <a name="remarks"></a>Poznámky
@@ -161,7 +161,7 @@ Následující kroky musíte provést k vytvoření a používání událostí v
 
    - Vytvoření objektu třídy obsahující definici události.
 
-Další informace o jazyce C + +/ CLI událostí, naleznete v tématu
+Další informace o C++nebo rozhraní příkazového řádku události
 
 - [Události v rozhraní](../dotnet/how-to-use-events-in-cpp-cli.md)
 

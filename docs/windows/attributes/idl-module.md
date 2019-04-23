@@ -1,5 +1,5 @@
 ---
-title: možnost idl_module (atribut C++ COM)
+title: možnost idl_module (C++ atributů COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_module
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
 ms.openlocfilehash: 80e4909a61b5b53ecde19471f2c838dd4c425874
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034975"
 ---
 # <a name="idlmodule"></a>idl_module
@@ -26,7 +26,7 @@ function declaration
 
 ### <a name="parameters"></a>Parametry
 
-*name*<br/>
+*Jméno*<br/>
 Uživatelem definovaný název pro blok kódu, který se zobrazí v souboru IDL.
 
 *NázevSouboru*<br/>
@@ -55,7 +55,7 @@ Funkce, která budou definovat.
 
 ## <a name="remarks"></a>Poznámky
 
-**Možnost idl_module** atribut C++ umožňuje zadat vstupní bod v souboru .dll, který umožňuje importovat ze souboru .dll.
+**Možnost idl_module** C++ atribut umožňuje určit vstupní bod v souboru .dll, který umožňuje importovat ze souboru .dll.
 
 **Možnost idl_module** atribut má podobné funkce [modulu](/windows/desktop/Midl/module) atribut MIDL.
 

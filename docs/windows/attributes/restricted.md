@@ -7,10 +7,10 @@ helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
 ms.openlocfilehash: 86f40fa49daf88668e37bef07f0db33d01cf1942
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029500"
 ---
 # <a name="restricted"></a>restricted
@@ -27,7 +27,7 @@ Určuje, že modul, rozhraní nebo dispinterface nejde volat libovolně.
 
 ### <a name="parameters"></a>Parametry
 
-*rozhraní*<br/>
+*interfaces*<br/>
 Jedno nebo více rozhraní, které nelze volat libovolně pro objekt modelu COM. Tento parametr platí pouze při použití na třídu.
 
 ## <a name="remarks"></a>Poznámky
@@ -70,7 +70,7 @@ class c : public a, public b
 |**Platí pro**|Metody rozhraní **rozhraní**, **třídy**, **– struktura**|
 |**Opakovatelné**|Ne|
 |**Vyžadované atributy**|**coclass** (při použití u **třídy** nebo **struktura**)|
-|**Neplatné atributy**|Žádné|
+|**Neplatné atributy**|Žádný|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 

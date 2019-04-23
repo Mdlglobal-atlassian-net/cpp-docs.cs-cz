@@ -10,10 +10,10 @@ helpviewer_keywords:
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
 ms.openlocfilehash: 12e6af31c2714095cf2ecf51e4f067081789a9e0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028695"
 ---
 # <a name="aggregates"></a>aggregates
@@ -28,7 +28,7 @@ Označuje, že objekt agreguje objektu určeného parametrem identifikátor CLSI
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor CLSID*<br/>
+*clsid*<br/>
 Určuje identifikátor CLSID agregovatelné objektu.
 
 *variable_name*<br/>
@@ -86,7 +86,7 @@ struct CObject : IObject
 |**Platí pro**|**Třída**, **– struktura**|
 |**Opakovatelné**|Ano|
 |**Vyžadované atributy**|Jeden nebo více z následujících akcí: `coclass`, `progid`, nebo `vi_progid`.|
-|**Neplatné atributy**|Žádné|
+|**Neplatné atributy**|Žádný|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
@@ -95,6 +95,6 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](cp
 [COM – atributy](com-attributes.md)<br/>
 [Atributy třídy](class-attributes.md)<br/>
 [Atributy klíčových slov typedef, enum, union a struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Aggregation](/windows/desktop/com/aggregation)<br/>
-[Agregovatelné](/windows/desktop/Midl/aggregatable)<br/>
+[Agregace](/windows/desktop/com/aggregation)<br/>
+[Aggregatable](/windows/desktop/Midl/aggregatable)<br/>
 [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)

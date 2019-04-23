@@ -7,10 +7,10 @@ helpviewer_keywords:
 - defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
 ms.openlocfilehash: 813fb9dd4edf2f6e522e7310ba1e8bfcd55ed2b9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028344"
 ---
 # <a name="defaultvtable"></a>defaultvtable
@@ -25,7 +25,7 @@ Definuje rozhraní jako výchozího rozhraní vtable pro objekt modelu COM.
 
 ### <a name="parameters"></a>Parametry
 
-*rozhraní*<br/>
+*interface*<br/>
 Určené rozhraní, které mají mít výchozí vtable pro objekt modelu COM.
 
 ## <a name="remarks"></a>Poznámky

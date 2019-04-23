@@ -8,15 +8,15 @@ helpviewer_keywords:
 - INVLPGA instruction
 ms.assetid: aa6578ce-8278-464b-8815-a0fc45330915
 ms.openlocfilehash: 5e470fc12ad47aa156c513b293543fa356398d5e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031130"
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Zruší platnost položky mapování adresy ve vyrovnávací paměti počítače překlad doplňování vzhled. Parametry zadejte virtuální adresu a adresu místo identifikátor stránky zrušit platnost.
 
@@ -45,7 +45,7 @@ void __svm_invlpga(void *Va, int ASID);
 
 **Soubor hlaviček** \<intrin.h >
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

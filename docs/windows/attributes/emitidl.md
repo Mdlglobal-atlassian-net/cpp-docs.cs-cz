@@ -7,10 +7,10 @@ helpviewer_keywords:
 - emitidl attribute
 ms.assetid: 85b80c56-578e-4392-ac03-8443c74ebb7d
 ms.openlocfilehash: 6c4055e0f14bced1e5047fc502a4bf274126f804
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031631"
 ---
 # <a name="emitidl"></a>emitidl
@@ -60,7 +60,7 @@ Pokaždé, když kompilátor narazí nový soubor **emitidl** implicitně nastav
 |-|-|
 |**Platí pro**|Kdekoli|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
+|**Vyžadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).

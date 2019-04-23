@@ -7,15 +7,15 @@ helpviewer_keywords:
 - __umul128 intrinsic
 ms.assetid: 13684df3-3ac7-467c-b258-a0e93bc490b5
 ms.openlocfilehash: afca1e62127ac2dbcfc407982dbe191d379b4acb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034962"
 ---
 # <a name="umul128"></a>_umul128
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Vynásobí dvě 64-bit celých čísel bez znaménka předaný jako první dva argumenty a umístí vysokou 64bitová verze produktu 64bitové celé číslo bez znaménka na které odkazuje `HighProduct` a vrátí nízké 64bitová verze produktu.
 
@@ -77,7 +77,7 @@ int main()
 0xfffffffffffffff * 0xf0000000 = 0xeffffffffffffff10000000
 ```
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

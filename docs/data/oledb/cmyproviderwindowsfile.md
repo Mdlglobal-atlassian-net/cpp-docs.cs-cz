@@ -10,10 +10,10 @@ helpviewer_keywords:
 - CCustomWindowsFile class
 ms.assetid: 0e9e72ac-1e1e-445f-a7ac-690c20031f9d
 ms.openlocfilehash: 4af302d8a391de359f3b8ac66d41b5d7198fd8f6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033108"
 ---
 # <a name="ccustomwindowsfile"></a>CCustomWindowsFile
@@ -79,4 +79,4 @@ Metoda vytvoří jeden záznam pro každý soubor (odpovídající řádek) a um
 
 ## <a name="see-also"></a>Viz také:
 
-[Poskytovatel souborů vytvořených průvodcem](../../data/oledb/provider-wizard-generated-files.md)<br/>
+[Soubory generované průvodcem zprostředkovatele](../../data/oledb/provider-wizard-generated-files.md)<br/>

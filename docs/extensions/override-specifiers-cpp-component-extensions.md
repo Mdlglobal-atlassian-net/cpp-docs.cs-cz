@@ -1,5 +1,5 @@
 ---
-title: Override – specifikátory (C + +/ CLI a C + +/ CX)
+title: Override – specifikátory (C++vyhodnocovací a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - override specifiers
 ms.assetid: 155bbf6f-4722-4654-afb1-9cb52af799fb
 ms.openlocfilehash: c1e8e7db2879b0226eaff562f5b5b826bce14caf
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029931"
 ---
-# <a name="override-specifiers--ccli-and-ccx"></a>Override – specifikátory (C + +/ CLI a C + +/ CX)
+# <a name="override-specifiers--ccli-and-ccx"></a>Override – specifikátory (C++vyhodnocovací a C++/CX)
 
 *Override – specifikátory* upravit jak se děděné typy a členy děděných typů chovají v odvozených typech.
 

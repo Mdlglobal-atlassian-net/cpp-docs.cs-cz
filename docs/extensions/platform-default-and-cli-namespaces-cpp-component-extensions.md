@@ -1,5 +1,5 @@
 ---
-title: Platform, default a cli obory názvů (C + +/ CLI a C + +/ CX)
+title: Platform, default a cli obory názvů (C++vyhodnocovací a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
 ms.openlocfilehash: a7599e2987d27626e6f5c9d049d9a3bd4509c3ff
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028513"
 ---
-# <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Platform, default a cli obory názvů (C + +/ CLI a C + +/ CX)
+# <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Platform, default a cli obory názvů (C++vyhodnocovací a C++/CX)
 
 Obor názvů kvalifikuje názvy prvků jazyka, aby názvy nebyly v konfliktu s jinak identickými názvy jinde ve zdrojovém kódu. Například kolize názvů může zabránit kompilátor rozpozná [Context-Sensitive Keywords](context-sensitive-keywords-cpp-component-extensions.md). Obory názvů používá kompilátor, ale ve zkompilovaném sestavení nejsou zachovány.
 
 ## <a name="all-runtimes"></a>Všechny moduly runtime
 
-Při vytváření projektu sady Visual Studio poskytuje výchozí obor názvů pro váš projekt. Můžete ručně přejmenovat obor názvů, i když v jazyce C + +/ CX název souboru winmd musí odpovídat názvu kořenového oboru názvů.
+Při vytváření projektu sady Visual Studio poskytuje výchozí obor názvů pro váš projekt. Obor názvů, můžete ručně přejmenovat, i když v C++/CX název souboru winmd musí odpovídat názvu kořenového oboru názvů.
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
-Další informace najdete v tématu [viditelnost typů a oborů názvů (C + +/ CX)](https://msdn.microsoft.com/library/windows/apps/hh969551.aspx).
+Další informace najdete v tématu [viditelnost typů a oborů názvů (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh969551.aspx).
 
 ### <a name="requirements"></a>Požadavky
 
@@ -42,7 +42,7 @@ using namespace cli;
 
 ### <a name="remarks"></a>Poznámky
 
-C + +/ CLI podporuje **rozhraní příkazového řádku** oboru názvů. Při kompilaci s `/clr`, **pomocí** implikován příkaz v oddílu syntaxe.
+C++/CLI podporuje **rozhraní příkazového řádku** oboru názvů. Při kompilaci s `/clr`, **pomocí** implikován příkaz v oddílu syntaxe.
 
 Spadají následující funkce jazyka **rozhraní příkazového řádku** obor názvů:
 

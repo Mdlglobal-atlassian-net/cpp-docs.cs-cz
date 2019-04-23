@@ -3,10 +3,10 @@ title: Desktopové aplikace (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
 ms.openlocfilehash: 1242878c6b79616aaadb6a176cd29deeb89a7daf
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
-ms.translationtype: MT
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033102"
 ---
 # <a name="desktop-applications-visual-c"></a>Desktopové aplikace (Visual C++)
@@ -29,7 +29,7 @@ V sadě Visual Studio 2017 verze 15.4 nebo novější můžete vytvořit projekt
 
 - Aplikace MFC je desktopová aplikace Windows použít [Microsoft Foundation Classes](../mfc/mfc-desktop-applications.md) k vytvoření uživatelského rozhraní. Aplikace knihovny MFC můžete také použít komponenty modelu COM stejně jako CRT a standardní knihovny rozhraní API. Knihovna MFC poskytuje dynamického zajišťování objektově orientované obálku C++ přes rozhraní Windows API a smyčky zpráv okna. Knihovna MFC je výchozí volbou pro aplikace, zejména ty podnikové aplikace –, které mají velké množství ovládacích prvků uživatelského rozhraní nebo vlastních uživatelských ovládacích prvků. Knihovna MFC poskytuje pohodlné pomocné třídy pro správu okna, serializaci, manipulaci s textem, tisk a prvky moderního uživatelského rozhraní, jako je například pás karet. Účinná s knihovnou MFC měli seznámit s Win32.
 
-- C + +/ CLI aplikace nebo komponenty používá rozšíření syntaxe jazyka C++ (vzhledem k tomu provést ve specifikaci jazyka C++) k povolení interakce mezi rozhraním .NET a nativního kódu jazyka C++.  C + +/ CLI aplikace může mít, na kterých běží nativně díly a, které běží na rozhraní .NET Framework s přístupem k základní knihovny tříd rozhraní .NET. C + +/ CLI je upřednostňovanou možností, když máte nativní kód C++, kterou je potřeba pracovat s kódem napsaným v jazyce C# nebo Visual Basic. Je primárně určena pro použití v knihovnách DLL .NET, nikoli v uživatelském rozhraní kódu. Další informace najdete v tématu [.NET programování v jazyce C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
+- A C++/CLI aplikace nebo komponenty používá rozšíření C++ syntaxe (to povoluje C++ specifikace) k povolení interakce mezi rozhraním .NET a nativního kódu jazyka C++.  A C++/CLI aplikace může mít, na kterých běží nativně díly a, které běží na rozhraní .NET Framework s přístupem k základní knihovny tříd rozhraní .NET. C++/ CLI je upřednostňovanou možností v případě, že máte nativní C++ kód, který je pro práci s kódem napsaným v C# nebo Visual Basic. Je primárně určena pro použití v knihovnách DLL .NET, nikoli v uživatelském rozhraní kódu. Další informace najdete v tématu [programování v rozhraní .NET s C++vyhodnocovací (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
 
 Všechny aplikace klasické pracovní plochy v jazyce C++ můžete použít C Runtime (CRT) a standardní knihovny třídy a funkce, objekty COM a veřejných funkcí Windows, které jsou souhrnně označovány jako Windows API. Úvod do aplikací klasické pracovní plochy Windows v jazyce C++, naleznete v tématu [Win32 a C++ vám začít](/windows/desktop/LearnWin32/learn-to-program-for-windows).
 
@@ -37,12 +37,12 @@ Všechny aplikace klasické pracovní plochy v jazyce C++ můžete použít C Ru
 
 |Název|Popis|
 |-----------|-----------------|
-|[Windows konzolové aplikace v jazyce C++](console-applications-in-visual-cpp.md)|Obsahuje informace o konzolových aplikacích. Konzolová aplikace Win32 (nebo Win64) nemá žádná vlastní okna ani žádnou smyčku zpráv. Spustí se v okně konzoly a vstup a výstup se provádí prostřednictvím příkazového řádku.|
-|[Návod: Vytváření aplikací klasické pracovní plochy Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Vytvoření jednoduché aplikace klasické pracovní plochy Windows.|
-|[Vytváření aplikací klasické pracovní plochy Windows prázdný](creating-an-empty-windows-desktop-application.md)|Jak vytvořit projekt klasické pracovní plochy Windows, který nemá žádný výchozí soubory.|
+|[Konzolové aplikace pro Windows v C++](console-applications-in-visual-cpp.md)|Obsahuje informace o konzolových aplikacích. Konzolová aplikace Win32 (nebo Win64) nemá žádná vlastní okna ani žádnou smyčku zpráv. Spustí se v okně konzoly a vstup a výstup se provádí prostřednictvím příkazového řádku.|
+|[Návod: Vytváření desktopových aplikací Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Vytvoření jednoduché aplikace klasické pracovní plochy Windows.|
+|[Vytvoření prázdné desktopové aplikace Windows](creating-an-empty-windows-desktop-application.md)|Jak vytvořit projekt klasické pracovní plochy Windows, který nemá žádný výchozí soubory.|
 |[Přidávání souborů do prázdných aplikací Win32](adding-files-to-an-empty-win32-applications.md)|Postup přidání souborů do projektu prázdný.|
 |[Práce se zdrojovými soubory](working-with-resource-files.md)|Jak přidat obrázky, ikony, tabulek řetězců a dalších prostředků pro aplikace klasické pracovní plochy.|
-|[Prostředky pro vytvoření hry s použitím rozhraní DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Obsahuje odkazy na obsah pro vytváření her v C++.|
+|[Prostředky pro vytvoření hry s použitím rozhraní DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Obsahuje odkazy na obsah pro vytváření her v C++.|
 |[Návod: Vytvoření a použití statické knihovny](walkthrough-creating-and-using-a-static-library-cpp.md)|Jak vytvořit binární soubor LIB.|
 |[Postupy: Použití sady Windows 10 SDK v desktopové aplikaci Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Obsahuje kroky pro vytvoření projektu pro sestavení pomocí Windows 10 SDK.|
 

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - RFX (ODBC), implementing
 ms.assetid: ada8f043-37e6-4d41-9db3-92c997a61957
 ms.openlocfilehash: 2a029f653753363e08b3c4f8b9fceab6295924af
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034112"
 ---
 # <a name="record-field-exchange-using-rfx"></a>Výměna polí záznamu: Použití funkce RFX
@@ -40,7 +40,7 @@ V následující tabulce jsou uvedeny vaši roli ve vztahu k rámci udělá za v
 
 ## <a name="see-also"></a>Viz také:
 
-[Výměna pole záznamu (Record Field Exchange – RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
+[Výměna polí záznamu (Record Field Exchange – RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [Výměna polí záznamu: Jak funkce RFX pracuje](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
 [Recordset: Získávání součtů a jiných agregačních výsledků (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
 [CRecordset – třída](../../mfc/reference/crecordset-class.md)<br/>

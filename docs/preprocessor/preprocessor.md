@@ -5,10 +5,10 @@ helpviewer_keywords:
 - preprocessor
 ms.assetid: e120eda3-b413-49f1-a07c-e9fb128cf500
 ms.openlocfilehash: b1443d88fdba470cb8ed5058c9a9012bfbdc5bc7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028571"
 ---
 # <a name="preprocessor"></a>Preprocesor
@@ -16,7 +16,7 @@ Preprocesor je textový procesor, který pracuje s textem zdrojového souboru v 
 
 Referenční materiál preprocesoru obsahuje následující oddíly:
 
-- [Direktivy preprocesoru](../preprocessor/preprocessor-directives.md)
+- [Preprocesor – direktivy](../preprocessor/preprocessor-directives.md)
 
 - [Operátory preprocesoru](../preprocessor/preprocessor-operators.md)
 
@@ -24,11 +24,11 @@ Referenční materiál preprocesoru obsahuje následující oddíly:
 
 - [Pragmas](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Můžete získat seznam zdrojového kódu po předběžném zpracování pomocí [/E](../build/reference/e-preprocess-to-stdout.md) nebo [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) – možnost kompilátoru. Obě možnosti vyvolají preprocesor a způsobí zobrazení výsledného textu na standardním výstupním zařízení, které ve většině případů představuje konzole. Rozdíl mezi dvěma možnostmi je, že /E obsahuje direktivy `#line` a /EP tyto direktivy vyjme.
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ##  <a name="_predir_special_terminology"></a> Speciální terminologie
 

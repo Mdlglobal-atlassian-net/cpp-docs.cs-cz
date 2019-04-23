@@ -6,10 +6,10 @@ helpviewer_keywords:
 - attributes [C++/CLI], compiler
 ms.assetid: 53cd9bee-1521-48ec-b171-80feac2096cc
 ms.openlocfilehash: ea4d3119a640c0642664210384c297e011104411
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030814"
 ---
 # <a name="compiler-attributes"></a>Atributy kompilátoru
@@ -29,7 +29,7 @@ Atributy kompilátoru poskytují širokou škálu funkcí.
 |[library_block](library-block.md)|Umístí konstrukci uvnitř bloku knihovny souboru IDL.|
 |[no_injected_text](no-injected-text.md)|Zabrání kompilátoru vkládání kódu v důsledku použití atributu.|
 |[satype](satype.md)|Určuje datový typ `SAFEARRAY`.|
-|[verze](version-cpp.md)|Určuje konkrétní verzi napříč několika verzemi rozhraní nebo tříd.|
+|[version](version-cpp.md)|Určuje konkrétní verzi napříč několika verzemi rozhraní nebo tříd.|
 
 ## <a name="see-also"></a>Viz také:
 

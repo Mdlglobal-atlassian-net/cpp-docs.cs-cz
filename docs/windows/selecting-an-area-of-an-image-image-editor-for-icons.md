@@ -41,10 +41,10 @@ helpviewer_keywords:
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
 ms.openlocfilehash: 849da0d14987a057d39d5f9531e97545b3d4b8cf
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033284"
 ---
 # <a name="how-to-edit-an-image"></a>Postupy: Upravit obrázek
@@ -217,12 +217,12 @@ Můžete nastavit nebo upravit vlastnosti image pomocí [okno vlastností](/visu
 
 ## <a name="requirements"></a>Požadavky
 
-Žádné
+Žádný
 
 ## <a name="see-also"></a>Viz také:
 
 [Editor obrázků pro ikony](../windows/image-editor-for-icons.md)<br/>
 [Postupy: Vytvoření ikony nebo jiného obrázku](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
-[Postupy: Použití nástroje kreslení](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
-[Postupy: Pracovat s barvou](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[Postupy: Použití nástroje pro kreslení](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Postupy: Práce s barvou](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

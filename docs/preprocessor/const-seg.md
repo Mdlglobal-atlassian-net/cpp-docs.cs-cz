@@ -9,10 +9,10 @@ helpviewer_keywords:
 - const_seg pragma
 ms.assetid: 1eb58ee2-fb0e-4a39-9621-699c8f5ef957
 ms.openlocfilehash: c58f154f5e1ab6906b45d59f454a7dc2b5c0bfbe
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029619"
 ---
 # <a name="constseg"></a>const_seg
@@ -26,13 +26,13 @@ Určuje segment kde [const](../cpp/const-cpp.md) proměnné, které jsou uložen
 
 ### <a name="parameters"></a>Parametry
 
-**nabízených oznámení**<br/>
+**push**<br/>
 (Volitelné) Vloží záznam do zásobníku vnitřního kompilátoru. A **nabízených** může mít *identifikátor* a *segment-name*.
 
-**POP**<br/>
+**pop**<br/>
 (Volitelné) Odstraní záznam z vrcholu vnitřního zásobníku kompilátoru.
 
-*identifikátor*<br/>
+*identifier*<br/>
 (Volitelné) Při použití s **nabízených**, přiřadí název záznamu ve vnitřním zásobníku kompilátoru. Při použití s **pop**, vyjme všechny záznamy z vnitřního zásobníku až do *identifikátor* li *identifikátor* nebyl nalezen v interním zásobníku, nic nevezme.
 
 Pomocí *identifikátor* vyjmout několik záznamů lze jedním z jedné **pop** příkazu.

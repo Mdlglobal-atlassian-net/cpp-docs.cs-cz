@@ -7,10 +7,10 @@ helpviewer_keywords:
 - in attribute
 ms.assetid: 7b450cc4-4d2e-4910-a195-7487c6b7c373
 ms.openlocfilehash: 06d78552ef2ebb878ed630eb377e6249ba60cad4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034534"
 ---
 # <a name="in-c"></a>in (C++)
@@ -39,7 +39,7 @@ Zobrazit [umožňujících vazbu](bindable.md) příklad, jak používat **v**.
 |-|-|
 |**Platí pro**|Rozhraní parametrů, metody rozhraní|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
+|**Vyžadované atributy**|Žádné|
 |**Neplatné atributy**|**retval**|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).

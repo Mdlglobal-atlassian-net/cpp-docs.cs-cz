@@ -1,5 +1,5 @@
 ---
-title: Obecní delegáti (C + +/ CLI)
+title: Obecní delegáti (C++vyhodnocovací)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
 ms.openlocfilehash: 449659126f52997d548ebd7785a78c1200038ee6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029561"
 ---
-# <a name="generic-delegates-ccli"></a>Obecní delegáti (C + +/ CLI)
+# <a name="generic-delegates-ccli"></a>Obecní delegáti (C++vyhodnocovací)
 
-Můžete použít parametry obecného typu pomocí delegátů. Další informace o delegátech naleznete v tématu [delegáta (C + +/ CLI a C + +/ CX)](delegate-cpp-component-extensions.md).
+Můžete použít parametry obecného typu pomocí delegátů. Další informace o delegátech naleznete v tématu [delegáta (C++vyhodnocovací a C++/CX)](delegate-cpp-component-extensions.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,22 +29,22 @@ generic < [class | typename] type-parameter-identifiers>
 
 ### <a name="parameters"></a>Parametry
 
-*atributy*<br/>
+*Atributy*<br/>
 (Volitelné) Další informace o deklarativní. Další informace o atributu třídy a atributy naleznete v tématu atributy.
 
 *Typ – parametr-identifikátory*<br/>
 Čárkou oddělený seznam identifikátorů pro parametry typu.
 
 *type-parameter-constraints-clauses*<br/>
-Má podobu podle [omezení parametrů obecných typů (C + +/ CLI)](constraints-on-generic-type-parameters-cpp-cli.md)
+Má podobu podle [omezení parametrů obecných typů (C++vyhodnocovací)](constraints-on-generic-type-parameters-cpp-cli.md)
 
-*Modifikátory dostupnosti*<br/>
+*accessibility-modifiers*<br/>
 (Volitelné) Modifikátory (třeba **veřejné**, **privátní**).
 
 *Typ výsledku*<br/>
 Návratový typ delegáta.
 
-*identifikátor*<br/>
+*identifier*<br/>
 Název delegáta.
 
 *formální parametry*<br/>

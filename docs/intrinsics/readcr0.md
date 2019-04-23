@@ -7,15 +7,15 @@ helpviewer_keywords:
 - __readcr0 intrinsic
 ms.assetid: 25bdb093-d83c-48d7-9c0f-224de8e2c61c
 ms.openlocfilehash: 09d44e438b4aa99f9be63927a4cf116f12c6e634
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027789"
 ---
 # <a name="readcr0"></a>__readcr0
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Přečte CR0 registr a vrátí jeho hodnotu.
 
@@ -42,7 +42,7 @@ Hodnota registru CR0.
 
 Tomto vnitřní je k dispozici pouze v režimu jádra a rutina je dostupný jenom jako vnitřní.
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

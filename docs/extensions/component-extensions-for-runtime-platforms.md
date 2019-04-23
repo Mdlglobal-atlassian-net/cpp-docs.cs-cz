@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
 ms.openlocfilehash: cf123e54c633539c8e5bf8204344c842a21183ef
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034041"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>Přípony komponent pro .NET a UPW
 
-Standard jazyka C++ umožňuje dodavatelům kompilátoru poskytují nestandardní rozšíření pro jazyk. Microsoft poskytuje rozšíření vám pomůže s připojením nativní kód C++ pro kód, který běží na rozhraní .NET Framework nebo univerzální platformu Windows (UPW). Rozšíření .NET se nazývají C + +/ CLI a vytvoří kód, který se spustí v rozhraní .NET spravované prostředí pro spouštění, která je volána Common Language Runtime (CLR). Rozšíření UPW se nazývají C + +/ CX a vytvořit nativního strojového kódu.
+Standard jazyka C++ umožňuje dodavatelům kompilátoru poskytují nestandardní rozšíření pro jazyk. Microsoft poskytuje rozšíření vám pomůže s připojením nativní kód C++ pro kód, který běží na rozhraní .NET Framework nebo univerzální platformu Windows (UPW). Rozšíření .NET se nazývají C++/rozhraní příkazového řádku a vytvoří kód, který se spustí v rozhraní .NET spravované prostředí pro spouštění, která je volána Common Language Runtime (CLR). Rozšíření UPW se nazývají C++/CX a vytvořit nativního strojového kódu.
 
 > [!NOTE]
-> Pro nové aplikace, doporučujeme použít C + +/ WinRT spíše než C + +/ CX. C + +/ WinRT je nový, standard C ++ 17 jazyk projekci pro rozhraní API Windows Runtime. Budeme dál podporovat C + +/ CX a WRL, ale důrazně doporučujeme, aby nové aplikace pomocí C + +/ WinRT. Další informace najdete v tématu [C + +/ WinRT](/windows/uwp/cpp-and-winrt-apis/index).
+> Pro nové aplikace, doporučujeme použít C++/WinRT spíše než C++/CX. C++/ WinRT je nový, standard C ++ 17 jazyk projekci pro rozhraní API Windows Runtime. Budeme dál podporovat C++/CX a WRL, ale důrazně doporučujeme, aby nové aplikace pomocí C++/WinRT. Další informace najdete v tématu [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/index).
 
 ### <a name="two-runtimes-one-set-of-extensions"></a>Dva moduly runtime, jednu sadu rozšíření
 
-C + +/ CLI rozšiřuje standard ISO/ANSI C++ a je definován v části s Ecma C + +/ CLI Standard. Další informace najdete v tématu [.NET programování v jazyce C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
+C++/ Rozšiřuje rozhraní příkazového řádku ISO/ANSI C++ standard a je definován v rámci Ecma C++standardní rozhraní příkazového řádku. Další informace najdete v tématu [programování v rozhraní .NET s C++vyhodnocovací (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
 
-C + +/ CX rozšíření jsou podmnožinou C + +/ CLI. I když rozšíření syntaxe je stejný jako ve většině případů, kód, který je generován závisí na, jestli je zadat `/ZW` – možnost kompilátoru do cíle UPW, nebo `/clr` možnost cílového rozhraní .NET. Tyto přepínače jsou nastaveny automaticky při vytvoření projektu pomocí sady Visual Studio.
+C++/CX rozšíření jsou podmnožinou C++vyhodnocovací. I když rozšíření syntaxe je stejný jako ve většině případů, kód, který je generován závisí na, jestli je zadat `/ZW` – možnost kompilátoru do cíle UPW, nebo `/clr` možnost cílového rozhraní .NET. Tyto přepínače jsou nastaveny automaticky při vytvoření projektu pomocí sady Visual Studio.
 
 ## <a name="data-type-keywords"></a>Klíčová slova datový typ
 
@@ -44,12 +44,12 @@ Následující tabulka obsahuje seznam klíčových slov v rozšíření jazyka 
 |**interface class**<br /><br /> **Struktura rozhraní**|Ne|Deklaruje rozhraní.|[interface class](interface-class-cpp-component-extensions.md)|
 |**enum class**<br /><br /> **Struktura výčet**|Ne|Deklaruje výčet.|[enum class](enum-class-cpp-component-extensions.md)|
 |**property**|Ano|Deklaruje vlastnost.|[property](property-cpp-component-extensions.md)|
-|**delegát**|Ano|Deklaruje delegáta.|[Delegate (C + +/ CLI a C + +/ CX)](delegate-cpp-component-extensions.md)|
+|**delegate**|Ano|Deklaruje delegáta.|[delegate (C++/CLI a C++/CX)](delegate-cpp-component-extensions.md)|
 |**event**|Ano|Deklaruje událost.|[event](event-cpp-component-extensions.md)|
 
 ## <a name="override-specifiers"></a>override – specifikátory
 
-Následující klíčová slova můžete použít k určení chování přepsat pro odvození. I když **nové** – klíčové slovo není rozšířením jazyka C++, je vzhledem k tomu je možné v další kontext zde uvedena. Několik specifikátorů platí také pro nativní programování. Další informace najdete v tématu [jak: Deklarace specifikátorů Override v nativních kompilacích (C + +/ CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
+Následující klíčová slova můžete použít k určení chování přepsat pro odvození. I když **nové** – klíčové slovo není rozšířením jazyka C++, je vzhledem k tomu je možné v další kontext zde uvedena. Několik specifikátorů platí také pro nativní programování. Další informace najdete v tématu [jak: Deklarace specifikátorů Override v nativních kompilacích (C++vyhodnocovací)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
 |Klíčové slovo|Závislá na kontextu|Účel|Odkaz|
 |-------------|-----------------------|-------------|---------------|
@@ -64,7 +64,7 @@ Byly přidány následující klíčová slova pro podporu obecných typů. Dal�
 
 |Klíčové slovo|Závislá na kontextu|Účel|
 |-------------|-----------------------|-------------|
-|**obecné**|Ne|Deklaruje obecného typu.|
+|**Obecné**|Ne|Deklaruje obecného typu.|
 |**kde**|Ano|Určuje omezení, která se použijí na parametr obecného typu.|
 
 ## <a name="miscellaneous-keywords"></a>Ostatní klíčová slova
@@ -78,7 +78,7 @@ Následující klíčová slova jsou přidané do rozšíření C++.
 |**gcnew**|Ne|Přidělí typy v haldě uvolňování paměti. Použít místo **nové** a **odstranit**.|[ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md)|
 |**Nový odkaz**|Ano|Přidělí typ Windows Runtime. Použít místo **nové** a **odstranit**.|[ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md)|
 |**initonly**|Ano|Označuje, že člen se dá inicializovat jenom v deklaraci nebo statický konstruktor.|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
-|**literál**|Ano|Vytvoří proměnnou literálu.|[literál](literal-cpp-component-extensions.md)|
+|**literal**|Ano|Vytvoří proměnnou literálu.|[literal](literal-cpp-component-extensions.md)|
 |**nullptr**|Ne|Označuje, že popisovač nebo ukazatel neukazuje na objekt.|[nullptr](nullptr-cpp-component-extensions.md)|
 
 ## <a name="template-constructs"></a>Šablona konstrukce
@@ -87,7 +87,7 @@ Tyto jazykové konstrukce jsou implementovány jako šablony, nikoli jako klíč
 
 |Klíčové slovo|Účel|Odkaz|
 |-------------|-------------|---------------|
-|**pole**|Deklaruje pole.|[Pole](arrays-cpp-component-extensions.md)|
+|**Pole**|Deklaruje pole.|[Pole](arrays-cpp-component-extensions.md)|
 |**interior_ptr**|(Pouze CLR) Body k datům v typu odkazu.|[interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)|
 |**pin_ptr**|(Pouze CLR) Odkazuje na odkazové typy CLR dočasně potlačit systém kolekce paměti.|[pin_ptr (C++/CLI)](pin-ptr-cpp-cli.md)|
 |**safe_cast**|Určuje a provede metodu optimální přetypování typu modulu runtime.|[safe_cast](safe-cast-cpp-component-extensions.md)|
@@ -110,9 +110,9 @@ Tato část obsahuje další programovací konstrukce a témata, která se týka
 |-----------|-----------------|
 |[__identifier (C++/CLI)](identifier-cpp-cli.md)|(Windows Runtime a CLR) Umožňuje použít klíčová slova jako identifikátory.|
 |[Seznamy argumentů s proměnnou délkou (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Windows Runtime a CLR) Povolí funkci provést proměnný počet argumentů.|
-|[.NET Framework – Ekvivalenty k nativním typům C++ (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)|Seznam typů CLR, které se používají místo celočíselné typy C++.|
+|[.NET Framework – ekvivalenty nativních typů C++ (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)|Seznam typů CLR, které se používají místo celočíselné typy C++.|
 |[appdomain](../cpp/appdomain.md) **__declspec** modifier|**__declspec** modifikátor, který určuje, že existují statické a globální proměnné na doménu aplikace.|
-|[Přetypování ve stylu jazyka pomocí možnosti /clr (C++/CLI)](c-style-casts-with-clr-cpp-cli.md)|Popisuje, jak se interpretují přetypování C-style.|
+|[Přetypování C-Style s parametrem/CLR (C++vyhodnocovací)](c-style-casts-with-clr-cpp-cli.md)|Popisuje, jak se interpretují přetypování C-style.|
 |[výraz __clrcall](../cpp/clrcall.md) konvence volání|Určuje konvence volání CLR nedodržující předpisy.|
 |`__cplusplus_cli`|[Předdefinovaná makra](../preprocessor/predefined-macros.md)|
 |[Vlastní atributy](user-defined-attributes-cpp-component-extensions.md)|Popisuje, jak definovat vlastní atributy CLR.|
@@ -124,13 +124,13 @@ Tato část obsahuje další programovací konstrukce a témata, která se týka
 |[spravované, nespravované](../preprocessor/managed-unmanaged.md) direktivy pragma|Ukazuje, jak spravované a nespravované funkce mohou současně existovat ve stejném modulu.|
 |[proces](../cpp/process.md) **__declspec** modifikátor|**__declspec** modifikátor, který zmocňuje, statické a globální proměnné existují jeden proces.|
 |[Reflexe (C++/CLI)](../dotnet/reflection-cpp-cli.md)|Ukazuje CLR verze informací o typu za běhu.|
-|[String](string-cpp-component-extensions.md)|Tento článek popisuje kompilátoru převod z řetězcových literálů na <xref:System.String>.|
+|[Řetězec](string-cpp-component-extensions.md)|Tento článek popisuje kompilátoru převod z řetězcových literálů na <xref:System.String>.|
 |[Předávání typů (C++/CLI)](type-forwarding-cpp-cli.md)|Přesun typu do přesouvání sestavení na jiné sestavení umožňuje, aby se klientský kód nebude muset být překompilovány.|
 |[Uživatelsky definované atributy](user-defined-attributes-cpp-component-extensions.md)|Ukazuje, uživatelsky definované atributy.|
 |[#using – direktiva](../preprocessor/hash-using-directive-cpp.md)|Importuje externí sestavení.|
-|[dokumentace XML](../build/reference/xml-documentation-visual-cpp.md)|Vysvětluje dokumentace kódu XML pomocí  [ /DOC (zpracování dokumentačních komentářů) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md)|
+|[Dokumentace XML](../build/reference/xml-documentation-visual-cpp.md)|Vysvětluje dokumentace kódu XML pomocí  [ /DOC (zpracování dokumentačních komentářů) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md)|
 
 ## <a name="see-also"></a>Viz také:
 
-[.NET – programování s C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
+[Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 [Nativní funkce a vzájemná funkční spolupráce rozhraní .NET](../dotnet/native-and-dotnet-interoperability.md)

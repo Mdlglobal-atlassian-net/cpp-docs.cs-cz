@@ -15,10 +15,10 @@ helpviewer_keywords:
 - GetRowsetProperties method
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
 ms.openlocfilehash: 60ca0af25a0556c4a3d42d91ba3b0c52daa5f530
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034226"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Metody generované v průvodci příjemcem
@@ -161,4 +161,4 @@ Průvodce definuje metody `OpenDataSource` a `CloseDataSource`; `OpenDataSource`
 
 ## <a name="see-also"></a>Viz také:
 
-[Vytvoření příjemce technologie OLE DB pomocí průvodce](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+[Vytvoření příjemce OLE DB pomocí průvodce](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
