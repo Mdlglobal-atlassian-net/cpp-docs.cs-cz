@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3465
 ms.assetid: aeb815e5-b3fc-4525-afe2-d738e9321df1
 ms.openlocfilehash: 117c9b9918950fd2e95e206c5aea457dee183b0a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58781572"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779255"
 ---
 # <a name="compiler-error-c3465"></a>Chyba kompilátoru C3465
 
@@ -19,7 +19,7 @@ určený typ 'type' musí odkazovat na sestavení 'assembly'
 
 Předávání typů bude fungovat pro klientskou aplikaci, dokud je provedena rekompilace klienta. Při opětovné kompilaci, budete potřebovat odkaz pro všechna sestavení, který obsahuje definici typu, který se používá v klientské aplikaci.
 
-Další informace najdete v tématu [předávání typů (C + +/ CLI)](../../extensions/type-forwarding-cpp-cli.md).
+Další informace najdete v tématu [předávání typu (C++vyhodnocovací)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Příklad
 

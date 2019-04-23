@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3298
 ms.assetid: 458c2680-95bb-4d5e-895f-ce4115844193
 ms.openlocfilehash: fe6913d402c6ce4df3551c159eb56a12590799cb
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58773894"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779125"
 ---
 # <a name="compiler-error-c3298"></a>Compiler Error C3298
 
@@ -19,7 +19,7 @@ ms.locfileid: "58773894"
 
 Nelze zadat vzájemně se vylučující charakteristiky pro omezení. Například parametr obecného typu nemůže být omezen na typ hodnoty a typ odkazu.
 
-Další informace najdete v tématu [omezení parametrů obecných typů (C + +/ CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
+Další informace najdete v tématu [omezení parametrů obecných typů (C++vyhodnocovací)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
 
 ## <a name="example"></a>Příklad
 

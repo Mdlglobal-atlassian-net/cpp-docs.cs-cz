@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: bcf2372f039ccec4b46bf51fb4da9f4175289f14
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58807474"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59803732"
 ---
 Kompilátory sady Visual Studio a nástroje sestavení mohou hlásit různé druhy chyb a upozornění. Po chybě nebo upozornění nenajde, nástroje sestavení mohou vytvářet předpoklady o záměru kódu a pokusí se pokračovat, takže další problémy mohou být hlášeny ve stejnou dobu. Pokud nástroje vytvoří chybný předpoklad, pozdější upozornění nebo chyby nemusí vztahovat na váš projekt. Při opravách problémů v projektu vždy začněte první chybou nebo varováním, který se použije v hlášení a často provádějte opakovaná sestavení. Jednu opravu může provést mnoho dalších chyb odstranit.
 

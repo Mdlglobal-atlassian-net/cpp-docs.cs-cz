@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
 ms.openlocfilehash: 3daf2cd532cd07225b822c80b46fc28274d4e2a8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58778751"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779398"
 ---
 # <a name="compiler-error-c2065"></a>Chyba kompilátoru C2065
 
@@ -203,9 +203,9 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-type-deduction-failure"></a>Příklad: C + +/ CLI chyba odvození typu
+## <a name="example-ccli-type-deduction-failure"></a>Příklad: C++Nebo Chyba odvození typu rozhraní příkazového řádku
 
-Této chybě může dojít při volání obecné funkce, pokud argument určený typ nelze odvodit z parametrů použitých. Další informace najdete v tématu [obecné funkce (C + +/ CLI)](../../extensions/generic-functions-cpp-cli.md).
+Této chybě může dojít při volání obecné funkce, pokud argument určený typ nelze odvodit z parametrů použitých. Další informace najdete v tématu [obecné funkce (C++vyhodnocovací)](../../extensions/generic-functions-cpp-cli.md).
 
 ```cpp
 // C2065_b.cpp
@@ -220,7 +220,7 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-attribute-parameters"></a>Příklad: C + +/ CLI atribut parametry
+## <a name="example-ccli-attribute-parameters"></a>Příklad: C++/ Parametry příkazového řádku atributu
 
 Tato chyba může být také generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual C++ 2005: kontroly parametrů pro atributy Visual C++.
 

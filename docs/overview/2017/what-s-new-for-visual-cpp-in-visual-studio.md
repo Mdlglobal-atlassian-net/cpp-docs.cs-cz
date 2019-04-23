@@ -6,11 +6,11 @@ ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
 ms.openlocfilehash: e74f8270d241b9725a24ee257fb846a7cc4e079e
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58899267"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779486"
 ---
 # <a name="whats-new-for-c-in-visual-studio-2017"></a>Co je nového v C++ v sadě Visual Studio 2017
 
@@ -71,7 +71,7 @@ Kompilátor Microsoft C++ podporuje společnosti Intel AVX-512, včetně instruk
 
 - Nový přepínač kompilátoru [/qspectre ](../../build/reference/qspectre.md) zmírnit před útoky na straně kanálu spekulativního spouštění. Zobrazit [zmírnění hrozby Spectre v MSVC](https://blogs.msdn.microsoft.com/vcblog/2018/01/15/spectre-mitigations-in-msvc/) Další informace.
 - Nové diagnostické upozornění pro zmírnění hrozby Spectre. Zobrazit [chyby zabezpečení Spectre diagnostiky v sadě Visual Studio 2017 verze 15.7 Preview 4](https://blogs.msdn.microsoft.com/vcblog/2018/04/20/spectre-diagnostic-in-visual-studio-2017-version-15-7-preview-4/) Další informace.
-- Nová hodnota pro /Zc, **přepínače/Zc:**, opravte umožňuje vykazování podpory standard C++. Například pokud přepínač nastavený a kompilátor probíhá/std: c ++ 17 režimu rozšíří hodnotu **201703 L**. Zobrazit [MSVC nyní správně hlásí __cplusplus](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/msvc-now-correctly-reports-__cplusplus/) Další informace.
+- Nová hodnota pro /Zc, **přepínače/Zc:**, umožňuje opravit, vytváření sestav C++ standardní podporu. Například pokud přepínač nastavený a kompilátor probíhá/std: c ++ 17 režimu rozšíří hodnotu **201703 L**. Zobrazit [MSVC nyní správně hlásí __cplusplus](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/msvc-now-correctly-reports-__cplusplus/) Další informace.
 
 ## <a name="c-standard-library-improvements"></a>Vylepšení standardní knihovny C++
 
@@ -392,9 +392,9 @@ Teď máte nové možnosti pro zápis a balení aplikací pro univerzální plat
 
 **Visual Studio 2017 version 15.5**: A **projekt Windows Application Packaging** šablona projektu se přidá, což výrazně zjednodušuje práci při vytváření balíčků aplikací klasické pracovní plochy s využitím přemostění na Desktop. Je k dispozici v **soubor | Nové | Projekt | Instalaci | Visual C++ | Universal Windows Platform**. Další informace najdete v tématu [balíček aplikace pomocí sady Visual Studio (přemostění na Desktop)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
-Pokud zapisujete nový kód, můžete nyní použít C + +/ WinRT, standardní projekce jazyka C++ prostředí Windows runtime implementována pouze v souborech hlaviček. Umožňuje oba Autor a používání rozhraní API Windows Runtime pomocí jakýkoli standardům kompilátor jazyka C++. C + +/ WinRT je navržené pro poskytování vývojáře v jazyce C++ s přístupem k prvotřídní moderní rozhraní Windows API. Další informace najdete v tématu [C + +/ WinRT dostupný na Githubu](https://moderncpp.com/).
+Pokud zapisujete nový kód, můžete nyní použít C++/WinRT, což je standard C++ projekce jazyk prostředí Windows runtime implementována pouze v souborech hlaviček. Umožňuje oba Autor a používání rozhraní API Windows Runtime pomocí jakýkoli standardům kompilátor jazyka C++. C++/ WinRT je navržené pro poskytování C++ vývojářům první třídy přístup k moderní rozhraní Windows API. Další informace najdete v tématu [ C++WinRT dostupný na Githubu](https://moderncpp.com/).
 
-Od verze sestavení 17025 sady Windows SDK Insider Preview, C + +/ WinRT je součástí sady Windows SDK. Další informace najdete v tématu [C + +/ WinRT je nyní zahrnutá sady Windows SDK](https://blogs.msdn.microsoft.com/vcblog/2017/11/01/cppwinrt-is-now-included-the-windows-sdk/).
+V době sestavení 17025 Windows SDK Insider Preview C++/WinRT je součástí sady Windows SDK. Další informace najdete v tématu [ C++/WinRT je nyní zahrnutá sady Windows SDK](https://blogs.msdn.microsoft.com/vcblog/2017/11/01/cppwinrt-is-now-included-the-windows-sdk/).
 
 ## <a name="clangc2-platform-toolset"></a>Sada nástrojů platformy clang/C2
 

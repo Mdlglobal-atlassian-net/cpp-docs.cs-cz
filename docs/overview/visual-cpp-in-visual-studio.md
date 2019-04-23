@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 6430d57ddc8718c419076d2da1008e21efdb9b13
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: d8826c92077ac374b67a7294fe040d6fe8dea927
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898710"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124743"
 ---
 # <a name="c-in-visual-studio"></a>C++ v sadě Visual Studio
 
@@ -32,7 +32,7 @@ Zjistěte, co je nového v sadě Visual Studio.
 [Co je nového v jazyce C++ v aplikaci Visual Studio 2003 – 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
 Zjistěte, co je nového v jazyce C++ pro každou verzi sady Visual Studio z 2003 – 2015.
 
-[Vylepšení shody C++ v sadě Visual Studio](cpp-conformance-improvements.md)<br/>
+[Vylepšení shody C++ se sadou Visual Studio](cpp-conformance-improvements.md)<br/>
 Další informace o vylepšení shody C++ v sadě Visual Studio.
 
 [Shoda jazyka Visual C++](visual-cpp-language-conformance.md)<br/>
@@ -168,8 +168,8 @@ Napříč platformami **vcpkg** nástroj příkazového řádku výrazně zjedno
 [Postup nahlášení problému se sadou nástrojů Visual C++](how-to-report-a-problem-with-the-visual-cpp-toolset.md)<br/>
 Naučíte se vytvářet zprávy o chybách efektivní proti sady nástrojů Visual C++ (kompilátoru, linkeru a dalších nástrojů) a způsoby, jak odeslat sestavy.
 
-[Blog týmu Visual C++](http://blogs.msdn.com/b/vcblog/)<br/>
-Další informace o nových funkcích a nejnovější informace od vývojářů [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)].
+Microsoft [ C++ Blog týmu](https://devblogs.microsoft.com/cppblog/)<br/>
+Další informace o nových funkcích a nejnovější informace od vývojářů C++ nástroje v sadě Visual Studio.
 
 [Visual Studio Developer Community](https://developercommunity.visualstudio.com/)<br/>
 Zjistěte, jak získat nápovědu, oznamovat chyby a posílat návrhy na vylepšení pro sadu Visual Studio.

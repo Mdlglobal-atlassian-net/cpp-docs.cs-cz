@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C1211
 ms.assetid: df0ca70d-ec6e-4400-926a-b877e2599978
 ms.openlocfilehash: f39ab027d8d81762ae1cf8f38405f3e21524da2e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58781936"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777767"
 ---
 # <a name="fatal-error-c1211"></a>Závažná chyba C1211
 
@@ -23,4 +23,4 @@ Některé funkce kompilátoru nemusí fungovat v době běhu předchozí verze.
 
 K vyřešení C1211 instalaci modul common language runtime, dodávané spolu se kompilátor používáte.
 
-Další informace najdete v tématu [předávání typů (C + +/ CLI)](../../extensions/type-forwarding-cpp-cli.md).
+Další informace najdete v tématu [předávání typu (C++vyhodnocovací)](../../extensions/type-forwarding-cpp-cli.md).

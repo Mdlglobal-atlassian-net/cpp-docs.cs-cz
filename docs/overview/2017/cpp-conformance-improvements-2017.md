@@ -6,11 +6,11 @@ ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
 ms.openlocfilehash: 6a0e296e4a5542c1aad848c55d35d3e40244478d
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58899264"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779473"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159improvements159"></a>Vylepšení shody C++ v sadě Visual Studio 2017 verze 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158), [15.9](#improvements_159)
 
@@ -623,7 +623,7 @@ Podle standardu jazyka C++ třídy deklarované uvnitř anonymní obory názvů 
 struct __declspec(dllexport) S1 { virtual void f() {} }; //C2201
 ```
 
-### <a name="default-initializers-for-value-class-members-ccli"></a>Výchozí inicializátory pro hodnotu členy třídy (C + +/ CLI)
+### <a name="default-initializers-for-value-class-members-ccli"></a>Výchozí inicializátory pro hodnotu členy třídy (C++vyhodnocovací)
 
 V sadě Visual Studio 2015 a starší kompilátor povoleno (ale ignorovat) výchozí inicializátor členu pro člena třídy value class. Výchozí inicializace hodnotová třída vždy nula inicializuje členy. výchozí konstruktor není povolená. V sadě Visual Studio 2017 výchozí inicializátory členů vyvolat chybu kompilátoru, jak je znázorněno v tomto příkladu:
 
@@ -635,7 +635,7 @@ value struct V
 };
 ```
 
-### <a name="default-indexers-ccli"></a>Výchozí indexery (C + +/ CLI)
+### <a name="default-indexers-ccli"></a>Výchozí indexery (C++vyhodnocovací)
 
 V sadě Visual Studio 2015 a starší kompilátor v některých případech misidentified výchozí vlastnost jako výchozí indexeru. Bylo možné tento problém obejít, s použitím identifikátoru `default` pro přístup k vlastnosti. Alternativní řešení, samotný začal být problematické po `default` byla zavedená jako klíčové slovo v C ++ 11. Proto v sadě Visual Studio 2017 které jsme opravili chyby, které vyžaduje řešení, a kompilátor nyní vyvolá chybu při `default` se používá pro přístup k výchozí vlastnost pro třídu.
 
@@ -1766,7 +1766,7 @@ public:
 
 [offsetof](../../c-runtime-library/reference/offsetof-macro.md) tradičně byl implementován použití makra, která vyžaduje [reinterpret_cast](../../cpp/reinterpret-cast-operator.md). Toto je neplatný v kontextech, které vyžadují konstantní výraz, ale to má povolené tradičně kompilátor C++ společnosti Microsoft. Offsetof – makro, který je dodáván jako součást STL správně používá vnitřní kompilátor (**__builtin_offsetof**), ale mnoho lidí použilo zdvih – makro definovat vlastní **offsetof**.
 
-V sadě Visual Studio 2017 verze 15.8 omezí kompilátor oblastí, které tyto reinterpret_casts mohou objevit ve výchozím režimu mohla pomoci kódu v souladu s standardního chování jazyka C++. V části [/ permissive-](../../build/reference/permissive-standards-conformance.md), omezení jsou ještě přísnější. Používání výsledek offsetof na místech, které vyžadují konstantní výrazy mohou přinést v kódu, který vydá upozornění C4644 *využití modelu na základě – makro offsetof v konstantních výrazech je nestandardní; použití offsetof definované ve standardu jazyka C++ Knihovna místo toho* nebo C2975 *neplatný argument šablony, očekávané době kompilace konstantní výraz*.
+V sadě Visual Studio 2017 verze 15.8 kompilátor omezí oblastí, které tyto reinterpret_casts mohou objevit ve výchozím režimu aby pomohli se řídí standardem kód C++ chování. V části [/ permissive-](../../build/reference/permissive-standards-conformance.md), omezení jsou ještě přísnější. Používání výsledek offsetof na místech, které vyžadují konstantní výrazy mohou přinést v kódu, který vydá upozornění C4644 *využití modelu na základě – makro offsetof v konstantních výrazech je nestandardní; použití offsetof definované ve standardu jazyka C++ Knihovna místo toho* nebo C2975 *neplatný argument šablony, očekávané době kompilace konstantní výraz*.
 
 Následující kód vyvolá C4644 v **/výchozí** a **/std: c ++ 17** režimech a C2975 v **/ permissive-** režimu:
 

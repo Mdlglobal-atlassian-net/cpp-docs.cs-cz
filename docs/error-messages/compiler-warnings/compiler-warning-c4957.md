@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4957
 ms.assetid: a18c52d4-23e2-44f1-b4b5-f7fa5a7f3987
 ms.openlocfilehash: 79a1b516db1508c755693b67ca2e4070095839da
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58769339"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778979"
 ---
 # <a name="compiler-warning-c4957"></a>Upozornění kompilátoru C4957
 
@@ -23,7 +23,7 @@ Přetypování způsobí bitovou kopii nelze ověřit.
 
 Některá přetypování je bezpečné (například `static_cast` , který aktivuje uživatelem definované převody a `const_cast`). A [safe_cast](../../extensions/safe-cast-cpp-component-extensions.md) je zaručeno, že vytvoří ověřitelný kód.
 
-Další informace najdete v tématu [prázdná a ověřitelný kód (C + +/ CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Další informace najdete v tématu [prázdná a ověřitelný kód (C++vyhodnocovací)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
 **/CLR: safe** – možnost kompilátoru je zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3384
 ms.assetid: c9f92c6a-62a9-4333-b2b1-bc55c7f288b6
 ms.openlocfilehash: d1b7e1a69035df358cf84ad791f611928dab8b5a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58773629"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779151"
 ---
 # <a name="compiler-error-c3384"></a>Chyba kompilátoru C3384
 
@@ -19,7 +19,7 @@ ms.locfileid: "58773629"
 
 Nelze omezit obecného typu pro obě `value class` a `ref class`.
 
-Zobrazit [omezení parametrů obecných typů (C + +/ CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) Další informace.
+Zobrazit [omezení parametrů obecných typů (C++vyhodnocovací)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) Další informace.
 
 ## <a name="example"></a>Příklad
 

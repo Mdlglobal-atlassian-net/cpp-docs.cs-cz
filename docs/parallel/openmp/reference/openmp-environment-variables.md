@@ -1,6 +1,6 @@
 ---
 title: OpenMP – proměnné prostředí
-ms.date: 10/23/2018
+ms.date: 03/20/2019
 f1_keywords:
 - OpenMP environment variables
 - OMP_DYNAMIC
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - OMP_NUM_THREADS OpenMP environment variable
 - OMP_SCHEDULE OpenMP environment variable
 ms.assetid: 2178ce2b-ffa1-45ec-a455-64437711d15d
-ms.openlocfilehash: 99868fec581d93f451d321af365f6c4546319077
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73fb11db14df22e5df95fdec556ccdfc16a935e5
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449683"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124964"
 ---
 # <a name="openmp-environment-variables"></a>OpenMP – proměnné prostředí
 
@@ -29,10 +29,10 @@ Implementace jazyka Visual C++, OpenMP standard zahrnuje následující proměnn
 
 |Proměnná prostředí|Popis|
 |--------------------|-----------|
+|[OMP_SCHEDULE](#omp-schedule)|Upravuje chování [plán](openmp-clauses.md#schedule) klauzule při `schedule(runtime)` je zadán v `for` nebo `parallel for` – direktiva.|
+|[OMP_NUM_THREADS](#omp-num-threads)|Nastaví maximální počet vláken v paralelní oblasti, pokud není přepsán [omp_set_num_threads –](openmp-functions.md#omp-set-num-threads) nebo [num_threads](openmp-clauses.md#num-threads).|
 |[OMP_DYNAMIC](#omp-dynamic)|Určuje, zda OpenMP běhu můžete upravit počet vláken v paralelní oblasti.|
 |[OMP_NESTED](#omp-nested)|Určuje, zda je vnořené paralelismu povoleno, není-li povolit nebo zakázat pomocí vnořených paralelismu `omp_set_nested`.|
-|[OMP_NUM_THREADS](#omp-num-threads)|Nastaví maximální počet vláken v paralelní oblasti, pokud není přepsán [omp_set_num_threads –](openmp-functions.md#omp-set-num-threads) nebo [num_threads](openmp-clauses.md#num-threads).|
-|[OMP_SCHEDULE](#omp-schedule)|Upravuje chování [plán](openmp-clauses.md#schedule) klauzule při `schedule(runtime)` je zadán v `for` nebo `parallel for` – direktiva.|
 
 ## <a name="omp-dynamic"></a>OMP_DYNAMIC
 
@@ -117,7 +117,7 @@ Další informace najdete v tématu [4.2 OMP_NUM_THREADS](../../../parallel/open
 
 ### <a name="example"></a>Příklad
 
-Nastaví zadáním následujícího příkazu `OMP_NUM_THREADS` proměnné prostředí na 16:
+Nastaví zadáním následujícího příkazu `OMP_NUM_THREADS` proměnnou prostředí, aby `16`:
 
 ```
 set OMP_NUM_THREADS=16
@@ -140,15 +140,10 @@ set OMP_SCHEDULE[=type[,size]]
 ### <a name="parameters"></a>Parametry
 
 *Velikost*<br/>
-(Volitelné) Určuje velikost iterací. `size` Musí být kladné celé číslo. Výchozí hodnota je 1, kromě případů, kdy `type` je statická. Není platná v případě `type` je `runtime`.
+(Volitelné) Určuje velikost iterací. *velikost* musí být kladné celé číslo. Výchozí hodnota je `1`, s výjimkou, kdy *typ* je statická. Není platná v případě *typ* je `runtime`.
 
-*Typ*<br/>
-Typ plánování:
-
-- `dynamic`
-- `guided`
-- `runtime`
-- `static`
+*type*<br/>
+Druh plánování buď `dynamic`, `guided`, `runtime`, nebo `static`.
 
 ### <a name="remarks"></a>Poznámky
 

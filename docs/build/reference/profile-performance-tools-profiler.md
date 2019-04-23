@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -PROFILE linker option
 - /PROFILE linker option
 ms.assetid: e676baa1-5063-47a3-a357-ba0d1f0d1699
-ms.openlocfilehash: ca68ae090c6e4e6e3e10f37ac0d225faee96746a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 23cbccba9a8ec839252d553cc5cbafd37e66bbf9
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810000"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124769"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (profiler nástrojů výkonu)
 
@@ -56,7 +56,22 @@ Vytvoří výstupní soubor, který lze použít s profilerem Performance Tools.
 
 1. Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Profile%2A>.
 
-## <a name="see-also"></a>Viz také:
+### <a name="to-set-this-linker-option-within-visual-studio-cmake-project"></a>Nastavení této možnosti linkeru v rámci projektu Visual Studio CMake
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)
+**CMake** projekt nemá **stránky vlastností**, možnosti linkeru lze nastavit pomocí modifing souboru CMakeLists.txt.
+
+1. Otevření souboru CMakeLists.txt v kořenovém adresáři projektu.
+
+1. Přidejte následující kód. Podrobnosti najdete v tématu [odkazy CMake](https://cmake.org/cmake/help/v3.0/command/set_target_properties.html)
+
+1. Znovu sestavte své řešení.
+
+```
+SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES LINK_FLAGS "/PROFILE")
+```
+
+## <a name="see-also"></a>Viz také
+
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)
+

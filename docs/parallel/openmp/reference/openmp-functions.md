@@ -1,6 +1,6 @@
 ---
 title: Funkce jazyka OpenMP
-ms.date: 10/23/2018
+ms.date: 03/20/2019
 f1_keywords:
 - OpenMP functions
 - omp_destroy_lock
@@ -50,43 +50,60 @@ helpviewer_keywords:
 - omp_unset_lock OpenMP function
 - omp_unset_nest_lock OpenMP function
 ms.assetid: a55a2e5c-a260-44ee-bbd6-de7e2351b384
-ms.openlocfilehash: 0435d75b69ea870db50739933245925d6860cbf9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 1bf0e08f3b28368d9aea5438b3036ac8a0283735
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333278"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124977"
 ---
 # <a name="openmp-functions"></a>Funkce jazyka OpenMP
 
 Obsahuje odkazy na funkcí používaných v rozhraní API OpenMP.
 
-Implementace jazyka Visual C++, OpenMP standard zahrnuje následující funkce.
+Vizuál C++ provádění OpenMP standard zahrnuje následující funkce a datové typy.
+
+Pro spuštění prostředí:
 
 |Funkce|Popis|
 |--------|-----------|
-|[omp_destroy_lock](#omp-destroy-lock)|Zruší inicializaci zámek.|
-|[omp_destroy_nest_lock](#omp-destroy-nest-lock)|Zruší inicializaci, vnořitelných zámek.|
-|[omp_get_dynamic](#omp-get-dynamic)|Vrátí hodnotu určující, pokud počet vláken v nadcházející paralelních oblastí je upravit podle času spuštění.|
-|[omp_get_max_threads](#omp-get-max-threads)|Vrátí celé číslo, které je roven nebo větší než počet vláken, která bude k dispozici, pokud paralelní oblasti bez [num_threads](openmp-clauses.md#num-threads) nebyly definované v tomto bodě v kódu.|
-|[omp_get_nested](#omp-get-nested)|Vrátí hodnotu, která označuje, zda je povoleno vnořené paralelismu.|
-|[omp_get_num_procs](#omp-get-num-procs)|Vrátí počet procesorů, které jsou k dispozici, když je tato funkce volána.|
+|[omp_set_num_threads](#omp-set-num-threads)|Nastaví počet vláken v nadcházející paralelních oblastí, pokud nejsou přepsány [num_threads](openmp-clauses.md#num-threads) klauzuli.|
 |[omp_get_num_threads](#omp-get-num-threads)|Vrátí počet vláken v paralelní oblasti.|
+|[omp_get_max_threads](#omp-get-max-threads)|Vrátí celé číslo, které je roven nebo větší než počet vláken, která bude k dispozici, pokud paralelní oblasti bez [num_threads](openmp-clauses.md#num-threads) nebyly definované v tomto bodě v kódu.|
 |[omp_get_thread_num](#omp-get-thread-num)|Vrátí počet vláken vlákno provádění v rámci týmu jeho vlákna.|
-|[omp_get_wtick](#omp-get-wtick)|Vrátí počet sekund mezi cykly hodin procesoru.|
-|[omp_get_wtime](#omp-get-wtime)|Vrátí že hodnotu v sekundách času uplynulo v určitém okamžiku.|
+|[omp_get_num_procs](#omp-get-num-procs)|Vrátí počet procesorů, které jsou k dispozici, když je tato funkce volána.|
 |[omp_in_parallel](#omp-in-parallel)|Vrátí nenulovou hodnotu, je-li volat v rámci paralelní oblasti.|
+|[omp_set_dynamic](#omp-set-dynamic)|Označuje, že počet vláken v nadcházející paralelních oblastí je upravit podle času spuštění.|
+|[omp_get_dynamic](#omp-get-dynamic)|Vrátí hodnotu určující, pokud počet vláken v nadcházející paralelních oblastí je upravit podle času spuštění.|
+|[omp_set_nested](#omp-set-nested)|Povolí vnořená paralelismu.|
+|[omp_get_nested](#omp-get-nested)|Vrátí hodnotu, která označuje, zda je povoleno vnořené paralelismu.|
+
+Uzamčení zařízení:
+
+|Funkce|Popis|
+|--------|-----------|
 |[omp_init_lock](#omp-init-lock)|Inicializuje jednoduchým zámkem.|
 |[omp_init_nest_lock](#omp-init-nest-lock)|Inicializuje zámek.|
-|[omp_set_dynamic](#omp-set-dynamic)|Označuje, že počet vláken v nadcházející paralelních oblastí je upravit podle času spuštění.|
+|[omp_destroy_lock](#omp-destroy-lock)|Zruší inicializaci zámek.|
+|[omp_destroy_nest_lock](#omp-destroy-nest-lock)|Zruší inicializaci, vnořitelných zámek.|
 |[omp_set_lock](#omp-set-lock)|Bloky spouštění vlákna, dokud se zámek je k dispozici.|
 |[omp_set_nest_lock](#omp-set-nest-lock)|Bloky spouštění vlákna, dokud se zámek je k dispozici.|
-|[omp_set_nested](#omp-set-nested)|Povolí vnořená paralelismu.|
-|[omp_set_num_threads](#omp-set-num-threads)|Nastaví počet vláken v nadcházející paralelních oblastí, pokud nejsou přepsány [num_threads](openmp-clauses.md#num-threads) klauzuli.|
-|[omp_test_lock](#omp-test-lock)|Pokusí se nastavit zámek, ale nebude blokovat spouštění vlákna.|
-|[omp_test_nest_lock](#omp-test-nest-lock)|Pokusí se nastavit, vnořitelných zámek, ale nebude blokovat spouštění vlákna.|
 |[omp_unset_lock](#omp-unset-lock)|Uvolní zámek.|
 |[omp_unset_nest_lock](#omp-unset-nest-lock)|Uvolní, vnořitelných zámek.|
+|[omp_test_lock](#omp-test-lock)|Pokusí se nastavit zámek, ale nebude blokovat spouštění vlákna.|
+|[omp_test_nest_lock](#omp-test-nest-lock)|Pokusí se nastavit, vnořitelných zámek, ale nebude blokovat spouštění vlákna.|
+
+|Datový typ|Popis|
+|---------|-----------|
+|`omp_lock_t`|Typ, který obsahuje stav zámku, určuje, zda je k dispozici zámek nebo pokud vlákno vlastníkem zámku.|
+|`omp_nest_lock_t`|Typ, který obsahuje jeden z následujících částí informace o zámku: zda zámek je k dispozici a identitu vlákna, která vlastní zámek a počet vnoření.|
+
+Pro rutiny časování:
+
+|Funkce|Popis|
+|--------|-----------|
+|[omp_get_wtime](#omp-get-wtime)|Vrátí že hodnotu v sekundách času uplynulo v určitém okamžiku.|
+|[omp_get_wtick](#omp-get-wtick)|Vrátí počet sekund mezi cykly hodin procesoru.|
 
 ## <a name="omp-destroy-lock"></a>omp_destroy_lock
 
@@ -101,7 +118,7 @@ void omp_destroy_lock(
 ### <a name="parameters"></a>Parametry
 
 *lock*<br/>
-Proměnné typu [omp_lock_t](openmp-data-types.md#omp-lock-t) , který byl inicializován s [omp_init_lock](#omp-init-lock).
+Proměnné typu `omp_lock_t` , který byl inicializován s [omp_init_lock](#omp-init-lock).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -111,7 +128,7 @@ Další informace najdete v tématu [3.2.2 omp_destroy_lock a omp_destroy_nest_l
 
 Zobrazit [omp_init_lock](#omp-init-lock) pro příklad použití `omp_destroy_lock`.
 
-## <a name="omp-destroy-nest-lock"></a>omp_destroy_nest_lock –
+## <a name="omp-destroy-nest-lock"></a>omp_destroy_nest_lock
 
 Zruší inicializaci, vnořitelných zámek.
 
@@ -124,7 +141,7 @@ void omp_destroy_nest_lock(
 ### <a name="parameters"></a>Parametry
 
 *lock*<br/>
-Proměnné typu [omp_nest_lock_t](openmp-data-types.md#omp-nest-lock-t) , který byl inicializován s [omp_init_nest_lock –](#omp-init-nest-lock).
+Proměnné typu `omp_nest_lock_t` , který byl inicializován s [omp_init_nest_lock –](#omp-init-nest-lock).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -134,7 +151,7 @@ Další informace najdete v tématu [3.2.2 omp_destroy_lock a omp_destroy_nest_l
 
 Zobrazit [omp_init_nest_lock –](#omp-init-nest-lock) pro příklad použití `omp_destroy_nest_lock`.
 
-## <a name="omp-get-dynamic"></a>omp_get_dynamic –
+## <a name="omp-get-dynamic"></a>omp_get_dynamic
 
 Vrátí hodnotu určující, pokud počet vláken v nadcházející paralelních oblastí je upravit podle času spuštění.
 
@@ -156,7 +173,7 @@ Další informace najdete v tématu [3.1.7 omp_set_dynamic – funkce](../../../
 
 Zobrazit [omp_set_dynamic –](#omp-set-dynamic) pro příklad použití `omp_get_dynamic`.
 
-## <a name="omp-get-max-threads"></a>omp_get_max_threads –
+## <a name="omp-get-max-threads"></a>omp_get_max_threads
 
 Vrátí celé číslo, které je roven nebo větší než počet vláken, která bude k dispozici, pokud paralelní oblasti bez [num_threads](openmp-clauses.md#num-threads) nebyly definované v tomto bodě v kódu.
 
@@ -170,7 +187,7 @@ Další informace najdete v tématu [3.1.3 omp_get_max_threads – funkce](../..
 
 ### <a name="example"></a>Příklad
 
-```
+```cpp
 // omp_get_max_threads.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -206,7 +223,7 @@ int main( )
 8
 ```
 
-## <a name="omp-get-nested"></a>omp_get_nested –
+## <a name="omp-get-nested"></a>omp_get_nested
 
 Vrátí hodnotu, která označuje, zda je povoleno vnořené paralelismu.
 
@@ -228,7 +245,7 @@ Další informace najdete v tématu [3.1.10 omp_get_nested – funkce](../../../
 
 Zobrazit [omp_set_nested –](#omp-set-nested) pro příklad použití `omp_get_nested`.
 
-## <a name="omp-get-num-procs"></a>omp_get_num_procs –
+## <a name="omp-get-num-procs"></a>omp_get_num_procs
 
 Vrátí počet procesorů, které jsou k dispozici, když je tato funkce volána.
 
@@ -242,7 +259,7 @@ Další informace najdete v tématu [3.1.5 omp_get_num_procs – funkce](../../.
 
 ### <a name="example"></a>Příklad
 
-```
+```cpp
 // omp_get_num_procs.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -279,7 +296,7 @@ Další informace najdete v tématu [3.1.2 omp_get_num_threads – funkce](../..
 
 ### <a name="example"></a>Příklad
 
-```
+```cpp
 // omp_get_num_threads.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -315,7 +332,7 @@ int main()
 1
 ```
 
-## <a name="omp-get-thread-num"></a>omp_get_thread_num –
+## <a name="omp-get-thread-num"></a>omp_get_thread_num
 
 Vrátí počet vláken vlákno provádění v rámci týmu jeho vlákna.
 
@@ -331,7 +348,7 @@ Další informace najdete v tématu [3.1.4 omp_get_thread_num – funkce](../../
 
 Zobrazit [paralelní](openmp-directives.md#parallel) pro příklad použití `omp_get_thread_num`.
 
-## <a name="omp-get-wtick"></a>omp_get_wtick –
+## <a name="omp-get-wtick"></a>omp_get_wtick
 
 Vrátí počet sekund mezi cykly hodin procesoru.
 
@@ -367,7 +384,7 @@ Další informace najdete v tématu [3.3.1 omp_get_wtime – funkce](../../../pa
 
 ### <a name="example"></a>Příklad
 
-```
+```cpp
 // omp_get_wtime.cpp
 // compile with: /openmp
 #include "omp.h"
@@ -410,7 +427,7 @@ Další informace najdete v tématu [3.1.6 omp_in_parallel – funkce](../../../
 
 ### <a name="example"></a>Příklad
 
-```
+```cpp
 // omp_in_parallel.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -447,7 +464,7 @@ void omp_init_lock(
 ### <a name="parameters"></a>Parametry
 
 *lock*<br/>
-Proměnné typu [omp_lock_t](openmp-data-types.md#omp-lock-t).
+Proměnné typu `omp_lock_t`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -455,7 +472,7 @@ Další informace najdete v tématu [3.2.1 omp_init_lock a omp_init_nest_lock �
 
 ### <a name="example"></a>Příklad
 
-```
+```cpp
 // omp_init_lock.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -539,7 +556,7 @@ void omp_init_nest_lock(
 ### <a name="parameters"></a>Parametry
 
 *lock*<br/>
-Proměnné typu [omp_nest_lock_t](openmp-data-types.md#omp-nest-lock-t).
+Proměnné typu `omp_nest_lock_t`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -549,7 +566,7 @@ Další informace najdete v tématu [3.2.1 omp_init_lock a omp_init_nest_lock �
 
 ### <a name="example"></a>Příklad
 
-```
+```cpp
 // omp_init_nest_lock.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -611,7 +628,7 @@ Thread 0 - starting nested locked region
 Thread 0 - ending nested locked region
 ```
 
-## <a name="omp-set-dynamic"></a>omp_set_dynamic –
+## <a name="omp-set-dynamic"></a>omp_set_dynamic
 
 Označuje, že počet vláken v nadcházející paralelních oblastí je upravit podle času spuštění.
 
@@ -624,7 +641,7 @@ void omp_set_dynamic(
 ### <a name="parameters"></a>Parametry
 
 *Val*<br/>
-Hodnota označující, pokud je možné upravit počet vláken v nadcházející paralelních oblastí modulem runtime.  Pokud nenulovou hodnotu, že modul runtime můžete upravit počet vláken, pokud je nula, modul runtime nebude dynamicky upravit počet vláken.
+Hodnota označující, pokud je možné upravit počet vláken v nadcházející paralelních oblastí modulem runtime. Pokud nenulovou hodnotu, že modul runtime můžete upravit počet vláken, pokud je nula, modul runtime nebude dynamicky upravit počet vláken.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -638,7 +655,7 @@ Další informace najdete v tématu [3.1.7 omp_set_dynamic – funkce](../../../
 
 ### <a name="example"></a>Příklad
 
-```
+```cpp
 // omp_set_dynamic.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -675,7 +692,7 @@ void omp_set_lock(
 ### <a name="parameters"></a>Parametry
 
 *lock*<br/>
-Proměnné typu [omp_lock_t](openmp-data-types.md#omp-lock-t) , který byl inicializován s [omp_init_lock](#omp-init-lock).
+Proměnné typu `omp_lock_t` , který byl inicializován s [omp_init_lock](#omp-init-lock).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -685,7 +702,7 @@ Další informace najdete v tématu [3.2.3 omp_set_lock a omp_set_nest_lock – 
 
 Zobrazit [omp_init_lock](#omp-init-lock) pro příklad použití `omp_set_lock`.
 
-## <a name="omp-set-nest-lock"></a>omp_set_nest_lock –
+## <a name="omp-set-nest-lock"></a>omp_set_nest_lock
 
 Bloky spouštění vlákna, dokud se zámek je k dispozici.
 
@@ -698,7 +715,7 @@ void omp_set_nest_lock(
 ### <a name="parameters"></a>Parametry
 
 *lock*<br/>
-Proměnné typu [omp_nest_lock_t](openmp-data-types.md#omp-nest-lock-t) , který byl inicializován s [omp_init_nest_lock –](#omp-init-nest-lock).
+Proměnné typu `omp_nest_lock_t` , který byl inicializován s [omp_init_nest_lock –](#omp-init-nest-lock).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -708,7 +725,7 @@ Další informace najdete v tématu [3.2.3 omp_set_lock a omp_set_nest_lock – 
 
 Zobrazit [omp_init_nest_lock –](#omp-init-nest-lock) pro příklad použití `omp_set_nest_lock`.
 
-## <a name="omp-set-nested"></a>omp_set_nested –
+## <a name="omp-set-nested"></a>omp_set_nested
 
 Povolí vnořená paralelismu.
 
@@ -729,7 +746,7 @@ OMP vnořené paralelismu, lze zapnout pomocí `omp_set_nested`, nebo nastavení
 
 Nastavení pro `omp_set_nested` přepíše nastavení jazyka `OMP_NESTED` proměnné prostředí.
 
-Povolení proměnné prostředí můžete přerušit jinak provozní program, protože počet vláken zvyšuje exponenciálně při vnoření paralelních oblastí.  Například funkce, která recurses šestkrát s počtem vláken OMP nastavena na 4 vyžaduje 4 096 (4 k elektrické energie 6) vlákna. S výjimkou s aplikacemi vstupně-výstupní výkon aplikace obecně sníží, přetrénujte Pokud existují další vlákna než procesory.
+Povolení proměnné prostředí můžete přerušit jinak provozní program, protože počet vláken zvyšuje exponenciálně při vnoření paralelních oblastí. Například funkce, která recurses šestkrát s počtem vláken OMP nastavena na 4 vyžaduje 4 096 (4 k elektrické energie 6) vlákna. S výjimkou s aplikacemi vstupně-výstupní výkon aplikace obecně sníží, přetrénujte Pokud existují další vlákna než procesory.
 
 Použití [omp_get_nested –](#omp-get-nested) zobrazíte aktuální nastavení `omp_set_nested`.
 
@@ -737,7 +754,7 @@ Další informace najdete v tématu [3.1.9 omp_set_nested – funkce](../../../p
 
 ### <a name="example"></a>Příklad
 
-```
+```cpp
 // omp_set_nested.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -761,7 +778,7 @@ int main( )
 1
 ```
 
-## <a name="omp-set-num-threads"></a>omp_set_num_threads –
+## <a name="omp-set-num-threads"></a>omp_set_num_threads
 
 Nastaví počet vláken v nadcházející paralelních oblastí, pokud nejsou přepsány [num_threads](openmp-clauses.md#num-threads) klauzuli.
 
@@ -797,7 +814,7 @@ int omp_test_lock(
 ### <a name="parameters"></a>Parametry
 
 *lock*<br/>
-Proměnné typu [omp_lock_t](openmp-data-types.md#omp-lock-t) , který byl inicializován s [omp_init_lock](#omp-init-lock).
+Proměnné typu `omp_lock_t` , který byl inicializován s [omp_init_lock](#omp-init-lock).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -805,7 +822,7 @@ Další informace najdete v tématu [3.2.5 omp_test_lock a omp_test_nest_lock �
 
 ### <a name="example"></a>Příklad
 
-```
+```cpp
 // omp_test_lock.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -870,7 +887,7 @@ int omp_test_nest_lock(
 ### <a name="parameters"></a>Parametry
 
 *lock*<br/>
-Proměnné typu [omp_nest_lock_t](openmp-data-types.md#omp-nest-lock-t) , který byl inicializován s [omp_init_nest_lock –](#omp-init-nest-lock).
+Proměnné typu `omp_nest_lock_t` , který byl inicializován s [omp_init_nest_lock –](#omp-init-nest-lock).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -878,7 +895,7 @@ Další informace najdete v tématu [3.2.5 omp_test_lock a omp_test_nest_lock �
 
 ### <a name="example"></a>Příklad
 
-```
+```cpp
 // omp_test_nest_lock.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -961,7 +978,7 @@ void omp_unset_lock(
 ### <a name="parameters"></a>Parametry
 
 *lock*<br/>
-Proměnné typu [omp_lock_t](openmp-data-types.md#omp-lock-t) , který byl inicializován s [omp_init_lock](#omp-init-lock)vlastněné uživatelem vlákna a provádění ve funkci.
+Proměnné typu `omp_lock_t` , který byl inicializován s [omp_init_lock](#omp-init-lock)vlastněné uživatelem vlákna a provádění ve funkci.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -971,7 +988,7 @@ Další informace najdete v tématu [3.2.4 omp_unset_lock a omp_unset_nest_lock 
 
 Zobrazit [omp_init_lock](#omp-init-lock) pro příklad použití `omp_unset_lock`.
 
-## <a name="omp-unset-nest-lock"></a>omp_unset_nest_lock –
+## <a name="omp-unset-nest-lock"></a>omp_unset_nest_lock
 
 Uvolní, vnořitelných zámek.
 
@@ -984,7 +1001,7 @@ void omp_unset_nest_lock(
 ### <a name="parameters"></a>Parametry
 
 *lock*<br/>
-Proměnné typu [omp_nest_lock_t](openmp-data-types.md#omp-nest-lock-t) , který byl inicializován s [omp_init_nest_lock –](#omp-init-nest-lock)vlastněné uživatelem vlákna a provádění ve funkci.
+Proměnné typu `omp_nest_lock_t` , který byl inicializován s [omp_init_nest_lock –](#omp-init-nest-lock)vlastněné uživatelem vlákna a provádění ve funkci.
 
 ### <a name="remarks"></a>Poznámky
 

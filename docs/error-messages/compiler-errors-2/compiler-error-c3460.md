@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3460
 ms.assetid: adbf8775-10ca-4654-acdf-58dd765351cd
 ms.openlocfilehash: 9ffbc5102855574aba668a2c501cd08dbaebe5b8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58775176"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777936"
 ---
 # <a name="compiler-error-c3460"></a>Chyba kompilátoru C3460
 
 'type': předávat dál se dají jenom typ definovaný uživatelem
 
-Další informace najdete v tématu [předávání typů (C + +/ CLI)](../../extensions/type-forwarding-cpp-cli.md).
+Další informace najdete v tématu [předávání typu (C++vyhodnocovací)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Příklad
 

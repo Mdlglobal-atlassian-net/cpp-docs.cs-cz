@@ -1,17 +1,17 @@
 ---
-title: Slabé odkazy a cykly slov (C + +/ CX)
+title: Slabé odkazy a cykly zásadní (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 1acb6402-05f0-4951-af94-0e9dab41c53e
 ms.openlocfilehash: 19252b8684eade131394e98dc705f2f1d451f0cf
-ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59237104"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778654"
 ---
-# <a name="weak-references-and-breaking-cycles-ccx"></a>Slabé odkazy a cykly slov (C + +/ CX)
+# <a name="weak-references-and-breaking-cycles-ccx"></a>Slabé odkazy a cykly zásadní (C++/CX)
 
-V systému libovolný typ, který je založen na počítání odkazů, mohl vytvořit odkazy na typy *cykly*– to znamená, že jeden objekt odkazuje na druhý objekt, druhý objekt, který odkazuje na třetí objekt a tak dále až do některých konečného objektu odkazuje zpět na první objekt. V cyklu nelze odstranit objekty správně při nulový počet odkazů na jeden objekt. Které vám pomůžou vyřešit tento problém, C + +/ CX poskytuje [Platform::weakreference – třída](../cppcx/platform-weakreference-class.md) třídy. A `WeakReference` podporuje [vyřešit](../cppcx/platform-weakreference-class.md#resolve) metodu, která vrátí hodnotu null, pokud objekt již existuje nebo vyvolává [Platform::InvalidCastException –](../cppcx/platform-invalidcastexception-class.md) Pokud objekt je aktivní, ale není typu `T`.
+V systému libovolný typ, který je založen na počítání odkazů, mohl vytvořit odkazy na typy *cykly*– to znamená, že jeden objekt odkazuje na druhý objekt, druhý objekt, který odkazuje na třetí objekt a tak dále až do některých konečného objektu odkazuje zpět na první objekt. V cyklu nelze odstranit objekty správně při nulový počet odkazů na jeden objekt. Které vám pomůžou vyřešit tento problém C++/CX poskytuje [Platform::weakreference – třída](../cppcx/platform-weakreference-class.md) třídy. A `WeakReference` podporuje [vyřešit](../cppcx/platform-weakreference-class.md#resolve) metodu, která vrátí hodnotu null, pokud objekt již existuje nebo vyvolává [Platform::InvalidCastException –](../cppcx/platform-invalidcastexception-class.md) Pokud objekt je aktivní, ale není typu `T`.
 
 Jeden scénář, ve kterém `WeakReference` musí používat je, když `this` ukazatel je zachycena ve výrazu lambda, který se používá k definování obslužné rutiny události. Doporučujeme použít pojmenované metody při definování obslužné rutiny událostí, ale pokud budete chtít použít výraz lambda pro obslužnou rutinu události, nebo pokud musíte přerušit počítání cyklus v některé situace odkaz – použijte `WeakReference`. Tady je příklad:
 

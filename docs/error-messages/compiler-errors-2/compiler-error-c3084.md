@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3084
 ms.assetid: 0362cb70-e24e-476f-a24d-8f5bb97c3afd
 ms.openlocfilehash: 01e229fe0ae5bf9e04c577bb653ff1ed7fdb33bf
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58773895"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778160"
 ---
 # <a name="compiler-error-c3084"></a>Chyba kompilátoru C3084
 
@@ -19,7 +19,7 @@ ms.locfileid: "58773895"
 
 Finalizační metodu nebo destruktor byl deklarován nesprávně.
 
-Například by neměla destruktor označené jako sealed.  Destruktor nebudou k dispozici pro odvozené typy.  Další informace najdete v tématu [explicitní přepsání](../../extensions/explicit-overrides-cpp-component-extensions.md) a [destruktory a finalizační metody v tom, jak: Definice a používání tříd a struktur (C + +/ CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Například by neměla destruktor označené jako sealed.  Destruktor nebudou k dispozici pro odvozené typy.  Další informace najdete v tématu [explicitní přepsání](../../extensions/explicit-overrides-cpp-component-extensions.md) a [destruktory a finalizační metody v tom, jak: Definice a používání tříd a struktur (C++vyhodnocovací)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 ## <a name="example"></a>Příklad
 
