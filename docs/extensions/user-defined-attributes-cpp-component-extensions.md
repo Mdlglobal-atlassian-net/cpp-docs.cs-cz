@@ -1,5 +1,5 @@
 ---
-title: Uživatelsky definované atributy (C + +/ CLI a C + +/ CX)
+title: Uživatelsky definované atributy (C++vyhodnocovací a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -7,19 +7,19 @@ helpviewer_keywords:
 - custom attributes, extending metadata
 ms.assetid: 98b29048-a3ea-4698-8441-f149cdaec9fb
 ms.openlocfilehash: 6d200c36946e7bc7d441c2c4db1bdfe96d4aeef9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041300"
 ---
-# <a name="user-defined-attributes--ccli-and-ccx"></a>Uživatelsky definované atributy (C + +/ CLI a C + +/ CX)
+# <a name="user-defined-attributes--ccli-and-ccx"></a>Uživatelsky definované atributy (C++vyhodnocovací a C++/CX)
 
-C + +/ CLI a C + +/ CX umožňují vytvořit atributy specifické pro platformu, které rozšiřují metadat rozhraní, třídy nebo struktury, metody, parametr nebo výčet. Tyto atributy se liší od [standardní C++ atributy](../cpp/attributes.md).
+C++/ Rozhraní příkazového řádku a C++/CX umožňují vytvořit atributy specifické pro platformu, které rozšiřují metadat rozhraní, třídy nebo struktury, metody, parametr nebo výčet. Tyto atributy se liší od [standardní C++ atributy](../cpp/attributes.md).
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
-Můžete použít C + +/ CX atributy vlastnosti, ale ne konstruktory a metody.
+Můžete použít C++/CX atributy vlastnosti, ale ne konstruktory a metody.
 
 ### <a name="requirements"></a>Požadavky
 
@@ -37,7 +37,7 @@ Další informace naleznete v tématu:
 
 - [Typy parametrů atributů](attribute-parameter-types-cpp-component-extensions.md)
 
-Informace o podepisování sestavení v jazyce Visual C++, naleznete v tématu [sestavení se silným názvem (podepisování sestavení) (C + +/ CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+Informace o podepisování sestavení ve Vizuálu C++, naleznete v tématu [sestavení se silným názvem (podepisování sestavení) (C++vyhodnocovací)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
 ### <a name="requirements"></a>Požadavky
 

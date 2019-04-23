@@ -9,15 +9,15 @@ helpviewer_keywords:
 - __inbytestring intrinsic
 ms.assetid: fe549556-e7a3-4af3-8ebf-8a7dc3cb233b
 ms.openlocfilehash: e515c6452d18ca022707fa2f9e36e2045523ccd5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038580"
 ---
 # <a name="inbytestring"></a>__inbytestring
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Čte data z pomocí zadaný port `rep insb` instrukce.
 
@@ -54,7 +54,7 @@ void __inbytestring(
 
 Tato rutina je k dispozici pouze jako vnitřní objekt.
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

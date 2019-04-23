@@ -7,10 +7,10 @@ helpviewer_keywords:
 - readonly attribute
 ms.assetid: 1246cadd-5304-43a9-beea-51153d12704d
 ms.openlocfilehash: 7eea071b62130c65fbb46ebc8827fc2b428c4c0c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036904"
 ---
 # <a name="readonly-c"></a>readonly (C++)
@@ -56,7 +56,7 @@ __interface IFireTabCtrl
 |**Platí pro**|Metoda rozhraní|
 |**Opakovatelné**|Ne|
 |**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádný|
+|**Neplatné atributy**|Žádné|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 

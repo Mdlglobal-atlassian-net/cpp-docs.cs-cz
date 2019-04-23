@@ -10,10 +10,10 @@ helpviewer_keywords:
 - files [C++], translation
 ms.assetid: a7f7a8c9-e8ba-4321-9e50-ebfbbdcce9db
 ms.openlocfilehash: 11e36e06adc4fa95cb9aa607704e72f64c812429
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036150"
 ---
 # <a name="phases-of-translation"></a>Fáze posunutí
@@ -54,7 +54,7 @@ Všechny členy zdrojové znakové sady a řídicí sekvence jsou ve znakové sa
 *Zřetězení řetězců*<br/>
 Všechny sousední řetězce a literály širokých řetězců jsou zřetězeny. Například `"String " "concatenation"` stane `"String concatenation"`.
 
-*Překlad*<br/>
+*Translation*<br/>
 Všechny tokeny jsou analyzovány syntakticky a sémanticky. Tyto tokeny jsou převedeny na kód objektu.
 
 *Propojení*<br/>

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: 9f4dd43f-9909-43d6-91d2-05734643876e
 ms.openlocfilehash: bab7013f2c5fd48ef1a22b990499d79c9c217ca9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038223"
 ---
 # <a name="attributes-by-group"></a>Atributy podle skupin
@@ -28,6 +28,6 @@ Informace o tom, jak definovat vlastní atributy pro aplikaci rozhraní .NET Fra
 
 ## <a name="see-also"></a>Viz také:
 
-[Atributy C++ COM a .NET](cpp-attributes-com-net.md)<br/>
+[Atributy C++ pro COM a .NET](cpp-attributes-com-net.md)<br/>
 [Atributy podle použití](attributes-by-usage.md)<br/>
 [Abecedně řazená referenční dokumentace k atributům](attributes-alphabetical-reference.md)

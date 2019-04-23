@@ -1,5 +1,5 @@
 ---
-title: db_param – (atribut C++ COM)
+title: db_param – (C++ atributů COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_param
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
 ms.openlocfilehash: a3cfcf3c7ce3313eaff9a3b35854e1e077fc906f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038093"
 ---
 # <a name="dbparam"></a>db_param
@@ -37,19 +37,19 @@ Přidruží zadaný členskou proměnnou vstupní nebo výstupní parametr a odd
 
 - DBPARAMIO_NOTPARAM přistupující objekt nemá žádné parametry. Nastavení `eParamIO` na tuto hodnotu v řádku přistupující objekty upozorňuje uživatele, že parametry budou ignorovány.
 
-*Hodnota DbType*<br/>
+*dbtype*<br/>
 (Volitelné) OLE DB [indikátor typu](/previous-versions/windows/desktop/ms711251(v=vs.85)) pro vstupní sloupec.
 
-*přesnost*<br/>
+*precision*<br/>
 (Volitelné) Přesnost, který má být použit pro vstupní sloupec. Podrobnosti najdete v tématu Popis `bPrecision` elementu [DBBINDING struktura](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*měřítko*<br/>
+*Škálování*<br/>
 (Volitelné) Škálování, která má být použit pro vstupní sloupec. Podrobnosti najdete v tématu Popis `bScale` elementu [DBBINDING struktura](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*stav*<br/>
+*status*<br/>
 (Volitelné) Členské proměnné používané pro udržení stavu daného sloupce. Stav označuje, zda je hodnota sloupce datovou hodnotu nebo jinou hodnotu, jako je NULL. Možné hodnoty najdete v části [stav](/previous-versions/windows/desktop/ms722617(v=vs.85)) v *OLE DB referenční informace pro programátory*.
 
-*length*<br/>
+*Délka*<br/>
 (Volitelné) Členské proměnné používané pro udržení velikost sloupce v bajtech.
 
 ## <a name="remarks"></a>Poznámky
@@ -110,8 +110,8 @@ struct CSalesbyYear {
 |-|-|
 |**Platí pro**|**Třída**, **struktura**, člen, metoda, místní|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
-|**Neplatné atributy**|Žádný|
+|**Vyžadované atributy**|Žádné|
+|**Neplatné atributy**|Žádné|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 

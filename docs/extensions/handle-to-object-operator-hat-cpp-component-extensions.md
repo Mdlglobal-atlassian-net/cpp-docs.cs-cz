@@ -1,18 +1,18 @@
 ---
-title: Operátor popisovače objektu (^) (C + +/ CLI a C + +/ CX)
+title: Operátor popisovače objektu (^) (C++vyhodnocovací a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
 ms.openlocfilehash: bdf19b6b472cd4d224d749f59c75ca77d11c34f8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039917"
 ---
-# <a name="handle-to-object-operator---ccli-and-ccx"></a>Operátor popisovače objektu (^) (C + +/ CLI a C + +/ CX)
+# <a name="handle-to-object-operator---ccli-and-ccx"></a>Operátor popisovače objektu (^) (C++vyhodnocovací a C++/CX)
 
 *Deklarátor popisovače* (`^`, výslovnost "stříška"), změní typ [specifikátor](../cpp/overview-of-declarators.md) znamenat, že deklarovaný objekt má být automaticky odstraněn, když systém zjistí, že objekt je už nebude přístupný.
 

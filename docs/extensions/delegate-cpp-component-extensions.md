@@ -1,5 +1,5 @@
 ---
-title: Delegate (C + +/ CLI a C + +/ CX)
+title: Delegate (C++vyhodnocovací a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
 ms.openlocfilehash: 29bf305ed5e4845437b90ed672d1ab0c0de9ced6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036949"
 ---
-# <a name="delegate--ccli-and-ccx"></a>Delegate (C + +/ CLI a C + +/ CX)
+# <a name="delegate--ccli-and-ccx"></a>Delegate (C++vyhodnocovací a C++/CX)
 
 Deklaruje typ, který představuje ukazatel na funkci.
 
@@ -31,7 +31,7 @@ Chcete-li zjistit v době kompilace, pokud typ je delegát, použijte `__is_dele
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
-C + +/ CX podporuje delegáty s následující syntaxí.
+C++/CX podporuje delegáty s následující syntaxí.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -56,12 +56,12 @@ Návratový typ prototypu funkce.
 *delegate-type-identifier*<br/>
 Název typu deklarovaného delegáta.
 
-*parametry*<br/>
+*parameters*<br/>
 (Volitelné) Typy a identifikátory prototypu funkce.
 
 ### <a name="remarks"></a>Poznámky
 
-Použití *identifikátor typu delegáta* deklarovat událost s stejný prototyp jako delegát. Další informace najdete v tématu [delegátů (C + +/ CX)](../cppcx/delegates-c-cx.md).
+Použití *identifikátor typu delegáta* deklarovat událost s stejný prototyp jako delegát. Další informace najdete v tématu [delegátů (C++/CX)](../cppcx/delegates-c-cx.md).
 
 ### <a name="requirements"></a>Požadavky
 
@@ -119,9 +119,9 @@ Při vytvoření delegáta, kterého globální nebo statické funkce, se vyžad
 
 Další informace o delegátech naleznete v tématu
 
-- [Postupy: Definice a používání delegátů (C + +/ CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
+- [Postupy: Definice a používání delegátů (C++/CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
 
-- [Obecní delegáti (C + +/ CLI)](generic-delegates-visual-cpp.md)
+- [Obecní delegáti (C++/CLI)](generic-delegates-visual-cpp.md)
 
 ### <a name="requirements"></a>Požadavky
 

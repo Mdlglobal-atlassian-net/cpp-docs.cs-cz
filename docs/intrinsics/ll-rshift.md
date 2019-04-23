@@ -9,15 +9,15 @@ helpviewer_keywords:
 - ll_rshift intrinsic
 ms.assetid: ef13b732-d122-44a0-add9-f5544a2c4ab2
 ms.openlocfilehash: e39f8fe797467569077dd24baf49670607915107
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041017"
 ---
 # <a name="llrshift"></a>__ll_rshift
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Posune 64 bitů hodnotu zadanou pomocí prvního parametru vpravo o počet bitů určený druhý parametr.
 
@@ -89,7 +89,7 @@ fffffffffffffff0
 
 **Poznámka:** Pokud `_ull_rshift` byl použit, MSB hodnotu posunuta doprava by byl nula, tak v případě záporné hodnoty by byly získány požadovaný výsledek.
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

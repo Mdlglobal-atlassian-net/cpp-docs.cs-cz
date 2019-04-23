@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3393
 ms.assetid: d57f7c69-0a02-4fe3-9e45-bc62644fd77c
 ms.openlocfilehash: 5147e3e406fde73a05b7069e2a9336f27b3db622
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58767129"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776259"
 ---
 # <a name="compiler-error-c3393"></a>Chyba kompilátoru C3393
 
 Chyba syntaxe v klauzuli omezení: 'identifier' není typ
 
-Identifikátor předán omezení, který musí být typu, nebyl typu.  Další informace najdete v tématu [omezení parametrů obecných typů (C + +/ CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
+Identifikátor předán omezení, který musí být typu, nebyl typu.  Další informace najdete v tématu [omezení parametrů obecných typů (C++vyhodnocovací)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
 
 ## <a name="example"></a>Příklad
 

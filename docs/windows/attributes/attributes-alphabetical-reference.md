@@ -9,10 +9,10 @@ helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: fb2216ef-9fbd-44f4-afed-732aa99450e2
 ms.openlocfilehash: 386afe5362f876cd1489a35839f4f8cfc2381e91
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038210"
 ---
 # <a name="attributes-alphabetical-reference"></a>Abecedně řazená referenční dokumentace k atributům
@@ -25,15 +25,15 @@ Následující atributy jsou k dispozici v kompilátoru C++ společnosti Microso
 |[aggregates](aggregates.md)|Označuje, že ovládací prvek agreguje cílové třídy.|
 |[appobject](appobject.md)|Identifikuje coclass jako objekt aplikace, který je spojen s celou aplikaci EXE a označuje, že funkce a vlastnosti třídy typu coclass jsou globálně k dispozici v této knihovně typů.|
 |[async_uuid](async-uuid.md)|Určuje UUID, který nasměruje definovat synchronní a asynchronní verze rozhraní modelu COM kompilátoru MIDL.|
-|[ – atribut](attribute.md)|Umožňuje vytvořit vlastní atribut.|
+|[attribute](attribute.md)|Umožňuje vytvořit vlastní atribut.|
 |[bindable](bindable.md)|Označuje, že vlastnost podporuje datové vazby.|
 |[call_as](call-as.md)|Povolí funkci nonremotable namapovat na vzdálenou funkci.|
 |[case](case-cpp.md)|Používá se [switch_type –](switch-type.md) atribut ve sjednocení.|
 |[coclass](coclass.md)|Vytvoří objekt modelu COM, které můžete implementovat rozhraní modelu COM.|
 |[com_interface_entry](com-interface-entry-cpp.md)|Přidá položku do rozhraní COM mapy.|
-|[ – ovládací prvek](control.md)|Určuje, jestli je typ uživatelského ovládacího prvku.|
+|[control](control.md)|Určuje, jestli je typ uživatelského ovládacího prvku.|
 |[cpp_quote](cpp-quote.md)|Zadaný řetězec bez uvozovek znaků, vysílá do vygenerovaného souboru hlavičky.|
-|[vlastní](custom-cpp.md)|Umožňuje definovat vlastní atributy.|
+|[custom](custom-cpp.md)|Umožňuje definovat vlastní atributy.|
 |[db_accessor](db-accessor.md)|Vytvoří vazbu sloupců v sadě řádků a sváže s odpovídající přístupového objektu map.|
 |[db_column](db-column.md)|Zadaný sloupec se váže k dané sadě řádků.|
 |[db_command](db-command.md)|Provede příkaz OLE DB.|
@@ -77,7 +77,7 @@ Následující atributy jsou k dispozici v kompilátoru C++ společnosti Microso
 |[length_is](length-is.md)|Určuje počet elementů pole předávají.|
 |[library_block](library-block.md)|Umístí konstrukci uvnitř bloku knihovny souboru IDL.|
 |[licensed](licensed.md)|Označuje, že je licencován coclass, ke kterému se vztahuje a musí být vytvořena pomocí `IClassFactory2`.|
-|[místní](local-cpp.md)|Umožňuje používat v kompilátoru MIDL jako generátor záhlaví při použití v záhlaví rozhraní. Při použití jednotlivých funkcí, určuje místní postupu, pro které jsou generovány žádné zástupné procedury.|
+|[local](local-cpp.md)|Umožňuje používat v kompilátoru MIDL jako generátor záhlaví při použití v záhlaví rozhraní. Při použití jednotlivých funkcí, určuje místní postupu, pro které jsou generovány žádné zástupné procedury.|
 |[max_is](max-is.md)|Určuje maximální hodnotu pro pole platný index.|
 |[module](module-cpp.md)|Bloku knihovny definuje v souboru IDL.|
 |[ms_union](ms-union.md)|Určuje zarovnání reprezentace dat sítě nonencapsulated sjednocení.|
@@ -85,7 +85,7 @@ Následující atributy jsou k dispozici v kompilátoru C++ společnosti Microso
 |[nonbrowsable](nonbrowsable.md)|Označuje, že člen rozhraní, nebude se zobrazovat v prohlížeči vlastností.|
 |[noncreatable](noncreatable.md)|Definuje objekt, který se nedá vytvořit instance samostatně.|
 |[nonextensible](nonextensible.md)|Určuje, že `IDispatch` implementace obsahuje pouze vlastnosti a metody uvedené v popisu rozhraní a nejde prodloužit s další členy v době běhu.|
-|[odkazy objektů](object-cpp.md)|Určuje vlastní rozhraní; synonymem vlastního atributu.|
+|[object](object-cpp.md)|Určuje vlastní rozhraní; synonymem vlastního atributu.|
 |[odl](odl.md)|Označí rozhraní jako objekt popis jazyka (ODL) rozhraní.|
 |[oleautomation](oleautomation.md)|Označuje, že je kompatibilní s automatizací rozhraní.|
 |[optional](optional-cpp.md)|Určuje volitelný parametr pro členské funkce.|
@@ -110,7 +110,7 @@ Následující atributy jsou k dispozici v kompilátoru C++ společnosti Microso
 |[satype](satype.md)|Určuje datový typ `SAFEARRAY`.|
 |[size_is](size-is.md)|Určuje velikost paměti přidělené pro velikosti ukazatele, velikosti ukazatele na velikosti ukazatele a single - nebo vícedimenzionální pole.|
 |[source](source-cpp.md)|Označuje, že je členem třídy, vlastnosti nebo metody zdroj událostí.|
-|[odkazy řetězců](string-cpp.md)|Označuje, že jednorozměrné pole **char**, **wchar_t**, `byte`, nebo ekvivalentní pole nebo ukazatel na takové pole musí být považované za řetězec.|
+|[string](string-cpp.md)|Označuje, že jednorozměrné pole **char**, **wchar_t**, `byte`, nebo ekvivalentní pole nebo ukazatel na takové pole musí být považované za řetězec.|
 |[support_error_info](support-error-info.md)|Podporuje odesílání sestav chyb pro cílový objekt.|
 |[switch_is](switch-is.md)|Určuje výraz nebo identifikátor, který funguje jako sjednocení discriminant, který vybere člen sjednocení.|
 |[switch_type](switch-type.md)|Určuje typ proměnné použité jako sjednocení discriminant.|
@@ -123,12 +123,12 @@ Následující atributy jsou k dispozici v kompilátoru C++ společnosti Microso
 |[uuid](uuid-cpp-attributes.md)|Určuje jedinečné ID pro třídu nebo rozhraní.|
 |[v1_enum](v1-enum.md)|Určí, že zadaný výčtového typu předávají jako 32-bit entity, spíše než výchozí 16 bitů.|
 |[vararg](vararg.md)|Určuje, že funkce trvat proměnný počet argumentů.|
-|[verze](version-cpp.md)|Určuje konkrétní verzi napříč několika verzemi rozhraní nebo tříd.|
+|[version](version-cpp.md)|Určuje konkrétní verzi napříč několika verzemi rozhraní nebo tříd.|
 |[vi_progid](vi-progid.md)|Určuje verzi nezávislé formu ProgID.|
 |[wire_marshal](wire-marshal.md)|Určuje datový typ, který se použije pro přenos místo typu dat pro konkrétní aplikace.|
 
 ## <a name="see-also"></a>Viz také:
 
-[Atributy C++ COM a .NET](cpp-attributes-com-net.md)<br/>
+[Atributy C++ pro COM a .NET](cpp-attributes-com-net.md)<br/>
 [Atributy podle skupin](attributes-by-group.md)<br/>
 [Atributy podle použití](attributes-by-usage.md)

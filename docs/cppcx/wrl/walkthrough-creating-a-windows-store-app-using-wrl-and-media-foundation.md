@@ -4,10 +4,10 @@ ms.date: 09/17/2018
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
 ms.openlocfilehash: e0254be8c6fa185f75c46898d4da51742195550a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036033"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Návod: Vytvoření aplikace UPW s použitím knihovny WRL a platformy Media Foundation
@@ -19,7 +19,7 @@ Tento příklad vytvoří vlastní transformace Media Foundation, která se pou�
 > [!NOTE]
 > Místo C# také vám pomůže jazyka JavaScript, Visual Basic nebo C++ využívat komponentu vlastní transformace.
 
-Ve většině případů můžete použít C + +/ CX k vytvoření prostředí Windows Runtime. Ale někdy je nutné použít WRL. Například při vytváření média rozšíření pro Microsoft Media Foundation, musíte vytvořit komponentu, která implementuje rozhraní COM a Windows Runtime. Protože C + +/ CX lze vytvořit pouze objekty modulu Windows Runtime, chcete-li vytvořit médium rozšíření je nutné použít WRL vzhledem k tomu, že umožňuje, aby implementace rozhraní COM a Windows Runtime.
+Ve většině případů můžete použít C++/CX k vytvoření prostředí Windows Runtime. Ale někdy je nutné použít WRL. Například při vytváření média rozšíření pro Microsoft Media Foundation, musíte vytvořit komponentu, která implementuje rozhraní COM a Windows Runtime. Protože C++/CX lze vytvořit pouze objekty modulu Windows Runtime, chcete-li vytvořit médium rozšíření je nutné použít WRL vzhledem k tomu, že umožňuje, aby implementace rozhraní COM a Windows Runtime.
 
 > [!NOTE]
 > Sice dlouhý tento příklad kódu ukazuje minimální potřebná k vytvoření užitečné transformace Media Foundation. Můžete ho použít jako výchozí bod pro vlastní vlastní transformace. V tomto příkladu jsou upraveny z [ukázkové rozšíření Media](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096), které používá media rozšíření použít dopad na video, dekódování video a vytváření obslužných rutin schéma, které vytvářejí datové proudy médií.

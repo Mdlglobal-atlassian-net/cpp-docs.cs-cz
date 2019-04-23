@@ -81,10 +81,10 @@ helpviewer_keywords:
 - scroll bars [C++], width
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
 ms.openlocfilehash: 878b7371dfa77880d68f1001444ed44b84d7240c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037418"
 ---
 # <a name="how-to-layout-controls-c"></a>Postupy: Rozložení ovládacích prvků (C++)
@@ -114,7 +114,7 @@ Můžete uspořádat ovládací prvky v dialogových oknech s **editoru dialogov
 |Vlastnost|Popis|
 |---|---|
 |**Vodítka rozložení**|Zobrazuje nastavení vodítek rozložení.|
-|**Žádný**|Skryje nástroje rozložení.|
+|**Žádné**|Skryje nástroje rozložení.|
 |**Pravítka a vodítka**|Pokud povolená, přidá do nástroje pro rozložení pravítka a umožňuje umístit do pravítek, kteří. Výchozí příručky jsou okraje.|
 |**Mřížka**|Vytvoří rozložení mřížky. Nové ovládací prvky budou automaticky zarovnat k mřížce.|
 |**Rozteč mřížky**|Nastavení pro rozteč mřížky se zobrazí v poli jednotky dialogu (dlu).|
@@ -261,7 +261,7 @@ Při přidání do dialogových oken, můžete měnit velikost pole se seznamem.
    |Mezery|Popis|
    |---|---|
    |**Mezi**|Ovládací prvky místo rovnoměrně mezi první a poslední ovládací prvek.|
-   |**Dolů**|Ovládací prvky místo rovnoměrně mezi horní a nejspodnějších ovládací prvek.|
+   |**Down**|Ovládací prvky místo rovnoměrně mezi horní a nejspodnějších ovládací prvek.|
 
 - Zarovnat na střed ovládací prvky, vyberete ovládací prvek nebo prvky, které chcete změnit uspořádání. Přejděte do nabídky **formátu** > **Center v dialogovém okně** a zvolte jednu z následujících opatření:
 
@@ -274,7 +274,7 @@ Při přidání do dialogových oken, můžete měnit velikost pole se seznamem.
 
    |Uspořádání|Popis|
    |---|---|
-   |**Pravé**|Zarovná tlačítek podél pravého okraje dialogového okna.|
+   |**doprava**|Zarovná tlačítek podél pravého okraje dialogového okna.|
    |**dolní**|Zarovná tlačítek podél dolního okraje dialogového okna.|
 
    Pokud vyberete ovládací prvek než příkazové tlačítko, jeho pozice nemá vliv.
@@ -286,5 +286,5 @@ Win32
 ## <a name="see-also"></a>Viz také:
 
 [Správa ovládací prvky dialogového okna](controls-in-dialog-boxes.md)<br/>
-[Postupy: Přidání, úpravě nebo odstranění ovládacích prvků](adding-editing-or-deleting-controls.md)<br/>
+[Postupy: Přidání, úprava nebo odstranění ovládacích prvků](adding-editing-or-deleting-controls.md)<br/>
 [Postupy: Definování řízení přístupu a hodnot](defining-mnemonics-access-keys.md)<br/>

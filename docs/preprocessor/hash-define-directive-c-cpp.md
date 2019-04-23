@@ -11,10 +11,10 @@ helpviewer_keywords:
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
 ms.openlocfilehash: 8a0cc7e7836a0c82c72055fe8d9e7497995485d0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039495"
 ---
 # <a name="define-directive-cc"></a>#define – direktiva (C++)
@@ -62,7 +62,7 @@ Pokud dojde k název makra definovaného v *řetězci tokenu* (i v důsledku jin
 
 Sekundy **#define** pro makro se stejným názvem vygeneruje upozornění, pokud není druhá sekvence tokenů shodná s první.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Microsoft C/C++ umožňuje znovu definovat makro, pokud je nová definice syntakticky shodná s původní definice. Jinými slovy dvě definice mohou mít různé názvy parametrů. Toto chování se liší od standardu ANSI C, který vyžaduje, aby dvě definice byly lexikálně identické.
 
@@ -80,7 +80,7 @@ Na druhé straně následující dvě makra nejsou stejné a vygeneruje upozorn�
 #define multiply( a1, a2 ) ( b1 * b2 )
 ```
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 Tento příklad ukazuje, **#define** – direktiva:
 
@@ -109,11 +109,11 @@ var = 80 + 10 * 20;
 
 které vyhodnocuje 280.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Definování maker a konstant pomocí [/D](../build/reference/d-preprocessor-definitions.md) – možnost kompilátoru má stejný účinek jako použití **#define** direktiva předzpracování na začátku souboru. Pomocí možnosti /D lze definovat až 30 maker.
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

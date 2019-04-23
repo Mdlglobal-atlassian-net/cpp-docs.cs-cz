@@ -51,10 +51,10 @@ helpviewer_keywords:
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
 ms.openlocfilehash: 9d50561c598f17e251425972590c0663efe6e832
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038150"
 ---
 # <a name="toolbar-editor-c"></a>Editor panelu nástrojů (C++)
@@ -93,7 +93,7 @@ Tlačítka panelu nástrojů má následující vlastnosti:
 |**ID**|Definuje ID pro tlačítko. Rozevírací seznam obsahuje běžné **ID** názvy.|
 |**Šířka**|Nastavuje šířku tlačítka. doporučuje se 16 pixelů.|
 |**Výška**|Nastaví výšku tlačítka. Výška tlačítka změní výšku všechna tlačítka na panelu nástrojů. doporučuje se 15 pixelů.|
-|**Výzva**|Definuje zprávy zobrazí ve stavovém řádku. Přidání *\n* a přidá název **popisek** na toto tlačítko panelu nástrojů. Další informace najdete v tématu [vytvoření popisu](../windows/creating-a-tool-tip-for-a-toolbar-button.md).|
+|**Zeptat se**|Definuje zprávy zobrazí ve stavovém řádku. Přidání *\n* a přidá název **popisek** na toto tlačítko panelu nástrojů. Další informace najdete v tématu [vytvoření popisu](../windows/creating-a-tool-tip-for-a-toolbar-button.md).|
 
 **Šířka** a **výška** platí pro všechna tlačítka. Rastrový obrázek, který se používá k vytvoření panelu nástrojů má maximální šířku 2048, tak pokud nastavíte šířku tlačítka na *512*, můžete mít jenom čtyři tlačítka a nastavte šířku na *513*, můžete mít jenom tři tlačítka.
 

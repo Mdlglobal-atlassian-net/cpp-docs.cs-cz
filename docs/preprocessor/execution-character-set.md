@@ -8,10 +8,10 @@ helpviewer_keywords:
 - pragma execution_character_set
 ms.assetid: 32248cbc-7c92-4dca-8442-230c052b53ad
 ms.openlocfilehash: bd31e8e91a1bcbfa6ace9b47fa2b13dd945adb20
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039923"
 ---
 # <a name="executioncharacterset"></a>execution_character_set
@@ -26,7 +26,7 @@ Určuje znakovou sadu spuštění použitou pro literálech řetězců a znaků.
 
 ### <a name="parameters"></a>Parametry
 
-*cíl*<br/>
+*target*<br/>
 Určuje cílový znaková sada spuštění. Aktuálně je pouze provádění cílů v nastavení podporovaná "utf-8".
 
 ## <a name="remarks"></a>Poznámky
@@ -43,4 +43,4 @@ Ve výchozím nastavení používá Visual Studio jako zdrojovou znakovou sadou 
 
 [Direktivy pragma a \_ \_– klíčové slovo – direktiva Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
 [/ Execution-Charset (nastavení znakové sady spuštění)](../build/reference/execution-charset-set-execution-character-set.md)<br/>
-[/ UTF-8 (nastavení zdrojové a spustitelné znakové sady na UTF-8)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
+[/utf-8 (nastavení zdrojové znakové sady a spustitelné znakové sady na UTF-8)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

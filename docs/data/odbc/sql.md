@@ -8,10 +8,10 @@ helpviewer_keywords:
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
 ms.openlocfilehash: 8f93d97530068695359273b523e7d2ae46de01cb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037854"
 ---
 # <a name="sql"></a>SQL
@@ -49,10 +49,10 @@ Databázové třídy použijte část SQL označované jako jazyk manipulace dat
 |-----------------|---------------------------------------------|
 |**SELECT**|Chcete-li určit, které tabulky a sloupce ve zdroji dat se mají použít.|
 |**WHERE**|Chcete-li použít filtr, který způsobí zúžení výběru.|
-|**ŘADIT PODLE**|Chcete-li použít pořadí řazení na sadu záznamů.|
-|**INSERT**|Přidání nových záznamů do sady záznamů.|
+|**ORDER BY**|Chcete-li použít pořadí řazení na sadu záznamů.|
+|**VLOŽIT**|Přidání nových záznamů do sady záznamů.|
 |**DELETE**|Chcete-li odstranit záznamy ze sady záznamů.|
-|**UPDATE**|Chcete-li změnit pole záznamu.|
+|**AKTUALIZACE**|Chcete-li změnit pole záznamu.|
 
 Kromě toho databázové třídy rozpoznat ODBC **volání** příkazy, které můžete použít pro volání předdefinovaný dotaz (nebo uložená procedura) na některé zdroje dat. Ovladač ODBC databáze interpretuje tyto příkazy a nahradí příkazu vhodného pro každý systém DBMS.
 
@@ -85,5 +85,5 @@ Další informace o použití databázových tříd SQL naleznete v následujíc
 
 ## <a name="see-also"></a>Viz také:
 
-[ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
+[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [ODBC – základy](../../data/odbc/odbc-basics.md)

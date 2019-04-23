@@ -9,15 +9,15 @@ helpviewer_keywords:
 - sfence instruction
 ms.assetid: 6c6eb973-3cf0-4306-b3af-cfde9b0210a5
 ms.openlocfilehash: a0c8027f443a475b03521920e2e036e7ed4eaafb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036692"
 ---
 # <a name="faststorefence"></a>__faststorefence
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Záruky, že každý předchozí odkaz paměti, včetně načítají a ukládají odkazy na paměť, je viditelné globálně před všechny odkazy na další paměti.
 
@@ -43,7 +43,7 @@ Na platformě AMD64 Tato rutina generuje instrukce, který je rychlejší ohraze
 
 Tato rutina je k dispozici pouze jako vnitřní objekt.
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - data access [C++], class libraries for databases
 ms.assetid: def97b2c-b5a6-445f-afeb-308050fd4852
 ms.openlocfilehash: b4f5fb6ed21fb23195af340c8de3ee7c654f7fee
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037828"
 ---
 # <a name="data-access-programming-mfcatl"></a>Přístup k datům programování knihovny MFC nebo ATL)
@@ -27,7 +27,7 @@ Pokud se starší verzí aplikace používá pro připojení k serveru SQL Serve
 
 Komponentu Nativní klient systému SQL (SNAC), které balíčky OLE DB a ovladače ODBC v jedné knihovně DLL, je zastaralé pro aplikace rozhraní ODBC. Verze systému SQL Server 2012 SNAC (SQLNCLI11. Knihovny DLL) se dodává s SQL Server 2016, protože na ní závisí další součásti systému SQL Server. Však měli použít nové aplikace C++, které se připojují k systému SQL Server nebo databázi SQL Azure pomocí rozhraní ODBC [nejnovější ovladač ODBC](/sql/connect/odbc/download-odbc-driver-for-sql-server). Další informace najdete v tématu [SQL Server nativního klienta programování](/sql/relational-databases/native-client/sql-server-native-client-programming)
 
-Pokud používáte C + +/ CLI, které můžete dál používat ADO.NET jako vždy. Další informace najdete v tématu [Data přístupu pomocí ADO.NET (C + +/ CLI)](../dotnet/data-access-using-adonet-cpp-cli.md), a [přístup k datům v sadě Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).
+Pokud používáte C++/rozhraní příkazového řádku, můžete nadále používat jako vždy ADO.NET. Další informace najdete v tématu [Data přístupu pomocí ADO.NET (C++vyhodnocovací)](../dotnet/data-access-using-adonet-cpp-cli.md), a [přístup k datům v sadě Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).
 
 - Kromě obálkové třídy ODBC MFC také poskytuje obálkové třídy objektů DAO (Data Access) pro připojení k přístupu k databázím.  Rozhraní DAO, ale je zastaralé. Jakýkoli kód, na základě CDaoDatabase nebo CDaoRecordset by měl upgradovat.
 

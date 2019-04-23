@@ -1,5 +1,5 @@
 ---
-title: safe_cast (C + +/ CLI a C + +/ CX)
+title: safe_cast (C++vyhodnocovací a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
 ms.openlocfilehash: 199fda710a077998c6b10f101f6ebc15573e675e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038878"
 ---
-# <a name="safecast-ccli-and-ccx"></a>safe_cast (C + +/ CLI a C + +/ CX)
+# <a name="safecast-ccli-and-ccx"></a>safe_cast (C++vyhodnocovací a C++/CX)
 
 **Safe_cast** časový limit operace vrátí zadaný výraz jako zadaný typ, v případě úspěchu; jinak vyvolá výjimku `InvalidCastException`.
 
@@ -32,7 +32,7 @@ ms.locfileid: "59038878"
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
-**safe_cast** vám umožní změnit typ zadaného výrazu. V situacích, kdy plně očekáváte proměnná nebo parametr být převoditelná na určitý typ, můžete použít **safe_cast** bez **bloku try-catch** bloku k detekci programové chyby během vývoje. Další informace najdete v tématu [přetypování (C + +/ CX)](https://msdn.microsoft.com/library/windows/apps/hh755802.aspx).
+**safe_cast** vám umožní změnit typ zadaného výrazu. V situacích, kdy plně očekáváte proměnná nebo parametr být převoditelná na určitý typ, můžete použít **safe_cast** bez **bloku try-catch** bloku k detekci programové chyby během vývoje. Další informace najdete v tématu [přetypování (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755802.aspx).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -45,7 +45,7 @@ ms.locfileid: "59038878"
 *id typu*<br/>
 Typ, který chcete převést *výraz* k. Popisovač pro odkaz nebo typ hodnoty, typ hodnoty nebo odkaz sledování na typ odkazu nebo hodnoty.
 
-*výraz*<br/>
+*Výraz*<br/>
 Výraz, který se vyhodnotí jako popisovač pro odkaz nebo typ hodnoty, typ hodnoty nebo odkaz sledování na typ odkazu nebo hodnoty.
 
 ### <a name="remarks"></a>Poznámky
@@ -105,14 +105,14 @@ Caught expected exception: InvalidCastException
 *id typu*<br/>
 Popisovač pro odkaz nebo typ hodnoty, typ hodnoty nebo odkaz sledování na typ odkazu nebo hodnoty.
 
-*výraz*<br/>
+*Výraz*<br/>
 Výraz, který se vyhodnotí jako popisovač pro odkaz nebo typ hodnoty, typ hodnoty nebo odkaz sledování na typ odkazu nebo hodnoty.
 
 ### <a name="remarks"></a>Poznámky
 
 Výraz `safe_cast<` *id typu*`>(`*výraz* `)` převede operand *výraz* na objekt typu *id typu*.
 
-Kompilátor přijme [static_cast](../cpp/static-cast-operator.md) ve většině případů, které bude přijímat **safe_cast**.  Ale **safe_cast** je zaručeno, že k tvorbě ověřitelného kódu MSIL, přičemž **static_cast** by mohla vést neověřitelný MSIL.  Zobrazit [prázdná a ověřitelný kód (C + +/ CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md) a [Peverify.exe (Nástroj PEVerify)](/dotnet/framework/tools/peverify-exe-peverify-tool) Další informace o kódu s možností ověření.
+Kompilátor přijme [static_cast](../cpp/static-cast-operator.md) ve většině případů, které bude přijímat **safe_cast**.  Ale **safe_cast** je zaručeno, že k tvorbě ověřitelného kódu MSIL, přičemž **static_cast** by mohla vést neověřitelný MSIL.  Zobrazit [prázdná a ověřitelný kód (C++vyhodnocovací)](../dotnet/pure-and-verifiable-code-cpp-cli.md) a [Peverify.exe (Nástroj PEVerify)](/dotnet/framework/tools/peverify-exe-peverify-tool) Další informace o kódu s možností ověření.
 
 Stejně jako **static_cast**, **safe_cast** vyvolá uživatelem definovaných převodů.
 
@@ -124,9 +124,9 @@ Další informace o přetypování, naleznete v tématu [operátory přetypován
 
 Další informace o **safe_cast**, naleznete v tématu:
 
-- [Přetypování ve stylu jazyka pomocí možnosti /clr (C++/CLI)](c-style-casts-with-clr-cpp-cli.md)
+- [Přetypování C-Style s parametrem/CLR (C++vyhodnocovací)](c-style-casts-with-clr-cpp-cli.md)
 
-- [Postupy: Používání operátoru safe_cast v jazyce C + +/ CLI](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)
+- [Postupy: Používání operátoru safe_cast v jazyce C++/CLI](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)
 
 ### <a name="requirements"></a>Požadavky
 

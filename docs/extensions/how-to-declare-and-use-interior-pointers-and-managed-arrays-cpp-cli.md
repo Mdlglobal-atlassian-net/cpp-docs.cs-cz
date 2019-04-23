@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Deklarování a použití vnitřních ukazatelů a spravovaných polí (C + +/ CLI)'
+title: 'Postupy: Deklarování a použití vnitřních ukazatelů a spravovaných polí (C++vyhodnocovací)'
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - arrays [C++], managed
 ms.assetid: e61a2c09-a7d0-4867-91ea-6b8788a01079
 ms.openlocfilehash: 0f7ec6551b09b2125fdb21736a851dae0dadbd4a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035871"
 ---
-# <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>Postupy: Deklarování a použití vnitřních ukazatelů a spravovaných polí (C + +/ CLI)
+# <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>Postupy: Deklarování a použití vnitřních ukazatelů a spravovaných polí (C++vyhodnocovací)
 
-Následující C + +/ CLI příklad ukazuje, jak deklarovat a použít vnitřní ukazatel na pole.
+Následující C++/CLI příklad ukazuje, jak deklarovat a použít vnitřní ukazatel na pole.
 
 > [!IMPORTANT]
 > Této funkci jazyka podporuje `/clr` – možnost kompilátoru, ale ne za `/ZW` – možnost kompilátoru.

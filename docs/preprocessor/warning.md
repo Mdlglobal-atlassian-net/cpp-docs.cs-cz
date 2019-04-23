@@ -11,10 +11,10 @@ helpviewer_keywords:
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
 ms.openlocfilehash: 1341472af22582635207a2bdff93b4367fd59330
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037747"
 ---
 # <a name="warning-pragma"></a>– Direktiva Pragma upozornění
@@ -37,7 +37,7 @@ K dispozici jsou následující parametry upozornění specifier.
 |------------------------|-------------|
 |*1, 2, 3, 4*|Platí pro zadaný počet upozornění: na dané úrovni. To také zapne zadané upozornění, která je ve výchozím nastavení vypnuté.|
 |*default*|Chování upozornění resetovat na výchozí hodnotu. To také zapne zadané upozornění, která je ve výchozím nastavení vypnuté. Upozornění se vygeneruje při jeho výchozí, zdokumentovat, úroveň.<br /><br /> Další informace najdete v tématu [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
-|*Zakázat*|Zadaná zpráva nebo zprávy upozornění bez vyvolání.|
+|*disable*|Zadaná zpráva nebo zprávy upozornění bez vyvolání.|
 |*error*|Sestavy určených upozornění jako chyby.|
 |*once*|Zobrazení zadané zprávy pouze jednou.|
 |*potlačení*|Posune aktuální stav direktivy pragma v zásobníku, zakáže zadané upozornění pro další řádek a potom zobrazí zásobník upozornění tak, aby se resetuje stav direktivy pragma.|

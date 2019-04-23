@@ -9,15 +9,15 @@ helpviewer_keywords:
 - movsq instruction
 ms.assetid: be116a6e-2176-4ca4-93b1-9ccf3e7e7835
 ms.openlocfilehash: 4e4908cd5ffc28840b5a48b735048cccb557e97c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036744"
 ---
 # <a name="movsq"></a>__movsq
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Generuje řetězec opakovaný přesun (`rep movsq`) instrukce.
 
@@ -83,7 +83,7 @@ int main()
 950 850 750 650 550 450 350 250 150 50
 ```
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

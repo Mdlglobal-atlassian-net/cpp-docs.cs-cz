@@ -1,5 +1,5 @@
 ---
-title: Třída rozhraní (C + +/ CLI a C + +/ CX)
+title: Třída rozhraní (C++vyhodnocovací a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
 ms.openlocfilehash: 60e8965e3ef2538554d8c664b35bd0849bd5e69e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035855"
 ---
-# <a name="interface-class--ccli-and-ccx"></a>Třída rozhraní (C + +/ CLI a C + +/ CX)
+# <a name="interface-class--ccli-and-ccx"></a>Třída rozhraní (C++vyhodnocovací a C++/CX)
 
 Deklaruje rozhraní.  Informace o nativní rozhraní, naleznete v tématu [__interface](../cpp/interface.md).
 
@@ -34,7 +34,7 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 *interface_access*<br/>
 Usnadnění rozhraní mimo sestavení.  Možné hodnoty jsou **veřejné** a **privátní**.  **privátní** je výchozí nastavení. Vnořené rozhraní nemůže mít *interface_access* specifikátor.
 
-*name*<br/>
+*Jméno*<br/>
 Název rozhraní.
 
 *inherit_access*<br/>
@@ -57,7 +57,7 @@ Další informace naleznete v tématu:
 
 - [Statický konstruktor rozhraní](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)
 
-- [Obecná rozhraní (C + +/ CLI)](generic-interfaces-visual-cpp.md)
+- [Obecná rozhraní (C++/CLI)](generic-interfaces-visual-cpp.md)
 
 Informace o dalších typech CLR naleznete v tématu [třídy a struktury](classes-and-structs-cpp-component-extensions.md).
 

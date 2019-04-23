@@ -6,10 +6,10 @@ helpviewer_keywords:
 - ODBC cursor library [ODBC], disabling
 ms.assetid: e89e41c4-78fd-4cb6-821f-4fb090f4b08b
 ms.openlocfilehash: 2bd762e64d9f742ade789e3c9571eb02d6f0ef2e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039251"
 ---
 # <a name="use-the-odbc-cursor-library"></a>Použití knihovny kurzorů ODBC
@@ -22,4 +22,4 @@ ODBC spravuje procházení sad záznamů pomocí knihovna kurzorů rozhraní. Ta
 
 ## <a name="see-also"></a>Viz také:
 
-[ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)
+[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

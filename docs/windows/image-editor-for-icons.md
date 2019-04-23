@@ -43,10 +43,10 @@ helpviewer_keywords:
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
 ms.openlocfilehash: dd7da76d3df68fa63c87f64610524accfd4302ef
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041546"
 ---
 # <a name="image-editor-for-icons-c"></a>Editor obrázků pro ikony (C++)
@@ -145,7 +145,7 @@ Chcete-li získat přístup k tomuto dialogovému oknu, vyberte **písmo** tlač
 |**Styl písma**|Zobrazí seznam dostupných stylů pro zadaný font.|
 |**Velikost**|Umožňuje zobrazit seznam velikostí bod k dispozici pro zadaný font.|
 |**Ukázka**|Zobrazuje ukázku toho, jak se text zobrazí s nastavením zadaný font.|
-|**Skript**|Zobrazí seznam dostupný jazyk skriptů pro zadaný font.<br/><br/>Když vyberete jiný jazyk skriptu, znaková sada, bude k dispozici pro vytvoření vícejazyčné dokumenty jazyka.|
+|**skript**|Zobrazí seznam dostupný jazyk skriptů pro zadaný font.<br/><br/>Když vyberete jiný jazyk skriptu, znaková sada, bude k dispozici pro vytvoření vícejazyčné dokumenty jazyka.|
 
 #### <a name="to-change-the-font-of-text-on-an-image"></a>Změna písma textu obrázku
 

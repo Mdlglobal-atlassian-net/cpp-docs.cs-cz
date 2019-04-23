@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3388
 ms.assetid: 34336545-ed13-4d81-ab5f-f869799fe4c2
 ms.openlocfilehash: 3b56aae115b1a1721f3f8a8688e36b25edc7f33f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58780025"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776727"
 ---
 # <a name="compiler-error-c3388"></a>Chyba kompilátoru C3388
 
 'type': nelze použít jako omezení; přepokládá se: ref class' Chcete pokračovat s analýzou.
 
-Byla zadána omezení u obecného typu, ale nebyl správně zadán omezení. Zobrazit [omezení parametrů obecných typů (C + +/ CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) Další informace.
+Byla zadána omezení u obecného typu, ale nebyl správně zadán omezení. Zobrazit [omezení parametrů obecných typů (C++vyhodnocovací)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) Další informace.
 
 ## <a name="example"></a>Příklad
 

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - _mm_cvtss_si64x intrinsic
 ms.assetid: c279aff2-ee29-4271-8829-3ec691bf7718
 ms.openlocfilehash: a3b7ece325d975045046e865e6b090f3f6729558
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036822"
 ---
 # <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Generuje x64 rozšířenou verzi převést skalární jedné přesnosti s plovoucí desetinnou čárkou bodu čísla na 64bitové celé číslo (`cvtss2si`) instrukce.
 
@@ -85,7 +85,7 @@ int main()
 101
 ```
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

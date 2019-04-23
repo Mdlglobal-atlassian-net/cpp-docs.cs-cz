@@ -128,10 +128,10 @@ helpviewer_keywords:
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
 ms.openlocfilehash: 19b8d0c86044e04cc60fd7aab89ec828c46f5fb9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040965"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor – třída
@@ -162,7 +162,7 @@ class CDynamicAccessor : public CAccessorBase
 |[GetBookmark](#getbookmark)|Načte záložky na aktuálním řádku.|
 |[Getcolumncount –](#getcolumncount)|Získá počet sloupců v dané sadě řádků.|
 |[Getcolumnflags –](#getcolumnflags)|Načte vlastnosti sloupce.|
-|[GetColumnInfo –](#getcolumninfo)|Načte metadata pro sloupec.|
+|[GetColumnInfo](#getcolumninfo)|Načte metadata pro sloupec.|
 |[Getcolumnname –](#getcolumnname)|Načte název určený sloupec.|
 |[Getcolumntype –](#getcolumntype)|Načte datový typ zadaný sloupec.|
 |[GetLength](#getlength)|Získá maximální možná délka sloupce v bajtech.|
@@ -170,7 +170,7 @@ class CDynamicAccessor : public CAccessorBase
 |[GetStatus](#getstatus)|Načte stav zadaného sloupce.|
 |[GetValue](#getvalue)|Načte data z vyrovnávací paměti.|
 |[Setblobhandling –](#setblobhandling)|Nastaví objekt BLOB zpracování hodnotu aktuálního řádku.|
-|[Setblobsizelimit –](#setblobsizelimit)|Nastaví maximální velikost objektu BLOB v bajtech.|
+|[SetBlobSizeLimit](#setblobsizelimit)|Nastaví maximální velikost objektu BLOB v bajtech.|
 |[SetLength](#setlength)|Nastaví délka sloupce v bajtech.|
 |[SetStatus –](#setstatus)|Nastaví stav zadaného sloupce.|
 |[SetValue](#setvalue)|Ukládá data do vyrovnávací paměti.|
@@ -195,7 +195,7 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 
 #### <a name="parameters"></a>Parametry
 
-*Informace o*<br/>
+*info*<br/>
 [in] A `DBCOLUMNINFO` struktura obsahující informace o sloupci. Naleznete v části "DBCOLUMNINFO struktury" v [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -655,7 +655,7 @@ bool SetStatus(const WCHAR* pColumnName,
 *nColumn*<br/>
 [in] Číslo sloupce. Sloupec čísel začínající číslem 1. Hodnota 0 odkazuje na sloupec záložku, pokud existuje.
 
-*stav*<br/>
+*status*<br/>
 [in] Stav sloupce. Zobrazit [DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace.
 
 *pColumnName*<br/>

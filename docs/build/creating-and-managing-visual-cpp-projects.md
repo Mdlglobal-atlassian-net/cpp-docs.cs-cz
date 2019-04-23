@@ -12,10 +12,10 @@ helpviewer_keywords:
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
 ms.openlocfilehash: b4772b9bd625a542a18039386fefe42840ab65b1
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038035"
 ---
 # <a name="visual-studio-projects---c"></a>Projekty Visual Studio – C++
@@ -60,16 +60,16 @@ V seznamu chyb, můžete stisknout **F1** na zvýrazněné chyby, přejděte na 
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Nastavení kompilátoru jazyka C++ a vlastnosti v sadě Visual Studio sestavení](working-with-project-properties.md)<br/>
+[Nastavení vlastností kompilátoru a sestavení C++ v sadě Visual Studio](working-with-project-properties.md)<br/>
 Jak používat stránky vlastností a vlastností k určení nastavení projektu.
 
-[Referenční dokumentace knihoven a komponenty v okamžiku sestavení](adding-references-in-visual-cpp-projects.md)<br/>
+[Referenční knihovny a komponenty v okamžiku sestavení](adding-references-in-visual-cpp-projects.md)<br/>
 Postup zahrnutí knihovny DLL, komponenty COM a .NET v projektu.
  
 [Uspořádání výstupních souborů projektu](how-to-organize-project-output-files-for-builds.md)<br/>
 Postup přizpůsobení umístění spustitelné soubory vytvořené během procesu sestavení.
 
-[Vlastní kroky sestavení a s událostmi sestavení](understanding-custom-build-steps-and-build-events.md)<br/>
+[Postup vlastního sestavení a události sestavení](understanding-custom-build-steps-and-build-events.md)<br/>
 Postup přidání jakékoli libovolný příkaz do procesu sestavení na zadané body.
 
 [Vytvoření projektu z existujícího kódu](how-to-create-a-cpp-project-from-existing-code.md)<br/>
@@ -77,4 +77,4 @@ Jak vytvořit nový projekt sady Visual Studio z kolekce dojde ke ztrátě zdroj
 
 ## <a name="see-also"></a>Viz také:
 
-[Projekty a sestavení systémy](projects-and-build-systems-cpp.md)<br>
+[Projekty a systémy sestavení](projects-and-build-systems-cpp.md)<br>

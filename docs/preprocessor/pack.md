@@ -9,10 +9,10 @@ helpviewer_keywords:
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
 ms.openlocfilehash: bf1ae81184d53dd271f63c26e8f9a52a6410b232
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038444"
 ---
 # <a name="pack"></a>pack
@@ -26,16 +26,16 @@ Určuje zarovnání zabalení pro struktury, sjednocení a členy třídy.
 
 ### <a name="parameters"></a>Parametry
 
-**Show**<br/>
+**show**<br/>
 (Volitelné) Zobrazí aktuální hodnotu bajtu pro balení zarovnání. Hodnota se zobrazí zpráva upozornění.
 
-**nabízených oznámení**<br/>
+**push**<br/>
 (Volitelné) Nabízená oznámení aktuální zarovnání zabalení hodnoty na vnitřního zásobníku kompilátoru a nastaví hodnotu aktuální zarovnání zabalení *n*. Pokud *n* není zadán, aktuální hodnota zarovnání zabalení je vloženo.
 
-**POP**<br/>
+**pop**<br/>
 (Volitelné) Odstraní záznam z vrcholu vnitřního zásobníku kompilátoru. Pokud *n* není zadaný s **pop**, balení hodnotu přidruženou k výsledného záznamu vrcholu zásobníku je nová hodnota zarovnání zabalení. Pokud *n* není zadána, například `#pragma pack(pop, 16)`, *n* stane nová hodnota zarovnání zabalení. Pokud jste vyvolat přes pop s *identifikátor*, například `#pragma pack(pop, r1)`, pak všechny záznamy v zásobníku jsou otevřené až do záznam, který má *identifikátor* nenajde. Že záznam není vyjmut záznam a přidružený výsledného záznamu v horní hodnota balení je zásobník nové balení hodnota zarovnání. Pokud jste vyvolat přes pop s *identifikátor* , který se nenachází v libovolné záznamu v zásobníku, pak bude **pop** se ignoruje.
 
-*identifikátor*<br/>
+*identifier*<br/>
 (Volitelné) Při použití s *nabízených*, přiřadí název záznamu ve vnitřním zásobníku kompilátoru. Při použití s **pop**, vyjme všechny záznamy z vnitřního zásobníku až do *identifikátor* li *identifikátor* nebyl nalezen v interním zásobníku, nic nevezme.
 
 *n*<br/>

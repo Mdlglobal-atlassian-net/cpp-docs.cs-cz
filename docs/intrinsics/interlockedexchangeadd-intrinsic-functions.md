@@ -56,15 +56,15 @@ helpviewer_keywords:
 - _InterlockedExchangeAdd64_rel intrinsic
 ms.assetid: 25809e1f-9c60-4492-9f7c-0fb59c8d13d2
 ms.openlocfilehash: 2cffd5a088c4b3c67441e79bc04bd709be6bf8ef
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039173"
 ---
 # <a name="interlockedexchangeadd-intrinsic-functions"></a>Vnitřní funkce _InterlockedExchangeAdd
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Poskytuje vnitřní podporu kompilátoru pro sadu SDK Windows Win32 [vnitřní funkce _InterlockedExchangeAdd](../intrinsics/interlockedexchangeadd-intrinsic-functions.md) funkce.
 
@@ -189,10 +189,10 @@ Tyto rutiny jsou dostupné jenom jako vnitřní funkce. Proto jsou vnitřní Ur�
 
 Pro ukázku toho, jak používat `_InterlockedExchangeAdd`, naleznete v tématu [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
-[klíčová slova](../cpp/keywords-cpp.md)<br/>
+[Klíčová slova](../cpp/keywords-cpp.md)<br/>
 [Konflikty s kompilátorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

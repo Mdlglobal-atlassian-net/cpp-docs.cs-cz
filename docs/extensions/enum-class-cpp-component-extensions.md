@@ -1,16 +1,16 @@
 ---
-title: Výčet tříd (C + +/ CLI a C + +/ CX)
+title: Třída výčtu (C++vyhodnocovací a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
 ms.openlocfilehash: da9097a02de08fd1615f5401d08c438c5f64c139
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037030"
 ---
-# <a name="enum-class--ccli-and-ccx"></a>Výčet tříd (C + +/ CLI a C + +/ CX)
+# <a name="enum-class--ccli-and-ccx"></a>Třída výčtu (C++vyhodnocovací a C++/CX)
 
 Deklaruje výčet v oboru názvů, který je uživatelem definovaný typ tvořený sadou pojmenovaných konstant nazývaných enumerátory.
 
@@ -18,7 +18,7 @@ Deklaruje výčet v oboru názvů, který je uživatelem definovaný typ tvořen
 
 ### <a name="remarks"></a>Poznámky
 
-C + +/ CX a C + +/ podpora rozhraní příkazového řádku **veřejný výčet tříd** a **soukromý výčet tříd** které jsou podobně jako standardní C++ **výčet tříd** , ale s přidáním usnadnění přístupu specifikátor. V části **/CLR**, C ++ 11 **výčet tříd** typ je povolené, ale bude generovat upozornění C4472, která je určena k zajištění, že Opravdu chcete typ výčtu ISO a není jazyce C + +/ CX a C + +/ CLI typu. Další informace o standardu ISO C++ **výčtu** – klíčové slovo, naleznete v tématu [výčty](../cpp/enumerations-cpp.md).
+C++/CX a C++/podpora rozhraní příkazového řádku **veřejný výčet tříd** a **soukromý výčet tříd** které jsou podobně jako standardní C++ **výčet tříd** ale přidání specifikátor usnadnění přístupu. V části **/CLR**, C ++ 11 **výčet tříd** typ je povolené, ale bude generovat upozornění C4472, která je určena k zajištění, že Opravdu chcete typ výčtu ISO a ne C++/CX a C++vyhodnocovací typu. Další informace o standardu ISO C++ **výčtu** – klíčové slovo, naleznete v tématu [výčty](../cpp/enumerations-cpp.md).
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
@@ -40,12 +40,12 @@ Usnadnění výčet, který může být **veřejné** nebo **privátní**.
 *Identifikátor výčtu*<br/>
 Název výčtu.
 
-*Základní typ*<br/>
+*underlying-type*<br/>
 (Volitelné) Základní typ výčtu.
 
 (Volitelné. Pouze Windows Runtime) základní typ výčtu, který může být **bool**, **char**, `char16`, `int16`, `uint16`, **int**, `uint32`, `int64`, nebo `uint64`.
 
-*seznam výčtu*<br/>
+*enumerator-list*<br/>
 Čárkami oddělený seznam názvů enumerátor.
 
 Hodnota každého výčtu je konstantní výraz, který je buď definován implicitně kompilátorem, nebo explicitně zápisu, *enumerátor*`=`*konstantní výraz*. Ve výchozím nastavení hodnota první čítače výčtu je nula, pokud je implicitně definovaný. Hodnotu každé následné implicitně definovaný enumerátor je hodnota z předchozího výčtu + 1.
@@ -85,13 +85,13 @@ accessenum structname [:type] { enumerator-list } var;
 *access*<br/>
 Přístupnost člena výčtu. Může být buď **veřejné** nebo **privátní**.
 
-*seznam výčtu*<br/>
+*enumerator-list*<br/>
 Čárkou oddělený seznam identifikátorů (enumerátory) ve výčtu.
 
-*name*<br/>
+*Jméno*<br/>
 Název výčtu. Anonymní výčty spravované nejsou povoleny.
 
-* – typ*<br/>
+*type*<br/>
 (Volitelné) Základní typ *identifikátory*. To může být libovolného skalárního typu, jako je například podepsaná nebo nepodepsaná verze z **int**, **krátký**, nebo **dlouhé**.  **BOOL** nebo **char** je také povolena.
 
 *var*<br/>
@@ -101,9 +101,9 @@ Název výčtu. Anonymní výčty spravované nejsou povoleny.
 
 **Třída výčtu** a **enum struct** jsou ekvivalentní deklarace.
 
-Existují dva typy výčtů: spravované nebo C + +/ CX a standard.
+Existují dva typy výčtů: spravované nebo C++/CX a standard.
 
-Spravované nebo C + +/ CX výčtu může být definovaná následujícím způsobem
+Spravované nebo C++/CX výčtu může být definovaná následujícím způsobem
 
 ```cpp
 public enum class day {sun, mon };

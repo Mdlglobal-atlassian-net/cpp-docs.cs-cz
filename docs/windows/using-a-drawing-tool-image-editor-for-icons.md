@@ -17,10 +17,10 @@ helpviewer_keywords:
 - custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
 ms.openlocfilehash: 7b362749c9a5cb1c7ec77e5cac8625aa7eb260f0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037786"
 ---
 # <a name="how-to-use-a-drawing-tool"></a>Postupy: Použití nástroje kreslení
@@ -136,12 +136,12 @@ Stisknutím klávesy **Esc** nebo zvolte jiný nástroj pro vykreslování.
 
 ## <a name="requirements"></a>Požadavky
 
-Žádné
+Žádný
 
 ## <a name="see-also"></a>Viz také:
 
 [Editor obrázků pro ikony](../windows/image-editor-for-icons.md)<br/>
 [Postupy: Vytvoření ikony nebo jiného obrázku](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
-[Postupy: Upravit obrázek](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[Postupy: Pracovat s barvou](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[Postupy: Úprava obrázku](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Postupy: Práce s barvou](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

@@ -33,10 +33,10 @@ helpviewer_keywords:
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
 ms.openlocfilehash: 8b2a92fdefd965d4b87e0a9ed411cc1b5c89b8f9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036796"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl – třída
@@ -83,7 +83,7 @@ Jednotky úložiště pro všechny popisovačů řádků uchovávat zprostředko
 |||
 |-|-|
 |[DeleteRows](#deleterows)|Odstraní řádky ze sady řádků.|
-|[Insertrow –](#insertrow)|Vloží řádek do sady řádků.|
+|[InsertRow](#insertrow)|Vloží řádek do sady řádků.|
 |[SetData](#setdata)|Nastaví hodnoty dat v jedné nebo více sloupců.|
 
 ### <a name="implementation-method-callback"></a>Implementace metody (zpětného volání)

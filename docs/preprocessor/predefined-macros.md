@@ -144,10 +144,10 @@ helpviewer_keywords:
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
 ms.openlocfilehash: dedcab9b0addd3696749b50fef92b70081981c03
-ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59237208"
 ---
 # <a name="predefined-macros"></a>Předdefinovaná makra
@@ -362,7 +362,7 @@ MSVC podporuje tyto dodatečné předdefinovaná makra.
 
 - **&#95;MSC&#95;VER** definován jako literál celého čísla, který kóduje hlavní a dílčí číslo prvky číslo verze kompilátoru. Hlavní číslo je první prvek čísla verze odděleného tečkou a vedlejší číslo je druhá část. Pokud číslo verze kompilátoru Microsoft C/C++ je 17.00.51106.1, například  **&#95;MSC&#95;VER** – makro vyhodnotí jako 1700. Zadejte `cl /?` příkazového řádku, chcete-li zobrazit číslo verze kompilátoru. Toto makro je vždy definováno.
 
-   |Verze Visual Studio|**&#95;MSC&#95;VER**|
+   |Verze sady Visual Studio|**&#95;MSC&#95;VER**|
    |-|-|
    |Visual Studio 6.0|1200|
    |Visual Studio .NET 2002 (7.0)|1300|

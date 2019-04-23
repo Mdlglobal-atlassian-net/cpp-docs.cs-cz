@@ -1,5 +1,5 @@
 ---
-title: Řetězce (C + +/ CLI a C + +/ CX)
+title: Řetězec (C++vyhodnocovací a C++/CX)
 ms.date: 10/08/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - /clr compiler option [C++], string support
 ms.assetid: c695f965-9be0-4e20-9661-373bfee6557e
 ms.openlocfilehash: 8440ddf510f99618c28a6b6d585c8628df85f9cb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038545"
 ---
-# <a name="string--ccli-and-ccx"></a>Řetězce (C + +/ CLI a C + +/ CX)
+# <a name="string--ccli-and-ccx"></a>Řetězec (C++vyhodnocovací a C++/CX)
 
 Modul Windows Runtime a modul common language runtime představují řetězce jako objekty, jejichž přidělenou paměť je spravována automaticky. To znamená není nutné explicitně zahodit paměti pro řetězec při ukončení řetězce proměnné překročí obor nebo aplikace. K označení, že se automaticky spravovat dobu života objektu string, deklarujte typ řetězce s [popisovač objektu (^)](handle-to-object-operator-hat-cpp-component-extensions.md) modifikátor.
 
@@ -55,7 +55,7 @@ Kompilátor také obsahuje integrovanou podporu pro tři operátory, které mů�
 Při předání <xref:System.String>, kompilátor pole, v případě potřeby a pak je zřetězí objekt (s ToString) s řetězcem.
 
 > [!NOTE]
-> Znak stříšky ("^") označuje, že deklarovaná proměnná je popisovač pro C + +/ CLI spravovaných objektů.
+> Blikající kurzor ("^") označuje, že deklarovaná proměnná je popisovač C++vyhodnocovací spravovaných objektů.
 
 Další informace najdete v části [řetězcové a znakové literály](../cpp/string-and-character-literals-cpp.md).
 
@@ -263,4 +263,4 @@ System.String
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)<br/>
 [Řetězcové a znakové literály](../cpp/string-and-character-literals-cpp.md)<br/>
-[/clr (Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)
+[/clr (kompilace modulu Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)

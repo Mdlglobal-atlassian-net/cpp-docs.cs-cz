@@ -8,15 +8,15 @@ helpviewer_keywords:
 - __vmx_vmlaunch intrinsic
 ms.assetid: 708f7c38-b7c1-4ee7-bfc4-0daeb9cc9360
 ms.openlocfilehash: 37f3a39ee7b0d4d24f26fab2347ac9fca020ec47
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037039"
 ---
 # <a name="vmxvmlaunch"></a>__vmx_vmlaunch
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Umístí volající aplikace ve stavu operace nekořenovými VMX (zadejte virtuální počítač) pomocí aktuální struktury řízení virtuálních počítačů (VMCS).
 
@@ -29,7 +29,7 @@ unsigned char __vmx_vmlaunch(
 
 ## <a name="return-value"></a>Návratová hodnota
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
 |0|Operace byla úspěšná.|
 |1|Operace se nezdařila s rozšířenou stav k dispozici v `VM-instruction error field` z aktuální VMCS.|
@@ -49,7 +49,7 @@ Aplikace může provádět operace, která virtuálního počítače zadejte bu�
 
 **Soubor hlaviček** \<intrin.h >
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

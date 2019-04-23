@@ -7,10 +7,10 @@ helpviewer_keywords:
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
 ms.openlocfilehash: a08c7ecb153b790f06da386ac93d1f05f5981e61
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037727"
 ---
 # <a name="working-with-resource-files"></a>Práce se zdrojovými soubory
@@ -18,7 +18,7 @@ ms.locfileid: "59037727"
 > [!WARNING]
 > Tato část se týká aplikací klasické pracovní plochy Windows napsaný v jazyce C++.
 >
-> Informace o prostředcích v aplikacích pro univerzální platformu Windows napsaný v jazyce C++, naleznete v tématu [definování prostředků aplikace](/windows/uwp/app-resources/), nebo o přidávání prostředků do C + +/ CLI (spravované) projekty, naleznete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v Příručka pro vývojáře rozhraní .NET Framework.
+> Informace o prostředcích v aplikacích pro univerzální platformu Windows v C++, naleznete v tématu [definování prostředků aplikace](/windows/uwp/app-resources/), nebo o přidávání prostředků do C++nebo rozhraní příkazového řádku (spravované) projekty [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v rozhraní .NET Framework Developer's Guide.
 
 Prostředky může skládat ze široké škály prvky, jako je:
 
@@ -38,10 +38,10 @@ Globalizace a lokalizace prostředků ve spravovaných aplikací najdete v téma
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Zdrojové soubory](../windows/resource-files-visual-studio.md)<br/>
+[Soubory prostředků](../windows/resource-files-visual-studio.md)<br/>
 Popisuje soubory prostředků a jak se používají v aplikacích klasické pracovní plochy Windows. Obsahuje také odkazy na články, které popisují způsob použití souborů prostředků.
 
-[Identifikátory prostředků (symbolů)](../windows/symbols-resource-identifiers.md)<br/>
+[Identifikátory prostředků (symboly)](../windows/symbols-resource-identifiers.md)<br/>
 Popisuje symboly a poskytuje informace o používání **symbolů prostředků** dialogové okno ke správě symbolů ve vašich projektech.
 
 [Editory prostředků](../windows/resource-editors.md)<br/>

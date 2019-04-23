@@ -1,5 +1,5 @@
 ---
-title: vlastnosti (C + +/ CLI a C + +/ CX)
+title: vlastnosti (C++vyhodnocovací a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
 ms.openlocfilehash: 8ec76db37cffb1b3d15447165300bedf1a8771c9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038810"
 ---
-# <a name="property--ccli-and-ccx"></a>vlastnosti (C + +/ CLI a C + +/ CX)
+# <a name="property--ccli-and-ccx"></a>vlastnosti (C++vyhodnocovací a C++/CX)
 
 Deklaruje *vlastnost*, což je členská funkce, který se chová a je přístupná jako datový člen nebo element pole.
 
@@ -61,10 +61,10 @@ property type default[index_list] {
 
 ### <a name="parameters"></a>Parametry
 
-* – typ*<br/>
+*type*<br/>
 Datový typ hodnoty vlastnosti a proto samotné vlastnosti.
 
-*%{Property_Name/*<br/>
+*property_name*<br/>
 Název vlastnosti
 
 *access-modifier*<br/>
@@ -86,7 +86,7 @@ Tělo metody vlastností přistupujícího objektu set nebo get. *Property_body*
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
-Další informace najdete v tématu [vlastnosti (C + +/ CX)](https://msdn.microsoft.com/library/windows/apps/hh755807.aspx).
+Další informace najdete v tématu [vlastnosti (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755807.aspx).
 
 ### <a name="requirements"></a>Požadavky
 
@@ -113,13 +113,13 @@ modifier property type default[index];
 
 ### <a name="parameters"></a>Parametry
 
-* – modifikátor*<br/>
+*modifier*<br/>
 Modifikátor, který lze použít v deklaraci vlastnosti nebo metody přístupového objektu get/set. Možné hodnoty jsou **statické** a **virtuální**.
 
-* – typ*<br/>
+*type*<br/>
 Typ hodnoty, která je reprezentována vlastnost.
 
-*%{Property_Name/*<br/>
+*property_name*<br/>
 Parametry pro metodu raise; signatura delegáta se musí shodovat.
 
 *index_list*<br/>

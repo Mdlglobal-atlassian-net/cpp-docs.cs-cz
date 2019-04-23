@@ -10,10 +10,10 @@ helpviewer_keywords:
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
 ms.openlocfilehash: 71850807f6332f31195ef9bafbd9468f48cb6fb3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041423"
 ---
 # <a name="generic-classes-ccli"></a>Obecné třídy (C++/CLI)
@@ -37,10 +37,10 @@ class-body
 
 Ve výše uvedené syntaxe se používají následující termíny:
 
-*atributy*<br/>
+*Atributy*<br/>
 (Volitelné) Další informace o deklarativní. Další informace o atributu třídy a atributy naleznete v tématu atributy.
 
-*klíč třídy*<br/>
+*class-key*<br/>
 Buď **třídy** nebo **typename**
 
 *Typ – parametr-identifikátory*, čárkami oddělený seznam identifikátorů určující názvy parametrů typu.
@@ -50,25 +50,25 @@ Seznam (nikoli oddělený čárkami) **kde** klauzule určující omezení pro p
 
 > **kde** *identifikátor typu parametru* **:** *seznam omezení***...**
 
-*seznam omezení*<br/>
+*constraint-list*<br/>
 *Třída nebo rozhraní*[`,` *...* ]
 
-*Modifikátory dostupnosti*<br/>
+*accessibility-modifiers*<br/>
 Modifikátory dostupnosti pro obecná třída. Prostředí Windows Runtime je jediný povolený modifikátor **privátní**. Pro modul common language runtime, jsou povolené modifikátory **privátní** a **veřejné**.
 
-*identifikátor*<br/>
+*identifier*<br/>
 Název obecná třída libovolný platný identifikátor C++.
 
-*modifikátory*<br/>
+*Modifikátory*<br/>
 (Volitelné) Povolené modifikátory zahrnují **zapečetěné** a **abstraktní**.
 
-*Base-list*<br/>
+*base-list*<br/>
 Seznam obsahující jednu základní třídu a žádné implementovaná rozhraní, všechny oddělených čárkami.
 
 *class-body*<br/>
 Text třídu obsahující pole, členské funkce atd.
 
-*deklarátory*<br/>
+*declarators*<br/>
 Deklarace proměnných tohoto typu. Příklad: `^` *identifikátor*[`,` ...]
 
 Je možné deklarovat obecné třídy takovéto (Všimněte si, že klíčové slovo **třídy** může být použita místo **typename**). V tomto příkladu `ItemType`, `KeyType` a `ValueType` jsou neznámé typy, které jsou uvedeny v místě, kde typ. `HashTable<int, int>` konstruovaný typ obecného typu je `HashTable<KeyType, ValueType>`. Počet různých sestavené typy lze zkonstruovat z jednoho obecného typu. Sestavené typy vytvořený z obecné třídy jsou zpracovány stejně jako jakýkoli jiný typ referenční třídy.
@@ -97,7 +97,7 @@ int main() {
 
 Oba typy hodnot (buď předdefinované typy, jako **int** nebo **double**, nebo hodnotu definovanou uživatelem typy) a typy odkazů může sloužit jako argument obecného typu. Syntaxe v definici obecného je stejný bez ohledu na to. Neznámý typ je zpracováván syntakticky, jako by šlo typ odkazu. Modul runtime je však možné, která určí, zda skutečně používá typ je typ hodnoty a nahraďte příslušné generovaný kód pro přímý přístup ke členům. Hodnota typy použité jako argumenty obecného typu nejsou v poli a proto není trpí snížení výkonu, které jsou přidružené k zabalení. By měl být použit v těle obecné syntaxe `T^` a `->` místo `.`. Jakékoli použití [ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md) pro typ parametru se správně interpretovat modulem runtime jako jednoduchým vytvořením hodnotového typu Pokud typ argumentu je typ hodnoty.
 
-Můžete také deklarovat obecná třída s atributem [omezení parametrů obecných typů (C + +/ CLI)](constraints-on-generic-type-parameters-cpp-cli.md) na typy, které lze použít pro parametr typu. V následujícím příkladu používá libovolný typ pro `ItemType` musí implementovat `IItem` rozhraní. Pokus o použití **int**, například která neimplementuje `IItem`, byste mohli vytvořit chybu v době kompilace, protože argumentů typu nevyhovuje omezením.
+Můžete také deklarovat obecná třída s atributem [omezení parametrů obecných typů (C++vyhodnocovací)](constraints-on-generic-type-parameters-cpp-cli.md) na typy, které lze použít pro parametr typu. V následujícím příkladu používá libovolný typ pro `ItemType` musí implementovat `IItem` rozhraní. Pokus o použití **int**, například která neimplementuje `IItem`, byste mohli vytvořit chybu v době kompilace, protože argumentů typu nevyhovuje omezením.
 
 ```cpp
 // generic_classes_2.cpp

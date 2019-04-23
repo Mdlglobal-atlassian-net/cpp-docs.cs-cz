@@ -6,10 +6,10 @@ helpviewer_keywords:
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
 ms.openlocfilehash: ee2b6097a62a8f1030dc631354f96ec7a33d2f11
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039394"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Upozornění kompilátoru, které jsou ve výchozím nastavení vypnuta
@@ -28,7 +28,7 @@ Můžete povolit upozornění, která jsou obvykle vypnuto ve výchozím nastave
 
    Zadané upozornění (*warning_number*) je na zadané úrovni povoleno (*warning_level*).
 
-- [/Wall](../build/reference/compiler-option-warning-level.md)
+- [/ Wall](../build/reference/compiler-option-warning-level.md)
 
    `/Wall` Povolí všechna upozornění, které jsou ve výchozím nastavení vypnuta. Pokud použijete tuto možnost, můžete vypnout jednotlivých upozornění pomocí [/wd](../build/reference/compiler-option-warning-level.md) možnost.
 
@@ -180,4 +180,4 @@ Toto upozornění je vypnuto ve výchozím nastavení ve verzích kompilátoru p
 
 ## <a name="see-also"></a>Viz také:
 
-[upozornění](../preprocessor/warning.md)
+[warning](../preprocessor/warning.md)

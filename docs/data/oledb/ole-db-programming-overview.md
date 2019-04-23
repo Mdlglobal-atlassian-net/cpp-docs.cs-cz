@@ -6,10 +6,10 @@ helpviewer_keywords:
 - OLE DB, about OLE DB
 ms.assetid: a5a69730-2793-4277-a67d-6f3c8edab6df
 ms.openlocfilehash: 68ada06514defe0f7f5332288ad8e91a7d8d9351
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035527"
 ---
 # <a name="ole-db-programming-overview"></a>Přehled programování v architektuře OLE DB
@@ -26,7 +26,7 @@ Podle specifikace modelu COM, OLE DB definuje rozšiřitelné a udržuje kolekci
 
 ## <a name="see-also"></a>Viz také:
 
-[OLE DB – programování](../../data/oledb/ole-db-programming.md)<br/>
+[Programování v architektuře OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Šablony OLE DB](../../data/oledb/ole-db-templates.md)

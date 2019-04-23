@@ -24,10 +24,10 @@ helpviewer_keywords:
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
 ms.openlocfilehash: e809c7af7465cde98db11eac8628b76d04f7e8b5
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424076"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (formát ladicích informací)
@@ -42,7 +42,7 @@ Určuje typ ladicích informací vytvářených pro program a zda tyto informace
 
 Pokud kód je zkompilován a vytvořené v režimu ladění, kompilátor vytvoří názvy symbolů pro funkce a proměnné, informace o typu a umístění číslo řádku pro použití ladicím programem. Symbolickém ladění může být zahrnuté v souborech objektů (soubory .obj) produkované kompilátorem nebo v samostatném souboru PDB (soubor typu .pdb) pro spustitelný soubor.  Možnosti formátování informace o ladění jsou popsány v následujících částech.
 
-### <a name="none"></a>Žádný
+### <a name="none"></a>Žádné
 
 Ve výchozím nastavení Pokud není zadána žádná možnost formát informací ladění, kompilátor nevytváří žádné ladicí informace, kompilace je proto rychlejší.
 
@@ -91,6 +91,6 @@ Pokud vytvoříte knihovnu z objektů, které byly zkompilovány pomocí **/zi**
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)
 

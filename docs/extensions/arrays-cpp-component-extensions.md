@@ -1,5 +1,5 @@
 ---
-title: Pole (C + +/ CLI a C + +/ CX)
+title: Pole (C++vyhodnocovací a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
 ms.openlocfilehash: e4173c16e13c08a54b36e42183e6e18b6ed4fdc2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035339"
 ---
-# <a name="arrays-ccli-and-ccx"></a>Pole (C + +/ CLI a C + +/ CX)
+# <a name="arrays-ccli-and-ccx"></a>Pole (C++vyhodnocovací a C++/CX)
 
-`Platform::Array<T>` Typu v jazyce C + +/ CX nebo **pole** – klíčové slovo v jazyce C + +/ CLI, deklaruje pole určeného typu a počáteční hodnota.
+`Platform::Array<T>` Zadejte C++/CX, nebo **pole** – klíčové slovo v C++/CLI, deklaruje pole určeného typu a počáteční hodnota.
 
 ## <a name="all-platforms"></a>Všechny platformy
 
@@ -32,7 +32,7 @@ Na rozdíl od standardní C++ vytváření dolních indexů není synonymum pro 
 
 Další informace o polích naleznete v tématu:
 
-- [Postupy: Používání polí v jazyce C + +/ CLI](../dotnet/how-to-use-arrays-in-cpp-cli.md)
+- [Postupy: Používání polí v jazyce C++/CLI](../dotnet/how-to-use-arrays-in-cpp-cli.md)
 
 - [Seznamy argumentů s proměnnou délkou (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)
 
@@ -55,13 +55,13 @@ První příklad syntaxe používá **ref nové** agregační – klíčové slo
 *Kvalifikátory*<br/>
 (Volitelné) Jeden nebo více těchto specifikátorů třídy úložiště: [proměnlivé](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statické](../cpp/static-members-cpp.md).
 
-*Typ pole*<br/>
+*array-type*<br/>
 Typ proměnné pole. Platné typy jsou třídy Windows Runtime a základní typy, referenční třídy a struktury, hodnota třídy a struktury a nativními ukazateli (`type*`).
 
-*rozsah*<br/>
+*pořadí*<br/>
 (Volitelné) Počet rozměrů pole. Musí být 1.
 
-*identifikátor*<br/>
+*identifier*<br/>
 Název proměnné pole.
 
 *typ inicializace*<br/>
@@ -111,13 +111,13 @@ První příklad syntaxe používá **gcnew** – klíčové slovo pro přiděle
 *Kvalifikátory*<br/>
 (Volitelné) Jeden nebo více těchto specifikátorů třídy úložiště: [proměnlivé](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statické](../cpp/static-members-cpp.md).
 
-*Typ pole*<br/>
+*array-type*<br/>
 Typ proměnné pole. Platné typy jsou třídy Windows Runtime a základní typy, referenční třídy a struktury, hodnota třídy a struktury, nativními ukazateli (`type*`) a nativní typy POD (obyčejná stará data).
 
-*rozsah*<br/>
+*pořadí*<br/>
 (Volitelné) Počet rozměrů pole. Výchozí hodnota je 1; maximální počet je 32. Každé dimenze pole je pole.
 
-*identifikátor*<br/>
+*identifier*<br/>
 Název proměnné pole.
 
 *typ inicializace*<br/>
@@ -135,13 +135,13 @@ Například pokud *řazení seznamu velikost* byly `(3)`, který deklaruje jedno
 
 **pole** probíhá [Platform, default a cli obory názvů](platform-default-and-cli-namespaces-cpp-component-extensions.md) oboru názvů.
 
-Podobně jako standardní C++ indexy pole jsou počítány od nuly a pole je indexované pomocí hranatých závorek ([]). Na rozdíl od standardní C++ jsou uvedeny indexy vícerozměrné pole v seznamu indexů pro jednotlivé rozměry namísto sadu operátorů hranatých závorek ([]) pro jednotlivé rozměry. Například *identifikátor*[*index1*, *index2*] místo *identifikátor*[*index1*] [ *index2*].
+Podobně jako standardní C++indexy pole jsou počítány od nuly a pole je indexované pomocí hranatých závorek ([]). Na rozdíl od standardní C++, indexy vícerozměrné pole jsou uvedeny v seznamu indexů pro jednotlivé rozměry namísto sadu operátorů hranatých závorek ([]) pro jednotlivé rozměry. Například *identifikátor*[*index1*, *index2*] místo *identifikátor*[*index1*] [ *index2*].
 
 Dědí všechny spravovaných polí `System::Array`. Všechny metody nebo vlastnosti z `System::Array` lze použít přímo k proměnné pole.
 
 Když přidělíte pole, jehož typ prvku je ukazatel-spravovanou třídu prvky jsou inicializovány 0.
 
-Když přidělíte pole, jehož typ prvku je typ hodnoty `V`, výchozí konstruktor pro `V` se aplikuje na každý prvek pole. Další informace najdete v tématu [rozhraní .NET Framework – ekvivalenty nativních typů C++ (C + +/ CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md).
+Když přidělíte pole, jehož typ prvku je typ hodnoty `V`, výchozí konstruktor pro `V` se aplikuje na každý prvek pole. Další informace najdete v tématu [rozhraní .NET Framework – ekvivalenty k C++ nativních typech (C++vyhodnocovací)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md).
 
 V době kompilace, můžete zjistit, zda je typ common language runtime (CLR) pole `__is_ref_array(type)`. Další informace najdete v tématu [podpora kompilátoru pro typové vlastnosti](compiler-support-for-type-traits-cpp-component-extensions.md).
 

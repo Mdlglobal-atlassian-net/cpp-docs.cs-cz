@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
 ms.openlocfilehash: c85a8284c91037e981f0d1ea82507b49be8121a3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58780675"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777131"
 ---
 # <a name="compiler-error-c2440"></a>Compiler Error C2440
 
@@ -143,7 +143,7 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-C2440 může vzniknout také kvůli nesprávnému použití uživatelem definovaného převodu. Například pokud operátor převodu byl definovaný jako `explicit`, kompilátor nelze použít v implicitní převod. Další informace o uživatelem definovaných převodů, naleznete v tématu [uživatelem definovaných převodů (C + +/ CLI)](../../dotnet/user-defined-conversions-cpp-cli.md)). Tato ukázka generuje upozornění C2440:
+C2440 může vzniknout také kvůli nesprávnému použití uživatelem definovaného převodu. Například pokud operátor převodu byl definovaný jako `explicit`, kompilátor nelze použít v implicitní převod. Další informace o uživatelem definovaných převodů, naleznete v tématu [uživatelem definovaných převodů (C++vyhodnocovací)](../../dotnet/user-defined-conversions-cpp-cli.md)). Tato ukázka generuje upozornění C2440:
 
 ```cpp
 // C2440d.cpp
@@ -194,7 +194,7 @@ C2440 může vzniknout také z důvodu změn ve funkci atributů.  Následujíc�
 
 ## <a name="example"></a>Příklad
 
-Kompilátor Visual C++ již neumožňuje [operátor const_cast](../../cpp/const-cast-operator.md) pro přetypování směrem dolů, když zdrojový kód, který používá **/CLR** programování je zkompilován.
+Vizuál C++ kompilátoru již neumožňuje [operátor const_cast](../../cpp/const-cast-operator.md) pro přetypování směrem dolů, když zdrojový kód, který používá **/CLR** programování je zkompilován.
 
 Chcete-li vyřešit tuto chybu C2440, použijte správný operátor osazení. Další informace najdete v tématu [operátory přetypování](../../cpp/casting-operators.md).
 

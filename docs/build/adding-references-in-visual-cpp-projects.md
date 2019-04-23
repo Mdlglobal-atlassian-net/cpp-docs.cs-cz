@@ -8,10 +8,10 @@ helpviewer_keywords:
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
 ms.openlocfilehash: dff057977e6b6ff0c36d3a888bc4d5c3aa778576
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038759"
 ---
 # <a name="consuming-libraries-and-components"></a>Používání knihovny a součásti
@@ -46,11 +46,11 @@ Pokud knihovna DLL není součástí řešení aplikací, musíte soubor knihovn
 
 ## <a name="com-objects"></a>COM – objekty
 
-Pokud vaše nativní aplikace C++ potřebuje používat objekt modelu COM a je *zaregistrovaný*, pak vše, co musíte udělat je volání funkce CoCreateInstance a předejte mu identifikátor CLSID objektu. Systém se ji najít v registru Windows a načtěte jej. C + +/ CLI projektu může spotřebovat objekt modelu COM, stejným způsobem, nebo tak, že přidáte odkaz na z **Add References > COM** seznamu a pracovat s nimi prostřednictvím jeho [obálka volatelná za běhu](/dotnet/framework/interop/runtime-callable-wrapper). 
+Pokud vaše nativní aplikace C++ potřebuje používat objekt modelu COM a je *zaregistrovaný*, pak vše, co musíte udělat je volání funkce CoCreateInstance a předejte mu identifikátor CLSID objektu. Systém se ji najít v registru Windows a načtěte jej. A C++/CLI projektu může spotřebovat objekt modelu COM, stejným způsobem, nebo tak, že přidáte odkaz na z **Add References > COM** seznamu a pracovat s nimi prostřednictvím jeho [obálka volatelná za běhu](/dotnet/framework/interop/runtime-callable-wrapper). 
 
 ## <a name="net-assemblies-and-windows-runtime-components"></a>Sestavení .NET a součásti Windows Runtime
 
-V UPW nebo C + +/ projekty rozhraní příkazového řádku, využívají sestavení .NET nebo součástí prostředí Windows Runtime tak, že přidáte *odkaz* k sestavením nebo komponentou. V části **odkazy** uzlu v UPW nebo C + +/ CLI projektu, uvidíte odkazy na běžně používané komponenty. Klikněte pravým tlačítkem na **odkazy** uzel v **Průzkumníka řešení** zobrazíte **správce odkazů** a projděte si další součásti, které jsou známé systému. Klikněte na tlačítko **Procházet** tlačítko Přejít na libovolnou složku, kde se nachází vlastní komponentu. Protože sestavení .NET a součásti prostředí Windows Runtime obsahují informace o předdefinovaných typech, můžete zobrazit jejich metod a tříd kliknutím pravým tlačítkem a vyberete **zobrazit v prohlížeči objektů**. 
+V UPW nebo C++vyhodnocovací projekty, využívají sestavení .NET nebo součástí prostředí Windows Runtime tak, že přidáte *odkaz* k sestavením nebo komponentou. V části **odkazy** uzel v UPW nebo C++vyhodnocovací projektu se zobrazí odkazy na běžně používané komponenty. Klikněte pravým tlačítkem na **odkazy** uzel v **Průzkumníka řešení** zobrazíte **správce odkazů** a projděte si další součásti, které jsou známé systému. Klikněte na tlačítko **Procházet** tlačítko Přejít na libovolnou složku, kde se nachází vlastní komponentu. Protože sestavení .NET a součásti prostředí Windows Runtime obsahují informace o předdefinovaných typech, můžete zobrazit jejich metod a tříd kliknutím pravým tlačítkem a vyberete **zobrazit v prohlížeči objektů**. 
 
 ## <a name="reference-properties"></a>Vlastnosti odkazu
 
@@ -80,9 +80,9 @@ Vlastnosti odkazu ActiveX jsou dostupné pouze pro odkazy na komponenty modelu C
 
    Zobrazí nástroj, který se používá k vytvoření sestavení interop z odkazované knihovny COM nebo ovládacího prvku ActiveX.
 
-### <a name="assembly-reference-properties-ccli"></a>Vlastnosti odkazu na sestavení (C + +/ CLI)
+### <a name="assembly-reference-properties-ccli"></a>Vlastnosti odkazu na sestavení (C++vyhodnocovací)
 
-Vlastnosti odkazu na sestavení jsou k dispozici pouze pro odkazy na sestavení rozhraní .NET Framework v jazyce C + +/ CLI projekty. Tyto vlastnosti se zobrazí jenom v případě, že je vybraná sestavení rozhraní .NET Framework v **odkazy** podokně. Vlastnosti nelze změnit.
+Vlastnosti odkazu na sestavení jsou k dispozici pouze pro odkazy na sestavení rozhraní .NET Framework v C++vyhodnocovací projekty. Tyto vlastnosti se zobrazí jenom v případě, že je vybraná sestavení rozhraní .NET Framework v **odkazy** podokně. Vlastnosti nelze změnit.
 
 - **Relativní cesta**
 
@@ -96,7 +96,7 @@ Následující vlastnosti jsou k dispozici na různé typy odkazů. Umožňují 
 
    Určuje, jestli se mají automaticky kopírovat odkazované sestavení do cílového umístění během sestavení.
 
-- **Zkopírovat místní satelitní sestavení (C + +/ CLI)**
+- **Zkopírovat místní satelitní sestavení (C++vyhodnocovací)**
 
    Určuje, jestli se mají automaticky kopírovat satelitní sestavení odkazovaného sestavení do cílového umístění během sestavení. Použít jenom v případě **Kopírovat místně** je **true**.
 
@@ -112,7 +112,7 @@ Definujte následující vlastnosti *odkaz typu projekt projekt* z projektu, kte
 
    Pokud je tato vlastnost **True**, systém projektu propojeny do závislý projekt lib souborů, které jsou vytvářeny nezávislé projektem. Obvykle můžete zadat **True**.
 
-- **Identifikátor projektu**
+- **Project Identifier**
 
    Jednoznačně identifikuje nezávislé projektu. Hodnota vlastnosti je interní systém identifikátor GUID, který nemůže být upraven.
 
@@ -148,7 +148,7 @@ Následující vlastnosti se nacházejí na odkazy na sestavení modelu COM a .N
 
    Zobrazí popisek odkazu.
 
-- **Name**
+- **Název**
 
    Zobrazí název odkazu.
 
@@ -160,11 +160,11 @@ Následující vlastnosti se nacházejí na odkazy na sestavení modelu COM a .N
 
    `true` Pokud má odkazované sestavení silný název. Silně pojmenované sestavení mají je jedinečné verze.
 
-- **Version**
+- **Verze**
 
    Verze odkazovaného sestavení zobrazí.
 
 ## <a name="see-also"></a>Viz také:
 
 [Odkaz na stránku vlastností projektu jazyka C++](reference/property-pages-visual-cpp.md)<br>
-[Nastavení kompilátoru jazyka C++ a vlastnosti v sadě Visual Studio sestavení](working-with-project-properties.md)
+[Nastavení vlastností kompilátoru a sestavení C++ v sadě Visual Studio](working-with-project-properties.md)

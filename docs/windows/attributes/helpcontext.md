@@ -7,10 +7,10 @@ helpviewer_keywords:
 - helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
 ms.openlocfilehash: 22023b4087c67b62d540d021fa06fd3582c7e4e2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038157"
 ---
 # <a name="helpcontext"></a>helpcontext
@@ -44,7 +44,7 @@ Podívejte se na příklad pro [defaultvalue](defaultvalue.md) příklad, jak po
 |-|-|
 |**Platí pro**|**rozhraní**, **typedef**, **třída**, metoda, vlastnost|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
+|**Vyžadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).

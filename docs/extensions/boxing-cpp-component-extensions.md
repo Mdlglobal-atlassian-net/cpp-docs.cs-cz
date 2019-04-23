@@ -1,18 +1,18 @@
 ---
-title: Zabalení (C + +/ CLI a C + +/ CX)
+title: Zabalení (C++vyhodnocovací a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - boxing, C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
 ms.openlocfilehash: 0b41cacba8c279447e1e944cc3214ca1ba607665
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038697"
 ---
-# <a name="boxing--ccli-and-ccx"></a>Zabalení (C + +/ CLI a C + +/ CX)
+# <a name="boxing--ccli-and-ccx"></a>Zabalení (C++vyhodnocovací a C++/CX)
 
 Převod typů hodnot na objekty se nazývá *zabalení*, a převod objektů pro typy hodnot se nazývá *rozbalení*.
 
@@ -22,7 +22,7 @@ Převod typů hodnot na objekty se nazývá *zabalení*, a převod objektů pro 
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
-C + +/ CX podporuje syntaxi ve zkráceném tvaru pro typy hodnot zabalení a rozbalení typy odkazů. Typ hodnoty je zabalená, když je přiřazen k proměnné typu `Object`. `Object` Proměnná je instance nezabalená, když je přiřazen do proměnné typu hodnoty a nezabalený typ. je uveden v závorkách, což znamená, když je objektová proměnná přetypována na typ hodnoty.
+C++/CX podporuje syntaxi ve zkráceném tvaru pro typy hodnot zabalení a rozbalení typy odkazů. Typ hodnoty je zabalená, když je přiřazen k proměnné typu `Object`. `Object` Proměnná je instance nezabalená, když je přiřazen do proměnné typu hodnoty a nezabalený typ. je uveden v závorkách, což znamená, když je objektová proměnná přetypována na typ hodnoty.
 
 ```cpp
   Platform::Object^
@@ -72,7 +72,7 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 }
 ```
 
-Další informace najdete v tématu [zabalení (C + +/ CX)](https://msdn.microsoft.com/library/windows/apps/hh969554.aspx).
+Další informace najdete v tématu [zabalení (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh969554.aspx).
 
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)
 
@@ -82,11 +82,11 @@ Zabalení a rozbalení povolit typy hodnot jsou považovány za objekty. Typy ho
 
 Další informace naleznete v tématu:
 
-- [Postupy: Explicitní žádost o zabalení](../dotnet/how-to-explicitly-request-boxing.md)
+- [Postupy: Explicitní žádost o zabalení](../dotnet/how-to-explicitly-request-boxing.md)
 
-- [Postupy: Pomocí výrazu gcnew vytváření typů hodnot s použitím implicitního zabalení](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)
+- [Postupy: Vytváření typů hodnot pomocí výrazu gcnew s použitím implicitního zabalení](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)
 
-- [Postupy: rozbalení](../dotnet/how-to-unbox.md)
+- [Postupy: Rozbalení](../dotnet/how-to-unbox.md)
 
 - [Standardní převody a implicitní zabalení](../dotnet/standard-conversions-and-implicit-boxing.md)
 

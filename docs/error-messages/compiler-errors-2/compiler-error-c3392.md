@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3392
 ms.assetid: e4757596-e2aa-4314-b01e-5c4bfd2110e9
 ms.openlocfilehash: 72bdef1b3344b3d69ba0d014f92a85e9381de4b3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58779531"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776714"
 ---
 # <a name="compiler-error-c3392"></a>Chyba kompilátoru C3392
 
@@ -21,7 +21,7 @@ Byla nesprávně vytvořena instance obecného typu. Zkontrolujte definici typu.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad používá C# k vytvoření komponenty, která obsahuje obecný typ, který má určitá omezení, které nejsou podporovány při vytváření obecné typy v jazyce C + +/ CLI. Další informace najdete v tématu [omezení parametrů typů](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
+Následující ukázkový používá C# vytvořit komponentu, která obsahuje obecný typ, který má určitá omezení, které nejsou podporovány při vytváření obecné typy v C++vyhodnocovací. Další informace najdete v tématu [omezení parametrů typů](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
 
 ```cs
 // C3392.cs

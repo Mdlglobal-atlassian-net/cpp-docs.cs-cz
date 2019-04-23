@@ -1,5 +1,5 @@
 ---
-title: max_is – (atribut C++ COM)
+title: max_is – (C++ atributů COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.max_is
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
 ms.openlocfilehash: dca2a3dc18aa3c3e75bbb682ed0b1b90adcd9236
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041306"
 ---
 # <a name="maxis"></a>max_is
@@ -25,7 +25,7 @@ Určuje maximální hodnotu pro pole platný index.
 
 ### <a name="parameters"></a>Parametry
 
-*výraz*<br/>
+*Výraz*<br/>
 Jeden nebo více výrazů jazyka C. Prázdný argument sloty jsou povoleny.
 
 ## <a name="remarks"></a>Poznámky
@@ -40,7 +40,7 @@ Jeden nebo více výrazů jazyka C. Prázdný argument sloty jsou povoleny.
 |-|-|
 |**Platí pro**|Pole v **struktura** nebo **sjednocení**, rozhraní parametr, rozhraní – metoda|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**Vyžadované atributy**|Žádný|
 |**Neplatné atributy**|**size_is**|
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).

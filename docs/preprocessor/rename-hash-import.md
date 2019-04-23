@@ -7,10 +7,10 @@ helpviewer_keywords:
 - rename attribute
 ms.assetid: 5c5c6153-1087-4b7b-87fb-fc59b90b9975
 ms.openlocfilehash: 0fbed04f040a47b5b389f40eeb15254da4a7940b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037051"
 ---
 # <a name="rename-import"></a>Přejmenovat (\#import)
@@ -60,5 +60,5 @@ Důvodem je, že název `GetMyParent` dochází pouze v výsledný hlavičkový 
 
 ## <a name="see-also"></a>Viz také:
 
-[#import – atributy](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - include directive (#include)
 ms.assetid: 17067dc0-8db1-4f2d-b43e-ec12ecf83238
 ms.openlocfilehash: 7ffccb34d52f8ffa1e6b9cc64a58d3471d02ac92
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038978"
 ---
 # <a name="include-directive-cc"></a>#include – direktiva (C++)
@@ -69,7 +69,7 @@ V tomto příkladu přidá obsah souboru určeného DEFS. H do zdrojového progr
 
 Vnoření vložených souborů může pokračovat až do 10 úrovně. Když ve vnořeném **#include** je zpracována, bude preprocesor nadále vkládat vnořené soubory do původního zdrojového souboru.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Pro nalezení zahrnutelných zdrojových souborů, že preprocesor nejprve prohledá adresáře, které jsou určeny **/I** – možnost kompilátoru. Pokud **/I** možnost není k dispozici nebo se nezdaří, preprocesor použije proměnnou prostředí INCLUDE k nalezení všech souborů include v lomených závorkách. Proměnná prostředí INCLUDE a **/I** – možnost kompilátoru může obsahovat několik cest oddělených středníky (**;**). Pokud více než jeden adresář zobrazí jako součást **/I** možnost nebo v rámci proměnná prostředí INCLUDE, preprocesor je hledá v pořadí, v jakém jsou uvedeny.
 
@@ -92,7 +92,7 @@ Pokud název souboru je plně zadaný pro soubor include, který má cestu, kter
 
 Při zahrnutí souborů, které jsou určeny jako `#include "path-spec"`, hledání začne adresářem nadřazeného souboru a pak pokračuje přes adresáře všech souborů výše nadřazených. Hledání tedy začíná relativně vzhledem k adresáři obsahujícímu zdroj souboru, který obsahuje **#include** směrnice, které jsou zpracovávány. Pokud není žádný nadřazený soubor a soubor nebyl nalezen, vyhledávání pokračuje, jako by název souboru byl uzavřen do lomených závorek.
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,5 +1,5 @@
 ---
-title: REF new, gcnew (C + +/ CLI a C + +/ CX)
+title: REF new, gcnew (C++vyhodnocovací a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - gcnew keyword [C++]
 ms.assetid: 388a62da-c2df-4a94-a9a2-205b53e577da
 ms.openlocfilehash: f3dd0b73e300b44cb4f35e42683725813453d7de
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039431"
 ---
-# <a name="ref-new-gcnew--ccli-and-ccx"></a>REF new, gcnew (C + +/ CLI a C + +/ CX)
+# <a name="ref-new-gcnew--ccli-and-ccx"></a>REF new, gcnew (C++vyhodnocovací a C++/CX)
 
 **Ref nové** agregační – klíčové slovo přiděluje instance typu, který je uvolněna při objekt přestane být přístupný a, která vrací popisovač ([^](handle-to-object-operator-hat-cpp-component-extensions.md)) na přiřazený objekt.
 

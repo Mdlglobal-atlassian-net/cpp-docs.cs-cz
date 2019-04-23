@@ -10,10 +10,10 @@ helpviewer_keywords:
 - generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
 ms.openlocfilehash: a4a1702c8b9902f5265a8a5f92316d7c82751609
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038700"
 ---
 # <a name="generic-functions-ccli"></a>Obecné funkce (C++/CLI)
@@ -53,16 +53,16 @@ return-type identifier<type-parameter identifier(s)>
 
 ### <a name="parameters"></a>Parametry
 
-*atributy*<br/>
+*Atributy*<br/>
 (Volitelné) Další informace o deklarativní. Další informace o atributu třídy a atributy naleznete v tématu atributy.
 
-*modifikátory*<br/>
+*Modifikátory*<br/>
 (Volitelné) Modifikátor pro funkce, jako je statická.  **virtuální** není povolená, protože virtuální metody nemusí být obecný.
 
 *Návratový typ*<br/>
 Typ vrácený metodou Pokud je návratový typ void, vyžádáním žádnou návratovou hodnotu.
 
-*identifikátor*<br/>
+*identifier*<br/>
 Název funkce.
 
 *parametr typu identifikátory*<br/>
@@ -72,7 +72,7 @@ Seznam identifikátorů oddělených čárkou.
 (Volitelné) Seznam parametrů.
 
 *type-parameter-constraints-clauses*<br/>
-Toto určuje omezení na typy, které mohou používat jako argumenty typu a má podobu podle [omezení parametrů obecných typů (C + +/ CLI)](constraints-on-generic-type-parameters-cpp-cli.md).
+Toto určuje omezení na typy, které mohou používat jako argumenty typu a má podobu podle [omezení parametrů obecných typů (C++vyhodnocovací)](constraints-on-generic-type-parameters-cpp-cli.md).
 
 *tělo funkce*<br/>
 Tělo metody, která mohou odkazovat na identifikátory parametr typu.

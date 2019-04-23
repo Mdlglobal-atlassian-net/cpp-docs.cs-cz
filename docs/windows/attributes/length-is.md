@@ -1,5 +1,5 @@
 ---
-title: length_is – (atribut C++ COM)
+title: length_is – (C++ atributů COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.length_is
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
 ms.openlocfilehash: 1de168606b57c801bc3dc1fb9aee76eb6f3d54c8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039907"
 ---
 # <a name="lengthis"></a>length_is
@@ -25,7 +25,7 @@ Určuje počet elementů pole předávají.
 
 ### <a name="parameters"></a>Parametry
 
-*výraz*<br/>
+*Výraz*<br/>
 Jeden nebo více výrazů jazyka C. Prázdný argument sloty jsou povoleny.
 
 ## <a name="remarks"></a>Poznámky
@@ -45,7 +45,7 @@ Zobrazit [first_is –](first-is.md) příklad toho, jak zadat část pole.
 |**Platí pro**|Pole v **struktura** nebo **sjednocení**, rozhraní parametr, rozhraní – metoda|
 |**Opakovatelné**|Ne|
 |**Vyžadované atributy**|Žádný|
-|**Neplatné atributy**|Žádné|
+|**Neplatné atributy**|Žádný|
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 

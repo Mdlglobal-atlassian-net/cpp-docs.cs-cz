@@ -1,5 +1,5 @@
 ---
-title: idl_quote – (atribut C++ COM)
+title: idl_quote – (C++ atributů COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_quote
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
 ms.openlocfilehash: fd7455298c9a1b69926d85766b6cd7f96bd374cc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037114"
 ---
 # <a name="idlquote"></a>idl_quote
@@ -25,7 +25,7 @@ Umožňuje použít IDL konstrukce, které nejsou podporovány v aktuální verz
 
 ### <a name="parameters"></a>Parametry
 
-*text*<br/>
+*Text*<br/>
 Název atributu, který máte v úmyslu kompilátor Visual C++ pro převedení na generovaného souboru bez vrácení chybu kompilátoru.
 
 ## <a name="remarks"></a>Poznámky
@@ -79,8 +79,8 @@ Tento kód způsobí, že `MYFLOT` a `MYDUB` a *text* položky budou umístěny 
 |-|-|
 |**Platí pro**|Kdekoli|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
-|**Neplatné atributy**|Žádný|
+|**Vyžadované atributy**|Žádné|
+|**Neplatné atributy**|Žádné|
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 

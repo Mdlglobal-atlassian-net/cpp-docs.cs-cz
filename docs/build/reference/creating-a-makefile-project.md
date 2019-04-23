@@ -8,10 +8,10 @@ helpviewer_keywords:
 - project files [C++], Makefile projects
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
 ms.openlocfilehash: 9c2edfe35233672e8117d336ba40cfea497b1a22
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035595"
 ---
 # <a name="create-a-c-makefile-project"></a>Vytvoření projektu souboru pravidel C++
@@ -87,7 +87,7 @@ Při příštím otevření projektu makefile ve vývojovém prostředí sady Vi
 ## <a name="see-also"></a>Viz také:
 
 [Používání atributu IntelliSense](/visualstudio/ide/using-intellisense)<br>
-[NMAKE – odkaz](nmake-reference.md)<br>
+[NMAKE – referenční zdroje](nmake-reference.md)<br>
 [Postupy: Vytvoření projektu jazyka C++ z existujícího kódu](../how-to-create-a-cpp-project-from-existing-code.md)
 [speciální znaky v souboru pravidel](special-characters-in-a-makefile.md)<br/>
 [Obsah souboru pravidel](contents-of-a-makefile.md)<br/>

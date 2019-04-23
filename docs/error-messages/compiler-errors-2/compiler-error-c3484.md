@@ -7,10 +7,10 @@ helpviewer_keywords:
 - C3484
 ms.assetid: 2fe847fa-f6ee-4978-bc1d-b6dc6ae906ac
 ms.openlocfilehash: c4405eb81911b1081d19d25ba779d24bee8f6d37
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039975"
 ---
 # <a name="compiler-error-c3484"></a>Chyba kompilátoru C3484
@@ -51,4 +51,4 @@ int main()
 
 ## <a name="see-also"></a>Viz také:
 
-[Lambda – výrazy](../../cpp/lambda-expressions-in-cpp.md)
+[Výrazy lambda](../../cpp/lambda-expressions-in-cpp.md)

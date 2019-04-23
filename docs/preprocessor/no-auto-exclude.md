@@ -7,10 +7,10 @@ helpviewer_keywords:
 - no_auto_exclude attribute
 ms.assetid: 3241ef9c-758a-4e86-bdc5-37da6072430f
 ms.openlocfilehash: 06bde7535bd181057750ab9dd4c3999321b4990c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038939"
 ---
 # <a name="noautoexclude"></a>no_auto_exclude
@@ -32,5 +32,5 @@ Knihovny typů mohou obsahovat definice položek definovaných v systémových h
 
 ## <a name="see-also"></a>Viz také:
 
-[#import – atributy](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

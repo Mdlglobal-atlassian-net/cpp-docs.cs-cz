@@ -57,15 +57,15 @@ helpviewer_keywords:
 - _InterlockedOr_HLEAcquire intrinsic
 ms.assetid: 5f265240-7af8-44b7-b952-19f3a9c56186
 ms.openlocfilehash: 9748099e4224a8c55cd4455a57c8e849531f1c9a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040472"
 ---
 # <a name="interlockedor-intrinsic-functions"></a>Vnitřní funkce _InterlockedOr
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Provádějí operace bitový atomic nebo operace u proměnné, které jsou sdíleny více vlákny.
 
@@ -172,7 +172,7 @@ __int64 _InterlockedOr64_rel(
 
 #### <a name="parameters"></a>Parametry
 
-*Value*<br/>
+*Hodnota*<br/>
 [out v] Ukazatel na první operand, bude nahrazen výsledek.
 
 *Maska*<br/>
@@ -224,7 +224,7 @@ int main()
 0xffffff00 0xffff00 0xff00ff00
 ```
 
-**END Specifické pro Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

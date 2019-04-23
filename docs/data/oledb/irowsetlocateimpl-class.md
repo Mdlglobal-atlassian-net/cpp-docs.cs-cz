@@ -33,10 +33,10 @@ helpviewer_keywords:
 - m_rgbookmarks
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
 ms.openlocfilehash: e3513084697a60a33b9fa2ab02222a9b332cce79
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039816"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl – třída
@@ -94,10 +94,10 @@ Jednotky úložiště pro všechny popisovačů řádků uchovávat záložkou.
 
 |||
 |-|-|
-|[Porovnat](#compare)|Porovná dva záložky.|
+|[Compare](#compare)|Porovná dva záložky.|
 |[GetRowsAt](#getrowsat)|Načte řádky od řádku určený posun od záložku.|
 |[GetRowsByBookmark](#getrowsbybookmark)|Načte řádky, které odpovídají zadaným záložky.|
-|[Hodnota hash](#hash)|Vrátí hodnotu hash hodnoty pro zadaný záložky.|
+|[Hash](#hash)|Vrátí hodnotu hash hodnoty pro zadaný záložky.|
 
 ### <a name="data-members"></a>Datové členy
 
