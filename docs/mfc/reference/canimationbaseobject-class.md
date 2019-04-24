@@ -51,11 +51,11 @@ helpviewer_keywords:
 - CAnimationBaseObject [MFC], m_pParentController
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
 ms.openlocfilehash: e9c5ed98d654eb37be7ab8523d44c9da6eecd9c7
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152628"
 ---
 # <a name="canimationbaseobject-class"></a>Canimationbaseobject – třída
 
@@ -71,14 +71,14 @@ class CAnimationBaseObject : public CObject;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationBaseObject::CAnimationBaseObject](#canimationbaseobject)|Přetíženo. Vytvoří objekt animace.|
 |[CAnimationBaseObject::~CAnimationBaseObject](#_dtorcanimationbaseobject)|Destruktor. Volá se, když se likviduje objekt animace.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationBaseObject::ApplyTransitions](#applytransitions)|Přidá přechody do scénáře s proměnnou zapouzdřený animace.|
 |[CAnimationBaseObject::ClearTransitions](#cleartransitions)|Odebere všechny související přechody.|
@@ -97,14 +97,14 @@ class CAnimationBaseObject : public CObject;
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationBaseObject::GetAnimationVariableList](#getanimationvariablelist)|Shromažďuje ukazatelů na proměnné omezením animace.|
 |[CAnimationBaseObject::SetParentAnimationObjects](#setparentanimationobjects)|Vytvoří vztah mezi proměnné animace, obsažené v objektu animace a jejich kontejneru.|
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationBaseObject::m_bAutodestroyTransitions](#m_bautodestroytransitions)|Určuje, zda související přechody by měl automaticky odstraní.|
 |[CAnimationBaseObject::m_dwUserData](#m_dwuserdata)|Uživatelem definované datové úložiště.|

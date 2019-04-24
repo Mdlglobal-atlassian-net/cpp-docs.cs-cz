@@ -7,11 +7,11 @@ helpviewer_keywords:
 - PROTO directive
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
 ms.openlocfilehash: 616b6be2a5c191ebc67d61288cb5fa6c183091fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210518"
 ---
 # <a name="proto"></a>PROTO
 
@@ -23,10 +23,10 @@ Prototypy funkce nebo procedury. Můžete volat funkce prototypem pomocí PROTO 
 
 ### <a name="parameters"></a>Parametry
 
-*Popisek*<br/>
+*label*<br/>
 Název nevolá se prototypovaná funkce.
 
-*vzdálenost*<br/>
+*distance*<br/>
 (Volitelné) Použít v modelech paměti 16 bitů výchozí hodnotu přepsat a uvede **NEAR** nebo **FAR** volání.
 
 *langtype*<br/>
@@ -34,7 +34,7 @@ Název nevolá se prototypovaná funkce.
 
 - 32-bit **PLOCHÝ** modelu: **C**, **STDCALL**
 
-- modely 16 bitů: **C**, **BASIC**, **až po FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**
+- 16bitové modely: **C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**
 
 *Parametr*<br/>
 Volitelný název parametru funkce.

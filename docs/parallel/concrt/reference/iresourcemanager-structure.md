@@ -15,11 +15,11 @@ helpviewer_keywords:
 - IResourceManager structure
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
 ms.openlocfilehash: 7afb37fb35040975d6e9471a1d12465e5163fafc
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301926"
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager – struktura
 
@@ -35,13 +35,13 @@ struct IResourceManager;
 
 ### <a name="public-enumerations"></a>Veřejné výčty
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[IResourceManager::OSVersion](#osversion)|Výčtový typ, který představuje verzi operačního systému.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[IResourceManager::CreateNodeTopology](#createnodetopology)|K dispozici jenom v ladění sestavení modulu runtime, tato metoda je zkušebnímu zavěšení navrženým k usnadnění testování výhod Resource Manageru na různé topologie hardwaru, bez nutnosti skutečné hardwarové odpovídající konfiguraci. Prodejní buildy modulu runtime tato metoda vrátí bez provedení jakékoli akce.|
 |[IResourceManager::GetAvailableNodeCount](#getavailablenodecount)|Vrátí počet uzlů, které jsou k dispozici na Resource Manager.|

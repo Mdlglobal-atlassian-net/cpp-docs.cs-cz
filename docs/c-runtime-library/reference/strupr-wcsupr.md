@@ -24,12 +24,12 @@ helpviewer_keywords:
 - wcsupr function
 ms.assetid: 17dfe1cd-3b09-4702-9f89-2207f44953e6
 ms.openlocfilehash: 8f263ed98dbbc56065f2ca4d1b8b5f234132b7e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258660"
 ---
 # <a name="strupr-wcsupr"></a>strupr, wcsupr
 
-Tyto funkce POSIX je zastaralá. Použít splňující podmínky ISO C++ [_strupr – _strupr_l –, _mbsupr –, _mbsupr_l –, _wcsupr_l –, _wcsupr –](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md) nebo s rozšířeným zabezpečením [_strupr_s – _strupr_s_l –, _mbsupr_s –, _mbsupr_s_l –, _wcsupr_s –, _wcsupr_s_l –](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md) místo.
+Tyto funkce POSIX je zastaralá. Použít bitovou kopii ISO C++ splňující podmínky [_strupr – _strupr_l –, _mbsupr –, _mbsupr_l –, _wcsupr_l –, _wcsupr –](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md) nebo s rozšířeným zabezpečením [_strupr_s – _strupr_s_l –, _mbsupr_s –, _mbsupr_s_l –, _wcsupr_s –, _wcsupr_s_l –](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md) Místo toho.

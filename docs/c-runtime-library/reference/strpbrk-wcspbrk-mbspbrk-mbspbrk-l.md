@@ -45,11 +45,11 @@ helpviewer_keywords:
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
 ms.openlocfilehash: 059b0659a8088783c6d169288de486b41a6e8d82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209564"
 ---
 # <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 
@@ -139,7 +139,7 @@ Vrací ukazatel na první výskyt libovolného znaku od *strCharSet* v *str*, ne
 
 `_mbspbrk` je podobný `_mbscspn` s tím rozdílem, že `_mbspbrk` vrátí ukazatel, nikoli hodnotu typu [size_t](../../c-runtime-library/standard-types.md).
 
-V jazyce C, tyto funkce přijímají **const** ukazatele pro první argument. V jazyce C++ jsou k dispozici dvě přetížení. Přetížení přijímající ukazatel na **const** vrací ukazatel na **const**; verze, která přijímá ukazatel na jinou hodnotu než**const** vrací ukazatel na jinou hodnotu než**const** . _CRT_CONST_CORRECT_OVERLOADS – makro je definováno, pokud **const** a jiných-**const** verze těchto funkcí jsou k dispozici. Pokud budete potřebovat non -**const** chování pro obě přetížení C++, definujte symbol _CONST_RETURN.
+V jazyce C, tyto funkce přijímají **const** ukazatele pro první argument. V jazyce C++ jsou k dispozici dvě přetížení. Přetížení přijímající ukazatel na **const** vrací ukazatel na **const**; verze, která přijímá ukazatel na jinou hodnotu než**const** vrací ukazatel na jinou hodnotu než**const** . _CRT_CONST_CORRECT_OVERLOADS – makro je definováno, pokud **const** a jiných-**const** verze těchto funkcí jsou k dispozici. Pokud budete potřebovat non -**const** chování pro obě C++ přetížení, definujte symbol _CONST_RETURN.
 
 Výstupní hodnota je ovlivněna nastavením kategorie nastavení LC_CTYPE národního prostředí; Další informace najdete v tématu [setlocale](setlocale-wsetlocale.md). Verze těchto funkcí bez **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze se **_l** přípona je identická s tím rozdílem, že používá parametr národního prostředí místo něho předán v. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
@@ -154,7 +154,7 @@ Výstupní hodnota je ovlivněna nastavením kategorie nastavení LC_CTYPE náro
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|`strpbrk`|\<String.h >|
+|`strpbrk`|\<string.h>|
 |`wcspbrk`|\<String.h > nebo \<wchar.h >|
 |`_mbspbrk`, `_mbspbrk_l`|\<Mbstring.h >|
 

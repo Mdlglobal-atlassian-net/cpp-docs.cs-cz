@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
 ms.openlocfilehash: 87e526a10c9bcd6a52f4544c50344c5145cfa732
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62247054"
 ---
 # <a name="catlexemodulet-class"></a>Catlexemodulet – třída
 
@@ -49,14 +49,14 @@ Vaše třída odvozena od `CAtlExeModuleT`.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlExeModuleT::CAtlExeModuleT](#catlexemodulet)|Konstruktor|
 |[CAtlExeModuleT::~CAtlExeModuleT](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlExeModuleT::InitializeCom](#initializecom)|Inicializuje model COM.|
 |[CAtlExeModuleT::ParseCommandLine](#parsecommandline)|Analyzuje příkazového řádku a provádí registraci v případě potřeby.|
@@ -72,7 +72,7 @@ Vaše třída odvozena od `CAtlExeModuleT`.
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlExeModuleT::m_bDelayShutdown](#m_bdelayshutdown)|Příznak označující, že by měl být zpoždění vypnutí modulu.|
 |[CAtlExeModuleT::m_dwPause](#m_dwpause)|Pozastavit hodnota používá k zajištění, že všechny objekty jsou vydané před vypnutím.|
