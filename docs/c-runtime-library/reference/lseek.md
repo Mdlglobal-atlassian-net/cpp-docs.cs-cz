@@ -21,12 +21,12 @@ helpviewer_keywords:
 - lseek function
 ms.assetid: 137d7741-5c2e-443e-811a-6a01417fcae7
 ms.openlocfilehash: 8559b7bfaf07302aa76b86dda0a126ebbee8a700
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285640"
 ---
 # <a name="lseek"></a>lseek
 
-Tato funkce POSIX je zastaralá. Použít splňující podmínky ISO C++ [_lseek –](lseek-lseeki64.md) místo.
+Tato funkce POSIX je zastaralá. Použít bitovou kopii ISO C++ splňující podmínky [_lseek –](lseek-lseeki64.md) místo.

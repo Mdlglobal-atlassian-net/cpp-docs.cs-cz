@@ -33,11 +33,11 @@ helpviewer_keywords:
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
 ms.openlocfilehash: 7bf8e8c88153e2f22cfa08bb35ff8d4ba01a8804
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157208"
 ---
 # <a name="ismbblead-ismbbleadl"></a>_ismbblead, _ismbblead_l
 
@@ -77,14 +77,14 @@ Vícebajtové znaky jsou tvořeny vedoucím bajtem následovaným koncovým bajt
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_istlead –**|Vždy vrátí hodnotu false|**_ismbblead**|Vždy vrátí hodnotu false|
+|**_istlead**|Vždy vrátí hodnotu false|**_ismbblead**|Vždy vrátí hodnotu false|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_ismbblead**|\<Mbctype.h > nebo \<mbstring.h >|\<ctype.h >, * \<limits.h >, \<stdlib.h >|
-|**_ismbblead_l**|\<Mbctype.h > nebo \<mbstring.h >|\<ctype.h >, * \<limits.h >, \<stdlib.h >|
+|**_ismbblead**|\<Mbctype.h > nebo \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbblead_l**|\<Mbctype.h > nebo \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
 
 \* Pro konstanty manifestu pro zkušební podmínky.
 

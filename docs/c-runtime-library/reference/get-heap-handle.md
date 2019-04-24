@@ -26,11 +26,11 @@ helpviewer_keywords:
 - get_heap_handle function
 ms.assetid: a4d05049-8528-494a-8281-a470d1e1115c
 ms.openlocfilehash: 82ea108a41bec1d0276e2c952b3f509f36bab8ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332114"
 ---
 # <a name="getheaphandle"></a>_get_heap_handle
 
@@ -54,7 +54,7 @@ Tuto funkci použít, pokud chcete volat [HeapSetInformation](/windows/desktop/a
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_get_heap_handle**|\<malloc.h >|
+|**_get_heap_handle**|\<malloc.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

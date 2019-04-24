@@ -9,11 +9,11 @@ helpviewer_keywords:
 - builds [C++], additional information
 ms.assetid: 100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d
 ms.openlocfilehash: 4c3f7aa598a9c43af04c148ed0d4b3f555566ec7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294756"
 ---
 # <a name="cc-building-reference"></a>Odkaz sestavení C/C++
 
@@ -21,12 +21,12 @@ Visual C++ nabízí dva způsoby vytvoření programu v jazyce C/C++. Je nejjedn
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Referenční dokumentace nástroje MSBuild pro projekty v jazyce C++](msbuild-visual-cpp-overview.md)
+[Referenční zdroje k nástroji MSBuild pro projekty C++](msbuild-visual-cpp-overview.md)
 
-[Referenční dokumentace kompilátoru MSVC](compiling-a-c-cpp-program.md)<br/>
+[Referenční zdroje ke kompilátorům MSVC](compiling-a-c-cpp-program.md)<br/>
 Popisuje kompilátor MSVC, která vytvoří objektový soubor obsahující strojového kódu, direktivy linkeru, oddíly, externí odkazy a funkce/dat názvy.
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
 Popisuje linkeru, která kombinuje kódu ze souborů objekt vytvořený kompilátorem a ze staticky propojených knihoven, překládá název odkazy a vytvoří spustitelný soubor.
 
 [Podpora kódování Unicode v kompilátoru a linkeru](unicode-support-in-the-compiler-and-linker.md)
@@ -51,13 +51,13 @@ Obsahuje odkazy na témata popisující vytváření vaší aplikace z příkazo
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
 Popisuje nastavení možnosti kompilátoru ve vývojovém prostředí nebo na příkazovém řádku.
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 Obsahuje odkazy na témata popisující použití možnosti kompilátoru.
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
 Popisuje nastavení možností linkeru uvnitř nebo mimo integrované vývojové prostředí.
 
-[Možnosti Linkeru MSVC](linker-options.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)<br/>
 Obsahuje odkazy na témata popisující použití možností propojovacího programu.
 
 [BSCMAKE – referenční dokumentace](bscmake-reference.md)<br/>

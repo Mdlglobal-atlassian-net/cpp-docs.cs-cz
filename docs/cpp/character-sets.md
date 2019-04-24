@@ -8,11 +8,11 @@ helpviewer_keywords:
 - basic execution character set (C++)
 ms.assetid: 379a2af6-6422-425f-8352-ef0bca6c0d74
 ms.openlocfilehash: 5282d5b227e71c0ba6f822a9534a8a31cbd86db9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331230"
 ---
 # <a name="character-sets"></a>Znakové sady
 
@@ -34,7 +34,7 @@ Určuje standard jazyka C++ *základní sada zdrojových znaků* , která může
 
 `_ { } [ ] # ( ) < > % : ; . ? * + - / ^ & | ~ ! = , \ " '`
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Visual C++ obsahuje `$` znak jako člen základní zdrojové znakové sady. Visual C++ umožňuje také další sadu znaků, které mají použít ve zdrojových souborech založené na kódování souboru. Ve výchozím nastavení Visual Studio ukládá zdrojové soubory s použitím výchozí znakovou stránku. Pokud zdrojové soubory jsou uloženy ve znakové stránce specifických pro národní prostředí nebo znaková stránka Unicode, Visual C++ umožňuje používat znaky tuto znakovou stránku ve zdrojovém kódu, s výjimkou řídicích kódů nejsou explicitně povolená v základní zdrojové znakové nastavit. Například můžete vložit japonské znaky komentáře, identifikátory nebo řetězcové literály, při uložení souboru pomocí japonské znakovou stránku. Visual C++ nepovoluje sekvence znaků, které nelze převést na platné vícebajtové znaky nebo kódové body sady Unicode. V závislosti na možnostech kompilátoru můžou objevit všechny povolené znaky v identifikátory. Další informace najdete v tématu [identifikátory](../cpp/identifiers-cpp.md).
 
@@ -46,7 +46,7 @@ Protože programy v jazyce C++ můžete použít mnoho více znaků, než úlohy
 
 V identifikátory a v literálech řetězců a znaků může používat univerzální názvy znaků. Univerzální název znaku nemůže používá k reprezentování náhradní bod kódu v rozsahu 0xD800-0xDFFF. Místo toho použít bod požadovaného kódu; kompilátor automaticky generuje všechny požadované zástupnými typy. Další omezení platí pro názvy univerzálních znaků, které lze použít v identifikátory. Další informace najdete v tématu [identifikátory](../cpp/identifiers-cpp.md) a [řetězcové a znakové literály](../cpp/string-and-character-literals-cpp.md).
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Kompilátor Visual C++ zpracovává znak v univerzálních znaků název literálu formuláři a Zaměnitelně. Můžete třeba deklarovat pomocí formuláře univerzálních znaků názvu identifikátor a použít v podobě literálu:
 

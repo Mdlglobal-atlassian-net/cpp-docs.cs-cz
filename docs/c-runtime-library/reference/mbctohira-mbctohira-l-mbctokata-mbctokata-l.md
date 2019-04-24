@@ -39,11 +39,11 @@ helpviewer_keywords:
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
 ms.openlocfilehash: 11b08449a7d27015c4ffe0ce398c471bbd6069f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285610"
 ---
 # <a name="mbctohira-mbctohiral-mbctokata-mbctokatal"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 
@@ -89,8 +89,8 @@ Každá z těchto funkcí vrací převedený znak *c*, pokud je to možné. V op
 
 |Rutiny|Převede|
 |--------------|--------------|
-|**_mbctohira –**, **_mbctohira_l –**|Vícebajtové znaky katakana pro vícebajtové znaky hiragana.|
-|**_mbctokata –**, **_mbctokata_l –**|Vícebajtové znaky hiragana na vícebajtové znaky katakana.|
+|**_mbctohira**, **_mbctohira_l**|Vícebajtové znaky katakana pro vícebajtové znaky hiragana.|
+|**_mbctokata**, **_mbctokata_l**|Vícebajtové znaky hiragana na vícebajtové znaky katakana.|
 
 Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze těchto funkcí jsou identické, s tím rozdílem, ty, které nemají mít **_l** přípona používají aktuální národní prostředí pro toto chování závislé na národním prostředí a ty, které mají **_l** místo toho příponu použijte parametr národního prostředí, které je předáno. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 

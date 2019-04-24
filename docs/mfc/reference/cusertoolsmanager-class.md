@@ -45,11 +45,11 @@ helpviewer_keywords:
 - CUserToolsManager [MFC], SetFilter
 ms.assetid: bdfa37ae-efca-4616-abb5-9d0dcd2d335b
 ms.openlocfilehash: 857e86184e1b7ea399787520e9c4701547185133
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58777087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323369"
 ---
 # <a name="cusertoolsmanager-class"></a>CUserToolsManager Class
 
@@ -65,13 +65,13 @@ class CUserToolsManager : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CUserToolsManager::CUserToolsManager](#cusertoolsmanager)|Vytvoří `CUserToolsManager`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CUserToolsManager::CreateNewTool](#createnewtool)|Vytvoří nový uživatelský nástroj.|
 |[CUserToolsManager::FindTool](#findtool)|Vrací ukazatel `CMFCUserTool` objekt, který je přidružen ID zadaného příkazu.|

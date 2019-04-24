@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _expand_dbg function
 ms.assetid: dc58c91f-72a8-48c6-b643-fe130fb6c1fd
 ms.openlocfilehash: cc3aa2b7e39b52eb71ac10a9b5c4a221ba6fb70c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288042"
 ---
 # <a name="expanddbg"></a>_expand_dbg
 
@@ -60,7 +60,7 @@ Požadovaný typ změněnou velikostí bloku: **_CLIENT_BLOCK** nebo **_NORMAL_B
 *Název souboru*<br/>
 Ukazatel na název zdrojového souboru, který vyžadují rozbalte operace nebo **NULL**.
 
-*Číslo řádku*<br/>
+*linenumber*<br/>
 Číslo řádku ve zdrojovém souboru, kde byla požadovaná operace rozbalení nebo **NULL**.
 
 *Filename* a *linenumber* parametry jsou k dispozici pouze při **_expand_dbg –** explicitně volána nebo [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)byla definována konstanta preprocesoru.

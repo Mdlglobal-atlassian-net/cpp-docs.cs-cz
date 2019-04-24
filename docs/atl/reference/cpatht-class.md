@@ -50,11 +50,11 @@ helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
 ms.openlocfilehash: 109f9baefd0e6775db05eeba8cb78542bf60a9ac
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278173"
 ---
 # <a name="cpatht-class"></a>Cpatht – třída
 
@@ -79,7 +79,7 @@ Třídy ATL/MFC řetězec určený pro danou cestu (viz [CStringT](../../atl-mfc
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPathT::PCXSTR](#pcxstr)|Typ konstanty typu řetězec.|
 |[CPathT::PXSTR](#pxstr)|Typ řetězec.|
@@ -135,7 +135,7 @@ Třídy ATL/MFC řetězec určený pro danou cestu (viz [CStringT](../../atl-mfc
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPathT::operator const StringType &](#operator_const_stringtype_amp)|Tento operátor umožňuje objekt, který má zacházet jako řetězec.|
 |[CPathT::operator CPathT::PCXSTR](#operator_cpatht__pcxstr)|Tento operátor umožňuje objekt, který má zacházet jako řetězec.|

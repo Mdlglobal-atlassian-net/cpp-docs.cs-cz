@@ -31,11 +31,11 @@ helpviewer_keywords:
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
 ms.openlocfilehash: 263635a32b21b01faa84405ab97bd5518f054ba5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334785"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
 
@@ -85,7 +85,7 @@ Vrátí pozitivní rozdíl mezi *x* a *y*:
 |Návratová hodnota|Scénář|
 |------------------|--------------|
 |x-y|if x > y|
-|0|Pokud x < = y|
+|0|if x <= y|
 
 V opačném případě může vracet instanci jednoho z následujících chyb:
 
@@ -107,7 +107,7 @@ S výjimkou zpracování NaN, tato funkce je ekvivalentní `fmax(x - y, 0)`.
 
 |Funkce|Záhlaví C|Hlaviček jazyka C++|
 |--------------|--------------|------------------|
-|**fdim –**, **fdimf –**, **fdiml**|\<Math.h >|\<cmath >|
+|**fdim –**, **fdimf –**, **fdiml**|\<math.h>|\<cmath>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

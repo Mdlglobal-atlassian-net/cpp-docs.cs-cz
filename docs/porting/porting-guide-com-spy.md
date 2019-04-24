@@ -3,11 +3,11 @@ title: 'Průvodce přenosem: COM Spy'
 ms.date: 11/04/2016
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
 ms.openlocfilehash: ca81b240a102195109c0ad6ef05bfaed10306704
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337216"
 ---
 # <a name="porting-guide-com-spy"></a>Průvodce přenosem: COM Spy
 
@@ -166,6 +166,6 @@ To běžel bez problémů a s COM Spy zprovozněný a konfiguruje pro monitorov�
 
 ## <a name="see-also"></a>Viz také:
 
-[Portování a upgradování: Příklady a případové studie](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
-[Následující příklad: Spy ++](../porting/porting-guide-spy-increment.md)<br/>
+[Přenos a upgrade: Příklady a případové studie](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[Následující příklad: Spy++](../porting/porting-guide-spy-increment.md)<br/>
 [Předchozí příklad: MFC Scribble](../porting/porting-guide-mfc-scribble.md)

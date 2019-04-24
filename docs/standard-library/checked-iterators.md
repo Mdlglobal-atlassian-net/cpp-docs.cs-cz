@@ -11,11 +11,11 @@ helpviewer_keywords:
 - checked iterators
 ms.assetid: cfc87df8-e3d9-403b-ab78-e9483247d940
 ms.openlocfilehash: 163729b401fa917d7df0002c621998f5021757f6
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62279161"
 ---
 # <a name="checked-iterators"></a>Checked – iterátory
 
@@ -42,8 +42,8 @@ Když _ITERATOR_DEBUG_LEVEL je definováno jako 1 nebo 2, se provádí tyto kont
 
 |||||
 |-|-|-|-|
-|[basic_string::Operator\[\]](../standard-library/basic-string-class.md#op_at)|[bitset::Operator\[\]](../standard-library/bitset-class.md#op_at)|[Zpět](../standard-library/deque-class.md#back)|[Přední](../standard-library/deque-class.md#front)|
-|[deque::Operator\[\]](../standard-library/deque-class.md#op_at)|[Zpět](../standard-library/list-class.md#back)|[Přední](../standard-library/list-class.md#front)|[Zpět](../standard-library/queue-class.md#back)|
+|[basic_string::operator\[\]](../standard-library/basic-string-class.md#op_at)|[bitset::operator\[\]](../standard-library/bitset-class.md#op_at)|[Zpět](../standard-library/deque-class.md#back)|[Přední](../standard-library/deque-class.md#front)|
+|[deque::operator\[\]](../standard-library/deque-class.md#op_at)|[Zpět](../standard-library/list-class.md#back)|[Přední](../standard-library/list-class.md#front)|[Zpět](../standard-library/queue-class.md#back)|
 |[Přední](../standard-library/queue-class.md#front)|[Vector::Operator\[\]](../standard-library/vector-class.md#op_at)|[Zpět](../standard-library/vector-class.md#back)|[Přední](../standard-library/vector-class.md#front)|
 
 Pokud _ITERATOR_DEBUG_LEVEL je definován jako 0:

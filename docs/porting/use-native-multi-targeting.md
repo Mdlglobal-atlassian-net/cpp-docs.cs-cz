@@ -6,11 +6,11 @@ helpviewer_keywords:
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
 ms.openlocfilehash: 57e9556ccb7313c137c173e0f2143dc6e563d4c3
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337151"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Pomocí nativního cílení na více platforem v sadě Visual Studio sestavení starých projektů
 
@@ -67,4 +67,4 @@ Při instalaci těchto produktů **sada nástrojů platformy** vlastnost rozeví
 ## <a name="see-also"></a>Viz také:
 
 [Upgrade projektů z dřívějších verzí Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
-[Vylepšení shody C++ v sadě Visual Studio](../overview/cpp-conformance-improvements.md)
+[Vylepšení shody C++ se sadou Visual Studio](../overview/cpp-conformance-improvements.md)

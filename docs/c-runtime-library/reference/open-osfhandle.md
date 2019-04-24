@@ -25,11 +25,11 @@ helpviewer_keywords:
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
 ms.openlocfilehash: f45ca46cae459c8606f88a98d03b64c40e5d5f01
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156098"
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
 
@@ -75,7 +75,7 @@ Tyto konstanty manifestu jsou definovány v \<fcntl.h >:
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_open_osfhandle**|\<IO.h >|
+|**_open_osfhandle**|\<io.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - KEYFILE linker option
 ms.assetid: 9b71f8c0-541c-4fe5-a0c7-9364f42ecb06
 ms.openlocfilehash: d309390c1ac1a19d9d4a982908dbbbac0bd52714
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291558"
 ---
 # <a name="keyfile-specify-key-or-key-pair-to-sign-an-assembly"></a>/KEYFILE (Zadat klíč nebo pár klíčů pro podepsání sestavení)
 
@@ -33,7 +33,7 @@ Linker vloží veřejný klíč do manifestu sestavení a poté podepíše kone�
 
 Pokud kompilujete s [/LN](ln-create-msil-module.md), je název souboru klíče uložené v modulu a součástí sestavení, které se vytvoří, když kompilujete sestavení, které obsahuje explicitní odkaz na modul, prostřednictvím [#using](../../preprocessor/hash-using-directive-cpp.md), nebo při propojování s [/ASSEMBLYMODULE](assemblymodule-add-a-msil-module-to-the-assembly.md).
 
-Můžete také předat údaje o šifrování linkeru s [/keycontainer](keycontainer-specify-a-key-container-to-sign-an-assembly.md). Použití [/delaysign](delaysign-partially-sign-an-assembly.md) potřebujete částečně podepsaného sestavení. Zobrazit [sestavení se silným názvem (podepisování sestavení) (C + +/ CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) Další informace o podepisování sestavení.
+Můžete také předat údaje o šifrování linkeru s [/keycontainer](keycontainer-specify-a-key-container-to-sign-an-assembly.md). Použití [/delaysign](delaysign-partially-sign-an-assembly.md) potřebujete částečně podepsaného sestavení. Zobrazit [sestavení se silným názvem (podepisování sestavení) (C++vyhodnocovací)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) Další informace o podepisování sestavení.
 
 V případě obě **/keyfile** a **/keycontainer** zadávají (pomocí parametru příkazového řádku nebo pomocí vlastního atributu), linker se nejdřív pokusí použít kontejner klíčů. Pokud tato operace úspěšná, sestavení je podepsáno pomocí informací v kontejneru klíčů. Pokud linker kontejner klíčů nenajde, pokusí se soubor určený parametrem/keyfile. Pokud se tato operace úspěšná, sestavení je podepsáno informacemi ze souboru klíčů a informace o klíči budou nainstalovány do kontejneru klíčů (podobné sn -i) tak, aby při další kompilaci bude platný kontejner klíčů.
 
@@ -69,5 +69,5 @@ Další možnosti linkeru, které ovlivňují generování sestavení jsou:
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - floating-point conversion
 ms.assetid: 96804c8e-fa3b-4742-9006-0082ed9e57f2
 ms.openlocfilehash: 87e1554897326039649829539443795cbc0fabab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312521"
 ---
 # <a name="conversions-from-floating-point-types"></a>Převody z typů s plovoucí desetinnou čárkou
 
@@ -18,7 +18,7 @@ A **float** převedeny na hodnotu **double** nebo **long double**, nebo **double
 
 Hodnotu s plovoucí desetinnou čárkou je převeden na celočíselnou hodnotu prvního přejdete k **dlouhé**, pak z **dlouhé** hodnotu na konkrétní celočíselnou hodnotu. Desetinnou část hodnoty s plovoucí desetinnou čárkou je zahozena v převod na **dlouhé**. Pokud výsledek je stále se nevešla do **dlouhé**, výsledek převod není definován.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Při převodu **double** nebo **long double** číslo s plovoucí desetinnou čárkou na menší s plovoucí desetinnou čárkou číslo, hodnotu proměnné s plovoucí desetinnou čárkou je zkrácena směrem k nule, když dojde k podtečení. Přetečení způsobí chybu za běhu. Všimněte si, že kompilátor Microsoft C mapuje **long double** na typ **double**.
 

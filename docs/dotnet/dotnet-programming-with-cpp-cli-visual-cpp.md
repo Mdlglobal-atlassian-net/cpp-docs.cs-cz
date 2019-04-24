@@ -1,5 +1,5 @@
 ---
-title: .NET – programování s C + +/ CLI (Visual C++)
+title: Programování s .NET C++vyhodnocovací (Visual C++)
 ms.date: 09/18/2018
 helpviewer_keywords:
 - programming [C++], .NET programming
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Visual C++, .NET programming
 ms.assetid: 2c7f3b0f-a266-4f0e-b318-d6f1371e04a9
 ms.openlocfilehash: 21a45dbff2b02ccce5444706c158e5bdcc6e6cc2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62303793"
 ---
-# <a name="net-programming-with-ccli-visual-c"></a>.NET – programování s C + +/ CLI (Visual C++)
+# <a name="net-programming-with-ccli-visual-c"></a>Programování s .NET C++vyhodnocovací (Visual C++)
 
 **Visual Studio 2015**: Ve výchozím nastavení CLR projekty vytvořené pomocí sady Visual Studio 2015 cíleny na rozhraní .NET Framework 4.5.2. Pro cílové rozhraní .NET Framework 4.6 při vytváření nového projektu v **nový projekt** dialogu změnit cílovou architekturu v rozevírací nabídce nahoře uprostřed dialogového okna. Chcete-li změnit cílový rámec pro existující projekt, Zavřít projekt, upravte soubor projektu (.vcxproj) a změňte hodnotu cílovou architekturu na verzi 4.6. Při příštím otevření projektu, nastavení se projeví.
 
-**Visual Studio 2017**: V sadě Visual Studio 2017, je výchozí framework 4.6.1 a výběru verze rozhraní Framework je v dolní části **dialogové okno nového projektu**. C + +/ CLI není nainstalovaný ve výchozím nastavení. Pro instalaci součásti, spusťte instalační program sady Visual Studio a zvolte C + +/ CLI komponenty v jazyce Visual C++.
+**Visual Studio 2017**: V sadě Visual Studio 2017, je výchozí framework 4.6.1 a výběru verze rozhraní Framework je v dolní části **dialogové okno nového projektu**. C++Nebo ve výchozím nastavení není nainstalována rozhraní příkazového řádku samotný. Pro instalaci součásti, spusťte instalační program sady Visual Studio a zvolte C++vyhodnocovací komponenty v rámci Visual C++.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
@@ -32,7 +32,7 @@ ms.locfileid: "57749812"
 
 [Regulární výrazy (C++/CLI)](../dotnet/regular-expressions-cpp-cli.md)
 
-[Práce se soubory a vstupně-výstupní operace (C + +/ CLI)](../dotnet/file-handling-and-i-o-cpp-cli.md)
+[Práce se soubory a vstupně-výstupních operací (C++vyhodnocovací)](../dotnet/file-handling-and-i-o-cpp-cli.md)
 
 [Grafické operace (C++/CLI)](../dotnet/graphics-operations-cpp-cli.md)
 

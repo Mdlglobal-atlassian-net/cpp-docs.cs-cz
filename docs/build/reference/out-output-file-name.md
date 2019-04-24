@@ -12,11 +12,11 @@ helpviewer_keywords:
 - linker [C++], output files
 ms.assetid: 976210a4-e51f-4cfb-af5e-c16344455834
 ms.openlocfilehash: be5fe929bdcf52be19955a5bc2d7aa093e194f45
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320068"
 ---
 # <a name="out-output-file-name"></a>/OUT (Název výstupního souboru)
 
@@ -53,5 +53,5 @@ Tato možnost Základní název výchozí knihovny .mapfile nebo import. Podrobn
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)

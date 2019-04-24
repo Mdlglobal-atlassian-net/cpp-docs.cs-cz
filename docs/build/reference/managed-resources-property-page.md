@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Managed Resources property page
 ms.assetid: 80b80384-ee55-494d-9f0e-907bb98cfc19
 ms.openlocfilehash: 394aac779fceb4d9d5918e4a5ad36eee8be896ea
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321459"
 ---
 # <a name="managed-resources-property-page"></a>Stránka vlastností spravovaných zdrojů
 

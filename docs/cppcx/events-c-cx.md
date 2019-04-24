@@ -1,15 +1,15 @@
 ---
-title: Události (C + +/ CX)
+title: Události (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
 ms.openlocfilehash: 8e7e8616831e66a7f59ed849fc92ef2553aadb5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301536"
 ---
-# <a name="events-ccx"></a>Události (C + +/ CX)
+# <a name="events-ccx"></a>Události (C++/CX)
 
 Windows Runtime lze deklarovat typ (který je, publikování) události a kódem klientské pod stejnou komponentou nebo v jiných součástech mohou přihlásit k odběru těchto událostí tím, že přidružíte volání metody *obslužné rutiny událostí* s událostí. Více obslužných rutin událostí lze přidružit jednu událost. Při publikování objektu vyvolá událost, dojde k vyvolání všech obslužných rutin událostí. Tímto způsobem můžete provádět odběratelská třídy jakýkoli vlastní akce je vhodné, když vydavatele vyvolává událost. Událost má typ delegáta, který určuje signatura, kterou musí mít všechny obslužné rutiny událostí k události registrovat.
 
@@ -34,7 +34,7 @@ Následující příklad ukazuje, jak používá třídu odběratelská `+=` ope
 [!code-cpp[cx_events#02](../cppcx/codesnippet/CPP/eventsupportinvs/eventclientclass.h#02)]
 
 > [!WARNING]
-> Obecně je vhodnější použít pojmenované funkce namísto výrazu lambda pro obslužnou rutinu události nezvolíte velmi pečlivě, aby se zabránilo cyklické odkazy. Pojmenované funkce zachycuje ukazatel "Tento" podle nestálý odkaz, že výraz lambda zachytí silné odkazem a vytváří cyklický odkaz. Další informace najdete v tématu [slabé odkazy a cykly slov (C + +/ CX)](../cppcx/weak-references-and-breaking-cycles-c-cx.md).
+> Obecně je vhodnější použít pojmenované funkce namísto výrazu lambda pro obslužnou rutinu události nezvolíte velmi pečlivě, aby se zabránilo cyklické odkazy. Pojmenované funkce zachycuje ukazatel "Tento" podle nestálý odkaz, že výraz lambda zachytí silné odkazem a vytváří cyklický odkaz. Další informace najdete v tématu [slabé odkazy a cykly zásadní (C++/CX)](../cppcx/weak-references-and-breaking-cycles-c-cx.md).
 
 ### <a name="custom-add-and-remove-methods"></a>Vlastní přidání a odebrání metody
 
@@ -63,4 +63,4 @@ Pořadí, ve kterém zdroj události vyvolá obslužných rutin událostí v př
 [Systém typů](../cppcx/type-system-c-cx.md)<br/>
 [Delegáti](../cppcx/delegates-c-cx.md)<br/>
 [Referenční dokumentace jazyka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Odkaz na obory názvů](../cppcx/namespaces-reference-c-cx.md)
+[Referenční informace o oborech názvů](../cppcx/namespaces-reference-c-cx.md)

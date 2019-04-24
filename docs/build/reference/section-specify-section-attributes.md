@@ -9,11 +9,11 @@ helpviewer_keywords:
 - section attributes
 - /SECTION linker option
 ms.openlocfilehash: 8fb73043c9c185adee0859bb81098eab022430c2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318560"
 ---
 # <a name="section-specify-section-attributes"></a>/SECTION (Určit atributy oddílu)
 
@@ -91,5 +91,5 @@ Oddíl v souboru PE, která nemá E, R nebo W, nastavte je pravděpodobně nepla
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)

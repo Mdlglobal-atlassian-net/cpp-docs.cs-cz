@@ -39,11 +39,11 @@ helpviewer_keywords:
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
 ms.openlocfilehash: 58f9efb19988be8487ec87ce0c63d90ee1a97911
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62296576"
 ---
 # <a name="cmap-class"></a>Cmap – třída
 
@@ -73,19 +73,19 @@ Datový typ používaný pro *hodnotu* argumenty; obvykle odkaz na *hodnota*.
 
 ### <a name="public-structures"></a>Veřejné struktury
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMap::CPair](#cpair)|Vnořené struktury obsahující hodnotu klíče a hodnoty přidruženého objektu.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMap::CMap](#cmap)|Sestaví kolekci, který mapuje klíče na hodnoty.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMap::GetCount](#getcount)|Vrátí počet prvků, které na této mapě.|
 |[CMap::GetHashTableSize](#gethashtablesize)|Vrátí počet prvků v zatřiďovací tabulce.|
@@ -104,7 +104,7 @@ Datový typ používaný pro *hodnotu* argumenty; obvykle odkaz na *hodnota*.
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMap::operator \[ \]](#operator_at)|Vloží prvek do mapy – operátor nahrazení pro `SetAt`.|
 

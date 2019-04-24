@@ -7,21 +7,21 @@ helpviewer_keywords:
 - integer limits
 ms.assetid: 0c23cbd6-29fb-4d9c-b689-5984e19748de
 ms.openlocfilehash: 057da1ac8e4549a05d10a01cc3aead678045d9c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312424"
 ---
 # <a name="c-integer-limits"></a>Omezení typu Integer v jazyce C++ 
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Limity pro celočíselné typy jsou uvedeny v následující tabulce. Tato omezení jsou definovány v hlavičce standardní limity. H. Microsoft C umožňuje také deklaraci proměnných integer s nastavenou velikostí, které jsou integrální typy o velikosti 8, 16 a 32 bity. Další informace o celočíselných najdete v tématu [celočíselné typy s velikostí](../c-language/c-sized-integer-types.md).
 
 ## <a name="limits-on-integer-constants"></a>Omezení na konstanty typu Integer
 
-|**Konstanty**|Význam|Hodnota|
+|**Konstanty**|Význam|Value|
 |------------------|-------------|-----------|
 |**CHAR_BIT**|Počet bitů v proměnné nejmenší, který není bitového pole.|8|
 |**SCHAR_MIN**|Minimální hodnota pro proměnnou typu **podepsané char**.|-128|

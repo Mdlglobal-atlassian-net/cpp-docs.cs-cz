@@ -10,11 +10,11 @@ helpviewer_keywords:
 - -Gh compiler option [C++]
 ms.assetid: 93181453-2676-42e5-bf63-3b19e07299b6
 ms.openlocfilehash: 077096cc296f2aa2128127493a84a91da9a067c5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270910"
 ---
 # <a name="gh-enable-pexit-hook-function"></a>/GH (Povolit funkce háku _pexit)
 
@@ -54,5 +54,5 @@ void __declspec(naked) __cdecl _pexit( void );
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

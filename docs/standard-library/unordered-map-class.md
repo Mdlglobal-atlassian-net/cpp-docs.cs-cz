@@ -139,11 +139,11 @@ helpviewer_keywords:
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
 ms.openlocfilehash: 51b84b8a48365189abf1efa111ae2186af0cab11
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159142"
 ---
 # <a name="unorderedmap-class"></a>unordered_map – třída
 
@@ -181,12 +181,12 @@ class unordered_map;
 |[const_reference](#const_reference)|Typ konstantního odkazu na prvek|
 |[difference_type](#difference_type)|Typ vzdálenosti se znaménkem mezi dvěma prvky|
 |[hasher](#hasher)|Typ hashovací funkce|
-|[iterátor](#iterator)|Typ iterátoru řízené sekvence|
+|[iterator](#iterator)|Typ iterátoru řízené sekvence|
 |[key_equal](#key_equal)|Typ funkce porovnání|
 |[key_type](#key_type)|Typ klíče řazení|
 |[local_iterator](#local_iterator)|Typ iterátoru kbelíku řízené sekvence|
 |[mapped_type](#mapped_type)|Typ mapované hodnoty přiřazené ke každému klíči|
-|[Ukazatel](#pointer)|Typ ukazatele na prvek|
+|[pointer](#pointer)|Typ ukazatele na prvek|
 |[Referenční dokumentace](#reference)|Typ odkazu na prvek|
 |[size_type](#size_type)|Typ vzdálenosti bez znaménka mezi dvěma prvky|
 |[value_type](#value_type)|Typ prvku|
@@ -200,10 +200,10 @@ class unordered_map;
 |[bucket_size](#bucket_size)|Získá velikost kbelíku.|
 |[cbegin](#cbegin)|Určuje začátek řízené sekvence.|
 |[cend](#cend)|Určuje konec řízené sekvence.|
-|[Vymazat](#clear)|Odebere všechny prvky.|
+|[clear](#clear)|Odebere všechny prvky.|
 |[Počet](#count)|Zjistí počet prvků odpovídající zadanému klíči.|
-|[emplace –](#emplace)|Přidá prvek vytvořený v místě.|
-|[emplace_hint –](#emplace_hint)|Přidá prvek vytvořený v místě s nápovědou.|
+|[emplace](#emplace)|Přidá prvek vytvořený v místě.|
+|[emplace_hint](#emplace_hint)|Přidá prvek vytvořený v místě s nápovědou.|
 |[prázdný](#empty)|Zkouší, zda nejsou přítomny žádné prvky.|
 |[ukončení](#end)|Určuje konec řízené sekvence.|
 |[equal_range](#equal_range)|Najde rozsah, který odpovídá zadanému klíči.|
@@ -213,13 +213,13 @@ class unordered_map;
 |[hash_function –](#hash)|Získá uložený objekt hashovací funkce.|
 |[Vložit](#insert)|Přidá prvky.|
 |[key_eq](#key_eq)|Získá uložený objekt funkce porovnání.|
-|[load_factor –](#load_factor)|Spočítá průměrný počet prvků na kbelík.|
+|[load_factor](#load_factor)|Spočítá průměrný počet prvků na kbelík.|
 |[max_bucket_count](#max_bucket_count)|Získá maximální počet kbelíků.|
 |[max_load_factor](#max_load_factor)|Získá nebo nastaví maximální počet prvků na kbelík.|
 |[max_size](#max_size)|Získá maximální velikost řízené sekvence.|
 |[rehash](#rehash)|Znovu vytvoří hashovací tabulku.|
 |[Velikost](#size)|Spočítá počet prvků.|
-|[Prohození](#swap)|Zamění obsah dvou kontejnerů.|
+|[swap](#swap)|Zamění obsah dvou kontejnerů.|
 |[unordered_map](#unordered_map)|Sestaví objekt kontejneru.|
 
 |Operátor|Popis|
@@ -239,7 +239,7 @@ Objekt přiděluje a uvolňuje úložiště pro sekvenci řídí, prostřednictv
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<unordered_map >
+**Header:** \<unordered_map>
 
 **Namespace:** std
 
@@ -294,7 +294,7 @@ const Ty& at(const Key& key) const;
 
 |Parametr|Popis|
 |-|-|
-|*Klíč*|Hodnota klíče k vyhledání.|
+|*key*|Hodnota klíče k vyhledání.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -406,7 +406,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Keyval*<br/>
+*keyval*<br/>
 Hodnota klíče pro mapování.
 
 ### <a name="remarks"></a>Poznámky
@@ -907,7 +907,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Keyval*<br/>
+*keyval*<br/>
 Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
@@ -1171,7 +1171,7 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Keyval*<br/>
+*keyval*<br/>
 Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
@@ -1272,7 +1272,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Keyval*<br/>
+*keyval*<br/>
 Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
@@ -2233,7 +2233,7 @@ int main( )
    }
 ```
 
-## <a name="pointer"></a>  unordered_map::Pointer
+## <a name="pointer"></a>  unordered_map::pointer
 
 Typ ukazatele na prvek
 
@@ -2630,7 +2630,7 @@ unordered_map(
 |*Al*|Objekt alokátoru, který se má uložit.|
 |*Kompozice*|Objekt funkce porovnání, který se má uložit.|
 |*Hash*|Objekt hashovací funkce, který se má uložit.|
-|*Bucket_count –*|Minimální počet kbelíků.|
+|*Bucket_count*|Minimální počet kbelíků.|
 |*doprava*|Kontejner, který se má kopírovat.|
 |*první*||
 |*poslední*||

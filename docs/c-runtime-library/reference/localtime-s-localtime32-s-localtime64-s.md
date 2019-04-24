@@ -33,11 +33,11 @@ helpviewer_keywords:
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
 ms.openlocfilehash: 44b2eb2515035d56143a2aab251437a92515e652
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157271"
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s, _localtime32_s, _localtime64_s
 
@@ -76,8 +76,8 @@ Nula v případě úspěchu. Vrácená hodnota je kód chyby, pokud dojde k selh
 
 |*tmDest*|*sourceTime*|Návratová hodnota|Hodnota v *tmDest*|Vyvolá obslužnou rutinu neplatného parametru|
 |-----------|------------|------------------|--------------------|---------------------------------------|
-|**HODNOTU NULL**|Všechny|**EINVAL**|Nezměněno|Ano|
-|Není **NULL** (odkazuje na platný paměti)|**HODNOTU NULL**|**EINVAL**|Všechna pole nastavena na hodnotu -1|Ano|
+|**NULL**|Všechny|**EINVAL**|Nezměněno|Ano|
+|Není **NULL** (odkazuje na platný paměti)|**NULL**|**EINVAL**|Všechna pole nastavena na hodnotu -1|Ano|
 |Není **NULL** (odkazuje na platný paměti)|menší než 0 nebo větší než **_MAX__TIME64_T**|**EINVAL**|Všechna pole nastavena na hodnotu -1|Ne|
 
 V případě první dvě chybové stavy, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tyto funkce nastaví **errno** k **EINVAL** a vrátit **EINVAL**.
@@ -115,7 +115,7 @@ Pokud **TZ** nastavení proměnné prostředí, knihovny run-time jazyka C před
 
 |Rutina|Požadovaná hlavička C|Požadované hlaviček jazyka C++|
 |-------------|---------------------|-|
-|**localtime_s –**, **_localtime32_s –**, **_localtime64_s –**|\<Time.h >|\<CTime – > nebo \<time.h >|
+|**localtime_s**, **_localtime32_s**, **_localtime64_s**|\<time.h>|\<CTime – > nebo \<time.h >|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

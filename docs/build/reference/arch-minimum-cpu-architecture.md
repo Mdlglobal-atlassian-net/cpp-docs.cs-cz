@@ -10,11 +10,11 @@ helpviewer_keywords:
 - arch compiler option [C++]
 ms.assetid: cc17da15-47bd-4e74-b905-4e73c3bdb8a0
 ms.openlocfilehash: 83379ad7daca7dcb21f4ed0c0b94bb354161204a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273946"
 ---
 # <a name="arch-minimum-cpu-architecture"></a>/arch (minimální architektura procesoru)
 
@@ -28,5 +28,5 @@ Možnosti architektury zadejte architekturu pro generování kódu. Vyberte zák
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

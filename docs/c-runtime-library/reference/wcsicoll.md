@@ -21,12 +21,12 @@ helpviewer_keywords:
 - wcsicoll function
 ms.assetid: d049022d-cf60-467f-842b-9a508d9aeaff
 ms.openlocfilehash: 6621db86ccfa2c7da38341020c037f6afd21cbb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188611"
 ---
 # <a name="wcsicoll"></a>wcsicoll
 
-Tato funkce POSIX je zastaralá. Použít splňující podmínky ISO C++ [_wcsicoll –](stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md) místo.
+Tato funkce POSIX je zastaralá. Použít bitovou kopii ISO C++ splňující podmínky [_wcsicoll –](stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md) místo.

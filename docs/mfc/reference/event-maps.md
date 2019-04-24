@@ -7,11 +7,11 @@ helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
 ms.openlocfilehash: 512170d7eaa891b3616ca1ea56c29a8bb5cccda9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322238"
 ---
 # <a name="event-maps"></a>Mapy událostí
 
@@ -21,7 +21,7 @@ Knihovny Microsoft Foundation Class nabízí programovací model, který je opti
 
 [!code-cpp[NVC_MFCAxCtl#16](../../mfc/reference/codesnippet/cpp/event-maps_1.cpp)]
 
-`EVENT_STOCK_CLICK` – Makro označuje, že se ovládací prvek aktivuje akcie klikněte na událost pokaždé, když se zjistí myš, klikněte na tlačítko. Další podrobné informace o dalších uložených událostí, najdete v článku [ovládací prvky ActiveX: události](../../mfc/mfc-activex-controls-events.md). Makra jsou také k dispozici k označení vlastní události.
+`EVENT_STOCK_CLICK` – Makro označuje, že se ovládací prvek aktivuje akcie klikněte na událost pokaždé, když se zjistí myš, klikněte na tlačítko. Další podrobné informace o dalších uložených událostí, najdete v článku [ovládací prvky ActiveX: Události](../../mfc/mfc-activex-controls-events.md). Makra jsou také k dispozici k označení vlastní události.
 
 Makra mapy událostí jsou důležité, obecně není vložen je přímo. Je to proto, že v okně Vlastnosti automaticky vytvoří položky mapa událostí ve zdrojových souborech, když ho použijete pro přidružení k události funkcí vyvolávající události. Pokaždé, když chcete upravit nebo přidat položku mapy událostí můžete použít v okně Vlastnosti.
 
@@ -41,7 +41,7 @@ Pro podporu mapy událostí, knihovna MFC poskytuje následující makra:
 
 |||
 |-|-|
-|[EVENT_CUSTOM –](#event_custom)|Určuje funkci, která vyvolávající události se zadanou událost aktivuje.|
+|[EVENT_CUSTOM](#event_custom)|Určuje funkci, která vyvolávající události se zadanou událost aktivuje.|
 |[EVENT_CUSTOM_ID](#event_custom_id)|Určuje funkci, která vyvolávající události se aktivuje zadanou událost s ID určené odeslání.|
 
 ### <a name="message-mapping-macros"></a>Makra mapování zpráv
@@ -63,11 +63,11 @@ DECLARE_EVENT_MAP()
 
 Použití DECLARE_EVENT_MAP – makro na konec deklarace třídy. Potom v souboru .cpp, který definuje členské funkce třídy, použijte BEGIN_EVENT_MAP – makro, makro položky pro každý z události ovládacího prvku a END_EVENT_MAP – makro deklarovat konce seznamu událostí.
 
-Další informace o mapování události, najdete v článku [ovládací prvky ActiveX: události](../../mfc/mfc-activex-controls-events.md).
+Další informace o mapování události, najdete v článku [ovládací prvky ActiveX: Události](../../mfc/mfc-activex-controls-events.md).
 
 ### <a name="requirements"></a>Požadavky
 
-**Hlavička** afxctl.h
+**Header** afxctl.h
 
 ## <a name="begin_event_map"></a>  BEGIN_EVENT_MAP
 
@@ -89,11 +89,11 @@ Určuje název základní třídy *theClass*.
 
 V souboru implementace (.cpp), který definuje členské funkce třídy mapa událostí začínat BEGIN_EVENT_MAP – makro pak přidat makro položky pro každý z událostí a dokončete mapa událostí s END_EVENT_MAP – makro.
 
-Další informace o mapování události a BEGIN_EVENT_MAP – makro, najdete v článku [ovládací prvky ActiveX: události](../../mfc/mfc-activex-controls-events.md).
+Další informace o mapování události a BEGIN_EVENT_MAP – makro, najdete v článku [ovládací prvky ActiveX: Události](../../mfc/mfc-activex-controls-events.md).
 
 ### <a name="requirements"></a>Požadavky
 
-**Hlavička** afxctl.h
+**Header** afxctl.h
 
 ##  <a name="end_event_map"></a>  END_EVENT_MAP
 
@@ -105,7 +105,7 @@ END_EVENT_MAP()
 
 ### <a name="requirements"></a>Požadavky
 
-**Hlavička** afxctl.h
+**Header** afxctl.h
 
 ## <a name="event_custom"></a>  EVENT_CUSTOM –
 
@@ -144,7 +144,7 @@ Určuje hodnotu, za nímž následuje ukazatel na seznam obsahující 32bitové 
 |VTS_R8|**double**|
 |VTS_COLOR|OLE_COLOR|
 |VTS_CY|MĚNY|
-|VTS_DATE|DATUM|
+|VTS_DATE|DATE (Datum)|
 |VTS_BSTR|**Const** __char\*__|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_FONT|`IFontDispatch*`|
@@ -171,7 +171,7 @@ Určuje hodnotu, za nímž následuje ukazatel na seznam obsahující 32bitové 
 
 ### <a name="requirements"></a>Požadavky
 
-**Hlavička** afxctl.h
+**Header** afxctl.h
 
 ## <a name="event_custom_id"></a>  EVENT_CUSTOM_ID
 
@@ -190,7 +190,7 @@ EVENT_CUSTOM_ID(
 *pszName*<br/>
 Název události
 
-*identifikátor DISPID*<br/>
+*dispid*<br/>
 Identifikátor odeslání použit v ovládacím prvku při aktivaci události.
 
 *pfnFire*<br/>
@@ -211,7 +211,7 @@ Seznam `VTS_` konstanty, naleznete v tématu [EVENT_CUSTOM](#event_custom).
 
 ### <a name="requirements"></a>Požadavky
 
-**Hlavička** afxctl.h
+**Header** afxctl.h
 
 ## <a name="on_oleverb"></a>  ON_OLEVERB
 

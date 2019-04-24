@@ -11,11 +11,11 @@ helpviewer_keywords:
 - print preview [MFC], customizing
 ms.assetid: 32744697-c91c-41b6-9a12-b8ec01e0d438
 ms.openlocfilehash: 09938c5cec2812998d5e76e15154754ad3ac3e0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305681"
 ---
 # <a name="tn030-customizing-printing-and-print-preview"></a>TN030: Přizpůsobení tisku a tiskového náhledu
 
@@ -46,7 +46,7 @@ Náhled, v podstatě se pokusí změnit zobrazení do emulaci tiskárnu. Ve výc
 
 ## <a name="customizing-print-preview"></a>Přizpůsobení náhledu tisku
 
-Tato poznámka zabývá pouze jeden aspekt úpravy náhledu tisku: Přidání uživatelského rozhraní do režimu náhledu. Další změny, ale ta tyto změny jsou mimo rozsah této diskuse.
+Tato poznámka zabývá pouze jeden aspekt úpravy náhledu: Přidání uživatelského rozhraní do režimu náhledu. Další změny, ale ta tyto změny jsou mimo rozsah této diskuse.
 
 ## <a name="to-add-ui-to-the-preview-mode"></a>Přidání uživatelského rozhraní do režimu náhledu
 

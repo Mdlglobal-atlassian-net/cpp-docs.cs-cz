@@ -11,11 +11,11 @@ helpviewer_keywords:
 - cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
 ms.openlocfilehash: f8d8c5e1b0ca4d2a35a57683fea2e6de12747860
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294535"
 ---
 # <a name="cl-invokes-the-linker"></a>CL vyvolává linker
 
@@ -58,5 +58,5 @@ CL názvy souborů .obj, spolu s názvem MYGRAPH.lib, předá linkeru. Linker p�
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Nastavení možností kompilátoru](compiler-command-line-syntax.md)

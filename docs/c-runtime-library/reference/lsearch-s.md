@@ -29,11 +29,11 @@ helpviewer_keywords:
 - lsearch_s function
 ms.assetid: d2db0635-be7a-4799-8660-255f14450882
 ms.openlocfilehash: f57a96622419e3f72fc2df5b260cbbbdd59666ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156952"
 ---
 # <a name="lsearchs"></a>_lsearch_s
 
@@ -54,7 +54,7 @@ void *_lsearch_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Objekt pro hledání.
 
 *base*<br/>
@@ -69,7 +69,7 @@ Velikost jednotlivých prvků pole v bajtech.
 *compare*<br/>
 Ukazatel na rutiny porovnání. Druhý parametr je ukazatel na klíč pro hledání. Třetí parametr je ukazatel na prvek pole k porovnání s klíči.
 
-*Kontext*<br/>
+*context*<br/>
 Ukazatel na objekt, který může přistupovat ve funkci porovnání.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -80,12 +80,12 @@ Pokud jsou předány neplatné parametry pro funkci, vyvolán obslužnou rutinu 
 
 ### <a name="error-conditions"></a>Chybové podmínky
 
-|*Klíč*|*base*|*compare*|*Číslo*|*Velikost*|**errno**|
+|*key*|*base*|*compare*|*Číslo*|*Velikost*|**errno**|
 |-----------|------------|---------------|-----------|------------|-------------|
-|**HODNOTU NULL**|Všechny|Všechny|Všechny|Všechny|**EINVAL**|
-|Všechny|**HODNOTU NULL**|Všechny|!= 0|Všechny|**EINVAL**|
+|**NULL**|Všechny|Všechny|Všechny|Všechny|**EINVAL**|
+|Všechny|**NULL**|Všechny|!= 0|Všechny|**EINVAL**|
 |Všechny|Všechny|Všechny|Všechny|nula|**EINVAL**|
-|Všechny|Všechny|**HODNOTU NULL**|Aplikace|Všechny|**EINVAL**|
+|Všechny|Všechny|**NULL**|Aplikace|Všechny|**EINVAL**|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -99,7 +99,7 @@ Pokud jsou předány neplatné parametry pro funkci, vyvolán obslužnou rutinu 
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_lsearch_s**|\<Search.h >|
+|**_lsearch_s**|\<search.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

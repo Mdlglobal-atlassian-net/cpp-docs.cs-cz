@@ -41,11 +41,11 @@ helpviewer_keywords:
 - fwscanf_l function
 ms.assetid: 9004e978-6c5f-4bb2-98fd-51e5948933f2
 ms.openlocfilehash: 5be3f4107d2f05c1863c9c8303ac89e184590baa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287834"
 ---
 # <a name="fscanf-fscanfl-fwscanf-fwscanfl"></a>fscanf, _fscanf_l, fwscanf, _fwscanf_l
 
@@ -80,13 +80,13 @@ int _fwscanf_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Stream*<br/>
+*stream*<br/>
 Ukazatel na **souboru** struktury.
 
 *Formát*<br/>
 Řetězec řízení formátu
 
-*Argument*<br/>
+*argument*<br/>
 Volitelné argumenty
 
 *Národní prostředí*<br/>
@@ -111,7 +111,7 @@ Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že pou�
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ftscanf –**|**fscanf –**|**fscanf –**|**fwscanf –**|
-|**_ftscanf_l –**|**_fscanf_l**|**_fscanf_l**|**_fwscanf_l**|
+|**_ftscanf_l**|**_fscanf_l**|**_fscanf_l**|**_fwscanf_l**|
 
 Další informace najdete v tématu [pole Specifikace formátu – funkce scanf a wscanf funkce](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
@@ -119,8 +119,8 @@ Další informace najdete v tématu [pole Specifikace formátu – funkce scanf 
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**fscanf –**, **_fscanf_l –**|\<stdio.h>|
-|**fwscanf –**, **_fwscanf_l –**|\<stdio.h > nebo \<wchar.h >|
+|**fscanf**, **_fscanf_l**|\<stdio.h>|
+|**fwscanf**, **_fwscanf_l**|\<stdio.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

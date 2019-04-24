@@ -38,11 +38,11 @@ helpviewer_keywords:
 - _ismbcgraph_l function
 ms.assetid: 531a5f34-4302-4d0a-8a4f-b7ea150ad941
 ms.openlocfilehash: af3fae11536a869c0c3e3ebae285ebbaca5ea907
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287040"
 ---
 # <a name="isgraph-iswgraph-isgraphl-iswgraphl"></a>isgraph, iswgraph, _isgraph_l, _iswgraph_l
 
@@ -84,16 +84,16 @@ Chování **isgraph** a **_isgraph_l –** není definováno, pokud *c* není ko
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_istgraph –**|**isgraph**|[_ismbcgraph](ismbcgraph-functions.md)|**iswgraph –**|
-|**_istgraph_l –**|**_isgraph_l**|[_ismbcgraph_l](ismbcgraph-functions.md)|**_iswgraph_l**|
+|**_istgraph**|**isgraph**|[_ismbcgraph](ismbcgraph-functions.md)|**iswgraph**|
+|**_istgraph_l**|**_isgraph_l**|[_ismbcgraph_l](ismbcgraph-functions.md)|**_iswgraph_l**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**isgraph**|\<ctype.h >|
-|**iswgraph –**|\<ctype.h > nebo \<wchar.h >|
-|**_isgraph_l**|\<ctype.h >|
+|**isgraph**|\<ctype.h>|
+|**iswgraph**|\<ctype.h > nebo \<wchar.h >|
+|**_isgraph_l**|\<ctype.h>|
 |**_iswgraph_l**|\<ctype.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

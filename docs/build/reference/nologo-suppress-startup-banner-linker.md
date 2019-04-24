@@ -14,11 +14,11 @@ helpviewer_keywords:
 - NOLOGO linker option
 ms.assetid: 3b20dddd-eca6-4545-a331-9f70bf720197
 ms.openlocfilehash: 0ef0c6f8e0073e7450daa8d0433ce4d6e82ceab8
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320516"
 ---
 # <a name="nologo-suppress-startup-banner-linker"></a>/NOLOGO (Potlačit úvodní nápis při spouštění) (linker)
 
@@ -44,5 +44,5 @@ Ve výchozím nastavení tyto informace jsou odeslány pomocí linkeru, aby v ok
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)

@@ -3,11 +3,11 @@ title: Souhrn deklarací
 ms.date: 11/04/2016
 ms.assetid: 53a5e9e5-1a33-40b5-9dea-7f669b479329
 ms.openlocfilehash: 21d6866f8e0b370d8a0d93253a6259302666963a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157732"
 ---
 # <a name="summary-of-declarations"></a>Souhrn deklarací
 
@@ -19,23 +19,23 @@ ms.locfileid: "50647197"
 &nbsp;&nbsp;&nbsp;&nbsp;*Specifikátor typu* *specifikátory deklarace*<sub>optimalizované</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Kvalifikátor typu* *specifikátory deklarace*<sub>optimalizované</sub>
 
-*sekvence atributů* :&nbsp; &nbsp; &nbsp; &nbsp; / \* specifické pro Microsoft \*/<br/>
+*sekvence atributů* :&nbsp;&nbsp;&nbsp;&nbsp;/\* Specifické pro Microsoft \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*atribut* *sekvence atributů*<sub>optimalizované</sub>
 
 *atribut* : jeden z&nbsp; &nbsp; &nbsp; &nbsp; / \* specifické pro Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[__asm](../assembler/inline/asm.md) [__clrcall](../cpp/clrcall.md) [__stdcall](../cpp/stdcall.md) [__based](../cpp/based-grammar.md) [__fastcall](../cpp/fastcall.md) [klíčové slovo __thiscall](../cpp/thiscall.md) [__cdecl](../cpp/cdecl.md) [__inline](../cpp/inline-functions-cpp.md) [__vectorcall](../cpp/vectorcall.md)
+&nbsp;&nbsp;&nbsp;&nbsp;[__asm](../assembler/inline/asm.md) [__clrcall](../cpp/clrcall.md) [__stdcall](../cpp/stdcall.md) [__based](../cpp/based-grammar.md) [__fastcall](../cpp/fastcall.md) [__thiscall](../cpp/thiscall.md) [__cdecl](../cpp/cdecl.md) [__inline](../cpp/inline-functions-cpp.md) [__vectorcall](../cpp/vectorcall.md)
 
 *init-declarator-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Init-declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Init-declarator-list***,***init-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Init-declarator-list* **,** *init-declarator*
 
-*Init-declarator*:<br/>
+*init-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Deklarátor*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarátor***=***inicializátor*  / \* pro skalární inicializace \*/
 
-*Storage-class-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Automaticky**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Registrace**<br/>
+*storage-class-specifier*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**auto**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**register**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Statická**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Definice TypeDef**<br/>
@@ -44,7 +44,7 @@ ms.locfileid: "50647197"
 *Specifikátor typu*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Typ void**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Char**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**krátké**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__int8**  / \* specifické pro Microsoft \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__int16**  / \* specifické pro Microsoft \*/<br/>
@@ -55,7 +55,7 @@ ms.locfileid: "50647197"
 &nbsp;&nbsp;&nbsp;&nbsp;**Double**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**podepsané**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**bez znaménka**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct – nebo – sjednocení – specifikátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*enum – specifikátor*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Název TypeDef*
 
@@ -64,20 +64,20 @@ ms.locfileid: "50647197"
 &nbsp;&nbsp;&nbsp;&nbsp;**Volatile**
 
 *deklarátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*ukazatel*<sub>optimalizované</sub> *direct-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
-*přímé declarator*:<br/>
+*direct-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**(** *deklarátor* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **[** *konstantní výraz*<sub>optimalizované</sub> **]**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **(** *seznam parametrů typu* **)**  / \* deklarátor nový styl \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **(** *seznam identifikátorů*<sub>optimalizované</sub> **)**  / \* Obsolete – vizuální styl deklarátor \*/
 
-*ukazatel*:<br/>
+*pointer*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *seznam typů kvalifikátor*<sub>optimalizované</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *seznam typů kvalifikátor*<sub>optimalizované</sub> *ukazatele*
 
-*Seznam parametrů typu*:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; / \* Seznam parametrů \*/<br/>
+*Seznam parametrů typu*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* Seznam parametrů \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Seznam parametrů*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Seznam parametrů* **,...**
 
@@ -104,11 +104,11 @@ ms.locfileid: "50647197"
 *Konstanta výčtu*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*
 
-*struct – nebo – sjednocení specifikátor*:<br/>
+*struct-or-union-specifier*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Struktura nebo sjednocení* *identifikátor*<sub>optimalizované</sub> **{** *struct-declaration-list* **}**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Struktura nebo sjednocení* *identifikátor*
 
-*Struktura nebo sjednocení*:<br/>
+*struct-or-union*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**– Struktura**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**sjednocení**
 
@@ -123,10 +123,10 @@ ms.locfileid: "50647197"
 &nbsp;&nbsp;&nbsp;&nbsp;*Specifikátor typu* *specifikátor seznam kvalifikátorů-*<sub>optimalizované</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Kvalifikátor typu* *specifikátor seznam kvalifikátorů-*<sub>optimalizované</sub>
 
-*Struktura declarator-list*:<br/>
+*struct-declarator-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Struktura declarator* *struct-declarator-list* **,** *deklarátor – struktura*
 
-*Struktura declarator*:<br/>
+*struct-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Deklarátor*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Specifikátor typu* *deklarátor*<sub>optimalizované</sub> **:** *konstantního výrazu.*
 
@@ -139,16 +139,16 @@ ms.locfileid: "50647197"
 &nbsp;&nbsp;&nbsp;&nbsp;*Seznam identifikátorů* **,** *identifikátor*
 
 *abstraktní deklarátor*: /\* použít s anonymní deklarátorů \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Ukazatel*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*ukazatel*<sub>optimalizované</sub> *direct abstraktní declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-abstract-declarator*
 
 *direct-abstract-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**(** *abstraktní deklarátor* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé abstraktní declarator*<sub>optimalizované</sub> **[** *konstantní výraz*<sub>optimalizované</sub> **]**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé abstraktní declarator*<sub>optimalizované</sub> **(** *seznam parametrů typu*<sub>optimalizované</sub> **)**
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-abstract-declarator*<sub>opt</sub> **[** *constant-expression*<sub>opt</sub> **]**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-abstract-declarator*<sub>opt</sub> **(** *parameter-type-list*<sub>opt</sub> **)**
 
 *Inicializátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz přiřazení*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**{** *seznam inicializátorů* **}**  / \* pro inicializace agregace \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**{** *seznam inicializátorů* **,}**
 
@@ -162,14 +162,14 @@ ms.locfileid: "50647197"
 *Název typedef*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*
 
-*Extended-decl-modifier-seq*:&nbsp; &nbsp; &nbsp; &nbsp; / \* specifické pro Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl modifikátor*<sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl-modifier-seq* *extended-decl – modifikátor*
+*extended-decl-modifier-seq*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Specifické pro Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
 
-*Extended-decl modifikátor*:&nbsp; &nbsp; &nbsp; &nbsp; / \* specifické pro Microsoft \*/<br/>
+*extended-decl-modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Specifické pro Microsoft \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**vlákno**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**DllImport**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**
 
 ## <a name="see-also"></a>Viz také:

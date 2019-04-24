@@ -27,11 +27,11 @@ helpviewer_keywords:
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
 ms.openlocfilehash: 113bf97b0fe93204cd41de20bc36a8be080a88b6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155417"
 ---
 # <a name="umask"></a>_umask
 
@@ -62,7 +62,7 @@ Celočíselný výraz *pmode* obsahuje jednu nebo obě z následujících konsta
 |-|-|
 | **_S_IWRITE** | Zápis povolen. |
 | **_S_IREAD** | Čtení povolené. |
-| **_S_IREAD** &AMP;#124; **_S_IWRITE** | Čtení a zápis povolen. |
+| **_S_IREAD** &#124; **_S_IWRITE** | Čtení a zápis povolen. |
 
 Když jsou uvedeny oba konstanty, jsou spojeny pomocí bitového operátoru OR – operátor ( **&#124;** ). Pokud *pmode* argument je **_S_IREAD**, není povoleno čtení (soubor je jen pro zápis). Pokud *pmode* argument je **_S_IWRITE**, není povolen zápis (soubor je jen pro čtení). Pokud je bit zápisu nastavený v masce, všechny nové soubory bude třeba jen pro čtení. Upozorňujeme, že zástupného kódu MS-DOS a operační systémy Windows, je čitelný; všechny soubory není možné poskytnout oprávnění jen pro zápis. Proto nastavení čtení bit s **_umask –** nemá žádný vliv na jeho režimy.
 

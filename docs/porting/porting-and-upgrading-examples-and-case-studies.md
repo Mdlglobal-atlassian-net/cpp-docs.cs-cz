@@ -3,11 +3,11 @@ title: 'Portování a upgradování: Příklady a případové studie'
 ms.date: 11/04/2016
 ms.assetid: d48bbff9-1ea7-467f-8c8b-758601f01573
 ms.openlocfilehash: 50e22c9eac39927c4456eeff1ed05c46a239bd30
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337125"
 ---
 # <a name="porting-and-upgrading-examples-and-case-studies"></a>Portování a upgradování: Příklady a případové studie
 

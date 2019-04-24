@@ -36,11 +36,11 @@ helpviewer_keywords:
 - print formatted data to streams
 ms.assetid: 16067c3c-69ce-472a-8272-9aadf1f5beed
 ms.openlocfilehash: 05886dc4ce7de771749f157913a222b6b01a5c5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333154"
 ---
 # <a name="fprintfs-fprintfsl-fwprintfs-fwprintfsl"></a>fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l
 
@@ -75,7 +75,7 @@ int _fwprintf_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Stream*<br/>
+*stream*<br/>
 Ukazatel na **souboru** struktury.
 
 *Formát*<br/>
@@ -108,8 +108,8 @@ Podobně jako nezabezpečené verze (viz [fprintf _fprintf_l –, fwprintf – _
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_ftprintf_s –**|**fprintf_s –**|**fprintf_s –**|**fwprintf_s –**|
-|**_ftprintf_s_l –**|**_fprintf_s_l**|**_fprintf_s_l**|**_fwprintf_s_l**|
+|**_ftprintf_s**|**fprintf_s**|**fprintf_s**|**fwprintf_s**|
+|**_ftprintf_s_l**|**_fprintf_s_l**|**_fprintf_s_l**|**_fwprintf_s_l**|
 
 Další informace najdete v tématu [specifikace formátu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
@@ -117,8 +117,8 @@ Další informace najdete v tématu [specifikace formátu](../../c-runtime-libra
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**fprintf_s –**, **_fprintf_s_l –**|\<stdio.h>|
-|**fwprintf_s –**, **_fwprintf_s_l –**|\<stdio.h > nebo \<wchar.h >|
+|**fprintf_s**, **_fprintf_s_l**|\<stdio.h>|
+|**fwprintf_s**, **_fwprintf_s_l**|\<stdio.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
@@ -163,4 +163,4 @@ this is a string
 [Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
-[sprintf _sprintf_l –, swprintf, _swprintf_l –, \__swprintf_l –](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>

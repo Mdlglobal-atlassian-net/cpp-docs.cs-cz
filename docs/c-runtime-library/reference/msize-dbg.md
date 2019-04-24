@@ -24,11 +24,11 @@ helpviewer_keywords:
 - msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
 ms.openlocfilehash: 3b6d08d44162d8263ca88147fe86166924d7d162
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156301"
 ---
 # <a name="msizedbg"></a>_msize_dbg
 
@@ -57,7 +57,7 @@ Při úspěšném dokončení **_msize_dbg –** vrátí velikost (v bajtech) za
 
 ## <a name="remarks"></a>Poznámky
 
-**_msize_dbg –** je ladicí verze _[msize –](msize.md) funkce. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, každé volání **_msize_dbg –** je omezená na volání **_msize –**. Obě **_msize –** a **_msize_dbg –** vypočítat velikost bloku paměti v haldě základní, ale **_msize_dbg –** přidá dvou funkcí ladění: zahrnuje vyrovnávací paměti na obou stranách uživatele umožňuje část blok paměti v vrácená velikost a výpočty velikosti pro konkrétní blok typy.
+**_msize_dbg –** je ladicí verze _[msize –](msize.md) funkce. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, každé volání **_msize_dbg –** je omezená na volání **_msize –**. Obě **_msize –** a **_msize_dbg –** vypočítat velikost bloku paměti v haldě základní, ale **_msize_dbg –** přidá dvou funkcí ladění: Zahrnuje vrácená velikost vyrovnávací paměti na obou stranách část uživatele bloku paměti a umožňuje výpočty velikosti pro konkrétní blok typy.
 
 Informace o způsobu jsou bloky paměti přidělené, inicializovat a správy v ladicí verzi základní haldy viz [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details). Informace o typech bloku přidělení a způsob jejich použití naleznete v tématu [typy bloků na haldě ladění](/visualstudio/debugger/crt-debug-heap-details). Informace o rozdílech mezi volání funkce haldy standardní a jeho ladicí verze v sestavení pro ladění aplikace najdete v tématu [ladění verze z funkcí přidělení haldy](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 

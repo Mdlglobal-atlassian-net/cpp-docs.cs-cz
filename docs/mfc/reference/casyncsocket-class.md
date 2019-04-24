@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
 ms.openlocfilehash: ef486e653eaf78914ea25663e0c1ab744ab30cd4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164903"
 ---
 # <a name="casyncsocket-class"></a>Casyncsocket – třída
 
@@ -808,7 +808,7 @@ Nenulové, pokud je funkce úspěšná; v opačném případě 0 a určitý kód
 
 Tyto možnosti jsou podporovány pro `GetSockOpt`. Typ určuje typ dat řešený *lpOptionValue*. Možnost TCP_NODELAY používá úroveň IPPROTO_TCP; všechny ostatní možnosti použít úroveň SOL_SOCKET.
 
-|Hodnota|Typ|Význam|
+|Value|Type|Význam|
 |-----------|----------|-------------|
 |SO_ACCEPTCONN|BOOL|Naslouchání soketu.|
 |SO_BROADCAST|BOOL|Soket je nakonfigurovaný pro předávání zpráv všesměrového vysílání.|
@@ -827,7 +827,7 @@ Tyto možnosti jsou podporovány pro `GetSockOpt`. Typ určuje typ dat řešený
 
 Možnosti Berkeley Software Distribution (BSD) není podporována pro `GetSockOpt` jsou:
 
-|Hodnota|Typ|Význam|
+|Value|Type|Význam|
 |-----------|----------|-------------|
 |SO_RCVLOWAT|**int**|Zobrazit dolní meze.|
 |SO_RCVTIMEO|**int**|Zobrazit časový limit.|
@@ -1715,7 +1715,7 @@ Některé implementace rozhraní Windows Sockets dodání výstupní informace o
 
 Tyto možnosti jsou podporovány pro `SetSockOpt`. Typ určuje typ dat řešený *lpOptionValue*.
 
-|Hodnota|Typ|Význam|
+|Value|Type|Význam|
 |-----------|----------|-------------|
 |SO_BROADCAST|BOOL|Povolte přenos zpráv všesměrového vysílání v soketu.|
 |SO_DEBUG|BOOL|Záznam informací o ladění.|
@@ -1731,7 +1731,7 @@ Tyto možnosti jsou podporovány pro `SetSockOpt`. Typ určuje typ dat řešený
 
 Možnosti Berkeley Software Distribution (BSD) není podporována pro `SetSockOpt` jsou:
 
-|Hodnota|Typ|Význam|
+|Value|Type|Význam|
 |-----------|----------|-------------|
 |SO_ACCEPTCONN|BOOL|Naslouchání soketu|
 |SO_ERROR|**int**|Získat stav chyby a zrušte zaškrtnutí.|

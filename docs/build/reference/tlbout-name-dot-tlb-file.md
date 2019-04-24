@@ -12,11 +12,11 @@ helpviewer_keywords:
 - -TLBOUT linker option
 ms.assetid: 0df6d078-2e48-46c9-a1a5-02674d85dce8
 ms.openlocfilehash: 4e04514933a521bbf9d927fa6b47bacb87896353
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317637"
 ---
 # <a name="tlbout-name-tlb-file"></a>/TLBOUT (Název souboru .TLB)
 
@@ -56,8 +56,8 @@ V kompilátoru MIDL je volán linkeru MSVC při propojování projekty, které m
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)<br/>
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)<br/>
 [/IGNOREIDL (nezpracovávat atributy do MIDL)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
 [/MIDL (určení možností příkazového řádku MIDL)](midl-specify-midl-command-line-options.md)<br/>
 [Sestavení programu s atributy](../../windows/building-an-attributed-program.md)

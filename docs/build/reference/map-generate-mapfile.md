@@ -16,11 +16,11 @@ helpviewer_keywords:
 - /MAP linker option
 ms.assetid: 9ccce53d-4e36-43da-87b0-7603ddfdea63
 ms.openlocfilehash: 9a45fd5ea44b8908e77f847275bde42b86385cdb
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321602"
 ---
 # <a name="map-generate-mapfile"></a>/MAP (Generovat soubor mapování)
 
@@ -69,5 +69,5 @@ Souboru mapování je textový soubor, který obsahuje následující informace 
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)

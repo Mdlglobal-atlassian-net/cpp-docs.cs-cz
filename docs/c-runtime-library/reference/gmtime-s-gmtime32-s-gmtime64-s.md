@@ -36,11 +36,11 @@ helpviewer_keywords:
 - _gmtime32_s function
 ms.assetid: 261c7df0-2b0c-44ba-ba61-cb83efaec60f
 ms.openlocfilehash: 8225fed21ca9dc67440a4af5dcf43b2ad5cfdffb
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157445"
 ---
 # <a name="gmtimes-gmtime32s-gmtime64s"></a>gmtime_s, _gmtime32_s, _gmtime64_s
 
@@ -79,8 +79,8 @@ Nula v případě úspěchu. Vrácená hodnota je kód chyby, pokud dojde k selh
 
 |*tmDest*|*sourceTime*|Vrátí|Hodnota v *tmDest*|
 |-----------|------------|------------|--------------------|
-|**HODNOTU NULL**|Všechny|**EINVAL**|Nedojde ke změně.|
-|Není **NULL** (odkazuje na platný paměti)|**HODNOTU NULL**|**EINVAL**|Všechna pole nastavena na hodnotu -1.|
+|**NULL**|Všechny|**EINVAL**|Nedojde ke změně.|
+|Není **NULL** (odkazuje na platný paměti)|**NULL**|**EINVAL**|Všechna pole nastavena na hodnotu -1.|
 |Není **NULL**|< 0|**EINVAL**|Všechna pole nastavena na hodnotu -1.|
 
 V případě první dvě chybové stavy, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tyto funkce nastaví **errno** k **EINVAL** a vrátit **EINVAL**.
@@ -114,7 +114,7 @@ Každé pole struktury je typu **int**, jak je znázorněno v následující tab
 
 |Rutina|Požadovaná hlavička C|Požadované hlaviček jazyka C++|
 |-------------|---------------------|-|
-|**gmtime_s –**, **_gmtime32_s –**, **_gmtime64_s –**|\<Time.h >|\<CTime – > nebo \<time.h >|
+|**gmtime_s**, **_gmtime32_s**, **_gmtime64_s**|\<time.h>|\<CTime – > nebo \<time.h >|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

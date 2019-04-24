@@ -34,11 +34,11 @@ helpviewer_keywords:
 - tmakepath function
 ms.assetid: 5930b197-a7b8-46eb-8519-2841a58cd026
 ms.openlocfilehash: 073f8aba6936aa33dafcef7ed47f5286802a4948
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285696"
 ---
 # <a name="makepath-wmakepath"></a>_makepath, _wmakepath
 
@@ -68,16 +68,16 @@ void _wmakepath(
 *Cesta*<br/>
 Úplná cesta vyrovnávací paměti.
 
-*Jednotky*<br/>
+*drive*<br/>
 Obsahuje písmeno (A, B a tak dále) odpovídající na požadovaný disk a volitelné koncové dvojtečka. **_makepath –** vloží dvojtečka automaticky složenou cestu Pokud není nalezena. Pokud *jednotky* je **NULL** nebo odkazuje na prázdný řetězec, zobrazí se v složeného žádné písmeno jednotky *cesta* řetězec.
 
-*adresář*<br/>
+*dir*<br/>
 Obsahuje cestu adresáře, bez zahrnutí specifikátor jednotky nebo skutečného názvu souboru. Do adresy koncové lomítko je volitelný a lomítkem (/) ani zpětné lomítko (\\) nebo může být možné použít v jediném *dir* argument. Pokud žádného koncového lomítka (/ nebo \\) je zadán, je automaticky vložen. Pokud *dir* je **NULL** nebo odkazuje na prázdný řetězec, žádná cesta k adresáři se vloží do složeného *cesta* řetězec.
 
 *%{fname/*<br/>
 Obsahuje základní název souboru bez žádné přípony názvů souborů. Pokud *%{fname/* je **NULL** nebo odkazuje na prázdný řetězec, žádný název souboru se vloží do složeného *cesta* řetězec.
 
-*ext, přípona*<br/>
+*ext*<br/>
 Obsahuje skutečnou příponu souboru, s nebo bez úvodní tečky (.). **_makepath –** vloží období automaticky, pokud se nezobrazí v *ext*. Pokud *ext* je **NULL** nebo odkazuje na prázdný řetězec, bez přípony se vloží do složeného *cesta* řetězec.
 
 ## <a name="remarks"></a>Poznámky
@@ -90,7 +90,7 @@ Obsahuje skutečnou příponu souboru, s nebo bez úvodní tečky (.). **_makepa
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tmakepath –**|**_makepath**|**_makepath**|**_wmakepath**|
+|**_tmakepath**|**_makepath**|**_makepath**|**_wmakepath**|
 
 *Cesta* argumentu musí odkazovat na prázdné vyrovnávací paměti dostatečně velký pro úplnou cestu. Složené *cesta* nesmí být větší než **_MAX_PATH** – konstanta, definovány v Stdlib.h.
 

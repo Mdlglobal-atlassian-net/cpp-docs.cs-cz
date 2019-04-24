@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Microsoft::WRL::ActivationFactory::Release method
 ms.assetid: 5faddf1f-43b6-4f8a-97de-8c9d3ae1e1ff
 ms.openlocfilehash: 8e5132f4a8711f6420cd9b52751550a96d10d8fc
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58787006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62303887"
 ---
 # <a name="activationfactory-class"></a>ActivationFactory – třída
 
@@ -81,13 +81,13 @@ Následující fragment kódu ukazuje způsob použití [implementuje](implement
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Name                                                       | Popis
+Název                                                       | Popis
 ---------------------------------------------------------- | ------------------------------------------
 [ActivationFactory::ActivationFactory](#activationfactory) | Inicializuje `ActivationFactory` třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Name                                                           | Popis
+Název                                                           | Popis
 -------------------------------------------------------------- | --------------------------------------------------------------------------------------------
 [Activationfactory::addref –](#addref)                           | Zvýší počet odkazů aktuálního `ActivationFactory` objektu.
 [Activationfactory::getiids –](#getiids)                         | Načte pole ID implementovaného rozhraní.

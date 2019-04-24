@@ -39,11 +39,11 @@ helpviewer_keywords:
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
 ms.openlocfilehash: 47b7e43172884524e50e332dcb421e84a99b9806
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157991"
 ---
 # <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
 
@@ -88,16 +88,16 @@ Chování **isalpha** a **_isalpha_l –** není definováno, pokud *c* není ko
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_istalpha –**|**isalpha**|**_ismbcalpha**|**iswalpha –**|
-|**_istalpha_l –**|**_isalpha_l**|**_ismbcalpha_l**|**_iswalpha_l**|
+|**_istalpha**|**isalpha**|**_ismbcalpha**|**iswalpha**|
+|**_istalpha_l**|**_isalpha_l**|**_ismbcalpha_l**|**_iswalpha_l**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**isalpha**|\<ctype.h >|
-|**iswalpha –**|\<ctype.h > nebo \<wchar.h >|
-|**_isalpha_l**|\<ctype.h >|
+|**isalpha**|\<ctype.h>|
+|**iswalpha**|\<ctype.h > nebo \<wchar.h >|
+|**_isalpha_l**|\<ctype.h>|
 |**_iswalpha_l**|\<ctype.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

@@ -34,11 +34,11 @@ helpviewer_keywords:
 - _fputwc_nolock function
 ms.assetid: c63eb3ad-58fa-46d0-9249-9c25f815eab9
 ms.openlocfilehash: 370b7e9f20bcc32f6243cff804381b5453801dbd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333128"
 ---
 # <a name="fputcnolock-fputwcnolock"></a>_fputc_nolock, _fputwc_nolock
 
@@ -62,7 +62,7 @@ wint_t _fputwc_nolock(
 *c*<br/>
 Znak k zapsání.
 
-*Stream*<br/>
+*stream*<br/>
 Ukazatel **souboru** struktury.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -79,14 +79,14 @@ Tyto dvě funkce se chovají stejně jako v případě, že datový proud je ote
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_fputtc_nolock –**|**_fputc_nolock**|**_fputc_nolock**|**_fputwc_nolock –**|
+|**_fputtc_nolock –**|**_fputc_nolock**|**_fputc_nolock**|**_fputwc_nolock**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
 |**_fputc_nolock**|\<stdio.h>|
-|**_fputwc_nolock –**|\<stdio.h > nebo \<wchar.h >|
+|**_fputwc_nolock**|\<stdio.h > nebo \<wchar.h >|
 
 Konzole není podporována v aplikacích pro univerzální platformu Windows (UPW). Standardní datový proud popisovačů, které jsou spojeny s konzolou –**stdin**, **stdout**, a **stderr**– musí být přesměrován před funkcí jazyka C za běhu můžete použít v aplikacích pro UWP . Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

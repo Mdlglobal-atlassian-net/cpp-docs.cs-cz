@@ -7,11 +7,11 @@ helpviewer_keywords:
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
 ms.openlocfilehash: 747920378472cc091928a080e303a0543e287aaa
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154705"
 ---
 # <a name="c-bit-fields"></a>Bitová pole jazyka C++
 
@@ -48,7 +48,7 @@ Rozložení paměti objektu Date
 
 Všimněte si, že `nYear` je 8 bitů dlouhý a přeteče hranice slova deklarovaného typu **bez znaménka** **krátký**. Proto je zahájen na začátku nového **bez znaménka** **krátký**. Není nutné, aby se všechna bitová pole vešla do jednoho objektu použitého typu. Nové jednotky úložiště jsou přidělovány podle vyžadovaného počtu bitů v deklaraci.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Řazení dat, která jsou deklarována jako bitová pole, je od nízkého po vysoký bit, jak je znázorněno na obrázku výše.
 

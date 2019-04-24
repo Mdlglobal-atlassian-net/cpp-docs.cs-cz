@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru C2701
+title: Compiler Error C2701
 ms.date: 11/04/2016
 f1_keywords:
 - C2701
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C2701
 ms.assetid: 31cf2ab7-ced9-4f75-aa51-e169e20407fb
 ms.openlocfilehash: b16ddb16d98a81e53b29ff51e41d19073200a2e5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161287"
 ---
-# <a name="compiler-error-c2701"></a>Chyba kompilátoru C2701
+# <a name="compiler-error-c2701"></a>Compiler Error C2701
 
 'function': Šablona funkcí nemůže být funkce friend lokální třídy
 

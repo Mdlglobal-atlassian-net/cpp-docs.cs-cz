@@ -41,11 +41,11 @@ helpviewer_keywords:
 - ismbckata function
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
 ms.openlocfilehash: d2a5d0336e5ed4ad8bbb19f8a259128ab33d004e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286730"
 ---
 # <a name="ismbchira-ismbchiral-ismbckata-ismbckatal"></a>_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 
@@ -93,10 +93,10 @@ Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že pou�
 
 |Rutina|Testovací podmínka (pouze znaková stránky 932)|
 |-------------|-------------------------------------------|
-|**_ismbchira**|Dvoubajtové znaky Hiragana: 0x829F < =*c*< = 0x82F1.|
-|**_ismbchira_l**|Dvoubajtové znaky Hiragana: 0x829F < =*c*< = 0x82F1.|
-|**_ismbckata**|Dvoubajtové znaky katakana: 0x8340 < =*c*< = 0x8396.|
-|**_ismbckata_l**|Dvoubajtové znaky katakana: 0x8340 < =*c*< = 0x8396.|
+|**_ismbchira**|Dvoubajtové znaky Hiragana: 0x829F<=*c*<=0x82F1.|
+|**_ismbchira_l**|Dvoubajtové znaky Hiragana: 0x829F<=*c*<=0x82F1.|
+|**_ismbckata**|Dvoubajtové znaky katakana: 0x8340<=*c*<=0x8396.|
+|**_ismbckata_l**|Dvoubajtové znaky katakana: 0x8340<=*c*<=0x8396.|
 
 **End specifické pro kódovou stránku 932**
 

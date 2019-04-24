@@ -21,11 +21,11 @@ helpviewer_keywords:
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
 ms.openlocfilehash: 17d80507462b3eb0fdfb5d9e41da6162947bd3de
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62304394"
 ---
 # <a name="to-functions"></a>to – funkce
 
@@ -45,10 +45,10 @@ Každá z **k** funkce a její přidružené – makro, pokud existuje, převede
 |`__toascii`|`__toascii`|Převede `c` znak ASCII|
 |`tolower`|`tolower`|Převede `c` na malá písmena v případě potřeby|
 |`_tolower`|`_tolower`|Převede `c` na malá písmena|
-|`towlower`|Žádná|Převede `c` na odpovídající širokého znaku malé písmeno|
+|`towlower`|Žádné|Převede `c` na odpovídající širokého znaku malé písmeno|
 |`toupper`|`toupper`|Převede `c` na velká písmena v případě potřeby|
 |`_toupper`|`_toupper`|Převede `c` na velká písmena|
-|`towupper`|Žádná|Převede c na odpovídající širokého znaku velké písmeno|
+|`towupper`|Žádné|Převede c na odpovídající širokého znaku velké písmeno|
 
 Používat funkce verze **k** rutin, které jsou také definovány jako makra, buď odeberte definice maker s `#undef` direktivy nebo nezahrnují CTYPE. H. Pokud použijete možnosti kompilátoru /Za, kompilátor používá verzi funkce `toupper` nebo `tolower`. Deklarace `toupper` a `tolower` funkce jsou v STDLIB. H.
 

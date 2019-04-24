@@ -14,11 +14,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::GenericReleaseNotifier::Invoke method
 ms.assetid: 244a8fbe-f89b-409b-aa65-db3e37f9b125
 ms.openlocfilehash: 318415c9726426cbd60c205759a6ff8572cc555e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325049"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier – třída
 
@@ -40,19 +40,19 @@ Typ datového člena, který obsahuje umístění obslužné rutiny události.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Name                                                                                                     | Popis
+Název                                                                                                     | Popis
 -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------
 [Module::genericreleasenotifier:: genericreleasenotifier –](#genericreleasenotifier-genericreleasenotifier) | Inicializuje novou instanci třídy `Module::GenericReleaseNotifier` třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Name                                                                     | Popis
+Název                                                                     | Popis
 ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------
 [Module::GenericReleaseNotifier:: Invoke](#genericreleasenotifier-invoke) | Volá obslužnou rutinu události spojené s aktuálním `Module::GenericReleaseNotifier` objektu.
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-Name                                                                          | Popis
+Název                                                                          | Popis
 ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------
 [Module::genericreleasenotifier:: callback_ –](#genericreleasenotifier-callback) | Obsahuje výraz lambda, funktor nebo obslužná rutina události ukazatele na funkce přidružené k aktuální `Module::GenericReleaseNotifier` objektu.
 

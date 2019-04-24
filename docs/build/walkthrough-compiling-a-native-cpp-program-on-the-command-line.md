@@ -9,11 +9,11 @@ helpviewer_keywords:
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
 ms.openlocfilehash: d7b5bc88966f7edbb7179c36398b1dd95afb971f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313880"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Návod: Kompilace nativního programu C++ v příkazovém řádku
 
@@ -172,5 +172,5 @@ Kompilátor MSVC zahrnuje C Runtime Library (CRT), který je kompatibilní se st
 ## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
-[Projekty a sestavení systémy](projects-and-build-systems-cpp.md)<br/>
-[Možnosti kompilátoru MSVC](reference/compiler-options.md)
+[Projekty a systémy sestavení](projects-and-build-systems-cpp.md)<br/>
+[Parametry kompilátoru MSVC](reference/compiler-options.md)

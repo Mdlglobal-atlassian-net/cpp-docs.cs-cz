@@ -9,11 +9,11 @@ helpviewer_keywords:
 - PostNcDestroy method [MFC]
 ms.assetid: 5bf208a5-5683-439b-92a1-547c5ded26cd
 ms.openlocfilehash: 9e52112bed0f583a3f5652f9213bd5049d543a80
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306145"
 ---
 # <a name="tn017-destroying-window-objects"></a>TN017: Likvidace objektů oken
 
@@ -46,7 +46,7 @@ Výchozí implementace `CWnd::PostNcDestroy` neprovede žádnou akci, která je 
 Tyto třídy, které mají být samostatně přidělený k haldě přepsat `PostNcDestroy` metodu za účelem **odstranit tento**. Tento příkaz uvolní paměť přidružený objekt jazyka C++. I když výchozí `CWnd` volání destruktoru `DestroyWindow` Pokud *m_hWnd* je není NULL, to není vést k nekonečné rekurzi popisovač proto bude odpojená a NULL ve fázi čištění.
 
 > [!NOTE]
->  Systém volá obvykle `CWnd::PostNcDestroy` po zpracování zprávy Windows WM_NCDESTROY a `HWND` a okno objekt jazyka C++ jsou již propojeny. Systém také bude volat `CWnd::PostNcDestroy` při provádění většiny [CWnd::Create](../mfc/reference/cwnd-class.md#create) zavolá, pokud dojde k chybě. Automatické čištění pravidel jsou popsány dále v tomto tématu.
+>  Systém volá obvykle `CWnd::PostNcDestroy` po zpracování zprávy Windows WM_NCDESTROY a `HWND` a C++ objekt okna už nejste připojení. Systém také bude volat `CWnd::PostNcDestroy` při provádění většiny [CWnd::Create](../mfc/reference/cwnd-class.md#create) zavolá, pokud dojde k chybě. Automatické čištění pravidel jsou popsány dále v tomto tématu.
 
 ## <a name="auto-cleanup-classes"></a>Automatické čištění třídy
 
@@ -91,7 +91,7 @@ Warning: calling DestroyWindow in CWnd::~CWnd
 
 V případě Windows C++ objekty, které provádějí automatické čištění, je nutné volat `DestroyWindow`. Pokud používáte **odstranit** operátor přímo, přidělení paměti diagnostických MFC vás upozorní, že jste se uvolňování paměti dvakrát. Jsou dva výskyty první explicitní volání a nepřímé volání **odstranit tento** při provádění automatické čištění `PostNcDestroy`.
 
-Po volání `DestroyWindow` na automatické vyčištění objektu, objekt jazyka C++ bude i nadále, ale *m_hWnd* budou mít hodnotu NULL. Po volání `DestroyWindow` na automatické vyčištění objektu, objekt jazyka C++ zmizí, uvolnění operátor delete C++ při provádění automatické čištění `PostNcDestroy`.
+Po volání `DestroyWindow` na automatické vyčištění objektu, C++ objekt se bude i nadále, ale *m_hWnd* budou mít hodnotu NULL. Po volání `DestroyWindow` na automatické vyčištění objektu, objekt jazyka C++ zmizí, uvolnění operátor delete C++ při provádění automatické čištění `PostNcDestroy`.
 
 ## <a name="see-also"></a>Viz také:
 

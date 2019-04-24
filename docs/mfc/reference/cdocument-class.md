@@ -121,11 +121,11 @@ helpviewer_keywords:
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
 ms.openlocfilehash: 2d87ff67000fb5b70c0a5c965638875e6f50b22c
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58774180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164111"
 ---
 # <a name="cdocument-class"></a>CDocument – třída
 
@@ -141,13 +141,13 @@ class CDocument : public CCmdTarget
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDocument::CDocument](#cdocument)|Vytvoří `CDocument` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDocument::AddView](#addview)|Zobrazení se připojí k tomuto dokumentu.|
 |[CDocument::BeginReadChunks](#beginreadchunks)|Inicializuje bloku dat čtení.|
@@ -200,14 +200,14 @@ class CDocument : public CCmdTarget
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDocument::OnFileSendMail](#onfilesendmail)|Odešle e-mailovou zprávu se na dokument připojený.|
 |[CDocument::OnUpdateFileSendMail](#onupdatefilesendmail)|Povolit příkaz Odeslat e-mailu, pokud je k dispozici podpora e-mailu.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDocument::m_bGetThumbnailMode](#m_bgetthumbnailmode)|Určuje, že `CDocument` objekt byl vytvořen dllhost pro miniatury. By měl být vráceny se změnami `CView::OnDraw`.|
 |[CDocument::m_bPreviewHandlerMode](#m_bpreviewhandlermode)|Určuje, že `CDocument` objekt byl vytvořen prevhost pro `Rich Preview`. By měl být vráceny se změnami `CView::OnDraw`.|

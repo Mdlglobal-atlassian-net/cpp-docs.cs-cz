@@ -9,11 +9,11 @@ helpviewer_keywords:
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
 ms.openlocfilehash: c9f18dfd1498538ce3700fd73a27ce6f6088ee42
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180040"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Funkční paralelismus (Concurrency Runtime)
 
@@ -108,7 +108,7 @@ Můžete použít `create_task` funkce lze vytvořit ekvivalentní operaci.
 
 Pokud během provádění úkolu je vyvolána výjimka, modul runtime zařazuje tuto výjimku při následném volání `task::get` nebo `task::wait`, nebo na pokračování podle úloh. Další informace o mechanizmu zpracování výjimky úkolu naleznete v tématu [zpracování výjimek](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
 
-Příklad, který používá `task`, [concurrency::task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), zrušení, naleznete v tématu [návod: připojení pomocí úloh a žádostí XML HTTP](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md). ( `task_completion_event` Třídy je popsána dále v tomto dokumentu.)
+Příklad, který používá `task`, [concurrency::task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), zrušení, naleznete v tématu [názorný postup: Připojení pomocí úloh a žádostí XML HTTP](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md). ( `task_completion_event` Třídy je popsána dále v tomto dokumentu.)
 
 > [!TIP]
 >  Další podrobnosti, které jsou specifické pro úlohy v aplikacích pro UPW, najdete v článku [asynchronní programování v jazyce C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) a [vytváření asynchronních operací v jazyce C++ pro aplikace pro UPW](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).
@@ -244,7 +244,7 @@ Dva způsoby, jak to provést je použití pokračování nebo spuštění úloh
 
 [Concurrency::task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) třídy pomáhá zjednodušit složení těchto úkolů. Podobně jako `task` třídy, parametr typu `T` je typ výsledku, který je vytvořil úkol. Tento typ může být `void` Pokud úloha nevrací hodnotu. `T` nelze použít `const` modifikátor. Obvykle `task_completion_event` zadaný objekt do vlákna nebo úlohy, které mu dají signál, jakmile je hodnota pro ni k dispozici. Ve stejnou dobu jeden nebo více úkolů nastavené jako posluchači pro tuto událost. Při nastavení události úkoly modulu listener a jejich pokračování je naplánováno ke spuštění.
 
-Příklad, který používá `task_completion_event` k implementaci úkolu, který se dokončí po prodlevě, naleznete v tématu [postupy: vytvoření úlohy takové se dokončí po zpoždění](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md).
+Příklad, který používá `task_completion_event` k implementaci úkolu, který se dokončí po prodlevě, naleznete v tématu [jak: Vytvořte úlohu, která se dokončí po prodlevě](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md).
 
 ##  <a name="task-groups"></a> Skupiny úloh
 
@@ -299,7 +299,7 @@ Message from task: 42
 
 Vzhledem k tomu, `parallel_invoke` algoritmus spustí úlohy současně, může měnit pořadí výstupu zpráv.
 
-Kompletní příklady, které ukazují, jak používat `parallel_invoke` algoritmus, najdete v článku [postupy: použití algoritmu parallel_invoke k zápisu rutiny paralelního třídění](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) a [postupy: použití algoritmu parallel_invoke k provádění paralelních operací](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md). Úplný příklad používající `task_group` třídu pro implementaci asynchronních funkcí naleznete v tématu [návod: implementace tříd Future](../../parallel/concrt/walkthrough-implementing-futures.md).
+Kompletní příklady, které ukazují, jak používat `parallel_invoke` algoritmus, najdete v článku [jak: Použití algoritmu parallel_invoke k zápisu rutiny paralelního třídění](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) a [jak: Použití algoritmu parallel_invoke k provádění paralelních operací](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md). Úplný příklad používající `task_group` třídu pro implementaci asynchronních funkcí naleznete v tématu [názorný postup: Implementace tříd Future](../../parallel/concrt/walkthrough-implementing-futures.md).
 
 ##  <a name="robust"></a> Robustní programování
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
 ms.openlocfilehash: 9408938b670d8130305f2e1c1258fc6fcb9875bb
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62264592"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>Návod: Práce s projekty a řešeními (C++)
 
@@ -223,4 +223,4 @@ Blahopřejeme, úspěšně jste vytvořili řešení a projekt aplikace. Další
 ## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
-[Projekty a sestavení systémy](../build/projects-and-build-systems-cpp.md)<br/>
+[Projekty a systémy sestavení](../build/projects-and-build-systems-cpp.md)<br/>

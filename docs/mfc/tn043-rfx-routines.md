@@ -9,11 +9,11 @@ helpviewer_keywords:
 - RFX (record field exchange)
 ms.assetid: f552d0c1-2c83-4389-b472-42c9940aa713
 ms.openlocfilehash: 18820c7d17ddea355490ee32679d5d690ec3533e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305395"
 ---
 # <a name="tn043-rfx-routines"></a>TN043: Rutiny RFX
 
@@ -150,7 +150,7 @@ Zápis funkce RFX vlastní, doporučujeme zkopírovat existující funkce RFX a 
 
 `RFX_Text` a `RFX_Binary`: Tyto dvě funkce předběžné přidělení statické vyrovnávací paměť pro uložení řetězce nebo binární informace a zaregistrujte vyrovnávací paměti s ODBC SQLBindCol místo registrace & vá hodnota. Z tohoto důvodu mají tyto dvě funkce velké množství kódu zvláštní případy.
 
-`RFX_Date`: ODBC vrátí informace o datu a času jejich vlastní TIMESTAMP_STRUCT z datové struktury. Tato funkce dynamicky přiděluje TIMESTAMP_STRUCT z jako proxy "server" pro odesílání a přijímání dat Datum čas. Různé operace musí přenášet informace o datu a času mezi C++ `CTime` objektu a TIMESTAMP_STRUCT z proxy serveru. To komplikuje tato funkce výrazně, ale je dobrým příkladem toho, jak používat proxy server pro přenos dat.
+`RFX_Date`: ODBC vrátí informace o datu a času jejich vlastní TIMESTAMP_STRUCT z datové struktury. Tato funkce dynamicky přiděluje TIMESTAMP_STRUCT z jako proxy "server" pro odesílání a přijímání dat Datum čas. Různé operace musíte přenést informace o datu a času mezi C++ `CTime` objektu a TIMESTAMP_STRUCT z proxy serveru. To komplikuje tato funkce výrazně, ale je dobrým příkladem toho, jak používat proxy server pro přenos dat.
 
 `RFX_LongBinary`: Toto je pouze knihovny tříd RFX funkce, která se nepoužívá pro příjem a odesílání dat vazba sloupce. Tato funkce ignoruje BindFieldToColumn operace a místo toho během operace opravy alokují prostor pro příchozí data SQL_LONGVARCHAR nebo SQL_LONGVARBINARY pak provede volání rozhraní SQLGetData k načtení hodnoty do přidělené úložiště. Při přípravě k odesílání dat zpět do zdroje dat (například operace pár Názevhodnota a hodnota), tato funkce využívá funkce DATA_AT_EXEC ODBC. Zobrazit [Technická poznámka 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md) Další informace o práci s SQL_LONGVARBINARY a SQL_LONGVARCHARs.
 

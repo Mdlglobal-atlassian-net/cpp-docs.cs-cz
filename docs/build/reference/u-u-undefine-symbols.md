@@ -14,11 +14,11 @@ helpviewer_keywords:
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
 ms.openlocfilehash: bfc03ebd5c900bf8bf81b4a50eed02111baf85ee
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317000"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (nedefinované symboly)
 
@@ -71,7 +71,7 @@ Ve výchozím nastavení kompilátor definuje následující symboly specifické
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
 [/J (výchozí znakový typ není podepsaný)](j-default-char-type-is-unsigned.md)<br/>
 [/GR (povolení informací o typu za běhu)](gr-enable-run-time-type-information.md)<br/>

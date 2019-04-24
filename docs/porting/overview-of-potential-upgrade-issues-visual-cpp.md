@@ -3,11 +3,11 @@ title: Přehled potenciálních problémů s upgradem (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
 ms.openlocfilehash: 1dac6ad201656dc83428aa5182a59cb8ff824651
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337294"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Přehled potenciálních problémů s upgradem (Visual C++)
 
@@ -182,4 +182,4 @@ Další informace najdete v tématu [Portování ze znakové sady MBCS do kódu 
 ## <a name="see-also"></a>Viz také:
 
 [Upgrade projektů z dřívějších verzí Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
-[Vylepšení shody C++ v sadě Visual Studio](../overview/cpp-conformance-improvements.md)
+[Vylepšení shody C++ se sadou Visual Studio](../overview/cpp-conformance-improvements.md)

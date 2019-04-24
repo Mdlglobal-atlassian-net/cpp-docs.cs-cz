@@ -9,11 +9,11 @@ helpviewer_keywords:
 - std::tuple_size
 ms.assetid: 73852fc5-eb68-41f1-8379-465cedc2314a
 ms.openlocfilehash: 1a069bcf5385a014438e36983e455ec3761ce727
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278940"
 ---
 # <a name="tuplesize-class"></a>tuple_size – třída;
 
@@ -123,6 +123,6 @@ int main()
 
 ## <a name="see-also"></a>Viz také:
 
-[\<řazené kolekce členů >](../standard-library/tuple.md)<br/>
+[\<tuple>](../standard-library/tuple.md)<br/>
 [Řazené kolekce členů](../standard-library/tuple-class.md)<br/>
 [tuple_element – třída](../standard-library/tuple-element-class-tuple.md)<br/>

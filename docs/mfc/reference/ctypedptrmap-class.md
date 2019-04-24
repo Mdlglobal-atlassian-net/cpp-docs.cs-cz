@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
 ms.openlocfilehash: bc164125f867cf3e2f27b74e69b826cbed31ff1d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58781793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323567"
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap Class
 
@@ -47,7 +47,7 @@ Třída objekt uložený v objektu map.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CTypedPtrMap::GetNextAssoc](#getnextassoc)|Získá další prvek pro iterace.|
 |[CTypedPtrMap::Lookup](#lookup)|Vrátí `KEY` na základě `VALUE`.|
@@ -56,7 +56,7 @@ Třída objekt uložený v objektu map.
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CTypedPtrMap::operator \[ \]](#operator_at)|Vloží prvek do objektu map.|
 

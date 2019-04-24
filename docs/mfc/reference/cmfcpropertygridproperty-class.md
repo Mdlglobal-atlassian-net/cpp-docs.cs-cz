@@ -167,11 +167,11 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
 ms.openlocfilehash: aa88cc2d4ee915b970157ee6ed280512e2352bcc
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58779024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62310450"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty Class
 
@@ -189,14 +189,14 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty)|Vytvoří `CMFCPropertyGridProperty` objektu.|
 |`CMFCPropertyGridProperty::~CMFCPropertyGridProperty`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::AddOption](#addoption)|Přidá novou položku seznamu do ovládacího prvku seznamu vlastností.|
 |[CMFCPropertyGridProperty::AddSubItem](#addsubitem)|Přidá podřízenou položku Vlastnosti.|
@@ -269,7 +269,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::CreateCombo](#createcombo)|Volá se rozhraním, chcete-li přidat pole se seznamem na vlastnost.|
 |[CMFCPropertyGridProperty::HasButton](#hasbutton)|Určuje, zda vlastnost obsahuje tlačítko.|
@@ -282,7 +282,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="data-members"></a>Datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::m_strFormatDouble](#m_strformatdouble)|Řetězec formátu pro hodnoty typu double.|
 |[CMFCPropertyGridProperty::m_strFormatFloat](#m_strformatfloat)|Řetězec formátu pro hodnoty typu float.|

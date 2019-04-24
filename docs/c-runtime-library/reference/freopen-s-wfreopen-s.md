@@ -30,11 +30,11 @@ helpviewer_keywords:
 - freopen_s function
 ms.assetid: ad25a4da-6ad4-476b-a86d-660b221ca84d
 ms.openlocfilehash: 2cdc16f21882c32933868000c6fd1d66accc74b8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332998"
 ---
 # <a name="freopens-wfreopens"></a>freopen_s, _wfreopen_s
 
@@ -68,7 +68,7 @@ Cesta k novému souboru.
 *Režim*<br/>
 Typ přístupu povolený.
 
-*Stream*<br/>
+*stream*<br/>
 Ukazatel na **souboru** struktury.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -85,7 +85,7 @@ Pokud některý z *pFile*, *cesta*, *režimu*, nebo *stream* jsou **NULL**, nebo
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tfreopen_s –**|**freopen_s –**|**freopen_s –**|**_wfreopen_s**|
+|**_tfreopen_s**|**freopen_s**|**freopen_s**|**_wfreopen_s**|
 
 **freopen_s –** se obvykle používá k přesměrování dříve otevřených souborů **stdin**, **stdout**, a **stderr** na soubory zadané uživatelem. Nový soubor spojený s *stream* se otevře s *režimu*, což je řetězec znaků určující typ požadovaného přístupu k souboru, následujícím způsobem:
 
@@ -121,7 +121,7 @@ Diskuzi o textovém a binárním režimu, najdete v článku [textového a biná
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**freopen_s –**|\<stdio.h>|
+|**freopen_s**|\<stdio.h>|
 |**_wfreopen_s**|\<stdio.h > nebo \<wchar.h >|
 
 Konzole není podporována v aplikacích pro univerzální platformu Windows (UPW). Standardní datový proud popisovačů, které jsou spojeny s konzolou, **stdin**, **stdout**, a **stderr**, musí být přesměrován před funkcí jazyka C za běhu můžete použít v aplikacích pro UWP . Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

@@ -1,32 +1,32 @@
 ---
-title: Základní typy (C + +/ CX)
+title: Základní typy (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
 ms.openlocfilehash: 2bd5be01b868fd3086c2064edfd4ca343db425be
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301447"
 ---
-# <a name="fundamental-types-ccx"></a>Základní typy (C + +/ CX)
+# <a name="fundamental-types-ccx"></a>Základní typy (C++/CX)
 
-Kromě standardní C++ předdefinovaných typů, C + +/ CX podporuje systém typů, který je definován architekturu Windows Runtime tím, že poskytuje – definice TypeDef pro Windows Runtime základních typů, která je namapována na standardní typy C++... C + +/ CX implementuje logická hodnota, znak a číselných základních typů. Tyto funkce TypeDef jsou definovány v `default` obor názvů, který nikdy musí být explicitně zadán. Kromě toho, C + +/ CX poskytuje obálky a konkrétní implementace rozhraní a některé typy Windows Runtime.
+Kromě standardní C++ vestavěné typy, C++/CX podporuje systém typů, který je definován architekturu Windows Runtime tím, že poskytuje – definice TypeDef pro Windows Runtime základních typů, která je namapována na úroveň standard C++ typy... C++/CX implementuje logická hodnota, znak a číselných základních typů. Tyto funkce TypeDef jsou definovány v `default` obor názvů, který nikdy musí být explicitně zadán. Kromě toho C++/CX poskytuje obálky a konkrétní implementace rozhraní a některé typy Windows Runtime.
 
 ## <a name="boolean-and-character-types"></a>Typy logické a znak
 
 Následující tabulka uvádí integrované datový typ Boolean a typy znaků a jejich ekvivalenty standard C++.
 
-|Obor názvů|C + +/ CX název|Definice|Standardní název jazyka C++|Rozsah hodnot|
+|Obor názvů|C++/CX název|Definice|Standardní název jazyka C++|Rozsah hodnot|
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|
 |Platforma|Boolean|Hodnotu typu Boolean. 8 bitů.|bool|**Hodnota TRUE** (nenulový) a **false** (nula)|
 |default|char16|Hodnota nečíselné 16-bit, který představuje bod kódu Unicode (UTF-16).|wchar_t<br /><br /> -nebo-<br /><br /> L'c.|(Určený standardu Unicode)|
 
 ## <a name="numeric-types"></a>Číselné typy
 
-V následující tabulce jsou uvedeny předdefinované číselné typy. Číselné typy jsou deklarovány v `default` výrazy TypeDef pro odpovídající C++ vestavěný typ oboru názvů a vyhoví se jim. Ne všechny C++ předdefinovaných typů (například dlouhý) jsou podporovány v modulu Windows Runtime. Konzistence a nejasnostem, doporučujeme použít C + +/ CX název.
+V následující tabulce jsou uvedeny předdefinované číselné typy. Číselné typy jsou deklarovány v `default` výrazy TypeDef pro odpovídající C++ vestavěný typ oboru názvů a vyhoví se jim. Ne všechny C++ předdefinovaných typů (například dlouhý) jsou podporovány v modulu Windows Runtime. Konzistence a nejasnostem, doporučujeme použít C++/CX název.
 
-|C + +/ CX název|Definice|Standardní název jazyka C++|Rozsah hodnot|
+|C++/CX název|Definice|Standardní název jazyka C++|Rozsah hodnot|
 |-----------------------------------------------------------------------|----------------|-------------------------|---------------------|
 |int8|8bitové podepsaný číselnou hodnotu.|podepsané char|-128 až 127.|
 |uint8|8bitové hodnoty bez znaménka číselná.|unsigned char|0 až 255|
@@ -41,7 +41,7 @@ V následující tabulce jsou uvedeny předdefinované číselné typy. Číseln
 
 ## <a name="windows-runtime-types"></a>Typy Windows Runtime
 
-V následující tabulce jsou uvedeny některé další typy, které jsou definovány pomocí architektury Windows Runtime a jsou integrované do jazyka C + +/ CX. Objekt a řetězce jsou odkazové typy. Ostatní jsou typy hodnot. Všechny tyto typy jsou deklarovány v `Platform` oboru názvů. Úplný seznam najdete v tématu [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md).
+V následující tabulce jsou uvedeny některé další typy, které jsou definovány pomocí architektury Windows Runtime a jsou integrované do C++/CX. Objekt a řetězce jsou odkazové typy. Ostatní jsou typy hodnot. Všechny tyto typy jsou deklarovány v `Platform` oboru názvů. Úplný seznam najdete v tématu [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md).
 
 |Název|Definice|
 |----------|----------------|

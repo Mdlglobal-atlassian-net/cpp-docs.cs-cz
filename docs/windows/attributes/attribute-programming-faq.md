@@ -8,11 +8,11 @@ helpviewer_keywords:
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
 ms.openlocfilehash: fd4c24e3933738d128dffd41018466c33b419de8
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59025095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148364"
 ---
 # <a name="attribute-programming-faq"></a>Nejčastější dotazy k programování s atributy
 
@@ -40,7 +40,7 @@ Toto téma poskytuje odpovědi na následující nejčastější dotazy:
 
 HRESULT je jednoduchý datový typ, který se často používá jako návratovou hodnotu tak, že atributy a knihovny ATL obecně. Následující tabulka popisuje různé hodnoty. Další hodnoty jsou obsaženy v souboru winerror.h záhlaví.
 
-|Name|Popis|Hodnota|
+|Název|Popis|Value|
 |----------|-----------------|-----------|
 |S_OK|Operace byla úspěšná.|0x00000000|
 |E_UNEXPECTED, JE-|Došlo k neočekávané chybě|0x8000FFFF|

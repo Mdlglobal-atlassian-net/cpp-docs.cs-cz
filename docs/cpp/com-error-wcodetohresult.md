@@ -7,15 +7,15 @@ helpviewer_keywords:
 - WCodeToHRESULT method [C++]
 ms.assetid: 0ec43a4b-ca91-42d5-b270-3fde9c8412ea
 ms.openlocfilehash: f2fc84be53d95754d21c30eaea8dd981447453d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154926"
 ---
 # <a name="comerrorwcodetohresult"></a>_com_error::WCodeToHRESULT
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Mapuje 16bitové *wCode* 32-bit HRESULT.
 
@@ -29,7 +29,7 @@ static HRESULT WCodeToHRESULT(
 
 #### <a name="parameters"></a>Parametry
 
-*WCode*<br/>
+*wCode*<br/>
 16bitové hodnoty *wCode* namapována na 32bitové HRESULT.
 
 ## <a name="return-value"></a>Návratová hodnota

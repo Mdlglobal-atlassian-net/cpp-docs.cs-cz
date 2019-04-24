@@ -3,11 +3,11 @@ title: /HIGHENTROPYVA (podpora 64bitové technologie ASLR)
 ms.date: 06/12/2018
 ms.assetid: fe35f9f7-d28e-4694-9aeb-a79db06168e0
 ms.openlocfilehash: 5ecbbf8bbd8e74f80f2f5b2d7df0d2ef544112fc
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291597"
 ---
 # <a name="highentropyva-support-64-bit-aslr"></a>/HIGHENTROPYVA (podpora 64bitové technologie ASLR)
 
@@ -35,8 +35,8 @@ Pro **/highentropyva** mají nějaký efekt v okamžiku načtení [možnost/Dyna
 
 ## <a name="see-also"></a>Viz také:
 
-- [Odkaz na MSVC linkeru](linking.md)
-- [Možnosti Linkeru MSVC](linker-options.md)
+- [Referenční zdroje k linkeru MSVC](linking.md)
+- [Možnosti linkeru MSVC](linker-options.md)
 - [/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)
 - [/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)
 - [Obrana zabezpečení ISV softwaru Windows](https://msdn.microsoft.com/library/bb430720.aspx)

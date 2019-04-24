@@ -17,11 +17,11 @@ helpviewer_keywords:
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
 ms.openlocfilehash: d3721f3624a64a24de0a5458d88de4836b07a9c1
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330840"
 ---
 # <a name="string-and-character-literals--c"></a>Řetězcové a znakové literály (C++)
 
@@ -112,15 +112,15 @@ Existují tři typy sekvence úniku: jednoduchá, osmičková a šestnáctková.
 | Zpětné lomítko | \\\\ |
 | horizontální tabulátor | \\t |
 | otazník | ? nebo \\? |
-| vertikální tabulátor | \\V |
+| vertikální tabulátor | \\v |
 | jednoduché uvozovky | \\' |
-| BACKSPACE | \\B |
+| BACKSPACE | \\b |
 | dvojité uvozovky | \\" |
 | návrat na začátek řádku | \\r |
 | znak null | \\0 |
-| Posun strany | \\F |
+| Posun strany | \\f |
 | osmičkové | \\ooo |
-| upozornění (zvonek) | \\A |
+| upozornění (zvonek) | \\a |
 | hexadecimální | \\xhhh |
 
 Následující kód ukazuje příklady použití literály běžný znak řídicí znaky. Podle stejné syntaxe řídicí sekvence je platný pro další znak literálu typy.
@@ -145,7 +145,7 @@ int main() {
 }
 ```
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 K vytvoření hodnoty z běžný znak literálu, (ta bez předpony), kompilátor převede znak nebo posloupnost znaků mezi jednoduchými uvozovkami na 8bitové hodnoty v rámci 32bitové celé číslo. Více znaků v literálu vyplnit odpovídající bajtů podle potřeby od nejvyšší k nejnižší. Chcete-li vytvořit **char** hodnota, kompilátor má nejnižší bajt. Chcete-li vytvořit **wchar_t** nebo `char16_t` hodnota, kompilátor má nižší řád slova. Kompilátor vás upozorní, že výsledek je zkrácen, pokud všechny bity jsou nastaveny nad přiřazené bajtů nebo word.
 
@@ -254,7 +254,7 @@ auto s4 = U"hello"; // const char32_t*
 
 ### <a name="raw-string-literals-c11"></a>Literály nezpracovaných řetězců (C ++ 11)
 
-Nezpracovaný Textový literál je pole zakončené znakem null – znak typu –, která obsahuje libovolný grafický znak včetně dvojité uvozovky ("), zpětného lomítka (\\), nebo znak nového řádku. Nezpracované řetězcové literály se často používají v regulárních výrazech, které používají třídy znaků a v řetězcích HTML a XML. Příklady najdete v následujícím článku: [Bjarne Stroustrup – nejčastější dotazy o C ++ 11](http://www.stroustrup.com/C++11FAQ.html).
+Nezpracovaný Textový literál je pole zakončené znakem null – znak typu –, která obsahuje libovolný grafický znak včetně dvojité uvozovky ("), zpětného lomítka (\\), nebo znak nového řádku. Nezpracované řetězcové literály se často používají v regulárních výrazech, které používají třídy znaků a v řetězcích HTML a XML. Příklady naleznete v následujícím článku: [Bjarne Stroustrup – nejčastější dotazy o C ++ 11](http://www.stroustrup.com/C++11FAQ.html).
 
 ```cpp
 // represents the string: An unescaped \ character
@@ -326,9 +326,9 @@ Maximální délka řetězce literálu je 65535 bajtů. Toto omezení platí pro
 
 Protože (nezahrnuje std:string literály) řetězcové literály jsou konstanty, pokus upravit je – například `str[2] = 'A'`– způsobí chybu kompilátoru.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
-V jazyce Visual C++ můžete použít textový literál k inicializaci ukazatele na nekonstantní **char** nebo **wchar_t**. To je povoleno v kódu C99, ale je zastaralé v C ++ 98 odebírají a v C ++ 11. Pokus upravit řetězec způsobuje narušení přístupu, jako v následujícím příkladu:
+Ve Vizuálu C++ můžete použít textový literál k inicializaci ukazatele na nekonstantní **char** nebo **wchar_t**. To je povoleno v kódu C99, ale je zastaralé v C ++ 98 odebírají a v C ++ 11. Pokus upravit řetězec způsobuje narušení přístupu, jako v následujícím příkladu:
 
 ```cpp
 wchar_t* str = L"hello";

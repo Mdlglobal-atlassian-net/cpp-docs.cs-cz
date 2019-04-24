@@ -123,11 +123,11 @@ helpviewer_keywords:
 - _ldsin
 - _fdsin
 ms.openlocfilehash: 230d0def145bcb443437b59303b2b36e348da2bb
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333609"
 ---
 # <a name="floating-point-primitives"></a>S plovoucí desetinnou čárkou primitiv
 
@@ -200,7 +200,7 @@ Argumenty funkce s plovoucí desetinnou čárkou.
 
 Těchto primitivních hodnot s plovoucí desetinnou čárkou přijímají dva argumenty, *x* a *y*a vrátí hodnotu, která zobrazuje jejich pořadí vztahu, vyjádřené jako bitový nebo tyto konstanty definované v math.h:
 
-| Hodnota | Popis |
+| Value | Popis |
 |------------|-----------------|
 | **_FP_LT** | *x* lze považovat za méně než *y* |
 | **_FP_EQ** | *x* lze považovat za rovna *y* |
@@ -227,7 +227,7 @@ Ukazatel na argument typu s plovoucí desetinnou čárkou.
 
 Implementace těchto primitivních hodnot s plovoucí desetinnou čárkou C++ verze funkcí CRT [fpclassify –](fpclassify.md) pro typy s plovoucí desetinnou čárkou. Argument *x* se vyhodnotí a vrátí se jako jeden z následujících konstant, definované v math.h klasifikace:
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 | **FP_NAN** | Tichý, signalizace nebo neurčitý NaN |
 | **FP_INFINITE** | Kladné nebo záporné nekonečno |
@@ -427,10 +427,10 @@ Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-
 [fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>
-[isinf –](isinf.md)<br/>
+[isinf](isinf.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
 [isnormal](isnormal.md)<br/>
-[Cos cosf –, cosl –](cos-cosf-cosl.md)<br/>
+[cos, cosf, cosl](cos-cosf-cosl.md)<br/>
 [frexp – frexpf –, frexpl –](frexp.md)<br/>
 [ldexp – ldexpf – a ldexpl](ldexp.md)<br/>
 [protokol, logf –, logl, log10, log10f –, log10l](log-logf-log10-log10f.md)<br/>

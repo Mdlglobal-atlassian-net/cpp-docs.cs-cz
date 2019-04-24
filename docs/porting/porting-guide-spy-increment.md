@@ -3,11 +3,11 @@ title: 'Průvodce přenosem: Spy++'
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
 ms.openlocfilehash: b28de2396ba94578a8d06038a1191be42dce49ea
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337421"
 ---
 # <a name="porting-guide-spy"></a>Průvodce přenosem: Spy++
 
@@ -673,5 +673,5 @@ Portování nástroje Spy ++ od původního kódu Visual C++ 6.0 na nejnovějš�
 
 ## <a name="see-also"></a>Viz také:
 
-[Portování a upgradování: Příklady a případové studie](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[Přenos a upgrade: Příklady a případové studie](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Předchozí Případová studie: COM Spy](../porting/porting-guide-com-spy.md)

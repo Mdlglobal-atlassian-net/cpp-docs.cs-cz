@@ -26,11 +26,11 @@ helpviewer_keywords:
 - file handles [C++], operating system
 ms.assetid: 0bdd728a-4fd8-410b-8c9f-01a121135196
 ms.openlocfilehash: beab4e4308bc7bcde287366b78671f61a89f8827
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332205"
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
@@ -46,7 +46,7 @@ intptr_t _get_osfhandle(
 
 ### <a name="parameters"></a>Parametry
 
-*FD*<br/>
+*fd*<br/>
 Existující popisovač souboru.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -61,7 +61,7 @@ Zavřete soubor, jehož popisovač souboru operačního systému (OS) se získá
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_get_osfhandle**|\<IO.h >|
+|**_get_osfhandle**|\<io.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

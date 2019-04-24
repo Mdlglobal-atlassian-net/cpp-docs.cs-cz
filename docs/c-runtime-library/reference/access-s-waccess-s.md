@@ -31,11 +31,11 @@ helpviewer_keywords:
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
 ms.openlocfilehash: 17d19527323f3e97edecd22ca7c0a0262b1cfbad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335682"
 ---
 # <a name="accesss-waccesss"></a>_access_s, _waccess_s
 
@@ -68,7 +68,7 @@ Každá funkce vrátí hodnotu 0, pokud má soubor dané režimu. Funkce vrátí
 
 |Hodnota errno|Podmínka|
 |-|-|
-`EACCES`|Přístup byl odepřen. Nastavení oprávnění k souboru neumožňuje zadaný přístup.
+`EACCES`|Přístup se odepřel. Nastavení oprávnění k souboru neumožňuje zadaný přístup.
 `ENOENT`|Název souboru nebo cesta nebyla nalezena.
 `EINVAL`|Neplatný parametr.
 
@@ -101,7 +101,7 @@ Tyto funkce ověřují své parametry. Pokud *cesta* má hodnotu NULL nebo *rež
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_access_s**|\<IO.h >|\<errno.h>|
+|**_access_s**|\<io.h>|\<errno.h>|
 |**_waccess_s**|\<wchar.h > nebo \<io.h >|\<errno.h>|
 
 ## <a name="example"></a>Příklad

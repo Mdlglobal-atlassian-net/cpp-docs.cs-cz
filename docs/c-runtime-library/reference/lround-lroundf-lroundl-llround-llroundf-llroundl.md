@@ -37,11 +37,11 @@ helpviewer_keywords:
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
 ms.openlocfilehash: a1406f84179df555125b908caa13a0cde6516597
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285842"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround, lroundf, lroundl, llround, llroundf, llroundl
 
@@ -93,7 +93,7 @@ Hodnota s plovoucí desetinnou čárkou k zaokrouhlení.
 
 |Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|ROZMEZÍ **QNAN**, **AJÍT**|žádná|**_DOMÉNA**|
+|± **QNAN**, **IND**|žádná|**_DOMAIN**|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -103,7 +103,7 @@ Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **lrou
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**lround –**, **lroundf –**, **lroundl –**, **llround –**, **llroundf –**, **llroundl –**|\<Math.h >|
+|**lround –**, **lroundf –**, **lroundl –**, **llround –**, **llroundf –**, **llroundl –**|\<math.h>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
@@ -151,5 +151,5 @@ lroundl(-3.500000) is -4
 [fmod, fmodf](fmod-fmodf.md)<br/>
 [lrint, lrintf, lrintl, llrint, llrintf, llrintl](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)<br/>
 [round, roundf, roundl](round-roundf-roundl.md)<br/>
-[nearbyint – nearbyintf –, nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)<br/>
+[nearbyint, nearbyintf, nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)<br/>
 [rint, rintf, rintl](rint-rintf-rintl.md)<br/>

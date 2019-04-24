@@ -34,11 +34,11 @@ helpviewer_keywords:
 - temporary files [C++]
 ms.assetid: 055eb539-a8c2-4a7d-be54-f5b6d1eb5c85
 ms.openlocfilehash: c1c5f0ee12c9e07d76405014bb4a6a6ecc7d97e6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156509"
 ---
 # <a name="mktemp-wmktemp"></a>_mktemp, _wmktemp
 
@@ -80,7 +80,7 @@ Každá z těchto funkcí vrací ukazatel na upravený nameTemplate. Funkce vrá
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tmktemp –**|**_mktemp**|**_mktemp**|**_wmktemp**|
+|**_tmktemp**|**_mktemp**|**_mktemp**|**_wmktemp**|
 
 *NameTemplate* argument má tvar *základní*XXXXXX, kde *základní* je součástí nový název souboru, který zadáte, a každá X je zástupný symbol pro znak poskytl **_mktemp –**. Každý zástupný znak v *nameTemplate* musí být velké písmeno x **_mktemp –** zachová *základní* a nahradí první Koncové X abecední znak. **_mktemp –** nahrazuje následující koncové bezpodmínečný s hodnotou pět číslic; tato hodnota je jedinečné číslo identifikující volání procesu, nebo v programech s více vlákny, volajícího vlákna.
 
@@ -110,7 +110,7 @@ V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají nověj
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_mktemp**|\<IO.h >|
+|**_mktemp**|\<io.h>|
 |**_wmktemp**|\<IO.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

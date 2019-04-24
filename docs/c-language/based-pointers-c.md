@@ -8,17 +8,17 @@ helpviewer_keywords:
 - based addressing
 ms.assetid: b5446920-89e0-4e2f-91f3-1f2a769a08e8
 ms.openlocfilehash: e5d8c529adfb92c9db1fdcc5a38f688853606d5d
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62327428"
 ---
 # <a name="based-pointers-c"></a>Základní ukazatelé (C)
 
 **Microsoft Specific**
 
-[__based (referenční dokumentace jazyka C++)](../cpp/based-pointers-cpp.md)
+[__based (C++ odkaz)](../cpp/based-pointers-cpp.md)
 
 Pro Microsoft 32bitové a 64bitové kompilátory jazyka C je 32bitová nebo 64bitová verze posun z 32bitové nebo 64bitové ukazatele na základní ukazatel. Na základě adresování je užitečné pro kontrolu nad části, kde jsou přidělené objekty výkonu, a tím zmenšit velikost spustitelný soubor a zvýšit rychlost provádění. Obecně je formulář pro určení ukazatele
 

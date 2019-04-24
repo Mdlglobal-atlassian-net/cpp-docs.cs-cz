@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _SECURE_SCL
 ms.assetid: 4ffbc788-cc12-4c6a-8cd7-490081675086
 ms.openlocfilehash: dcfaee2906136dffbe79a49f089a079104112e78
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295744"
 ---
 # <a name="securescl"></a>_SECURE_SCL
 
@@ -41,4 +41,4 @@ Informace o tom, jak zakázat varování o kontrolovaných iterátorech naleznet
 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)<br/>
 [Checked – iterátory](../standard-library/checked-iterators.md)<br/>
 [Podpora ladění iterátorů](../standard-library/debug-iterator-support.md)<br/>
-[Bezpečné knihovny: standardní knihovna C++](../standard-library/safe-libraries-cpp-standard-library.md)<br/>
+[Bezpečné knihovny: Standardní knihovna C++](../standard-library/safe-libraries-cpp-standard-library.md)<br/>

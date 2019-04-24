@@ -11,11 +11,11 @@ helpviewer_keywords:
 - import libraries, overriding default name
 ms.assetid: fe8f71ab-7055-41b5-8ef8-2b97cfa4a432
 ms.openlocfilehash: dc9a9220d55f7831a00f70ec155cc5b57a695818
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269983"
 ---
 # <a name="implib-name-import-library"></a>/IMPLIB (knihovna importu názvů)
 
@@ -54,5 +54,5 @@ ODKAZ ignoruje /IMPLIB při knihovnu importu se vytváří. Pokud nejsou zadány
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)

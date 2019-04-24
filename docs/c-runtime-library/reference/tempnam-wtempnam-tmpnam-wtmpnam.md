@@ -41,11 +41,11 @@ helpviewer_keywords:
 - _wtempnam function
 ms.assetid: 3ce75f0f-5e30-42a6-9791-8d7cbfe70fca
 ms.openlocfilehash: 29fa8fc836b1b52bcf66247b3f6aaba47b8c2eaa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62284864"
 ---
 # <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
 
@@ -75,7 +75,7 @@ wchar_t *_wtmpnam(
 *prefix*<br/>
 Řetězec, který bude pre čekajícího na názvy vrácené **_tempnam –**.
 
-*adresář*<br/>
+*dir*<br/>
 Cesta v názvu souboru používá, pokud neexistuje žádná proměnná prostředí TMP, nebo pokud TMP není platný adresář.
 
 *str*<br/>
@@ -112,7 +112,7 @@ Pokud **_DEBUG** a **_CRTDBG_MAP_ALLOC** jsou definovány, **_tempnam –** a **
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_ttmpnam –**|**tmpnam**|**tmpnam**|**_wtmpnam**|
+|**_ttmpnam**|**tmpnam**|**tmpnam**|**_wtmpnam**|
 |**_ttempnam**|**_tempnam**|**_tempnam**|**_wtempnam**|
 
 ## <a name="requirements"></a>Požadavky
@@ -120,7 +120,7 @@ Pokud **_DEBUG** a **_CRTDBG_MAP_ALLOC** jsou definovány, **_tempnam –** a **
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**_tempnam**|\<stdio.h>|
-|**_wtempnam –**, **_wtmpnam –**|\<stdio.h > nebo \<wchar.h >|
+|**_wtempnam**, **_wtmpnam**|\<stdio.h > nebo \<wchar.h >|
 |**tmpnam**|\<stdio.h>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

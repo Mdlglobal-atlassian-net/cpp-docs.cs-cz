@@ -31,11 +31,11 @@ helpviewer_keywords:
 - CUserTool [MFC], m_strLabel
 ms.assetid: 7c287d3e-d012-488d-b4e1-aa0f83f294bb
 ms.openlocfilehash: 5bb0ae073b722c97e8e30158f8f7832fd88b2fbc
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58779037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323421"
 ---
 # <a name="cusertool-class"></a>Cusertool – třída
 
@@ -51,7 +51,7 @@ class CUserTool : public CObject
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CUserTool::CopyIconToClipboard](#copyicontoclipboard)||
 |[CUserTool::DrawToolIcon](#drawtoolicon)|Kreslení v obdélníku zadaného ikonu uživatele nástroje.|
@@ -64,13 +64,13 @@ class CUserTool : public CObject
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CUserTool::LoadDefaultIcon](#loaddefaulticon)|Načte výchozí ikonu pro uživatelský nástroj.|
 
 ### <a name="data-members"></a>Datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CUserTool::m_strArguments](#m_strarguments)|Argumenty příkazového řádku pro nástroj pro uživatele.|
 |[CUserTool::m_strInitialDirectory](#m_strinitialdirectory)|Počáteční adresář pro nástroj pro uživatele.|

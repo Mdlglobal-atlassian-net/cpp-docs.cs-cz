@@ -1,5 +1,5 @@
 ---
-title: 'TN039: MFC-OLE – implementace automatizace'
+title: 'TN039: Knihovny MFC-OLE – implementace automatizace'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.mfc.ole
@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Automation, MFC COM interface entry points
 ms.assetid: 765fa3e9-dd54-4f08-9ad2-26e0546ff8b6
 ms.openlocfilehash: cd6f8d681ef7e6517f2172ca6b22b13723a962fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305486"
 ---
 # <a name="tn039-mfcole-automation-implementation"></a>TN039: MFC/OLE – implementace automatizace
 
@@ -120,7 +120,7 @@ Název třídy.
 *pszName*<br/>
 Externí název vlastnosti.
 
-*Jméno*<br/>
+*memberName*<br/>
 Název členské proměnné, ve kterém je uložené vlastnosti.
 
 *pfnAfterSet*<br/>
@@ -156,7 +156,7 @@ Externí název vlastnosti.
 *memberGet*<br/>
 Název členské funkce použít k získání vlastnosti.
 
-*Členů*<br/>
+*memberSet*<br/>
 Název členské funkce lze nastavit vlastnost.
 
 *vtPropType*<br/>
@@ -228,7 +228,7 @@ Název třídy.
 *pszName*<br/>
 Externí název vlastnosti.
 
-*identifikátor DISPID*<br/>
+*dispid*<br/>
 Pevná hodnota DISPID pro vlastnosti nebo metody.
 
 *pfnGet*<br/>
@@ -237,7 +237,7 @@ Název členské funkce použít k získání vlastnosti.
 *pfnSet*<br/>
 Název členské funkce lze nastavit vlastnost.
 
-*Jméno*<br/>
+*memberName*<br/>
 Název členské proměnné pro mapování na vlastnost
 
 *vtPropType*<br/>

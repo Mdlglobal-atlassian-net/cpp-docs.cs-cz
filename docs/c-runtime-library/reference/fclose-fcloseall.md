@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _fcloseall function
 ms.assetid: c3c6ea72-92c6-450a-a33e-3e568d2784a4
 ms.openlocfilehash: 4713ffb7ecdf8da73e5f949bbef7be124dfaf28a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334876"
 ---
 # <a name="fclose-fcloseall"></a>fclose, _fcloseall
 
@@ -47,7 +47,7 @@ int _fcloseall( void );
 
 ### <a name="parameters"></a>Parametry
 
-*Stream*<br/>
+*stream*<br/>
 Ukazatel na **souboru** struktury.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -62,7 +62,7 @@ Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/er
 
 **_Fcloseall** funkce zavře všechny otevřené datových proudů s výjimkou **stdin**, **stdout**, **stderr** (a v operačním systému MS-DOS, **_stdaux**  a **_stdprn**). Také se zavře a odstraní všechny dočasných souborů vytvořených databázovým **tmpfile –**. V obou funkcí, před uzavírací vyprázdní všechny vyrovnávací paměti přidružený datový proud. System – přidělené vyrovnávací paměti se vydávají při datový proud je uzavřen. Vyrovnávací paměti přiřazené uživatelem s **setbuf –** a **setvbuf –** nedojde k uvolnění automaticky.
 
-**Poznámka:** při těchto funkcí slouží k zavření datového proudu, podkladového popisovače souborů a operačním systémem popisovač souboru (nebo soketu) jsou uzavřeny, a také datového proudu. Proto pokud soubor byl původně otevřen jako soubor zpracování nebo popisovač souboru a je uzavřen **fclose –**, proveďte volání není také **_Zavřít** na zavřít popisovač souboru; nelze volat funkci Win32  **CloseHandle** zavřít popisovač souboru.
+**Poznámka:** V případě tyto funkce používají zavřete datový proud, podkladového popisovače souborů a operačním systémem popisovač souboru (nebo soketu) jsou uzavřeny, a také datového proudu. Proto pokud soubor byl původně otevřen jako soubor zpracování nebo popisovač souboru a je uzavřen **fclose –**, proveďte volání není také **_Zavřít** na zavřít popisovač souboru; nelze volat funkci Win32  **CloseHandle** zavřít popisovač souboru.
 
 **fclose –** a **_fcloseall** přidat kód pro ochranu před rušením z jiných vláken. Nezamykací verze nástroje **fclose –**, naleznete v tématu **_fclose_nolock –**.
 

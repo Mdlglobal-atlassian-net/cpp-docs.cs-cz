@@ -1,5 +1,5 @@
 ---
-title: fabs – fabsf –, fabsl
+title: fabs, fabsf, fabsl
 ms.date: 04/05/2018
 apiname:
 - fabsf
@@ -33,13 +33,13 @@ helpviewer_keywords:
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
 ms.openlocfilehash: 8df36c06fb3ca9af9be4cf704998946b3eaf9a6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334941"
 ---
-# <a name="fabs-fabsf-fabsl"></a>fabs – fabsf –, fabsl
+# <a name="fabs-fabsf-fabsl"></a>fabs, fabsf, fabsl
 
 Vypočítá absolutní hodnotu argumentu s plovoucí desetinnou čárkou.
 
@@ -74,7 +74,7 @@ Hodnota s plovoucí desetinnou čárkou.
 
 |Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|ROZMEZÍ QNAN, AJÍT|žádná|_DOMÉNA|
+|ROZMEZÍ QNAN, AJÍT|žádná|_DOMAIN|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -84,7 +84,7 @@ Jazyk C++ umožňuje přetížení, takže můžete volat přetížení **fabs �
 
 |Funkce|Požadovaná hlavička C|Požadované hlaviček jazyka C++|
 |--------------|-----------------------|---------------------------|
-|**fabs –**, **fabsf –**, **fabsl**|\<Math.h >|\<cmath > nebo \<math.h >|
+|**fabs –**, **fabsf –**, **fabsl**|\<math.h>|\<cmath > nebo \<math.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

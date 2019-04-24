@@ -39,11 +39,11 @@ helpviewer_keywords:
 - mbcjistojms_l function
 ms.assetid: dece5127-b337-40a4-aa10-53320a2c9432
 ms.openlocfilehash: 22cf8eeb5f99b6abee624aa3b1d06246d7230652
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156821"
 ---
 # <a name="mbcjistojms-mbcjistojmsl-mbcjmstojis-mbcjmstojisl"></a>_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l
 
@@ -99,9 +99,9 @@ V dřívějších verzích **_mbcjistojms –** a **_mbcjmstojis –** byly vol�
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_mbcjistojms –**|\<Mbstring.h >|
+|**_mbcjistojms**|\<Mbstring.h >|
 |**_mbcjistojms_l**|\<Mbstring.h >|
-|**_mbcjmstojis –**|\<Mbstring.h >|
+|**_mbcjmstojis**|\<Mbstring.h >|
 |**_mbcjmstojis_l**|\<Mbstring.h >|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

@@ -27,11 +27,11 @@ helpviewer_keywords:
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
 ms.openlocfilehash: 03c39802301406bc4250328983c8cf8bad94497f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331763"
 ---
 # <a name="getdiskfree"></a>_getdiskfree
 
@@ -51,10 +51,10 @@ unsigned _getdiskfree(
 
 ### <a name="parameters"></a>Parametry
 
-*Jednotky*<br/>
+*drive*<br/>
 Disková jednotka, pro které chcete informace.
 
-*DriveInfo*<br/>
+*driveinfo*<br/>
 A **_diskfree_t –** struktura, která naplní se informace o jednotce.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -80,7 +80,7 @@ Tato funkce ověřuje své parametry. Pokud *driveinfo* ukazatel **NULL** nebo *
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_getdiskfree**|\<Direct.h >|
+|**_getdiskfree**|\<direct.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

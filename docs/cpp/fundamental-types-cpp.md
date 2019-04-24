@@ -44,11 +44,11 @@ helpviewer_keywords:
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
 ms.openlocfilehash: f4af392ed559349b0e49fd26f3ecb4406a70b74b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153798"
 ---
 # <a name="fundamental-types--c"></a>Základní typy (C++)
 
@@ -66,7 +66,7 @@ Následující tabulka popisuje omezení velikostí písma. Tato omezení jsou n
 
 ### <a name="fundamental-types-of-the-c-language"></a>Základní typy jazyka C++
 
-|Kategorie|Typ|Obsah|
+|Kategorie|Type|Obsah|
 |--------------|----------|--------------|
 |Celočíselný typ|**char**|Typ **char** je integrálový typ, který obvykle obsahuje členy znakové sady spuštění základní – ve výchozím nastavení, je to ASCII v Microsoft C++.<br /><br /> Kompilátor C++ zpracovává proměnné typu **char**, **podepsané char**, a **unsigned char** tak, že má různé typy. Proměnné typu **char** jsou povýšeny do **int** jakoby se jednalo o typ **podepsané char** ve výchozím nastavení, pokud není použita možnost kompilace/j. V tomto případě jsou považovány za typ **unsigned char** a jsou povýšeny do **int** bez přípony sign.|
 ||**bool**|Typ **bool** je integrálový typ, který může mít jednu ze dvou hodnot **true** nebo **false**. Velikost není zadána.|
@@ -77,16 +77,16 @@ Následující tabulka popisuje omezení velikostí písma. Tato omezení jsou n
 ||**Long long**|Větší než nepodepsaný **dlouhé**.<br /><br /> Objekty typu **long long** lze deklarovat jako **podepsáno long long** nebo **unsigned long long**. **podepsáno long long** je synonymum pro **long long**.|
 ||**wchar_t**, **__wchar_t**|Proměnné typu **wchar_t** označuje typ širokého znaku nebo vícebajtového znaku. Ve výchozím nastavení **wchar_t** je nativní typ, ale můžete použít [/Zc:wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) aby **wchar_t** definice typu **unsigned short**. **__Wchar_t** typ je synonymum pro nativní specifické pro společnost Microsoft **wchar_t** typu.<br /><br /> Použijte předponu L před znak nebo textový literál, chcete-li určit typ širokého znaku.|
 |Plovoucí desetinná čárka|**float**|Typ **float** je nejmenší plovoucí typu bodu.|
-||**double**|Typ **double** je plovoucí typ bodu, který je větší než nebo rovno typu **float**, ale kratší než nebo rovno velikosti typu **long double**.<br /><br /> Specifické pro Microsoft: reprezentace **long double** a **double** je stejný jako. Ale **long double** a **double** jsou zvláštní typy.|
+||**double**|Typ **double** je plovoucí typ bodu, který je větší než nebo rovno typu **float**, ale kratší než nebo rovno velikosti typu **long double**.<br /><br /> Specifické pro Microsoft: Reprezentace **long double** a **double** je stejný jako. Ale **long double** a **double** jsou zvláštní typy.|
 ||**typ long double**|Typ **long double** je plovoucí typ bodu, který je větší než nebo rovno typu **double**.|
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Následující tabulka uvádí velikost úložiště potřebného pro základní typy v Microsoft C++.
 
 ### <a name="sizes-of-fundamental-types"></a>Velikosti základních typů
 
-|Typ|Velikost|
+|Type|Velikost|
 |----------|----------|
 |**BOOL**, **char**, **unsigned char**, **podepsané char**, **__int8**|1 bajt|
 |**__int16**, **krátký**, **unsigned short**, **wchar_t**, **__wchar_t**|2 bajty|

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - '& operator, bitwise operators'
 ms.assetid: e22127b1-9a2d-4876-b01d-c8f72cec3317
 ms.openlocfilehash: 2133aaa5faa0f4bef7391fb5c0e7e0eb51fd4e69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325790"
 ---
 # <a name="c-bitwise-operators"></a>Bitové operátory jazyka C
 
@@ -27,7 +27,7 @@ Bitové operátory provádějí operace bitový- a (**&**), bitový exkluzivní 
 
 *Výraz AND*: &nbsp; &nbsp; *výrazu rovnosti* &nbsp; &nbsp; *výraz AND* **&** *výrazu rovnosti*
 
-*výraz exkluzivní OR*: &nbsp; &nbsp; *výraz AND* &nbsp; &nbsp; *výraz exkluzivní OR* **^** *Výraz AND*
+*exclusive-OR-expression*: &nbsp;&nbsp;*Výraz AND* &nbsp; &nbsp; *výraz exkluzivní OR* **^** *výraz AND*
 
 *Inkluzivní výraz OR*: &nbsp; &nbsp; *výraz exkluzivní OR* &nbsp; &nbsp; *včetně výraz OR* &#124; *výraz exkluzivní OR*
 
@@ -63,7 +63,7 @@ n = i ^ j;
 
 Bitový inkluzivní OR v druhém příkladu výsledkem hodnota 0xABCD (šestnáctkově), zatímco bitový exkluzivní OR v třetí příklad vytváří 0xCD (šestnáctkově).
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Výsledky bitová operace na celá čísla se znaménkem, je definováno implementací podle standardu ANSI C. Kompilátor Microsoft C bitových operací s celými čísly se znaménkem fungují stejně jako bitové operace s celými čísly bez znaménka. Například `-16 & 99` může být vyjádřena v binárním souboru jako
 

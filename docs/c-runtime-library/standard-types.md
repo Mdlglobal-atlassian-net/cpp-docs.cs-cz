@@ -161,11 +161,11 @@ helpviewer_keywords:
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
 ms.openlocfilehash: 85ebe9052d9e8bd18dfc9b3b123871e2e5acda4e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267790"
 ---
 # <a name="standard-types"></a>Standardní typy
 
@@ -189,7 +189,7 @@ Běhové knihovny Microsoft definuje následující standardní typy a definice 
 |int_fast64_t, uint_fast64_t|unsigned long long long long.|
 |intmax_t, uintmax_t|unsigned long long long long.|
 
-|Typ|Popis|Deklarováno v|
+|Type|Popis|Deklarováno v|
 |----------|-----------------|-----------------|
 |`clock_t` (dlouhé)|Ukládá časové hodnoty; používá [hodiny](../c-runtime-library/reference/clock.md).|TIME.H|
 |`_complex` Struktura|Ukládá reálné a imaginární části komplexních čísel. používá [_cabs](../c-runtime-library/reference/cabs.md).|MATH.H|

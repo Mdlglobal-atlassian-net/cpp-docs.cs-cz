@@ -5,11 +5,11 @@ f1_keywords:
 - <future>
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
 ms.openlocfilehash: 189a9f16b65ae74fc2a86bee62bf8bd548c486aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159857"
 ---
 # <a name="ltfuturegt"></a>&lt;budoucí&gt;
 
@@ -40,7 +40,7 @@ Funkce šablony `async` a tříd šablon `promise` a `packaged_task` asynchronn�
 
 Každý z tříd šablon `promise`, `future`, a `shared_future` má specializaci pro typ **void** a částečnou specializaci pro ukládání a načítání hodnoty podle odkazu. Tyto specializace se liší od primární šablony pouze v podpisy a sémantika funkcí, které ukládají a načítají vrácené hodnoty.
 
-Třídy šablon `future` a `shared_future` není nikdy blokována v jejich destruktory, s výjimkou v jednom případě, že je zachována z důvodu zpětné kompatibility: na rozdíl od jiných termínu pro `future`– nebo poslední `shared_future`–, který je připojen k úloze Práce s `std::async`je destruktor blokován, pokud úkol nebyl dokončen, tedy blokuje, pokud toto vlákno dosud nevolalo `.get()` nebo `.wait()` a je stále spuštěn úkol. Byla přidána následující poznámka použitelnost pro popis `std::async` koncept standardu: "[Poznámka: Pokud budoucí získané z std::async je přesunut mimo místní rozsah, jiný kód, který se používá v budoucnosti musí mějte na paměti, že do budoucna destruktor může blokovat pro sdílený stav připraveno. k – poslední poznámku] "ve všech ostatních případech `future` a `shared_future` destruktory jsou vyžadovány a zaručeně není nikdy blokována.
+Třídy šablon `future` a `shared_future` není nikdy blokována v jejich destruktory, s výjimkou v jednom případě, že je zachována z důvodu zpětné kompatibility: Na rozdíl od jiných termínu pro `future`– nebo poslední `shared_future`–, který je připojen k úloze spuštěné pomocí `std::async`je destruktor blokován, pokud úkol nebyl dokončen, tedy blokuje, pokud toto vlákno dosud nevolalo `.get()` nebo `.wait()`a je stále spuštěn úkol. Byla přidána následující poznámka použitelnost pro popis `std::async` koncept standardu: "[Poznámka: Pokud budoucí získané z std::async je přesunut mimo místní rozsah, jiný kód, který se používá v budoucnosti musí mějte na paměti, že do budoucna destruktor může blokovat sdíleného stavu Připraveno. k – poslední poznámku] "ve všech ostatních případech `future` a `shared_future` Destruktory jsou vyžadovány a zaručeně není nikdy blokována.
 
 ## <a name="members"></a>Členové
 
@@ -69,14 +69,14 @@ Třídy šablon `future` a `shared_future` není nikdy blokována v jejich destr
 |[future_category –](../standard-library/future-functions.md#future_category)|Vrátí odkaz na `error_category` objekt, který charakterizuje chyby, které jsou přidružené k `future` objekty.|
 |[make_error_code](../standard-library/future-functions.md#make_error_code)|Vytvoří `error_code` , který má `error_category` objekt, který charakterizuje `future` chyby.|
 |[make_error_condition](../standard-library/future-functions.md#make_error_condition)|Vytvoří `error_condition` , který má `error_category` objekt, který charakterizuje `future` chyby.|
-|[Prohození](../standard-library/future-functions.md#swap)|Vymění přidružený asynchronní stav jednoho `promise` objektu z jiného.|
+|[swap](../standard-library/future-functions.md#swap)|Vymění přidružený asynchronní stav jednoho `promise` objektu z jiného.|
 
 ### <a name="enumerations"></a>Výčty
 
 |Název|Popis|
 |----------|-----------------|
 |[future_errc](../standard-library/future-enums.md#future_errc)|Poskytuje symbolické názvy pro chyby, které jsou hlášeny sadou `future_error` třídy.|
-|[future_status –](../standard-library/future-enums.md#future_status)|Poskytuje symbolické názvy pro důvody, které můžou vrátit funkce vypršel časový limit čekání.|
+|[future_status](../standard-library/future-enums.md#future_status)|Poskytuje symbolické názvy pro důvody, které můžou vrátit funkce vypršel časový limit čekání.|
 |[spuštění](../standard-library/future-enums.md#launch)|Představuje typ bitová maska, která popisuje možné režimy pro šablonu funkce `async`.|
 
 ## <a name="see-also"></a>Viz také:

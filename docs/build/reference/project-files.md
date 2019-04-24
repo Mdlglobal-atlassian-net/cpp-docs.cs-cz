@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
 ms.openlocfilehash: cfe40d6520187212ab77607273c555f12012fd02
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319821"
 ---
 # <a name="project-files"></a>Soubory projektu
 
@@ -120,5 +120,5 @@ Následující ukázkový soubor .vcxproj byl vytvořen tak, že zadáte **Konzo
 
 ## <a name="see-also"></a>Viz také:
 
-[Visual Studio Projects - C++](../creating-and-managing-visual-cpp-projects.md)<br>
-[Nastavení kompilátoru jazyka C++ a vlastnosti v sadě Visual Studio sestavení](../working-with-project-properties.md)
+[Projekty sady Visual Studio – C++](../creating-and-managing-visual-cpp-projects.md)<br>
+[Nastavení vlastností kompilátoru a sestavení C++ v sadě Visual Studio](../working-with-project-properties.md)

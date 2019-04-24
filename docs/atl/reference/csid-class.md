@@ -22,11 +22,11 @@ helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
 ms.openlocfilehash: 87f889a079b1c55d82f547230a1917540de276af
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58770489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277978"
 ---
 # <a name="csid-class"></a>CSID – třída
 
@@ -45,20 +45,20 @@ class CSid
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSid::CSidArray](#csidarray)|Pole `CSid` objekty.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSid::CSid](#csid)|Konstruktor|
 |[CSid::~CSid](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSid::AccountName](#accountname)|Vrátí název účtu přidruženého k `CSid` objektu.|
 |[CSid::Domain](#domain)|Vrátí název domény přidružené k `CSid` objektu.|
@@ -556,7 +556,7 @@ SID_NAME_USE SidNameUse() const throw();
 
 Vrací hodnotu datového člena, který ukládá hodnotu popisující stav `CSid` objektu.
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |SidTypeUser|Označuje uživatele `SID` (security identifier).|
 |SidTypeGroup|Určuje skupinu `SID`.|

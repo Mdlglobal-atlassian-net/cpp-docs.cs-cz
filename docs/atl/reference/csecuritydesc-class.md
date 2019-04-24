@@ -35,11 +35,11 @@ helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
 ms.openlocfilehash: aadaa64a936aee867766dfc0f7a6e190c9691ca6
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58778023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277965"
 ---
 # <a name="csecuritydesc-class"></a>Csecuritydesc – třída
 
@@ -58,14 +58,14 @@ class CSecurityDesc
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSecurityDesc::CSecurityDesc](#csecuritydesc)|Konstruktor|
 |[CSecurityDesc::~CSecurityDesc](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSecurityDesc::FromString](#fromstring)|Převede formát řetězce popisovače zabezpečení do popisovače zabezpečení platný a funkční.|
 |[CSecurityDesc::GetControl](#getcontrol)|Načte ovládací prvek informace z popisovače zabezpečení.|
@@ -96,7 +96,7 @@ class CSecurityDesc
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSecurityDesc::operator const SECURITY_DESCRIPTOR *](#operator_const_security_descriptor__star)|Vrací ukazatel `SECURITY_DESCRIPTOR` struktury.|
 |[CSecurityDesc::operator =](#operator_eq)|Operátor přiřazení.|

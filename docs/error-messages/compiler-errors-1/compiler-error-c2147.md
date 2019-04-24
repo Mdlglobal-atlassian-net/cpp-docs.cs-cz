@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru C2147
+title: Compiler Error C2147
 ms.date: 11/04/2016
 f1_keywords:
 - C2147
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C2147
 ms.assetid: d1adb3bf-7ece-4815-922c-ad7492fb6670
 ms.openlocfilehash: 0a093bbbaf9cf9f72625226f949a27b681005c35
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62175391"
 ---
-# <a name="compiler-error-c2147"></a>Chyba kompilátoru C2147
+# <a name="compiler-error-c2147"></a>Compiler Error C2147
 
 Chyba syntaxe: 'identifier' je nové klíčové slovo
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - type_index class
 ms.assetid: db366119-74cb-43e8-aacf-9679e561fa2f
 ms.openlocfilehash: 8807a041ab1c6ef47a9c3c12dac2688f121f6cfa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278959"
 ---
 # <a name="typeindex-class"></a>type_index – třída
 
@@ -40,4 +40,4 @@ Konstruktor inicializuje `ptr` k `&tinfo`.
 ## <a name="see-also"></a>Viz také:
 
 [Informace o typu modulu runtime](../cpp/run-time-type-information.md)<br/>
-[\<typeindex >](../standard-library/typeindex.md)<br/>
+[\<typeindex>](../standard-library/typeindex.md)<br/>

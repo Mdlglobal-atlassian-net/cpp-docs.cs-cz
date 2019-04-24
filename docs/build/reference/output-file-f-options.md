@@ -9,11 +9,11 @@ helpviewer_keywords:
 - cl.exe compiler, output files
 ms.assetid: f6367f30-2710-4178-b43a-639eed824acb
 ms.openlocfilehash: 38db548bb71f8dc3e21cb1d544ba70d4fdebb6b7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320107"
 ---
 # <a name="output-file-f-options"></a>Možnosti výstupního souboru (/F)
 
@@ -43,5 +43,5 @@ Možnosti výstupního souboru vytvořit nebo přejmenovat výstupní soubory. O
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

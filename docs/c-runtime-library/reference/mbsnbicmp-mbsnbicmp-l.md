@@ -41,11 +41,11 @@ helpviewer_keywords:
 - _wcsnicmp function
 ms.assetid: ddb44974-8b0c-42f0-90d0-56c9350bae0c
 ms.openlocfilehash: 059d0781e465f6491f27fd634bbc4479104bc12f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331295"
 ---
 # <a name="mbsnbicmp-mbsnbicmpl"></a>_mbsnbicmp, _mbsnbicmp_l
 
@@ -66,7 +66,7 @@ int _mbsnbicmp(
 
 ### <a name="parameters"></a>Parametry
 
-*řetězec1*, *řetězec2*<br/>
+*string1*, *string2*<br/>
 Řetězec zakončený hodnotou Null pro srovnání.
 
 *Počet*<br/>
@@ -100,8 +100,8 @@ Pokud *řetězec1* nebo *řetězec2* je ukazatel s hodnotou null, **_mbsnbicmp �
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tcsnicmp –**|**_strnicmp**|**_mbsnbicmp**|**_wcsnicmp**|
-|**_tcsnicmp_l –**|**_strnicmp_l**|**_mbsnbicmp_l**|**_wcsnicmp_l**|
+|**_tcsnicmp**|**_strnicmp**|**_mbsnbicmp**|**_wcsnicmp**|
+|**_tcsnicmp_l**|**_strnicmp_l**|**_mbsnbicmp_l**|**_wcsnicmp_l**|
 
 ## <a name="requirements"></a>Požadavky
 

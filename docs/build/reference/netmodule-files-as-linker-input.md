@@ -8,11 +8,11 @@ helpviewer_keywords:
 - modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
 ms.openlocfilehash: fcba363cff567c69ac0fbd0a541953dfe2c8e910
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320666"
 ---
 # <a name="netmodule-files-as-linker-input"></a>Soubory .netmodule jako vstup linkeru
 
@@ -99,4 +99,4 @@ caught non System exception in C++ source code file
 ## <a name="see-also"></a>Viz také:
 
 - [Vstupní soubory LINK](link-input-files.md)
-- [Možnosti Linkeru MSVC](linker-options.md)
+- [Možnosti linkeru MSVC](linker-options.md)

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - std::make_tuple [C++]
 - std::tie [C++]
 ms.openlocfilehash: 93c11a89f7cdfa3949be2d97e401fad199a17d97
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278955"
 ---
 # <a name="lttuplegt-functions"></a>&lt;řazené kolekce členů&gt; funkce
 
@@ -121,7 +121,7 @@ template <class T1, class T2, ..., class TN>
 *TN*<br/>
 Typ parametru Nth – funkce
 
-*TN*<br/>
+*tN*<br/>
 Hodnota parametru n-tý funkce.
 
 ### <a name="remarks"></a>Poznámky
@@ -226,4 +226,4 @@ int main() {
 
 ## <a name="see-also"></a>Viz také:
 
-[\<řazené kolekce členů >](../standard-library/tuple.md)<br/>
+[\<tuple>](../standard-library/tuple.md)<br/>

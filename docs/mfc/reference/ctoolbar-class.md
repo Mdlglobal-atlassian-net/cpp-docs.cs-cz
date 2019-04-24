@@ -45,11 +45,11 @@ helpviewer_keywords:
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
 ms.openlocfilehash: aa49ebed2d48d9818c2d39ae4894d8caf1fbbf81
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58773135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323645"
 ---
 # <a name="ctoolbar-class"></a>Ctoolbar – třída
 
@@ -65,13 +65,13 @@ class CToolBar : public CControlBar
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CToolBar::CToolBar](#ctoolbar)|Vytvoří `CToolBar` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CToolBar::CommandToIndex](#commandtoindex)|Vrátí index tlačítko s ID daného příkazu.|
 |[CToolBar::Create](#create)|Vytvoří panel nástrojů Windows a připojí ho k `CToolBar` objektu.|

@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
 ms.openlocfilehash: 51ff3c675f1f53aee9beab629b17193164a2e7eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334863"
 ---
 # <a name="fcvts"></a>_fcvt_s
 
@@ -87,10 +87,10 @@ V případě neplatného parametru, jak je uvedeno v následující tabulce, tat
 
 |*Vyrovnávací paměti*|*sizeInBytes*|value|count|dec|znak|Vrátí|Hodnota v *vyrovnávací paměti*|
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|
-|**HODNOTU NULL**|Všechny|Všechny|Všechny|Všechny|Všechny|**EINVAL**|Nedojde ke změně.|
+|**NULL**|Všechny|Všechny|Všechny|Všechny|Všechny|**EINVAL**|Nedojde ke změně.|
 |Není **NULL** (odkazuje na platný paměti)|<=0|Všechny|Všechny|Všechny|Všechny|**EINVAL**|Nedojde ke změně.|
-|Všechny|Všechny|Všechny|Všechny|**HODNOTU NULL**|Všechny|**EINVAL**|Nedojde ke změně.|
-|Všechny|Všechny|Všechny|Všechny|Všechny|**HODNOTU NULL**|**EINVAL**|Nedojde ke změně.|
+|Všechny|Všechny|Všechny|Všechny|**NULL**|Všechny|**EINVAL**|Nedojde ke změně.|
+|Všechny|Všechny|Všechny|Všechny|Všechny|**NULL**|**EINVAL**|Nedojde ke změně.|
 
 ## <a name="security-issues"></a>Problémy se zabezpečením
 
@@ -118,7 +118,7 @@ Ladicí verze této funkce nejprve naplní vyrovnávací paměť hodnotou 0xFD. 
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-**Knihovny:** všechny verze [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md).
+**Knihovny:** Všechny verze [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 

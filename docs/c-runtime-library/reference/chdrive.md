@@ -25,11 +25,11 @@ helpviewer_keywords:
 - chdrive function
 ms.assetid: 212a1a4b-4fa8-444e-9677-7fca4c8c47e3
 ms.openlocfilehash: 963b7b7b40b632981abfc1529beb9c48a5b991ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335474"
 ---
 # <a name="chdrive"></a>_chdrive
 
@@ -48,7 +48,7 @@ int _chdrive(
 
 ### <a name="parameters"></a>Parametry
 
-*Jednotky*<br/>
+*drive*<br/>
 Celé číslo od 1 až 26, který určuje aktuální pracovní jednotku (1 = A, 2 = B a tak dále).
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -67,7 +67,7 @@ Pokud *jednotky* není v rozsahu 1 až 26, je vyvolána obslužná rutina neplat
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_chdrive**|\<Direct.h >|
+|**_chdrive**|\<direct.h>|
 
 Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

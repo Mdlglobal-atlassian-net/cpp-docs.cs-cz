@@ -1,6 +1,6 @@
 ---
-title: Chyby kompilátoru C3000 až C3099
-ms.date: 11/17/2017
+title: Compiler errors C3000 Through C3099
+ms.date: 04/21/2019
 f1_keywords:
 - C3051
 - C3061
@@ -38,14 +38,14 @@ helpviewer_keywords:
 - C3093
 - C3098
 ms.assetid: 01b7b9cb-b351-4b5a-8cb0-1fcddb08d2ab
-ms.openlocfilehash: b7a01c35086fe503e39af2af60655c03301dc7c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08c7b691d6390e6c1070fc71dff116604731ebab
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62281663"
 ---
-# <a name="compiler-errors-c3000-through-c3099"></a>Chyby kompilátoru C3000 až C3099
+# <a name="compiler-errors-c3000-through-c3099"></a>Compiler errors C3000 Through C3099
 
 Články v této části dokumentace vysvětlují podmnožinu chybové zprávy, které jsou generovány kompilátorem.
 
@@ -55,10 +55,10 @@ ms.locfileid: "50475488"
 
 |Chyba|Zpráva|
 |-----------|-------------|
-|Kompilátoru C3000 chyba|Zastaralé.|
+|Chyba kompilátoru C3000|Zastaralé.|
 |[Chyba kompilátoru C3001](compiler-error-c3001.md)|"*zpráva*': očekával se název direktivy OpenMP|
 |[Chyba kompilátoru C3002](compiler-error-c3002.md)|"*name1* *name2*': několik názvů direktiv OpenMP|
-|[Chyba kompilátoru C3003](compiler-error-c3003.md)|"*směrnice*': Název direktivy OpenMP není povolený po klauzulích direktiv|
+|[Chyba kompilátoru C3003](compiler-error-c3003.md)|"*směrnice*": Název direktivy OpenMP není povolený po klauzulích direktiv|
 |[Chyba kompilátoru C3004](compiler-error-c3004.md)|"*klauzule*': není platný na OpenMP – klauzule"*směrnice*"– direktiva|
 |[Chyba kompilátoru C3005](compiler-error-c3005.md)|"*zpráva*': na OpenMP se našel neočekávaný token"*směrnice*"– direktiva|
 |[Chyba kompilátoru C3006](compiler-error-c3006.md)|"*klauzule*': klauzuli OpenMP '*– direktiva*" direktivě chybí očekávaný argument|
@@ -73,7 +73,7 @@ ms.locfileid: "50475488"
 |[Chyba kompilátoru C3015](compiler-error-c3015.md)|Inicializace v OpenMP for – příkaz má nesprávnou podobu.|
 |[Chyba kompilátoru C3016](compiler-error-c3016.md)|"*identifikátor*': indexovaná proměnná příkazu for v OpenMP musí mít celočíselný typ se znaménkem|
 |[Chyba kompilátoru C3017](compiler-error-c3017.md)|test ukončení v OpenMP for – příkaz má nesprávnou podobu.|
-|[Chyba kompilátoru C3018](compiler-error-c3018.md)|"*identifikátor*': OpenMP 'pro' test nebo přírůstek musí používat indexovaná proměnná"*proměnnou*.|
+|[Chyba kompilátoru C3018](compiler-error-c3018.md)|"*identifikátor*": OpenMP – pro, test nebo přírůstek musí používat indexovaná proměnná "*proměnnou*.|
 |[Chyba kompilátoru C3019](compiler-error-c3019.md)|přírůstek v OpenMP for – příkaz má nesprávnou podobu.|
 |[Chyba kompilátoru C3020](compiler-error-c3020.md)|"*proměnnou*': indexovaná proměnná OpenMP smyčku for nejde upravovat v těle smyčky|
 |[Chyba kompilátoru C3021](compiler-error-c3021.md)|"*argument*': argument je prázdný v OpenMP '*směrnice*" – direktiva|
@@ -106,7 +106,7 @@ ms.locfileid: "50475488"
 |[Chyba kompilátoru C3048](compiler-error-c3048.md)|Výraz, který následuje '#pragma omp atomic' má nesprávnou podobu.|
 |[Chyba kompilátoru C3049](compiler-error-c3049.md)|"*argument*': Neplatný argument v 'default' OpenMP – klauzule|
 |[Chyba kompilátoru C3050](compiler-error-c3050.md)|"*třídy*': třídy ref class nemůže dědit od třídy"*identifikátor*.|
-|C3051 chyby kompilátoru|Zastaralé.|
+|Chyba kompilátoru C3051|Zastaralé.|
 |[Chyba kompilátoru C3052](compiler-error-c3052.md)|"*identifikátor*': proměnná se neobjevuje v klauzuli data-sharing pod klauzulí default(none)|
 |[Chyba kompilátoru C3053](compiler-error-c3053.md)|"*identifikátor*": 'threadprivate' platí pouze pro globální nebo statické datové položky|
 |[Chyba kompilátoru C3054](compiler-error-c3054.md)|v obecné třídě nebo funkci aktuálně nepodporuje "#pragma omp parallel.|
@@ -116,42 +116,47 @@ ms.locfileid: "50475488"
 |[Chyba kompilátoru C3058](compiler-error-c3058.md)|"*identifikátor*': symbol není deklarovaný jako 'threadprivate' než se použijí v klauzuli copyin.|
 |[Chyba kompilátoru C3059](compiler-error-c3059.md)|"*identifikátor*": 'threadprivate' symbol nejde používat v "*klauzule*" – klauzule|
 |[Chyba kompilátoru C3060](compiler-error-c3060.md)|"*identifikátor*': funkce friend nemůže být definovaná uvnitř třídy pomocí kvalifikovaného názvu (to může být jedině deklarovaná)|
-|C3061 chyby kompilátoru|operátor "*– operátor*': není povolené pro výčet"*typ*"s podkladovým typem"*typ*"|
+|Chyba kompilátoru C3061|operátor "*– operátor*': není povolené pro výčet"*typ*"s podkladovým typem"*typ*"|
 |[Chyba kompilátoru C3062](compiler-error-c3062.md)|"*identifikátor*': enumerátor vyžaduje hodnotu, protože základní typ je '*typ*.|
 |[Chyba kompilátoru C3063](compiler-error-c3063.md)|operátor '*operátor*': všechny operandy musí mít stejný typ výčtu|
-|C3064 chyby kompilátoru|"*identifikátor*': musí být jednoduchý typ. nebo překládat|
+|Chyba kompilátoru C3064|"*identifikátor*': musí být jednoduchý typ. nebo překládat|
 |[Chyba kompilátoru C3065](compiler-error-c3065.md)|deklarace vlastnosti v oboru bez třídy není povolená.|
 |[Chyba kompilátoru C3066](compiler-error-c3066.md)|existuje více způsobů, že objekt tohoto typu lze volat s těmito argumenty|
-|C3067 chyby kompilátoru|seznam inicializátorů nejde v předdefinované operator]|
+|Chyba kompilátoru C3067|seznam inicializátorů nejde v předdefinované operator]|
 |[Chyba kompilátoru C3068](compiler-error-c3068.md)|"*identifikátor*': funkci naked' nemůže obsahovat objekty, které by vyžadovaly vrácení zpět, pokud došlo k výjimce C++|
 |[Chyba kompilátoru C3069](compiler-error-c3069.md)|operátor '*operátor*': není povolený pro výčtový typ.|
 |[Chyba kompilátoru C3070](compiler-error-c3070.md)|"*identifikátor*': vlastnost nemá metodu set.|
 |[Chyba kompilátoru C3071](compiler-error-c3071.md)|operátor '*operátor*"může používat jedině pro instanci ref class nebo value-type.|
 |[Chyba kompilátoru C3072](compiler-error-c3072.md)|operátor '*operátor*' nelze použít pro instanci třídy ref použití operátoru unární % převeďte instanci ref třídy na typ popisovače|
 |[Chyba kompilátoru C3073](compiler-error-c3073.md)|"*identifikátor*': Třída ref class nemá žádné uživatelem definovaného kopírovacího konstruktoru|
-|C3074 chyby kompilátoru|pole se nedá inicializovat pomocí inicializátoru v závorkách.|
+|Chyba kompilátoru C3074|pole se nedá inicializovat pomocí inicializátoru v závorkách.|
 |[Chyba kompilátoru C3075](compiler-error-c3075.md)|"*identifikátor*': nemůžete vložit instanci typu odkazu"*typ*", v typu hodnoty|
 |[Chyba kompilátoru C3076](compiler-error-c3076.md)|"*identifikátor*': nemůžete vložit instanci typu odkazu"*typ*", v nativním typu|
 |[Chyba kompilátoru C3077](compiler-error-c3077.md)|"*identifikátor*': finalizační metoda může být jenom členem odkazového typu|
-|C3078 chyby kompilátoru|Velikost pole musí být zadán ve výrazu new|
-|C3079 chyby kompilátoru|seznam inicializátorů nejde používat jako pravý operand tohoto operátoru přiřazení|
+|Chyba kompilátoru C3078|Velikost pole musí být zadán ve výrazu new|
+|Chyba kompilátoru C3079|seznam inicializátorů nejde používat jako pravý operand tohoto operátoru přiřazení|
 |[Chyba kompilátoru C3080](compiler-error-c3080.md)|"*finalizační metodu*': finalizační metoda nemůže mít storage-class-specifier|
-|C3081 chyby kompilátoru|Zastaralé.|
-|C3082 chyby kompilátoru|Zastaralé.|
+|Chyba kompilátoru C3081|Zastaralé.|
+|Chyba kompilátoru C3082|Zastaralé.|
 |[Chyba kompilátoru C3083](compiler-error-c3083.md)|"*identifikátor*': symbol nalevo od '::' musí být typu|
 |[Chyba kompilátoru C3084](compiler-error-c3084.md)|"*identifikátor*': destruktor nebo finalizační metoda nemůže být"*– klíčové slovo*.|
 |[Chyba kompilátoru C3085](compiler-error-c3085.md)|"*identifikátor*': konstruktor nemůže být"*– klíčové slovo*.|
-|C3086 chyby kompilátoru|Nelze najít "std::initializer_list": je potřeba #include \<initializer_list >|
+|Chyba kompilátoru C3086|Nelze najít "std::initializer_list": je potřeba #include \<initializer_list >|
 |[Chyba kompilátoru C3087](compiler-error-c3087.md)|"*identifikátor*': volání"*deklarace*"už tento člen inicializuje|
-|C3088 chyby kompilátoru|"*třídy*': konstruktor atributu musí mít pojmenované formální argumenty|
-|C3089 chyby kompilátoru|"*identifikátor*': název parametru se neshoduje s názvem datového členu|
-|C3090 chyby kompilátoru|"*třídy*': třída atributů nemůže být šablona|
-|C3091 chyby kompilátoru|"*třídy*': třída atributů nemůže mít základní třídy|
-|C3092 chyby kompilátoru|"*třídy*': člen třídy atributu nemůže být bitová pole, 'static' nebo 'const'|
-|C3093 chyby kompilátoru|"*typ*': typ není povolený pro člen třídy atributu '*člen*.|
+|Chyba kompilátoru C3088|"*třídy*': konstruktor atributu musí mít pojmenované formální argumenty|
+|Chyba kompilátoru C3089|"*identifikátor*': název parametru se neshoduje s názvem datového členu|
+|Chyba kompilátoru C3090|"*třídy*': třída atributů nemůže být šablona|
+|Chyba kompilátoru C3091|"*třídy*': třída atributů nemůže mít základní třídy|
+|Chyba kompilátoru C3092|"*třídy*': člen třídy atributu nemůže být bitová pole, 'static' nebo 'const'|
+|Chyba kompilátoru C3093|"*typ*': typ není povolený pro člen třídy atributu '*člen*.|
 |[Chyba kompilátoru C3094](compiler-error-c3094.md)|"*atribut*': anonymní použití není povolené|
 |[Chyba kompilátoru C3095](compiler-error-c3095.md)|"*atribut*': atribut se nemůže opakovat|
 |[Chyba kompilátoru C3096](compiler-error-c3096.md)|"*atribut*': atribut je povolený pro datové členy tříd atributů pouze|
 |[Chyba kompilátoru C3097](compiler-error-c3097.md)|"*atribut*': obor atributu musí být s" sestavení: "nebo" modul: "|
-|C3098 chyby kompilátoru|"*identifikátor*': atribut nemá žádné uživatelem definované konstruktory|
+|Chyba kompilátoru C3098|"*identifikátor*': atribut nemá žádné uživatelem definované konstruktory|
 |[Chyba kompilátoru C3099](compiler-error-c3099.md)|"*– klíčové slovo*': použijte [System::AttributeUsageAttribute] / [Windows::Foundation::Metadata::AttributeUsageAttribute] pro atributy spravované/WinRT|
+
+## <a name="see-also"></a>Viz také:
+
+[C /C++ nástroje chyby a upozornění kompilátoru a sestavení](../compiler-errors-1/c-cpp-build-errors.md) \
+[Chyby kompilátoru C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

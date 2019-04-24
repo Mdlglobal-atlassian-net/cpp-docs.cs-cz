@@ -13,11 +13,11 @@ helpviewer_keywords:
 - -INCLUDE linker option
 ms.assetid: 4a039677-360a-480f-bd0b-448e239b449c
 ms.openlocfilehash: 1f7a443e32ed20550e3017c7e6ce70f4adf5137d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269867"
 ---
 # <a name="include-force-symbol-references"></a>/INCLUDE (Vynutit odkazy na symboly)
 
@@ -56,5 +56,5 @@ Zadání symbolu pomocí této možnosti přepsání odebrání tohoto symbolu p
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)

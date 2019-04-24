@@ -13,11 +13,11 @@ helpviewer_keywords:
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
 ms.openlocfilehash: 9f5eed60ecb51abc1d8fbd3c38773bbf782b23a5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271798"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (model zpracování výjimek)
 
@@ -112,7 +112,7 @@ Atribut non-throwing. však není zaručeno, že funkce mohou být vyvolány ž�
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
 [Ošetření chyb a výjimek](../../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [Specifikace výjimek (throw)](../../cpp/exception-specifications-throw-cpp.md)<br/>

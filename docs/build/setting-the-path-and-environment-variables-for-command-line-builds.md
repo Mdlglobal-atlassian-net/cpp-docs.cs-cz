@@ -19,11 +19,11 @@ helpviewer_keywords:
 - environment variables [C++], CL compiler
 ms.assetid: 99389528-deb5-43b9-b99a-03c8773ebaf4
 ms.openlocfilehash: fed3360294bec724af09b87e5abd7c6bb22fa285
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315388"
 ---
 # <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>Nastavení cesty a proměnných prostředí pro sestavení příkazového řádku
 
@@ -38,8 +38,8 @@ Pokud chcete zobrazit, které proměnné prostředí se nastavují pomocí zást
 
 ## <a name="see-also"></a>Viz také:
 
-[Použití nástrojů MSVC z příkazového řádku](building-on-the-command-line.md)<br/>
-[Odkaz na MSVC linkeru](reference/linking.md)<br/>
-[Možnosti Linkeru MSVC](reference/linker-options.md)<br/>
-[Referenční dokumentace kompilátoru MSVC](reference/compiling-a-c-cpp-program.md)<br/>
-[Možnosti kompilátoru MSVC](reference/compiler-options.md)
+[Použití sady nástrojů MSVC z příkazového řádku](building-on-the-command-line.md)<br/>
+[Referenční zdroje k linkeru MSVC](reference/linking.md)<br/>
+[Možnosti linkeru MSVC](reference/linker-options.md)<br/>
+[Referenční zdroje ke kompilátorům MSVC](reference/compiling-a-c-cpp-program.md)<br/>
+[Parametry kompilátoru MSVC](reference/compiler-options.md)

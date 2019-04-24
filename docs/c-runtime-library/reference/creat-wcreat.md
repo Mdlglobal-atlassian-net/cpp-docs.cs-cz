@@ -33,11 +33,11 @@ helpviewer_keywords:
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
 ms.openlocfilehash: 901a95a6a9361f95f38749dacf1a5001d97b3761
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335305"
 ---
 # <a name="creat-wcreat"></a>_creat, _wcreat
 
@@ -86,7 +86,7 @@ Další informace o těchto a dalších návratových kódech naleznete v témat
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tcreat –**|**_creat**|**_creat**|**_wcreat**|
+|**_tcreat**|**_creat**|**_creat**|**_wcreat**|
 
 Pokud soubor určený *filename* buď neexistuje, vytvoří nový soubor se vytvoří pomocí nastavení dané oprávnění a je otevřen pro zápis. Pokud soubor už existuje a její nastavení oprávnění umožňuje zápis, **_creat –** zkrátí soubor, který má délku 0, zničení předchozí obsah a otevře jej pro zápis. Nastavení oprávnění *pmode*, platí pouze pro nově vytvořené soubory. Nový soubor obdrží nastavení zadané oprávnění po prvním propojení se zavře. Celočíselný výraz *pmode* obsahuje jeden nebo oba z konstant manifestu **_S_IWRITE** a **_S_IREAD**definované v SYS\Stat.h. Když jsou uvedeny oba konstanty, jsou spojeny s bitový operátor or ( **&#124;** ). *Pmode* parametr je nastaven na jednu z následujících hodnot.
 
@@ -94,7 +94,7 @@ Pokud soubor určený *filename* buď neexistuje, vytvoří nový soubor se vytv
 |-----------|----------------|
 |**_S_IWRITE**|Zápis povolen.|
 |**_S_IREAD**|Čtení povolené.|
-|**_S_IREAD** &AMP;#124; **_S_IWRITE**|Čtení a zápis povolen.|
+|**_S_IREAD** &#124; **_S_IWRITE**|Čtení a zápis povolen.|
 
 Pokud tento parametr není zadaný oprávnění k zápisu, soubor je jen pro čtení. Všechny soubory jsou vždy čitelné; není možné poskytnout oprávnění jen pro zápis. Režimy **_S_IWRITE** a **_S_IREAD** | **_S_IWRITE** pak jsou ekvivalentní. Soubory otevřené pomocí **_creat –** jsou vždy otevřen v režimu kompatibility (viz [_sopen](sopen-wsopen.md)) s **_SH_DENYNO**.
 
@@ -104,7 +104,7 @@ Pokud tento parametr není zadaný oprávnění k zápisu, soubor je jen pro čt
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_creat**|\<IO.h >|\<SYS/Types.h >, \<sys/stat.h >, \<errno.h >|
+|**_creat**|\<io.h>|\<SYS/Types.h >, \<sys/stat.h >, \<errno.h >|
 |**_wcreat**|\<IO.h > nebo \<wchar.h >|\<SYS/Types.h >, \<sys/stat.h >, \<errno.h >|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

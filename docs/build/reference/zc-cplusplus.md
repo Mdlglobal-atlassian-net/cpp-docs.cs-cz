@@ -7,15 +7,15 @@ helpviewer_keywords:
 - -Zc:__cplusplus compiler option (C++)
 - __cplusplus macro (C++)
 ms.openlocfilehash: 89545f541f32374a47dce7f87958e61873c1b47c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315713"
 ---
 # <a name="zccplusplus-enable-updated-cplusplus-macro"></a>Přepínače/Zc: (Povolit aktualizované __cplusplus – makro)
 
-**Přepínače/Zc:** umožňuje – možnost kompilátoru  **\_ \_cplusplus** preprocesor makro hlášení aktualizovanou hodnotu pro poslední podpora standardů jazyka C++. Ve výchozím nastavení, Visual Studio vždy vrátí hodnotu "199711L"  **\_ \_cplusplus** makro preprocesoru.
+**Přepínače/Zc:** umožňuje – možnost kompilátoru  **\_ \_cplusplus** preprocesor makro hlášení aktualizovanou hodnotu pro poslední C++ normy jazykové podpory. Ve výchozím nastavení, Visual Studio vždy vrátí hodnotu "199711L"  **\_ \_cplusplus** makro preprocesoru.
 
 ## <a name="syntax"></a>Syntaxe
 

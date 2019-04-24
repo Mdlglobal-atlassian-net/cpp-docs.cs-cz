@@ -179,11 +179,11 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
 ms.openlocfilehash: d336e85020d8d2e855afb0568058057594ec8829
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182045"
 ---
 # <a name="cframewndex-class"></a>Cframewndex – třída
 
@@ -199,7 +199,7 @@ class CFrameWndEx : public CFrameWnd
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Upraví rozložení klientskou položku OLE a klientskou oblast rámce.|
 |`CFrameWndEx::AddDockSite`|Tato metoda se nepoužívá.|

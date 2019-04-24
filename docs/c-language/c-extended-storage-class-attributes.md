@@ -8,17 +8,17 @@ helpviewer_keywords:
 - storage class specifiers, C storage classes
 ms.assetid: 2580735c-f5bf-46ab-9468-0696893d82be
 ms.openlocfilehash: 9b0c8b60dab3229d5d5c162f7bafc959fa2558f0
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56146954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325881"
 ---
 # <a name="c-extended-storage-class-attributes"></a>Rozšířené atributy třídy úložiště jazyka C
 
 **Microsoft Specific**
 
-Více aktuální informace o tomto tématu najdete v části [__declspec (referenční dokumentace jazyka C++)](../cpp/declspec.md).
+Více aktuální informace o tomto tématu najdete v části [__declspec (C++ odkaz)](../cpp/declspec.md).
 
 Rozšířená syntaxe atributu zjednodušuje a standardizuje rozšíření specifické pro společnost Microsoft v rámci jazyka C. Mezi atributy třídy úložiště používající rozšířenou syntaxi atributů patří atributy thread, naked, dllimport a dllexport.
 

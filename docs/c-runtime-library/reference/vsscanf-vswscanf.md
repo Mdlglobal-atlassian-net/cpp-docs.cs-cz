@@ -25,11 +25,11 @@ helpviewer_keywords:
 - vsscanf function
 ms.assetid: e96180f2-df46-423d-b4eb-0a49ab819bde
 ms.openlocfilehash: 5bbe80cd2463c5c5b9b4ea55b8d6574675e42054
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188857"
 ---
 # <a name="vsscanf-vswscanf"></a>vsscanf, vswscanf
 
@@ -58,7 +58,7 @@ Uložená data
 *Formát*<br/>
 Řetězec řízení formátu Další informace najdete v tématu [pole Specifikace formátu: funkce scanf a wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
-*seznam_argumentů*<br/>
+*arglist*<br/>
 Seznam argumentů s proměnnou délkou.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -82,14 +82,14 @@ Informace o těchto a dalších chybových kódech naleznete v tématu [errno _d
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_vstscanf**|**vsscanf**|**vsscanf**|**vswscanf –**|
+|**_vstscanf**|**vsscanf**|**vsscanf**|**vswscanf**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**vsscanf**|\<stdio.h>|
-|**vswscanf –**|\<stdio.h > nebo \<wchar.h >|
+|**vswscanf**|\<stdio.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
@@ -149,5 +149,5 @@ Real:     = 15.000000
 [Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>
-[sprintf _sprintf_l –, swprintf, _swprintf_l –, \__swprintf_l –](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [vsscanf_s, vswscanf_s](vsscanf-s-vswscanf-s.md)<br/>

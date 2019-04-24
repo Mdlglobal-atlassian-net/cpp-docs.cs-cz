@@ -43,11 +43,11 @@ helpviewer_keywords:
 - istlegal_l function
 ms.assetid: 31bf1ea5-b56f-4e28-b21e-b49a2cf93ffc
 ms.openlocfilehash: 07855ec970b2bf307238982987912f1e91505e96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286829"
 ---
 # <a name="ismbclegal-ismbclegall-ismbcsymbol-ismbcsymboll"></a>_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
 
@@ -102,15 +102,15 @@ Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že pou�
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_istlegal –**|Vždy vrátí hodnotu false|**_ismbclegal**|vždy vrátí hodnotu false.|
-|**_istlegal_l –**|Vždy vrátí hodnotu false|**_ismbclegal_l**|vždy vrátí hodnotu false.|
+|**_istlegal**|Vždy vrátí hodnotu false|**_ismbclegal**|vždy vrátí hodnotu false.|
+|**_istlegal_l**|Vždy vrátí hodnotu false|**_ismbclegal_l**|vždy vrátí hodnotu false.|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_ismbclegal –**, **_ismbclegal_l –**|\<Mbstring.h >|
-|**_ismbcsymbol –**, **_ismbcsymbol_l –**|\<Mbstring.h >|
+|**_ismbclegal**, **_ismbclegal_l**|\<Mbstring.h >|
+|**_ismbcsymbol**, **_ismbcsymbol_l**|\<Mbstring.h >|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

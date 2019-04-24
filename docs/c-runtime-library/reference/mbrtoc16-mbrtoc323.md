@@ -1,5 +1,5 @@
 ---
-title: mbrtoc16 mbrtoc323
+title: mbrtoc16, mbrtoc323
 ms.date: 11/04/2016
 apiname:
 - mbrtoc16
@@ -27,13 +27,13 @@ helpviewer_keywords:
 - mbrtoc32 function
 ms.assetid: 099ade4d-56f7-4e61-8b45-493f1d7a64bd
 ms.openlocfilehash: f8573ac321772d19141be0228891b290ba48b217
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331581"
 ---
-# <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16 mbrtoc32
+# <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
 
 Převede první vícebajtového znaku v úzký řetězcový na ekvivalentní UTF-16 nebo UTF-32 znaků.
 
@@ -57,7 +57,7 @@ size_t mbrtoc32(
 
 ### <a name="parameters"></a>Parametry
 
-*cíl*<br/>
+*destination*<br/>
 Ukazatel **char16_t** nebo **char32_t** ekvivalent vícebajtový znak pro převod. Pokud má hodnotu null, funkce hodnotu neukládá.
 
 *source*<br/>
@@ -66,14 +66,14 @@ Ukazatel na řetězec vícebajtový znak pro převod.
 *max_bytes*<br/>
 Maximální počet bajtů v *zdroj* prozkoumat pro znak pro převod. Toto musí být číslo v rozsahu od 1 do počtu bajtů, včetně jakékoli ukončovacího znaku null, zbývajících v *zdroj*.
 
-*Stav*<br/>
+*state*<br/>
 Ukazatel **mbstate_t** převodu stav objektu použité k interpretaci vícebajtový řetězec, který má jeden nebo více znaků výstupu.
 
 ## <a name="return-value"></a>Návratová hodnota
 
 V případě úspěchu vrátí hodnotu první z těchto podmínek, které se vztahuje, aktuálně stanovaném *stavu* hodnotu:
 
-|Hodnota|Podmínka|
+|Value|Podmínka|
 |-----------|---------------|
 |0|Další *max_bytes* nebo méně znaků převést z *zdroj* odpovídají široké znaky null, což je hodnota uložená Pokud *cílové* nemá hodnotu null.<br /><br /> *Stav* obsahuje počáteční posun stavu.|
 |Mezi 1 a *max_bytes*včetně|Vrácená hodnota je počet bajtů *zdroj* dokončit, který je platný vícebajtový znak. Převedený širokého znaku je uložen, pokud *cílové* nemá hodnotu null.|
@@ -102,7 +102,7 @@ Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
 [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[c16rtomb c32rtomb](c16rtomb-c32rtomb1.md)<br/>
+[c16rtomb, c32rtomb](c16rtomb-c32rtomb1.md)<br/>
 [mbrtowc](mbrtowc.md)<br/>
 [mbsrtowcs](mbsrtowcs.md)<br/>
 [mbsrtowcs_s](mbsrtowcs-s.md)<br/>

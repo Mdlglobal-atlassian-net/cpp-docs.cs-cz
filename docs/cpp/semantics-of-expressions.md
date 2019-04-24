@@ -8,11 +8,11 @@ helpviewer_keywords:
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
 ms.openlocfilehash: d2ce510478bcf1574429c85f704552e6b73100ea
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331201"
 ---
 # <a name="semantics-of-expressions"></a>Sémantika výrazů
 
@@ -52,7 +52,7 @@ Pořadí, ve kterém je výraz podle výše uvedeného obrázku vyhodnocen, se s
 
 1. Sčítání (+) má další nejvyšší prioritu, takže hodnota proměnné `a` je přičtena k výsledku operace s proměnnými `b` a `c`.
 
-1. Levý posun (<<) má ve výrazu nejnižší prioritu, ale existují dva výskyty. Vzhledem k tomu, že operátor levého posunu seskupuje zleva doprava, je levý podvýraz vyhodnocen jako první, a potom je vyhodnocen pravý podvýraz.
+1. Operátor posunu vlevo (<<) má nejnižší prioritu ve výrazu, ale existují dva výskyty. Vzhledem k tomu, že operátor levého posunu seskupuje zleva doprava, je levý podvýraz vyhodnocen jako první, a potom je vyhodnocen pravý podvýraz.
 
 Použití závorek k seskupení podvýrazů mění prioritu a také pořadí, ve kterém je výraz vyhodnocen, jak je znázorněno na následujícím obrázku.
 
@@ -69,10 +69,10 @@ Jazyk C++ určuje určité kompatibility při zadávání operandy. Následujíc
 
 |Očekával se typ.|Povolené typy|
 |-------------------|-------------------|
-|*Typ*|`const` *Typ*<br /> `volatile` *Typ*<br /> *Typ*&<br /> `const` *Typ*&<br /> `volatile` *Typ*&<br /> `volatile const` *Typ*<br /> `volatile const` *Typ*&|
+|*type*|`const` *Typ*<br /> `volatile` *Typ*<br /> *Typ*&<br /> `const` *Typ*&<br /> `volatile` *Typ*&<br /> `volatile const` *Typ*<br /> `volatile const` *Typ*&|
 |*Typ* \*|*Typ* \*<br /> `const` *Typ* \*<br /> `volatile` *Typ* \*<br /> `volatile const` *Typ* \*|
-|`const` *Typ*|*Typ*<br /> `const` *Typ*<br />`const` *Typ*&|
-|`volatile` *Typ*|*Typ*<br /> `volatile` *Typ*<br /> `volatile` *Typ*&|
+|`const` *Typ*|*type*<br /> `const` *Typ*<br />`const` *Typ*&|
+|`volatile` *Typ*|*type*<br /> `volatile` *Typ*<br /> `volatile` *Typ*&|
 
 Protože předchozí pravidla je vždy použít v kombinaci, může být zadán ukazatel const volatile objekt, kde se očekává ukazatel.
 
@@ -94,7 +94,7 @@ Výraz může změnit hodnotu objektu mezi po sobě jdoucími „body sekvence�
 
 Definice jazyka C++ aktuálně nespecifikuje body sekvence. Jazyk C++ společnosti Microsoft používá stejné body sekvence jako standard ANSI C pro všechny výrazy zahrnující operátory jazyka C a nevyžaduje přetížené operátory. Pokud jsou operátory přetíženy, sémantika se změní ze sekvence operátorů na sekvenci volání funkce. Jazyk C++ společnosti Microsoft používá následující body sekvence:
 
-- Levý operand logického operátoru AND (&&). Levý operand logického operátoru AND je kompletně vyhodnocen a všechny vedlejší účinky jsou před pokračováním dokončeny. Není zaručeno, že bude pravý operand logického operátoru AND vyhodnocen.
+- Levý operand logického operátoru AND (& &). Levý operand logického operátoru AND je kompletně vyhodnocen a všechny vedlejší účinky jsou před pokračováním dokončeny. Není zaručeno, že bude pravý operand logického operátoru AND vyhodnocen.
 
 - Levý operand logického operátoru OR (&#124;&#124;). Levý operand logického operátoru OR je kompletně vyhodnocen a všechny vedlejší účinky jsou před pokračováním dokončeny. Není zaručeno, že bude pravý operand logického operátoru OR vyhodnocen.
 

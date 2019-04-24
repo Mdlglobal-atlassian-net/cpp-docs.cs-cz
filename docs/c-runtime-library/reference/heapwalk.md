@@ -25,11 +25,11 @@ helpviewer_keywords:
 - _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
 ms.openlocfilehash: cc2a49d9032746cc6c82c9dc401fc96baabbe2e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331685"
 ---
 # <a name="heapwalk"></a>_heapwalk
 
@@ -55,12 +55,12 @@ Vyrovnávací paměť obsahující informace o haldě.
 
 |Návratová hodnota|Význam|
 |-|-|
-|**_HEAPBADBEGIN –**| Počáteční informace hlavičky jsou neplatné nebo nebyly nalezeny.|
-|**_HEAPBADNODE –**| Haldy poškozený nebo nalezený špatný uzel.|
-|**_HEAPBADPTR –**| **_Pentry** pole **_heapinfo –** struktury neobsahuje platný ukazatel do haldy nebo *entryinfo* je ukazatel s hodnotou null.|
-|**_HEAPEND –**| Úspěšně bylo dosaženo konce haldy.|
+|**_HEAPBADBEGIN**| Počáteční informace hlavičky jsou neplatné nebo nebyly nalezeny.|
+|**_HEAPBADNODE**| Haldy poškozený nebo nalezený špatný uzel.|
+|**_HEAPBADPTR**| **_Pentry** pole **_heapinfo –** struktury neobsahuje platný ukazatel do haldy nebo *entryinfo* je ukazatel s hodnotou null.|
+|**_HEAPEND**| Úspěšně bylo dosaženo konce haldy.|
 |**_HEAPEMPTY –**| Halda neinicializována.|
-|**_HEAPOK –**| Zatím; žádné chyby *entryinfo* se aktualizuje informacemi o další položce haldy.|
+|**_HEAPOK**| Zatím; žádné chyby *entryinfo* se aktualizuje informacemi o další položce haldy.|
 
 Kromě toho, pokud dojde k chybě **_heapwalk** nastaví **errno** k **ENOSYS**.
 
@@ -82,7 +82,7 @@ Tato funkce ověřuje svůj parametr. Pokud *entryinfo* je ukazatel s hodnotou n
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_heapwalk**|\<malloc.h >|\<errno.h>|
+|**_heapwalk**|\<malloc.h>|\<errno.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

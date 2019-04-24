@@ -1,20 +1,20 @@
 ---
-title: Vyřazování typů a členů (C + +/ CX)
+title: Vyřazování typů a členů (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
 ms.openlocfilehash: 7f488dfa522c0b48c75150d40584b0946baae806
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301497"
 ---
-# <a name="deprecating-types-and-members-ccx"></a>Vyřazování typů a členů (C + +/ CX)
+# <a name="deprecating-types-and-members-ccx"></a>Vyřazování typů a členů (C++/CX)
 
-V jazyce C + +/ CX, vyřazení prostředí Windows Runtime typů a členů pro producenty a spotřebiteli pomocí [zastaralé](/uwp/api/windows.foundation.metadata.deprecatedattribute) je atribut podporovaný. Využití rozhraní API, ke kterému tento atribut používá, dostanete zprávu upozornění kompilace, která označuje, že rozhraní API je zastaralé a také doporučuje alternativní rozhraní API pro použití. Ve vlastní veřejné typy a metody můžete použít tento atribut a zadejte vlastní zprávu.
+V C++/CX, vyřazení prostředí Windows Runtime typů a členů pro producenty a spotřebiteli pomocí [zastaralé](/uwp/api/windows.foundation.metadata.deprecatedattribute) atribut je podporován. Využití rozhraní API, ke kterému tento atribut používá, dostanete zprávu upozornění kompilace, která označuje, že rozhraní API je zastaralé a také doporučuje alternativní rozhraní API pro použití. Ve vlastní veřejné typy a metody můžete použít tento atribut a zadejte vlastní zprávu.
 
 > [!CAUTION]
-> [Zastaralé](/uwp/api/windows.foundation.metadata.deprecatedattribute) atribut lze použít pouze s typy Windows Runtime. Standardní C++ tříd a členů, použijte [__declspec(deprecated)](../cpp/deprecated-cpp.md).
+> [Zastaralé](/uwp/api/windows.foundation.metadata.deprecatedattribute) atribut lze použít pouze s typy Windows Runtime. Pro úroveň standard C++ tříd a členů, použijte [__declspec(deprecated)](../cpp/deprecated-cpp.md).
 
 ### <a name="example"></a>Příklad
 
@@ -58,4 +58,4 @@ Následující tabulka uvádí konstrukce, na které může být použit atribut
 
 [Systém typů](../cppcx/type-system-c-cx.md)<br/>
 [Referenční dokumentace jazyka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Odkaz na obory názvů](../cppcx/namespaces-reference-c-cx.md)
+[Referenční informace o oborech názvů](../cppcx/namespaces-reference-c-cx.md)

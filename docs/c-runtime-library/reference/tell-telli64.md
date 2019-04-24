@@ -31,11 +31,11 @@ helpviewer_keywords:
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
 ms.openlocfilehash: 628f37d3b8a39a75fb2329a1b2805426f15e821f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258569"
 ---
 # <a name="tell-telli64"></a>_tell, _telli64
 
@@ -54,7 +54,7 @@ __int64 _telli64(
 
 ### <a name="parameters"></a>Parametry
 
-*Popisovač*<br/>
+*handle*<br/>
 Soubor deskriptoru odkazující na otevření souboru.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -73,7 +73,7 @@ Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/er
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_tell –**, **_telli64 –**|\<IO.h >|
+|**_tell**, **_telli64**|\<io.h>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

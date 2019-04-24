@@ -13,11 +13,11 @@ helpviewer_keywords:
 - -STUB linker option
 ms.assetid: 65221ffe-4f9a-4a14-ac69-3cfb79b40b5f
 ms.openlocfilehash: 7150d4ff8f35b00d96caa21fd5ea3754fec76030
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317871"
 ---
 # <a name="stub-ms-dos-stub-file-name"></a>/STUB (název souboru zástupného kódu MS-DOS)
 
@@ -62,5 +62,5 @@ Při sestavování ovladač virtuálního zařízení *filename* umožňuje uži
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)

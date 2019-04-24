@@ -10,11 +10,11 @@ helpviewer_keywords:
 - User code, debugging
 - JMC compiler option [C++]
 ms.openlocfilehash: c107ad7107d2a65ed19719933aa127c0557916ce
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291636"
 ---
 # <a name="jmc-just-my-code-debugging"></a>/ JMC (ladění pouze můj kód)
 
@@ -48,5 +48,5 @@ Další informace najdete v tématu [pouze můj kód C++](/visualstudio/debugger
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>

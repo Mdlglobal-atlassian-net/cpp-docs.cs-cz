@@ -10,11 +10,11 @@ helpviewer_keywords:
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
 ms.openlocfilehash: bccbe435d926a75990a4ca35b98c9b352dd40e8b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62289829"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Syntaxe specifikace formátu: funkce printf a wprintf
 
@@ -78,9 +78,9 @@ Celočíselné typy, jako `short`, `int`, `long`, `long long` a jejich `unsigned
 
 Od verze sady Visual Studio 2015, pokud argument, který odpovídá specifikátor převody plovoucí desetinné čárky (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) je nekonečné neomezené, nebo NaN, formátovaný výstup vyhovuje C99 standard. Tato tabulka shrnuje formátovaný výstup:
 
-|Hodnota|Výstup|
+|Value|Výstup|
 |-----------|------------|
-|nekonečna|`inf`|
+|Infinity|`inf`|
 |Tichý NaN|`nan`|
 |Signalizace NaN|`nan(snan)`|
 |Neomezené NaN|`nan(ind)`|
@@ -89,7 +89,7 @@ Některé z těchto hodnot mohou začínat znakem. Pokud plovoucí desetinné č
 
 Před Visual Studio 2015 CRT používá jiný, nestandardní formát pro výstup nekonečno, nekonečno a NaN hodnoty:
 
-|Hodnota|Výstup|
+|Value|Výstup|
 |-----------|------------|
 |+ nekonečno|`1.#INF` *náhodné číslic*|
 |-nekonečno|`-1.#INF` *náhodné číslic*|
@@ -157,7 +157,7 @@ Pokud je specifikace přesnosti hvězdičku (\*), `int` poskytuje hodnotu argume
 
 ### <a name="how-precision-values-affect-type"></a>Jak hodnoty přesnosti ovlivňují typ
 
-|Typ|Význam|Výchozí|
+|Type|Význam|Výchozí|
 |----------|-------------|-------------|
 |**a**, **A**|Přesnosti určuje počet číslic za čárkou.|Přesnost je 13. Pokud přesnost je 0, pokud není, vytiskne se žádné desetinné čárky **#** příznak se používá.|
 |**c**, **C**|Přesnost nemá žádný vliv.|Znak je vytištěna.|

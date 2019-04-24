@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
 ms.openlocfilehash: 600459784b4db620b6b717b5ffdfaf24d1ceb757
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159311"
 ---
 # <a name="geometricdistribution-class"></a>geometric_distribution – třída
 
@@ -78,7 +78,7 @@ Třída šablony popisuje distribuci, která vytváří hodnoty uživatelem zada
 
 ||||
 |-|-|-|
-|[geometric_distribution –](#geometric_distribution)|`geometric_distribution::p`|`geometric_distribution::param`|
+|[geometric_distribution](#geometric_distribution)|`geometric_distribution::p`|`geometric_distribution::param`|
 |`geometric_distribution::operator()`||[param_type](#param_type)|
 
 Funkce vlastností `p()` vrátí hodnotu pro parametr uložené distribuce `p`.

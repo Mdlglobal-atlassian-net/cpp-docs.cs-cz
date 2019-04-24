@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
 ms.openlocfilehash: ccf35c7a036a69487d5138baf8c017f9c5995bef
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323710"
 ---
 # <a name="ctabctrl-class"></a>Ctabctrl – třída
 
@@ -517,7 +517,7 @@ Maska určující, které položky stavu příznaky pro vrácení. Seznam hodnot
 
 Odkaz na hodnotu DWORD příjem informací o stavu. Může být jedna z následujících hodnot:
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |TCIS_BUTTONPRESSED|Je vybraná položka ovládacího prvku karty.|
 |TCIS_HIGHLIGHTED|Položku ovládacího prvku karta je zvýrazněn a na kartě a text jsou vykreslovány pomocí aktuální barvu zvýraznění. Při použití barvu zvýraznění, bude true umožňuje stručně popsat, tónovaná barva.|
@@ -858,7 +858,7 @@ Maska určující, které položky stavu příznaky pro nastavení. Seznam hodno
 *dwState*<br/>
 Odkaz na hodnotu DWORD obsahující informace o stavu. Může být jedna z následujících hodnot:
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |TCIS_BUTTONPRESSED|Je vybraná položka ovládacího prvku karty.|
 |TCIS_HIGHLIGHTED|Položku ovládacího prvku karta je zvýrazněn a na kartě a text jsou vykreslovány pomocí aktuální barvu zvýraznění. Při použití barvu zvýraznění, bude true umožňuje stručně popsat, tónovaná barva.|

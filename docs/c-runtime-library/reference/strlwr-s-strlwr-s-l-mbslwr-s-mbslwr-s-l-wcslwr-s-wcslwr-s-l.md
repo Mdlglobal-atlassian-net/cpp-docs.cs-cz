@@ -61,11 +61,11 @@ helpviewer_keywords:
 - strings [C++], converting case
 ms.assetid: 4883d31b-bdac-4049-83a1-91dfdeceee79
 ms.openlocfilehash: b7eb9d81b1269018cd41c80c1f9c15aa92a4f85a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210050"
 ---
 # <a name="strlwrs-strlwrsl-mbslwrs-mbslwrsl-wcslwrs-wcslwrsl"></a>_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
 
@@ -164,16 +164,16 @@ Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť hodnotou 0xF
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcslwr_s –**|**_strlwr_s**|**_mbslwr_s**|**_wcslwr_s**|
-|**_tcslwr_s_l –**|**_strlwr_s_l**|**_mbslwr_s_l**|**_wcslwr_s_l**|
+|**_tcslwr_s**|**_strlwr_s**|**_mbslwr_s**|**_wcslwr_s**|
+|**_tcslwr_s_l**|**_strlwr_s_l**|**_mbslwr_s_l**|**_wcslwr_s_l**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_strlwr_s –**, **_strlwr_s_l –**|\<String.h >|
-|**_mbslwr_s –**, **_mbslwr_s_l –**|\<Mbstring.h >|
-|**_wcslwr_s –**, **_wcslwr_s_l –**|\<String.h > nebo \<wchar.h >|
+|**_strlwr_s**, **_strlwr_s_l**|\<string.h>|
+|**_mbslwr_s**, **_mbslwr_s_l**|\<Mbstring.h >|
+|**_wcslwr_s**, **_wcslwr_s_l**|\<String.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

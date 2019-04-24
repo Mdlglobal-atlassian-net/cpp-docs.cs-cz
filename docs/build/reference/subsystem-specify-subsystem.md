@@ -12,11 +12,11 @@ helpviewer_keywords:
 - subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
 ms.openlocfilehash: ecda3443d0422af4d5ceec9282d86590c53af2f5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318242"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (Zadat subsystém)
 
@@ -87,5 +87,5 @@ Volitelné minimální a výchozí *hlavní* a *menší* čísla verzí pro subs
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)

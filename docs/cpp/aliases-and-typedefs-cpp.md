@@ -5,11 +5,11 @@ f1_keywords:
 - typedef_cpp
 ms.assetid: af1c24d2-4bfd-408a-acfc-482e264232f5
 ms.openlocfilehash: 155f1868123514dfec89ab448ef22f2da225c4d3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155287"
 ---
 # <a name="aliases-and-typedefs-c"></a>Aliasy a definice Typedef (C++)
 
@@ -23,10 +23,10 @@ using identifier = type;
 
 ## <a name="remarks"></a>Poznámky
 
-*identifikátor*<br/>
+*identifier*<br/>
 Název aliasu.
 
-*Typ*<br/>
+*type*<br/>
 Identifikátor typu, kterou vytváříte alias.
 
 Alias nezavádí nový typ a nelze změnit význam existujícím názvem typu.
@@ -347,7 +347,7 @@ typedef struct {
 } POINT;
 ```
 
-Předchozí příklad deklaruje třídu s názvem `POINT` pomocí Nepojmenovaná třída **typedef** syntaxe. `POINT` je považován za název třídy. Na názvy zavedené tímto způsobem se však vztahují následující omezení:
+Předchozí příklad deklaruje třídu s názvem `POINT` pomocí Nepojmenovaná třída **typedef** syntaxe. `POINT` je považován za název třídy; na názvy zavedené tímto způsobem se však vztahují následující omezení:
 
 - Název (synonymum) se nemůže objevit po **třídy**, **struktura**, nebo **sjednocení** předponu.
 

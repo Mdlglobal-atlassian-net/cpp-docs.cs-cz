@@ -31,11 +31,11 @@ helpviewer_keywords:
 - ccoshl function
 ms.assetid: 79667449-4edf-4948-bf6b-720adf2b3f3b
 ms.openlocfilehash: c25441d4f25f9e77a0cb71d942e132f34c4c1f5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335552"
 ---
 # <a name="ccosh-ccoshf-ccoshl"></a>ccosh ccoshf, ccoshl
 
@@ -72,13 +72,13 @@ Hyperbolický kosinus *z*, v radiánech.
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **ccosh** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **ccosh** vždy převezme a vrátí **_Dcomplex** hodnotu.
+Protože C++ umožňuje přetížení, můžete volat přetížení **ccosh** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **ccosh** vždy převezme a vrátí **_Dcomplex** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
-|**ccosh**, **ccoshf**, **ccoshl**|\<complex.h>|\<ccomplex >|
+|**ccosh**,               **ccoshf**, **ccoshl**|\<complex.h>|\<ccomplex>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

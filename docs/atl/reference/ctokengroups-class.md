@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
 ms.openlocfilehash: 934d746dafafb39c2ffc3477c59c95914d270196
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58772823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277354"
 ---
 # <a name="ctokengroups-class"></a>CTokenGroups Class
 
@@ -40,14 +40,14 @@ class CTokenGroups
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CTokenGroups::CTokenGroups](#ctokengroups)|Konstruktor|
 |[CTokenGroups::~CTokenGroups](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CTokenGroups::Add](#add)|Přidá `CSid` nebo existující `TOKEN_GROUPS` struktury na `CTokenGroups` objektu.|
 |[CTokenGroups::Delete](#delete)|Odstraní `CSid` a jeho přidružených atributů z `CTokenGroups` objektu.|
@@ -60,7 +60,7 @@ class CTokenGroups
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CTokenGroups::operator const TOKEN_GROUPS *](#operator_const_token_groups__star)|Přetypování `CTokenGroups` na ukazatel na objekt `TOKEN_GROUPS` struktury.|
 |[CTokenGroups::operator =](#operator_eq)|Operátor přiřazení.|

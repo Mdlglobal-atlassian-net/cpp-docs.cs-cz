@@ -3,19 +3,19 @@ title: 'Implementace čistě virtuálních funkcí:'
 ms.date: 11/16/2016
 ms.assetid: ea9b4719-34a3-474a-b4ec-05b1859f80f1
 ms.openlocfilehash: 59e4519f57a1d9bd9ba1cee1ed6ae41bea785a9f
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62265079"
 ---
 # <a name="implement-pure-virtuals"></a>Implementace čistě virtuálních funkcí:
 
-**Co:** umožňuje okamžitě generování kódu nutné implementovat všechny čistě virtuální metody ve třídě.
+**Co:** Umožňuje okamžitě generování kódu nutné implementovat všechny čistě virtuální metody ve třídě.
 
-**Kdy:** chcete dědit ze třídy s čistě virtuální funkce.
+**Kdy:** Chcete-li dědit ze třídy s čistě virtuální funkce.
 
-**Důvod, proč:** ručně může implementovat všechny čistě virtuální funkce jeden po druhém, ale tato funkce automaticky vygeneruje všechny podpisy metod.
+**Proč:** Ručně je možné implementovat všechny čistě virtuální funkce jeden po druhém, ale tato funkce automaticky vygeneruje všechny podpisy metod.
 
 **Jak:**
 

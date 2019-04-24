@@ -10,11 +10,11 @@ helpviewer_keywords:
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
 ms.openlocfilehash: 0ffe1077da76d7524ce99d825e97f68a031ca315
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301549"
 ---
 # <a name="nested-class-declarations"></a>Vnořené deklarace tříd
 
@@ -54,7 +54,7 @@ int main()
 }
 ```
 
-`BufferedIO::BufferedInput` a `BufferedIO::BufferedOutput` jsou deklarovány v `BufferedIO`. Tyto názvy tříd nejsou viditelné mimo obor třídy `BufferedIO`. Objekt typu `BufferedIO` však neobsahuje žádné objekty typu `BufferedInput` ani `BufferedOutput`.
+`BufferedIO::BufferedInput` a `BufferedIO::BufferedOutput` jsou deklarovány v rámci `BufferedIO`. Tyto názvy tříd nejsou viditelné mimo obor třídy `BufferedIO`. Objekt typu `BufferedIO` však neobsahuje žádné objekty typu `BufferedInput` ani `BufferedOutput`.
 
 Vnořené třídy mohou přímo použít názvy, názvy typů, názvy statických členů a enumerátory pouze z nadřazené třídy. Pro použití názvů ostatních členů třídy je nutné použít ukazatele, odkazy nebo názvy objektů.
 

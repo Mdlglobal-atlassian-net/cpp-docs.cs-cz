@@ -28,11 +28,11 @@ helpviewer_keywords:
 - expm1 function
 ms.assetid: 2a4dd2d9-370c-42b0-9067-0625efa272e0
 ms.openlocfilehash: 5971f879ecef7d4fa1027849cc44d598e877b5f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334980"
 ---
 # <a name="expm1-expm1f-expm1l"></a>expm1, expm1f, expm1l
 
@@ -75,7 +75,7 @@ Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **expm
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**expm1 –**, **expm1f –**, **expm1l –**|\<Math.h >|
+|**expm1 –**, **expm1f –**, **expm1l –**|\<math.h>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

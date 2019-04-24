@@ -7,15 +7,15 @@ helpviewer_keywords:
 - inline assembly [C++], using
 ms.assetid: 94364d97-faa7-4bdf-8473-570956986c51
 ms.openlocfilehash: ecf1598ec90a8600e1fa9aae565724c254dc11e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167397"
 ---
 # <a name="advantages-of-inline-assembly"></a>Výhody inline assembleru
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Protože vložený assembler nevyžaduje samostatné kroky sestavení a propojení, je pohodlnější než samostatný assembler. Kód vloženého sestavení může použít název proměnné nebo funkce jazyka C, který je v rozsahu, takže jej lze snadno integrovat do kódu jazyka C programu. Protože lze kód sestavení kombinovat s příkazy jazyka C nebo C++ vložené, lze provádět úkoly, které jsou náročné nebo nemožné v jazyce C nebo C++.
 

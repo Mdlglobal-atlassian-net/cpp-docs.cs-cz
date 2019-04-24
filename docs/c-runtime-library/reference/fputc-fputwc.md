@@ -29,11 +29,11 @@ helpviewer_keywords:
 - fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
 ms.openlocfilehash: fc06c9f2060baae63071339768cef11fc5f34023
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288016"
 ---
 # <a name="fputc-fputwc"></a>fputc, fputwc
 
@@ -57,7 +57,7 @@ wint_t fputwc(
 *c*<br/>
 Znak k zapsání.
 
-*Stream*<br/>
+*stream*<br/>
 Ukazatel na **souboru** struktury.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -79,20 +79,20 @@ Následují poznámky specifické pro rutinu.
 |Rutina|Poznámky|
 |-------------|-------------|
 |**fputc**|Ekvivalentní **putc**, ale implementována pouze jako funkce, nikoli jako funkce a makro.|
-|**fputwc –**|Širokoznaká verze **fputc**. Zapíše *c* jako vícebajtový znak nebo široký znak podle toho, zda *stream* je otevřen v textovém nebo binárním režimu.|
+|**fputwc**|Širokoznaká verze **fputc**. Zapíše *c* jako vícebajtový znak nebo široký znak podle toho, zda *stream* je otevřen v textovém nebo binárním režimu.|
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_fputtc –**|**fputc**|**fputc**|**fputwc –**|
+|**_fputtc –**|**fputc**|**fputc**|**fputwc**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
 |**fputc**|\<stdio.h>|
-|**fputwc –**|\<stdio.h > nebo \<wchar.h >|
+|**fputwc**|\<stdio.h > nebo \<wchar.h >|
 
 Konzole není podporována v aplikacích pro univerzální platformu Windows (UPW). Standardní datový proud popisovačů, které jsou spojeny s konzolou –**stdin**, **stdout**, a **stderr**– musí být přesměrován před funkcí jazyka C za běhu můžete použít v aplikacích pro UWP . Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

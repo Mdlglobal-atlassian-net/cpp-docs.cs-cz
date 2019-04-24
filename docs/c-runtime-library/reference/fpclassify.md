@@ -1,5 +1,5 @@
 ---
-title: fpclassify –
+title: fpclassify
 ms.date: 04/05/2018
 apiname:
 - fpclassify
@@ -23,13 +23,13 @@ helpviewer_keywords:
 - fpclassify function
 ms.assetid: bf549499-7ff9-4a58-8692-f2d1cb6bab81
 ms.openlocfilehash: a25897a110d96923a45695d61f923dc7818c7e3a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287938"
 ---
-# <a name="fpclassify"></a>fpclassify –
+# <a name="fpclassify"></a>fpclassify
 
 Vrátí hodnotu s plovoucí desetinnou čárkou klasifikace argumentu.
 
@@ -62,7 +62,7 @@ Hodnota s plovoucí desetinnou čárkou k testování.
 
 **fpclassify –** vrací celočíselnou hodnotu, která určuje třídu s plovoucí desetinnou čárkou argumentu *x*. Tato tabulka uvádí možné hodnoty vrácené **fpclassify –** definované v \<math.h >.
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |**FP_NAN**|Tichý, signalizace nebo neurčitý NaN|
 |**FP_INFINITE**|Kladné nebo záporné nekonečno|
@@ -78,7 +78,7 @@ V jazyce C **fpclassify –** je makro; v jazyce C++, **fpclassify –** je funk
 
 |Funkce nebo makra|Požadované záhlaví (C)|Požadované záhlaví (C++)|
 |---------------------|---------------------------|-------------------------------|
-|**fpclassify**|\<Math.h >|\<Math.h > nebo \<cmath >|
+|**fpclassify**|\<math.h>|\<Math.h > nebo \<cmath >|
 
 **Fpclassify –** – makro a **fpclassify –** funkce v souladu s normou ISO C99 a C ++ 11 specifikace. Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

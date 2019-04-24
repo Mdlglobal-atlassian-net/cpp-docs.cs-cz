@@ -183,11 +183,11 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
 ms.openlocfilehash: 92f5adcea50e660ecfad131313247e118312e609
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58781260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323762"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl Class
 
@@ -203,13 +203,13 @@ class CToolBarCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CToolBarCtrl::CToolBarCtrl](#ctoolbarctrl)|Vytvoří `CToolBarCtrl` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CToolBarCtrl::AddBitmap](#addbitmap)|Přidá jednu nebo víc imagí rastrového obrázku tlačítka na seznam obrázky tlačítek, které jsou k dispozici pro ovládací prvek panelu nástrojů.|
 |[CToolBarCtrl::AddButtons](#addbuttons)|Přidá jednu nebo více tlačítek do ovládacího prvku toolbar.|

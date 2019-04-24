@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::lock [C++]
 - std::try_to_lock [C++]
 ms.openlocfilehash: b375aec0bee4183563b8cd55e4e8a27f79e7cd3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326323"
 ---
 # <a name="ltmutexgt-functions-and-variables"></a>&lt;objekt mutex&gt; funkce a proměnné
 
@@ -48,7 +48,7 @@ void call_once(once_flag& Flag,
 
 ### <a name="parameters"></a>Parametry
 
-*Příznak*<br/>
+*Parametr*<br/>
 A [once_flag –](../standard-library/once-flag-structure.md) objekt, který zajistí, že volatelný objekt je volat pouze jednou.
 
 *F*<br/>
@@ -94,4 +94,4 @@ const try_to_lock_t try_to_lock;
 
 ## <a name="see-also"></a>Viz také:
 
-[\<mutex – >](../standard-library/mutex.md)<br/>
+[\<mutex>](../standard-library/mutex.md)<br/>

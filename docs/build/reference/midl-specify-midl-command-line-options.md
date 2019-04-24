@@ -12,11 +12,11 @@ helpviewer_keywords:
 - MIDL, command line options
 ms.assetid: 22dc259e-b34c-4ed3-a380-4beb734482c1
 ms.openlocfilehash: 584958ac51bdc491ad1bdd16117ecaad6e000ec7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321069"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Zadejte možnosti příkazového řádku MIDL)
 
@@ -51,8 +51,8 @@ Soubor musí obsahovat jeden parametr příkazového řádku MIDL každý řáde
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)<br/>
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)<br/>
 [/IDLOUT (pojmenování výstupních souborů MIDL)](idlout-name-midl-output-files.md)<br/>
 [/IGNOREIDL (nezpracovávat atributy do MIDL)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
 [/TLBOUT (pojmenování souboru .TLB)](tlbout-name-dot-tlb-file.md)<br/>

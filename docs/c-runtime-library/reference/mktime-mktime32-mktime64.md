@@ -32,11 +32,11 @@ helpviewer_keywords:
 - time, converting
 ms.assetid: 284ed5d4-7064-48a2-bd50-15effdae32cf
 ms.openlocfilehash: 8e9524249d6c90323bdcfc0b92ecf2dad281c79b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156483"
 ---
 # <a name="mktime-mktime32-mktime64"></a>mktime, _mktime32, _mktime64
 
@@ -93,9 +93,9 @@ Tyto funkce ověřují své parametru. Pokud *timeptr* je ukazatel s hodnotou nu
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**mktime**|\<Time.h >|
-|**_mktime32**|\<Time.h >|
-|**_mktime64**|\<Time.h >|
+|**mktime**|\<time.h>|
+|**_mktime32**|\<time.h>|
+|**_mktime64**|\<time.h>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

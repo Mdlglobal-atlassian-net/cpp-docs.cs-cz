@@ -165,11 +165,11 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
 ms.openlocfilehash: 2687dfc9941a512523a7cb771cb872c78b97ce2d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58773980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152166"
 ---
 # <a name="coleclientitem-class"></a>Coleclientitem – třída
 
@@ -185,13 +185,13 @@ class COleClientItem : public CDocItem
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleClientItem::COleClientItem](#coleclientitem)|Vytvoří `COleClientItem` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleClientItem::Activate](#activate)|Otevře položku OLE pro operace a pak spustí zadaný příkaz.|
 |[COleClientItem::ActivateAs](#activateas)|Aktivuje položku jako jiného typu.|
@@ -265,7 +265,7 @@ class COleClientItem : public CDocItem
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleClientItem::CanActivate](#canactivate)|Volá se rozhraním, chcete-li zjistit, jestli je povolená místní aktivace.|
 |[COleClientItem::OnChangeItemPosition](#onchangeitemposition)|Volá se rozhraním, když se změní pozici položky.|
@@ -1045,7 +1045,7 @@ virtual BOOL DoVerb(
 *nVerb*<br/>
 Určuje příkaz pro spuštění. Může obsahovat jednu z následujících akcí:
 
-|Value|Význam|Symbol|
+|Hodnota|Význam|Symbol|
 |-----------|-------------|------------|
 |- 0|primární požadavek|OLEIVERB_PRIMARY|
 |- 1|Sekundární příkaz|(Žádné)|

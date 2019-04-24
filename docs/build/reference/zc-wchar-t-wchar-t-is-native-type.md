@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Zc compiler options [C++]
 ms.assetid: b0de5a84-da72-4e5a-9a4e-541099f939e0
 ms.openlocfilehash: b2563ba0ae2a07bc9f9d81128745ed4b9651fb6c
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57815174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315635"
 ---
 # <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t (wchar_t je nativní typ)
 
@@ -31,9 +31,9 @@ Analyzovat `wchar_t` jako předdefinovaný typ podle standardu jazyka C++.
 
 Pokud **/Zc: wchar_t** zapnutý, `wchar_t` je klíčové slovo pro vestavěný celočíselný typ v kódu zkompilovaném jako C++. Pokud **/Zc:wchar_t-** (se znaménkem minus) je zadán, nebo v kódu zkompilovat jako C, `wchar_t` není vestavěný typ. Místo toho `wchar_t` je definován jako `typedef` pro `unsigned short` v kanonické hlavička stddef.h. (Microsoft implementace ji definuje v jiné záhlaví, který je součástí stddef.h a další standardní záhlaví.)
 
-Nedoporučujeme **/Zc:wchar_t-** protože standard jazyka C++ vyžaduje, aby `wchar_t` předdefinovaným typem. Použití `typedef` verze může způsobit problémy s přenositelností. Pokud upgradujete ze starší verze jazyka Visual C++ a dojde k chybě kompilátoru [upozornění C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) protože kód se snaží implicitně převést `wchar_t` k `unsigned short`, doporučujeme vám, že změníte kód, který opravit chybu, místo toho nastavení **/Zc:wchar_t-**.
+Nedoporučujeme **/Zc:wchar_t-** vzhledem k tomu, C++ standard vyžaduje, aby `wchar_t` předdefinovaným typem. Použití `typedef` verze může způsobit problémy s přenositelností. Pokud upgradujete ze starší verze Visual C++ a dojde k chybě kompilátoru [upozornění C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) protože kód se snaží implicitně převést `wchar_t` k `unsigned short`, doporučujeme vám, že změníte kód, který opravit chybu, Namísto nastavení **/Zc:wchar_t-**.
 
-**/Zc: wchar_t** možnost je ve výchozím v kompilací C++ a je ignorován v jazyce C kompilacích. [/ Permissive-](permissive-standards-conformance.md) nemá vliv na možnost **/Zc: wchar_t**.
+**/Zc: wchar_t** možnost je ve výchozím v C++ kompilace a je ignorován v jazyce C kompilacích. [/ Permissive-](permissive-standards-conformance.md) nemá vliv na možnost **/Zc: wchar_t**.
 
 Microsoft implementuje `wchar_t` jako hodnota bez znaménka dva bajtu. Mapuje se na nativní typ specifické pro společnost Microsoft `__wchar_t`. Další informace o `wchar_t`, naleznete v tématu [rozsahy datového typu](../../cpp/data-type-ranges.md) a [základní typy](../../cpp/fundamental-types-cpp.md).
 

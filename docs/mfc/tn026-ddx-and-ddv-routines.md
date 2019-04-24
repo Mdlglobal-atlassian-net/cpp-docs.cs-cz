@@ -1,5 +1,5 @@
 ---
-title: 'TN026: Rutiny DDX a DDV'
+title: 'TN026: DDX a DDV'
 ms.date: 06/28/2018
 f1_keywords:
 - DDX
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - DDV (dialog data validation), procedures
 ms.assetid: c2eba87a-4b47-4083-b28b-e2fa77dfb4c4
 ms.openlocfilehash: 89916e60d9677240f2d70e37e9a80e6ad7a76fc3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305863"
 ---
-# <a name="tn026-ddx-and-ddv-routines"></a>TN026: Rutiny DDX a DDV
+# <a name="tn026-ddx-and-ddv-routines"></a>TN026: DDX a DDV
 
 > [!NOTE]
 > Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
@@ -85,15 +85,15 @@ Ověření dochází pouze při `m_bSaveAndValidate` nastavena. Hodnota `m_bSave
 
 Existují tři další zajímavé `CDataExchange` členy:
 
-- `m_pDlgWnd`: Okno (obvykle dialogového okna), který obsahuje ovládací prvky. To je zabránit volající globální funkce DDX_ a DDV_ s k předání 'this' na každá rutina DDX/DDV.
+- `m_pDlgWnd`: V okně (obvykle dialogového okna), který obsahuje ovládací prvky. To je zabránit volající globální funkce DDX_ a DDV_ s k předání 'this' na každá rutina DDX/DDV.
 
-- `PrepareCtrl`, a `PrepareEditCtrl`: připraví ovládací prvek dialogového okna pro data systému exchange. Uloží popisovač tohoto ovládacího prvku nastavení fokusu, pokud se ověřování nezdaří. `PrepareCtrl` se používá pro jiné ovládací prvky a `PrepareEditCtrl` se používá pro ovládacích prvcích pro úpravy.
+- `PrepareCtrl`, a `PrepareEditCtrl`: Připraví ovládací prvek dialogového okna pro data systému exchange. Uloží popisovač tohoto ovládacího prvku nastavení fokusu, pokud se ověřování nezdaří. `PrepareCtrl` se používá pro jiné ovládací prvky a `PrepareEditCtrl` se používá pro ovládacích prvcích pro úpravy.
 
 - `Fail`: Volá se po přepnutí do okna se zprávou upozornění uživateli vstupních chyb. Tato rutina obnoví fokus na poslední ovládací prvek (poslední volání `PrepareCtrl` nebo `PrepareEditCtrl`) a vyvolají výjimku. Tato členská funkce může být volána z DDX_ a DDV_ rutiny.
 
 ## <a name="user-extensions"></a>Rozšíření uživatele
 
-K rozšíření výchozího mechanismu DDX/DDV několika způsoby. Můžeš:
+K rozšíření výchozího mechanismu DDX/DDV několika způsoby. Můžete:
 
 - Přidáte nové datové typy.
 
@@ -143,21 +143,21 @@ else
 
 ClassWizard podporuje podmnožinu DDX/DDV přizpůsobení, neboť umožňuje integrovat vlastní DDX_ a DDV_ rutin do uživatelského rozhraní ClassWizard. To je jenom náklady na výhodné, pokud budete chtít znovu použít konkrétní DDX a DDV rutiny v projektu nebo v mnoha projektů.
 
-K tomu dojde ke speciální položky ve DDX. CLW (předchozí verze aplikace Visual C++ uložené tyto informace v APSTUDIO. INI) nebo ve vašem projektu. CLW souboru. Speciální položky může být zadán buď v [obecné informace o] části vašeho projektu. CLW souboru nebo v části [ExtraDDX] DDX. CLW soubor v adresáři \Program Files\Microsoft Visual Studio\Visual C ++ \bin. Budete muset vytvořit DDX. CLW soubor, pokud ještě neexistuje. Pokud budete chtít použít vlastní rutiny DDX_/DDV_ pouze v určitých projektu, přidejte položky do oddílu [obecné informace o] vašeho projektu. CLW souboru místo toho. Pokud máte v plánu pro použití rutin na mnoho projektů, přidáte položky do oddílu [ExtraDDX] DDX. CLW.
+K tomu dojde ke speciální položky ve DDX. CLW (předchozí verze aplikace Visual C++ uložené tyto informace v APSTUDIO. INI) nebo ve vašem projektu. CLW souboru. Speciální položky může být zadán buď v [obecné informace o] části vašeho projektu. CLW souboru nebo v části [ExtraDDX] DDX. Soubor CLW \Program Files\Microsoft Visual Studio\Visual C++adresáři \bin. Budete muset vytvořit DDX. CLW soubor, pokud ještě neexistuje. Pokud budete chtít použít vlastní rutiny DDX_/DDV_ pouze v určitých projektu, přidejte položky do oddílu [obecné informace o] vašeho projektu. CLW souboru místo toho. Pokud máte v plánu pro použití rutin na mnoho projektů, přidáte položky do oddílu [ExtraDDX] DDX. CLW.
 
 Je obecný formát tyto speciální položky:
 
-> ExtraDDXCount =*n*
+> ExtraDDXCount=*n*
 
 kde *n* je počet ExtraDDX? řádky a postup, formuláře
 
-> ExtraDDX? =*klíče*; *vb-keys*; *řádku*; *typ*; *shodný*; *DDX_Proc* [; *DDV_Proc*; *prompt1*; *arg1* [; *prompt2*; *fmt2*]]
+> ExtraDDX?=*keys*; *vb-keys*; *prompt*; *type*; *initValue*; *DDX_Proc* [; *DDV_Proc*; *prompt1*; *arg1* [; *prompt2*; *fmt2*]]
 
 kde? číslo 1 - *n* určující, jaký typ DDX v seznamu, který definuje.
 
 Každé pole je oddělené znakem ";". Pole a jejich účel jsou popsané níže.
 
-- *klíče*
+- *keys*
 
   Seznam jednotlivých znaků určující, pro který dialog řídí tento typ proměnné je povolený.
 
@@ -174,7 +174,7 @@ Každé pole je oddělené znakem ";". Pole a jejich účel jsou popsané níže
   n | seřazené rozevíracího seznamu
   1 | Pokud vložení DDX měla být přidána do hlavní seznam (výchozí je přidat do funkce tail) obecně používá se pro rutiny DDX přenos vlastnost 'Control'.
 
-- *VB-keys*
+- *vb-keys*
 
   Toto pole se používá pouze v rámci produktu 16 bitů pro ovládací prvky VBX (ovládací prvky VBX nejsou podporovány v produktu 32 bitů)
 
@@ -182,21 +182,21 @@ Každé pole je oddělené znakem ";". Pole a jejich účel jsou popsané níže
 
   Řetězec, který se umístí v poli se seznamem vlastností (žádné uvozovky)
 
-- *Typ*
+- *type*
 
   Jeden identifikátor pro typ generoval v hlavičkovém souboru. V našem příkladu s DDX_Time to se nastavuje na CTime.
 
-- *VB-keys*
+- *vb-keys*
 
   Nepoužívá se v této verzi a by měla být prázdná
 
-- *Shodný*
+- *initValue*
 
   Počáteční hodnota – 0 nebo prázdné. Pokud je pole prázdné, bude žádné inicializačního řádku napsané v části //{{AFX_DATA_INIT implementační soubor. Prázdná položka by měla sloužit pro objekty jazyka C++ (například `CString`, `CTime`, a tak dále), které mají konstruktory, které zajistit správné inicializace.
 
 - *DDX_Proc*
 
-  Jeden identifikátor pro proceduru DDX_. Název funkce C++ musí začínat znakem "DDX_", ale neobsahují "DDX_" v \<DDX_Proc > identifikátor. V příkladu výše \<DDX_Proc > identifikátor bude čas. Když ClassWizard zapíše volání funkce v souboru implementace {{oddíl AFX_DATA_MAP přidá tento název k DDX_, tedy přicházejících u DDX_Time.
+  Jeden identifikátor pro proceduru DDX_. C++ Název funkce musí začínat znakem "DDX_", ale neobsahují "DDX_" v \<DDX_Proc > identifikátor. V příkladu výše \<DDX_Proc > identifikátor bude čas. Když ClassWizard zapíše volání funkce v souboru implementace {{oddíl AFX_DATA_MAP přidá tento název k DDX_, tedy přicházejících u DDX_Time.
 
 - *Komentář*
 
@@ -208,7 +208,7 @@ Každé pole je oddělené znakem ";". Pole a jejich účel jsou popsané níže
 
 - *arg*
 
-  Jeden identifikátor DDV_ postup. Název funkce C++ musí začínat znakem "DDV_", ale nezahrnete "DDX_" \<DDX_Proc > identifikátor.
+  Jeden identifikátor DDV_ postup. C++ Název funkce musí začínat znakem "DDV_", ale nezahrnete "DDX_" \<DDX_Proc > identifikátor.
 
   *arg* následuje args DDV 1 nebo 2:
 
@@ -220,7 +220,7 @@ Každé pole je oddělené znakem ";". Pole a jejich účel jsou popsané níže
 
       Znak formátu pro typ arg, jeden z:
 
-      |Znak|Typ|
+      |Znak|Type|
       |-|-|
       |d | int|
       |u | unsigned int|

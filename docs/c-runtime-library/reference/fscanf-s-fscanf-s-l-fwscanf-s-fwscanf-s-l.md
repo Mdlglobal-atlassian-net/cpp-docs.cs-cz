@@ -41,11 +41,11 @@ helpviewer_keywords:
 - fscanf_s_l function
 ms.assetid: b6e88194-714b-4322-be82-1cc0b343fe01
 ms.openlocfilehash: f9c1686d7e42e0e885a65e153ee4e1ff2be01f27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332920"
 ---
 # <a name="fscanfs-fscanfsl-fwscanfs-fwscanfsl"></a>fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l
 
@@ -80,13 +80,13 @@ int _fwscanf_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Stream*<br/>
+*stream*<br/>
 Ukazatel na **souboru** struktury.
 
 *Formát*<br/>
 Řetězec řízení formátu
 
-*Argument*<br/>
+*argument*<br/>
 Volitelné argumenty
 
 *Národní prostředí*<br/>
@@ -113,15 +113,15 @@ Verze těchto funkcí, které mají **_l** přípona jsou stejné s tím rozdíl
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_ftscanf_s –**|**fscanf_s**|**fscanf_s**|**fwscanf_s**|
-|**_ftscanf_s_l –**|**_fscanf_s_l**|**_fscanf_s_l**|**_fwscanf_s_l**|
+|**_ftscanf_s**|**fscanf_s**|**fscanf_s**|**fwscanf_s**|
+|**_ftscanf_s_l**|**_fscanf_s_l**|**_fscanf_s_l**|**_fwscanf_s_l**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**fscanf_s –**, **_fscanf_s_l –**|\<stdio.h>|
-|**fwscanf_s –**, **_fwscanf_s_l –**|\<stdio.h > nebo \<wchar.h >|
+|**fscanf_s**, **_fscanf_s_l**|\<stdio.h>|
+|**fwscanf_s**, **_fwscanf_s_l**|\<stdio.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

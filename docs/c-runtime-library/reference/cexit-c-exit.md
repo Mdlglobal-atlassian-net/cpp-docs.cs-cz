@@ -30,11 +30,11 @@ helpviewer_keywords:
 - c_exit function
 ms.assetid: f3072045-9924-4b1a-9fef-b0dcd6d12663
 ms.openlocfilehash: a075e8a8e965a195765b86ffa21fed0915dbf5ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335487"
 ---
 # <a name="cexit-cexit"></a>_cexit, _c_exit
 
@@ -53,7 +53,7 @@ void _c_exit( void );
 
 |Funkce|Chování|
 |--------------|--------------|
-|**ukončení**|Provádí kompletní postupy ukončení knihovny jazyka C, ukončí proces a se zadaným stavovým kódem se ukončí.|
+|**exit**|Provádí kompletní postupy ukončení knihovny jazyka C, ukončí proces a se zadaným stavovým kódem se ukončí.|
 |**_exit**|Provádí rychlé postupy ukončení knihovny jazyka C, ukončí proces a se zadaným stavovým kódem se ukončí.|
 |**_cexit**|Provádí kompletní postupy ukončení knihovny jazyka C a vrátí volajícímu, ale neukončí proces.|
 |**_c_exit**|Provádí rychlé postupy ukončení knihovny jazyka C a vrátí volajícímu, ale neukončí proces.|
@@ -68,8 +68,8 @@ myObject.myClass::~myClass( );
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_cexit**|\<Process.h >|
-|**_c_exit**|\<Process.h >|
+|**_cexit**|\<process.h>|
+|**_c_exit**|\<process.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

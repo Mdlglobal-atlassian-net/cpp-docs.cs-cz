@@ -50,11 +50,11 @@ helpviewer_keywords:
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
 ms.openlocfilehash: 36d8b0d6480266f86136119a470fb7af5859a5b8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332785"
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 
@@ -91,7 +91,7 @@ int _fstat64i32(
 
 ### <a name="parameters"></a>Parametry
 
-*FD*<br/>
+*fd*<br/>
 Popisovač souboru otevřený souboru.
 
 *Vyrovnávací paměti*<br/>
@@ -110,7 +110,7 @@ Vrátí hodnotu 0, pokud je získat informace o stavu souboru. Návratová hodno
 | **st_atime** | Čas posledního přístupu k souboru. |
 | **st_ctime** | Čas vytvoření souboru. |
 | **st_dev** | Pokud zařízení, *fd*; jinak 0. |
-| **st_mode –** | Bitová maska informace režim souboru. **_S_IFCHR** bit nastaven, pokud *fd* odkazuje na zařízení. **_S_IFREG** bit nastaven, pokud *fd* odkazuje na soubor běžné. Bits pro čtení a zápis nastaveny podle režimu oprávnění k souboru. **_S_IFCHR** a ostatní konstanty jsou definovány v SYS\Stat.h. |
+| **st_mode** | Bitová maska informace režim souboru. **_S_IFCHR** bit nastaven, pokud *fd* odkazuje na zařízení. **_S_IFREG** bit nastaven, pokud *fd* odkazuje na soubor běžné. Bits pro čtení a zápis nastaveny podle režimu oprávnění k souboru. **_S_IFCHR** a ostatní konstanty jsou definovány v SYS\Stat.h. |
 | **st_mtime** | Čas poslední změny souboru. |
 | **st_nlink** | Vždy 1 v systémech souborů než NTFS. |
 | **st_rdev** | Pokud zařízení, *fd*; jinak 0. |
@@ -130,14 +130,14 @@ Variace z těchto funkcí podporovaly typy času 32bitové nebo 64bitové a 32bi
 
 |Funkce|_USE_32BIT_TIME_T definované?|Typ času|Délka typu souboru|
 |---------------|------------------------------------|---------------|----------------------|
-|**_fstat**|Nedefinovaná.|64bitových|32bitová|
+|**_fstat**|Nedefinovaná.|64bitová|32bitová|
 |**_fstat**|Definice|32bitová|32bitová|
 |**_fstat32**|Není ovlivněna definici makra|32bitová|32bitová|
-|**_fstat64**|Není ovlivněna definici makra|64bitových|64bitových|
-|**_fstati64**|Nedefinovaná.|64bitových|64bitových|
-|**_fstati64**|Definice|32bitová|64bitových|
-|**_fstat32i64**|Není ovlivněna definici makra|32bitová|64bitových|
-|**_fstat64i32**|Není ovlivněna definici makra|64bitových|32bitová|
+|**_fstat64**|Není ovlivněna definici makra|64bitová|64bitová|
+|**_fstati64**|Nedefinovaná.|64bitová|64bitová|
+|**_fstati64**|Definice|32bitová|64bitová|
+|**_fstat32i64**|Není ovlivněna definici makra|32bitová|64bitová|
+|**_fstat64i32**|Není ovlivněna definici makra|64bitová|32bitová|
 
 ## <a name="requirements"></a>Požadavky
 

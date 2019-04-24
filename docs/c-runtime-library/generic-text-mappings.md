@@ -8,11 +8,11 @@ helpviewer_keywords:
 - mappings, generic-text
 ms.assetid: 1ed02e02-3649-42dd-a697-e1b4af25bb02
 ms.openlocfilehash: d4bf4fdc44cc8807bebacdad3700d2040c628b0d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62289712"
 ---
 # <a name="generic-text-mappings"></a>Mapování obecného textu
 

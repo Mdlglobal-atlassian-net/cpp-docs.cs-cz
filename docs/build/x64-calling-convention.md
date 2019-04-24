@@ -4,11 +4,11 @@ description: Podrobnosti o výchozí x64 ABI konvenci volání.
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
 ms.openlocfilehash: 02bf4719766366049b600b148ad88fc238f4e54e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313612"
 ---
 # <a name="x64-calling-convention"></a>x64 konvence volání
 
@@ -44,7 +44,7 @@ Následující tabulka shrnuje, jak jsou předávány parametry:
 
 |Typ parametru|Jak předávat|
 |--------------------|----------------|
-|Číslo s plovoucí desetinnou čárkou|První 4 parametry - XMM0 prostřednictvím XMM3. Ostatní předány v zásobníku.|
+|Plovoucí desetinná čárka|První 4 parametry - XMM0 prostřednictvím XMM3. Ostatní předány v zásobníku.|
 |Integer|První 4 parametry – RCX, RDX, R8 R9. Ostatní předány v zásobníku.|
 |Agregace (8, 16, 32 nebo 64 bitů) a __m64|První 4 parametry – RCX, RDX, R8 R9. Ostatní předány v zásobníku.|
 |Agregace (ostatní)|Ukazatel. První 4 parametry předány jako ukazatel v RCX, RDX, R8 a R9|

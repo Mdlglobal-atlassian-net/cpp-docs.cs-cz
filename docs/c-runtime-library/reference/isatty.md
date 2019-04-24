@@ -25,11 +25,11 @@ helpviewer_keywords:
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
 ms.openlocfilehash: ef0df5f859779c081df47ef4bfe938ec2601d524
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157471"
 ---
 # <a name="isatty"></a>_isatty
 
@@ -43,7 +43,7 @@ int _isatty( int fd );
 
 ### <a name="parameters"></a>Parametry
 
-*FD*<br/>
+*fd*<br/>
 Popisovač souboru odkazující na testované zařízení.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -60,7 +60,7 @@ Tato funkce ověřuje *fd* parametru. Pokud *fd* je nesprávný ukazatel souboru
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_isatty**|\<IO.h >|
+|**_isatty**|\<io.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

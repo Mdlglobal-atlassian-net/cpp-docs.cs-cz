@@ -8,11 +8,11 @@ helpviewer_keywords:
 - /Qimprecise_fwaits compiler option (C++)
 ms.assetid: b1501f21-7e08-4fea-95e8-176ec03a635b
 ms.openlocfilehash: 40683382686ea64a80563f3f29b7d3523f4144a8
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57819711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319587"
 ---
 # <a name="qimprecisefwaits-remove-fwaits-inside-try-blocks"></a>/Qimprecise_fwaits (odebrání příkazů fwaits z bloků Try)
 
@@ -45,5 +45,5 @@ Tato možnost nemá žádný vliv, pokud **/FP: except** není zároveň zadaná
 ## <a name="see-also"></a>Viz také:
 
 [/Q – možnosti (operace nízké úrovně)](q-options-low-level-operations.md)<br/>
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

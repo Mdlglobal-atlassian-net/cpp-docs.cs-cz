@@ -21,15 +21,15 @@ helpviewer_keywords:
 - execve function
 ms.assetid: f28aabe4-fd76-422e-a0e4-80864736d245
 ms.openlocfilehash: 6ed2bc258dfb0b627b23391b90e94222e9803a6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288332"
 ---
 # <a name="execve"></a>execve
 
-Tato funkce POSIX je zastaralá. Použít splňující podmínky ISO C++ [_execve](execve-wexecve.md) místo.
+Tato funkce POSIX je zastaralá. Použít bitovou kopii ISO C++ splňující podmínky [_execve](execve-wexecve.md) místo.
 
 > [!IMPORTANT]
 > Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

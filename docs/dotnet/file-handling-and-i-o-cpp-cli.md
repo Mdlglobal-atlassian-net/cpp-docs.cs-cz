@@ -1,5 +1,5 @@
 ---
-title: Práce se soubory a I/o (C + +/ CLI)
+title: Práce se soubory a I/o (C++vyhodnocovací)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - .NET Framework [C++], file handling
@@ -25,11 +25,11 @@ helpviewer_keywords:
 - text files, writing in C++
 ms.assetid: 3296fd59-a83a-40d4-bd4a-6096cc13101b
 ms.openlocfilehash: 7009c0b017c403c3f0108aa84b8ddb25a1d1564f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324997"
 ---
 # <a name="file-handling-and-io-ccli"></a>Práce se soubory a vstupně-výstupní operace (C++/CLI)
 
@@ -136,7 +136,7 @@ int main()
 
 Následující příklad kódu ukazuje, jak přečíst binární data ze souboru, pomocí dvou tříd z <xref:System.IO?displayProperty=fullName> obor názvů: <xref:System.IO.FileStream> a <xref:System.IO.BinaryReader>. <xref:System.IO.FileStream> představuje skutečný soubor. <xref:System.IO.BinaryReader> poskytuje rozhraní pro datový proud, který umožňuje binární přístup.
 
-Příklad kódu načte soubor s názvem data.bin a obsahuje celá čísla v binárním formátu. Informace o tomto typu souboru, naleznete v tématu [jak: Zápis do binárního souboru (C + +/ CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md).
+Příklad kódu načte soubor s názvem data.bin a obsahuje celá čísla v binárním formátu. Informace o tomto typu souboru, naleznete v tématu [jak: Zápis do binárního souboru (C++vyhodnocovací)](../dotnet/how-to-write-a-binary-file-cpp-cli.md).
 
 ### <a name="example"></a>Příklad
 
@@ -177,7 +177,7 @@ int main()
 
 Následující příklad kódu ukazuje, jak otevřít a přečíst si jeden řádek textu souboru chvíli, s použitím <xref:System.IO.StreamReader> třídu, která je definována v <xref:System.IO?displayProperty=fullName> oboru názvů. Instance této třídy se používá k otevření textového souboru a pak <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> metoda se používá k načtení každého řádku.
 
-Tento příklad kódu načte soubor s názvem textfile.txt, který obsahuje text. Informace o tomto typu souboru, naleznete v tématu [jak: Zápis do textového souboru (C + +/ CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md).
+Tento příklad kódu načte soubor s názvem textfile.txt, který obsahuje text. Informace o tomto typu souboru, naleznete v tématu [jak: Zápis do textového souboru (C++vyhodnocovací)](../dotnet/how-to-write-a-text-file-cpp-cli.md).
 
 ### <a name="example"></a>Příklad
 
@@ -261,7 +261,7 @@ int main()
 
 Následující příklad kódu ukazuje, zápis binární data do souboru. Používá třídy <xref:System.IO> a <xref:System.IO.FileStream> z oboru názvů <xref:System.IO.BinaryWriter>. <xref:System.IO.FileStream> představuje skutečný soubor, zatímco <xref:System.IO.BinaryWriter> poskytuje rozhraní pro datový proud, který umožňuje binární přístup.
 
-Následující příklad kódu zapíše soubor obsahující celá čísla v binárním formátu. Tento soubor lze číst pomocí kódu v [jak: Čtení z binárního souboru (C + +/ CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md).
+Následující příklad kódu zapíše soubor obsahující celá čísla v binárním formátu. Tento soubor lze číst pomocí kódu v [jak: Čtení z binárního souboru (C++vyhodnocovací)](../dotnet/how-to-read-a-binary-file-cpp-cli.md).
 
 ### <a name="example"></a>Příklad
 

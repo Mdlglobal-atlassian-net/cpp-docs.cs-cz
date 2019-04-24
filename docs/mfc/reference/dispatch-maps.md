@@ -9,11 +9,11 @@ helpviewer_keywords:
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
 ms.openlocfilehash: 5ebedaa02a03bcc7802110977b96659dae45f174
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322511"
 ---
 # <a name="dispatch-maps"></a>Expediční mapy
 
@@ -78,7 +78,7 @@ V souboru implementace (.cpp), který definuje členské funkce třídy mapa ode
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdisp.h
+**Header:** afxdisp.h
 
 ## <a name="end_dispatch_map"></a>  END_DISPATCH_MAP
 
@@ -94,7 +94,7 @@ Je možné použít ve spojení s BEGIN_DISPATCH_MAP.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdisp.h
+**Header:** afxdisp.h
 
 ## <a name="disp_function"></a>  DISP_FUNCTION
 
@@ -138,7 +138,7 @@ Místo oddělený seznam jednoho nebo více konstant určující seznam parametr
 |VT_R4|**float**|
 |VT_R8|**double**|
 |VT_CY|CY|
-|VT_DATE|DATUM|
+|VT_DATE|DATE (Datum)|
 |VT_BSTR|BSTR|
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
@@ -161,14 +161,14 @@ Určuje seznam obsahující krátké celé číslo, za nímž následuje ukazate
 |VTS_R4|**float**|
 |VTS_R8|**double**|
 |VTS_CY|`const CY` Nebo `CY*`|
-|VTS_DATE|DATUM|
+|VTS_DATE|DATE (Datum)|
 |VTS_BSTR|LPCSTR|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_SCODE|SCODE|
 |VTS_BOOL|BOOL|
 |VTS_VARIANT|`const VARIANT*` Nebo `VARIANT&`|
 |VTS_UNKNOWN|LPUNKNOWN|
-|VTS_PI2|__krátké\*__|
+|VTS_PI2|__short\*__|
 |VTS_PI4|__Long\*__|
 |VTS_PR4|__plovoucí desetinnou čárkou\*__|
 |VTS_PR8|__Double\*__|
@@ -184,7 +184,7 @@ Určuje seznam obsahující krátké celé číslo, za nímž následuje ukazate
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdisp.h
+**Header:** afxdisp.h
 
 ## <a name="disp_property"></a>  DISP_PROPERTY
 
@@ -206,7 +206,7 @@ Název třídy.
 *pszName*<br/>
 Externí název vlastnosti.
 
-*Jméno*<br/>
+*memberName*<br/>
 Název členské proměnné, ve kterém je uložené vlastnosti.
 
 *vtPropType*<br/>
@@ -223,7 +223,7 @@ Hodnota určující typ vlastnosti.
 |VT_R4|**float**|
 |VT_R8|**double**|
 |VT_CY|CY|
-|VT_DATE|DATUM|
+|VT_DATE|DATE (Datum)|
 |VT_BSTR|`CString`|
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
@@ -235,7 +235,7 @@ Při změně vlastností, je hodnota členské proměnné určené externího kl
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdisp.h
+**Header:** afxdisp.h
 
 ## <a name="disp_property_ex"></a>  DISP_PROPERTY_EX
 
@@ -261,7 +261,7 @@ Externí název vlastnosti.
 *memberGet*<br/>
 Název členské funkce použít k získání vlastnosti.
 
-*Členů*<br/>
+*memberSet*<br/>
 Název členské funkce lze nastavit vlastnost.
 
 *vtPropType*<br/>
@@ -275,7 +275,7 @@ Hodnota určující typ vlastnosti.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdisp.h
+**Header:** afxdisp.h
 
 ## <a name="disp_property_notify"></a>  DISP_PROPERTY_NOTIFY
 
@@ -298,7 +298,7 @@ Název třídy.
 *szExternalName*<br/>
 Externí název vlastnosti.
 
-*Jméno*<br/>
+*memberName*<br/>
 Název členské proměnné, ve kterém je uložené vlastnosti.
 
 *pfnAfterSet*<br/>
@@ -320,7 +320,7 @@ Na rozdíl od vlastnosti definované s DISP_PROPERTY vlastnosti definované pomo
 |VT_R4|**float**|
 |VT_R8|**double**|
 |VT_CY|CY|
-|VT_DATE|DATUM|
+|VT_DATE|DATE (Datum)|
 |VT_BSTR|`CString`|
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
@@ -330,7 +330,7 @@ Na rozdíl od vlastnosti definované s DISP_PROPERTY vlastnosti definované pomo
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdisp.h
+**Header:** afxdisp.h
 
 ## <a name="disp_property_param"></a>  DISP_PROPERTY_PARAM
 
@@ -390,7 +390,7 @@ Tyto weby odpovídají na následující DISP_PROPERTY_PARAM – makro v mapová
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdisp.h
+**Header:** afxdisp.h
 
 ## <a name="disp_defvalue"></a>  DISP_DEFVALUE
 
@@ -416,7 +416,7 @@ Programování objektu automatizace jednodušší pro aplikace Visual Basic mů�
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdisp.h
+**Header:** afxdisp.h
 
 ## <a name="see-also"></a>Viz také:
 

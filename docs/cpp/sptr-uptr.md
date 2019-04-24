@@ -13,15 +13,15 @@ helpviewer_keywords:
 - __uptr modifier
 ms.assetid: c7f5f3b2-9106-4a0b-a6de-d1588ab153ed
 ms.openlocfilehash: 957f744ca6c5a7be807c1dc68fcd2b602b72300e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330956"
 ---
 # <a name="sptr-uptr"></a>__sptr, __uptr
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Použití **__sptr** nebo **__uptr** modifikátor deklarace 32bitový ukazatel k určení, jak má kompilátor převést 32bitový ukazatel na 64bitový ukazatel. 32bitový ukazatel je například převeden při přiřazení k proměnné 64bitového ukazatele, nebo pokud je k němu přistupováno přes ukazatel na 64bitovou platformu.
 

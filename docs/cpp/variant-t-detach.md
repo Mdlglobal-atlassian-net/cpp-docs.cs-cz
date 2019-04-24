@@ -10,15 +10,15 @@ helpviewer_keywords:
 - VARIANT object
 ms.assetid: c348ac08-62cf-4657-a16f-974a79c12158
 ms.openlocfilehash: 719852c4556291747b612d54c44d4bf82caa9188
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62165928"
 ---
 # <a name="varianttdetach"></a>_variant_t::Detach
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Odpojí zapouzdřeného `VARIANT` objektu z tohoto `_variant_t` objektu.
 

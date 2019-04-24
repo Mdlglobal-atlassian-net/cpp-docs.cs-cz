@@ -1,5 +1,5 @@
 ---
-title: db_command (atribut C++ COM)
+title: db_command (C++ atributů COM)
 ms.date: 07/10/2018
 f1_keywords:
 - vc-attr.db_command
@@ -7,11 +7,11 @@ helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
 ms.openlocfilehash: 136c82b2674f3c08f053de9676068c0fb4baac11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148195"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -97,7 +97,7 @@ TCHAR m_state[3] = 'CA';
 
 Pokud zadáte hodnotu pro *vazby*, **db_command** provede analýzu přidruženou hodnotu a nebude analyzovat \[ *bindtype*] parametru. Toto použití můžete použít syntaxi zprostředkovatele OLE DB. Chcete-li zakázat analýzy bez vazby parametrů, zadejte `Bindings=""`.
 
-Pokud nezadáte hodnotu *vazby*, **db_command** provede analýzu bloku parametrů vazby, hledá "**(**" následovaný **\[** _bindtype_**]** v závorkách, za nímž následuje jedna nebo více dříve deklarovaný člen proměnné C++, za nímž následuje "**)**". Veškerý text v závorkách se odstraní z výsledné příkazu a tyto parametry se použije k vytvoření sloupce a parametr vazby tohoto příkazu.
+Pokud nezadáte hodnotu *vazby*, **db_command** provede analýzu bloku parametrů vazby, hledá "**(**" následovaný **\[** _bindtype_**]** v závorkách, následovaný jednou nebo více dříve deklarovány C++ členské proměnné, za nímž následuje "**)**". Veškerý text v závorkách se odstraní z výsledné příkazu a tyto parametry se použije k vytvoření sloupce a parametr vazby tohoto příkazu.
 
 *bulk_fetch*<br/>
 (Volitelné) Celočíselná hodnota, která určuje počet řádků, které mají načíst.
@@ -122,7 +122,7 @@ Když příjemce atribut poskytovatel použije tento atribut na třídu, kompil�
 
 Tato ukázka definuje příkaz, který vybere jména a příjmení z tabulky, jejichž sloupce pro stát odpovídá "CA". **db_command** vytvoří a načte sadu řádků, na kterém bude možné volat generované v Průvodci funkce, jako [OpenAll a CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), stejně jako `CRowset` členské funkce, jako například [MoveNext](../../data/oledb/crowset-movenext.md).
 
-Upozorňujeme, že tento kód vyžaduje, abyste zadali vlastní připojovací řetězec, který se připojuje k databázi pubs. Informace o tom, jak to udělat ve vývojovém prostředí najdete v tématu [postupy: připojení k databázi a procházejí existujících objektů](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) a [přidat nové připojení](/visualstudio/data-tools/add-new-connections).
+Upozorňujeme, že tento kód vyžaduje, abyste zadali vlastní připojovací řetězec, který se připojuje k databázi pubs. Informace o tom, jak to udělat ve vývojovém prostředí najdete v tématu [jak: Připojení k databázi a procházejí existujících objektů](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) a [přidat nové připojení](/visualstudio/data-tools/add-new-connections).
 
 ```cpp
 // db_command.h
@@ -239,7 +239,7 @@ int main() {
 |-|-|
 |**Platí pro**|**Třída**, **struktura**, člen, metoda, místní|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**Vyžadované atributy**|Žádný|
 |**Neplatné atributy**|Žádné|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
