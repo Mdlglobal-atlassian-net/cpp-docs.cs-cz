@@ -30,11 +30,11 @@ helpviewer_keywords:
 - wfreopen function
 ms.assetid: de4b73f8-1043-4d62-98ee-30d2022da885
 ms.openlocfilehash: 4c570837bddea1f5e986ae5f767279ab2637ea21
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332985"
 ---
 # <a name="freopen-wfreopen"></a>freopen, _wfreopen
 
@@ -63,7 +63,7 @@ Cesta k novému souboru.
 *Režim*<br/>
 Typ přístupu povolený.
 
-*Stream*<br/>
+*stream*<br/>
 Ukazatel na **souboru** struktury.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -82,7 +82,7 @@ Existují bezpečnější verze těchto funkcí naleznete v tématu [freopen_s �
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tfreopen –**|**freopen**|**freopen**|**_wfreopen**|
+|**_tfreopen**|**freopen**|**freopen**|**_wfreopen**|
 
 **freopen** se obvykle používá k přesměrování dříve otevřených souborů **stdin**, **stdout**, a **stderr** na soubory zadané uživatelem. Nový soubor spojený s *stream* se otevře s *režimu*, což je řetězec znaků určující typ požadovaného přístupu k souboru, následujícím způsobem:
 

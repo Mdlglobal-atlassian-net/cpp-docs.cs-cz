@@ -49,11 +49,11 @@ helpviewer_keywords:
 - _ismbcl0 function
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
 ms.openlocfilehash: b4ea5a165e5fb06229c3fdf69c53cdf82c4f35f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286627"
 ---
 # <a name="ismbcl0-ismbcl0l-ismbcl1-ismbcl1l-ismbcl2-ismbcl2l"></a>_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
 
@@ -108,12 +108,12 @@ Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie 
 
 |Rutina|Testovací podmínka (pouze znaková stránky 932)|
 |-------------|-------------------------------------------|
-|**_ismbcl0**|Bez JIS-Kanji: 0x8140 < =*c*< = 0x889E.|
-|**_ismbcl0_l**|Bez JIS-Kanji: 0x8140 < =*c*< = 0x889E.|
-|**_ismbcl1**|1. úrovně JIS: 0x889F < =*c*< = 0x9872.|
-|**_ismbcl1_l**|1. úrovně JIS: 0x889F < =*c*< = 0x9872.|
-|**_ismbcl2**|2. úrovně JIS: 0x989F < =*c*< = 0xEAA4.|
-|**_ismbcl2_l**|2. úrovně JIS: 0x989F < =*c*< = 0xEAA4.|
+|**_ismbcl0**|Bez JIS-Kanji: 0x8140<=*c*<=0x889E.|
+|**_ismbcl0_l**|Bez JIS-Kanji: 0x8140<=*c*<=0x889E.|
+|**_ismbcl1**|Úroveň JIS-1: 0x889F < =*c*< = 0x9872.|
+|**_ismbcl1_l**|Úroveň JIS-1: 0x889F < =*c*< = 0x9872.|
+|**_ismbcl2**|Úroveň JIS-2: 0x989F<=*c*<=0xEAA4.|
+|**_ismbcl2_l**|Úroveň JIS-2: 0x989F<=*c*<=0xEAA4.|
 
 Funkce ověří, zda zadaná hodnota *c* odpovídá zkušebním podmínkám popsaným výše, ale nekontrolují, zda *c* je platný vícebajtový znak. Pokud nižší bajt je v rozsahu 0x00 – 0x3F, 0x7F nebo 0xFD – 0xFF, tyto funkce vrátí nenulovou hodnotu, která udává, že znak splňuje testovací podmínku. Použití [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) k ověření, zda je vícebajtový znak definován.
 

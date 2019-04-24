@@ -37,11 +37,11 @@ helpviewer_keywords:
 - _wprintf_s_l function
 ms.assetid: 044ebb2e-5cc1-445d-bb4c-f084b405615b
 ms.openlocfilehash: 6b07fd90e0390d5c39bc8f5885f5744de20eeb79
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62231998"
 ---
 # <a name="printfs-printfsl-wprintfs-wprintfsl"></a>printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
 
@@ -75,7 +75,7 @@ int _wprintf_s_l(
 *Formát*<br/>
 Formátování ovládacího prvku.
 
-*Argument*<br/>
+*argument*<br/>
 Volitelné argumenty
 
 *Národní prostředí*<br/>
@@ -103,8 +103,8 @@ Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že pou�
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tprintf_s –**|**printf_s**|**printf_s**|**wprintf_s**|
-|**_tprintf_s_l –**|**_printf_s_l**|**_printf_s_l**|**_wprintf_s_l**|
+|**_tprintf_s**|**printf_s**|**printf_s**|**wprintf_s**|
+|**_tprintf_s_l**|**_printf_s_l**|**_printf_s_l**|**_wprintf_s_l**|
 
 *Formátu* argument se skládá z běžných znaků, řídících sekvencí a (Pokud argumenty jsou podle *formátu*) specifikace formátu. Obyčejné znaky a sekvence escape se zkopírují do **stdout** v pořadí jejich výskytu. Například řádek
 
@@ -128,8 +128,8 @@ Line one
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**printf_s**, **_printf_s_l –**|\<stdio.h>|
-|**wprintf_s –**, **_wprintf_s_l –**|\<stdio.h > nebo \<wchar.h >|
+|**printf_s**, **_printf_s_l**|\<stdio.h>|
+|**wprintf_s**, **_wprintf_s_l**|\<stdio.h > nebo \<wchar.h >|
 
 Konzole není podporována v aplikacích pro univerzální platformu Windows (UPW). Standardní datový proud popisovačů, které jsou spojeny s konzolou, **stdin**, **stdout**, a **stderr**, musí být přesměrován před funkcí jazyka C za běhu můžete použít v aplikacích pro UWP . Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
@@ -218,5 +218,5 @@ Address as:   0012FF78
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
-[sprintf _sprintf_l –, swprintf, _swprintf_l –, \__swprintf_l –](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [vprintf – funkce](../../c-runtime-library/vprintf-functions.md)<br/>

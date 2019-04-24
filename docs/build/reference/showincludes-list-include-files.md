@@ -13,11 +13,11 @@ helpviewer_keywords:
 - showIncludes compiler option [C++]
 ms.assetid: 0b74b052-f594-45a6-a7c7-09e1a319547d
 ms.openlocfilehash: d454054c132976a899fcc4a56a63be427e79beec
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57819231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318157"
 ---
 # <a name="showincludes-list-include-files"></a>/showIncludes (seznam vložených souborů)
 
@@ -64,5 +64,5 @@ V takovém případě `2.h` byla zahrnuta z v rámci `1.h`, proto odsazení.
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

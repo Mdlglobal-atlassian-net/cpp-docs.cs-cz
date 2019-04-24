@@ -45,11 +45,11 @@ helpviewer_keywords:
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
 ms.openlocfilehash: 42e02473e062c3af9524ed432aa163b7574342de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223077"
 ---
 # <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
 
@@ -136,7 +136,7 @@ Vrací ukazatel na první výskyt *strSearch* v *str*, nebo hodnota NULL, pokud 
 > [!IMPORTANT]
 > Tyto funkce může mít za následek hrozeb od problémem přetečení vyrovnávací paměti. Problémů přetečení vyrovnávací paměti lze použít k útokům systému, protože umožňují spuštění libovolného kódu, což může způsobit neoprávněné zvýšení úrovně oprávnění. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-V jazyce C, tyto funkce přijímají **const** ukazatele pro první argument. V jazyce C++ jsou k dispozici dvě přetížení. Přetížení přijímající ukazatel na **const** vrací ukazatel na **const**; verze, která přijímá ukazatel na jinou hodnotu než**const** vrací ukazatel na jinou hodnotu než **Const**. _CRT_CONST_CORRECT_OVERLOADS – makro je definováno, pokud **const** a jiných-**const** verze těchto funkcí jsou k dispozici. Pokud budete potřebovat non -**const** chování pro obě přetížení C++, definujte symbol _CONST_RETURN.
+V jazyce C, tyto funkce přijímají **const** ukazatele pro první argument. V jazyce C++ jsou k dispozici dvě přetížení. Přetížení přijímající ukazatel na **const** vrací ukazatel na **const**; verze, která přijímá ukazatel na jinou hodnotu než**const** vrací ukazatel na jinou hodnotu než **Const**. _CRT_CONST_CORRECT_OVERLOADS – makro je definováno, pokud **const** a jiných-**const** verze těchto funkcí jsou k dispozici. Pokud budete potřebovat non -**const** chování pro obě C++ přetížení, definujte symbol _CONST_RETURN.
 
 Výstupní hodnota je ovlivněna nastavením kategorie národního prostředí LC_CTYPE; Další informace najdete v tématu [setlocale _wsetlocale](setlocale-wsetlocale.md). Verze těchto funkcí, které nemají **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; ty, které mají **_l** přípona jsou stejné s tím rozdílem, že místo toho používají Parametr národního prostředí, které je předáno. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
@@ -151,7 +151,7 @@ Výstupní hodnota je ovlivněna nastavením kategorie národního prostředí L
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|`strstr`|\<String.h >|
+|`strstr`|\<string.h>|
 |`wcsstr`|\<String.h > nebo \<wchar.h >|
 |`_mbsstr`, `_mbsstr_l`|\<Mbstring.h >|
 
@@ -204,4 +204,4 @@ lazy found at position 36
 [strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l](strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)<br/>
 [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
-[basic_string::Find](../../standard-library/basic-string-class.md#find)<br/>
+[basic_string::find](../../standard-library/basic-string-class.md#find)<br/>

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
 ms.openlocfilehash: 035d73190f3596044a35cbc45681807801385eab
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62205823"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Návod: Vytvoření sítě pro zpracování obrázků
 

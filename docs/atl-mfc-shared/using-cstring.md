@@ -7,11 +7,11 @@ helpviewer_keywords:
 - CString class (Visual C++)
 ms.assetid: ed018aaf-8b10-46f9-828c-f9c092dc7609
 ms.openlocfilehash: a84ae21b60d87971cb2f7b758dd369b4078607e6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62199206"
 ---
 # <a name="using-cstring"></a>CString – použití
 
@@ -27,7 +27,7 @@ A `CString` objekt znaková data uchová `CStringData` objektu. `CString` přij�
 
 Následující sadu tříd řetězců je možné bez knihovny MFC, s nebo bez podpory CRT propojení: `CAtlString`, `CAtlStringA`, a `CAtlStringW`.
 
-`CString` se používá v nativní projekty. Pro spravovaný kód (C + +/ CLI) projekty, používají `System::String`.
+`CString` se používá v nativní projekty. Pro spravovaný kód (C++vyhodnocovací) projekty, používají `System::String`.
 
 Chcete-li přidat více možností než `CString`, `CStringA`, nebo `CStringW` aktuálně nabídnout, měli byste vytvořit podtřídu `CStringT` , který obsahuje další funkce.
 

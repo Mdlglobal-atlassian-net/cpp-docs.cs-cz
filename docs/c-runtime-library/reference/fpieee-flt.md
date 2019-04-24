@@ -26,11 +26,11 @@ helpviewer_keywords:
 - fpieee_flt function
 ms.assetid: 2bc4801e-0eed-4e73-b518-215da8cc9740
 ms.openlocfilehash: 9a49ec403b1cb95407b0a366accf1d9374d9cb22
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333245"
 ---
 # <a name="fpieeeflt"></a>_fpieee_flt
 
@@ -54,7 +54,7 @@ Kód výjimky.
 *excInfo*<br/>
 Ukazatel na strukturu informace výjimky Windows NT.
 
-*Obslužná rutina*<br/>
+*handler*<br/>
 Ukazatel na uživatele IEEE depeše obslužné rutině.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -154,5 +154,5 @@ int main( void )
 ## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
-[_control87 – _controlfp, \__control87_2](control87-controlfp-control87-2.md)<br/>
+[_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md)<br/>
 [_controlfp_s](controlfp-s.md)<br/>

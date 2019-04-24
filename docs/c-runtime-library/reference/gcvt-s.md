@@ -30,11 +30,11 @@ helpviewer_keywords:
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
 ms.openlocfilehash: 168e0657150d072bbe41cd0ad6e914ca1f53e512
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332291"
 ---
 # <a name="gcvts"></a>_gcvt_s
 
@@ -79,7 +79,7 @@ Nula v případě úspěchu. Pokud dojde k chybě z důvodu neplatného parametr
 
 |*Vyrovnávací paměti*|*sizeInBytes*|*value*|*číslice*|Vrátí|Hodnota v *vyrovnávací paměti*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
-|**HODNOTU NULL**|Všechny|Všechny|Všechny|**EINVAL**|Nedojde ke změně.|
+|**NULL**|Všechny|Všechny|Všechny|**EINVAL**|Nedojde ke změně.|
 |Není **NULL** (odkazuje na platný paměti)|nula|Všechny|Všechny|**EINVAL**|Nedojde ke změně.|
 |Není **NULL** (odkazuje na platný paměti)|Všechny|Všechny|>= *sizeInBytes*|**EINVAL**|Nedojde ke změně.|
 
@@ -99,7 +99,7 @@ Ladicí verze této funkce nejprve naplní vyrovnávací paměť hodnotou 0xFD. 
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_gcvt_s**|\<stdlib.h>|\<Error.h >|
+|**_gcvt_s**|\<stdlib.h>|\<error.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

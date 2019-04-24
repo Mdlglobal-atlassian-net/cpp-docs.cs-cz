@@ -19,11 +19,11 @@ helpviewer_keywords:
 - CD2DGradientBrush [MFC], m_pGradientStops
 ms.assetid: 5bf133e6-16b7-4e3a-845d-0ce63fafe5ec
 ms.openlocfilehash: 2e04d714e3479224cfc4e207b70483786be33db8
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62173376"
 ---
 # <a name="cd2dgradientbrush-class"></a>Cd2dgradientbrush – třída
 
@@ -46,13 +46,13 @@ class CD2DGradientBrush : public CD2DBrush;
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DGradientBrush::Destroy](#destroy)|Odstraní objekt cd2dgradientbrush –. (Přepíše [CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DGradientBrush::m_arGradientStops](#m_argradientstops)|Pole struktur D2D1_GRADIENT_STOP.|
 |[CD2DGradientBrush::m_colorInterpolationGamma](#m_colorinterpolationgamma)|Místo barvou, které se provádí interpolaci mezi Přechodové zarážky.|

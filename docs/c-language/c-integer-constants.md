@@ -5,11 +5,11 @@ helpviewer_keywords:
 - integer constants
 ms.assetid: fcf6b83c-2038-49ec-91ca-3d5ca1f83037
 ms.openlocfilehash: 4a3d6b945f3611b8e51029c0a5ec5dc77b2cbaa0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326882"
 ---
 # <a name="c-integer-constants"></a>Konstanty typu Integer jazyka C
 
@@ -17,22 +17,22 @@ ms.locfileid: "50620217"
 
 ## <a name="syntax"></a>Syntaxe
 
-*celočíselná konstanta*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*desetinná konstanta* *číselnou příponou*<sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*osmičkové konstanty* *číselnou příponou*<sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*šestnáctkové konstanty* *číselnou příponou*<sub>optimalizované</sub><br/>
+*integer-constant*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *integer-suffix*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*octal-constant* *integer-suffix*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *integer-suffix*<sub>opt</sub><br/>
 
-*desetinná konstanta*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*nenulovou číslicí.*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*desetinná konstanta* *číslice*<br/>
+*decimal-constant*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*nonzero-digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *digit*<br/>
 
 *osmičkové konstanty*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*osmičkové konstanty* *uveden jako osmičková číslice*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*octal-constant* *octal-digit*<br/>
 
-*šestnáctkové konstanty*:<br/>
+*hexadecimal-constant*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-prefix* *hexadecimal-digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*šestnáctkové konstanty* *šestnáctkové číslice*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *hexadecimal-digit*<br/>
 
 *Předpona šestnáctkové*: jeden z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0x**  **0X**<br/>
@@ -45,7 +45,7 @@ ms.locfileid: "50620217"
 
 *šestnáctkové číslice*: jeden z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**b c d e f**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**a b c d e f**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**A B C D E F**<br/>
 
 *integer-suffix*:<br/>
@@ -63,10 +63,10 @@ ms.locfileid: "50620217"
 &nbsp;&nbsp;&nbsp;&nbsp;**l L**<br/>
 
 *Long long-suffix*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**ll, LL**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**ll LL**<br/>
 
 *64-bit číselnou příponou*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**I64 I64**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**i64 I64**<br/>
 
 **I64** a **I64** přípony jsou specifické pro společnost Microsoft.
 

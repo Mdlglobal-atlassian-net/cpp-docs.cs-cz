@@ -91,11 +91,11 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
 ms.openlocfilehash: bd062a4e0d4db364c9cb628608c6af165dc0edc2
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58777165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338015"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl Class
 
@@ -111,13 +111,13 @@ class CMonthCalCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMonthCalCtrl::CMonthCalCtrl](#cmonthcalctrl)|Vytvoří `CMonthCalCtrl` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMonthCalCtrl::Create](#create)|Vytvoří ovládací prvek měsíční kalendář a připojí ho k `CMonthCalCtrl` objektu.|
 |[CMonthCalCtrl::GetCalendarBorder](#getcalendarborder)|Zjišťuje šířku ohraničení ovládacího prvku kalendáři aktuálního měsíce.|
@@ -448,7 +448,7 @@ Celočíselná hodnota představující první den v týdnu. Zobrazit **poznámk
 
 Tato členská funkce implementuje chování zprávy Win32 [MCM_GETFIRSTDAYOFWEEK](/windows/desktop/Controls/mcm-getfirstdayofweek), jak je popsáno v sadě Windows SDK. Dny v týdnu jsou reprezentovány jako celá čísla, následujícím způsobem.
 
-|Hodnota|Den v týdnu|
+|Value|Den v týdnu|
 |-----------|---------------------|
 |0|Pondělí|
 |1|Úterý|
@@ -634,7 +634,7 @@ Ukazatel na `COleDateTime` objektu, `CTime` objektu, nebo [SYSTEMTIME](/windows/
 
 DWORD, který může být nula (bez omezení jsou nastavené) nebo ke kombinaci komponent následující hodnoty, které určují informace o limitu.
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
 |GDTR_MAX|Maximální limit nastavený pro ovládací prvek; *pMaxRange* je platný a obsahuje informace o příslušné datum.|
 |GDTR_MIN|Minimální omezení je nastavena pro ovládací prvek; *pMinRange* je platný a obsahuje informace o příslušné datum.|

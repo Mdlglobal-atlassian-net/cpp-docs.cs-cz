@@ -83,11 +83,11 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
 ms.openlocfilehash: 4cada70723c7fadc9c91c40380b8a7e9fc46a07a
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58777256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224217"
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc Class
 
@@ -103,13 +103,13 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleServerDoc::COleServerDoc](#coleserverdoc)|Vytvoří `COleServerDoc` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleServerDoc::ActivateDocObject](#activatedocobject)|Aktivuje přidružený dokument DocObject.|
 |[COleServerDoc::ActivateInPlace](#activateinplace)|Aktivuje dokument pro místní úpravy.|
@@ -140,7 +140,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleServerDoc::CreateInPlaceFrame](#createinplaceframe)|Volá se rozhraním, chcete-li vytvořit okno rámce pro místní úpravy.|
 |[COleServerDoc::DestroyInPlaceFrame](#destroyinplaceframe)|Volá se rozhraním zničit okno rámce pro místní úpravy.|

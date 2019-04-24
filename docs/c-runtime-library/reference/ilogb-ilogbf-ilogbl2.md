@@ -1,5 +1,5 @@
 ---
-title: ilogb – ilogbf –, ilogbl2
+title: ilogb, ilogbf, ilogbl2
 ms.date: 04/05/2018
 apiname:
 - ilogb
@@ -31,11 +31,11 @@ helpviewer_keywords:
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
 ms.openlocfilehash: 272544124dd8a8a666fc434516d3c45c73b1d011
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331672"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 
@@ -93,7 +93,7 @@ Volání této funkce je podobný voláním ekvivalentní **logb –** funkce a 
 
 |Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
-|**ilogb –**, **ilogbf –**, **ilogbl**|\<Math.h >|\<cmath >|
+|**ilogb**, **ilogbf**, **ilogbl**|\<math.h>|\<cmath>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

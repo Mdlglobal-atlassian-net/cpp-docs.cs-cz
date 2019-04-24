@@ -43,11 +43,11 @@ helpviewer_keywords:
 - CObArray [MFC], SetSize
 ms.assetid: 2ba2c194-2c6c-40ff-9db4-e9dbe57e1f57
 ms.openlocfilehash: 945a77436f41f4981392e583c831723e667f867c
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58770572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323606"
 ---
 # <a name="cwordarray-class"></a>CWordArray Class
 
@@ -71,13 +71,13 @@ například se přeloží na
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|Vytvoří prázdné pole.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|Přidá prvek na konec pole. v případě potřeby se zvětší pole.|
 |[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|Připojí další pole k poli; v případě potřeby se zvětší pole.|
@@ -99,7 +99,7 @@ například se přeloží na
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CObArray::operator&#91;&#93;](../../mfc/reference/cobarray-class.md#operator_at)|Nastaví nebo získá prvek na zadaném indexu.|
 

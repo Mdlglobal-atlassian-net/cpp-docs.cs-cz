@@ -63,11 +63,11 @@ helpviewer_keywords:
 - iscsymf function
 ms.assetid: 944dfb99-f2b8-498c-9f55-dbcf370d0a2c
 ms.openlocfilehash: 8ee84243b98c08504ac0bb63593e39c32230b706
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331633"
 ---
 # <a name="iscsym-iscsymf-iscsym-iswcsym-iscsymf-iswcsymf-iscsyml-iswcsyml-iscsymfl-iswcsymfl"></a>iscsym –, iscsymf –, __iscsym –, __iswcsym –, __iscsymf –, __iswcsymf –, _iscsym_l –, _iswcsym_l –, _iscsymf_l –, _iswcsymf_l –
 
@@ -130,7 +130,7 @@ Z důvodu zpětné kompatibility **iscsym –** a **iscsymf –** jsou definová
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**iscsym –**, **iscsymf –**, **__iscsym –**, **__iswcsym –**, **__iscsymf –**, **__iswcsymf –**, **_iscsym_l –**, **_iswcsym_l –**, **_iscsymf_l –**, **_iswcsymf_l –**|C: \<ctype.h ><br /><br /> Jazyk C++: \<cctype – > nebo \<ctype.h >|
+|**iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**, **_iswcsymf_l**|C: \<ctype.h ><br /><br /> Jazyk C++: \<cctype – > nebo \<ctype.h >|
 
 **Iscsym –**, **iscsymf –**, **__iscsym –**, **__iswcsym –**, **__iscsymf –**, **__ iswcsymf**, **_iscsym_l –**, **_iswcsym_l –**, **_iscsymf_l –**, a **_iswcsymf_l –** jsou rutiny Specifické pro Microsoft. Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

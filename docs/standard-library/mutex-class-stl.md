@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::mutex [C++], try_lock
 - std::mutex [C++], unlock
 ms.openlocfilehash: 7766b063eb89a14a94eaa41ebfa17f3e4a1c102e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158575"
 ---
 # <a name="mutex-class-c-standard-library"></a>mutex – třída (standardní knihovna C++)
 
@@ -39,7 +39,7 @@ class mutex;
 
 |Název|Popis|
 |----------|-----------------|
-|[objekt mutex](#mutex)|Vytvoří `mutex` objektu.|
+|[mutex](#mutex)|Vytvoří `mutex` objektu.|
 |[mutex:: ~ mutex – destruktor](#dtormutex_destructor)|Uvolní všechny prostředky, které byly používány `mutex` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
@@ -47,9 +47,9 @@ class mutex;
 |Název|Popis|
 |----------|-----------------|
 |[lock](#lock)|Blokuje volající vlákno, dokud vlákno nezíská vlastnictví `mutex`.|
-|[native_handle –](#native_handle)|Vrátí typ specifický pro implementaci představující popisovač mutex.|
+|[native_handle](#native_handle)|Vrátí typ specifický pro implementaci představující popisovač mutex.|
 |[try_lock](#try_lock)|Pokusy o získání vlastnictví `mutex` bez blokování.|
-|[Odemknutí](#unlock)|Uvolní vlastnictví objektu `mutex`.|
+|[unlock](#unlock)|Uvolní vlastnictví objektu `mutex`.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -132,4 +132,4 @@ Pokud volající vlákno není vlastníkem `mutex`, není chování definováno.
 ## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex – >](../standard-library/mutex.md)<br/>
+[\<mutex>](../standard-library/mutex.md)<br/>

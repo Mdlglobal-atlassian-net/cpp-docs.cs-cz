@@ -10,15 +10,15 @@ helpviewer_keywords:
 - VARIANT object
 ms.assetid: 829d2eeb-3338-4a88-9dce-0ca145f47aac
 ms.openlocfilehash: 319c4fde808932e86021ee59b051261c43ca2edd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166201"
 ---
 # <a name="varianttchangetype"></a>_variant_t::ChangeType
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Typ se změní `_variant_t` objekt označený `VARTYPE`.
 
@@ -33,7 +33,7 @@ void ChangeType(
 
 #### <a name="parameters"></a>Parametry
 
-*VarType*<br/>
+*vartype*<br/>
 `VARTYPE` To `_variant_t` objektu.
 
 *pSrc*<br/>

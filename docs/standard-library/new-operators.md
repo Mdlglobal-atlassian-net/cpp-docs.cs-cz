@@ -6,11 +6,11 @@ f1_keywords:
 - new/std::operator new
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 ms.openlocfilehash: 87f7b6cfd6a06ab03b27ebe6aa4dd41b0b900673
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223685"
 ---
 # <a name="ltnewgt-operators"></a>&lt;nové&gt; operátory
 
@@ -263,4 +263,4 @@ int main() {
 
 ## <a name="see-also"></a>Viz také:
 
-[\<Nový >](../standard-library/new.md)<br/>
+[\<new>](../standard-library/new.md)<br/>

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - -Ox compiler option [C++]
 ms.assetid: 3ad7c30b-c615-428c-b1d0-2e024f81c760
 ms.openlocfilehash: e39905608087425fe5a445f4ef88434d73bb2ded
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320094"
 ---
 # <a name="ox-enable-most-speed-optimizations"></a>/OX (povolení většiny optimalizací pro rychlost)
 
@@ -69,5 +69,5 @@ Použít všechny dostupné souboru úroveň optimalizace pro buildy vydaných v
 ## <a name="see-also"></a>Viz také:
 
 [/O – možnosti (optimalizace kódu)](o-options-optimize-code.md)<br/>
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

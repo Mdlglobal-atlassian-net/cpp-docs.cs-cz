@@ -9,11 +9,11 @@ helpviewer_keywords:
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
 ms.openlocfilehash: ab5456bfc8a1b8305813f4ee4a4399091de15aee
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58564907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314062"
 ---
 # <a name="set-compiler-and-build-properties"></a>Nastavení kompilátoru a vlastnosti sestavení
 
@@ -41,7 +41,7 @@ Následující obrázek ukazuje stejné stránce vlastností projektu, ale konfi
 
 *Cílová platforma* odkazuje na typ zařízení a/nebo operační systém, který se spustí spustitelný soubor na. Můžete vytvářet projekt pro více než jednu platformu. Dostupné cílové platformy pro projekty C++ závisí na typu projektu. zahrnout, ale nejsou omezeny na Win32, x64, ARM, Android a iOS.     **X86** cílové platformy, který můžete vidět v **nástroje Configuration Manager** je stejný jako **Win32** v nativních projektů C++. Win32 znamená Windows 32-bit a **x64** znamená Windows 64-bit. Další informace o těchto dvou platforem, naleznete v tématu [spuštění 32bitových aplikací](/windows/desktop/WinProg64/running-32-bit-applications).
 
-**Jakýkoli procesor** cílové platformy hodnoty, který můžete vidět v **nástroje Configuration Manager** nemá žádný vliv na nativních projektů C++; je relevantní pro C + +/ CLI a dalších .NET typy projektů. Další informace najdete v tématu [/CLRIMAGETYPE (zadat typ z bitové kopie modulu CLR)](reference/clrimagetype-specify-type-of-clr-image.md).
+**Jakýkoli procesor** cílové platformy hodnoty, který můžete vidět v **nástroje Configuration Manager** nemá žádný vliv na nativní C++ projekty; je relevantní pro C++/CLI a dalších .NET typy projektů. Další informace najdete v tématu [/CLRIMAGETYPE (zadat typ z bitové kopie modulu CLR)](reference/clrimagetype-specify-type-of-clr-image.md).
 
 
 Další informace o nastavení vlastností pro sestavení pro ladění naleznete v tématu:

@@ -30,11 +30,11 @@ helpviewer_keywords:
 - tgetenv_s function
 ms.assetid: c3ae1ffe-d4cd-4bae-bcb1-3afa754c613a
 ms.openlocfilehash: eac3c036e2f4f271c7bc2d77c8ae82bec28d3617
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331737"
 ---
 # <a name="getenvs-wgetenvs"></a>getenv_s, _wgetenv_s
 
@@ -83,7 +83,7 @@ Vyrovnávací paměť pro ukládání hodnoty horní proměnné prostředí.
 *numberOfElements*<br/>
 Velikost *vyrovnávací paměti*.
 
-*název_proměnné*<br/>
+*varname*<br/>
 Název proměnné prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -92,11 +92,11 @@ Nula v případě úspěchu; v opačném případě chybu kódu při selhání.
 
 ### <a name="error-conditions"></a>Chybové podmínky
 
-|*pReturnValue*|*Vyrovnávací paměti*|*numberOfElements*|*název_proměnné*|Návratová hodnota|
+|*pReturnValue*|*Vyrovnávací paměti*|*numberOfElements*|*varname*|Návratová hodnota|
 |--------------------|--------------|------------------------|---------------|------------------|
-|**HODNOTU NULL**|Všechny|Všechny|Všechny|**EINVAL**|
-|Všechny|**HODNOTU NULL**|>0|Všechny|**EINVAL**|
-|Všechny|Všechny|Všechny|**HODNOTU NULL**|**EINVAL**|
+|**NULL**|Všechny|Všechny|Všechny|**EINVAL**|
+|Všechny|**NULL**|>0|Všechny|**EINVAL**|
+|Všechny|Všechny|Všechny|**NULL**|**EINVAL**|
 
 Některé z těchto chybových stavů vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, funkce nastaví **errno** k **EINVAL** a vrátit **EINVAL**.
 
@@ -126,7 +126,7 @@ V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šab
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tgetenv_s –**|**getenv_s**|**getenv_s**|**_wgetenv_s**|
+|**_tgetenv_s**|**getenv_s**|**getenv_s**|**_wgetenv_s**|
 
 Zkontrolujte nebo změňte hodnotu **TZ** proměnné, použijte prostředí **getenv_s –**, **_putenv**, a **_tzset –**, podle potřeby. Další informace o **TZ**, naleznete v tématu [_tzset –](tzset.md) a [_daylight, _dstbias, _timezone a _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
 

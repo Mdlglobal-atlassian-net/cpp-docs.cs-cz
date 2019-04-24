@@ -161,11 +161,11 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
 ms.openlocfilehash: 0a3af2b13eeb2775671ee89019b1562010acc059
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58776385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218349"
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton Class
 
@@ -181,14 +181,14 @@ class CMFCToolBarButton : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBarButton::CMFCToolBarButton](#cmfctoolbarbutton)|Vytvoří a inicializuje `CMFCToolBarButton` objektu.|
 |`CMFCToolBarButton::~CMFCToolBarButton`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBarButton::CanBeDropped](#canbedropped)|Určuje, zda uživatele lze umístit na tlačítko na panelu nástrojů nebo nabídce během přizpůsobování.|
 |[CMFCToolBarButton::CanBeStored](#canbestored)|Určuje, zda mohou být uloženy na tlačítko.|
@@ -260,7 +260,7 @@ class CMFCToolBarButton : public CObject
 
 ### <a name="data-members"></a>Datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBarButton::m_bImage](#m_bimage)|Určuje, jestli obrázek je zobrazený na tlačítku.|
 |[CMFCToolBarButton::m_bText](#m_btext)|Určuje, zda je textový popisek zobrazený na tlačítku.|

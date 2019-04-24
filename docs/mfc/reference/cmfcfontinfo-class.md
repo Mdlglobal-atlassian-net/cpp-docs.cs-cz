@@ -19,11 +19,11 @@ helpviewer_keywords:
 - CMFCFontInfo [MFC], m_strScript
 ms.assetid: f88329b2-d74e-4921-9441-a3bb6536a049
 ms.openlocfilehash: 930aceb4514195f0e844c35d326b52d9cd8d31fa
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58781325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237504"
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo Class
 
@@ -39,19 +39,19 @@ class CMFCFontInfo : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCFontInfo`|Vytvoří `CMFCFontInfo` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCFontInfo::GetFullName](#getfullname)|Načte nastavení zřetězených názvy písmo a jeho znak (skript).|
 
 ### <a name="data-members"></a>Datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCFontInfo::m_nCharSet](#m_ncharset)|Hodnota, která určuje znakovou sadu (skript) přidružené k písma.|
 |[CMFCFontInfo::m_nPitchAndFamily](#m_npitchandfamily)|Hodnota, která určuje rozteč a rodiny písma.|

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - OnFileSendMail method [MFC]
 ms.assetid: cafbecb1-0427-4077-b4b8-159bae5b49b8
 ms.openlocfilehash: 9b873ca1b3384adab6487fb3af9dc1401aaad12c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62225523"
 ---
 # <a name="mapi-support-in-mfc"></a>Podpora MAPI v MFC
 
@@ -32,7 +32,7 @@ Rozhraní MAPI potřebuje číst soubor k odeslání přílohy. Pokud aplikace s
 
 #### <a name="to-implement-a-send-mail-command-with-mfc"></a>Implementace příkazu Odeslat e-mailu s knihovnou MFC
 
-1. Pomocí nabídky editoru Visual C++ přidat položku nabídky, jejichž ID příkazu je ID_FILE_SEND_MAIL.
+1. Tento vizuál použít C++ editor nabídek k přidání položky nabídky, jejichž ID příkazu je ID_FILE_SEND_MAIL.
 
    Toto ID příkazu je poskytovaného rámcem v AFXRES. H. Příkaz je přidat do jakékoli nabídky, ale obvykle je přidána do **souboru** nabídky.
 

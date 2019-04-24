@@ -7,11 +7,11 @@ helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
 ms.openlocfilehash: 3ab548261d6ebcb9d3d7f7e352c8afe3b33db06f
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59023864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148117"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -70,7 +70,7 @@ Příklad tohoto atributu použijí v aplikaci, najdete v ukázkách [AtlAgent](
 |-|-|
 |**Platí pro**|**Třída**, **– struktura**|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**Vyžadované atributy**|Žádný|
 |**Neplatné atributy**|Žádné|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
 ms.openlocfilehash: 78b9ae467d3504f3922c540a3e4cd100322d8f4e
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57808388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62151277"
 ---
 # <a name="application-information-and-management"></a>Informace o aplikacích a správa aplikací
 
@@ -682,7 +682,7 @@ Knihovny Microsoft Foundation Class automaticky zaregistruje několik tříd sta
 
 Název zaregistrovat pro třídu podle `AfxRegisterWndClass` závisí výhradně na parametry. Při volání `AfxRegisterWndClass` více než jednou s shodné parametry pouze registruje třídu při prvním volání. Následující volání `AfxRegisterWndClass` s shodné parametry jednoduše vrátit classname už zaregistrovaný.
 
-Při volání `AfxRegisterWndClass` pro více třídy odvozené z CWnd s shodné parametry místo zobrazování samostatném okně třídy pro každou třídu, každá třída sdílí stejnou třídu okna. Pokud se používá třída stylu CS_CLASSDC to může způsobovat problémy. Místo více tříd oken CS_CLASSDC skončíte se jednu třídu okna CS_CLASSDC a všechny systémy windows C++, které používají tuto sdílenou složku třídy stejné řadič domény. Chcete-li tomuto problému vyhnout, zavolejte [afxregisterclass –](#afxregisterclass) registrovat třídu.
+Při volání `AfxRegisterWndClass` pro více třídy odvozené z CWnd s shodné parametry místo zobrazování samostatném okně třídy pro každou třídu, každá třída sdílí stejnou třídu okna. Pokud se používá třída stylu CS_CLASSDC to může způsobovat problémy. Místo více tříd oken CS_CLASSDC, skončíte se jednu třídu okna CS_CLASSDC a všechny C++ windows, které používají třídy sdílejí stejné řadič domény. Chcete-li tomuto problému vyhnout, zavolejte [afxregisterclass –](#afxregisterclass) registrovat třídu.
 
 Odkazovat na technická Poznámka [TN001: Registrace tříd oken](../../mfc/tn001-window-class-registration.md) Další informace o registrace tříd oken a `AfxRegisterWndClass` funkce.
 

@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
 ms.openlocfilehash: 5466f1d1c8987724aa0768cd8915e06b62b031ad
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161624"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections:: Vector – třída
 
@@ -63,7 +63,7 @@ Povolené typy jsou:
 
 **Vektoru** třída je konkrétní implementace jazyka C++ [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) rozhraní.
 
-Pokud se pokusíte použít **vektoru** zadejte veřejné návratová hodnota nebo parametr, je vyvolána C3986 Chyba kompilátoru. Můžete chybu opravit změnou parametr nebo návratový typ hodnoty na [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Další informace najdete v tématu [kolekce (C + +/ CX)](../cppcx/collections-c-cx.md).
+Pokud se pokusíte použít **vektoru** zadejte veřejné návratová hodnota nebo parametr, je vyvolána C3986 Chyba kompilátoru. Můžete chybu opravit změnou parametr nebo návratový typ hodnoty na [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Další informace najdete v tématu [kolekce (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Členové
 

@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru C2190
+title: Compiler Error C2190
 ms.date: 11/04/2016
 f1_keywords:
 - C2190
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C2190
 ms.assetid: 34e15f85-d979-4948-80fc-46c414508a70
 ms.openlocfilehash: b52797b945b1a652506b4a85171e60a91544bbf0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62282826"
 ---
-# <a name="compiler-error-c2190"></a>Chyba kompilátoru C2190
+# <a name="compiler-error-c2190"></a>Compiler Error C2190
 
 první seznam parametrů je delší než druhý.
 

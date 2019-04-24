@@ -8,15 +8,15 @@ helpviewer_keywords:
 - structure types in __asm blocks
 ms.assetid: e99f5a28-0381-4090-8ece-6af8f2436a49
 ms.openlocfilehash: 1f56cc5c049c1501ea09c76f31be3ab9dea5ed10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50433056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167605"
 ---
 # <a name="accessing-c-or-c-data-in-asm-blocks"></a>Přístup k datům jazyka C nebo C++ v blocích __asm
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Skvělou výhodou vloženého sestavení je možnost odkazovat na proměnné jazyka C nebo C++ podle názvu. `__asm` Bloku mohou odkazovat na žádné symboly, včetně názvy proměnných, které jsou v oboru, ve kterém se zobrazí bloku. Například pokud proměnnou C `var` je v oboru, instrukce
 

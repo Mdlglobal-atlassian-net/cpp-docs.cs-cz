@@ -9,15 +9,15 @@ helpviewer_keywords:
 - __declspec keyword (C++), spectre
 - spectre __declspec keyword
 ms.openlocfilehash: 2377a3c23be1e27bfe4f2df23eb00823635fa05d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267255"
 ---
 # <a name="spectre"></a>chyby zabezpečení Spectre
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Přikáže kompilátoru Nevkládat chyby zabezpečení Spectre variant 1 spekulativního spouštění barrier pokyny pro funkci.
 

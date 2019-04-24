@@ -31,11 +31,11 @@ helpviewer_keywords:
 - <<= operator
 ms.assetid: 11688dcb-c941-44e7-a636-3fc98e7dac40
 ms.openlocfilehash: 5080f390d302840e9e7b349cf1c21ab618ae48db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326869"
 ---
 # <a name="c-assignment-operators"></a>Operátory přiřazení v jazyce C
 
@@ -43,9 +43,9 @@ Operátor přiřazení přiřazuje hodnotu operandu pravé strany na umístění
 
 ## <a name="syntax"></a>Syntaxe
 
-*výraz přiřazení*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Podmíněného výrazu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Unární výraz* *operátor přiřazení* *výrazu přiřazení*
+*assignment-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unary-expression* *assignment-operator* *assignment-expression*
 
 *operátor přiřazení*: jeden z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**=** **\*=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **|=**

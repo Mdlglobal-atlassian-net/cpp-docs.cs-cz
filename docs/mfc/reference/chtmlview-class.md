@@ -195,11 +195,11 @@ helpviewer_keywords:
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
 ms.openlocfilehash: 17979dce7899820db3da3c24968385914c3a57e9
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58777282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337892"
 ---
 # <a name="chtmlview-class"></a>CHtmlView – třída
 
@@ -215,7 +215,7 @@ class CHtmlView : public CFormView
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CHtmlView::Create](#create)|Vytvoří ovládací prvek WebBrowser.|
 |[CHtmlView::CreateControlSite](#createcontrolsite)|Overridable umožňuje vytvořit instanci ovládacího prvku serveru pro hostování ovládacího prvku na formuláři.|

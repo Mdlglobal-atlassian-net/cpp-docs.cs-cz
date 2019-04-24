@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CrtSetReportMode function
 ms.assetid: 3ecc6a12-afdd-4242-b046-8187ff6d4b36
 ms.openlocfilehash: 2096d39a8ba316fc76c97517a16e34231940e7f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335292"
 ---
 # <a name="crtsetreportmode"></a>_CrtSetReportMode
 
@@ -47,7 +47,7 @@ int _CrtSetReportMode(
 *reportType*<br/>
 Typ sestavy: **_CRT_WARN**, **_CRT_ERROR**, a **_CRT_ASSERT**.
 
-*ReportMode.*<br/>
+*reportMode*<br/>
 Nová sestava režim nebo režimy *reportType*.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -83,7 +83,7 @@ Následující tabulka uvádí typy sestav, které jsou definovány v souboru Cr
 |**_CRTDBG_MODE_DEBUG**|Zapíše zprávu do okna výstup ladicího programu.|
 |**_CRTDBG_MODE_FILE**|Zapíše popisovač souboru uživatelem zadané zprávy. [_CrtSetReportFile](crtsetreportfile.md) by měla být volána pro definování konkrétního souboru nebo datový proud použít jako cíl.|
 |**_CRTDBG_MODE_WNDW**|Vytvoří okno se zprávou pro zobrazení zprávy spolu s [přerušit](abort.md), **opakujte**, a **Ignorovat** tlačítka.|
-|**_CRTDBG_REPORT_MODE**|Vrátí *ReportMode* pro zadaný rozbočovač *reportType*:<br /><br /> 1 **_CRTDBG_MODE_FILE**<br /><br /> 2 **_CRTDBG_MODE_DEBUG**<br /><br /> 4 **_CRTDBG_MODE_WNDW**|
+|**_CRTDBG_REPORT_MODE**|Vrátí *ReportMode* pro zadaný rozbočovač *reportType*:<br /><br /> 1   **_CRTDBG_MODE_FILE**<br /><br /> 2   **_CRTDBG_MODE_DEBUG**<br /><br /> 4   **_CRTDBG_MODE_WNDW**|
 
 Každý typ sestavy mohou být zaznamenány vůbec pomocí jedna, dvě nebo tři režimy nebo žádný. Proto je možné mít víc než jeden cíl definovaného pro typ jednu sestavu. Například následující fragment kódu způsobí selhání kontrolního výrazu k odeslání do obou okno zprávy ladění a **stderr**:
 
@@ -102,7 +102,7 @@ Kromě toho vytváření sestav režimu nebo režimů pro každý typ sestavy lz
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-**Knihovny:** ladicí verze [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md) pouze.
+**Knihovny:** Ladicí verze [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md) pouze.
 
 ## <a name="see-also"></a>Viz také:
 

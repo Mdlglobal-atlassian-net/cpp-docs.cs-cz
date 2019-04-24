@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
 ms.openlocfilehash: 0c6fb39e17e22bcac60d50b87f7370c6a9f91db9
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58770675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237639"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Cmfceditbrowsectrl – třída
 
@@ -47,14 +47,14 @@ class CMFCEditBrowseCtrl : public CEdit
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCEditBrowseCtrl::CMFCEditBrowseCtrl`|Výchozí konstruktor.|
 |`CMFCEditBrowseCtrl::~CMFCEditBrowseCtrl`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)|Povolí nebo zakáže (skryje) na tlačítko Procházet.|
 |[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|Povolí tlačítko Procházet a umístí ovládací prvek pro úpravy Procházet *procházení souborů* režimu.|

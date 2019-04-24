@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
 ms.openlocfilehash: a5dcd2ed80a2858ac08d2d8e9cb03095ddfec5b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159675"
 ---
 # <a name="gammadistribution-class"></a>gamma_distribution – třída
 
@@ -82,7 +82,7 @@ Třída šablony popisuje distribuci, která vytváří hodnoty uživatelem zada
 
 ||||
 |-|-|-|
-|[gamma_distribution –](#gamma_distribution)|`gamma_distribution::alpha`|`gamma_distribution::param`|
+|[gamma_distribution](#gamma_distribution)|`gamma_distribution::alpha`|`gamma_distribution::param`|
 |`gamma_distribution::operator()`|`gamma_distribution::beta`|[param_type](#param_type)|
 
 Funkce vlastností `alpha()` a `beta()` vrátit jejich příslušných hodnot pro parametry uložené distribuce *alfa* a *beta*.
@@ -199,10 +199,10 @@ explicit gamma_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*systém Alpha*<br/>
+*alpha*<br/>
 `alpha` Parametru distribuce.
 
-*Beta verze*<br/>
+*beta*<br/>
 `beta` Parametru distribuce.
 
 *Parametr*<br/>
@@ -234,10 +234,10 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*systém Alpha*<br/>
+*alpha*<br/>
 `alpha` Parametru distribuce.
 
-*Beta verze*<br/>
+*beta*<br/>
 `beta` Parametru distribuce.
 
 *doprava*<br/>

@@ -30,11 +30,11 @@ helpviewer_keywords:
 - CBindStatusCallback class
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
 ms.openlocfilehash: 6e5e55a23ee678bbedf76f608bc4fdf562cc1822
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58773122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259713"
 ---
 # <a name="cbindstatuscallback-class"></a>Cbindstatuscallback – třída
 
@@ -64,14 +64,14 @@ Určuje příznaky vazby, které jsou vráceny pomocí [GetBindInfo](#getbindinf
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CBindStatusCallback::CBindStatusCallback](#cbindstatuscallback)|Konstruktor|
 |[CBindStatusCallback::~CBindStatusCallback](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CBindStatusCallback::Download](#download)|Vytvoří statickou metodu, která se spustí proces stahování `CBindStatusCallback` objektu a volání `StartAsyncDownload`.|
 |[CBindStatusCallback::GetBindInfo](#getbindinfo)|Volané asynchronní moniker na informace o žádostech na typ vazby, který se má vytvořit.|
@@ -86,7 +86,7 @@ Určuje příznaky vazby, které jsou vráceny pomocí [GetBindInfo](#getbindinf
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CBindStatusCallback::m_dwAvailableToRead](#m_dwavailabletoread)|Počet bajtů ke čtení k dispozici.|
 |[CBindStatusCallback::m_dwTotalRead](#m_dwtotalread)|Celkový počet bajtů ke čtení.|

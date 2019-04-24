@@ -167,11 +167,11 @@ helpviewer_keywords:
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
 ms.openlocfilehash: e0d6b844ba4a5c373dd69c0435bbb9972db3b49b
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58774474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164161"
 ---
 # <a name="cbasepane-class"></a>CBasePane Class
 
@@ -187,14 +187,14 @@ class CBasePane : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CBasePane::CBasePane`|Výchozí konstruktor.|
 |`CBasePane::~CBasePane`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CBasePane::accHitTest`|Volá se rozhraním, načtěte podřízený element nebo podřízený objekt v daném bodě na obrazovce. (Přepíše [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|
 |`CBasePane::accLocation`|Volá se rozhraním, aby načíst aktuální polohu na obrazovce pro zadaný objekt. (Přepíše [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|
@@ -302,7 +302,7 @@ class CBasePane : public CWnd
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CBasePane::DoPaint](#dopaint)|Vyplní pozadí podokna.|
 
@@ -1873,7 +1873,7 @@ Obvykle rozhraní volá tuto metodu při podokno je ukotven z jedné strany hlav
 
 V následující tabulce jsou uvedeny možné hodnoty pro *dwAlignment*:
 
-|Hodnota|Zarovnání|
+|Value|Zarovnání|
 |-----------|---------------|
 |CBRS_ALIGN_LEFT|Zarovnání doleva.|
 |CBRS_ALIGN_RIGHT|Zarovnání doprava.|

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - operators [C++], precedence
 ms.assetid: 201f7864-0c51-4c55-9d6f-39c5d013bcb0
 ms.openlocfilehash: 88d0256e2ce948fbdfffb24037517690ef4b7cb7
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232205"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Přednost a pořadí vyhodnocení
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - functional header
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
 ms.openlocfilehash: 317344db856a7a0568aca422ecfe8280b80db097
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159415"
 ---
 # <a name="ltfunctionalgt"></a>&lt;funkční&gt;
 
@@ -48,13 +48,13 @@ V C ++ 11, C ++ 14 a C ++ 17 jsou přidány následující funkce:
 
 Pseudofunkcí `INVOKE(f, t1, t2, ..., tN)` se rozumí jedna z následujících možností:
 
-- `(t1.*f)(t2, ..., tN)`, když je `f` ukazatel na členskou funkci třídy `T` a `t1` je objekt typu `T` nebo odkaz na objekt typu `T` nebo odkaz na objekt typu odvozeného z typu `T`.
+- `(t1.*f)(t2, ..., tN)` Když `f` je ukazatel na členskou funkci třídy `T` a `t1` je objekt typu `T` nebo odkaz na objekt typu `T` nebo odkaz na objekt typu odvozeného z `T`.
 
-- `((*t1).*f)(t2, ..., tN)`, když je `f` ukazatel na členskou funkci třídy `T` a `t1` není jedním z typů uvedených v předchozí položce.
+- `((*t1).*f)(t2, ..., tN)` Když `f` je ukazatel na členskou funkci třídy `T` a `t1` není jedním z typů uvedených v předchozí položce.
 
-- `t1.*f`, když N == 1 a `f` je ukazatel na členská data třídy `T` a `t1` je objekt typu `T` nebo odkaz na objekt typu `T` nebo odkaz na objekt typu odvozeného z typu `T`.
+- `t1.*f` Když N == 1 a `f` je ukazatel na členská data třídy `T` a `t1` je objekt typu `T` nebo odkaz na objekt typu `T` nebo odkaz na objekt typu odvozeného z `T`.
 
-- `(*t1).*f`, když N == 1 a `f` je ukazatel na datový člen třídy `T` a `t1` není jedním z typů uvedených v předchozí položce.
+- `(*t1).*f` Když N == 1 a `f` je ukazatel na členská data třídy `T` a `t1` není jedním z typů uvedených v předchozí položce.
 
 - `f(t1, t2, ..., tN)` ve všech ostatních případech.
 

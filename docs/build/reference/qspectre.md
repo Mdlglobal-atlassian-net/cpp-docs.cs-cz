@@ -6,11 +6,11 @@ f1_keywords:
 helpviewer_keywords:
 - /Qspectre
 ms.openlocfilehash: 42adff6564dc1c2ef47abffe9f9e6e630279ea7d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319184"
 ---
 # <a name="qspectre"></a>/ Qspectre
 
@@ -55,8 +55,8 @@ Dopad výkon **/qspectre** ukázala být nepatrné v několika velmi rozsáhlýc
 **/Qspectre** – možnost kompilátoru generuje kód, který se odkazuje implicitně verzí knihoven runtime, která byla vytvořená pro poskytování zmírnění hrozby Spectre. Tyto knihovny jsou volitelné součásti, které je třeba nainstalovat pomocí instalačního programu sady Visual Studio:
 
 - VC ++ 2017 verze *version_numbers* knihovny pro Spectre \[(x86 a x64) | (ARM) | (ARM64)]
-- Visual C++ ATL pro \[(x86/x64) | ARM | ARM64] se zmírněními hrozeb Spectre
-- Visual C++ MFC pro \[x86/x64 | ARM | ARM64] se zmírněními hrozeb Spectre
+- Vizuální C++ knihovny ATL pro \[(x86/x64) | ARM | ARM64] se zmírněními hrozeb Spectre
+- Vizuální C++ MFC pro \[x86/x64 | ARM | ARM64] se zmírněními hrozeb Spectre
 
 Při vytváření kódu s použitím **/qspectre** a tyto knihovny nejsou nainstalovány, zprávy systému sestavení **upozornění MSB8038: Zmírnění hrozby Spectre je zapnutá, ale nebyly nalezeny zmírnit hrozby Spectre knihovny**. Pokud se nepovede kódu knihovny MFC nebo ATL k sestavení a propojovací program hlásí chybu, jako **závažná chyba LNK1104: Nelze otevřít soubor oldnames.lib**, tyto chybějící knihovny může být příčinou.
 
@@ -79,5 +79,5 @@ Další informace najdete v tématu official je přínosné pro [Microsoft Secur
 ## <a name="see-also"></a>Viz také:
 
 [/Q – možnosti (operace nízké úrovně)](q-options-low-level-operations.md)<br/>
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

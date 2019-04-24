@@ -29,11 +29,11 @@ helpviewer_keywords:
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
 ms.openlocfilehash: 4eca5738068dab7393f70edf619629b179637e73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158004"
 ---
 # <a name="ismbbkalnum-ismbbkalnuml"></a>_ismbbkalnum, _ismbbkalnum_l
 
@@ -67,8 +67,8 @@ Národní prostředí.
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_ismbbkalnum**|\<Mbctype.h >|
-|**_ismbbkalnum_l**|\<Mbctype.h >|
+|**_ismbbkalnum**|\<mbctype.h>|
+|**_ismbbkalnum_l**|\<mbctype.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

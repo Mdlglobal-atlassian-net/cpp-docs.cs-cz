@@ -100,11 +100,11 @@ helpviewer_keywords:
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
 ms.openlocfilehash: 016f3474345b623415be9fe33556bb9f466542ad
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157367"
 ---
 # <a name="itoa-itoa-ltoa-ltoa-ultoa-ultoa-i64toa-ui64toa-itow-ltow-ultow-i64tow-ui64tow"></a>itoa – _itoa –, ltoa –, _ltoa –, ultoa –, _ultoa –, _i64toa –, _ui64toa –, _itow –, _ltow –, _ultow –, _i64tow –, _ui64tow –
 
@@ -199,7 +199,7 @@ Použití těchto funkcí bez upozornění na vyřazení, definujte **_CRT_SECUR
 
 V jazyce C++ mají tyto funkce přetížení šablon, které vyvolávají jejich protějšky bezpečnější. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
-POSIX – názvy **itoa –**, **ltoa –**, a **ultoa –** existovat jako aliasy pro **_itoa –**, **_ltoa –**, a **_ultoa –** funkce. POSIX – názvy jsou zastaralé, protože nepostupujte podle konvence název specifický pro implementaci funkce ISO c. Ve výchozím nastavení, tyto funkce způsobí upozornění na vyřazení [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **POSIX název pro tuto položku je zastaralý. Místo toho použijte název splňující podmínky ISO C a C++:** *nový_název*. Doporučujeme změnit zdrojový kód používat bezpečnější verze těchto funkcí, **_itoa_s –**, **_ltoa_s –**, nebo **_ultoa_s –**. Další informace najdete v tématu [_itoa_s – _itow_s – funkce](itoa-s-itow-s.md).
+POSIX – názvy **itoa –**, **ltoa –**, a **ultoa –** existovat jako aliasy pro **_itoa –**, **_ltoa –**, a **_ultoa –** funkce. POSIX – názvy jsou zastaralé, protože nepostupujte podle konvence název specifický pro implementaci funkce ISO c. Ve výchozím nastavení, tyto funkce způsobí upozornění na vyřazení [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **POSIX název pro tuto položku je zastaralý. Místo toho použijte ISO C a C++ splňovala podmínky shody názvu:** *nový_název*. Doporučujeme změnit zdrojový kód používat bezpečnější verze těchto funkcí, **_itoa_s –**, **_ltoa_s –**, nebo **_ultoa_s –**. Další informace najdete v tématu [_itoa_s – _itow_s – funkce](itoa-s-itow-s.md).
 
 Pro přenositelnost zdrojového kódu můžete chtít zachovat POSIX – názvy v kódu. Použití těchto funkcí bez upozornění na vyřazení, definovat, jak **_CRT_NONSTDC_NO_WARNINGS** a **_CRT_SECURE_NO_WARNINGS** makra preprocesoru před zahrnutím záhlaví CRT. Můžete to provést na příkazovém řádku v příkazovém řádku pro vývojáře tak, že přidáte **/D_CRT_SECURE_NO_WARNINGS** a **/D_CRT_NONSTDC_NO_WARNINGS** možností kompilátoru k **cl**příkazu. Jinak definujte makra ve zdrojových souborech. Pokud používáte předkompilovaných hlaviček, definování makra v horní části předkompilované hlavičky zahrnout soubor stdafx.h obvykle. Chcete-li definovat makra ve zdrojovém kódu, použijte **#define** direktivy před obsahovat libovolné záhlaví CRT, jako v následujícím příkladu:
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - binary compatibility, Visual C++
 ms.assetid: 591580f6-3181-4bbe-8ac3-f4fbaca949e6
 ms.openlocfilehash: d0291ef75bda2e4da994e40ad55d94ae1042e57e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62205501"
 ---
 # <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2017"></a>Binární kompatibilita C++ Visual Studio 2015 a Visual Studio 2017
 

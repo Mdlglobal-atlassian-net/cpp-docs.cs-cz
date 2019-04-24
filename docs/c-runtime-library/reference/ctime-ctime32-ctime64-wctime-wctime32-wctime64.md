@@ -51,11 +51,11 @@ helpviewer_keywords:
 - time, converting
 ms.assetid: 2423de37-a35c-4f0a-a378-3116bc120a9d
 ms.openlocfilehash: d1858a36c68a2ca5cedf70a1d74d5f250cbac8df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288600"
 ---
 # <a name="ctime-ctime32-ctime64-wctime-wctime32-wctime64"></a>ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
 
@@ -111,17 +111,17 @@ Tyto funkce ověřují své parametry. Pokud *sourceTime* je ukazatel s hodnotou
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tctime –**|**CTime –**|**CTime –**|**_wctime**|
-|**_tctime32 –**|**_ctime32**|**_ctime32**|**_wctime32**|
-|**_tctime64 –**|**_ctime64**|**_ctime64**|**_wctime64**|
+|**_tctime**|**CTime –**|**CTime –**|**_wctime**|
+|**_tctime32**|**_ctime32**|**_ctime32**|**_wctime32**|
+|**_tctime64**|**_ctime64**|**_ctime64**|**_wctime64**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**CTime –**|\<Time.h >|
-|**_ctime32**|\<Time.h >|
-|**_ctime64**|\<Time.h >|
+|**CTime –**|\<time.h>|
+|**_ctime32**|\<time.h>|
+|**_ctime64**|\<time.h>|
 |**_wctime**|\<Time.h > nebo \<wchar.h >|
 |**_wctime32**|\<Time.h > nebo \<wchar.h >|
 |**_wctime64**|\<Time.h > nebo \<wchar.h >|

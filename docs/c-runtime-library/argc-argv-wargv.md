@@ -18,11 +18,11 @@ helpviewer_keywords:
 - __argc
 ms.assetid: 17001b0a-04ad-4762-b3a6-c54847f02d7c
 ms.openlocfilehash: f428d81215193361a409473a411eb5c4d91fa997
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62290479"
 ---
 # <a name="argc-argv-wargv"></a>__argc __argv, __wargv
 
@@ -59,5 +59,5 @@ Přenositelný kód, doporučujeme použít argumenty předané `main` získat a
 ## <a name="see-also"></a>Viz také:
 
 [Globální proměnné](../c-runtime-library/global-variables.md)<br/>
-[hlavní: Spuštění programu](../cpp/main-program-startup.md)<br/>
+[main: spuštění programu](../cpp/main-program-startup.md)<br/>
 [Použití funkce wmain namísto main](../cpp/using-wmain-instead-of-main.md)

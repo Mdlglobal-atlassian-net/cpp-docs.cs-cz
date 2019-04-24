@@ -35,11 +35,11 @@ helpviewer_keywords:
 - CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
 ms.openlocfilehash: b711ca65e552d495e466ea2e46a6779cf43ecbe3
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58767741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182118"
 ---
 # <a name="cfontdialog-class"></a>Cfontdialog – třída
 
@@ -55,13 +55,13 @@ class CFontDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFontDialog::CFontDialog](#cfontdialog)|Vytvoří `CFontDialog` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFontDialog::DoModal](#domodal)|Zobrazí dialogové okno a umožňuje uživatelům provést výběr.|
 |[CFontDialog::GetCharFormat](#getcharformat)|Načte formátování vybraného písma.|
@@ -78,7 +78,7 @@ class CFontDialog : public CCommonDialog
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFontDialog::m_cf](#m_cf)|Struktura používané k úpravám `CFontDialog` objektu.|
 

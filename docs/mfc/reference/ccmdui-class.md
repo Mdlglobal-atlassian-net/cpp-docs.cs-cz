@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
 ms.openlocfilehash: c1d44638779f9b5caf052106ac172110d309b69f
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58770886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62206382"
 ---
 # <a name="ccmdui-class"></a>Ccmdui – třída
 
@@ -47,7 +47,7 @@ class CCmdUI
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CCmdUI::ContinueRouting](#continuerouting)|Určuje mechanismus směrování příkazů pokračujte směrování aktuální zprávu v řetězu obslužné rutiny.|
 |[CCmdUI::Enable](#enable)|Povolí nebo zakáže uživatelské rozhraní položky pro tento příkaz.|
@@ -57,7 +57,7 @@ class CCmdUI
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CCmdUI::m_nID](#m_nid)|ID objektu uživatelské rozhraní.|
 |[CCmdUI::m_nIndex](#m_nindex)|Index objektu uživatelského rozhraní.|

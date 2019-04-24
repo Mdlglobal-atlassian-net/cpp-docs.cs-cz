@@ -25,11 +25,11 @@ helpviewer_keywords:
 - inline expansion, compiler option
 ms.assetid: f134e6df-e939-4980-a01d-47425dbc562a
 ms.openlocfilehash: 6bf16e5725916e81e64d80c0a1f96bf502c8826c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320224"
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob (rozbalení vložené funkce)
 
@@ -78,5 +78,5 @@ Můžete použít `#pragma` [auto_inline](../../preprocessor/auto-inline.md) sm�
 ## <a name="see-also"></a>Viz také:
 
 [/O – možnosti (optimalizace kódu)](o-options-optimize-code.md)<br/>
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

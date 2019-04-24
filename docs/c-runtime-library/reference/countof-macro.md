@@ -21,11 +21,11 @@ helpviewer_keywords:
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
 ms.openlocfilehash: 60b4350d6cf14a545de67de0bdaee70ee2099006
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335344"
 ---
 # <a name="countof-macro"></a>_countof – makro
 
@@ -50,7 +50,7 @@ Počet prvků v poli, vyjádřené jako **size_t**.
 
 **_countof** je implementovaný jako preprocesorové makro podobné funkce. Verze C++ obsahuje další šablony strojů k detekci v době kompilace, pokud je předán ukazatel místo staticky deklarovaným pole.
 
-Ujistěte se, že *pole* je ve skutečnosti pole, nikoli ukazatel. V jazyce C **_countof** vytváří chybné výsledky, pokud *pole* ukazatel. V jazyce C++ **_countof** nejde zkompilovat, pokud *pole* ukazatel.  Pole předána jako parametr funkce *decays na ukazatel*, což znamená, že v rámci této funkce nelze použít **_countof** k určení rozsahu objektu array.
+Ujistěte se, že *pole* je ve skutečnosti pole, nikoli ukazatel. V jazyce C **_countof** vytváří chybné výsledky, pokud *pole* ukazatel. V C++, **_countof** nejde zkompilovat, pokud *pole* ukazatel.  Pole předána jako parametr funkce *decays na ukazatel*, což znamená, že v rámci této funkce nelze použít **_countof** k určení rozsahu objektu array.
 
 ## <a name="requirements"></a>Požadavky
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - istrstream class
 ms.assetid: c2d41c75-bd2c-4437-bd77-5939ce1b97af
 ms.openlocfilehash: 70e71ac5a6fd523f0b7589625f4e88fdb41ee0e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224270"
 ---
 # <a name="istrstream-class"></a>istrstream – třída
 
@@ -35,7 +35,7 @@ Objekt ukládá objekt třídy `strstreambuf`.
 
 |Konstruktor|Popis|
 |-|-|
-|[istrstream –](#istrstream)|Vytvoří objekt typu `istrstream`.|
+|[istrstream](#istrstream)|Vytvoří objekt typu `istrstream`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
@@ -124,7 +124,7 @@ Zobrazit [strstream::str](../standard-library/strstreambuf-class.md#str) ukázku
 
 ## <a name="see-also"></a>Viz také:
 
-[IStream](../standard-library/istream-typedefs.md#istream)<br/>
+[istream](../standard-library/istream-typedefs.md#istream)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [iostream – programování](../standard-library/iostream-programming.md)<br/>
 [iostreams – konvence](../standard-library/iostreams-conventions.md)<br/>

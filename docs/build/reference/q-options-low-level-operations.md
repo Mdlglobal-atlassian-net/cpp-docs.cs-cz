@@ -8,11 +8,11 @@ helpviewer_keywords:
 - -Q compiler option [C++]
 - /Q compiler option [C++]
 ms.openlocfilehash: 5bbb63b4f437f8aefd5c84c1c1c4bd20bdb965cb
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57819906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319392"
 ---
 # <a name="q-options-low-level-operations"></a>/Q – možnosti (operace nízké úrovně)
 
@@ -36,5 +36,5 @@ Můžete použít **/Q** – možnosti kompilátoru k provedení následujícíc
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

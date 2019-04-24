@@ -33,19 +33,19 @@ helpviewer_keywords:
 - std::next [C++]
 - std::prev [C++]
 ms.openlocfilehash: f6ea1ac49dabbfc34af9c8ddd020543f606d37a4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224139"
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;iterátor&gt; funkce
 
 ||||
 |-|-|-|
-|[zálohy](#advance)|[back_inserter](#back_inserter)|[začít](#begin)|
-|[cbegin](#cbegin)|[cend](#cend)|[vzdálenost](#distance)|
-|[ukončení](#end)|[front_inserter](#front_inserter)|[Vkládací modul](#inserter)|
+|[advance](#advance)|[back_inserter](#back_inserter)|[začít](#begin)|
+|[cbegin](#cbegin)|[cend](#cend)|[distance](#distance)|
+|[ukončení](#end)|[front_inserter](#front_inserter)|[inserter](#inserter)|
 |[make_checked_array_iterator](#make_checked_array_iterator)|[make_move_iterator](#make_move_iterator)|[make_unchecked_array_iterator](#make_unchecked_array_iterator)|
 |[next](#next)|[prev](#prev)|
 
@@ -65,7 +65,7 @@ void advance(
 *Inicializace*<br/>
 Iterátor, který má být zvýšen a který musí splňovat požadavky pro vstupní iterátor.
 
-*Vypnout*<br/>
+*Off*<br/>
 Integrální typ, který lze převést na typ rozdílu iterátoru a určuje počet přírůstků pozice, o které má být iterátor zvýšen.
 
 ### <a name="remarks"></a>Poznámky
@@ -317,7 +317,7 @@ Konstanta `cont.begin()`.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce funguje s všechny kontejnery standardní knihovny C++ a [initializer_list](../standard-library/initializer-list-class.md).
+Tato funkce funguje se všemi C++ kontejnery standardní knihovny a s [initializer_list](../standard-library/initializer-list-class.md).
 
 Můžete použít tuto členskou funkci místo `begin()` šablona funkce pro zajištění, že návratová hodnota je `const_iterator`. Obvykle se používá ve spojení s [automaticky](../cpp/auto-cpp.md) zadejte klíčovým slovem odvození, jak je znázorněno v následujícím příkladu. V tomto příkladu zvažte `Container` jako upravitelný (jinou hodnotu než **const**) kontejner nebo `initializer_list` jakéhokoli druhu, který podporuje `begin()` a `cbegin()`.
 
@@ -350,7 +350,7 @@ Konstanta `cont.end()`.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce funguje s všechny kontejnery standardní knihovny C++ a [initializer_list](../standard-library/initializer-list-class.md).
+Tato funkce funguje se všemi C++ kontejnery standardní knihovny a s [initializer_list](../standard-library/initializer-list-class.md).
 
 Můžete použít tuto členskou funkci místo [end()](../standard-library/iterator-functions.md#end) šablona funkce pro zajištění, že návratová hodnota je `const_iterator`. Obvykle se používá ve spojení s [automaticky](../cpp/auto-cpp.md) zadejte klíčovým slovem odvození, jak je znázorněno v následujícím příkladu. V tomto příkladu zvažte `Container` jako upravitelný (jinou hodnotu než **const**) kontejner nebo `initializer_list` jakéhokoli druhu, který podporuje `end()` a `cend()`.
 
@@ -376,7 +376,7 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 *první*<br/>
 První iterátor, který má být stanovena jehož vzdálenost od druhé.
 
-*poslední*<br/>
+*last*<br/>
 Druhý iterátor, jehož vzdálenost od první má být stanovena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -630,7 +630,7 @@ Iter Ptr,
 
 ### <a name="parameters"></a>Parametry
 
-*PTR*<br/>
+*Ptr*<br/>
 Ukazatel na cílové pole.
 
 *Velikost*<br/>
@@ -740,7 +740,7 @@ unchecked_array_iterator<Iter>
 
 ### <a name="parameters"></a>Parametry
 
-*PTR*<br/>
+*Ptr*<br/>
 Ukazatel na cílové pole.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -856,4 +856,4 @@ Počet pokusů pro iteraci.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<iterátor >](../standard-library/iterator.md)<br/>
+[\<iterator>](../standard-library/iterator.md)<br/>

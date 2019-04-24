@@ -30,17 +30,17 @@ helpviewer_keywords:
 - compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
 ms.openlocfilehash: dab8ac23be8b66ca84c57514c6c04e94dddebaae
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321186"
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>Rozšíření Microsoft pro C a C++
 
 Jazyk Visual C++ rozšiřuje standardy ANSI C a ANSI C++ následujícím způsobem.
 
-## <a name="keywords"></a>Klíčová slova
+## <a name="keywords"></a>klíčová slova
 
 Je přidáno několik klíčových slov. V seznamu v [klíčová slova](../../cpp/keywords-cpp.md), klíčová slova, která mají dvě úvodní podtržítka jsou rozšíření jazyka Visual C++.
 
@@ -262,9 +262,9 @@ void func ()
 
 V části **/Ze**, budete muset zahrnout soubor iso646.h, pokud chcete používat textové tvary následujících operátorů:
 
-- && (and)
+- & & (a)
 
-- &= (and_eq)
+- & = (and_eq)
 
 - & (bitand)
 
@@ -301,5 +301,5 @@ int main()
 ## <a name="see-also"></a>Viz také:
 
 - [/Za, /Ze (zakázání jazykových rozšíření)](za-ze-disable-language-extensions.md)
-- [Možnosti kompilátoru MSVC](compiler-options.md)
+- [Parametry kompilátoru MSVC](compiler-options.md)
 - [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

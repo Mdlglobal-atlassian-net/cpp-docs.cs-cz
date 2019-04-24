@@ -25,11 +25,11 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
 ms.openlocfilehash: 9a1633ed48c763b986f3421c33589a05f8bba126
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58781637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224789"
 ---
 # <a name="coledroptarget-class"></a>COleDropTarget Class
 
@@ -45,13 +45,13 @@ class COleDropTarget : public CCmdTarget
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleDropTarget::COleDropTarget](#coledroptarget)|Vytvoří `COleDropTarget` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleDropTarget::OnDragEnter](#ondragenter)|Volá se, když ukazatel poprvé vstoupí do okna.|
 |[COleDropTarget::OnDragLeave](#ondragleave)|Volá se, když ukazatel ocitne mimo okno.|

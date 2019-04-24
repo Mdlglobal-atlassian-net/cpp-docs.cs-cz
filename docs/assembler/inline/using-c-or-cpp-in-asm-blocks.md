@@ -15,15 +15,15 @@ helpviewer_keywords:
 - __asm keyword [C++], C/C++ elements in
 ms.assetid: ae8b2b52-6b75-42e3-ac0c-ad02d922ed97
 ms.openlocfilehash: 0949eba769bed33da8fe39bb41500a2ba02af224
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166552"
 ---
 # <a name="using-c-or-c-in-asm-blocks"></a>Použití jazyka C nebo C++ v blocích __asm
 
-** Specifické pro Microsoft **
+** Microsoft Specific **
 
 Protože pokyny vložené sestavení lze kombinovat s příkazy jazyka C nebo C++, mohou odkazovat na proměnné jazyka C nebo C++ podle názvu a použít mnoho prvků z těchto jazyků.
 

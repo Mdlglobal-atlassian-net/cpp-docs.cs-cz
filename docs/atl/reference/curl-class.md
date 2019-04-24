@@ -36,11 +36,11 @@ helpviewer_keywords:
 - CUrl class
 ms.assetid: b3894d34-47b9-4961-9719-4197153793da
 ms.openlocfilehash: 913365e2b20015b22480dfd364d75b2be3c6355b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277250"
 ---
 # <a name="curl-class"></a>CUrl – třída
 
@@ -189,7 +189,7 @@ BOOL CrackUrl(LPCTSTR lpszUrl, DWORD dwFlags = 0) throw();
 Adresa URL.
 
 *dwFlags*<br/>
-Zadejte ATL_URL_DECODE nebo ATL_URL_ESCAPE převést všechny řídicí znaky v *lpszUrl* na skutečné hodnoty po analýze. (Před Visual C++ 2005 ATL_URL_DECODE převést všechny řídicí znaky před dokončením analýzy.)
+Zadejte ATL_URL_DECODE nebo ATL_URL_ESCAPE převést všechny řídicí znaky v *lpszUrl* na skutečné hodnoty po analýze. (Před Visual C++ 2005, ATL_URL_DECODE převést všechny řídicí znaky před dokončením analýzy.)
 
 ### <a name="return-value"></a>Návratová hodnota
 

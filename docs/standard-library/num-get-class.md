@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
 ms.openlocfilehash: c0984c15e2bf1682fc902264f47f340d0bd3c859
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223746"
 ---
 # <a name="numget-class"></a>num_get – třída
 
@@ -170,7 +170,7 @@ virtual iter_type do_get(
 *první*<br/>
 Začátek rozsahu znaků ze kterého se má přečíst číslo.
 
-*poslední*<br/>
+*last*<br/>
 Konec rozsahu znaků od kterého se mají číst číslo.
 
 *_Iosbase*<br/>
@@ -417,7 +417,7 @@ iter_type get(
 *první*<br/>
 Začátek rozsahu znaků ze kterého se má přečíst číslo.
 
-*poslední*<br/>
+*last*<br/>
 Konec rozsahu znaků od kterého se mají číst číslo.
 
 *_Iosbase*<br/>
@@ -441,7 +441,7 @@ První chráněná virtuální členská funkce se pokusí porovnat sekvenční 
 
 Vstupní pole celé číslo je převedeno stejnými pravidly, používá funkce kontroly pro porovnávání a převod řadu **char** elementy ze souboru. Každé takové **char** element předpokládá, že je mapují na odpovídající element typu `CharType` mapováním jednoduché, 1: 1. Specifikace ekvivalentní kontrolu převodu je stanoven následujícím způsobem:
 
-- Pokud `iosbase`. [příznaky](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct), je specifikace převodu `lo`.
+- If `iosbase`. [příznaky](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct), je specifikace převodu `lo`.
 
 - Pokud **iosbase.flags** & **ios_base::basefield** == `ios_base::`[hex](../standard-library/ios-functions.md#hex), je specifikace převodu `lx`.
 
@@ -449,7 +449,7 @@ Vstupní pole celé číslo je převedeno stejnými pravidly, používá funkce 
 
 - V opačném případě je specifikace převodu `ld`.
 
-Formát vstupního pole celé číslo další určené [omezující vlastnost národního prostředí](../standard-library/locale-class.md#facet_class)**fac** vrácený voláním [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct – ](../standard-library/numpunct-class.md) \< **Elem**> ( **iosbase**. [getloc –](../standard-library/ios-base-class.md#getloc)). Konkrétně:
+Formát vstupního pole celé číslo další určené [omezující vlastnost národního prostředí](../standard-library/locale-class.md#facet_class)**fac** vrácený voláním [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct – ](../standard-library/numpunct-class.md) \< **Elem**> ( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)). Konkrétně:
 
 - **FAC**. [seskupení](../standard-library/numpunct-class.md#grouping) určuje způsob seskupení číslic vlevo od desetinné čárky.
 
@@ -582,9 +582,9 @@ Možné hodnoty parametru *_Refs* parametrů a jejich význam:
 
 - 0: Životnost objektu se spravuje přes národní prostředí, které je obsahují.
 
-- 1: doba života objektu je nutné ručně spravovat.
+- 1: Doba života objektu se musí spravovat ručně.
 
-- \> 1: tyto hodnoty nejsou definovány.
+- \> 1: Tyto hodnoty nejsou definovány.
 
 Žádné přímé příklady je to možné, protože destruktor je chráněn.
 

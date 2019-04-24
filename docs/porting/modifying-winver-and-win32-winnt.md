@@ -6,15 +6,15 @@ helpviewer_keywords:
 - _WIN32_WINNT in an upgraded Visual C++ project
 ms.assetid: 6a1f1d66-ae0e-48a7-81c3-524d8e8f3447
 ms.openlocfilehash: a936a54620590d4dc21f43acd50abdc49d77ffa8
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337255"
 ---
 # <a name="modifying-winver-and-win32winnt"></a>Úpravy maker WINVER a _WIN32_WINNT
 
-Jazyk Visual C++ již podporuje cílení na Windows 95, Windows 98, Windows ME, Windows NT nebo Windows 2000. Pokud vaše **WINVER** nebo **_WIN32_WINNT** makra se přiřadí k jednomu z těchto verzí systému Windows, je třeba upravit makra. Když upgradujete projekt, který byl vytvořen pomocí dřívější verze aplikace Visual C++, může se zobrazit související se chyby při kompilaci **WINVER** nebo **_WIN32_WINNT** makra, pokud jsou přiřazeny k verzi Windows, který už není podporovaná.
+Jazyk Visual C++ již podporuje cílení na Windows 95, Windows 98, Windows ME, Windows NT nebo Windows 2000. Pokud vaše **WINVER** nebo **_WIN32_WINNT** makra se přiřadí k jednomu z těchto verzí systému Windows, je třeba upravit makra. Když upgradujete projekt, který byl vytvořen pomocí dřívější verzi aplikace Visual C++, může se zobrazit související se chyby při kompilaci **WINVER** nebo **_WIN32_WINNT** makra, pokud jsou přiřazeny k verzi z Windows, který se už nepodporuje.
 
 ## <a name="remarks"></a>Poznámky
 

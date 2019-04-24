@@ -35,11 +35,11 @@ helpviewer_keywords:
 - gettch_nolock function
 ms.assetid: 9d248546-26ca-482c-b0c6-55812a987e83
 ms.openlocfilehash: dbfc670b70a278e97794fc19f170cef565626dbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287531"
 ---
 # <a name="getchnolock-getwchnolock"></a>_getch_nolock, _getwch_nolock
 
@@ -67,14 +67,14 @@ Vrátí čtení znaku. Není vrácena žádná chyba.
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_gettch_nolock –**|**_getch_nolock –**|**_getch_nolock –**|**_getwch_nolock –**|
+|**_gettch_nolock**|**_getch_nolock**|**_getch_nolock**|**_getwch_nolock**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_getch_nolock –**|\<conio.h >|
-|**_getwch_nolock –**|\<conio.h > nebo \<wchar.h >|
+|**_getch_nolock**|\<conio.h>|
+|**_getwch_nolock**|\<conio.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

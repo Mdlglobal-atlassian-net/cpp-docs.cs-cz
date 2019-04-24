@@ -15,11 +15,11 @@ helpviewer_keywords:
 - single-threaded applications, ATL
 ms.assetid: e5dc30c7-405a-4ba4-8ae9-51937243fce8
 ms.openlocfilehash: 57219ca79dfa46437a8b13d889bb5f0c5a5d6f37
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258985"
 ---
 # <a name="ccomsinglethreadmodel-class"></a>CComSingleThreadModel – třída
 
@@ -54,7 +54,7 @@ class CComSingleThreadModel
 
 Obvykle použijete `CComSingleThreadModel` prostřednictvím jednoho ze dvou **typedef** názvy buď [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) nebo [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel). Třída odkazovaná každou **typedef** závisí na model vláken použít, jak je znázorněno v následující tabulce:
 
-| – definice typedef|Jeden model vláken|Podprocesový model Apartment|Model vláken zdarma|
+|– definice typedef|Jeden model vláken|Podprocesový model Apartment|Model vláken zdarma|
 |-------------|----------------------------|-------------------------------|--------------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|

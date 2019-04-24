@@ -3,11 +3,11 @@ title: Dynamické rozložení
 ms.date: 11/19/2018
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
 ms.openlocfilehash: 396aad5b33a00021ddb5c1143c1d15c130e97eaa
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62175287"
 ---
 # <a name="dynamic-layout"></a>Dynamické rozložení
 
@@ -61,7 +61,7 @@ Z předchozího postupu je užitečné pro určení dynamické rozložení vlast
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
     ```
 
-1. První ovládací prvek do kterého chcete přidat dynamické chování pomocí statické metody ve třídě dynamické rozložení vytvářet [MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) struktura, která kóduje tak, jak ovládací prvek by měl být upraven. To provedete první volbou vhodnou statickou metodu: [CMFCDynamicLayout::MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [CMFCDynamicLayout::MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [CMFCDynamicLayout::MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone), nebo [CMFCDynamicLayout::MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Předáte vodorovné nebo svislé aspektů přesunutí v procentech. Tyto statické metody vrátí nově vytvořený objekt MoveSettings, můžete použít k určení chování přesunutí ovládacího prvku.
+1. První ovládací prvek do kterého chcete přidat dynamické chování pomocí statické metody ve třídě dynamické rozložení vytvářet [MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) struktura, která kóduje tak, jak ovládací prvek by měl být upraven. To uděláte první volbou vhodnou statickou metodu: [CMFCDynamicLayout::MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [CMFCDynamicLayout::MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [CMFCDynamicLayout::MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone), nebo [cmfcdynamiclayout –:: MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Předáte vodorovné nebo svislé aspektů přesunutí v procentech. Tyto statické metody vrátí nově vytvořený objekt MoveSettings, můžete použít k určení chování přesunutí ovládacího prvku.
 
    Mějte na paměti, že 100 znamená přesun přesně tak, jak dialogové okno změní velikost, která způsobí, že ovládací prvek edge zůstat pevné vzdálenost od nové ohraničení.
 

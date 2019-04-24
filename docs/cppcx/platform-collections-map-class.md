@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
 ms.openlocfilehash: ce50290217c7c06e26f26fc50564d3e37c873157
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161755"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections:: map – třída
 
@@ -71,13 +71,13 @@ Další informace najdete v tématu [kolekce](../cppcx/collections-c-cx.md).
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[Map::map](#ctor)|Inicializuje novou instanci třídy Map.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[Map::clear](#clear)|Odebere všechny páry klíč hodnota z aktuálního objektu Map.|
 |[Map::First](#first)|Vrátí iterátor, který určuje první prvek v objektu map.|

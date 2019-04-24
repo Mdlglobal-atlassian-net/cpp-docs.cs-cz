@@ -163,11 +163,11 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
 ms.openlocfilehash: 3819e861b7a5e6ff27fe632a33413b588a5a4835
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58782001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323632"
 ---
 # <a name="ctreectrl-class"></a>Ctreectrl – třída
 
@@ -183,13 +183,13 @@ class CTreeCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CTreeCtrl::CTreeCtrl](#ctreectrl)|Vytvoří `CTreeCtrl` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CTreeCtrl::Create](#create)|Vytvoří ovládací prvek stromového zobrazení a připojí ho k `CTreeCtrl` objektu.|
 |[CTreeCtrl::CreateDragImage](#createdragimage)|Vytvoří přetahování rastrového obrázku pro položku zobrazení domény stromové struktury.|
@@ -1366,7 +1366,7 @@ Při volání této funkce je *pt* parametr určuje souřadnice bodu k testován
 
 |||
 |-|-|
-|Value|Význam|
+|Hodnota|Význam|
 |TVHT_ABOVE|Nad oblastí klienta.|
 |TVHT_BELOW|Pod klientské oblasti.|
 |TVHT_NOWHERE|V oblasti klienta, ale pod poslední položkou.|

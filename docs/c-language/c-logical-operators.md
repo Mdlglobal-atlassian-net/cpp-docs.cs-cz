@@ -12,11 +12,11 @@ helpviewer_keywords:
 - logical OR operator
 ms.assetid: c0a4e766-ad56-4300-bf76-b28dc0e19b43
 ms.openlocfilehash: 5df0c0f16bdf298c47a6a0699ec10c7392ab84ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326583"
 ---
 # <a name="c-logical-operators"></a>Logické operátory jazyka C
 
@@ -24,13 +24,13 @@ Logické operátory provádí logické- a (**&&**) a logical-OR (**||**) operace
 
 ## <a name="syntax"></a>Syntaxe
 
-*logický a výraz*:<br/>
+*logical-AND-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Inkluzivní nebo výraz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logický a výraz***&&***včetně výraz OR* 
+&nbsp;&nbsp;&nbsp;&nbsp;*logický a výraz***&&***včetně výraz OR*
 
-*logický výraz OR*:<br/>
+*logical-OR-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logický a výraz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logický výraz OR***&#124;&#124;***logické a expression* 
+&nbsp;&nbsp;&nbsp;&nbsp;*logický výraz OR***&#124;&#124;***logické a expression*
 
 ## <a name="remarks"></a>Poznámky
 

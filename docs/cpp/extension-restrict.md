@@ -9,11 +9,11 @@ helpviewer_keywords:
 - __restrict keyword [C++]
 ms.assetid: 2d151b4d-f930-49df-bd16-d8757ec7fa83
 ms.openlocfilehash: 76cdf9424e6eab33a3a92b3f98d9c2b0b04ff667
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183749"
 ---
 # <a name="restrict"></a>__restrict
 
@@ -21,7 +21,7 @@ Podobně jako **__declspec ( [omezit](../cpp/restrict.md) )** modifikátor, **kv
 
 - **Kvalifikátor __restrict** – klíčové slovo je platný pouze pro proměnné, a `__declspec ( restrict )` je platný jenom pro deklarace a definice funkcí.
 
-- **Kvalifikátor __restrict** je podobný **omezit** od specifikace C99, ale **kvalifikátor __restrict** lze použít v programech jazyka C++ i c.
+- **Kvalifikátor __restrict** je podobný **omezit** od specifikace C99, ale **kvalifikátor __restrict** lze použít v C++ nebo programů jazyka C.
 
 - Když **kvalifikátor __restrict** se používá, kompilátor nebude šířit vlastnost no-alias proměnné. To znamená Pokud přiřadíte **kvalifikátor __restrict** proměnné non-**kvalifikátor __restrict** proměnné, kompilátor bude stále umožňují jiných __restrict proměnné mít alias. Tím se liší od chování **omezit** – klíčové slovo z dle specifikace C99.
 
@@ -29,7 +29,7 @@ Obecně při ovlivňování chování celé funkce, je vhodnější použít `__
 
 Z důvodu kompatibility s předchozími verzemi **_restrict** je synonymum pro **kvalifikátor __restrict** Pokud – možnost kompilátoru [/Za \(zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md) je zadat.
 
-V sadě Visual Studio 2015 a novější **kvalifikátor __restrict** lze použít v referencích C++.
+V sadě Visual Studio 2015 a novější **kvalifikátor __restrict** jde použít na C++ odkazy.
 
 > [!NOTE]
 >  Při použití na proměnnou, která má také [volatile](../cpp/volatile-cpp.md) – klíčové slovo, **volatile** bude mít přednost.

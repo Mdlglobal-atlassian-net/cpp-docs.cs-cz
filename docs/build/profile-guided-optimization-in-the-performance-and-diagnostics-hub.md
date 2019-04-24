@@ -3,11 +3,11 @@ title: Optimalizace na základě profilu v centru pro výkon a diagnostiku
 ms.date: 11/19/2018
 ms.assetid: dc3a1914-dbb6-4401-bc63-10665a8c8943
 ms.openlocfilehash: e1aaf64c18ebde29e6ea0d6b4b6bdad66f21a435
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295633"
 ---
 # <a name="profile-guided-optimization-in-the-visual-studio-2013-performance-and-diagnostics-hub"></a>Profilově řízené optimalizace výkon sady Visual Studio 2013 a Centrum diagnostiky
 

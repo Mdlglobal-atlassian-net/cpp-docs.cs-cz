@@ -25,11 +25,11 @@ helpviewer_keywords:
 - CMenuTearOffManager [MFC], SetupTearOffMenus
 ms.assetid: ab7ca272-ce42-4678-95f7-6ad75038f5a0
 ms.openlocfilehash: 8b92ddad9d3a6de41cf6914dee268f6e54b5d420
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58776060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62163705"
 ---
 # <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager Class
 
@@ -47,13 +47,13 @@ class CMenuTearOffManager : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMenuTearOffManager::CMenuTearOffManager](#cmenutearoffmanager)|Vytvoří `CMenuTearOffManager` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMenuTearOffManager::Build](#build)||
 |[CMenuTearOffManager::GetRegPath](#getregpath)||

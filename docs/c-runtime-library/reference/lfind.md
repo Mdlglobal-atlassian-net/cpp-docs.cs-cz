@@ -28,11 +28,11 @@ helpviewer_keywords:
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
 ms.openlocfilehash: 1508d54d6b2f2566e4aee3afef02af45b28e4f48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286489"
 ---
 # <a name="lfind"></a>_lfind
 
@@ -52,7 +52,7 @@ void *_lfind(
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Objekt pro hledání.
 
 *base*<br/>
@@ -81,7 +81,7 @@ Tato funkce ověřuje své parametry. Pokud *porovnání*, *klíč* nebo *čísl
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_lfind**|\<Search.h >|
+|**_lfind**|\<search.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

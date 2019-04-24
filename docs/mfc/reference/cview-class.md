@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
 ms.openlocfilehash: 06c6d4dff28399f3d8e6ac7f46d9ed751850036f
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58775306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323332"
 ---
 # <a name="cview-class"></a>CView – třída
 
@@ -73,13 +73,13 @@ class AFX_NOVTABLE CView : public CWnd
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CView::CView](#cview)|Vytvoří `CView` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CView::DoPreparePrinting](#doprepareprinting)|Zobrazí dialogové okno Tisk a vytvoří kontext zařízení tiskárny volat metodu, pokud přepsání `OnPreparePrinting` členskou funkci.|
 |[CView::GetDocument](#getdocument)|Vrátí dokument přidružený k zobrazení.|
@@ -97,7 +97,7 @@ class AFX_NOVTABLE CView : public CWnd
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CView::OnActivateFrame](#onactivateframe)|Volá se, když se aktivuje nebo deaktivuje okno rámce obsahující zobrazení.|
 |[CView::OnActivateView](#onactivateview)|Volá se, když se aktivuje zobrazení.|

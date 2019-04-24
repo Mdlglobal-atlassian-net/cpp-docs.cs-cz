@@ -29,11 +29,11 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
 ms.openlocfilehash: 9c649dd979b28e2b545a797c5453a2ec9aa6d0dc
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58768039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62206725"
 ---
 # <a name="cchecklistbox-class"></a>Cchecklistbox – třída
 
@@ -49,13 +49,13 @@ class CCheckListBox : public CListBox
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CCheckListBox::CCheckListBox](#cchecklistbox)|Vytvoří `CCheckListBox` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CCheckListBox::Create](#create)|Vytvoří pole kontrolního seznamu Windows a připojí ho k `CCheckListBox` objektu.|
 |[CCheckListBox::DrawItem](#drawitem)|Volá se rozhraním při úpravě vizuálního aspektu uživatelem nakreslený seznam se změní.|

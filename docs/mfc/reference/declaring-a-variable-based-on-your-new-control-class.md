@@ -9,11 +9,11 @@ helpviewer_keywords:
 - classes [MFC], declaring variables based on
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
 ms.openlocfilehash: b3b1a168619c1c111db3e71e1a9562d441cc710d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323005"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>Deklarace proměnné založené na nové třídě ovládacího prvku
 
@@ -46,7 +46,7 @@ Po vytvoření třídy ovládacího prvku knihovny MFC, je možné deklarovat pr
 ## <a name="see-also"></a>Viz také:
 
 [Mapování zpráv na funkce](../../mfc/reference/mapping-messages-to-functions.md)<br/>
-[Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Přidání funkce pomocí Průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Přidání třídy](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Přidání členské funkce](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Přidání členské proměnné](../../ide/adding-a-member-variable-visual-cpp.md)<br/>

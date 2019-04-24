@@ -10,11 +10,11 @@ helpviewer_keywords:
 - MFC, library versions
 - libraries [MFC], versions
 ms.openlocfilehash: c0dc724566063066175ea54e2b7734892e3c6e05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62238499"
 ---
 # <a name="mfc-library-versions"></a>MFC – verze knihovny
 
@@ -85,7 +85,7 @@ Projekty MFC používají symbol preprocesoru \_UNICODE označuje podporu širok
 
 Statické knihovny MFC pomocí následující názvové konvence. Názvy knihoven mít formát _služba ._protokol
 
-> <em>u</em>afx –<em>cd</em>. LIB
+> <em>u</em>AFX<em>cd</em>.LIB
 
 zobrazí kurzívou malá písmena, kde jsou zástupné symboly specifikátory jehož význam, jsou uvedeny v následující tabulce:
 
@@ -116,12 +116,12 @@ Knihovny DLL MFC mají *verze* čísla označující binární kompatibilitu. Po
 
 |DLL|Popis|
 |---------|-----------------|
-|MFC*verze*. KNIHOVNY DLL|MFC DLL, ANSI nebo znakové sady MBCS vydání verze|
+|MFC*version*.DLL|MFC DLL, ANSI nebo znakové sady MBCS vydání verze|
 |MFC*version*U.DLL|Knihovny MFC DLL, Unicode verze|
 |MFC*version*D.DLL|Verze knihovny MFC DLL, ANSI nebo ladění znakové sady MBCS|
 |MFC*version*UD.DLL|Knihovny MFC DLL, Unicode ladicí verze|
-|MFCM*verze*. KNIHOVNY DLL|MFC DLL pomocí ovládacích prvků Windows Forms, ANSI nebo znakové sady MBCS vydání verze|
-|MFCM*verze*U.DLL|Pomocí ovládacích prvků Windows Forms, Unicode verze knihovny MFC DLL|
+|MFCM*version*.DLL|MFC DLL pomocí ovládacích prvků Windows Forms, ANSI nebo znakové sady MBCS vydání verze|
+|MFCM*version*U.DLL|Pomocí ovládacích prvků Windows Forms, Unicode verze knihovny MFC DLL|
 |MFCM*version*D.DLL|MFC DLL pomocí ovládacích prvků Windows Forms, verze ANSI nebo ladění znakové sady MBCS|
 |MFCM*version*UD.DLL|Pomocí ovládacích prvků Windows Forms, Unicode ladicí verze knihovny MFC DLL|
 

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
 ms.openlocfilehash: 0de4ffb8e72c21490f07ae164aa23ffcd524c2b8
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161404"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections:: vectorviewiterator – třída
 
 Poskytuje standardní knihovny šablon iterátor pro objekty, které jsou odvozeny z modulu Windows Runtime`IVectorView` rozhraní.
 
-`ViewVectorIterator` je proxy iterátor, který ukládá prvky typu `VectorProxy<T>`. Objekt proxy je však téměř nikdy viditelné pro uživatelský kód. Další informace najdete v tématu [kolekce (C + +/ CX)](../cppcx/collections-c-cx.md).
+`ViewVectorIterator` je proxy iterátor, který ukládá prvky typu `VectorProxy<T>`. Objekt proxy je však téměř nikdy viditelné pro uživatelský kód. Další informace najdete v tématu [kolekce (C++/CX)](../cppcx/collections-c-cx.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,7 +36,7 @@ Vlastnost typename třídy VectorViewIterator šablony.
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`difference_type`|Rozdíl ukazatelů (ptrdiff_t).|
 |`iterator_category`|Kategorie iterátor náhodného přístupu (:: std::random_access_iterator_tag).|
@@ -46,13 +46,13 @@ Vlastnost typename třídy VectorViewIterator šablony.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[VectorViewIterator::VectorViewIterator](#ctor)|Inicializuje novou instanci třídy VectorViewIterator.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[VectorViewIterator::operator-– operátor](#operator-minus)|Odečte buď zadaný počet prvků z aktuální iterace, což má za následek nové iterátor nebo iterátor zadané z aktuální iterace, což má za následek počet prvků mezi iterátory.|
 |[VectorViewIterator::operator-- Operator](#operator-decrement)|Sníží aktuální VectorViewIterator.|

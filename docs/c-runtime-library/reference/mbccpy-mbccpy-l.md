@@ -35,11 +35,11 @@ helpviewer_keywords:
 - mbccpy_l function
 ms.assetid: 13f4de6e-7792-41ac-b319-dd9b135433aa
 ms.openlocfilehash: 852097ebea41ef99b1a53f7bc344eb0c08911a4d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156834"
 ---
 # <a name="mbccpy-mbccpyl"></a>_mbccpy, _mbccpy_l
 
@@ -64,7 +64,7 @@ void _mbccpy_l(
 
 ### <a name="parameters"></a>Parametry
 
-*cíl*<br/>
+*dest*<br/>
 Cíl kopírování.
 
 *src*<br/>
@@ -87,15 +87,15 @@ Tato funkce ověřuje své parametry. Pokud **_mbccpy** je předán ukazatel s h
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tccpy –**|Mapuje se na makro nebo vloženou funkci|**_mbccpy**|Mapuje se na makro nebo vloženou funkci|
-|**_tccpy_l –**|není k dispozici|**_mbccpy_l**|není k dispozici|
+|**_tccpy**|Mapuje se na makro nebo vloženou funkci|**_mbccpy**|Mapuje se na makro nebo vloženou funkci|
+|**_tccpy_l**|není k dispozici|**_mbccpy_l**|není k dispozici|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_mbccpy**|\<Mbctype.h >|
-|**_mbccpy_l**|\<Mbctype.h >|
+|**_mbccpy**|\<mbctype.h>|
+|**_mbccpy_l**|\<mbctype.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - specifiers, type
 ms.assetid: fbe13441-04c3-4829-b047-06d374adc2b6
 ms.openlocfilehash: 1191cf4d2912cda535547f465fe4bfbedebe8fa2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313191"
 ---
 # <a name="c-type-specifiers"></a>Specifikátory typu jazyka C
 
@@ -28,7 +28,7 @@ Výčtové typy jsou považovány za základní typy. Specifikátory typu pro ty
 
 Klíčové slovo **void** má tři použití: Chcete-li určit funkce, návratový typ, můžete určit přehledu typ argumentu pro funkci, která nepřijímá žádné argumenty a zadejte ukazatel neurčeného typu. Můžete použít **void** typu k deklaraci funkce, které vrací žádná hodnota nebo deklarovat ukazatel na neurčeného typu. V tématu [argumenty](../c-language/arguments.md) informace o **void** když se zobrazí pouze v závorkách za názvem funkce.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Kontrola typu je nyní vyhovující standardu ANSI, což znamená, že tento typ **krátký** a typ **int** jsou odlišné typy. Například toto je nová definice v kompilátoru C společnosti Microsoft, který byl přijat předchozími verzemi kompilátoru.
 

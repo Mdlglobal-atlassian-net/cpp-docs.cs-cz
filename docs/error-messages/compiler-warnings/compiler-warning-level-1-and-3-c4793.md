@@ -16,11 +16,11 @@ helpviewer_keywords:
 - C4793
 ms.assetid: 819ada53-1d9c-49b8-a629-baf8c12314e6
 ms.openlocfilehash: e7ca3b10e09b0d6818fbc7f5607ebc9c95c7f15c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280539"
 ---
 # <a name="compiler-warning-level-1-and-3-c4793"></a>Upozornění kompilátoru (úroveň 1 a 3) C4793
 
@@ -38,7 +38,7 @@ V následující tabulce jsou uvedeny všechny možné pokračování zprávy.
 |--------------------|-------------|
 |Zarovnané datové typy nejsou ve spravovaném kódu podporované.|Modul CLR musí být schopen přidělení dat podle potřeby, což nemusí být možné dat je v souladu s deklaracemi, jako v případě [__m128](../../cpp/m128.md) nebo [zarovnat](../../cpp/align-cpp.md).|
 |Funkce, které používají ": __ImageBase" nejsou ve spravovaném kódu podporované.|`__ImageBase` je speciální linkeru symbol, který je obvykle používána pouze nízké úrovně nativní kód pro načtení knihovny DLL.|
-|Funkce VarArgs nejsou podporovány "/ clr' – možnost kompilátoru|Nativní funkce nelze volat spravované funkce, které mají [seznamy argumentů proměnných](../../cpp/functions-with-variable-argument-lists-cpp.md) (vararg) vzhledem k tomu, že nemají tyto funkce požadavkům na rozložení jiný zásobník. Ale pokud zadáte **/CLR: pure** – možnost kompilátoru, seznamy jsou podporované, protože sestavení může obsahovat jenom spravované funkce argumentů s proměnnou délkou. Další informace najdete v tématu [prázdná a ověřitelný kód (C + +/ CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).|
+|Funkce VarArgs nejsou podporovány "/ clr' – možnost kompilátoru|Nativní funkce nelze volat spravované funkce, které mají [seznamy argumentů proměnných](../../cpp/functions-with-variable-argument-lists-cpp.md) (vararg) vzhledem k tomu, že nemají tyto funkce požadavkům na rozložení jiný zásobník. Ale pokud zadáte **/CLR: pure** – možnost kompilátoru, seznamy jsou podporované, protože sestavení může obsahovat jenom spravované funkce argumentů s proměnnou délkou. Další informace najdete v tématu [prázdná a ověřitelný kód (C++vyhodnocovací)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).|
 |64bitový modul CLR nepodporuje data deklarovaný s modifikátorem __ptr32|Ukazatel musí mít stejnou velikost jako nativní ukazatel na aktuální platformě. Další informace najdete v tématu [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md).|
 |32bitová verze CLR nepodporuje data deklarovaný s modifikátorem __ptr64|Ukazatel musí mít stejnou velikost jako nativní ukazatel na aktuální platformě. Další informace najdete v tématu [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md).|
 |Jeden nebo více vnitřních objektů není ve spravovaném kódu podporované.|Název vnitřní objekt není k dispozici v době, kdy je vygenerován zprávy. Vnitřní objekt, který způsobí, že tato zpráva obvykle však představuje nízké úrovně počítače instrukce.|

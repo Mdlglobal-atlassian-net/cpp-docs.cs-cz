@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Wp64 compiler option [C++]
 ms.assetid: 331ae5aa-e627-4d03-8f63-dd2c2d76dadd
 ms.openlocfilehash: 5a3cdaf85fa4dc05ece54fc630cb69fc93650e6b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316545"
 ---
 # <a name="wp64-detect-64-bit-portability-issues"></a>/Wp64 (Zjištěny problémy s 64bitovou přenositelností)
 
@@ -63,6 +63,6 @@ Pokud kompilujete aplikace pravidelně pomocí kompilátoru, který vytváří 6
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
 [Konfigurace projektů C++ pro 64bitové, x64 cíle](../configuring-programs-for-64-bit-visual-cpp.md)

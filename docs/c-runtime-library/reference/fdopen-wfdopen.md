@@ -34,11 +34,11 @@ helpviewer_keywords:
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
 ms.openlocfilehash: 0cde110bf1dd12c23a6b0b658809502743d9edd3
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334772"
 ---
 # <a name="fdopen-wfdopen"></a>_fdopen, _wfdopen
 
@@ -59,7 +59,7 @@ FILE *_wfdopen(
 
 ### <a name="parameters"></a>Parametry
 
-*FD*<br/>
+*fd*<br/>
 Popisovač souboru otevřený souboru.
 
 *Režim*<br/>
@@ -81,7 +81,7 @@ Předaná do popisovače souboru **_fdopen –** patří ve vráceném **souboru
 
 |Rutina Tchar.h|\_Kódování UNICODE a \_znakové sady MBCS nedefinovaná.|\_Znakové sady MBCS definovaný|\_Definované kódování UNICODE|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tfdopen –**|**_fdopen**|**_fdopen**|**_wfdopen**|
+|**_tfdopen**|**_fdopen**|**_fdopen**|**_wfdopen**|
 
 *Režimu* řetězec znaků určuje typ souboru požadovaného přístupu k souboru:
 
@@ -114,15 +114,15 @@ Platné znaky pro *režimu* řetězec použitý v **fopen** a **_fdopen –** od
 |Znaky v *režimu* řetězec|Ekvivalentní *oflag* hodnota **_Otevřít** a **_sopen**|
 |---------------------------------|---------------------------------------------------|
 |**a**|**\_O\_WRONLY &#124; \_O\_APPEND** (obvykle  **\_O\_WRONLY &#124; \_O\_CREAT &#124; \_O \_Připojit**)|
-|**a +**|**\_O\_RDWR &#124; \_O\_APPEND** (obvykle  **\_O\_RDWR &#124; \_O\_APPEND &#124; \_O\_ VYTVOŘENÍ** )|
+|**a+**|**\_O\_RDWR &#124; \_O\_APPEND** (obvykle  **\_O\_RDWR &#124; \_O\_APPEND &#124; \_O\_ VYTVOŘENÍ** )|
 |**r**|**\_O\_RDONLY**|
-|**r +**|**\_O\_RDWR**|
+|**r+**|**\_O\_RDWR**|
 |**w**|**\_O\_WRONLY** (obvykle  **\_O\_WRONLY &#124; \_O\_CREAT &#124; \_O\_TRUNC**)|
-|**w +**|**\_O\_RDWR** (obvykle  **\_O\_RDWR &#124; \_O\_CREAT &#124; \_O\_TRUNC**)|
+|**w+**|**\_O\_RDWR** (obvykle  **\_O\_RDWR &#124; \_O\_CREAT &#124; \_O\_TRUNC**)|
 |**b**|**\_O\_BINÁRNÍ**|
 |**t**|**\_O\_TEXT**|
 |**c**|Žádné|
-|**n**|Žádné|
+|**n**|Žádný|
 
 ## <a name="requirements"></a>Požadavky
 

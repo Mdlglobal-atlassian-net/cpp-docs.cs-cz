@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
 ms.openlocfilehash: d71f72c00cc384d5f4f69d8a58dbcfb7aa39332f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331750"
 ---
 # <a name="getdrive"></a>_getdrive
 
@@ -53,7 +53,7 @@ Vrátí aktuální jednotku (výchozí) (1 = A, 2 = B a tak dále). Není vráce
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_getdrive**|\<Direct.h >|
+|**_getdrive**|\<direct.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

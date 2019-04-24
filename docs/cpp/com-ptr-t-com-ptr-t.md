@@ -7,15 +7,15 @@ helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
 ms.openlocfilehash: 779fd1008f6763f4b5ca95938018a5129e89aa1f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154874"
 ---
 # <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Vytvoří **_com_ptr_t** objektu.
 
@@ -141,7 +141,7 @@ Nezpracovaný ukazatel rozhraní.
 *fAddRef*<br/>
 Při hodnotě TRUE se `AddRef` nazývá se zvýší počet odkazů zapouzdřený ukazatel rozhraní.
 
-*prohlášení CP*<br/>
+*cp*<br/>
 A **_com_ptr_t** objektu.
 
 *p*<br/>
@@ -150,7 +150,7 @@ Nezpracovaný ukazatel rozhraní, jehož typ se liší od typu inteligentního u
 *varSrc*<br/>
 A `_variant_t` objektu.
 
-*identifikátor CLSID*<br/>
+*clsid*<br/>
 `CLSID` Třídy coclass.
 
 *dwClsContext*<br/>

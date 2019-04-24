@@ -21,12 +21,12 @@ helpviewer_keywords:
 - fcvt function
 ms.assetid: 1f748ad0-e186-400e-af8e-80d4431523d7
 ms.openlocfilehash: 4e0c2111d7741652b514020cb3b7adb9a44f98e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155882"
 ---
 # <a name="fcvt"></a>fcvt
 
-Tato funkce POSIX je zastaralá. Použít splňující podmínky ISO C++ [_fcvt –](fcvt.md) nebo s rozšířeným zabezpečením [_fcvt_s –](fcvt-s.md) místo.
+Tato funkce POSIX je zastaralá. Použít bitovou kopii ISO C++ splňující podmínky [_fcvt –](fcvt.md) nebo s rozšířeným zabezpečením [_fcvt_s –](fcvt-s.md) místo.

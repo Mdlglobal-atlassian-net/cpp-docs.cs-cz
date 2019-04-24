@@ -7,15 +7,15 @@ helpviewer_keywords:
 - .DOSSEG directive
 ms.assetid: 175ad470-0a2b-4e2b-b078-65e224fec040
 ms.openlocfilehash: 28b3e351030ee83693c0fec5568aacf9b4b77c27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62204358"
 ---
 # <a name="dosseg"></a>.DOSSEG
 
-Seřadí segmentů podle úmluvy segmentu zástupného kódu MS-DOS: kód nejprve pak segmenty nejsou v DGROUP a potom segmenty v DGROUP.
+Objednávky segmentů podle úmluvy zástupného kódu MS-DOS segmentu: KÓD nejprve, pak DGROUP segmentů a segmentů v DGROUP.
 
 ## <a name="syntax"></a>Syntaxe
 

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - /Tp compiler option [C++]
 - -Tp compiler option [C++]
 ms.openlocfilehash: f7ee51c858c9f90440cf0c2b21799ef7473cf6da
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317442"
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>/Tc, /Tp, /TC, /TP (zadání typu zdrojového souboru)
 
@@ -69,5 +69,5 @@ Cl – příkazový řádek určuje, že TEST1.c, TEST2.cxx, TEST3.huh a TEST4.o
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

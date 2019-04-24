@@ -3,11 +3,11 @@ title: Direktivy assembleru ARM
 ms.date: 08/30/2018
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
 ms.openlocfilehash: 9124f893b3334e0893073332c9d5f5a1388373d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167670"
 ---
 # <a name="arm-assembler-directives"></a>Direktivy assembleru ARM
 
@@ -83,7 +83,7 @@ Ve většině případů assembler Microsoft ARM používá assembleru ARM, kter
 
    Pokud `TYPE` *t* není zadán, pak *t* Určuje, jak by měl pokusit vyřešit linker *sym*.  Tyto hodnoty pro *t* jsou možné:
 
-   |Hodnota|Popis|
+   |Value|Popis|
    |-|-|
    |1|Neprovádějte hledání knihovny *symbolů*|
    |2|Hledání knihovny pro *symbolů*|

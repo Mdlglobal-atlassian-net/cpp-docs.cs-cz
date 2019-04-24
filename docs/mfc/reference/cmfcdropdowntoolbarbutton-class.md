@@ -43,11 +43,11 @@ helpviewer_keywords:
 - CMFCDropDownToolbarButton [MFC], m_uiShowBarDelay
 ms.assetid: bc9d69e6-bd3e-4c15-9368-e80a504a0ba7
 ms.openlocfilehash: 5027b43e1519d9f8cc2880cc4de005d5137bbb67
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237699"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>Cmfcdropdowntoolbarbutton – třída
 
@@ -63,14 +63,14 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCDropDownToolbarButton::CMFCDropDownToolbarButton](#cmfcdropdowntoolbarbutton)|Vytvoří `CMFCDropDownToolbarButton` objektu.|
 |`CMFCDropDownToolbarButton::~CMFCDropDownToolbarButton`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCDropDownToolbarButton::CopyFrom](#copyfrom)|Zkopíruje aktuální tlačítko Vlastnosti jiné tlačítko panelu nástrojů. (Přepíše [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|
 |`CMFCDropDownToolbarButton::CreateObject`|Rozhraní používá k vytvoření dynamické instance tohoto typu třídy.|
@@ -94,7 +94,7 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
 
 ### <a name="data-members"></a>Datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay)|Určuje dobu, která uživatel musí podržte tlačítko myši předtím, než se zobrazí rozevírací seznam nástrojů.|
 

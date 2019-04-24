@@ -33,11 +33,11 @@ helpviewer_keywords:
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
 ms.openlocfilehash: f9a7554630bd3b46196358c01c21b99978c53e53
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156847"
 ---
 # <a name="mbccpys-mbccpysl"></a>_mbccpy_s, _mbccpy_s_l
 
@@ -79,7 +79,7 @@ errno_t _mbccpy_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*cíl*<br/>
+*dest*<br/>
 Cíl kopírování.
 
 *buffSizeInBytes*<br/>
@@ -123,7 +123,7 @@ V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šab
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tccpy_s –**|Mapuje se na makro nebo vloženou funkci.|**_mbccpy_s**|Mapuje se na makro nebo vloženou funkci.|
+|**_tccpy_s**|Mapuje se na makro nebo vloženou funkci.|**_mbccpy_s**|Mapuje se na makro nebo vloženou funkci.|
 
 ## <a name="requirements"></a>Požadavky
 

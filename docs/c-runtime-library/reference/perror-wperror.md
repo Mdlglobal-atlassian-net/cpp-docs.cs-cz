@@ -31,11 +31,11 @@ helpviewer_keywords:
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
 ms.openlocfilehash: c9026a96ecc74640eb2bcd7004d5d1e0fc287e38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156097"
 ---
 # <a name="perror-wperror"></a>perror, _wperror
 
@@ -65,7 +65,7 @@ void _wperror(
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tperror –**|**perror**|**perror**|**_wperror**|
+|**_tperror**|**perror**|**perror**|**_wperror**|
 
 *zpráva* vytiskne se nejprve, následovaný dvojtečkou a pak podle chybovou zprávu systému pro poslední volání knihovny, který vytvořil chybu a nakonec znakem nového řádku. Pokud *zpráva* je ukazatel s hodnotou null nebo ukazatel na řetězec null **perror** vytiskne pouze chybovou zprávu systému.
 
@@ -141,4 +141,4 @@ _strerror says open failed: No such file or directory
 [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)<br/>
 [clearerr](clearerr.md)<br/>
 [ferror](ferror.md)<br/>
-[strerror _strerror –, _wcserror –, \__wcserror –](strerror-strerror-wcserror-wcserror.md)<br/>
+[strerror, _strerror, _wcserror, \__wcserror](strerror-strerror-wcserror-wcserror.md)<br/>

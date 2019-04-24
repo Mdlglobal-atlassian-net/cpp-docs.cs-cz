@@ -31,11 +31,11 @@ helpviewer_keywords:
 - clog10l function
 ms.assetid: 2ddae00d-ef93-4441-add3-f4d58358401b
 ms.openlocfilehash: 195f4be80f0320e83cc9455a598185ce281bbf59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335448"
 ---
 # <a name="clog10-clog10f-clog10l"></a>clog10 clog10f, clog10l
 
@@ -73,13 +73,13 @@ Je to možné návratové hodnoty jsou:
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **clog10** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **clog10** vždy převezme a vrátí **_Dcomplex** hodnotu.
+Protože C++ umožňuje přetížení, můžete volat přetížení **clog10** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **clog10** vždy převezme a vrátí **_Dcomplex** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
-|**clog10**, **clog10f**, **clogl**|\<complex.h>|\<ccomplex >|
+|**clog10**, **clog10f**, **clogl**|\<complex.h>|\<ccomplex>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

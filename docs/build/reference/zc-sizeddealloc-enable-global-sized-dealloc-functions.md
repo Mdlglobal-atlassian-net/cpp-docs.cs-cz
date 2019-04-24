@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Zc compiler options (C++)
 ms.assetid: 3a73ace0-4d36-420a-b699-0ca6fc0dd134
 ms.openlocfilehash: dc381058c6a2ef84542be1d3cdd00c410aa51c2f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315479"
 ---
 # <a name="zcsizeddealloc-enable-global-sized-deallocation-functions"></a>/Zc:sizedDealloc (povolení funkcí Dealokace v globálním)
 
@@ -50,6 +50,6 @@ Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
 [/Zc (shoda)](zc-conformance.md)<br/>

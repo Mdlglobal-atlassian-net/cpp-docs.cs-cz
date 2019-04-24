@@ -3,17 +3,17 @@ title: Zarovnání (deklarace C++)
 ms.date: 11/04/2016
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
 ms.openlocfilehash: 0709ad414af3f167a64d9c89c342690015190287
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155391"
 ---
 # <a name="alignment-c-declarations"></a>Zarovnání (deklarace C++)
 
 Jednou z nízké úrovně funkcí jazyka C++ je schopnost určit přesné zarovnání objektů v paměti maximálně využijí architektury konkrétní hardware. Ve výchozím nastavení, kompilátor zarovná členy třídy a struktury na jejich velikost: bool a char jsou zarovnány na hranice jeden bajt, na dva bajty, krátký int na čtyři bajty, long long, double a long double na osm bajtů. Ve většině případů budete muset nikdy být obeznámeni s zarovnání, protože je již optimální výchozí zarovnání. V některých případech však můžete dosáhnout výrazné zlepšení výkonu, nebo úspory paměti tak, že zadáte vlastní zarovnání datových struktur. Visual Studio 2015 můžete použít klíčová slova __alignof specifických pro společnost Microsoft a declspec(alignas) k určení zarovnání větší než výchozí. Spuštění v sadě Visual Studio 2015 používejte C ++ 11 standard klíčových slov [alignof a alignas](../cpp/alignof-and-alignas-cpp.md) pro přenositelnost maximální kódu. Nová klíčová slova se chovají stejným způsobem pod pokličkou jako rozšíření specifické pro společnost Microsoft a v dokumentaci pro tato rozšíření platí také pro nová klíčová slova. Zobrazit [__alignof – operátor](../cpp/alignof-operator.md) a [zarovnat](../cpp/align-cpp.md) Další informace. Standard jazyka C++ neurčuje balení chování pro zarovnání na hranicích menší než výchozí nastavení kompilátoru pro cílovou platformu, takže budete stále muset použít Microsoft #pragma [pack](../preprocessor/pack.md) v takovém případě.
 
-Poskytuje standardní knihovny C++ [aligned_storage – třída](../standard-library/aligned-storage-class.md) pro přidělení paměti pro datové struktury s vlastní zarovnání a [aligned_union – třída](../standard-library/aligned-union-class.md) pro určení zarovnání pro sjednocení s netriviálními konstruktory a destruktory.
+C++ Poskytuje standardní knihovny [aligned_storage – třída](../standard-library/aligned-storage-class.md) pro přidělení paměti pro datové struktury s vlastní zarovnání a [aligned_union – třída](../standard-library/aligned-union-class.md) pro určení zarovnání Sjednocení s netriviálními konstruktory a destruktory.
 
 ## <a name="about-alignment"></a>Informace o zarovnání
 

@@ -55,11 +55,11 @@ helpviewer_keywords:
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
 ms.openlocfilehash: 14a4691e0c1f25a8f9e8b2b652c6e582f51c954a
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58775943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62235117"
 ---
 # <a name="cimage-class"></a>Cimage – třída
 
@@ -78,13 +78,13 @@ class CImage
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CImage::CImage](#cimage)|Konstruktor|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CImage::AlphaBlend](#alphablend)|Zobrazí rastrové obrázky, být transparentní nebo poloprůhledných pixelů.|
 |[CImage::Attach](#attach)|Připojí HBITMAP k `CImage` objektu. Je možné s rastrových obrázků bez DIB části nebo části DIB rastrových obrázků.|
@@ -128,7 +128,7 @@ class CImage
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CImage::operator HBITMAP](#operator_hbitmap)|Vrátí popisovač Windows připojené k `CImage` objektu.|
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ENTRY linker option
 ms.assetid: 26c62ba2-4f52-4882-a7bd-7046a0abf445
 ms.openlocfilehash: 0f3604ef75ce10928463c088e423615886555eda
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293209"
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY (symbol vstupního bodu)
 
@@ -66,5 +66,5 @@ Informace o tom, jak definovat vlastní `DllMain` vstupní bod, najdete v člán
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)

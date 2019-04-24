@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
 ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58781442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323814"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd – třída
 
@@ -93,13 +93,13 @@ class CSplitterWnd : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSplitterWnd::CSplitterWnd](#csplitterwnd)|Volání k vytvoření `CSplitterWnd` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSplitterWnd::ActivateNext](#activatenext)|Provede příkaz Další podokno nebo předchozí podokno.|
 |[CSplitterWnd::CanActivateNext](#canactivatenext)|Kontroluje, jestli je aktuálně možné příkaz Další podokno nebo předchozí podokno.|
@@ -133,7 +133,7 @@ class CSplitterWnd : public CWnd
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSplitterWnd::OnDraw](#ondraw)|Volá se rozhraním, chcete-li nakreslit okna s rozdělovačem.|
 |[CSplitterWnd::OnDrawSplitter](#ondrawsplitter)|Vykreslí obrázek rozděleného okna.|

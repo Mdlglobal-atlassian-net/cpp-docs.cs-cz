@@ -31,11 +31,11 @@ helpviewer_keywords:
 - directories [C++], current working
 ms.assetid: 266bf6f0-0417-497f-963d-2e0f306d9385
 ms.openlocfilehash: 700cfe732dc390ca59a976694403bb3d91af5980
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331854"
 ---
 # <a name="getdcwddbg-wgetdcwddbg"></a>_getdcwd_dbg, _wgetdcwd_dbg
 
@@ -64,13 +64,13 @@ wchar_t *_wgetdcwd_dbg(
 
 ### <a name="parameters"></a>Parametry
 
-*Jednotky*<br/>
+*drive*<br/>
 Název disku.
 
 *Vyrovnávací paměti*<br/>
 Umístění úložiště pro danou cestu.
 
-*MAXLEN*<br/>
+*maxlen*<br/>
 Maximální délka cesty ve znacích: **char** pro **_getdcwd_dbg –** a **wchar_t** pro **_wgetdcwd_dbg –**.
 
 *blockType*<br/>
@@ -79,7 +79,7 @@ Požadovaný typ bloku paměti: **_CLIENT_BLOCK** nebo **_NORMAL_BLOCK**.
 *Název souboru*<br/>
 Ukazatel na název zdrojového souboru, který požadovanou operaci přidělení nebo **NULL**.
 
-*Číslo řádku*<br/>
+*linenumber*<br/>
 Číslo řádku ve zdrojovém souboru, ve kterém se požadovaná operace rozdělení nebo **NULL**.
 
 ## <a name="return-value"></a>Návratová hodnota

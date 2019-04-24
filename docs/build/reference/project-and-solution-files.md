@@ -12,11 +12,11 @@ helpviewer_keywords:
 - file types [C++], project files
 ms.assetid: 5823b954-36cf-42d3-8fd5-25bab3ef63d9
 ms.openlocfilehash: b4b82aa3837558b2c325fb6cba6819422c0db7ff
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319574"
 ---
 # <a name="project-and-solution-files"></a>Soubory projektu a řešení
 
@@ -31,7 +31,7 @@ Následující soubory jsou vytvořeny při vytvoření projektu v sadě Visual 
 |*Projname*.sdf|*Projname*|Nezobrazuje se v Průzkumníku řešení|*Databáze procházení* souboru. Podporuje vyhledávání a navigace funkce, jako **Goto definice**, **najít všechny odkazy**, a **zobrazení tříd**. Je generována pomocí analýzy soubory hlaviček.|
 |*Název_projektu*. vcxproj.filters|*Projname*|Nezobrazuje se v Průzkumníku řešení|*Filtry* souboru. Určuje umístění souboru, který je přidán do řešení. Například soubor hlaviček je umístěn **hlavičkové soubory** uzlu.|
 |*Název_projektu*. vcxproj.user|*Projname*|Nezobrazuje se v Průzkumníku řešení|*Uživatele migrace* souboru. Po migraci oznámení projekt ze sady Visual Studio 2008, tento soubor obsahuje informace, které se převedl ze všech souborů.|
-|*Název_projektu*IDL|*Projname*|Zdroj|(Specifické pro projekt) Obsahuje popis jazyka IDL (Interface) zdrojový kód pro knihovnu typů ovládacího prvku. Tento soubor se používá ve Visual C++ generovat knihovnu typů. Vygenerovaný knihovna poskytuje rozhraní ovládacího prvku jiným klientům automatizace. Další informace najdete v tématu [soubor Interface Definition (IDL)](/windows/desktop/Rpc/the-interface-definition-language-idl-file) v sadě Windows SDK.|
+|*Název_projektu*IDL|*Projname*|Source|(Specifické pro projekt) Obsahuje popis jazyka IDL (Interface) zdrojový kód pro knihovnu typů ovládacího prvku. Tento soubor se používá ve Visual C++ generovat knihovnu typů. Vygenerovaný knihovna poskytuje rozhraní ovládacího prvku jiným klientům automatizace. Další informace najdete v tématu [soubor Interface Definition (IDL)](/windows/desktop/Rpc/the-interface-definition-language-idl-file) v sadě Windows SDK.|
 |Readme.txt|*Projname*|Project|*Čtěte* souboru. Je generována pomocí Průvodce aplikací a popisuje soubory v projektu.|
 
 ## <a name="see-also"></a>Viz také:

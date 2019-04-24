@@ -1,5 +1,5 @@
 ---
-title: '&lt;scoped_allocator –&gt;'
+title: '&lt;scoped_allocator&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <scoped_allocator>
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - scoped_allocator Header
 ms.assetid: d20175b8-96be-4896-8141-3faba45e0005
 ms.openlocfilehash: 101edcf31114252911eac90d07f5f44249f98fb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295757"
 ---
-# <a name="ltscopedallocatorgt"></a>&lt;scoped_allocator –&gt;
+# <a name="ltscopedallocatorgt"></a>&lt;scoped_allocator&gt;
 
 Definuje scoped_allocator – kontejner šablony třídy.
 

@@ -23,11 +23,11 @@ helpviewer_keywords:
 - fegetexceptflag function
 ms.assetid: 2d28f0ca-70c9-4cff-be8b-3d876eacde71
 ms.openlocfilehash: 43259001bd05bb7df9e2e1636c174018dcdaef3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334421"
 ---
 # <a name="fegetexceptflag"></a>fegetexceptflag
 
@@ -75,7 +75,7 @@ Pokud chcete používat tuto funkci, musíte vypnout s plovoucí desetinnou čá
 
 |Funkce|Záhlaví C|Hlaviček jazyka C++|
 |--------------|--------------|------------------|
-|**fegetexceptflag**|\<fenv.h >|\<cfenv>|
+|**fegetexceptflag**|\<fenv.h>|\<cfenv>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

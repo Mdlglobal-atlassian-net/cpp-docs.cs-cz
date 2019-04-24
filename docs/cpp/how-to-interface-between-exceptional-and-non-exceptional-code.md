@@ -5,11 +5,11 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
 ms.openlocfilehash: e8ff92f965f48faa7954ae0364ec7877428e519c
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183697"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Postupy: Rozhraní mezi kódem výjimek a ostatním kódem
 
@@ -237,4 +237,4 @@ Další informace o výrazech lambda naleznete v tématu [výrazy Lambda](../cpp
 ## <a name="see-also"></a>Viz také:
 
 [Ošetření chyb a výjimek (moderní verze jazyka C++)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Postupy: Návrh pro bezpečnost výjimek](../cpp/how-to-design-for-exception-safety.md)<br/>
+[Postupy: Návrh s ohledem na bezpečnost výjimek](../cpp/how-to-design-for-exception-safety.md)<br/>

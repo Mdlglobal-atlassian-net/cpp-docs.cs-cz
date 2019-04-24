@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru C2088
+title: Compiler Error C2088
 ms.date: 11/04/2016
 f1_keywords:
 - C2088
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C2088
 ms.assetid: b93f7094-185b-423d-8bb9-507cd757dbf5
 ms.openlocfilehash: 6d53f2896fc3b964a4d2652b3bfd0dcebb4a7226
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62175170"
 ---
-# <a name="compiler-error-c2088"></a>Chyba kompilátoru C2088
+# <a name="compiler-error-c2088"></a>Compiler Error C2088
 
 'operator': neplatné pro "klíč třídy.
 

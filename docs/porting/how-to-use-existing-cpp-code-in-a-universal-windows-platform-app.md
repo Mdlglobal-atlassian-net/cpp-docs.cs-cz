@@ -3,11 +3,11 @@ title: 'Postupy: Použití existujícího kódu C++ v aplikaci Windows Universal
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
 ms.openlocfilehash: 3aeef205effe072a25fc0b3dabb9145245461d45
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59424193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62205189"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Postupy: Použití existujícího kódu C++ v aplikaci Windows Universal Platform
 

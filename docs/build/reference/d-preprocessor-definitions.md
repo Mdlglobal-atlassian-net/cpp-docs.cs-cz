@@ -14,11 +14,11 @@ helpviewer_keywords:
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
 ms.openlocfilehash: 18bbdb980c63b3c04b432602afb2402c5e2c42e7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293963"
 ---
 # <a name="d-preprocessor-definitions"></a>/D (definice preprocesoru)
 
@@ -97,7 +97,7 @@ TEST defined 1
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
 [/U, /u (nedefinované symboly)](u-u-undefine-symbols.md)<br/>
 [#undef – direktiva (C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br/>

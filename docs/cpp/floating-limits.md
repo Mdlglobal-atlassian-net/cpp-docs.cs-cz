@@ -10,21 +10,21 @@ helpviewer_keywords:
 - floating limits
 ms.assetid: fc718652-1f4c-4ed8-af60-0e769637459c
 ms.openlocfilehash: cead21c9a66dbc54b46b1c9f8083022a59e80295
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154398"
 ---
 # <a name="floating-limits"></a>Plovoucí omezení
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Následující tabulka uvádí omezení hodnot konstant s plovoucí desetinnou čárkou. Tato omezení jsou také definovány v souboru standardní hlavičku \<float.h >.
 
 ## <a name="limits-on-floating-point-constants"></a>Omezení konstant s plovoucí desetinnou čárkou
 
-|Konstanta|Význam|Hodnota|
+|Konstanta|Význam|Value|
 |--------------|-------------|-----------|
 |`FLT_DIG`<br/>`DBL_DIG`<br/>`LDBL_DIG`|Počet číslic, q, například, že číslo s plovoucí desetinnou čárkou s q desítkovými číslicemi lze zaokrouhlit na reprezentaci s plovoucí desetinnou čárkou a zpět bez ztráty přesnosti.|6<br/>15<br/>15|
 |`FLT_EPSILON`<br/>`DBL_EPSILON`<br/>`LDBL_EPSILON`|Nejmenší kladné číslo x, že x + 1,0 není roven 1,0.|1.192092896e-07F<br/>2.2204460492503131e-016<br/>2.2204460492503131e-016|

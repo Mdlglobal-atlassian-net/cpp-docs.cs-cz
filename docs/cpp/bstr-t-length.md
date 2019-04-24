@@ -8,15 +8,15 @@ helpviewer_keywords:
 - BSTR object [C++], length
 ms.assetid: 4f2e2c76-8894-4ef9-833f-4c6e796d0654
 ms.openlocfilehash: c4f02192f89fa64b0816a6cde83cab30e8056a03
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62284649"
 ---
 # <a name="bstrtlength"></a>_bstr_t::length
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Vrátí počet znaků v proměnné `_bstr_t`, bez ukončujícího znaku null, zapouzdřené proměnné `BSTR`.
 

@@ -44,11 +44,11 @@ helpviewer_keywords:
 - _towlower_l function
 ms.assetid: 86e0fc02-94ae-4472-9631-bf8e96f67b92
 ms.openlocfilehash: f7d017235eddb19b08353dceb332a2721e7434aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155511"
 ---
 # <a name="tolower-tolower-towlower-tolowerl-towlowerl"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
 
@@ -98,7 +98,7 @@ Aby **_tolower –** očekávané výsledky, [__isascii –](isascii-isascii-isw
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_totlower –**|**ToLower**|**_mbctolower –**|**towlower –**|
+|**_totlower**|**tolower**|**_mbctolower**|**towlower**|
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_l**|
 
 > [!NOTE]
@@ -108,9 +108,9 @@ Aby **_tolower –** očekávané výsledky, [__isascii –](isascii-isascii-isw
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**ToLower**|\<ctype.h >|
-|**_tolower –**|\<ctype.h >|
-|**towlower –**|\<ctype.h > nebo \<wchar.h >|
+|**tolower**|\<ctype.h>|
+|**_tolower**|\<ctype.h>|
+|**towlower**|\<ctype.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
