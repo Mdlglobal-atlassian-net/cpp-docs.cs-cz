@@ -28,11 +28,11 @@ helpviewer_keywords:
 - _execle function
 ms.assetid: 75efa9c5-96b7-4e23-acab-06258901f63a
 ms.openlocfilehash: dbd84dd8d8e150a063dad4dc89a572c317bce544
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288159"
 ---
 # <a name="execle-wexecle"></a>_execle, _wexecle
 
@@ -65,7 +65,7 @@ intptr_t _wexecle(
 *cmdname*<br/>
 Cesta k souboru pro spuštění.
 
-*arg0*,... *argn*<br/>
+*arg0*, ... *argn*<br/>
 Seznam ukazatelů na parametry.
 
 *envp*<br/>
@@ -97,7 +97,7 @@ Každá z těchto funkcí načte a spustí nový proces a předá každý argume
 
 |Funkce|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |--------------|---------------------|---------------------|
-|**_execle**|\<Process.h >|\<errno.h>|
+|**_execle**|\<process.h>|\<errno.h>|
 |**_wexecle**|\<Process.h > nebo \<wchar.h >|\<errno.h>|
 
 Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

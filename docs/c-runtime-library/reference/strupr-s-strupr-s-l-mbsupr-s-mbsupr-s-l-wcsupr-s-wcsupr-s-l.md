@@ -61,11 +61,11 @@ helpviewer_keywords:
 - wcsupr_s function
 ms.assetid: 82d3a273-9f6f-4a26-9560-919d891e4581
 ms.openlocfilehash: fb0c7027ff53408ba981aa85f97c49dba054e21d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62304628"
 ---
 # <a name="struprs-struprsl-mbsuprs-mbsuprsl-wcsuprs-wcsuprsl"></a>_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
 
@@ -164,15 +164,15 @@ Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť hodnotou 0xF
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsupr_s –**|**_strupr_s**|**_mbsupr_s –**|**_wcsupr_s**|
-|**_tcsupr_s_l –**|**_strupr_s_l**|**_mbsupr_s_l**|**_wcsupr_s_l**|
+|**_tcsupr_s**|**_strupr_s**|**_mbsupr_s**|**_wcsupr_s**|
+|**_tcsupr_s_l**|**_strupr_s_l**|**_mbsupr_s_l**|**_wcsupr_s_l**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_strupr_s –**, **_strupr_s_l –**|\<String.h >|
-|**_wcsupr_s –**, **_wcsupr_s_l –**, **_mbsupr_s –**, **_mbsupr_s_l –**|\<String.h > nebo \<wchar.h >|
+|**_strupr_s**, **_strupr_s_l**|\<string.h>|
+|**_wcsupr_s**, **_wcsupr_s_l**, **_mbsupr_s**, **_mbsupr_s_l**|\<String.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

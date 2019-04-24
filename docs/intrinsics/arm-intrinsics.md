@@ -1932,11 +1932,11 @@ helpviewer_keywords:
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
 ms.openlocfilehash: 47fd2f449568494bafde993e035d3ec37c44f6fe
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59027624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62264293"
 ---
 # <a name="arm-intrinsics"></a>ARM – vnitřní prvky
 
@@ -2398,14 +2398,14 @@ Následující tabulka shrnuje podporu ARM – vnitřní prvky bez bittest propo
 
 ||8|16|32|64|P|
 |-|-------|--------|--------|--------|-------|
-|Přidejte|Žádné|Žádný|Do bloku|Do bloku|Žádný|
+|Přidejte|Žádné|Žádné|Do bloku|Do bloku|Žádné|
 |A|Do bloku|Do bloku|Do bloku|Do bloku|Žádný|
 |CompareExchange|Do bloku|Do bloku|Do bloku|Do bloku|Do bloku|
 |Snížení|Žádné|Do bloku|Do bloku|Do bloku|Žádný|
 |Exchange|Částečné|Částečné|Částečné|Částečné|Částečné|
 |ExchangeAdd|Do bloku|Do bloku|Do bloku|Do bloku|Žádné|
-|Přírůstek|Žádné|Do bloku|Do bloku|Do bloku|Žádné|
-|Nebo|Do bloku|Do bloku|Do bloku|Do bloku|Žádný|
+|Přírůstek|Žádný|Do bloku|Do bloku|Do bloku|Žádné|
+|Nebo|Do bloku|Do bloku|Do bloku|Do bloku|Žádné|
 |XOR|Do bloku|Do bloku|Do bloku|Do bloku|Žádné|
 
 Klíč:

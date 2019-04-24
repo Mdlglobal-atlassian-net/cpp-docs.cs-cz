@@ -10,11 +10,11 @@ f1_keywords:
 - VC.Project.VCManifestTool.AssemblyIdentity
 ms.assetid: b99368a5-6819-482c-a06e-f2409290cfd1
 ms.openlocfilehash: 9acdb7f5c934a8cabdd1803074778ac9f01f4960
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271027"
 ---
 # <a name="general-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Obecné, Nástroj Manifest, vlastnosti konfigurace, &lt;Projectname&gt; dialogové okno stránky vlastností projektu
 
@@ -44,4 +44,4 @@ Pro přístup k této dialogové okno stránky vlastností, otevřete stránky v
 
 [ClickOnce – manifest aplikace ](/visualstudio/deployment/clickonce-application-manifest)<br>
 [Stránky vlastností nástroje manifest](manifest-tool-property-pages.md)<br>
-[Nastavení kompilátoru jazyka C++ a vlastnosti v sadě Visual Studio sestavení](../working-with-project-properties.md)
+[Nastavení vlastností kompilátoru a sestavení C++ v sadě Visual Studio](../working-with-project-properties.md)

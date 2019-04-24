@@ -36,11 +36,11 @@ helpviewer_keywords:
 - _wcsxfrm_l function
 ms.assetid: 6ba8e1f6-4484-49aa-83b8-bc2373187d9e
 ms.openlocfilehash: 4e4f5bb6639cbeee0f004f94f09177c08394d43e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258712"
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 
@@ -105,7 +105,7 @@ Tyto funkce ověřují své parametry. Pokud *strSource* je ukazatel s hodnotou 
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsxfrm –**|**strxfrm**|**strxfrm**|**wcsxfrm**|
+|**_tcsxfrm**|**strxfrm**|**strxfrm**|**wcsxfrm**|
 |**_tcsxfrm_l**|**_strxfrm_l**|**_strxfrm_l**|**_wcsxfrm_l**|
 
 Pořadí znaků ve znakové sadě (znaková sada ASCII) v národním prostředí "C", je stejné jako lexikografické pořadí znaků. V ostatních národních prostředí, ale pořadí znaků ve znakové sadě může lišit od pořadí lexikografických znaků. Například v některých evropských národní prostředí, znak "a" (hodnota 0x61) předchází znak "&\#x00E4;. (hodnota 0xE4) do množiny znaků, ale znak "ä" předchází znak "a" lexicographically.
@@ -129,9 +129,9 @@ return( strlen( _string1 ) );
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strxfrm**|\<String.h >|
+|**strxfrm**|\<string.h>|
 |**wcsxfrm**|\<String.h > nebo \<wchar.h >|
-|**_strxfrm_l**|\<String.h >|
+|**_strxfrm_l**|\<string.h>|
 |**_wcsxfrm_l**|\<String.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

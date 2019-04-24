@@ -26,11 +26,11 @@ helpviewer_keywords:
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
 ms.openlocfilehash: 0123c618eb5ba614bd8e5b5b3f1f4b0aff539c4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288245"
 ---
 # <a name="ecvts"></a>_ecvt_s
 
@@ -85,12 +85,12 @@ V případě neplatného parametru, jak je uvedeno v následující tabulce, tat
 
 ### <a name="error-conditions"></a>Chybové podmínky
 
-|*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Přihlásit|Návratová hodnota|Hodnota v *vyrovnávací paměti*|
+|*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|Návratová hodnota|Hodnota v *vyrovnávací paměti*|
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|
-|**HODNOTU NULL**|Všechny|Všechny|Všechny|Všechny|Všechny|**EINVAL**|Nedojde ke změně.|
+|**NULL**|Všechny|Všechny|Všechny|Všechny|Všechny|**EINVAL**|Nedojde ke změně.|
 |Není **NULL** (odkazuje na platný paměti)|<=0|Všechny|Všechny|Všechny|Všechny|**EINVAL**|Nedojde ke změně.|
-|Všechny|Všechny|Všechny|Všechny|**HODNOTU NULL**|Všechny|**EINVAL**|Nedojde ke změně.|
-|Všechny|Všechny|Všechny|Všechny|Všechny|**HODNOTU NULL**|**EINVAL**|Nedojde ke změně.|
+|Všechny|Všechny|Všechny|Všechny|**NULL**|Všechny|**EINVAL**|Nedojde ke změně.|
+|Všechny|Všechny|Všechny|Všechny|Všechny|**NULL**|**EINVAL**|Nedojde ke změně.|
 
 ## <a name="security-issues"></a>Problémy se zabezpečením
 

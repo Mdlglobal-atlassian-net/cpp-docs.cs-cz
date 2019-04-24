@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Force Fast Transcendentals
 ms.assetid: 4de24bd1-38e6-49d4-9a05-04c9937d24ac
 ms.openlocfilehash: 383a915721d627367ca2ca035957df947996bbe2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319314"
 ---
 # <a name="qfasttranscendentals-force-fast-transcendentals"></a>/Qfast_transcendentals (Vynutit rychlé transcendentní objekty)
 
@@ -47,5 +47,5 @@ Tato možnost není kompatibilní s **/FP: strict**. Zobrazit [/fp (určení cho
 ## <a name="see-also"></a>Viz také:
 
 [/Q – možnosti (operace nízké úrovně)](q-options-low-level-operations.md)<br/>
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

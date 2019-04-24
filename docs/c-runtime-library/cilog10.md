@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CIlog10 intrinsic
 ms.assetid: 05d7fcaa-3cff-4cc5-8d44-015e7cacba24
 ms.openlocfilehash: 771ed103c8ab0fe29061086923189cc90eb047d9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62290180"
 ---
 # <a name="cilog10"></a>_CIlog10
 

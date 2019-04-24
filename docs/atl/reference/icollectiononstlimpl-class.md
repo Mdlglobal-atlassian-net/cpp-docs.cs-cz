@@ -12,11 +12,11 @@ helpviewer_keywords:
 - ICollectionOnSTLImpl class
 ms.assetid: 683c88b0-0d97-4779-a762-e493334ba7f9
 ms.openlocfilehash: 6842f1c75ebbc9c3dfdd93f30d52fd2cb2936c03
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58779219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62275784"
 ---
 # <a name="icollectiononstlimpl-class"></a>ICollectionOnSTLImpl Class
 
@@ -50,7 +50,7 @@ A [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)– třída kompati
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[ICollectionOnSTLImpl::get__NewEnum](#newenum)|Vrátí objekt enumerátoru pro kolekci.|
 |[ICollectionOnSTLImpl::getcount](#get_count)|Vrátí počet prvků v kolekci.|
@@ -58,7 +58,7 @@ A [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)– třída kompati
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[ICollectionOnSTLImpl::m_coll](#m_coll)|Kolekce.|
 

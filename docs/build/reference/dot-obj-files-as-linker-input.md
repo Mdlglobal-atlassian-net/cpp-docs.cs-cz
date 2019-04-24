@@ -10,11 +10,11 @@ helpviewer_keywords:
 - OBJ files as linker input
 - .obj files as linker input
 ms.openlocfilehash: c55c3181c2ddfabddce882a473e56d952a7e5d81
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293274"
 ---
 # <a name="obj-files-as-linker-input"></a>Soubory .Obj jako vstup linkeru
 
@@ -33,7 +33,7 @@ Další informace o kompilátoru a linkeru, naleznete v tématu [Podpora kódov�
 ## <a name="see-also"></a>Viz také:
 
 [Vstupní soubory LINK](link-input-files.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)<br/>
 [Podpora pro Unicode](../../text/support-for-unicode.md)<br/>
 [Podpora kódování Unicode v kompilátoru a linkeru](unicode-support-in-the-compiler-and-linker.md)<br/>
 [Unicode standard](http://www.unicode.org/)<br/>

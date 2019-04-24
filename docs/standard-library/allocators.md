@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
 ms.openlocfilehash: 1f11d1b007a728b32d27afd733df271f361864e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252724"
 ---
 # <a name="allocators"></a>Alokátory
 
@@ -45,7 +45,7 @@ Minimálních alokátorů vyžaduje mnohem méně často používaný text a umo
 C ++ 11 výchozí `construct()` člena, který vám poskytneme vám perfektní přesměrování a umožňuje sémantiky přesunutí; je v mnoha případech mnohem efektivnější než starší verze.
 
 > [!WARNING]
-> V době kompilace standardní knihovny C++ používá třídu allocator_traits zjistit členy, které jste explicitně zadali a poskytuje výchozí implementaci členů, které nejsou k dispozici. Nejsou v konfliktu s Tento mechanismus poskytnutím specializací allocator_traits – pro vašeho allocator!
+> V době kompilace C++ standardní knihovny používá třídu allocator_traits zjistit členy, které jste explicitně zadali a poskytuje výchozí implementaci členů, které nejsou k dispozici. Nejsou v konfliktu s Tento mechanismus poskytnutím specializací allocator_traits – pro vašeho allocator!
 
 Následující příklad ukazuje minimální implementaci alokátoru, který používá `malloc` a `free`. Všimněte si použití nový typ výjimky `std::bad_array_new_length` která je vyvolána, pokud je velikost pole menší než nula nebo větší než maximální povolená velikost.
 

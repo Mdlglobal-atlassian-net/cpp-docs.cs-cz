@@ -17,11 +17,11 @@ helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
 ms.openlocfilehash: 79b1cabc0304e905012db5f6dd73ed71073c0c1e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278420"
 ---
 # <a name="compiler-options-macros"></a>Makra možností kompilátoru
 
@@ -115,7 +115,7 @@ Pokud chcete vynutit použití syntaxe vyhovující standardu ANSI C++ pro ukaza
 
 Knihovny ATL a MFC se změnily tak, aby odpovídaly kompilátor Visual C++ vylepšené standard C++ dodržování předpisů. Podle standardu ANSI C++ by měl být syntaxe ukazatel na členskou funkci třídy `&CMyClass::MyFunc`.
 
-Když [_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning) není definována (výchozí případ), ATL/MFC zakáže C4867 chyby v rámci služby maps – makro (zejména zprávy maps) tak, aby kód, který byl vytvořen ve starších verzích pokračovat v sestavení jako předtím. Pokud definujete **_ATL_ENABLE_PTM_WARNING**, váš kód by měl být kompatibilní s standard jazyka C++.
+Když [_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning) není definována (výchozí případ), ATL/MFC zakáže C4867 chyby v rámci služby maps – makro (zejména zprávy maps) tak, aby kód, který byl vytvořen ve starších verzích pokračovat v sestavení jako předtím. Pokud definujete **_ATL_ENABLE_PTM_WARNING**, váš kód by měl být C++ standard kompatibilní.
 
 Ale nestandardní formuláře je zastaralá, tak budete potřebovat přesunout existující kód C++ standardní kompatibilní syntaxi. Například následující:
 

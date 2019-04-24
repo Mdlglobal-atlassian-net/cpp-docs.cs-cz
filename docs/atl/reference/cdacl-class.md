@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
 ms.openlocfilehash: 1beac6106b825c775012b85ccd01226c3dfab795
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58770016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258959"
 ---
 # <a name="cdacl-class"></a>Cdacl – třída
 
@@ -37,14 +37,14 @@ class CDacl : public CAcl
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDacl::CDacl](#cdacl)|Konstruktor|
 |[CDacl::~CDacl](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDacl::AddAllowedAce](#addallowedace)|Přidá povolený ACE (položky řízení přístupu) `CDacl` objektu.|
 |[CDacl::AddDeniedAce](#adddeniedace)|Přidá ACE odepření `CDacl` objektu.|
@@ -54,7 +54,7 @@ class CDacl : public CAcl
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDacl::operator =](#operator_eq)|Operátor přiřazení.|
 

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - -ASSEMBLYMODULE linker option
 ms.assetid: 67357da8-e4b6-49fd-932c-329a5777f143
 ms.openlocfilehash: 728e8a84ff8d1afac99f99dbb975c7fd9360bcc1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273012"
 ---
 # <a name="assemblymodule-add-a-msil-module-to-the-assembly"></a>/ASSEMBLYMODULE (přidání modulu MSIL do sestavení)
 
@@ -77,5 +77,5 @@ MSVC linker přijímá soubory .netmodule jako vstup a výstup souboru vytvořen
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)

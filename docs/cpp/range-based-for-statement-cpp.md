@@ -3,11 +3,11 @@ title: Příkaz For založený na rozsahu (C++)
 ms.date: 11/04/2016
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
 ms.openlocfilehash: 1cbdb4e1636f471c26f6742b9e8686a332ed845f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62244132"
 ---
 # <a name="range-based-for-statement-c"></a>Příkaz For založený na rozsahu (C++)
 
@@ -24,7 +24,7 @@ for ( for-range-declaration : expression )
 
 Použít rozsahový **pro** příkaz k vytvoření smyček, které jsou vykonány skrze "rozsah", který je definován jako cokoli, co lze iterovat – například `std::vector`, nebo všechny ostatní standardní knihovny C++ pořadí rozsahem je definován `begin()` a `end()`. Název, který je deklarován v `for-range-declaration` je lokální pro **pro** příkazu a nemůže být předeklarováno ve `expression` nebo `statement`. Všimněte si, že [automaticky](../cpp/auto-cpp.md) je preferováno klíčové slovo `for-range-declaration` část příkazu.
 
-**Novinka v sadě Visual Studio 2017:** Range-based pro smyčky už nevyžadují, aby begin() a end() vrací objekty stejného typu. To umožňuje end() vrátí objekt sentinel, například používané rozsahy, jak je definováno v návrhu rozsahy V3. Další informace najdete v tématu [zobecňuje Range-Based pro smyčky](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) a [knihovny rozsah v3 na Githubu](https://github.com/ericniebler/range-v3).
+**Nová funkce v sadě Visual Studio 2017:**  Založený na rozsahu pro smyčky už nevyžadují, aby begin() a end() vrací objekty stejného typu. To umožňuje end() vrátí objekt sentinel, například používané rozsahy, jak je definováno v návrhu rozsahy V3. Další informace najdete v tématu [zobecňuje Range-Based pro smyčky](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) a [knihovny rozsah v3 na Githubu](https://github.com/ericniebler/range-v3).
 
 Tento kód ukazuje, jak použít rozsahový **pro** smyčky pro iteraci polem a vektorem:
 

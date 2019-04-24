@@ -36,11 +36,11 @@ helpviewer_keywords:
 - _ftime32_s function
 ms.assetid: d03080d9-a520-45be-aa65-504bdb197e8b
 ms.openlocfilehash: 696b461cdb6b8d58bb668b996a99c5d0bb774d6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287678"
 ---
 # <a name="ftimes-ftime32s-ftime64s"></a>_ftime_s, _ftime32_s, _ftime64_s
 
@@ -72,7 +72,7 @@ Nula v případě úspěchu, při selhání kód chyby. Pokud *timeptr* je **NUL
 |**dstflag**|Nenulové, pokud letní čas je aktuálně používána pro místní časové pásmo. (Viz [_tzset –](tzset.md) pro vysvětlení, jak se určují letní čas.)|
 |**millitm**|Zlomek sekundy v milisekundách.|
 |**čas**|Čas v řádu sekund od půlnoci (00: 00:00), 1. ledna 1970, koordinovaného univerzálního času (UTC).|
-|**časové pásmo**|Rozdíl v řádech minut, přesun westward, mezi místním časem a UTC. Hodnota **časové pásmo** nastavit hodnotu globální proměnné **_timezone** (viz **_tzset –**).|
+|**timezone**|Rozdíl v řádech minut, přesun westward, mezi místním časem a UTC. Hodnota **časové pásmo** nastavit hodnotu globální proměnné **_timezone** (viz **_tzset –**).|
 
 **_Ftime64_s** funkci, která používá **__timeb64 –** struktury, umožňuje vytvoření souboru data vyjadřují až do 23:59:59, 31 prosince 3000 UTC, zatímco **_ftime32_s** pouze představuje data do 23:59:59 18. ledna 2038 UTC. Půlnoc 1. ledna 1970 je dolní mez rozsahu kalendářních dat pro všechny tyto funkce.
 

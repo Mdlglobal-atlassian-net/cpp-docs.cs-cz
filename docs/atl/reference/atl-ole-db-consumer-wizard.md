@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ATL OLE DB Consumer Wizard
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
 ms.openlocfilehash: 59ad635f62ab7a20a31de7255ec4522136e102ec
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261257"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Průvodce příjemcem ATL OLE DB
 
@@ -36,13 +36,13 @@ Tento průvodce nastaví třída příjemce technologie OLE DB pomocí datové v
 
    - **Připojení** kartu
 
-      Obsah na této kartě záviset na poskytovateli, kterou jste vybrali. I když existuje mnoho typů poskytovatelů, tato část popisuje připojení pro dva nejběžnější: data SQL a ODBC. Ostatní jsou podobné varianty pole popsaná zde.
+      Obsah na této kartě záviset na poskytovateli, kterou jste vybrali. I když existuje mnoho typů poskytovatelů, tato část popisuje připojení pro dva nejběžnější: Data SQL a ODBC. Ostatní jsou podobné varianty pole popsaná zde.
 
       Pro SQL data:
 
-      1. **Vyberte nebo zadejte název serveru:** klikněte na nabídku rozevíracího seznamu zobrazíte všechny registrované datové servery v síti a vyberte jednu.
+      1. **Vyberte nebo zadejte název serveru:** Klikněte na nabídku rozevíracího seznamu zobrazíte všechny registrované datové servery v síti a vyberte jednu.
 
-      1. **Zadejte informace pro přihlášení k serveru:** zadejte uživatelské jméno a heslo pro přihlášení k serveru data.
+      1. **Zadejte informace pro přihlášení k serveru:** Zadejte uživatelské jméno a heslo pro přihlášení k serveru data.
 
          > [!NOTE]
          > Dojde k problému zabezpečení s funkcí "Povolit uložení hesla" dialogové okno Vlastnosti datového připojení. V "Zadejte informace pro přihlášení k serveru", existují dva přepínače:
@@ -53,26 +53,26 @@ Tento průvodce nastaví třída příjemce technologie OLE DB pomocí datové v
          > Pokud vyberete **použít konkrétní uživatelské jméno a heslo**, mají možnost uložení hesla (pomocí zaškrtávací políčko "Povolit uložení hesla"), ale tato možnost není zabezpečený. Doporučuje se, že vyberete **integrované zabezpečení Windows NT použití**; tato možnost je bezpečná, protože je heslo zašifruje.
          > Můžou nastat situace, ve kterých chcete možnost "Povolit uložení hesla." Například pokud uvolnění knihovny s privátní databázového řešení vám by měl není přímý přístup k databázi, ale místo toho použít k ověření uživatele (pomocí libovolné zvolíte schéma ověřování) a pak omezit druh dat aplikace střední vrstvy k dispozici pro uživatele.
 
-      1. **Vyberte databázi na serveru:** klikněte na nabídku rozevíracího seznamu zobrazíte všechny registrované databází na serveru pro data a vyberte jednu.
+      1. **Vyberte databázi na serveru:** Klikněte na nabídku rozevíracího seznamu zobrazíte všechny registrované databází na serveru pro data a vyberte jednu.
 
          \- nebo –
 
-         **Připojit soubor databáze jako název databáze:** zadejte soubor, který má být použit jako databáze; zadejte explicitní název cesty.
+         **Připojte soubor databáze jako název databáze:** Zadejte soubor, který má být použit jako databázi. Zadejte explicitní název cesty.
 
       U dat rozhraní ODBC:
 
-      1. **Zdroj dat:** můžete použít název zdroje dat nebo připojovací řetězec.
+      1. **Zadejte zdroj dat:** Můžete použít název zdroje dat nebo připojovací řetězec.
 
          **Použijte název zdroje dat:** Tento rozevírací seznam zobrazuje zdroje dat registrované ve vašem počítači. Můžete nastavit zdroje dat předem pomocí Správce zdrojů dat ODBC
 
          \- nebo –
 
-         **Použijte připojovací řetězec:** buď zadejte připojovací řetězec už získali, nebo klikněte na tlačítko **sestavení** tlačítko; **vybrat zdroj dat** zobrazí se dialogové okno. Vyberte zdroj dat souboru nebo počítače a klikněte na tlačítko **OK**.
+         **Použijte připojovací řetězec:** Buď zadejte připojovací řetězec už získali, nebo klikněte na tlačítko **sestavení** tlačítko; **vybrat zdroj dat** zobrazí se dialogové okno. Vyberte zdroj dat souboru nebo počítače a klikněte na tlačítko **OK**.
 
          > [!NOTE]
          > Připojovací řetězec můžete získat zobrazením vlastností existujícího připojení v **Průzkumníka serveru**, nebo můžete vytvořit připojení na něj poklikejte **přidat připojení** v **serveru Průzkumník**.
 
-      1. **Zadejte informace pro přihlášení k serveru:** zadejte uživatelské jméno a heslo pro přihlášení k serveru data.
+      1. **Zadejte informace pro přihlášení k serveru:** Zadejte uživatelské jméno a heslo pro přihlášení k serveru data.
 
       1. Zadejte počáteční katalog.
 
@@ -80,9 +80,9 @@ Tento průvodce nastaví třída příjemce technologie OLE DB pomocí datové v
 
    - **Pokročilé** kartu
 
-      **Nastavení sítě:** zadejte **úroveň zosobnění** (úroveň zosobnění, které může používat při zosobňování klienta serveru; odpovídá úrovní zosobnění RPC) a  **Úroveň ochrany** (stupeň ochrany dat odeslány mezi klientem a serverem; odpovídá přímo na úrovních ochrany RPC).
+      **Nastavení sítě:** Zadejte **úroveň zosobnění** (úroveň zosobnění, které může používat při zosobňování klienta serveru; odpovídá úrovní zosobnění RPC) a **úroveň ochrany** () úroveň ochrany data odesílaná mezi klientem a serverem; odpovídá přímo na úrovních ochrany RPC).
 
-      **Ostatní:** v **časový limit připojení**, zadejte dobu v sekundách nečinnosti před dojde k vypršení časového limitu. V **přístupová oprávnění**, zadejte oprávnění k přístupu na datové připojení.
+      **Další:** V **časový limit připojení**, zadejte dobu v sekundách nečinnosti před dojde k vypršení časového limitu. V **přístupová oprávnění**, zadejte oprávnění k přístupu na datové připojení.
 
       Další informace o vlastnostech pokročilé inicializace naleznete v dokumentaci dodávané s každou zprostředkovatele OLE DB.
 
@@ -90,13 +90,13 @@ Tento průvodce nastaví třída příjemce technologie OLE DB pomocí datové v
 
       Tato karta zobrazuje souhrn inicializační vlastnosti pro zdroj dat a připojení, které jste zadali. Můžete upravit tyto hodnoty.
 
-      Klikněte na tlačítko **OK** na dokončení. **Vyberte databázový objekt** zobrazí se dialogové okno. V tomto dialogovém okně vyberte tabulky, zobrazení nebo uložené procedury, která bude používat příjemce.
+      Kliknutím na **OK** vytváření dokončete. **Vyberte databázový objekt** zobrazí se dialogové okno. V tomto dialogovém okně vyberte tabulky, zobrazení nebo uložené procedury, která bude používat příjemce.
 
 - **Třída**
 
    Po výběru zdroje dat, toto pole se vyplní výchozí název třídy na základě tabulky nebo uloženou proceduru, která jste vybrali (viz **vyberte zdroj dat** níže). Můžete upravit název třídy.
 
-- **soubor .h**
+- **.h file**
 
    Po výběru zdroje dat, toto pole se vyplní výchozí název třídy hlavičky na základě tabulky nebo uloženou proceduru, která jste vybrali (viz **vyberte zdroj dat** níže). Můžete upravit název souboru hlaviček nebo vybrat existující hlavičkový soubor.
 
@@ -184,5 +184,5 @@ Tento průvodce nastaví třída příjemce technologie OLE DB pomocí datové v
 ## <a name="see-also"></a>Viz také:
 
 [Příjemce knihovny ATL technologie OLE DB](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
-[Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Přidání funkce pomocí Průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Připojovací řetězce a propojení dat (OLE DB)](/previous-versions/windows/desktop/ms718376)

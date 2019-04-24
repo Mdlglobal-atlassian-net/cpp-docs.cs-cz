@@ -11,11 +11,11 @@ helpviewer_keywords:
 - -H compiler option [C++]
 ms.assetid: de701dd3-ed04-4c88-8195-960d2520ec2e
 ms.openlocfilehash: bdd3da8d3a5165262c00bc3475122e31f5770726
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270389"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (Omezit délku externích názvů)
 
@@ -86,5 +86,5 @@ Použití **/H** není kompatibilní s [/GL (optimalizace celého programu)](gl-
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

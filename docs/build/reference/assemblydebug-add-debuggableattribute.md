@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ASSEMBLYDEBUG linker option
 ms.assetid: 94443af3-470c-41d7-83a0-7434563d7982
 ms.openlocfilehash: b9899ea76b7a23a0d09442fca01e7d968c5e8aa6
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273089"
 ---
 # <a name="assemblydebug-add-debuggableattribute"></a>/ASSEMBLYDEBUG (Přidat atribut DebuggableAttribute)
 
@@ -78,5 +78,5 @@ Další možnosti linkeru, které ovlivňují generování sestavení jsou:
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)

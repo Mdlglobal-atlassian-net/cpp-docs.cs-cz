@@ -31,11 +31,11 @@ helpviewer_keywords:
 - trigonometric functions
 - hyperbolic functions
 ms.openlocfilehash: 3b9c7269d3c945301106098fc944383bbc364e5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258314"
 ---
 # <a name="tanh-tanhf-tanhl"></a>TANH, tanhf –, tanhl
 
@@ -65,7 +65,7 @@ long double tanh( long double x );  // C++ only
 
 |Vstup|Výjimka SEH|**Matherr** výjimky|
 |-----------|-------------------|-------------------------|
-|ROZMEZÍ QNAN, AJÍT|žádná|_DOMÉNA|
+|ROZMEZÍ QNAN, AJÍT|žádná|_DOMAIN|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -75,7 +75,7 @@ Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **tanh
 
 |Rutina|Požadované záhlaví (C)|Požadované záhlaví (C)|
 |-------------|---------------------|-|
-|**TANH**, **tanhf –**, **tanhl**|\<Math.h >|\<cmath > nebo \<math.h >|
+|**tanh**, **tanhf**, **tanhl**|\<math.h>|\<cmath > nebo \<math.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -errorReport compiler option [C++]
 ms.assetid: 819828f8-b0a5-412c-9c57-bf822f17e667
 ms.openlocfilehash: 52909cb42180bf8b778d73fd709be05faf3f5714
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271785"
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>/errorReport (sestava s interními chybami kompilátoru)
 
@@ -63,5 +63,5 @@ Uživatele umožňuje odeslat sestavy závisí na oprávnění zásad počítač
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

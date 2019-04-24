@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru C2770
+title: Compiler Error C2770
 ms.date: 11/04/2016
 f1_keywords:
 - C2770
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C2770
 ms.assetid: 100001b5-80b0-4971-8ff6-9023f443c926
 ms.openlocfilehash: 9397b52838f61449f0475a31d5bb4077dad7f587
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62257398"
 ---
-# <a name="compiler-error-c2770"></a>Chyba kompilátoru C2770
+# <a name="compiler-error-c2770"></a>Compiler Error C2770
 
 Neplatné explicitní template_or_generic argumentů "šablony.
 

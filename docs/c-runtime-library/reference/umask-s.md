@@ -28,11 +28,11 @@ helpviewer_keywords:
 - files [C++], permission settings for
 ms.assetid: 70898f61-bf2b-4d8d-8291-0ccaa6d33145
 ms.openlocfilehash: 878a22cb2884c36e792ff8dead1453582addb5b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62268908"
 ---
 # <a name="umasks"></a>_umask_s
 
@@ -63,7 +63,7 @@ Vrátí kód chyby, pokud *režimu* neurčuje platný režim nebo *pOldMode* uka
 
 |*Režim*|*pOldMode*|Návratová hodnota|Obsah *pOldMode*|
 |------------|----------------|----------------------|--------------------------------|
-|Všechny|**HODNOTU NULL**|**EINVAL**|Nezměněno|
+|Všechny|**NULL**|**EINVAL**|Nezměněno|
 |Neplatný režim|Všechny|**EINVAL**|Nezměněno|
 
 Pokud dojde k jedné z výše uvedených podmínek, vyvolán obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **_umask_s –** vrátí **EINVAL** a nastaví **errno** k **EINVAL**.

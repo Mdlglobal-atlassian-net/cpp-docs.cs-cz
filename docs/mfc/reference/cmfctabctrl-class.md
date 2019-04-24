@@ -105,11 +105,11 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
 ms.openlocfilehash: 43eb171ce9b3ea3454855dc1f92d9aa1b74645d4
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58778452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252942"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -125,14 +125,14 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCTabCtrl::CMFCTabCtrl`|Výchozí konstruktor.|
 |`CMFCTabCtrl::~CMFCTabCtrl`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCTabCtrl::ActivateMDITab](#activatemditab)|Zobrazí zadanou kartu aktuální ovládací prvek karty a nastaví fokus na této kartě.|
 |[CMFCTabCtrl::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)||
@@ -193,7 +193,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="data-members"></a>Datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCTabCtrl::m_bEnableActivate](#m_benableactivate)|Zabrání zobrazení aktivního ztráta fokusu, pokud je vložen a povolí na nové kartě.|
 
@@ -846,7 +846,7 @@ Vždy TRUE.
 
 Hodnota *styl* parametr může být jeden z následujících `CMFCTabCtrl::Style` výčty.
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |STYLE_3D|Zobrazí trojrozměrného, obdélníkové karty, které mají zaoblení rohů.|
 |STYLE_3D_ONENOTE|Zobrazí trojrozměrného karty, které mají jeden svislý jeden zkosené straně a a které mají zaoblené rohy.|
@@ -1078,7 +1078,7 @@ void SetResizeMode(ResizeMode resizeMode);
 
 *ResizeMode* parametr může být jeden z následujících `ResizeMode` hodnot výčtu.
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |RESIZE_NO|Nelze změnit velikost ovládacího prvku karta.|
 |RESIZE_VERT|Ovládací prvek karty můžete změnit velikost svisle, ale ne horizontálně.|

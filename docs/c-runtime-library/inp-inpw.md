@@ -21,15 +21,15 @@ helpviewer_keywords:
 - inpw function
 ms.assetid: c7e1eeac-77cd-47ff-b843-4095b4c31d3b
 ms.openlocfilehash: caa79ad98c0790fc8a22374e018ac4ad8d5a0b13
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62289452"
 ---
 # <a name="inp-inpw"></a>inp, inpw
 
-Tyto funkce POSIX je zastaralá. Použít splňující podmínky ISO C++ [_inp – _inpw –, _inpd –](../c-runtime-library/inp-inpw-inpd.md) místo.
+Tyto funkce POSIX je zastaralá. Použít bitovou kopii ISO C++ splňující podmínky [_inp – _inpw –, _inpd –](../c-runtime-library/inp-inpw-inpd.md) místo.
 
 > [!IMPORTANT]
 >  Tyto funkce jsou zastaralé. Od v sadě Visual Studio 2015, nejsou k dispozici v CRT.

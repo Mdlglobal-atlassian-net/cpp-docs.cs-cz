@@ -1,31 +1,31 @@
 ---
-title: 'Průvodce: Kompilování programu C++/CLI na příkazovém řádku'
+title: 'Návod: Kompilování programu C++/CLI na příkazovém řádku'
 ms.date: 09/24/2018
 ms.assetid: cef41c88-faf9-439d-8423-25aa3f5674dd
 ms.openlocfilehash: c90d2c915db7264dc1b4e4807803e063c2a24fc7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314166"
 ---
 # <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Návod: Kompilování programu C++/CLI na příkazovém řádku
 
-Můžete vytvořit programů aplikace Visual C++, které cílí Common Language Runtime (CLR) a pomocí rozhraní .NET Framework a sestavení na příkazovém řádku. Jazyk Visual C++ podporuje C + +/ CLI programovací jazyk, který obsahuje operátory a další typy cílit na .NET programovací model. Obecné informace o jazyce C + +/ jazyce CLI, najdete v článku [.NET programování v jazyce C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
+Můžete vytvořit programů aplikace Visual C++, které cílí Common Language Runtime (CLR) a pomocí rozhraní .NET Framework a sestavení na příkazovém řádku. Vizuální C++ podporuje C++/CLI programovací jazyk, který obsahuje operátory a další typy cílit na .NET programovací model. Obecné informace o C++vyhodnocovací jazyka naleznete v tématu [programování v rozhraní .NET s C++vyhodnocovací (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
 
-V tomto názorném postupu pomocí textového editoru, vytvořte základní C + +/ CLI programu a jeho následnou kompilaci v příkazovém řádku. (Můžete použít vlastní C + +/ CLI program místo zadání ten, který se zobrazí, nebo můžete použít C + +/ CLI vzorového kódu z jiného článku nápovědy. Tato technika je užitečná pro vytváření a testování malé moduly, které mají bez prvků uživatelského rozhraní.)
+V tomto názorném postupu použijete k vytvoření základního textového editoru C++vyhodnocovací programu a jeho následnou kompilaci v příkazovém řádku. (Můžete použít vlastní C++/program rozhraní příkazového řádku místo zadání ten, který se zobrazí, nebo můžete použít C++vyhodnocovací vzorového kódu z jiného článku nápovědy. Tato technika je užitečná pro vytváření a testování malé moduly, které mají bez prvků uživatelského rozhraní.)
 
 ## <a name="prerequisites"></a>Požadavky
 
 Rozumíte základům jazyka C++.
 
-## <a name="compiling-a-ccli-program"></a>Kompilace jazyka C + +/ CLI programu
+## <a name="compiling-a-ccli-program"></a>Kompilování C++vyhodnocovací programu
 
-Následující kroky ukazují, jak kompilovat a C + +/ CLI konzolovou aplikaci využívající tříd rozhraní .NET Framework.
+Následující kroky ukazují, jak sestavit C++vyhodnocovací konzolovou aplikaci využívající tříd rozhraní .NET Framework.
 
-Povolit kompilace pro C + +/ CLI, je nutné použít [/CLR](reference/clr-common-language-runtime-compilation.md) – možnost kompilátoru. Kompilátor MSVC generuje soubor .exe, který obsahuje kód jazyka MSIL – nebo smíšený jazyk MSIL i nativní kód – a odkazy na požadované knihovny rozhraní .NET Framework.
+Povolit kompilace pro C++/rozhraní příkazového řádku, je nutné použít [/CLR](reference/clr-common-language-runtime-compilation.md) – možnost kompilátoru. Kompilátor MSVC generuje soubor .exe, který obsahuje kód jazyka MSIL – nebo smíšený jazyk MSIL i nativní kód – a odkazy na požadované knihovny rozhraní .NET Framework.
 
-### <a name="to-compile-a-ccli-application-on-the-command-line"></a>Chcete-li zkompilovat a C + +/ CLI aplikace v příkazovém řádku
+### <a name="to-compile-a-ccli-application-on-the-command-line"></a>Chcete-li zkompilovat C++vyhodnocovací aplikace v příkazovém řádku
 
 1. Otevřít **Developer Command Prompt** okna. Konkrétní pokyny najdete v tématu [otevřete okno příkazového řádku pro vývojáře](building-on-the-command-line.md#developer_command_prompt).
 
@@ -61,5 +61,5 @@ Povolit kompilace pro C + +/ CLI, je nutné použít [/CLR](reference/clr-common
 ## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
-[Projekty a sestavení systémy](projects-and-build-systems-cpp.md)<br/>
-[Možnosti kompilátoru MSVC](reference/compiler-options.md)
+[Projekty a systémy sestavení](projects-and-build-systems-cpp.md)<br/>
+[Parametry kompilátoru MSVC](reference/compiler-options.md)

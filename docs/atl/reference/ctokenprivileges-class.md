@@ -19,11 +19,11 @@ helpviewer_keywords:
 - CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
 ms.openlocfilehash: 8bca3e1d45d0a85d1d4ceac4ffdf7b11091020f6
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277302"
 ---
 # <a name="ctokenprivileges-class"></a>Ctokenprivileges – třída
 
@@ -42,14 +42,14 @@ class CTokenPrivileges
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CTokenPrivileges::CTokenPrivileges](#ctokenprivileges)|Konstruktor|
 |[CTokenPrivileges::~CTokenPrivileges](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CTokenPrivileges::Add](#add)|Přidá jednu nebo více oprávnění `CTokenPrivileges` objektu.|
 |[CTokenPrivileges::Delete](#delete)|Odstraní oprávnění z `CTokenPrivileges` objektu.|
@@ -64,7 +64,7 @@ class CTokenPrivileges
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CTokenPrivileges::operator const TOKEN_PRIVILEGES *](#operator_const_token_privileges__star)|Přetypování na ukazatel na hodnotu `TOKEN_PRIVILEGES` struktury.|
 |[CTokenPrivileges::operator =](#operator_eq)|Operátor přiřazení.|

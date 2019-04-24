@@ -109,11 +109,11 @@ helpviewer_keywords:
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
 ms.openlocfilehash: a76be4be87471f26970a5b517d9993ae324b56c5
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58778517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253984"
 ---
 # <a name="ccombobox-class"></a>CComboBox – třída
 
@@ -129,13 +129,13 @@ class CComboBox : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComboBox::CComboBox](#ccombobox)|Vytvoří `CComboBox` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComboBox::AddString](#addstring)|Přidá řetězec do konce seznamu v poli seznamu pole se seznamem, nebo na seřazený pozici pro pole se seznamem se stylem CBS_SORT.|
 |[CComboBox::Clear](#clear)|Odstraní (vymaže) aktuální výběr, pokud existuje, v textovém poli.|
@@ -337,7 +337,7 @@ Dlouhým ukazatelem na [compareitemstruct –](/windows/desktop/api/winuser/ns-w
 
 Označuje relativní polohu dvě položky podle `COMPAREITEMSTRUCT` struktury. Může být některý z následujících hodnot:
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |- 1|Položka 1 se řadí před položkou 2.|
 |0|Položka 1 a položka 2 seřadí hodnoty stejné.|

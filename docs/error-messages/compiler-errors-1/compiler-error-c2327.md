@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru C2327
+title: Compiler Error C2327
 ms.date: 11/04/2016
 f1_keywords:
 - C2327
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C2327
 ms.assetid: 95278c95-d1f9-4487-ad27-53311f5e8112
 ms.openlocfilehash: abc9aa92c41947a2536e53108c1fb646792a8202
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62300846"
 ---
-# <a name="compiler-error-c2327"></a>Chyba kompilátoru C2327
+# <a name="compiler-error-c2327"></a>Compiler Error C2327
 
 'symbol': není název typu, statický člen ani enumerátor
 

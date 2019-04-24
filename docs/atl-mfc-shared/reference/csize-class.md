@@ -12,11 +12,11 @@ helpviewer_keywords:
 - CSize class
 ms.assetid: fb2cf85a-0bc1-46f8-892b-309c108b52ae
 ms.openlocfilehash: 5e19ab9b9339f3e6f61abf7731a40ed3832b50c9
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58767359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252685"
 ---
 # <a name="csize-class"></a>Csize – třída
 
@@ -32,13 +32,13 @@ class CSize : public tagSIZE
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSize::CSize](#csize)|Vytvoří `CSize` objektu.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSize::operator-](#operator_-)|Odečte dvou velikostech.|
 |[CSize::operator! =](#operator_neq)|Zkontroluje nerovnost mezi `CSize` a velikost.|

@@ -30,11 +30,11 @@ helpviewer_keywords:
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
 ms.openlocfilehash: 46c4949fcc8cfbe4a3477e66b57d8fc6fc97ed73
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259089"
 ---
 # <a name="system-wsystem"></a>system, _wsystem
 
@@ -84,13 +84,13 @@ Je nutné provést explicitní vyprázdnění, s použitím [fflush –](fflush.
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tsystem –**|**Systém**|**Systém**|**_wsystem**|
+|**_tsystem**|**system**|**system**|**_wsystem**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**Systém**|\<Process.h > nebo \<stdlib.h >|
+|**system**|\<Process.h > nebo \<stdlib.h >|
 |**_wsystem**|\<Process.h > nebo \<stdlib.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

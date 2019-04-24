@@ -7,11 +7,11 @@ helpviewer_keywords:
 - EXPORTS .def file statement
 ms.assetid: dbcd7579-b855-44c4-bd27-931e157657f7
 ms.openlocfilehash: 33b70c680bfc3db24f5326a2027fa9ec4740e3f2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271343"
 ---
 # <a name="exports"></a>EXPORTY
 
@@ -51,7 +51,7 @@ EXPORTS
    func2=other_module.#42
 ```
 
-Protože kompilátor MSVC používá dekorování názvů pro funkce jazyka C++, je nutné použít upravený název *internal_name* nebo definovat exportovaných funkcí s použitím `extern "C"` ve zdrojovém kódu. Kompilátor také upraví funkcí jazyka C, které používají [__stdcall](../../cpp/stdcall.md) podtržítkem konvence volání (\_) předponu a příponu tvořený zavináč (\@) následovaný počtem bajtů (v desítkové soustavě) v Seznam argumentů.
+Protože kompilátor MSVC používá dekorování názvů pro C++ funkce, je nutné použít upravený název *internal_name* nebo definovat exportovaných funkcí s použitím `extern "C"` ve zdrojovém kódu. Kompilátor také upraví funkcí jazyka C, které používají [__stdcall](../../cpp/stdcall.md) podtržítkem konvence volání (\_) předponu a příponu tvořený zavináč (\@) následovaný počtem bajtů (v desítkové soustavě) v Seznam argumentů.
 
 Pokud chcete zjistit dekorované názvy produkované kompilátorem, použijte [DUMPBIN](dumpbin-reference.md) nástroje nebo linker [/MAP](map-generate-mapfile.md) možnost. Dekorované názvy jsou specifické pro kompilátor. Pokud exportujete dekorované názvy ve. Soubor DEF spustitelné soubory, které na knihovnu DLL musí být sestaveny také pomocí stejné verze kompilátoru. Tím se zajistí, že dekorované názvy volajícího odpovídaly exportovaným názvům v. Soubor DEF.
 

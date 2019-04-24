@@ -5,12 +5,12 @@ helpviewer_keywords:
 - global constants
 - constants, global
 ms.assetid: df5a9bd4-d0a8-4c1c-956e-b481d0bded7d
-ms.openlocfilehash: 1ae29b8744e24b6471f0d5536f3f13cc5ae59499
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 2f0621f52fe445f8f2058ef902824ddc1f5e2bb5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59030190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62255427"
 ---
 # <a name="global-constants-in-c"></a>Globální konstanty v jazyku C++
 
@@ -20,7 +20,7 @@ Jedním ze způsobů pro vyřešení této chyby je zahrnout soubor hlaviček co
 
 Následující ukázka generuje C2019:
 
-```
+```cpp
 // global_constants.cpp
 // LNK2019 expected
 void test(void);
@@ -33,7 +33,7 @@ int main() {
 
 a pak,
 
-```
+```cpp
 // global_constants_2.cpp
 // compile with: global_constants.cpp
 extern int lnktest1;

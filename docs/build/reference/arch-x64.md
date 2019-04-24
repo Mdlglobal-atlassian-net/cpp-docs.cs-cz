@@ -3,11 +3,11 @@ title: /arch (x64)
 ms.date: 11/04/2016
 ms.assetid: ecda22bf-5bed-43f4-99fb-88aedd83d9d8
 ms.openlocfilehash: c515307ee3a49ef746eea939e90d7aecbd661b95
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295279"
 ---
 # <a name="arch-x64"></a>/arch (x64)
 
@@ -50,5 +50,5 @@ Umožňuje použití Intel Advanced Vector Extensions 2 instrukcí.
 ## <a name="see-also"></a>Viz také:
 
 [/arch (minimální architektura procesoru)](arch-minimum-cpu-architecture.md)<br/>
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

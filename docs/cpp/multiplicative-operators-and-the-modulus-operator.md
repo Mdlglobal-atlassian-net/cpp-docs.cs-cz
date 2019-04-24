@@ -16,11 +16,11 @@ helpviewer_keywords:
 - division operator
 ms.assetid: b53ea5da-d0b4-40dc-98f3-0aa52d548293
 ms.openlocfilehash: 9a01672976703634c06724c9c655605bb433facf
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301822"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Multiplikativní operátory a operátor numerického zbytku
 
@@ -64,7 +64,7 @@ Pokud jsou oba operandy na výraz násobení, dělení, nebo zbytku mají stejn�
 > [!NOTE]
 >  Vzhledem k tomu, že převody prováděné operátory násobení nepočítají s podmínkami přetečení nebo podtečení, informace se mohou ztratit, pokud výsledek operace násobení nelze reprezentovat v typu operandu po převodu.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 V programu Microsoft C++ výsledek výrazu zbytku je vždy stejný jako znaménko prvního operandu.
 

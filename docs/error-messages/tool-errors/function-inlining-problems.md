@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -Ob2 C++ compiler option
 - function inlining problems
 ms.assetid: 65d59943-4b3c-4a43-aeb6-dccbf7686740
-ms.openlocfilehash: fec3884dff0dda7140f18fa53e493c12996edcf0
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: f088b0f3ec94ad59c9c5576e6090a895bb88c3ad
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59031521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62255497"
 ---
 # <a name="function-inlining-problems"></a>Problémy vložené funkce
 
@@ -24,7 +24,7 @@ Pokud používáte funkci vkládání, musíte mít:
 
 - Mít vkládání zapnuté v hlavičkovém souboru.
 
-```
+```cpp
 // LNK2019_function_inline.cpp
 // compile with: /c
 // post-build command: lib LNK2019_function_inline.obj
@@ -39,7 +39,7 @@ void _load_config_used::Test() { printf("in Test\n"); }
 
 a pak,
 
-```
+```cpp
 // LNK2019_function_inline_2.cpp
 // compile with: LNK2019_function_inline.lib
 struct _load_config_used {
@@ -60,7 +60,7 @@ Kombinování vložené a které nejsou vložené možnosti kompilace na různý
 
 Obdobně projekt, který používá funkci vkládání ještě definuje funkce v souboru s příponou .cpp, spíše než v hlavičce souboru získají LNK2019. Soubor hlaviček je součástí všude, kde považujete za vhodné, ale funkce jsou pouze vložené když soubor .cpp prochází kompilátoru; proto linkeru považuje funkce nerozpoznané externí typy při použití v dalších modulů.
 
-```
+```cpp
 // LNK2019_FIP.h
 struct testclass {
    void PublicStatMemFunc1(void);
@@ -69,7 +69,7 @@ struct testclass {
 
 a pak,
 
-```
+```cpp
 // LNK2019_FIP.cpp
 // compile with: /c
 #include "LNK2019_FIP.h"
@@ -78,7 +78,7 @@ inline void testclass::PublicStatMemFunc1(void) {}
 
 a pak,
 
-```
+```cpp
 // LNK2019_FIP_2.cpp
 // compile with: LNK2019_FIP.cpp
 // LNK2019 expected

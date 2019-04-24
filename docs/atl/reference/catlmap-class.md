@@ -38,11 +38,11 @@ helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
 ms.openlocfilehash: 1821532a4d5a3078202f180273b02945b8d8e4ba
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58774552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260607"
 ---
 # <a name="catlmap-class"></a>Catlmap – třída
 
@@ -76,7 +76,7 @@ Kód použitý má zkopírovat nebo přesunout elementy hodnotu.
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlMap::KINARGTYPE](#kinargtype)|Typ použitý klíč je předána jako vstupní argument|
 |[CAtlMap::KOUTARGTYPE](#koutargtype)|Typ použitý při klíč se vrátí jako výstup argument.|
@@ -85,27 +85,27 @@ Kód použitý má zkopírovat nebo přesunout elementy hodnotu.
 
 ### <a name="public-classes"></a>Veřejné třídy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlMap::CPair Class](#cpair_class)|Třída obsahující prvky klíč a hodnotu.|
 
 ### <a name="cpair-data-members"></a>CPair datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPair::m_key](#m_key)|Datový člen ukládání klíčovým prvkem.|
 |[CPair::m_value](#m_value)|Datový člen ukládání prvku hodnoty.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlMap::CAtlMap](#catlmap)|Konstruktor|
 |[CAtlMap::~CAtlMap](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlMap::AssertValid](#assertvalid)|Volejte tuto metodu za účelem způsobit ASSERT, pokud `CAtlMap` není platný.|
 |[CAtlMap::DisableAutoRehash](#disableautorehash)|Voláním této metody lze zakázat automatické rehashing z `CAtlMap` objektu.|
@@ -133,7 +133,7 @@ Kód použitý má zkopírovat nebo přesunout elementy hodnotu.
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlMap::operator\[\]](catlmap-class.md#operator_at)|Nahradí nebo přidá nový prvek do `CAtlMap`.|
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Visual C++, 64-bit hardware
 ms.assetid: cb99f72b-8c74-48f4-846a-8921b37b97e9
 ms.openlocfilehash: c56cd34ecbc6615b0acebde6c40c658ca0c436a4
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274678"
 ---
 # <a name="configure-c-projects-for-64-bit-x64-targets"></a>Konfigurace projektů C++ pro 64bitové, x64 cíle
 
@@ -47,4 +47,4 @@ Tento oddíl obsahuje témata o cílení na 64bitové x64 hardwaru s jazykem Vis
 
 ## <a name="see-also"></a>Viz také:
 
-[Projekty a sestavení systémy](projects-and-build-systems-cpp.md)
+[Projekty a systémy sestavení](projects-and-build-systems-cpp.md)

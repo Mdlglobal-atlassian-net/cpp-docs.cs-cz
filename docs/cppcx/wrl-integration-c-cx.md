@@ -1,15 +1,15 @@
 ---
-title: Integrace WRL (C + +/ CX)
+title: Integrace WRL (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3ad43894-c574-477c-ad3e-240301f381d4
 ms.openlocfilehash: a3c8b824d2cd932a7d284804f3f28781654045e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62304147"
 ---
-# <a name="wrl-integration-ccx"></a>Integrace WRL (C + +/ CX)
+# <a name="wrl-integration-ccx"></a>Integrace WRL (C++/CX)
 
 Je volně kombinovat kód knihovny WRL kódem Windows Runtime C++ šablony knihovny (WRL). Ve stejné jednotce překladu, můžete použít objekty deklarované pomocí knihovny WRL popisovač objektu (`^`) zápisem a WRL inteligentní ukazatel (`ComPtr<T>`) notaci. Však musí ručně zpracovat vrácené hodnoty a kódy chyb WRL HRESULT a výjimek knihovny WRL.
 

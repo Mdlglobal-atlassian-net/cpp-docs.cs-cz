@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
 ms.openlocfilehash: 8f4ad77c28b4643a979d7c3fb22e44e4aebd43dd
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295484"
 ---
 # <a name="set-class"></a>set – třída
 
@@ -159,10 +159,10 @@ Iterátor poskytovaný třídou set je obousměrný iterátor, ale členské fun
 |[const_reference](#const_reference)|Typ, který poskytuje odkaz na **const** prvek uložený v objektu set pro čtení a provádění **const** operace.|
 |[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může přečíst jakýkoli **const** prvek v sadě.|
 |[difference_type](#difference_type)|Celočíselný typ se znaménkem, který slouží k vyjádření počtu prvků objektu set v rozsahu mezi prvky, na které odkazují iterátory.|
-|[iterátor](#iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat libovolný prvek v objektu set.|
+|[iterator](#iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat libovolný prvek v objektu set.|
 |[key_compare](#key_compare)|Typ, který poskytuje objekt funkce, který může porovnat dva klíče řazení pro určení relativního pořadí dvou prvků v objektu set.|
 |[key_type](#key_type)|Typ popisuje objekt uložený jako prvek sady (objekt set) v jeho kapacitě jako klíč řazení.|
-|[Ukazatel](#pointer)|Typ, který poskytuje ukazatel na prvek v objektu set.|
+|[pointer](#pointer)|Typ, který poskytuje ukazatel na prvek v objektu set.|
 |[Referenční dokumentace](#reference)|Typ, který poskytuje odkaz na prvek uložený v objektu set.|
 |[reverse_iterator](#reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat prvek v obráceném objektu set.|
 |[size_type](#size_type)|Celočíselný typ bez znaménka představující počet prvků v objektu set.|
@@ -176,12 +176,12 @@ Iterátor poskytovaný třídou set je obousměrný iterátor, ale členské fun
 |[začít](#begin)|Vrátí iterátor adresující první prvek v sadě.|
 |[cbegin](#cbegin)|Vrátí iterátor const adresující první prvek v sadě.|
 |[cend](#cend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v objektu set.|
-|[Vymazat](#clear)|Odstraní všechny prvky objektu set.|
+|[clear](#clear)|Odstraní všechny prvky objektu set.|
 |[Počet](#count)|Vrátí počet prvků objektu set, jejichž klíč odpovídá klíči se zadaným parametrem.|
 |[crbegin](#rbegin)|Vrátí konstantní iterátor adresující první prvek v obráceném objektu set.|
-|[crend –](#rend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v obráceném objektu set.|
-|[emplace –](#emplace)|Vloží vytvořený prvek na místo do objektu set.|
-|[emplace_hint –](#emplace_hint)|Vloží vytvořený prvek s náznakem umístění na místo do objektu set.|
+|[crend](#rend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v obráceném objektu set.|
+|[emplace](#emplace)|Vloží vytvořený prvek na místo do objektu set.|
+|[emplace_hint](#emplace_hint)|Vloží vytvořený prvek s náznakem umístění na místo do objektu set.|
 |[prázdný](#empty)|Testuje, zda je objekt set prázdný.|
 |[ukončení](#end)|Vrátí iterátor adresující umístění následující po posledním prvku v objektu set.|
 |[equal_range](#equal_range)|Vrátí pár iterátorů, respektive, na první prvek objektu set s klíčem, který je větší než zadaný klíč a na první prvek objektu set s klíčem, který je roven nebo větší než tento klíč.|
@@ -192,11 +192,11 @@ Iterátor poskytovaný třídou set je obousměrný iterátor, ale členské fun
 |[key_comp](#key_comp)|Načte kopii objektu porovnání, která je použita pro seřazení klíčů v objektu set.|
 |[lower_bound –](#lower_bound)|Vrátí iterátor na první prvek objektu set s klíčem, který je roven nebo větší než zadaný klíč.|
 |[max_size](#max_size)|Vrátí maximální délku objektu set.|
-|[rbegin –](#rbegin)|Vrátí iterátor adresující první prvek v obráceném objektu set.|
+|[rbegin](#rbegin)|Vrátí iterátor adresující první prvek v obráceném objektu set.|
 |[rend –](#rend)|Vrátí iterátor adresující umístění následující po posledním prvku v obráceném objektu set.|
 |[Velikost](#size)|Vrátí počet prvků v objektu set.|
-|[Prohození](#swap)|Vymění prvky dvou sad.|
-|[upper_bound –](#upper_bound)|Vrátí iterátor na první prvek objektu set s klíčem, který je větší než zadaný klíč.|
+|[swap](#swap)|Vymění prvky dvou sad.|
+|[upper_bound](#upper_bound)|Vrátí iterátor na první prvek objektu set s klíčem, který je větší než zadaný klíč.|
 |[value_comp](#value_comp)|Získá kopii objektu porovnání použitého pro seřazení hodnot prvků objektu set.|
 
 ### <a name="operators"></a>Operátory
@@ -477,7 +477,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč prvky, které mají být porovnány ze sady.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -920,7 +920,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč argumentu k porovnání s klíči řazení prvek ze sady vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1115,7 +1115,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče k porovnání s klíči řazení prvek ze sady vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1572,7 +1572,7 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč argumentu k porovnání s klíči řazení prvek ze sady vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2259,7 +2259,7 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč argumentu k porovnání s klíči řazení prvek ze sady vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota

@@ -26,11 +26,11 @@ f1_keywords:
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
 ms.openlocfilehash: 13c521bae6790a030212c4a8edac460c960ecfc0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62247861"
 ---
 # <a name="atl-text-encoding-functions"></a>Funkce kódování textu ATL
 
@@ -362,7 +362,7 @@ Délka ve znacích převedený řetězec.
 
 V tabulce jsou uvedeny možné převody prováděné tuto funkci:
 
-|Zdroj|Cíl|
+|Source|Cíl|
 |------------|-----------------|
 |\<|&lt;|
 |>|&gt;|

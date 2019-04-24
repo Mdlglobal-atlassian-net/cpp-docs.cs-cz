@@ -10,11 +10,11 @@ helpviewer_keywords:
 - preprocessing output files, file name
 ms.assetid: 6d0ba983-a8b7-41ec-84f5-b4688ef8efee
 ms.openlocfilehash: 990c48a72c3f6017d893ddf9b46bcbb737bfb634
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271252"
 ---
 # <a name="fi-preprocess-output-file-name"></a>/Fi (předběžné zpracování názvu výstupního souboru)
 
@@ -48,6 +48,6 @@ CL /P /FiMYPROCESS.I PROGRAM.CPP
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [/P (předzpracování do souboru)](p-preprocess-to-a-file.md)<br/>
 [Určení názvu cesty](specifying-the-pathname.md)

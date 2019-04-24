@@ -13,11 +13,11 @@ helpviewer_keywords:
 - /c compiler option [C++]
 ms.assetid: 944567ca-16bc-4728-befe-d414a7787f26
 ms.openlocfilehash: c5854fd1255ab509d8778828de25638dd821d74b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272829"
 ---
 # <a name="c-preserve-comments-during-preprocessing"></a>/C (Zachovat komentáře při předběžném zpracování)
 
@@ -64,7 +64,7 @@ int i;   // a variable
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
 [/E (předzpracování do stdout)](e-preprocess-to-stdout.md)<br/>
 [/P (předzpracování do souboru)](p-preprocess-to-a-file.md)<br/>

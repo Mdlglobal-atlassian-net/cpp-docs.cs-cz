@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CListView [MFC], RemoveImageList
 ms.assetid: 7626bdb2-a1b8-4eab-b631-6743710a8432
 ms.openlocfilehash: 698e37b2853a2ca3698ee0a426c8ded688c99c58
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58776619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62296654"
 ---
 # <a name="clistview-class"></a>CListView – třída
 
@@ -33,19 +33,19 @@ class CListView : public CCtrlView
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CListView::CListView](#clistview)|Vytvoří `CListView` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CListView::GetListCtrl](#getlistctrl)|Vrátí ovládací prvek seznamu, který je přidružený k zobrazení.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CListView::RemoveImageList](#removeimagelist)|Odebere seznam zadané bitové kopie ze zobrazení seznamu.|
 

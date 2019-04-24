@@ -10,11 +10,11 @@ helpviewer_keywords:
 - -KEYCONTAINER linker option
 ms.assetid: 94882d12-b77a-49c7-96d0-18a31aee001e
 ms.openlocfilehash: 96d2f5fed0e450224f82ee909cea9d56082505fb
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291610"
 ---
 # <a name="keycontainer-specify-a-key-container-to-sign-an-assembly"></a>/KEYCONTAINER (Zadat kontejner klíčů pro podpis sestavení)
 
@@ -33,7 +33,7 @@ Propojovací program vytvoří podepsané sestavení tak, že vloží veřejný 
 
 Pokud kompilujete s [/LN](ln-create-msil-module.md), je název souboru klíče uložené v modulu a součástí sestavení, které se vytvoří, když kompilujete sestavení, které obsahuje explicitní odkaz na modul, prostřednictvím [#using](../../preprocessor/hash-using-directive-cpp.md), nebo při propojování s [/ASSEMBLYMODULE](assemblymodule-add-a-msil-module-to-the-assembly.md).
 
-Můžete také předat údaje o šifrování pro kompilátor [/keyfile](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md). Použití [/delaysign](delaysign-partially-sign-an-assembly.md) potřebujete částečně podepsaného sestavení. Zobrazit [sestavení se silným názvem (podepisování sestavení) (C + +/ CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) Další informace o podepisování sestavení.
+Můžete také předat údaje o šifrování pro kompilátor [/keyfile](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md). Použití [/delaysign](delaysign-partially-sign-an-assembly.md) potřebujete částečně podepsaného sestavení. Zobrazit [sestavení se silným názvem (podepisování sestavení) (C++vyhodnocovací)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) Další informace o podepisování sestavení.
 
 Další možnosti linkeru, které ovlivňují generování sestavení jsou:
 
@@ -63,5 +63,5 @@ Další možnosti linkeru, které ovlivňují generování sestavení jsou:
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)

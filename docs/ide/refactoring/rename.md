@@ -3,19 +3,19 @@ title: přejmenování
 ms.date: 11/16/2016
 ms.assetid: 64b42a88-3bd9-4399-8b96-75bceffc353b
 ms.openlocfilehash: a747784f46341f130d1271fd0f15475b63d7b6d8
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62265001"
 ---
 # <a name="rename"></a>přejmenování
 
-**Co:** slouží k přejmenování identifikátory pro symboly kódu, jako je například pole lokálních proměnných, metod, obory názvů, vlastností a typy.
+**Co:** Slouží k přejmenování identifikátory pro symboly kódu, jako je například pole lokálních proměnných, metod, obory názvů, vlastností a typy.
 
-**Kdy:** chcete bezpečně něco přejmenovat bez nutnosti vyhledáte všechny instance a kopírovat/vložit nový název.
+**Kdy:** Chcete něco bezpečně přejmenovat bez nutnosti vyhledáte všechny instance a kopírovat/vložit nový název.
 
-**Důvod, proč:** zkopírujete a vložíte nový název přes celý projekt by pravděpodobně vést k chybám.  Tento nástroj refaktoringu přesně provede akci přejmenování.
+**Proč:** Zkopírujete a vložíte nový název přes celý projekt by pravděpodobně vést k chybám.  Tento nástroj refaktoringu přesně provede akci přejmenování.
 
 **Jak:**
 

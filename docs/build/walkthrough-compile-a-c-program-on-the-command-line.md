@@ -9,11 +9,11 @@ helpviewer_keywords:
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
 ms.openlocfilehash: 54f5810e60cdaada6a99651a732570c88ea883ce
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314179"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Návod: Kompilace programu C na příkazovém řádku
 
@@ -162,5 +162,5 @@ Kompilátor Visual C++ C je kompatibilní se standardem ISO C99, ale není strik
 
 [Návod: Vytvoření programu ve standardním C++ (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)<br/>
 [Referenční dokumentace jazyka C](../c-language/c-language-reference.md)<br/>
-[Projekty a sestavení systémy](projects-and-build-systems-cpp.md)<br/>
+[Projekty a systémy sestavení](projects-and-build-systems-cpp.md)<br/>
 [Kompatibilita](../c-runtime-library/compatibility.md)

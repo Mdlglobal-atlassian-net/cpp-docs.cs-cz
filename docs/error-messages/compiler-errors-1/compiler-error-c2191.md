@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru C2191
+title: Compiler Error C2191
 ms.date: 11/04/2016
 f1_keywords:
 - C2191
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C2191
 ms.assetid: 051b8350-e5de-4f51-ab6e-96d32366bcef
 ms.openlocfilehash: 23dfe1d95ab75f253fc2a7b4b00dfcd1aaaa3bbf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62302966"
 ---
-# <a name="compiler-error-c2191"></a>Chyba kompilátoru C2191
+# <a name="compiler-error-c2191"></a>Compiler Error C2191
 
 druhý seznam parametrů je delší než první.
 

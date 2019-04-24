@@ -1,6 +1,6 @@
 ---
-title: Chyby kompilátoru C3200 až C3299
-ms.date: 11/17/2017
+title: Compiler errors C3200 Through C3299
+ms.date: 04/21/2019
 f1_keywords:
 - C3220
 - C3221
@@ -34,14 +34,14 @@ helpviewer_keywords:
 - C3281
 - C3294
 ms.assetid: 6b3104f6-63bc-4823-b6f3-b8a16be4b87f
-ms.openlocfilehash: e8a9c1db4cba837a5780e51f84035492cd0e9e76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6965fcde5f7cc93464593e83f787d0a5838398dd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62281492"
 ---
-# <a name="compiler-errors-c3200-through-c3299"></a>Chyby kompilátoru C3200 až C3299
+# <a name="compiler-errors-c3200-through-c3299"></a>Compiler errors C3200 Through C3299
 
 Články v této části dokumentace vysvětlují podmnožinu chybové zprávy, které jsou generovány kompilátorem.
 
@@ -71,8 +71,8 @@ ms.locfileid: "50490593"
 |[Chyba kompilátoru C3217](compiler-error-c3217.md)|"*parametr*': v této deklaraci nemůže omezovat obecný parametr|
 |[Chyba kompilátoru C3218](compiler-error-c3218.md)|"*typ*': typ není povolený jako omezení|
 |[Chyba kompilátoru C3219](compiler-error-c3219.md)|"*parametr*': obecný parametr se nemůže omezovat několika třídami non Interface:"*typ*.|
-|C3220 chyby kompilátoru|"*rozhraní*': rozhraní nemůže mít progid|
-|C3221 chyby kompilátoru|"*člen*': více"default"a 'case' atributy není povolený pro člena|
+|Chyba kompilátoru C3220|"*rozhraní*': rozhraní nemůže mít progid|
+|Chyba kompilátoru C3221|"*člen*': více"default"a 'case' atributy není povolený pro člena|
 |[Chyba kompilátoru C3222](compiler-error-c3222.md)|"*funkce*': nelze deklarovat výchozí argumenty pro členské funkce typu spravované/WinRT nebo obecné funkce|
 |[Chyba kompilátoru C3223](compiler-error-c3223.md)|"*vlastnost*': pro vlastnost nejde použít typeid.|
 |[Chyba kompilátoru C3224](compiler-error-c3224.md)|"*typ*': žádná přetížená obecnou třídu přebírá*číslo*" argumenty obecného typu|
@@ -96,29 +96,29 @@ ms.locfileid: "50490593"
 |[Chyba kompilátoru C3242](compiler-error-c3242.md)|"*funkce*': pouze explicitně můžete přepsat virtuální funkce|
 |[Chyba kompilátoru C3243](compiler-error-c3243.md)|žádná z funkcí přetížení nezavádí "*rozhraní*.|
 |[Chyba kompilátoru C3244](compiler-error-c3244.md)|"*člen*': Tato metoda byla zavedena ve"*– rozhraní 1*"není ve"*rozhraní interface2*"|
-|C3245 chyby kompilátoru|"*funkce*': použití variabilní šablony vyžaduje seznam argumentů šablony|
+|Chyba kompilátoru C3245|"*funkce*': použití variabilní šablony vyžaduje seznam argumentů šablony|
 |[Chyba kompilátoru C3246](compiler-error-c3246.md)|"*třídy*': nejde dědit z:"*$base_class*"jak byl deklarován jako'*dědičnosti*"|
 |[Chyba kompilátoru C3247](compiler-error-c3247.md)|"*coclass*': Konstrukt coclass nemůže dědit z jiného konstruktu coclass *$base_class*.|
 |[Chyba kompilátoru C3248](compiler-error-c3248.md)|Zastaralé. "*funkce*': funkce deklarovaná jako 'sealed' nemůže být přepsána"*funkce*"|
-|C3249 chyby kompilátoru|Neplatný příkaz nebo podvýraz pro funkci specifikátorem constexpr.|
-|C3250 chyby kompilátoru|"*deklarace*': deklarace není povolená v těle funkce specifikátorem constexpr.|
+|Chyba kompilátoru C3249|Neplatný příkaz nebo podvýraz pro funkci specifikátorem constexpr.|
+|Chyba kompilátoru C3250|"*deklarace*': deklarace není povolená v těle funkce specifikátorem constexpr.|
 |[Chyba kompilátoru C3251](compiler-error-c3251.md)|Nelze vyvolat metodu základní třídy na instanci hodnotového typu.|
 |[Chyba kompilátoru C3252](compiler-error-c3252.md)|"*funkce*': nejde snížit přístupnost virtuální metody v typu spravované/WinRT|
 |[Chyba kompilátoru C3253](compiler-error-c3253.md)|"*funkce*": Chyba s explicitním přepsáním|
 |[Chyba kompilátoru C3254](compiler-error-c3254.md)|"*funkce*': třída obsahuje explicitní přepsání"*funkce*", ale není odvozený z rozhraní, která obsahuje deklaraci funkce|
 |[Chyba kompilátoru C3255](compiler-error-c3255.md)|"*typ*': nejde dynamicky přidělit tento objekt hodnotového typu na nativní halda|
-|C3256 chyby kompilátoru|"*funkce*': Výsledkem použití proměnné není konstantní výraz|
-|C3257 chyby kompilátoru|Zastaralé.|
-|C3258 chyby kompilátoru|Zastaralé.|
-|C3259 chyby kompilátoru|Modifikátor constexpr' funkce může mít jenom jeden návratový příkaz.|
-|C3260 chyby kompilátoru|"*token*': Přeskakují se neočekávané tokeny před tělem výrazu lambda|
-|C3261 chyby kompilátoru|funkce vracející pole spravovaných/WinRT musí mít hranaté závorky pole na konci deklarace: "*identifikátor*(...) []'|
+|Chyba kompilátoru C3256|"*funkce*': Výsledkem použití proměnné není konstantní výraz|
+|Chyba kompilátoru C3257|Zastaralé.|
+|Chyba kompilátoru C3258|Zastaralé.|
+|Chyba kompilátoru C3259|Modifikátor constexpr' funkce může mít jenom jeden návratový příkaz.|
+|Chyba kompilátoru C3260|"*token*': Přeskakují se neočekávané tokeny před tělem výrazu lambda|
+|Chyba kompilátoru C3261|funkce vracející pole spravovaných/WinRT musí mít hranaté závorky pole na konci deklarace: "*identifikátor*(...) []'|
 |[Chyba kompilátoru C3262](compiler-error-c3262.md)|Neplatné indexování pole: *číslo* dimenzí zadaný pro *číslo*-multidimenzionálním "*typ*.|
-|C3263 chyby kompilátoru|Zastaralé.|
+|Chyba kompilátoru C3263|Zastaralé.|
 |[Chyba kompilátoru C3264](compiler-error-c3264.md)|"*identifikátor*': class-constructor nemůže mít návratový typ.|
 |[Chyba kompilátoru C3265](compiler-error-c3265.md)|nejde deklarovat spravovaný "*managed_construct*"v nespravované"*unmanaged_construct*.|
 |[Chyba kompilátoru C3266](compiler-error-c3266.md)|"*funkce*': class-constructor musí mít seznam parametrů void.|
-|C3267 chyby kompilátoru|Zastaralé.|
+|Chyba kompilátoru C3267|Zastaralé.|
 |[Chyba kompilátoru C3268](compiler-error-c3268.md)|"*funkce*': obecná funkce nebo členská funkce obecné třídy nemůže mít seznam parametrů proměnných|
 |[Chyba kompilátoru C3269](compiler-error-c3269.md)|"*funkce*': členská funkce spravovaného/WinRT typu se nedá deklarovat pomocí '...'|
 |[Chyba kompilátoru C3270](compiler-error-c3270.md)|"*pole*': atribut FieldOffset jde použít jenom v kontextu StructLayout(LayoutKind::Explicit)|
@@ -132,7 +132,7 @@ ms.locfileid: "50490593"
 |[Chyba kompilátoru C3278](compiler-error-c3278.md)|Přímá volání metody interface nebo pure "*funkce*" selže v době běhu|
 |[Chyba kompilátoru C3279](compiler-error-c3279.md)|dílčí a explicitní specializace, jakož i explicitní vytváření instancí šablon tříd jsou deklarovány v oboru názvů cli jsou zakázané.|
 |[Chyba kompilátoru C3280](compiler-error-c3280.md)|"*funkce*': členská funkce spravovaného typu se nedá zkompilovat jako nespravovaná funkce|
-|C3281 chyby kompilátoru|"*funkce*': globální operátor nemůže mít typ spravovaného/WinRT"*typ*"v podpisu|
+|Chyba kompilátoru C3281|"*funkce*': globální operátor nemůže mít typ spravovaného/WinRT"*typ*"v podpisu|
 |[Chyba kompilátoru C3282](compiler-error-c3282.md)|seznamy obecných parametrů může vyskytovat jenom u spravovaných/WinRT třídy, struktury nebo funkce|
 |[Chyba kompilátoru C3283](compiler-error-c3283.md)|"*rozhraní*': rozhraní nemůže mít konstruktor instance|
 |[Chyba kompilátoru C3284](compiler-error-c3284.md)|omezení pro obecný parametr "*parametr*"funkce"*deklarátor*"musí odpovídat omezením pro obecný parametr"*parametr*"funkce"*deklarátor*.|
@@ -145,9 +145,14 @@ ms.locfileid: "50490593"
 |[Chyba kompilátoru C3291](compiler-error-c3291.md)|'default': název triviální vlastnost nemůže být.|
 |[Chyba kompilátoru C3292](compiler-error-c3292.md)|obor názvů cli nejde znovu otevřít|
 |[Chyba kompilátoru C3293](compiler-error-c3293.md)|"*identifikátor*": "default" používat pro přístup k výchozí vlastnost (indexer) pro třídu*třídy*.|
-|C3294 chyby kompilátoru|Zastaralé.|
+|Chyba kompilátoru C3294|Zastaralé.|
 |[Chyba kompilátoru C3295](compiler-error-c3295.md)|"#pragma *specifikátor*" jde použít jenom na globální nebo obor názvů|
 |[Chyba kompilátoru C3296](compiler-error-c3296.md)|"*identifikátor*': vlastnost s tímto názvem již existuje.|
 |[Chyba kompilátoru C3297](compiler-error-c3297.md)|" *constraint2*': nelze použít" *constraint1*' jako omezení protože " *constraint1*' má omezení hodnoty|
 |[Chyba kompilátoru C3298](compiler-error-c3298.md)|" *constraint1*': nelze použít" *constraint2*' jako omezení protože " *constraint2*' má omezení ref a" *constraint1*" má omezení hodnoty|
 |[Chyba kompilátoru C3299](compiler-error-c3299.md)|" *funkce*': nelze zadat omezení, dědí se ze základní metody|
+
+## <a name="see-also"></a>Viz také:
+
+[C /C++ nástroje chyby a upozornění kompilátoru a sestavení](../compiler-errors-1/c-cpp-build-errors.md) \
+[Chyby kompilátoru C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

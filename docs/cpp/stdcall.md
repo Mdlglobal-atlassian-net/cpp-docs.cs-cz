@@ -9,15 +9,15 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 ms.assetid: e212594b-1827-4d07-9527-7d412b300df8
 ms.openlocfilehash: b9efac6f729a78db945ff3bd9ab16ebe315b7a5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266956"
 ---
 # <a name="stdcall"></a>__stdcall
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 **__Stdcall** konvence volání se používá pro volání funkce rozhraní Win32 API. Volaný vyčistí zásobník, aby mohl kompilátor `vararg` funkce **__cdecl**. Funkce, které používají konvenci volání k vyžadování prototypu funkce.
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
 ms.openlocfilehash: 9aaf75916196f33904a51289d0a49725e042aa9e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58777035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262106"
 ---
 # <a name="example-implementing-a-property-page"></a>Příklad: Implementace stránky vlastností
 
@@ -41,7 +41,7 @@ Abyste mohli absolvovat tento příklad, provedete následující:
 
 Nejprve vytvořte nový projekt knihovny ATL DLL serveru s názvem `ATLPages7`. Teď použijte [Průvodce stránkou vlastností ATL](../atl/reference/atl-property-page-wizard.md) ke generování stránky vlastností. Zadejte na stránce vlastností **krátký název** z **DocProperties** pak přepnout do **řetězce** stránky lze nastavit vlastnosti stránky konkrétní položky, jak je znázorněno v následující tabulce.
 
-|Položka|Hodnota|
+|Položka|Value|
 |----------|-----------|
 |Název|TextDocument|
 |Řetězec doc|Vlastnosti TextDocument VCUE|

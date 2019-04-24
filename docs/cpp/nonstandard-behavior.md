@@ -7,11 +7,11 @@ helpviewer_keywords:
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
 ms.openlocfilehash: b7546914f4cd417f127af56fb7342903989d8330
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245371"
 ---
 # <a name="nonstandard-behavior"></a>Nestandardní chování
 
@@ -75,7 +75,7 @@ Další informace o specifikacích výjimek naleznete v tématu [specifikace vý
 
 ## <a name="chartraitseof"></a>char_traits::eof()
 
-C++ standard uvádí, že [char_traits::eof](../standard-library/char-traits-struct.md#eof) nesmí odpovídat platné `char_type` hodnotu. Kompilátor Visual C++ vynucuje toto omezení pro typ **char**, ale ne pro typ **wchar_t**. To není v souladu s požadavky tabulky 62 v oddíle 12.1.1 specifikace C++ ISO. To zachycuje níže uvedený příklad.
+C++ Standard uvádí, že [char_traits::eof](../standard-library/char-traits-struct.md#eof) nesmí odpovídat platné `char_type` hodnotu. Vizuál C++ kompilátor vynucuje toto omezení pro typ **char**, ale ne pro typ **wchar_t**. To není v souladu s požadavky tabulky 62 v oddíle 12.1.1 specifikace C++ ISO. To zachycuje níže uvedený příklad.
 
 ```cpp
 #include <iostream>

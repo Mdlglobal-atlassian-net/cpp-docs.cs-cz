@@ -50,11 +50,11 @@ helpviewer_keywords:
 - IOleObjectImpl class
 ms.assetid: 59750b2d-1633-4a51-a4c2-6455b6b90c45
 ms.openlocfilehash: 5a815023d340839068873c32f1477d33053b13b4
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58775930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274929"
 ---
 # <a name="ioleobjectimpl-class"></a>Ioleobjectimpl – třída
 
@@ -79,7 +79,7 @@ Vaše třída odvozena od `IOleObjectImpl`.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[IOleObjectImpl::Advise](#advise)|Naváže připojení k advisory pomocí ovládacího prvku.|
 |[IOleObjectImpl::Close](#close)|Změní stav ovládacího prvku ve spuštění načíst.|

@@ -1,17 +1,17 @@
 ---
-title: Přetypování (C + +/ CX)
+title: Přetypování (C++/CX)
 ms.date: 06/19/2018
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
 ms.openlocfilehash: 65d489d14c91b462e5a2bbe8bd60fce2657904a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258210"
 ---
-# <a name="casting-ccx"></a>Přetypování (C + +/ CX)
+# <a name="casting-ccx"></a>Přetypování (C++/CX)
 
-Čtyři operátory různých přetypování se vztahují na typy Windows Runtime: [static_cast – operátor](../cpp/static-cast-operator.md), [dynamic_cast – operátor](../cpp/dynamic-cast-operator.md), **operátoru safe_cast**, a [ reinterpret_cast – operátor](../cpp/reinterpret-cast-operator.md). **safe_cast** a **static_cast** vyvolat výjimku, pokud převod nelze provést; [static_cast – operátor](../cpp/static-cast-operator.md) také provede kontrolu typů za kompilace. **přetypování dynamic_cast** vrátí **nullptr** , pokud se typ převést nepodaří. I když **reinterpret_cast** vrátí nenulovou hodnotu, může být neplatný. Z tohoto důvodu doporučujeme je velmi riskantní používat **reinterpret_cast** Pokud si nejste jisti, že bude úspěšné přetypování. Kromě toho doporučujeme je velmi riskantní používat přetypování ve stylu jazyka C ve vaší C + +/ CX kódu, protože jsou stejné jako **reinterpret_cast**.
+Čtyři operátory různých přetypování se vztahují na typy Windows Runtime: [static_cast – operátor](../cpp/static-cast-operator.md), [dynamic_cast – operátor](../cpp/dynamic-cast-operator.md), **operátoru safe_cast**, a [ reinterpret_cast – operátor](../cpp/reinterpret-cast-operator.md). **safe_cast** a **static_cast** vyvolat výjimku, pokud převod nelze provést; [static_cast – operátor](../cpp/static-cast-operator.md) také provede kontrolu typů za kompilace. **přetypování dynamic_cast** vrátí **nullptr** , pokud se typ převést nepodaří. I když **reinterpret_cast** vrátí nenulovou hodnotu, může být neplatný. Z tohoto důvodu doporučujeme je velmi riskantní používat **reinterpret_cast** Pokud si nejste jisti, že bude úspěšné přetypování. Kromě toho doporučujeme nepoužívat přetypování ve stylu jazyka C ve vaší C++/CX kódu, protože jsou stejné jako **reinterpret_cast**.
 
 Kompilovacími a běhovými také provést implicitní přetypování – například v operace zabalení, když typ hodnoty nebo předdefinovaný typ jsou předány jako argumenty metody parametr, jehož typ je `Object^`. Teoreticky by měla implicitní přetypování nikdy nezpůsobí výjimku za běhu; Pokud kompilátor nemůže provést implicitní převod, vyvolá chybu v době kompilace.
 
@@ -123,4 +123,4 @@ Následující tabulka shrnuje případy, ve kterých je bezpečné používat *
 
 - [Systém typů](../cppcx/type-system-c-cx.md)
 - [Referenční dokumentace jazyka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)
-- [Odkaz na obory názvů](../cppcx/namespaces-reference-c-cx.md)
+- [Referenční informace o oborech názvů](../cppcx/namespaces-reference-c-cx.md)

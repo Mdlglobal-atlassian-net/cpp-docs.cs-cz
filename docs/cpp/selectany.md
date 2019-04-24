@@ -8,15 +8,15 @@ helpviewer_keywords:
 - selectany __declspec keyword
 ms.assetid: 9c353017-5a42-4f50-b741-bd13da1ce84d
 ms.openlocfilehash: a6bf4076dfecbd29035716285f52c0a9faf81067
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267294"
 ---
 # <a name="selectany"></a>selectany
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Říká kompilátoru, že deklarovaná položka globálních dat (proměnná nebo objekt) je vybrána libovolnou sekvencí COMDAT (zabalenou funkcí).
 

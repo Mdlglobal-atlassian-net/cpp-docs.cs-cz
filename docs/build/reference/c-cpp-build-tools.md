@@ -8,11 +8,11 @@ helpviewer_keywords:
 - tools [C++], build
 ms.assetid: 48d9daf4-6bbf-473a-8ce2-bf2923b69f80
 ms.openlocfilehash: e41a6dcb8de4a8608d065cce5bce2595cd96a84f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272842"
 ---
 # <a name="additional-msvc-build-tools"></a>Nástroje pro vytváření dalších MSVC
 
@@ -37,5 +37,5 @@ Visual C++ poskytuje následující nástroje příkazového řádku pro zobraze
 
 [Referenční zdroje k sestavení programu v jazyce C/C++](c-cpp-building-reference.md)<br/>
 [Dekorované názvy](decorated-names.md)<br/>
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)

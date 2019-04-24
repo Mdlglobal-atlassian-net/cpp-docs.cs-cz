@@ -8,11 +8,11 @@ helpviewer_keywords:
 - math routines
 - complex numbers
 ms.openlocfilehash: 12ba858993d3712cbf390288df60faedc602c90a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62290011"
 ---
 # <a name="c-complex-math-support"></a>Podpora komplexní matematiky C
 
@@ -86,7 +86,7 @@ Hlaviček math.h definuje samostatný typ, **struktura _complex**, která se pou
 |[conj, conjf, conjl](../c-runtime-library/reference/conj-conjf-conjl.md)|COMPUTE sdružené komplexního čísla|
 |[cproj, cprojf, cprojl](../c-runtime-library/reference/cproj-cprojf-cprojl.md)|Projekce komplexního čísla do oblasti Riemannův COMPUTE|
 |[creal, crealf, creall](../c-runtime-library/reference/creal-crealf-creall.md)|COMPUTE skutečné součástí komplexního čísla|
-|[Norm a normf, norml](../c-runtime-library/reference/norm-normf-norml1.md)|COMPUTE ve čtverci velikost komplexního čísla|
+|[norm, normf, norml](../c-runtime-library/reference/norm-normf-norml1.md)|COMPUTE ve čtverci velikost komplexního čísla|
 
 ## <a name="operation-functions"></a>Operace funkce
 

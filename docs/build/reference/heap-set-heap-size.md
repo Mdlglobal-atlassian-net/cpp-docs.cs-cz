@@ -12,11 +12,11 @@ helpviewer_keywords:
 - HEAP linker option
 ms.assetid: a3f71927-7f1d-492c-9fdb-dfccb1a043da
 ms.openlocfilehash: 715eaa358d052d4ae646f38f2e784f0235dffccb
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270351"
 ---
 # <a name="heap-set-heap-size"></a>/HEAP (Nastavit velikost haldy)
 
@@ -52,5 +52,5 @@ Tato funkce je také k dispozici prostřednictvím souboru definice modulu s [HE
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)

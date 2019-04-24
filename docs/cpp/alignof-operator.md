@@ -15,17 +15,17 @@ helpviewer_keywords:
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
 ms.openlocfilehash: 96c85db83c133af6f1712baa8597ed3360277854
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258249"
 ---
 # <a name="alignof-operator"></a>__alignof – operátor
 
 C ++ 11 zavádí **alignof** operátor, který vrátí zarovnání, v bajtech zadaného typu. Pro zajištění maximální přenositelnosti používali operátor alignof místo __alignof – operátor specifické pro společnost Microsoft.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Vrátí hodnotu typu `size_t` to znamená požadavek zarovnání typu.
 
@@ -39,12 +39,12 @@ Vrátí hodnotu typu `size_t` to znamená požadavek zarovnání typu.
 
 Příklad:
 
-|Výraz|Hodnota|
+|Výraz|Value|
 |----------------|-----------|
 |**__alignof (char)**|1|
 |**__alignof (krátký)**|2|
 |**__alignof (int).**|4|
-|**__alignof ( \__int64)**|8|
+|**__alignof( \__int64 )**|8|
 |**__alignof (float)**|4|
 |**__alignof (double)**|8|
 |**__alignof (char\* )**|4|

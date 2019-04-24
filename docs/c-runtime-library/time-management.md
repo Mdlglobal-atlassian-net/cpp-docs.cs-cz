@@ -10,11 +10,11 @@ helpviewer_keywords:
 - time functions
 ms.assetid: 93599220-c011-45d5-978f-12182abfdd2f
 ms.openlocfilehash: b763361d2cdd732025e492a25ac63fc01f06c2b8
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62304435"
 ---
 # <a name="time-management"></a>Správa času
 
@@ -47,7 +47,7 @@ Tyto funkce můžete použijte k získání aktuální čas a převést, upravte
 > Ve všech verzích Microsoft C/C++ s výjimkou Microsoft C/C++ version 7.0 a ve všech verzích aplikace Visual C++ funkce čas vrátí aktuální čas jako dobu v sekundách uplynulých od půlnoci na 1. ledna 1970. V Microsoft C/C++ version 7.0 **čas** jako dobu v sekundách uplynulých od půlnoci na 31. prosince 1899 vrátí aktuální čas.
 
 > [!NOTE]
-> Ve verzích Visual C++ a Microsoft C/C++ před Visual C++ 2005 **time_t** byla **dlouhé** **int** (32bitová verze) a proto jej nelze použít pro data za 3:14:07 19. ledna 2038 , UTC. **time_t** je ekvivalentní **__time64_t –** ve výchozím nastavení, ale definování **_USE_32BIT_TIME_T** změny **time_t** k **__time32_t** a vynutí mnoho času funkce pro volání verze, které trvat 32-bit **time_t**. Další informace najdete v tématu [standardní typy](../c-runtime-library/standard-types.md) a komentářů v dokumentaci pro jednotlivé časové funkce.
+> Ve verzích Visual C++ a Microsoft C /C++ před Visual C++ 2005, **time_t** byl **dlouhé** **int** (32bitová verze) a proto jej nelze použít pro data minulé 3:14:07 19. ledna 2038 UTC. **time_t** je ekvivalentní **__time64_t –** ve výchozím nastavení, ale definování **_USE_32BIT_TIME_T** změny **time_t** k **__time32_t** a vynutí mnoho času funkce pro volání verze, které trvat 32-bit **time_t**. Další informace najdete v tématu [standardní typy](../c-runtime-library/standard-types.md) a komentářů v dokumentaci pro jednotlivé časové funkce.
 
 ## <a name="see-also"></a>Viz také:
 

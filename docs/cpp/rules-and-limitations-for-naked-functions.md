@@ -5,11 +5,11 @@ helpviewer_keywords:
 - naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
 ms.openlocfilehash: c813b97b85469165aae892b0a4cce888112e3dc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267369"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Pravidla a omezení pro holé funkce
 
@@ -33,7 +33,7 @@ Na neviditelné funkce se vztahují následující pravidla a omezení:
 
 - **Naked** – klíčové slovo je ignorována při kompilaci s [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
 
-- Pro [__fastcall](../cpp/fastcall.md) nahé funkce, pokaždé, když se v kódu C/C++ na jeden z argumentů registru existuje odkaz, by měl kód prologu uložit hodnoty daného registru do umístění zásobníku pro danou proměnnou. Příklad:
+- Pro [__fastcall](../cpp/fastcall.md) nahé funkce, vždycky, když je odkaz v jazyce C /C++ kódu do jednoho z argumentů registru by měl kód prologu uložit hodnoty daného registru do umístění zásobníku pro danou proměnnou. Příklad:
 
 ```cpp
 // nkdfastcl.cpp

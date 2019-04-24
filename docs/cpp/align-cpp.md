@@ -8,17 +8,17 @@ helpviewer_keywords:
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
 ms.openlocfilehash: 1bfe6e7a4646be8cea622078b4d85f20f458e1c5
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258146"
 ---
 # <a name="align-c"></a>align (C++)
 
 V sadě Visual Studio 2015 a novější, použijte standard C ++ 11 `alignas` specifikátor zarovnání ovládacího prvku. Další informace najdete v tématu [zarovnání](../cpp/alignment-cpp-declarations.md).
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Použití `__declspec(align(#))` pro přesné řízení zarovnání dat definované uživatelem (například statické přidělení nebo automatická datová funkce).
 
@@ -224,7 +224,7 @@ struct S {
 
 Následující tabulka uvádí posun pro každého člena podle různých `/Zp` (nebo #pragma `pack`) hodnotami, zobrazení jejich interakce.
 
-|Proměnná|/Zp1|/Zp2|/Zp4|/ Zp8|
+|Proměnná|/Zp1|/Zp2|/Zp4|/Zp8|
 |--------------|-----------|-----------|-----------|-----------|
 |a|0|0|0|0|
 |b|1|2|2|2|
@@ -244,4 +244,4 @@ Posun objektu je založeno na posunu na předchozí objekt a aktuální nastaven
 
 [__declspec](../cpp/declspec.md)<br/>
 [Přehled konvencí ARM ABI](../build/overview-of-arm-abi-conventions.md)<br/>
-[x64 softwarové konvence](../build/x64-software-conventions.md)
+[x64 – softwarové konvence](../build/x64-software-conventions.md)

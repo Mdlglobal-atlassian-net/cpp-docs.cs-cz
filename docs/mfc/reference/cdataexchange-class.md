@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CDataExchange [MFC], m_pDlgWnd
 ms.assetid: 84ed6113-325d-493e-a75d-223f03a992b8
 ms.openlocfilehash: 0e7a9d429acb1acd72942e5f10ac0815232ddc69
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58776307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253566"
 ---
 # <a name="cdataexchange-class"></a>CDataExchange Class
 
@@ -41,13 +41,13 @@ class CDataExchange
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDataExchange::CDataExchange](#cdataexchange)|Vytvoří `CDataExchange` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDataExchange::Fail](#fail)|Volá se, když se ověřování nezdaří. Obnoví fokus na předchozí ovládací prvek a vyvolá výjimku.|
 |[CDataExchange::PrepareCtrl](#preparectrl)|Připraví zadaný ovládací prvek pro výměnu dat nebo ověření. Použití pro ovládací prvky nonedit.|
@@ -56,7 +56,7 @@ class CDataExchange
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDataExchange::m_bSaveAndValidate](#m_bsaveandvalidate)|Příznak směru DDX a DDV.|
 |[CDataExchange::m_pDlgWnd](#m_pdlgwnd)|Dialogové okno nebo okno, kde data exchange probíhá.|

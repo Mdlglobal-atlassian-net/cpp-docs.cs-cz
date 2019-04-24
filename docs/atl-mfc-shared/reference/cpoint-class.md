@@ -12,11 +12,11 @@ helpviewer_keywords:
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
 ms.openlocfilehash: 85e469e1f52a22917580ce8616aaba5ff57d08ed
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58768026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252616"
 ---
 # <a name="cpoint-class"></a>Cpoint – třída
 
@@ -32,19 +32,19 @@ class CPoint : public tagPOINT
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPoint::CPoint](#cpoint)|Vytvoří `CPoint`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPoint::Offset](#offset)|Přidá hodnoty `x` a `y` členy `CPoint`.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPoint::operator-](#operator_-)|Vrátí rozdíl `CPoint` a velikost nebo negace bod nebo rozdíl velikosti mezi dvěma body nebo offset zápornou velikostí.|
 |[CPoint::operator! =](#operator_neq)|Kontroly pro nerovnost mezi dvěma body.|

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - command input to linker files [C++]
 ms.assetid: bb26fcc5-509a-4620-bc3e-b6c6e603a412
 ms.openlocfilehash: 48ad9423ae35c22a97a873fe6a2a0479c12ab33b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291506"
 ---
 # <a name="link-input-files"></a>Vstupní soubory LINK
 
@@ -54,5 +54,5 @@ ODKAZ používá následující typy vstupních souborů:
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)

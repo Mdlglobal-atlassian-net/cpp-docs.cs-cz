@@ -10,11 +10,11 @@ helpviewer_keywords:
 - distributing files with ATL components
 ms.assetid: 061d5f98-f669-440e-9380-42f017a0f9e8
 ms.openlocfilehash: d44434a36c8d757fb8f79d36a672c4c77de64ade
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278108"
 ---
 # <a name="creating-an-atl-project"></a>Vytvoření projektu ATL
 
@@ -37,5 +37,5 @@ Po vytvoření projektu lze zobrazit vytvořené soubory v **Průzkumníka řeš
 
 ## <a name="see-also"></a>Viz také:
 
-[Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Přidání funkce pomocí Průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Stránky vlastností](../../build/reference/property-pages-visual-cpp.md)

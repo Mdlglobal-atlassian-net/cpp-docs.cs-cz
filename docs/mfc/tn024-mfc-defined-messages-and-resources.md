@@ -10,11 +10,11 @@ helpviewer_keywords:
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
 ms.openlocfilehash: 029177821d37d5d26abe0b39ea1581e8a5ad602b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306022"
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024: Zprávy a prostředky definované knihovnou MFC
 
@@ -172,7 +172,7 @@ Výchozí nástrojů poskytovaných AppWizard je založená na vlastní prostře
 
 Jeden formát privátnímu prostředku knihovny MFC slouží k uložení informace o inicializaci navíc dialogového okna. To zahrnuje počáteční řetězce uložené v poli se seznamem. Formát tohoto prostředku nespouští ručně upravit, ale je zpracována Visual C++.
 
-Visual C++ a tento prostředek RT_DLGINIT nemusí použít související funkce MFC, protože existují API alternativu k použití informací v prostředku. Pomocí Visual C++ je mnohem jednodušší psaní, udržovat a překládat vaší aplikace v dlouhodobém horizontu.
+Vizuální C++ a tento prostředek RT_DLGINIT nemusí používat související funkce MFC, protože rozhraní API alternativu k použití informací v prostředku. Pomocí Visual C++ je mnohem jednodušší psaní, udržovat a překládat vaší aplikace v dlouhodobém horizontu.
 
 Základní struktura RT_DLGINIT prostředků vypadá takto:
 

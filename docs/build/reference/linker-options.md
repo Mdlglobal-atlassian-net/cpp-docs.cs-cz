@@ -10,11 +10,11 @@ helpviewer_keywords:
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
 ms.openlocfilehash: 7ff8ecd6a607aac59fca6d32fa2784e7e3e4268f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301757"
 ---
 # <a name="linker-options"></a>Možnosti linkeru
 
@@ -137,4 +137,4 @@ Další informace najdete v tématu [možnosti propojení Compiler-Controlled](c
 ## <a name="see-also"></a>Viz také:
 
 [Referenční zdroje k sestavení programu v jazyce C/C++](c-cpp-building-reference.md)<br/>
-[Odkaz na MSVC linkeru](linking.md)
+[Referenční zdroje k linkeru MSVC](linking.md)

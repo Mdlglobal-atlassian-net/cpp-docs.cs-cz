@@ -9,15 +9,15 @@ helpviewer_keywords:
 - exporting functions [C++], C functions in C++ executables
 ms.assetid: b51d6e5e-37cf-4c1c-b0bf-fcf188c82f00
 ms.openlocfilehash: b7ba2ed30615efb3b05e71cecf0ea69898feb8ba
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273570"
 ---
 # <a name="exporting-c-functions-for-use-in-c-or-c-language-executables"></a>Export funkcí jazyka C pro použití ve spustitelných souborech jazyka C nebo C++
 
-Pokud máte funkce v knihovně DLL napsané v C, které chcete získat přístup z jazyka C nebo modulu jazyka C++, byste měli použít **__cplusplus** preprocesor makro určit jazyk, který je kompilován a pak tyto deklarace funkce s C-linkage, pokud je používán z modulu jazyka C++. Pokud používáte tento postup a zadejte soubory hlaviček pro vaši knihovnu DLL, lze tyto funkce jazyka C a C++ uživatelé beze změny.
+Pokud máte funkce v knihovně DLL napsané v jazyce C, který chcete získat přístup z jazyka C nebo C++ jazykového modulu, měli byste použít **__cplusplus** preprocesor makro určit jazyk, který je kompilován a pak tyto deklarace Pokud je používán z funkce s C-linkage C++ jazykového modulu. Pokud používáte tento postup a zadejte soubory hlaviček pro vaši knihovnu DLL, lze tyto funkce jazyka C a C++ uživatelé beze změny.
 
 Následující kód ukazuje soubor hlaviček, které mohou využívat klientské aplikace C a C++:
 

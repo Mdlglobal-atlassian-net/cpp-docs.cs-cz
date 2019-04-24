@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _get_doserrno function
 ms.assetid: 7fec7be3-6e39-4181-846b-8ef24489361c
 ms.openlocfilehash: 700f710e6d94f48b03697325bb720dbc539fe04e
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287743"
 ---
 # <a name="getdoserrno"></a>_get_doserrno
 
@@ -63,7 +63,7 @@ Možné hodnoty **_doserrno** jsou definovány v \<errno.h >.
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_get_doserrno**|\<stdlib.h >, \<cstdlib – > (C++)|\<errno.h >, \<cerrno – > (C++)|
+|**_get_doserrno**|\<stdlib.h>, \<cstdlib> (C++)|\<errno.h>, \<cerrno> (C++)|
 
 **_get_doserrno –** je rozšířením společnosti Microsoft. Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

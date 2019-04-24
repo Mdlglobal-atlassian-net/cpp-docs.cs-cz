@@ -4,11 +4,11 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
 ms.openlocfilehash: c051a7d70042456d30bee0ebb2b362c5d05b8e37
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266917"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Formátování řetězců a I/O (moderní verze jazyka C++)
 
@@ -67,6 +67,6 @@ Následující kód ukazuje některé funkce formátování Boost.
 [C++ vás vítá zpět (moderní verze jazyka C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)<br/>
-[\<iostream – >](../standard-library/iostream.md)<br/>
+[\<iostream>](../standard-library/iostream.md)<br/>
 [\<omezení >](../standard-library/limits.md)<br/>
-[\<iomanip >](../standard-library/iomanip.md)
+[\<iomanip>](../standard-library/iomanip.md)

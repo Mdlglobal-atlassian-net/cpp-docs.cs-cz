@@ -35,11 +35,11 @@ helpviewer_keywords:
 - CDBVariant [MFC], m_pstringW
 ms.assetid: de23609c-c560-4b24-bd6b-9d8903fd5b49
 ms.openlocfilehash: 48a2e08d056e3bfef8a06b80ae6607947923cbcb
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253319"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant – třída
 
@@ -55,13 +55,13 @@ class CDBVariant
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDBVariant::CDBVariant](#cdbvariant)|Vytvoří `CDBVariant` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDBVariant::Clear](#clear)|Vymaže `CDBVariant` objektu.|
 
@@ -73,7 +73,7 @@ class CDBVariant
 
 ### <a name="public-union-members"></a>Veřejné členy sjednocení.
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDBVariant::m_boolVal](#m_boolval)|Obsahuje hodnotu typu **BOOL**.|
 |[CDBVariant::m_chVal](#m_chval)|Obsahuje hodnotu typu **unsigned char**.|

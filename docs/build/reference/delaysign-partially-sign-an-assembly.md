@@ -10,11 +10,11 @@ helpviewer_keywords:
 - -DELAYSIGN linker option
 ms.assetid: 15244d30-3ecb-492f-a408-ffe81f38de20
 ms.openlocfilehash: 65585b856627ad9fda5a8f8bfad6ad81fef0f81c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293833"
 ---
 # <a name="delaysign-partially-sign-an-assembly"></a>/DELAYSIGN (částečně podepsané sestavení)
 
@@ -37,7 +37,7 @@ Pokud budete požadovat plně podepsané sestavení, kompilátor vytvoří hodno
 
 Například použití **/delaysign** umožňuje testerovi vložit sestavení do globální mezipaměti. Po otestování je možné plně podepsat sestavení tak, že privátní klíč v sestavení.
 
-Zobrazit [sestavení se silným názvem (podepisování sestavení) (C + +/ CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) a [zpožděné podepisování sestavení](/dotnet/framework/app-domains/delay-sign-assembly) Další informace o podepisování sestavení.
+Zobrazit [sestavení se silným názvem (podepisování sestavení) (C++vyhodnocovací)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) a [zpožděné podepisování sestavení](/dotnet/framework/app-domains/delay-sign-assembly) Další informace o podepisování sestavení.
 
 Další možnosti linkeru, které ovlivňují generování sestavení jsou:
 
@@ -67,5 +67,5 @@ Další možnosti linkeru, které ovlivňují generování sestavení jsou:
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)

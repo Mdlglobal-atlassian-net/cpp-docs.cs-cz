@@ -10,11 +10,11 @@ helpviewer_keywords:
 - referencing objects, declarator syntax
 ms.assetid: 68156f7f-97a0-4b66-b26d-b25ade5e3bd8
 ms.openlocfilehash: aafc582299402eabab2736ac7d07b6c4c397413c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62244211"
 ---
 # <a name="references-c"></a>Odkazy (C++)
 
@@ -22,7 +22,7 @@ Odkaz, jako je ukazatel, uchovává adresu objektu, který je umístěn kdekoli 
 
 Odkazy mohou být deklarovány pomocí následující syntaxe:
 
-> \[*specifikátory třídy úložiště*] \[ *kvalifikátory cv*] *specifikátory typu* \[ *ms modifikátor*]  *deklarátor* \[ **=** *výraz*]**;**
+> \[*storage-class-specifiers*] \[*cv-qualifiers*] *type-specifiers* \[*ms-modifier*] *declarator* \[**=** *expression*]**;**
 
 Žádné platné deklarátoru určující odkaz může být použit. Není-li odkaz na odkaz na funkci nebo typ pole, platí následující zjednodušenou syntaxi:
 

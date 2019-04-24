@@ -35,11 +35,11 @@ helpviewer_keywords:
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
 ms.openlocfilehash: 46b5f15a2f6048745a12b8c3a8c8a63404f71aa2
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252698"
 ---
 # <a name="coledatetime-class"></a>COleDateTime – třída
 
@@ -85,7 +85,7 @@ class COleDateTime
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleDateTime::operator == COleDateTime::operator < atd.](#coledatetime_relational_operators)|Porovnat dva `COleDateTime` hodnoty.|
 |[COleDateTime::operator + COleDateTime::operator-](#operator_add_-)|Sčítání a odečítání `COleDateTime` hodnoty.|
@@ -108,7 +108,7 @@ Je jedním z možných typů [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagva
 
 `DATE` Typ je implementován jako hodnotu s plovoucí desetinnou čárkou. Dny jsou měřená od 30. prosince 1899 půlnoci. V následující tabulce jsou uvedeny některé kalendářních dat a jejich přidružené hodnoty:
 
-|Datum|Hodnota|
+|Datum|Value|
 |----------|-----------|
 |29. prosince 1899 půlnoci|-1.0|
 |29. prosince 1899, dvanáctihodinového 6|-1.25|
@@ -1014,7 +1014,7 @@ Pokud data hodnotu zadanou pomocí parametrů není platná, je nastaven stav to
 
 Tady jsou některé příklady s hodnotami kalendářních dat:
 
-|*nYear*|*nMonth*|*nDay*|Hodnota|
+|*nYear*|*nMonth*|*nDay*|Value|
 |-------------|--------------|------------|-----------|
 |2000|2|29|29. února 2000|
 |1776|7|4|4. července 1776|
@@ -1191,7 +1191,7 @@ Pokud čas, který není platný, hodnoty určené parametry stav tohoto objektu
 
 Tady jsou některé příklady hodnot času:
 
-|*nHour*|*nMin*|*nSec*|Hodnota|
+|*nHour*|*nMin*|*nSec*|Value|
 |-------------|------------|------------|-----------|
 |1|3|3|01:03:03|
 |23|45|0|23:45:00|

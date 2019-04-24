@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2872
 ms.assetid: c619ef97-6e0e-41d7-867c-f8d28a07d553
 ms.openlocfilehash: 103998c7872b683c7405796ee28bd550246ae9bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62257607"
 ---
 # <a name="compiler-error-c2872"></a>Chyba kompilátoru C2872
 
@@ -21,7 +21,7 @@ Kompilátor nemůže určit, který symbol se odkazuje na. Více než jeden symb
 
 C2872 může dojít, pokud obsahuje soubor hlaviček [direktiva using](../../cpp/namespaces-cpp.md#using_directives), a následné záhlaví souboru je zahrnuta, který obsahuje typ, který je také v oboru názvů určenému ve `using` – direktiva. Zadejte `using` direktiv až po hlavičkové soubory jsou určeny pomocí všechny `#include`.
 
-C2872 může dojít v sadě Visual Studio 2013 z důvodu konfliktu mezi `Windows::Foundation::Metadata::Platform` výčtu typu a C + +/ CX definované `Platform` oboru názvů. Chcete-li tento problém vyřešit, postupujte podle těchto kroků:
+C2872 může dojít v sadě Visual Studio 2013 z důvodu konfliktu mezi `Windows::Foundation::Metadata::Platform` typ výčtu a C++/definované CX `Platform` oboru názvů. Chcete-li tento problém vyřešit, postupujte podle těchto kroků:
 
 - Odeberte klauzuli "pomocí oboru názvů Windows::Foundation::Metadata" ze souborů projektu.
 

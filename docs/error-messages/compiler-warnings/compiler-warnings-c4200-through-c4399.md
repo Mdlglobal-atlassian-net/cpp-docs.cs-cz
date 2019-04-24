@@ -1,6 +1,6 @@
 ---
-title: Compiler Warnings C4200 Through C4399
-ms.date: 11/17/2017
+title: Compiler warnings C4200 Through C4399
+ms.date: 04/21/2019
 f1_keywords:
 - C4203
 - C4277
@@ -28,14 +28,14 @@ f1_keywords:
 - C4387
 - C4388
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-ms.openlocfilehash: d79c9c12664f9920f03490b8cb53ec671d3d78a3
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 5a257fa5ac39a9b8f593062d6a670c8d1ce4187f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280577"
 ---
-# <a name="compiler-warnings-c4200-through-c4399"></a>Compiler Warnings C4200 Through C4399
+# <a name="compiler-warnings-c4200-through-c4399"></a>Compiler warnings C4200 Through C4399
 
 Články v této části dokumentace vysvětlují podmnožinu varovné zprávy, které jsou generovány kompilátorem.
 
@@ -66,15 +66,15 @@ ms.locfileid: "58328262"
 |[Upozornění kompilátoru (úroveň 4) C4221](../../error-messages/compiler-warnings/compiler-warning-level-4-c4221.md)|používá se nestandardní rozšíření: '*identifikátor*': Nelze inicializovat pomocí adresy automatické proměnné '*proměnnou*"|
 |[Upozornění kompilátoru (úrovně 1 a 4) C4223](../../error-messages/compiler-warnings/compiler-warning-levels-1-and-4-c4223.md)|používá se nestandardní rozšíření: pole l-hodnoty převeden na ukazatel|
 |[Upozornění kompilátoru (úroveň 1) C4224](../../error-messages/compiler-warnings/compiler-warning-level-1-c4224.md)|používá se nestandardní rozšíření: formální parametr "*identifikátor*" byl předtím definovaný jako typ.|
-|[Kompilátor upozornění (úroveň 1, chyba) C4226](../../error-messages/compiler-warnings/compiler-warning-level-1-c4226.md)|používá se nestandardní rozšíření: '*– klíčové slovo*"je zastaralé klíčové slovo|
+|[Upozornění kompilátoru (úroveň 1, chyba) C4226](../../error-messages/compiler-warnings/compiler-warning-level-1-c4226.md)|používá se nestandardní rozšíření: '*– klíčové slovo*"je zastaralé klíčové slovo|
 |[Upozornění kompilátoru (úroveň 1) C4227](../../error-messages/compiler-warnings/compiler-warning-level-1-c4227.md)|anachronismus: kvalifikátory pro odkaz se ignorují.|
 |[Upozornění kompilátoru (úroveň 1) C4228](../../error-messages/compiler-warnings/compiler-warning-level-1-c4228.md)|používá se nestandardní rozšíření: kvalifikátory za čárkou v seznamu deklarátorů se ignorují.|
 |[Upozornění kompilátoru (úroveň 1) C4229](../../error-messages/compiler-warnings/compiler-warning-level-1-c4229.md)|anachronismus: Modifikátory pro data se ignorují.|
 |[Upozornění kompilátoru (úroveň 1) C4230](../../error-messages/compiler-warnings/compiler-warning-level-1-c4230.md)|anachronismus: Modifikátory/kvalifikátory promíchaný; kvalifikátor se ignoruje.|
 |[Upozornění kompilátoru (úroveň 4) C4232](../../error-messages/compiler-warnings/compiler-warning-level-4-c4232.md)|používá se nestandardní rozšíření: '*identifikátor*': adresa dllimport "*dllimport*" není statická, identita není zaručená.|
-|[Kompilátor upozornění (úroveň 4, chyba) C4233](../../error-messages/compiler-warnings/compiler-warning-level-4-c4233.md)|používá se nestandardní rozšíření: '*– klíčové slovo*"– klíčové slovo pouze v jazyce C++, C není podporována|
-|[Kompilátor upozornění (úroveň 4, chyba) C4234](../../error-messages/compiler-warnings/compiler-warning-level-4-c4234.md)|používá se nestandardní rozšíření: '*– klíčové slovo*"vyhrazená pro budoucí použití – klíčové slovo|
-|[Kompilátor upozornění (úroveň 4, chyba) C4235](../../error-messages/compiler-warnings/compiler-warning-level-4-c4235.md)|používá se nestandardní rozšíření: '*– klíčové slovo*"– klíčové slovo není na této architektuře podporováno.|
+|[Upozornění kompilátoru (úroveň 4, chyba) C4233](../../error-messages/compiler-warnings/compiler-warning-level-4-c4233.md)|používá se nestandardní rozšíření: '*– klíčové slovo*"– klíčové slovo pouze v jazyce C++, C není podporována|
+|[Upozornění kompilátoru (úroveň 4, chyba) C4234](../../error-messages/compiler-warnings/compiler-warning-level-4-c4234.md)|používá se nestandardní rozšíření: '*– klíčové slovo*"vyhrazená pro budoucí použití – klíčové slovo|
+|[Upozornění kompilátoru (úroveň 4, chyba) C4235](../../error-messages/compiler-warnings/compiler-warning-level-4-c4235.md)|používá se nestandardní rozšíření: '*– klíčové slovo*"– klíčové slovo není na této architektuře podporováno.|
 |[Upozornění kompilátoru (úroveň 1) C4237](../../error-messages/compiler-warnings/compiler-warning-level-1-c4237.md)|"*– klíčové slovo*" – klíčové slovo je ještě není podporované, ale vyhrazené pro budoucí použití|
 |[Upozornění kompilátoru (úroveň 4) C4238](../../error-messages/compiler-warnings/compiler-warning-level-4-c4238.md)|používá se nestandardní rozšíření: rvalue třídy se používá jako l-hodnoty.|
 |[Upozornění kompilátoru (úroveň 4) C4239](../../error-messages/compiler-warnings/compiler-warning-level-4-c4239.md)|používá se nestandardní rozšíření: '*token*': převod z '*type1*"do"*type2*"|
@@ -114,7 +114,7 @@ ms.locfileid: "58328262"
 |[Upozornění kompilátoru (úroveň 3) C4287](../../error-messages/compiler-warnings/compiler-warning-level-3-c4287.md)|"*operátor*': unsigned/negative – neshoda konstanty|
 |[Upozornění kompilátoru (úroveň 1) C4288](../../error-messages/compiler-warnings/compiler-warning-level-1-c4288.md)|používá se nestandardní rozšíření: '*proměnnou*': Proměnná ovládacího prvku smyčky deklarovaná ve smyčce for-loop se používá mimo obor smyčky for-loop; je v konfliktu s deklarací ve vnějším oboru|
 |[Upozornění kompilátoru (úroveň 4) C4289](../../error-messages/compiler-warnings/compiler-warning-level-4-c4289.md)|používá se nestandardní rozšíření: '*proměnnou*': Proměnná ovládacího prvku smyčky deklarovaná ve smyčce for-loop se používá mimo obor smyčky for loop|
-|[Upozornění kompilátoru (úroveň 3) C4290](../../error-messages/compiler-warnings/compiler-warning-level-3-c4290.md)|Specifikace výjimky C++ se ignorovala že funkce není not __declspec(nothrow).|
+|[Upozornění kompilátoru (úroveň 3) C4290](../../error-messages/compiler-warnings/compiler-warning-level-3-c4290.md)|C++Specifikace výjimky se ignoruje s výjimkou, že funkce není not __declspec(nothrow).|
 |[Upozornění kompilátoru (úroveň 1) C4291](../../error-messages/compiler-warnings/compiler-warning-level-1-c4291.md)|"*deklarace*': nenašla se žádná odpovídající operátor delete; paměť se neuvolní, pokud při inicializaci dojde k výjimce|
 |[Upozornění kompilátoru (úroveň 1) C4293](../../error-messages/compiler-warnings/compiler-warning-level-1-c4293.md)|"*shift_operator*': záporný nebo moc velký počet operací shift je; nedefinované chování|
 |[Upozornění kompilátoru (úroveň 4) C4295](../../error-messages/compiler-warnings/compiler-warning-level-4-c4295.md)|"*pole*': pole je příliš malá, aby zahrnují ukončujícího znaku null|
@@ -152,7 +152,7 @@ ms.locfileid: "58328262"
 |Upozornění kompilátoru (úroveň 1) C4330|atribut '*atribut*"pro oddíl'*části*" ignorováno|
 |[Upozornění kompilátoru (úroveň 1) C4333](../../error-messages/compiler-warnings/compiler-warning-level-1-c4333.md)|"*shift_operator*': posunutí doprava o moc velkou hodnotu, ztráta dat|
 |[Upozornění kompilátoru (úroveň 3) C4334](../../error-messages/compiler-warnings/compiler-warning-level-3-c4334.md)|"*shift_operator*': výsledek 32bitového posunu se implicitně převedl na 64 bitů (byl 64bitový posun určený?)|
-|[Upozornění kompilátoru C4335](../../error-messages/compiler-warnings/compiler-warning-c4335.md)|Zjistil se formát souborů Mac: převeďte prosím zdrojový soubor do formátu DOS nebo UNIX|
+|[Kompilátor varování C4335](../../error-messages/compiler-warnings/compiler-warning-c4335.md)|Zjistil se formát souborů Mac: převeďte prosím zdrojový soubor do formátu DOS nebo UNIX|
 |[Upozornění kompilátoru (úroveň 4) C4336](../../error-messages/compiler-warnings/compiler-warning-level-4-c4336.md)|Import knihovny typů s křížovými odkazy "*library1*'před importem"*library2*.|
 |[Upozornění kompilátoru (úroveň 4) C4337](../../error-messages/compiler-warnings/compiler-warning-level-4-c4337.md)|Knihovna typů s křížovými odkazy "*library1*"in"*library2*" se importuje automaticky.|
 |Upozornění kompilátoru (úroveň 4) C4338|#pragma *směrnice*: oddíl standard "*části*' se používá|
@@ -166,7 +166,7 @@ ms.locfileid: "58328262"
 |[Upozornění kompilátoru (úroveň 1) C4350](../../error-messages/compiler-warnings/compiler-warning-level-1-c4350.md)|Změna chování: "*member1*"volá namísto"*člen2*.|
 |Upozornění kompilátoru (úroveň 1) C4352|"*identifikátor*': vnitřní funkce už je definovaná|
 |[Upozornění kompilátoru (úroveň 1) C4353](../../error-messages/compiler-warnings/compiler-warning-level-1-c4353.md)|používá se nestandardní rozšíření: Konstanta 0 jako výraz funkce.  Místo toho použijte vnitřní funkce "__noop.|
-|[Upozornění kompilátoru C4355](../../error-messages/compiler-warnings/compiler-warning-c4355.md)upozornění kompilátoru (úroveň 1 a 4) C4355|'this': používá se v seznamu inicializátorů základního člena|
+|[Kompilátor varování C4355](../../error-messages/compiler-warnings/compiler-warning-c4355.md)upozornění kompilátoru (úroveň 1 a 4) C4355|'this': používá se v seznamu inicializátorů základního člena|
 |[Upozornění kompilátoru (úroveň 2) C4356](../../error-messages/compiler-warnings/compiler-warning-level-2-c4356.md)|"*člen*': Statický datový člen nejde inicializovat prostřednictvím odvozené třídy|
 |[Upozornění kompilátoru (úroveň 3) C4357](../../error-messages/compiler-warnings/compiler-warning-level-3-c4357.md)|Param array argument nalezena v seznamu formálních argumentů pro delegáta '*delegovat*"ignoruje při generování"*funkce*"|
 |[Upozornění kompilátoru (úroveň 1) C4358](../../error-messages/compiler-warnings/compiler-warning-level-1-c4358.md)|"*operátor*': návratový typ kombinovaných delegátů není"void"; vrácená hodnota není definována|
@@ -176,7 +176,7 @@ ms.locfileid: "58328262"
 |[Upozornění kompilátoru (úroveň 4) C4365](../../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md)|"*výraz*': převod z '*type1*"do"*type2*", podepsaný/unsigned – neshoda|
 |[Upozornění kompilátoru (úroveň 4) C4366](../../error-messages/compiler-warnings/compiler-warning-level-4-c4366.md)|Výsledek unární "*operátor*" operátor může být zarovnaný.|
 |Upozornění kompilátoru (úroveň 3) C4367|Převod z '*type1*"do"*type2*' může způsobit výjimku kvůli neshodě datového typu|
-|[Upozornění (chyba) kompilátoru C4368](../../error-messages/compiler-warnings/compiler-warning-c4368.md)|nelze definovat '*člen*'jako člen spravovaného'*typ*': smíšené typy nejsou podporovány.|
+|[Kompilátor upozornění C4368 (chyba)](../../error-messages/compiler-warnings/compiler-warning-c4368.md)|nelze definovat '*člen*'jako člen spravovaného'*typ*': smíšené typy nejsou podporovány.|
 |[Upozornění kompilátoru (úroveň 1) C4369](../../error-messages/compiler-warnings/compiler-warning-level-1-c4369.md)|"*enumerátor*': hodnota výčtu '*hodnotu*"nemůže být reprezentovaná jako"*typ*', hodnota je'*nová_hodnota*"|
 |Kompilátor varování C4370|"*classname*': má ke změně rozložení třídy z předchozí verze kompilátoru z důvodu lepšího balení|
 |[Upozornění kompilátoru (úroveň 3) C4371](../../error-messages/compiler-warnings/c4371.md)|"*classname*': může mít ke změně rozložení třídy z předchozí verze kompilátoru z důvodu lepšího balení člena '*člen*.|
@@ -199,9 +199,14 @@ ms.locfileid: "58328262"
 |[Upozornění kompilátoru (úroveň 1) C4391](../../error-messages/compiler-warnings/compiler-warning-level-1-c4391.md)|"*function_signature*': nesprávný návratový typ pro vnitřní funkci, byl očekáván '*typ*.|
 |[Upozornění kompilátoru (úroveň 1) C4392](../../error-messages/compiler-warnings/compiler-warning-level-1-c4392.md)|"*function_signature*': nesprávný počet argumentů pro vnitřní funkci, byl očekáván '*argument_count*" argumenty|
 |[Upozornění kompilátoru (úroveň 1) C4393](../../error-messages/compiler-warnings/compiler-warning-level-1-c4393.md)|"*proměnnou*': const nemá žádný vliv"*literálu*"datový člen; ignorováno|
-|[Upozornění kompilátoru C4394](../../error-messages/compiler-warnings/compiler-warning-c4394.md)|"*funkce*': symbol na úrovni appdomain by neměl být označeny atributem __declspec('dllexport')|
+|[Kompilátor varování C4394](../../error-messages/compiler-warnings/compiler-warning-c4394.md)|"*funkce*': symbol na úrovni appdomain by neměl být označeny atributem __declspec('dllexport')|
 |[Upozornění kompilátoru (úroveň 1) C4395](../../error-messages/compiler-warnings/compiler-warning-level-1-c4395.md)|"*funkce*': členská funkce se bude volat pro kopii datového členu initonly"*člen*.|
 |[Upozornění kompilátoru (úroveň 2) C4396](compiler-warning-level-2-c4396.md)|"*funkce*': specifikátor inline nejde použít, když deklarace friend odkazuje na specializaci šablony funkce|
 |[Upozornění kompilátoru (úroveň 1) C4397](../../error-messages/compiler-warnings/compiler-warning-level-1-c4397.md)|DefaultCharSetAttribute se ignoruje.|
 |[Upozornění kompilátoru (úroveň 3) C4398](../../error-messages/compiler-warnings/compiler-warning-level-3-c4398.md)|"*proměnnou*': globální objekt na úrovni jednotlivého procesu nemusí fungovat správně s více objektů třídy appdomains; zvažte použití možnosti __declspec(appdomain)|
 |[Upozornění kompilátoru (úroveň 1) C4399](../../error-messages/compiler-warnings/compiler-warning-level-1-c4399.md)|"*symbol*': symbol na úrovni jednotlivého procesu nesmí být označené __declspec('dllimport') při kompilaci s parametrem/CLR: pure|
+
+## <a name="see-also"></a>Viz také:
+
+[C /C++ nástroje chyby a upozornění kompilátoru a sestavení](../compiler-errors-1/c-cpp-build-errors.md) \
+[Upozornění kompilátoru C4000 - C5999](compiler-warnings-c4000-c5999.md)

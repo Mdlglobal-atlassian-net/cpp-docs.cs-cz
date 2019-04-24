@@ -3,11 +3,11 @@ title: Atributy v jazyce C++
 ms.date: 06/01/2018
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
 ms.openlocfilehash: 81de2816c208d5ddc879f04d70912c3dddcd7832
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62284744"
 ---
 # <a name="attributes-in-c"></a>Atributy v jazyce C++
 
@@ -77,10 +77,10 @@ Atributy představují standardizované alternativou k rozšíření specifické
 
   V příkladu vyvolává tato upozornění:
 
-  - 26494 (typ pravidla 5: objekt vždy inicializujte.)
+  - 26494 (zadejte pravidlo 5: Vždy objekt inicializujte.)
 
-  - 26485 (rozsah pravidla 3: rozklad pole na ukazatel.)
+  - 26485 (rozsah pravidla 3: Rozklad pole na ukazatel.)
 
-  - 26481 (hranice Rule 1: Nepoužívejte aritmetiku ukazatele. Použijte rozsah.)
+  - 26481 (pravidlo 1 hranice: Nepoužívejte aritmetiku ukazatele. Použijte rozsah.)
 
   První dva upozornění vyvolat při kompilaci tohoto kódu s nástrojem analýza kódu CppCoreCheck nainstalovaná a aktivovaná. Ale třetí upozornění neaktivuje z důvodu atribut. Celý profil můžete potlačit pomocí zápisu [[gsl::suppress(bounds)]] bez zahrnutí příslušné pravidlo číslo. Podle dokumentu C++ Core Guidelines jsou navrženy k usnadnění psaní kódu lepší a bezpečnější. Atribut potlačit usnadňuje Chcete-li vypnout upozornění, pokud nejsou potřebná.

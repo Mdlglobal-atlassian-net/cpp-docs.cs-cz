@@ -12,11 +12,11 @@ helpviewer_keywords:
 - CComHeap class
 ms.assetid: c74183ce-98ae-46fb-b186-93ea4cf0222b
 ms.openlocfilehash: 1a8618bd5146f2906f18cfbaa33894d34598776a
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58770743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259375"
 ---
 # <a name="ccomheap-class"></a>Ccomheap – třída
 
@@ -35,7 +35,7 @@ class CComHeap : public IAtlMemMgr
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComHeap::Allocate](#allocate)|Volejte tuto metodu za účelem přidělení bloku paměti.|
 |[CComHeap::Free](#free)|Volejte tuto metodu pro uvolnění bloku paměti přidělené tomuto správci paměti.|

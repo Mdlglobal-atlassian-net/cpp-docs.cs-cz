@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4430
 ms.assetid: 12efbfff-aa58-4a86-a7d6-2c6a12d01dd3
 ms.openlocfilehash: 1d58efd57433a065f08e4111302f358405e3b9ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62311433"
 ---
 # <a name="compiler-warning-c4430"></a>Upozornění kompilátoru C4430
 
-chybějící specifikátor typu: předpokládá se int Poznámka: C++ nepodporuje typ default int.
+chybějící specifikátor typu: předpokládá se int Poznámka: Jazyk C++ nepodporuje typ default int.
 
 Tuto chybu mohou být generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual C++ 2005: všechny deklarace musíte explicitně zadat typ; je již předpokládá.
 

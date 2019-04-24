@@ -8,15 +8,15 @@ helpviewer_keywords:
 - __declspec keyword [C++], property
 ms.assetid: f3b850ba-bf48-4df7-a1d6-8259d97309ce
 ms.openlocfilehash: ece1016b7a18873dfa477b0f8b6ae4271a0f8001
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301484"
 ---
 # <a name="property-c"></a>property (C++)
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Tento atribut lze použít pro nestatické „virtuální datové členy“ v definici třídy nebo struktury. Kompilátor zpracovává tyto „virtuální datové členy“ jako datové členy změnou jejich odkazů na volání funkce.
 

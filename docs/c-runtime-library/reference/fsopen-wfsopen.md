@@ -36,11 +36,11 @@ helpviewer_keywords:
 - file sharing [C++]
 ms.assetid: 5e4502ab-48a9-4bee-a263-ebac8d638dec
 ms.openlocfilehash: 197a4f690a6626edbfec27ea4abef1999b6cedaf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287693"
 ---
 # <a name="fsopen-wfsopen"></a>_fsopen, _wfsopen
 
@@ -122,14 +122,14 @@ Argument *shflag* je konstantní výraz, který se skládá z jednoho z následu
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tfsopen –**|**_fsopen –**|**_fsopen –**|**_wfsopen –**|
+|**_tfsopen**|**_fsopen**|**_fsopen**|**_wfsopen**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|Volitelná záhlaví|
 |--------------|---------------------|----------------------|
-|**_fsopen –**|\<stdio.h>|\<share.h><br /><br /> Konstanty manifestu pro *shflag* parametru.|
-|**_wfsopen –**|\<stdio.h > nebo \<wchar.h >|\<share.h><br /><br /> Konstanty manifestu pro *shflag* parametru.|
+|**_fsopen**|\<stdio.h>|\<share.h><br /><br /> Konstanty manifestu pro *shflag* parametru.|
+|**_wfsopen**|\<stdio.h > nebo \<wchar.h >|\<share.h><br /><br /> Konstanty manifestu pro *shflag* parametru.|
 
 ## <a name="example"></a>Příklad
 

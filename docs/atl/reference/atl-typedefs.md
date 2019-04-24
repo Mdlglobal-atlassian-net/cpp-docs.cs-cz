@@ -24,11 +24,11 @@ helpviewer_keywords:
 - ATL, typedefs
 ms.assetid: 7dd05baa-3efb-4e3b-af23-793c610f4560
 ms.openlocfilehash: f3db32e85ea9cba1e946db6259c00c621650e969
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260854"
 ---
 # <a name="atl-typedefs"></a>ATL – definice TypeDef
 
@@ -170,7 +170,7 @@ Pomocí `CComGlobalsThreadModel` díky které určení konkrétní třídy model
 
 Kromě `CComGlobalsThreadModel`, knihovna ATL poskytuje **typedef** název [CComObjectThreadModel](#ccomobjectthreadmodel). Třída odkazovaná každou `typedef` závisí na model vláken použít, jak je znázorněno v následující tabulce:
 
-| – definice typedef|Jeden dělení na vlákna|Práce s vlákny typu Apartment|Bezplatné dělení na vlákna|
+|– definice typedef|Jeden dělení na vlákna|Práce s vlákny typu Apartment|Bezplatné dělení na vlákna|
 |-------------|----------------------|-------------------------|--------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
@@ -210,7 +210,7 @@ Pomocí `CComObjectThreadModel` díky které určení konkrétní třídy modelu
 
 Kromě `CComObjectThreadModel`, knihovna ATL poskytuje **typedef** název [CComGlobalsThreadModel](#ccomglobalsthreadmodel). Třída odkazovaná každou **typedef** závisí na model vláken použít, jak je znázorněno v následující tabulce:
 
-| – definice typedef|Jeden dělení na vlákna|Práce s vlákny typu Apartment|Bezplatné dělení na vlákna|
+|– definice typedef|Jeden dělení na vlákna|Práce s vlákny typu Apartment|Bezplatné dělení na vlákna|
 |-------------|----------------------|-------------------------|--------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|

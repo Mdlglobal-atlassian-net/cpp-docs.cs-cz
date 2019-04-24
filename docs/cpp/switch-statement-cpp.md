@@ -11,11 +11,11 @@ helpviewer_keywords:
 - default keyword [C++]
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
 ms.openlocfilehash: 67918b7df747d3bee923da500729e60b4fe04336
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267086"
 ---
 # <a name="switch-statement-c"></a>switch – příkaz (C++)
 
@@ -106,7 +106,7 @@ int main()
 }
 ```
 
-**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): příkaz switch může zavádět a inicializujte proměnnou, jejíž rozsah je omezen na blok příkazu switch:
+**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)):  Příkaz switch může zavádět a inicializujte proměnnou, jejíž rozsah je omezen na blok příkazu switch:
 
 ```cpp
     switch (Gadget gadget(args); auto s = gadget.get_status())
@@ -156,7 +156,7 @@ int main(int argc, char *argv[])
 
 A **přepnout** příkaz mohou být vnořené. V takových případech **případ** nebo **výchozí** popisky přidružují k nejbližšímu **přepnout** příkaz, který je obklopuje.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Microsoft C neomezuje počet případových hodnoty v **přepnout** příkazu. Počet je omezen pouze dostupnou paměť. ANSI C vyžaduje alespoň 257 povolených popisků případu v **přepnout** příkazu.
 

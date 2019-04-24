@@ -31,11 +31,11 @@ helpviewer_keywords:
 - _wtempnam_dbg function
 ms.assetid: e3760bb4-bb01-4808-b689-2c45af56a170
 ms.openlocfilehash: 804c8ad1f17c6ee1df563cafc69ee7aef494d1cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258133"
 ---
 # <a name="tempnamdbg-wtempnamdbg"></a>_tempnam_dbg, _wtempnam_dbg
 
@@ -62,7 +62,7 @@ wchar_t *_wtempnam_dbg(
 
 ### <a name="parameters"></a>Parametry
 
-*adresář*<br/>
+*dir*<br/>
 Cesta v názvu souboru používá, pokud neexistuje žádná proměnná prostředí TMP, nebo pokud TMP není platný adresář.
 
 *prefix*<br/>
@@ -74,7 +74,7 @@ Požadovaný typ bloku paměti: **_CLIENT_BLOCK** nebo **_NORMAL_BLOCK**.
 *Název souboru*<br/>
 Ukazatel na název zdrojového souboru, který požadovanou operaci přidělení nebo **NULL**.
 
-*Číslo řádku*<br/>
+*linenumber*<br/>
 Číslo řádku ve zdrojovém souboru, kde byla požadována operace přidělení nebo **NULL**.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -100,7 +100,7 @@ Chcete-li explicitně volat tyto funkce ve většině případů nepotřebujete.
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_tempnam_dbg –**, **_wtempnam_dbg –**|\<crtdbg.h>|
+|**_tempnam_dbg**, **_wtempnam_dbg**|\<crtdbg.h>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

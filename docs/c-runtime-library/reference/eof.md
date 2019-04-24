@@ -27,11 +27,11 @@ helpviewer_keywords:
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
 ms.openlocfilehash: 1da849c3721d4d83ff0b3166bc18f95728ebf124
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288133"
 ---
 # <a name="eof"></a>_eof
 
@@ -47,7 +47,7 @@ int _eof(
 
 ### <a name="parameters"></a>Parametry
 
-*FD*<br/>
+*fd*<br/>
 Popisovač souboru odkazující na otevřený soubor.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -62,7 +62,7 @@ Popisovač souboru odkazující na otevřený soubor.
 
 |Funkce|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |--------------|---------------------|---------------------|
-|**_eof**|\<IO.h >|\<errno.h>|
+|**_eof**|\<io.h>|\<errno.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
