@@ -454,18 +454,18 @@ helpviewer_keywords:
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
 ms.openlocfilehash: fa1156aa6406f1c34712e845612147a42b753184
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180144"
 ---
 # <a name="reference-concurrency-runtime"></a>Referenční dokumentace (Concurrency Runtime)
 
 Tato část obsahuje referenční informace k modulu Runtime souběžnosti.
 
 > [!Note]
-> Standard jazyka C++ vyhrazuje použití identifikátorů, které začínají znakem podtržítka (_), například pro implementaci knihoven. Nepoužívejte tyto názvy v kódu. Chování kódu elementy, jejichž názvy postupujte podle tohoto konvence není zaručeno a se může změnit v budoucích vydáních. Z těchto důvodů jsou takovéto prvky kódu vynechány v dokumentaci k modulu Runtime souběžnosti.
+> C++ Standard jazyka vyhrazuje použití identifikátorů, které začínají znakem podtržítka (_), například pro implementaci knihoven. Nepoužívejte tyto názvy v kódu. Chování kódu elementy, jejichž názvy postupujte podle tohoto konvence není zaručeno a se může změnit v budoucích vydáních. Z těchto důvodů jsou takovéto prvky kódu vynechány v dokumentaci k modulu Runtime souběžnosti.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
@@ -474,4 +474,4 @@ Obor názvů souběžnosti poskytuje třídy a funkce, které umožňují přís
 
 [obor názvů std](std-namespace.md)
 
-[stdx – obor názvů](stdx-namespace.md)
+[stdx namespace](stdx-namespace.md)

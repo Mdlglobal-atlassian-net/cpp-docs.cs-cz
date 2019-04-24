@@ -9,11 +9,11 @@ helpviewer_keywords:
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
 ms.openlocfilehash: 769720877cc58de530791b268811d7d01adad3e6
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154484"
 ---
 # <a name="friend-c"></a>friend (C++)
 
@@ -51,7 +51,7 @@ friend class F;
 friend F;
 ```
 
-První formulář zavádí novou třídu F, pokud žádná existující třída s tímto názvem nebyla v nejvnitřnější obor názvů. **C ++ 11**: Druhá forma nezavádí nové třídy; můžete použít, pokud třída již byla deklarována, a musí být použit při deklaraci parametru typu šablony nebo definice typu jako přátelská.
+První formulář zavádí novou třídu F, pokud žádná existující třída s tímto názvem nebyla v nejvnitřnější obor názvů. **C++11**: Druhý formulář nezavádí nové třídy; můžete použít, pokud třída již byla deklarována, a musí být použit při deklaraci parametru typu šablony nebo definice typu jako přátelská.
 
 Použití `class friend F` při odkazovaný typ nebyl dosud byla deklarována:
 

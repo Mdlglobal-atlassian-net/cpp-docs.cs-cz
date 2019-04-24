@@ -3,11 +3,11 @@ title: 'Průvodce přenosem: MFC Scribble'
 ms.date: 11/19/2018
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
 ms.openlocfilehash: 436dd27d8c2669e21ddc8a9e453f369cdd14f70c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337447"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Průvodce přenosem: MFC Scribble
 
@@ -51,7 +51,7 @@ V tomto případě problémy se všechna upozornění a sady Visual Studio prove
 
 Před sestavením, zkontrolujeme sada nástrojů platformy, abychom věděli, jaké verze kompilátoru používá systém projektu. V dialogovém okně Vlastnosti projektu v rámci **vlastnosti konfigurace**v **Obecné** kategorie, podívejte se **sada nástrojů platformy** vlastnost. Obsahuje verzi sady Visual Studio a čísla verze nástrojů platformy, které v tomto případě je v141 pro Visual Studio 2017 verze nástrojů. Pokud převedete projekt, který byl původně kompilován s Visual C++ 2010, 2012, 2013 nebo 2015, sada nástrojů se neaktualizuje automaticky do sady nástrojů Visual Studio 2017.
 
-Přechod usnadní do kódování Unicode, otevřete vlastnosti projektu, v části **vlastnosti konfigurace**, zvolte **Obecné** části a vyhledejte **znaková sada** vlastnost. Změnit z **použít vícebajtovou znakovou sadu** k **použít znakovou sadu Unicode**. Účinkem této změny je to teď _UNICODE a UNICODE makra jsou definována a _MBCS není, což můžete ověřit v dialogovém okně Vlastnosti v části **C/C++** kategorií **příkazového řádku** vlastnost.
+Přechod usnadní do kódování Unicode, otevřete vlastnosti projektu, v části **vlastnosti konfigurace**, zvolte **Obecné** části a vyhledejte **znaková sada** vlastnost. Změnit z **použít vícebajtovou znakovou sadu** k **použít znakovou sadu Unicode**. Účinkem této změny je to teď _UNICODE a UNICODE makra jsou definována a _MBCS není, což můžete ověřit v dialogovém okně Vlastnosti v části **C /C++**  kategorií **příkazového řádku** Vlastnost.
 
 ```Output
 /GS /analyze- /W4 /Zc:wchar_t /Zi /Gm- /Od /Fd".\Debug\vc141.pdb" /Zc:inline /fp:precise /D "_AFXDLL" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_UNICODE" /D "UNICODE" /errorReport:prompt /WX /Zc:forScope /Gd /Oy- /MDd /Fa".\Debug\" /EHsc /nologo /Fo".\Debug\" /Fp".\Debug\Scribble.pch" /diagnostics:classic
@@ -87,5 +87,5 @@ Scribble byla aplikace pracovní plochy Windows malý a jednoduchý a se těžko
 
 ## <a name="see-also"></a>Viz také:
 
-[Portování a upgradování: Příklady a případové studie](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[Přenos a upgrade: Příklady a případové studie](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Následující příklad: COM Spy](../porting/porting-guide-com-spy.md)

@@ -67,11 +67,11 @@ helpviewer_keywords:
 - _wcsnicmp function
 ms.assetid: df6e5037-4039-4c85-a0a6-21d4ef513966
 ms.openlocfilehash: 38f5697e0c7fe147a481249888595b7d51cfe93c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209684"
 ---
 # <a name="strnicmp-wcsnicmp-mbsnicmp-strnicmpl-wcsnicmpl-mbsnicmpl"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 
@@ -120,7 +120,7 @@ int _mbsnicmp_l(
 
 ### <a name="parameters"></a>Parametry
 
-*řetězec1*, *řetězec2*<br/>
+*string1*, *string2*<br/>
 Řetězec zakončený hodnotou Null pro srovnání.
 
 *Počet*<br/>
@@ -155,17 +155,17 @@ Všechny tyto funkce ověřují své parametry. Pokud *řetězec1* nebo *řetěz
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsncicmp –**|**_strnicmp**|**_mbsnicmp –**|**_wcsnicmp**|
-|**_tcsnicmp –**|**_strnicmp**|**_mbsnbicmp**|**_wcsnicmp**|
+|**_tcsncicmp**|**_strnicmp**|**_mbsnicmp**|**_wcsnicmp**|
+|**_tcsnicmp**|**_strnicmp**|**_mbsnbicmp**|**_wcsnicmp**|
 |**_tcsncicmp_l**|**_strnicmp_l**|**_mbsnicmp_l**|**_wcsnicmp_l**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_strnicmp –**, **_strnicmp_l –**|\<String.h >|
-|**_wcsnicmp –**, **_wcsnicmp_l –**|\<String.h > nebo \<wchar.h >|
-|**_mbsnicmp –**, **_mbsnicmp_l –**|\<Mbstring.h >|
+|**_strnicmp**, **_strnicmp_l**|\<string.h>|
+|**_wcsnicmp**, **_wcsnicmp_l**|\<String.h > nebo \<wchar.h >|
+|**_mbsnicmp**, **_mbsnicmp_l**|\<Mbstring.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

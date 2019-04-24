@@ -23,11 +23,11 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
 ms.openlocfilehash: e574f535609ec9401bd76badf11fa7e05cc0c619
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58781858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224389"
 ---
 # <a name="colepropertiesdialog-class"></a>Colepropertiesdialog – třída
 
@@ -43,20 +43,20 @@ class COlePropertiesDialog : public COleDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COlePropertiesDialog::COlePropertiesDialog](#colepropertiesdialog)|Vytvoří `COlePropertiesDialog` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COlePropertiesDialog::DoModal](#domodal)|Zobrazí dialogové okno a umožňuje uživatelům provést výběr.|
 |[COlePropertiesDialog::OnApplyScale](#onapplyscale)|Volá se rozhraním, při škálování položka dokumentu.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COlePropertiesDialog::m_gp](#m_gp)|Struktury použité k inicializaci stránku "Obecné" `COlePropertiesDialog` objektu.|
 |[COlePropertiesDialog::m_lp](#m_lp)|Struktury použité k inicializaci stránky na "Propojení" `COlePropertiesDialog` objektu.|

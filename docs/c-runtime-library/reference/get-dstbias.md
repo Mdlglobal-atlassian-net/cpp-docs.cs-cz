@@ -28,11 +28,11 @@ helpviewer_keywords:
 - _get_dstbias function
 ms.assetid: e751358c-1ecc-411b-ae2c-81b2ec54ea45
 ms.openlocfilehash: 61807f854dc9c2f7de6f0acd5bbf4668987ce49e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332374"
 ---
 # <a name="getdstbias"></a>_get_dstbias
 
@@ -65,7 +65,7 @@ Doporučujeme použít tuto funkci místo makro **_dstbias** nebo zastaralé fun
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_get_dstbias**|\<Time.h >|
+|**_get_dstbias**|\<time.h>|
 
 Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::iota [C++]
 - std::partial_sum [C++]
 ms.openlocfilehash: 6df37cf4f6c8afe09f25550d4fc0d9acb553ac52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236547"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;číselné&gt; funkce
 
@@ -49,7 +49,7 @@ Type accumulate(
 *první*<br/>
 Vstupní iterátor adresující první prvek v rozsahu třeba sečítá nebo zkombinován podle zadané binární operace.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor adresující poslední prvek v rozsahu se sčítat ani zkombinován podle zadané binární operace, které je o jednu pozici za posledním prvkem, který je skutečně zahrnut do iterovaného souhrnu.
 
 *Val*<br/>
@@ -189,7 +189,7 @@ OutputIterator adjacent_difference(
 *první*<br/>
 Vstupní iterátor adresující první prvek ve vstupním rozsahu, jehož prvky mají být diferencovány s příslušnými předchůdci nebo ve kterém použije dvojice hodnot jiná zadaná binární operace.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor adresující poslední prvek ve vstupním rozsahu, jehož prvky mají být diferencovány s příslušnými předchůdci nebo ve kterém použije dvojice hodnot jiná zadaná binární operace.
 
 *výsledek*<br/>
@@ -300,7 +300,7 @@ Type inner_product(
 *first1*<br/>
 Vstupní iterátor adresující první prvek v první rozsahu, jehož vnitřní nebo produkt zobecněný vnitřní pomocí druhého rozsahu se vypočítat.
 
-*Příjmení1*<br/>
+*last1*<br/>
 Vstupní iterátor adresující poslední prvek v první rozsahu, jehož vnitřní nebo produkt zobecněný vnitřní pomocí druhého rozsahu se vypočítat.
 
 *first2*<br/>
@@ -437,7 +437,7 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 *první*<br/>
 Vstupní iterátor adresující první prvek v rozsahu pro vyplnění.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor adresující poslední prvek v rozsahu pro vyplnění.
 
 *value*<br/>
@@ -487,7 +487,7 @@ int main(void)
 }
 ```
 
-## <a name="partial_sum"></a>  partial_sum –
+## <a name="partial_sum"></a>  partial_sum
 
 Vypočítá sérii součtů ve vstupním rozsahu od prvního prvku po *můžu*tý prvek a uloží výsledek každého součtu v *můžu*-tém prvku cílového rozsahu nebo vypočítá výsledek zobecněné procedury, kde je operace součtu nahrazena jinou zadanou binární operací.
 
@@ -511,7 +511,7 @@ OutputIterator partial_sum(
 *první*<br/>
 Vstupní iterátor adresující první prvek v rozsahu, u kterého bude proveden částečný součet nebo který bude zkombinován podle zadané binární operace.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor adresující poslední prvek v rozsahu, u kterého bude proveden částečný součet nebo který bude zkombinován podle zadané binární operace, který se nachází o jednu pozici za posledním prvkem, který je skutečně zahrnut do iterovaného souhrnu.
 
 *výsledek*<br/>

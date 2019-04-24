@@ -23,11 +23,11 @@ helpviewer_keywords:
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
 ms.openlocfilehash: b830dc940fa2abb131f70130033d27b057412137
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156905"
 ---
 # <a name="matherr"></a>_matherr
 
@@ -73,7 +73,7 @@ struct _exception
 
 |– Makro|Význam|
 |-|-|
-| **_DOMÉNA** | Chyba argumentu domény |
+| **_DOMAIN** | Chyba argumentu domény |
 | **_SING** | Argument singularity |
 | **_OVERFLOW** | Chyba přetečení rozsahu |
 | **_PLOSS** | Částečné ztrátě významu |
@@ -88,7 +88,7 @@ Výchozí návratová hodnota pro danou chybu **retval**. Pokud změníte návra
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_matherr**|\<Math.h >|
+|**_matherr**|\<math.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

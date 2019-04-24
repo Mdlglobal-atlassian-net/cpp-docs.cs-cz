@@ -12,11 +12,11 @@ helpviewer_keywords:
 - default libraries, omitting names
 ms.assetid: b27d39d0-44d6-498c-84ae-27c1326fee59
 ms.openlocfilehash: cb8083d874abe17add1d27096ebce143d03a04cf
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315544"
 ---
 # <a name="zl-omit-default-library-name"></a>/Zl (vypuštění názvu výchozí knihovny)
 
@@ -70,5 +70,5 @@ void Test() {
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

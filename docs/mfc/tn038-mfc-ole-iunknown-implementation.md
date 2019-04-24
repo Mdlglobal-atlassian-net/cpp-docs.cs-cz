@@ -1,5 +1,5 @@
 ---
-title: 'TN038: MFC-OLE – implementace třídy IUnknown'
+title: 'TN038: Knihovny MFC-OLE – implementace třídy IUnknown'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.mfc.ole
@@ -19,11 +19,11 @@ helpviewer_keywords:
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
 ms.openlocfilehash: 0722ce294e6a088446b8ba681810cf3f7885f122
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305473"
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038: MFC/OLE – implementace třídy IUnknown
 
@@ -570,7 +570,7 @@ INTERFACE_PART(theClass, iid, localClass)
 *theClass*<br/>
 Název třídy, která obsahuje mapu rozhraní.
 
-*identifikátor IID*<br/>
+*iid*<br/>
 `IID` , Který se má namapovat na vloženou třídu.
 
 *localClass*<br/>

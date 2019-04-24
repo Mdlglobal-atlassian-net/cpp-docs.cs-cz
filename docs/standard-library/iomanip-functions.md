@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::setprecision [C++]
 - std::setw [C++]
 ms.openlocfilehash: b5ead8b1000fd6c2708b2450f71da3dc612dc51d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158557"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; funkce
 
@@ -150,7 +150,7 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 *str*<br/>
 Std::string, char\*, řetězcový literál nebo nezpracovaný řetězcový literál nebo celou verzi některé z těchto (např. std::wstring, wchar_t\*).
 
-*Oddělovač*<br/>
+*delimiter*<br/>
 Uživatelem zadaný znak nebo široký znak, použít jako oddělovač pro začátek a konec řetězce.
 
 *Řídicí*<br/>
@@ -332,7 +332,7 @@ T3 setbase(int _Base);
 
 ### <a name="parameters"></a>Parametry
 
-*_Základní*<br/>
+*_Base*<br/>
 Základna čísla.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -362,7 +362,7 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*ch*<br/>
+*Ch*<br/>
 Znak, který se použije k vyplnění mezer v zobrazení zarovnána vpravo.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -653,4 +653,4 @@ l5 = 65536
 
 ## <a name="see-also"></a>Viz také:
 
-[\<iomanip >](../standard-library/iomanip.md)<br/>
+[\<iomanip>](../standard-library/iomanip.md)<br/>

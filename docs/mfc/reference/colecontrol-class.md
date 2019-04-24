@@ -335,11 +335,11 @@ helpviewer_keywords:
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
 ms.openlocfilehash: 30d73d546ee68a25f1e59776020477d038da65e8
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58771497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160312"
 ---
 # <a name="colecontrol-class"></a>COleControl – třída
 
@@ -355,13 +355,13 @@ class COleControl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleControl::COleControl](#colecontrol)|Vytvoří `COleControl` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleControl::AmbientAppearance](#ambientappearance)|Načte aktuální vzhled ovládacího prvku.|
 |[COleControl::AmbientBackColor](#ambientbackcolor)|Vrátí hodnotu vlastnosti BackColor okolí.|
@@ -525,7 +525,7 @@ class COleControl : public CWnd
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleControl::DrawContent](#drawcontent)|Volá se rozhraním, když je potřeba aktualizovat vzhled ovládacího prvku.|
 |[COleControl::DrawMetafile](#drawmetafile)|Volá se rozhraním, když se používá kontextu zařízení metasouboru.|

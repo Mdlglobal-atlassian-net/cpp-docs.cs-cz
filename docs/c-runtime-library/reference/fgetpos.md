@@ -23,11 +23,11 @@ helpviewer_keywords:
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
 ms.openlocfilehash: e213c9830ffe6edf04b12a80828f14cc48f77524
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333927"
 ---
 # <a name="fgetpos"></a>fgetpos
 
@@ -44,15 +44,15 @@ int fgetpos(
 
 ### <a name="parameters"></a>Parametry
 
-*Stream*<br/>
+*stream*<br/>
 Cílový datový proud.
 
-*POS*<br/>
+*pos*<br/>
 Indikátor pozice v úložišti.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěšného ověření **fgetpos** vrátí hodnotu 0. Při selhání, vrátí nenulovou hodnotu a nastaví **errno** na jednu z následujících manifest konstanty (definované v STDIO. H): **EBADF**, což znamená, že zadaný datový proud není platným souborem ukazatel nebo není přístupný, nebo **EINVAL**, což znamená, že *stream* hodnotu nebo hodnotu *pos* je neplatný, třeba když buď je ukazatel s hodnotou null. Pokud *stream* nebo *pos* je **NULL** ukazatel myši, funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md).
+V případě úspěšného ověření **fgetpos** vrátí hodnotu 0. Při selhání, vrátí nenulovou hodnotu a nastaví **errno** na jednu z následujících manifest konstanty (definované v STDIO. H): **EBADF**, což znamená, že zadaný datový proud není platným souborem ukazatel nebo není přístupný, nebo **EINVAL**, což znamená, že *stream* hodnotu nebo hodnotu *pos*je neplatný, třeba když buď je ukazatel s hodnotou null. Pokud *stream* nebo *pos* je **NULL** ukazatel myši, funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Poznámky
 

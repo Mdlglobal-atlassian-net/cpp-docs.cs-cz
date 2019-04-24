@@ -34,11 +34,11 @@ helpviewer_keywords:
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
 ms.openlocfilehash: 1309f991b8251bde7d614aa274d8d2e9da7a8ed3
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333323"
 ---
 # <a name="fopens-wfopens"></a>fopen_s, _wfopen_s
 
@@ -78,9 +78,9 @@ Nula v případě úspěchu; Kód chyby při selhání. Zobrazit [errno _doserrn
 
 |*pFile*|*Název souboru*|*Režim*|Návratová hodnota|Obsah *pFile*|
 |-------------|----------------|------------|------------------|------------------------|
-|**HODNOTU NULL**|Všechny|Všechny|**EINVAL**|beze změny|
-|Všechny|**HODNOTU NULL**|Všechny|**EINVAL**|beze změny|
-|Všechny|Všechny|**HODNOTU NULL**|**EINVAL**|beze změny|
+|**NULL**|Všechny|Všechny|**EINVAL**|beze změny|
+|Všechny|**NULL**|Všechny|**EINVAL**|beze změny|
+|Všechny|Všechny|**NULL**|**EINVAL**|beze změny|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -125,7 +125,7 @@ Pokud *režimu* je **", ccs =**_kódování_**"**, **fopen_s** poprvé pokusí o
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tfopen_s –**|**fopen_s –**|**fopen_s –**|**_wfopen_s**|
+|**_tfopen_s**|**fopen_s**|**fopen_s**|**_wfopen_s**|
 
 Řetězec znaků *režimu* určuje druh přístupu, které jsou požadovány pro soubor, následujícím způsobem.
 
@@ -168,29 +168,29 @@ Další informace o používání textové a binární režimy v kódování Uni
 | **R** | Určuje, že je mezipaměť optimalizovaná pro, ale nikoliv omezená, náhodný přístup z disku. |
 | **T** | Určuje soubor jako dočasný. Pokud je to možné, není zapsán na disk. |
 | **D** | Určuje soubor jako dočasný. Je smazán po uzavření posledního ukazatele na soubor. |
-| **CCS =**_kódování_ | Určuje kódovaného znakovou sadu (jeden z **UTF-8**, **UTF-16LE**, nebo **UNICODE**) pro tento soubor. Ponechte nevyplněné, pokud chcete, aby kódování ANSI. |
+| **ccs=**_encoding_ | Určuje kódovaného znakovou sadu (jeden z **UTF-8**, **UTF-16LE**, nebo **UNICODE**) pro tento soubor. Ponechte nevyplněné, pokud chcete, aby kódování ANSI. |
 
 Platné znaky pro *režimu* řetězec použitý v **fopen_s** a [_fdopen –](fdopen-wfdopen.md) odpovídají *oflag* argumenty použité v [_ Otevřete](open-wopen.md) a [_sopen](sopen-wsopen.md), následujícím způsobem.
 
 |Znaky v *režimu* řetězec|Ekvivalentní *oflag* hodnotu _Otevřít/_sopen|
 |-------------------------------|----------------------------------------------------|
 |**a**|**_O_WRONLY** &#124; **_O_APPEND** (obvykle **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_APPEND **)|
-|**a +**|**_O_RDWR** &#124; **_O_APPEND** (obvykle **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
+|**a+**|**_O_RDWR** &#124; **_O_APPEND** (obvykle **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
 |**r**|**_O_RDONLY**|
-|**r +**|**_O_RDWR**|
+|**r+**|**_O_RDWR**|
 |**w**|**_O_WRONLY** (obvykle **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_TRUNC **)|
-|**w +**|**_O_RDWR** (obvykle **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
+|**w+**|**_O_RDWR** (obvykle **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
 |**b**|**_O_BINARY**|
 |**t**|**_O_TEXT**|
-|**c**|Žádné|
+|**c**|Žádný|
 |**n**|Žádné|
 |**S**|**_O_SEQUENTIAL**|
 |**R**|**_O_RANDOM**|
 |**T**|**_O_SHORTLIVED**|
 |**D**|**_O_TEMPORARY**|
-|**CCS = kódování UNICODE**|**_O_WTEXT**|
-|**CCS = UTF-8**|**_O_UTF8**|
-|**CCS = UTF-16LE**|**_O_UTF16**|
+|**ccs=UNICODE**|**_O_WTEXT**|
+|**ccs=UTF-8**|**_O_UTF8**|
+|**ccs=UTF-16LE**|**_O_UTF16**|
 
 Pokud používáte **rb** režimu, nebudete muset přeneste kód a očekávat spoustu soubor a/nebo o výkon sítě, soubory mapované do paměti Win32 může být také možnost.
 
@@ -198,7 +198,7 @@ Pokud používáte **rb** režimu, nebudete muset přeneste kód a očekávat sp
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**fopen_s –**|\<stdio.h>|
+|**fopen_s**|\<stdio.h>|
 |**_wfopen_s**|\<stdio.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CFormView [MFC], IsInitDlgCompleted
 ms.assetid: a99ec313-36f0-4f28-9d2b-de11de14ac19
 ms.openlocfilehash: 8a0c11352ffab37f50ede5c67aa810fa20e838ed
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58777269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182000"
 ---
 # <a name="cformview-class"></a>CFormView – třída
 
@@ -31,13 +31,13 @@ class CFormView : public CScrollView
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFormView::CFormView](#cformview)|Vytvoří `CFormView` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFormView::IsInitDlgCompleted](#isinitdlgcompleted)|Používán k synchronizaci během inicializace.|
 

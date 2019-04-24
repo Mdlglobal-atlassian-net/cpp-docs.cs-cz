@@ -8,11 +8,11 @@ helpviewer_keywords:
 - NMAKE program
 ms.assetid: 24fab6e3-7e43-4da4-957a-88afbbcf8661
 ms.openlocfilehash: 47836973680fba311fe70cb1a24bb1483ba99a4b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320484"
 ---
 # <a name="nmake-reference"></a>NMAKE – odkaz
 
@@ -40,8 +40,8 @@ Pokud chcete použít NMAKE, musíte ho spustit v okně příkazového řádku p
 
 ## <a name="see-also"></a>Viz také:
 
-[Použití nástrojů MSVC z příkazového řádku](../building-on-the-command-line.md)<br/>
+[Použití sady nástrojů MSVC z příkazového řádku](../building-on-the-command-line.md)<br/>
 [Nástroje pro vytváření dalších MSVC](c-cpp-build-tools.md)<br/>
-[Visual Studio Projects - C++](../creating-and-managing-visual-cpp-projects.md)<br/>
+[Projekty sady Visual Studio – C++](../creating-and-managing-visual-cpp-projects.md)<br/>
 [Ladění v sadě Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)<br/>
 [Referenční zdroje k sestavení programu v jazyce C/C++](c-cpp-building-reference.md)

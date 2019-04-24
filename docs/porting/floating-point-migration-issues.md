@@ -3,15 +3,15 @@ title: Problémy migrace s plovoucí desetinnou čárkou
 ms.date: 05/17/2017
 ms.assetid: 36a1b552-2f2b-4919-bc9d-c17f42434954
 ms.openlocfilehash: a259cf276c0347fda4954b46318cc79be88028ee
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62205202"
 ---
 # <a name="floating-point-migration-issues"></a>Problémy migrace s plovoucí desetinnou čárkou
 
-Někdy při upgradu projektů na novější verzi sady Visual Studio, můžete zjistit, že jste změnili výsledky určitých operací s plovoucí desetinnou čárkou. K tomu obvykle dojde pro jednu ze dvou důvodů: generování kódu změní této lepší využití dostupný procesor a opravy chyb nebo změny algoritmy používané v matematické funkce v knihovně modulu runtime jazyka C (CRT). Obecně platí nové výsledky jsou správné a v mezích určeného standard jazyka. Přečtěte si k podívejte se, co se změnilo, a pokud je důležité, jak získat stejné výsledky vašich funkcí je teď před.
+Někdy při upgradu projektů na novější verzi sady Visual Studio, můžete zjistit, že jste změnili výsledky určitých operací s plovoucí desetinnou čárkou. Obecně se stane pro jednu ze dvou důvodů: Generování provedené změny, které využívají lepší procesoru a opravy chyb a změny na algoritmy používané matematické funkce v knihovně modulu runtime jazyka C (CRT) Obecně platí nové výsledky jsou správné a v mezích určeného standard jazyka. Přečtěte si k podívejte se, co se změnilo, a pokud je důležité, jak získat stejné výsledky vašich funkcí je teď před.
 
 ## <a name="new-math-functions-and-universal-crt-changes"></a>Nový matematické funkce a změny Universal CRT
 

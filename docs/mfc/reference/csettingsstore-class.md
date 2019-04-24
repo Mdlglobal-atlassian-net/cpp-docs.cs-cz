@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
 ms.openlocfilehash: 1e1373da86c1c3fea3b1ddd6ff17f0fac4f76980
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58770392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324184"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 
@@ -43,13 +43,13 @@ class CSettingsStore : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSettingsStore::CSettingsStore](#csettingsstore)|Vytvoří `CSettingsStore` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSettingsStore::Close](#close)|Zavře otevřít klíč registru.|
 |[CSettingsStore::CreateKey](#createkey)|Otevře se zadaným klíčem nebo ji vytvoří, pokud neexistuje.|

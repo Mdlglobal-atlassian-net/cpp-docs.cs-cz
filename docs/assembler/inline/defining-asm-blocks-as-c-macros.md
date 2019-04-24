@@ -7,15 +7,15 @@ helpviewer_keywords:
 - __asm keyword [C++], as C macros
 ms.assetid: 677ba11c-21c8-4609-bba7-cd47312243b0
 ms.openlocfilehash: c48298cf802600995dbbf68885896b6feccb807d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167023"
 ---
 # <a name="defining-asm-blocks-as-c-macros"></a>Definování bloků __asm jako maker v jazyce C
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Nabízí pohodlný způsob, jak vložit sestavení kódu do zdrojového kódu maker v jazyce C, ale vyžadují zvláštní pozornost vzhledem k tomu makro rozšíří na jednoho logického řádku. Chcete-li vytvořit bezproblémovou makra, postupovat podle těchto pravidel:
 

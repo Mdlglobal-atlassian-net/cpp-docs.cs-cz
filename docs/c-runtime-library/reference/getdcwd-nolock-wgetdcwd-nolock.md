@@ -35,11 +35,11 @@ helpviewer_keywords:
 - directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
 ms.openlocfilehash: 47938c387ba30d7bcba038145c2dff9c7b59b750
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157705"
 ---
 # <a name="getdcwdnolock-wgetdcwdnolock"></a>_getdcwd_nolock, _wgetdcwd_nolock
 
@@ -65,13 +65,13 @@ wchar_t *_wgetdcwd_nolock(
 
 ### <a name="parameters"></a>Parametry
 
-*Jednotky*<br/>
+*drive*<br/>
 Disková jednotka.
 
 *Vyrovnávací paměti*<br/>
 Umístění úložiště pro danou cestu.
 
-*MAXLEN*<br/>
+*maxlen*<br/>
 Maximální délka cesty ve znacích: **char** pro **_getdcwd –** a **wchar_t** pro **_wgetdcwd –**.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -86,13 +86,13 @@ Zobrazit [_getdcwd – _wgetdcwd –](getdcwd-wgetdcwd.md).
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tgetdcwd_nolock –**|**_getdcwd_nolock**|**_getdcwd_nolock**|**_wgetdcwd_nolock**|
+|**_tgetdcwd_nolock**|**_getdcwd_nolock**|**_getdcwd_nolock**|**_wgetdcwd_nolock**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_getdcwd_nolock**|\<Direct.h >|
+|**_getdcwd_nolock**|\<direct.h>|
 |**_wgetdcwd_nolock**|\<Direct.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

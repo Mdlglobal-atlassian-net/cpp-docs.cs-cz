@@ -31,11 +31,11 @@ helpviewer_keywords:
 - CMFCHeaderCtrl [MFC], OnFillBackground
 ms.assetid: 2f5fbf7b-5c75-42db-9216-640b1628f777
 ms.openlocfilehash: 86674e086da482e59b2711f5ba9154848ff05a6f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218382"
 ---
 # <a name="cmfcheaderctrl-class"></a>Cmfcheaderctrl – třída
 
@@ -116,7 +116,7 @@ CMFCHeaderCtrl::CMFCHeaderCtrl()
 
 Tento konstruktor inicializuje následující proměnné členů na zadané hodnoty:
 
-|Členské proměnné|Hodnota|
+|Členské proměnné|Value|
 |---------------------|-----------|
 |`m_bIsMousePressed`|FALSE|
 |`m_bMultipleSort`|FALSE|
@@ -160,7 +160,7 @@ int GetColumnState(int iColumn) const;
 
 Hodnota, která indikuje stav řazení pro určený sloupec. V následující tabulce jsou uvedeny možné hodnoty:
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |-1|Seřazené v sestupném pořadí.|
 |0|Nejsou seřazené.|

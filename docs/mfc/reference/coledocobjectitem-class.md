@@ -25,11 +25,11 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
 ms.openlocfilehash: 382960b4dc4dcfa61c836a87044dd14585756174
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62225510"
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem Class
 
@@ -45,13 +45,13 @@ class COleDocObjectItem : public COleClientItem
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleDocObjectItem::COleDocObjectItem](#coledocobjectitem)|Vytvoří `COleDocObject` položky.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleDocObjectItem::DoDefaultPrinting](#dodefaultprinting)|Vytiskne dokument aplikace typu kontejner pomocí výchozích nastavení tiskárny.|
 |[COleDocObjectItem::ExecCommand](#execcommand)|Provede příkaz specifikovaných uživatelem.|
@@ -151,7 +151,7 @@ Jedinečný identifikátor skupiny příkazů. Ve výchozím nastavení, NULL, k
 
 Vrátí hodnotu S_OK v případě úspěchu; v opačném případě vrátí jednu z následující kódy chyb.
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |E_UNEXPECTED, JE-|Došlo k neočekávané chybě.|
 |E_FAIL|Došlo k chybě.|

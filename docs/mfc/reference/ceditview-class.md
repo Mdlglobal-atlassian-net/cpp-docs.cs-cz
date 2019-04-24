@@ -41,11 +41,11 @@ helpviewer_keywords:
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
 ms.openlocfilehash: 3ab276e83e8642aa5de2fd96305cb6d7b648fc40
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58781234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164171"
 ---
 # <a name="ceditview-class"></a>Ceditview – třída
 
@@ -61,13 +61,13 @@ class CEditView : public CCtrlView
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CEditView::CEditView](#ceditview)|Vytvoří objekt typu `CEditView`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CEditView::FindText](#findtext)|Vyhledá řetězec v textu.|
 |[CEditView::GetBufferLength](#getbufferlength)|Získá délku vyrovnávací paměti pro znaky.|
@@ -83,7 +83,7 @@ class CEditView : public CCtrlView
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CEditView::OnFindNext](#onfindnext)|Najít další výskyty textového řetězce.|
 |[CEditView::OnReplaceAll](#onreplaceall)|Nový řetězec nahradí všechny výskyty daného řetězce.|
@@ -92,7 +92,7 @@ class CEditView : public CCtrlView
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CEditView::dwStyleDefault](#dwstyledefault)|Výchozí styl pro objekty typu `CEditView`.|
 

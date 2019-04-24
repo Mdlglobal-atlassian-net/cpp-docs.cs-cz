@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::num_put [C++], put
 ms.assetid: 36c5bffc-8283-4201-8ed4-78c4d81f8a17
 ms.openlocfilehash: 2ede0ccd85f116f300939c819ae8209435da72b7
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223555"
 ---
 # <a name="numput-class"></a>num_put – třída
 
@@ -183,7 +183,7 @@ Nakonec:
 
 - Pokud **iosbase**. **příznaky** & **ios_base –::**[showbase](../standard-library/ios-functions.md#showbase) nenulovou hodnotu, je příznak **#** je přidáno jako předpona specifikace převodu.
 
-Formát celé výstup pole Další závisí [omezující vlastnost národního prostředí](../standard-library/locale-class.md#facet_class)**fac** vrácený voláním [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct – ](../standard-library/numpunct-class.md) \< **Elem**> ( **iosbase**. [getloc –](../standard-library/ios-base-class.md#getloc)). Konkrétně:
+Formát celé výstup pole Další závisí [omezující vlastnost národního prostředí](../standard-library/locale-class.md#facet_class)**fac** vrácený voláním [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct – ](../standard-library/numpunct-class.md) \< **Elem**> ( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)). Konkrétně:
 
 - **FAC**. [seskupení](../standard-library/numpunct-class.md#grouping) určuje způsob seskupení číslic vlevo od desetinné čárky
 
@@ -317,9 +317,9 @@ Možné hodnoty parametru *_Refs* parametrů a jejich význam:
 
 - 0: Životnost objektu se spravuje přes národní prostředí, které je obsahují.
 
-- 1: doba života objektu je nutné ručně spravovat.
+- 1: Doba života objektu se musí spravovat ručně.
 
-- \> 1: tyto hodnoty nejsou definovány.
+- \> 1: Tyto hodnoty nejsou definovány.
 
 Žádné přímé příklady je to možné, protože destruktor je chráněn.
 
@@ -381,7 +381,7 @@ iter_type put(
 
 ### <a name="parameters"></a>Parametry
 
-*cíl*<br/>
+*dest*<br/>
 Iterátor adresující první prvek vložený řetězec.
 
 *_Iosbase*<br/>

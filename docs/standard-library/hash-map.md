@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - hash_map header
 ms.openlocfilehash: 5a7ea891a314d69b8bc3378edce9fa0de2d89ace
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159493"
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
@@ -30,8 +30,8 @@ Definuje kontejner šablony třídy hash_map a hash_multimap – a jejich podpů
 
 |Hash_map – verze|Hash_multimap – verze|Popis|
 |-----------------------|----------------------------|-----------------|
-|[Operator! = (hash_map)](hash-map-operators.md#op_neq)|[Operator!=(hash_multimap)](hash-map-operators.md#op_neq_mm)|Testuje, zda je objekt hash_map nebo hash_multimap na levé straně operátoru není roven objektu hash_map nebo hash_multimap na pravé straně.|
-|[Operator == (hash_map)](hash-map-operators.md#op_eq_eq)|[Operator == (hash_multimap)](hash-map-operators.md#op_eq_eq_mm)|Testuje, zda hash_map nebo hash_multimap objekt na levé straně operátoru roven objektu hash_map nebo hash_multimap na pravé straně.|
+|[Operator! = (hash_map)](hash-map-operators.md#op_neq)|[operator!=(hash_multimap)](hash-map-operators.md#op_neq_mm)|Testuje, zda je objekt hash_map nebo hash_multimap na levé straně operátoru není roven objektu hash_map nebo hash_multimap na pravé straně.|
+|[Operator == (hash_map)](hash-map-operators.md#op_eq_eq)|[operator== (hash_multimap)](hash-map-operators.md#op_eq_eq_mm)|Testuje, zda hash_map nebo hash_multimap objekt na levé straně operátoru roven objektu hash_map nebo hash_multimap na pravé straně.|
 
 ### <a name="specialized-template-functions"></a>Specializované funkce šablon
 

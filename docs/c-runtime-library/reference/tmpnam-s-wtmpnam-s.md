@@ -31,11 +31,11 @@ helpviewer_keywords:
 - wtmpnam_s function
 ms.assetid: e70d76dc-49f5-4aee-bfa2-f1baa2bcd29f
 ms.openlocfilehash: 9bf994d16362ef461d8d25d72466721ba9a5890f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155534"
 ---
 # <a name="tmpnams-wtmpnams"></a>tmpnam_s, _wtmpnam_s
 
@@ -79,7 +79,7 @@ Obě tyto funkce vrátí 0 v případě úspěchu nebo číslo chyby při selhá
 |||||
 |-|-|-|-|
 |*str*|*sizeInChars*|**Návratová hodnota**|**Obsah**  *str* |
-|**HODNOTU NULL**|Všechny|**EINVAL**|Nezměněno|
+|**NULL**|Všechny|**EINVAL**|Nezměněno|
 |Není **NULL** (odkazuje na platný paměti)|příliš krátký|**ERANGE**|Nezměněno|
 
 Pokud *str* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tyto funkce nastaví **errno** k **EINVAL** a vrátit **EINVAL**.

@@ -312,11 +312,11 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
 ms.openlocfilehash: 523e89859a6726bdff1dd27975077263abe481c4
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58775624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218360"
 ---
 # <a name="cmfctoolbar-class"></a>Cmfctoolbar – třída
 
@@ -334,14 +334,14 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCToolBar::CMFCToolBar`|Výchozí konstruktor.|
 |`CMFCToolBar::~CMFCToolBar`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBar::AddBasicCommand](#addbasiccommand)|Přidá příkaz nabídky do seznamu příkazů, které se zobrazují vždy, když uživatel otevře nabídku.|
 |[CMFCToolBar::AddCommandUsage](#addcommandusage)|Zvýší o jedna čítač, který je přidružen daný příkaz.|
@@ -493,7 +493,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBar::AllowShowOnList](#allowshowonlist)|Určuje, zda panel nástrojů se zobrazí v seznamu v **panely nástrojů** podokně **vlastní** dialogové okno.|
 |[CMFCToolBar::CalcMaxButtonHeight](#calcmaxbuttonheight)|Vypočítá maximální výšku tlačítka na panelu nástrojů.|
@@ -504,7 +504,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ### <a name="data-members"></a>Datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBar::m_bDontScaleImages](#m_bdontscaleimages)|Určuje, jestli se má změnit velikost nebo obrázky panelu nástrojů nejsou v režimu vysoké rozlišení DPI.|
 |[CMFCToolBar::m_dblLargeImageRatio](#m_dbllargeimageratio)|Určuje poměr mezi rozměr (výšky a šířky) velké obrázky a dimenze běžných bitových kopií.|

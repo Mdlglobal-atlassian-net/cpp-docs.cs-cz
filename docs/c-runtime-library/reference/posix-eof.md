@@ -21,12 +21,12 @@ helpviewer_keywords:
 - eof function
 ms.assetid: 2e8fb55b-b736-46a6-be5e-15f8876a714f
 ms.openlocfilehash: d596949a2d8b251c6b4ceec552871ad29737eecf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155867"
 ---
 # <a name="eof"></a>eof
 
-Tato funkce POSIX je zastaralá. Použít splňující podmínky ISO C++ [_eof –](eof.md) místo.
+Tato funkce POSIX je zastaralá. Použít bitovou kopii ISO C++ splňující podmínky [_eof –](eof.md) místo.

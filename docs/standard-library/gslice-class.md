@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
 ms.openlocfilehash: bee6fec3e09f7c5758112ba8b0c171a300797f9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159467"
 ---
 # <a name="gslice-class"></a>gslice – třída
 
@@ -43,15 +43,15 @@ Operace s valarrays zaručeno pouze v případě, že zdrojové a cílové podmn
 
 |Konstruktor|Popis|
 |-|-|
-|[gslice –](#gslice)|Definuje podmnožinu `valarray` , který se skládá z více částí `valarray` všechny začínají na zadaný prvek.|
+|[gslice](#gslice)|Definuje podmnožinu `valarray` , který se skládá z více částí `valarray` všechny začínají na zadaný prvek.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
 |[Velikost](#size)|Vyhledá pole hodnoty určující počet prvků v obecné řezu `valarray`.|
-|[Spuštění](#start)|Vyhledá počáteční index obecné řezu `valarray`.|
-|[STRIDE](#stride)|Vyhledá vzdálenost mezi prvky v obecné řezu `valarray`.|
+|[start](#start)|Vyhledá počáteční index obecné řezu `valarray`.|
+|[stride](#stride)|Vyhledá vzdálenost mezi prvky v obecné řezu `valarray`.|
 
 ## <a name="requirements"></a>Požadavky
 

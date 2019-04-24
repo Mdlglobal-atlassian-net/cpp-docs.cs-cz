@@ -403,11 +403,11 @@ helpviewer_keywords:
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
 ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62173548"
 ---
 # <a name="cdc-class"></a>CDC – třída
 
@@ -3177,7 +3177,7 @@ Určuje znak, pro který má být vrácen informace.
 *nFormat*<br/>
 Určuje formát, ve kterém funkce vrací informace. Může být jeden z následujících hodnot nebo 0:
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |GGO_BITMAP|Vrátí piktogram rastrového obrázku. Pokud funkce vrátí, vyrovnávací paměti, na které odkazuje *lpBuffer* obsahuje rastrový obrázek 1 bitů na pixel jejíž řádky start na hranicích dvojitého slova.|
 |GGO_NATIVE|Vrátí datových bodů křivky v nativním formátu rasterizéru pomocí jednotek zařízení. Je-li tato hodnota zadána, některou transformaci podle *lpmat2* se ignoruje.|
@@ -6322,7 +6322,7 @@ int SetStretchBltMode(int nStretchMode);
 *nStretchMode*<br/>
 Určuje režim roztažení. Může být některý z následujících hodnot:
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |BLACKONWHITE|Provádí operaci logickou a použití hodnot barvy pro odstraněny a stávající pixelů. Pokud bitmapy monochromatický rastrový obrázek, tento režim zachovává černé pixelů za cenu bílé pixelů.|
 |COLORONCOLOR|Odstraní pixely. Tento režim odstraní odstraněny všechny řádky v pixelech bez pokusu o zachování svých informací.|

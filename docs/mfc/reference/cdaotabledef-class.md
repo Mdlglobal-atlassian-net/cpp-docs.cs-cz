@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
 ms.openlocfilehash: 485fe3533916e5e59bc87084f58acfb37368ac32
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62151212"
 ---
 # <a name="cdaotabledef-class"></a>Cdaotabledef – třída
 
@@ -318,7 +318,7 @@ Ukazatel na řetězcový výraz určující název tohoto pole.
 *nType*<br/>
 Hodnota označující datový typ pole. Toto nastavení může být jedna z těchto hodnot:
 
-|Typ|Velikost (bajty)|Popis|
+|Type|Velikost (bajty)|Popis|
 |----------|--------------------|-----------------|
 |`dbBoolean`|1 bajt|BOOL|
 |`dbByte`|BYTE|
@@ -876,7 +876,7 @@ V následující tabulce jsou uvedeny typy databáze a jejich odpovídající sp
 |HTML Import|"HTML Import;"|" `drive`:\\\ *cesta*\ *filename*"|
 |HTML Export|"Export ve formátu HTML;"|" `drive`:\\\ *cesta*"|
 |Text|"Text";|"jednotka:\\\path"|
-|ODBC|"ODBC; DATABÁZE = `database`; UID = *uživatele*; PWD = *heslo*; Název zdroje dat = *datasourcename;* LOGINTIMEOUT = *sekund;*" (To nemusí být úplný připojovací řetězec pro všechny servery, je jenom pro příklad. Je velmi důležité, abyste adresní prostory mezi parametry.)|Žádná|
+|ODBC|"ODBC; DATABÁZE = `database`; UID = *uživatele*; PWD = *heslo*; Název zdroje dat = *datasourcename;* LOGINTIMEOUT = *sekund;*" (To nemusí být úplný připojovací řetězec pro všechny servery, je jenom pro příklad. Je velmi důležité, abyste adresní prostory mezi parametry.)|Žádné|
 |Exchange|"Exchange;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE = {0 &AMP;#124; 1};]<br /><br /> [PROFILE= *profile*;]<br /><br /> [PWD= *password*;]<br /><br /> [DATABASE= `database`;]"|*"jednotka*:\\\ *cesta*\\\ *filename*. MDB"|
 
 > [!NOTE]

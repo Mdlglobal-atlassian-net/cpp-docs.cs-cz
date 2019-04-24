@@ -13,11 +13,11 @@ helpviewer_keywords:
 - task_continuation_context class
 ms.assetid: 1fb5a76a-3682-45c2-a615-8b6b527741f0
 ms.openlocfilehash: 5d7d92fcd1bb00513b9e05030afa56726e87183b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212854"
 ---
 # <a name="taskcontinuationcontext-class"></a>task_continuation_context – třída
 
@@ -73,7 +73,7 @@ Aktuální kontext vlákna modulu Windows Runtime. Vrátí prázdný task_contin
 
 Hodnota vrácená `get_current_winrt_context` slouží k oznámení modulu Runtime, že pokračování má být spuštěno v modelu objektu apartment zachyceném kontextu (STA vs MTA) bez ohledu na to, zda je předchozí úloha vědoma objektu apartment. Úkol je úkol, který rozbalí Windows Runtime komplexu `IAsyncInfo` rozhraní nebo úloha, která je potomkem takového úkolu.
 
-Tato metoda je podobný `use_current` metody, ale dostupná je i nativní kód C++ bez C + +/ CX rozšíření podpory. Je určena pro použití zkušení uživatelé psaní C + +/ CX bez ohledu na kód knihovny pro nativní a volající modulu Windows Runtime. Pokud potřebujete tuto funkci, doporučujeme `use_current` metodu, která je dostupná jenom pro C + +/ CX klientů.
+Tato metoda je podobný `use_current` metody, ale je také k dispozici na nativní C++ kódu bez C++/CX rozšíření podpory. Je určena pro použití zkušení uživatelé psaní C++/CX-agnostic kód knihovny pro nativní a volající modulu Windows Runtime. Pokud potřebujete tuto funkci, doporučujeme `use_current` metodu, která je dostupná jenom pro C++/CX klientů.
 
 ##  <a name="use_arbitrary"></a> use_arbitrary –
 

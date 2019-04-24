@@ -24,12 +24,12 @@ helpviewer_keywords:
 - strset function
 ms.assetid: 20e132d8-4b6c-4341-b1eb-8e19b46047e2
 ms.openlocfilehash: 352e2f0591c74b98ade309759b5d286c597fb624
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223193"
 ---
 # <a name="strset-wcsset"></a>strset, wcsset
 
-Tyto funkce jsou zastaralé. Použít splňující podmínky ISO C++ [_strset – _strset_l –, _wcsset –, _wcsset_l –, _mbsset –, _mbsset_l –](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md) nebo s rozšířeným zabezpečením [_strset_s – _strset_s_l –, _wcsset_s –, _wcsset_s_l –, _mbsset_s –, _mbsset_s_l –](strset-s-strset-s-l-wcsset-s-wcsset-s-l-mbsset-s-mbsset-s-l.md) místo.
+Tyto funkce jsou zastaralé. Použít bitovou kopii ISO C++ splňující podmínky [_strset – _strset_l –, _wcsset –, _wcsset_l –, _mbsset –, _mbsset_l –](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md) nebo s rozšířeným zabezpečením [_strset_s – _strset_s_l –, _wcsset_s –, _wcsset_s_l –, _mbsset_s –, _mbsset_s_l –](strset-s-strset-s-l-wcsset-s-wcsset-s-l-mbsset-s-mbsset-s-l.md) Místo toho.

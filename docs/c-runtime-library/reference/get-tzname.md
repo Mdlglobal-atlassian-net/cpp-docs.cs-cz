@@ -25,11 +25,11 @@ helpviewer_keywords:
 - get_tzname function
 ms.assetid: df0065ff-095f-4237-832c-2fe9ab913875
 ms.openlocfilehash: c173832efb866eed133a908b5f2b72266fd3798a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332037"
 ---
 # <a name="gettzname"></a>_get_tzname
 
@@ -78,9 +78,9 @@ Pokud *timeZoneName* je **NULL**, nebo *sizeInBytes* je nula nebo menší než n
 
 |*pReturnValue*|*timeZoneName*|*sizeInBytes*|*index*|Návratová hodnota|Obsah *timeZoneName*|
 |--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|
-|velikost TZ název|**HODNOTU NULL**|0|0 nebo 1|0|Nezměněno|
+|velikost TZ název|**NULL**|0|0 nebo 1|0|Nezměněno|
 |velikost TZ název|Všechny|> 0|0 nebo 1|0|Název – TZ|
-|Nezměněno|**HODNOTU NULL**|> 0|Všechny|**EINVAL**|Nezměněno|
+|Nezměněno|**NULL**|> 0|Všechny|**EINVAL**|Nezměněno|
 |Nezměněno|Všechny|nula|Všechny|**EINVAL**|Nezměněno|
 |Nezměněno|Všechny|> 0|> 1|**EINVAL**|Nezměněno|
 
@@ -136,7 +136,7 @@ The current Daylight standard time zone name is PDT.
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_get_tzname**|\<Time.h >|
+|**_get_tzname**|\<time.h>|
 
 Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

@@ -34,11 +34,11 @@ helpviewer_keywords:
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
 ms.openlocfilehash: 9d874321418854a703886eb80ee23ac1cba57fa4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223088"
 ---
 # <a name="strtime-wstrtime"></a>_strtime, _wstrtime
 
@@ -84,13 +84,13 @@ V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají nověj
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tstrtime –**|**_strtime**|**_strtime**|**_wstrtime**|
+|**_tstrtime**|**_strtime**|**_strtime**|**_wstrtime**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_strtime**|\<Time.h >|
+|**_strtime**|\<time.h>|
 |**_wstrtime**|\<Time.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

@@ -47,11 +47,11 @@ helpviewer_keywords:
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
 ms.openlocfilehash: 1a2f928d826b70b788220130f69c53cc351b4910
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157280"
 ---
 # <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 
@@ -112,17 +112,17 @@ Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že pou�
 
 |Rutina|Testovací podmínka|Příklad znakové stránky 932|
 |-------------|--------------------|---------------------------|
-|**_ismbcalnum –**, **_ismbcalnum_l –**|Alfanumerické znaky|Vrátí nenulovou hodnotu právě tehdy *c* je jednobajtové znázornění písmena anglické abecedy ASCII: viz příklady pro **_ismbcdigit –** a **_ismbcalpha –**.|
-|**_ismbcalpha –**, **_ismbcalpha_l –**|Abecedy|Vrátí nenulovou hodnotu právě tehdy *c* je jednobajtové znázornění písmena anglické abecedy ASCII: 0x41 < =*c*< = 0x5A nebo 0x61 < =*c*< = 0x7A; nebo písma katakana písmena: 0xA6 < =*c*< = 0xDF.|
-|**_ismbcdigit –**, **_ismbcdigit –**|číslice|Vrátí nenulovou hodnotu právě tehdy *c* je jednobajtové znázornění číslic ASCII: 0x30 < =*c*< = 0x39.|
+|**_ismbcalnum**, **_ismbcalnum_l**|Alfanumerické znaky|Vrátí nenulovou hodnotu právě tehdy *c* je jednobajtové znázornění písmena anglické abecedy ASCII: Viz příklady pro **_ismbcdigit –** a **_ismbcalpha –**.|
+|**_ismbcalpha**, **_ismbcalpha_l**|Abecedy|Vrátí nenulovou hodnotu právě tehdy *c* je jednobajtové znázornění písmena anglické abecedy ASCII: 0x41 < =*c*< = 0x5A nebo 0x61 < =*c*< = 0x7A; nebo písma katakana písmena: 0xA6<=*c*<=0xDF.|
+|**_ismbcdigit**, **_ismbcdigit**|číslice|Vrátí nenulovou hodnotu právě tehdy *c* je jednobajtové znázornění číslic ASCII: 0x30 < =*c*< = 0x39.|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_ismbcalnum –**, **_ismbcalnum_l –**|\<Mbstring.h >|
-|**_ismbcalpha –**, **_ismbcalpha_l –**|\<Mbstring.h >|
-|**_ismbcdigit –**, **_ismbcdigit_l –**|\<Mbstring.h >|
+|**_ismbcalnum**, **_ismbcalnum_l**|\<Mbstring.h >|
+|**_ismbcalpha**, **_ismbcalpha_l**|\<Mbstring.h >|
+|**_ismbcdigit**, **_ismbcdigit_l**|\<Mbstring.h >|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

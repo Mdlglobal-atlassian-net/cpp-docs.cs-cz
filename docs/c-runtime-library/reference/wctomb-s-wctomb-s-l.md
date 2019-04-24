@@ -30,11 +30,11 @@ helpviewer_keywords:
 - string conversion, multibyte character strings
 ms.assetid: 7e94a888-deed-4dbd-b5e9-d4a0455538b8
 ms.openlocfilehash: 08e8cb0ddaac342682776600fd0fd8b3d26b8953
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188482"
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
 
@@ -83,7 +83,7 @@ Chybové podmínky
 
 |*mbchar*|*sizeInBytes*|Návratová hodnota|*pRetValue*|
 |--------------|-------------------|------------------|-----------------|
-|**HODNOTU NULL**|>0|**EINVAL**|Nezměněno|
+|**NULL**|>0|**EINVAL**|Nezměněno|
 |Všechny|>**INT_MAX**|**EINVAL**|Nezměněno|
 |Všechny|příliš malá|**EINVAL**|Nezměněno|
 
@@ -101,7 +101,7 @@ Pokud **wctomb_s –** převede širokého znaku na vícebajtový znak, uloží 
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**wctomb_s –**|\<stdlib.h>|
+|**wctomb_s**|\<stdlib.h>|
 |**_wctomb_s_l**|\<stdlib.h>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

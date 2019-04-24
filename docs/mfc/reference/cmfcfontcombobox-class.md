@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CMFCFontComboBox [MFC], m_bDrawUsingFont
 ms.assetid: 9a53fb0c-7b45-486d-8187-2a4c723d9fbb
 ms.openlocfilehash: ccc4e545b2274d6dbb9989cfb9c047de819b8d32
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58781299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237467"
 ---
 # <a name="cmfcfontcombobox-class"></a>Cmfcfontcombobox – třída
 
@@ -37,14 +37,14 @@ class CMFCFontComboBox : public CComboBox
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCFontComboBox::CMFCFontComboBox](#cmfcfontcombobox)|Vytvoří `CMFCFontComboBox` objektu.|
 |`CMFCFontComboBox::~CMFCFontComboBox`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCFontComboBox::CompareItem`|Volá se rozhraním, aby určení relativní pozice nové položky v poli seřazený seznam aktuální prvek pole se seznamem písma. (Přepíše [CComboBox::CompareItem](../../mfc/reference/ccombobox-class.md#compareitem).)|
 |`CMFCFontComboBox::DrawItem`|Volá se rozhraním, chcete-li nakreslit zadanou položku v aktuální prvek pole se seznamem písma. (Přepíše [CComboBox::DrawItem](../../mfc/reference/ccombobox-class.md#drawitem).)|
@@ -56,7 +56,7 @@ class CMFCFontComboBox : public CComboBox
 
 ### <a name="data-members"></a>Datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCFontComboBox::m_bDrawUsingFont](#m_bdrawusingfont)|Určuje rozhraní Framework písma, které slouží k vykreslení položky popisky v aktuální pole se seznamem písma.|
 

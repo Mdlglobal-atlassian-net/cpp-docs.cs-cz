@@ -34,11 +34,11 @@ helpviewer_keywords:
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
 ms.openlocfilehash: 4c533f0e716cb9a13c152b9be3c46f60291118d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331789"
 ---
 # <a name="getcwd-wgetcwd"></a>_getcwd, _wgetcwd
 
@@ -62,7 +62,7 @@ wchar_t *_wgetcwd(
 *Vyrovnávací paměti*<br/>
 Umístění úložiště pro danou cestu.
 
-*MAXLEN*<br/>
+*maxlen*<br/>
 Maximální délka cesty ve znacích: **char** pro **_getcwd** a **wchar_t** pro **_wgetcwd –**.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -91,7 +91,7 @@ Když **_DEBUG** a **_CRTDBG_MAP_ALLOC** jsou definovány, volání **_getcwd** 
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_getcwd**|\<Direct.h >|
+|**_getcwd**|\<direct.h>|
 |**_wgetcwd**|\<Direct.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

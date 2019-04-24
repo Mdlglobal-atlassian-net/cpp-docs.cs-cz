@@ -1,17 +1,17 @@
 ---
-title: '&lt;objekt mutex&gt;'
+title: '&lt;mutex&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <mutex>
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
 ms.openlocfilehash: 4655278e312647f4e69cf48cb772df854260ce57
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224074"
 ---
-# <a name="ltmutexgt"></a>&lt;objekt mutex&gt;
+# <a name="ltmutexgt"></a>&lt;mutex&gt;
 
 Zahrnout standardní hlavička \<vzájemně vyloučený přístup > k definování třídy `mutex`, `recursive_mutex`, `timed_mutex`, a `recursive_timed_mutex`; šablony `lock_guard` a `unique_lock`; a podporuje typy a funkce, které definují oblasti vyloučeného kódu.
 

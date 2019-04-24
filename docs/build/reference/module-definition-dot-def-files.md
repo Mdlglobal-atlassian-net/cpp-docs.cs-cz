@@ -7,11 +7,11 @@ helpviewer_keywords:
 - .def files
 ms.assetid: 08c0bc28-c5d2-47aa-9624-7fc68bcaa4d8
 ms.openlocfilehash: 0047f24722644cd9a68bbbf827ced26ad085d4c1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321225"
 ---
 # <a name="module-definition-def-files"></a>Soubory definice modulu (.Def)
 
@@ -48,4 +48,4 @@ Najdete v následujících částech Další informace:
 ## <a name="see-also"></a>Viz také:
 
 [Referenční zdroje k sestavení programu v jazyce C/C++](c-cpp-building-reference.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)
+[Možnosti linkeru MSVC](linker-options.md)

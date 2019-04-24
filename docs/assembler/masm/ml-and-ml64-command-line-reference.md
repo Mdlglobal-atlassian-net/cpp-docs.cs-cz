@@ -55,11 +55,11 @@ helpviewer_keywords:
 - /Ta MASM compiler option
 ms.assetid: 712623c6-f77e-47ea-a945-089e57c50b40
 ms.openlocfilehash: a452bab03e31436ee5dde476117bce8b73c7571f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62178108"
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>Referenční dokumentace pro použití nástroje ML a ML64 v příkazovém řádku
 
@@ -83,11 +83,11 @@ Možnosti uvedené v následující tabulce.
 |**/AT**|Umožňuje aplikaci malého modelu paměti podporu. Umožňuje chybové zprávy pro konstrukce kódu, které porušují požadavky na soubory ve formátu .com. Všimněte si, že to není ekvivalentní [. MODEL](../../assembler/masm/dot-model.md) **TINY** směrnice.<br /><br /> Není k dispozici v ml64.exe.|
 |**/BL** *název souboru*|Vybere alternativní linkeru.|
 |**/c**|Sestaví pouze. Není propojena.|
-|**/ COFF**|Vygeneruje soubor objektu běžné format (COFF) typ objektu modulu. Obecně potřebné pro vývoj jazyk sestavení Win32.<br /><br /> Není k dispozici v ml64.exe.|
+|**/coff**|Vygeneruje soubor objektu běžné format (COFF) typ objektu modulu. Obecně potřebné pro vývoj jazyk sestavení Win32.<br /><br /> Není k dispozici v ml64.exe.|
 |**/Cp**|Zachová případ všechny identifikátory uživatele.|
 |**/Cu**|Všechny identifikátory se mapuje na velká písmena (výchozí).<br /><br /> Není k dispozici v ml64.exe.|
 |**/Cx**|Zachová veřejného partnerského vztahu a externí symboly v takovém případě.|
-|**/D** *symbol*[[=*hodnotu*]]|Definuje makra text s daným názvem. Pokud *hodnotu* je chybí, je prázdný. Více tokenů oddělené mezerami musí být uzavřen v uvozovkách.|
+|**/D** *symbol*[[=*value*]]|Definuje makra text s daným názvem. Pokud *hodnotu* je chybí, je prázdný. Více tokenů oddělené mezerami musí být uzavřen v uvozovkách.|
 |**/EP**|Generuje seznam předem zpracovaný zdroj (odeslané do STDOUT). Zobrazit **/Sf**.|
 |**/ ERRORREPORT** [ **NONE** &AMP;#124; **VÝZVY** &AMP;#124; **FRONTY** &AMP;#124; **ODESLAT** ]|Pokud ml.exe nebo ml64.exe selže v době běhu, můžete použít **/errorreport** odesílat informace společnosti Microsoft o tyto vnitřní chyby.<br /><br /> Další informace o **/errorreport**, naleznete v tématu [/errorreport (sestava interními chybami kompilátoru)](../../build/reference/errorreport-report-internal-compiler-errors.md).|
 |**/F** *hexnum*|Nastaví velikost do zásobníku *hexnum* bajtů (to je stejný jako **/odkazu/STACK**:*číslo*). Hodnota musí být vyjádřena v šestnáctkové soustavě. Musí být mezera mezi **/F** a *hexnum*.|
@@ -112,7 +112,7 @@ Možnosti uvedené v následující tabulce.
 |**/Sl** *šířka*|Nastaví šířku čáry v znaky na řádek zdroje. Rozsah je 0 nebo 60 až 255. Výchozí hodnota je 0. Stejné jako [stránky](../../assembler/masm/page.md) šířku.|
 |**/Sn**|Při vytváření výpis vypne tabulky symbolů.|
 |**/SP** *délku*|Nastaví délku stránky zdroje v řádků na stránce. Rozsah je 0 nebo 10 až 255. Výchozí hodnota je 0. Stejné jako [stránky](../../assembler/masm/page.md) délku.|
-|**/SS** *text*|Určuje text pro výpis zdroje. Stejné jako [TITULEK](../../assembler/masm/subtitle.md) text.|
+|**/Ss** *text*|Určuje text pro výpis zdroje. Stejné jako [TITULEK](../../assembler/masm/subtitle.md) text.|
 |**/St** *text*|Určuje název zdrojového seznamu. Stejné jako [název](../../assembler/masm/title.md) text.|
 |**/Sx**|Zapne false podmíněné výrazy v seznamu.|
 |**/Ta** *název souboru*|Sestaví zdrojového souboru, jehož název nekončí příponou .asm.|
@@ -125,7 +125,7 @@ Možnosti uvedené v následující tabulce.
 |**/Zi**|Generuje informace CodeView v objektu souboru.|
 |**/Zm**|Umožňuje**M510** možnost pro maximální kompatibilitu s MASM 5.1.<br /><br /> Není k dispozici v ml64.exe.|
 |**/ Zp**[[*zarovnání*]]|Sbalí struktury na hranici zadaném bajtu. *Zarovnání* může být 1, 2 nebo 4.|
-|**/ZS**|Provádí pouze kontrola syntaxe.|
+|**/Zs**|Provádí pouze kontrola syntaxe.|
 |**/?**|Zobrazí souhrn syntaxe příkazového řádku ML.|
 
 *Název souboru*<br/>

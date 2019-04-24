@@ -7,11 +7,11 @@ helpviewer_keywords:
 - utility header
 ms.assetid: c4491103-5da9-47a1-9c2b-ed8bc64b0599
 ms.openlocfilehash: 3e3904bda2a20392724f86df2443cd71a14a1ad6
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62168255"
 ---
 # <a name="ltutilitygt"></a>&lt;Nástroj&gt;
 
@@ -32,7 +32,7 @@ Páry se často používá ve standardní knihovně jazyka C++. Jako argumenty a
 |Třída|Popis|
 |-|-|
 |[tuple_element –](../standard-library/tuple-element-class-tuple.md)|Třída, která zabalí typu `pair` elementu.|
-|[tuple_size –](../standard-library/tuple-size-class-tuple.md)|Třída, která zabalí `pair` počet prvků.|
+|[tuple_size](../standard-library/tuple-size-class-tuple.md)|Třída, která zabalí `pair` počet prvků.|
 
 ### <a name="functions"></a>Funkce
 
@@ -41,8 +41,8 @@ Páry se často používá ve standardní knihovně jazyka C++. Jako argumenty a
 |[Vpřed](../standard-library/utility-functions.md#forward)|Zachová typu odkazu (buď `lvalue` nebo `rvalue`) argumentu z právě zakrytý dokonalé předávání.|
 |[get](../standard-library/utility-functions.md#get)|Funkce, která získá prvek z `pair` objektu.|
 |[make_pair](../standard-library/utility-functions.md#make_pair)|Pomocná funkce šablony používá k vytvoření objektů typu `pair`, kde jsou typy komponenty založené na datové typy, které předávají jako parametry.|
-|[Přesunutí](../standard-library/utility-functions.md#move)|Vrátí předaný argument jako `rvalue` odkaz.|
-|[Prohození](../standard-library/utility-functions.md#swap)|Vymění prvky dvou `pair` objekty.|
+|[move](../standard-library/utility-functions.md#move)|Vrátí předaný argument jako `rvalue` odkaz.|
+|[swap](../standard-library/utility-functions.md#swap)|Vymění prvky dvou `pair` objekty.|
 
 ### <a name="operators"></a>Operátory
 
@@ -52,7 +52,7 @@ Páry se často používá ve standardní knihovně jazyka C++. Jako argumenty a
 |[operator==](../standard-library/utility-operators.md#op_eq_eq)|Testuje, zda objekt dvojice na levé straně operátoru roven objektu pair na pravé straně.|
 |[Operator <](../standard-library/utility-operators.md#op_lt)|Testuje, zda je pár objekt na levé straně operátoru je menší než objekt dvojice na pravé straně.|
 |[– Operátor\<=](../standard-library/utility-operators.md#op_gt_eq)|Testuje, zda je pár objekt na levé straně operátoru je menší než nebo rovna hodnotě párový objekt na pravé straně.|
-|[Operator >](../standard-library/utility-operators.md#op_gt)|Testuje, zda je objekt dvojice na levé straně operátoru větší než párový objekt na pravé straně.|
+|[operator>](../standard-library/utility-operators.md#op_gt)|Testuje, zda je objekt dvojice na levé straně operátoru větší než párový objekt na pravé straně.|
 |[operator>=](../standard-library/utility-operators.md#op_gt_eq)|Testuje, zda je objekt dvojice na levé straně operátoru větší než nebo rovna hodnotě párový objekt na pravé straně.|
 
 ### <a name="structs"></a>Struktury

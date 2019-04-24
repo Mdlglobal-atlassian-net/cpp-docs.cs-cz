@@ -9,11 +9,11 @@ helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
 ms.openlocfilehash: 882010cd28c291e9f49ca0f7dd9d646c70130184
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188844"
 ---
 # <a name="importing-and-exporting"></a>Import a export
 
@@ -31,7 +31,7 @@ Pomocí souborů .def k [import do aplikace](importing-using-def-files.md) nebo 
 
 ## <a name="using-declspec"></a>Pomocí __declspec
 
-Visual C++ používá **__declspec(dllimport)** a **__declspec(dllexport)** nahradit **__export** – klíčové slovo předtím používal v 16bitovou verzí jazyka Visual C++.
+Vizuální C++ používá **__declspec(dllimport)** a **__declspec(dllexport)** nahradit **__export** předtím používal v 16bitové verze vizuálu C++.
 
 Není potřeba použít **__declspec(dllimport)** váš kód mohl zkompilovat správně, ale to umožňuje kompilátoru generovat lepší kód. Kompilátor je schopen vygenerovat lepší kód, protože ho můžete určit, zda funkce existuje v knihovně DLL nebo Ne, což umožňuje kompilátoru vytvořit kód, který přeskočí určitou úroveň dereference, který bude obvykle k dispozici ve volání funkce, která překračuje hranice knihovny DLL. Nicméně je nutné použít **__declspec(dllimport)** import proměnné používané v knihovně DLL.
 

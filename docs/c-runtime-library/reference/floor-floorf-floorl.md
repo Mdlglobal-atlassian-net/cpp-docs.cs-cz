@@ -30,11 +30,11 @@ helpviewer_keywords:
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
 ms.openlocfilehash: 050b7ea0eedf07666fa52145eeaf43f8fde2e18b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333583"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -71,7 +71,7 @@ Hodnota s plovoucí desetinnou čárkou.
 
 |Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|ROZMEZÍ QNAN, AJÍT|žádná|_DOMÉNA|
+|ROZMEZÍ QNAN, AJÍT|žádná|_DOMAIN|
 
 **dolní mez** má implementace, která používá Streaming SIMD Extensions 2 (SSE2). Informace a omezení týkající se použití implementace SSE2, naleznete v tématu [_set_sse2_enable –](set-sse2-enable.md).
 
@@ -83,7 +83,7 @@ Jazyk C++ umožňuje přetížení, takže můžete volat přetížení **floor*
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**dolní mez**, **floorf –**, **floorl –**|\<Math.h >|
+|**dolní mez**, **floorf –**, **floorl –**|\<math.h>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

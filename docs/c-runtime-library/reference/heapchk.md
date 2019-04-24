@@ -27,11 +27,11 @@ helpviewer_keywords:
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
 ms.openlocfilehash: bdc0137761664a668d6ef95d739f09501e8290e5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331711"
 ---
 # <a name="heapchk"></a>_heapchk
 
@@ -49,11 +49,11 @@ int _heapchk( void );
 
 |Návratová hodnota|Podmínka|
 |-|-|
-| **_HEAPBADBEGIN –** | Informace v hlavičce počáteční je chybná nebo se nenašel. |
-| **_HEAPBADNODE –** | Zjistila se chybná uzlu nebo poškození haldy. |
-| **_HEAPBADPTR –** | Ukazatel do haldy není platný. |
+| **_HEAPBADBEGIN** | Informace v hlavičce počáteční je chybná nebo se nenašel. |
+| **_HEAPBADNODE** | Zjistila se chybná uzlu nebo poškození haldy. |
+| **_HEAPBADPTR** | Ukazatel do haldy není platný. |
 | **_HEAPEMPTY –** | Haldy nebyla inicializována. |
-| **_HEAPOK –** | Haldy se zdá být konzistentní vzhledem k aplikacím. |
+| **_HEAPOK** | Haldy se zdá být konzistentní vzhledem k aplikacím. |
 
 Kromě toho, pokud dojde k chybě **_heapchk –** nastaví **errno** k **ENOSYS**.
 
@@ -65,7 +65,7 @@ Kromě toho, pokud dojde k chybě **_heapchk –** nastaví **errno** k **ENOSYS
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_heapchk**|\<malloc.h >|\<errno.h>|
+|**_heapchk**|\<malloc.h>|\<errno.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ALIGN directive
 ms.assetid: 7357ab2d-4a5c-43ca-accb-a5f21cdfcde5
 ms.openlocfilehash: 522d5689d680d0fc334743d2802abe21570dd6f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167316"
 ---
 # <a name="even-and-align-directives"></a>Direktivy EVEN a ALIGN
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 I když vložený assembler nepodporuje většina direktivy MASM, podporuje `EVEN` a **ZAROVNAT**. Umístěte směrnic **NOP** (žádná operace) podle pokynů v kódu sestavení podle potřeby pro zarovnání popisků na určité hranice. Díky tomu operace načtení instrukce efektivnější pro některé procesory.
 

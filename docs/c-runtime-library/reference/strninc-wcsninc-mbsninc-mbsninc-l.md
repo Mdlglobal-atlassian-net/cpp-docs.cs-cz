@@ -43,11 +43,11 @@ helpviewer_keywords:
 - _tcsninc function
 ms.assetid: 6caace64-f9e4-48c0-afa8-ea51824ad723
 ms.openlocfilehash: ef30a9f57f0b8c84199befb00f3edc13342a1eaf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209712"
 ---
 # <a name="strninc-wcsninc-mbsninc-mbsnincl"></a>_strninc, _wcsninc, _mbsninc, _mbsninc_l
 
@@ -101,7 +101,7 @@ Každá z těchto rutin vrací ukazatel na *str* po *str* byl navýšen o *poče
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tcsninc –**|**_strninc**|**_mbsninc –**|**_wcsninc**|
+|**_tcsninc**|**_strninc**|**_mbsninc**|**_wcsninc**|
 
 **_strninc –** a **_wcsninc –** jsou řetězce jedním jednobajtového znaku a verze řetězce širokého znaku **_mbsninc –**. **_wcsninc –** a **_strninc –** jsou k dispozici pouze pro toto mapování a nesmí být použity jinak. Další informace najdete v tématu [použití mapování obecného textu](../../c-runtime-library/using-generic-text-mappings.md) a [mapování obecného textu](../../c-runtime-library/generic-text-mappings.md).
 
@@ -111,7 +111,7 @@ Každá z těchto rutin vrací ukazatel na *str* po *str* byl navýšen o *poče
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_mbsninc –**|\<Mbstring.h >|
+|**_mbsninc**|\<Mbstring.h >|
 |**_mbsninc_l**|\<Mbstring.h >|
 |**_strninc**|\<tchar.h>|
 |**_wcsninc**|\<tchar.h>|

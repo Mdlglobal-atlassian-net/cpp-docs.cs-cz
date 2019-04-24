@@ -30,11 +30,11 @@ helpviewer_keywords:
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
 ms.openlocfilehash: 4d0320b45cb8cd99f1d9f6494b7dcb17bc545a81
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285923"
 ---
 # <a name="lseek-lseeki64"></a>_lseek, _lseeki64
 
@@ -57,7 +57,7 @@ __int64 _lseeki64(
 
 ### <a name="parameters"></a>Parametry
 
-*FD*<br/>
+*fd*<br/>
 Popisovač souboru odkazující na otevřený soubor.
 
 *Posun*<br/>
@@ -88,8 +88,8 @@ Můžete použít **_lseek –** k přemístění ukazatel myši kamkoli v soubo
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_lseek**|\<IO.h >|
-|**_lseeki64**|\<IO.h >|
+|**_lseek**|\<io.h>|
+|**_lseeki64**|\<io.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

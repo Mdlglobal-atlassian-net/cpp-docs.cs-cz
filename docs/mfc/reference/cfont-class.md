@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
 ms.openlocfilehash: 04136b3550675f0e50f905047fee551e27da7069
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58768105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182235"
 ---
 # <a name="cfont-class"></a>Cfont – třída
 
@@ -41,13 +41,13 @@ class CFont : public CGdiObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFont::CFont](#cfont)|Vytvoří `CFont` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFont::CreateFont](#createfont)|Inicializuje `CFont` se zadané vlastnosti.|
 |[CFont::CreateFontIndirect](#createfontindirect)|Inicializuje `CFont` objekt s vlastnostmi podle `LOGFONT` struktury.|
@@ -58,7 +58,7 @@ class CFont : public CGdiObject
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFont::operator HFONT](#operator_hfont)|Vrátí popisovač písem Windows GDI připojené k `CFont` objektu.|
 

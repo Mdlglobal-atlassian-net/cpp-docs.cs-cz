@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru C2299
+title: Compiler Error C2299
 ms.date: 11/04/2016
 f1_keywords:
 - C2299
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C2299
 ms.assetid: d001c2bc-f6fd-47aa-8e42-0eb824d6441d
 ms.openlocfilehash: 4776ddede31dbcebe56a5919fd111f4df7248215
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182688"
 ---
-# <a name="compiler-error-c2299"></a>Chyba kompilátoru C2299
+# <a name="compiler-error-c2299"></a>Compiler Error C2299
 
 'function': Změna chování: explicitní specializace nemůže být kopírovací konstuktor ani operátor copy assignment
 

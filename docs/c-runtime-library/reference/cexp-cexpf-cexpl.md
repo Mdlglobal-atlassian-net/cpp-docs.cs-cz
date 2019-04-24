@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cexpf function
 ms.assetid: f27fd5a9-70c7-4957-a7ee-5256d19bd1da
 ms.openlocfilehash: 401dd30b326fcd6caef7cae6f1ecbdc43ed5dd5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335457"
 ---
 # <a name="cexp-cexpf-cexpl"></a>cexp cexpf, cexpl
 
@@ -65,7 +65,7 @@ Hodnota **e** umocněné na sílu *z*.
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **cexp** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **cexp** vždy převezme a vrátí **_Dcomplex** hodnotu.
+Protože C++ umožňuje přetížení, můžete volat přetížení **cexp** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **cexp** vždy převezme a vrátí **_Dcomplex** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 

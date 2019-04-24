@@ -41,11 +41,11 @@ helpviewer_keywords:
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
 ms.openlocfilehash: 9918b1ae38caacf2b2355ace6337e8e5e6260605
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58771349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62168320"
 ---
 # <a name="cdialog-class"></a>CDialog – třída
 
@@ -61,13 +61,13 @@ class CDialog : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDialog::CDialog](#cdialog)|Vytvoří `CDialog` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDialog::Create](#create)|Inicializuje `CDialog` objektu. Vytvoří nemodální dialogové okno a připojí ho k `CDialog` objektu.|
 |[CDialog::CreateIndirect](#createindirect)|Vytvoří nemodální dialogové okno z šablony dialog-box v paměti (ne založené na prostředcích).|
@@ -86,7 +86,7 @@ class CDialog : public CWnd
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDialog::OnCancel](#oncancel)|Přepsání nastavení za účelem provedení tlačítko Storno nebo reakce na stisknutí klávesy ESC. Výchozí hodnota zavře dialogové okno a `DoModal` vrátí IDCANCEL.|
 |[CDialog::OnOK](#onok)|Přepsání nastavení za účelem provedení akce tlačítko OK v modální dialogové okno. Výchozí hodnota zavře dialogové okno a `DoModal` vrátí IDOK.|

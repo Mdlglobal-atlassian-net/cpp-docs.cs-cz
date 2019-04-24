@@ -31,11 +31,11 @@ helpviewer_keywords:
 - _wgetenv function
 ms.assetid: 3b9cb9ab-a126-4e0e-a44f-6c5a7134daf4
 ms.openlocfilehash: 79c685fef8d6a4b966c53bb7d94b423d16971976
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157666"
 ---
 # <a name="getenv-wgetenv"></a>getenv, _wgetenv
 
@@ -57,7 +57,7 @@ wchar_t *_wgetenv(
 
 ### <a name="parameters"></a>Parametry
 
-*název_proměnné*<br/>
+*varname*<br/>
 Název proměnné prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -88,7 +88,7 @@ Pokud dvě kopie prostředí (znaková sada MBCS a Unicode) existují současně
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tgetenv –**|**GETENV**|**GETENV**|**_wgetenv**|
+|**_tgetenv**|**getenv**|**getenv**|**_wgetenv**|
 
 Zkontrolujte nebo změňte hodnotu **TZ** proměnné, použijte prostředí **getenv**, **_putenv** a **_tzset –** podle potřeby. Další informace o **TZ**, naleznete v tématu [_tzset –](tzset.md) a [_daylight, časové pásmo a _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
 
@@ -96,7 +96,7 @@ Zkontrolujte nebo změňte hodnotu **TZ** proměnné, použijte prostředí **ge
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**GETENV**|\<stdlib.h>|
+|**getenv**|\<stdlib.h>|
 |**_wgetenv**|\<stdlib.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

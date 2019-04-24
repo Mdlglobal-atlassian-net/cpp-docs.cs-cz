@@ -31,11 +31,11 @@ helpviewer_keywords:
 - norml function
 ms.assetid: 9786ecfe-0019-4553-b378-0af6c691e15c
 ms.openlocfilehash: 3c1803a54f0dfc27975af5bb0eeb7e5c042b2579
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156133"
 ---
 # <a name="norm-normf-norml"></a>Norm a normf, norml
 
@@ -65,7 +65,7 @@ Ve čtverci velikost *z*.
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **norm** trvají **_Fcomplex** nebo **_Lcomplex** hodnoty a návrat **float** nebo **long double** hodnoty. V programu jazyka C **norm** vždy přijímá **_Dcomplex** hodnotu a vrátí **double** hodnotu.
+Protože C++ umožňuje přetížení, můžete volat přetížení **norm** trvají **_Fcomplex** nebo **_Lcomplex** hodnoty a návrat **float**nebo **long double** hodnoty. V programu jazyka C **norm** vždy přijímá **_Dcomplex** hodnotu a vrátí **double** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 

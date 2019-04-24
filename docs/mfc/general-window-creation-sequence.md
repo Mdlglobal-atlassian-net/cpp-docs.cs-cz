@@ -8,11 +8,11 @@ helpviewer_keywords:
 - sequence [MFC]
 ms.assetid: 9cd8c7ea-5e24-429e-b6d9-d7b6041d8ba6
 ms.openlocfilehash: 949cf72910654b502ca4b57be72bedc2db63c315
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219561"
 ---
 # <a name="general-window-creation-sequence"></a>Obecná posloupnost vytvoření okna
 
@@ -20,7 +20,7 @@ Při vytváření okna vlastní, jako je například podřízená okna rozhraní
 
 Třídy oken poskytovaných MFC využívají [dvoufázová konstrukce](../mfc/one-stage-and-two-stage-construction-of-objects.md). To znamená, že při vyvolání jazyka c++ **nové** operátor konstruktoru přiděluje a inicializuje objekt jazyka C++ ale nevytvoří odpovídající okno Windows. Který se následně provádí voláním [vytvořit](../mfc/reference/cwnd-class.md#create) členské funkce objektu okno.
 
-`Create` Členská funkce je v okně Windows a ukládá jeho `HWND` v objekt jazyka C++ veřejné datový člen [m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd). `Create` poskytuje dokončení flexibilitu prostřednictvím vytváření parametry. Před voláním `Create`, možná budete chtít zaregistrovat třídy okna s globální funkce [afxregisterwndclass –](../mfc/reference/application-information-and-management.md#afxregisterwndclass) nastavit ikonu a třída styly pro rámec.
+`Create` Členská funkce je v okně Windows a ukládá jeho `HWND` v C++ objektu veřejné datový člen [m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd). `Create` poskytuje dokončení flexibilitu prostřednictvím vytváření parametry. Před voláním `Create`, možná budete chtít zaregistrovat třídy okna s globální funkce [afxregisterwndclass –](../mfc/reference/application-information-and-management.md#afxregisterwndclass) nastavit ikonu a třída styly pro rámec.
 
 Oken s rámečkem, můžete použít [loadframe –](../mfc/reference/cframewnd-class.md#loadframe) členskou funkci místo `Create`. `LoadFrame` Díky Windows okno s menším počtem parametrů. Získá mnoho výchozí hodnoty ze zdrojů, včetně titulek rámce, ikony, tabulky akcelerátorů a nabídky.
 

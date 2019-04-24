@@ -75,11 +75,11 @@ helpviewer_keywords:
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
 ms.openlocfilehash: c4c026975e9884ac2a0e6aaef31e799c2b5b09bf
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58777373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224230"
 ---
 # <a name="coleserveritem-class"></a>COleServerItem Class
 
@@ -95,13 +95,13 @@ class COleServerItem : public CDocItem
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleServerItem::COleServerItem](#coleserveritem)|Vytvoří `COleServerItem` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleServerItem::AddOtherClipboardData](#addotherclipboarddata)|Umístí v prezentaci a převod formátů `COleDataSource` objektu.|
 |[COleServerItem::CopyToClipboard](#copytoclipboard)|Kopíruje položku do schránky.|
@@ -134,7 +134,7 @@ class COleServerItem : public CDocItem
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleServerItem::GetDataSource](#getdatasource)|Získá objekt použitý k uložení převod formátů.|
 |[COleServerItem::OnHide](#onhide)|Volá se rozhraním, chcete-li skrýt položky OLE.|
@@ -143,7 +143,7 @@ class COleServerItem : public CDocItem
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleServerItem::m_sizeExtent](#m_sizeextent)|Informuje o tom, jak velká část položky OLE je viditelné server.|
 

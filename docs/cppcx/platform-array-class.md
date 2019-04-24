@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
 ms.openlocfilehash: 597f8e32e2da95370169cdbfe2ccd209296322cc
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161657"
 ---
 # <a name="platformarray-class"></a>Platform::Array – třída
 
@@ -127,4 +127,4 @@ Popisovač na aktuální pole.
 ## <a name="see-also"></a>Viz také:
 
 [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)<br/>
-[Pole a WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)
+[Array a WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

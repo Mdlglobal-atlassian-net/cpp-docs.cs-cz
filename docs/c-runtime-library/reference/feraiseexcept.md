@@ -22,11 +22,11 @@ helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
 ms.openlocfilehash: 581dd4026a20ce7221945c5815af3ae102f132fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334356"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -66,13 +66,13 @@ Pokud všechny zadané výjimky jsou vyvolány úspěšně, vrátí hodnotu 0.
 
 Pokud chcete používat tuto funkci, musíte vypnout s plovoucí desetinnou čárkou optimalizace, které by mohla zabránit přístupu pomocí `#pragma fenv_access(on)` direktiv před voláním. Další informace najdete v tématu [fenv_access](../../preprocessor/fenv-access.md).
 
-**Specifické pro Microsoft:** výjimky podle *, s výjimkou* jsou vyvolány v pořadí FE_INVALID, FE_DIVBYZERO FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. Ale FE_INEXACT mohou být vyvolány po vyvolání FE_OVERFLOW nebo FE_UNDERFLOW i v případě, že není zadán v *, s výjimkou*. **Specifické pro end Microsoft**
+**Specifické pro Microsoft:** Výjimky podle *, s výjimkou* jsou vyvolány v pořadí FE_INVALID, FE_DIVBYZERO FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. Ale FE_INEXACT mohou být vyvolány po vyvolání FE_OVERFLOW nebo FE_UNDERFLOW i v případě, že není zadán v *, s výjimkou*. **Specifické pro end Microsoft**
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Záhlaví C|Hlaviček jazyka C++|
 |--------------|--------------|------------------|
-|*feraiseexcept*|\<fenv.h >|\<cfenv>|
+|*feraiseexcept*|\<fenv.h>|\<cfenv>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

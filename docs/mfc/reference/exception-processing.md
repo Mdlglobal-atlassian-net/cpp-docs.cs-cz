@@ -14,11 +14,11 @@ helpviewer_keywords:
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
 ms.openlocfilehash: 3db919f40caf4e5dbf42b4e10c549b165c0a9fe4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322212"
 ---
 # <a name="exception-processing"></a>Zpracování výjimek
 
@@ -161,7 +161,7 @@ Určuje název objektu výjimky ukazatel, vytvořený makra. Název ukazatele m�
 Kód zpracování výjimek můžete dotazování objekt výjimky, pokud je to vhodné, chcete-li získat další informace o konkrétní příčina výjimky. Vyvolat `THROW_LAST` – makro přesunout zpracování do dalšího snímku vnější výjimky. Pokud používáte **CATCH_ALL**, end **zkuste** blok s END_CATCH_ALL – makro.
 
 > [!NOTE]
->  **CATCH_ALL** bloku je definován jako obor C++ je oddělená složené závorky. Při deklarování proměnné v tomto oboru, jsou přístupné pouze v daném oboru.
+>  **CATCH_ALL** bloku je definován jako C++ oboru, vymezeny hranatými složené závorky. Při deklarování proměnné v tomto oboru, jsou přístupné pouze v daném oboru.
 
 Další informace o výjimkách, najdete v článku [výjimky](../../mfc/exception-handling-in-mfc.md).
 
@@ -196,7 +196,7 @@ Použijte makro CATCH pro zachycení jeden typ výjimky a pak AND_CATCH – makr
 Kód zpracování výjimek můžete dotazování objekt výjimky, pokud je to vhodné, chcete-li získat další informace o konkrétní příčina výjimky. THROW_LAST – makro v rámci volání **AND_CATCH** blokovat ke zpracování do dalšího snímku vnější výjimky. **AND_CATCH** označuje konec předchozí **CATCH** nebo **AND_CATCH** bloku.
 
 > [!NOTE]
->  **AND_CATCH** bloku je definované jako obor C++ (která je oddělená složených závorek). Při deklarování proměnné v tomto oboru, mějte na paměti, že jsou přístupné pouze v daném oboru. To platí i pro *exception_object_pointer_name* proměnné.
+>  **AND_CATCH** bloku je definován jako C++ oboru (která je oddělená složených závorek). Při deklarování proměnné v tomto oboru, mějte na paměti, že jsou přístupné pouze v daném oboru. To platí i pro *exception_object_pointer_name* proměnné.
 
 ### <a name="example"></a>Příklad
 
@@ -225,7 +225,7 @@ Použití **CATCH** – makro zachytit jeden typ výjimky a pak AND_CATCH_ALL �
 Kód zpracování výjimek můžete dotazování objekt výjimky, pokud je to vhodné, chcete-li získat další informace o konkrétní příčina výjimky. THROW_LAST – makro v rámci volání **AND_CATCH_ALL** blokovat ke zpracování do dalšího snímku vnější výjimky. **AND_CATCH_ALL** označuje konec předchozí **CATCH** nebo **AND_CATCH_ALL** bloku.
 
 > [!NOTE]
->  **AND_CATCH_ALL** bloku je definované jako obor C++ (která je oddělená složených závorek). Při deklarování proměnné v tomto oboru, mějte na paměti, že jsou přístupné pouze v daném oboru.
+>  **AND_CATCH_ALL** bloku je definován jako C++ oboru (která je oddělená složených závorek). Při deklarování proměnné v tomto oboru, mějte na paměti, že jsou přístupné pouze v daném oboru.
 
 ### <a name="requirements"></a>Požadavky
 

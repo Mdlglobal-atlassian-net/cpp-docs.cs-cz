@@ -8,11 +8,11 @@ helpviewer_keywords:
 - MFC, adding classes
 ms.assetid: 9a96b67f-40bf-43d4-8872-2f8dfc5404f1
 ms.openlocfilehash: 1cc3dc734917da46af99e67da40fe243941102e3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62296771"
 ---
 # <a name="adding-an-mfc-class"></a>Přidání třídy knihovny MFC
 
@@ -33,6 +33,6 @@ Chcete-li přidat třídy odvozené od třídy knihovny Microsoft Foundation Cla
 
 ## <a name="see-also"></a>Viz také:
 
-[Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Přidání funkce pomocí Průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Přidání třídy](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Přehled tříd](../../mfc/class-library-overview.md)

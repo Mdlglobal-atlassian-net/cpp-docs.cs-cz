@@ -1,6 +1,6 @@
 ---
-title: Compiler Warnings C4000 Through C4199
-ms.date: 11/17/2017
+title: Upozornění kompilátoru C4000 až C4199
+ms.date: 04/21/2019
 f1_keywords:
 - C4000
 - C4035
@@ -20,14 +20,14 @@ f1_keywords:
 - C4196
 - C4199
 ms.assetid: 426f495a-43af-4906-ad2b-6e5822c09965
-ms.openlocfilehash: 746bd86b9c5911ac8d4f7ae455b5a2184d302746
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.openlocfilehash: 1af76f1bad4d8df06d527063bc6618d0f8ef8f70
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62226712"
 ---
-# <a name="compiler-warnings-c4000-through-c4199"></a>Compiler Warnings C4000 Through C4199
+# <a name="compiler-warnings-c4000-through-c4199"></a>Upozornění kompilátoru C4000 až C4199
 
 Články v této části dokumentace vysvětlují podmnožinu varovné zprávy, které jsou generovány kompilátorem.
 
@@ -186,3 +186,8 @@ ms.locfileid: "58278483"
 |Upozornění kompilátoru (úroveň 1) C4196|Očekávalo se: %$L' nebo: %$L;. našlo se: %$L.|
 |[Upozornění kompilátoru (úroveň 3) C4197](../../error-messages/compiler-warnings/compiler-warning-level-3-c4197.md)|'type': volatile na nejvyšší úrovni v přetypování se ignoruje.|
 |Upozornění kompilátoru (úroveň 1, úroveň 2, úroveň 3 a úroveň 4) C4199|%s|
+
+## <a name="see-also"></a>Viz také:
+
+[C /C++ nástroje chyby a upozornění kompilátoru a sestavení](../compiler-errors-1/c-cpp-build-errors.md) \
+[Upozornění kompilátoru C4000 - C5999](compiler-warnings-c4000-c5999.md)

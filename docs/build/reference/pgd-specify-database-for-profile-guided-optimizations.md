@@ -8,11 +8,11 @@ helpviewer_keywords:
 - /PGD linker option
 ms.assetid: 9f312498-493b-461f-886f-92652257e443
 ms.openlocfilehash: e1d7c9fcb94a9351ce94b66e04b4bfc523248f4e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319795"
 ---
 # <a name="pgd-specify-database-for-profile-guided-optimizations"></a>/PGD (Určit databázi pro optimalizace na základě profilu)
 
@@ -49,5 +49,5 @@ Další informace najdete v tématu [Profile-Guided optimalizace](../profile-gui
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)<br/>
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)<br/>

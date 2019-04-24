@@ -15,18 +15,18 @@ helpviewer_keywords:
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
 ms.openlocfilehash: 736e587a41fa1006801dcf6930b33ee434c9a5ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179208"
 ---
 # <a name="ltallocatorsgt-macros"></a>&lt;alokátory&gt; makra
 
 ||||
 |-|-|-|
 |[ALLOCATOR_DECL](#allocator_decl)|[CACHE_CHUNKLIST](#cache_chunklist)|[CACHE_FREELIST](#cache_freelist)|
-|[CACHE_SUBALLOC –](#cache_suballoc)|[SYNC_DEFAULT](#sync_default)|
+|[CACHE_SUBALLOC](#cache_suballoc)|[SYNC_DEFAULT](#sync_default)|
 
 ## <a name="allocator_decl"></a>  ALLOCATOR_DECL
 
@@ -88,7 +88,7 @@ Vrací `stdext::allocators::cache_freelist<sizeof(Type), max>`.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="cache_suballoc"></a>  CACHE_SUBALLOC –
+## <a name="cache_suballoc"></a>  CACHE_SUBALLOC
 
 Vrací `stdext::allocators::cache_suballoc<sizeof(Type)>`.
 
@@ -112,4 +112,4 @@ Pokud kompilátor podporuje kompilace s jedním vláknem i vícevláknové aplik
 
 ## <a name="see-also"></a>Viz také:
 
-[\<alokátory: >](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)<br/>

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - decrement operators [C++], types of
 ms.assetid: 5423c6ce-3999-4a77-92f6-ad540add1b1d
 ms.openlocfilehash: 4413c2bba600d1118870faca9a15b20398ec4dd4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183565"
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>Přetížení operátoru inkrementace a dekrementace (C++)
 
@@ -22,7 +22,7 @@ Operátory zvýšení a snížení spadají do zvláštní kategorie, protože e
 
 - Predekrement a postdekrement
 
-Při zápisu funkcí přetížených operátorů může být užitečné implementovat samostatné verze pro předponovou a příponovou verzi těchto operátorů. K rozlišení mezi těmito dvěma, je dodržovat následující pravidlo: předponový tvar operátoru je deklarován stejným způsobem jako ostatní unární operátory; příponový tvar přijímá další argument typu **int**.
+Při zápisu funkcí přetížených operátorů může být užitečné implementovat samostatné verze pro předponovou a příponovou verzi těchto operátorů. K rozlišení mezi těmito dvěma, je dodržovat následující pravidlo: Předponový tvar operátoru je deklarován stejným způsobem jako ostatní unární operátory; příponový tvar přijímá další argument typu **int**.
 
 > [!NOTE]
 >  Při zadání přetíženého operátoru pro příponový tvar operátoru zvýšení nebo snížení, musí být další argument typu **int**; zadání jiného typu vygeneruje chybu.

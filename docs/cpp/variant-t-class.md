@@ -11,15 +11,15 @@ helpviewer_keywords:
 - VARIANT object [C++], COM encapsulation
 ms.assetid: 6a3cbd4e-0ae8-425e-b4cf-ca0df894c93f
 ms.openlocfilehash: 69976cab9caed653a8278f80821569b613f690eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62165943"
 ---
 # <a name="variantt-class"></a>_variant_t – třída
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 A **_variant_t** zapouzdřuje objektu `VARIANT` datového typu. Třída spravuje a zrušení přidělení prostředků a volá funkci `VariantInit` a `VariantClear` podle potřeby.
 
@@ -43,7 +43,7 @@ A **_variant_t** zapouzdřuje objektu `VARIANT` datového typu. Třída spravuje
 
 |||
 |-|-|
-|[operátor =](../cpp/variant-t-operator-equal.md)|Přiřadí novou hodnotu do existujícího **_variant_t** objektu.|
+|[Operator =](../cpp/variant-t-operator-equal.md)|Přiřadí novou hodnotu do existujícího **_variant_t** objektu.|
 |[operátor ==,! =](../cpp/variant-t-relational-operators.md)|Porovnat dva **_variant_t** objekty a zjistí rovnost či nerovnost.|
 |[– Extraktory](../cpp/variant-t-extractors.md)|Extrahovat data z zapouzdřeného `VARIANT` objektu.|
 
@@ -51,7 +51,7 @@ A **_variant_t** zapouzdřuje objektu `VARIANT` datového typu. Třída spravuje
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<comutil.h >
+**Header:** \<comutil.h>
 
 **Lib:** comsuppw.lib nebo comsuppwd.lib (viz [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Další informace)
 

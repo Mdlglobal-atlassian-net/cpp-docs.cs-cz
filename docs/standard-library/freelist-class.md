@@ -11,11 +11,11 @@ helpviewer_keywords:
 - stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
 ms.openlocfilehash: ef1f2e617e93869a1084dc030c6496c819f1ed96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159389"
 ---
 # <a name="freelist-class"></a>freelist – třída
 
@@ -49,7 +49,7 @@ Spravuje seznam paměťových bloků velikosti této třídy šablony *Sz* s max
 
 |Členská funkce|Popis|
 |-|-|
-|[POP](#pop)|Odebere první blok paměti ze seznamu zdarma.|
+|[pop](#pop)|Odebere první blok paměti ze seznamu zdarma.|
 |[push](#push)|Blok paměti se přidá do seznamu.|
 
 ## <a name="requirements"></a>Požadavky
@@ -108,4 +108,4 @@ Pokud `full` vrátí maximální třídy **false**, přidá bloku paměti, na kt
 
 ## <a name="see-also"></a>Viz také:
 
-[\<alokátory: >](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)<br/>

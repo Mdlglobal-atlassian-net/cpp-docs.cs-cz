@@ -93,11 +93,11 @@ helpviewer_keywords:
 - _tfindnexti64 function
 ms.assetid: 75d97188-5add-4698-a46c-4c492378f0f8
 ms.openlocfilehash: c7df8649625488a83239a19e4afcecea129f9072
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333726"
 ---
 # <a name="findnext-findnext32-findnext32i64-findnext64-findnext64i32-findnexti64-wfindnext-wfindnext32-wfindnext32i64-wfindnext64-wfindnext64i32-wfindnexti64"></a>_findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
 
@@ -158,10 +158,10 @@ int _wfindnext64i32(
 
 ### <a name="parameters"></a>Parametry
 
-*Popisovač*<br/>
+*handle*<br/>
 Hledání popisovač vrácený voláním předchozí **_findfirst**.
 
-*FileInfo*<br/>
+*fileinfo*<br/>
 Informace o vyrovnávací paměti souboru.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -190,36 +190,36 @@ Pokud nemáte konkrétní důvod používat verze, které explicitně zadat veli
 
 |Funkce|**_USE_32BIT_TIME_T** definované?|Typ času|Délka typu souboru|
 |---------------|----------------------------------|---------------|----------------------|
-|**_findnext**, **_wfindnext –**|Nedefinovaná.|64bitových|32bitová|
-|**_findnext**, **_wfindnext –**|Definice|32bitová|32bitová|
-|**_findnext32 –**, **_wfindnext32 –**|Není ovlivněna definici makra|32bitová|32bitová|
-|**_findnext64 –**, **_wfindnext64 –**|Není ovlivněna definici makra|64bitových|64bitových|
-|**_findnexti64 –**, **_wfindnexti64 –**|Nedefinovaná.|64bitových|64bitových|
-|**_findnexti64 –**, **_wfindnexti64 –**|Definice|32bitová|64bitových|
-|**_findnext32i64 –**, **_wfindnext32i64 –**|Není ovlivněna definici makra|32bitová|64bitových|
-|**_findnext64i32 –**, **_wfindnext64i32 –**|Není ovlivněna definici makra|64bitových|32bitová|
+|**_findnext**, **_wfindnext**|Nedefinovaná.|64bitová|32bitová|
+|**_findnext**, **_wfindnext**|Definice|32bitová|32bitová|
+|**_findnext32**, **_wfindnext32**|Není ovlivněna definici makra|32bitová|32bitová|
+|**_findnext64**, **_wfindnext64**|Není ovlivněna definici makra|64bitová|64bitová|
+|**_findnexti64**, **_wfindnexti64**|Nedefinovaná.|64bitová|64bitová|
+|**_findnexti64**, **_wfindnexti64**|Definice|32bitová|64bitová|
+|**_findnext32i64**, **_wfindnext32i64**|Není ovlivněna definici makra|32bitová|64bitová|
+|**_findnext64i32**, **_wfindnext64i32**|Není ovlivněna definici makra|64bitová|32bitová|
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tfindnext –**|**_findnext**|**_findnext**|**_wfindnext**|
-|**_tfindnext32 –**|**_findnext32**|**_findnext32**|**_wfindnext32**|
-|**_tfindnext64 –**|**_findnext64**|**_findnext64**|**_wfindnext64**|
-|**_tfindnexti64 –**|**_findnexti64**|**_findnexti64**|**_wfindnexti64**|
-|**_tfindnext32i64 –**|**_findnext32i64**|**_findnext32i64**|**_wfindnext32i64**|
-|**_tfindnext64i32 –**|**_findnext64i32**|**_findnext64i32**|**_wfindnext64i32**|
+|**_tfindnext**|**_findnext**|**_findnext**|**_wfindnext**|
+|**_tfindnext32**|**_findnext32**|**_findnext32**|**_wfindnext32**|
+|**_tfindnext64**|**_findnext64**|**_findnext64**|**_wfindnext64**|
+|**_tfindnexti64**|**_findnexti64**|**_findnexti64**|**_wfindnexti64**|
+|**_tfindnext32i64**|**_findnext32i64**|**_findnext32i64**|**_wfindnext32i64**|
+|**_tfindnext64i32**|**_findnext64i32**|**_findnext64i32**|**_wfindnext64i32**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**_findnext**|\<IO.h >|
-|**_findnext32**|\<IO.h >|
-|**_findnext64**|\<IO.h >|
-|**_findnexti64**|\<IO.h >|
-|**_findnext32i64**|\<IO.h >|
-|**_findnext64i32**|\<IO.h >|
+|**_findnext**|\<io.h>|
+|**_findnext32**|\<io.h>|
+|**_findnext64**|\<io.h>|
+|**_findnexti64**|\<io.h>|
+|**_findnext32i64**|\<io.h>|
+|**_findnext64i32**|\<io.h>|
 |**_wfindnext**|\<IO.h > nebo \<wchar.h >|
 |**_wfindnext32**|\<IO.h > nebo \<wchar.h >|
 |**_wfindnext64**|\<IO.h > nebo \<wchar.h >|

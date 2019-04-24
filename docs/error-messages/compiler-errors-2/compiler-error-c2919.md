@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2919
 ms.assetid: 140a6db9-eb48-4c5e-84a7-a09d2653605b
 ms.openlocfilehash: ab11226c8cc4629a265dd182d5f882f6b3be7e5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160848"
 ---
 # <a name="compiler-error-c2919"></a>Chyba kompilátoru C2919
 
-'type': operátory nejde používat na publikované ploše typu WinRT
+'type': Operátory nejde používat na publikované ploše typu WinRT
 
 Systém typů prostředí Windows Runtime nepodporuje operátor členské funkce v publikované ploše typu. Je to proto, že ne všechny jazyky můžou využívat funkce členského operátora. Můžete vytvořit privátní nebo interní operátor členské funkce, které lze volat z kódu jazyka C++ ve stejné jednotce třídy nebo kompilace.
 

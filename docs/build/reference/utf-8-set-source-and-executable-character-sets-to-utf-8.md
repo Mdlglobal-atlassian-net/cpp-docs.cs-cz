@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /utf-8 compiler option
 ms.assetid: f0e1f3cb-6cae-46eb-9483-04ed13d9b504
 ms.openlocfilehash: 5ac15c63041e76b8bb0d292868bb982c21866078
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317286"
 ---
 # <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/ UTF-8 (nastavení zdrojové a spustitelné znakové sady na UTF-8)
 
@@ -41,7 +41,7 @@ Ve výchozím nastavení sada Visual Studio zjistí značka pořadí bajtů k ur
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
 [/ Execution-Charset (nastavení znakové sady spuštění)](execution-charset-set-execution-character-set.md)<br/>
 [/source-charset (nastavení zdrojové znakové sady)](source-charset-set-source-character-set.md)<br/>

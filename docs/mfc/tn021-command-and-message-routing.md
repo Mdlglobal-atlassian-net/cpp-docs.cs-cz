@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Windows messages [MFC], routing
 ms.assetid: b5952c8b-123e-406c-a36d-a6ac7c6df307
 ms.openlocfilehash: ce8aa2013c8f2f351ca1028f0d6103135ba5ecd8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306178"
 ---
 # <a name="tn021-command-and-message-routing"></a>TN021: Příkaz a směrování zpráv
 
@@ -80,7 +80,7 @@ Udržování stavu povolený/checked položek nabídky všechny programu celou d
 
 `CFrameWnd` také zpracovává zprávy WM_ENTERIDLE pro popis aktuální nabídce položky vybrané na stavovém řádku (také označované jako řádek zprávy).
 
-Struktura nabídky aplikace, upravili pomocí Visual C++ se používá k reprezentování potenciální příkazy, které jsou k dispozici v době WM_INITMENUPOPUP. ON_UPDATE_COMMAND_UI obslužné rutiny můžete změnit text nabídky nebo stav nebo pro rozšířené použití (např. do seznamu naposledy použitých souborů nebo v rozbalovací nabídce příkazy OLE), ve skutečnosti upravit struktura nabídky před vykreslením nabídky.
+Struktura nabídky aplikace, upravovat Visual C++, se používá k reprezentování potenciální příkazy, které jsou k dispozici v době WM_INITMENUPOPUP. ON_UPDATE_COMMAND_UI obslužné rutiny můžete změnit text nabídky nebo stav nebo pro rozšířené použití (např. do seznamu naposledy použitých souborů nebo v rozbalovací nabídce příkazy OLE), ve skutečnosti upravit struktura nabídky před vykreslením nabídky.
 
 Panely nástrojů (a další ovládací pruhy) se provádí stejný druh ON_UPDATE_COMMAND_UI zpracování při aplikaci zadá jeho nečinné smyčky. Najdete v článku *knihovny tříd* a [Technická poznámka 31](../mfc/tn031-control-bars.md) Další informace o ovládacích panelů.
 

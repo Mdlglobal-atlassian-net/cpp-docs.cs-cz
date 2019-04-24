@@ -12,11 +12,11 @@ helpviewer_keywords:
 - /DEF linker option
 ms.assetid: 6497fa68-65f0-48ca-8f66-b87166fc631a
 ms.openlocfilehash: c08412fb50835485e7941b2bb1db088943387b71
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272305"
 ---
 # <a name="def-specify-module-definition-file"></a>/DEF (Zadat soubor definice modulu)
 
@@ -51,5 +51,5 @@ Zadat soubor .def z vývojového prostředí, musí ho přidat do projektu spole
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - defaultbind attribute
 ms.assetid: b20a8437-24e6-4b6d-a2df-09fe5e1006e0
 ms.openlocfilehash: f0dd9101966f22253e6c4098c3c64d22d0a0cba6
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59041361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148065"
 ---
 # <a name="defaultbind"></a>defaultbind
 
@@ -39,7 +39,7 @@ Podívejte se na příklad pro [umožňujících vazbu](bindable.md) příklad, 
 |-|-|
 |**Platí pro**|Metoda rozhraní|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
+|**Vyžadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).

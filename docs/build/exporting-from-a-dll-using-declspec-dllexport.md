@@ -11,15 +11,15 @@ helpviewer_keywords:
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
 ms.openlocfilehash: 3b6b9733776f30fc8dcbfeee709b7d24e0f0187b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195313"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Export z knihovny DLL pomocí deklarace __declspec(dllexport)
 
-Společnost Microsoft zavedla **__export** ve verzi 16-bit kompilátor Visual C++ za účelem povolení kompilátoru generovat automaticky exportní názvy a umístit je do souboru LIB. Tento .lib soubor pak lze stejně jako statický .lib propojení s knihovnou DLL.
+Společnost Microsoft zavedla **__export** v kompilátoru 16bitové verzi Vizuálu C++ k povolení kompilátoru generovat automaticky exportní názvy a umístit je do souboru LIB. Tento .lib soubor pak lze stejně jako statický .lib propojení s knihovnou DLL.
 
 V novějších verzích kompilátoru můžete exportovat data, funkce, třídy nebo členské funkce tříd z knihovny DLL pomocí **__declspec(dllexport)** – klíčové slovo. **__declspec(dllexport)** přidá exportní směrnici do souboru objektu, takže nepotřebujete použít soubor .def.
 

@@ -117,11 +117,11 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
 ms.openlocfilehash: d53d3afb464b9dcfa32ab3cf4ee51446f8313a92
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58771822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62168060"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog – třída
 
@@ -137,14 +137,14 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDHtmlDialog::CDHtmlDialog](#cdhtmldialog)|Vytvoří objekt CDHtmlDialog.|
 |[CDHtmlDialog::~CDHtmlDialog](#_dtorcdhtmldialog)|Odstraní objekt CDHtmlDialog.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDHtmlDialog::CanAccessExternal](#canaccessexternal)|Overridable, která je volána jako kontroly přístupu se, zda skriptovací objekty na stránce načíst přístup k externí odeslání řízení lokality. Kontroluje, abyste měli jistotu, že odesílání je, že buď bezpečné pro skriptování, nebo aktuální zóny umožňuje pro objekty, které nejsou bezpečné pro skriptování.|
 |[CDHtmlDialog::CreateControlSite](#createcontrolsite)|Overridable umožňuje vytvořit instanci ovládacího prvku serveru pro hostování ovládacího prvku WebBrowser v dialogovém okně.|
@@ -197,7 +197,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDHtmlDialog::m_bUseHtmlTitle](#m_busehtmltitle)|Označuje, zda chcete použít název dokumentu HTML jako dialogové okno popisek.|
 |[CDHtmlDialog::m_nHtmlResID](#m_nhtmlresid)|Resource ID HTML prostředek má být zobrazen.|

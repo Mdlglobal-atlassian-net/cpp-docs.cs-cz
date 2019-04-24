@@ -11,11 +11,11 @@ helpviewer_keywords:
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
 ms.openlocfilehash: 1fc7ec438d83be1a92d8fa9d699f4172aba842e4
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179390"
 ---
 # <a name="safeint-class"></a>SafeInt – třída
 
@@ -49,13 +49,13 @@ class SafeInt;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-| Name                          |  Popis |
+| Název                          |  Popis |
 |---------------------------|--------------------|
 | [SafeInt::SafeInt](#safeint)  |  Výchozí konstruktor. |
 
 ### <a name="assignment-operators"></a>Operátory přiřazení
 
-| Name  |  Syntaxe |
+| Název  |  Syntaxe |
 |----|---------|
 | =     |  `template<typename U>`<br />`SafeInt<T,E>& operator= (const U& rhs)` |
 | =     |  `SafeInt<T,E>& operator= (const T& rhs) throw()` |
@@ -64,7 +64,7 @@ class SafeInt;
 
 ### <a name="casting-operators"></a>Operátory přetypování
 
-| Name              |  Syntaxe |
+| Název              |  Syntaxe |
 |------|---------------------------------|
 | bool              |  `operator bool() throw()` |
 | char              |  `operator char() const` |
@@ -82,7 +82,7 @@ class SafeInt;
 
 ### <a name="comparison-operators"></a>Operátory porovnání
 
-| Name  |  Syntaxe |
+| Název  |  Syntaxe |
 |----|----------------|
 | \<     |  `template<typename U>`<br /><br /> `bool operator< (U rhs) const throw()` |
 | \<     |  `bool operator< (SafeInt<T,E> rhs) const throw()` |
@@ -101,7 +101,7 @@ class SafeInt;
 
 ### <a name="arithmetic-operators"></a>Aritmetické operátory
 
-| Name  |  Syntaxe |
+| Název  |  Syntaxe |
 |----|--------------|
 | +     |  `const SafeInt<T,E>& operator+ () const throw()` |
 | -     |  `SafeInt<T,E> operator- () const` |
@@ -134,7 +134,7 @@ class SafeInt;
 
 ### <a name="logical-operators"></a>Logické operátory
 
-| Name     |  Syntaxe |
+| Název     |  Syntaxe |
 |------|--------------|
 | !        |  `bool operator !() const throw()` |
 | ~        |  `SafeInt<T,E> operator~ () const throw()` |

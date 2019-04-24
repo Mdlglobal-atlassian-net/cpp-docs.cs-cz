@@ -10,15 +10,15 @@ helpviewer_keywords:
 - jumping to labels in inline assembly
 ms.assetid: 36c18b97-8981-4631-9dfd-af6c14a04297
 ms.openlocfilehash: 7653dc990e2f4b490bcbe333ed6f7586ac966d2e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166903"
 ---
 # <a name="jumping-to-labels-in-inline-assembly"></a>Přechod na popisky v sestavení inline assemblerem
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Běžné jazyka C nebo C++ popisek, popisek v, jako jsou `__asm` bloku rozsahem v rámci funkce, ve kterém je definována (nikoli pouze v bloku). Obě pokyny k sestavení a `goto` příkazy Přejít na popisky uvnitř nebo vně `__asm` bloku.
 

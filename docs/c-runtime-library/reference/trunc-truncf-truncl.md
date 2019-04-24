@@ -31,11 +31,11 @@ helpviewer_keywords:
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
 ms.openlocfilehash: 6e023b9d894ea1b40a0e056e73b7c32f1e3cbed7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62268933"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc, truncf, truncl
 
@@ -68,7 +68,7 @@ V opačném případě může vrátit jednu z následujících akcí:
 |Problém|Vrátí|
 |-----------|------------|
 |*x* = ±INFINITY|x|
-|*x* = ±0|x|
+|*x* =  ±0|x|
 |*x* = NaN|NaN|
 
 Jsou hlášeny chyby uvedené v [_matherr](matherr.md).
@@ -85,7 +85,7 @@ Je možné také zaokrouhlit dolů Implicitním převodem z s plovoucí desetinn
 
 |Funkce|Záhlaví C|Hlaviček jazyka C++|
 |--------------|--------------|------------------|
-|**TRUNC –**, **truncf –**, **truncl**|\<Math.h >|\<cmath >|
+|**trunc**, **truncf**, **truncl**|\<math.h>|\<cmath>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

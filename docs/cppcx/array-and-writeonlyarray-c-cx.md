@@ -1,17 +1,17 @@
 ---
-title: Pole a WriteOnlyArray (C + +/ CX)
+title: Pole a WriteOnlyArray (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
 ms.openlocfilehash: fd616487bd3c11544f12e84a7dc64f41e63d501a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209413"
 ---
-# <a name="array-and-writeonlyarray-ccx"></a>Pole a WriteOnlyArray (C + +/ CX)
+# <a name="array-and-writeonlyarray-ccx"></a>Pole a WriteOnlyArray (C++/CX)
 
-Lze volně používat regulární pole stylu C nebo [std::array](../standard-library/array-class-stl.md) v jazyce C + +/ CX programu (i když [std::vector](../standard-library/vector-class.md) je často vhodnější), ale v žádné rozhraní API, který je publikován v metadatech, je nutné převést pole stylu C nebo pro vektorové [Platform::Array](../cppcx/platform-array-class.md) nebo [Platform::writeonlyarray –](../cppcx/platform-writeonlyarray-class.md) typ v závislosti na tom, jak se používá. [Platform::Array](../cppcx/platform-array-class.md) typ není tak účinné ani výkonné jako funkce [std::vector](../standard-library/vector-class.md), takže se v rámci obecných pokynů byste se měli vyhnout použití ve vnitřní kód, který provádí mnoho operací s poli elementy.
+Lze volně používat regulární pole stylu C nebo [std::array](../standard-library/array-class-stl.md) v C++/CX programu (i když [std::vector](../standard-library/vector-class.md) je často vhodnější použít), ale v žádné rozhraní API, který je publikován v metadatech, je nutné převést Pole stylu C nebo vektoru k [Platform::Array](../cppcx/platform-array-class.md) nebo [: Platform::WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) typ v závislosti na tom, jak se používá. [Platform::Array](../cppcx/platform-array-class.md) typ není tak účinné ani výkonné jako funkce [std::vector](../standard-library/vector-class.md), takže se v rámci obecných pokynů byste se měli vyhnout použití ve vnitřní kód, který provádí mnoho operací s poli elementy.
 
 Následující typy polí může být předán přes ABI:
 
@@ -29,11 +29,11 @@ PassArray používá, když volající předá pole na metodu. Vstupní parametr
 
 FillArray používá, když volající předá pole pro metodu tak, aby vyplnil. Vstupní parametr typu jazyka C++ je [: Platform::WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md)\<T >.
 
-ReceiveArray používá, když volající přijímá pole, který přiděluje metodu. V jazyce C + +/ CX může vrátit pole ve vrácené hodnotě jako pole ^ nebo ho můžete vrátit jako výstupní parametr jako typ pole ^ *.
+ReceiveArray používá, když volající přijímá pole, který přiděluje metodu. V C++/CX může vrátit pole ve vrácené hodnotě jako pole ^ nebo ho můžete vrátit jako výstupní parametr jako typ pole ^ *.
 
 ## <a name="passarray-pattern"></a>Vzor PassArray
 
-Když metoda neupravuje klientský kód předá metodě C++ pole, metoda přijímá pole jako const Array ^. Na úrovni binární rozhraní (ABI) aplikace Windows Runtime to se označuje jako PassArray. Následující příklad ukazuje, jak předat pole, která je přidělena v jazyce JavaScript, která načte z něj funkci jazyka C++.
+Když klientský kód předá pole na C++ metodou a metodou nemohou jej měnit, metoda přijímá pole jako const Array ^. Na úrovni binární rozhraní (ABI) aplikace Windows Runtime to se označuje jako PassArray. Následující příklad ukazuje, jak předat pole, která je přidělena v jazyce JavaScript, která načte z něj funkci jazyka C++.
 
 [!code-javascript[cx_arrays#101](../cppcx/codesnippet/JavaScript/array-and-writeonlyarray-c-_1.js)]
 
@@ -91,4 +91,4 @@ Obecně byste se měli vyhnout vystavení `Platform::Array` typu jako vlastnost 
 
 [Systém typů](../cppcx/type-system-c-cx.md)<br/>
 [Referenční dokumentace jazyka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Odkaz na obory názvů](../cppcx/namespaces-reference-c-cx.md)
+[Referenční informace o oborech názvů](../cppcx/namespaces-reference-c-cx.md)

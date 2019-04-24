@@ -81,11 +81,11 @@ helpviewer_keywords:
 - std::forward_list::unique
 ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
 ms.openlocfilehash: 5eaa8eba1904dc0a729fb66b280b8d3fa4bb78f1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159779"
 ---
 # <a name="forwardlist-class"></a>forward_list – třída
 
@@ -121,7 +121,7 @@ Doplňky řízené sekvence může dojít k voláním [forward_list::insert_afte
 
 |Konstruktor|Popis|
 |-|-|
-|[forward_list –](#forward_list)|Vytvoří objekt typu `forward_list`.|
+|[forward_list](#forward_list)|Vytvoří objekt typu `forward_list`.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -132,8 +132,8 @@ Doplňky řízené sekvence může dojít k voláním [forward_list::insert_afte
 |[const_pointer](#const_pointer)|Typ, který poskytuje ukazatel na **const** prvek v seznamu vpřed.|
 |[const_reference](#const_reference)|Typ, který poskytuje konstantní odkaz na prvek v seznamu vpřed.|
 |[difference_type](#difference_type)|Celočíselný typ se znaménkem, který slouží k vyjádření počtu prvků seznam dopředu v rozsahu mezi prvky, na které odkazují iterátory.|
-|[iterátor](#iterator)|Typ, který poskytuje iterátor pro dopředný seznamu.|
-|[Ukazatel](#pointer)|Typ, který poskytuje ukazatel na prvek v seznamu vpřed.|
+|[iterator](#iterator)|Typ, který poskytuje iterátor pro dopředný seznamu.|
+|[pointer](#pointer)|Typ, který poskytuje ukazatel na prvek v seznamu vpřed.|
 |[Referenční dokumentace](#reference)|Typ, který poskytuje odkaz na prvek v seznamu vpřed.|
 |[size_type](#size_type)|Typ, který představuje vzdálenosti bez znaménka mezi dvěma prvky.|
 |[value_type](#value_type)|Typ, který představuje typ prvků uložených v dopředné seznamu.|
@@ -142,15 +142,15 @@ Doplňky řízené sekvence může dojít k voláním [forward_list::insert_afte
 
 |Členská funkce|Popis|
 |-|-|
-|[přiřazení](#assign)|Odstraní prvky ze seznamu dopředné a zkopíruje novou sadu prvků do cílového seznamu vpřed.|
+|[assign](#assign)|Odstraní prvky ze seznamu dopředné a zkopíruje novou sadu prvků do cílového seznamu vpřed.|
 |[before_begin –](#before_begin)|Vrátí iterátor adresující umístění před první prvek v dopředné seznamu.|
 |[začít](#begin)|Vrátí iterátor adresující první prvek v dopředné seznamu.|
 |[cbefore_begin](#cbefore_begin)|Vrátí konstantní iterátor adresující umístění před první prvek v dopředné seznamu.|
 |[cbegin](#cbegin)|Vrátí konstantní iterátor adresující první prvek v dopředné seznamu.|
 |[cend](#cend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v dopředné seznamu.|
-|[Vymazat](#clear)|Vymaže všechny prvky dopředné seznamu.|
-|[emplace_after –](#emplace_after)|Přesunutí vytvoří nový prvek po do zadané pozice.|
-|[emplace_front –](#emplace_front)|Přidá prvek vytvořený v místě na začátek seznamu.|
+|[clear](#clear)|Vymaže všechny prvky dopředné seznamu.|
+|[emplace_after](#emplace_after)|Přesunutí vytvoří nový prvek po do zadané pozice.|
+|[emplace_front](#emplace_front)|Přidá prvek vytvořený v místě na začátek seznamu.|
 |[prázdný](#empty)|Ověřuje, zda přesměrování seznam je prázdný.|
 |[ukončení](#end)|Vrátí iterátor adresující umístění následující po posledním prvku v dopředné seznamu.|
 |[erase_after](#erase_after)|Odebere prvky ze seznamu přesměrování po do zadané pozice.|
@@ -163,11 +163,11 @@ Doplňky řízené sekvence může dojít k voláním [forward_list::insert_afte
 |[push_front](#push_front)|Přidá prvek na začátku seznamu vpřed.|
 |[remove](#remove)|Odstraní prvky v dopředné seznamu, který odpovídá zadané hodnotě.|
 |[remove_if](#remove_if)|Odstraní prvky z seznam vpřed, pro kterou zadaný predikát uspokojen.|
-|[Změna velikosti](#resize)|Určuje novou velikost seznamu vpřed.|
+|[resize](#resize)|Určuje novou velikost seznamu vpřed.|
 |[reverzní](#reverse)|Obrátí pořadí, ve kterém se prvky objevují v dopředné seznamu.|
 |[Řazení](#sort)|Uspořádá prvky ve vzestupném pořadí nebo pořadí určeném predikátem.|
 |[splice_after](#splice_after)|Restitches propojení mezi uzly.|
-|[Prohození](#swap)|Vymění prvky dvou seznamů vpřed.|
+|[swap](#swap)|Vymění prvky dvou seznamů vpřed.|
 |[unique](#unique)|Odebere sousedící prvky, které předávají zadaný testovací.|
 
 ### <a name="operators"></a>Operátory
@@ -178,7 +178,7 @@ Doplňky řízené sekvence může dojít k voláním [forward_list::insert_afte
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<forward_list – >
+**Header:** \<forward_list>
 
 **Namespace:** std
 
@@ -194,7 +194,7 @@ typedef Allocator allocator_type;
 
 `allocator_type` je synonymum pro parametr šablony alokátoru.
 
-## <a name="assign"></a>  forward_list::Assign
+## <a name="assign"></a>  forward_list::assign
 
 Odstraní prvky ze seznamu dopředné a zkopíruje novou sadu prvků do cílového seznamu vpřed.
 
@@ -215,11 +215,11 @@ void assign(InputIterator First, InputIterator Last);
 |Parametr|Popis|
 |---------------|-----------------|
 |*první*|Začátek rozsahu nahrazení.|
-|*poslední*|Konec rozsahu nahrazení.|
+|*last*|Konec rozsahu nahrazení.|
 |*Počet*|Počet prvků, které mají přiřadit.|
 |*Val*|Hodnota pro přiřazení jednotlivých prvků.|
 |*Typ*|Typ hodnoty.|
-|* IList.|Objekt initializer_list ke kopírování.|
+|* IList. | Objekt initializer_list ke kopírování.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -468,7 +468,7 @@ iterator erase_after(const_iterator first, const_iterator last);
 |---------------|-----------------|
 |*kde*|Pozice v cílovém seznamu vpřed ve kterém se vymažou elementu.|
 |*první*|Začátek rozsahu, který chcete vymazat.|
-|*poslední*|Konec rozsahu, který chcete vymazat.|
+|*last*|Konec rozsahu, který chcete vymazat.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -645,7 +645,7 @@ void merge(forward_list& right, Predicate comp);
 |Parametr|Popis|
 |---------------|-----------------|
 |*doprava*|Dopředné seznamu sloučit z.|
-|*Kompozice*|Objekt funkce porovnání, která slouží k seřazení prvků.|
+|*comp*|Objekt funkce porovnání, která slouží k seřazení prvků.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -682,7 +682,7 @@ Druhý operátor člena nahradí řízenou sekvenci z objektu třídy `initializ
 
 Třetí členský operátor je stejný jako první, ale s [rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) odkaz.
 
-## <a name="pointer"></a>  forward_list::Pointer
+## <a name="pointer"></a>  forward_list::pointer
 
 Typ, který poskytuje ukazatel na prvek v seznamu vpřed.
 
@@ -725,7 +725,7 @@ void push_front(Type&& val);
 
 Pokud je vyvolána výjimka, kontejner zůstane beze změny a je znovu vyvolána výjimka.
 
-## <a name="reference"></a>  forward_list::Reference
+## <a name="reference"></a>  forward_list::reference
 
 Typ, který poskytuje odkaz na prvek v seznamu vpřed.
 
@@ -735,7 +735,7 @@ typedef typename Allocator::reference reference;
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="remove"></a>  forward_list::Remove
+## <a name="remove"></a>  forward_list::remove
 
 Odstraní prvky v dopředné seznamu, který odpovídá zadané hodnotě.
 
@@ -796,7 +796,7 @@ void resize(size_type _Newsize, const Type& val);
 
 Členské funkce obou zajistěte, aby byl počet prvků v seznamu od nynějška *_Newsize*. Pokud je třeba provést řízené sekvence delší, první členská funkce přidá prvky s hodnotou `Type()`, zatímco druhá členská funkce přidá prvky s hodnotou *val*. Chcete-li řízené sekvence kratší, efektivně i členské funkce volají `erase_after(begin() + _Newsize - 1, end())`.
 
-## <a name="reverse"></a>  forward_list::Reverse
+## <a name="reverse"></a>  forward_list::reverse
 
 Obrátí pořadí, ve kterém se prvky objevují v dopředné seznamu.
 
@@ -1003,7 +1003,7 @@ void unique(BinaryPredicate comp);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*Kompozice*|Binární predikát, který používá k porovnání po sobě jdoucí prvky.|
+|*comp*|Binární predikát, který používá k porovnání po sobě jdoucí prvky.|
 
 ### <a name="remarks"></a>Poznámky
 
