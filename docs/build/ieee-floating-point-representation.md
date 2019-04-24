@@ -12,11 +12,11 @@ helpviewer_keywords:
 - real*4 value
 ms.assetid: 537833e8-fe05-49fc-8169-55fd0314b195
 ms.openlocfilehash: 69686e7e1c8994b799607eebf7e50387ed688272
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188831"
 ---
 # <a name="ieee-floating-point-representation"></a>Reprezentace plovoucí desetinné čárky IEEE
 
@@ -24,7 +24,7 @@ Microsoft Visual C++ je konzistentní s číselnou standardů IEEE. Standard IEE
 
 Hodnoty jsou uloženy následujícím způsobem:
 
-|Hodnota|Uložené jako|
+|Value|Uložené jako|
 |-----------|---------------|
 |jednoduchou přesností|podepsat bit, 8 bitů exponent, 23 bitů mantisy|
 |dvojité přesnosti|podepsat bit, 11bitový exponent, mantisy 52-bit|
@@ -90,49 +90,49 @@ Toto jsou některé příklady ve formátu jednoduchou přesnost:
 
 - Hodnota -2. Stejné jako + 2 s tím rozdílem, že je nastavena na bit znaménka. To platí pro záporné hodnoty všech čísel s plovoucí desetinnou čárkou IEEE formátu.
 
-   |Hodnota|Vzorec|Binární reprezentace|Šestnáctková hodnota|
+   |Value|Vzorec|Binární reprezentace|Šestnáctková hodnota|
    |-|-|-|-|
    |-2|-1 * 2<sup>1</sup>|1100 0000 0000 0000 0000 0000 0000 0000|0xC0000000|
 
 - Hodnota 4. Stejné mantisy exponent zvýší o 1 (posunutého hodnotu 129, nebo 100 0000 1 v binárním souboru.
 
-   |Hodnota|Vzorec|Binární reprezentace|Šestnáctková hodnota|
+   |Value|Vzorec|Binární reprezentace|Šestnáctková hodnota|
    |-|-|-|-|
    |4|1 * 2<sup>2</sup>|0100 0000 1000 0000 0000 0000 0000 0000|0x40800000|
 
 - Hodnotu 6. Stejné exponent mantisy je větší polovinu – jeho (1). 100 0000 ... 0000 0000, který, protože se jedná binární zlomek je 1. 1/2, protože hodnoty zlomkové číslice 1/2, 1/4, 1/8 a tak dále.
 
-   |Hodnota|Vzorec|Binární reprezentace|Šestnáctková hodnota|
+   |Value|Vzorec|Binární reprezentace|Šestnáctková hodnota|
    |-|-|-|-|
    |6|1.5 * 2<sup>2</sup>|0100 0000 1100 0000 0000 0000 0000 0000|0x40C00000|
 
 - Hodnota 1. Stejné mantisy jako ostatní mocniny dvou posunutého exponent je jeden méně než dvě 127 nebo 011 1111 1 v binárním souboru.
 
-   |Hodnota|Vzorec|Binární reprezentace|Šestnáctková hodnota|
+   |Value|Vzorec|Binární reprezentace|Šestnáctková hodnota|
    |-|-|-|-|
    |1|1 * 2<sup>0</sup>|0011 1111 1000 0000 0000 0000 0000 0000|0x3F800000|
 
 - Hodnota 0,75. Posunutého exponent je 126 011 1111 0 v binárním souboru a říká mantisa je (1). 100 0000 ... 0000 0000, což je 1. 1/2.
 
-   |Hodnota|Vzorec|Binární reprezentace|Šestnáctková hodnota|
+   |Value|Vzorec|Binární reprezentace|Šestnáctková hodnota|
    |-|-|-|-|
    |0.75|1.5 * 2<sup>-1</sup>|0011 1111 0100 0000 0000 0000 0000 0000|0x3F400000|
 
 - Hodnota 2.5. Stejně jako dvě kromě toho, že je bit, který představuje 1/4 je nastavena v mantisy.
 
-   |Hodnota|Vzorec|Binární reprezentace|Šestnáctková hodnota|
+   |Value|Vzorec|Binární reprezentace|Šestnáctková hodnota|
    |-|-|-|-|
    |2.5|1.25 * 2<sup>1</sup>|0100 0000 0010 0000 0000 0000 0000 0000|0x40200000|
 
 - 1/10 je opakovaný zlomek v binárním souboru. Mantisa je právě tvy 1.6, a posunutého exponent říká, že má být děleno 16 1.6 (je 1 1101 011 v binárním souboru, který je 123 v desítkové soustavě). True exponent je 123-127 = - 4, což znamená, že faktor, podle kterého se má vynásobit 2<sup>-4</sup> = 1/16. Všimněte si, že uložené mantisy se zaokrouhluje nahoru v poslední verzi, pokus o přičtení číslo představující co nejpřesněji. (Z důvodu 1/10 do 1/100 se nemusí přesně reprezentovat v binárním souboru se podobá z důvodu, že se nemusí přesně reprezentovat v desítkové soustavě 1/3.)
 
-   |Hodnota|Vzorec|Binární reprezentace|Šestnáctková hodnota|
+   |Value|Vzorec|Binární reprezentace|Šestnáctková hodnota|
    |-|-|-|-|
    |0.1|1.6 * 2<sup>-4</sup>|0011 1101 1100 1100 1100 1100 1100 1101|0x3DCCCCCD|
 
 - Nula je zvláštní případ, který používá tento vzorec pro minimální možné reprezentovatelné kladné hodnoty, které obsahuje samé nuly.
 
-   |Hodnota|Vzorec|Binární reprezentace|Šestnáctková hodnota|
+   |Value|Vzorec|Binární reprezentace|Šestnáctková hodnota|
    |-|-|-|-|
    |0|1 * 2<sup>-128</sup>|0000 0000 0000 0000 0000 0000 0000 0000|0x00000000|
 

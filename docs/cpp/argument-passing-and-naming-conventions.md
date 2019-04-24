@@ -14,15 +14,15 @@ helpviewer_keywords:
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
 ms.openlocfilehash: ca09d31d3d8d50ca94543c5e02262edd7b2deefc
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184397"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>Konvence předávání a pojmenování argumentů
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Kompilátory jazyka Visual C++ umožňují určit konvence pro předávání argumentů a návratové hodnoty mezi funkcemi a volajícími. Ne všechny konvence jsou k dispozici na všech podporovaných platformách a některé konvence využívají implementace specifické pro platformu. Ve většině případů klíčová slova nebo přepínače kompilátoru určující nepodporovanou úmluvu na jednotlivých platformách jsou ignorovány a používá se výchozí konvence platformy.
 

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - A4509
 ms.assetid: 52b38267-6023-4bdc-a0ef-863362f48eec
 ms.openlocfilehash: 867ef50065c6ed63a4da6d37523bd5a1f3cbadba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167840"
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>Diagnostické zprávy assembleru ARM
 
@@ -60,7 +60,7 @@ Assembler můžou snažit kódování větve v 16 bitů a neúspěšné a zobraz
 label
 ```
 
-> A2202: Syntaxe příkazu Pre-UAL není povolené v oblasti JEZDCE
+> A2202: Syntaxe příkazu Pre-protokolování přístupu uživatele není povoleno v oblasti JEZDCE
 
 Kód pro Thumb nutné použít syntaxi Unified jazyka assembleru (UAL).  Stará syntaxe už je přijat.
 
@@ -90,7 +90,7 @@ Struktury NEON načítají a ukládají pokyny (`VLDn`, `VSTn`), existuje altern
 
 ## <a name="diagnostic-messages---warnings"></a>Diagnostické zprávy – upozornění
 
-> A4228: Zarovnání oblasti; větší než hodnota zarovnání není zaručeno, že zarovnání
+> A4228: Hodnota zarovnání větší než zarovnání oblasti; není zaručeno, že zarovnání
 
 Zarovnání ve stanoveném `ALIGN` direktiva je větší než zarovnání nadřazený `AREA`.  V důsledku toho, assembler nemůže zaručit, že `ALIGN` – direktiva se neuplatňují.
 
@@ -104,7 +104,7 @@ AREA |.myarea2|,ALIGN=3
 ALIGN 8           ; OK
 ```
 
-> A4508: Použití této otočený konstanty je zastaralé.
+> A4508: Použití této otočený konstanty je zastaralé
 
 V režimu ARM je alternativní syntaxe pro určení konstanty.  Místo psaní `#<const>`, můžete napsat `#<byte>,#<rot>`, která představuje konstantní hodnota, která se získá hodnota otáčení `<byte>` právo `<rot>`.  V některých kontextech ARM přestala používat tyto otočený konstant. V těchto případech použijte základní `#<const>` syntaxe místo.
 
@@ -113,7 +113,7 @@ V režimu ARM je alternativní syntaxe pro určení konstanty.  Místo psaní `#
     ANDS r0, r0, #4, #2            ; A4508: Use of this rotated constant is deprecated
 ```
 
-> A4509: Tento formulář podmíněné instrukce je zastaralý.
+> A4509: Tato forma podmíněné instrukce je zastaralý.
 
 Tato forma podmíněné instrukce je zastaralá ve ARM v architektuře ARMv8. Doporučujeme vám, že změníte kód, který použije podmínkových větví. Pokud chcete zobrazit, které podmíněné pokyny jsou stále podporovány, naleznete [ARM architektuře referenčním manuálu](http://go.microsoft.com/fwlink/p/?linkid=246464).
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UNION directive
 ms.assetid: 52504abf-7dc1-47c5-944c-b886803a0c6a
 ms.openlocfilehash: 37d486c6a9b8ba66a892e3cf9b3f68532509782d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216882"
 ---
 # <a name="union"></a>UNION
 
@@ -20,7 +20,7 @@ Deklaruje sjednocení jeden nebo více datových typů. *Deklarace pole* musí b
 ## <a name="syntax"></a>Syntaxe
 
 > *název* SJEDNOCENÍ [[*zarovnání*]] [[, DUPLICITNÍ]]<br/>
-> *deklarace polí*<br/>
+> *field-declarations*<br/>
 > [[*název*]] KONČÍ
 
 ## <a name="see-also"></a>Viz také:

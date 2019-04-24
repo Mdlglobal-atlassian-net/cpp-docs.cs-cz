@@ -24,11 +24,11 @@ helpviewer_keywords:
 - purecall function
 ms.assetid: 56135d9b-3403-4e22-822d-e714523801cc
 ms.openlocfilehash: a7a6db42dc4b8d9b2962a66c7866aae9db55eb3b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62231972"
 ---
 # <a name="purecall"></a>_purecall
 
@@ -42,7 +42,7 @@ extern "C" int __cdecl _purecall();
 
 ## <a name="remarks"></a>Poznámky
 
-**_Purecall –** funkce je specifické pro společnost Microsoft podrobnosti implementace kompilátoru Microsoft Visual C++. Tato funkce není určena k volání přímo ve vašem kódu a nemá žádné veřejné záhlaví deklarace. Je tady popsali, protože je k veřejné exportu knihovny Runtime jazyka C.
+**_Purecall –** funkce je specifické pro společnost Microsoft podrobnosti implementace Microsoft Visual C++ kompilátoru. Tato funkce není určena k volání přímo ve vašem kódu a nemá žádné veřejné záhlaví deklarace. Je tady popsali, protože je k veřejné exportu knihovny Runtime jazyka C.
 
 Volání čistě virtuální funkce se o chybu, protože nemá žádnou implementaci. Kompilátor generuje kód, který má být vyvolán **_purecall –** funkci obslužné rutiny chyb při volání čistě virtuální funkce. Ve výchozím nastavení **_purecall –** ukončí program. Než se ukončí, **_purecall –** vyvolá funkce **_purecall_handler** fungovat, pokud byla nastavena pro proces. Můžete nainstalovat vlastní funkci obslužné rutiny chyby pro volání čistě virtuální funkce, je pro ladění nebo pro účely vykazování zachytit. Pokud chcete použít vlastní obslužnou rutinu chyb, vytvořte funkci, která má **_purecall_handler** podpis, pak použít [_set_purecall_handler –](get-purecall-handler-set-purecall-handler.md) k němu aktuální obslužné rutiny.
 

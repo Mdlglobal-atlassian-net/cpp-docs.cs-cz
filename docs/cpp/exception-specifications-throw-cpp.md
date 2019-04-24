@@ -9,11 +9,11 @@ helpviewer_keywords:
 - noexcept keyword [C++]
 ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
 ms.openlocfilehash: 9280f3d96088d988a9d5cfe0f3d56444b865167e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154331"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Specifikace výjimek (throw, noexcept) (C++)
 
@@ -52,7 +52,7 @@ Explicitní specifikace výjimek nejsou povoleny ve funkcích c. Funkci jazyka C
 
 Následující tabulka uvádí, zda funkci jazyka C++ může potenciálně vyvolat v rámci různých zpracování možností kompilátoru výjimek:
 
-|Funkce|/ EHsc|/ EHs|/EHa|/ EHac|
+|Funkce|/EHsc|/EHs|/EHa|/EHac|
 |--------------|------------|-----------|-----------|------------|
 |C++ funguje bez specifikací výjimek|Ano|Ano|Ano|Ano|
 |Funkce jazyka C++ s `noexcept`, `noexcept(true)`, nebo `throw()` specifikace výjimek|Ne|Ne|Ano|Ano|

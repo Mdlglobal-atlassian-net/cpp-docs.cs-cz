@@ -29,11 +29,11 @@ helpviewer_keywords:
 - mbbtype_l function
 ms.assetid: b8e34b40-842a-4298-aa39-0bd2d8e51c2a
 ms.openlocfilehash: a6d17b99e4314c2ab836a16129ab8a0e6ac7720e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156886"
 ---
 # <a name="mbbtype-mbbtypel"></a>_mbbtype, _mbbtype_l
 
@@ -61,7 +61,7 @@ int _mbbtype_l(
 *c*<br/>
 Znak k testování.
 
-*Typ*<br/>
+*type*<br/>
 Typ bajtu pro test.
 
 *Národní prostředí*<br/>
@@ -91,7 +91,7 @@ V dřívějších verzích **_mbbtype –** označovala jako **chkctype**. Pro n
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_mbbtype –**|\<Mbstring.h >|\<Mbctype.h > *|
+|**_mbbtype**|\<Mbstring.h >|\<Mbctype.h > *|
 |**_mbbtype_l**|\<Mbstring.h >|\<Mbctype.h > *|
 
 \* Definice konstanty manifestu používané jako vrácené hodnoty.

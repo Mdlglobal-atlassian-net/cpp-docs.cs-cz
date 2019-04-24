@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Parallel Patterns Library (PPL)
 ms.assetid: 40fd86b2-69fa-45e5-93d8-98a75636c242
 ms.openlocfilehash: 11440d56b9618d4763e1b7e47a21b365bbdc0c15
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301848"
 ---
 # <a name="parallel-patterns-library-ppl"></a>Knihovna PPL (Parallel Patterns Library)
 
@@ -27,7 +27,7 @@ PPL poskytuje následující funkce:
 
 PPL poskytuje programovací model, který vypadá podobně jako standardní knihovny C++. Následující příklad ukazuje mnoho funkcí PPL. Několik čísel Fibonacciho vypočítává sériově i paralelně. Zpracovat oba výpočty [std::array](../../standard-library/array-class-stl.md) objektu. V příkladu také tiskne na konzolu čas, který je potřeba provést i výpočty.
 
-Sériový verze používá standardní knihovny C++ [std::for_each](../../standard-library/algorithm-functions.md#for_each) algoritmus k procházení pole a ukládá výsledky [std::vector](../../standard-library/vector-class.md) objektu. Paralelní verze provádí stejné úlohy, ale používá PPL [: concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmus a ukládá výsledky [concurrency::concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) objektu. `concurrent_vector` Třída umožňuje každého průchodu cyklem současně přidávat prvky bez nutnosti synchronizovat oprávnění k zápisu do kontejneru.
+Sériové verze používá C++ standardní knihovny [std::for_each](../../standard-library/algorithm-functions.md#for_each) algoritmus k procházení pole a ukládá výsledky [std::vector](../../standard-library/vector-class.md) objektu. Paralelní verze provádí stejné úlohy, ale používá PPL [: concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmus a ukládá výsledky [concurrency::concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) objektu. `concurrent_vector` Třída umožňuje každého průchodu cyklem současně přidávat prvky bez nutnosti synchronizovat oprávnění k zápisu do kontejneru.
 
 Protože `parallel_for_each` funguje souběžně, paralelní verze tohoto příkladu musí řazení `concurrent_vector` objekt vytvářejí stejné výsledky jako verze sériového portu.
 

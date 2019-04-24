@@ -35,11 +35,11 @@ helpviewer_keywords:
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
 ms.openlocfilehash: 0009b4bc1c7bf70bd84b9a82ecdc8643789e8164
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287397"
 ---
 # <a name="getpurecallhandler-setpurecallhandler"></a>_get_purecall_handler, _set_purecall_handler
 
@@ -66,7 +66,7 @@ Předchozí **_purecall_handler**. Vrátí **nullptr** Pokud žádná předchoz�
 
 ## <a name="remarks"></a>Poznámky
 
-**_Get_purecall_handler** a **_set_purecall_handler –** funkce jsou specifické pro společnost Microsoft a platí pouze pro kód jazyka C++.
+**_Get_purecall_handler** a **_set_purecall_handler –** funkce jsou specifické pro společnost Microsoft a platí jenom pro C++ kódu.
 
 Volání čistě virtuální funkce se o chybu, protože nemá žádnou implementaci. Ve výchozím nastavení kompilátor vygeneruje kód pro vyvolat funkci obslužné rutiny k chybě při volání čistě virtuální funkce, která ukončí program. Můžete nainstalovat vlastní funkci obslužné rutiny chyby pro volání čistě virtuální funkce, je pro ladění nebo pro účely vykazování zachytit. Pokud chcete použít vlastní obslužnou rutinu chyb, vytvořte funkci, která má **_purecall_handler** podpis, pak použít **_set_purecall_handler –** k němu aktuální obslužné rutiny.
 
@@ -78,7 +78,7 @@ Chcete-li obnovit výchozí chování, zavolejte **_set_purecall_handler –** p
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_get_purecall_handler**, **_set_purecall_handler –**|\<cstdlib – > nebo \<stdlib.h >|
+|**_get_purecall_handler**, **_set_purecall_handler**|\<cstdlib – > nebo \<stdlib.h >|
 
 Informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

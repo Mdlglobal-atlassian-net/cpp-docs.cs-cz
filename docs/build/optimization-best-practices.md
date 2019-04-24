@@ -6,11 +6,11 @@ helpviewer_keywords:
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
 ms.openlocfilehash: edb036292b87593a3f8bb9b3f5ec5f7beb84c3a5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274167"
 ---
 # <a name="optimization-best-practices"></a>Doporučené postupy optimalizace
 
@@ -93,7 +93,7 @@ Další užitečné – Direktiva pragma pro omezení hloubku vkládání je `#p
 
 ## <a name="restrict-and-assume"></a>Kvalifikátor __restrict a \__assume
 
-Existuje několik klíčových slov v jazyce Visual C++, který vám pomůže výkonu: [kvalifikátor __restrict](../cpp/extension-restrict.md) a [__assume](../intrinsics/assume.md).
+Existuje několik klíčových slov ve Vizuálu C++ , který vám pomůže zvýšit výkon: [kvalifikátor __restrict](../cpp/extension-restrict.md) a [__assume](../intrinsics/assume.md).
 
 Nejprve je třeba poznamenat, že `__restrict` a `__declspec(restrict)` jsou dvě různé věci. Při nich do jisté míry se vztahují, se liší jejich sémantiku. `__restrict` Kvalifikátor typu, jako je třeba je `const` nebo `volatile`, ale výhradně pro typy ukazatelů.
 

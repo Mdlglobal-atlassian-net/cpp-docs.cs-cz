@@ -33,11 +33,11 @@ helpviewer_keywords:
 - temporary files [C++]
 ms.assetid: 92a7e269-7f3d-4c71-bad6-14bc827a451d
 ms.openlocfilehash: fef10f2cfbcc0332741d560a41a782b70ed14798
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156531"
 ---
 # <a name="mktemps-wmktemps"></a>_mktemp_s, _wmktemp_s
 
@@ -80,7 +80,7 @@ Obě tyto funkce vrací nulu v případě úspěchu; Kód chyby při selhání.
 
 |*nameTemplate*|*sizeInChars*|Návratová hodnota|Nová hodnota v *nameTemplate*|
 |----------------|-------------------|----------------------|-------------------------------|
-|**HODNOTU NULL**|Všechny|**EINVAL**|**HODNOTU NULL**|
+|**NULL**|Všechny|**EINVAL**|**NULL**|
 |Nesprávný formát (viz poznámky části správný formát)|Všechny|**EINVAL**|Prázdný řetězec|
 |Všechny|< = počet bezpodmínečný|**EINVAL**|Prázdný řetězec|
 
@@ -94,7 +94,7 @@ Pokud dojde k některé z výše uvedených chybové stavy, vyvolán obslužnou 
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tmktemp_s –**|**_mktemp_s**|**_mktemp_s**|**_wmktemp_s**|
+|**_tmktemp_s**|**_mktemp_s**|**_mktemp_s**|**_wmktemp_s**|
 
 *NameTemplate* argument má tvar **baseXXXXXX**, kde *základní* je součástí nový název souboru, který zadáte, a každá X je zástupný symbol pro znak poskytl **_mktemp_s –**. Každý zástupný znak v *nameTemplate* musí být velké písmeno x **_mktemp_s –** zachová *základní* a nahradí první Koncové X abecední znak. **_mktemp_s –** nahrazuje následující koncové bezpodmínečný s hodnotou pět číslic; tato hodnota je jedinečné číslo identifikující volání procesu, nebo v programech s více vlákny, volajícího vlákna.
 
@@ -122,7 +122,7 @@ V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šab
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_mktemp_s**|\<IO.h >|
+|**_mktemp_s**|\<io.h>|
 |**_wmktemp_s**|\<IO.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

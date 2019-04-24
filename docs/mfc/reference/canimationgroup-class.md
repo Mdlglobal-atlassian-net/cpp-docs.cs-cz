@@ -47,11 +47,11 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
 ms.openlocfilehash: 32b2adfee2a36139a11caa12fa98bd240b0732dd
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152070"
 ---
 # <a name="canimationgroup-class"></a>Canimationgroup – třída
 
@@ -67,14 +67,14 @@ class CAnimationGroup;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationGroup::CAnimationGroup](#canimationgroup)|Vytvoří skupinu animace.|
 |[CAnimationGroup::~CAnimationGroup](#_dtorcanimationgroup)|Destruktor. Volá se, když se likviduje skupinu animace.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationGroup::Animate](#animate)|Animuje skupinu.|
 |[CAnimationGroup::ApplyTransitions](#applytransitions)|Přechody se vztahuje na objekty animace.|
@@ -95,7 +95,7 @@ class CAnimationGroup;
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationGroup::m_bAutoclearTransitions](#m_bautocleartransitions)|Určuje, jak vymazat přechody ze animace objektů, které patří do skupiny. Pokud tato vlastnost hodnotu TRUE, se automaticky odeberou přechody, když je naplánovaná animace. Jinak budete muset ručně odebrat přechodů.|
 |[CAnimationGroup::m_bAutodestroyAnimationObjects](#m_bautodestroyanimationobjects)|Určuje, jak zničit objekty animace. Pokud tento parametr má hodnotu TRUE, objekty animace zničí automaticky při zničení skupině. Animace objektů v opačném případě musí být zničený ručně. Výchozí hodnota je FALSE. Nastavte tuto hodnotu na TRUE jenom v případě, že všechny objekty animace, které patří do skupiny se přidělují dynamicky pomocí operátoru new.|
@@ -106,7 +106,7 @@ class CAnimationGroup;
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationGroup::m_nGroupID](#m_ngroupid)|Jedinečný identifikátor skupiny animace.|
 |[CAnimationGroup::m_pParentController](#m_pparentcontroller)|Ukazatel na řadič animace, do které tato skupina patří.|

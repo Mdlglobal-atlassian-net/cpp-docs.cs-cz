@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::MakeAllocator::~MakeAllocator, destructor
 ms.assetid: a1114615-abd7-4a56-9bc3-750c118f0fa1
 ms.openlocfilehash: 805f0c09b0490d8cec1a0be96dcb1fc99a051371
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161235"
 ---
 # <a name="makeallocator-class"></a>MakeAllocator – třída
 
@@ -64,14 +64,14 @@ Přepsat `MakeAllocator` třídu pro implementaci modelu přidělování paměti
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Name                                                  | Popis
+Název                                                  | Popis
 ----------------------------------------------------- | ----------------------------------------------------------------
 [MakeAllocator::MakeAllocator](#makeallocator)        | Inicializuje novou instanci třídy `MakeAllocator` třídy.
 [MakeAllocator::~MakeAllocator](#tilde-makeallocator) | Zruší inicializaci aktuální instance `MakeAllocator` třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Name                                 | Popis
+Název                                 | Popis
 ------------------------------------ | -----------------------------------------------------------------------------------------------------------
 [Makeallocator::allocate –](#allocate) | Přidělí paměť a přidruží ji k aktuální `MakeAllocator` objektu.
 [MakeAllocator::Detach](#detach)     | Zruší přidružení paměť přidělenou [přidělení](#allocate) metodu z aktuální `MakeAllocator` objektu.

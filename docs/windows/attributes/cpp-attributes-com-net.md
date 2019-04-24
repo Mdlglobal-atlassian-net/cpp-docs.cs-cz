@@ -7,11 +7,11 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
 ms.openlocfilehash: f9d339860e9d2bdb8d66f6b7f8f49d3993b2d5cf
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148322"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Atributy C++ COM a .NET
 
@@ -60,7 +60,7 @@ Následující obrázek ukazuje vztah mezi kompilátoru a poskytovatele atributu
 > [!NOTE]
 > Použití atributu nezmění obsah zdrojového souboru. Kód vygenerovaný atributu je viditelné se pouze během relace ladění. Kromě toho pro každý zdrojový soubor v projektu, můžete vygenerovat textový soubor, který zobrazuje výsledky atribut nahrazení. Další informace o tomto postupu najdete v tématu [/Fx (sloučení vloženého kódu)](../../build/reference/fx-merge-injected-code.md) a [ladění vloženého kódu](/visualstudio/debugger/how-to-debug-injected-code).
 
-Jako většina konstruktory jazyka C++ mít atributy sadu vlastností, která definuje jejich správné použití. To se označuje jako kontext atribut a je určena v tabulce atribut kontextu pro každý atribut referenční téma. Například [coclass](coclass.md) atribut lze použít pouze na existující třída nebo struktura, nikoli [cpp_quote –](cpp-quote.md) atribut, který může vložit na libovolné místo v rámci zdrojový soubor jazyka C++.
+Jako většina konstruktory jazyka C++ mít atributy sadu vlastností, která definuje jejich správné použití. To se označuje jako kontext atribut a je určena v tabulce atribut kontextu pro každý atribut referenční téma. Například [coclass](coclass.md) atribut lze použít pouze na existující třída nebo struktura, nikoli [cpp_quote –](cpp-quote.md) atribut, který může vložit na libovolné místo v rámci C++ zdrojový soubor.
 
 ## <a name="building-an-attributed-program"></a>Sestavení programu s atributy
 

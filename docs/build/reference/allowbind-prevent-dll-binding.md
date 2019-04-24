@@ -13,11 +13,11 @@ helpviewer_keywords:
 - DLLs [C++], preventing binding
 ms.assetid: 30e37e24-12e4-407e-988a-39d357403598
 ms.openlocfilehash: bd9976e434441d2480386ee6fa3d0315fd8d2ef5
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57818840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295146"
 ---
 # <a name="allowbind-prevent-dll-binding"></a>/ALLOWBIND (Zabránit vazbě knihoven DLL)
 
@@ -45,7 +45,7 @@ Můžete upravit existující knihovny DLL pro funkce /ALLOWBIND s [/ALLOWBIND](
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)<br/>
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)<br/>
 [BindImage – funkce](/windows/desktop/api/imagehlp/nf-imagehlp-bindimage)<br/>
 [BindImageEx – funkce](/windows/desktop/api/imagehlp/nf-imagehlp-bindimageex)

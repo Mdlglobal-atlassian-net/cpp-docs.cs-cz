@@ -9,11 +9,11 @@ helpviewer_keywords:
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
 ms.openlocfilehash: 6f87486d0bb2614a3b2542cf050172a47f152c4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184598"
 ---
 # <a name="identifiers-c"></a>Identifikátory (C++)
 
@@ -58,9 +58,9 @@ Následující znaky jsou povoleny jako libovolný znak identifikátoru s výjim
 
 Číslo rozsahy tyto Unicode kódu bodu jsou povolené také jako univerzální názvy znaků pro libovolný znak identifikátoru s výjimkou prvního:
 
-- 0300-036F 1DC0 1DFF, 20D 0-20FF FE20 FE2F
+- 0300-036F, 1DC0-1DFF, 20D0-20FF, FE20-FE2F
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Významných je pouze prvních 2 048 znaků identifikátorů Microsoft C++. Názvy pro uživatelem definované typy jsou "dekorovaných" kompilátorem za účelem zachování informací o typu. Výsledný název, včetně informací o typu, nemůže být delší než 2 048 znaků. (Viz [dekorované názvy](../build/reference/decorated-names.md) Další informace.) Mezi faktory ovlivňující délku dekorovaného identifikátoru jsou:
 
@@ -87,7 +87,7 @@ int main() {
 }
 ```
 
-Rozsah znaků v identifikátoru povolený je méně omezující při kompilaci C + +/ CLI kódu. Identifikátory v kódu zkompilovaném pomocí/CLR by měly dodržovat [Standard ECMA-335: Common Language infrastruktury (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).
+Rozsah znaků v identifikátoru povolený je méně omezující při kompilaci C++vyhodnocovací kódu. Identifikátory v kódu zkompilovaném pomocí/CLR by měly dodržovat [Standard ECMA-335: Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
 **Specifické pro END Microsoft**
 
@@ -95,7 +95,7 @@ První znak identifikátoru musí být abecední znak, velká nebo malá písmen
 
 Identifikátory nesmí mít přesně stejný tvar a pád jako klíčová slova. Identifikátory, které obsahují klíčová slova jsou platné. Například `Pint` je platný identifikátor, přestože obsahuje **int**, což je klíčové slovo.
 
-Použití dvou po sobě jdoucích podtržítek ( **__** ) v identifikátoru nebo jedno vedoucí podtržítko následované jedním velkým písmenem je vyhrazeno pro implementace jazyka C++ ve všech oborech. Můžete Vyhněte se použití jednoho vedoucí znaku podtržítka následovaného malým písmenem pro názvy s rozsahem souboru z důvodu možných konfliktů současných nebo budoucích vyhrazených identifikátorů.
+Použití dvou po sobě jdoucích podtržítek ( **__** ) v identifikátoru nebo jedno vedoucí podtržítko následované jedním velkým písmenem je vyhrazeno pro C++ implementace ze všech rozsahů. Můžete Vyhněte se použití jednoho vedoucí znaku podtržítka následovaného malým písmenem pro názvy s rozsahem souboru z důvodu možných konfliktů současných nebo budoucích vyhrazených identifikátorů.
 
 ## <a name="see-also"></a>Viz také:
 

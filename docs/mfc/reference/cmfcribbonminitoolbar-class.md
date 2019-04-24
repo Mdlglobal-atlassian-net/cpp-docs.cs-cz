@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CMFCRibbonMiniToolBar [MFC], ShowWithContextMenu
 ms.assetid: 7017e963-aeaf-4fe9-b540-e15a7ed41e94
 ms.openlocfilehash: 394182aa0f9c967524ed0db510d0b9cc0739118e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58777152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62151887"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>Cmfcribbonminitoolbar – třída
 
@@ -37,14 +37,14 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCRibbonMiniToolBar::CMFCRibbonMiniToolBar`|Výchozí konstruktor.|
 |`CMFCRibbonMiniToolBar::~CMFCRibbonMiniToolBar`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCRibbonMiniToolBar::CreateObject`|Rozhraní používá k vytvoření dynamické instance tohoto typu třídy.|
 |`CMFCRibbonMiniToolBar::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|

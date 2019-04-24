@@ -20,11 +20,11 @@ helpviewer_keywords:
 - Microsoft::WRL::WeakRef::WeakRef, constructor
 ms.assetid: 572be703-c641-496c-8af5-ad6164670ba1
 ms.openlocfilehash: 9616fcffac0b92d5ac6d96cfe5f4119f3a3b180f
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223050"
 ---
 # <a name="weakref-class"></a>WeakRef – třída
 
@@ -40,14 +40,14 @@ class WeakRef : public ComPtr<IWeakReference>;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[WeakRef::WeakRef – konstruktor](#weakref)|Inicializuje novou instanci třídy `WeakRef` třídy.|
 |[WeakRef::~WeakRef – destruktor](#tilde-weakref)|Zruší inicializaci aktuální instance `WeakRef` třídy.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[WeakRef::As – metoda](#as)|Nastaví zadaný `ComPtr` parametr ukazatele k reprezentaci zadané rozhraní.|
 |[WeakRef::AsIID – metoda](#asiid)|Nastaví zadaný `ComPtr` parametr ukazatele představující ID zadané rozhraní.|
@@ -55,7 +55,7 @@ class WeakRef : public ComPtr<IWeakReference>;
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[WeakRef::operator& – operátor](#operator-ampersand-operator)|Vrátí `ComPtrRef` objekt, který představuje aktuální `WeakRef` objektu.|
 

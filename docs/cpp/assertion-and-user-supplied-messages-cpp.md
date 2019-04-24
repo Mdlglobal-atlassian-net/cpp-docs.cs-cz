@@ -8,15 +8,15 @@ helpviewer_keywords:
 - user-supplied messages [C++], compile time
 ms.assetid: ebf7d885-61c8-4233-b0ae-1c9a38e0f385
 ms.openlocfilehash: 913aa199b4acd2ceb6daf7a24d8c50c28234b74a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184358"
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>Kontrolní výraz a uživatelem zadané zprávy (C++)
 
-C++ jazyk podporuje tři mechanismy zpracování chyb, které vám pomůžou ladit vaše aplikace: [#error – direktiva](../preprocessor/hash-error-directive-c-cpp.md), [static_assert](../cpp/static-assert.md) – klíčové slovo a [vyhodnocení makra, _assert, _ wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) – makro. Všechny tři mechanismy vyvolávají chybové zprávy a dva z nich také testují kontrolní výrazy softwaru. Softwarové tvrzení Určuje podmínku, která očekáváte, že na hodnotu true v určitém místě v programu. Pokud kontrolní výraz doby kompilace selže, kompilátor vyvolá chybu kompilace a diagnostických zpráv. Selže-li kontrolní výraz modulu běhu, operační systém vyvolá diagnostickou zprávu a ukončí aplikaci.
+C++ Jazyk podporuje tři chyba zpracování mechanismy, které vám pomůžou ladit vaše aplikace: [#error – direktiva](../preprocessor/hash-error-directive-c-cpp.md), [static_assert](../cpp/static-assert.md) – klíčové slovo a [assert – makro _ Akce Assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) – makro. Všechny tři mechanismy vyvolávají chybové zprávy a dva z nich také testují kontrolní výrazy softwaru. Softwarové tvrzení Určuje podmínku, která očekáváte, že na hodnotu true v určitém místě v programu. Pokud kontrolní výraz doby kompilace selže, kompilátor vyvolá chybu kompilace a diagnostických zpráv. Selže-li kontrolní výraz modulu běhu, operační systém vyvolá diagnostickou zprávu a ukončí aplikaci.
 
 ## <a name="remarks"></a>Poznámky
 

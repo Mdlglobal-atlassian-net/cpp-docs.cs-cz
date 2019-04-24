@@ -25,11 +25,11 @@ helpviewer_keywords:
 - COleInsertDialog [MFC], m_io
 ms.assetid: a9ec610b-abde-431e-bd01-c40159a66dbb
 ms.openlocfilehash: 27bf98ea4fe6951624873c1463d50f37558c9234
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58781481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159922"
 ---
 # <a name="coleinsertdialog-class"></a>Coleinsertdialog – třída
 
@@ -45,13 +45,13 @@ class COleInsertDialog : public COleDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleInsertDialog::COleInsertDialog](#coleinsertdialog)|Vytvoří `COleInsertDialog` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleInsertDialog::CreateItem](#createitem)|Vytvoří položky vybrané v dialogovém okně.|
 |[COleInsertDialog::DoModal](#domodal)|Zobrazí dialogové okno vložení objektu OLE.|
@@ -63,7 +63,7 @@ class COleInsertDialog : public COleDialog
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleInsertDialog::m_io](#m_io)|Struktura typu OLEUIINSERTOBJECT, které ovládá chování dialogového okna.|
 

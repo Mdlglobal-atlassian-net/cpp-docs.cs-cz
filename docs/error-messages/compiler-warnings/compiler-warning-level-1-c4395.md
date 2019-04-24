@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C4395
 ms.assetid: 8051469a-3a39-4677-80f7-1300fbffe8ea
 ms.openlocfilehash: 27503b94a18b949637293201203e18793f5e7788
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182402"
 ---
 # <a name="compiler-warning-level-1-c4395"></a>Kompilátor upozornění (úroveň 1) C4395
 
 'function': členská funkce se bude volat pro kopii datového členu initonly 'member'
 
-Členská funkce byla volána pro [initonly (C + +/ CLI)](../../dotnet/initonly-cpp-cli.md) datový člen.  C4395, která upozorní **initonly** datový člen nemůže upravit funkce.
+Členská funkce byla volána pro [initonly (C++vyhodnocovací)](../../dotnet/initonly-cpp-cli.md) datový člen.  C4395, která upozorní **initonly** datový člen nemůže upravit funkce.
 
 Následující ukázka generuje C4395:
 

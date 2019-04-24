@@ -13,11 +13,11 @@ helpviewer_keywords:
 - -DELAY linker option
 ms.assetid: 9334b332-cc58-4dae-b10f-a4c75972d50c
 ms.openlocfilehash: d3c32ba04cbad509ff2819020a35102698d6ceb3
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272123"
 ---
 # <a name="delay-delay-load-import-settings"></a>/DELAY (nastavení importu odloženého načtení)
 
@@ -56,5 +56,5 @@ Pokud chcete zadat knihovny DLL pro odložené načtení, použijte [/delayload]
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
 ms.openlocfilehash: afcdb1246d9c02f83dbc8708326d10e802ad2779
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212089"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -44,7 +44,7 @@ Sada komplexní čísla s operacemi komplexní sčítání a násobení složit�
 
 Podle reprezentující komplexní čísla *z* = (*a*, *b*) ve formátu *z* = *a*  +  *bi*, kde *i*<sup>2</sup> = -1, pravidla pro algebra sadu reálná čísla můžete použít sadu komplexní čísla a jejich součástí. Příklad:
 
-   (1 + 2*můžu*) \* (2 + 3*můžu*) = 1 \* (2 + 3*můžu*) + 2*můžu* \* (2 + 3*i*) = (2 + 3*můžu*) + (4*můžu* + 6*můžu*<sup>2</sup>) = (2 až 6) + (3 a 4)*můžu* = -4 + 7*mi*
+   (1 + 2*i*) \* (2 + 3*i*) = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>) = (2 - 6) + (3 + 4)*i* = -4 + 7*i*
 
 Systém komplexní čísla je pole, ale není seřazené pole. Neexistuje žádné řazení komplexních čísel, protože není pro pole reálná čísla a její podskupiny, takže nerovností nelze použít pro komplexní čísla, jako jsou na reálná čísla.
 
@@ -72,24 +72,24 @@ Pokud není uvedeno jinak, jsou funkce, které může vrátit více hodnot musí
 
 |Funkce|Popis|
 |-|-|
-|[Abs](../standard-library/complex-functions.md#abs)|Vypočítá zbytek z komplexního čísla.|
+|[abs](../standard-library/complex-functions.md#abs)|Vypočítá zbytek z komplexního čísla.|
 |[arg](../standard-library/complex-functions.md#arg)|Extrahuje argumentu z komplexního čísla.|
 |[conj](../standard-library/complex-functions.md#conj)|Vrátí sdružené komplexního čísla.|
-|[Cos](../standard-library/complex-functions.md#cos)|Vrátí hodnotu kosinus tohoto komplexního čísla.|
-|[COSH –](../standard-library/complex-functions.md#cosh)|Vrací hyperbolický kosinus komplexního čísla.|
+|[cos](../standard-library/complex-functions.md#cos)|Vrátí hodnotu kosinus tohoto komplexního čísla.|
+|[cosh](../standard-library/complex-functions.md#cosh)|Vrací hyperbolický kosinus komplexního čísla.|
 |[exp](../standard-library/complex-functions.md#exp)|Vrátí hodnotu exponenciální funkce komplexního čísla.|
 |[imag](../standard-library/complex-functions.md#imag)|Extrahuje imaginární komplexního čísla.|
-|[protokol](../standard-library/complex-functions.md#log)|Vrátí přirozený logaritmus komplexního čísla.|
+|[log](../standard-library/complex-functions.md#log)|Vrátí přirozený logaritmus komplexního čísla.|
 |[log10](../standard-library/complex-functions.md#log10)|Vrátí logaritmus o základu 10 komplexního čísla.|
 |[Norm –](../standard-library/complex-functions.md#norm)|Extrahuje norm komplexního čísla.|
 |[polar](../standard-library/complex-functions.md#polar)|Komplexní čísla, která odpovídá zadané operace modulo a argument, vrátí v Kartézském formuláře.|
 |[Pow](../standard-library/complex-functions.md#pow)|Vyhodnotí komplexního čísla získala při vyvolání základ, který je komplexního čísla na mocninu vyjádřenou druhým číslem komplexní.|
 |[Real](../standard-library/complex-functions.md#real)|Extrahuje reálnou součástí komplexního čísla.|
-|[Sin](../standard-library/complex-functions.md#sin)|Vrátí sinus úhlu komplexního čísla.|
-|[SINH –](../standard-library/complex-functions.md#sinh)|Vrací hyperbolický sinus komplexního čísla.|
+|[sin](../standard-library/complex-functions.md#sin)|Vrátí sinus úhlu komplexního čísla.|
+|[sinh](../standard-library/complex-functions.md#sinh)|Vrací hyperbolický sinus komplexního čísla.|
 |[sqrt](../standard-library/complex-functions.md#sqrt)|Vrátí druhou odmocninu komplexního čísla.|
 |[Tan](../standard-library/complex-functions.md#tan)|Vrátí tangens komplexního čísla.|
-|[TANH –](../standard-library/complex-functions.md#tanh)|Vrací hyperbolický tangens komplexního čísla.|
+|[tanh](../standard-library/complex-functions.md#tanh)|Vrací hyperbolický tangens komplexního čísla.|
 
 ### <a name="operators"></a>Operátory
 
@@ -102,13 +102,13 @@ Pokud není uvedeno jinak, jsou funkce, které může vrátit více hodnot musí
 |[Operator /](../standard-library/complex-operators.md#op_div)|Vydělí dvě komplexní čísla, jeden nebo oba z nich může patřit do dílčí typ pro reálné a imaginární části.|
 |[Operator <\<](../standard-library/complex-operators.md#op_lt_lt)|Funkce šablony, který se vkládá komplexního čísla do výstupního datového proudu.|
 |[operator==](../standard-library/complex-operators.md#op_eq_eq)|Ověřuje rovnost mezi dvěma komplexní čísla, jeden nebo oba z nich může patřit do dílčí typ pro reálné a imaginární části.|
-|[operátor >>](../standard-library/complex-operators.md#op_gt_gt)|Funkce šablony, který extrahuje komplexní hodnoty ze vstupního datového proudu.|
+|[operator>>](../standard-library/complex-operators.md#op_gt_gt)|Funkce šablony, který extrahuje komplexní hodnoty ze vstupního datového proudu.|
 
 ### <a name="classes"></a>Třídy
 
 |Třída|Popis|
 |-|-|
-|[komplexní\<double >](../standard-library/complex-double.md)|Třída explicitně specializovaný šablony popisuje objekt, který ukládá seřazená dvojice objektů, oba typu **double**, kde první představuje skutečný část komplexního čísla a druhá představuje imaginární části.|
+|[complex\<double>](../standard-library/complex-double.md)|Třída explicitně specializovaný šablony popisuje objekt, který ukládá seřazená dvojice objektů, oba typu **double**, kde první představuje skutečný část komplexního čísla a druhá představuje imaginární části.|
 |[complex\<float>](../standard-library/complex-float.md)|Třída explicitně specializovaný šablony popisuje objekt, který ukládá seřazená dvojice objektů, oba typu **float**, kde první představuje skutečný část komplexního čísla a druhá představuje imaginární části.|
 |[komplexní\<long double >](../standard-library/complex-long-double.md)|Třída explicitně specializovaný šablony popisuje objekt, který ukládá seřazená dvojice objektů, oba typu **long double**, kde první představuje skutečný část komplexního čísla a druhá představuje imaginární části.|
 |[complex](../standard-library/complex-class.md)|Třída šablony popisuje objekt, který používá reprezentující komplexní čísla systému a provádět komplexní aritmetické operace.|

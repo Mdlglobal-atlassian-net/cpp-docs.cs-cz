@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - isinf function
 ms.openlocfilehash: be99970a0c7b152ba213eabd59b53a7503cd3c54
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331607"
 ---
 # <a name="isinf"></a>isinf –
 
@@ -47,7 +47,7 @@ Hodnota s plovoucí desetinnou čárkou k testování.
 
 |Funkce|Požadované záhlaví (C)|Požadované záhlaví (C++)|
 |--------------|---------------------------|-------------------------------|
-|**isinf –**|\<math.h>|\<Math.h > nebo \<cmath >|
+|**isinf**|\<math.h>|\<Math.h > nebo \<cmath >|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

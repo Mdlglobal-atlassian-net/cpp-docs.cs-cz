@@ -33,11 +33,11 @@ helpviewer_keywords:
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
 ms.openlocfilehash: 9c7a7fed8eabc38f1a0a67587d495e75ba8fa3d8
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333336"
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 
@@ -170,8 +170,8 @@ Platné znaky pro *režimu* řetězec, který se používá v **fopen** a **_fdo
 |**w+**|**\_O\_RDWR** (obvykle  **\_O\_RDWR** &#124;  **\_O\_CREAT** &#124;  **\_ O\_TRUNC**)|
 |**b**|**\_O\_BINÁRNÍ**|
 |**t**|**\_O\_TEXT**|
-|**c**|Žádná|
-|**n**|Žádná|
+|**c**|Žádné|
+|**n**|Žádné|
 |**S**|**\_O\_SEKVENČNÍ**|
 |**R**|**\_O\_RANDOM**|
 |**T**|**\_O\_SHORTLIVED**|

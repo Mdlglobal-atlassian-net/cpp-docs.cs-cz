@@ -31,11 +31,11 @@ helpviewer_keywords:
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
 ms.openlocfilehash: b9fb38adcc442e60864ec632cd92793f16e47502
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288185"
 ---
 # <a name="exp-expf-expl"></a>Exp, expf –, expl
 
@@ -72,8 +72,8 @@ Plovoucí desetinné čárky hodnota, která se exponentiate základ přirozené
 
 |Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|Rozmezí tichý NaN neurčitý|Žádné|_DOMÉNA|
-|Nekonečno přesností|NEPLATNÝ|_DOMÉNA|
+|Rozmezí tichý NaN neurčitý|Žádný|_DOMAIN|
+|Nekonečno přesností|NEPLATNÝ|_DOMAIN|
 |x ≥ 7.097827e + 002|NEPŘESNÉ + PŘETEČENÍ|PŘETEČENÍ|
 |X ≤-7.083964e + 002|NEPŘESNÉ + PODTEČENÍ|PODTEČENÍ|
 
@@ -87,7 +87,7 @@ Jazyk C++ umožňuje přetížení, takže můžete volat přetížení **exp** 
 
 |Funkce|Požadovaná hlavička C|Požadované hlaviček jazyka C++|
 |--------------|---------------------|---|
-|**Exp**, **expf –**, **expl**|\<Math.h >|\<cmath > nebo \<math.h >|
+|**Exp**, **expf –**, **expl**|\<math.h>|\<cmath > nebo \<math.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

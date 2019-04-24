@@ -8,11 +8,11 @@ helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), ML error messages
 ms.assetid: e7e164b3-6d65-4b5b-8925-bfbebc043523
 ms.openlocfilehash: aa0440afae980e218c32ab3296bd7c6fb2b444d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62202208"
 ---
 # <a name="ml-error-messages"></a>Chybové zprávy nástroje ML
 
@@ -26,7 +26,7 @@ Chybové zprávy generované komponentami MASM spadají do tří kategorií:
 
 Všechny chybové zprávy následující podobu:
 
-> *Nástroj*: *Filename* (*řádku*): {*error_type –*} (*kód*): *Message_text*
+> *Nástroj*: *Filename* (*Line*) : {*Error_type*} (*Code*): *Message_text*
 
 kde:
 
@@ -39,7 +39,7 @@ Soubor, který obsahuje podmínku chyby generování.
 *Řádek*<br/>
 Přibližná řádku, kde existenci chybového stavu.
 
-*Error_type –*<br/>
+*Error_type*<br/>
 Závažná chyba, chyba nebo upozornění.
 
 *Kód*<br/>

@@ -1,6 +1,6 @@
 ---
 title: index – třída
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - AMP/index
 - AMP/Concurrency::index::index
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-ms.openlocfilehash: 054db83e4d8e140af37dcff9a7664ffdf7902325
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5226440e49aab5766fc7992e0651e2b5ee5d4981
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180231"
 ---
 # <a name="index-class"></a>index – třída
 
@@ -37,14 +37,14 @@ class index;
 
 |Název|Popis|
 |----------|-----------------|
-|[index konstruktor](#ctor)|Inicializuje novou instanci třídy `index` třídy.|
+|[index konstruktor](#index_ctor)|Inicializuje novou instanci třídy `index` třídy.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Název|Popis|
 |----------|-----------------|
 |[operator--](#operator--)|Sníží každý prvek `index` objektu.|
-|[operator(mod)=](#operator_mod_eq)|Vypočítá modulo (zbytek) každého prvku `index` objektu při dělení podle čísla.|
+|[operator%=](#operator_mod_eq)|Vypočítá modulo (zbytek) každého prvku `index` objektu při dělení podle čísla.|
 |[Operator * =](#operator_star_eq)|Vynásobí každý prvek `index` číslem.|
 |[/ = – operátor](#operator_div_eq)|Vydělí každý prvek `index` číslem.|
 |[index::operator\[\]](#operator_at)|Vrátí prvek, který je v zadaném indexu.|
@@ -139,7 +139,7 @@ index operator--(
 
 Pro prefixový operátor objekt indexu (* to). Pro sufixový operátor nový objekt v indexu.
 
-## <a name="operator_mod_eq"></a>  Operator(MOD) =
+## <a name="operator_mod_eq"></a>  Operator % =
 
 Vypočítá modulo (zbytek) jednotlivých prvků v objektu indexu při dělení zadaným číslem.
 

@@ -1,5 +1,5 @@
 ---
-title: isascii – __isascii –, iswascii –
+title: isascii, __isascii, iswascii
 ms.date: 11/04/2016
 apiname:
 - iswascii
@@ -35,13 +35,13 @@ helpviewer_keywords:
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
 ms.openlocfilehash: d150e7bb335dc77ed86f445128eebf97b8be5ac3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50433654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287466"
 ---
-# <a name="isascii-isascii-iswascii"></a>isascii – __isascii –, iswascii –
+# <a name="isascii-isascii-iswascii"></a>isascii, __isascii, iswascii
 
 Určuje, zda určitý znak je znak ASCII.
 
@@ -77,13 +77,13 @@ Z důvodu zpětné kompatibility **isascii –** je implementovaný jako makra p
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_istascii –**|**__isascii**|**__isascii**|**iswascii**|
+|**_istascii**|**__isascii**|**__isascii**|**iswascii**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**isascii –**, **__isascii –**|C: \<ctype.h ><br /><br /> Jazyk C++: \<cctype – > nebo \<ctype.h >|
+|**isascii**, **__isascii**|C: \<ctype.h ><br /><br /> Jazyk C++: \<cctype – > nebo \<ctype.h >|
 |**iswascii**|C: \<wctype.h >, \<ctype.h >, nebo \<wchar.h ><br /><br /> Jazyk C++: \<cwctype – >, \<cctype – >, \<wctype.h >, \<ctype.h >, nebo \<wchar.h >|
 
 **Isascii –**, **__isascii –** a **iswascii –** funkce jsou specifické pro Microsoft. Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

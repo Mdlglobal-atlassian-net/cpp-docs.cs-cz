@@ -33,11 +33,11 @@ helpviewer_keywords:
 - _ismbcupper_l function
 ms.assetid: 17d89587-65bc-477c-ba8f-a84e63cf59e7
 ms.openlocfilehash: 29a1e97f4583808931e5228a6905aed7c0a62702
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157270"
 ---
 # <a name="ismbclower-ismbclowerl-ismbcupper-ismbcupperl"></a>_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 
@@ -85,8 +85,8 @@ Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že pou�
 
 |Rutina|Testovací podmínka|Příklad znakové stránky 932|
 |-------------|--------------------|---------------------------|
-|**_ismbclower**|Malá písmena|Vrátí nenulovou hodnotu právě tehdy *c* je jednobajtové znázornění písmena malá písmena anglické abecedy ASCII: 0x61 < =*c*< = 0x7A.|
-|**_ismbclower_l**|Malá písmena|Vrátí nenulovou hodnotu právě tehdy *c* je jednobajtové znázornění písmena malá písmena anglické abecedy ASCII: 0x61 < =*c*< = 0x7A.|
+|**_ismbclower**|Malá písmena|Vrátí nenulovou hodnotu právě tehdy *c* je jednobajtové znázornění písmena malá písmena anglické abecedy ASCII: 0x61<=*c*<=0x7A.|
+|**_ismbclower_l**|Malá písmena|Vrátí nenulovou hodnotu právě tehdy *c* je jednobajtové znázornění písmena malá písmena anglické abecedy ASCII: 0x61<=*c*<=0x7A.|
 |**_ismbcupper**|Velká písmena|Vrátí nenulovou hodnotu právě tehdy *c* je jednobajtové znázornění písmena velká písmena anglické abecedy ASCII: 0x41 < =*c*< = 0x5A.|
 |**_ismbcupper_l**|Velká písmena|Vrátí nenulovou hodnotu právě tehdy *c* je jednobajtové znázornění písmena velká písmena anglické abecedy ASCII: 0x41 < =*c*< = 0x5A.|
 

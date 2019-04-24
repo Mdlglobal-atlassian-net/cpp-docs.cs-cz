@@ -33,11 +33,11 @@ helpviewer_keywords:
 - gettc function
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
 ms.openlocfilehash: bbaee79eac6802959a11f7f1ba30eaf590ecf2f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331867"
 ---
 # <a name="getc-getwc"></a>getc, getwc
 
@@ -56,7 +56,7 @@ wint_t getwc(
 
 ### <a name="parameters"></a>Parametry
 
-*Stream*<br/>
+*stream*<br/>
 Vstupní datový proud.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -76,20 +76,20 @@ Následují poznámky specifické pro rutinu.
 |Rutina|Poznámky|
 |-------------|-------------|
 |**getc**|Stejné jako **fgetc –**, ale implementovaná jako funkce a jako makro.|
-|**getwc –**|Širokoznaká verze **getc**. Přečte vícebajtový znak nebo široký znak podle toho, zda *stream* je otevřen v textovém nebo binárním režimu.|
+|**getwc**|Širokoznaká verze **getc**. Přečte vícebajtový znak nebo široký znak podle toho, zda *stream* je otevřen v textovém nebo binárním režimu.|
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_gettc –**|**getc**|**getc**|**getwc –**|
+|**_gettc**|**getc**|**getc**|**getwc**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**getc**|\<stdio.h>|
-|**getwc –**|\<stdio.h > nebo \<wchar.h >|
+|**getwc**|\<stdio.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

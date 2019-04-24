@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-ms.openlocfilehash: ac9ee843f5f11d4a42377b16ec77b266238fc461
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0b8a29efc5b18432eabfeddc75af12737538281c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330203"
 ---
 # <a name="platformstring-class"></a>Platform::String – třída
 
@@ -85,11 +85,11 @@ Třída řetězec má následující operátory.
 
 |Člen|Popis|
 |------------|-----------------|
-|[String::Operator == – operátor](#operator-equality)|Určuje, zda dva objekty zadaný řetězec mají stejnou hodnotu.|
+|[String::Operator == – operátor](#operator-equality)|Určuje, zda dva objekty zadaného řetězce mají stejnou hodnotu.|
 |[Operator + – operátor](#operator-plus)|Zřetězí dva objekty řetězce do nového objektu řetězce.|
 |[String::Operator > – operátor](#operator-greater-than)|Určuje, zda je hodnota jednoho objektu řetězec větší než hodnota druhý objekt řetězce.|
 |[String::Operator > = – operátor](#operator-greater-than-or-equals)|Určuje, zda je hodnota jednoho objektu řetězec větší nebo rovna hodnotě druhý objekt řetězce.|
-|[String::Operator! = – operátor](#operator-inequality)|Určuje, zda dva objekty zadaný řetězec mají různé hodnoty.|
+|[String::Operator! = – operátor](#operator-inequality)|Určuje, zda dva objekty zadaného řetězce mají různé hodnoty.|
 |[String::Operator < – operátor](#operator-less-than)|Určuje, zda je hodnota jednoho objektu řetězce menší než hodnota druhý objekt řetězce.|
 
 ### <a name="requirements"></a>Požadavky
@@ -138,7 +138,7 @@ Druhý objekt řetězce.
 
 Celé číslo, které označuje lexikální vztah mezi dvěma komparátory. Následující tabulka obsahuje seznam možných vrácených hodnot.
 
-|Hodnota|Podmínka|
+|Value|Podmínka|
 |-----------|---------------|
 |-1|`str1` je menší než `str2`.|
 |0|`str1` je rovno `str2`.|
@@ -411,7 +411,7 @@ Druhá `String` objektu.
 
 ## <a name="operator-inequality"></a> String::Operator! =
 
-Určuje, zda dva zadaný `String` objekty mají různé hodnoty.
+Určuje, zda dvě zadané `String` objekty mají různé hodnoty.
 
 ### <a name="syntax"></a>Syntaxe
 

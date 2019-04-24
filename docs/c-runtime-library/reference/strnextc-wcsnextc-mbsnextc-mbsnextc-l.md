@@ -45,11 +45,11 @@ helpviewer_keywords:
 - wcsnextc function
 ms.assetid: e3086173-9eb5-4540-a23a-5d866bd05340
 ms.openlocfilehash: 31ddc2721abe997041bfde6645c8405fdd875e4d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209732"
 ---
 # <a name="strnextc-wcsnextc-mbsnextc-mbsnextcl"></a>_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l
 
@@ -100,7 +100,7 @@ Pokud *str* je **NULL**, je vyvolána obslužná rutina neplatného parametru, j
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tcsnextc –**|**_strnextc**|**_mbsnextc**|**_wcsnextc**|
+|**_tcsnextc**|**_strnextc**|**_mbsnextc**|**_wcsnextc**|
 
 **_strnextc –** a **_wcsnextc –** jsou řetězce jedním jednobajtového znaku a verze řetězce širokého znaku **_mbsnextc –**. **_wcsnextc –** vrátí celočíselnou hodnotu dalšího širokého znaku v *str*; **_strnextc –** vrátí celočíselnou hodnotu dalšího jednobajtového znaku v *str*. **_strnextc –** a **_wcsnextc –** jsou k dispozici pouze pro toto mapování a nesmí být použity jinak. Další informace najdete v tématu [použití mapování obecného textu](../../c-runtime-library/using-generic-text-mappings.md) a [mapování obecného textu](../../c-runtime-library/generic-text-mappings.md).
 

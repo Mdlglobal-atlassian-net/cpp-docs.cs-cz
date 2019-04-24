@@ -28,11 +28,11 @@ helpviewer_keywords:
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
 ms.openlocfilehash: 5f8d7dbeb35c8818706eb6070df613df8654feb6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287238"
 ---
 # <a name="getchar-getwchar"></a>getchar, getwchar
 
@@ -59,14 +59,14 @@ Tyto funkce uzamykají volající vlákno a proto jsou vláknově bezpečné. Ne
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_gettchar –**|**GetChar**|**GetChar**|**getwchar –**|
+|**_gettchar**|**getchar**|**getchar**|**getwchar**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**GetChar**|\<stdio.h>|
-|**getwchar –**|\<stdio.h > nebo \<wchar.h >|
+|**getchar**|\<stdio.h>|
+|**getwchar**|\<stdio.h > nebo \<wchar.h >|
 
 Konzole není podporována v aplikacích pro univerzální platformu Windows (UPW). Standardní datový proud popisovačů, které jsou spojeny s konzolou, **stdin**, **stdout**, a **stderr**, musí být přesměrován před funkcí jazyka C za běhu můžete použít v aplikacích pro UWP . Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

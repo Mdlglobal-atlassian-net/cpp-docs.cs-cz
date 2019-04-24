@@ -3,11 +3,11 @@ title: Upgrade kódu na Universal CRT
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
 ms.openlocfilehash: bdf1615d47361654e9690977520d01c332098438
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337164"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Upgrade kódu na Universal CRT
 
@@ -49,4 +49,4 @@ Mnoho funkcí přidaná nebo aktualizovaná UCRT ke zlepšení ISO C99 shoda a �
 [Přehled potenciálních problémů s upgradem (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Upgrade projektů z dřívějších verzí Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Historie změn Visual C++ 2003–2015](visual-cpp-change-history-2003-2015.md)<br/>
-[Vylepšení shody C++ v sadě Visual Studio](../overview/cpp-conformance-improvements.md)
+[Vylepšení shody C++ se sadou Visual Studio](../overview/cpp-conformance-improvements.md)

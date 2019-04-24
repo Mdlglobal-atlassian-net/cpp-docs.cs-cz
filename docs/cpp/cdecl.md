@@ -10,17 +10,17 @@ helpviewer_keywords:
 - __cdecl keyword [C++]
 ms.assetid: 1ff1d03e-fb4e-4562-8be1-74f1ad6427f1
 ms.openlocfilehash: 298485d310ee4039b13781a8b5cd88a489af3b8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232399"
 ---
 # <a name="cdecl"></a>__cdecl
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
-**__cdecl** je výchozí konvencí volání programů jazyka C a C++. Vzhledem k tomu, že je zásobník vyčištěn volajícím, můžete provádět `vararg` funkce. **__Cdecl** konvence volání vytvoří větší spustitelné soubory než [__stdcall](../cpp/stdcall.md), protože vyžaduje, aby každé volání funkce obsahovalo kód pro vyčištění zásobníku. Následující seznam ukazuje implementaci této konvence volání.
+**__cdecl** je výchozí konvencí volání jazyka C a C++ programy. Vzhledem k tomu, že je zásobník vyčištěn volajícím, můžete provádět `vararg` funkce. **__Cdecl** konvence volání vytvoří větší spustitelné soubory než [__stdcall](../cpp/stdcall.md), protože vyžaduje, aby každé volání funkce obsahovalo kód pro vyčištění zásobníku. Následující seznam ukazuje implementaci této konvence volání.
 
 |Prvek|Implementace|
 |-------------|--------------------|

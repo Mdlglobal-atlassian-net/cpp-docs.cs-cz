@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru C2603
+title: Compiler Error C2603
 ms.date: 11/04/2016
 f1_keywords:
 - C2603
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2603
 ms.assetid: 9ca520d0-f082-4b65-933d-17c3bcf8b02c
 ms.openlocfilehash: 5391aed09b7fd448a9d72ea7cc17cd5c26fc5f04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62215398"
 ---
-# <a name="compiler-error-c2603"></a>Chyba kompilátoru C2603
+# <a name="compiler-error-c2603"></a>Compiler Error C2603
 
-> "*funkce*': příliš mnoho statických objektů oboru bloku s konstruktory/destruktory ve funkci
+> "*funkce*": Příliš mnoho statických objektů oboru bloku s konstruktory/destruktory ve funkci
 
 Ve verzích kompilátor Visual C++ před Visual Studio 2015 nebo když [/Zc: threadsafeinit](../../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) – možnost kompilátoru je zadán, platí omezení na počet statických objektů v externě viditelné vložená funkce může být 31 .
 

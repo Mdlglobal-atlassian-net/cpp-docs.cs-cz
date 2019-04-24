@@ -8,23 +8,23 @@ helpviewer_keywords:
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
 ms.openlocfilehash: 57abafbcbd899d3eca7369205afba4ca262ad2c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210798"
 ---
 # <a name="c-standard-library-overview"></a>Standardní knihovna C++ – přehled
 
-Všechny entity knihovny C++ jsou deklarované nebo definované v jedné nebo více standardní záhlaví. Tato implementace obsahuje dvě další hlavičky, \<hash_map > a \<hash_set >, která nejsou požadována standardu jazyka C++. Úplný seznam hlaviček, které podporuje tuto implementaci, najdete v části [referenční příručka souborů záhlaví](../standard-library/cpp-standard-library-header-files.md).
+Všechny entity knihovny C++ jsou deklarované nebo definované v jedné nebo více standardní záhlaví. Tato implementace obsahuje dvě další hlavičky, \<hash_map > a \<hash_set >, která nejsou požadována C++ Standard. Úplný seznam hlaviček, které podporuje tuto implementaci, najdete v části [referenční příručka souborů záhlaví](../standard-library/cpp-standard-library-header-files.md).
 
 Samostatné implementaci knihoven jazyka C++ poskytuje pouze podmnožinu těchto hlaviček:
 
 |||
 |-|-|
 |[\<cstddef>](../standard-library/cstddef.md)|[\<cstdlib – >](../standard-library/cstdlib.md) (nejméně deklarování funkce `abort`, `atexit`, a `exit`)|
-|[\<výjimky >](../standard-library/exception.md)|[\<omezení >](../standard-library/limits.md)|
-|[\<Nový >](../standard-library/new.md)|[\<cstdarg>](../standard-library/cstdarg.md)|
+|[\<exception>](../standard-library/exception.md)|[\<omezení >](../standard-library/limits.md)|
+|[\<new>](../standard-library/new.md)|[\<cstdarg>](../standard-library/cstdarg.md)|
 
 Hlaviček knihoven C++ mají dvě širší pododdíly:
 
@@ -42,7 +42,7 @@ Tato část obsahuje následující části:
 
 - [Spuštění a ukončení programu C++](../standard-library/cpp-program-startup-and-termination.md)
 
-- [Bezpečné knihovny: standardní knihovna C++](../standard-library/safe-libraries-cpp-standard-library.md)
+- [Bezpečné knihovny: Standardní knihovna C++](../standard-library/safe-libraries-cpp-standard-library.md)
 
 - [Checked – iterátory](../standard-library/checked-iterators.md)
 

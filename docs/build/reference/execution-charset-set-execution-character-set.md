@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -execution-charset compiler option
 ms.assetid: 0e02f487-2236-45bc-95f3-5760933a8f96
 ms.openlocfilehash: 0a140bf438a44df152b1578f4569a087a604061c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271434"
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/ Execution-Charset (nastavení znakové sady spuštění)
 
@@ -53,7 +53,7 @@ Pokud chcete nastavit zdrojové znakové sady a znakové sady spuštění na UTF
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
 [/source-charset (nastavení zdrojové znakové sady)](source-charset-set-source-character-set.md)<br/>
 [/utf-8 (nastavení zdrojové znakové sady a spustitelné znakové sady na UTF-8)](utf-8-set-source-and-executable-character-sets-to-utf-8.md)<br/>

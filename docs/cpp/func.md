@@ -5,11 +5,11 @@ f1_keywords:
 - __func__
 ms.assetid: a5299b8d-f0ee-4af2-91dd-8fb165e68798
 ms.openlocfilehash: eecd3efea6239c92a8bc81c0ed13a9563e5b87d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154292"
 ---
 # <a name="func"></a>__Func__
 
@@ -52,4 +52,4 @@ int main()
 
 ## <a name="requirements"></a>Požadavky
 
-C ++ 11
+C++11

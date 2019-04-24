@@ -45,11 +45,11 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
 ms.openlocfilehash: 37bf536403d0edfc16b098929a4758a6c6958cf1
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164147"
 ---
 # <a name="cbasetransition-class"></a>Cbasetransition – třída
 
@@ -65,20 +65,20 @@ class CBaseTransition : public CObject;
 
 ### <a name="public-enumerations"></a>Veřejné výčty
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[Výčet CBaseTransition::TRANSITION_TYPE](#transition_type_enumeration)|Definuje typy přechod aktuálně podporováno implementací MFC rozhraní Windows API animace.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CBaseTransition::CBaseTransition](#cbasetransition)|Vytvoří objekt základní přechod.|
 |[CBaseTransition::~CBaseTransition](#_dtorcbasetransition)|Destruktor. Volá se při přechodu objekt je zničen.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CBaseTransition::AddToStoryboard](#addtostoryboard)|Přidá přechod do scénáře.|
 |[CBaseTransition::AddToStoryboardAtKeyframes](#addtostoryboardatkeyframes)|Přidá přechod do scénáře.|
@@ -95,7 +95,7 @@ class CBaseTransition : public CObject;
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CBaseTransition::m_bAdded](#m_badded)|Určuje, zda přechodu je přidaný do scénáře.|
 |[CBaseTransition::m_pEndKeyframe](#m_pendkeyframe)|Uchovává ukazatel na klíčový snímek, který určuje konci přechodu.|

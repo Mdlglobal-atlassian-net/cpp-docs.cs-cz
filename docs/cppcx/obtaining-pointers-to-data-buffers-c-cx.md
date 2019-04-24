@@ -1,15 +1,15 @@
 ---
-title: Získání ukazatelů do vyrovnávací paměti dat (C + +/ CX)
+title: Získání ukazatelů do vyrovnávací paměti dat (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
 ms.openlocfilehash: 46a81fa9e3d278645b654dca3c652653f6c21037
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62162311"
 ---
-# <a name="obtaining-pointers-to-data-buffers-ccx"></a>Získání ukazatelů do vyrovnávací paměti dat (C + +/ CX)
+# <a name="obtaining-pointers-to-data-buffers-ccx"></a>Získání ukazatelů do vyrovnávací paměti dat (C++/CX)
 
 V modulu Windows Runtime [Windows::Storage::Streams::IBuffer](/uwp/api/windows.storage.streams.ibuffer) rozhraní poskytuje jazykově neutrální, základem je stream znamená, že přístup k datové vyrovnávací paměti. V jazyce C++ můžete získat nezpracovaný ukazatel na podkladové pole bajtů s použitím rozhraní IBufferByteAccess knihovna Windows Runtime, který je definován v robuffer.h. Pomocí tohoto přístupu můžete upravit bajtové pole na místě přitom všechny nepotřebné kopie data.
 

@@ -41,11 +41,11 @@ helpviewer_keywords:
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
 ms.openlocfilehash: c8e3f73e61fefa7a39a6d53d63739b094d78c499
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286009"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>protokol, logf –, logl, log10, log10f –, log10l
 
@@ -80,9 +80,9 @@ Hodnota, jejíž logaritmus se má nacházet.
 
 |Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|ROZMEZÍ QNAN, AJÍT|žádná|_DOMÉNA|
+|ROZMEZÍ QNAN, AJÍT|žádná|_DOMAIN|
 |± 0|ZERODIVIDE|_SING|
-|*x* < 0|NEPLATNÝ|_DOMÉNA|
+|*x* < 0|NEPLATNÝ|_DOMAIN|
 
 **protokol** a **log10** mít implementaci, která používá Streaming SIMD Extensions 2 (SSE2). Zobrazit [_set_sse2_enable –](set-sse2-enable.md) informace a omezení používání implementace SSE2.
 
@@ -94,7 +94,7 @@ Jazyk C++ umožňuje přetížení, takže můžete volat přetížení **protok
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**protokol**, **logf –**, **logl**, **log10**, **log10f –**, **log10l**|\<Math.h >|
+|**protokol**, **logf –**, **logl**, **log10**, **log10f –**, **log10l**|\<math.h>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

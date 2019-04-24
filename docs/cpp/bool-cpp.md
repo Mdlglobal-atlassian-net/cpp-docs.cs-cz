@@ -9,17 +9,17 @@ helpviewer_keywords:
 - __BOOL_DEFINED macro
 ms.assetid: 9abed3f2-d21c-4eb4-97c5-716342e613d8
 ms.openlocfilehash: e481cb9de7c80d147179efceab2fda9b160f3c21
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184272"
 ---
 # <a name="bool-c"></a>bool (C++)
 
 Toto klíčové slovo je vestavěný typ. Proměnná tohoto typu může mít hodnoty [true](../cpp/true-cpp.md) a [false](../cpp/false-cpp.md). Podmíněné výrazy jsou typu **bool** a mají proto hodnoty typu **bool**. Například `i!=0` teď má hodnotu TRUE nebo FALSE, v závislosti na hodnotě z `i`.
 
-**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): operand uplatněna přípona nebo předpona Inkrementace nebo dekrementace operátor nesmí být typu **bool**. Jinými slovy, zadané proměnné `b` typu **bool**, už nejsou povolené tyto výrazy:
+**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Operand uplatněna přípona nebo předpona Inkrementace nebo dekrementace operátor nesmí být typu **bool**. Jinými slovy, zadané proměnné `b` typu **bool**, už nejsou povolené tyto výrazy:
 
 ```cpp
     b++;

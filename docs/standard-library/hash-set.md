@@ -8,11 +8,11 @@ helpviewer_keywords:
 - hash_set header
 ms.assetid: 6b556967-c808-4869-9b4d-f9e030864435
 ms.openlocfilehash: ba7716c1c84e8a74495a67f10a78eeaad2a6c3d7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51517695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159272"
 ---
 # <a name="lthashsetgt"></a>&lt;hash_set&gt;
 
@@ -33,7 +33,7 @@ Definuje kontejner šablony třídy hash_set a hash_multiset – a jejich podpů
 
 |Hash_set – verze|Hash_multiset – verze|Popis|
 |-----------------------|----------------------------|-----------------|
-|[Operator! = (hash_set)](../standard-library/hash-set-operators.md#op_neq)|[Operator! = (hash_multiset)](../standard-library/hash-set-operators.md#op_neq)|Testuje, zda je objekt hash_set nebo hash_multiset na levé straně operátoru není roven objektu hash_set nebo hash_multiset na pravé straně.|
+|[Operator! = (hash_set)](../standard-library/hash-set-operators.md#op_neq)|[operator!= (hash_multiset)](../standard-library/hash-set-operators.md#op_neq)|Testuje, zda je objekt hash_set nebo hash_multiset na levé straně operátoru není roven objektu hash_set nebo hash_multiset na pravé straně.|
 |[Operator == (hash_set)](../standard-library/hash-set-operators.md#op_eq_eq)|[Operator == (hash_multiset)](../standard-library/hash-set-operators.md#op_eq_eq)|Testuje, zda hash_set nebo hash_multiset objekt na levé straně operátoru roven objektu hash_set nebo hash_multiset na pravé straně.|
 
 ### <a name="specialized-template-functions"></a>Specializované funkce šablon

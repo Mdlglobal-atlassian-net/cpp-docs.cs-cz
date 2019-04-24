@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
 ms.openlocfilehash: 44c7691cc967b13b4fa94a7c51da57b7bf4d511f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159714"
 ---
 # <a name="function-class"></a>function – třída
 
@@ -119,9 +119,9 @@ Prázdná `function` objekt neobsahuje volatelného objektu nebo odkazem na vola
 
 |Členská funkce|Popis|
 |-|-|
-|[přiřazení](#assign)|Volatelný objekt přiřadí k tomuto objektu funkce.|
-|[Prohození](#swap)|Zamění dvě volatelných objektů.|
-|[Cíl](#target)|Testuje, zda je uložená volatelný objekt lze volat jako zadaný.|
+|[assign](#assign)|Volatelný objekt přiřadí k tomuto objektu funkce.|
+|[swap](#swap)|Zamění dvě volatelných objektů.|
+|[target](#target)|Testuje, zda je uložená volatelný objekt lze volat jako zadaný.|
 |[target_type](#target_type)|Získá typ informací na volatelný objekt.|
 
 ### <a name="operators"></a>Operátory
@@ -129,7 +129,7 @@ Prázdná `function` objekt neobsahuje volatelného objektu nebo odkazem na vola
 |Operátor|Popis|
 |-|-|
 |[Tento parametr zadán Function::Operator](#op_unspecified)|Testuje, zda existuje uložené volatelný objekt.|
-|[funkce:: operator()](#op_call)|Volá volatelný objekt.|
+|[function::operator()](#op_call)|Volá volatelný objekt.|
 |[Function::Operator =](#op_eq)|Nahradí uloženou volatelný objekt.|
 
 ## <a name="requirements"></a>Požadavky
@@ -197,7 +197,7 @@ template <class Fx, class Alloc>
 *doprava*<br/>
 Objekt funkce ke kopírování.
 
-*FX*<br/>
+*Fx*<br/>
 Typ volatelný objekt.
 
 *_Func*<br/>
@@ -344,7 +344,7 @@ result_type operator()(
 *TN*<br/>
 Typ n-té volání argument.
 
-*TN*<br/>
+*tN*<br/>
 Volání n-tý argument.
 
 ### <a name="remarks"></a>Poznámky
@@ -623,7 +623,7 @@ empty == true
 no target == true
 ```
 
-## <a name="target_type"></a>  Function::target_type
+## <a name="target_type"></a>  function::target_type
 
 Získá typ informací na volatelný objekt.
 

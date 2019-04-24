@@ -39,11 +39,11 @@ helpviewer_keywords:
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
 ms.openlocfilehash: c5eb0b51cf0371100ed884221ee04885dfbe9ad9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157303"
 ---
 # <a name="isctype-iswctype-isctypel-iswctypel"></a>_isctype, iswctype, _isctype_l, _iswctype_l
 
@@ -93,16 +93,16 @@ Chování **_isctype –** a **_isctype_l –** není definováno, pokud *c* nen
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|není k dispozici|**_isctype –**|není k dispozici|**_iswctype –**|
+|není k dispozici|**_isctype**|není k dispozici|**_iswctype**|
 |není k dispozici|**_isctype_l**|není k dispozici|**_iswctype_l**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_isctype –**|\<ctype.h >|
+|**_isctype**|\<ctype.h>|
 |**iswctype**|\<ctype.h > nebo \<wchar.h >|
-|**_isctype_l**|\<ctype.h >|
+|**_isctype_l**|\<ctype.h>|
 |**_iswctype_l**|\<ctype.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

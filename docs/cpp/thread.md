@@ -10,15 +10,15 @@ helpviewer_keywords:
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
 ms.openlocfilehash: 089f339e5d203fe44789a7df1607f73ab13b8a24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330515"
 ---
 # <a name="thread"></a>vlákno
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 **Vlákno** modifikátor rozšířené paměťové třídy se používá k deklarování místní proměnné vlákna. Přenosná ekvivalentní v C ++ 11 a novějším, použijte [thread_local](../cpp/storage-classes-cpp.md#thread_local) specifikátor třídy úložiště pro přenosného kódu. Na Windows `thread_local` je implementováno s **__declspec(thread)**.
 
@@ -42,7 +42,7 @@ Při použití místní proměnné vlákna v dynamicky načíst knihovny, musít
 
 1. Místní proměnné vlákna, které jsou staticky inicializována s konstantní hodnoty jsou obecně správně inicializována na všech vláknech. Však k prosinci 2017 existuje problém známé shoda v kompilátoru Microsoft Visual C++, kterým proměnné constexpr přijímat dynamické místo Statická inicializace.
 
-   Poznámka: Oba zmíněné problémy jsou má být opraveno v budoucím aktualizace kompilátoru.
+   Poznámka: Oba zmíněné problémy se očekává v budoucnu vyřešit aktualizací kompilátoru.
 
 Kromě toho musí dodržovat tyto pokyny při deklarování proměnné a místními objekty vlákna:
 

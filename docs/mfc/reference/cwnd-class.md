@@ -819,11 +819,11 @@ helpviewer_keywords:
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
 ms.openlocfilehash: 493fe04f34f615d9113196e3db8bc744f420d4a2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323470"
 ---
 # <a name="cwnd-class"></a>Třída CWnd
 
@@ -1822,7 +1822,7 @@ Určuje souřadnice bodu klienta má být testována.
 *nflags*<br/>
 Určuje, které podřízená okna, chcete-li přeskočit. Tento parametr může být kombinací následujícího:
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |CWP_ALL|Vynechat všechny podřízená okna|
 |CWP_SKIPINVISIBLE|Přeskočit neviditelné podřízená okna|
@@ -1970,7 +1970,7 @@ virtual HRESULT CreateAccessibleProxy(
 *wParam*<br/>
 Určuje objekt zpřístupněny pomocí proxy serveru Active Accessibility. Může být jedna z následujících hodnot
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |OBJID_CLIENT|Odkazuje na klientské oblasti okna.|
 
@@ -6127,7 +6127,7 @@ Obsahuje počet opakování, kolikrát stisk klávesy se opakuje, když uživate
 *nFlags*<br/>
 Obsahuje kontroly kódu, přechod klíče kódu, předchozí stav klíčů a kód kontextu, jak je znázorněno v následujícím seznamu:
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |0-15|Určuje počet opakování. Hodnota je počet průchodů stisknutí klávesy se opakuje v důsledku uživatele podržíte klávesu.|
 |16-23|Určuje kód kontroly. Hodnota závisí na výrobce OEM (OEM)|
@@ -6344,7 +6344,7 @@ Obsahuje dlouhým ukazatelem na [compareitemstruct –](/windows/desktop/api/win
 
 Určuje relativní umístění dvě položky. To může být libovolná z následujících hodnot:
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |-1|Položka 1 se řadí před položkou 2.|
 |0|Položka 1 a položka 2 seřadí hodnoty stejné.|
@@ -6542,7 +6542,7 @@ Určuje počet opakování.
 *nFlags*<br/>
 Určuje kontroly kódu, přechod klíče kódu, předchozí stav klíčů a kód kontextu, jak je znázorněno v následujícím seznamu:
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |0-7|Naskenujte kód (OEM závislé hodnoty). Nižší bajt vyšší řád slova.|
 |8|Rozšířené klíč, jako je například funkční klávesy nebo klávesy na numerické klávesnici (1, pokud je rozšířené klíč; jinak 0).|
@@ -7386,7 +7386,7 @@ Určuje virtuální kód zadaný klíč. Seznam kódů standardní virtuální k
 *nFlags*<br/>
 Určuje kontroly kódu, přechod klíče kódu, předchozí stav klíčů a kód kontextu, jak je znázorněno v následujícím seznamu:
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |0-7|Naskenujte kód (OEM závislé hodnoty).|
 |8|Rozšířené klíč, jako je například funkční klávesy nebo klávesy na numerické klávesnici (1, pokud je rozšířené klíč).|
@@ -7431,7 +7431,7 @@ Určuje virtuální kód zadaný klíč. Seznam kódů standardní virtuální k
 *nFlags*<br/>
 Určuje kontroly kódu, přechod klíče kódu, předchozí stav klíčů a kód kontextu, jak je znázorněno v následujícím seznamu:
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |0-7|Naskenujte kód (OEM závislé hodnoty). Nižší bajt vyšší řád slova.|
 |8|Rozšířené klíč, jako je například funkční klávesy nebo klávesy na numerické klávesnici (1, pokud je rozšířené klíč; jinak 0).|
@@ -9524,7 +9524,7 @@ Určuje počet opakování (počet pokusů, které stisknutí klávesy se opakuj
 *nFlags*<br/>
 *NFlags* parametr může mít tyto hodnoty:
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |0-15|Určuje počet opakování. Hodnota je počet průchodů stisknutí klávesy se opakuje v důsledku uživatele podržíte klávesu...|
 |16-23|Určuje kód kontroly. Hodnota závisí na výrobce OEM (OEM)|
@@ -9687,7 +9687,7 @@ Určuje počet opakování.
 *nFlags*<br/>
 Určuje kontroly kódu, přechod klíče kódu, předchozí stav klíčů a kód kontextu, jak je znázorněno v následujícím seznamu:
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |0-7|Naskenujte kód (OEM závislé hodnoty). Nižší bajt vyšší řád slova.|
 |8|Rozšířené klíč, jako je například funkční klávesy nebo klávesy na numerické klávesnici (1, pokud je rozšířené klíč; jinak 0).|
@@ -9734,7 +9734,7 @@ Určuje počet opakování.
 *nFlags*<br/>
 Určuje kontroly kódu, přechod klíče kódu, předchozí stav klíčů a kód kontextu, jak je znázorněno v následujícím seznamu:
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |0-7|Naskenujte kód (OEM závislé hodnoty). Nižší bajt vyšší řád slova.|
 |8|Rozšířené klíč, jako je například funkční klávesy nebo klávesy na numerické klávesnici (1, pokud je rozšířené klíč; jinak 0).|

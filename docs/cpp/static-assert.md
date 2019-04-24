@@ -10,11 +10,11 @@ helpviewer_keywords:
 - static_assert
 ms.assetid: 28dd3668-e78c-4de8-ba68-552084743426
 ms.openlocfilehash: d5ef1ba45001a2b1a3ee1f2da46f66224857b070
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330643"
 ---
 # <a name="staticassert"></a>static_assert
 
@@ -33,7 +33,7 @@ static_assert( constant-expression ); // Visual Studio 2017 and later
 |Parametr|Popis|
 |---------------|-----------------|
 |*constant-expression*|Celočíselný konstantní výraz, který lze převést na logickou hodnotu.<br /><br /> Pokud vyhodnocený výraz je nula (false), *řetězcový literál* parametrů se zobrazí a kompilace selže s chybou. Pokud má výraz hodnotu nenulová (pravda), **static_assert** deklarace nemá žádný vliv.|
-|*řetězcový literál*|Zprávu, která se zobrazí, pokud *konstantní výraz* parametru je nula. Zpráva je řetězec znaků [základní znakové sadě](../c-language/ascii-character-set.md) kompilátoru; který je, nikoli [vícebajtové široké znaky](../c-language/multibyte-and-wide-characters.md).|
+|*string-literal*|Zprávu, která se zobrazí, pokud *konstantní výraz* parametru je nula. Zpráva je řetězec znaků [základní znakové sadě](../c-language/ascii-character-set.md) kompilátoru; který je, nikoli [vícebajtové široké znaky](../c-language/multibyte-and-wide-characters.md).|
 
 ## <a name="remarks"></a>Poznámky
 

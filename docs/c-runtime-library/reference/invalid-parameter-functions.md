@@ -20,11 +20,11 @@ f1_keywords:
 - _invoke_watson
 ms.assetid: a4d6f1fd-ce56-4783-8719-927151a7a814
 ms.openlocfilehash: e43d5caaeebb6303d209d870c804357117812985
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157536"
 ---
 # <a name="invalidparameter-invalidparameternoinfo-invalidparameternoinfonoreturn-invokewatson"></a>_invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson
 
@@ -70,7 +70,7 @@ Souboru zdrojového kódu, kde byla volána obslužnou rutinu.
 *line_number*<br/>
 Číslo řádku ve zdrojovém kódu, kde byla volána obslužnou rutinu.
 
-*Rezervováno*<br/>
+*reserved*<br/>
 Nevyužité.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -91,7 +91,7 @@ Pokud výchozí obslužnou rutinu **_invoke_watson** je volána, pokud procesor 
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|------------------|
-|**_invalid_parameter**, **_invalid_parameter_noinfo**, **_invalid_parameter_noinfo_noreturn**, **_invoke_watson**|\<corecrt.h >|
+|**_invalid_parameter**, **_invalid_parameter_noinfo**, **_invalid_parameter_noinfo_noreturn**, **_invoke_watson**|\<corecrt.h>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

@@ -22,11 +22,11 @@ helpviewer_keywords:
 - imaxabs function
 ms.assetid: de2566a3-1415-4e9a-91b5-7ac3a49ebf5e
 ms.openlocfilehash: a7492e08c3a078698292923ce395524ab5327ecf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157490"
 ---
 # <a name="imaxabs"></a>imaxabs
 
@@ -56,7 +56,7 @@ Celočíselná hodnota.
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**imaxabs**|\<inttypes.h >|
+|**imaxabs**|\<inttypes.h>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

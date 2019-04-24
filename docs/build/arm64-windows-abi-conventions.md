@@ -2,11 +2,11 @@
 title: Přehled konvencí ARM64 ABI
 ms.date: 03/27/2019
 ms.openlocfilehash: 4c0f89f97529d4cd70e1449c90b131d25d30f9ee
-ms.sourcegitcommit: ac5c04b347e817eeece6e2c98e60236fc0e307a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58639443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195500"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Přehled konvencí ARM64 ABI
 
@@ -231,7 +231,7 @@ Kód, který generuje dynamicky by měl být popsán s tabulkami dynamické funk
 
 ## <a name="cycle-counter"></a>Čítač cyklu
 
-Všechny procesory ARMv8 jsou vyžadovány pro podporu cyklu čítač zaregistrovat, 64-bit registru, který konfiguruje Windows, aby byly čitelné na libovolné úrovni výjimky, včetně uživatelského režimu. Je přístupný prostřednictvím speciální PMCCNTR_EL0 zaregistrovat, pomocí operačního kódu MSR v kódu sestavení nebo `_ReadStatusReg` vnitřní v kódu C/C++.
+Všechny procesory ARMv8 jsou vyžadovány pro podporu cyklu čítač zaregistrovat, 64-bit registru, který konfiguruje Windows, aby byly čitelné na libovolné úrovni výjimky, včetně uživatelského režimu. Je přístupný prostřednictvím speciální PMCCNTR_EL0 zaregistrovat, pomocí operačního kódu MSR v kódu sestavení nebo `_ReadStatusReg` vnitřní v jazyce C /C++ kódu.
 
 Čítač cyklus je čítač true cyklu, není skutečný hodiny. Počítání frekvence se bude lišit při frekvenci procesoru. Pokud se domníváte, že musíte znát četnost cyklu čítače, neměli byste používat čítač cyklu. Místo toho chcete měřit skutečný čas, pro kterou byste měli použít `QueryPerformanceCounter`.
 

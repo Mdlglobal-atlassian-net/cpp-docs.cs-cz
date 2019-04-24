@@ -33,11 +33,11 @@ helpviewer_keywords:
 - ungetc_nolock function
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
 ms.openlocfilehash: 55888f122af0848c92204168a23cca93e2517904
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62268881"
 ---
 # <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock, _ungetwc_nolock
 
@@ -61,7 +61,7 @@ wint_t _ungetwc_nolock(
 *c*<br/>
 Znak k posunutí.
 
-*Stream*<br/>
+*stream*<br/>
 Ukazatel na **souboru** struktury.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -78,14 +78,14 @@ Tyto funkce jsou nezamykací verze **ungetc –** a **ungetwc –**. Verze s **_
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_ungettc_nolock –**|**_ungetc_nolock –**|**_ungetc_nolock –**|**_ungetwc_nolock –**|
+|**_ungettc_nolock**|**_ungetc_nolock**|**_ungetc_nolock**|**_ungetwc_nolock**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_ungetc_nolock –**|\<stdio.h>|
-|**_ungetwc_nolock –**|\<stdio.h > nebo \<wchar.h >|
+|**_ungetc_nolock**|\<stdio.h>|
+|**_ungetwc_nolock**|\<stdio.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

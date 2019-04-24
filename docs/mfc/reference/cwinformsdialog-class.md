@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CWinFormsDialog [MFC], OnInitDialog
 ms.assetid: e3cec000-a578-448e-b06a-8af256312f61
 ms.openlocfilehash: 1542f852a8fe3f05d81ae59efb8a522caae671fd
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323408"
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog – třída
 
@@ -42,7 +42,7 @@ Rozhraní .NET Framework uživatelský ovládací prvek zobrazený v aplikaci kn
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWinFormsDialog::CWinFormsDialog](#cwinformsdialog)|Vytvoří `CWinFormsDialog` objektu.|
 
@@ -56,7 +56,7 @@ Rozhraní .NET Framework uživatelský ovládací prvek zobrazený v aplikaci kn
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name||
+|Název||
 |----------|-|
 |[CWinFormsDialog::operator-&gt;](#operator_-_gt)|Nahradí [CWinFormsDialog::GetControl](#getcontrol) ve výrazech.|
 |[CWinFormsDialog::operator TManagedControl^](#operator-tmanagedcontrol-hat)|Přetypování typu jako odkaz na uživatelský ovládací prvek Windows Forms.|

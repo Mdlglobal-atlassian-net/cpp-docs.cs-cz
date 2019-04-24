@@ -1,5 +1,5 @@
 ---
-title: timespec_get _timespec32_get, _timespec64_get1
+title: timespec_get, _timespec32_get, _timespec64_get1
 ms.date: 11/04/2016
 apiname:
 - timespec_get
@@ -34,11 +34,11 @@ helpviewer_keywords:
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
 ms.openlocfilehash: 1591189ff2db78605c334e72ac3be13876afc81d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155547"
 ---
 # <a name="timespecget-timespec32get-timespec64get"></a>timespec_get, _timespec32_get, _timespec64_get
 
@@ -77,7 +77,7 @@ Hodnota *základní* Pokud úspěšné, jinak vrátí 0.
 
 **Timespec_get** funkce nastaví aktuální čas ve struktuře, na které odkazují *time_spec* argument. Všechny verze této struktury mají dva členy **tv_sec** a **tv_nsec**. **Tv_sec** hodnota nastavená na celočíselný počet sekund a **tv_nsec** na celočíselný počet nanosekundách zaokrouhlí na rozlišení systémových hodin od začátku epochy určené *základní*.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Tyto funkce podporují pouze **TIME_UTC** jako *základní* hodnotu. Tím se nastaví *time_spec* hodnota počet sekund a nanosekundách od epochy spuštění, půlnoci 1. ledna 1970, koordinovaný univerzální čas (UTC). V **struktura** **_timespec32**, **tv_sec** je **__time32_t** hodnotu. V **struktura** **_timespec64**, **tv_sec** je **__time64_t –** hodnotu. V **struktura** **timespec**, **tv_sec** je **time_t** typ, který je 32 bity a 64 bitů v závislosti na tom, zda preprocesoru je definována hodnota _USE_32BIT_TIME_T – makro. **Timespec_get** funkce je vložená funkce, která volá **_timespec32_get** Pokud je definována hodnota _USE_32BIT_TIME_T; jinak zavolá **_timespec64_get**.
 

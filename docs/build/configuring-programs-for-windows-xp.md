@@ -3,11 +3,11 @@ title: Konfigurace programů pro Windows XP
 ms.date: 02/02/2018
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
 ms.openlocfilehash: 989a4e2c7e91c05498902bf1c5cb9d838ee47c3b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273799"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Konfigurace programů pro Windows XP
 
@@ -25,7 +25,7 @@ Sada nástrojů platformy Windows XP, který je součástí sady Visual Studio j
 
 1. V **Průzkumníka řešení**, otevřete místní nabídku pro váš projekt a klikněte na tlačítko **vlastnosti**.
 
-1. V **stránky vlastností** dialogové okno pro projekt, v části **vlastnosti konfigurace** > **Obecné**, nastavte **Sadanástrojůplatformy** vlastnost k požadované sadě nástrojů Windows XP. Například zvolte **Visual Studio 2017 – Windows XP (v141_xp)** vytvořit kód pro Windows XP a Windows Server 2003 pomocí kompilátoru Microsoft Visual C++ 2017.
+1. V **stránky vlastností** dialogové okno pro projekt, v části **vlastnosti konfigurace** > **Obecné**, nastavte **Sadanástrojůplatformy** vlastnost k požadované sadě nástrojů Windows XP. Například zvolte **Visual Studio 2017 – Windows XP (v141_xp)** vytvořit kód pro Windows XP a Windows Server 2003 pomocí Microsoft Visual C++ kompilátoru 2017.
 
 ### <a name="c-runtime-support"></a>Podpora modulu CLR C++
 
@@ -43,7 +43,7 @@ Tyto knihovny jsou podporovány sad nástrojů platformy, které instaluje sada 
 |C++ AMP|X|X||
 
 > [!NOTE]
-> Aplikace, které jsou napsané v jazyce C + +/ CLI a cílové rozhraní .NET Framework 4 běží na Windows XP a Windows Server 2003.
+> Aplikace, které jsou napsané v C++/rozhraní příkazového řádku a cílové rozhraní .NET Framework 4 běží na Windows XP a Windows Server 2003.
 
 ### <a name="differences-between-the-toolsets"></a>Rozdíly mezi sady nástrojů
 

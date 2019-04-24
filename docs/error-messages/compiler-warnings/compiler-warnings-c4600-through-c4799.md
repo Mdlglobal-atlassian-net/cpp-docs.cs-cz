@@ -1,6 +1,6 @@
 ---
-title: Compiler Warnings C4600 Through C4799
-ms.date: 07/03/2018
+title: Upozornění kompilátoru C4600 až C4799
+ms.date: 04/21/2019
 f1_keywords:
 - C4609
 - C4658
@@ -40,14 +40,14 @@ helpviewer_keywords:
 - C4767
 - C4770
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
-ms.openlocfilehash: d1b1e06d3a2be71d6386554c704c547c6f2a4672
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 3df17b115797f4d68621854d072c41aca14a0fd8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62227028"
 ---
-# <a name="compiler-warnings-c4600-through-c4799"></a>Compiler Warnings C4600 Through C4799
+# <a name="compiler-warnings-c4600-through-c4799"></a>Upozornění kompilátoru C4600 až C4799
 
 Články v této části dokumentace vysvětlují podmnožinu varovné zprávy, které jsou generovány kompilátorem.
 
@@ -93,7 +93,7 @@ ms.locfileid: "58328371"
 |[Upozornění kompilátoru (úroveň 3 a 4) C4637](compiler-warning-level-3-c4637.md)|Cíl komentáře dokumentu XML: \<zahrnout > značky zahozeny. Důvod|
 |[Upozornění kompilátoru (úroveň 3) C4638](compiler-warning-level-3-c4638.md)|Cíl komentáře dokumentu XML: odkaz na neznámý symbol 'symbol'.|
 |[Upozornění kompilátoru (úroveň 4) C4639](../../error-messages/compiler-warnings/compiler-warning-level-4-c4639.md)|Chyba MSXML; dokumentu XML, který nezpracují se komentáře. Důvod|
-|[Upozornění kompilátoru (úroveň 3) C4640](../../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md)|'instance': stavba místního statického objektu není bezpečná pro přístup z více vláken|
+|[Upozornění kompilátoru (úroveň 3) c4640 týkajícího](../../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md)|'instance': stavba místního statického objektu není bezpečná pro přístup z více vláken|
 |[Upozornění kompilátoru (úroveň 3) C4641](../../error-messages/compiler-warnings/compiler-warning-level-3-c4641.md)|Komentář k dokumentu XML má nejednoznačný křížový odkaz:|
 |[Upozornění kompilátoru (úroveň 3) C4645](compiler-warning-level-3-c4645.md)|funkce deklarovaná pomocí __declspec(noreturn) má návratový příkaz|
 |[Upozornění kompilátoru (úroveň 3) C4646](compiler-warning-level-3-c4646.md)|funkce deklarovaná pomocí __declspec(noreturn) má návratový typ jiný než void|
@@ -131,7 +131,7 @@ ms.locfileid: "58328371"
 |[Upozornění kompilátoru (úroveň 1) C4684](../../error-messages/compiler-warnings/compiler-warning-level-1-c4684.md)|'attribute': UPOZORNĚNÍ! atribut může způsobit vygenerování neplatného kódu: používejte opatrně,|
 |[Upozornění kompilátoru (úroveň 1) C4685](compiler-warning-level-1-c4685.md)|byl očekáván ' >> ' najít ' >> "při analýze parametrů šablony|
 |[Upozornění kompilátoru (úroveň 3) C4686](../../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)|'user-defined type': možné změny v chování, změna ve vrácení konvence volání uživatelem definovaného typu|
-|[Upozornění (chyba) kompilátoru C4687](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|'class': zapečetěná abstraktní třída nemůže implementovat rozhraní "rozhraní"|
+|[Kompilátor varování C4687 (chyba)](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|'class': zapečetěná abstraktní třída nemůže implementovat rozhraní "rozhraní"|
 |[Upozornění kompilátoru (úroveň 1) C4688](../../error-messages/compiler-warnings/compiler-warning-level-1-c4688.md)|"omezení": seznam omezení obsahuje typ sestavení private 'type'|
 |Upozornění kompilátoru (úroveň 1) C4689|'%c': Nepodporovaný znak v #pragma detect_mismatch; #pragma ignorovat|
 |[Upozornění kompilátoru (úroveň 4) C4690](../../error-messages/compiler-warnings/compiler-warning-level-4-c4690.md)|\[ emitidl (pop)]: Další POP než push|
@@ -141,7 +141,7 @@ ms.locfileid: "58328371"
 |[Upozornění kompilátoru (úroveň 1, chyba) C4694](../../error-messages/compiler-warnings/compiler-warning-c4694.md)|'class': zapečetěná abstraktní třída nemůže mít základní třídy "$base_class.|
 |Upozornění kompilátoru (úroveň 1) C4695|#pragma execution_character_set: 'znaková sada' není podporovaný argument: momentálně se podporuje jenom "UTF-8' je podporován.|
 |Upozornění kompilátoru (úroveň 1) C4696|/ Parametr ZBvalue1 je mimo rozsah; za předpokladu, že "hodnota2"|
-|[Upozornění kompilátoru (úrovně 1 a 4) C4700](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700.md)|Neinicializovaná lokální proměnná "name" použít|
+|[Upozornění kompilátoru (úroveň 1 a 4) C4700](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700.md)|Neinicializovaná lokální proměnná "name" použít|
 |[Upozornění kompilátoru (úroveň 4) C4701](../../error-messages/compiler-warnings/compiler-warning-level-4-c4701.md)|potenciální neinicializovaná lokální proměnná "name" použít|
 |[Upozornění kompilátoru (úroveň 4) C4702](../../error-messages/compiler-warnings/compiler-warning-level-4-c4702.md)|Nedosažitelný kód|
 |[Upozornění kompilátoru (úroveň 4) C4703](../../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md)|potenciálně neinicializovaná lokální proměnná ukazatele %s, který používá|
@@ -151,7 +151,7 @@ ms.locfileid: "58328371"
 |[Upozornění kompilátoru (úroveň 1) C4711](../../error-messages/compiler-warnings/compiler-warning-level-1-c4711.md)|Funkce 'function' vybraná pro automatické vložení rozšíření|
 |[Upozornění kompilátoru (úroveň 4) C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md)|Funkce označená jako __forceinline není vložená funkce|
 |[Upozornění kompilátoru (úroveň 1) C4715](../../error-messages/compiler-warnings/compiler-warning-level-1-c4715.md)|'function': Ne všechny cesty ovládacích prvků vracet hodnotu|
-|[Kompilátor upozornění (úroveň 1, chyba) C4716](../../error-messages/compiler-warnings/compiler-warning-level-1-c4716.md)|'function': musí vracet hodnotu|
+|[Upozornění kompilátoru (úroveň 1, chyba) C4716](../../error-messages/compiler-warnings/compiler-warning-level-1-c4716.md)|'function': musí vracet hodnotu|
 |[Upozornění kompilátoru (úroveň 1) C4717](../../error-messages/compiler-warnings/compiler-warning-level-1-c4717.md)|'function': rekurzivní pro všechny cesty ovládacích prvků, funkce způsobí za běhu přetečení zásobníku|
 |[Upozornění kompilátoru (úroveň 4) C4718](compiler-warning-level-4-c4718.md)|volání funkce: rekurzivní volání nemá žádné vedlejší efekty, odstraňuje se|
 |Upozornění kompilátoru (úroveň 1) C4719|Pokud Qfast - použít 'f' jako přípona pro indikaci přesnosti single se našla konstanta Double|
@@ -164,17 +164,17 @@ ms.locfileid: "58328371"
 |[Upozornění kompilátoru (úroveň 1) C4727](../../error-messages/compiler-warnings/compiler-warning-level-1-c4727.md)|Soubor PCH s názvem pch_file se stejným časovým razítkem se našel v obj_file_1 a obj_file_2.  Pomocí první soubor PCH.|
 |Upozornění kompilátoru (úroveň 1) C4728|/ Yl-se ignoruje, protože je vyžadován odkaz na soubor PCH|
 |Upozornění kompilátoru (úroveň 4) C4729|upozornění založená na funkce je moc velká pro graf toku|
-|[Upozornění kompilátoru (úroveň 1) C4730](../../error-messages/compiler-warnings/compiler-warning-level-1-c4730.md)upozornění kompilátoru (úroveň 1) C4730|"hlavní": směšování výrazů _m64 a plovoucí desetinná čárka výrazy mohou způsobit nesprávný kód|
-|[Upozornění kompilátoru (úroveň 1) C4731](../../error-messages/compiler-warnings/compiler-warning-level-1-c4731.md)|"ukazatelů": "zaregistrovat" upravil vložený kód sestavení registr ukazatelů rámců|
+|[Kompilátor varování (úroveň 1) C4730](../../error-messages/compiler-warnings/compiler-warning-level-1-c4730.md)upozornění kompilátoru (úroveň 1) C4730|"hlavní": směšování výrazů _m64 a plovoucí desetinná čárka výrazy mohou způsobit nesprávný kód|
+|[Kompilátor varování (úroveň 1) C4731](../../error-messages/compiler-warnings/compiler-warning-level-1-c4731.md)|"ukazatelů": "zaregistrovat" upravil vložený kód sestavení registr ukazatelů rámců|
 |Upozornění kompilátoru (úroveň 1) C4732|vnitřní '%s' není v této architektuře podporovaný.|
-|[Upozornění kompilátoru (úroveň 1) C4733](../../error-messages/compiler-warnings/compiler-warning-level-1-c4733.md)|Vložené asm přiřazení 'FS:0': není zaregistrovaný jako bezpečná obslužná rutina|
-|[Upozornění kompilátoru (úroveň 3) C4738](../../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md)|ukládání 32bitového plovoucího výsledku do paměti, možná ztráta|
+|[Kompilátor varování (úroveň 1) C4733](../../error-messages/compiler-warnings/compiler-warning-level-1-c4733.md)|Vložené asm přiřazení 'FS:0': není zaregistrovaný jako bezpečná obslužná rutina|
+|[Kompilátor varování (úroveň 3) C4738](../../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md)|ukládání 32bitového plovoucího výsledku do paměti, možná ztráta|
 |[Upozornění kompilátoru (úroveň 1) C4739](compiler-warning-level-1-c4739.md)|odkaz na proměnnou 'var' překračuje její prostor úložiště.|
-|[Upozornění kompilátoru (úroveň 4) C4740](../../error-messages/compiler-warnings/compiler-warning-level-4-c4740.md)|Flow nebo z vloženého kódu asm potlačuje globální optimalizaci.|
-|[Upozornění kompilátoru (úroveň 1) C4742](../../error-messages/compiler-warnings/compiler-warning-level-1-c4742.md)|'příkaz var' má jiné zarovnání v 'file1' a 'file2': číslo a číslo|
-|[Upozornění kompilátoru (úroveň 1) C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|'type' má jinou velikost 'file1' a 'file2': číslo a počet bajtů|
-|[Upozornění kompilátoru (úroveň 1) C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|'příkaz var' má jiný typ v 'file1' a 'file2': 'type1' a 'type2'|
-|[Upozornění kompilátoru C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|přístup typu "*výraz*' / volatile:\<iso&#124;ms > nastavení; zvažte použití vnitřních funkcí Using __iso_volatile_load/store|
+|[Kompilátor varování (úroveň 4) C4740](../../error-messages/compiler-warnings/compiler-warning-level-4-c4740.md)|Flow nebo z vloženého kódu asm potlačuje globální optimalizaci.|
+|[Kompilátor varování (úroveň 1) C4742](../../error-messages/compiler-warnings/compiler-warning-level-1-c4742.md)|'příkaz var' má jiné zarovnání v 'file1' a 'file2': číslo a číslo|
+|[Kompilátor varování (úroveň 1) C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|'type' má jinou velikost 'file1' a 'file2': číslo a počet bajtů|
+|[Kompilátor varování (úroveň 1) C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|'příkaz var' má jiný typ v 'file1' a 'file2': 'type1' a 'type2'|
+|[Kompilátor varování C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|přístup typu "*výraz*' / volatile:\<iso&#124;ms > nastavení; zvažte použití vnitřních funkcí Using __iso_volatile_load/store|
 |[Upozornění kompilátoru (úroveň 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|Volání spravované 'entrypoint": Zámek zavaděče, včetně vstupního bodu DLL a volání dosáhlo ze vstupního bodu DLL se možná nespustí spravovaný kód|
 |Upozornění kompilátoru (úroveň 4) C4749|podmíněně podporováno: na které se netýkají nestandardním rozložením typu se použil offsetof '*typ*.|
 |[Upozornění kompilátoru (úroveň 1) C4750](compiler-warning-level-1-c4750.md)|'identifier': funkce s: _alloca() je vložená do smyčky|
@@ -189,15 +189,20 @@ ms.locfileid: "58328371"
 |Upozornění kompilátoru (úroveň 3) C4768|atributy __declspec před specifikací propojení se ignorují.|
 |Kompilátor varování C4770|částečně ověřený výčet "*název*se používá jako index.|
 |Kompilátor varování C4771|Hranice musí být vytvořené pomocí jednoduchého ukazatele; Vnitřní funkce MPX se ignoruje|
-|[Kompilátor upozornění (úroveň 1, chyba) C4772](../../error-messages/compiler-warnings/compiler-warning-level-1-c4772.md)|#import odkazovala na typ z chybějící knihovny typů; používá jako zástupný symbol missing_type|
+|[Upozornění kompilátoru (úroveň 1, chyba) C4772](../../error-messages/compiler-warnings/compiler-warning-level-1-c4772.md)|#import odkazovala na typ z chybějící knihovny typů; používá jako zástupný symbol missing_type|
 |Upozornění kompilátoru (úroveň 4) C4774|"*řetězec*': formátovací řetězec očekávaný v argumentu *číslo* není řetězcový literál|
 |Upozornění kompilátoru (úroveň 3) C4775|používá se nestandardní rozšíření použité ve formátovacím řetězci "*řetězec*"funkce"*funkce*.|
 |Upozornění kompilátoru (úroveň 1) C4776|' %*znak*"není povolena ve formátovacím řetězci funkce"*funkce*.|
 |Upozornění kompilátoru (úroveň 4) C4777|"*funkce*': řetězec formátu"*řetězec*"vyžaduje argument typu"*type1*", ale variadický argument *číslo* má typ"*type2*.|
 |Upozornění kompilátoru (úroveň 3) C4778|"*funkce*': neukončený formátovací řetězec"*řetězec*.|
-|[Upozornění kompilátoru (úroveň 1) C4788](../../error-messages/compiler-warnings/compiler-warning-level-1-c4788.md)|'identifier': identifikátor se zkrátil na znaků 'number'|
-|[Upozornění kompilátoru (úroveň 1) C4789](../../error-messages/compiler-warnings/compiler-warning-level-1-c4789.md)|'identifier' bajtů N velikost vyrovnávací paměti bude mít přeběhnutí; M bajtů se zapíše s posunem L|
+|[Kompilátor varování (úroveň 1) C4788](../../error-messages/compiler-warnings/compiler-warning-level-1-c4788.md)|'identifier': identifikátor se zkrátil na znaků 'number'|
+|[Kompilátor varování (úroveň 1) C4789](../../error-messages/compiler-warnings/compiler-warning-level-1-c4789.md)|'identifier' bajtů N velikost vyrovnávací paměti bude mít přeběhnutí; M bajtů se zapíše s posunem L|
 |Upozornění kompilátoru (úroveň 2) C4792|Funkce '%s' deklarovaná pomocí: sysimport a odkazuje z nativního kódu; naimportujte knihovnu požadovanou pro propojení.|
-|[Upozornění kompilátoru (úrovně 1 a 3) C4793](../../error-messages/compiler-warnings/compiler-warning-level-1-and-3-c4793.md)|'function': funkci zkompilovat jako nativní: \n\t'reason.|
+|[Upozornění kompilátoru (úroveň 1 a 3) C4793](../../error-messages/compiler-warnings/compiler-warning-level-1-and-3-c4793.md)|'function': funkci zkompilovat jako nativní: \n\t'reason.|
 |[Upozornění kompilátoru (úroveň 1) C4794](compiler-warning-level-1-c4794.md)|Segment úložiště thread local proměnné '%s' změněn z '%s' na '%s'|
 |[Upozornění kompilátoru (úroveň 1) C4799](../../error-messages/compiler-warnings/compiler-warning-level-1-c4799.md)|Funkce 'function' nemá žádnou instrukci EMMS.|
+
+## <a name="see-also"></a>Viz také:
+
+[C /C++ nástroje chyby a upozornění kompilátoru a sestavení](../compiler-errors-1/c-cpp-build-errors.md) \
+[Upozornění kompilátoru C4000 - C5999](compiler-warnings-c4000-c5999.md)

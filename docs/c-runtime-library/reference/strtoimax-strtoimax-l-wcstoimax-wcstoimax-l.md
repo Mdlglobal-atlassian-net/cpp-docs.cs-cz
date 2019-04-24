@@ -34,11 +34,11 @@ helpviewer_keywords:
 - wcstoimax function
 ms.assetid: 4530d3dc-aaac-4a76-b7cf-29ae3c98d0ae
 ms.openlocfilehash: e0a320f90b2c0f8653109a6ae0056c4c0cdd7455
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62176288"
 ---
 # <a name="strtoimax-strtoimaxl-wcstoimax-wcstoimaxl"></a>strtoimax, _strtoimax_l, wcstoimax, _wcstoimax_l
 
@@ -107,7 +107,7 @@ Pokud *endptr* není **NULL**, ukazatel na znak, který zastavil skenování, je
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcstoimax**|**strtoimax**|**strtoimax**|**wcstoimax –**|
+|**_tcstoimax**|**strtoimax**|**strtoimax**|**wcstoimax**|
 |**_tcstoimax_l**|**strtoimax_l**|**_strtoimax_l**|**_wcstoimax_l**|
 
 **strtoimax** očekává, že *strSource* tak, aby odkazoval na řetězec v následujícím formátu:
@@ -120,7 +120,7 @@ A *prázdné znaky* může skládat ze znaků mezera a tabulátor, které jsou i
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strtoimax**, **_strtoimax_l –**, **wcstoimax –**, **_wcstoimax_l –**|\<inttypes.h >|
+|**strtoimax**, **_strtoimax_l**, **wcstoimax**, **_wcstoimax_l**|\<inttypes.h>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

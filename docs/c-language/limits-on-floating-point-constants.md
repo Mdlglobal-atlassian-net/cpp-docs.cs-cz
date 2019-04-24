@@ -10,11 +10,11 @@ helpviewer_keywords:
 - floating-point numbers, floating limits
 ms.assetid: 2d975868-2af6-45d7-a8af-db79f2c6b67b
 ms.openlocfilehash: df39ee719a4474f6dfd55d31a2848169a1168390
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325582"
 ---
 # <a name="limits-on-floating-point-constants"></a>Omezení konstant s plovoucí desetinnou čárkou
 
@@ -24,7 +24,7 @@ V následující tabulce jsou uvedena omezení hodnot konstant s plovoucí deset
 
 ### <a name="limits-on-floating-point-constants"></a>Omezení konstant s plovoucí desetinnou čárkou
 
-|Konstanta|Význam|Hodnota|
+|Konstanta|Význam|Value|
 |--------------|-------------|-----------|
 |**FLT_DIG**<br />**DBL_DIG**<br />**LDBL_DIG**|Počet číslic, *q*, tak, že číslo s plovoucí desetinnou čárkou s *q* desítkových číslicích lze zaokrouhlit na reprezentaci s plovoucí desetinnou čárkou a zpět bez ztráty přesnosti.|6<br />15<br />15|
 |**FLT_EPSILON**<br />**DBL_EPSILON**<br />**LDBL_EPSILON**|Nejmenší kladné číslo *x*, tak, aby *x* + 1,0 není roven 1,0|1.192092896e-07F<br />2.2204460492503131e-016<br />2.2204460492503131e-016|

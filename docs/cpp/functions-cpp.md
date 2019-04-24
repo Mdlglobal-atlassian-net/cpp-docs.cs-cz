@@ -9,11 +9,11 @@ helpviewer_keywords:
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
 ms.openlocfilehash: aafd3be3b27fbe134b380a29083b4ca36177e702
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154133"
 ---
 # <a name="functions-c"></a>Funkce (C++)
 
@@ -196,7 +196,7 @@ Pokud funkce upraví argument, který se předá odkazem, upraví původní obje
 void DoSomething(const std::string& input){...}
 ```
 
-**Jazyk C++ 11:** explicitně zpracování argumentů, které jsou předávány odkaz rvalue nebo odkaz na lvalue, pomocí double-ampersand u parametru určíte univerzální odkaz:
+**C++11:**  Zpracování explicitně argumenty, které jsou předávány odkaz rvalue nebo odkaz na lvalue, určíte univerzální odkaz pomocí double-ampersand na parametru:
 
 ```cpp
 void DoSomething(const std::string&& input){...}
@@ -363,7 +363,7 @@ Existují různé způsoby, jak vrátit více než jednu hodnotu z funkce:
     }
     ```
 
-1. **Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): použijte strukturované vazby. Výhodou strukturované vazby je, že proměnné, které ukládají vrácené hodnoty jsou inicializovány ve stejnou dobu, které jsou deklarovány, což v některých případech může být mnohem efektivnější. V tomto prohlášení –`auto[x, y, z] = f();`--závorky představují a inicializována názvy, které jsou v oboru pro daný blok celou funkci.
+1. **Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Použijte strukturovaných vazeb. Výhodou strukturované vazby je, že proměnné, které ukládají vrácené hodnoty jsou inicializovány ve stejnou dobu, které jsou deklarovány, což v některých případech může být mnohem efektivnější. V tomto prohlášení –`auto[x, y, z] = f();`--závorky představují a inicializována názvy, které jsou v oboru pro daný blok celou funkci.
 
     ```cpp
     #include <tuple>

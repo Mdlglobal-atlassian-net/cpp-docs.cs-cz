@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru C2146
+title: Compiler Error C2146
 ms.date: 11/04/2016
 f1_keywords:
 - C2146
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C2146
 ms.assetid: 6bfb7de6-6723-4486-9350-c66ef88d7a64
 ms.openlocfilehash: 3a0fd9c49a71f6f53d1a109378e3a6894bb68723
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62175420"
 ---
-# <a name="compiler-error-c2146"></a>Chyba kompilátoru C2146
+# <a name="compiler-error-c2146"></a>Compiler Error C2146
 
 Chyba syntaxe: chybí token před identifikátor 'identifier'
 

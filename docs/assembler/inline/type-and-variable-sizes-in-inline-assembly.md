@@ -17,15 +17,15 @@ helpviewer_keywords:
 - variables, size
 ms.assetid: b62c2f2b-a7ad-4145-bae4-d890db86d348
 ms.openlocfilehash: 36c97ee866ca449e9bbcf514e464a13f24f12cd9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166890"
 ---
 # <a name="type-and-variable-sizes-in-inline-assembly"></a>Typ a velikost proměnných ve vloženém sestavení
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 **Délka**, **velikost**, a **typ** operátory mají omezenou význam ve vloženém sestavení. Nelze je použít na všech s `DUP` – operátor (protože nelze definovat data pomocí direktivy MASM nebo operátory). Ale můžete je použít k vyhledání velikost proměnné jazyka C nebo C++ nebo typy:
 

@@ -43,11 +43,11 @@ helpviewer_keywords:
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
 ms.openlocfilehash: e620af526e5f0af02868bba4ba635e9ed6e34ff6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156795"
 ---
 # <a name="mbctolower-mbctolowerl-mbctoupper-mbctoupperl"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 
@@ -93,8 +93,8 @@ Funkce otestují znak *c* a pokud je to možné, použijte jednu z následujíc�
 
 |Rutiny|Převede|
 |--------------|--------------|
-|**_mbctolower –**, **_mbctolower_l –**|Velké znak malého písmene.|
-|**_mbctoupper –**, **_mbctoupper_l –**|Malé písmeno na velká písmena znak.|
+|**_mbctolower**, **_mbctolower_l**|Velké znak malého písmene.|
+|**_mbctoupper**, **_mbctoupper_l**|Malé písmeno na velká písmena znak.|
 
 Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze této funkce bez **_l** příponu používá aktuální národní prostředí pro toto chování závislé na národním prostředí verze s **_l** přípona je identická s tím rozdílem, že používá parametr národního prostředí místo něho předán v. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
@@ -104,17 +104,17 @@ V předchozích verzích **_mbctolower –** byla volána **jtolower**, a **_mbc
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_totlower –**|**ToLower**|**_mbctolower –**|**towlower –**|
+|**_totlower**|**tolower**|**_mbctolower**|**towlower**|
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_t**|
-|**_totupper –**|**ToUpper**|**_mbctoupper –**|**towupper –**|
-|**_totupper_l**|**toupper_l –**|**_mbctoupper_l**|**_towupper_l**|
+|**_totupper**|**toupper**|**_mbctoupper**|**towupper**|
+|**_totupper_l**|**toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutiny|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**_mbctolower –**, **_mbctolower_l –**|\<Mbstring.h >|
-|**_mbctoupper –**, **_mbctoupper_l –**|\<Mbstring.h >|
+|**_mbctolower**, **_mbctolower_l**|\<Mbstring.h >|
+|**_mbctoupper**, **_mbctoupper_l**|\<Mbstring.h >|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

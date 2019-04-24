@@ -12,11 +12,11 @@ helpviewer_keywords:
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
 ms.openlocfilehash: f6ed6184f8ae4b3a0f9db3c1f962a2918a185138
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317429"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (Vytvořit aplikace s detekcí terminálového serveru)
 
@@ -56,7 +56,7 @@ Pokud byla aplikace propojené s parametr/TSAWARE, DUMPBIN [/HEADERS](headers.md
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)<br/>
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)<br/>
 [Ukládání informací specifických pro uživatele](/windows/desktop/TermServ/storing-user-specific-information)<br/>
 [Starší verze aplikace v prostředí Terminálové služby](https://msdn.microsoft.com/library/aa382957.aspx)

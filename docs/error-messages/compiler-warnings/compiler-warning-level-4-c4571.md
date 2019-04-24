@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4571
 ms.assetid: 07aa17bd-b15c-4266-824c-57cc445e8edd
 ms.openlocfilehash: 92164bf297a44871897b6c6150eb54f8c5ccf3cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62220452"
 ---
 # <a name="compiler-warning-level-4-c4571"></a>Kompilátor upozornění (úroveň 4) C4571
 
@@ -29,7 +29,7 @@ V jednom z následujících způsobů, můžete vyřešit C4571
 
 - Nepovolujte C4571, pokud nechcete, aby vaše catch(...) bloků catch strukturované výjimky, ale chcete použít catch(...) bloky.  Je stále možné zachytit strukturované výjimky používání strukturovaného zpracování klíčová slova výjimek (**__try**, **__except**, a **__finally**).  Ale nezapomeňte, že při kompilaci **/EHS** destruktory bude volat pouze při vyvolání výjimky jazyka C++, ne v případě, že dojde k výjimce SEH.
 
-- Catch(...) blok nahraďte bloky catch pro určité výjimky jazyka C++ a volitelně přidat kolem zpracování výjimek jazyka C++ zpracování strukturovaných výjimek (**__try**, **__except**, a **_ _finally**).  Zobrazit [strukturovaného zpracování výjimek (C/C++)](../../cpp/structured-exception-handling-c-cpp.md) Další informace.
+- Nahraďte bloky catch pro konkrétní blok catch(...) C++ výjimky a volitelně přidat kolem zpracování strukturovaných výjimek C++ zpracování výjimek (**__try**, **__except**, a **__finally**).  Zobrazit [strukturovaného zpracování výjimek (C/C++)](../../cpp/structured-exception-handling-c-cpp.md) Další informace.
 
 Zobrazit [/EH (Model zpracování výjimek)](../../build/reference/eh-exception-handling-model.md) Další informace.
 

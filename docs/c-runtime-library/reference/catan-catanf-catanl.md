@@ -31,11 +31,11 @@ helpviewer_keywords:
 - catanl function
 ms.assetid: 8415ed9c-7909-4d08-b532-4630bafdc7e8
 ms.openlocfilehash: 99acdccca1b83be2fa667b5e5ef6e5181dc1ba81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335513"
 ---
 # <a name="catan-catanf-catanl"></a>catan catanf, catanl
 
@@ -65,13 +65,13 @@ Arkus tangens *z*, v radiánech. Výsledkem je bez vazby na ose imaginární a v
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **catan** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **catan** vždy převezme a vrátí **_Dcomplex** hodnotu.
+Protože C++ umožňuje přetížení, můžete volat přetížení **catan** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **catan** vždy převezme a vrátí **_Dcomplex** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
-|**catan**, **catanf**, **catanl**|\<complex.h>|\<ccomplex >|
+|**catan**, **catanf**, **catanl**|\<complex.h>|\<ccomplex>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

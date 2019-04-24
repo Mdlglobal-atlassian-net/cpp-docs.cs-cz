@@ -22,11 +22,11 @@ helpviewer_keywords:
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
 ms.openlocfilehash: 7c4f7e6edb020f5c8d2abf80f14df33e18a915c5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270949"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (Konvence volání)
 
@@ -41,7 +41,7 @@ Tyto možnosti určují pořadí ve funkci, která argumenty jsou vloženy do z�
 
 ## <a name="remarks"></a>Poznámky
 
-**/GD –**, výchozí nastavení, určuje, [__cdecl](../../cpp/cdecl.md) konvence volání pro všechny funkce s výjimkou členských C++, funkce a funkce, které jsou označeny [__stdcall](../../cpp/stdcall.md), [__ fastcall](../../cpp/fastcall.md), nebo [__vectorcall](../../cpp/vectorcall.md).
+**/GD –**, výchozí nastavení, určuje, [__cdecl](../../cpp/cdecl.md) konvence volání pro všechny funkce s výjimkou C++ členské funkce a funkce, které jsou označeny [__stdcall](../../cpp/stdcall.md), [__fastcall](../../cpp/fastcall.md), nebo [__vectorcall](../../cpp/vectorcall.md).
 
 **/GR** Určuje, `__fastcall` konvence volání pro všechny funkce s výjimkou členských funkcí jazyka C++, funkce s názvem `main`a funkce, které jsou označeny `__cdecl`, `__stdcall`, nebo `__vectorcall`. Všechny `__fastcall` funkce musejí mít prototypy. Tato konvence volání je k dispozici v kompilátorech, které se zaměřují x86 pouze a ignorováno kompilátory, které se zaměřují na jiné architektury.
 
@@ -54,7 +54,7 @@ Funkce vyžadující proměnný počet argumentů musí být označen `__cdecl`.
 **/GD –**, **GR**, **/Gv** a **/Gz** nejsou kompatibilní s [/CLR: safe](clr-common-language-runtime-compilation.md) nebo   **/CLR: pure**. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
 
 > [!NOTE]
-> Ve výchozím nastavení pro x86 procesory, členské funkce C++ použijí [klíčové slovo __thiscall](../../cpp/thiscall.md).
+> Ve výchozím nastavení pro x86 procesory, C++ členské funkce pomocí [klíčové slovo __thiscall](../../cpp/thiscall.md).
 
 Pro všechny procesory, členská funkce, která je explicitně označena jako `__cdecl`, `__fastcall`, `__vectorcall`, nebo `__stdcall` používá zadané konvence volání, pokud není ignorována u této architektury. Členská funkce, která přijímá proměnný počet argumentů, vždy používá `__cdecl` konvence volání.
 
@@ -111,5 +111,5 @@ Pro jazyk C `__vectorcall` zásady vytváření názvů používá název funkce
 
 ## <a name="see-also"></a>Viz také:
 
-- [Možnosti kompilátoru MSVC](compiler-options.md)
+- [Parametry kompilátoru MSVC](compiler-options.md)
 - [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

@@ -8,21 +8,21 @@ helpviewer_keywords:
 - integer limits
 ms.assetid: 6922bdbf-0f49-443b-bc03-ee182e4cbd57
 ms.openlocfilehash: 0d14f6246dd2ec71c4e0b2286bb1f2b3325085b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183371"
 ---
 # <a name="integer-limits"></a>Omezení typu Integer
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Limity pro celočíselné typy jsou uvedeny v následující tabulce. Tato omezení jsou také definovány v souboru standardní hlavičku \<limits.h >.
 
 ## <a name="limits-on-integer-constants"></a>Omezení na konstanty typu Integer
 
-|Konstanta|Význam|Hodnota|
+|Konstanta|Význam|Value|
 |--------------|-------------|-----------|
 |CHAR_BIT|Počet bitů v proměnné nejmenší, který není bitového pole.|8|
 |SCHAR_MIN|Minimální hodnota pro proměnnou typu **podepsané char**.|-128|

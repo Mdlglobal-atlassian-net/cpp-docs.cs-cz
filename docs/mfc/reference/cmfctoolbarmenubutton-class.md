@@ -93,11 +93,11 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
 ms.openlocfilehash: 7733969a0218dacf481ac82c764911c61ecabbbf
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218022"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton Class
 
@@ -114,13 +114,13 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBarMenuButton::CMFCToolBarMenuButton](#cmfctoolbarmenubutton)|Vytvoří `CMFCToolBarMenuButton` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBarMenuButton::CompareWith](#comparewith)|Porovná tuto instanci za poskytnutý `CMFCToolBarButton` objektu. (Přepíše [CMFCToolBarButton::CompareWith](../../mfc/reference/cmfctoolbarbutton-class.md#comparewith).)|
 |[CMFCToolBarMenuButton::CopyFrom](#copyfrom)|Zkopíruje aktuální tlačítko Vlastnosti jiné tlačítko panelu nástrojů. (Přepíše [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|
@@ -165,13 +165,13 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBarMenuButton::DrawDocumentIcon](#drawdocumenticon)|Nakreslí ikonu na tlačítko nabídky.|
 
 ### <a name="data-members"></a>Datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw](#m_balwayscallownerdraw)|Při hodnotě TRUE se vždy volá framework [CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) při vykreslované tlačítko.|
 

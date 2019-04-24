@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru C2298
+title: Compiler Error C2298
 ms.date: 11/04/2016
 f1_keywords:
 - C2298
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C2298
 ms.assetid: eb0120ad-c850-4bdd-911d-0361229cc859
 ms.openlocfilehash: 34957d226f10b4ac27f13be6746eac241101b516
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182651"
 ---
-# <a name="compiler-error-c2298"></a>Chyba kompilátoru C2298
+# <a name="compiler-error-c2298"></a>Compiler Error C2298
 
 'operation': Neplatná operace na ukazatel na výraz členské funkce
 

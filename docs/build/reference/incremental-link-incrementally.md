@@ -13,11 +13,11 @@ helpviewer_keywords:
 - incremental linking
 ms.assetid: 135656ff-94fa-4ad4-a613-22e1a2a5d16b
 ms.openlocfilehash: 189affe57694a8369e9cf7ac98815cc5888b69aa
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270009"
 ---
 # <a name="incremental-link-incrementally"></a>/INCREMENTAL (inkrementální odkaz)
 
@@ -86,5 +86,5 @@ Příkaz LINK navíc provede úplné propojení, pokud dojde k některé z ná
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)

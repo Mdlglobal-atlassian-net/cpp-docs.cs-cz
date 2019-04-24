@@ -8,11 +8,11 @@ helpviewer_keywords:
 - message handling [MFC], editing handlers
 ms.assetid: 7babb496-1f14-43b1-a14d-2e54402a92e2
 ms.openlocfilehash: 851b07c46fbc173031da838211beac7ba2d76954
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322368"
 ---
 # <a name="editing-a-message-handler"></a>Úpravy obslužné rutiny zpráv
 
@@ -25,7 +25,7 @@ Můžete přejít k definici funkce člena z [zobrazení tříd](/visualstudio/i
 ## <a name="see-also"></a>Viz také:
 
 [Mapování zpráv na funkce](../../mfc/reference/mapping-messages-to-functions.md)<br/>
-[Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Přidání funkce pomocí Průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Přidání třídy](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Přidání členské funkce](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Přidání členské proměnné](../../ide/adding-a-member-variable-visual-cpp.md)<br/>

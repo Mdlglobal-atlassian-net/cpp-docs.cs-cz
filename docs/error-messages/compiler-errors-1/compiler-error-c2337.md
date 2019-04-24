@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru C2337
+title: Compiler Error C2337
 ms.date: 11/04/2016
 f1_keywords:
 - C2337
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C2337
 ms.assetid: eccc9178-a15e-42cd-bbd0-3cea7cf2d55b
 ms.openlocfilehash: 63f18a12ccd1962dd221324f5557c29be89eb04c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188269"
 ---
-# <a name="compiler-error-c2337"></a>Chyba kompilátoru C2337
+# <a name="compiler-error-c2337"></a>Compiler Error C2337
 
 'název atributu': atribut nebyl nalezen
 

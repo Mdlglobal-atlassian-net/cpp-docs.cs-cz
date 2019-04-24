@@ -10,15 +10,15 @@ helpviewer_keywords:
 - square brackets [ ]
 ms.assetid: a26ccfd4-40ae-4a61-952f-c417982aa8dd
 ms.openlocfilehash: a871c19942252bf6a1a4901f8854b7b759700cd9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166500"
 ---
 # <a name="using-operators-in-asm-blocks"></a>Používání operátorů v blocích __asm
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 `__asm` Block nemůže používat konkrétní operátory jazyka C nebo C++, jako **<<** operátor. Ale operátory sdílí C a MASM, například \* operátoru, jsou interpretovány jako operátory jazyka sestavení. Například mimo `__asm` blokovat, hranaté závorky (**[] č.**) jsou interpretovány jako vnější subscripty pole, které C automaticky škáluje, aby velikost prvku v poli. Uvnitř `__asm` bloku, že se zobrazují jako MASM operátoru indexu, který dává za bajtovým posunem. z jakéhokoli datového objektu nebo popisek (ne jenom pole). Následující kód ukazuje rozdíl:
 

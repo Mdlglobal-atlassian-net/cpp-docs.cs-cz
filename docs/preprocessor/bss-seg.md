@@ -9,11 +9,11 @@ helpviewer_keywords:
 - bss_seg pragma
 ms.assetid: 755f0154-de51-4778-97d3-c9b24e445079
 ms.openlocfilehash: 489ced11bb6024fdf9818872c07ab7feebfeabf3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212410"
 ---
 # <a name="bssseg"></a>bss_seg
 
@@ -30,16 +30,16 @@ Určuje segment neinicializované proměnné, kde jsou uloženy v souboru .obj.
 **push**<br/>
 (Volitelné) Vloží záznam do zásobníku vnitřního kompilátoru. A *pu*TV * může mít *identifikátor* a *segment-name*.
 
-**POP**<br/>
+**pop**<br/>
 (Volitelné) Odstraní záznam z vrcholu vnitřního zásobníku kompilátoru.
 
-*identifikátor*<br/>
+*identifier*<br/>
 (Volitelné) Při použití s **nabízených**, přiřadí název záznamu ve vnitřním zásobníku kompilátoru. *identifikátor* vyjmout několik záznamů lze jedním z jedné **pop** příkazu. Při použití s **pop**, direktivy Vyjme všechny záznamy z vnitřního zásobníku až do *identifikátor* li *identifikátor* nebyl nalezen v interním zásobníku, nic není odebrány.
 
 *"segment-name"*<br/>
 (Volitelné) Název segmentu. Při použití s **pop**, je zásobník odebrán a *segment-name* stane aktivním názvem segmentu.
 
-*"segmentu třídy"*<br/>
+*"segment-class"*<br/>
 (Volitelné) Zahrnuto z důvodu kompatibility s jazykem C++ starším než verze 2.0. Ignorováno.
 
 ## <a name="remarks"></a>Poznámky

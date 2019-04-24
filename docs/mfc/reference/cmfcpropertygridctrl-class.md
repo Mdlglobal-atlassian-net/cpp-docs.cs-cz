@@ -151,11 +151,11 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
 ms.openlocfilehash: 93ace0388981f429ac4a422947fbdaae8cdb8f24
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58781975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62168122"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl Class
 
@@ -173,14 +173,14 @@ class CMFCPropertyGridCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl)|Vytvoří `CMFCPropertyGridCtrl` objektu.|
 |`CMFCPropertyGridCtrl::~CMFCPropertyGridCtrl`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCPropertyGridCtrl::accHitTest`|Volá se rozhraním, načtěte podřízený element nebo podřízený objekt v daném bodě na obrazovce. (Přepíše [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|
 |`CMFCPropertyGridCtrl::accLocation`|Volá se rozhraním, k načtení zadaného objektu aktuální umístění na obrazovce. (Přepíše [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|
@@ -253,7 +253,7 @@ class CMFCPropertyGridCtrl : public CWnd
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCPropertyGridCtrl::AdjustLayout](#adjustlayout)|Překreslí ovládací prvek mřížky vlastností a její vlastnosti.|
 |[CMFCPropertyGridCtrl::CompareProps](#compareprops)|Je voláno ovládací prvek mřížky vlastností seřadit vlastnosti.|
@@ -1074,7 +1074,7 @@ Termín *oblast vlastnosti* odkazuje na libovolný název, hodnotu, nebo rozbalt
 
 Tato metoda nastaví hodnotu proměnné, která *pnArea* parametr odkazuje na. V následující tabulce jsou uvedeny možné hodnoty a odpovídající oblasti.
 
-|Value|Oblast|
+|Hodnota|Oblast|
 |-----------|----------|
 |`ClickArea::ClickExpandBox`|Vlastnost rozbalit ovládací prvek pole.|
 |`ClickArea::ClickName`|Název vlastnosti.|

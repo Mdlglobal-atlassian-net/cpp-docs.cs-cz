@@ -7,11 +7,11 @@ helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
 ms.openlocfilehash: f37be47b92a71e20821cd1e40f8cf1350dfedaff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210372"
 ---
 # <a name="segment"></a>SEGMENT
 
@@ -30,7 +30,7 @@ Rozsah adresy paměti, ze kterých lze vybrat počáteční adresu segmentu. Typ
 
 |Typ zarovnání|Počáteční adresa|
 |----------------|----------------------|
-|**BAJTŮ**|Další adresa k dispozici bajtů.|
+|**BYTE**|Další adresa k dispozici bajtů.|
 |**WORD**|Další adresa k dispozici word (2 bajty za word).|
 |**DWORD**|Další adresa k dispozici double word (4 bajtů na typ double word).|
 |**PARA**|Další adresa k dispozici odstavci (16 bajtů za odstavci).|
@@ -39,7 +39,7 @@ Rozsah adresy paměti, ze kterých lze vybrat počáteční adresu segmentu. Typ
 
 Pokud není tento parametr zadán, **PARA** se používá ve výchozím nastavení.
 
-*kombinování*<br/>
+*combine*<br/>
 **VEŘEJNÉ**, **zásobníku**, **běžné**, **paměti**, **na**<em>adresu</em>, **PRIVÁTNÍ**
 
 *Použití*<br/>

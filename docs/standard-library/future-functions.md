@@ -15,18 +15,18 @@ helpviewer_keywords:
 - std::make_error_condition [C++]
 - std::swap [C++]
 ms.openlocfilehash: 56ae0da7e86e092cee46d24d1a2a27d9d54709e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159506"
 ---
 # <a name="ltfuturegt-functions"></a>&lt;budoucí&gt; funkce
 
 ||||
 |-|-|-|
 |[async](#async)|[future_category –](#future_category)|[make_error_code](#make_error_code)|
-|[make_error_condition](#make_error_condition)|[Prohození](#swap)|
+|[make_error_condition](#make_error_condition)|[swap](#swap)|
 
 ## <a name="async"></a>  asynchronní
 
@@ -44,7 +44,7 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 ### <a name="parameters"></a>Parametry
 
-*Zásady*<br/>
+*policy*<br/>
 A [spuštění](../standard-library/future-enums.md#launch) hodnotu.
 
 ### <a name="remarks"></a>Poznámky
@@ -92,14 +92,14 @@ inline error_code make_error_code(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*errno*<br/>
+*Errno*<br/>
 A [future_errc](../standard-library/future-enums.md#future_errc) hodnotu, která identifikuje ohlášenou chybu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 `error_code(static_cast<int>(Errno), future_category());`
 
-## <a name="make_error_condition"></a>  make_error_condition –
+## <a name="make_error_condition"></a>  make_error_condition
 
 Vytvoří [error_condition –](../standard-library/error-condition-class.md) spolu s [error_category](../standard-library/error-category-class.md) objekt, který charakterizuje [budoucí](../standard-library/future-class.md) chyby.
 
@@ -109,7 +109,7 @@ inline error_condition make_error_condition(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*errno*<br/>
+*Errno*<br/>
 A [future_errc](../standard-library/future-enums.md#future_errc) hodnotu, která identifikuje ohlášenou chybu.
 
 ### <a name="return-value"></a>Návratová hodnota

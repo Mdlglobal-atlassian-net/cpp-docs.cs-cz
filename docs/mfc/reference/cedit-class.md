@@ -95,11 +95,11 @@ helpviewer_keywords:
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
 ms.openlocfilehash: 45c03d142c34186660aa2715081ffb0f45e85ccc
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58773746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164069"
 ---
 # <a name="cedit-class"></a>Cedit – třída
 
@@ -115,13 +115,13 @@ class CEdit : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CEdit::CEdit](#cedit)|Vytvoří `CEdit` objekt ovládacího prvku.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CEdit::CanUndo](#canundo)|Určuje, jestli operace edit-control je možné vrátit zpět.|
 |[CEdit::CharFromPos](#charfrompos)|Načte indexy řádku a znak nejblíže určené pozici znaku.|

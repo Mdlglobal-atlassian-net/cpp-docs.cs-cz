@@ -27,11 +27,11 @@ helpviewer_keywords:
 - _controlfp_s function
 ms.assetid: a51fc3f6-ab13-41f0-b227-6bf02d98e987
 ms.openlocfilehash: 0624cbfb4870ca87efebac01a8de682b588a4ca3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335374"
 ---
 # <a name="controlfps"></a>_controlfp_s
 
@@ -68,7 +68,7 @@ Nula v případě úspěchu, nebo **errno** kód chyby hodnoty.
 
 Pokud hodnota *maska* se rovná 0, **_controlfp_s –** získá slovo s plovoucí desetinnou čárkou ovládací prvek a uloží získanou hodnotu v *currentControl*.
 
-Pokud *maska* je nenulová, je nastavena nová hodnota pro řídicí slovo: pro všechny nastavené bity (to je rovno 1) v *maska*, odpovídající bit v *nové* slouží k aktualizaci ovládacího prvku aplikace Word. Jinými slovy *fpcntrl* = ((*fpcntrl* & ~*maska*) &#124; (*newControl* & *masky* )) kde *fpcntrl* je slovo s plovoucí desetinnou čárkou ovládacího prvku. V tomto scénáři *currentControl* je nastavena na hodnotu po dokončení změny; nejde původní bitové hodnoty kontrolního slova.
+Pokud *maska* je nenulová, je nastavena nová hodnota pro řídicí slovo: Pro některé bit, který je nastaven (to je rovno 1) v *maska*, odpovídající bit v *nové* slouží k aktualizaci řídicího slova. Jinými slovy *fpcntrl* = ((*fpcntrl* & ~*maska*) &#124; (*newControl* & *masky* )) kde *fpcntrl* je slovo s plovoucí desetinnou čárkou ovládacího prvku. V tomto scénáři *currentControl* je nastavena na hodnotu po dokončení změny; nejde původní bitové hodnoty kontrolního slova.
 
 > [!NOTE]
 > Ve výchozím nastavení běhové knihovny maskují všechny výjimky s plovoucí desetinnou čárkou.
@@ -183,4 +183,4 @@ Default:  0x9001f
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [_clear87, _clearfp](clear87-clearfp.md)<br/>
 [_status87, _statusfp, _statusfp2](status87-statusfp-statusfp2.md)<br/>
-[_control87 – _controlfp, \__control87_2](control87-controlfp-control87-2.md)<br/>
+[_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md)<br/>

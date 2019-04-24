@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::unique_ptr [C++], swap
 ms.assetid: acdf046b-831e-4a4a-83aa-6d4ee467db9a
 ms.openlocfilehash: b0751d7716e2f8587ab410e57c2bea17c5dd3e21
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295458"
 ---
 # <a name="uniqueptr-class"></a>unique_ptr – třída
 
@@ -99,7 +99,7 @@ A `unique_ptr`.
 *Nptr*<br/>
 `rvalue` Typu `std::nullptr_t`.
 
-*PTR*<br/>
+*Ptr*<br/>
 A `pointer`.
 
 *Odstraňovač*<br/>
@@ -135,7 +135,7 @@ Uložený ukazatel na vlastní prostředek, `stored_ptr` má typ `pointer`. Je `
 |-|-|
 |[deleter_type](#deleter_type)|Synonymum pro parametr šablony `Del`.|
 |[element_type](#element_type)|Synonymum pro parametr šablony `T`.|
-|[Ukazatel](#pointer)|Synonymum pro `Del::pointer` li definováno, jinak `T *`.|
+|[pointer](#pointer)|Synonymum pro `Del::pointer` li definováno, jinak `T *`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
@@ -144,8 +144,8 @@ Uložený ukazatel na vlastní prostředek, `stored_ptr` má typ `pointer`. Je `
 |[get](#get)|Vrátí `stored_ptr`.|
 |[get_deleter](#get_deleter)|Vrátí odkaz na `stored_deleter`.|
 |[Vydání verze](#release)|ukládá `pointer()` v `stored_ptr` a vrátí jeho předchozí obsah.|
-|[Resetovat](#reset)|Uvolní aktuálně vlastněný prostředek a přijme nový prostředek.|
-|[Prohození](#swap)|Vymění prostředek a `deleter` za poskytnutý `unique_ptr`.|
+|[reset](#reset)|Uvolní aktuálně vlastněný prostředek a přijme nový prostředek.|
+|[swap](#swap)|Vymění prostředek a `deleter` za poskytnutý `unique_ptr`.|
 
 ### <a name="operators"></a>Operátory
 
@@ -380,7 +380,7 @@ První dva konstruktory vytvořit objekt, který spravuje žádný prostředek. 
 
 Pátý konstruktor ukládá *ptr* v `stored_ptr` a přesune `deleter` do `stored_deleter`. Šestý a sedmý konstruktor úložiště `right.release()` v `stored_ptr` a přesune `right.get_deleter()` do `stored_deleter`.
 
-## <a name="dtorunique_ptr"></a>  unique_ptr ~ unique_ptr
+## <a name="dtorunique_ptr"></a>  unique_ptr ~unique_ptr
 
 Destruktor `unique_ptr`, odstraní `unique_ptr` objektu.
 
@@ -394,4 +394,4 @@ Volání destruktoru `get_deleter()(stored_ptr)`.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<paměť >](../standard-library/memory.md)<br/>
+[\<memory>](../standard-library/memory.md)<br/>

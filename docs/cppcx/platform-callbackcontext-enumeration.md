@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Platform::CallbackContext Enumeration
 ms.assetid: 60e0c7cb-5d8f-482a-bdca-ca9335ae4899
 ms.openlocfilehash: 7f4e020ab0b1e377456c27d3b4666e15b5a4f7a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161663"
 ---
 # <a name="platformcallbackcontext-enumeration"></a>Platform::callbackcontext – výčet
 
@@ -28,15 +28,15 @@ enum class CallbackContext {};
 
 |Typ kódu|Popis|
 |---------------|-----------------|
-|Všechny|Funkce zpětného volání lze spustit v libovolném kontextu vlákna.|
+|Jakýkoli|Funkce zpětného volání lze spustit v libovolném kontextu vlákna.|
 |Stejné|Funkce zpětného volání lze spustit na pouze kontext vlákna, který spustil asynchronní operace.|
 
 ### <a name="requirements"></a>Požadavky
 
 **Minimální podporovaná klienta:** Windows 8
 
-**Minimální podporovaná serverem:** systému Windows Server 2012
+**Minimální podporovaná serveru:** Windows Server 2012
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 **Metadata:** platform.winmd

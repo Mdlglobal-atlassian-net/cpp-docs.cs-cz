@@ -1,6 +1,6 @@
 ---
-title: Chyby kompilátoru C2700 až C2799
-ms.date: 11/17/2017
+title: Compiler errors C2700 Through C2799
+ms.date: 04/21/2019
 f1_keywords:
 - C2716
 - C2717
@@ -40,14 +40,14 @@ helpviewer_keywords:
 - C2796
 - C2799
 ms.assetid: 6ee257bb-94bc-42b9-af2c-3c73926afba4
-ms.openlocfilehash: e29f344e0e45374f85715552f9ecc19ab90a9e7b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6f4391008bf9b0a066ba65f27a41697c6097c2e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153210"
 ---
-# <a name="compiler-errors-c2700-through-c2799"></a>Chyby kompilátoru C2700 až C2799
+# <a name="compiler-errors-c2700-through-c2799"></a>Compiler errors C2700 Through C2799
 
 Články v této části dokumentace vysvětlují podmnožinu chybové zprávy, které jsou generovány kompilátorem.
 
@@ -73,8 +73,8 @@ ms.locfileid: "50677848"
 |[Chyba kompilátoru C2713](compiler-error-c2713.md)|jednu funkci je povolená jenom jedna podoba ošetření výjimky|
 |[Chyba kompilátoru C2714](compiler-error-c2714.md)|možnost alignof(void) není povolená|
 |[Chyba kompilátoru C2715](compiler-error-c2715.md)|"*typ*': nelze operaci throw nebo catch tohoto typu|
-|C2716 chyby kompilátoru|Zastaralé.|
-|C2717 chyby kompilátoru|Zastaralé.|
+|Chyba kompilátoru C2716|Zastaralé.|
+|Chyba kompilátoru C2717|Zastaralé.|
 |[Chyba kompilátoru C2718](compiler-error-c2718.md)|"*typ*': skutečný parametr s požadovaným zarovnáním *číslo* se nezarovnají|
 |[Chyba kompilátoru C2719](compiler-error-c2719.md)|"*parametr*': formální parametr s požadovaným zarovnáním *číslo* se nezarovnají|
 |[Chyba kompilátoru C2720](compiler-error-c2720.md)|"*identifikátor*": "*specifikátor*' není pro členy platný specifikátor třídy úložiště|
@@ -84,9 +84,9 @@ ms.locfileid: "50677848"
 |[Chyba kompilátoru C2724](compiler-error-c2724.md)|"*funkce*': 'static', neměl by se používat pro členské funkce definované v rozsahu souboru|
 |[Chyba kompilátoru C2725](compiler-error-c2725.md)|"*typ*': nelze provést operaci throw nebo catch spravované/WinRT objektu podle hodnoty nebo odkazu|
 |[Chyba kompilátoru C2726](compiler-error-c2726.md)|'gcnew' slouží jenom k vytvoření objektu s typem spravované/WinRT|
-|C2727 chyby kompilátoru|Zastaralé.|
+|Chyba kompilátoru C2727|Zastaralé.|
 |[Chyba kompilátoru C2728](compiler-error-c2728.md)|"*typ*': nativní pole nemůže obsahovat tento typ.|
-|C2729 chyby kompilátoru|Zastaralé.|
+|Chyba kompilátoru C2729|Zastaralé.|
 |[Chyba kompilátoru C2730](compiler-error-c2730.md)|"*třídy*': nemůže být základní třídou sebe sama|
 |[Chyba kompilátoru C2731](compiler-error-c2731.md)|"*funkce*': funkce nemůže být přetížená.|
 |[Chyba kompilátoru C2732](compiler-error-c2732.md)|Specifikace propojení konfliktu s předchozí specifikací pro "*funkce*.|
@@ -94,17 +94,17 @@ ms.locfileid: "50677848"
 |[Chyba kompilátoru C2734](compiler-error-c2734.md)|"*identifikátor*': 'const' objekt musí být inicializovaný, pokud není extern|
 |[Chyba kompilátoru C2735](compiler-error-c2735.md)|"*– klíčové slovo*" klíčové slovo není povolené ve specifikátoru typu formálního parametru|
 |[Chyba kompilátoru C2736](compiler-error-c2736.md)|"*– klíčové slovo*" není v přetypování povolené – klíčové slovo|
-|C2737 chyby kompilátoru|"*identifikátor*': musí se inicializovat objekt specifikátorem constexpr.|
+|Chyba kompilátoru C2737|"*identifikátor*': musí se inicializovat objekt specifikátorem constexpr.|
 |[Chyba kompilátoru C2738](compiler-error-c2738.md)|"operátor *typ*": je nejednoznačný nebo není členem "*třídy*.|
 |[Chyba kompilátoru C2739](compiler-error-c2739.md)|"*číslo*': explicitní pole spravovaných/WinRT dimenze musí být mezi 1 a 32|
-|C2740 chyby kompilátoru|hodnota operandu "*číslo*"je mimo rozsah"*lower_bound* - *upper_bound*.|
-|C2741 chyby kompilátoru|moc velká velikost rámce|
-|C2742 chyby kompilátoru|Zastaralé.|
+|Chyba kompilátoru C2740|hodnota operandu "*číslo*"je mimo rozsah"*lower_bound* - *upper_bound*.|
+|Chyba kompilátoru C2741|moc velká velikost rámce|
+|Chyba kompilátoru C2742|Zastaralé.|
 |[Chyba kompilátoru C2743](compiler-error-c2743.md)|"*typ*': nelze zachytit nativní typ s destruktorem __clrcall nebo kopírovacím konstuktorem|
-|C2744 chyby kompilátoru|"*operátor*' není platný operátor CLR/WinRT|
+|Chyba kompilátoru C2744|"*operátor*' není platný operátor CLR/WinRT|
 |[Chyba kompilátoru C2745](compiler-error-c2745.md)|"*token*': Tento token nejde převést na identifikátor rozhraní|
-|C2746 chyby kompilátoru|Zastaralé.|
-|C2747 chyby kompilátoru|Zastaralé.|
+|Chyba kompilátoru C2746|Zastaralé.|
+|Chyba kompilátoru C2747|Zastaralé.|
 |[Chyba kompilátoru C2748](compiler-error-c2748.md)|Vytvoření spravované/WinRT pole musí mít velikost pole nebo inicializátor pole.|
 |[Chyba kompilátoru C2749](compiler-error-c2749.md)|"*typ*': můžete pouze operaci throw nebo catch popisovač pro spravovanou třídu s/clr: safe|
 |[Chyba kompilátoru C2750](compiler-error-c2750.md)|"*typ*': nelze použít 'new' v rámci odkazu na typ; místo toho použijte"gcnew.|
@@ -116,20 +116,20 @@ ms.locfileid: "50677848"
 |[Chyba kompilátoru C2756](compiler-error-c2756.md)|"*šablony*': výchozí argumenty šablony nejsou pro částečnou specializaci povolené.|
 |[Chyba kompilátoru C2757](compiler-error-c2757.md)|"*identifikátor*': symbol s tímto názvem už existuje, a proto nelze použít tento název jako název oboru názvů|
 |[Chyba kompilátoru C2758](compiler-error-c2758.md)|"*člen*': člen odkazového typu musí být inicializován.|
-|C2759 chyby kompilátoru|vložené sestavy assembleru vloženého kódu: *error_message*|
+|Chyba kompilátoru C2759|vložené sestavy assembleru vloženého kódu: *error_message*|
 |[Chyba kompilátoru C2760](compiler-error-c2760.md)|Chyba syntaxe: byl očekáván '*token1*"not"*token2*.|
 |[Chyba kompilátoru C2761](compiler-error-c2761.md)|"*funkce*': opětovná deklarace členské funkce nejsou povoleny|
 |[Chyba kompilátoru C2762](compiler-error-c2762.md)|"*šablony*': Neplatný výraz jako argument šablony pro"*parametr*.|
-|C2763 chyby kompilátoru|"*šablony*': Neplatné použití řetězcového literálu jako argumentu šablony pro"*parametr*.|
+|Chyba kompilátoru C2763|"*šablony*': Neplatné použití řetězcového literálu jako argumentu šablony pro"*parametr*.|
 |[Chyba kompilátoru C2764](compiler-error-c2764.md)|"*parametr*': parametr šablony nepoužívá nebo není odvoditelný v částečné specializaci"*specializace*.|
 |[Chyba kompilátoru C2765](compiler-error-c2765.md)|"*funkce*': explicitní specializace šablony funkcí nemůže mít žádné výchozí argumenty|
 |[Chyba kompilátoru C2766](compiler-error-c2766.md)|explicitní specializace; "*specializace*' již byl definován.|
 |[Chyba kompilátoru C2767](compiler-error-c2767.md)|Neshoda dimenze polí spravovaných/WinRT: byl očekáván *číslo* argumentů - *číslo* k dispozici|
 |[Chyba kompilátoru C2768](compiler-error-c2768.md)|"*funkce*': Neplatné použití explicitních argumentů šablony|
-|C2769 chyby kompilátoru|je nelze inicializovat složenou závorku spravované/WinRT pole v seznamu inicializátorů base/member|
+|Chyba kompilátoru C2769|je nelze inicializovat složenou závorku spravované/WinRT pole v seznamu inicializátorů base/member|
 |[Chyba kompilátoru C2770](compiler-error-c2770.md)|Neplatné explicitní šablony nebo generické argumenty pro '*šablony*.|
 |[Chyba kompilátoru C2771](compiler-error-c2771.md)|#import je povolená jedině globální nebo obor názvů|
-|C2772 chyby kompilátoru|Zastaralé.|
+|Chyba kompilátoru C2772|Zastaralé.|
 |[Chyba kompilátoru C2773](compiler-error-c2773.md)|#import a #using k dispozici pouze v kompilátoru jazyka C++|
 |[Chyba kompilátoru C2774](compiler-error-c2774.md)|"*identifikátor*": je tato vlastnost přidružená žádná metoda put.|
 |[Chyba kompilátoru C2775](compiler-error-c2775.md)|"*identifikátor*": je tato vlastnost přidružená žádná metoda get.|
@@ -146,14 +146,19 @@ ms.locfileid: "50677848"
 |[Chyba kompilátoru C2786](compiler-error-c2786.md)|"*typ*': Neplatný operand pro: __uuidof|
 |[Chyba kompilátoru C2787](compiler-error-c2787.md)|"*identifikátor*': žádný identifikátor GUID je přidružen k tomuto objektu|
 |[Chyba kompilátoru C2788](compiler-error-c2788.md)|"*identifikátor*': více než jeden identifikátor GUID přidružený k tomuto objektu|
-|C2789 chyby kompilátoru|"*identifikátor*': objekt typ const-qualified musí být inicializován.|
+|Chyba kompilátoru C2789|"*identifikátor*': objekt typ const-qualified musí být inicializován.|
 |[Chyba kompilátoru C2790](compiler-error-c2790.md)|"super: Toto klíčové slovo jde použít jenom v těle funkce člena třídy|
 |[Chyba kompilátoru C2791](compiler-error-c2791.md)|Neplatné použití "super": "*třídy*' nemá žádné základní třídy|
 |[Chyba kompilátoru C2792](compiler-error-c2792.md)|'super: Toto klíčové slovo musí být následován znakem '::'|
 |[Chyba kompilátoru C2793](compiler-error-c2793.md)|"*token*': Neočekávaný token za '::', identifikátor nebo klíčové slovo očekáván operátor|
 |[Chyba kompilátoru C2794](compiler-error-c2794.md)|"*identifikátor*': není člen žádné přímé ani nepřímé základní třídu '*třídy*.|
 |[Chyba kompilátoru C2795](compiler-error-c2795.md)|"super::*identifikátor*" není členská funkce|
-|C2796 chyby kompilátoru|možnost ref new' slouží jenom k vytvoření instance typu WinRT|
+|Chyba kompilátoru C2796|možnost ref new' slouží jenom k vytvoření instance typu WinRT|
 |[Chyba kompilátoru C2797](compiler-error-c2797.md)|(Zastaralé) "*identifikátor*': Inicializace seznamu je uvnitř seznamu inicializátoru členů nebo nestatický datový člen inicializátor není implementována.|
 |[Chyba kompilátoru C2798](compiler-error-c2798.md)|"super::*identifikátor*' je nejednoznačný|
-|C2799 chyby kompilátoru|"*identifikátor*': objekt typu třídy const-qualified bez uživatelem zadaného výchozího konstruktoru musí být inicializován.|
+|Chyba kompilátoru C2799|"*identifikátor*': objekt typu třídy const-qualified bez uživatelem zadaného výchozího konstruktoru musí být inicializován.|
+
+## <a name="see-also"></a>Viz také:
+
+[C /C++ nástroje chyby a upozornění kompilátoru a sestavení](../compiler-errors-1/c-cpp-build-errors.md) \
+[Chyby kompilátoru C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - __fastcall keyword [C++]
 ms.assetid: bb5b9c8a-dfad-450c-9119-0ac2bc59544f
 ms.openlocfilehash: 3e7cd4b1202ee717abf9a9767785ed8abe96bd69
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154318"
 ---
 # <a name="fastcall"></a>__fastcall
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 **__Fastcall** konvence volání Určuje, že argumenty funkcí mají být předány v registrech, pokud je to možné. Tato konvence volání se vztahuje pouze x86 architektury. Následující seznam ukazuje implementaci této konvence volání.
 

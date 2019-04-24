@@ -9,15 +9,15 @@ helpviewer_keywords:
 - operator = _com_error objects
 ms.assetid: b9cc4094-d055-450c-b45a-0a95317488f8
 ms.openlocfilehash: 68eb486ec109d98890ebf3adc0c086368380142b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154991"
 ---
 # <a name="comerroroperator-"></a>_com_error::operator =
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Přiřadí existující `_com_error` objektu na jiný.
 

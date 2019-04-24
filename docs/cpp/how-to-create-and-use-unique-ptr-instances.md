@@ -5,15 +5,15 @@ ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
 ms.openlocfilehash: 48e459b69592bf4c231407c2a378a7b7e01ff4ae
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153652"
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>Postupy: Vytvoření a používání instancí ukazatelů unique_ptr
 
-A [unique_ptr](../standard-library/unique-ptr-class.md) nesdílí jeho ukazatel. Nemůže být zkopírován do jiného `unique_ptr`, předán podle hodnoty do funkce, nebo použit v libovolném algoritmu standardní knihovny C++, který vyžaduje vytvoření kopií, které budou. A `unique_ptr` lze pouze přesunout. To znamená, že vlastnictví prostředku paměti je převedeno do jiného `unique_ptr` a původní `unique_ptr` není nadále jeho vlastníkem. Doporučujeme omezit objekt na jednoho vlastníka, protože více vlastnictví zkomplikuje programovou logiku. Proto, když budete potřebovat inteligentní ukazatel pro prostý objekt jazyka C++, použijte `unique_ptr`, a při sestavování `unique_ptr`, použijte [make_unique](../standard-library/memory-functions.md#make_unique) pomocnou funkci.
+A [unique_ptr](../standard-library/unique-ptr-class.md) nesdílí jeho ukazatel. Nemůže být zkopírován do jiného `unique_ptr`, předán podle hodnoty do funkce, nebo použit v libovolném algoritmu standardní knihovny C++, který vyžaduje vytvoření kopií, které budou. A `unique_ptr` lze pouze přesunout. To znamená, že vlastnictví prostředku paměti je převedeno do jiného `unique_ptr` a původní `unique_ptr` není nadále jeho vlastníkem. Doporučujeme omezit objekt na jednoho vlastníka, protože více vlastnictví zkomplikuje programovou logiku. Proto při potřebovat inteligentní ukazatel pro prostý C++ objektu, použijte `unique_ptr`, a při sestavování `unique_ptr`, použijte [make_unique](../standard-library/memory-functions.md#make_unique) pomocnou funkci.
 
 Následující diagram znázorňuje převod vlastnictví mezi dvěma `unique_ptr` instancí.
 

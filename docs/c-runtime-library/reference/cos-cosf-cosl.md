@@ -32,11 +32,11 @@ helpviewer_keywords:
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
 ms.openlocfilehash: b050fd98a35028b121def8b665fce62ad58ec437
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335357"
 ---
 # <a name="cos-cosf-cosl"></a>Cos cosf –, cosl –
 
@@ -66,8 +66,8 @@ Kosinus *x*. Pokud *x* je větší než nebo rovno 263 nebo menší než nebo ro
 
 |Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|ROZMEZÍ QNAN, AJÍT|žádná|**_DOMÉNA**|
-|ROZMEZÍ INF|**NEPLATNÝ**|**_DOMÉNA**|
+|ROZMEZÍ QNAN, AJÍT|žádná|**_DOMAIN**|
+|± INF|**NEPLATNÝ**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -77,7 +77,7 @@ Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **cos*
 
 |Rutina|Požadovaná hlavička C|Požadované hlaviček jazyka C++|
 |-------------|---------------------|-|
-|**Cos**, **cosh**, **cosf –**|\<Math.h >|\<cmath > nebo \<math.h >|
+|**cos**, **cosh**, **cosf**|\<math.h>|\<cmath > nebo \<math.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

@@ -25,11 +25,11 @@ helpviewer_keywords:
 - getmbcp function
 ms.assetid: 2db202d4-5c3d-4871-a0b8-ceb0b79ee7bb
 ms.openlocfilehash: 4cea84fc771a1d847814d002294391256efae57b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157640"
 ---
 # <a name="getmbcp"></a>_getmbcp
 
@@ -49,7 +49,7 @@ Vrátí aktuální vícebajtové znakové stránky. Vrácená hodnota 0 znamená
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_getmbcp**|\<Mbctype.h >|
+|**_getmbcp**|\<mbctype.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

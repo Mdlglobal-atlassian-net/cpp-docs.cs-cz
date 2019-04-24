@@ -17,11 +17,11 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
 ms.openlocfilehash: c5076ceef0c6626fac0232fadf6818edd78b4ccf
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58773551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224358"
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc Class
 
@@ -37,20 +37,20 @@ class COleLinkingDoc : public COleDocument
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleLinkingDoc::COleLinkingDoc](#colelinkingdoc)|Vytvoří `COleLinkingDoc` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleLinkingDoc::Register](#register)|Registruje dokumentu OLE systémové knihovny DLL.|
 |[COleLinkingDoc::Revoke](#revoke)|Odvolá registrace dokumentu.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleLinkingDoc::OnFindEmbeddedItem](#onfindembeddeditem)|Vyhledá určitou vloženou položku.|
 |[COleLinkingDoc::OnGetLinkedItem](#ongetlinkeditem)|Vyhledá určitou propojenou položku.|

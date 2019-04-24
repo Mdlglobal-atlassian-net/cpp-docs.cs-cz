@@ -9,11 +9,11 @@ helpviewer_keywords:
 - memory header
 ms.assetid: ef8e38da-7c9d-4037-9ad1-20c99febf5dc
 ms.openlocfilehash: c63421995fdabc94a7e6495df8d9937049dbba9d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62217336"
 ---
 # <a name="ltmemorygt"></a>&lt;Paměť&gt;
 
@@ -48,7 +48,7 @@ Definuje třídu, operátor a několik šablon, které pomáhají přidělit a u
 |[pointer_safety](../standard-library/memory-enums.md#pointer_safety)|Výčet všech možných vrácených hodnot pro `get_pointer_safety`.|
 |[return_temporary_buffer](../standard-library/memory-functions.md#return_temporary_buffer)|Zruší přidělení dočasné paměti, která byla přidělena pomocí `get_temporary_buffer` šablony funkce.|
 |[static_pointer_cast](../standard-library/memory-functions.md#static_pointer_cast)|Statický zápis to `shared_ptr`.|
-|[Prohození](../standard-library/memory-functions.md#swap)|Zaměňte dva `shared_ptr` nebo `weak_ptr` objekty.|
+|[swap](../standard-library/memory-functions.md#swap)|Zaměňte dva `shared_ptr` nebo `weak_ptr` objekty.|
 |[undeclare_no_pointers](../standard-library/memory-functions.md#undeclare_no_pointers)|Informuje uvolňování paměti, že některé znaky v bloku paměti definované ukazatelem základní adresy a velikostí bloku mohou nyní obsahovat sledovatelné ukazatele.|
 |[undeclare_reachable](../standard-library/memory-functions.md#undeclare_reachable)|Informuje `garbage_collector` , že zadané umístění v paměti není dostupný.|
 |[uninitialized_copy](../standard-library/memory-functions.md#uninitialized_copy)|Zkopíruje objekty ze zadaného rozsahu vstupu do neinicializované cílové oblasti.|
@@ -65,15 +65,15 @@ Definuje třídu, operátor a několik šablon, které pomáhají přidělit a u
 |[operator>=](../standard-library/memory-operators.md#op_gt_eq)|Testy pro jeden objekt přidělování, který je větší nebo roven druhému objektu přidělování z dané třídy.|
 |[Operator <](../standard-library/memory-operators.md#op_lt)|Testy pro jeden objekt, který je menší, než druhý objekt z dané třídy.|
 |[– Operátor\<=](../standard-library/memory-operators.md#op_gt_eq)|Testy pro jeden objekt, který je menší nebo roven druhému objektu z dané třídy.|
-|[Operator >](../standard-library/memory-operators.md#op_gt)|Testy pro jeden objekt, který je větší, než druhý objekt z dané třídy.|
+|[operator>](../standard-library/memory-operators.md#op_gt)|Testy pro jeden objekt, který je větší, než druhý objekt z dané třídy.|
 |[operátor <<](../standard-library/memory-operators.md#op_lt_lt)|`shared_ptr` Vkládací modul.|
 
 ### <a name="classes"></a>Třídy
 
 |Třída|Popis|
 |-|-|
-|[Allocator –](../standard-library/allocator-class.md)|Třída šablony popisuje objekt, který spravuje rozdělení úložiště a uvolnění pro pole objektů typu **typ**.|
-|[allocator_traits –](../standard-library/allocator-traits-class.md)|Popisuje objekt, který určuje všechny informace požadované kontejnerem s povoleným přidělováním.|
+|[allocator](../standard-library/allocator-class.md)|Třída šablony popisuje objekt, který spravuje rozdělení úložiště a uvolnění pro pole objektů typu **typ**.|
+|[allocator_traits](../standard-library/allocator-traits-class.md)|Popisuje objekt, který určuje všechny informace požadované kontejnerem s povoleným přidělováním.|
 |[auto_ptr](../standard-library/auto-ptr-class.md)|Třída šablony popisuje objekt, který uchovává ukazatel na přidělený objekt typu **typ** <strong>\*</strong> , který zajišťuje, že objekt, na který odkazuje, se odstraní při jeho nadřazeného auto_ptr zničení.|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|Nahlásí chybnou výjimku weak_ptr.|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|Pomáhá generovat `shared_ptr`.|
@@ -87,7 +87,7 @@ Definuje třídu, operátor a několik šablon, které pomáhají přidělit a u
 
 |||
 |-|-|
-|[Allocator\<void >](../standard-library/allocator-void-class.md)|Specializace alokátoru třídy šablony pro typování void, definující pouze typy členů, které dávají smysl v tomto specializovaném kontextu.|
+|[allocator\<void>](../standard-library/allocator-void-class.md)|Specializace alokátoru třídy šablony pro typování void, definující pouze typy členů, které dávají smysl v tomto specializovaném kontextu.|
 
 ## <a name="see-also"></a>Viz také:
 

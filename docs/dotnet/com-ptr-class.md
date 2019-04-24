@@ -17,11 +17,11 @@ helpviewer_keywords:
 - msclr::ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
 ms.openlocfilehash: 342c222b837e179e2e13dbbd27c88efc18b12332
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58774167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209227"
 ---
 # <a name="comptr-class"></a>com::ptr – třída
 
@@ -167,14 +167,14 @@ int main() {
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis| 
+|Název|Popis| 
 |---------|-----------| 
 |[ptr::ptr](#ptr)|Vytvoří `com::ptr` zabalit objekt modelu COM.| 
 |[ptr::~ptr](#tilde-ptr)|Destructs `com::ptr`.| 
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |---------|-----------| 
 |[ptr::Attach](#attach)|Připojí objektu modelu COM `com::ptr`.| 
 |[ptr::CreateInstance](#createInstance)|Vytvoří instanci objektu modelu COM v rámci `com::ptr`.| 
@@ -185,7 +185,7 @@ int main() {
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |---------|-----------| 
 |[PTR::Operator-&gt;](#operator-arrow)|Operátor přístupu členů použít k volání metody na vlastní objekt modelu COM.| 
 |[ptr::operator=](#operator-assign)|Připojí objektu modelu COM `com::ptr`.| 

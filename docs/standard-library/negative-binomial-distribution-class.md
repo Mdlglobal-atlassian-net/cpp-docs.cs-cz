@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
 ms.openlocfilehash: a2cc6479c9da3b51c28e5408eb44ff1d02b97023
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223672"
 ---
 # <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution – třída
 
@@ -80,7 +80,7 @@ Třída šablony popisuje distribuci, která vytváří hodnoty uživatelem zada
 
 ||||
 |-|-|-|
-|[negative_binomial_distribution –](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
+|[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
 |`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
 
 Členy vlastnosti `k()` a `p()` vrátit aktuálně uložené distribuci hodnot parametrů *k* a *p* v uvedeném pořadí.

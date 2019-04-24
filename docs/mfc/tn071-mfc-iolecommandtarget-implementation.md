@@ -1,5 +1,5 @@
 ---
-title: 'TN071: MFC IOleCommandTarget – implementace'
+title: 'TN071: MFC iolecommandtarget – implementace'
 ms.date: 06/28/2018
 f1_keywords:
 - IOleCommandTarget
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - IOleCommandTarget interface [MFC]
 ms.assetid: 3eef571e-6357-444d-adbb-6f734a0c3161
 ms.openlocfilehash: dca1183a17fe8f3022f517d1ad0c3932ea272417
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167995"
 ---
-# <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071: MFC IOleCommandTarget – implementace
+# <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071: MFC iolecommandtarget – implementace
 
 > [!NOTE]
 > Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
@@ -23,7 +23,7 @@ ms.locfileid: "50522223"
 
 `IOleCommandTarget` Automatizace jako rozhraní je v tom, že se používá pro klienta k vyvolání metody na serveru. Avšak použití `IOleCommandTarget` šetří režii volání prostřednictvím rozhraní automatizace protože programátoři nemusíte používat obvykle nákladné `Invoke` metoda `IDispatch`.
 
-V knihovně MFC `IOleCommandTarget` rozhraní používá servery pro aktivní dokumenty umožňující kontejnery pro aktivní dokument k odeslání příkazů na server. Třída serveru aktivního dokumentu, `CDocObjectServerItem`, používá mapy rozhraní MFC (naleznete v tématu [TN038: MFC/OLE – implementace třídy IUnknown](../mfc/tn038-mfc-ole-iunknown-implementation.md)) k implementaci `IOleCommandTarget` rozhraní.
+V knihovně MFC `IOleCommandTarget` rozhraní používá servery pro aktivní dokumenty umožňující kontejnery pro aktivní dokument k odeslání příkazů na server. Třída serveru aktivního dokumentu, `CDocObjectServerItem`, používá mapy rozhraní MFC (naleznete v tématu [TN038: Implementace třídy IUnknown MFC/OLE](../mfc/tn038-mfc-ole-iunknown-implementation.md)) k implementaci `IOleCommandTarget` rozhraní.
 
 `IOleCommandTarget` také je implementována `COleFrameHook` třídy. `COleFrameHook` je nedokumentované třídy knihovny MFC, která implementuje funkce okna rámce kontejnerů úpravy na místě. `COleFrameHook` mapy rozhraní MFC používá také k implementaci `IOleCommandTarget` rozhraní. `COleFrameHook`pro implementaci `IOleCommandTarget` předává příkazy OLE, které `COleDocObjectItem`-odvozené kontejnery pro aktivní dokument. To umožňuje libovolné MFC aktivní kontejner dokumentu pro příjem zpráv z servery pro aktivní dokumenty obsažené.
 

@@ -3,11 +3,11 @@ title: Průvodce přenosem a upgradováním Visual C++
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
 ms.openlocfilehash: 8798d8b3da5a91adfc6f77912d4f34bf62549f54
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62336917"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Průvodce přenosem a upgradováním Visual C++
 
@@ -77,7 +77,7 @@ Případně třeba Teď máte nové požadavky nebo můžou předvídat potřebu
 |-----------|-----------------|
 |[Upgrade projektů z dřívějších verzí Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Popisuje, jak používat projekty vytvořené v dřívějších verzích Visual C++.|
 |[Co je nového pro kompilátor jazyka C++ v sadě Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Změny v prostředí IDE a nástroje pro aktuální verzi sady Visual Studio|
-|[Vylepšení shody C++ v sadě Visual Studio](../overview/cpp-conformance-improvements.md)|Vylepšení ze sady Visual Studio 2015 se sadou Visual Studio|
+|[Vylepšení shody C++ se sadou Visual Studio](../overview/cpp-conformance-improvements.md)|Vylepšení ze sady Visual Studio 2015 se sadou Visual Studio|
 |[Historie změn Visual C++ 2003–2015](visual-cpp-change-history-2003-2015.md)|Seznam všech změn v Visual C++ knihovny a nástroje sestavení ze sady Visual Studio 2003 do 2015, které mohou vyžadovat změny v kódu.|
 |[Novinky Visual C++ 2003–2015](visual-cpp-what-s-new-2003-through-2015.md)|Všechny "Novinky" informace pro jazyk Visual C++ ze sady Visual Studio 2003 do Visual Studio 2015.|
 |[Přenos knihoven třetích stran](porting-third-party-libraries.md)|Jak používat **vcpkg** nástroj příkazového řádku k portu starší knihovny open-source verze kompilován s novější sady nástrojů Visual C++.|

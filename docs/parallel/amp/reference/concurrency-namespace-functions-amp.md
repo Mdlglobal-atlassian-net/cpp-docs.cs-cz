@@ -14,11 +14,11 @@ f1_keywords:
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
 ms.openlocfilehash: 7baae51480c273ca023856253af7963ac83d7c92
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180385"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Funkce oboru názvů Concurrency (AMP)
 
@@ -453,7 +453,7 @@ Datový typ prvků, které jsou zkopírovány.
 
 ##  <a name="copy_async"></a>  copy_async
 
-Zkopíruje objekt jazyka C++ AMP a vrátí [completion_future](completion-future-class.md) objekt, který lze čekat. Data nelze kopírovat, li kód spuštěn na akcelerátoru.  Obecný tvar této funkce je `copy(src, dest)`.
+Kopie C++ objekt AMP a vrátí [completion_future](completion-future-class.md) objekt, který lze čekat. Data nelze kopírovat, li kód spuštěn na akcelerátoru.  Obecný tvar této funkce je `copy(src, dest)`.
 
 ```
 template <typename value_type, int _Rank>

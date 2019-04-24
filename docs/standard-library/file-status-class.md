@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::file_status::type
 - std::experimental::filesystem::file_status::permissions
 ms.openlocfilehash: 81ce4ecc1673087db8e985f94e297798dd712a6e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160014"
 ---
 # <a name="filestatus-class"></a>file_status – třída
 
@@ -33,14 +33,14 @@ class file_status;
 
 |Konstruktor|Popis|
 |-|-|
-|[file_status –](#file_status)|Vytvoří obálku pro [file_type](../standard-library/filesystem-enumerations.md#file_type) a soubor [oprávnění](../standard-library/filesystem-enumerations.md#perms).|
+|[file_status](#file_status)|Vytvoří obálku pro [file_type](../standard-library/filesystem-enumerations.md#file_type) a soubor [oprávnění](../standard-library/filesystem-enumerations.md#perms).|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[Typ](#type)|Získá nebo nastaví `file_type`.|
-|[Oprávnění](#permissions)|Získá nebo nastaví oprávnění k souboru.|
+|[type](#type)|Získá nebo nastaví `file_type`.|
+|[oprávnění](#permissions)|Získá nebo nastaví oprávnění k souboru.|
 
 ### <a name="operators"></a>Operátory
 
@@ -78,7 +78,7 @@ Zadaný `file_type`, výchozí hodnota je `file_type::none`.
 *Maska*<br/>
 Zadaný soubor `perms`, výchozí hodnota je `perms::unknown`.
 
-*file_status –*<br/>
+*file_status*<br/>
 Uložený objekt.
 
 ## <a name="op_as"></a> file_status::Operator =
@@ -92,7 +92,7 @@ file_status& operator=(file_status&&) nexcept = default;
 
 ### <a name="parameters"></a>Parametry
 
-*file_status –*<br/>
+*file_status*<br/>
 [File_status –](../standard-library/file-status-class.md) kopírovaná do `file_status`.
 
 ## <a name="type"></a> Typ
@@ -129,4 +129,4 @@ Zadaný `perms`.
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [path – třída](../standard-library/path-class.md)<br/>
-[\<FileSystem >](../standard-library/filesystem.md)<br/>
+[\<filesystem>](../standard-library/filesystem.md)<br/>

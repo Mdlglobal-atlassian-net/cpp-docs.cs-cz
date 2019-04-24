@@ -47,11 +47,11 @@ helpviewer_keywords:
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
 ms.openlocfilehash: 9314717fab53b1a89b87d657ec617a4c6bd45b8b
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58776190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62206438"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget – třída
 
@@ -67,13 +67,13 @@ class CCmdTarget : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CCmdTarget::CCmdTarget](#ccmdtarget)|Vytvoří `CCmdTarget` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CCmdTarget::BeginWaitCursor](#beginwaitcursor)|Zobrazí kurzor přesýpacích hodin kurzoru.|
 |[CCmdTarget::DoOleVerb](#dooleverb)|Způsobí, že určený operaci OLE provést akci.|

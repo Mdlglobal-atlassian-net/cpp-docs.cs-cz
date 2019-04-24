@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _ITERATOR_DEBUG_LEVEL
 ms.assetid: 718549cd-a9a9-4ab3-867b-aac00b321e67
 ms.openlocfilehash: a584fe5a97e251205e750507b27e53e6e7b9a20e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224191"
 ---
 # <a name="iteratordebuglevel"></a>_ITERATOR_DEBUG_LEVEL
 
@@ -49,7 +49,7 @@ Informace o tom, jak zakázat varování o kontrolovaných iterátorech naleznet
 
 ### <a name="example"></a>Příklad
 
-Chcete-li zadat hodnotu makru _ITERATOR_DEBUG_LEVEL, použijte [/D](../build/reference/d-preprocessor-definitions.md) – možnost kompilátoru definujte ho v příkazovém řádku, nebo použít `#define` před standardní knihovny C++ jsou obsažena ve zdrojových souborech. Například na příkazovém řádku, chcete-li zkompilovat *sample.cpp* v režimu ladění a používat iterátor podporu ladění, můžete zadat _ITERATOR_DEBUG_LEVEL definice makra:
+Chcete-li zadat hodnotu makru _ITERATOR_DEBUG_LEVEL, použijte [/D](../build/reference/d-preprocessor-definitions.md) – možnost kompilátoru definujte ho v příkazovém řádku, nebo použít `#define` před C++ hlavičky standardní knihovny, které jsou zahrnuté ve zdrojových souborech. Například na příkazovém řádku, chcete-li zkompilovat *sample.cpp* v režimu ladění a používat iterátor podporu ladění, můžete zadat _ITERATOR_DEBUG_LEVEL definice makra:
 
 `cl /EHsc /Zi /MDd /D_ITERATOR_DEBUG_LEVEL=1 sample.cpp`
 
@@ -69,4 +69,4 @@ Ve zdrojovém souboru zadejte – makro před záhlaví standardní knihovny, kt
 
 [Checked – iterátory](../standard-library/checked-iterators.md)<br/>
 [Podpora ladění iterátorů](../standard-library/debug-iterator-support.md)<br/>
-[Bezpečné knihovny: standardní knihovna C++](../standard-library/safe-libraries-cpp-standard-library.md)<br/>
+[Bezpečné knihovny: Standardní knihovna C++](../standard-library/safe-libraries-cpp-standard-library.md)<br/>

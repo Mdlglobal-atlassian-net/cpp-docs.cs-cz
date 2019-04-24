@@ -35,11 +35,11 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
 ms.openlocfilehash: 9f5289491a7c14749865cfd163417440bc542aba
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58776528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164186"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd – třída
 
@@ -55,13 +55,13 @@ class CMDIFrameWnd : public CFrameWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMDIFrameWnd::CMDIFrameWnd](#cmdiframewnd)|Vytvoří `CMDIFrameWnd`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMDIFrameWnd::CreateClient](#createclient)|Vytvoří okno Windows MDICLIENT pro tento `CMDIFrameWnd`. Volá `OnCreate` členskou funkci `CWnd`.|
 |[CMDIFrameWnd::CreateNewChild](#createnewchild)|Vytvoří nové podřízené okno.|

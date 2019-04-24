@@ -12,11 +12,11 @@ helpviewer_keywords:
 - precompiled header files, use existing
 ms.assetid: 24f1bd0e-b624-4296-a17e-d4b53e374e1f
 ms.openlocfilehash: c0dcb045450d6e6eca31b8c76a92726e62400656
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316142"
 ---
 # <a name="yu-use-precompiled-header-file"></a>/Yu (Použít předkompilovaný hlavičkový soubor)
 
@@ -98,5 +98,5 @@ Tento příkaz určuje předkompilovaného hlavičkového souboru s názvem MYPC
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

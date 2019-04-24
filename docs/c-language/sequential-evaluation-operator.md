@@ -7,11 +7,11 @@ helpviewer_keywords:
 - comma operator
 ms.assetid: 587514f4-c8e2-44e9-81a8-7a553ce1453a
 ms.openlocfilehash: 2cbffc51fb7113ae442dbfcd1db01bbf27a67746
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158518"
 ---
 # <a name="sequential-evaluation-operator"></a>Operátor sekvenčního vyhodnocení
 

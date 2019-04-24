@@ -8,15 +8,15 @@ helpviewer_keywords:
 - preserving registers
 ms.assetid: dbcd7360-6f3e-4b22-9ee2-9f65ca6f2543
 ms.openlocfilehash: 30b2f9ca8c658b65819709bb2e536b5aaecad676
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166669"
 ---
 # <a name="using-and-preserving-registers-in-inline-assembly"></a>Použití a zachování registrů v sestavení inline assemblerem
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Obecně platí, by neměla předpokládají, že registru bude mít předané hodnoty při `__asm` zahájení bloku. Hodnot registru nemají zaručenu zachovaná napříč samostatnými `__asm` bloky. Je-li ukončit blok vloženého kódu a začnete jiného, nelze spoléhat na registry v druhé bloku zachovat jejich hodnoty z prvního bloku. `__asm` Bloku dědí cokoli, co registrace hodnoty výsledek z normálního toku řízení.
 

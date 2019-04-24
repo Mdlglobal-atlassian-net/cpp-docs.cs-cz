@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CColorDialog [MFC], m_cc
 ms.assetid: d013dc25-9290-4b5d-a97e-95ad7208e13b
 ms.openlocfilehash: bc9bc76b328359d4c8ec7796de7dfaa7d3a9cf2c
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58772832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62207721"
 ---
 # <a name="ccolordialog-class"></a>CColorDialog Class
 
@@ -41,13 +41,13 @@ class CColorDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CColorDialog::CColorDialog](#ccolordialog)|Vytvoří `CColorDialog` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CColorDialog::DoModal](#domodal)|Zobrazí dialogové okno barvy a umožňuje uživatelům provést výběr.|
 |[CColorDialog::GetColor](#getcolor)|Vrátí `COLORREF` struktury obsahující hodnoty vybrané barvy.|
@@ -56,13 +56,13 @@ class CColorDialog : public CCommonDialog
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CColorDialog::OnColorOK](#oncolorok)|Přepsání nastavení za účelem ověření barvu zadaný do dialogového okna.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CColorDialog::m_cc](#m_cc)|Struktura používané k úpravám nastavení dialogovém okně.|
 

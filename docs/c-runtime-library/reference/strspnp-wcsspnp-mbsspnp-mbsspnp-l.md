@@ -43,11 +43,11 @@ helpviewer_keywords:
 - tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
 ms.openlocfilehash: 9a4a0d2f9b9940e181625b129e5ded8bb9644c39
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223128"
 ---
 # <a name="strspnp-wcsspnp-mbsspnp-mbsspnpl"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 
@@ -83,7 +83,7 @@ unsigned char *_mbsspnp_l(
 *str*<br/>
 Řetězec zakončený hodnotou Null pro hledání.
 
-*Znaková sada*<br/>
+*charset*<br/>
 Sada znaků zakončených znakem null.
 
 *Národní prostředí*<br/>
@@ -103,7 +103,7 @@ Pokud *str* nebo *charset* je ukazatel s hodnotou null, tato funkce vyvolá obsl
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tcsspnp –**|**_strspnp**|**_mbsspnp**|**_wcsspnp**|
+|**_tcsspnp**|**_strspnp**|**_mbsspnp**|**_wcsspnp**|
 
 **_strspnp –** a **_wcsspnp –** jsou jednobajtového znaku a širokoznaká verze **_mbsspnp –**. **_strspnp –** a **_wcsspnp –** chovají stejně jako **_mbsspnp –** jinak, jsou k dispozici pouze pro toto mapování a neměli byste používat z jiného důvodu. Další informace najdete v tématu [použití mapování obecného textu](../../c-runtime-library/using-generic-text-mappings.md) a [mapování obecného textu](../../c-runtime-library/generic-text-mappings.md).
 

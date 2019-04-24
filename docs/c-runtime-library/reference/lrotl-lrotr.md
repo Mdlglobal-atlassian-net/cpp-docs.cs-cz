@@ -32,11 +32,11 @@ helpviewer_keywords:
 - bits, rotating
 ms.assetid: d42f295b-35f9-49d2-9ee4-c66896ffe68e
 ms.openlocfilehash: 71ca61676e4551155f9f14e792c5c1cee65ddb7e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156964"
 ---
 # <a name="lrotl-lrotr"></a>_lrotl, _lrotr
 
@@ -54,7 +54,7 @@ unsigned long _lrotr( unsigned long value, int shift );
 *value*<br/>
 Hodnota, která otočen.
 
-*SHIFT*<br/>
+*shift*<br/>
 Počet bitů, chcete-li posunout *hodnota*.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -69,7 +69,7 @@ Obě funkce vrátí hodnotu otočený. Není vrácena žádná chyba.
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_lrotl –**, **_lrotr –**|\<stdlib.h>|
+|**_lrotl**, **_lrotr**|\<stdlib.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

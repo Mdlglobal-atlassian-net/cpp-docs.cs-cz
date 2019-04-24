@@ -7,11 +7,11 @@ helpviewer_keywords:
 - expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
 ms.openlocfilehash: a13b86755a5e309a51a0e2e14faa1157b7e95ea0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183867"
 ---
 # <a name="expressions-with-unary-operators"></a>Výrazy s unárními operátory
 
@@ -37,7 +37,7 @@ Unární operátory pracují na pouze jeden operand ve výrazu. Unární operát
 
 - [sizeof – operátor](../cpp/sizeof-operator.md)
 
-- [__uuidof – operátor](../cpp/uuidof-operator.md)
+- [__uuidof operator](../cpp/uuidof-operator.md)
 
 - [__alignof – operátor](../cpp/alignof-operator.md)
 
@@ -49,11 +49,11 @@ Tyto operátory mají asociativitu zprava doleva. Výrazy s unárními obvykle z
 
 Tady jsou možné typy unární výrazů.
 
-- *výraz přípony*
+- *postfix-expression*
 
-- `++` *Unární výraz*
+- `++` *unary-expression*
 
-- `--` *Unární výraz*
+- `--` *unary-expression*
 
 - *Unární operátor* *výrazem přetypování.*
 
@@ -63,9 +63,9 @@ Tady jsou možné typy unární výrazů.
 
 - `decltype(` *Výraz* `)`
 
-- *přidělení – výraz*
+- *allocation-expression*
 
-- *zrušení přidělení – výraz*
+- *deallocation-expression*
 
 Žádné *postfix-expression* se považuje za *unární výraz*, a protože se považuje za jakékoli primární výraz *postfix-expression*, se žádné primární výrazy považovat za *unární výraz* také. Další informace najdete v tématu [výrazy přípony](../cpp/postfix-expressions.md) a [primární výrazy](../cpp/primary-expressions.md).
 

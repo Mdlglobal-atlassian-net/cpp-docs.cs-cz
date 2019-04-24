@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru C2597
+title: Compiler Error C2597
 ms.date: 11/04/2016
 f1_keywords:
 - C2597
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C2597
 ms.assetid: 2e48127d-e3ff-4a40-8156-2863e45b1a38
 ms.openlocfilehash: b7bdd10ebd70eb61746690958532854dd98c6429
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62228587"
 ---
-# <a name="compiler-error-c2597"></a>Chyba kompilátoru C2597
+# <a name="compiler-error-c2597"></a>Compiler Error C2597
 
 Neplatný odkaz na Nestatický člen 'identifier'
 

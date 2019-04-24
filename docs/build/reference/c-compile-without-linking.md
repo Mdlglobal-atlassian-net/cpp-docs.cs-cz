@@ -11,11 +11,11 @@ helpviewer_keywords:
 - /c compiler option [C++]
 ms.assetid: 8017fc3d-e5dd-4668-a1f7-3120daa95d20
 ms.openlocfilehash: bfe351daf43b913f10df74b1059ba98f7d5d657b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294847"
 ---
 # <a name="c-compile-without-linking"></a>/c (kompilovat bez propojení)
 
@@ -57,5 +57,5 @@ LINK firsti.obj second.obj third.obj /OUT:filename.exe
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

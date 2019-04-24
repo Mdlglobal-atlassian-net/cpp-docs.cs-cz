@@ -30,11 +30,11 @@ helpviewer_keywords:
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
 ms.openlocfilehash: 93b61f1d0342d7d4b7ddfc7fce4d64ea5e10a2eb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159571"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;funkční&gt; funkce
 
@@ -590,13 +590,13 @@ Argumenty volání.
 
 Vyvolá volatelný objekt *fn* pomocí parametrů *args*. Efektivně `INVOKE(std::forward<Callable>(fn), std::forward<Args>(args)...)`, kde pseudofunkce `INVOKE(f, t1, t2, ..., tN)` znamená, že jeden z následujících akcí:
 
-- `(t1.*f)(t2, ..., tN)`, když je `f` ukazatel na členskou funkci třídy `T` a `t1` je objekt typu `T` nebo odkaz na objekt typu `T` nebo odkaz na objekt typu odvozeného z typu `T`. To znamená, že pokud `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` má hodnotu true.
+- `(t1.*f)(t2, ..., tN)` Když `f` je ukazatel na členskou funkci třídy `T` a `t1` je objekt typu `T` nebo odkaz na objekt typu `T` nebo odkaz na objekt typu odvozeného z `T`. To znamená, že pokud `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` má hodnotu true.
 
 - `(t1.get().*f)(t2, ..., tN)` Když `f` je ukazatel na členskou funkci třídy `T` a `std::decay_t<decltype(t1)>` je specializací `std::reference_wrapper`.
 
 - `((*t1).*f)(t2, ..., tN)` Když `f` je ukazatel na členskou funkci třídy `T` a `t1` není jeden z předchozích typů.
 
-- `t1.*f`, když N == 1 a `f` je ukazatel na členská data třídy `T` a `t1` je objekt typu `T` nebo odkaz na objekt typu `T` nebo odkaz na objekt typu odvozeného z typu `T`.  To znamená, že pokud `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` má hodnotu true.
+- `t1.*f` Když N == 1 a `f` je ukazatel na členská data třídy `T` a `t1` je objekt typu `T` nebo odkaz na objekt typu `T` nebo odkaz na objekt typu odvozeného z `T`.  To znamená, že pokud `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` má hodnotu true.
 
 - `t1.get().*f` Když N == 1 a `f` je ukazatel na členská data třídy `T` a `std::decay_t<decltype(t1)>` je specializací `std::reference_wrapper`.
 

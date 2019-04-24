@@ -7,11 +7,11 @@ helpviewer_keywords:
 - expressions [C++], constant
 ms.assetid: d48a6c47-e44c-4be2-9c8b-7944c7ef8de7
 ms.openlocfilehash: f6984c47ef8acde462a8e92e01b72ef26a61eddc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325738"
 ---
 # <a name="c-constant-expressions"></a>Výrazy konstant v jazyce C
 
@@ -19,23 +19,23 @@ Konstantní výraz je vyhodnocen v době kompilace, ne doby běhu a můžou pou�
 
 ## <a name="syntax"></a>Syntaxe
 
-*konstantní výraz*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Podmíněného výrazu*
+*constant-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*
 
-*podmíněného výrazu*:<br/>
+*conditional-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logický výraz OR*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logický výraz OR* **?** *výraz* **:** *podmíněného výrazu*
 
 *výraz*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz přiřazení*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*výraz* **,** *výrazu přiřazení*
 
-*výraz přiřazení*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Podmíněného výrazu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Unární výraz* *operátor přiřazení* *výrazu přiřazení*
+*assignment-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unary-expression* *assignment-operator* *assignment-expression*
 
 *operátor přiřazení*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**=** **&#42;=** **/=** **%=** **+=** **-=** **\< \<=** **>>=** **&=** **^=** **&#124;=**
+&nbsp;&nbsp;&nbsp;&nbsp;**=** **&#42;=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **&#124;=**
 
 Neterminály deklarátor – struktura, enumerátoru, s přímým přístupem deklarátor, přímo abstraktní deklarátor a příkaz s popiskem obsahují *konstantní výraz* neterminálu.
 

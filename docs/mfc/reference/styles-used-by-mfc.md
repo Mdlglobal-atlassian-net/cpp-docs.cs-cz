@@ -197,11 +197,11 @@ helpviewer_keywords:
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
 ms.openlocfilehash: eb5123c347fdb847cade54f15764f175ee0ab799
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309821"
 ---
 # <a name="styles-used-by-mfc"></a>Styly využívané prostředím MFC
 
@@ -215,7 +215,7 @@ Styly tlačítek platí pro [CButton – třída](../../mfc/reference/cbutton-cl
 
 V následující tabulce jsou uvedeny typy tlačítek. Můžete volitelně zvolit jednu z následujících akcí. Pokud nezadáte typ tlačítka, výchozí hodnota je BS_PUSHBUTTON.
 
-|Typ|Popis|
+|Type|Popis|
 |----------|-----------------|
 |BS_3STATE|Vytvoří tlačítko zaškrtávacího políčka se třemi stavy: BST_CHECKED BST_INDETERMINATE a BST_UNCHECKED. Kliknutí na tlačítko odešle oznámení BN_CLICKED nadřazenému oknu, ale nezmění stav tlačítka. Ve výchozím nastavení se přidružený text zobrazí napravo od zaškrtávacího políčka. Chcete-li zobrazit text vlevo od zaškrtávacího políčka, použijte styl BS_LEFTTEXT nebo BS_RIGHTBUTTON.|
 |BS_AUTO3STATE|Vytvoří tlačítko zaškrtávacího políčka se třemi stavy: BST_CHECKED BST_INDETERMINATE a BST_UNCHECKED. Kliknutí na tlačítko odešle oznámení BN_CLICKED nadřazenému oknu a změní stav tlačítka. Stavy tlačítka se mění v pořadí BST_CHECKED BST_INDETERMINATE a BST_UNCHECKED cyklu. Ve výchozím nastavení se přidružený text zobrazí napravo od zaškrtávacího políčka. Chcete-li zobrazit text vlevo od zaškrtávacího políčka, použijte styl BS_LEFTTEXT nebo BS_RIGHTBUTTON.|
