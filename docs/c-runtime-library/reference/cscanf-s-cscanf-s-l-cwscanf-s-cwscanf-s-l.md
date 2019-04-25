@@ -49,11 +49,11 @@ helpviewer_keywords:
 - tcscanf_s_l function
 ms.assetid: 9ccab74d-916f-42a6-93d8-920525efdf4b
 ms.openlocfilehash: b49c464c7262a60bb7744a68c0144234e152edd3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288911"
 ---
 # <a name="cscanfs-cscanfsl-cwscanfs-cwscanfsl"></a>_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
 
@@ -90,7 +90,7 @@ int _cwscanf_s_l(
 *Formát*<br/>
 Řetězec řízení formátu
 
-*Argument*<br/>
+*argument*<br/>
 Volitelné parametry.
 
 *Národní prostředí*<br/>
@@ -117,15 +117,15 @@ Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že pou�
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tcscanf_s –**|**_cscanf_s**|**_cscanf_s**|**_cwscanf_s**|
-|**_tcscanf_s_l –**|**_cscanf_s_l**|**_cscanf_s_l**|**_cwscanf_s_l**|
+|**_tcscanf_s**|**_cscanf_s**|**_cscanf_s**|**_cwscanf_s**|
+|**_tcscanf_s_l**|**_cscanf_s_l**|**_cscanf_s_l**|**_cwscanf_s_l**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_cscanf_s –**, **_cscanf_s_l –**|\<conio.h >|
-|**_cwscanf_s –**, **_cwscanf_s_l –**|\<conio.h > nebo \<wchar.h >|
+|**_cscanf_s**, **_cscanf_s_l**|\<conio.h>|
+|**_cwscanf_s**, **_cwscanf_s_l**|\<conio.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

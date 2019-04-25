@@ -1,6 +1,6 @@
 ---
-title: Compiler Warnings C4400 Through C4599
-ms.date: 05/30/2018
+title: Upozornění kompilátoru C4400 až C4599
+ms.date: 04/21/2019
 f1_keywords:
 - C4413
 - C4415
@@ -23,14 +23,10 @@ f1_keywords:
 - C4448
 - C4449
 - C4450
-- C4451
 - C4452
 - C4453
 - C4454
 - C4455
-- C4456
-- C4457
-- C4459
 - C4472
 - C4474
 - C4475
@@ -138,14 +134,14 @@ helpviewer_keywords:
 - C4594
 - C4595
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
-ms.openlocfilehash: 990560e2c05f66a010382f736735c19c17d4dc28
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 7dd09e6f31592f6d4b62b94d8d3256fe1a432010
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280307"
 ---
-# <a name="compiler-warnings-c4400-through-c4599"></a>Compiler Warnings C4400 Through C4599
+# <a name="compiler-warnings-c4400-through-c4599"></a>Upozornění kompilátoru C4400 až C4599
 
 Články v této části dokumentace vysvětlují podmnožinu varovné zprávy, které jsou generovány kompilátorem.
 
@@ -184,14 +180,14 @@ ms.locfileid: "57816617"
 |Upozornění kompilátoru (úroveň 1) C4426|příznaky optimalizace se po včetně záhlaví, může být #pragma optimize().|
 |Upozornění kompilátoru (úroveň 1) C4427|"*operátor*': přetečení v dělení konstantou; nedefinované chování|
 |[Upozornění kompilátoru (úroveň 4) C4429](../../error-messages/compiler-warnings/compiler-warning-level-4-c4429.md)|je to možné neúplný nebo nesprávně vytvořený universal-character-name|
-|[Upozornění (chyba) kompilátoru C4430](../../error-messages/compiler-warnings/compiler-warning-c4430.md)|chybějící specifikátor typu: předpokládá se int Poznámka: Jazyk C++ nepodporuje typ default int.|
+|[Kompilátor varování C4430 (chyba)](../../error-messages/compiler-warnings/compiler-warning-c4430.md)|chybějící specifikátor typu: předpokládá se int Poznámka: Jazyk C++ nepodporuje typ default int.|
 |[Upozornění kompilátoru (úroveň 4) C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)|chybějící specifikátor typu: předpokládá se int Poznámka: C už nepodporuje typ default int.|
 |[Upozornění kompilátoru (úroveň 4) C4434](../../error-messages/compiler-warnings/compiler-warning-level-4-c4434.md)|Statický konstruktor musí mít přístupnost private; Změna na soukromý přístup|
 |[Upozornění kompilátoru (úroveň 4) C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|"*derived_class*": Rozložení objektu pod: / vd2 se změní z důvodu virtuální base '*$base_class*.|
 |[Upozornění kompilátoru (úroveň 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)|dynamické\_přetypování z virtuální base '*$base_class*"do"*derived_class*"v konstruktoru nebo destruktoru by mohlo selhat s částečně vytvořeným objektem.|
 |[Upozornění kompilátoru (úroveň 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)|dynamické\_přetypování z virtuální base '*$base_class*"do"*derived_class*' může v některých kontextech selhat|
 |Kompilátor varování C4438|"*funkce*': nejde volat bezpečně / await: clrcompat režimu. Pokud se*funkce*"volání do modulu CLR může způsobit poškození hlavičky CLR|
-|[Upozornění (chyba) kompilátoru C4439](../../error-messages/compiler-warnings/compiler-warning-c4439.md)|"*funkce*': definice funkce se spravovaným typem v podpisu musí mít konvenci volání __clrcall|
+|[Kompilátor varování C4439 (chyba)](../../error-messages/compiler-warnings/compiler-warning-c4439.md)|"*funkce*': definice funkce se spravovaným typem v podpisu musí mít konvenci volání __clrcall|
 |[Upozornění kompilátoru (úroveň 1) C4440](../../error-messages/compiler-warnings/compiler-warning-level-1-c4440.md)|Předefinování konvence volání z: "*calling_convention1*"do"*calling_convenction2*se ignoruje|
 |[Upozornění kompilátoru (úroveň 1) C4441](../../error-messages/compiler-warnings/compiler-warning-level-1-c4441.md)|konvence volání '*calling_convention1*se ignoruje; "*calling_convention2*' místo toho použita|
 |Upozornění kompilátoru (úroveň 1) C4442|vložený terminátor s hodnotou null v argumentu __annotation.  Hodnota bude zkrátila.|
@@ -212,7 +208,7 @@ ms.locfileid: "57816617"
 |[Upozornění kompilátoru (úroveň 4) C4457](compiler-warning-level-4-c4457.md)|deklarace "*identifikátor*' skryje parametr funkce|
 |[Upozornění kompilátoru (úroveň 4) C4458](compiler-warning-level-4-c4458.md)|deklarace "*identifikátor*' skryje člen třídy|
 |[Upozornění kompilátoru (úroveň 4) C4459](compiler-warning-level-4-c4459.md)|deklarace "*identifikátor*' skryje globální deklaraci|
-|[Upozornění kompilátoru (úroveň 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|"WinRT&#124;spravované ' operátor '*– operátor*', má parametr předaný odkazem. "WinRT&#124;spravované ' operátor '*– operátor*"má odlišnou sémantiku než operátor C++"*cpp_operator*", nechtěli jste předat hodnotu v?|
+|[Upozornění kompilátoru (úroveň 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|"WinRT&#124;spravované ' operátor '*– operátor*', má parametr předaný odkazem. "WinRT&#124;spravované ' operátor '*– operátor*" má odlišnou sémantiku než C++ – operátor "*cpp_operator*", nechtěli jste předat hodnotu v?|
 |[Upozornění kompilátoru (úroveň 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|"*classname*': Tato třída má finalizační metodu '! *finalizační metoda*", ale žádný destruktor ' ~*dtor*.|
 |[Upozornění kompilátoru (úroveň 1, chyba) C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|"*typ*': Nelze určit identifikátor GUID typu. Program může při běhu selhat.|
 |[Upozornění kompilátoru (úroveň 4) C4463](compiler-warning-level-4-c4463.md)|přetečení; přiřazení '*hodnotu*"pro bitové pole, které může obsahovat jenom hodnoty z.*min_value*"do"*max_value*.|
@@ -230,8 +226,8 @@ ms.locfileid: "57816617"
 |[Upozornění kompilátoru (úroveň 4) C4481](../../error-messages/compiler-warnings/compiler-warning-level-4-c4481.md)|používá se nestandardní rozšíření: specifikátor override '*– klíčové slovo*.|
 |Kompilátor varování C4482|používá se nestandardní rozšíření: výčtu '*výčet*"používat v kvalifikovaném názvu|
 |Upozornění kompilátoru (úroveň 1, chyba) C4483|Chyba syntaxe: Očekávalo se klíčové slovo jazyka C++|
-|[Upozornění (chyba) kompilátoru C4484](../../error-messages/compiler-warnings/compiler-warning-c4484.md)|"*override_function*': odpovídá metodě base ref class '*base_class_function*", není ale označené jako 'virtuální', 'new' nebo 'override'; předpokládá se 'new' (tzn. ne virtual)|
-|[Upozornění (chyba) kompilátoru C4485](../../error-messages/compiler-warnings/compiler-warning-c4485.md)|"*override_function*': odpovídá metodě base ref class '*base_class_function*", ale není označeno 'new' nebo 'override'; předpokládá se 'new. (a 'virtual')|
+|[Kompilátor varování C4484 (chyba)](../../error-messages/compiler-warnings/compiler-warning-c4484.md)|"*override_function*': odpovídá metodě base ref class '*base_class_function*", není ale označené jako 'virtuální', 'new' nebo 'override'; předpokládá se 'new' (tzn. ne virtual)|
+|[Kompilátor varování C4485 (chyba)](../../error-messages/compiler-warnings/compiler-warning-c4485.md)|"*override_function*': odpovídá metodě base ref class '*base_class_function*", ale není označeno 'new' nebo 'override'; předpokládá se 'new. (a 'virtual')|
 |[Upozornění kompilátoru (úroveň 1) C4486](../../error-messages/compiler-warnings/compiler-warning-level-1-c4486.md)|"*funkce*': virtuální metoda private třídy ref class nebo value class by měla být označená jako sealed.|
 |[Upozornění kompilátoru (úroveň 4) C4487](../../error-messages/compiler-warnings/compiler-warning-level-4-c4487.md)|"*derived_class_function*": shody zděděné nevirtuální metody "*base_class_function*", ale není explicitně označené jako new.|
 |[Upozornění kompilátoru (úroveň 1) C4488](../../error-messages/compiler-warnings/compiler-warning-level-1-c4488.md)|"*funkce*': vyžaduje"*– klíčové slovo*'implementovat metodu rozhraní – klíčové slovo'*interface_method*"|
@@ -289,7 +285,7 @@ ms.locfileid: "57816617"
 |[Upozornění kompilátoru (úroveň 1) C4551](../../error-messages/compiler-warnings/compiler-warning-level-1-c4551.md)|Chybí seznam argumentů funkce volání|
 |[Upozornění kompilátoru (úroveň 1) C4552](../../error-messages/compiler-warnings/compiler-warning-level-1-c4552.md)|"*operátor*': operátor nemá žádný vliv; očekával se operátor s vedlejším účinkem|
 |[Upozornění kompilátoru (úroveň 1) C4553](../../error-messages/compiler-warnings/compiler-warning-level-1-c4553.md)|"*operátor*': operátor nemá žádný vliv; nechtěli jste použít ' operátor?|
-|[Upozornění (úroveň 3) C4554 kompilátoru](../../error-messages/compiler-warnings/compiler-warning-level-3-c4554.md) C4554|"*operátor*': Zkontrolujte priorita operátorů není chyba; pomocí závorek upřesněte svůj prioritu|
+|[Upozornění kompilátoru (úroveň 3) C4554](../../error-messages/compiler-warnings/compiler-warning-level-3-c4554.md) C4554|"*operátor*': Zkontrolujte priorita operátorů není chyba; pomocí závorek upřesněte svůj prioritu|
 |[Upozornění kompilátoru (úroveň 1) C4555](../../error-messages/compiler-warnings/compiler-warning-level-1-c4555.md)|výraz nemá žádný vliv; očekávaný výraz s vedlejším účinkem|
 |[Upozornění kompilátoru (úroveň 1) C4556](../../error-messages/compiler-warnings/compiler-warning-level-1-c4556.md)|hodnota vnitřního argumentu immediate '*hodnotu*"je mimo rozsah"*lower_bound* - *upper_bound*.|
 |[Upozornění kompilátoru (úroveň 3) C4557](../../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md)|'__assume' obsahuje efekt '*efekt*.|
@@ -329,3 +325,8 @@ ms.locfileid: "57816617"
 |Upozornění kompilátoru (chyba) C4597|nedefinované chování: offsetof u člena virtuální základny.|
 |Upozornění kompilátoru (úroveň 1 a 3) C4598|"#include"*záhlaví*"!: číslo hlavičky *číslo* Předkompilovaná hlavička se neshoduje s aktuální kompilace na této pozici|
 |Upozornění kompilátoru (úroveň 3) C4599|"*příznak* *cesta*': číslo argumentu příkazového řádku *číslo* neodpovídá předkompilované hlavičky|
+
+## <a name="see-also"></a>Viz také:
+
+[C /C++ nástroje chyby a upozornění kompilátoru a sestavení](../compiler-errors-1/c-cpp-build-errors.md) \
+[Upozornění kompilátoru C4000 - C5999](compiler-warnings-c4000-c5999.md)

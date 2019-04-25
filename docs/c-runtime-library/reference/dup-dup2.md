@@ -29,11 +29,11 @@ helpviewer_keywords:
 - _dup function
 ms.assetid: 4d07e92c-0d76-4832-a770-dfec0e7a0cfa
 ms.openlocfilehash: a00b9506102e6b274a9aa87c33c144d75cfc2508
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288963"
 ---
 # <a name="dup-dup2"></a>_dup, _dup2
 
@@ -48,10 +48,10 @@ int _dup2( int fd1, int fd2 );
 
 ### <a name="parameters"></a>Parametry
 
-*FD*, *fd1*<br/>
+*fd*, *fd1*<br/>
 Popisovače souboru odkazující na otevření souboru.
 
-*FD2*<br/>
+*fd2*<br/>
 Všechny popisovače souboru.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -74,8 +74,8 @@ int cstderr = _dup( _fileno( stderr ));
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_dup –**|\<IO.h >|
-|**_dup2**|\<IO.h >|
+|**_dup**|\<io.h>|
+|**_dup2**|\<io.h>|
 
 Konzole není podporována v aplikacích pro univerzální platformu Windows (UPW). Standardní datový proud popisovačů, které jsou spojeny s konzolou, **stdin**, **stdout**, a **stderr**, musí být přesměrován před funkcí jazyka C za běhu můžete použít v aplikacích pro UWP . Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
