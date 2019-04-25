@@ -19,6 +19,6 @@
 ### [Multithreading: Vytváření pracovních vláken](multithreading-creating-worker-threads.md)
 ### [Multithreading: Kdy použít synchronizační třídy](multithreading-when-to-use-the-synchronization-classes.md)
 ### [Multithreading: Jak používat synchronizační třídy](multithreading-how-to-use-the-synchronization-classes.md)
-### [Multithreading: Ukončení vláken](multithreading-terminating-threads.md)
-### [Multithreading: Tipy pro programování](multithreading-programming-tips.md)
+### [Multithreading: Ukončování vláken](multithreading-terminating-threads.md)
+### [Multithreading: Tipy k programování](multithreading-programming-tips.md)
 ## [Multithreading a národní prostředí](multithreading-and-locales.md)

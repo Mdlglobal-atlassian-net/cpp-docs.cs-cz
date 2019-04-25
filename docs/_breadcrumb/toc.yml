@@ -103,15 +103,9 @@
                   tocHref: /cpp/build/reference/
                   topicHref: /cpp/build/reference/c-cpp-building-reference
                   items:
-                    - name: Chyby kompilátoru
-                      tocHref: /cpp/error-messages/compiler-errors-1/
-                      topicHref: /cpp/compiler-errors-1/c-cpp-build-errors
-                    - name: Upozornění kompilátoru
-                      tocHref: /cpp/compiler-warnings/
-                      topicHref: /cpp/compiler-warnings/compiler-warnings-c4000-through-C4199
-                    - name: Další nástroje
-                      tocHref: /cpp/error-messages/tool-errors/
-                      topicHref: /cpp/error-messages/tool-errors/vectorizer-and-parallelizer-messages
+                    - name: Chyby a upozornění kompilátoru a nástrojů
+                      tocHref: /cpp/error-messages/
+                      topicHref: /cpp/error-messages/compiler-errors-1/c-cpp-build-errors
             - name: Portování a upgradování
               tocHref: /cpp/porting/
               topicHref: /cpp/porting/visual-cpp-porting-and-upgrading-guide

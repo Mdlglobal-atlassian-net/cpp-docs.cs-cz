@@ -203,7 +203,7 @@
 #### [Souhrn příkazů](summary-of-statements.md)
 #### [Externí definice](external-definitions.md)
 ## [Chování definované implementací](implementation-defined-behavior.md)
-### [Převod: diagnostika](translation-diagnostics.md)
+### [Překlad: diagnostika](translation-diagnostics.md)
 ### [Prostředí](environment.md)
 #### [Argumenty operace main](arguments-to-main.md)
 #### [Interaktivní zařízení](interactive-devices.md)

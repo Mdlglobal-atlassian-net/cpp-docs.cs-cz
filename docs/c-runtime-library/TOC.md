@@ -52,7 +52,7 @@
 ### [Operátory ISO646](iso646-operators.md)
 ### [Jednobajtové a vícebajtové znakové sady](single-byte-and-multibyte-character-sets.md)
 ### [Datové typy SBCS a MBCS](sbcs-and-mbcs-data-types.md)
-### [Unicode: široká charakterová sada](unicode-the-wide-character-set.md)
+### [Unicode: široká znaková sada](unicode-the-wide-character-set.md)
 ### [Použití mapování obecného textu](using-generic-text-mappings.md)
 ### [Ukázka programu obecného textu](a-sample-generic-text-program.md)
 ### [Použití datových typů TCHAR.H s kódováním _MBCS](using-tchar-h-data-types-with-mbcs.md)
