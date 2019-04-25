@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4938
 ms.assetid: 6acac81a-9d23-465e-b700-ed4b6e8edcd0
 ms.openlocfilehash: da2725a398a99b5943e128038e75622115a9e34f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280201"
 ---
 # <a name="compiler-warning-level-4-c4938"></a>Kompilátor upozornění (úroveň 4) C4938
 
-'příkaz var': plovoucího bodu redukční proměnná může způsobit nekonzistentní výsledky v/FP: strict nebo #pragma fenv_access
+příkaz 'var': Plovoucího bodu redukční proměnná může způsobit nekonzistentní výsledky v/FP: strict nebo #pragma fenv_access
 
 Neměli byste používat [/FP: strict](../../build/reference/fp-specify-floating-point-behavior.md) nebo [fenv_access](../../preprocessor/fenv-access.md) s OpenMP snížení s plovoucí desetinnou čárkou, protože součet je vypočítán v jiném pořadí. Výsledky se díky tomu se může lišit od výsledky bez/OpenMP.
 

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - fiber-safe static thread-local storage compiler option [C++]
 ms.assetid: 071fec79-c701-432b-9970-457344133159
 ms.openlocfilehash: 417ac00a446f773a424553e42478a4f0cf58efc6
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291805"
 ---
 # <a name="gt-support-fiber-safe-thread-local-storage"></a>/GT (Podpora místního optického úložiště se zabezpečenými vlákny)
 
@@ -51,5 +51,5 @@ Vlákno je zjednodušený objekt, který se skládá ze zásobníku a zaregistru
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

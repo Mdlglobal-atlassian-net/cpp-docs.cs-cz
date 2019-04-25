@@ -23,11 +23,11 @@ helpviewer_keywords:
 - _cwait function
 ms.assetid: d9b596b5-45f4-4e03-9896-3f383cb922b8
 ms.openlocfilehash: f7a49497ac71ec15261e1215bd2bbed2e49f42ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288781"
 ---
 # <a name="cwait"></a>_cwait
 
@@ -55,7 +55,7 @@ Ukazatel do vyrovnávací paměti, kam se má uložit výsledek kód určený pr
 Popisovač čekání na proces (to znamená, že proces, který má ukončit před **_cwait** může vrátit).
 
 *Akce*<br/>
-Hodnotu NULL: Ignoruje aplikací operačního systému Windows. u ostatních aplikací: kód akce k provedení na *procHandle*.
+HODNOTA NULL: Ignorovat podle aplikací operačního systému Windows. u ostatních aplikací: kód akce k provedení na *procHandle*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -82,7 +82,7 @@ Není-li *procHandle* -1 nebo -2 (zpracuje aktuální proces nebo vlákno), popi
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_cwait**|\<Process.h >|\<errno.h>|
+|**_cwait**|\<process.h>|\<errno.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

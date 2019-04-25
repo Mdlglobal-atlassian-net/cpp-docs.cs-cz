@@ -13,11 +13,11 @@ helpviewer_keywords:
 - /Fx compiler option [C++]
 ms.assetid: 14f0e301-3bab-45a3-bbdf-e7ce66f20560
 ms.openlocfilehash: f1a266eee4edc524fbbe49bdef31a8235f62bd3c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292299"
 ---
 # <a name="fx-merge-injected-code"></a>/Fx (sloučení vloženého kódu)
 
@@ -77,5 +77,5 @@ Pokud váš program zahrnuje soubor hlaviček, který používá vložený kód 
 ## <a name="see-also"></a>Viz také:
 
 [Možnosti výstupního souboru (/F)](output-file-f-options.md)<br/>
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

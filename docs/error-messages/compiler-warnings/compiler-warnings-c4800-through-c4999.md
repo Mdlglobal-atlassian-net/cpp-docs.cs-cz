@@ -1,6 +1,6 @@
 ---
-title: Compiler Warnings C4800 Through C5999
-ms.date: 03/14/2019
+title: Upozornění kompilátoru C4800 až C5999
+ms.date: 04/21/2019
 f1_keywords:
 - C4808
 - C4809
@@ -153,14 +153,14 @@ helpviewer_keywords:
 - C5105
 - C5106
 - C5107
-ms.openlocfilehash: 46bb439b490295b7f3279f06421d3fd6b8d6ba8b
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 93ff809d640efab6852e855f85e7b6e0109d9c1d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280311"
 ---
-# <a name="compiler-warnings-c4800-through-c5999"></a>Compiler Warnings C4800 Through C5999
+# <a name="compiler-warnings-c4800-through-c5999"></a>Upozornění kompilátoru C4800 až C5999
 
 Články v této části dokumentace vysvětlují podmnožinu varovné zprávy, které jsou generovány kompilátorem.
 
@@ -170,7 +170,7 @@ ms.locfileid: "58356254"
 
 |Upozornění|Zpráva|
 |-------------|------------|
-|[(Úroveň 4) upozornění kompilátoru C4800](compiler-warning-level-3-c4800.md)| Implicitní převod z '*typ*' na typ bool. Ztráty informací je to možné |
+|[Upozornění kompilátoru (úroveň 4) C4800](compiler-warning-level-3-c4800.md)| Implicitní převod z '*typ*' na typ bool. Ztráty informací je to možné |
 |[Upozornění kompilátoru (úroveň 1) C4803](compiler-warning-level-1-c4803.md)|"*metoda*': metoda raise má jinou třídu úložiště než událost,"*události*"|
 |[Upozornění kompilátoru (úroveň 1) C4804](compiler-warning-level-1-c4804.md)|"*operace*': potenciálně nebezpečné používání typu 'bool' v operaci|
 |[Upozornění kompilátoru (úroveň 1) C4805](compiler-warning-level-1-c4805.md)|"*operace*': potenciálně nebezpečné směšování typu"*type1*"a typ"*type2*"v operaci|
@@ -206,8 +206,8 @@ ms.locfileid: "58356254"
 | Upozornění kompilátoru (úroveň 4) C4847 | "\_\_declspec (ne\_init\_all)" může používat jedině pro funkce, typ třídy nebo místní proměnná: ignoruje |
 | Upozornění kompilátoru (úroveň 1) C4848 | Podpora pro standardní atribut "žádné\_jedinečný\_adres v C ++ 17 a starších verzích je rozšířením dodavatele |
 |[Upozornění kompilátoru (úroveň 4) C4866](c4866.md)| Kompilátor nemůže vynutit pořadí vyhodnocování zleva doprava pro volání *operator_name*|
-|[Upozornění (chyba) kompilátoru C4867](compiler-warning-c4867.md)|"*funkce*': chybí seznam argumentů volání funkce; použijte"*volání*' vytvořte ukazatel na člena|
-|[Upozornění (úroveň 4) kompilátoru C4868](compiler-warning-c4868.md)|"_souboru_(*line_number*)' kompilátor nemůže vynutit pořadí vyhodnocování zleva doprava v inicializačního seznamu v závorkách|
+|[Kompilátor varování C4867 (chyba)](compiler-warning-c4867.md)|"*funkce*': chybí seznam argumentů volání funkce; použijte"*volání*' vytvořte ukazatel na člena|
+|[Upozornění kompilátoru (úroveň 4) C4868](compiler-warning-c4868.md)|"_souboru_(*line_number*)' kompilátor nemůže vynutit pořadí vyhodnocování zleva doprava v inicializačního seznamu v závorkách|
 |Upozornění kompilátoru (úroveň 2) C4872|číslo s plovoucí čárkou bodu dělení nulou zjistil při kompilování grafu volání pro: concurrency::parallel_for_each: "*umístění*.|
 |Upozornění kompilátoru (úroveň 1) C4880|přetypování z ' const *type_1*"do"*type_2*': přetypování konstantnosti z ukazatele nebo odkazu může vést k nedefinovanému chování ve funkci s omezením pomocí specifikátoru amp|
 |Upozornění kompilátoru (úroveň 4) C4881|konstruktor nebo destruktor se nebudou volat pro proměnnou tile_static "*proměnnou*.|
@@ -242,7 +242,7 @@ ms.locfileid: "58356254"
 |[Upozornění kompilátoru (úroveň 1) C4946](compiler-warning-level-1-c4946.md)|reinterpret_cast použito mezi souvisejícími třídami: '*class1*"a"*class2*.|
 |[Upozornění kompilátoru (úroveň 1) C4947](compiler-warning-level-1-c4947.md)|"*typ nebo člen*': označené jako zastaralé|
 |[Upozornění kompilátoru (úroveň 2) C4948](compiler-warning-level-2-c4948.md)|Typ vrácené hodnoty '*přistupující objekt*"se neshoduje s typem parametru odpovídajícího nastavovacího kódu.|
-|[Upozornění kompilátoru (úrovně 1 a 4) C4949](compiler-warning-level-1-and-level-4-c4949.md)|direktivy pragma "spravované" a 'nespravované' mají smysl jenom při kompilaci s "/ clr [: možnost]"|
+|[Upozornění kompilátoru (úroveň 1 a 4) C4949](compiler-warning-level-1-and-level-4-c4949.md)|direktivy pragma "spravované" a 'nespravované' mají smysl jenom při kompilaci s "/ clr [: možnost]"|
 |[Upozornění kompilátoru (úroveň 1, chyba) C4950](compiler-warning-c4950.md)|"*typ nebo člen*': označené jako zastaralé|
 |[Upozornění kompilátoru (úroveň 1) C4951](compiler-warning-level-1-c4951.md)|"*funkce*' byl upraven od shromáždění dat profilu data profilu funkce se nepoužijí|
 |[Upozornění kompilátoru (úroveň 1) C4952](compiler-warning-level-1-c4952.md)|"*funkce*': nenašla se žádná data profilu v databázi programu"*pgd_file*.|
@@ -267,7 +267,7 @@ ms.locfileid: "58356254"
 |Upozornění kompilátoru (úroveň 1) C4974|"*symbol*': označené jako zastaralé|
 |Upozornění kompilátoru (úroveň 3) C4981|Warbird: funkce '*funkce*"označená jako __forceinline není vložená, protože obsahuje sémantiku výjimky.|
 |Upozornění kompilátoru (úroveň 3) C4985|Název symbolu ': neexistují atributy pro předchozí deklaraci.|
-|[Upozornění kompilátoru C4986](compiler-warning-c4986.md)|"*deklarace*': specifikace výjimky se neshoduje s předchozí deklarací.|
+|[Kompilátor varování C4986](compiler-warning-c4986.md)|"*deklarace*': specifikace výjimky se neshoduje s předchozí deklarací.|
 |Upozornění kompilátoru (úroveň 4) C4987|použito nestandardní rozšíření: 'throw (...)'|
 |Upozornění kompilátoru (úroveň 4) C4988|"*proměnnou*': proměnná deklarována mimo rozsah třídy a funkce|
 |Upozornění kompilátoru (úroveň 4) C4989|"*typ*': typ má konfliktní definice.|
@@ -316,3 +316,8 @@ ms.locfileid: "58356254"
 | Upozornění kompilátoru (úroveň 1) C5105 | rozšíření makra vytváření "definice" má nedefinované chování |
 | Upozornění kompilátoru (úroveň 1) C5106 | předefinovalo se různé názvy parametrů – makro |
 | Upozornění kompilátoru (úroveň 1) C5107 | chybí ukončení "*char*" znak |
+
+## <a name="see-also"></a>Viz také:
+
+[C /C++ nástroje chyby a upozornění kompilátoru a sestavení](../compiler-errors-1/c-cpp-build-errors.md) \
+[Upozornění kompilátoru C4000 - C5999](compiler-warnings-c4000-c5999.md)

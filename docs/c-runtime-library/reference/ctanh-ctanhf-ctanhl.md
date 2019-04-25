@@ -31,11 +31,11 @@ helpviewer_keywords:
 - ctanhf function
 ms.assetid: 807f2cd1-8740-4988-afff-5911c346385b
 ms.openlocfilehash: f63329e45fdcd3a26d613f73cd911fdf6fb10401
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288937"
 ---
 # <a name="ctanh-ctanhf-ctanhl"></a>ctanh ctanhf, ctanhl
 
@@ -77,7 +77,7 @@ Komplexní hyperbolický tangens *z*.
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **ctanh** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **ctanh** vždy převezme a vrátí **_Dcomplex** hodnotu.
+Protože C++ umožňuje přetížení, můžete volat přetížení **ctanh** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **ctanh** vždy převezme a vrátí **_Dcomplex** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 

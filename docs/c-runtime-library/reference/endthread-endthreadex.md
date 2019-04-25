@@ -31,11 +31,11 @@ helpviewer_keywords:
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
 ms.openlocfilehash: 2f54ca9c4cd5e863ca960f1d9c3634b85e7896dd
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288820"
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
 
@@ -67,7 +67,7 @@ Můžete volat **_endthread** nebo **_endthreadex** explicitně k ukončení pod
 Win32, jako jsou **ExitThread** rozhraní API, **_endthreadex** nezavře popisovač vlákna. Proto při použití **_beginthreadex** a **_endthreadex**, je nutné zavřít popisovač vlákna voláním rozhraní Win32 **CloseHandle** rozhraní API.
 
 > [!NOTE]
-> **_endthread** a **_endthreadex** způsobit, že destruktory jazyka C++ čekající ve vláknu není, která se má volat.
+> **_endthread** a **_endthreadex** způsobit C++ destruktory čekající ve vláknu není, která se má volat.
 
 ## <a name="requirements"></a>Požadavky
 

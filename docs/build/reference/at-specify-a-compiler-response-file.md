@@ -9,11 +9,11 @@ helpviewer_keywords:
 - cl.exe compiler, specifying response files
 ms.assetid: 400fffee-909d-4f60-bf76-45833e822685
 ms.openlocfilehash: c2b5578e1ce1db590bdf5abbff0c91e858803ad7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272998"
 ---
 # <a name="-specify-a-compiler-response-file"></a>@ (Zadat soubor odezvy kompilátoru)
 
@@ -46,5 +46,5 @@ Z příkazového řádku můžete zadat libovolný počet možností soubor odpo
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

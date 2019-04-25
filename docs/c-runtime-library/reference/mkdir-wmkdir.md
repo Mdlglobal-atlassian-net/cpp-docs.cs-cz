@@ -34,11 +34,11 @@ helpviewer_keywords:
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
 ms.openlocfilehash: 0d89e1f0930cf9131156a4691069f1f17c15c124
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285194"
 ---
 # <a name="mkdir-wmkdir"></a>_mkdir, _wmkdir
 
@@ -73,7 +73,7 @@ Další informace o těchto a dalších návratových kódech naleznete v témat
 
 ## <a name="remarks"></a>Poznámky
 
-**_Mkdir –** funkce vytvoří nový adresář se zadaným *dirname.* **_mkdir –** lze vytvořit pouze jeden nový adresář za volání, takže pouze poslední součástí *dirname* můžete název nového adresáře. **_mkdir –** nepřekládá oddělovače cesty. V systému Windows NT, zpětné lomítko ( \\) a lomítkem (/) jsou platná cesta oddělovače ve znakové řetězce v běhové rutiny.
+**_Mkdir –** funkce vytvoří nový adresář se zadaným *dirname.* **_mkdir –** lze vytvořit pouze jeden nový adresář za volání, takže pouze poslední součástí *dirname* můžete název nového adresáře. **_mkdir** does not translate path delimiters. V systému Windows NT, zpětné lomítko ( \\) a lomítkem (/) jsou platná cesta oddělovače ve znakové řetězce v běhové rutiny.
 
 **_wmkdir –** je verze širokého znaku **_mkdir –**; *dirname* argument **_wmkdir –** je širokoznaký řetězec. **_wmkdir –** a **_mkdir –** se jinak chovají stejně.
 
@@ -81,13 +81,13 @@ Další informace o těchto a dalších návratových kódech naleznete v témat
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tmkdir –**|**_mkdir**|**_mkdir**|**_wmkdir**|
+|**_tmkdir**|**_mkdir**|**_mkdir**|**_wmkdir**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_mkdir**|\<Direct.h >|
+|**_mkdir**|\<direct.h>|
 |**_wmkdir**|\<Direct.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

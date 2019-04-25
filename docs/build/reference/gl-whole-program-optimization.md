@@ -11,11 +11,11 @@ helpviewer_keywords:
 - GL compiler option [C++]
 ms.assetid: 09d51e2d-9728-4bd0-b5dc-3b8284aca1d1
 ms.openlocfilehash: 6251209dac74a504bb0635f0c544c39935090a42
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292130"
 ---
 # <a name="gl-whole-program-optimization"></a>/GL (celková optimalizace programu)
 
@@ -65,5 +65,5 @@ Další informace o dostupných s optimalizací a omezení optimalizace celého 
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)
