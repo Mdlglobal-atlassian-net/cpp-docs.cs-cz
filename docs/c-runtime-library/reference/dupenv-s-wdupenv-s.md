@@ -34,11 +34,11 @@ helpviewer_keywords:
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
 ms.openlocfilehash: bc8af3282b57c9fa411aac97f5fa4d414bc3305b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288859"
 ---
 # <a name="dupenvs-wdupenvs"></a>_dupenv_s, _wdupenv_s
 
@@ -70,7 +70,7 @@ Vyrovnávací paměť pro ukládání hodnotu proměnné.
 *numberOfElements*<br/>
 Velikost *vyrovnávací paměti*.
 
-*název_proměnné*<br/>
+*varname*<br/>
 Název proměnné prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -102,7 +102,7 @@ Hodnota v *vyrovnávací paměti* je kopie hodnoty proměnné prostředí; její
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tdupenv_s –**|**_dupenv_s**|**_dupenv_s**|**_wdupenv_s**|
+|**_tdupenv_s**|**_dupenv_s**|**_dupenv_s**|**_wdupenv_s**|
 
 ## <a name="requirements"></a>Požadavky
 

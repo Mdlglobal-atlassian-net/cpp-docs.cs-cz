@@ -52,11 +52,11 @@ helpviewer_keywords:
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
 ms.openlocfilehash: 0410aeda4bbec33738d01a9514181c19f351e2c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288358"
 ---
 # <a name="ctimes-ctime32s-ctime64s-wctimes-wctime32s-wctime64s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 
@@ -147,7 +147,7 @@ Nula v případě úspěchu. Pokud dojde k selhání z důvodu neplatného param
 
 |*Vyrovnávací paměti*|*numberOfElements*|*sourceTime*|Vrátí|Hodnota v *vyrovnávací paměti*|
 |--------------|------------------------|------------|------------|-----------------------|
-|**HODNOTU NULL**|Všechny|Všechny|**EINVAL**|Nezměněno|
+|**NULL**|Všechny|Všechny|**EINVAL**|Nezměněno|
 |Není **NULL** (odkazuje na platný paměti)|0|Všechny|**EINVAL**|Nezměněno|
 |Není **NULL**|0 < velikost < 26|Všechny|**EINVAL**|Prázdný řetězec|
 |Není **NULL**|>= 26|NULL|**EINVAL**|Prázdný řetězec|
@@ -173,15 +173,15 @@ V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šab
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tctime_s –**|**ctime_s**|**ctime_s**|**_wctime_s**|
-|**_tctime32_s –**|**_ctime32_s**|**_ctime32_s**|**_wctime32_s**|
-|**_tctime64_s –**|**_ctime64_s**|**_ctime64_s**|**_wctime64_s**|
+|**_tctime_s**|**ctime_s**|**ctime_s**|**_wctime_s**|
+|**_tctime32_s**|**_ctime32_s**|**_ctime32_s**|**_wctime32_s**|
+|**_tctime64_s**|**_ctime64_s**|**_ctime64_s**|**_wctime64_s**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**ctime_s**, **_ctime32_s**, **_ctime64_s**|\<Time.h >|
+|**ctime_s**, **_ctime32_s**, **_ctime64_s**|\<time.h>|
 |**_wctime_s**, **_wctime32_s**, **_wctime64_s**|\<Time.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

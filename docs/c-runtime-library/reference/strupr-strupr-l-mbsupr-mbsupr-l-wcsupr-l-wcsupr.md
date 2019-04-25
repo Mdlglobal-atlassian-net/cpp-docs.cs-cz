@@ -61,11 +61,11 @@ helpviewer_keywords:
 - strings [C++], converting case
 ms.assetid: caac8f16-c233-41b6-91ce-575ec7061b77
 ms.openlocfilehash: c3d155ebfdc40c5dd479cffed0b892dd73f80138
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269027"
 ---
 # <a name="strupr-struprl-mbsupr-mbsuprl-wcsuprl-wcsupr"></a>_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
 
@@ -153,16 +153,16 @@ V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají nověj
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsupr –**|**_strupr**|**_mbsupr –**|**_wcsupr**|
-|**_tcsupr_l –**|**_strupr_l**|**_mbsupr_l**|**_wcsupr_l**|
+|**_tcsupr**|**_strupr**|**_mbsupr**|**_wcsupr**|
+|**_tcsupr_l**|**_strupr_l**|**_mbsupr_l**|**_wcsupr_l**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_strupr –**, **_strupr_l –**|\<String.h >|
-|**_wcsupr –**, **_wcsupr_l –**|\<String.h > nebo \<wchar.h >|
-|**_mbsupr –**, **_mbsupr_l –**|\<Mbstring.h >|
+|**_strupr**, **_strupr_l**|\<string.h>|
+|**_wcsupr**, **_wcsupr_l**|\<String.h > nebo \<wchar.h >|
+|**_mbsupr**, **_mbsupr_l**|\<Mbstring.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

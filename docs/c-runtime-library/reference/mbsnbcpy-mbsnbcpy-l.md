@@ -34,11 +34,11 @@ helpviewer_keywords:
 - tcsncpy function
 ms.assetid: 83d17b50-3cbf-4df9-bce8-3b6d52f85d04
 ms.openlocfilehash: 1f22e8066b5b32feef642b01ad82955935a450e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285569"
 ---
 # <a name="mbsnbcpy-mbsnbcpyl"></a>_mbsnbcpy, _mbsnbcpy_l
 
@@ -111,8 +111,8 @@ V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají nověj
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tcsncpy –**|[strncpy](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)|**_mbsnbcpy**|[wcsncpy –](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)|
-|**_tcsncpy_l –**|**_strncpy_l**|**_mbsnbcp_l**|**_wcsncpy_l**|
+|**_tcsncpy**|[strncpy](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)|**_mbsnbcpy**|[wcsncpy](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)|
+|**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcp_l**|**_wcsncpy_l**|
 
 ## <a name="requirements"></a>Požadavky
 

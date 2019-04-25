@@ -31,11 +31,11 @@ helpviewer_keywords:
 - ctanl function
 ms.assetid: d3cbd25c-1e93-4a6d-8154-da42921f7223
 ms.openlocfilehash: 2d4da5a39658e46bc633ae3bd9c8f6f0a01555aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288751"
 ---
 # <a name="ctan-ctanf-ctanl"></a>ctan ctanf, ctanl
 
@@ -70,20 +70,20 @@ Komplexní čísla, která představuje úhel v radiánech.
 
 Tangens *z*.
 
-|Vstup|Výjimka SEH|**_matherr** výjimky|
+|Vstup|Výjimka SEH|**_matherr** Exception|
 |-----------|-------------------|--------------------------|
-|ROZMEZÍ ∞, QNAN, AJÍT|žádná|_DOMÉNA|
-|Rozmezí ∞ (**tan**, **tanf –**)|NEPLATNÝ|_DOMÉNA|
+|± ∞, QNAN, IND|žádná|_DOMAIN|
+|Rozmezí ∞ (**tan**, **tanf –**)|NEPLATNÝ|_DOMAIN|
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **ctan** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **ctan** vždy převezme a vrátí **_Dcomplex** hodnotu.
+Protože C++ umožňuje přetížení, můžete volat přetížení **ctan** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **ctan** vždy převezme a vrátí **_Dcomplex** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
-|**ctan**, **ctanf**, **ctanl**|\<complex.h>|\<ccomplex >|
+|**ctan**, **ctanf**, **ctanl**|\<complex.h>|\<ccomplex>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - buffers [C++], avoiding overruns
 ms.assetid: 8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e
 ms.openlocfilehash: 10afa874092eb563903ba5f49c6add136afc869c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292169"
 ---
 # <a name="gs-buffer-security-check"></a>/GS (kontrola zabezpečení vyrovnávací paměti)
 
@@ -157,5 +157,5 @@ int main() {
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

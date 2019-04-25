@@ -35,11 +35,11 @@ helpviewer_keywords:
 - _strtoll_l function
 ms.assetid: e2d05dcf-d3b2-4291-9e60-dee77e540fd7
 ms.openlocfilehash: 53ae4ab1d482478c50aa257acdc974569bfc05f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269147"
 ---
 # <a name="strtoll-strtolll-wcstoll-wcstolll"></a>strtoll, _strtoll_l, wcstoll, _wcstoll_l
 
@@ -104,8 +104,8 @@ Další informace o návratových kódech naleznete v tématu [errno _doserrno, 
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcstoll –**|**strtoll –**|**strtoll –**|**wcstoll –**|
-|**_tcstoll_l –**|**_strtoll_l**|**_strtoll_l**|**_wcstoll_l**|
+|**_tcstoll**|**strtoll**|**strtoll**|**wcstoll –**|
+|**_tcstoll_l**|**_strtoll_l**|**_strtoll_l**|**_wcstoll_l**|
 
 Národního prostředí **LC_NUMERIC** kategorie určuje rozpoznávání znaku radix v *strSource*; Další informace najdete v tématu [setlocale _wsetlocale](setlocale-wsetlocale.md). Funkce, které nemají **_l** přípona používají aktuální národní prostředí; **_strtoll_l –** a **_wcstoll_l –** jsou stejné pro odpovídající funkce, které nemají příponu s tím rozdílem, že místo toho používají předané národní prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
@@ -121,8 +121,8 @@ A *prázdné znaky* může skládat ze znaků mezera a tabulátor, které jsou i
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strtoll –**, **_strtoll_l –**|\<stdlib.h>|
-|**wcstoll –**, **_wcstoll_l –**|\<stdlib.h > nebo \<wchar.h >|
+|**strtoll**, **_strtoll_l**|\<stdlib.h>|
+|**wcstoll**, **_wcstoll_l**|\<stdlib.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

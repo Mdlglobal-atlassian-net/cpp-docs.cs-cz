@@ -21,12 +21,12 @@ helpviewer_keywords:
 - mktemp function
 ms.assetid: b58cba60-034f-4e63-b312-ccbcd489d0a7
 ms.openlocfilehash: 1d3d74f5c505281ca76b4d711624be6b7e11d65b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285511"
 ---
 # <a name="mktemp"></a>mktemp
 
-Tato funkce POSIX je zastaralá. Použít splňující podmínky ISO C++ [_mktemp –](mktemp-wmktemp.md) nebo s rozšířeným zabezpečením [_mktemp_s –](mktemp-s-wmktemp-s.md) místo.
+Tato funkce POSIX je zastaralá. Použít bitovou kopii ISO C++ splňující podmínky [_mktemp –](mktemp-wmktemp.md) nebo s rozšířeným zabezpečením [_mktemp_s –](mktemp-s-wmktemp-s.md) místo.

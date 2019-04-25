@@ -1,5 +1,5 @@
 ---
-title: csqrt csqrtf, csqrtl
+title: csqrt, csqrtf, csqrtl
 ms.date: 11/04/2016
 apiname:
 - csqrt
@@ -31,13 +31,13 @@ helpviewer_keywords:
 - csqrtl function
 ms.assetid: b65f086b-0f55-4622-a7a3-4e79d9c9c05c
 ms.openlocfilehash: 00fe12d4f9c136278e56ceaf3fa62443092d0ec4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288833"
 ---
-# <a name="csqrt-csqrtf-csqrtl"></a>csqrt csqrtf, csqrtl
+# <a name="csqrt-csqrtf-csqrtl"></a>csqrt, csqrtf, csqrtl
 
 Načte odmocninu komplexního čísla s větví vyjmout skutečné ose záporné.
 
@@ -70,20 +70,20 @@ Komplexní čísla.
 
 Druhou odmocninu *z*. Výsledkem je v pravé polovině roviny.
 
-|Vstup|Výjimka SEH|**_matherr** výjimky|
+|Vstup|Výjimka SEH|**_matherr** Exception|
 |-----------|-------------------|--------------------------|
-|ROZMEZÍ QNAN, AJÍT|žádná|_DOMÉNA|
-|- ∞|žádná|_DOMÉNA|
+|ROZMEZÍ QNAN, AJÍT|žádná|_DOMAIN|
+|- ∞|žádná|_DOMAIN|
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **csqrt** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **csqrt** vždy převezme a vrátí **_Dcomplex** hodnotu.
+Protože C++ umožňuje přetížení, můžete volat přetížení **csqrt** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **csqrt** vždy převezme a vrátí **_Dcomplex** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
-|**csqrt**, **csqrtf**, **csqrtl**|\<complex.h>|\<ccomplex >|
+|**csqrt**,               **csqrtf**, **csqrtl**|\<complex.h>|\<ccomplex>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
