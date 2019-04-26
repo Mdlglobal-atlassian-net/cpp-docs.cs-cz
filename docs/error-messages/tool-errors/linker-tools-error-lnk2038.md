@@ -6,11 +6,11 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2038
 ms.openlocfilehash: a22b31f1ac3226271ed7ff03b5be7dad7fff6b93
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62298864"
 ---
 # <a name="linker-tools-error-lnk2038"></a>Chyba linkerů LNK2038
 
@@ -26,13 +26,13 @@ Visual Studio definuje následující symboly, aby se zabránilo propojení neko
 
 - `_MSC_VER` Označuje číslo hlavní verze a podverze kompilátoru Visual C++, který slouží k vytvoření aplikace nebo knihovna. Kód, který je zkompilován pomocí jedné verze kompilátoru jazyka Visual C++ není kompatibilní s kódem, který je zkompilován s použitím verzi, která má různé hlavní verze a podverze čísla. Další informace najdete v tématu `_MSC_VER` v [předdefinovaná makra](../../preprocessor/predefined-macros.md).
 
-   Pokud odkazujete na knihovnu, která není kompatibilní s verzí kompilátoru Visual C++, který používáte, a nelze získat nebo vytvořit kompatibilní verzi knihovny, můžete použít starší verzi kompilátoru k sestavení projektu: změnit <C1/>sada nástrojů platformy** vlastnosti projektu starší sadu nástrojů. Další informace najdete v tématu [postupy: Změna cílové architektury a sady nástrojů](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
+   Pokud odkazujete na knihovnu, která není kompatibilní s verzí kompilátoru Visual C++, který používáte, a nelze získat nebo vytvořit kompatibilní verzi knihovny, můžete použít starší verzi kompilátoru k sestavení projektu: změnit **sada nástrojů platformy** vlastnosti projektu starší sadu nástrojů. Další informace najdete v tématu [jak: Změna cílové architektury a sady nástrojů](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - `_ITERATOR_DEBUG_LEVEL` Informuje o úrovni zabezpečení a ladění funkcí, které jsou povoleny ve standardní knihovně jazyka C++. Tyto funkce mohou změnit reprezentaci některých objektů standardní knihovny C++ a tím je znekompatibilnit ty použití různých zabezpečení a ladění funkcí. Další informace najdete v tématu [_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md).
 
 - `RuntimeLibrary` Určuje verzi modulu runtime standardní knihovny C++ a C, který používá aplikace nebo knihovna. Kód, který používá jednu verzi modulu runtime standardní knihovny C++ nebo C je nekompatibilní s kódem, který používá jinou verzi. Další informace najdete v tématu [/ / MD, / MT, /LD (použití knihovny Run-Time)](../../build/reference/md-mt-ld-use-run-time-library.md).
 
-- `_PPLTASKS_WITH_WINRT` Označuje, že kód, který používá [knihovna paralelních vzorů (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) je propojen s objekty zkompilovanými s použitím různých nastavení [/ZW](../../build/reference/zw-windows-runtime-compilation.md) – možnost kompilátoru. (**/ZW** podporuje C + +/ CX.) Kód, který se používá nebo závisí na PPL musí být zkompilován pomocí stejné **/ZW** nastavení, které se používá ve zbývající části aplikace.
+- `_PPLTASKS_WITH_WINRT` Označuje, že kód, který používá [knihovna paralelních vzorů (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) je propojen s objekty zkompilovanými s použitím různých nastavení [/ZW](../../build/reference/zw-windows-runtime-compilation.md) – možnost kompilátoru. (**/ZW** podporuje C++/CX.) Kód, který se používá nebo závisí na PPL musí být zkompilován pomocí stejné **/ZW** nastavení, které se používá ve zbývající části aplikace.
 
 Zajistěte, aby byly hodnoty těchto symbolů konzistentní v rámci projektů v řešení sady Visual Studio a také, že jsou slučitelné s kódem a knihovnami, které vaše aplikace připojuje.
 
