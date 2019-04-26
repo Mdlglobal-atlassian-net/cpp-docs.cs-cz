@@ -5,7 +5,7 @@
 ### [Instalace podpory databáze (MFC-ATL)](installing-database-support-mfc-atl.md)
 ### [Databázové třídy ATL (šablony OLE DB)](atl-database-classes-ole-db-templates.md)
 ### [MFC – databázové třídy](mfc-database-classes-odbc-and-dao.md)
-#### [MFC: Použití databázových tříd s dokumenty a zobrazeními](mfc-using-database-classes-with-documents-and-views.md)
+#### [MFC: Použití databázových tříd s dokumenty a zobrazeními](mfc-using-database-classes-with-documents-and-views.md)
 #### [MFC: Použití databázových tříd bez dokumentů a zobrazení](mfc-using-database-classes-without-documents-and-views.md)
 ### [Záznam (přístup k datům MFC)](record-mfc-data-access.md)
 ### [Schéma (přístup k datům MFC)](schema-mfc-data-access.md)
