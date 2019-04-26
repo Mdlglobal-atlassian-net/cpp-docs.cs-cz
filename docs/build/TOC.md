@@ -46,7 +46,6 @@
 #### [pgomgr](pgomgr.md)
 #### [pgosweep](pgosweep.md)
 #### [Postupy: Sloučení několika profilů PGO do jediného profilu](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
-#### [Doplněk PGO pro Visual Studio 2013 v centru sledování výkonu a diagnostiky](profile-guided-optimization-in-the-performance-and-diagnostics-hub.md)
 # [Použití sady nástrojů MSVC z příkazového řádku](building-on-the-command-line.md)
 ## [Návod: Kompilace nativního programu C++ na příkazovém řádku](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)
 ## [Návod: Kompilace programu C na příkazovém řádku](walkthrough-compile-a-c-program-on-the-command-line.md)
