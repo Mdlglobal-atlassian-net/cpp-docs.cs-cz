@@ -30,11 +30,11 @@ helpviewer_keywords:
 - clear87 function
 ms.assetid: 72d24a70-7688-4793-ae09-c96d33fcca52
 ms.openlocfilehash: 4148f85d82a4210033686455c73046081832e3c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340544"
 ---
 # <a name="clear87-clearfp"></a>_clear87, _clearfp
 
@@ -110,5 +110,5 @@ Status: 80000 - denormal
 ## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
-[_control87 – _controlfp, \__control87_2](control87-controlfp-control87-2.md)<br/>
+[_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md)<br/>
 [_status87, _statusfp, _statusfp2](status87-statusfp-statusfp2.md)<br/>

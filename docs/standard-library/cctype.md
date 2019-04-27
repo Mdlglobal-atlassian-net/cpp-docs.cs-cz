@@ -1,5 +1,5 @@
 ---
-title: '&lt;cctype –&gt;'
+title: '&lt;cctype&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <cctype>
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - cctype header
 ms.assetid: 3fd18bfd-c414-4def-bac1-c362e1fe8b71
 ms.openlocfilehash: 985dc27d8da535d9bb4a3005aca38cdde85c25ad
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51517642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351206"
 ---
-# <a name="ltcctypegt"></a>&lt;cctype –&gt;
+# <a name="ltcctypegt"></a>&lt;cctype&gt;
 
 Obsahuje hlavičku knihovny Standard C \<ctype.h > a přidá názvy přidružené k `std` oboru názvů.
 

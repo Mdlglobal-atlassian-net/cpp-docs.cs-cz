@@ -9,11 +9,11 @@ helpviewer_keywords:
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
 ms.openlocfilehash: 1d03333dee12989af5897c34ba96484930a39673
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62343970"
 ---
 # <a name="math-and-floating-point-support"></a>Matematické a podpora plovoucí desetinné čárky
 
@@ -44,7 +44,7 @@ Předchozí verze 16bitové Microsoft C/C++ a Microsoft Visual C++ nepodporuje *
 [_control87, \__control87_2, _controlfp](../c-runtime-library/reference/control87-controlfp-control87-2.md)|Získá a nastaví slovo ovládacího prvku s plovoucí desetinnou čárkou
 [_controlfp_s](../c-runtime-library/reference/controlfp-s.md)|Zabezpečené verze **_controlfp**
 [copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl](../c-runtime-library/reference/copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)|Vrátí hodnotu, která má velikost jednoho argumentu a znaménko druhého
-[Cos cosf –, cosl –](../c-runtime-library/reference/cos-cosf-cosl.md)|Vypočítá sinus
+[cos, cosf, cosl](../c-runtime-library/reference/cos-cosf-cosl.md)|Vypočítá sinus
 [cosh, coshf, coshl](../c-runtime-library/reference/cosh-coshf-coshl.md)|Vypočte hyperbolický sinus
 [div, ldiv, lldiv](../c-runtime-library/reference/div.md)|Počítá podíl a zbytek dvou celočíselných hodnot
 [_ecvt](../c-runtime-library/reference/ecvt.md), [ecvt](../c-runtime-library/reference/posix-ecvt.md)|Převede **double** na řetězec
@@ -87,8 +87,8 @@ Předchozí verze 16bitové Microsoft C/C++ a Microsoft Visual C++ nepodporuje *
 [imaxabs](../c-runtime-library/reference/imaxabs.md)|Vypočítá absolutní hodnotu celočíselného typu.
 [imaxdiv](../c-runtime-library/reference/imaxdiv.md)|Počítá podíl a zbytek dvou celočíselných hodnot
 [isfinite, _finite, _finitef](../c-runtime-library/reference/finite-finitef.md)|Určuje, zda hodnota je omezené
-[isgreater isgreaterequal, isless, islessequal, islessgreater, isunordered](../c-runtime-library/reference/floating-point-ordering.md)|Porovnání pořadí dvě hodnoty plovoucího bodu
-[isinf –](../c-runtime-library/reference/isinf.md)|Určuje, zda je nekonečnou hodnotu s plovoucí desetinnou čárkou
+[isgreater, isgreaterequal, isless, islessequal, islessgreater, isunordered](../c-runtime-library/reference/floating-point-ordering.md)|Porovnání pořadí dvě hodnoty plovoucího bodu
+[isinf](../c-runtime-library/reference/isinf.md)|Určuje, zda je nekonečnou hodnotu s plovoucí desetinnou čárkou
 [isnan, _isnan, _isnanf](../c-runtime-library/reference/isnan-isnan-isnanf.md)|Testy s plovoucí desetinnou čárkou hodnota NaN
 [isnormal](../c-runtime-library/reference/isnormal.md)|Testuje, jestli hodnotu s plovoucí desetinnou čárkou je omezené a ne subnormal
 [_j0, _j1, _jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Vypočítá Besselovy funkce
@@ -108,7 +108,7 @@ Předchozí verze 16bitové Microsoft C/C++ a Microsoft Visual C++ nepodporuje *
 [__min](../c-runtime-library/reference/min.md)|Makro, které vrátí menší ze dvou hodnot
 [modf, modff, modfl](../c-runtime-library/reference/modf-modff-modfl.md)|Rozdělí hodnotu s plovoucí desetinnou čárkou na frakce a celá čísla
 [nan, nanf, nanl](../c-runtime-library/reference/nan-nanf-nanl.md)|Vrátí hodnotu tichý NaN
-[nearbyint – nearbyintf –, nearbyintl](../c-runtime-library/reference/nearbyint-nearbyintf-nearbyintl1.md)|Vrátí zaoblenými hodnota
+[nearbyint, nearbyintf, nearbyintl](../c-runtime-library/reference/nearbyint-nearbyintf-nearbyintl1.md)|Vrátí zaoblenými hodnota
 [nextafter –, nextafterf –, nextafterl, _nextafter –, _nextafterf](../c-runtime-library/reference/nextafter-functions.md)|Vrátí následující reprezentovatelnou hodnotu s plovoucí desetinnou čárkou
 [nexttoward, nexttowardf, nexttowardl](../c-runtime-library/reference/nextafter-functions.md)|Vrátí následující reprezentovatelnou hodnotu s plovoucí desetinnou čárkou
 [pow, powf, powl](../c-runtime-library/reference/pow-powf-powl.md)|Vrátí hodnotu *x*<sup>*y*</sup>
@@ -121,7 +121,7 @@ Předchozí verze 16bitové Microsoft C/C++ a Microsoft Visual C++ nepodporuje *
 [scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl](../c-runtime-library/reference/scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)|Vynásobí číslo s plovoucí desetinnou čárkou integrální sílu **FLT_RADIX**
 [_set_controlfp](../c-runtime-library/reference/set-controlfp.md)|Nastaví slovo ovládacího prvku s plovoucí desetinnou čárkou
 [_set_SSE2_enable](../c-runtime-library/reference/set-sse2-enable.md)|Povolí nebo zakáže SSE2 pokyny
-[signbit –](../c-runtime-library/reference/signbit.md)|Testuje na bit znaménka s plovoucí desetinnou čárkou
+[signbit](../c-runtime-library/reference/signbit.md)|Testuje na bit znaménka s plovoucí desetinnou čárkou
 [sin, sinf, sinl](../c-runtime-library/reference/sin-sinf-sinl.md)|Vypočítá sinus
 [sinh, sinhf, sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|Vypočte hyperbolický sinus
 [sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|Vypočítá druhou odmocninu
@@ -138,4 +138,4 @@ Předchozí verze 16bitové Microsoft C/C++ a Microsoft Visual C++ nepodporuje *
 ## <a name="see-also"></a>Viz také:
 
 [Rutiny UCRT (Universal C runtime) podle kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
-[S plovoucí desetinnou čárkou primitiv](../c-runtime-library/reference/floating-point-primitives.md)<br/>
+[Primitiva s plovoucí desetinnou čárkou](../c-runtime-library/reference/floating-point-primitives.md)<br/>

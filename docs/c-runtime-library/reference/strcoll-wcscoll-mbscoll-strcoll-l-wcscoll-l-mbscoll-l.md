@@ -44,11 +44,11 @@ helpviewer_keywords:
 - strings [C++], comparing by code page
 ms.assetid: 900a7540-c7ec-4c2f-b292-7a85f63e3fe8
 ms.openlocfilehash: ae72b4cbb2b001a332d41a74883a0e2a9d20a181
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62354207"
 ---
 # <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 
@@ -91,7 +91,7 @@ int _mbscoll_l(
 
 ### <a name="parameters"></a>Parametry
 
-*řetězec1*, *řetězec2*<br/>
+*string1*, *string2*<br/>
 Řetězec zakončený hodnotou Null pro srovnání.
 
 *Národní prostředí*<br/>
@@ -121,17 +121,17 @@ Porovnání dvou řetězců je operace závislé na národním prostředí, prot
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcscoll –**|**strcoll –**|**_mbscoll –**|**wcscoll –**|
+|**_tcscoll**|**strcoll**|**_mbscoll**|**wcscoll –**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strcoll –**|\<String.h >|
-|**wcscoll –**|\<wchar.h >, \<string.h >|
-|**_mbscoll –**, **_mbscoll_l**|\<Mbstring.h >|
-|**_strcoll_l**|\<String.h >|
-|**_wcscoll_l**|\<wchar.h >, \<string.h >|
+|**strcoll**|\<string.h>|
+|**wcscoll –**|\<wchar.h>, \<string.h>|
+|**_mbscoll**, **_mbscoll_l**|\<Mbstring.h >|
+|**_strcoll_l**|\<string.h>|
+|**_wcscoll_l**|\<wchar.h>, \<string.h>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

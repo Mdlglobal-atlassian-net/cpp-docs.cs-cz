@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cacoshl function
 ms.assetid: 83fd05eb-3587-4741-9be6-589a830a1703
 ms.openlocfilehash: aa31dfa1b29eda18d34528fc8aa9544e58a5a082
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340726"
 ---
 # <a name="cacosh-cacoshf-cacoshl"></a>cacosh cacoshf, cacoshl
 
@@ -72,13 +72,13 @@ Inverzní hyperbolický kosinus *z*, v radiánech. Výsledkem je bez vazby a nez
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **cacosh** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **cacosh** vždy převezme a vrátí **_Dcomplex** hodnotu.
+Protože C++ umožňuje přetížení, můžete volat přetížení **cacosh** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **cacosh** vždy převezme a vrátí **_Dcomplex** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
-|**cacosh**, **cacoshf**, **cacoshl**|\<complex.h>|\<ccomplex >|
+|**cacosh**,               **cacoshf**, **cacoshl**|\<complex.h>|\<ccomplex>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

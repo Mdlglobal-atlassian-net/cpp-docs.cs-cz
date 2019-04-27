@@ -140,11 +140,11 @@ helpviewer_keywords:
 - RSIZE_MAX constant
 ms.assetid: c0f1c405-0465-41d5-b5ff-e81cdb6f1622
 ms.openlocfilehash: c4ffbf294083131f29ffe957fd0434182fbb8f99
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62344392"
 ---
 # <a name="data-type-constants"></a>Konstanty datového typu
 
@@ -161,7 +161,7 @@ Tyto konstanty poskytují rozsahů pro integrální datové typy. Pokud chcete p
 > [!NOTE]
 > [/J](../build/reference/j-default-char-type-is-unsigned.md) – možnost kompilátoru změní výchozí **char** typ, který **bez znaménka**.
 
-|Konstanta|Hodnota|Popis|
+|Konstanta|Value|Popis|
 |--------------|-----------|-------------|
 |**CHAR_BIT**|8|Počet bitů **char**|
 |**SCHAR_MIN**|(-128)|Minimální podepsané **char** hodnota|
@@ -176,25 +176,25 @@ Tyto konstanty poskytují rozsahů pro integrální datové typy. Pokud chcete p
 |**INT_MIN**|(-2147483647 - 1)|Minimální podepsané **int** hodnota|
 |**INT_MAX**|2147483647|Maximální počet podepsané **int** hodnota|
 |**UINT_MAX**|4294967295 (0xffffffff)|Maximální **bez znaménka** **int** hodnota|
-|**LONG_MIN**|(-2147483647 L - 1)|Minimální podepsané **dlouhé** hodnota|
+|**LONG_MIN**|(-2147483647L - 1)|Minimální podepsané **dlouhé** hodnota|
 |**LONG_MAX**|2147483647L|Maximální počet podepsané **dlouhé** hodnota|
 |**ULONG_MAX**|4294967295UL (0xfffffffful)|Maximální **bez znaménka** **dlouhé** hodnota|
-|**LLONG_MIN**|(- 9223372036854775807LL - 1)|Minimální podepsané **dlouhé** **dlouhé** nebo **__int64** hodnota|
+|**LLONG_MIN**|(-9223372036854775807LL - 1)|Minimální podepsané **dlouhé** **dlouhé** nebo **__int64** hodnota|
 |**LLONG_MAX**|9223372036854775807LL|Maximální podepsané **dlouhé** **dlouhé** nebo **__int64** hodnota|
 |**ULLONG_MAX**|0xffffffffffffffffull|Maximální **bez znaménka** **dlouhé** **dlouhé** hodnota|
-|**_I8_MIN**|(- 127i8 - 1)|Minimální podepsané 8bitové hodnoty|
+|**_I8_MIN**|(-127i8 - 1)|Minimální podepsané 8bitové hodnoty|
 |**_I8_MAX**|127i8|Maximální počet podepsané 8bitové hodnoty|
 |**_UI8_MAX**|0xffui8|Maximální hodnota bez znaménka 8 bitů|
-|**_I16_MIN**|(- 32767i16 - 1)|Minimální podepsané 16bitová hodnota|
+|**_I16_MIN**|(-32767i16 - 1)|Minimální podepsané 16bitová hodnota|
 |**_I16_MAX**|32767i16|Maximální počet podepsané 16bitová hodnota|
 |**_UI16_MAX**|0xffffui16|Maximální hodnota bez znaménka 16 bitů|
-|**_I32_MIN**|(- 2147483647i32 - 1)|Minimální podepsané 32bitová hodnota|
+|**_I32_MIN**|(-2147483647i32 - 1)|Minimální podepsané 32bitová hodnota|
 |**_I32_MAX**|2147483647i32|Maximální počet podepsané 32bitová hodnota|
 |**_UI32_MAX**|0xffffffffui32|Maximální hodnota bez znaménka 32-bit|
 |**_I64_MIN**|(-9223372036854775807 - 1)|Minimální podepsané 64 bitů hodnotu|
 |**_I64_MAX**|9223372036854775807|Podepsané maximální hodnotu 64-bit|
 |**_UI64_MAX**|0xffffffffffffffffui64|Maximální hodnota bez znaménka 64-bit|
-|**_I128_MIN**|(- 170141183460469231731687303715884105727i128 - 1)|Minimální podepsané 128 bitů hodnotu|
+|**_I128_MIN**|(-170141183460469231731687303715884105727i128 - 1)|Minimální podepsané 128 bitů hodnotu|
 |**_I128_MAX**|170141183460469231731687303715884105727i128|Maximální počet podepsané 128 bitů hodnotu|
 |**_UI128_MAX**|0xffffffffffffffffffffffffffffffffui128|Maximální hodnota bez znaménka 128-bit|
 |**SIZE_MAX**|stejné jako **_UI64_MAX** Pokud **_WIN64** je definován, nebo **UINT_MAX**|Maximální celočíselná hodnota nativní velikost|

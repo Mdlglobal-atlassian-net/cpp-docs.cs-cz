@@ -107,11 +107,11 @@ helpviewer_keywords:
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
 ms.openlocfilehash: d9272cd4596a54a38e1ba21ac92b038c2da0d207
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62354705"
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 
@@ -205,24 +205,24 @@ Tato funkce ověřuje své parametry. Pokud *cesta* nebo *vyrovnávací paměti*
 
 |Funkce|_USE_32BIT_TIME_T definované?|Typ času|Délka typu souboru|
 |---------------|------------------------------------|---------------|----------------------|
-|**_stat –**, **_wstat –**|Nedefinovaná.|64bitových|32bitová|
-|**_stat –**, **_wstat –**|Definice|32bitová|32bitová|
-|**_stat32 –**, **_wstat32 –**|Není ovlivněna definici makra|32bitová|32bitová|
-|**_stat64**, **_wstat64**|Není ovlivněna definici makra|64bitových|64bitových|
-|**_stati64**, **_wstati64**|Nedefinovaná.|64bitových|64bitových|
-|**_stati64**, **_wstati64**|Definice|32bitová|64bitových|
-|**_stat32i64 –**, **_wstat32i64 –**|Není ovlivněna definici makra|32bitová|64bitových|
-|**_stat64i32 –**, **_wstat64i32 –**|Není ovlivněna definici makra|64bitových|32bitová|
+|**_stat**, **_wstat**|Nedefinovaná.|64bitová|32bitová|
+|**_stat**, **_wstat**|Definice|32bitová|32bitová|
+|**_stat32**, **_wstat32**|Není ovlivněna definici makra|32bitová|32bitová|
+|**_stat64**, **_wstat64**|Není ovlivněna definici makra|64bitová|64bitová|
+|**_stati64**, **_wstati64**|Nedefinovaná.|64bitová|64bitová|
+|**_stati64**, **_wstati64**|Definice|32bitová|64bitová|
+|**_stat32i64**, **_wstat32i64**|Není ovlivněna definici makra|32bitová|64bitová|
+|**_stat64i32**, **_wstat64i32**|Není ovlivněna definici makra|64bitová|32bitová|
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tstat –**|**_stat**|**_stat**|**_wstat**|
-|**_tstat64 –**|**_stat64**|**_stat64**|**_wstat64**|
-|**_tstati64 –**|**_stati64**|**_stati64**|**_wstati64**|
-|**_tstat32i64 –**|**_stat32i64**|**_stat32i64**|**_wstat32i64**|
-|**_tstat64i32 –**|**_stat64i32**|**_stat64i32**|**_wstat64i32**|
+|**_tstat**|**_stat**|**_stat**|**_wstat**|
+|**_tstat64**|**_stat64**|**_stat64**|**_wstat64**|
+|**_tstati64**|**_stati64**|**_stati64**|**_wstati64**|
+|**_tstat32i64**|**_stat32i64**|**_stat32i64**|**_wstat32i64**|
+|**_tstat64i32**|**_stat64i32**|**_stat64i32**|**_wstat64i32**|
 
 **_Stat** struktury definované v SYS\STAT. H, obsahuje následující pole.
 
@@ -233,7 +233,7 @@ Tato funkce ověřuje své parametry. Pokud *cesta* nebo *vyrovnávací paměti*
 | **st_ctime** | Čas vytvoření souboru. Diskové jednotky naformátované platné v systému souborů NTFS, ale ne v systému souborů FAT. |
 | **st_dev** | Číslo disku obsahující soubor jednotky (stejné jako **st_rdev**). |
 | **st_ino** | Počet uzlu informace ( **uzlů**) pro soubor (specifické pro systém UNIX). V systémech souborů UNIX **uzlů** popisuje data souborů a časová razítka, oprávnění a obsah. Pokud jsou soubory pevných – vzájemně propojený, sdílejí stejné **uzlů**. **Uzlů**a proto **st_ino**, nemá žádný význam v systémech souborů FAT, HPFS nebo systému souborů NTFS. |
-| **st_mode –** | Bitová maska informace režim souboru. **_S_IFDIR** bit nastaven, pokud *cesta* Určuje adresář; **_S_IFREG** bit nastaven, pokud *cesta* Určuje běžný soubor nebo zařízení. Podle režimu oprávnění k souboru; jsou nastaveny bity pro čtení a zápis uživatele uživatel spustit bity jsou nastaveny podle příponu názvu souboru. |
+| **st_mode** | Bitová maska informace režim souboru. **_S_IFDIR** bit nastaven, pokud *cesta* Určuje adresář; **_S_IFREG** bit nastaven, pokud *cesta* Určuje běžný soubor nebo zařízení. Podle režimu oprávnění k souboru; jsou nastaveny bity pro čtení a zápis uživatele uživatel spustit bity jsou nastaveny podle příponu názvu souboru. |
 | **st_mtime** | Čas poslední změny souboru. |
 | **st_nlink** | Vždy 1 v systémech souborů než NTFS. |
 | **st_rdev** | Číslo disku obsahující soubor jednotky (stejné jako **st_dev**). |
@@ -246,8 +246,8 @@ Pokud *cesta* odkazuje na zařízení, **st_size**, různá pole čas **st_dev**
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelná záhlaví|
 |-------------|---------------------|----------------------|
-|**_stat –**, **_stat32 –**, **_stat64**, **_stati64**, **_stat32i64 –**, **_stat64i32 –**|\<SYS/Types.h > za nímž následuje \<sys/stat.h >|\<errno.h>|
-|**_wstat –**, **_wstat32 –**, **_wstat64**, **_wstati64**, **_wstat32i64 –**, **_wstat64i32 –**|\<SYS/Types.h > za nímž následuje \<sys/stat.h > nebo \<wchar.h >|\<errno.h>|
+|**_stat**, **_stat32**, **_stat64**, **_stati64**, **_stat32i64**, **_stat64i32**|\<SYS/Types.h > za nímž následuje \<sys/stat.h >|\<errno.h>|
+|**_wstat**, **_wstat32**, **_wstat64**, **_wstati64**, **_wstat32i64**, **_wstat64i32**|\<SYS/Types.h > za nímž následuje \<sys/stat.h > nebo \<wchar.h >|\<errno.h>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

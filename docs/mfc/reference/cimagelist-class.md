@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
 ms.openlocfilehash: 2fc92858f84826e2b953fcbc9de020741e97b007
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346363"
 ---
 # <a name="cimagelist-class"></a>Cimagelist – třída
 
@@ -295,7 +295,7 @@ Index založený na nule obrázek, který se použije jako zdroj kopírování.
 *uFlags*<br/>
 Hodnota příznaku bit, který určuje typ operace kopírování má být provedeno. Tento parametr může být jeden z následujících hodnot:
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |ILCF_MOVE|Zdroj obrázku je zkopírován do index bitové kopie cíl. Tato operace vyústí ve více instancích sady danou image. ILCF_MOVE je výchozí nastavení.|
 |ILCF_SWAP|Bitové kopie zdrojových a cílových exchange pozice v seznamu obrázků.|
@@ -357,7 +357,7 @@ Dimenze každého obrázku v pixelech.
 *nFlags*<br/>
 Určuje typ vytvoření seznamu obrázků. Tento parametr může být kombinací těchto hodnot, ale může obsahovat pouze jeden z `ILC_COLOR` hodnoty.
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |ILC_COLOR|Pokud není zadaný žádný další ILC_COLOR * příznaků, použije se výchozí chování. Výchozí hodnota je obvykle ILC_COLOR4; ale pro starší ovladače displeje, výchozí hodnota je ILC_COLORDDB.|
 |ILC_COLOR4|Oddíl 4-bit bitmap nezávislých na zařízení (DIB) (16 barev) použijte jako rastrový obrázek pro seznam obrázků.|
@@ -591,7 +591,7 @@ Umístění, kam chcete-li nakreslit v rámci zadané zařízení.
 *nStyle*<br/>
 Příznak určující styl vykreslování. Může být jeden nebo více z těchto hodnot:
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |ILD_BLEND25 ILD_FOCUS|Nakreslí obrázek, prolnutí 25 procent barvou zvýraznění systému. Tato hodnota nemá žádný vliv, pokud seznam obrázků neobsahuje masky.|
 |ILD_BLEND50, ILD_SELECTED, ILD_BLEND|Nakreslí obrázek, prolnutí 50 procent barvou zvýraznění systému. Tato hodnota nemá žádný vliv, pokud seznam obrázků neobsahuje masky.|

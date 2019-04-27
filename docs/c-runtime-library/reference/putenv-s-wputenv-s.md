@@ -32,11 +32,11 @@ helpviewer_keywords:
 - environment variables, modifying
 ms.assetid: fbf51225-a8da-4b9b-9d7c-0b84ef72df18
 ms.openlocfilehash: f675c2c0a2b12db3cce841dd0db9fa722393f1b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357860"
 ---
 # <a name="putenvs-wputenvs"></a>_putenv_s, _wputenv_s
 
@@ -60,7 +60,7 @@ errno_t _wputenv_s(
 
 ### <a name="parameters"></a>Parametry
 
-*název_proměnné*<br/>
+*varname*<br/>
 Název proměnné prostředí.
 
 *value_string*<br/>
@@ -72,10 +72,10 @@ Vrátí hodnotu 0, pokud je úspěšná, nebo kód chyby.
 
 ### <a name="error-conditions"></a>Chybové podmínky
 
-|*název_proměnné*|*value_string*|Návratová hodnota|
+|*varname*|*value_string*|Návratová hodnota|
 |------------|-------------|------------------|
-|**HODNOTU NULL**|Všechny|**EINVAL**|
-|Všechny|**HODNOTU NULL**|**EINVAL**|
+|**NULL**|Všechny|**EINVAL**|
+|Všechny|**NULL**|**EINVAL**|
 
 Pokud nenastane některá z chybových stavů, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **EINVAL** a nastavte **errno** k **EINVAL**.
 

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
 ms.openlocfilehash: 32fd0898ccac80b74b467dbfe0a136eef139e642
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339746"
 ---
 # <a name="creal-crealf-creall"></a>creal crealf, creall
 
@@ -65,13 +65,13 @@ Skutečné součástí *z*.
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **creal** trvají **_Fcomplex** nebo **_Lcomplex** hodnoty a návrat **float** nebo **long double** hodnoty. V programu jazyka C **creal** vždy přijímá **_Dcomplex** hodnotu a vrátí **double** hodnotu.
+Protože C++ umožňuje přetížení, můžete volat přetížení **creal** trvají **_Fcomplex** nebo **_Lcomplex** hodnoty a návrat **float**nebo **long double** hodnoty. V programu jazyka C **creal** vždy přijímá **_Dcomplex** hodnotu a vrátí **double** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
-|**creal**, **crealf**, **creall**|\<complex.h>|\<ccomplex >|
+|**creal**, **crealf**, **creall**|\<complex.h>|\<ccomplex>|
 
 **_Fcomplex**, **_Dcomplex**, a **_Lcomplex** typy jsou specifické pro společnost Microsoft ekvivalenty neimplementovaná nativní typy C99 **float _Complex** , **double _Complex**, a **long double _Complex**v uvedeném pořadí. Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
@@ -79,7 +79,7 @@ Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **crea
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [_Cbuild, _FCbuild, _LCbuild](cbuild-fcbuild-lcbuild.md)<br/>
-[Norm a normf, norml](norm-normf-norml1.md)<br/>
+[norm, normf, norml](norm-normf-norml1.md)<br/>
 [cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
 [conj, conjf, conjl](conj-conjf-conjl.md)<br/>
 [cimag, cimagf, cimagl](cimag-cimagf-cimagl.md)<br/>

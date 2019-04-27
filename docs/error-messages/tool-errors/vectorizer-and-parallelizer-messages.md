@@ -1,6 +1,6 @@
 ---
 title: Zprávy nástrojů pro vektorizaci a paralelní zpracování
-ms.date: 11/04/2016
+ms.date: 04/17/2019
 f1_keywords:
 - C5011
 - C5002
@@ -8,34 +8,18 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: 6f80bc9d2a2438a6003c93ce7e60de50fd639a16
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: c38bfca4c1b93d373c86bbc710ccb30c43dafd4f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59023903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346867"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Zprávy nástrojů pro vektorizaci a paralelní zpracování
 
-Můžete použít možnosti kompilátoru Visual C++ [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) a [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) nastavit [Automatická paralelizace a Automatická vektorizace](../../parallel/auto-parallelization-and-auto-vectorization.md) pro výstup kódů příčiny a informační zprávy o její činnosti. Tento článek vysvětluje kódy příčiny a zprávy.
+Můžete použít Microsoft C++ – možnosti kompilátoru [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) a [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) nastavit [Automatická paralelizace a Automatická vektorizace](../../parallel/auto-parallelization-and-auto-vectorization.md) důvod výstupu kódy a informačních zpráv o aktivitě. Tento článek vysvětluje kódy příčiny a zprávy.
 
-- [Informační zprávy](#BKMK_InformationalMessages)
-
-- [5xx](#BKMK_ReasonCode50x)
-
-- [10xx](#BKMK_ReasonCode100x)
-
-- [11xx](#BKMK_ReasonCode110x)
-
-- [12xx](#BKMK_ReasonCode120x)
-
-- [13xx](#BKMK_ReasonCode130x)
-
-- [14xx](#BKMK_ReasonCode140x)
-
-- [15xx](#BKMK_ReasonCode150x)
-
-##  <a name="BKMK_InformationalMessages"></a> Informační zprávy
+## <a name="BKMK_InformationalMessages"></a> Informační zprávy
 
 V závislosti na zadané úrovni vytváření sestav se zobrazí jedna z následujících informačních zpráv pro každou smyčku.
 
@@ -43,27 +27,25 @@ Informace o kódech příčiny naleznete v další části tohoto článku.
 
 |Informační zpráva|Popis|
 |---------------------------|-----------------|
-|5001|Vektorizovaná smyčka|
-|5002|Smyčka není vektorizována z důvodu „popisu“.|
-|5011|Paralelizovaná smyčka|
-|5012|Smyčka není paralelizována z důvodu „popisu“.|
-|5021|Nelze přidružit pragma smyčky.|
+|5001|`Loop vectorized.`|
+|5002|`Loop not vectorized due to reason '*description*'.`|
+|5011|`Loop parallelized.`|
+|5012|`Loop not parallelized due to reason '*description*'.`|
+|5021|`Unable to associate loop with pragma.`|
 
-## <a name="reason-codes"></a>Kódy příčiny
+Následující části uvádí kódy příčiny pro automatickou paralelizací a automatickou vektorizací.
 
-Následující části uvádí kódy příčiny pro automatický paralelizér a automatický vektorizér.
+## <a name="BKMK_ReasonCode50x"></a> Kódy příčiny 5xx
 
-###  <a name="BKMK_ReasonCode50x"></a> 5xx
-
-5*xx* platí kódy příčiny pro automatický paralelizér a automatický vektorizér.
+5*xx* kódy příčiny platí pro automatickou paralelizací i automatickou vektorizací.
 
 |Kód příčiny|Vysvětlení|
 |-----------------|-----------------|
-|500|Jedná se o obecnou zprávu, která zahrnuje několik případů, například smyčka obsahuje více východů nebo hlavička smyčky nekončí zvýšením indukční proměnné.|
-|501|Indukční proměnná není místní nebo horní mez smyčky není invariantní.|
-|502|Indukční proměnná je zvyšována způsobem jiným než jednoduchým +1.|
-|503|Smyčka obsahuje zpracování výjimek nebo příkazy switch.|
-|504|Tělo smyčky může vyvolat výjimku, která vyžaduje zničení objektu jazyka C++.|
+|500|Obecná zpráva, která zahrnuje několik případů – například smyčka obsahuje více východů nebo Hlavička smyčky nekončí zvýšením indukční proměnné.|
+|501|`Induction variable is not local; or upper bound is not loop-invariant.`|
+|502|`Induction variable is stepped in some manner other than a simple +1.`|
+|503|`Loop includes exception-handling or switch statements.`|
+|504|`Loop body may throw an exception that requires destruction of a C++ object.`|
 
 ```cpp
 void code_500(int *A)
@@ -216,23 +198,23 @@ void code_504(int *A) {
 }
 ```
 
-###  <a name="BKMK_ReasonCode100x"></a> 10xx
+## <a name="BKMK_ReasonCode100x"></a> Kódy příčiny 10xx
 
-10*xx* platí kódy příčiny pro automatický paralelizér.
+10*xx* kódy příčiny platí pro automatickou paralelizací.
 
 |Kód příčiny|Vysvětlení|
 |-----------------|-----------------|
-|1000|Kompilátor zjistil závislost dat v těle smyčky.|
-|1001|Kompilátor zjistil ukládání skalární proměnné do těla smyčky a použití tohoto skaláru mimo smyčku.|
-|1002|Kompilátor se pokusil paralelizovat smyčku, která má již paralelizovánu vnitřní smyčku.|
-|1003|Tělo smyčky obsahuje vnitřní volání, které může číst nebo zapisovat do paměti.|
-|1004|V těle smyčky existuje snížení skaláru. Ke snížení skaláru může dojít, pokud smyčka byla vektorizována.|
-|1005|**No_parallel** bylo zadáno pragma.|
-|1006|Tato funkce obsahuje **openmp**. Tento problém vyřešit tak, že odeberete některý **openmp** této funkce.|
-|1007|Indukční proměnná smyčky nebo hranice smyčky nejsou 32bitová čísla se znaménkem (`int` nebo `long`). Tento problém vyřešíte změnou typu indukční proměnné.|
-|1008|Kompilátor zjistil, že tato smyčka neprovádí dostatek práce, aby fungovala automatická paralelizace.|
-|1009|Kompilátor zjistil pokus o paralelizování smyčky do-while. Automatický paralelizér se zaměřuje pouze `for` smyčky.|
-|1010|Kompilátor zjistil, že smyčka používá "nerovnosti" (! =) pro její podmínky.|
+|1000|`The compiler detected a data dependency in the loop body.`|
+|1001|`The compiler detected a store to a scalar variable in the loop body, and that scalar has a use beyond the loop.`|
+|1002|`The compiler tried to parallelize a loop that has an inner loop that was already parallelized.`|
+|1003|`The loop body contains an intrinsic call that may read or write to memory.`|
+|1004|`There is a scalar reduction in the loop body. Scalar reduction can occur if the loop has been vectorized.`|
+|1005|`The no_parallel pragma was specified.`|
+|1006|`This function contains openmp. Resolve this by removing any openmp in this function.`|
+|1007|`The loop induction variable or the loop bounds are not signed 32-bit numbers (int or long). Resolve this by changing the type of the induction variable.`|
+|1008|`The compiler detected that this loop does not perform enough work to warrant auto-parallelization.`|
+|1009|`The compiler detected an attempt to parallelize a "do-while" loop. The auto-parallelizer only targets "for" loops.`|
+|1010|`The compiler detected that the loop is using "not-equals" (!=) for its condition.`|
 
 ```cpp
 int A[1000];
@@ -425,19 +407,19 @@ void code_1010()
 }
 ```
 
-###  <a name="BKMK_ReasonCode110x"></a> 11xx
+## <a name="BKMK_ReasonCode110x"></a> Kódy příčiny 11xx
 
-11*xx* platí kódy příčiny pro automatický vektorizér.
+11*xx* kódy příčiny platí pro automatickou vektorizací.
 
 |Kód příčiny|Vysvětlení|
 |-----------------|-----------------|
-|1100|Smyčka obsahuje řízení toku, například příkaz „if“ nebo operátor „?“.|
-|1101|Smyčka obsahuje převod datového typu, možná implicitní, který nelze vektorizovat.|
-|1102|Smyčka obsahuje nearitmetické nebo jiné nevektorizovatelné operace.|
-|1103|Tělo smyčky obsahuje operace posunutí, jejichž velikost se může v rámci smyčky lišit.|
-|1104|Tělo smyčky obsahuje skalární proměnné.|
-|1105|Smyčka obsahuje nerozpoznanou operaci snížení.|
-|1106|Vnější smyčka není vektorizována.|
+|1100|`Loop contains control flow—for example, "if" or "?".`|
+|1101|`Loop contains datatype conversion—perhaps implicit—that cannot be vectorized.`|
+|1102|`Loop contains non-arithmetic or other non-vectorizable operations.`|
+|1103|`Loop body includes shift operations whose size might vary within the loop.`|
+|1104|`Loop body includes scalar variables.`|
+|1105|`Loop includes a unrecognized reduction operation.`|
+|1106|`Outer loop not vectorized.`|
 
 ```cpp
 void code_1100(int *A, int x)
@@ -573,16 +555,16 @@ void code_1106(int *A)
 }
 ```
 
-###  <a name="BKMK_ReasonCode120x"></a> 12xx
+## <a name="BKMK_ReasonCode120x"></a> Kódy příčiny 12xx
 
-12*xx* platí kódy příčiny pro automatický vektorizér.
+12*xx* kódy příčiny platí pro automatickou vektorizací.
 
 |Kód příčiny|Vysvětlení|
 |-----------------|-----------------|
-|1200|Smyčka obsahuje závislosti dat týkající se smyčky, které brání ve vektorizaci. Různé iterace smyčky se navzájem ovlivňují, takže vektorizace smyčky může produkovat nesprávné výsledky a automatický vektorizér nemůže prokázat, že neexistují takové závislosti dat.|
-|1201|Základ pole se během smyčky změnil.|
-|1202|Pole struktury není široké 32 nebo 64 bitů.|
-|1203|Tělo smyčky obsahuje nesouvislé přístupy do pole.|
+|1200|`Loop contains loop-carried data dependences that prevent vectorization. Different iterations of the loop interfere with each other such that vectorizing the loop would produce wrong answers, and the auto-vectorizer cannot prove to itself that there are no such data dependences.`|
+|1201|`Array base changes during the loop.`|
+|1202|`Field in a struct is not 32 or 64 bits wide.`|
+|1203|`Loop body includes non-contiguous accesses into an array.`|
 
 ```cpp
 void fn();
@@ -648,18 +630,18 @@ void code_1203(int *A)
 }
 ```
 
-###  <a name="BKMK_ReasonCode130x"></a> 13xx
+## <a name="BKMK_ReasonCode130x"></a> Kódy příčiny 13xx
 
-13*xx* platí kódy příčiny pro automatický vektorizér.
+13*xx* kódy příčiny platí pro automatickou vektorizací.
 
 |Kód příčiny|Vysvětlení|
 |-----------------|-----------------|
-|1300|Tělo smyčky neobsahuje žádný, nebo jen velmi drobný výpočet.|
-|1301|Krok smyčky není +1.|
-|1302|Smyčka je "-když".|
-|1303|Příliš málo iterací smyčky na to, aby vektorizace poskytla hodnotu.|
-|1304|Smyčka obsahuje přiřazení, která jsou různých velikostí.|
-|1305|Nedostatek informací o typu.|
+|1300|`Loop body contains no—or very little—computation.`|
+|1301|`Loop stride is not +1.`|
+|1302|`Loop is a "do-while".`|
+|1303|`Too few loop iterations for vectorization to provide value.`|
+|1304|`Loop includes assignments that are of different sizes.`|
+|1305|`Not enough type information.`|
 
 ```cpp
 void code_1300(int *A, int *B)
@@ -780,18 +762,18 @@ void code_1305( S_1305 *s, S_1305 x)
 }
 ```
 
-###  <a name="BKMK_ReasonCode140x"></a> 14xx
+## <a name="BKMK_ReasonCode140x"></a> Kódy příčiny 14xx
 
-14*xx* kódy dojít, když je zadána některá možnost, která není kompatibilní s Automatická vektorizace důvod.
+14*xx* kódy dojít, když je zadána některá možnost, která není kompatibilní s vektorizace důvod.
 
 |Kód příčiny|Vysvětlení|
 |-----------------|-----------------|
-|1400|**#pragma loop(no_vector)** určena.|
-|1401|**/ Kernel** přepínač je zadán při cílení na x86 nebo ARM.|
-|1402|**SSE2** nebo vyšší přepínač není zadán při cílení na x86.|
-|1403|**/arch:Atom** je zadán přepínač a smyčka obsahuje operace s čísly typu Double.|
-|1404|**/ O1** nebo **/Os** je zadán přepínač.|
-|1405|Vektorizace je zakázána pro usnadnění optimalizace dynamického inicializátoru na statický inicializátor.|
+|1400|`#pragma loop(no_vector) is specified.`|
+|1401|`/kernel switch is specified when targeting x86 or ARM.`|
+|1402|`/arch:SSE2 or higher switch is not specified when targeting x86.`|
+|1403|`/arch:ATOM switch is specified and the loop includes operations on doubles.`|
+|1404|`/O1 or /Os switch is specified.`|
+|1405|`Vectorization is disabled to aid in dynamic-initializer-to-static-initializer optimization.`|
 
 ```cpp
 void code_1400(int *A)
@@ -852,18 +834,18 @@ void code_1404(int *A)
 }
 ```
 
-###  <a name="BKMK_ReasonCode150x"></a> 15xx
+## <a name="BKMK_ReasonCode150x"></a> Kódy příčiny 15xx
 
-Blok 15*xx* kódy příčiny vztahuje pouze na aliasing. Aliasing nastane, pokud je umístění v paměti přístupné pod dvěma různými názvy.
+15*xx* kódy příčiny vztahuje pouze na aliasing. Aliasing nastane, pokud je umístění v paměti přístupné pod dvěma různými názvy.
 
 |Kód příčiny|Vysvětlení|
 |-----------------|-----------------|
-|1500|Možný aliasing vícerozměrných polí.|
-|1501|Možný aliasing polí struktur.|
-|1502|Možný aliasing a index pole je jiný než n + K.|
-|1503|Možný aliasing a index pole má více posunů.|
-|1504|Možný aliasing, vyžadoval by příliš mnoho kontrol modulu runtime.|
-|1505|Možný aliasing, ale kontroly modulu runtime jsou příliš složité.|
+|1500|`Possible aliasing on multi-dimensional arrays.`|
+|1501|`Possible aliasing on arrays-of-structs.`|
+|1502|`Possible aliasing and array index is other than n + K.`|
+|1503|`Possible aliasing and array index has multiple offsets.`|
+|1504|`Possible aliasing; would require too many runtime checks.`|
+|1505|`Possible aliasing, but runtime checks are too complex.`|
 
 ```cpp
 void code_1500(int A[100][100], int B[100][100])
@@ -982,9 +964,10 @@ void code_1505(int *A, int *B)
 
 ## <a name="see-also"></a>Viz také:
 
-[Automatická paralelizace a automatická vektorizace](../../parallel/auto-parallelization-and-auto-vectorization.md)<br/>
-[Paralelní programování v nativním kódu](http://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
-[#pragma loop()](../../preprocessor/loop.md)<br/>
-[/Q – možnosti (operace nízké úrovně)](../../build/reference/q-options-low-level-operations.md)<br/>
-[/Qpar-report (úroveň generování sestav s automatickou paralelizací)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
+[C /C++ nástroje chyby a upozornění kompilátoru a sestavení](../compiler-errors-1/c-cpp-build-errors.md)
+[Automatická paralelizace a Automatická vektorizace](../../parallel/auto-parallelization-and-auto-vectorization.md) \
+[Automatický Vektorizér v sadě Visual Studio 2012 – přehled](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/) \
+[#pragma loop()](../../preprocessor/loop.md) \
+[/Q – možnosti (operace nízké úrovně)](../../build/reference/q-options-low-level-operations.md) \
+[/ Qpar-report (úroveň sestav automatickou paralelizací)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
 [/Qpar-report (úroveň generování sestav s automatickou vektorizací)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

@@ -35,11 +35,11 @@ helpviewer_keywords:
 - environment variables, modifying
 ms.assetid: 9ba9b7fd-276e-45df-8420-d70c4204b8bd
 ms.openlocfilehash: 952a4d62f6ceb6b689091ac09f6ca338d0b10864
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357884"
 ---
 # <a name="putenv-wputenv"></a>_putenv, _wputenv
 
@@ -76,7 +76,7 @@ Vrátit 0 v případě úspěchu nebo -1 v případě chyby.
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tputenv –**|**_putenv**|**_putenv**|**_wputenv**|
+|**_tputenv**|**_putenv**|**_putenv**|**_wputenv**|
 
 *Envstring* argument musí být ukazatel na řetězec ve formě *název_proměnné*=*value_string*, kde *název_proměnné* je Název proměnné prostředí, která se přidá nebo upraví a *value_string* je hodnota proměnné. Pokud *název_proměnné* je již součástí životního prostředí, její hodnota je nahrazena *value_string*; v opačném případě nová *název_proměnné* proměnnou a její *value_string*  hodnoty jsou přidány do prostředí. Proměnnou můžete odebrat z prostředí zadáním prázdného *value_string*, nebo jinými slovy, zadáním pouze *název_proměnné*=.
 

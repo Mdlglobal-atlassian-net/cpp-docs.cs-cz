@@ -41,11 +41,11 @@ helpviewer_keywords:
 - stscanf_l function
 ms.assetid: c2dcf0d2-9798-499f-a4a8-06f7e2b9a80c
 ms.openlocfilehash: 60dbb8e89e531c3020c243d998a69370095424e5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62354695"
 ---
 # <a name="sscanf-sscanfl-swscanf-swscanfl"></a>sscanf, _sscanf_l, swscanf, _swscanf_l
 
@@ -86,7 +86,7 @@ Uložená data
 *Formát*<br/>
 Řetězec řízení formátu Další informace najdete v tématu [specifikace formátu](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
-*Argument*<br/>
+*argument*<br/>
 Nepovinné argumenty.
 
 *Národní prostředí*<br/>
@@ -115,15 +115,15 @@ Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že pou�
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_stscanf –**|**sscanf**|**sscanf**|**swscanf –**|
-|**_stscanf_l –**|**_sscanf_l**|**_sscanf_l**|**_swscanf_l**|
+|**_stscanf –**|**sscanf**|**sscanf**|**swscanf**|
+|**_stscanf_l**|**_sscanf_l**|**_sscanf_l**|**_swscanf_l**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**sscanf –**, **_sscanf_l –**|\<stdio.h>|
-|**swscanf –**, **_swscanf_l –**|\<stdio.h > nebo \<wchar.h >|
+|**sscanf**, **_sscanf_l**|\<stdio.h>|
+|**swscanf**, **_swscanf_l**|\<stdio.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
@@ -173,5 +173,5 @@ Real:     = 15.000000
 [Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
-[sprintf _sprintf_l –, swprintf, _swprintf_l –, \__swprintf_l –](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)<br/>

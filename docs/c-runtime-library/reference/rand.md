@@ -27,15 +27,15 @@ helpviewer_keywords:
 - pseudorandom numbers
 - numbers, generating pseudorandom
 ms.openlocfilehash: 868c6239ac1b86dfc9ac72cc8cc83d1ba3002b4a
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357769"
 ---
 # <a name="rand"></a>rand
 
-Pseudonáhodná čísla vygeneruje pomocí algoritmu dobře známé a plně reprodukovatelné. Více programově bezpečné verze této funkce je k dispozici. Zobrazit [rand_s –](rand-s.md). Generované čísel **rand** nejsou kryptograficky zabezpečené. Pro další kryptograficky zabezpečené generování náhodných čísel, pomocí [rand_s –](rand-s.md) nebo funkce deklarované ve standardní knihovně jazyka C++ v [ \<náhodné >](../../standard-library/random.md).
+Pseudonáhodná čísla vygeneruje pomocí algoritmu dobře známé a plně reprodukovatelné. Více programově bezpečné verze této funkce je k dispozici. Zobrazit [rand_s –](rand-s.md). Generované čísel **rand** nejsou kryptograficky zabezpečené. Pro další kryptograficky zabezpečené generování náhodných čísel, pomocí [rand_s –](rand-s.md) nebo funkce deklarované v C++ standardní knihovny v [ \<náhodné >](../../standard-library/random.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,7 +51,7 @@ int rand( void );
 
 **Rand** funkce vrací pseudonáhodných celé číslo v rozsahu 0 až **RAND_MAX** (32767). Použití [srand –](srand.md) funkce pro generátor pseudonáhodných čísel před voláním **rand**.
 
-**Rand** funkce generuje posloupnost dobře známé a není vhodná pro použití jako kryptografické funkce. Pro další kryptograficky zabezpečené generování náhodných čísel, pomocí [rand_s –](rand-s.md) nebo funkce deklarované ve standardní knihovně jazyka C++ v [ \<náhodné >](../../standard-library/random.md). Informace o čem je problém s **rand** a jak \<náhodné > řeší tyto nedostatky, najdete v tomto videu s názvem [rand považovat za škodlivých](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
+**Rand** funkce generuje posloupnost dobře známé a není vhodná pro použití jako kryptografické funkce. Pro další kryptograficky zabezpečené generování náhodných čísel, pomocí [rand_s –](rand-s.md) nebo funkce deklarované v C++ standardní knihovny v [ \<náhodné >](../../standard-library/random.md). Informace o čem je problém s **rand** a jak \<náhodné > řeší tyto nedostatky, najdete v tomto videu s názvem [rand považovat za škodlivých](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
 
 ## <a name="requirements"></a>Požadavky
 

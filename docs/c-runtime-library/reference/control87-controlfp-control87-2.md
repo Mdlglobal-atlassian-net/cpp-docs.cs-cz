@@ -39,11 +39,11 @@ helpviewer_keywords:
 - control87_2 function
 ms.assetid: 0d09729d-d9a0-43d6-864c-43ff25e7e0c5
 ms.openlocfilehash: e2ebfdc80a451ebf02563f78a62dd08618f92bcd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340414"
 ---
 # <a name="control87-controlfp-control872"></a>_control87, _controlfp, __control87_2
 
@@ -90,7 +90,7 @@ Pro **__control87_2**, vrácená hodnota je 1, což označuje úspěch.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Control87** funkce získá a nastaví slovo ovládacího prvku s plovoucí desetinnou čárkou. Slovo ovládacího prvku s plovoucí desetinnou čárkou umožňuje programu změnit přesnost, zaokrouhlení a režimy nekonečna matematickém s plovoucí desetinnou čárkou balíčku, v závislosti na platformě. Můžete také použít **_control87** k maskování nebo odmaskování výjimek s plovoucí desetinnou čárkou. Pokud hodnota *maska* se rovná 0, **_control87** získá slovo s plovoucí desetinnou čárkou ovládacího prvku. Pokud *maska* je nenulová, je nastavena nová hodnota pro řídicí slovo: pro všechny bity, který je na (to je rovno 1) v *maska*, odpovídající bit v *nové* slouží k aktualizaci ovládacího prvku aplikace Word. Jinými slovy **fpcntrl** = ((**fpcntrl** & ~*maska*) &#124; (*nové* & *maska*)) kde **fpcntrl** je slovo s plovoucí desetinnou čárkou ovládacího prvku.
+**_Control87** funkce získá a nastaví slovo ovládacího prvku s plovoucí desetinnou čárkou. Slovo ovládacího prvku s plovoucí desetinnou čárkou umožňuje programu změnit přesnost, zaokrouhlení a režimy nekonečna matematickém s plovoucí desetinnou čárkou balíčku, v závislosti na platformě. Můžete také použít **_control87** k maskování nebo odmaskování výjimek s plovoucí desetinnou čárkou. Pokud hodnota *maska* se rovná 0, **_control87** získá slovo s plovoucí desetinnou čárkou ovládacího prvku. Pokud *maska* je nenulová, je nastavena nová hodnota pro řídicí slovo: Pro některé bit, který je na (to je rovno 1) v *maska*, odpovídající bit v *nové* slouží k aktualizaci řídicího slova. Jinými slovy **fpcntrl** = ((**fpcntrl** & ~*maska*) &#124; (*nové* & *maska*)) kde **fpcntrl** je slovo s plovoucí desetinnou čárkou ovládacího prvku.
 
 > [!NOTE]
 > Ve výchozím nastavení běhové knihovny maskují všechny výjimky s plovoucí desetinnou čárkou.
@@ -144,7 +144,7 @@ Pro **_MCW_EM** maska zrušení masky nastaví výjimku, která povoluje výjimk
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_control87 –**, **_controlfp**, **_control87_2**|\<float.h >|
+|**_control87**, **_controlfp**, **_control87_2**|\<float.h >|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

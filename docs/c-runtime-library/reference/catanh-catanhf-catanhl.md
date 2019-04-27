@@ -31,11 +31,11 @@ helpviewer_keywords:
 - catanhl function
 ms.assetid: 1b6021cb-647a-41b4-9d7f-919cc8b57b86
 ms.openlocfilehash: 8c71d4e44de72b54fd334fc2464ca221f36855a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340960"
 ---
 # <a name="catanh-catanhf-catanhl"></a>catanh catanhf, catanhl
 
@@ -72,13 +72,13 @@ Inverzní hyperbolický tangens *z*, v radiánech. Výsledkem je bez vazby na sk
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **catanh** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **catanh** vždy převezme a vrátí **_Dcomplex** hodnotu.
+Protože C++ umožňuje přetížení, můžete volat přetížení **catanh** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **catanh** vždy převezme a vrátí **_Dcomplex** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
-|**catanh**, **catanhf**, **catanhl**|\<complex.h>|\<ccomplex >|
+|**catanh**, **catanhf**, **catanhl**|\<complex.h>|\<ccomplex>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

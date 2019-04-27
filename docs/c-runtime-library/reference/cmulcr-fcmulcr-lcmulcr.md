@@ -1,5 +1,5 @@
 ---
-title: _Cmulcr _FCmulcr, _LCmulcr
+title: _Cmulcr, _FCmulcr, _LCmulcr
 ms.date: 03/30/2018
 apiname:
 - _Cmulcr
@@ -30,13 +30,13 @@ helpviewer_keywords:
 - _FCmulcr function
 - _LCmulcr function
 ms.openlocfilehash: ce45b1b1081faba18d8532d3a55d1be877cf84e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340401"
 ---
-# <a name="cmulcr-fcmulcr-lcmulcr"></a>_Cmulcr _FCmulcr, _LCmulcr
+# <a name="cmulcr-fcmulcr-lcmulcr"></a>_Cmulcr, _FCmulcr, _LCmulcr
 
 Vynásobí komplexního čísla s plovoucí desetinnou čárkou číslem.
 
@@ -77,7 +77,7 @@ Tyto funkce jsou specifické pro společnost Microsoft. Typy **_Dcomplex**, **_F
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [_Cbuild, _FCbuild, _LCbuild](cbuild-fcbuild-lcbuild.md)<br/>
 [_Cmulcc, _FCmulcc, _LCmulcc](cmulcc-fcmulcc-lcmulcc.md)<br/>
-[Norm a normf, norml](norm-normf-norml1.md)<br/>
+[norm, normf, norml](norm-normf-norml1.md)<br/>
 [cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
 [conj, conjf, conjl](conj-conjf-conjl.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>

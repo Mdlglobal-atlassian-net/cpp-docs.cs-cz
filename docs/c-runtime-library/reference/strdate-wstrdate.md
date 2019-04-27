@@ -34,11 +34,11 @@ helpviewer_keywords:
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
 ms.openlocfilehash: 4dc2ea7f25e644c9bf7a4ddca4a625991f37d912
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353960"
 ---
 # <a name="strdate-wstrdate"></a>_strdate, _wstrdate
 
@@ -88,13 +88,13 @@ V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají nověj
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tstrdate –**|**_strdate**|**_strdate**|**_wstrdate**|
+|**_tstrdate**|**_strdate**|**_strdate**|**_wstrdate**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_strdate**|\<Time.h >|
+|**_strdate**|\<time.h>|
 |**_wstrdate**|\<Time.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

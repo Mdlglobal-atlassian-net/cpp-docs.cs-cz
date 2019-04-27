@@ -21,15 +21,15 @@ helpviewer_keywords:
 - cputs function
 ms.assetid: 0c2a7d4e-623a-4cb2-a0f9-1900c05bac08
 ms.openlocfilehash: 39a65feb50e896fe324ab3cdf64963393649aa22
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339728"
 ---
 # <a name="cputs"></a>cputs
 
-Tato funkce POSIX je zastaralá. Použít splňující podmínky ISO C++ [_cputs –](cputs-cputws.md) místo.
+Tato funkce POSIX je zastaralá. Použít bitovou kopii ISO C++ splňující podmínky [_cputs –](cputs-cputws.md) místo.
 
 > [!IMPORTANT]
 > Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

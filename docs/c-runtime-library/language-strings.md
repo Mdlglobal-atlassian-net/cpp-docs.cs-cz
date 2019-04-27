@@ -7,15 +7,15 @@ helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
 ms.openlocfilehash: 143f06a0cf22265734d6d77f8fca4efd5ac3031b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62343144"
 ---
 # <a name="language-strings"></a>Řetězce jazyků
 
-[Setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) a [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) funkce můžete použít rozhraní API Windows NLS podporované jazyky operačních systémů, které nepoužívají znakovou stránku kódování Unicode. Seznam podporovaných jazyků podle verze operačního systému najdete v tématu [chování produktu dodatku A:](https://msdn.microsoft.com/library/cc233982.aspx) v [MS-LCID]: odkaz na identifikátor pro kód jazyka Windows (LCID). Řetězec jazyka může nabývat hodnoty v **jazyk** a **značku jazyka** sloupce seznam podporovaných jazyků. Příklad kódu, který vytvoří výčet dostupných názvů národního prostředí a souvisejících hodnot najdete v tématu [NLS: Ukázka rozhraní API na základě názvu](/windows/desktop/intl/nls--name-based-apis-sample).
+[Setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) a [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) funkce můžete použít rozhraní API Windows NLS podporované jazyky operačních systémů, které nepoužívají znakovou stránku kódování Unicode. Seznam podporovaných jazyků podle verze operačního systému najdete v tématu [dodatku A: Chování produktu](https://msdn.microsoft.com/library/cc233982.aspx) v [MS-LCID]: Odkaz na identifikátor (LCID) kód jazyka Windows. Řetězec jazyka může nabývat hodnoty v **jazyk** a **značku jazyka** sloupce seznam podporovaných jazyků. Příklad kódu, který vytvoří výčet dostupných názvů národního prostředí a souvisejících hodnot najdete v tématu [NLS: Ukázka rozhraní API na základě názvu](/windows/desktop/intl/nls--name-based-apis-sample).
 
 ## <a name="additional-supported-language-strings"></a>Další podporovaných řetězců jazyka
 
@@ -23,71 +23,71 @@ Implementace knihovny runtime jazyka Microsoft C podporuje také tyto řetězce 
 
 |Řetězec jazyka|Odpovídající místní název|
 |---------------------|----------------------------|
-|American|en US|
-|americkou angličtinu|en US|
-|americkou angličtinu|en US|
+|American|en-US|
+|americkou angličtinu|en-US|
+|americkou angličtinu|en-US|
 |Australský|cs AU|
 |Belgie|nl-BE|
 |Kanadský|cs CA|
 |CHH|zh-HK|
-|Kuba|zh-SG|
+|chi|zh-SG|
 |Čínština|zh|
-|čínština hongkong|zh-HK|
+|chinese-hongkong|zh-HK|
 |čínština (zjednodušená)|zh-CN|
 |Čínština – Singapur|zh-SG|
 |čínština (tradiční)|zh-TW|
 |Holandština – Belgie|nl-BE|
-|americká angličtina|en US|
+|americká angličtina|en-US|
 |Angličtina – Austrálie|cs AU|
-|Angličtina – belize|en BZ|
+|Angličtina – belize|en-BZ|
 |angličtina, může|cs CA|
-|Angličtina – Karibská oblast|cs-029|
+|Angličtina – Karibská oblast|en-029|
 |vyžadovat angličtina|cs IE|
 |Angličtina – Jamajka|cs JM|
-|nz – angličtina|cs NZ|
-|Angličtina – Jihoafrická republika|cs ZA|
-|Angličtina – trinidad a tobago|cs TT|
+|english-nz|cs NZ|
+|Angličtina – Jihoafrická republika|en-ZA|
+|Angličtina – trinidad a tobago|en-TT|
 |angličtina – Velká Británie|en-GB|
-|Angličtina-USA|en US|
-|Angličtina usa|en US|
-|Francouzština – Belgie|FR-být|
+|Angličtina-USA|en-US|
+|Angličtina usa|en-US|
+|Francouzština – Belgie|fr-BE|
 |French-Canadian|fr-CA|
-|Francouzština – Lucembursko|FR LU|
+|Francouzština – Lucembursko|fr-LU|
 |Francouzština – Švýcarsko|FR-CH|
 |Němčina – Rakousko|de-AT|
-|Němčina – lichtenstein|de-LI|
+|german-lichtenstein|de-LI|
 |Němčina – Lucembursko|de-LU|
-|Němčina – Švýcarsko|de-CH|
+|german-swiss|de-CH|
 |Irština – angličtina|cs IE|
-|Italština – Švýcarsko|IT CH|
+|italian-swiss|it-CH|
 |Norština|Ne|
 |Norština – bokmal|nb-NO|
-|norština – nynorsk|nn – ne|
+|norwegian-nynorsk|nn – ne|
 |Brazilská portugalština|pt-BR|
-|Španělština – argentina|ES AR|
-|Španělština – Bolívie|ES BO|
-|Španělština – chile|ES-CL|
-|Španělština – Kolumbie|ES CO|
-|Španělština – Kostarika|ES CR|
-|Španělština – Dominikánská republika|Proveďte ES|
-|Španělština – Ekvádor|ES ES|
-|Španělština – el salvador|ES SV|
-|Španělština – guatemala|ES-GT|
-|Španělština – honduras|ES HN|
+|Španělština – argentina|es-AR|
+|Španělština – Bolívie|es-BO|
+|Španělština – chile|es-CL|
+|Španělština – Kolumbie|es-CO|
+|Španělština – Kostarika|es-CR|
+|Španělština – Dominikánská republika|es-DO|
+|Španělština – Ekvádor|es-EC|
+|Španělština – el salvador|es-SV|
+|Španělština – guatemala|es-GT|
+|spanish-honduras|es-HN|
 |Španělština – Mexiko|es-MX|
 |španělština – moderní|es-ES|
-|Španělština – Nikaragua|ES-NI|
-|Španělština – panama|ES PA|
-|Španělština – paraguay|ES-PY|
-|Španělština – peru|ES-PE|
-|Španělština – Portoriko|ES – žádost o přijetí změn|
-|Španělština – uruguay|ES UY|
-|Španělština – venezuela|ES – odebrat|
-|Švédština – Finsko|sv-FI|
+|Španělština – Nikaragua|es-NI|
+|Španělština – panama|es-PA|
+|Španělština – paraguay|es-PY|
+|Španělština – peru|es-PE|
+|Španělština – Portoriko|es-PR|
+|Španělština – uruguay|es-UY|
+|Španělština – venezuela|es-VE|
+|swedish-finland|sv-FI|
 |Švýcarsko|de-CH|
 |Spojené království|en-GB|
-|USA|en US|
-|USA|en US|
+|USA|en-US|
+|usa|en-US|
 
 ## <a name="see-also"></a>Viz také:
 

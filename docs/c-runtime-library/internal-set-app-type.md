@@ -20,11 +20,11 @@ helpviewer_keywords:
 - __set_app_type
 ms.assetid: f0ac0f4d-70e6-4e96-9e43-eb9d1515490c
 ms.openlocfilehash: f42ac1c173637cf85d727adf25ebf9079f4cb37c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62343150"
 ---
 # <a name="setapptype"></a>__set_app_type
 
@@ -43,7 +43,7 @@ void __set_app_type (
 *at*<br/>
 Hodnota, která určuje typ aplikace. Možné hodnoty jsou:
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |_UNKNOWN_APP|Neznámý typ aplikace.|
 |_CONSOLE_APP|Aplikace konzoly (příkazového řádku).|

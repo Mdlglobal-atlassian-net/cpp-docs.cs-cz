@@ -26,11 +26,11 @@ helpviewer_keywords:
 - chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
 ms.openlocfilehash: 5c60f3aa08a405eb9a83dc6ba8636cd316a32925
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340323"
 ---
 # <a name="chsize"></a>_chsize
 
@@ -47,7 +47,7 @@ int _chsize(
 
 ### <a name="parameters"></a>Parametry
 
-*FD*<br/>
+*fd*<br/>
 Popisovač souboru odkazující na otevřený soubor.
 
 *Velikost*<br/>
@@ -69,7 +69,7 @@ Tato funkce ověřuje své parametry. Pokud *velikost* je menší než nula nebo
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_chsize**|\<IO.h >|\<errno.h>|
+|**_chsize**|\<io.h>|\<errno.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

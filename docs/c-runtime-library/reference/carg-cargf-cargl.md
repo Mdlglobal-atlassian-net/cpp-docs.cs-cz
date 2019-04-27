@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cargl function
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
 ms.openlocfilehash: 584732594cd9ca9579907986e3dc3b5f3dbf52c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340713"
 ---
 # <a name="carg-cargf-cargl"></a>carg cargf, cargl
 
@@ -72,20 +72,20 @@ Argument (označované také jako fáze) *z*. Výsledkem je v intervalu [-pí, +
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **carg** trvají **_Fcomplex** nebo **_Lcomplex** hodnoty a návrat **float** nebo **dlouhé** **double** hodnoty. V programu jazyka C **carg** vždy přijímá **_Dcomplex** hodnotu a vrátí **double** hodnotu.
+Protože C++ umožňuje přetížení, můžete volat přetížení **carg** trvají **_Fcomplex** nebo **_Lcomplex** hodnoty a návrat **float**nebo **dlouhé** **double** hodnoty. V programu jazyka C **carg** vždy přijímá **_Dcomplex** hodnotu a vrátí **double** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
-|**carg**, **cargf**, **cargl**|\<complex.h>|\<ccomplex >|
+|**carg**, **cargf**, **cargl**|\<complex.h>|\<ccomplex>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
-[Norm a normf, norml](norm-normf-norml1.md)<br/>
+[norm, normf, norml](norm-normf-norml1.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>
 [cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
 [conj, conjf, conjl](conj-conjf-conjl.md)<br/>

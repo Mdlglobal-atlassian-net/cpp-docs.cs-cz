@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
 ms.openlocfilehash: 8341b775df3b9cbaececdfaa1f17e075d7c7416c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340582"
 ---
 # <a name="cgetss-cgetwss"></a>_cgets_s, _cgetws_s
 
@@ -88,9 +88,9 @@ Vrácená hodnota je nula v případě úspěchu; v opačném případě chybu k
 
 |*Vyrovnávací paměti*|*numberOfElements*|*pSizeRead*|Vrátí|Obsah *vyrovnávací paměti*|
 |--------------|------------------------|-----------------|------------|--------------------------|
-|**HODNOTU NULL**|Všechny|Všechny|**EINVAL**|není k dispozici|
+|**NULL**|Všechny|Všechny|**EINVAL**|není k dispozici|
 |Není **NULL**|nula|Všechny|**EINVAL**|Nezměněno|
-|Není **NULL**|Všechny|**HODNOTU NULL**|**EINVAL**|řetězec nulové délky|
+|Není **NULL**|Všechny|**NULL**|**EINVAL**|řetězec nulové délky|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -110,7 +110,7 @@ V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šab
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_cgets_s**|\<conio.h >|
+|**_cgets_s**|\<conio.h>|
 |**_cgetws_s**|\<conio.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

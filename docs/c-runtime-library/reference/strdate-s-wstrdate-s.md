@@ -34,11 +34,11 @@ helpviewer_keywords:
 - _wstrdate_s function
 ms.assetid: d41d8ea9-e5ce-40d4-864e-1ac29b455991
 ms.openlocfilehash: 85c9ab7dcad68f3aa4832236461cd38b07d4ae44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353986"
 ---
 # <a name="strdates-wstrdates"></a>_strdate_s, _wstrdate_s
 
@@ -81,7 +81,7 @@ Nula v případě úspěchu. Vrácená hodnota je kód chyby, pokud dojde k selh
 
 |*Vyrovnávací paměti*|*numberOfElements*|Vrátí|Obsah *vyrovnávací paměti*|
 |--------------|------------------------|------------|--------------------------|
-|**HODNOTU NULL**|(žádné)|**EINVAL**|Nezměněno|
+|**NULL**|(žádné)|**EINVAL**|Nezměněno|
 |Není **NULL** (odkazuje na platnou vyrovnávací paměť)|0|**EINVAL**|Nezměněno|
 |Není **NULL** (odkazuje na platnou vyrovnávací paměť)|0 < *numberOfElements* < 9|**EINVAL**|Prázdný řetězec|
 |Není **NULL** (odkazuje na platnou vyrovnávací paměť)|*numberOfElements* > = 9|0|Aktuální datum ve formátu podle poznámky|
@@ -106,15 +106,15 @@ V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šab
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tstrdate_s –**|**_strdate_s**|**_strdate_s**|**_wstrdate_s**|
+|**_tstrdate_s**|**_strdate_s**|**_strdate_s**|**_wstrdate_s**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_strdate**|\<Time.h >|
+|**_strdate**|\<time.h>|
 |**_wstrdate**|\<Time.h > nebo \<wchar.h >|
-|**_strdate_s**|\<Time.h >|
+|**_strdate_s**|\<time.h>|
 
 ## <a name="example"></a>Příklad
 

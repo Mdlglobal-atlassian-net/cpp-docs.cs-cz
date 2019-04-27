@@ -13,11 +13,11 @@ helpviewer_keywords:
 - USEDENTRY constant
 ms.assetid: 26f658e6-6846-4a4e-9984-262cfe392770
 ms.openlocfilehash: a8aa11173dcc76089a916d19fd319e0d317724ce
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62343657"
 ---
 # <a name="freeentry-usedentry"></a>_FREEENTRY, _USEDENTRY
 

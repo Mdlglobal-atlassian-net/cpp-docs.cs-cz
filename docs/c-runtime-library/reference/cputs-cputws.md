@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
 ms.openlocfilehash: 81d2364cd1fc409ca3267bc416bd3cbd16c62a15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340234"
 ---
 # <a name="cputs-cputws"></a>_cputs, _cputws
 
@@ -74,14 +74,14 @@ Tato funkce ověřuje svůj parametr. Pokud *str* je **NULL**, je vyvolána obsl
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_cputts**|**_cputs –**|**_cputs –**|**_cputws**|
+|**_cputts**|**_cputs**|**_cputs**|**_cputws**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_cputs –**|\<conio.h >|\<errno.h>|
-|**_cputws**|\<conio.h >|\<errno.h>|
+|**_cputs**|\<conio.h>|\<errno.h>|
+|**_cputws**|\<conio.h>|\<errno.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
 ms.openlocfilehash: faea008903136e8abdc39297672b31800ada796d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340011"
 ---
 # <a name="close"></a>_close
 
@@ -44,7 +44,7 @@ int _close(
 
 ### <a name="parameters"></a>Parametry
 
-*FD*<br/>
+*fd*<br/>
 Popisovač souboru odkazující na otevřený soubor.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -63,7 +63,7 @@ Tato funkce ověřuje své parametry. Pokud *fd* je popisovače souborů, je vyv
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_close**|\<IO.h >|\<errno.h>|
+|**_close**|\<io.h>|\<errno.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - CrtDoForAllClientObjects function
 ms.assetid: d0fdb835-3cdc-45f1-9a21-54208e8df248
 ms.openlocfilehash: 86268bd9ac49c8ea27f715404236bcb9291f5d8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339712"
 ---
 # <a name="crtdoforallclientobjects"></a>_CrtDoForAllClientObjects
 
@@ -48,7 +48,7 @@ void _CrtDoForAllClientObjects(
 *pfn*<br/>
 Ukazatel na funkci zpětného volání funkce poskytované aplikací. První parametr této funkce se odkazuje na data. Druhý parametr není ukazatel kontextu, který se předává do volání k **_CrtDoForAllClientObjects**.
 
-*Kontext*<br/>
+*context*<br/>
 Ukazatel na kontext, který poskytované aplikací má předat do funkce poskytované aplikací.
 
 ## <a name="remarks"></a>Poznámky
@@ -69,7 +69,7 @@ Pokud *pfn* je **NULL**, je vyvolána obslužná rutina neplatného parametru, j
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-**Knihovny:** ladicí verze knihoven universal C Runtime pouze.
+**Knihovny:** Ladicí verze knihoven universal C Runtime pouze.
 
 ## <a name="see-also"></a>Viz také:
 

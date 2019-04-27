@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
 ms.openlocfilehash: 18757ecd30f399ca3d1fdb77e8bff8213a265e74
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348572"
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos cacosf, cacosl
 
@@ -65,13 +65,13 @@ Arkus kosinus *z*, v radiánech. Výsledkem je bez vazby na ose imaginární a v
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **cacos** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **cacos** vždy převezme a vrátí **_Dcomplex** hodnotu.
+Protože C++ umožňuje přetížení, můžete volat přetížení **cacos** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **cacos** vždy převezme a vrátí **_Dcomplex** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
-|**cacos**, **cacosf**, **cacosl**|\<complex.h>|\<ccomplex >|
+|**cacos**, **cacosf**, **cacosl**|\<complex.h>|\<ccomplex>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

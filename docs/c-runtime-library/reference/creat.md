@@ -21,12 +21,12 @@ helpviewer_keywords:
 - creat function
 ms.assetid: 3aa6f0cc-5ae6-40d5-be94-0ab6f53c0c5b
 ms.openlocfilehash: 6cbb255ca2c484f4543eb9b0651d000c516da919
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340271"
 ---
 # <a name="creat"></a>creat
 
-Tato funkce POSIX je zastaralá. Použít splňující podmínky ISO C++ [_creat –](creat-wcreat.md) místo.
+Tato funkce POSIX je zastaralá. Použít bitovou kopii ISO C++ splňující podmínky [_creat –](creat-wcreat.md) místo.
