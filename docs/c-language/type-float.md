@@ -15,11 +15,11 @@ helpviewer_keywords:
 - lengths, exponent
 ms.assetid: 706e332b-17a0-4a30-b7d8-5d6cd372524b
 ms.openlocfilehash: 61bfd094801165e0c3e41e5de6fcbfb0c5e59504
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346324"
 ---
 # <a name="type-float"></a>Float – typ
 
@@ -29,7 +29,7 @@ Proměnné můžete deklarovat jako float nebo double, v závislosti na potřeb�
 
 ### <a name="floating-point-types"></a>Typy s plovoucí desetinnou čárkou
 
-|Typ|Významných číslic|Počet bajtů|
+|Type|Významných číslic|Počet bajtů|
 |----------|------------------------|---------------------|
 |float|6 - 7|4|
 |double|15 - 16|8|
@@ -40,7 +40,7 @@ V následující tabulce jsou uvedeny počet bitů, které jsou přiděleny mant
 
 ### <a name="lengths-of-exponents-and-mantissas"></a>Délky exponenty a mantisy
 
-|Typ|Délka exponentu|Délka mantisa|
+|Type|Délka exponentu|Délka mantisa|
 |----------|---------------------|---------------------|
 |float|8 bitů|23 bitů|
 |double|11 bits|52 bitů|
@@ -55,7 +55,7 @@ V následující tabulce jsou uvedeny minimální a maximální hodnoty, že mů
 
 ### <a name="range-of-floating-point-types"></a>Rozsah typů s plovoucí desetinnou čárkou
 
-|Typ|Minimální hodnota|Maximální hodnota|
+|Type|Minimální hodnota|Maximální hodnota|
 |----------|-------------------|-------------------|
 |float|1.175494351 E - 38|3.402823466 E + 38|
 |double|2.2250738585072014 E - 308|1.7976931348623158 E + 308|

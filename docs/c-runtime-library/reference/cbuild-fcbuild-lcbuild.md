@@ -30,11 +30,11 @@ helpviewer_keywords:
 - _FCbuild function
 - _LCbuild function
 ms.openlocfilehash: 5565c87a3cccd1715a1357f417238587f3fba4d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340463"
 ---
 # <a name="cbuild-fcbuild-lcbuild"></a>_Cbuild _FCbuild, _LCbuild
 
@@ -53,7 +53,7 @@ _Lcomplex _LCbuild( long double real, long double imaginary );
 *Real*<br/>
 Skutečné součástí komplexní čísla k vytvoření.
 
-*pomyslná*<br/>
+*imaginary*<br/>
 Imaginární části komplexního čísla k vytvoření.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -68,7 +68,7 @@ A **_Dcomplex**, **_Fcomplex**, nebo **_Lcomplex** struktura, která představuj
 
 |Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
-|**_Cbuild**, **_FCbuild**, **_LCbuild**|\<complex.h>|\<ccomplex >|
+|**_Cbuild**, **_FCbuild**, **_LCbuild**|\<complex.h>|\<ccomplex>|
 
 Tyto funkce jsou specifické pro společnost Microsoft. Typy **_Dcomplex**, **_Fcomplex**, a **_Lcomplex** jsou specifické pro společnost Microsoft – ekvivalenty k neimplementovaná C99 nativní typy **double _Complex** , **float _Complex**, a **long double _Complex**v uvedeném pořadí. Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
@@ -77,7 +77,7 @@ Tyto funkce jsou specifické pro společnost Microsoft. Typy **_Dcomplex**, **_F
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [_Cmulcc, _FCmulcc, _LCmulcc](cmulcc-fcmulcc-lcmulcc.md)<br/>
 [_Cmulcr, _FCmulcr, _LCmulcr](cmulcr-fcmulcr-lcmulcr.md)<br/>
-[Norm a normf, norml](norm-normf-norml1.md)<br/>
+[norm, normf, norml](norm-normf-norml1.md)<br/>
 [cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
 [conj, conjf, conjl](conj-conjf-conjl.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>

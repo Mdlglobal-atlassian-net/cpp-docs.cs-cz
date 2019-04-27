@@ -23,11 +23,11 @@ helpviewer_keywords:
 - _CrtMemDifference function
 ms.assetid: 0f327278-b551-482f-958b-76941f796ba4
 ms.openlocfilehash: f2c6306bf604737d0ace142674b21845a08e2dee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339465"
 ---
 # <a name="crtmemdifference"></a>_CrtMemDifference
 
@@ -78,7 +78,7 @@ Další informace o funkcích stavu haldy a **_CrtMemState** struktury, přečt�
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-**Knihovny:** ladicí verze [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md) pouze.
+**Knihovny:** Ladicí verze [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md) pouze.
 
 ## <a name="see-also"></a>Viz také:
 

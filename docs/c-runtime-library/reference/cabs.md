@@ -29,11 +29,11 @@ helpviewer_keywords:
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
 ms.openlocfilehash: 3e95b6f568ce66b8e9e5483bd1dcbcfaa7af3d28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341064"
 ---
 # <a name="cabs"></a>_cabs
 
@@ -64,7 +64,7 @@ Komplexní čísla.
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_cabs**|\<Math.h >|
+|**_cabs**|\<math.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

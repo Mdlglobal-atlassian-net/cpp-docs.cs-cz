@@ -22,11 +22,11 @@ helpviewer_keywords:
 - sys_nerr global variable
 ms.assetid: adbec641-6d91-4e19-8398-9a34046bd369
 ms.openlocfilehash: 57d04fe5867c6a969b6aeca40f26b18b5dcd7a61
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62344041"
 ---
 # <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno, _doserrno, _sys_errlist, and _sys_nerr
 
@@ -59,7 +59,7 @@ Knihovna matematických rutin nastavuje `errno` voláním [_matherr](../c-runtim
 
 Všechny `errno` hodnoty v následující tabulce jsou předdefinované konstanty v \<errno.h >, a jsou kompatibilní se systémem UNIX. Pouze `ERANGE`, `EILSEQ`, a `EDOM` zadávají se ve standardu ISO C99.
 
-|Konstanta|Zpráva o systémové chybě|Hodnota|
+|Konstanta|Zpráva o systémové chybě|Value|
 |--------------|--------------------------|-----------|
 |`EPERM`|Operace není povolena.|1|
 |`ENOENT`|Žádný odpovídající soubor nebo adresář|2|

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _CrtMemCheckpoint function
 ms.assetid: f1bacbaa-5a0c-498a-ac7a-b6131d83dfbc
 ms.openlocfilehash: ee435ba3e9e40795280dee0f97feaad32c8b0fc3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339868"
 ---
 # <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
 
@@ -44,7 +44,7 @@ void _CrtMemCheckpoint(
 
 ### <a name="parameters"></a>Parametry
 
-*Stav*<br/>
+*state*<br/>
 Ukazatel na **_CrtMemState** struktura, která se zaplnit kontrolním bodem paměti.
 
 ## <a name="remarks"></a>Poznámky
@@ -65,7 +65,7 @@ Pokud *stavu* je **NULL**, je vyvolána obslužná rutina neplatného parametru,
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-**Knihovny:** verze ladění knihoven pouze UCRT.
+**Knihovny:** Ladění verzí pouze UCRT.
 
 ## <a name="see-also"></a>Viz také:
 
