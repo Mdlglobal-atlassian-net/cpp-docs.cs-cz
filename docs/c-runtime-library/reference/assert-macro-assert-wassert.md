@@ -29,11 +29,11 @@ helpviewer_keywords:
 - assert macro
 ms.assetid: a9ca031a-648b-47a6-bdf1-65fc7399dd40
 ms.openlocfilehash: 7ac299213ba3de878f7cf2dc99b44c45273bc3b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341363"
 ---
 # <a name="assert-macro-assert-wassert"></a>assert Macro, _assert, _wassert
 
@@ -81,7 +81,7 @@ Diagnostické zprávy je vytištěna v širokých znaků. Proto bude fungovat po
 
 Cíl diagnostické zprávy závisí na typu aplikace, volá se, rutina. Konzolové aplikace vždy zobrazí zpráva prostřednictvím **stderr**. V aplikaci založené na Windows **vyhodnocení** volá Windows [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) funkce k vytvoření okna zprávy pro zobrazení zprávy spolu s **OK** tlačítko. Když uživatel klepne **OK**, program okamžitě přeruší.
 
-Když je aplikace spojena s ladicí verzí knihovny run-time **vyhodnocení** vytvoří okno se zprávou s tři tlačítka: **přerušit**, **opakujte**a **Ignorovat**. Pokud uživatel klikne **přerušit**, program okamžitě přeruší. Pokud uživatel klikne **opakujte**, se nazývá ladicího programu a uživatele můžete ladit program, pokud je povoleno ladění just-in-time (JIT). Pokud uživatel klikne **Ignorovat**, **vyhodnocení** pokračovat normální spuštění: vytvoření okna se zprávou s **OK** tlačítko. Všimněte si, že kliknete na **Ignorovat** při existenci chybového stavu může vést k nedefinovanému chování.
+Když je aplikace spojena s ladicí verzí knihovny run-time **vyhodnocení** vytvoří okno se zprávou s tři tlačítka: **Přerušit**, **opakujte**, a **Ignorovat**. Pokud uživatel klikne **přerušit**, program okamžitě přeruší. Pokud uživatel klikne **opakujte**, se nazývá ladicího programu a uživatele můžete ladit program, pokud je povoleno ladění just-in-time (JIT). Pokud uživatel klikne **Ignorovat**, **vyhodnocení** pokračovat normální spuštění: vytvoření okna se zprávou s **OK** tlačítko. Všimněte si, že kliknete na **Ignorovat** při existenci chybového stavu může vést k nedefinovanému chování.
 
 Další informace o ladění CRT naleznete v tématu [techniky ladění CRT](/visualstudio/debugger/crt-debugging-techniques).
 
@@ -93,7 +93,7 @@ Další informace o ladění CRT naleznete v tématu [techniky ladění CRT](/vi
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**Assert –**, **_wassert**|\<assert.h>|
+|**assert**, **_wassert**|\<assert.h>|
 
 Podpis metody **_assert** funkce není k dispozici v hlavičkovém souboru. Podpis metody **_wassert** funkce je dostupná jenom při **NDEBUG** makro není definované.
 

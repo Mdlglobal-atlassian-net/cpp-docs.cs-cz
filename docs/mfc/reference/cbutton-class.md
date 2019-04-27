@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
 ms.openlocfilehash: b1a02d995594f5e079359151167ac970a3d1ab37
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348689"
 ---
 # <a name="cbutton-class"></a>CButton – třída
 
@@ -321,7 +321,7 @@ int GetCheck() const;
 
 Návratová hodnota z ovládacího prvku tlačítko vytvořené pomocí BS_AUTOCHECKBOX, BS_AUTORADIOBUTTON, BS_AUTO3STATE, BS_CHECKBOX, BS_RADIOBUTTON nebo BS_3STATE style je jedním z následujících hodnot:
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |BST_UNCHECKED|Stav tlačítka není zaškrtnuta.|
 |BST_CHECKED|Kontroluje se stav tlačítka.|
@@ -699,7 +699,7 @@ void SetCheck(int nCheck);
 *nZkontrolujte*<br/>
 Určuje stav kontroly. Tento parametr může být jeden z následujících akcí:
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |BST_UNCHECKED|Nastavte stav tlačítka nezaškrtnuté.|
 |BST_CHECKED|Nastavte stav tlačítka zkontrolovat.|

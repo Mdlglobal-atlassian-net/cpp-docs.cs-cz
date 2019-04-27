@@ -23,11 +23,11 @@ helpviewer_keywords:
 - recalloc_dbg function
 ms.assetid: 43c3e9b2-be6d-4508-9b0f-3220c8a47ca3
 ms.openlocfilehash: e2782492d3338b5b548db0153b6123fb82ff5e72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357681"
 ---
 # <a name="recallocdbg"></a>_recalloc_dbg
 
@@ -65,7 +65,7 @@ Informace o typech bloku přidělení a způsob jejich použití naleznete v té
 *Název souboru*<br/>
 Ukazatel na název zdrojového souboru, který požadovanou operaci přidělení nebo **NULL**.
 
-*Číslo řádku*<br/>
+*linenumber*<br/>
 Číslo řádku ve zdrojovém souboru, kde byla požadovaná operace rozdělení nebo **NULL**.
 
 *Filename* a *linenumber* parametry jsou k dispozici pouze při **_recalloc_dbg –** explicitně volána nebo [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) byla definována konstanta preprocesoru.

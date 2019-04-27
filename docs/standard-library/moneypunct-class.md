@@ -47,11 +47,11 @@ helpviewer_keywords:
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
 ms.openlocfilehash: 750b61100f7e3fe15851fffbedeb5b60d4d7034f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349118"
 ---
 # <a name="moneypunct-class"></a>moneypunct – třída
 
@@ -82,14 +82,14 @@ Statický objekt const intl uchovává hodnotu parametru šablony *Intl*.
 
 |Konstruktor|Popis|
 |-|-|
-|[moneypunct –](#moneypunct)|Konstruktor objektů typu `moneypunct`.|
+|[moneypunct](#moneypunct)|Konstruktor objektů typu `moneypunct`.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Název typu|Popis|
 |-|-|
 |[char_type](#char_type)|Typ, který se používá k popisu znaku používaného národním prostředním.|
-|[STRING_TYPE](#string_type)|Typ, který popisuje řetězec obsahující znaky typu `CharType`.|
+|[string_type](#string_type)|Typ, který popisuje řetězec obsahující znaky typu `CharType`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
@@ -100,8 +100,8 @@ Statický objekt const intl uchovává hodnotu parametru šablony *Intl*.
 |[do_curr_symbol](#do_curr_symbol)|Chráněná virtuální členská funkce, která vrátí sekvenci prvků specifickou pro národní prostředí, která se použije jako symbol měny.|
 |[do_decimal_point](#do_decimal_point)|Chráněná virtuální členská funkce, která je volána k vrácení sekvence prvků specifických pro národní prostředí, která se použije jako symbol desetinné čárky.|
 |[do_frac_digits](#do_frac_digits)|Chráněná virtuální členská funkce, která vrátí počet číslic specifický pro národní prostředí, který se zobrazí vpravo od každé desetinné čárky.|
-|[do_grouping –](#do_grouping)|Chráněná virtuální členská funkce, která vrátí pravidlo specifické pro národní prostředí k určení způsobu seskupení číslic vlevo od desetinné čárky.|
-|[do_neg_format –](#do_neg_format)|Chráněná virtuální členská funkce, která je volána k vrácení pravidla specifického pro národní prostředí pro formátování výstupů se zápornými částkami.|
+|[do_grouping](#do_grouping)|Chráněná virtuální členská funkce, která vrátí pravidlo specifické pro národní prostředí k určení způsobu seskupení číslic vlevo od desetinné čárky.|
+|[do_neg_format](#do_neg_format)|Chráněná virtuální členská funkce, která je volána k vrácení pravidla specifického pro národní prostředí pro formátování výstupů se zápornými částkami.|
 |[do_negative_sign](#do_negative_sign)|Chráněná virtuální členská funkce, která je volána k vrácení sekvence prvků specifických pro národní prostředí, která se použije jako symbol záporného znaménka.|
 |[do_pos_format](#do_pos_format)|Chráněná virtuální členská funkce, která je volána k vrácení pravidla specifického pro národní prostředí pro formátování výstupů s kladnými částkami.|
 |[do_positive_sign](#do_positive_sign)|Chráněná virtuální členská funkce, která je volána k vrácení sekvence prvků specifických pro národní prostředí, která se použije jako symbol kladného znaménka.|
@@ -112,7 +112,7 @@ Statický objekt const intl uchovává hodnotu parametru šablony *Intl*.
 |[negative_sign](#negative_sign)|Vrátí sekvenci prvků pro specifické národní prostředí, která se použije jako symbol záporného znaménka.|
 |[pos_format](#pos_format)|Vrátí pravidlo specifické pro národní prostředí pro formátování výstupů s kladnými částkami.|
 |[positive_sign](#positive_sign)|Vrátí sekvenci prvků pro specifické národní prostředí, která se použije jako symbol kladného znaménka.|
-|[thousands_sep –](#thousands_sep)|Vrátí sekvenci prvků pro specifické národní prostředí, která se použije jako symbol oddělovače tisíců.|
+|[thousands_sep](#thousands_sep)|Vrátí sekvenci prvků pro specifické národní prostředí, která se použije jako symbol oddělovače tisíců.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -532,9 +532,9 @@ Možné hodnoty parametru *_Refs* parametrů a jejich význam:
 
 - 0: Životnost objektu se spravuje přes národní prostředí, které je obsahují.
 
-- 1: doba života objektu je nutné ručně spravovat.
+- 1: Doba života objektu se musí spravovat ručně.
 
-- \> 1: tyto hodnoty nejsou definovány.
+- \> 1: Tyto hodnoty nejsou definovány.
 
 Žádné přímé příklady je to možné, protože destruktor je chráněn.
 
@@ -760,7 +760,7 @@ French_France.1252 international positive sign:
 French_France.1252 domestic positive sign:
 ```
 
-## <a name="string_type"></a>  moneypunct::STRING_TYPE
+## <a name="string_type"></a>  moneypunct::string_type
 
 Typ, který popisuje řetězec obsahující znaky typu **CharType**.
 
