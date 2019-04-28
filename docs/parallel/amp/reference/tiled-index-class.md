@@ -20,11 +20,11 @@ helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
 ms.openlocfilehash: dd8b6d7a0e174c88ad229da2d08a9ec8a11fb0aa
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352187"
 ---
 # <a name="tiledindex-class"></a>tiled_index – třída
 
@@ -73,7 +73,7 @@ Velikost nejméně významného rozměru.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[get_tile_extent](#tiled_index__get_tile_extent)|Vrátí [rozsahu](extent-class.md) objekt, který obsahuje hodnoty `tiled_index` argumenty šablony `_Dim0`, `_Dim1`, a `_Dim2`.|
 
@@ -94,7 +94,7 @@ Velikost nejméně významného rozměru.
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[tile_extent](#tile_extent)|Získá [rozsahu](extent-class.md) objekt, který obsahuje hodnoty `tiled_index` argumenty šablony `tiled_index` argumenty šablony `_Dim0`, `_Dim1`, a `_Dim2`.|
 

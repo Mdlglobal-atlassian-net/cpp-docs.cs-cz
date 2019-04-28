@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
 ms.openlocfilehash: f92a72e36fecbb39e57cbdf9583047aca0c1ebd5
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58773733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338243"
 ---
 # <a name="cmousemanager-class"></a>CMouseManager Class
 
@@ -43,7 +43,7 @@ class CMouseManager : public CObject
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMouseManager::AddView](#addview)|Přidá `CView` objektu **přizpůsobení** dialogové okno. **Přizpůsobení** dialogové okno umožňuje uživateli přidružit dvakrát klikněte na příkaz pro každou z uvedených zobrazení.|
 |[CMouseManager::GetViewDblClickCommand](#getviewdblclickcommand)|Vrátí příkaz, který se spouští při poklepání uvnitř zadaná zobrazení.|

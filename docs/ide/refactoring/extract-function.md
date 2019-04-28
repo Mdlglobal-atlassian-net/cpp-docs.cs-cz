@@ -3,19 +3,19 @@ title: Extrahovat funkci
 ms.date: 11/16/2016
 ms.assetid: e31d1249-9705-4511-acbd-9f6fe73bdf2d
 ms.openlocfilehash: ec3b9a0aeaef9e418b457bafdfb9bb1bbd2edffc
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349336"
 ---
 # <a name="extract-function"></a>Extrahovat funkci
 
-**Co:** umožňuje zapnout fragment kódu do samostatné funkce.
+**Co:** Umožňuje vypnout fragment kódu do samostatné funkce.
 
-**Kdy:** máte fragment existující kód v některé funkce, které je potřeba volat z jiné funkci.
+**Kdy:** Máte fragment existující kód v některé funkce, které je potřeba volat z jiné funkci.
 
-**Důvod, proč:** vám může kopírovat/vložit tento kód, ale které by mohlo dojít k duplikaci.  Lepším řešením je refaktorovat tohoto fragmentu do své vlastní funkce, které je možné vyvolat bez omezení dalších funkcí.
+**Proč:** Vám může kopírovat/vložit tento kód, ale které by mohlo dojít k duplikaci.  Lepším řešením je refaktorovat tohoto fragmentu do své vlastní funkce, které je možné vyvolat bez omezení dalších funkcí.
 
 **Jak:**
 

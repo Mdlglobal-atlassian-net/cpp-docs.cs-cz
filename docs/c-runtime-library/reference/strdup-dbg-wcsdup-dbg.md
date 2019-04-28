@@ -32,11 +32,11 @@ helpviewer_keywords:
 - wcsdup_dbg function
 ms.assetid: 681db70c-d124-43ab-b83e-5eeea9035097
 ms.openlocfilehash: 3092c27df1e39c7b719f6e7037efa202d29c9e81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353875"
 ---
 # <a name="strdupdbg-wcsdupdbg"></a>_strdup_dbg, _wcsdup_dbg
 
@@ -70,7 +70,7 @@ Požadovaný typ bloku paměti: **_CLIENT_BLOCK** nebo **_NORMAL_BLOCK**.
 *Název souboru*<br/>
 Ukazatel na název zdrojového souboru, který požadovanou operaci přidělení nebo **NULL**.
 
-*Číslo řádku*<br/>
+*linenumber*<br/>
 Číslo řádku ve zdrojovém souboru, kde byla požadována operace přidělení nebo **NULL**.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -93,7 +93,7 @@ Chcete-li explicitně volat tyto funkce ve většině případů nepotřebujete.
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_strdup_dbg –**, **_wcsdup_dbg –**|\<crtdbg.h>|
+|**_strdup_dbg**, **_wcsdup_dbg**|\<crtdbg.h>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

@@ -6,11 +6,11 @@ ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
 ms.openlocfilehash: 69591186550a915edb49889617740e454817f154
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351953"
 ---
 # <a name="visual-c-language-conformance"></a>Shoda jazyka Visual C++
 
@@ -315,7 +315,7 @@ Následující není paralelizovaná v současné době:
 
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)<br/>
-[Vylepšení shody C++ v sadě Visual Studio](cpp-conformance-improvements.md)<br/>
+[Vylepšení shody C++ se sadou Visual Studio](cpp-conformance-improvements.md)<br/>
 [Co je nového v aplikaci Visual C++ v sadě Visual Studio](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [Historie změn Visual C++ 2003 – 2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [Novinky Visual C++ 2003–2015](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>

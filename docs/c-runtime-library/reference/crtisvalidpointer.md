@@ -23,11 +23,11 @@ helpviewer_keywords:
 - _CrtIsValidPointer function
 ms.assetid: 91c35590-ea5e-450f-a15d-ad8d62ade1fa
 ms.openlocfilehash: 64197d460cdb7dd26d22196c08151be09df48573
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339322"
 ---
 # <a name="crtisvalidpointer"></a>_CrtIsValidPointer
 
@@ -45,13 +45,13 @@ int _CrtIsValidPointer(
 
 ### <a name="parameters"></a>Parametry
 
-*Adresa*<br/>
+*address*<br/>
 Odkazuje na začátku rozsahu paměti pro testování platnosti.
 
 *Velikost*<br/>
 Velikost zadaná paměťová rozsahu (v bajtech).
 
-*Přístup*<br/>
+*access*<br/>
 Usnadnění přístupu pro čtení a zápis k určení rozsahu paměti.
 
 ## <a name="return-value"></a>Návratová hodnota

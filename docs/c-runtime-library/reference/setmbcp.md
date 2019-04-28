@@ -25,11 +25,11 @@ helpviewer_keywords:
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
 ms.openlocfilehash: c1f4967baa5fda68a7df33bcd08935dca23fab16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356456"
 ---
 # <a name="setmbcp"></a>_setmbcp
 
@@ -45,7 +45,7 @@ int _setmbcp(
 
 ### <a name="parameters"></a>Parametry
 
-*znaková stránka*<br/>
+*codepage*<br/>
 Nové nastavení stránky kód pro vícebajtové rutiny nezávislý na národním prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -82,7 +82,7 @@ Kromě toho všechny rutiny knihovny run-time, které přijímají vícebajtové
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_setmbcp**|\<Mbctype.h >|
+|**_setmbcp**|\<mbctype.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

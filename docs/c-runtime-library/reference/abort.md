@@ -23,11 +23,11 @@ helpviewer_keywords:
 - abort function
 - processes, aborting
 ms.openlocfilehash: d8cb190e36a64e8bd8cfcb75bc9a19c2a394fc48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62342195"
 ---
 # <a name="abort"></a>abort
 
@@ -48,7 +48,7 @@ void abort( void );
 
 ## <a name="remarks"></a>Poznámky
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Ve výchozím nastavení, když je aplikace sestavena s běhovou ladicí knihovnou **přerušit** rutina zobrazí chybovou zprávu před `SIGABRT` je vyvolána. Pro aplikace konzoly spuštěné v režimu konzoly, je zpráva odeslána `STDERR`. Aplikace klasické pracovní plochy Windows a aplikace konzoly spuštěné v režimu zobrazení v okně zobrazí zpráva v okně se zprávou. Chcete-li potlačit tuto zprávu, použijte [_set_abort_behavior](set-abort-behavior.md) zrušte `_WRITE_ABORT_MSG` příznak. Zobrazená zpráva závisí na verzi běhového prostředí. Pro aplikace vytvořené pomocí nejnovější verze aplikace Visual C++ zpráva vypadá takto:
 

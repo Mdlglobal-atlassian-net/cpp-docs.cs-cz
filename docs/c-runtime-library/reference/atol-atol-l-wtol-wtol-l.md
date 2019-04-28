@@ -44,11 +44,11 @@ helpviewer_keywords:
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
 ms.openlocfilehash: 486b6dc3bdfbbaf4b7becadde76768a0bb1c7c00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347805"
 ---
 # <a name="atol-atoll-wtol-wtoll"></a>atol, _atol_l, _wtol, _wtol_l
 
@@ -95,7 +95,7 @@ Vstupní řetězec je posloupnost znaků, které lze interpretovat jako hodnotu 
 
 *Str* argument **atol –** má následující formát:
 
-> [*prázdné znaky*] [*přihlašování*] [*číslic*]]
+> [*whitespace*] [*sign*] [*digits*]]
 
 A *prázdné znaky* se skládá ze znaků mezera nebo tabulátor, které jsou ignorovány; *přihlašování* je buď plus (+) nebo minus (-); a *číslic* je jeden nebo více číslic.
 
@@ -107,15 +107,15 @@ Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že pou�
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tstol –**|**Atol –**|**Atol –**|**_wtol**|
-|**_ttol –**|**Atol –**|**Atol –**|**_wtol**|
+|**_tstol**|**atol**|**atol**|**_wtol**|
+|**_ttol**|**atol**|**atol**|**_wtol**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutiny|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**Atol –**|\<stdlib.h>|
-|**_atol_l –**, **_wtol –**, **_wtol_l –**|\<stdlib.h > a \<wchar.h >|
+|**atol**|\<stdlib.h>|
+|**_atol_l**, **_wtol**, **_wtol_l**|\<stdlib.h > a \<wchar.h >|
 
 ## <a name="example"></a>Příklad
 

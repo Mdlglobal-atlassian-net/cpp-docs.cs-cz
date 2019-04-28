@@ -34,11 +34,11 @@ helpviewer_keywords:
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
 ms.openlocfilehash: 0d0d9a25b70746174a66abbe088b297a5d9a0942
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357457"
 ---
 # <a name="rmdir-wrmdir"></a>_rmdir, _wrmdir
 
@@ -82,13 +82,13 @@ Další informace o těchto a dalších návratových kódech naleznete v témat
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_trmdir –**|**_rmdir**|**_rmdir**|**_wrmdir**|
+|**_trmdir**|**_rmdir**|**_rmdir**|**_wrmdir**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_rmdir**|\<Direct.h >|
+|**_rmdir**|\<direct.h>|
 |**_wrmdir**|\<Direct.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

@@ -30,11 +30,11 @@ helpviewer_keywords:
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
 ms.openlocfilehash: 20a2ffc37ea666207b9558cb5c282c414cfd4838
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347961"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -66,9 +66,9 @@ Ve výchozím nastavení pokud *x* je menší než -1 nebo větší než 1, **as
 
 |Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|± ∞|**NEPLATNÝ**|**_DOMÉNA**|
-|ROZMEZÍ **QNAN**, **AJÍT**|žádná|**_DOMÉNA**|
-|&#124;x&#124;>1|**NEPLATNÝ**|**_DOMÉNA**|
+|± ∞|**NEPLATNÝ**|**_DOMAIN**|
+|± **QNAN**, **IND**|žádná|**_DOMAIN**|
+|&#124;x&#124;>1|**NEPLATNÝ**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -78,7 +78,7 @@ Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **asin
 
 |Rutina|Požadované záhlaví (C)|Požadované záhlaví (C++)|
 |-------------|---------------------|-|
-|**ASIN**, **asinf –**, **asinl –**|\<Math.h >|\<cmath > nebo \<math.h >|
+|**ASIN**, **asinf –**, **asinl –**|\<math.h>|\<cmath > nebo \<math.h >|
 
 ## <a name="example"></a>Příklad
 
@@ -89,7 +89,7 @@ Další informace najdete v tématu [acos, acosf –, acosl –](acos-acosf-acos
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
-[Cos cosf –, cosl –](cos-cosf-cosl.md)<br/>
+[cos, cosf, cosl](cos-cosf-cosl.md)<br/>
 [_matherr](matherr.md)<br/>
 [sin, sinf, sinl](sin-sinf-sinl.md)<br/>
 [tan, tanf, tanl](tan-tanf-tanl.md)<br/>

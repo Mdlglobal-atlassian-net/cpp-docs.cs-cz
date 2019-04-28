@@ -24,11 +24,11 @@ helpviewer_keywords:
 - quick_exit function
 ms.assetid: ecfbdae6-01c4-45fa-aaeb-b368e1de2a9c
 ms.openlocfilehash: 50f1ee72cce04c2bebc8f7396a2b6fad98301dd7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358031"
 ---
 # <a name="quickexit"></a>quick_exit
 
@@ -44,7 +44,7 @@ __declspec(noreturn) void quick_exit(
 
 ### <a name="parameters"></a>Parametry
 
-*Stav*<br/>
+*status*<br/>
 Stavový kód se vraťte do hostitelského prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota

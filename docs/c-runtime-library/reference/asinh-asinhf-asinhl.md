@@ -28,11 +28,11 @@ helpviewer_keywords:
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
 ms.openlocfilehash: f6100268b77178487b7a7aa1cc3f10ac3ea7e9dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341779"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -60,7 +60,7 @@ Hodnota s plovoucí desetinnou čárkou.
 
 **Asinh –** funkce vrátí hyberbolic inverzní sinus (hyperbolický Arkus sinus) *x*. Tato funkce je platný v doméně s plovoucí desetinnou čárkou. Pokud *x* je tichý NaN, nekonečno, nebo nekonečno, je vrácena stejnou hodnotu.
 
-|Vstup|Výjimka SEH|**_matherr** výjimky|
+|Vstup|Výjimka SEH|**_matherr** Exception|
 |-----------|-------------------|--------------------------|
 |ROZMEZÍ QNAN, AJÍT INF|žádná|žádná|
 
@@ -72,7 +72,7 @@ Při použití jazyka C++, můžete volat přetížení **asinh –** , která p
 
 |Funkce|Požadovaná hlavička C|Požadované hlaviček jazyka C++|
 |--------------|--------------|------------------|
-|**asinh –**, **asinhf –**, **asinhl**|\<Math.h >|\<cmath > nebo \<math.h <|
+|**asinh**, **asinhf**, **asinhl**|\<math.h>|\<cmath > nebo \<math.h <|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

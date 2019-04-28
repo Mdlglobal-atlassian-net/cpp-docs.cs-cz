@@ -16,11 +16,11 @@ helpviewer_keywords:
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
 ms.openlocfilehash: f7663987b2759c762d1f6c1604923478915f5726
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364997"
 ---
 # <a name="vectorltboolgt-class"></a>vektor&lt;bool&gt; třídy
 
@@ -45,14 +45,14 @@ Operace, které se zabývají **bool** typu odpovídají hodnotám v kontejneru 
 |-|-|
 |[const_pointer](#const_pointer)|Typedef pro `const_iterator` , který může sloužit jako konstantní ukazatel na prvek logické hodnoty `vector<bool>`.|
 |[const_reference](#const_reference)|Definice typu **bool**. Po inicializaci nekontroluje aktualizace původní hodnoty.|
-|[Ukazatel](#pointer)|Typedef pro `iterator` , který může sloužit jako ukazatel na prvek logické hodnoty `vector<bool>`.|
+|[pointer](#pointer)|Typedef pro `iterator` , který může sloužit jako ukazatel na prvek logické hodnoty `vector<bool>`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
 |[Převrátit na ose](#flip)|Obrátí všechny bity v `vector<bool>`.|
-|[Prohození](#swap)|Vymění prvky dvou `vector<bool>`s.|
+|[swap](#swap)|Vymění prvky dvou `vector<bool>`s.|
 |[– operátor&#91;&#93;](#op_at)|Vrátí simulovaný odkaz `vector<bool>` prvek na zadané pozici.|
 |`at`|Funguje stejně jako nespecializovaná [vektoru](../standard-library/vector-class.md):: ve funkci, s tím rozdílem, že používá třídu proxy [vektoru\<bool >:: reference](#reference_class). Viz také [operátor&#91;&#93;](#op_at).|
 |`front`|Funguje stejně jako nespecializovaná [vektoru](../standard-library/vector-class.md):: přední funkce, s tím rozdílem, že používá třídu proxy [vektoru\<bool >:: reference](#reference_class). Viz také [operátor&#91;&#93;](#op_at).|
@@ -70,7 +70,7 @@ Operace, které se zabývají **bool** typu odpovídají hodnotám v kontejneru 
 
 **Namespace:** std
 
-## <a name="const_pointer"></a>  vektor\<bool >:: const_pointer
+## <a name="const_pointer"></a>  vector\<bool>::const_pointer
 
 Typ, který popisuje objekt, který může sloužit jako konstantní ukazatel na prvek logické hodnoty sekvence obsažený objektem `vector<bool>` objektu.
 
@@ -359,7 +359,7 @@ The original value of the 2nd element still stored in a bool: false
 The original value of the 3rd element still stored in a bool: false
 ```
 
-## <a name="swap"></a>  vektor\<bool >:: swap
+## <a name="swap"></a>  vector\<bool>::swap
 
 Statická členská funkce, která vyměňuje dva prvky vektorů logické hodnoty ( `vector<bool>`) pomocí serveru proxy třídy [vektoru\<bool >:: reference](#reference_class).
 

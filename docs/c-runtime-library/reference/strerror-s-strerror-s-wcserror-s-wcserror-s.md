@@ -40,11 +40,11 @@ helpviewer_keywords:
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
 ms.openlocfilehash: 00ff9d0df1a78d07eaa509201fb998b30396cc4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353817"
 ---
 # <a name="strerrors-strerrors-wcserrors-wcserrors"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 
@@ -117,7 +117,7 @@ Nula v případě úspěchu, při selhání kód chyby.
 
 |*Vyrovnávací paměti*|*numberOfElements*|*strErrMsg*|Obsah *vyrovnávací paměti*|
 |--------------|------------------------|-----------------|--------------------------|
-|**HODNOTU NULL**|Všechny|Všechny|není k dispozici|
+|**NULL**|Všechny|Všechny|není k dispozici|
 |Všechny|0|Všechny|Nezměněno|
 
 ## <a name="remarks"></a>Poznámky
@@ -152,14 +152,14 @@ Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť hodnotou 0xF
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcserror_s –**|**strerror_s**|**strerror_s**|**_wcserror_s**|
+|**_tcserror_s**|**strerror_s**|**strerror_s**|**_wcserror_s**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strerror_s –**, **_strerror_s –**|\<String.h >|
-|**_wcserror_s –**, **__wcserror_s –**|\<String.h > nebo \<wchar.h >|
+|**strerror_s**, **_strerror_s**|\<string.h>|
+|**_wcserror_s**, **__wcserror_s**|\<String.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
