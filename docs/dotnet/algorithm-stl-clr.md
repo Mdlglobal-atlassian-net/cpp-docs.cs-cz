@@ -142,11 +142,11 @@ helpviewer_keywords:
 - upper_bound function [STL/CLR]
 ms.assetid: ee2718dc-a98d-40b8-8341-593fe7d2ac15
 ms.openlocfilehash: 6011aad0ef86bc0e633687a6d8e017e9b12771c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62350829"
 ---
 # <a name="algorithm-stlclr"></a>algorithm (STL/CLR)
 
@@ -223,7 +223,7 @@ Definuje funkce šablony kontejneru STL/CLR, které provádějí algoritmy.
 |[set_difference (STL/CLR)](#set_difference)|Sjednotí všechny prvky, které patří do jednoho seřazeného zdrojového rozsahu, ale nikoli do druhého seřazeného zdrojového rozsahu, do jednoho seřazeného cílového rozsahu, kde kritérium pořadí může být určeno binárním predikátem.|
 |[set_intersection (STL/CLR)](#set_intersection)|Sjednotí všechny prvky, které náleží do obou seřazených zdrojových rozsahů, do jednoho seřazeného cílového rozsahu, kde kritérium pořadí může být určeno binárním predikátem.|
 |[set_symmetric_difference (STL/CLR)](#set_symmetric_difference)|Sjednotí všechny prvky, které náleží do jednoho, ale nikoli obou seřazených zdrojových rozsahů, do jednoho seřazeného cílového rozsahu, kde kritérium pořadí může být určeno binárním predikátem.|
-|[set_union – (STL/CLR)](#set_union))|Sjednotí všechny prvky, které náleží alespoň do jednoho ze dvou seřazených zdrojových rozsahů, do jednoho seřazeného cílového rozsahu, kde kritérium pořadí může být určeno binárním predikátem.|
+|[set_union (STL/CLR)](#set_union))|Sjednotí všechny prvky, které náleží alespoň do jednoho ze dvou seřazených zdrojových rozsahů, do jednoho seřazeného cílového rozsahu, kde kritérium pořadí může být určeno binárním predikátem.|
 |[sort (STL/CLR)](#sort)|Uspořádá prvky v zadaném rozsahu do nesestupného pořadí nebo podle setřiďovacího kritéria určeného binárním predikátem.|
 |[sort_heap (STL/CLR)](#sort_heap)|Převede haldu na seřazený rozsah.|
 |[stable_partition (STL/CLR)](#stable_partition)|Rozdělí prvky v rozsahu do dvou oddělených sad. Prvky, které splňují unární predikát, jsou umístěny před těmi, které jej nesplňují. Relativní pořadí ekvivalentních prvků je zachováno.|
@@ -550,9 +550,9 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce se chová stejně jako funkce standardní knihovny C++ `inplace_merge` Další informace najdete v tématu [inplace_merge](../standard-library/algorithm-functions.md#inplace_merge).
+Tato funkce se chová stejně jako C++ funkce standardní knihovny `inplace_merge` Další informace najdete v tématu [inplace_merge](../standard-library/algorithm-functions.md#inplace_merge).
 
-## <a name="iter_swap"></a> iter_swap – (STL/CLR)
+## <a name="iter_swap"></a> iter_swap (STL/CLR)
 
 Vymění dvě hodnoty odkazované dvojicí zadaných iterátorů.
 
@@ -930,7 +930,7 @@ template<class _InIt, class _OutIt, class _Pr> inline
 
 Tato funkce se chová stejně jako funkce standardní knihovny C++ `remove_copy_if`. Další informace najdete v tématu [remove_copy_if](../standard-library/algorithm-functions.md#remove_copy_if).
 
-## <a name="remove_if"></a> remove_if – (STL/CLR)
+## <a name="remove_if"></a> remove_if (STL/CLR)
 
 Odstraní prvky, které splňují predikát, z daného rozsahu bez narušení pořadí zbývajících prvků a vrácení konce nového rozsahu, který neobsahuje zadanou hodnotu.
 
@@ -1146,7 +1146,7 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 Tato funkce se chová stejně jako funkce standardní knihovny C++ `set_intersection`. Další informace najdete v tématu [set_intersection –](../standard-library/algorithm-functions.md#set_intersection).
 
-## <a name="set_symmetric_difference"></a> set_symmetric_difference – (STL/CLR)
+## <a name="set_symmetric_difference"></a> set_symmetric_difference (STL/CLR)
 
 Sjednotí všechny prvky, které náleží do jednoho, ale nikoli obou seřazených zdrojových rozsahů, do jednoho seřazeného cílového rozsahu, kde kritérium pořadí může být určeno binárním predikátem.
 

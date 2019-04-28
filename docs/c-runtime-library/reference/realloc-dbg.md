@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _realloc_dbg function
 ms.assetid: 7c3cb780-51ed-4d9c-9929-cdde606d846a
 ms.openlocfilehash: 9b30dfd6fbae9a4831ff53e7896aeb995657da03
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357743"
 ---
 # <a name="reallocdbg"></a>_realloc_dbg
 
@@ -62,7 +62,7 @@ Požadovaný typ pro reallocated blok: **_CLIENT_BLOCK** nebo **_NORMAL_BLOCK**.
 *Název souboru*<br/>
 Ukazatel na název zdrojového souboru, který vyžadují **realloc** operace nebo **NULL**.
 
-*Číslo řádku*<br/>
+*linenumber*<br/>
 Číslo řádku ve zdrojovém souboru kde **realloc** operace byla požadována nebo **NULL**.
 
 *Filename* a *linenumber* parametry jsou k dispozici pouze při **_realloc_dbg –** explicitně volána nebo [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) byla definována konstanta preprocesoru.

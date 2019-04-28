@@ -1,17 +1,17 @@
 ---
-title: Stručná referenční dokumentace (C + +/ CX)
+title: Stručná referenční příručka (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: ba457195-26e5-43aa-b99d-24a871e550f4
 ms.openlocfilehash: 0526c9083d177688146926598b79e66ca2f9723c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362332"
 ---
-# <a name="quick-reference-ccx"></a>Stručná referenční dokumentace (C + +/ CX)
+# <a name="quick-reference-ccx"></a>Stručná referenční příručka (C++/CX)
 
-Modul Windows Runtime podporuje aplikace univerzální platformy Windows (UPW), které provést pouze v prostředí pro důvěryhodného operačního systému, použít oprávnění funkce, typy dat a zařízení a jsou distribuovány prostřednictvím Microsoft Store. C + +/ CX zjednodušují psaní aplikací pro Windows Runtime. Tento článek je Stručná referenční příručka; Podrobnější dokumentaci najdete v tématu [systém typů](../cppcx/type-system-c-cx.md).
+Modul Windows Runtime podporuje aplikace univerzální platformy Windows (UPW), které provést pouze v prostředí pro důvěryhodného operačního systému, použít oprávnění funkce, typy dat a zařízení a jsou distribuovány prostřednictvím Microsoft Store. C++/CX zjednodušují psaní aplikací pro Windows Runtime. Tento článek je Stručná referenční příručka; Podrobnější dokumentaci najdete v tématu [systém typů](../cppcx/type-system-c-cx.md).
 
 Při sestavování v příkazovém řádku použít **/ZW** – možnost kompilátoru k sestavení aplikace pro UPW nebo součásti prostředí Windows Runtime. Pro přístup k prostředí Windows Runtime deklarace, které jsou definovány v souborech modulu Windows Runtime metadata (.winmd), zadejte `#using` směrnice nebo **/FU** – možnost kompilátoru. Když vytvoříte projekt pro aplikace pro UPW, Visual Studio ve výchozím nastavení nastaví tyto možnosti a přidá odkazy na všechny knihovny Windows Runtime.
 
@@ -19,7 +19,7 @@ Při sestavování v příkazovém řádku použít **/ZW** – možnost kompil�
 
 |Koncept|Standardní C++|C++/CX|Poznámky|
 |-------------|--------------------|------------------------------------------------------------------|-------------|
-|Základní typy|Základní typy C++.|C + +/ CX základní typy, které implementují základní typy, které jsou definovány v modulu Windows Runtime.|`default` Obsahuje obor názvů C + +/ CX integrované, základní typy. Kompilátor implicitně mapuje C + +/ CX základní typy Standardní typy jazyka C++.<br /><br /> `Platform` Řadu oborů názvů obsahuje typy, které implementují základní typy modulu Windows Runtime.|
+|Základní typy|Základní typy C++.|C++/CX základní typy, které implementují základní typy, které jsou definovány v modulu Windows Runtime.|`default` Obor názvů obsahuje C++/CX integrované, základní typy. Kompilátor implicitně mapuje C++/CX základních typů standardu C++ typy.<br /><br /> `Platform` Řadu oborů názvů obsahuje typy, které implementují základní typy modulu Windows Runtime.|
 ||`bool`|`bool`|Hodnotu typu Boolean. 8 bitů.|
 ||`__wchar_t`|`char16`|16bitové nečíselná hodnota, která představuje bod kódu Unicode (UTF-16).|
 ||`short`<br /><br /> `unsigned short`|`int16`<br /><br /> `uint16`|16bitové celé číslo se znaménkem.<br /><br /> 16bitové celé číslo bez znaménka.|

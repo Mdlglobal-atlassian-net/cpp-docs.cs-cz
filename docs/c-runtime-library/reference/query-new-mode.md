@@ -25,11 +25,11 @@ helpviewer_keywords:
 - _query_new_mode function
 ms.assetid: e185c5f9-b73b-4257-8eff-b47648374768
 ms.openlocfilehash: 327f22c847793316bd126721b4a66846d7da84dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358070"
 ---
 # <a name="querynewmode"></a>_query_new_mode
 
@@ -49,13 +49,13 @@ Vrátí aktuální nový režim obslužné rutiny, konkrétně 0 nebo 1, pro **m
 
 ## <a name="remarks"></a>Poznámky
 
-C++ **_query_new_mode –** funkce vrátí celé číslo, které označuje nový režim obslužné rutiny, který je nastaven podle jazyka C++ [_set_new_mode](set-new-mode.md) fungovat [malloc](malloc.md). Nový režim obslužné rutiny Určuje, zda je při selhání přidělení paměti, **malloc** je volat nové rutiny obsluhy úmluvu [_set_new_handler](set-new-handler.md). Ve výchozím nastavení **malloc** nevolá nové rutiny obsluhy při selhání. Můžete použít **_set_new_mode** tak přepsat toto chování, které při selhání **malloc** volá nové rutiny obsluhy ve stejném způsobu, jakým **nové** operátor provede, když se nepodaří přidělení paměti. Další informace najdete v diskuzi o [nové a odstranit operátory](../../cpp/new-and-delete-operators.md) v referenci jazyka C++.
+C++ **_Query_new_mode –** funkce vrátí celé číslo, které označuje nový režim obslužné rutiny, kterou je nastavit C++ [_set_new_mode](set-new-mode.md) fungovat [malloc](malloc.md). Nový režim obslužné rutiny Určuje, zda je při selhání přidělení paměti, **malloc** je volat nové rutiny obsluhy úmluvu [_set_new_handler](set-new-handler.md). Ve výchozím nastavení **malloc** nevolá nové rutiny obsluhy při selhání. Můžete použít **_set_new_mode** tak přepsat toto chování, které při selhání **malloc** volá nové rutiny obsluhy ve stejném způsobu, jakým **nové** operátor provede, když se nepodaří přidělení paměti. Další informace najdete v diskuzi o [nové a odstranit operátory](../../cpp/new-and-delete-operators.md) v referenci jazyka C++.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_query_new_mode**|\<New.h >|
+|**_query_new_mode**|\<new.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

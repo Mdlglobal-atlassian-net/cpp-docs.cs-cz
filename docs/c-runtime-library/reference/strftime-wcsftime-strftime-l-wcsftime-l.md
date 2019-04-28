@@ -35,11 +35,11 @@ helpviewer_keywords:
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
 ms.openlocfilehash: 932a7827ef61a5e111f86f8bc44291827843b76e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353836"
 ---
 # <a name="strftime-wcsftime-strftimel-wcsftimel"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
@@ -81,7 +81,7 @@ size_t _wcsftime_l(
 *strDest*<br/>
 Výstupní řetězec.
 
-*Parametr MaxSize*<br/>
+*maxsize*<br/>
 Velikost *strDest* vyrovnávací paměti, měřeno v znaků (**char** nebo **wchar_t**).
 
 *Formát*<br/>
@@ -111,7 +111,7 @@ Tato funkce ověřuje své parametry. Pokud *strDest*, *formátu*, nebo *timeptr
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsftime –**|**STRFTIME**|**STRFTIME**|**wcsftime**|
+|**_tcsftime**|**strftime**|**strftime**|**wcsftime**|
 
 *Formátu* argument se skládá z jednoho nebo více kódů; protože v **printf**, formátování kódy jsou uvozená znakem procent (**%**). Znaky, které nezačínají **%** zkopírují beze změny do *strDest*. **LC_TIME** kategorie aktuálního národního prostředí má vliv na výstupní formátování **strftime**. (Další informace o **LC_TIME**, naleznete v tématu [setlocale](setlocale-wsetlocale.md).) **Strftime** a **wcsftime** aktuálně nastavené pomocí funkce národního prostředí. **_Strftime_l –** a **_wcsftime_l –** verze těchto funkcí jsou identické, s tím rozdílem, že trvat národního prostředí jako parametr a použít namísto v současné době nastavené národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
@@ -162,7 +162,7 @@ Stejně jako **printf** funkce, **#** příznak může předpony žádné formá
 
 |Formátování kódu|Význam|
 |-----------------|-------------|
-|**% #**, **%#A**, **%#b**, **%#B**, **%#g**, **%#G**, **%#h**, **%#n**, **%#p**, **%#t**, **%#u**, **%#w**, **%#X** , **%#z**, **%#Z**, **%#%**|**#** Příznak se ignoruje.|
+|**%#a**, **%#A**, **%#b**, **%#B**, **%#g**, **%#G**, **%#h**, **%#n**, **%#p**, **%#t**, **%#u**, **%#w**, **%#X**, **%#z**, **%#Z**, **%#%**|**#** Příznak se ignoruje.|
 |**%#c**|Dlouhé datum a čas reprezentace, vhodné pro národní prostředí. Příklad: "Úterý, 14 dne 1995, 12:41:29".|
 |**%#x**|Datum (dlouhé) reprezentaci, vhodné pro národní prostředí. Příklad: "Úterý, 14 dne 1995".|
 |**%#d**, **%#D**, **%#e**, **%#F**, **%#H**, **% #I**, **%#j**, **%#m**, **%#M**, **%#r**, **%#R**, **%#S**, **%#T** , **%#U**, **%#V**, **%#W**, **%#y**, **%#Y**|Odeberte počátečních nul nebo mezery (pokud existuje).|
@@ -173,9 +173,9 @@ ISO 8601-týden a na základě týden roku vytvářených **%V**, **%g**, a **%G
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**STRFTIME**|\<Time.h >|
+|**strftime**|\<time.h>|
 |**wcsftime**|\<Time.h > nebo \<wchar.h >|
-|**_strftime_l**|\<Time.h >|
+|**_strftime_l**|\<time.h>|
 |**_wcsftime_l**|\<Time.h > nebo \<wchar.h >|
 
 **_Strftime_l –** a **_wcsftime_l –** funkce jsou specifické pro společnost Microsoft. Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

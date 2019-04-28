@@ -6,11 +6,11 @@ helpviewer_keywords:
 - D2D [MFC]
 ms.assetid: dda36c33-c231-4da6-a62f-72d69a12b6dd
 ms.openlocfilehash: 0793511f09be9dcb37732c4c16bfd2b3038a6cf4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358614"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>Návod: Přidání objektu D2D do projektu MFC
 

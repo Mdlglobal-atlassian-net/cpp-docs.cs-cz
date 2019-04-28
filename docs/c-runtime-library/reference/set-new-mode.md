@@ -25,11 +25,11 @@ helpviewer_keywords:
 - set_new_mode function
 ms.assetid: 4d14039a-e54e-4689-8c70-74a4b9834768
 ms.openlocfilehash: 0228170e4ab5b55b4b061fa61a412766de77a063
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356599"
 ---
 # <a name="setnewmode"></a>_set_new_mode
 
@@ -52,7 +52,7 @@ Vrátí předchozí obslužnou rutinou set režimu pro **malloc**. Návratová h
 
 ## <a name="remarks"></a>Poznámky
 
-C++ **_set_new_mode** funkce nastaví nový režim obslužné rutiny pro [malloc](malloc.md). Nový režim obslužné rutiny Určuje, zda je při selhání, **malloc** je volat nové rutiny obsluhy úmluvu [_set_new_handler](set-new-handler.md). Ve výchozím nastavení **malloc** nevolá nové rutiny obsluhy při selhání přidělení paměti. Toto výchozí chování můžete přepsat tak, aby, když **malloc** selže přidělování paměti, **malloc** volá nové rutiny obsluhy ve stejném způsobu, jakým **nové** operátor Když selže ze stejného důvodu. Další informace najdete v tématu [nové](../../cpp/new-operator-cpp.md) a [odstranit](../../cpp/delete-operator-cpp.md) operátory ve *referenční dokumentace jazyka C++*. Pokud chcete přepsat výchozí nastavení, volání:
+C++ **_Set_new_mode** funkce nastaví nový režim obslužné rutiny pro [malloc](malloc.md). Nový režim obslužné rutiny Určuje, zda je při selhání, **malloc** je volat nové rutiny obsluhy úmluvu [_set_new_handler](set-new-handler.md). Ve výchozím nastavení **malloc** nevolá nové rutiny obsluhy při selhání přidělení paměti. Toto výchozí chování můžete přepsat tak, aby, když **malloc** selže přidělování paměti, **malloc** volá nové rutiny obsluhy ve stejném způsobu, jakým **nové** operátor Když selže ze stejného důvodu. Další informace najdete v tématu [nové](../../cpp/new-operator-cpp.md) a [odstranit](../../cpp/delete-operator-cpp.md) operátory ve *referenční dokumentace jazyka C++*. Pokud chcete přepsat výchozí nastavení, volání:
 
 ```cpp
 _set_new_mode(1);
@@ -66,7 +66,7 @@ Tato funkce ověřuje svůj parametr. Pokud *newhandlermode* je něco jinak než
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_set_new_mode**|\<New.h >|
+|**_set_new_mode**|\<new.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

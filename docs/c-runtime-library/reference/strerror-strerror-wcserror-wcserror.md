@@ -44,11 +44,11 @@ helpviewer_keywords:
 - error messages, getting
 ms.assetid: 27b72255-f627-43c0-8836-bcda8b003e14
 ms.openlocfilehash: 4038fcc29c18e5d73024cbe5688c674e00d1409e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353856"
 ---
 # <a name="strerror-strerror-wcserror-wcserror"></a>strerror, _strerror, _wcserror, __wcserror
 
@@ -85,7 +85,7 @@ Všechny tyto funkce vrátí ukazatel na řetězec chybové zprávy. Následná 
 
 ## <a name="remarks"></a>Poznámky
 
-**Strerror** funkce mapy *errnum* na řetězec chybové zprávy a vrací ukazatel na řetězec. Ani **strerror** ani **_strerror –** ve skutečnosti zprávu nevytiskne: pro, je nutné zavolat výstupní funkci, jako například [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+**Strerror** funkce mapy *errnum* na řetězec chybové zprávy a vrací ukazatel na řetězec. Ani **strerror** ani **_strerror –** ve skutečnosti zprávu nevytiskne: K tomu budete muset zavolat výstupní funkci, jako například [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
@@ -106,15 +106,15 @@ Chcete-li získat chybové řetězce, doporučujeme **strerror** nebo **_wcserro
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcserror –**|**strerror**|**strerror**|**_wcserror**|
+|**_tcserror**|**strerror**|**strerror**|**_wcserror**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strerror**|\<String.h >|
-|**_strerror**|\<String.h >|
-|**_wcserror –**, **__wcserror –**|\<String.h >|
+|**strerror**|\<string.h>|
+|**_strerror**|\<string.h>|
+|**_wcserror**, **__wcserror**|\<string.h>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

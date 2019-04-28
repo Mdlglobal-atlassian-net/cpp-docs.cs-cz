@@ -9,11 +9,11 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
 ms.openlocfilehash: 258266768d3f456fb761a9d5a403a92c502dbe32
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349900"
 ---
 # <a name="c-amp-overview"></a>Přehled produktu C++ AMP
 
@@ -102,7 +102,7 @@ void CppAmpMethod() {
 
 Stejné základní prvky jsou k dispozici, ale jsou použity konstrukce knihovny C++ AMP:
 
-- Data: Pole jazyka C++ lze použít k sestavení tři C++ AMP [array_view](../../parallel/amp/reference/array-view-class.md) objekty. Zadat čtyři hodnoty k vytvoření `array_view` objektu: hodnoty dat, počet rozměrů, typ elementu a délku `array_view` objektu v každém rozměru. Počet rozměrů a typ jsou předány jako parametry typu. Data a délka jsou předány jako parametry konstruktoru. V tomto příkladu je jednorozměrné pole jazyka C++, která je předána do konstruktoru. Počet rozměrů a délka se používají k tvorbě obdélníkového tvaru dat `array_view` objektu a datové hodnoty jsou použity k vyplnění pole. Běhová knihovna také zahrnuje [array – třída](../../parallel/amp/reference/array-class.md), která má podobné rozhraní `array_view` třídy a je popsána dále v tomto článku.
+- Data: Použijete C++ pole k sestavení kompletních tři C++ AMP [array_view](../../parallel/amp/reference/array-view-class.md) objekty. Zadat čtyři hodnoty k vytvoření `array_view` objektu: hodnoty dat, počet rozměrů, typ elementu a délku `array_view` objektu v každém rozměru. Počet rozměrů a typ jsou předány jako parametry typu. Data a délka jsou předány jako parametry konstruktoru. V tomto příkladu je jednorozměrné pole jazyka C++, která je předána do konstruktoru. Počet rozměrů a délka se používají k tvorbě obdélníkového tvaru dat `array_view` objektu a datové hodnoty jsou použity k vyplnění pole. Běhová knihovna také zahrnuje [array – třída](../../parallel/amp/reference/array-class.md), která má podobné rozhraní `array_view` třídy a je popsána dále v tomto článku.
 
 - Iterace: [Parallel_for_each – funkce (C++ AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each) poskytuje mechanismus pro procházení datových prvků, nebo *výpočetní domény*. V tomto příkladu je výpočetní domény určené `sum.extent`. Kód, který chcete spustit je obsažen ve výrazu lambda nebo *funkce jádra*. `restrict(amp)` Označuje, že je použita pouze podmnožina jazyka C++, kterou může knihovna C++ AMP urychlit.
 

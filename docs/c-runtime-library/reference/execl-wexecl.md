@@ -28,11 +28,11 @@ helpviewer_keywords:
 - execl function
 ms.assetid: 81fefb8a-0a06-4221-b2bc-be18e38e89f4
 ms.openlocfilehash: 3d736849f90782425e6e1c1cff04536972318c91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339270"
 ---
 # <a name="execl-wexecl"></a>_execl, _wexecl
 
@@ -63,7 +63,7 @@ intptr_t _wexecl(
 *cmdname*<br/>
 Cesta k souboru, který má být proveden.
 
-*arg0*,... *argn*<br/>
+*arg0*, ... *argn*<br/>
 Seznam ukazatelů na parametry.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -90,7 +90,7 @@ Každá z těchto funkcí načte a spustí nový proces, přičemž předá kaž
 
 |Funkce|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |--------------|---------------------|---------------------|
-|**_execl**|\<Process.h >|\<errno.h>|
+|**_execl**|\<process.h>|\<errno.h>|
 |**_wexecl**|\<Process.h > nebo \<wchar.h >|\<errno.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

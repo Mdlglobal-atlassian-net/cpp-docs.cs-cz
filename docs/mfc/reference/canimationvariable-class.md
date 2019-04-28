@@ -45,11 +45,11 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
 ms.openlocfilehash: 42fd3ddc504e85ba3f69588bee54c6540b628129
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338269"
 ---
 # <a name="canimationvariable-class"></a>Canimationvariable – třída
 
@@ -72,7 +72,7 @@ class CAnimationVariable;
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationVariable::AddTransition](#addtransition)|Přidá přechod.|
 |[CAnimationVariable::ApplyTransitions](#applytransitions)|Přidá přechody ze seznamu interní do scénáře.|
@@ -101,7 +101,7 @@ class CAnimationVariable;
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationVariable::m_dblDefaultValue](#m_dbldefaultvalue)|Určuje výchozí hodnotu, která se šíří do IUIAnimationVariable.|
 |[CAnimationVariable::m_lstTransitions](#m_lsttransitions)|Obsahuje seznam přechody, která animovat tuto proměnnou animace.|

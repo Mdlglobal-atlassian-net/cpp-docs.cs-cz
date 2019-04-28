@@ -32,11 +32,11 @@ helpviewer_keywords:
 - sinhl function
 - hyperbolic functions
 ms.openlocfilehash: 7327809a20569c520aa799690203458d54e30fb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356274"
 ---
 # <a name="sinh-sinhf-sinhl"></a>SINH – sinhf –, sinhl –
 
@@ -66,7 +66,7 @@ long double sinh(long double x);  // C++ only
 
 |Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|ROZMEZÍ QNAN, AJÍT|Žádné|_DOMÉNA|
+|ROZMEZÍ QNAN, AJÍT|Žádné|_DOMAIN|
 |&#124;x&#124; ≥ 7.104760e + 002|OVERFLOW + NEPŘESNÉ|PŘETEČENÍ|
 
 Další informace o návratových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
@@ -79,7 +79,7 @@ Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **sinh
 
 |Rutina|Požadované záhlaví (C)|Požadované záhlaví (C++)|
 |-|-|-|
-|**SINH**, **sinhf –**, **sinhl –**|\<Math.h >|\<cmath > nebo \<math.h >|
+|**sinh**, **sinhf**, **sinhl**|\<math.h>|\<cmath > nebo \<math.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

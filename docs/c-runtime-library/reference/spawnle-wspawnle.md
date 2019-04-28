@@ -32,11 +32,11 @@ helpviewer_keywords:
 - _spawnle function
 ms.assetid: 80308892-2815-49b1-8cca-53894c366f5a
 ms.openlocfilehash: 1caa949fab71a7ebc7731c91871e460869ca9f5b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355286"
 ---
 # <a name="spawnle-wspawnle"></a>_spawnle, _wspawnle
 
@@ -76,7 +76,7 @@ Režim spuštění pro volající proces.
 *cmdname*<br/>
 Cesta k souboru, který má být proveden.
 
-*arg0*, *arg1*,... *argn*<br/>
+*arg0*, *arg1*, ... *argn*<br/>
 Seznam ukazatelů na argumenty. *Arg0* argument je obvykle ukazatel na *cmdname*. Argumenty *arg1* prostřednictvím *argn* jsou ukazatele na znakové řetězce tvořící nový seznam argumentů. Následující *argn*, musí existovat **NULL** ukazatel k označení konce seznamu argumentů.
 
 *envp*<br/>
@@ -106,7 +106,7 @@ Tyto funkce ověřují své parametry. Pokud *cmdname* nebo *arg0* je prázdný 
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_spawnle**|\<Process.h >|
+|**_spawnle**|\<process.h>|
 |**_wspawnle**|\<stdio.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

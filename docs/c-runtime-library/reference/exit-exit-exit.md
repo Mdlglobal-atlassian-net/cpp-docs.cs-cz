@@ -1,5 +1,5 @@
 ---
-title: ukončit, _Exit, _exit
+title: exit, _Exit, _exit
 ms.date: 1/02/2018
 apiname:
 - _exit
@@ -31,13 +31,13 @@ helpviewer_keywords:
 - function calls, terminating
 - process termination, calling
 ms.openlocfilehash: 7b2a22649d779f382bb4055b1e44c14312627ccd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339348"
 ---
-# <a name="exit-exit-exit"></a>ukončit, _Exit, _exit
+# <a name="exit-exit-exit"></a>exit, _Exit, _exit
 
 Ukončí volající proces. **Ukončit** funkce skončí po vyčištění **_exit** a **_Exit** ukončit okamžitě.
 
@@ -60,20 +60,20 @@ void _exit(
 
 ### <a name="parameters"></a>Parametry
 
-*Stav*<br/>
+*status*<br/>
 Ukončovací kód stavu.
 
 ## <a name="remarks"></a>Poznámky
 
 **Ukončit**, **_Exit** a **_exit** funkce ukončí volající proces. **Ukončit** volá funkci pro místní objekty, pak zavolá – v pořadí last-in-first-out (LIFO) – funkce, které jsou registrovány **atexit** a **_onexit**a potom vyprázdní všechny vyrovnávací paměti souborů než proces ukončí. **_Exit** a **_exit** funkce ukončit bez zničení objektů thread local nebo zpracování **atexit** nebo **_onexit**funkce a bez vyprazdňování vyrovnávací paměti datového proudu.
 
-I když **ukončit**, **_Exit** a **_exit** volání nesmí vracet hodnotu, hodnota v *stav* je k dispozici do hostitelského prostředí nebo čeká volajícího procesu, pokud nějaký existuje – po ukončení procesu. Obvykle, nastaví volajícího *stav* hodnotu 0 udávající normální ukončení nebo na jinou hodnotu udávající chybu. *Stav* hodnota není k dispozici k příkazu batch operačního systému **ERRORLEVEL** a je reprezentována jednou ze dvou konstant: **EXIT_SUCCESS**, která představuje hodnotu 0 nebo **EXIT_FAILURE**, která představuje hodnotu 1.
+I když **ukončit**, **_Exit** a **_exit** volání nesmí vracet hodnotu, hodnota v *stav* je k dispozici do hostitelského prostředí nebo čeká volajícího procesu, pokud nějaký existuje – po ukončení procesu. Obvykle, nastaví volajícího *stav* hodnotu 0 udávající normální ukončení nebo na jinou hodnotu udávající chybu. *Stav* hodnota není k dispozici k příkazu batch operačního systému **ERRORLEVEL** a je reprezentována jednou ze dvou konstant: **EXIT_SUCCESS**, která představuje hodnotu 0, nebo **EXIT_FAILURE**, která představuje hodnotu 1.
 
 **Ukončit**, **_Exit**, **_exit**, **quick_exit**, **_cexit –**, a **_c_exit –** funkce se chovají následovně.
 
 |Funkce|Popis|
 |--------------|-----------------|
-|**ukončení**|Provádí kompletní postupy ukončení knihovny jazyka C, ukončí proces a poskytuje zadaným stavovým kódem do hostitelského prostředí.|
+|**exit**|Provádí kompletní postupy ukončení knihovny jazyka C, ukončí proces a poskytuje zadaným stavovým kódem do hostitelského prostředí.|
 |**_Exit**|Provádí minimální postupy ukončení knihovny jazyka C, ukončí proces a poskytuje zadaným stavovým kódem do hostitelského prostředí.|
 |**_exit**|Provádí minimální postupy ukončení knihovny jazyka C, ukončí proces a poskytuje zadaným stavovým kódem do hostitelského prostředí.|
 |**quick_exit**|Provádí rychlé postupy ukončení knihovny jazyka C, ukončí proces a poskytuje zadaným stavovým kódem do hostitelského prostředí.|
@@ -97,7 +97,7 @@ Nepoužívejte **DLL_PROCESS_ATTACH** volat **ukončit** z **DllMain**. Pro ukon
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**Ukončete**, **_Exit**, **_exit**|\<Process.h > nebo \<stdlib.h >|
+|**exit**, **_Exit**, **_exit**|\<Process.h > nebo \<stdlib.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

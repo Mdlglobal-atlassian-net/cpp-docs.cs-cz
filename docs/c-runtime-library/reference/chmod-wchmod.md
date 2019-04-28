@@ -30,11 +30,11 @@ helpviewer_keywords:
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
 ms.openlocfilehash: 278ee1e6dda9e153b55676ce5c0ca389f383efd1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348468"
 ---
 # <a name="chmod-wchmod"></a>_chmod, _wchmod
 
@@ -67,7 +67,7 @@ Tyto funkce vrátí 0, pokud na nastavení oprávnění se úspěšně změnil. 
 |-|-|
 | **\_S\_IREAD** | Povoleno jen čtení. |
 | **\_S\_IWRITE** | Zápis povolen. (V podstatě povoluje čtení a zápis.) |
-| **\_S\_IREAD** &AMP;#124;  **\_S\_IWRITE** | Čtení a zápis povolen. |
+| **\_S\_IREAD** &#124; **\_S\_IWRITE** | Čtení a zápis povolen. |
 
 Když jsou uvedeny oba konstanty, jsou spojeny s bitový operátor or (**\|**). Pokud tento parametr není zadaný oprávnění k zápisu, soubor je jen pro čtení. Všimněte si, že všechny soubory budou vždy číst; není možné poskytnout oprávnění jen pro zápis. Proto režimy **_S_IWRITE** a **_S_IREAD** \| **_S_IWRITE** jsou ekvivalentní.
 
@@ -79,13 +79,13 @@ Tato funkce ověřuje své parametry. Pokud *pmode* není kombinaci některou z 
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tchmod**|**_chmod –**|**_chmod –**|**_wchmod**|
+|**_tchmod**|**_chmod**|**_chmod**|**_wchmod**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_chmod –**|\<IO.h >|\<SYS/Types.h >, \<sys/stat.h >, \<errno.h >|
+|**_chmod**|\<io.h>|\<SYS/Types.h >, \<sys/stat.h >, \<errno.h >|
 |**_wchmod**|\<IO.h > nebo \<wchar.h >|\<SYS/Types.h >, \<sys/stat.h >, \<errno.h >|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

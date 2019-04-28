@@ -24,11 +24,11 @@ helpviewer_keywords:
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
 ms.openlocfilehash: 7be81dec7fba80a273d635cbd30b96b09928bc66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356443"
 ---
 # <a name="setterminate-crt"></a>set_terminate (CRT)
 
@@ -51,7 +51,7 @@ Vrací ukazatel na funkci předchozí registrovaných **set_terminate** tak, aby
 
 ## <a name="remarks"></a>Poznámky
 
-**Set_terminate** funkce nainstaluje *termFunction* jako funkci volanou třídou **ukončit**. **set_terminate** se používá s zpracování výjimek jazyka C++ a může být volána v libovolném bodě ve svém programu, než je vyvolána výjimka. **Ukončit** volání [přerušit](abort.md) ve výchozím nastavení. Toto výchozí nastavení můžete změnit tak, že zápis ukončení funkce a volání **set_terminate** s názvem funkce jako svůj argument. **Ukončit** volá poslední funkci předána jako argument pro **set_terminate**. Po provedení některé požadované úlohy čištění, *termFunction* by měla ukončit program. Pokud neexistuje (Pokud se vrátí výsledek volajícímu), [přerušit](abort.md) je volána.
+**Set_terminate** funkce nainstaluje *termFunction* jako funkci volanou třídou **ukončit**. **set_terminate** se používá s C++ zpracování výjimek a může být volána v libovolném bodě ve svém programu, než je vyvolána výjimka. **Ukončit** volání [přerušit](abort.md) ve výchozím nastavení. Toto výchozí nastavení můžete změnit tak, že zápis ukončení funkce a volání **set_terminate** s názvem funkce jako svůj argument. **Ukončit** volá poslední funkci předána jako argument pro **set_terminate**. Po provedení některé požadované úlohy čištění, *termFunction* by měla ukončit program. Pokud neexistuje (Pokud se vrátí výsledek volajícímu), [přerušit](abort.md) je volána.
 
 V prostředí s více vlákny ukončení funkce jsou udržovány odděleně pro každé vlákno. Každé nové vlákno je potřeba nainstalovat vlastní funkci terminate. Díky tomu se každé vlákno má na starosti vlastní zpracování ukončení.
 

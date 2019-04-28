@@ -26,11 +26,11 @@ helpviewer_keywords:
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
 ms.openlocfilehash: bc7718503f59c69868a75cac9383286a548fc307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356495"
 ---
 # <a name="setnewhandler"></a>_set_new_handler
 
@@ -53,7 +53,7 @@ Vrací ukazatel na předchozí výjimku zpracování funkcí registrovaných **_
 
 ## <a name="remarks"></a>Poznámky
 
-C++ **_set_new_handler** funkce určuje funkci zpracování výjimek, která získá kontrolu, pokud **nové** operátor selže přidělování paměti. Pokud **nové** selže, systém za běhu automaticky volá funkci zpracování výjimek, který byl předán jako argument **_set_new_handler**. **_Pnh –**, definované v New.h, je ukazatel na funkci, která vrací typ **int** a přebírá argument typu **size_t**. Použití **size_t** k určení množství místa, která bude přidělena.
+C++ **_Set_new_handler** funkce určuje funkci zpracování výjimek, která získá kontrolu, pokud **nové** operátor selže přidělování paměti. Pokud **nové** selže, systém za běhu automaticky volá funkci zpracování výjimek, který byl předán jako argument **_set_new_handler**. **_Pnh –**, definované v New.h, je ukazatel na funkci, která vrací typ **int** a přebírá argument typu **size_t**. Použití **size_t** k určení množství místa, která bude přidělena.
 
 Neexistuje žádný výchozí obslužnou rutinu.
 
@@ -88,7 +88,7 @@ Adresa funkce, která byla naposledy předána můžete uložit **_set_new_handl
    // . . .
 ```
 
-C++ [_set_new_mode](set-new-mode.md) funkce nastaví nový režim obslužné rutiny pro [malloc](malloc.md). Nový režim obslužné rutiny Určuje, zda je při selhání, **malloc** je volat nové rutiny obsluhy úmluvu **_set_new_handler**. Ve výchozím nastavení **malloc** nevolá nové rutiny obsluhy při selhání přidělení paměti. Toto výchozí chování můžete přepsat tak, aby, když **malloc** selže přidělování paměti, **malloc** volá nové rutiny obsluhy ve stejném způsobu, jakým **nové** operátor Když selže ze stejného důvodu. Pokud chcete přepsat výchozí nastavení, volání:
+C++ [_Set_new_mode](set-new-mode.md) funkce nastaví nový režim obslužné rutiny pro [malloc](malloc.md). Nový režim obslužné rutiny Určuje, zda je při selhání, **malloc** je volat nové rutiny obsluhy úmluvu **_set_new_handler**. Ve výchozím nastavení **malloc** nevolá nové rutiny obsluhy při selhání přidělení paměti. Toto výchozí chování můžete přepsat tak, aby, když **malloc** selže přidělování paměti, **malloc** volá nové rutiny obsluhy ve stejném způsobu, jakým **nové** operátor Když selže ze stejného důvodu. Pokud chcete přepsat výchozí nastavení, volání:
 
 ```cpp
 _set_new_mode(1);
@@ -106,7 +106,7 @@ Existuje jeden **_set_new_handler** obslužné rutiny pro všechny dynamicky pro
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_set_new_handler**|\<New.h >|
+|**_set_new_handler**|\<new.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

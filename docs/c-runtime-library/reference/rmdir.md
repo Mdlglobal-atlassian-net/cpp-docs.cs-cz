@@ -21,12 +21,12 @@ helpviewer_keywords:
 - rmdir function
 ms.assetid: 03a0aff4-f66c-42a9-bee9-84c46f994952
 ms.openlocfilehash: 4646999fa577b18f03ac74d5207fb8479dc08f80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357496"
 ---
 # <a name="rmdir"></a>rmdir
 
-Tato funkce POSIX je zastaralá. Použít splňující podmínky ISO C++ [_rmdir –](rmdir-wrmdir.md) místo.
+Tato funkce POSIX je zastaralá. Použít bitovou kopii ISO C++ splňující podmínky [_rmdir –](rmdir-wrmdir.md) místo.

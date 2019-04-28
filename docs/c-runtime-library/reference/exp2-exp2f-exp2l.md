@@ -31,11 +31,11 @@ helpviewer_keywords:
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
 ms.openlocfilehash: 70a3b7eb610556d4a26de7cf0aad55affcdbdc94
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338828"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
 
@@ -93,7 +93,7 @@ Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **exp2
 
 |Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
-|**Exp**, **expf –**, **expl**|\<Math.h >|\<cmath >|
+|**Exp**, **expf –**, **expl**|\<math.h>|\<cmath>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

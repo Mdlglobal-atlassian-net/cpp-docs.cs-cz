@@ -1,19 +1,19 @@
 ---
-title: Kolekce (C + +/ CX)
+title: Kolekce (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
 ms.openlocfilehash: 850ac0f4801a13a5407f8fe008740bbfa21cc02c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347331"
 ---
-# <a name="collections-ccx"></a>Kolekce (C + +/ CX)
+# <a name="collections-ccx"></a>Kolekce (C++/CX)
 
-V jazyce C + +/ CX program, můžete provést bezplatné použití knihovny STL (Standard Template) kontejnerů nebo jakéhokoli jiného typu uživatelem definované kolekci. Ale při předání kolekce vpřed a zpět v prostředí Windows Runtime binárním rozhraním aplikace (ABI) – například do ovládacího prvku XAML nebo JavaScript klienta, je nutné použít typy Windows Runtime kolekcí.
+V C++/CX program, můžete provést bezplatné použití knihovny STL (Standard Template) kontejnerů nebo jakéhokoli jiného typu uživatelem definované kolekci. Ale při předání kolekce vpřed a zpět v prostředí Windows Runtime binárním rozhraním aplikace (ABI) – například do ovládacího prvku XAML nebo JavaScript klienta, je nutné použít typy Windows Runtime kolekcí.
 
-Modul Windows Runtime definuje rozhraní pro kolekce a souvisejících typů a C + +/ CX poskytuje konkrétní implementace jazyka C++ v hlavičkovém souboru collection.h. Tento obrázek znázorňuje vztahy mezi typy kolekcí:
+Modul Windows Runtime definuje rozhraní pro kolekce a souvisejících typů a C++/CX poskytuje betonu C++ implementace v hlavičkovém souboru collection.h. Tento obrázek znázorňuje vztahy mezi typy kolekcí:
 
 ![C&#43;&#43;&#47;CX strom dědičnosti pro typy kolekcí](../cppcx/media/cppcxcollectionsinheritancetree.png "C&#43;&#43;&#47;CX strom dědičnosti pro typy kolekcí")
 
@@ -28,7 +28,7 @@ Modul Windows Runtime definuje rozhraní pro kolekce a souvisejících typů a C
    > [!IMPORTANT]
    > Iterátory proxy `VectorIterator` a `VectorViewIterator` využívají objekty proxy `VectoryProxy<T>` a `ArrowProxy<T>` umožňující použití s kontejnery STL. Další informace najdete v tématu "VectorProxy prvky" dále v tomto článku.
 
-- C + +/ CX kolekci typů podporu stejné zabezpečení vlákna zaručuje, že podporuje kontejnery STL.
+- C++/CX kolekci typů podporu stejné zabezpečení vlákna zaručuje, že podporuje kontejnery STL.
 
 - [Windows::Foundation::Collections::IObservableVector](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) a [Windows::Foundation::Collections::IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) definovat události, které jsou aktivovány, pokud se změní kolekce různými způsoby. Implementací těchto rozhraní [Platform::Collections:: map –](../cppcx/platform-collections-map-class.md) a [Platform::Collections:: Vector –](../cppcx/platform-collections-vector-class.md) podporují vazby dat s kolekcí XAML. Například, pokud máte `Vector` , který je vázán na data `Grid`, při přidání položky do kolekce, změny se projeví v Uživatelském rozhraní mřížky.
 
@@ -96,7 +96,7 @@ Prvky [Platform::Collections:: map –](../cppcx/platform-collections-map-class.
 
 ## <a name="collection-types"></a>Typy kolekcí
 
-Kolekce se dělí do čtyř kategorií: upravitelná verze a verze jen pro čtení pořadí kolekcí a asociativní kolekce. Kromě toho, C + +/ CX vylepšuje kolekce tím, že poskytuje tři třídy iterátoru, které usnadňují přístup ke kolekcím.
+Kolekce se dělí do čtyř kategorií: upravitelná verze a verze jen pro čtení pořadí kolekcí a asociativní kolekce. Kromě toho C++/CX vylepšuje kolekce tím, že poskytuje tři třídy iterátoru, které usnadňují přístup ke kolekcím.
 
 Prvky lze měnit kolekci mohou být změněny, ale elementy z kolekce jen pro čtení, která se nazývá *zobrazení*, lze pouze číst. Prvky [Platform::Collections:: Vector –](../cppcx/platform-collections-vector-class.md) nebo[Platform::Collections:: vectorview –](../cppcx/platform-collections-vectorview-class.md) kolekce lze přistupovat pomocí iterátoru nebo kolekce [Vector::GetAt](../cppcx/platform-collections-vector-class.md#getat) a indexu. Prvky asociativní kolekce lze přistupovat pomocí kolekce [Map::Lookup](../cppcx/platform-collections-map-class.md#lookup) a klíč.
 
@@ -125,7 +125,7 @@ Iterátor STL, který splňuje požadavky STL `const` iterátor s náhodným př
 
 ### <a name="begin-and-end-functions"></a>Funkce begin() a end()
 
-Pro zjednodušení používá STL zpracovat `Vector`, `VectorView`, `Map`, `MapView`a libovolné `Windows::Foundation::Collections` objekty, C + +/ CX podporuje přetížení [begin – funkce](../cppcx/begin-function.md) a [end Funkce](../cppcx/end-function.md) nečlenské funkce.
+Pro zjednodušení používá STL zpracovat `Vector`, `VectorView`, `Map`, `MapView`a libovolné `Windows::Foundation::Collections` objekty, C++/CX podporuje přetížení [begin – funkce](../cppcx/begin-function.md) a [end Function](../cppcx/end-function.md) nečlenské funkce.
 
 V následující tabulce jsou uvedeny dostupné iterátory a funkce.
 
@@ -147,4 +147,4 @@ V následující tabulce jsou uvedeny dostupné iterátory a funkce.
 
 [Systém typů](../cppcx/type-system-c-cx.md)<br/>
 [Referenční dokumentace jazyka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Odkaz na obory názvů](../cppcx/namespaces-reference-c-cx.md)
+[Referenční informace o oborech názvů](../cppcx/namespaces-reference-c-cx.md)

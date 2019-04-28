@@ -10,11 +10,11 @@ helpviewer_keywords:
 - type-cast conversions [C++]
 ms.assetid: 57ab5902-f12f-4326-a2f6-6282f1d4025a
 ms.openlocfilehash: d54e4c15f84ccecad629d48341e5d3ae26d8cecf
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62344938"
 ---
 # <a name="type-cast-conversions"></a>Převody přetypování
 
@@ -39,7 +39,7 @@ Přetypování typu můžete použít k explicitnímu převodu typů.
 |Floating-point|Žádné aritmetický typ|
 |Ukazatel na objekt, nebo (**void** <strong>\*</strong>)|Jakýkoli typ celé číslo (**void** <strong>\*</strong>), ukazatel na objekt nebo ukazatel na funkci|
 |Ukazatel na funkci|Libovolný integrální typ, ukazatel na objekt nebo ukazatel na funkci|
-|Struktury, sjednocení nebo pole|Žádná|
+|Struktury, sjednocení nebo pole|Žádný|
 |Typ void.|Jakýkoli typ|
 
 Žádný identifikátor lze převést na `void` typu. Nicméně, pokud typ zadaný v výraz přetypování není `void`, potom se identifikátor přetypovat na, že typ nemůže být `void` výrazu. Libovolný výraz může být převeden na `void`, ale výraz typu `void` nelze přetypovat na libovolného typu. Například funkce s `void` vrátit typ nemůže mít jeho návratový přetypován na jiný typ.

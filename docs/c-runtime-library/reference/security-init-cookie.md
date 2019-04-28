@@ -25,11 +25,11 @@ helpviewer_keywords:
 - global security cookie
 ms.assetid: 32119905-0897-4a1c-84ca-bffd16c9b2af
 ms.openlocfilehash: c7b25e05b4574a7b397cd07d55000a5e53db58f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356833"
 ---
 # <a name="securityinitcookie"></a>__security_init_cookie
 
@@ -57,7 +57,7 @@ Podívejte se na příklady v [C Runtime chyba R6035](../../error-messages/tool-
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**__security_init_cookie**|\<Process.h >|
+|**__security_init_cookie**|\<process.h>|
 
 **__security_init_cookie** je rozšířením společnosti Microsoft pro standardní knihovny C Runtime. Informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

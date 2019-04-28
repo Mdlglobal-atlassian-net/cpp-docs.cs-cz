@@ -44,11 +44,11 @@ helpviewer_keywords:
 - _sctprintf_p_l function
 ms.assetid: 8390d1e1-2826-47a4-851f-6635a88087cc
 ms.openlocfilehash: 818dc5c24cca178fa03d08d1f609c23abbc7a013
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357054"
 ---
 # <a name="scprintfp-scprintfpl-scwprintfp-scwprintfpl"></a>_scprintf_p, _scprintf_p_l, _scwprintf_p, _scwprintf_p_l
 
@@ -82,7 +82,7 @@ int _scwprintf_p _l(
 *Formát*<br/>
 Řetězec řízení formátu
 
-*Argument*<br/>
+*argument*<br/>
 Volitelné argumenty
 
 *Národní prostředí*<br/>
@@ -111,15 +111,15 @@ Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že pou�
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_sctprintf_p –**|**_scprintf_p**|**_scprintf_p**|**_scwprintf_p**|
-|**_sctprintf_p_l –**|**_scprintf_p_l**|**_scprintf_p_l**|**_scwprintf_p_l**|
+|**_sctprintf_p**|**_scprintf_p**|**_scprintf_p**|**_scwprintf_p**|
+|**_sctprintf_p_l**|**_scprintf_p_l**|**_scprintf_p_l**|**_scwprintf_p_l**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_scprintf_p –**, **_scprintf_p_l –**|\<stdio.h>|
-|**_scwprintf_p –**, **_scwprintf_p_l –**|\<stdio.h > nebo \<wchar.h >|
+|**_scprintf_p**, **_scprintf_p_l**|\<stdio.h>|
+|**_scwprintf_p**, **_scwprintf_p_l**|\<stdio.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

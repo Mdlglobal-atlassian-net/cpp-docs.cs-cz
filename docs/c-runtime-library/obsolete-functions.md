@@ -51,11 +51,11 @@ helpviewer_keywords:
 - _seterrormode function
 ms.assetid: 8e14c2d4-1481-4240-8586-47eb43db02b0
 ms.openlocfilehash: edac8fde530752c911058acdaccccea6d0318b8c
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62342247"
 ---
 # <a name="obsolete-functions"></a>Zastaralé funkce
 
@@ -81,14 +81,14 @@ Některé funkce knihovny jsou zastaralé a novější ekvivalenty. Doporučujem
 |-----------------------|-----------------|
 |[_cgets, _cgetws](../c-runtime-library/cgets-cgetws.md)|[_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|
 |[gets, _getws](../c-runtime-library/gets-getws.md)|[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|
-|[_get_output_format](../c-runtime-library/get-output-format.md)|Žádná|
-|[_heapadd](../c-runtime-library/heapadd.md)|Žádná|
-|[_heapset](../c-runtime-library/heapset.md)|Žádná|
-|[inp, inpw](../c-runtime-library/inp-inpw.md)|Žádná|
-|[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Žádná|
-|[outp, outpw](../c-runtime-library/outp-outpw.md)|Žádná|
-|[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Žádná|
-|[_set_output_format](../c-runtime-library/set-output-format.md)|Žádná|
+|[_get_output_format](../c-runtime-library/get-output-format.md)|Žádné|
+|[_heapadd](../c-runtime-library/heapadd.md)|Žádné|
+|[_heapset](../c-runtime-library/heapset.md)|Žádný|
+|[inp, inpw](../c-runtime-library/inp-inpw.md)|Žádné|
+|[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Žádný|
+|[outp, outpw](../c-runtime-library/outp-outpw.md)|Žádné|
+|[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Žádný|
+|[_set_output_format](../c-runtime-library/set-output-format.md)|Žádné|
 
 ## <a name="removed-from-the-crt-in-earlier-versions-of-visual-studio"></a>Odebrat z CRT v dřívějších verzích sady Visual Studio
 

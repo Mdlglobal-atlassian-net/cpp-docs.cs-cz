@@ -29,11 +29,11 @@ helpviewer_keywords:
 - trigonometric functions
 - hyperbolic functions
 ms.openlocfilehash: 0f55e084e760cb6d04dbe7ec4fefb5e2ac1d79fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347441"
 ---
 # <a name="cosh-coshf-coshl"></a>COSH – coshf –, coshl –
 
@@ -65,7 +65,7 @@ Ve výchozím nastavení, pokud je výsledek příliš velké **cosh**, **coshf 
 
 |Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|ROZMEZÍ **QNAN**, **AJÍT**|žádná|**_DOMÉNA**|
+|± **QNAN**, **IND**|žádná|**_DOMAIN**|
 |*x* ≥ 7.104760e + 002|**NEPŘESNÉ**+**PŘETEČENÍ**|**PŘETEČENÍ**|
 
 ## <a name="remarks"></a>Poznámky
@@ -76,7 +76,7 @@ Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **cosh
 
 |Rutina|Požadované záhlaví (C)|Požadované záhlaví (C++)|
 |-------------|---------------------|-|
-|**coshf –**, **cosl –**, **coshl –**|\<Math.h >|\<cmath > nebo \<math.h >|
+|**coshf**, **cosl**, **coshl**|\<math.h>|\<cmath > nebo \<math.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

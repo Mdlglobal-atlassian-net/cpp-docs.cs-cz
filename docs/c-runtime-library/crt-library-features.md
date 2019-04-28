@@ -19,11 +19,11 @@ helpviewer_keywords:
 - linking [C++], libraries
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
 ms.openlocfilehash: b9a2691d492a277ffe0018b6e86b00cd245840ed
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58767688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62344652"
 ---
 # <a name="crt-library-features"></a>Funkce knihovny CRT
 
@@ -50,8 +50,8 @@ Tato tabulka shrnuje, které implementují knihovnu vcruntime knihoven.
 
 |Knihovna|Associated DLL|Vlastnosti|Možnost|Direktivy preprocesoru|
 |-------------|--------------------|---------------------|------------|-----------------------------|
-|libvcruntime.lib|Žádné|Staticky propojené do kódu.|**/MT**|_MT|
-|libvcruntimed.lib|Žádné|Ladicí verze pro statické propojování. Redistributable.|**/MTd**|_MT, _DEBUG|
+|libvcruntime.lib|Žádný|Staticky propojené do kódu.|**/MT**|_MT|
+|libvcruntimed.lib|Žádný|Ladicí verze pro statické propojování. Redistributable.|**/MTd**|_MT, _DEBUG|
 |vcruntime.lib|vcruntime\<version>.dll|Importovat knihovny DLL pro vcruntime.|**/MD**|_MT, _DLL|
 |vcruntimed.lib|vcruntime\<version>d.dll|Importovat knihovny DLL pro ladění vcruntime. Redistributable.|**/MDd**|_DEBUG, _MT, _DLL|
 

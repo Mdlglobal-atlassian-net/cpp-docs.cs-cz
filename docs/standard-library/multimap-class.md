@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
 ms.openlocfilehash: caffa84052f774803b92730f7906bf53cb3c824a
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348364"
 ---
 # <a name="multimap-class"></a>multimap – třída
 
@@ -167,11 +167,11 @@ V C ++ 14 můžete povolit heterogenní vyhledávání tak, že zadáte `std::le
 |[const_reference](#const_reference)|Typ, který poskytuje odkaz na **const** element uložené v `multimap` pro čtení a provádění **const** operace.|
 |[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může přečíst jakýkoli **const** prvek `multimap`.|
 |[difference_type](#difference_type)|Celočíselný typ se znaménkem, který slouží k vyjádření počtu prvků `multimap` v rozsahu mezi prvky, na které odkazují iterátory.|
-|[iterátor](#iterator)|Typ, který obsahuje rozdíl mezi dvěma iterátory, které odkazují na prvky v rámci stejného `multimap`.|
+|[iterator](#iterator)|Typ, který obsahuje rozdíl mezi dvěma iterátory, které odkazují na prvky v rámci stejného `multimap`.|
 |[key_compare](#key_compare)|Typ poskytující objekt funkce, který může porovnat dva klíče řazení pro určení relativního pořadí dvou prvků v `multimap`.|
 |[key_type](#key_type)|Typ, který popisuje řazení objektu klíče, který představuje každý prvek objektu `multimap`.|
 |[mapped_type](#mapped_type)|Typ, který představuje typ dat uložených v `multimap`.|
-|[Ukazatel](#pointer)|Typ, který poskytuje ukazatel na **const** prvek `multimap`.|
+|[pointer](#pointer)|Typ, který poskytuje ukazatel na **const** prvek `multimap`.|
 |[Referenční dokumentace](#reference)|Typ, který poskytuje odkaz na prvek uložený v `multimap`.|
 |[reverse_iterator](#reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat prvek v obráceném objektu `multimap`.|
 |[size_type](#size_type)|Který poskytuje ukazatel na typ unsigned integer **const** prvek `multimap`.|
@@ -184,12 +184,12 @@ V C ++ 14 můžete povolit heterogenní vyhledávání tak, že zadáte `std::le
 |[začít](#begin)|Vrátí iterátor adresující první prvek `multimap`.|
 |[cbegin](#cbegin)|Vrátí konstantní iterátor adresující první prvek `multimap`.|
 |[cend](#cend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v `multimap`.|
-|[Vymazat](#clear)|Vymaže všechny prvky `multimap`.|
+|[clear](#clear)|Vymaže všechny prvky `multimap`.|
 |[Počet](#count)|Vrátí počet prvků v `multimap` jejichž klíč odpovídá klíči se zadaným parametrem.|
 |[crbegin](#crbegin)|Vrátí konstantní iterátor adresující první prvek v obráceném objektu `multimap`.|
-|[crend –](#crend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v obráceném objektu `multimap`.|
-|[emplace –](#emplace)|Vloží vytvořený prvek na místo do `multimap`.|
-|[emplace_hint –](#emplace_hint)|Vloží vytvořený prvek na místo do `multimap`, s náznakem umístění|
+|[crend](#crend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v obráceném objektu `multimap`.|
+|[emplace](#emplace)|Vloží vytvořený prvek na místo do `multimap`.|
+|[emplace_hint](#emplace_hint)|Vloží vytvořený prvek na místo do `multimap`, s náznakem umístění|
 |[prázdný](#empty)|Testuje, zda `multimap` je prázdný.|
 |[ukončení](#end)|Vrátí iterátor adresující umístění následující po posledním prvku v `multimap`.|
 |[equal_range](#equal_range)|Vyhledá rozsahu prvků, kde klíče prvku odpovídají zadané hodnotě.|
@@ -200,11 +200,11 @@ V C ++ 14 můžete povolit heterogenní vyhledávání tak, že zadáte `std::le
 |[key_comp](#key_comp)|Získá kopii objektu porovnání použitého pro seřazení klíčů v `multimap`.|
 |[lower_bound –](#lower_bound)|Vrátí iterátor na první prvek v `multimap` s klíčem, který je roven nebo větší než zadaný klíč.|
 |[max_size](#max_size)|Vrátí maximální délku objektu `multimap`.|
-|[rbegin –](#rbegin)|Vrátí iterátor adresující první prvek v obráceném objektu `multimap`.|
+|[rbegin](#rbegin)|Vrátí iterátor adresující první prvek v obráceném objektu `multimap`.|
 |[rend –](#rend)|Vrátí iterátor adresující umístění následující po posledním prvku v obráceném objektu `multimap`.|
 |[Velikost](#size)|Vrátí počet prvků v `multimap`.|
-|[Prohození](#swap)|Vymění prvky dvou `multimap`s.|
-|[upper_bound –](#upper_bound)|Vrátí iterátor na první prvek v `multimap` s klíčem, který je větší než zadaný klíč.|
+|[swap](#swap)|Vymění prvky dvou `multimap`s.|
+|[upper_bound](#upper_bound)|Vrátí iterátor na první prvek v `multimap` s klíčem, který je větší než zadaný klíč.|
 |[value_comp](#value_comp)|Členská funkce vrátí objekt funkce, která určuje pořadí prvků v `multimap` porovnáním jejich hodnoty klíče.|
 
 ### <a name="operators"></a>Operátory
@@ -504,7 +504,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč prvky, které mají být odpovídat z objektu multimap.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -903,7 +903,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč argumentu k porovnání s klíči řazení prvek z objektu multimap vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1024,7 +1024,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče k porovnání s klíči řazení prvek z objektu multimap vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1472,7 +1472,7 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč argumentu k porovnání s klíči řazení prvek z objektu multimap vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2237,7 +2237,7 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč argumentu k porovnání s klíči řazení prvek z objektu multimap vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota

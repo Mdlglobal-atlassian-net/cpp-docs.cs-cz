@@ -10,11 +10,11 @@ helpviewer_keywords:
 - runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
 ms.openlocfilehash: 024ede0f05dfd646bcebe7acd2cfb86b5c54f6d1
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352725"
 ---
 # <a name="runtimeexception-class"></a>runtime_exception – třída
 
@@ -30,14 +30,14 @@ class runtime_exception : public std::exception;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[runtime_exception Constructor](#ctor)|Inicializuje novou instanci třídy `runtime_exception` třídy.|
 |[~runtime_exception Destructor](#dtor)|Odstraní `runtime_exception` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[get_error_code](#get_error_code)|Vrátí kód chyby, který způsobil výjimku.|
 

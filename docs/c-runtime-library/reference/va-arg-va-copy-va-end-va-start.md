@@ -38,11 +38,11 @@ helpviewer_keywords:
 - va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
 ms.openlocfilehash: cc0a903f6bc4895f7d2ea6e80990dea94f28c6c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353563"
 ---
 # <a name="vaarg-vacopy-vaend-vastart"></a>va_arg, va_copy, va_end, va_start
 
@@ -73,13 +73,13 @@ void va_start(
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*<br/>
+*type*<br/>
 Typ argumentu, který se má načíst.
 
 *arg_ptr*<br/>
 Ukazatel na seznam argumentů.
 
-*cíl*<br/>
+*dest*<br/>
 Ukazatel na seznam argumentů, které mají být inicializovány z *src*
 
 *src*<br/>
@@ -94,7 +94,7 @@ Parametr, který předchází první nepovinný argument.
 
 ## <a name="remarks"></a>Poznámky
 
-**Va_arg**, **va_copy**, **va_end**, a **va_start** makra poskytují přenosný způsob pro přístup k argumentům funkce při funkce má proměnný počet argumentů. Existují dvě verze makra: makra definovaná v STDARG. H v souladu s normou, ISO C99 Makra definovaná ve funkcích VARARGS. H jsou zastaralé, ale se zachovává kvůli zpětné kompatibilitě s kódem, který byl zapsán před ANSI C89 standard.
+**Va_arg**, **va_copy**, **va_end**, a **va_start** makra poskytují přenosný způsob pro přístup k argumentům funkce při funkce má proměnný počet argumentů. Existují dvě verze makra: Makra definovaná v STDARG. H v souladu s normou, ISO C99 Makra definovaná ve funkcích VARARGS. H jsou zastaralé, ale se zachovává kvůli zpětné kompatibilitě s kódem, který byl zapsán před ANSI C89 standard.
 
 Tato makra se předpokládá, že funkce nepřebírá pevný počet povinné argumenty, za nímž následuje proměnný počet volitelné argumenty. Povinné argumenty jsou deklarovány jako běžný parametrů pro funkci a je přístupný prostřednictvím názvy parametrů. Nepovinné argumenty jsou přístupné prostřednictvím makra v STDARG. H (ani parametry vararg. H pro kód, který byl zapsán před standardu ANSI C89), který nastaví ukazatel na první nepovinný argument v seznamu argumentů, načte argumenty v seznamu a resetuje ukazatel po dokončení zpracování argumentů.
 

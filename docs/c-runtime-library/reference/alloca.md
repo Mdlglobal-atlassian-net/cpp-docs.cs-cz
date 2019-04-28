@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
 ms.openlocfilehash: 7c083e791301d3224709a5fc6c711ceaa6397d38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341597"
 ---
 # <a name="alloca"></a>_alloca
 
@@ -57,7 +57,7 @@ Pokud nelze přidělit místo, vygeneruje se k výjimce přetečení zásobníku
 
 **_alloca** přiděluje *velikost* bajtů ze zásobníku programu. Do přiděleného místa je automaticky uvolněn při ukončení volání funkce (ne už při přidělení předává pouze mimo rozsah). Proto, nepředávejte hodnotu ukazatele vrácené **_alloca** jako argument [bezplatné](free.md).
 
-Existují omezení explicitně voláním **_alloca** v obslužné rutiny výjimek (EH). Rutiny EH, na kterých běží na procesorech x86 třídy pracovat v rámci své vlastní paměti: provádějí své úkoly v paměti, který není založen na aktuální umístění ukazatel zásobníku nadřazené funkce. Většina běžných implementací zahrnují zpracování (SEH) systému Windows NT strukturovaných výjimek a výrazy klauzule catch C++. Proto se explicitně voláním **_alloca** v některém z následujících výsledků scénáře selhání programu při vrácení volání rutiny EH:
+Existují omezení explicitně voláním **_alloca** v obslužné rutiny výjimek (EH). Rutiny EH, na kterých běží na procesorech x86 třídy pracovat v rámci své vlastní paměti: Provádějí své úkoly v paměti, který není založen na aktuální umístění ukazatel zásobníku nadřazené funkce. Většina běžných implementací zahrnují zpracování (SEH) systému Windows NT strukturovaných výjimek a výrazy klauzule catch C++. Proto se explicitně voláním **_alloca** v některém z následujících výsledků scénáře selhání programu při vrácení volání rutiny EH:
 
 - Výraz filtru výjimky SEH Windows NT: `__except ( _alloca() )`
 
@@ -76,7 +76,7 @@ Kromě výše uvedená omezení při použití[/CLR (kompilace Common Language R
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_alloca**|\<malloc.h >|
+|**_alloca**|\<malloc.h>|
 
 ## <a name="example"></a>Příklad
 

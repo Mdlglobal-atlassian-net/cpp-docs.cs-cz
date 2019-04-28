@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
 ms.openlocfilehash: 18ee500d7b884d1934c29dc91d9bcb03d507680d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356547"
 ---
 # <a name="setsetranslator"></a>_set_se_translator
 
@@ -53,7 +53,7 @@ Vrátí ukazatel na funkci předchozí translator registrovaných **_set_se_tran
 
 ## <a name="remarks"></a>Poznámky
 
-**_Set_se_translator** poskytuje způsob, jak zpracovat výjimky Win32 (strukturované výjimky jazyka C) jako C++ – funkce typu výjimky. Chcete-li povolit jednotlivé výjimky jazyka C++ zpracovávat **catch** obslužnou rutinu, nejprve definují C obálkovou třídu výjimek, který můžete použít nebo odvodit, kterému budou připsány určitý typ třídy na výjimku jazyka C. Pokud chcete použít tuto třídu, nainstalujte vlastní funkci C výjimka translator, která je volána metodou interní mechanismus zpracování výjimek pokaždé, když je vyvolána výjimka jazyka C. V rámci funkce translator, lze vyvolat jakoukoli typovou výjimku, které lze zachytit odpovídající C++ **catch** obslužné rutiny.
+**_Set_se_translator** funkce poskytuje způsob, jak zpracovat výjimky Win32 (strukturované výjimky jazyka C) jako C++ zadané výjimky. Chcete-li povolit jednotlivé výjimky jazyka C++ zpracovávat **catch** obslužnou rutinu, nejprve definují C obálkovou třídu výjimek, který můžete použít nebo odvodit, kterému budou připsány určitý typ třídy na výjimku jazyka C. Pokud chcete použít tuto třídu, nainstalujte vlastní funkci C výjimka translator, která je volána metodou interní mechanismus zpracování výjimek pokaždé, když je vyvolána výjimka jazyka C. V rámci funkce translator, lze vyvolat jakoukoli typovou výjimku, které lze zachytit odpovídající C++ **catch** obslužné rutiny.
 
 Je nutné použít [/EHa](../../build/reference/eh-exception-handling-model.md) při použití **_set_se_translator**.
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - sockets [MFC], MFC
 ms.assetid: 1f3c476a-9c68-49fe-9a25-d22971a334d0
 ms.openlocfilehash: 9992d2054c04eea1b3b63d591601acf0091acb5e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348559"
 ---
 # <a name="windows-sockets-in-mfc"></a>Windows sockets v prostředí MFC
 
@@ -46,7 +46,7 @@ Operační systémy Microsoft Windows zadat rozhraní Windows Sockets dynamické
 
 Další informace o rozhraní Windows Sockets naleznete v tématu:
 
-- [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: Sokety datového proudu](../mfc/windows-sockets-stream-sockets.md)
 
 - [Windows Sockets: Sokety datagramu](../mfc/windows-sockets-datagram-sockets.md)
 

@@ -23,11 +23,11 @@ helpviewer_keywords:
 - M_LN2 constant
 ms.assetid: db533c3f-6ae8-4520-9d35-c8fabbef3529
 ms.openlocfilehash: bd17004585e0238f36b939b19379ef62e349fac9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62342663"
 ---
 # <a name="math-constants"></a>Matematické konstanty
 
@@ -45,7 +45,7 @@ ms.locfileid: "57744165"
 
 Pro hodnoty jejich uvedené výrazy jsou definovány následující symboly:
 
-|Symbol|Výraz|Hodnota|
+|Symbol|Výraz|Value|
 |------------|----------------|-----------|
 |M_E|e|2.71828182845904523536|
 |M_LOG2E|log2(e)|1.44269504088896340736|

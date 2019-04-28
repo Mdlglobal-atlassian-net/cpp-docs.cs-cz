@@ -3,19 +3,19 @@ title: Převést na literál nezpracovaného řetězce
 ms.date: 11/16/2016
 ms.assetid: fffbfee4-66ee-42ba-aeb9-df07fb702c51
 ms.openlocfilehash: bf492e6796b9d2342b5952abb093bddd5ede114b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349414"
 ---
 # <a name="convert-to-raw-string-literal"></a>Převést na literál nezpracovaného řetězce
 
-**Co:** umožňuje proměnit libovolný řetězec C++ nezpracovaný řetězcový literál.
+**Co:** Umožňuje vypnout libovolný řetězec do C++ nezpracovaný řetězcový literál.
 
-**Kdy:** řetězec s řídicí znaky, které by neměly být zpracován jako řídicí znaky.
+**Kdy:** Máte řetězec s řídicí znaky, které by neměly být zpracován jako řídicí znaky.
 
-**Důvod, proč:** může dvojitou řídicí znaky, ale to často vede k nepřehledný a nečitelné řetězce.  Pomocí nezpracované řetězcové literály řetězce velmi usnadňuje čtení.
+**Proč:** Můžete dvojitou řídicí znaky, ale to často vede k nepřehledný a nečitelné řetězce.  Pomocí nezpracované řetězcové literály řetězce velmi usnadňuje čtení.
 
 **Jak:**
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
 ms.openlocfilehash: f6df36aafde9a61a1fd590a7f60b3c17131aadbb
-ms.sourcegitcommit: 6990f842fefc27b522b15cf352f3517b319d78da
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53248543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62342741"
 ---
 # <a name="ucrt-locale-names-languages-and-countryregion-strings"></a>UCRT Locale names, jazyky a země/oblast řetězce
 
@@ -26,7 +26,7 @@ ms.locfileid: "53248543"
 &nbsp;&nbsp;&nbsp;&nbsp;\| "__.__  *znaková stránka*"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;\| "C"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;\| ""<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;\| HODNOTU NULL
+&nbsp;&nbsp;&nbsp;&nbsp;\| NULL
 
 *Název národního prostředí* formuláře je krátký, standardizované IETF řetězec, například `en-US` pro angličtinu (Spojené státy) nebo `bs-Cyrl-BA` pro Bosenština (cyrilice, Bosna a Hercegovina). Jsou upřednostňované. Seznam podporovaných názvech národních prostředí podle verze operačního systému Windows, najdete v článku **značku jazyka** sloupec tabulky v [dodatku A: Chování produktu](https://msdn.microsoft.com/library/cc233982.aspx) v [MS-LCID]: Odkaz na identifikátor (LCID) kód jazyka Windows. Tento materiál obsahuje seznam podporovaných částí názvů národních prostředí, jež udávají jazyk, způsob zápisu a oblast. Informace o názvech podporované národní prostředí, které mají jiné než výchozí pořadí řazení, naleznete **název národního prostředí** sloupec v [identifikátory pořadí řazení](/windows/desktop/Intl/sort-order-identifiers). V části Windows 10 nebo novější, národní prostředí názvy, které odpovídají na platný [BCP-47](https://tools.ietf.org/html/bcp47) jsou povolené značky jazyka. Například `jp-US` je platná značka BCP-47, ale to je v podstatě pouze `US` pro funkce národního prostředí.
 

@@ -23,11 +23,11 @@ helpviewer_keywords:
 - _RTC_SetErrorFunc function
 ms.assetid: b2292722-0d83-4092-83df-3d5b19880666
 ms.openlocfilehash: 6b292d685eea8eccb9e9b2a3c3e6cd903d501005
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357203"
 ---
 # <a name="rtcseterrorfunc"></a>_RTC_SetErrorFunc
 
@@ -58,7 +58,7 @@ Nepoužívejte tuto funkci. Místo toho použijte **_RTC_SetErrorFuncW**. Se uch
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_RTC_SetErrorFunc**|\<rtcapi.h >|
+|**_RTC_SetErrorFunc**|\<rtcapi.h>|
 
 Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

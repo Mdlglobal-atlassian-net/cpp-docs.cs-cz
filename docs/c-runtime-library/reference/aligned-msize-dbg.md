@@ -21,11 +21,11 @@ helpviewer_keywords:
 - _aligned_msize_dbg
 ms.assetid: f1c44af0-3f66-4033-81d1-d71d3afecba0
 ms.openlocfilehash: 054f7b88f93eef37a9a88fbb7895452f7c158716
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62342028"
 ---
 # <a name="alignedmsizedbg"></a>_aligned_msize_dbg
 
@@ -60,7 +60,7 @@ Vrátí velikost (v bajtech) jako celé číslo bez znaménka.
 
 *Zarovnání* a *posun* hodnoty musí být stejný jako hodnoty předané na funkci, která přidělené bloku.
 
-**_aligned_msize_dbg** je ladicí verzi [_aligned_msize –](aligned-msize.md) funkce. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, každé volání **_aligned_msize_dbg** je omezená na volání **_aligned_msize –**. Obě **_aligned_msize –** a **_aligned_msize_dbg** vypočítat velikost bloku paměti v haldě základní, ale **_aligned_msize_dbg** přidá funkce ladění: zahrnuje blok, ve vrácené velikost vyrovnávací paměti na obou stranách uživatele část paměti.
+**_aligned_msize_dbg** je ladicí verzi [_aligned_msize –](aligned-msize.md) funkce. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, každé volání **_aligned_msize_dbg** je omezená na volání **_aligned_msize –**. Obě **_aligned_msize –** a **_aligned_msize_dbg** vypočítat velikost bloku paměti v haldě základní, ale **_aligned_msize_dbg** přidá funkce ladění: Zahrnuje vrácená velikost vyrovnávací paměti na obou stranách část uživatele bloku paměti.
 
 Tato funkce ověřuje svůj parametr. Pokud *memblock* je ukazatel s hodnotou null nebo *zarovnání* není mocninou čísla 2, **_msize –** vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation ](../../c-runtime-library/parameter-validation.md). Pokud je chyba zpracována, funkce nastaví **errno** k **EINVAL** a vrátí hodnotu -1.
 

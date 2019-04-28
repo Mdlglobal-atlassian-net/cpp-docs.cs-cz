@@ -34,11 +34,11 @@ helpviewer_keywords:
 - _tsplitpath function
 ms.assetid: 32bd76b5-1385-4ee8-a64c-abcb541cd2e4
 ms.openlocfilehash: d079bd17912c0711a4e1fbadadf12430520f2c96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355000"
 ---
 # <a name="splitpath-wsplitpath"></a>_splitpath, _wsplitpath
 
@@ -68,16 +68,16 @@ void _wsplitpath(
 *Cesta*<br/>
 Úplná cesta.
 
-*Jednotky*<br/>
+*drive*<br/>
 Písmeno, za nímž následuje dvojtečka (**:**). Můžete předat **NULL** pro tento parametr, pokud není nutné písmeno jednotky.
 
-*adresář*<br/>
+*dir*<br/>
 Cesta k adresáři, včetně koncového lomítka. Lomítka ( **/** ), zpětná lomítka ( **\\** ), nebo obě mohou být použity. Můžete předat **NULL** pro tento parametr, pokud není nutné cesta k adresáři.
 
 *%{fname/*<br/>
 Základní název souboru (bez přípony). Můžete předat **NULL** pro tento parametr, pokud není nutné název souboru.
 
-*ext, přípona*<br/>
+*ext*<br/>
 Příponu názvu souboru, včetně počáteční období (**.**). Můžete předat **NULL** pro tento parametr, pokud není nutné příponu názvu souboru.
 
 ## <a name="remarks"></a>Poznámky
@@ -90,7 +90,7 @@ Příponu názvu souboru, včetně počáteční období (**.**). Můžete před
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tsplitpath –**|**_splitpath**|**_splitpath**|**_wsplitpath**|
+|**_tsplitpath**|**_splitpath**|**_splitpath**|**_wsplitpath**|
 
 Jednotlivé komponenty úplná cesta je uložena v samostatných vyrovnávací paměti; konstanty manifestu **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**, a **_MAX_EXT** (definované v STDLIB. H) zadejte maximální velikost pro každou komponentu souboru. Soubor součásti, které jsou větší než odpovídající konstant manifestu dojít k poškození haldy.
 

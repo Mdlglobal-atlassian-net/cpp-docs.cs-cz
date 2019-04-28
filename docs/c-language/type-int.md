@@ -8,11 +8,11 @@ helpviewer_keywords:
 - signed integers
 ms.assetid: 0067ce9a-281e-491a-ae63-632952981e13
 ms.openlocfilehash: 848c9799e7ab5cfdfd2b25cc84e55de02c673f3e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62345224"
 ---
 # <a name="type-int"></a>Typ int
 

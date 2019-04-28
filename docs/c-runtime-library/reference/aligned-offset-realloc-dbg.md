@@ -23,11 +23,11 @@ helpviewer_keywords:
 - _aligned_offset_realloc_dbg function
 ms.assetid: 64e30a12-887e-453b-aea8-aed793fca9d8
 ms.openlocfilehash: 7684a752f489eb726b2105b1055b6da1e86e9cd1
-ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341571"
 ---
 # <a name="alignedoffsetreallocdbg"></a>_aligned_offset_realloc_dbg
 
@@ -63,7 +63,7 @@ Posun na přidělení paměti pro vynucení zarovnání.
 *Název souboru*<br/>
 Ukazatel na název zdrojového souboru, který vyžadují **aligned_offset_realloc –** operace nebo **NULL**.
 
-*Číslo řádku*<br/>
+*linenumber*<br/>
 Číslo řádku ve zdrojovém souboru kde **aligned_offset_realloc –** operace byla požadována nebo **NULL**.
 
 ## <a name="return-value"></a>Návratová hodnota

@@ -32,11 +32,11 @@ helpviewer_keywords:
 - process creation
 ms.assetid: dd4584c9-7173-4fc5-b93a-6e7d3c2316d7
 ms.openlocfilehash: 11ff3447487fcaf1a4225825c222b873005b2a1c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355273"
 ---
 # <a name="spawnl-wspawnl"></a>_spawnl, _wspawnl
 
@@ -74,7 +74,7 @@ Režim spuštění pro volající proces.
 *cmdname*<br/>
 Cesta k souboru, který má být proveden.
 
-*arg0*, *arg1*,... *argn*<br/>
+*arg0*, *arg1*, ... *argn*<br/>
 Seznam ukazatelů na argumenty. *Arg0* argument je obvykle ukazatel na *cmdname*. Argumenty *arg1* prostřednictvím *argn* jsou ukazatele na znakové řetězce tvořící nový seznam argumentů. Následující *argn*, musí existovat **NULL** ukazatel k označení konce seznamu argumentů.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -101,7 +101,7 @@ Každá z těchto funkcí vytvoří a spustí nový proces, přičemž předá k
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_spawnl**|\<Process.h >|
+|**_spawnl**|\<process.h>|
 |**_wspawnl**|\<stdio.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

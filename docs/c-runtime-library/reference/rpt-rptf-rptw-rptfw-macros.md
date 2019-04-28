@@ -87,11 +87,11 @@ helpviewer_keywords:
 - RPTW1 macro
 ms.assetid: a5bf8b30-57f7-4971-8030-e773b7a1ae13
 ms.openlocfilehash: 61748cca2cdfcc2d72b6943bfeedd9597009e20b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357491"
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT, _RPTF, _RPTW, _RPTFW – makra
 
@@ -166,7 +166,7 @@ Existují dvě další makra, které generují sestavu ladění. [_ASSERT](asser
 |**_RPT** makra|\<crtdbg.h>|
 |**_RPTF** makra|\<crtdbg.h>|
 |**_RPTW** makra|\<crtdbg.h>|
-|**_Rptfw –** makra|\<crtdbg.h>|
+|**_RPTFW** macros|\<crtdbg.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

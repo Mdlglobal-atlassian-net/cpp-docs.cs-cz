@@ -44,11 +44,11 @@ helpviewer_keywords:
 - cprintf_p function
 ms.assetid: 1f82fd7d-13c8-4c4a-a3e4-db0df3873564
 ms.openlocfilehash: ef4ac6a89749c2784e4935fcf83810e81b61ae11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348286"
 ---
 # <a name="cprintfp-cprintfpl-cwprintfp-cwprintfpl"></a>_cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l
 
@@ -85,7 +85,7 @@ int _cwprintf_p_l(
 *Formát*<br/>
 Řetězec řízení formátu
 
-*Argument*<br/>
+*argument*<br/>
 Volitelné parametry.
 
 *Národní prostředí*<br/>
@@ -112,15 +112,15 @@ Také, jako jsou **_cprintf_s** a **_cwprintf_s –**, ověřují vstupní ukaza
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tcprintf_p –**|**_cprintf_p**|**_cprintf_p**|**_cwprintf_p**|
-|**_tcprintf_p_l –**|**_cprintf_p_l**|**_cprintf_p_l**|**_cwprintf_p_l**|
+|**_tcprintf_p**|**_cprintf_p**|**_cprintf_p**|**_cwprintf_p**|
+|**_tcprintf_p_l**|**_cprintf_p_l**|**_cprintf_p_l**|**_cwprintf_p_l**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_cprintf_p –**, **_cprintf_p_l –**|\<conio.h >|
-|**_cwprintf_p –**, **_cwprintf_p_l –**|\<conio.h >|
+|**_cprintf_p**, **_cprintf_p_l**|\<conio.h>|
+|**_cwprintf_p**, **_cwprintf_p_l**|\<conio.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

@@ -41,11 +41,11 @@ helpviewer_keywords:
 - bits, rotating
 ms.assetid: cfce439b-366f-4584-8ab1-d527b13fcfc6
 ms.openlocfilehash: c8cf61ecd8ffab9433f5c6ad077ddba39401c0e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357405"
 ---
 # <a name="rotl-rotl64-rotr-rotr64"></a>_rotl, _rotl64, _rotr, _rotr64
 
@@ -78,7 +78,7 @@ unsigned __int64 _rotr64(
 *value*<br/>
 Hodnota, která otočen.
 
-*SHIFT*<br/>
+*shift*<br/>
 Počet bitů na posunu.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -93,8 +93,8 @@ Otočený hodnotu. Není vrácena žádná chyba.
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_rotl –**, **_rotl64 –**|\<stdlib.h>|
-|**_rotr –**, **_rotr64 –**|\<stdlib.h>|
+|**_rotl**, **_rotl64**|\<stdlib.h>|
+|**_rotr**, **_rotr64**|\<stdlib.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

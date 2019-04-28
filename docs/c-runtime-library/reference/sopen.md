@@ -21,12 +21,12 @@ helpviewer_keywords:
 - sopen function
 ms.assetid: 1ce0b707-0c9e-4942-8467-ce7f6cd68acc
 ms.openlocfilehash: 160e30e22c1adbf6d3c7cd311e1c20723017f0bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355325"
 ---
 # <a name="sopen"></a>sopen
 
-Tato funkce POSIX je zastaralá. Použít splňující podmínky ISO C++ [_sopen](sopen-wsopen.md) nebo s rozšířeným zabezpečením [_sopen_s –](sopen-s-wsopen-s.md) místo.
+Tato funkce POSIX je zastaralá. Použít bitovou kopii ISO C++ splňující podmínky [_sopen](sopen-wsopen.md) nebo s rozšířeným zabezpečením [_sopen_s –](sopen-s-wsopen-s.md) místo.

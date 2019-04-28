@@ -43,11 +43,11 @@ helpviewer_keywords:
 - _mbsrchr_l function
 ms.assetid: 75cf2664-758e-49bb-bf6b-8a139cd474d2
 ms.openlocfilehash: 016be9a1d753787b6e0c3800df5a96baea1a19f5
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347295"
 ---
 # <a name="strrchr-wcsrchr-mbsrchr-mbsrchrl"></a>strrchr, wcsrchr, _mbsrchr, _mbsrchr_l
 
@@ -133,7 +133,7 @@ Vrací ukazatel na poslední výskyt *c* v *str*, nebo hodnota NULL, pokud *c* n
 
 `wcsrchr` a `_mbsrchr` jsou širokoznaké a vícebajtové verze `strrchr`. Argumenty a vrácené hodnoty `wcsrchr` jsou širokoznaké řetězce `_mbsrchr` jsou vícebajtové znakové řetězce.
 
-V jazyce C, tyto funkce přijímají **const** ukazatele pro první argument. V jazyce C++ jsou k dispozici dvě přetížení. Přetížení přijímající ukazatel na **const** vrací ukazatel na **const**; verze, která přijímá ukazatel na jinou hodnotu než**const** vrací ukazatel na jinou hodnotu než**const** . _CRT_CONST_CORRECT_OVERLOADS – makro je definováno, pokud **const** a jiných-**const** verze těchto funkcí jsou k dispozici. Pokud budete potřebovat non -**const** chování pro obě přetížení C++, definujte symbol _CONST_RETURN.
+V jazyce C, tyto funkce přijímají **const** ukazatele pro první argument. V jazyce C++ jsou k dispozici dvě přetížení. Přetížení přijímající ukazatel na **const** vrací ukazatel na **const**; verze, která přijímá ukazatel na jinou hodnotu než**const** vrací ukazatel na jinou hodnotu než**const** . _CRT_CONST_CORRECT_OVERLOADS – makro je definováno, pokud **const** a jiných-**const** verze těchto funkcí jsou k dispozici. Pokud budete potřebovat non -**const** chování pro obě C++ přetížení, definujte symbol _CONST_RETURN.
 
 `_mbsrchr` ověří jeho parametry. Pokud *str* má hodnotu NULL, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, `errno` je nastavena na EINVAL a `_mbsrchr` vrátí hodnotu 0. `strrchr` a `wcsrchr` neověří jejich parametry. Tyto tři funkce chovají identicky jinak.
 

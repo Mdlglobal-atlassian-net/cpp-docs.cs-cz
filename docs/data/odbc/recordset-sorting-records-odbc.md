@@ -7,11 +7,11 @@ helpviewer_keywords:
 - recordsets, sorting
 ms.assetid: b40b152e-0a91-452e-be7b-e5bc27f744c7
 ms.openlocfilehash: 831f21901186ed0ae010b0f332327eefcba94b51
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59024657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368627"
 ---
 # <a name="recordset-sorting-records-odbc"></a>Recordset: Řazení záznamů (ODBC)
 
@@ -62,5 +62,5 @@ Sada záznamů obsahuje všechny záznamy student, seřazeny v sestupném pořad
 ## <a name="see-also"></a>Viz také:
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset: Parametrizace sady záznamů (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
-[Recordset: Filtrování záznamů (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
+[Sada záznamů: Parametrizace sady záznamů (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
+[Sada záznamů: Filtrování záznamů (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)

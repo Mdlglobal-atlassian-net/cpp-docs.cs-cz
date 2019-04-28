@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _RTC_SetErrorType function
 ms.assetid: f5f99be7-d357-4b11-b8f5-ddd3428f2b06
 ms.openlocfilehash: 022079bd199477c8bca92e853ed66879c96428db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357132"
 ---
 # <a name="rtcseterrortype"></a>_RTC_SetErrorType
 
@@ -67,7 +67,7 @@ Předtím, než bude možné volat tuto funkci, musíte nejdřív voláním funk
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_RTC_SetErrorType**|\<rtcapi.h >|
+|**_RTC_SetErrorType**|\<rtcapi.h>|
 
 Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

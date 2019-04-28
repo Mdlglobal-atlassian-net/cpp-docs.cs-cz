@@ -24,11 +24,11 @@ helpviewer_keywords:
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
 ms.openlocfilehash: d4336c6cc478a035fcc0b9b059a7161d58bc4442
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356313"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -47,7 +47,7 @@ int setvbuf(
 
 ### <a name="parameters"></a>Parametry
 
-*Stream*<br/>
+*stream*<br/>
 Ukazatel na **souboru** struktury.
 
 *Vyrovnávací paměti*<br/>
@@ -57,7 +57,7 @@ Uživatel přidělené vyrovnávací paměti.
 Režim ukládání do vyrovnávací paměti.
 
 *Velikost*<br/>
-Velikost vyrovnávací paměti v bajtech. Povolený rozsah: 2 < = *velikost* < = INT_MAX (2147483647). Interně, hodnota zadaná pro *velikost* se zaokrouhlí směrem dolů na nejbližší násobek 2.
+Velikost vyrovnávací paměti v bajtech. Povolený rozsah: 2 <= *size* <= INT_MAX (2147483647). Interně, hodnota zadaná pro *velikost* se zaokrouhlí směrem dolů na nejbližší násobek 2.
 
 ## <a name="return-value"></a>Návratová hodnota
 

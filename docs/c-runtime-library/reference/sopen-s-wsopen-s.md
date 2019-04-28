@@ -32,11 +32,11 @@ helpviewer_keywords:
 - files [C++], sharing
 ms.assetid: 059a0084-d08c-4973-9174-55e391b72aa2
 ms.openlocfilehash: 1d5f35615aee058b51c0b14ff9ccd38894427b20
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355626"
 ---
 # <a name="sopens-wsopens"></a>_sopen_s, _wsopen_s
 
@@ -104,7 +104,7 @@ V případě chyby, je vrácena hodnota -1 prostřednictvím *pfh* (není-li *pf
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tsopen_s**|**_sopen_s –**|**_sopen_s –**|**_wsopen_s**|
+|**_tsopen_s**|**_sopen_s**|**_sopen_s**|**_wsopen_s**|
 
 Celočíselný výraz *oflag* je tvořen přidáním jednoho nebo více konstant manifestu, které jsou definovány v kombinaci \<fcntl.h >. Když dva nebo více konstant tvoří argument *oflag*, jsou kombinované pomocí bitového operátoru OR – operátor ( **&#124;** ).
 
@@ -113,9 +113,9 @@ Celočíselný výraz *oflag* je tvořen přidáním jednoho nebo více konstant
 | **_O_APPEND** | Přesune ukazatel na soubor na konec souboru před každou operaci zápisu. |
 | **_O_BINARY** | Otevře soubor v binárním (nepřeloženém) režimu. (Viz [fopen](fopen-wfopen.md) popis binárním režimu.) |
 | **_O_CREAT** | Vytvoří soubor a otevře jej pro zápis. Nemá žádný vliv, pokud souboru určeném *filename* existuje. *Pmode* argument je požadován při **_O_CREAT** určena. |
-| **_O_CREAT** &AMP;#124; **_O_SHORT_LIVED** | Vytvoří soubor jako dočasný a pokud je to možné není vyprázdnit na disk. *Pmode* argument je požadován při **_O_CREAT** určena. |
-| **_O_CREAT** &AMP;#124; **_O_TEMPORARY** | Vytvoří soubor jako dočasný; Při zavření posledního popisovač souboru, odstraní se tento soubor. *Pmode* argument je požadován při **_O_CREAT** určena. |
-| **_O_CREAT**&AMP;#124; ` _O_EXCL` | Vrací chybovou hodnotu, pokud soubor určený parametrem *filename* existuje. Platí pouze při použití s **_O_CREAT**. |
+| **_O_CREAT** &#124; **_O_SHORT_LIVED** | Vytvoří soubor jako dočasný a pokud je to možné není vyprázdnit na disk. *Pmode* argument je požadován při **_O_CREAT** určena. |
+| **_O_CREAT** &#124; **_O_TEMPORARY** | Vytvoří soubor jako dočasný; Při zavření posledního popisovač souboru, odstraní se tento soubor. *Pmode* argument je požadován při **_O_CREAT** určena. |
+| **_O_CREAT** &#124; ` _O_EXCL` | Vrací chybovou hodnotu, pokud soubor určený parametrem *filename* existuje. Platí pouze při použití s **_O_CREAT**. |
 | **_O_NOINHERIT** | Zabraňuje vytváření popisovače sdílený soubor. |
 | **_O_RANDOM** | Určuje, že je mezipaměť optimalizovaná pro, ale nikoliv omezená, náhodný přístup z disku. |
 | **_O_RDONLY** | Otevře se soubor jen pro čtení. Nelze zadat s **_O_RDWR** nebo **_O_WRONLY**. |
@@ -149,7 +149,7 @@ Argument *shflag* je konstantní výraz, který se skládá z jednoho z následu
 |-|-|
 | **_S_IREAD** | Povoleno jen čtení. |
 | **_S_IWRITE** | Zápis povolen. (V podstatě povoluje čtení a zápis.) |
-| **_S_IREAD** &AMP;#124; **_S_IWRITE** | Čtení a zápis povolen. |
+| **_S_IREAD** &#124; **_S_IWRITE** | Čtení a zápis povolen. |
 
 Pokud tento parametr není zadaný oprávnění k zápisu, soubor je jen pro čtení. V operačním systému Windows jsou čitelné; všechny soubory není možné poskytnout oprávnění jen pro zápis. Proto režimy **_S_IWRITE** a **_S_IREAD** | **_S_IWRITE** jsou ekvivalentní.
 
@@ -159,7 +159,7 @@ Pokud tento parametr není zadaný oprávnění k zápisu, soubor je jen pro čt
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_sopen_s –**|\<IO.h >|\<fcntl.h >, \<vložit hlavičky sys\types.h >, \<sys\stat.h >, \<share.h >|
+|**_sopen_s**|\<io.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|
 |**_wsopen_s**|\<IO.h > nebo \<wchar.h >|\<fcntl.h >, \<sys/types.h >, \<sys/stat.h >, \<share.h >|
 
 **_sopen_s –** a **_wsopen_s –** jsou rozšíření společnosti Microsoft. Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

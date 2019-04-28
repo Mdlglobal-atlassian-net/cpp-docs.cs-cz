@@ -21,15 +21,15 @@ helpviewer_keywords:
 - outp function
 ms.assetid: ab29dc04-e440-4c3f-83b1-420e65b5df75
 ms.openlocfilehash: 8c4d6ecf60086e1d5ff58e3271f446cba4cff079
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62342208"
 ---
 # <a name="outp-outpw"></a>outp, outpw
 
-Tyto funkce POSIX je zastaralá. Použít splňující podmínky ISO C++ [_outp – _outpw –, _outpd –](../c-runtime-library/outp-outpw-outpd.md) místo.
+Tyto funkce POSIX je zastaralá. Použít bitovou kopii ISO C++ splňující podmínky [_outp – _outpw –, _outpd –](../c-runtime-library/outp-outpw-outpd.md) místo.
 
 > [!IMPORTANT]
 >  Tyto funkce jsou zastaralé. Od v sadě Visual Studio 2015, nejsou k dispozici v CRT.

@@ -233,11 +233,11 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
 ms.openlocfilehash: 6daa5b6249c7ff18a8bc01c2309ffb94d3fb88ce
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58773070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351888"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Cmfcribbonbaseelement – třída
 
@@ -253,13 +253,13 @@ class CMFCRibbonBaseElement : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCRibbonBaseElement`|Vytvoří `CMFCRibbonBaseElement` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonBaseElement::AddToKeyList](#addtokeylist)|Přidá klávesovou zkratku pro prvek pásu karet do pole popisky tlačítek.|
 |[CMFCRibbonBaseElement::AddToListBox](#addtolistbox)|Přidá prvek pásu karet do seznamu příkazů zadaný pásu karet.|
@@ -375,7 +375,7 @@ class CMFCRibbonBaseElement : public CObject
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonBaseElement::OnProcessKey](#onprocesskey)|Volá se rozhraním, když uživatel stiskne klávesovou zkratku.|
 |[CMFCRibbonBaseElement::OnSetFocus](#onsetfocus)|Volá se rozhraním, když přijme prvek pásu karet nebo ztratí vstupní fokus.|
@@ -893,7 +893,7 @@ RibbonElementLocation GetLocationInGroup() const;
 
 A `RibbonElementLocation` hodnotu výčtu. V následující tabulce jsou uvedeny možné hodnoty.
 
-|Value|Popis|
+|Hodnota|Popis|
 |-----------|-----------------|
 |`RibbonElementNotInGroup`|Prvek pásu karet není součástí skupiny pásu karet.|
 |`RibbonElementSingleInGroup`|Prvek pásu karet se zobrazí jako jedinou položku do skupiny pásu karet.|

@@ -21,15 +21,15 @@ helpviewer_keywords:
 - spawnvp function
 ms.assetid: 25d3896d-1934-4453-ae8b-4fb5480a2657
 ms.openlocfilehash: 028f7d878fc0445103f34223cc75a882b491163d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355052"
 ---
 # <a name="spawnvp"></a>spawnvp
 
-Tato funkce POSIX je zastaralá. Použít splňující podmínky ISO C++ [_spawnvp](spawnvp-wspawnvp.md) místo.
+Tato funkce POSIX je zastaralá. Použít bitovou kopii ISO C++ splňující podmínky [_spawnvp](spawnvp-wspawnvp.md) místo.
 
 > [!IMPORTANT]
 > Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

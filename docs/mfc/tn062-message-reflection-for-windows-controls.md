@@ -28,11 +28,11 @@ helpviewer_keywords:
 - ON_CONTROL_REFLECT macro
 ms.assetid: 53efb0ba-fcda-4fa0-a3c7-14e0b78fb494
 ms.openlocfilehash: aa189eec430d72bef753fef7ebbe9ad929d76c87
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351839"
 ---
 # <a name="tn062-message-reflection-for-windows-controls"></a>TN062: Reflexe zprávy pro ovládací prvky Windows
 
@@ -41,7 +41,7 @@ ms.locfileid: "50677497"
 
 Tato technická Poznámka popisuje reflexe zprávy, nová funkce v knihovně MFC 4.0. Také obsahuje pokyny pro vytvoření jednoduché opakovaně použitelné ovládací prvek, který používá reflexi zprávy.
 
-Tato technická Poznámka nezabývá reflexe zprávy, protože platí pro ovládací prvky ActiveX (dříve se označovaly jako ovládací prvky OLE). Podrobnosti najdete v článku [ovládací prvky ActiveX: vytvoření podtřídy ovládacího prvku Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
+Tato technická Poznámka nezabývá reflexe zprávy, protože platí pro ovládací prvky ActiveX (dříve se označovaly jako ovládací prvky OLE). Podrobnosti najdete v článku [ovládací prvky ActiveX: Vytvoření podtřídy ovládacího prvku Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
 
 **Co je reflexe zprávy**
 
@@ -87,28 +87,28 @@ Významy parametry a návratové hodnoty funkce jsou popsány v části název f
 
 |Položka mapování|Prototyp funkce|
 |---------------|------------------------|
-|**ON_CONTROL_REFLECT (** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **();**|
-|**ON_NOTIFY_REFLECT – (** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **(NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT** <strong>\*</strong> *výsledek* **);**|
-|**ON_UPDATE_COMMAND_UI_REFLECT (** `memberFxn` **)**|**afx_msg void** `memberFxn` **(ccmdui –** <strong>\*</strong> `pCmdUI` **);**|
-|**ON_WM_CTLCOLOR_REFLECT)**|**afx_msg HBRUSH CtlColor (CDC** <strong>\*</strong> `pDC` **, UINT** `nCtlColor` **);**|
+|**ON_CONTROL_REFLECT (** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **( );**|
+|**ON_NOTIFY_REFLECT – (** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **( NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT**<strong>\*</strong> *result* **);**|
+|**ON_UPDATE_COMMAND_UI_REFLECT(** `memberFxn` **)**|**afx_msg void** `memberFxn` **( CCmdUI**<strong>\*</strong> `pCmdUI` **);**|
+|**ON_WM_CTLCOLOR_REFLECT( )**|**afx_msg HBRUSH CtlColor ( CDC**<strong>\*</strong> `pDC` **, UINT** `nCtlColor` **);**|
 |**ON_WM_DRAWITEM_REFLECT)**|**afx_msg void DrawItem (LPDRAWITEMSTRUCT** `lpDrawItemStruct` **);**|
-|**ON_WM_MEASUREITEM_REFLECT)**|**measureitem – void afx_msg (LPMEASUREITEMSTRUCT** `lpMeasureItemStruct` **);**|
-|**ON_WM_DELETEITEM_REFLECT)**|**afx_msg void DeleteItem (LPDELETEITEMSTRUCT** `lpDeleteItemStruct` **);**|
-|**ON_WM_COMPAREITEM_REFLECT)**|**afx_msg int CompareItem (LPCOMPAREITEMSTRUCT** `lpCompareItemStruct` **);**|
-|**ON_WM_CHARTOITEM_REFLECT)**|**afx_msg int CharToItem (UINT** `nKey` **, UINT** `nIndex` **);**|
-|**ON_WM_VKEYTOITEM_REFLECT)**|**afx_msg int VKeyToItem (UINT** `nKey` **, UINT** `nIndex` **);**|
-|**ON_WM_HSCROLL_REFLECT)**|**afx_msg void HScroll (UINT** `nSBCode` **, UINT** `nPos` **);**|
-|**ON_WM_VSCROLL_REFLECT)**|**afx_msg void VScroll (UINT** `nSBCode` **, UINT** `nPos` **);**|
+|**ON_WM_MEASUREITEM_REFLECT( )**|**measureitem – void afx_msg (LPMEASUREITEMSTRUCT** `lpMeasureItemStruct` **);**|
+|**ON_WM_DELETEITEM_REFLECT( )**|**afx_msg void DeleteItem ( LPDELETEITEMSTRUCT** `lpDeleteItemStruct` **);**|
+|**ON_WM_COMPAREITEM_REFLECT( )**|**afx_msg int CompareItem ( LPCOMPAREITEMSTRUCT** `lpCompareItemStruct` **);**|
+|**ON_WM_CHARTOITEM_REFLECT)**|**afx_msg int CharToItem ( UINT** `nKey` **, UINT** `nIndex` **);**|
+|**ON_WM_VKEYTOITEM_REFLECT( )**|**afx_msg int VKeyToItem ( UINT** `nKey` **, UINT** `nIndex` **);**|
+|**ON_WM_HSCROLL_REFLECT( )**|**afx_msg void HScroll ( UINT** `nSBCode` **, UINT** `nPos` **);**|
+|**ON_WM_VSCROLL_REFLECT( )**|**afx_msg void VScroll ( UINT** `nSBCode` **, UINT** `nPos` **);**|
 |**ON_WM_PARENTNOTIFY_REFLECT)**|**afx_msg void ParentNotify (UINT** `message` **, LPARAM** `lParam` **);**|
 
 On_notify_reflect – a ON_CONTROL_REFLECT makra mají varianty, které umožňují více než jeden objekt (například ovládací prvek a jeho nadřazený objekt) pro zpracování danou zprávu.
 
 |Položka mapování|Prototyp funkce|
 |---------------|------------------------|
-|**ON_NOTIFY_REFLECT_EX – (** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **(NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT** <strong>\*</strong> *výsledek* **);**|
-|**ON_CONTROL_REFLECT_EX (** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **();**|
+|**ON_NOTIFY_REFLECT_EX – (** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **( NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT**<strong>\*</strong> *result* **);**|
+|**ON_CONTROL_REFLECT_EX(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **( );**|
 
-## <a name="handling-reflected-messages-an-example-of-a-reusable-control"></a>Zpracování zpráv Reflected: Příklad opakovaně použitelné ovládací prvek
+## <a name="handling-reflected-messages-an-example-of-a-reusable-control"></a>Zpracování Reflektovaných zpráv: Příklad opakovaně použitelné ovládací prvek
 
 Tento jednoduchý příklad vytvoří ovládací prvek opakovaně volat `CYellowEdit`. Ovládací prvek funguje stejně jako regulární textové pole s výjimkou toho, aby zobrazil černý text na žlutým pozadím. To by bylo možné snadno přidat členské funkce, která by umožnila `CYellowEdit` ovládací prvek pro zobrazení různé barvy.
 

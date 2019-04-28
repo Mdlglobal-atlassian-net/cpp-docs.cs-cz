@@ -31,11 +31,11 @@ helpviewer_keywords:
 - _putws function
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
 ms.openlocfilehash: 0151d29f627a8f6b91142d619f64921333bb48f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358083"
 ---
 # <a name="puts-putws"></a>puts, _putws
 
@@ -75,7 +75,7 @@ Informace o těchto a dalších chybových kódech naleznete v tématu [_doserrn
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_putts –**|**Vloží**|**Vloží**|**_putws**|
+|**_putts**|**Vloží**|**Vloží**|**_putws**|
 
 ## <a name="requirements"></a>Požadavky
 

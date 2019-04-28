@@ -51,11 +51,11 @@ helpviewer_keywords:
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: b5657ffb-6178-4cbf-9886-1af904ede94c
 ms.openlocfilehash: dcb8e37090e4c15ba849e76ca1cb1cc646a7bcc0
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348182"
 ---
 # <a name="crtsetdbgflag"></a>_CrtSetDbgFlag
 
@@ -86,11 +86,11 @@ V následující tabulce jsou uvedeny bitových polí pro **_crtDbgFlag** a popi
 
 |Bitové pole.|Výchozí|Popis|
 |---------------|-------------|-----------------|
-|**_CRTDBG_ALLOC_MEM_DF**|DÁLE|ON: Povolit přidělení haldy ladění a použití identifikátorů typ bloku paměti, jako například **_CLIENT_BLOCK**. VYPNUTO: Přidat nové přidělení propojeném seznamu haldy, ale nastavit typ do bloku **_IGNORE_BLOCK**.<br /><br /> Můžete také kombinovat s žádným z makra haldy frekvence kontroly.|
-|**_CRTDBG_CHECK_ALWAYS_DF**|VYPNOUT|Zapnuté: Volání [_CrtCheckMemory](crtcheckmemory.md) při každé žádosti o přidělování a navracení zpět. VYPNUTO: **_CrtCheckMemory** musí být explicitně volána.<br /><br /> Haldy frekvence kontroly makra nemají žádný vliv, pokud je tento příznak nastaven.|
-|**_CRTDBG_CHECK_CRT_DF**|VYPNOUT|Zapnuté: Zahrnout **_CRT_BLOCK** typy ve stavu přetečení zjišťování a paměti rozdíl operace. VYPNUTO: Paměť používaná interně knihovnou run-time je ignorována pomocí těchto operací.<br /><br /> Můžete také kombinovat s žádným z makra haldy frekvence kontroly.|
-|**_CRTDBG_DELAY_FREE_MEM_DF**|VYPNOUT|Zapnuté: Ponechat uvolněné paměti propojeného seznamu bloků v haldě, přiřazovat je **_FREE_BLOCK** zadejte a vyplnit hodnota bajtu 0xDD. VYPNUTO: Není ponechat uvolněné bloky v propojeném seznamu haldy.<br /><br /> Můžete také kombinovat s žádným z makra haldy frekvence kontroly.|
-|**_CRTDBG_LEAK_CHECK_DF**|VYPNOUT|Zapnuté: Provést automatické nevracení při ukončení programu prostřednictvím volání na kontrolu [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) a vygenerovat zprávu o chybách v případě, že aplikace se nezdařilo uvolnit všechny přidělené paměti. VYPNUTO: Neprovádět automaticky nevracení kontrolu při ukončení programu.<br /><br /> Můžete také kombinovat s žádným z makra haldy frekvence kontroly.|
+|**_CRTDBG_ALLOC_MEM_DF**|DÁLE|ON: Povolit přidělení haldy ladění a použití identifikátorů typ bloku paměti, jako například **_CLIENT_BLOCK**. OFF: Přidat nové přidělení propojeném seznamu haldy, ale nastavit typ do bloku **_IGNORE_BLOCK**.<br /><br /> Můžete také kombinovat s žádným z makra haldy frekvence kontroly.|
+|**_CRTDBG_CHECK_ALWAYS_DF**|OFF|ON: Volání [_CrtCheckMemory](crtcheckmemory.md) při každé žádosti o přidělování a navracení zpět. VYPNUTO: **_CrtCheckMemory** musí být explicitně volána.<br /><br /> Haldy frekvence kontroly makra nemají žádný vliv, pokud je tento příznak nastaven.|
+|**_CRTDBG_CHECK_CRT_DF**|OFF|ON: Zahrnout **_CRT_BLOCK** typy ve stavu přetečení zjišťování a paměti rozdíl operace. OFF: Paměť používaná interně knihovnou run-time je ignorována pomocí těchto operací.<br /><br /> Můžete také kombinovat s žádným z makra haldy frekvence kontroly.|
+|**_CRTDBG_DELAY_FREE_MEM_DF**|OFF|ON: Zachovat uvolněné bloky paměti v propojeném seznamu haldy, přiřazovat je **_FREE_BLOCK** zadejte a vyplnit hodnota bajtu 0xDD. OFF: Nezachovat uvolněné bloky v propojeném seznamu haldy.<br /><br /> Můžete také kombinovat s žádným z makra haldy frekvence kontroly.|
+|**_CRTDBG_LEAK_CHECK_DF**|OFF|ON: Proveďte automatické nevracení při ukončení programu prostřednictvím volání na kontrolu [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) a vygenerovat zprávu o chybách v případě, že aplikace se nezdařilo uvolnit všechny přidělené paměti. OFF: Neprovádějte automaticky nevracení kontrolu při ukončení programu.<br /><br /> Můžete také kombinovat s žádným z makra haldy frekvence kontroly.|
 
 **Kontrola haldy frekvence makra**
 

@@ -39,11 +39,11 @@ helpviewer_keywords:
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
 ms.openlocfilehash: 59a67b0d213a11630f551fd7582b44aab60e314f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341714"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
@@ -82,7 +82,7 @@ Všechna čísla.
 
 |Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|ROZMEZÍ **QNAN**, **AJÍT**|žádná|**_DOMÉNA**|
+|± **QNAN**, **IND**|žádná|**_DOMAIN**|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -96,7 +96,7 @@ Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **atan
 
 |Rutina|Požadované záhlaví (C)|Požadované záhlaví (C++)|
 |-------------|---------------------|-|
-|**Atan**, **atan2**, **atanf –**, **atan2f –**, **atanl –**, **atan2l –**|\<Math.h >|\<cmath > nebo \<math.h >|
+|**Atan**, **atan2**, **atanf –**, **atan2f –**, **atanl –**, **atan2l –**|\<math.h>|\<cmath > nebo \<math.h >|
 
 ## <a name="example"></a>Příklad
 
@@ -134,7 +134,7 @@ Arctangent of 0.500000 / 5.000000: 0.099669
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>
-[Cos cosf –, cosl –](cos-cosf-cosl.md)<br/>
+[cos, cosf, cosl](cos-cosf-cosl.md)<br/>
 [_matherr](matherr.md)<br/>
 [sin, sinf, sinl](sin-sinf-sinl.md)<br/>
 [tan, tanf, tanl](tan-tanf-tanl.md)<br/>

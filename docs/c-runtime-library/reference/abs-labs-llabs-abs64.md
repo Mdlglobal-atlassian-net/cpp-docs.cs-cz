@@ -1,5 +1,5 @@
 ---
-title: Funkce ABS, praktická cvičení, llabs –, _abs64 –
+title: abs, labs, llabs, _abs64
 ms.date: 04/05/2018
 apiname:
 - abs
@@ -37,13 +37,13 @@ helpviewer_keywords:
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
 ms.openlocfilehash: 61aa0a48757a35708ffb85d2c0525bb4eac82d56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341987"
 ---
-# <a name="abs-labs-llabs-abs64"></a>Funkce ABS, praktická cvičení, llabs –, _abs64 –
+# <a name="abs-labs-llabs-abs64"></a>abs, labs, llabs, _abs64
 
 Vypočítá absolutní hodnotu argumentu.
 
@@ -77,13 +77,13 @@ float abs( float n );   // C++ only
 
 Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **abs** , která používají a vrací **dlouhé**, **dlouhé** **dlouhé**,  **float**, **double**, a **dlouhé** **double** hodnoty. Tato přetížení jsou definovány v \<cmath > záhlaví. V programu jazyka C **abs** vždy převezme a vrátí **int**.
 
-**Specifické pro Microsoft**: protože oblast záporných celých čísel, která lze znázornit pomocí libovolný integrální typ, je větší než rozsah kladných celých čísel, která lze znázornit pomocí tohoto typu, je možné zadat argument do těchto Funkce, které nelze převést. Pokud absolutní hodnota argumentu nemůže být reprezentována návratovým typem, **abs** funkce vrátí nezměněnou hodnotu argumentu. Konkrétně `abs(INT_MIN)` vrátí `INT_MIN`, `labs(LONG_MIN)` vrátí `LONG_MIN`, `llabs(LLONG_MIN)` vrátí `LLONG_MIN`, a `_abs64(_I64_MIN)` vrátí `_I64_MIN`. To znamená, že **abs** funkce nelze používat k zajištění kladné hodnoty.
+**Specifické pro Microsoft**: Protože oblast záporných celých čísel, která lze znázornit pomocí libovolný integrální typ, je větší než rozsah kladných celých čísel, která lze znázornit pomocí tohoto typu, je možné zadat argument do těchto funkcí, které nelze převést. Pokud absolutní hodnota argumentu nemůže být reprezentována návratovým typem, **abs** funkce vrátí nezměněnou hodnotu argumentu. Konkrétně `abs(INT_MIN)` vrátí `INT_MIN`, `labs(LONG_MIN)` vrátí `LONG_MIN`, `llabs(LLONG_MIN)` vrátí `LLONG_MIN`, a `_abs64(_I64_MIN)` vrátí `_I64_MIN`. To znamená, že **abs** funkce nelze používat k zajištění kladné hodnoty.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaná hlavička C|Požadované hlaviček jazyka C++|
 |-------------|-----------------------|---------------------------|
-|**Abs**, **labs**, **llabs –**|\<Math.h > nebo \<stdlib.h >|\<cmath >, \<cstdlib – >, \<stdlib.h > nebo \<math.h >|
+|**abs**, **labs**, **llabs**|\<Math.h > nebo \<stdlib.h >|\<cmath >, \<cstdlib – >, \<stdlib.h > nebo \<math.h >|
 |**_abs64**|\<stdlib.h>|\<cstdlib – > nebo \<stdlib.h >|
 
 Použití přetížené verze **abs** v jazyce C++, musíte zahrnout \<cmath > záhlaví.

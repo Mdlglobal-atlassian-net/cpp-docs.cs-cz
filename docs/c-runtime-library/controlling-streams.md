@@ -9,11 +9,11 @@ helpviewer_keywords:
 - streams
 ms.assetid: 267e9013-9afc-45f6-91e3-ca093230d9d9
 ms.openlocfilehash: 85c7e1b22519287fbd03d89487d6639f197a8b63
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62344627"
 ---
 # <a name="controlling-streams"></a>Řídicí proudy
 

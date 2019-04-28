@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru C2141
+title: Compiler Error C2141
 ms.date: 11/04/2016
 f1_keywords:
 - C2141
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C2141
 ms.assetid: 10cf770f-0500-4220-ac90-a863b7ea5fe6
 ms.openlocfilehash: 89395fa3419d79fa4dec3fecf9acfc681590d825
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353559"
 ---
-# <a name="compiler-error-c2141"></a>Chyba kompilátoru C2141
+# <a name="compiler-error-c2141"></a>Compiler Error C2141
 
 přetečení velikosti pole
 

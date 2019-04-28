@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru C2143
+title: Compiler Error C2143
 ms.date: 11/04/2016
 f1_keywords:
 - C2143
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C2143
 ms.assetid: 1d8d1456-e031-4965-9240-09a6e33ba81c
 ms.openlocfilehash: ed4bc7eea85e5263d59817082caed99bde3d75d5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353479"
 ---
-# <a name="compiler-error-c2143"></a>Chyba kompilátoru C2143
+# <a name="compiler-error-c2143"></a>Compiler Error C2143
 
 Chyba syntaxe: chybí "token1" před "token2.
 

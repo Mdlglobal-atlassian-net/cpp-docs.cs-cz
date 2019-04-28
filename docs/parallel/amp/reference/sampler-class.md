@@ -13,11 +13,11 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::sampler::graphics::filter_mode
 ms.assetid: 9a6a9807-497d-402d-b092-8c4d86275b80
 ms.openlocfilehash: 1a66e4d025a7592b78839dbe5f25f9103da41224
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352590"
 ---
 # <a name="sampler-class"></a>sampler – třída
 
@@ -57,7 +57,7 @@ class sampler;
 |----------|-----------------|
 |[address_mode](#address_mode)|Načte režim adresy objektu `sampler` objektu.|
 |[border_color](#border_color)|Získá barvu ohraničení `sampler` objektu.|
-|[filter_mode –](#filter_mode)|Načte režim filtru objektu `sampler` objektu.|
+|[filter_mode](#filter_mode)|Načte režim filtru objektu `sampler` objektu.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -119,7 +119,7 @@ Barva ohraničení, která se použije, pokud je režim adresy address_border. V
 
 [6] přesunout konstruktor `sampler` objektu přesunout do nové `sampler` instance.
 
-##  <a name="address_mode"></a> address_mode –
+##  <a name="address_mode"></a> address_mode
 
 Načte režim adresy objektu `sampler` objektu.
 

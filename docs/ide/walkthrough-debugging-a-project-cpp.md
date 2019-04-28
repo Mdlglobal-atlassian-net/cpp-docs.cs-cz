@@ -1,17 +1,17 @@
 ---
 title: 'Návod: Ladění projektu (C++)'
-ms.date: 09/14/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - projects [C++], debugging
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
 ms.openlocfilehash: 0a1ceddca3234ead7d10cc839d41a6d644ec1866
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349916"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>Návod: Ladění projektu (C++)
 
@@ -59,4 +59,4 @@ V tomto návodu změníte program pro vyřešení problému, který jste zjistil
 ## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
-[Projekty a sestavení systémy](../build/projects-and-build-systems-cpp.md)<br/>
+[Projekty a systémy sestavení](../build/projects-and-build-systems-cpp.md)<br/>

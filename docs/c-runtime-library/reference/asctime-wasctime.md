@@ -31,11 +31,11 @@ helpviewer_keywords:
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
 ms.openlocfilehash: bc2d7a50442d9000eaaebf7a06bf336b3317e4df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341805"
 ---
 # <a name="asctime-wasctime"></a>asctime, _wasctime
 
@@ -91,13 +91,13 @@ Tyto funkce ověřují své parametry. Pokud *timeptr* je ukazatel s hodnotou nu
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tasctime –**|**asctime –**|**asctime –**|**_wasctime**|
+|**_tasctime**|**asctime**|**asctime**|**_wasctime**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**asctime –**|\<Time.h >|
+|**asctime**|\<time.h>|
 |**_wasctime**|\<Time.h > nebo \<wchar.h >|
 
 ## <a name="example"></a>Příklad

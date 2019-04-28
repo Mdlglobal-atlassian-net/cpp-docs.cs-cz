@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (queue)
 - std::operator== (queue)
 ms.openlocfilehash: 496b728b67c4539a63d5bf3c783f8c9145c1de42
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369901"
 ---
 # <a name="ltqueuegt-operators"></a>&lt;fronty&gt; operátory
 
@@ -424,4 +424,4 @@ The queue q1 is greater than or equal to the queue q3.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<fronty >](../standard-library/queue.md)<br/>
+[\<queue>](../standard-library/queue.md)<br/>

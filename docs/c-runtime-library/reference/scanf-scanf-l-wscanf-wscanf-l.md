@@ -41,11 +41,11 @@ helpviewer_keywords:
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
 ms.openlocfilehash: 48aa0bb3348a3336de9ee0eb9f9ec0d3e1a2b3cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357119"
 ---
 # <a name="scanf-scanfl-wscanf-wscanfl"></a>scanf, _scanf_l, wscanf, _wscanf_l
 
@@ -79,7 +79,7 @@ int _wscanf_l(
 *Formát*<br/>
 Řetězec řízení formátu.
 
-*Argument*<br/>
+*argument*<br/>
 Volitelné argumenty
 
 *Národní prostředí*<br/>
@@ -108,8 +108,8 @@ Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že pou�
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tscanf –**|**scanf**|**scanf**|**wscanf**|
-|**_tscanf_l –**|**_scanf_l**|**_scanf_l**|**_wscanf_l**|
+|**_tscanf**|**scanf**|**scanf**|**wscanf**|
+|**_tscanf_l**|**_scanf_l**|**_scanf_l**|**_wscanf_l**|
 
 Další informace najdete v tématu [pole Specifikace formátu – scanf funkce a funkce wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
@@ -117,8 +117,8 @@ Další informace najdete v tématu [pole Specifikace formátu – scanf funkce 
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**scanf –**, **_scanf_l –**|\<stdio.h>|
-|**wscanf**, **_wscanf_l –**|\<stdio.h > nebo \<wchar.h >|
+|**scanf**, **_scanf_l**|\<stdio.h>|
+|**wscanf**, **_wscanf_l**|\<stdio.h > nebo \<wchar.h >|
 
 Konzole není podporována v aplikacích pro univerzální platformu Windows (UPW). Standardní datový proud popisovačů, které jsou spojeny s konzolou, **stdin**, **stdout**, a **stderr**, musí být přesměrován před funkcí jazyka C za běhu můžete použít v aplikacích pro UWP . Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
@@ -167,5 +167,5 @@ The contents are: 36 92.300003 y n Wide characters
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf _sprintf_l –, swprintf, _swprintf_l –, \__swprintf_l –](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>

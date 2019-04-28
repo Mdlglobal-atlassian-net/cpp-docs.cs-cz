@@ -23,11 +23,11 @@ helpviewer_keywords:
 - calloc function
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
 ms.openlocfilehash: 59aa535136cf32ea5dd68b8917ec969eee41e2ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347727"
 ---
 # <a name="calloc"></a>calloc
 
@@ -60,7 +60,7 @@ Délka v bajtech každého prvku.
 
 **calloc** nastaví **errno** k **ENOMEM** Pokud selhání přidělení paměti, nebo pokud požadované množství paměti překročí **_heap_maxreq –**. Informace o tomto a dalších chybových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**calloc** volání **malloc** použití jazyka C++ [_set_new_mode](set-new-mode.md) funkce nastavíte nový režim obslužné rutiny. Nový režim obslužné rutiny Určuje, zda je při selhání, **malloc** je volat nové rutiny obsluhy úmluvu [_set_new_handler](set-new-handler.md). Ve výchozím nastavení **malloc** nevolá nové rutiny obsluhy při selhání přidělení paměti. Toto výchozí chování můžete přepsat tak, aby, když **calloc** selže přidělování paměti, **malloc** volá nové rutiny obsluhy ve stejném způsobu, jakým **nové** operátor Když selže ze stejného důvodu. Chcete-li přepsat výchozí hodnotu, zavolejte
+**calloc** volání **malloc** používat C++ [_set_new_mode](set-new-mode.md) funkce nastavíte nový režim obslužné rutiny. Nový režim obslužné rutiny Určuje, zda je při selhání, **malloc** je volat nové rutiny obsluhy úmluvu [_set_new_handler](set-new-handler.md). Ve výchozím nastavení **malloc** nevolá nové rutiny obsluhy při selhání přidělení paměti. Toto výchozí chování můžete přepsat tak, aby, když **calloc** selže přidělování paměti, **malloc** volá nové rutiny obsluhy ve stejném způsobu, jakým **nové** operátor Když selže ze stejného důvodu. Chcete-li přepsat výchozí hodnotu, zavolejte
 
 ```C
 _set_new_mode(1);

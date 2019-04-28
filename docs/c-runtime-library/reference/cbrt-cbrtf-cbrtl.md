@@ -28,11 +28,11 @@ helpviewer_keywords:
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
 ms.openlocfilehash: c395a063cfa07cdfb7e841f19bc64fb1c57ca796
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341091"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt, cbrtf, cbrtl
 
@@ -67,9 +67,9 @@ Hodnota s plovoucí desetinnou čárkou
 
 **Cbrt –** vrátí funkce datové krychle kořen *x*.
 
-|Vstup|Výjimka SEH|**_matherr** výjimky|
+|Vstup|Výjimka SEH|**_matherr** Exception|
 |-----------|-------------------|--------------------------|
-|ROZMEZÍ ∞, QNAN, AJÍT|žádná|žádná|
+|± ∞, QNAN, IND|žádná|žádná|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -79,7 +79,7 @@ Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **cbrt
 
 |Funkce|Záhlaví C|Hlaviček jazyka C++|
 |--------------|--------------|------------------|
-|**cbrt –**, **cbrtf –**, **cbrtl**|\<Math.h >|\<cmath >|
+|**cbrt**, **cbrtf**, **cbrtl**|\<math.h>|\<cmath>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

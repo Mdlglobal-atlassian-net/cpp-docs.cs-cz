@@ -33,11 +33,11 @@ helpviewer_keywords:
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
 ms.openlocfilehash: e4cf7a44864df0b5ecca531aab3db4546c25bb2c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347662"
 ---
 # <a name="chdir-wchdir"></a>_chdir, _wchdir
 
@@ -79,13 +79,13 @@ Při použití volitelných lomítka (**&#92;**) v cestách, je nutné umístit 
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tchdir –**|**_chdir**|**_chdir**|**_wchdir**|
+|**_tchdir**|**_chdir**|**_chdir**|**_wchdir**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_chdir**|\<Direct.h >|\<errno.h>|
+|**_chdir**|\<direct.h>|\<errno.h>|
 |**_wchdir**|\<Direct.h > nebo \<wchar.h >|\<errno.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
 ms.openlocfilehash: c02f5171fac862b6f79e194f5940b0adeb2e93e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348208"
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor – třída
 
@@ -57,7 +57,7 @@ Výpomoc s několika koncepty, které nejsou součástí rozhraní viditelné po
 
 Tři typy jsou definovány pro účely budeme:
 
-|Typ|Popis|
+|Type|Popis|
 |----------|-----------------|
 |`Outermost`|Typ `OUTERMOST(*this)`.|
 |`Outermost_traits`|`allocator_traits<Outermost>`|
@@ -97,9 +97,9 @@ Tři typy jsou definovány pro účely budeme:
 |Název|Popis|
 |----------|-----------------|
 |[allocate](#allocate)|Přiděluje paměť pomocí `Outer` alokátoru.|
-|[Konstrukce](#construct)|Vytvoří objekt.|
+|[construct](#construct)|Vytvoří objekt.|
 |[zrušit přidělení](#deallocate)|Zruší přidělení objektů pomocí vnější alokátoru.|
-|[zrušení](#destroy)|Odstraní zadaný objekt.|
+|[destroy](#destroy)|Odstraní zadaný objekt.|
 |[inner_allocator](#inner_allocator)|Získá odkaz na uložený objekt typu `inner_allocator_type`.|
 |[max_size](#max_size)|Určuje maximální počet objektů, které mohou být přiděleny podle vnější alokátoru.|
 |[outer_allocator](#outer_allocator)|Získá odkaz na uložený objekt typu `outer_allocator_type`.|
@@ -271,7 +271,7 @@ Odkaz na uložený objekt typu `outer_allocator_type`.
 
 Definuje typ `Outer::rebind\<Other>::other` jako synonymum pro `scoped_allocator_adaptor\<Other, Inner...>`.
 
-Struktura obnovení vazby {typedef Other_traits::rebind\<jiných > Other_alloc; scoped_allocator_adaptor – definice typedef\<Other_alloc, vnitřní... > ostatní;};
+Struktura obnovení vazby {typedef Other_traits::rebind\<jiných > Other_alloc; scoped_allocator_adaptor – definice typedef\<Other_alloc, vnitřní... > ostatní; };
 
 ## <a name="scoped_allocator_adaptor"></a>  scoped_allocator_adaptor::scoped_allocator_adaptor – konstruktor
 
@@ -307,7 +307,7 @@ Seznam alokátorů má být použit jako vnitřní alokátorů.
 
 První výchozí konstruktor zkonstruuje jeho objekty uložené přidělování. Všechny následující tři konstruktory vytvoří její objekty uložené přidělování z odpovídajícími objekty ve *správné*. Poslední konstruktor vytvoří její objekty uložené přidělování z odpovídajícího argumenty v seznamu argumentů.
 
-## <a name="select_on_container_copy_construction"></a>  scoped_allocator_adaptor::select_on_container_copy_construction –
+## <a name="select_on_container_copy_construction"></a>  scoped_allocator_adaptor::select_on_container_copy_construction
 
 Vytvoří novou `scoped_allocator_adaptor` objekt s každou uložený objekt alokátoru inicializován pomocí volání `select_on_container_copy_construction` pro každý odpovídající alokátoru.
 

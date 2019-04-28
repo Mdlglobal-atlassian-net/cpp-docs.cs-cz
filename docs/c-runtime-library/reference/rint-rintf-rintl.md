@@ -28,11 +28,11 @@ helpviewer_keywords:
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
 ms.openlocfilehash: 9e0e3875b7484735b5439c6c0e0a7252940d4552
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357587"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -60,9 +60,9 @@ Hodnota s plovoucí desetinnou čárkou k zaokrouhlení.
 
 **Isknout** funkce vrátí hodnotu s plovoucí desetinnou čárkou, která představuje na nejbližší celé číslo k *x*. Středové hodnoty jsou zaokrouhleny podle aktuálního nastavení režimu zaokrouhlení s plovoucí desetinnou čárkou, stejné jako **nearbyint –** funkce. Na rozdíl od **nearbyint –** funkce, **isknout** funkce může vyvolat **FE_INEXACT** výjimek plovoucí desetinné čárky, pokud výsledek se liší v hodnotě z argumentu. Není vrácena žádná chyba.
 
-|Vstup|Výjimka SEH|**_matherr** výjimky|
+|Vstup|Výjimka SEH|**_matherr** Exception|
 |-----------|-------------------|--------------------------|
-|ROZMEZÍ ∞, QNAN, AJÍT|žádná|žádná|
+|± ∞, QNAN, IND|žádná|žádná|
 |Denormals|EXCEPTION_FLT_UNDERFLOW|žádná|
 
 ## <a name="remarks"></a>Poznámky
@@ -73,7 +73,7 @@ Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **iskn
 
 |Funkce|Záhlaví C|Hlaviček jazyka C++|
 |--------------|--------------|------------------|
-|**rint**, **rintf**, **rintl**|\<Math.h >|\<cmath >|
+|**rint**, **rintf**, **rintl**|\<math.h>|\<cmath>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
@@ -121,5 +121,5 @@ rintl(-2.500000) is -3
 [fmod, fmodf](fmod-fmodf.md)<br/>
 [lrint, lrintf, lrintl, llrint, llrintf, llrintl](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)<br/>
 [lround, lroundf, lroundl, llround, llroundf, llroundl](lround-lroundf-lroundl-llround-llroundf-llroundl.md)<br/>
-[nearbyint – nearbyintf –, nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)<br/>
+[nearbyint, nearbyintf, nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)<br/>
 [Tisknout](rint-rintf-rintl.md)<br/>

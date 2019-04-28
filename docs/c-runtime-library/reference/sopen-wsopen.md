@@ -33,11 +33,11 @@ helpviewer_keywords:
 - _wsopen function
 ms.assetid: a9d4cccf-06e9-414d-96fa-453fca88cc1f
 ms.openlocfilehash: b3773550fd32df75f0a3819767de1171daebaf0f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355390"
 ---
 # <a name="sopen-wsopen"></a>_sopen, _wsopen
 
@@ -107,9 +107,9 @@ Celočíselný výraz *oflag* je tvořen přidáním kombinování nejméně jed
 | **_O_APPEND** | Přesune ukazatel na soubor na konec souboru před každou operaci zápisu. |
 | **_O_BINARY** | Otevře soubor v binárním (nepřeloženém) režimu. (Viz [fopen](fopen-wfopen.md) popis binárním režimu.) |
 | **_O_CREAT** | Vytvoří soubor a otevře jej pro zápis. Nemá žádný vliv, pokud souboru určeném *filename* existuje. *Pmode* argument je požadován při **_O_CREAT** určena. |
-| **_O_CREAT** &AMP;#124; **_O_SHORT_LIVED** | Vytvoří soubor jako dočasný a pokud je to možné není vyprázdnit na disk. *Pmode* argument je požadován při **_O_CREAT** určena. |
-| **_O_CREAT** &AMP;#124; **_O_TEMPORARY** | Vytvoří soubor jako dočasný; Při zavření posledního popisovač souboru, odstraní se tento soubor. *Pmode* argument je požadován při **_O_CREAT** určena. |
-| **_O_CREAT**&AMP;#124; ` _O_EXCL` | Vrací chybovou hodnotu, pokud soubor určený parametrem *filename* existuje. Platí pouze při použití s **_O_CREAT**. |
+| **_O_CREAT** &#124; **_O_SHORT_LIVED** | Vytvoří soubor jako dočasný a pokud je to možné není vyprázdnit na disk. *Pmode* argument je požadován při **_O_CREAT** určena. |
+| **_O_CREAT** &#124; **_O_TEMPORARY** | Vytvoří soubor jako dočasný; Při zavření posledního popisovač souboru, odstraní se tento soubor. *Pmode* argument je požadován při **_O_CREAT** určena. |
+| **_O_CREAT** &#124; ` _O_EXCL` | Vrací chybovou hodnotu, pokud soubor určený parametrem *filename* existuje. Platí pouze při použití s **_O_CREAT**. |
 | **_O_NOINHERIT** | Zabraňuje vytváření popisovače sdílený soubor. |
 | **_O_RANDOM** | Určuje, že je mezipaměť optimalizovaná pro, ale nikoliv omezená, náhodný přístup z disku. |
 | **_O_RDONLY** | Otevře se soubor jen pro čtení. Nelze zadat s **_O_RDWR** nebo **_O_WRONLY**. |
@@ -143,7 +143,7 @@ Argument *shflag* je konstantní výraz, který se skládá z jednoho z následu
 |-|-|
 | **_S_IREAD** | Povoleno jen čtení. |
 | **_S_IWRITE** | Zápis povolen. (V podstatě povoluje čtení a zápis.) |
-| **_S_IREAD** &AMP;#124; **_S_IWRITE** | Čtení a zápis povolen. |
+| **_S_IREAD** &#124; **_S_IWRITE** | Čtení a zápis povolen. |
 
 Pokud tento parametr není zadaný oprávnění k zápisu, soubor je jen pro čtení. V operačním systému Windows jsou čitelné; všechny soubory není možné poskytnout oprávnění jen pro zápis. Proto režimy **_S_IWRITE** a **_S_IREAD** | **_S_IWRITE** jsou ekvivalentní.
 
@@ -153,8 +153,8 @@ Pokud tento parametr není zadaný oprávnění k zápisu, soubor je jen pro čt
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_sopen**|\<IO.h >|\<fcntl.h >, \<vložit hlavičky sys\types.h >, \<sys\stat.h >, \<share.h >|
-|**_wsopen**|\<IO.h > nebo \<wchar.h >|\<fcntl.h >, \<vložit hlavičky sys\types.h >, \<sys\stat.h >, \<share.h >|
+|**_sopen**|\<io.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|
+|**_wsopen**|\<IO.h > nebo \<wchar.h >|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

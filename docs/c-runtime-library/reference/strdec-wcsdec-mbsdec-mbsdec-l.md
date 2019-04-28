@@ -41,11 +41,11 @@ helpviewer_keywords:
 - _mbsdec function
 ms.assetid: ae37c223-800f-48a9-ae8e-38c8d20af2dd
 ms.openlocfilehash: 7e88bcf5bf7ffc5eba6feecd545cda8f7950829c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353876"
 ---
 # <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
 
@@ -78,7 +78,7 @@ unsigned char *_mbsdec_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Spuštění*<br/>
+*start*<br/>
 Ukazatel na libovolný znak (nebo pro **_mbsdec** a **_mbsdec_l –**, první bajt libovolného vícebajtového znaku) ve zdrojovém řetězci; *start* musí předcházet *aktuální* ve zdrojovém řetězci.
 
 *aktuální*<br/>
@@ -106,7 +106,7 @@ Pokud *start* nebo *aktuální* je **NULL**, je vyvolána obslužná rutina nepl
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tcsdec –**|**_strdec**|**_mbsdec**|**_wcsdec**|
+|**_tcsdec**|**_strdec**|**_mbsdec**|**_wcsdec**|
 
 **_strdec –** a **_wcsdec –** jsou jedním jednobajtového znaku a širokoznaká verze **_mbsdec** a **_mbsdec_l –**. **_strdec –** a **_wcsdec –** jsou k dispozici pouze pro toto mapování a nesmí být použity jinak.
 
@@ -116,8 +116,8 @@ Další informace najdete v tématu [použití mapování obecného textu](../..
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_mbsdec**|\<Mbstring.h >|\<Mbctype.h >|
-|**_mbsdec_l**|\<Mbstring.h >|\<Mbctype.h >|
+|**_mbsdec**|\<Mbstring.h >|\<mbctype.h>|
+|**_mbsdec_l**|\<Mbstring.h >|\<mbctype.h>|
 |**_strdec**|\<tchar.h>||
 |**_wcsdec**|\<tchar.h>||
 
