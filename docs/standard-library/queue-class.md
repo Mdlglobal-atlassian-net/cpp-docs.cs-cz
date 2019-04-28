@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
 ms.openlocfilehash: 2b82e4237a525b09758323ae2483d8818fc938af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369940"
 ---
 # <a name="queue-class"></a>queue – třída
 
@@ -56,7 +56,7 @@ Zahrnout vhodný základní třídy kontejnerů pro frontu [deque](../standard-l
 
 Fronty objekty jsou srovnatelné if rovnosti a pouze v případě elementů třídy `Type` lze porovnávat rovnosti a jsou méně – než srovnatelné Pokud a pouze v případě elementů třídy `Type` jsou méně – než srovnatelná s hodnotou.
 
-Existují tři typy definované ve standardní knihovně C++ adaptéry kontejneru: zásobník, fronty a priority_queue –. Každý omezuje funkčnost některé základní třídy kontejneru a poskytuje tak přesně řízené rozhraní standardní datovou strukturu.
+Existují tři typy určené adaptéry kontejneru C++ standardní knihovny: zásobník, fronty a priority_queue –. Každý omezuje funkčnost některé základní třídy kontejneru a poskytuje tak přesně řízené rozhraní standardní datovou strukturu.
 
 - [Stack – třída](../standard-library/stack-class.md) podporuje poslední dovnitř, první (ven LIFO) datové struktury. Dobré analogové brát v úvahu by stoh talířů shora. Elementy (tabulky) může vložit, prozkoumat nebo odebrat jenom z horní části zásobníku, což je poslední prvek na konci kontejneru základní. Omezení přístupu jenom k prvku na vrcholu je důvod horizontálních oddílů pomocí třídy zásobníku.
 
@@ -85,7 +85,7 @@ Existují tři typy definované ve standardní knihovně C++ adaptéry kontejner
 |[Zpět](#back)|Vrátí odkaz na poslední a naposledy přidat prvek při zálohování `queue`.|
 |[prázdný](#empty)|Testuje, zda `queue` je prázdný.|
 |[Přední](#front)|Vrátí odkaz na první prvek na začátku `queue`.|
-|[POP](#pop)|Odstraní prvek z přední části `queue`.|
+|[pop](#pop)|Odstraní prvek z přední části `queue`.|
 |[push](#push)|Přidá prvek na pozadí `queue`.|
 |[Velikost](#size)|Vrátí počet prvků v `queue`.|
 
@@ -470,7 +470,7 @@ The queue length is 1.
 The queue length is now 2.
 ```
 
-## <a name="size_type"></a>  Queue::size_type
+## <a name="size_type"></a>  queue::size_type
 
 Typ celé číslo bez znaménka představující počet prvků ve frontě.
 

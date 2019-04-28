@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::regex_iterator::operator++
 ms.assetid: 0cfd8fd0-5a95-4f3c-bf8e-6ef028c423d3
 ms.openlocfilehash: 937c217cdef6895aaa3adb1499f1fde8f67fd513
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369487"
 ---
 # <a name="regexiterator-class"></a>regex_iterator – třída
 
@@ -63,7 +63,7 @@ Třída šablony popisuje objekt konstanty dopředný iterátor. Extrahuje objek
 |-|-|
 |[difference_type](#difference_type)|Typ rozdílu iterátoru.|
 |[iterator_category](#iterator_category)|Typ iterátoru kategorie.|
-|[Ukazatel](#pointer)|Typ ukazatele na shodu.|
+|[pointer](#pointer)|Typ ukazatele na shodu.|
 |[Referenční dokumentace](#reference)|Typ odkazu na shodu.|
 |[regex_type](#regex_type)|Typ odpovídající regulární výraz.|
 |[value_type](#value_type)|Typ shody.|
@@ -76,7 +76,7 @@ Třída šablony popisuje objekt konstanty dopředný iterátor. Extrahuje objek
 |[Operator *](#op_star)|Přistupuje k určené shoda.|
 |[Operator ++](#op_add_add)|Zvýší iterátor.|
 |[operátor =](#op_eq)|Porovná rovnost iterátory.|
-|[Operator ->](#op_arrow)|Přistupuje k určené shoda.|
+|[operator->](#op_arrow)|Přistupuje k určené shoda.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -94,7 +94,7 @@ V regulárních výrazech naleznete v následujících tématech příklady:
 
 - [regex_search](../standard-library/regex-functions.md#regex_search)
 
-- [Prohození](../standard-library/regex-functions.md#swap)
+- [swap](../standard-library/regex-functions.md#swap)
 
 ```cpp
 // std__regex__regex_iterator.cpp
@@ -205,7 +205,7 @@ Pokud aktuální shoda nemá žádné znaky první operátor zavolá `regex_sear
 
 Druhý operátor vytvoří kopii tohoto objektu, zvýší na objekt a potom vrátí kopii.
 
-## <a name="op_eq"></a>  regex_iterator::Operator =
+## <a name="op_eq"></a>  regex_iterator::operator=
 
 Porovná rovnost iterátory.
 
@@ -222,7 +222,7 @@ Iterátor, který má být porovnán s.
 
 Členská funkce vrátí hodnotu true, pokud `*this` a *správné* koncová sekvence iterátory nebo pokud ani jeden není iterátor koncová sekvence a `begin == right.begin`, `end == right.end`, `pregex == right.pregex`, a `flags == right.flags`. V opačném případě vrátí hodnotu false.
 
-## <a name="op_arrow"></a>  regex_iterator::Operator-&gt;
+## <a name="op_arrow"></a>  regex_iterator::operator-&gt;
 
 Přistupuje k určené shoda.
 
@@ -234,7 +234,7 @@ const match_results<BidIt> * operator->();
 
 Členská funkce vrátí adresu uloženou hodnotu `match`.
 
-## <a name="pointer"></a>  regex_iterator::Pointer
+## <a name="pointer"></a>  regex_iterator::pointer
 
 Typ ukazatele na shodu.
 
@@ -276,10 +276,10 @@ regex_iterator(BidIt first,
 *první*<br/>
 Začátek pořadí tak, aby odpovídaly.
 
-*poslední*<br/>
+*last*<br/>
 Konec pořadí tak, aby odpovídaly.
 
-*RE*<br/>
+*re*<br/>
 Regulárních výrazů pro shody.
 
 *f*<br/>

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
 ms.openlocfilehash: 5b246be02c860ede6691db1c4d21af7e6b4da26a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369803"
 ---
 # <a name="ltrandomgt"></a>&lt;náhodné&gt;
 
@@ -212,11 +212,11 @@ Tento kód ukazuje dva různé randomizations – náhodně vektor celých čís
 
 URNGs jsou často popisuje jako tyto vlastnosti:
 
-1. **Délka období**: kolik iterací trvá opakování pořadí generované čísel. Čím delší lepší.
+1. **Délka období**: Kolik iterací trvá opakování pořadí generované čísel. Čím delší lepší.
 
-2. **Výkon**: jak rychle můžete generované čísel a kolik paměti používá. Nižší lepší.
+2. **Výkon**: Jak rychle můžete generované čísel a kolik paměti používá. Nižší lepší.
 
-3. **Kvalita**: jak blízko true náhodných čísel je generovaný sekvenční. To se často nazývá "*náhodnost*".
+3. **Kvalita**: Jak blízko true náhodných čísel je generovaný sekvenční. To se často nazývá "*náhodnost*".
 
 V následujících částech jednotné generátorů náhodných čísel (URNGs) součástí \<náhodné > záhlaví.
 
@@ -493,7 +493,7 @@ Další informace najdete v další části odkaz pod touto propojenou dříve v
 
 Existují dva velmi užitečné URNGs v sadě Visual Studio –`mt19937` a `random_device`– jak je znázorněno v této tabulce porovnání:
 
-|URNG|Rychlé|Šifrování zabezpečení|Seedable|Deterministické|
+|URNG|Rychlé|Crypto-secure|Seedable|Deterministické|
 |----------|-----------|---------------------|---------------|--------------------|
 |`mt19937`|Ano|Ne|Ano|Ano<sup>*</sup>|
 |`random_device`|Ne|Ano|Ne|Ne|

@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru C2989
+title: Compiler Error C2989
 ms.date: 11/04/2016
 f1_keywords:
 - C2989
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C2989
 ms.assetid: 936303d8-eb3b-4746-82ec-2f18020a6f64
 ms.openlocfilehash: e5f03d644ab6c25b7eb0da0dc1684c7de5c2e6a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62366131"
 ---
-# <a name="compiler-error-c2989"></a>Chyba kompilátoru C2989
+# <a name="compiler-error-c2989"></a>Compiler Error C2989
 
 'class': typ třídy je už deklarovaný jako typ bez třídy
 

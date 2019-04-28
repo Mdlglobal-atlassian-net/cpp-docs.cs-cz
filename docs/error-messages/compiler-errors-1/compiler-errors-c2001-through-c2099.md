@@ -1,6 +1,6 @@
 ---
 title: Chyby kompilátoru C2000 až C2099
-ms.date: 11/17/2017
+ms.date: 04/21/2019
 f1_keywords:
 - C2000
 - C2016
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - C2096
 - C2098
 ms.assetid: d99a19eb-eeeb-4181-9b33-9cbe4459767b
-ms.openlocfilehash: aff0faff5d8e58b46aa6280eb8f259dbd64acee9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf1d2f647c13b589463624749e29dc277f6f1d3e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62360486"
 ---
 # <a name="compiler-errors-c2000-through-c2099"></a>Chyby kompilátoru C2000 až C2099
 
@@ -53,7 +53,7 @@ ms.locfileid: "50548145"
 
 |Chyba|Zpráva|
 |-----------|-------------|
-|Kompilátoru C2000 chyba|Neznámá chyba Zvolte prosím příkaz technická podpora v nabídce Nápověda pro Visual C++, nebo otevřete soubor nápovědy technické podpory pro další informace|
+|Chyba kompilátoru C2000|Neznámá chyba Zvolte prosím příkaz technická podpora v nabídce Nápověda pro Visual C++, nebo otevřete soubor nápovědy technické podpory pro další informace|
 |[Chyba kompilátoru C2001](compiler-error-c2001.md)|Obsahuje znak nového řádku – konstanta|
 |[Chyba kompilátoru C2002](compiler-error-c2002.md)|Neplatná konstanta širokých znaků|
 |[Chyba kompilátoru C2003](compiler-error-c2003.md)|očekávané: defined id.|
@@ -69,29 +69,29 @@ ms.locfileid: "50548145"
 |[Chyba kompilátoru C2013](compiler-error-c2013.md)|Chybí ">"|
 |[Chyba kompilátoru C2014](compiler-error-c2014.md)|příkaz preprocesoru musí spustit jako první neprázdný|
 |[Chyba kompilátoru C2015](compiler-error-c2015.md)|příliš mnoho znaků – konstanta|
-|C2016 chyby kompilátoru|Jazyk C vyžaduje, aby struktura nebo sjednocení měly minimálně jednoho člena|
+|Chyba kompilátoru C2016|Jazyk C vyžaduje, aby struktura nebo sjednocení měly minimálně jednoho člena|
 |[Chyba kompilátoru C2017](compiler-error-c2017.md)|Neplatná řídicí sekvence|
 |[Chyba kompilátoru C2018](compiler-error-c2018.md)|Neznámý znak 0 x*hodnota*.|
 |[Chyba kompilátoru C2019](compiler-error-c2019.md)|Očekávaná direktiva preprocesoru, nalezeno '*znak*.|
 |[Chyba kompilátoru C2020](compiler-error-c2020.md)|"*člen*": "*třídy*: předefinování členu|
 |[Chyba kompilátoru C2021](compiler-error-c2021.md)|očekávala se hodnota exponent, ne "*znak*.|
 |[Chyba kompilátoru C2022](compiler-error-c2022.md)|"*číslo*': moc velké pro znak|
-|C2023 chyby kompilátoru|"*identifikátor*': zarovnání (*Číslo1*) liší od předchozí deklarace (*číslo2*)|
-|C2024 chyby kompilátoru|atribut "alignas" se vztahuje na proměnné, datové členy a pouze typy značek|
-|C2025 chyby kompilátoru|soubor rozhraní binárního modulu neplatný nebo poškozený: "*filename*.|
+|Chyba kompilátoru C2023|"*identifikátor*": Zarovnání (*Číslo1*) liší od předchozí deklarace (*číslo2*)|
+|Chyba kompilátoru C2024|atribut "alignas" se vztahuje na proměnné, datové členy a pouze typy značek|
+|Chyba kompilátoru C2025|soubor rozhraní binárního modulu neplatný nebo poškozený: "*filename*.|
 |[Chyba kompilátoru C2026](compiler-error-c2026.md)|řetězec je moc velký, koncové znaky se oříznou|
 |[Chyba kompilátoru C2027](compiler-error-c2027.md)|použití nedefinovaného typu "*typ*.|
 |[Chyba kompilátoru C2028](compiler-error-c2028.md)|Člen struktury/sjednocení musí být uvnitř struktury/sjednocení.|
-|C2029 chyby kompilátoru|Levá strana "*token*"Určuje nedefinované třídu/strukturu/rozhraní"*identifikátor*.|
+|Chyba kompilátoru C2029|Levá strana "*token*"Určuje nedefinované třídu/strukturu/rozhraní"*identifikátor*.|
 |[Chyba kompilátoru C2030](compiler-error-c2030.md)|destruktor s přístupností protected private nemůže být členem třídy deklarované jako sealed.|
-|C2031 chyby kompilátoru|virtuální destruktor s "*usnadnění*" pro tento typ není povolený pro usnadnění|
+|Chyba kompilátoru C2031|virtuální destruktor s "*usnadnění*" pro tento typ není povolený pro usnadnění|
 |[Chyba kompilátoru C2032](compiler-error-c2032.md)|"*identifikátor*': funkce nemůže být členem struktury nebo sjednocení"*typ*.|
 |[Chyba kompilátoru C2033](compiler-error-c2033.md)|"*identifikátor*': bitové pole nemůže mít indirekci|
 |[Chyba kompilátoru C2034](compiler-error-c2034.md)|"*identifikátor*': typ bitového pole je příliš malý počet bitů|
-|C2035 chyby kompilátoru|nevirtuální destruktor s "*usnadnění*" pro tento typ není povolený pro usnadnění|
+|Chyba kompilátoru C2035|nevirtuální destruktor s "*usnadnění*" pro tento typ není povolený pro usnadnění|
 |[Chyba kompilátoru C2036](compiler-error-c2036.md)|"*identifikátor*': Neznámá velikost|
-|C2037 chyby kompilátoru|Levá strana "*identifikátor*"Určuje nedefinovanou strukturu/sjednocení"*typ*.|
-|C2038 chyby kompilátoru|obor názvů std nemůže být vložený.|
+|Chyba kompilátoru C2037|Levá strana "*identifikátor*"Určuje nedefinovanou strukturu/sjednocení"*typ*.|
+|Chyba kompilátoru C2038|obor názvů std nemůže být vložený.|
 |[Chyba kompilátoru C2039](compiler-error-c2039.md)|"*identifier1*': není členem"*identifier2*.|
 |[Chyba kompilátoru C2040](compiler-error-c2040.md)|"*operátor*": "*identifier1*"se liší úrovněmi indirekce z"*identifier2*.|
 |[Chyba kompilátoru C2041](compiler-error-c2041.md)|Neplatná číslice "*znak*"pro base"*číslo*.|
@@ -102,7 +102,7 @@ ms.locfileid: "50548145"
 |[Chyba kompilátoru C2046](compiler-error-c2046.md)|Neplatný případ|
 |[Chyba kompilátoru C2047](compiler-error-c2047.md)|Neplatné výchozí|
 |[Chyba kompilátoru C2048](compiler-error-c2048.md)|více než jeden výchozí|
-|C2049 chyby kompilátoru|"*identifikátor*': obor názvů nevložená nejde znovu otevřít jako vložené|
+|Chyba kompilátoru C2049|"*identifikátor*': obor názvů nevložená nejde znovu otevřít jako vložené|
 |[Chyba kompilátoru C2050](compiler-error-c2050.md)|výraz Switch není celočíselný|
 |[Chyba kompilátoru C2051](compiler-error-c2051.md)|výraz Case není konstanta.|
 |[Chyba kompilátoru C2052](compiler-error-c2052.md)|"*typ*': Neplatný typ pro výraz case|
@@ -121,7 +121,7 @@ ms.locfileid: "50548145"
 |[Chyba kompilátoru C2065](compiler-error-c2065.md)|"*identifikátor*': nedeklarovaný identifikátor|
 |[Chyba kompilátoru C2066](compiler-error-c2066.md)|přetypování na typ funkce je neplatné.|
 |[Chyba kompilátoru C2067](compiler-error-c2067.md)|přetypování na typ pole je neplatné.|
-|C2068 chyby kompilátoru|Neplatné použití funkce přetížení. Chybí seznam argumentů?|
+|Chyba kompilátoru C2068|Neplatné použití funkce přetížení. Chybí seznam argumentů?|
 |[Chyba kompilátoru C2069](compiler-error-c2069.md)|přetypování "void" období na jinou hodnotu než 'zrušit'|
 |[Chyba kompilátoru C2070](compiler-error-c2070.md)|"*typ*': Neplatný operand sizeof|
 |[Chyba kompilátoru C2071](compiler-error-c2071.md)|"*identifikátor*': Neplatná třída úložiště|
@@ -129,11 +129,11 @@ ms.locfileid: "50548145"
 |[Chyba kompilátoru C2073](compiler-error-c2073.md)|"*identifikátor*': elementy částečně inicializovaného pole musí mít výchozí konstruktor|
 |[Chyba kompilátoru C2074](compiler-error-c2074.md)|"*identifikátor*": "*typ*" Inicializace vyžaduje seznam inicializátorů v závorkách|
 |[Chyba kompilátoru C2075](compiler-error-c2075.md)|"*identifikátor*': inicializace pole vyžaduje seznam inicializátorů v závorkách|
-|C2076 chyby kompilátoru|seznam inicializátorů v závorkách nejde používat v novém výrazu, jehož typ obsahuje "*typ*.|
+|Chyba kompilátoru C2076|seznam inicializátorů v závorkách nejde používat v novém výrazu, jehož typ obsahuje "*typ*.|
 |[Chyba kompilátoru C2077](compiler-error-c2077.md)|Inicializátor neskalárního pole "*identifikátor*.|
 |[Chyba kompilátoru C2078](compiler-error-c2078.md)|moc velký počet inicializátorů|
 |[Chyba kompilátoru C2079](compiler-error-c2079.md)|"*identifikátor*"používá nedefinovanou strukturu/třídy/sjednocení"*typ*.|
-|C2080 chyby kompilátoru|"*identifikátor*': typ pro"*typ*"dá odvodit jenom z výrazu s jedním inicializátorem|
+|Chyba kompilátoru C2080|"*identifikátor*': typ pro"*typ*"dá odvodit jenom z výrazu s jedním inicializátorem|
 |[Chyba kompilátoru C2081](compiler-error-c2081.md)|"*identifikátor*': název v seznamu formálních parametrů je neplatný|
 |[Chyba kompilátoru C2082](compiler-error-c2082.md)|Předefinování formálního parametru '*identifikátor*.|
 |[Chyba kompilátoru C2083](compiler-error-c2083.md)|Neplatné porovnání struktury nebo sjednocení.|
@@ -149,7 +149,12 @@ ms.locfileid: "50548145"
 |[Chyba kompilátoru C2093](compiler-error-c2093.md)|"*identifier1*': Nelze inicializovat pomocí adresy automatické proměnné '*identifier2*.|
 |[Chyba kompilátoru C2094](compiler-error-c2094.md)|Popisek "*identifikátor*' nebyla definovaná|
 |[Chyba kompilátoru C2095](compiler-error-c2095.md)|"*funkce*': skutečný parametr má typ void: Parametr *číslo*|
-|C2096 chyby kompilátoru|"*identifikátor*!: datový člen se nedá inicializovat pomocí inicializátoru v závorkách.|
+|Chyba kompilátoru C2096|"*identifikátor*": Datový člen se nedá inicializovat pomocí inicializátoru v závorkách.|
 |[Chyba kompilátoru C2097](compiler-error-c2097.md)|Neplatná inicializace|
-|C2098 chyby kompilátoru|Neočekávaný token po datovém členu '*identifikátor*.|
+|Chyba kompilátoru C2098|Neočekávaný token po datovém členu '*identifikátor*.|
 |[Chyba kompilátoru C2099](compiler-error-c2099.md)|Inicializátor není konstantní|
+
+## <a name="see-also"></a>Viz také:
+
+[C /C++ nástroje chyby a upozornění kompilátoru a sestavení](../compiler-errors-1/c-cpp-build-errors.md) \
+[Chyby kompilátoru C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

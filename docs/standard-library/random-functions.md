@@ -7,11 +7,11 @@ ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
 ms.openlocfilehash: 80bdb1ca83be5fb390035d7f3b005793a2f03715
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370343"
 ---
 # <a name="ltrandomgt-functions"></a>&lt;náhodné&gt; funkce
 
@@ -20,7 +20,7 @@ ms.locfileid: "50520611"
 Vrátí hodnotu s plovoucí desetinnou čárkou v náhodném pořadí.
 
 > [!NOTE]
-> Norma ISO C++ uvádí, že tato funkce by měla vrátit hodnoty v rozsahu [ `0`, `1`). Visual Studio není kompatibilní s tímto omezením. Jako alternativní řešení pro generování hodnot v tomto rozsahu, použijte [uniform_real_distribution –](../standard-library/uniform-real-distribution-class.md).
+> ISO C++ Standard uvádí, že tato funkce by měla vrátit hodnoty v rozsahu [ `0`, `1`). Visual Studio není kompatibilní s tímto omezením. Jako alternativní řešení pro generování hodnot v tomto rozsahu, použijte [uniform_real_distribution –](../standard-library/uniform-real-distribution-class.md).
 
 ```cpp
 template <class RealType, size_t Bits, class Generator>

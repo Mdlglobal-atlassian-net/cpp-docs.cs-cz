@@ -45,11 +45,11 @@ helpviewer_keywords:
 - formatted text [C++]
 ms.assetid: 3f99bde3-c891-493d-908f-30559c421058
 ms.openlocfilehash: 266df8c033fc9d1c8459aff9f2b95771947d88d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364698"
 ---
 # <a name="vprintfp-vprintfpl-vwprintfp-vwprintfpl"></a>_vprintf_p, _vprintf_p_l, _vwprintf_p, _vwprintf_p_l
 
@@ -112,15 +112,15 @@ Pokud *formátu* je ukazatel s hodnotou null, nebo pokud řetězec formátu obsa
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_vtprintf_p –**|**_vprintf_p**|**_vprintf_p**|**_vwprintf_p**|
-|**_vtprintf_p_l –**|**_vprintf_p_l**|**_vprintf_p_l**|**_vwprintf_p_l**|
+|**_vtprintf_p**|**_vprintf_p**|**_vprintf_p**|**_vwprintf_p**|
+|**_vtprintf_p_l**|**_vprintf_p_l**|**_vprintf_p_l**|**_vwprintf_p_l**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelná záhlaví|
 |-------------|---------------------|----------------------|
-|**_vprintf_p –**, **_vprintf_p_l –**|\<stdio.h > a \<stdarg.h >|\<varargs.h>*|
-|**_vwprintf_p –**, **_vwprintf_p_l –**|\<stdio.h > nebo \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|
+|**_vprintf_p**, **_vprintf_p_l**|\<stdio.h > a \<stdarg.h >|\<varargs.h>*|
+|**_vwprintf_p**, **_vwprintf_p_l**|\<stdio.h > nebo \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|
 
 \* Vyžaduje se pro kompatibility systému UNIX V.
 

@@ -39,24 +39,24 @@ helpviewer_keywords:
 - std::tan [C++]
 - std::tanh [C++]
 ms.openlocfilehash: c4e5873e9a511311d2c49b34791df82038fe9f9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62365181"
 ---
 # <a name="ltvalarraygt-functions"></a>&lt;valarray –&gt; funkce
 
 ||||
 |-|-|-|
-|[Abs](#abs)|[Funkce ACOS](#acos)|[ASIN](#asin)|
-|[Atan](#atan)|[atan2](#atan2)|[Cos](#cos)|
-|[COSH –](#cosh)|[exp](#exp)|[protokol](#log)|
-|[log10](#log10)|[Pow](#pow)|[Sin](#sin)|
-|[SINH –](#sinh)|[sqrt](#sqrt)|[Prohození](#swap)|
-|[Tan](#tan)|[TANH –](#tanh)|
+|[abs](#abs)|[acos](#acos)|[asin](#asin)|
+|[atan](#atan)|[atan2](#atan2)|[cos](#cos)|
+|[cosh](#cosh)|[exp](#exp)|[log](#log)|
+|[log10](#log10)|[Pow](#pow)|[sin](#sin)|
+|[sinh](#sinh)|[sqrt](#sqrt)|[swap](#swap)|
+|[Tan](#tan)|[tanh](#tanh)|
 
-## <a name="abs"></a>  Abs
+## <a name="abs"></a>  abs
 
 Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné absolutní hodnota prvků vstupní valarray pracuje.
 
@@ -427,7 +427,7 @@ The atan2 ( y / x ) of the initial valarrays is:
  -0.785398  radians, which is          -45degrees
 ```
 
-## <a name="cos"></a>  Cos
+## <a name="cos"></a>  cos
 
 Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné kosinus prvků vstupní valarray pracuje.
 

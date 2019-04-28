@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::regex_traits [C++], getloc
 ms.assetid: bc5a5eed-32fc-4eb7-913d-71c42e729e81
 ms.openlocfilehash: 80739d3d8f4bfd38dc3d252a5f3d6308653a7bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369121"
 ---
 # <a name="regextraits-class"></a>regex_traits – třída
 
@@ -71,7 +71,7 @@ Každý `regex_traits` obsahuje objekt typu `regex_traits::locale` která je pou
 
 |Konstruktor|Popis|
 |-|-|
-|[regex_traits –](#regex_traits)|Vytvoří objekt.|
+|[regex_traits](#regex_traits)|Vytvoří objekt.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -81,22 +81,22 @@ Každý `regex_traits` obsahuje objekt typu `regex_traits::locale` která je pou
 |[char_type](#char_type)|Typ prvku|
 |[locale_type](#locale_type)|Typ objektu uloženého národního prostředí.|
 |[size_type](#size_type)|Typ délka sekvence.|
-|[STRING_TYPE](#string_type)|Typ prvků řetězce.|
+|[string_type](#string_type)|Typ prvků řetězce.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[getloc –](#getloc)|Vrátí objekt uloženého národního prostředí.|
-|[imbue –](#imbue)|Změní objekt uloženého národního prostředí.|
-|[isctype –](#isctype)|Testy pro členství ve třídě.|
+|[getloc](#getloc)|Vrátí objekt uloženého národního prostředí.|
+|[imbue](#imbue)|Změní objekt uloženého národního prostředí.|
+|[isctype](#isctype)|Testy pro členství ve třídě.|
 |[Délka](#length)|Vrátí délku objektu sekvence zakončená hodnotou null.|
 |[lookup_classname](#lookup_classname)|Sekvence se mapuje na třídu znaků.|
 |[lookup_collatename –](#lookup_collatename)|Kolační prvek mapuje sekvenci.|
-|[Transformace](#transform)|Převede ekvivalent pořadí řazení.|
-|[transform_primary –](#transform_primary)|Převede ekvivalent caseless pořadí řazení.|
-|[Překlad](#translate)|Převede na ekvivalentní odpovídající prvek.|
-|[translate_nocase –](#translate_nocase)|Převede na ekvivalentní caseless odpovídající prvek.|
+|[transform](#transform)|Převede ekvivalent pořadí řazení.|
+|[transform_primary](#transform_primary)|Převede ekvivalent caseless pořadí řazení.|
+|[translate](#translate)|Převede na ekvivalentní odpovídající prvek.|
+|[translate_nocase](#translate_nocase)|Převede na ekvivalentní caseless odpovídající prvek.|
 |[value](#value)|Převede prvek na hodnotu číslice.|
 
 ## <a name="requirements"></a>Požadavky
@@ -221,7 +221,7 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parametry
 
-*Umístění*<br/>
+*loc*<br/>
 Objekt národního prostředí pro uložení.
 
 ### <a name="remarks"></a>Poznámky
@@ -292,7 +292,7 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 *první*<br/>
 Začátek pořadí k vyhledání.
 
-*poslední*<br/>
+*last*<br/>
 Konec pořadí k vyhledání.
 
 ### <a name="remarks"></a>Poznámky
@@ -317,7 +317,7 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 *první*<br/>
 Začátek pořadí k vyhledání.
 
-*poslední*<br/>
+*last*<br/>
 Konec pořadí k vyhledání.
 
 ### <a name="remarks"></a>Poznámky
@@ -350,7 +350,7 @@ Typedef je synonymum pro celočíselný typ bez znaménka. V odborností `regex_
 
 Typedef je synonymum pro `std::size_t`.
 
-## <a name="string_type"></a>  regex_traits::STRING_TYPE
+## <a name="string_type"></a>  regex_traits::string_type
 
 Typ prvků řetězce.
 
@@ -376,7 +376,7 @@ string_type transform(FwdIt first, FwdIt last) const;
 *první*<br/>
 Začátek pořadí transformace.
 
-*poslední*<br/>
+*last*<br/>
 Konec pořadí transformace.
 
 ### <a name="remarks"></a>Poznámky
@@ -397,7 +397,7 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 *první*<br/>
 Začátek pořadí transformace.
 
-*poslední*<br/>
+*last*<br/>
 Konec pořadí transformace.
 
 ### <a name="remarks"></a>Poznámky
@@ -468,5 +468,5 @@ Aritmetické operace základní použití.
 [\<regulární výraz > operátory](../standard-library/regex-operators.md)<br/>
 [regex_token_iterator – třída](../standard-library/regex-token-iterator-class.md)<br/>
 [\<regulární výraz > – Definice TypeDef](../standard-library/regex-typedefs.md)<br/>
-[regex_traits\<char > třída](../standard-library/regex-traits-char-class.md)<br/>
-[regex_traits\<wchar_t > třída](../standard-library/regex-traits-wchar-t-class.md)<br/>
+[regex_traits\<char> Class](../standard-library/regex-traits-char-class.md)<br/>
+[regex_traits\<wchar_t> Class](../standard-library/regex-traits-wchar-t-class.md)<br/>

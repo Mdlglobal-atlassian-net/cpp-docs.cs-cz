@@ -7,15 +7,15 @@ helpviewer_keywords:
 - __clrcall keyword [C++]
 ms.assetid: 92096695-683a-40ed-bf65-0c8443572152
 ms.openlocfilehash: bc44feb97223de47f45734f75777ee040d0ebdd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364568"
 ---
 # <a name="clrcall"></a>__clrcall
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Určuje, že funkce lze volat pouze ze spravovaného kódu.  Použití **__clrcall** pro všechny virtuální funkce, které bude volat pouze ze spravovaného kódu. Tato konvence volání však nelze použít pro funkce, které budou volat z nativního kódu.
 
@@ -29,7 +29,7 @@ Když `/clr` (ne `/clr:pure` nebo `/clr:safe`) se používá a **__clrcall** je 
 
 [/ CLR (kompilace common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) znamená, že jsou všechny funkce a ukazatelů na funkce **__clrcall** a kompilátor nebude povolit funkci uvnitř kompilantu nic jiného než Označit **__clrcall**. Když **/CLR: pure** se používá, **__clrcall** lze zadat pouze na ukazatele na funkce a externí deklarace.
 
-Můžete volat přímo **__clrcall** funkce z existujícího kódu C++, který byl zkompilován pomocí **/CLR** za předpokladu, tato funkce je implementace jazyka MSIL. **výraz __clrcall** funkce nelze volat přímo z funkcí, které mají vloženého kódu asm a volání intrinisics specifické pro procesor, například i v případě, že tyto funkce jsou kompilovány pomocí `/clr`.
+Můžete volat přímo **__clrcall** funkce z již existujících C++ kód, který byl zkompilován pomocí **/CLR** za předpokladu, tato funkce je implementace jazyka MSIL. **výraz __clrcall** funkce nelze volat přímo z funkcí, které mají vloženého kódu asm a volání intrinisics specifické pro procesor, například i v případě, že tyto funkce jsou kompilovány pomocí `/clr`.
 
 **výraz __clrcall** ukazatelů na funkce jsou určeny pouze pro použití v aplikační doméně, ve kterém byly vytvořeny.  Namísto předání **__clrcall** ukazatele funkcí napříč doménami aplikace, použijte <xref:System.CrossAppDomainDelegate>. Další informace najdete v tématu [aplikačních doménách a Visual C++](../dotnet/application-domains-and-visual-cpp.md).
 

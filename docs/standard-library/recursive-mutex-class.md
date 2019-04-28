@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], try_lock
 - std::recursive_mutex [C++], unlock
 ms.openlocfilehash: 8be17c8ab361272678c25326464261e153da6a49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369641"
 ---
 # <a name="recursivemutex-class"></a>recursive_mutex – třída
 
@@ -46,7 +46,7 @@ class recursive_mutex;
 |----------|-----------------|
 |[lock](#lock)|Blokuje volající vlákno, dokud vlákno nezíská vlastnictví objektu mutex.|
 |[try_lock](#try_lock)|Pokusy o získání vlastnictví mutex bez blokování.|
-|[Odemknutí](#unlock)|Uvolní vlastnictví objektu mutex.|
+|[unlock](#unlock)|Uvolní vlastnictví objektu mutex.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -74,7 +74,7 @@ Vytvoří `recursive_mutex` objektu, která není uzamčena.
 recursive_mutex();
 ```
 
-## <a name="dtorrecursive_mutex_destructor"></a>  ~ recursive_mutex –
+## <a name="dtorrecursive_mutex_destructor"></a>  ~recursive_mutex
 
 Uvolní všechny prostředky, které jsou používané tímto objektem.
 
@@ -119,4 +119,4 @@ Pokud volající vlákno není vlastníkem `mutex`, není chování definováno.
 ## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex – >](../standard-library/mutex.md)<br/>
+[\<mutex>](../standard-library/mutex.md)<br/>

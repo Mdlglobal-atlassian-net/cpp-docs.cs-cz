@@ -32,11 +32,11 @@ helpviewer_keywords:
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
 ms.openlocfilehash: 7006d7246837e5dc69733a007b3f7dab1c55280e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356248"
 ---
 # <a name="sin-sinf-sinl"></a>Sin sinf –, sinl –
 
@@ -66,8 +66,8 @@ long double sin(long double x);  // C++ only
 
 |Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|ROZMEZÍ QNAN, AJÍT|Žádné|_DOMÉNA|
-|Rozmezí ∞ (sin, sinf – sinl –.)|NEPLATNÝ|_DOMÉNA|
+|ROZMEZÍ QNAN, AJÍT|Žádný|_DOMAIN|
+|Rozmezí ∞ (sin, sinf – sinl –.)|NEPLATNÝ|_DOMAIN|
 
 Další informace o návratových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -79,7 +79,7 @@ Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **sin*
 
 |Rutina|Požadované záhlaví (C)|Požadované záhlaví (C++)|
 |-|-|-|
-|**Sin**, **sinf –**, **sinl –**|\<Math.h >|\<cmath > nebo \<math.h >|
+|**Sin**, **sinf –**, **sinl –**|\<math.h>|\<cmath > nebo \<math.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
@@ -117,6 +117,6 @@ cos( 1.570796 ) = 0.000000
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
-[Cos cosf –, cosl –](cos-cosf-cosl.md)<br/>
+[cos, cosf, cosl](cos-cosf-cosl.md)<br/>
 [tan, tanf, tanl](tan-tanf-tanl.md)<br/>
 [_CIsin](../../c-runtime-library/cisin.md)<br/>

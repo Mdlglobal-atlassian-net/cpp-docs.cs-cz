@@ -31,11 +31,11 @@ helpviewer_keywords:
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
 ms.openlocfilehash: 350d8c7b1dcf61272a3cfee884dff8a63b455f1c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349472"
 ---
 # <a name="asctimes-wasctimes"></a>asctime_s, _wasctime_s
 
@@ -85,10 +85,10 @@ Nula v případě úspěchu. Pokud dojde k selhání, vyvolán obslužnou rutinu
 
 |*Vyrovnávací paměti*|*numberOfElements*|*tmSource*|Vrátí|Hodnota v *vyrovnávací paměti*|
 |--------------|------------------------|----------|------------|-----------------------|
-|**HODNOTU NULL**|Všechny|Všechny|**EINVAL**|Nezměněno|
-|Není **NULL** (odkazuje na platný paměti)|0|Všechny|**EINVAL**|Nezměněno|
-|Není **NULL**|0 < velikost < 26|Všechny|**EINVAL**|Prázdný řetězec|
-|Není **NULL**|>= 26|**HODNOTU NULL**|**EINVAL**|Prázdný řetězec|
+|**NULL**|Jakýkoli|Jakýkoli|**EINVAL**|Nezměněno|
+|Není **NULL** (odkazuje na platný paměti)|0|Jakýkoli|**EINVAL**|Nezměněno|
+|Není **NULL**|0 < velikost < 26|Jakýkoli|**EINVAL**|Prázdný řetězec|
+|Není **NULL**|>= 26|**NULL**|**EINVAL**|Prázdný řetězec|
 |Není **NULL**|>= 26|Neplatný čas struktury nebo je mimo rozsah hodnoty pro součásti času|**EINVAL**|Prázdný řetězec|
 
 > [!NOTE]
@@ -120,7 +120,7 @@ Nula v případě úspěchu. Pokud dojde k selhání, vyvolán obslužnou rutinu
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tasctime_s –**|**asctime_s**|**asctime_s**|**_wasctime_s**|
+|**_tasctime_s**|**asctime_s**|**asctime_s**|**_wasctime_s**|
 
 V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky, takže odpadá nutnost určit velikost argumentu. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
@@ -128,7 +128,7 @@ V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šab
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**asctime_s**|\<Time.h >|
+|**asctime_s**|\<time.h>|
 |**_wasctime_s**|\<Time.h > nebo \<wchar.h >|
 
 ## <a name="security"></a>Zabezpečení

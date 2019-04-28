@@ -37,11 +37,11 @@ helpviewer_keywords:
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
 ms.openlocfilehash: 40c2d0c42a3d61f84db78015388eba19742af06e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356820"
 ---
 # <a name="searchenvs-wsearchenvs"></a>_searchenv_s, _wsearchenv_s
 
@@ -84,7 +84,7 @@ errno_t _wsearchenv_s(
 *Název souboru*<br/>
 Název souboru pro hledání.
 
-*název_proměnné*<br/>
+*varname*<br/>
 Prostředí pro vyhledávání.
 
 *pathname*<br/>
@@ -101,10 +101,10 @@ Pokud *filename* je prázdný řetězec, bude návratovou hodnotou **ENOENT**.
 
 ### <a name="error-conditions"></a>Chybové podmínky
 
-|*Název souboru*|*název_proměnné*|*pathname*|*numberOfElements*|Návratová hodnota|Obsah *cesta*|
+|*Název souboru*|*varname*|*pathname*|*numberOfElements*|Návratová hodnota|Obsah *cesta*|
 |----------------|---------------|----------------|------------------------|------------------|----------------------------|
-|Všechny|Všechny|**HODNOTU NULL**|Všechny|**EINVAL**|není k dispozici|
-|**HODNOTU NULL**|Všechny|Všechny|Všechny|**EINVAL**|nebyl změněn.|
+|Všechny|Všechny|**NULL**|Všechny|**EINVAL**|není k dispozici|
+|**NULL**|Všechny|Všechny|Všechny|**EINVAL**|nebyl změněn.|
 |Všechny|Všechny|Všechny|<= 0|**EINVAL**|nebyl změněn.|
 
 Pokud dojde k některé z těchto chybových stavů, vyvolán obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tyto funkce nastaví **errno** k **EINVAL** a vrátit **EINVAL**.
@@ -125,7 +125,7 @@ V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šab
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tsearchenv_s –**|**_searchenv_s**|**_searchenv_s**|**_wsearchenv_s**|
+|**_tsearchenv_s**|**_searchenv_s**|**_searchenv_s**|**_wsearchenv_s**|
 
 ## <a name="requirements"></a>Požadavky
 

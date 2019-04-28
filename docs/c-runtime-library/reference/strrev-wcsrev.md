@@ -24,12 +24,12 @@ helpviewer_keywords:
 - wcsrev function
 ms.assetid: 89e05854-a9ce-4fb7-993d-a9831cd7edf2
 ms.openlocfilehash: bef47893ba11367b8b695c81c7f89fde45a1f967
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62365159"
 ---
 # <a name="strrev-wcsrev"></a>strrev, wcsrev
 
-Tyto funkce POSIX je zastaralá. Použít splňující podmínky ISO C++ [_strrev – _wcsrev, _mbsrev _mbsrev_l –](strrev-wcsrev-mbsrev-mbsrev-l.md) místo.
+Tyto funkce POSIX je zastaralá. Použít bitovou kopii ISO C++ splňující podmínky [_strrev – _wcsrev, _mbsrev _mbsrev_l –](strrev-wcsrev-mbsrev-mbsrev-l.md) místo.

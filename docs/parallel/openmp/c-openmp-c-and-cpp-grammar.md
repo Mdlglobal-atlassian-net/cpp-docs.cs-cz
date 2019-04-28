@@ -3,11 +3,11 @@ title: C. Gramatika OpenMP – C a C++
 ms.date: 01/16/2019
 ms.assetid: 97a878ce-1533-47f7-a134-66fcbff48524
 ms.openlocfilehash: 85e18161079b49e83cc9fedb3184ee220c889e75
-ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362943"
 ---
 # <a name="c-openmp-c-and-c-grammar"></a>C. Gramatika OpenMP – C a C++
 
@@ -25,7 +25,7 @@ Syntaktické výraz *termín*<sub>optseq</sub> je ekvivalentní *termín seq*<su
 *termín seq*:  
 &nbsp;&nbsp;&nbsp;&nbsp;*Termín*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*termín seq* *termín*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*termín seq* `,` *termín* 
+&nbsp;&nbsp;&nbsp;&nbsp;*termín seq* `,` *termín*
 
 ## <a name="c2-rules"></a>C.2 Pravidla
 
@@ -106,7 +106,7 @@ Zápis je popsaný v části 6.1 standardu C. Tento dodatek gramatiky ukazuje ro
 *unique-for-clause*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `ordered`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `schedule (` *Typ plánu*   `)`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `schedule (` *Typ plánu* `,` *výraz*    `)`
+&nbsp;&nbsp;&nbsp;&nbsp;  `schedule (` *Typ plánu* `,` *výraz*   `)`
 
 *Typ plánu*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `static`<br/>
@@ -207,7 +207,7 @@ Zápis je popsaný v části 6.1 standardu C. Tento dodatek gramatiky ukazuje ro
 &nbsp;&nbsp;&nbsp;&nbsp;*threadprivate – direktiva*
 
 *Direktiva threadprivate*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp threadprivate (` *seznamu proměnné* `)` *nový řádek* 
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp threadprivate (` *seznamu proměnné* `)` *nový řádek*
 
 *data-clause*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `private (` *Proměnná list*   `)`<br/>
@@ -217,7 +217,7 @@ Zápis je popsaný v části 6.1 standardu C. Tento dodatek gramatiky ukazuje ro
 &nbsp;&nbsp;&nbsp;&nbsp;  `shared (` *Proměnná list*   `)`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `default ( shared )`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `default ( none )`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `reduction (`  *operátorem Reduction*`:`*seznamu proměnné*     `)`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `reduction (`  *operátorem Reduction*`:`*seznamu proměnné*    `)`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `copyin (`  *Proměnná list*    `)`
 
 *operátorem Reduction*:<br/>
@@ -227,10 +227,10 @@ Zápis je popsaný v části 6.1 standardu C. Tento dodatek gramatiky ukazuje ro
 
 *seznamu proměnné*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*seznamu proměnné* `,` *identifikátor* 
+&nbsp;&nbsp;&nbsp;&nbsp;*seznamu proměnné* `,` *identifikátor*
 
 **/\* v jazyce C++ \*/**
 
 *seznamu proměnné*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*ID – výraz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*seznamu proměnné* `,` *id – výraz* 
+&nbsp;&nbsp;&nbsp;&nbsp;*seznamu proměnné* `,` *id – výraz*

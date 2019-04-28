@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
 ms.openlocfilehash: d37d55c56e3c23d8d9129c985cb4272d2e3ee47a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368731"
 ---
 # <a name="platformexception-class"></a>Platform::Exception – třída
 
@@ -131,7 +131,7 @@ Hodnotu HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Většina výjimek začíná jako chyby modelu COM, které jsou následně vráceny jako hodnoty HRESULT. C + +/ CX převede tyto hodnoty na Platform::Exception ^ objekty a tato vlastnost slouží k uložení hodnoty původní kód chyby.
+Většina výjimek začíná jako chyby modelu COM, které jsou následně vráceny jako hodnoty HRESULT. C++/CX převede tyto hodnoty na Platform::Exception ^ objekty a tato vlastnost slouží k uložení hodnoty původní kód chyby.
 
 ## <a name="message"></a> Vlastnost Exception::Message
 
@@ -149,7 +149,7 @@ V výjimky vzniklé v modulu Windows Runtime je to poskytnuté systémem popis c
 
 ### <a name="remarks"></a>Poznámky
 
-V systému Windows 8 Tato vlastnost je jen pro čtení vzhledem k tomu, že jsou napříč ABI pouze jako HRESULTS přenosu výjimek v této verzi systému Windows Runtime. Ve Windows 8.1 bohatší informace o výjimkách přenosu napříč ABI a můžete zadat vlastní zprávu, ke kterému programově přístup jiných komponent. Další informace najdete v tématu [výjimky (C + +/ CX)](../cppcx/exceptions-c-cx.md).
+V systému Windows 8 Tato vlastnost je jen pro čtení vzhledem k tomu, že jsou napříč ABI pouze jako HRESULTS přenosu výjimek v této verzi systému Windows Runtime. Ve Windows 8.1 bohatší informace o výjimkách přenosu napříč ABI a můžete zadat vlastní zprávu, ke kterému programově přístup jiných komponent. Další informace najdete v tématu [výjimky (C++/CX)](../cppcx/exceptions-c-cx.md).
 
 ## <a name="see-also"></a>Viz také:
 

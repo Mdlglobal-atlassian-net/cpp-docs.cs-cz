@@ -22,11 +22,11 @@ f1_keywords:
 - regex/std::wssub_match
 ms.assetid: e6a69067-106c-4a24-9e08-7c867a3a2260
 ms.openlocfilehash: 33217388ff7e0826efcee413b39adaeba569399a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369134"
 ---
 # <a name="ltregexgt-typedefs"></a>&lt;regulární výraz&gt; – definice TypeDef
 
@@ -51,7 +51,7 @@ typedef match_results<const char*> cmatch;
 
 Typ, který popisuje specializace třídy šablony [match_results – třída](../standard-library/match-results-class.md) u iterátorů typu `const char*`.
 
-## <a name="cregex_iterator"></a>  cregex_iterator – Typedef
+## <a name="cregex_iterator"></a>  cregex_iterator Typedef
 
 Zadejte definici regex_iterator – char.
 
@@ -63,7 +63,7 @@ typedef regex_iterator<const char*> cregex_iterator;
 
 Typ, který popisuje specializace třídy šablony [regex_iterator – třída](../standard-library/regex-iterator-class.md) u iterátorů typu `const char*`.
 
-## <a name="cregex_token_iterator"></a>  cregex_token_iterator – Typedef
+## <a name="cregex_token_iterator"></a>  cregex_token_iterator Typedef
 
 Definice typu char regex_token_iterator –
 
@@ -114,7 +114,7 @@ typedef match_results<string::const_iterator> smatch;
 
 Typ, který popisuje specializace třídy šablony [match_results – třída](../standard-library/match-results-class.md) u iterátorů typu `string::const_iterator`.
 
-## <a name="sregex_iterator"></a>  sregex_iterator – Typedef
+## <a name="sregex_iterator"></a>  sregex_iterator Typedef
 
 Zadejte definici regex_iterator – řetězec.
 
@@ -126,7 +126,7 @@ typedef regex_iterator<string::const_iterator> sregex_iterator;
 
 Typ, který popisuje specializace třídy šablony [regex_iterator – třída](../standard-library/regex-iterator-class.md) u iterátorů typu `string::const_iterator`.
 
-## <a name="sregex_token_iterator"></a>  sregex_token_iterator – Typedef
+## <a name="sregex_token_iterator"></a>  sregex_token_iterator Typedef
 
 Zadejte definici regex_token_iterator – řetězec.
 
@@ -162,7 +162,7 @@ typedef match_results<const wchar_t *> wcmatch;
 
 Typ, který popisuje specializace třídy šablony [match_results – třída](../standard-library/match-results-class.md) u iterátorů typu `const wchar_t*`.
 
-## <a name="wcregex_iterator"></a>  wcregex_iterator – Typedef
+## <a name="wcregex_iterator"></a>  wcregex_iterator Typedef
 
 Zadejte definici regex_iterator – wchar_t.
 
@@ -174,7 +174,7 @@ typedef regex_iterator<const wchar_t*> wcregex_iterator;
 
 Typ, který popisuje specializace třídy šablony [regex_iterator – třída](../standard-library/regex-iterator-class.md) u iterátorů typu `const wchar_t*`.
 
-## <a name="wcregex_token_iterator"></a>  wcregex_token_iterator – Typedef
+## <a name="wcregex_token_iterator"></a>  wcregex_token_iterator Typedef
 
 Zadejte definici regex_token_iterator – wchar_t.
 
@@ -222,7 +222,7 @@ typedef match_results<wstring::const_iterator> wsmatch;
 
 Typ, který popisuje specializace třídy šablony [match_results – třída](../standard-library/match-results-class.md) u iterátorů typu `wstring::const_iterator`.
 
-## <a name="wsregex_iterator"></a>  wsregex_iterator – Typedef
+## <a name="wsregex_iterator"></a>  wsregex_iterator Typedef
 
 Zadejte definici regex_iterator wstring –.
 
@@ -234,7 +234,7 @@ typedef regex_iterator<wstring::const_iterator> wsregex_iterator;
 
 Typ, který popisuje specializace třídy šablony [regex_iterator – třída](../standard-library/regex-iterator-class.md) u iterátorů typu `wstring::const_iterator`.
 
-## <a name="wsregex_token_iterator"></a>  wsregex_token_iterator – Typedef
+## <a name="wsregex_token_iterator"></a>  wsregex_token_iterator Typedef
 
 Zadejte definici regex_token_iterator wstring –.
 

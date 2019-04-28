@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
 ms.openlocfilehash: d8f2b4ab788c82e531d1121f04dd0d422efb17cd
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370009"
 ---
 # <a name="priorityqueue-class"></a>priority_queue – třída
 
@@ -59,7 +59,7 @@ Zahrnout vhodný základní třídy kontejnerů pro priority_queue – [třídou
 
 Prvky k přidávání a odebírání elementů z `priority_queue` mají logaritmické složitost. Přístup k prvkům v `priority_queue` má konstantní složitost.
 
-Existují tři typy definované ve standardní knihovně C++ adaptéry kontejneru: zásobník, fronty a priority_queue –. Každý omezuje funkčnost některé základní třídy kontejneru a poskytuje tak přesně řízené rozhraní standardní datovou strukturu.
+Existují tři typy určené adaptéry kontejneru C++ standardní knihovny: zásobník, fronty a priority_queue –. Každý omezuje funkčnost některé základní třídy kontejneru a poskytuje tak přesně řízené rozhraní standardní datovou strukturu.
 
 - [Stack – třída](../standard-library/stack-class.md) podporuje poslední dovnitř, první (ven LIFO) datové struktury. Dobré analogové brát v úvahu by stoh talířů shora. Elementy (tabulky) může vložit, prozkoumat nebo odebrat jenom z horní části zásobníku, což je poslední prvek na konci kontejneru základní. Omezení přístupu jenom k prvku na vrcholu je důvod horizontálních oddílů pomocí třídy zásobníku.
 
@@ -86,7 +86,7 @@ Existují tři typy definované ve standardní knihovně C++ adaptéry kontejner
 |Členská funkce|Popis|
 |-|-|
 |[prázdný](#empty)|Testuje, zda `priority_queue` je prázdný.|
-|[POP](#pop)|Odstraní největší prvek z `priority_queue` z nejvyšší pozici.|
+|[pop](#pop)|Odstraní největší prvek z `priority_queue` z nejvyšší pozici.|
 |[push](#push)|Přidá prvek do prioritní fronty, na základě priority element z operátoru <.|
 |[Velikost](#size)|Vrátí počet prvků v `priority_queue`.|
 |[nahoru](#top)|Vrátí konstantní odkaz na prvek největší v horní části `priority_queue`.|
@@ -107,7 +107,7 @@ typedef Container container_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony `Container`. Třída kontejneru sekvence standardní knihovny C++ `deque` a výchozí třídu `vector` požadavkům má být použit jako základní kontejneru pro objekt priority_queue –. Uživatelem definované typy splňující požadavky může také sloužit.
+Typ je synonymum pro parametr šablony `Container`. C++ Třída kontejneru sekvence standardní knihovny `deque` a výchozí třídu `vector` požadavkům má být použit jako základní kontejneru pro objekt priority_queue –. Uživatelem definované typy splňující požadavky může také sloužit.
 
 Další informace o `Container`, najdete v části poznámky [priority_queue – třída](../standard-library/priority-queue-class.md) tématu.
 
@@ -254,7 +254,7 @@ Priority_queue –, který je vytvořen objekt set kopií.
 *první*<br/>
 Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.
 
-*poslední*<br/>
+*last*<br/>
 Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.
 
 ### <a name="remarks"></a>Poznámky

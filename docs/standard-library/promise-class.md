@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::promise [C++], set_value_at_thread_exit
 - std::promise [C++], swap
 ms.openlocfilehash: 101c9939f1636d87780aa15aea9459ebb927684d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369953"
 ---
 # <a name="promise-class"></a>promise – třída
 
@@ -55,7 +55,7 @@ class promise;
 |[set_exception_at_thread_exit](#set_exception_at_thread_exit)|Atomicky nastaví výsledek této snahy na označení výjimky a doručí oznámení pouze po všech místních objektů v aktuálním vlákně nejsou zničeny (obvykle při ukončení podprocesu).|
 |[set_value](#set_value)|Atomicky nastaví výsledek této snahy na označení hodnoty.|
 |[set_value_at_thread_exit](#set_value_at_thread_exit)|Atomicky nastaví výsledek této snahy na označení hodnoty a doručí oznámení pouze po všech místních objektů v aktuálním vlákně nejsou zničeny (obvykle při ukončení podprocesu).|
-|[Prohození](#swap)|Výměna *přidružený asynchronní stav* tohoto objektu promise za zadaný objekt promise u.|
+|[swap](#swap)|Výměna *přidružený asynchronní stav* tohoto objektu promise za zadaný objekt promise u.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
@@ -145,7 +145,7 @@ void set_exception(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parametry
 
-*Výhradní*<br/>
+*Exc*<br/>
 [Exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) touto metodou, která je uložena jako výsledek výjimky.
 
 ### <a name="remarks"></a>Poznámky
@@ -166,7 +166,7 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parametry
 
-*Výhradní*<br/>
+*Exc*<br/>
 [Exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) touto metodou, která je uložena jako výsledek výjimky.
 
 ### <a name="remarks"></a>Poznámky
@@ -209,7 +209,7 @@ Pro částečnou specializaci `promise<Ty&>`, uložené hodnoty je výsledkem od
 
 Pro specializaci `promise<void>`, neexistuje žádná uložená hodnota.
 
-## <a name="set_value_at_thread_exit"></a>  Promise::set_value_at_thread_exit –
+## <a name="set_value_at_thread_exit"></a>  promise::set_value_at_thread_exit
 
 Atomicky ukládá hodnotu jako výsledek tohoto `promise` objektu.
 

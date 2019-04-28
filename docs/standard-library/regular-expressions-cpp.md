@@ -7,11 +7,11 @@ helpviewer_keywords:
 - regular expressions
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
 ms.openlocfilehash: dafbe7c7ba10db2b0f34fdc6065c1475d63be284
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369030"
 ---
 # <a name="regular-expressions-c"></a>Regulární výrazy (C++)
 
@@ -22,7 +22,7 @@ Standardní knihovny C++ podporuje více gramatikách regulárního výrazu. Tot
 Gramatika regulárních výrazů používat podle určena pomocí jednoho z `std::regex_constants::syntax_option_type` hodnot výčtu. Tyto gramatikách regulárního výrazu jsou definovány v std::regex_constants:
 
 - `ECMAScript`: Toto je nejblíže gramatiky používá JavaScript a jazyky .NET.
-- `basic`: Základní regulární výrazy POSIX nebo BRE.
+- `basic`: POSIX základní regulární výrazy nebo BRE.
 - `extended`: POSIX rozšířené regulární výrazy nebo ERE.
 - `awk`: Toto je `extended`, ale má další řídicí sekvence pro netisknutelné znaky.
 - `grep`: Toto je `basic`, ale umožňuje také znaku nového řádku ('\n') znaků k oddělení alternací.
@@ -32,9 +32,9 @@ Ve výchozím nastavení, pokud není zadána žádná gramatika `ECMAScript` se
 
 Kromě gramatiku můžete použít několik příznaků:
 - `icase`: Ignorujte velikost písmen při porovnávání.
-- `nosubs`: Ignorujte označené shody (tj. výrazy v závorkách); jsou uloženy žádné nahrazení.
+- `nosubs`: Ignorovat označené shody (tj. výrazy v závorkách); jsou uloženy žádné nahrazení.
 - `optimize`: Ujistěte se, rychlejší, odpovídající na úkor větší době konstrukce.
-- `collate`: Použijte v pořadí řazení citlivé na národní prostředí (například. rozsahy ve formátu "[a-z]").
+- `collate`: Pomocí pořadí řazení citlivé na národní prostředí (například. rozsahy ve formátu "[a-z]").
 
 Nula nebo více příznaků lze kombinovat s gramatiky k určení chování modulu regulárních výrazů. Pokud pouze příznaky jsou zadané, `ECMAScript` se předpokládá, že jako gramatiky.
 
@@ -303,8 +303,8 @@ Kolační symbol ve výrazu závorky přidá *kolační prvek* do sady, která j
 |„\D“|„[^[:d:]]“|„[^[:digit:]]“|
 |„\s“|„[[:s:]]“|„[[:space:]]“|
 |„\S“|„[^[:s:]]“|„[^[:space:]]“|
-|„\w“|„[[:w:]]“|"[-zA-Z0-9_]"\*|
-|„\W“|„[^[:w:]]“|"[^-zA-Z0-9_]"\*|
+|„\w“|„[[:w:]]“|"[a-zA-Z0-9_]"\*|
+|„\W“|„[^[:w:]]“|"[^a-zA-Z0-9_]"\*|
 
 \*Znaková sada ASCII
 
@@ -393,7 +393,7 @@ Běžný znak je jakýkoli platný znak, který nemá v aktuální gramatice zvl
 
 V `ECMAScript`, mají následující znaky zvláštní význam:
 
-- ^  $  \  .  \*  +  ?  (  )  \[  ]  {  }&#124;
+- ^  $  \  .  \*  +  ?  (  )  \[  ]  {  }  &#124;
 
 V `basic` a `grep`, mají následující znaky zvláštní význam:
 
@@ -480,7 +480,7 @@ Pokud existuje více než jedna dílčí sekvence, která odpovídá v určitém
 |"$&"|"&"|Sekvence znaků, která odpovídá celému regulárnímu výrazu (`[match[0].first, match[0].second)`)|
 |"$$"||"$"|
 ||"\\&"|"&"|
-|"$\`" (znak dolaru následovaný závěrečnou uvozovkou)||Sekvence znaků, která předchází dílčí sekvenci odpovídající regulárnímu výrazu (`[match.prefix().first, match.prefix().second)`)|
+|"$\`" (znak dolaru následovaný závěrečnou uvozovkou) || Sekvence znaků, která předchází dílčí sekvenci odpovídající regulárnímu výrazu (`[match.prefix().first, match.prefix().second)`)|
 |„$'“ (znak dolaru následovaný počáteční uvozovkou)||Sekvence znaků, který následuje za dílčí sekvencí odpovídající regulárnímu výrazu (`[match.suffix().first, match.suffix().second)`)|
 |„$n“|„\n“|Sekvence znaků, který odpovídá skupině zachycení na pozici `n`, kde `n` je číslo mezi 0 a 9 (`[match[n].first, match[n].second)`)|
 ||"\\\n"|„\n“|

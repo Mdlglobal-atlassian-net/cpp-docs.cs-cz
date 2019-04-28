@@ -1,5 +1,5 @@
 ---
-title: snprintf – _snprintf, _snprintf_l –, _snwprintf, _snwprintf_l –
+title: snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 ms.date: 11/04/2016
 apiname:
 - _snwprintf
@@ -49,13 +49,13 @@ helpviewer_keywords:
 - formatted text [C++]
 ms.assetid: 5976c9c8-876e-4ac9-a515-39f3f7fd0925
 ms.openlocfilehash: 202f2f12de3955a2c9b0f785c3e89280d91a4a95
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355715"
 ---
-# <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf – _snprintf, _snprintf_l –, _snwprintf, _snwprintf_l –
+# <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 
 Zapisuje formátovaná data do řetězce. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
 
@@ -137,7 +137,7 @@ Maximální počet znaků, které se mají uložit
 *Formát*<br/>
 Řetězec řízení formátu
 
-*Argument*<br/>
+*argument*<br/>
 Volitelné argumenty
 
 *Národní prostředí*<br/>
@@ -180,15 +180,15 @@ V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají nověj
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_sntprintf –**|**_snprintf**|**_snprintf**|**_snwprintf**|
-|**_sntprintf_l –**|**_snprintf_l**|**_snprintf_l**|**_snwprintf_l**|
+|**_sntprintf**|**_snprintf**|**_snprintf**|**_snwprintf**|
+|**_sntprintf_l**|**_snprintf_l**|**_snprintf_l**|**_snwprintf_l**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**snprintf –**, **_snprintf**, **_snprintf_l –**|\<stdio.h>|
-|**_snwprintf**, **_snwprintf_l –**|\<stdio.h > nebo \<wchar.h >|
+|**snprintf**, **_snprintf**,  **_snprintf_l**|\<stdio.h>|
+|**_snwprintf**, **_snwprintf_l**|\<stdio.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
@@ -308,7 +308,7 @@ character count = 69
 ## <a name="see-also"></a>Viz také:
 
 [Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
-[sprintf _sprintf_l –, swprintf, _swprintf_l –, \__swprintf_l –](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>

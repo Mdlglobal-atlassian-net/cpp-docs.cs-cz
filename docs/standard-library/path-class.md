@@ -5,11 +5,11 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::path
 ms.assetid: 8a1227ca-aeb2-4e0e-84aa-86e34e4f4fe8
 ms.openlocfilehash: 486245df3433f552c289786a0b20deb33c8fb6c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370447"
 ---
 # <a name="path-class"></a>path – třída
 
@@ -34,25 +34,25 @@ class path;
 |Název typu|Popis|
 |-|-|
 |[const_iterator](#const_iterator)|Synonymum pro `iterator`.|
-|[iterátor](#iterator)|Obousměrný konstantní iterátor, který určuje `path` součástí `myname`.|
-|[STRING_TYPE](#string_type)|Typ je synonymum pro `basic_string<value_type>`.|
+|[iterator](#iterator)|Obousměrný konstantní iterátor, který určuje `path` součástí `myname`.|
+|[string_type](#string_type)|Typ je synonymum pro `basic_string<value_type>`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
 |[Připojení](#append)|Připojí k zadané pořadí `mypath`, převést a vkládání preferred_separator podle potřeby.|
-|[přiřazení](#assign)|Nahradí `mypath` s zadané pořadí převede podle potřeby.|
+|[assign](#assign)|Nahradí `mypath` s zadané pořadí převede podle potřeby.|
 |[začít](#begin)|Vrátí `path::iterator` označující první element path v názvu cesty, pokud jsou k dispozici.|
 |[c_str](#c_str)|Vrací ukazatel na první znak v `mypath`.|
-|[Vymazat](#clear)|Spustí `mypath.clear()`.|
+|[clear](#clear)|Spustí `mypath.clear()`.|
 |[compare](#compare)|Vrátí hodnoty porovnání.|
 |[concat](#compare)|Připojí k zadané pořadí `mypath`, převést (ale ne vkládání oddělovač) podle potřeby.|
 |[prázdný](#empty)|Vrátí `mypath.empty()`.|
 |[ukončení](#end)|Vrátí iterátor koncová sekvence typu `iterator`.|
 |[Rozšíření](#extension)|Vrátí přípona `filename()`.|
 |[Název souboru](#filename)|Vrátí komponentu kořenové adresáře Jmeno, konkrétně `empty() path() : *--end()`. Komponenta může být prázdný.|
-|[generic_string –](#generic_string)|Vrátí `this->string<Elem, Traits, Alloc>(al)` s (v části Windows) převést všechny zpětné lomítko na dopředné lomítko.|
+|[generic_string](#generic_string)|Vrátí `this->string<Elem, Traits, Alloc>(al)` s (v části Windows) převést všechny zpětné lomítko na dopředné lomítko.|
 |[generic_u16string](#generic_u16string)|Vrátí `u16string()` s (v části Windows) převést všechny zpětné lomítko na dopředné lomítko.|
 |[generic_u32string](#generic_u32string)|Vrátí `u32string()` s (v části Windows) převést všechny zpětné lomítko na dopředné lomítko.|
 |[generic_u8string](#generic_u8string)|Vrátí `u8string()` s (v části Windows) převést všechny zpětné lomítko na dopředné lomítko.|
@@ -71,16 +71,16 @@ class path;
 |[Nativní](#native)|Vrátí `myname`.|
 |[parent_path](#parent_path)|Vrátí nadřazenou součást cesty `myname`.|
 |[preferred_separator](#preferred_separator)|Objekt konstanty poskytuje upřednostňované znak pro oddělení součásti cesty, v závislosti na operačním systému hostitele. |
-|[RELATIVE_PATH](#relative_path)|Vrátí komponentu relativní cesta `myname`. |
+|[relative_path](#relative_path)|Vrátí komponentu relativní cesta `myname`. |
 |[remove_filename –](#remove_filename)|Odebere název souboru.|
-|[replace_extension –](#replace_extension)|Nahrazuje rozšíření `myname`. |
+|[replace_extension](#replace_extension)|Nahrazuje rozšíření `myname`. |
 |[replace_filename](#replace_filename)|RReplaces název souboru.|
 |[root_directory](#root_directory)|Vrátí komponentu kořenové adresáře `myname`. |
 |[root_name](#root_name)|Vrátí komponentu názvu kořenového `myname`. |
 |[root_path](#root_path)|Vrátí komponentu kořenové cesty `myname`.|
 |[stem](#stem)|Vrátí `stem` komponentu `myname`.|
 |[string](#string)|Převede sekvenci uložené v `mypath`.|
-|[Prohození](#swap)|Spustí `swap(mypath, right.mypath)`.|
+|[swap](#swap)|Spustí `swap(mypath, right.mypath)`.|
 |[u16string](#u16string)|Převede sekvenci uložené v `mypath` UTF-16 a vrátí je uložená v objektu typu `u16string`.|
 |[u32string](#u32string)|Převede sekvenci uložené v `mypath` UTF-32 a vrátí je uložená v objektu typu `u32string`.|
 |[u8string](#u8string)|Převede sekvenci uložené v `mypath` UTF-8 a vrátí je uložená v objektu typu `u8string`.|
@@ -122,7 +122,7 @@ Zadané pořadí.
 *první*<br/>
 Začátek zadaného pořadí.
 
-*poslední*<br/>
+*last*<br/>
 Konec zadaného pořadí.
 
 ## <a name="assign"></a> path::Assign –
@@ -145,7 +145,7 @@ Zadané pořadí.
 *první*<br/>
 Začátek zadaného pořadí.
 
-*poslední*<br/>
+*last*<br/>
 Konec zadaného pořadí.
 
 ## <a name="begin"></a> path::begin –
@@ -213,7 +213,7 @@ Zadané pořadí.
 *první*<br/>
 Začátek zadaného pořadí.
 
-*poslední*<br/>
+*last*<br/>
 Konec zadaného pořadí.
 
 ## <a name="const_iterator"></a> path::const_iterator
@@ -326,7 +326,7 @@ Vrátí `!filename().empty()`.
 bool has_filename() const;
 ```
 
-## <a name="has_parent_path"></a> path::has_parent_path –
+## <a name="has_parent_path"></a> path::has_parent_path
 
 Vrátí `!parent_path().empty()`.
 
@@ -599,13 +599,13 @@ Cesta, z nichž má být kopie vytvořené cesty.
 *source*<br/>
 Zdroj, z nichž má být kopie vytvořené cesty.
 
-*Umístění*<br/>
+*loc*<br/>
 Zadanému národnímu prostředí.
 
 *první*<br/>
 Pozice prvního prvku, který chcete zkopírovat.
 
-*poslední*<br/>
+*last*<br/>
 Pozice posledního prvku, které se mají zkopírovat.
 
 ### <a name="remarks"></a>Poznámky
@@ -775,7 +775,7 @@ První členská funkce (šablona) převede sekvenci uložené v `mypath` stejn�
 
 Druhá členská funkce převede sekvenci uložené v `mypath` kódování podporuje pro systém hostitele **char** pořadí a vrátí je uložená v objektu typu `string`.
 
-## <a name="string_type"></a> path::STRING_TYPE
+## <a name="string_type"></a> path::string_type
 
 Typ je synonymum pro `basic_string<value_type>`.
 
@@ -783,7 +783,7 @@ Typ je synonymum pro `basic_string<value_type>`.
 typedef basic_string<value_type> string_type;
 ```
 
-## <a name="swap"></a> path::swap –
+## <a name="swap"></a> path::swap
 
 Spustí `swap(mypath, right.mypath)`.
 

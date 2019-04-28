@@ -1,23 +1,23 @@
 ---
-title: Referenční třídy a struktury (C + +/ CX)
+title: Referenční třídy a struktury (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
 ms.openlocfilehash: e9ac14762dba580967fbecd245a81a4ff4356b64
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368588"
 ---
-# <a name="ref-classes-and-structs-ccx"></a>Referenční třídy a struktury (C + +/ CX)
+# <a name="ref-classes-and-structs-ccx"></a>Referenční třídy a struktury (C++/CX)
 
-C + +/ CX podporuje uživatelem definované *referenční třídy* a *struktury ref*a uživatelem definovanými *hodnota třídy* a *hodnotu struktury*. Tyto datové struktury jsou primární kontejnery, ve které C + +/ CX podporuje systém typů prostředí Windows Runtime. K metadatům podle určité zvláštní pravidla jsou emitovány jejich obsah a díky tomu mají být předány mezi komponentami prostředí Windows Runtime a aplikací pro univerzální platformu Windows, které jsou napsány v C++ nebo jiných jazycích.
+C++/CX podporuje uživatelem definované *referenční třídy* a *struktury ref*a uživatelem definovanými *hodnota třídy* a *hodnotu struktury*. Tyto datové struktury jsou primární kontejnery, podle kterého C++/CX podporuje systém typů prostředí Windows Runtime. K metadatům podle určité zvláštní pravidla jsou emitovány jejich obsah a díky tomu mají být předány mezi komponentami prostředí Windows Runtime a aplikací pro univerzální platformu Windows, které jsou napsány v C++ nebo jiných jazycích.
 
 Třída ref class nebo ref struct má tyto základní funkce:
 
 - Musí být deklarována v rámci oboru názvů v oboru názvů, a v tomto oboru názvů může mít přístupnost veřejné nebo soukromé. Pouze veřejné typy jsou emitovány do metadat. Není povoleno definovat vnořené veřejnou třídu, včetně vnořený veřejný [výčtu](../cppcx/enums-c-cx.md) třídy. Další informace najdete v tématu [obory názvů a viditelnost typů](../cppcx/namespaces-and-type-visibility-c-cx.md).
 
-- Může obsahovat jako členy C + +/ CX včetně referenční třídy, hodnota třídy, struktury ref, struktuře hodnot nebo struktury s možnou hodnotou Null. Může také obsahovat Skalární typy, jako jsou float64, bool a tak dále. Standardní typy jazyka C++ může také obsahovat například `std::vector` nebo vlastní třídu, dokud nejsou veřejné. C + +/ CX konstrukce pravděpodobně `public`, `protected`, `internal`, `private`, nebo `protected private` usnadnění přístupu. Všechny `public` nebo `protected` členy jsou emitovány do metadat. Standardní C++ typy musí mít `private`, `internal`, nebo `protected private` usnadnění, které brání právě emituje do metadat.
+- Může obsahovat jako členy C++/CX včetně referenční třídy, hodnota třídy, struktury ref, struktuře hodnot nebo struktury s možnou hodnotou Null. Může také obsahovat Skalární typy, jako jsou float64, bool a tak dále. Standardní typy jazyka C++ může také obsahovat například `std::vector` nebo vlastní třídu, dokud nejsou veřejné. C++/CX konstrukce pravděpodobně `public`, `protected`, `internal`, `private`, nebo `protected private` usnadnění přístupu. Všechny `public` nebo `protected` členy jsou emitovány do metadat. Standardní C++ typy musí mít `private`, `internal`, nebo `protected private` usnadnění, které brání právě emituje do metadat.
 
 - Může implementovat jednu nebo více *rozhraní třídy* nebo *rozhraní struktury*.
 
@@ -61,7 +61,7 @@ Podle definice třídy ref class má sémantiku odkazu. Když přiřadíte refer
 
 [!code-cpp[cx_classes#02](../cppcx/codesnippet/CPP/classesstructs/class1.h#02)]
 
-Když C + +/ CX referenční třídy je vytvořena instance, jeho paměti je inicializována nulou před voláním konstruktoru; proto není nutné pro jednotlivé členy, včetně vlastnosti inicializace nula. Pokud C + +/ CX třída odvozena z třídy Windows Runtime C++ knihovny (WRL), pouze jazyce C + +/ CX odvozená třída je inicializována nulou.
+Když C++je vytvořena instance třídy ref /CX, jeho paměti je inicializována nulou před voláním konstruktoru; proto není nutné pro jednotlivé členy, včetně vlastnosti inicializace nula. Pokud C++/CX třída odvozena z Windows Runtime C++ knihovny (WRL) třídy pouze C++/CX odvozená třída je inicializována nulou.
 
 ### <a name="members"></a>Členové
 
@@ -81,7 +81,7 @@ Veřejné referenční třídy, které má parametry typu nejsou povolené. Uži
 
 ## <a name="destructors"></a>Destruktory
 
-V jazyce C + +/ CX, volání `delete` na veřejným destruktorem vyvolá destruktor bez ohledu na počet odkazů na objekt. Toto chování umožňuje definovat destruktor, který provede vlastní vyčištění prostředků – vzoru RAII deterministické způsobem. I v tomto případě není však samotný objekt odstraněn z paměti. Paměť pro objekt je uvolněna pouze při počet odkazů dosáhne nuly.
+V C++/CX, volání `delete` na veřejným destruktorem vyvolá destruktor bez ohledu na počet odkazů na objekt. Toto chování umožňuje definovat destruktor, který provede vlastní vyčištění prostředků – vzoru RAII deterministické způsobem. I v tomto případě není však samotný objekt odstraněn z paměti. Paměť pro objekt je uvolněna pouze při počet odkazů dosáhne nuly.
 
 Pokud destruktor třídy nejsou veřejné, pak je pouze vyvoláno, když počet odkazů dosáhne nuly. Při volání `delete` na objekt, který má privátní destruktor, kompilátor vyvolá upozornění C4493, který říká "odstranit výraz nemá žádný účinek, jako je destruktor \<název typu > nemá přístupnost public.."
 
@@ -97,11 +97,11 @@ Destruktory třídy REF se dají deklarovat jenom následujícím způsobem:
 
 Chování není definováno, pokud se pokusíte pro přístup ke členům třídy, která již byla jeho destruktor spuštění. pravděpodobně způsobí pád programu. Volání `delete t` na typ, který nemá žádný destruktor public nemá žádný vliv. Volání `delete this` na typ nebo základní třídu, která obsahuje známou `private` nebo `protected private` destruktor z v rámci své hierarchie typů také nemá žádný vliv.
 
-Když deklarujete veřejným destruktorem, kompilátor generuje kód tak, aby třída ref implementuje `Platform::IDisposable` a implementuje destruktor `Dispose` metody. `Platform::IDisposable` je C + +/ CX projekci `Windows::Foundation::IClosable`. Tato rozhraní implementují nikdy explicitně.
+Když deklarujete veřejným destruktorem, kompilátor generuje kód tak, aby třída ref implementuje `Platform::IDisposable` a implementuje destruktor `Dispose` metody. `Platform::IDisposable` je C++/CX projekci `Windows::Foundation::IClosable`. Tato rozhraní implementují nikdy explicitně.
 
 ## <a name="inheritance"></a>Dědičnost
 
-Platform::Object – je univerzální základní třída pro všechny třídy ref. Všechny referenční třídy jsou implicitně převést na Platform::Object – a můžete přepsat [Object::ToString](../cppcx/platform-object-class.md#tostring). Ale model dědičnosti modulu Windows Runtime nejsou určeny jako obecné model dědičnosti; v jazyce C + +/ CX, to znamená, že uživatelský public ref class nemůže sloužit jako základní třídu.
+Platform::Object – je univerzální základní třída pro všechny třídy ref. Všechny referenční třídy jsou implicitně převést na Platform::Object – a můžete přepsat [Object::ToString](../cppcx/platform-object-class.md#tostring). Ale model dědičnosti modulu Windows Runtime nejsou určeny jako obecné model dědičnosti; v C++/CX to znamená, že uživatelský public ref class nemůže sloužit jako základní třídu.
 
 Pokud se vytvoření uživatelského ovládacího prvku XAML a účastní v systému vlastností závislosti, pak můžete použít `Windows::UI::Xaml::DependencyObject` jako základní třídu.
 
@@ -109,9 +109,9 @@ Po definování nezapečetěné třídy `MyBase` , která dědí z `DependencyOb
 
 Privátní base ref class není nutné odvozovat od existující nezapečetěné třídy. Pokud potřebujete hierarchii objektů modelu strukturu programu nebo povolit opakované využívání kódu, použijte privátní nebo interní referenční třídy nebo ještě lépe, standardní třídy jazyka C++. Můžete zveřejnit funkčnost privátní objekt hierarchie prostřednictvím obálky třída public ref zapečetěné.
 
-Ref class, která má veřejný nebo chráněný konstruktor v jazyce C + +/ CX musí být deklarované jako sealed. Toto omezení znamená, že neexistuje žádný způsob, jak třídy, které jsou napsané v jiných jazycích, jako je C# nebo Visual Basic pro dědění z typů, které deklarujete v součásti prostředí Windows Runtime, která je napsána v jazyce C + +/ CX.
+Ref class, která má veřejný nebo chráněný konstruktor v C++/CX musí být deklarované jako sealed. Toto omezení znamená, že neexistuje žádný způsob, jak třídy, které jsou napsané v jiných jazycích, jako například C# nebo dědit z typů, které deklarujete v prostředí Windows Runtime komponenty, která je napsána v jazyce Visual Basic C++/CX.
 
-Tady jsou základní pravidla dědičnosti v C + +/ CX:
+Tady jsou základní pravidla dědičnosti v C++/CX:
 
 - Referenční třídy lze dědit přímo z nejvýše jedna základní třída ref class, ale může implementovat libovolný počet rozhraní.
 
@@ -130,6 +130,6 @@ Následující příklad ukazuje, jak vystavit třída public ref class, která 
 ## <a name="see-also"></a>Viz také:
 
 [Systém typů](../cppcx/type-system-c-cx.md)<br/>
-[Hodnota třídy a struktury](../cppcx/value-classes-and-structs-c-cx.md)<br/>
+[Hodnotové třídy a struktury](../cppcx/value-classes-and-structs-c-cx.md)<br/>
 [Referenční dokumentace jazyka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Odkaz na obory názvů](../cppcx/namespaces-reference-c-cx.md)
+[Referenční informace o oborech názvů](../cppcx/namespaces-reference-c-cx.md)

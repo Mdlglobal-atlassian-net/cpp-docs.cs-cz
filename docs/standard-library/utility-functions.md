@@ -15,18 +15,18 @@ helpviewer_keywords:
 - std::move [C++]
 - std::swap [C++]
 ms.openlocfilehash: 7a061ede19c5c4c181b5fea912b9c6212c583267
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362364"
 ---
 # <a name="ltutilitygt-functions"></a>&lt;Nástroj&gt; funkce
 
 ||||
 |-|-|-|
 |[exchange](#exchange)|[Vpřed](#forward)|[Funkce Get &lt;nástroje&gt;](#get)|
-|[make_pair](#make_pair)|[Přesunutí](#move)|[Prohození](#swap)|
+|[make_pair](#make_pair)|[move](#move)|[swap](#swap)|
 
 ## <a name="exchange"></a>  Exchange
 
@@ -170,7 +170,7 @@ Typ první prvek dvojice.
 *T2*<br/>
 Typ elementu druhý pár.
 
-*žádost o přijetí změn*<br/>
+*pr*<br/>
 Dvojice lze vybírat.
 
 ### <a name="remarks"></a>Poznámky

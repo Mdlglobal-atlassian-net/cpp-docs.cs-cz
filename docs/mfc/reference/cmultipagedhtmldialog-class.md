@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CMultiPageDHtmlDialog [MFC], CMultiPageDHtmlDialog
 ms.assetid: 971accc1-824d-4df4-b4c1-b1a20e0f7e4f
 ms.openlocfilehash: 404b1b8bb1c96c2b244a6cfaee7f2f2c77800f31
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62366898"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>CMultiPageDHtmlDialog Class
 
@@ -29,7 +29,7 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Vytvoří vícestránkové dialogové okno objekt DHTML (Průvodce style).|
 |[CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog](#_dtorcmultipagedhtmldialog)|Odstraní objekt vícestránkové dialogové okno DHTML.|

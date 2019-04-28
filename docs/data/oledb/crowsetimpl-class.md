@@ -35,11 +35,11 @@ helpviewer_keywords:
 - m_strIndexText
 ms.assetid: e97614b3-b11d-4806-a0d3-b9401331473f
 ms.openlocfilehash: 1fac3a74ca259fe3b680355fadc7f9bbd6e3cc13
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368705"
 ---
 # <a name="crowsetimpl-class"></a>CRowsetImpl – třída
 
@@ -93,8 +93,8 @@ Třída, která bude sloužit jako úložiště pro data v sadě řádků. Vých
 
 |||
 |-|-|
-|[GetColumnInfo –](#getcolumninfo)|Načte informace o sloupci pro žádost o konkrétního klienta.|
-|[Getcommandfromid –](#getcommandfromid)|Kontroluje, zda nebo oba parametry obsahovat řetězcové hodnoty a pokud ano, zkopíruje řetězcové hodnoty na datové členy [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) a [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).|
+|[GetColumnInfo](#getcolumninfo)|Načte informace o sloupci pro žádost o konkrétního klienta.|
+|[GetCommandFromID](#getcommandfromid)|Kontroluje, zda nebo oba parametry obsahovat řetězcové hodnoty a pokud ano, zkopíruje řetězcové hodnoty na datové členy [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) a [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).|
 |[ValidateCommandID –](#validatecommandid)|Zkontroluje, zda je buď nebo obojí `DBID`s obsahovat řetězcové hodnoty a pokud ano, zkopíruje je do svých datových členů [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) a [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).|
 
 ### <a name="data-members"></a>Datové členy
@@ -190,7 +190,7 @@ static ATLCOLUMNINFO* CRowsetBaseImpl::GetColumnInfo(T* pv,
 
 #### <a name="parameters"></a>Parametry
 
-*PV*<br/>
+*pv*<br/>
 [in] Ukazatel na uživatele `CRowsetImpl` odvozené třídy.
 
 *pcCols*<br/>

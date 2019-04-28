@@ -25,11 +25,11 @@ helpviewer_keywords:
 - _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
 ms.openlocfilehash: ad8c9b470c33a4c84f46ac7758d368917e7938e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357535"
 ---
 # <a name="resetstkoflw"></a>_resetstkoflw
 
@@ -88,9 +88,9 @@ Volání **_resetstkoflw** k obnovení ochranné stránky při každém proveden
 
 V těchto bodech zásobník ještě není dostatečně oddělen.
 
-Výjimky přetečení zásobníku jsou generovány jako strukturované výjimky, ne výjimky jazyka C++, takže **_resetstkoflw** není k ničemu v běžném **catch** blokovat, protože nezachytí výjimku přetečení zásobníku. Nicméně pokud [_set_se_translator](set-se-translator.md) slouží k implementaci překladače strukturovaných výjimek, který vyvolá výjimky jazyka C++ (viz druhý příklad), catch výsledků výjimky přetečení zásobníku v výjimky jazyka C++, které mohou být zpracovány C++ blok.
+Výjimky přetečení zásobníku generovány jako strukturované výjimky, ne C++ výjimky, takže **_resetstkoflw** není k ničemu v běžném **catch** blokovat, protože nezachytí přetečení zásobníku došlo k výjimce. Ale pokud [_set_se_translator](set-se-translator.md) slouží k implementaci překladače strukturovaných výjimek, který vyvolá C++ výjimky (viz druhý příklad), vede k výjimce přetečení zásobníku C++ výjimku, která může být zpracována C++ blok catch.
 
-Není bezpečné volat **_resetstkoflw** v bloku catch jazyka C++, který je dosažen z výjimky vyvolané funkcí překladače strukturované výjimky. V takovém případě není uvolněn prostor v zásobníku a ukazatel na zásobník není vynulován, dokud mimo blok catch, přestože destruktory byly volány pro zničitelné objekty před blokem catch. Tato funkce by neměl volána, dokud není uvolněno místo v zásobníku a ukazatel zásobníku se resetovalo. Proto by měla být volána jedině po ukončení bloku catch. Jako málo místa zásobníku, co možná byste měli použít ve blok catch, protože přetečení zásobníku, ke které dochází v bloku catch, který je sám pokouší o obnovení z předchozí přetečení zásobníku se nedá vrátit zpátky a může způsobit, že program přestane reagovat jako přetečení v aktivační události blok catch výjimky, že samotné je zpracována stejným blok catch.
+Není bezpečné volat **_resetstkoflw** v C++ blok catch, který je dosažen z výjimky vyvolané funkcí překladače strukturované výjimky. V takovém případě není uvolněn prostor v zásobníku a ukazatel na zásobník není vynulován, dokud mimo blok catch, přestože destruktory byly volány pro zničitelné objekty před blokem catch. Tato funkce by neměl volána, dokud není uvolněno místo v zásobníku a ukazatel zásobníku se resetovalo. Proto by měla být volána jedině po ukončení bloku catch. Jako málo místa zásobníku, co možná byste měli použít ve blok catch, protože přetečení zásobníku, ke které dochází v bloku catch, který je sám pokouší o obnovení z předchozí přetečení zásobníku se nedá vrátit zpátky a může způsobit, že program přestane reagovat jako přetečení v aktivační události blok catch výjimky, že samotné je zpracována stejným blok catch.
 
 Existují situace, kdy **_resetstkoflw** může selhat, i když se používá na správném místě, například v rámci **__except** bloku. Pokud ani po uvolnění zásobníku, není stále dostatek místa k provedení **_resetstkoflw** bez zápisu do poslední stránky zásobníku, **_resetstkoflw** nezdaří obnovit poslední stránku zásobníku jako ochrannou stránku a vrátí hodnotu 0 označující selhání. Proto bezpečné používání této funkce by měly zahrnovat kontrolu návratové hodnoty místo za předpokladu, že zásobník je bezpečné používat.
 
@@ -100,11 +100,11 @@ Strukturované zpracování výjimek nezachytí **STATUS_STACK_OVERFLOW** výjim
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_resetstkoflw**|\<malloc.h >|
+|**_resetstkoflw**|\<malloc.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-**Knihovny:** všechny verze [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md).
+**Knihovny:** Všechny verze [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -212,7 +212,7 @@ resetting stack overflow
 
 ### <a name="description"></a>Popis
 
-Následující příklad ukazuje doporučené použití **_resetstkoflw** v programu, kde jsou strukturované výjimky převedeny na výjimky jazyka C++.
+Následující příklad ukazuje doporučené použití **_resetstkoflw** v programu, kde jsou strukturované výjimky převedeny na C++ výjimky.
 
 ### <a name="code"></a>Kód
 

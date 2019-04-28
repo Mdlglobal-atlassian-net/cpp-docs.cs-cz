@@ -7,11 +7,11 @@ helpviewer_keywords:
 - regex header
 ms.assetid: 5dd4ef74-6063-4dbc-b692-1960bb736f0b
 ms.openlocfilehash: 0a4728008130119ed9a01334efb2fea2a4ac0639
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368978"
 ---
 # <a name="ltregexgt"></a>&lt;regex&gt;
 
@@ -41,16 +41,16 @@ Pokud chcete upravit podrobnosti gramatika regulárních výrazů, zápis tříd
 |-|-|
 |[basic_regex](../standard-library/basic-regex-class.md)|Zabalí regulární výraz.|
 |[match_results](../standard-library/match-results-class.md)|Obsahuje posloupnost dílčí shody.|
-|[regex_constants –](../standard-library/regex-constants-class.md)|Obsahuje různé konstanty.|
+|[regex_constants](../standard-library/regex-constants-class.md)|Obsahuje různé konstanty.|
 |[regex_error](../standard-library/regex-error-class.md)|Sestavy chybný regulární výraz.|
 |[regex_iterator](../standard-library/regex-iterator-class.md)|Iteruje přes výsledky porovnání.|
-|[regex_traits –](../standard-library/regex-traits-class.md)|Popisuje charakteristiky elementů pro porovnání.|
+|[regex_traits](../standard-library/regex-traits-class.md)|Popisuje charakteristiky elementů pro porovnání.|
 |[regex_traits\<char>](../standard-library/regex-traits-char-class.md)|Popisuje charakteristiky **char** pro porovnání.|
-|[regex_traits < wchar_t >](../standard-library/regex-traits-wchar-t-class.md)|Popisuje charakteristiky **wchar_t** pro porovnání.|
+|[regex_traits<wchar_t>](../standard-library/regex-traits-wchar-t-class.md)|Popisuje charakteristiky **wchar_t** pro porovnání.|
 |[regex_token_iterator](../standard-library/regex-token-iterator-class.md)|Iteruje přes dílčí shody.|
 |[sub_match](../standard-library/sub-match-class.md)|Popisuje dílčí shoda.|
 
-### <a name="type-definitions"></a>Definice typu
+### <a name="type-definitions"></a>Definice typů
 
 |||
 |-|-|
@@ -80,7 +80,7 @@ Pokud chcete upravit podrobnosti gramatika regulárních výrazů, zápis tříd
 |[regex_match](../standard-library/regex-functions.md#regex_match)|Přesně shoduje s regulárním výrazem.|
 |[regex_replace](../standard-library/regex-functions.md#regex_replace)|Nahradí odpovídající regulární výrazy.|
 |[regex_search](../standard-library/regex-functions.md#regex_search)|Hledání regulárního výrazu shody.|
-|[Prohození](../standard-library/regex-functions.md#swap)|Zamění `basic_regex` nebo `match_results` objekty.|
+|[swap](../standard-library/regex-functions.md#swap)|Zamění `basic_regex` nebo `match_results` objekty.|
 
 ### <a name="operators"></a>Operátory
 
@@ -90,7 +90,7 @@ Pokud chcete upravit podrobnosti gramatika regulárních výrazů, zápis tříd
 |[operator!=](../standard-library/regex-operators.md#op_neq)|Porovnání různých objektů, není rovno.|
 |[Operator <](../standard-library/regex-operators.md#op_lt)|Porovnání různých objektů, menší než.|
 |[– Operátor\<=](../standard-library/regex-operators.md#op_gt_eq)|Porovnání různých objektů, menší než nebo rovno.|
-|[Operator >](../standard-library/regex-operators.md#op_gt)|Porovnání různých objektů, které jsou větší než.|
+|[operator>](../standard-library/regex-operators.md#op_gt)|Porovnání různých objektů, které jsou větší než.|
 |[operator>=](../standard-library/regex-operators.md#op_gt_eq)|Porovnání různých objektů, větší než nebo rovno.|
 |[operátor <<](../standard-library/regex-operators.md#op_lt_lt)|Vloží `sub_match` v datovém proudu.|
 

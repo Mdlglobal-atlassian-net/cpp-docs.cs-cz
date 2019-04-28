@@ -11,11 +11,11 @@ helpviewer_keywords:
 - messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
 ms.openlocfilehash: d60ae52225ddd993c1768d0b5ce1989ab0192e45
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358229"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>Obslužné rutiny pro standardní zprávy Windows
 
@@ -23,7 +23,7 @@ Výchozí obslužné rutiny pro standardní zprávy Windows (**WM_**) jsou před
 
 `afx_msg void OnPaint();`
 
-**Afx_msg** – klíčové slovo navrhuje efekt C++ **virtuální** – klíčové slovo rozlišuje obslužné rutiny z jiných `CWnd` členské funkce. Upozorňujeme, že tyto funkce nejsou ve skutečnosti virtuální; Místo toho implementaci prostřednictvím mapy zpráv. Mapy zpráv závisí výhradně na standardní makra preprocesoru, nikoli na rozšíření jazyka C++. **Afx_msg** – klíčové slovo se překládá na prázdné místo po předběžném zpracování.
+**Afx_msg** – klíčové slovo navrhuje vliv C++ **virtuální** – klíčové slovo rozlišuje obslužné rutiny z jiných `CWnd` členské funkce. Upozorňujeme, že tyto funkce nejsou ve skutečnosti virtuální; Místo toho implementaci prostřednictvím mapy zpráv. Mapy zpráv závisí výhradně na standardní makra preprocesoru, nikoli na rozšíření jazyka C++. **Afx_msg** – klíčové slovo se překládá na prázdné místo po předběžném zpracování.
 
 K přepsání obslužná rutina definovaná v základní třídě, stačí Definujte funkci s stejný prototyp v odvozené třídě a aby položka mapy zpráv pro obslužnou rutinu. Vaše obslužná rutina "přepisuje" Obslužná rutina se stejným názvem v některém z základních třídách této třídy.
 

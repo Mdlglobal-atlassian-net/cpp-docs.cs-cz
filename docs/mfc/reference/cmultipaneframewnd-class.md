@@ -81,11 +81,11 @@ helpviewer_keywords:
 - CMultiPaneFrameWnd [MFC], StoreRecentTabRelatedInfo
 ms.assetid: 989a548e-0d70-46b7-a513-8cf740e1be3e
 ms.openlocfilehash: 9c23d76e8f3ea54fe34e7956ad5b4e7dc9780def
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58773057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62366833"
 ---
 # <a name="cmultipaneframewnd-class"></a>Cmultipaneframewnd – třída
 
@@ -103,7 +103,7 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMultiPaneFrameWnd::AddPane](#addpane)|Přidá do podokna. (Přepíše [CPaneFrameWnd::AddPane](../../mfc/reference/cpaneframewnd-class.md#addpane).)|
 |[CMultiPaneFrameWnd::AddRecentPane](#addrecentpane)||

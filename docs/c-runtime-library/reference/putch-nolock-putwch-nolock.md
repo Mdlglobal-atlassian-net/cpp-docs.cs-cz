@@ -34,11 +34,11 @@ helpviewer_keywords:
 - _putwch_nolock function
 ms.assetid: edbc811d-bac6-47fa-a872-fe4f3a1590b0
 ms.openlocfilehash: 3b3ce1bb36e8a6d938ad620af21e8c1d3bc768db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358206"
 ---
 # <a name="putchnolock-putwchnolock"></a>_putch_nolock, _putwch_nolock
 
@@ -81,8 +81,8 @@ Vrátí *c* v případě úspěšného ověření. Pokud **_putch_nolock** selž
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_putch_nolock**|\<conio.h >|
-|**_putwch_nolock**|\<conio.h >|
+|**_putch_nolock**|\<conio.h>|
+|**_putwch_nolock**|\<conio.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

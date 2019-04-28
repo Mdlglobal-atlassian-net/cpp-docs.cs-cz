@@ -44,11 +44,11 @@ helpviewer_keywords:
 - vfwprintf_p function
 ms.assetid: 4d4a0914-4175-4b65-9ca1-037c4ef29147
 ms.openlocfilehash: 7e93972ccd77d730d873177fe92f958877c83fe4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62365361"
 ---
 # <a name="vfprintfp-vfprintfpl-vfwprintfp-vfwprintfpl"></a>_vfprintf_p, _vfprintf_p_l, _vfwprintf_p, _vfwprintf_p_l
 
@@ -83,7 +83,7 @@ int _vfwprintf_p_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Stream*<br/>
+*stream*<br/>
 Ukazatel na **souboru** struktury.
 
 *Formát*<br/>
@@ -118,15 +118,15 @@ Pokud *stream* nebo *formátu* je ukazatel s hodnotou null, nebo pokud řetězec
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_vftprintf_p –**|**_vfprintf_p**|**_vfprintf_p**|**_vfwprintf_p**|
-|**_vftprintf_p_l –**|**_vfprintf_p_l**|**_vfprintf_p_l**|**_vfwprintf_p_l**|
+|**_vftprintf_p**|**_vfprintf_p**|**_vfprintf_p**|**_vfwprintf_p**|
+|**_vftprintf_p_l**|**_vfprintf_p_l**|**_vfprintf_p_l**|**_vfwprintf_p_l**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelná záhlaví|
 |-------------|---------------------|----------------------|
-|**_vfprintf_p –**, **_vfprintf_p_l –**|\<stdio.h > a \<stdarg.h >|\<varargs.h>*|
-|**_vfwprintf_p –**, **_vfwprintf_p_l –**|\<stdio.h > nebo \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|
+|**_vfprintf_p**, **_vfprintf_p_l**|\<stdio.h > a \<stdarg.h >|\<varargs.h>*|
+|**_vfwprintf_p**, **_vfwprintf_p_l**|\<stdio.h > nebo \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|
 
 \* Vyžaduje se pro kompatibility systému UNIX V.
 
@@ -138,7 +138,7 @@ Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-
 [vprintf – funkce](../../c-runtime-library/vprintf-functions.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf _sprintf_l –, swprintf, _swprintf_l –, \__swprintf_l –](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)<br/>
 [printf_p – poziční parametry](../../c-runtime-library/printf-p-positional-parameters.md)<br/>
 [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>

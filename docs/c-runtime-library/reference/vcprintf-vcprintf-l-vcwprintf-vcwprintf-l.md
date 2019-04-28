@@ -44,11 +44,11 @@ helpviewer_keywords:
 - formatted text [C++]
 ms.assetid: 4ef8d237-6200-4b66-8731-8c57e5624bb1
 ms.openlocfilehash: e78d2f0b873042bda4fc79df100374b52751aebc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364841"
 ---
 # <a name="vcprintf-vcprintfl-vcwprintf-vcwprintfl"></a>_vcprintf, _vcprintf_l, _vcwprintf, _vcwprintf_l
 
@@ -110,15 +110,15 @@ Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že pou�
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_vtcprintf –**|**_vcprintf**|**_vcprintf**|**_vcwprintf**|
-|**_vtcprintf_l –**|**_vcprintf_l**|**_vcprintf_l**|**_vcwprintf_l**|
+|**_vtcprintf**|**_vcprintf**|**_vcprintf**|**_vcwprintf**|
+|**_vtcprintf_l**|**_vcprintf_l**|**_vcprintf_l**|**_vcwprintf_l**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelná záhlaví|
 |-------------|---------------------|----------------------|
-|**_vcprintf –**, **_vcprintf_l –**|\<conio.h > a \<stdarg.h >|\<varargs.h>*|
-|**_vcwprintf –**, **_vcwprintf_l –**|\<conio.h > nebo \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|
+|**_vcprintf**, **_vcprintf_l**|\<conio.h > a \<stdarg.h >|\<varargs.h>*|
+|**_vcwprintf**, **_vcwprintf_l**|\<conio.h > nebo \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|
 
 \* Vyžaduje se pro kompatibility systému UNIX V.
 
@@ -163,5 +163,5 @@ int main()
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf _sprintf_l –, swprintf, _swprintf_l –, \__swprintf_l –](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)<br/>

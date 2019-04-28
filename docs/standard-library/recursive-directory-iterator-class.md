@@ -5,11 +5,11 @@ f1_keywords:
 - filesystem/std::tr2::sys::recursive_directory_iterator
 ms.assetid: 79a061bd-5b64-404c-97e8-749c888c2ced
 ms.openlocfilehash: 52e6f738aa226dba26bae0cf6e97cd18d107d677
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370126"
 ---
 # <a name="recursivedirectoryiterator-class"></a>recursive_directory_iterator – třída
 
@@ -52,7 +52,7 @@ s argumenty navštíví volání `path("abc/def/ghi")` a `path("abc/jkl")`. Kval
 
 |Konstruktor|Popis|
 |-|-|
-|[recursive_directory_iterator –](#recursive_directory_iterator)|Vytvoří `recursive_directory_iterator`.|
+|[recursive_directory_iterator](#recursive_directory_iterator)|Vytvoří `recursive_directory_iterator`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
@@ -62,7 +62,7 @@ s argumenty navštíví volání `path("abc/def/ghi")` a `path("abc/jkl")`. Kval
 |[disable_recursion_pending](#disable_recursion_pending)|Úložiště **true** v `no_push`.|
 |[Přírůstek](#increment)|Přejde k další název souboru v sekvenci.|
 |[Možnosti](#options)|Vrátí `myoptions`.|
-|[POP](#pop)|Vrátí další objekt.|
+|[pop](#pop)|Vrátí další objekt.|
 |[recursion_pending](#recursion_pending)|Vrátí `!no_push`.|
 
 ### <a name="operators"></a>Operátory
@@ -73,7 +73,7 @@ s argumenty navštíví volání `path("abc/def/ghi")` a `path("abc/jkl")`. Kval
 |[operátor =](#op_as)|Operátory přiřazení nastavený na výchozí hodnotu člena chovat dle očekávání.|
 |[operator==](#op_eq)|Vrátí **true** pouze tehdy, pokud obě `*this` a *správné* koncová sekvence iterátory nebo obojí jsou není end z pořadí – iterátory.|
 |[Operator *](#op_multiply)|Vrátí `myentry`.|
-|[Operator ->](#op_cast)|Vrátí `&**this`.|
+|[operator->](#op_cast)|Vrátí `&**this`.|
 |[Operator ++](#op_increment)|Zvýší `recursive_directory_iterator`.|
 
 ## <a name="requirements"></a>Požadavky
@@ -108,7 +108,7 @@ recursive_directory_iterator& increment(error_code& ec) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*ES*<br/>
+*ec*<br/>
 Zadaný kód chyby.
 
 ### <a name="remarks"></a>Poznámky
@@ -139,7 +139,7 @@ recursive_directory_iterator& operator=(recursive_directory_iterator&&) noexcept
 
 ### <a name="parameters"></a>Parametry
 
-*recursive_directory_iterator –*<br/>
+*recursive_directory_iterator*<br/>
 [Recursive_directory_iterator –](../standard-library/recursive-directory-iterator-class.md) kopírovaná do `recursive_directory_iterator`.
 
 ## <a name="op_eq"></a> recursive_directory_iterator::Operator ==
@@ -243,13 +243,13 @@ recursive_directory_iterator(recursive_directory_iterator&&) noexcept = default;
 *pval*<br/>
 Zadaná cesta.
 
-*error_code –*<br/>
+*error_code*<br/>
 Zadaný chybový kód.
 
 *požádá o*<br/>
 Zadaný adresář možnosti.
 
-*recursive_directory_iterator –*<br/>
+*recursive_directory_iterator*<br/>
 `recursive_directory_iterator` z nich vytvořeného `recursive_directory_iterator` je kopií.
 
 ### <a name="remarks"></a>Poznámky
@@ -261,5 +261,5 @@ První konstruktor vytvoří iterátor koncová sekvence. Druhý a třetí konst
 ## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<FileSystem >](../standard-library/filesystem.md)<br/>
+[\<filesystem>](../standard-library/filesystem.md)<br/>
 [Navigace v systému souborů (C++)](../standard-library/file-system-navigation.md)<br/>

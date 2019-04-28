@@ -14,11 +14,11 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::swap [C++]
 ms.openlocfilehash: 47b3ae9d59db7c39d7b9667038d216f24530d5dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369602"
 ---
 # <a name="ltregexgt-functions"></a>&lt;regulární výraz&gt; funkce
 
@@ -27,7 +27,7 @@ ms.locfileid: "50624819"
 |[regex_match](#regex_match)|Ověřuje, zda regulární výraz odpovídá celý cílový řetězec.|
 |[regex_replace](#regex_replace)|Nahradí odpovídající regulární výrazy.|
 |[regex_search](#regex_search)|Hledání regulárního výrazu shody.|
-|[Prohození](#swap)|Prohodí dva `basic_regex` nebo `match_results` objekty.|
+|[swap](#swap)|Prohodí dva `basic_regex` nebo `match_results` objekty.|
 
 ## <a name="regex_match"></a>  regex_match –
 
@@ -111,7 +111,7 @@ Příznaky pro shody.
 *první*<br/>
 Začátek pořadí tak, aby odpovídaly.
 
-*poslední*<br/>
+*last*<br/>
 Konec pořadí tak, aby odpovídaly.
 
 *match*<br/>
@@ -120,7 +120,7 @@ Výsledky porovnání. Odpovídá typu Elem: [smatch](../standard-library/regex-
 *ptr*<br/>
 Ukazatel na začátek pořadí tak, aby odpovídaly. Pokud *ptr* je `char*`, pak použijte `cmatch` a `regex`. Pokud *ptr* je `wchar_t*` použije `wcmatch` a `wregex`.
 
-*RE*<br/>
+*re*<br/>
 Regulární výraz tak, aby odpovídaly. Typ `regex` pro `string` a `char*`, nebo `wregex` pro `wstring` a `wchar_t*`.
 
 *str*<br/>
@@ -196,7 +196,7 @@ Regex found in Drizzle
 The matching text is: 2014-04-02
 ```
 
-## <a name="regex_replace"></a>  regex_replace –
+## <a name="regex_replace"></a>  regex_replace
 
 Nahradí odpovídající regulární výrazy.
 
@@ -241,16 +241,16 @@ Příznaky pro shody.
 *první*<br/>
 Začátek pořadí tak, aby odpovídaly.
 
-*FMT*<br/>
+*fmt*<br/>
 Formát pro nahrazení.
 
-*poslední*<br/>
+*last*<br/>
 Konec pořadí tak, aby odpovídaly.
 
 *out*<br/>
 Výstupní iterátor.
 
-*RE*<br/>
+*re*<br/>
 Regulární výraz tak, aby odpovídaly.
 
 *str*<br/>
@@ -304,7 +304,7 @@ replacement == AdAeAf
 replacement == Adaeaf
 ```
 
-## <a name="regex_search"></a>  regex_search –
+## <a name="regex_search"></a>  regex_search
 
 Hledání regulárního výrazu shody.
 
@@ -380,7 +380,7 @@ Příznaky pro shody.
 *první*<br/>
 Začátek pořadí tak, aby odpovídaly.
 
-*poslední*<br/>
+*last*<br/>
 Konec pořadí tak, aby odpovídaly.
 
 *match*<br/>
@@ -389,7 +389,7 @@ Výsledky porovnání.
 *ptr*<br/>
 Ukazatel na začátek pořadí tak, aby odpovídaly.
 
-*RE*<br/>
+*re*<br/>
 Regulární výraz tak, aby odpovídaly.
 
 *str*<br/>

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::regex_token_iterator [C++], reference
 ms.assetid: a213ba48-8e4e-4b6b-871a-2637acf05f15
 ms.openlocfilehash: 2cb66ce4cbee0936211e5e991b18f3ae4b8a7fe5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369420"
 ---
 # <a name="regextokeniterator-class"></a>regex_token_iterator – třída
 
@@ -80,7 +80,7 @@ Posloupnost znaků začínající hned za koncem předchozí shoda s regulární
 |-|-|
 |[difference_type](#difference_type)|Typ rozdílu iterátoru.|
 |[iterator_category](#iterator_category)|Typ iterátoru kategorie.|
-|[Ukazatel](#pointer)|Typ ukazatele na shodu.|
+|[pointer](#pointer)|Typ ukazatele na shodu.|
 |[Referenční dokumentace](#reference)|Typ odkazu k dílčí shoda.|
 |[regex_type](#regex_type)|Typ odpovídající regulární výraz.|
 |[value_type](#value_type)|Typ dílčí shoda.|
@@ -93,7 +93,7 @@ Posloupnost znaků začínající hned za koncem předchozí shoda s regulární
 |[Operator *](#op_star)|Přistupuje k určené dílčí shoda.|
 |[Operator ++](#op_add_add)|Zvýší iterátor.|
 |[operator==](#op_eq_eq)|Porovná rovnost iterátory.|
-|[Operator ->](#op_arrow)|Přistupuje k určené dílčí shoda.|
+|[operator->](#op_arrow)|Přistupuje k určené dílčí shoda.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -238,7 +238,7 @@ Iterátor, který má být porovnán s.
 
 Členská funkce vrátí `!(*this == right)`.
 
-## <a name="op_star"></a>  regex_token_iterator::Operator *
+## <a name="op_star"></a>  regex_token_iterator::operator*
 
 Přistupuje k určené dílčí shoda.
 
@@ -283,7 +283,7 @@ Iterátor, který má být porovnán s.
 
 Členská funkce vrátí `it == right.it && subs == right.subs && pos == right.pos`.
 
-## <a name="op_arrow"></a>  regex_token_iterator::Operator-&gt;
+## <a name="op_arrow"></a>  regex_token_iterator::operator-&gt;
 
 Přistupuje k určené dílčí shoda.
 
@@ -295,7 +295,7 @@ const sub_match<BidIt> * operator->();
 
 Členská funkce vrátí ukazatel `sub_match<BidIt>` objekt představující skupinu zachycení identifikovat podle hodnoty indexu `subs[pos]`.
 
-## <a name="pointer"></a>  regex_token_iterator::Pointer
+## <a name="pointer"></a>  regex_token_iterator::pointer
 
 Typ ukazatele na shodu.
 
@@ -307,7 +307,7 @@ typedef sub_match<BidIt> *pointer;
 
 Typ je synonymum pro `sub_match<BidIt>*`, kde `BidIt` je parametr šablony.
 
-## <a name="reference"></a>  regex_token_iterator::Reference
+## <a name="reference"></a>  regex_token_iterator::reference
 
 Typ odkazu k dílčí shoda.
 
@@ -345,10 +345,10 @@ regex_token_iterator(BidIt first, BidIt last,
 *první*<br/>
 Začátek pořadí tak, aby odpovídaly.
 
-*poslední*<br/>
+*last*<br/>
 Konec pořadí tak, aby odpovídaly.
 
-*RE*<br/>
+*re*<br/>
 Regulárních výrazů pro shody.
 
 *f*<br/>

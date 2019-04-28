@@ -83,13 +83,13 @@ helpviewer_keywords:
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
 ms.openlocfilehash: f3e733bced407f96414783612165984c71b63775
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369563"
 ---
-# <a name="regexconstants-namespace"></a>regex_constants – obor názvů
+# <a name="regexconstants-namespace"></a>regex_constants namespace
 
 Obor názvů pro příznaky regulárního výrazu
 
@@ -109,9 +109,9 @@ Obor názvů `regex_constants` zapouzdřuje několik typů příznaků a jejich 
 
 |||
 |-|-|
-|[error_type –](#error_type)|Příznaky pro hlášení chyb syntaxe regulárního výrazu.|
-|[match_flag_type –](#match_flag_type)|Příznaky pro porovnávání možnosti regulárních výrazů.|
-|[syntax_option_type –](#syntax_option_type)|Příznaky pro výběr možnosti syntaxe.|
+|[error_type](#error_type)|Příznaky pro hlášení chyb syntaxe regulárního výrazu.|
+|[match_flag_type](#match_flag_type)|Příznaky pro porovnávání možnosti regulárních výrazů.|
+|[syntax_option_type](#syntax_option_type)|Příznaky pro výběr možnosti syntaxe.|
 
 ## <a name="requirements"></a>Požadavky
 

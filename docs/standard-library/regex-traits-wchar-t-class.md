@@ -1,5 +1,5 @@
 ---
-title: regex_traits&lt;wchar_t&gt; třídy
+title: regex_traits&lt;wchar_t&gt; Class
 ms.date: 09/10/2018
 f1_keywords:
 - regex/std::regex_traits<wchar_t>
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - regex_traits<wchar_t> class
 ms.assetid: 288d6fdb-fb8e-4a4d-904a-53916be7f95b
 ms.openlocfilehash: cba5a7a036806f244f45a2d3b7a6317393f7a196
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369082"
 ---
-# <a name="regextraitsltwchartgt-class"></a>regex_traits&lt;wchar_t&gt; třídy
+# <a name="regextraitsltwchartgt-class"></a>regex_traits&lt;wchar_t&gt; Class
 
 Specializace `regex_traits` pro **wchar_t**.
 

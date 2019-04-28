@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::recursive_timed_mutex [C++], try_lock_until
 - std::recursive_timed_mutex [C++], unlock
 ms.openlocfilehash: 2cb6fe8588f4b81ae5c67533c4b9124ae8c9b252
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370070"
 ---
 # <a name="recursivetimedmutex-class"></a>recursive_timed_mutex – třída
 
@@ -52,7 +52,7 @@ class recursive_timed_mutex;
 |[try_lock](#try_lock)|Pokusy o získání vlastnictví `mutex` bez blokování.|
 |[try_lock_for](#try_lock_for)|Pokusy o získání vlastnictví `mutex` pro zadaný časový interval.|
 |[try_lock_until](#try_lock_until)|Pokusy o získání vlastnictví `mutex` až do zadaného času.|
-|[Odemknutí](#unlock)|Uvolní vlastnictví objektu `mutex`.|
+|[unlock](#unlock)|Uvolní vlastnictví objektu `mutex`.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -171,4 +171,4 @@ Pokud volající vlákno není vlastníkem `mutex`, není chování definováno.
 ## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex – >](../standard-library/mutex.md)<br/>
+[\<mutex>](../standard-library/mutex.md)<br/>

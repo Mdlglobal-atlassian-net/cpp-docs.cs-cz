@@ -22,11 +22,11 @@ f1_keywords:
 - vwscanf_s
 ms.assetid: 23a1c383-5b01-4887-93ce-534a1e38ed93
 ms.openlocfilehash: 90100a5fbc03371a11f437acc12562d9ccf957f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364867"
 ---
 # <a name="vscanfs-vwscanfs"></a>vscanf_s, vwscanf_s
 
@@ -50,7 +50,7 @@ int vwscanf_s(
 *Formát*<br/>
 Řetězec řízení formátu.
 
-*seznam_argumentů*<br/>
+*arglist*<br/>
 Seznam argumentů s proměnnou délkou.
 
 ## <a name="return-value"></a>Návratová hodnota

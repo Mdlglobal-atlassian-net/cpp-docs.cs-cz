@@ -29,11 +29,11 @@ helpviewer_keywords:
 - execlpe function
 ms.assetid: 07b861da-3e7e-4f1d-bb80-ad69b55e5162
 ms.openlocfilehash: e3aa4189d2a384a0092c742909e97c5efc52b5ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339361"
 ---
 # <a name="execlpe-wexeclpe"></a>_execlpe, _wexeclpe
 
@@ -66,7 +66,7 @@ intptr_t _wexeclpe(
 *cmdname*<br/>
 Cesta k souboru pro spuštění.
 
-*arg0*,... *argn*<br/>
+*arg0*, ... *argn*<br/>
 Seznam ukazatelů na parametry.
 
 *envp*<br/>
@@ -98,7 +98,7 @@ Každá z těchto funkcí načte a spustí nový proces, přičemž předá kaž
 
 |Funkce|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |--------------|---------------------|---------------------|
-|**_execlpe –**|\<Process.h >|\<errno.h>|
+|**_execlpe**|\<process.h>|\<errno.h>|
 |**_wexeclpe**|\<Process.h > nebo \<wchar.h >|\<errno.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - spawnlp function
 ms.assetid: 74fc6e7a-4f24-4103-9387-7177875875e6
 ms.openlocfilehash: 44137aefcec8f6658a90117288a47696f4d31903
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355234"
 ---
 # <a name="spawnlp-wspawnlp"></a>_spawnlp, _wspawnlp
 
@@ -73,7 +73,7 @@ Režim spuštění pro volající proces.
 *cmdname*<br/>
 Cesta k souboru, který má být proveden.
 
-*arg0*, *arg1*,... *argn*<br/>
+*arg0*, *arg1*, ... *argn*<br/>
 Seznam ukazatelů na argumenty. *Arg0* argument je obvykle ukazatel na *cmdname*. Argumenty *arg1* prostřednictvím *argn* jsou ukazatele na znakové řetězce tvořící nový seznam argumentů. Následující *argn*, musí existovat **NULL** ukazatel k označení konce seznamu argumentů.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -100,7 +100,7 @@ Tyto funkce ověřují své parametry. Pokud *cmdname* nebo *arg0* je prázdný 
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_spawnlp**|\<Process.h >|
+|**_spawnlp**|\<process.h>|
 |**_wspawnlp**|\<stdio.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

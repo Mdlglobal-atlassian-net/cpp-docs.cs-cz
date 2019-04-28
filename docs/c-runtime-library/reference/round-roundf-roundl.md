@@ -28,11 +28,11 @@ helpviewer_keywords:
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
 ms.openlocfilehash: 126c6bace2b79123094a7f8bcc8f3d3378391d96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357444"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
@@ -69,7 +69,7 @@ Hodnota s plovoucí desetinnou čárkou k zaokrouhlení.
 
 |Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|ROZMEZÍ **QNAN**, **AJÍT**|žádná|**_DOMÉNA**|
+|± **QNAN**, **IND**|žádná|**_DOMAIN**|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -79,7 +79,7 @@ Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **ZAOK
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**ZAOKROUHLIT**, **roundf –**, **roundl –**|\<Math.h >|
+|**ZAOKROUHLIT**, **roundf –**, **roundl –**|\<math.h>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
@@ -127,5 +127,5 @@ roundl(-2.500000) is -3
 [fmod, fmodf](fmod-fmodf.md)<br/>
 [lrint, lrintf, lrintl, llrint, llrintf, llrintl](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)<br/>
 [lround, lroundf, lroundl, llround, llroundf, llroundl](lround-lroundf-lroundl-llround-llroundf-llroundl.md)<br/>
-[nearbyint – nearbyintf –, nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)<br/>
+[nearbyint, nearbyintf, nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)<br/>
 [rint, rintf, rintl](rint-rintf-rintl.md)<br/>
