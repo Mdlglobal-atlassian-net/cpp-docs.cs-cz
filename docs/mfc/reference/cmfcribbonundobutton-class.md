@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CMFCRibbonUndoButton [MFC], HasMenu
 ms.assetid: 5c42adf7-871d-4239-901e-47ae7fb816fc
 ms.openlocfilehash: cd657ac035c004e7aa9bfcd2f6dbd2f3c90da80c
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58776463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410084"
 ---
 # <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton Class
 
@@ -37,13 +37,13 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|Sestaví nový `CMFCRibbonUndoButton` s použitím ID příkazu, který zadáte, textový popisek a obrázků ze seznamu obrázků nadřazeného objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonUndoButton::AddUndoAction](#addundoaction)|Přidá novou akci do seznamu akcí.|
 |[CMFCRibbonUndoButton::CleanUpUndoList](#cleanupundolist)|Vymaže seznam akcí, což je rozevíracím seznamu.|

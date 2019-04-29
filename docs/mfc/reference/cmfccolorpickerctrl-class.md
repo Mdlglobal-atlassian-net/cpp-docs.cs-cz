@@ -41,11 +41,11 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
 ms.openlocfilehash: 1977717ee590acb63655ba21bfa5eb6bfe7c9bd8
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58772355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403783"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl Class
 
@@ -61,13 +61,13 @@ class CMFCColorPickerCtrl : public CButton
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorPickerCtrl::CMFCColorPickerCtrl](#cmfccolorpickerctrl)|Vytvoří `CMFCColorPickerCtrl` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorPickerCtrl::GetColor](#getcolor)|Zjišťuje barvu, kterou uživatel vybere.|
 |[CMFCColorPickerCtrl::GetHLS](#gethls)|Načte hodnoty hue, světelnost a sytost barev, které uživatel vybere.|
@@ -87,7 +87,7 @@ class CMFCColorPickerCtrl : public CButton
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorPickerCtrl::DrawCursor](#drawcursor)|Volá se rozhraním, než se zobrazí kurzor, který odkazuje na vybraném barevném.|
 

@@ -1,5 +1,5 @@
 ---
-title: Práce s vlákny a zařazování (C + +/ CX)
+title: Práce s vlákny a zařazování (C++/CX)
 ms.date: 12/30/2016
 f1_keywords:
 - C4451
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
 ms.openlocfilehash: c5bce60e564bef490bcfafd6f8559dffe5fd4f1d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404634"
 ---
-# <a name="threading-and-marshaling-ccx"></a>Práce s vlákny a zařazování (C + +/ CX)
+# <a name="threading-and-marshaling-ccx"></a>Práce s vlákny a zařazování (C++/CX)
 
 V převážné většině případů instance tříd modulu Windows Runtime, stejně jako se standardními objekty C++, je přístupný z libovolného vlákna. Tyto třídy jsou označovány jako "agilní". Ale malý počet Windows Runtime třídy, které se dodávají s Windows jsou mimo agilní a musí být využity více jako objekty modelu COM než standardní objektů jazyka C++. Nemusíte být odborníkem na modelu COM použít třídy – agile, ale potřeba vzít v úvahu třídy modelu vláken a její chování zařazování. Tento článek obsahuje základní informace a pokyny pro těchto výjimečných případech, ve kterých je nutné používat instanci-agilní třídy.
 
@@ -97,7 +97,7 @@ V jazyce Visual C++, při vytváření odkazu na třídu prostředí Windows Run
 
 ## <a name="authoring-agile-windows-runtime-components"></a>Vytváření agilních součásti prostředí Windows Runtime
 
-Při definování třídy ref class v jazyce C + +/ CX, je ve výchozím nastavení agilní – to znamená, že má `ThreadingModel`= obě a `MarshallingType`= Agile.  Pokud používáte knihovna šablon C++ Windows Runtime, můžete vytvořit třídu agilní odvozením z `FtmBase`, který používá `FreeThreadedMarshaller`.  Pokud vytváříte třídu, která má `ThreadingModel`= obě nebo `ThreadingModel`= MTA, ujistěte se, že třída je bezpečná pro vlákno.
+Při definování třídy ref class v C++/CX, je ve výchozím nastavení agilní – to znamená, že má `ThreadingModel`= obě a `MarshallingType`= Agile.  Pokud používáte knihovna šablon C++ Windows Runtime, můžete vytvořit třídu agilní odvozením z `FtmBase`, který používá `FreeThreadedMarshaller`.  Pokud vytváříte třídu, která má `ThreadingModel`= obě nebo `ThreadingModel`= MTA, ujistěte se, že třída je bezpečná pro vlákno.
 
 Můžete upravit model vláken a zařazování chování třídy ref class. Pokud provedete změny, které vykreslují třídy bez agile, však musíte znát důsledky, které jsou spojeny s těmito změnami.
 

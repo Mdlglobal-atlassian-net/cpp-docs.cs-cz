@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::strstream [C++], str
 ms.assetid: 63f3be31-9e36-42b1-9715-a474a5997e2a
 ms.openlocfilehash: 9494f7ee2508df1971d56c94b929a7212bedb254
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412290"
 ---
 # <a name="strstream-class"></a>strstream – třída
 
@@ -40,14 +40,14 @@ Objekt ukládá objekt třídy `strstreambuf`.
 
 |Konstruktor|Popis|
 |-|-|
-|[strstream –](#strstream)|Vytvoří objekt typu `strstream`.|
+|[strstream](#strstream)|Vytvoří objekt typu `strstream`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
 |[zablokování](#freeze)|Způsobí, že vyrovnávací paměť datového proudu do nedostupný prostřednictvím operací vyrovnávací paměť datového proudu.|
-|[pcount –](#pcount)|Vrátí počet prvků zapsaných pro řízenou sekvenci.|
+|[pcount](#pcount)|Vrátí počet prvků zapsaných pro řízenou sekvenci.|
 |[rdbuf](#rdbuf)|Vrací ukazatel na datový proud přidružený k tomuto `strstreambuf` objektu.|
 |[str](#str)|Volání [ukotvit](../standard-library/strstreambuf-class.md#freeze)a vrátí ukazatel na začátek řízené sekvence.|
 
@@ -155,7 +155,7 @@ strstream(char* ptr,
 *Počet*<br/>
 Velikost vyrovnávací paměti.
 
-*Reži_m*<br/>
+*_Mode*<br/>
 Režim vstupní a výstupní vyrovnávací paměti. Zobrazit [ios_base::openmode](../standard-library/ios-base-class.md#openmode) Další informace.
 
 *ptr*<br/>
@@ -171,7 +171,7 @@ Obě konstruktory inicializují základní třídy voláním [streambuf](../stan
 
 ## <a name="see-also"></a>Viz také:
 
-[iostream –](../standard-library/istream-typedefs.md#iostream)<br/>
+[iostream](../standard-library/istream-typedefs.md#iostream)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [iostream – programování](../standard-library/iostream-programming.md)<br/>
 [iostreams – konvence](../standard-library/iostreams-conventions.md)<br/>

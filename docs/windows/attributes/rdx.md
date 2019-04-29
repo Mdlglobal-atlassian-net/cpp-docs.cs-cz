@@ -7,11 +7,11 @@ helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
 ms.openlocfilehash: 2790c3de01d21242daee73fc442ad22d88739355
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59023877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407494"
 ---
 # <a name="rdx"></a>rdx
 
@@ -49,7 +49,7 @@ Tento atribut lze použít ve spojení s [coclass](coclass.md), [progid](progid.
 |**Platí pro**|**Třída** nebo **struktura** člena|
 |**Opakovatelné**|Ne|
 |**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádné|
+|**Neplatné atributy**|Žádný|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 

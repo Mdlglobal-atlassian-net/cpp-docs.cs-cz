@@ -7,11 +7,11 @@ helpviewer_keywords:
 - local attribute
 ms.assetid: 35cdd668-bd8e-492a-b7b8-263e7b662437
 ms.openlocfilehash: 678968bb7b0f2e7af94124bea5b0967df27e43f7
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59033066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409223"
 ---
 # <a name="local-c"></a>local (C++)
 
@@ -39,7 +39,7 @@ Zobrazit [call_as](call-as.md) příklad, jak používat **místní**.
 |-|-|
 |**Platí pro**|**rozhraní**, rozhraní – metoda|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**Vyžadované atributy**|Žádný|
 |**Neplatné atributy**|`dispinterface`|
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).

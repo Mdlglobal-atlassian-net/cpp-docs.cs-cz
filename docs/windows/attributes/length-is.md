@@ -7,11 +7,11 @@ helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
 ms.openlocfilehash: 1de168606b57c801bc3dc1fb9aee76eb6f3d54c8
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59039907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409301"
 ---
 # <a name="lengthis"></a>length_is
 
@@ -44,8 +44,8 @@ Zobrazit [first_is –](first-is.md) příklad toho, jak zadat část pole.
 |-|-|
 |**Platí pro**|Pole v **struktura** nebo **sjednocení**, rozhraní parametr, rozhraní – metoda|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
-|**Neplatné atributy**|Žádný|
+|**Vyžadované atributy**|Žádné|
+|**Neplatné atributy**|Žádné|
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 

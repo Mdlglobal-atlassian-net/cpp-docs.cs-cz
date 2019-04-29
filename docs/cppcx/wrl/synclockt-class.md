@@ -18,11 +18,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Details::SyncLockT::Unlock method
 ms.assetid: a967f6f7-3555-43d1-b210-2bb65d63d15e
 ms.openlocfilehash: d27e6ba8601d0e822113bf3a4a65269c89437271
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398157"
 ---
 # <a name="synclockt-class"></a>SyncLockT – třída
 
@@ -50,27 +50,27 @@ Představuje typ, který může trvat exkluzivní nebo sdílené vlastnictví pr
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Name                                      | Popis
+Název                                      | Popis
 ----------------------------------------- | ----------------------------------------------------
 [SyncLockT::SyncLockT](#synclockt)        | Inicializuje novou instanci třídy `SyncLockT` třídy.
 [SyncLockT::~SyncLockT](#tilde-synclockt) | Uvolní instanci `SyncLockT` třídy.
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-Name                               | Popis
+Název                               | Popis
 ---------------------------------- | ----------------------------------------------------
 [SyncLockT::SyncLockT](#synclockt) | Inicializuje novou instanci třídy `SyncLockT` třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Name                             | Popis
+Název                             | Popis
 -------------------------------- | --------------------------------------------------------------------------------------------------------------
 [SyncLockT::IsLocked](#islocked) | Označuje, zda aktuální `SyncLockT` vlastní prostředek objektu; to znamená, `SyncLockT` objekt je *uzamčen*.
 [Synclockt::Unlock –](#unlock)     | Verze ovládacího prvku prostředku držené aktuální `SyncLockT` objektu, pokud existuje.
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-Name                      | Popis
+Název                      | Popis
 ------------------------- | -------------------------------------------------------------------
 [SyncLockT::sync_](#sync) | Obsahuje základní prostředku reprezentovaného `SyncLockT` třídy.
 

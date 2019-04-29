@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ExitInstance method [MFC]
 ms.assetid: 5bb597bd-8dab-4d49-8bcf-9c45aa8be4a2
 ms.openlocfilehash: c76f588b22ad8ffd1d3dae954c5113feffb62a3f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405817"
 ---
 # <a name="exitinstance-member-function"></a>ExitInstance – členská funkce
 
@@ -22,4 +22,4 @@ Přepsat `ExitInstance` potřebujete zpracování zvláštního vyčištění, j
 
 ## <a name="see-also"></a>Viz také:
 
-[CWinApp Třída aplikace](../mfc/cwinapp-the-application-class.md)
+[CWinApp: Třída aplikace](../mfc/cwinapp-the-application-class.md)

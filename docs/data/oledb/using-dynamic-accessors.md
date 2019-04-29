@@ -6,11 +6,11 @@ helpviewer_keywords:
 - dynamic accessors
 ms.assetid: e5d5bfa6-2b1d-49d0-8ced-914666422431
 ms.openlocfilehash: 4539247894c3980464e744c76cea450324372382
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403058"
 ---
 # <a name="using-dynamic-accessors"></a>Použití dynamických přístupových objektů
 
@@ -18,7 +18,7 @@ Dynamické přístupové objekty umožňují přístup ke zdroji dat, když nema
 
 [DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer) příklad ukazuje způsob použití tříd dynamického přístupového objektu získat informace o sloupci a dynamicky se vytvářejí přistupující objekty.
 
-## <a name="using-cdynamicaccessor"></a>CDynamicAccessor – použití
+## <a name="using-cdynamicaccessor"></a>Using CDynamicAccessor
 
 [CDynamicAccessor –](../../data/oledb/cdynamicaccessor-class.md) umožňuje přístup ke zdroji dat, když nemají žádné informace o schématu databáze (základní strukturu vaší databáze). `CDynamicAccessor` metody získat informace o sloupci, jako jsou názvy sloupců, počet a typ dat. Informace o tomto sloupci použijete k vytvoření přistupující objekt dynamicky za běhu. Informace o sloupci je uložená ve vyrovnávací paměti, který je vytvořen a spravován společností tuto třídu. Získání dat z vyrovnávací paměti pomocí [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md) metody.
 
@@ -88,7 +88,7 @@ int main(int argc, char* argv[] )
 }
 ```
 
-## <a name="using-cdynamicstringaccessor"></a>CDynamicStringAccessor – použití
+## <a name="using-cdynamicstringaccessor"></a>Using CDynamicStringAccessor
 
 [CDynamicStringAccessor –](../../data/oledb/cdynamicstringaccessor-class.md) funguje jako [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md), s výjimkou jedním ze způsobů důležité. Zatímco `CDynamicAccessor` vyžádá data v nativním formátu hlášené poskytovatelem, `CDynamicStringAccessor` požadavků, že zprostředkovatel načíst všechna data z úložiště dat jako řetězce data. Proces je zvláště užitečná pro jednoduché úlohy, které nevyžadují výpočet hodnot v úložišti dat, jako je například zobrazení nebo tisk obsah datového úložiště.
 

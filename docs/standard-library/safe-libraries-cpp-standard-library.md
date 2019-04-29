@@ -1,5 +1,5 @@
 ---
-title: 'Bezpečné knihovny: standardní knihovna C++'
+title: 'Bezpečné knihovny: Standardní knihovna C++'
 ms.date: 11/04/2016
 f1_keywords:
 - _SCL_SECURE_NO_DEPRECATE
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
 ms.openlocfilehash: 340d300efb442fedb18b738c275bc0a79f874991
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409730"
 ---
-# <a name="safe-libraries-c-standard-library"></a>Bezpečné knihovny: standardní knihovna C++
+# <a name="safe-libraries-c-standard-library"></a>Bezpečné knihovny: Standardní knihovna C++
 
 Několik vylepšení byly provedeny na knihovny, které se dodávají s jazykem Visual C++, včetně standardní knihovny C++, aby se daly bezpečnější.
 

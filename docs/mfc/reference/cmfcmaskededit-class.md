@@ -25,11 +25,11 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
 ms.openlocfilehash: c1dcf89811fa5225283cb5bec120d3bd2fdfb003
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58773785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410145"
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit Class
 
@@ -45,14 +45,14 @@ class CMFCMaskedEdit : public CEdit
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCMaskedEdit::CMFCMaskedEdit`|Výchozí konstruktor.|
 |`CMFCMaskedEdit::~CMFCMaskedEdit`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCMaskedEdit::DisableMask](#disablemask)|Zakáže ověřování uživatelského vstupu.|
 |[CMFCMaskedEdit::EnableGetMaskedCharsOnly](#enablegetmaskedcharsonly)|Určuje, zda `GetWindowText` metoda načte pouze maskované znaků.|
@@ -66,7 +66,7 @@ class CMFCMaskedEdit : public CEdit
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCMaskedEdit::IsMaskedChar](#ismaskedchar)|Volá se rozhraním pro ověření zadaného znaku podle odpovídajícího znaku masky.|
 

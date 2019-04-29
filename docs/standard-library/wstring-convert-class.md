@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::wstring_convert [C++], state
 ms.assetid: e34f5b65-d572-4bdc-ac69-20778712e376
 ms.openlocfilehash: df3b003289dcd86e8033521d8cb0cacdbb7dfbd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410795"
 ---
 # <a name="wstringconvert-class"></a>wstring_convert – třída
 
@@ -42,7 +42,7 @@ class wstring_convert
 
 ### <a name="parameters"></a>Parametry
 
-*codecvt –*<br/>
+*Codecvt*<br/>
 [Národní prostředí](../standard-library/locale-class.md) omezující vlastnost, která představuje objekt převodu.
 
 *Elem*<br/>
@@ -83,10 +83,10 @@ Ukládá se objekt této třídy šablony:
 
 |Členská funkce|Popis|
 |-|-|
-|[from_bytes –](#from_bytes)|Převede řetězec bajtů na široký řetězec.|
-|[to_bytes –](#to_bytes)|Převede širokého řetězce na řetězec bajtů.|
+|[from_bytes](#from_bytes)|Převede řetězec bajtů na široký řetězec.|
+|[to_bytes](#to_bytes)|Převede širokého řetězce na řetězec bajtů.|
 |[převést](#converted)|Vrátí počet úspěšných převody.|
-|[Stav](#state)|Vrátí objekt představující stav převodu.|
+|[state](#state)|Vrátí objekt představující stav převodu.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -139,9 +139,9 @@ wide_string from_bytes(const char* first, const char* last);
 |---------------|-----------------|
 |*Bajtů*|Sekvence bajtů jedním prvkem, který má být převeden.|
 |*ptr*|Stylu C zakončený hodnotou null posloupnost znaků, které mají být převedeny.|
-|*BSTR*|[Byte_string](#byte_string) má být převeden.|
+|*Bstr*|[Byte_string](#byte_string) má být převeden.|
 |*první*|První znak v rozsahu znaků, které mají být převedeny.|
-|*poslední*|Poslední znak v rozsahu znaků, které mají být převedeny.|
+|*last*|Poslední znak v rozsahu znaků, které mají být převedeny.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -210,7 +210,7 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 |*Wptr*|Stylu C zakončený hodnotou null pořadí, počínaje `wptr`, má být převeden.|
 |*WSTR.*|[Wide_string](#wide_string) má být převeden.|
 |*první*|První prvek v rozsahu prvků, které mají být převedeny.|
-|*poslední*|Po posledním prvku v rozsahu prvků, které má být převeden.|
+|*last*|Po posledním prvku v rozsahu prvků, které má být převeden.|
 
 ### <a name="remarks"></a>Poznámky
 

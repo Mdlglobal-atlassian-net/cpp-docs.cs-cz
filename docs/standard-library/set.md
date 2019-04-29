@@ -7,11 +7,11 @@ helpviewer_keywords:
 - set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
 ms.openlocfilehash: 633571f00cfe761b687e9b76624029f57ab6043e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412576"
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 
@@ -40,7 +40,7 @@ Definuje kontejner šablony třídy sady a multiset a jejich podpůrných šablo
 
 |Nastavit verzi|Multiset – verze|Popis|
 |-----------------|----------------------|-----------------|
-|[Prohození](../standard-library/set-functions.md#swap)|[swap (multiset)](../standard-library/set-functions.md#swap_multiset)|Vymění prvky dvou sad nebo multisets.|
+|[swap](../standard-library/set-functions.md#swap)|[swap (multiset)](../standard-library/set-functions.md#swap_multiset)|Vymění prvky dvou sad nebo multisets.|
 
 ### <a name="classes"></a>Třídy
 

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::basic_ofstream [C++], swap
 ms.assetid: 3bcc9c51-6dfc-4844-8fcc-22ef57c9dff1
 ms.openlocfilehash: 9a8255a02c46a4ade33bd95635516e5d36fe8e64
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409795"
 ---
 # <a name="basicofstream-class"></a>basic_ofstream – třída
 
@@ -84,7 +84,7 @@ int main(int argc, char **argv)
 |[is_open](#is_open)|Určuje, zda je soubor otevřený.|
 |[open](#open)|Otevře se soubor.|
 |[rdbuf](#rdbuf)|Vrátí adresu uloženou datový proud vyrovnávací paměti.|
-|[Prohození](#swap)|Zamění obsah proměnných to `basic_ofstream` pro obsah ze zadaných `basic_ofstream`.|
+|[swap](#swap)|Zamění obsah proměnných to `basic_ofstream` pro obsah ze zadaných `basic_ofstream`.|
 
 ### <a name="operators"></a>Operátory
 
@@ -124,7 +124,7 @@ basic_ofstream(
 *Náze_v souboru*<br/>
 Název souboru, který se otevře.
 
-*Reži_m*<br/>
+*_Mode*<br/>
 Jeden z výčtů ve [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*<br/>
@@ -246,7 +246,7 @@ void open(
 *Náze_v souboru*<br/>
 Název souboru, který se otevře.
 
-*Reži_m*<br/>
+*_Mode*<br/>
 Jeden z výčtů ve [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*<br/>

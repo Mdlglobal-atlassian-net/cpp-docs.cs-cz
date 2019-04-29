@@ -11,11 +11,11 @@ helpviewer_keywords:
 - std::insert_iterator [C++], reference
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
 ms.openlocfilehash: fb18c67b6e7949486c33e95c7daf6bc6868d0baa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404883"
 ---
 # <a name="insertiterator-class"></a>insert_iterator – třída
 
@@ -429,6 +429,6 @@ The first element in the list L is: 10.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<iterátor >](../standard-library/iterator.md)<br/>
+[\<iterator>](../standard-library/iterator.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

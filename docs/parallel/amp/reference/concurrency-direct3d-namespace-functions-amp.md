@@ -22,11 +22,11 @@ f1_keywords:
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
 ms.openlocfilehash: 0a2977faf094aafb6290063e39e062ffaeaaec81
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405583"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Funkce oboru názvů Concurrency::Direct3D (AMP)
 
@@ -156,7 +156,7 @@ Modul runtime C++ AMP poskytuje podrobné informace o chybě v režimu ladění 
 
 ##  <a name="d3d_access_lock"></a>  d3d_access_lock
 
-Získejte zámek na accelerator_view pro účely bezpečného provádění operací D3D na prostředcích sdílených s accelerator_view. Prostředky accelerator_view a všechny prostředky C++ AMP, vnitřně přidružené s tímto prostředkem accelerator_view přijmou toto uzamčení při provádění operací a budou blokovat, zatímco jiné vlákno drží zámek přístupu D3D. Tento zámek je nerekurzivní: Voláním této funkce z vlákna již obsahujícího zámek vyvolá nedefinované chování je. To je nedefinované chování k provádění operací na objektu accelerator_view nebo jakémkoli kontejneru dat spojeném s objektem accelerator_view z vlákna, které drží zámek přístupu D3D. Další informace naleznete v tématu scoped_d3d_access_lock, třídě stylu RAII pro obor zámku přístupu D3D.
+Získejte zámek na accelerator_view pro účely bezpečného provádění operací D3D na prostředcích sdílených s accelerator_view. Prostředky accelerator_view a všechny C++ AMP prostředky interně spojené s tímto prostředkem accelerator_view přijmou toto uzamčení při provádění operací a budou blokovat, zatímco jiné vlákno drží zámek přístupu D3D. Tento zámek je nerekurzivní: Voláním této funkce z vlákna již obsahujícího zámek vyvolá nedefinované chování je. To je nedefinované chování k provádění operací na objektu accelerator_view nebo jakémkoli kontejneru dat spojeném s objektem accelerator_view z vlákna, které drží zámek přístupu D3D. Další informace naleznete v tématu scoped_d3d_access_lock, třídě stylu RAII pro obor zámku přístupu D3D.
 
 ```
 void __cdecl d3d_access_lock(accelerator_view& _Av);

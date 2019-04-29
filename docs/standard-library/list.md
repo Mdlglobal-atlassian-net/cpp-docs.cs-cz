@@ -8,11 +8,11 @@ helpviewer_keywords:
 - list header
 ms.assetid: 2345823b-5612-44d8-95d3-aa96ed076d17
 ms.openlocfilehash: cfe6e8b4f75a3dbf824574654bfba83dcbbd8ba6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413200"
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
 
@@ -32,7 +32,7 @@ Definuje kontejner šablony třídy seznamu a několik podpůrných šablon.
 |[Operator <](../standard-library/list-operators.md#op_lt)|Testuje, zda je objekt seznamu na levé straně operátoru menší než objekt seznamu na pravé straně.|
 |[– Operátor\<=](../standard-library/list-operators.md#op_gt_eq)|Testuje, zda je objekt v seznamu na levé straně operátoru je menší než nebo roven objektu seznamu na pravé straně.|
 |[operator==](../standard-library/list-operators.md#op_eq_eq)|Testuje, zda je objekt seznamu na levé straně operátoru roven objektu seznamu na pravé straně.|
-|[Operator >](../standard-library/list-operators.md#op_gt)|Testuje, zda je objekt seznamu na levé straně operátoru větší než objekt seznamu na pravé straně.|
+|[operator>](../standard-library/list-operators.md#op_gt)|Testuje, zda je objekt seznamu na levé straně operátoru větší než objekt seznamu na pravé straně.|
 |[operator>=](../standard-library/list-operators.md#op_gt_eq)|Testuje, zda je objekt seznamu na levé straně operátoru větší než nebo roven objektu seznamu na pravé straně.|
 
 ### <a name="classes"></a>Třídy

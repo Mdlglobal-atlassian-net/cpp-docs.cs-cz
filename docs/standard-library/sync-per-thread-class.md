@@ -13,11 +13,11 @@ helpviewer_keywords:
 - stdext::sync_per_thread [C++], equals
 ms.assetid: 47bf75f8-5b02-4760-b1d3-3099d08fe14c
 ms.openlocfilehash: 3cb1946ee68642065488cfd13c146abab818ec60
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412316"
 ---
 # <a name="syncperthread-class"></a>sync_per_thread – třída
 
@@ -91,7 +91,7 @@ void deallocate(void* ptr, std::size_t count);
 
 Volání členských funkcí `deallocate` na objekt mezipaměti patřících k tomuto vláknu. Pokud byl přidělen žádný objekt mezipaměti pro aktuální vlákno, nejprve přiděluje jeden.
 
-## <a name="equals"></a>  sync_per_thread::Equals
+## <a name="equals"></a>  sync_per_thread::equals
 
 Porovná rovnost dvou mezipamětí.
 
@@ -114,4 +114,4 @@ bool equals(const sync<Cache>& Other) const;
 
 ## <a name="see-also"></a>Viz také:
 
-[\<alokátory: >](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)<br/>

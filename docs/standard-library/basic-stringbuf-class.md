@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
 ms.openlocfilehash: 1ed9deee46f7c99750ee3260a6b2a8de1f0f3397
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409756"
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf – třída
 
@@ -91,13 +91,13 @@ Objekt basic_stringbuf – třída < `Elem`, `Tr`, `Alloc`> ukládá kopie `ios_
 
 |Členská funkce|Popis|
 |-|-|
-|[přetečení](#overflow)|Chráněná, virtuální funkce, která může být volána při vložení nového znaku do plné vyrovnávací paměti.|
-|[pbackfail –](#pbackfail)|Funkce chráněná virtuální členská se pokusí vrátit elementu do vstupní vyrovnávací paměť, pak díky aktuálního elementu (ukazuje další ukazatel).|
-|[seekoff –](#seekoff)|Chráněná virtuální členská funkce se pokusí změnit aktuální pozice řízené datových proudů.|
-|[seekpos –](#seekpos)|Chráněná virtuální členská funkce se pokusí změnit aktuální pozice řízené datových proudů.|
+|[overflow](#overflow)|Chráněná, virtuální funkce, která může být volána při vložení nového znaku do plné vyrovnávací paměti.|
+|[pbackfail](#pbackfail)|Funkce chráněná virtuální členská se pokusí vrátit elementu do vstupní vyrovnávací paměť, pak díky aktuálního elementu (ukazuje další ukazatel).|
+|[seekoff](#seekoff)|Chráněná virtuální členská funkce se pokusí změnit aktuální pozice řízené datových proudů.|
+|[seekpos](#seekpos)|Chráněná virtuální členská funkce se pokusí změnit aktuální pozice řízené datových proudů.|
 |[str](#str)|Nastaví nebo získá text ve vyrovnávací paměti řetězce beze změny pozici zápisu.|
 |swap||
-|[podtečení](#underflow)|Chráněná virtuální členská funkce se extrahovat aktuálního elementu ze vstupního datového proudu.|
+|[underflow](#underflow)|Chráněná virtuální členská funkce se extrahovat aktuálního elementu ze vstupního datového proudu.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -128,7 +128,7 @@ basic_stringbuf(
 
 ### <a name="parameters"></a>Parametry
 
-*Reži_m*<br/>
+*_Mode*<br/>
 Jeden z výčtů ve [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *str*<br/>
@@ -164,7 +164,7 @@ Vytvoří tento typ v rámci oboru basic_filebuf – od ekvivalentem typu se ste
 typedef typename traits_type::off_type off_type;
 ```
 
-## <a name="overflow"></a>  basic_stringbuf::Overflow
+## <a name="overflow"></a>  basic_stringbuf::overflow
 
 Chráněné virtuální funkce, která může být volána při vložení nového znaku do plné vyrovnávací paměti.
 
@@ -241,7 +241,7 @@ Pozice hledání pro relativně *_Way*. Další informace najdete v tématu [bas
 *_Way*<br/>
 Výchozí bod pro operace. Zobrazit [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) možných hodnot.
 
-*Reži_m*<br/>
+*_Mode*<br/>
 Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic. Další informace najdete v tématu [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -277,7 +277,7 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
 *_Sp*<br/>
 Pozice k vyhledání pro.
 
-*Reži_m*<br/>
+*_Mode*<br/>
 Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -396,7 +396,7 @@ Basic_stringbuf – jehož obsah se Prohodit s této basic_stringbuf –.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="op_eq"></a>  basic_stringbuf::Operator =
+## <a name="op_eq"></a>  basic_stringbuf::operator=
 
 Přiřadí obsah basic_stringbuf – na pravé straně operátoru basic_stringbuf – na levé straně.
 

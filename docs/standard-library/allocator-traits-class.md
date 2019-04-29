@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
 ms.openlocfilehash: 66c8c998a91ddd3e6550b57415a513fae55856da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410966"
 ---
 # <a name="allocatortraits-class"></a>allocator_traits – třída
 
@@ -81,9 +81,9 @@ Následující statické metody odpovídající metodu volat parametr daného al
 |Název|Popis|
 |----------|-----------------|
 |[allocate](#allocate)|Statická metoda, která přiděluje paměť pomocí parametru dané alokátoru.|
-|[Konstrukce](#construct)|Statická metoda, která používá alokátorem určeným pro vytvoření objektu.|
+|[construct](#construct)|Statická metoda, která používá alokátorem určeným pro vytvoření objektu.|
 |[zrušit přidělení](#deallocate)|Statická metoda, která používá alokátorem určeným se uvolnit zadaný počet objektů.|
-|[zrušení](#destroy)|Statická metoda, která používá alokátorem určeným pro volání destruktoru objektu bez rušení přidělení paměti.|
+|[destroy](#destroy)|Statická metoda, která používá alokátorem určeným pro volání destruktoru objektu bez rušení přidělení paměti.|
 |[max_size](#max_size)|Statická metoda, která používá alokátorem určeným pro určení maximální počet objektů, které mohou být přiděleny.|
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|Statická metoda, která volá `select_on_container_copy_construction` na zadaného alokátoru.|
 
@@ -235,6 +235,6 @@ Tato metoda se používá k určení přidělování při přiřazeným kontejne
 
 ## <a name="see-also"></a>Viz také:
 
-[\<paměť >](../standard-library/memory.md)<br/>
+[\<memory>](../standard-library/memory.md)<br/>
 [pointer_traits – struktura](../standard-library/pointer-traits-struct.md)<br/>
 [scoped_allocator_adaptor – třída](../standard-library/scoped-allocator-adaptor-class.md)<br/>

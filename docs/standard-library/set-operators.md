@@ -1,6 +1,6 @@
 ---
 title: '&lt;Nastavte&gt; operátory'
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - set/std::operator!=
 - set/std::operator&gt;
@@ -16,19 +16,19 @@ helpviewer_keywords:
 - std::operator&lt; (set)
 - std::operator&lt;= (set)
 - std::operator== (set)
-ms.openlocfilehash: f6354da2a7b4cf6419be4aae1a8d5f20356a4012
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16308623a845fdbf804f4e72f2159bc2a2dbc76b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412589"
 ---
 # <a name="ltsetgt-operators"></a>&lt;Nastavte&gt; operátory
 
 ||||
 |-|-|-|
-|[Operator! = (set)](#op_neq)|[operátor&gt; (set)](#op_gt)|[operátor&gt;= (set)](#eq)|
-|[operátor&lt; (set)](#op_lt)|[operátor&lt;= (set)](#eq)|[Operator == (set)](#op_eq_eq)|
+|[Operator! = (set)](#op_neq)|[operátor&gt; (set)](#op_gt)|[operátor&gt;= (set)](#op_gt_eq)|
+|[operátor&lt; (set)](#op_lt)|[operátor&lt;= (set)](#op_lt_eq)|[Operator == (set)](#op_eq_eq)|
 |[Operator! = (multiset)](#op_neq_multiset)|[operátor&gt; (multiset)](#op_gt_multiset)|[operátor&gt;= (multiset)](#op_gt_eq_multiset)|
 |[operátor&lt; (multiset)](#op_lt_multiset)|[operátor&lt;= (multiset)](#op_lt_eq_multiset)|[operator== (multiset)](#op_eq_eq_multiset)|
 

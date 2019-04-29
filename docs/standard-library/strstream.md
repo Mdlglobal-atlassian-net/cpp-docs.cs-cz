@@ -1,5 +1,5 @@
 ---
-title: '&lt;strstream –&gt;'
+title: '&lt;strstream&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <strstream>
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - strstream header
 ms.assetid: eaa9d0d4-d217-4f28-8a68-9b9ad7b1c0f5
 ms.openlocfilehash: 72b96c300aba1729823462ce6671e2f9a5285761
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412264"
 ---
-# <a name="ltstrstreamgt"></a>&lt;strstream –&gt;
+# <a name="ltstrstreamgt"></a>&lt;strstream&gt;
 
 Definuje několik tříd, které podporují operace iostreams na pořadí, které jsou uložené v přidělené pole **char** objektu. Tato sekvence jsou snadno převést do a z řetězců C.
 
@@ -41,7 +41,7 @@ Objekty typu `strstream` fungují s `char` *, které jsou C řetězce. Použití
 
 ## <a name="see-also"></a>Viz také:
 
-[\<strstream – >](../standard-library/strstream.md)<br/>
+[\<strstream>](../standard-library/strstream.md)<br/>
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [iostream – programování](../standard-library/iostream-programming.md)<br/>

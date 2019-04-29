@@ -10,11 +10,11 @@ helpviewer_keywords:
 - OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
 ms.openlocfilehash: 98bd58745e56a62bf5700e9b5fe4963a7b584953
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58766797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405921"
 ---
 # <a name="drag-and-drop-ole"></a>Přetažení (OLE)
 
@@ -32,7 +32,7 @@ Pokud jste čtení [datové objekty a zdroje dat (OLE)](../mfc/data-objects-and-
 
 Další informace o přetahování naleznete v tématu:
 
-- [Přetažení: Implementace zdroje přemístění](../mfc/drag-and-drop-implementing-a-drop-source.md)
+- [Přetažení: Implementace zdroje přetažení](../mfc/drag-and-drop-implementing-a-drop-source.md)
 
 - [Přetažení: Implementace cíle přetažení](../mfc/drag-and-drop-implementing-a-drop-target.md)
 

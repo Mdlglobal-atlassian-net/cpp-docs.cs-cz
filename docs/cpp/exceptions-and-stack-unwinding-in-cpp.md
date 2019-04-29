@@ -3,11 +3,11 @@ title: Výjimky a unwinding zásobníku v jazyce C++
 ms.date: 11/04/2016
 ms.assetid: a1a57eae-5fc5-4c49-824f-3ce2eb8129ed
 ms.openlocfilehash: 5e094101557469a189311ce2c5344bb895696649
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398885"
 ---
 # <a name="exceptions-and-stack-unwinding-in-c"></a>Výjimky a unwinding zásobníku v jazyce C++
 
@@ -25,7 +25,7 @@ V mechanismu výjimek jazyka C++ přesune ovládací prvek příkaz throw na prv
 
 ## <a name="stack-unwinding-example"></a>Příklad odvíjení zásobníku
 
-Následující příklad ukazuje odvíjení zásobníku po vyvolání výjimky. Spuštění ve vlákně přejde z příkazu throw v `C` k příkazu catch v `main` a odvine každou funkci, na kterou narazí. Všimněte si pořadí, v jakém jsou objekty `Dummy` vytvářeny a následně zničeny při mizení z rozsahu. Všimněte si také, že žádná funkce není dokončena, s výjimkou funkce `main`, která obsahuje příkaz catch. Funkce `A` se nikdy nevrátí ze svého volání `B()` a `B` se nikdy vrátí ze svého volání `C()`. Po odstranění komentářů řádku definice ukazatele `Dummy` a odpovídajícího příkazu odstranění a po následném spuštění programu si všimněte, že ukazatel není nikdy odstraněn. To ukazuje, co se může stát, když funkce neposkytují záruku výjimky. Další informace naleznete v tématu Postup: Návrh výjimek. Zakomentováním příkazu catch lze sledovat, co se stane, když program skončí kvůli neošetřené výjimce.
+Následující příklad ukazuje odvíjení zásobníku po vyvolání výjimky. Spuštění ve vlákně přejde z příkazu throw v `C` k příkazu catch v `main` a odvine každou funkci, na kterou narazí. Všimněte si pořadí, v jakém jsou objekty `Dummy` vytvářeny a následně zničeny při mizení z rozsahu. Všimněte si také, že žádná funkce není dokončena, s výjimkou funkce `main`, která obsahuje příkaz catch. Funkce `A` se nikdy nevrátí ze svého volání `B()` a `B` se nikdy vrátí ze svého volání `C()`. Po odstranění komentářů řádku definice ukazatele `Dummy` a odpovídajícího příkazu odstranění a po následném spuštění programu si všimněte, že ukazatel není nikdy odstraněn. To ukazuje, co se může stát, když funkce neposkytují záruku výjimky. Další informace najdete v tématu Postupy: Návrh výjimek. Zakomentováním příkazu catch lze sledovat, co se stane, když program skončí kvůli neošetřené výjimce.
 
 ```cpp
 #include <string>

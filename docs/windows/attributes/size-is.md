@@ -7,11 +7,11 @@ helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
 ms.openlocfilehash: a7b990a708bafba78c9dc4153315f8b7b20351ba
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59033226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407325"
 ---
 # <a name="sizeis"></a>size_is
 
@@ -44,7 +44,7 @@ Podívejte se na příklad pro [first_is –](first-is.md) ukázku toho, jak zad
 |-|-|
 |**Platí pro**|Pole v **struktura** nebo **sjednocení**, rozhraní parametr, rozhraní – metoda|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**Vyžadované atributy**|Žádný|
 |**Neplatné atributy**|`max_is`|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).

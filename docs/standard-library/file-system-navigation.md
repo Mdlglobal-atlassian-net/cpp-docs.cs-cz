@@ -3,15 +3,15 @@ title: Navigace v systému souborů
 ms.date: 11/04/2016
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
 ms.openlocfilehash: cfdc789daab5b476566f2072109d23fb9310094f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405193"
 ---
 # <a name="file-system-navigation"></a>Navigace v systému souborů
 
-\<Systému souborů > záhlaví implementuje 18822:2015 C++ souboru systému technické specifikace ISO/IEC TS (konečný návrh: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) a má typy a funkce, které umožňují zapisovat nezávislá na platformě kód pro navigaci v systému souborů. Protože je multiplatformní, obsahuje rozhraní API, která nejsou relevantní pro systémy Windows. Například to znamená, že `is_fifo(const path&)` vždy vrátí **false** na Windows.
+\<Filesystem > záhlaví implementuje C++ 18822:2015 souboru systému technické specifikace ISO/IEC TS (konečný návrh: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) a má typy a funkce, které umožňují také napsat kód nezávislý na platformě pro navigaci v systému souborů. Protože je multiplatformní, obsahuje rozhraní API, která nejsou relevantní pro systémy Windows. Například to znamená, že `is_fifo(const path&)` vždy vrátí **false** na Windows.
 
 ## <a name="overview"></a>Přehled
 

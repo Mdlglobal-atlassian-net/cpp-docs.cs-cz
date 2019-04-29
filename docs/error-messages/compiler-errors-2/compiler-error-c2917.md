@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru C2917
+title: Compiler Error C2917
 ms.date: 11/04/2016
 f1_keywords:
 - C2917
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C2917
 ms.assetid: ec9da9ee-0f37-47b3-87dd-19ef5a14dc4c
 ms.openlocfilehash: 6926d96eccadacd427cc4d13b93db494809c3775
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406779"
 ---
-# <a name="compiler-error-c2917"></a>Chyba kompilátoru C2917
+# <a name="compiler-error-c2917"></a>Compiler Error C2917
 
 "name": Neplatné zadání template-parameter
 

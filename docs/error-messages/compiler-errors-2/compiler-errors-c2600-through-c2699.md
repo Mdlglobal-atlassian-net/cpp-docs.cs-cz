@@ -1,6 +1,6 @@
 ---
 title: Chyby kompilátoru C2600 až C2699
-ms.date: 11/17/2017
+ms.date: 04/21/2019
 f1_keywords:
 - C2604
 - C2606
@@ -52,12 +52,12 @@ helpviewer_keywords:
 - C2686
 - C2697
 ms.assetid: 73c6319f-cbea-4a2f-913b-90dc1af61f64
-ms.openlocfilehash: af173a04f9ae1e8a3ec4c9b3c869a4e51867cf1b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 9ac5f5724490574aecf0e5b542f6fdd42b0ae5bb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406506"
 ---
 # <a name="compiler-errors-c2600-through-c2699"></a>Chyby kompilátoru C2600 až C2699
 
@@ -72,35 +72,35 @@ ms.locfileid: "50518648"
 |[Chyba kompilátoru C2600](compiler-error-c2600.md)|"*funkce*': nelze definovat kompilátorem generované zvláštní členské funkce (nejprve musí být deklarován ve třídě)|
 |[Chyba kompilátoru C2601](compiler-error-c2601.md)|"*funkce*': definice lokální funkce jsou neplatné|
 |[Chyba kompilátoru C2602](compiler-error-c2602.md)|"*třídy*::*identifikátor*"není členem základní třídy"*třídy*.|
-|[Chyba kompilátoru C2603](compiler-error-c2603.md)|"*funkce*': příliš mnoho statických objektů oboru bloku s konstruktory/destruktory ve funkci|
-|C2604 chyby kompilátoru|"*identifikátor*': nelze implementovat více než jednu metodu rozhraní|
+|[Chyba kompilátoru C2603](compiler-error-c2603.md)|"*funkce*": Příliš mnoho statických objektů oboru bloku s konstruktory/destruktory ve funkci|
+|Chyba kompilátoru C2604|"*identifikátor*": Nejde implementovat víc než jednu metodu rozhraní|
 |[Chyba kompilátoru C2605](compiler-error-c2605.md)|"*identifikátor*': Tato metoda je vyhrazená v rámci třídy spravované/WinRT|
-|C2606 chyby kompilátoru|"*class1*': nejde znova implementovat '*člen*", protože je zděděno z modulu runtime základní"*class2*"|
-|C2607 chyby kompilátoru|Chyba statického kontrolního výrazu|
-|C2608 chyby kompilátoru|Zastaralé.|
-|C2609 chyby kompilátoru|Zastaralé.|
-|C2610 chyby kompilátoru|"*třídy*::*člen*': není speciální členská funkce, která by se dala|
+|Chyba kompilátoru C2606|"*class1*': nejde znova implementovat '*člen*", protože je zděděno z modulu runtime základní"*class2*"|
+|Chyba kompilátoru C2607|Chyba statického kontrolního výrazu|
+|Chyba kompilátoru C2608|Zastaralé.|
+|Chyba kompilátoru C2609|Zastaralé.|
+|Chyba kompilátoru C2610|"*třídy*::*člen*': není speciální členská funkce, která by se dala|
 |[Chyba kompilátoru C2611](compiler-error-c2611.md)|"*token*': neplatný následující ' ~" (očekával se identifikátor)|
 |[Chyba kompilátoru C2612](compiler-error-c2612.md)|na konci "*znak*" neplatné v seznamu inicializátorů base/member|
 |[Chyba kompilátoru C2613](compiler-error-c2613.md)|na konci "*znak*" neplatné v seznamu základních tříd|
 |[Chyba kompilátoru C2614](compiler-error-c2614.md)|"*třídy*': Neplatná inicializace členu:"*identifikátor*"není základní nebo členský|
-|C2615 chyby kompilátoru|Zastaralé.|
+|Chyba kompilátoru C2615|Zastaralé.|
 |[Chyba kompilátoru C2616](compiler-error-c2616.md)|"*převod*': nelze implicitně převést na jiné hodnoty lvalue"*type1*"k"*type2*", který není const|
 |[Chyba kompilátoru C2617](compiler-error-c2617.md)|"*funkce*': nekonzistentní návratový příkaz.|
-|C2618 chyby kompilátoru|Zastaralé.|
+|Chyba kompilátoru C2618|Zastaralé.|
 |[Chyba kompilátoru C2619](compiler-error-c2619.md)|"*identifikátor*': Statický datový člen není povolený v anonymní struktuře/sjednocení|
-|C2620 chyby kompilátoru|Zastaralé.|
-|C2621 chyby kompilátoru|Zastaralé.|
-|C2622 chyby kompilátoru|Zastaralé.|
-|C2623 chyby kompilátoru|Zastaralé.|
+|Chyba kompilátoru C2620|Zastaralé.|
+|Chyba kompilátoru C2621|Zastaralé.|
+|Chyba kompilátoru C2622|Zastaralé.|
+|Chyba kompilátoru C2623|Zastaralé.|
 |[Chyba kompilátoru C2624](compiler-error-c2624.md)|"*oboru*::*typ*': lokální třídy nejde používat pro deklarování proměnných"extern"|
-|C2625 chyby kompilátoru|"*identifikátor*': Neplatný člen sjednocení; typ"*typ*"je odkazový typ.|
+|Chyba kompilátoru C2625|"*identifikátor*': Neplatný člen sjednocení; typ"*typ*"je odkazový typ.|
 |[Chyba kompilátoru C2626](compiler-error-c2626.md)|"*identifikátor*': private nebo protected. datový člen není povolený v anonymní struktuře/sjednocení|
 |[Chyba kompilátoru C2627](compiler-error-c2627.md)|"*funkce*': členská funkce není v anonymním sjednocení povolená.|
 |[Chyba kompilátoru C2628](compiler-error-c2628.md)|"*type1*"následované"*type2*" je neplatné. (Nezapomněli jste středník (;)?)|
-|C2629 chyby kompilátoru|"*identifikátor*': anonymní struktuře/sjednocení nejde deklarovat vnořený typ.|
+|Chyba kompilátoru C2629|"*identifikátor*': anonymní struktuře/sjednocení nejde deklarovat vnořený typ.|
 |[Chyba kompilátoru C2630](compiler-error-c2630.md)|"*symbol*" v co by měl být seznam oddělený čárkami|
-|C2631 chyby kompilátoru|"*identifikátor*': třída nebo výčet se nedá definovat v šabloně aliasů|
+|Chyba kompilátoru C2631|"*identifikátor*': třída nebo výčet se nedá definovat v šabloně aliasů|
 |[Chyba kompilátoru C2632](compiler-error-c2632.md)|"*type1*"následované"*type2*" je neplatné.|
 |[Chyba kompilátoru C2633](compiler-error-c2633.md)|"*identifikátor*": "vložené" je jedinou platnou třídou úložiště pro konstruktory|
 |[Chyba kompilátoru C2634](compiler-error-c2634.md)|"*třídy*::*člen*': ukazatel na odkazový člen je neplatný|
@@ -108,12 +108,12 @@ ms.locfileid: "50518648"
 |[Chyba kompilátoru C2636](compiler-error-c2636.md)|"*identifikátor*': ukazatel na odkazový člen je neplatný|
 |[Chyba kompilátoru C2637](compiler-error-c2637.md)|"*identifikátor*': nejdou upravovat ukazatele na datové členy|
 |[Chyba kompilátoru C2638](compiler-error-c2638.md)|"*identifikátor*': ukazatel na ukazatel na člena je neplatný modifikátor __based|
-|C2639 chyby kompilátoru|Zastaralé.|
+|Chyba kompilátoru C2639|Zastaralé.|
 |[Chyba kompilátoru C2640](compiler-error-c2640.md)|"*identifikátor*': pro odkaz neplatný modifikátor __based|
-|C2641 chyby kompilátoru|Zastaralé.|
-|C2642 chyby kompilátoru|Zastaralé.|
-|C2643 chyby kompilátoru|Zastaralé.|
-|C2644 chyby kompilátoru|Zastaralé.|
+|Chyba kompilátoru C2641|Zastaralé.|
+|Chyba kompilátoru C2642|Zastaralé.|
+|Chyba kompilátoru C2643|Zastaralé.|
+|Chyba kompilátoru C2644|Zastaralé.|
 |[Chyba kompilátoru C2645](compiler-error-c2645.md)|neexistuje kvalifikovaný název pro ukazatel na člen (nalezen ':: *')|
 |[Chyba kompilátoru C2646](compiler-error-c2646.md)|anonymní struktuře/sjednocení globální nebo obor názvů musí být deklarované jako statické.|
 |[Chyba kompilátoru C2647](compiler-error-c2647.md)|"*– operátor*': Nelze přistoupit přes ukazatel"*type1*"na"*type2*"|
@@ -153,9 +153,9 @@ ms.locfileid: "50518648"
 |[Chyba kompilátoru C2681](compiler-error-c2681.md)|"*typ*': Neplatný typ výrazu pro *přetypování*|
 |[Chyba kompilátoru C2682](compiler-error-c2682.md)|nelze použít '*přetypování*"pro převod z'*type1*"do"*type2*.|
 |[Chyba kompilátoru C2683](compiler-error-c2683.md)|"*přetypování*": "*typ*" není polymorfní typ|
-|C2684 chyby kompilátoru|"*deklarátor*': odstraněné a výchozí funkce nejsou podporované v třídách spravované/WinRT|
-|C2685 chyby kompilátoru|"*deklarátor*': odstraněné a výchozí funkce nejsou podporované s explicitními specifikátory omezení|
-|C2686 chyby kompilátoru|nejde přetížit statické a nestatické členské funkce se stejnými typy parametrů|
+|Chyba kompilátoru C2684|"*deklarátor*': odstraněné a výchozí funkce nejsou podporované v třídách spravované/WinRT|
+|Chyba kompilátoru C2685|"*deklarátor*': odstraněné a výchozí funkce nejsou podporované s explicitními specifikátory omezení|
+|Chyba kompilátoru C2686|nejde přetížit statické a nestatické členské funkce se stejnými typy parametrů|
 |[Chyba kompilátoru C2687](compiler-error-c2687.md)|"*typ*': deklarace výjimky nemůže být void' nebo označení neúplný typ nebo ukazatel nebo odkaz na neúplný typ.|
 |[Chyba kompilátoru C2688](compiler-error-c2688.md)|"*typ*::*člen*': kovariant se vrací s několika nebo virtual, což není podporované funkcemi varargs|
 |[Chyba kompilátoru C2689](compiler-error-c2689.md)|"*funkce*': funkce friend nemůže být definovaná v rámci lokální třídy|
@@ -166,5 +166,10 @@ ms.locfileid: "50518648"
 |[Chyba kompilátoru C2694](compiler-error-c2694.md)|"*override_function*': přepisující virtuální funkce má míň omezující specifikaci výjimky než virtuální členskou funkci základní třídy"*base_function*.|
 |[Chyba kompilátoru C2695](compiler-error-c2695.md)|"*override_function*': přepisující virtuální funkce se liší od"*base_function*"pouze podle konvence volání|
 |[Chyba kompilátoru C2696](compiler-error-c2696.md)|Nelze vytvořit dočasný objekt typu spravované/WinRT "*typ*.|
-|C2697 chyby kompilátoru|Zastaralé.|
+|Chyba kompilátoru C2697|Zastaralé.|
 |[Chyba kompilátoru C2698](compiler-error-c2698.md)|deklarace using pro '*declaration1*'nemůže společně existovat s existující deklarace using pro'*declaration2*.|
+
+## <a name="see-also"></a>Viz také:
+
+[C /C++ nástroje chyby a upozornění kompilátoru a sestavení](../compiler-errors-1/c-cpp-build-errors.md) \
+[Chyby kompilátoru C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

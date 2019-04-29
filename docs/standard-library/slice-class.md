@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
 ms.openlocfilehash: f2c054626b36083d67f9dbc4c87cf6283c12f001
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412524"
 ---
 # <a name="slice-class"></a>slice – třída
 
@@ -48,8 +48,8 @@ Operace s valarrays zaručeno pouze v případě, že zdrojové a cílové podmn
 |Členská funkce|Popis|
 |-|-|
 |[Velikost](#size)|Zjistí počet prvků v řez `valarray`.|
-|[Spuštění](#start)|Vyhledá počáteční index řez `valarray`.|
-|[STRIDE](#stride)|Najde rozdíl mezi prvky v řez `valarray`.|
+|[start](#start)|Vyhledá počáteční index řez `valarray`.|
+|[stride](#stride)|Najde rozdíl mezi prvky v řez `valarray`.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -142,7 +142,7 @@ Valarray – index prvního prvku v podmnožině rozhraní.
 *_Len*<br/>
 Počet prvků v podmnožině rozhraní.
 
-*STRIDE*<br/>
+*stride*<br/>
 Vzdálenost mezi prvky v podmnožině rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota

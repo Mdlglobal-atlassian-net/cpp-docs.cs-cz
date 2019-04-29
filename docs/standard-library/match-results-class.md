@@ -7,11 +7,11 @@ helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
 ms.openlocfilehash: 32a5f9d20999740d4368f7901c797d87acce0be9
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412966"
 ---
 # <a name="matchresults-class"></a>match_results – třída
 
@@ -51,10 +51,10 @@ Třída šablony popisuje objekt, který řídí neupravitelnými sekvence eleme
 |[const_iterator](#const_iterator)|Typ const iterator pro dílčí shody.|
 |[const_reference](#const_reference)|Typ const odkaz na element.|
 |[difference_type](#difference_type)|Typ rozdílu iterátoru.|
-|[iterátor](#iterator)|Typ iterátoru pro dílčí shody.|
+|[iterator](#iterator)|Typ iterátoru pro dílčí shody.|
 |[Referenční dokumentace](#reference)|Typ odkazu na element.|
 |[size_type](#size_type)|Typ počtu dílčí shoda.|
-|[STRING_TYPE](#string_type)|Typ řetězec.|
+|[string_type](#string_type)|Typ řetězec.|
 |[value_type](#value_type)|Typ dílčí shoda.|
 
 ### <a name="member-functions"></a>Členské funkce
@@ -73,7 +73,7 @@ Třída šablony popisuje objekt, který řídí neupravitelnými sekvence eleme
 |[Velikost](#size)|Spočítá počet dílčí shody.|
 |[str](#str)|Vrátí hodnotu dílčí shoda.|
 |[Přípona](#suffix)|Získá pořadí po poslední dílčí shoda.|
-|[Prohození](#swap)|Prohodí dva objekty match_results –.|
+|[swap](#swap)|Prohodí dva objekty match_results –.|
 
 ### <a name="operators"></a>Operátory
 
@@ -304,7 +304,7 @@ Typ výstupního iterátoru.
 *out*<br/>
 Výstupní tok, do kterého se má zapisovat.
 
-*FMT*<br/>
+*fmt*<br/>
 Řetězec formátu.
 
 *příznaky*<br/>
@@ -369,7 +369,7 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>Parametry
 
-*ALLOC*<br/>
+*alloc*<br/>
 Objekt alokátoru, který se má uložit.
 
 *doprava*<br/>
@@ -507,7 +507,7 @@ Index dílčí shoda.
 
 Členská funkce vrátí `string_type((*this)[sub])`.
 
-## <a name="string_type"></a>  match_results::STRING_TYPE
+## <a name="string_type"></a>  match_results::string_type
 
 Typ řetězec.
 

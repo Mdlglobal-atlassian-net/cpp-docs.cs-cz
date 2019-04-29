@@ -6,17 +6,17 @@ f1_keywords:
 - istream/std::ws
 ms.assetid: 0301ea0d-4ded-4841-83dd-4253b55b3188
 ms.openlocfilehash: b590559b01bb8f5db21fca9f78d220d8bad5c27e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413330"
 ---
 # <a name="ltistreamgt-functions"></a>&lt;IStream&gt; funkce
 
 |||
 |-|-|
-|[Prohození](#istream_swap)|[ws](#ws)|
+|[swap](#istream_swap)|[ws](#ws)|
 
 ## <a name="istream_swap"></a>  Prohození
 
@@ -71,4 +71,4 @@ Zobrazit [operátor >>](../standard-library/istream-operators.md#op_gt_gt) pro p
 
 ## <a name="see-also"></a>Viz také:
 
-[\<IStream >](../standard-library/istream.md)<br/>
+[\<istream>](../standard-library/istream.md)<br/>

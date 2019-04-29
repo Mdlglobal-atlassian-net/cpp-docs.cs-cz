@@ -87,18 +87,18 @@ helpviewer_keywords:
 - stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
 ms.openlocfilehash: 8510bbc89a22fe3eb8df6bbf8ce77db44c7a65a0
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405076"
 ---
 # <a name="hashmultimap-class"></a>hash_multimap – třída
 
 > [!NOTE]
 > Toto rozhraní API je zastaralé. Alternativou je [unordered_multimap – třída](../standard-library/unordered-multimap-class.md).
 
-Hash_multimap – třída kontejneru je rozšířením standardní knihovny C++ a slouží k ukládání a rychlé načítání dat z kolekce, ve kterém je každý prvek pár, který má klíč řazení, jehož hodnota nemusí být jedinečný a přidružená data hodnotu.
+Hash_multimap – třída kontejneru je rozšířením C++ standardní knihovnu a používá se pro ukládání a rychlé načítání dat z kolekce, ve kterém je každý prvek pár, který má klíč řazení, jehož hodnota nemusí být jedinečný a přidružená data hodnotu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -170,11 +170,11 @@ Iterátor poskytovaný třídou hash_multimap je obousměrný iterátor, ale čl
 |[const_reference](#const_reference)|Typ, který poskytuje odkaz na **const** element uložené v `hash_multimap` pro čtení a provádění **const** operace.|
 |[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může přečíst jakýkoli **const** prvek `hash_multimap`.|
 |[difference_type](#difference_type)|Celočíselný typ se znaménkem, který slouží k vyjádření počtu prvků `hash_multimap` v rozsahu mezi prvky, na které odkazují iterátory.|
-|[iterátor](#iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat libovolný prvek v `hash_multimap`.|
+|[iterator](#iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat libovolný prvek v `hash_multimap`.|
 |[key_compare](#key_compare)|Typ poskytující objekt funkce, který může porovnat dva klíče řazení pro určení relativního pořadí dvou prvků v `hash_multimap`.|
 |[key_type](#key_type)|Typ, který popisuje řazení objektu klíče, který představuje každý prvek objektu `hash_multimap`.|
 |[mapped_type](#mapped_type)|Typ, který představuje typ dat uložených v `hash_multimap`.|
-|[Ukazatel](#pointer)|Typ, který poskytuje ukazatel na prvek v `hash_multimap`.|
+|[pointer](#pointer)|Typ, který poskytuje ukazatel na prvek v `hash_multimap`.|
 |[Referenční dokumentace](#reference)|Typ, který poskytuje odkaz na prvek uložený v `hash_multimap`.|
 |[reverse_iterator](#reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat prvek v obráceném objektu `hash_multimap`.|
 |[size_type](#size_type)|Typ celé číslo bez znaménka představující počet prvků v `hash_multimap`.|
@@ -187,12 +187,12 @@ Iterátor poskytovaný třídou hash_multimap je obousměrný iterátor, ale čl
 |[začít](#begin)|Vrátí iterátor adresující první prvek `hash_multimap`.|
 |[cbegin](#cbegin)|Vrátí konstantní iterátor adresující první prvek `hash_multimap`.|
 |[cend](#cend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v `hash_multimap`.|
-|[Vymazat](#clear)|Vymaže všechny prvky `hash_multimap`.|
+|[clear](#clear)|Vymaže všechny prvky `hash_multimap`.|
 |[Počet](#count)|Vrátí počet prvků v `hash_multimap` jejichž klíč odpovídá klíči se zadaným parametrem.|
 |[crbegin](#crbegin)|Vrátí konstantní iterátor adresující první prvek v obráceném objektu `hash_multimap`.|
-|[crend –](#crend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v obráceném objektu `hash_multimap`.|
-|[emplace –](#emplace)|Vloží vytvořený prvek na místo do `hash_multimap`.|
-|[emplace_hint –](#emplace_hint)|Vloží vytvořený prvek na místo do `hash_multimap`, s náznakem umístění.|
+|[crend](#crend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v obráceném objektu `hash_multimap`.|
+|[emplace](#emplace)|Vloží vytvořený prvek na místo do `hash_multimap`.|
+|[emplace_hint](#emplace_hint)|Vloží vytvořený prvek na místo do `hash_multimap`, s náznakem umístění.|
 |[prázdný](#empty)|Testuje, zda `hash_multimap` je prázdný.|
 |[ukončení](#end)|Vrátí iterátor adresující umístění následující po posledním prvku v `hash_multimap`.|
 |[equal_range](#equal_range)|Vrátí iterátor adresující umístění následující po posledním prvku v `hash_multimap`.|
@@ -203,11 +203,11 @@ Iterátor poskytovaný třídou hash_multimap je obousměrný iterátor, ale čl
 |[key_comp](#key_comp)|Získá kopii objektu porovnání použitého pro seřazení klíčů v `hash_multimap`.|
 |[lower_bound –](#lower_bound)|Vrátí iterátor na první prvek v `hash_multimap` , že hodnotou klíče, který je roven nebo větší než zadaný klíč.|
 |[max_size](#max_size)|Vrátí maximální délku objektu `hash_multimap`.|
-|[rbegin –](#rbegin)|Vrátí iterátor adresující první prvek v obráceném objektu `hash_multimap`.|
+|[rbegin](#rbegin)|Vrátí iterátor adresující první prvek v obráceném objektu `hash_multimap`.|
 |[rend –](#rend)|Vrátí iterátor adresující umístění následující po posledním prvku v obráceném objektu `hash_multimap`.|
 |[Velikost](#size)|Určuje novou velikost `hash_multimap`.|
-|[Prohození](#swap)|Vymění prvky dvou `hash_multimap`s.|
-|[upper_bound –](#upper_bound)|Vrátí iterátor na první prvek v `hash_multimap` , že hodnotou klíče, který je větší než zadaný klíč.|
+|[swap](#swap)|Vymění prvky dvou `hash_multimap`s.|
+|[upper_bound](#upper_bound)|Vrátí iterátor na první prvek v `hash_multimap` , že hodnotou klíče, který je větší než zadaný klíč.|
 |[value_comp](#value_comp)|Získá kopii objektu porovnání použitého pro seřazení hodnot prvků v `hash_multimap`.|
 
 ### <a name="operators"></a>Operátory
@@ -589,7 +589,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč prvky lze porovnat z hash_multimap.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1085,7 +1085,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč argumentu k porovnání s klíči řazení prvek z hash_multimap vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1159,7 +1159,7 @@ matching the 2nd element of the pair returned by equal_range( 2 ).
 The hash_multimap hm1 doesn't have an element with a key less than 4.
 ```
 
-## <a name="erase"></a>  hash_multimap::Erase
+## <a name="erase"></a>  hash_multimap::erase
 
 > [!NOTE]
 > Toto rozhraní API je zastaralé. Alternativou je [unordered_multimap – třída](../standard-library/unordered-multimap-class.md).
@@ -1182,10 +1182,10 @@ Pozice prvku, který chcete odebrat z hash_multimap.
 *první*<br/>
 Pozice prvního prvku odebrán hash_multimap.
 
-*poslední*<br/>
+*last*<br/>
 Pozice bezprostředně za posledním prvkem odebrán hash_multimap.
 
-*Klíč*<br/>
+*key*<br/>
 Klíč prvky, které mají být odebrány hash_multimap –.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1300,7 +1300,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč určený k porovnání s klíči řazení prvek z hash_multimap vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1750,7 +1750,7 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč argumentu k porovnání s klíči řazení prvek z hash_multimap vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1889,7 +1889,7 @@ int main( )
 }
 ```
 
-## <a name="op_eq"></a>  hash_multimap::Operator =
+## <a name="op_eq"></a>  hash_multimap::operator=
 
 > [!NOTE]
 > Toto rozhraní API je zastaralé. Alternativou je [unordered_multimap – třída](../standard-library/unordered-multimap-class.md).
@@ -2378,7 +2378,7 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč argumentu k porovnání s klíči řazení prvek z hash_multimap vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota

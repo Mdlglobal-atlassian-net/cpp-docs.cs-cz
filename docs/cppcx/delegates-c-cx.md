@@ -1,15 +1,15 @@
 ---
-title: Delegáti (C + +/ CX)
+title: Delegáti (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
 ms.openlocfilehash: e2158adad288045c9a98889dbe97e834dc93ea71
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406922"
 ---
-# <a name="delegates-ccx"></a>Delegáti (C + +/ CX)
+# <a name="delegates-ccx"></a>Delegáti (C++/CX)
 
 `delegate` – Klíčové slovo se používá k deklaraci typu odkaz, který je ekvivalentní prostředí Windows Runtime a objektu funkce ve standardním jazyce C++. Deklarace delegáta, která je podobná signatuře funkce; Určuje návratový typ a typy parametrů musí mít jeho zabalené funkce. Toto je uživatelský delegát deklarace:
 
@@ -110,7 +110,7 @@ Následující příklad ukazuje, jak vytvořit delegáta z každého z těchto 
 
 ### <a name="generic-delegates"></a>Obecní delegáti
 
-Obecní delegáti v jazyce C + +/ CX mají omezení, podobně jako deklarace obecných tříd. Nemohou být deklarovány jako veřejná. Můžete deklarovat soukromé nebo interní obecného delegáta a používat ji v C++, ale rozhraní .NET nebo klientů JavaScript nelze ho zpracovat vzhledem k tomu, že se emitovat do metadat .winmd. V tomto příkladu deklaruje obecného delegáta, který může používat pouze C++:
+Obecní delegáti v C++/CX mají omezení, podobně jako deklarace obecných tříd. Nemohou být deklarovány jako veřejná. Můžete deklarovat soukromé nebo interní obecného delegáta a používat ji v C++, ale rozhraní .NET nebo klientů JavaScript nelze ho zpracovat vzhledem k tomu, že se emitovat do metadat .winmd. V tomto příkladu deklaruje obecného delegáta, který může používat pouze C++:
 
 [!code-cpp[Cx_delegates#116](../cppcx/codesnippet/CPP/delegatesevents/class1.h#116)]
 
@@ -128,10 +128,10 @@ Pokud kód, který spouští delegáta je spuštěna v jiném vlákně – např
 
 Pokud chcete vytvořený delegát být ve stejném vlákně, který byl vytvořen na zpětné volání – například pokud předáte do komponenty, která běží v prostředí MTA komplexu – a má být vyvolána ve stejném vlákně jako Tvůrce , pak pomocí přetížení konstruktoru delegáta, který přebírá sekundy `CallbackContext` parametru. Toto přetížení použijte pouze na delegáty, kteří mají registrované proxy/zástupné procedury; Ne všechny delegáty, které jsou definovány v Windows.winmd jsou registrované.
 
-Pokud jste se seznámili s obslužné rutiny události v rozhraní .NET, víte, že doporučeným postupem je vytvořit místní kopii předtím, než se aktivuje událost. Tím se vyhnete časování, ve kterých může být obslužné rutiny události odebrán těsně před plánovaným začátkem události je vyvolána. Není to nutné k tomu v jazyce C + +/ CX vzhledem k tomu, že při přidávání nebo odebírání obslužných rutin událostí se vytvoří nový seznam obslužné rutiny. Protože objekt jazyka C++ zvýší počet odkazů na seznam obslužných rutin před vyvoláním události, není zaručeno, že všechny obslužné rutiny bude platit. To ale také znamená, že pokud odeberete obslužné rutiny události v konzumním vlákně, tato obslužná rutina může stále získat vyvolána, pokud publikování objektu stále pracuje na jeho kopii v seznamu je nyní zastaralá. Publikování objekt nebude aktualizovaný seznam získáte až do příštího vyvolá událost.
+Pokud jste se seznámili s obslužné rutiny události v rozhraní .NET, víte, že doporučeným postupem je vytvořit místní kopii předtím, než se aktivuje událost. Tím se vyhnete časování, ve kterých může být obslužné rutiny události odebrán těsně před plánovaným začátkem události je vyvolána. Není to nutné k tomu C++/CX vzhledem k tomu, že při přidávání nebo odebírání obslužných rutin událostí se vytvoří nový seznam obslužné rutiny. Protože objekt jazyka C++ zvýší počet odkazů na seznam obslužných rutin před vyvoláním události, není zaručeno, že všechny obslužné rutiny bude platit. To ale také znamená, že pokud odeberete obslužné rutiny události v konzumním vlákně, tato obslužná rutina může stále získat vyvolána, pokud publikování objektu stále pracuje na jeho kopii v seznamu je nyní zastaralá. Publikování objekt nebude aktualizovaný seznam získáte až do příštího vyvolá událost.
 
 ## <a name="see-also"></a>Viz také:
 
 [Systém typů](../cppcx/type-system-c-cx.md)<br/>
 [Referenční dokumentace jazyka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Odkaz na obory názvů](../cppcx/namespaces-reference-c-cx.md)
+[Referenční informace o oborech názvů](../cppcx/namespaces-reference-c-cx.md)

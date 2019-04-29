@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
 ms.openlocfilehash: 21d5825f8d9ea00359f2aa1c87291b831d1f330f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405167"
 ---
 # <a name="collate-class"></a>collate – třída
 
@@ -60,7 +60,7 @@ Stejně jako u omezující vlastnosti národního prostředí má ID statického
 |Název typu|Popis|
 |-|-|
 |[char_type](#char_type)|Typ, který odpovídá znaku typu `CharType`.|
-|[STRING_TYPE](#string_type)|Typ, který popisuje řetězec typu `basic_string` obsahující znaky typu `CharType`.|
+|[string_type](#string_type)|Typ, který popisuje řetězec typu `basic_string` obsahující znaky typu `CharType`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
@@ -71,7 +71,7 @@ Stejně jako u omezující vlastnosti národního prostředí má ID statického
 |[do_hash](#do_hash)|Virtuální funkce volaná k určení hodnoty hash sekvencí podle pravidel na základě jejich omezujících vlastností.|
 |[do_transform](#do_transform)|Virtuální funkce volaná k převedení znakové sekvence z národního prostředí na řetězec, který lze použít v lexikografických porovnáních s ostatními znakovými sekvencemi podobně převedenými ze stejného národního prostředí.|
 |[Hodnota hash](#hash)|Určí hodnotu hash sekvence podle pravidel na základě její omezující vlastnosti.|
-|[Transformace](#transform)|Převede znakovou sekvenci z národního prostředí na řetězec, který lze použít v lexikografických porovnáních s ostatními znakovými sekvencemi podobně převedenými ze stejného národního prostředí.|
+|[transform](#transform)|Převede znakovou sekvenci z národního prostředí na řetězec, který lze použít v lexikografických porovnáních s ostatními znakovými sekvencemi podobně převedenými ze stejného národního prostředí.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -120,9 +120,9 @@ Možné hodnoty parametru *_Refs* parametrů a jejich význam:
 
 - 0: Životnost objektu se spravuje přes národní prostředí, které je obsahují.
 
-- 1: doba života objektu je nutné ručně spravovat.
+- 1: Doba života objektu se musí spravovat ručně.
 
-- \> 1: tyto hodnoty nejsou definovány.
+- \> 1: Tyto hodnoty nejsou definovány.
 
 Konstruktor inicializuje jeho základní objekt s **locale::**[omezující vlastnost](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
@@ -142,13 +142,13 @@ int compare(const CharType* first1,
 *first1*<br/>
 Ukazatel na první prvek v první sekvenci, který se má porovnat.
 
-*Příjmení1*<br/>
+*last1*<br/>
 Ukazatel na poslední prvek v první sekvenci, který se má porovnat.
 
 *first2*<br/>
 Ukazatel na první prvek v druhé pořadí, který se má porovnat.
 
-*Příjmení2*<br/>
+*last2*<br/>
 Ukazatel na po posledním prvku v druhé pořadí, který se má porovnat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -208,13 +208,13 @@ virtual int do_compare(const CharType* first1,
 *first1*<br/>
 Ukazatel na první prvek v první sekvenci, který se má porovnat.
 
-*Příjmení1*<br/>
+*last1*<br/>
 Ukazatel na poslední prvek v první sekvenci, který se má porovnat.
 
 *first2*<br/>
 Ukazatel na první prvek v druhé pořadí, který se má porovnat.
 
-*Příjmení2*<br/>
+*last2*<br/>
 Ukazatel na po posledním prvku v druhé pořadí, který se má porovnat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -248,7 +248,7 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 *první*<br/>
 Ukazatel na první znak v sekvenci, jehož má hodnota má být stanovena.
 
-*poslední*<br/>
+*last*<br/>
 Ukazatel na poslední znak v sekvenci, jehož má hodnota má být stanovena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -276,7 +276,7 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 *první*<br/>
 Ukazatel na první znak v sekvenci, která má být převeden.
 
-*poslední*<br/>
+*last*<br/>
 Ukazatel na poslední znak v sekvenci, která má být převeden.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -304,7 +304,7 @@ long hash(const CharType* first, const CharType* last) const;
 *první*<br/>
 Ukazatel na první znak v sekvenci, jehož má hodnota má být stanovena.
 
-*poslední*<br/>
+*last*<br/>
 Ukazatel na poslední znak v sekvenci, jehož má hodnota má být stanovena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -374,7 +374,7 @@ string_type transform(const CharType* first, const CharType* last) const;
 *první*<br/>
 Ukazatel na první znak v sekvenci, která má být převeden.
 
-*poslední*<br/>
+*last*<br/>
 Ukazatel na poslední znak v sekvenci, která má být převeden.
 
 ### <a name="return-value"></a>Návratová hodnota

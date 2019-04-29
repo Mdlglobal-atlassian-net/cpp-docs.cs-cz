@@ -3,15 +3,15 @@ title: Používání akcelerátoru a objektů accelerator_view
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
 ms.openlocfilehash: 05ca53d075867fefa43f7471bb795040d075274e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405388"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Používání akcelerátoru a objektů accelerator_view
 
-Můžete použít [akcelerátoru](../../parallel/amp/reference/accelerator-class.md) a [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) třídy a zadejte zařízení nebo emulátoru spustit kód AMP. Systém může mít několik zařízení nebo emulátorů, které se liší podle množství paměti, podpory sdílené paměti, podpory ladění nebo podpory dvojité přesnosti. C++ Accelerated Massive Parallelism (C++ AMP) poskytuje rozhraní API, která můžete použít pro zkoumat všechny dostupné akcelerátory, nastavení jako výchozí, zadejte více accelerator_views pro více volání na parallel_for_each a provádění zvláštních úkolů ladění.
+Můžete použít [akcelerátoru](../../parallel/amp/reference/accelerator-class.md) a [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) třídy a zadejte zařízení nebo emulátoru spustit vaše C++ kódu AMP na. Systém může mít několik zařízení nebo emulátorů, které se liší podle množství paměti, podpory sdílené paměti, podpory ladění nebo podpory dvojité přesnosti. C++Accelerated Massive Parallelism (C++ AMP) poskytuje rozhraní API, která vám umožní zkoumat všechny dostupné akcelerátory, nastavit jako výchozí, zadejte více accelerator_views pro více volání na parallel_for_each a provádění zvláštních úkolů ladění.
 
 ## <a name="using-the-default-accelerator"></a>Použití výchozího akcelerátoru
 

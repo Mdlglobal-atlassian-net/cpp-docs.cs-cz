@@ -7,11 +7,11 @@ helpviewer_keywords:
 - uidefault attribute
 ms.assetid: 200de0e0-2e34-40a2-bae4-8d485a62264d
 ms.openlocfilehash: a5bb8d3ad869d9ee60b2ab04743f5a926a10dd2a
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59027672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407091"
 ---
 # <a name="uidefault"></a>uidefault
 
@@ -56,7 +56,7 @@ __interface ICustom{
 |-|-|
 |**Platí pro**|Metoda rozhraní|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
+|**Vyžadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).

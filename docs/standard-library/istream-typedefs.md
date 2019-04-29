@@ -8,17 +8,17 @@ f1_keywords:
 - istream/std::wistream
 ms.assetid: 55bc1f84-53a7-46ca-a36f-ac6ef75d0374
 ms.openlocfilehash: f647fba2036f6c69cb02393e30553c66df34b9dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413291"
 ---
 # <a name="ltistreamgt-typedefs"></a>&lt;IStream&gt; – definice TypeDef
 
 ||||
 |-|-|-|
-|[iostream –](#iostream)|[IStream](#istream)|[wiostream](#wiostream)|
+|[iostream](#iostream)|[istream](#istream)|[wiostream](#wiostream)|
 |[wistream](#wistream)|
 
 ## <a name="iostream"></a>  iostream –
@@ -71,4 +71,4 @@ Typ je synonymum pro šablony třídy [basic_istream](../standard-library/basic-
 
 ## <a name="see-also"></a>Viz také:
 
-[\<IStream >](../standard-library/istream.md)<br/>
+[\<istream>](../standard-library/istream.md)<br/>

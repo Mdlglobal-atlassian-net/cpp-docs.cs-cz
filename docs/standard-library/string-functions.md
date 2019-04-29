@@ -29,20 +29,20 @@ helpviewer_keywords:
 - std::to_string [C++]
 - std::to_wstring [C++]
 ms.openlocfilehash: d10af9bc32acd730db1fe9da3775ac2aa84e5fff
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412342"
 ---
 # <a name="ltstringgt-functions"></a>&lt;řetězec&gt; funkce
 
 ||||
 |-|-|-|
-|[getline](#getline)|[stod –](#stod)|[stof](#stof)|
+|[getline](#getline)|[stod](#stod)|[stof](#stof)|
 |[stoi](#stoi)|[stol](#stol)|[stold](#stold)|
 |[stoll](#stoll)|[stoul](#stoul)|[stoull](#stoull)|
-|[Prohození](#swap)|[to_string](#to_string)|[to_wstring](#to_wstring)|
+|[swap](#swap)|[to_string](#to_string)|[to_wstring](#to_wstring)|
 
 ## <a name="getline"></a>  getline
 
@@ -82,7 +82,7 @@ Vstupní datový proud, ze kterého má být extrahován řetězec.
 *str*<br/>
 Řetězec, do kterého se čtení znaků ze vstupního datového proudu.
 
-*Delim*<br/>
+*delim*<br/>
 Oddělovač řádků.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -176,7 +176,7 @@ double stod(
 |Parametr|Popis|
 |---------------|-----------------|
 |*str*|Sekvence znaků, který má být převeden.|
-|*IDX*|Hodnota indexu prvního nepřevedeném znaku.|
+|*idx*|Hodnota indexu prvního nepřevedeném znaku.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -205,7 +205,7 @@ float stof(
 |Parametr|Popis|
 |---------------|-----------------|
 |*str*|Sekvence znaků, který má být převeden.|
-|*IDX*|Hodnota indexu prvního nepřevedeném znaku.|
+|*idx*|Hodnota indexu prvního nepřevedeném znaku.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -240,7 +240,7 @@ Celočíselná hodnota.
 |Parametr|Popis|
 |---------------|-----------------|
 |*str*|Sekvence znaků, který má být převeden.|
-|*IDX*|Obsahuje index prvního znaku nepřevedeném návratu.|
+|*idx*|Obsahuje index prvního znaku nepřevedeném návratu.|
 |*base*|Počet základních k použití.|
 
 ### <a name="remarks"></a>Poznámky
@@ -272,7 +272,7 @@ long stol(
 |Parametr|Popis|
 |---------------|-----------------|
 |*str*|Sekvence znaků, který má být převeden.|
-|*IDX*|Hodnota indexu prvního nepřevedeném znaku.|
+|*idx*|Hodnota indexu prvního nepřevedeném znaku.|
 |*base*|Počet základních k použití.|
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -302,7 +302,7 @@ double stold(
 |Parametr|Popis|
 |---------------|-----------------|
 |*str*|Sekvence znaků, který má být převeden.|
-|*IDX*|Hodnota indexu prvního nepřevedeném znaku.|
+|*idx*|Hodnota indexu prvního nepřevedeném znaku.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -333,7 +333,7 @@ long long stoll(
 |Parametr|Popis|
 |---------------|-----------------|
 |*str*|Sekvence znaků, který má být převeden.|
-|*IDX*|Hodnota indexu prvního nepřevedeném znaku.|
+|*idx*|Hodnota indexu prvního nepřevedeném znaku.|
 |*base*|Počet základních k použití.|
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -365,7 +365,7 @@ unsigned long stoul(
 |Parametr|Popis|
 |---------------|-----------------|
 |*str*|Sekvence znaků, který má být převeden.|
-|*IDX*|Hodnota indexu prvního nepřevedeném znaku.|
+|*idx*|Hodnota indexu prvního nepřevedeném znaku.|
 |*base*|Počet základních k použití.|
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -397,7 +397,7 @@ unsigned long long stoull(
 |Parametr|Popis|
 |---------------|-----------------|
 |*str*|Sekvence znaků, který má být převeden.|
-|*IDX*|Hodnota indexu prvního nepřevedeném znaku.|
+|*idx*|Hodnota indexu prvního nepřevedeném znaku.|
 |*base*|Počet základních k použití.|
 
 ### <a name="return-value"></a>Návratová hodnota

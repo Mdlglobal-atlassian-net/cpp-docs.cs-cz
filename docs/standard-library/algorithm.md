@@ -1,5 +1,5 @@
 ---
-title: '&lt;algoritmus&gt;'
+title: '&lt;algorithm&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <algorithm>
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
 ms.openlocfilehash: 042523cddf640e7cf6fd7f9a1dac9f3adbc360b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411146"
 ---
-# <a name="ltalgorithmgt"></a>&lt;algoritmus&gt;
+# <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
 Definuje funkce šablony kontejneru standardní knihovny C++, které provádějí algoritmy.
 
@@ -60,7 +60,7 @@ Numerické algoritmy standardní knihovny C++, které jsou k dispozici pro numer
 |[Výplň](../standard-library/algorithm-functions.md#fill)|Každému prvku v zadaném rozsahu přiřadí stejnou novou hodnotu.|
 |[fill_n](../standard-library/algorithm-functions.md#fill_n)|Přiřadí novou hodnotu zadanému počtu prvků v rozsahu, který začíná konkrétním prvkem.|
 |[Najít](../standard-library/algorithm-functions.md#find)|Vyhledá pozici prvního výskytu prvku v rozsahu, který má zadanou hodnotu.|
-|[find_end –](../standard-library/algorithm-functions.md#find_end)|Vyhledá v rozsahu poslední dílčí sekvenci, která je shodná se zadanou sekvencí nebo která je ekvivalentní ve smyslu určeném binárním predikátem.|
+|[find_end](../standard-library/algorithm-functions.md#find_end)|Vyhledá v rozsahu poslední dílčí sekvenci, která je shodná se zadanou sekvencí nebo která je ekvivalentní ve smyslu určeném binárním predikátem.|
 |[find_first_of](../standard-library/algorithm-functions.md#find_first_of)|Vyhledá první výskyt jedné z několika hodnot v cílovém rozsahu nebo první výskyt jednoho z několika prvků, které jsou ekvivalentní ve smyslu určeném binárním predikátem zadané sadě prvků.|
 |[find_if](../standard-library/algorithm-functions.md#find_if)|Vyhledá pozici prvního výskytu prvku v rozsahu, který splňuje zadanou podmínku.|
 |[find_if_not](../standard-library/algorithm-functions.md#find_if_not)|Vrátí první prvek v zadaném rozsahu, který nesplňuje podmínku.|
@@ -68,13 +68,13 @@ Numerické algoritmy standardní knihovny C++, které jsou k dispozici pro numer
 |[Generovat](../standard-library/algorithm-functions.md#generate)|Přiřadí hodnoty generované objektem funkce každému prvku v rozsahu.|
 |[generate_n](../standard-library/algorithm-functions.md#generate_n)|Přiřadí hodnoty generované objektem funkce zadanému počtu prvků v rozsahu a vrátí pozici prvku za poslední přiřazenou hodnotou.|
 |[zahrnuje](../standard-library/algorithm-functions.md#includes)|Ověřuje, zda jeden seřazený rozsah obsahuje všechny prvky obsažené ve druhém seřazeném rozsahu, kde kritérium pořadí nebo ekvivalence mezi prvky může být určeno binárním predikátem.|
-|[inplace_merge –](../standard-library/algorithm-functions.md#inplace_merge)|Kombinuje prvky ze dvou po sobě následujících seřazených rozsahů do jednoho seřazeného rozsahu, kde kritérium pořadí může být určeno binárním predikátem.|
+|[inplace_merge](../standard-library/algorithm-functions.md#inplace_merge)|Kombinuje prvky ze dvou po sobě následujících seřazených rozsahů do jednoho seřazeného rozsahu, kde kritérium pořadí může být určeno binárním predikátem.|
 |[is_heap](../standard-library/algorithm-functions.md#is_heap)|Vrátí **true** Pokud prvky v zadaném rozsahu tvoří haldu.|
-|[is_heap_until –](../standard-library/algorithm-functions.md#is_heap_until)|Vrátí **true** Pokud zadaný rozsah tvoří haldu i poslední prvek.|
+|[is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)|Vrátí **true** Pokud zadaný rozsah tvoří haldu i poslední prvek.|
 |[is_partitioned](../standard-library/algorithm-functions.md#is_partitioned)|Vrátí **true** Pokud všechny prvky v zadaném rozsahu, který test **true** pro podmínku, předcházejí prvkům, které testují **false**.|
 |[is_permutation](../standard-library/algorithm-functions.md#is_permutation)|Určuje, zda prvky v zadaném rozsahu tvoří platný permutaci.|
 |[is_sorted](../standard-library/algorithm-functions.md#is_sorted)|Vrátí **true** Pokud prvky v zadaném rozsahu jsou v seřazeném pořadí.|
-|[is_sorted_until –](../standard-library/algorithm-functions.md#is_sorted_until)|Vrátí **true** Pokud prvky v zadaném rozsahu jsou v seřazeném pořadí.|
+|[is_sorted_until](../standard-library/algorithm-functions.md#is_sorted_until)|Vrátí **true** Pokud prvky v zadaném rozsahu jsou v seřazeném pořadí.|
 |[iter_swap](../standard-library/algorithm-functions.md#iter_swap)|Vymění dvě hodnoty odkazované dvojicí zadaných iterátorů.|
 |[lexicographical_compare](../standard-library/algorithm-functions.md#lexicographical_compare)|Porovná prvek po prvku mezi dvěma sekvencemi k určení, která z nich je menší.|
 |[lower_bound –](../standard-library/algorithm-functions.md#lower_bound)|Najde pozici prvního prvku v seřazeném rozsahu, jehož hodnota je větší nebo rovna zadané hodnotě, kde kritérium pořadí může být určeno primárním predikátem.|
@@ -86,33 +86,33 @@ Numerické algoritmy standardní knihovny C++, které jsou k dispozici pro numer
 |[min_element](../standard-library/algorithm-functions.md#min_element)|Vyhledá první výskyt nejmenšího prvku v zadaném rozsahu, kde kritérium pořadí může být určeno binárním predikátem.|
 |[minmax](../standard-library/algorithm-functions.md#minmax)|Porovná dva vstupní parametry a vrátí je jako dvojici v pořadí od nejmenšího po největší.|
 |[minmax_element](../standard-library/algorithm-functions.md#minmax_element)|Provádí práci vykonávanou [min_element](../standard-library/algorithm-functions.md#min_element) a [max_element](../standard-library/algorithm-functions.md#max_element) v jednom volání.|
-|[Neshoda](../standard-library/algorithm-functions.md#mismatch)|Porovná dva rozsahy prvek po prvku buď ke zjištění rovnosti, nebo ekvivalence ve smyslu určeném binárním predikátem a vyhledá první pozici, kde existuje rozdíl.|
+|[mismatch](../standard-library/algorithm-functions.md#mismatch)|Porovná dva rozsahy prvek po prvku buď ke zjištění rovnosti, nebo ekvivalence ve smyslu určeném binárním predikátem a vyhledá první pozici, kde existuje rozdíl.|
 |[&lt;alg&gt; přesunout](../standard-library/algorithm-functions.md#alg_move)|Přesune prvky přidružené k určenému rozsahu.|
 |[move_backward](../standard-library/algorithm-functions.md#move_backward)|Přesune prvky jednoho iterátoru do druhého. Pohyb začíná posledním prvkem v daném rozsahu a končí prvním prvkem v daném rozsahu.|
 |[next_permutation](../standard-library/algorithm-functions.md#next_permutation)|Znovu uspořádá prvky v rozsahu tak, aby původní pořadí bylo nahrazeno lexikograficky následující větší permutací, pokud existuje, kde význam následujícího může být určen binárním predikátem.|
 |[none_of](../standard-library/algorithm-functions.md#none_of)|Vrátí **true** při je nikdy přítomna podmínka pohyb mezi elementy v daném rozsahu.|
-|[nth_element –](../standard-library/algorithm-functions.md#nth_element)|Rozdělí rozsah prvků a správně určí *n*-tém prvku sekvence v rozsahu tak, aby všechny prvky před tímto prvkem byly menší nebo rovny a všechny prvky, které na něho v pořadí jsou větší než nebo rovno k němu.|
+|[nth_element](../standard-library/algorithm-functions.md#nth_element)|Rozdělí rozsah prvků a správně určí *n*-tém prvku sekvence v rozsahu tak, aby všechny prvky před tímto prvkem byly menší nebo rovny a všechny prvky, které na něho v pořadí jsou větší než nebo rovno k němu.|
 |[partial_sort](../standard-library/algorithm-functions.md#partial_sort)|Uspořádá zadaný počet menších prvků v rozsahu do nesestupného pořadí nebo podle setřiďovacího kritéria určeného binárním predikátem.|
 |[partial_sort_copy](../standard-library/algorithm-functions.md#partial_sort_copy)|Zkopíruje prvky ze zdrojového rozsahu do cílového rozsahu, kde zdrojové prvky jsou seřazeny buď podle binárního predikátu „menší než“ nebo jiného určeného binárního predikátu.|
-|[oddíl](../standard-library/algorithm-functions.md#partition)|Rozdělí prvky v rozsahu do dvou oddělených sad. Prvky, které splňují unární predikát, jsou umístěny před těmi, které jej nesplňují.|
-|[partition_copy –](../standard-library/algorithm-functions.md#partition_copy)|Zkopíruje prvky, pro které je podmínka **true** do jednoho cíle a pro které je podmínka **false** do jiného. Prvky musí pocházet ze zadaného rozsahu.|
+|[partition](../standard-library/algorithm-functions.md#partition)|Rozdělí prvky v rozsahu do dvou oddělených sad. Prvky, které splňují unární predikát, jsou umístěny před těmi, které jej nesplňují.|
+|[partition_copy](../standard-library/algorithm-functions.md#partition_copy)|Zkopíruje prvky, pro které je podmínka **true** do jednoho cíle a pro které je podmínka **false** do jiného. Prvky musí pocházet ze zadaného rozsahu.|
 |[partition_point](../standard-library/algorithm-functions.md#partition_point)|Vrátí první prvek v zadaném rozsahu, který nesplňuje podmínku. Prvky jsou seřazeny tak, aby ty, které splňují podmínku, předcházely těm, které ji nesplňují.|
-|[pop_heap –](../standard-library/algorithm-functions.md#pop_heap)|Odstraní největší prvek z přední části haldy až do předposlední pozice v rozsahu a ze zbývajících prvků vytvoří novou haldu.|
+|[pop_heap](../standard-library/algorithm-functions.md#pop_heap)|Odstraní největší prvek z přední části haldy až do předposlední pozice v rozsahu a ze zbývajících prvků vytvoří novou haldu.|
 |[prev_permutation](../standard-library/algorithm-functions.md#prev_permutation)|Znovu uspořádá prvky v rozsahu tak, aby původní pořadí bylo nahrazeno lexikograficky následující větší permutací, pokud existuje, kde význam následujícího může být určen binárním predikátem.|
-|[push_heap –](../standard-library/algorithm-functions.md#push_heap)|Přidá prvek, který je na konci rozsahu, do stávající haldy, která zahrnuje předchozí prvky daného rozsahu.|
+|[push_heap](../standard-library/algorithm-functions.md#push_heap)|Přidá prvek, který je na konci rozsahu, do stávající haldy, která zahrnuje předchozí prvky daného rozsahu.|
 |[random_shuffle](../standard-library/algorithm-functions.md#random_shuffle)|Znovu uspořádá sekvenci *N* prvků v rozsahu do jednoho z *N*! možných uspořádání vybraného náhodně.|
 |[remove](../standard-library/algorithm-functions.md#remove)|Odstraní zadanou hodnotu z daného rozsahu bez narušení pořadí zbývajících prvků a vrácení konce nového rozsahu, který neobsahuje zadanou hodnotu.|
 |[remove_copy](../standard-library/algorithm-functions.md#remove_copy)|Zkopíruje prvky ze zdrojového rozsahu do cílového rozsahu. Prvky zadané hodnoty zkopírovány nejsou. Nenaruší pořadí zbývajících prvků a nevrátí konec nového cílového rozsahu.|
 |[remove_copy_if](../standard-library/algorithm-functions.md#remove_copy_if)|Zkopíruje prvky ze zdrojového rozsahu do cílového rozsahu. Prvky splňující predikát zkopírovány nejsou. Nenaruší pořadí zbývajících prvků a nevrátí konec nového cílového rozsahu.|
 |[remove_if](../standard-library/algorithm-functions.md#remove_if)|Odstraní prvky, které splňují predikát, z daného rozsahu bez narušení pořadí zbývajících prvků a vrácení konce nového rozsahu, který neobsahuje zadanou hodnotu.|
 |[nahradit](../standard-library/algorithm-functions.md#replace)|Zkontroluje každý prvek v rozsahu a nahradí jej, pokud odpovídá zadané hodnotě.|
-|[replace_copy –](../standard-library/algorithm-functions.md#replace_copy)|Zkontroluje každý prvek ve zdrojovém rozsahu a nahradí jej, pokud při kopírování výsledku do nového cílového rozsahu odpovídá zadané hodnotě.|
-|[replace_copy_if –](../standard-library/algorithm-functions.md#replace_copy_if)|Zkontroluje každý prvek ve zdrojovém rozsahu a nahradí jej, pokud při kopírování výsledku do nového cílového rozsahu splňuje zadaný predikát.|
-|[replace_if –](../standard-library/algorithm-functions.md#replace_if)|Zkontroluje každý prvek v rozsahu a nahradí jej, pokud splňuje zadaný predikát.|
+|[replace_copy](../standard-library/algorithm-functions.md#replace_copy)|Zkontroluje každý prvek ve zdrojovém rozsahu a nahradí jej, pokud při kopírování výsledku do nového cílového rozsahu odpovídá zadané hodnotě.|
+|[replace_copy_if](../standard-library/algorithm-functions.md#replace_copy_if)|Zkontroluje každý prvek ve zdrojovém rozsahu a nahradí jej, pokud při kopírování výsledku do nového cílového rozsahu splňuje zadaný predikát.|
+|[replace_if](../standard-library/algorithm-functions.md#replace_if)|Zkontroluje každý prvek v rozsahu a nahradí jej, pokud splňuje zadaný predikát.|
 |[reverzní](../standard-library/algorithm-functions.md#reverse)|Obrátí pořadí prvků v rozsahu.|
-|[reverse_copy –](../standard-library/algorithm-functions.md#reverse_copy)|Obrátí pořadí prvků ve zdrojovém rozsahu při kopírování do cílového rozsahu.|
+|[reverse_copy](../standard-library/algorithm-functions.md#reverse_copy)|Obrátí pořadí prvků ve zdrojovém rozsahu při kopírování do cílového rozsahu.|
 |[Otočit o](../standard-library/algorithm-functions.md#rotate)|Vymění prvky ve dvou sousedních rozsazích.|
-|[rotate_copy –](../standard-library/algorithm-functions.md#rotate_copy)|Vymění prvky ve dvou sousedních rozsazích v rámci zdrojového rozsahu a zkopíruje výsledek do cílového rozsahu.|
+|[rotate_copy](../standard-library/algorithm-functions.md#rotate_copy)|Vymění prvky ve dvou sousedních rozsazích v rámci zdrojového rozsahu a zkopíruje výsledek do cílového rozsahu.|
 |[search](../standard-library/algorithm-functions.md#search)|Vyhledá první výskyt sekvence v cílovém rozsahu, jejíž prvky jsou rovné prvkům v dané sekvenci prvků nebo jejíž prvky jsou ekvivalentní ve smyslu určeném binárním predikátem prvkům v dané sekvenci.|
 |[search_n](../standard-library/algorithm-functions.md#search_n)|Vyhledá první dílčí sekvenci v rozsahu zadaného počtu prvků s konkrétní hodnotou nebo vztahem k dané hodnotě podle binárního predikátu.|
 |[set_difference](../standard-library/algorithm-functions.md#set_difference)|Sjednotí všechny prvky, které patří do jednoho seřazeného zdrojového rozsahu, ale nikoli do druhého seřazeného zdrojového rozsahu, do jednoho seřazeného cílového rozsahu, kde kritérium pořadí může být určeno binárním predikátem.|
@@ -121,15 +121,15 @@ Numerické algoritmy standardní knihovny C++, které jsou k dispozici pro numer
 |[set_union](../standard-library/algorithm-functions.md#set_union)|Sjednotí všechny prvky, které náleží alespoň do jednoho ze dvou seřazených zdrojových rozsahů, do jednoho seřazeného cílového rozsahu, kde kritérium pořadí může být určeno binárním predikátem.|
 |[Řazení](../standard-library/algorithm-functions.md#sort)|Uspořádá prvky v zadaném rozsahu do nesestupného pořadí nebo podle setřiďovacího kritéria určeného binárním predikátem.|
 |[Shuffle](../standard-library/algorithm-functions.md#shuffle)|Prvky podle okolí posouvá (změní uspořádání) pro zadaný rozsah pomocí generátor náhodných čísel.|
-|[sort_heap –](../standard-library/algorithm-functions.md#sort_heap)|Převede haldu na seřazený rozsah.|
-|[stable_partition –](../standard-library/algorithm-functions.md#stable_partition)|Rozdělí prvky v rozsahu do dvou oddělených sad. Prvky, které splňují unární predikát, jsou umístěny před těmi, které jej nesplňují. Relativní pořadí ekvivalentních prvků je zachováno.|
+|[sort_heap](../standard-library/algorithm-functions.md#sort_heap)|Převede haldu na seřazený rozsah.|
+|[stable_partition](../standard-library/algorithm-functions.md#stable_partition)|Rozdělí prvky v rozsahu do dvou oddělených sad. Prvky, které splňují unární predikát, jsou umístěny před těmi, které jej nesplňují. Relativní pořadí ekvivalentních prvků je zachováno.|
 |[stable_sort](../standard-library/algorithm-functions.md#stable_sort)|Uspořádá prvky v zadaném rozsahu do nesestupného pořadí nebo podle setřiďovacího kritéria určeného binárním predikátem a zachová relativní pořadí ekvivalentních prvků.|
-|[Prohození](../standard-library/algorithm-functions.md#swap)|Vymění hodnoty prvků mezi dvěma typy objektů, obsah prvního objektu přiřadí ke druhému objektu a obsah druhého k prvnímu objektu.|
+|[swap](../standard-library/algorithm-functions.md#swap)|Vymění hodnoty prvků mezi dvěma typy objektů, obsah prvního objektu přiřadí ke druhému objektu a obsah druhého k prvnímu objektu.|
 |[swap_ranges](../standard-library/algorithm-functions.md#swap_ranges)|Vymění prvky z jednoho rozsahu za prvky druhého rozsahu o stejné velikosti.|
-|[Transformace](../standard-library/algorithm-functions.md#transform)|Aplikuje zadaný objekt funkce na každý prvek ve zdrojovém rozsahu nebo na dvojici prvků ze dvou zdrojových rozsahů a zkopíruje vrácené hodnoty objektu funkce do cílového rozsahu.|
+|[transform](../standard-library/algorithm-functions.md#transform)|Aplikuje zadaný objekt funkce na každý prvek ve zdrojovém rozsahu nebo na dvojici prvků ze dvou zdrojových rozsahů a zkopíruje vrácené hodnoty objektu funkce do cílového rozsahu.|
 |[unique](../standard-library/algorithm-functions.md#unique)|Odstraní duplicitní prvky, které v zadaném rozsahu sousedí.|
 |[unique_copy](../standard-library/algorithm-functions.md#unique_copy)|Zkopíruje prvky ze zdrojového rozsahu do cílového rozsahu s výjimkou sousedících duplicitních prvků.|
-|[upper_bound –](../standard-library/algorithm-functions.md#upper_bound)|Najde pozici prvního prvku v seřazeném rozsahu, který má hodnotu větší než zadaná hodnota, kde kritérium pořadí může být určeno binárním predikátem.|
+|[upper_bound](../standard-library/algorithm-functions.md#upper_bound)|Najde pozici prvního prvku v seřazeném rozsahu, který má hodnotu větší než zadaná hodnota, kde kritérium pořadí může být určeno binárním predikátem.|
 
 ## <a name="see-also"></a>Viz také:
 

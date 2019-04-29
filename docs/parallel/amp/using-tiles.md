@@ -3,11 +3,11 @@ title: Používání bloků
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
 ms.openlocfilehash: ede62c80a83b5f5fc1d691bf52dde67140e68246
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405372"
 ---
 # <a name="using-tiles"></a>Používání bloků
 
@@ -291,13 +291,13 @@ Existují dva typy přístupů k paměti, které musí být synchronizovány –
 
 A *ohrazení paměti* zajišťuje, že jsou k dispozici pro ostatní vlákna v dlaždici vlákna přístupy k paměti a že paměti jsou provedeny podle pořadí programu. Aby toto bylo zajištěno, kompilátory a procesory nemění pořadí čtení a zápisu napříč ohrazením. V jazyce C++ AMP je ohrazení paměti vytvořen voláním jedné z těchto metod:
 
-- [tile_barrier::wait – metoda](reference/tile-barrier-class.md#wait): vytvoří ohrazení kolem i globální a `tile_static` paměti.
+- [tile_barrier::wait – metoda](reference/tile-barrier-class.md#wait): Vytvoří ohrazení kolem i globální a `tile_static` paměti.
 
-- [tile_barrier::wait_with_all_memory_fence – metoda](reference/tile-barrier-class.md#wait_with_all_memory_fence): vytvoří ohrazení kolem i globální a `tile_static` paměti.
+- [tile_barrier::wait_with_all_memory_fence – metoda](reference/tile-barrier-class.md#wait_with_all_memory_fence): Vytvoří ohrazení kolem i globální a `tile_static` paměti.
 
-- [tile_barrier::wait_with_global_memory_fence – metoda](reference/tile-barrier-class.md#wait_with_global_memory_fence): vytvoří ohrazení pouze kolem globální paměti.
+- [tile_barrier::wait_with_global_memory_fence – metoda](reference/tile-barrier-class.md#wait_with_global_memory_fence): Vytvoří ohrazení pouze kolem globální paměti.
 
-- [tile_barrier::wait_with_tile_static_memory_fence – metoda](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): vytvoří ohrazení pouze kolem `tile_static` paměti.
+- [tile_barrier::wait_with_tile_static_memory_fence – metoda](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): Vytvoří ohrazení pouze kolem `tile_static` paměti.
 
 Volání konkrétní požadovaného ohrazení může zvýšit výkon vaší aplikace. Typ bariéry ovlivňuje, jak kompilátor a hardware mění pořadí příkazů. Například pokud používáte ohrazení globální paměti, použije přístupy do globální paměti a proto se mohou změnit pořadí kompilátor a hardware čte a zapisuje do `tile_static` proměnné na obou stranách ohrazení.
 

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::strstreambuf [C++], underflow
 ms.assetid: b040b8ea-0669-4eba-8908-6a9cc159c54b
 ms.openlocfilehash: 75c9a96b727ef60280055536296f850f492d16ac
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412277"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf – třída
 
@@ -69,13 +69,13 @@ Objekt také uchovává ukazatele na dvě funkce, které řídí `strstreambuf` 
 |Členská funkce|Popis|
 |-|-|
 |[zablokování](#freeze)|Způsobí, že vyrovnávací paměť datového proudu do nedostupný prostřednictvím operací vyrovnávací paměť datového proudu.|
-|[přetečení](#overflow)|Chráněné virtuální funkce, která může být volána při vložení nového znaku do plné vyrovnávací paměti.|
-|[pbackfail –](#pbackfail)|Chráněná virtuální členská funkce, který se pokusí vložit element zpět do vstupního datového proudu a proveďte aktuálního elementu (ukazuje další ukazatel).|
-|[pcount –](#pcount)|Vrátí počet prvků zapsaných pro řízenou sekvenci.|
-|[seekoff –](#seekoff)|Chráněná virtuální členská funkce, který se pokouší změnit aktuální pozice řízené datových proudů.|
-|[seekpos –](#seekpos)|Chráněná virtuální členská funkce, který se pokouší změnit aktuální pozice řízené datových proudů.|
+|[overflow](#overflow)|Chráněné virtuální funkce, která může být volána při vložení nového znaku do plné vyrovnávací paměti.|
+|[pbackfail](#pbackfail)|Chráněná virtuální členská funkce, který se pokusí vložit element zpět do vstupního datového proudu a proveďte aktuálního elementu (ukazuje další ukazatel).|
+|[pcount](#pcount)|Vrátí počet prvků zapsaných pro řízenou sekvenci.|
+|[seekoff](#seekoff)|Chráněná virtuální členská funkce, který se pokouší změnit aktuální pozice řízené datových proudů.|
+|[seekpos](#seekpos)|Chráněná virtuální členská funkce, který se pokouší změnit aktuální pozice řízené datových proudů.|
 |[str](#str)|Volání [ukotvit](#freeze)a vrátí ukazatel na začátek řízené sekvence.|
-|[podtečení](#underflow)|Chráněné virtuální funkce se extrahovat aktuálního elementu ze vstupního datového proudu.|
+|[underflow](#underflow)|Chráněné virtuální funkce se extrahovat aktuálního elementu ze vstupního datového proudu.|
 
 ## <a name="requirements"></a>Požadavky
 

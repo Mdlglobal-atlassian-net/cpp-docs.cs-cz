@@ -1,5 +1,5 @@
 ---
-title: '&lt;Výjimka&gt;'
+title: '&lt;exception&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <exception>
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - exception header
 ms.assetid: 28900768-5dd7-4834-b907-5e37ab3407db
 ms.openlocfilehash: e599a725feb46eaa90023fdb9c999f5b2d159637
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412628"
 ---
-# <a name="ltexceptiongt"></a>&lt;Výjimka&gt;
+# <a name="ltexceptiongt"></a>&lt;exception&gt;
 
 Definuje několik typů a funkcí, které se týkají zpracování výjimek. Zpracování výjimek se používá v situacích, ve kterých lze systém zotavit z chyby. Poskytuje prostředky pro vrácení vykonávání z funkce do programu. Cílem začlenění zpracování výjimek je zvýšit robustnost programu a poskytnout řádný způsob zotavení z chyby.
 
@@ -36,7 +36,7 @@ Definuje několik typů a funkcí, které se týkají zpracování výjimek. Zpr
 |Funkce|Popis|
 |-|-|
 |[current_exception](../standard-library/exception-functions.md#current_exception)|Získá ukazatel na aktuální výjimku.|
-|[get_terminate –](../standard-library/exception-functions.md#get_terminate)|Získá aktuální `terminate_handler` funkce.|
+|[get_terminate](../standard-library/exception-functions.md#get_terminate)|Získá aktuální `terminate_handler` funkce.|
 |[get_unexpected](../standard-library/exception-functions.md#get_unexpected)|Získá aktuální `unexpected_handler` funkce.|
 |[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)|Vytvoří `exception_ptr` objekt, který obsahuje kopii výjimky.|
 |[rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)|Vyvolá výjimku předanou jako parametr.|

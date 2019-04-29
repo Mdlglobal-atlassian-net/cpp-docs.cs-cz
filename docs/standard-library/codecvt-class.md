@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::codecvt [C++], unshift
 ms.assetid: 37d3efa1-2b7f-42b6-b04f-7a972c8c2c86
 ms.openlocfilehash: be1075da65284ac3f9672a839622b59c8926bfb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405233"
 ---
 # <a name="codecvt-class"></a>codecvt – třída
 
@@ -106,7 +106,7 @@ převádí mezi `char32_t` kódováním UTF-32 (UCS-4) a **char** kódováním U
 
 |Konstruktor|Popis|
 |-|-|
-|[codecvt –](#codecvt)|Konstruktor pro objekty třídy `codecvt` , který slouží jako omezující vlastnost národního prostředí pro zpracování převodů.|
+|[codecvt](#codecvt)|Konstruktor pro objekty třídy `codecvt` , který slouží jako omezující vlastnost národního prostředí pro zpracování převodů.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -128,12 +128,12 @@ převádí mezi `char32_t` kódováním UTF-32 (UCS-4) a **char** kódováním U
 |[do_max_length](#do_max_length)|Virtuální funkce, která vrátí maximální počet externích bajtů nezbytných k vytvoření jednoho interního `CharType`.|
 |[do_out](#do_out)|Virtuální funkce volaná k převedení sekvence interních `CharType`na sekvenci externích bajtů.|
 |[do_unshift](#do_unshift)|Virtuální funkce volaná k poskytování `Byte`potřebných při převodu závislém na stavu k dokončení posledního znaku v sekvenci `Byte`s.|
-|[Kódování](#encoding)|Testuje, zda kódování `Byte` datový proud je závisí na stavu a zda je poměr mezi `Byte`použitou a `CharType`s vytvořený je konstantní a pokud ano, stanoví hodnotu tohoto poměru.|
+|[encoding](#encoding)|Testuje, zda kódování `Byte` datový proud je závisí na stavu a zda je poměr mezi `Byte`použitou a `CharType`s vytvořený je konstantní a pokud ano, stanoví hodnotu tohoto poměru.|
 |[in](#in)|Převede externí znázornění sekvence `Byte`s interní znázornění sekvence `CharType`s.|
 |[Délka](#length)|Určuje, kolik `Byte`z dané sekvence externích `Byte`vytvoří maximální počet interních `CharType`s a vrátí daný počet `Byte`s.|
 |[max_length](#max_length)|Vrátí maximální počet externích `Byte`nezbytných k vytvoření jednoho interního `CharType`.|
 |[out](#out)|Převede sekvenci interních `CharType`na sekvenci externích `Byte`s.|
-|[unshift –](#unshift)|Poskytne externí `Byte`potřebných při převodu závislém na stavu k dokončení posledního znaku v sekvenci `Byte`s.|
+|[unshift](#unshift)|Poskytne externí `Byte`potřebných při převodu závislém na stavu k dokončení posledního znaku v sekvenci `Byte`s.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -211,9 +211,9 @@ Možné hodnoty parametru *_Refs* parametrů a jejich význam:
 
 - 0: Životnost objektu se spravuje přes národní prostředí, které je obsahují.
 
-- 1: doba života objektu je nutné ručně spravovat.
+- 1: Doba života objektu se musí spravovat ručně.
 
-- 2: tyto hodnoty nejsou definovány.
+- 2: Tyto hodnoty nejsou definovány.
 
 Konstruktor inicializuje jeho `locale::facet` základního objektu s **locale::**[omezující vlastnost](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
@@ -280,7 +280,7 @@ Stav převodu, který se spravuje mezi voláními na členskou funkci.
 *first1*<br/>
 Ukazatel na začátek sekvence má být převeden.
 
-*Příjmení1*<br/>
+*last1*<br/>
 Ukazatel na konci sekvence má být převeden.
 
 *next1*<br/>
@@ -289,7 +289,7 @@ Ukazatel za koncem převedený pořadí první nepřevedeném znak.
 *first2*<br/>
 Ukazatel na začátek převedený pořadí.
 
-*Příjmení2*<br/>
+*last2*<br/>
 Ukazatel na konci převedený sekvence.
 
 *next2*<br/>
@@ -335,7 +335,7 @@ Stav převodu, který se spravuje mezi voláními na členskou funkci.
 *first1*<br/>
 Ukazatel na začátek pořadí externí.
 
-*Příjmení1*<br/>
+*last1*<br/>
 Ukazatel na konci externí sekvence.
 
 *_Len2*<br/>
@@ -400,7 +400,7 @@ Stav převodu, který se spravuje mezi voláními na členskou funkci.
 *first1*<br/>
 Ukazatel na začátek sekvence má být převeden.
 
-*Příjmení1*<br/>
+*last1*<br/>
 Ukazatel na konci sekvence má být převeden.
 
 *next1*<br/>
@@ -409,7 +409,7 @@ Odkaz na ukazatel na první nepřevedený `CharType`, za poslední `CharType` p�
 *first2*<br/>
 Ukazatel na začátek převedený pořadí.
 
-*Příjmení2*<br/>
+*last2*<br/>
 Ukazatel na konci převedený sekvence.
 
 *next2*<br/>
@@ -455,7 +455,7 @@ Stav převodu, který se spravuje mezi voláními na členskou funkci.
 *first2*<br/>
 Ukazatel na první pozici v cílovém rozsahu.
 
-*Příjmení2*<br/>
+*last2*<br/>
 Ukazatel na poslední pozice v cílové oblasti.
 
 *next2*<br/>
@@ -569,7 +569,7 @@ Stav převodu, který se spravuje mezi voláními na členskou funkci.
 *first1*<br/>
 Ukazatel na začátek sekvence má být převeden.
 
-*Příjmení1*<br/>
+*last1*<br/>
 Ukazatel na konci sekvence má být převeden.
 
 *next1*<br/>
@@ -578,7 +578,7 @@ Ukazatel za koncem převedený pořadí první nepřevedeném znak.
 *first2*<br/>
 Ukazatel na začátek převedený pořadí.
 
-*Příjmení2*<br/>
+*last2*<br/>
 Ukazatel na konci převedený sekvence.
 
 *next2*<br/>
@@ -671,7 +671,7 @@ Stav převodu, který se spravuje mezi voláními na členskou funkci.
 *first1*<br/>
 Ukazatel na začátek pořadí externí.
 
-*Příjmení1*<br/>
+*last1*<br/>
 Ukazatel na konci externí sekvence.
 
 *_Len2*<br/>
@@ -776,7 +776,7 @@ Stav převodu, který se spravuje mezi voláními na členskou funkci.
 *first1*<br/>
 Ukazatel na začátek sekvence má být převeden.
 
-*Příjmení1*<br/>
+*last1*<br/>
 Ukazatel na konci sekvence má být převeden.
 
 *next1*<br/>
@@ -785,7 +785,7 @@ Odkaz na ukazatel na první nepřevedený `CharType` za poslední `CharType` př
 *first2*<br/>
 Ukazatel na začátek převedený pořadí.
 
-*Příjmení2*<br/>
+*last2*<br/>
 Ukazatel na konci převedený sekvence.
 
 *next2*<br/>
@@ -868,7 +868,7 @@ Stav převodu, který se spravuje mezi voláními na členskou funkci.
 *first2*<br/>
 Ukazatel na první pozici v cílovém rozsahu.
 
-*Příjmení2*<br/>
+*last2*<br/>
 Ukazatel na poslední pozice v cílové oblasti.
 
 *next2*<br/>

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
 ms.openlocfilehash: 83306e47995f652014682d6bcc94966aab75c062
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413252"
 ---
 # <a name="linearcongruentialengine-class"></a>linear_congruential_engine – třída
 
@@ -49,13 +49,13 @@ class linear_congruential_engine{
 Typ výsledku celého čísla bez znaménka. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
 
 *A*<br/>
-**Násobitel**. **Předběžná podmínka**: části poznámky v tématu.
+**Násobitel**. **Předběžná podmínka**: Viz část poznámky.
 
 *C*<br/>
-**Přírůstek**. **Předběžná podmínka**: části poznámky v tématu.
+**Přírůstek**. **Předběžná podmínka**: Viz část poznámky.
 
 *M*<br/>
-**MODULUS**. **Předběžná podmínka**: viz poznámky.
+**MODULUS**. **Předběžná podmínka**: Viz poznámky.
 
 ## <a name="members"></a>Členové
 

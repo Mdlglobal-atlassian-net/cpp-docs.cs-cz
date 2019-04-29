@@ -25,17 +25,17 @@ helpviewer_keywords:
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
 ms.openlocfilehash: 22c5b34f1c87d10b48a797229bc987305fca8f9d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412654"
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;výjimka&gt; funkce
 
 ||||
 |-|-|-|
-|[current_exception](#current_exception)|[get_terminate –](#get_terminate)|[get_unexpected](#get_unexpected)|
+|[current_exception](#current_exception)|[get_terminate](#get_terminate)|[get_unexpected](#get_unexpected)|
 |[make_exception_ptr](#make_exception_ptr)|[rethrow_exception](#rethrow_exception)|[set_terminate](#set_terminate)|
 |[set_unexpected](#set_unexpected)|[ukončit](#terminate)|[uncaught_exception](#uncaught_exception)|
 |[unexpected](#unexpected)|
@@ -82,7 +82,7 @@ Třída s výjimkou pro kopírování Obvykle, zadejte [třída výjimky](../sta
 
 ### <a name="remarks"></a>Poznámky
 
-Volání `make_exception_ptr` funkce je ekvivalentní k vyvolání výjimky jazyka C++, jejímu zachycení v bloku catch a následným voláním [current_exception](../standard-library/exception-functions.md#current_exception) funkce, která se vrátí `exception_ptr` objekt, který na výjimku odkazuje. Implementace společnosti Microsoft `make_exception_ptr` funkce je efektivnější než vyvolávání a následné zachycování výjimky.
+Volání `make_exception_ptr` funkce je ekvivalentní k vyvolání C++ výjimky, jejímu zachycení v bloku catch a následným voláním [current_exception](../standard-library/exception-functions.md#current_exception) funkce, která se vrátí `exception_ptr` objekt, který na výjimku odkazuje. Implementace společnosti Microsoft `make_exception_ptr` funkce je efektivnější než vyvolávání a následné zachycování výjimky.
 
 Aplikace obvykle nevyžaduje, aby `make_exception_ptr` funkce a zabraňte jejich použití.
 
@@ -329,4 +329,4 @@ Zobrazit [set_unexpected](../standard-library/exception-functions.md#set_unexpec
 
 ## <a name="see-also"></a>Viz také:
 
-[\<výjimky >](../standard-library/exception.md)<br/>
+[\<exception>](../standard-library/exception.md)<br/>

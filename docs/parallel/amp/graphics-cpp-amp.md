@@ -3,11 +3,11 @@ title: Grafické prvky (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
 ms.openlocfilehash: 4a40575d84c9a0efedcb3c7c9717fc310870b530
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405661"
 ---
 # <a name="graphics-c-amp"></a>Grafické prvky (C++ AMP)
 
@@ -263,7 +263,7 @@ Můžete také zkopírovat z jedné textury do jiné pomocí [texture::copy_to](
 
 ## <a name="texture-view-classes"></a>Třídy zobrazení textur
 
-C ++ AMP představuje [texture_view – třída](../../parallel/amp/reference/texture-view-class.md) v sadě Visual Studio 2013. Zobrazení textury podporují stejné typy a řazení texel jako [texture – třída](../../parallel/amp/reference/texture-class.md), ale na rozdíl od textur poskytují přístup k dalším funkcím hardwaru například vzorkování textury a mipmapy. Zobrazení textury podporují přístup jen pro čtení, pouze pro zápis a čtení i zápis v podkladových datech textury.
+C++++ AMP představuje [texture_view – třída](../../parallel/amp/reference/texture-view-class.md) v sadě Visual Studio 2013. Zobrazení textury podporují stejné typy a řazení texel jako [texture – třída](../../parallel/amp/reference/texture-class.md), ale na rozdíl od textur poskytují přístup k dalším funkcím hardwaru například vzorkování textury a mipmapy. Zobrazení textury podporují přístup jen pro čtení, pouze pro zápis a čtení i zápis v podkladových datech textury.
 
 - Přístup jen pro čtení je poskytován `texture_view<const T, N>` textury specializace šablony, které podporují prvky, které mají 1, 2 nebo 4 komponenty, vzorkování a dynamický přístup k rozsahu úrovní mipmap, které jsou určeny při vytváření instance zobrazení.
 
@@ -275,7 +275,7 @@ Zobrazení textury jsou podobná zobrazením polí, ale neposkytují funkci spr�
 
 ### <a name="writeonlytextureview-deprecated"></a>writeonly_texture_view – nepoužívané
 
-Pro sadu Visual Studio 2013, C++ AMP přináší lepší podporu funkcí hardwaru pro textury jako je odběr vzorků a Mipmap, které nemusí být podporovány [writeonly_texture_view – třída](../../parallel/amp/reference/writeonly-texture-view-class.md). Nově zavedená `texture_view` třída podporuje nadmnožinu funkcí v `writeonly_texture_view`; v důsledku toho `writeonly_texture_view` je zastaralý.
+Pro sadu Visual Studio 2013 C++ AMP přináší lepší podporu funkcí hardwaru pro textury jako je odběr vzorků a Mipmap, které nemusí být podporovány [writeonly_texture_view – třída](../../parallel/amp/reference/writeonly-texture-view-class.md). Nově zavedená `texture_view` třída podporuje nadmnožinu funkcí v `writeonly_texture_view`; v důsledku toho `writeonly_texture_view` je zastaralý.
 
 Doporučujeme – alespoň pro nový kód –, který používáte `texture_view` pro přístup k funkcím, které byly dříve poskytovány pomocí `writeonly_texture_view`. Porovnejte následující dva příklady, které se zápis do objektu textury, která má dvě součásti (int_2). Všimněte si, že v obou případech platí, zobrazení `wo_tv4`, musí být zachyceno hodnotou ve výrazu lambda. Tady je příklad, který používá novou `texture_view` třídy:
 
@@ -342,7 +342,7 @@ Všimněte si, jak zobrazení textury jejíž typ elementu je nekonstantní a m�
 
 Typ elementu `texture_view`– jeho const-ness a také počet komponent, které má, také hraje roli při určování, zda zobrazení podporuje vzorkování textury a jak je přístupný úrovní mipmap:
 
-|Typ|Komponenty|Číst|Write|Vzorkování|Přístup Mipmap|
+|Type|Komponenty|Číst|Write|Vzorkování|Přístup Mipmap|
 |----------|----------------|----------|-----------|--------------|-------------------|
 |texture_view\<const T, N >|1, 2, 4|Ano|Ne (1)|Ano|Ano, indexovatelné. Rozsah je určena při instanci.|
 |Texture_view\<T, N>|1<br /><br /> 2, 4|Ano<br /><br /> Ne (2)|Ano<br /><br /> Ano|Ne (1)<br /><br /> Ne (1)|Ano, jedna úroveň. Úroveň je určena při instanci.<br /><br /> Ano, jedna úroveň. Úroveň je určena při instanci.|

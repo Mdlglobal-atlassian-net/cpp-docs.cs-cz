@@ -7,11 +7,11 @@ helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
 ms.openlocfilehash: 37bd2b16fb7a7c1c186f59897898e08cc73fffae
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59022663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407507"
 ---
 # <a name="pointerdefault"></a>pointer_default
 
@@ -44,7 +44,7 @@ Podívejte se na příklad pro [defaultvalue](defaultvalue.md) ukázkový použ�
 |-|-|
 |**Platí pro**|**interface**|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
+|**Vyžadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).

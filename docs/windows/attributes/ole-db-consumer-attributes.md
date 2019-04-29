@@ -10,11 +10,11 @@ helpviewer_keywords:
 - attributes [C++/CLI], OLE DB consumer
 ms.assetid: 017b591f-8f9a-42b4-84d5-cc42a21ab0cc
 ms.openlocfilehash: 9f89af963c9c49a8a94b2a4f0c8930ab714926e7
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59035728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407559"
 ---
 # <a name="ole-db-consumer-attributes"></a>Atributy příjemce technologie OLE DB
 Atributy příjemce technologie OLE DB vložit kód, na základě [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-reference.md), chcete-li vytvořit pracovní technologie OLE DB příjemce, který provádí úlohy, jako je otevření tabulek, provádění příkazů a přístup k datům.

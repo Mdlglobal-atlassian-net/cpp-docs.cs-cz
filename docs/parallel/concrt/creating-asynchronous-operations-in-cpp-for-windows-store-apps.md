@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
 ms.openlocfilehash: 8815861e525a2824bb1bc7a7d0e40f96b053c6a4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413977"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Vytváření asynchronních operací v jazyce C++ pro aplikace pro UPW
 
@@ -23,7 +23,7 @@ Použití asynchronního programování je klíčovou komponentou v aplikaci mod
 
 ## <a name="key-points"></a>Klíčové body
 
-- Použití [concurrency::create_async](reference/concurrency-namespace-functions.md#create_async) k vytvoření asynchronní operace, které můžete používat další součásti (která může být napsán v jiných jazycích než C++).
+- Použití [concurrency::create_async](reference/concurrency-namespace-functions.md#create_async) k vytvoření asynchronní operace, které mohou používat ostatní součásti (která může být napsané v jazycích jiných než C++).
 
 - Použití [concurrency::progress_reporter](../../parallel/concrt/reference/progress-reporter-class.md) na oznámení o průběhu sestavy pro součásti, které volají asynchronní operace.
 
@@ -63,7 +63,7 @@ Představuje asynchronní operaci, která vrací výsledek.
 [Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress>](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)<br/>
 Představuje asynchronní operaci, která vrací výsledek a sestavy pokroku.
 
-Pojem *akce* znamená, že asynchronní úloha nevytvoří hodnotu (Představte si, že funkce, která vrátí `void`). Pojem *operace* znamená, že asynchronní úloha výsledkem hodnota. Pojem *průběh* znamená, že úloha může hlásit zprávy o průběhu volajícímu. JavaScript, rozhraní .NET Framework a jazyka Visual C++ nabízí svou vlastní způsob, jak vytvořit instance pro použití těchto rozhraní hranice ABI. Pro jazyk Visual C++ poskytuje PPL [concurrency::create_async](reference/concurrency-namespace-functions.md#create_async) funkce. Tato funkce vytvoří prostředí Windows Runtime asynchronní akce nebo operace, která představuje dokončení úlohy. `create_async` Funkce přebírá pracovní funkci (obvykle výraz lambda), vytvoří interně `task` objektu a zabalí, které úlohy v jednom ze čtyř asynchronní rozhraní Windows Runtime.
+Pojem *akce* znamená, že asynchronní úloha nevytvoří hodnotu (Představte si, že funkce, která vrátí `void`). Pojem *operace* znamená, že asynchronní úloha výsledkem hodnota. Pojem *průběh* znamená, že úloha může hlásit zprávy o průběhu volajícímu. JavaScript, rozhraní .NET Framework a jazyka Visual C++ nabízí svou vlastní způsob, jak vytvořit instance pro použití těchto rozhraní hranice ABI. Pro Vizuály C++, poskytuje PPL [concurrency::create_async](reference/concurrency-namespace-functions.md#create_async) funkce. Tato funkce vytvoří prostředí Windows Runtime asynchronní akce nebo operace, která představuje dokončení úlohy. `create_async` Funkce přebírá pracovní funkci (obvykle výraz lambda), vytvoří interně `task` objektu a zabalí, které úlohy v jednom ze čtyř asynchronní rozhraní Windows Runtime.
 
 > [!NOTE]
 >  Použití `create_async` pouze pokud je nutné vytvořit funkci, která je přístupná z jiného jazyka nebo jiné součásti prostředí Windows Runtime. Použití `task` třídy přímo, ve kterých víte, že operaci je vytvořen i zaplněny kódem C++ pod stejnou komponentou.

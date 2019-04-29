@@ -10,11 +10,11 @@ f1_keywords:
 - tuple/std::operator==
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
 ms.openlocfilehash: e60de54a78f3a206ef77776761c3419bf8a2f3b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411874"
 ---
 # <a name="lttuplegt-operators"></a>&lt;řazené kolekce členů&gt; operátory
 
@@ -415,4 +415,4 @@ false
 
 ## <a name="see-also"></a>Viz také:
 
-[\<řazené kolekce členů >](../standard-library/tuple.md)<br/>
+[\<tuple>](../standard-library/tuple.md)<br/>

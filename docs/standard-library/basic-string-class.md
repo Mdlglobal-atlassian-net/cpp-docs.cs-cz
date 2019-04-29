@@ -117,15 +117,15 @@ helpviewer_keywords:
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
 ms.openlocfilehash: ab93f8b225e27c0cf4d294d176c566bd6f2b5d02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409782"
 ---
 # <a name="basicstring-class"></a>basic_string – třída
 
-Sekvence řízené objektem třídy šablony `basic_string` jsou standardní řetězcové třídy C++ a jsou obvykle označovány jako řetězce, ale neměly by být zaměňovány s řetězci ve stylu jazyka C zakončený hodnotou null, který se používá v rámci celé standardní knihovny C++. Řetězec jazyka Standard C++ je kontejner, který umožňuje použití řetězců jako běžných typů, jako je například operace porovnání a zřetězení, iterátorů, algoritmy standardní knihovny C++ a kopírování a přidělení pomocí přidělující třídy spravované paměti. Pokud potřebujete Standard C++ řetězec převést na řetězec stylu C zakončený hodnotou null, použijte [basic_string::c_str](#c_str) člena.
+Sekvence řízené objektem třídy šablony `basic_string` jsou standardní řetězcové třídy C++ a jsou obvykle označovány jako řetězce, ale neměly by být zaměňovány s řetězci ve stylu jazyka C zakončený hodnotou null, který se používá v rámci celé standardní knihovny C++. Řetězec jazyka Standard C++ je kontejner, který umožňuje použití řetězců jako běžných typů, jako je například operace porovnání a zřetězení, iterátorů, algoritmy standardní knihovny C++ a kopírování a přidělení pomocí přidělující třídy spravované paměti. Pokud je potřeba převést standardní C++ řetězec, který se řetězec stylu C zakončený hodnotou null, použijte [basic_string::c_str](#c_str) člena.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -137,7 +137,7 @@ class basic_string;
 ### <a name="parameters"></a>Parametry
 
 *CharType*<br/>
-Datový typ jednoho znaku pro uložení v řetězci. Standardní knihovny C++ poskytuje specializace této třídy šablony s definicemi typu [řetězec](../standard-library/string-typedefs.md#string) pro prvky typu **char**, [wstring](../standard-library/string-typedefs.md#wstring), pro **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) pro `char16_t`, a [u32string](../standard-library/string-typedefs.md#u32string) pro `char32_t`.
+Datový typ jednoho znaku pro uložení v řetězci. C++ Standardní knihovny poskytuje specializace této třídy šablony s definicemi typu [řetězec](../standard-library/string-typedefs.md#string) pro prvky typu **char**, [wstring](../standard-library/string-typedefs.md#wstring), pro **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) pro `char16_t`, a [u32string](../standard-library/string-typedefs.md#u32string) pro `char32_t`.
 
 *Osobnostní rysy*<br/>
 Různé důležité vlastnosti `CharType` elementy ve specializaci basic_string jsou popsány pomocí třídy `Traits`. Výchozí hodnota je `char_traits` <  `CharType`>.
@@ -161,9 +161,9 @@ Typ představující uložený objekt alokátoru, který zapouzdřuje informace 
 |[const_reference](#const_reference)|Typ, který poskytuje odkaz na **const** prvek uložený v řetězci pro čtení a provádění **const** operace.|
 |[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje iterátor náhodného přístupu, který může přečíst jakýkoli **const** prvek v řetězci.|
 |[difference_type](#difference_type)|Typ, který obsahuje rozdíl mezi dvěma iterátory, které odkazují na prvky v rámci stejného řetězce.|
-|[iterátor](#iterator)|Typ, který poskytuje iterátor náhodného přístupu, který může číst nebo upravovat libovolný prvek v řetězci.|
+|[iterator](#iterator)|Typ, který poskytuje iterátor náhodného přístupu, který může číst nebo upravovat libovolný prvek v řetězci.|
 |[nPos –](#npos)|Bez znaménka celočíselná hodnota, která je inicializována na hodnotu -1, která označuje "nebyl nalezen" nebo "všechny zbývající znaky" když selže funkce hledání.|
-|[Ukazatel](#pointer)|Typ, který poskytuje ukazatel na prvek znaků v řetězec nebo znak pole.|
+|[pointer](#pointer)|Typ, který poskytuje ukazatel na prvek znaků v řetězec nebo znak pole.|
 |[Referenční dokumentace](#reference)|Typ, který poskytuje odkaz na prvek uložený v řetězci.|
 |[reverse_iterator](#reverse_iterator)|Typ, který poskytuje iterátor náhodného přístupu, který může číst nebo upravovat prvek v obráceném řetězci.|
 |[size_type](#size_type)|Celočíselný typ bez znaménka pro počet prvků v řetězci.|
@@ -175,7 +175,7 @@ Typ představující uložený objekt alokátoru, který zapouzdřuje informace 
 |Členská funkce|Popis|
 |-|-|
 |[Připojení](#append)|Přidá znaky na konec řetězce.|
-|[přiřazení](#assign)|Přiřadí nové hodnoty znaků obsahu řetězce.|
+|[assign](#assign)|Přiřadí nové hodnoty znaků obsahu řetězce.|
 |[at](#at)|Vrátí odkaz na prvek v zadaném umístění v řetězci.|
 |[Zpět](#back)||
 |[začít](#begin)|Vrátí iterátor adresující první prvek v řetězci.|
@@ -183,11 +183,11 @@ Typ představující uložený objekt alokátoru, který zapouzdřuje informace 
 |[Kapacita](#capacity)|Vrátí největší číslo z prvků, které může být uložený v řetězci bez zvýšení přidělení paměti řetězce.|
 |[cbegin](#cbegin)|Vrátí konstantní iterátor adresující první prvek v řetězci.|
 |[cend](#cend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v řetězci.|
-|[Vymazat](#clear)|Vymaže všechny prvky řetězce.|
+|[clear](#clear)|Vymaže všechny prvky řetězce.|
 |[compare](#compare)|Porovná řetězec se zadaným řetězcem a určete, jestli jsou dva řetězce stejné, nebo pokud je jeden méně lexikografický, než ten druhý.|
 |[kopírování](#copy)|Zkopíruje maximálně několika určenými znaky z indexovaného místa ve zdrojovém řetězci do cílového pole znaků. Zastaralé Použití [basic_string::_Copy_s](#copy_s) místo.|
 |[crbegin](#crbegin)|Vrátí konstantní iterátor adresující první prvek v obráceném řetězci.|
-|[crend –](#crend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v obráceném řetězci.|
+|[crend](#crend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v obráceném řetězci.|
 |[_Copy_s](#copy_s)|Zkopíruje maximálně několika určenými znaky z indexovaného místa ve zdrojovém řetězci do cílového pole znaků.|
 |[data](#data)|Převede obsah řetězce na pole znaků.|
 |[prázdný](#empty)|Ověřuje, zda řetězec obsahuje znaky.|
@@ -203,18 +203,18 @@ Typ představující uložený objekt alokátoru, který zapouzdřuje informace 
 |[Vložit](#insert)|Vloží prvek nebo prvky, nebo rozsah prvků do řetězce na určenou pozici.|
 |[Délka](#length)|Vrátí aktuální počet prvků v řetězci.|
 |[max_size](#max_size)|Vrátí maximální počet znaků, které řetězec může obsahovat.|
-|[pop_back –](#pop_back)|Odstraní poslední prvek řetězce.|
+|[pop_back](#pop_back)|Odstraní poslední prvek řetězce.|
 |[push_back](#push_back)|Přidá prvek na konec řetězce.|
-|[rbegin –](#rbegin)|Vrátí iterátor na první prvek v obráceném řetězci.|
+|[rbegin](#rbegin)|Vrátí iterátor na první prvek v obráceném řetězci.|
 |[rend –](#rend)|Vrátí iterátor, který ukazuje za poslední prvek v obráceném řetězci.|
 |[nahradit](#replace)|Nahradí prvky v řetězci na zadané pozici zadanými znaky nebo znaky zkopírovanými z jiných oblastí nebo řetězců nebo řetězce jazyka C.|
-|[Rezervovat](#reserve)|Nastaví kapacitu řetězce na číslo větší, než zadané číslo.|
-|[Změna velikosti](#resize)|Určuje novou velikost řetězce, přidávání nebo mazání prvků podle potřeby.|
+|[reserve](#reserve)|Nastaví kapacitu řetězce na číslo větší, než zadané číslo.|
+|[resize](#resize)|Určuje novou velikost řetězce, přidávání nebo mazání prvků podle potřeby.|
 |[rfind –](#rfind)|Vyhledá řetězec ve směru dozadu pro první výskyt podřetězce, který odpovídá zadané posloupnosti znaků.|
 |[shrink_to_fit](#shrink_to_fit)|Odstraní nadbytečnou kapacitu řetězce.|
 |[Velikost](#size)|Vrátí aktuální počet prvků v řetězci.|
-|[substr –](#substr)|Zkopíruje podřetězec s maximálně několika znaky ze začátku řetězce od určené pozice.|
-|[Prohození](#swap)|Výměna obsahu dvou řetězců.|
+|[substr](#substr)|Zkopíruje podřetězec s maximálně několika znaky ze začátku řetězce od určené pozice.|
+|[swap](#swap)|Výměna obsahu dvou řetězců.|
 
 ### <a name="operators"></a>Operátory
 
@@ -325,7 +325,7 @@ Hodnota znaku, které se mají připojit.
 *první*<br/>
 Vstupní iterátor adresující první prvek v rozsahu připojit.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor, const_pointer nebo const_iterator adresující pozici jedné za posledním prvkem v rozsahu připojit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -483,10 +483,10 @@ Hodnota znaku, který má být přiřazena.
 *první*<br/>
 Vstupní iterátor, const_pointer nebo const_iterator adresující první znak v rozsahu zdrojový řetězec má být přiřazena do cílového rozsahu.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor, const_pointer nebo const_iterator adresování je nad rámec poslední znak v rozsahu zdrojový řetězec má být přiřazena do cílového rozsahu.
 
-*Vypnout*<br/>
+*off*<br/>
 Umístění, ve kterém se spustí znaky nového přiřazení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -768,7 +768,7 @@ Hodnota znaku, které se mají zkopírovat do řetězce při konstrukci.
 *první*<br/>
 Vstupní iterátor, const_pointer nebo const_iterator adresující první prvek ve zdrojovém rozsahu má být vložen.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor, const_pointer nebo const_iterator adresující pozici jedné za posledním prvkem ve zdrojové oblasti má být vložen.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -894,7 +894,7 @@ Ukazatel verzi vyvolání řetězce s C-style.  Hodnota ukazatele je neplatná p
 
 ### <a name="remarks"></a>Poznámky
 
-Objekty typu String, které patří do třídy šablon basic_string C++\<char > jsou nutně null byl ukončen. Znak null '\0' se používá jako speciální znak v řetězci jazyka C pro označení konce řetězce, ale nemá žádný speciální význam v objektu typu String a může být součástí řetězce stejně jako jakýkoli jiný znak. Je automatického převodu z **const char** <strong>\*</strong> do řetězce, ale řetězec neposkytuje třídy pro automatické převod z řetězce ve stylu jazyka C pro objekty typu **basic_string\<char >**.
+Objekty typu String, do které patří C++ třídy šablon basic_string\<char > jsou nutně null byl ukončen. Znak null '\0' se používá jako speciální znak v řetězci jazyka C pro označení konce řetězce, ale nemá žádný speciální význam v objektu typu String a může být součástí řetězce stejně jako jakýkoli jiný znak. Je automatického převodu z **const char** <strong>\*</strong> do řetězce, ale řetězec neposkytuje třídy pro automatické převod z řetězce ve stylu jazyka C pro objekty typu **basic_string\<char >**.
 
 Vráceného řetězce ve stylu jazyka C se nesmí upravovat, protože to může zneplatnit má ukazatel na řetězec, nebo odstranit, protože řetězec má omezenou životnost a vlastní řetězec třídy.
 
@@ -1590,7 +1590,7 @@ size_type _Copy_s(
 
 ### <a name="parameters"></a>Parametry
 
-*cíl*<br/>
+*dest*<br/>
 Znak cílového pole, do kterého mají být zkopírovány prvky.
 
 *dest_size*<br/>
@@ -1670,7 +1670,7 @@ Ukazatel na první prvek pole obsahující řetězce, nebo pro prázdné pole, n
 
 ### <a name="remarks"></a>Poznámky
 
-Objekty typu String, které patří do třídy šablon basic_string C++ \<char > jsou nutně null byl ukončen. Návratový typ pro `data` není platný řetězec C, protože žádný znak null získá připojen. Znak null '\0' se používá jako speciální znak v řetězci jazyka C pro označení konce řetězce, ale nemá žádný speciální význam v objektu typu String a může být součástí objektu string stejně jako jakýkoli jiný znak.
+Objekty typu String, do které patří C++ třídy šablon basic_string \<char > jsou nutně null byl ukončen. Návratový typ pro `data` není platný řetězec C, protože žádný znak null získá připojen. Znak null '\0' se používá jako speciální znak v řetězci jazyka C pro označení konce řetězce, ale nemá žádný speciální význam v objektu typu String a může být součástí objektu string stejně jako jakýkoli jiný znak.
 
 Je automatického převodu z **const char** <strong>\*</strong> do řetězce, ale řetězec neposkytuje třídy pro automatické převod z řetězce ve stylu jazyka C pro objekty typu **basic_string \<char >**.
 
@@ -1913,7 +1913,7 @@ basic_string<CharType, Traits, Allocator>& erase(
 *první*<br/>
 Iterátor adresuje umístění prvního prvku v rozsahu jsou vymazány.
 
-*poslední*<br/>
+*last*<br/>
 Iterátor adresuje umístění jedno místo za posledním prvkem v rozsahu jsou vymazány.
 
 *_It*<br/>
@@ -3049,7 +3049,7 @@ Iterátor adresující pozici, za které má být vložen znak.
 *první*<br/>
 Vstupní iterátor, const_pointer nebo const_iterator adresující první prvek ve zdrojovém rozsahu má být vložen.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor, const_pointer nebo const_iterator adresující pozici jedné za posledním prvkem ve zdrojové oblasti má být vložen.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3951,7 +3951,7 @@ Iterátor adresující poslední znak v řetězci operand odebrána.
 *první*<br/>
 Iterátoru, const_pointer nebo const_iterator adresující první znak ke zkopírování v řetězci parametr.
 
-*poslední*<br/>
+*last*<br/>
 Iterátoru, const_pointer nebo const_iterator adresující poslední znak ke zkopírování v řetězci parametr.
 
 *Počet*<br/>
@@ -4140,7 +4140,7 @@ The result of s7o.replace (IterF3 ,IterL3 ,IterF4 ,IterL4)
 is the string: OPPOOOO.
 ```
 
-## <a name="reserve"></a>  basic_string::Reserve
+## <a name="reserve"></a>  basic_string::reserve
 
 Nastaví kapacitu řetězce na číslo větší, než zadané číslo.
 

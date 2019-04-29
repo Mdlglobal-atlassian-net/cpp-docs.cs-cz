@@ -7,11 +7,11 @@ helpviewer_keywords:
 - vector<bool> reference class
 ms.assetid: f27854f9-0ef0-4e7e-ad2e-cd53b6cb3334
 ms.openlocfilehash: 7930c1cd93cd05a752d4997b9480c766ee26bd99
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407715"
 ---
 # <a name="vectorltboolgtreference-class"></a>vektor&lt;bool&gt;:: reference – třída
 
@@ -44,6 +44,6 @@ bool& refb = vb[1];   // conversion error - do not use
 
 ## <a name="see-also"></a>Viz také:
 
-[\<vektor >](../standard-library/vector.md)<br/>
+[\<vector>](../standard-library/vector.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

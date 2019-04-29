@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::RuntimeClassBaseT::GetImplementedIIDS method
 ms.assetid: a62775fb-3359-4f45-9ff1-c07fa8da464b
 ms.openlocfilehash: 5d93b3e86e7ba105a42ccbedbbf44c51ada97bbd
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403162"
 ---
 # <a name="runtimeclassbaset-structure"></a>RuntimeClassBaseT – struktura
 
@@ -42,7 +42,7 @@ Poskytuje pomocné metody pro `QueryInterface` operace a získat ID rozhraní.
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-Name                                                         | Popis
+Název                                                         | Popis
 ------------------------------------------------------------ | -----------------------------------------------------------------------------
 [RuntimeClassBaseT::AsIID](#asiid)                           | Načte ukazatel na ID zadané rozhraní.
 [Runtimeclassbaset::getimplementediids –](#getimplementediids) | Načte pole ID, které jsou implementovány pomocí zadaného typu rozhraní.

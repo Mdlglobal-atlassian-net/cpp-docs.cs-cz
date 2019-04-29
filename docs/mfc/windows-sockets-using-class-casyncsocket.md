@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Windows Sockets [MFC], converting Unicode and MBCS strings
 ms.assetid: 825dae17-7c1b-4b86-8d6c-da7f1afb5d8d
 ms.openlocfilehash: 51274791393d95517bd8de5ae7248dc634018037
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399561"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets: Použití třídy CAsyncSocket
 
@@ -103,9 +103,9 @@ Bez ohledu na tyto problémy třídy `CAsycnSocket` může být správnou volbou
 
 Další informace naleznete v tématu:
 
-- [Windows Sockets: Background](../mfc/windows-sockets-background.md)
+- [Windows Sockets: Podrobnosti](../mfc/windows-sockets-background.md)
 
-- [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: Sokety datového proudu](../mfc/windows-sockets-stream-sockets.md)
 
 - [Windows Sockets: Sokety datagramu](../mfc/windows-sockets-datagram-sockets.md)
 

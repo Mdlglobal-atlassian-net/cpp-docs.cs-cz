@@ -95,11 +95,11 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
 ms.openlocfilehash: 581652ea39d0729079666dc675b7214b4b3a4da3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62414175"
 ---
 # <a name="basicstreambuf-class"></a>basic_streambuf – třída
 
@@ -179,42 +179,42 @@ Objekt třídy `basic_streambuf` <  `Elem`, `Tr`> ukládá šest ukazatele popsa
 |Členská funkce|Popis|
 |-|-|
 |[eback –](#eback)|Chráněné funkce, která vrací ukazatel na začátku vstupní vyrovnávací paměť.|
-|[egptr –](#egptr)|Chráněné funkce vracející ukazatel právě za koncem vstupní vyrovnávací paměť.|
-|[epptr –](#epptr)|Chráněné funkce, která vrací ukazatel právě za koncem výstupní vyrovnávací paměť.|
-|[gbump –](#gbump)|Chráněné funkce, která přidá `count` další ukazatele pro vstupní vyrovnávací paměť.|
-|[getloc –](#getloc)|Získá `basic_streambuf` objektu národního prostředí.|
-|[gptr –](#gptr)|Chráněné funkce, která vrací ukazatel na další prvek vstupní vyrovnávací paměť.|
-|[imbue –](#imbue)|Chráněná, virtuální funkce volány [pubimbue –](#pubimbue).|
-|[in_avail –](#in_avail)|Vrátí počet prvků, které jsou připravené ke čtení z vyrovnávací paměti.|
-|[přetečení](#overflow)|Chráněné virtuální funkce, která může být volána při vložení nového znaku do plné vyrovnávací paměti.|
-|[pbackfail –](#pbackfail)|Chráněná virtuální členská funkce, který se pokusí vrátit elementu do vstupního datového proudu, a pak si všechno aktuálního elementu (ukazuje další ukazatel).|
+|[egptr](#egptr)|Chráněné funkce vracející ukazatel právě za koncem vstupní vyrovnávací paměť.|
+|[epptr](#epptr)|Chráněné funkce, která vrací ukazatel právě za koncem výstupní vyrovnávací paměť.|
+|[gbump](#gbump)|Chráněné funkce, která přidá `count` další ukazatele pro vstupní vyrovnávací paměť.|
+|[getloc](#getloc)|Získá `basic_streambuf` objektu národního prostředí.|
+|[gptr](#gptr)|Chráněné funkce, která vrací ukazatel na další prvek vstupní vyrovnávací paměť.|
+|[imbue](#imbue)|Chráněná, virtuální funkce volány [pubimbue –](#pubimbue).|
+|[in_avail](#in_avail)|Vrátí počet prvků, které jsou připravené ke čtení z vyrovnávací paměti.|
+|[overflow](#overflow)|Chráněné virtuální funkce, která může být volána při vložení nového znaku do plné vyrovnávací paměti.|
+|[pbackfail](#pbackfail)|Chráněná virtuální členská funkce, který se pokusí vrátit elementu do vstupního datového proudu, a pak si všechno aktuálního elementu (ukazuje další ukazatel).|
 |[pbase](#pbase)|Chráněné funkce, která vrací ukazatel na začátku výstupní vyrovnávací paměť.|
-|[pbump –](#pbump)|Chráněné funkce, která přidá `count` další ukazatele pro výstupní vyrovnávací paměť.|
+|[pbump](#pbump)|Chráněné funkce, která přidá `count` další ukazatele pro výstupní vyrovnávací paměť.|
 |[pptr](#pptr)|Chráněné funkce, která vrací ukazatel na další prvek výstupní vyrovnávací paměť.|
-|[pubimbue –](#pubimbue)|Nastaví `basic_streambuf` objektu národního prostředí.|
-|[pubseekoff –](#pubseekoff)|Volání [seekoff –](#seekoff), chránit virtuální funkce, která je přepsání v odvozené třídě.|
+|[pubimbue](#pubimbue)|Nastaví `basic_streambuf` objektu národního prostředí.|
+|[pubseekoff](#pubseekoff)|Volání [seekoff –](#seekoff), chránit virtuální funkce, která je přepsání v odvozené třídě.|
 |[pubseekpos –](#pubseekpos)|Volání [seekpos –](#seekpos), chránit virtuální funkce, která je přepsání v odvozené třídě a obnoví aktuální pozici ukazatele.|
 |[pubsetbuf](#pubsetbuf)|Volání [setbuf –](#setbuf), chránit virtuální funkce, která je přepsání v odvozené třídě.|
 |[pubsync](#pubsync)|Volání [synchronizace](#sync), chránit virtuální funkce, která je přepsání v odvozené třídě a aktualizuje externí datový proud přidružený k této vyrovnávací paměti.|
-|[sbumpc –](#sbumpc)|Přečte a vrátí aktuální prvek ukazatele datového proudu.|
-|[seekoff –](#seekoff)|Chráněná virtuální členská funkce se pokusí změnit aktuální pozice řízené datových proudů.|
-|[seekpos –](#seekpos)|Chráněná virtuální členská funkce se pokusí změnit aktuální pozice řízené datových proudů.|
+|[sbumpc](#sbumpc)|Přečte a vrátí aktuální prvek ukazatele datového proudu.|
+|[seekoff](#seekoff)|Chráněná virtuální členská funkce se pokusí změnit aktuální pozice řízené datových proudů.|
+|[seekpos](#seekpos)|Chráněná virtuální členská funkce se pokusí změnit aktuální pozice řízené datových proudů.|
 |[setbuf](#setbuf)|Chráněná virtuální členská funkce se provede konkrétní operace pro každou odvozené datový proud vyrovnávací paměti.|
-|[setg –](#setg)|Do chráněné funkce, která ukládá `_Gbeg` v ukazateli začátek `_Gnext` v další ukazatele a `_Gend` v koncový ukazatel pro vstupní vyrovnávací paměť.|
-|[setp –](#setp)|Do chráněné funkce, která ukládá `_Pbeg` v ukazateli na začátku a `_Pend` v koncový ukazatel do vyrovnávací paměti výstupních.|
-|[sgetc –](#sgetc)|Vrátí aktuální prvek beze změny pozice v proudu.|
+|[setg](#setg)|Do chráněné funkce, která ukládá `_Gbeg` v ukazateli začátek `_Gnext` v další ukazatele a `_Gend` v koncový ukazatel pro vstupní vyrovnávací paměť.|
+|[setp](#setp)|Do chráněné funkce, která ukládá `_Pbeg` v ukazateli na začátku a `_Pend` v koncový ukazatel do vyrovnávací paměti výstupních.|
+|[sgetc](#sgetc)|Vrátí aktuální prvek beze změny pozice v proudu.|
 |[sgetn](#sgetn)|Vrátí počet prvků číst.|
-|[showmanyc –](#showmanyc)|Chráněná virtuální členská funkce, která vrátí počet znaků, které může být extrahována ze vstupního datového proudu a ujistěte se, že program nebude podléhat neomezené čekání.|
+|[showmanyc](#showmanyc)|Chráněná virtuální členská funkce, která vrátí počet znaků, které může být extrahována ze vstupního datového proudu a ujistěte se, že program nebude podléhat neomezené čekání.|
 |[snextc](#snextc)|Načte aktuální prvek a vrátí následující element.|
 |[sputbackc](#sputbackc)|Vloží `char_type` v datovém proudu.|
-|[sputc –](#sputc)|Vloží znak do datového proudu.|
+|[sputc](#sputc)|Vloží znak do datového proudu.|
 |[sputn –](#sputn)|Převede řetězec znaků do datového proudu.|
-|[stossc –](#stossc)|Přesunout za aktuální prvek v datovém proudu.|
-|[sungetc –](#sungetc)|Získá znak z datového proudu.|
-|[Prohození](#swap)|Vymění hodnoty v tomto objektu pro hodnoty v zadaných `basic_streambuf` parametru objektu.|
+|[stossc](#stossc)|Přesunout za aktuální prvek v datovém proudu.|
+|[sungetc](#sungetc)|Získá znak z datového proudu.|
+|[swap](#swap)|Vymění hodnoty v tomto objektu pro hodnoty v zadaných `basic_streambuf` parametru objektu.|
 |[sync](#sync)|Chráněné virtuální funkce, který se pokouší synchronizovat řízené datové proudy s jakékoli přidružené externích datových proudů.|
-|[uflow –](#uflow)|Chráněné virtuální funkce, která extrahuje aktuálního elementu ze vstupního datového proudu.|
-|[podtečení](#underflow)|Chráněné virtuální funkce, která extrahuje aktuálního elementu ze vstupního datového proudu.|
+|[uflow](#uflow)|Chráněné virtuální funkce, která extrahuje aktuálního elementu ze vstupního datového proudu.|
+|[underflow](#underflow)|Chráněné virtuální funkce, která extrahuje aktuálního elementu ze vstupního datového proudu.|
 |[xsgetn](#xsgetn)|Chráněné virtuální funkce, která extrahuje prvky ze vstupního datového proudu.|
 |[xsputn –](#xsputn)|Chráněné virtuální funkce, která vloží prvky do výstupního datového proudu.|
 
@@ -1208,7 +1208,7 @@ void swap(basic_streambuf& right);
 
 Chráněný člen funkce vyměňuje s *správné* všechny ukazatele řízení `input buffer` a `output buffer`. Také vymění `right.` [getloc()](#getloc) s `locale` objektu.
 
-## <a name="sync"></a>  basic_streambuf::Sync
+## <a name="sync"></a>  basic_streambuf::sync
 
 Chráněné virtuální funkce, který se pokouší synchronizovat řízené datové proudy s jakékoli přidružené externích datových proudů.
 

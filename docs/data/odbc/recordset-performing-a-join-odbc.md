@@ -11,11 +11,11 @@ helpviewer_keywords:
 - recordsets [C++], joining tables
 ms.assetid: ca720900-a156-4780-bf01-4293633bea64
 ms.openlocfilehash: 9e589f00ec0512794d14accc6bb33c0e7adbd378
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59035410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397723"
 ---
 # <a name="recordset-performing-a-join-odbc"></a>Recordset: Provedení spojení (rozhraní ODBC)
 
@@ -38,6 +38,6 @@ Stejným způsobem můžete spojit více než dvě tabulky srovnáním více pá
 ## <a name="see-also"></a>Viz také:
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset: Deklarování třídy pro předdefinovaný dotaz (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
-[Recordset: Deklarování třídy pro tabulku (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
-[Recordset: Opětovné spuštění dotazu na sadu záznamů (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+[Sada záznamů: Deklarování třídy pro předdefinovaný dotaz (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
+[Sada záznamů: Deklarování třídy pro tabulku (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[Sada záznamů: Opětovné spuštění dotazu na sadu záznamů (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)

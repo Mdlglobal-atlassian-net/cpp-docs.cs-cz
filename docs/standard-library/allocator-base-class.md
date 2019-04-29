@@ -39,11 +39,11 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
 ms.openlocfilehash: 59d5834b941791a659815ff0a03f1c68c8ce68bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411068"
 ---
 # <a name="allocatorbase-class"></a>allocator_base – třída
 
@@ -67,7 +67,7 @@ class allocator_base
 
 |Konstruktor|Popis|
 |-|-|
-|[allocator_base –](#allocator_base)|Vytvoří objekt typu `allocator_base`.|
+|[allocator_base](#allocator_base)|Vytvoří objekt typu `allocator_base`.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -76,7 +76,7 @@ class allocator_base
 |[const_pointer](#const_pointer)|Typ, který poskytuje konstantní ukazatel na typ objektu spravovaného pomocí přidělujícího modulu.|
 |[const_reference](#const_reference)|Typ, který poskytuje konstantní odkaz na typ objektu spravovaného pomocí přidělujícího modulu.|
 |[difference_type](#difference_type)|Celočíselný typ se znaménkem, které mohou představovat rozdíl mezi hodnotami ukazatelů na typ objektu spravovaného pomocí přidělujícího modulu.|
-|[Ukazatel](#pointer)|Typ, který poskytuje ukazatel na typ objektu spravovaného pomocí přidělujícího modulu.|
+|[pointer](#pointer)|Typ, který poskytuje ukazatel na typ objektu spravovaného pomocí přidělujícího modulu.|
 |[Referenční dokumentace](#reference)|Typ, který poskytuje odkaz na typ objektu spravovaného pomocí přidělujícího modulu.|
 |[size_type](#size_type)|Bez znaménka celočíselného typu, který může představovat Délka libovolného pořadí, které objekt třídy šablony `allocator_base` můžete přidělit.|
 |[value_type](#value_type)|Typ, který je spravovaný nástrojem přidělujícího modulu.|
@@ -86,12 +86,12 @@ class allocator_base
 |Členská funkce|Popis|
 |-|-|
 |[_Charalloc](#charalloc)|Alokují prostor pro pole typu **char**.|
-|[_Chardealloc –](#chardealloc)|Uvolňuje úložiště pro pole obsahující prvky typu **char**.|
-|[Adresa](#address)|Vyhledá adresu objektu, jehož hodnota je určena.|
+|[_Chardealloc](#chardealloc)|Uvolňuje úložiště pro pole obsahující prvky typu **char**.|
+|[address](#address)|Vyhledá adresu objektu, jehož hodnota je určena.|
 |[allocate](#allocate)|Přiděluje blok paměti dostatečně velký pro uložení alespoň nějaké zadaný počet prvků.|
-|[Konstrukce](#construct)|Vytvoří konkrétní typ objektu na zadané adrese, který je inicializován se zadanou hodnotou.|
+|[construct](#construct)|Vytvoří konkrétní typ objektu na zadané adrese, který je inicializován se zadanou hodnotou.|
 |[zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů z úložiště počínaje na určené pozici.|
-|[zrušení](#destroy)|Volá destruktor objekty bez rušení přidělení paměti uložení objektu.|
+|[destroy](#destroy)|Volá destruktor objekty bez rušení přidělení paměti uložení objektu.|
 |[max_size](#max_size)|Vrátí počet prvků typu *typ* , které by mohly být přiděleny v objektu alokátoru třídy předtím, než se využilo volné paměti.|
 
 ## <a name="requirements"></a>Požadavky
@@ -341,4 +341,4 @@ typedef Type value_type;
 
 ## <a name="see-also"></a>Viz také:
 
-[\<alokátory: >](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)<br/>

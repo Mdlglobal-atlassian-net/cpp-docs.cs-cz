@@ -100,11 +100,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: c3cfc69b-04c6-42ae-a30e-0eda953fe883
 ms.openlocfilehash: fb7db25785d041786f5dfc0d2c3986a76d776d5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404413"
 ---
 # <a name="hashmap-stlclr"></a>hash_map (STL/CLR)
 
@@ -580,7 +580,7 @@ size_type count(key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
@@ -793,7 +793,7 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
@@ -859,10 +859,10 @@ bool erase(key_type key)
 *první*<br/>
 Začátek rozsahu vymazat.
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče vymazat.
 
-*poslední*<br/>
+*last*<br/>
 Konec rozsahu vymazat.
 
 *kde*<br/>
@@ -947,7 +947,7 @@ iterator find(key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
@@ -1298,7 +1298,7 @@ Začátek rozsahu pro vložení.
 *hashfn*<br/>
 Hash – funkce pro mapování klíčů do kontejnerů.
 
-*poslední*<br/>
+*last*<br/>
 Konec rozsahu pro vložení.
 
 *Před*<br/>
@@ -1564,7 +1564,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *první*<br/>
 Začátek rozsahu pro vložení.
 
-*poslední*<br/>
+*last*<br/>
 Konec rozsahu pro vložení.
 
 *doprava*<br/>
@@ -1957,7 +1957,7 @@ iterator lower_bound(key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
@@ -2016,7 +2016,7 @@ static value_type make_value(key_type key, mapped_type mapped);
 
 #### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče používat.
 
 *Mapovat*<br/>
@@ -2247,7 +2247,7 @@ mapped_type operator[](key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
@@ -2797,7 +2797,7 @@ iterator upper_bound(key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky

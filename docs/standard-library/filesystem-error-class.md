@@ -5,11 +5,11 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 ms.assetid: c53aac27-c1fa-43e4-8967-48ea8ba1f172
 ms.openlocfilehash: add1e0da43a44c35f39c96e8d65e36aeea0d3afb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405154"
 ---
 # <a name="filesystemerror-class"></a>filesystem_error – třída
 
@@ -29,14 +29,14 @@ Tato třída slouží jako základní třída pro všechny výjimky vyvolané oz
 
 |Konstruktor|Popis|
 |-|-|
-|[filesystem_error –](#filesystem_error)|Vytvoří `filesystem_error` zprávy.|
+|[filesystem_error](#filesystem_error)|Vytvoří `filesystem_error` zprávy.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[cesta1](#path1)|Vrátí `mypval1`|
-|[cesta2](#path2)|Vrátí `mypval2`|
+|[path1](#path1)|Vrátí `mypval1`|
+|[path2](#path2)|Vrátí `mypval2`|
 |[Co](#what)|Vrací ukazatel na `NTBS`.|
 
 ## <a name="requirements"></a>Požadavky
@@ -68,7 +68,7 @@ filesystem_error(const string& what_arg,
 *what_arg*<br/>
 Zadaná zpráva.
 
-*ES*<br/>
+*ec*<br/>
 Zadaný kód chyby.
 
 *mypval1*<br/>
@@ -93,7 +93,7 @@ const path& path1() const noexcept;
 const path& path2() const noexcept;
 ```
 
-## <a name="what"></a> filesystem_error::What
+## <a name="what"></a> filesystem_error::what
 
 Členská funkce vrátí ukazatel `NTBS`, pokud možno skládá z `runtime_error::what()`, `system_error::what()`, `mymesg`, `mypval1.native_string()`, a `mypval2.native_string()`.
 
@@ -105,5 +105,5 @@ const char *what() const noexcept;
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [system_error – třída](../standard-library/system-error-class.md)<br/>
-[\<FileSystem >](../standard-library/filesystem.md)<br/>
-[\<výjimky >](../standard-library/exception.md)<br/>
+[\<filesystem>](../standard-library/filesystem.md)<br/>
+[\<exception>](../standard-library/exception.md)<br/>

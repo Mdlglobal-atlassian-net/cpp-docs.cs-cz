@@ -8,11 +8,11 @@ helpviewer_keywords:
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
 ms.openlocfilehash: b6990dba20643b35dde36a492d40c3e3e76ae0b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413759"
 ---
 # <a name="enableif-class"></a>enable_if – třída
 
@@ -50,7 +50,7 @@ V jazyce C++, selhání nahrazování parametrů šablony není chyba sám o sob
 
 Tady jsou čtyři ukázkové scénáře:
 
-- Scénář 1: Zabalení návratový typ funkce:
+- Scénář 1: Obtékání návratový typ funkce:
 
 ```cpp
     template <your_stuff>
@@ -64,7 +64,7 @@ yourfunction(args) {// ...
 }
 ```
 
-- Scénář 2: Přidání parametr funkce, která má výchozí argument:
+- Scénář 2: Přidání funkce parametr, který má výchozí argument:
 
 ```cpp
     template <your_stuff>
@@ -80,7 +80,7 @@ your_return_type_if_present
 rest_of_function_declaration_goes_here
 ```
 
-- Scénář 4: Pokud má vaše funkce bez použití šablon argument, můžete zalomit její typ:
+- Scénář 4: Pokud má vaše funkce bez použití šablon argument, můžete zabalit její typ:
 
 ```cpp
     template <typename T>
@@ -117,7 +117,7 @@ Scénář 4 funguje v konstruktory, které nemají návratové typy a tím řeš
 
 ## <a name="example"></a>Příklad
 
-Tento příklad vysvětluje, jak funkce standardní knihovny C++ šablony [std::make_pair()](../standard-library/utility-functions.md#make_pair) využívá `enable_if`.
+Tento příklad vysvětluje, jak C++ funkce standardní knihovny šablon [std::make_pair()](../standard-library/utility-functions.md#make_pair) využívá `enable_if`.
 
 ```cpp
 void func(const pair<int, int>&);

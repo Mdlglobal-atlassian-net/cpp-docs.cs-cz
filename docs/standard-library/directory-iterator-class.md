@@ -26,11 +26,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_iterator::operator-&gt;
 - std::experimental::filesystem::directory_iterator::operator++
 ms.openlocfilehash: 6763f2a96b771fadbec311cf8740352fff53e29a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413843"
 ---
 # <a name="directoryiterator-class"></a>directory_iterator – třída
 
@@ -56,7 +56,7 @@ class directory_iterator;
 
 |Konstruktor|Popis|
 |-|-|
-|[directory_iterator –](#directory_iterator)|Sestaví vstupní iterátor, který pořadí prostřednictvím názvy souborů v adresáři.|
+|[directory_iterator](#directory_iterator)|Sestaví vstupní iterátor, který pořadí prostřednictvím názvy souborů v adresáři.|
 
 ### <a name="member-functions"></a>Členské funkce
 
@@ -72,7 +72,7 @@ class directory_iterator;
 |[operátor =](#op_as)|Operátory přiřazení nastavený na výchozí hodnotu člena chovat dle očekávání.|
 |[operator==](#op_eq)|Vrátí **true** pouze tehdy, pokud obě `*this` a *správné* koncová sekvence iterátory nebo obojí jsou není end z pořadí – iterátory.|
 |[Operator *](#op_star)|Vrátí `myentry`.|
-|[Operator ->](#op_cast)|Vrátí `&**this`.|
+|[operator->](#op_cast)|Vrátí `&**this`.|
 |[Operator ++](#op_increment)|Volání `increment()`, vrátí `*this`, nebo vytvoří kopii tohoto objektu, volání `increment()`, pak vrátí kopii.|
 
 ## <a name="requirements"></a>Požadavky
@@ -101,10 +101,10 @@ directory_iterator(directory_iterator&&) noexcept = default;
 *pval*<br/>
 Cesta k názvu uloženého souboru.
 
-*ES*<br/>
+*ec*<br/>
 Stavový kód chyby.
 
-*directory_iterator –*<br/>
+*directory_iterator*<br/>
 Uložený objekt.
 
 ## <a name="increment"></a> directory_iterator::Increment –
@@ -188,5 +188,5 @@ Počet přírůstků.
 ## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<FileSystem >](../standard-library/filesystem.md)<br/>
+[\<filesystem>](../standard-library/filesystem.md)<br/>
 [Navigace v systému souborů (C++)](../standard-library/file-system-navigation.md)<br/>

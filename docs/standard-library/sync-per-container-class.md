@@ -8,11 +8,11 @@ helpviewer_keywords:
 - sync_per_container class
 ms.assetid: 0b4b2904-b668-4d94-a422-d4f919cbffab
 ms.openlocfilehash: 641595f663c382129a40ce503ebdb789f8042cf0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412160"
 ---
 # <a name="syncpercontainer-class"></a>sync_per_container – třída
 
@@ -44,7 +44,7 @@ class sync_per_container
 
 **Namespace:** stdext
 
-## <a name="equals"></a>  sync_per_container::Equals
+## <a name="equals"></a>  sync_per_container::equals
 
 Porovná rovnost dvou mezipamětí.
 
@@ -67,4 +67,4 @@ bool equals(const sync_per_container<Cache>& Other) const;
 
 ## <a name="see-also"></a>Viz také:
 
-[\<alokátory: >](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)<br/>

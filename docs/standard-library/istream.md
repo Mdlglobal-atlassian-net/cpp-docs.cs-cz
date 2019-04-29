@@ -1,5 +1,5 @@
 ---
-title: '&lt;IStream&gt;'
+title: '&lt;istream&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - istream/std::<istream>
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
 ms.openlocfilehash: 2e39c0de5b11c9aa0a4c69f0142841469ef798c7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413278"
 ---
-# <a name="ltistreamgt"></a>&lt;IStream&gt;
+# <a name="ltistreamgt"></a>&lt;istream&gt;
 
 Definuje basic_istream – třída šablony, která zprostředkovává extrakce pro iostreams, a basic_iostream – třída šablony, která zprostředkovává vložení a extrakce. Záhlaví definuje také související manipulátor. Tento soubor hlavičky je obvykle součástí za vás pomocí jiné záhlaví iostreams; obvykle nemusí obsahovat přímo.
 
@@ -29,8 +29,8 @@ Definuje basic_istream – třída šablony, která zprostředkovává extrakce 
 
 |Název typu|Popis|
 |-|-|
-|[iostream –](../standard-library/istream-typedefs.md#iostream)|Typ `basic_iostream` specializované na **char**.|
-|[IStream](../standard-library/istream-typedefs.md#istream)|Typ `basic_istream` specializované na **char**.|
+|[iostream](../standard-library/istream-typedefs.md#iostream)|Typ `basic_iostream` specializované na **char**.|
+|[istream](../standard-library/istream-typedefs.md#istream)|Typ `basic_istream` specializované na **char**.|
 |[wiostream](../standard-library/istream-typedefs.md#wiostream)|Typ `basic_iostream` specializované na **wchar**.|
 |[wistream](../standard-library/istream-typedefs.md#wistream)|Typ `basic_istream` specializované na **wchar**.|
 
@@ -39,13 +39,13 @@ Definuje basic_istream – třída šablony, která zprostředkovává extrakce 
 |||
 |-|-|
 |[ws](../standard-library/istream-functions.md#ws)|Přeskočí prázdné místo v datovém proudu.|
-|[Prohození](../standard-library/istream-functions.md#istream_swap)|Vyměňuje dva objekty stream.|
+|[swap](../standard-library/istream-functions.md#istream_swap)|Vyměňuje dva objekty stream.|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[operátor >>](../standard-library/istream-operators.md#op_gt_gt)|Extrahuje z datového proudu znaků a řetězce.|
+|[operator>>](../standard-library/istream-operators.md#op_gt_gt)|Extrahuje z datového proudu znaků a řetězce.|
 
 ### <a name="classes"></a>Třídy
 

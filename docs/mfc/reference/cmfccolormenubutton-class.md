@@ -45,11 +45,11 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
 ms.openlocfilehash: 5fccfbca9fe8c31070f3eb9f208c09cb3722b9b9
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58780220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403721"
 ---
 # <a name="cmfccolormenubutton-class"></a>Cmfccolormenubutton – třída
 
@@ -65,13 +65,13 @@ class CMFCColorMenuButton : public CMFCToolBarMenuButton
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorMenuButton::CMFCColorMenuButton](#cmfccolormenubutton)|Vytvoří `CMFCColorMenuButton` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorMenuButton::EnableAutomaticButton](#enableautomaticbutton)|Povolí nebo zakáže "automatické" tlačítko, které je umístěn nad regulární barvy tlačítka. (Standardní systém automatické tlačítko má název **automatické**.)|
 |[CMFCColorMenuButton::EnableDocumentColors](#enabledocumentcolors)|Umožňuje zobrazovat konkrétní dokumenty barvy místo systémových barev.|
@@ -89,7 +89,7 @@ class CMFCColorMenuButton : public CMFCToolBarMenuButton
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorMenuButton::CopyFrom](#copyfrom)|Zkopíruje jiné tlačítko panelu nástrojů na tlačítko aktuální.|
 |[CMFCColorMenuButton::CreatePopupMenu](#createpopupmenu)|Vytvoří dialogové okno Výběr barvy.|

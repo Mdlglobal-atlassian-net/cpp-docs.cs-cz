@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3505
 ms.assetid: ed73c99e-93a1-4f3a-bac7-ba7ed5d836e4
 ms.openlocfilehash: 5730102371d00ebaf3ae05fdefb70184b58d7c18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400328"
 ---
 # <a name="compiler-error-c3505"></a>Chyba kompilátoru C3505
 
@@ -23,6 +23,6 @@ Můžete tuto chybu vyřešit vytvořením 32bitové a 64bitové verze knihovny 
 
 Další informace najdete v tématu,
 
-- [Postupy: Povolení 64bitové sady nástrojů Visual C++ v příkazovém řádku](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
+- [Postupy: Povolení 64bitové sady nástrojů Visual C++ na příkazovém řádku](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
 
 - [Postupy: Konfigurace projektů Visual C++ pro 64bitové platformy x64](../../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)

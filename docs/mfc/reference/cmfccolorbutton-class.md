@@ -45,11 +45,11 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
 ms.openlocfilehash: c0c9ad79342f2013aa071240c684fce168e55c9e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58779999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403747"
 ---
 # <a name="cmfccolorbutton-class"></a>Cmfccolorbutton – třída
 
@@ -65,13 +65,13 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorButton::CMFCColorButton](#cmfccolorbutton)|Sestaví nový `CMFCColorButton` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorButton::EnableAutomaticButton](#enableautomaticbutton)|Povolí nebo zakáže "automatické" tlačítko, které je umístěn nad regulární barvy tlačítka. (Standardní systém automatické tlačítko má název **automatické**.)|
 |[CMFCColorButton::EnableOtherButton](#enableotherbutton)|Povolí nebo zakáže "other" tlačítko, který je umístěn pod regulární barvy tlačítka. (Standardní systém je označené jako "other" tlačítko **Další barvy**.)|
@@ -86,7 +86,7 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorButton::IsDrawXPTheme](#isdrawxptheme)|Určuje, zda aktuální barva – tlačítko se zobrazí v vizuálního stylu Windows XP.|
 |[CMFCColorButton::OnDraw](#ondraw)|Volá se rozhraním pro zobrazení obrázku tlačítka.|
@@ -98,7 +98,7 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="data-members"></a>Datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`m_bAltColorDlg`|Logická hodnota. Při hodnotě TRUE se zobrazí rozhraní [cmfccolordialog –](../../mfc/reference/cmfccolordialog-class.md) Barva dialogové okno při *jiných* po kliknutí na tlačítko, nebo pokud je hodnota FALSE, systém barvy dialogové okno. Výchozí hodnota je TRUE. Další informace najdete v tématu [CMFCColorButton::EnableOtherButton](#enableotherbutton).|
 |`m_bAutoSetFocus`|Logická hodnota. Při hodnotě TRUE se rozhraní nastaví fokus v nabídce barvy v případě, že v nabídce se zobrazí, nebo pokud je hodnota FALSE, zaměřuje nezmění. Výchozí hodnota je TRUE.|

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - multithreading [C++]
 ms.assetid: 24425b1f-5031-4c6b-aac7-017115a40e7c
 ms.openlocfilehash: 649e26c3f0704dfd6740b1a250613545e29316a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407741"
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>Podpora více vláken ve starším kódu (Visual C++)
 
@@ -40,7 +40,7 @@ Představuje vlákno provádění v rámci aplikace.
 [CSyncObject](../mfc/reference/csyncobject-class.md)<br/>
 Popisuje čistě virtuální třídu, která poskytuje funkčnost běžnou pro synchronizaci objektů v systému Win32.
 
-[CSemaphore –](../mfc/reference/csemaphore-class.md)<br/>
+[CSemaphore](../mfc/reference/csemaphore-class.md)<br/>
 Představuje semafor, což je synchronizační objekt, který umožňuje omezenému počtu vláken v jednom nebo více procesech přistupovat k prostředku.
 
 [CMutex](../mfc/reference/cmutex-class.md)<br/>

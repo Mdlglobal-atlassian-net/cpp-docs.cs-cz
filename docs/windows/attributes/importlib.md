@@ -7,11 +7,11 @@ helpviewer_keywords:
 - importlib attribute
 ms.assetid: f129e459-b8d3-4aca-a0bc-ee53e18b62ed
 ms.openlocfilehash: 29c7df8fbedbd107a9bb0b05466addc4672fc555
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59041442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409375"
 ---
 # <a name="importlib"></a>importlib
 
@@ -51,8 +51,8 @@ Následující kód ukazuje příklad, jak používat **importlib**:
 |-|-|
 |**Platí pro**|Kdekoli|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádný|
+|**Vyžadované atributy**|Žádný|
+|**Neplatné atributy**|Žádné|
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 

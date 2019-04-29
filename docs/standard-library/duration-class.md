@@ -12,11 +12,11 @@ ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
 helpviewer_keywords:
 - std::chrono [C++], duration
 ms.openlocfilehash: 49c68b1650ced36ebcf949ae2594508480e15136
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413798"
 ---
 # <a name="duration-class"></a>duration – třída
 
@@ -41,7 +41,7 @@ Argument šablony `Rep` popisuje typ, který se používá k ukládání počtu 
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |DURATION::period – Typedef|Představuje synonymum pro parametr šablony `Period`.|
 |DURATION::rep – Typedef|Představuje synonymum pro parametr šablony `Rep`.|
@@ -54,7 +54,7 @@ Argument šablony `Rep` popisuje typ, který se používá k ukládání počtu 
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[Počet](#count)|Vrátí počet taktů v časovém intervalu.|
 |[max](#max)|Statické. Vrátí maximální povolenou hodnotou parametru šablony `Ref`.|
@@ -63,7 +63,7 @@ Argument šablony `Rep` popisuje typ, který se používá k ukládání počtu 
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[DURATION::Operator-](#operator-)|Vrátí kopii objektu `duration` společně s negovaným čítačem značek.|
 |[DURATION::Operator--](#operator--)|Sníží počet uložených impulzů.|

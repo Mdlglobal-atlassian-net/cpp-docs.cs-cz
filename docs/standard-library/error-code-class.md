@@ -20,11 +20,11 @@ helpviewer_keywords:
 - std::error_code::message
 ms.assetid: c09b4a96-cb14-4281-a319-63543f9b2b4a
 ms.openlocfilehash: f4d0bc2c2922374d27bba3c0693e50f7930dbe67
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413694"
 ---
 # <a name="errorcode-class"></a>error_code – třída
 
@@ -44,7 +44,7 @@ Objekt typu `error_code` třída uchovává chybovou hodnotu kód a ukazatele na
 
 |Konstruktor|Popis|
 |-|-|
-|[error_code –](#error_code)|Vytvoří objekt typu `error_code`.|
+|[error_code](#error_code)|Vytvoří objekt typu `error_code`.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -56,9 +56,9 @@ Objekt typu `error_code` třída uchovává chybovou hodnotu kód a ukazatele na
 
 |Členská funkce|Popis|
 |-|-|
-|[přiřazení](#assign)|Hodnota kódu chyby a kategorie služby přiřadí chybový kód.|
+|[assign](#assign)|Hodnota kódu chyby a kategorie služby přiřadí chybový kód.|
 |[Kategorie](#category)|Vrací kategorie chyby.|
-|[Vymazat](#clear)|Vymaže hodnota kódu chyby a kategorie.|
+|[clear](#clear)|Vymaže hodnota kódu chyby a kategorie.|
 |[default_error_condition](#default_error_condition)|Vrátí výchozí chybový stav.|
 |[message](#message)|Vrátí název kód chyby.|
 

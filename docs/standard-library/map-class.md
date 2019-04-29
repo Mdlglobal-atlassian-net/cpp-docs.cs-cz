@@ -89,11 +89,11 @@ helpviewer_keywords:
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
 ms.openlocfilehash: 52a24bb2372cc7f22797ae7122b6659724c47b55
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413005"
 ---
 # <a name="map-class"></a>map – třída
 
@@ -174,11 +174,11 @@ Na mapě Seřadí prvky pomocí volání uloženého objektu funkce typu [key_co
 |[const_reference](#const_reference)|Definice typu odkazu na **const** prvek uložený v objektu map pro čtení a provádění **const** operace.|
 |[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může přečíst jakýkoli **const** prvek v objektu map.|
 |[difference_type](#difference_type)|Definice typu celého čísla se znaménkem pro počet prvků objektu map v rozsahu mezi prvky, na které odkazují iterátory.|
-|[iterátor](#iterator)|Definice typu obousměrného iterátoru, který může číst nebo upravovat libovolný prvek v objektu map.|
+|[iterator](#iterator)|Definice typu obousměrného iterátoru, který může číst nebo upravovat libovolný prvek v objektu map.|
 |[key_compare](#key_compare)|Definice typu poskytující objekt funkce, který může porovnat dva klíče řazení pro určení relativního pořadí dvou prvků v objektu map.|
 |[key_type](#key_type)|Definice typu klíče řazení uloženého v jednotlivých prvcích objektu map.|
 |[mapped_type](#mapped_type)|Definice typu dat uložených v jednotlivých prvcích objektu map.|
-|[Ukazatel](#pointer)|Typedef pro ukazatel **const** prvku v objektu map.|
+|[pointer](#pointer)|Typedef pro ukazatel **const** prvku v objektu map.|
 |[Referenční dokumentace](#reference)|Definice typu odkazu na prvek uložený v objektu map.|
 |[reverse_iterator](#reverse_iterator)|Definice typu obousměrného iterátoru, který může číst nebo upravovat prvek v obráceném objektu map.|
 |[size_type](#size_type)|Celočíselná definice typu bez znaménka pro počet prvků v objektu map.|
@@ -192,12 +192,12 @@ Na mapě Seřadí prvky pomocí volání uloženého objektu funkce typu [key_co
 |[začít](#begin)|Vrátí iterátor odkazující na první prvek v objektu map.|
 |[cbegin](#cbegin)|Vrátí konstantní iterátor odkazující na první prvek v objektu map.|
 |[cend](#cend)|Vrátí konstantní iterátor za koncem.|
-|[Vymazat](#clear)|Odstraní všechny prvky objektu map.|
+|[clear](#clear)|Odstraní všechny prvky objektu map.|
 |[Počet](#count)|Vrátí počet prvků objektu map, jejichž klíč odpovídá klíči zadaného parametrem.|
 |[crbegin](#crbegin)|Vrátí konstantní iterátor, který odkazuje na první prvek v obráceném objektu map.|
-|[crend –](#crend)|Vrátí konstantní iterátor, který odkazuje na umístění za posledním prvkem v převráceném objektu map.|
-|[emplace –](#emplace)|Vloží vytvořený prvek na místo do objektu map.|
-|[emplace_hint –](#emplace_hint)|Vloží vytvořený prvek s náznakem umístění na místo do objektu map.|
+|[crend](#crend)|Vrátí konstantní iterátor, který odkazuje na umístění za posledním prvkem v převráceném objektu map.|
+|[emplace](#emplace)|Vloží vytvořený prvek na místo do objektu map.|
+|[emplace_hint](#emplace_hint)|Vloží vytvořený prvek s náznakem umístění na místo do objektu map.|
 |[prázdný](#empty)|Vrátí **true** Pokud je objekt map prázdný.|
 |[ukončení](#end)|Vrátí iterátor za koncem.|
 |[equal_range](#equal_range)|Vrátí pár iterátorů. První iterátor v páru odkazuje na první prvek v `map` s klíčem, který je větší než zadaný klíč. Druhý iterátor v páru odkazuje na první prvek `map` s klíčem, který je roven nebo větší než tento klíč.|
@@ -208,11 +208,11 @@ Na mapě Seřadí prvky pomocí volání uloženého objektu funkce typu [key_co
 |[key_comp](#key_comp)|Vrátí kopii objektu porovnání, která je použit pro seřazení klíčů v objektu map.|
 |[lower_bound –](#lower_bound)|Vrátí iterátor na první prvek objektu map s hodnotou klíče, který je roven nebo větší než zadaný klíč.|
 |[max_size](#max_size)|Vrátí maximální délku objektu map.|
-|[rbegin –](#rbegin)|Vrátí iterátor odkazující na první prvek v obráceném objektu map.|
+|[rbegin](#rbegin)|Vrátí iterátor odkazující na první prvek v obráceném objektu map.|
 |[rend –](#rend)|Vrátí iterátor, který odkazuje na umístění za posledním prvkem v převráceném objektu map.|
 |[Velikost](#size)|Vrátí počet prvků v objektu map.|
-|[Prohození](#swap)|Zamění prvky dvou objektů map.|
-|[upper_bound –](#upper_bound)|Vrátí iterátor na první prvek objektu map s hodnotou klíče, který je větší než zadaný klíč.|
+|[swap](#swap)|Zamění prvky dvou objektů map.|
+|[upper_bound](#upper_bound)|Vrátí iterátor na první prvek objektu map s hodnotou klíče, který je větší než zadaný klíč.|
 |[value_comp](#value_comp)|Získá kopii objektu porovnání použitého pro seřazení hodnot prvků objektu map.|
 
 ### <a name="operators"></a>Operátory
@@ -255,7 +255,7 @@ const Type& at(const Key& key) const;
 |Parametr|Popis|
 |-|-|
 |Parametr|Popis|
-|*Klíč*|Hodnota klíče k vyhledání.|
+|*key*|Hodnota klíče k vyhledání.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -566,7 +566,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče prvků lze porovnat z mapy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1027,7 +1027,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče argumentu k porovnání s klíči řazení prvek z mapy vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1222,7 +1222,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče k porovnání s klíči řazení prvek z mapy vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1677,7 +1677,7 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče argumentu k porovnání s klíči řazení prvek z mapy vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1999,7 +1999,7 @@ Type& operator[](Key&& key);
 |Parametr|Popis|
 |-|-|
 |Parametr|Popis|
-|*Klíč*|Hodnota klíče prvku, který má být vložen.|
+|*key*|Hodnota klíče prvku, který má být vložen.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2537,7 +2537,7 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče argumentu k porovnání s hodnotou klíče řazení prvek z mapy být vyhledán.
 
 ### <a name="return-value"></a>Návratová hodnota

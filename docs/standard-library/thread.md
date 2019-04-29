@@ -5,11 +5,11 @@ f1_keywords:
 - <thread>
 ms.assetid: 0c858405-4efb-449d-bf76-70d3693c9234
 ms.openlocfilehash: 43fb79ceda6de7409e6f93797ce2f4ff213c43ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411978"
 ---
 # <a name="ltthreadgt"></a>&lt;thread&gt;
 
@@ -48,17 +48,17 @@ Zahrnout standardní hlavička \<vlákna > pro definování třídy **vlákno** 
 |----------|-----------------|
 |[get_id](../standard-library/thread-functions.md#get_id)|Jednoznačně identifikuje aktuální vlákno provádění.|
 |[sleep_for](../standard-library/thread-functions.md#sleep_for)|Blokuje volající vlákno.|
-|[sleep_until –](../standard-library/thread-functions.md#sleep_until)|Blokuje volající vlákno, alespoň do zadané doby.|
-|[Prohození](../standard-library/thread-functions.md#swap)|Vymění dvě stavy **vlákno** objekty.|
+|[sleep_until](../standard-library/thread-functions.md#sleep_until)|Blokuje volající vlákno, alespoň do zadané doby.|
+|[swap](../standard-library/thread-functions.md#swap)|Vymění dvě stavy **vlákno** objekty.|
 |[yield](../standard-library/thread-functions.md#yield)|Signály ke spuštění jiných vláken operačního systému, i v případě, že aktuální vlákno by obvykle i nadále spouštět.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Název|Popis|
 |----------|-----------------|
-|[Operator > = – operátor](../standard-library/thread-operators.md#op_gt_eq)|Určuje, zda jeden `thread::id` objekt je větší než nebo roven jinému.|
+|[operator>= Operator](../standard-library/thread-operators.md#op_gt_eq)|Určuje, zda jeden `thread::id` objekt je větší než nebo roven jinému.|
 |[Operator > – operátor](../standard-library/thread-operators.md#op_gt)|Určuje, zda jeden `thread::id` je větší než jiný objekt.|
-|[Operator < = – operátor](../standard-library/thread-operators.md#op_lt_eq)|Určuje, zda jeden `thread::id` je objekt menší než nebo rovna do jiného.|
+|[operator<= Operator](../standard-library/thread-operators.md#op_lt_eq)|Určuje, zda jeden `thread::id` je objekt menší než nebo rovna do jiného.|
 |[Operator < – operátor](../standard-library/thread-operators.md#op_lt)|Určuje, zda jeden `thread::id` je menší než jiný objekt.|
 |[Operator! = – operátor](../standard-library/thread-operators.md#op_neq)|Porovná dva `thread::id` objekty nerovnost.|
 |[Operator == – operátor](../standard-library/thread-operators.md#op_eq_eq)|Porovná dva `thread::id` objekty pro rovnost.|

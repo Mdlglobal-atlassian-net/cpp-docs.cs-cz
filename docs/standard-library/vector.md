@@ -1,5 +1,5 @@
 ---
-title: '&lt;vektor&gt;'
+title: '&lt;vector&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <vector>
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
 ms.openlocfilehash: 348b5c53ecd3fb7900d03fed7c1209a2c94eeb4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410851"
 ---
-# <a name="ltvectorgt"></a>&lt;vektor&gt;
+# <a name="ltvectorgt"></a>&lt;vector&gt;
 
 Definuje kontejner šablony třídy vektoru a několik podpůrných šablon.
 
@@ -94,7 +94,7 @@ Druhý (vpravo) vektoru v operaci porovnání.
 |[Operator <](../standard-library/vector-operators.md#op_lt)|Testuje, zda je objekt vektoru na levé straně operátoru menší než vektorový objekt na pravé straně.|
 |[– Operátor\<=](../standard-library/vector-operators.md#op_gt_eq)|Testuje, zda je objekt vektoru na levé straně operátoru je menší než nebo rovna hodnotě vektorový objekt na pravé straně.|
 |[operator==](../standard-library/vector-operators.md#op_eq_eq)|Testuje, zda vektorový objekt na levé straně operátoru roven objektu vektoru na pravé straně.|
-|[Operator >](../standard-library/vector-operators.md#op_gt)|Testuje, zda je objekt vektoru na levé straně operátoru větší než vektorový objekt na pravé straně.|
+|[operator>](../standard-library/vector-operators.md#op_gt)|Testuje, zda je objekt vektoru na levé straně operátoru větší než vektorový objekt na pravé straně.|
 |[operator>=](../standard-library/vector-operators.md#op_gt_eq)|Testuje, zda vektorový objekt na levé straně operátoru větší než nebo rovna hodnotě vektorový objekt na pravé straně.|
 
 ### <a name="classes"></a>Třídy

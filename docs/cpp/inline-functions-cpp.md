@@ -13,11 +13,11 @@ helpviewer_keywords:
 - inline functions [C++], class members
 ms.assetid: 355f120c-2847-4608-ac04-8dda18ffe10c
 ms.openlocfilehash: 55cf598877c2447e0f80e783b53b290699042b8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400588"
 ---
 # <a name="inline-functions-c"></a>Vložené funkce (C++)
 
@@ -78,7 +78,7 @@ Pomocí vložených funkcí lze program urychlit, protože tyto funkce odstraňu
 
 Kompilátor zpracovává možnosti vloženého rozšíření a klíčová slova jako návrhy. Není zaručeno, že budou funkce vloženy. Nelze vynutit na kompilátoru k vložení funkce, i s **__forceinline** – klíčové slovo. Při kompilaci s **/CLR**, kompilátor nevloží funkci Pokud nejsou u funkce použity atributy zabezpečení.
 
-**Vložené** – klíčové slovo je k dispozici pouze v jazyce C++. **__Inline** a **__forceinline** klíčová slova jsou k dispozici v jazycích C a C++. Z důvodu kompatibility s předchozími verzemi **_inline** a **_forceinline** jsou synonyma pro **__inline**, a **__forceinline** Pokud – možnost kompilátoru [/Za \(zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md) určena.
+**Vložené** – klíčové slovo je k dispozici pouze v jazyce C++. **__Inline** a **__forceinline** klíčová slova jsou k dispozici v obou C a C++. Z důvodu kompatibility s předchozími verzemi **_inline** a **_forceinline** jsou synonyma pro **__inline**, a **__forceinline** Pokud – možnost kompilátoru [/Za \(zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md) určena.
 
 **Vložené** – klíčové slovo sděluje kompilátoru, že je upřednostněno vložené rozšíření upřednostňované. Kompilátor však může vytvořit samostatnou instanci funkce (vytvoření instance) a může vytvořit standardní spojení volání namísto vložení kódu. Jsou dva případy, kdy tato situace může nastat:
 

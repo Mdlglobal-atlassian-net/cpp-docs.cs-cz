@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::thread [C++], native_handle
 - std::thread [C++], swap
 ms.openlocfilehash: d1405062ef553dbfea3b60b5f39e0546707343b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412069"
 ---
 # <a name="thread-class"></a>thread – třída
 
@@ -67,10 +67,10 @@ Každé vlákno provádění má jedinečný identifikátor typu `thread::id`. F
 |[Odpojení](#detach)|Odpojí přidružené vlákno od **vlákno** objektu.|
 |[get_id](#get_id)|Vrací jedinečný identifikátor přidruženého vlákna.|
 |[hardware_concurrency](#hardware_concurrency)|Statické. Vrací odhadovaný počet kontextů hardwarových vláken.|
-|[Připojte se k](#join)|Blokuje, dokud se přidružené vlákno nedokončí.|
-|[spojitelné](#joinable)|Určuje, zda je přidružené vlákno spojitelné.|
-|[native_handle –](#native_handle)|Vrátí typ specifický pro implementaci představující popisovač vlákna.|
-|[Prohození](#swap)|Zamění stav objektu se zadaným **vlákno** objektu.|
+|[join](#join)|Blokuje, dokud se přidružené vlákno nedokončí.|
+|[joinable](#joinable)|Určuje, zda je přidružené vlákno spojitelné.|
+|[native_handle](#native_handle)|Vrátí typ specifický pro implementaci představující popisovač vlákna.|
+|[swap](#swap)|Zamění stav objektu se zadaným **vlákno** objektu.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 

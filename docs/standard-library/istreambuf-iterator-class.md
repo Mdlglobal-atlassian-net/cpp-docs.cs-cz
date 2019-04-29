@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::istreambuf_iterator [C++], equal
 ms.assetid: 39002da2-61a6-48a5-9d0c-5df8271f6038
 ms.openlocfilehash: 41298909b53de1c7acf3cb8ae4b999eb6260765d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413265"
 ---
 # <a name="istreambufiterator-class"></a>istreambuf_iterator – třída
 
@@ -79,7 +79,7 @@ Po vytvoření nebo zvýšení objektu třídy istreambuf_iterator pomocí ulož
 |-|-|
 |[Operator *](#op_star)|Dereferenční operátor vrátí následující znak v toku.|
 |[Operator ++](#op_add_add)|Vrátí buď následující znak ze vstupního toku, nebo zkopíruje objekt před jeho zvýšením a vrátí kopii.|
-|[Operator ->](#op_arrow)|Vrátí hodnotu členu, pokud existuje.|
+|[operator->](#op_arrow)|Vrátí hodnotu členu, pokud existuje.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -442,6 +442,6 @@ int main( )
 ## <a name="see-also"></a>Viz také:
 
 [iterator – struktura](../standard-library/iterator-struct.md)<br/>
-[\<iterátor >](../standard-library/iterator.md)<br/>
+[\<iterator>](../standard-library/iterator.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

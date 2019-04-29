@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::Unlock method
 ms.assetid: c515a1b5-4eb0-40bc-9035-c4d9352c9de7
 ms.openlocfilehash: ce904ecbd9a5855c63fd43f07f88c215cef544ae
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398599"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits – struktura
 
@@ -32,13 +32,13 @@ struct CriticalSectionTraits;
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-Name   | Popis
+Název   | Popis
 ------ | -----------------------------------------------------------------------------------------------------------------
 `Type` | A `typedef` , který definuje ukazatel na kritický oddíl. `Type` je definován jako `typedef CRITICAL_SECTION* Type;`.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Name                                                       | Popis
+Název                                                       | Popis
 ---------------------------------------------------------- | -----------------
 [Criticalsectiontraits::getinvalidvalue –](#getinvalidvalue) | Se specializuje `CriticalSection` šablony tak, aby šablona vždy je neplatná.
 [Criticalsectiontraits::Unlock –](#unlock)                   | Se specializuje `CriticalSection` šablony tak, že podporuje uvolňující vlastnictví objektu zadaného kritický oddíl.

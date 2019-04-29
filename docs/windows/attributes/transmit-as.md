@@ -7,11 +7,11 @@ helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
 ms.openlocfilehash: e432d1a8f39cbc5e12f192ed7b07c29421bc403e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59032096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407169"
 ---
 # <a name="transmitas"></a>transmit_as
 
@@ -73,7 +73,7 @@ struct _TREE_NODE_TYPE * right;
 |**Platí pro**|**Definice TypeDef**|
 |**Opakovatelné**|Ne|
 |**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádné|
+|**Neplatné atributy**|Žádný|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 

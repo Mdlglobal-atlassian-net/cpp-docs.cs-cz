@@ -18,11 +18,11 @@ helpviewer_keywords:
 - std::error_condition::message
 ms.assetid: 6690f481-97c9-4554-a0ff-851dc96b7a06
 ms.openlocfilehash: ccc2b41aa6c008fbda29c065ad63aa9f61b6680f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413681"
 ---
 # <a name="errorcondition-class"></a>error_condition – třída
 
@@ -54,9 +54,9 @@ Objekt typu `error_condition` ukládá chybovou hodnotu kód a ukazatele na obje
 
 |Členská funkce|Popis|
 |-|-|
-|[přiřazení](#assign)|Hodnota kódu chyby a kategorie služby přiřadí chybovou podmínku.|
+|[assign](#assign)|Hodnota kódu chyby a kategorie služby přiřadí chybovou podmínku.|
 |[Kategorie](#category)|Vrací kategorie chyby.|
-|[Vymazat](#clear)|Vymaže hodnota kódu chyby a kategorie.|
+|[clear](#clear)|Vymaže hodnota kódu chyby a kategorie.|
 |[message](#message)|Vrátí název kód chyby.|
 
 ### <a name="operators"></a>Operátory

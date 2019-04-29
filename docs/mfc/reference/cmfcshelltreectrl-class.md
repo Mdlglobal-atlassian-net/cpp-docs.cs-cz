@@ -29,11 +29,11 @@ helpviewer_keywords:
 - CMFCShellTreeCtrl [MFC], SetRelatedList
 ms.assetid: 3d1da715-9554-4ed7-968c-055c48146267
 ms.openlocfilehash: 1fc422c3aca3efe1fb177e7a3567530d70c27119
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58779752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410058"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl Class
 
@@ -50,7 +50,7 @@ class CMFCShellTreeCtrl : public CTreeCtrl
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCShellTreeCtrl::EnableShellContextMenu](#enableshellcontextmenu)|Povoluje nebo zakazuje místní nabídku.|
 |[CMFCShellTreeCtrl::GetFlags](#getflags)|Vrátí kombinace příznaků, které jsou předány [IShellFolder::EnumObjects](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects).|

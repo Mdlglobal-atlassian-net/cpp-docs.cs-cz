@@ -7,11 +7,11 @@ helpviewer_keywords:
 - propput attribute
 ms.assetid: 1f84dda9-9cce-4e16-aaf0-b2c5219827f2
 ms.openlocfilehash: c9853b38675abfa0a94a319ac752eb2ef61a48e0
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59031729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407520"
 ---
 # <a name="propput"></a>propput
 
@@ -39,7 +39,7 @@ Podívejte se na příklad pro [umožňujících vazbu](bindable.md) ukázkový 
 |-|-|
 |**Platí pro**|Metoda|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**Vyžadované atributy**|Žádný|
 |**Neplatné atributy**|`propget`, `propputref`|
 
 Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).

@@ -29,11 +29,11 @@ helpviewer_keywords:
 - std::weak_ptr [C++], use_count
 ms.assetid: 2db4afb2-c7be-46fc-9c20-34ec2f8cc7c2
 ms.openlocfilehash: e2efb5d534ad43e2492ac4fb0bf76db402dca272
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410850"
 ---
 # <a name="weakptr-class"></a>weak_ptr – třída
 
@@ -95,10 +95,10 @@ Cyklus nastane, pokud dva nebo více zdrojů řídí `shared_ptr` objektů, podr
 |[element_type](#element_type)|Typ elementu.|
 |[Vypršela platnost](#expired)|Testuje, zda je vlastnictví vypršela platnost.|
 |[lock](#lock)|Získá výhradní vlastnictví prostředku.|
-|[owner_before –](#owner_before)|Vrátí **true** tato `weak_ptr` je řazen před (nebo menší než) poskytnutý ukazatel.|
-|[Resetovat](#reset)|Verze vlastněný zdroj.|
-|[Prohození](#swap)|Prohodí dva `weak_ptr` objekty.|
-|[use_count –](#use_count)|Určený počet počty `shared_ptr` objekty.|
+|[owner_before](#owner_before)|Vrátí **true** tato `weak_ptr` je řazen před (nebo menší než) poskytnutý ukazatel.|
+|[reset](#reset)|Verze vlastněný zdroj.|
+|[swap](#swap)|Prohodí dva `weak_ptr` objekty.|
+|[use_count](#use_count)|Určený počet počty `shared_ptr` objekty.|
 
 ### <a name="operators"></a>Operátory
 
@@ -281,10 +281,10 @@ weak_ptr& operator=(const shared_ptr<Other>& sp);
 *Jiné*<br/>
 Typ řízený ukazatelem argumentu sdílené/weak.
 
-*webové části*<br/>
+*wp*<br/>
 Slabý ukazatel na kopii.
 
-*SP*<br/>
+*sp*<br/>
 Sdílený ukazatel na kopii.
 
 ### <a name="remarks"></a>Poznámky
@@ -396,7 +396,7 @@ void swap(weak_ptr& wp);
 
 ### <a name="parameters"></a>Parametry
 
-*webové části*<br/>
+*wp*<br/>
 Slabý ukazatel, který chcete Prohodit s.
 
 ### <a name="remarks"></a>Poznámky
@@ -517,10 +517,10 @@ weak_ptr(const shared_ptr<Other>& sp);
 *Jiné*<br/>
 Typ řízený ukazatelem argumentu sdílené/weak.
 
-*webové části*<br/>
+*wp*<br/>
 Slabý ukazatel na kopii.
 
-*SP*<br/>
+*sp*<br/>
 Sdílený ukazatel na kopii.
 
 ### <a name="remarks"></a>Poznámky

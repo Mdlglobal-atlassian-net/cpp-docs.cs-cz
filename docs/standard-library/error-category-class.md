@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
 ms.openlocfilehash: 55ff55b2026b741a2b7062d815fe43d6d19b078b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413707"
 ---
 # <a name="errorcategory-class"></a>error_category – třída
 
@@ -104,7 +104,7 @@ virtual bool equivalent(const error_code& _Code,
 |---------------|-----------------|
 |*_Errval*|Hodnota kódu chyby k porovnání.|
 |*_Cond*|[Error_condition –](../standard-library/error-condition-class.md) objekt k porovnání.|
-|*_Fragmenty*|[Error_code](../standard-library/error-code-class.md) objekt k porovnání.|
+|*_Code*|[Error_code](../standard-library/error-code-class.md) objekt k porovnání.|
 
 ### <a name="return-value"></a>Návratová hodnota
 

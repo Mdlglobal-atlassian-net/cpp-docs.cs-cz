@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::basic_istream [C++], unget
 ms.assetid: c7c27111-de6d-42b4-95a3-a7e65259bf17
 ms.openlocfilehash: 5e7f6ae0728a7d28af1992cf4186d533f1a97330
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62414162"
 ---
 # <a name="basicistream-class"></a>basic_istream – třída
 
@@ -144,14 +144,14 @@ Podívejte se na příklad pro [basic_ifstream – třída](../standard-library/
 |[gcount –](#gcount)|Vrátí počet znaků čtení během posledních neformátovaný vstup.|
 |[get](#get)|Načte jeden nebo více znaků ze vstupního datového proudu.|
 |[getline](#getline)|Přečte řádek ze vstupního datového proudu.|
-|[Ignorovat](#ignore)|Způsobí, že počet prvků přeskočit z aktuální pozici čtení.|
+|[ignore](#ignore)|Způsobí, že počet prvků přeskočit z aktuální pozici čtení.|
 |[Náhled](#peek)|Vrátí následující znak pro čtení.|
 |[putback –](#putback)|Vloží zadaný znak do datového proudu.|
 |[read](#read)|Přečte zadaný počet znaků z datového proudu a uloží je v poli.|
 |[readsome –](#readsome)|Čtení z pouze vyrovnávací paměti.|
 |[seekg –](#seekg)|Posune pozici v datovém proudu pro čtení.|
-|[SENTRY](#sentry)|Vnořené třídy popisuje objekt, jehož deklarace struktur formátovaný vstupu funkce a neformátovaný vstupní funkce.|
-|[Prohození](#swap)|Vymění to `basic_istream` objekt pro zadaný `basic_istream` parametru objektu.|
+|[sentry](#sentry)|Vnořené třídy popisuje objekt, jehož deklarace struktur formátovaný vstupu funkce a neformátovaný vstupní funkce.|
+|[swap](#swap)|Vymění to `basic_istream` objekt pro zadaný `basic_istream` parametru objektu.|
 |[sync](#sync)|Synchronizuje vstupní zařízení spojené s datovým proudem s vyrovnávací paměť datového proudu.|
 |[tellg –](#tellg)|Hlásí, že čtení aktuální pozici v datovém proudu.|
 |[unget –](#unget)|Vloží naposledy čtení znak zpět do datového proudu.|
@@ -160,7 +160,7 @@ Podívejte se na příklad pro [basic_ifstream – třída](../standard-library/
 
 |Operátor|Popis|
 |-|-|
-|[operátor >>](#op_gt_gt)|Volá funkci vstupního datového proudu nebo přečte formátovaná data ze vstupního datového proudu.|
+|[operator>>](#op_gt_gt)|Volá funkci vstupního datového proudu nebo přečte formátovaná data ze vstupního datového proudu.|
 |[operátor =](#op_eq)|Přiřadí `basic_istream` na pravé straně operátoru k tomuto objektu. Toto je zahrnující přiřazení pro přesun `rvalue` odkaz, který kopii nenechává za sebou.|
 
 ## <a name="requirements"></a>Požadavky
@@ -169,7 +169,7 @@ Podívejte se na příklad pro [basic_ifstream – třída](../standard-library/
 
 **Namespace:** std
 
-## <a name="basic_istream"></a>  basic_istream::basic_istream –
+## <a name="basic_istream"></a>  basic_istream::basic_istream
 
 Vytvoří objekt typu `basic_istream`.
 
@@ -275,7 +275,7 @@ Znak, který by měla ukončit čtení, pokud je zjištěna před *počet*.
 *str*<br/>
 Řetězec, do kterých chcete zapsat.
 
-*ch*<br/>
+*Ch*<br/>
 Znak k získání.
 
 *strbuf*<br/>
@@ -471,7 +471,7 @@ basic_istream& operator>>(long double& val);
 
 ### <a name="parameters"></a>Parametry
 
-*pfn*<br/>
+*Pfn*<br/>
 Ukazatel na funkci.
 
 *strbuf*<br/>
@@ -651,7 +651,7 @@ basic_istream<Elem, Tr>& putback(
 
 ### <a name="parameters"></a>Parametry
 
-*ch*<br/>
+*Ch*<br/>
 Znak převést zpět do datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -818,10 +818,10 @@ basic_istream<Elem, Tr>& seekg(off_type off, ios_base::seekdir way);
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Absolutní pozici, do kterého chcete přesunout ukazatel pro čtení.
 
-*Vypnout*<br/>
+*off*<br/>
 Posun čtení ukazatele vzhledem k *způsob*.
 
 *způsob, jak*<br/>
@@ -863,7 +863,7 @@ int main ( )
 }
 ```
 
-## <a name="sentry"></a>  basic_istream::SENTRY
+## <a name="sentry"></a>  basic_istream::sentry
 
 Vnořené třídy popisuje objekt, jehož deklarace struktur vstupní funkce naformátovaný a je neformátovaný.
 
@@ -896,7 +896,7 @@ Odkaz na lvalue k `basic_istream` objektu.
 
 Volání členských funkcí [basic_ios::swap](../standard-library/basic-ios-class.md#swap)`(right)`. Také vymění počet extrakce s počtem extrakce pro *správné*.
 
-## <a name="sync"></a>  basic_istream::Sync
+## <a name="sync"></a>  basic_istream::sync
 
 Synchronizuje vstupní zařízení spojené s datovým proudem s vyrovnávací paměť datového proudu.
 
