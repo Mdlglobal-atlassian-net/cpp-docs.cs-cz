@@ -42,11 +42,11 @@ helpviewer_keywords:
 - vscprintf_p_l function
 ms.assetid: 5da920b3-8652-4ee9-b19e-5aac3ace9d03
 ms.openlocfilehash: 357cc1f28e5495385b67fdb7c1b86bbc15f79950
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386184"
 ---
 # <a name="vscprintfp-vscprintfpl-vscwprintfp-vscwprintfpl"></a>_vscprintf_p, _vscprintf_p_l, _vscwprintf_p, _vscwprintf_p_l
 
@@ -107,15 +107,15 @@ Pokud *formátu* je ukazatel s hodnotou null, je vyvolána obslužná rutina nep
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_vsctprintf_p –**|**_vscprintf_p**|**_vscprintf_p**|**_vscwprintf_p**|
-|**_vsctprintf_p_l –**|**_vscprintf_p_l**|**_vscprintf_p_l**|**_vscwprintf_p_l**|
+|**_vsctprintf_p**|**_vscprintf_p**|**_vscprintf_p**|**_vscwprintf_p**|
+|**_vsctprintf_p_l**|**_vscprintf_p_l**|**_vscprintf_p_l**|**_vscwprintf_p_l**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_vscprintf_p –**, **_vscprintf_p_l –**|\<stdio.h>|
-|**_vscwprintf_p –**, **_vscwprintf_p_l –**|\<stdio.h > nebo \<wchar.h >|
+|**_vscprintf_p**, **_vscprintf_p_l**|\<stdio.h>|
+|**_vscwprintf_p**, **_vscwprintf_p_l**|\<stdio.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

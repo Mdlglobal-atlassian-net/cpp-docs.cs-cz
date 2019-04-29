@@ -4,11 +4,11 @@ ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: d71fe149-d804-4c6f-961d-43fe21ef8630
 ms.openlocfilehash: fce6e620600164e73d3708d98d8a7fa979e8ab42
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59027470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392034"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details – obor názvů
 
@@ -24,7 +24,7 @@ namespace Microsoft::WRL::Details;
 
 ### <a name="classes"></a>Třídy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[ComPtrRef – třída](comptrref-class.md)|Představuje odkaz na objekt typu ComPtr\<T >.|
 |[ComPtrRefBase – třída](comptrrefbase-class.md)|Představuje základní třídu pro [comptrref –](comptrref-class.md) třídy.|
@@ -37,7 +37,7 @@ namespace Microsoft::WRL::Details;
 
 ### <a name="structures"></a>Struktury
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[ArgTraits – struktura](argtraits-structure.md)|Deklaruje zadaného delegáta, rozhraní a anonymní členskou funkci, která má zadaný počet parametrů.|
 |[ArgTraitsHelper – struktura](argtraitshelper-structure.md)|Pomáhá definovat běžné vlastnosti argumenty delegátů.|
@@ -63,13 +63,13 @@ namespace Microsoft::WRL::Details;
 
 ### <a name="enumerations"></a>Výčty
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[AsyncStatusInternal – výčet](asyncstatusinternal-enumeration.md)|Určuje mapování mezi interní výčty pro stav asynchronní operace a `Windows::Foundation::AsyncStatus` výčtu.|
 
 ### <a name="functions"></a>Funkce
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[ActivationFactoryCallback – funkce](activationfactorycallback-function.md)|Získá objekt factory aktivace pro ID zadaná aktivace.|
 |[Move – funkce](move-function.md)|Zadaný argument přesune z jednoho umístění do druhého.|

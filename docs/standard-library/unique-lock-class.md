@@ -5,11 +5,11 @@ f1_keywords:
 - mutex/std::unique_lock
 ms.assetid: f4ed8ba9-c8af-446f-8ef0-0b356bad14bd
 ms.openlocfilehash: 784969bea25bfff49a21c23b350afbfc8bdab59a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383513"
 ---
 # <a name="uniquelock-class"></a>unique_lock – třída
 
@@ -48,14 +48,14 @@ Interně `unique_lock` uchovává ukazatel na přidruženou `mutex` objektu a **
 |Název|Popis|
 |----------|-----------------|
 |[lock](#lock)|Blokuje volající vlákno, dokud vlákno nezíská vlastnictví přidruženého `mutex`.|
-|[objekt mutex](#mutex)|Získá uložený ukazatel na přidruženou `mutex`.|
+|[mutex](#mutex)|Získá uložený ukazatel na přidruženou `mutex`.|
 |[owns_lock](#owns_lock)|Určuje, zda volající vlákno vlastní přidružené `mutex`.|
 |[Vydání verze](#release)|Zruší přidružení `unique_lock` objekt z přidruženého `mutex` objektu.|
-|[Prohození](#swap)|Zamění přidruženého `mutex` a stav vlastnictví zadaný objekt.|
+|[swap](#swap)|Zamění přidruženého `mutex` a stav vlastnictví zadaný objekt.|
 |[try_lock](#try_lock)|Pokusy o získání vlastnictví přidruženého `mutex` bez blokování.|
 |[try_lock_for](#try_lock_for)|Pokusy o získání vlastnictví přidruženého `mutex` bez blokování.|
 |[try_lock_until](#try_lock_until)|Pokusy o získání vlastnictví přidruženého `mutex` bez blokování.|
-|[Odemknutí](#unlock)|Uvolní vlastnictví objektu přidruženého `mutex`.|
+|[unlock](#unlock)|Uvolní vlastnictví objektu přidruženého `mutex`.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
@@ -331,4 +331,4 @@ Jinak tato metoda volá `unlock` přidruženého `mutex` a nastaví příznak vl
 ## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex – >](../standard-library/mutex.md)<br/>
+[\<mutex>](../standard-library/mutex.md)<br/>

@@ -89,11 +89,11 @@ helpviewer_keywords:
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
 ms.openlocfilehash: 8a50d04751ac5b4abaf94d0d9fd16f57c6200f66
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394010"
 ---
 # <a name="deque-class"></a>deque – třída
 
@@ -136,7 +136,7 @@ V opačném případě vložení nebo odstranění prvku zruší platnost všech
 
 |Konstruktor|Popis|
 |-|-|
-|[deque –](#deque)|Vytvoří `deque`. Jsou k dispozici několik konstruktorů nastavit obsah nového `deque` různými způsoby: prázdný; načtená zadaného počtu prvků prázdný; obsah přesunut nebo zkopírovaných z jiného `deque`; obsah zkopírovaný ani přesunutý pomocí iterátoru; a jeden element zkopírována `deque` `count` časy. Některé z konstruktorů povolení s využitím vlastní `allocator` k vytváření prvků.|
+|[deque](#deque)|Vytvoří `deque`. Jsou k dispozici několik konstruktorů nastavit obsah nového `deque` různými způsoby: prázdný; načtená zadaného počtu prvků prázdný; obsah přesunut nebo zkopírovaných z jiného `deque`; obsah zkopírovaný ani přesunutý pomocí iterátoru; a jeden element zkopírována `deque` `count` časy. Některé z konstruktorů povolení s využitím vlastní `allocator` k vytváření prvků.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -148,8 +148,8 @@ V opačném případě vložení nebo odstranění prvku zruší platnost všech
 |[const_reference](#const_reference)|Typ, který poskytuje odkaz na prvek v `deque` pro čtení a další operace jako `const.`|
 |[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje iterátor náhodného přístupu, který může zobrazovat a číst prvky `deque` jako **const**. V opačném pořadí zobrazení deque. Další informace najdete v tématu [reverse_iterator – třída](../standard-library/reverse-iterator-class.md)|
 |[difference_type](#difference_type)|Typ, který obsahuje rozdíl mezi dvěma iterátory s náhodným přístupem, které odkazují na prvky ve stejném `deque`.|
-|[iterátor](#iterator)|Typ, který poskytuje iterátor náhodného přístupu, který může číst nebo upravovat libovolný prvek v `deque`.|
-|[Ukazatel](#pointer)|Typ, který poskytuje ukazatel na prvek v `deque`.|
+|[iterator](#iterator)|Typ, který poskytuje iterátor náhodného přístupu, který může číst nebo upravovat libovolný prvek v `deque`.|
+|[pointer](#pointer)|Typ, který poskytuje ukazatel na prvek v `deque`.|
 |[Referenční dokumentace](#reference)|Typ, který poskytuje odkaz na prvek uložený v `deque`.|
 |[reverse_iterator](#reverse_iterator)|Typ, který poskytuje iterátor náhodného přístupu, který může číst nebo upravovat prvek v `deque`. V opačném pořadí zobrazení deque.|
 |[size_type](#size_type)|Typ, který vrátí počet prvků v `deque`.|
@@ -159,18 +159,18 @@ V opačném případě vložení nebo odstranění prvku zruší platnost všech
 
 |Členská funkce|Popis|
 |-|-|
-|[přiřazení](#assign)|Odstraní prvky ze `deque` a zkopíruje novou posloupnost prvků k cíli `deque`.|
+|[assign](#assign)|Odstraní prvky ze `deque` a zkopíruje novou posloupnost prvků k cíli `deque`.|
 |[at](#at)|Vrátí odkaz na prvek v zadaném umístění v `deque`.|
 |[Zpět](#back)|Vrátí odkaz na poslední prvek `deque`.|
 |[začít](#begin)|Vrátí iterátor náhodného přístupu adresující první prvek v `deque`.|
 |[cbegin](#cbegin)|Vrátí konstantní iterátor na první prvek `deque`.|
 |[cend](#cend)|Vrátí náhodným přístupem **const** iterátor, který ukazuje přesně za konec `deque`.|
-|[Vymazat](#clear)|Vymaže všechny prvky `deque`.|
+|[clear](#clear)|Vymaže všechny prvky `deque`.|
 |[crbegin](#crbegin)|Vrátí konstantní iterátor náhodného přístupu na první prvek v `deque` zobrazit v obráceném pořadí.|
-|[crend –](#crend)|Vrátí konstantní iterátor náhodného přístupu na první prvek v `deque` zobrazit v obráceném pořadí.|
-|[emplace –](#emplace)|Vloží vytvořený prvek na místo do `deque` na určené pozici.|
+|[crend](#crend)|Vrátí konstantní iterátor náhodného přístupu na první prvek v `deque` zobrazit v obráceném pořadí.|
+|[emplace](#emplace)|Vloží vytvořený prvek na místo do `deque` na určené pozici.|
 |[emplace_back](#emplace_back)|Přidá prvek vytvořený v místě na konec objektu `deque`.|
-|[emplace_front –](#emplace_front)|Přidá prvek vytvořený v místě na začátek `deque`.|
+|[emplace_front](#emplace_front)|Přidá prvek vytvořený v místě na začátek `deque`.|
 |[prázdný](#empty)|Vrátí **true** Pokud `deque` neobsahuje žádnou prvky a **false** pokud obsahuje jeden nebo více prvků.|
 |[ukončení](#end)|Vrátí iterátor náhodného přístupu, na kterou odkazuje přesně za konec `deque`.|
 |[vymazání](#erase)|Odebere prvek nebo rozsah prvků `deque` od zadané pozice.|
@@ -178,16 +178,16 @@ V opačném případě vložení nebo odstranění prvku zruší platnost všech
 |[get_allocator](#get_allocator)|Vrátí kopii objektu `allocator` objekt, který se používá ke konstrukci `deque`.|
 |[Vložit](#insert)|Vloží prvek, několik prvků nebo rozsahu prvků do `deque` na určené pozici.|
 |[max_size](#max_size)|Vrátí maximální možná délka `deque`.|
-|[pop_back –](#pop_back)|Odstraní prvek na konec `deque`.|
+|[pop_back](#pop_back)|Odstraní prvek na konec `deque`.|
 |[pop_front](#pop_front)|Odstraní prvek na začátku `deque`.|
 |[push_back](#push_back)|Přidá prvek na konec objektu `deque`.|
 |[push_front](#push_front)|Přidá prvek na začátku `deque`.|
-|[rbegin –](#rbegin)|Vrátí iterátor s náhodným přístupem na první prvek v obráceném objektu `deque`.|
+|[rbegin](#rbegin)|Vrátí iterátor s náhodným přístupem na první prvek v obráceném objektu `deque`.|
 |[rend –](#rend)|Vrátí iterátor náhodného přístupu, který ukazuje za poslední prvek v obráceném objektu `deque`.|
-|[Změna velikosti](#resize)|Určuje novou velikost `deque`.|
+|[resize](#resize)|Určuje novou velikost `deque`.|
 |[shrink_to_fit](#shrink_to_fit)|Odstraní nadbytečnou kapacitu.|
 |[Velikost](#size)|Vrátí počet prvků v `deque`.|
-|[Prohození](#swap)|Vymění prvky dvou `deque`s.|
+|[swap](#swap)|Vymění prvky dvou `deque`s.|
 
 ### <a name="operators"></a>Operátory
 
@@ -198,7 +198,7 @@ V opačném případě vložení nebo odstranění prvku zruší platnost všech
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička**: \<deque >
+**Header**: \<deque>
 
 ## <a name="allocator_type"></a>  deque::allocator_type
 
@@ -321,7 +321,7 @@ const_reference at(size_type pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Dolní index (nebo číslo pozice) elementu odkazovat deque.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -777,7 +777,7 @@ deque(initializer_list<value_type> IList, const Allocator& Al);
 |*doprava*|Deque –, který je vytvořený deque kopií.|
 |*první*|Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.|
 |*poslední*|Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.|
-|* IList.|Objekt initializer_list, které se mají zkopírovat.|
+|* IList. | Objekt initializer_list, které se mají zkopírovat.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1340,7 +1340,7 @@ Pozice prvku, který chcete odebrat z deque.
 *první*<br/>
 Pozice prvního prvku odebrán deque.
 
-*poslední*<br/>
+*last*<br/>
 Pozice bezprostředně za posledním prvkem odebrán deque.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1591,7 +1591,7 @@ const_reference operator[](size_type pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Pozice prvku deque má odkazovat.
 
 ### <a name="return-value"></a>Návratová hodnota

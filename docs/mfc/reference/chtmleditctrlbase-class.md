@@ -221,11 +221,11 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
 ms.openlocfilehash: a3c90f4b75b79dc51091c87a5a84b5c59a70646f
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58772576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375818"
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase Class
 
@@ -241,7 +241,7 @@ template <class T> class CHtmlEditCtrlBase
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CHtmlEditCtrlBase::AddToGlyphTable](#addtoglyphtable)|Přidá položku do piktogram tabulku, která určuje Image pro zobrazení konkrétních značek v režimu návrhu.|
 |[CHtmlEditCtrlBase::Bold](#bold)|Přepíná tučné stav vybraného textu.|

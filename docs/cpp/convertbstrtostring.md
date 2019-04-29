@@ -7,15 +7,15 @@ helpviewer_keywords:
 - ConvertBSTRToString function
 ms.assetid: ab6ce555-3d75-4e9c-9cb8-ada6d8ce43b1
 ms.openlocfilehash: df123dc218aa770a67536bf1bad7d8bafcf4c318
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392320"
 ---
 # <a name="convertbstrtostring"></a>ConvertBSTRToString
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Převede `BSTR` hodnota, která se `char *`.
 
@@ -64,7 +64,7 @@ char * text: Test
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<comutil.h >
+**Header:** \<comutil.h>
 
 **Lib:** comsuppw.lib nebo comsuppwd.lib (viz [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Další informace)
 

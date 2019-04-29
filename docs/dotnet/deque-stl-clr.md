@@ -99,11 +99,11 @@ helpviewer_keywords:
 - operator>= member [STL/CLR]
 ms.assetid: dd669da3-3c0e-45e9-8596-f6b483720941
 ms.openlocfilehash: ff5ddcfa101baf4c85145d1c6d64a6a3b9e7df58
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393763"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 
@@ -246,7 +246,7 @@ Počet elementů k vložení.
 *první*<br/>
 Začátek rozsahu pro vložení.
 
-*poslední*<br/>
+*last*<br/>
 Konec rozsahu pro vložení.
 
 *doprava*<br/>
@@ -318,7 +318,7 @@ reference at(size_type pos);
 
 #### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Pozice prvku přístup.
 
 ### <a name="remarks"></a>Poznámky
@@ -724,7 +724,7 @@ Počet elementů k vložení.
 *první*<br/>
 Začátek rozsahu pro vložení.
 
-*poslední*<br/>
+*last*<br/>
 Konec rozsahu pro vložení.
 
 *doprava*<br/>
@@ -1021,7 +1021,7 @@ iterator erase(iterator first, iterator last);
 *první*<br/>
 Začátek rozsahu vymazat.
 
-*poslední*<br/>
+*last*<br/>
 Konec rozsahu vymazat.
 
 *kde*<br/>
@@ -1445,7 +1445,7 @@ Počet elementů k vložení.
 *první*<br/>
 Začátek rozsahu pro vložení.
 
-*poslední*<br/>
+*last*<br/>
 Konec rozsahu pro vložení.
 
 *doprava*<br/>
@@ -1661,7 +1661,7 @@ reference operator[](size_type pos);
 
 #### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*pos*<br/>
 Pozice prvku přístup.
 
 ### <a name="remarks"></a>Poznámky

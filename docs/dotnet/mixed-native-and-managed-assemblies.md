@@ -13,11 +13,11 @@ helpviewer_keywords:
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
 ms.openlocfilehash: 78e95177282804369bac2065582a06b8acbc975b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384852"
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Smíšená (nativní a spravovaná) sestavení
 
@@ -27,14 +27,14 @@ Například již existující knihovny, které obsahuje jenom nativní kód C++,
 
 Generování smíšené spravované sestavení Visual C++ podporuje pouze s použitím **/CLR** – možnost kompilátoru. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017. Pokud budete potřebovat čisté a ověřitelné spravovaná sestavení, doporučujeme že vytvořit pomocí jazyka C#.
 
-Starší verze sady nástrojů kompilátoru Visual C++ nepodporuje generování tří různých typů spravovaných sestavení: smíšené, čisté a ověřitelné. Poslední dva jsou popsány v [prázdná a ověřitelný kód (C + +/ CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Starší verze sady nástrojů kompilátoru Visual C++ nepodporuje generování tří různých typů spravovaných sestavení: smíšené, čisté a ověřitelné. Poslední dva jsou popsány v [prázdná a ověřitelný kód (C++vyhodnocovací)](../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Postupy: přechod na/CLR](../dotnet/how-to-migrate-to-clr.md)<br/>
+[Postupy: Přechod na/CLR](../dotnet/how-to-migrate-to-clr.md)<br/>
 Popisuje doporučené kroky pro zavedení nebo upgradu funkce rozhraní .NET ve vaší aplikaci.
 
-[Postupy: kompilace/CLR MFC a ATL kódu s použitím](../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md)<br/>
+[Postupy: Zkompilujte knihovnu MFC a ATL kód pomocí/CLR](../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md)<br/>
 Popisuje, jak kompilovat existující programy MFC a ATL cílit na modul Common Language Runtime.
 
 [Inicializace smíšených sestavení](../dotnet/initialization-of-mixed-assemblies.md)<br/>

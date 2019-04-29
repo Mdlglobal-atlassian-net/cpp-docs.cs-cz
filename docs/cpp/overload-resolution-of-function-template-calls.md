@@ -1,17 +1,17 @@
 ---
-title: Rozlišení přetížení volání šablony funkce
+title: Řešení přetížení volání šablony funkce
 ms.date: 11/04/2016
 helpviewer_keywords:
 - function templates overload resolution
 ms.assetid: a2918748-2cbb-4fc6-a176-e256f120bee4
 ms.openlocfilehash: a736e89565bb7ab6bc49c3c0f65d12fc9508200c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62379126"
 ---
-# <a name="overload-resolution-of-function-template-calls"></a>Rozlišení přetížení volání šablony funkce
+# <a name="overload-resolution-of-function-template-calls"></a>Řešení přetížení volání šablony funkce
 
 Šablony funkce lze přetížení funkce nešablonových se stejným názvem. V tomto scénáři jsou vyřešeny volání funkce tak, že nejprve pomocí odvození argumentu šablony pro vytvoření instance šablony funkce s specializaci jedinečný. Pokud selže odvození argumentu šablony další přetížení funkce jsou považovány za vyřešit volání. Tyto další přetížení, označované také jako sada Release candidate, zahrnují funkce nešablonových a další instance funkce šablony. Pokud bude úspěšné odvození argumentu šablony, pak generované funkce je ve srovnání s dalších funkcí, které mají určit nejlepší shodu dle pravidel pro řešení přetížení. Další informace najdete v tématu [přetížení funkce](function-overloading.md).
 

@@ -43,24 +43,24 @@ helpviewer_keywords:
 - std::tan [C++]
 - std::tanh [C++]
 ms.openlocfilehash: a67955da21c1229c3492d5b52dd6e14c9caa33fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389200"
 ---
 # <a name="ltcomplexgt-functions"></a>&lt;komplexní&gt; funkce
 
 ||||
 |-|-|-|
-|[Abs](#abs)|[arg](#arg)|[conj](#conj)|
-|[Cos](#cos)|[COSH –](#cosh)|[exp](#exp)|
-|[imag](#imag)|[protokol](#log)|[log10](#log10)|
+|[abs](#abs)|[arg](#arg)|[conj](#conj)|
+|[cos](#cos)|[cosh](#cosh)|[exp](#exp)|
+|[imag](#imag)|[log](#log)|[log10](#log10)|
 |[Norm –](#norm)|[polar](#polar)|[Pow](#pow)|
-|[Real](#real)|[Sin](#sin)|[SINH –](#sinh)|
-|[sqrt](#sqrt)|[Tan](#tan)|[TANH –](#tanh)|
+|[Real](#real)|[sin](#sin)|[sinh](#sinh)|
+|[sqrt](#sqrt)|[Tan](#tan)|[tanh](#tanh)|
 
-## <a name="abs"></a>  Abs
+## <a name="abs"></a>  abs
 
 Vypočítá zbytek z komplexního čísla.
 
@@ -309,7 +309,7 @@ The imaginary part of c2 is imag ( c2 ) = -3.
 The norm of (c1 * conj (c1) ) is c1 * c2 = 25
 ```
 
-## <a name="cos"></a>  Cos
+## <a name="cos"></a>  cos
 
 Vrátí hodnotu kosinus tohoto komplexního čísla.
 
@@ -934,7 +934,7 @@ complex<Type> pow(const Type& _Base, const complex<Type>& _Power);
 
 ### <a name="parameters"></a>Parametry
 
-*_Základní*<br/>
+*_Base*<br/>
 Komplexní čísla nebo číslo, které je parametr typu pro komplexní čísla, která je základem pro mocniny navýšit tak, že členská funkce.
 
 *_Power*<br/>
@@ -1550,4 +1550,4 @@ The complex components tanh (vci), where abs (vci) = 1
 
 ## <a name="see-also"></a>Viz také:
 
-[\<komplexní >](../standard-library/complex.md)<br/>
+[\<complex>](../standard-library/complex.md)<br/>

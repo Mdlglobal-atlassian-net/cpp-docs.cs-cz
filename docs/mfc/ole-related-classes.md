@@ -9,11 +9,11 @@ helpviewer_keywords:
 - OLE [MFC], classes
 ms.assetid: 2135cf54-1d9d-4e0e-91b4-943b3440effa
 ms.openlocfilehash: 7d58072d133b9348558804b848ecfda4497931e1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62378294"
 ---
 # <a name="ole-related-classes"></a>Třídy související s rozhraním OLE
 

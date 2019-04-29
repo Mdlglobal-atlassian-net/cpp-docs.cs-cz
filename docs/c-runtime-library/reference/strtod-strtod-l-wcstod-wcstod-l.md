@@ -43,11 +43,11 @@ helpviewer_keywords:
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
 ms.openlocfilehash: c8c2b3b491e2e7265829fa88580529dc757ace8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376468"
 ---
 # <a name="strtod-strtodl-wcstod-wcstodl"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -101,8 +101,8 @@ Každá funkce převede vstupní řetězec *strSource* k **double**. **Strtod** 
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcstod –**|**strtod**|**strtod**|**wcstod –**|
-|**_tcstod_l –**|**_strtod_l**|**_strtod_l**|**_wcstod_l**|
+|**_tcstod**|**strtod**|**strtod**|**wcstod**|
+|**_tcstod_l**|**_strtod_l**|**_strtod_l**|**_wcstod_l**|
 
 **LC_NUMERIC** kategorie aktuálního národního prostředí určuje rozpoznávání znaku radix bodu v *strSource*. Další informace najdete v tématu [setlocale](setlocale-wsetlocale.md). Funkce bez **_l** přípona používají aktuální národní prostředí; **_strtod_l –** je stejný jako **_strtod_l –** s tím rozdílem, že používají *národní prostředí* místo něho předán. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
@@ -120,8 +120,8 @@ UCRT verze těchto funkcí nepodporuje převod až po Fortran – vizuální sty
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strtod**, **_strtod_l –**|C: &lt;stdlib.h > C++: &lt;cstdlib – > nebo &lt;stdlib.h > |
-|**wcstod –**, **_wcstod_l –**|C: &lt;stdlib.h > nebo &lt;wchar.h > C++: &lt;cstdlib – >, &lt;stdlib.h > nebo &lt;wchar.h > |
+|**strtod**, **_strtod_l**|C: &lt;stdlib.h > C++: &lt;cstdlib – > nebo &lt;stdlib.h > |
+|**wcstod**, **_wcstod_l**|C: &lt;stdlib.h > nebo &lt;wchar.h > C++: &lt;cstdlib – >, &lt;stdlib.h > nebo &lt;wchar.h > |
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

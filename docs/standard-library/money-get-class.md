@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::money_get [C++], get
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
 ms.openlocfilehash: 40ce364d768e682c9e85506d2af9e46a01c76e65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383526"
 ---
 # <a name="moneyget-class"></a>money_get – třída
 
@@ -58,7 +58,7 @@ Stejně jako u omezující vlastnosti národního prostředí má ID statického
 |-|-|
 |[char_type](#char_type)|Typ, který se používá k popisu znaku používaného národním prostředním.|
 |[iter_type](#iter_type)|Typ, který popisuje vstupní iterátor.|
-|[STRING_TYPE](#string_type)|Typ, který popisuje řetězec obsahující znaky typu `CharType`.|
+|[string_type](#string_type)|Typ, který popisuje řetězec obsahující znaky typu `CharType`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
@@ -108,13 +108,13 @@ virtual iter_type do_get(iter_type first,
 *první*<br/>
 Vstupní iterátor adresující začátek sekvence má být převeden.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor adresující konec sekvence má být převeden.
 
 *Intl*<br/>
 Logická hodnota označující typ symbolu měny očekávání v pořadí: **true** pokud mezinárodní **false** Pokud domácí.
 
-*iosbase*<br/>
+*Iosbase*<br/>
 Příznak formátu, který při nastavení znamená, že symbol měny je volitelná. v opačném případě je povinný.
 
 *Stav*<br/>
@@ -133,7 +133,7 @@ První chráněná virtuální členská funkce se pokusí porovnat sekvenční 
 
 Druhá chráněná virtuální členská funkce se chová stejně jako první, s tím rozdílem, že v případě úspěšného ověření převádí na hodnotu typu pořadí číslo se znaménkem. volitelně **long double** a uloží hodnotu v *val*.
 
-Formát vstupního závisí [omezující vlastnost národního prostředí](../standard-library/locale-class.md#facet_class)**fac** vrácený voláním efektivní [use_facet](../standard-library/locale-functions.md#use_facet)  <  [ moneypunct –](../standard-library/moneypunct-class.md) \< **CharType**, **intl**>> ( **iosbase**. [getloc –](../standard-library/ios-base-class.md#getloc)).
+Formát vstupního závisí [omezující vlastnost národního prostředí](../standard-library/locale-class.md#facet_class)**fac** vrácený voláním efektivní [use_facet](../standard-library/locale-functions.md#use_facet)  <  [ moneypunct –](../standard-library/moneypunct-class.md) \< **CharType**, **intl**>> ( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).
 
 Konkrétně:
 
@@ -159,7 +159,7 @@ Pokud **iosbase**. [příznaky](../standard-library/ios-base-class.md#flags) & [
 
 Pokud žádné instance **fac**. `thousands_sep` v části hodnoty peněžní vstupní pole dojde k (kde prvek s hodnotou **money_base::value** se zobrazí v vzorek formátu), se nevyžaduje žádná omezení seskupení. V opačném případě technologie nevyžaduje žádná omezení seskupení **fac**. **seskupení** bude vynucovat. Všimněte si, že pro výsledné pořadí číslice představuje celé číslo, jehož nižšího řádu **fac**. `frac_digits` vpravo od desetinné čárky jsou považovány za desítkové číslice.
 
-Libovolné prázdné místo je nalezena shoda s kde element rovna **money_base::space** se zobrazí ve formátu vzoru, pokud se objeví jiné než na konci vzorku formátu. V opačném případě je neodpovídají žádná vnitřní prázdné znaky. Element *ch* je považován za prázdný znak, pokud [use_facet](../standard-library/locale-functions.md#use_facet) < [ctype](../standard-library/ctype-class.md) \< **CharType**>> () **iosbase**. [getloc –](../standard-library/ios-base-class.md#getloc)). [je](../standard-library/ctype-class.md#is)( **ctype_base::space**, *ch*) je **true**.
+Libovolné prázdné místo je nalezena shoda s kde element rovna **money_base::space** se zobrazí ve formátu vzoru, pokud se objeví jiné než na konci vzorku formátu. V opačném případě je neodpovídají žádná vnitřní prázdné znaky. Element *ch* je považován za prázdný znak, pokud [use_facet](../standard-library/locale-functions.md#use_facet) < [ctype](../standard-library/ctype-class.md) \< **CharType**>> () **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)). [je](../standard-library/ctype-class.md#is)( **ctype_base::space**, *ch*) je **true**.
 
 ### <a name="example"></a>Příklad
 
@@ -190,13 +190,13 @@ iter_type get(iter_type first,
 *první*<br/>
 Vstupní iterátor adresující začátek sekvence má být převeden.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor adresující konec sekvence má být převeden.
 
 *Intl*<br/>
 Logická hodnota označující typ symbolu měny očekávání v pořadí: **true** pokud mezinárodní **false** Pokud domácí.
 
-*iosbase*<br/>
+*Iosbase*<br/>
 Příznak formátu, který při nastavení znamená, že symbol měny je volitelná. v opačném případě je povinné
 
 *Stav*<br/>
@@ -293,15 +293,15 @@ Možné hodnoty parametru *_Refs* parametrů a jejich význam:
 
 - 0: Životnost objektu se spravuje přes národní prostředí, které je obsahují.
 
-- 1: doba života objektu je nutné ručně spravovat.
+- 1: Doba života objektu se musí spravovat ručně.
 
-- \> 1: tyto hodnoty nejsou definovány.
+- \> 1: Tyto hodnoty nejsou definovány.
 
 Žádné přímé příklady je to možné, protože destruktor je chráněn.
 
 Konstruktor inicializuje jeho základní objekt s **locale::**[omezující vlastnost](../standard-library/locale-class.md#facet_class)(*_Refs*).
 
-## <a name="string_type"></a>  money_get::STRING_TYPE
+## <a name="string_type"></a>  money_get::string_type
 
 Typ, který popisuje řetězec obsahující znaky typu **CharType**.
 

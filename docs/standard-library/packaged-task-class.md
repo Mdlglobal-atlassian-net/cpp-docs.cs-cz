@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::packaged_task [C++], swap
 - std::packaged_task [C++], valid
 ms.openlocfilehash: e759b1bc8cb47c5c943f29545e3b03ee535f3df7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370668"
 ---
 # <a name="packagedtask-class"></a>packaged_task – třída
 
@@ -53,8 +53,8 @@ class packaged_task;
 |----------|-----------------|
 |[get_future](#get_future)|Vrátí [budoucí](../standard-library/future-class.md) objekt, který má stejný připojený asynchronní stav.|
 |[make_ready_at_thread_exit](#make_ready_at_thread_exit)|Volá volatelný objekt, který je uložený v přidruženém asynchronním stavu a atomicky ukládá vrácené hodnoty.|
-|[Resetovat](#reset)|Nahradí přidružený asynchronní stav.|
-|[Prohození](#swap)|Vymění přidružený asynchronní stav zadaný objekt.|
+|[reset](#reset)|Nahradí přidružený asynchronní stav.|
+|[swap](#swap)|Vymění přidružený asynchronní stav zadaný objekt.|
 |[platný](#valid)|Určuje, zda má objekt přidružený asynchronní stav.|
 
 ### <a name="public-operators"></a>Veřejné operátory
@@ -172,7 +172,7 @@ template <class Fn, class Alloc>
 *doprava*<br/>
 A `packaged_task` objektu.
 
-*ALLOC*<br/>
+*alloc*<br/>
 Přidělovač paměti. Další informace najdete v tématu [ \<alokátorů >](../standard-library/allocators-header.md).
 
 *fn*<br/>
@@ -212,7 +212,7 @@ void reset();
 
 V důsledku toho tato metoda se spouští `*this = packaged_task(move(fn))`, kde *fn* je objekt funkce, která je uložena v přidruženém asynchronním stavu pro tento objekt. Proto se vymaže stav objektu, a [get_future](#get_future), [operator()](#op_call), a [make_ready_at_thread_exit](#make_ready_at_thread_exit) lze volat jako na nově vytvořeným objektem.
 
-## <a name="swap"></a>  packaged_task::swap –
+## <a name="swap"></a>  packaged_task::swap
 
 Vymění přidružený asynchronní stav zadaný objekt.
 

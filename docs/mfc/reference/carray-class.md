@@ -43,11 +43,11 @@ helpviewer_keywords:
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
 ms.openlocfilehash: f82dbf7dce2e14bf760bb76d23d23f667797ee0f
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58779843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391345"
 ---
 # <a name="carray-class"></a>Carray – třída
 
@@ -72,13 +72,13 @@ Parametr šablony určující typ argumentu, který se používá pro přístup 
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CArray::CArray](#carray)|Vytvoří prázdné pole.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CArray::Add](#add)|Přidá prvek na konec pole. v případě potřeby se zvětší pole.|
 |[CArray::Append](#append)|Připojí další pole k poli; v případě potřeby roste pole|
@@ -100,7 +100,7 @@ Parametr šablony určující typ argumentu, který se používá pro přístup 
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[– operátor&#91;&#93;](#operator_at)|Nastaví nebo získá prvek na zadaném indexu.|
 

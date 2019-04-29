@@ -29,11 +29,11 @@ helpviewer_keywords:
 - CPictureHolder [MFC], m_pPict
 ms.assetid: a4f59775-704a-41dd-b5bd-2e531c95127a
 ms.openlocfilehash: 5386240114550826e4bf557b63310a91590afb55
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372878"
 ---
 # <a name="cpictureholder-class"></a>CPictureHolder Class
 
@@ -267,7 +267,7 @@ short GetType();
 
 Hodnota určující typ obrázku. Možné hodnoty a jejich význam jsou následující:
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |PICTYPE_UNINITIALIZED|`CPictureHolder` objekt je unititialized.|
 |PICTYPE_NONE|`CPictureHolder` objekt je prázdný.|

@@ -5,11 +5,11 @@ f1_keywords:
 - atomic/std::atomic
 ms.assetid: 261628ed-7049-41ac-99b9-cfe49f696b44
 ms.openlocfilehash: 258812f033d34f040d96847581d6f51692a933b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376666"
 ---
 # <a name="atomic-structure"></a>atomic – struktura
 
@@ -33,10 +33,10 @@ struct atomic;
 |[Atomic::Operator =](#op_eq)|Používá zadanou hodnotu k nahrazení uložené hodnoty. ([Atomic::Store –](#store))|
 |[Atomic::Operator ++](#op_inc)|Zvýší uloženou hodnotu. Používá se pouze specializacemi integrálu a ukazatele.|
 |[Atomic::Operator +=](#op_add_eq)|Přidá zadanou hodnotu k uložené hodnotě. Používá se pouze specializacemi integrálu a ukazatele.|
-|[Atomic::Operator--](#op_dec)|Sníží uloženou hodnotu. Používá se pouze specializacemi integrálu a ukazatele.|
+|[atomic::operator--](#op_dec)|Sníží uloženou hodnotu. Používá se pouze specializacemi integrálu a ukazatele.|
 |[Atomic::Operator-=](#op_sub_eq)|Odečte zadanou hodnotu od uložené hodnoty. Používá se pouze specializacemi integrálu a ukazatele.|
 |[Atomic::Operator & =](#op_and_eq)|Provádí logické bitové a na zadanou hodnotu a uloženou hodnotu. Používá se pouze specializacemi integrálu.|
-|[Atomic::Operator&#124;=](#op_or_eq)|Provádí logické bitové nebo na zadanou hodnotu a uloženou hodnotu. Používá se pouze specializacemi integrálu.|
+|[atomic::operator&#124;=](#op_or_eq)|Provádí logické bitové nebo na zadanou hodnotu a uloženou hodnotu. Používá se pouze specializacemi integrálu.|
 |[Atomic::Operator ^ =](#op_xor_eq)|Provádí bitový exkluzivní nebo na zadanou hodnotu a uloženou hodnotu. Používá se pouze specializacemi integrálu.|
 |**Funkce**||
 |[compare_exchange_strong](#compare_exchange_strong)|Provádí *atomic_compare_and_exchange* operace **to** a vrátí výsledek.|
@@ -48,7 +48,7 @@ struct atomic;
 |[fetch_xor](#fetch_xor)|Provádí bitový exkluzivní nebo na zadanou hodnotu a uloženou hodnotu.|
 |[is_lock_free](#is_lock_free)|Určuje, zda atomické operace na **to** jsou *bez zámku*. Atomický typ je *bez zámku* Pokud žádné atomické operace na daném typu nepoužívají zámky.|
 |[Zatížení](#load)|Přečte a vrátí uloženou hodnotu.|
-|[úložiště](#store)|Používá zadanou hodnotu k nahrazení uložené hodnoty.|
+|[store](#store)|Používá zadanou hodnotu k nahrazení uložené hodnoty.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -61,8 +61,8 @@ Specializace existuje pro každý integrální typ kromě **bool**. Jednotlivé 
 ||||
 |-|-|-|
 |**Atomic\<char >**|**Atomic\<podepsané char >**|**Atomic\<unsigned char >**|
-|**Atomic\<char16_t >**|**Atomic\<char32_t >**|**Atomic\<wchar_t >**|
-|**Atomic\<krátký >**|**Atomic\<unsigned short >**|**Atomic\<int >**|
+|**atomic\<char16_t>**|**atomic\<char32_t>**|**atomic\<wchar_t>**|
+|**atomic\<short>**|**Atomic\<unsigned short >**|**atomic\<int>**|
 |**Atomic\<unsigned int >**|**Atomic\<dlouhé >**|**Atomic\<unsigned long >**|
 |**Atomic\<long long >**|**Atomic\<unsigned long long. >**|
 
@@ -427,7 +427,7 @@ Ty atomic<Ty>::exchange(
 *Hodnota*<br/>
 Hodnotu typu *Ty*.
 
-*Pořadí*<br/>
+*Order*<br/>
 A `memory_order`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -458,7 +458,7 @@ Ty atomic<Ty>::fetch_add (
 *Hodnota*<br/>
 Hodnotu typu *Ty*.
 
-*Pořadí*<br/>
+*Order*<br/>
 A `memory_order`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -489,7 +489,7 @@ Ty atomic<Ty>::fetch_and (
 *Hodnota*<br/>
 Hodnotu typu *Ty*.
 
-*Pořadí*<br/>
+*Order*<br/>
 A `memory_order`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -520,7 +520,7 @@ Ty atomic<Ty>::fetch_or (
 *Hodnota*<br/>
 Hodnotu typu *Ty*.
 
-*Pořadí*<br/>
+*Order*<br/>
 A `memory_order`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -551,7 +551,7 @@ Ty atomic<Ty>::fetch_sub (
 *Hodnota*<br/>
 Hodnotu typu *Ty*.
 
-*Pořadí*<br/>
+*Order*<br/>
 A `memory_order`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -582,7 +582,7 @@ Ty atomic<Ty>::fetch_xor (
 *Hodnota*<br/>
 Hodnotu typu *Ty*.
 
-*Pořadí*<br/>
+*Order*<br/>
 A `memory_order`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -624,7 +624,7 @@ Ty atomic::load(
 
 ### <a name="parameters"></a>Parametry
 
-*Pořadí*<br/>
+*Order*<br/>
 A `memory_order`. *Pořadí* nesmí být `memory_order_release` nebo `memory_order_acq_rel`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -651,7 +651,7 @@ void atomic<Ty>::store(
 *Hodnota*<br/>
 A *Ty* objektu.
 
-*Pořadí*<br/>
+*Order*<br/>
 A `memory_order` omezení.
 
 ### <a name="remarks"></a>Poznámky

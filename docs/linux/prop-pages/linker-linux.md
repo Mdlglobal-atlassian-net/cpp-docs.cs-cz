@@ -1,21 +1,21 @@
 ---
-title: Vlastnosti linkerů (Linux C++)
+title: Linker Properties (Linux C++)
 ms.date: 9/26/2017
 ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
 ms.openlocfilehash: 2e5c3446d8daeeb052937b5e172fc9fa4b6ad302
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393035"
 ---
-# <a name="linker-properties-linux-c"></a>Vlastnosti linkerů (Linux C++)
+# <a name="linker-properties-linux-c"></a>Linker Properties (Linux C++)
 
 ## <a name="general"></a>Obecné
 
 Vlastnost | Popis | Možnosti
 --- | ---| ---
-Výstupní soubor | Tato možnost přepíše výchozí název a umístění programu, který vytvoří linker. (-o).
+Výstupní soubor | Tato možnost přepíše výchozí název a umístění programu, který vytvoří linker. (-o)
 Zobrazit průběh | Vytiskne zprávy o průběhu Linkeru.
 Version | -Version přikáže linkeru, aby vložil číslo verze v záhlaví spustitelného souboru.
 Povolit podrobný výstup | -Verbose – možnost dá linkeru pokyn, do výstupu vypisoval podrobné zprávy pro ladění.
@@ -45,7 +45,7 @@ Další závislosti | Určuje další položky pro přidání do příkazového 
 Vlastnost | Popis | Možnosti
 --- | ---| ---
 Informace o symbolech ladicího programu | Ladicí program informace o symbolech z výstupního souboru. | **Zahrnout všechny**<br>**Vynechat informace o symbolech ladicího programu pouze**<br>**Vynechat všechny informace o symbolech**<br>
-Název souboru mapy | Možnost Map přikazuje linkeru, aby vytvořil soubor mapy s uživatelsky definovaným názvem. (-Map =)
+Název souboru mapy | Možnost Map přikazuje linkeru, aby vytvořil soubor mapy s uživatelsky definovaným názvem. (-Map=)
 
 ## <a name="advanced"></a>Upřesnit
 

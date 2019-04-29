@@ -5,11 +5,11 @@ helpviewer_keywords:
 - output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
 ms.openlocfilehash: eba627c69437754a9c0a819167443aa00c025fef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370837"
 ---
 # <a name="output-file-stream-member-functions"></a>Členské funkce datového proudu výstupního souboru
 
@@ -108,8 +108,8 @@ K testování chyby při zápisu do datového proudu použijte tyto členské fu
 |[Selhání](basic-ios-class.md#fail)|Vrátí **true** dojde k neodstranitelné chybě nebo "očekávané" podmínku, třeba Chyba převodu, nebo pokud se nenajde soubor. Zpracování může často pokračovat po volání `clear` s argumentem nula.|
 |[Dobré](basic-ios-class.md#good)|Vrátí **true** Pokud neexistuje žádná chybová podmínka (neobnovitelná nebo jinak) a není nastaven příznak end souboru.|
 |[eof](basic-ios-class.md#eof)|Vrátí **true** ve stavu ukončení souboru.|
-|[Vymazat](basic-ios-class.md#clear)|Nastaví stav vnitřní chyba. Pokud je volána pomocí výchozích argumentů, vymaže všechny bity chyby.|
-|[rdstate –] (basic-ios-class.md #rdstate|Vrátí aktuální chybový stav.|
+|[clear](basic-ios-class.md#clear)|Nastaví stav vnitřní chyba. Pokud je volána pomocí výchozích argumentů, vymaže všechny bity chyby.|
+|[rdstate](basic-ios-class.md#rdstate|Vrátí aktuální chybový stav.|
 
 **!** k provedení stejné funkce jako je operátor přetížen `fail` funkce. Proto výraz:
 

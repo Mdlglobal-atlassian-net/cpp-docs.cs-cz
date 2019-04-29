@@ -9,15 +9,15 @@ helpviewer_keywords:
 - BSTR object [C++], COM encapsulation
 ms.assetid: 58841fef-fe21-4a84-aab9-780262b5201f
 ms.openlocfilehash: f394a48c0326058be705d14fb0413e23e8052ae2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386158"
 ---
 # <a name="bstrt-class"></a>_bstr_t – třída
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 A `_bstr_t` zapouzdřuje objektu [datový typ BSTR](/previous-versions/windows/desktop/automat/bstr). Třída spravuje a pomocí volání funkce zrušení přidělení prostředků `SysAllocString` a `SysFreeString` a dalších `BSTR` rozhraní API. **_Bstr_t** třída používá počítání odkazů, aby se zabránilo nadměrnému zatížení.
 
@@ -54,7 +54,7 @@ A `_bstr_t` zapouzdřuje objektu [datový typ BSTR](/previous-versions/windows/d
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<comutil.h >
+**Header:** \<comutil.h>
 
 **Lib:** comsuppw.lib nebo comsuppwd.lib (viz [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Další informace)
 

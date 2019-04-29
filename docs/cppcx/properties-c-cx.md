@@ -1,15 +1,15 @@
 ---
-title: Vlastnosti (C + +/ CX)
+title: Vlastnosti (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
 ms.openlocfilehash: 8303952beefbbac13db14e148c6441c29a46b3d0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375220"
 ---
-# <a name="properties-ccx"></a>Vlastnosti (C + +/ CX)
+# <a name="properties-ccx"></a>Vlastnosti (C++/CX)
 
 Veřejné datové typy Windows Runtime vystavit jako vlastnosti. Klientský kód přistupuje k vlastnosti stejně jako veřejné datamember. Vlastnost interně, je implementovaný jako blok, který obsahuje metodu přístupového objektu get nebo metodu přístupového objektu set. Pomocí přístupových metod lze provádět další akce před nebo po načtení hodnoty, například může vyvolat událost nebo provádět kontroly ověřování.
 
@@ -19,7 +19,7 @@ Hodnota vlastnosti je obsažen v soukromé proměnné – označované jako *zá
 
 A *triviální* je vlastnost pro čtení a zápis, pro které kompilátor automaticky implementuje přístupové objekty a záložního úložiště. Nemáte přístup k implementaci kompilátor. Můžete však deklarovat vlastní vlastnost a explicitně deklarovat její přístupové objekty a záložního úložiště. V rámci přistupující objekt můžete provádět jakékoli logiky, která budete potřebovat, jako je například ověřování vstupu pro přistupující objekt set, výpočtu hodnoty z hodnoty vlastnosti, přístup k databázi nebo aktivaci události při změně vlastnosti.
 
-Když C + +/ CX referenční třídy je vytvořena instance, jeho paměti je inicializována nulou před voláním konstruktoru; proto všechny vlastnosti jsou přiřazeny výchozí hodnotu nula nebo nullptr bodě deklarace.
+Když C++je vytvořena instance třídy ref /CX, jeho paměti je inicializována nulou před voláním konstruktoru; proto všechny vlastnosti jsou přiřazeny výchozí hodnotu nula nebo nullptr bodě deklarace.
 
 ### <a name="examples"></a>Příklady
 
@@ -39,4 +39,4 @@ Všimněte si, že vlastnost nejde inicializovat ve seznamu členů. Samozřejm�
 
 [Systém typů](../cppcx/type-system-c-cx.md)<br/>
 [Referenční dokumentace jazyka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Odkaz na obory názvů](../cppcx/namespaces-reference-c-cx.md)
+[Referenční informace o oborech názvů](../cppcx/namespaces-reference-c-cx.md)

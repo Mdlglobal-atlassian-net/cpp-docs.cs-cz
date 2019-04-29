@@ -17,11 +17,11 @@ helpviewer_keywords:
 - custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
 ms.openlocfilehash: 7b362749c9a5cb1c7ec77e5cac8625aa7eb260f0
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59037786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387828"
 ---
 # <a name="how-to-use-a-drawing-tool"></a>Postupy: Použití nástroje kreslení
 
@@ -136,7 +136,7 @@ Stisknutím klávesy **Esc** nebo zvolte jiný nástroj pro vykreslování.
 
 ## <a name="requirements"></a>Požadavky
 
-Žádný
+Žádné
 
 ## <a name="see-also"></a>Viz také:
 

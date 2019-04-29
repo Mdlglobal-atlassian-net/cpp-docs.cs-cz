@@ -1,15 +1,15 @@
 ---
-title: Částečné třídy (C + +/ CX)
+title: Částečné třídy (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 69d93575-636c-4564-8cca-6dfba0c7e328
 ms.openlocfilehash: 71df19e98192a7704d4528fe730ce79977383a9b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384995"
 ---
-# <a name="partial-classes-ccx"></a>Částečné třídy (C + +/ CX)
+# <a name="partial-classes-ccx"></a>Částečné třídy (C++/CX)
 
 Částečné třídy je konstrukce, která podporuje scénáře, ve kterých chcete upravit část definice třídy a automatické generování kódu softwaru – například Návrhář XAML, je také upravovat kód ve stejné třídě. S použitím částečnou třídu, můžete zabránit návrháře přepsání kódu. V projektu sady Visual Studio `partial` modifikátor se použijí automaticky generovaného souboru.
 
@@ -99,4 +99,4 @@ Následující příklad definuje `Address` třídy mezi dva soubory kódu. Upra
 
 [Systém typů](../cppcx/type-system-c-cx.md)<br/>
 [Referenční dokumentace jazyka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Odkaz na obory názvů](../cppcx/namespaces-reference-c-cx.md)
+[Referenční informace o oborech názvů](../cppcx/namespaces-reference-c-cx.md)

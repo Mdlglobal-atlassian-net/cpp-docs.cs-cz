@@ -9,11 +9,11 @@ helpviewer_keywords:
 - detect_mismatch pragma
 ms.assetid: ddb13ac9-0e2f-40ce-be69-7e44c04f5a12
 ms.openlocfilehash: 42a3ba61cefe3b2db01aef24b802e3a51fed55d9
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59026703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389330"
 ---
 # <a name="detectmismatch"></a>detect_mismatch
 Umístí do objektu záznam. Linker zkontroluje tyto záznamy a vyhledá potenciální problémy.

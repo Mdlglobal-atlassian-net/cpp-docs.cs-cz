@@ -64,11 +64,11 @@ helpviewer_keywords:
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
 ms.openlocfilehash: f4a99ea972c6d2ea9b9721664cc75dec257fd7b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393750"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
@@ -321,8 +321,8 @@ Typ uložené funktor.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|Operator()|Vypočítá požadované funkce.|
-|delegate_type^() – operátor|Přetypování funktor na delegáta.|
+|operator()|Vypočítá požadované funkce.|
+|operator delegate_type^()|Přetypování funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -596,8 +596,8 @@ Typ uložené funktor.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|Operator()|Vypočítá požadované funkce.|
-|delegate_type^() – operátor|Přetypování funktor na delegáta.|
+|operator()|Vypočítá požadované funkce.|
+|operator delegate_type^()|Přetypování funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -701,8 +701,8 @@ Typ uložené funktor.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|Operator()|Vypočítá požadované funkce.|
-|delegate_type^() – operátor|Přetypování funktor na delegáta.|
+|operator()|Vypočítá požadované funkce.|
+|operator delegate_type^()|Přetypování funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -805,8 +805,8 @@ Typ argumentů a vrácené hodnoty.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|Operator()|Vypočítá požadované funkce.|
-|delegate_type^() – operátor|Přetypování funktor na delegáta.|
+|operator()|Vypočítá požadované funkce.|
+|operator delegate_type^()|Přetypování funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -906,8 +906,8 @@ Typ argumentů.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|Operator()|Vypočítá požadované funkce.|
-|delegate_type^() – operátor|Přetypování funktor na delegáta.|
+|operator()|Vypočítá požadované funkce.|
+|operator delegate_type^()|Přetypování funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1007,8 +1007,8 @@ Typ argumentů.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|Operator()|Vypočítá požadované funkce.|
-|delegate_type operátor ^|Přetypování funktor na delegáta.|
+|operator()|Vypočítá požadované funkce.|
+|operator delegate_type^|Přetypování funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1108,8 +1108,8 @@ Typ argumentů.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|Operator()|Vypočítá požadované funkce.|
-|delegate_type operátor ^|Přetypování funktor na delegáta.|
+|operator()|Vypočítá požadované funkce.|
+|operator delegate_type^|Přetypování funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1209,8 +1209,8 @@ Typ argumentů.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|Operator()|Vypočítá požadované funkce.|
-|delegate_type operátor ^|Přetypování funktor na delegáta.|
+|operator()|Vypočítá požadované funkce.|
+|operator delegate_type^|Přetypování funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1310,8 +1310,8 @@ Typ argumentů.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|Operator()|Vypočítá požadované funkce.|
-|delegate_type operátor ^|Přetypování funktor na delegáta.|
+|operator()|Vypočítá požadované funkce.|
+|operator delegate_type^|Přetypování funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1411,8 +1411,8 @@ Typ argumentů.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|Operator()|Vypočítá požadované funkce.|
-|delegate_type operátor ^|Přetypování funktor na delegáta.|
+|operator()|Vypočítá požadované funkce.|
+|operator delegate_type^|Přetypování funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1509,8 +1509,8 @@ Typ argumentů.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|Operator()|Vypočítá požadované funkce.|
-|delegate_type operátor ^|Přetypování funktor na delegáta.|
+|operator()|Vypočítá požadované funkce.|
+|operator delegate_type^|Přetypování funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1602,8 +1602,8 @@ Typ argumentů.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|Operator()|Vypočítá požadované funkce.|
-|delegate_type operátor ^|Přetypování funktor na delegáta.|
+|operator()|Vypočítá požadované funkce.|
+|operator delegate_type^|Přetypování funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1703,8 +1703,8 @@ Typ argumentů a vrácené hodnoty.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|Operator()|Vypočítá požadované funkce.|
-|delegate_type operátor ^|Přetypování funktor na delegáta.|
+|operator()|Vypočítá požadované funkce.|
+|operator delegate_type^|Přetypování funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1804,8 +1804,8 @@ Typ argumentů a vrácené hodnoty.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|Operator()|Vypočítá požadované funkce.|
-|delegate_type operátor ^|Přetypování funktor na delegáta.|
+|operator()|Vypočítá požadované funkce.|
+|operator delegate_type^|Přetypování funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1905,8 +1905,8 @@ Typ argumentů a vrácené hodnoty.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|Operator()|Vypočítá požadované funkce.|
-|delegate_type operátor ^|Přetypování funktor na delegáta.|
+|operator()|Vypočítá požadované funkce.|
+|operator delegate_type^|Přetypování funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2003,8 +2003,8 @@ Typ argumentů.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|Operator()|Vypočítá požadované funkce.|
-|delegate_type operátor ^|Přetypování funktor na delegáta.|
+|operator()|Vypočítá požadované funkce.|
+|operator delegate_type^|Přetypování funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2096,8 +2096,8 @@ Typ argumentů.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|Operator()|Vypočítá požadované funkce.|
-|delegate_type operátor ^|Přetypování funktor na delegáta.|
+|operator()|Vypočítá požadované funkce.|
+|operator delegate_type^|Přetypování funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2350,8 +2350,8 @@ Typ argumentů a vrácené hodnoty.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|Operator()|Vypočítá požadované funkce.|
-|delegate_type operátor ^|Přetypování funktor na delegáta.|
+|operator()|Vypočítá požadované funkce.|
+|operator delegate_type^|Přetypování funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2578,8 +2578,8 @@ Typ uložené funktor.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|Operator()|Vypočítá požadované funkce.|
-|delegate_type ^|Přetypování funktor na delegáta.|
+|operator()|Vypočítá požadované funkce.|
+|delegate_type^|Přetypování funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 

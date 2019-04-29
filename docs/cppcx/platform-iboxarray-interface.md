@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Platform::IBoxArray
 ms.assetid: 6cd82c9e-4230-4147-9edb-7a652875dbf1
 ms.openlocfilehash: ea2517ad64cfd6742ef072d24e94a9b3899cea2d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392073"
 ---
 # <a name="platformiboxarray-interface"></a>Platform::iboxarray – rozhraní
 
@@ -33,7 +33,7 @@ Typ zabalené hodnoty v každém elementu pole.
 
 ### <a name="remarks"></a>Poznámky
 
-`IBoxArray` je C + +/ CX název `Windows::Foundation::IReferenceArray`.
+`IBoxArray` je C++/CX název `Windows::Foundation::IReferenceArray`.
 
 ### <a name="members"></a>Členové
 
@@ -68,4 +68,4 @@ Příklad najdete v tématu [zabalení](../cppcx/boxing-c-cx.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Pole a WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)
+[Array a WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - GetBSTR method [C++]
 ms.assetid: 0c62ff16-4433-4183-a03c-d5a0a9b731ef
 ms.openlocfilehash: cea3404e0732cb0e16b3fa9199ce95e3dfcc23f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386145"
 ---
 # <a name="bstrtgetbstr"></a>_bstr_t::GetBSTR
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Odkazuje na začátku `BSTR` uzavřenou `_bstr_t`.
 

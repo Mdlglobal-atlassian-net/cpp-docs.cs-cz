@@ -6,11 +6,11 @@ helpviewer_keywords:
 - preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
 ms.openlocfilehash: a9e5be5895d8a90d93d0060e2bd2a7d0a9f84dbd
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403513"
 ---
 # <a name="cc-preprocessor-reference"></a>C/C++ – referenční dokumentace preprocesoru
 *C/C++ Preprocessor Reference* popisuje preprocesor, jak je implementován v jazyce Microsoft C/C++. Preprocesor provádí předběžné operace v souborech C a C++ dříve, než jsou předány kompilátoru. Preprocesor můžete použít k podmíněné kompilaci kódu, vložení souborů, zadejte kompilace chybové zprávy a použití pravidel specifických pro části kódu.

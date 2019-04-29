@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
 ms.openlocfilehash: 1b9f57e46d5ac74dd52f7ddb7ebd90f8888891e3
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58772748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403734"
 ---
 # <a name="cmfccolordialog-class"></a>Cmfccolordialog – třída
 
@@ -43,14 +43,14 @@ class CMFCColorDialog : public CDialogEx
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorDialog::CMFCColorDialog](#cmfccolordialog)|Vytvoří `CMFCColorDialog` objektu.|
 |`CMFCColorDialog::~CMFCColorDialog`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorDialog::GetColor](#getcolor)|Vrátí aktuální vybraná barva.|
 |[CMFCColorDialog::GetPalette](#getpalette)|Vrátí hodnotu barvy palety.|
@@ -63,7 +63,7 @@ class CMFCColorDialog : public CDialogEx
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`m_bIsMyPalette`|Hodnota TRUE, pokud dialogové okno Výběr barvy používá vlastní paletu barev, nebo hodnotu FALSE, pokud používá paletu, která je zadána v dialogovém okně `CMFCColorDialog` konstruktoru.|
 |`m_bPickerMode`|Hodnota TRUE, když uživatel je výběr barvy z dialogového okna Výběr; v opačném případě hodnota FALSE.|

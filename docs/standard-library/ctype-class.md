@@ -37,11 +37,11 @@ helpviewer_keywords:
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
 ms.openlocfilehash: e7c474e9112acadc11af889471b1e126dfeeb23f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394140"
 ---
 # <a name="ctype-class"></a>ctype – třída
 
@@ -104,8 +104,8 @@ Všechny ostatní operace jsou prováděny na **char** hodnoty stejným způsobe
 |[Upřesněte](#narrow)|Převede znak typu `CharType` používaný národním prostředím na odpovídající znak typu char v nativní znakové sadě.|
 |[scan_is](#scan_is)|Vyhledá první znak v rozsahu, který odpovídá zadané masce.|
 |[scan_not](#scan_not)|Vyhledá první znak v rozsahu, který neodpovídá zadané masce.|
-|[ToLower](#tolower)|Převede znak nebo rozsah znaků na malá písmena.|
-|[ToUpper](#toupper)|Převede znak nebo rozsah znaků na velká písmena.|
+|[tolower](#tolower)|Převede znak nebo rozsah znaků na malá písmena.|
+|[toupper](#toupper)|Převede znak nebo rozsah znaků na velká písmena.|
 |[widen](#widen)|Převede znak typu **char** v nativní znakové sadě na odpovídající znak typu `CharType` používaný národním prostředím.|
 
 ## <a name="requirements"></a>Požadavky
@@ -149,9 +149,9 @@ Možné hodnoty parametru *_Refs* parametrů a jejich význam:
 
 - 0: Životnost objektu se spravuje přes národní prostředí, které je obsahují.
 
-- 1: doba života objektu je nutné ručně spravovat.
+- 1: Doba života objektu se musí spravovat ručně.
 
-- \> 1: tyto hodnoty nejsou definovány.
+- \> 1: Tyto hodnoty nejsou definovány.
 
 Žádné přímé příklady je to možné, protože destruktor je chráněn.
 
@@ -183,10 +183,10 @@ Znak, jejichž atributy jsou má být testována.
 *první*<br/>
 Ukazatel na první znak v rozsahu, jejichž atributy jsou klasifikaci.
 
-*poslední*<br/>
+*last*<br/>
 Ukazatel na znak hned za poslední znak v rozsahu, jejichž atributy jsou klasifikaci.
 
-*cíl*<br/>
+*dest*<br/>
 Ukazatel na začátku pole, kde jsou hodnoty masky charakterizuje atributy znaky mají být uloženy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -230,10 +230,10 @@ Výchozí hodnota pro přiřazení pomocí členské funkce znaky typu `CharType
 *první*<br/>
 Ukazatel na první znak v rozsahu znaků, které mají být převedeny.
 
-*poslední*<br/>
+*last*<br/>
 Ukazatel na znak hned za poslední znak v rozsahu znaků, které mají být převedeny.
 
-*cíl*<br/>
+*dest*<br/>
 Konstantní ukazatel na první znak typu **char** v cílovém rozsahu, který ukládá převedený rozsahu znaků.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -269,7 +269,7 @@ Hodnota masky k porovnání s znak.
 *první*<br/>
 Ukazatel na první znak v rozsahu ke kontrole.
 
-*poslední*<br/>
+*last*<br/>
 Ukazatel na znak hned za poslední znak v rozsahu ke kontrole.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -303,7 +303,7 @@ Hodnota masky není k porovnání s znak.
 *první*<br/>
 Ukazatel na první znak v rozsahu ke kontrole.
 
-*poslední*<br/>
+*last*<br/>
 Ukazatel na znak hned za poslední znak v rozsahu ke kontrole.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -338,7 +338,7 @@ Znak, který má být převeden na malá písmena.
 *první*<br/>
 Ukazatel na první znak v rozsahu znaků, jehož případy jsou má být převeden.
 
-*poslední*<br/>
+*last*<br/>
 Ukazatel na znak hned za poslední znak v rozsahu znaků, jehož případy jsou má být převeden.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -373,7 +373,7 @@ Znak, který má být převeden na velká písmena.
 *první*<br/>
 Ukazatel na první znak v rozsahu znaků, jehož případy jsou má být převeden.
 
-*poslední*<br/>
+*last*<br/>
 Ukazatel na znak hned za poslední znak v rozsahu znaků, jehož případy jsou má být převeden.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -409,10 +409,10 @@ Znak typu **char** v nativní znakové sadě má být převeden.
 *první*<br/>
 Ukazatel na první znak v rozsahu znaků, které mají být převedeny.
 
-*poslední*<br/>
+*last*<br/>
 Ukazatel na znak hned za poslední znak v rozsahu znaků, které mají být převedeny.
 
-*cíl*<br/>
+*dest*<br/>
 Ukazatel na první znak typu `CharType` v cílovém rozsahu, který ukládá převedený rozsahu znaků.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -453,10 +453,10 @@ Znak, jejichž atributy jsou má být testována.
 *první*<br/>
 Ukazatel na první znak v rozsahu, jejichž atributy jsou klasifikaci.
 
-*poslední*<br/>
+*last*<br/>
 Ukazatel na znak hned za poslední znak v rozsahu, jejichž atributy jsou klasifikaci.
 
-*cíl*<br/>
+*dest*<br/>
 Ukazatel na začátku pole, kde jsou hodnoty masky charakterizuje atributy znaky mají být uloženy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -533,10 +533,10 @@ Výchozí hodnota pro přiřazení pomocí členské funkce znaky typu `CharType
 *první*<br/>
 Ukazatel na první znak v rozsahu znaků, které mají být převedeny.
 
-*poslední*<br/>
+*last*<br/>
 Ukazatel na znak hned za poslední znak v rozsahu znaků, které mají být převedeny.
 
-*cíl*<br/>
+*dest*<br/>
 Konstantní ukazatel na první znak typu **char** v cílovém rozsahu, který ukládá převedený rozsahu znaků.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -594,7 +594,7 @@ Hodnota masky k porovnání s znak.
 *první*<br/>
 Ukazatel na první znak v rozsahu ke kontrole.
 
-*poslední*<br/>
+*last*<br/>
 Ukazatel na znak hned za poslední znak v rozsahu ke kontrole.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -650,7 +650,7 @@ Hodnota masky není k porovnání s znak.
 *první*<br/>
 Ukazatel na první znak v rozsahu ke kontrole.
 
-*poslední*<br/>
+*last*<br/>
 Ukazatel na znak hned za poslední znak v rozsahu ke kontrole.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -705,7 +705,7 @@ Znak, který má být převeden na malá písmena.
 *první*<br/>
 Ukazatel na první znak v rozsahu znaků, jehož případy jsou má být převeden.
 
-*poslední*<br/>
+*last*<br/>
 Ukazatel na znak hned za poslední znak v rozsahu znaků, jehož případy jsou má být převeden.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -760,7 +760,7 @@ Znak, který má být převeden na velká písmena.
 *první*<br/>
 Ukazatel na první znak v rozsahu znaků, jehož případy jsou má být převeden.
 
-*poslední*<br/>
+*last*<br/>
 Ukazatel na znak hned za poslední znak v rozsahu znaků, jehož případy jsou má být převeden.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -815,10 +815,10 @@ Znak typu char v nativní znakové nastavit má být převeden.
 *první*<br/>
 Ukazatel na první znak v rozsahu znaků, které mají být převedeny.
 
-*poslední*<br/>
+*last*<br/>
 Ukazatel na znak hned za poslední znak v rozsahu znaků, které mají být převedeny.
 
-*cíl*<br/>
+*dest*<br/>
 Ukazatel na první znak typu `CharType` v cílovém rozsahu, který ukládá převedený rozsahu znaků.
 
 ### <a name="return-value"></a>Návratová hodnota

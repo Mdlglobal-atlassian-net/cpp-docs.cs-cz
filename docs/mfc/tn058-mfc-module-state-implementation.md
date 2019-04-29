@@ -13,11 +13,11 @@ helpviewer_keywords:
 - process state [MFC]
 ms.assetid: 72f5b36f-b3da-4009-a144-24258dcd2b2f
 ms.openlocfilehash: db34f528e70a7dcc437836684656b3ce8a4078fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399593"
 ---
 # <a name="tn058-mfc-module-state-implementation"></a>TN058: Implementace stavu modulu MFC
 
@@ -30,7 +30,7 @@ Před čtením této poznámky o "Správa the stav dat modulů knihovny MFC" v [
 
 ## <a name="overview"></a>Přehled
 
-Existují tři druhy informací o stavu knihovny MFC: modul stav, stav procesu a stav vlákna. V některých případech mohou být kombinovány tyto typy stavu. Mapování zpracování MFC jsou například místní modul a místního vlákna. To umožňuje dvou různých modulech mít různých map v každé z jejich vlákna.
+Existují tři druhy informací o stavu knihovny MFC: Stav modulu, stav procesu a stav vlákna. V některých případech mohou být kombinovány tyto typy stavu. Mapování zpracování MFC jsou například místní modul a místního vlákna. To umožňuje dvou různých modulech mít různých map v každé z jejich vlákna.
 
 Stav procesu a stav vlákna jsou podobné. Tyto datové položky jsou věci, které tradičně globální proměnné, ale mají musí být specifické pro daný proces nebo vlákno pro podporu správné Win32s nebo podpora multithreadingu ve správné. Která kategorie dané datové položky vejde závisí na danou položku a její požadované sémantika s ohledem na hranice procesu a vlákně.
 

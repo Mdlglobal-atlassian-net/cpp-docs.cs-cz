@@ -4,11 +4,11 @@ ms.date: 09/17/2018
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
 ms.openlocfilehash: c3def77d8b7a22be05259784e3b80562c8728c15
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398911"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Ošetření chyb a výjimek (moderní verze jazyka C++)
 
@@ -90,7 +90,7 @@ Výjimky a kontrolní výrazy jsou dva odlišné mechanismy pro detekci chyb za 
 
 ## <a name="c-exceptions-versus-windows-seh-exceptions"></a>Výjimky jazyka C++ a výjimky Windows SEH
 
-Programy jazyka C i C++ mohou používat strukturovaných výjimek (SEH) mechanismu v operačním systému Windows pro zpracování. Základní pojmy v SEH se podobají těm v výjimky jazyka C++, s tím rozdílem, že SEH používá **__try**, **__except**, a **__finally** vytvoří místo **zkuste** a **catch**. V jazyce Visual C++ jsou výjimky C++ implementovány pro SEH. Při psaní kódu jazyka C++ však použijte synax výjimek C++.
+Programy jazyka C i C++ mohou používat strukturovaných výjimek (SEH) mechanismu v operačním systému Windows pro zpracování. Základní pojmy v SEH se podobají těm v C++ výjimky, s tím rozdílem, že SEH používá **__try**, **__except**, a **__finally** vytvoří místo **akci**  a **catch**. V jazyce Visual C++ jsou výjimky C++ implementovány pro SEH. Při psaní kódu jazyka C++ však použijte synax výjimek C++.
 
 Další informace o knihovnách SEH naleznete v tématu [strukturovaného zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md).
 

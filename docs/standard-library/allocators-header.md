@@ -1,5 +1,5 @@
 ---
-title: '&lt;alokátory:&gt;'
+title: '&lt;allocators&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <allocators>
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
 ms.openlocfilehash: 064afd4467a2aedebe3a9892fc80b14597c8552f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375402"
 ---
-# <a name="ltallocatorsgt"></a>&lt;alokátory:&gt;
+# <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
 Definuje několik šablon, které pomáhají přidělit a uvolnit bloky paměti pro kontejnery založené na uzlu.
 
@@ -31,7 +31,7 @@ Allocator šablony jsou implementovány pomocí opakovaně použitelné komponen
 
 Kontejnery založené na uzlu ve standardní knihovně C++ (std::list, std::set, std::multiset, std::map a std::multimap) ukládají jejich prvky v jednotlivých uzlech. Všechny uzly konkrétní typy kontejnerů mají stejnou velikost, takže není potřeba flexibilitu správce paměti pro obecné účely. Protože každý blok paměti velikosti je znám v době kompilace, správce paměti může být mnohem jednodušší a rychlejší.
 
-Při použití s kontejnery, které nejsou založené na uzlu (například std::deque std::vector kontejnery standardní knihovny C++ a std::basic_string), šablony alllocator bude správně fungovat, ale nejsou pravděpodobně kvůli zlepšení výkonu za výchozího přidělujícího modulu.
+Při použití s kontejnery, které nejsou založené na uzlu (například C++ std::deque std::vector kontejnery standardní knihovny a std::basic_string), šablony alllocator bude správně fungovat, ale nejsou pravděpodobně kvůli zlepšení výkonu přes výchozího přidělujícího modulu.
 
 Přidělování je třída šablony popisující objekt, který spravuje rozdělení úložiště a uvolnění pro objekty a pole objektů určeného typu. Přidělování objektů používá několik tříd šablon kontejneru ve standardní knihovně jazyka C++.
 
@@ -46,11 +46,11 @@ Pokud argument šablony `Type` je typ spravovaných instancí alokátoru. Standa
 
 - [allocator_newdel](../standard-library/allocator-newdel-class.md)
 
-- [allocator_unbounded –](../standard-library/allocator-unbounded-class.md)
+- [allocator_unbounded](../standard-library/allocator-unbounded-class.md)
 
 - [allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)
 
-- [allocator_variable_size –](../standard-library/allocator-variable-size-class.md)
+- [allocator_variable_size](../standard-library/allocator-variable-size-class.md)
 
 - [allocator_suballoc](../standard-library/allocator-suballoc-class.md)
 
@@ -124,7 +124,7 @@ Pokud kompilátor podporuje kompilace s jedním vláknem i vícevláknové aplik
 |[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)|Vrací alokátoru třídy šablony.|
 |[CACHE_CHUNKLIST](../standard-library/allocators-functions.md#cache_chunklist)|Vrací `stdext::allocators::cache_chunklist<sizeof(Type)>`.|
 |[CACHE_FREELIST](../standard-library/allocators-functions.md#cache_freelist)|Vrací `stdext::allocators::cache_freelist<sizeof(Type), max>`.|
-|[CACHE_SUBALLOC –](../standard-library/allocators-functions.md#cache_suballoc)|Vrací `stdext::allocators::cache_suballoc<sizeof(Type)>`.|
+|[CACHE_SUBALLOC](../standard-library/allocators-functions.md#cache_suballoc)|Vrací `stdext::allocators::cache_suballoc<sizeof(Type)>`.|
 |[SYNC_DEFAULT](../standard-library/allocators-functions.md#sync_default)|Vrací filtr synchronizace.|
 
 ### <a name="operators"></a>Operátory
@@ -138,13 +138,13 @@ Pokud kompilátor podporuje kompilace s jedním vláknem i vícevláknové aplik
 
 |Třída|Popis|
 |-|-|
-|[allocator_base –](../standard-library/allocator-base-class.md)|Definuje základní třídu a běžné funkce potřebné k vytváření alokátorem definovaný uživatelem z filtru synchronizace.|
+|[allocator_base](../standard-library/allocator-base-class.md)|Definuje základní třídu a běžné funkce potřebné k vytváření alokátorem definovaný uživatelem z filtru synchronizace.|
 |[allocator_chunklist](../standard-library/allocator-chunklist-class.md)|Popisuje objekt, který spravuje rozdělení úložiště a uvolnění objektů použití mezipaměti typu [cache_chunklist –](../standard-library/cache-chunklist-class.md).|
 |[allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)|Popisuje objekt, který spravuje rozdělení úložiště a uvolnění pro objekt typu `Type` použití mezipaměti typu [cache_freelist –](../standard-library/cache-freelist-class.md) s délkou spravuje [max_fixed_size –](../standard-library/max-fixed-size-class.md).|
 |[allocator_newdel](../standard-library/allocator-newdel-class.md)|Implementuje alokátoru, který používá **operátor delete** k uvolnění paměti bloku a **operátor new** přidělení bloku paměti.|
 |[allocator_suballoc](../standard-library/allocator-suballoc-class.md)|Popisuje objekt, který spravuje rozdělení úložiště a uvolnění pro objekt typu `Type` použití mezipaměti typu [cache_suballoc –](../standard-library/cache-suballoc-class.md).|
-|[allocator_unbounded –](../standard-library/allocator-unbounded-class.md)|Popisuje objekt, který spravuje rozdělení úložiště a uvolnění pro objekt typu `Type` použití mezipaměti typu [cache_freelist –](../standard-library/cache-freelist-class.md) s délkou spravuje [max_unbounded –](../standard-library/max-unbounded-class.md).|
-|[allocator_variable_size –](../standard-library/allocator-variable-size-class.md)|Popisuje objekt, který spravuje rozdělení úložiště a uvolnění pro objekt typu `Type` použití mezipaměti typu [cache_freelist –](../standard-library/cache-freelist-class.md) s délkou spravuje [max_variable_size –](../standard-library/max-variable-size-class.md).|
+|[allocator_unbounded](../standard-library/allocator-unbounded-class.md)|Popisuje objekt, který spravuje rozdělení úložiště a uvolnění pro objekt typu `Type` použití mezipaměti typu [cache_freelist –](../standard-library/cache-freelist-class.md) s délkou spravuje [max_unbounded –](../standard-library/max-unbounded-class.md).|
+|[allocator_variable_size](../standard-library/allocator-variable-size-class.md)|Popisuje objekt, který spravuje rozdělení úložiště a uvolnění pro objekt typu `Type` použití mezipaměti typu [cache_freelist –](../standard-library/cache-freelist-class.md) s délkou spravuje [max_variable_size –](../standard-library/max-variable-size-class.md).|
 |[cache_chunklist](../standard-library/cache-chunklist-class.md)|Definuje bloku alokátoru, který přiděluje a zruší přidělení bloků paměti z jednoho velikost.|
 |[cache_freelist](../standard-library/cache-freelist-class.md)|Definuje bloku alokátoru, který přiděluje a zruší přidělení bloků paměti z jednoho velikost.|
 |[cache_suballoc](../standard-library/cache-suballoc-class.md)|Definuje bloku alokátoru, který přiděluje a zruší přidělení bloků paměti z jednoho velikost.|

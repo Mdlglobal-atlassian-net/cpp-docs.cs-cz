@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
 ms.openlocfilehash: 6084392c5cae151f6c7111fbe9fe7a45e103b74d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371474"
 ---
 # <a name="numpunct-class"></a>numpunct – třída
 
@@ -68,7 +68,7 @@ Stejně jako u omezující vlastnosti národního prostředí má ID statického
 |Název typu|Popis|
 |-|-|
 |[char_type](#char_type)|Typ, který se používá k popisu znaku používaného národním prostředním.|
-|[STRING_TYPE](#string_type)|Typ, který popisuje řetězec obsahující znaky typu `CharType`.|
+|[string_type](#string_type)|Typ, který popisuje řetězec obsahující znaky typu `CharType`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
@@ -76,13 +76,13 @@ Stejně jako u omezující vlastnosti národního prostředí má ID statického
 |-|-|
 |[decimal_point](#decimal_point)|Vrátí prvek specifický pro národní prostředí, který se použije jako desetinná čárka.|
 |[do_decimal_point](#do_decimal_point)|Chráněná virtuální členská funkce, která je volána k vrácení prvku specifického pro národní prostředí, který se použije jako desetinná čárka.|
-|[do_falsename –](#do_falsename)|Chráněná virtuální členská funkce, která je volána k vrácení řetězce, který se použije jako textové vyjádření hodnoty **false**.|
-|[do_grouping –](#do_grouping)|Chráněná virtuální členská funkce, která je volána k vrácení pravidla specifického pro národní prostředí k určení způsobu seskupení číslic vlevo od desetinné čárky.|
+|[do_falsename](#do_falsename)|Chráněná virtuální členská funkce, která je volána k vrácení řetězce, který se použije jako textové vyjádření hodnoty **false**.|
+|[do_grouping](#do_grouping)|Chráněná virtuální členská funkce, která je volána k vrácení pravidla specifického pro národní prostředí k určení způsobu seskupení číslic vlevo od desetinné čárky.|
 |[do_thousands_sep](#do_thousands_sep)|Chráněná virtuální členská funkce, která je volána k vrácení prvku specifického pro národní prostředí, který se použije jako oddělovač tisíců.|
 |[do_truename](#do_truename)|Chráněná virtuální členská funkce, která je volána k vrácení řetězce, který se použije jako textové vyjádření hodnoty **true**.|
 |[falsename –](#falsename)|Vrátí řetězec, který se použije jako textové vyjádření hodnoty **false**.|
 |[Seskupení](#grouping)|Vrátí pravidlo specifické pro národní prostředí určující způsob seskupení číslic nalevo od desetinné čárky.|
-|[thousands_sep –](#thousands_sep)|Vrátí prvek specifický pro národní prostředí, který se použije jako oddělovač tisíců.|
+|[thousands_sep](#thousands_sep)|Vrátí prvek specifický pro národní prostředí, který se použije jako oddělovač tisíců.|
 |[truename –](#truename)|Vrátí řetězec, který se použije jako textové vyjádření hodnoty **true**.|
 
 ## <a name="requirements"></a>Požadavky
@@ -354,15 +354,15 @@ Možné hodnoty parametru *_Refs* parametrů a jejich význam:
 
 - 0: Životnost objektu se spravuje přes národní prostředí, které je obsahují.
 
-- 1: doba života objektu je nutné ručně spravovat.
+- 1: Doba života objektu se musí spravovat ručně.
 
-- \> 1: tyto hodnoty nejsou definovány.
+- \> 1: Tyto hodnoty nejsou definovány.
 
 Žádné přímé příklady je to možné, protože destruktor je chráněn.
 
 Konstruktor inicializuje jeho základní objekt s **locale::**[omezující vlastnost](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
-## <a name="string_type"></a>  numpunct::STRING_TYPE
+## <a name="string_type"></a>  numpunct::string_type
 
 Typ, který popisuje řetězec obsahující znaky typu **CharType**.
 

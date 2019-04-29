@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::basic_ifstream [C++], swap
 ms.assetid: 366cd9a7-efc4-4b7f-ba10-c8271e47ffcf
 ms.openlocfilehash: 30ae1e6384b3861bc4324d42f095516f80dce6e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400679"
 ---
 # <a name="basicifstream-class"></a>basic_ifstream – třída
 
@@ -71,7 +71,7 @@ int main(int argc, char **argv)
 }
 ```
 
-## <a name="input-basicifstreamclasstxt"></a>Vstup: basic_ifstream_class.txt
+## <a name="input-basicifstreamclasstxt"></a>Input: basic_ifstream_class.txt
 
 ```cpp
 This is the contents of basic_ifstream_class.txt.
@@ -97,7 +97,7 @@ This is the contents of basic_ifstream_class.txt.
 |[is_open](#is_open)|Určuje, zda je soubor otevřený.|
 |[open](#open)|Otevře se soubor.|
 |[rdbuf](#rdbuf)|Vrátí adresu uloženou datový proud vyrovnávací paměti.|
-|[Prohození](#swap)|Vymění obsah této `basic_ifstream` obsahu poskytnutého `basic_ifstream`.|
+|[swap](#swap)|Vymění obsah této `basic_ifstream` obsahu poskytnutého `basic_ifstream`.|
 
 ### <a name="operators"></a>Operátory
 
@@ -136,7 +136,7 @@ basic_ifstream(basic_ifstream&& right);
 *Náze_v souboru*<br/>
 Název souboru, který se otevře.
 
-*Reži_m*<br/>
+*_Mode*<br/>
 Jeden z výčtů ve [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*<br/>
@@ -240,7 +240,7 @@ void open(
 *Náze_v souboru*<br/>
 Název souboru, který se otevře.
 
-*Reži_m*<br/>
+*_Mode*<br/>
 Jeden z výčtů ve [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*<br/>

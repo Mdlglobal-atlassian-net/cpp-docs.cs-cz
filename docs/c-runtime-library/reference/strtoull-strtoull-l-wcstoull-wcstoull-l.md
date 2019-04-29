@@ -35,11 +35,11 @@ helpviewer_keywords:
 - wcstoull function
 ms.assetid: 36dac1cc-e901-40a0-8802-63562d6d01df
 ms.openlocfilehash: f23799b43a356600f48fb0fbf32b4604966c416b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62379204"
 ---
 # <a name="strtoull-strtoulll-wcstoull-wcstoulll"></a>strtoull, _strtoull_l, wcstoull, _wcstoull_l
 
@@ -106,8 +106,8 @@ Pokud *endptr* není **NULL**, ukazatel na znak, který zastavil skenování, je
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcstoull –**|**strtoull –**|**strtoull –**|**wcstoull –**|
-|**_tcstoull_l –**|**strtoull_l**|**_strtoull_l**|**_wcstoull_l**|
+|**_tcstoull**|**strtoull**|**strtoull**|**wcstoull –**|
+|**_tcstoull_l**|**strtoull_l**|**_strtoull_l**|**_wcstoull_l**|
 
 **strtoull –** očekává, že *strSource* tak, aby odkazoval na řetězec v následujícím formátu:
 
@@ -119,7 +119,7 @@ A *prázdné znaky* může skládat ze znaků mezera a tabulátor, které jsou i
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strtoull –**|\<stdlib.h>|
+|**strtoull**|\<stdlib.h>|
 |**wcstoull –**|\<stdlib.h > nebo \<wchar.h >|
 |**_strtoull_l**|\<stdlib.h>|
 |**_wcstoull_l**|\<stdlib.h > nebo \<wchar.h >|

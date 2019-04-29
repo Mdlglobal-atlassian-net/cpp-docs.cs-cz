@@ -115,11 +115,11 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
 ms.openlocfilehash: a14a1fba25c8c38c4bcf441dda566f14dc790f76
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372145"
 ---
 # <a name="crendertarget-class"></a>Crendertarget – třída
 
@@ -135,14 +135,14 @@ class CRenderTarget : public CObject;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRenderTarget::CRenderTarget](#crendertarget)|Vytvoří objekt crendertarget –.|
 |[CRenderTarget::~CRenderTarget](#_dtorcrendertarget)|Destruktor. Volá se při vykreslení cílový objekt je zničen.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRenderTarget::Attach](#attach)|Bude k obrazci existující vykreslení rozhraní cílového objektu|
 |[CRenderTarget::BeginDraw](#begindraw)|Inicializuje na tento cíl vykreslování.|
@@ -202,13 +202,13 @@ class CRenderTarget : public CObject;
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRenderTarget::operator ID2D1RenderTarget*](#operator_id2d1rendertarget_star)|Vrátí ID2D1RenderTarget rozhraní|
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRenderTarget::m_lstResources](#m_lstresources)|Seznam ukazatelů na objekty cd2dresource –.|
 |[CRenderTarget::m_pRenderTarget](#m_prendertarget)|Ukazatel na objekt ID2D1RenderTarget.|

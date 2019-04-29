@@ -98,11 +98,11 @@ helpviewer_keywords:
 - operator>= member [STL/CLR]
 ms.assetid: 3dfe329d-a078-462a-b050-7999ce6110ad
 ms.openlocfilehash: 9cc7dd32f222e68abb45fe8c518d9f378453b372
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384828"
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
 
@@ -495,7 +495,7 @@ size_type count(key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
@@ -774,10 +774,10 @@ bool erase(key_type key)
 *první*<br/>
 Začátek rozsahu vymazat.
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče vymazat.
 
-*poslední*<br/>
+*last*<br/>
 Konec rozsahu vymazat.
 
 *kde*<br/>
@@ -862,7 +862,7 @@ iterator find(key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
@@ -1159,7 +1159,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *první*<br/>
 Začátek rozsahu pro vložení.
 
-*poslední*<br/>
+*last*<br/>
 Konec rozsahu pro vložení.
 
 *doprava*<br/>
@@ -1476,7 +1476,7 @@ iterator lower_bound(key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
@@ -1535,7 +1535,7 @@ static value_type make_value(key_type key, mapped_type mapped);
 
 #### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče používat.
 
 *Mapovat*<br/>
@@ -1643,7 +1643,7 @@ multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
 *první*<br/>
 Začátek rozsahu pro vložení.
 
-*poslední*<br/>
+*last*<br/>
 Konec rozsahu pro vložení.
 
 *Před*<br/>
@@ -2266,7 +2266,7 @@ iterator upper_bound(key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky

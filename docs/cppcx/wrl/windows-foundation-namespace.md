@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Foundation namespace
 ms.assetid: 96a6b5e0-ddee-4b21-ae4e-da5feeb945c3
 ms.openlocfilehash: cd16a888594e928214ef45cbdddb1e0fdac7c82a
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59030478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396047"
 ---
 # <a name="windowsfoundation-namespace"></a>Windows::Foundation – obor názvů
 
@@ -29,7 +29,7 @@ namespace Windows::Foundation;
 
 ### <a name="functions"></a>Funkce
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[ActivateInstance – funkce](activateinstance-function.md)|Zaregistruje a načte instanci zadaného typu definované v ID zadané třídy.|
 |[GetActivationFactory – funkce](getactivationfactory-function.md)|Načte objekt factory pro aktivaci pro typ zadaný v parametru šablony.|

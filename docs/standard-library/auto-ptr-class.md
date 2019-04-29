@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
 ms.openlocfilehash: f0c8e0c1f4dc2e1082d5df230c74efafcae24f29
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377973"
 ---
 # <a name="autoptr-class"></a>auto_ptr – třída
 
@@ -88,7 +88,7 @@ Můžete předat `auto_ptr<Type>` objektu podle hodnoty jako argument volání f
 |-|-|
 |[get](#get)|Členská funkce vrátí uložený ukazatel `myptr`.|
 |[Vydání verze](#release)|Nahradí uložený ukazatel člen `myptr` s hodnotou null a vrátí dříve uložený ukazatel.|
-|[Resetovat](#reset)|Členská funkce vyhodnotí výraz `delete myptr`, ale pouze tehdy, pokud hodnota uložený ukazatel `myptr` změny jako výsledek volání funkce. Poté nahradí uložený ukazatel s *ptr*.|
+|[reset](#reset)|Členská funkce vyhodnotí výraz `delete myptr`, ale pouze tehdy, pokud hodnota uložený ukazatel `myptr` změny jako výsledek volání funkce. Poté nahradí uložený ukazatel s *ptr*.|
 
 ### <a name="operators"></a>Operátory
 
@@ -96,7 +96,7 @@ Můžete předat `auto_ptr<Type>` objektu podle hodnoty jako argument volání f
 |-|-|
 |[operátor =](#op_eq)|Operátor přiřazení, který převede vlastnictví z jednoho `auto_ptr` objektu na jiný.|
 |[Operator *](#op_star)|Operátor přesměrování pro objekty typu `auto_ptr`.|
-|[Operator ->](#op_arrow)|Operátor pro povolení přístupu ke členu.|
+|[operator->](#op_arrow)|Operátor pro povolení přístupu ke členu.|
 |[auto_ptr – operátor\<Další >](#op_auto_ptr_lt_other_gt)|Druh přetypování z jednoho `auto_ptr` na jiný typ z `auto_ptr`.|
 |[operátor auto_ptr_ref\<Další >](#op_auto_ptr_ref_lt_other_gt)|Přetypování z `auto_ptr` do `auto_ptr_ref`.|
 

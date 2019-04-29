@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
 ms.openlocfilehash: 346dd4f681432143c954ca125c3862fc6827db60
-ms.sourcegitcommit: b04160e9ed58f83bdc8ace218ae64b35395f6ea2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50968101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383539"
 ---
 # <a name="moneyput-class"></a>money_put – třída
 
@@ -59,7 +59,7 @@ Stejně jako u omezující vlastnosti národního prostředí má ID statického
 |-|-|
 |[char_type](#char_type)|Typ, který se používá k popisu znaku používaného národním prostředním.|
 |[iter_type](#iter_type)|Typ, který popisuje výstupní iterátor.|
-|[STRING_TYPE](#string_type)|Typ, který popisuje řetězec obsahující znaky typu `CharType`.|
+|[string_type](#string_type)|Typ, který popisuje řetězec obsahující znaky typu `CharType`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
@@ -133,7 +133,7 @@ První chráněná virtuální členská funkce generuje sekvenční prvky poč�
 
 Druhá chráněná virtuální členská funkce se chová stejně jako první, s výjimkou, že první efektivně převede *val* na posloupnost desítková číslice, může volitelně předcházet znaménko minus potom převede tento pořadí, jak je uvedeno výše.
 
-Formát pole peněžní výstupu je určeno [omezující vlastnost národního prostředí](../standard-library/locale-class.md#facet_class) fac vrácený voláním (skutečná) [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md) \< **CharType**, **intl**>> ( **iosbase**. [getloc –](../standard-library/ios-base-class.md#getloc)).
+Formát pole peněžní výstupu je určeno [omezující vlastnost národního prostředí](../standard-library/locale-class.md#facet_class) fac vrácený voláním (skutečná) [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md) \< **CharType**, **intl**>> ( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).
 
 Konkrétně:
 
@@ -281,7 +281,7 @@ int main()
 money_put() = "EUR1.000,12"
 ```
 
-## <a name="string_type"></a>  money_put::STRING_TYPE
+## <a name="string_type"></a>  money_put::string_type
 
 Typ, který popisuje řetězec obsahující znaky typu `CharType`.
 

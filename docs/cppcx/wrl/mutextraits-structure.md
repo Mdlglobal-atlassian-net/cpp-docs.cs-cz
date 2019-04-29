@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::MutexTraits::Unlock method
 ms.assetid: 6582df80-b9ba-4892-948f-d572a3b23d54
 ms.openlocfilehash: 9bc4071e5699610a664cbf01ca3e7d36d7effc5e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62379178"
 ---
 # <a name="mutextraits-structure"></a>MutexTraits – struktura
 
@@ -30,7 +30,7 @@ struct MutexTraits : HANDLENullTraits;
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Name                           | Popis
+Název                           | Popis
 ------------------------------ | ------------------------------------------------
 [Mutextraits::Unlock –](#unlock) | Uvolní výhradní kontrolu nad sdíleného prostředku.
 

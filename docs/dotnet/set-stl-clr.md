@@ -96,11 +96,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 27d3628c-741a-43a7-bef1-5085536f679e
 ms.openlocfilehash: 612c0772504043a99f3a2ae9fa7da9c791076d6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384644"
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
 
@@ -477,7 +477,7 @@ size_type count(key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
@@ -686,7 +686,7 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
@@ -751,10 +751,10 @@ size_type erase(key_type key)
 *první*<br/>
 Začátek rozsahu vymazat.
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče vymazat.
 
-*poslední*<br/>
+*last*<br/>
 Konec rozsahu vymazat.
 
 *kde*<br/>
@@ -830,7 +830,7 @@ iterator find(key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
@@ -1123,7 +1123,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *první*<br/>
 Začátek rozsahu pro vložení.
 
-*poslední*<br/>
+*last*<br/>
 Konec rozsahu pro vložení.
 
 *doprava*<br/>
@@ -1438,7 +1438,7 @@ iterator lower_bound(key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
@@ -1495,7 +1495,7 @@ static value_type make_value(key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče používat.
 
 ### <a name="remarks"></a>Poznámky
@@ -1794,7 +1794,7 @@ set(System::Collections::Generic::IEnumerable<GValue>^ right,
 *první*<br/>
 Začátek rozsahu pro vložení.
 
-*poslední*<br/>
+*last*<br/>
 Konec rozsahu pro vložení.
 
 *Před*<br/>
@@ -2171,7 +2171,7 @@ iterator upper_bound(key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky

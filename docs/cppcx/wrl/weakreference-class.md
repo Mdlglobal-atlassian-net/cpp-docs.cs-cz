@@ -20,11 +20,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::WeakReference::WeakReference, constructor
 ms.assetid: 3f4c956b-dbbd-49b1-8cfa-9509a9956c97
 ms.openlocfilehash: a3372a176a158dd9c89eb888c8deb0244eef9a84
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58787037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387536"
 ---
 # <a name="weakreference-class"></a>WeakReference – třída
 
@@ -50,14 +50,14 @@ A `WeakReference` objekt se obvykle používá k reprezentaci objektu, jehož ex
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Name                                                  | Popis
+Název                                                  | Popis
 ----------------------------------------------------- | ---------------------------------------------------------------------------
 [Weakreference::weakreference –](#weakreference)        | Inicializuje novou instanci třídy `WeakReference` třídy.
 [WeakReference:: ~ weakreference –](#tilde-weakreference) | Zruší inicializaci (odstraní) aktuální instancí třídy `WeakReference` třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Name                                                                 | Popis
+Název                                                                 | Popis
 -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------
 [WeakReference::DecrementStrongReference](#decrementstrongreference) | Sníží počet silné referenční aktuálního `WeakReference` objektu.
 [Weakreference::incrementstrongreference –](#incrementstrongreference) | Zvýší počet odkazů silné aktuálního `WeakReference` objektu.

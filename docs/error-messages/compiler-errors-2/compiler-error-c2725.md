@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru C2725
+title: Compiler Error C2725
 ms.date: 11/04/2016
 f1_keywords:
 - C2725
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C2725
 ms.assetid: 13cd5b1b-e906-4cd8-9b2b-510d587c665a
 ms.openlocfilehash: da5fe354724427ae6806424122281d1653ebca22
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62382980"
 ---
-# <a name="compiler-error-c2725"></a>Chyba kompilátoru C2725
+# <a name="compiler-error-c2725"></a>Compiler Error C2725
 
 'exception': nelze provést operaci throw nebo catch spravované nebo objekt WinRT hodnotou nebo odkazem
 

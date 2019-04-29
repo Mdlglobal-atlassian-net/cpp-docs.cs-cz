@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru C2180
+title: Compiler Error C2180
 ms.date: 11/04/2016
 f1_keywords:
 - C2180
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C2180
 ms.assetid: ea71b39e-b977-48a7-b7bd-af68ef5e263b
 ms.openlocfilehash: 16fcf15eb29743f74bbf2edcb1016f2e15228e5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385911"
 ---
-# <a name="compiler-error-c2180"></a>Chyba kompilátoru C2180
+# <a name="compiler-error-c2180"></a>Compiler Error C2180
 
 řídicí výraz má typ 'type'
 

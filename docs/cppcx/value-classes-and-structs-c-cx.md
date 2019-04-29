@@ -1,18 +1,18 @@
 ---
-title: Hodnotové třídy a struktury (C + +/ CX)
+title: Hodnotové třídy a struktury (C++/CX)
 ms.date: 12/30/2016
 helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
 ms.openlocfilehash: 5b9b50ba7200439e9ce648c53d52ce37226f61d3
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384982"
 ---
-# <a name="value-classes-and-structs-ccx"></a>Hodnotové třídy a struktury (C + +/ CX)
+# <a name="value-classes-and-structs-ccx"></a>Hodnotové třídy a struktury (C++/CX)
 
 A *hodnotu struktury* nebo *hodnotu třídy* je Windows Runtime kompatibilní POD ("prostý stará datová struktura"). Má pevnou velikost a skládá se z pole. na rozdíl od ref class nemá žádné vlastnosti.
 
@@ -64,7 +64,7 @@ Následující fragment kódu deklaruje `Coordinates` a `City` typy jako hodnota
 
 ## <a name="parameter-passing-for-value-types"></a>Předávání pro typy hodnot parametrů
 
-Pokud máte jako parametr funkce nebo metoda typ hodnoty, je obvykle předávána podle hodnoty. Pro větší objekty to může způsobit problémy s výkonem. Vizuální Studio2013 a dříve, hodnota typy v jazyce C + +/ CX se vždycky předá podle hodnoty. V sadě Visual Studio 2015 a novější můžete předat typy hodnot, podle odkazu nebo podle hodnoty.
+Pokud máte jako parametr funkce nebo metoda typ hodnoty, je obvykle předávána podle hodnoty. Pro větší objekty to může způsobit problémy s výkonem. Typy v hodnot Visual Studio2013 a dřívějších verzí C++/CX byly vždy předán podle hodnoty. V sadě Visual Studio 2015 a novější můžete předat typy hodnot, podle odkazu nebo podle hodnoty.
 
 Chcete-li deklarovat parametr, který předává typ hodnoty podle hodnoty, použijte kód podobný tomuto:
 
@@ -151,5 +151,5 @@ public:
 
 [Systém typů (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
 [Referenční dokumentace jazyka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Odkaz na obory názvů](../cppcx/namespaces-reference-c-cx.md)<br/>
+[Referenční informace o oborech názvů](../cppcx/namespaces-reference-c-cx.md)<br/>
 [Referenční třídy a struktury (C++/CX)](../cppcx/ref-classes-and-structs-c-cx.md)

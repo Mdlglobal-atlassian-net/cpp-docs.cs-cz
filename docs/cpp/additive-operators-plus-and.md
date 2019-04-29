@@ -13,11 +13,11 @@ helpviewer_keywords:
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
 ms.openlocfilehash: be9e1830ea44223aa46ad9a7f5c6cee6734fa9e6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385047"
 ---
 # <a name="additive-operators--and--"></a>Operátory sčítání: + a -
 
@@ -44,10 +44,10 @@ Aditivní operátory přebírají operandy *aritmetické*, *integrální*, a *sk
 
 ### <a name="types-used-with-additive-operators"></a>Typy použité spolu s aditivními operátory
 
-|Typ|Význam|
+|Type|Význam|
 |----------|-------------|
 |*Aritmetické operace*|Celočíselné typy a typy s plovoucí desetinnou čárkou se společně nazývají „aritmetické“ typy.|
-|*Celočíselný typ*|Typy char a int všech velikostí (long, short) a výčty jsou „celočíselné“ typy.|
+|*integral*|Typy char a int všech velikostí (long, short) a výčty jsou „celočíselné“ typy.|
 |*scalar*|Skalární operandy jsou operandy aritmetického typu nebo typu ukazatele.|
 
 Platnými kombinacemi pro tyto operátory jsou:
@@ -56,11 +56,11 @@ Platnými kombinacemi pro tyto operátory jsou:
 
 *scalar* + *integral*
 
-*integrální* + *skalární*
+*integral* + *scalar*
 
 *aritmetické* - *aritmetické*
 
-*Skalární* - *skalární*
+*scalar* - *scalar*
 
 Všimněte si, že sčítání a odčítání nejsou ekvivalentními operacemi.
 

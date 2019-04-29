@@ -38,11 +38,11 @@ helpviewer_keywords:
 - strtol function
 ms.assetid: 1787c96a-f283-4a83-9325-33cfc1c7e240
 ms.openlocfilehash: 73df5dd3ffcd4a9b2fca8b6b713b645ef94addb5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62379152"
 ---
 # <a name="strtol-wcstol-strtoll-wcstoll"></a>strtol, wcstol, _strtol_l, _wcstol_l
 
@@ -105,7 +105,7 @@ Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/er
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcstol –**|**strtol –**|**strtol –**|**wcstol –**|
+|**_tcstol**|**strtol**|**strtol**|**wcstol**|
 |**_tcstol_l**|**_strtol_l**|**_strtol_l**|**_wcstol_l**|
 
 Aktuální národní prostředí **LC_NUMERIC** kategorie určuje rozpoznávání znaku radix v *strSource*; Další informace najdete v tématu [setlocale](setlocale-wsetlocale.md). Funkce bez **_l** přípona používají aktuální národní prostředí; **_strtol_l –** a **_wcstol_l –** jsou stejné pro odpovídající funkce bez **_l** přípony s tím rozdílem, že používají předané národní prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
@@ -122,8 +122,8 @@ A *prázdné znaky* může skládat ze znaků mezera a tabulátor, které jsou i
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strtol –**|\<stdlib.h>|
-|**wcstol –**|\<stdlib.h > nebo \<wchar.h >|
+|**strtol**|\<stdlib.h>|
+|**wcstol**|\<stdlib.h > nebo \<wchar.h >|
 |**_strtol_l**|\<stdlib.h>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
