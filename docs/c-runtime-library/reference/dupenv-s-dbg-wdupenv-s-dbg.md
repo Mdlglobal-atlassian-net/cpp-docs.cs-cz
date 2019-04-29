@@ -30,11 +30,11 @@ helpviewer_keywords:
 - _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
 ms.openlocfilehash: 95d8c18a0ebc543304fdb6bf51c4adde589333aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339218"
 ---
 # <a name="dupenvsdbg-wdupenvsdbg"></a>_dupenv_s_dbg, _wdupenv_s_dbg
 
@@ -69,7 +69,7 @@ Vyrovnávací paměť pro ukládání hodnotu proměnné.
 *numberOfElements*<br/>
 Velikost *vyrovnávací paměti*.
 
-*název_proměnné*<br/>
+*varname*<br/>
 Název proměnné prostředí.
 
 *blockType*<br/>
@@ -78,7 +78,7 @@ Požadovaný typ bloku paměti: **_CLIENT_BLOCK** nebo **_NORMAL_BLOCK**.
 *Název souboru*<br/>
 Ukazatel na název zdrojového souboru nebo **NULL**.
 
-*Číslo řádku*<br/>
+*linenumber*<br/>
 Číslo řádku ve zdrojovém souboru nebo **NULL**.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -99,7 +99,7 @@ Chcete-li explicitně volat tyto funkce ve většině případů nepotřebujete.
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tdupenv_s_dbg –**|**_dupenv_s_dbg**|**_dupenv_s_dbg**|**_wdupenv_s_dbg**|
+|**_tdupenv_s_dbg**|**_dupenv_s_dbg**|**_dupenv_s_dbg**|**_wdupenv_s_dbg**|
 
 ## <a name="requirements"></a>Požadavky
 

@@ -4,12 +4,12 @@ ms.date: 05/11/2018
 helpviewer_keywords:
 - deploying the CRT [C++]
 - application CRT deployment [C++]
-ms.openlocfilehash: 90f859eb0e9134c997e7eecad118cfb8ec00b782
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: 7952d2ec6e8f502b0edf776811a492c67f495cce
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786904"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344177"
 ---
 # <a name="universal-crt-deployment"></a>Nasazení Universal CRT
 
@@ -23,7 +23,9 @@ Upřednostňuje se centrálně nainstalovat komponentu Universal CRT je použív
 
 Ne všechny počítače Windows Microsoft pravidelně instalace aktualizací pomocí Windows Update, a některé nemusí nainstalovat všechny doporučené aktualizace. Pro podporu použití aplikace vytvořené pomocí sady Visual Studio 2015 a novější sady nástrojů C++ na těchto počítačích, k dispozici redistribuovatelnost Universal CRT pro distribuci v režimu offline. Tyto distribuovatelné součásti stáhnout z jednoho z uvedených odkazů KB. Všimněte si, že redistribuovatelnost Universal CRT vyžadovat, že je počítač se aktualizovala na aktuální aktualizaci service pack. Ano například distribuovatelné součásti pro Windows 7 je možné instalovat pouze do Windows 7 SP1, ne Windows 7 RTM.
 
-Protože Universal CRT je základní závislostí knihoven C++, jazyce Visual C++ redistributable (VCRedist) nainstaluje základní verzi Universal CRT na počítačích, které nemají verze již nainstalovaný, dostatečná pro uspokojení knihovny C++ závislosti. Pokud je aplikace závislá na novější verzi Universal CRT, je nutné explicitně nainstalovat této novější verzi. Doporučujeme nainstalovat před instalací VCRedist, aby se zabránilo potenciální více vyžaduje restartování.
+Protože Universal CRT je základní závislost C++ knihovny, vizuál C++ redistributable (VCRedist) nainstaluje na počítače, které nemají již nainstalovanou verzi počáteční verzi sady Universal CRT (verze 10.0.10240). Tato verze je dostatečná pro uspokojení C++ závislé položky knihoven. Pokud je aplikace závislá na novější verzi Universal CRT, musíte používání plně aktuálním stavu počítače pomocí služby Windows Update nebo explicitně nainstalovat tuto verzi. Doporučujeme mít Universal C Runtime už nainstalovaná prostřednictvím služby Windows Update nebo přes MSU před instalací VCRedist, chcete-li se vyhnout potenciálnímu více vyžaduje restartování počítače.
+
+Všechny operační systémy mají nárok nejnovější modul Universal C Runtime prostřednictvím služby Windows Update. Ve Windows 10 centrálně nasazené verze odpovídá verzi operačního systému. K aktualizaci Universal C Runtime dál, je nutné aktualizovat operační systém. Pro Windows Vista až Windows 8.1 je nejnovější dostupný Universal C Runtime aktuálně podle verze zahrnuté ve Windows 10 Anniversary Update (verze 10.0.14393) další opravy.
 
 ## <a name="local-deployment"></a>Místní nasazení
 
