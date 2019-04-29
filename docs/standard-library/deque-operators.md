@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (deque)
 - std::operator== (deque)
 ms.openlocfilehash: a5e88d421df2746cf2ca0aab5be4c19953162559
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393997"
 ---
 # <a name="ltdequegt-operators"></a>&lt;deque –&gt; operátory
 
@@ -357,4 +357,4 @@ Deque c1 is greater than or equal to deque c2.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<deque >](../standard-library/deque.md)<br/>
+[\<deque>](../standard-library/deque.md)<br/>

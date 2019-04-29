@@ -4,11 +4,11 @@ ms.date: 9/26/2017
 ms.assetid: 4bb8894b-c874-4a68-935e-b127d54e484f
 f1_keywords: []
 ms.openlocfilehash: 4719f02b1050472f35375b921fd1a6bd670c11c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393100"
 ---
 # <a name="cc-properties-linux-c"></a>Vlastnosti C/C++ (C++ pro Linux)
 
@@ -47,7 +47,7 @@ Vlastnost | Popis | Možnosti
 Definice preprocesoru | Definuje symboly předzpracování pro zdrojový soubor. (-D)
 Zrušit Definice preprocesoru | Určuje že jeden nebo více nedefinovaných hodnot preprocesoru.  (-U [makro])
 Zrušit všechny definice preprocesoru | Zruší definici všech dříve definovaných hodnot preprocesoru.  (-undef)
-Zobrazit soubory k zahrnutí | Generuje seznam vložených souborů s výstupem kompilátoru.  (-H).
+Zobrazit soubory k zahrnutí | Generuje seznam vložených souborů s výstupem kompilátoru.  (-H)
 
 ## <a name="code-generation"></a>Vytvoření kódu
 
@@ -72,7 +72,7 @@ Standard jazyka C++ | Určuje standard jazyka C++. | **Default**<br/>**C ++ 03**
 
 Vlastnost | Popis | Možnosti
 --- | ---| ---
-Kompilovat jako | Vyberte možnost jazyka kompilace pro soubory .c a .cpp.  "Výchozí" rozpozná na základě přípony .c nebo .cpp rozšíření. (-x c, - x c ++) | **Výchozí** – výchozí.<br/>**Kompilovat jako kód jazyka C** -kompilovat jako kód jazyka C.<br/>**Kompilovat jako kód jazyka C++** -kompilovat jako kód jazyka C++.<br/>
+Kompilovat jako | Vyberte možnost jazyka kompilace pro soubory .c a .cpp.  "Výchozí" rozpozná na základě přípony .c nebo .cpp rozšíření. (-x c, -x c++) | **Výchozí** – výchozí.<br/>**Kompilovat jako kód jazyka C** -kompilovat jako kód jazyka C.<br/>**Kompilovat jako kód jazyka C++** -kompilovat jako kód jazyka C++.<br/>
 Nuceně zahrnuté soubory | Jeden nebo více vynucených k zahrnutí souborů (-include [název])
 
 ## <a name="additional-options"></a>Další možnosti

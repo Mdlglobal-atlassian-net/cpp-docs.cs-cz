@@ -11,15 +11,15 @@ helpviewer_keywords:
 - pointers, based
 ms.assetid: 1e5f2e96-c52e-4738-8e14-87278681205e
 ms.openlocfilehash: 771d3ee132e4cd63499fec886ef9f7cd06ec0260
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393958"
 ---
 # <a name="based-pointers-c"></a>Základní ukazatelé (C++)
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 **__Based** – klíčové slovo umožňuje deklarovat ukazatele založené na ukazatelích (ukazatele posunuté oproti existujícím ukazatelům).
 

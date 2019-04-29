@@ -1,17 +1,17 @@
 ---
-title: Řetězce (C + +/ CX)
+title: Řetězce (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 5b34e1df-7c2b-4269-aba8-b767d36c49d9
 ms.openlocfilehash: 8f7cbdd02cb1d38231c476ba939009a95533a046
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403240"
 ---
-# <a name="strings-ccx"></a>Řetězce (C + +/ CX)
+# <a name="strings-ccx"></a>Řetězce (C++/CX)
 
-Představuje text v modulu Windows Runtime v jazyce C + +/ CX podle [Platform::String – třída](../cppcx/platform-string-class.md). Použití `Platform::String Class` při předání řetězce vpřed a zpět v metodách Windows Runtime tříd, nebo jsou při interakci s ostatními součástmi modulu Windows Runtime hranice binární rozhraní (ABI) aplikace. `Platform::String Class` Poskytuje metody pro několik běžných operace s řetězci, ale to není navržena jako plně funkční řetězec třídy. V modulu jazyka C++, použijte standardní řetězec typy C++ [wstring](../standard-library/basic-string-class.md) žádné významné text zpracování, a pak převod je konečný výsledek do [Platform::String ^](../cppcx/platform-string-class.md) předtím, než ji předáte do nebo z veřejné rozhraní. Je snadné a efektivní pro převod mezi `wstring` nebo `wchar_t*` a `Platform::String`.
+Text v modulu Windows Runtime je vyjádřena v C++/CX podle [Platform::String – třída](../cppcx/platform-string-class.md). Použití `Platform::String Class` při předání řetězce vpřed a zpět v metodách Windows Runtime tříd, nebo jsou při interakci s ostatními součástmi modulu Windows Runtime hranice binární rozhraní (ABI) aplikace. `Platform::String Class` Poskytuje metody pro několik běžných operace s řetězci, ale to není navržena jako plně funkční řetězec třídy. Ve vaší C++ modulu, pomocí standardních C++ řetězec typy, jako [wstring](../standard-library/basic-string-class.md) žádné významné text zpracování, a pak převod je konečný výsledek do [Platform::String ^](../cppcx/platform-string-class.md) předtím, než ji předáte do nebo z veřejné rozhraní. Je snadné a efektivní pro převod mezi `wstring` nebo `wchar_t*` a `Platform::String`.
 
 **Fast pass**
 

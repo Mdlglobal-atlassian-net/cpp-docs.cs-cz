@@ -56,11 +56,11 @@ helpviewer_keywords:
 - std::basic_ios [C++], widen
 ms.assetid: 4fdcd8e1-62d2-4611-8a70-1e4f58434007
 ms.openlocfilehash: c22e048d01665deed83a9474525f414dfd874fe0
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400653"
 ---
 # <a name="basicios-class"></a>basic_ios – třída
 
@@ -100,7 +100,7 @@ Objekt třídy **basic_ios –\<třídy Elem, třída vlastností >** ukládá:
 
 |Konstruktor|Popis|
 |-|-|
-|[basic_ios –](#basic_ios)|Vytvoří `basic_ios` třídy.|
+|[basic_ios](#basic_ios)|Vytvoří `basic_ios` třídy.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -117,22 +117,22 @@ Objekt třídy **basic_ios –\<třídy Elem, třída vlastností >** ukládá:
 |Členská funkce|Popis|
 |-|-|
 |[Špatné](#bad)|Označuje ztrátu integrity vyrovnávací paměť datového proudu.|
-|[Vymazat](#clear)|Vymaže všechny příznaky chyby.|
-|[copyfmt –](#copyfmt)|Kopíruje příznaky z jednoho datového proudu do jiného.|
+|[clear](#clear)|Vymaže všechny příznaky chyby.|
+|[copyfmt](#copyfmt)|Kopíruje příznaky z jednoho datového proudu do jiného.|
 |[eof](#eof)|Označuje, pokud bylo dosaženo konce datového proudu.|
 |[Výjimky](#exceptions)|Určuje, které výjimky budou vyvolány metodou datového proudu.|
 |[Selhání](#fail)|Indikuje selhání platné pole extrahovat z datového proudu.|
 |[Výplň](#fill)|Určuje nebo vrátí znak, který se použije, když text není stejně široká jako datový proud.|
 |[Dobré](#good)|Označuje, že datový proud je v dobrém stavu.|
-|[imbue –](#imbue)|Změní národní prostředí.|
+|[imbue](#imbue)|Změní národní prostředí.|
 |[init](#init)|Volané `basic_ios` konstruktory.|
-|[Přesunutí](#move)|Přesune všechny hodnoty, s výjimkou ukazatelů do vyrovnávací paměti datového proudu z parametru do aktuálního objektu.|
+|[move](#move)|Přesune všechny hodnoty, s výjimkou ukazatelů do vyrovnávací paměti datového proudu z parametru do aktuálního objektu.|
 |[Upřesněte](#narrow)|Najde odpovídající znak danou `char_type`.|
 |[rdbuf](#rdbuf)|Datový proud trasy do zadané vyrovnávací paměti.|
-|[rdstate –](#rdstate)|Přečte stav bity příznaky.|
+|[rdstate](#rdstate)|Přečte stav bity příznaky.|
 |[set_rdbuf](#set_rdbuf)|Vyrovnávací paměť datového proudu do vyrovnávací paměti pro čtení pro tento objekt stream se přiřadí.|
 |[setstate](#setstate)|Nastaví další příznaky.|
-|[Prohození](#swap)|Vymění hodnoty v tomto `basic_ios` objektu pro ty z jiného `basic_ios` objektu. Ukazatele na vyrovnávací paměť datového proudu se prohodit.|
+|[swap](#swap)|Vymění hodnoty v tomto `basic_ios` objektu pro ty z jiného `basic_ios` objektu. Ukazatele na vyrovnávací paměť datového proudu se prohodit.|
 |[Tie](#tie)|Zajišťuje, že tento jeden datový proud se zpracovává před jiného datového proudu.|
 |[widen](#widen)|Najde odpovídající `char_type` na daný znak.|
 
@@ -220,7 +220,7 @@ void clear(io_state state);
 
 ### <a name="parameters"></a>Parametry
 
-*Stav*<br/>
+*state*<br/>
 (Volitelné) Příznaky, které chcete nastavit po vymazání všech příznaků. Výchozí hodnota je `goodbit`.
 
 *reraise*<br/>
@@ -232,7 +232,7 @@ Příznaky jsou `goodbit`, `failbit`, `eofbit`, a `badbit`. Test pro tyto příz
 
 Členská funkce se nahradí informace o stavu uložené datového proudu s:
 
-`state` &#124;`(` [rdbuf –](#rdbuf) ! = 0 **goodbit** : **badbit**)
+`state` &#124; `(`[rdbuf](#rdbuf) != 0 **goodbit** : **badbit**)
 
 Pokud `state` **&** [výjimky](#exceptions) je nenulovou hodnotu, pak vyvolá objekt třídy [selhání](../standard-library/ios-base-class.md#failure).
 
@@ -283,7 +283,7 @@ int main( )
 }
 ```
 
-## <a name="eof"></a>  basic_ios::EOF
+## <a name="eof"></a>  basic_ios::eof
 
 Označuje, pokud bylo dosaženo konce datového proudu.
 
@@ -321,7 +321,7 @@ int main( int argc, char* argv[] )
 }
 ```
 
-## <a name="exceptions"></a>  basic_ios::Exceptions
+## <a name="exceptions"></a>  basic_ios::exceptions
 
 Určuje, které výjimky budou vyvolány metodou datového proudu.
 
@@ -485,7 +485,7 @@ locale imbue(const locale& Loc);
 
 ### <a name="parameters"></a>Parametry
 
-*Umístění*<br/>
+*Loc*<br/>
 Řetězec národního prostředí.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -566,7 +566,7 @@ Synonymum pro `traits_type::int_type`.
 typedef typename traits_type::int_type int_type;
 ```
 
-## <a name="move"></a>  basic_ios::Move
+## <a name="move"></a>  basic_ios::move
 
 Přesune všechny hodnoty, s výjimkou ukazatelů do vyrovnávací paměti datového proudu z parametru do aktuálního objektu.
 
@@ -636,7 +636,7 @@ Synonymum pro `traits_type::off_type`.
 typedef typename traits_type::off_type off_type;
 ```
 
-## <a name="op_void_star"></a>  basic_ios::Operator void *
+## <a name="op_void_star"></a>  basic_ios::operator void *
 
 Určuje, zda datový proud je pořád dobré.
 

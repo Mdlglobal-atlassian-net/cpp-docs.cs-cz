@@ -10,11 +10,11 @@ helpviewer_keywords:
 - add class from ActiveX control wizard [C++]
 ms.assetid: 729fcb37-54b8-44d5-9b4e-50bb16e0eea4
 ms.openlocfilehash: 1d91d98082a5c5d6d45bfa31e81c59e8925aa2c2
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386266"
 ---
 # <a name="add-a-class-from-an-activex-control"></a>Přidání třídy z ovládacího prvku ActiveX
 
@@ -57,11 +57,11 @@ Tohoto průvodce použijte k přidání třídy knihovny MFC z ovládacího prvk
   |Možnost|Popis|
   |------------|-----------------|
   |**Registru**|Knihovna typů je registrován v systému. Zaregistrované knihovny typů jsou uvedeny v **dostupné ovládací prvky ActiveX**.|
-  |**Soubor**|Knihovna typů není nutně registrován v systému, ale je uložen v souboru. Zadejte umístění souboru v **umístění**.|
+  |**File**|Knihovna typů není nutně registrován v systému, ale je uložen v souboru. Zadejte umístění souboru v **umístění**.|
 
 - **Dostupné ovládací prvky ActiveX**
 
-  Určuje ovládací prvky ActiveX, které jsou aktuálně registrované v systému. Vyberte ze seznamu zobrazíte jeho rozhraní v ovládacím prvku ActiveX **rozhraní** seznamu. Naleznete v tématu [ovládací prvky MFC ActiveX: distribuce ovládacích prvků](../mfc/mfc-activex-controls-distributing-activex-controls.md) Další informace o registraci komponenty – ovládací prvky ActiveX.
+  Určuje ovládací prvky ActiveX, které jsou aktuálně registrované v systému. Vyberte ze seznamu zobrazíte jeho rozhraní v ovládacím prvku ActiveX **rozhraní** seznamu. Zobrazit [– ovládací prvky ActiveX knihovny MFC: Distribuce ovládacích prvků ActiveX](../mfc/mfc-activex-controls-distributing-activex-controls.md) Další informace o registraci komponenty – ovládací prvky ActiveX.
 
   Pokud vyberete **souboru** pod **přidat třídu z**, toto pole je k dispozici pro změnu.
 
@@ -92,7 +92,7 @@ Tohoto průvodce použijte k přidání třídy knihovny MFC z ovládacího prvk
 
    Určuje název třídy vybraný v **generované třídy** pole, které průvodce přidá při výběru **Dokončit**. Můžete upravit název v **třídy** pole.
 
-- **soubor .h**
+- **.h file**
 
   Nastaví název hlavičkového souboru pro nový objekt třídy. Ve výchozím nastavení, tento název je založen na názvu je zadat v **generované třídy**. Vyberte tlačítko se třemi tečkami uložení názvu souboru do umístění podle vaší volby, nebo připojit k existujícímu souboru deklaraci třídy. Pokud zvolíte existující soubor, Průvodce neuloží se do vybraného umístění dokud vyberte **Dokončit** v průvodci.
 

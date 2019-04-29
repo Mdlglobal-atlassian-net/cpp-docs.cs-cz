@@ -26,11 +26,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ComPtrRef::ReleaseAndGetAddressOf method
 ms.assetid: d6bdfd20-e977-45b4-9ac1-1b8efbdb77de
 ms.openlocfilehash: 281e02d85e70a84530e6980d31669a73091448d5
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398664"
 ---
 # <a name="comptrref-class"></a>ComPtrRef – třída
 
@@ -56,20 +56,20 @@ Představuje odkaz na objekt typu `ComPtr<T>`.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Name                               | Popis
+Název                               | Popis
 ---------------------------------- | -------------------------------------------------------------------------------------------------------------
 [Comptrref::comptrref –](#comptrref) | Inicializuje novou instanci třídy `ComPtrRef` třídy z zadaný ukazatel na jiný `ComPtrRef` objektu.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Name                                                         | Popis
+Název                                                         | Popis
 ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------
 [ComPtrRef::GetAddressOf](#getaddressof)                     | Načte adresu ukazatel rozhraní reprezentované aktuální `ComPtrRef` objektu.
 [ComPtrRef::ReleaseAndGetAddressOf](#releaseandgetaddressof) | Odstraní aktuální `ComPtrRef` objekt a vrátí ukazatel na ukazatel rozhraní, která je reprezentována `ComPtrRef` objektu.
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-Name                                                                     | Popis
+Název                                                                     | Popis
 ------------------------------------------------------------------------ | -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 [ComPtrRef::operator InterfaceType **](#operator-interfacetype-star-star) | Odstraní aktuální `ComPtrRef` objekt a vrátí ukazatel na ukazatel rozhraní, která je reprezentována `ComPtrRef` objektu.
 [ComPtrRef::operator T *](#operator-t-star)                               | Vrátí hodnotu [ptr_ –](comptrrefbase-class.md#ptr) aktuálního objektu comptrref – datový člen.

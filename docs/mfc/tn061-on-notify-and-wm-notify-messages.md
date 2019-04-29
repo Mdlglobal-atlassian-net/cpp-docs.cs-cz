@@ -1,5 +1,5 @@
 ---
-title: 'TN061: ON_NOTIFY a WM_NOTIFY – zprávy'
+title: 'TN061: ON_NOTIFY a wm_notify – zprávy'
 ms.date: 06/28/2018
 f1_keywords:
 - ON_NOTIFY
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - WM_NOTIFY message
 ms.assetid: 04a96dde-7049-41df-9954-ad7bb5587caf
 ms.openlocfilehash: 74eb39a855da3ff3e6da7f14a76bf0804919826d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399574"
 ---
-# <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061: ON_NOTIFY a WM_NOTIFY – zprávy
+# <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061: ON_NOTIFY a wm_notify – zprávy
 
 > [!NOTE]
 > Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
@@ -31,7 +31,7 @@ Tato technická poznámka obsahuje základní informace o nové wm_notify – zp
 
 Ve Windows 3.x, ovládací prvky oznámit svých nadřazených složek událostí, jako je například kliknutí myší, změny v obsahu a výběr a barvení ovládacích prvků na pozadí odesláním zprávy na nadřazený prvek. Jednoduché oznámení se odesílají jako speciální wm_command – zprávy s kódem oznámení (například BN_CLICKED) a ID zkomprimována do ovládacího prvku *wParam* a popisovač tohoto ovládacího prvku v *lParam*. Všimněte si, že od *wParam* a *lParam* plný, neexistuje žádný způsob, jak předávat žádná další data jsou – tyto zprávy mohou být pouze jednoduché oznámení. Například v oznámení BN_CLICKED neexistuje žádný způsob, jak odesílat informace o umístění kurzoru myši, když došlo ke kliknutí na tlačítko.
 
-Když ovládacích prvků ve Windows 3.x muset odeslat zprávu oznámení, která obsahuje další data, používají širokou škálu speciální zprávy, včetně WM_CTLCOLOR – WM_VSCROLL, WM_HSCROLL, WM_DRAWITEM, WM_MEASUREITEM, WM_COMPAREITEM, WM_DELETEITEM, WM_ CHARTOITEM WM_VKEYTOITEM a tak dále. Tyto zprávy můžete projeví zpět do ovládacího prvku, který jim poslali. Další informace najdete v tématu [TN062: reflexe zprávy pro Windows prvky](../mfc/tn062-message-reflection-for-windows-controls.md).
+Když ovládacích prvků ve Windows 3.x muset odeslat zprávu oznámení, která obsahuje další data, používají širokou škálu speciální zprávy, včetně WM_CTLCOLOR – WM_VSCROLL, WM_HSCROLL, WM_DRAWITEM, WM_MEASUREITEM, WM_COMPAREITEM, WM_DELETEITEM, WM_ CHARTOITEM WM_VKEYTOITEM a tak dále. Tyto zprávy můžete projeví zpět do ovládacího prvku, který jim poslali. Další informace najdete v tématu [TN062: Zpráva reflexe pro ovládací prvky Windows](../mfc/tn062-message-reflection-for-windows-controls.md).
 
 **Zprávy s oznámením v systému Win32**
 
@@ -71,14 +71,14 @@ Některá oznámení jsou společné pro všechny nové ovládací prvky Windows
 
 |Kód upozornění|Odeslat, protože|
 |-----------------------|------------------|
-|NM_CLICK –|Uživatel klikl levým tlačítkem myši v ovládacím prvku|
-|NM_DBLCLK –|Uživatel dvojitému kliknutí levým tlačítkem myši v ovládacím prvku|
+|NM_CLICK|Uživatel klikl levým tlačítkem myši v ovládacím prvku|
+|NM_DBLCLK|Uživatel dvojitému kliknutí levým tlačítkem myši v ovládacím prvku|
 |NM_RCLICK –|Uživatel klikl pravým tlačítkem myši v ovládacím prvku|
-|NM_RDBLCLK –|Uživatel dvojitému kliknutí pravým tlačítkem myši v ovládacím prvku|
-|NM_RETURN –|Uživatel stiskne klávesu ENTER, když ovládací prvek má vstupní fokus|
-|NM_SETFOCUS –|Ovládací prvek se předala vstupní fokus.|
-|NM_KILLFOCUS –|Ovládací prvek ztratil vstupní fokus.|
-|NM_OUTOFMEMORY –|Ovládací prvek nemohl dokončit operaci, protože nebyl k dispozici dostatek paměti k dispozici|
+|NM_RDBLCLK|Uživatel dvojitému kliknutí pravým tlačítkem myši v ovládacím prvku|
+|NM_RETURN|Uživatel stiskne klávesu ENTER, když ovládací prvek má vstupní fokus|
+|NM_SETFOCUS|Ovládací prvek se předala vstupní fokus.|
+|NM_KILLFOCUS|Ovládací prvek ztratil vstupní fokus.|
+|NM_OUTOFMEMORY|Ovládací prvek nemohl dokončit operaci, protože nebyl k dispozici dostatek paměti k dispozici|
 
 ##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> ON_NOTIFY: Zpracování wm_notify – zprávy v aplikacích MFC
 
@@ -94,7 +94,7 @@ ON_NOTIFY(wNotifyCode, id, memberFxn)
 
 kde parametry jsou:
 
-*funkci wNotifyCode*<br/>
+*wNotifyCode*<br/>
 Kód pro tuto zprávu zpracovat, jako je například LVN_KEYDOWN.
 
 *id*<br/>
@@ -157,7 +157,7 @@ ON_NOTIFY_RANGE(wNotifyCode, id, idLast, memberFxn)
 
 kde parametry jsou:
 
-*funkci wNotifyCode*<br/>
+*wNotifyCode*<br/>
 Kód pro tuto zprávu zpracovat, jako je například LVN_KEYDOWN.
 
 *id*<br/>

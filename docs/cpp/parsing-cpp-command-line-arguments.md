@@ -9,15 +9,15 @@ helpviewer_keywords:
 - startup code, parsing command-line arguments
 ms.assetid: e634e733-ac2f-4298-abe2-7e9288c94951
 ms.openlocfilehash: 53873fa9340253ab5e8459eb442385641246f930
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396116"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analýza argumentů příkazového řádku jazyka C++
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Spouštěcí kód Microsoft C/C++ používá při interpretaci argumentů příkazového řádku operačního systému následující pravidla:
 
@@ -63,7 +63,7 @@ Následující tabulka uvádí příklad vstupu a očekávaný výstup, ukázka 
 
 ### <a name="results-of-parsing-command-lines"></a>Výsledky analýzy příkazové řádky
 
-|Vstup příkazového řádku|argv [1]|argv [2]|argv [3]|
+|Vstup příkazového řádku|argv[1]|argv[2]|argv[3]|
 |-------------------------|---------------|---------------|---------------|
 |`"abc" d e`|`abc`|`d`|`e`|
 |`a\\b d"e f"g h`|`a\\b`|`de fg`|`h`|

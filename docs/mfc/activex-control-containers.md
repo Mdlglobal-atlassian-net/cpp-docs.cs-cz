@@ -6,11 +6,11 @@ helpviewer_keywords:
 - OLE controls [MFC], containers
 ms.assetid: 0eb1a713-e607-4c79-a0c7-67c5f1fd5fab
 ms.openlocfilehash: e8340acafc81447052fcb8d90df8997e81dc4117
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394855"
 ---
 # <a name="activex-control-containers"></a>ActiveX – kontejnery ovládacích prvků
 
@@ -45,7 +45,7 @@ Další články popisují několik témat, od vytvoření projektu kontejneru o
 
 - [Kontejnery ovládacích prvků ActiveX: Programování ovládacích prvků ActiveX v kontejneru ovládacího prvku ActiveX](../mfc/programming-activex-controls-in-a-activex-control-container.md)
 
-- [Kontejnery ovládacích prvků ActiveX: Použití ovládacích prvků v kontejneru než dialogovém okně](../mfc/activex-control-containers-using-controls-in-a-non-dialog-container.md)
+- [Kontejnery ovládacích prvků ActiveX: Použití ovládacích prvků v kontejneru bez dialogových oken](../mfc/activex-control-containers-using-controls-in-a-non-dialog-container.md)
 
 Další informace o používání ovládacích prvků ActiveX v dialogovém okně najdete v tématu [editoru dialogového okna](../windows/dialog-editor.md) témata.
 

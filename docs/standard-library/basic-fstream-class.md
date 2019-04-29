@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::basic_fstream [C++], swap
 ms.assetid: 8473817e-42a4-430b-82b8-b476c86bcf8a
 ms.openlocfilehash: 894ac0bf7703bf68c9125d11023dbc32cfbb5941
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400668"
 ---
 # <a name="basicfstream-class"></a>basic_fstream – třída
 
@@ -97,7 +97,7 @@ Writing to a basic_fstream object...
 |[is_open](#is_open)|Určuje, zda je soubor otevřený.|
 |[open](#open)|Otevře se soubor.|
 |[rdbuf](#rdbuf)|Vrátí adresu uloženou streamu, typu ukazatele do [basic_filebuf –](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>.|
-|[Prohození](#swap)|Vymění obsahu tohoto objektu s obsahem jiného `basic_fstream` objektu.|
+|[swap](#swap)|Vymění obsahu tohoto objektu s obsahem jiného `basic_fstream` objektu.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -130,7 +130,7 @@ basic_fstream(basic_fstream&& right);
 *Náze_v souboru*<br/>
 Název souboru, který se otevře.
 
-*Reži_m*<br/>
+*_Mode*<br/>
 Jeden z výčtů ve [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*<br/>
@@ -213,7 +213,7 @@ void open(
 *Náze_v souboru*<br/>
 Název souboru, který se otevře.
 
-*Reži_m*<br/>
+*_Mode*<br/>
 Jeden z výčtů ve [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*<br/>

@@ -81,11 +81,11 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
 ms.openlocfilehash: 0659e5335e1ebc495280a4e0cb5c0167f3b45e1d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58768210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403825"
 ---
 # <a name="cmfcbutton-class"></a>Cmfcbutton – třída
 
@@ -101,14 +101,14 @@ class CMFCButton : public CButton
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCButton::CMFCButton`|Výchozí konstruktor.|
 |`CMFCButton::~CMFCButton`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCButton::CleanUp](#cleanup)|Obnoví vnitřních proměnných a uvolní přidělené prostředky, jako jsou obrázky, rastrové obrázky a ikony.|
 |`CMFCButton::CreateObject`|Rozhraní používá k vytvoření dynamické instance tohoto typu třídy.|
@@ -143,7 +143,7 @@ class CMFCButton : public CButton
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCButton::OnDraw](#ondraw)|Volá se rozhraním, chcete-li nakreslit tlačítko.|
 |[CMFCButton::OnDrawBorder](#ondrawborder)|Volá se rozhraním, chcete-li nakreslit ohraničení tlačítka.|
@@ -154,7 +154,7 @@ class CMFCButton : public CButton
 
 ### <a name="data-members"></a>Datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCButton::m_nAlignStyle](#m_nalignstyle)|Určuje zarovnání textu tlačítka.|
 |[CMFCButton::m_bDontUseWinXPTheme](#m_bDontUseWinXPTheme)|Určuje, jestli se má použít motivy Windows XP.|
@@ -503,7 +503,7 @@ AlignStyle m_nAlignStyle;
 
 Použijte jednu z následujících `CMFCButton::AlignStyle` hodnot výčtu k určení zarovnání textu tlačítka:
 
-|Value|Popis|
+|Hodnota|Popis|
 |-----------|-----------------|
 |ALIGN_CENTER|(Výchozí) Zarovná text tlačítka na střed tlačítka.|
 |ALIGN_LEFT|Zarovná text tlačítka na levé straně tlačítka.|

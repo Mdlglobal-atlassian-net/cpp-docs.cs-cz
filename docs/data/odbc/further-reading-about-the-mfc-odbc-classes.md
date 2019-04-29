@@ -5,11 +5,11 @@ helpviewer_keywords:
 - MFC ODBC classes
 ms.assetid: 155c092b-3577-4cb8-b00e-f1adf4cb2adc
 ms.openlocfilehash: 96286fc7a60a6ab43190dae6262948ac99ca30d6
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59035186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395895"
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>Další výklad o třídách knihovny MFC rozhraní ODBC
 
@@ -39,7 +39,7 @@ Dále v následujících tématech se vysvětlují konceptech a technikách pře
 
 - [Zobrazení záznamů](../../data/record-views-mfc-data-access.md)
 
-- [Serializace: Serializace vs. Databázový vstup/výstup](../../mfc/serialization-serialization-vs-database-input-output.md)
+- [Serializace: Serializace a zpracování Databázový vstup/výstup](../../mfc/serialization-serialization-vs-database-input-output.md)
 
 - [Snímek](../../data/odbc/snapshot.md)
 

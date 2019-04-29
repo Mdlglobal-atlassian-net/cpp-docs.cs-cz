@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::SyncLockWithStatusT, constructor
 ms.assetid: 4832fd93-0ac8-4168-9404-b43fefea7476
 ms.openlocfilehash: 1c9c0805834a59d10a559bfc2b6da0f10e2fe160
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398131"
 ---
 # <a name="synclockwithstatust-class"></a>SyncLockWithStatusT – třída
 
@@ -48,26 +48,26 @@ Představuje typ, který může trvat exkluzivní nebo sdílené vlastnictví pr
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Name                                                             | Popis
+Název                                                             | Popis
 ---------------------------------------------------------------- | --------------------------------------------------------------
 [SyncLockWithStatusT::SyncLockWithStatusT](#synclockwithstatust) | Inicializuje novou instanci třídy `SyncLockWithStatusT` třídy.
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-Name                                                             | Popis
+Název                                                             | Popis
 ---------------------------------------------------------------- | --------------------------------------------------------------
 [SyncLockWithStatusT::SyncLockWithStatusT](#synclockwithstatust) | Inicializuje novou instanci třídy `SyncLockWithStatusT` třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Name                                         | Popis
+Název                                         | Popis
 -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------
 [Synclockwithstatust::getStatus –](#getstatus) | Načte aktuální stav Čekání `SyncLockWithStatusT` objektu.
 [SyncLockWithStatusT::IsLocked](#islocked)   | Označuje, zda aktuální `SyncLockWithStatusT` vlastní prostředek objektu; to znamená, `SyncLockWithStatusT` objekt je *uzamčen*.
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-Name                                    | Popis
+Název                                    | Popis
 --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------
 [SyncLockWithStatusT::status_](#status) | Obsahuje výsledek základní operace čekání po operaci zámku na objektu na základě aktuálního `SyncLockWithStatusT` objektu.
 

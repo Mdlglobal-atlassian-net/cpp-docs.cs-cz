@@ -87,18 +87,18 @@ helpviewer_keywords:
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
 ms.openlocfilehash: c7d5df87dc6c8529d18b9f5fb960148c7362129a
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405037"
 ---
 # <a name="hashset-class"></a>hash_set – třída
 
 > [!NOTE]
 > Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).
 
-Hash_set – třídy kontejnerů je rozšířením standardní knihovny C++ a slouží k ukládání a rychlé načítání dat z kolekce, ve kterém hodnoty elementů obsažených jsou jedinečné a slouží jako klíčové hodnoty.
+Hash_set – třídy kontejnerů je rozšířením C++ standardní knihovnu a používá se pro ukládání a rychlé načítání dat z kolekce, ve kterém hodnoty elementů obsažených jsou jedinečné a slouží jako klíčové hodnoty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -164,10 +164,10 @@ Iterátor poskytovaný třídou hash_set je obousměrný iterátor, ale člensk�
 |[const_reference](#const_reference)|Typ, který poskytuje odkaz na **const** element uložené v `hash_set` pro čtení a provádění **const** operace.|
 |[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může přečíst jakýkoli **const** prvek `hash_set`.|
 |[difference_type](#difference_type)|Celočíselný typ se znaménkem, který slouží k vyjádření počtu prvků `hash_set` v rozsahu mezi prvky, na které odkazují iterátory.|
-|[iterátor](#iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat libovolný prvek v `hash_set`.|
+|[iterator](#iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat libovolný prvek v `hash_set`.|
 |[key_compare](#key_compare)|Typ poskytující objekt funkce, který může porovnat dva klíče řazení pro určení relativního pořadí dvou prvků v `hash_set`.|
 |[key_type](#key_type)|Typ, který popisuje objekt uložený jako prvek sady `hash_set` v jeho kapacitě jako klíč řazení.|
-|[Ukazatel](#pointer)|Typ, který poskytuje ukazatel na prvek v `hash_set`.|
+|[pointer](#pointer)|Typ, který poskytuje ukazatel na prvek v `hash_set`.|
 |[Referenční dokumentace](#reference)|Typ, který poskytuje odkaz na prvek uložený v `hash_set`.|
 |[reverse_iterator](#reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat prvek v obráceném objektu `hash_set`.|
 |[size_type](#size_type)|Typ celé číslo bez znaménka představující počet prvků v `hash_set`.|
@@ -181,12 +181,12 @@ Iterátor poskytovaný třídou hash_set je obousměrný iterátor, ale člensk�
 |[začít](#begin)|Vrátí iterátor adresující první prvek `hash_set`.|
 |[cbegin](#cbegin)|Vrátí konstantní iterátor adresující první prvek `hash_set`.|
 |[cend](#cend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v `hash_set`.|
-|[Vymazat](#clear)|Vymaže všechny prvky `hash_set`.|
+|[clear](#clear)|Vymaže všechny prvky `hash_set`.|
 |[Počet](#count)|Vrátí počet prvků v `hash_set` jejichž klíč odpovídá klíči se zadaným parametrem.|
 |[crbegin](#crbegin)|Vrátí konstantní iterátor adresující první prvek v obráceném objektu `hash_set`.|
-|[crend –](#crend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v obráceném objektu `hash_set`.|
-|[emplace –](#emplace)|Vloží vytvořený prvek na místo do `hash_set`.|
-|[emplace_hint –](#emplace_hint)|Vloží vytvořený prvek na místo do `hash_set`, s náznakem umístění.|
+|[crend](#crend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v obráceném objektu `hash_set`.|
+|[emplace](#emplace)|Vloží vytvořený prvek na místo do `hash_set`.|
+|[emplace_hint](#emplace_hint)|Vloží vytvořený prvek na místo do `hash_set`, s náznakem umístění.|
 |[prázdný](#empty)|Testuje, zda `hash_set` je prázdný.|
 |[ukončení](#end)|Vrátí iterátor adresující umístění následující po posledním prvku v `hash_set`.|
 |[equal_range](#equal_range)|Vrátí pár iterátorů v uvedeném pořadí na první prvek v `hash_set` s klíčem, který je větší než zadaný klíč a na první prvek `hash_set` s klíčem, který je roven nebo větší než tento klíč.|
@@ -197,18 +197,18 @@ Iterátor poskytovaný třídou hash_set je obousměrný iterátor, ale člensk�
 |[key_comp](#key_comp)|Získá kopii objektu porovnání použitého pro seřazení klíčů v `hash_set`.|
 |[lower_bound –](#lower_bound)|Vrátí iterátor na první prvek v `hash_set` s klíčem, který je roven nebo větší než zadaný klíč.|
 |[max_size](#max_size)|Vrátí maximální délku objektu `hash_set`.|
-|[rbegin –](#rbegin)|Vrátí iterátor adresující první prvek v obráceném objektu `hash_set`.|
+|[rbegin](#rbegin)|Vrátí iterátor adresující první prvek v obráceném objektu `hash_set`.|
 |[rend –](#rend)|Vrátí iterátor adresující umístění následující po posledním prvku v obráceném objektu `hash_set`.|
 |[Velikost](#size)|Vrátí počet prvků v `hash_set`.|
-|[Prohození](#swap)|Vymění prvky dvou `hash_set`s.|
-|[upper_bound –](#upper_bound)|Vrátí iterátor na první prvek v `hash_set` s klíčem, který je roven nebo větší než zadaný klíč.|
+|[swap](#swap)|Vymění prvky dvou `hash_set`s.|
+|[upper_bound](#upper_bound)|Vrátí iterátor na první prvek v `hash_set` s klíčem, který je roven nebo větší než zadaný klíč.|
 |[value_comp](#value_comp)|Získá kopii objektu hash vlastností použita pro hodnoty hash a pořadí hodnot klíče v elementu `hash_set`.|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[hash_set::Operator =](#op_eq)|Nahradí prvky objektu `hash_set` s kopií jiného `hash_set`.|
+|[hash_set::operator=](#op_eq)|Nahradí prvky objektu `hash_set` s kopií jiného `hash_set`.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -552,7 +552,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč prvky lze porovnat z hash_set.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1019,7 +1019,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč argumentu k porovnání s klíči řazení prvek z hash_set vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1112,10 +1112,10 @@ Pozice prvku, který chcete odebrat z hash_set.
 *první*<br/>
 Pozice prvního prvku odebrán hash_set.
 
-*poslední*<br/>
+*last*<br/>
 Pozice bezprostředně za posledním prvkem odebrán hash_set.
 
-*Klíč*<br/>
+*key*<br/>
 Klíč prvky, které mají být odebrány hash_set –.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1224,7 +1224,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč argumentu k porovnání s klíči řazení prvek z hash_set vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1650,7 +1650,7 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč argumentu k porovnání s klíči řazení prvek z hash_set vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2216,7 +2216,7 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč argumentu k porovnání s klíči řazení prvek z hash_set vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota

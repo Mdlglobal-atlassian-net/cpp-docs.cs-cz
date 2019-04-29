@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HStringReference::operator< operator
 ms.assetid: 9bf823b1-17eb-4ac4-8c5d-27d27c7a4150
 ms.openlocfilehash: b9d2e49d0a7e1321e2259c06e1313a90d55dc90e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398274"
 ---
 # <a name="hstringreference-class"></a>HStringReference – třída
 
@@ -46,7 +46,7 @@ Doba života běhu záložní vyrovnávací paměti v novém HSTRING není sprav
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Name                                                    | Popis
+Název                                                    | Popis
 ------------------------------------------------------- | -----------------------------------------------------------
 [Hstringreference::hstringreference –](#hstringreference) | Inicializuje novou instanci třídy `HStringReference` třídy.
 
@@ -59,7 +59,7 @@ Name                                                    | Popis
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-Name                                                  | Popis
+Název                                                  | Popis
 ----------------------------------------------------- | ----------------------------------------------------------------------------------------------
 [HStringReference::operator =](#operator-assign)       | Přesune hodnotu jiného `HStringReference` objektů na aktuální `HStringReference` objektu.
 [HStringReference::operator ==](#operator-equality)    | Určuje, zda se tyto dva parametry rovnají.

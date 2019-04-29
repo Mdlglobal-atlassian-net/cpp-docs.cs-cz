@@ -7,11 +7,11 @@ helpviewer_keywords:
 - codecvt_utf8_utf16 class
 ms.assetid: 4c12c881-5dba-4e39-b338-0b9caff5af29
 ms.openlocfilehash: 42c9c8643edc795748c1f12c5180471f281c4142
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405256"
 ---
 # <a name="codecvtutf8utf16"></a>codecvt_utf8_utf16
 
@@ -30,7 +30,7 @@ Typ elementu širokého znaku.
 *Maxcode*<br/>
 Maximální počet znaků pro omezující vlastnost národního prostředí.
 
-*Režim*<br/>
+*Mode*<br/>
 Informace o konfiguraci pro omezující vlastnost národního prostředí.
 
 ## <a name="remarks"></a>Poznámky

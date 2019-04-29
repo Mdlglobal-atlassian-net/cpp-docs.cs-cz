@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
 ms.openlocfilehash: 4eee24eb93be446f6b4f2631b70736c13a02f45c
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58771404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403760"
 ---
 # <a name="cmfccolorbar-class"></a>Cmfccolorbar – třída
 
@@ -95,13 +95,13 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorBar::CMFCColorBar](#cmfccolorbar)|Vytvoří `CMFCColorBar` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorBar::ContextToSize](#contexttosize)|Vypočítá vertikálním a horizontálním okraje, které jsou nutné tak, aby obsahovala tlačítek v ovládacím prvku pruhu barev a pak nastaví umístění těchto tlačítek.|
 |[CMFCColorBar::CreateControl](#createcontrol)|Vytvoří okno Ovládací prvek pruhu barev, připojí se k `CMFCColorBar` objektu a změní velikost ovládacího prvku tak, aby obsahovala zadaný palety barev.|
@@ -123,7 +123,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorBar::AdjustLocations](#adjustlocations)|Upraví pozice barvu tlačítka v ovládacím prvku pruhu barev.|
 |[CMFCColorBar::AllowChangeTextLabels](#allowchangetextlabels)|Označuje, zda lze změnit označení textového barvu tlačítka.|
@@ -144,7 +144,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`m_bInternal`|Logická pole, která určuje, zda se zpracovávají události myši. Události myši se zpracovávají obvykle, když toto pole je PRAVDA a režim úprav je FALSE.|
 |`m_bIsEnabled`|Logická hodnota, která určuje, zda je ovládací prvek povolený.|

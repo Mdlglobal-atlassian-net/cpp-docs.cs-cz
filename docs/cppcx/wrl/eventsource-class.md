@@ -24,11 +24,11 @@ helpviewer_keywords:
 - Microsoft::WRL::EventSource::targetsPointerLock_ data member
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
 ms.openlocfilehash: e9070fe756410e3e1bb1e5840eb3f06e29c2f46b
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398508"
 ---
 # <a name="eventsource-class"></a>EventSource – třída
 
@@ -50,13 +50,13 @@ Rozhraní pro delegáta, který představuje obslužnou rutinu události.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-| Name                                     | Popis                                            |
+| Název                                     | Popis                                            |
 | ---------------------------------------- | ------------------------------------------------------ |
 | [EventSource::EventSource –](#eventsource) | Inicializuje novou instanci třídy `EventSource` třídy. |
 
 ### <a name="public-methods"></a>Veřejné metody
 
-| Name                                 | Popis                                                                                                                                                      |
+| Název                                 | Popis                                                                                                                                                      |
 | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [EventSource::add –](#add)             | Připojí obslužnou rutinu události reprezentována rozhraní zadaného delegáta k sadě obslužné rutiny událostí pro aktuální `EventSource` objektu.                     |
 | [EventSource::getsize –](#getsize)     | Získá počet obslužných rutin událostí, které jsou přidružené k aktuální `EventSource` objektu.                                                                         |
@@ -65,7 +65,7 @@ Rozhraní pro delegáta, který představuje obslužnou rutinu události.
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-| Name                                                    | Popis                                                                                                                       |
+| Název                                                    | Popis                                                                                                                       |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | [EventSource::addRemoveLock_](#addremovelock)           | Synchronizuje přístup k [targets_ –](#targets) pole při přidání, odebrání nebo volání obslužné rutiny událostí.                          |
 | [EventSource::targets_](#targets)                       | Pole jednoho nebo více obslužných rutin událostí.                                                                                           |

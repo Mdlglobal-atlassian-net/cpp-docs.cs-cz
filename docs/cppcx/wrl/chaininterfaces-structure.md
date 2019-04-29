@@ -18,11 +18,11 @@ helpviewer_keywords:
 - Microsoft::WRL::ChainInterfaces::Verify method
 ms.assetid: d7415b59-5468-4bef-a3fd-8d82b12f0e9c
 ms.openlocfilehash: 9fd315f017d3dcc9823054ea99e845ec99bc4192
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398742"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces – struktura
 
@@ -113,7 +113,7 @@ Logická hodnota, že pokud **true**, znamená, že nemůžete použít [MixIn](
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-Name                                                   | Popis
+Název                                                   | Popis
 ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 [Chaininterfaces::cancastto –](#cancastto)               | Určuje, jestli ID zadané rozhraní může být převeden na jednotlivé specializace určené `ChainInterface` parametry šablony.
 [Chaininterfaces::casttounknown –](#casttounknown)       | Přetypování ukazatele rozhraní typu definované *I0* parametr šablony na ukazatel na `IUnknown`.
@@ -122,7 +122,7 @@ Name                                                   | Popis
 
 ### <a name="protected-constants"></a>Chráněné konstanty
 
-Name                                   | Popis
+Název                                   | Popis
 -------------------------------------- | -----------------------------------------------------------------------------------------------------------------
 [ChainInterfaces::IidCount](#iidcount) | Celkový počet rozhraní ID, které jsou součástí rozhraní určené parametry šablony *I0* prostřednictvím *I9*.
 

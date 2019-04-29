@@ -16,15 +16,15 @@ helpviewer_keywords:
 - == operator [C++], with specific Visual C++ objects
 ms.assetid: 141bacb8-41a2-44dd-b3c0-4ad1f884f4ea
 ms.openlocfilehash: e0d26247868440f47c73422510ac0e998f8e8dee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403292"
 ---
 # <a name="variantt-relational-operators"></a>_variant_t – relační operátory
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Porovnat dva `_variant_t` objekty a zjistí rovnost či nerovnost.
 

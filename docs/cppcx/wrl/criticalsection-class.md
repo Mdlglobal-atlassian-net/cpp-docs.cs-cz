@@ -20,11 +20,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::CriticalSection::TryLock method
 ms.assetid: f2e0a024-71a3-4f6b-99ea-d93a4a608ac4
 ms.openlocfilehash: dd34206741ba8fee8b283e22b6e8eefb3b3efb0e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58787007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398586"
 ---
 # <a name="criticalsection-class"></a>CriticalSection – třída
 
@@ -40,14 +40,14 @@ class CriticalSection;
 
 ### <a name="constructor"></a>Konstruktor
 
-Name                                                        | Popis
+Název                                                        | Popis
 ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------
 [Criticalsection::criticalsection –](#criticalsection)        | Inicializuje objekt synchronizace, který je podobný objektu mutex, ale může využívat pouze vláken v jednom procesu.
 [CriticalSection::~CriticalSection](#tilde-criticalsection) | Uvolní a odstraní aktuální `CriticalSection` objektu.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Name                                 | Popis
+Název                                 | Popis
 ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------
 [CriticalSection::IsValid](#isvalid) | Označuje, zda aktuální kritický oddíl je platný.
 [CriticalSection::Lock](#lock)       | Čeká na vlastnictví objektu zadaného kritický oddíl. Funkce vrátí, pokud volající vlákno bylo uděleno vlastnictví.
@@ -55,7 +55,7 @@ Name                                 | Popis
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-Name                        | Popis
+Název                        | Popis
 --------------------------- | ----------------------------------------
 [CriticalSection::cs_](#cs) | Deklaruje datový člen kritický oddíl.
 

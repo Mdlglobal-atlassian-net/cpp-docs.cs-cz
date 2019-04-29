@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CDaoIndexInfo structure [MFC]
 ms.assetid: 251d8285-78ce-4716-a0b3-ccc3395fc437
 ms.openlocfilehash: 55f64fcebc308bd0e63643cfb5447608c4e2e37c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399769"
 ---
 # <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo – struktura
 
@@ -61,7 +61,7 @@ Když nastavíte primární klíč u tabulky, primární klíč je automaticky d
 *m_bUnique*<br/>
 Označuje, zda objekt index představuje jedinečný index pro tabulku. Pokud je tato vlastnost hodnotu TRUE, představuje objekt indexu, který je jedinečný index. Jedinečný index se skládá z jednoho nebo více polí, které logicky uspořádat všechny záznamy v tabulce v pořadí jedinečné, předdefinované. Pokud jedno pole obsahuje index, hodnoty v tomto poli musí být jedinečné pro celou tabulku. Pokud je index tvořen více než jedno pole, každé pole může obsahovat duplicitní hodnoty, ale kombinace hodnot z indexovaného pole musí být jedinečný.
 
-Pokud primární i jedinečné vlastnosti objektu indexu jsou nastavena na hodnotu TRUE, index je jedinečný a primární: jednoznačně identifikuje všechny záznamy v tabulce v předdefinované logické pořadí. Pokud je primární vlastnost nastavena na hodnotu FALSE, index je sekundární index. Sekundární indexy (klíče a nonkey) logicky uspořádat záznamy v předdefinovaném pořadí bez slouží jako identifikátor pro záznamy v tabulce.
+Pokud primární i jedinečné vlastnosti objektu indexu jsou nastavena na hodnotu TRUE, index je jedinečný a primární: Jednoznačně identifikuje všechny záznamy v tabulce v předdefinované logické pořadí. Pokud je primární vlastnost nastavena na hodnotu FALSE, index je sekundární index. Sekundární indexy (klíče a nonkey) logicky uspořádat záznamy v předdefinovaném pořadí bez slouží jako identifikátor pro záznamy v tabulce.
 
 Další informace najdete v tématech "Primární vlastnosti" a "Jedinečné vlastnosti" v nápovědě k DAO.
 
@@ -74,11 +74,11 @@ Označuje, zda objekt index představuje clusterovaný index pro tabulku. Pokud 
 *m_bIgnoreNulls*<br/>
 Určuje, zda jsou položky index pro záznamy, jejichž hodnoty Null v jejich rejstřík polí. Pokud je tato vlastnost hodnotu TRUE, pole s hodnotami Null není nutné položka. Chcete-li vyhledávání záznamů rychleji pomocí pole, můžete definovat index pro pole. Je-li povolit položky Null v indexovaného pole a očekávají mnoho položek na hodnotu Null, můžete nastavit vlastnost u objektu indexu na hodnotu TRUE a snížit množství místa, které používá index. Nastavení vlastnosti Ignorovat hodnoty Null a nastavení požadovaná vlastnost společně určují, zda má záznam s hodnotou Null index položka, jak ukazuje následující tabulka.
 
-|Ignorovat hodnoty Null|Požadováno|Index pole s hodnotou Null|
+|IgnoreNulls|Požadováno|Index pole s hodnotou Null|
 |-----------------|--------------|-------------------------|
-|Hodnota TRUE|False|Hodnota Null, které jsou povoleny. žádná položka indexu s přidána.|
+|Pravda|False|Hodnota Null, které jsou povoleny. žádná položka indexu s přidána.|
 |False|False|Hodnota Null, které jsou povoleny. Index položky přidány.|
-|True nebo False|Hodnota TRUE|Hodnota Null není povolena; žádná položka indexu s přidána.|
+|True nebo False|Pravda|Hodnota Null není povolena; žádná položka indexu s přidána.|
 
 Další informace naleznete v tématu "Vlastnost" v nápovědě k DAO.
 

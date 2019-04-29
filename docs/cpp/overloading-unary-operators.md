@@ -12,11 +12,11 @@ helpviewer_keywords:
 - plus operator
 ms.assetid: 7683ef08-42a4-4283-928f-d3dd4f3ab4c0
 ms.openlocfilehash: 802380bad59534e8402020142e394b3948032476
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377221"
 ---
 # <a name="overloading-unary-operators"></a>Přetížení unárních operátorů
 
@@ -24,7 +24,7 @@ Unární operátory, které mohou být přetíženy, jsou následující:
 
 1. `!` ([logický operátor NOT](../cpp/logical-negation-operator-exclpt.md))
 
-1. `&` ([adresy](../cpp/address-of-operator-amp.md))
+1. `&` ([address-of](../cpp/address-of-operator-amp.md))
 
 1. `~` ([doplněk](../cpp/one-s-complement-operator-tilde.md))
 

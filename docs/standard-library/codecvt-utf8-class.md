@@ -7,11 +7,11 @@ helpviewer_keywords:
 - codecvt_utf8 class
 ms.assetid: 2a87478f-e2d4-4b8d-ad9c-00add01d1bb0
 ms.openlocfilehash: 3e3ddeccac2c18eedb96746f1c442c6b42349783
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405243"
 ---
 # <a name="codecvtutf8"></a>codecvt_utf8
 
@@ -30,7 +30,7 @@ Typ elementu širokého znaku.
 *Maxcode*<br/>
 Maximální počet znaků pro omezující vlastnost národního prostředí.
 
-*Režim*<br/>
+*Mode*<br/>
 Informace o konfiguraci pro omezující vlastnost národního prostředí.
 
 ## <a name="remarks"></a>Poznámky
@@ -39,6 +39,6 @@ Bajtový proud je možné zapisovat na binární soubor nebo textový soubor.
 
 ## <a name="requirements"></a>Požadavky
 
-Záhlaví: \<codecvt – > \
+Header: \<codecvt>\
 
 Namespace: std

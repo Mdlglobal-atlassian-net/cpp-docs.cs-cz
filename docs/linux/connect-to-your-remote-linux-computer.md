@@ -4,11 +4,11 @@ description: Jak se připojit ke vzdálenému počítači Linux z uvnitř projek
 ms.date: 07/20/2018
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
 ms.openlocfilehash: e20714308448349ee5dac8951a7b5d7bfd2f29ef
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389743"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>Připojení ke vzdálenému počítači s Linuxem
 

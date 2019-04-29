@@ -8,15 +8,15 @@ helpviewer_keywords:
 - COM, compiler support
 ms.assetid: 6d800d9b-b902-4033-9639-740a30b06f88
 ms.openlocfilehash: 066fe797bc500625e96e027777a70f278b88cddb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399197"
 ---
 # <a name="compiler-com-support-classes"></a>Třídy podpory kompilátoru modelu COM
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Standardní třídy se používá pro podporu některých typů modelu COM. Třídy jsou definovány v \<comdef.h > a souborech hlaviček generovaných z knihovny typů.
 

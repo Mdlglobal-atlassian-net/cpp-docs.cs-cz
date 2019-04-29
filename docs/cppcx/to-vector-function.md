@@ -7,11 +7,11 @@ helpviewer_keywords:
 - to_vector Function
 ms.assetid: 9cdd5123-7243-4def-a1d3-162e0bf6219e
 ms.openlocfilehash: 4fa4e9c620519cc6bb2f96d346ded88b6cc826ae
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404621"
 ---
 # <a name="tovector-function"></a>to_vector – funkce
 
@@ -45,4 +45,4 @@ IVector nebo IVectorView rozhraní, které poskytuje přístup k základní obje
 
 ## <a name="see-also"></a>Viz také:
 
-[Windows::Foundation:: Collections – Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+[Windows::Foundation::Collections – obor názvů](../cppcx/windows-foundation-collections-namespace-c-cx.md)

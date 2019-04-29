@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::Unlock method
 ms.assetid: 38a996ef-c2d7-4886-b413-a426ecee8f05
 ms.openlocfilehash: 25249b8823b8c182133e85aa4cd07d38f5874cf2
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393869"
 ---
 # <a name="srwlockexclusivetraits-structure"></a>SRWLockExclusiveTraits – struktura
 
@@ -32,13 +32,13 @@ struct SRWLockExclusiveTraits;
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-Name   | Popis
+Název   | Popis
 ------ | --------------------------------------------------------------------------
 `Type` | Synonymum pro ukazatel [SRWLOCK](srwlock-class.md) třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Name                                                        | Popis
+Název                                                        | Popis
 ----------------------------------------------------------- | --------------------------------------------------------------------
 [Srwlockexclusivetraits::getinvalidvalue –](#getinvalidvalue) | Načte `SRWLockExclusiveTraits` objekt, který je pořád platný.
 [Srwlockexclusivetraits::Unlock –](#unlock)                   | Uvolní výhradní kontrolu zadaného `SRWLock` objektu.

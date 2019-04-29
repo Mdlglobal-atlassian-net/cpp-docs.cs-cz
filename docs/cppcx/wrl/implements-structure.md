@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Implements::IidCount method
 ms.assetid: 29b13e90-34d4-4a0b-babd-5187c9eb0c36
 ms.openlocfilehash: 63cac6931428644cc5ddec7d87e49007e95e039d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398246"
 ---
 # <a name="implements-structure"></a>Implementuje strukturu
 
@@ -119,13 +119,13 @@ Každý *I0* prostřednictvím *I9* rozhraní parametr musí být odvozen z rozh
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-| Name        | Popis                               |
+| Název        | Popis                               |
 | ----------- | ----------------------------------------- |
 | `ClassFlags`| Synonymum pro `RuntimeClassFlags<WinRt>`. |
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-| Name                                              | Popis                                                                                                   |
+| Název                                              | Popis                                                                                                   |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
 | [Implements::cancastto –](#cancastto)               | Získá ukazatel na rozhraní zadané.                                                                    |
 | [Implements::casttounknown –](#casttounknown)       | Získá ukazatel na základní `IUnknown` rozhraní.                                                        |
@@ -133,7 +133,7 @@ Každý *I0* prostřednictvím *I9* rozhraní parametr musí být odvozen z rozh
 
 ### <a name="protected-constants"></a>Chráněné konstanty
 
-| Name                              | Popis                                    |
+| Název                              | Popis                                    |
 | --------------------------------- | ---------------------------------------------- |
 | [Implements::IidCount](#iidcount) | Obsahuje počet implementovaných rozhraní ID. |
 

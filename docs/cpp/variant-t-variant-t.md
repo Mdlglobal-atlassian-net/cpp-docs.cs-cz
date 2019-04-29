@@ -8,15 +8,15 @@ helpviewer_keywords:
 - _variant_t method [C++]
 ms.assetid: a50e5b33-d4c6-4a26-8e7e-a0a25fd9895b
 ms.openlocfilehash: b3575226199c15c4a9796fb439f65efb5a539225
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403279"
 ---
 # <a name="varianttvariantt"></a>_variant_t::_variant_t
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Vytvoří `_variant_t` objektu.
 
@@ -142,7 +142,7 @@ A `_variant_t` objektu, které se mají zkopírovat do nové `_variant_t` objekt
 *fCopy*<br/>
 Pokud **false**, zadané `VARIANT` objektu se připojit k novému `_variant_t` objektu bez provedení pomocí nové kopie `VariantCopy`.
 
-*Kód, sSrc*<br/>
+*ISrc, sSrc*<br/>
 Celočíselná hodnota, které se mají zkopírovat do nové `_variant_t` objektu.
 
 *vtSrc*<br/>
@@ -157,7 +157,7 @@ A `CY` objektu, které se mají zkopírovat do nové `_variant_t` objektu.
 *bstrSrc*<br/>
 A `_bstr_t` objektu, které se mají zkopírovat do nové `_variant_t` objektu.
 
-*strSrc wstrSrc*<br/>
+*strSrc, wstrSrc*<br/>
 Řetězec, které se mají zkopírovat do nové `_variant_t` objektu.
 
 *bSrc*<br/>
@@ -184,7 +184,7 @@ A **unsigned short** hodnota, která má být zkopírován do nové `_variant_t`
 *ulSrc*<br/>
 A **unsigned long** hodnota, která má být zkopírován do nové `_variant_t` objektu.
 
-*Kód*<br/>
+*iSrc*<br/>
 **Int** hodnota, která má být zkopírován do nové `_variant_t` objektu.
 
 *uiSrc*<br/>

@@ -71,11 +71,11 @@ helpviewer_keywords:
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
 ms.openlocfilehash: 861850f192281d64ef02ec4a241315c05cd3318f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371513"
 ---
 # <a name="numericlimits-class"></a>numeric_limits – třída
 
@@ -105,11 +105,11 @@ Pro libovolné specializace mít žádné členy smysluplné hodnoty. Uloží ob
 |-|-|
 |[denorm_min](#denorm_min)|Vrátí nejmenší nenulovou denormalizovaný hodnotu.|
 |[číslice](#digits)|Vrátí počet číslic základ číselné soustavy, představující typ bez ztráty přesnosti.|
-|[digits10 –](#digits10)|Vrátí počet desetinných míst, představující typ bez ztráty přesnosti.|
+|[digits10](#digits10)|Vrátí počet desetinných míst, představující typ bez ztráty přesnosti.|
 |[Epsilon –](#epsilon)|Vrátí rozdíl mezi 1 a nejmenší hodnotu větší než 1, které mohou představovat datového typu.|
 |[has_denorm](#has_denorm)|Testuje, zda typ umožňuje denormalizovaný hodnoty.|
 |[has_denorm_loss](#has_denorm_loss)|Ověřuje, zda ztrátou přesnosti se detekuje jako denormalizace ztrátu, nikoli jako nepřesné výsledky.|
-|[has_infinity –](#has_infinity)|Ověřuje, zda typ má reprezentaci pro kladné nekonečno.|
+|[has_infinity](#has_infinity)|Ověřuje, zda typ má reprezentaci pro kladné nekonečno.|
 |[has_quiet_NaN](#has_quiet_nan)|Ověřuje, zda typ má reprezentaci pro tichý nečíselné (NAN), což je nonsignaling.|
 |[has_signaling_NaN](#has_signaling_nan)|Ověřuje, zda typ má reprezentaci pro signalizaci nečíselné (NAN).|
 |[Infinity](#infinity)|Reprezentace pro kladné nekonečno pro typ, pokud je k dispozici.|
@@ -118,8 +118,8 @@ Pro libovolné specializace mít žádné členy smysluplné hodnoty. Uloží ob
 |[is_iec559](#is_iec559)|Testuje, zda je typ odpovídá IEC 559 standardy.|
 |[is_integer](#is_integer)|Testuje, zda je typ má reprezentaci celého čísla.|
 |[is_modulo](#is_modulo)|Testuje, zda má typ modulo reprezentace.|
-|[is_signed –](#is_signed)|Testuje, zda je typ má reprezentaci podepsaný držitelem.|
-|[is_specialized –](#is_specialized)|Testuje, zda typ má explicitní specializace definované v šabloně třídy `numeric_limits`.|
+|[is_signed](#is_signed)|Testuje, zda je typ má reprezentaci podepsaný držitelem.|
+|[is_specialized](#is_specialized)|Testuje, zda typ má explicitní specializace definované v šabloně třídy `numeric_limits`.|
 |[Nejnižší](#lowest)|Vrátí největší omezenou zápornou hodnotu.|
 |[max](#max)|Vrátí maximální konečná hodnota typu.|
 |[max_digits10](#max_digits10)|Vrátí počet desetinných míst, které jsou potřeba k tomu, že dvě odlišné hodnoty typu mají odlišné reprezentace decimal.|
@@ -130,10 +130,10 @@ Pro libovolné specializace mít žádné členy smysluplné hodnoty. Uloží ob
 |[min_exponent10](#min_exponent10)|Vrátí maximální negativní integrální exponent, který typ s plovoucí desetinnou čárkou mohou představovat jako konečnou hodnotu při vyvolání třídou base deset na výkon.|
 |[quiet_NaN](#quiet_nan)|Vrátí reprezentaci tichý pro typ není číslo (NAN).|
 |[radix](#radix)|Vrátí integrální base označovány jako základ, použitý pro reprezentaci typu.|
-|[round_error –](#round_error)|Vrátí maximální zaokrouhlení typ v podrobnostech o chybě.|
-|[round_style –](#round_style)|Vrátí hodnotu, která popisuje různé metody, které můžete vybrat implementace zaokrouhlení s plovoucí desetinnou čárkou na celočíselnou hodnotu.|
+|[round_error](#round_error)|Vrátí maximální zaokrouhlení typ v podrobnostech o chybě.|
+|[round_style](#round_style)|Vrátí hodnotu, která popisuje různé metody, které můžete vybrat implementace zaokrouhlení s plovoucí desetinnou čárkou na celočíselnou hodnotu.|
 |[signaling_NaN](#signaling_nan)|Pro typ, vrátí reprezentaci signalizace nečíselné (NAN).|
-|[tinyness_before –](#tinyness_before)|Ověřuje, zda typ můžete určit, že hodnota je příliš malá, aby reprezentovala normalizovanou hodnotu před jeho zaokrouhlení.|
+|[tinyness_before](#tinyness_before)|Ověřuje, zda typ můžete určit, že hodnota je příliš malá, aby reprezentovala normalizovanou hodnotu před jeho zaokrouhlení.|
 |[depeše](#traps)|Testuje, zda soutisku, která informuje o aritmetické výjimky je implementován pro typ.|
 
 ## <a name="requirements"></a>Požadavky

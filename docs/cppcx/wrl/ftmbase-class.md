@@ -26,11 +26,11 @@ helpviewer_keywords:
 - Microsoft::WRL::FtmBase::UnmarshalInterface method
 ms.assetid: 275f3b71-2975-4f92-89e7-d351e96496df
 ms.openlocfilehash: fb7f103d8ea647f554d9bbf26c2e218d34f6b1ff
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398443"
 ---
 # <a name="ftmbase-class"></a>FtmBase – třída
 
@@ -54,13 +54,13 @@ Další informace najdete v tématu [runtimeclass – třída](runtimeclass-clas
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-| Name                         | Popis                                        |
+| Název                         | Popis                                        |
 | ---------------------------- | -------------------------------------------------- |
 | [FtmBase::FtmBase](#ftmbase) | Inicializuje novou instanci třídy `FtmBase` třídy. |
 
 ### <a name="public-methods"></a>Veřejné metody
 
-| Name                                                               | Popis                                                                                                                                                          |
+| Název                                                               | Popis                                                                                                                                                          |
 | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [FtmBase::CreateGlobalInterfaceTable](#createglobalinterfacetable) | Vytvoří globální tabulku rozhraní (GIT).                                                                                                                              |
 | [Ftmbase::disconnectobject –](#disconnectobject)                     | Nuceně uvolní všechny externí připojení k objektu. Server objektu zavolá objektu implementace této metody před vypíná.                |
@@ -72,7 +72,7 @@ Další informace najdete v tématu [runtimeclass – třída](runtimeclass-clas
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-| Name                                | Popis                                       |
+| Název                                | Popis                                       |
 | ----------------------------------- | ------------------------------------------------- |
 | [Ftmbase::marshaller_ –](#marshaller) | Obsahuje odkaz na volné zařazování vláken. |
 

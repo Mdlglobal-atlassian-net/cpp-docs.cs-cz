@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
 ms.openlocfilehash: 40e99901d4d4105902010a9e5b71ed3edf7d00db
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411042"
 ---
 # <a name="allocator-class"></a>allocator – třída
 
@@ -77,7 +77,7 @@ Díky tomu se přidělování definuje následující typy:
 
 Tyto `Type`s zadejte formulář, který ukazatele a reference musí přijmout přidělené elementů. ( [allocator::pointer](#pointer) není nutně stejné jako `Type*` pro všechny objekty přidělování, i když má tato zřejmé definice pro třídu `allocator`.)
 
-**C ++ 11 a novější:** povolit operací přesunu ve vašich allocator, použijte rozhraní minimálních alokátorů a implementovat kopírovací konstuktor, == a! = operátory, přidělit a uvolnit. Další informace a příklad najdete v tématu [Alokátorů](../standard-library/allocators.md)
+**C ++ 11 a novější:**  Povolení operací přesunu ve vašich allocator, použijte rozhraní minimálních alokátorů a implementovat kopírovací konstuktor, == a! = operátory, přidělit a uvolnit. Další informace a příklad najdete v tématu [Alokátorů](../standard-library/allocators.md)
 
 ## <a name="members"></a>Členové
 
@@ -85,7 +85,7 @@ Tyto `Type`s zadejte formulář, který ukazatele a reference musí přijmout p�
 
 |Konstruktor|Popis|
 |-|-|
-|[Allocator –](#allocator)|Umožňuje vytvořit konstruktory `allocator` objekty.|
+|[allocator](#allocator)|Umožňuje vytvořit konstruktory `allocator` objekty.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -94,7 +94,7 @@ Tyto `Type`s zadejte formulář, který ukazatele a reference musí přijmout p�
 |[const_pointer](#const_pointer)|Typ, který poskytuje konstantní ukazatel na typ objektu spravovaného pomocí přidělujícího modulu.|
 |[const_reference](#const_reference)|Typ, který poskytuje konstantní odkaz na typ objektu spravovaného pomocí přidělujícího modulu.|
 |[difference_type](#difference_type)|Celočíselný typ se znaménkem, které mohou představovat rozdíl mezi hodnotami ukazatelů na typ objektu spravovaného pomocí přidělujícího modulu.|
-|[Ukazatel](#pointer)|Typ, který poskytuje ukazatel na typ objektu spravovaného pomocí přidělujícího modulu.|
+|[pointer](#pointer)|Typ, který poskytuje ukazatel na typ objektu spravovaného pomocí přidělujícího modulu.|
 |[Referenční dokumentace](#reference)|Typ, který poskytuje odkaz na typ objektu spravovaného pomocí přidělujícího modulu.|
 |[size_type](#size_type)|Bez znaménka celočíselného typu, který může představovat Délka libovolného pořadí, které objekt třídy šablony `allocator` můžete přidělit.|
 |[value_type](#value_type)|Typ, který je spravovaný nástrojem přidělujícího modulu.|
@@ -103,11 +103,11 @@ Tyto `Type`s zadejte formulář, který ukazatele a reference musí přijmout p�
 
 |Členská funkce|Popis|
 |-|-|
-|[Adresa](#address)|Vyhledá adresu objektu, jehož hodnota je určena.|
+|[address](#address)|Vyhledá adresu objektu, jehož hodnota je určena.|
 |[allocate](#allocate)|Přiděluje blok paměti dostatečně velký pro uložení alespoň nějaké zadaný počet prvků.|
-|[Konstrukce](#construct)|Vytvoří konkrétní typ objektu na zadané adrese, který je inicializován se zadanou hodnotou.|
+|[construct](#construct)|Vytvoří konkrétní typ objektu na zadané adrese, který je inicializován se zadanou hodnotou.|
 |[zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů z úložiště počínaje na určené pozici.|
-|[zrušení](#destroy)|Volá destruktor objekty bez rušení přidělení paměti uložení objektu.|
+|[destroy](#destroy)|Volá destruktor objekty bez rušení přidělení paměti uložení objektu.|
 |[max_size](#max_size)|Vrátí počet prvků typu `Type` , které by mohly být přiděleny objektem třídy `allocator` předtím, než se využilo volné paměti.|
 |[obnovení vazby](#rebind)|Struktura, která umožňuje alokátoru pro objekty jednoho typu pro přidělení úložiště pro objekty jiného typu.|
 
@@ -615,7 +615,7 @@ The modified vector v1 is:
 ( 2 4 6 8 10 -99 14 ).
 ```
 
-## <a name="difference_type"></a>  Allocator::difference_type
+## <a name="difference_type"></a>  allocator::difference_type
 
 Celočíselný typ se znaménkem, které mohou představovat rozdíl mezi hodnotami ukazatelů na typ objektu spravovaného pomocí přidělujícího modulu.
 

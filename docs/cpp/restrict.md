@@ -8,15 +8,15 @@ helpviewer_keywords:
 - restrict __declspec keyword
 ms.assetid: f39cf632-68d8-4362-a497-2d4c15693689
 ms.openlocfilehash: 40c1c05ca72f639829f2d3658497b0e9f3199640
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403370"
 ---
 # <a name="restrict"></a>restrict
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Při použití u deklarace funkce nebo definice, která vrací typ ukazatele, **omezit** sděluje kompilátoru, že funkce vrátí objekt, který není *alias*, to znamená, odkazuje jiný ukazatele. To umožňuje kompilátoru provést další optimalizace.
 

@@ -1,15 +1,15 @@
 ---
-title: Obory názvů a viditelnost typů (C + +/ CX)
+title: Obory názvů a viditelnost typů (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
 ms.openlocfilehash: 54bac3492991d0bd849f7476cc87a1336108bd52
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392125"
 ---
-# <a name="namespaces-and-type-visibility-ccx-"></a>Obory názvů a viditelnost typů (C + +/ CX)
+# <a name="namespaces-and-type-visibility-ccx-"></a>Obory názvů a viditelnost typů (C++/CX)
 
 Obor názvů je standardní C++ konstrukci pro seskupení typů, které mají související funkce a pro předcházení kolizi názvů v knihovnách. Systém typů prostředí Windows Runtime vyžaduje, že všechny veřejné typy Windows Runtime, včetně těch, které ve svém vlastním kódu, musí být deklarovány v oboru názvů v oboru názvů. Veřejné typy, které jsou deklarovány v globálním oboru nebo vnořit do jiné třídy způsobí chybu kompilace.
 
@@ -42,9 +42,9 @@ Pomocí následující modifikátory přístupu můžete řídit viditelnost met
 
 Rozhraní Windows API se skládá z typů, které jsou deklarovány v Windows::\* obory názvů. Tyto obory názvů jsou vyhrazené pro Windows a typy nelze přidat k nim. V **prohlížeče objektů**, zobrazí se tyto obory názvů v souboru windows.winmd. Dokumentaci o těchto oborech názvů najdete v tématu [rozhraní Windows API](/uwp/api/).
 
-## <a name="ccx-namespaces"></a>C + +/ CX obory názvů
+## <a name="ccx-namespaces"></a>C++/CX obory názvů
 
-C + +/ CX definují určité typy v těchto oborech názvů jako součást projekce systém typů prostředí Windows Runtime.
+C++/CX definují určité typy v těchto oborech názvů jako součást projekce systém typů prostředí Windows Runtime.
 
 |||
 |-|-|

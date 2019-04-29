@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CDaoFieldInfo structure [MFC]
 ms.assetid: 91b13e3f-bdb8-440c-86fc-ba4181ea0182
 ms.openlocfilehash: a5c4013a323c85ad19a3fade20f76852e053362a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399821"
 ---
 # <a name="cdaofieldinfo-structure"></a>CDaoFieldInfo – struktura
 
@@ -78,7 +78,7 @@ Hodnota, která určuje datový typ pole. Podrobnosti naleznete v tématu "Vlast
 *m_lSize*<br/>
 Hodnota, která určuje maximální velikost v bajtech DAO pole objektu, který obsahuje text nebo pevné velikosti pole objektu, který obsahuje textové nebo číselné hodnoty. Podrobnosti naleznete v tématu "Vlastnost Size" v nápovědě k DAO. Velikosti může být jedna z následujících hodnot:
 
-|Typ|Velikost (bajty)|Popis|
+|Type|Velikost (bajty)|Popis|
 |----------|--------------------|-----------------|
 |`dbBoolean`|1 bajt|Ano/Ne (stejné jako True/False)|
 |`dbByte`|1|Byte|

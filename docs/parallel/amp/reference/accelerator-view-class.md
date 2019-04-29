@@ -22,11 +22,11 @@ helpviewer_keywords:
 - accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
 ms.openlocfilehash: 4075051ec07fc1331d815534a715c0411160fe14
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405635"
 ---
 # <a name="acceleratorview-class"></a>accelerator_view – třída
 
@@ -42,14 +42,14 @@ class accelerator_view;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[accelerator_view Constructor](#ctor)|Inicializuje novou instanci třídy `accelerator_view` třídy.|
 |[~ accelerator_view – destruktor](#dtor)|Odstraní `accelerator_view` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[create_marker](#create_marker)|Vrátí objekt future ke sledování dokončení všech příkazů dosud zaslaných tomuto `accelerator_view` objektu.|
 |[Vyprázdnění](#flush)|Odešle všechny příkazy čekající ve frontě `accelerator_view` objekt akcelerátoru ke spuštění.|
@@ -62,7 +62,7 @@ class accelerator_view;
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[operator!=](#operator_neq)|Porovná tento `accelerator_view` objekt s jiným a vrátí **false** případě, že jsou totožné; v opačném případě vrátí **true**.|
 |[operátor =](#operator_eq)|Zkopíruje obsah zadaného `accelerator_view` do tohoto objektu.|

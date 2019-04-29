@@ -18,13 +18,13 @@ helpviewer_keywords:
 - assemblies [C++], pure code
 ms.assetid: 9050e110-fa11-4356-b56c-665187ff871c
 ms.openlocfilehash: 66f3b5a33791d20297cde6e6223ba65189a99682
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384711"
 ---
-# <a name="pure-and-verifiable-code-ccli"></a>Čistý a ověřitelný kód (C + +/ CLI)
+# <a name="pure-and-verifiable-code-ccli"></a>Čistý a ověřitelný kód (C++vyhodnocovací)
 
 Pro programování v rozhraní .NET, Visual C++ v sadě Visual Studio 2017 podporuje vytváření smíšená sestavení s použitím [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) – možnost kompilátoru. **/CLR: pure** a **CLR: safe** možnosti jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017. Pokud váš kód musí být bezpečné nebo ověřit, pak doporučujeme port na C#.
 

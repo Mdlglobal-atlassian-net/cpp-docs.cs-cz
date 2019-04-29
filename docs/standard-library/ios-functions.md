@@ -51,11 +51,11 @@ helpviewer_keywords:
 - std::unitbuf [C++]
 - std::uppercase [C++]
 ms.openlocfilehash: 18f42f8e5bcd69872e4300d154eb72f489015e36
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404887"
 ---
 # <a name="ltiosgt-functions"></a>&lt;IOS&gt; funkce
 
@@ -66,7 +66,7 @@ ms.locfileid: "51519675"
 |[doleva](#left)|[noboolalpha](#noboolalpha)|[noshowbase](#noshowbase)|
 |[noshowpoint](#noshowpoint)|[noshowpos](#noshowpos)|[noskipws](#noskipws)|
 |[nounitbuf](#nounitbuf)|[nouppercase](#nouppercase)|[Říjen](#oct)|
-|[doprava](#right)|[vědecké](#scientific)|[showbase](#showbase)|
+|[doprava](#right)|[scientific](#scientific)|[showbase](#showbase)|
 |[showpoint](#showpoint)|[showpos](#showpos)|[skipws](#skipws)|
 |[unitbuf](#unitbuf)|[velká písmena](#uppercase)|
 
@@ -122,7 +122,7 @@ true
 true
 ```
 
-## <a name="dec"></a>  DEC
+## <a name="dec"></a>  dec
 
 Určuje, že celočíselné proměnné zobrazí v základní 10 zápisu.
 
@@ -961,4 +961,4 @@ A
 
 ## <a name="see-also"></a>Viz také:
 
-[\<IOS >](../standard-library/ios.md)<br/>
+[\<ios>](../standard-library/ios.md)<br/>

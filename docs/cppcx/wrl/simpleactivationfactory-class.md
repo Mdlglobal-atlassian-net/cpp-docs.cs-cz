@@ -14,11 +14,11 @@ helpviewer_keywords:
 - Microsoft::WRL::SimpleActivationFactory::GetTrustLevel method
 ms.assetid: aff768e0-0038-4fd7-95d2-ad7d308da41c
 ms.openlocfilehash: 1831a816d0967c2ca53f941128639ea368c1b727
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58787036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403083"
 ---
 # <a name="simpleactivationfactory-class"></a>SimpleActivationFactory – třída
 
@@ -48,7 +48,7 @@ Následující příklad kódu ukazuje, jak používat simpleactivationfactory �
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[SimpleActivationFactory::ActivateInstance – metoda](#activateinstance)|Vytvoří instanci zadaného rozhraní.|
 |[SimpleActivationFactory::GetRuntimeClassName – metoda](#getruntimeclassname)|Získá název třídy runtime instance třídy určené *Base* parametr šablony třídy.|

@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::SRWLock::TryLockShared method
 ms.assetid: 4fa250e3-5f29-4b06-ac24-61b6c04ade93
 ms.openlocfilehash: 6d4a504d9465c858af59a88cf0ef611bf88c3fde
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403078"
 ---
 # <a name="srwlock-class"></a>Třída SRWLock
 
@@ -46,21 +46,21 @@ Zámek tenký čtení/zápis se používá k synchronizaci přístupu napříč 
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-Name                | Popis
+Název                | Popis
 ------------------- | -------------------------------------------------------------------
 `SyncLockExclusive` | Synonymum pro `SRWLock` objekt, který je požadován ve výhradním režimu.
 `SyncLockShared`    | Synonymum pro `SRWLock` objekt, který je požadován ve sdíleném režimu.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Name                                     | Popis
+Název                                     | Popis
 ---------------------------------------- | --------------------------------------------------
 [SRWLock::SRWLock](#srwlock-constructor) | Inicializuje novou instanci třídy `SRWLock` třídy.
 [SRWLock::~SRWLock](#tilde-srwlock)      | Uvolní instanci `SRWLock` třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Name                                           | Popis
+Název                                           | Popis
 ---------------------------------------------- | -------------------------------------------------------------------------------------------------------
 [SRWLock::LockExclusive](#lockexclusive)       | Získá `SRWLock` objektu ve výhradním režimu.
 [SRWLock::LockShared](#lockshared)             | Získá `SRWLock` objektu ve sdíleném režimu.
@@ -69,7 +69,7 @@ Name                                           | Popis
 
 ### <a name="protected-data-member"></a>Chráněný datový člen
 
-Name                                      | Popis
+Název                                      | Popis
 ----------------------------------------- | -----------------------------------------------------------------------
 [SRWLock::SRWLock_](#srwlock-data-member) | Obsahuje základní proměnnou zámek pro aktuální `SRWLock` objektu.
 

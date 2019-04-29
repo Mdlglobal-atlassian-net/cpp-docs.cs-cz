@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ODBC [C++], RFX
 ms.assetid: f5ddfbf0-2901-48d7-9848-4fb84de3c7ee
 ms.openlocfilehash: 8630fab11728b0c0cd16eee5035df028a8382706
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59032216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395713"
 ---
 # <a name="record-field-exchange-rfx"></a>Výměna pole záznamu (Record Field Exchange – RFX)
 
@@ -38,11 +38,11 @@ Pokud potřebujete rozsáhlejšími znalostmi RFX, přečtěte si [výměna pol�
 
 Následující témata popisují podrobnosti o použití objektů sada záznamů:
 
-- [Výměna polí záznamu: Použití funkce RFX](../../data/odbc/record-field-exchange-using-rfx.md)
+- [Výměna polí záznamu (Record Field Exchange – RFX): Použití RFX](../../data/odbc/record-field-exchange-using-rfx.md)
 
-- [Výměna polí záznamu: Použití funkcí RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
+- [Výměna polí záznamu (Record Field Exchange – RFX): Použití funkcí RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
 
-- [Výměna polí záznamu: Jak funkce RFX pracuje](../../data/odbc/record-field-exchange-how-rfx-works.md)
+- [Výměna polí záznamu (Record Field Exchange – RFX): Jak RFX funguje](../../data/odbc/record-field-exchange-how-rfx-works.md)
 
 ## <a name="see-also"></a>Viz také:
 

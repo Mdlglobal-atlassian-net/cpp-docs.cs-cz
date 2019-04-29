@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RW2003
 ms.assetid: 9dc0ba70-6776-4aef-b316-5f1711d8e42e
 ms.openlocfilehash: f359c1f71f03ce0d946579776230398fb31d046f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396771"
 ---
 # <a name="resource-compiler-error-rw2003"></a>Chyba kompilátoru prostředků RW2003
 
@@ -19,7 +19,7 @@ Chyba generování
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
 
-1. **Chyba: Soubor prostředků – rastrového obrázku není ve formátu 3.00**
+1. **Chyba: Rastrový obrázek soubor – soubor prostředků není ve formátu 3.00**
 
    Rastrové obrázky ve formátu Windows verze 2.x nelze použít v souborech prostředků verze 3.x. Rastrový obrázek musí být překreslení nebo převedeny na formát 3.x.
 
@@ -27,7 +27,7 @@ Chyba generování
 
    Na zařízení nezávislé rastrového obrázku (DIB) v zadaný prostředek není kompatibilní s formátem Windows 3.0. Rastrový obrázek musí být překreslení nebo převedeny na formát 3.x.
 
-1. **Chyba: Prostředek název souboru prostředku není ve formátu 3.00**
+1. **Chyba: Resource název souboru prostředku není ve formátu 3.00**
 
    Ikony nebo kurzoru v zadaného prostředku používaný formát z předchozí verze systému Windows. Ikony nebo kurzoru musí být překreslení nebo převedeny na formát 3.x.
 

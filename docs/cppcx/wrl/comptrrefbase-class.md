@@ -14,11 +14,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ComPtrRefBase::ptr_ data member
 ms.assetid: 6d344c1a-cc13-4a3f-8a0d-f167ccb9348f
 ms.openlocfilehash: df4e2aa1ce650fd5b1f04baf2f7c4cd2fb4cff93
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398638"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase – třída
 
@@ -44,20 +44,20 @@ Představuje základní třídu pro [comptrref –](comptrref-class.md) třídy.
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-Name            | Popis
+Název            | Popis
 --------------- | -------------------------------------------------
 `InterfaceType` | Synonymum pro typ parametru šablony *T*.
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-Name                                                                       | Popis
+Název                                                                       | Popis
 -------------------------------------------------------------------------- | -----------------------------------------------------------------------------------------------------
 [ComPtrRefBase::operator IInspectable **](#operator-iinspectable-star-star) | Přetypování aktuální [ptr_ –](#ptr) na ukazatel na ukazatel – datový člen `IInspectable` rozhraní.
 [ComPtrRefBase::operator IUnknown **](#operator-iunknown-star-star)         | Přetypování aktuální [ptr_ –](#ptr) na ukazatel na ukazatel – datový člen `IUnknown` rozhraní.
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-Name                        | Popis
+Název                        | Popis
 --------------------------- | ----------------------------------------------------------------
 [Comptrrefbase::ptr_ –](#ptr) | Ukazatel na typ zadaný v parametru aktuální šablony.
 

@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru C2385
+title: Compiler Error C2385
 ms.date: 11/04/2016
 f1_keywords:
 - C2385
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C2385
 ms.assetid: 6d3dd1f2-e56d-49d7-865c-6a9acdb17417
 ms.openlocfilehash: bffb4c1088c41832e69b0c6f161b47f6f9f08d06
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393698"
 ---
-# <a name="compiler-error-c2385"></a>Chyba kompilátoru C2385
+# <a name="compiler-error-c2385"></a>Compiler Error C2385
 
 nejednoznačný přístup 'member'
 

@@ -38,11 +38,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HString::~HString, destructor
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
 ms.openlocfilehash: 19ef11a5d33e69bb77049e450df1b386528b7f7b
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398287"
 ---
 # <a name="hstring-class"></a>HString – třída
 
@@ -62,14 +62,14 @@ Modul Runtime Windows poskytuje přístup k řetězcům prostřednictvím [HSTRI
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Name                                | Popis
+Název                                | Popis
 ----------------------------------- | -----------------------------------------------------
 [Hstring::hstring –](#hstring)        | Inicializuje novou instanci třídy `HString` třídy.
 [HString:: ~ HString](#tilde-hstring) | Odstraní aktuální instanci aplikace `HString` třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Name                                     | Popis
+Název                                     | Popis
 ---------------------------------------- | -------------------------------------------------------------------------------------------------------------
 [Hstring::Attach –](#attach)               | Přidruží zadaný `HString` objektu s aktuálním `HString` objektu.
 [Hstring::CopyTo –](#copyto)               | Zkopíruje aktuální `HString` objektu na objekt HSTRING.
@@ -83,7 +83,7 @@ Name                                     | Popis
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-Name                                         | Popis
+Název                                         | Popis
 -------------------------------------------- | ----------------------------------------------------------------------------
 [HString::operator =](#operator-assign)       | Přesune hodnotu jiného `HString` objektů na aktuální `HString` objektu.
 [HString::operator ==](#operator-equality)    | Určuje, zda se tyto dva parametry rovnají.

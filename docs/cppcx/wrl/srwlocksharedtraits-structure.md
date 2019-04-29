@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::SRWLockSharedTraits::Unlock method
 ms.assetid: 709cb51e-d70c-40b6-bdb4-d8eacf3af495
 ms.openlocfilehash: af567fd333854519df4543ad24084e52cda4d96e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383279"
 ---
 # <a name="srwlocksharedtraits-structure"></a>SRWLockSharedTraits – struktura
 
@@ -32,13 +32,13 @@ struct SRWLockSharedTraits;
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-Name   | Popis
+Název   | Popis
 ------ | --------------------------------------------------------------------------
 `Type` | Synonymum pro ukazatel [SRWLOCK](srwlock-class.md) třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Name                                                     | Popis
+Název                                                     | Popis
 -------------------------------------------------------- | -----------------------------------------------------------------
 [Srwlocksharedtraits::getinvalidvalue –](#getinvalidvalue) | Načte `SRWLockSharedTraits` objekt, který je pořád platný.
 [Srwlocksharedtraits::Unlock –](#unlock)                   | Uvolní výhradní kontrolu zadaného `SRWLock` objektu.

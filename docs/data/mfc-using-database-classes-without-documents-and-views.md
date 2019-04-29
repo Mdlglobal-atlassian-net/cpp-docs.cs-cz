@@ -18,11 +18,11 @@ helpviewer_keywords:
 - user interface [C++], drawing information
 ms.assetid: 15bf52d4-91cf-4b1d-8b37-87c3ae70123a
 ms.openlocfilehash: ab9946609fa20c4644873a684a754cbc8a41742f
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59024631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396012"
 ---
 # <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC: Použití databázových tříd bez dokumentů a zobrazení
 
@@ -59,7 +59,7 @@ Průvodce aplikací MFC obsahuje celou řadu možností **vyberte Podpora datab�
 |**Zobrazení databází bez podpory souborů**|Odvozený z `CRecordView`|Poskytuje podporu dokumentu, ale nepodporuje serializaci. Dokument můžete ukládat sady záznamů a koordinaci více zobrazení; nepodporuje serializaci nebo **nový**, **otevřít**, **Uložit**, a **uložit jako** příkazy. Zobrazit [aplikace s minimálními dokumenty](#_core_applications_with_minimal_documents). Pokud zahrnete zobrazení databáze, musíte zadat zdroj dat.<br /><br /> Obsahuje databázové soubory hlaviček, knihovnách, zobrazení záznamů a záznamů. (K dispozici pouze pro aplikace s **podpora architektury Document/view** možnosti vybrané v [typ aplikace, Průvodce aplikací knihovny MFC](../mfc/reference/application-type-mfc-application-wizard.md) stránky.)|
 |**Zobrazení databází s podporou souborů**|Odvozený z `CRecordView`|Poskytuje plnou podporu dokumentu, včetně serializace a související dokument **souboru** příkazů nabídky. Databázové aplikace je obvykle fungují na základě jednotlivé záznamy, nikoli na jednotlivé – soubor základ a proto není nutné serializace. Může však mít speciální použití pro serializaci. Zobrazit [aplikace s minimálními dokumenty](#_core_applications_with_minimal_documents). Pokud zahrnete zobrazení databáze, musíte zadat zdroj dat.<br /><br /> Obsahuje databázové soubory hlaviček, knihovnách, zobrazení záznamů a záznamů. (K dispozici pouze pro aplikace s **podpora architektury Document/view** možnosti vybrané v [typ aplikace, Průvodce aplikací knihovny MFC](../mfc/reference/application-type-mfc-application-wizard.md) stránky.)|
 
-Diskuzi o alternativy k serializaci a alternativní možnosti použití serializace naleznete v tématu [serializace: Serializace vs. Databáze vstupní a výstupní](../mfc/serialization-serialization-vs-database-input-output.md).
+Diskuzi o alternativy k serializaci a alternativní možnosti použití serializace naleznete v tématu [serializace: Serializace a zpracování Databáze vstupní a výstupní](../mfc/serialization-serialization-vs-database-input-output.md).
 
 ##  <a name="_core_applications_with_minimal_documents"></a> Aplikace s minimálními dokumenty
 
@@ -81,7 +81,7 @@ Obvykle použijete tuto možnost pro jednoduché aplikace založené na formulá
 
 ###  <a name="_core_a_document_with_file_support"></a> Dokument s podporou souborů
 
-Vyberte možnost aplikace Průvodce databáze **databáze zobrazení s podporou souborů** Pokud máte alternativní použití pro související dokument **souboru** příkazů nabídky a serializace dokumentu. Pro přístup k datům je součástí programu, můžete použít dokumentu stejným způsobem, jak je popsáno v [dokumentu bez podpory souborů](#_core_a_document_without_file_support). Možnost serializace dokumentu, můžete použít třeba ke čtení a zápis dokumentu serializované uživatelské profil, který ukládá předvolby uživatele a další užitečné informace. Další informace najdete v článku [serializace: Serializace vs. Databáze vstupní a výstupní](../mfc/serialization-serialization-vs-database-input-output.md).
+Vyberte možnost aplikace Průvodce databáze **databáze zobrazení s podporou souborů** Pokud máte alternativní použití pro související dokument **souboru** příkazů nabídky a serializace dokumentu. Pro přístup k datům je součástí programu, můžete použít dokumentu stejným způsobem, jak je popsáno v [dokumentu bez podpory souborů](#_core_a_document_without_file_support). Možnost serializace dokumentu, můžete použít třeba ke čtení a zápis dokumentu serializované uživatelské profil, který ukládá předvolby uživatele a další užitečné informace. Další informace najdete v článku [serializace: Serializace a zpracování Databáze vstupní a výstupní](../mfc/serialization-serialization-vs-database-input-output.md).
 
 Průvodce aplikací podporuje tuto možnost, ale je nutné napsat kód, který serializuje dokumentu. Serializované informace Store v dokumentu datové členy.
 

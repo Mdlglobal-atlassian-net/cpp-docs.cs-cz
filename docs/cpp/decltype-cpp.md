@@ -10,11 +10,11 @@ helpviewer_keywords:
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
 ms.openlocfilehash: 6c1c91aec7d974836b1ec031a1e8b38e8abb65ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399080"
 ---
 # <a name="decltype--c"></a>decltype (C++)
 
@@ -59,7 +59,7 @@ const A* a = new A();
 
 Dále zkontrolujte typy, které jsou vráceny pomocí čtyř **decltype** příkazy v následující tabulce.
 
-|Příkaz|Typ|Poznámky|
+|Příkaz|Type|Poznámky|
 |---------------|----------|-----------|
 |`decltype(fx());`|`const int&&`|[Odkaz rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) k **const int**.|
 |`decltype(var);`|**int**|Typ proměnné `var`.|
@@ -179,7 +179,7 @@ x3.Dump() = 42
 
 ## <a name="example"></a>Příklad
 
-**Visual Studio 2017 a novější:** kompilátor analyzuje decltype argumenty, pokud tyto šablony jsou deklarovány spíše než vytvořena instance. V důsledku toho pokud nezávislé specializace je nalezena v argument pro decltype, nesmí být odložena na čas vytvoření instance a bude potřeba zpracovat okamžitě a všechny případné chyby se zjistit, v daném čase.
+**Visual Studio 2017 a novější:** Kompilátor analyzuje decltype argumenty při šablony jsou deklarovány, nikoli vytvořena instance. V důsledku toho pokud nezávislé specializace je nalezena v argument pro decltype, nesmí být odložena na čas vytvoření instance a bude potřeba zpracovat okamžitě a všechny případné chyby se zjistit, v daném čase.
 
 Následující příklad ukazuje takový chybu kompilátoru, která je vyvolána v okamžiku deklarace:
 

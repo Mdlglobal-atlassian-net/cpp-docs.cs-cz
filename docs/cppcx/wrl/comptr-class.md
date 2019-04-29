@@ -52,11 +52,11 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
 ms.openlocfilehash: 9e5b2419f070ead17e72b1642f510f74bad8260e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398677"
 ---
 # <a name="comptr-class"></a>ComPtr – třída
 
@@ -90,20 +90,20 @@ Další informace o inteligentních ukazatelích naleznete v tématu "Chytrých 
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-Name            | Popis
+Název            | Popis
 --------------- | ---------------------------------------------------------------
 `InterfaceType` | Synonymum pro typ zadaný *T* parametr šablony.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Name                             | Popis
+Název                             | Popis
 -------------------------------- | --------------------------------------------------------------------------------------------------------------------
 [Comptr::comptr –](#comptr)        | Inicializuje novou instanci třídy `ComPtr` třídy. Přetížení poskytují výchozí, kopírovat, přesunout a převod konstruktory.
 [ComPtr::~ComPtr](#tilde-comptr) | Uvolní instanci `ComPtr`.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Name                                                      | Popis
+Název                                                      | Popis
 --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 [Comptr::AS –](#as)                                         | Vrátí `ComPtr` objekt, který představuje rozhraní identifikován parametrem určené šablony.
 [ComPtr::AsIID](#asiid)                                   | Vrátí `ComPtr` objekt, který představuje rozhraní, které identifikují pomocí ID zadané rozhraní.
@@ -119,14 +119,14 @@ Name                                                      | Popis
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-Name                                        | Popis
+Název                                        | Popis
 ------------------------------------------- | --------------------------------------------------------------------------------
 [Comptr::internaladdref –](#internaladdref)   | Zvýší počet odkazů přidružený k tomuto rozhraní `ComPtr`.
 [Comptr::internalrelease –](#internalrelease) | Provádí operaci vydání COM pro rozhraní přidružené k tomuto `ComPtr`.
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-Name                                                                                           | Popis
+Název                                                                                           | Popis
 ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------
 [ComPtr::operator &](#operator-ampersand)                                                       | Načte adresu aktuálního `ComPtr`.
 [ComPtr::operator->](#operator-arrow)                                                          | Načte ukazatel na typ určený v parametru aktuální šablony.
@@ -137,7 +137,7 @@ Name                                                                            
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-Name                 | Popis
+Název                 | Popis
 -------------------- | ------------------------------------------------------------------------------------------
 [ComPtr::ptr_](#ptr) | Obsahuje ukazatel rozhraní, který je přidružený k a spravovaného touto `ComPtr`.
 

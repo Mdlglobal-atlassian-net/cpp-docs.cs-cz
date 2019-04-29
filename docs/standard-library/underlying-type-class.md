@@ -1,5 +1,5 @@
 ---
-title: underlying_type – třída
+title: underlying_type Class
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::underlying_type
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - underlying_type
 ms.assetid: 691ddce3-2677-4480-bd35-d933fab85d3e
 ms.openlocfilehash: 23e5e9bc5406265f49fca2ed220c597cb32e2a9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399359"
 ---
-# <a name="underlyingtype-class"></a>underlying_type – třída
+# <a name="underlyingtype-class"></a>underlying_type Class
 
 Vytvoří základní celočíselného typu pro typ výčtu.
 

@@ -89,11 +89,11 @@ helpviewer_keywords:
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
 ms.openlocfilehash: da046a467333fba9aa106b97e21cf583c8cef75d
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405063"
 ---
 # <a name="hashmap-class"></a>hash_map – třída
 
@@ -172,11 +172,11 @@ Iterátor poskytovaný třídou hash_map je obousměrný iterátor, ale člensk�
 |[const_reference](#const_reference)|Typ, který poskytuje odkaz na **const** element uložené v `hash_map` pro čtení a provádění **const** operace.|
 |[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může přečíst jakýkoli **const** prvek `hash_map`.|
 |[difference_type](#difference_type)|Celočíselný typ se znaménkem, který slouží k vyjádření počtu prvků `hash_map` v rozsahu mezi prvky, na které odkazují iterátory.|
-|[iterátor](#iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat libovolný prvek v `hash_map`.|
+|[iterator](#iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat libovolný prvek v `hash_map`.|
 |[key_compare](#key_compare)|Typ poskytující objekt funkce, který může porovnat dva klíče řazení pro určení relativního pořadí dvou prvků v `hash_map`.|
 |[key_type](#key_type)|Typ popisuje řazení objektu klíče, který představuje každý prvek objektu `hash_map`.|
 |[mapped_type](#mapped_type)|Typ, který představuje typ dat uložených v `hash_map`.|
-|[Ukazatel](#pointer)|Typ, který poskytuje ukazatel na prvek v `hash_map`.|
+|[pointer](#pointer)|Typ, který poskytuje ukazatel na prvek v `hash_map`.|
 |[Referenční dokumentace](#reference)|Typ, který poskytuje odkaz na prvek uložený v `hash_map`.|
 |[reverse_iterator](#reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat prvek v obráceném objektu `hash_map`.|
 |[size_type](#size_type)|Typ celé číslo bez znaménka představující počet prvků v `hash_map`.|
@@ -190,12 +190,12 @@ Iterátor poskytovaný třídou hash_map je obousměrný iterátor, ale člensk�
 |[začít](#begin)|Vrátí iterátor adresující první prvek `hash_map`.|
 |[cbegin](#cbegin)|Vrátí konstantní iterátor adresující první prvek `hash_map`.|
 |[cend](#cend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v `hash_map`.|
-|[Vymazat](#clear)|Vymaže všechny prvky `hash_map`.|
+|[clear](#clear)|Vymaže všechny prvky `hash_map`.|
 |[Počet](#count)|Vrátí počet prvků v `hash_map` jejichž klíč odpovídá klíči se zadaným parametrem.|
 |[crbegin](#crbegin)|Vrátí konstantní iterátor adresující první prvek v obráceném objektu `hash_map`.|
-|[crend –](#crend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v obráceném objektu `hash_map`.|
-|[emplace –](#emplace)|Vloží vytvořený prvek na místo do `hash_map`.|
-|[emplace_hint –](#emplace_hint)|Vloží vytvořený prvek na místo do `hash_map`, s náznakem umístění.|
+|[crend](#crend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v obráceném objektu `hash_map`.|
+|[emplace](#emplace)|Vloží vytvořený prvek na místo do `hash_map`.|
+|[emplace_hint](#emplace_hint)|Vloží vytvořený prvek na místo do `hash_map`, s náznakem umístění.|
 |[prázdný](#empty)|Testuje, zda `hash_map` je prázdný.|
 |[ukončení](#end)|Vrátí iterátor adresující umístění následující po posledním prvku v `hash_map`.|
 |[equal_range](#equal_range)|Vrátí pár iterátorů, respektive, na první prvek v `hash_map` s klíčem, který je větší než zadaný klíč a na první prvek `hash_map` s klíčem, který je roven nebo větší než tento klíč.|
@@ -206,11 +206,11 @@ Iterátor poskytovaný třídou hash_map je obousměrný iterátor, ale člensk�
 |[key_comp](#key_comp)|Vrátí iterátor na první prvek v `hash_map` s hodnotou klíče, který je roven nebo větší než zadaný klíč.|
 |[lower_bound –](#lower_bound)|Vrátí iterátor na první prvek v `hash_map` s hodnotou klíče, který je roven nebo větší než zadaný klíč.|
 |[max_size](#max_size)|Vrátí maximální délku objektu `hash_map`.|
-|[rbegin –](#rbegin)|Vrátí iterátor adresující první prvek v obráceném objektu `hash_map`.|
+|[rbegin](#rbegin)|Vrátí iterátor adresující první prvek v obráceném objektu `hash_map`.|
 |[rend –](#rend)|Vrátí iterátor adresující umístění následující po posledním prvku v obráceném objektu `hash_map`.|
 |[Velikost](#size)|Vrátí počet prvků v `hash_map`.|
-|[Prohození](#swap)|Vymění prvky dvou `hash_map`s.|
-|[upper_bound –](#upper_bound)|Vrátí iterátor na první prvek v `hash_map` , že hodnotou klíče, který je větší než zadaný klíč.|
+|[swap](#swap)|Vymění prvky dvou `hash_map`s.|
+|[upper_bound](#upper_bound)|Vrátí iterátor na první prvek v `hash_map` , že hodnotou klíče, který je větší než zadaný klíč.|
 |[value_comp](#value_comp)|Získá kopii objektu porovnání použitého pro seřazení hodnot prvků v `hash_map`.|
 
 ### <a name="operators"></a>Operátory
@@ -258,7 +258,7 @@ const Type& at(const Key& key) const;
 
 |Parametr|Popis|
 |-|-|
-|*Klíč*|Hodnota klíče prvku, který se má nacházet.|
+|*key*|Hodnota klíče prvku, který se má nacházet.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -637,7 +637,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče prvků lze porovnat z hash_map.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1129,7 +1129,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče argumentu k porovnání s klíči řazení prvek z hash_map vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1224,10 +1224,10 @@ Pozice prvku, který chcete odebrat z hash_map.
 *první*<br/>
 Pozice prvního prvku odebrán hash_map.
 
-*poslední*<br/>
+*last*<br/>
 Pozice bezprostředně za posledním prvkem odebrán hash_map.
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče prvky, které mají být odebrány hash_map –.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1340,7 +1340,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče k porovnání s klíči řazení prvek z hash_map vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1596,7 +1596,7 @@ iterator insert(
 |*Val*|Hodnota element, který má být vložen do hash_map – Pokud hash_map – již obsahuje tento prvek (nebo více obecně element, jehož klíč je ekvivalentně seřazen).|
 |*_Where*|Doporučení týkající se místo zahájení vyhledání správného bodu vložení.|
 |*první*|Pozice prvního prvku, které se mají zkopírovat ze hash_map –.|
-|*poslední*|Pozice bezprostředně za posledním prvkem zkopírovány z hash_map.|
+|*last*|Pozice bezprostředně za posledním prvkem zkopírovány z hash_map.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1882,7 +1882,7 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče argumentu k porovnání s klíči řazení prvek z hash_map vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2021,7 +2021,7 @@ Type& operator[](Key&& key);
 
 |Parametr|Popis|
 |-|-|
-|*Klíč*|Hodnota klíče prvku, který má být vložen.|
+|*key*|Hodnota klíče prvku, který má být vložen.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2597,7 +2597,7 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče argumentu k porovnání s hodnotou klíče řazení elementu z hash_map být vyhledán.
 
 ### <a name="return-value"></a>Návratová hodnota

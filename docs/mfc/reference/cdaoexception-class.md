@@ -19,11 +19,11 @@ helpviewer_keywords:
 - CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
 ms.openlocfilehash: 8d49291c51f66ee837f9b31a2ade390cec48c51a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399797"
 ---
 # <a name="cdaoexception-class"></a>Cdaoexception – třída
 
@@ -153,7 +153,7 @@ Voláním této členské funkce získat následující druh informací o výjim
 
 - Kód chyby
 
-- Zdroj
+- Source
 
 - Popis
 
@@ -194,7 +194,7 @@ Tento objekt obsahuje následující informace:
 |Cdaoerrorinfo – člen|Informace o|Význam|
 |--------------------------|-----------------|-------------|
 |`m_lErrorCode`|Kód chyby|Kód chyby rozhraní DAO|
-|`m_strSource`|Zdroj|Název objektu nebo aplikaci, která původně vytvořil chybu|
+|`m_strSource`|Source|Název objektu nebo aplikaci, která původně vytvořil chybu|
 |`m_strDescription`|Popis|Popisný řetězec přidružený k chybě|
 |`m_strHelpFile`|Soubor nápovědy|Cesta k souboru nápovědy Windows ve kterém může uživatel získat informace o tomto problému|
 |`m_lHelpContext`|Kontextové nápovědy|ID kontextu pro téma v souboru nápovědy k rozhraní DAO|

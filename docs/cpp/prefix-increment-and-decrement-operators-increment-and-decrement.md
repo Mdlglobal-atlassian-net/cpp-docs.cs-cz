@@ -14,11 +14,11 @@ helpviewer_keywords:
 - decrement operators [C++]
 ms.assetid: 45ea7fc7-f279-4be9-a216-1d9a0ef9eb7b
 ms.openlocfilehash: deb8acc6c6a68c9a97f2f0efbdc4084b4937df46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392099"
 ---
 # <a name="prefix-increment-and-decrement-operators--and---"></a>Operátory přírůstku a snížení předpony: ++ a --
 
@@ -35,7 +35,7 @@ Prefixový operátor Inkrementace (**++**) z nich se má jeho operand; přidá t
 
 Operátor dekrementace předpony (**--**) je obdobou operátoru Inkrementace předponu, s tím rozdílem, že operand je sníží o jedna a výsledkem je tato hodnota odečítají.
 
-**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): operand operátoru Inkrementace nebo dekrementace nemůže být typu **bool**.
+**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Operand operátoru Inkrementace nebo dekrementace nemůže být typu **bool**.
 
 Jak předpony a přípony přírůstek a snížení operátory ovlivnit jejich operandy. Klíčovým rozdílem mezi nimi je v tom pořadí, ve kterém zvýšení nebo snížení dojde při vyhodnocení výrazu. (Další informace najdete v tématu [operátory Příponové operátory Inkrementace a dekrementace](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md).) Ve formuláři předponu zvýšení nebo snížení dojde před hodnota bude použita ve vyhodnocení výrazu, tak hodnota tohoto výrazu se liší od hodnoty operandu. V příponový tvar zvýšení nebo snížení dojde po hodnota se používá ve vyhodnocení výrazu, takže hodnota výrazu je stejná jako hodnota operandu. Například následující program vytiskne "`++i = 6`":
 

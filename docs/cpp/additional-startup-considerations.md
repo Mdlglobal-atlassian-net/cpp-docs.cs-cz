@@ -7,11 +7,11 @@ helpviewer_keywords:
 - initializing before main
 ms.assetid: 0e942aa6-8342-447c-b068-8980ed7622bd
 ms.openlocfilehash: 16e48f2e4f7544d28a1bea00e1fdf2d1cff397b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385073"
 ---
 # <a name="additional-startup-considerations"></a>Další důležité informace o spuštění
 
@@ -23,7 +23,7 @@ Následujícím inicializacím dochází před vstupem do `main`:
 
 - Inicializace globálních statických objektů v jednotce převodu. K tomu může dojít buď před vstupem do `main` nebo před prvním použitím libovolné funkce nebo objektu v jednotce převodu daného objektu.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 V programu Microsoft C++ jsou globální statické objekty inicializovány před vstupem do `main`.
 

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - _com_raise_error function
 ms.assetid: a98226c2-c3fe-44f1-8ff5-85863de11cd6
 ms.openlocfilehash: 5790fceef26d6de4edff604270cc7108f764aced
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399249"
 ---
 # <a name="comraiseerror"></a>_com_raise_error
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Vyvolá výjimku [_com_error](../cpp/com-error-class.md) v reakci na selhání.
 
@@ -54,7 +54,7 @@ void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<comdef.h >
+**Header:** \<comdef.h>
 
 **Lib:** Pokud **wchar_t je nativní typ** – možnost kompilátoru je na, použijte comsuppw.lib nebo comsuppwd.lib. Pokud **wchar_t je nativní typ** je, použijte comsupp.lib. Další informace najdete v tématu [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 

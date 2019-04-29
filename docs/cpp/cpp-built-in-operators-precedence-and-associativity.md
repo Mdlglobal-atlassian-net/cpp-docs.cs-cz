@@ -13,11 +13,11 @@ helpviewer_keywords:
 - hierarchy, operator
 ms.assetid: 95c1f0ba-dad8-4034-b039-f79a904f112f
 ms.openlocfilehash: 0b560913deb57393a8547f0831e0d987eed41ab7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392346"
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>Integrované operátory C++, Priorita a asociativita
 
@@ -37,10 +37,10 @@ Operátor *prioritu* určuje pořadí operací ve výrazech, které obsahují v�
 |[Volání funkce](../cpp/function-call-operator-parens.md)|[()](../cpp/function-call-operator-parens.md)|
 |[Zvýšení příponového operátora](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|[++](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|
 |[Snížení příponového operátora](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|[--](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|
-|[Název typu](../cpp/typeid-operator.md)|[identifikátor TypeId.](../cpp/typeid-operator.md)|
+|[Název typu](../cpp/typeid-operator.md)|[typeid](../cpp/typeid-operator.md)|
 |[Konstantní typ převodu](../cpp/const-cast-operator.md)|[const_cast](../cpp/const-cast-operator.md)|
-|[Dynamický typ převodu](../cpp/dynamic-cast-operator.md)|[přetypování dynamic_cast](../cpp/dynamic-cast-operator.md)|
-|[Znovu interpretovaný typ převodu](../cpp/reinterpret-cast-operator.md)|[přetypování reinterpret_cast.](../cpp/reinterpret-cast-operator.md)|
+|[Dynamický typ převodu](../cpp/dynamic-cast-operator.md)|[dynamic_cast](../cpp/dynamic-cast-operator.md)|
+|[Znovu interpretovaný typ převodu](../cpp/reinterpret-cast-operator.md)|[reinterpret_cast](../cpp/reinterpret-cast-operator.md)|
 |[Statický typ převodu](../cpp/static-cast-operator.md)|[static_cast](../cpp/static-cast-operator.md)|
 |**Priorita skupiny 3 zprava asociativitu**|
 |[Velikost objektu nebo typu](../cpp/sizeof-operator.md)|[sizeof](../cpp/sizeof-operator.md)|
@@ -60,7 +60,7 @@ Operátor *prioritu* určuje pořadí operací ve výrazech, které obsahují v�
 |**Priorita skupiny 5, zleva doprava asociativita**|
 |[Násobení](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[&#42;](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |[Dělení](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[/](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
-|[numerického zbytku](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[%](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
+|[Modulus](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[%](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |**Priorita skupiny 6, zleva doprava asociativita**|
 |[Přidání](../cpp/additive-operators-plus-and.md)|[+](../cpp/additive-operators-plus-and.md)|
 |[Odčítání](../cpp/additive-operators-plus-and.md)|[-](../cpp/additive-operators-plus-and.md)|

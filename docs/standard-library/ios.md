@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
 ms.openlocfilehash: 1566f9105a61b1c037e86fd2e4b280ed6dd2020e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385216"
 ---
 # <a name="ltiosgt"></a>&lt;IOS&gt;
 
@@ -67,7 +67,7 @@ volání [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 |[nouppercase](../standard-library/ios-functions.md#nouppercase)|Určuje, že šestnáctkových číslic a exponent za použití vědeckého zápisu se zobrazí na malá písmena.|
 |[Říjen](../standard-library/ios-functions.md#oct)|Určuje, že celočíselné proměnné zobrazí v základní 8 zápisu.|
 |[doprava](../standard-library/ios-functions.md#right)|Způsobí, že text, který není stejně široká jako šířka výstupu se zobrazí v vyprázdnění datový proud s na pravém okraji.|
-|[vědecké](../standard-library/ios-functions.md#scientific)|Způsobí, že plovoucí desetinnou čárkou zobrazeného pomocí vědeckého zápisu.|
+|[scientific](../standard-library/ios-functions.md#scientific)|Způsobí, že plovoucí desetinnou čárkou zobrazeného pomocí vědeckého zápisu.|
 |[showbase](../standard-library/ios-functions.md#showbase)|Označuje konvenční základní třídy, ve kterém se zobrazí číslo.|
 |[showpoint](../standard-library/ios-functions.md#showpoint)|Zobrazuje část celého čísla číslo s plovoucí desetinnou čárkou a číslic vpravo od desetinné čárky, i v případě, že zlomkové části je nula.|
 |[showpos](../standard-library/ios-functions.md#showpos)|Způsobí, že explicitně podepsat kladná čísla.|
@@ -79,7 +79,7 @@ volání [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 |Třída|Popis|
 |-|-|
-|[basic_ios –](../standard-library/basic-ios-class.md)|Třída šablony popisuje funkce úložiště a člena, které jsou společné pro oba vstupní datové proudy (třídy šablony [basic_istream](../standard-library/basic-istream-class.md)) tak za výstupní datové proudy (třídy šablony [basic_ostream –](../standard-library/basic-ostream-class.md)), který závisí na Parametry šablony.|
+|[basic_ios](../standard-library/basic-ios-class.md)|Třída šablony popisuje funkce úložiště a člena, které jsou společné pro oba vstupní datové proudy (třídy šablony [basic_istream](../standard-library/basic-istream-class.md)) tak za výstupní datové proudy (třídy šablony [basic_ostream –](../standard-library/basic-ostream-class.md)), který závisí na Parametry šablony.|
 |[fpos –](../standard-library/fpos-class.md)|Třída šablony popisuje objekt, který můžete uložit všechny informace potřebné k obnovení Indikátor pozice souboru v libovolné v rámci jakékoli služby stream.|
 |[ios_base](../standard-library/ios-base-class.md)|Tato třída popisuje úložiště a členské funkce společné pro vstupní a výstupní datové proudy, které nezávisí na parametry šablony.|
 

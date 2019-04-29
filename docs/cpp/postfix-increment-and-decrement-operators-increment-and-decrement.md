@@ -15,11 +15,11 @@ helpviewer_keywords:
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
 ms.openlocfilehash: e1a87fe4815a75b97616d7b11a4b9aa4ae65eb9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392138"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Operátory přírůstku a snížení přípony: ++ a --
 
@@ -48,7 +48,7 @@ Použití příponového operátoru Inkrementace u ukazatele na pole objektů ty
 
 Operandy Příponové operátory Inkrementace a dekrementace operátory přípony musí být upravitelné (nikoli **const**) l hodnoty aritmetického typu nebo typu ukazatele. Typ výsledku je stejný jako *postfix-expression*, ale už nejsou l hodnotou.
 
-**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): operand příponového přírůstek nebo snížení operátor nesmí být typu **bool**.
+**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Operand příponového přírůstek nebo snížení operátor nesmí být typu **bool**.
 
 Následující kód znázorňuje příponový operátor inkrementace:
 

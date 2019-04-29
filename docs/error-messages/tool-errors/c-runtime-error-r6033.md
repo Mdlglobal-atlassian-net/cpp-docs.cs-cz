@@ -1,5 +1,5 @@
 ---
-title: Chyba za běhu C R6033 jazyka
+title: Chyba modulu C runtime R6033
 ms.date: 11/04/2016
 f1_keywords:
 - R6033
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - R6033
 ms.assetid: f9cffdc9-81bd-4a64-a698-02762cbd82c9
 ms.openlocfilehash: 39d8a20dacb0cdeb2a767529e9716bd476f406dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400003"
 ---
-# <a name="c-runtime-error-r6033"></a>Chyba za běhu C R6033 jazyka
+# <a name="c-runtime-error-r6033"></a>Chyba modulu C runtime R6033
 
 Pokus o použití kód jazyka MSIL z tohoto sestavení během inicializace nativního kódu. To znamená chybu ve vaší aplikaci. Pravděpodobně je výsledek volání jazyka MSIL kompilována (/ clr) funkce z nativní konstruktoru nebo funkce DllMain.
 

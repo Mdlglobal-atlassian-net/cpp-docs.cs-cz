@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CMFCKeyMapDialog [MFC], SetColumnsWidth
 ms.assetid: 5feb4942-d636-462d-a162-0104dd320f4e
 ms.openlocfilehash: 65aa5ab0f24999ee23a97f383577b69584825502
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58774786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388498"
 ---
 # <a name="cmfckeymapdialog-class"></a>CMFCKeyMapDialog Class
 
@@ -47,19 +47,19 @@ class CMFCKeyMapDialog : public CDialogEx
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCKeyMapDialog::CMFCKeyMapDialog](#cmfckeymapdialog)|Vytvoří `CMFCKeyMapDialog` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCKeyMapDialog::DoModal](#domodal)|Zobrazí dialogové okno mapování klávesnice.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCKeyMapDialog::FormatItem](#formatitem)|Volá se rozhraním sestavit řetězec, který popisuje mapování klíčů. Ve výchozím nastavení řetězec obsahuje název příkazu, klávesové zkratky používá a Popis klíče zástupce.|
 |[CMFCKeyMapDialog::GetCommandKeys](#getcommandkeys)|Načte řetězec, který obsahuje seznam klávesových zkratek, které jsou přidružené k zadaný příkaz.|

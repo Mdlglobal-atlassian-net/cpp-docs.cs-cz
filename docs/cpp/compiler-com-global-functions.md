@@ -6,15 +6,15 @@ helpviewer_keywords:
 - COM, compiler support
 ms.assetid: 74449d26-50a2-47c7-b175-7cf2cf83533e
 ms.openlocfilehash: ac74270cd020aa66ccc14ff314a00b388a038086
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399184"
 ---
 # <a name="compiler-com-global-functions"></a>Globální funkce kompilátoru modelu COM
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 K dispozici jsou následující rutiny:
 

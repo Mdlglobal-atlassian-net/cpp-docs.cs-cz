@@ -45,11 +45,11 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
 ms.openlocfilehash: c791f3988c7257ed7d188917394e74a6dbeca98b
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58776801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62374035"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>Cmfcoutlookbartabctrl – třída
 
@@ -65,14 +65,14 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCOutlookBarTabCtrl::CMFCOutlookBarTabCtrl`|Výchozí konstruktor.|
 |`CMFCOutlookBarTabCtrl::~CMFCOutlookBarTabCtrl`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCOutlookBarTabCtrl::AddControl](#addcontrol)|Přidá ovládací prvek Windows jako novou kartu na panelu aplikace Outlook.|
 |`CMFCOutlookBarTabCtrl::CalcRectEdit`|Volá se rozhraním, k určení velikosti pole pro úpravy, které se zobrazí, když se uživatel přejmenuje na kartě. (Přepíše `CMFCBaseTabCtrl::CalcRectEdit`.)|

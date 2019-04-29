@@ -3,11 +3,11 @@ title: Používání modelu C++ AMP v aplikacích pro UWP
 ms.date: 11/04/2016
 ms.assetid: 85577298-2c28-4209-9470-eb21048615db
 ms.openlocfilehash: 31fede0a2419e56d53cb16521b08067dac5facc6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405349"
 ---
 # <a name="using-c-amp-in-uwp-apps"></a>Používání modelu C++ AMP v aplikacích pro UWP
 
@@ -15,7 +15,7 @@ C++ AMP (C++ Accelerated Massive Parallelism) můžete použít v aplikaci pro u
 
 ## <a name="performance-considerations"></a>Důležité informace o výkonu
 
-Pokud používáte rozšíření součásti Visual C++ C + +/ CX k vytvoření aplikace pro univerzální platformu Windows (UPW), doporučujeme používat typy prostý staré dat (POD) spolu se souvislým úložištěm – například `std::vector` nebo pole stylu C – pro data, která bude použít s C++ AMP. To může pomoci dosáhnout vyššího výkonu než pomocí typů bez POD nebo kontejnerů RT systému Windows, protože k dojít k žádnému zařazování.
+Pokud používáte Visual C++ rozšíření komponent C++/CX k vytvoření aplikace pro univerzální platformu Windows (UPW), doporučujeme používat typy prostý staré dat (POD) spolu se souvislým úložištěm – například `std::vector` nebo pole stylu C – pro data, která se použije C++ AMP. To může pomoci dosáhnout vyššího výkonu než pomocí typů bez POD nebo kontejnerů RT systému Windows, protože k dojít k žádnému zařazování.
 
 V jádře C++ AMP pro přístup k datům, která je uložena tímto způsobem pouze zabalte `std::vector` nebo pole úložiště `concurrency::array_view` a potom použijte zobrazení pole ve `concurrency::parallel_for_each` smyčka:
 

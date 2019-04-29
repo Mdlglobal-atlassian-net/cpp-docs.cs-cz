@@ -11,11 +11,11 @@ helpviewer_keywords:
 - assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
 ms.openlocfilehash: 59f463d103e233a1d9b25da3243a16f67263c815
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392294"
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>Konstruktory a operátory přiřazení pro kopírování (C++)
 
@@ -34,7 +34,7 @@ ms.locfileid: "50535041"
 
    způsobí, že je hodnota `b` zkopírována do `a`.
 
-- **Inicializace**: inicializaci dochází při deklaraci nového objektu, kdy jsou argumenty předány funkcím podle hodnoty nebo hodnoty jsou vráceny ve funkcích podle hodnoty.
+- **Inicializace**: Inicializaci dochází při deklaraci nového objektu, kdy jsou argumenty předány funkcím podle hodnoty nebo hodnoty jsou vráceny ve funkcích podle hodnoty.
 
 Pro objekty typu třídy lze definovat sémantiku „kopie“. Podívejte se například na tento kód:
 

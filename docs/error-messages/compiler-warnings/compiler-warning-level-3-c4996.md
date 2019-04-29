@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
 ms.openlocfilehash: ef1bc46b64ccbe1374fd795a9b5d56e091b47f48
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57816422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62401498"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Kompilátor upozornění (úroveň 3) C4996
 
@@ -19,7 +19,7 @@ Kompilátor zjistil nepoužívané deklarace. **Toto upozornění je vždy zám�
 
 Toto jsou některé běžné C4996 zprávy generované běhové knihovny jazyka C a standardní knihovny, ale o vyčerpávající seznam. Pomocí odkazů nebo si přečtěte o způsoby, chcete-li tento problém vyřešit, nebo chcete-li vypnout upozornění.
 
-- [POSIX název pro tuto položku je zastaralý. Místo toho použijte název splňující podmínky ISO C a C++: *nový_název*. Najdete v online nápovědě pro podrobnosti.](#posix-function-names)
+- [POSIX název pro tuto položku je zastaralý. Místo toho použijte ISO C a C++ splňovala podmínky shody názvu: *nový_název*. Najdete v online nápovědě pro podrobnosti.](#posix-function-names)
 
 - [Tato funkce nebo proměnná může nebezpečné. Zvažte použití *safe_version* místo. Chcete-li zakázat vyřazení, použijte \_CRT\_SECURE\_ne\_upozornění.  Najdete v online nápovědě pro podrobnosti.](#unsafe-crt-library-functions)
 
@@ -27,7 +27,7 @@ Toto jsou některé běžné C4996 zprávy generované běhové knihovny jazyka 
 
 - [Tato funkce nebo proměnná byla nahrazena novější funkce knihovny nebo operačního systému. Zvažte použití *new_item* místo. Najdete v online nápovědě pro podrobnosti.](#obsolete-crt-functions-and-variables)
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
 
 C4996 nastane, pokud kompilátor narazí, funkce nebo proměnná, která je označena jako [zastaralé](../../cpp/deprecated-cpp.md) pomocí `__declspec(deprecated)` modifikátor, nebo když se pokusíte o přístup k funkci, člen třídy nebo definice typedef, která má C ++ 14 [ \[ \[zastaralé\] \] ](../../cpp/attributes.md) atribut. Můžete použít `__declspec(deprecated)` modifikátor nebo `[[deprecated]]` atribut sami v knihovnách nebo hlavičkové soubory k upozornění klientů o zastaralé funkce, proměnné, členy a definice TypeDef.
 
@@ -65,7 +65,7 @@ Tady jsou některé běžné zdroje C4996 upozornění a chyb.
 
 ### <a name="posix-function-names"></a>Názvy funkcí v rámci specifikace POSIX
 
-**POSIX název pro tuto položku je zastaralý. Místo toho použijte název splňující podmínky ISO C a C++:** *nový_název*. **Najdete v online nápovědě pro podrobnosti.**
+**POSIX název pro tuto položku je zastaralý. Místo toho použijte ISO C a C++ splňovala podmínky shody názvu:** *nový_název*. **Najdete v online nápovědě pro podrobnosti.**
 
 Microsoft má přejmenovat, některé funkce POSIX v souladu s normou C99 a C ++ 03 pravidla pro názvy definované implementací globální funkce CRT. Jenom původní názvy POSIX jsou zastaralé, ne samotné funkce. Ve většině případů vedoucí znaku podtržítka přidal do názvu funkce POSIX k vytvoření názvu standardní splňující podmínky. Kompilátor vyvolá upozornění na zastaralost pro původní název funkce a navrhne upřednostňovaný název.
 

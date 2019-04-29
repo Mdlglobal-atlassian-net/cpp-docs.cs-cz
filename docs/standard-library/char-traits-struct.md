@@ -28,11 +28,11 @@ helpviewer_keywords:
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
 ms.openlocfilehash: 2975c839e07093a22d910f295be730fdd68839cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62379438"
 ---
 # <a name="chartraits-struct"></a>char_traits – struktura
 
@@ -68,17 +68,17 @@ Popisuje různé vlastnosti znaků pro typ struktury šablony `CharType`. Tříd
 
 |Členská funkce|Popis|
 |-|-|
-|[přiřazení](#assign)|Přiřadí hodnotu jeden znak do jiného.|
+|[assign](#assign)|Přiřadí hodnotu jeden znak do jiného.|
 |[compare](#compare)|Porovná až po zadaný počet znaků v dva řetězce.|
 |[kopírování](#copy)|Zkopíruje zadaný počet znaků z jednoho řetězce do jiného. Zastaralé Použití [char_traits::_Copy_s](#copy_s) místo.|
 |[_Copy_s](#copy_s)|Zkopíruje zadaný počet znaků z jednoho řetězce do jiného.|
 |[eof](#eof)|Vrátí znak koncové z file (EOF).|
-|[EQ](#eq)|Testuje, jestli dvě `char_type` znaky jsou stejné.|
+|[eq](#eq)|Testuje, jestli dvě `char_type` znaky jsou stejné.|
 |[eq_int_type](#eq_int_type)|Ověřuje, zda dva znaky jako `int_type`s jsou si rovny.|
 |[Najít](#find)|Vyhledá první výskyt zadaného znaku v rozsahu znaků.|
 |[Délka](#length)|Vrátí délku řetězce.|
 |[lt](#lt)|Ověřuje, zda jeden znak je menší než jiný.|
-|[Přesunutí](#move)|Zkopíruje zadaný počet znaků v pořadí do jiného, je to možné překrývání, pořadí. Zastaralé Použití [char_traits::_Move_s](#move_s) místo.|
+|[move](#move)|Zkopíruje zadaný počet znaků v pořadí do jiného, je to možné překrývání, pořadí. Zastaralé Použití [char_traits::_Move_s](#move_s) místo.|
 |[_Move_s](#move_s)|Zkopíruje zadaný počet znaků v pořadí do jiného, je to možné překrývání, pořadí.|
 |[not_eof](#not_eof)|Ověřuje, zda znak je znak end file (EOF).|
 |[to_char_type](#to_char_type)|Převede `int_type` znak na odpovídající `char_type` znak a vrátí výsledek.|
@@ -189,10 +189,10 @@ static int compare(const char_type* str1,
 
 ### <a name="parameters"></a>Parametry
 
-*Str1*<br/>
+*str1*<br/>
 První dva řetězce k porovnání k sobě navzájem.
 
-*řetězci Str2*<br/>
+*str2*<br/>
 Druhý dva řetězce k porovnání k sobě navzájem.
 
 *_Num*<br/>
@@ -255,10 +255,10 @@ static char_type *copy(char_type* _To,
 
 ### <a name="parameters"></a>Parametry
 
-*_Do*<br/>
+*_To*<br/>
 Prvek na začátku řetězec nebo znak pole cílené na příjem zkopírovaný posloupnost znaků.
 
-*_Ze*<br/>
+*_From*<br/>
 Prvek na začátku pole, které se mají zkopírovat řetězec nebo znak zdroje.
 
 *_Num*<br/>
@@ -317,13 +317,13 @@ static char_type *_Copy_s(
 
 ### <a name="parameters"></a>Parametry
 
-*cíl*<br/>
+*dest*<br/>
 Řetězec nebo znak pole cílené na příjem zkopírovaný posloupnost znaků.
 
 *dest_size*<br/>
 Velikost *dest*. Pokud `char_type` je **char**, pak je tato velikost v bajtech. Pokud `char_type` je **wchar_t**, pak tato velikost je ve slovech.
 
-*_Ze*<br/>
+*_From*<br/>
 Zdrojový řetězec nebo znak pole, které se mají zkopírovat.
 
 *Počet*<br/>
@@ -384,7 +384,7 @@ Znak EOF.
 
 Hodnota, která představuje konec souboru (například znak konce souboru nebo WEOF).
 
-Standardní C++ stavy, které tato hodnota nesmí odpovídat platné `char_type` hodnotu. Kompilátor Visual C++ vynucuje toto omezení pro typ **char**, ale ne pro typ **wchar_t**. To zachycuje níže uvedený příklad.
+Standardní C++ stavy, které tato hodnota nesmí odpovídat platné `char_type` hodnotu. Vizuál C++ kompilátor vynucuje toto omezení pro typ **char**, ale ne pro typ **wchar_t**. To zachycuje níže uvedený příklad.
 
 ### <a name="example"></a>Příklad
 
@@ -763,10 +763,10 @@ static char_type *move(char_type* _To,
 
 ### <a name="parameters"></a>Parametry
 
-*_Do*<br/>
+*_To*<br/>
 Prvek na začátku řetězec nebo znak pole cílené na příjem zkopírovaný posloupnost znaků.
 
-*_Ze*<br/>
+*_From*<br/>
 Prvek na začátku pole, které se mají zkopírovat řetězec nebo znak zdroje.
 
 *_Num*<br/>
@@ -840,13 +840,13 @@ static char_type *_Move_s(
 
 ### <a name="parameters"></a>Parametry
 
-*cíl*<br/>
+*dest*<br/>
 Prvek na začátku řetězec nebo znak pole cílené na příjem zkopírovaný posloupnost znaků.
 
 *dest_size*<br/>
 Velikost *dest*. Pokud `char_type` je **char**, pak toto je v bajtech. Pokud `char_type` je **wchar_t**, pak toto je ve slovech.
 
-*_Ze*<br/>
+*_From*<br/>
 Prvek na začátku pole, které se mají zkopírovat řetězec nebo znak zdroje.
 
 *Počet*<br/>
@@ -1037,11 +1037,11 @@ Hodnota *_Ch* nemůže být reprezentovaná jako takové poskytuje neurčené v�
 
 Operace převodu [to_int_type](#to_int_type) a `to_char_type` jsou inverzní k sobě navzájem, tak, aby:
 
-`to_int_type` ( `to_char_type` ( *x* )) == *x*
+`to_int_type` ( `to_char_type` ( *x* ) ) == *x*
 
 pro všechny `int_type` *x* a
 
-`to_char_type` ( `to_int_type` ( *x* )) == *x*
+`to_char_type` ( `to_int_type` ( *x* ) ) == *x*
 
 pro všechny `char_type` *x*.
 
@@ -1141,11 +1141,11 @@ static int_type to_int_type(const char_type& _Ch);
 
 Operace převodu `to_int_type` a [to_char_type](#to_char_type) jsou inverzní k sobě navzájem, tak, aby:
 
-`to_int_type` ( `to_char_type` ( *x* )) == *x*
+`to_int_type` ( `to_char_type` ( *x* ) ) == *x*
 
 pro všechny `int_type` *x*, a
 
-`to_char_type` ( `to_int_type` ( *x* )) == *x*
+`to_char_type` ( `to_int_type` ( *x* ) ) == *x*
 
 pro všechny `char_type` *x*.
 

@@ -25,11 +25,11 @@ helpviewer_keywords:
 - CD2DTextFormat [MFC], m_pTextFormat
 ms.assetid: db194cec-9dae-4644-ab84-7c43b7164117
 ms.openlocfilehash: fa2f3b663cb5258c64ec0405abacf2e4eedeb987
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396207"
 ---
 # <a name="cd2dtextformat-class"></a>CD2DTextFormat Class
 
@@ -52,7 +52,7 @@ class CD2DTextFormat : public CD2DResource;
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DTextFormat::Create](#create)|Vytvoří cd2dtextformat –. (Přepíše [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
 |[CD2DTextFormat::Destroy](#destroy)|Odstraní objekt cd2dtextformat –. (Přepíše [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
@@ -70,7 +70,7 @@ class CD2DTextFormat : public CD2DResource;
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DTextFormat::m_pTextFormat](#m_ptextformat)|Ukazatel IDWriteTextFormat.|
 

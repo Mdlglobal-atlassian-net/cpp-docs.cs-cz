@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
 ms.openlocfilehash: 80416e3af18774a7a8bf64264dca2906995ae202
-ms.sourcegitcommit: 185b8ee6dd4e10045df730c5b957b9729813da2d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53411959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410899"
 ---
 # <a name="vector-class"></a>vector – třída
 
@@ -128,7 +128,7 @@ Vektor realokace nastane, pokud členskou funkci, musíte zvýšit pořadí obsa
 
 |Konstruktor|Popis|
 |-|-|
-|[vektor](#vector)|Sestaví vektor určité velikosti nebo s prvky určité hodnoty nebo s konkrétní `allocator` nebo jako kopii vektoru.|
+|[vector](#vector)|Sestaví vektor určité velikosti nebo s prvky určité hodnoty nebo s konkrétní `allocator` nebo jako kopii vektoru.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -140,8 +140,8 @@ Vektor realokace nastane, pokud členskou funkci, musíte zvýšit pořadí obsa
 |[const_reference](#const_reference)|Typ, který poskytuje odkaz na **const** prvek uložený v vektor pro čtení a provádění **const** operace.|
 |[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje iterátor náhodného přístupu, který může přečíst jakýkoli **const** element ve vektoru.|
 |[difference_type](#difference_type)|Typ, který obsahuje rozdíl mezi adresami dvou prvků ve vektoru.|
-|[iterátor](#iterator)|Typ, který poskytuje iterátor náhodného přístupu, který může číst nebo upravovat libovolný prvek vektoru.|
-|[Ukazatel](#pointer)|Typ, který poskytuje ukazatel na prvek ve vektoru.|
+|[iterator](#iterator)|Typ, který poskytuje iterátor náhodného přístupu, který může číst nebo upravovat libovolný prvek vektoru.|
+|[pointer](#pointer)|Typ, který poskytuje ukazatel na prvek ve vektoru.|
 |[Referenční dokumentace](#reference)|Typ, který poskytuje odkaz na prvek uložený ve vektoru.|
 |[reverse_iterator](#reverse_iterator)|Typ, který poskytuje iterátor náhodného přístupu, který může číst nebo upravovat libovolný prvek v obráceném objektu vektoru.|
 |[size_type](#size_type)|Typ, který vrátí počet prvků ve vektoru.|
@@ -151,7 +151,7 @@ Vektor realokace nastane, pokud členskou funkci, musíte zvýšit pořadí obsa
 
 |Členská funkce|Popis|
 |-|-|
-|[přiřazení](#assign)|Vymaže vektoru a zkopíruje zadané elementy prázdný vektor.|
+|[assign](#assign)|Vymaže vektoru a zkopíruje zadané elementy prázdný vektor.|
 |[at](#at)|Vrátí odkaz na prvek v zadaném umístění ve vektoru.|
 |[Zpět](#back)|Vrátí odkaz na poslední prvek vektoru.|
 |[začít](#begin)|Vrátí iterátor s náhodným přístupem na první prvek ve vektoru.|
@@ -159,10 +159,10 @@ Vektor realokace nastane, pokud členskou funkci, musíte zvýšit pořadí obsa
 |[cbegin](#cbegin)|Vrátí konstantní iterátor náhodného přístupu na první prvek ve vektoru.|
 |[cend](#cend)|Vrátí konstantní iterátor náhodného přístupu, na kterou odkazuje přesně za konec vektoru.|
 |[crbegin](#crbegin)|Vrátí konstantní iterátor na první prvek v obráceném objektu vektoru.|
-|[crend –](#crend)|Vrátí konstantní iterátor za účelem obráceném objektu vektoru.|
-|[Vymazat](#clear)|Odstraní prvky vektoru.|
+|[crend](#crend)|Vrátí konstantní iterátor za účelem obráceném objektu vektoru.|
+|[clear](#clear)|Odstraní prvky vektoru.|
 |[data](#data)|Vrací ukazatel na první prvek ve vektoru.|
-|[emplace –](#emplace)|Vloží vytvořený prvek na místo do vektoru na určené pozici.|
+|[emplace](#emplace)|Vloží vytvořený prvek na místo do vektoru na určené pozici.|
 |[emplace_back](#emplace_back)|Přidá prvek vytvořený v místě na konec vektoru.|
 |[prázdný](#empty)|Testuje, zda kontejner vektoru je prázdný.|
 |[ukončení](#end)|Vrátí iterátor náhodného přístupu, který odkazuje na konec vektoru.|
@@ -171,15 +171,15 @@ Vektor realokace nastane, pokud členskou funkci, musíte zvýšit pořadí obsa
 |[get_allocator](#get_allocator)|Vrátí objekt `allocator` Třída použitá ve vektoru.|
 |[Vložit](#insert)|Vloží prvek nebo počet elementů do vektoru na určené pozici.|
 |[max_size](#max_size)|Vrátí maximální délku vektoru.|
-|[pop_back –](#pop_back)|Odstraní prvek na konec vektoru.|
+|[pop_back](#pop_back)|Odstraní prvek na konec vektoru.|
 |[push_back](#push_back)|Přidáte element do konec vektoru.|
-|[rbegin –](#rbegin)|Vrátí iterátor na první prvek v obráceném objektu vektoru.|
+|[rbegin](#rbegin)|Vrátí iterátor na první prvek v obráceném objektu vektoru.|
 |[rend –](#rend)|Vrátí iterátor na konci obráceném objektu vektoru.|
-|[Rezervovat](#reserve)|Rezervuje o minimální délce úložiště pro objekt vektoru.|
-|[Změna velikosti](#resize)|Určuje novou velikost vektoru.|
+|[reserve](#reserve)|Rezervuje o minimální délce úložiště pro objekt vektoru.|
+|[resize](#resize)|Určuje novou velikost vektoru.|
 |[shrink_to_fit](#shrink_to_fit)|Odstraní nadbytečnou kapacitu.|
 |[Velikost](#size)|Vrátí počet prvků ve vektoru.|
-|[Prohození](#swap)|Vymění prvky dvou vektorů.|
+|[swap](#swap)|Vymění prvky dvou vektorů.|
 
 ### <a name="operators"></a>Operátory
 
@@ -826,7 +826,7 @@ The vector c1 contains elements: 1 2
 The vector c1 now contains elements: 20 2
 ```
 
-## <a name="difference_type"></a>  Vector::difference_type
+## <a name="difference_type"></a>  vector::difference_type
 
 Typ, který obsahuje rozdíl mezi dvěma iterátory, které odkazují na prvky v rámci stejné vektoru.
 
@@ -1082,7 +1082,7 @@ iterator erase(
 |-|-|
 |*_Where*|Pozice prvku, který chcete odebrat z vektoru.|
 |*první*|Pozice prvního prvku odebrán vektoru.|
-|*poslední*|Pozice bezprostředně za posledním prvkem odebrán vektoru.|
+|*last*|Pozice bezprostředně za posledním prvkem odebrán vektoru.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1251,7 +1251,7 @@ void insert(
 |*Val*|Hodnota prvku vloženého do vektoru.|
 |*Počet*|Počet elementů nebude vložen do vektoru.|
 |*první*|Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.|
-|*poslední*|Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.|
+|*last*|Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1887,7 +1887,7 @@ Typ `reverse_iterator` se používá k iteraci v rámci vektoru, v opačném po�
 
 Podívejte se na příklad pro [rbegin –](#rbegin).
 
-## <a name="shrink_to_fit"></a>  Vector::shrink_to_fit
+## <a name="shrink_to_fit"></a>  vector::shrink_to_fit
 
 Odstraní nadbytečnou kapacitu.
 
@@ -1968,7 +1968,7 @@ Vector length is 1.
 Vector length is now 2.
 ```
 
-## <a name="size_type"></a>  Vector::size_type
+## <a name="size_type"></a>  vector::size_type
 
 Typ, který vrátí počet prvků ve vektoru.
 

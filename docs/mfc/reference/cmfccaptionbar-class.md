@@ -67,11 +67,11 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
 ms.openlocfilehash: c6385cb6bd3eec3ce5fefe0475d771c774777820
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58781871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403838"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar – třída
 
@@ -87,7 +87,7 @@ class CMFCCaptionBar : public CPane
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCCaptionBar::Create](#create)|Vytvoří ovládací prvek panel titulek a připojí ho k `CMFCCaptionBar` objektu.|
 |[CMFCCaptionBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Určuje, zda jiný podokně můžete dynamicky vložen mezi záhlaví a jeho nadřazeného rámce. (Přepíše [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|
@@ -114,7 +114,7 @@ class CMFCCaptionBar : public CPane
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCCaptionBar::OnDrawBackground](#ondrawbackground)|Volá se rozhraním, aby vyplnit pozadí záhlaví.|
 |[CMFCCaptionBar::OnDrawBorder](#ondrawborder)|Volá se rozhraním, chcete-li nakreslit ohraničení záhlaví.|
@@ -124,7 +124,7 @@ class CMFCCaptionBar : public CPane
 
 ### <a name="data-members"></a>Datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground)|Barva pozadí záhlaví.|
 |[CMFCCaptionBar::m_clrBarBorder](#m_clrbarborder)|Barva ohraničení záhlaví.|

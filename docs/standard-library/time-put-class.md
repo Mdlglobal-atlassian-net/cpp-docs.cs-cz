@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::time_put [C++], put
 ms.assetid: df79493e-3331-48d2-97c3-ac3a745f0791
 ms.openlocfilehash: b9c6f8db26cdc67d3a1bc752b9b5eb31f7dc220b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411926"
 ---
 # <a name="timeput-class"></a>time_put – třída
 
@@ -182,7 +182,7 @@ Modifikátor formátu. Zobrazit [strftime, wcsftime, _strftime_l, _wcsftime_l �
 *první*<br/>
 Začátek formátovací řetězce pro výstup. Zobrazit [strftime, wcsftime, _strftime_l, _wcsftime_l – –](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) platné hodnoty.
 
-*poslední*<br/>
+*last*<br/>
 Konec formátovací řetězec pro výstup. Zobrazit [strftime, wcsftime, _strftime_l, _wcsftime_l – –](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) platné hodnoty.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -256,9 +256,9 @@ Možné hodnoty parametru *_Refs* parametrů a jejich význam:
 
 - 0: Životnost objektu se spravuje přes národní prostředí, které je obsahují.
 
-- 1: doba života objektu je nutné ručně spravovat.
+- 1: Doba života objektu se musí spravovat ručně.
 
-- \> 1: tyto hodnoty nejsou definovány.
+- \> 1: Tyto hodnoty nejsou definovány.
 
 Konstruktor inicializuje jeho základní objekt s [locale::facet](../standard-library/locale-class.md#facet_class)(*_Refs*).
 

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ModuleBase::~ModuleBase, destructor
 ms.assetid: edce7591-6893-46f7-94a7-382827775548
 ms.openlocfilehash: 254796c03d25a77da22c48881c086a41ffbfeb82
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403214"
 ---
 # <a name="modulebase-class"></a>ModuleBase – třída
 
@@ -40,14 +40,14 @@ Představuje základní třídu [modulu](module-class.md) třídy.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Name                                         | Popis
+Název                                         | Popis
 -------------------------------------------- | ---------------------------------------------------------
 [ModuleBase::ModuleBase](#modulebase)        | Inicializuje novou instanci `Module` třídy.
 [ModuleBase::~ModuleBase](#tilde-modulebase) | Zruší inicializaci aktuální instance `Module` třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Name                                                      | Popis
+Název                                                      | Popis
 --------------------------------------------------------- | -------------------------------------------------------------------------
 [Modulebase::decrementobjectcount –](#decrementobjectcount) | Při implementaci, sníží počet objektů sledování modulu.
 [Modulebase::incrementobjectcount –](#incrementobjectcount) | Při implementaci, zvýší počet objektů, které jsou sledovány v rámci modulu.

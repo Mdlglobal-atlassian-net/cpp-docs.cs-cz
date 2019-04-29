@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::ostrstream [C++], str
 ms.assetid: e2e34679-b266-4728-a8e1-8eda5d400e46
 ms.openlocfilehash: 2d4a7a780f1a7db27bcb600c13430deaa0dc35cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370865"
 ---
 # <a name="ostrstream-class"></a>ostrstream – třída
 
@@ -40,14 +40,14 @@ Objekt ukládá objekt třídy `strstreambuf`.
 
 |Konstruktor|Popis|
 |-|-|
-|[ostrstream –](#ostrstream)|Vytvoří objekt typu `ostrstream`.|
+|[ostrstream](#ostrstream)|Vytvoří objekt typu `ostrstream`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
 |[zablokování](#freeze)|Způsobí, že vyrovnávací paměť datového proudu do nedostupný prostřednictvím operací vyrovnávací paměť datového proudu.|
-|[pcount –](#pcount)|Vrátí počet prvků zapsaných pro řízenou sekvenci.|
+|[pcount](#pcount)|Vrátí počet prvků zapsaných pro řízenou sekvenci.|
 |[rdbuf](#rdbuf)|Vrací ukazatel na datový proud přidružený k tomuto `strstreambuf` objektu.|
 |[str](#str)|Volání [ukotvit](../standard-library/strstreambuf-class.md#freeze)a vrátí ukazatel na začátek řízené sekvence.|
 
@@ -98,7 +98,7 @@ Vyrovnávací paměť.
 *Počet*<br/>
 Velikost vyrovnávací paměti v bajtech.
 
-*Reži_m*<br/>
+*_Mode*<br/>
 Režim vstupní a výstupní vyrovnávací paměti. Zobrazit [ios_base::openmode](../standard-library/ios-base-class.md#openmode) Další informace.
 
 ### <a name="remarks"></a>Poznámky

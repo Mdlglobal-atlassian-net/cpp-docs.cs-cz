@@ -15,11 +15,11 @@ helpviewer_keywords:
 - WRL namespace
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
 ms.openlocfilehash: 749469c7ae2acf3a0da92d24a51bbfca9b68971d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59033518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392021"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL – obor názvů
 
@@ -35,13 +35,13 @@ namespace Microsoft::WRL;
 
 ### <a name="typedefs"></a>Typedefs
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`InhibitWeakReferencePolicy`|`RuntimeClassFlags<WinRt | InhibitWeakReference>`|
 
 ### <a name="classes"></a>Třídy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[ActivationFactory – třída](activationfactory-class.md)|Umožňuje jednu nebo více tříd aktivováno modulu Windows Runtime.|
 |[AsyncBase – třída](asyncbase-class.md)|Implementuje asynchronní stav počítače Windows Runtime.|
@@ -58,7 +58,7 @@ namespace Microsoft::WRL;
 
 ### <a name="structures"></a>Struktury
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[ChainInterfaces – struktura](chaininterfaces-structure.md)|Určuje, ověřování a Inicializace funkce, které mohou být použity na sadu rozhraní ID.|
 |[CloakedIid – struktura](cloakediid-structure.md)|Pozná, `RuntimeClass`, `Implements` a `ChainInterfaces` šablony, že zadané rozhraní není v seznamu IID k dispozici.|
@@ -68,7 +68,7 @@ namespace Microsoft::WRL;
 
 ### <a name="enumerations"></a>Výčty
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[AsyncResultType – výčet](asyncresulttype-enumeration.md)|Určuje typ výsledku vrácený `GetResults()` metody.|
 |[ModuleType – výčet](moduletype-enumeration.md)|Určuje, zda modul by měl podporovat v procesový server nebo server mimo proces.|
@@ -76,7 +76,7 @@ namespace Microsoft::WRL;
 
 ### <a name="functions"></a>Funkce
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[AsWeak – funkce](asweak-function.md)|Získá nestálý odkaz pro zadanou instanci.|
 |[Zpětné volání – funkce (WRL)](callback-function-wrl.md)|Vytvoří objekt, jehož členská funkce je metoda zpětného volání.|

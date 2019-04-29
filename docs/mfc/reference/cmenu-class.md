@@ -85,11 +85,11 @@ helpviewer_keywords:
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
 ms.openlocfilehash: 464b59f7e598ea1901cf88c47c5887cbbf308607
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58770847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375792"
 ---
 # <a name="cmenu-class"></a>Cmenu – třída
 
@@ -105,13 +105,13 @@ class CMenu : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMenu::CMenu](#cmenu)|Vytvoří `CMenu` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMenu::AppendMenu](#appendmenu)|Přidá novou položku na konec této nabídky.|
 |[CMenu::Attach](#attach)|Připojí popisovač nabídky Windows `CMenu` objektu.|
@@ -153,7 +153,7 @@ class CMenu : public CObject
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMenu::operator HMENU](#operator_hmenu)|Načte popisovač objekt nabídky.|
 |[CMenu::operator! =](#operator_neq)|Určuje, pokud dva objekty nabídky nejsou stejné.|
@@ -161,7 +161,7 @@ class CMenu : public CObject
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMenu::m_hMenu](#m_hmenu)|Určuje popisovač do nabídky Windows připojené k `CMenu` objektu.|
 

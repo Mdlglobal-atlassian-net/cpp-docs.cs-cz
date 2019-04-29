@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
 ms.openlocfilehash: 4cd922fff691b524ec9d278ac5948992fc096e09
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396775"
 ---
 # <a name="resource-compiler-error-rw2002"></a>Chyba kompilátoru prostředků RW2002
 
@@ -69,7 +69,7 @@ Chyba parsování
 
 1. **Název třídy očekávané ovládacího prvku**
 
-   `class` Pole **ovládací PRVEK** příkaz v **dialogové okno** příkazu musí být jedna z následujících typů: tlačítko, pole se SEZNAMEM, úpravy, LISTBOX, POSUVNÍK, STATICKÝ, nebo uživatelem definovaný. Ujistěte se, že třída je napsán správně.
+   `class` Pole **ovládací PRVEK** výroky **dialogové okno** příkazu musí být jedna z následujících typů: TLAČÍTKO, pole se SEZNAMEM, úpravy, LISTBOX, POSUVNÍK, STATICKÝ, nebo uživatelem definovaný. Ujistěte se, že třída je napsán správně.
 
 1. **Očekával se název písma pro rozpoznávání tváře**
 
@@ -141,7 +141,7 @@ Chyba parsování
 
 1. **Neplatný ovládací prvek typu**
 
-   Každý příkaz ovládacího prvku v **dialogové okno** příkazu musí být jedna z následujících akcí: zaškrtávací políčko, pole se SEZNAMEM, ovládací PRVEK, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, ikony, LISTBOX, LTEXT, PUSHBUTTON, ovládacího prvku RADIOBUTTON, RTEXT, POSUVNÍK. Ujistěte se, že tyto řídicí příkazy jsou zadány správně.
+   Každý příkaz ovládacího prvku v **dialogové okno** příkazu musí být jedna z následujících akcí: ZAŠKRTÁVACÍ POLÍČKO, – POLE SE SEZNAMEM, OVLÁDACÍ PRVEK, CTEXT, DEFPUSHBUTTON, EDITTEXT, SKUPINOVÝ RÁMEČEK, IKONY, LISTBOX, LTEXT, PUSHBUTTON, OVLÁDACÍHO PRVKU RADIOBUTTON, RTEXT, POSUVNÍK. Ujistěte se, že tyto řídicí příkazy jsou zadány správně.
 
 1. **Neplatný typ**
 

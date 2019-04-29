@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ArgTraits::args constant
 ms.assetid: 58ae4115-c1bc-48c8-b01b-e60554841c30
 ms.openlocfilehash: 17109508cf99888ccde79be39a41c5361da24c6e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398807"
 ---
 # <a name="argtraits-structure"></a>ArgTraits – struktura
 
@@ -170,7 +170,7 @@ Typ devátého argumentu `Invoke` metody.
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-Name       | Popis
+Název       | Popis
 ---------- | ----------------------
 `Arg1Type` | Definice typu pro TArg1.
 `Arg2Type` | Definice typu pro TArg2.
@@ -184,7 +184,7 @@ Name       | Popis
 
 ### <a name="public-constants"></a>Veřejné konstanty
 
-Name                     | Popis
+Název                     | Popis
 ------------------------ | ---------------------------------------------------------------------------------------
 [ArgTraits::args](#args) | Sleduje počet parametrů `Invoke` metoda rozhraní delegáta.
 

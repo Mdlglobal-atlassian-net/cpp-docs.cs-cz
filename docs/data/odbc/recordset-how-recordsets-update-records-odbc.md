@@ -9,11 +9,11 @@ helpviewer_keywords:
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
 ms.openlocfilehash: bf71f562714e2dacfe75540e1e532219b3eb307f
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397806"
 ---
 # <a name="recordset-how-recordsets-update-records-odbc"></a>Recordset: Jak sady záznamů aktualizují záznamy (ODBC)
 
@@ -33,9 +33,9 @@ Toto téma vysvětluje:
 
 - [Sada záznamů jako vyrovnávací paměť úprav](#_core_the_edit_buffer) a [rozdíly v dynamických sadách a snímky](#_core_dynasets_and_snapshots).
 
-[Recordset: Jak funkce operací AddNew, Edit a Delete práce (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md) popisuje akce, které z těchto funkcí z hlediska sady záznamů.
+[Sada záznamů: Jak funkce operací AddNew, Edit a Delete práce (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md) popisuje akce, které z těchto funkcí z hlediska sady záznamů.
 
-[Recordset: Další informace o aktualizace (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) poslední částí scénáře aktualizace sady záznamů a s vysvětlením vliv transakcí na aktualizace, jak uzavírání sady záznamů nebo posouvání ovlivňuje Probíhá aktualizace a způsob aktualizace interakce s aktualizacemi jiných uživatelů.
+[Sada záznamů: Další informace o aktualizace (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) poslední částí scénáře aktualizace sady záznamů a s vysvětlením vliv transakcí na aktualizace, jak uzavírání sady záznamů nebo posouvání ovlivňuje Probíhá aktualizace a způsob aktualizace interakce s aktualizacemi jiných uživatelů.
 
 ##  <a name="_core_your_role_in_recordset_updating"></a> Vaše Role při aktualizaci sady záznamů
 
@@ -73,4 +73,4 @@ Při volání [AddNew](../../mfc/reference/crecordset-class.md#addnew) nebo [upr
 ## <a name="see-also"></a>Viz také:
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset: Jak funkce operací AddNew, Edit a odstranit pracovní (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)
+[Sada záznamů: Jak fungují operace AddNew, Edit a Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)

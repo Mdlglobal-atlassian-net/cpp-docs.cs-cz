@@ -1,5 +1,5 @@
 ---
-title: 'TN054: Přímé volání rozhraní DAO při používání tříd DAO knihovny MFC'
+title: 'TN054: Volání rozhraní DAO při používání tříd DAO knihovny MFC'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.mfc.dao
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - DAO (Data Access Objects), and MFC
 ms.assetid: f7de7d85-8d6c-4426-aa05-2e617c0da957
 ms.openlocfilehash: 938381f55b598911b69bb25bf7af576dfdfb2e4f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399652"
 ---
-# <a name="tn054-calling-dao-directly-while-using-mfc-dao-classes"></a>TN054: Přímé volání rozhraní DAO při používání tříd DAO knihovny MFC
+# <a name="tn054-calling-dao-directly-while-using-mfc-dao-classes"></a>TN054: Volání rozhraní DAO při používání tříd DAO knihovny MFC
 
 > [!NOTE]
 > Prostředí Visual C++ a Průvodce nepodporuje rozhraní DAO (i když jsou součástí třídy DAO a můžete stále použít). Microsoft doporučuje, abyste použili [šablony technologie OLE DB](../data/oledb/ole-db-templates.md) nebo [rozhraní ODBC a MFC](../data/odbc/odbc-and-mfc.md) pro nové projekty. DAO byste měli používat jenom v udržování existujících aplikací.

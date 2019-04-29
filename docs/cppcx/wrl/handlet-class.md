@@ -28,11 +28,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleT::~HandleT, destructor
 ms.assetid: 3822b32a-a426-4d94-a54d-919d4df60ee2
 ms.openlocfilehash: 6e5824da03fb85e52f413f5678ea6e0fd6c77ddd
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398404"
 ---
 # <a name="handlet-class"></a>HandleT – třída
 
@@ -54,20 +54,20 @@ Instance [handletraits –](handletraits-structure.md) stucture, který definuje
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-Name     | Popis
+Název     | Popis
 -------- | -----------------------------
 `Traits` | Synonymum pro `HandleTraits`.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Name                                | Popis
+Název                                | Popis
 ----------------------------------- | --------------------------------------------------
 [Handlet::handlet –](#handlet)        | Inicializuje novou instanci třídy `HandleT` třídy.
 [HandleT:: ~ handlet –](#tilde-handlet) | Uvolní instanci `HandleT` třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Name                         | Popis
+Název                         | Popis
 ---------------------------- | ----------------------------------------------------------------------
 [Handlet::Attach –](#attach)   | Přidruží Zadaný popisovač s aktuálním `HandleT` objektu.
 [Handlet::Close –](#close)     | Zavře aktuální `HandleT` objektu.
@@ -77,19 +77,19 @@ Name                         | Popis
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-Name                                     | Popis
+Název                                     | Popis
 ---------------------------------------- | ------------------------------------
 [HandleT::InternalClose](#internalclose) | Zavře aktuální `HandleT` objektu.
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-Name                                   | Popis
+Název                                   | Popis
 -------------------------------------- | ----------------------------------------------------------------------------------
 [HandleT::operator =](#operator-assign) | Přesune hodnotu zadaného `HandleT` objektů na aktuální `HandleT` objektu.
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-Name                        | Popis
+Název                        | Popis
 --------------------------- | ----------------------------------------------------------------
 [Handlet::handle_ –](#handle) | Obsahuje popisovač, která je reprezentována `HandleT` objektu.
 

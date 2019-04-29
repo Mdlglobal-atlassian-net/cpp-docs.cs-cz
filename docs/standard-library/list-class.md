@@ -99,11 +99,11 @@ helpviewer_keywords:
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
 ms.openlocfilehash: d990efb7d4c363b8d8e38f42f9edac7eea0a3882
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413213"
 ---
 # <a name="list-class"></a>list – třída
 
@@ -150,8 +150,8 @@ Zahrnout hlavičku standardní knihovny C++ standard \<seznamu > k definování 
 |[const_reference](#const_reference)|Typ, který poskytuje odkaz na **const** prvek uložený v seznamu pro čtení a provádění **const** operace.|
 |[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může přečíst jakýkoli **const** prvek v seznamu.|
 |[difference_type](#difference_type)|Typ, který obsahuje rozdíl mezi dvěma iterátory, které odkazují na prvky v rámci stejného seznamu.|
-|[iterátor](#iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat libovolný prvek v seznamu.|
-|[Ukazatel](#pointer)|Typ, který poskytuje ukazatel na prvek v seznamu.|
+|[iterator](#iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat libovolný prvek v seznamu.|
+|[pointer](#pointer)|Typ, který poskytuje ukazatel na prvek v seznamu.|
 |[Referenční dokumentace](#reference)|Typ, který poskytuje odkaz na **const** prvek uložený v seznamu pro čtení a provádění **const** operace.|
 |[reverse_iterator](#reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat prvek v obráceném seznamu.|
 |[size_type](#size_type)|Typ, který vrátí počet prvků v seznamu.|
@@ -161,17 +161,17 @@ Zahrnout hlavičku standardní knihovny C++ standard \<seznamu > k definování 
 
 |Členská funkce|Popis|
 |-|-|
-|[přiřazení](#assign)|Odstraní prvky ze seznamu a zkopíruje novou sadu prvků do cílového seznamu.|
+|[assign](#assign)|Odstraní prvky ze seznamu a zkopíruje novou sadu prvků do cílového seznamu.|
 |[Zpět](#back)|Vrátí odkaz na poslední prvek seznamu.|
 |[začít](#begin)|Vrátí iterátor adresující první prvek v seznamu.|
 |[cbegin](#cbegin)|Vrátí konstantní iterátor adresující první prvek v seznamu.|
 |[cend](#cend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v seznamu.|
-|[Vymazat](#clear)|Vymaže všechny prvky seznamu.|
+|[clear](#clear)|Vymaže všechny prvky seznamu.|
 |[crbegin](#crbegin)|Vrátí konstantní iterátor adresující první prvek v obráceném seznamu.|
-|[crend –](#crend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v obráceném seznamu.|
-|[emplace –](#emplace)|Vloží vytvořený prvek na místo do seznamu na zadané pozici.|
+|[crend](#crend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v obráceném seznamu.|
+|[emplace](#emplace)|Vloží vytvořený prvek na místo do seznamu na zadané pozici.|
 |[emplace_back](#emplace_back)|Přidá prvek vytvořený v místě na konec seznamu.|
-|[emplace_front –](#emplace_front)|Přidá prvek vytvořený v místě na začátek seznamu.|
+|[emplace_front](#emplace_front)|Přidá prvek vytvořený v místě na začátek seznamu.|
 |[prázdný](#empty)|Testuje, zda je seznam prázdný.|
 |[ukončení](#end)|Vrátí iterátor adresující umístění následující po posledním prvku v seznamu.|
 |[vymazání](#erase)|Odebere prvek nebo rozsah prvků v seznamu od zadané pozice.|
@@ -180,20 +180,20 @@ Zahrnout hlavičku standardní knihovny C++ standard \<seznamu > k definování 
 |[Vložit](#insert)|Vloží prvek nebo prvky, nebo rozsah prvků do seznamu na zadané pozici.|
 |[max_size](#max_size)|Vrátí maximální délku seznamu.|
 |[sloučení](#merge)|Odebere prvky ze seznamu argumentů, vloží do cílového seznamu a řadí nové, kombinované sadu elementů ve vzestupném pořadí nebo v jiných určeném pořadí.|
-|[pop_back –](#pop_back)|Odstraní prvek na konec seznamu.|
+|[pop_back](#pop_back)|Odstraní prvek na konec seznamu.|
 |[pop_front](#pop_front)|Odstraní prvek na začátku seznamu.|
 |[push_back](#push_back)|Přidá prvek na konec seznamu.|
 |[push_front](#push_front)|Přidá prvek na začátku seznamu.|
-|[rbegin –](#rbegin)|Vrátí iterátor adresující první prvek v obráceném seznamu.|
+|[rbegin](#rbegin)|Vrátí iterátor adresující první prvek v obráceném seznamu.|
 |[remove](#remove)|Odstraní prvky v seznamu, které odpovídají zadané hodnotě.|
 |[remove_if](#remove_if)|Odstraní prvky ze seznamu, pro kterou zadaný predikát uspokojen.|
 |[rend –](#rend)|Vrátí iterátor adresující umístění následující po posledním prvku v obráceném seznamu.|
-|[Změna velikosti](#resize)|Určuje novou velikost seznamu.|
+|[resize](#resize)|Určuje novou velikost seznamu.|
 |[reverzní](#reverse)|Obrátí pořadí, ve kterém se prvky objevují v seznamu.|
 |[Velikost](#size)|Vrátí počet prvků v seznamu.|
 |[Řazení](#sort)|Uspořádá prvky seznamu vzestupně nebo s ohledem na některé jiné pořadí vztah.|
 |[splice](#splice)|Odstraní prvky ze seznamu argumentů a vloží je do cílového seznamu.|
-|[Prohození](#swap)|Vymění prvky dvou seznamů.|
+|[swap](#swap)|Vymění prvky dvou seznamů.|
 |[unique](#unique)|Odebere sousedících duplicitních prvků nebo sousedící prvky, které splňují některé binárním predikátem ze seznamu.|
 
 ### <a name="operators"></a>Operátory
@@ -986,7 +986,7 @@ Pozice prvku, který chcete odebrat ze seznamu.
 *první*<br/>
 Pozice prvního prvku odebrán ze seznamu.
 
-*poslední*<br/>
+*last*<br/>
 Pozice bezprostředně za posledním prvkem odebrán ze seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1440,7 +1440,7 @@ void merge(list<Type, Allocator>& right, Traits comp);
 *doprava*<br/>
 Seznam argumentů ke sloučení se do cílového seznamu.
 
-*Kompozice*<br/>
+*comp*<br/>
 Operátor porovnání slouží k seřazení prvků do cílového seznamu.
 
 ### <a name="remarks"></a>Poznámky
@@ -2285,7 +2285,7 @@ void sort(Traits comp);
 
 ### <a name="parameters"></a>Parametry
 
-*Kompozice*<br/>
+*comp*<br/>
 Operátor porovnání slouží k seřazení po sobě jdoucí prvky.
 
 ### <a name="remarks"></a>Poznámky
@@ -2633,6 +2633,6 @@ int main( )
 
 ## <a name="see-also"></a>Viz také:
 
-[\<Seznam >](../standard-library/list.md)<br/>
+[\<list>](../standard-library/list.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

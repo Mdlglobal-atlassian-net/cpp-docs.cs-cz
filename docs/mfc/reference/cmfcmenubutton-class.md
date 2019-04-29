@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_nMenuResult
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
 ms.openlocfilehash: cbdf4005ee1a0249e7ed2b5f1d50621fb951f64f
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58777360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388420"
 ---
 # <a name="cmfcmenubutton-class"></a>Cmfcmenubutton – třída
 
@@ -43,20 +43,20 @@ class CMFCMenuButton : public CMFCButton
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCMenuButton::CMFCMenuButton](#cmfcmenubutton)|Vytvoří `CMFCMenuButton` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCMenuButton::PreTranslateMessage](#pretranslatemessage)|Volá se rozhraním před odesláním přeložit zprávy okna. (Přepíše `CMFCButton::PreTranslateMessage`.)|
 |[CMFCMenuButton::SizeToContent](#sizetocontent)|Změní velikost tlačítka podle velikosti jeho textu a obrázků.|
 
 ### <a name="data-members"></a>Datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|Určuje, zda chcete zobrazit výchozí rozbalovací nabídky systému nebo použít [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).|
 |[CMFCMenuButton::m_bRightArrow](#m_brightarrow)|Určuje, zda v rozbalovací nabídce se zobrazí pod nebo napravo od panelu.|

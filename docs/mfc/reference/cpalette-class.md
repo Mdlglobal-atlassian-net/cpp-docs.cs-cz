@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
 ms.openlocfilehash: f0105a8ee33a57f7431a9c6a97b4b132f291f42a
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58770793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373177"
 ---
 # <a name="cpalette-class"></a>CPalette Class
 
@@ -47,13 +47,13 @@ class CPalette : public CGdiObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPalette::CPalette](#cpalette)|Vytvoří `CPalette` objekt se žádné připojené palety Windows. Je třeba inicializovat `CPalette` objekt s jedním z inicializace členských funkcí předtím, než je možné.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPalette::AnimatePalette](#animatepalette)|Nahradí položky v logickou paletu identifikován `CPalette` objektu. Aplikace nemá klientské oblasti, aktualizovat, protože Windows mapuje nové položky do systémové palety okamžitě.|
 |[CPalette::CreateHalftonePalette](#createhalftonepalette)|Vytvoří barevnou paletu polotónování pro kontext zařízení a připojí ho k `CPalette` objektu.|
@@ -67,7 +67,7 @@ class CPalette : public CGdiObject
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPalette::operator HPALETTE](#operator_hpalette)|Vrátí HPALETTE připojené k `CPalette`.|
 

@@ -201,11 +201,11 @@ helpviewer_keywords:
 - std::partition_copy [C++]
 - std::swap [C++]
 ms.openlocfilehash: 260b2ee780956550678fcb01b3a018a60fb58deb
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54334674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411171"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algoritmus&gt; funkce
 
@@ -662,7 +662,7 @@ Zdrojová oblast musí být platná a v cíli musí být dostatek místa na pro 
 
 `copy_backward` Algoritmus vyžaduje přísnější požadavky než algoritmus kopírování. Vstupní i výstupní iterátory musí být obousměrné.
 
-`copy_backward` a [move_backward](../standard-library/algorithm-functions.md#move_backward) algoritmy jsou jediné algoritmy standardní knihovny C++ vyznačením výstupní oblasti s iterátorem ukazujícím na konec cílové oblasti.
+`copy_backward` a [move_backward](../standard-library/algorithm-functions.md#move_backward) algoritmy jsou pouze C++ algoritmů standardní knihovny vyznačením výstupní oblasti s iterátorem ukazujícím na konec cílové oblasti.
 
 Protože algoritmus kopíruje zdrojové prvky v pořadí od posledního prvku, cílová oblast se může překrývat se zdrojové oblasti *první* pozice zdrojové oblasti není obsažena v cílovém umístění rozsah. `copy_backward` můžete použít k posunu prvků doprava, ale nikoli vlevo, pokud neexistuje žádné překrytí mezi zdrojovou a cílovou oblastí. Chcete-li posunout vlevo libovolný počet pozic, použijte [kopírování](../standard-library/algorithm-functions.md#copy) algoritmus.
 
@@ -2793,7 +2793,7 @@ Druhý dopředných iterátorů, jehož hodnota je mají vyměnit.
 
 ### <a name="remarks"></a>Poznámky
 
-`swap` má použít v preference pro můžu **ter_swap**, která byla součástí standardu jazyka C++ z důvodu zpětné kompatibility. Pokud `Fit1` a `Fit2` dopředných iterátorů, jsou pak `iter_swap` ( `Fit1`, `Fit2` ), je ekvivalentní `swap` ( \* `Fit1`, \* `Fit2` ).
+`swap` má použít v preference pro můžu **ter_swap**, která byla součástí C++ standardní z důvodu zpětné kompatibility. Pokud `Fit1` a `Fit2` dopředných iterátorů, jsou pak `iter_swap` ( `Fit1`, `Fit2` ), je ekvivalentní `swap` ( \* `Fit1`, \* `Fit2` ).
 
 Typy hodnot iterátorů předání vstupních musí mít stejnou hodnotu.
 
@@ -3252,7 +3252,7 @@ Haldy má dvě vlastnosti:
 
 - Elementy mohou přidat nebo odebrat logaritmické včas.
 
-Haldy jsou ideální způsob, jak implementovat prioritní fronty a používají se v implementaci adaptér kontejneru standardní knihovny C++ [priority_queue – třída](../standard-library/priority-queue-class.md).
+Haldy jsou ideální způsob, jak implementovat prioritní fronty a používají se při provádění C++ adaptér kontejneru standardní knihovny [priority_queue – třída](../standard-library/priority-queue-class.md).
 
 Složitost je lineární, které vyžadují 3 \* (* naposledy - nejprve *) porovnání.
 
@@ -5207,7 +5207,7 @@ Haldy má dvě vlastnosti:
 
 - Elementy mohou přidat nebo odebrat logaritmické včas.
 
-Haldy jsou ideální způsob, jak implementovat prioritní fronty a používají se v implementaci adaptér kontejneru standardní knihovny C++ [priority_queue – třída](../standard-library/priority-queue-class.md).
+Haldy jsou ideální způsob, jak implementovat prioritní fronty a používají se při provádění C++ adaptér kontejneru standardní knihovny [priority_queue – třída](../standard-library/priority-queue-class.md).
 
 Odkazovaný rozsah musí být platný; všechny odkazy musí být možné nepřímo odkazovat a v rámci pořadí se poslední pozice dosažitelná z první pomocí přírůstků.
 
@@ -5484,7 +5484,7 @@ Haldy má dvě vlastnosti:
 
 - Elementy mohou přidat nebo odebrat logaritmické včas.
 
-Haldy jsou ideální způsob, jak implementovat prioritní fronty a používají se v implementaci adaptér kontejneru standardní knihovny C++ [priority_queue – třída](../standard-library/priority-queue-class.md).
+Haldy jsou ideální způsob, jak implementovat prioritní fronty a používají se při provádění C++ adaptér kontejneru standardní knihovny [priority_queue – třída](../standard-library/priority-queue-class.md).
 
 Odkazovaný rozsah musí být platný; všechny odkazy musí být možné nepřímo odkazovat a v rámci pořadí se poslední pozice dosažitelná z první pomocí přírůstků.
 
@@ -7771,7 +7771,7 @@ Po aplikaci, pokud tento algoritmus, rozsahu byla použita k už není haldu.
 
 Toto není stabilní řazení, protože relativní pořadí ekvivalentních prvků nutně nezachová.
 
-Haldy jsou ideální způsob, jak implementovat prioritní fronty a používají se v implementaci adaptér kontejneru standardní knihovny C++ [priority_queue – třída](../standard-library/priority-queue-class.md).
+Haldy jsou ideální způsob, jak implementovat prioritní fronty a používají se při provádění C++ adaptér kontejneru standardní knihovny [priority_queue – třída](../standard-library/priority-queue-class.md).
 
 Odkazovaný rozsah musí být platný; všechny odkazy musí být možné nepřímo odkazovat a v rámci pořadí se poslední pozice dosažitelná z první pomocí přírůstků.
 

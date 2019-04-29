@@ -8,11 +8,11 @@ helpviewer_keywords:
 - AsyncResultType enumeration
 ms.assetid: 4195d234-3f3f-4363-9118-6ad2a7551cf2
 ms.openlocfilehash: d3f99fa85a777ae8361ed6f7cb82fe97ddd8d667
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59028049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398794"
 ---
 # <a name="asyncresulttype-enumeration"></a>AsyncResultType – výčet
 
@@ -28,7 +28,7 @@ enum AsyncResultType;
 
 ### <a name="values"></a>Hodnoty
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`MultipleResults`|Sada více výsledků, které jsou uvedeny postupně mezi `Start` stavu a před `Close()` je volána.|
 |`SingleResult`|Jeden výsledek, který se zobrazí po `Complete` dojde k události.|

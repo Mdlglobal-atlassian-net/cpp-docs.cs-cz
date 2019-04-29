@@ -133,11 +133,11 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
 ms.openlocfilehash: a9d7c4ea941884435c9ecfac54a1d42649c6dbd5
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391202"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -153,13 +153,13 @@ class CDockablePane : public CPane
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDockablePane::CDockablePane](#cdockablepane)|Vytvoří a inicializuje `CDockablePane` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDockablePane::AttachToTabWnd](#attachtotabwnd)|Připojí do podokna Další podokno. Tím se vytvoří podokna s kartami.|
 |[CDockablePane::CalcFixedLayout](#calcfixedlayout)|Vrátí velikost podokna obdélník.|
@@ -229,7 +229,7 @@ class CDockablePane : public CPane
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDockablePane::CheckAutoHideCondition](#checkautohidecondition)|Určuje, zda je ukotvené podokno skrytý (v režimu automatického skrytí).|
 |[CDockablePane::CheckStopSlideCondition](#checkstopslidecondition)|Určuje, kdy ukotvené podokno automatického schovávání by se měla zastavit klouzavé.|
@@ -239,7 +239,7 @@ class CDockablePane : public CPane
 
 ### <a name="data-members"></a>Datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDockablePane::m_bDisableAnimation](#m_bdisableanimation)|Určuje, zda je animace automatického skrytí podokna ukotvitelné zakázaný.|
 |[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)|Určuje chování v podokně, když je podokno v režimu automatického skrytí.|
@@ -783,7 +783,7 @@ Hodnota TRUE, pokud kontejner byl úspěšně ukotveno podokna. v opačném př�
 
 *dwAlignment* může být kterýkoli z následujících hodnot:
 
-|Value|Popis|
+|Hodnota|Popis|
 |-----------|-----------------|
 |CBRS_ALIGN_TOP|Kontejner je ukotven horní části podokna.|
 |CBRS_ALIGN_BOTTOM|Kontejner je právě ukotven k dolní části podokna.|

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - formats [C++], exception codes
 ms.assetid: be1376c3-c46a-4f52-ad1d-c2362840746a
 ms.openlocfilehash: 49ee800bafff017c29b73c5f6fd64318009a140a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403461"
 ---
 # <a name="raising-software-exceptions"></a>Vyvolávání výjimek softwaru
 
@@ -38,7 +38,7 @@ Použití strukturovaného zpracování výjimek s chybami:
 
 |Bity|Doporučené binární nastavení|Popis|
 |----------|--------------------------------|-----------------|
-|31-30|11|Tyto dva bity popisují základní stav kódu: 11 = chyba, 00 = úspěch, 01 = informace, 10 = upozornění.|
+|31-30|11|Tyto dva bity popisují základní stav kódu:  11 = chyba, 00 = úspěch, 01 = informace, 10 = upozornění.|
 |29|1|Klientský bit. Pro kódy definované uživatelem jej nastavte na hodnotu 1.|
 |28|0|Vyhrazený bit. (Ponechejte nastavený na hodnotu 0.)|
 

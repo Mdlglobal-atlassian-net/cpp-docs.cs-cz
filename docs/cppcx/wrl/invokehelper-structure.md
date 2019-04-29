@@ -14,11 +14,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::InvokeHelper, constructor
 ms.assetid: 555ad2bc-4dd6-4e65-a2e2-1242c395f0e5
 ms.openlocfilehash: 3fcba210d4018d22487d234b437acfee3634cec6
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386132"
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper – struktura
 
@@ -120,25 +120,25 @@ Poskytuje implementaci `Invoke()` metoda na základě zadané číslo a typ argu
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-Name     | Popis
+Název     | Popis
 -------- | -----------------------------------------------------------------------------
 `Traits` | Synonymum pro třídu, která definuje typ každého argumentu obslužné rutiny události.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Name                                        | Popis
+Název                                        | Popis
 ------------------------------------------- | -------------------------------------------------------
 [Invokehelper::invokehelper –](#invokehelper) | Inicializuje novou instanci třídy `InvokeHelper` třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Name                            | Popis
+Název                            | Popis
 ------------------------------- | -----------------------------------------------------------------------------------
 [Invokehelper::Invoke –](#invoke) | Volá obslužnou rutinu události, jehož předpis obsahuje zadaný počet argumentů.
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-Name                                 | Popis
+Název                                 | Popis
 ------------------------------------ | ----------------------------------------------------------
 [Invokehelper::callback_ –](#callback) | Reprezentuje obslužnou rutinu události pro volání při výskytu události.
 

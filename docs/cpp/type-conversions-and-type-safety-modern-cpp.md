@@ -4,11 +4,11 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
 ms.openlocfilehash: 79285e4870b73ff01ed3b230a0162f87c0400aa8
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404686"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Převody a bezpečnost typů (moderní verze jazyka C++)
 
@@ -20,7 +20,7 @@ Když kompilátor zjistí nebezpečný převod, vyvolá chybu nebo upozornění.
 
 ## <a name="implicit-type-conversions"></a>Implicitní převody typu
 
-Pokud výraz obsahuje operandy různých předdefinovaných typů a jsou k dispozici žádné explicitní přetypování, kterou kompilátor používá integrované *standardní převody* pro převod jednoho z operandů tak, aby tyto typy odpovídaly. Kompilátor se pokusí provést převod v přesně určeném pořadí, dokud některý krok neuspěje. Pokud je vybraným převodem povýšení, kompilátor upozornění nevyvolá. Je-li převod zužující, kompilátor vyvolá upozornění na možnou ztrátu dat. To, zda skutečně dojde ke ztrátě dat, závisí na skutečných zúčastněných hodnotách, avšak doporučujeme považovat toto upozornění za chybu. Pokud se jedná o uživatelský typ, kompilátor se pokusí provést převody zadané v definici této třídy. Pokud kompilátor nenajde přijatelný převod, vyvolá chybu a program nezkompiluje. Další informace o pravidlech, kterými se řídí standardní převody, naleznete v tématu [standardní převody](../cpp/standard-conversions.md). Další informace o uživatelem definovaných převodů, naleznete v tématu [uživatelem definovaných převodů (C + +/ CLI)](../dotnet/user-defined-conversions-cpp-cli.md).
+Pokud výraz obsahuje operandy různých předdefinovaných typů a jsou k dispozici žádné explicitní přetypování, kterou kompilátor používá integrované *standardní převody* pro převod jednoho z operandů tak, aby tyto typy odpovídaly. Kompilátor se pokusí provést převod v přesně určeném pořadí, dokud některý krok neuspěje. Pokud je vybraným převodem povýšení, kompilátor upozornění nevyvolá. Je-li převod zužující, kompilátor vyvolá upozornění na možnou ztrátu dat. To, zda skutečně dojde ke ztrátě dat, závisí na skutečných zúčastněných hodnotách, avšak doporučujeme považovat toto upozornění za chybu. Pokud se jedná o uživatelský typ, kompilátor se pokusí provést převody zadané v definici této třídy. Pokud kompilátor nenajde přijatelný převod, vyvolá chybu a program nezkompiluje. Další informace o pravidlech, kterými se řídí standardní převody, naleznete v tématu [standardní převody](../cpp/standard-conversions.md). Další informace o uživatelem definovaných převodů, naleznete v tématu [uživatelem definovaných převodů (C++vyhodnocovací)](../dotnet/user-defined-conversions-cpp-cli.md).
 
 ### <a name="widening-conversions-promotion"></a>Rozšiřující převody (povýšení)
 

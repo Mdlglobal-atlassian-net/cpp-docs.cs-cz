@@ -1,5 +1,5 @@
 ---
-title: '&lt;codecvt –&gt;'
+title: '&lt;codecvt&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - codecvt
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
 ms.openlocfilehash: 56cd4263d3dcddd23246a05466275b8b7d370b95
-ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405206"
 ---
-# <a name="ltcodecvtgt"></a>&lt;codecvt –&gt;
+# <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
 Definuje několik tříd šablon, které popisují objekty na základě šablony třídy [codecvt](../standard-library/codecvt-class.md). Tyto objekty může sloužit jako [omezující vlastnosti národního prostředí](../standard-library/locale-class.md#facet_class) , které řídí převodů mezi sekvencí hodnot typu `Elem` a sekvencí hodnot typu **char**.
 

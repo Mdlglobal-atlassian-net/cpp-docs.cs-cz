@@ -3,15 +3,15 @@ title: Používání parametrů Lambda, objektů funkcí a omezených funkcí
 ms.date: 11/04/2016
 ms.assetid: 25346cc9-869d-4ada-aad3-e2228cad3d6c
 ms.openlocfilehash: 0c72ae6f600fe73405481e34ab05b60f163e44d2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405323"
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>Používání parametrů Lambda, objektů funkcí a omezených funkcí
 
-Kód jazyka C++ AMP, který chcete provést v akcelerátoru je zadán jako argument ve volání [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) metody. Jako tento argument můžete zadat výraz lambda nebo objekt funkce (funktoru). Kromě toho lambda výraz nebo objekt funkce může volat funkci s omezením jazyka C++ AMP. Toto téma používá algoritmus sčítání pole k předvedení výrazy lambda, objektů funkcí a omezených funkcí. Následující příklad ukazuje algoritmus bez kódu jazyka C++ AMP. Jsou vytvořeny dva 1rozměrné pole o stejné délce. Odpovídající celočíselné prvky jsou přidány a uloženy v třetí 1rozměrné pole. C++ AMP není používána.
+C++ Kód AMP, který chcete spustit v akcelerátoru je zadán jako argument ve volání [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) metody. Jako tento argument můžete zadat výraz lambda nebo objekt funkce (funktoru). Kromě toho lambda výraz nebo objekt funkce může volat funkci s omezením jazyka C++ AMP. Toto téma používá algoritmus sčítání pole k předvedení výrazy lambda, objektů funkcí a omezených funkcí. Následující příklad ukazuje algoritmus bez kódu jazyka C++ AMP. Jsou vytvořeny dva 1rozměrné pole o stejné délce. Odpovídající celočíselné prvky jsou přidány a uloženy v třetí 1rozměrné pole. C++ AMP není používána.
 
 ```cpp
 void CpuMethod() {

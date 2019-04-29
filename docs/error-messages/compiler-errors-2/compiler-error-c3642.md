@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3642
 ms.assetid: 429790c2-9614-4d85-b31c-687c8d8f83ff
 ms.openlocfilehash: d524c49075c400caa345dd26ed681734ea0cfb94
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385613"
 ---
 # <a name="compiler-error-c3642"></a>Chyba kompilátoru C3642
 
@@ -21,7 +21,7 @@ Funkce, která je označena [__clrcall](../../cpp/clrcall.md) konvence volání 
 
 *Typ/args* je buď název funkce nebo typ `__clrcall` funkce, které se snažíte volat.  Typ se používá, když voláte prostřednictvím ukazatele funkce.
 
-Volání spravované funkce z nativního kontextu, můžete přidat funkci "zabezpečenou obálku", která bude volat `__clrcall` funkce. Nebo můžete použít mechanismus sběrného systému CLR; v tématu [postupy: zařazování funkce ukazatele pomocí PInvoke](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md) Další informace.
+Volání spravované funkce z nativního kontextu, můžete přidat funkci "zabezpečenou obálku", která bude volat `__clrcall` funkce. Nebo můžete použít mechanismus sběrného systému CLR; Zobrazit [jak: Zařazování PInvoke pomocí funkce ukazatele](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md) Další informace.
 
 Následující ukázka generuje C3642:
 

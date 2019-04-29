@@ -18,11 +18,11 @@ helpviewer_keywords:
 - Microsoft::WRL::ClassFactory::Release method
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
 ms.openlocfilehash: ccc1c43e8c68053a773883c25704cdea086bd0b1
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398729"
 ---
 # <a name="classfactory-class"></a>ClassFactory – třída
 
@@ -73,13 +73,13 @@ Následující programovací model popisuje způsob použití [implementuje](imp
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Name                                        | Popis
+Název                                        | Popis
 ------------------------------------------- | -----------
 [ClassFactory::ClassFactory](#classfactory) |
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Name                                            | Popis
+Název                                            | Popis
 ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------
 [ClassFactory::AddRef](#addref)                 | Zvýší počet odkazů pro aktuální `ClassFactory` objektu.
 [ClassFactory::LockServer](#lockserver)         | Zvýší nebo sníží počet podkladových objektů, které jsou sledovány aktuální `ClassFactory` objektu.

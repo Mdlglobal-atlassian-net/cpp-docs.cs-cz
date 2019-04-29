@@ -4,11 +4,11 @@ ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
 ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
-ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58476900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392278"
 ---
 # <a name="c-type-system-modern-c"></a>C++ – systém typů (moderní verze jazyka C++)
 
@@ -94,7 +94,7 @@ A **const** se liší od své nekonstantní verze; například **const int** je 
 
 ## <a name="string-types"></a>Typy řetězců
 
-Přesněji řečeno jazyk C++ nemá žádný typ integrované řetězec; **char** a **wchar_t** ukládají jednotlivé znaky – třeba deklarovat více těchto typů aproximace řetězce, přidávání ukončující hodnotu null (například ASCII `'\0'`) k prvku pole za za posledním platným znakem (také nazývané *řetězce ve stylu C*). Psaní řetězců ve stylu C vyžadovalo zapsat mnohem více kódu nebo využít funkce externí knihovny pro tvorbu řetězců. Ale v moderní C++ máme typy standardní knihovny `std::string` (pro 8bitové **char**-řetězce znaků typu) nebo `std::wstring` (pro 16bitové **wchar_t**-řetězce znaků typu). Tyto kontejnery standardní knihovny C++ lze považovat za nativní typy řetězce vzhledem k tomu, že jsou součástí standardní knihovny, které jsou součástí žádné kompatibilní prostředí pro sestavení C++. Jednoduše použít `#include <string>` – direktiva tyto typy dostupné v programu. (Pokud používáte knihovnu MFC nebo ATL, je k dispozici také třída CString, ta ale není součástí standardu C++.) Použití polí znaků zakončených hodnotou null (výše zmíněné řetězce ve stylu C) se v moderním jazyce C++ důrazně nedoporučuje.
+Přesněji řečeno C++ jazyk nemá žádný typ integrované řetězec; **char** a **wchar_t** ukládají jednotlivé znaky – třeba deklarovat více těchto typů aproximace řetězce, přidávání ukončující hodnotu null (například ASCII `'\0'`) k prvku pole jedno místo za posledním platným znakem (také nazývané *řetězce ve stylu C*). Psaní řetězců ve stylu C vyžadovalo zapsat mnohem více kódu nebo využít funkce externí knihovny pro tvorbu řetězců. Ale v moderní C++, máme typy standardní knihovny `std::string` (pro 8bitové **char**-řetězce znaků typu) nebo `std::wstring` (pro 16bitové **wchar_t**-řetězce znaků typu). Tyto kontejnery standardní knihovny C++ lze považovat za nativní typy řetězce vzhledem k tomu, že jsou součástí standardní knihovny, které jsou součástí žádné kompatibilní prostředí pro sestavení C++. Jednoduše použít `#include <string>` – direktiva tyto typy dostupné v programu. (Pokud používáte knihovnu MFC nebo ATL, je k dispozici také třída CString, ta ale není součástí standardu C++.) Použití polí znaků zakončených hodnotou null (výše zmíněné řetězce ve stylu C) se v moderním jazyce C++ důrazně nedoporučuje.
 
 ## <a name="user-defined-types"></a>Uživateli definované typy
 

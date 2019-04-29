@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
 ms.openlocfilehash: 5d5dae5bc766c0cfc31b4fb76f7fe104be0dbd74
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59041264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395583"
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>Recordset: Vytváření a uzavírání sad záznamů (ODBC)
 
@@ -110,5 +110,5 @@ Po dokončení sady záznamů, musíte vyřadit a uvolnění paměti.
 ## <a name="see-also"></a>Viz také:
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset: Posouvání (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
-[Recordset: Přidání, aktualizace nebo odstranění záznamů (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+[Sada záznamů: Posouvání (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
+[Sada záznamů: Přidávání, aktualizace a odstranění záznamů (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

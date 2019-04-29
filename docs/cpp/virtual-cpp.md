@@ -11,11 +11,11 @@ helpviewer_keywords:
 - virtual keyword [C++]
 ms.assetid: c2eb987d-6cf3-43b6-aa0c-29a6f561b1ae
 ms.openlocfilehash: f68bd2e500ebe16c43ef6c3d7a5aede26421b27d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393906"
 ---
 # <a name="virtual-c"></a>virtual (C++)
 
@@ -33,13 +33,13 @@ virtual [access-specifier] base-class-name
 *specifikátory typu*<br/>
 Určuje návratový typ virtuální členské funkce.
 
-*deklarátor členské funkce*<br/>
+*member-function-declarator*<br/>
 Deklaruje členskou funkci.
 
-*specifikátor přístupu*<br/>
+*access-specifier*<br/>
 Definuje úroveň přístupu na základní třídu **veřejné**, **chráněné** nebo **privátní**. Před nebo po ní se může objevit **virtuální** – klíčové slovo.
 
-*Název třídy Base*<br/>
+*base-class-name*<br/>
 Identifikuje dříve deklarovaný typ třídy.
 
 ## <a name="remarks"></a>Poznámky

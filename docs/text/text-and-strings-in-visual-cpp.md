@@ -25,11 +25,11 @@ helpviewer_keywords:
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
 ms.openlocfilehash: c6083fcf9db8236df15d1cb5e7de4cc15fe5916e
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411796"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Text a řetězce v jazyce Visual C++
 
@@ -49,7 +49,7 @@ Tento článek popisuje znakové sady MBCS, o alternativu k kódování Unicode 
 [Mapování obecného textu v souboru tchar.h](../text/generic-text-mappings-in-tchar-h.md)<br/>
 Mapování obecného textu specifické pro společnost Microsoft poskytuje pro mnoho typů dat, rutiny a dalších objektů.
 
-[Postupy: Převést mezi různými typy řetězců](../text/how-to-convert-between-various-string-types.md)<br/>
+[Postupy: Převody různých typů řetězců](../text/how-to-convert-between-various-string-types.md)<br/>
 Ukazuje, jak převést různé řetězcové typy jazyka Visual C++ do jiných řetězců.
 
 ## <a name="related-sections"></a>Související oddíly

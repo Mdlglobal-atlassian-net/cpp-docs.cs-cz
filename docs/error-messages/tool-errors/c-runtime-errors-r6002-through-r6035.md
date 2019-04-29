@@ -1,56 +1,46 @@
 ---
-title: Chyby modulu C runtime R6002 až R6035
-ms.date: 11/17/2017
+title: Chyby modulu runtime C
+ms.date: 04/16/2019
 f1_keywords:
 - c.errors
+- R6000
+- R6003
+- R6010
+- R6022
+- R6023
+- R6034
 ms.assetid: 78019050-9a30-4b61-8250-a5702e0e2393
-ms.openlocfilehash: b1a4aa5114965451791f44d88eb9e5ca61ff9c57
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: 8fc1c5365d4c09908235336575c80b9df6892f90
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58766882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400029"
 ---
-# <a name="c-runtime-errors-r6002-through-r6035"></a>Chyby modulu C runtime R6002 až R6035
+# <a name="c-runtime-errors-rxxxx"></a>Chyby modulu runtime C (Rxxxx)
 
-Tato část se odkaz na chyby, které mohou být generovány pomocí knihovny C Runtime (CRT), když je načíst nebo spuštěné aplikace. I v případě, že zprávy se odkazuje na modul runtime Microsoft Visual C++, tyto chyby označuje chybu v kódu vaší aplikace nebo podmínku, která nemůže zpracovat knihovny runtime, jako je nedostatek paměti. Koncovým uživatelům vaší aplikace může zobrazit tyto chyby Pokud není kód vaší aplikaci, aby zabránila podmínky, které způsobit nebo psaní kódu a zaznamenat tyto chyby uživatelům k dispozici přátelskou zprávou.
+Knihovna Runtime jazyka C (CRT) může hlásit chybu modulu runtime, když je aplikace načíst nebo spuštěné. I v případě, že každá zpráva se odkazuje na Microsoft Visual C++ knihovny prostředí runtime, neznamená to je chyba v knihovně. Tyto chyby označuje chybu v kódu vaší aplikace nebo podmínku, která nemůže zpracovat knihovny runtime, jako je nedostatek paměti. Koncoví uživatelé vaší aplikace může zobrazit tyto chyby, pokud vaše zápisu své aplikace, zabránit nebo zachytit chyby a prezentovat popisná chybová zpráva pro vaše uživatele místo toho.
 
-Můžete zjistit další pomoc pro chyby a upozornění na veřejných fórech od Microsoftu. Můžete vyhledat chyby nebo číslo upozornění na [komunity vývojářů](https://developercommunity.visualstudio.com) lokality. [Visual C++ General](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vcgeneral) je fórum pro otázky týkající se jazyka Visual C++, které nejsou popsány na jiných fórech. Můžete také vyhledat chyby a upozornění a Ptejte se na [Stack Overflow](http://stackoverflow.com/) najít řešení.
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-Odkazy na další pomoc a zdroje poskytované komunitou, naleznete v části [Nápověda pro Visual C++ a komunity](../../overview/visual-cpp-help-and-community.md).
+## <a name="c-runtime-errors"></a>Chyby modulu runtime C
 
-## <a name="c-runtime-errors"></a>Chyby modulu C Runtime
-
-[Chyba modulu C runtime R6002](../../error-messages/tool-errors/c-runtime-error-r6002.md)
-
-[Chyba modulu C runtime R6008](../../error-messages/tool-errors/c-runtime-error-r6008.md)
-
-[Chyba modulu C runtime R6009](../../error-messages/tool-errors/c-runtime-error-r6009.md)
-
-[Chyba modulu C runtime R6016](../../error-messages/tool-errors/c-runtime-error-r6016.md)
-
-[Chyba modulu C runtime R6017](../../error-messages/tool-errors/c-runtime-error-r6017.md)
-
-[Chyba modulu C runtime R6018](../../error-messages/tool-errors/c-runtime-error-r6018.md)
-
-[Chyba modulu C runtime R6019](../../error-messages/tool-errors/c-runtime-error-r6019.md)
-
-[Chyba modulu C runtime R6024](../../error-messages/tool-errors/c-runtime-error-r6024.md)
-
-[Chyba modulu C runtime R6025](../../error-messages/tool-errors/c-runtime-error-r6025.md)
-
-[Chyba modulu C runtime R6028](../../error-messages/tool-errors/c-runtime-error-r6028.md)
-
-[Chyba modulu C runtime R6030](../../error-messages/tool-errors/c-runtime-error-r6030.md)
-
-[Chyba modulu C runtime R6031](../../error-messages/tool-errors/c-runtime-error-r6031.md)
-
-[Chyba modulu C runtime R6032](../../error-messages/tool-errors/c-runtime-error-r6032.md)
-
-[Chyba modulu C runtime R6033](../../error-messages/tool-errors/c-runtime-error-r6033.md)
-
+[C Runtime Error R6002](../../error-messages/tool-errors/c-runtime-error-r6002.md) \
+[Chyba modulu Runtime R6008 C](../../error-messages/tool-errors/c-runtime-error-r6008.md) \
+[Chyba modulu Runtime R6009 C](../../error-messages/tool-errors/c-runtime-error-r6009.md) \
+[C Runtime Error R6016](../../error-messages/tool-errors/c-runtime-error-r6016.md) \
+[C Runtime Error R6017](../../error-messages/tool-errors/c-runtime-error-r6017.md) \
+[C Runtime Error R6018](../../error-messages/tool-errors/c-runtime-error-r6018.md) \
+[C Runtime Error R6019](../../error-messages/tool-errors/c-runtime-error-r6019.md) \
+[C Runtime Error R6024](../../error-messages/tool-errors/c-runtime-error-r6024.md) \
+[C Runtime Error R6025](../../error-messages/tool-errors/c-runtime-error-r6025.md) \
+[Chyba modulu Runtime R6028 C](../../error-messages/tool-errors/c-runtime-error-r6028.md) \
+[Chyba modulu Runtime jazyka C za r6030 jazyka](../../error-messages/tool-errors/c-runtime-error-r6030.md) \
+[C Runtime Error R6031](../../error-messages/tool-errors/c-runtime-error-r6031.md) \
+[C Runtime Error R6032](../../error-messages/tool-errors/c-runtime-error-r6032.md) \
+[C Runtime Error R6033](../../error-messages/tool-errors/c-runtime-error-r6033.md) \
 [Chyba modulu C runtime R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md)
 
 ## <a name="see-also"></a>Viz také:
 
-[Chyby sestavení C/C++](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)
+[C /C++ nástroje chyby a upozornění kompilátoru a sestavení](../compiler-errors-1/c-cpp-build-errors.md)

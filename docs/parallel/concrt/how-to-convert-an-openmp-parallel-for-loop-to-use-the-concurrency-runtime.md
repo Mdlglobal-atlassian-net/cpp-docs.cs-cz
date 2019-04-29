@@ -8,11 +8,11 @@ helpviewer_keywords:
 - parallel loops, converting from OpenMP to the Concurrency Runtime
 ms.assetid: d8a7b656-f86c-456e-9c5d-a7d52f94646e
 ms.openlocfilehash: bc408465f34f0558e9f426ae35b83d4610898414
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413889"
 ---
 # <a name="how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime"></a>Postupy: Převedení OpenMP paralelní smyčky na využití modulu Concurrency Runtime
 
@@ -41,7 +41,7 @@ Další informace o `parallel_for` a jiné paralelní algoritmy, naleznete v té
 
 ## <a name="example"></a>Příklad
 
-Tento příklad upravuje předchozí tak, aby fungoval na [std::array](../../standard-library/array-class-stl.md) místo objektu na nativní pole. Protože verze OpenMP 2.0 nebo 2.5 povolit pro typy celočíselný index pouze v podepsané `parallel_for` konstrukce, iterátory nelze použít pro přístup k prvkům kontejneru standardní knihovny C++ paralelně. Poskytuje knihovna paralelních vzorů (PPL) [: concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmus, který provádí úkoly, paralelních, iterativní kontejneru jako je například těch, které poskytuje ve standardní knihovně jazyka C++. Používá stejnou logiku dělení, který `parallel_for` algoritmus používá. `parallel_for_each` Algoritmus vypadá podobně jako standardní knihovny C++ [std::for_each](../../standard-library/algorithm-functions.md#for_each) algoritmus, s výjimkou, že `parallel_for_each` algoritmus spustí úlohy současně.
+Tento příklad upravuje předchozí tak, aby fungoval na [std::array](../../standard-library/array-class-stl.md) místo objektu na nativní pole. Protože verze OpenMP 2.0 nebo 2.5 povolit pro typy celočíselný index pouze v podepsané `parallel_for` konstrukce, iterátory nelze použít pro přístup k prvkům kontejneru standardní knihovny C++ paralelně. Poskytuje knihovna paralelních vzorů (PPL) [: concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmus, který paralelně, iterativní kontejneru jako třeba pomocí provádí úkoly, C++ standardní knihovny. Používá stejnou logiku dělení, který `parallel_for` algoritmus používá. `parallel_for_each` Algoritmus vypadá podobně jako C++ standardní knihovny [std::for_each](../../standard-library/algorithm-functions.md#for_each) algoritmus, s výjimkou, že `parallel_for_each` algoritmus spustí úlohy současně.
 
 [!code-cpp[concrt-openmp#10](../../parallel/concrt/codesnippet/cpp/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime_2.cpp)]
 
