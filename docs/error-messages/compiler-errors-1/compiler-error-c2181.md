@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru C2181
+title: Compiler Error C2181
 ms.date: 11/04/2016
 f1_keywords:
 - C2181
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C2181
 ms.assetid: d52b2fe4-566a-40a9-b8e2-8dce1f287668
 ms.openlocfilehash: a676794b5dedd17cfb973de36d3771ef1130a786
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386093"
 ---
-# <a name="compiler-error-c2181"></a>Chyba kompilátoru C2181
+# <a name="compiler-error-c2181"></a>Compiler Error C2181
 
 Neplatné else bez odpovídajícího if
 

@@ -1,5 +1,5 @@
 ---
-title: '&lt;iosfwd –&gt;'
+title: '&lt;iosfwd&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <iosfwd>
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - iosfwd header
 ms.assetid: 964442eb-17f1-43ef-a0e0-c5bb77f9c187
 ms.openlocfilehash: 7b21e6e92c1fa1d01826ad8f6805d9a52b0fde42
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385177"
 ---
-# <a name="ltiosfwdgt"></a>&lt;iosfwd –&gt;
+# <a name="ltiosfwdgt"></a>&lt;iosfwd&gt;
 
 Deklaruje dopředné odkazy na několik tříd šablon používaný v celém iostreams. Všechny tyto třídy šablony jsou definovány v jiné standardní záhlaví. Explicitně zahrnete tuto hlavičku jenom v případě, že budete potřebovat jeden z jeho deklarace, ale ne jeho definici.
 
