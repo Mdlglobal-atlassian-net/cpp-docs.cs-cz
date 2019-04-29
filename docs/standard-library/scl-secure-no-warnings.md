@@ -9,11 +9,11 @@ helpviewer_keywords:
 - _SCL_SECURE_NO_WARNINGS
 ms.assetid: ef0ddea9-7c62-4b53-8b64-5f4fd369776f
 ms.openlocfilehash: 77c60aed511fc3dbbea2d74e83e36dae735dcb0e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348305"
 ---
 # <a name="sclsecurenowarnings"></a>_SCL_SECURE_NO_WARNINGS
 
@@ -51,4 +51,4 @@ Další informace najdete v tématu [/w, /W0, /W1, /W2, w3, / W4, /w1, /w2, w3, 
 
 ## <a name="see-also"></a>Viz také:
 
-[Bezpečné knihovny: standardní knihovna C++](../standard-library/safe-libraries-cpp-standard-library.md)<br/>
+[Bezpečné knihovny: Standardní knihovna C++](../standard-library/safe-libraries-cpp-standard-library.md)<br/>

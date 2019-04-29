@@ -11,15 +11,15 @@ helpviewer_keywords:
 - mixed assemblies [C++], initilizing
 ms.assetid: bfab7d9e-f323-4404-bcb8-712b15f831eb
 ms.openlocfilehash: 1f4ea7f5cfc6e99390c93ba9c2beadc46fce8584
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339036"
 ---
 # <a name="initialization-of-mixed-assemblies"></a>Inicializace smíšených sestavení
 
-Vývojáři Windows musí být opatrně zámek zavaděče při spuštění kódu během `DllMain`. Existují však některé další důležité informace, které souvisejí při práci s C + +/ clr sestavení ve smíšeném režimu.
+Vývojáři Windows musí být opatrně zámek zavaděče při spuštění kódu během `DllMain`. Existuje však několik dalších důležitých informací, které souvisejí při zpracování komplexnějších C++sestavení ve smíšeném režimu/CLR.
 
 Kód v rámci [DllMain](/windows/desktop/Dlls/dllmain) nesmí přístup k modulu CLR. To znamená, že `DllMain` by měla volat žádné spravované funkce, přímo nebo nepřímo; žádný spravovaný kód by měl být deklarován nebo implementované v `DllMain`; a žádná uvolnění paměti nebo automatické načítání knihovna má být provedena v rámci `DllMain` .
 
@@ -49,7 +49,7 @@ Zbývající část tohoto dokumentu popisuje scénáře zbývající, pro kter�
 
 Existuje několik různých situacích, kdy může uživatel provést kód jazyka MSIL nastavený zámek zavaděče. Vývojář musí zajistit, že implementace kódu uživatele nebude pokoušet pro spouštění instrukcí jazyka MSIL pod každým z těchto okolností. Následující témata popisují všechny možnosti s diskusi o tom, jak vyřešit problémy v nejběžnějších případech.
 
-### <a name="dllmain"></a>Zpracování funkce DllMain
+### <a name="dllmain"></a>DllMain
 
 `DllMain` Funkce je vstupním bodem definované uživatelem pro knihovnu DLL. Pokud uživatel neurčí jinak, `DllMain` je vyvolána pokaždé, když proces nebo vlákno připojí nebo odpojí od obsahující knihovnu DLL. Protože toto volání může dojít, dokud je držen zámek zavaděče, ne uživatelem zadané `DllMain` funkce by měla být zkompilována do jazyka MSIL. Kromě toho se žádná funkce ve stromu volání kořenovým adresářem v `DllMain` mohou být zkompilována do jazyka MSIL. Chcete-li vyřešit problémy většinou neřeší, blok kódu, který definuje `DllMain` by měl být upraven pomocí #pragma `unmanaged`. Stejné by měla provést pro každou funkci, která `DllMain` volání.
 
