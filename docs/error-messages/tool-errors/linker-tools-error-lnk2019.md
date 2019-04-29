@@ -8,11 +8,11 @@ helpviewer_keywords:
 - LNK2019
 - _check_commonlanguageruntime_version
 ms.openlocfilehash: af40a48e36d316842ec9a744ad95d6c3b3af3731
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386340"
 ---
 # <a name="linker-tools-error-lnk2019"></a>Chyba linkerů LNK2019
 
@@ -86,7 +86,7 @@ Například, pokud použijete AVX2 vnitřní, ale není zadán [/arch: avx2](../
 
 ### <a name="you-mix-code-that-uses-native-wchart-with-code-that-doesnt"></a>Kombinovat kód, který používá nativní wchar\_t s kódem, který není
 
-C++ language prací, které bylo provedeno v aplikaci Visual C++ 2005 provedené `wchar_t` nativní typ ve výchozím nastavení. Je nutné použít [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) – možnost kompilátoru generovat kód kompatibilní s knihoven a objektů soubory kompilované pomocí starší verze jazyka Visual C++. Pokud se všechny soubory již byly zkompilovány pomocí stejného **/Zc:wchar\_t** nastavením odkazy nemusí odpovídat nekompatibilní typy. Ověřte, že `wchar_t` typy ve všech souborech knihoven a objektů jsou kompatibilní, aktualizace typů, které se používají, nebo pomocí konzistentní **/Zc: wchar_t** nastavení při kompilaci.
+C++ language prací, které bylo provedeno v aplikaci Visual C++ 2005 provedené `wchar_t` nativní typ ve výchozím nastavení. Je nutné použít [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) – možnost kompilátoru generovat kód kompatibilní s knihoven a objektů soubory sestavené v předchozích verzích sady Visual C++. Pokud se všechny soubory již byly zkompilovány pomocí stejného **/Zc:wchar\_t** nastavením odkazy nemusí odpovídat nekompatibilní typy. Ověřte, že `wchar_t` typy ve všech souborech knihoven a objektů jsou kompatibilní, aktualizace typů, které se používají, nebo pomocí konzistentní **/Zc: wchar_t** nastavení při kompilaci.
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>Problémy knihovny třetí strany a Vcpkg
 

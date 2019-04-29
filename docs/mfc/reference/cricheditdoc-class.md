@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CRichEditDoc [MFC], m_bRTF
 ms.assetid: c936ec18-d516-49d4-b7fb-c9aa0229eddc
 ms.openlocfilehash: 4cc3af7649d30a153b67cd8269e595c11018833f
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372085"
 ---
 # <a name="cricheditdoc-class"></a>CRichEditDoc Class
 
@@ -35,7 +35,7 @@ class CRichEditDoc : public COleServerDoc
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRichEditDoc::CreateClientItem](#createclientitem)|Volá se, aby, vyčistěte dokumentu.|
 |[CRichEditDoc::GetStreamFormat](#getstreamformat)|Určuje, zda datový proud vstup a výstup by měl obsahovat informace o formátování.|
@@ -43,7 +43,7 @@ class CRichEditDoc : public COleServerDoc
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRichEditDoc::m_bRTF](#m_brtf)|Určuje, zda by měl obsahovat datový proud vstupně-výstupní operace formátování.|
 

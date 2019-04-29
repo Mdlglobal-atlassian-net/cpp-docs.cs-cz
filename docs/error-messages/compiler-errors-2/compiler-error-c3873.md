@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3873
 ms.assetid: e68fd3be-2391-492b-ac3f-d2428901b2e9
 ms.openlocfilehash: eb2a6935073c3b4a2b9eb3d9b099b372cfa34303
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385638"
 ---
 # <a name="compiler-error-c3873"></a>Chyba kompilátoru C3873
 
@@ -19,7 +19,7 @@ ms.locfileid: "50467353"
 
 Kompilátor C++ 11 standard C ++ následuje na znaky v identifikátoru povolený. Jenom určitých rozsahů znaků a univerzální názvy znaků jsou v identifikátoru povolený. Další omezení se použijí pro počáteční znak identifikátoru. Další informace a seznam povolených znaků a název rozsahy univerzálních znaků naleznete v tématu [identifikátory](../../cpp/identifiers-cpp.md).
 
-Rozsah znaků v identifikátoru povolený je méně omezující při kompilaci C + +/ CLI kódu. Identifikátory v kódu zkompilovaném pomocí/CLR by měly dodržovat [Standard ECMA-335: Common Language infrastruktury (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).
+Rozsah znaků v identifikátoru povolený je méně omezující při kompilaci C++vyhodnocovací kódu. Identifikátory v kódu zkompilovaném pomocí/CLR by měly dodržovat [Standard ECMA-335: Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
 Následující ukázka generuje C3873:
 

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CPaintDC [MFC], m_hWnd
 ms.assetid: 7e245baa-bf9b-403e-a637-7218adf28fab
 ms.openlocfilehash: df1db8a3e65d35f247df7d070119c66b02208815
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58772056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373269"
 ---
 # <a name="cpaintdc-class"></a>CPaintDC Class
 
@@ -33,19 +33,19 @@ class CPaintDC : public CDC
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPaintDC::CPaintDC](#cpaintdc)|Vytvoří `CPaintDC` připojené k zadané [CWnd](../../mfc/reference/cwnd-class.md).|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPaintDC::m_ps](#m_ps)|Obsahuje [paintstruct –](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct) použita k vyplnění klientské oblasti.|
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPaintDC::m_hWnd](#m_hwnd)|HWND, ke kterému je tento `CPaintDC` objekt připojen.|
 

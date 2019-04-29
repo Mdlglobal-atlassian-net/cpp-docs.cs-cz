@@ -3,11 +3,11 @@ title: U aplikací pro UPW, prostředí Windows Runtime a C Run-Time
 ms.date: 02/02/2019
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
 ms.openlocfilehash: 932b5388f2d1bf87f0d77ae1330fa3e613c9dca7
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385114"
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>U aplikací pro UPW, prostředí Windows Runtime a C Run-Time
 

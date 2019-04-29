@@ -8,15 +8,15 @@ helpviewer_keywords:
 - __declspec keyword [C++], noalias
 ms.assetid: efafa8b0-7f39-4edc-a81e-d287ae882c9b
 ms.openlocfilehash: 2eceffd10f97615859918991320ceebf577d094c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377436"
 ---
 # <a name="noalias"></a>noalias
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 **noalias** znamená, že volání funkce neupravuje nebo neodkazuje na globální stav a pouze upravuje paměť odkazovanou na *přímo* parametry ukazatele (nepřímé odkazy na první úrovni).
 

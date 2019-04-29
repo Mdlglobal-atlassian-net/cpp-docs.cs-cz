@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CPaneDialog [MFC], SetOccDialogInfo
 ms.assetid: 48a6bb91-4b92-40f5-8907-b3270b146cf6
 ms.openlocfilehash: c78b8f2cd19e87fa559c3f9bbd24d07543d887c5
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373086"
 ---
 # <a name="cpanedialog-class"></a>CPaneDialog Class
 
@@ -33,14 +33,14 @@ class CPaneDialog : public CDockablePane
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CPaneDialog::CPaneDialog`|Výchozí konstruktor.|
 |`CPaneDialog::~CPaneDialog`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPaneDialog::Create](#create)|Vytvoří ukotvitelné dialogové okno a připojí ho k `CPaneDialog` objektu.|
 |`CPaneDialog::CreateObject`|Rozhraní používá k vytvoření dynamické instance tohoto typu třídy.|

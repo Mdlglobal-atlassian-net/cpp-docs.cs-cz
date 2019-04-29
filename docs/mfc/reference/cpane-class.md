@@ -134,11 +134,11 @@ helpviewer_keywords:
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
 ms.openlocfilehash: b660d181aada8abeb61b397fb30b097897e74f65
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373151"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -927,7 +927,7 @@ virtual AFX_CS_STATUS IsChangeState(
 
 Jeden z následujících hodnot AFX_CS_STATUS:
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |CS_NOTHING|V podokně není v dokovacím místě. Rozhraní není ukotvení panelu.|
 |CS_DOCK_IMMEDIATELY|V podokně prostřednictvím dokovacím místě, a styl DT_IMMEDIATE povolen. V podokně ukotvené rozhraní okamžitě.|
@@ -1106,7 +1106,7 @@ BOOL MoveByAlignment(
 
 *dwAlignment* může být kterýkoli z následujících hodnot:
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |CBRS_ALIGN_TOP|Umožňuje v podokně ukotvit do horní části klientské oblasti okna rámce.|
 |CBRS_ALIGN_BOTTOM|Umožňuje v podokně ukotvit k dolnímu okraji klientské oblasti okna rámce.|

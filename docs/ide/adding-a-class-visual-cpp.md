@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Add Class dialog box
 ms.assetid: c34b5f70-4e72-4faa-ba21-e2b05361c4d9
 ms.openlocfilehash: 21dd4b1936eda201df8283146ba9f41fa81e11de
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375883"
 ---
 # <a name="add-a-class"></a>Přidat třídu
 
@@ -68,17 +68,17 @@ Existují čtyři kategorie **přidat třídu** šablony: .NET, ATL, MFC a obecn
 
 #### <a name="net"></a>.NET
 
-|Šablony|Průvodce|
+|Šablona|Průvodce|
 |--------------|------------|
 |Webová služba ASP.NET|Není k dispozici|
 |Komponentní třída (.NET)|Není k dispozici|
 |Instalační program tříd (.NET)|Není k dispozici|
 |Uživatelský ovládací prvek (.NET)|Není k dispozici|
-|Formuláře Windows (.NET)|Není k dispozici|
+|Windows Form (.NET)|Není k dispozici|
 
 #### <a name="atl"></a>ATL
 
-|Šablony|Průvodce|
+|Šablona|Průvodce|
 |--------------|------------|
 |Přidat podporu ATL do MFC|Není k dispozici|
 |Komponenta knihovny ATL Active Server Page|[Průvodce komponentami ATL active server page](../atl/reference/atl-active-server-page-component-wizard.md)|
@@ -94,7 +94,7 @@ Existují čtyři kategorie **přidat třídu** šablony: .NET, ATL, MFC a obecn
 
 #### <a name="mfc"></a>MFC
 
-|Šablony|Průvodce|
+|Šablona|Průvodce|
 |--------------|------------|
 |Třída knihovny MFC|[Průvodce přidáním třídy MFC](../mfc/reference/mfc-add-class-wizard.md)|
 |Třída knihovny MFC z ovládacího prvku ActiveX|[Přidání třídy z Průvodce ovládacím prvkem ActiveX](../ide/add-class-from-activex-control-wizard.md)|
@@ -103,6 +103,6 @@ Existují čtyři kategorie **přidat třídu** šablony: .NET, ATL, MFC a obecn
 
 #### <a name="generic-classes"></a>Obecné třídy
 
-|Šablony|Průvodce|
+|Šablona|Průvodce|
 |--------------|------------|
 |Generické třídy jazyka C++|[Průvodci obecnými třídami C++](../ide/generic-cpp-class-wizard.md)|

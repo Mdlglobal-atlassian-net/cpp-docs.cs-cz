@@ -8,11 +8,11 @@ helpviewer_keywords:
 - implement interface wizard [C++]
 ms.assetid: 72f8731b-7e36-45db-8b10-7ef211a773cd
 ms.openlocfilehash: 8e166f806d247cd93ff0f471360d749fa95e430b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375896"
 ---
 # <a name="implement-an-interface"></a>Implementace rozhraní
 
@@ -60,7 +60,7 @@ Informace o rozhraní a implementaci, najdete v článku [rozhraní a implementa
   |------------|-----------------|
   |**Projekt**|Knihovna typů je součástí projektu.|
   |**Registru**|Knihovna typů je registrován v systému. Zaregistrované knihovny typů jsou uvedeny v **dostupné knihovny typů**.|
-  |**Soubor**|Knihovna typů není nutně registrován v systému, ale se nachází v souboru. Zadejte umístění souboru v **umístění**.|
+  |**File**|Knihovna typů není nutně registrován v systému, ale se nachází v souboru. Zadejte umístění souboru v **umístění**.|
 
 - **Dostupné knihovny typů**
 

@@ -53,11 +53,11 @@ helpviewer_keywords:
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
 ms.openlocfilehash: 7c3416397d8f43963d3be2ce9bc39707ea7865db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383461"
 ---
 # <a name="vsnprintf-vsnprintf-vsnprintfl-vsnwprintf-vsnwprintfl"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
@@ -188,15 +188,15 @@ V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají nověj
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_vsntprintf –**|**_vsnprintf**|**_vsnprintf**|**_vsnwprintf**|
-|**_vsntprintf_l –**|**_vsnprintf_l**|**_vsnprintf_l**|**_vsnwprintf_l**|
+|**_vsntprintf**|**_vsnprintf**|**_vsnprintf**|**_vsnwprintf**|
+|**_vsntprintf_l**|**_vsnprintf_l**|**_vsnprintf_l**|**_vsnwprintf_l**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadované záhlaví (C)|Požadované záhlaví (C++)|
 |-------------|---------------------------|-------------------------------|
-|**vsnprintf –**, **_vsnprintf –**, **_vsnprintf_l –**|\<stdio.h>|\<stdio.h > nebo \<cstdio – >|
-|**_vsnwprintf –**, **_vsnwprintf_l –**|\<stdio.h > nebo \<wchar.h >|\<stdio.h >, \<wchar.h >, \<cstdio – >, nebo \<cwchar – >|
+|**vsnprintf**, **_vsnprintf**, **_vsnprintf_l**|\<stdio.h>|\<stdio.h > nebo \<cstdio – >|
+|**_vsnwprintf**, **_vsnwprintf_l**|\<stdio.h > nebo \<wchar.h >|\<stdio.h >, \<wchar.h >, \<cstdio – >, nebo \<cwchar – >|
 
 **_Vsnprintf –**, **_vsnprintf_l –**, **_vsnwprintf –** a **_vsnwprintf_l –** funkce jsou specifické pro Microsoft. Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
@@ -285,5 +285,5 @@ nSize: 10, buff: Hi there!
 [Syntaxe specifikace formátu: funkce printf a wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf _sprintf_l –, swprintf, _swprintf_l –, \__swprintf_l –](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)<br/>

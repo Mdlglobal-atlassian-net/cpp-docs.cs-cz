@@ -9,11 +9,11 @@ helpviewer_keywords:
 - interoperability [C++], performance considerations
 ms.assetid: bb9a282e-c3f8-40eb-a2fa-45d80d578932
 ms.openlocfilehash: c6b4456d9c75061c9a8c93f37f98b58f92adc899
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384748"
 ---
 # <a name="performance-considerations-for-interop-c"></a>Faktory ovlivňující výkon u zprostředkovatelů komunikace (C++)
 

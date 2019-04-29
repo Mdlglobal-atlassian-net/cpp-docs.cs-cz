@@ -16,11 +16,11 @@ helpviewer_keywords:
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
 ms.openlocfilehash: 8641e2f8bcc80cd2ba9b6b68e5574a476f60312e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371617"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;komplexní&gt; operátory
 
@@ -935,4 +935,4 @@ Input a complex number ( try: 2.0 ): 2.0
 
 ## <a name="see-also"></a>Viz také:
 
-[\<komplexní >](../standard-library/complex.md)<br/>
+[\<complex>](../standard-library/complex.md)<br/>

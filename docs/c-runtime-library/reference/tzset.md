@@ -24,11 +24,11 @@ helpviewer_keywords:
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
 ms.openlocfilehash: 6312297e6daa9b4790674bd26d21812d5bee34c6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385190"
 ---
 # <a name="tzset"></a>_tzset
 
@@ -62,7 +62,7 @@ void _tzset( void );
 
 Chcete-li například nastavit **TZ** proměnnou prostředí tak, aby odpovídala aktuálnímu časovému pásmu v Německu, zadejte na příkazovém řádku následující:
 
-> **Nastavte TZ = GST 1GDT**
+> **set TZ=GST-1GDT**
 
 Tento příkaz používá GST k označení německého standardního času, předpokládá, že čas UTC je jednu hodinu za Německem (nebo jinými slovy, Německo je hodinu před časem UTC) a které předpokládá, že Německo dodržuje letní čas.
 
@@ -83,7 +83,7 @@ Výchozí hodnoty uvedené v předchozí tabulce pro **_daylight** a **_tzname**
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_tzset**|\<Time.h >|
+|**_tzset**|\<time.h>|
 
 **_Tzset –** funkce je specifické pro společnost Microsoft. Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

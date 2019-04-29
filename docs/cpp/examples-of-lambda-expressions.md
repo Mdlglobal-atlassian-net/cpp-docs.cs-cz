@@ -5,11 +5,11 @@ helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
 ms.openlocfilehash: 6854c5710d8a27093078c0f2013d691ac22c5870
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392190"
 ---
 # <a name="examples-of-lambda-expressions"></a>Příklady výrazů lambda
 
@@ -271,7 +271,7 @@ int main()
 ### <a name="example"></a>Příklad
 
 Můžete použít výrazy lambda v těle funkce. Výraz lambda má přístup k funkci nebo datový člen, s přístupem k nadřazené funkce. Můžete explicitně nebo implicitně zachytit **to** ukazatel k poskytnutí přístupu k funkce a datovým členům ohraničující třídy.
-**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): zachycení **to** podle hodnoty (`[*this]`) Pokud výraz lambda se použijí v asynchronní nebo paralelních operací Pokud po může spustit kód na původní objekt dostane mimo rozsah.
+**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Zachycení **to** podle hodnoty (`[*this]`) Pokud výraz lambda se použijí v asynchronní a paralelní operace kde může spustit kód po původní objekt dostane mimo rozsah.
 
 Můžete použít **to** ukazatel explicitně ve funkci, jak je znázorněno zde:
 
@@ -479,7 +479,7 @@ Další informace o zpracování výjimek naleznete v tématu [zpracování výj
 
 [[v tomto článku](#top)]
 
-##  <a name="managedLambdaExpressions"></a> Použití výrazů Lambda s spravované typy (C + +/ CLI)
+##  <a name="managedLambdaExpressions"></a> Použití výrazů Lambda s spravované typy (C++vyhodnocovací)
 
 ### <a name="example"></a>Příklad
 

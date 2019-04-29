@@ -97,11 +97,11 @@ helpviewer_keywords:
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
 ms.openlocfilehash: fdc3705980ac8f763e0438f19920148437e7ed27
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377501"
 ---
 # <a name="array-class-c-standard-library"></a>Array – třída (standardní knihovna C++)
 
@@ -130,8 +130,8 @@ class array;
 |[const_reference](#const_reference)|Typ konstantního odkazu na prvek|
 |[const_reverse_iterator](#const_reverse_iterator)|Typ konstantního zpětného iterátoru řízené sekvence.|
 |[difference_type](#difference_type)|Typ vzdálenosti se znaménkem mezi dvěma prvky|
-|[iterátor](#iterator)|Typ iterátoru řízené sekvence|
-|[Ukazatel](#pointer)|Typ ukazatele na prvek|
+|[iterator](#iterator)|Typ iterátoru řízené sekvence|
+|[pointer](#pointer)|Typ ukazatele na prvek|
 |[Referenční dokumentace](#reference)|Typ odkazu na prvek|
 |[reverse_iterator](#reverse_iterator)|Typ "reverse iterator" pro řízenou sekvenci.|
 |[size_type](#size_type)|Typ vzdálenosti bez znaménka mezi dvěma prvky|
@@ -140,24 +140,24 @@ class array;
 |Členská funkce|Popis|
 |-|-|
 |[Pole](#array)|Vytvoří objekt typu pole.|
-|[přiřazení](#assign)|Nahradí všechny elementy.|
+|[assign](#assign)|Nahradí všechny elementy.|
 |[at](#at)|Přistupuje k element na určené pozici.|
 |[Zpět](#back)|Přistupuje k poslední prvek.|
 |[začít](#begin)|Určuje začátek řízené sekvence.|
 |[cbegin](#cbegin)|Vrátí konstantní iterátor náhodného přístupu na první prvek v poli.|
 |[cend](#cend)|Vrátí konstantní iterátor náhodného přístupu, na kterou odkazuje hned za koncem tohoto pole.|
 |[crbegin](#crbegin)|Vrátí konstantní iterátor na první prvek v obráceném objektu array.|
-|[crend –](#crend)|Vrátí konstantní iterátor za účelem obráceném objektu array.|
+|[crend](#crend)|Vrátí konstantní iterátor za účelem obráceném objektu array.|
 |[data](#data)|Získá adresu prvního prvku.|
 |[prázdný](#empty)|Testy, jestli prvky jsou k dispozici.|
 |[ukončení](#end)|Určuje konec řízené sekvence.|
 |[Výplň](#fill)|Nahradí všechny prvky se zadanou hodnotou.|
 |[Přední](#front)|Přistupuje k první prvek.|
 |[max_size](#max_size)|Spočítá počet prvků.|
-|[rbegin –](#rbegin)|Určuje začátek řízené obrácené sekvenci.|
+|[rbegin](#rbegin)|Určuje začátek řízené obrácené sekvenci.|
 |[rend –](#rend)|Určuje konec řízené obrácené sekvenci.|
 |[Velikost](#size)|Spočítá počet prvků.|
-|[Prohození](#swap)|Zamění obsah dvou kontejnerů.|
+|[swap](#swap)|Zamění obsah dvou kontejnerů.|
 
 |Operátor|Popis|
 |-|-|
@@ -303,7 +303,7 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Vypnout*<br/>
+*off*<br/>
 Pozice prvku přístup.
 
 ### <a name="remarks"></a>Poznámky
@@ -808,7 +808,7 @@ int main()
 0
 ```
 
-## <a name="difference_type"></a>  Array::difference_type
+## <a name="difference_type"></a>  array::difference_type
 
 Typ vzdálenosti se znaménkem mezi dvěma prvky
 
@@ -1149,7 +1149,7 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Vypnout*<br/>
+*off*<br/>
 Pozice prvku přístup.
 
 ### <a name="remarks"></a>Poznámky
@@ -1677,4 +1677,4 @@ int main()
 
 ## <a name="see-also"></a>Viz také:
 
-[\<pole >](../standard-library/array.md)<br/>
+[\<array>](../standard-library/array.md)<br/>

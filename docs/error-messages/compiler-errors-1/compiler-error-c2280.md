@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2280
 ms.assetid: e6c5b1fb-2b9b-4554-8ff9-775eeb37161b
 ms.openlocfilehash: e1ec032878fefdc1992605df5ee1aa13c673d4cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388901"
 ---
 # <a name="compiler-error-c2280"></a>Chyba kompilátoru C2280
 
@@ -19,7 +19,7 @@ ms.locfileid: "50572806"
 
 Kompilátor zjistil pokus o odkaz `deleted` funkce. Tuto chybu může způsobovat volání na členskou funkci, která byla explicitně označena jako `= deleted` ve zdrojovém kódu. Tato chyba může taky způsobovat volání implicitní zvláštní členskou funkci ze struktury nebo třídy, která je automaticky deklarovat a označena jako `deleted` kompilátorem. Další informace o Když kompilátor automaticky generuje `default` nebo `deleted` zvláštní členské funkce, najdete v článku [speciálních členských funkcí](../../cpp/special-member-functions.md).
 
-## <a name="example-explicitly-deleted-functions"></a>Příklad: Explicitně odstraněných funkcí
+## <a name="example-explicitly-deleted-functions"></a>Příklad: Explicitně odstraněné funkce
 
 Volání explicitně `deleted` funkce způsobí, že k této chybě. Explicitně `deleted` členská funkce znamená, že dané třídy nebo struktury je záměrně cílem znemožnění jeho použití, takže chcete opravit tento problém, měli byste změnit váš kód jak jí předcházet.
 
@@ -58,7 +58,7 @@ struct A {
 } a;    // C2280
 ```
 
-## <a name="example-reference-and-const-data-members"></a>Příklad: Odkaz a konstantní datové členy
+## <a name="example-reference-and-const-data-members"></a>Příklad: Referenční dokumentace a konstantní datové členy
 
 A `const` nebo odkaz na typ datový člen způsobí, že kompilátor pro deklaraci `deleted` kopírovacího operátoru přiřazení. Po inicializaci tyto členy nelze přiřadit, tak jednoduché kopírování nebo přesunutí nemůže pracovat. Chcete-li vyřešit tento problém, doporučujeme že změnit svoji logiku odebrat přiřazení operací, které způsobí chybu.
 
@@ -79,7 +79,7 @@ void f() {
 }
 ```
 
-## <a name="example-movable-deletes-implicit-copy"></a>Příklad: Přesouvatelných odstraní implicitní kopie
+## <a name="example-movable-deletes-implicit-copy"></a>Příklad: Pohyblivé odstraní implicitní kopie
 
 Pokud třída deklaruje přenosový konstruktor nebo operátor přiřazení přesunu, ale nedeklaruje explicitně kopírovací konstruktor, kompilátor implicitně deklaruje kopírovací konstruktor a definuje jako `deleted`. Podobně, pokud třída deklaruje přenosový konstruktor nebo operátor přiřazení přesunu, ale nedeklaruje explicitně operátor přiřazení kopie, kompilátor implicitně deklaruje operátor přiřazení kopie a definuje jako `deleted`. Chcete-li vyřešit tento problém, musíte explicitně deklarovat těchto členů.
 
@@ -108,7 +108,7 @@ void copy(base *p)
 }
 ```
 
-## <a name="example-variant-and-volatile-members"></a>Příklad: Členy Variant a volatile
+## <a name="example-variant-and-volatile-members"></a>Příklad: Členy typu variant a volatile
 
 Verze kompilátoru před Visual Studio 2015 Update 2 byly nonkonformní a generovaný výchozí konstruktory a destruktory pro anonymní sjednocení. Ty se teď implicitně deklarovaný jako `deleted`. Tato verze také povoleny nonkonformní implicitní definice `default` kopírování a přesun konstruktorů a `default` kopírování a přesouvání operátory přiřazení v tříd a struktur, které mají `volatile` členské proměnné. Kompilátor nyní bere v úvahu tyto netriviálními konstruktory a operátory přiřazení a negeneruje `default` implementace. Pokud takové třídy je člen sjednocení nebo anonymní sjednocení uvnitř třídy, kopírování a přesun konstruktory a operátory přiřazení přesunutí a kopírování sjednocení nebo třídy jsou implicitně definovaný jako `deleted`. Chcete-li vyřešit tento problém, musíte explicitně deklarovat vyžaduje zvláštní členské funkce.
 
@@ -137,7 +137,7 @@ int main() {
 }
 ```
 
-## <a name="example-indirect-base-members-deleted"></a>Příklad: Nepřímých základních členů odstraněn
+## <a name="example-indirect-base-members-deleted"></a>Příklad: Odstranit nepřímých základních členů.
 
 Verze kompilátoru před Visual Studio 2015 Update 2 byly nonkonformní a povolený odvozené třídy za účelem volání zvláštní členské funkce nepřímo odvozeny `private virtual` základních tříd. Kompilátor vyvolá chybu kompilátoru C2280 nyní, po provedení těchto volání.
 

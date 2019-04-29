@@ -7,11 +7,11 @@ f1_keywords:
 - atomic/std::atomic_flag::test_and_set
 ms.assetid: 17f0c2f5-fd39-4a44-873a-b569720a670e
 ms.openlocfilehash: 13af0c26b765aa7ebbbd1ec22b5a0ed1b8cce0ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377254"
 ---
 # <a name="atomicflag-structure"></a>atomic_flag – struktura
 
@@ -29,7 +29,7 @@ struct atomic_flag;
 
 |Název|Popis|
 |----------|-----------------|
-|[Vymazat](#clear)|Nastaví uložený příznak na **false**.|
+|[clear](#clear)|Nastaví uložený příznak na **false**.|
 |[test_and_set](#test_and_set)|Nastaví uložený příznak na **true** a vrátí počáteční hodnotu příznaku.|
 
 ## <a name="remarks"></a>Poznámky
@@ -53,7 +53,7 @@ void atomic_flag::clear(memory_order Order = memory_order_seq_cst) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Pořadí*<br/>
+*Order*<br/>
 A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="test_and_set"></a>  atomic_flag::test_and_set –
@@ -67,7 +67,7 @@ bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) noexce
 
 ### <a name="parameters"></a>Parametry
 
-*Pořadí*<br/>
+*Order*<br/>
 A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Návratová hodnota

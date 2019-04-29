@@ -43,11 +43,11 @@ helpviewer_keywords:
 - vscprintf_l function
 ms.assetid: 1bc67d3d-21d5-49c9-ac8d-69e26b16a3c3
 ms.openlocfilehash: 18b177114fe0e2984fee518b06a72bea72905ed1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383474"
 ---
 # <a name="vscprintf-vscprintfl-vscwprintf-vscwprintfl"></a>_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l
 
@@ -108,15 +108,15 @@ Každý *argument* (pokud existuje) je převeden podle odpovídající specifika
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_vsctprintf –**|**_vscprintf**|**_vscprintf**|**_vscwprintf**|
-|**_vsctprintf_l –**|**_vscprintf_l**|**_vscprintf_l**|**_vscwprintf_l**|
+|**_vsctprintf**|**_vscprintf**|**_vscprintf**|**_vscwprintf**|
+|**_vsctprintf_l**|**_vscprintf_l**|**_vscprintf_l**|**_vscwprintf_l**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_vscprintf –**, **_vscprintf_l –**|\<stdio.h>|
-|**_vscwprintf –**, **_vscwprintf_l –**|\<stdio.h > nebo \<wchar.h >|
+|**_vscprintf**, **_vscprintf_l**|\<stdio.h>|
+|**_vscwprintf**, **_vscwprintf_l**|\<stdio.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - macros
 ms.assetid: 83a344c1-73c9-4ace-8b93-cccfb62c6133
 ms.openlocfilehash: d4915526d5bb84b33f0595678781257d754aaf2d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59024913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371786"
 ---
 # <a name="macros-and-c"></a>Makra a jazyk C++
 Jazyk C++ nabízí nové možnosti, z nichž některé nahrazují možnosti preprocesoru standardu ANSI C. Tyto nové možnosti zvyšují bezpečnost typů a předvídatelnost jazyka:

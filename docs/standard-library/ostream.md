@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ostream header
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
 ms.openlocfilehash: eb73c77f0e2658cf750cf17ca85549a09d1cbe51
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370928"
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
 
@@ -39,7 +39,7 @@ Třída šablony definuje [basic_ostream –](../standard-library/basic-ostream-
 |[endl](../standard-library/ostream-functions.md#endl)|Ukončení řádku a vyprázdní vyrovnávací paměť.|
 |[končí](../standard-library/ostream-functions.md#ends)|Ukončí řetězec.|
 |[Vyprázdnění](../standard-library/ostream-functions.md#flush)|Vyprázdní vyrovnávací paměť.|
-|[Prohození](../standard-library/ostream-functions.md#swap)|Vymění hodnoty levé straně `basic_ostream` parametru objektu pro ty pravé `basic_ostream` parametru objektu.|
+|[swap](../standard-library/ostream-functions.md#swap)|Vymění hodnoty levé straně `basic_ostream` parametru objektu pro ty pravé `basic_ostream` parametru objektu.|
 
 ### <a name="operators"></a>Operátory
 
@@ -51,7 +51,7 @@ Třída šablony definuje [basic_ostream –](../standard-library/basic-ostream-
 
 |Třída|Popis|
 |-|-|
-|[basic_ostream –](../standard-library/basic-ostream-class.md)|Třída šablony popisuje objekt, který řídí vkládání prvků a kódovaného objekty do vyrovnávací paměti datového proudu.|
+|[basic_ostream](../standard-library/basic-ostream-class.md)|Třída šablony popisuje objekt, který řídí vkládání prvků a kódovaného objekty do vyrovnávací paměti datového proudu.|
 
 ## <a name="see-also"></a>Viz také:
 

@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
 ms.openlocfilehash: 817e7fb2b434d06d6c0dfdfc100be8004f6fa4ef
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377146"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf – třída
 
@@ -217,15 +217,15 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 |[close](#close)|Soubor se zavře.|
 |[is_open](#is_open)|Určuje, zda je soubor otevřen.|
 |[open](#open)|Otevře se soubor.|
-|[přetečení](#overflow)|Chráněné virtuální funkce, která může být volána při vložení nového znaku do plné vyrovnávací paměti.|
-|[pbackfail –](#pbackfail)|Chráněná virtuální členská funkce se pokusí vrátit elementu do vstupního datového proudu a usnadňují aktuálního elementu (ukazuje další ukazatel).|
-|[seekoff –](#seekoff)|Chráněná virtuální členská funkce se pokusí změnit aktuální pozice řízené datových proudů.|
-|[seekpos –](#seekpos)|Chráněná virtuální členská funkce se pokusí změnit aktuální pozice řízené datových proudů.|
+|[overflow](#overflow)|Chráněné virtuální funkce, která může být volána při vložení nového znaku do plné vyrovnávací paměti.|
+|[pbackfail](#pbackfail)|Chráněná virtuální členská funkce se pokusí vrátit elementu do vstupního datového proudu a usnadňují aktuálního elementu (ukazuje další ukazatel).|
+|[seekoff](#seekoff)|Chráněná virtuální členská funkce se pokusí změnit aktuální pozice řízené datových proudů.|
+|[seekpos](#seekpos)|Chráněná virtuální členská funkce se pokusí změnit aktuální pozice řízené datových proudů.|
 |[setbuf](#setbuf)|Chráněná virtuální členská funkce se provede konkrétní operace pro každou odvozené datový proud vyrovnávací paměti.|
 |[Swap](#swap)|Vymění obsah této `basic_filebuf` obsahu poskytnutého `basic_filebuf` parametru.|
 |[sync](#sync)|Chráněná, virtuální funkce se pokusí o synchronizaci řízené datové proudy s jakékoli přidružené externích datových proudů.|
-|[uflow –](../standard-library/basic-streambuf-class.md#uflow)|Chráněná, virtuální funkce se extrahovat aktuálního elementu ze vstupního datového proudu.|
-|[podtečení](#underflow)|Chráněná, virtuální funkce se extrahovat aktuálního elementu ze vstupního datového proudu.|
+|[uflow](../standard-library/basic-streambuf-class.md#uflow)|Chráněná, virtuální funkce se extrahovat aktuálního elementu ze vstupního datového proudu.|
+|[underflow](#underflow)|Chráněná, virtuální funkce se extrahovat aktuálního elementu ze vstupního datového proudu.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -405,7 +405,7 @@ basic_filebuf<Elem, Tr> *open(
 *Náze_v souboru*<br/>
 Název souboru, který se otevře.
 
-*Reži_m*<br/>
+*_Mode*<br/>
 Jeden z výčtů ve [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*<br/>
@@ -433,7 +433,7 @@ Pokud ukazatel souboru je ukazatel s hodnotou null, funkce vrátí ukazatel s ho
 
 Pokud **režim & ios_base::binary** je nenulovou hodnotu, funkce přidá `b` k `strmode` otevřete binárního datového proudu místo textového datového proudu. Pak uloží hodnotu vrácenou příkazem `fopen` v ukazatel na soubor `fp`. Pokud **režim & ios_base::ate** je nenulový ukazatel na soubor není ukazatel s hodnotou null, volání funkce `fseek`( **fp**, 0, `SEEK_END`) na pozici datový proud na konci souboru. Pokud umístění operace selže, volání funkce [zavřete](#close)( `fp`) a ukládá ukazatel s hodnotou null ukazatel na soubor.
 
-Pokud ukazatel na soubor není ukazatel s hodnotou null, funkce určuje omezující vlastnost převod souboru: `use_facet` <  `codecvt` <  **Elem**, `char`, **traits_type::** [ state_type](../standard-library/char-traits-struct.md#state_type)>> ( [getloc –](../standard-library/basic-streambuf-class.md#getloc)), používají [podtečení](#underflow) a [přetečení](#overflow).
+Pokud ukazatel na soubor není ukazatel s hodnotou null, funkce určuje omezující vlastnost převod souboru: `use_facet`< `codecvt`< **Elem**, `char`, **traits_type::**[state_type](../standard-library/char-traits-struct.md#state_type)>> ( [getloc –](../standard-library/basic-streambuf-class.md#getloc)), používají [podtečení](#underflow) a [přetečení](#overflow).
 
 Pokud ukazatel souboru je ukazatel s hodnotou null, funkce vrátí ukazatel s hodnotou null. V opačném případě vrátí **to**.
 
@@ -624,7 +624,7 @@ void swap(basic_filebuf& right);
 *doprava*<br/>
 `lvalue` Odkaz na jiný `basic_filebuf`.
 
-## <a name="sync"></a>  basic_filebuf::Sync
+## <a name="sync"></a>  basic_filebuf::sync
 
 Se pokusí o synchronizaci řízené datové proudy s jakékoli přidružené externích datových proudů.
 

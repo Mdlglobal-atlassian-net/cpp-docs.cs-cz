@@ -31,11 +31,11 @@ helpviewer_keywords:
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
 ms.openlocfilehash: 579c4a99b52c66bd14cea947eaa1f301cc1127e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375324"
 ---
 # <a name="strtimes-wstrtimes"></a>_strtime_s, _wstrtime_s
 
@@ -80,7 +80,7 @@ Pokud dojde k chybě, vyvolán obslužnou rutinu neplatného parametru, jak je p
 
 |*Vyrovnávací paměti*|*numberOfElements*|Vrátí|Obsah *vyrovnávací paměti*|
 |--------------|------------------------|------------|--------------------------|
-|**HODNOTU NULL**|(žádné)|**EINVAL**|Nezměněno|
+|**NULL**|(žádné)|**EINVAL**|Nezměněno|
 |Není **NULL** (odkazuje na platnou vyrovnávací paměť)|0|**EINVAL**|Nezměněno|
 |Není **NULL** (odkazuje na platnou vyrovnávací paměť)|0 < velikost < 9|**EINVAL**|Prázdný řetězec|
 |Není **NULL** (odkazuje na platnou vyrovnávací paměť)|Velikost > 9|0|Aktuální čas ve formátu zadané v poli poznámky|
@@ -109,7 +109,7 @@ V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šab
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_strtime_s**|\<Time.h >|
+|**_strtime_s**|\<time.h>|
 |**_wstrtime_s**|\<Time.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

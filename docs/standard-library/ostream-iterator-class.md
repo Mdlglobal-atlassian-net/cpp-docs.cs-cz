@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::ostream_iterator [C++], traits_type
 ms.assetid: 24d842d3-9f45-4bf6-a697-62f5968f5a03
 ms.openlocfilehash: 6a065a100faf5ea40be161e980de2913add917fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370984"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator – třída
 
@@ -291,7 +291,7 @@ ostream_iterator(
 *_Ostr*<br/>
 Výstupní datový proud typu [ostream_iterator::ostream_type](#ostream_type) chcete provést iteraci.
 
-*_Mezeru*<br/>
+*_Delimiter*<br/>
 Oddělovač, který je vložen do výstupního datového proudu mezi hodnotami.
 
 ### <a name="remarks"></a>Poznámky
@@ -415,6 +415,6 @@ by intOut are:
 
 ## <a name="see-also"></a>Viz také:
 
-[\<iterátor >](../standard-library/iterator.md)<br/>
+[\<iterator>](../standard-library/iterator.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

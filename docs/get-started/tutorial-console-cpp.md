@@ -2,11 +2,11 @@
 title: Vytvoření projektu aplikace konzoly C++
 moniker-range: '>=vs-2015'
 ms.openlocfilehash: cc725e80d534754e8339bfbb4b670566100002a4
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59778267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62382697"
 ---
 ::: moniker range=">=vs-2019"
 

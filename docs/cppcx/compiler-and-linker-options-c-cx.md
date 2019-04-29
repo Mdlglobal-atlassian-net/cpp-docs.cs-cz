@@ -1,17 +1,17 @@
 ---
-title: Možnosti kompilátoru a Linkeru (C + +/ CX)
+title: Možnosti kompilátoru a Linkeru (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
 ms.openlocfilehash: cc1964c57d6700995bb283c245e4c63c8e9e313b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383357"
 ---
-# <a name="compiler-and-linker-options-ccx"></a>Možnosti kompilátoru a Linkeru (C + +/ CX)
+# <a name="compiler-and-linker-options-ccx"></a>Možnosti kompilátoru a Linkeru (C++/CX)
 
-Proměnné prostředí, C + +/ CX – možnosti kompilátoru a linkeru možnosti podporu vytváření aplikací pro Windows Runtime.
+Proměnná prostředí C++/CX – možnosti kompilátoru a možnosti linkeru, podporu vytváření aplikací pro Windows Runtime.
 
 ## <a name="library-path"></a>Cestu ke knihovně
 
@@ -43,4 +43,4 @@ Při použití **/ZW**, kompilátor automaticky propojí verzi knihovny DLL z mo
 
 ## <a name="see-also"></a>Viz také:
 
-[Vytváření aplikací a knihoven](../cppcx/building-apps-and-libraries-c-cx.md)
+[Sestavení aplikací a knihoven](../cppcx/building-apps-and-libraries-c-cx.md)

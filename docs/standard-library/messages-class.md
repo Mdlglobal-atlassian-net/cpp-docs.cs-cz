@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
 ms.openlocfilehash: 7a024a8cad8c536b25127d033468874de5ebd8af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383578"
 ---
 # <a name="messages-class"></a>messages – třída
 
@@ -64,14 +64,14 @@ Tato omezující vlastnost v podstatě otevře katalog zpráv definovaný v zák
 |Název typu|Popis|
 |-|-|
 |[char_type](#char_type)|Typ znaku, který je používán pro zobrazení zpráv.|
-|[STRING_TYPE](#string_type)|Typ, který popisuje řetězec typu `basic_string` obsahující znaky typu `CharType`.|
+|[string_type](#string_type)|Typ, který popisuje řetězec typu `basic_string` obsahující znaky typu `CharType`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
 |[close](#close)|Zavře katalog zpráv.|
-|[do_close –](#do_close)|Virtuální funkce volaná k zavření katalogu zpráv.|
+|[do_close](#do_close)|Virtuální funkce volaná k zavření katalogu zpráv.|
 |[do_get](#do_get)|Virtuální funkce volaná k načtení katalogu zpráv.|
 |[do_open](#do_open)|Virtuální funkce volaná k otevření katalogu zpráv.|
 |[get](#get)|Načte katalog zpráv.|
@@ -155,7 +155,7 @@ Identifikace hodnota určující katalog zpráv, které chcete prohledat.
 *_Nastavit*<br/>
 První identifikovat používaná k nalezení zprávu v katalogu zpráv.
 
-*_TEXT*<br/>
+*_Message*<br/>
 Druhé identifikovat používaná k nalezení zprávu v katalogu zpráv.
 
 *_Dfault*<br/>
@@ -225,7 +225,7 @@ Identifikace hodnota určující katalog zpráv, které chcete prohledat.
 *_Nastavit*<br/>
 První identifikovat používaná k nalezení zprávu v katalogu zpráv.
 
-*_TEXT*<br/>
+*_Message*<br/>
 Druhé identifikovat používaná k nalezení zprávu v katalogu zpráv.
 
 *_Dfault*<br/>
@@ -266,9 +266,9 @@ Možné hodnoty parametru *_Refs* parametrů a jejich význam:
 
 - 0: Životnost objektu se spravuje přes národní prostředí, které je obsahují.
 
-- 1: doba života objektu je nutné ručně spravovat.
+- 1: Doba života objektu se musí spravovat ručně.
 
-- \> 1: tyto hodnoty nejsou definovány.
+- \> 1: Tyto hodnoty nejsou definovány.
 
 Žádné přímé příklady je to možné, protože destruktor je chráněn.
 

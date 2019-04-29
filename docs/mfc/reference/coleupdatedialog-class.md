@@ -11,11 +11,11 @@ helpviewer_keywords:
 - COleUpdateDialog [MFC], DoModal
 ms.assetid: 699ca980-52b1-4cf8-9ab1-ac6767ad5b0e
 ms.openlocfilehash: b8e580130b025f07b8f85a624b7f5a224a00e49e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58771100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373593"
 ---
 # <a name="coleupdatedialog-class"></a>Coleupdatedialog – třída
 
@@ -31,13 +31,13 @@ class COleUpdateDialog : public COleLinksDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleUpdateDialog::COleUpdateDialog](#coleupdatedialog)|Vytvoří `COleUpdateDialog` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleUpdateDialog::DoModal](#domodal)|Zobrazí **upravit odkazy** dialogové okno v režimu aktualizace.|
 

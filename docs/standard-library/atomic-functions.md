@@ -63,11 +63,11 @@ helpviewer_keywords:
 - std::atomic_thread_fence [C++]
 - std::kill_dependency [C++]
 ms.openlocfilehash: 6ec4ff879b70e4d2cc16a3328217660db695e859
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377135"
 ---
 # <a name="ltatomicgt-functions"></a>&lt;Atomic&gt; funkce
 
@@ -75,14 +75,14 @@ ms.locfileid: "50533754"
 |-|-|-|
 |[atomic_compare_exchange_strong](#atomic_compare_exchange_strong)|[atomic_compare_exchange_strong_explicit](#atomic_compare_exchange_strong_explicit)|[atomic_compare_exchange_weak](#atomic_compare_exchange_weak)|
 |[atomic_compare_exchange_weak_explicit](#atomic_compare_exchange_weak_explicit)|[atomic_exchange](#atomic_exchange)|[atomic_exchange_explicit](#atomic_exchange_explicit)|
-|[atomic_fetch_add](#atomic_fetch_add)|[atomic_fetch_add_explicit](#atomic_fetch_add_explicit)|[atomic_fetch_and –](#atomic_fetch_and)|
+|[atomic_fetch_add](#atomic_fetch_add)|[atomic_fetch_add_explicit](#atomic_fetch_add_explicit)|[atomic_fetch_and](#atomic_fetch_and)|
 |[atomic_fetch_and_explicit](#atomic_fetch_and_explicit)|[atomic_fetch_or](#atomic_fetch_or)|[atomic_fetch_or_explicit](#atomic_fetch_or_explicit)|
 |[atomic_fetch_sub](#atomic_fetch_sub)|[atomic_fetch_sub_explicit](#atomic_fetch_sub_explicit)|[atomic_fetch_xor](#atomic_fetch_xor)|
 |[atomic_fetch_xor_explicit](#atomic_fetch_xor_explicit)|[atomic_flag_clear](#atomic_flag_clear)|[atomic_flag_clear_explicit](#atomic_flag_clear_explicit)|
 |[atomic_flag_test_and_set](#atomic_flag_test_and_set)|[atomic_flag_test_and_set_explicit](#atomic_flag_test_and_set_explicit)|[atomic_init](#atomic_init)|
-|[atomic_is_lock_free](#atomic_is_lock_free)|[atomic_load –](#atomic_load)|[atomic_load_explicit](#atomic_load_explicit)|
+|[atomic_is_lock_free](#atomic_is_lock_free)|[atomic_load](#atomic_load)|[atomic_load_explicit](#atomic_load_explicit)|
 |[atomic_signal_fence](#atomic_signal_fence)|[atomic_store](#atomic_store)|[atomic_store_explicit](#atomic_store_explicit)|
-|[atomic_thread_fence –](#atomic_thread_fence)|[kill_dependency](#kill_dependency)|
+|[atomic_thread_fence](#atomic_thread_fence)|[kill_dependency](#kill_dependency)|
 
 ## <a name="atomic_compare_exchange_strong"></a>  atomic_compare_exchange_strong –
 
@@ -306,7 +306,7 @@ Ukazatel `atomic` objekt, který ukládá hodnotu typu `Ty`.
 *Hodnota*<br/>
 Hodnotu typu `Ty`.
 
-*Pořadí*<br/>
+*Order*<br/>
 A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -457,7 +457,7 @@ Ukazatel `atomic` objekt, který ukládá hodnotu typu `T`.
 *Hodnota*<br/>
 Hodnotu typu `T`.
 
-*Pořadí*<br/>
+*Order*<br/>
 A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -521,7 +521,7 @@ Ukazatel `atomic` objekt, který ukládá hodnotu typu `T`.
 *Hodnota*<br/>
 Hodnotu typu `T`.
 
-*Pořadí*<br/>
+*Order*<br/>
 A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -676,7 +676,7 @@ Ukazatel `atomic` objekt, který ukládá hodnotu typu `T`.
 *Hodnota*<br/>
 Hodnotu typu `T`.
 
-*Pořadí*<br/>
+*Order*<br/>
 A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -698,7 +698,7 @@ inline void atomic_flag_clear(atomic_flag* Flag) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Příznak*<br/>
+*Parametr*<br/>
 Ukazatel `atomic_flag` objektu.
 
 ## <a name="atomic_flag_clear_explicit"></a>  atomic_flag_clear_explicit
@@ -712,10 +712,10 @@ inline void atomic_flag_clear_explicit(atomic_flag* Flag, memory_order Order) no
 
 ### <a name="parameters"></a>Parametry
 
-*Příznak*<br/>
+*Parametr*<br/>
 Ukazatel `atomic_flag` objektu.
 
-*Pořadí*<br/>
+*Order*<br/>
 A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_flag_test_and_set"></a>  atomic_flag_test_and_set
@@ -729,7 +729,7 @@ inline bool atomic_flag_test_and_set(atomic_flag* Flag,) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Příznak*<br/>
+*Parametr*<br/>
 Ukazatel `atomic_flag` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -747,10 +747,10 @@ inline bool atomic_flag_test_and_set_explicit(atomic_flag* Flag, memory_order Or
 
 ### <a name="parameters"></a>Parametry
 
-*Příznak*<br/>
+*Parametr*<br/>
 Ukazatel `atomic_flag` objektu.
 
-*Pořadí*<br/>
+*Order*<br/>
 A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -844,7 +844,7 @@ inline Ty atomic_load_explicit(const atomic<Ty>* Atom, memory_order Order) noexc
 *Atom*<br/>
 Ukazatel `atomic` objekt, který obsahuje hodnotu typu `Ty`.
 
-*Pořadí*<br/>
+*Order*<br/>
 A [memory_order](../standard-library/atomic-enums.md#memory_order_enum). Nepoužívejte `memory_order_release` nebo `memory_order_acq_rel`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -861,7 +861,7 @@ inline void atomic_signal_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Pořadí*<br/>
+*Order*<br/>
 Omezení, která určuje typ plotu řazení paměti.
 
 ### <a name="remarks"></a>Poznámky
@@ -926,7 +926,7 @@ Ukazatel `atomic` objekt, který obsahuje hodnotu typu `Ty`.
 *Hodnota*<br/>
 Hodnotu typu `Ty`.
 
-*Pořadí*<br/>
+*Order*<br/>
 A [memory_order](../standard-library/atomic-enums.md#memory_order_enum). Nepoužívejte `memory_order_consume`, `memory_order_acquire`, nebo `memory_order_acq_rel`.
 
 ### <a name="remarks"></a>Poznámky
@@ -943,7 +943,7 @@ inline void atomic_thread_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Pořadí*<br/>
+*Order*<br/>
 Omezení, která určuje typ plotu řazení paměti.
 
 ### <a name="remarks"></a>Poznámky

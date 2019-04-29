@@ -85,11 +85,11 @@ helpviewer_keywords:
 - CPaneDivider [MFC], m_pSliderRTC
 ms.assetid: 8e828a5d-232f-4127-b8e3-7fa45a7a476e
 ms.openlocfilehash: 43cba977d50e161c58d3e240e1282049a415c88d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58773850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373099"
 ---
 # <a name="cpanedivider-class"></a>Cpanedivider – třída
 
@@ -107,13 +107,13 @@ class CPaneDivider : public CBasePane
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPaneDivider::CPaneDivider](#cpanedivider)||
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPaneDivider::AddPaneContainer](#addpanecontainer)||
 |[CPaneDivider::AddPane](#addpane)||
@@ -152,14 +152,14 @@ class CPaneDivider : public CBasePane
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPaneDivider::GetPanes](#getpanes)|Vrátí seznam podoken, které se nacházejí v [cpanecontainer – třída](../../mfc/reference/cpanecontainer-class.md). Tuto metodu lze volat pouze pro výchozí podokně oddělovače.|
 |[CPaneDivider::GetPaneDividers](#getpanedividers)|Vrátí seznam oddělovačů podokno, které se nacházejí v [cpanecontainer – třída](../../mfc/reference/cpanecontainer-class.md). Tuto metodu lze volat pouze pro výchozí podokně oddělovače.|
 
 ### <a name="data-members"></a>Datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|Určuje výchozí šířku v pixelech všechny oddělovače podokno v aplikaci.|
 |[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|Drží ukazatel o informace o třídě modulu runtime `CPaneDivider`-odvozenému objektu.|

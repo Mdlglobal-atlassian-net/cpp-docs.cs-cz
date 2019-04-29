@@ -1,5 +1,5 @@
 ---
-title: '&lt;iostream –&gt;'
+title: '&lt;iostream&gt;'
 ms.date: 09/20/2017
 f1_keywords:
 - <iostream>
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
 ms.openlocfilehash: 18d6a8517d71cfa9c7e17a45c97f77977ec778f0
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385138"
 ---
-# <a name="ltiostreamgt"></a>&lt;iostream –&gt;
+# <a name="ltiostreamgt"></a>&lt;iostream&gt;
 
 Deklaruje objekty, které určují čtení a zápis do standardních datových proudů. To je často jediným hlavičky, které je potřeba zahrnout provádět vstup a výstup z programu v jazyce C++.
 
@@ -50,7 +50,7 @@ Tuto záruku však není univerzální. Statický konstruktor může volat funkc
 |||
 |-|-|
 |[cerr](#cerr)|Určuje, `cerr` globální datového proudu.|
-|[CIN](#cin)|Určuje, `cin` globální datového proudu.|
+|[cin](#cin)|Určuje, `cin` globální datového proudu.|
 |[clog](#clog)|Určuje, `clog` globální datového proudu.|
 |[cout](#cout)|Určuje, `cout` globální datového proudu.|
 |[wcerr](#wcerr)|Určuje, `wcerr` globální datového proudu.|

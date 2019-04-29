@@ -43,11 +43,11 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
 ms.openlocfilehash: 15241485278f09d16c86fc7274f2fc1d85a7a2f7
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58778946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372410"
 ---
 # <a name="cprogressctrl-class"></a>Cprogressctrl – třída
 
@@ -63,13 +63,13 @@ class CProgressCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CProgressCtrl::CProgressCtrl](#cprogressctrl)|Vytvoří `CProgressCtrl` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CProgressCtrl::Create](#create)|Vytvoří ovládací prvek indikátoru průběhu a připojí ho k `CProgressCtrl` objektu.|
 |[CProgressCtrl::CreateEx](#createex)|Vytvoří ovládací prvek průběh se zadaným rozšířené styly Windows a připojí ho k `CProgressCtrl` objektu.|
@@ -297,7 +297,7 @@ int GetState() const;
 
 Stav aktuální ovládací prvek indikátoru průběhu, který je jedním z následujících hodnot:
 
-|Hodnota|Stav|
+|Value|Stav|
 |-----------|-----------|
 |PBST_NORMAL|V průběhu|
 |PBST_ERROR|Chyba|

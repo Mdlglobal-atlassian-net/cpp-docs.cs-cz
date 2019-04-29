@@ -1,31 +1,31 @@
 ---
-title: Systém typů (C + +/ CX)
+title: Systém typů (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
 ms.openlocfilehash: fbc7a178621624e396c80509703ce1b5b4c19162
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392086"
 ---
-# <a name="type-system-ccx"></a>Systém typů (C + +/ CX)
+# <a name="type-system-ccx"></a>Systém typů (C++/CX)
 
-Pomocí architektury Windows Runtime, můžete pomocí jazyka C + +/ CX, Visual Basic, Visual C# a JavaScript pro zápis aplikace a komponenty, které přímo přístup k rozhraní API Windows a zajistit vzájemnou funkční spolupráci s ostatními modulu Windows Runtime aplikace a komponenty. Aplikace pro univerzální platformu Windows, které jsou napsané v jazyce C++ se kompilují do nativního kódu, který se spustí přímo v procesoru. Aplikace pro univerzální platformu Windows, které jsou napsány v jazyce C# nebo Visual Basic zkompilovat pro jazyk Microsoft intermediate language (MSIL) a spustit v modulu common language runtime (CLR). Aplikace pro univerzální platformu Windows, které jsou napsané v jazyce JavaScript spouštění v prostředí za běhu. Součásti operačního systému Windows Runtime, samotné jsou napsané v jazyce C++ a spouštět v nativním kódu. Všechny tyto součásti a aplikace pro univerzální platformu Windows komunikovat přímo pomocí prostředí Windows Runtime binárním rozhraním aplikace (ABI).
+Pomocí architektury Windows Runtime, můžete použít C++/CX, Visual Basic, Visual C# a jazyka JavaScript pro zápis aplikace a komponenty, které přímo přístup k rozhraní API Windows a zajistit vzájemnou funkční spolupráci s ostatními modulu Windows Runtime aplikace a komponenty. Aplikace pro univerzální platformu Windows, které jsou napsané v jazyce C++ se kompilují do nativního kódu, který se spustí přímo v procesoru. Aplikace pro univerzální platformu Windows, které jsou napsány v jazyce C# nebo Visual Basic zkompilovat pro jazyk Microsoft intermediate language (MSIL) a spustit v modulu common language runtime (CLR). Aplikace pro univerzální platformu Windows, které jsou napsané v jazyce JavaScript spouštění v prostředí za běhu. Součásti operačního systému Windows Runtime, samotné jsou napsané v jazyce C++ a spouštět v nativním kódu. Všechny tyto součásti a aplikace pro univerzální platformu Windows komunikovat přímo pomocí prostředí Windows Runtime binárním rozhraním aplikace (ABI).
 
-Pokud chcete povolit podporu pro prostředí Windows Runtime v moderní C++ idiom, společnost Microsoft vytvořila C + +/ CX. C + +/ CX poskytuje základní typy a implementace základní typy modulu Windows Runtime, které umožňují aplikací v jazyce C++ a komponenty pro komunikaci mezi ABI s aplikacemi, které jsou napsané v jiných jazycích. Můžete používat jakýkoli typ Windows Runtime nebo vytvořit třídy, struktury, rozhraní a další uživatelem definované typy, které mohou být spotřebovány jiných aplikací pro univerzální platformu Windows a komponenty. aplikace univerzální platformy Windows, která je napsána v jazyce C + +/ CX můžete také použít regulární C++ třídy a struktury tak dlouho, dokud nebudou mít přístupnost public.
+Povolení podpory pro Windows Runtime v jako moderní C++ idiom, Microsoft, které jsou vytvořené C++/CX. C++/CX poskytuje implementace základní prostředí Windows Runtime a vestavěné typy základní typy této povolit C++ aplikace a komponenty pro komunikaci mezi ABI s aplikacemi, které jsou napsané v jiných jazycích. Můžete používat jakýkoli typ Windows Runtime nebo vytvořit třídy, struktury, rozhraní a další uživatelem definované typy, které mohou být spotřebovány jiných aplikací pro univerzální platformu Windows a komponenty. aplikace s univerzální platformu Windows, která je napsána v C++/CX můžete použít také pravidelně C++ třídy a struktury, dokud nebudou mít přístupnost public.
 
-Podrobné informace o jazyce C + +/ CX jazyk projekce a jak to funguje pod pokličkou, najdete v těchto příspěvcích blogu:
+Podrobné informace o C++/CX jazyk projekce a jak to funguje pod pokličkou, najdete v těchto příspěvcích blogu:
 
-1. [C + +/ CX součástí 0 \[n\]: Úvod](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)
+1. [C++/CX součástí 0 \[n\]: Úvod](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)
 
-1. [C + +/ CX, část 1 ze \[n\]: Jednoduchá třída](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)
+1. [C++/CX 1. části \[n\]: Jednoduchá třída](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)
 
-1. [C + +/ CX část 2 \[n\]: Typy, které Hats Wear](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)
+1. [C++/CX část 2 \[n\]: Typy, které Hats Wear](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)
 
-1. [C + +/ CX část 3 \[n\]: Ve výstavbě](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)
+1. [C++/CX část 3 \[n\]: Ve výstavbě](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)
 
-1. [C + +/ CX část 4 \[n\]: Statické členské funkce](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)
+1. [C++/CX část 4 \[n\]: Statické členské funkce](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)
 
 ## <a name="windows-metadata-winmd-files"></a>Soubory metadat (.winmd) pro Windows
 
@@ -40,16 +40,16 @@ Určuje, zda je viditelný v metadatech typu nebo metodě závisí na jaké modi
 |**Publikování metadat**|**Nezveřejněno v metadatech**|
 |public|private|
 |protected|internal|
-|veřejné, chráněné|privátní, chráněné|
+|veřejné, chráněné|private protected|
 
-Můžete použít **prohlížeče objektů** zobrazíte obsah soubory .winmd. Součásti prostředí Windows Runtime, které jsou součástí Windows jsou v souboru Windows.winmd. Default.winmd soubor obsahuje základní typy, které se používají v jazyce C + +/ CX a platform.winmd obsahuje další typy z oboru názvů Platform. Ve výchozím nastavení jsou zahrnuty tyto tři soubory winmd v každém projektu C++ pro aplikace univerzální platformy Windows.
+Můžete použít **prohlížeče objektů** zobrazíte obsah soubory .winmd. Součásti prostředí Windows Runtime, které jsou součástí Windows jsou v souboru Windows.winmd. Default.winmd soubor obsahuje základní typy, které se používají v C++/CX a platform.winmd obsahuje další typy z oboru názvů Platform. Ve výchozím nastavení jsou zahrnuty tyto tři soubory winmd v každém projektu C++ pro aplikace univerzální platformy Windows.
 
 > [!TIP]
 > Typy v [Platform::Collections – Namespace](../cppcx/platform-collections-namespace.md) nejsou zobrazeny v souboru winmd, protože nejsou veřejné. Jsou privátní implementace specifické pro C++, které jsou definovány v rozhraní `Windows::Foundation::Collections`. Aplikace s Windows Runtime, která je napsána v jazyce JavaScript nebo C# neví, co [Platform::Collections:: Vector – třída](../cppcx/platform-collections-vector-class.md) je, ale může spotřebovávat `Windows::Foundation::Collections::IVector`. `Platform::Collections` Typy jsou definovány v collection.h.
 
-## <a name="windows-runtime-type-system-in-ccx"></a>Systém typů prostředí Windows Runtime v jazyce C + +/ CX
+## <a name="windows-runtime-type-system-in-ccx"></a>Systém typů prostředí Windows Runtime v C++/CX
 
-Následující části popisují hlavní funkce systému typů modulu Windows Runtime a jak jsou podporovány v jazyce C + +/ CX.
+Následující části popisují hlavní funkce systému typů modulu Windows Runtime a jak jsou podporovány v C++/CX.
 
 ### <a name="namespaces"></a>Jmenné prostory
 
@@ -61,9 +61,9 @@ Další informace najdete v tématu [obory názvů a viditelnost typů](../cppcx
 
 ### <a name="fundamental-types"></a>Základní typy
 
-Modul Windows Runtime definuje následující základní typy, UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64, jedním, Double, Char16, logická hodnota a řetězec. C + +/ CX podporuje základní číselné typy jako typ uint16, uint32, uint64, int16, int32, int64, float32, float64 a char16 v její výchozí obor názvů. Datový typ Boolean a řetězce je definována v oboru názvů Platform.
+Modul Windows Runtime definuje následující základní typy, UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64, jedním, Double, Char16, logická hodnota a řetězec. C++/CX podporuje v její výchozí obor názvů jako uint16, uint32, uint64, int16, int32, int64, float32, float64 a char16 základní číselné typy. Datový typ Boolean a řetězce je definována v oboru názvů Platform.
 
-C + +/ CX také definuje uint8 ekvivalentní `unsigned char`, což není podporováno v modulu Windows Runtime a nelze použít ve veřejných rozhraní API.
+C++/CX také definuje uint8 ekvivalentní `unsigned char`, což není podporováno v modulu Windows Runtime a nelze použít ve veřejných rozhraní API.
 
 Základní typ se dají vytvořit s možnou hodnotou Null v obalením [Platform::ibox – rozhraní](../cppcx/platform-ibox-interface.md) rozhraní. Další informace najdete v tématu [hodnotové třídy a struktury](../cppcx/value-classes-and-structs-c-cx.md).
 
@@ -77,13 +77,13 @@ Další informace najdete v tématu [řetězce](../cppcx/strings-c-cx.md).
 
 ### <a name="arrays"></a>Pole
 
-Modul Windows Runtime podporuje 1rozměrné pole libovolného typu. Pole polí se nepodporují.  V jazyce C + +/ CX, pole prostředí Windows Runtime se vykreslují jako [Platform::Array – třída](../cppcx/platform-array-class.md).
+Modul Windows Runtime podporuje 1rozměrné pole libovolného typu. Pole polí se nepodporují.  V C++/CX pole prostředí Windows Runtime se vykreslují jako [Platform::Array – třída](../cppcx/platform-array-class.md).
 
 Další informace najdete v tématu [pole a WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)
 
 ### <a name="ref-classes-and-structs"></a>Referenční třídy a struktury
 
-Třída Windows Runtime je plánované v jazyce C + +/ CX jako ref class nebo ref struct, protože se zkopírují podle odkazu. Správa paměti pro referenční třídy a struktury ref se transparentně zpracovává prostřednictvím počítání odkazů. Při poslední odkaz na objekt dostane mimo rozsah, bude objekt zničen. Třída nebo "REF" struktury ref provádět následující akce:
+Třída Windows Runtime se vykreslují ve C++/CX jako ref class nebo ref struct, protože se zkopírují podle odkazu. Správa paměti pro referenční třídy a struktury ref se transparentně zpracovává prostřednictvím počítání odkazů. Při poslední odkaz na objekt dostane mimo rozsah, bude objekt zničen. Třída nebo "REF" struktury ref provádět následující akce:
 
 - Obsahovat jako konstruktory členů, metody, vlastnosti a události. Tyto členy mohou mít veřejný, privátní, chráněné nebo interní přístupnost.
 
@@ -115,9 +115,9 @@ Vlastnost je členem veřejné datové libovolný typ Windows Runtime a je imple
 
 Další informace najdete v tématu [vlastnosti](../cppcx/properties-c-cx.md).
 
-### <a name="windows-runtime-collections-in-ccx"></a>Kolekce modulu Windows Runtime v jazyce C + +/ CX
+### <a name="windows-runtime-collections-in-ccx"></a>Kolekce modulu Windows Runtime v C++/CX
 
-Modul Windows Runtime definuje sadu rozhraní pro typy kolekcí, které implementují jednotlivé jazyky vlastním způsobem. C + +/ CX poskytuje implementaci v [Platform::Collections:: Vector – třída](../cppcx/platform-collections-vector-class.md), [Platform::Collections:: map – třída](../cppcx/platform-collections-map-class.md)a další související konkrétní kolekci typů, které jsou kompatibilní s jejich Standardní knihovny šablon (STL) protějšky.
+Modul Windows Runtime definuje sadu rozhraní pro typy kolekcí, které implementují jednotlivé jazyky vlastním způsobem. C++/CX poskytuje implementaci v [Platform::Collections:: Vector – třída](../cppcx/platform-collections-vector-class.md), [Platform::Collections:: map – třída](../cppcx/platform-collections-map-class.md)a další související konkrétní kolekci typů, které jsou kompatibilní s jejich Standardní knihovny šablon (STL) protějšky.
 
 Další informace najdete v tématu [kolekce](../cppcx/collections-c-cx.md).
 
@@ -147,7 +147,7 @@ Další informace najdete v tématu [delegáti](../cppcx/delegates-c-cx.md).
 
 ### <a name="exceptions"></a>Výjimky
 
-V jazyce C + +/ CX, můžete zachytit vlastní typy výjimek, [std::exception](../standard-library/exception-class.md) typů, a [Platform::Exception](../cppcx/platform-exception-class.md) typy.
+V C++/CX, můžete zachytit vlastní typy výjimek, [std::exception](../standard-library/exception-class.md) typů, a [Platform::Exception](../cppcx/platform-exception-class.md) typy.
 
 Další informace najdete v tématu [výjimky](../cppcx/exceptions-c-cx.md).
 
@@ -159,7 +159,7 @@ Další informace najdete v tématu [události](../cppcx/events-c-cx.md).
 
 ### <a name="casting"></a>Přetypování
 
-C + +/ CX podporuje standardní operátorů přetypování jazyka C++ [static_cast](../cpp/static-cast-operator.md), [dynamic_cast](../cpp/dynamic-cast-operator.md), a [reinterpret_cast](../cpp/reinterpret-cast-operator.md)a také **safe_cast**operátor, který je specifická pro C + +/ CX.
+C++/CX podporuje standard C++ operátory přetypování [static_cast](../cpp/static-cast-operator.md), [dynamic_cast](../cpp/dynamic-cast-operator.md), a [reinterpret_cast](../cpp/reinterpret-cast-operator.md)a také **safe_cast** operátor, který je specifický pro C++/CX.
 
 Další informace najdete v tématu [přetypování](../cppcx/casting-c-cx.md).
 

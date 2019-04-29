@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual C++, exception handling
 ms.assetid: 65f80b44-9d0f-4d17-b910-07205a5c5c40
 ms.openlocfilehash: b4eaab7d5bb352cccc612dd950572464b82b67e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392307"
 ---
 # <a name="c-exception-handling"></a>Zpracovávání výjimek v jazyce C++
 
@@ -38,7 +38,7 @@ Tato diskuse o zpracování výjimek jazyka C++ obsahuje:
 
 ## <a name="support-for-earlier-mfc-exceptions"></a>Podpora starších výjimek knihovny MFC
 
-Od verze 4.0 knihovna MFC začaly využívat mechanismus zpracování výjimek jazyka C++. I když jste v novém kódu vedeni k používání zpracování výjimek jazyka C++, knihovna MFC verze 4.0 a novější zachovává makra z předchozích verzí knihovny MFC z důvodu kompatibility se starším kódem. Tato makra a nový mechanismus lze také kombinovat. Informace o kombinování maker a zpracování výjimek jazyka C++ a o převodu starého kódu pro použití s novým mechanismem naleznete v článcích [výjimky: použití maker MFC a výjimek jazyka C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md) a [výjimky: převádění z knihovny MFC Makra výjimek](../mfc/exceptions-converting-from-mfc-exception-macros.md). Starší výjimky maker knihovny MFC, pokud je stále používáte, se vyhodnotí jako klíčová slova výjimek jazyka C++. Zobrazit [výjimky: změny maker pro výjimky ve verzi 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md).
+Od verze 4.0 knihovna MFC začaly využívat mechanismus zpracování výjimek jazyka C++. I když jste v novém kódu vedeni k používání zpracování výjimek jazyka C++, knihovna MFC verze 4.0 a novější zachovává makra z předchozích verzí knihovny MFC z důvodu kompatibility se starším kódem. Tato makra a nový mechanismus lze také kombinovat. Informace o kombinování maker a C++ výjimka zpracování a o převodu starého kódu pro použití s novým mechanismem, najdete v článcích [výjimky: Použití maker MFC a C++ výjimky](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md) a [výjimky: Převádění z maker výjimek prostředí MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md). Starší výjimky maker knihovny MFC, pokud je stále používáte, se vyhodnotí jako klíčová slova výjimek jazyka C++. Zobrazit [výjimky: Změny maker pro výjimky ve verzi 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md).
 
 ## <a name="see-also"></a>Viz také:
 

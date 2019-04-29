@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::IsBaseOfStrict::value constant
 ms.assetid: 6fed7366-c8d4-4991-b4fb-43ed93f8e1bf
 ms.openlocfilehash: 85aeb71ceaa162cc6366836dd286f2f9983d34e2
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386015"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict – struktura
 
@@ -48,7 +48,7 @@ První šablona testuje, jestli typ je odvozen od základního typu, který mů�
 
 ### <a name="public-constants"></a>Veřejné konstanty
 
-Name                            | Popis
+Název                            | Popis
 ------------------------------- | --------------------------------------------------
 [IsBaseOfStrict::value](#value) | Označuje, zda je jeden typ základ jiného.
 

@@ -131,11 +131,11 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
 ms.openlocfilehash: efb833a8d4cc0b801f75951bc648d6b83df5bae8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372195"
 ---
 # <a name="crecordset-class"></a>CRecordset – třída
 
@@ -288,7 +288,7 @@ Pokud zdroj dat podporuje transakce, můžete vytvořit vaše `AddNew` volání 
 
 Je neplatné volat `AddNew` pro sadu záznamů jehož `Open` nebyla volána členská funkce. A `CDBException` je vyvolána, pokud zavoláte `AddNew` pro sadu záznamů, které se nejde připojit k. Můžete určit, jestli je sada záznamů aktualizovat pomocí volání [CanAppend](#canappend).
 
-Další informace najdete v následujících článcích: [Recordset: Jak sady záznamů aktualizují záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md), [sada záznamů: Přidání, aktualizace nebo odstranění záznamů (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md), a [transakce (ODBC)](../../data/odbc/transaction-odbc.md).
+Další informace najdete v následujících článcích: [Sada záznamů: Jak sady záznamů aktualizují záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md), [sada záznamů: Přidání, aktualizace nebo odstranění záznamů (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md), a [transakce (ODBC)](../../data/odbc/transaction-odbc.md).
 
 ### <a name="example"></a>Příklad
 

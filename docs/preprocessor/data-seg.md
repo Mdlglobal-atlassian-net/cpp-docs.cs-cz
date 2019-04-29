@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pragmas, data_seg
 ms.assetid: 65c66466-4c98-494f-93af-106beb4caf78
 ms.openlocfilehash: 414fc542aa3f84f985e326960d8cf73b67fd1580
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389304"
 ---
 # <a name="dataseg"></a>data_seg
 
@@ -30,10 +30,10 @@ Určuje datový segment inicializované proměnné, kde jsou uloženy v souboru 
 **push**<br/>
 (Volitelné) Vloží záznam do zásobníku vnitřního kompilátoru. A **nabízených** může mít *identifikátor* a *segment-name*.
 
-**POP**<br/>
+**pop**<br/>
 (Volitelné) Odstraní záznam z vrcholu vnitřního zásobníku kompilátoru.
 
-*identifikátor*<br/>
+*identifier*<br/>
 (Volitelné) Při použití s **nabízených**, přiřadí název záznamu ve vnitřním zásobníku kompilátoru. Při použití s **pop**, vyjme všechny záznamy z vnitřního zásobníku až do *identifikátor* li *identifikátor* nebyl nalezen v interním zásobníku, nic nevezme.
 
 *identifikátor* vyjmout několik záznamů lze jedním z jedné **pop** příkazu.
@@ -41,7 +41,7 @@ Určuje datový segment inicializované proměnné, kde jsou uloženy v souboru 
 *"segment-name"*<br/>
 (Volitelné) Název segmentu. Při použití s **pop**, je zásobník odebrán a *segment-name* stane aktivním názvem segmentu.
 
-*"segmentu třídy"*<br/>
+*"segment-class"*<br/>
 (Volitelné) Zahrnuto z důvodu kompatibility s jazykem C++ starším než verze 2.0. Ignorováno.
 
 ## <a name="remarks"></a>Poznámky

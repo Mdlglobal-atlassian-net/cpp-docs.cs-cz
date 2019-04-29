@@ -37,11 +37,11 @@ helpviewer_keywords:
 - CJumpList [MFC], SetAppID
 ms.assetid: d364d27e-f512-4b12-9872-c2a17c78ab1f
 ms.openlocfilehash: 9296912c97b1efb5f7cbd1ed9f769d0222d5f85c
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392567"
 ---
 # <a name="cjumplist-class"></a>Cjumplist – třída
 
@@ -62,7 +62,7 @@ class CJumpList;
 |[CJumpList::CJumpList](#cjumplist)|Vytvoří `CJumpList` objektu.|
 |[CJumpList::~CJumpList](#_dtorcjumplist)|Odstraní `CJumpList` objektu.|
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CJumpList::AbortList](#abortlist)|Přeruší transakci sestavování seznamu bez potvrzení.|
 |[CJumpList::AddDestination](#adddestination)|Přetíženo. Přidá cílový do seznamu.|

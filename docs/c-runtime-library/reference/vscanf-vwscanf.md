@@ -22,11 +22,11 @@ f1_keywords:
 - _vtscanf
 ms.assetid: d1df595b-11bc-4682-9441-a92616301e3b
 ms.openlocfilehash: 936dcc34fb0d2ed73919ca59c7419f2090c54e28
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383500"
 ---
 # <a name="vscanf-vwscanf"></a>vscanf, vwscanf
 
@@ -50,7 +50,7 @@ int vwscanf(
 *Formát*<br/>
 Řetězec řízení formátu.
 
-*seznam_argumentů*<br/>
+*arglist*<br/>
 Seznam argumentů s proměnnou délkou.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -149,6 +149,6 @@ The contents are: 36 92.300003 y n Wide characters
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf _sprintf_l –, swprintf, _swprintf_l –, \__swprintf_l –](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>
 [vscanf_s, vwscanf_s](vscanf-s-vwscanf-s.md)<br/>

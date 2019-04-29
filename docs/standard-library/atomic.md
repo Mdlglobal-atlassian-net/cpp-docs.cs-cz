@@ -49,11 +49,11 @@ f1_keywords:
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
 ms.openlocfilehash: e2146c7424d4903523372ad54b0cd2eece525cbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376598"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -78,7 +78,7 @@ Atomická operace má dvě vlastnosti klíče, které vám pomohou správně pra
 
 Na některých platformách, nemusí být možné efektivně provádět atomické operací pro některé typy bez použití `mutex` zámky. Atomický typ je *bez zámku* Pokud žádné atomické operace na daném typu nepoužívají zámky.
 
-**C ++ 11**: V obslužných rutinách signálu můžete provádět atomické operace na objektu `obj` Pokud `obj.is_lock_free()` nebo `atomic_is_lock_free(x)` hodnotu true.
+**C++11**: V obslužných rutinách signálu můžete provádět atomické operace na objektu `obj` Pokud `obj.is_lock_free()` nebo `atomic_is_lock_free(x)` hodnotu true.
 
 Třída [atomic_flag](../standard-library/atomic-flag-structure.md) poskytuje minimální Atomický typ, který má **bool** příznak. Jeho operace jsou vždy bez zámku.
 
@@ -98,7 +98,7 @@ Každý `atomic<integral>` má typ, který vám pomůže v makru odpovídající
 
 Pro každou z celočíselných typů se odpovídající pojmenované Atomický typ, který spravuje objekt daného celočíselného typu. Každý `atomic_integral` typ má stejnou sadu členských funkcí jako odpovídající instance `atomic<T>` a mohou být předány žádné atomické funkce bez členů.
 
-|`atomic_integral` Typ|Celočíselný typ|`atomic_is_lock_free` – Makro|
+|`atomic_integral` Typ|Celočíselný typ|`atomic_is_lock_free` Macro|
 |----------------------------|-------------------|---------------------------------|
 |`atomic_char`|**char**|ATOMIC_CHAR_LOCK_FREE|
 |`atomic_schar`|**podepsané char**|ATOMIC_CHAR_LOCK_FREE|
@@ -177,7 +177,7 @@ V následujícím seznamu funkcí, které nekončí řetězcem `_explicit` mají
 |[atomic_exchange_explicit](../standard-library/atomic-functions.md#atomic_exchange_explicit)|Nahradí uloženou hodnotu.|
 |[atomic_fetch_add](../standard-library/atomic-functions.md#atomic_fetch_add)|Přidá zadanou hodnotu ke stávající uložené hodnotě.|
 |[atomic_fetch_add_explicit](../standard-library/atomic-functions.md#atomic_fetch_add_explicit)|Přidá zadanou hodnotu ke stávající uložené hodnotě.|
-|[atomic_fetch_and –](../standard-library/atomic-functions.md#atomic_fetch_and)|Provádí logické bitové `and` na zadanou hodnotu a existující uložené hodnoty.|
+|[atomic_fetch_and](../standard-library/atomic-functions.md#atomic_fetch_and)|Provádí logické bitové `and` na zadanou hodnotu a existující uložené hodnoty.|
 |[atomic_fetch_and_explicit](../standard-library/atomic-functions.md#atomic_fetch_and_explicit)|Provádí logické bitové `and` na zadanou hodnotu a existující uložené hodnoty.|
 |[atomic_fetch_or](../standard-library/atomic-functions.md#atomic_fetch_or)|Provádí logické bitové `or` na zadanou hodnotu a existující uložené hodnoty.|
 |[atomic_fetch_or_explicit](../standard-library/atomic-functions.md#atomic_fetch_or_explicit)|Provádí logické bitové `or` na zadanou hodnotu a existující uložené hodnoty.|
@@ -191,12 +191,12 @@ V následujícím seznamu funkcí, které nekončí řetězcem `_explicit` mají
 |[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Nastaví příznak `atomic_flag` objektu **true**.|
 |[atomic_init](../standard-library/atomic-functions.md#atomic_init)|Nastaví hodnotu uloženou v `atomic` objektu.|
 |[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|Určuje, zda jsou atomické operace na zadaný objekt bez zámku.|
-|[atomic_load –](../standard-library/atomic-functions.md#atomic_load)|Atomicky načte hodnotu.|
+|[atomic_load](../standard-library/atomic-functions.md#atomic_load)|Atomicky načte hodnotu.|
 |[atomic_load_explicit](../standard-library/atomic-functions.md#atomic_load_explicit)|Atomicky načte hodnotu.|
 |[atomic_signal_fence](../standard-library/atomic-functions.md#atomic_signal_fence)|Funguje jako *ohrazení* , který vytváří požadavky mezi ohrazeními ve volající vlákno, které řazení paměti má obslužné rutiny signálu spuštěn ve stejném vlákně.|
 |[atomic_store](../standard-library/atomic-functions.md#atomic_store)|Atomicky ukládá hodnotu.|
 |[atomic_store_explicit](../standard-library/atomic-functions.md#atomic_store_explicit)|Atomicky ukládá hodnotu.|
-|[atomic_thread_fence –](../standard-library/atomic-functions.md#atomic_thread_fence)|Funguje jako *ohrazení* , který vytváří požadavky s ohledem na jinými ohrazeními řazení paměti.|
+|[atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence)|Funguje jako *ohrazení* , který vytváří požadavky s ohledem na jinými ohrazeními řazení paměti.|
 |[kill_dependency](../standard-library/atomic-functions.md#kill_dependency)|Rozdělí řetězec možných závislostí.|
 
 ## <a name="see-also"></a>Viz také:
