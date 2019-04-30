@@ -5,11 +5,11 @@ helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
 ms.openlocfilehash: 75491130e8e5fc426116685332490efd2c5fe60b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262867"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346340"
 ---
 # <a name="parallel-algorithms"></a>Paralelní algoritmy
 
@@ -84,9 +84,9 @@ Vzhledem k tomu, `parallel_for` algoritmus funguje pro každou položku paraleln
 
 ##  <a name="parallel_for_each"></a> Algoritmus parallel_for_each
 
-[: Concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmus provádí úlohy na iterativní kontejneru, jako je například těch, které poskytuje standardní knihovnou jazyka C++, paralelně. Používá stejnou logiku dělení, který `parallel_for` algoritmus používá.
+[: Concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmus iterativní kontejneru, jako je například těch, které poskytuje pomocí provádí úlohy C++ standardní knihovny, paralelně. Používá stejnou logiku dělení, který `parallel_for` algoritmus používá.
 
-`parallel_for_each` Algoritmus vypadá podobně jako standardní knihovny C++ [std::for_each](../../standard-library/algorithm-functions.md#for_each) algoritmus, s výjimkou, že `parallel_for_each` algoritmus spustí úlohy současně. Další paralelní algoritmy, jako jsou `parallel_for_each` nepracuje v určitém pořadí úkolů.
+`parallel_for_each` Algoritmus vypadá podobně jako C++ standardní knihovny [std::for_each](../../standard-library/algorithm-functions.md#for_each) algoritmus, s výjimkou, že `parallel_for_each` algoritmus spustí úlohy současně. Další paralelní algoritmy, jako jsou `parallel_for_each` nepracuje v určitém pořadí úkolů.
 
 I když `parallel_for_each` algoritmus funguje na dopředné iterátory a iterátory s náhodným přístupem, vrací lepší výsledky s iterátory s náhodným přístupem.
 
@@ -134,7 +134,7 @@ Kompletní příklady, které používají `parallel_invoke` algoritmus, najdete
 
 ##  <a name="parallel_transform_reduce"></a> Algoritmy parallel_transform a parallel_reduce
 
-[Concurrency::parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform) a [concurrency::parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce) algoritmy jsou paralelní verze algoritmů standardní knihovny C++ [std::transform](../../standard-library/algorithm-functions.md#transform)a [std::accumulate](../../standard-library/numeric-functions.md#accumulate)v uvedeném pořadí. Verze modulu Runtime souběžnosti se chovají jako standardní knihovny C++ verze, s tím rozdílem, že pořadí operací není určit, protože paralelně spustit. Pomocí těchto algoritmů při práci se sadou, který je dostatečně velký, aby získáte výhody výkonu a škálovatelnosti pro paralelní zpracování.
+[Concurrency::parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform) a [concurrency::parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce) algoritmy jsou paralelní verze C++ algoritmů standardní knihovny [std::transform](../../standard-library/algorithm-functions.md#transform) a [std::accumulate](../../standard-library/numeric-functions.md#accumulate)v uvedeném pořadí. Verze modulu Runtime souběžnosti se chovají jako standardní knihovny C++ verze, s tím rozdílem, že pořadí operací není určit, protože paralelně spustit. Pomocí těchto algoritmů při práci se sadou, který je dostatečně velký, aby získáte výhody výkonu a škálovatelnosti pro paralelní zpracování.
 
 > [!IMPORTANT]
 >  `parallel_transform` a `parallel_reduce` algoritmy podporovat pouze náhodného přístupu, obousměrné a dopředné iterátory, protože tyto iterátory vytvořit stabilní paměti adresy. Také musíte vytvořit tyto iterátory jinou hodnotu než`const` l hodnoty.
@@ -241,7 +241,7 @@ Následující tabulka shrnuje důležité vlastnosti tři paralelní algoritmy 
 
 |algoritmus|Popis|Mechanismus řazení|Řazení Stability|Požadavky na paměť|Čas složitost|Přístup k iterátoru|
 |---------------|-----------------|-----------------------|--------------------|-------------------------|---------------------|---------------------|
-|`parallel_sort`|Pro obecné účely na základě porovnání řazení.|Na základě porovnání (vzestupně)|Nestabilní|Žádná|O((N/P)log(N/P) + 2N((P-1)/P))|náhodné|
+|`parallel_sort`|Pro obecné účely na základě porovnání řazení.|Na základě porovnání (vzestupně)|Nestabilní|Žádné|O((N/P)log(N/P) + 2N((P-1)/P))|náhodné|
 |`parallel_buffered_sort`|Rychlejší pro obecné účely na základě porovnání řazení, která vyžaduje O(N) místa.|Na základě porovnání (vzestupně)|Nestabilní|Vyžaduje další prostor O(N)|O((N/P)log(N))|náhodné|
 |`parallel_radixsort`|Celé číslo na základě klíčů řazení, která vyžaduje O(N) místa.|Na základě hodnoty hash|Stable|Vyžaduje další prostor O(N)|O(N/P)|náhodné|
 

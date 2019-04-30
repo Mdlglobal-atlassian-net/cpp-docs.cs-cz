@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CTabView [MFC], OnActivateView
 ms.assetid: 8e6ecd9d-d28d-432b-8ec8-0446f0204d52
 ms.openlocfilehash: 56640edbd0d2e74a1cc00dad5441350ad3d35725
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58772086"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346242"
 ---
 # <a name="ctabview-class"></a>Ctabview – třída
 
@@ -43,7 +43,7 @@ class CTabbedView : public CView
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CTabView::AddView](#addview)|Přidá nové zobrazení pro ovládací prvek karty.|
 |[CTabView::FindTab](#findtab)|Vrátí index zadané zobrazení v ovládacím prvku karty.|
@@ -54,7 +54,7 @@ class CTabbedView : public CView
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CTabView::IsScrollBar](#isscrollbar)|Volá se rozhraním při vytváření zobrazení karta slouží k určení, zda má kartě se zobrazením sdílené vodorovný posuvník.|
 |[CTabView::OnActivateView](#onactivateview)|Volá se rozhraním, když se kartě se zobrazením je aktivní nebo neaktivní.|

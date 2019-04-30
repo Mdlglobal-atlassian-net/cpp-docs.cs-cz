@@ -53,11 +53,11 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
 ms.openlocfilehash: d1922c2f2d804c2a93d30dc0708b2d3ae037414d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58768702"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341818"
 ---
 # <a name="coledocument-class"></a>Coledocument – třída
 
@@ -73,13 +73,13 @@ class COleDocument : public CDocument
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleDocument::COleDocument](#coledocument)|Vytvoří `COleDocument` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleDocument::AddItem](#additem)|Přidá položku do seznamu položek udržuje dokumentu.|
 |[COleDocument::ApplyPrintDevice](#applyprintdevice)|Nastaví tiskové cílovému zařízení pro všechny klientské položky v dokumentu.|
@@ -97,7 +97,7 @@ class COleDocument : public CDocument
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleDocument::OnEditChangeIcon](#oneditchangeicon)|Zpracovává události v příkazu nabídky Změnit ikonu.|
 |[COleDocument::OnEditConvert](#oneditconvert)|Zpracovává server převod vložený nebo připojený objekt z jednoho typu na jiný.|
