@@ -29,11 +29,11 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
 ms.openlocfilehash: d60082092bd42fbe220eee08953ad5fda0ff0a85
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58774150"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64339563"
 ---
 # <a name="cscrollview-class"></a>CScrollView Class
 
@@ -49,13 +49,13 @@ class CScrollView : public CView
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CScrollView::CScrollView](#cscrollview)|Vytvoří `CScrollView` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CScrollView::CheckScrollBars](#checkscrollbars)|Označuje, jestli se posuvníky zobrazení vodorovného a svislého posuvníku.|
 |[CScrollView::FillOutsideRect](#filloutsiderect)|Vyplní oblast zobrazení mimo oblast posouvání.|

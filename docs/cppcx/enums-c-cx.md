@@ -1,17 +1,17 @@
 ---
-title: Výčty (C + +/ CX)
+title: Výčty (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 99fbbe28-c1cd-43af-9ead-60f90eba6e68
 ms.openlocfilehash: f16a288a0b928b74ef42de5781fd1b54930927d6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752139"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345817"
 ---
-# <a name="enums-ccx"></a>Výčty (C + +/ CX)
+# <a name="enums-ccx"></a>Výčty (C++/CX)
 
-C + +/ CX podporuje `public enum class` – klíčové slovo, což je standard c++ analagous `scoped  enum`. Při použití enumerátor, který je deklarovaná příkazem using `public enum class` – klíčové slovo, identifikátor výčtu musíte použít k určení rozsahu každá hodnota výčtu.
+C++/CX podporuje `public enum class` – klíčové slovo, což je analagous ze standardních C++ `scoped  enum`. Při použití enumerátor, který je deklarovaná příkazem using `public enum class` – klíčové slovo, identifikátor výčtu musíte použít k určení rozsahu každá hodnota výčtu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -41,4 +41,4 @@ Následující příklad ukazuje, jak převést na číselnou ekvivalenty a prov
 
 [Systém typů](../cppcx/type-system-c-cx.md)<br/>
 [Referenční dokumentace jazyka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Odkaz na obory názvů](../cppcx/namespaces-reference-c-cx.md)
+[Referenční informace o oborech názvů](../cppcx/namespaces-reference-c-cx.md)

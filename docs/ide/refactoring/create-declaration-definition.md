@@ -3,19 +3,19 @@ title: Vytvořit deklaraci / definici
 ms.date: 10/19/2018
 ms.assetid: 6b1cdcb2-765e-4b93-8cef-92b861f64eba
 ms.openlocfilehash: 59ae3ebc23303554a35eea17c7e28850a4a1499a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693123"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344247"
 ---
 # <a name="create-declaration--definition"></a>Vytvořit deklaraci / definici
 
-**Co:** umožňuje okamžitě generovat deklarace nebo definice funkce.
+**Co:** Umožňuje okamžitě generovat deklarace nebo definice funkce.
 
-**Kdy:** máte funkci, která vyžaduje deklaraci, nebo naopak.
+**Kdy:** Máte funkci, která vyžaduje deklaraci, nebo naopak.
 
-**Důvod, proč:** můžete ručně vytvořit deklaraci/definici, ale tím se vytvoří jej automaticky, v případě potřeby vytvoření záhlaví/kódový soubor.
+**Proč:** Můžete ručně vytvořit deklaraci/definici, ale tím se vytvoří jej automaticky, v případě potřeby vytvoření záhlaví/kódový soubor.
 
 **Jak:**
 

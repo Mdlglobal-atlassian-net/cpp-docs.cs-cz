@@ -10,11 +10,11 @@ helpviewer_keywords:
 - add member function wizard [C++]
 ms.assetid: 55b25ddb-541d-44ed-957c-974ef91cfc85
 ms.openlocfilehash: 1cd7abbbc43ae56861b3b83451b41933b8b0b4f0
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693409"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346001"
 ---
 # <a name="add-a-member-function"></a>Přidat členskou funkci
 
@@ -86,7 +86,7 @@ Po přidání členské funkce pomocí průvodce, můžete upravit kód ve vývo
   | Možnost | Popis |
   |--------|-------------|
   | [Static](../cpp/storage-classes-cpp.md) |  Určuje, že funguje jako globální funkci a může být volána mimo třídu i bez vytvoření instance třídy. Členská funkce nemá přístup k nestatické členy. Členská funkce definována jako `Static` nemůže být virtuální. |
-  | [Virtuální](../cpp/virtual-cpp.md) | Zajišťuje, že správné členská funkce je volána pro objekt, bez ohledu na výraz použitý k volání členské funkce. Členská funkce definována jako `Virtual` nemohou být statické. |
+  | [Virtual](../cpp/virtual-cpp.md) | Zajišťuje, že správné členská funkce je volána pro objekt, bez ohledu na výraz použitý k volání členské funkce. Členská funkce definována jako `Virtual` nemohou být statické. |
   | **pure** | Označuje, že pro virtuální členské funkce deklarované není dodávána žádná implementace. **Čistě** se dá nastavit jenom pro virtuální členské funkce. Třídu, která obsahuje alespoň jeden čistě virtuální členská funkce je považována za abstraktní třídu. Třídy odvozené od abstraktní třídy musí implementovat čistě virtuální členské funkci nebo, příliš, jsou abstraktní třídy. |
   | [vložené](../cpp/inline-functions-cpp.md) | Dává pokyn kompilátoru k vložení kopie těla členské funkce do každé místo, kde má členská funkce je volána. Členská funkce definována jako **vložené** nemůže být prázdná. |
 

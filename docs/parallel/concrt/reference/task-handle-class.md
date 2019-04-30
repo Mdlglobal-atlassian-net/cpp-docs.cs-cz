@@ -9,11 +9,11 @@ helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
 ms.openlocfilehash: 8528bc212603484be9325ed967e9475e4faa1348
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565097"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346160"
 ---
 # <a name="taskhandle-class"></a>task_handle – třída
 
@@ -37,14 +37,14 @@ Typ objektu funkce, která bude volána k provedení práce reprezentována `tas
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[task_handle](#task_handle)|Sestaví nový `task_handle` objektu. Pracovní úloha provádí volání funkce zadat jako parametr do konstruktoru.|
 |[~task_handle Destructor](#dtor)|Odstraní `task_handle` objektu.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[operator()](#task_handle__operator_call)|Operátor volání funkce, která volá modul runtime pro provedení úlohy popisovače.|
 

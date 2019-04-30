@@ -44,11 +44,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::UnregisterWinRTObject method
 ms.assetid: dd67e3b8-c2e1-4f53-8c0f-565a140ba649
 ms.openlocfilehash: db3eb123382ac70f6198d094c5eb3fe44d3bbcd9
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786879"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345790"
 ---
 # <a name="module-class"></a>Modul – třída
 
@@ -76,7 +76,7 @@ Kombinace jedné nebo více [ModuleType](moduletype-enumeration.md) hodnot výč
 
 ### <a name="protected-classes"></a>Chráněné třídy
 
-Name                                                                                | Popis
+Název                                                                                | Popis
 ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 [Module::genericreleasenotifier –](module-genericreleasenotifier-class.md) | Vyvolá obslužnou rutinu události po vydání poslední objekt v aktuálním modulu. Obslužná rutina události je zadaný ve výrazu lambda, funktor nebo ukazatel na funkci.
 [Module::methodreleasenotifier –](module-methodreleasenotifier-class.md)   | Vyvolá obslužnou rutinu události po vydání poslední objekt v aktuálním modulu. Obslužná rutina události je zadaný objekt a jejího člena ukazatel na metodu.
@@ -84,19 +84,19 @@ Name                                                                            
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Name                             | Popis
+Název                             | Popis
 -------------------------------- | -----------------------------------------------------------
 [Module::~Module](#tilde-module) | Zruší inicializaci aktuální instance `Module` třídy.
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-Name                      | Popis
+Název                      | Popis
 ------------------------- | ---------------------------------------------------
 [Module::module –](#module) | Inicializuje novou instanci třídy `Module` třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Name                                                    | Popis
+Název                                                    | Popis
 ------------------------------------------------------- | --------------------------------------------------------------------------------------------------
 [Module::Create –](#create)                               | Vytvoří instanci modulu.
 [Module::decrementobjectcount –](#decrementobjectcount)   | Sníží počet objektů, které sledují modulem.
@@ -115,13 +115,13 @@ Name                                                    | Popis
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-Name                      | Popis
+Název                      | Popis
 ------------------------- | --------------------------------
 [Module::Create –](#create) | Vytvoří instanci modulu.
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-Name                                         | Popis
+Název                                         | Popis
 -------------------------------------------- | --------------------------------------------------------------------------------------------------------
 [Module::objectcount_ –](#objectcount)         | Uchovává informace o tom, kolik třídy byly vytvořeny s [zkontrolujte](make-function.md) funkce.
 [Module::releasenotifier_ –](#releasenotifier) | Uchovává ukazatel `ReleaseNotifier` objektu.

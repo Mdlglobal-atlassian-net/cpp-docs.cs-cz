@@ -7,11 +7,11 @@ helpviewer_keywords:
 - user interface issues
 ms.assetid: c833c249-a633-4f1c-82d6-ec6b4892863a
 ms.openlocfilehash: 68a56983bccbdb2ed7f6701577ea5abaa7ea04c6
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58779661"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346076"
 ---
 # <a name="containers-user-interface-issues"></a>Kontejnery: Problémy uživatelského rozhraní
 
@@ -27,5 +27,5 @@ Aplikace typu kontejner uživatelského rozhraní a odpovídajícím způsobem s
 ## <a name="see-also"></a>Viz také:
 
 [Kontejnery](../mfc/containers.md)<br/>
-[Kontejnery: Pokročilé funkce](../mfc/containers-advanced-features.md)<br/>
+[Kontejnery: Rozšířené funkce](../mfc/containers-advanced-features.md)<br/>
 [Nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md)

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - entry attribute
 ms.assetid: ba4843e3-d7ad-4b86-9a15-0b4192f0f698
 ms.openlocfilehash: 703a55ee7c56b64a5b168016770508508bab09e0
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59036299"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346132"
 ---
 # <a name="entry"></a>entry
 
@@ -45,7 +45,7 @@ Podívejte se na příklad pro [možnost idl_module](idl-module.md) pro příkla
 |**Platí pro**|`idl_module` Atribut|
 |**Opakovatelné**|Ne|
 |**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádný|
+|**Neplatné atributy**|Žádné|
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 

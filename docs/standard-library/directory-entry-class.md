@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_entry::operator&gt;
 - std::experimental::filesystem::directory_entry::operator&gt;=
 ms.openlocfilehash: c1b68aefd44d8f0ac60c36307dee93333d801bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533819"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342974"
 ---
 # <a name="directoryentry-class"></a>directory_entry – třída
 
@@ -61,16 +61,16 @@ Další informace a příklady kódu naleznete v tématu [navigace systému soub
 
 |Konstruktor|Popis|
 |-|-|
-|[directory_entry –](#directory_entry)|Výchozí konstruktory chovat dle očekávání. Čtvrtý konstruktor inicializuje `mypath` k *pval*, `mystat` k *stat_arg*, a `mysymstat` k *symstat_arg*.|
+|[directory_entry](#directory_entry)|Výchozí konstruktory chovat dle očekávání. Čtvrtý konstruktor inicializuje `mypath` k *pval*, `mystat` k *stat_arg*, a `mysymstat` k *symstat_arg*.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[přiřazení](#assign)|Členská funkce přiřadí *pval* k `mypath`, *stat* k `mystat`, a *symstat* k `mysymstat`.|
+|[assign](#assign)|Členská funkce přiřadí *pval* k `mypath`, *stat* k `mystat`, a *symstat* k `mysymstat`.|
 |[Cesta](#path)|Členská funkce vrátí `mypath`.|
 |[replace_filename](#replace_filename)|Členská funkce se nahradí `mypath` s `mypath.parent_path()`  /  *pval*, `mystat` s *stat_arg*, a `mysymstat` s *symstat_arg*|
-|[Stav](#status)|Obě členské funkce vrátí `mystat` může být nejprve změněn.|
+|[status](#status)|Obě členské funkce vrátí `mystat` může být nejprve změněn.|
 |[symlink_status](#symlink_status)|Obě členské funkce vrátí `mysymstat` může být nejprve změněn.|
 
 ### <a name="operators"></a>Operátory
@@ -81,8 +81,8 @@ Další informace a příklady kódu naleznete v tématu [navigace systému soub
 |[operátor =](#op_as)|Operátory přiřazení nastavený na výchozí hodnotu člena chovat dle očekávání.|
 |[operator==](#op_eq)|Vrátí `mypath == right.mypath`.|
 |[Operator <](#op_lt)|Vrátí `mypath < right.mypath`.|
-|[Operator < =](#op_lteq)|Vrátí `!(right < *this)`.|
-|[Operator >](#op_gt)|Vrátí `right < *this`.|
+|[operator<=](#op_lteq)|Vrátí `!(right < *this)`.|
+|[operator>](#op_gt)|Vrátí `right < *this`.|
 |[operator>=](#op_gteq)|Vrátí `!(*this < right)`.|
 |[operátor – konstanta path_type &](#path_type)|Vrátí `mypath`.|
 
@@ -282,7 +282,7 @@ file_status status(error_code& ec) const noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*ES*<br/>
+*ec*<br/>
 Stavový kód chyby.
 
 ## <a name="symlink_status"></a> symlink_status –
@@ -296,10 +296,10 @@ file_status symlink_status(error_code& ec) const noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*ES*<br/>
+*ec*<br/>
 Stavový kód chyby.
 
 ## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<systém souborů&gt;](../standard-library/filesystem.md)<br/>
+[\<filesystem&gt;](../standard-library/filesystem.md)<br/>

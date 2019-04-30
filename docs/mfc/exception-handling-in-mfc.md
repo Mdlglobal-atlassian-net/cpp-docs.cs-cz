@@ -34,11 +34,11 @@ helpviewer_keywords:
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
 ms.openlocfilehash: afa49a4d54397cf79a3bd0af28e4a0f0a4c7639e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818632"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346051"
 ---
 # <a name="exception-handling-in-mfc"></a>Zpracování výjimek v prostředí MFC
 
@@ -109,7 +109,7 @@ V následující tabulce jsou uvedeny předdefinované výjimky, které jsou k d
 
 Tyto články vysvětlují použití knihovny MFC pro zpracování výjimek:
 
-- [Výjimky: Zachytávání a mazání](../mfc/exceptions-catching-and-deleting-exceptions.md)
+- [Výjimky: Zachytávání a odstraňování výjimek](../mfc/exceptions-catching-and-deleting-exceptions.md)
 
 - [Výjimky: Zkoumání obsahu výjimek](../mfc/exceptions-examining-exception-contents.md)
 
@@ -125,9 +125,9 @@ V následujících článcích porovnat maker výjimek prostředí MFC s klíčo
 
 - [Výjimky: Změny maker pro výjimky ve verzi 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)
 
-- [Výjimky: Převádění z maker výjimek prostředí MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md)
+- [Výjimky: Převádění z maker výjimek prostředí MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md)
 
-- [Výjimky: Použití maker MFC a výjimek jazyka C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)
+- [Výjimky: Použití výjimek v makrech MFC a jazyce C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)
 
 ## <a name="see-also"></a>Viz také:
 

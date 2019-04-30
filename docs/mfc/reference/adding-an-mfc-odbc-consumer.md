@@ -5,11 +5,11 @@ helpviewer_keywords:
 - MFC ODBC consumers
 ms.assetid: 2dc97909-1f7e-43ee-9d47-99e612727058
 ms.openlocfilehash: 2086401bea24cdf3a7b57eb9b5b1e72560f6c9e4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280716"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346123"
 ---
 # <a name="adding-an-mfc-odbc-consumer"></a>Přidání příjemce rozhraní ODBC knihovny MFC
 
@@ -29,4 +29,4 @@ Příjemci knihovny MFC rozhraní ODBC se skládá z rozhraní ODBC záznamů t�
 
 ## <a name="see-also"></a>Viz také:
 
-[Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)
+[Přidání funkce pomocí Průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)

@@ -1,6 +1,6 @@
 ---
 title: Optimalizace kódu
-ms.date: 12/10/2018
+ms.date: 04/23/2019
 helpviewer_keywords:
 - performance, optimizing code
 - optimization
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - optimization, C++ code
 - code, optimizing
 - performance, compiler
-ms.openlocfilehash: ae60070959c683a6365992e7b6cc510fd4111b36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 430ac9ef1b2946e511d04f7ce18bb0f20d727d75
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295209"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341119"
 ---
 # <a name="optimizing-your-code"></a>Optimalizace kódu
 
@@ -23,13 +23,13 @@ Optimalizace spustitelný soubor, můžete dosáhnout rovnováhy mezi rychlostí
 
 Následující témata popisují některé optimalizace funkce v jazyce C/C++.
 
-[Direktivy pragma a klíčová slova pro optimalizaci](optimization-pragmas-and-keywords.md)<br/>
+[Optimalizace Pragmas a klíčových slov](optimization-pragmas-and-keywords.md) \
 Seznam klíčová slova a pragmas, můžete použít ve vašem kódu pro zlepšení výkonu.
 
-[Možnosti kompilátoru uvedené podle kategorie](reference/compiler-options-listed-by-category.md)<br/>
+[Možnosti kompilátoru uvedené podle kategorie](reference/compiler-options-listed-by-category.md) \
 Seznam **/O** – možnosti kompilátoru, které určují velikost rychlost nebo kód spuštění.
 
-[Deklarátor odkazu r-hodnoty: &&](../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
+[Deklarátor odkazu hodnoty r: & &](../cpp/rvalue-reference-declarator-amp-amp.md) \
 Odkazy rvalue podporují implementaci *sémantiky přesunutí*. Pokud přesunutí sémantiky se používají k implementaci knihovny šablon, výkon aplikace, které používají tyto šablony může výrazně zlepšit.
 
 ### <a name="the-optimize-pragma"></a>Optimize – Direktiva pragma
@@ -52,10 +52,10 @@ Optimalizace programu pro rychlost paradoxically, může způsobit kód poběž�
 
 Následující témata popisují funkční programovací postupy.
 
-[Tipy pro zlepšení časově kritického kódu](tips-for-improving-time-critical-code.md)<br/>
+[Tipy pro zlepšení časově kritického kódu](tips-for-improving-time-critical-code.md) \
 Lepší kódování techniky může přinést lepší výkon. Toto téma navrhuje kódování techniky, které vám umožňují Ujistěte se, že uspokojivě provádět náročné části kódu.
 
-[Doporučené postupy optimalizace](optimization-best-practices.md)<br/>
+[Doporučené postupy optimalizace](optimization-best-practices.md) \
 Obsahuje obecné pokyny o optimálním optimalizovat výkon své aplikace.
 
 ## <a name="debugging-optimized-code"></a>Ladění optimalizovaného kódu
@@ -86,20 +86,19 @@ Následující témata obsahují informace o tom, jak optimalizovat vytváření
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Direktivy pragma a klíčová slova pro optimalizaci](optimization-pragmas-and-keywords.md)<br/>
-[Zvýšení propustnosti kompilátoru](improving-compiler-throughput.md)<br/>
-[Proč čísla s plovoucí desetinnou čárkou můžou ztratit přesnost](why-floating-point-numbers-may-lose-precision.md)<br/>
-[Reprezentace plovoucí desetinné čárky IEEE](ieee-floating-point-representation.md)<br/>
-[Tipy pro zlepšení časově kritického kódu](tips-for-improving-time-critical-code.md)<br/>
-[Použití názvu funkce bez závorek nevygeneruje žádný kód](using-function-name-without-parens-produces-no-code.md)<br/>
-[Doporučené postupy optimalizace](optimization-best-practices.md)<br/>
-[Optimalizace na základě profilu](profile-guided-optimizations.md)<br/>
-[Proměnné prostředí pro optimalizace na základě profilu](environment-variables-for-profile-guided-optimizations.md)<br/>
-[PgoAutoSweep](pgoautosweep.md)<br/>
-[pgomgr](pgomgr.md)<br/>
-[pgosweep](pgosweep.md)<br/>
-[Postupy: Sloučení několika profilů PGO do jediného profilu](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)<br/>
-[Doplněk PGO pro Visual Studio 2013 v centru sledování výkonu a diagnostiky](profile-guided-optimization-in-the-performance-and-diagnostics-hub.md)<br/>
+[Optimalizace Pragmas a klíčových slov](optimization-pragmas-and-keywords.md) \
+[Zvýšení propustnosti kompilátoru](improving-compiler-throughput.md) \
+[Proč čísla s plovoucí desetinnou čárkou mohou ztratit přesnost](why-floating-point-numbers-may-lose-precision.md) \
+[Reprezentace plovoucí desetinné čárky IEEE](ieee-floating-point-representation.md) \
+[Tipy pro zlepšení časově kritického kódu](tips-for-improving-time-critical-code.md) \
+[Použití názvu funkce bez závorek nevygeneruje žádný kód](using-function-name-without-parens-produces-no-code.md) \
+[Doporučené postupy optimalizace](optimization-best-practices.md) \
+[Optimalizace na základě profilu](profile-guided-optimizations.md) \
+[Proměnné prostředí pro optimalizace na základě profilu](environment-variables-for-profile-guided-optimizations.md) \
+[PgoAutoSweep](pgoautosweep.md) \
+[pgomgr](pgomgr.md) \
+[pgosweep](pgosweep.md) \
+[Postupy: Sloučení několika profilů PGO do jediného profilu](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
 
 ## <a name="see-also"></a>Viz také:
 

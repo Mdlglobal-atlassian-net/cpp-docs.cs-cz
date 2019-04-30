@@ -27,11 +27,11 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
 ms.openlocfilehash: c0c1fd14105bae3b5413f92b547339ccabf3bb91
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58774773"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341614"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver – třída
 
@@ -47,13 +47,13 @@ class COleDispatchDriver
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleDispatchDriver::COleDispatchDriver](#coledispatchdriver)|Vytvoří `COleDispatchDriver` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleDispatchDriver::AttachDispatch](#attachdispatch)|Připojí `IDispatch` připojení `COleDispatchDriver` objektu.|
 |[COleDispatchDriver::CreateDispatch](#createdispatch)|Vytvoří `IDispatch` připojení a připojí ho k `COleDispatchDriver` objektu.|
@@ -65,14 +65,14 @@ class COleDispatchDriver
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleDispatchDriver::operator =](#operator_eq)|Zkopíruje zdrojovou hodnotou do `COleDispatchDriver` objektu.|
 |[COleDispatchDriver::operator LPDISPATCH](#operator_lpdispatch)|Přistupuje k podkladovým `IDispatch` ukazatele.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleDispatchDriver::m_bAutoRelease](#m_bautorelease)|Určuje, jestli se má uvolnit `IDispatch` během `ReleaseDispatch` nebo zničení objektu.|
 |[COleDispatchDriver::m_lpDispatch](#m_lpdispatch)|Označuje ukazatel `IDispatch` rozhraní připojené k tomuto `COleDispatchDriver`.|

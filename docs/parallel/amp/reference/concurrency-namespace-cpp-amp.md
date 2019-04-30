@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
 ms.openlocfilehash: e0870eb046f1cec091a72d49c94a2fea41484340
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278688"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346036"
 ---
 # <a name="concurrency-namespace-c-amp"></a>Obor názvů souběžnosti (C++ AMP)
 
@@ -92,7 +92,7 @@ namespace Concurrency;
 |[atomic_fetch_sub](concurrency-namespace-functions-amp.md#atomic_fetch_sub)|Přetíženo. Nastaví hodnotu uloženou v zadaném umístění na rozdíl dané hodnoty a určitou hodnotu jako atomickou operaci.|
 |[atomic_fetch_xor](concurrency-namespace-functions-amp.md#atomic_fetch_xor)|Přetíženo. Nastaví hodnotu uloženou v zadaném umístění na bitové `xor` z dané hodnoty a určitou hodnotu jako atomickou operaci.|
 |[kopírování](concurrency-namespace-functions-amp.md#copy)|Zkopíruje objekt jazyka C++ AMP. Jsou splněny všechny požadavky synchronního přenosu dat. Data nelze kopírovat, pokud kód spouští kód na akcelerátoru. Obecný tvar této funkce je `copy(src, dest)`.|
-|[copy_async](concurrency-namespace-functions-amp.md#copy_async)|Zkopíruje objekt jazyka C++ AMP a vrátí [completion_future](completion-future-class.md) , který lze čekat. Data nelze kopírovat, pokud je kód spuštěn na akcelerátoru. Obecný tvar této funkce je `copy(src, dest)`.|
+|[copy_async](concurrency-namespace-functions-amp.md#copy_async)|Zkopíruje C++ AMP a vrací [completion_future](completion-future-class.md) , který lze čekat. Data nelze kopírovat, pokud je kód spuštěn na akcelerátoru. Obecný tvar této funkce je `copy(src, dest)`.|
 |[direct3d_abort](concurrency-namespace-functions-amp.md#direct3d_abort)|Zruší spuštění funkce, která má `restrict(amp)` podmínkou.|
 |[direct3d_errorf](concurrency-namespace-functions-amp.md#direct3d_errorf)|Vytiskne formátovaný řetězec pro Visual Studio **výstup** okno a vyvolá [runtime_exception](runtime-exception-class.md) výjimku, která má stejné formátování řetězce.|
 |[direct3d_printf](concurrency-namespace-functions-amp.md#direct3d_printf)|Vytiskne formátovaný řetězec pro Visual Studio **výstup** okna. Je volána z funkce, která má `restrict(amp)` podmínkou.|

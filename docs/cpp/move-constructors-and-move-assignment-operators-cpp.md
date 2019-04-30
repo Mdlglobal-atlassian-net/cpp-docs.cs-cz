@@ -1,15 +1,15 @@
 ---
-title: 'Postupy: definování konstruktory přesunutí a operátory přiřazení pro přesunutí (C++)'
+title: 'Postupy: Definovat konstruktory přesunutí a operátory přiřazení přesunutí (C++)'
 ms.date: 03/05/2018
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
 ms.openlocfilehash: b601c53c01940fe110036d569e0be9d43a123a91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504517"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345015"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Konstruktory a operátory přiřazení pro přesunutí (C++)
 
@@ -312,4 +312,4 @@ MemoryBlock(MemoryBlock&& other)
 ## <a name="see-also"></a>Viz také:
 
 [Deklarátor odkazu r-hodnoty: &&](../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
-[std::Move](../standard-library/utility-functions.md#move)
+[std::move](../standard-library/utility-functions.md#move)

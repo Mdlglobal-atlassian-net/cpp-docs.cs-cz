@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /ALLOWISOLATION linker option
 ms.assetid: 6d41851e-b3c1-4bdf-beaa-031773089d6f
 ms.openlocfilehash: fe76e0d40a2a19a002136a7e095875ad2903d434
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818450"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341069"
 ---
 # <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION (vyhledání manifestu)
 
@@ -47,5 +47,5 @@ Další informace najdete v tématu [referenční příručka souborů manifestu
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na MSVC linkeru](linking.md)<br/>
-[Možnosti Linkeru MSVC](linker-options.md)
+[Referenční zdroje k linkeru MSVC](linking.md)<br/>
+[Možnosti linkeru MSVC](linker-options.md)

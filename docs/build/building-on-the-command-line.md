@@ -11,11 +11,11 @@ helpviewer_keywords:
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
 ms.openlocfilehash: 21d1c9063a1d6dd154de8d2caca913ea3fd0ce37
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812119"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342155"
 ---
 # <a name="use-the-msvc-toolset-from-the-command-line"></a>Použití nástrojů MSVC z příkazového řádku
 
@@ -162,10 +162,10 @@ Poskytuje příklad, který ukazuje, jak vytvořit a zkompilujte jednoduchý pro
 Popisuje, jak kompilovat program napsaný v programovacím jazyce C.
 
 [Návod: Kompilace programu C++/CLI na příkazovém řádku](walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)<br/>
-Popisuje postup vytvoření a kompilace C + +/ CLI program, který používá rozhraní .NET Framework.
+Popisuje, jak vytvořit a zkompilujte C++vyhodnocovací program, který používá rozhraní .NET Framework.
 
 [Návod: Kompilace programu C++/CX na příkazovém řádku](walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)<br/>
-Popisuje postup vytvoření a kompilace C + +/ CX program, který používá prostředí Windows Runtime.
+Popisuje, jak vytvořit a zkompilujte C++/CX program, který používá prostředí Windows Runtime.
 
 [Nastavení cesty a proměnných prostředí pro sestavení příkazového řádku](setting-the-path-and-environment-variables-for-command-line-builds.md)<br/>
 Popisuje, jak spustit okno příkazového řádku, který má požadované proměnné nastavit pro sestavení příkazového řádku, které cílí x86, x64 a ARM platformy s využitím 32bitová nebo 64bitová verze nástrojů.
@@ -184,7 +184,7 @@ Popisuje, jak pomocí těchto možností kompilátoru pro použití knihovny run
 [Možnosti kompilátoru C/C++](reference/compiler-options.md)<br/>
 Obsahuje odkazy na články, které popisují možnosti kompilátoru C a C++ a CL.exe.
 
-[Možnosti Linkeru MSVC](reference/linker-options.md)<br/>
+[Možnosti linkeru MSVC](reference/linker-options.md)<br/>
 Obsahuje odkazy na články, které popisují možnosti linkeru a LINK.exe.
 
 [Nástroje pro vytváření dalších MSVC](reference/c-cpp-build-tools.md)<br/>
@@ -192,4 +192,4 @@ Poskytuje nástroje, které jsou zahrnuty v sadě Visual Studio pro vytváření
 
 ## <a name="see-also"></a>Viz také:
 
-[Projekty a sestavení systémy](projects-and-build-systems-cpp.md)
+[Projekty a systémy sestavení](projects-and-build-systems-cpp.md)

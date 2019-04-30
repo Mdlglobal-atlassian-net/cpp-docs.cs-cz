@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
 ms.openlocfilehash: 080e47746b83b6ff12db9f6df0fc27bcd202bb51
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58768682"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346088"
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray Class
 
@@ -52,7 +52,7 @@ Typ prvků uložených v poli základní třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CTypedPtrArray::Add](#add)|Přidá nový prvek na konec pole. V případě potřeby roste pole|
 |[CTypedPtrArray::Append](#append)|Přidá na konec jiné obsah jedno pole. V případě potřeby roste pole|
@@ -65,7 +65,7 @@ Typ prvků uložených v poli základní třídy.
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CTypedPtrArray::operator \[ \]](#operator_at)|Nastaví nebo získá prvek na zadaném indexu.|
 

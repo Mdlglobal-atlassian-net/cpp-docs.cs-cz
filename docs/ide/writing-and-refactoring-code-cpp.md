@@ -3,11 +3,11 @@ title: Psaní a refaktoring kódu (C++)
 ms.date: 04/30/2018
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
 ms.openlocfilehash: bc839a759d2ff3f403ca001ab32702d3fe27833e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570427"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345235"
 ---
 # <a name="writing-and-refactoring-code-c"></a>Psaní a refaktoring kódu (C++)
 
@@ -67,7 +67,7 @@ Refaktoring jsou k dispozici v místní nabídce rychlá akce, nebo kliknutím n
 
 Visual C++ sdílí řadu funkcí pro navigaci kódu s jinými jazyky. Další informace najdete v tématu [procházení kódu](/visualstudio/ide/navigating-code) a [zobrazení struktury kódu](/visualstudio/ide/viewing-the-structure-of-code).
 
-## <a name="quickinfo"></a>Rychlé informace
+## <a name="quickinfo"></a>QuickInfo
 
 Najeďte myší proměnné zobrazíte informace o typu.
 
@@ -93,7 +93,7 @@ Najeďte myší proměnnou nebo funkci deklaraci, klikněte pravým tlačítkem,
 
 Klikněte pravým tlačítkem na každé volání funkce a zobrazení seznamu resursive všechny funkce, které volá a všechny funkce, které ji volaly. Každá funkce v seznamu lze rozšířit stejným způsobem. Další informace najdete v tématu [hierarchie volání](/visualstudio/ide/reference/call-hierarchy).
 
-![Visual C&#43; &#43; hierarchie volání](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
+![Visual C&#43;&#43; Call Hierarchy](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
 
 ## <a name="toggle-header--code-file"></a>Přepínač záhlaví / soubor kódu
 
@@ -103,11 +103,11 @@ Klikněte pravým tlačítkem a zvolte **přepínač záhlaví / soubor s kódem
 
 Klikněte pravým tlačítkem na libovolné místo v souboru zdrojového kódu a zvolte **Osnova** sbalit nebo rozbalit definice a/nebo vlastní oblastech a usnadňují procházení jen ty části, které vás zajímají. Další informace najdete v tématu [Osnova](/visualstudio/ide/outlining).
 
-![Visual C&#43; &#43; sbalování](../ide/media/vs2015_cpp_outlining.png "vs2015_cpp_outlining")
+![Visual C&#43;&#43; Outlining](../ide/media/vs2015_cpp_outlining.png "vs2015_cpp_outlining")
 
 ## <a name="scrollbar-map-mode"></a>Režim mapování posuvníku
 
-Režim mapování posuvníku umožňuje rychle přejděte a projděte si soubor kódu bez opuštění skutečně svoji aktuální polohu. Nebo klikněte na libovolné místo na mapě kódu přejdete přímo do tohoto umístění. Další informace najdete v tématu [postupy: sledování kódu přizpůsobením posuvníku](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
+Režim mapování posuvníku umožňuje rychle přejděte a projděte si soubor kódu bez opuštění skutečně svoji aktuální polohu. Nebo klikněte na libovolné místo na mapě kódu přejdete přímo do tohoto umístění. Další informace najdete v tématu [jak: Sledování kódu přizpůsobením posuvníku](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
 
 ![Mapa v jazyce Visual C kódu&#43;&#43;](../ide/media/vs2015_cpp_code_map.png "vs2015_cpp_code_map")
 
@@ -125,4 +125,4 @@ Umístěte kurzor na slovo na nebo bezprostředně po jakéhokoli typu, – klí
 
 Chcete-li snadno přejít k jakékoli okno nebo nástroje v sadě Visual Studio, jednoduše zadejte jeho název v okně Snadné spuštění v pravém horním rohu uživatelského rozhraní. Automatické dokončování seznam bude filtrovat při psaní.
 
-![Snadné spuštění sady Visual Studio](../ide/media/vs2015_cpp_quick_launch.png "vs2015_cpp_quick_launch")
+![Visual Studio Quick Launch](../ide/media/vs2015_cpp_quick_launch.png "vs2015_cpp_quick_launch")

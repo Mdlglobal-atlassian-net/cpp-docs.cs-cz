@@ -11,11 +11,11 @@ helpviewer_keywords:
 - IDL attributes, add method wizard
 ms.assetid: 4ba4e45f-fa38-4d5e-af44-cbec0a7ab558
 ms.openlocfilehash: 23fb05e633713016b1f6289f73a916502736af10
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692682"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346004"
 ---
 # <a name="add-a-method"></a>Přidat metodu
 
@@ -69,7 +69,7 @@ Tohoto průvodce použijte k přidání metody rozhraní. V závislosti na typu 
   |--------------------|-----------------|
   |Duální rozhraní ATL, vlastní rozhraní a vlastní místní rozhraní|Zadejte vlastní název metody.|
   |Dispinterface knihovny MFC|Zadejte název vlastní metody nebo vyberte název navrhované metody ze seznamu. Pokud název vyberete ze seznamu, zobrazí se v odpovídající hodnotu **návratový typ** pole a neměnný.|
-  |Dispinterface ovládací prvek ActiveX knihovny MFC|Zadejte vlastní nebo vyberte některý z uložených metod [DoClick](../mfc/reference/colecontrol-class.md#doclick) a [aktualizovat](../mfc/reference/colecontrol-class.md#refresh). Další informace najdete v tématu [ovládací prvky MFC ActiveX: Přidání uložených metod](../mfc/mfc-activex-controls-adding-stock-methods.md).|
+  |Dispinterface ovládací prvek ActiveX knihovny MFC|Zadejte vlastní nebo vyberte některý z uložených metod [DoClick](../mfc/reference/colecontrol-class.md#doclick) a [aktualizovat](../mfc/reference/colecontrol-class.md#refresh). Další informace najdete v tématu [– ovládací prvky ActiveX knihovny MFC: Přidání uložených metod](../mfc/mfc-activex-controls-adding-stock-methods.md).|
 
 - **Typ metody**
 

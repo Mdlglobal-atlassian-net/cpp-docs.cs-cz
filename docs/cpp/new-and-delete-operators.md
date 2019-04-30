@@ -10,17 +10,17 @@ helpviewer_keywords:
 - delete keyword [C++], syntax
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
 ms.openlocfilehash: 1ac6282ecbf45f22e7dd66b94f8bccdbc4e505ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441298"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345899"
 ---
 # <a name="new-and-delete-operators"></a>Operátory new a delete
 
 Jazyk C++ podporuje dynamické přidělování a navracení objektů pomocí [nové](../cpp/new-operator-cpp.md) a [odstranit](../cpp/delete-operator-cpp.md) operátory. Tyto operátory přidělují paměť objektům z fondu s názvem volné úložiště. **Nové** operátor volá funkci speciální [operátor new](../cpp/new-operator-cpp.md)a **odstranit** operátor volá funkci speciální [operátor delete](../cpp/delete-operator-cpp.md).
 
-**Nové** podporuje funkce ve standardní knihovně jazyka C++ chování podle standardu jazyka C++, což je vyvolání výjimky std::bad_alloc Pokud selhání přidělení paměti. Pokud stále chcete non-throwing. verzi **nové**, propojit aplikaci s nothrownew.obj. Ale při propojení s nothrownew.obj výchozí **operátor new** ve standardní knihovně C++ nebude dál fungovat.
+**Nové** fungovat v C++ standardní knihovny podporuje chování určené v C++ standard, což je vyvolání výjimky std::bad_alloc Pokud selhání přidělení paměti. Pokud stále chcete non-throwing. verzi **nové**, propojit aplikaci s nothrownew.obj. Ale při propojení s nothrownew.obj výchozí **operátor new** ve standardní knihovně C++ nebude dál fungovat.
 
 Seznam souborů knihoven, které tvoří knihovny prostředí Runtime jazyka C a standardní knihovny C++, naleznete v tématu [funkce knihovny CRT](../c-runtime-library/crt-library-features.md).
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - generic C++ class wizard [C++]
 ms.assetid: e95a5a14-dbed-4edc-8551-344fe48613cb
 ms.openlocfilehash: 08ebe572da605e0f6d4d712bd7e48159598ba844
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694137"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344453"
 ---
 # <a name="add-a-generic-c-class"></a>Přidání generické třídy jazyka C++
 
@@ -43,7 +43,7 @@ Do projektu přidá generické třídy jazyka C++. Třída nedědí z knihovny A
 
   Nastaví název nové třídy.
 
-- **soubor .h**
+- **.h file**
 
   Nastaví název souboru hlaviček pro novou třídu. Ve výchozím nastavení, tento název je založen na názvu je zadat v **název třídy**. Uložte soubor hlaviček do umístění podle vašeho výběru, nebo deklaraci třídy připojit k existujícímu souboru, vyberte tlačítko se třemi tečkami (**...** ). Pokud zadáte existující soubor a vyberte **Dokončit**, Průvodce zobrazí výzvu k určení, zda deklarace třídy by měl být připojen do obsahu souboru. Chcete-li přidat deklaraci, vyberte **Ano**; pokud ho chcete vrátit do průvodce a zadejte jiný název souboru, vyberte **ne**.
 

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - try-catch keyword [C++], mixed-language
 ms.assetid: a149154e-36dd-4d1a-980b-efde2a563a56
 ms.openlocfilehash: 94d6dc249cb130aaf09d3202b9e8f437d00a9597
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548199"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345958"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>Kombinace jazyka C (strukturované) a výjimky jazyka C++
 
-Pokud chcete zapsat přenositelný kód, není doporučeno používat zpracování strukturovaných výjimek (SEH) v programu v jazyce C++. Však můžete někdy chtít zkompilovat pomocí [/EHa](../build/reference/eh-exception-handling-model.md) spojit strukturované výjimky a zdrojový kód jazyka C++ a někdy třeba zařízení pro práci s oběma druhy výjimek. Protože obslužná rutina strukturované výjimky nemá žádný koncept objektů ani typových výjimek, nemůže zpracovat výjimky vyvolané z kódu jazyka C++. Nicméně C++ **catch** obslužné rutiny strukturované výjimky zpracovat mohou. Syntaxe zpracování výjimek jazyka C++ (**zkuste**, **throw**, **catch**) neakceptuje kompilátor jazyka C, ale syntaxe zpracování strukturovaných výjimek (**definovaný blok __try**, **__except**, **__finally**) je podporována kompilátorem jazyka C++.
+Pokud chcete zapsat přenositelný kód, není doporučeno používat zpracování strukturovaných výjimek (SEH) v programu v jazyce C++. Však můžete někdy chtít zkompilovat pomocí [/EHa](../build/reference/eh-exception-handling-model.md) spojit strukturované výjimky a zdrojový kód jazyka C++ a někdy třeba zařízení pro práci s oběma druhy výjimek. Protože obslužná rutina strukturované výjimky nemá žádný koncept objektů ani typových výjimek, nemůže zpracovat výjimky vyvolané z kódu jazyka C++. Nicméně C++ **catch** obslužné rutiny strukturované výjimky zpracovat mohou. C++Syntaxe pro zpracování výjimek (**zkuste**, **throw**, **catch**) neakceptuje kompilátor jazyka C, ale syntaxe zpracování strukturovaných výjimek (**definovaný blok __try**, **__except**, **__finally**) je podporován C++ kompilátoru.
 
-Zobrazit [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) informace o tom, jak zpracování strukturovaných výjimek jako výjimek jazyka C++.
+Zobrazit [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) informace o tom, jak zpracování strukturovaných výjimek jako C++ výjimky.
 
 Jsou-li zkombinovány strukturované a výjimky jazyka C++, mějte na paměti těchto potenciálních problémů:
 

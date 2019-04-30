@@ -12,11 +12,11 @@ helpviewer_keywords:
 - -doc compiler option [C++]
 ms.assetid: b54f7e2c-f28f-4f46-9ed6-0db09be2cc63
 ms.openlocfilehash: 90f63a972245114424b64d4131420dcb4e1e925a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809792"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342914"
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc (zpracování dokumentačních komentářů) (C/C++)
 
@@ -28,7 +28,7 @@ V souborech zdrojového kódu a chcete vytvořit soubor .xdc pro každý soubor 
 
 ## <a name="arguments"></a>Arguments
 
-*Jméno*<br/>
+*name*<br/>
 Název, který kompilátor vytvoří soubor .xdc. Platné jen v případě jeden soubor .cpp se předává v kompilace.
 
 ## <a name="remarks"></a>Poznámky
@@ -53,5 +53,5 @@ Použít soubor .xml generovaný s podporou technologie IntelliSense, ujistěte 
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)
