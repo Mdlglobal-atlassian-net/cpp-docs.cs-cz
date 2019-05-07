@@ -56,11 +56,11 @@ Direktivy předběžného zpracování se nerozlišují malá a velká písmena.
 
    Pouze /D / můžu /N a /S lze použít v souboru pravidel. V Tools.ini, jsou povoleny všechny možnosti kromě /F, / help, / nologo, / X, a /?. Zadaný v bloku popis změny se projeví až do další blok popis. Tato direktiva aktualizuje **MAKEFLAGS**; změny jsou zděděny během rekurze, pokud **MAKEFLAGS** určena.
 
-- **! Chyba***text*
+- **! Chyba** *text*
 
    Zobrazí *text* v chybě nástroje U1050 a zastaví NMAKE, i když /K, /, můžu **. Ignorovat**, **! CMDSWITCHES**, nebo se používá příkaz modifikátor pomlčky (-). Mezery nebo tabulátory před *text* jsou ignorovány.
 
-- **! ZPRÁVA***text*
+- **! ZPRÁVA** *text*
 
    Zobrazí *text* do standardního výstupu. Mezery nebo tabulátory před *text* jsou ignorovány.
 
@@ -72,11 +72,11 @@ Direktivy předběžného zpracování se nerozlišují malá a velká písmena.
 
    Zpracovává příkazy mezi **! Pokud** a dalších **! OSTATNÍ** nebo **! ENDIF** Pokud *constant_expression* vyhodnocen na nenulovou hodnotu.
 
-- **! IFDEF***makro*
+- **! IFDEF** *makro*
 
    Zpracovává příkazy mezi **! IFDEF** a dalších **! OSTATNÍ** nebo **! ENDIF** Pokud *makro* je definována. Makro s hodnotou null se považuje za definovat.
 
-- **! IFNDEF***makro*
+- **! IFNDEF** *makro*
 
    Zpracovává příkazy mezi **! IFNDEF** a dalších **! OSTATNÍ** nebo **! ENDIF** Pokud *makro* není definován.
 
@@ -100,7 +100,7 @@ Direktivy předběžného zpracování se nerozlišují malá a velká písmena.
 
    Označuje konec **! Pokud**, **! IFDEF**, nebo **! IFNDEF** bloku. Žádný text po **! ENDIF** na stejném řádku se ignoruje.
 
-- **! UNDEF***makro*
+- **! UNDEF** *makro*
 
    Nedefinovaných hodnot *makro*.
 
