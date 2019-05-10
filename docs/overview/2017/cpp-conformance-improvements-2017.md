@@ -5,16 +5,16 @@ ms.technology: cpp-language
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 6a0e296e4a5542c1aad848c55d35d3e40244478d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f168da7440c52d1a2d5bc68a6e973d47122b7212
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410125"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65468343"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159improvements159"></a>Vylepšení shody C++ v sadě Visual Studio 2017 verze 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158), [15.9](#improvements_159)
 
-Podporu pro generalizovaný specifikátor constexpr a NSDMI pro agregace je kompilátor jazyka Microsoft Visual C++ teď kompletní pro funkce přidané ve 14 standardu C ++. Mějte na paměti, že v kompilátoru stále chybí několik funkcí ze standardů C++11 a C++98. Zobrazit [shoda jazyka Visual C++](../visual-cpp-language-conformance.md) pro tabulku, která se zobrazuje aktuální stav kompilátoru.
+S podporou pro generalizovaný specifikátor constexpr a NSDMI pro agregace, Microsoft C++ kompilátoru je teď kompletní pro funkce přidané v C ++ 14 Standard. Mějte na paměti, že v kompilátoru stále chybí několik funkcí ze standardů C++11 a C++98. Zobrazit [shoda jazyka Visual C++](../visual-cpp-language-conformance.md) pro tabulku, která se zobrazuje aktuální stav kompilátoru.
 
 ## <a name="c11"></a>C++11
 
@@ -955,7 +955,7 @@ Upozornění je vyloučena pod **/WV: 18** a je ve výchozím v části upozorn�
 
 ### <a name="stdisconvertible-for-array-types"></a>std::is_convertible pro typy polí
 
-Předchozí verze kompilátoru zadali nesprávné výsledky pro [std::is_convertible](../../standard-library/is-convertible-class.md) pro typy polí. Tato oprávnění vyžadují knihovny autorům zvláštní případy kompilátor jazyka Microsoft Visual C++ při použití `std::is_convertible<...>` typovou vlastnost. V následujícím příkladu statické nepodmíněné výrazy pass v dřívějších verzích sady Visual Studio, ale selže v sadě Visual Studio 2017 verze 15.3:
+Předchozí verze kompilátoru zadali nesprávné výsledky pro [std::is_convertible](../../standard-library/is-convertible-class.md) pro typy polí. Tato oprávnění vyžadují knihovny autorům zvláštní případy Microsoft C++ kompilátoru při použití `std::is_convertible<...>` typovou vlastnost. V následujícím příkladu statické nepodmíněné výrazy pass v dřívějších verzích sady Visual Studio, ale selže v sadě Visual Studio 2017 verze 15.3:
 
 ```cpp
 #include <type_traits>

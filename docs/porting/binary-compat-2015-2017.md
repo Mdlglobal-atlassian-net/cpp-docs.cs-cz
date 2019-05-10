@@ -1,25 +1,25 @@
 ---
-title: Binární kompatibilita C++ Visual Studio 2015 a Visual Studio 2017
-ms.date: 09/24/2018
+title: C++Binární kompatibilitu mezi Visual Studio 2015 a Visual Studio 2019
+ms.date: 05/03/2019
 helpviewer_keywords:
 - binary compatibility, Visual C++
 ms.assetid: 591580f6-3181-4bbe-8ac3-f4fbaca949e6
-ms.openlocfilehash: d0291ef75bda2e4da994e40ad55d94ae1042e57e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 052874eb9273ee9a9ce1695ffdadedd9911673e1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62205501"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449052"
 ---
-# <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2017"></a>Binární kompatibilita C++ Visual Studio 2015 a Visual Studio 2017
+# <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2019"></a>C++Binární kompatibilitu mezi Visual Studio 2015 a Visual Studio 2019
 
-V předchozích verzích sady Visual Studio binární kompatibilitu mezi soubory objektů (OBJs), statické knihovny (knihovny), dynamické knihovny (DLL) a spustitelných souborů (exe) vytvořené pomocí jiných verzí kompilátoru sadu nástrojů a modulu runtime knihoven nebyl zaručená. To byl změněn v sadě Visual Studio 2017. Hlavní číslo sady nástrojů C++ v sadě Visual Studio 2015 a Visual Studio 2017, je 14 (v140 pro Visual Studio 2015 a v141 pro Visual Studio 2017). To odpovídá skutečnost, že modul runtime knihovny a aplikace kompilované s jakoukoli verzí kompilátoru jsou--pro největší část--binární kompatibilní. To znamená například, že pokud máte knihovnu DLL v sadě Visual Studio 2015, není nutné znovu zkompilovat aby bylo možné využívat z aplikace, která je integrovaná se sadou Visual Studio 2017.
+V sadě Visual Studio 2013 a starší není zaručeno, že binární kompatibilitu mezi soubory objektů (OBJs), statické knihovny (knihovny), dynamické knihovny (DLL) a spustitelných souborů (exe) vytvořené pomocí jiných verzí kompilátoru sadu nástrojů a modulu runtime knihoven. 
 
-Existují dvě výjimky z tohoto pravidla. Binární kompatibilita není zaručena v těchto případech:
+V sadě Visual Studio 2015 a novější C++ nástrojů hlavní číslo je 14 (v140 pro Visual Studio 2015, Visual Studio 2017 v141 a v142 pro Visual Studio 2019). To odpovídá vzhledem k tomu, že modul runtime knihovny a aplikace kompilované s jakoukoli verzí kompilátoru mají binární kompatibilní. To znamená, že pokud máte knihovny třetí strany, který byl vytvořen pomocí sady Visual Studio 2015, není nutné znovu zkompilovat aby bylo možné využívat z aplikace sestavené aplikací Visual Studio 2017 nebo Visual Studio 2019.
 
-1. Když zkompilovaná statických knihoven nebo objektových souborů `/GL` přepínač kompilátoru.
+Jedinou výjimkou tohoto pravidla je, že statické knihovny nebo objektové soubory, které jsou kompilovány pomocí `/GL` přepínač kompilátoru nejsou kompatibilní s binární. 
 
-2. Při využívání knihovny vytvořené pomocí nástrojů, jehož verze je větší než sada nástrojů používá ke kompilaci a odkaz aplikaci. Například program, který je zkompilován a propojit s verzí kompilátoru 19.12 může spotřebovat knihovny, které jsou kompilovány pomocí verzi 19.0 nahoru prostřednictvím 19.12. Navíc binární kompatibilitu existuje pouze mezi Visual Studio 2015 a Visual Studio 2017; nepodporuje propojování programů 19.x s knihovnami Visual Studio 2013 nebo starší.
+Když kombinovat binární soubory sestavené pomocí různých podporované verze sady nástrojů MSVC, vizuál C++ zabere redistributable, spustí se vaše aplikace nemůže být starší než verze nástrojů sloužící k sestavení aplikace nebo všechny knihovny. 
 
 ## <a name="see-also"></a>Viz také:
 

@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: 69771de120dc413496a3b7b0613e51a13d208e22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d9aaa493eab39199ac75b6b9fe888c3e103f115
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209151"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448079"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>C++ – sémantika zásobníku pro odkazové typy
 
-Před Visual C++ 2005, instanci typu odkazu může vytvořit pouze pomocí `new` haldě operátor, který vytvořil objekt na uvolňování paměti. Můžete však nyní vytvořit instanci typu odkazu pomocí stejné syntaxe, které můžete použít k vytvoření instance nativního typu v zásobníku. Proto není potřeba použít [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) pro vytvoření objektu typu odkazu. A když objekt dostane mimo rozsah, kompilátor vyvolá destruktor objektu.
+Před Visual Studio 2005 instanci typu odkazu může vytvořit pouze pomocí `new` haldě operátor, který vytvořil objekt na uvolňování paměti. Můžete však nyní vytvořit instanci typu odkazu pomocí stejné syntaxe, které můžete použít k vytvoření instance nativního typu v zásobníku. Proto není potřeba použít [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) pro vytvoření objektu typu odkazu. A když objekt dostane mimo rozsah, kompilátor vyvolá destruktor objektu.
 
 ## <a name="remarks"></a>Poznámky
 

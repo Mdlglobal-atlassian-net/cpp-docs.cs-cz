@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-ms.openlocfilehash: e469556a773ffcdbf50e53d94022c0b6b7abf869
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 05b9d8bcf5d7364e1dcd31940bc0db64a5e605f1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404426"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447302"
 ---
 # <a name="friend-assemblies-c"></a>Přátelská sestavení (C++)
 
@@ -47,7 +47,7 @@ Přestože typy v oboru názvů a globální rozsah může být známé klienta 
 
 Přístup pro všechny typy v sestavení je třeba udělit explicitně.  Například sestavení C nemá přístup pro všechny typy v sestavení A Pokud sestavení B odkazuje na sestavení C a sestavení B má přístup pro všechny typy v sestavení A.
 
-Informace o tom, jak podepsat – to znamená, jak udělit silný název – sestavení, která je vytvořená pomocí Vizuálu C++ kompilátoru, naleznete v tématu [sestavení se silným názvem (podepisování sestavení) (C++vyhodnocovací)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+Informace o tom, jak podepsat – to znamená, jak udělit silný název – sestavení, která je vytvořená pomocí Microsoft C++ kompilátoru, naleznete v tématu [sestavení se silným názvem (podepisování sestavení) (C++vyhodnocovací)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
 Jako alternativu k použití funkce sestavení typu friend, můžete použít <xref:System.Security.Permissions.StrongNameIdentityPermission> k omezení přístupu k jednotlivých typů.
 

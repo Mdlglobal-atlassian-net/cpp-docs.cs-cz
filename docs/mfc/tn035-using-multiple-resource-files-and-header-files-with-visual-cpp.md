@@ -7,12 +7,12 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 0493dd45caf5eb78da435987a4590442a908a5a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ce38c2f3f4effa993dfa32221d82bece65096dd
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305512"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448547"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Použití více zdrojových souborů a hlavičkových souborů v jazyce Visual C++
 
@@ -204,7 +204,7 @@ RESOURCE.H     AFXRES.H
     AFXPRINT.RC
 ```
 
-Pomocí směrnice času kompilace můžete uspořádat Visual C++ upravitelné a neupravitelné prostředky do více. RC – soubory, kde "hlavní" MYAPP. Nemá žádný účinek, RC ale #include Další. Soubory RC. Pokud použijete projekt jazyka Visual C++. Soubor klíče k vícenásobné aktivaci a potom by měl obsahovat "hlavní". RC souboru v projektu tak, všechny # include 'D prostředky jsou kompilovány s vaší aplikací.
+Pomocí směrnice času kompilace můžete uspořádat Visual C++ upravitelné a neupravitelné prostředky do více. RC – soubory, kde "hlavní" MYAPP. Nemá žádný účinek, RC ale #include Další. Soubory RC. Pokud používáte Visual Studio C++ projektu. Soubor klíče k vícenásobné aktivaci a potom by měl obsahovat "hlavní". RC souboru v projektu tak, všechny # include 'D prostředky jsou kompilovány s vaší aplikací.
 
 **Vynucení soubory vynutí neupravitelné Visual C++**
 

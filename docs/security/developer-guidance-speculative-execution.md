@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-ms.openlocfilehash: 20e6d45c088fe92fa736539e485d6807802b368a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3895cdb060d45d3f75c75f75c930e868b3654b2
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179316"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448607"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Doprovodné materiály pro vývojáře v C++ pro kanály na straně spekulativního spouštění
 
@@ -21,7 +21,7 @@ Tento článek obsahuje pokyny pro vývojáře, které pomáhají při identifik
 
 Pokynů, které jste v tomto článku se vztahuje na třídy reprezentována ohrožení zabezpečení:
 
-1. CVE-2017-5753, označované také jako chyby zabezpečení Spectre variant 1. Tuto třídu hardwaru ohrožení zabezpečení se týká kanály na straně, které mohou vzniknout z důvodu spekulativního spouštění, ke které dojde v důsledku misprediction podmíněná větev. Kompilátor Visual C++ v sadě Visual Studio 2017 (od verze 15.5.5) zahrnuje podporu pro `/Qspectre` přepínač, který poskytuje zmírnění kompilace pro omezenou sadu potenciálně ohrožená vzorce kódování související s CVE-2017-5753. `/Qspectre` Přepínač je také k dispozici v sadě Visual Studio 2015 Update 3 prostřednictvím [KB 4338871](https://support.microsoft.com/help/4338871). V dokumentaci [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) příznak poskytuje další informace o jeho dopady a využití.
+1. CVE-2017-5753, označované také jako chyby zabezpečení Spectre variant 1. Tuto třídu hardwaru ohrožení zabezpečení se týká kanály na straně, které mohou vzniknout z důvodu spekulativního spouštění, ke které dojde v důsledku misprediction podmíněná větev. Microsoft C++ kompilátoru v sadě Visual Studio 2017 (od verze 15.5.5) zahrnuje podporu pro `/Qspectre` přepínač, který poskytuje zmírnění kompilace pro omezenou sadu potenciálně ohrožená vzorce kódování související s CVE-2017-5753. `/Qspectre` Přepínač je také k dispozici v sadě Visual Studio 2015 Update 3 prostřednictvím [KB 4338871](https://support.microsoft.com/help/4338871). V dokumentaci [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) příznak poskytuje další informace o jeho dopady a využití.
 
 2. CVE-2018-3639, označované také jako [spekulativního jednorázové přihlášení pro Store (SSB)](https://aka.ms/sescsrdssb). Tuto třídu hardwaru ohrožení zabezpečení se týká kanály na straně, které mohou vzniknout z důvodu spekulativního spouštění zatížení náskok před závislé úložiště jako výsledek misprediction přístupu k paměti.
 
@@ -174,7 +174,7 @@ unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
 }
 ```
 
-Je třeba poznamenat, že oba tyto příklady zahrnují spekulativního úpravy přidělený na zásobník nepřímé větev ukazatelů. Je možné, že spekulativního úpravy by se mohl vyskytnout pro globální proměnné, paměť přidělenou haldě a dokonce i paměti jen pro čtení na některých procesorech. Přidělený na zásobník paměti kompilátor Visual C++ již trvá v zájmu postup znesnadňují speculatively upravit přidělený na zásobník nepřímé větvi cíle, například opětovným uspořádáním lokální proměnné tak, že soubor cookie zabezpečení jako jsou umístěna vyrovnávací paměti součástí [/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check) kompilátoru bezpečnostní funkce.
+Je třeba poznamenat, že oba tyto příklady zahrnují spekulativního úpravy přidělený na zásobník nepřímé větev ukazatelů. Je možné, že spekulativního úpravy by se mohl vyskytnout pro globální proměnné, paměť přidělenou haldě a dokonce i paměti jen pro čtení na některých procesorech. Přidělený na zásobník paměti Microsoft C++ kompilátoru již trvá postup znesnadňují speculatively upravit přidělený na zásobník nepřímé větvi cíle, například opětovným uspořádáním lokální proměnné tak, že vyrovnávací paměti jsou umístěna na zabezpečení soubor cookie jako součást [/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check) kompilátoru bezpečnostní funkce.
 
 ## <a name="speculative-type-confusion"></a>Typu spekulativním záměny
 
@@ -331,7 +331,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>Spekulační bariéru prostřednictvím kompilaci instrumentace
 
-Kompilátor Visual C++ v sadě Visual Studio 2017 (od verze 15.5.5) zahrnuje podporu pro `/Qspectre` přepínač, který automaticky vloží spekulační bariéru pro omezenou sadu potenciálně ohrožená vzorce kódování související s CVE-2017-5753. V dokumentaci [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) příznak poskytuje další informace o jeho dopady a využití. Je důležité si uvědomit, že tento příznak nepopisuje všechny potenciálně ohrožená vzorce kódování a jako takový vývojáři by neměl spoléhat jako komplexní omezení rizik pro tuto třídu ohrožení zabezpečení.
+Microsoft C++ kompilátoru v sadě Visual Studio 2017 (od verze 15.5.5) zahrnuje podporu pro `/Qspectre` přepínač, který automaticky vloží spekulační bariéru pro omezenou sadu potenciálně ohrožená vzorce kódování související s CVE-2017-5753. V dokumentaci [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) příznak poskytuje další informace o jeho dopady a využití. Je důležité si uvědomit, že tento příznak nepopisuje všechny potenciálně ohrožená vzorce kódování a jako takový vývojáři by neměl spoléhat jako komplexní omezení rizik pro tuto třídu ohrožení zabezpečení.
 
 ### <a name="masking-array-indices"></a>Indexy pole maskování
 

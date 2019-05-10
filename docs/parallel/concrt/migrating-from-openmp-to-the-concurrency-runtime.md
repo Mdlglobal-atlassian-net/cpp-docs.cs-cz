@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: 16b0f175867e18e127997749098cce998674b3d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba2b413d40da601029f5c4e1d861576212c10494
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412667"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448420"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migrace z OpenMP do Concurrency Runtime
 
 Modul Concurrency Runtime umožňuje širokou škálu programovacích modelů. Tyto modely mohou překrývat nebo doplňují modely další knihovny. Dokumenty v této části porovnání [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp) do Concurrency Runtime a poskytnout příklady o tom, jak migrovat existující kód OpenMP na využití modulu Concurrency Runtime.
 
-OpenMP – programovací model je definován otevřený standard a nemá jasně definované vazby pro programovací jazyky až po Fortran a jazyka C/C++. OpenMP – verze 2.0 nebo 2.5, které podporují kompilátor jazyka Visual C++, jsou vhodné pro paralelní algoritmy, které jsou iterativní; To znamená provádějí paralelní iterace nad určitým polem data. OpenMP 3.0 podporuje – iterativní úlohy navíc iterativní úlohám.
+OpenMP – programovací model je definován otevřený standard a nemá jasně definované vazby pro programovací jazyky až po Fortran a jazyka C/C++. Verze OpenMP 2.0 a 2.5, které podporuje Microsoft C++ kompilátor, jsou vhodné pro paralelní algoritmy, které jsou iterativní; To znamená provádějí paralelní iterace nad určitým polem data. OpenMP 3.0 podporuje – iterativní úlohy navíc iterativní úlohám.
 
 OpenMP – je nejúčinnější, když stupeň paralelismu předem určit a odpovídá prostředcích k dispozici v systému. OpenMP – model je zvlášť vhodné shoda pro vysokovýkonné výpočetní prostředí, ve kterých se velmi rozsáhlých výpočetních problémech distribuují napříč prostředky zpracování z jednoho počítače. V tomto scénáři je hardwarové prostředí obecně pevně a vývojář můžete přiměřeně očekávají, že má výhradní přístup ke všem prostředkům výpočetní při provádění algoritmu.
 

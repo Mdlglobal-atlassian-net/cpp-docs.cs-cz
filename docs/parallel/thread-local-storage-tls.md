@@ -9,16 +9,16 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-ms.openlocfilehash: f5a75f7964b0291a980b22d36e7ce6a0a87d3dc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5c7bf2ae7cb5bfe71be9a1d72147e97c894064b3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362722"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448907"
 ---
 # <a name="thread-local-storage-tls"></a>Lokální úložiště vláken (TLS)
 
-Místní úložiště vláken (TLS) je metoda, podle kterého všechna vlákna daného procesu můžete přidělit umístění, ve kterých se mají ukládat data určitého vlákna. Dynamicky datové vazby (za běhu) specifické pro vlákno je podporováno prostřednictvím rozhraní API pro protokol TLS ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc).  Win32 a kompilátor Visual C++ teď podporují staticky vazbou (během načítání) dat pro vlákno kromě stávající implementaci rozhraní API.
+Místní úložiště vláken (TLS) je metoda, podle kterého všechna vlákna daného procesu můžete přidělit umístění, ve kterých se mají ukládat data určitého vlákna. Dynamicky datové vazby (za běhu) specifické pro vlákno je podporováno prostřednictvím rozhraní API pro protokol TLS ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc).  Win32 a Microsoft C++ kompilátor nyní podpora staticky vázaných dat (během načítání) vlákno kromě stávající implementaci rozhraní API.
 
 ##  <a name="_core_compiler_implementation_for_tls"></a> Implementace kompilátoru TLS
 

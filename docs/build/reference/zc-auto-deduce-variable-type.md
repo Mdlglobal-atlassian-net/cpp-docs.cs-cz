@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 5f5bc102-44c3-4688-bbe1-080594dcee5c
-ms.openlocfilehash: ea977020286d720ed3a6b1b13bf8ff8f5c85e5b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9609bc484310fbc9999182add384eb4e438378bf
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315960"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446239"
 ---
 # <a name="zcauto-deduce-variable-type"></a>/Zc:auto (odvození typu proměnné)
 
@@ -26,7 +26,7 @@ ms.locfileid: "62315960"
 
 ## <a name="remarks"></a>Poznámky
 
-Standard jazyka C++ definuje původní a revidovaný význam `auto` – klíčové slovo. Před Visual C++ 2010 klíčové slovo deklaruje proměnnou v automatické třídě úložiště; To znamená proměnná, která má místní dobu platnosti. Od verze Visual C++ 2010, klíčové slovo odvodí typ proměnné z výrazu inicializace deklarace. Použít **/Zc: Auto [-]** – možnost kompilátoru sdělit kompilátoru, aby použil původní a revidovaný význam `auto` – klíčové slovo. **/Zc: Auto** možnost zapnutá ve výchozím nastavení. [/ Permissive-](permissive-standards-conformance.md) možnost nezmění výchozí nastavení **/Zc: Auto**.
+Standard jazyka C++ definuje původní a revidovaný význam `auto` – klíčové slovo. Před Visual Studio 2010 klíčové slovo deklaruje proměnnou v automatické třídě úložiště; To znamená proměnná, která má místní dobu platnosti. Od verze Visual Studio 2010, klíčové slovo odvodí typ proměnné z výrazu inicializace deklarace. Použít **/Zc: Auto [-]** – možnost kompilátoru sdělit kompilátoru, aby použil původní a revidovaný význam `auto` – klíčové slovo. **/Zc: Auto** možnost zapnutá ve výchozím nastavení. [/ Permissive-](permissive-standards-conformance.md) možnost nezmění výchozí nastavení **/Zc: Auto**.
 
 Kompilátor vyvolá odpovídající diagnostické zprávy, pokud vaše užívání `auto` – klíčové slovo v rozporu se aktuální **/Zc: Auto** – možnost kompilátoru. Další informace najdete v tématu [auto – klíčové slovo](../../cpp/auto-keyword.md). Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete v tématu [nestandardní chování](../../cpp/nonstandard-behavior.md).
 

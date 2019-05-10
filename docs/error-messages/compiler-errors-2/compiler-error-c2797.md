@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2797
 ms.assetid: 9fb26d35-eb5c-46fc-9ff5-756fba5bdaff
-ms.openlocfilehash: 04a7b2b1d33ab7efa77563406ab3c12831cf80fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ccd007bf193bd6529748004a96745fafcb9f3226
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360122"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447822"
 ---
 # <a name="compiler-error-c2797"></a>Chyba kompilátoru C2797
 
 (Zastaralé) Inicializace seznamu je uvnitř seznamu inicializátoru členů nebo nestatický datový člen inicializátor není implementována.
 
-Toto upozornění je zastaralé v sadě Visual Studio 2015. V sadě Visual Studio 2013 a dřívějších verzích kompilátor Visual C++ neimplementuje Inicializace seznamu je uvnitř seznamu inicializátoru členů nebo inicializátoru nestatický datový člen. Před Visual Studio 2013 Update 3 Tento byl text tiše převeden na volání funkce, které by mohlo vést k generování chybného kódu. Visual Studio 2013 Update 3 sestavy to za chybu.
+Toto upozornění je zastaralé v sadě Visual Studio 2015. V sadě Visual Studio 2013 a předchozími verzemi, Microsoft C++ kompilátoru neimplementuje Inicializace seznamu je uvnitř seznamu inicializátoru členů nebo inicializátoru nestatický datový člen. Před Visual Studio 2013 Update 3 Tento byl text tiše převeden na volání funkce, které by mohlo vést k generování chybného kódu. Visual Studio 2013 Update 3 sestavy to za chybu.
 
 Tento příklad vygeneruje C2797:
 

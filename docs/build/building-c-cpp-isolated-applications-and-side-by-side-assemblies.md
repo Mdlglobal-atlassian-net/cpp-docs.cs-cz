@@ -1,6 +1,6 @@
 ---
 title: Sestavení izolovaných aplikací C/C++ a souběžných sestavení
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - isolated applications [C++]
 - WinSxS [C++]
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - side-by-side applications [C++]
 - builds [C++], side-by-side assemblies
 ms.assetid: 9465904e-76f7-48bd-bb3f-c55d8f1699b6
-ms.openlocfilehash: b962796c3bf32bc312d3047535ae90a40a37094d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8164ede1379e573b08f699cd55c199f6fa228823
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196687"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220971"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>Sestavení izolovaných aplikací C/C++ a souběžných sestavení
 
-Jazyk Visual C++ podporuje model nasazení pro klientské aplikace Windows podle představu o [izolovaných aplikací](/windows/desktop/SbsCs/isolated-applications) a [sestavení vedle sebe](/windows/desktop/SbsCs/about-side-by-side-assemblies-). Ve výchozím nastavení, Visual C++ sestavení všech nativních aplikací C/C++ jako izolované aplikace, které používají [manifesty](/windows/desktop/sbscs/manifests) k popisu jejich závislosti v knihovnách jazyka Visual C++.
+Visual Studio podporuje model nasazení pro klientské aplikace Windows podle představu o [izolovaných aplikací](/windows/desktop/SbsCs/isolated-applications) a [sestavení vedle sebe](/windows/desktop/SbsCs/about-side-by-side-assemblies-). Ve výchozím nastavení, sada Visual Studio sestavuje všechny nativní C /C++ aplikace jako izolované aplikace, které používají [manifesty](/windows/desktop/sbscs/manifests) k popisu závislé na Vizuálu C++ knihovny.
 
 Sestavování programů jazyka C/C++ jako izolované aplikace nabízí řadu výhod. Izolované aplikace je například to neovlivní, když jiné aplikace C/C++ instalace nebo odinstalace knihoven Visual C++. Knihovny Visual C++ používá izolované aplikace možné distribuovat stále v buď místní složce aplikace nebo po instalaci do mezipaměti nativních sestavení (WinSxS); ale obsluhu knihoven Visual C++ pro již nasazené aplikace se dá zjednodušit pomocí [konfigurační soubor vydavatele](/windows/desktop/SbsCs/publisher-configuration). Izolované aplikační model nasazení je snazší zajistit, že aplikace C/C++, které jsou spuštěny v určitém počítači použít nejnovější verzi knihovny Visual C++, přičemž stále otevřete možnost pro správce systému a aplikace autorům určit, vázání verze explicitní aplikací na jejich závislé knihovny DLL.
 
-Tato část popisuje, jak můžete svou aplikaci C/C++ jako izolované aplikace a ujistěte se, že vytvoří vazbu s knihovnami Visual C++ pomocí manifestu. Informace v této části především se vztahuje na nativní, nebo nespravované, aplikace Visual C++. Informace o nasazení nativních aplikací vytvořených v jazyce Visual C++, naleznete v tématu [Redistribuce souborů Visual C++](../windows/redistributing-visual-cpp-files.md).
+Tato část popisuje, jak můžete svou aplikaci C/C++ jako izolované aplikace a ujistěte se, že vytvoří vazbu s knihovnami Visual C++ pomocí manifestu. Informace v této části především se vztahuje na nativní, nebo nespravované, C++ aplikací. Další informace o nasazení nativní C++ aplikace sestavené pomocí sady Visual Studio, naleznete v tématu [Redistributing Visual C++ soubory](../windows/redistributing-visual-cpp-files.md).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 

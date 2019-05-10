@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: b381a2b7cc9a4ad4749f382838bdec5872a3decf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0a13748894880c076f8d32c9c74afde1752504c
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337008"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448986"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>2003 – 2015 historie změn Visual C++
 
@@ -36,7 +36,7 @@ Kromě toho probíhající vylepšení shoda s kompilátorem prostředí můžet
 
 - [Změny způsobující chyby modulu Runtime souběžnosti](#BK_ConcRT)
 
-## <a name="VC_2015"></a> Visual C++ 2015 nejnovějšími změnami
+## <a name="VC_2015"></a> Visual Studio 2015 nejnovějšími změnami
 
 ###  <a name="BK_CRT"></a> Běhové knihovny jazyka C (CRT)
 
@@ -2756,7 +2756,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
         }
     ```
 
-- C++ Standard nepovoluje explicitní specializace ve třídě. I když kompilátor jazyka Microsoft Visual C++ umožňuje v některých případech se v případech, jako v následujícím příkladu je nyní generována chyba, protože kompilátor nezahrne druhou funkci jako specializaci té první.
+- C++ Standard nepovoluje explicitní specializace ve třídě. I když Microsoft C++ kompilátoru umožňuje v některých případech se v případech, jako v následujícím příkladu, je nyní generována chyba, protože kompilátor nezahrne druhou funkci jako specializaci té první.
 
     ```cpp
     template < int N>
@@ -2994,7 +2994,7 @@ C++ Kompilátor v sadě Visual Studio 2013 zjistí neshody v makru _ITERATOR_DEB
 
 - Trasovací nástroj ATL nebo MFC je odebrán společně s knihovnou ATL DLL a mechanismus trasování je zjednodušen. `CTraceCategory` Konstruktoru nyní přijímá jeden parametr (název kategorie) a makra trasování volají funkce vykazování ladění CRT.
 
-## <a name="visual-c-2012-breaking-changes"></a>Visual C++ 2012 nejnovější změny
+## <a name="visual-studio-2012-breaking-changes"></a>Rozbíjející změny sady Visual Studio 2012
 
 ### <a name="compiler"></a>Kompilátor
 
@@ -3042,19 +3042,19 @@ C++ Kompilátor v sadě Visual Studio 2013 zjistí neshody v makru _ITERATOR_DEB
 
 - Následující k zásadní změně C ++ 98/03 až 11 standardů C ++ pomocí explicitní argumenty šablony pro volání `make_pair()` – stejně jako v `make_pair<int, int>(x, y)` – obvykle nebude kompilace v jazyce Visual C++ v sadě Visual Studio 2012. Toto řešení je vždy volat `make_pair() `bez explicitní argumenty šablony, stejně jako v `make_pair(x, y)`. Poskytuje šablony explicitní argumenty popírá účel funkce. Pokud potřebujete mít naprostou kontrolu nad výsledný typ, použijte `pair` místo `make_pair` – stejně jako v `pair<short, short>(int1, int2)`.
 
-- Další změnou rozdělení mezi C ++ 11 standardy a C ++ 98/03: Když je implicitně převést na B a B A je implicitně převést na C, ale není implicitně převést na C a C ++ 98/03 Visual C++ 2010 povolené A `pair<A, X>` má být převeden (implicitně nebo explicitně) do `pair<C, X>`. (Jiný typ, X, není zde zájmu a se neomezuje jen na první typ v páru.) Kompilátor C++ v sadě Visual Studio 2012 zjistí, že není implicitně převést na C A a odebere pár převod z řešení přetížení. Tato změna je pozitivní pro řadu scénářů. Například přetížení `func(const pair<int, int>&)` a `func(const pair<string, string>&)`a volání `func()` s `pair<const char *, const char *>` se zkompiluje podle této změny. Tato změna však konce kódu, který spoléhal na agresivní pár převody. Provedením jedné části převod explicitně obvykle lze napravit takového kódu – například tím, že předáte `make_pair(static_cast<B>(a), x)` funkci, která očekává, že `pair<C, X>`.
+- Další změnou rozdělení mezi C ++ 11 standardy a C ++ 98/03: Když je implicitně převést na B a B A je implicitně převést na C, ale není implicitně převést na C a C ++ 98/03 povolené Visual Studio 2010 A `pair<A, X>` má být převeden (implicitně nebo explicitně) do `pair<C, X>`. (Jiný typ, X, není zde zájmu a se neomezuje jen na první typ v páru.) Kompilátor C++ v sadě Visual Studio 2012 zjistí, že není implicitně převést na C A a odebere pár převod z řešení přetížení. Tato změna je pozitivní pro řadu scénářů. Například přetížení `func(const pair<int, int>&)` a `func(const pair<string, string>&)`a volání `func()` s `pair<const char *, const char *>` se zkompiluje podle této změny. Tato změna však konce kódu, který spoléhal na agresivní pár převody. Provedením jedné části převod explicitně obvykle lze napravit takového kódu – například tím, že předáte `make_pair(static_cast<B>(a), x)` funkci, která očekává, že `pair<C, X>`.
 
-- Visual C++ 2010 simulované variadické šablony – například `make_shared<T>(arg1, arg2, argN)`– až po limit 10 argumentů, orazítkování přetížení a specializace preprocesoru zařízení. V sadě Visual Studio 2012 je tento limit snížena na pět argumentů zlepšit dobu potřebnou ke kompilaci a spotřebu paměti kompilátoru pro většinu uživatelů. Předchozí limit však můžete nastavit tak, že explicitně definujete příkaz _VARIADIC_MAX jako 10 celého projektu.
+- Simulované variadické šablony sady Visual Studio 2010 – například `make_shared<T>(arg1, arg2, argN)`– až po limit 10 argumentů, orazítkování přetížení a specializace preprocesoru zařízení. V sadě Visual Studio 2012 je tento limit snížena na pět argumentů zlepšit dobu potřebnou ke kompilaci a spotřebu paměti kompilátoru pro většinu uživatelů. Předchozí limit však můžete nastavit tak, že explicitně definujete příkaz _VARIADIC_MAX jako 10 celého projektu.
 
 - C ++ 11 17.6.4.3.1 [macro.names]/2 zakazuje nahrazení makra klíčových slov při C++ hlavičky standardní knihovny, které jsou zahrnuty. Záhlaví nyní generuje chyby kompilátoru při detekci makra nahrazeny klíčová slova. (Definování _ALLOW_KEYWORD_MACROS umožňuje takový kód mohl zkompilovat, ale důrazně budeme bránit tohle využívání.) Jako výjimku – makro formu `new` je povolené ve výchozím nastavení, protože záhlaví komplexně chránit s použitím `#pragma push_macro("new")` / `#undef new` / `#pragma pop_macro("new")`. Definování _ENFORCE_BAN_OF_MACRO_NEW nemá přesně jak název napovídá.
 
-- Pokud chcete implementovat různých optimalizací a kontroly ladění, implementace standardní knihovny C++ záměrně neumožňuje binární kompatibilitu mezi verzemi sady Visual Studio (2005, 2008, 2010, 2012). Při použití standardní knihovny C++ zakazuje kombinování souborů objektů a statických knihoven, které jsou kompilovány pomocí různých verzí na jednom binárním souboru (EXE nebo DLL) a zakazuje předávání objektů standardní knihovny C++ mezi binárními soubory, které jsou kompilovány pomocí pomocí různých verzí. Kombinování souborů objektů a statických knihoven (pomocí C++ standardní knihovny, které byly zkompilovány pomocí Visual C++ 2010 těmi, které byly zkompilovány pomocí C++ kompilátor v sadě Visual Studio 2012 chyby linkeru týkající se neshoda _MSC_VER kde _MSC_VER je makro, které obsahuje hlavní verzi kompilátoru (1 700 vizuálu C++ v sadě Visual Studio 2012). Tato kontrola nezjistí směšování knihoven DLL a nelze zjišťovat kombinace, která zahrnuje Visual C++ 2008 nebo dřívější.
+- Pokud chcete implementovat různých optimalizací a kontroly ladění, implementace standardní knihovny C++ záměrně neumožňuje binární kompatibilitu mezi verzemi sady Visual Studio (2005, 2008, 2010, 2012). Při použití standardní knihovny C++ zakazuje kombinování souborů objektů a statických knihoven, které jsou kompilovány pomocí různých verzí na jednom binárním souboru (EXE nebo DLL) a zakazuje předávání objektů standardní knihovny C++ mezi binárními soubory, které jsou kompilovány pomocí pomocí různých verzí. Kombinování souborů objektů a statických knihoven (pomocí C++ standardní knihovny, které byly zkompilovány pomocí sady Visual Studio 2010, které byly zkompilovány pomocí C++ kompilátor v sadě Visual Studio 2012 chyby linkeru týkající se neshoda _MSC_VER, kde _MSC_VER je makro, které obsahuje hlavní verzi kompilátoru (1 700 vizuálu C++ v sadě Visual Studio 2012). Tato kontrola nezjistí směšování knihoven DLL a nelze zjišťovat kombinace, která zahrnuje sady Visual Studio 2008 nebo dřívější.
 
-- Kromě zjišťování neshody _ITERATOR_DEBUG_LEVEL, které bylo implementováno ve Vizuálu C++ 2010, C++ kompilátor v sadě Visual Studio 2012 zjistí neshody knihovny prostředí Runtime. Tyto problémy dojít při možnosti kompilátoru `/MT` (statická vydaná verze), `/MTd` (statické ladění), `/MD` (dynamická vydaná verze), a `/MDd` (dynamické ladění) jsou smíšené.
+- Kromě zjišťování neshody _ITERATOR_DEBUG_LEVEL, které bylo implementováno v sadě Visual Studio 2010 C++ kompilátor v sadě Visual Studio 2012 zjistí neshody knihovny prostředí Runtime. Tyto problémy dojít při možnosti kompilátoru `/MT` (statická vydaná verze), `/MTd` (statické ladění), `/MD` (dynamická vydaná verze), a `/MDd` (dynamické ladění) jsou smíšené.
 
 - `operator<()`, `operator>()`, `operator<=()`, a `operator>=()` byly dříve k dispozici pro `std::unordered_map` a `stdext::hash_map` rodiny kontejnerů, i když jejich implementace nebylo užitečné. Tyto operátory nestandardní jsme odebrali v jazyce Visual C++ v sadě Visual Studio 2012. Kromě toho provádění `operator==()` a `operator!=()` pro `std::unordered_map` řady rozšířilo a zahrnují `stdext::hash_map` řady. (Doporučujeme, abyste se vyhněte použití `stdext::hash_map` řady v novém kódu.)
 
-- C ++ 11 22.4.1.4 [locale.codecvt] Určuje, že `codecvt::length()` a `codecvt::do_length()` zabere upravitelná `stateT&` parametry, ale Visual C++ 2010 trvalo `const stateT&`. Kompilátor C++ v sadě Visual Studio 2012 trvá `stateT&` podle zákonného standard. Tento rozdíl je důležité pro každého, kdo se pokouší přepsat virtuální funkci `do_length()`.
+- C ++ 11 22.4.1.4 [locale.codecvt] Určuje, že `codecvt::length()` a `codecvt::do_length()` zabere upravitelná `stateT&` parametry, ale Visual Studio 2010 trvalo `const stateT&`. Kompilátor C++ v sadě Visual Studio 2012 trvá `stateT&` podle zákonného standard. Tento rozdíl je důležité pro každého, kdo se pokouší přepsat virtuální funkci `do_length()`.
 
 ### <a name="crt"></a>CRT
 
@@ -3228,7 +3228,7 @@ C++ Kompilátor v sadě Visual Studio 2013 zjistí neshody v makru _ITERATOR_DEB
 
 - Přejmenovat `CPane::GetDockSiteRow(CDockingPanesRow *)` k `CPane::SetDockSiteRow`.
 
-## <a name="visual-c-2010-breaking-changes"></a>Visual C++ 2010 nejnovější změny
+## <a name="visual-studio-2010-breaking-changes"></a>Rozbíjející změny sady Visual Studio 2010
 
 ### <a name="compiler"></a>Kompilátor
 
@@ -3244,23 +3244,23 @@ C++ Kompilátor v sadě Visual Studio 2013 zjistí neshody v makru _ITERATOR_DEB
 
 - Pokud kompilujete s oběma `/GL` (optimalizace celého programu) a `/clr` možnosti kompilátoru (kompilace Common Language Runtime), `/GL` možnost je ignorována. Tato změna byla provedena, protože zadaná kombinace parametrů kompilátoru málo výhodné. V důsledku této změny je výkon sestavení.
 
-- Ve výchozím nastavení podpora trigraphs je vypnutá ve Visual C++ 2010. Použití `/Zc:trigraphs` povolení podpory trigraphs – možnost kompilátoru. Trigraf se skládá ze dvou po sobě jdoucími otazníky ("??") následovaný znakem třetí jedinečný. Kompilátor nahradí trigraph odpovídající znak interpunkce. Například, kompilátor nahradí `??=` trigraph znakem '#'. Použití trigraphs ve zdrojových souborech jazyka C, které používají znakovou sadu, která neobsahuje vhodné grafické reprezentace pro některá interpunkční znaménka.
+- Ve výchozím nastavení podpora trigraphs je vypnutá v sadě Visual Studio 2010. Použití `/Zc:trigraphs` povolení podpory trigraphs – možnost kompilátoru. Trigraf se skládá ze dvou po sobě jdoucími otazníky ("??") následovaný znakem třetí jedinečný. Kompilátor nahradí trigraph odpovídající znak interpunkce. Například, kompilátor nahradí `??=` trigraph znakem '#'. Použití trigraphs ve zdrojových souborech jazyka C, které používají znakovou sadu, která neobsahuje vhodné grafické reprezentace pro některá interpunkční znaménka.
 
 - Propojovací program již podporuje optimalizaci pro Windows 98. `/OPT` Možnosti (optimalizace) vytvoří chybu v době kompilace při zadání `/OPT:WIN98` nebo `/OPT:NOWIN98`.
 
 - Výchozí možnosti kompilátoru, která jsou určena podle RuntimeLibrary a DebugInformationFormat sestavovací systém, které se změnily vlastnosti. Ve výchozím nastavení tato sestavení, které jsou zadány vlastnosti v projektech, které jsou vytvořeny pomocí jazyka Visual C++ verze 7.0 prostřednictvím 10.0. Pokud provádíte migraci projekt, který byl vytvořen ve Visual C++ 6.0, zvažte, jestli můžete zadat hodnotu pro tyto vlastnosti.
 
-- V sadě Visual C++ 2010 RuntimeLibrary = s více vlákny (`/MD`) a DebugInformationFormat = ProgramDatabase (`/Zi`). V jazyce Visual C++ 9.0, RuntimeLibrary = s více vlákny (`/MT`) a DebugInformationFormat = zakázáno.
+- V sadě Visual Studio 2010 RuntimeLibrary = s více vlákny (`/MD`) a DebugInformationFormat = ProgramDatabase (`/Zi`). V jazyce Visual C++ 9.0, RuntimeLibrary = s více vlákny (`/MT`) a DebugInformationFormat = zakázáno.
 
 ### <a name="clr"></a>CLR
 
 - Kompilátory Microsoft C# a Visual Basic můžete nyní vytvořit primární definiční sestavení (no-PIA). No-PIA sestavení můžete typy modelu COM bez nasazování relevantní primární sestavení vzájemné spolupráce (PIA). Při využívání no-PIA sestavení vytvořené Visual C# nebo Visual Basic, je třeba sestavení PIA, na příkaz compile odkazovat dříve, než odkazovat no-PIA sestavení, který používá knihovnu.
 
-### <a name="visual-c-projects-and-msbuild"></a>Projekty Visual C++ a nástroje MSBuild
+### <a name="visual-studio-c-projects-and-msbuild"></a>Visual Studio C++ projektů a nástroje MSBuild
 
-- Projekty Visual C++ jsou nyní podle nástroj MSBuild. V důsledku toho soubory projektu používají nový formát souboru XML a příponu souboru .vcxproj. Visual C++ 2010 automaticky převede soubory projektu z předchozích verzí sady Visual Studio na nový formát souboru. Existující projekt bude ovlivněna závisí na předchozím .vcproj nástroje, VCBUILD.exe nebo příponu souboru projektu sestavení.
+- Visual Studio C++ projekty jsou nyní podle nástroj MSBuild. V důsledku toho soubory projektu používají nový formát souboru XML a příponu souboru .vcxproj. Visual Studio 2010 automaticky převede soubory projektu z předchozích verzí sady Visual Studio na nový formát souboru. Existující projekt bude ovlivněna závisí na předchozím .vcproj nástroje, VCBUILD.exe nebo příponu souboru projektu sestavení.
 
-- V dřívějších verzích Visual C++ nepodporuje opožděné vyhodnocení vlastností. Například nadřazený seznam vlastností může importovat seznam vlastností podřízené a nadřazené může používat proměnné definované v podřízeném definovat jiné proměnné. Opožděné vyhodnocení povolit nadřazené použít vlastnost podřízené ještě předtím, než bylo importováno podřízený seznam vlastností. V aplikaci Visual C++ 2010 nelze použít seznam proměnných projektu předtím, než je definován, protože MSBuild podporuje pouze dřívější vyhodnocení.
+- V dřívějších verzích Visual C++ nepodporuje opožděné vyhodnocení vlastností. Například nadřazený seznam vlastností může importovat seznam vlastností podřízené a nadřazené může používat proměnné definované v podřízeném definovat jiné proměnné. Opožděné vyhodnocení povolit nadřazené použít vlastnost podřízené ještě předtím, než bylo importováno podřízený seznam vlastností. V sadě Visual Studio 2010 nelze použít seznam proměnných projektu předtím, než je definován, protože MSBuild podporuje pouze dřívější vyhodnocení.
 
 ### <a name="ide"></a>IDE – integrované vývojové prostředí
 
@@ -3274,7 +3274,7 @@ C++ Kompilátor v sadě Visual Studio 2013 zjistí neshody v makru _ITERATOR_DEB
 
 - Manifesty model nasazení knihoven už používá k nalezení konkrétní verzi knihovny DLL. Místo toho název každou knihovnu DLL obsahuje číslo verze a používat tento název k vyhledání knihovny.
 
-- V předchozích verzích sady Visual Studio může sestavení knihovny run-time. Visual C++ 2010 již podporuje vytváření vlastní kopie C spusťte soubory knihovny.
+- V předchozích verzích sady Visual Studio může sestavení knihovny run-time. Visual Studio 2010 již podporuje vytváření vlastní kopie C spusťte soubory knihovny.
 
 ### <a name="standard-library"></a>Standardní knihovna
 
@@ -3306,7 +3306,7 @@ C++ Kompilátor v sadě Visual Studio 2013 zjistí neshody v makru _ITERATOR_DEB
 
 - Několik direktivy byly odebrány z kompilátoru Microsoft Macro Assembler – referenční dokumentace. Odebrání direktivy jsou `.186`, `.286`, `.286P`, `.287`, `.8086`, `.8087`, a `.NO87`.
 
-## <a name="visual-c-2008-breaking-changes"></a>Visual C++ 2008 nejnovější změny
+## <a name="visual-studio-2008-breaking-changes"></a>Rozbíjející změny sady Visual Studio 2008
 
 ### <a name="compiler"></a>Kompilátor
 
@@ -3330,7 +3330,7 @@ C++ Kompilátor v sadě Visual Studio 2013 zjistí neshody v makru _ITERATOR_DEB
 
    - tag_name
 
-### <a name="visual-c-projects"></a>Projekty Visual C++
+### <a name="visual-studio-c-projects"></a>Visual Studio C++ projekty
 
 - Upgrade projektů z předchozích verzí sady Visual Studio, je nutné upravit maker WINVER a _WIN32_WINNT tak, aby byly větší než nebo rovna hodnotě 0x0500.
 
@@ -3386,7 +3386,7 @@ C++ Kompilátor v sadě Visual Studio 2013 zjistí neshody v makru _ITERATOR_DEB
 
 ### <a name="atl"></a>ATL
 
-- Knihovny ATL nelze sestavit bez závislosti na CRT. V dřívějších verzích sady Visual Studio, můžete použít #define ATL_MIN_CRT projektu ATL, aby minimálně závislé na CRT. Ve Vizuálu C++ 2008, jsou všechny projekty knihovny ATL minimálně závislé na CRT bez ohledu na to, zda je definován ATL_MIN_CRT.
+- Knihovny ATL nelze sestavit bez závislosti na CRT. V dřívějších verzích sady Visual Studio, můžete použít #define ATL_MIN_CRT projektu ATL, aby minimálně závislé na CRT. V sadě Visual Studio 2008 jsou všechny projekty knihovny ATL minimálně závislé na CRT bez ohledu na to, zda je definován ATL_MIN_CRT.
 
 - Základ kódu serveru ATL byla uvedena jako sdílený zdrojový projekt na webu CodePlex a není nainstalován jako součást sady Visual Studio. Kódování a dekódování z funkce atlenc.h a nástroje a třídy z atlutil.h a atlpath.h dat byla držena a jsou teď součástí knihovny ATL. Několik souborů, které jsou přidružené k serveru knihovny ATL už nejsou součástí sady Visual Studio.
 
@@ -3396,7 +3396,7 @@ C++ Kompilátor v sadě Visual Studio 2013 zjistí neshody v makru _ITERATOR_DEB
 
 ### <a name="atlmfc-shared-classes"></a>Sdílené třídy ATL/MFC
 
-- Knihovny ATL nelze sestavit bez závislosti na CRT. V dřívějších verzích sady Visual Studio, můžete použít `#define ATL_MIN_CRT` do projektu ATL, aby minimálně závislé na CRT. Ve Vizuálu C++ 2008, jsou všechny projekty knihovny ATL minimálně závislé na CRT bez ohledu na to, zda je definován ATL_MIN_CRT.
+- Knihovny ATL nelze sestavit bez závislosti na CRT. V dřívějších verzích sady Visual Studio, můžete použít `#define ATL_MIN_CRT` do projektu ATL, aby minimálně závislé na CRT. V sadě Visual Studio 2008 jsou všechny projekty knihovny ATL minimálně závislé na CRT bez ohledu na to, zda je definován ATL_MIN_CRT.
 
 - Základ kódu serveru ATL byla uvedena jako sdílený zdrojový projekt na webu CodePlex a není nainstalován jako součást sady Visual Studio. Kódování a dekódování z funkce atlenc.h a nástroje a třídy z atlutil.h a atlpath.h dat byla držena a jsou teď součástí knihovny ATL. Několik souborů, které jsou přidružené k serveru knihovny ATL už nejsou součástí sady Visual Studio.
 
@@ -3420,7 +3420,7 @@ C++ Kompilátor v sadě Visual Studio 2013 zjistí neshody v makru _ITERATOR_DEB
 
 - Rozhraní API nepoužívané standardu ANSI: ANSI verze z několika metod MFC jsou zastaralé. Použijte Unicode verze těchto metod v budoucí aplikace. Další informace najdete v tématu **vytvářet požadavky pro Windows Vista běžné ovládací prvky**.
 
-## <a name="visual-c-2005-breaking-changes"></a>Visual C++ 2005 nejnovější změny
+## <a name="visual-studio-2005-breaking-changes"></a>Visual Studio 2005 nejnovější změny
 
 ### <a name="crt"></a>CRT
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COM interfaces, editing
 - properties [C++], adding to COM interfaces
 ms.assetid: 1be84d3c-6886-4d1e-8493-56c4d38a96d4
-ms.openlocfilehash: dfc4b09f4fa42b179bdef91877e0a004caa69187
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 6ed2784c781b474b57a3aef796a336a8911df8fc
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345228"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448164"
 ---
 # <a name="create-a-com-interface"></a>Vytváření rozhraní modelu COM
 
@@ -74,7 +74,7 @@ V zobrazení tříd a jeho místní nabídky můžete pracovat s rozhraním nás
 
 ## <a name="edit-a-com-interface"></a>Úpravy rozhraní modelu COM
 
-Pomocí příkazů v místní nabídce Zobrazení tříd můžete definovat nové metody a vlastnosti pro rozhraní modelu COM v projektech Visual C++. Z panelu nástrojů můžete také definovat události pro ovládací prvky ActiveX.
+Pomocí příkazů v místní nabídce Zobrazení tříd můžete definovat nové metody a vlastnosti pro rozhraní modelu COM v aplikaci Visual Studio C++ projekty. Z panelu nástrojů můžete také definovat události pro ovládací prvky ActiveX.
 
 Pro třídy objektů knihovny ATL a MFC-založené na modelu COM můžete upravit implementace třídy ve stejnou dobu, abyste upravili rozhraní.
 

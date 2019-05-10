@@ -1,6 +1,6 @@
 ---
 title: CAtlServiceModuleT Class
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - CAtlServiceModuleT
 - ATLBASE/ATL::CAtlServiceModuleT
@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: 2d4d5d4a5c4d8a52f792cc04a968974967c1e13a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d44e356d907afcb261c0b4a765f8807bb54dc19
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260191"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221183"
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT Class
 
@@ -68,13 +68,13 @@ Identifikátor prostředku služby.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAtlServiceModuleT::CAtlServiceModuleT](#catlservicemodulet)|Konstruktor|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAtlServiceModuleT::Handler](#handler)|Rutina obslužné rutiny pro službu.|
 |[CAtlServiceModuleT::InitializeSecurity](#initializesecurity)|Poskytuje výchozí nastavení zabezpečení pro službu.|
@@ -101,7 +101,7 @@ Identifikátor prostředku služby.
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAtlServiceModuleT::m_bService](#m_bservice)|Příznak označující, že je program spuštěn jako služba.|
 |[CAtlServiceModuleT::m_dwThreadID](#m_dwthreadid)|Členské proměnné ukládání identifikátor vlákna.|
@@ -186,7 +186,7 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-V aplikaci Visual Studio .NET 2003 tato metoda není implementována v základní třídě. Průvodce projektem Visual Studio obsahuje tuto metodu ve vygenerovaném kódu, ale chybu kompilace dojde, pokud projekt vytvořený v předchozích verzích Visual C++ je zkompilován pomocí knihovny ATL 7.1. Všechny třídy, která je odvozena z `CAtlServiceModuleT` musí tuto metodu implementovat v odvozené třídě.
+Všechny třídy, která je odvozena z `CAtlServiceModuleT` musí tuto metodu implementovat v odvozené třídě.
 
 Použít ověřování úrovni PKT, úroveň zosobnění rpc_c_imp_level_identify a popisovač zabezpečení jinou hodnotu než null při volání funkce `CoInitializeSecurity`.
 

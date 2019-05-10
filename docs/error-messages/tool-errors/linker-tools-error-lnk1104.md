@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-ms.openlocfilehash: eadeeb7ac19e3975a37a1364502b33400018cb05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc6305ab2e96496aa212004e186150d4a51cf3fc
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255510"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446965"
 ---
 # <a name="linker-tools-error-lnk1104"></a>Chyba linkerů LNK1104
 
@@ -59,7 +59,7 @@ Ujistěte se, že máte nainstalované všechny verze knihovny, které potřebuj
 
 ### <a name="cannot-open-a-file-built-by-your-project"></a>Nelze otevřít soubor vytvořen vaším projektem
 
-Tato chyba může zobrazit, pokud soubor *filename* je vytvořených vaším řešením, ale dosud neexistuje propojovací program se pokusí k němu přistupovat. To může nastat při jednom projektu závisí na jiný projekt, ale projektů nejsou vytvořená ve správném pořadí. Chcete-li vyřešit tento problém, ujistěte se, že odkazy projektu jsou nastaveny v projektu, který používá soubor tak, že chybí soubor je sestaveny předtím, než je povinný. Další informace najdete v tématu [přidávání odkazů v projektech Visual C++](../../build/adding-references-in-visual-cpp-projects.md) a [Správa odkazů v projektu](/visualstudio/ide/managing-references-in-a-project).
+Tato chyba může zobrazit, pokud soubor *filename* je vytvořených vaším řešením, ale dosud neexistuje propojovací program se pokusí k němu přistupovat. To může nastat při jednom projektu závisí na jiný projekt, ale projektů nejsou vytvořená ve správném pořadí. Chcete-li vyřešit tento problém, ujistěte se, že odkazy projektu jsou nastaveny v projektu, který používá soubor tak, že chybí soubor je sestaveny předtím, než je povinný. Další informace najdete v tématu [přidávání odkazů v sadě Visual Studio C++ projekty](../../build/adding-references-in-visual-cpp-projects.md) a [Správa odkazů v projektu](/visualstudio/ide/managing-references-in-a-project).
 
 ### <a name="cannot-open-file-cprogramobj"></a>Nelze otevřít soubor "C:\\Program.obj.
 

@@ -1,18 +1,18 @@
 ---
-title: 'Hodnota kategorie: Hodnoty lvalue a rvalue (C++)'
-ms.date: 04/06/2018
+title: 'Hodnota kategorie: Hodnoty Lvalue a Rvalue (C++)'
+ms.date: 05/07/2019
 helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-ms.openlocfilehash: 74bfac5f5bb56549eee41a5479babf8e71b00aa6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e3cfa87a8f1ae9b17f7c08afd8faeabea7102b3
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245556"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222016"
 ---
-# <a name="lvalues-and-rvalues-visual-c"></a>Hodnoty lvalue a rvalue (C++)
+# <a name="lvalues-and-rvalues-c"></a>Hodnoty Lvalue a Rvalue (C++)
 
 Každý výraz jazyka C++ má typ, patří *kategorií hodnot*. Hodnota kategorie jsou základem pro pravidla, která řídí kompilátory při vytváření, kopírování a přesouvání dočasné objekty při vyhodnocení výrazu.
 

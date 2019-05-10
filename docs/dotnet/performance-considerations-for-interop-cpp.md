@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mixed assemblies [C++], performance considerations
 - interoperability [C++], performance considerations
 ms.assetid: bb9a282e-c3f8-40eb-a2fa-45d80d578932
-ms.openlocfilehash: c6b4456d9c75061c9a8c93f37f98b58f92adc899
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29dbfa6465f6bcbcf4d0618b1820e59a8edbd3a3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384748"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447260"
 ---
 # <a name="performance-considerations-for-interop-c"></a>Faktory ovlivňující výkon u zprostředkovatelů komunikace (C++)
 
@@ -21,7 +21,7 @@ Toto téma obsahuje pokyny pro snižuje vliv na výkon za běhu spravovaného a 
 
 Jazyk Visual C++ podporuje stejné mechanismy spolupráce jako dalších jazycích .NET, například Visual Basic a C# (nespravovaného), ale přináší také spolupráce podpory, které jsou specifické pro Visual C++ (zprostředkovatele komunikace C++). Pro kritickém pro výkon aplikace je důležité si uvědomit důsledky výkon jednotlivých spolupráce techniky.
 
-Bez ohledu na to spolupráce techniku použít sekvence speciální přechodu, nazvané převody, jsou požadovány pokaždé, když spravované funkce volá nespravovaný versa funkce a naopak. Tyto převody jsou automaticky vložen kompilátorem jazyka Visual C++, ale je důležité si pamatovat, že kumulativně, můžou být tyto přechody náročné z hlediska výkonu.
+Bez ohledu na to spolupráce techniku použít sekvence speciální přechodu, nazvané převody, jsou požadovány pokaždé, když spravované funkce volá nespravovaný versa funkce a naopak. Tyto převody jsou automaticky vloženy Microsoftu C++ kompilátoru, ale je důležité si pamatovat, že kumulativně, můžou být tyto přechody náročné z hlediska výkonu.
 
 ## <a name="reducing-transitions"></a>Omezení přechodů
 

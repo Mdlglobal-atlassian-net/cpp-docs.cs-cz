@@ -1,14 +1,14 @@
 ---
 title: Převody a bezpečnost typů (moderní verze jazyka C++)
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-ms.openlocfilehash: 79285e4870b73ff01ed3b230a0162f87c0400aa8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e06ea3f9c3ea427f205764c35988ea3316c3794a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404686"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221862"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Převody a bezpečnost typů (moderní verze jazyka C++)
 
@@ -84,7 +84,7 @@ Kompilátor nevyvolá upozornění o implicitních převodech mezi celočíseln�
 
 ### <a name="pointer-conversions"></a>Převody ukazatele
 
-V mnoha výrazech je pole stylu jazyka C implicitně převedeno na ukazatel na první element v tomto poli a ke konstantním převodům může dojít bez upozornění. I když je to pohodlné, je to také potenciálně náchylné k chybám. Například následující ukázka špatně navrženého kódu se zdá být nesmyslná, ale v jazyce Visual C++ bude zkompilována a jako výsledek vrátí znak 'p'. Nejprve je konstantní textový literál „Help“ převeden na typ `char*` odkazující na první prvek pole. Tento ukazatel je poté zvýšen o tři prvky, takže nyní odkazuje na poslední prvek 'p'.
+V mnoha výrazech je pole stylu jazyka C implicitně převedeno na ukazatel na první element v tomto poli a ke konstantním převodům může dojít bez upozornění. I když je to pohodlné, je to také potenciálně náchylné k chybám. Například následující ukázka špatně navrženého kódu příklad zdá být nesmyslná, a ještě bude zkompilována a jako výsledek 'p'. Nejprve je konstantní textový literál „Help“ převeden na typ `char*` odkazující na první prvek pole. Tento ukazatel je poté zvýšen o tři prvky, takže nyní odkazuje na poslední prvek 'p'.
 
 ```cpp
 char* s = "Help" + 3;

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 774575e978a8e7f94868eb1b5dad90c6ac345460
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a752122d89b3d952aec664f0dec092af1599f143
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388173"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448915"
 ---
 # <a name="resource-editors-c"></a>Editory prostředků (C++)
 
@@ -39,15 +39,15 @@ Otevře se editor odpovídající automaticky při vytvoření nebo otevření p
 
 |Použití...|Chcete-li upravit...|
 |----------------|----------------|
-|[Editor akcelerátorů](../windows/accelerator-editor.md)|Tabulek akcelerátorů v projektech Visual C++.|
+|[Editor akcelerátorů](../windows/accelerator-editor.md)|Tabulek akcelerátorů v aplikaci Visual Studio C++ projekty.|
 |[Binární editor](binary-editor.md)|Informace o binárních dat a vlastních prostředků v projektech Visual C++, Visual Basic nebo Visual C#.|
-|[Editor dialogových oken](../windows/dialog-editor.md)|Dialogová okna v projektech Visual C++.|
+|[Editor dialogových oken](../windows/dialog-editor.md)|Dialogová okna v sadě Visual Studio C++ projekty.|
 |[Editor obrázků](../windows/image-editor-for-icons.md)|Rastrové obrázky, ikony, kurzory a další soubory obrázků v projektech Visual C++, Visual Basic nebo Visual C#.|
-|[Editor nabídek](../windows/menu-editor.md)|Prostředky nabídky v projektech Visual C++.|
+|[Editor nabídek](../windows/menu-editor.md)|Prostředky nabídky v sadě Visual Studio C++ projekty.|
 |[Ribbon Editor](../mfc/ribbon-designer-mfc.md)|Prostředky z pásu karet v projektech knihovny MFC.|
-|[Editor řetězce](../windows/string-editor.md)|Řetězec tabulek v projektech Visual C++.|
-|[Editor panelu nástrojů](../windows/toolbar-editor.md)|Prostředky panelu nástrojů v projektech Visual C++. **Panelu nástrojů editoru** je součástí **Editor obrázků**.|
-|[Editor informací o verzi](../windows/version-information-editor.md)|Informace o verzi v projektech Visual C++.|
+|[Editor řetězce](../windows/string-editor.md)|Řetězec tabulky v sadě Visual Studio C++ projekty.|
+|[Editor panelu nástrojů](../windows/toolbar-editor.md)|Prostředky panelu nástrojů v sadě Visual Studio C++ projekty. **Panelu nástrojů editoru** je součástí **Editor obrázků**.|
+|[Editor informací o verzi](../windows/version-information-editor.md)|Informace o verzi v sadě Visual Studio C++ projekty.|
 
 > [!NOTE]
 > Pokud váš projekt již neobsahuje soubor .rc, najdete [jak: Vytvoření prostředků](../windows/how-to-create-a-resource-script-file.md).

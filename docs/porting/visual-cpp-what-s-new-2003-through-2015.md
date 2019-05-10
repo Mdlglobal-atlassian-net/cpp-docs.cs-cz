@@ -2,16 +2,16 @@
 title: Visual C++ co&#39;s novou 2003 – 2015
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: ae21a81869bd68c5a2641dba47b89d7e10b67567
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 773500b32b1a80a6a7b1d1f2431b036f7ad3bd63
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371919"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448872"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ co&#39;s novou 2003 – 2015
 
-Tato stránka obsahuje všechny "Novinky" stránky pro všechny verze sady Visual C++ ze sady Visual Studio 2015 zpět do 2003. Tyto informace jsou poskytovány v zájmu usnadnění práce v případě, že může být užitečné při upgradu ze starší verze jazyka Visual C++.
+Tato stránka obsahuje všechny "Novinky" stránky pro všechny verze sady Visual C++ ze sady Visual Studio 2015 zpět do 2003. Tyto informace jsou poskytovány v zájmu usnadnění práce v případě, že může být užitečné při upgradu z dřívější verze sady Visual Studio.
 
 > [!NOTE]
 > Informace o aktuální verzi sady Visual Studio najdete v tématu [co je nového v aplikaci Visual C++ v sadě Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) a [vylepšení v aplikaci Visual C++ v sadě Visual Studio](../overview/cpp-conformance-improvements.md).
@@ -75,7 +75,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     };
    ```
 
-   Toto přijetí předchozí verze kompilátoru jazyka Visual C++, ale teď kompilátor poskytuje následující chybu:
+   Předchozí verze agenta Microsoft C++ kompilátoru přijímají toto, ale teď kompilátor poskytuje následující chybu:
 
    ```Output
     error C2071: 'S::r': illegal storage class
@@ -1516,7 +1516,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
 #### <a name="compiler"></a>Kompilátor
 
-Kompilátor jazyka Microsoft Visual C++ podporuje tyto funkce ISO C ++ 11 jazyka:
+MSVC podporuje tyto funkce ISO C ++ 11 jazyka:
 
 - Výchozí argumenty šablon pro šablony funkcí.
 - Delegování konstruktorů
@@ -1696,7 +1696,7 @@ Tato vylepšená podpora standardů ISO C/C++ mohou vyžadovat změny existujíc
 ### <a name="new-in-visual-studio-2012-update-1"></a>Novinka ve Visual Studio 2012 Update 1
 
 Při sestavování kódu C++ jako cíl Windows XP.
-Můžete použít kompilátor jazyka Visual C++ a knihoven a cíl Windows XP a Windows Server 2003.
+Můžete použít Microsoft C++ kompilátor a knihovny do cílového Windows XP a Windows Server 2003.
 
 #### <a name="parallel-programming-support"></a>Paralelní programování podpory
 
@@ -1787,7 +1787,7 @@ Pokrytí kódu je aktualizovaná na dynamicky instrumentace binárních souborů
 
 **static_assert Declaration.** A **static_assert** deklarace testuje výraz softwaru v době kompilace, na rozdíl od jiných kontrolní výraz mechanismů, které testují v době běhu. Pokud výraz se nezdaří, kompilace se nezdaří a vydává zadanou chybovou zprávou.
 
-**klíčová slova nullptr a __nullptr.** Kompilátor Visual C++ vám umožní používat **nullptr** – klíčové slovo nativního kódu nebo spravovaného kódu. **Nullptr** – klíčové slovo určuje, že popisovač objektu, vnitřní ukazatel nebo typ nativní ukazatel neukazuje na objekt. Kompilátor interpretuje **nullptr** být při použití spravovaného kódu `/clr` – možnost kompilátoru a nativní kód, když použijete `/clr` možnost.
+**klíčová slova nullptr a __nullptr.** MSVC vám umožní používat **nullptr** – klíčové slovo nativního kódu nebo spravovaného kódu. **Nullptr** – klíčové slovo určuje, že popisovač objektu, vnitřní ukazatel nebo typ nativní ukazatel neukazuje na objekt. Kompilátor interpretuje **nullptr** být při použití spravovaného kódu `/clr` – možnost kompilátoru a nativní kód, když použijete `/clr` možnost.
 Specifické pro Microsoft **__nullptr** – klíčové slovo má stejný význam jako **nullptr**, ale se vztahuje pouze na nativní kód. Pokud kompilujete pomocí nativního kódu C/C++ `/clr` – možnost kompilátoru, kompilátor nemůže určit, jestli **nullptr** – klíčové slovo je nativní nebo spravovaný termín. Aby váš záměr vymazat pro kompilátor pomocí klíčového slova nullptr můžete zadat jako spravované a **__nullptr** k určení nativní termínu.
 
 **/ Zc: trigraphs – možnost kompilátoru.** Ve výchozím nastavení podpora trigraphs je vypnutá. Použití `/Zc:trigraphs` povolení podpory trigraphs – možnost kompilátoru.
@@ -1801,9 +1801,9 @@ Trigraf se skládá ze dvou po sobě jdoucími otazníky (?) následovaný znake
 
 **Vnitřní funkce XOP, Fma4 a LWP vnitřních objektů.** Nový vnitřní funkce byly přidány pro podporu XOP vnitřní objekty přidány pro Visual Studio 2010 SP1, přidá FMA4 vnitřních objektů pro Visual Studio 2010 SP1 a přidali LWP vnitřních objektů pro Visual Studio 2010 SP1 procesoru technologie. Použijte __cpuid __cpuidex k určení, které procesor technologie jsou podporovány v určitém počítači.
 
-### <a name="visual-c-projects-and-the-build-system"></a>Projekty Visual C++ a systému sestavení
+### <a name="visual-studio-c-projects-and-the-build-system"></a>Visual Studio C++ projekty a systému sestavení
 
-**MSBuild.** Visual C++ řešení a projekty jsou nyní integrovány pomocí MSBuild.exe, která nahrazuje VCBuild.exe. Nástroj MSBuild je stejný nástroj pro sestavení flexibilní, rozšiřitelné a založený na formátu XML, který se používá v jiných jazycích sady Visual Studio a typy projektů. Z důvodu této změny soubory projektu Visual C++ teď použít formát souboru XML a mají příponu názvu souboru .vcxproj. Soubory projektu Visual C++ z předchozích verzí sady Visual Studio se automaticky převedou na nový formát souboru.
+**MSBuild.** Visual C++ řešení a projekty jsou nyní integrovány pomocí MSBuild.exe, která nahrazuje VCBuild.exe. Nástroj MSBuild je stejný nástroj pro sestavení flexibilní, rozšiřitelné a založený na formátu XML, který se používá v jiných jazycích sady Visual Studio a typy projektů. Z důvodu této změny sady Visual Studio C++ soubory projektu nyní používají formát souboru XML a mají příponu názvu souboru. Visual Studio C++ soubory projektu z předchozích verzí sady Visual Studio se automaticky převedou na nový formát souboru.
 
 **Adresáře VC ++.** Nastavení adresáře VC ++ se nyní nachází na dvou místech. Pomocí stránky vlastností projektu můžete nastavit hodnoty jednotlivých projektů pro adresáře VC ++. Použití **Správce vlastností** a seznam vlastností pro globální nastavení podle konfigurace hodnoty adresáře VC ++.
 
@@ -1934,7 +1934,7 @@ Přidání datového typu YMMWORD podporuje oborového 256bitového multimediál
 - Vnitřní funkce podporují novější procesorů AMD a Intel. Několik nových vnitřní pokynů podporovat více funkcí v novější procesorů AMD a Intel. Další informace o nové vnitřních objektů najdete v tématu **doplňkové Streaming SIMD Extensions 3 pokyny**, **Streaming SIMD Extensions 4 pokyny**, **SSE4A a rozšířená verze Manipulace s vnitřní objekty**, **vnitřní objekty AES**, **_mm_clmulepi64_si128**, a **__rdtscp**.
 - `__cpuid` Funkce se aktualizuje. `__cpuid`, `__cpuidex` Funkce teď podporují několik nových funkcí z nejnovější revize procesory AMD a Intel. `__cpuidex` Vnitřní novinky a shromažďuje informace z poslední procesory.
 - `/MP` – Možnost kompilátoru snižuje čas celkové sestavení. `/MP` Možnost může výrazně snížit celkový čas kompilace několik zdrojových souborů tak, že vytvoříte několik procesů, které se kompilují soubory současně. Tato možnost je užitečná v počítačích, které podporují hyperthreadingem, více procesorů nebo více jader.
-- `/Wp64` – Možnost kompilátoru a **__w64** – klíčové slovo se považují za zastaralé. `/Wp64` – Možnost kompilátoru a **__w64** – klíčové slovo, které zjišťovat problémy přenositelnosti na 64-bit, se považují za zastaralé a bude v budoucí verzi kompilátoru odebrána. Namísto tohoto – možnost kompilátoru a – klíčové slovo využijte kompilátor Visual C++ této platformy cíle 64-bit.
+- `/Wp64` – Možnost kompilátoru a **__w64** – klíčové slovo se považují za zastaralé. `/Wp64` – Možnost kompilátoru a **__w64** – klíčové slovo, které zjišťovat problémy přenositelnosti na 64-bit, se považují za zastaralé a bude v budoucí verzi kompilátoru odebrána. Namísto této možnosti kompilátoru a – klíčové slovo použijte MSVC, který cílí na 64bitovou platformu.
 - `/Qfast_transcendentals` generuje kód vloženého Transcendentní funkce.
 - `/Qimprecise_fwaits` Odstraní příkazy fwait interní na bloky try při použití `/fp:except` – možnost kompilátoru.
 

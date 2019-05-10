@@ -1,14 +1,14 @@
 ---
 title: Ošetření chyb a výjimek (moderní verze jazyka C++)
-ms.date: 09/17/2018
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-ms.openlocfilehash: c3def77d8b7a22be05259784e3b80562c8728c15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb27a92347b327e22afc4f6bb2fb248c12290cae
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398911"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222141"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Ošetření chyb a výjimek (moderní verze jazyka C++)
 
@@ -90,13 +90,13 @@ Výjimky a kontrolní výrazy jsou dva odlišné mechanismy pro detekci chyb za 
 
 ## <a name="c-exceptions-versus-windows-seh-exceptions"></a>Výjimky jazyka C++ a výjimky Windows SEH
 
-Programy jazyka C i C++ mohou používat strukturovaných výjimek (SEH) mechanismu v operačním systému Windows pro zpracování. Základní pojmy v SEH se podobají těm v C++ výjimky, s tím rozdílem, že SEH používá **__try**, **__except**, a **__finally** vytvoří místo **akci**  a **catch**. V jazyce Visual C++ jsou výjimky C++ implementovány pro SEH. Při psaní kódu jazyka C++ však použijte synax výjimek C++.
+Programy jazyka C i C++ mohou používat strukturovaných výjimek (SEH) mechanismu v operačním systému Windows pro zpracování. Základní pojmy v SEH se podobají těm v C++ výjimky, s tím rozdílem, že SEH používá **__try**, **__except**, a **__finally** vytvoří místo **akci**  a **catch**. V Microsoftu C++ kompilátor (MSVC) C++ výjimky jsou implementovány pro SEH. Při psaní kódu jazyka C++ však použijte synax výjimek C++.
 
 Další informace o knihovnách SEH naleznete v tématu [strukturovaného zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md).
 
 ## <a name="exception-specifications-and-noexcept"></a>Specifikace výjimek a noexcept
 
-Specifikace výjimek byly zavedeny v C++ jako způsob, jak určit výjimky, které může funkce vyvolat. Specifikace výjimek však ukázaly jako problematické v praxi a jsou zastaralé v C ++ 11 koncept standardu. Doporučujeme, abyste nepoužívejte specifikace výjimek s výjimkou `throw()`, což znamená, že funkce umožňuje žádné únikové výjimky. Pokud je nutné použít specifikace výjimek typu `throw(` *typ*`)`, mějte na paměti, že Visual C++ se liší od standardu určitým způsobem. Další informace najdete v tématu [specifikace výjimek (throw)](../cpp/exception-specifications-throw-cpp.md). `noexcept` Specifikátor byl představen v C ++ 11 upřednostňovaná alternativa k `throw()`.
+Specifikace výjimek byly zavedeny v C++ jako způsob, jak určit výjimky, které může funkce vyvolat. Specifikace výjimek však ukázaly jako problematické v praxi a jsou zastaralé v C ++ 11 koncept standardu. Doporučujeme, abyste nepoužívejte specifikace výjimek s výjimkou `throw()`, což znamená, že funkce umožňuje žádné únikové výjimky. Pokud je nutné použít specifikace výjimek typu `throw(` *typ*`)`, mějte na paměti, že MSVC se liší od standardu určitým způsobem. Další informace najdete v tématu [specifikace výjimek (throw)](../cpp/exception-specifications-throw-cpp.md). `noexcept` Specifikátor byl představen v C ++ 11 upřednostňovaná alternativa k `throw()`.
 
 ## <a name="see-also"></a>Viz také:
 

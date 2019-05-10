@@ -1,26 +1,26 @@
 ---
 title: Znakové sady
-ms.date: 04/12/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - Character sets
 - basic source character set (C++)
 - universal character names
 - basic execution character set (C++)
 ms.assetid: 379a2af6-6422-425f-8352-ef0bca6c0d74
-ms.openlocfilehash: 5282d5b227e71c0ba6f822a9534a8a31cbd86db9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92d60e3383abd7e3b3fa2d689958cf02a9b91e75
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331230"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222519"
 ---
 # <a name="character-sets"></a>Znakové sady
 
-Text programu v jazyce C++ je uložen ve zdrojových souborech, které používají určitý znak kódování. Standard jazyka C++ určuje základní zdrojové znakové sady zdrojových souborů a základním provedení znakové sady pro zkompilované soubory. Visual C++ umožňuje další sadu znaků specifických pro národní prostředí pro použití ve zdrojových souborech a zkompilované soubory.
+Text programu v jazyce C++ je uložen ve zdrojových souborech, které používají určitý znak kódování. Standard jazyka C++ určuje základní zdrojové znakové sady zdrojových souborů a základním provedení znakové sady pro zkompilované soubory. Microsoft C++ kompilátor (MSVC) umožňuje další sadu znaků specifických pro národní prostředí pro použití ve zdrojových souborech a zkompilované soubory.
 
 ## <a name="character-sets"></a>Znakové sady
 
-Určuje standard jazyka C++ *základní sada zdrojových znaků* , která může být použita ve zdrojových souborech. K reprezentaci znaků mimo tuto sadu, můžete zadat další znaky pomocí *univerzální název znaku*. Při kompilaci, *základní znakové sadě spuštění* a *základním provedení široká charakterová sada* reprezentaci znaků a řetězce, které se mohou objevit v programu. Implementace jazyka Visual C++ umožňuje další znaky ve zdrojovém kódu a zkompilovaného kódu.
+Určuje standard jazyka C++ *základní sada zdrojových znaků* , která může být použita ve zdrojových souborech. K reprezentaci znaků mimo tuto sadu, můžete zadat další znaky pomocí *univerzální název znaku*. Při kompilaci, *základní znakové sadě spuštění* a *základním provedení široká charakterová sada* reprezentaci znaků a řetězce, které se mohou objevit v programu. Implementace MSVC umožňuje další znaky ve zdrojovém kódu a zkompilovaného kódu.
 
 ### <a name="basic-source-character-set"></a>Základní sada zdrojových znaků
 
@@ -36,7 +36,7 @@ Určuje standard jazyka C++ *základní sada zdrojových znaků* , která může
 
 **Microsoft Specific**
 
-Visual C++ obsahuje `$` znak jako člen základní zdrojové znakové sady. Visual C++ umožňuje také další sadu znaků, které mají použít ve zdrojových souborech založené na kódování souboru. Ve výchozím nastavení Visual Studio ukládá zdrojové soubory s použitím výchozí znakovou stránku. Pokud zdrojové soubory jsou uloženy ve znakové stránce specifických pro národní prostředí nebo znaková stránka Unicode, Visual C++ umožňuje používat znaky tuto znakovou stránku ve zdrojovém kódu, s výjimkou řídicích kódů nejsou explicitně povolená v základní zdrojové znakové nastavit. Například můžete vložit japonské znaky komentáře, identifikátory nebo řetězcové literály, při uložení souboru pomocí japonské znakovou stránku. Visual C++ nepovoluje sekvence znaků, které nelze převést na platné vícebajtové znaky nebo kódové body sady Unicode. V závislosti na možnostech kompilátoru můžou objevit všechny povolené znaky v identifikátory. Další informace najdete v tématu [identifikátory](../cpp/identifiers-cpp.md).
+Zahrnuje MSVC `$` znak jako člen základní zdrojové znakové sady. MSVC také umožňuje další sadu znaků, které mají použít ve zdrojových souborech založené na kódování souboru. Ve výchozím nastavení Visual Studio ukládá zdrojové soubory s použitím výchozí znakovou stránku. Pokud zdrojové soubory jsou uloženy ve znakové stránce specifických pro národní prostředí nebo znaková stránka Unicode, MSVC umožňuje používat znaky tuto znakovou stránku ve zdrojovém kódu, s výjimkou řídicích kódů nejsou explicitně povolená v základní zdrojové znakové nastavit. Například můžete vložit japonské znaky komentáře, identifikátory nebo řetězcové literály, při uložení souboru pomocí japonské znakovou stránku. MSVC neumožňuje sekvence znaků, které nelze převést na platné vícebajtové znaky nebo kódové body sady Unicode. V závislosti na možnostech kompilátoru můžou objevit všechny povolené znaky v identifikátory. Další informace najdete v tématu [identifikátory](../cpp/identifiers-cpp.md).
 
 **Specifické pro END Microsoft**
 
@@ -48,7 +48,7 @@ V identifikátory a v literálech řetězců a znaků může používat univerz�
 
 **Microsoft Specific**
 
-Kompilátor Visual C++ zpracovává znak v univerzálních znaků název literálu formuláři a Zaměnitelně. Můžete třeba deklarovat pomocí formuláře univerzálních znaků názvu identifikátor a použít v podobě literálu:
+Microsoft C++ kompilátor zpracovává znak v univerzálních znaků název literálu formuláři a Zaměnitelně. Můžete třeba deklarovat pomocí formuláře univerzálních znaků názvu identifikátor a použít v podobě literálu:
 
 ```cpp
 auto \u30AD = 42; // \u30AD is 'キ'

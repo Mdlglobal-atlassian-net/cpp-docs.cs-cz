@@ -1,17 +1,17 @@
 ---
 title: Přehled potenciálních problémů s upgradem (Visual C++)
-ms.date: 11/04/2016
+ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: 1dac6ad201656dc83428aa5182a59cb8ff824651
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e22a3a0889bfc9352a8fe9d2a79fe37bcb757107
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337294"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448893"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Přehled potenciálních problémů s upgradem (Visual C++)
 
-V průběhu let kompilátor jazyka Microsoft Visual C++ prošla řadou změn, spolu se změnami samotný jazyk C++, standardní knihovny C++, C runtime (CRT) a dalších knihoven, jako je například knihovny MFC a ATL. V důsledku toho při upgradu aplikace ze starší verze sady Visual Studio můžete setkat, kompilátoru a linkeru chyby a upozornění v kódu, který dříve zkompilován čistě. Starší základní původního kódu, tím větší potenciál pro takové chyby. Tento přehled obsahuje souhrn třídy většiny běžných problémů, budete pravděpodobně dojde, a nabízí odkazy k podrobnějším informacím.
+V průběhu let Microsoft C++ kompilátoru prošla řadou změn spolu se změnami C++ samotný, jazyk C++ standardní knihovny C runtime (CRT) a dalších knihoven, jako je například knihovny MFC a ATL. V důsledku toho při upgradu aplikace ze starší verze sady Visual Studio můžete setkat, kompilátoru a linkeru chyby a upozornění v kódu, který dříve zkompilován čistě. Starší základní původního kódu, tím větší potenciál pro takové chyby. Tento přehled obsahuje souhrn třídy většiny běžných problémů, budete pravděpodobně dojde, a nabízí odkazy k podrobnějším informacím.
 
 > [!NOTE]
 > V minulosti doporučujeme mít, upgrady, které jsou rozmístěny v několika verzích sady Visual Studio měli provádět přírůstkové jedné verze najednou. Doporučujeme, abyste už tento přístup. Zjistili jsme, že je téměř vždy jednodušší pro upgrade na nejnovější verzi sady Visual Studio bez ohledu na to, kolik základu kódu.
@@ -20,15 +20,20 @@ Je možné odeslat dotazy nebo připomínky k upgradu vcupgrade@microsoft.com.
 
 ## <a name="library-and-toolset-dependencies"></a>Závislosti knihoven a nástrojů
 
+> [!NOTE] 
+> Tato část se týká aplikací a knihoven, které jsou vytvořené pomocí sady Visual Studio 2013 a starší. Sady nástrojů používá v sadě Visual Studio 2015, Visual Studio 2017 a Visual Studio 2019 jsou binární kompatibilní. Další informace najdete v tématu [ C++ binární kompatibilitu mezi Visual Studio 2015 a Visual Studio 2019](binary-compat-2015-2017.md).
+
 Při upgradu aplikace na novou verzi sady Visual Studio, se důrazně doporučuje a v mnoha případech nutné také upgradovat všechny knihovny a knihovny DLL, které aplikace se odkazuje na. To vyžaduje, abyste měli přístup ke zdrojovému kódu, nebo, dodavatele knihovny můžete zadat nové binární soubory zkompilovány se stejnou hlavní verzí kompilátoru. Pokud je splněna jedna z těchto podmínek, můžete přeskočit tuto část, která se zabývá podrobnosti binární kompatibilitu. Pokud ani jeden z jsou případu, pak nebudete moci používat knihovny v aplikaci upgradovaný. Informace v této části vám pomůže pochopit, jestli vám pokračujte v upgradu.
 
 ### <a name="toolset"></a>Sada nástrojů
 
 Formáty souborů .obj a. lib jsou dobře definovaný a jen zřídka mění. Někdy jsou dodatky provedené do těchto formátů souborů, ale tyto doplňky obecně vliv na schopnost novější sady nástrojů využívat objektových souborů a knihoven vytvářených starší sady nástrojů. Zde jeden velký výjimkou je, pokud kompilujete pomocí [/GL (optimalizace celého programu)](../build/reference/gl-whole-program-optimization.md). Pokud kompilujete pomocí `/GL`, výsledný soubor objektu lze propojit pouze pomocí stejné sady nástrojů, který byl použit k jeho vytvoření. Pokud vytvoříte soubor objektu se tedy `/GL` a pomocí kompilátoru Visual Studio 2017 (verze 141), je třeba propojit pomocí sady Visual Studio 2017 (verze 141) linkeru. Je to proto, že interní datové struktury v rámci objektu soubory nejsou stabilní mezi hlavními verzemi sady nástrojů a novější sady nástrojů není srozumitelný starší formáty data.
 
-C++ nemá binární rozhraní stabilní aplikace (ABI). Visual Studio udržuje stabilní C++ ABI pro všechny dílčí verze na verzi. Visual Studio 2017 a všechny její aktualizace jsou například binární kompatibilní. Ale ABI není nutně kompatibilní mezi hlavními verzemi sady Visual Studio (s výjimkou 2015 a 2017, která _jsou_ binární kompatibilní). To znamená může uděláme změny způsobující chyby rozložení typu, dekorování názvů, zpracování výjimek a dalších součástí C++ ABI C++. Proto pokud máte soubor objektu, který má externí symboly s propojením jazyka C++, tento soubor objektu nesmí odkazovat správně s objekt soubory vytvořenými pomocí různých hlavní verzi sady nástrojů. Všimněte si, že tady "nemusí fungovat" má mnoho možných výsledků: odkaz nemusí zcela (třeba ke změně dekorování názvů), odkaz může být úspěšné, a za běhu nemusí fungovat věci (třeba-li změnit typ rozložení), nebo pracovat v mnoha případech se může stát věci a nic půjdou wro NG. Všimněte si také, že C++ ABI není stabilní, C ABI a dílčí sadu C++ ABI požadované pro COM jsou stabilní.
+C++ nemá binární rozhraní stabilní aplikace (ABI). Visual Studio udržuje stabilní, ale C++ ABI pro všechny dílčí verze na verzi. Visual Studio 2015 (v140), Visual Studio 2017 (verze 141) a Visual Studio 2019 (v142) se liší pouze v jejich podverze. Všichni mají stejné číslo hlavní verze, která je 14. Další informace najdete v tématu [ C++ binární kompatibilitu mezi Visual Studio 2015 a Visual Studio 2019](binary-compat-2015-2017.md). 
 
-Pokud odkaz na knihovnu importu, všechny novější verze sady Visual Studio distribuovatelných knihoven, které zachování kompatibility ABI lze za běhu. Například pokud vaše aplikace je kompilována a propojené pomocí sady nástrojů Visual Studio 2015 Update 3, můžete použít jakékoli redistributable, Visual Studio 2017 protože knihovny 2015 a 2017 mají zachovají zpětně binární kompatibilitu. Opak není pravdou; nelze použít distribuovatelné součásti pro starší verzi sady nástrojů než použijete k sestavení vašeho kódu i v případě, že mají kompatibilní ABI.
+Pokud máte soubor objektu, který má externích symbolů se C++ propojení, tento objekt soubor nemusí správně propojit pomocí objektu soubory vytvořenými pomocí různých hlavní verzi sady nástrojů. Všimněte si, že tady "nemusí fungovat" má mnoho možných výsledků: odkaz nemusí zcela (například ke změně dekorování názvů), může být úspěšné, propojení a nemusí fungovat věci za běhu (například pokud změnit typ rozložení), nebo se může stát pro práci v řadě případů a ne věc, kterou může pokazit. Všimněte si také, že C++ ABI není stabilní, C ABI a dílčí sadu C++ ABI požadované pro COM jsou stabilní.
+
+Pokud odkaz na knihovnu importu, všechny novější verze sady Visual Studio distribuovatelných knihoven, které zachování kompatibility ABI lze za běhu. Například pokud vaše aplikace je kompilována a propojené pomocí sady nástrojů Visual Studio 2015 Update 3, můžete všechny sady Visual Studio 2017 nebo Visual Studio 2019 distribuovatelné součásti, protože knihovny 2015 a 2017 mají zachovají binární zpětné kompatibility. Opak není pravdou; nelze použít distribuovatelné součásti pro starší verzi sady nástrojů než použijete k sestavení vašeho kódu i v případě, že mají kompatibilní ABI.
 
 ### <a name="libraries"></a>Knihovny
 
@@ -105,7 +110,7 @@ Stejný problém platí také v případě, že používáte `/ENTRY` možnost n
 
 ## <a name="errors-due-to-improved-language-conformance"></a>Chyby vzniklé v důsledku shoda lepší jazyka
 
-Kompilátor jazyka Microsoft Visual C++ se průběžně vylepšuje jeho shody C++ standard v průběhu let. Kód, který zkompiluje v dřívějších verzích se nemusí podařit kompilace v sadě Visual Studio 2017, protože kompilátor správně označí chybu, která dříve ignorovat nebo explicitně povolená.
+Microsoft C++ kompilátoru se zvýšil průběžně jeho shody C++ standard v průběhu let. Kód, který zkompiluje v dřívějších verzích se nemusí podařit kompilovat v novějších verzích sady Visual Studio, protože kompilátor správně označí chybu, která dříve ignorovat nebo explicitně povolená.
 
 Například `/Zc:forScope` přepínače byla zavedena v rané fázi historie MSVC. IT specialistovi nonkonformní chování proměnné smyčky. Tento přepínač je nyní zastaralá a v budoucích verzích může být odstraněna. Důrazně doporučujeme používat tento přepínač při upgradu vašeho kódu. Další informace najdete v tématu [zastaralé /Zc:forScope-](porting-guide-spy-increment.md#deprecated_forscope).
 
@@ -127,11 +132,11 @@ Stisknutím klávesy **F12** (**přejít k definici**) zobrazíte, kde je defino
 
 Mnoho změny byly provedeny na modul runtime jazyka C v průběhu let. Byly přidány bezpečné verze funkcí a některé byly odebrány. Také jak je popsáno výše v tomto článku, výlučně implementace Microsoftu CRT se teď vyčleněný v sadě Visual Studio 2015 do nové binární soubory a soubory .lib přidružené.
 
-Pokud k chybě zahrnuje funkce CRT, Hledat [změn Visual C++ 2003 – 2015 historie](visual-cpp-change-history-2003-2015.md) nebo [vylepšení shody C++ v sadě Visual Studio](../overview/cpp-conformance-improvements.md) zobrazíte, pokud tato témata obsahují jakékoli další informace. Pokud je chyba LNK2019 nevyřešené externí, zkontrolujte, zda že funkce nebyla odebrána. Jinak, pokud jste si jistí, že stále existuje funkce a volající kód je správný, zkontrolujte, zda váš projekt používá `/NODEFAULTLIB`. V takovém případě musíte aktualizovat seznam knihoven tak, aby projekt využívá nový univerzální knihovny (UCRT). Knihovny a závislosti pro další informace najdete v části výše.
+Pokud k chybě zahrnuje funkce CRT, Hledat [změn Visual C++ 2003 – 2015 historie](visual-cpp-change-history-2003-2015.md) nebo [vylepšení shody C++ v sadě Visual Studio](../overview/cpp-conformance-improvements.md) zobrazíte, pokud tato témata obsahují jakékoli další informace. Pokud je chyba LNK2019 nevyřešené externí, zkontrolujte, zda že funkce nebyla odebrána. Jinak, pokud jste si jistí, že stále existuje funkce a volající kód je správný, zkontrolujte, zda váš projekt používá `/NODEFAULTLIB`. V takovém případě musíte aktualizovat seznam knihoven tak, aby projekt využívá nový univerzální knihovny (UCRT). Další informace najdete v části výše na knihovny a závislosti.
 
 Pokud chyba zahrnuje `printf` nebo `scanf`, ujistěte se, že jste nejsou definování soukromě buď funkce bez zahrnutí stdio.h. Pokud ano, buď odeberte privátní definice, nebo odkaz na starší verzi\_stdio\_definitions.lib. Tento parametr můžete nastavit **stránky vlastností** dialogového okna v části **vlastnosti konfigurace** > **Linkeru** > **vstup**v **Další závislosti** vlastnost. Pokud se propojení s Windows SDK 8.1 nebo starší, přidejte starší verze\_stdio\_definitions.lib.
 
-Pokud chyba zahrnuje formátování argumentů řetězců, to je pravděpodobně vzhledem k tomu, že kompilátor je přísnější o vynucování standardní. Zobrazit historii změn pro další informace. Prosím pozornosti tady nějaké chyby protože potenciálně může představovat bezpečnostní riziko.
+Pokud chyba zahrnuje formátování argumentů řetězců, to je pravděpodobně vzhledem k tomu, že kompilátor je přísnější o vynucování standardní. Další informace najdete v historii změn. Prosím pozornosti tady nějaké chyby protože potenciálně může představovat bezpečnostní riziko.
 
 ## <a name="errors-due-to-changes-in-the-c-standard"></a>Chyby z důvodu změn ve standardu jazyka C++
 
@@ -155,7 +160,7 @@ Další informace o aktuálním rozhraní API a minimální podporované operač
 
 ### <a name="windows-version"></a>Verze Windows
 
-Při upgradu program, který používá rozhraní Windows API přímo nebo nepřímo, je potřeba rozhodnout, minimální verze Windows na podporu. Windows 7 ve většině případů je dobrou volbou. Další informace najdete v části [záhlaví souboru problémy](porting-guide-spy-increment.md#header_file_problems). `WINVER` Makra definuje nejstarší verzi Windows, který program je navržený pro spouštění. Pokud váš program knihovny MFC nastaví WINVER 0x0501 (Windows XP) se zobrazí upozornění protože MFC už nepodporuje XP, přestože kompilátor sám má režim XP.
+Při upgradu program, který používá rozhraní Windows API přímo nebo nepřímo, je potřeba rozhodnout, minimální verze Windows na podporu. Windows 7 ve většině případů je dobrou volbou. Další informace najdete v tématu [záhlaví souboru problémy](porting-guide-spy-increment.md#header_file_problems). `WINVER` Makra definuje nejstarší verzi Windows, který program je navržený pro spouštění. Pokud váš program knihovny MFC nastaví WINVER 0x0501 (Windows XP) se zobrazí upozornění protože MFC už nepodporuje XP, přestože kompilátor sám má režim XP.
 
 Další informace najdete v tématu [aktualizuje cílovou verzi Windows](porting-guide-spy-increment.md#updating_winver) a [více zastaralé soubory hlaviček](porting-guide-spy-increment.md#outdated_header_files).
 

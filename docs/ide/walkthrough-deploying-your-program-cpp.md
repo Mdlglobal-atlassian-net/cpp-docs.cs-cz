@@ -1,6 +1,6 @@
 ---
 title: 'Návod: Nasazení programu (C++)'
-ms.date: 09/14/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - deploying applications [C++], walkthroughs
 - setup projects [C++]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: aa0e1cd6ec7c27b8d3ccc1e327f3cb8da526d4f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 307fa5e867b97fc05cc5419b8d51e4673284e097
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264683"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857535"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>Návod: Nasazení programu (C++)
 
@@ -30,9 +30,45 @@ Návodu ukazuje způsob použití Instalační služby systému Windows pro nasa
 
 - Návod nelze dokončit v edicích Express sady Visual Studio.
 
-- Pokud jste tak již neučinili, stáhněte si rozšíření Microsoft projektů instalačního programu sady Visual Studio, jak je popsáno v dalších krocích později. Rozšíření je zdarma pro vývojáře v sadě Visual Studio a přidá funkce šablon projektů instalace a nasazení do sady Visual Studio.
+## <a name="install-the-visual-studio-setup-and-deployment-project-template"></a>Instalace sady Visual Studio šablona projektu instalace a nasazení
 
-### <a name="to-install-the-visual-studio-setup-and-deployment-project-template"></a>Chcete-li nainstalovat Visual Studio šablona projektu instalace a nasazení
+Kroky v této části se liší v závislosti na tom, kterou verzi sady Visual Studio jste nainstalovali. Ujistěte se, že se že volič verze v levé horní části této stránky jsou správně nastavena.
+
+::: moniker range="vs-2019"
+
+### <a name="to-install-the-setup-and-deployment-project-template-for-visual-studio-2019"></a>Instalace pro Visual Studio 2019 instalace a nasazení projektové šablony
+
+1. Pokud jste tak již neučinili, stáhněte si rozšíření Microsoft projektů instalačního programu sady Visual Studio. Rozšíření je zdarma pro vývojáře v sadě Visual Studio a přidá funkce šablon projektů instalace a nasazení do sady Visual Studio. Pokud jste připojeni k Internetu, v sadě Visual Studio, zvolte **rozšíření** > **spravovat rozšíření**. V části **rozšíření a aktualizace** dialogového okna, vyberte **Online** kartu a typ *projektů instalačního programu sady Visual Studio Microsoft* do vyhledávacího pole. Spuštění **Enter**vyberte **sady Microsoft Visual Studio \<verze > Projekty instalačního programu**a klikněte na tlačítko **Stáhnout**. Zvolte spuštění a instalace rozšíření a potom restartujte Visual Studio.
+
+1. Na řádku nabídek sady Visual Studio, zvolte **souboru** > **poslední projekty a řešení**a klikněte na tlačítko k otevření projektu.
+
+1. V panelu nabídky zvolte **souboru** > **nový** > **projektu** otevřít **vytvořte nový projekt** dialogové okno. Do vyhledávacího pole zadejte "Nastavení" a v seznamu výsledků zvolte **projektu instalace**.
+
+1. Zadejte název projektu instalace v **název** pole. V **řešení** rozevíracího seznamu vyberte **přidat do řešení**. Zvolte **OK** pro vytvoření projektu instalace. A **souboru Assistant (ProjectName)** kartě se otevře v okně editoru.
+
+1. Klikněte pravým tlačítkem myši **složky aplikace** uzel a vyberte možnost **přidat** > **výstup projektu** otevřete **Přidat výstupní skupinu projektu**dialogové okno.
+
+1. V dialogovém okně vyberte **primární výstup** a klikněte na tlačítko **OK**. Nová položka s názvem **primární výstup ze hry (aktivní)** se zobrazí.
+
+1. Vyberte položku **primární výstup ze hry (aktivní)** klikněte pravým tlačítkem a zvolte **vytvořit zástupce na primární výstup ze hry (aktivní)**. Nová položka s názvem **zástupce primární výstup ze hry (aktivní)** se zobrazí.
+
+1. Přejmenovat položku místní *hru*, pak přetažení položky do **Uživatelská nabídka programy** uzlu na levé straně okna.
+
+1. V **Průzkumníka řešení**, vyberte **instalátor hry** projekt a zvolte **zobrazení** > **okno vlastností** nebo stiskněte tlačítko  **F4** otevřít **vlastnosti** okna.
+
+1. Zadejte další podrobnosti, jak chcete, aby se objevily v instalačním programu.  Například použít *Contoso* pro **výrobce**, *instalátor hry* pro **název produktu**, a *http\://www.contoso.com* pro **SupportUrl**.
+
+1. V panelu nabídky zvolte **sestavení** > **nástroje Configuration Manager**. V **projektu** tabulky v části **sestavení** sloupců, zaškrtněte políčko u **instalátor hry**. Klikněte na **Zavřít**.
+
+1. V panelu nabídky zvolte **sestavení** > **sestavit řešení** sestavit projekt hry a projektu instalátor hry.
+
+1. Ve složce řešení vyhledejte program setup.exe vytvořený z projektu instalátor hry a pak jeho spuštěním nainstalujte hru ve vašem počítači. Můžete zkopírovat tento soubor (a nalezněte) k instalaci aplikace a jeho požadovaných souborů knihovny v jiném počítači.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-install-the-setup-and-deployment-project-template-for-visual-studio-2017-and-earlier"></a>Chcete-li nainstalovat instalace a nasazení šablony projektu pro Visual Studio 2017 a starší
 
 1. Pokud jste připojeni k Internetu, v sadě Visual Studio, zvolte **nástroje** > **rozšíření a aktualizace**.
 
@@ -69,6 +105,8 @@ Návodu ukazuje způsob použití Instalační služby systému Windows pro nasa
 1. V panelu nabídky zvolte **sestavení** > **sestavit řešení** sestavit projekt hry a projektu instalátor hry.
 
 1. Ve složce řešení vyhledejte program setup.exe vytvořený z projektu instalátor hry a pak jeho spuštěním nainstalujte hru ve vašem počítači. Můžete zkopírovat tento soubor (a nalezněte) k instalaci aplikace a jeho požadovaných souborů knihovny v jiném počítači.
+
+::: moniker-end
 
 ## <a name="next-steps"></a>Další kroky
 

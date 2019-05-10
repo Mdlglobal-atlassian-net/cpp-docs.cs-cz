@@ -4,12 +4,12 @@ ms.date: 09/18/2018
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-ms.openlocfilehash: 3b7c7bdad8848a3755db4ea565117459c72e939b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1052d0a0eeeff177f0a22883fe06cd07d7b03f6
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317117"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446501"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>Struktura souborů .vcxproj a .props
 
@@ -21,13 +21,13 @@ Pokud budete chtít ručně upravit soubor .vcxproj, mějte na paměti tyto skut
 
 1. Struktura souboru musí následovat předepsané formulář, který je popsaný v tomto článku.
 
-1. Systém projektu Visual C++ aktuálně nepodporuje zástupné znaky v položkách projektu. Například to není podporováno:
+1. Visual Studio C++ systém projektu aktuálně nepodporuje použití zástupných znaků v položkách projektu. Například to není podporováno:
 
    ```xml
    <ClCompile Include="*.cpp"/>
    ```
 
-1. Systém projektu Visual C++ aktuálně nepodporuje makra v cesty položky projektu. Například to není podporováno:
+1. Visual Studio C++ systém projektu aktuálně nepodporuje makra v cesty položky projektu. Například to není podporováno:
 
    ```xml
    <ClCompile Include="$(IntDir)\generated.cpp"/>
@@ -224,7 +224,7 @@ Metadata by měl mít konfigurace podmínek pro každou konfiguraci, i když jso
 </ItemGroup>
 ```
 
-Systém projektu Visual C++ aktuálně nepodporuje zástupné znaky v položkách projektu.
+Visual Studio C++ systém projektu aktuálně nepodporuje použití zástupných znaků v položkách projektu.
 
 ```xml
 <ItemGroup>
@@ -232,7 +232,7 @@ Systém projektu Visual C++ aktuálně nepodporuje zástupné znaky v položkác
 </ItemGroup>
 ```
 
-Systém projektu Visual C++ aktuálně nepodporuje makra v položkách projektu.
+Visual Studio C++ systém projektu aktuálně nepodporuje makra v položkách projektu.
 
 ```xml
 <ItemGroup>

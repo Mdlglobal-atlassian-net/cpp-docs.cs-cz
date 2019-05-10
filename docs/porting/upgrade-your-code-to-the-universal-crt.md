@@ -2,12 +2,12 @@
 title: Upgrade kódu na Universal CRT
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: bdf1615d47361654e9690977520d01c332098438
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68edcd57ee03ac861a6d2105456f4dbf699c1210
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337164"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448992"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Upgrade kódu na Universal CRT
 
@@ -19,7 +19,7 @@ Tento refaktorování, změnily se názvy nebo umístění mnoho CRT hlavičkov�
 
 ## <a name="where-to-find-the-universal-crt-files"></a>Kde se mají hledat soubory Universal CRT
 
-Jako Windows jsou teď součástí sady Windows software development kit (SDK) komponenty, UCRT soubory knihovny a hlavičky. Při instalaci sady Visual Studio, nainstaluje se také součástí Windows SDK, aby jeho používání UCRT. Instalační program sady Visual Studio přidá umístění UCRT hlavičky, knihovny a soubory DLL přidala k výchozím cestám používané projektu sady Visual Studio sestavovací systém. Při aktualizaci vašich projektů Visual C++, pokud používají výchozí nastavení projektu, rozhraní IDE automaticky vyhledá nové umístění pro soubory hlaviček a propojovací program automaticky použije nový výchozí UCRT a vcruntime knihovny. Podobně pokud pomocí příkazového řádku pro vývojáře provádět sestavení příkazového řádku, prostředí, ve kterém proměnné, které obsahují cesty pro hlavičky a knihovny se aktualizují a automaticky i práce.
+Jako Windows jsou teď součástí sady Windows software development kit (SDK) komponenty, UCRT soubory knihovny a hlavičky. Při instalaci sady Visual Studio, nainstaluje se také součástí Windows SDK, aby jeho používání UCRT. Instalační program sady Visual Studio přidá umístění UCRT hlavičky, knihovny a soubory DLL přidala k výchozím cestám používané projektu sady Visual Studio sestavovací systém. Při aktualizaci sady Visual Studio C++ projekty, pokud používají výchozí nastavení projektu, rozhraní IDE automaticky vyhledá nové umístění pro soubory hlaviček a propojovací program automaticky použije nový výchozí UCRT a vcruntime knihovny. Podobně pokud pomocí příkazového řádku pro vývojáře provádět sestavení příkazového řádku, prostředí, ve kterém proměnné, které obsahují cesty pro hlavičky a knihovny se aktualizují a automaticky i práce.
 
 Souborech hlaviček standardní knihovny jazyka C jsou teď součástí sady Windows SDK v zahrnout složku v adresáři konkrétní verze sady SDK. Obvyklé umístění pro soubory hlaviček je ve složce Program Files nebo Program Files (x86) adresář v rámci sady Windows\\10\\zahrnout\\_verze sady sdk_\\ucrt, kde _verze sady sdk_ odpovídá verzi Windows nebo aktualizace, například 10.0.14393.0 Anniversary Update sady Windows 10.
 
@@ -29,7 +29,7 @@ Maloobchodní prodej a ladění knihoven DLL UCRT se nacházejí v různých um�
 
 C a C++ specifických pro kompilátor podporu knihovně runtime **vcruntime**, obsahuje kód potřebné k podpoře spuštění programu a funkce jako je zpracování výjimek a vnitřní funkce. Knihovny a soubory hlaviček se stále nacházejí ve složce specifické pro verzi sady Microsoft Visual Studio v adresáři Program files (x86) nebo Program Files. V sadě Visual Studio 2017, se nacházejí záhlaví v rámci sady Microsoft Visual Studio\\2017\\_edition_\\VC\\nástroje\\MSVC\\  _lib – verze_\\zahrnout a jsou v ní odkaz knihovny v rámci sady Microsoft Visual Studio\\2017\\_edition_\\VC\\nástroje \\MSVC\\_lib verze_\\lib\\_architektura_, kde _edition_ je vydání sady Visual Studio nainstalovaný _lib verze_ je verze knihoven, a _architektura_ je na architektuře procesoru. Odkaz knihovny pro OneCore a Store se taky nacházejí ve složce knihovny. Verze maloobchodních a ladicích statické knihovny jsou libvcruntime.lib a libvcruntimed.lib. Knihovny DLL maloobchodních a ladicích zástupné procedury jsou vcruntime.lib a vcruntimed.lib.
 
-Při aktualizaci vašich projektů Visual C++, pokud jste nastavili v projektu **Linkeru** vlastnost **ignorovat všechny výchozí knihovny** k **Ano** nebo pokud používáte `/NODEFAULTLIB` na příkazovém řádku a potom – možnost linkeru musíte aktualizovat seznam knihovny k začlenění refaktorované, nové knihovny. Nahraďte původní knihovny CRT, například libcmt.lib, libcmtd.lib, msvcrt.lib nebo msvcrtd.lib, ekvivalentní refaktorovaný knihovny. Informace o konkrétní knihovny používat, naleznete v tématu [funkce knihovny CRT](../c-runtime-library/crt-library-features.md).
+Při aktualizaci sady Visual Studio C++ projekty, pokud jste nastavili v projektu **Linkeru** vlastnost **ignorovat všechny výchozí knihovny** k **Ano** nebo pokud používáte `/NODEFAULTLIB` linkeru možnost příkazového řádku, pak je nutné aktualizovat seznam knihovny k začlenění refaktorované, nové knihovny. Nahraďte původní knihovny CRT, například libcmt.lib, libcmtd.lib, msvcrt.lib nebo msvcrtd.lib, ekvivalentní refaktorovaný knihovny. Informace o konkrétní knihovny používat, naleznete v tématu [funkce knihovny CRT](../c-runtime-library/crt-library-features.md).
 
 ## <a name="deployment-and-redistribution-of-the-universal-crt"></a>Nasazení a distribuci na Universal CRT
 

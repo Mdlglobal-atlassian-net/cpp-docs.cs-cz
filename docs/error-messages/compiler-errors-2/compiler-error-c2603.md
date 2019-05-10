@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2603
 ms.assetid: 9ca520d0-f082-4b65-933d-17c3bcf8b02c
-ms.openlocfilehash: 5391aed09b7fd448a9d72ea7cc17cd5c26fc5f04
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4540180058c890a1dec9c4060f796f1f044c934
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62215398"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447993"
 ---
 # <a name="compiler-error-c2603"></a>Compiler Error C2603
 
 > "*funkce*": Příliš mnoho statických objektů oboru bloku s konstruktory/destruktory ve funkci
 
-Ve verzích kompilátor Visual C++ před Visual Studio 2015 nebo když [/Zc: threadsafeinit](../../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) – možnost kompilátoru je zadán, platí omezení na počet statických objektů v externě viditelné vložená funkce může být 31 .
+Ve verzích Microsoft C++ kompilátor před Visual Studio 2015, nebo když [/Zc: threadsafeinit](../../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) – možnost kompilátoru je zadán, je stanovený limit 31 počet statických objektů, které máte v externě viditelné Vložená funkce.
 
-Chcete-li vyřešit tento problém, doporučujeme přijmout novější verzi sady nástrojů kompilátoru Visual C++, nebo pokud je to možné, remove – možnost kompilátoru/Zc: threadsafeinit. Pokud to není možné, vezměte v úvahu kombinaci statických objektů. Pokud jsou objekty stejného typu, zvažte použití jedné statického pole tohoto typu a odkazovat na jednotlivé členy podle potřeby.
+Chcete-li vyřešit tento problém, doporučujeme přijmout novější verze sady Microsoft C++ sada nástrojů kompilátoru, nebo pokud je to možné, remove – možnost kompilátoru/Zc: threadsafeinit. Pokud to není možné, vezměte v úvahu kombinaci statických objektů. Pokud jsou objekty stejného typu, zvažte použití jedné statického pole tohoto typu a odkazovat na jednotlivé členy podle potřeby.
 
 ## <a name="example"></a>Příklad
 

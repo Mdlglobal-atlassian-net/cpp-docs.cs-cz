@@ -93,12 +93,12 @@ helpviewer_keywords:
 - $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: 46fdd5e356ded96388a154ff459ef4cc3c02267f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: abb42db6a44f1c48d120eff1f117e06c970b6b44
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294441"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221783"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>Běžná makra pro příkazy MSBuild a vlastnosti
 
@@ -121,7 +121,7 @@ Tato tabulka popisuje běžně používané podmnožinou dostupná makra; Existu
 |**$(FrameworkDir)**|Adresář, do kterého bylo nainstalované rozhraní .NET Framework.|
 |**$(FrameworkSDKDir)**|Adresář, do nějž jste nainstalovali rozhraní .NET Framework. Rozhraní .NET Framework může být nainstalovány jako součást sady Visual Studio nebo samostatně.|
 |**$(FrameworkVersion)**|Verze rozhraní .NET Framework používá sada Visual Studio. V kombinaci s **$(FrameworkDir)**, úplná cesta k verzi rozhraní .NET Framework používá Visual Studio.|
-|**$(FxCopDir)**|Cesta k souboru fxcop.cmd. Soubor fxcop.cmd není nainstalován ve všech edicích aplikace Visual C++.|
+|**$(FxCopDir)**|Cesta k souboru fxcop.cmd. Soubor fxcop.cmd není nainstalován ve všech edicích sady Visual Studio.|
 |**$(IntDir)**|Cesta do adresáře určeného pro zprostředkující soubory. Pokud je relativní cesta, zprostředkující soubory přejděte k této cestě se připojí k adresáři projektu. Tato cesta by měla mít koncové lomítko. To řeší na hodnotu **zprostředkující adresář** vlastnost. Nepoužívejte **$(OutDir)** definovat tuto vlastnost.|
 |**$(OutDir)**|Cesta k adresáři výstupního souboru. Pokud je relativní cesta, výstupní soubory přejděte k této cestě se připojí k adresáři projektu. Tato cesta by měla mít koncové lomítko. To řeší na hodnotu **výstupní adresář** vlastnost. Nepoužívejte **$(IntDir)** definovat tuto vlastnost.|
 |**$(Platform)**|Název aktuální platformy projektu, například "Win32".|
@@ -143,7 +143,7 @@ Tato tabulka popisuje běžně používané podmnožinou dostupná makra; Existu
 |**$(TargetFileName)**|Název souboru primárního výstupního souboru pro sestavení (definované jako základní název a příponu souboru).|
 |**$(TargetName)**|Základní název primárního výstupního souboru pro sestavení.|
 |**$(TargetPath)**|Absolutní cesta název primárního výstupního souboru pro sestavení (definuje jako jednotka + cesta + název základní + přípona souboru).|
-|**$(VCInstallDir)**|Adresář, který obsahuje obsah jazyka C++ instalace sady Visual Studio. Tato vlastnost obsahuje verzi nástroje cílovou sadu nástrojů Visual C++, který se může lišit, který hostitel Visual Studio. Například při sestavení s `$(PlatformToolset) = v140`, **$(VCInstallDir)** obsahuje cestu k instalaci Visual C++ 2015.|
+|**$(VCInstallDir)**|Adresář, který obsahuje obsah jazyka C++ instalace sady Visual Studio. Tato vlastnost obsahuje verzi cílové Microsoft C++ sada nástrojů (MSVC), který se může lišit, který hostitel Visual Studio. Například při sestavení s `$(PlatformToolset) = v140`, **$(VCInstallDir)** obsahuje cestu k instalaci sady Visual Studio 2015.|
 |**$(VSInstallDir)**|Adresář, do nějž jste nainstalovali aplikaci Visual Studio. Tato vlastnost obsahuje verzi nástroje na cílovou sadu nástrojů Visual Studio, který se může lišit, který hostitel Visual Studio. Například při sestavení s `$(PlatformToolset) = v110`, **$(VSInstallDir)** obsahuje cestu k instalaci sady Visual Studio 2012.|
 |**$(WebDeployPath)**|Relativní cesta z kořene nasazení webu na kde výstup projektu patří. Vrátí stejnou hodnotu jako <xref:Microsoft.VisualStudio.VCProjectEngine.VCWebDeploymentTool.RelativePath%2A>.|
 |**$(WebDeployRoot)**|Absolutní cesta k umístění  **\<localhost >**. Například c:\inetpub\wwwroot.|

@@ -5,12 +5,12 @@ f1_keywords:
 - LNK2038
 helpviewer_keywords:
 - LNK2038
-ms.openlocfilehash: a22b31f1ac3226271ed7ff03b5be7dad7fff6b93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2839494232e7b57325b6f7abb960a258ba13078
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298864"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446949"
 ---
 # <a name="linker-tools-error-lnk2038"></a>Chyba linkerů LNK2038
 
@@ -24,9 +24,9 @@ Této chybě může dojít, když je soubor objektu v projektu je zastaralý. P�
 
 Visual Studio definuje následující symboly, aby se zabránilo propojení nekompatibilního kód, který může způsobit chyby za běhu nebo jiné neočekávané chování.
 
-- `_MSC_VER` Označuje číslo hlavní verze a podverze kompilátoru Visual C++, který slouží k vytvoření aplikace nebo knihovna. Kód, který je zkompilován pomocí jedné verze kompilátoru jazyka Visual C++ není kompatibilní s kódem, který je zkompilován s použitím verzi, která má různé hlavní verze a podverze čísla. Další informace najdete v tématu `_MSC_VER` v [předdefinovaná makra](../../preprocessor/predefined-macros.md).
+- `_MSC_VER` Označuje číslo hlavní verze a podverze Microsoft C++ kompilátor (MSVC), který se používá k vytvoření aplikace nebo knihovna. Kód, který je zkompilován pomocí jedné verze MSVC není kompatibilní s kódem, který je zkompilován s použitím verzi, která má různé hlavní verze a podverze čísla. Další informace najdete v tématu `_MSC_VER` v [předdefinovaná makra](../../preprocessor/predefined-macros.md).
 
-   Pokud odkazujete na knihovnu, která není kompatibilní s verzí kompilátoru Visual C++, který používáte, a nelze získat nebo vytvořit kompatibilní verzi knihovny, můžete použít starší verzi kompilátoru k sestavení projektu: změnit **sada nástrojů platformy** vlastnosti projektu starší sadu nástrojů. Další informace najdete v tématu [jak: Změna cílové architektury a sady nástrojů](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
+   Pokud odkazujete na knihovnu, která není kompatibilní s verzí MSVC, který používáte, a nelze získat nebo vytvořit kompatibilní verzi knihovny, můžete použít starší verzi kompilátoru k sestavení projektu: změnit  **Sada nástrojů platformy** vlastnosti projektu starší sadu nástrojů. Další informace najdete v tématu [jak: Změna cílové architektury a sady nástrojů](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - `_ITERATOR_DEBUG_LEVEL` Informuje o úrovni zabezpečení a ladění funkcí, které jsou povoleny ve standardní knihovně jazyka C++. Tyto funkce mohou změnit reprezentaci některých objektů standardní knihovny C++ a tím je znekompatibilnit ty použití různých zabezpečení a ladění funkcí. Další informace najdete v tématu [_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md).
 

@@ -1,6 +1,6 @@
 ---
 title: 'Postupy: Vytvoření projektu jazyka C++ z existujícího kódu'
-ms.date: 01/15/2019
+ms.date: 05/06/2019
 helpviewer_keywords:
 - C++, creating projects from existing code
 - Create New Project From Existing Code Files Wizard, project settings
@@ -10,12 +10,12 @@ f1_keywords:
 - vc.appwiz.importwiz.debugsettings
 - vc.appwiz.importwiz.releasesettings
 ms.assetid: e328a938-395c-48ea-9e35-dd433de12b31
-ms.openlocfilehash: 1658e19595d8cfc7966ca881abfdd2aa8acf76ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a899fe7f1b038ac1497465171098183f63f40564
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62189023"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221451"
 ---
 # <a name="how-to-create-a-c-project-from-existing-code"></a>Postupy: Vytvoření projektu jazyka C++ z existujícího kódu
 
@@ -26,8 +26,6 @@ Přenesení existujících souborů kódu do projektu jazyka C++ umožňuje pou�
 ### <a name="to-create-a-c-project-from-existing-code"></a>Vytvoření projektu jazyka C++ z existujícího kódu
 
 1. Na **souboru** nabídce vyberte možnost **nový** > **projekt z existujícího kódu**.
-
-1. První stránka **vytvořit nový projekt z existujících souborů kódu** průvodce, vyberte **Visual C++** v **jaký typ projektu chcete vytvořit?** seznamu. Zvolte **Další** pokračujte.
 
 1. Zadejte umístění vašeho projektu, adresáře pro zdrojové soubory a typy souborů, které Průvodce naimportuje do nového projektu. Zvolte **Další** pokračujte.
 
@@ -44,7 +42,7 @@ Přenesení existujících souborů kódu do projektu jazyka C++ umožňuje pou�
 
     | Nastavení | Popis |
     | --- | --- |
-    | **Pomocí sady Visual Studio** | Určuje použití nástroje pro vytváření, které jsou zahrnuty v sadě Visual Studio pro vytváření nového projektu. Ve výchozím nastavení je vybraná tato možnost.<br/><br/>Vyberte **typu projektu** k určení typu projektu vygeneruje průvodce. Zvolte **projekt aplikace Windows**, **projekt konzolové aplikace**, **projektu dynamické knihovny (DLL)**, nebo **statická knihovna (LIB) projekt**.<br/><br/>Zkontrolujte **přidat podporu ATL** přidat podporu ATL do nového projektu.<br/><br/>Zkontrolujte **přidat podporu knihovny MFC** k přidání podpory MFC do nového projektu.<br/><br/>Zkontrolujte **přidání podpory pro modul Common Language Runtime** přidat do projektu podporu CLR programování. Zvolte **Common Language Runtime Support** pro typ dodržování předpisů, jako například **Common Language Runtime (stará syntaxe)** dodržování předpisů s spravovaných rozšíření syntaxe jazyka C++, CLR programování syntaxe před Visual C++ 2005. |
+    | **Pomocí sady Visual Studio** | Určuje použití nástroje pro vytváření, které jsou zahrnuty v sadě Visual Studio pro vytváření nového projektu. Ve výchozím nastavení je vybraná tato možnost.<br/><br/>Vyberte **typu projektu** k určení typu projektu vygeneruje průvodce. Zvolte **projekt aplikace Windows**, **projekt konzolové aplikace**, **projektu dynamické knihovny (DLL)**, nebo **statická knihovna (LIB) projekt**.<br/><br/>Zkontrolujte **přidat podporu ATL** přidat podporu ATL do nového projektu.<br/><br/>Zkontrolujte **přidat podporu knihovny MFC** k přidání podpory MFC do nového projektu.<br/><br/>Zkontrolujte **přidání podpory pro modul Common Language Runtime** přidat do projektu podporu CLR programování. Zvolte **Common Language Runtime Support** pro typ dodržování předpisů, jako například **Common Language Runtime (stará syntaxe)** dodržování předpisů s spravovaných rozšíření pro C++ syntaxe, programovací syntaxe CLR před Visual Studio 2005. |
     | **Použití externího sestavovacího systému** | Určuje použití nástroje sestavení, které nejsou zahrnuty v sadě Visual Studio pro vytváření nového projektu. Pokud je vybraná tato možnost, můžete určit příkazové řádky sestavení na **zadat konfigurační nastavení ladění** a **zadejte konfigurační nastavení vydání** stránky. |
 
     ![Nastavení projektu](media/settings.png)

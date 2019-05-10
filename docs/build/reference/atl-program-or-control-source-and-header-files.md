@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], ATL source and headers
 ms.assetid: cb65372f-4880-4007-b582-a52eaa568fd1
-ms.openlocfilehash: e315586de57ca65c60c435c436734bcdededed54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15d49cf984e45feeaad454de13c4ab37622000a4
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273018"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446577"
 ---
 # <a name="atl-program-or-control-source-and-header-files"></a>Program knihovny ATL nebo zdroj ovládacího prvku a soubory hlaviček
 
@@ -27,6 +27,6 @@ Všechny tyto soubory jsou umístěny v *název_projektu* adresář a soubory hl
 
 ## <a name="see-also"></a>Viz také:
 
-[Typy souborů vytvořených pro projekty Visual C++](file-types-created-for-visual-cpp-projects.md)<br>
+[Soubor typy vytvořené pro vizuál C++ projekty](file-types-created-for-visual-cpp-projects.md)<br>
 [Program knihovny MFC nebo zdroj ovládacího prvku a soubory hlaviček](mfc-program-or-control-source-and-header-files.md)<br>
 [Projekty CLR](files-created-for-clr-projects.md)

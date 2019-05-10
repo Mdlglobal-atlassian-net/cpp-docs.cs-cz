@@ -1,22 +1,20 @@
 ---
 title: 'Postupy: Změna cílové architektury a sady nástrojů'
 ms.custom: conceptual
-ms.date: 11/04/2016
-f1_keywords:
-- msbuild.cpp.howto.modifytargetframeworkandplatformtoolset
+ms.date: 05/06/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-ms.openlocfilehash: cf2078432f629a353e0c325b407db59681ffd9d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3d6b50a57cab9cc63657949fceccebf4ea6b8c9
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273492"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220671"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Postupy: Změna cílové architektury a sady nástrojů
 
-Můžete změnit nastavení projektu Visual C++ pro cílení na různé verze rozhraní .NET Framework a jiné sady nástrojů platformy. Ve výchozím nastavení používá systém projektu verzi rozhraní .NET Framework a verzi sady nástrojů, které odpovídají verzi sady Visual Studio, který použijete k vytvoření projektu. Můžete změnit cílovou sadu nástrojů platformy úpravou vlastností projektu. Cílové rozhraní Framework lze změnit úpravou souboru projektu (.vcxproj). Nemusíte udržovat samostatnou kód základní pro každý cíl kompilace.
+Visual Studio můžete změnit C++ nastavení pro jiné cílové verze rozhraní .NET Framework a jiné sady nástrojů platformy projektu. Ve výchozím nastavení používá systém projektu verzi rozhraní .NET Framework a verzi sady nástrojů, které odpovídají verzi sady Visual Studio, který použijete k vytvoření projektu. Můžete změnit cílovou sadu nástrojů platformy úpravou vlastností projektu. Cílové rozhraní Framework lze změnit úpravou souboru projektu (.vcxproj). Nemusíte udržovat samostatnou kód základní pro každý cíl kompilace.
 
 > [!IMPORTANT]
 >  Některé edice nemusí podporovat změny cílových rozhraní nebo sad nástrojů platformy. Informace o kompatibilitě naleznete v tématu [Port, migrace a Upgrade projektů sady Visual Studio](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects).

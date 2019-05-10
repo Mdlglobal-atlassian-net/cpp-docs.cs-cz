@@ -1,5 +1,5 @@
 ---
-title: Compiler errors C3000 Through C3099
+title: Chyby kompilátoru C3000 až C3099
 ms.date: 04/21/2019
 f1_keywords:
 - C3051
@@ -39,13 +39,13 @@ helpviewer_keywords:
 - C3098
 ms.assetid: 01b7b9cb-b351-4b5a-8cb0-1fcddb08d2ab
 ms.openlocfilehash: 08c7b691d6390e6c1070fc71dff116604731ebab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281663"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856927"
 ---
-# <a name="compiler-errors-c3000-through-c3099"></a>Compiler errors C3000 Through C3099
+# <a name="compiler-errors-c3000-through-c3099"></a>Chyby kompilátoru C3000 až C3099
 
 Články v této části dokumentace vysvětlují podmnožinu chybové zprávy, které jsou generovány kompilátorem.
 
@@ -53,7 +53,7 @@ ms.locfileid: "62281663"
 
 ## <a name="error-messages"></a>Chybové zprávy
 
-|Chyba|Zpráva|
+|Chyba|Message|
 |-----------|-------------|
 |Chyba kompilátoru C3000|Zastaralé.|
 |[Chyba kompilátoru C3001](compiler-error-c3001.md)|"*zpráva*': očekával se název direktivy OpenMP|

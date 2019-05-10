@@ -1,6 +1,6 @@
 ---
 title: Portování ze systému UNIX do Win32
-ms.date: 08/02/2018
+ms.date: 05/02/2019
 helpviewer_keywords:
 - APIs [C++], porting to Win32
 - Windows API [C++], migrating from UNIX
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - porting to Win32 [C++]
 - Win32 applications [C++], migrating from UNIX
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: 3146c94879532a5c58208369bb6d131a3a027c33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66ac5b478929a42b37d6d0b712063552cfae9104
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337346"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449026"
 ---
 # <a name="porting-from-unix-to-win32"></a>Portování ze systému UNIX do Win32
 
@@ -39,17 +39,9 @@ Následující seznam uvádí Microsoft a třetích stran pro přenos a podpora 
 
 [Průvodce projektem migrace Unix](https://technet.microsoft.com/library/bb656287.aspx) doplňuje Průvodce migrací systému UNIX vlastní aplikace tím, že poskytuje základní nápovědy na migraci podstatné projekty ze systému UNIX do Win32. Průvodce poskytuje Rady na problémy, které je třeba zvážit v každé fázi migrace projektu.
 
-### <a name="interopsystemscom"></a>InteropSystems.com
-
-[http://www.interopsystems.com/](http://www.interopsystems.com/)
-
-Server jiného výrobce pro společnost poskytující softwarem, který podporuje přenos ze systému UNIX do Win32.
-
 ### <a name="c-boost-web-site"></a>C++ Boost webové stránky
 
-[http://boost.sourceforge.net/regression-logs/](http://boost.sourceforge.net/regression-logs/)
-
-[http://boost.sourceforge.net/boost-build2/](http://boost.sourceforge.net/boost-build2/)
+[https://www.boost.org/](https://www.boost.org/)
 
 ## <a name="porting-unix-applications-directly-to-win32"></a>Portování aplikací UNIX přímo do Win32
 

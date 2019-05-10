@@ -8,12 +8,12 @@ helpviewer_keywords:
 - deploying applications [C++], about deploying applications
 - libraries [C++], application deployment issues
 ms.assetid: ebd7f246-ab54-40e8-87fa-dac02c0047b3
-ms.openlocfilehash: ec472e506e78a57b65186bf6a5b801419fb141fb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: ac3565b4ec465ec60672d2238fbe81b71613a6c1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346404"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449041"
 ---
 # <a name="deployment-concepts"></a>Koncepty nasazení
 
@@ -21,7 +21,7 @@ Tato část popisuje hlavní aspekty pro nasazení aplikací v jazyce C++.
 
 ## <a name="windows-installer-deployment-in-c"></a>Nasazení Instalační služby systému Windows v jazyce C++
 
-Projekty Visual C++ obvykle používat tradiční instalace Instalační služby systému Windows pro nasazení. Příprava nasazení Instalační služby systému Windows, balíček aplikace do souboru setup.exe a distribuovat tento soubor, společně s balíčkem aplikace Instalační služby (MSI). Uživatelé pak spusťte setup.exe pro instalaci vaší aplikace.
+Visual Studio C++ projekty obvykle používat tradiční instalace Instalační služby systému Windows pro nasazení. Příprava nasazení Instalační služby systému Windows, balíček aplikace do souboru setup.exe a distribuovat tento soubor, společně s balíčkem aplikace Instalační služby (MSI). Uživatelé pak spusťte setup.exe pro instalaci vaší aplikace.
 
 Zabalení aplikace tak, že přidáte do svého řešení; projektu instalace Při sestavování, vytvoří instalační program a instalační program soubory balíčku, které můžete distribuovat uživatelům. Další informace najdete v tématu [volba metody nasazení](choosing-a-deployment-method.md).
 

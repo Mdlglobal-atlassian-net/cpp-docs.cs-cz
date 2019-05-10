@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 090259a4ad6b46eccf66dca6c99b4eb532b7ae5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5fe7d6876b094c84fe3d4cdbba417106edcca528
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387477"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447293"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Postupy: Definice a používání tříd a struktur (C++vyhodnocovací)
 
@@ -127,7 +127,7 @@ Můžete řídit viditelnost běžné language runtime (CLR) typy tak, že pokud
 
 `public` Označuje, že typ je viditelný do libovolného zdrojového souboru, který obsahuje `#using` směrnice pro sestavení, který obsahuje typ.  `private` Označuje, že typ není viditelný pro zdrojové soubory, které obsahují `#using` směrnice pro sestavení, který obsahuje typ. Privátní typy jsou však viditelné v rámci stejného sestavení. Výchozí viditelnost pro třídu je `private`.
 
-Ve výchozím nastavení před Visual C++ 2005 musely nativní typy přístupnost public mimo sestavení. Povolit [upozornění kompilátoru (úroveň 1) C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) můžete zobrazit, kde jsou správně použity privátní nativní typy. Použití [make_public](../preprocessor/make-public.md) – Direktiva pragma přidělit nativní typ v souboru zdrojového kódu, který nemůže změnit přístupnost public.
+Ve výchozím nastavení před Visual Studio 2005 musely nativní typy přístupnost public mimo sestavení. Povolit [upozornění kompilátoru (úroveň 1) C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) můžete zobrazit, kde jsou správně použity privátní nativní typy. Použití [make_public](../preprocessor/make-public.md) – Direktiva pragma přidělit nativní typ v souboru zdrojového kódu, který nemůže změnit přístupnost public.
 
 Další informace najdete v tématu [# direktiva using](../preprocessor/hash-using-directive-cpp.md).
 
@@ -588,7 +588,7 @@ int main() {
 Base::Test
 ```
 
-Další příklad ukazuje, že kompilátor Visual C++ volá funkci v nejvíce odvozené třídy – i v případě, že převod je vyžadovaný pro shodu nejméně jeden z parametrů – a není volání funkce v základní třídě, která představuje lepší shodu pro volání funkce.
+Na další příklad ukazuje, že Microsoft C++ kompilátor volá funkci v nejvíce odvozené třídy – i v případě, že převod je vyžadovaný pro shodu nejméně jeden z parametrů – a není volání funkce v základní třídě, která představuje lepší shodu pro volání funkce.
 
 ```cpp
 // compile with: /clr
@@ -736,7 +736,7 @@ CLR systému uvolňování paměti odstraní nepoužitých spravovaných objekt�
 
 Finalizační metoda Visual C++ není stejný jako <xref:System.Object.Finalize%2A> metody. (CLR dokumentace používá finalizační metody a <xref:System.Object.Finalize%2A> metoda jako synonyma). <xref:System.Object.Finalize%2A> Metoda je volána metodou systému uvolňování paměti, které vyvolá každý finalizační metody v řetězu dědičnosti třídy. Na rozdíl od destruktory jazyka Visual C++ finalizační metodu odvozené třídy volání nezpůsobí kompilátor volat finalizační metodu všech základních tříd.
 
-Protože kompilátor Visual C++ podporuje deterministické uvolnění prostředků, nedoporučujeme provádět <xref:System.IDisposable.Dispose%2A> nebo <xref:System.Object.Finalize%2A> metody. Pokud jste obeznámeni s těmito metodami, tady je ale jak Visual C++ finalizační metody a destruktor, která volá finalizační metodu mapují na <xref:System.IDisposable.Dispose%2A> vzoru:
+Protože Microsoft C++ kompilátor podporuje deterministické uvolnění prostředků, nepokoušejte se implementovat <xref:System.IDisposable.Dispose%2A> nebo <xref:System.Object.Finalize%2A> metody. Pokud jste obeznámeni s těmito metodami, tady je ale jak Visual C++ finalizační metody a destruktor, která volá finalizační metodu mapují na <xref:System.IDisposable.Dispose%2A> vzoru:
 
 ```cpp
 // Visual C++ code
@@ -757,7 +757,7 @@ void Dispose(bool disposing) {
 
 Spravovaný typ může použít také spravované prostředky, které chcete uvolnit deterministicky a nesmí zůstat na systému uvolňování paměti k uvolnění nedeterministicky v určitém okamžiku po objekt se už nevyžaduje. Deterministické uvolnění prostředků může výrazně zlepšit výkon.
 
-Kompilátor Visual C++ umožňuje definice destruktor nedeterministicky vyčistit objekty. Můžete uvolnit všechny prostředky, které chcete uvolnit nedeterministicky destruktor.  Pokud se nachází finalizační metodu, jeho volání z destruktoru, aby se zabránilo duplicitě kódu.
+Microsoft C++ kompilátoru umožňuje definice destruktor nedeterministicky vyčistit objekty. Můžete uvolnit všechny prostředky, které chcete uvolnit nedeterministicky destruktor.  Pokud se nachází finalizační metodu, jeho volání z destruktoru, aby se zabránilo duplicitě kódu.
 
 ```cpp
 // compile with: /clr /c

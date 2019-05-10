@@ -2,16 +2,16 @@
 title: 'Průvodce přenosem: MFC Scribble'
 ms.date: 11/19/2018
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: 436dd27d8c2669e21ddc8a9e453f369cdd14f70c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0424b5e8c87c0103b4ebee65765244b40e8fa553
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337447"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448955"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Průvodce přenosem: MFC Scribble
 
-Toto téma je první několik témat, které vám představí postup upgradu pro projekty Visual C++, které byly vytvořeny ve starších verzích sady Visual Studio do sady Visual Studio 2017. Tato témata zavést procesu upgradu podle příkladu, počínaje velmi jednoduchý projekt a přechod na ty o něco složitější. V tomto tématu se budeme pracovat prostřednictvím procesu upgradu ke konkrétnímu projektu knihovny MFC Scribble. Je vhodné jako základní informace o procesu upgradu pro projekty C++.
+Toto téma je první několik témat, které vám představí postup upgradu pro sadu Visual Studio C++ projekty, které byly vytvořeny ve starších verzích sady Visual Studio do sady Visual Studio 2017. Tato témata zavést procesu upgradu podle příkladu, počínaje velmi jednoduchý projekt a přechod na ty o něco složitější. V tomto tématu se budeme pracovat prostřednictvím procesu upgradu ke konkrétnímu projektu knihovny MFC Scribble. Je vhodné jako základní informace o procesu upgradu pro projekty C++.
 
 Jednotlivými verzemi sady Visual Studio zavádí možné nekompatibility, které může zkomplikovat přesunutí kódu ze starší verze sady Visual Studio na novější. Někdy jsou požadované změny v kódu, takže je nutné znovu zkompilovat a aktualizujte svůj kód a někdy jsou požadované změny v souborech projektu. Když otevřete projekt, který byl vytvořen pomocí předchozí verze sady Visual Studio, Visual Studio automaticky vás zeptá, zda aktualizovat projekt nebo řešení na nejnovější verzi. Tyto nástroje obvykle upgradovat jenom soubory projektu; Neprovádějte žádné změny zdrojového kódu.
 
@@ -49,7 +49,7 @@ V tomto případě problémy se všechna upozornění a sady Visual Studio prove
 
 ### <a name="step-2-getting-it-to-build"></a>Krok 2. Načítání sestavení
 
-Před sestavením, zkontrolujeme sada nástrojů platformy, abychom věděli, jaké verze kompilátoru používá systém projektu. V dialogovém okně Vlastnosti projektu v rámci **vlastnosti konfigurace**v **Obecné** kategorie, podívejte se **sada nástrojů platformy** vlastnost. Obsahuje verzi sady Visual Studio a čísla verze nástrojů platformy, které v tomto případě je v141 pro Visual Studio 2017 verze nástrojů. Pokud převedete projekt, který byl původně kompilován s Visual C++ 2010, 2012, 2013 nebo 2015, sada nástrojů se neaktualizuje automaticky do sady nástrojů Visual Studio 2017.
+Před sestavením, zkontrolujeme sada nástrojů platformy, abychom věděli, jaké verze kompilátoru používá systém projektu. V dialogovém okně Vlastnosti projektu v rámci **vlastnosti konfigurace**v **Obecné** kategorie, podívejte se **sada nástrojů platformy** vlastnost. Obsahuje verzi sady Visual Studio a čísla verze nástrojů platformy, které v tomto případě je v141 pro Visual Studio 2017 verze nástrojů. Pokud převedete projekt, který byl původně kompilován s Visual Studio 2010, 2012, 2013 nebo 2015, sada nástrojů se neaktualizuje automaticky do sady nástrojů Visual Studio 2017.
 
 Přechod usnadní do kódování Unicode, otevřete vlastnosti projektu, v části **vlastnosti konfigurace**, zvolte **Obecné** části a vyhledejte **znaková sada** vlastnost. Změnit z **použít vícebajtovou znakovou sadu** k **použít znakovou sadu Unicode**. Účinkem této změny je to teď _UNICODE a UNICODE makra jsou definována a _MBCS není, což můžete ověřit v dialogovém okně Vlastnosti v části **C /C++**  kategorií **příkazového řádku** Vlastnost.
 
@@ -65,7 +65,7 @@ Nyní sestavte řešení. V okně Výstup kompilátoru víme, že _WINNT32_WINNT
 _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
 ```
 
-Toto je upozornění, ne o chybu a je velmi běžná v případě upgrade projektu Visual C++. Toto je makro, které definuje co nejnižší verze Windows, na kterém bude naši aplikaci spustili. Pokud jsme upozornění ignorovat, můžeme přijmout výchozí hodnotu _WIN32_WINNT_MAXVER, což znamená, že aktuální verzi Windows. Tabulka obsahující možné hodnoty, najdete v článku [pomocí hlavičky Windows](/windows/desktop/WinProg/using-the-windows-headers). Například můžeme nastavit jeho spuštění na libovolnou verzi systému Vista a vyšší.
+Toto je upozornění, ne o chybu a je velmi běžné při upgradu sady Visual Studio C++ projektu. Toto je makro, které definuje co nejnižší verze Windows, na kterém bude naši aplikaci spustili. Pokud jsme upozornění ignorovat, můžeme přijmout výchozí hodnotu _WIN32_WINNT_MAXVER, což znamená, že aktuální verzi Windows. Tabulka obsahující možné hodnoty, najdete v článku [pomocí hlavičky Windows](/windows/desktop/WinProg/using-the-windows-headers). Například můžeme nastavit jeho spuštění na libovolnou verzi systému Vista a vyšší.
 
 ```cpp
 #define _WIN32_WINNT _WIN32_WINNT_VISTA

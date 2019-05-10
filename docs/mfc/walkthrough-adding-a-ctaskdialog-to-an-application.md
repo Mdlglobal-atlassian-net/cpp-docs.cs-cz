@@ -1,16 +1,16 @@
 ---
 title: 'Návod: Přidání objektu CTaskDialog do aplikace'
-ms.date: 09/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - CTaskDialog, adding
 - walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
-ms.openlocfilehash: f0992d476326e5175db799ea0f9e5667eab3704b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 8cf2223b2859a2dfa6ecc7582ec2f171a056152c
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358246"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558205"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Návod: Přidání objektu CTaskDialog do aplikace
 
@@ -37,7 +37,9 @@ Následující postup ukazuje základní použití `CTaskDialog`, který má nah
 
 ### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>Nahraďte zprávou Windows objektu CTaskDialog
 
-1. Vytvořte nový projekt aplikace knihovny MFC s výchozím nastavením. Pojmenujte ji *MyProject*.
+1. Použití **Průvodce aplikací knihovny MFC** k vytvoření aplikace knihovny MFC s výchozím nastavením. Zobrazit [názorný postup: Použití nových ovládacích prvků prostředí MFC](walkthrough-using-the-new-mfc-shell-controls.md) pokyny o tom, jak spustit Průvodce účtem pro vaši verzi sady Visual Studio.
+
+1. Pojmenujte ji *MyProject*. 
 
 1. Použití **Průzkumníka řešení** k otevření souboru MyProject.cpp.
 

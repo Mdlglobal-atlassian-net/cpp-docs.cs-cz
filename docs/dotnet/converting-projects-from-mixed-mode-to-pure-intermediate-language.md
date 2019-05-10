@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 93eff646fb582e25ad70549afc714c5321e56079
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f63b6860157e315d44f7c050812a7f0b97f2726
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209240"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448051"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Převod projektů ze smíšeného režimu do čistého IL
 
@@ -21,7 +21,7 @@ Všechny projekty Visual C++ CLR se propojit ke knihovnám C za běhu ve výchoz
 > [!IMPORTANT]
 > Zastaralé Visual Studio 2015 a Visual Studio 2017 už nepodporuje vytváření **/CLR: pure** nebo **/CLR: safe** kódu pro aplikace modulu CLR. Pokud budete potřebovat pure nebo bezpečné sestavení, doporučujeme že převést aplikaci do jazyka C#.
 
-Pokud používáte starší verzi sady nástrojů kompilátoru Visual C++, který podporuje **/CLR: pure** nebo **/CLR: safe**, tento postup slouží k převodu kódu do prázdné MSIL:
+Pokud používáte starší verzi sady Microsoft C++ sada nástrojů kompilátoru, který podporuje **/CLR: pure** nebo **/CLR: safe**, tento postup slouží k převodu kódu do prázdné MSIL:
 
 ### <a name="to-convert-your-mixed-mode-application-into-pure-intermediate-language"></a>Chcete-li převést aplikace ve smíšeném režimu do čistého IL
 

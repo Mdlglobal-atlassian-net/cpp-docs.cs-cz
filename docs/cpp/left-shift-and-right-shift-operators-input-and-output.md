@@ -13,12 +13,12 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: 2f118c11aab9fb2bbdd6cfa4f23425077b382b23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd048bedc45b14bdc7b83120ad039296b54aa850
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216418"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222058"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operátor posunu vlevo a vpravo (&gt; &gt; a &lt; &lt;)
 
@@ -61,7 +61,7 @@ int main() {
 }
 ```
 
-Pokud posunete doleva číslo se znaménkem tak, aby to mělo vliv na znaménko, bude výsledek nedefinovaný. Následující příklad ukazuje, co se stane v jazyce Visual C++, když se 1 bit posune doleva na pozici bitu znaménka.
+Pokud posunete doleva číslo se znaménkem tak, aby to mělo vliv na znaménko, bude výsledek nedefinovaný. Následující příklad ukazuje, co se stane, když 1 bit posune doleva na pozici bitu znaménka.
 
 ```cpp
 #include <iostream>
@@ -89,7 +89,7 @@ int main() {
 Operátor pravého posunutí způsobí posunutí bitů v *shift-expression* vpravo o počet pozic určený *additive-expression*. V případě čísel bez znaménka se bitové pozice uvolněné operací posunutí vyplní nulami. U čísel se znaménkem se bit znaménka použije k vyplnění uvolněných bitových pozic. Platí tedy, že pokud je číslo kladné, použije se 0. Pokud je číslo záporné, použije se 1.
 
 > [!IMPORTANT]
-> Výsledek posunu záporného čísla se znaménkem doprava je závislý na implementaci. Přestože jazyk Visual C++ používá bit znaménka k vyplnění uvolněných pozic, není nijak zaručeno, že tak budou činit i další implementace.
+> Výsledek posunu záporného čísla se znaménkem doprava je závislý na implementaci. I když Microsoft C++ kompilátor používá bit znaménka k vyplnění uvolněných pozic, není zaručeno, že v jiných implementacích tak budou činit i.
 
 Tento příklad ukazuje operace pravého posunutí pomocí čísel bez znaménka:
 

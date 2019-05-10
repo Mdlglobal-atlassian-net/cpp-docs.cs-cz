@@ -5,16 +5,16 @@ helpviewer_keywords:
 - cl-exe compiler, intrinsics
 - intrinsics, x64
 - intrinsics, amd64
-ms.openlocfilehash: 141ffa24a87d7794815c10f407ee23718071dacf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b1a0b664d0b67925cd6a2ed01e128741e641b48
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389655"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448574"
 ---
 # <a name="x64-amd64-intrinsics-list"></a>x64 (amd64) – seznam vnitřních objektů
 
-Tento dokument obsahuje seznam vnitřních objektů, které kompilátor Visual C++ podporuje při cílení na architekturu x64 (označovanou také jako amd64).
+Tento dokument obsahuje seznam vnitřních objektů, které Microsoft C++ kompilátor podporuje, pokud je cílem x64 (označované také jako amd64).
 
 Informace o jednotlivých vnitřních objektech naleznete v následujících materiálech, podle procesoru, na který ve vývoji cílíte:
 

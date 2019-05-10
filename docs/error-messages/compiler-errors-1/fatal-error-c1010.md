@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C1010
 ms.assetid: dfd035f1-a7a2-40bc-bc92-dc4d7f456767
-ms.openlocfilehash: 6974f0d82653203973be50b5ea709bd9487a215f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 204c7ef94d82513338f6635ec9eb22f26fc090a7
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363970"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448015"
 ---
 # <a name="fatal-error-c1010"></a>Závažná chyba C1010
 
 Neočekávaný konec souboru při hledání předkompilované hlavičky. Nezapomněli jste přidat ' #include název "ke zdroji?
 
-Zadaný soubor include [/Yu](../../build/reference/yu-use-precompiled-header-file.md) není uveden ve zdrojovém souboru.  Tato možnost je povolená ve výchozím nastavení ve většině typů projektu Visual C++ a "stdafx.h" je výchozí zahrnout soubor určený parametrem tuto možnost.
+Zadaný soubor include [/Yu](../../build/reference/yu-use-precompiled-header-file.md) není uveden ve zdrojovém souboru.  Tato možnost je povolena ve výchozím nastavení v aplikaci Visual Studio většina C++ typy projektů a "stdafx.h" je výchozí zahrnout soubor určený parametrem tuto možnost.
 
 V prostředí Visual Studio použijte jednu z následujících metod pro vyřešení této chyby:
 

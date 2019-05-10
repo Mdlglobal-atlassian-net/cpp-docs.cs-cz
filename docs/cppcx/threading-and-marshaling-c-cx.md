@@ -8,12 +8,12 @@ helpviewer_keywords:
 - agility, C++/CX
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
-ms.openlocfilehash: c5bce60e564bef490bcfafd6f8559dffe5fd4f1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4206dd9c675325d3141a56b0e57f6cf67dc5693d
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404634"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448145"
 ---
 # <a name="threading-and-marshaling-ccx"></a>Práce s vlákny a zařazování (C++/CX)
 
@@ -35,7 +35,7 @@ Když vytvoříte aplikaci pro univerzální platformu Windows, může interakti
 
 ### <a name="compiler-warning-c4451-when-consuming-non-agile-classes"></a>Kompilátor varování C4451 při využívání-agilní třídy
 
-Z různých důvodů nemůže být některé třídy agile. Pokud jste přístupu k instance-agilní tříd z vlákna uživatelského rozhraní a vlákna na pozadí, a pak provést další pro vás k zajištění správného chování za běhu. Kompilátor Visual C++ vyvolá upozornění při vytvoření instance – agile run-time třída ve vaší aplikaci v globálním oboru nebo deklarovat-agilní typ jako členem třídy ref class, která je označena jako agilní.
+Z různých důvodů nemůže být některé třídy agile. Pokud jste přístupu k instance-agilní tříd z vlákna uživatelského rozhraní a vlákna na pozadí, a pak provést další pro vás k zajištění správného chování za běhu. Microsoft C++ kompilátor vyvolá upozornění při vytvoření instance – agile run-time třída ve vaší aplikaci v globálním oboru nebo deklarovat-agilní typ jako členem třídy ref class, která je označena jako agile.
 
 Agilní tříd nejjednodušší řešit jsou ty, které mají `ThreadingModel`= obě a `MarshallingType`= Standard.  Provedením těchto tříd agilní stačí použít `Agile<T>` pomocná třída.   Následující příklad ukazuje deklaraci-agilní objekt typu `Windows::Security::Credentials::UI::CredentialPickerOptions^`a upozornění kompilátoru, která je výsledkem vydala.
 

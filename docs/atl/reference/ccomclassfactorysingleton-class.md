@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactorySingleton class
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
-ms.openlocfilehash: 480b4c2a6e052e8e0823b97b548fc5d07b55230f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c415da15341f7800a706379d991cb753f5991170
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260172"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221172"
 ---
 # <a name="ccomclassfactorysingleton-class"></a>CComClassFactorySingleton Class
 
@@ -41,13 +41,13 @@ Třída.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CComClassFactorySingleton::CreateInstance](#createinstance)|Dotazy `m_spObj` pro ukazatel rozhraní.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CComClassFactorySingleton::m_spObj](#m_spobj)|[Ccomobjectglobal –](../../atl/reference/ccomobjectglobal-class.md) přiřazený objekt vytvořený pomocí `CComClassFactorySingleton`.|
 
@@ -108,7 +108,7 @@ CComPtr<IUnknown> m_spObj;
 
 Každé volání [CreateInstance](#createinstance) metoda jednoduše dotazuje tohoto objektu pro ukazatel rozhraní.
 
-Všimněte si, že aktuální formu `m_spObj` uvede k zásadní změně z způsob, který `CComClassFactorySingleton` pracovali v předchozích verzích ATL. V předchozích verzích `CComClassFactorySingleton` objekt byl vytvořen ve stejnou dobu jako objekt pro vytváření tříd, během inicializace serveru. V jazyce Visual C++ .NET 2003 je objekt vytvořen laxně, na první požadavek. Tato změna může způsobit chyby v programech, které jsou závislé na dřívější inicializace.
+Všimněte si, že aktuální formu `m_spObj` uvede k zásadní změně z způsob, který `CComClassFactorySingleton` pracovali v předchozích verzích ATL. V předchozích verzích `CComClassFactorySingleton` objekt byl vytvořen ve stejnou dobu jako objekt pro vytváření tříd, během inicializace serveru. Ve Vizuálu C++.NET 2003 a novějším, objekt je vytvořen laxně, na první požadavek. Tato změna může způsobit chyby v programech, které jsou závislé na dřívější inicializace.
 
 ## <a name="see-also"></a>Viz také:
 

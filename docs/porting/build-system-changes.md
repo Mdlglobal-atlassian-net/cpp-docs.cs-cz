@@ -12,16 +12,16 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-ms.openlocfilehash: 621e62379657da66d6eaec7a3ceff780fd610066
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3e51aa7e5a4346137e94191b551b0d53452e460
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62205488"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449005"
 ---
 # <a name="build-system-changes"></a>Změny systému sestavení
 
-Systém MSBuild se používá k sestavení projektů Visual C++. V sadě Visual Studio 2008 a dřívějších verzích, ale systém VCBuild se použil. Některé typy souborů a koncepty, které závisí na VCBuild neexistují nebo jsou reprezentovány odlišně v aktuálním systému. Tento dokument popisuje rozdíly v aktuálním systému sestavení.
+Systém MSBuild sloužící k sestavení sady Visual Studio C++ projekty. V sadě Visual Studio 2008 a dřívějších verzích, ale systém VCBuild se použil. Některé typy souborů a koncepty, které závisí na VCBuild neexistují nebo jsou reprezentovány odlišně v aktuálním systému. Tento dokument popisuje rozdíly v aktuálním systému sestavení.
 
 ## <a name="vcproj-is-now-vcxproj"></a>.vcproj je nyní .vcxproj
 
@@ -37,7 +37,7 @@ Přípona názvu souboru pro seznam vlastností projektu v aktuální verzi je .
 
 ## <a name="custom-build-rules-and-rules-files"></a>Vlastní sestavení pravidel a .rules soubory
 
-V dřívějších verzích *soubor pravidel* je soubor založený na formátu XML, který má příponu názvu souboru .rules. Soubor pravidel umožňuje definovat vlastní pravidla sestavení a začlenit do procesu sestavení projektu ve Visual C++. Pravidlo vlastního sestavení, které může být přidružený jeden nebo více přípon souborů, umožňuje předání vstupních souborů do nástrojů, která obsahuje jeden nebo více výstupních souborů.
+V dřívějších verzích *soubor pravidel* je soubor založený na formátu XML, který má příponu názvu souboru .rules. Soubor pravidel umožňuje definovat vlastní pravidla sestavení a začlenit do procesu sestavení sady Visual Studio C++ projektu. Pravidlo vlastního sestavení, které může být přidružený jeden nebo více přípon souborů, umožňuje předání vstupních souborů do nástrojů, která obsahuje jeden nebo více výstupních souborů.
 
 V této verzi pravidla vlastního sestavení jsou reprezentovány tři typy souborů, XML, .props a .targets, nikoli soubor .rules. Při migraci .rules souboru, který byl vytvořen pomocí dřívější verze aplikace Visual C++ na aktuální verzi, ekvivalentní soubory .xml, .props a .targets jsou vytvořeny a uloženy ve vašem projektu společně s původní soubor .rules.
 

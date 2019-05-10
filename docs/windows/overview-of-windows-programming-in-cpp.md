@@ -1,13 +1,13 @@
 ---
 title: Přehled programování v C++ v systému Windows
-ms.date: 03/28/2019
+ms.date: 05/06/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 48c7f419b6c69955ab25db528c8d3d86a7249391
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40028794a6df30db619965181f2e31d7c9a2745c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362345"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221326"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Přehled programování v C++ v systému Windows
 
@@ -21,7 +21,7 @@ Aplikace konzoly C++ spusťte z příkazového řádku v okně konzoly a může 
 
 Termín *nativní klientská aplikace* odkazuje na C nebo C++ oddílové aplikaci, která používá původní nativní [rozhraní API Windows C a/nebo rozhraní API modelu COM](/windows/desktop/apiindex/windows-api-list) pro přístup k operačním systémem. Tato rozhraní API představují samy o sobě převážně v C. Při vytváření tohoto typu aplikace, máte taky možnost výběru programovat přímo s smyčku zpráv ve stylu jazyka C, který zpracovává události v operačním systému, nebo s použitím *Microsoft Foundation Classes* (MFC), knihovnu C++, která obaluje Win32 způsobem, který je o něco objektově orientovaný. Žádný přístup se považuje za "moderní" ve srovnání s univerzální platformu Windows (viz níže), ale oba jsou stále plně podporované a mít miliony řádků kódu spuštěného v celém světě ještě dnes. Aplikace Win32, na kterém běží v okně vyžaduje pro vývojáře pro práci s zpráv Windows uvnitř procedury funkce Windows explicitně. Bez ohledu na název můžete jako (x86) 32bitové nebo 64bitové (x64) binární zkompilovat aplikaci Win32. V sadě Visual Studio IDE je shodný podmínky x86 a Win32.
 
-Abyste mohli začít s programováním tradiční Windows C++, naleznete v tématu [Win32 a C++ vám začít](/windows/desktop/LearnWin32/learn-to-program-for-windows). Po získání některé znalost Win32 ji bude snazší naučit [desktopových aplikací knihovny MFC](/mfc/mfc-desktop-applications). Příklad tradiční desktopové aplikace C++, využívající sofistikované grafiky, naleznete v tématu [Hilo: Vývoj aplikací pro Windows v jazyce C++](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx).
+Abyste mohli začít s programováním tradiční Windows C++, naleznete v tématu [Win32 a C++ vám začít](/windows/desktop/LearnWin32/learn-to-program-for-windows). Po získání některé znalost Win32 ji bude snazší naučit [desktopových aplikací knihovny MFC](../mfc/mfc-desktop-applications.md). Příklad tradiční desktopové aplikace C++, využívající sofistikované grafiky, naleznete v tématu [Hilo: Vývoj aplikací pro Windows v jazyce C++](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx).
 
 ### <a name="c-or-net"></a>.NET nebo C++? 
 

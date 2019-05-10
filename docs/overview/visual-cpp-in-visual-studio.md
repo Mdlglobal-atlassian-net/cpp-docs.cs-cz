@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: d8826c92077ac374b67a7294fe040d6fe8dea927
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a01c6448174a35da900b7b50a1df5916a2983201
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351966"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222598"
 ---
 # <a name="c-in-visual-studio"></a>C++ v sadě Visual Studio
 
@@ -103,7 +103,7 @@ Zjistěte, jak vytvořit knihovny DLL, které umožňuje interoperabilitu mezi n
 [Programování v systému Linux](../linux/index.md)<br/>
 Použijte Visual Studio IDE na kód a nasaďte na vzdáleném počítači s Linuxem pro kompilaci pomocí GCC.
 
-[Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)<br/>
+[Vytvoření knihovny DLL jazyka C/C++ v sadě Visual Studio](../build/dlls-in-visual-cpp.md)<br/>
 Zjistěte, jak používat Win32 a knihovny ATL a MFC pro vytvoření DLL knihoven pracovní plochy Windows a jak kompilovat a registrovat vytvořené knihovny DLL.
 
 [Paralelní programování](../parallel/parallel-programming-in-visual-cpp.md)<br/>

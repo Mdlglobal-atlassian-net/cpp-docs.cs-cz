@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4581
 ms.assetid: 598bcd87-257d-4eb3-94e4-15bb31aadc99
-ms.openlocfilehash: 9e370bcff0c30fb508ebc22aaff1f6a56dd420a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9868d33538a1f56906455f2b1772b53eb3a7734d
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397273"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447097"
 ---
 # <a name="compiler-warning-level-1-c4581"></a>Kompilátor upozornění (úroveň 1) C4581
 
 zastaralé chování: "Řetězec1" nahradit "řetězec2" atributu procesu
 
-Tuto chybu mohou být generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual C++ 2005: kontroly parametrů pro atributy Visual C++.
+Tuto chybu mohou být generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual Studio 2005: kontroly parametrů pro vizuál C++ atributy.
 
 V předchozích verzích byla přijata hodnoty atributů, zda byl uzavřen do uvozovek. Pokud je hodnota výčtu, nesmí být uzavřen v uvozovkách.
 

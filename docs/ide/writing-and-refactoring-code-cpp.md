@@ -1,13 +1,14 @@
 ---
 title: Psaní a refaktoring kódu (C++)
+description: Použití C++ editoru kódu v sadě Visual Studio k formátování, navigace, pochopit a Refaktorovat kód.
 ms.date: 04/30/2018
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
-ms.openlocfilehash: bc839a759d2ff3f403ca001ab32702d3fe27833e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: ee506229584690cd4f7730011e0b5b50af0e27e0
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345235"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222315"
 ---
 # <a name="writing-and-refactoring-code-c"></a>Psaní a refaktoring kódu (C++)
 
@@ -91,7 +92,7 @@ Najeďte myší proměnnou nebo funkci deklaraci, klikněte pravým tlačítkem,
 
 ## <a name="view-call-hierarchy"></a>Zobrazit hierarchii volání
 
-Klikněte pravým tlačítkem na každé volání funkce a zobrazení seznamu resursive všechny funkce, které volá a všechny funkce, které ji volaly. Každá funkce v seznamu lze rozšířit stejným způsobem. Další informace najdete v tématu [hierarchie volání](/visualstudio/ide/reference/call-hierarchy).
+Klikněte pravým tlačítkem na každé volání funkce a zobrazte seznam všech funkcí, které volá a všechny funkce, které ji volaly rekurzivní. Každá funkce v seznamu lze rozšířit stejným způsobem. Další informace najdete v tématu [hierarchie volání](/visualstudio/ide/reference/call-hierarchy).
 
 ![Visual C&#43;&#43; Call Hierarchy](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
 

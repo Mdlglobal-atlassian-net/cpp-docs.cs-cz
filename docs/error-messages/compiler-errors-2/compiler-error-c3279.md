@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3279
 ms.assetid: 639afc20-984c-4a95-be35-8bf9409f02d5
-ms.openlocfilehash: 5f39510ee9ec0e717d675aa8b396405bc33b4ea1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72646d7611163748fe7e27ea6c78cd38426eb6ad
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381946"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447810"
 ---
 # <a name="compiler-error-c3279"></a>Chyba kompilátoru C3279
 
 dílčí a explicitní specializace, jakož i explicitní vytváření instancí šablon tříd jsou deklarovány v oboru názvů cli jsou zakázané.
 
-`cli` Obor názvů definovaný společností Microsoft a obsahuje pseudo šablony. Kompilátor Visual C++ nepovoluje definovaný uživatelem, dílčí a explicitní specializace a explicitní vytváření instancí šablon tříd v tomto oboru názvů.
+`cli` Obor názvů definovaný společností Microsoft a obsahuje pseudo šablony. Microsoft C++ kompilátoru neumožňuje definovaný uživatelem, dílčí a explicitní specializace a explicitní vytváření instancí šablon tříd v tomto oboru názvů.
 
 Následující ukázka generuje C3279:
 

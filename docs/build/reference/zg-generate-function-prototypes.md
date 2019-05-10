@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -Zg compiler option [C++]
 - generate function prototypes compiler option
 ms.assetid: c8df1b46-24ff-46f2-8356-e0a144b21dd2
-ms.openlocfilehash: 684174cf46e644c22e072e3fa60f75f9434c7e54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 591460b78a461aa2e33f873b79d6dcec0277f99f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315895"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446196"
 ---
 # <a name="zg-generate-function-prototypes"></a>/Zg (Generovat prototypy funkcí)
 
@@ -29,7 +29,7 @@ Odebrat. Vytvoří prototyp pro každou funkci definovanou ve zdrojovém souboru
 
 ## <a name="remarks"></a>Poznámky
 
-Tato možnost kompilátoru je již k dispozici. Byl odebrán v sadě Visual C++ 2015. Tato stránka zůstane uživatelům starší verze jazyka Visual C++.
+Tato možnost kompilátoru je již k dispozici. Byl odebrán v sadě Visual Studio 2015. Tato stránka zůstane uživatelům starší verze sady Visual Studio.
 
 Prototyp funkce obsahuje návratový typ funkce a seznam argumentů typu. Seznam argumentů typu se vytvoří z typy formálních parametrů funkce. Všechny prototypy již existuje ve zdrojovém souboru jsou ignorovány.
 

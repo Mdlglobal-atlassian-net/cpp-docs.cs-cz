@@ -1,8 +1,6 @@
 ---
 title: Rozšiřující knihovny DLL
-ms.date: 11/04/2016
-f1_keywords:
-- afxdll
+ms.date: 05/06/2019
 helpviewer_keywords:
 - memory [C++], DLLs
 - MFC extension DLLs [C++]
@@ -15,12 +13,12 @@ helpviewer_keywords:
 - extension DLLs [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
-ms.openlocfilehash: eca33b60b8fa6ba812bf5fa68520f51ceb1d164b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 55b1e55a9c7bdf6daaff98a7fe3f1a2a55f68334
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195657"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220774"
 ---
 # <a name="mfc-extension-dlls"></a>MFC – rozšiřující knihovny DLL
 
@@ -52,7 +50,7 @@ Rozšiřující knihovny DLL MFC používá stejným způsobem jako aplikace pou
 
 Dříve než ve verzi 4.0 knihovna MFC DLL tento typ byla volána AFXDLL. AFXDLL – odkazuje `_AFXDLL` symbol preprocesoru, který je definován při vytváření knihovny DLL.
 
-Importovat knihovny pro sdílenou verzi knihovny MFC jsou pojmenovány podle konvence je popsáno v [zásady vytváření názvů pro knihovny MFC DLL](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions). Visual C++ poskytuje předem připravených verze knihovny MFC DLL plus číslo z non - MFC knihovny DLL, kterou můžete použít a distribuovat s vašimi aplikacemi. Tyto jsou zdokumentované v souboru Redist.txt, který je nainstalován do složky, Program Files\Microsoft Visual Studio.
+Importovat knihovny pro sdílenou verzi knihovny MFC jsou pojmenovány podle konvence je popsáno v [zásady vytváření názvů pro knihovny MFC DLL](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions). Visual Studio poskytuje předem připravených verze knihovny MFC DLL plus číslo z non - MFC knihovny DLL, kterou můžete použít a distribuovat s vašimi aplikacemi. Tyto jsou zdokumentované v souboru Redist.txt, který je nainstalován do složky, Program Files\Microsoft Visual Studio.
 
 Pokud exportujete pomocí souboru .def, umístěte následující kód na začátek a konec hlavičkový soubor:
 
@@ -132,4 +130,4 @@ Pokud vaše MFC – rozšiřující knihovny DLL je potřeba udržovat doplňuj�
 
 ## <a name="see-also"></a>Viz také:
 
-[Knihovny DLL v jazyce Visual C++](dlls-in-visual-cpp.md)
+[Vytvoření knihovny DLL jazyka C/C++ v sadě Visual Studio](dlls-in-visual-cpp.md)

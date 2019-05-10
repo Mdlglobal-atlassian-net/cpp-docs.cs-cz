@@ -1,15 +1,15 @@
 ---
 title: Možnosti kompilátoru uvedené podle kategorie
-ms.date: 11/12/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: d3ebfbc3661ba648c2fdb73c697db42735faf422
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d12c0f82d3595ee6b61edcd21fb01dd7f49163b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294158"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221755"
 ---
 # <a name="compiler-options-listed-by-category"></a>Možnosti kompilátoru uvedené podle kategorie
 
@@ -153,7 +153,7 @@ Tento článek obsahuje seznam kategorií možností kompilátoru. Abecední sez
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|Zvýší počet adresovatelných sekcí v souboru .obj.|
 |[/c](c-compile-without-linking.md)|Zkompiluje bez propojení.|
 |[/cgthreads](cgthreads-code-generation-threads.md)|Určuje počet vláken cl.exe pro optimalizace a generování kódu.|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|Umožňuje poskytnout kompilátoru informace o chybě (ICE) přímo do týmu Visual C++.|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)|Umožňuje poskytnout informace o kompilátoru vnitřní chybě (ICE) přímo do Microsoft C++ týmu.|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Zobrazí úplnou cestu souborů zdrojového kódu předaných do cl.exe v rámci diagnostického textu.|
 |[/FS](fs-force-synchronous-pdb-writes.md)|Vynutí zápisy do souboru databáze (PDB) programu k serializaci pomocí MSPDBSRV. SOUBOR EXE.|
 |[/H](h-restrict-length-of-external-names.md)|Zastaralé Omezí délku externích (veřejných) názvů.|
@@ -213,7 +213,7 @@ Tento článek obsahuje seznam kategorií možností kompilátoru. Abecední sez
 |[/Yd](yd-place-debug-information-in-object-file.md)|Zastaralé Umístí úplnou informaci o ladění do všech objektových souborů. Použití [/zi](z7-zi-zi-debug-information-format.md) místo.|
 |[/Zc:forScope-](zc-forscope-force-conformance-in-for-loop-scope.md)|Zastaralé Zakáže dodržování standardu pro obor cyklu for.|
 |[/Ze](za-ze-disable-language-extensions.md)|Zastaralé Povolí jazyková rozšíření.|
-|[/Zg](zg-generate-function-prototypes.md)|Odebrat v sadě Visual C++ 2015. Vytvoří prototypy funkcí.|
+|[/Zg](zg-generate-function-prototypes.md)|Odebrat v sadě Visual Studio 2015. Vytvoří prototypy funkcí.|
 
 ## <a name="see-also"></a>Viz také:
 

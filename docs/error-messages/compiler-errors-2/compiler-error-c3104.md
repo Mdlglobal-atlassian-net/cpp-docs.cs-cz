@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
-ms.openlocfilehash: 3b2737bd67798fd467649be175d581ca551e1331
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fee023809246634f2f3da266a718e45861eae76e
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404166"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447844"
 ---
 # <a name="compiler-error-c3104"></a>Compiler Error C3104
 
@@ -21,7 +21,7 @@ Zadali jste neplatný argument pro atribut.
 
 Zobrazit [typy parametrů atributů](../../extensions/attribute-parameter-types-cpp-component-extensions.md) Další informace.
 
-Tuto chybu mohou být generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual C++ 2005: při předávání spravovaná pole vlastních atributů, typ pole je už odvodit ze seznamu inicializace agregace. Kompilátor nyní vyžaduje zadání typu pole, jakož i seznam inicializátorů.
+Tuto chybu mohou být generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual Studio 2005: při předávání spravovaná pole vlastních atributů, typ pole je už odvodit ze seznamu inicializace agregace. Kompilátor nyní vyžaduje zadání typu pole, jakož i seznam inicializátorů.
 
 ## <a name="example"></a>Příklad
 

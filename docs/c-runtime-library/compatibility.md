@@ -8,12 +8,12 @@ helpviewer_keywords:
 - compatibility, C run-time libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-ms.openlocfilehash: f562a6a214cd1fb3feba2caf26831797d4b182fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e9d2edca8da128343bd14ea86a8c1c0023a244b
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344678"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446666"
 ---
 # <a name="compatibility"></a>Kompatibilita
 
@@ -21,9 +21,9 @@ Univerzální knihovna C Run-Time (UCRT) podporuje většinu standardní knihovn
 
 Funkce specifické pro implementaci Microsoft Visual C++ se nacházejí v knihovně vcruntime.  Mnohé z těchto funkcí jsou pro interní použití a nemůže být volané kódem uživatele. Některé jsou popsány pro použití v ladění a provádění kompatibility.
 
-Standard jazyka C++ vyhrazuje názvy začínající podtržítkem v globálním oboru názvů pro implementaci. Protože funkce POSIX v globálním oboru názvů, ale nejsou součástí standardní knihovny runtime jazyka C, implementace specifické pro společnost Microsoft tyto funkce mají úvodní podtržítka. Pro přenositelnost UCRT podporuje také výchozí názvy, ale kompilátor Visual C++ vyvolá upozornění na zastarání při kompilaci kódu, který je využívá. Pouze výchozí POSIX – názvy jsou zastaralé, není funkce. Chcete-li potlačit upozornění, definujte `_CRT_NONSTDC_NO_WARNINGS` před zahrnutím záhlaví v kódu, který používá původní názvy POSIX.
+Standard jazyka C++ vyhrazuje názvy začínající podtržítkem v globálním oboru názvů pro implementaci. Protože funkce POSIX v globálním oboru názvů, ale nejsou součástí standardní knihovny runtime jazyka C, implementace specifické pro společnost Microsoft tyto funkce mají úvodní podtržítka. Pro přenositelnost UCRT také podporuje výchozí názvy, ale Microsoft C++ kompilátor vyvolá upozornění zastarání při kompilaci kódu, který je využívá. Pouze výchozí POSIX – názvy jsou zastaralé, není funkce. Chcete-li potlačit upozornění, definujte `_CRT_NONSTDC_NO_WARNINGS` před zahrnutím záhlaví v kódu, který používá původní názvy POSIX.
 
-Některé funkce standardní knihovny jazyka C mít historii nebezpečné používání z důvodu nesprávně použitý parametry a vyrovnávací paměti není zaškrtnuto. Tyto funkce jsou často zdroj bezpečnostní problémy v kódu. Microsoft vytvořil sadu bezpečnější verze těchto funkcí, které ověřte použití parametrů a vyvolat obslužnou rutinu neplatného parametru, když se zjistí problém v době běhu.  Ve výchozím nastavení kompilátor Visual C++ problémy, zastarání upozornění, když se funkce použije, který má k dispozici bezpečnější variantu. Při kompilaci kódu jako C++ můžete definovat `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` jako 1, chcete-li odstranit většinu upozornění. Tento mechanismus využívá přetížení šablon k volání bezpečnější varianty při zachování přenosné zdrojového kódu. Chcete-li potlačit upozornění, definujte `_CRT_SECURE_NO_WARNINGS` před zahrnutím záhlaví v kódu, který používá tyto funkce. Další informace najdete v tématu [funkce zabezpečení v CRT](../c-runtime-library/security-features-in-the-crt.md).
+Některé funkce standardní knihovny jazyka C mít historii nebezpečné používání z důvodu nesprávně použitý parametry a vyrovnávací paměti není zaškrtnuto. Tyto funkce jsou často zdroj bezpečnostní problémy v kódu. Microsoft vytvořil sadu bezpečnější verze těchto funkcí, které ověřte použití parametrů a vyvolat obslužnou rutinu neplatného parametru, když se zjistí problém v době běhu.  Ve výchozím nastavení, Microsoft C++ kompilátor vyvolá upozornění vyřazení když se používá funkce, která má k dispozici bezpečnější variantu. Při kompilaci kódu jako C++ můžete definovat `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` jako 1, chcete-li odstranit většinu upozornění. Tento mechanismus využívá přetížení šablon k volání bezpečnější varianty při zachování přenosné zdrojového kódu. Chcete-li potlačit upozornění, definujte `_CRT_SECURE_NO_WARNINGS` před zahrnutím záhlaví v kódu, který používá tyto funkce. Další informace najdete v tématu [funkce zabezpečení v CRT](../c-runtime-library/security-features-in-the-crt.md).
 
 S výjimkou toho, jak je uvedeno v dokumentaci pro konkrétní funkce, je kompatibilní s rozhraním API pro Windows UCRT.  Některé funkce nejsou podporovány v aplikacích pro Windows 8 Store nebo v aplikacích pro univerzální platformu Windows (UPW) na Windows 10. Tyto funkce jsou uvedeny v [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md), což vytvoří výčet funkce není podporována modulem Windows Runtime a [UPW](/uwp).
 

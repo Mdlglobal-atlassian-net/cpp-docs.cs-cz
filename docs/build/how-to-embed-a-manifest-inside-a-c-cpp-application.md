@@ -1,21 +1,21 @@
 ---
 title: 'Postupy: Vložení manifestu do aplikace C/C++'
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - manifests [C++]
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-ms.openlocfilehash: 332d6d75080be3fdde6b8238ab79b8e5b1d1121e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee60620f2815bb20e2d0f3ecec768d99533437a9
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274379"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220699"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Postupy: Vložení manifestu do aplikace C/C++
 
-Doporučuje se, že aplikace C/C++ (nebo knihovna) mají manifest vložený v koncovém binárním souboru, protože zaručí se tak správný modul runtime chování ve většině scénářů. Ve výchozím nastavení Visual Studio se pokusí pro vložení manifestu při sestavení projektu ze zdrojových souborů. Zobrazit [generování manifestu v sadě Visual Studio](manifest-generation-in-visual-studio.md) Další informace. Ale pokud je aplikace sestavena pomocí nmake, některé existující soubor pravidel jsou nutné změny. Tato část ukazuje, jak změnit existující soubory pravidel pro automatické vložení manifestu v koncovém binárním souboru.
+Je vhodné vložit manifest aplikace nebo knihovna v koncovém binárním souboru, protože zaručí se tak správný modul runtime chování ve většině scénářů. Ve výchozím nastavení se pokusí vložit manifest při sestavení projektu sady Visual Studio. Další informace najdete v tématu [generování manifestu v sadě Visual Studio](manifest-generation-in-visual-studio.md). Nicméně pokud vytváříte aplikaci pomocí nmake, budete muset udělat nějaké změny do souboru pravidel. Tato část ukazuje, jak změnit soubory pravidel tak, aby se automaticky vloží manifest v koncovém binárním souboru.
 
 ## <a name="two-approaches"></a>Dva přístupy
 
@@ -23,15 +23,19 @@ Existují dva způsoby, jak vložit manifestu aplikace nebo knihovna.
 
 - Pokud se nejedná přírůstkového sestavení můžete přímo vložit do manifestu jako krok po sestavení pomocí příkazového řádku, který je podobný následujícímu:
 
-   **mt.exe -manifest MyApp.exe.manifest -outputresource:MyApp.exe;1**
+   ```cmd
+   mt.exe -manifest MyApp.exe.manifest -outputresource:MyApp.exe;1
+   ```
 
    or
 
-   **mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2**
+   ```cmd
+   mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2
+   ```
 
-   (1 pro soubor EXE, 2 pro knihovnu DLL).
+   Použijte 1 pro EXE a 2 pro knihovnu DLL.
 
-- Pokud provádíte přírůstkového sestavení, Přímá úprava prostředku, jak je znázorněno zde bude zakázat přírůstkové sestavování a způsobit úplné opětovné sestavení; Proto by měla být přijata jiný přístup:
+- Pokud provádíte přírůstkového sestavení, postupujte následovně:
 
    - Propojte binárního souboru ke generování souboru MyApp.exe.manifest.
 
@@ -63,7 +67,7 @@ clean :
     del MyApp.obj MyApp.exe
 ```
 
-Pokud se skript spouští beze změny v jazyce Visual C++, vytvoří úspěšně MyApp.exe. Vytvoří také externí soubor manifestu MyApp.exe.manifest, pro použití v operačním systému pro načtení závislá sestavení za běhu.
+Pokud se skript spouští beze změny pomocí sady Visual Studio, vytvoří úspěšně MyApp.exe. Vytvoří také externí soubor manifestu MyApp.exe.manifest, pro použití v operačním systému pro načtení závislá sestavení za běhu.
 
 Nmake skript pro MyLibrary.dll vypadá podobně jako:
 
@@ -226,7 +230,7 @@ _VC_MANIFEST_CLEAN=
 ####################################################
 ```
 
-Teď vytvořte makefile.targ.inc a zkopírujte do něj následující:
+Teď vytvořte **makefile.targ.inc** a zkopírujte do něj následující:
 
 ```
 # makefile.targ.inc - include this at the very bottom of the existing makefile

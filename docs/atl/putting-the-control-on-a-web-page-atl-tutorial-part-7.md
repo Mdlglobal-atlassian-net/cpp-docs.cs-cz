@@ -1,14 +1,14 @@
 ---
 title: Vložení ovládacího prvku na webovou stránku (ATL – tutoriál, část 7)
 ms.custom: get-started-article
-ms.date: 09/27/2018
+ms.date: 05/06/2019
 ms.assetid: 50dc4c95-c95b-4006-b88a-9826f7bdb222
-ms.openlocfilehash: baf0ca56ae7512ac76f64b29e3060e0749c083c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aab9557fd73e870c0362f876642e828616b538bd
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261537"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221234"
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>Vložení ovládacího prvku na webovou stránku (ATL – tutoriál, část 7)
 
@@ -74,7 +74,7 @@ Přidali jste některý kód jazyka VBScript, který získá vlastnost Sides z o
 
 ## <a name="indicating-that-the-control-is-safe-for-scripting"></a>Indikuje, že ovládací prvek je bezpečný pro skriptování
 
-Můžete zobrazit webovou stránku pomocí ovládacího prvku v aplikaci Internet Explorer nebo ještě pohodlněji pomocí zobrazení webového prohlížeče, které jsou součástí Visual C++. Chcete-li zobrazit ovládací prvek ve webovém prohlížeči, pravým tlačítkem myši na PolyCtl.htm a klikněte na tlačítko **zobrazit v prohlížeči**.
+Webovou stránku pomocí ovládacího prvku můžete zobrazit pouze v aplikaci Internet Explorer. Ostatní prohlížeče ovládací prvky ActiveX už nepodporují z důvodu slabé stránky zabezpečení. 
 
 > [!NOTE]
 > Pokud ovládací prvek není viditelný, vědět, že některé prohlížeče vyžadovat úpravy nastavení spuštění ovládacích prvků ActiveX. Najdete v prohlížeči na dokumentaci o tom, jak povolit ovládací prvky ActiveX.

@@ -6,12 +6,12 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: 32c63240f578b6170ae351cdf0cd1628167464b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de3389a52781f541143268e3ede79eae375ff1d3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317884"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446225"
 ---
 # <a name="std-specify-language-standard-version"></a>/ STD (určení standardní jazykové verze)
 
@@ -48,10 +48,10 @@ Další informace o jaké funkce C ++ 14 a C ++ 17 jsou povolené při **/std: c
 
 **/Std** možnost platit během kompilace jazyka C++ lze zjistit pomocí [ \_MSVC\_LANG](../../preprocessor/predefined-macros.md) makro preprocesoru. Další informace najdete v tématu [makra preprocesoru](../../preprocessor/predefined-macros.md).
 
-**/Std: c ++ 14** a **/std: c ++ nejnovější** možnosti jsou k dispozici od verze Visual C++ 2015 Update 3. **/Std: c ++ 17** možnost je k dispozici od verze Visual C++ 2017 verze 15.3. Jak bylo uvedeno výše, některé standardu C ++ 17 chování zajišťuje **/std: c ++ 14** umožněné možnost, ale všechny ostatní funkce C ++ 17 **/std: c ++ 17**.
+**/Std: c ++ 14** a **/std: c ++ nejnovější** možnosti jsou k dispozici od verze Visual Studio 2015 Update 3. **/Std: c ++ 17** možnost je k dispozici od verze Visual Studio 2017 verze 15.3. Jak bylo uvedeno výše, některé standardu C ++ 17 chování zajišťuje **/std: c ++ 14** umožněné možnost, ale všechny ostatní funkce C ++ 17 **/std: c ++ 17**.
 
 > [!NOTE]
-> V závislosti na MSVC verze nebo aktualizace úroveň kompilátoru, nemusí plně implementovány některé funkce C ++ 14 a C ++ 17 nebo plně při zadávání splňující podmínky **/std: c ++ 14** nebo **/std: c ++ 17** možnosti. Například kompilátor Visual C++ 2017 RTM plně nepodporuje C ++ 14 podmínky shody `constexpr`, výraz SFINAE nebo vyhledávání názvů fázi 2. Přehled přizpůsobení jazyka C++ v jazyce Visual C++ ve verzi, naleznete v tématu [shoda jazyka Visual C++](../../overview/visual-cpp-language-conformance.md).
+> V závislosti na MSVC verze nebo aktualizace úroveň kompilátoru, nemusí plně implementovány některé funkce C ++ 14 a C ++ 17 nebo plně při zadávání splňující podmínky **/std: c ++ 14** nebo **/std: c ++ 17** možnosti. Například kompilátor Visual Studio 2017 RTM plně nepodporuje C ++ 14 podmínky shody `constexpr`, výraz SFINAE nebo vyhledávání názvů fázi 2. Přehled přizpůsobení jazyka C++ v jazyce Visual C++ ve verzi, naleznete v tématu [shoda jazyka Visual C++](../../overview/visual-cpp-language-conformance.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 

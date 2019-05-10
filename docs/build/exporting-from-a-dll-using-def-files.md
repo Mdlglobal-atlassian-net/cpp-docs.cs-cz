@@ -1,17 +1,17 @@
 ---
 title: Export z knihovny DLL pomocí souborů .DEF
-ms.date: 01/09/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - def files [C++], exporting from DLLs
 - .def files [C++], exporting from DLLs
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-ms.openlocfilehash: 35f55ea525bd03c5b0b1b1750d25c1223bc608fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92a140c6491e9e3f0d356509862dee39ebe3fae6
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195474"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220782"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>Export z knihovny DLL pomocí souborů .DEF
 
@@ -36,7 +36,10 @@ EXPORTS
 
 Pokud používáte [Průvodce MFC DLL](../mfc/reference/mfc-dll-wizard.md) k vytvoření knihovny DLL MFC, Průvodce pro vás vytvoří kostru souboru .def a automaticky přidá do vašeho projektu. Přidejte názvy funkcí, které mají být exportovány do tohoto souboru. Pro non - MFC knihovny DLL, vytvořit soubor DEF sami a přidejte ho do projektu. Pak přejděte na **projektu** > **vlastnosti** > **Linkeru** > **vstup**  >  **Soubor definice modulu** a zadejte název souboru definice. Tento krok opakujte pro každou konfiguraci a platformu, nebo provést všechny najednou tak, že vyberete **konfiguraci = všechny konfigurace**, a **platformy = všechny platformy**.
 
-Pokud exportujete funkce v souboru jazyka C++, musíte umístit do souboru .def dekorované názvy nebo definovat vámi exportované funkce standardním C propojením pomocí externího "C". Pokud je potřeba umístit souboru .def dekorované názvy, můžete je získat pomocí [DUMPBIN](../build/reference/dumpbin-reference.md) nástroj nebo pomocí volby propojovacího programu [/MAP](../build/reference/map-generate-mapfile.md) možnost. Všimněte si, že dekorované názvy produkované kompilátorem jsou specifické pro kompilátor. Pokud umístíte dekorované názvy produkované kompilátorem jazyka Visual C++ do souboru definice, aplikace, které jsou propojeny s DLL Knihovnou musí také být vytvářejí pomocí stejné verze aplikace Visual C++ tak, aby dekorované názvy ve volání aplikace odpovídaly exportovaným názvům v knihovně DLL DEF f soubor.
+Pokud exportujete funkce v souboru jazyka C++, musíte umístit do souboru .def dekorované názvy nebo definovat vámi exportované funkce standardním C propojením pomocí externího "C". Pokud je potřeba umístit souboru .def dekorované názvy, můžete je získat pomocí [DUMPBIN](../build/reference/dumpbin-reference.md) nástroj nebo pomocí volby propojovacího programu [/MAP](../build/reference/map-generate-mapfile.md) možnost. Všimněte si, že dekorované názvy produkované kompilátorem jsou specifické pro kompilátor. Pokud umístíte dekorované názvy produkované Microsoftu C++ kompilátor (MSVC) do souboru definice aplikace, které jsou propojeny s DLL Knihovnou musí také být vytvářejí pomocí stejné verze MSVC tak, aby dekorované názvy ve volání aplikace odpovídaly exportovaným názvům v soubor DEF knihovny DLL. 
+
+> [!NOTE]
+> Knihovny DLL vytvořené pomocí sady Visual Studio 2015, mohou být spotřebovány aplikací vytvořených pomocí sady Visual Studio 2017 nebo Visual Studio 2019.
 
 Pokud vytváříte [rozšiřující knihovny DLL](../build/extension-dlls-overview.md), a exportujete pomocí souboru .def, umístěte následující kód na začátek a konec souborů hlaviček, které obsahují exportované třídy:
 

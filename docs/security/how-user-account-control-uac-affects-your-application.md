@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user accounts [C++]
 - User Account Control [C++]
 ms.assetid: 0d001870-253e-4989-b689-f78035953799
-ms.openlocfilehash: 3702462ec892025cfb4f24d9c91e6db705b1b9a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3818b0ff7d4e4c551c41726dd44935beb5d32842
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179244"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448472"
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>Jak ovlivňuje nástroj Řízení uživatelských účtů (UAC) vaši aplikaci
 
@@ -22,7 +22,7 @@ ms.locfileid: "62179244"
 
 ## <a name="building-projects-after-enabling-uac"></a>Vytváření projektů po povolení nástroje Řízení uživatelských účtů
 
-Pokud vytváříte projekt jazyka Visual C++ v systému Windows Vista s nástroji Řízení uživatelských účtů, které jsou zakázané a později povolit nástroj Řízení uživatelských účtů, musí vyčistit a znovu sestavte projekt, aby mohly fungovat správně.
+Při sestavování v sadě Visual Studio C++ projektu v systému Windows Vista s nástroji Řízení uživatelských účtů je zakázané a později povolit nástroj Řízení uživatelských účtů, je nutné vyčistit a znovu sestavte projekt, aby mohly fungovat správně.
 
 ## <a name="applications-that-require-administrative-privileges"></a>Aplikace, které vyžadují oprávnění správce
 

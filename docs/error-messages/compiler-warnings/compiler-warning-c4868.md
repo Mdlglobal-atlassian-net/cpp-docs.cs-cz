@@ -4,12 +4,12 @@ ms.date: 10/26/2017
 f1_keywords:
 - C4868
 ms.assetid: fc6aa7e5-34dd-4ec2-88bd-16e430361dc7
-ms.openlocfilehash: d0bc8716e53e71c52f6a31036a95d0b4cefedd79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72700091fcd22271e6913228a1206b3d5efcbdef
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388706"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447181"
 ---
 # <a name="compiler-warning-level-4-c4868"></a>Upozornění (úroveň 4) kompilátoru C4868
 
@@ -17,7 +17,7 @@ ms.locfileid: "62388706"
 
 Prvky seznamu inicializátorů v závorkách jsou vyhodnocovány v pořadí zleva doprava. Existují dva případy, ve kterých kompilátor nedokáže zaručit toto pořadí: první je při některé prvky jsou objekty, které jsou předávány hodnotou; Druhým je při kompilaci s `/clr` a některé prvky jsou pole objektů nebo prvků pole. Pokud kompilátor nemůže zaručit vyhodnocování zleva doprava vydá upozornění C4868.
 
-Toto upozornění mohou být generovány jako důsledek kompilátoru prací, které bylo provedeno Visual C++ 2015 Update 2. Kód, který zkompiluje před Visual C++ 2015 Update 2 teď můžete vygenerovat C4868.
+Toto upozornění mohou být generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual Studio 2015 Update 2. Kód, který zkompiluje před Visual Studio 2015 Update 2 teď můžete vygenerovat C4868.
 
 Toto upozornění je vypnuto ve výchozím nastavení. Použití `/Wall` k aktivaci tohoto upozornění.
 

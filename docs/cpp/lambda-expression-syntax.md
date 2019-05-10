@@ -1,15 +1,15 @@
 ---
 title: Syntaxe výrazu lambda
-ms.date: 03/25/2019
+ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], syntax
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
-ms.openlocfilehash: 2df2c203024e1b50cffdcb15af834fe09effaae2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37e4a512678bf276b5244fd54945f49a37ff8d01
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216508"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222397"
 ---
 # <a name="lambda-expression-syntax"></a>Syntaxe výrazu lambda
 
@@ -83,7 +83,7 @@ V příkladu, třetí argument **for_each** funkce je výraz lambda. `[&evenCoun
 
 ## <a name="example-2-using-a-function-object"></a>Příklad 2: Použití objektu funkce
 
-Výraz lambda je někdy příliš nepraktické rozšířit více než v předchozím příkladu. Následující příklad používá objekt funkce namísto výrazu lambda, spolu s **for_each** produkuje stejné výsledky jako příklad 1. Oba příklady ukládají počet sudých čísel v `vector` objektu. Pro uchování stavu operace `FunctorClass` třídy úložiště `m_evenCount` proměnné podle odkazu jako členskou proměnnou. K provedení této operace `FunctorClass` implementuje operátor volání funkce **operator()**. Kompilátor jazyka Visual C++ vygeneruje kód, který je srovnatelné velikosti a výkonu jako kód výrazu lambda v příkladu 1. Pro řešení základního problému jako v tomto článku platí, že jednodušší návrh výrazu lambda je pravděpodobně lepší než návrh funkce objektu. Pokud však myslíte, že funkce mohou v budoucnu vyžadovat značné rozšíření, použijte návrh objektu funkce pro snazší údržbu kódu.
+Výraz lambda je někdy příliš nepraktické rozšířit více než v předchozím příkladu. Následující příklad používá objekt funkce namísto výrazu lambda, spolu s **for_each** produkuje stejné výsledky jako příklad 1. Oba příklady ukládají počet sudých čísel v `vector` objektu. Pro uchování stavu operace `FunctorClass` třídy úložiště `m_evenCount` proměnné podle odkazu jako členskou proměnnou. K provedení této operace `FunctorClass` implementuje operátor volání funkce **operator()**. Microsoft C++ kompilátor generuje kód, který je srovnatelné velikosti a výkonu jako kód výrazu lambda v příkladu 1. Pro řešení základního problému jako v tomto článku platí, že jednodušší návrh výrazu lambda je pravděpodobně lepší než návrh funkce objektu. Pokud však myslíte, že funkce mohou v budoucnu vyžadovat značné rozšíření, použijte návrh objektu funkce pro snazší údržbu kódu.
 
 Další informace o **operator()**, naleznete v tématu [volání funkce](../cpp/function-call-cpp.md). Další informace o **for_each** funkce naleznete v tématu [for_each](../standard-library/algorithm-functions.md#for_each).
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4407
 ms.assetid: 32bc2c21-363a-4bb8-b486-725faeaededc
-ms.openlocfilehash: 5142e3800f3ad716166a27e3b0407a40999b5746
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e47e293b650f64d2a6be91a837cc4195e073e8f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408404"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447743"
 ---
 # <a name="compiler-warning-level-1-c4407"></a>Kompilátor upozornění (úroveň 1) C4407
 
@@ -19,7 +19,7 @@ přetypování mezi různé reprezentacemi ukazatele na člen, kompilátor můž
 
 Byl zjištěn nesprávný přetypování.
 
-C4407 mohou být generovány z důvodu kompilátoru prací, které bylo provedeno v aplikaci Visual C++ 2005. Pointer-to-member nyní vyžaduje úplný název a address-of – operátor (&).
+C4407 mohou být generovány z důvodu kompilátoru prací, které bylo provedeno v sadě Visual Studio 2005. Pointer-to-member nyní vyžaduje úplný název a address-of – operátor (&).
 
 C4407 může dojít, pokud přetypování mezi více dědičnosti pointer-to-member na jednoduchá dědičnost pointer-to-member. Někdy to můžou fungovat, ale někdy není toho schopen, protože reprezentace pointer-to-member jednoduchá dědičnost nebude obsahovat dostatek informací. Kompilace s **/VMM** může pomoci (Další informace najdete v tématu [/VMM, / VMS, / vmv (obecná reprezentace)](../../build/reference/vmm-vms-vmv-general-purpose-representation.md)). Můžete také zkusit uspořádání základní třídy; kompilátor je zjišťování ztráty informací v převod, protože základní třída je posunem nenulové od odvozený.
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2653
 ms.assetid: 3f49e731-affd-43a0-a8d0-181db7650bc3
-ms.openlocfilehash: d4a3a8a74483317b87e16458f44016f0aeca1379
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2882764e1c0a84634c500d920f327fbebc4b19a9
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350777"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447937"
 ---
 # <a name="compiler-error-c2653"></a>Chyba kompilátoru C2653
 
@@ -21,7 +21,7 @@ Syntaxe jazyka vyžaduje třídy, struktury, sjednocení nebo název oboru názv
 
 Této chybě může dojít, pokud použijete název, který nebyl deklarován jako třídy, struktury, sjednocení nebo obor názvů před operátor rozsahu. Chcete-li vyřešit tento problém, deklarovat název nebo zahrnout záhlaví, který deklaruje název, než bude použit.
 
-C2653 je také možné, pokud se pokusíte k definování *složené obor názvů*, obor názvů, který obsahuje jeden nebo více názvů vnořené oboru názvů. Složené obor názvů, který definice nejsou povoleny v jazyce C++ před C ++ 17. Složené obory názvů jsou podporované od verze Visual Studio 2015 Update 3 při zadávání [/std: c ++ nejnovější](../../build/reference/std-specify-language-standard-version.md) – možnost kompilátoru. Počínaje verzí Visual C++ 2017 verze 15.5, kompilátor podporuje definice oboru názvů složené při [/std: c ++ 17](../../build/reference/std-specify-language-standard-version.md) je zadána možnost.
+C2653 je také možné, pokud se pokusíte k definování *složené obor názvů*, obor názvů, který obsahuje jeden nebo více názvů vnořené oboru názvů. Složené obor názvů, který definice nejsou povoleny v jazyce C++ před C ++ 17. Složené obory názvů jsou podporované od verze Visual Studio 2015 Update 3 při zadávání [/std: c ++ nejnovější](../../build/reference/std-specify-language-standard-version.md) – možnost kompilátoru. Spouští se v sadě Visual Studio 2017 verze 15.5, kompilátor podporuje definice oboru názvů složené při [/std: c ++ 17](../../build/reference/std-specify-language-standard-version.md) je zadána možnost.
 
 ## <a name="examples"></a>Příklady
 
@@ -42,7 +42,7 @@ V kódu, který není zkompilován pro C ++ 17 a novějších standardy musí vn
 
 ```cpp
 // C2653b.cpp
-namespace a::b {int i;}   // C2653 prior to Visual C++ 2015 Update 3,
+namespace a::b {int i;}   // C2653 prior to Visual Studio 2015 Update 3,
                           // C2429 thereafter. Use /std:c++17 or /std:c++latest to fix.
 
 namespace a {             // Use this form for compliant code under /std:c++14 (the default)

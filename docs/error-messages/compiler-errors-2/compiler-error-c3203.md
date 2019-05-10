@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3203
 ms.assetid: 6356770e-22c1-434c-91fe-f60b0aa23b91
-ms.openlocfilehash: 65b7e1d8f03b5e59bd21091531bc9d21472e4ae4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c55160c855a6188a616f957acee43e409b751b62
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402733"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447797"
 ---
 # <a name="compiler-error-c3203"></a>Chyba kompilátoru C3203
 
@@ -19,7 +19,7 @@ ms.locfileid: "62402733"
 
 Neplatný argument předaný do šablony třídy nebo obecná. Třída šablona nebo obecná hodnota očekává jako parametr typu.
 
-Tuto chybu mohou být generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual C++ 2005: šablonu nespecializovaná třídy nelze použít jako argument šablony v seznamu základních tříd. C3203 vyřešíte explicitně přidáte parametrů typu šablony pro název třídy šablony při použití jako parametr šablony v seznamu základních tříd.
+Tuto chybu mohou být generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual Studio 2005: šablonu nespecializovaná třídy nelze použít jako argument šablony v seznamu základních tříd. C3203 vyřešíte explicitně přidáte parametrů typu šablony pro název třídy šablony při použití jako parametr šablony v seznamu základních tříd.
 
 ```
 // C3203.cpp

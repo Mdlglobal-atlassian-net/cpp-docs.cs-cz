@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: f9d339860e9d2bdb8d66f6b7f8f49d3993b2d5cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b985799849a268010dff63f9f7bc25e474b365e
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148322"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448511"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Atributy C++ COM a .NET
 
@@ -34,7 +34,7 @@ Atributy rozšíření bez narušení classic struktura jazyka C++ v aktuálně 
 
 - Nahradí velké množství kódu IDL vyžadované komponenty modelu COM s několika stručné atributy.
 
-Například implementovat jednoduché událostní jímka pro obecné třídy ATL, můžete použít [event_receiver](event-receiver.md) atribut pro konkrétní třídu jako `CMyReceiver`. `event_receiver` Atribut je potom kompilovány pomocí kompilátoru jazyka Visual C++, který vloží správný kód do souboru objektu.
+Například implementovat jednoduché událostní jímka pro obecné třídy ATL, můžete použít [event_receiver](event-receiver.md) atribut pro konkrétní třídu jako `CMyReceiver`. `event_receiver` Atribut je poté zkompilován s Microsoft C++ kompilátoru, který vloží správný kód do souboru objektu.
 
 ```cpp
 [event_receiver(com)]
@@ -49,7 +49,7 @@ Potom můžete nastavit `CMyReceiver` metody `handler1` a `handler2` zpracován�
 
 ## <a name="basic-mechanics-of-attributes"></a>Základní mechanismy atributů
 
-Existují tři způsoby, jak vložit atributy do projektu. Nejprve můžete je ručně do zdrojového kódu. Za druhé můžete vložit pomocí mřížky vlastností objektu ve vašem projektu. Nakonec můžete vložit pomocí různých průvodců. Další informace o používání **vlastnosti** okno a různých průvodců, najdete v části [vytváření a správa projektů Visual C++](../../build/creating-and-managing-visual-cpp-projects.md).
+Existují tři způsoby, jak vložit atributy do projektu. Nejprve můžete je ručně do zdrojového kódu. Za druhé můžete vložit pomocí mřížky vlastností objektu ve vašem projektu. Nakonec můžete vložit pomocí různých průvodců. Další informace o používání **vlastnosti** okno a různých průvodců, najdete v části [projektů sady Visual Studio – C++ ](../../build/creating-and-managing-visual-cpp-projects.md).
 
 Jako dříve, při sestavení projektu, kompilátor analyzuje každý zdrojový soubor jazyka C++, vytváření soubor objektu. Ale když kompilátor narazí atribut, je analyzovat a syntakticky ověřit. Kompilátor poté zavolá dynamicky poskytovatele atributu vložení kódu a provádět další úpravy v době kompilace. Implementace zprostředkovatele se liší v závislosti na typu atributu. Například Atlprov.dll implementují související ATL atributy.
 
@@ -64,7 +64,7 @@ Jako většina konstruktory jazyka C++ mít atributy sadu vlastností, která de
 
 ## <a name="building-an-attributed-program"></a>Sestavení programu s atributy
 
-Poté, co vložíte do zdrojového kódu jazyka Visual C++ atributy, můžete kompilátor Visual C++ k vytvoření souboru typu knihovna a .idl za vás. Následující linkeru možnosti tvorbu souborů .tlb a IDL:
+Po přepnutí Visual C++ atributy do zdrojového kódu, můžete chtít Microsoft C++ kompilátor vytvoří soubor typu knihovny a .idl za vás. Následující linkeru možnosti tvorbu souborů .tlb a IDL:
 
 - [/ IDLOUT](../../build/reference/idlout-name-midl-output-files.md)
 
