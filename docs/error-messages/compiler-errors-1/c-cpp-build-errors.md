@@ -8,13 +8,13 @@ helpviewer_keywords:
 - errors [C++], builds
 ms.assetid: 2470b496-28fa-47e7-a238-a086d99b06ca
 ms.openlocfilehash: d16b691592a7b35a08bc02a0214f5415bd4ad2dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209073"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856891"
 ---
-# <a name="cc-compiler-and-build-tools-errors-and-warnings"></a>C /C++ nástroje chyby a upozornění kompilátoru a sestavení
+# <a name="cc-compiler-and-build-tools-errors-and-warnings"></a>Chyby a upozornění kompilátoru C/C++ a nástrojů pro sestavování buildů
 
 Články v této části dokumentace vysvětlují diagnostických chybové zprávy a upozornění, které jsou generovány nástrojem Microsoft C /C++ kompilátor a nástroje sestavení.
 

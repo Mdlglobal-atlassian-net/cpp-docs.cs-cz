@@ -1,5 +1,5 @@
 ---
-title: Typy souborů vytvořených pro projekty Visual C++
+title: Soubor typy vytvořené pro sadu Visual Studio C++ projekty
 ms.date: 04/08/2019
 helpviewer_keywords:
 - header files [C++], Visual Studio projects
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: eee53acbb8b0b8432a7d5819fb773b616f0e8897
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42040854b7a038ebe32d67e305c947d095d5391a
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271163"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446298"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Typy souborů vytvořených pro projekty C++ pro Visual Studio
 
@@ -52,29 +52,29 @@ Následující tabulka uvádí běžné soubory v projektu sady Visual Studio a 
 |asmx|Source|Nasazení souboru.|
 |.asp|Source|Stránka ASP.|
 |.atp|Project|Soubor šablony projektu aplikace.|
-|.bmp, .dib, .gif, .jpg, .jpe, PNG|Prostředek|Obecné obrazových souborů.|
+|.bmp, .dib, .gif, .jpg, .jpe, PNG|Resource|Obecné obrazových souborů.|
 |.bsc|Kompilace|Soubor kódu prohlížeče.|
 |.cpp, .c|Source|Soubory hlavní zdrojového kódu pro vaši aplikaci.|
-|.cur|Prostředek|Rastrový obrázek kurzoru.|
+|.cur|Resource|Rastrový obrázek kurzoru.|
 |.dbp|Project|Soubor projektu databáze.|
 |.disco|Source|Dynamicky zpřístupněný soubor dokumentu. Zpracovává zjišťování XML webové služby.|
 |.exe, .dll|Project|Soubory knihoven DLL nebo spustitelného souboru.|
 |.h|Source|Záhlaví (zahrnout) souboru.|
-|htm, HTML, .xsp, ASP, HTC, HTA, .xml|Prostředek|Běžné webové soubory.|
+|htm, HTML, .xsp, ASP, HTC, HTA, .xml|Resource|Běžné webové soubory.|
 |.HxC|Project|Projekt soubor nápovědy.|
-|.ico|Prostředek|Rastrový obrázek ikony.|
+|.ico|Resource|Rastrový obrázek ikony.|
 |.idb|Kompilace|Stav soubor obsahující informace o závislostech mezi zdrojovými soubory a definice tříd. Lze použít kompilátor během přírůstková kompilace. Použití [/Fd](fd-program-database-file-name.md) – možnost kompilátoru zadat název souboru IDB.|
 |IDL|Kompilace|Soubor definice jazyka rozhraní. Další informace najdete v tématu [soubor Interface Definition (IDL)](/windows/desktop/Rpc/the-interface-definition-language-idl-file) v sadě Windows SDK.|
 |.ilk|Propojení|Soubor přírůstkové propojení. Další informace najdete v tématu [/INCREMENTAL](incremental-link-incrementally.md).|
 |.map|Propojení|Textový soubor obsahující informace linkeru. Použití [/Fm](fm-name-mapfile.md) pojmenovat soubor mapování – možnost kompilátoru. Další informace najdete v tématu [/MAP](map-generate-mapfile.md).|
-|.mfcribbon-ms|Prostředek|Soubor prostředků, která obsahuje kód XML, který definuje tlačítka, ovládací prvky a atributy MFC na pásu karet. Další informace najdete v tématu [Návrháře pásu karet](../../mfc/ribbon-designer-mfc.md).|
+|.mfcribbon-ms|Resource|Soubor prostředků, která obsahuje kód XML, který definuje tlačítka, ovládací prvky a atributy MFC na pásu karet. Další informace najdete v tématu [Návrháře pásu karet](../../mfc/ribbon-designer-mfc.md).|
 |obj, .o||Objektové soubory zkompilovány, ale není propojená.|
 |.pch|Ladit|Soubor předkompilované hlavičky.|
-|.rc, .rc2|Prostředek|[Soubory skriptu prostředků](../../windows/working-with-resource-files.md) pro generování prostředků.|
+|.rc, .rc2|Resource|[Soubory skriptu prostředků](../../windows/working-with-resource-files.md) pro generování prostředků.|
 |.sbr|Kompilace|Zprostředkující soubor zdrojového prohlížeče. Vstupní soubor pro [BSCMAKE](bscmake-options.md).|
 |.sln|Řešení|[Řešení](/visualstudio/ide/solutions-and-projects-in-visual-studio) souboru.|
 |.suo|Řešení|Soubor možností řešení.|
-|.txt|Prostředek|Textový soubor, obvykle v souboru "readme".|
+|.txt|Resource|Textový soubor, obvykle v souboru "readme".|
 |.Vap|Project|Soubor projektu Visual Studio Analyzer.|
 |.vbg|Řešení|Soubor projektu kompatibilní skupiny.|
 |.VBP, .vip, .vbproj|Project|Soubor projektu jazyka Visual Basic.|

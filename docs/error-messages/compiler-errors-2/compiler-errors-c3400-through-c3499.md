@@ -1,5 +1,5 @@
 ---
-title: Compiler errors C3400 Through C3499
+title: Chyby kompilátoru C3400 až C3499
 ms.date: 04/21/2019
 f1_keywords:
 - C3401
@@ -99,13 +99,13 @@ helpviewer_keywords:
 - C3497
 ms.assetid: a5651dfb-c402-4e01-b3ae-28f371e51d6a
 ms.openlocfilehash: 587b28cedb0ab8b11c244be4278c7dc17d1f4247
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281384"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857379"
 ---
-# <a name="compiler-errors-c3400-through-c3499"></a>Compiler errors C3400 Through C3499
+# <a name="compiler-errors-c3400-through-c3499"></a>Chyby kompilátoru C3400 až C3499
 
 Články v této části dokumentace vysvětlují podmnožinu chybové zprávy, které jsou generovány kompilátorem.
 
@@ -113,7 +113,7 @@ ms.locfileid: "62281384"
 
 ## <a name="error-messages"></a>Chybové zprávy
 
-|Chyba|Zpráva|
+|Chyba|Message|
 |-----------|-------------|
 |[Chyba kompilátoru C3400](compiler-error-c3400.md)|Cyklické omezení týkajících se závislostí '*constraint1*"a"*constraint2*.|
 |Chyba kompilátoru C3401|"*specifikátor*': sestavení Neplatný specifikátor přístupu - jedině možnost private' je povolen u šablon třídy|

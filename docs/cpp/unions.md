@@ -1,18 +1,18 @@
 ---
 title: Sjednocení
-ms.date: 11/19/2018
+ms.date: 05/06/2019
 f1_keywords:
 - union_cpp
 helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: f14f1197c4c835e9dfb753b1396e12e2d2f12772
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58f4940d209b783b00c7167265ff1a2a733c947c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312174"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222340"
 ---
 # <a name="unions"></a>Sjednocení
 
@@ -28,7 +28,7 @@ union [name]  { member-list };
 
 ### <a name="parameters"></a>Parametry
 
-*Jméno*<br/>
+*name*<br/>
 Název typu sjednocení.
 
 *seznam členů*<br/>
@@ -64,7 +64,6 @@ int main()
 V předchozím příkladu veškerý kód, který přistupuje k sjednocení potřebuje vědět, který člen obsahuje data. Nejběžnější řešení tohoto problému je uzavření sjednocení ve struktuře spolu s člen další výčtu, která určuje typ dat aktuálně uloženy ve sjednocení. Jedná se *rozlišované sjednocení* a následující příklad zobrazuje základní vzor.
 
 ```cpp
-#include "stdafx.h"
 #include <queue>
 
 using namespace std;

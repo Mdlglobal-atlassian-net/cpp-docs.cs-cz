@@ -1,6 +1,6 @@
 ---
 title: BSCMAKE – odkaz
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - BSCMAKE, reference
 - Microsoft Browse Information Maintenance Utility
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - bsc files, building
 - BSCMAKE
 ms.assetid: b97ad994-1355-4809-98db-6abc12c6fb13
-ms.openlocfilehash: 4303e48e3d02f0f69b177e8a888157a6f90aaa89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72ad297ee5a24bc0c7ffd3ed25959031d0b8a309
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294886"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220558"
 ---
 # <a name="bscmake-reference"></a>BSCMAKE – odkaz
 
@@ -24,7 +24,7 @@ ms.locfileid: "62294886"
 
 Nástroj Údržba informací procházení Microsoft (BSCMAKE. (EXE) vytvoří soubor informací o procházení (.bsc) z soubory .sbr vytvořené během kompilace. Některé nástroje třetích stran soubory .bsc použít pro analýzu kódu.
 
-Když vytvoříte aplikaci, vytvoříte informačního souboru procházení pro váš program automaticky, pomocí nástroje BSCMAKE pro sestavení souboru. Nepotřebujete vědět, jak spustit nástroje BSCMAKE vytváření informačního souboru procházení ve vývojovém prostředí Visual C++. Můžete však chtít přečtěte si toto téma pochopit dostupné možnosti.
+Když vytvoříte aplikaci, vytvoříte informačního souboru procházení pro váš program automaticky, pomocí nástroje BSCMAKE pro sestavení souboru. Nepotřebujete vědět, jak spustit nástroje BSCMAKE vytváření informačního souboru procházení ve vývojovém prostředí sady Visual Studio. Můžete však chtít přečtěte si toto téma pochopit dostupné možnosti.
 
 Pokud vytváříte program mimo vývojové prostředí, můžete stále vytvořit vlastní .bsc, které můžete zkontrolovat v prostředí. BscMake – spouštět soubory .sbr, které jste vytvořili během kompilace.
 

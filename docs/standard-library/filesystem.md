@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: 54817eeeba0b885cbf3de558c04fe2eb5d6e14fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f397d8b0c39769fde20b6aa50412c979237f70a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159844"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220371"
 ---
 # <a name="ltfilesystemgt"></a>&lt;systém souborů&gt;
 
@@ -29,7 +29,7 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> Od verze Visual Studio 2017 \<systému souborů > hlavička nebyla dosud standard jazyka C++. Visual C++ 2017 implementuje konečné normy, které se nacházejí v [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
+> Od verze Visual Studio 2017 \<systému souborů > hlavička nebyla dosud standard jazyka C++. C++v sadě Visual Studio 2017 (verze 141 MSVC) implementuje součástí standardu konečný návrh [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
 
 Tato hlavička podporuje systémy souborů z jednoho z dvě různé třídy hostitelských operačních systémech: Microsoft Windows a Posix.
 
@@ -91,7 +91,7 @@ Další informace a příklady kódu naleznete v tématu [navigace systému soub
 
 ## <a name="classes"></a>Třídy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[directory_entry – třída](../standard-library/directory-entry-class.md)|Popisuje objekt, který je vrácen `directory_iterator` nebo `recursive_directory_iterator` a obsahuje cestu.|
 |[directory_iterator – třída](../standard-library/directory-iterator-class.md)|Popisuje vstupní iterátor, který pořadí pomocí názvů souboru v adresáři systému souborů.|
@@ -102,7 +102,7 @@ Další informace a příklady kódu naleznete v tématu [navigace systému soub
 
 ## <a name="structs"></a>Struktury
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[space_info – struktura](../standard-library/space-info-structure.md)|Obsahuje informace o svazku.|
 
@@ -116,7 +116,7 @@ Další informace a příklady kódu naleznete v tématu [navigace systému soub
 
 ## <a name="enumerations"></a>Výčty
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Výčet, který se používá s [copy_file –](../standard-library/filesystem-functions.md#copy_file) a určuje chování, pokud cílový soubor už existuje.|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Výčet, který se používá s [copy_file –](../standard-library/filesystem-functions.md#copy_file) a určuje chování, pokud cílový soubor už existuje.|

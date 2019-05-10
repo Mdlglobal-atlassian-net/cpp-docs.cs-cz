@@ -1,6 +1,6 @@
 ---
 title: CStockPropImpl Class
-ms.date: 11/06/2018
+ms.date: 05/06/2019
 f1_keywords:
 - CStockPropImpl
 - ATLCTL/ATL::CStockPropImpl
@@ -64,12 +64,12 @@ helpviewer_keywords:
 - controls [ATL], stock properties
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
-ms.openlocfilehash: 148c9571bb37e2b9063ca9290f51caa1fabb2d21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 246e2a26db6adde0fec06523c1b8db09c5f552f3
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277484"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221070"
 ---
 # <a name="cstockpropimpl-class"></a>CStockPropImpl Class
 
@@ -182,7 +182,7 @@ Třída, která slouží ke správě informace o typu *T*. Výchozí hodnota je 
 
 `CStockPropImpl` poskytuje **umístit** a **získat** metody pro každou uloženou vlastnost. Tyto metody poskytují kód nastavit nebo získat datový člen spojené s každou vlastnost a upozornění a synchronizovat s kontejnerem při libovolné vlastnosti.
 
-Visual C++ poskytuje podporu pro základní vlastnosti prostřednictvím jeho průvodců. Další informace o přidání uložených vlastností do ovládacího prvku, naleznete v tématu [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md).
+Visual Studio poskytuje podporu pro základní vlastnosti prostřednictvím jeho průvodců. Další informace o přidání uložených vlastností do ovládacího prvku, naleznete v tématu [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md).
 
 Z důvodu zpětné kompatibility `CStockPropImpl` také poskytuje `get_Window` a `put_Window` metody, které jednoduše zavoláte `get_HWND` a `put_HWND`v uvedeném pořadí. Výchozí implementace `put_HWND` vrátí E_FAIL od HWND musí být vlastnost jen pro čtení.
 

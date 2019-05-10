@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CRT initialization [C++]
 ms.assetid: e7979813-1856-4848-9639-f29c86b74ad7
-ms.openlocfilehash: 980d94b29d31d8eea910fbdb171a0ae8df1dccca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03126b8fdf1c3824b114d822c269655c22e5ee9f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344594"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446683"
 ---
 # <a name="crt-initialization"></a>Inicializace CRT
 
@@ -41,7 +41,7 @@ Jeden ze způsobů, jak zjistit, je nastavit zarážku `func()`ladit aplikaci a 
 
 Při procházení funkcí v zásobníku, zjistíte, že je opakování ve smyčce přes seznam ukazatelů na funkce a volání každé z nich je narazí CRT. Tyto funkce jsou podobné `func()` nebo konstruktory pro instance třídy.
 
-Seznam ukazatelů na funkce CRT získá z kompilátoru jazyka Visual C++. Když kompilátor narazí globální inicializační výraz, vygeneruje dynamického inicializátoru v `.CRT$XCU` oddílu (ve kterém `CRT` je název oddílu, který a `XCU` je název skupiny). Získat seznam těchto dynamických inicializátorů. Spusťte příkaz **dumpbin/all main.obj**a potom je prohledejte `.CRT$XCU` části (Pokud main.cpp je zkompilován jako soubor jazyka C++, nejedná se o soubor jazyka C). Je podobný následujícímu:
+Seznam ukazatelů na funkce CRT získá od Microsoft C++ kompilátoru. Když kompilátor narazí globální inicializační výraz, vygeneruje dynamického inicializátoru v `.CRT$XCU` oddílu (ve kterém `CRT` je název oddílu, který a `XCU` je název skupiny). Získat seznam těchto dynamických inicializátorů. Spusťte příkaz **dumpbin/all main.obj**a potom je prohledejte `.CRT$XCU` části (Pokud main.cpp je zkompilován jako soubor jazyka C++, nejedná se o soubor jazyka C). Je podobný následujícímu:
 
 ```
 SECTION HEADER #6
@@ -77,7 +77,7 @@ CRT definuje dva ukazatele:
 
 Obě skupiny nemají žádné jiné symboly definované s výjimkou `__xc_a` a `__xc_z`.
 
-Teď, když linker přečte různé `.CRT` skupin, zkombinuje je v jednom oddílu a řadí je podle abecedy. To znamená, že uživatelský globálních inicializátorů (které kompilátor Visual C++ umístí `.CRT$XCU`) budou přicházet vždy po `.CRT$XCA` a před `.CRT$XCZ`.
+Teď, když linker přečte různé `.CRT` skupin, zkombinuje je v jednom oddílu a řadí je podle abecedy. To znamená, že uživatelský globálních inicializátorů (které Microsoft C++ kompilátoru vloží `.CRT$XCU`) budou přicházet vždy po `.CRT$XCA` a před `.CRT$XCZ`.
 
 V části bude vypadat takto:
 

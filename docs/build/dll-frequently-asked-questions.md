@@ -1,17 +1,17 @@
 ---
 title: Knihovny MFC DLL – nejčastější dotazy
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - troubleshooting [C++], DLLs
 - DLLs [C++], frequently asked questions
 - FAQs [C++], DLLs
 ms.assetid: 09dd068e-fc33-414e-82f7-289c70680256
-ms.openlocfilehash: 33a0c9dd1abbfb9375ce1aef53fd152a521ac97d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9108aaf3fcface847b0391455a2aecd4d45658c4
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274115"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220934"
 ---
 # <a name="dll-frequently-asked-questions"></a>DLL – nejčastější dotazy
 
@@ -41,11 +41,7 @@ Knihovna MFC DLL, která při spuštění vytvoří nové vlákno MFC přestane 
 
 ## <a name="mfc_multithreaded_2"></a> Může Vícevláknová aplikace přistupovat ke knihovně MFC DLL v různých vláknech?
 
-Vícevláknové aplikace můžou k běžných knihovnách MFC DLL, která dynamicky propojené ke knihovně MFC a rozšiřující knihovny DLL MFC z různých vláken. A od verze Visual C++ verze 4.2, mají přístup aplikace k běžných knihovnách MFC DLL, která staticky se propojit s knihovnou MFC z více vláken v aplikaci.
-
-Starší než verze 4.2 pouze jedno vlákno externí přiložit běžné knihovny MFC DLL staticky propojené do MFC.
-
-Všimněte si, že v dokumentaci k Visual C++ se již nepoužívá termín USRDLL. Běžné knihovny MFC DLL staticky propojené do MFC má stejné vlastnosti jako dosavadní USRDLL.
+Vícevláknové aplikace můžou k běžných knihovnách MFC DLL, která dynamicky propojené ke knihovně MFC a rozšiřující knihovny DLL MFC z různých vláken. Aplikace můžou přistupovat k běžných knihovnách MFC DLL, která staticky se propojit s knihovnou MFC z více vláken v aplikaci.
 
 ## <a name="mfc_prohibited_classes"></a> Existují jakékoli třídy nebo funkce MFC, které nelze použít v knihovně MFC DLL?
 
@@ -69,4 +65,4 @@ Jednou z možných příčin nevracení paměti je, že knihovna MFC vytvoří d
 
 ## <a name="see-also"></a>Viz také:
 
-[Knihovny DLL v jazyce Visual C++](dlls-in-visual-cpp.md)
+[Vytvoření knihovny DLL jazyka C/C++ v sadě Visual Studio](dlls-in-visual-cpp.md)

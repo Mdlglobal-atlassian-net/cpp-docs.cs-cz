@@ -1,15 +1,15 @@
 ---
 title: Příklady výrazů lambda
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-ms.openlocfilehash: 6854c5710d8a27093078c0f2013d691ac22c5870
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9f2c3e014e44c9f6a9ce10dd8388a1578ba3987
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392190"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222088"
 ---
 # <a name="examples-of-lambda-expressions"></a>Příklady výrazů lambda
 
@@ -61,7 +61,7 @@ Přestože výrazy lambda jsou často deklarovány v těle funkce, můžete je d
 
 ### <a name="example-2"></a>Příklad 2
 
-Kompilátor Visual C++ sváže lambda výraz s jeho zachycenými proměnnými při deklaraci výrazu místo při jeho volání. Následující příklad ukazuje výraz lambda, který explicitně zaznamenává místní proměnnou `i` podle hodnoty a místní proměnnou `j` podle odkazu. Vzhledem k tomu, že lambda výraz zachytí `i` podle hodnoty, přeřazení `i` dále v programu neovlivní výsledek výrazu. Ale vzhledem k tomu, že lambda výraz zachytí `j` podle odkazu, přeřazení `j` ovlivní výsledek výrazu.
+Microsoft C++ kompilátoru sváže lambda výraz s jeho zachycenými proměnnými při deklaraci výrazu místo při jeho volání. Následující příklad ukazuje výraz lambda, který explicitně zaznamenává místní proměnnou `i` podle hodnoty a místní proměnnou `j` podle odkazu. Vzhledem k tomu, že lambda výraz zachytí `i` podle hodnoty, přeřazení `i` dále v programu neovlivní výsledek výrazu. Ale vzhledem k tomu, že lambda výraz zachytí `j` podle odkazu, přeřazení `j` ovlivní výsledek výrazu.
 
 ### <a name="code"></a>Kód
 

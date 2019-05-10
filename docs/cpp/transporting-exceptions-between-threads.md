@@ -1,6 +1,6 @@
 ---
 title: Převod výjimek mezi vlákny
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - std::current_exception
 - transporting exceptions between threads
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-ms.openlocfilehash: f403b1448855b60f323ed582794a00c3e6ae1b3a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e59883c75fde9938a213fb4e888e6b05a79cf4f7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404738"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221919"
 ---
 # <a name="transporting-exceptions-between-threads"></a>Převod výjimek mezi vlákny
 
-Visual C++ podporuje *přenos výjimek* z jednoho vlákna do druhého. Přenos výjimek umožňuje zachytit výjimku v jednom vlákně a následně nechat výjimku vypadat, jako by byla vyvolána v jiném vlákně. Například je možné tuto funkci použít pro napsání vícevláknové aplikace, kde primární vlákno zpracovává všechny výjimky vyvolané sekundárními vlákny. Přenos výjimek je užitečný především pro vývojáře, kteří vytvářejí paralelní programovací knihovny nebo systémy. Pro implementaci přenosu výjimek, vizuál C++ poskytuje [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) typ a [current_exception](../standard-library/exception-functions.md#current_exception), [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)a [make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) funkce.
+Microsoft C++ kompilátor (MSVC) podporuje *přenos výjimek* z jednoho vlákna do druhého. Přenos výjimek umožňuje zachytit výjimku v jednom vlákně a následně nechat výjimku vypadat, jako by byla vyvolána v jiném vlákně. Například je možné tuto funkci použít pro napsání vícevláknové aplikace, kde primární vlákno zpracovává všechny výjimky vyvolané sekundárními vlákny. Přenos výjimek je užitečný především pro vývojáře, kteří vytvářejí paralelní programovací knihovny nebo systémy. Pro implementaci přenosu výjimek poskytuje MSVC [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) typ a [current_exception](../standard-library/exception-functions.md#current_exception), [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception), a [make_ exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) funkce.
 
 ## <a name="syntax"></a>Syntaxe
 

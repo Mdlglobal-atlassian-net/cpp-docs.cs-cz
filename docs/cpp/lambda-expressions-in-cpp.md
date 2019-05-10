@@ -1,17 +1,17 @@
 ---
 title: Výrazy lambda v jazyce C++
-ms.date: 11/19/2018
+ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++]
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: 9ebe4fec06996e908c619b6ac14af098b1c07a01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7543b3558da88b41102fa7b790bb9d9f3f18463
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216492"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222381"
 ---
 # <a name="lambda-expressions-in-c"></a>Výrazy lambda v jazyce C++
 
@@ -157,7 +157,7 @@ Obvykle je operátor volání funkce lambda podle hodnoty const, ale využití *
 
 ### <a name="exception-specification"></a>Specifikace výjimek
 
-Můžete použít `noexcept` specifikace výjimky označující, že výraz lambda nevyvolá žádné výjimky. Jako u běžných funkcí kompilátor Visual C++ generuje upozornění [C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md) Pokud výraz lambda deklaruje `noexcept` specifikace výjimek a hlavní část výrazu lambda vyvolá výjimku, jak je znázorněno zde:
+Můžete použít `noexcept` specifikace výjimky označující, že výraz lambda nevyvolá žádné výjimky. Stejně jako u běžných funkcí Microsoft C++ kompilátor generuje upozornění [C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md) Pokud výraz lambda deklaruje `noexcept` specifikace výjimek a hlavní část výrazu lambda vyvolá výjimku, jak je znázorněno zde:
 
 ```cpp
 // throw_lambda_expression.cpp

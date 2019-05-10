@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Safe Libraries, C++ Standard Library
 - Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
-ms.openlocfilehash: 340d300efb442fedb18b738c275bc0a79f874991
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c8f2de77255015254eabe018399f913b4582b7c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409730"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220465"
 ---
 # <a name="safe-libraries-c-standard-library"></a>Bezpečné knihovny: Standardní knihovna C++
 
-Několik vylepšení byly provedeny na knihovny, které se dodávají s jazykem Visual C++, včetně standardní knihovny C++, aby se daly bezpečnější.
+Provedli několik vylepšení knihovny, které se dodávají s Microsoftem C++, včetně C++ standardní knihovny, aby se daly bezpečnější.
 
 Několik metod ve standardní knihovně C++ byly identifikovány jako potenciálně nebezpečná vzhledem k tomu by mohlo vést k přetečení vyrovnávací paměti nebo jiných vad kódu. Používání těchto metod se nedoporučuje a pokud je Pokud chcete nahradit byly vytvořeny novým a lépe zabezpečeným metody. Tyto nové metody všechny končit `_s`.
 

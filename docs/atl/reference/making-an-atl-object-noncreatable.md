@@ -7,12 +7,12 @@ helpviewer_keywords:
 - noncreatable ATL objects
 - ATL projects, noncreatable objects
 ms.assetid: 80d0bca2-dea0-4801-9a85-6243124437f6
-ms.openlocfilehash: 966c7c1e42cd707726a8ca65bb80914c29ad582e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b259a677fdf3013ae1be6073afaf34f76a6e2fd
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62200143"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221048"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>Vytváření Noncreatable objektu ATL
 
@@ -37,7 +37,7 @@ Atributy objektu COM založený na knihovně ATL můžete změnit tak, aby klien
 ## <a name="see-also"></a>Viz také:
 
 [Průvodce projektem ATL](../../atl/reference/atl-project-wizard.md)<br/>
-[Typy projektů Visual C++](../../build/reference/visual-cpp-project-types.md)<br/>
+[C++typy projektů v sadě Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
 [Programování s použitím knihovny ATL a běhového kódu jazyka C](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Základy ATL – objekty COM](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Výchozí konfigurace projektu ATL](../../atl/reference/default-atl-project-configurations.md)

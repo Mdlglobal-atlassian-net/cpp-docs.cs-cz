@@ -1,23 +1,23 @@
 ---
-title: Zpracování výjimek v jazyce Visual C++
-ms.date: 11/04/2016
+title: Zpracování výjimek v MSVC
+ms.date: 05/07/2019
 helpviewer_keywords:
 - try-catch keyword [C++], exception handling
 ms.assetid: a6aa08de-669d-4ce8-9ec3-ec20d1354fcf
-ms.openlocfilehash: 506ead1b6e96f59717a92b6b0c48db0270b1822f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47443f1b7021aac7755d77f797a4f7b7410281f8
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398872"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222074"
 ---
-# <a name="exception-handling-in-visual-c"></a>Zpracování výjimek v jazyce Visual C++
+# <a name="exception-handling-in-msvc"></a>Zpracování výjimek v MSVC
 
 Výjimka je chybový stav, nacházející se případně i mimo řízení programu, který brání programu pokračovat dle jeho pravidelné cesty spuštění. Určité operace, včetně vytvoření objektu, vstupu a výstupu souboru a volání funkcí z jiných modulů, představují možné zdroje výjimek i v případě, že program pracuje správně. Robustní kód je na výjimky připraven a zpracovává je.
 
 Ke zjištění logických chyb v rámci programu nebo modulu, použít kontrolní výrazy místo výjimek (viz [použití kontrolních výrazů](/visualstudio/debugger/c-cpp-assertions)).
 
-Jazyk Visual C++ podporuje tři druhy zpracování výjimek:
+Microsoft C++ kompilátor (MSVC) podporuje tři druhy zpracování výjimek:
 
 - [Zpracování výjimek jazyka C++](../cpp/cpp-exception-handling.md)
 
@@ -29,7 +29,7 @@ Jazyk Visual C++ podporuje tři druhy zpracování výjimek:
 
 - [Výjimky MFC](../mfc/exception-handling-in-mfc.md)
 
-   Od verze 3.0 používá MFC výjimky jazyka C++, ale stále podporuje jeho starší makra pro zpracování výjimek, jejichž forma se podobá výjimkám jazyka C++. Přestože nejsou tato makra vhodná pro nové programování, jsou z důvodu zpětné kompatibility stále podporována. V aplikacích používajících makra lze volně používat i výjimky jazyka C++. Během předběžného zpracování provádějí makra vyhodnocování na základě klíčových slov zpracování výjimek definovaných v implementaci Visual C++ jazyka C++ stejně jako u Visual C++ verze 2.0. Stávající makra zpracování výjimek lze při použití výjimek jazyka C++ ponechat.
+   Od verze 3.0 používá MFC výjimky jazyka C++, ale stále podporuje jeho starší makra pro zpracování výjimek, jejichž forma se podobá výjimkám jazyka C++. Přestože nejsou tato makra vhodná pro nové programování, jsou z důvodu zpětné kompatibility stále podporována. V aplikacích používajících makra lze volně používat i výjimky jazyka C++. Během předběžného zpracování provádějí makra vyhodnocování podle MSVC provádění klíčových slov zpracování výjimek C++ jazyk od jazyka Visual C++ verze 2.0. Stávající makra zpracování výjimek lze při použití výjimek jazyka C++ ponechat.
 
 Použít [/EH](../build/reference/eh-exception-handling-model.md) – možnost kompilátoru k určení typu zpracování výjimek pro použití v projektu. Zpracování výjimek jazyka C++ je výchozí hodnota. Nekombinujte mechanismy; zpracování chyb výjimky jazyka C++ například nepoužívejte při zpracování strukturovaných výjimek. Pomocí zpracování výjimek jazyka C++ činí váš kód a umožňuje zpracovat výjimky libovolného typu. Další informace o nevýhod strukturované zpracování výjimek naleznete v tématu [strukturovaného zpracování výjimek](../cpp/structured-exception-handling-c-cpp.md). Nápovědu o kombinování maker MFC a výjimek jazyka C++, naleznete v tématu [výjimky: Použití maker MFC a výjimek jazyka C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
 

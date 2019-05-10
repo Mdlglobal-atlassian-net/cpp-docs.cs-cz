@@ -10,12 +10,12 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: 6ac470b85a14bfe32c7f3fe47168180687669ec6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9abc85227d6091005d7e097d3305150f4ca347a1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387250"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448087"
 ---
 # <a name="how-to-migrate-to-clr"></a>Postupy: Přechod na/CLR
 
@@ -41,13 +41,13 @@ Před použitím **/CLR** pro libovolný modul ve vašem projektu nejprve zkompi
 
 Následující kroky v pořadí, a potom zadejte nejsnadnější způsob, jak **/CLR** kompilace. Je důležité ke kompilaci a spuštění projektu po každé z těchto kroků.
 
-### <a name="versions-prior-to-visual-c-2003"></a>Verze starší než Visual C++ 2003
+### <a name="versions-prior-to-visual-studio-2003"></a>Verze starší než Visual Studio 2003
 
-Pokud provádíte upgrade na sadu Visual Studio 2010 z verze před jazykem Visual C++ 2003, mohou se objevit chyby při kompilaci vztahující se k vylepšením standardního jazyka C++ v jazyce Visual C++ 2003.
+Pokud provádíte upgrade na Visual Studio 2010 z verze před jazykem Visual Studio 2003, může se zobrazit chyby kompilátoru související s rozšířenými C++ standardní přizpůsobení v aplikaci Visual Studio 2003
 
-### <a name="upgrading-from-visual-c-2003"></a>Upgrade z Visual C++ 2003
+### <a name="upgrading-from-visual-studio-2003"></a>Upgrade z Visual Studio 2003
 
-Předchozí projekty sestavené pomocí jazyka Visual C++ 2003 by měl být nejprve zkompilován bez **/CLR** jako Visual Studio nyní vylepšuje shodu ANSI/ISO a odstraňuje některé narušující změny. Změna, která by mohla vyžadovat pozornost nejvíce [funkce zabezpečení v CRT](../c-runtime-library/security-features-in-the-crt.md). Kód, který používá CRT je velmi pravděpodobné k vytvoření upozornění na zastarání. Tato upozornění může být potlačena, ale migrace na nový [verze funkcí CRT Security-Enhanced](../c-runtime-library/security-enhanced-versions-of-crt-functions.md) je upřednostňována, protože poskytuje lepší zabezpečení a může odhalit problémy se zabezpečením ve vašem kódu.
+Předchozí projekty sestavené pomocí sady Visual Studio 2003 by měl být nejprve zkompilován bez **/CLR** jako Visual Studio nyní vylepšuje shodu ANSI/ISO a odstraňuje některé narušující změny. Změna, která by mohla vyžadovat pozornost nejvíce [funkce zabezpečení v CRT](../c-runtime-library/security-features-in-the-crt.md). Kód, který používá CRT je velmi pravděpodobné k vytvoření upozornění na zastarání. Tato upozornění může být potlačena, ale migrace na nový [verze funkcí CRT Security-Enhanced](../c-runtime-library/security-enhanced-versions-of-crt-functions.md) je upřednostňována, protože poskytuje lepší zabezpečení a může odhalit problémy se zabezpečením ve vašem kódu.
 
 ### <a name="upgrading-from-managed-extensions-for-c"></a>Upgradování ze spravovaných rozšíření pro C++
 
@@ -98,7 +98,7 @@ Tento krok má vliv jiné projekty, které používají soubory pravidel. V tomt
 **/ CLR** lze vybrat ve vývojovém prostředí pomocí pokynů v [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md). Jak už bylo zmíněno dříve, tento krok automaticky vypnout konfliktní nastavení projektu.
 
 > [!NOTE]
->  Při upgradu spravované knihovny nebo projektu webové služby z jazyka Visual C++ 2003, **/Zl** možnost kompilátoru bude přidána do **příkazového řádku** stránku vlastností. To způsobí, že LNK2001. Odebrat **/Zl** z **příkazového řádku** stránka vlastností řešení. Zobrazit [/Zl (vynechat název výchozí knihovny)](../build/reference/zl-omit-default-library-name.md) a [nastavení kompilátoru a vlastnosti sestavení](../build/working-with-project-properties.md) Další informace. Nebo přidejte msvcrt.lib a msvcmrt.lib v linkeru **Další závislosti** vlastnost.
+>  Při upgradu spravované knihovny nebo projektu webové služby z aplikace Visual Studio 2003 **/Zl** možnost kompilátoru bude přidána do **příkazového řádku** stránku vlastností. To způsobí, že LNK2001. Odebrat **/Zl** z **příkazového řádku** stránka vlastností řešení. Zobrazit [/Zl (vynechat název výchozí knihovny)](../build/reference/zl-omit-default-library-name.md) a [nastavení kompilátoru a vlastnosti sestavení](../build/working-with-project-properties.md) Další informace. Nebo přidejte msvcrt.lib a msvcmrt.lib v linkeru **Další závislosti** vlastnost.
 
 Pro projekty vytvořené pomocí souborů pravidel, nekompatibilní možnosti kompilátoru musí být zakázána ruční **/CLR** je přidána. Zobrazit /[/CLR – omezení](../build/reference/clr-restrictions.md) o – možnosti kompilátoru, které nejsou kompatibilní s **/CLR**.
 

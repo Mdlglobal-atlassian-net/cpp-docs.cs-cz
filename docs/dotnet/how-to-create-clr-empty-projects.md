@@ -5,12 +5,12 @@ helpviewer_keywords:
 - CLR empty projects
 - CLR empty projects, creating
 ms.assetid: edb4574f-fea7-426d-9b5c-fa4ecad2befb
-ms.openlocfilehash: 068b1328925c2e5040316d197b80076549aea321
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd57ac4c6a821536b1c2cf3d222327d9924700cb
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387447"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221816"
 ---
 # <a name="how-to-create-clr-empty-projects"></a>Postupy: Vytváření prázdných projektů CLR
 
@@ -36,5 +36,5 @@ Chcete-li vytvořit prázdný projekt CLR, použijte **prázdný projekt CLR** �
 
 ## <a name="see-also"></a>Viz také:
 
-[Typy projektů Visual C++](../build/reference/visual-cpp-project-types.md)<br/>
+[C++typy projektů v sadě Visual Studio](../build/reference/visual-cpp-project-types.md)<br/>
 [Ladění projektů v jazyce C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)

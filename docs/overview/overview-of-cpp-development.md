@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 207d99419499187715cf9088652d64b79b7ba34d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18d13fa74554e2cb37c02bc0e5a00443e7813798
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352709"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64876888"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Přehled vývoje v jazyce C++ v sadě Visual Studio
 
@@ -23,11 +23,21 @@ Kromě sdílené nástroje v integrovaném vývojovém prostředí sady Visual S
 
 A *projektu* je v podstatě sadu souborů se zdrojovým kódem a prostředky, jako jsou obrázky nebo data souborů, které jsou integrované do spustitelného souboru.
 
-Visual Studio 2017 poskytuje podporu pro libovolný systém sestavení nebo vlastních sestavovacích nástrojů, které chcete použít s plnou podporou technologie IntelliSense, procházení a ladění:
+Visual Studio poskytuje podporu pro libovolný systém sestavení nebo vlastních sestavovacích nástrojů, které chcete použít s plnou podporou technologie IntelliSense, procházení a ladění:
 
 - **Nástroj MSBuild** je nativní sestavovací systém pro Visual Studio. Když vyberete **souboru** > **nový** > **projektu** z hlavní nabídky, se zobrazí různé druhy MSBuild *šablony projektu*  , které vám pomůžou začít rychlým vývojem různé druhy aplikací v jazyce C++.
 
+::: moniker range="vs-2019"
+
+   ![Nové šablony projektu](../build/media/mathclient-project-name-2019.png "Visual Studio 2019 nový projekt dialogového okna")
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
    ![Šablony projektů](media/vs2017-new-project.png "Visual Studio 2017 projektu nové dialogové okno")
+
+::: moniker-end
 
    Obecně platí abyste používali tyto šablony pro nové projekty Pokud nemáte konkrétní důvod používat CMake nebo jiný systém projektu. Mají některé projekty *průvodce* , který vás provede procesem vytvoření nového projektu. Další informace najdete v tématu [vytváření a správa projekty využívající MSBuild](../build/creating-and-managing-visual-cpp-projects.md).
 
@@ -38,7 +48,17 @@ Visual Studio 2017 poskytuje podporu pro libovolný systém sestavení nebo vlas
 
 Správy zdrojového kódu umožňuje práci mezi více vývojářů, izolaci probíhající práce z produkčního kódu a zálohovat zdrojový kód. Visual Studio podporuje Git a [Team Foundation Version Control \(TFVC\) ](/azure/devops/repos/tfvc/) prostřednictvím jeho **Team Exploreru** okna.
 
+::: moniker range="vs-2019"
+
+![Team Explorer](media/vs2019-team-explorer.png "Visual Studio 2017 Team Explorer")
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
 ![Team Explorer](media/vs2017-team-explorer.png "Visual Studio 2017 Team Explorer")
+
+::: moniker-end
 
 Další informace o Git integrace s úložišti v Azure najdete v tématu [sdílení kódu pomocí sady Visual Studio 2017 a Azure úložišť Git](/azure/devops/repos/git/share-your-code-in-git-vs-2017). Informace o Git integraci s Githubem, naleznete v tématu [rozšíření GitHub pro Visual Studio](https://visualstudio.github.com/).
 
@@ -72,7 +92,9 @@ Další informace o přidávání a úprava prostředků v nativních desktopov�
 
 Zvolte **sestavení** > **sestavit řešení** v nabídce panelu, nebo zadejte kombinaci kláves Ctrl + Shift + B ke kompilaci a odkaz projekt. Chyby a upozornění sestavení jsou uvedeny v seznamu chyb (Ctrl +\\, E). **Výstup** okno (Alt + 2) zobrazí informace o procesu sestavení.
 
-![Výstup okna a seznamu chyb](media/vs2017-output-error-list.png "okně Výstup Visual Studio 2017 a seznamu chyb") Další informace o konfiguracích MSBuild naleznete v tématu [práce s vlastnostmi projektu](../build/working-with-project-properties.md) a [Projekty a sestavení systémy](../build/projects-and-build-systems-cpp.md).
+![Výstup okna a seznamu chyb](media/vs2017-output-error-list.png "okně Výstup Visual Studio 2017 a seznam chyb")
+
+Další informace o konfiguracích MSBuild naleznete v tématu [práce s vlastnostmi projektu](../build/working-with-project-properties.md) a [projekty a sestavení systémy](../build/projects-and-build-systems-cpp.md).
 
 Můžete také použít kompilátoru (cl.exe) a mnoho dalších související s buildem samostatných nástrojů, například NMAKE a LIB přímo z příkazového řádku. Další informace najdete v tématu [kódu sestavení C/C++ v příkazovém řádku](../build/building-on-the-command-line.md) a [Reference sestavení C/C++](../build/reference/c-cpp-building-reference.md).
 

@@ -1,16 +1,16 @@
 ---
 title: 'Návod: Přidání animace do projektu MFC'
-ms.date: 09/20/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - animation [MFC]
 - MFC, animation
 ms.assetid: 004f832c-9fd5-4f88-9ca9-ae65dececdc2
-ms.openlocfilehash: 25e29654f1e192e03a078e4a963f27abeea6056d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 07b0c5f712cd645246ecfb4e8c93543377a340a3
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358601"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558183"
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>Návod: Přidání animace do projektu MFC
 
@@ -38,9 +38,9 @@ K dokončení tohoto návodu, musíte mít Visual Studio.
 
 ### <a name="to-create-an-mfc-application"></a>Vytvoření aplikace MFC
 
-1. Na **souboru** nabídky, přejděte k **nový** a potom klikněte na tlačítko **projektu**.
+1. Použití **Průvodce aplikací knihovny MFC** k vytvoření aplikace knihovny MFC. Zobrazit [názorný postup: Použití nových ovládacích prvků prostředí MFC](walkthrough-using-the-new-mfc-shell-controls.md) pokyny o tom, jak spustit Průvodce účtem pro vaši verzi sady Visual Studio.
 
-1. V **nový projekt** dialogové okno, v levém podokně v části **nainstalované šablony**, rozbalte **Visual C++** a pak vyberte **MFC**. V prostředním podokně vyberte **aplikace knihovny MFC**. V **název** zadejte *MFCAnimationWalkthrough*. Klikněte na **OK**.
+1. V **název** zadejte *MFCAnimationWalkthrough*. Klikněte na **OK**.
 
 1. V **Průvodce aplikací knihovny MFC** dialogovém okně ověřte, zda **typ aplikace** je **více dokumentů**, **styl projektu** je  **Visual Studio**a **podpora architektury Document/View** je vybraná možnost. Klikněte na tlačítko **Dokončit**.
 

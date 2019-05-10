@@ -7,19 +7,19 @@ helpviewer_keywords:
 - MFC Application Wizard
 - executable files, creating
 ms.assetid: 227ac090-921d-4b2f-be0a-66a5f4cab0d4
-ms.openlocfilehash: 808e8364764dd826ee82e445627ba21b06946ed6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f69f0a19cdcd3526d8afac2e1492da806c2dffd3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412745"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448488"
 ---
 # <a name="mfc-application-wizard"></a>MFC – průvodce aplikací
 
 Průvodce aplikací knihovny MFC generuje aplikaci, která při kompilaci, implementuje základní funkce spustitelný soubor (.exe) aplikace Windows. Startovní aplikace knihovny MFC zahrnuje C++ (CPP) zdrojové soubory, soubory prostředků (.rc), soubory hlaviček (.h) a soubor projektu (.vcxproj). Kód, který je vygenerován v těchto souborech starter je založena na knihovně MFC.
 
 > [!NOTE]
->  V závislosti na možnostech, které jste vybrali Průvodce vytvoří další soubory v projektu. Pokud vyberete třeba **kontextové nápovědy** na [rozšířené funkce](../../mfc/reference/advanced-features-mfc-application-wizard.md) stránce průvodce vytvoří soubory, které jsou nezbytné pro kompilaci soubory nápovědy projektu. Další informace o souborech vytvořených průvodcem najdete v tématu [typy souborů vytvořené pro projekty Visual C++](../../build/reference/file-types-created-for-visual-cpp-projects.md)a najdete v souboru Readme.txt v projektu.
+>  V závislosti na možnostech, které jste vybrali Průvodce vytvoří další soubory v projektu. Pokud vyberete třeba **kontextové nápovědy** na [rozšířené funkce](../../mfc/reference/advanced-features-mfc-application-wizard.md) stránce průvodce vytvoří soubory, které jsou nezbytné pro kompilaci soubory nápovědy projektu. Další informace o souborech vytvořených průvodcem najdete v tématu [typy souborů vytvořené pro vizuál C++ projekty](../../build/reference/file-types-created-for-visual-cpp-projects.md)a najdete v souboru Readme.txt v projektu.
 
 ## <a name="overview"></a>Přehled
 
@@ -35,7 +35,7 @@ Tato stránka průvodce popisuje aktuální nastavení aplikace pro aplikaci kni
 
    - Projekt je vytvořený pomocí sady Visual Studio styl projektu a umožňuje přepínání vizuálního stylu.
 
-   - Projekt nepoužívá knihovnu MFC ve sdílené knihovně DLL. Další informace najdete v tématu [knihovny DLL v jazyce Visual C++](../../build/dlls-in-visual-cpp.md).
+   - Projekt nepoužívá knihovnu MFC ve sdílené knihovně DLL. Další informace najdete v tématu [vytvořit C /C++ knihovny DLL v sadě Visual Studio](../../build/dlls-in-visual-cpp.md).
 
 - [Podpora složených dokumentů, Průvodce aplikací MFC](../../mfc/reference/compound-document-support-mfc-application-wizard.md)
 

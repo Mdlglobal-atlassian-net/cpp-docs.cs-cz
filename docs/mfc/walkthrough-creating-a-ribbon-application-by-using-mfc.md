@@ -1,16 +1,16 @@
 ---
 title: 'Návod: Vytvoření jednoduché aplikace pásu karet pomocí knihovny MFC'
-ms.date: 11/04/2016
+ms.date: 04/25/2019
 helpviewer_keywords:
 - ribbon application, creating (MFC)
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: 29991a389a09e1fe3dc0074b80fd9a255458f673
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: a45df5258a16885b50e11d4cca8ba99eb4b3d458
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358304"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558226"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Návod: Vytvoření jednoduché aplikace pásu karet pomocí knihovny MFC
 
@@ -22,9 +22,7 @@ Tento názorný průvodce předpokládá, že jste nastavili Visual Studio použ
 
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>Vytvoření aplikace MFC obsahující pás karet
 
-1. Použití **Průvodce aplikací knihovny MFC** k vytvoření aplikace MFC obsahující pás karet. Spustit průvodce, na **souboru** nabídky, přejděte k **nový**a potom klikněte na tlačítko **projektu**.
-
-1. V **nový projekt** dialogového okna rozbalte **Visual C++** pod uzlem **nainstalované šablony**vyberte **MFC**a pak vyberte  **Aplikace MFC**. Zadejte název projektu, například *MFCRibbonApp*a potom klikněte na tlačítko **OK**.
+1. Použití **Průvodce aplikací knihovny MFC** k vytvoření aplikace MFC obsahující pás karet. Zobrazit [názorný postup: Použití nových ovládacích prvků prostředí MFC](walkthrough-using-the-new-mfc-shell-controls.md) pokyny o tom, jak spustit Průvodce účtem pro vaši verzi sady Visual Studio.
 
 1. Nastavte následující možnosti **Průvodce aplikací knihovny MFC**:
 
@@ -34,7 +32,7 @@ Tento názorný průvodce předpokládá, že jste nastavili Visual Studio použ
 
     1. V **vlastnosti šablony dokumentu** sekci **příponu souboru** zadejte příponu názvu souboru pro dokumenty, které tato aplikace vytváří, například *mfcrbnapp*.
 
-    1. V **Podpora databáze** části, ujistěte se, že **žádný** zaškrtnuto.
+    1. V **Podpora databáze** oddílu (Visual Studio 2015 pouze), ujistěte se, že **žádný** zaškrtnuto.
 
     1. V **funkce uživatelského rozhraní** části, ujistěte se, že **použít pás karet** zaškrtnuto.
 

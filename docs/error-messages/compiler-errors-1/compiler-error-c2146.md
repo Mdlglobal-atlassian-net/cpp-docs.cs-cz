@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2146
 ms.assetid: 6bfb7de6-6723-4486-9350-c66ef88d7a64
-ms.openlocfilehash: 3a0fd9c49a71f6f53d1a109378e3a6894bb68723
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f00de0ce491d517da11f251b89ccb9a7ae66b77d
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175420"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447264"
 ---
 # <a name="compiler-error-c2146"></a>Compiler Error C2146
 
@@ -73,7 +73,7 @@ typename X<T>::Y func() { }
 
 Zobrazí se také k této chybě v důsledku prací kompilátoru shoda pro Visual Studio .NET 2003: explicitní specializace již nelze najít parametry šablony z primární šablony.
 
-Použití `T` z primární šablony není povolený v explicitní specializace. Pro kód je platný v Visual Studio .NET 2003 a Visual Studio .NET verzí jazyka Visual C++ nahraďte všechny výskyty parametr šablony ve specializaci typu explicitně specializovaný.
+Použití `T` z primární šablony není povolený v explicitní specializace. Pro kód je platný v aplikaci Visual Studio .NET 2003 a Visual Studio .NET nahraďte všechny výskyty parametr šablony ve specializaci typu explicitně specializovaný.
 
 Následující ukázka zkompiluje v sadě Visual Studio .NET, ale selže v aplikaci Visual Studio .NET 2003:
 

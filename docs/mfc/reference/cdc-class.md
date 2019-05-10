@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ff6cd6e0817f74c7688fc573d4b98f70704f96c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173548"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222571"
 ---
 # <a name="cdc-class"></a>CDC – třída
 
@@ -423,13 +423,13 @@ class CDC : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDC::CDC](#cdc)|Vytvoří `CDC` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDC::AbortDoc](#abortdoc)|Ukončí aktuální tiskové úlohy, mazání všechno, co aplikace zapsala do zařízení od posledního volání `StartDoc` členskou funkci.|
 |[CDC::AbortPath](#abortpath)|Zavře a zahodí všechny cesty v kontextu zařízení.|
@@ -629,13 +629,13 @@ class CDC : public CObject
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDC::Operator HDC](#operator_hdc)|Načte popisovač kontextu zařízení.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDC::m_hAttribDC](#m_hattribdc)|Kontext atribut zařízení používaných touto `CDC` objektu.|
 |[CDC::m_hDC](#m_hdc)|Kontext výstupní zařízení používaných touto `CDC` objektu.|
@@ -3424,7 +3424,7 @@ CSize GetOutputTabbedTextExtent(
 Odkazuje na řetězec znaků pro měření. Můžete také předat [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt pro tento parametr.
 
 *nCount*<br/>
-Určuje počet znaků v řetězci. Pokud *nCount* se -1, vypočítá délku.
+Určuje, [délku řetězce](/windows/desktop/gdi/specifying-length-of-text-output-string) odkazované *lpszString*.
 
 *nTabPositions*<br/>
 Určuje počet pozic zarážky v poli, na které odkazuje *lpnTabStopPositions*.
@@ -3467,7 +3467,7 @@ CSize GetOutputTextExtent(const CString& str) const;
 Odkazuje na řetězec znaků. Můžete také předat [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt pro tento parametr.
 
 *nCount*<br/>
-Určuje počet znaků v řetězci. Pokud *nCount* se -1, vypočítá délku.
+Určuje, [délku řetězce](/windows/desktop/gdi/specifying-length-of-text-output-string) odkazované *lpszString*.
 
 *str*<br/>
 A `CString` objekt obsahující zadané znaky pro měření.
@@ -3669,7 +3669,7 @@ CSize GetTabbedTextExtent(
 Odkazuje na řetězec znaků. Můžete také předat [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt pro tento parametr.
 
 *nCount*<br/>
-Určuje počet znaků v řetězci. Pokud *nCount* se -1, vypočítá délku.
+Určuje, [délku řetězce](/windows/desktop/gdi/specifying-length-of-text-output-string) odkazované *lpszString*.
 
 *nTabPositions*<br/>
 Určuje počet pozic zarážky v poli, na které odkazuje *lpnTabStopPositions*.
@@ -4087,7 +4087,7 @@ Určuje instanci procedury adresu funkce poskytované aplikací zpětného volá
 Určuje vzdálenější ukazatel na data mají být předány funkci výstup. Pokud *lpfnOutput* má hodnotu NULL, *lpData* musí být dlouhým ukazatelem na řetězec, který má být výstup.
 
 *nCount*<br/>
-Určuje počet znaků, které mají být výstup. Pokud má parametr hodnotu 0, `GrayString` vypočítá délku řetězce (za předpokladu, že *lpData* je ukazatel na řetězec). Pokud *nCount* se -1 a funkce, na které odkazuje *lpfnOutput* vrátí hodnotu 0, image je zobrazena, ale nejsou zobrazeny šedě.
+Určuje počet znaků, které mají být výstup. Pokud má parametr hodnotu 0, `GrayString` vypočítá délku řetězce (za předpokladu, že *lpData* je ukazatel na řetězec). Pokud *nCount* je 1 a funkce, na které odkazuje *lpfnOutput* vrátí hodnotu 0, image je zobrazena, ale nejsou zobrazeny šedě.
 
 *x*<br/>
 Určuje logickou souřadnici x pozice obdélníku, který obklopuje řetězec.
@@ -6891,7 +6891,7 @@ Určuje logickou souřadnici y počátečního bodu řetězec.
 Odkazuje na řetězec znaků, chcete-li nakreslit. Můžete předat buď ukazatele na pole znaků nebo [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt pro tento parametr.
 
 *nCount*<br/>
-Určuje počet znaků v řetězci. Pokud *nCount* se -1, vypočítá délku.
+Určuje, [délku řetězce](/windows/desktop/gdi/specifying-length-of-text-output-string) odkazované *lpszString*.
 
 *nTabPositions*<br/>
 Určuje počet hodnot v poli umístění zarážky.

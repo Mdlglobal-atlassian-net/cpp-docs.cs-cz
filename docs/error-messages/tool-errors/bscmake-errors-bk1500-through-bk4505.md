@@ -1,15 +1,15 @@
 ---
-title: BscMake – chyby a upozornění
+title: Chyby a upozornění nástroje BSCMAKE
 ms.date: 04/16/2019
 ms.assetid: 3767baa6-e639-472e-99fd-7543fd945cd3
 ms.openlocfilehash: e6abc334d9ecf5df54d200ab242c91a7035ab226
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299839"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856370"
 ---
-# <a name="bscmake-errors-and-warnings-bkxxxx"></a>BscMake – chyby a upozornění (BKxxxx)
+# <a name="bscmake-errors-and-warnings-bkxxxx"></a>Chyby a upozornění nástroje BSCMAKE (BKxxxx)
 
 Tato část se odkaz na chyby a upozornění nástroje BSCMAKE generovaných nástrojem sestavení. BscMake – chyby a upozornění mít formát _služba ._protokol černá*xxxx*, kde *xxxx* je čtyřmístné číslo.
 

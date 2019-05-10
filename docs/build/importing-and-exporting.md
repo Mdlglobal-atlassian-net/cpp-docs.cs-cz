@@ -1,6 +1,6 @@
 ---
 title: Import a export
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - DLLs [C++], importing
 - exporting DLLs [C++]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++], exporting from
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
-ms.openlocfilehash: 882010cd28c291e9f49ca0f7dd9d646c70130184
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03931f7f128ab0666890bb8e76677db67dda8fc7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188844"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220637"
 ---
 # <a name="importing-and-exporting"></a>Import a export
 
@@ -31,8 +31,6 @@ Pomocí souborů .def k [import do aplikace](importing-using-def-files.md) nebo 
 
 ## <a name="using-declspec"></a>Pomocí __declspec
 
-Vizuální C++ používá **__declspec(dllimport)** a **__declspec(dllexport)** nahradit **__export** předtím používal v 16bitové verze vizuálu C++.
-
 Není potřeba použít **__declspec(dllimport)** váš kód mohl zkompilovat správně, ale to umožňuje kompilátoru generovat lepší kód. Kompilátor je schopen vygenerovat lepší kód, protože ho můžete určit, zda funkce existuje v knihovně DLL nebo Ne, což umožňuje kompilátoru vytvořit kód, který přeskočí určitou úroveň dereference, který bude obvykle k dispozici ve volání funkce, která překračuje hranice knihovny DLL. Nicméně je nutné použít **__declspec(dllimport)** import proměnné používané v knihovně DLL.
 
 Pomocí části správné .def souboru EXPORTŮ **__declspec(dllexport)** se nevyžaduje. **__declspec(dllexport)** byl přidán do poskytují snadný způsob, jak exportovat funkce ze souboru .exe nebo .dll bez použití .def souboru.
@@ -47,4 +45,4 @@ Ve formátu přenosného spustitelného souboru Win32 je určená k minimalizaci
 
 ## <a name="see-also"></a>Viz také:
 
-[Knihovny DLL v jazyce Visual C++](dlls-in-visual-cpp.md)
+[Vytvoření knihovny DLL jazyka C/C++ v sadě Visual Studio](dlls-in-visual-cpp.md)

@@ -1,17 +1,15 @@
 ---
 title: Zpracování událostí
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
-- attributes [C++], event handling
-- intrinsic functions [C++], event handling
-- event handling [C++], Visual C++
+- event handling [C++]
 ms.assetid: 82de3f9a-2d88-470c-9527-8a5b54c8ced4
-ms.openlocfilehash: 4c6701f04544b336de97196e8b65f4d0cd4be296
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd74ba0b20e2058f0b04d0d0d3c22c9d526157a0
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392151"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222120"
 ---
 # <a name="event-handling"></a>Zpracování událostí
 
@@ -21,7 +19,7 @@ Zpracování událostí je také podporována pro nativních tříd jazyka C++ (
 
 Zpracování událostí podporuje jeden a vícevláknové použití a chrání data před mělo současně přístup s více vlákny. Také umožňuje lze odvodit podtřídy ze zdroje události nebo třídy příjemce a podporu extended event sourcing a přijímáním v odvozené třídě.
 
-Visual C++ obsahuje atributy a klíčová slova pro deklarování událostí a obslužných rutin událostí. Atributy událostí a klíčová slova lze použít v aplikacích CLR a v nativních aplikacích C++.
+Microsoft C++ kompilátor obsahuje atributy a klíčová slova pro deklarování událostí a obslužných rutin událostí. Atributy událostí a klíčová slova lze použít v aplikacích CLR a v nativních aplikacích C++.
 
 |Téma|Popis|
 |-----------|-----------------|

@@ -1,26 +1,26 @@
 ---
 title: Doporučené postupy optimalizace
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
-- Visual C++, optimization
+- C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-ms.openlocfilehash: edb036292b87593a3f8bb9b3f5ec5f7beb84c3a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42178f8326def78f37bfcc905b96f37c7fc3affc
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274167"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220265"
 ---
 # <a name="optimization-best-practices"></a>Doporučené postupy optimalizace
 
-Tento dokument popisuje některé osvědčené postupy pro optimalizaci v jazyce Visual C++.
+Tento dokument popisuje některé osvědčené postupy pro optimalizaci C++ programů v sadě Visual Studio.
 
 ## <a name="compiler-and-linker-options"></a>Kompilátor a možnosti Linkeru
 
 ### <a name="profile-guided-optimization"></a>Optimalizace na základě profilu
 
-Visual C++ podporuje *profilováním řízená optimalizace* (PGO). Tato optimalizace se používá profil data z školení spuštění instrumentované verze této aplikace Centrum umožňující prosazovat novější optimalizace aplikace. Použití PGO může být časově náročné, proto to nemusí být něco, co každý vývojář používá, ale doporučujeme používat PGO pro sestavení konečné verze produktu. Další informace najdete v tématu [Profile-Guided optimalizace](profile-guided-optimizations.md).
+Visual Studio podporuje *profilováním řízená optimalizace* (PGO). Tato optimalizace se používá profil data z školení spuštění instrumentované verze této aplikace Centrum umožňující prosazovat novější optimalizace aplikace. Použití PGO může být časově náročné, proto to nemusí být něco, co každý vývojář používá, ale doporučujeme používat PGO pro sestavení konečné verze produktu. Další informace najdete v tématu [Profile-Guided optimalizace](profile-guided-optimizations.md).
 
 Kromě toho *optimalizace celého programu* (také ví jako generování kódu při propojování) a **/O1** a **/O2** byly vylepšeny optimalizace. Obecně platí aplikace kompilována s některou z těchto možností proběhne rychleji než stejnou aplikaci zkompilované s starší kompilátoru.
 
@@ -93,13 +93,13 @@ Další užitečné – Direktiva pragma pro omezení hloubku vkládání je `#p
 
 ## <a name="restrict-and-assume"></a>Kvalifikátor __restrict a \__assume
 
-Existuje několik klíčových slov ve Vizuálu C++ , který vám pomůže zvýšit výkon: [kvalifikátor __restrict](../cpp/extension-restrict.md) a [__assume](../intrinsics/assume.md).
+Existuje několik klíčových slov v sadě Visual Studio, který vám pomůže výkonu: [kvalifikátor __restrict](../cpp/extension-restrict.md) a [__assume](../intrinsics/assume.md).
 
 Nejprve je třeba poznamenat, že `__restrict` a `__declspec(restrict)` jsou dvě různé věci. Při nich do jisté míry se vztahují, se liší jejich sémantiku. `__restrict` Kvalifikátor typu, jako je třeba je `const` nebo `volatile`, ale výhradně pro typy ukazatelů.
 
 Ukazatel, který se mění `__restrict` se označuje jako *kvalifikátor __restrict ukazatel*. __Restrict ukazatel je ukazatel, který je přístupný pouze prostřednictvím \__restrict ukazatele. Jinými slovy, jinému ukazateli nelze použít pro přístup k datům, na které odkazují \__restrict ukazatele.
 
-`__restrict` může být výkonný nástroj pro optimalizaci Visual C++, ale jeho použití s pozornost. Pokud použili nesprávně, optimalizátor může provádět optimalizace, která by se narušil vaší aplikace.
+`__restrict` může být výkonný nástroj pro Microsoft C++ optimalizace, ale jeho použití s pozornost. Pokud použili nesprávně, optimalizátor může provádět optimalizace, která by se narušil vaší aplikace.
 
 `__restrict` Nahradí – klíčové slovo **/Oa** přepnout z předchozích verzí.
 

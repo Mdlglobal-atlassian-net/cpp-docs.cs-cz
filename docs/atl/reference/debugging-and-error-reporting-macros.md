@@ -1,6 +1,6 @@
 ---
 title: Makra ladění a hlášení chyb
-ms.date: 03/27/2019
+ms.date: 05/06/2019
 f1_keywords:
 - atldef/ATL::_ATL_DEBUG_INTERFACES
 - atldef/ATL::_ATL_DEBUG_QI
@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 0d5010f913521848675987b145a1277c7b00decf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a243351ff337cb517f8a8231c18c495c8d2ca302
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276624"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221074"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Makra ladění a hlášení chyb
 
@@ -176,7 +176,7 @@ ATLTRACE(
 ### <a name="parameters"></a>Parametry
 
 *exp*<br/>
-[in] Řetězec a proměnné k odeslání do Vizuálu C++ okno výstupu nebo jakékoliv aplikace, která zachycuje tyto zprávy.
+[in] Řetězec a proměnné k odeslání do okna výstup nebo jakékoliv aplikace, která zachycuje tyto zprávy.
 
 *Kategorie*<br/>
 [in] Typ události nebo metody, na kterém do sestavy. Viz poznámky pro seznam kategorií.
@@ -207,7 +207,7 @@ ATLTRACE2(
 ### <a name="parameters"></a>Parametry
 
 *exp*<br/>
-[in] Řetězec, který má odeslat do Vizuálu C++ okno výstupu nebo jakékoliv aplikace, která zachycuje tyto zprávy.
+[in] Řetězec, který se má odeslat do okna výstup nebo jakékoliv aplikace, která zachycuje tyto zprávy.
 
 *Kategorie*<br/>
 [in] Typ události nebo metody, na kterém do sestavy. Viz poznámky pro seznam kategorií.

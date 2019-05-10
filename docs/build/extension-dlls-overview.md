@@ -1,6 +1,6 @@
 ---
 title: 'Rozšiřující knihovny DLL: Přehled'
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - AFXDLL library
 - MFC DLLs [C++], MFC extension DLLs
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: eb5e10b7-d615-4bc7-908d-e3e99b7b1d5f
-ms.openlocfilehash: ab9b980cbb3e89eebee945e90c54f23d6717a1a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea8e950e28907ea1a4a85c1f39392d5505f08c49
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196726"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221368"
 ---
 # <a name="mfc-extension-dlls-overview"></a>MFC – rozšiřující knihovny DLL: Přehled
 
@@ -22,8 +22,6 @@ MFC – rozšiřující knihovny DLL je knihovnu DLL, která se obvykle implemen
 Rozšiřující knihovny DLL lze použít také pro předávání mezi aplikací a knihovny DLL MFC odvozené objekty. Členské funkce související s předaným objektem existovat v modulu, ve kterém byl objekt vytvořen. Protože tyto funkce se správně vyexportovala při použití sdílené knihovny DLL verze knihovny MFC, můžete předat volně knihovny MFC nebo knihovny MFC odvozenému objektu ukazatele mezi aplikací a MFC – rozšiřující knihovny DLL načte.
 
 Příklad knihovny DLL, která splňuje základní požadavky pro rozšiřující knihovny DLL MFC, najdete v ukázce MFC [DLLHUSK](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/dllhusk). Konkrétně se podívejte na Testdll1.cpp a Testdll2.cpp soubory.
-
-Všimněte si, že v dokumentaci k Visual C++ se již nepoužívá termín AFXDLL. Rozšiřující knihovny DLL MFC má stejné vlastnosti jako dřívější AFXDLL.
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 

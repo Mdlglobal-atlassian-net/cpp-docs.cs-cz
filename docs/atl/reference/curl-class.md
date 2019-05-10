@@ -1,6 +1,6 @@
 ---
 title: CUrl – třída
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - CUrl
 - ATLUTIL/ATL::CUrl
@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CUrl class
 ms.assetid: b3894d34-47b9-4961-9719-4197153793da
-ms.openlocfilehash: 913365e2b20015b22480dfd364d75b2be3c6355b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe91a01fbe67580bf82ae57c0317d06057fc9098
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277250"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221502"
 ---
 # <a name="curl-class"></a>CUrl – třída
 
@@ -59,14 +59,14 @@ class CUrl
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CUrl::CUrl](#curl)|Konstruktor|
 |[CUrl::~CUrl](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CUrl::Canonicalize](#canonicalize)|Volání této metody pro převod řetězce adresy URL na kanonický tvar.|
 |[CUrl::Clear](#clear)|Voláním této metody lze vymazat všechna pole adresy URL.|
@@ -98,7 +98,7 @@ class CUrl
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CUrl::operator =](#operator_eq)|Přiřadí zadaný `CUrl` objektů na aktuální `CUrl` objektu.|
 

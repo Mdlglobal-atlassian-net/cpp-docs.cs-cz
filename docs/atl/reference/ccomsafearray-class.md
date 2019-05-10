@@ -1,6 +1,6 @@
 ---
 title: Ccomsafearray – třída
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - CComSafeArray
 - ATLSAFE/ATL::CComSafeArray
@@ -28,12 +28,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: 0262764c950b01acdb610873a995a9a6fd912997
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dec6bbad0aa4a8409b9f3d24476dcc94b8eaefe3
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259440"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221155"
 ---
 # <a name="ccomsafearray-class"></a>Ccomsafearray – třída
 
@@ -55,14 +55,14 @@ Typ dat uložených v poli.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CComSafeArray::CComSafeArray](#ccomsafearray)|Konstruktor|
 |[CComSafeArray::~CComSafeArray](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CComSafeArray::Add](#add)|Přidá jeden nebo více prvků, nebo `SAFEARRAY` do struktury `CComSafeArray`.|
 |[CComSafeArray::Attach](#attach)|Připojí `SAFEARRAY` struktury k `CComSafeArray` objektu.|
@@ -86,7 +86,7 @@ Typ dat uložených v poli.
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CComSafeArray::operator LPSAFEARRAY](#operator_lpsafearray)|Přetypování hodnoty `SAFEARRAY` ukazatele.|
 |[CComSafeArray::operator\[\]](ccomsafearray-class.md#operator_at)|Načte prvek z pole.|
@@ -94,7 +94,7 @@ Typ dat uložených v poli.
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CComSafeArray::m_psa](#m_psa)|Tento datový člen udržuje adresu `SAFEARRAY` struktury.|
 
@@ -318,7 +318,7 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-A `CComSafeArray` objekt můžete vytvořit ze stávajícího `SAFEARRAYBOUND` strukturu a počet rozměrů, nebo tak, že určíte počet prvků v poli a dolní mez. Pokud chcete přistupovat z aplikace Visual C++ je pole, musí být dolní mez 0. Další jazyky vám umožní jiné hodnoty pro dolní mez (například Visual Basic podporuje pole s prvky s rozsahem například -10-10).
+A `CComSafeArray` objekt můžete vytvořit ze stávajícího `SAFEARRAYBOUND` strukturu a počet rozměrů, nebo tak, že určíte počet prvků v poli a dolní mez. Pokud je pole nelze přistupovat ze C++, musí být 0, dolní mez. Další jazyky vám umožní jiné hodnoty pro dolní mez (například Visual Basic podporuje pole s prvky s rozsahem například -10-10).
 
 ##  <a name="destroy"></a>  CComSafeArray::Destroy
 

@@ -3,12 +3,12 @@ title: C++ – systém typů (moderní verze jazyka C++)
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fa13d2f0b274361c2ad34b0eb64421d2d1d037e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392278"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222127"
 ---
 # <a name="c-type-system-modern-c"></a>C++ – systém typů (moderní verze jazyka C++)
 
@@ -53,7 +53,7 @@ int maxValue;                // Not recommended! maxValue contains
 
 ## <a name="fundamental-built-in-types"></a>Základní (vestavěné) typy
 
-Na rozdíl od některých jazyků nemá C++ žádný univerzální základní typ, z něhož by byly odvozeny všechny ostatní typy. Implementace jazyka Visual C++ obsahuje mnoho *základní typy*, označované také jako *předdefinovaných typů*. To zahrnuje číselné typy jako **int**, **double**, **dlouhé**, **bool**, plus **char** a **wchar_t** typy pro znaky ASCII a UNICODE v uvedeném pořadí. Většina základních typů (s výjimkou **bool**, **double**, **wchar_t** a souvisejících typů) mají všechny nepodepsané verze, které upravují rozsah hodnot, které může proměnná ukládat. Například **int**, který ukládá 32bitové celé číslo se znaménkem, může představovat hodnotu od-2,147,483,648 do 2 147 483 647. **Unsigned int**, která je také uložena jako 32bitová, může ukládat hodnotu od 0 do 4 294 967 295. Celkový počet možných hodnot je ve všech případech stejný, liší se pouze rozsah.
+Na rozdíl od některých jazyků nemá C++ žádný univerzální základní typ, z něhož by byly odvozeny všechny ostatní typy. Jazyk obsahuje mnoho *základní typy*, označované také jako *předdefinovaných typů*. To zahrnuje číselné typy jako **int**, **double**, **dlouhé**, **bool**, plus **char** a **wchar_t** typy pro znaky ASCII a UNICODE v uvedeném pořadí. Většina základních typů (s výjimkou **bool**, **double**, **wchar_t** a souvisejících typů) mají všechny nepodepsané verze, které upravují rozsah hodnot, které může proměnná ukládat. Například **int**, který ukládá 32bitové celé číslo se znaménkem, může představovat hodnotu od-2,147,483,648 do 2 147 483 647. **Unsigned int**, která je také uložena jako 32bitová, může ukládat hodnotu od 0 do 4 294 967 295. Celkový počet možných hodnot je ve všech případech stejný, liší se pouze rozsah.
 
 Základní typy jsou rozpoznávány kompilátorem, který má vestavěná pravidla určující, jaké operace lze s jednotlivými typy provádět a jak je lze převést na jiné základní typy. Úplný seznam předdefinovaných typů a jejich velikosti a číselné limitů naleznete v tématu [základní typy](../cpp/fundamental-types-cpp.md).
 

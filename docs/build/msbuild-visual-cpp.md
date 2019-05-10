@@ -1,17 +1,15 @@
 ---
 title: MSBuild na příkazovém řádku - C++
 ms.date: 12/12/2018
-f1_keywords:
-- MSBuild
 helpviewer_keywords:
 - MSBuild
 ms.assetid: 7a1be7ff-0312-4669-adf2-5f5bf507d560
-ms.openlocfilehash: 565b1c47b4476fa7cb830e15b978b389f4344ee1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e95d99cf5c63c824bb9bade8e76bc3ca99079669
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273310"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220572"
 ---
 # <a name="msbuild-on-the-command-line---c"></a>MSBuild na příkazovém řádku - C++
 
@@ -53,7 +51,7 @@ Další informace o nástroji MSBuild naleznete v tématu:
 
 |Termín|Definice|
 |----------|----------------|
-|[Návod: Vytvoření projektu jazyka Visual C++ pomocí nástroje MSBuild](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Popisuje způsob vytvoření projektu jazyka Visual C++ pomocí **MSBuild**.|
+|[Návod: Vytvoření projektu C++ pomocí nástroje MSBuild](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Demonstruje postup vytvoření sady Visual Studio C++ projektu pomocí **MSBuild**.|
 |[Postupy: Použití událostí sestavení v projektech MSBuild](how-to-use-build-events-in-msbuild-projects.md)|Ukazuje, jak určit akci, ke které dochází v particuler fázi v buildu: před začátkem sestavení; Před spuštěním kroku odkazu; nebo po ukončení sestavení.|
 |[Postupy: Přidání vlastního kroku sestavení do projektů MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md)|Ukazuje, jak přidat fázi uživatelem definované pořadí sestavení.|
 |[Postupy: Přidání vlastních nástrojů sestavení do projektů MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)|Ukazuje, jak přidružit určitý soubor nástroj sestavení.|

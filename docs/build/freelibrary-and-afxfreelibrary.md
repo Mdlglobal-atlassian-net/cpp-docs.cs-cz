@@ -13,12 +13,12 @@ helpviewer_keywords:
 - explicit linking [C++]
 - DLLs [C++], unloading
 ms.assetid: 4a48d290-3971-43e9-8e97-ba656cd0c8f8
-ms.openlocfilehash: 709e4fdbc24d6fbbac44944e686a6fecf8c9b8db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59deb75ad77b0a80efc69d9991e093ecef95c51e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274037"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221423"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary a AfxFreeLibrary
 
@@ -40,6 +40,6 @@ V aplikaci MFC pomocí [AfxFreeLibrary](../mfc/reference/application-information
 
 ## <a name="see-also"></a>Viz také:
 
-[Knihovny DLL v jazyce Visual C++](dlls-in-visual-cpp.md)<br/>
+[Vytvoření knihovny DLL jazyka C/C++ v sadě Visual Studio](dlls-in-visual-cpp.md)<br/>
 [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
 [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)

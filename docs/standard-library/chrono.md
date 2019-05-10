@@ -1,6 +1,6 @@
 ---
 title: '&lt;chrono&gt;'
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - chrono/std::chrono::nanoseconds
 - chrono/std::chrono::minutes
@@ -10,18 +10,18 @@ f1_keywords:
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: 1fcf87d84b2c99b89217b7f2e0fc7fecd55fff02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44620b6ea6c970027a8e9a023c0972c6dec43ee0
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279096"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220241"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
 Zahrnout standardní hlavička \<chrono > k definování třídy a funkce, které představují a manipulaci s dob trvání a okamžiky čas.
 
-V sadě Visual Studio 2015, provádění od `steady_clock` došlo ke změně pro splnění požadavků standardu C++ steadiness a monotonicity. `steady_clock` Teď vychází QueryPerformanceCounter() a `high_resolution_clock` je nyní definice typu `steady_clock`. V důsledku toho v jazyce Visual C++ `steady_clock::time_point` je nyní definice typu `chrono::time_point<steady_clock>`, nicméně toto není nutně případ v jiných implementacích.
+V sadě Visual Studio 2015, provádění od `steady_clock` došlo ke změně pro splnění požadavků standardu C++ steadiness a monotonicity. `steady_clock` Teď vychází QueryPerformanceCounter() a `high_resolution_clock` je nyní definice typu `steady_clock`. V důsledku toho v Microsoftu C++ kompilátoru `steady_clock::time_point` je nyní definice typu `chrono::time_point<steady_clock>`, nicméně toto není nutně případ v jiných implementacích.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,14 +31,14 @@ V sadě Visual Studio 2015, provádění od `steady_clock` došlo ke změně pro
 
 ### <a name="classes"></a>Třídy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[duration – třída](../standard-library/duration-class.md)|Popisuje typ, který obsahuje časový interval.|
 |[time_point – třída](../standard-library/time-point-class.md)|Popisuje typ, který představuje bod v čase.|
 
 ### <a name="structs"></a>Struktury
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[common_type – struktura](../standard-library/common-type-structure.md)|Popisuje specializace třídy šablony [common_type](../standard-library/common-type-class.md) pro konkretizací `duration` a `time_point`.|
 |[duration_values – struktura](../standard-library/duration-values-structure.md)|Poskytuje specifické hodnoty pro `duration` parametr šablony `Rep`.|
@@ -48,14 +48,14 @@ V sadě Visual Studio 2015, provádění od `steady_clock` došlo ke změně pro
 
 ### <a name="functions"></a>Funkce
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[duration_cast](../standard-library/chrono-functions.md#duration_cast)|Přetypování `duration` objekt zadaného typu.|
 |[time_point_cast](../standard-library/chrono-functions.md#time_point_cast)|Přetypování `time_point` objekt zadaného typu.|
 
 ### <a name="operators"></a>Operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[Operator-](../standard-library/chrono-operators.md#operator-)|Operátor odčítání nebo negace objektů `duration` a `time_point` objekty.|
 |[operator!=](../standard-library/chrono-operators.md#op_neq)|Operátor nerovnosti, který se používá s `duration` nebo `time_point` objekty.|

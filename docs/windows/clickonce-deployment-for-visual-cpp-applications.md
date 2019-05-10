@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application deployment [C++], ClickOnce
 - ClickOnce deployment [C++], C++ applications
 ms.assetid: 9988c546-0936-452c-932f-9c76daa42157
-ms.openlocfilehash: 83ee85dbf952fd78a1cd1b8d0c932b9dcd02682d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f78aca6621462ccbd86cfe09ae71b715b5e56f09
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407078"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448458"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>ClickOnce – nasazení pro aplikace Visual C++
 
@@ -19,10 +19,10 @@ Visual Studio poskytuje dvě různé technologie pro nasazení aplikací pro Win
 
 ## <a name="clickonce-deployment-in-c"></a>ClickOnce – nasazení v jazyce C++
 
-Vývojové prostředí Visual C++ přímo nepodporuje nasazení projekty Visual C++ pomocí ClickOnce, ale nástroje jsou k dispozici pro použití.
+Vizuál C++ vývojové prostředí přímo nepodporuje nasazení sady Visual Studio C++ projektů pomocí ClickOnce, ale nástroje jsou k dispozici pro použití.
 
 > [!NOTE]
->  Visual Studio podporuje ClickOnce v jazyce Visual C# a Visual Basic vývojových prostředích. Pokud váš projekt Visual C++, představuje závislost projektu jazyka Visual C#, můžete publikovat aplikaci (včetně jejích závislostí) použitím nasazení ClickOnce z vývojového prostředí jazyka Visual C#.
+>  Visual Studio podporuje ClickOnce v jazyce Visual C# a Visual Basic vývojových prostředích. Pokud aplikace Visual Studio C++ projektu je závislost Vizuálu C# projektu, můžete publikovat aplikaci (včetně jejích závislostí) pomocí nasazení ClickOnce z Vizuálu C# vývojové prostředí.
 
 K nasazení aplikace Visual C++ pomocí technologie ClickOnce, je nejprve nutné sestavit [Manifest aplikace ClickOnce](/visualstudio/deployment/clickonce-application-manifest) a [Manifest nasazení ClickOnce](/visualstudio/deployment/clickonce-deployment-manifest) pomocí [Mage.exe (Manifest Generation and Editing Tool)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool) nebo jeho verze s grafickým uživatelským rozhraním (informace najdete v tématu [MageUI.exe (Manifest Generation and Editing Tool, grafický klient)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)).
 

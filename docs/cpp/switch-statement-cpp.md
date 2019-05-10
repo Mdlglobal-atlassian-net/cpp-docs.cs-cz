@@ -1,6 +1,6 @@
 ---
 title: switch – příkaz (C++)
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - default_cpp
 - switch_cpp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - case keyword [C++], in switch statements
 - default keyword [C++]
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-ms.openlocfilehash: 67918b7df747d3bee923da500729e60b4fe04336
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8136b03d9e54b4d49bcb1417238066bd86bc6b89
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267086"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221933"
 ---
 # <a name="switch-statement-c"></a>switch – příkaz (C++)
 
@@ -78,7 +78,7 @@ int main() {
 
 Ve výše uvedeném příkladu `capa` se zvýší, pokud `c` je velké písmeno `A`. **Přerušení** příkazem za `capa++` ukončí provádění **přepnout** tělo s příkazy a řízení se předá **při** smyčky. Bez **přerušení** prohlášení, provádění by "předáno" do další příkaz s popiskem, tak, aby `lettera` a `nota` by se také zvýší. K podobnému účelu slouží **přerušení** příkaz pro `case 'a'`. Pokud `c` je malým `a`, `lettera` je zvýšen a **přerušení** příkaz ukončí **přepnout** těla příkazu. Pokud `c` není `a` nebo `A`, **výchozí** je proveden příkaz.
 
-**Visual Studio 2017 a novější:** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` je zadán atribut v standardu C ++ 17. Je možné v **přepnout** příkaz jako Nápověda pro kompilátor (nebo každému, kdo čte kód) je určena propuštěním chování. Kompilátor Visual C++ aktuálně neupozorňuje na fallthrough chování, tento atribut nemá žádný vliv na chování kompilátoru. Všimněte si, že atribut je použit prázdný příkaz v rámci příkaz s popiskem; jinými slovy je nezbytné středník.
+**Visual Studio 2017 a novější:** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` je zadán atribut v standardu C ++ 17. Je možné v **přepnout** příkaz jako Nápověda pro kompilátor (nebo každému, kdo čte kód) je určena propuštěním chování. Microsoft C++ kompilátor aktuálně nevyvolá upozornění na fallthrough chování, takže tento atribut nemá žádný vliv na chování kompilátoru. Všimněte si, že atribut je použit prázdný příkaz v rámci příkaz s popiskem; jinými slovy je nezbytné středník.
 
 ```cpp
 int main()

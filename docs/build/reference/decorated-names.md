@@ -6,18 +6,21 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-ms.openlocfilehash: 3fae232e6ca886195315002f4e65063d8a23ddc8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3950f79c4c88d031e04d0d145e0a03c9ebc0a37
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293898"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221789"
 ---
 # <a name="decorated-names"></a>Dekorované názvy
 
 Funkce, data a objekty v programech jazyka C a C++ jsou reprezentovány interně jejich dekorované názvy. A *dekorovaného názvu* je kódovaný řetězec vytvořený kompilátorem během kompilace objektu, dat nebo definice funkce. Zaznamenává, konvence volání, typy, parametry funkce a další informace spolu s názvem. Tento název dekorace, označované také jako *pozměnění názvu*, pomáhá linkeru najít správné funkce a objekty při propojení spustitelného souboru.
 
-Zásady vytváření názvů upravený změnily v různých verzích aplikace Visual C++ a mohou být různé také na různé cílové architektury. Chcete-li propojit správně se zdrojovými soubory, které jsou vytvořené pomocí jazyka Visual C++, C a C++ knihovny DLL a knihovny by měl být zkompilován pomocí stejné sady nástrojů kompilátoru, příznaky a Cílová architektura.
+Zásady vytváření názvů upravený změnily v různých verzích sady Visual Studio a mohou být různé také na různé cílové architektury. Pro propojení správně zdrojové soubory, které jsou vytvořené pomocí sady Visual Studio, C a C++ knihovny DLL a knihovny by měl být zkompilován pomocí stejné sady nástrojů kompilátoru, příznaky a Cílová architektura. 
+
+> [!NOTE]
+> Knihovny vytvořené pomocí sady Visual Studio 2015, mohou být spotřebovány aplikací vytvořených pomocí sady Visual Studio 2017 nebo Visual Studio 2019.
 
 ##  <a name="Using"></a> Použití dekorovaných názvů
 
@@ -25,7 +28,7 @@ Za normálních okolností není nutné znát upravený název napsat kód, kter
 
 Pokud změníte název funkce, třídy, konvence volání, návratový typ nebo žádné parametry, změní se také upravený název. V takovém případě musíte získat nový upravený název a použít všude, kde je zadán upravený název.
 
-Dekorování názvů je také důležité při připojování ke kódu napsaného v jiných programovacích jazycích, nebo pomocí jiné kompilátory. Různé kompilátory pomocí různých konvencí dekorace názvu. Pokud spustitelný soubor odkazuje na kód v jiném jazyce, musí tak, aby odpovídaly importované a exportované názvy a konvence volání věnovat zvláštní pozornost. Kód jazyka sestavení musí používat Visual C++ dekorované názvy a konvence volání propojení zdrojového kódu napsaného v jazyce Visual C++.
+Dekorování názvů je také důležité při připojování ke kódu napsaného v jiných programovacích jazycích, nebo pomocí jiné kompilátory. Různé kompilátory pomocí různých konvencí dekorace názvu. Pokud spustitelný soubor odkazuje na kód v jiném jazyce, musí tak, aby odpovídaly importované a exportované názvy a konvence volání věnovat zvláštní pozornost. Kód jazyka sestavení musí pokud chcete připojit ke zdrojovému kódu napsané s využitím MSVC použijte MSVC dekorované názvy a konvence volání.
 
 ##  <a name="Format"></a> Formát jazyka C++ dekorovaného názvu
 

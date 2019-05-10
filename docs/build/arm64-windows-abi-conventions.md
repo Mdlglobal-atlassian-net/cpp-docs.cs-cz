@@ -1,12 +1,12 @@
 ---
 title: Přehled konvencí ARM64 ABI
 ms.date: 03/27/2019
-ms.openlocfilehash: 4c0f89f97529d4cd70e1449c90b131d25d30f9ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfb1b5b6be6a7a368c2ed7cab255da90ae7a22df
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195500"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220985"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Přehled konvencí ARM64 ABI
 
@@ -50,6 +50,24 @@ Jako s ARM32 verze Windows na ARM64 Windows spustí v režimu little endian. Př
 Windows běží na ARM64 umožňuje procesoru hardwarem pro zpracování nezarovnané přístupy transparentně. V zlepšení z AArch32 tato podpora teď také funguje pro všechny přístupy celé číslo (včetně přístupy více slov) a přístupy s plovoucí desetinnou čárkou.
 
 Ale přístupy k paměti bez vyrovnávací paměti (zařízení) stále musí vždycky být zarovnány. Pokud kód může potenciálně čtení nebo zápisu nesprávně zarovnaná data z paměti bez mezipaměti, musí nezapomeňte zarovnat všechny přístupy.
+
+Zarovnání výchozí rozložení pro místní hodnoty:
+
+| Velikost v bajtech | Zarovnání v bajtech |
+| - | - |
+| 1 | 1 |
+| 2 | 2 |
+| 3, 4 | 4 |
+| > 4 | 8 |
+
+Zarovnání výchozí rozložení pro globální proměnné a statické objekty:
+
+| Velikost v bajtech | Zarovnání v bajtech |
+| - | - |
+| 1 | 1 |
+| 2 - 7 | 4 |
+| 8 - 63 | 8 |
+| >= 64 | 16 |
 
 ## <a name="integer-registers"></a>Celočíselné registry
 
@@ -185,7 +203,9 @@ Efektivně je stejný jako následující pravidla C.12–C.15 přidělit argume
 
 Integrální hodnoty jsou vráceny v x0.
 
-Hodnoty s plovoucí desetinnou čárkou jsou vráceny v s0/d0/v0 podle potřeby.
+Hodnoty s plovoucí desetinnou čárkou jsou vráceny v s0, d0 nebo v0 podle potřeby.
+
+HFA a HVA hodnoty jsou vráceny v s0 s3, d0 d3 nebo v0-v3, podle potřeby.
 
 Typy vrácené hodnoty jsou zpracovány jinak v závislosti na tom, zda mají určité vlastnosti. Typy, které mají všechny tyto vlastnosti
 

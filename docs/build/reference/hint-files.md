@@ -11,16 +11,16 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: 3d8b3be76fea454ed3b3dd3fd2a44174f34c065c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 919cbedd0c0d7c610273d597328979d1fb449f8f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291893"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446306"
 ---
 # <a name="hint-files"></a>Soubory pokynů
 
-A *informačního souboru* obsahuje makra, které by mohly jinak způsobit oblasti kódu přeskočení analyzátor databáze prohlížení jazyka C++. Při otevření projektu jazyka Visual C++, analyzátor kódu v každý zdrojový soubor v projektu analyzuje a vytvoří databázi s informacemi o každém identifikátoru. Integrované vývojové prostředí používá informace pomáhající při procházení kódu funkce, jako **zobrazení tříd** prohlížeče a **navigační panel**.
+A *informačního souboru* obsahuje makra, které by mohly jinak způsobit oblasti kódu přeskočení analyzátor databáze prohlížení jazyka C++. Při otevření sady Visual Studio C++ projektu, analyzátor kódu v každý zdrojový soubor v projektu analyzuje a vytvoří databázi s informacemi o každém identifikátoru. Integrované vývojové prostředí používá informace pomáhající při procházení kódu funkce, jako **zobrazení tříd** prohlížeče a **navigační panel**.
 
 Analyzátor databáze prohlížení jazyka C++ je analyzátor přibližných shod, které mohou analyzovat velké množství kódu v krátkém čase. Jeden z důvodů, proč je rychlá totiž přeskočí obsah bloky. Například pouze zaznamenává umístění a parametry funkce a ignoruje jeho obsah. Určité makra může způsobovat problémy s heuristiky používá k určení začátku a konce bloku. Takové problémy způsobují oblasti kódu, aby se zaznamenávaly nesprávně.
 
@@ -118,7 +118,7 @@ Systém analýzy prohledání adresářů pro soubory pokynů v tomto pořadí.
 
 - Adresář, který obsahuje instalační balíček pro Visual C++ (**vcpackages**). Tento adresář obsahuje integrovanou nápovědu soubor, který popisuje symboly v často používané systémové soubory, jako například **windows.h**. V důsledku toho projekt automaticky zdědí většina z těchto pomocných parametrů, které potřebuje.
 
-- Cesta z kořenového adresáře zdrojového souboru do adresáře, který obsahuje zdrojový soubor samotný. V obvyklou pro projekty Visual C++ kořenový adresář obsahuje soubor řešení nebo projektu.
+- Cesta z kořenového adresáře zdrojového souboru do adresáře, který obsahuje zdrojový soubor samotný. V typické aplikaci Visual Studio C++ projektu, kořenový adresář obsahuje soubor řešení nebo projektu.
 
    Výjimkou z tohoto pravidla je-li *stop soubor* v cestě ke zdrojovému souboru. Stop soubor je libovolný soubor s názvem **cpp.stop**. Stop soubor nabízí větší kontrolu nad pořadí hledání. Namísto spuštění z kořenového adresáře, prohledá systém analýzy z adresáře, který obsahuje stop soubor do adresáře, který obsahuje zdrojový soubor. V obvyklou pro projekty není nutné stop soubor.
 
@@ -162,7 +162,7 @@ Pomocné parametry použijte následující syntaxi:
 
 Tento příklad ukazuje, jak jsou pomocné parametry shromážděna z soubory pokynů. Stop soubory nejsou použity v tomto příkladu.
 
-Na obrázku ukazuje některé z fyzického adresáře projektu v jazyce Visual C++. Existují soubory pokynů v `vcpackages`, `Debug`, `A1`, a `A2` adresáře.
+Na obrázku ukazuje některé z fyzického adresáře v sadě Visual Studio C++ projektu. Existují soubory pokynů v `vcpackages`, `Debug`, `A1`, a `A2` adresáře.
 
 ### <a name="hint-file-directories"></a>Pomocný parametr souborové adresáře
 
@@ -244,7 +244,7 @@ Tyto poznámky platí pro v předchozím seznamu:
 
 ## <a name="see-also"></a>Viz také:
 
-[Typy souborů vytvořených pro projekty Visual C++](file-types-created-for-visual-cpp-projects.md)<br>
+[Soubor typy vytvořené pro vizuál C++ projekty](file-types-created-for-visual-cpp-projects.md)<br>
 [#define – direktiva (C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
 [#undef – direktiva (C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br>
 [Poznámky SAL](../../c-runtime-library/sal-annotations.md)<br>

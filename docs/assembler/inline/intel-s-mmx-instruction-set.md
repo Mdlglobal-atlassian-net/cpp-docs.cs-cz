@@ -5,18 +5,18 @@ ms.topic: reference
 helpviewer_keywords:
 - MMX instruction set
 ms.assetid: 705deb2d-c3fd-4696-9e22-8bcf25866daf
-ms.openlocfilehash: 3b2de7896c4a688c3428cddc13144a838f906557
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8b2697fa106506dadfdaa96149fd6b0b093c844
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166968"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65445870"
 ---
 # <a name="intel39s-mmx-instruction-set"></a>Intel&#39;s sada instrukcí MMX
 
 **Microsoft Specific**
 
-Kompilátor Visual C++ umožňuje použít nastavení v vložený assembler instrukce MMX (multimediální rozšíření) společnosti Intel. Instrukce MMX také podporují zpětný překlad ladicího programu. Kompilátor generuje upozornění, pokud funkce obsahuje instrukce MMX, ale neobsahuje instrukci EMMS. na prázdnou multimediální stavu. Další informace najdete v článku na webu společnosti Intel.
+Microsoft C++ kompilátoru umožňuje použít nastavení v vložený assembler instrukce MMX (multimediální rozšíření) společnosti Intel. Instrukce MMX také podporují zpětný překlad ladicího programu. Kompilátor generuje upozornění, pokud funkce obsahuje instrukce MMX, ale neobsahuje instrukci EMMS. na prázdnou multimediální stavu. Další informace najdete v článku na webu společnosti Intel.
 
 **Specifické pro END Microsoft**
 

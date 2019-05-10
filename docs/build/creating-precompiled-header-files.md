@@ -1,20 +1,18 @@
 ---
 title: Předkompilované soubory hlaviček
-ms.date: 12/10/2018
-f1_keywords:
-- pch
+ms.date: 05/06/2019
 helpviewer_keywords:
 - precompiled header files, creating
 - PCH files, creating
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 5afda50c43f93baa2d73e6afb68f436560c3243e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 1dc6ff9de94f98a4eef3d3827bec177f22672674
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341752"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220817"
 ---
 # <a name="precompiled-header-files"></a>Předkompilované soubory hlaviček
 
@@ -43,7 +41,7 @@ Můžete předkompilovat programů jazyka C a C++. V jazyce C++ programování j
 
 ## <a name="two-choices-for-precompiling-code"></a>Dvě možnosti pro předkompilaci kódu
 
-V jazyce Visual C++ můžete předkompilovat jakýkoli kód jazyka C nebo C++; nejste omezeni předkompilace jenom hlavičkové soubory.
+Můžete předkompilovat jakékoli C nebo C++ kódu; nejste omezeni předkompilace jenom hlavičkové soubory.
 
 Předkompilace vyžaduje plánování, ale nabízí mnohem rychlejší kompilace, pokud předkompilovat zdrojový kód než jednoduché hlavičkové soubory.
 
@@ -118,7 +116,7 @@ Při použití předkompilované hlavičky vytvořené pomocí /Yc a /Yu kompil�
 
 Tato tabulka shrnuje možnosti kompilátoru, které můžou aktivovat upozornění nekonzistence, při použití předkompilované hlavičky:
 
-|Možnost|Název|Pravidlo|
+|Možnost|Name|Pravidlo|
 |------------|----------|----------|
 |/D|Definovat konstanty a makra|Musí být mezi kompilace, která vytvořili předkompilované hlavičky a aktuální kompilace. Stav definované konstanty není povolená, ale nepředvídatelné výsledky může dojít, pokud soubory závisí na hodnotách konstant změněné.|
 |/E nebo /EP|Zkopírujte výstup předzpracování do standardního výstupu|Předkompilované hlavičky s možností /E nebo /EP nefungují.|
@@ -133,7 +131,7 @@ Tato tabulka shrnuje možnosti kompilátoru, které můžou aktivovat upozorněn
 
 Předchozí části jsou uvedeny základní informace o předkompilované hlavičky: /Yc a /Yu, možnost/fp a [hdrstop](../preprocessor/hdrstop.md) direktivy pragma. Tato část popisuje způsob pro použití ruční možnosti předkompilovaných hlaviček v projektu. končí příklad souboru pravidel a kód, který spravuje.
 
-Pro další postup pro použití ruční možnosti předkompilovaných hlaviček v projektu studovat mezi soubory pravidel v adresáři MFC\SRC, který se vytvoří během instalace výchozí jazyka Visual C++. Tyto soubory pravidel trvat podobný přístup je uvedené v této části, ale větší využití maker Microsoft Program údržby Utility (NMAKE) a nabízí větší kontrolu nad procesu sestavení.
+Pro další postup pro použití ruční možnosti předkompilovaných hlaviček v projektu studovat mezi soubory pravidel v adresáři MFC\SRC, který se vytvoří během instalace výchozí sady Visual Studio. Tyto soubory pravidel trvat podobný přístup je uvedené v této části, ale větší využití maker Microsoft Program údržby Utility (NMAKE) a nabízí větší kontrolu nad procesu sestavení.
 
 ## <a name="pch-files-in-the-build-process"></a>Soubory PCH v procesu sestavení
 

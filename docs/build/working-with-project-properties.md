@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: ab5456bfc8a1b8305813f4ee4a4399091de15aee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8c15de43a3843b8ff12cb4ad3d951d76b90c039
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314062"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446193"
 ---
 # <a name="set-compiler-and-build-properties"></a>Nastavení kompilátoru a vlastnosti sestavení
 
@@ -23,7 +23,7 @@ V integrovaném vývojovém prostředí, všechny informace potřebné k sestave
 
 Při vytváření projektu systém přiřadí hodnoty pro různé vlastnosti. Výchozí hodnoty lišit v závislosti na typu projektu a jaké možnosti můžete vybrat v Průvodci vytvořením aplikace. Například projekt knihovny ATL má vlastnosti týkající se souborů MIDL, ale tyto chybí v základní Konzolová aplikace. Výchozí vlastnosti jsou uvedeny v podokně obecné na stránkách vlastností:
 
-![Visual C&#43; &#43; výchozích hodnot projektu](media/visual-c---project-defaults.png "výchozí nastavení projektu Visual C++")
+![Visual C&#43; &#43; výchozí nastavení projektu](media/visual-c---project-defaults.png "Visual C++ výchozích hodnot projektu")
 
 ## <a name="applying-properties-to-build-configurations-and-target-platforms"></a>Použití vlastnosti k vytvoření, konfigurace a cílové platformy
 
@@ -61,7 +61,7 @@ Možnosti kompilátoru a linkeru C++ jsou umístěny v **C/C++** a **Linkeru** u
 
 Nástroj MSBuild podporuje použití konstanty z doby kompilace označovány jako "makra" pro určité řetězcové hodnoty patří adresářů a cesty. Tyto jsou přístupné na stránkách vlastností, kde můžete odkazovat na a upravit pomocí [Editor vlastností](#property_editor). 
 
-Následující obrázek znázorňuje stránky vlastností projektu jazyka Visual C++. V levém podokně **adresáře VC ++** *pravidlo* je vybraná, a v pravém podokně je uveden seznam vlastností, které jsou spojeny s tímto pravidlem. `$(...)` Hodnoty jsou označovány jako *makra*. A *– makro* kompilace konstanta, která může odkazovat na hodnotu, která je definována pomocí sady Visual Studio nebo systém MSBuild, nebo hodnotu definovanou uživatelem. Pomocí makra namísto pevně definovaných hodnot, jako je například cesty k adresářům, můžete snadněji sdílet nastavení vlastností mezi počítači a mezi verzemi sady Visual Studio a lépe tak zajistit správnou funkci v účasti nastavení projektu [ dědičnost vlastnosti](project-property-inheritance.md). 
+Následující obrázek znázorňuje stránky vlastností pro Visual Studio C++ projektu. V levém podokně **adresáře VC ++** *pravidlo* je vybraná, a v pravém podokně je uveden seznam vlastností, které jsou spojeny s tímto pravidlem. `$(...)` Hodnoty jsou označovány jako *makra*. A *– makro* kompilace konstanta, která může odkazovat na hodnotu, která je definována pomocí sady Visual Studio nebo systém MSBuild, nebo hodnotu definovanou uživatelem. Pomocí makra namísto pevně definovaných hodnot, jako je například cesty k adresářům, můžete snadněji sdílet nastavení vlastností mezi počítači a mezi verzemi sady Visual Studio a lépe tak zajistit správnou funkci v účasti nastavení projektu [ dědičnost vlastnosti](project-property-inheritance.md). 
 
 ![Stránky vlastností projektu](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 

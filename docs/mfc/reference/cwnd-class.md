@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 493fe04f34f615d9113196e3db8bc744f420d4a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e88c375560c617e970c70adda245125ac8242ae4
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323470"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220354"
 ---
 # <a name="cwnd-class"></a>Třída CWnd
 
@@ -839,13 +839,13 @@ class CWnd : public CCmdTarget
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CWnd::CWnd](#cwnd)|Vytvoří `CWnd` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CWnd::accDoDefaultAction](#accdodefaultaction)|Volá se rozhraním provést výchozí akci objektu.|
 |[CWnd::accHitTest](#acchittest)|Volá se rozhraním, načtěte podřízený element nebo podřízený objekt v daném bodě na obrazovce.|
@@ -1088,7 +1088,7 @@ class CWnd : public CCmdTarget
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CWnd::Default](#default)|Volá výchozí proceduru okna, která poskytuje výchozí zpracování, které aplikace nezpracovává zprávy okna.|
 |[CWnd::DefWindowProc](#defwindowproc)|Volá výchozí proceduru okna, která poskytuje výchozí zpracování, které aplikace nezpracovává zprávy okna.|
@@ -1259,7 +1259,7 @@ class CWnd : public CCmdTarget
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CWnd::operator HWND](#operator_hwnd)|Volání za účelem získání popisovač okna.|
 |[CWnd::operator! =](#operator_neq)|Určuje, pokud okno není stejný jako okno, jehož popisovač je [m_hWnd](#m_hwnd).|
@@ -1267,7 +1267,7 @@ class CWnd : public CCmdTarget
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CWnd::m_hWnd](#m_hwnd)|Označuje HWND připojených k tomuto `CWnd`.|
 
@@ -6127,7 +6127,7 @@ Obsahuje počet opakování, kolikrát stisk klávesy se opakuje, když uživate
 *nFlags*<br/>
 Obsahuje kontroly kódu, přechod klíče kódu, předchozí stav klíčů a kód kontextu, jak je znázorněno v následujícím seznamu:
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
 |0-15|Určuje počet opakování. Hodnota je počet průchodů stisknutí klávesy se opakuje v důsledku uživatele podržíte klávesu.|
 |16-23|Určuje kód kontroly. Hodnota závisí na výrobce OEM (OEM)|
@@ -7386,7 +7386,7 @@ Určuje virtuální kód zadaný klíč. Seznam kódů standardní virtuální k
 *nFlags*<br/>
 Určuje kontroly kódu, přechod klíče kódu, předchozí stav klíčů a kód kontextu, jak je znázorněno v následujícím seznamu:
 
-|Value|Popis|
+|Hodnota|Popis|
 |-----------|-----------------|
 |0-7|Naskenujte kód (OEM závislé hodnoty).|
 |8|Rozšířené klíč, jako je například funkční klávesy nebo klávesy na numerické klávesnici (1, pokud je rozšířené klíč).|
@@ -8262,7 +8262,7 @@ Obsahuje souřadnic x a y-kurzoru. Tyto souřadnice jsou vždy souřadnice obraz
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden z spuštění testu myši výčtových hodnot uvedených níže.
+Jeden z spuštění testu myši hodnot výčtu. Zobrazit [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) seznam hodnot.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -8282,7 +8282,7 @@ afx_msg void OnNcLButtonDblClk(
 ### <a name="parameters"></a>Parametry
 
 *nHitTest*<br/>
-Určuje, [kód pro spuštění testu](#onnchittest). Ověření pozice je test, který určuje umístění kurzoru.
+Určuje, [kód pro spuštění testu](#onnchittest). Ověření pozice je test, který určuje umístění kurzoru. Zobrazit [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) seznam hodnot.
 
 *point*<br/>
 Určuje `CPoint` objekt, který obsahuje x a y pozice kurzoru souřadnice obrazovky. Tyto souřadnice jsou vždy relativní k levého horního rohu obrazovky.
@@ -8307,7 +8307,7 @@ afx_msg void OnNcLButtonDown(
 ### <a name="parameters"></a>Parametry
 
 *nHitTest*<br/>
-Určuje, [kód pro spuštění testu](#onnchittest). Ověření pozice je test, který určuje umístění kurzoru.
+Určuje, [kód pro spuštění testu](#onnchittest). Ověření pozice je test, který určuje umístění kurzoru. Zobrazit [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) seznam hodnot.
 
 *point*<br/>
 Určuje `CPoint` objekt, který obsahuje x a y pozice kurzoru souřadnice obrazovky. Tyto souřadnice jsou vždy relativní k levého horního rohu obrazovky.
@@ -8332,7 +8332,7 @@ afx_msg void OnNcLButtonUp(
 ### <a name="parameters"></a>Parametry
 
 *nHitTest*<br/>
-Určuje, [kód pro spuštění testu](#onnchittest). Ověření pozice je test, který určuje umístění kurzoru.
+Určuje, [kód pro spuštění testu](#onnchittest). Ověření pozice je test, který určuje umístění kurzoru. Zobrazit [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) seznam hodnot.
 
 *point*<br/>
 Určuje `CPoint` objekt, který obsahuje x a y pozice kurzoru souřadnice obrazovky. Tyto souřadnice jsou vždy relativní k levého horního rohu obrazovky.
@@ -9648,7 +9648,7 @@ Určuje počet opakování.
 *nFlags*<br/>
 Určuje kontroly kódu, přechod klíče kódu, předchozí stav klíčů a kód kontextu, jak je znázorněno v následujícím seznamu:
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |0-7|Naskenujte kód (OEM závislé hodnoty). Nižší bajt vyšší řád slova.|
 |8|Rozšířené klíč, jako je například funkční klávesy nebo klávesy na numerické klávesnici (1, pokud je rozšířené klíč; jinak 0).|
@@ -9734,7 +9734,7 @@ Určuje počet opakování.
 *nFlags*<br/>
 Určuje kontroly kódu, přechod klíče kódu, předchozí stav klíčů a kód kontextu, jak je znázorněno v následujícím seznamu:
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
 |0-7|Naskenujte kód (OEM závislé hodnoty). Nižší bajt vyšší řád slova.|
 |8|Rozšířené klíč, jako je například funkční klávesy nebo klávesy na numerické klávesnici (1, pokud je rozšířené klíč; jinak 0).|

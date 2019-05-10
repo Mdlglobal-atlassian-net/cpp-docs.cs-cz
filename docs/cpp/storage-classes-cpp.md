@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: e50e5da5ea24d59131f123bb0c772897f9a30218
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92435b2bab670dd366f26c981443e98e4a4e3c29
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266930"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221995"
 ---
 # <a name="storage-classes-c"></a>Třídy úložiště (C++)
 
@@ -24,7 +24,7 @@ A *třídu úložiště* deklarace proměnných v rámci jazyka C++ je specifik�
 
 1. [Proměnlivé](../cpp/mutable-data-members-cpp.md) – klíčové slovo lze považovat za specifikátor paměťové třídy. Je však pouze k dispozici v sezamu členů definice třídy.
 
-1. **Visual C++ 2010 nebo novějším:** **Automaticky** – klíčové slovo již není specifikátorem třídy úložiště jazyka C++ a **zaregistrovat** – klíčové slovo je zastaralý. **Visual Studio 2017 verze 15.7 nebo novější:** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **Zaregistrovat** – klíčové slovo se odebere z jazyka C++.
+1. **Visual Studio 2010 a novější:** **Automaticky** – klíčové slovo již není specifikátorem třídy úložiště jazyka C++ a **zaregistrovat** – klíčové slovo je zastaralý. **Visual Studio 2017 verze 15.7 nebo novější:** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **Zaregistrovat** – klíčové slovo se odebere z jazyka C++.
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class

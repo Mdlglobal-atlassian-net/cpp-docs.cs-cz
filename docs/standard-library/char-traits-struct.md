@@ -1,6 +1,6 @@
 ---
 title: char_traits – struktura
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - iosfwd/std::char_traits
 - iosfwd/std::char_traits::char_type
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - char_traits struct
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
-ms.openlocfilehash: 2975c839e07093a22d910f295be730fdd68839cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 541f468071e315b205abb8f7b9c865f045c510fe
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379438"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220521"
 ---
 # <a name="chartraits-struct"></a>char_traits – struktura
 
@@ -384,7 +384,7 @@ Znak EOF.
 
 Hodnota, která představuje konec souboru (například znak konce souboru nebo WEOF).
 
-Standardní C++ stavy, které tato hodnota nesmí odpovídat platné `char_type` hodnotu. Vizuál C++ kompilátor vynucuje toto omezení pro typ **char**, ale ne pro typ **wchar_t**. To zachycuje níže uvedený příklad.
+Standardní C++ stavy, které tato hodnota nesmí odpovídat platné `char_type` hodnotu. Microsoft C++ kompilátor vynucuje toto omezení pro typ **char**, ale ne pro typ **wchar_t**. To zachycuje níže uvedený příklad.
 
 ### <a name="example"></a>Příklad
 

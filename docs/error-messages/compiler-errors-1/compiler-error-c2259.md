@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2259
 ms.assetid: e458236f-bdea-4786-9aa6-a98d8bffa5f4
-ms.openlocfilehash: 0310f20854185a6f8a5ccb0ce7b087c4d7c5f29d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 562882f50edfe2d44ab1f08ee9dbe88fe468af63
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387068"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447378"
 ---
 # <a name="compiler-error-c2259"></a>Compiler Error C2259
 
@@ -50,7 +50,7 @@ Existují dvě možná řešení problému:
 
 - Přiřaďte název implementované metody k názvu rozhraní použitím operátoru vyhodnocení rozsahu pro metody rozhraní implementované v odvozené třídě.
 
-C2259 může dojít v důsledku prací, které bylo provedeno ve Vizuálu C++ 2005, **/Zc: wchar_t** je teď ve výchozím. V takovém případě může být C2599 vyřešit buď kompilací s **/Zc:wchar_t-**, chcete-li získat chování z předchozích verzí, nebo lépe aktualizací typů tak, aby byly kompatibilní. Další informace najdete v tématu [/Zc: wchar_t (wchar_t je nativní typ)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+C2259 může dojít v důsledku prací, které bylo provedeno v sadě Visual Studio 2005 **/Zc: wchar_t** je teď ve výchozím. V takovém případě může být C2599 vyřešit buď kompilací s **/Zc:wchar_t-**, chcete-li získat chování z předchozích verzí, nebo lépe aktualizací typů tak, aby byly kompatibilní. Další informace najdete v tématu [/Zc: wchar_t (wchar_t je nativní typ)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 Následující ukázka generuje C2259:
 

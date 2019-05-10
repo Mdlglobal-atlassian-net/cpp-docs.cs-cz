@@ -4,14 +4,14 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - verifiable assemblies [C++], creating
 - conversions, C++ projects
-- Visual C++ projects
+- Visual Studio C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
-ms.openlocfilehash: de3742717bf55c53ab4007aaed18b6ce687fbede
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0784e6f202750e846c75434eef62a12dab3952f1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387451"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448108"
 ---
 # <a name="how-to-create-verifiable-c-projects-ccli"></a>Postupy: Vytvoření ověřitelných C++ projekty (C++vyhodnocovací)
 
@@ -20,7 +20,7 @@ Průvodci aplikací Visual C++ Vytvoření ověřitelných projektů.
 > [!IMPORTANT]
 > Zastaralé Visual Studio 2015 a Visual Studio 2017 se nepodporuje **/CLR: pure** a **/CLR: safe** Vytvoření ověřitelných projektů. Pokud budete potřebovat ověřitelný kód, doporučujeme že překlad kódu jazyka C#.
 
-Ale pokud používáte starší verzi sady nástrojů kompilátoru Visual C++, který podporuje **/CLR: pure** a **/CLR: safe**, projekty lze převést na být možné ověřit. Toto téma popisuje, jak nastavit vlastnosti projektu a upravte zdrojové soubory projektu transformovat vaše projekty Visual C++ k vytvoření ověřitelných aplikací.
+Ale pokud používáte starší verzi agenta Microsoft C++ sada nástrojů kompilátoru, který podporuje **/CLR: pure** a **/CLR: safe**, projekty lze převést na být možné ověřit. Toto téma popisuje, jak nastavit vlastnosti projektu a upravte zdrojové soubory projektu pro Visual Studio transformaci C++ projekty vytvářet ověřitelný aplikace.
 
 ## <a name="compiler-and-linker-settings"></a>Nastavení kompilátoru a linkeru
 

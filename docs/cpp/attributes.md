@@ -1,13 +1,13 @@
 ---
 title: Atributy v jazyce C++
-ms.date: 06/01/2018
+ms.date: 05/06/2019
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: 81de2816c208d5ddc879f04d70912c3dddcd7832
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc92e5f3e279edc6fbea7f99d52c469f9fdf04f8
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284744"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222301"
 ---
 # <a name="attributes-in-c"></a>Atributy v jazyce C++
 
@@ -41,7 +41,7 @@ Atributy představují standardizované alternativou k rozšíření specifické
 
 - `[[deprecated]]` **Visual Studio 2015 a novější:** Určuje, že funkce není určena pro použití a nemusí existovat v budoucích verzích rozhraní knihovny. Kompilátor může být využit k vygenerování informační zpráva, když kód klienta se pokusí o volání funkce. Můžete použít k deklaraci třídy, název typedef, proměnné, nestatický datový člen, funkce, obor názvů, výčtu, enumerátor nebo specializace šablony.
 
-- `[[fallthrough]]` **Visual Studio 2017 a novější:** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` atribut lze použít v kontextu [přepnout](switch-statement-cpp.md) příkazy jako Nápověda pro kompilátor (nebo každému, kdo čte kód), která je určena fallthrough chování. Kompilátor Visual C++ aktuálně neupozorňuje fallthrough chování, takže tento atribut nemá žádný účinek chování kompilátoru.
+- `[[fallthrough]]` **Visual Studio 2017 a novější:** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` atribut lze použít v kontextu [přepnout](switch-statement-cpp.md) příkazy jako Nápověda pro kompilátor (nebo každému, kdo čte kód), která je určena fallthrough chování. Microsoft C++ kompilátor aktuálně nevyvolá upozornění na fallthrough chování, takže tento atribut nemá žádný účinek chování kompilátoru.
 
 - `[[nodiscard]]` **Visual Studio 2017 verze 15.3 nebo novější:** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) určuje, že návratová hodnota funkce není určena pro zahodí. Vyvolá upozornění C4834, jak je znázorněno v tomto příkladu:
 

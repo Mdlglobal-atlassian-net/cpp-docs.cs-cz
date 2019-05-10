@@ -8,25 +8,25 @@ helpviewer_keywords:
 - projects [C++], types
 - templates [C++], projects
 - applications [C++], projects
-- Visual C++ projects, types
+- C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: cac194ed2c830541711161dc139a42ed0529340f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dce96a221804e5538929d63fa3c125a27e7fc36d
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316753"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217773"
 ---
 # <a name="c-project-templates"></a>Šablony projektů C++
 
-Šablony projektů sady Visual Studio generování souborů se zdrojovým kódem, možnosti kompilátoru, nabídky, panely nástrojů, ikony, odkazy, a `#include` příkazy, které jsou vhodné pro typ projektu chcete vytvořit. Visual Studio obsahuje několik druhů šablony projektů Visual C++ a poskytuje průvodce pro mnoho z nich tak, aby vaše projekty můžete přizpůsobit podle jejich vytvoření. Ihned po vytvoření projektu lze sestavit a spustit aplikaci. je dobrým zvykem přerušovaně sestavení při vývoji vaší aplikace.
+Šablony projektů sady Visual Studio generování souborů se zdrojovým kódem, možnosti kompilátoru, nabídky, panely nástrojů, ikony, odkazy, a `#include` příkazy, které jsou vhodné pro typ projektu chcete vytvořit. Visual Studio obsahuje několik typů z C++ šablony projektů a poskytuje průvodce pro mnoho z nich tak, aby vaše projekty můžete přizpůsobit podle jejich vytvoření. Ihned po vytvoření projektu lze sestavit a spustit aplikaci. je dobrým zvykem přerušovaně sestavení při vývoji vaší aplikace.
 
 > [!NOTE]
 > Vytvořte projekt jazyka C pomocí šablon projektů jazyka C++. V generovaném projektu, vyhledejte soubory, které mají .cpp příponu názvu souboru a změňte ji na. c. Potom na **vlastnosti projektu** stránce projektu (ne pro řešení), rozbalte **vlastnosti konfigurace**, **C/C++** a vyberte **Upřesnit**. Změnit **zkompilovat jako** nastavení **kompilovat jako kód jazyka C (/ TC)**.
 
 ## <a name="project-templates"></a>Šablony projektů
 
-Šablony projektů, které jsou součástí sady Visual Studio závisí na verzi produktu a úlohy, které jste nainstalovali. Pokud jste nainstalovali vývoj desktopových aplikací pomocí úlohy pro C++, Visual Studio obsahuje tyto šablony projektů Visual C++.
+Šablony projektů, které jsou součástí sady Visual Studio závisí na verzi produktu a úlohy, které jste nainstalovali. Pokud jste nainstalovali vývoj desktopových aplikací pomocí C++ má úloha, sada Visual Studio, tyto C++ šablony projektu.
 
 ### <a name="windows-desktop"></a>Plocha Windows
 

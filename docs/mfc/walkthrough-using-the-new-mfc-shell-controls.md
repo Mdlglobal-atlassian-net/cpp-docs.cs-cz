@@ -1,15 +1,15 @@
 ---
 title: 'Návod: Použití nových ovládacích prvků prostředí MFC'
-ms.date: 09/20/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
-ms.openlocfilehash: ef0e4856a844503f8d13b7b6ed37318b76b6af69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: b75568c0207dc004bbdb919427e4f3f6860c4a81
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358174"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558132"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Návod: Použití nových ovládacích prvků prostředí MFC
 
@@ -17,31 +17,71 @@ V tomto návodu vytvoříte aplikaci, která se podobá Průzkumníku souborů. 
 
 ## <a name="prerequisites"></a>Požadavky
 
-Tento názorný průvodce předpokládá, že jste nastavili sady Visual Studio, používat **obecným vývojovým nastavením**. Pokud používáte jiný vývojářský nastavení, některé okna sady Visual Studio, které používáme v tomto názorném postupu nemusí být zobrazeny ve výchozím nastavení.
+- V sadě Visual Studio 2017 nebo novější podporu knihovny MFC je jako volitelná součást. Ho Pokud chcete nainstalovat, spusťte instalační program sady Visual Studio v nabídce Windows Start. Zjistěte verzi aplikace Visual Studio používáte a zvolte **změnit** tlačítko. Ujistěte se, **Desktop Development with C++**  je zaškrtnuté políčko vedle sebe. V části **volitelné součásti**, zkontrolujte **podpory knihovny MFC** tlačítko.
 
-### <a name="to-create-a-new-mfc-application-by-using-the-mfc-application-wizard"></a>Chcete-li vytvořit novou aplikaci knihovny MFC pomocí Průvodce aplikací MFC
+- Tento názorný průvodce předpokládá, že jste nastavili sady Visual Studio, používat **obecným vývojovým nastavením**. Pokud používáte jiný vývojářský nastavení, některé okna sady Visual Studio, které používáme v tomto názorném postupu nemusí být zobrazeny ve výchozím nastavení.
+
+## <a name="to-create-a-new-mfc-application-by-using-the-mfc-application-wizard"></a>Chcete-li vytvořit novou aplikaci knihovny MFC pomocí Průvodce aplikací MFC
+
+Tyto kroky se liší v závislosti na tom, kterou verzi sady Visual Studio, kterou používáte. Ujistěte se, že se že volič verze v levé horní části této stránky jsou správně nastavena.
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-an-mfc-project-in-visual-studio-2019"></a>Vytvoření projektu knihovny MFC v aplikaci Visual Studio 2019
+
+1. V hlavní nabídce zvolte **souboru** > **nový** > **projektu** otevřít **vytvořte nový projekt** dialogového okna pole.
+
+1. Do vyhledávacího pole v horní části, zadejte **MFC** a klikněte na tlačítko **aplikace knihovny MFC** ze seznamu výsledků. 
+
+1. Klikněte na **Další**. Na další stránce zadejte název projektu a zadejte umístění projektu, v případě potřeby.
+
+1. Zvolte **vytvořit** tlačítko pro vytvoření projektu.
+
+   Po **Průvodce aplikací knihovny MFC** zobrazí, pomocí následujících možností:
+ 
+   1. Zvolte **typ aplikace** na levé straně. Potom vyberte **jednotlivý dokument** a vyberte **podpora architektury Document/View**. V části **projektu styl**vyberte **sady Visual Studio**a od **vizuální styl a barvy** rozevíracím seznamu vyberte **Office 2007 (modrý motiv)**.
+
+   1. Na **Podpora složených dokumentů** vyberte **žádný**.
+
+   1. Neprovádějte žádné změny k **vlastnosti šablony dokumentu** podokně.
+
+   1. Na **funkce uživatelského rozhraní** podokno, ujistěte se, že **použít řádek nabídek a panelů nástrojů** je vybraná možnost. Nechte ostatní možnosti, jak jsou.
+
+   1. Na **rozšířené funkce** vyberte **ovládací prvky ActiveX**, **běžné Manifest ovládacího prvku**, a **navigačním podokně** možnost. Vše ostatní ponechejte, protože se jedná. **Navigačním podokně** možnost způsobí, že průvodce vytvoří v podokně nalevo od okna s `CMFCShellTreeCtrl` již vložen.
+
+   1. Nebudeme žádné změny k **třídy generované v** podokně, klikněte na tlačítko Ano **Dokončit** k vytvoření nového projektu knihovny MFC.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-create-an-mfc-project-in-visual-studio-2017-or-earlier"></a>Vytvoření projektu knihovny MFC v sadě Visual Studio 2017 nebo starší
 
 1. Použití **Průvodce aplikací knihovny MFC** k vytvoření nové aplikace knihovny MFC. Chcete-li spustit průvodce, ze **souboru** nabídky vyberte možnost **nový**a pak vyberte **projektu**. **Nový projekt** se zobrazí dialogové okno.
 
-1. V **nový projekt** dialogového okna rozbalte **Visual C++** uzlu v **typy projektů** podokně a vyberte **MFC**. Potom v **šablony** vyberte **aplikace knihovny MFC**. Zadejte název projektu, například `MFCShellControls` a klikněte na tlačítko **OK**. Po **Průvodce aplikací knihovny MFC** zobrazí, pomocí následujících možností:
+1. V **nový projekt** dialogového okna rozbalte **Visual C++** uzlu v **typy projektů** podokně a vyberte **MFC**. Potom v **šablony** vyberte **aplikace knihovny MFC**. Zadejte název projektu, například `MFCShellControls` a klikněte na tlačítko **OK**. 
 
-    1. Na **typ aplikace** podokně v části **typ aplikace**, zrušte zaškrtnutí políčka **dokumenty na kartách** možnost. V dalším kroku vyberte **jednotlivý dokument** a vyberte **podpora architektury Document/View**. V části **projektu styl**vyberte **sady Visual Studio**a od **vizuální styl a barvy** rozevíracím seznamu vyberte **Office 2007 (modrý motiv)**.
+   Po **Průvodce aplikací knihovny MFC** zobrazí, pomocí následujících možností:
 
-    1. Na **Podpora složených dokumentů** vyberte **žádný**.
+   1. Na **typ aplikace** podokně v části **typ aplikace**, zrušte zaškrtnutí políčka **dokumenty na kartách** možnost. V dalším kroku vyberte **jednotlivý dokument** a vyberte **podpora architektury Document/View**. V části **projektu styl**vyberte **sady Visual Studio**a od **vizuální styl a barvy** rozevíracím seznamu vyberte **Office 2007 (modrý motiv)**.
 
-    1. Neprovádějte žádné změny k **řetězce šablony dokumentu** podokně.
+   1. Na **Podpora složených dokumentů** vyberte **žádný**.
 
-    1. Na **Podpora databáze** podokně (Visual Studio 2015 a starší), vyberte **žádný** vzhledem k tomu, že aplikace nepoužívá databázi.
+   1. Neprovádějte žádné změny k **řetězce šablony dokumentu** podokně.
 
-    1. Na **funkce uživatelského rozhraní** podokno, ujistěte se, že **použít řádek nabídek a panelů nástrojů** je vybraná možnost. Nechte ostatní možnosti, jak jsou.
+   1. Na **Podpora databáze** podokně (Visual Studio 2015 a starší), vyberte **žádný** vzhledem k tomu, že aplikace nepoužívá databázi.
 
-    1. Na **rozšířené funkce** podokně v části **pokročilé funkce**, vyberte pouze **ovládací prvky ActiveX** a **běžné Manifest ovládacího prvku**. V části **rozšířená podokna rámců**, vyberte pouze **navigačním podokně** možnost. To způsobí, že průvodce vytvoří v podokně nalevo od okna s `CMFCShellTreeCtrl` již vložen.
+   1. Na **funkce uživatelského rozhraní** podokno, ujistěte se, že **použít řádek nabídek a panelů nástrojů** je vybraná možnost. Nechte ostatní možnosti, jak jsou.
 
-    1. Nebudeme žádné změny k **třídy generované v** podokně, klikněte na tlačítko Ano **Dokončit** k vytvoření nového projektu knihovny MFC.
+   1. Na **rozšířené funkce** podokně v části **pokročilé funkce**, vyberte pouze **ovládací prvky ActiveX** a **běžné Manifest ovládacího prvku**. V části **rozšířená podokna rámců**, vyberte pouze **navigačním podokně** možnost. To způsobí, že průvodce vytvoří v podokně nalevo od okna s `CMFCShellTreeCtrl` již vložen.
 
-1. Ověřte, že aplikace úspěšně vytvořil sestavováním a spouštěním ho. Jak vytvořit aplikaci, ze **sestavení** nabídky vyberte možnost **sestavit řešení**. Je-li aplikace sestavena úspěšně, spusťte aplikaci tak, že vyberete **spustit ladění** z **ladění** nabídky.
+   1. Nebudeme žádné změny k **třídy generované v** podokně, klikněte na tlačítko Ano **Dokončit** k vytvoření nového projektu knihovny MFC.
 
-   Průvodce automaticky vytvoří aplikaci, která má standardní nabídek, standardním panelu nástrojů, standardní stavového řádku a panel aplikace Outlook k levému okraji okna s **složky** zobrazení a **kalendáře** zobrazení .
+::: moniker-end
+
+Ověřte, že aplikace úspěšně vytvořil sestavováním a spouštěním ho. Jak vytvořit aplikaci, ze **sestavení** nabídky vyberte možnost **sestavit řešení**. Je-li aplikace sestavena úspěšně, spusťte aplikaci tak, že vyberete **spustit ladění** z **ladění** nabídky.
+
+Průvodce automaticky vytvoří aplikaci, která má standardní nabídek, standardním panelu nástrojů, standardní stavového řádku a panel aplikace Outlook k levému okraji okna s **složky** zobrazení a **kalendáře** zobrazení .
 
 ### <a name="to-add-the-shell-list-control-to-the-document-view"></a>Chcete-li přidat ovládací prvek seznamu prostředí na zobrazení dokumentu
 
@@ -90,7 +130,7 @@ Tento názorný průvodce předpokládá, že jste nastavili sady Visual Studio,
 
 1. Nyní aktualizujeme `CMFCShellControlsView` třídy pro zpracování `WM_CREATE` zpráv systému windows. Otevřít **zobrazení tříd** okna a vyberte `CMFCShellControlsView` třídy. Klikněte pravým tlačítkem a vyberte **vlastnosti**.
 
-    Vedle **vlastnosti** okna, klikněte na tlačítko **zprávy** ikonu. Posuňte se dolů, dokud nenajdete `WM_CREATE` zprávy. Z rozevíracího seznamu vedle položky `WM_CREATE`vyberte  **\<Přidat > OnCreate**. Příkaz vytvoří obslužné rutiny zpráv pro nás a automaticky aktualizuje mapování zpráv knihovny MFC.
+   Vedle **vlastnosti** okna, klikněte na tlačítko **zprávy** ikonu. Posuňte se dolů, dokud nenajdete `WM_CREATE` zprávy. Z rozevíracího seznamu vedle položky `WM_CREATE`vyberte  **\<Přidat > OnCreate**. Příkaz vytvoří obslužné rutiny zpráv pro nás a automaticky aktualizuje mapování zpráv knihovny MFC.
 
    V `OnCreate` metoda, vytvoříme teď naše `CMFCShellListCtrl` objektu. Najít `OnCreate` definici metody v MFCShellControlsView.cpp zdrojového souboru a jeho implementace nahraďte následujícím kódem:
 

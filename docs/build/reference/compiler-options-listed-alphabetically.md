@@ -1,14 +1,14 @@
 ---
 title: Možnosti kompilátoru (abecední pořadí)
-ms.date: 04/08/2019
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: d8ab1cbac7ad8eb44f16c7829ccac20a6d3e73ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba4357f4c14e5cca9363ad2029374ede93529a2a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272331"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221774"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Možnosti kompilátoru (abecední pořadí)
 
@@ -34,7 +34,7 @@ Následuje úplný abecední seznam – možnosti kompilátoru. Seznam kategori�
 |[/E](e-preprocess-to-stdout.md)|Zkopíruje výstup předzpracování do standardního výstupu.|
 |[/EH](eh-exception-handling-model.md)|Určuje model zpracování výjimek.|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Zkopíruje výstup předzpracování do standardního výstupu.|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|Umožňuje poskytnout kompilátoru informace o chybě (ICE) přímo do týmu Visual C++.|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)|Umožňuje poskytnout informace o kompilátoru vnitřní chybě (ICE) přímo do Microsoft C++ týmu.|
 |[/execution-charset](execution-charset-set-execution-character-set.md)|Nastavení znakové sady spuštění.|
 |[/F](f-set-stack-size.md)|Nastaví velikost zásobníku.|
 |[/ favor](favor-optimize-for-architecture-specifics.md)|Vytvoří kód, který je optimalizovaný pro konkrétní x64 architekturu nebo pro konkrétní micro architektury v AMD64, tak i Extended Memory 64 (EM64T) technologie architektury.|
@@ -153,7 +153,7 @@ Následuje úplný abecední seznam – možnosti kompilátoru. Seznam kategori�
 |[/Zc](zc-conformance.md)|Určí obvyklé chování pod [/Ze](za-ze-disable-language-extensions.md).[ / Za, /Ze (zakázání jazykových rozšíření)](za-ze-disable-language-extensions.md)|
 |[/Ze](za-ze-disable-language-extensions.md)|Zastaralé Povolí jazyková rozšíření.|
 |[/Zf](zf.md)|Zlepšuje PDB generování dobu v paralelních sestaveních.|
-|[/Zg](zg-generate-function-prototypes.md)|Odebrat v sadě Visual C++ 2015. Vytvoří prototypy funkcí.|
+|[/Zg](zg-generate-function-prototypes.md)|Odebrat v sadě Visual Studio 2015. Vytvoří prototypy funkcí.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Obsahuje informace o ladění v databázi programu, který je kompatibilní s upravit a pokračovat.|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Generuje úplné ladicí informace.|
 |[/Zl](zl-omit-default-library-name.md)|Odstraní výchozí název knihovny ze souboru .obj (pouze x86).|

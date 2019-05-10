@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2299
 ms.assetid: d001c2bc-f6fd-47aa-8e42-0eb824d6441d
-ms.openlocfilehash: 4776ddede31dbcebe56a5919fd111f4df7248215
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39659baebf7dc1859a69021f60ed452964ae61af
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182688"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447955"
 ---
 # <a name="compiler-error-c2299"></a>Compiler Error C2299
 
 'function': Změna chování: explicitní specializace nemůže být kopírovací konstuktor ani operátor copy assignment
 
-Tato chyba může být také generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual C++ 2005: předchozí verze aplikace Visual C++ explicitní specializace povolená pro kopírovací konstuktor ani operátor přiřazení kopie.
+Tato chyba může být také generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual Studio 2005: předchozí verze vizuálu C++ explicitní specializace povolená pro kopírovací konstruktor a operátor přiřazení kopie.
 
 Chcete-li vyřešit C2299, Nedovolte, aby byly kopírovací konstruktor nebo operátor přiřazení šablony funkce, ale spíše nešablonové funkce, která přebírá typ třídy. Veškerý kód, který volá kopírovací konstuktor ani operátor přiřazení explicitním zadáním argumentů šablony musí odebrat argumenty šablony.
 

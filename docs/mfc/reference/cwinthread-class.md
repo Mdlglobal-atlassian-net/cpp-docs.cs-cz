@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 0e02f123580696519e59d828ec590456cbd2a81c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f17561941d785e5eb7b5fd8c52ab452aa6369e7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323278"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220410"
 ---
 # <a name="cwinthread-class"></a>CWinThread – třída
 
@@ -71,13 +71,13 @@ class CWinThread : public CCmdTarget
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CWinThread::CWinThread](#cwinthread)|Vytvoří `CWinThread` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CWinThread::CreateThread](#createthread)|Spustí provádění `CWinThread` objektu.|
 |[CWinThread::ExitInstance](#exitinstance)|Přepsání nastavení za účelem vyčištění při ukončení vašeho vlákna.|
@@ -98,13 +98,13 @@ class CWinThread : public CCmdTarget
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CWinThread::operator POPISOVAČ](#operator_handle)|Načte popisovač `CWinThread` objektu.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CWinThread::m_bAutoDelete](#m_bautodelete)|Určuje, jestli se má zničit objekt při ukončení vlákna.|
 |[CWinThread::m_hThread](#m_hthread)|Zpracování pro aktuální vlákno.|
@@ -311,7 +311,7 @@ BOOL m_bAutoDelete;
 
 `m_bAutoDelete` Datový člen je veřejná proměnná typu BOOL.
 
-Hodnota `m_bAutoDelete` neovlivní způsob uzavření podkladového popisovač vlákna. Popisovač vlákna je vždy uzavřen, když `CWinThread` objekt zničen.
+Hodnota `m_bAutoDelete` neovlivní způsob uzavření podkladového popisovač vlákna, ale neovlivní časování uzavření popisovače. Popisovač vlákna je vždy uzavřen, když `CWinThread` objekt zničen.
 
 ##  <a name="m_hthread"></a>  CWinThread::m_hThread
 
@@ -323,7 +323,9 @@ HANDLE m_hThread;
 
 ### <a name="remarks"></a>Poznámky
 
-`m_hThread` Datový člen je veřejná proměnná typu POPISOVAČ. Je platný jenom pokud podkladové vlákno aktuálně existuje.
+`m_hThread` Datový člen je veřejná proměnná typu POPISOVAČ. Platí pouze pokud podkladový objekt vlákna jádra aktuálně existuje a je popisovač ještě nebyly uzavřeny.
+
+CWinThread – destruktor volá CloseHandle `m_hThread`. Pokud [m_bAutoDelete](#m_bautodelete) je hodnotu PRAVDA, pokud se vlákno ukončí, CWinThread objekt je zničen, která zneplatní všechny ukazatele na objekt CWinThread a její členské proměnné. Možná bude nutné `m_hThread` člen ke kontrole hodnoty ukončení vlákna, nebo k čekání na signál. Aby objekt CWinThread a jeho `m_hThread` člena během provádění vlákna a po jeho ukončení `m_bAutoDelete` na hodnotu FALSE, než bude umožněno pokračovat v provádění vlákna. V opačném případě vlákno může ukončit zničit objekt CWinThread a zavřít popisovač, než se pokusíte použít. Pokud použijete tento postup, zodpovídáte za odstranění CWinThread objektu.
 
 ##  <a name="m_nthreadid"></a>  CWinThread::m_nThreadID
 
@@ -335,7 +337,8 @@ DWORD m_nThreadID;
 
 ### <a name="remarks"></a>Poznámky
 
-`m_nThreadID` Datový člen je veřejná proměnná typu DWORD. Je platný jenom pokud podkladové vlákno aktuálně existuje.
+`m_nThreadID` Datový člen je veřejná proměnná typu DWORD. Platí pouze pokud podkladový objekt vlákna jádra aktuálně existuje.
+Také zobrazit poznámky o [m_hThread](#m_hthread) životnost.
 
 ### <a name="example"></a>Příklad
 

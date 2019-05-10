@@ -1,43 +1,76 @@
 ---
 title: Kompilovat C++vyhodnocovací programu CLR
-ms.date: 09/17/2018
+description: Použijte Microsoft C++ k vytvoření programů a knihoven, které se můžete připojit nativní C++ kódu a programy .NET.
+ms.date: 04/23/2019
 helpviewer_keywords:
 - command-line applications [C++], managed code
 - compiling programs [C++]
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: fcac0079185b6ceef981b9acfeb555ef29d464e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 8462b2b031bdcdebf65d58974c521d80e57d856d
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384397"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221804"
 ---
 # <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Návod: Kompilovat C++vyhodnocovací programu CLR v sadě Visual Studio
 
-S použitím C++/jazyková rozšíření rozhraní příkazového řádku můžete vytvářet C++ programy, které používají třídy .NET a kompilovat s použitím vývojového prostředí sady Visual Studio.
+S použitím C++/rozhraní příkazového řádku můžete vytvářet C++ programy, které používají třídy rozhraní .NET, stejně jako nativní C++ typy. C++/ CLI je určena pro použití v konzolových aplikací a knihoven DLL, které balí nativní C++ kódu a zpřístupněte ho z aplikací .NET. Chcete-li vytvořit uživatelské rozhraní Windows založené na rozhraní .NET, použijte C# nebo Visual Basic. 
 
 Tento postup můžete zadat vlastní program C++ nebo použijte jednu z ukázkových programů. Ukázkový program, který používáme v tomto postupu vytváří textový soubor s názvem textfile.txt a uloží jej do adresáře projektu.
 
 ## <a name="prerequisites"></a>Požadavky
 
-Tato témata se předpokládá, že chápete základy jazyka C++.
+- Porozumění základům jazyka C++.
+- V sadě Visual Studio 2017 nebo novější C++/podpora rozhraní příkazového řádku je jako volitelná součást. Chcete-li ji nainstalovat, otevřete **instalační program sady Visual Studio** v nabídce Windows Start. Ujistěte se, že **vývoj desktopových aplikací pomocí C++**  dlaždice je zaškrtnuto a **volitelné** sekci součásti také zkontrolujte,  **C++podpora rozhraní příkazového řádku**.
 
-### <a name="to-create-a-new-project-in-visual-studio-and-add-a-new-source-file"></a>Vytvoření nového projektu v sadě Visual Studio a přidání nového zdrojového souboru
+## <a name="create-a-new-project"></a>Vytvoření nového projektu
+
+Následující postup se liší v závislosti na tom, kterou verzi sady Visual Studio, kterou používáte. Ujistěte se, že se že volič verze v levé horní části této stránky jsou správně nastavena.
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-ccli-project-in-visual-studio-2019"></a>Chcete-li vytvořit C++vyhodnocovací projektu v aplikaci Visual Studio 2019
+
+1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na horní části otevřete **vytvořte nový projekt** dialogové okno.
+
+1. V horní části dialogového okna zadejte **CLR** do vyhledávacího pole a klikněte na tlačítko **prázdný projekt CLR** ze seznamu výsledků. 
+
+1. Zvolte **vytvořit** tlačítko pro vytvoření projektu.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+### <a name="to-create-a-ccli-project-in-visual-studio-2017"></a>Chcete-li vytvořit C++vyhodnocovací projektu v sadě Visual Studio 2017
 
 1. Vytvořte nový projekt. Na **souboru** nabídky, přejděte k **nový**a potom klikněte na tlačítko **projektu**.
 
 1. Typy projektů jazyka Visual C++, klikněte na **CLR**a potom klikněte na tlačítko **prázdný projekt CLR**.
 
-   > [!NOTE]
-   > Pokud **prázdný projekt CLR** chybí typ (Visual Studio 2017 pouze), vyberte **otevřít instalační program Visual Studio** v levém podokně **nový projekt** dialogové okno. Možnost umístěna ve složce instalace **vývoj desktopových aplikací pomocí C++**  v **volitelné** součástí oddílu s názvem  **C++podpora rozhraní příkazového řádku**.<br/>
+1. Zadejte název projektu. Ve výchozím nastavení řešení, které obsahuje projekt má stejný název jako nový projekt, ale můžete zadat jiný název. Pokud chcete, můžete zadat jiné umístění pro projekt.
 
-1. Zadejte název projektu.
+1. Klikněte na tlačítko **OK** k vytvoření nového projektu.
 
-   Ve výchozím nastavení řešení, které obsahuje projekt má stejný název jako nový projekt, ale můžete zadat jiný název. Pokud chcete, můžete zadat jiné umístění pro projekt.
+::: moniker-end
 
-   Klikněte na tlačítko **OK** k vytvoření nového projektu.
+::: moniker range="vs-2015"
+
+### <a name="to-create-a-ccli-project-in-visual-studio-2015"></a>Chcete-li vytvořit C++vyhodnocovací projektu v sadě Visual Studio 2015
+
+1. Vytvořte nový projekt. Na **souboru** nabídky, přejděte k **nový**a potom klikněte na tlačítko **projektu**.
+
+1. Typy projektů jazyka Visual C++, klikněte na **CLR**a potom klikněte na tlačítko **prázdný projekt CLR**.
+
+1. Zadejte název projektu. Ve výchozím nastavení řešení, které obsahuje projekt má stejný název jako nový projekt, ale můžete zadat jiný název. Pokud chcete, můžete zadat jiné umístění pro projekt.
+
+1. Klikněte na tlačítko **OK** k vytvoření nového projektu.
+
+::: moniker-end
+
+## <a name="add-a-source-file"></a>Přidání zdrojového souboru
 
 1. Pokud **Průzkumníka řešení** nezobrazuje, klikněte na tlačítko **Průzkumníka řešení** na **zobrazení** nabídky.
 
@@ -57,7 +90,7 @@ Tato témata se předpokládá, že chápete základy jazyka C++.
 
    `StreamWriter^ sw = gcnew StreamWriter(fileName);`
 
-   Další informace o novou syntaxi jazyka Visual C++, naleznete v tématu [přípony komponent pro platformy běhového prostředí](../extensions/component-extensions-for-runtime-platforms.md).
+   Další informace o C++vyhodnocovací syntaxe, naleznete v tématu [přípony komponent pro platformy běhového prostředí](../extensions/component-extensions-for-runtime-platforms.md).
 
 1. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
 

@@ -1,6 +1,6 @@
 ---
 title: Makra možností kompilátoru
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - _ATL_ALL_WARNINGS
 - _ATL_APARTMENT_THREADED
@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-ms.openlocfilehash: 79b1cabc0304e905012db5f6dd73ed71073c0c1e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1d0f6e068989179dd9498e399ca5304a2b378b8
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278420"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221125"
 ---
 # <a name="compiler-options-macros"></a>Makra možností kompilátoru
 
@@ -32,7 +32,7 @@ Tato makra řízení kompilátoru specifické funkce.
 |[_ATL_ALL_WARNINGS](#_atl_all_warnings)|Symbol, který umožňuje chyby v projektech, které jsou převedené z předchozích verzí knihovny ATL.|
 |[_ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|Určete, zda jeden nebo více objektů použít podprocesový model apartment.|
 |[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|Díky určité `CString` konstruktory explicitní, brání všechny neúmyslnému převody.|
-|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|Chcete-li použít standardní kompatibilní syntaxi C++, který vygeneruje chybu kompilátoru C4867, pokud není standardní syntaxe je použita k inicializaci ukazatele na členskou funkci definujte toto makro.|
+|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|Chcete-li použít toto makro definovat C++ standardní vyhovující syntaxe, který vygeneruje chybu kompilátoru C4867, pokud nestandardní syntaxe je použita k inicializaci ukazatele na členskou funkci.|
 |[_ATL_FREE_THREADED](#_atl_free_threaded)|Určete, zda jeden nebo více objektů pomocí bezplatné nebo neutrální dělení na vlákna.|
 |[_ATL_MULTI_THREADED](#_atl_multi_threaded)|Symbol, který označuje, projekt bude mít objekty, které jsou označeny jako obojí zdarma nebo neutrální. Makro [_ATL_FREE_THREADED](#_atl_free_threaded) by místo toho používat.|
 |[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|Symbol, který brání použití výchozí obor názvů jako knihovnu ATL.|
@@ -63,7 +63,7 @@ Před Visual C++ .NET 2002 ATL zakázané spoustu upozornění a doleva je zaká
 
 - C4291 "deklarace": byl nalezen žádný odpovídající operátor delete paměť se neuvolní, pokud při inicializaci dojde k výjimce
 
-- C4268 'identifier': 'const' statická/globální data inicializovaná s konstruktorem default generovaným kompilátorem vyplní objekt nulami
+- C4268 'identifier': 'const' statická/globální data inicializovaná s konstruktorem default vygenerovaný kompilátorem vyplní objekt nulami
 
 - Nedosažitelný kód C4702
 
@@ -113,7 +113,7 @@ Pokud chcete vynutit použití syntaxe vyhovující standardu ANSI C++ pro ukaza
 
 ### <a name="remarks"></a>Poznámky
 
-Knihovny ATL a MFC se změnily tak, aby odpovídaly kompilátor Visual C++ vylepšené standard C++ dodržování předpisů. Podle standardu ANSI C++ by měl být syntaxe ukazatel na členskou funkci třídy `&CMyClass::MyFunc`.
+Knihovny ATL a MFC se změnily tak, aby odpovídaly Microsoft C++ vylepšené standard kompilátoru C++ dodržování předpisů. Podle standardu ANSI C++ by měl být syntaxe ukazatel na členskou funkci třídy `&CMyClass::MyFunc`.
 
 Když [_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning) není definována (výchozí případ), ATL/MFC zakáže C4867 chyby v rámci služby maps – makro (zejména zprávy maps) tak, aby kód, který byl vytvořen ve starších verzích pokračovat v sestavení jako předtím. Pokud definujete **_ATL_ENABLE_PTM_WARNING**, váš kód by měl být C++ standard kompatibilní.
 

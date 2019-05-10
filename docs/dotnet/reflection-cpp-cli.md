@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data types [C++], enumerating
 - public members [C++]
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-ms.openlocfilehash: a17910e0288b81723aa837ba9204bb40713d5d49
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f18a7faa4e77571a87cc0d76a43240aaf1fd52c
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384683"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447222"
 ---
 # <a name="reflection-ccli"></a>Reflexe (C++/CLI)
 
@@ -34,7 +34,7 @@ Mějte na paměti, že zadaný název sestavení se silným názvem (viz [vytvo�
 Nejběžnější způsob přístupu k funkcím reflexe, je prostřednictvím <xref:System.Object.GetType%2A> metody. Tato metoda poskytuje <xref:System.Object?displayProperty=nameWithType>, ze které jsou odvozeny všechny třídy uvolnění paměti.
 
 > [!NOTE]
-> Reflexe na .exe vytvořených pomocí kompilátoru jazyka Visual C++ je povolen, pouze pokud je sestavován .exe **/CLR: pure** nebo **/CLR: safe** – možnosti kompilátoru. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není k dispozici v sadě Visual Studio 2017. Zobrazit [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) Další informace.
+> Reflexe na .exe vytvořených pomocí Microsoft C++ kompilátoru je povolen, pouze pokud je sestavován .exe **/CLR: pure** nebo **/CLR: safe** – možnosti kompilátoru. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není k dispozici v sadě Visual Studio 2017. Zobrazit [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) Další informace.
 
 Další informace najdete v tématu <xref:System.Reflection>
 
@@ -181,7 +181,7 @@ Pokud výše uvedený kód je zkompilován do knihovny DLL s názvem vcpp_reflec
 
 Jakmile systém reflexe úspěšně načte sestavení pole **typ** objekty získáte pomocí <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> funkce. Každý prvek pole obsahuje informace o jiný typ, i když v tomto případě je definována pouze jednu třídu. Využitím smyčky, každý **typ** v tomto poli je dotazován členy typu pomocí **Type::GetMembers** funkce. Tato funkce vrací pole **MethodInfo** objekty, každý objekt, který obsahuje informace o členskou funkci, datový člen nebo vlastnost v typu.
 
-Všimněte si, že seznam metod zahrnuje funkce explicitně definované v **TestClass** a funkce se implicitně dědí z **System::Object** třídy. Jako součást popisovaný v .NET, nikoli v jazyce Visual C++ syntaxi vlastnosti se zobrazí jako základní datový člen přístupný funkce get/set. Funkce get/set se v tomto seznamu zobrazí jako běžné metody. Reflexe je podporované prostřednictvím modul common language runtime není kompilátorem jazyka Visual C++.
+Všimněte si, že seznam metod zahrnuje funkce explicitně definované v **TestClass** a funkce se implicitně dědí z **System::Object** třídy. Jako součást popisovaný v .NET, nikoli v jazyce Visual C++ syntaxi vlastnosti se zobrazí jako základní datový člen přístupný funkce get/set. Funkce get/set se v tomto seznamu zobrazí jako běžné metody. Reflexe podporují modul common language runtime, ne společnost Microsoft C++ kompilátoru.
 
 I když jste použili tento kód ke kontrole sestavení, které jste definovali, můžete také použít tento kód ke kontrole sestavení .NET. Například pokud měnit TestAssembly na mscorlib, pak se zobrazí seznam všech typů a metod, které jsou definovány v mscorlib.dll.
 

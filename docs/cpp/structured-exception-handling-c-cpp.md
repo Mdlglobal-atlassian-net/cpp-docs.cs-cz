@@ -9,16 +9,16 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-ms.openlocfilehash: b77a218340399578e3c9428100476787e2e60b25
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e948d941afa1459623619e385aa67b1c60490245
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330567"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221957"
 ---
 # <a name="structured-exception-handling-cc"></a>Strukturované zpracování výjimek (C/C++)
 
-Strukturované zpracování výjimek (SEH) je rozšířením společnosti Microsoft pro C elegantně zpracovat určité situace výjimečných kódu, například hardwarových chyb. I když Windows a Visual C++ podporují SEH, doporučujeme použít zpracování výjimek jazyka C++ podle standardu ISO, protože je váš kód větší přenositelnosti a flexibility. Nicméně chcete-li zachovat stávající kód nebo v určitých typech programů, stále může být nutné použít SEH.
+Strukturované zpracování výjimek (SEH) je rozšířením společnosti Microsoft pro C elegantně zpracovat určité situace výjimečných kódu, například hardwarových chyb. I když Windows a Microsoft C++ podporují SEH, doporučujeme použít standardu ISO C++ zpracování výjimek, protože je váš kód větší přenositelnosti a flexibility. Nicméně chcete-li zachovat stávající kód nebo v určitých typech programů, stále může být nutné použít SEH.
 
 **Specifické pro Microsoft:**
 
@@ -34,7 +34,7 @@ Strukturované zpracování výjimek (SEH) je rozšířením společnosti Micros
 
 Spolu se SEH můžete zajistit, že prostředky, jako jsou bloky paměti a soubory jsou správně uvolněny, pokud neočekávaně ukončí provádění. Můžete také zpracovávat specifické problémy – třeba nedostatek paměti – s použitím stručné strukturovaný kód, který nevyžaduje **goto** příkazy nebo propracované testování návratové kódy.
 
-Try-except a try-finally příkazy uvedené v tomto článku jsou rozšíření Microsoft pro jazyk C. Tím, že umožňuje aplikacím získat kontrolu nad programu po události, které by jinak ukončí provádění podporují SEH. Přestože SEH funguje s zdrojových souborů C++, není výslovně navrženo pro jazyk C++. Pokud používáte SEH v programu C++ pro kompilaci pomocí [/EHa nebo/EHsc](../build/reference/eh-exception-handling-model.md) možnost, destruktory pro místní objekty jsou volány, ale nemusí být jiné chování při spuštění, co očekáváte. Pro ilustraci podívejte se na příklad dále v tomto článku. Ve většině případů místo SEH vám doporučujeme použít standardu ISO [zpracování výjimek jazyka C++](../cpp/try-throw-and-catch-statements-cpp.md), které Visual C++ podporuje také. S použitím zpracování výjimek jazyka C++, můžete zajistit, že váš kód je větší přenositelnost a dokáže zpracovat výjimky libovolného typu.
+Try-except a try-finally příkazy uvedené v tomto článku jsou rozšíření Microsoft pro jazyk C. Tím, že umožňuje aplikacím získat kontrolu nad programu po události, které by jinak ukončí provádění podporují SEH. Přestože SEH funguje s zdrojových souborů C++, není výslovně navrženo pro jazyk C++. Pokud používáte SEH v programu C++ pro kompilaci pomocí [/EHa nebo/EHsc](../build/reference/eh-exception-handling-model.md) možnost, destruktory pro místní objekty jsou volány, ale nemusí být jiné chování při spuštění, co očekáváte. Pro ilustraci podívejte se na příklad dále v tomto článku. Ve většině případů místo SEH vám doporučujeme použít standardu ISO [ C++ zpracování výjimek](../cpp/try-throw-and-catch-statements-cpp.md), které Microsoft C++ kompilátor podporuje také. S použitím zpracování výjimek jazyka C++, můžete zajistit, že váš kód je větší přenositelnost a dokáže zpracovat výjimky libovolného typu.
 
 Pokud máte kód jazyka C, který používá SEH, je možné ji kombinovat s kódem jazyka C++, který používá zpracování výjimek jazyka C++. Informace najdete v tématu [zpracování strukturovaných výjimek v jazyce C++](../cpp/exception-handling-differences.md).
 

@@ -1,24 +1,28 @@
 ---
 title: 'Sestavení souborů informací o procházení: Přehled'
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - .bsc files, about .bsc files
 - bsc files, about bsc files
 - browse information files (.bsc)
 - browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-ms.openlocfilehash: 4f12bd25ca3ab718a845dbb04aba3169cc6d4b19
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d33460ba63e50d31e44384be382e98cfbea4c91
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272881"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220543"
 ---
 # <a name="building-browse-information-files-overview"></a>Sestavení souborů informací o procházení: Přehled
 
+
+> [!WARNING]
+> Přestože BSCMAKE je stále instalace sady Visual Studio, se už používá integrovaným vývojovým prostředím. Od verze Visual Studio 2008 je automaticky uloženy informace o procházení a symbol v soubor SDF SQL serveru ve složce řešení.
+
 K vytvoření informací o procházení pro procházení symbolů, kompilátor vytvoří soubor .sbr pro každý zdrojový soubor v projektu, pak BSCMAKE. Soubor EXE řetězí soubory .sbr do jednoho souboru .bsc.
 
-Generují se soubory .sbr a .bsc zabere určitý čas, takže Visual C++ vypne tyto funkce ve výchozím nastavení. Pokud chcete aktuální informace o procházení, musíte zapnout možnosti procházení a sestavte projekt znovu.
+Generují se soubory .sbr a .bsc zabere určitý čas, aby Visual Studio vypne tyto funkce ve výchozím nastavení. Pokud chcete aktuální informace o procházení, musíte zapnout možnosti procházení a sestavte projekt znovu.
 
 Použití [/FR](fr-fr-create-dot-sbr-file.md) nebo [/Fr](fr-fr-create-dot-sbr-file.md) říct kompilátor vytvoří soubory .sbr. Pokud chcete vytvořit soubory .bsc, můžete volat [BSCMAKE](bscmake-command-line.md) z příkazového řádku. Pomocí nástroje BSCMAKE z příkazového řádku poskytuje přesnější kontrolu nad zpracování souborů informací o procházení. Zobrazit [BscMake – referenční dokumentace](bscmake-reference.md) Další informace.
 

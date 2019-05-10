@@ -1,15 +1,15 @@
 ---
 title: Soubory pravidlo XML stránky vlastností
-ms.date: 04/27/2017
+ms.date: 05/06/2019
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-ms.openlocfilehash: 17b89f00b2e51c960ed7d3219427b56d92851b81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 610dc7341a35845b35d8ed80f52b421d1c2fb5d1
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319467"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217718"
 ---
 # <a name="property-page-xml-rule-files"></a>Soubory pravidlo XML stránky vlastností
 
@@ -19,7 +19,7 @@ Chcete vytvořit vlastní stránka vlastností pouze scénáře, ve kterých je 
 
 Nejprve můžeme otevření stránek vlastností pro projekt (klikněte pravým tlačítkem na uzel projektu v **Průzkumníka řešení** a zvolit vlastnosti):
 
-![Vlastnosti projektu Visual C++](../media/cpp-property-page-2017.png)
+![Visual Studio C++ Project Properties](../media/cpp-property-page-2017.png)
 
 Každý uzel v rámci **vlastnosti konfigurace** nazývá pravidlo. Pravidlo někdy představuje jeden nástroje, jako je kompilátor, ale obecně výraz odkazuje na něco, co má vlastnosti, který se spustí a, který může vytvořit některé výstup. Každé pravidlo se naplní ze souboru xml ve složce VCTargets. Například pravidla C/C++, který je zobrazen výše je vyplněn "cl.xml".
 

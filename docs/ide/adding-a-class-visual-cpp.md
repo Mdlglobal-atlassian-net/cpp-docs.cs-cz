@@ -10,16 +10,16 @@ helpviewer_keywords:
 - classes [C++], adding
 - Add Class dialog box
 ms.assetid: c34b5f70-4e72-4faa-ba21-e2b05361c4d9
-ms.openlocfilehash: 21dd4b1936eda201df8283146ba9f41fa81e11de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4cd4ed4d4ec5a7093ce674c7883a77fa4e91d5ef
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375883"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446948"
 ---
 # <a name="add-a-class"></a>Přidat třídu
 
-Chcete-li přidat třídu v projektu v jazyce Visual C++ v **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt, zvolte **přidat**a klikněte na tlačítko **třídy**. Tím se otevře [dialogové okno Přidat třídu](#add-class-dialog-box).
+Přidání třídy v sadě Visual Studio C++ projektu v **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt, zvolte **přidat**a klikněte na tlačítko **třídy**. Tím se otevře [dialogové okno Přidat třídu](#add-class-dialog-box).
 
 Při přidání třídy, musíte zadat název, který se liší od třídy, které již existují v MFC ani ATL. Pokud zadáte název, který již existuje v knihovně, rozhraní IDE zobrazí chybovou zprávu.
 

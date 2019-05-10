@@ -4,16 +4,16 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 266ea37510b636cd1dc1cfa5909552ace50df1bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21931fc4976c909c77120e696f25f93c0a0fda0b
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410042"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446771"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Postup ohlášení problému se sadou nástrojů Visual C++ nebo dokumentace
 
-Pokud narazíte na potíže s kompilátorem Microsoft Visual C++, linkeru, nebo jiné nástroje a knihovny, chceme informovat o. Pokud se problém nachází v naší dokumentaci, chcete vědět, že příliš.
+Pokud narazíte na potíže s Microsoftu C++ kompilátoru, linkeru, nebo jiné nástroje a knihovny, chceme informovat o. Pokud se problém nachází v naší dokumentaci, chcete vědět, že příliš.
 
 ## <a name="how-to-report-a-c-toolset-issue"></a>Postup ohlášení problému sadu nástrojů s C++
 

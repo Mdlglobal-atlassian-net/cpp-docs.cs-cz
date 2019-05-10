@@ -2,16 +2,16 @@
 title: DLLs (C++/CX)
 ms.date: 02/06/2018
 ms.assetid: 5b8bcc57-64dd-4c54-9f24-26a25bd5dddd
-ms.openlocfilehash: 1a72ecc5eb46abfbc7b9a52a168510ce0873ee04
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13e733f0be27fe532af6109bdd6fc53291265e66
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183274"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447235"
 ---
 # <a name="dlls-ccx"></a>DLLs (C++/CX)
 
-Visual Studio můžete použít k vytvoření standardním Win32 DLL nebo součásti prostředí Windows Runtime knihovny DLL, která mohou být spotřebovány aplikací univerzální platformy Windows (UPW). Standardní knihovny DLL, který byl vytvořen pomocí verze sady Visual Studio nebo kompilátor Visual C++, která je starší než Visual Studio 2012 v aplikace pro UPW nemusí načíst správně a nemusí předat ověřovací test aplikace v Microsoft Store.
+Visual Studio můžete použít k vytvoření standardním Win32 DLL nebo součásti prostředí Windows Runtime knihovny DLL, která mohou být spotřebovány aplikací univerzální platformy Windows (UPW). Standardní knihovny DLL, který byl vytvořen pomocí verze sady Visual Studio nebo službou Microsoft C++ kompilátoru, která je starší než Visual Studio 2012 v aplikace pro UPW nemusí načíst správně a nemusí předat ověřovací test aplikace v Microsoft Store.
 
 ## <a name="windows-runtime-component-dlls"></a>Součást prostředí Windows Runtime knihovny DLL
 

@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - side-by-side applications [C++]
 ms.assetid: 7fa20b16-3737-4f76-a0b5-1dacea19a1e8
-ms.openlocfilehash: 037fde58366ea4548ce3c7ff56c38cfc1a58aa17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d5d7652b6424177191275f8f80d7b1f6cf02b261
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195141"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221127"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>Sestavení souběžných sestavení C/C++
 
 A [sestavení vedle sebe](/windows/desktop/SbsCs/about-side-by-side-assemblies-) je kolekce prostředků – Skupina knihoven DLL, třídy systému windows, serverů COM, knihoven typů nebo rozhraní – k dispozici pro aplikaci pro použití za běhu. Hlavní výhodou opakovanému balení knihovny DLL v sestavení je, že aplikace může používat více verzí sestavení ve stejnou dobu a je možné aktuálně nainstalovanou službu sestavení v případě vydání verze update.
 
-Aplikace v jazyce Visual C++ může používat jednu nebo několik knihoven DLL v různých částí aplikace. Za běhu knihovny DLL se načtou do hlavní proces a je proveden požadovaný kód. Aplikace závisí na operačním systému najít požadované knihovny DLL, pochopit, jaké dalších závislých knihoven DLL mají načíst a pak je načíst spolu s požadovanou knihovnu DLL. Ve verzích operačních systémů Windows starších než Windows XP, Windows Server 2003 a Windows Vista na zavaděči operačního systému hledá závislé knihovny DLL v místní složce aplikace nebo jiné složky zadané v systémové cestě. Na Windows XP, Windows Server 2003 a Windows Vista na zavaděči operačního systému můžete také vyhledat pomocí závislých knihoven DLL [manifest](/windows/desktop/sbscs/manifests) soubor a vyhledejte sestavení vedle sebe, které obsahují tyto knihovny DLL.
+A C++ aplikace může používat jednu nebo několik knihoven DLL v různých částí aplikace. Za běhu knihovny DLL se načtou do hlavní proces a je proveden požadovaný kód. Aplikace závisí na operačním systému najít požadované knihovny DLL, pochopit, jaké dalších závislých knihoven DLL mají načíst a pak je načíst spolu s požadovanou knihovnu DLL. Ve verzích operačních systémů Windows starších než Windows XP, Windows Server 2003 a Windows Vista na zavaděči operačního systému hledá závislé knihovny DLL v místní složce aplikace nebo jiné složky zadané v systémové cestě. Na Windows XP, Windows Server 2003 a Windows Vista na zavaděči operačního systému můžete také vyhledat pomocí závislých knihoven DLL [manifest](/windows/desktop/sbscs/manifests) soubor a vyhledejte sestavení vedle sebe, které obsahují tyto knihovny DLL.
 
 Ve výchozím nastavení, při vytváření knihovny DLL pomocí sady Visual Studio, má [manifest aplikace](/windows/desktop/SbsCs/application-manifests) vložený jako prostředek RT_MANIFEST s ID roven 2. Stejně jako u spustitelný soubor tento manifest popisuje závislosti této knihovny DLL na jiná sestavení. Předpokladem je, že knihovna DLL není součástí sestavení vedle sebe a aplikace, které závisí na tuto knihovnu DLL nebudou používat manifest aplikace načíst, ale místo toho spoléhají na zavaděči operačního systému k vyhledání této knihovny DLL v systémové cestě.
 

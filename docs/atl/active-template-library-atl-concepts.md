@@ -1,21 +1,21 @@
 ---
 title: Koncepty knihovny ATL (Active Template Library)
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
-ms.openlocfilehash: 7eb7eb1c369f825fbb689cd476d43be538ae8d9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 785b929e935962f6461ffbc3722f573a61cb8749
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223451"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221296"
 ---
 # <a name="active-template-library-atl-concepts"></a>Koncepty knihovny ATL (Active Template Library)
 
 Aktivní šablony knihovny (ATL) je sada šablonových tříd jazyka C++ a, které vám umožňují vytvořit malé, rychlé objekty modelu COM (Component Object). Má zvláštní podporu pro klíčové funkce modelu COM, včetně uložené implementace, duální rozhraní, standardní rozhraní čítače modelu COM, spojovací body, odtržených rozhraní a ovládací prvky ActiveX.
 
-Pokud provedete mnoho programování knihovny ATL, můžete další informace o atributech, nová funkce v aplikaci Visual C++ .NET, který je navržené pro zjednodušení programování v modelu COM. Další informace najdete v tématu [programování s přidělenými atributy](../windows/attributed-programming-concepts.md).
+Pokud provedete mnoho programování knihovny ATL, můžete získat další informace o modelu COM a .NET atributy, které je navržené pro zjednodušení programování v modelu COM. Další informace najdete v tématu [programování s přidělenými atributy](../windows/attributed-programming-concepts.md). (COM a .NET atributy jsou by se zaměňovat s \[ \[atribut]] funkci C++ standardní.)
 
 ## <a name="in-this-section"></a>V tomto oddílu
 

@@ -1,16 +1,16 @@
 ---
 title: 'Návod: Odstranění práce z vlákna uživatelského rozhraní'
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 1838ad0d6adb146adacb8b3a395f44f76e2a8d3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 3bd41b1815737730067929c4728b32181cb2fc03
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407803"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857006"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Návod: Odstranění práce z vlákna uživatelského rozhraní
 
@@ -54,9 +54,9 @@ Tato část popisuje, jak vytvořit základní aplikaci knihovny MFC.
 
 ### <a name="to-create-a-visual-c-mfc-application"></a>Vytvoření aplikace v jazyce Visual C++ MFC
 
-1. Na **souboru** nabídky, klikněte na tlačítko **nový**a potom klikněte na tlačítko **projektu**.
+1. Použití **Průvodce aplikací knihovny MFC** k vytvoření aplikace knihovny MFC s výchozím nastavením. Zobrazit [názorný postup: Použití nových ovládacích prvků prostředí MFC](../../mfc/walkthrough-using-the-new-mfc-shell-controls.md) pokyny o tom, jak spustit Průvodce účtem pro vaši verzi sady Visual Studio.
 
-1. V **nový projekt** v dialogu **nainstalované šablony** vyberte **Visual C++** a pak na **šablony** vyberte **Aplikace knihovny MFC**. Zadejte název projektu, například `Mandelbrot`a potom klikněte na tlačítko **OK** zobrazíte **Průvodce aplikací knihovny MFC**.
+1. Zadejte název projektu, například `Mandelbrot`a potom klikněte na tlačítko **OK** zobrazíte **Průvodce aplikací knihovny MFC**.
 
 1. V **typ aplikace** vyberte **jednotlivý dokument**. Ujistěte se, že **podpora architektury Document/View** zrušení zaškrtnutí políčka.
 

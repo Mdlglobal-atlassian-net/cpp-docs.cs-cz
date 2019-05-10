@@ -1,23 +1,20 @@
 ---
 title: Reference jazyka C++
 ms.custom: index-page
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
-- language reference
 - C++, language reference
-- language reference, Visual C++
-- Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 8da5a4f7113bbb4256e45e7ec3c91a9c6677643c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1790f5d7ecf834c97a9242e8f42d1fb402604ac6
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154656"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222489"
 ---
 # <a name="c-language-reference"></a>Reference jazyka C++
 
-Tento přehled popisuje programovací jazyk C++ tak, jak je implementován v sadě Microsoft Visual C++. Organizace je založena na [ *The manuálu C++ s poznámkami odkaz* ](http://www.stroustrup.com/arm.html) od Margaret Ellis a Bjarne Stroustrup a ANSI/ISO C++ mezinárodním standardu (ISO/IEC FDIS 14882). Součástí jsou implementace funkcí jazyka C++ specifické pro společnost Microsoft.
+Tento přehled popisuje C++ programovací jazyk, jak je implementován v Microsoft C++ kompilátoru. Organizace je založena na [ *The manuálu C++ s poznámkami odkaz* ](http://www.stroustrup.com/arm.html) od Margaret Ellis a Bjarne Stroustrup a ANSI/ISO C++ mezinárodním standardu (ISO/IEC FDIS 14882). Součástí jsou implementace funkcí jazyka C++ specifické pro společnost Microsoft.
 
 Přehled programovací postupy v moderním jazyce C++, naleznete v tématu [Vítejte zpět do C++](welcome-back-to-cpp-modern-cpp.md).
 
@@ -90,7 +87,7 @@ Odkaz na třídy specifické pro společnost Microsoft a globální funkce použ
 Rozšíření Microsoft C++.
 
 [Nestandardní chování](../cpp/nonstandard-behavior.md)<br/>
-Informace o nestandardní chování kompilátoru jazyka Visual C++.
+Informace o nestandardní chování Microsoft C++ kompilátoru.
 
 [C++ vás vítá zpět](welcome-back-to-cpp-modern-cpp.md)<br/>
 Přehled o moderním programování C++ postupů pro psaní programů bezpečné, správné a efektivní.
@@ -98,7 +95,7 @@ Přehled o moderním programování C++ postupů pro psaní programů bezpečné
 ## <a name="related-sections"></a>Související oddíly
 
 [Přípony komponent pro platformy běhového prostředí](../extensions/component-extensions-for-runtime-platforms.md)<br/>
-Referenční materiál pro používání Visual C++ pro cílové rozhraní .NET.
+Referenční materiály k používání Microsoft C++ kompilátor, aby cílové rozhraní .NET.
 
 [Referenční zdroje k sestavení programu v jazyce C/C++](../build/reference/c-cpp-building-reference.md)<br/>
 Možnosti kompilátoru, možnosti linkeru a další nástroje sestavení.
@@ -107,7 +104,7 @@ Možnosti kompilátoru, možnosti linkeru a další nástroje sestavení.
 Referenční materiál pro pragmy, direktivy preprocesoru, předdefinovaná makra a preprocesor.
 
 [Knihovny Visual C++](../standard-library/cpp-standard-library-reference.md)<br/>
-Seznam odkazů na referenční spouštěcí stránky pro různé knihovny jazyka Visual C++.
+Seznam odkazů na referenční úvodní stránky pro různé Microsoft C++ knihovny.
 
 ## <a name="see-also"></a>Viz také:
 

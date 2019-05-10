@@ -37,11 +37,11 @@ helpviewer_keywords:
 - C2098
 ms.assetid: d99a19eb-eeeb-4181-9b33-9cbe4459767b
 ms.openlocfilehash: cf1d2f647c13b589463624749e29dc277f6f1d3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360486"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857143"
 ---
 # <a name="compiler-errors-c2000-through-c2099"></a>Chyby kompilátoru C2000 až C2099
 
@@ -51,7 +51,7 @@ ms.locfileid: "62360486"
 
 ## <a name="error-messages"></a>Chybové zprávy
 
-|Chyba|Zpráva|
+|Chyba|Message|
 |-----------|-------------|
 |Chyba kompilátoru C2000|Neznámá chyba Zvolte prosím příkaz technická podpora v nabídce Nápověda pro Visual C++, nebo otevřete soubor nápovědy technické podpory pro další informace|
 |[Chyba kompilátoru C2001](compiler-error-c2001.md)|Obsahuje znak nového řádku – konstanta|

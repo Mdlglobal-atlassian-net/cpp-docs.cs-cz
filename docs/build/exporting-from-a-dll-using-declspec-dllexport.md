@@ -1,6 +1,6 @@
 ---
 title: Export z knihovny DLL pomocí deklarace __declspec(dllexport)
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - dllexport
 - __declspec
@@ -10,18 +10,16 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-ms.openlocfilehash: 3b6b9733776f30fc8dcbfeee709b7d24e0f0187b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 167060d0270004b8648d32af206865bfe66c3b4b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195313"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220788"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Export z knihovny DLL pomocí deklarace __declspec(dllexport)
 
-Společnost Microsoft zavedla **__export** v kompilátoru 16bitové verzi Vizuálu C++ k povolení kompilátoru generovat automaticky exportní názvy a umístit je do souboru LIB. Tento .lib soubor pak lze stejně jako statický .lib propojení s knihovnou DLL.
-
-V novějších verzích kompilátoru můžete exportovat data, funkce, třídy nebo členské funkce tříd z knihovny DLL pomocí **__declspec(dllexport)** – klíčové slovo. **__declspec(dllexport)** přidá exportní směrnici do souboru objektu, takže nepotřebujete použít soubor .def.
+Můžete exportovat data, funkce, třídy nebo členské funkce tříd z knihovny DLL pomocí **__declspec(dllexport)** – klíčové slovo. **__declspec(dllexport)** přidá exportní směrnici do souboru objektu, takže nepotřebujete použít soubor .def.
 
 Tato výhoda je nejviditelnější při pokusu o export dekorovaných názvů funkcí jazyka C++. Protože neexistuje žádná standardní specifikace pro název dekorace, může být název exportované funkce změněn mezi verzemi kompilátoru. Pokud používáte **__declspec(dllexport)**, rekompilace DLL Knihovnu a závislé .exe soubory je potřeba pouze účet pro všechny změny zásady vytváření názvů.
 
@@ -50,11 +48,6 @@ Při sestavování DLL Knihovny obvykle vytvoříte soubor hlaviček, který obs
 ```
 
 **__declspec(dllexport)** uloží názvy funkcí v exportní tabulce knihovny DLL. Pokud chcete optimalizovat velikost tabulky, přečtěte si téma [export funkcí z DLL Knihovny podle pořadí, než podle názvu](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
-
-> [!NOTE]
->  Pokud přenášíte zdrojový kód knihovny DLL z Win16 na Win32, nahraďte každou instanci **__export** s **__declspec(dllexport)**.
-
-Jako odkaz Hledat v souboru hlaviček Win32 Winbase.h. Obsahuje příklady **__declspec(dllimport)** využití.
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 

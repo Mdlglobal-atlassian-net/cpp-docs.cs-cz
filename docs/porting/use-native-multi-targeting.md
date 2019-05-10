@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ native multi-targeting
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
-ms.openlocfilehash: 57e9556ccb7313c137c173e0f2143dc6e563d4c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35f6ac980a451b375d5005c20853fdd29c78d96d
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337151"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448954"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Pomocí nativního cílení na více platforem v sadě Visual Studio sestavení starých projektů
 
@@ -44,7 +44,7 @@ Pokud se rozhodnete neupgradovat, Visual Studio neprovede žádné změny k soub
 
 ## <a name="instructions-for-visual-studio-2008"></a>Pokyny pro sadu Visual Studio 2008
 
-Visual Studio 2008 má svůj vlastní vyhrazený sestavovací systém pro jazyk C++ volá **VCBuild**. Spouští se v sadě Visual Studio 2010, projekty v jazyce Visual C++ byly změněny na použití **MSBuild**. To znamená, že musí přejít až aktualizaci k sestavování projektů Visual Studio 2008 v nejnovější verzi sady Visual Studio. Aktualizovaný projekt stále generuje binární soubory, které jsou plně kompatibilní s binárními soubory vytvořené pomocí integrovaného vývojového prostředí Visual Studio 2008.
+Visual Studio 2008 má svůj vlastní vyhrazený sestavovací systém pro jazyk C++ volá **VCBuild**. Spouští se v sadě Visual Studio 2010, Visual Studio C++ projekty byly změněny na použití **MSBuild**. To znamená, že musí přejít až aktualizaci k sestavování projektů Visual Studio 2008 v nejnovější verzi sady Visual Studio. Aktualizovaný projekt stále generuje binární soubory, které jsou plně kompatibilní s binárními soubory vytvořené pomocí integrovaného vývojového prostředí Visual Studio 2008.
 
 Kromě aktuální verze sady Visual Studio, nejprve musíte nainstalovat Visual Studio 2010 ve stejném počítači jako Visual Studio 2008. Nainstaluje pouze Visual Studio 2010 **MSBuild** skripty, které jsou potřeba k projektům cílové sady Visual Studio 2008.
 
@@ -58,7 +58,7 @@ Po této změně Visual Studio 2008 kompilátor a knihovny se používají ke ge
 
 ## <a name="install-an-older-visual-studio-toolset"></a>Instalace starší nástrojů sady Visual Studio
 
-Můžete mít starý projektu Visual C++, který nemůžete nebo nechcete upgradovat, ale ne platformy verzi sady nástrojů, který odpovídá projektu. Získat sadu nástrojů, můžete v tomto případě nainstalovat Visual Studio edice Community zdarma nebo Express edition verze, které potřebujete. Všechny verze sady Visual Studio ze sady Visual Studio 2008 na nainstalovat kompilátoru, nástroje a knihovny, je potřeba cílit na tuto verzi v aktuální sadě Visual Studio. Vyhledejte Microsoft Download Center vyhledejte a stáhněte konkrétní verzi sady Visual Studio. Ujistěte se, že během instalace zvolíte možnosti instalace jazyka C++. Po dokončení instalace, spusťte tuto verzi sady Visual Studio nainstalovat všechny aktualizace. Také zkontrolujte, které mohou vyžadovat změny aktualizací Windows. Tento proces kontroly aktualizací může být nutné opakovat více než jednou. Chcete-li získat všechny aktualizace.
+Možná bude starý Visual Studio C++ projekt, který nemůžete nebo nechcete upgradovat, ale ne platformy verzi sady nástrojů, který odpovídá projektu. Získat sadu nástrojů, můžete v tomto případě nainstalovat Visual Studio edice Community zdarma nebo Express edition verze, které potřebujete. Všechny verze sady Visual Studio ze sady Visual Studio 2008 na nainstalovat kompilátoru, nástroje a knihovny, je potřeba cílit na tuto verzi v aktuální sadě Visual Studio. Vyhledejte Microsoft Download Center vyhledejte a stáhněte konkrétní verzi sady Visual Studio. Ujistěte se, že během instalace zvolíte možnosti instalace jazyka C++. Po dokončení instalace, spusťte tuto verzi sady Visual Studio nainstalovat všechny aktualizace. Také zkontrolujte, které mohou vyžadovat změny aktualizací Windows. Tento proces kontroly aktualizací může být nutné opakovat více než jednou. Chcete-li získat všechny aktualizace.
 
 Aktuálně k dispozici ke stažení, najdete v části [starší sadě Visual Studio software ke stažení](https://visualstudio.microsoft.com/vs/older-downloads/).
 

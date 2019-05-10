@@ -1,7 +1,8 @@
 ---
 title: Tutoriál knihovny ATL (Active Template Library)
+description: Vytvoření ovládacího prvku ActiveX pomocí Microsoft C++ a knihovnu Active Template Library.
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 05/03/2019
 helpviewer_keywords:
 - ATL projects, tutorials
 - controls [ATL], tutorials
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - tutorials [ATL]
 - ATL, tutorials
 ms.assetid: f921a121-09c8-4812-9317-e15b2f1471fa
-ms.openlocfilehash: 716818306c751a8d774a8fc6c311694a7932be2c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae336c0192214261d61792715353fc54b8b37fba
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198463"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221310"
 ---
 # <a name="active-template-library-atl-tutorial"></a>Tutoriál knihovny ATL (Active Template Library)
 

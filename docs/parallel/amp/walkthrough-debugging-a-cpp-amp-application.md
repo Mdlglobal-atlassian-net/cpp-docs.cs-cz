@@ -1,18 +1,18 @@
 ---
 title: 'Návod: Ladění aplikace C++ AMP'
-ms.date: 11/19/2018
+ms.date: 04/23/2019
 helpviewer_keywords:
 - debugging, C++ Accelerated Massive Parallelism
 - C++ AMP, debugging
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 5312ba7354c28286cafb092711d66d56a920581a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f358f66d1e8a64c5042b60d7385de26a559642e
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237954"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877549"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Návod: Ladění aplikace C++ AMP
 
@@ -38,11 +38,33 @@ Před zahájením tohoto návodu:
 
 - Ujistěte se, že tento řádek jsou čísla zobrazena v textovém editoru. Další informace najdete v tématu [jak: Zobrazení čísel řádků v editoru](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor).
 
-- Zajistěte, aby že se systémem Windows 8 nebo Windows Server 2012, v zájmu podpory ladění v softwarovém emulátoru.
+- Ujistěte se, že běží aspoň Windows 8 nebo Windows Server 2012, v zájmu podpory ladění v softwarovém emulátoru. 
 
 [!INCLUDE[note_settings_general](../../mfc/includes/note_settings_general_md.md)]
 
 ### <a name="to-create-the-sample-project"></a>K vytvoření ukázkového projektu
+
+Pokyny pro vytvoření projektu se liší v závislosti na tom, kterou verzi sady Visual Studio, kterou používáte. Ujistěte se, že máte správnou verzi vybrali v levém horním rohu této stránky.
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-the-sample-project-in-visual-studio-2019"></a>Chcete-li vytvořit ukázkový projekt v aplikaci Visual Studio 2019
+
+1. V panelu nabídky zvolte **souboru** > **nový** > **projektu** otevřít **vytvořte nový projekt** dialogové okno.
+
+1. V horní části dialogového okna, nastavte **jazyk** k **C++**, nastavte **platformy** k **Windows**a nastavte **typprojektu** k **konzoly**. 
+
+1. Filtrované seznamu typů projektů zvolte **konzolovou aplikaci** klikněte na tlačítko **Další**. Na další stránce zadejte `AMPMapReduce` v **název** zadat název projektu a zadejte umístění projektu, v případě potřeby.
+
+   ![Pojmenujte projekt](../../build/media/mathclient-project-name-2019.png "název projektu")
+
+1. Zvolte **vytvořit** pro vytvoření projektu klienta.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-create-the-sample-project-in-visual-studio-2017-or-visual-studio-2015"></a>Chcete-li vytvořit ukázkový projekt v sadě Visual Studio 2017 nebo Visual Studio 2015
 
 1. Spusťte Visual Studio.
 
@@ -57,6 +79,9 @@ Před zahájením tohoto návodu:
 6. Zrušte **Předkompilovaná hlavička** zaškrtněte políčko a klikněte na tlačítko **Dokončit** tlačítko.
 
 7. V **Průzkumníka řešení**, odstraňte stdafx.h targetver.h a stdafx.cpp z projektu.
+
+::: moniker-end
+
 
 8. Otevřete AMPMapReduce.cpp a nahraďte jeho obsah následujícím kódem.
 

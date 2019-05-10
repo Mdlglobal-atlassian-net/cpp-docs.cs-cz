@@ -1,18 +1,21 @@
 ---
 title: 'Návod: Vytvoření aplikace UPW s použitím knihovny WRL a platformy Media Foundation'
-ms.date: 09/17/2018
+ms.date: 04/23/2019
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-ms.openlocfilehash: e0254be8c6fa185f75c46898d4da51742195550a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 28e8d4b2871dbd3bef0f30bae5480d346af50706
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409207"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558270"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Návod: Vytvoření aplikace UPW s použitím knihovny WRL a platformy Media Foundation
 
-Další informace o použití Windows Runtime C++ šablony knihovny (WRL) k vytvoření aplikace pro univerzální platformu Windows (UPW), který používá [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
+> [!NOTE]
+> Pro nové aplikace pro UPW a komponenty, doporučujeme použít [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/), nový standard C ++ 17 jazyk projekci pro rozhraní API Windows Runtime. C++/ WinRT je k dispozici v sadě SDK Windows 10 verze 1803 dále. C++/ WinRT je implementovaný zcela v souborech hlaviček a je navržené pro poskytování je prvotřídní přístup k moderní rozhraní Windows API.
+
+V tomto kurzu se dozvíte, jak pomocí prostředí Windows Runtime C++ šablony knihovny (WRL) k vytvoření aplikace pro univerzální platformu Windows (UPW), který používá [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
 
 Tento příklad vytvoří vlastní transformace Media Foundation, která se použije ve stupních šedi mohou mít vliv na obrázky, které jsou zachyceny z webová kamera. Aplikace C++ používá k definování vlastní transformace a C# použít komponenty pro transformaci zaznamenané Image.
 
@@ -25,6 +28,8 @@ Ve většině případů můžete použít C++/CX k vytvoření prostředí Wind
 > Sice dlouhý tento příklad kódu ukazuje minimální potřebná k vytvoření užitečné transformace Media Foundation. Můžete ho použít jako výchozí bod pro vlastní vlastní transformace. V tomto příkladu jsou upraveny z [ukázkové rozšíření Media](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096), které používá media rozšíření použít dopad na video, dekódování video a vytváření obslužných rutin schéma, které vytvářejí datové proudy médií.
 
 ## <a name="prerequisites"></a>Požadavky
+
+- V sadě Visual Studio 2017 nebo novější je podpora UWP volitelnou komponentou. Ho Pokud chcete nainstalovat, otevřete instalační program sady Visual Studio v nabídce Windows Start a vyhledejte vaši verzi sady Visual Studio. Zvolte **změnit** a zkontrolujte, že **vývoj pro univerzální platformu Windows** je zaškrtnuté políčko vedle sebe. V části **volitelné součásti** zkontrolujte  **C++ nástrojů pro UPW (v141)** pro Visual Studio 2017 nebo  **C++ nástrojů pro UPW (v142)** pro Visual Studio 2019. Zkontrolujte verzi sady Windows SDK, kterou chcete použít. 
 
 - Vyzkoušejte si [modulu Windows Runtime](https://msdn.microsoft.com/library/windows/apps/br211377.aspx).
 

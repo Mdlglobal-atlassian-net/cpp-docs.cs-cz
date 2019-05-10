@@ -1,6 +1,6 @@
 ---
 title: vlákno
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - thread_cpp
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-ms.openlocfilehash: 089f339e5d203fe44789a7df1607f73ab13b8a24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59a1af8a7eb73207f84ddf2194d5fe9e77d7d46a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330515"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221958"
 ---
 # <a name="thread"></a>vlákno
 
@@ -40,7 +40,7 @@ Při použití místní proměnné vlákna v dynamicky načíst knihovny, musít
 
 1. Pokud proměnná je inicializována pomocí volání funkce (včetně konstruktory), tato funkce bude volat pouze vlákna, která způsobila binární/knihovny DLL pro načtení do procesu a tato vlákna, které se spustí po načtení binárního souboru knihovny DLL. Inicializační funkce nejsou volány pro ostatní vlákna, který byl již spuštěn při načtení knihovny DLL. Dynamická inicializace probíhá na volání funkce DllMain pro DLL_THREAD_ATTACH, ale knihovny DLL nikdy získá, které zprávy, není-li knihovny DLL v procesu při spuštění vlákna.
 
-1. Místní proměnné vlákna, které jsou staticky inicializována s konstantní hodnoty jsou obecně správně inicializována na všech vláknech. Však k prosinci 2017 existuje problém známé shoda v kompilátoru Microsoft Visual C++, kterým proměnné constexpr přijímat dynamické místo Statická inicializace.
+1. Místní proměnné vlákna, které jsou staticky inicializována s konstantní hodnoty jsou obecně správně inicializována na všech vláknech. Však k prosinci 2017 existuje problém známé shoda v Microsoftu C++ kompilátoru kterým přijímat dynamické místo Statická inicializace proměnné constexpr.
 
    Poznámka: Oba zmíněné problémy se očekává v budoucnu vyřešit aktualizací kompilátoru.
 

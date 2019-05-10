@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: c9b0eae9c0a1e074fb4f3f12ac38a737ef14c644
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6d418c1668a0757349c7e5c3bb38f7cda801223
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270897"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446561"
 ---
 # <a name="general-property-page-project"></a>Obecná stránka vlastností (projekt)
 
@@ -98,7 +98,7 @@ Vlastnosti v oddíle Obecná ovlivňují umístění souborů, které jsou vytvo
 
 - **Sada nástrojů platformy**
 
-   Umožňuje projekt cílit na jinou verzi knihovny Visual C++ a kompilátor. Projekty Visual C++ mohou cílit buď na výchozí sadu nástrojů nainstalované sady Visual Studio, nebo jeden z nástrojů nainstalována v předchozích verzích sady Visual Studio, včetně sady nástrojů, které vytvoříte spustitelné soubory, které můžete spustit v systému Windowx XP. Informace o změně sada nástrojů platformy najdete v tématu [jak: Změna cílové architektury a sady nástrojů](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Umožňuje projekt cílit na jinou verzi knihovny Visual C++ a kompilátor. Visual Studio C++ projekty můžete cílit buď na výchozí sadu nástrojů nainstalované sady Visual Studio, nebo jeden z nástrojů nainstalována v předchozích verzích sady Visual Studio, včetně sady nástrojů, které vytvoříte spustitelné soubory, které můžete spustit v systému Windowx XP. Informace o změně sada nástrojů platformy najdete v tématu [jak: Změna cílové architektury a sady nástrojů](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Povolit spravované přírůstkové sestavení**
 

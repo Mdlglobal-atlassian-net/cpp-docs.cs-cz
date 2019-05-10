@@ -1,21 +1,21 @@
 ---
 title: Nestandardní chování
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compatibility and compliance, nonstandard behavior
 - Microsoft-specific, compiler behavior
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
-ms.openlocfilehash: b7546914f4cd417f127af56fb7342903989d8330
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82c5faae68f9da747017119d76578cc88163d8bb
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245371"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222024"
 ---
 # <a name="nonstandard-behavior"></a>Nestandardní chování
 
-V následujících oddílech jsou uvedeny některé z míst, kde implementace Visual C++ jazyka C++ nesplňuje standard C++. Čísla oddílů, která jsou uvedena níže, odkazují na čísla oddílů ve standardu C++ (ISO/IEC 14882:2011(E)).
+V následujících oddílech jsou uvedeny některé z míst, kde implementace Microsoft C++ není v souladu s C++ standard. Čísla oddílů, která jsou uvedena níže, odkazují na čísla oddílů ve standardu C++ (ISO/IEC 14882:2011(E)).
 
 Seznam omezení kompilátoru, které se liší od stanovených ve standardu jazyka C++ je uveden v [omezení kompilátoru](../cpp/compiler-limits.md).
 
@@ -38,7 +38,7 @@ class B : virtual A
 
 ## <a name="binding-nondependent-names-in-templates"></a>Názvy nezávislé vazby v šablonách
 
-Kompilátor Visual C++ aktuálně nepodporuje názvy nezávislé vazby při počáteční analýze šablony. To není v souladu s oddílem 14.6.3 specifikace C++ ISO. To může způsobit přetížení deklarované poté, co má být šablona (ale předtím, než je vytvořena instance šablony) zobrazena.
+Microsoft C++ kompilátoru aktuálně nepodporuje názvy nezávislé vazby při počáteční analýze šablony. To není v souladu s oddílem 14.6.3 specifikace C++ ISO. To může způsobit přetížení deklarované poté, co má být šablona (ale předtím, než je vytvořena instance šablony) zobrazena.
 
 ```cpp
 #include <iostream>
@@ -75,7 +75,7 @@ Další informace o specifikacích výjimek naleznete v tématu [specifikace vý
 
 ## <a name="chartraitseof"></a>char_traits::eof()
 
-C++ Standard uvádí, že [char_traits::eof](../standard-library/char-traits-struct.md#eof) nesmí odpovídat platné `char_type` hodnotu. Vizuál C++ kompilátor vynucuje toto omezení pro typ **char**, ale ne pro typ **wchar_t**. To není v souladu s požadavky tabulky 62 v oddíle 12.1.1 specifikace C++ ISO. To zachycuje níže uvedený příklad.
+C++ Standard uvádí, že [char_traits::eof](../standard-library/char-traits-struct.md#eof) nesmí odpovídat platné `char_type` hodnotu. Microsoft C++ kompilátor vynucuje toto omezení pro typ **char**, ale ne pro typ **wchar_t**. To není v souladu s požadavky tabulky 62 v oddíle 12.1.1 specifikace C++ ISO. To zachycuje níže uvedený příklad.
 
 ```cpp
 #include <iostream>
@@ -94,4 +94,4 @@ int main()
 
 ## <a name="storage-location-of-objects"></a>Umístění úložiště objektů
 
-Standard C++ (odstavec 6 oddílu 1.8) vyžaduje jedinečná umístění úložiště objektů jazyka C++. V jazyce Visual C++ však existují případy, kde typy bez datových členů budou sdílet umístění úložiště s jinými typy po dobu životnosti objektu.
+Standard C++ (odstavec 6 oddílu 1.8) vyžaduje jedinečná umístění úložiště objektů jazyka C++. Nicméně s Microsoftem C++, existují případy, kde typy bez datových členů budou sdílet umístění úložiště s jinými typy po dobu životnosti objektu.

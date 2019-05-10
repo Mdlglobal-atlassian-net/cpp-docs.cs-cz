@@ -1,17 +1,15 @@
 ---
 title: 'Postupy: Použití událostí sestavení v projektech MSBuild'
 ms.date: 11/04/2016
-f1_keywords:
-- msbuild.cpp.howto.usebuildevents
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: 7678b975558b245fb730bff35fb156bf21d7f895
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f4ccea66f7346512df88fc4c6078752c624aaa9
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273479"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221471"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Postupy: Použití událostí sestavení v projektech MSBuild
 
@@ -39,7 +37,7 @@ V následující tabulce jsou uvedeny jednotlivé *použít v sestavení* elemen
 
 ## <a name="example"></a>Příklad
 
-Následující příklad je možné přidat uvnitř elementu projektu MyProject.vcxproj za soubor vytvořený v [názorný postup: Vytvoření projektu jazyka Visual C++ pomocí nástroje MSBuild](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). A *před sestavením* události vytvoří kopii main.cpp; *před propojením* události vytvoří kopii main.obj; a s *po sestavení* události vytvoří kopii tohoto myproject.exe. Je-li projekt se vytvořil pomocí konfiguraci vydané verze, jsou spuštěny událostí sestavení. Pokud projekt se vytvořil pomocí konfiguraci ladění, nebudou provedeny události sestavení.
+Následující příklad je možné přidat uvnitř elementu projektu MyProject.vcxproj za soubor vytvořený v [názorný postup: Vytvoření pomocí nástroje MSBuild C++ projektu](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). A *před sestavením* události vytvoří kopii main.cpp; *před propojením* události vytvoří kopii main.obj; a s *po sestavení* události vytvoří kopii tohoto myproject.exe. Je-li projekt se vytvořil pomocí konfiguraci vydané verze, jsou spuštěny událostí sestavení. Pokud projekt se vytvořil pomocí konfiguraci ladění, nebudou provedeny události sestavení.
 
 ```
 <ItemDefinitionGroup>
@@ -73,4 +71,4 @@ Následující příklad je možné přidat uvnitř elementu projektu MyProject.
 ## <a name="see-also"></a>Viz také:
 
 [MSBuild na příkazovém řádku - C++](msbuild-visual-cpp.md)<br/>
-[Návod: Vytvoření projektu jazyka Visual C++ pomocí nástroje MSBuild](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+[Návod: Vytvoření projektu C++ pomocí nástroje MSBuild](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

@@ -1,16 +1,16 @@
 ---
 title: 'Návod: Přidání objektu D2D do projektu MFC'
-ms.date: 09/20/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - MFC, D2D
 - D2D [MFC]
 ms.assetid: dda36c33-c231-4da6-a62f-72d69a12b6dd
-ms.openlocfilehash: 0793511f09be9dcb37732c4c16bfd2b3038a6cf4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 5710add59c0e5d27b2969ae22087533cae901ca9
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358614"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558170"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>Návod: Přidání objektu D2D do projektu MFC
 
@@ -36,9 +36,9 @@ K dokončení tohoto návodu, musíte mít nainstalované s Visual Studio **výv
 
 ## <a name="to-create-an-mfc-application"></a>Vytvoření aplikace MFC
 
-1. Na **souboru** nabídky, přejděte k **nový** a klikněte na tlačítko **projektu**.
+1. Použití **Průvodce aplikací knihovny MFC** k vytvoření aplikace knihovny MFC. Zobrazit [názorný postup: Použití nových ovládacích prvků prostředí MFC](walkthrough-using-the-new-mfc-shell-controls.md) pokyny o tom, jak spustit Průvodce účtem pro vaši verzi sady Visual Studio.
 
-1. V **nový projekt** dialogové okno, v levém podokně v části **nainstalované šablony**, rozbalte **Visual C++** a pak vyberte **MFC**. V prostředním podokně vyberte **aplikace knihovny MFC**. V **název** zadejte *MFCD2DWalkthrough*. Zvolte **OK**.
+1. V **název** zadejte *MFCD2DWalkthrough*. Zvolte **OK**.
 
 1. V **Průvodce aplikací knihovny MFC**, zvolte **Dokončit** bez jakýchkoli změn nastavení.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: 142d067b6fbc9e2357ff8fc23fd931a1194477e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a68c4a9df3b439ae641c5e4cbe6f3fbc8b8e6355
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398066"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222533"
 ---
 # <a name="data-access-in-visual-c"></a>Přístup k datům v jazyce Visual C++
 
@@ -40,11 +40,11 @@ Připojení ke službě Azure SQL Database v aplikacích jazyka C nebo C++.
 [Klientská knihovna pro úložiště Microsoft Azure pro jazyk C++](https://github.com/Azure/azure-storage-cpp)<br/>
 [Azure Storage](/azure/storage/storage-introduction) je řešení cloudového úložiště pro moderní aplikace, které spoléhají na odolnost, dostupnost a škálovatelnost pro potřeby svých zákazníků. Připojení ke službě Azure Storage z jazyka C++ s využitím klientské knihovny Azure Storage pro C++.
 
-[Ovladač ODBC 13.1 pro SQL Server – Windows všeobecně dostupné](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/08/01/announcing-the-odbc-driver-13-1-for-sql-server)<br/>
-Nejnovější ovladač ODBC poskytuje robustní datové přístup k Microsoft SQL Server 2016 Microsoft Azure SQL Database pro C/C++ na základě aplikace. Poskytuje podporu pro funkce, včetně funkcí always encrypted, Azure Active Directory a skupin dostupnosti AlwaysOn. Také k dispozici pro MacOS a Linux.
+[Ovladač ODBC pro SQL Server](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server)<br/>
+Nejnovější ovladač ODBC poskytuje robustní datové přístup k systému Microsoft SQL Server a Microsoft Azure SQL Database pro C /C++ aplikací založených na. Poskytuje podporu pro funkce, včetně funkcí always encrypted, Azure Active Directory a skupin dostupnosti AlwaysOn. Také k dispozici pro MacOS a Linux.
 
-[Nativní klient systému SQL Server](/sql/relational-databases/native-client/sql-server-native-client-programming)<br/>
-Nativní klient systému SQL Server je samostatná data přístup aplikace programovací rozhraní (API), používá se pro OLE DB a rozhraní ODBC, který podporuje SQL Server 2005 do SQL serveru 2014. Nová aplikace by měly používat ODBC Driver 13.1 pro SQL Server.
+[Ovladač technologie OLE DB pro SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)<br/>
+Nejnovější ovladače OLE DB je samostatné datové přístup aplikačního programovacího rozhraní (API), který podporuje Microsoft SQL Server a Microsoft Azure SQL Database.
 
 [Středisko pro vývojáře v C++ a C Microsoft Azure](https://azure.microsoft.com/develop/cpp/)<br/>
 Azure usnadňuje vývoj aplikací v C++ se zvýšenou flexibilitou, škálovatelností a spolehlivostí za použití oblíbených nástrojů.

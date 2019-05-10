@@ -1,20 +1,19 @@
 ---
 title: Operátory new a delete
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - delete_cpp
 - new
 helpviewer_keywords:
-- new keyword [C++], dynamic allocation of objects
-- nothrownew.obj
-- delete keyword [C++], syntax
+- new keyword [C++]
+- delete keyword [C++]
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-ms.openlocfilehash: 1ac6282ecbf45f22e7dd66b94f8bccdbc4e505ce
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 8dd5e6a555872c443e32e9ea464ea49d4ae18f99
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345899"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222362"
 ---
 # <a name="new-and-delete-operators"></a>Operátory new a delete
 
@@ -40,7 +39,7 @@ Dva obory **operátor new** funkce jsou popsány v následující tabulce.
 
 ### <a name="scope-for-operator-new-functions"></a>Obor pro funkce operator new
 
-|Operátor|Rozsah|
+|Operátor|Scope|
 |--------------|-----------|
 |**:: new – operátor**|Globální|
 |*Název třídy* **:: new – operátor**|Třída|
@@ -85,9 +84,7 @@ Argument zadaný v závorkách **nové** je předán `Blanks::operator new` jako
 Blanks *SomeBlanks = new Blanks;
 ```
 
-Ve Visual C++ 5.0 a starších netřídní typy a všechna pole (bez ohledu na to, zda byly **třídy** typ) přidělena pomocí **nové** operátor vždy použít globální **operátor new** funkce.
-
-Od verze Visual C++ 5.0, kompilátor podporuje členská pole **nové** a **odstranit** operátory v deklaraci třídy. Příklad:
+Kompilátor podporuje členská pole **nové** a **odstranit** operátory v deklaraci třídy. Příklad:
 
 ```cpp
 // spec1_the_operator_new_function2.cpp
@@ -203,7 +200,7 @@ int main( int argc, char *argv[] ) {
 
 Předchozí kód lze použít k detekci "úniku paměti" – to znamená, paměti, která je přidělené ve volném úložišti, ale nikdy uvolněna. K provedení této detekce, globální **nové** a **odstranit** operátory jsou předefinována na počet přidělování a navracení zpět paměti.
 
-Od verze Visual C++ 5.0, kompilátor podporuje členská pole **nové** a **odstranit** operátory v deklaraci třídy. Příklad:
+Kompilátor podporuje členská pole **nové** a **odstranit** operátory v deklaraci třídy. Příklad:
 
 ```cpp
 // spec1_the_operator_delete_function2.cpp
