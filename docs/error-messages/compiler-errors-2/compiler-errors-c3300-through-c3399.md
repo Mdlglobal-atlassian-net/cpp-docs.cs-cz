@@ -1,5 +1,5 @@
 ---
-title: Compiler errors C3300 Through C3399
+title: Chyby kompilátoru C3300 až C3399
 ms.date: 04/21/2019
 f1_keywords:
 - C3300
@@ -101,13 +101,13 @@ helpviewer_keywords:
 - C3378
 ms.assetid: 190b7d29-ffe6-4261-921d-140da1935d00
 ms.openlocfilehash: ca55e19534f722a7231a1d30c63e2dbb77d25ec7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281453"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857724"
 ---
-# <a name="compiler-errors-c3300-through-c3399"></a>Compiler errors C3300 Through C3399
+# <a name="compiler-errors-c3300-through-c3399"></a>Chyby kompilátoru C3300 až C3399
 
 Články v této části dokumentace vysvětlují podmnožinu chybové zprávy, které jsou generovány kompilátorem.
 
@@ -115,7 +115,7 @@ ms.locfileid: "62281453"
 
 ## <a name="error-messages"></a>Chybové zprávy
 
-|Chyba|Zpráva|
+|Chyba|Message|
 |-----------|-------------|
 |Chyba kompilátoru C3300|"*symbol*': nesprávný formát pro IDL"*hodnota*.|
 |Chyba kompilátoru C3301|"*coclass*': coclass nemůže být"*symbol*"rozhraní|

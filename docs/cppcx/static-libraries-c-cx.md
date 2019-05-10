@@ -2,12 +2,12 @@
 title: Statické knihovny (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-ms.openlocfilehash: 242ba10b29a8efe0c3e9580f1d0d0c3be529a7d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 188ba06518bf6cdd154b7d6bd61216ed1e4ffad3
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398859"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877244"
 ---
 # <a name="static-libraries-ccx"></a>Statické knihovny (C++/CX)
 
@@ -15,11 +15,32 @@ Statické knihovny, který se používá v aplikaci pro univerzální platformu 
 
 ## <a name="creating-static-libraries"></a>Vytvoření statické knihovny
 
-#### <a name="to-create-a-static-library-for-use-in-a-uwp-app"></a>Vytvoření statické knihovny pro použití v aplikaci UWP
+
+Pokyny pro vytvoření nového projektu se liší v závislosti na tom, kterou verzi sady Visual Studio jste nainstalovali. Ujistěte se, že máte volič verze v horním vlevo nastavené na správné verzi.
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-uwp-static-library-in-visual-studio-2019"></a>Chcete-li vytvořit statickou knihovnu UPW v aplikaci Visual Studio 2019
+
+1. V panelu nabídky zvolte **souboru** > **nový** > **projektu** otevřít **vytvořte nový projekt** dialogové okno.
+
+1. V horní části dialogového okna, nastavte **jazyk** k **C++**, nastavte **platformy** k **Windows**a nastavte **typprojektu** k **UPW**. 
+
+1. Filtrované seznamu typů projektů zvolte **statická knihovna (Universal Windows - C++/CX)** klikněte na tlačítko **Další**. Na další stránce zadejte název projektu a zadejte umístění projektu, v případě potřeby.
+
+1. Zvolte **vytvořit** tlačítko pro vytvoření projektu.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-create-a-uwp-static-library-in-visual-studio-2017-or-visual-studio-2015"></a>Chcete-li vytvořit statickou knihovnu UWP v sadě Visual Studio 2017 nebo Visual Studio 2015
 
 1. V panelu nabídky zvolte **souboru** > **nový** > **projektu**. V části **Visual C++** > **Windows Universal** zvolte **statická knihovna (Universal Windows)**.
 
 1. V **Průzkumníka řešení**, otevřete místní nabídku pro projekt a klikněte na tlačítko **vlastnosti**. V **vlastnosti** dialogovém okně **vlastnosti konfigurace** > **C/C++** nastavte **využívat rozšíření modulu Runtime Windows** k **Ano (/ZW)**.
+
+::: moniker-end
 
 Při kompilaci novou statickou knihovnu, pokud provedete voláním rozhraní Win32 API, která je vyloučená pro aplikace pro UPW, kompilátor vyvolá chybu C3861, "Identifikátor se nenašel." Vyhledejte alternativní metodu, která je podporována pro prostředí Windows Runtime, najdete v článku [alternativy k rozhraní API Windows v aplikacích pro UWP](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).
 

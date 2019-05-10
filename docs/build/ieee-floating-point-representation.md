@@ -1,6 +1,6 @@
 ---
 title: Reprezentace plovoucí desetinné čárky IEEE
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - float keyword
 - real*8 value
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - long double
 - real*4 value
 ms.assetid: 537833e8-fe05-49fc-8169-55fd0314b195
-ms.openlocfilehash: 69686e7e1c8994b799607eebf7e50387ed688272
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 130a79ae6846df27ffabfd6cb6649e0a0de03e4b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188831"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220631"
 ---
 # <a name="ieee-floating-point-representation"></a>Reprezentace plovoucí desetinné čárky IEEE
 
-Microsoft Visual C++ je konzistentní s číselnou standardů IEEE. Standard IEEE 754 popisuje s plovoucí desetinnou čárkou formátů, způsob, jak reprezentaci reálná čísla v hardwaru. Existují aspoň pět interní formát pro čísla s plovoucí desetinnou čárkou, která jsou reprezentovat hardwaru cílem a kompilátorem MSVC, ale kompilátor používá pouze dva z nich. *Jednoduchou přesností* (4bajtová) a *dvojité přesnosti* formáty (8 bajtů) se používají v jazyce Visual C++. Jednoduchou přesnost je deklarována pomocí klíčového slova **float**. Dvojitá přesnost je deklarována pomocí klíčového slova **double**. IEEE standard také určuje *precision polovině* (2bajtových) a *čtyřikrát přesností* formáty (16 bajtů), ale i *dvojité rozšířené přesnosti* (10 bajtů) formát, který některé kompilátory jazyků C a C++ implementovat jako **long double** datového typu. V kompilátoru MSVC **long double** datový typ je považován za odlišný typ, ale typ úložiště mapuje na **double**. Existuje, ale vnitřní a sestavení jazykovou podporu pro výpočty pomocí dalších formátů, včetně dvojité rozšířené přesnosti (10 bajtů) formát, kde je podporovaný hardware.
+Microsoft C++ je konzistentní s číselnou standardů IEEE (MSVC). Standard IEEE 754 popisuje s plovoucí desetinnou čárkou formátů, způsob, jak reprezentaci reálná čísla v hardwaru. Existují aspoň pět interní formát pro čísla s plovoucí desetinnou čárkou, která jsou reprezentovat hardwaru cílem a kompilátorem MSVC, ale kompilátor používá pouze dva z nich. *Jednoduchou přesností* (4bajtová) a *dvojité přesnosti* formáty (8 bajtů) se používají v MSVC. Jednoduchou přesnost je deklarována pomocí klíčového slova **float**. Dvojitá přesnost je deklarována pomocí klíčového slova **double**. IEEE standard také určuje *precision polovině* (2bajtových) a *čtyřikrát přesností* formáty (16 bajtů), ale i *dvojité rozšířené přesnosti* (10 bajtů) formát, který některé kompilátory jazyků C a C++ implementovat jako **long double** datového typu. V kompilátoru MSVC **long double** datový typ je považován za odlišný typ, ale typ úložiště mapuje na **double**. Existuje, ale vnitřní a sestavení jazykovou podporu pro výpočty pomocí dalších formátů, včetně dvojité rozšířené přesnosti (10 bajtů) formát, kde je podporovaný hardware.
 
 Hodnoty jsou uloženy následujícím způsobem:
 
-|Value|Uložené jako|
+|Hodnota|Uložené jako|
 |-----------|---------------|
 |jednoduchou přesností|podepsat bit, 8 bitů exponent, 23 bitů mantisy|
 |dvojité přesnosti|podepsat bit, 11bitový exponent, mantisy 52-bit|
@@ -84,7 +84,7 @@ Toto jsou některé příklady ve formátu jednoduchou přesnost:
 
 - Pro hodnotu 2 je bit znaménka 0 a uložené exponent je 128 nebo 1000 0000 v binárním souboru, který je 127 plus 1. Uložené binární mantisa je (1). 000 0000 0000 0000 0000 0000, která má implicitní přední 1 a binární bod, takže skutečný mantisy představuje jedno.
 
-   |Hodnota|Vzorec|Binární reprezentace|Šestnáctková hodnota|
+   |Value|Vzorec|Binární reprezentace|Šestnáctková hodnota|
    |-|-|-|-|
    |2|1 * 2<sup>1</sup>|0100 0000 0000 0000 0000 0000 0000 0000|0x40000000|
 
@@ -108,7 +108,7 @@ Toto jsou některé příklady ve formátu jednoduchou přesnost:
 
 - Hodnota 1. Stejné mantisy jako ostatní mocniny dvou posunutého exponent je jeden méně než dvě 127 nebo 011 1111 1 v binárním souboru.
 
-   |Value|Vzorec|Binární reprezentace|Šestnáctková hodnota|
+   |Hodnota|Vzorec|Binární reprezentace|Šestnáctková hodnota|
    |-|-|-|-|
    |1|1 * 2<sup>0</sup>|0011 1111 1000 0000 0000 0000 0000 0000|0x3F800000|
 
@@ -132,7 +132,7 @@ Toto jsou některé příklady ve formátu jednoduchou přesnost:
 
 - Nula je zvláštní případ, který používá tento vzorec pro minimální možné reprezentovatelné kladné hodnoty, které obsahuje samé nuly.
 
-   |Value|Vzorec|Binární reprezentace|Šestnáctková hodnota|
+   |Hodnota|Vzorec|Binární reprezentace|Šestnáctková hodnota|
    |-|-|-|-|
    |0|1 * 2<sup>-128</sup>|0000 0000 0000 0000 0000 0000 0000 0000|0x00000000|
 

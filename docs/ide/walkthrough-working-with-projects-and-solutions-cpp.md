@@ -1,18 +1,18 @@
 ---
 title: 'Návod: Práce s projekty a řešeními (C++)'
-ms.date: 09/14/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - solutions [C++]
 - projects [C++], about projects
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: 9408938b670d8130305f2e1c1258fc6fcb9875bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 978899e6e73d78623e37222e3248dc299ec29c69
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264592"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877294"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>Návod: Práce s projekty a řešeními (C++)
 
@@ -22,24 +22,43 @@ V sadě Visual Studio je práce organizována do projektů a řešení. Řešen�
 
 ## <a name="before-you-start"></a>Než začnete
 
-K dokončení tohoto návodu, třeba Visual Studio 2017 verze 15.3 nebo novější. Pokud potřebujete kopii, zde je krátké průvodce: [Instalace podpory jazyka C++ v sadě Visual Studio](../build/vscpp-step-0-installation.md). Pokud jste to ještě neudělali, postupujte podle dalších kroků po instalaci prostřednictvím kurz "Hello, World", abyste měli jistotu, že je správně nainstalovaný Visual C++ a všechny funguje.
+K dokončení tohoto návodu, třeba Visual Studio 2017 nebo novější. Pokud potřebujete kopii, zde je krátké průvodce: [Instalace podpory jazyka C++ v sadě Visual Studio](../build/vscpp-step-0-installation.md). Pokud jste to ještě neudělali, postupujte podle dalších kroků po instalaci prostřednictvím kurz "Hello, World", abyste měli jistotu, že je správně nainstalovaný Visual C++ a všechny funguje.
 
 To pomáhá porozumět základům jazyka C++ a vědět, co kompilátoru, linkeru a ladicí program se používají pro. Kurz předpokládá také, že jste obeznámeni s Windows a použití nabídek, dialogová okna,
 
 ## <a name="create-a-project"></a>Vytvoření projektu
 
-Chcete-li vytvořit projekt, zvolte nejprve šablonu typu projektu. Pro každý typ projektu aplikace Visual Studio nastaví nastavení kompilátoru a – podle toho, jaké – vygeneruje počáteční kód, který můžete později změnit.
+Chcete-li vytvořit projekt, zvolte nejprve šablonu typu projektu. Pro každý typ projektu aplikace Visual Studio nastaví nastavení kompilátoru a – podle toho, jaké – vygeneruje počáteční kód, který můžete později změnit. Následující postup se liší v závislosti na tom, kterou verzi sady Visual Studio, kterou používáte. Ujistěte se, že volič verze v levé horní části této stránky je nastaven na správnou verzi.
 
-### <a name="to-create-a-project"></a>Vytvoření projektu
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-project-in-visual-studio-2019"></a>Vytvoření projektu v aplikaci Visual Studio 2019
+
+1. V hlavní nabídce zvolte **souboru** > **nový** > **projektu** otevřít **vytvořte nový projekt** dialogového okna pole.
+
+1. V horní části dialogového okna, nastavte **jazyk** k **C++**, nastavte **platformy** k **Windows**a nastavte **typprojektu** k **konzoly**. 
+
+1. Filtrované seznamu typů projektů zvolte **konzolovou aplikaci** klikněte na tlačítko **Další**. Na další stránce zadejte *hru* jako název projektu.
+
+   Můžete přijmout výchozí umístění v **umístění** rozevíracího seznamu zadat jiné umístění nebo zvolte **Procházet** tlačítko vyhledat adresář, kam chcete projekt uložit.
+
+   Při vytváření projektu sady Visual Studio vloží projektu v řešení. Ve výchozím nastavení má řešení stejný název jako projekt. Můžete změnit název v **název řešení** pole, ale v tomto příkladu Ponecháme výchozí název.
+
+1. Zvolte **vytvořit** tlačítko pro vytvoření projektu.
+
+   Visual Studio vytvoří nová řešení a soubory projektu a otevře se editor pro Game.cpp souboru se zdrojovým kódem, který je generován.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+### <a name="to-create-a-project-in-visual-studio-2017"></a>Vytvoření projektu v sadě Visual Studio 2017
 
 1. V panelu nabídky zvolte **souboru** > **nový** > **projektu**.
 
 1. V levém podokně **nový projekt** dialogového okna rozbalte **nainstalováno** a vyberte **Visual C++**, pokud není již otevřen.
 
 1. V seznamu nainstalovaných šablon v prostředním podokně vyberte **Konzolová aplikace Windows**.
-
-   > [!NOTE]
-   > V předchozích verzích sady Visual Studio se nazývá nainstalovanou šablonu **Konzolová aplikace Win32**.
 
 1. Zadejte název projektu v **název** pole. V tomto příkladu zadejte *hru*.
 
@@ -50,6 +69,30 @@ Chcete-li vytvořit projekt, zvolte nejprve šablonu typu projektu. Pro každý 
 1. Zvolte **OK** tlačítko pro vytvoření projektu.
 
    Visual Studio vytvoří nová řešení a soubory projektu a otevře se editor pro Game.cpp souboru se zdrojovým kódem, který je generován.
+
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+### <a name="to-create-a-project-in-visual-studio-2015"></a>Vytvoření projektu v sadě Visual Studio 2015
+
+1. V panelu nabídky zvolte **souboru** > **nový** > **projektu**.
+
+1. V levém podokně **nový projekt** dialogového okna rozbalte **nainstalováno** a vyberte **Visual C++**, pokud není již otevřen.
+
+1. V seznamu nainstalovaných šablon v prostředním podokně vyberte **Konzolová aplikace Win32**.
+
+1. Zadejte název projektu v **název** pole. V tomto příkladu zadejte *hru*.
+
+   Můžete přijmout výchozí umístění v **umístění** rozevíracího seznamu zadat jiné umístění nebo zvolte **Procházet** tlačítko vyhledat adresář, kam chcete projekt uložit.
+
+   Při vytváření projektu sady Visual Studio vloží projektu v řešení. Ve výchozím nastavení má řešení stejný název jako projekt. Můžete změnit název v **název řešení** pole, ale v tomto příkladu Ponecháme výchozí název.
+
+1. Zvolte **OK** tlačítko pro vytvoření projektu.
+
+   Visual Studio vytvoří nová řešení a soubory projektu a otevře se editor pro Game.cpp souboru se zdrojovým kódem, který je generován.
+
+::: moniker-end
 
 ## <a name="organize-projects-and-files"></a>Uspořádání projektů a souborů
 
@@ -117,7 +160,7 @@ Tato část návodu ukazuje, jak přidat třídu do projektu. Při přidání t�
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#111](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_5.cpp)]-->
 
     ```cpp
-    #include "pch.h"
+    #include "pch.h" // remove this line in Visual Studio 2019
     #include "Cardgame.h"
     #include <iostream>
 
@@ -155,7 +198,7 @@ Přidání kódu do vaší aplikace, který kontroluje nových funkcí.
     // Game.cpp : Defines the entry point for the console application.
     //
 
-    #include "pch.h"
+    #include "pch.h" // remove this line in Visual Studio 2019
     #include "Cardgame.h"
     #include <iostream>
 

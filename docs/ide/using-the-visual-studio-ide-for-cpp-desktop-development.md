@@ -1,16 +1,16 @@
 ---
 title: Použití prostředí IDE sady Visual Studio pro vývoj aplikací klasické pracovní plochy v jazyce C++
-ms.date: 03/14/2019
+ms.date: 04/25/2019
 helpviewer_keywords:
 - IDE [C++]
 - Visual Studio IDE [C++]
 ms.assetid: d985c230-8e81-49d6-92be-2db9cac8d023
-ms.openlocfilehash: 7417c46097b1f0c6282e3684a7556880c21be42a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: e4a1fe0c8d008192d6283306c0f23eac7ae00e7a
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349235"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857674"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>Použití prostředí IDE sady Visual Studio pro vývoj aplikací klasické pracovní plochy v jazyce C++
 
@@ -22,17 +22,19 @@ Pokud jste dosud nenainstalovali aplikaci Visual Studio, teď je čas. Odkazy ke
 
 Tyto kurzy se předpokládá, že jste nainstalovali aplikaci Visual Studio a jazyka Visual C++ a komponenty potřebné pro vývoj pro plochu Windows. Také předpokládáme, že chápete základy jazyka C++. Pokud potřebujete informace o jazyku C++, existuje mnoho knih a webových prostředků k dispozici. Je jeden Dobrým začátkem [Začínáme](https://isocpp.org/get-started) stránce webu základ standardu C++.
 
-Pokud jste dosud nenainstalovali aplikaci Visual Studio, teď je čas.
+Pokud jste dosud nenainstalovali aplikaci Visual Studio, teď je čas. Obecně platí důrazně doporučujeme použít Visual Studio 2019 i v případě, že budete potřebovat ke kompilaci kódu pomocí kompilátoru Visual Studio 2017 nebo Visual Studio 2015. Další informace najdete v tématu [pomocí nativního cílení na více platforem v sadě Visual Studio sestavení starých projektů](../porting/use-native-multi-targeting.md).
+
+**Visual Studio 2019 Installation**
+
+Chcete-li získat Visual Studio 2019, můžete stáhnout z [stahování sady Visual Studio](https://www.visualstudio.com/downloads/). Nezapomeňte zahrnout nástroje Visual C++ pro vývoj, při instalaci sady Visual Studio, protože nejsou nainstalovány ve výchozím nastavení. Další informace o tom, jak nainstalovat sadu Visual Studio najdete v tématu [instalace sady Visual Studio](/visualstudio/install/install-visual-studio).
 
 **Visual Studio 2017 Installation**
 
-Pokud chcete získat Visual Studio 2017, můžete sadu stáhnout z [stahování sady Visual Studio](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx). Nezapomeňte zahrnout nástroje Visual C++ pro vývoj, při instalaci sady Visual Studio, protože nejsou nainstalovány ve výchozím nastavení. Další informace o tom, jak nainstalovat sadu Visual Studio najdete v tématu [instalace sady Visual Studio](/visualstudio/install/install-visual-studio).
+Pokud chcete získat Visual Studio 2017, můžete sadu stáhnout z [starší verze sady Visual Studio si můžete stáhnout](https://www.visualstudio.com/vs/older-downloads/). Nezapomeňte zahrnout nástroje Visual C++ pro vývoj, při instalaci sady Visual Studio, protože nejsou nainstalovány ve výchozím nastavení. Další informace o tom, jak nainstalovat sadu Visual Studio najdete v tématu [instalace sady Visual Studio](/visualstudio/install/install-visual-studio) a nastavte na stránce výběru verze **Visual Studio 2017**.
 
 **Visual Studio 2015 Installation**
 
 Chcete-li nainstalovat sadu Visual Studio 2015, přejděte na [starší verze sady Visual Studio si můžete stáhnout](https://www.visualstudio.com/vs/older-downloads/). Spusťte instalační program a zvolte **vlastní instalace** a klikněte na tlačítko komponent C++.
-
-Obecně platí důrazně doporučujeme použít Visual Studio 2017, i v případě, že budete potřebovat ke kompilaci kódu pomocí kompilátoru Visual Studio 2015. Další informace najdete v tématu [pomocí nativního cílení na více platforem v sadě Visual Studio sestavení starých projektů](../porting/use-native-multi-targeting.md).
 
 Po dokončení instalace sady Visual Studio budete chtít pokračovat.
 

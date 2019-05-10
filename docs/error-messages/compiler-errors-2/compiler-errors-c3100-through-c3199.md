@@ -1,5 +1,5 @@
 ---
-title: Compiler errors C3100 Through C3199
+title: Chyby kompilátoru C3100 až C3199
 ms.date: 04/21/2019
 f1_keywords:
 - C3102
@@ -67,13 +67,13 @@ helpviewer_keywords:
 - C3193
 ms.assetid: 7bc40c2f-6a8d-488a-b665-f39375afee77
 ms.openlocfilehash: efa3207a9fdfb81a52bf319a1cbc2da84084b6cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281650"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856812"
 ---
-# <a name="compiler-errors-c3100-through-c3199"></a>Compiler errors C3100 Through C3199
+# <a name="compiler-errors-c3100-through-c3199"></a>Chyby kompilátoru C3100 až C3199
 
 Články v této části dokumentace vysvětlují podmnožinu chybové zprávy, které jsou generovány kompilátorem.
 
@@ -81,7 +81,7 @@ ms.locfileid: "62281650"
 
 ## <a name="error-messages"></a>Chybové zprávy
 
-|Chyba|Zpráva|
+|Chyba|Message|
 |-----------|-------------|
 |[Chyba kompilátoru C3100](compiler-error-c3100.md)|"*identifikátor*': Neznámý kvalifikátor atributu|
 |[Chyba kompilátoru C3101](compiler-error-c3101.md)|Neplatný výraz pro argument pojmenovaného atributu '*identifikátor*.|

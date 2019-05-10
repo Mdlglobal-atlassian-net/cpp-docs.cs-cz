@@ -5,16 +5,16 @@ helpviewer_keywords:
 - .vcxproj files
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-ms.openlocfilehash: cfe40d6520187212ab77607273c555f12012fd02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 306b6a7b39db758c3712b1d57460268fc6414726
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319821"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217741"
 ---
 # <a name="project-files"></a>Soubory projektu
 
-Soubor projektu Visual C++ je soubor založený na formátu XML, který má příponu názvu souboru a obsahuje informace potřebné k sestavení projektu Visual C++. Všimněte si, že import souboru projektu různých souborů projektu, které mají příponu *.props* nebo *.targets*. Tyto soubory obsahují informace o další sestavení a může samotné odkazovat na jiné *.props* nebo *.targets* soubory. Makra v cestě k souboru (například `$(VCTargetsPath)`) jsou závislá na instalaci sady Visual Studio. Další informace o těchto maker a *.props* a *.targets* soubory, naleznete v tématu [VC ++ Directories Property Page](vcpp-directories-property-page.md), [kompilátor C++ nastavit a sestavení vlastnosti v sadě Visual Studio](../working-with-project-properties.md) a [sestavení běžná makra pro příkazy a vlastnosti](common-macros-for-build-commands-and-properties.md).
+A C++ soubor projektu v sadě Visual Studio je soubor založený na formátu XML, který má příponu názvu souboru a obsahuje informace potřebné k sestavení C++ projektu. Všimněte si, že import souboru projektu různých souborů projektu, které mají příponu *.props* nebo *.targets*. Tyto soubory obsahují informace o další sestavení a může samotné odkazovat na jiné *.props* nebo *.targets* soubory. Makra v cestě k souboru (například `$(VCTargetsPath)`) jsou závislá na instalaci sady Visual Studio. Další informace o těchto maker a *.props* a *.targets* soubory, naleznete v tématu [VC ++ Directories Property Page](vcpp-directories-property-page.md), [kompilátor C++ nastavit a sestavení vlastnosti v sadě Visual Studio](../working-with-project-properties.md) a [sestavení běžná makra pro příkazy a vlastnosti](common-macros-for-build-commands-and-properties.md).
 
 ## <a name="example"></a>Příklad
 

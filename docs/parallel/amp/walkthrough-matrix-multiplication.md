@@ -1,13 +1,13 @@
 ---
 title: 'Návod: Násobení matic'
-ms.date: 11/19/2018
+ms.date: 04/23/2019
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: 597ba0f47c7b081f62c82bf8e1ca01c286d35140
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: afa9dba8938f9d701b8f21ca3575eb06eb688ac0
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237232"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877485"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Návod: Násobení matic
 
@@ -21,9 +21,35 @@ Než začnete:
 
 - Čtení [pomocí dlaždice](../../parallel/amp/using-tiles.md).
 
-- Ujistěte se, že tento Windows 7, Windows 8, Windows Server 2008 R2 nebo Windows Server 2012 je nainstalovaný ve vašem počítači.
+- Ujistěte se, že používáte minimálně Windows 7 nebo Windows Server 2008 R2.
 
 ### <a name="to-create-the-project"></a>Vytvoření projektu
+
+Pokyny pro vytvoření nového projektu se liší v závislosti na tom, kterou verzi sady Visual Studio jste nainstalovali. Ujistěte se, že máte volič verze v horním vlevo nastavené na správné verzi.
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-the-project-in-visual-studio-2019"></a>Vytvoření projektu v aplikaci Visual Studio 2019
+
+1. V panelu nabídky zvolte **souboru** > **nový** > **projektu** otevřít **vytvořte nový projekt** dialogové okno.
+
+1. V horní části dialogového okna, nastavte **jazyk** k **C++**, nastavte **platformy** k **Windows**a nastavte **typprojektu** k **konzoly**. 
+
+1. Filtrované seznamu typů projektů zvolte **prázdný projekt** klikněte na tlačítko **Další**. Na další stránce zadejte *MatrixMultiply* v **název** zadat název projektu a zadejte umístění projektu, v případě potřeby.
+
+   ![Nových konzolovou aplikaci](../../build/media/mathclient-project-name-2019.png "nových konzolovou aplikaci")
+
+1. Zvolte **vytvořit** pro vytvoření projektu klienta.
+
+1. V **Průzkumníka řešení**, otevřete místní nabídku pro **zdrojové soubory**a klikněte na tlačítko **přidat** > **nová položka**.
+
+1. V **přidat novou položku** dialogu **soubor C++ (.cpp)**, zadejte *MatrixMultiply.cpp* v **název** pole a klikněte na tlačítko  **Přidat** tlačítko.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-create-a-project-in-visual-studio-2017-or-2015"></a>Vytvoření projektu v sadě Visual Studio 2017 nebo 2015
 
 1. V panelu nabídek v sadě Visual Studio zvolte **souboru** > **nový** > **projektu**.
 
@@ -36,6 +62,8 @@ Než začnete:
 1. V **Průzkumníka řešení**, otevřete místní nabídku pro **zdrojové soubory**a klikněte na tlačítko **přidat** > **nová položka**.
 
 1. V **přidat novou položku** dialogu **soubor C++ (.cpp)**, zadejte *MatrixMultiply.cpp* v **název** pole a klikněte na tlačítko  **Přidat** tlačítko.
+
+::: moniker-end
 
 ## <a name="multiplication-without-tiling"></a>Násobení bez dělení do bloků
 
@@ -53,31 +81,31 @@ Matice 3 2 je A a B je 2 x 3 matice. Součin hodnot a b je následující matice
 
 1. Otevřete MatrixMultiply.cpp a pomocí následujícího kódu nahraďte stávající kód.
 
-```cpp
-#include <iostream>
+   ```cpp
+   #include <iostream>
 
-void MultiplyWithOutAMP() {
-    int aMatrix[3][2] = {{1, 4}, {2, 5}, {3, 6}};
-    int bMatrix[2][3] = {{7, 8, 9}, {10, 11, 12}};
-    int product[3][3] = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
+   void MultiplyWithOutAMP() {
+       int aMatrix[3][2] = {{1, 4}, {2, 5}, {3, 6}};
+       int bMatrix[2][3] = {{7, 8, 9}, {10, 11, 12}};
+       int product[3][3] = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
 
-    for (int row = 0; row < 3; row++) {
-        for (int col = 0; col < 3; col++) {
-            // Multiply the row of A by the column of B to get the row, column of product.
-            for (int inner = 0; inner < 2; inner++) {
-                product[row][col] += aMatrix[row][inner] * bMatrix[inner][col];
-            }
-            std::cout << product[row][col] << "  ";
-        }
-        std::cout << "\n";
-    }
-}
+       for (int row = 0; row < 3; row++) {
+           for (int col = 0; col < 3; col++) {
+               // Multiply the row of A by the column of B to get the row, column of product.
+               for (int inner = 0; inner < 2; inner++) {
+                   product[row][col] += aMatrix[row][inner] * bMatrix[inner][col];
+               }
+               std::cout << product[row][col] << "  ";
+           }
+           std::cout << "\n";
+       }
+   }
 
-void main() {
-    MultiplyWithOutAMP();
-    getchar();
-}
-```
+   void main() {
+       MultiplyWithOutAMP();
+       getchar();
+   }
+   ```
 
    Algoritmus je jednoduchá implementace definice násobení matic. Zkrátit čas výpočtu nepoužívá žádné algoritmy paralelní nebo vláken.
 
@@ -91,61 +119,61 @@ void main() {
 
 1. V MatrixMultiply.cpp, přidejte následující kód před `main` metody.
 
-```cpp
-void MultiplyWithAMP() {
-    int aMatrix[] = { 1, 4, 2, 5, 3, 6 };
-    int bMatrix[] = { 7, 8, 9, 10, 11, 12 };
-    int productMatrix[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+   ```cpp
+   void MultiplyWithAMP() {
+   int aMatrix[] = { 1, 4, 2, 5, 3, 6 };
+   int bMatrix[] = { 7, 8, 9, 10, 11, 12 };
+   int productMatrix[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
-    array_view<int, 2> a(3, 2, aMatrix);
+   array_view<int, 2> a(3, 2, aMatrix);
 
-    array_view<int, 2> b(2, 3, bMatrix);
+   array_view<int, 2> b(2, 3, bMatrix);
 
-    array_view<int, 2> product(3, 3, productMatrix);
+   array_view<int, 2> product(3, 3, productMatrix);
 
-    parallel_for_each(product.extent,
-        [=] (index<2> idx) restrict(amp) {
-            int row = idx[0];
-            int col = idx[1];
-            for (int inner = 0; inner <2; inner++) {
-                product[idx] += a(row, inner)* b(inner, col);
-            }
-        });
+   parallel_for_each(product.extent,
+      [=] (index<2> idx) restrict(amp) {
+          int row = idx[0];
+          int col = idx[1];
+          for (int inner = 0; inner <2; inner++) {
+              product[idx] += a(row, inner)* b(inner, col);
+          }
+      });
 
-    product.synchronize();
+   product.synchronize();
 
-    for (int row = 0; row <3; row++) {
-        for (int col = 0; col <3; col++) {
-            //std::cout << productMatrix[row*3 + col] << "  ";
-            std::cout << product(row, col) << "  ";
-        }
-        std::cout << "\n";
-    }
-}
-```
+   for (int row = 0; row <3; row++) {
+      for (int col = 0; col <3; col++) {
+          //std::cout << productMatrix[row*3 + col] << "  ";
+          std::cout << product(row, col) << "  ";
+      }
+      std::cout << "\n";
+     }
+   }
+   ```
 
    Kód AMP se podobá kódu bez AMP. Volání `parallel_for_each` spouští jedno vlákno pro každý prvek v `product.extent`a nahradí `for` smyčky pro řádků a sloupců. Hodnota buňky v řádku a sloupce je k dispozici v `idx`. Dostanete prvky `array_view` s použitím buď `[]` operátor a indexovaná proměnná, nebo `()` řádků a sloupců proměnných a operátor. Tento příklad ukazuje obě metody. `array_view::synchronize` Metoda zkopíruje hodnoty `product` proměnné zpět `productMatrix` proměnné.
 
 1. Přidejte následující `include` a `using` příkazů v horní části MatrixMultiply.cpp.
 
-```cpp
-#include <amp.h>
-using namespace concurrency;
-```
+   ```cpp
+   #include <amp.h>
+   using namespace concurrency;
+   ```
 
 1. Upravit `main` metoda se má volat `MultiplyWithAMP` metody.
 
-```cpp
-void main() {
-    MultiplyWithOutAMP();
-    MultiplyWithAMP();
-    getchar();
-}
-```
+   ```cpp
+   void main() {
+       MultiplyWithOutAMP();
+       MultiplyWithAMP();
+       getchar();
+   }
+   ```
 
-1. Zvolte **Ctrl**+**F5** klávesovou zkratku pro spuštění ladění a ověřte, zda výstup je správná.
+1. Stisknutím klávesy **Ctrl**+**F5** klávesovou zkratku pro spuštění ladění a ověřte, zda výstup je správná.
 
-1. Zvolte **MEZERNÍK** ukončíte aplikaci.
+1. Stisknutím klávesy **MEZERNÍK** ukončíte aplikaci.
 
 ## <a name="multiplication-with-tiling"></a>Násobení s dělení do bloků
 
@@ -191,107 +219,106 @@ K implementaci tento algoritmus, kód:
 
 1. V MatrixMultiply.cpp, přidejte následující kód před `main` metody.
 
-```cpp
-void MultiplyWithTiling() {
-    // The tile size is 2.
-    static const int TS = 2;
+   ```cpp
+   void MultiplyWithTiling() {
+       // The tile size is 2.
+       static const int TS = 2;
 
-    // The raw data.
-    int aMatrix[] = { 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8 };
-    int bMatrix[] = { 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8 };
-    int productMatrix[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+       // The raw data.
+       int aMatrix[] = { 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8 };
+       int bMatrix[] = { 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8 };
+       int productMatrix[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
-    // Create the array_view objects.
-    array_view<int, 2> a(4, 4, aMatrix);
-    array_view<int, 2> b(4, 4, bMatrix);
-    array_view<int, 2> product(4, 4, productMatrix);
+       // Create the array_view objects.
+       array_view<int, 2> a(4, 4, aMatrix);
+       array_view<int, 2> b(4, 4, bMatrix);
+       array_view<int, 2> product(4, 4, productMatrix);
 
-    // Call parallel_for_each by using 2x2 tiles.
-    parallel_for_each(product.extent.tile<TS, TS>(),
-        [=] (tiled_index<TS, TS> t_idx) restrict(amp)
-        {
-            // Get the location of the thread relative to the tile (row, col)
-            // and the entire array_view (rowGlobal, colGlobal).
-            int row = t_idx.local[0];
-            int col = t_idx.local[1];
-            int rowGlobal = t_idx.global[0];
-            int colGlobal = t_idx.global[1];
-            int sum = 0;
+       // Call parallel_for_each by using 2x2 tiles.
+       parallel_for_each(product.extent.tile<TS, TS>(),
+           [=] (tiled_index<TS, TS> t_idx) restrict(amp)
+           {
+               // Get the location of the thread relative to the tile (row, col)
+               // and the entire array_view (rowGlobal, colGlobal).
+               int row = t_idx.local[0];
+               int col = t_idx.local[1];
+               int rowGlobal = t_idx.global[0];
+               int colGlobal = t_idx.global[1];
+               int sum = 0;
 
-            // Given a 4x4 matrix and a 2x2 tile size, this loop executes twice for each thread.
-            // For the first tile and the first loop, it copies a into locA and e into locB.
-            // For the first tile and the second loop, it copies b into locA and g into locB.
-            for (int i = 0; i < 4; i += TS) {
-                tile_static int locA[TS][TS];
-                tile_static int locB[TS][TS];
-                locA[row][col] = a(rowGlobal, col + i);
-                locB[row][col] = b(row + i, colGlobal);
-                // The threads in the tile all wait here until locA and locB are filled.
-                t_idx.barrier.wait();
+               // Given a 4x4 matrix and a 2x2 tile size, this loop executes twice for each thread.
+               // For the first tile and the first loop, it copies a into locA and e into locB.
+               // For the first tile and the second loop, it copies b into locA and g into locB.
+               for (int i = 0; i < 4; i += TS) {
+                   tile_static int locA[TS][TS];
+                   tile_static int locB[TS][TS];
+                   locA[row][col] = a(rowGlobal, col + i);
+                   locB[row][col] = b(row + i, colGlobal);
+                   // The threads in the tile all wait here until locA and locB are filled.
+                   t_idx.barrier.wait();
 
-                // Return the product for the thread. The sum is retained across
-                // both iterations of the loop, in effect adding the two products
-                // together, for example, a*e.
-                for (int k = 0; k < TS; k++) {
-                    sum += locA[row][k] * locB[k][col];
-                }
+                   // Return the product for the thread. The sum is retained across
+                   // both iterations of the loop, in effect adding the two products
+                   // together, for example, a*e.
+                   for (int k = 0; k < TS; k++) {
+                       sum += locA[row][k] * locB[k][col];
+                   }
 
-                // All threads must wait until the sums are calculated. If any threads
-                // moved ahead, the values in locA and locB would change.
-                t_idx.barrier.wait();
-                // Now go on to the next iteration of the loop.
-            }
+                   // All threads must wait until the sums are calculated. If any threads
+                   // moved ahead, the values in locA and locB would change.
+                   t_idx.barrier.wait();
+                   // Now go on to the next iteration of the loop.
+               }
 
-            // After both iterations of the loop, copy the sum to the product variable by using the global location.
-            product[t_idx.global] = sum;
-        });
+               // After both iterations of the loop, copy the sum to the product variable by using the global location.
+               product[t_idx.global] = sum;
+           });
 
-    // Copy the contents of product back to the productMatrix variable.
-    product.synchronize();
+       // Copy the contents of product back to the productMatrix variable.
+       product.synchronize();
 
-    for (int row = 0; row <4; row++) {
-        for (int col = 0; col <4; col++) {
-            // The results are available from both the product and productMatrix variables.
-            //std::cout << productMatrix[row*3 + col] << "  ";
-            std::cout << product(row, col) << "  ";
-        }
-        std::cout << "\n";
-    }
-}
-```
+       for (int row = 0; row <4; row++) {
+           for (int col = 0; col <4; col++) {
+               // The results are available from both the product and productMatrix variables.
+               //std::cout << productMatrix[row*3 + col] << "  ";
+               std::cout << product(row, col) << "  ";
+           }
+           std::cout << "\n";
+       }
+   }
+   ```
 
-    This example is significantly different than the example without tiling. The code uses these conceptual steps:
+   V tomto příkladu se značně liší od tohoto příkladu bez dlaždic. Tento kód použije koncepční takto:
+   1. Zkopírujte prvky dlaždici [0; 0] `a` do `locA`. Zkopírujte prvky dlaždici [0; 0] `b` do `locB`. Všimněte si, že `product` rozložen formou dlaždic, ne `a` a `b`. Proto použít globální indexy pro přístup k `a, b`, a `product`. Volání `tile_barrier::wait` je velmi důležité. Zastaví všechna vlákna v dlaždici do obou `locA` a `locB` jsou vyplněny.
 
-    1. Zkopírujte prvky dlaždici [0; 0] `a` do `locA`. Zkopírujte prvky dlaždici [0; 0] `b` do `locB`. Všimněte si, že `product` rozložen formou dlaždic, ne `a` a `b`. Proto použít globální indexy pro přístup k `a, b`, a `product`. Volání `tile_barrier::wait` je velmi důležité. Zastaví všechna vlákna v dlaždici do obou `locA` a `locB` jsou vyplněny.
+   1. Vynásobit `locA` a `locB` a uložte výsledky do `product`.
 
-    2. Vynásobit `locA` a `locB` a uložte výsledky do `product`.
+   1. Zkopírujte prvky dlaždici [0,1] `a` do `locA`. Zkopírujte prvky dlaždici [1,0] `b` do `locB`.
 
-    3. Zkopírujte prvky dlaždici [0,1] `a` do `locA`. Zkopírujte prvky dlaždici [1,0] `b` do `locB`.
+   1. Vynásobit `locA` a `locB` a přidat je do výsledky, které se již nacházejí v `product`.
 
-    4. Vynásobit `locA` a `locB` a přidat je do výsledky, které se již nacházejí v `product`.
+   1. Násobení dlaždice [0; 0] je dokončena.
 
-    5. Násobení dlaždice [0; 0] je dokončena.
+   1. Opakujte pro další čtyři dlaždice. Neexistuje žádné indexování speciálně pro dlaždice a vlákna můžete spustit v libovolném pořadí. Jak spustí každé vlákno `tile_static` proměnné se vytvářejí odpovídajícím způsobem pro každou dlaždici a volání `tile_barrier::wait` řídí tok programu.
 
-    6. Opakujte pro další čtyři dlaždice. Neexistuje žádné indexování speciálně pro dlaždice a vlákna můžete spustit v libovolném pořadí. Jak spustí každé vlákno `tile_static` proměnné se vytvářejí odpovídajícím způsobem pro každou dlaždici a volání `tile_barrier::wait` řídí tok programu.
+   1. Při prohlížení algoritmus úzce, Všimněte si, že každý submatrix je načten do `tile_static` paměti dvakrát. Přenos dat trvat dobu. Nicméně jakmile jsou data v `tile_static` paměti, je mnohem rychlejší přístup k datům. Protože výpočet produkty vyžaduje opakované přístup k hodnotám v submatrices, není zvýšení celkového výkonu. Pro každý algoritmus experimentování ve službě je potřeba najít optimálního algoritmu a velikost dlaždice.
 
-    7. Při prohlížení algoritmus úzce, Všimněte si, že každý submatrix je načten do `tile_static` paměti dvakrát. Přenos dat trvat dobu. Nicméně jakmile jsou data v `tile_static` paměti, je mnohem rychlejší přístup k datům. Protože výpočet produkty vyžaduje opakované přístup k hodnotám v submatrices, není zvýšení celkového výkonu. Pro každý algoritmus experimentování ve službě je potřeba najít optimálního algoritmu a velikost dlaždice.
+   V příkladech bez AMP a mimo dlaždicí každý prvek A a B přistupuje čtyřikrát z globální paměti k výpočtu produktu. V příkladu dlaždice každý prvek přistupuje dvakrát z globální paměti a čtyřikrát `tile_static` paměti. To není důležité výkonnější. 1 024 x 1 024 šlo A a B matice a velikost dlaždice se 16, by bylo zvýšení výkonu. V takovém případě každý prvek má být zkopírováno do `tile_static` paměti pouze 16 a k němu přistupovat z `tile_static` paměti 1024 časy.
 
-         V příkladech bez AMP a mimo dlaždicí každý prvek A a B přistupuje čtyřikrát z globální paměti k výpočtu produktu. V příkladu dlaždice každý prvek přistupuje dvakrát z globální paměti a čtyřikrát `tile_static` paměti. To není důležité výkonnější. 1 024 x 1 024 šlo A a B matice a velikost dlaždice se 16, by bylo zvýšení výkonu. V takovém případě každý prvek má být zkopírováno do `tile_static` paměti pouze 16 a k němu přistupovat z `tile_static` paměti 1024 časy.
+1. Změnit hlavní metoda k volání `MultiplyWithTiling` způsob, jak je znázorněno.
 
-2. Změnit hlavní metoda k volání `MultiplyWithTiling` způsob, jak je znázorněno.
+   ```cpp
+   void main() {
+       MultiplyWithOutAMP();
+       MultiplyWithAMP();
+       MultiplyWithTiling();
+       getchar();
+   }
+   ```
 
-```cpp
-void main() {
-    MultiplyWithOutAMP();
-    MultiplyWithAMP();
-    MultiplyWithTiling();
-    getchar();
-}
-```
+1. Stisknutím klávesy **Ctrl**+**F5** klávesovou zkratku pro spuštění ladění a ověřte, zda výstup je správná.
 
-3. Zvolte **Ctrl**+**F5** klávesovou zkratku pro spuštění ladění a ověřte, zda výstup je správná.
-
-4. Zvolte **místo** panelu ukončíte aplikaci.
+1. Stisknutím klávesy **místo** panelu ukončíte aplikaci.
 
 ## <a name="see-also"></a>Viz také:
 

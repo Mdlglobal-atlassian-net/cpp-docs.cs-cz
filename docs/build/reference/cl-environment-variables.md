@@ -1,6 +1,6 @@
 ---
 title: Proměnné prostředí CL
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - cl
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - environment variables, CL compiler
 ms.assetid: 2606585b-a681-42ee-986e-1c9a2da32108
-ms.openlocfilehash: a15bedc0a5aa8215356a98c3635a2edd1f3cfc5f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 620ec386e06b1a0eed91c94e9b2b891d9955fd00
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294470"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217633"
 ---
 # <a name="cl-environment-variables"></a>Proměnné prostředí CL
 
@@ -22,7 +22,7 @@ Cl – nástroj používá následující proměnné prostředí:
 
 - CL a \_CL\_, pokud je definována. Nástroj CL připojí na začátek možnosti a argumenty, které jsou definovány v proměnné prostředí CL na argumenty příkazového řádku a připojí možností a argumentů definované v \_CL\_, před zpracováním.
 
-- ZAHRNOUT, který musí ukazovat na podadresáři \include instalace sady Visual C++.
+- ZAHRNOUT, který musí ukazovat na podadresáři \include instalace sady Visual Studio.
 
 - Proměnná LIBPATH Určuje adresáře pro vyhledávání souborů metadat odkazovaný adresou [#using](../../preprocessor/hash-using-directive-cpp.md). Zobrazit `#using` Další informace o LIBPATH.
 

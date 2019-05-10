@@ -1,17 +1,20 @@
 ---
 title: 'Návod: Kompilování programu C++/CX na příkazovém řádku'
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: 099bef402d22abc12a31f105f63e5405c65a1d82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cbf5a48de3c029e36fc6daabe2b3f0db55dc173c
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314023"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877169"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Návod: Kompilování programu C++/CX na příkazovém řádku
 
-Můžete vytvořit programy v jazyce Visual C++, které se zaměřují na modul Windows Runtime je v příkazovém řádku. Vizuální C++ podporuje Visual C++ rozšíření komponent (C++/CX), který má další typy a operátory cílení programovacího modelu Windows Runtime. Můžete použít C++/CX k vytváření aplikací pro univerzální platformu Windows (UPW), Windows Phone 8.1 a Windows desktop. Další informace najdete v tématu [A prohlídku vyhodnocování +/ CX](https://msdn.microsoft.com/magazine/dn166929.aspx) a [přípony komponent pro platformy běhového prostředí](../extensions/component-extensions-for-runtime-platforms.md).
+> [!NOTE] 
+> Pro nové aplikace pro UPW a komponenty, doporučujeme použít [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/), standard C ++ 17 jazyk projekci pro rozhraní API Windows Runtime. C++/ WinRT je k dispozici v sadě SDK Windows 10 verze 1803 dále. C++/ WinRT je implementovaný zcela v souborech hlaviček a je navržené pro poskytování je prvotřídní přístup k moderní rozhraní Windows API.
+
+Microsoft C++ kompilátor (MSVC) podporuje C++ rozšíření komponent (C++/CX), který má další typy a operátory cílení programovacího modelu Windows Runtime. Můžete použít C++/CX k vytváření aplikací pro univerzální platformu Windows (UPW) a Windows desktop. Další informace najdete v tématu [A prohlídku vyhodnocování +/ CX](https://msdn.microsoft.com/magazine/dn166929.aspx) a [přípony komponent pro platformy běhového prostředí](../extensions/component-extensions-for-runtime-platforms.md).
 
 V tomto názorném postupu použijete k vytvoření základního textového editoru C++/CX programu a jeho následnou kompilaci v příkazovém řádku. (Můžete použít vlastní C++/CX program místo zadání ten, který se zobrazí, nebo můžete použít C++/CX vzorového kódu z jiného článku nápovědy. Tato technika je užitečná pro vytváření a testování malé moduly, které mají bez prvků uživatelského rozhraní.)
 
@@ -49,7 +52,7 @@ Povolit kompilace pro C++/CX, je nutné použít [/ZW](reference/zw-windows-runt
 
 1. V panelu nabídky zvolte **souboru** > **Uložit**.
 
-   Vytvoření zdrojového souboru jazyka Visual C++, který používá prostředí Windows Runtime [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md) oboru názvů.
+   Vytvoření C++ zdrojového souboru, který používá prostředí Windows Runtime [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md) oboru názvů.
 
 1. Na příkazovém řádku zadejte **/Link /ZW basiccx.cpp cl/EHsc/Subsystem: Console**. Cl.exe – kompilátor zkompiluje zdrojový kód do souboru .obj a pak spustí linkeru, aby generoval spustitelný program s názvem basiccx.exe. ( [/EHsc](reference/eh-exception-handling-model.md) – možnost kompilátoru Určuje model zpracování výjimek jazyka C++ a [/link](reference/link-pass-options-to-linker.md) příznak určuje konzolové aplikace.)
 

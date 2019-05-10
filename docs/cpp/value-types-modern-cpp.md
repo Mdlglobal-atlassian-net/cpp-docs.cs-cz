@@ -1,14 +1,14 @@
 ---
 title: Typy hodnot (moderní verze jazyka C++)
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.assetid: f63bb62c-60da-40d5-ac14-4366608fe260
-ms.openlocfilehash: 32cdb29ec1c59081ad7e0493888f290f21561d2b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 204ea9f86377eb8a5796f01cb81a9161163d9649
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390903"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221880"
 ---
 # <a name="value-types-modern-c"></a>Typy hodnot (moderní verze jazyka C++)
 
@@ -49,7 +49,7 @@ test.cpp(15) : error C2248: 'MyRefType::operator =' : cannot access private memb
 
 ## <a name="value-types-and-move-efficiency"></a>Typy hodnot a přesunout efektivity
 
-Režijní náklady na kopírování přidělení je vyloučeno z důvodu optimalizace nové kopie. Například při vkládání řetězce uprostřed vektor řetězce, bude žádné kopírování přerozdělení režijní náklady, pouze move - i v případě, že výsledkem zvětšit vektoru samotný. To platí i pro jiné operace, například provádění operace přidat na dvě velmi velké objekty. Jak povolit tyto operace optimalizace hodnotu? V některé kompilátory C++ kompilátor umožní to pro vás implicitně, stejně jako kopírovací konstruktory mohou být automaticky generovaný kompilátorem. Ale v jazyce Visual C++, třídě muset "přihlásit" k přesunutí přiřazení a konstruktory jeho deklarací v definici třídy. Toho lze dosáhnout pomocí dvojitých ampersandu (& &) odkaz na rvalue v odpovídající člen funkce deklarace a definice konstruktor přesunutí a metody přiřazení přesunu.  Také je třeba vložit správný kód "odcizit vnitřností" ze zdrojového objektu.
+Režijní náklady na kopírování přidělení je vyloučeno z důvodu optimalizace nové kopie. Například při vkládání řetězce uprostřed vektor řetězce, bude žádné kopírování přerozdělení režijní náklady, pouze move - i v případě, že výsledkem zvětšit vektoru samotný. To platí i pro jiné operace, například provádění operace přidat na dvě velmi velké objekty. Jak povolit tyto operace optimalizace hodnotu? V některé kompilátory C++ kompilátor umožní to pro vás implicitně, stejně jako kopírovací konstruktory mohou být automaticky generovaný kompilátorem. Nicméně v C++, třídě muset "přihlásit" k přesunutí přiřazení a konstruktory jeho deklarací v definici třídy. Toho lze dosáhnout pomocí dvojitých ampersandu (& &) odkaz na rvalue v odpovídající člen funkce deklarace a definice konstruktor přesunutí a metody přiřazení přesunu.  Také je třeba vložit správný kód "odcizit vnitřností" ze zdrojového objektu.
 
 Jak rozhodnout, pokud potřebujete přesunout povolené? Pokud již víte, že je že nutné zkopírovat konstrukce povolena, budete zřejmě chtít přesunout povoleno, zda může být levnější než hluboké kopírování. Ale pokud víte, že přesunete potřebovat podporu, ho neznamená nutně, že chcete, aby kopie povolené. Takovém případě by byla volána "jenom pro přesun typu". Příklad již ve standardní knihovně `unique_ptr`. Jako poznámka na okraj, starý `auto_ptr` je zastaralá a nahradila `unique_ptr` přesně vzhledem k absenci podporu sémantiky přesunutí v předchozí verzi jazyka C++.
 
@@ -110,7 +110,7 @@ Pokud povolíte konstrukce/přiřazení kopie, povolte konstrukce/přiřazení p
 
 Některé *bez hodnoty* typy jsou jenom pro přesun, například když nemůžete klonovat prostředek pouze přenos vlastnictví. Příklad: `unique_ptr`.
 
-## <a name="section"></a>Sekce
+## <a name="section"></a>Section
 
 Obsah
 

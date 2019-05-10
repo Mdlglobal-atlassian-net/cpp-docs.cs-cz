@@ -1,5 +1,5 @@
 ---
-title: Compiler errors C3200 Through C3299
+title: Chyby kompilátoru C3200 až C3299
 ms.date: 04/21/2019
 f1_keywords:
 - C3220
@@ -35,13 +35,13 @@ helpviewer_keywords:
 - C3294
 ms.assetid: 6b3104f6-63bc-4823-b6f3-b8a16be4b87f
 ms.openlocfilehash: 6965fcde5f7cc93464593e83f787d0a5838398dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281492"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856958"
 ---
-# <a name="compiler-errors-c3200-through-c3299"></a>Compiler errors C3200 Through C3299
+# <a name="compiler-errors-c3200-through-c3299"></a>Chyby kompilátoru C3200 až C3299
 
 Články v této části dokumentace vysvětlují podmnožinu chybové zprávy, které jsou generovány kompilátorem.
 
@@ -49,7 +49,7 @@ ms.locfileid: "62281492"
 
 ## <a name="error-messages"></a>Chybové zprávy
 
-|Chyba|Zpráva|
+|Chyba|Message|
 |-----------|-------------|
 |[Chyba kompilátoru C3200](compiler-error-c3200.md)|"*typ*': Neplatný argument šablony pro parametr šablony"*parametr*", očekávala se šablona třídy|
 |[Chyba kompilátoru C3201](compiler-error-c3201.md)|Seznam parametrů šablony pro šablonu tříd '*šablony*"neodpovídá seznamu parametrů šablony pro parametr šablony"*parametr*.|

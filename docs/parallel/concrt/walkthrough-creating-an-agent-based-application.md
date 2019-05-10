@@ -1,16 +1,16 @@
 ---
 title: 'Návod: Vytvoření aplikace založené na agentovi'
-ms.date: 11/04/2016
+ms.date: 04/25/2019
 helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 1d55c9879a3dd90bb4a40b61a3bf958dbe960bc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: c249bc8138a3617cce3eae836751575b2626f4aa
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378060"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857316"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Návod: Vytvoření aplikace založené na agentovi
 
@@ -40,9 +40,27 @@ Tento návod ukazuje, jak provádět následující úlohy:
 
 ##  <a name="createapplication"></a> Vytvoření konzolové aplikace
 
-Tato část ukazuje, jak vytvořit konzolovou aplikaci Visual C++, který odkazuje na soubory hlaviček, které budou používat program.
+Tato část ukazuje, jak vytvořit C++ konzolovou aplikaci, která odkazuje na soubory hlaviček, které budou používat program. Počáteční kroky se liší v závislosti na tom, kterou verzi sady Visual Studio, kterou používáte. Ujistěte se, že volič verze je správně nastavena v levém horním rohu této stránky.
 
-#### <a name="to-create-a-visual-c-application-by-using-the-win32-console-application-wizard"></a>Vytvoření aplikace Visual C++ pomocí Průvodce konzolovou aplikací Win32
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-c-console-application-in-visual-studio-2019"></a>Chcete-li vytvořit C++ konzolovou aplikaci v aplikaci Visual Studio 2019
+
+1. V hlavní nabídce zvolte **souboru** > **nový** > **projektu** otevřít **vytvořte nový projekt** dialogového okna pole.
+
+1. V horní části dialogového okna, nastavte **jazyk** k **C++**, nastavte **platformy** k **Windows**a nastavte **typprojektu** k **konzoly**. 
+
+1. Filtrované seznamu typů projektů zvolte **konzolovou aplikaci** klikněte na tlačítko **Další**. Na další stránce zadejte `BasicAgent` jako název projektu a zadejte umístění projektu, v případě potřeby.
+
+1. Zvolte **vytvořit** tlačítko pro vytvoření projektu.
+
+1. Klikněte pravým tlačítkem na uzel projektu v **Průzkumníka řešení**a zvolte **vlastnosti**. V části **vlastnosti konfigurace** > **C /C++** > **předkompilované hlavičky** > **předkompilované hlavička** zvolte **vytvořit**.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-create-a-c-console-application-in-visual-studio-2017-and-earlier"></a>Chcete-li vytvořit C++ konzolovou aplikaci v sadě Visual Studio 2017 a starší
 
 1. Na **souboru** nabídky, klikněte na tlačítko **nový**a potom klikněte na tlačítko **projektu** zobrazíte **nový projekt** dialogové okno.
 
@@ -50,7 +68,9 @@ Tato část ukazuje, jak vytvořit konzolovou aplikaci Visual C++, který odkazu
 
 1. V **Průvodce konzolovou aplikací Win32** dialogové okno, klikněte na tlačítko **Dokončit**.
 
-1. Ve stdafx.h přidejte následující kód.
+::: moniker-end
+
+1. V souboru stdafx.h (nebo soubor pch.h v závislosti na vaší verzi sady Visual Studio) přidejte následující kód.
 
 [!code-cpp[concrt-basic-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_1.h)]
 

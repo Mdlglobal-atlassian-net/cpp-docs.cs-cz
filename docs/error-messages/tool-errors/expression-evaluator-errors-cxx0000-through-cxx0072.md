@@ -1,15 +1,15 @@
 ---
-title: Chyby Chyba při vyhodnocování výrazu
+title: Chyby vyhodnocovače výrazů
 ms.date: 04/16/2019
 ms.assetid: a47a9866-7fb2-4b21-978c-2b77402c7105
 ms.openlocfilehash: 04b0dde3fe60d2a00e9bb788386d6a242e210a52
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255677"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857183"
 ---
-# <a name="expression-evaluator-errors-cxxxxxx"></a>Chyby Chyba při vyhodnocování výrazu (CXXxxxx)
+# <a name="expression-evaluator-errors-cxxxxxx"></a>Chyby vyhodnocovače výrazů (CXXxxxx)
 
 Tato část se odkaz na chyby vygenerované nástrojem ladicí program a diagnostické nástroje. Tyto nástroje generují chyby ve formuláři CXX*xxxx* nebo můžete*xxxx*, kde *xxxx* je čtyřmístné číslo.
 

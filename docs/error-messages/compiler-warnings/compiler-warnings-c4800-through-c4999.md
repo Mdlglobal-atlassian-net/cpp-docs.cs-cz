@@ -154,11 +154,11 @@ helpviewer_keywords:
 - C5106
 - C5107
 ms.openlocfilehash: 93ff809d640efab6852e855f85e7b6e0109d9c1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280311"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857447"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Upozornění kompilátoru C4800 až C5999
 
@@ -168,7 +168,7 @@ ms.locfileid: "62280311"
 
 ## <a name="warning-messages"></a>Zprávy upozornění
 
-|Upozornění|Zpráva|
+|Upozornění|Message|
 |-------------|------------|
 |[Upozornění kompilátoru (úroveň 4) C4800](compiler-warning-level-3-c4800.md)| Implicitní převod z '*typ*' na typ bool. Ztráty informací je to možné |
 |[Upozornění kompilátoru (úroveň 1) C4803](compiler-warning-level-1-c4803.md)|"*metoda*': metoda raise má jinou třídu úložiště než událost,"*události*"|

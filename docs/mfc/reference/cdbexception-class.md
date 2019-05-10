@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-ms.openlocfilehash: 755b89635eedd7808f900dc63cd3039845db1dd3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bdfb9bd0b45fd241de4378a2caa19e7dd9f9bdf2
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62253410"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877490"
 ---
 # <a name="cdbexception-class"></a>CDBException – třída
 
@@ -33,7 +33,7 @@ class CDBException : public CException
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDBException::m_nRetCode](#m_nretcode)|Obsahuje návratový kód připojení ODBC (Open Database), typu RETCODE.|
 |[CDBException::m_strError](#m_strerror)|Obsahuje řetězec popisující chybu v podmínkách alfanumerické znaky.|
@@ -132,7 +132,7 @@ Obsahuje řetězec popisující chybu, která způsobila výjimku.
 
 Řetězec je formuláře "stav: % s, nativní: % ld původu: % s", kde jsou kódy v pořadí, nahrazena hodnot, které popisují:
 
-- SQLSTATE, řetězec zakončený hodnotou null obsahující kód pěti chyby vrácené v *szSqlState* parametr funkce ODBC `SQLError`. SQLSTATE hodnoty jsou uvedené v dodatku A [kódy chyb rozhraní ODBC](/previous-versions/windows/desktop/ms714687(v=vs.85))v *ODBC programátora*. Příklad: "S0022".
+- SQLSTATE, řetězec zakončený hodnotou null obsahující kód pěti chyby vrácené v *szSqlState* parametr funkce ODBC `SQLError`. SQLSTATE hodnoty jsou uvedené v dodatku A [kódy chyb rozhraní ODBC](/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)v *ODBC programátora*. Příklad: "S0022".
 
 - Kód nativní chyby specifické pro zdroj dat se vrátil v *pfNativeError* parametr `SQLError` funkce. Příklad: 207.
 
@@ -140,11 +140,11 @@ Obsahuje řetězec popisující chybu, která způsobila výjimku.
 
 Rozhraní framework interpretuje řetězec chyby a vloží do jeho komponenty `m_strStateNativeOrigin`; Pokud `m_strStateNativeOrigin` obsahuje informace o více než jednu chybu, chyby jsou odděleny tabulátorů. Vloží text alfanumerické chyby do rozhraní framework `m_strError`.
 
-Další informace o kódech použité k vytvoření tohoto řetězce najdete v tématu [SQLError](/previous-versions/windows/desktop/ms716312(v=vs.85)) fungovat v *ODBC programátora*.
+Další informace o kódech použité k vytvoření tohoto řetězce najdete v tématu [SQLError](/sql/odbc/reference/syntax/sqlerror-function) fungovat v *ODBC programátora*.
 
 ### <a name="example"></a>Příklad
 
-  Z rozhraní ODBC: "Stav: S0022, nativní: 207, původu:\[Microsoft]\[ovladač ODBC systému SQL Server]\[systému SQL Server] neplatný název sloupce '%{colname/."
+Z rozhraní ODBC: "Stav: S0022, nativní: 207, původu:\[Microsoft]\[ovladač ODBC systému SQL Server]\[systému SQL Server] neplatný název sloupce '%{colname/."
 
 V `m_strStateNativeOrigin`: "Stav: S0022, nativní: 207, původu:\[Microsoft]\[Server ovladač ODBC SQL]\[systému SQL Server]"
 

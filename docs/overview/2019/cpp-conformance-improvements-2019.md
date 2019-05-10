@@ -1,15 +1,16 @@
 ---
 title: Vylepšení shody C++
 ms.date: 03/22/2019
+description: Microsoft C++ v aplikaci Visual Studio 2019 postupujte směrem k plný soulad se standardem 20 jazyka C++.
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: e12504d4950c87042cbb030c6c683874f6ffc8b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 331d8bd94076979f51adb0b3b7188a93d99623f0
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410120"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65404920"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2019"></a>Vylepšení shody C++ Visual Studio 2019
 

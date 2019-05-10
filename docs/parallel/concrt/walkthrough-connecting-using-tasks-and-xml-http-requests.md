@@ -1,17 +1,17 @@
 ---
 title: 'Návod: Připojení pomocí úloh a žádostí XML HTTP'
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - connecting to web services, UWP apps [C++]
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-ms.openlocfilehash: f78adda7625d3a3def60de968c5e7be97f282a7f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 449f99f37f0d328b7c874730b814335f8b69e807
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411403"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856284"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Návod: Připojení pomocí úloh a žádostí XML HTTP
 
@@ -31,6 +31,8 @@ Příklad, který používá `IXMLHTTPRequest2` ale úkoly, naleznete v tématu 
 
 ## <a name="prerequisites"></a>Požadavky
 
+Podpora UWP je volitelné v sadě Visual Studio 2017 nebo novější. Ho Pokud chcete nainstalovat, spusťte instalační program sady Visual Studio v nabídce Windows Start a zvolte verzi sady Visual Studio, kterou používáte. Klikněte na tlačítko **změnit** tlačítko a ujistěte se, že **vývoj UWP** je zaškrtnuté políčko vedle sebe. V části **volitelné součásti** Ujistěte se, že  **C++ nástrojů pro UPW** je zaškrtnuté políčko. Použijte v141 pro Visual Studio 2017 nebo v142 pro Visual Studio 2019.
+
 ## <a name="defining-the-httprequest-httprequestbufferscallback-and-httprequeststringcallback-classes"></a>Definice tříd HttpRequest, HttpRequestBuffersCallback a HttpRequestStringCallback
 
 Při použití `IXMLHTTPRequest2` rozhraní pro vytvoření webových požadavků pomocí protokolu HTTP, můžete implementovat `IXMLHTTPRequest2Callback` rozhraní pro příjem odpovědi serveru a reagovat na další události. Tento příklad definuje `HttpRequest` třídy za účelem vytvoření webových požadavků a `HttpRequestBuffersCallback` a `HttpRequestStringCallback` třídy ke zpracování odpovědi. `HttpRequestBuffersCallback` a `HttpRequestStringCallback` třídy podporu `HttpRequest` třídy autority fungovat jenom s `HttpRequest` třídu v kódu aplikace.
@@ -43,7 +45,9 @@ Pro podporu zrušení, `HttpRequest`, `HttpRequestBuffersCallback`, a `HttpReque
 
 #### <a name="to-define-the-httprequest-class"></a>Definice třídy HttpRequest
 
-1. Použití jazyka Visual C++ **prázdná aplikace (XAML)** šablony k vytvoření prázdného projektu aplikace XAML. V tomto příkladu názvy projektu `UsingIXMLHTTPRequest2`.
+1. V hlavní nabídce zvolte **souboru** > **nový** > **projektu**. 
+
+1. Použití C++ **prázdná aplikace (Universal Windows)** šablony k vytvoření prázdného projektu aplikace XAML. V tomto příkladu názvy projektu `UsingIXMLHTTPRequest2`.
 
 1. Přidejte do projektu soubor hlaviček, který je pojmenován HttpRequest.h a zdrojový soubor, který je pojmenován HttpRequest.cpp.
 

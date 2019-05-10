@@ -1,24 +1,24 @@
 ---
 title: Použití šablon pro přidání nové položky v prostředí Visual C++
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - Add New Item
 - Add New Item templates
 - Add New Item command
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
-ms.openlocfilehash: afa6f7e3a1e3a6ac293a23fc18ecd0834d70555f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6ef78d1a43bc649a31b715afd4ce1d44f25a8c6
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317143"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217759"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Použití šablon pro přidání nové položky v prostředí Visual C++
 
-Můžete snadno přidat položky, které jsou společné pro projekty Visual C++ s použitím **přidat novou položku** příkazu. Při použití **přidat novou položku** příkazu `Add New Item` dialogové okno se zobrazí seznam šablon položek, které přidejte příslušné soubory do projektu.
+Můžete snadno přidat položky, které jsou společné pro projekty aplikace Visual Studio s použitím **přidat novou položku** příkazu. Při použití **přidat novou položku** příkazu `Add New Item` dialogové okno se zobrazí seznam šablon položek, které přidejte příslušné soubory do projektu.
 
-V následující tabulce je abecední seznam šablon Visual C++, přidat novou položku.
+V následující tabulce je abecední seznam Visual Studio, přidejte novou položku – šablony.
 
 |Šablona|Popis|
 |--------------|-----------------|
@@ -38,7 +38,7 @@ V následující tabulce je abecední seznam šablon Visual C++, přidat novou p
 |Instalační třída|Přidá třídu, která dědí z <xref:System.Configuration.Install.Installer> pomocí funkce CLR.|
 |Soubor MIDL (.idl)|Vytvoří soubor s příponou Interface Definition Language.|
 |Soubor definice modulu (.def)|Vytvoří definiční soubor exportu DLL.|
-|Seznam vlastností (.props)|Vytvoří soubor seznamu vlastností Visual C++.|
+|Seznam vlastností (.props)|Vytvoří soubor seznamu vlastností.|
 |Registrační skript (.rgs)|Vytvoří soubor knihovny ATL registrace skriptu.|
 |Sestav (.rdlc)|Vytvoří soubor sestavy.|
 |Soubor prostředků (.rc)|Vytvoří soubor prostředků Win32.|

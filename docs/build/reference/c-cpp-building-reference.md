@@ -1,23 +1,23 @@
 ---
 title: Reference sestavení C/C++ – Visual Studio
 description: Referenční obsah pro nástroje systému a sestavení projektů jazyka C/C++ v sadě Visual Studio.
-ms.date: 12/10/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compiling source code [C++], additional information
 - cl.exe compiler [C++], building programs
 - linker [C++], building reference
 - builds [C++], additional information
 ms.assetid: 100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d
-ms.openlocfilehash: 4c3f7aa598a9c43af04c148ed0d4b3f555566ec7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: abe946ce516e915cd597a0f863c5949fed212bfa
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294756"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221439"
 ---
 # <a name="cc-building-reference"></a>Odkaz sestavení C/C++
 
-Visual C++ nabízí dva způsoby vytvoření programu v jazyce C/C++. Je nejjednodušší (a nejběžnější) způsobem [sestavení v integrovaném vývojovém prostředí sady Visual Studio](../creating-and-managing-visual-cpp-projects.md). Druhý způsob je [sestavení z příkazového řádku pomocí nástroje příkazového řádku](../building-on-the-command-line.md). V obou případech můžete vytvořit a upravit zdrojových souborů pomocí sady Visual Studio nebo jiného editoru podle vašeho výběru.
+Visual Studio nabízí dva způsoby vytváření a C /C++ programu. Je nejjednodušší (a nejběžnější) způsobem [sestavení v integrovaném vývojovém prostředí sady Visual Studio](../creating-and-managing-visual-cpp-projects.md). Druhý způsob je [sestavení z příkazového řádku pomocí nástroje příkazového řádku](../building-on-the-command-line.md). V obou případech můžete vytvořit a upravit zdrojových souborů pomocí sady Visual Studio nebo jiného editoru podle vašeho výběru.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 

@@ -1,17 +1,17 @@
 ---
 title: 'Návod: Vytvořte tradiční aplikace klasické pracovní plochy Windows (C++)'
 ms.custom: get-started-article
-ms.date: 09/18/2018
+ms.date: 04/23/2019
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: cb6d09acc00f2e38ee41180c81c1877bc53027c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 0bc9ef82863fde361964234cca54f12aac1e2abe
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388023"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877393"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Návod: Vytvořte tradiční aplikace klasické pracovní plochy Windows (C++)
 
@@ -26,7 +26,7 @@ Rozhraní API Windows (označované také jako rozhraní Win32 API, rozhraní AP
 
 - Počítač, na kterém běží Microsoft Windows 7 nebo novější verze. Doporučujeme pro nejlepší vývojové prostředí Windows 10.
 
-- A copy of Visual Studio 2017. Informace o tom, jak stáhnout a nainstalovat sadu Visual Studio najdete v tématu [instalace sady Visual Studio](/visualstudio/install/install-visual-studio). Když spustíte instalační program, ujistěte se, že **vývoj desktopových aplikací pomocí C++** úlohy je zaškrtnuté políčko. Nedělejte si starosti, pokud je tato úloha nenainstaloval při instalaci sady Visual Studio. Můžete znovu spustit instalační program a jeho instalaci.
+- Kopie sady Visual Studio. Informace o tom, jak stáhnout a nainstalovat sadu Visual Studio najdete v tématu [instalace sady Visual Studio](/visualstudio/install/install-visual-studio). Když spustíte instalační program, ujistěte se, že **vývoj desktopových aplikací pomocí C++** úlohy je zaškrtnuté políčko. Nedělejte si starosti, pokud je tato úloha nenainstaloval při instalaci sady Visual Studio. Můžete znovu spustit instalační program a jeho instalaci.
 
    ![Vývoj desktopových aplikací pomocí C++](../build/media/desktop-development-with-cpp.png "vývoj desktopových aplikací pomocí C++")
 
@@ -36,9 +36,37 @@ Rozhraní API Windows (označované také jako rozhraní Win32 API, rozhraní AP
 
 ## <a name="create-a-windows-desktop-project"></a>Vytvoření projektu klasické pracovní plochy Windows
 
-Postupujte podle následujících kroků vytvořte svůj první projekt klasické pracovní plochy Windows a zadejte kód pro pracovní aplikace klasické pracovní plochy Windows. Pokud používáte verzi sady Visual Studio starší než Visual Studio 2017 verze 15.3, přeskočte k části [vytvořit projekt klasické pracovní plochy Windows v sadě Visual Studio 2017 RTM](#create-in-vs2017-rtm).
+Postupujte podle následujících kroků vytvořte svůj první projekt klasické pracovní plochy Windows a zadejte kód pro pracovní aplikace klasické pracovní plochy Windows. Ujistěte se, že volič verze v levém horním rohu na této stránce je nastavena na správnou verzi sady Visual Studio, kterou používáte.
 
-### <a name="to-create-a-windows-desktop-project-in-visual-studio-2017-update-153-and-later"></a>Vytvoření projektu klasické pracovní plochy Windows v sadě Visual Studio 2017 Update 15.3 nebo novější
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-windows-desktop-project-in-visual-studio-2019"></a>Vytvoření projektu klasické pracovní plochy Windows ve Visual Studio 2019
+
+1. V hlavní nabídce zvolte **souboru** > **nový** > **projektu** otevřít **vytvořte nový projekt** dialogového okna pole.
+
+1. V horní části dialogového okna, nastavte **jazyk** k **C++**, nastavte **platformy** k **Windows**a nastavte **typprojektu** k **Desktop**. 
+
+1. Filtrované seznamu typů projektů zvolte **desktopový Průvodce pro Windows** klikněte na tlačítko **Další**. Na další stránce zadejte název projektu a zadejte umístění projektu, v případě potřeby.
+
+1. Zvolte **vytvořit** tlačítko pro vytvoření projektu.
+
+1. **Windows desktopový projekt** se nyní zobrazí dialogové okno. V části **typ aplikace**vyberte **aplikace Windows (.exe)**. V části **další možnosti**vyberte **prázdný projekt**. Zvolte **OK** pro vytvoření projektu.
+
+1. V **Průzkumníku řešení**, klikněte pravým tlačítkem myši **DesktopApp** projektu, zvolte **přidat**a klikněte na tlačítko **nová položka**.
+
+   ![Přidat novou položku do projektu DesktopApp](../build/media/desktop-app-project-add-new-item-153.gif "přidat novou položku do projektu DesktopApp")
+
+1. V **přidat novou položku** dialogu **soubor C++ (.cpp)**. V **název** zadejte název souboru, například *HelloWindowsDesktop.cpp*. Zvolte **přidat**.
+
+   ![Soubor .cpp přidat do projektu DesktopApp](../build/media/desktop-app-add-cpp-file-153.png "přidat soubor .cpp DesktopApp projektu")
+
+Váš projekt je nyní vytvořen a zdrojový soubor je otevřen v editoru. Chcete-li pokračovat, přeskočte k části [vytvářet kód](#create-the-code).
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+### <a name="to-create-a-windows-desktop-project-in-visual-studio-2017"></a>Chcete-li vytvořit projekt klasické pracovní plochy Windows v sadě Visual Studio 2017
 
 1. Na **souboru** nabídce zvolte **nový** a klikněte na tlačítko **projektu**.
 
@@ -62,7 +90,11 @@ Postupujte podle následujících kroků vytvořte svůj první projekt klasick�
 
 Váš projekt je nyní vytvořen a zdrojový soubor je otevřen v editoru. Chcete-li pokračovat, přeskočte k části [vytvářet kód](#create-the-code).
 
-### <a id="create-in-vs2017-rtm"></a> Chcete-li vytvořit projekt klasické pracovní plochy Windows v sadě Visual Studio 2017 RTM
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+### <a name="to-create-a-windows-desktop-project-in-visual-studio-2015"></a>Chcete-li vytvořit projekt klasické pracovní plochy Windows v sadě Visual Studio 2015
 
 1. Na **souboru** nabídce zvolte **nový** a klikněte na tlačítko **projektu**.
 
@@ -89,6 +121,8 @@ Váš projekt je nyní vytvořen a zdrojový soubor je otevřen v editoru. Chcet
    ![Soubor .cpp přidat do projektu DesktopApp](../build/media/desktop-app-add-cpp-file-150.png "přidat soubor .cpp DesktopApp projektu")
 
 Váš projekt je nyní vytvořen a zdrojový soubor je otevřen v editoru.
+
+::: moniker-end
 
 ## <a name="create-the-code"></a>Vytvoření kódu
 

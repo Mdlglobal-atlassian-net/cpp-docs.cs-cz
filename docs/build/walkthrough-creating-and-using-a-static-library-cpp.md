@@ -1,18 +1,19 @@
 ---
 title: 'Návod: Vytvoření a použití statické knihovny (C++)'
+description: Použití C++ vytvoření statické knihovny (.lib) v sadě Visual Studio.
 ms.custom: get-started-article
-ms.date: 09/18/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - libraries [C++], static
 - static libraries [C++]
 ms.assetid: 3cc36411-7d66-4240-851e-dacb9a8fd6ac
 ms.author: corob
-ms.openlocfilehash: 0d527681abb077a01b3d902c092a21de7a052867
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: afb12cc38dbaf0af88e93a9b329a59f3b54c8557
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313610"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217573"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>Návod: Vytvoření a použití statické knihovny (C++)
 
@@ -36,30 +37,55 @@ Porozumění základům jazyka C++.
 
 ##  <a name="CreateLibProject"></a> Vytvoření projektu statické knihovny
 
-### <a name="to-create-a-static-library-project"></a>Vytvoření projektu statické knihovny
+Pokyny pro vytvoření projektu se liší v závislosti na tom, zda používáte Visual Studio 2019 nebo starší verzi. Ujistěte se, že máte správnou verzi nastavit v levém horním rohu této stránky.
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-static-library-project-in-visual-studio-2019"></a>Vytvoření projektu statické knihovny v aplikaci Visual Studio 2019
+
+1. V panelu nabídky zvolte **souboru** > **nový** > **projektu** otevřít **vytvořte nový projekt** dialogové okno.
+
+1. V horní části dialogového okna, nastavte **jazyk** k **C++**, nastavte **platformy** k **Windows**a nastavte **typprojektu** k **knihovny**. 
+
+1. Filtrované seznamu typů projektů zvolte **statickou knihovnu** klikněte na tlačítko **Další**. Na další stránce zadejte *MathFuncsLib* v **název** zadat název projektu a zadejte umístění projektu, v případě potřeby.
+
+1. Zvolte **vytvořit** pro vytvoření projektu klienta.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+### <a name="to-create-a-static-library-project-in-visual-studio-2017"></a>Vytvoření projektu statické knihovny v sadě Visual Studio 2017
 
 1. V panelu nabídky zvolte **souboru** > **nový** > **projektu**.
 
 1. V levém podokně **nový projekt** dialogového okna rozbalte **nainstalováno** > **Visual C++** a pak vyberte **Windows Desktop**. V prostředním podokně vyberte **desktopový Průvodce pro Windows**.
 
-   > [!NOTE]
-   > Pro verze starší než 2017, Visual Studio v **nový projekt** dialogového okna rozbalte **nainstalováno** > **šablony**  >  **Visual C++** a pak vyberte **Win32**. V prostředním podokně vyberte **Konzolová aplikace Win32**.
+1. Zadejte název projektu – například *MathFuncsLib*– v **název** pole. Zadejte název pro toto řešení – například *StaticLibrary*– v **název řešení** pole. Zvolte **OK** tlačítko.
+
+1. V části **typ aplikace**vyberte **statická knihovna (.lib)**.
+
+1. V části **další možnosti**, zrušte zaškrtnutí políčka **Předkompilovaná hlavička** zaškrtávací políčko.
+
+1. Zvolte **OK** pro vytvoření projektu.
+
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+### <a name="to-create-a-static-library-project-in-visual-studio-2015"></a>Vytvoření projektu statické knihovny v sadě Visual Studio 2015
+
+1. V panelu nabídky zvolte **souboru** > **nový** > **projektu**.
+
+1. V **nový projekt** dialogového okna rozbalte **nainstalováno** > **šablony** > **Visual C++** , a potom vyberte **Win32**. V prostředním podokně vyberte **Konzolová aplikace Win32**.
 
 1. Zadejte název projektu – například *MathFuncsLib*– v **název** pole. Zadejte název pro toto řešení – například *StaticLibrary*– v **název řešení** pole. Zvolte **OK** tlačítko.
 
-    - For Visual Studio 2017,
+1. Klikněte na **Další**.
 
-        1. V části **typ aplikace**vyberte **statická knihovna (.lib)**.
+1. V části **typ aplikace**vyberte **statickou knihovnu**. Potom zrušte zaškrtnutí políčka **Předkompilovaná hlavička** pole a tlačítko **Dokončit**.
 
-        1. V části **další možnosti**, zrušte zaškrtnutí políčka **Předkompilovaná hlavička** zaškrtávací políčko.
-
-        1. Zvolte **OK** pro vytvoření projektu.
-
-    - Pro verze starší než 2017, Visual Studio
-
-        1. Klikněte na **Další**.
-
-        1. V části **typ aplikace**vyberte **statickou knihovnu**. Potom zrušte zaškrtnutí políčka **Předkompilovaná hlavička** pole a tlačítko **Dokončit**.
+::: moniker-end
 
 ##  <a name="AddClassToLib"></a> Přidání třídy do statické knihovny
 
@@ -84,30 +110,53 @@ Porozumění základům jazyka C++.
 
 ##  <a name="CreateAppToRefTheLib"></a> Vytvoření konzolové aplikace jazyka C++, který odkazuje na statickou knihovnu
 
-### <a name="to-create-a-c-console-app-that-references-the-static-library"></a>K vytvoření konzolové aplikace jazyka C++, který odkazuje na statickou knihovnu
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-c-console-app-that-references-the-static-library-in-visual-studio-2019"></a>Chcete-li vytvořit C++ konzolovou aplikaci, která odkazuje na statickou knihovnu v Visual Studio 2019
+
+1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na nejvyšší uzel řešení a zvolte **přidat** > **nový projekt** otevřít **přidat nový projekt**  dialogové okno.
+
+1. V horní části dialogového okna, nastavte **jazyk** k **C++**, nastavte **platformy** k **Windows**a nastavte **typprojektu** k **konzoly**. 
+
+1. Filtrované seznamu typů projektů zvolte **konzolovou aplikaci** klikněte na tlačítko **Další**. Na další stránce zadejte *MyExecRefsLib* v **název** zadat název projektu a zadejte umístění projektu, v případě potřeby.
+
+1. Zvolte **vytvořit** pro vytvoření projektu klienta.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+### <a name="to-create-a-c-console-app-that-references-the-static-library-in-visual-studio-2017"></a>Chcete-li vytvořit C++ konzolovou aplikaci, která odkazuje na statickou knihovnu v sadě Visual Studio 2017
 
 1. V panelu nabídky zvolte **souboru** > **nový** > **projektu**.
 
 1. V levém podokně **nový projekt** dialogového okna rozbalte **nainstalováno** > **Visual C++** a pak vyberte **Windows Desktop**. V prostředním podokně vyberte **desktopový Průvodce pro Windows**.
 
-   > [!NOTE]
-   > Pro verze starší než 2017, Visual Studio v **nový projekt** dialogového okna rozbalte **nainstalováno** > **šablony**  >  **Visual C++** a pak vyberte **Win32**. V prostředním podokně vyberte **Konzolová aplikace Win32**.
+1. Zadejte název projektu – například *MyExecRefsLib*– v **název** pole. V rozevíracího seznamu vedle položky **řešení**vyberte **přidat do řešení**. Tento příkaz přidá nový projekt do řešení, které obsahuje statickou knihovnu. Zvolte **OK** tlačítko.
+
+1. V části **typ aplikace**vyberte **Konzolová aplikace (.exe)**.
+
+1. V části **další možnosti**, zrušte zaškrtnutí políčka **Předkompilovaná hlavička** zaškrtávací políčko.
+
+1. Zvolte **OK** pro vytvoření projektu.
+
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+### <a name="to-create-a-c-console-app-that-references-the-static-library-in-visual-studio-2015"></a>Chcete-li vytvořit C++ konzolovou aplikaci, která odkazuje na statickou knihovnu v sadě Visual Studio 2015
+
+1. V panelu nabídky zvolte **souboru** > **nový** > **projektu**.
+
+1. V **nový projekt** dialogového okna rozbalte **nainstalováno** > **šablony** > **Visual C++** , a potom vyberte **Win32**. V prostředním podokně vyberte **Konzolová aplikace Win32**.
 
 1. Zadejte název projektu – například *MyExecRefsLib*– v **název** pole. V rozevíracího seznamu vedle položky **řešení**vyberte **přidat do řešení**. Tento příkaz přidá nový projekt do řešení, které obsahuje statickou knihovnu. Zvolte **OK** tlačítko.
 
-    - For Visual Studio 2017,
+1. Klikněte na **Další**.
 
-        1. V části **typ aplikace**vyberte **Konzolová aplikace (.exe)**.
+1. Ujistěte se, že **konzolovou aplikaci** zaškrtnuto. Zkontrolujte **prázdný projekt** pole a tlačítko **Dokončit**.
 
-        1. V části **další možnosti**, zrušte zaškrtnutí políčka **Předkompilovaná hlavička** zaškrtávací políčko.
-
-        1. Zvolte **OK** pro vytvoření projektu.
-
-    - Pro verze starší než 2017, Visual Studio
-
-        1. Klikněte na **Další**.
-
-        1. Ujistěte se, že **konzolovou aplikaci** zaškrtnuto. Zkontrolujte **prázdný projekt** pole a tlačítko **Dokončit**.
+::: moniker-end
 
 ##  <a name="UseLibInApp"></a> Pomocí funkcí ze statické knihovny v aplikaci
 
