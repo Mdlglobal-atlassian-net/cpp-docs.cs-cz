@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-ms.openlocfilehash: b49d53836179d765a72409d28304d7166dcf51d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09af59d97ab87c66a0a7096e72cc7b92bc3a5dbf
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389167"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525274"
 ---
 # <a name="supporting-schema-rowsets"></a>Podpora sad řádků schématu
 
@@ -31,6 +31,14 @@ Sady řádků schématu umožní uživatelům získat informace o úložišti da
 - [GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md) vrátí seznam sad řádků schématu přístupné `IDBSchemaRowsetImpl::GetRowset` (zděděno z rozhraní).
 
 ## <a name="atl-ole-db-provider-wizard-support"></a>Podpora průvodce pro zprostředkovatele ATL OLE DB
+
+::: moniker range="vs-2019"
+
+Průvodce zprostředkovatele ATL OLE DB není k dispozici v aplikaci Visual Studio 2019 a novějším.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 **Průvodce zprostředkovatelem ATL OLE DB** vytvoří tři třídy schématu v hlavičkovém souboru relace:
 
@@ -53,6 +61,8 @@ Můžete přizpůsobit tyto třídy pro zpracování informací o schématu pro 
 - V **C**<em>ShortName</em>**SessionTRSchemaRowset**, musíte vyplnit pole katalogu, tabulky a popis (`trData.m_szType`, `trData.m_szTable`a `trData.m_szDesc`). V příkladu generované v Průvodci se používá pouze jeden řádek (tabulka). Ostatní zprostředkovatelé může vrátit více než jednou tabulkou.
 
 - V **C**<em>ShortName</em>**SessionColSchemaRowset**, předejte název tabulky jako `DBID`.
+
+::: moniker-end
 
 ## <a name="setting-restrictions"></a>Nastavení omezení
 

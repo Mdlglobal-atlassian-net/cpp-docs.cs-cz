@@ -1,6 +1,6 @@
 ---
 title: MFC – verze knihovny
-ms.date: 1/09/2018
+ms.date: 05/08/2019
 helpviewer_keywords:
 - class libraries [MFC], building versions
 - version information [MFC], MFC library
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC libraries
 - MFC, library versions
 - libraries [MFC], versions
-ms.openlocfilehash: c0dc724566063066175ea54e2b7734892e3c6e05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8e32366d9ff43bd6e5770f64f0ba9d8bf6e56ab
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238499"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524788"
 ---
 # <a name="mfc-library-versions"></a>MFC – verze knihovny
 
@@ -129,7 +129,7 @@ Importovat knihovny potřebné k sestavení aplikace nebo MFC – rozšiřujíc�
 
 Pokud jsou dynamického propojení ke sdílené knihovně DLL verze knihovny MFC, ať už z aplikace nebo rozšiřující knihovny DLL MFC, je nutné zahrnout odpovídající MFC*verze*. Knihovna DLL nebo knihovny MFC*verze*U.DLL při nasazování produktu.
 
-Seznam knihoven DLL Visual C++, který se dá distribuovat s vašimi aplikacemi najdete v tématu [Distribuovatelný kód pro Microsoft Visual Studio 2017 a Microsoft Visual Studio 2017 SDK (zahrnuje soubory Buildovacího serveru a)](http://go.microsoft.com/fwlink/p/?LinkId=823098).
+Seznam Visual C++ knihovny DLL, které můžete distribuovat s vašimi aplikacemi, najdete v článku [Distribuovatelný kód pro Microsoft Visual Studio 2017 a Microsoft Visual Studio 2017 SDK (zahrnuje soubory Buildovacího serveru a)](/visualstudio/productinfo/2017-redistribution-vs) nebo [ Distribuovatelný kód pro Visual Studio 2019](/visualstudio/releases/2019/redistribution).
 
 Další informace o podpoře znakové sady MBCS a Unicode v prostředí MFC, naleznete v tématu [vícebajtové znakové sady (MBCS) Podpora kódování Unicode a](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).
 

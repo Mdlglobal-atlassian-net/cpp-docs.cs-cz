@@ -1,17 +1,25 @@
 ---
 title: Vytvoření jednoduchého příjemce
-ms.date: 11/06/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
-ms.openlocfilehash: 060a39a8436ff73900ebfaea7d1c882b9862ee7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f72363478696baccb0473e37104427b1516b39c3
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362016"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525004"
 ---
 # <a name="creating-a-simple-consumer"></a>Vytvoření jednoduchého příjemce
+
+::: moniker range="vs-2019"
+
+Průvodce spotřebitele ATL OLE DB není k dispozici v aplikaci Visual Studio 2019 a novějším. Funkce můžete přesto přidat ručně. Další informace najdete v tématu [vytvoření příjemce bez použití průvodce](creating-a-consumer-without-using-a-wizard.md).
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 Použití **Průvodce projektem ATL** a **průvodce příjemcem ATL OLE DB** ke generování šablony příjemce OLE DB.
 
@@ -41,7 +49,7 @@ Pak pomocí **průvodce příjemcem ATL OLE DB** přidání objektu příjemce t
 
    Zobrazí se dialogové okno **Přidat novou položku**.
 
-1. V **kategorie** podokně klikněte na tlačítko **nainstalováno** > **Visual C++** > **ATL**, klikněte na tlačítko **Spotřebitele OLEDB knihovny ATL** ikonu **šablony** podokně a pak klikněte na tlačítko **přidat**.
+1. V **kategorie** podokně klikněte na tlačítko **nainstalováno** > **Visual C++**  > **ATL**, klikněte na tlačítko  **Spotřebitele OLEDB knihovny ATL** ikonu **šablony** podokně a pak klikněte na tlačítko **přidat**.
 
    **Průvodce příjemcem ATL OLEDB** se zobrazí.
 
@@ -97,6 +105,8 @@ Průvodce vygeneruje třídu příkazu nebo třída záznamů uživatelů, jak j
 
 > [!NOTE]
 > Tento řádek znemožňuje spotřebitele aplikaci v kompilaci a vám připomene zkontrolovat pevně kódovaná hesla v připojovacím řetězci. Po kontrole připojovací řetězec, můžete odebrat tento řádek kódu.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Viz také:
 

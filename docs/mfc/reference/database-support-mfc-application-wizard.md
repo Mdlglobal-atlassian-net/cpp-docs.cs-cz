@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, database support
 ms.assetid: 9ddf4558-fd41-4ac7-8d9b-c93d9c68ab59
-ms.openlocfilehash: a1e0519e1351a48bbd969168d62f163c9dde7e7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94ed75ffd59294d5beb076ef4d66e57ef763f10e
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323110"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525459"
 ---
 # <a name="database-support-mfc-application-wizard"></a>Podpora databáze, Průvodce aplikací knihovny MFC
 
@@ -46,15 +46,15 @@ Tato stránka obsahuje možnosti, které vám umožňují určit úroveň datab�
 
 - **Zdroj dat**
 
+   > [!NOTE]
+   > Průvodce příjemcem ATL OLE DB a průvodce příjemcem ODBC knihovny MFC nejsou k dispozici v aplikaci Visual Studio 2019 a novějším. Funkce můžete přesto přidat ručně. Další informace najdete v tématu [vytvoření příjemce bez použití průvodce](../../data/oledb/creating-a-consumer-without-using-a-wizard.md).
+
    Klikněte na tlačítko **zdroj dat** tlačítko a nastavte zdroj dat s využitím konkrétní ovladač, zprostředkovatele nebo databáze. Pokud jste vybrali OLE DB v **typ klienta** toto tlačítko zobrazuje možnost, **vlastnosti propojení dat** dialogové okno. Pokud jste vybrali v ODBC **typ klienta** možnost, poskytuje toto tlačítko **vybrat zdroj dat** dialogové okno. Tato možnost je dostupná jenom v případě, že budete chtít zahrnout zobrazení databází ve vaší aplikaci.
 
    |Možnost|Popis|
    |------------|-----------------|
    |**Vlastnosti propojení dat** (OLE DB)|Vytvoří zadaný zdroj dat pomocí zadaného zprostředkovatele OLE DB. Zprostředkovatel OLE DB, umístění dat, zdroji dat, přihlašovací ID a (volitelně) heslo, je nutné zadat. Podrobnosti v tomto dialogovém okně najdete v tématu **zdroj dat** v [průvodce příjemcem ATL OLE DB](../../atl/reference/atl-ole-db-consumer-wizard.md).|
    |**Vyberte zdroj dat** (ODBC)|Vytvoří zadaný zdroj dat pomocí zadané ovladače rozhraní ODBC. Název zdroje dat k výběru tabulky pro zdroj dat, musíte vybrat. Průvodce vytvoří vazbu všechny sloupce v tabulce k členské proměnné `CRecordset`-odvozené třídy. Podrobnosti v tomto dialogovém okně najdete v tématu **zdroj dat** v [průvodce příjemcem MFC ODBC](../../mfc/reference/mfc-odbc-consumer-wizard.md).|
-
-   > [!NOTE]
-   > V předchozích verzích, kliknutím na posunu **zdroj dat** tlačítko Otevřít dialogové okno otevřít soubor a umožňuje tak vybrat soubor dat propojení (UDL). Tato funkce se už nepodporuje.
 
 - **Vygenerovat třídu s atributy databáze**
 

@@ -1,25 +1,30 @@
 ---
 title: Průvodce stránkou vlastností ATL
-ms.date: 10/03/2018
+ms.date: 05/09/2019
 f1_keywords:
 - vc.codewiz.class.atl.ppg.overview
 helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-ms.openlocfilehash: 791901ab3181ad2c8ac862a970980250693d20f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47fee2291d201fca04674b07926ed88aaed0a95c
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62248223"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524535"
 ---
 # <a name="atl-property-page-wizard"></a>Průvodce stránkou vlastností ATL
 
-Tento průvodce [přidá stránky vlastností do projektu knihovny ATL](../../atl/reference/adding-an-atl-property-page.md) nebo do projektu MFC pomocí podpory knihovny ATL. Stránky vlastností ATL poskytuje uživatelské rozhraní pro nastavení vlastností (nebo volání metody) z jednoho nebo více objektů COM.
+::: moniker range="vs-2019"
 
-> [!WARNING]
-> V sadě Visual Studio 2017 verze 15.9 průvodce tento kód je zastaralá a v budoucí verzi systému Visual Studio se odebere. Tento průvodce je používána zřídka. Obecné podpory knihovny ATL a MFC nemá žádný vliv, odebráním tohoto průvodce. Pokud chcete sdílet svůj názor na toto vyřazení, vyplňte prosím [tento průzkum](https://www.surveymonkey.com/r/QDWKKCN). Vaše zpětná vazba záleží na nás.
+Tento průvodce není k dispozici v aplikaci Visual Studio 2019 a novějším.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Tento průvodce [přidá stránky vlastností do projektu knihovny ATL](../../atl/reference/adding-an-atl-property-page.md) nebo do projektu MFC pomocí podpory knihovny ATL. Stránky vlastností ATL poskytuje uživatelské rozhraní pro nastavení vlastností (nebo volání metody) z jednoho nebo více objektů COM.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -63,6 +68,8 @@ Poskytuje informace o funkcích, které modelu COM pro objekt.
 - **ProgID**
 
    Nastaví název, který kontejnery lze použít místo identifikátor CLSID objektu.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,17 +1,17 @@
 ---
 title: Šablony OLE DB
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 f1_keywords:
 - vc.templates.ole
 helpviewer_keywords:
 - OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-ms.openlocfilehash: 9f0f917de7eeb2ace6800368d10958cec7d36e6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e98cef9317e92651d86ef9fec5ac451d6f2d428
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283813"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525343"
 ---
 # <a name="ole-db-templates"></a>Šablony OLE DB
 
@@ -43,7 +43,7 @@ Tento článek popisuje koncepční materiály o šablony příjemce technologie
 Tento článek popisuje koncepční materiály o šablony zprostředkovatele technologie OLE DB.
 
 [Vytvoření příjemce OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)<br/>
-Popisuje vytvoření šablony technologie OLE DB příjemce s nebo bez průvodce příjemcem ATL OLE DB.
+Popisuje vytvoření šablony technologie OLE DB příjemce.
 
 [Vytvoření jednoduchého zprostředkovatele pouze pro čtení](../../data/oledb/creating-a-simple-read-only-provider.md)<br/>
 Popisuje vytvoření jednoduchého zprostředkovatele pouze pro čtení, který čte dvojice řetězců.

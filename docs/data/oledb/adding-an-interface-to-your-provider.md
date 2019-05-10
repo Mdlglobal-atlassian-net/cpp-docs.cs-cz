@@ -1,17 +1,20 @@
 ---
 title: Přidání rozhraní ke zprostředkovateli
-ms.date: 10/29/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 ms.assetid: b0fc7cf8-428a-4584-9d64-ce9074d0eb66
-ms.openlocfilehash: c0452ca74509b65de3787af93bff41b3cb399c99
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1d219568c1787558674c47edd55436b8690a61c
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384969"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524811"
 ---
 # <a name="adding-an-interface-to-your-provider"></a>Přidání rozhraní ke zprostředkovateli
+
+> [!NOTE]
+> Průvodce zprostředkovatele ATL OLE DB není k dispozici v aplikaci Visual Studio 2019 a novějším.
 
 Určení objektu, který chcete přidat rozhraní do (obvykle datové zdroje, sady řádků, příkaz nebo relace objekty vytvořené **Průvodce zprostředkovatelem technologie OLE DB**). Je možné, že objekt je potřeba přidat rozhraní do je ten, který váš poskytovatel v současné době nepodporuje. V takovém případě spusťte **Průvodce zprostředkovatelem ATL OLE DB** k vytvoření objektu. Klikněte pravým tlačítkem na projekt v **zobrazení tříd**, klikněte na tlačítko **přidat** > **nová položka** v nabídce vyberte **nainstalováno**  >  **Visual C++** > **ATL**a potom klikněte na tlačítko **zprostředkovatele služeb OLEDB knihovny ATL**. Můžete chtít ukládejte kód rozhraní samostatný adresář a potom zkopírujte soubory do projektu poskytovatele.
 

@@ -1,25 +1,27 @@
 ---
 title: Přidání třídy z průvodce knihovnou typů
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.class.typelib
+ms.date: 05/09/2019
 helpviewer_keywords:
-- Add Class from TypeLib Wizard [MFC]
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-ms.openlocfilehash: a2c291e1c9e78d288bdb2d15f224520d764dfa1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 794df6c207c2f2e93cdcc63a6b83cd3434764e87
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297005"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525465"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Přidání třídy z průvodce knihovnou typů
 
-Tohoto průvodce použijte k přidání třídy knihovny MFC z knihovny typů k dispozici. Průvodce vytvoří třídu pro každé rozhraní, kterou přidáte z vybrané knihovny typů.
+::: moniker range="vs-2019"
 
-> [!WARNING]
-> V sadě Visual Studio 2017 verze 15.9 průvodce tento kód je zastaralá a v budoucí verzi systému Visual Studio se odebere. Tento průvodce je používána zřídka. Obecné podpory knihovny ATL a MFC nemá žádný vliv, odebráním tohoto průvodce. Pokud chcete sdílet svůj názor na toto vyřazení, vyplňte prosím [tento průzkum](https://www.surveymonkey.com/r/QDWKKCN). Vaše zpětná vazba záleží na nás.
+Tento průvodce není k dispozici v aplikaci Visual Studio 2019 a novějším.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Tohoto průvodce použijte k přidání třídy knihovny MFC z knihovny typů k dispozici. Průvodce vytvoří třídu pro každé rozhraní, kterou přidáte z vybrané knihovny typů.
 
 - **Přidat třídu z:**
 
@@ -66,6 +68,8 @@ Tohoto průvodce použijte k přidání třídy knihovny MFC z knihovny typů k 
    Nastaví název souboru hlaviček pro novou třídu. Ve výchozím nastavení, tento název je založen na názvu je zadat v **generované třídy**. Klikněte na tlačítko se třemi tečkami uložení názvu souboru do umístění podle vaší volby, nebo připojit k existujícímu souboru deklaraci třídy. Pokud zvolíte existující soubor, Průvodce neuloží se do vybraného umístění dokud kliknutím **Dokončit** v průvodci.
 
    Průvodce nepřepisuje soubor. Pokud jste vybrali název existujícího souboru, po kliknutí na **Dokončit**, Průvodce vás vyzve k označení, zda by měla být k obsah souboru připojen deklaraci třídy. Klikněte na tlačítko **Ano** pro připojení k souboru, klikněte na tlačítko **ne** pro návrat do průvodce a zadejte jiný název souboru.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Viz také:
 

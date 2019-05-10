@@ -1,17 +1,25 @@
 ---
 title: Implementace stránky vlastností (ATL)
-ms.date: 11/19/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 9aaf75916196f33904a51289d0a49725e042aa9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1da7a2691465162e645ae9790eecdb08d9a2ce98
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262106"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524565"
 ---
 # <a name="example-implementing-a-property-page"></a>Příklad: Implementace stránky vlastností
+
+::: moniker range="vs-2019"
+
+Průvodce stránkou vlastností ATL není k dispozici v aplikaci Visual Studio 2019 a novějším.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 Tento příklad ukazuje, jak vytvořit stránku vlastnost, která zobrazuje (a je možné změnit) vlastnosti [třídy dokumentů](../mfc/document-classes.md) rozhraní.
 
@@ -160,6 +168,8 @@ End Module
 ```
 
 Když spustíte toto makro, na stránce vlastností zobrazí zobrazuje název souboru a stav jen pro čtení aktuálního textového dokumentu. Umožňuje zápis do dokumentu ve vývojovém prostředí; jsou pouze údaje stavu jen pro čtení dokumentu To nemá vliv na atribut jen pro čtení souboru na disku.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Viz také:
 

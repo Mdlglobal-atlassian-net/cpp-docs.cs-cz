@@ -1,25 +1,25 @@
 ---
 title: Průvodce zprostředkovatelem ATL OLE DB
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.class.atl.provider.overview
+ms.date: 05/09/2019
 helpviewer_keywords:
-- ATL OLE DB Provider Wizard
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-ms.openlocfilehash: 3f8ff69fd80056bc2ac5a52cf3f42c69f8e8c543
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b30b9aa3956d0dbfa7ddf2fe7281484ebd2444e
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62248260"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524663"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Průvodce zprostředkovatelem ATL OLE DB
 
-Tento průvodce vytvoří třídy, které tvoří zprostředkovatele OLE DB.
+::: moniker range="vs-2019"
 
-> [!WARNING]
-> V sadě Visual Studio 2017 verze 15.9 průvodce tento kód je zastaralá a v budoucí verzi systému Visual Studio se odebere. Tento průvodce je používána zřídka. Obecné podpory knihovny ATL a MFC nemá žádný vliv, odebráním tohoto průvodce. Pokud chcete sdílet svůj názor na toto vyřazení, vyplňte prosím [tento průzkum](https://www.surveymonkey.com/r/QDWKKCN). Vaše zpětná vazba záleží na nás.
+Tento průvodce není k dispozici v aplikaci Visual Studio 2019 a novějším.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 ## <a name="remarks"></a>Poznámky
 
@@ -84,6 +84,8 @@ Následující tabulka popisuje možnosti pro Průvodce zprostředkovatelem ATL 
 - **Soubor .cpp sady řádků**
 
    Implementační soubor zprostředkovatele. Můžete upravit tento název souboru nebo vybrat existující implementační soubor.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Viz také:
 

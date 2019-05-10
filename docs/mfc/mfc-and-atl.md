@@ -2,12 +2,12 @@
 title: Rozhraní MFC a knihovna ATL
 ms.date: 01/24/2018
 ms.assetid: 31b1a3a8-4154-4c4a-af10-fafc23ecdc5c
-ms.openlocfilehash: c2cfb77f0e3885e0b315ddfe38bf942ec157375a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54498ddf8999379d93c899c05aa41fe224616ea3
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239250"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525435"
 ---
 # <a name="mfc-and-atl"></a>Rozhraní MFC a knihovna ATL
 
@@ -17,7 +17,7 @@ Můžete vytvořit programy MFC nebo ATL s Visual Studio Community Edition nebo 
 
 V sadě Visual Studio 2015 Visual C++ je volitelnou komponentou a komponent knihovny MFC a ATL jsou volitelné dílčí komponenty v jazyce Visual C++. Pokud nevyberete tyto součásti při první instalaci sady Visual Studio, budete vyzváni k instalaci je při prvním pokusu o vytvoření nebo otevření projektu knihovny MFC nebo ATL.
 
-V sadě Visual Studio 2017 a novější knihovny MFC a ATL jsou volitelné dílčí komponenty pod **vývoj desktopových aplikací pomocí C++** úlohy v aplikaci instalační program sady Visual Studio. Můžete nainstalovat podporu ATL bez knihovny MFC nebo knihovny MFC a ATL – podpora (MFC závisí na ATL) v kombinaci. Další informace o úlohách a komponentách najdete v tématu [instalace sady Visual Studio 2017](/visualstudio/install/install-visual-studio).
+V sadě Visual Studio 2017 a novější knihovny MFC a ATL jsou volitelné dílčí komponenty pod **vývoj desktopových aplikací pomocí C++** úlohy v aplikaci instalační program sady Visual Studio. Můžete nainstalovat podporu ATL bez knihovny MFC nebo knihovny MFC a ATL – podpora (MFC závisí na ATL) v kombinaci. Další informace o úlohách a komponentách najdete v tématu [instalace sady Visual Studio](/visualstudio/install/install-visual-studio).
 
 ## <a name="related-articles"></a>Související články
 

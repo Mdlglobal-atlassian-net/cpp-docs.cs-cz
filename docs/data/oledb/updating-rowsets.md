@@ -1,18 +1,18 @@
 ---
 title: Aktualizace sad řádků
-ms.date: 10/19/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - rowsets, updating data
 - updating data, rowsets
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: 7151d897469993b2f9be3575eb11a08844af3c69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0ee5cf97170cd9293abcb9039771f8fe23962aa
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389057"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525305"
 ---
 # <a name="updating-rowsets"></a>Aktualizace sad řádků
 
@@ -27,6 +27,9 @@ Uživatelé dokončit následující typy aktualizací na sadu řádků dat: nas
 - [Odstranit](../../data/oledb/crowset-delete.md) odstraní řádky ze sady řádků; to odpovídá příkazu SQL DELETE.
 
 ## <a name="supporting-update-operations"></a>Podpora operací aktualizace
+
+> [!NOTE]
+> Průvodce spotřebitele ATL OLE DB není k dispozici v aplikaci Visual Studio 2019 a novějším. Funkce můžete přesto přidat ručně. Další informace najdete v tématu [vytvoření příjemce bez použití průvodce](creating-a-consumer-without-using-a-wizard.md).
 
 Při vytváření příjemce s **průvodce příjemcem ATL OLE DB**, může podporovat operace aktualizace tak, že vyberete jeden nebo více ze tří zaškrtávacích políček **změnu**, **vložit**, a **odstranit**. Pokud vyberete tyto možnosti, Průvodce upravuje kód odpovídajícím způsobem pro podporu typ změny, které zvolíte. Nicméně pokud nepoužíváte průvodce, je nutné nastavit následující vlastnosti sady řádků `VARIANT_TRUE` podporovat aktualizace:
 

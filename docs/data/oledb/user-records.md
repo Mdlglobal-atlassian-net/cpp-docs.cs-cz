@@ -1,6 +1,6 @@
 ---
 title: Uživatelské záznamy
-ms.date: 10/22/2018
+ms.date: 05/09/2019
 f1_keywords:
 - COLUMN_ENTRY_MAP
 helpviewer_keywords:
@@ -15,14 +15,17 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-ms.openlocfilehash: 5dd7be3eccd59dc1a5a0dc1cd6932ca1310627c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9c1126f0e8248f31ac739bb1d939f811bda678d
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389044"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525289"
 ---
 # <a name="user-records"></a>Uživatelské záznamy
+
+> [!NOTE]
+> Průvodce spotřebitele ATL OLE DB není k dispozici v aplikaci Visual Studio 2019 a novějším. Funkce můžete přesto přidat ručně. Další informace najdete v tématu [vytvoření příjemce bez použití průvodce](creating-a-consumer-without-using-a-wizard.md).
 
 Pro použití statického následovníka (to znamená, přístupový objekt odvozený od `CAccessor`), vaše spotřebitel musí mít uživatelský záznam. Záznam uživatele je třída C++, který obsahuje prvky dat ke zpracování vstupu nebo výstupu. **Průvodce příjemcem ATL OLE DB** generuje záznam uživatele pro vaše příjemce. Přidat metody do uživatelského záznamu pro volitelné úkoly, jako je zpracování příkazů.
 

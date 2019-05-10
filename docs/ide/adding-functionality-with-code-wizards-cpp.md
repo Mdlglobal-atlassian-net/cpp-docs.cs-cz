@@ -1,28 +1,32 @@
 ---
 title: Přidání funkce pomocí průvodců kódem (C++)
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.classes
+ms.date: 05/09/2019
 helpviewer_keywords:
 - code wizards [C++]
-- wizards [C++], code
-- Visual Studio C++ projects, adding functionality
-- projects [C++], adding functionality
-- class wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: 45ba745492bf652b18dc3c7f9acceeffe0870fb7
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 3050b3e2d2a188c2465cd454325e458cd8cc4047
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446882"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525480"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Přidání funkce pomocí průvodců kódem (C++)
 
 Po vytvoření projektu můžete změnit nebo přidat funkce tohoto projektu. Mezi tyto úlohy patří vytváření nových tříd, přidává nové členské funkce a proměnné a přidání automatizace metody a vlastnosti. Průvodci kódem jsou navržené tak, aby šlo dělat tyto věci.
 
-> [!WARNING]
-> Průvodci kódem několik ATL a MFC jsou už zastaralé a v budoucí verzi systému Visual Studio se odebere. Tito průvodci jsou zřídka se používá. Obecné podpory knihovny ATL a MFC nemá žádný vliv, odebrání těchto průvodců. Pokud chcete sdílet svůj názor na toto vyřazení, vyplňte prosím [tento průzkum](https://www.surveymonkey.com/r/QDWKKCN). Vaše zpětná vazba záleží na nás.
+> [!NOTE]
+> V aplikaci Visual Studio 2019 odeberou se následující průvodci kódem zřídka používají. Obecné podpory knihovny ATL a MFC nemá žádný vliv, odebrání těchto průvodců. Ukázkový kód pro tyto technologie v Microsoft Docs a úložišti VCSamples GitHub archivuje.
+
+- Průvodce komponentami 1.0 knihovny ATL modelu COM +
+- Průvodce komponentami ATL Active Server Pages
+- Průvodce zprostředkovatelem ATL OLE DB
+- Průvodce stránkou vlastností ATL
+- Průvodce příjemcem ATL OLE DB
+- Příjemce ODBC knihovny MFC
+- Třída knihovny MFC z ovládacího prvku ActiveX
+- Třída knihovny MFC z typu Lib.
+
 
 > [!NOTE]
 >  Teď můžete přidat obslužné rutiny zpráv a mapování zpráv na ně a přepsat virtuální funkce MFC pomocí [okno vlastností](/visualstudio/ide/reference/properties-window).

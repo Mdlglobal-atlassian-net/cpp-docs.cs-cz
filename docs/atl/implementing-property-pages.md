@@ -6,14 +6,22 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: 8999f6469e420fa86cb1267675f10dc173d45ff0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4ba69d8421a76a94e4a676cb62ee53936d77da3
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250434"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524587"
 ---
 # <a name="implementing-property-pages"></a>Implementace stránek vlastností
+
+::: moniker range="vs-2019"
+
+Průvodce stránkou vlastností ATL není k dispozici v aplikaci Visual Studio 2019 a novějším.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 Stránky vlastností jsou objekty COM, které implementují `IPropertyPage` nebo `IPropertyPage2` rozhraní. Knihovna ATL poskytuje podporu pro implementace stránek vlastností prostřednictvím [Průvodce stránkou vlastností ATL](../atl/reference/atl-property-page-wizard.md) v [dialogové okno Přidat třídu](../ide/add-class-dialog-box.md).
 
@@ -44,6 +52,8 @@ Implementace stránky vlastností příklad naleznete v tématu [příkladu: Imp
 
 > [!NOTE]
 > Pokud chcete na stránce vlastností hostitelské ovládací prvky ActiveX, bude nutné změnit odvození třídy generované v průvodci. Nahraďte **CDialogImpl\<CYourClass >** s **CAxDialogImpl\<CYourClass >** v seznamu základních tříd.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,21 +1,25 @@
 ---
 title: Průvodce příjemcem ATL OLE DB
-ms.date: 08/31/2018
-f1_keywords:
-- vc.codewiz.class.atl.consumer.overview
+ms.date: 05/09/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB consumers
-- connection strings [C++], OLE DB consumers
-- ATL OLE DB Consumer Wizard
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-ms.openlocfilehash: 59ad635f62ab7a20a31de7255ec4522136e102ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 46a13f1ac46215fc28e71c15feb9f209967b67a2
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261257"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524654"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Průvodce příjemcem ATL OLE DB
+
+::: moniker range="vs-2019"
+
+Tento průvodce není k dispozici v aplikaci Visual Studio 2019 a novějším.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 Tento průvodce nastaví třída příjemce technologie OLE DB pomocí datové vazby potřebné pro přístup k danému zdroji dat pomocí zadaného zprostředkovatele OLE DB.
 
@@ -180,6 +184,8 @@ Tento průvodce nastaví třída příjemce technologie OLE DB pomocí datové v
    - **Delete**
 
       Určuje, že příjemci podporuje odstranění řádků ze sady řádků.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Viz také:
 

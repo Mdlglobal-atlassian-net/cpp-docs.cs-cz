@@ -1,19 +1,22 @@
 ---
 title: Přidání stránky vlastností ATL
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, adding
 - ATL projects, adding property pages
 - controls [ATL], property pages
 ms.assetid: ddf92b49-42a2-46d2-b6b8-d37baedebeca
-ms.openlocfilehash: c61f666865d3e1db4cdcf2dc6d3e07c2113a79c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81f793fbdc6d9dda567051b8c35a96f3d3f2f470
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62249096"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524619"
 ---
 # <a name="adding-an-atl-property-page"></a>Přidání stránky vlastností ATL
+
+> [!NOTE] 
+> Průvodce stránkou vlastností ATL není k dispozici v aplikaci Visual Studio 2019 a novějším.
 
 Chcete-li do svého projektu přidat stránku vlastností Active Template Library (ATL), váš projekt musí být vytvořen jako aplikace ATL nebo MFC aplikaci, která obsahuje podpory knihovny ATL Můžete použít [Průvodce projektem ATL](../../atl/reference/atl-project-wizard.md) k vytvoření aplikace knihovny ATL nebo [přidat objekt ATL do aplikace knihovny MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) k implementaci podpory knihovny ATL pro aplikaci knihovny MFC.
 

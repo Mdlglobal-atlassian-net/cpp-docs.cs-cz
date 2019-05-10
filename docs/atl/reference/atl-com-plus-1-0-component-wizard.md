@@ -1,27 +1,29 @@
 ---
 title: Průvodce komponentami 1.0 knihovny ATL modelu COM +
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.class.atl.mts.overview
+ms.date: 05/08/2019
 helpviewer_keywords:
 - ATL projects, adding components
-- ATL COM+ 1.0 Component Wizard
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-ms.openlocfilehash: df13c94eb0cc2aa7e2dea49aba6901f01fce0a15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e8ab9238f921b3c4e5c0eb396f0b26e46ab2a244
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62248819"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524677"
 ---
 # <a name="atl-com-10-component-wizard"></a>Průvodce komponentami 1.0 knihovny ATL modelu COM +
+
+::: moniker range="vs-2019"
+
+Tento průvodce není k dispozici v aplikaci Visual Studio 2019 a novějším.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 Tohoto průvodce použijte k přidání objektu do projektu, který podporuje služby COM + 1.0, včetně transakce.
 
 Můžete určit, zda objekt podporuje duální rozhraní a automatizace. Můžete také určit podporu pro rozhraní informace o chybě, vylepšeného objektu ovládacího prvku, transakce a asynchronních zpráv služby Řízení front.
-
-> [!WARNING]
-> V sadě Visual Studio 2017 verze 15.9 průvodce tento kód je zastaralá a v budoucí verzi systému Visual Studio se odebere. Tento průvodce je používána zřídka. Obecné podpory knihovny ATL a MFC nemá žádný vliv, odebráním tohoto průvodce. Pokud chcete sdílet svůj názor na toto vyřazení, vyplňte prosím [tento průzkum](https://www.surveymonkey.com/r/QDWKKCN). Vaše zpětná vazba záleží na nás.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -83,6 +85,8 @@ Poskytuje informace o funkcích, které modelu COM pro objekt.
 - **ProgID**
 
    Nastaví název, který kontejnery lze použít místo identifikátor CLSID objektu.
+   
+::: moniker-end
 
 ## <a name="see-also"></a>Viz také:
 

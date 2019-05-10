@@ -1,18 +1,26 @@
 ---
 title: Datoví členové stavu pole v přístupových objektech generovaných průvodcem
-ms.date: 10/24/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: dd650b7cafef78e23c23ddfef791c88b6b93727f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c92a450a00e6218d2ccc679d56aeff0f379762a3
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409002"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525066"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Datoví členové stavu pole v přístupových objektech generovaných průvodcem
+
+::: moniker range="vs-2019"
+
+Průvodce spotřebitele ATL OLE DB není k dispozici v aplikaci Visual Studio 2019 a novějším. Funkce můžete přesto přidat ručně. Další informace najdete v tématu [vytvoření příjemce bez použití průvodce](creating-a-consumer-without-using-a-wizard.md).
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 Při použití **průvodce příjemcem ATL OLE DB** vytvořte příjemce, vygeneruje průvodce datový člen třídy uživatelského záznamu pro každé pole, které jste zadali v mapě sloupců. Každý datový člen je typu `DWORD` a obsahuje stav hodnota odpovídající jeho odpovídající pole.
 
@@ -103,6 +111,8 @@ Můžete získat délku sloupce s proměnlivou délkou nebo stav sloupce (Chcete
     ```
 
 Při použití `CDynamicAccessor`, délku a stav je vázána pro vás automaticky. Chcete-li načíst hodnoty délky a stavu, použijte `GetLength` a `GetStatus` členské funkce.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Viz také:
 

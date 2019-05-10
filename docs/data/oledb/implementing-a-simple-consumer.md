@@ -1,18 +1,25 @@
 ---
 title: Implementace jednoduchého příjemce
-ms.date: 10/12/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
-- clients, creating
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 9067e8645fac9a06bd85ca5ef18fbaff45d16aae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 592a51dd77f7a2e115ee67a481e56dc558209253
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390799"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525072"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementace jednoduchého příjemce
+
+::: moniker range="vs-2019"
+
+Průvodce spotřebitele ATL OLE DB není k dispozici v aplikaci Visual Studio 2019 a novějším. Funkce můžete přesto přidat ručně. Další informace najdete v tématu [vytvoření příjemce bez použití průvodce](creating-a-consumer-without-using-a-wizard.md).
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 Následující témata ukazují, jak upravit soubory vytvořené **Průvodce aplikací knihovny MFC** a **průvodce příjemcem ATL OLE DB** k vytvoření jednoduchého příjemce. V tomto příkladu má následující části:
 
@@ -195,6 +202,8 @@ V předchozích krocích vám poskytnou podporu záložky a objektu záložky, s
     ```
 
 Další informace o záložkách najdete v tématu [pomocí záložky](../../data/oledb/using-bookmarks.md). Příklady záložky jsou také uvedeny v [aktualizace sad řádků](../../data/oledb/updating-rowsets.md).
+
+::: moniker-end
 
 ## <a name="see-also"></a>Viz také:
 

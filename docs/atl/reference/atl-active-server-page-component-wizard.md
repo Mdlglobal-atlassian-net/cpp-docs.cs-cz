@@ -1,27 +1,29 @@
 ---
 title: Průvodce komponentami stránka ATL Active Server
-ms.date: 11/04/2016
-f1_keywords:
-- vc.codewiz.class.atl.asp.overview
+ms.date: 05/09/2019
 helpviewer_keywords:
 - ASP components, creating in ATL
-- ATL Active Server Page Component Wizard
 ms.assetid: 5a5cb904-dbbf-44ea-ad3d-2ddd14c1d3c5
-ms.openlocfilehash: f020ed9b58f631bfff09fe54c70e36146eb03368
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d2f47176fb25b050e4b1f72053e4cbaaf89f569e
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62249012"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524595"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Průvodce komponentami stránka ATL Active Server
+
+::: moniker range="vs-2019"
+
+Tento průvodce není k dispozici v aplikaci Visual Studio 2019 a novějším.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 Tento průvodce se vloží do projektu jako součást stránky ASP (Active Server). Microsoft Internetové informační služby (IIS) používá jako součást jeho architektuře vývoj rozšířená webová stránka ASP součásti.
 
 Pomocí tohoto průvodce můžete určit, že se že procesu komponenty modelu a jeho podporu agregace. Můžete také určit podporu pro rozhraní informace o chybě, spojovací body a volných vláken zařazování.
-
-> [!WARNING]
-> V sadě Visual Studio 2017 verze 15.9 průvodce tento kód je zastaralá a v budoucí verzi systému Visual Studio se odebere. Tento průvodce je používána zřídka. Obecné podpory knihovny ATL a MFC nemá žádný vliv, odebráním tohoto průvodce. Pokud chcete sdílet svůj názor na toto vyřazení, vyplňte prosím [tento průzkum](https://www.surveymonkey.com/r/QDWKKCN). Vaše zpětná vazba záleží na nás.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -86,6 +88,8 @@ Poskytuje informace o funkcích, které modelu COM pro objekt.
 - **ProgID**
 
    Nastaví název, který kontejnery lze použít místo identifikátor CLSID objektu.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Viz také:
 
