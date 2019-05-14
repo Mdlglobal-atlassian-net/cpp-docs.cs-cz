@@ -1,13 +1,13 @@
 ---
 title: 3. Funkce knihovny run-time
-ms.date: 01/17/2019
+ms.date: 05/13/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 3eb6dc4110145a6c45dbdd772deaee3023e68e9d
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 7ecb2a79ad61169cdeabc9bd4893147a5de6a210
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525034"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611183"
 ---
 # <a name="3-run-time-library-functions"></a>3. Funkce knihovny run-time
 
@@ -55,6 +55,8 @@ Tato funkce má důsledky je popsáno výše, při volání z část programu, k
 
 Toto volání má vyšší prioritu než `OMP_NUM_THREADS` proměnné prostředí. Výchozí hodnota pro počet vláken, které mohou být stanoveny voláním `omp_set_num_threads` nebo nastavením `OMP_NUM_THREADS` proměnné prostředí, můžete explicitně přepsat v rámci jednoho `parallel` direktiv tak, že zadáte `num_threads` klauzuli.
 
+Další informace najdete v tématu [omp_set_dynamic –](#317-omp_set_dynamic-function).
+
 #### <a name="cross-references"></a>Křížové odkazy
 
 - [omp_set_dynamic](#317-omp_set_dynamic-function) function
@@ -74,6 +76,8 @@ int omp_get_num_threads(void);
 `num_threads` Klauzule `omp_set_num_threads` funkce a `OMP_NUM_THREADS` proměnnou prostředí řídí počet vláken v týmu.
 
 Pokud počet vláken není nastavený explicitně uživatelem, výchozí hodnota je definován implementací. Tato funkce vytvoří vazbu na nejbližší uzavírající `parallel` směrnice. Pokud je volána z sériového portu část programu nebo z vnořené paralelní oblasti, která je serializovaná, tato funkce vrátí hodnotu 1.
+
+Další informace najdete v tématu [omp_set_dynamic –](#317-omp_set_dynamic-function).
 
 #### <a name="cross-references"></a>Křížové odkazy
 
@@ -165,6 +169,12 @@ Volání `omp_set_dynamic` má vyšší prioritu než `OMP_DYNAMIC` proměnné p
 
 Výchozí nastavení pro dynamické úpravy vlákna, je definováno implementací. V důsledku toho uživatel kódy, které závisí na konkrétní počet vláken pro správné spuštění by měly explicitně zakázat dynamické vlákna. Implementace není potřeba poskytovat schopnost dynamicky upravit počet vláken, ale musí se poskytuje rozhraní pro podporu přenositelnost na všech platformách.
 
+#### <a name="microsoft-specific"></a>Specifické pro Microsoft
+
+Aktuální podporu `omp_get_dynamic` a `omp_set_dynamic` vypadá takto: 
+
+Vstupní parametr `omp_set_dynamic` neovlivní zásady dělení na vlákna a nemění počet vláken. `omp_get_num_threads` vždy vrátí hodnotu uživatelem definované číslo, pokud je nastavena, nebo výchozí číslo vlákna. V aktuální implementaci společnosti Microsoft `omp_set_dynamic(0)` vypne dynamické dělení na vlákna tak, aby na existující sadu vláken můžete znovu použít pro následující paralelní oblasti. `omp_set_dynamic(1)` Zapnutí dynamické dělení na vlákna na existující sadu vláken se zahodí a vytvořte novou sadu pro nadcházející paralelní oblasti. Počet vláken v nové sadě je stejné jako staré nastavení a je založena na návratovou hodnotu `omp_get_num_threads`. Proto pro zajištění nejlepšího výkonu použít `omp_set_dynamic(0)` pro opětovné použití existujícího vlákna.
+
 #### <a name="cross-references"></a>Křížové odkazy
 
 - [omp_get_num_threads](#312-omp_get_num_threads-function)
@@ -180,7 +190,7 @@ Výchozí nastavení pro dynamické úpravy vlákna, je definováno implementac�
 int omp_get_dynamic(void);
 ```
 
-Implementace neimplementuje dynamické úpravy počtu vláken, tato funkce vždy vrátí hodnotu 0.
+Implementace neimplementuje dynamické úpravy počtu vláken, tato funkce vždy vrátí hodnotu 0. Další informace najdete v tématu [omp_set_dynamic –](#317-omp_set_dynamic-function).
 
 #### <a name="cross-references"></a>Křížové odkazy
 

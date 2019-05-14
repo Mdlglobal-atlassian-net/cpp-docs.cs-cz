@@ -1,19 +1,17 @@
 ---
 title: Expediční mapy
 ms.date: 06/20/2018
-f1_keywords:
-- vc.mfc.macros.maps
 helpviewer_keywords:
 - dispatch maps [MFC], macros
 - dispatch maps [MFC]
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
-ms.openlocfilehash: 5ebedaa02a03bcc7802110977b96659dae45f174
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1baa5274dbd33bb1e88b57ccfab2b5ed2085f6d
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62322511"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611304"
 ---
 # <a name="dispatch-maps"></a>Expediční mapy
 
@@ -138,7 +136,7 @@ Místo oddělený seznam jednoho nebo více konstant určující seznam parametr
 |VT_R4|**float**|
 |VT_R8|**double**|
 |VT_CY|CY|
-|VT_DATE|DATE (Datum)|
+|VT_DATE|DATE|
 |VT_BSTR|BSTR|
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
@@ -161,7 +159,7 @@ Určuje seznam obsahující krátké celé číslo, za nímž následuje ukazate
 |VTS_R4|**float**|
 |VTS_R8|**double**|
 |VTS_CY|`const CY` Nebo `CY*`|
-|VTS_DATE|DATE (Datum)|
+|VTS_DATE|DATE|
 |VTS_BSTR|LPCSTR|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_SCODE|SCODE|
@@ -223,7 +221,7 @@ Hodnota určující typ vlastnosti.
 |VT_R4|**float**|
 |VT_R8|**double**|
 |VT_CY|CY|
-|VT_DATE|DATE (Datum)|
+|VT_DATE|DATE|
 |VT_BSTR|`CString`|
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
@@ -320,7 +318,7 @@ Na rozdíl od vlastnosti definované s DISP_PROPERTY vlastnosti definované pomo
 |VT_R4|**float**|
 |VT_R8|**double**|
 |VT_CY|CY|
-|VT_DATE|DATE (Datum)|
+|VT_DATE|DATE|
 |VT_BSTR|`CString`|
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|

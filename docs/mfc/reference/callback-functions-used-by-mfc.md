@@ -1,26 +1,24 @@
 ---
 title: Funkce zpětného volání používané v prostředí MFC
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.functions
 helpviewer_keywords:
 - callback functions [MFC], MFC
 - MFC, callback functions
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-ms.openlocfilehash: e3440530dfe30b6667012c76b2904dbb2786c199
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 84581a4a1147a5b0b046e1bf2fbe412bffe9c662
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152140"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612249"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funkce zpětného volání používané v prostředí MFC
 
 Zobrazí tři funkce zpětného volání v knihovny Microsoft Foundation Class. Tyto funkce zpětného volání jsou předány [metodu CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [metodu CDC::GrayString](../../mfc/reference/cdc-class.md#graystring), a [metodu CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Všimněte si, že všechny funkce zpětného volání musí zachycují výjimky MFC před vrácením Windows, protože výjimky nejde vyvolat přes hranice zpětného volání. Další informace o výjimkách, najdete v článku [výjimky](../../mfc/exception-handling-in-mfc.md).
 
-|Název||
+|Name||
 |----------|-----------------|
 |[Funkce zpětného volání pro metodu CDC::EnumObjects](#enum_objects)||
 |[Funkce zpětného volání pro metodu CDC::GrayString](#graystring)||
