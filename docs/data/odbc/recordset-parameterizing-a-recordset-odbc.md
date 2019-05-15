@@ -1,18 +1,18 @@
 ---
 title: 'Recordset: Parametrizace sady záznamů (ODBC)'
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
 - parameterizing recordsets
 - ODBC recordsets, parameterizing
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-ms.openlocfilehash: df67256c54cae3e2adb054d653d3e58bb91dd631
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 499741693009fb27df58f0ed3cde046d5e6b8c2d
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397754"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707795"
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>Recordset: Parametrizace sady záznamů (ODBC)
 
@@ -92,6 +92,9 @@ Další informace o filtrech najdete v tématu [sada záznamů: Filtrování zá
 Než vytvoříte třídu sady záznamů, zjistit, jaké parametry se budete potřebovat, jaké jsou jejich datové typy a jak je využívá sadu záznamů.
 
 #### <a name="to-parameterize-a-recordset-class"></a>Chcete-li parametrizovat třídy sady záznamů
+
+> [!NOTE] 
+> Průvodce příjemcem ODBC knihovny MFC není k dispozici v aplikaci Visual Studio 2019 a novějším. Tato funkce je stále můžete vytvořit ručně.
 
 1. Spustit [průvodce příjemcem MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) z **přidat třídu** pro vytvoření třídy.
 

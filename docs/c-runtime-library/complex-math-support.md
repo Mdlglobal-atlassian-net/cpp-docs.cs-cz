@@ -1,18 +1,18 @@
 ---
 title: Podpora komplexní matematiky C
-ms.date: 03/30/2018
+ms.date: 05/14/2019
 f1_keywords:
 - c.complex
 helpviewer_keywords:
 - complex numbers, math routines
 - math routines
 - complex numbers
-ms.openlocfilehash: 12ba858993d3712cbf390288df60faedc602c90a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 493886fcf1dbfd3dc16487dd8650206c428bb06d
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290011"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707392"
 ---
 # <a name="c-complex-math-support"></a>Podpora komplexní matematiky C
 
@@ -28,15 +28,15 @@ Implementace Microsoft hlavičky complex.h definuje jako ekvivalenty C99 standar
 
 |Standardní typ|Typ Microsoft|
 |-|-|
-|**komplexní float** nebo **float _Complex**|**_FComplex**|
-|**dvojité komplexní** nebo **double _Complex**|**_DComplex**|
-|**long double komplexní** nebo **_Complex long double**|**_LComplex**|
+|**komplexní float** nebo **float _Complex**|**_Fcomplex**|
+|**dvojité komplexní** nebo **double _Complex**|**_Dcomplex**|
+|**long double komplexní** nebo **_Complex long double**|**_Lcomplex**|
 
 Hlaviček math.h definuje samostatný typ, **struktura _complex**, která se používá pro [_cabs](../c-runtime-library/reference/cabs.md) funkce. **Struktura _complex** typ není používán ekvivalentní složité matematické funkce [soubory CAB, cabsf, cabsl –](../c-runtime-library/reference/cabs-cabsf-cabsl.md).
 
 ## <a name="complex-constants-and-macros"></a>Komplexní konstanty a makra
 
-**Můžu** je definován jako **float** komplexní typ **_FComplex** inicializoval `{ 0.0f, 1.0f }`.
+**Můžu** je definován jako **float** komplexní typ **_Fcomplex** inicializoval `{ 0.0f, 1.0f }`.
 
 ## <a name="trigonometric-functions"></a>Trigonometrické funkce
 

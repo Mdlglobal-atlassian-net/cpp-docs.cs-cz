@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-ms.openlocfilehash: 47fee2291d201fca04674b07926ed88aaed0a95c
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 5808a99d376ab3640c955156688d64bc0285e67e
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524535"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706974"
 ---
 # <a name="atl-property-page-wizard"></a>Průvodce stránkou vlastností ATL
 
@@ -22,7 +22,7 @@ Tento průvodce není k dispozici v aplikaci Visual Studio 2019 a novějším.
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 Tento průvodce [přidá stránky vlastností do projektu knihovny ATL](../../atl/reference/adding-an-atl-property-page.md) nebo do projektu MFC pomocí podpory knihovny ATL. Stránky vlastností ATL poskytuje uživatelské rozhraní pro nastavení vlastností (nebo volání metody) z jednoho nebo více objektů COM.
 

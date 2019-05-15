@@ -1,18 +1,18 @@
 ---
 title: Psaní a refaktoring kódu (C++)
 description: Použití C++ editoru kódu v sadě Visual Studio k formátování, navigace, pochopit a Refaktorovat kód.
-ms.date: 04/30/2018
+ms.date: 05/14/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
-ms.openlocfilehash: ee506229584690cd4f7730011e0b5b50af0e27e0
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 04f738cd6fdd456c432c334df42f37339e7fa49e
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222315"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708306"
 ---
 # <a name="writing-and-refactoring-code-c"></a>Psaní a refaktoring kódu (C++)
 
-Editor kódu jazyka Visual C++ a prostředí IDE poskytují mnoho kódování pomůcky. Některé jsou jedinečné pro C++, a některé v podstatě stejný pro všechny jazyky sady Visual Studio. Další informace o sdílených funkcích naleznete v tématu [psaní kódu v editoru kódu a textovém editoru](/visualstudio/ide/writing-code-in-the-code-and-text-editor). Možnosti pro povolení a konfigurace funkce specifické pro C++ jsou umístěny v **nástroje &#124; možnosti &#124; textový Editor &#124; C/C++**. Po výběru možnosti, kterou chcete nastavit, můžete získat další nápovědu stisknutím kombinace kláves **F1** při dialogového okna je aktivní. Obecné možnosti formátování kódu, zadejte `Editor C++` do **rychlé spuštění**.
+C++ Editoru kódu a integrovaném vývojovém prostředí Visual Studio poskytuje mnoho kódování pomůcky. Některé jsou jedinečné pro C++, a některé v podstatě stejný pro všechny jazyky sady Visual Studio. Další informace o sdílených funkcích naleznete v tématu [psaní kódu v editoru kódu a textovém editoru](/visualstudio/ide/writing-code-in-the-code-and-text-editor). Možnosti pro povolení a konfigurace funkce specifické pro C++ jsou umístěny v **nástroje &#124; možnosti &#124; textový Editor &#124; C/C++**. Po výběru možnosti, kterou chcete nastavit, můžete získat další nápovědu stisknutím kombinace kláves **F1** při dialogového okna je aktivní. Obecné možnosti formátování kódu, zadejte `Editor C++` do **rychlé spuštění**.
 
 Seznámit s experimentálními funkcemi, které mohou nebo nemusí být zahrnuté v budoucí verzi systému Visual Studio, najdete v [textového editoru C++ experimentální](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental) dialogového okna. V sadě Visual Studio 2017 můžete povolit **prediktivní IntelliSense** v tomto dialogovém okně.
 

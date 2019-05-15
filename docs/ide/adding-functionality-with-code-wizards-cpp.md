@@ -1,15 +1,15 @@
 ---
 title: Přidání funkce pomocí průvodců kódem (C++)
-ms.date: 05/09/2019
+ms.date: 05/14/2019
 helpviewer_keywords:
 - code wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: 3050b3e2d2a188c2465cd454325e458cd8cc4047
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 8c88936edcb9110fe7482281f483f11c542b83c1
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525480"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708125"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Přidání funkce pomocí průvodců kódem (C++)
 
@@ -31,9 +31,9 @@ Po vytvoření projektu můžete změnit nebo přidat funkce tohoto projektu. Me
 > [!NOTE]
 >  Teď můžete přidat obslužné rutiny zpráv a mapování zpráv na ně a přepsat virtuální funkce MFC pomocí [okno vlastností](/visualstudio/ide/reference/properties-window).
 
-## <a name="accessing-visual-c-code-wizards"></a>Přístup k Průvodci kódem jazyka Visual C++
+## <a name="accessing-c-code-wizards"></a>Přístup k C++ průvodců kódu
 
-Existují tři umístění, kam máte přístup průvodců kódem jazyka Visual C++:
+Existují tři umístění, kam máte přístup C++ průvodců kódu:
 
 - Na **projektu** nabídky, **přidat novou položku** příkazu můžete zobrazit `Add New Item` dialogové okno, které vám pomůžou při přidávání nové soubory do projektu. **Přidat třídu** příkaz zobrazí [přidat třídu](../ide/add-class-dialog-box.md) dialogové okno, které pak otevřete Průvodce pro každou třídu typů můžete přidat do projektu. **Přidat prostředek** příkaz zobrazí [přidat prostředek](../windows/add-resource-dialog-box.md) dialogové okno, ze kterého můžete vytvořit nebo vybrat prostředek pro přidání do projektu.
 
@@ -78,4 +78,4 @@ Existují tři umístění, kam máte přístup průvodců kódem jazyka Visual 
 [Přepisování virtuální funkce](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
 [Navigace strukturou třídy](../ide/navigating-the-class-structure-visual-cpp.md)<br>
 [C++typy projektů v sadě Visual Studio](../build/reference/visual-cpp-project-types.md)<br>
-[Soubor typy vytvořené pro vizuál C++ projekty](../build/reference/file-types-created-for-visual-cpp-projects.md)
+[Soubor typy vytvořené pro sadu Visual Studio C++ projekty](../build/reference/file-types-created-for-visual-cpp-projects.md)

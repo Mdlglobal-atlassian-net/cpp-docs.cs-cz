@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Desktop Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: b86536cb6177390ab89d235ecb8e093006dd8cff
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: a434a329febc38d6a46881dcabba6b05a402fbca
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448573"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708055"
 ---
 # <a name="windows-desktop-wizard"></a>Desktopový Průvodce pro Windows
 
@@ -83,7 +83,7 @@ Po vytvoření aplikace klasické pracovní plochy Windows, můžete přidat obe
 > [!NOTE]
 > Nelze přidat třídy ATL a MFC – třídy můžete přidat pouze tyto typy aplikace klasické pracovní plochy Windows, které podporují knihovny MFC (viz předchozí tabulka).
 
-Můžete zobrazit soubory Průvodce vytvoří pro váš projekt v **Průzkumníka řešení**. Další informace o souborech Průvodce vytvoří pro váš projekt, naleznete v generovaném souboru `ReadMe.txt`. Další informace o typech souborů [typy souborů vytvořené pro vizuál C++ projekty](../build/reference/file-types-created-for-visual-cpp-projects.md).
+Můžete zobrazit soubory Průvodce vytvoří pro váš projekt v **Průzkumníka řešení**. Další informace o souborech Průvodce vytvoří pro váš projekt, naleznete v generovaném souboru `ReadMe.txt`. Další informace o typech souborů [typy souborů vytvořené pro Visual Studio C++ projekty](../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>Viz také:
 

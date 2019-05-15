@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: efefd4c0-4491-4072-aa9b-59545641efb3
-ms.openlocfilehash: a07c52d4fdf3b1820e601ae1f132237e1e32f86f
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: dd731862adb741db068fc3465acb64b42e673522
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525053"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707607"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>Vytvoření příjemce technologie OLE DB pomocí průvodce
 
@@ -19,7 +19,7 @@ Průvodce spotřebitele ATL OLE DB není k dispozici v aplikaci Visual Studio 20
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 Tento postup ukazuje, jak můžete použít **Průvodce projektem ATL** a **průvodce příjemcem ATL OLE DB** generování šablony příjemce OLE DB a následně upravit hlavní kód aplikace konzoly načtení a zobrazení dat z databázové tabulky.
 

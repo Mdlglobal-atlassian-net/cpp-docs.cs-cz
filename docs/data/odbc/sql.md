@@ -1,18 +1,18 @@
 ---
 title: SQL
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
 - database classes [C++], SQL statements
 - SQL [C++]
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-ms.openlocfilehash: 8f93d97530068695359273b523e7d2ae46de01cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68c01623ef97e89623dff3f46a952c75ea31a774
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329884"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707820"
 ---
 # <a name="sql"></a>SQL
 
@@ -38,6 +38,9 @@ Toto téma vysvětluje:
 Databázové třídy jsou implementovány s rozhraním ODBC, který používá SQL v rozhraní úroveň volání namísto vložení příkazy SQL v kódu. Rozhraní ODBC používá ke komunikaci s SQL [zdroj dat](../../data/odbc/data-source-odbc.md) prostřednictvím ovladače rozhraní ODBC. Tyto ovladače interpretovat SQL a přeloží ji, pokud je to nutné pro použití s formátem konkrétní databáze, jako je například aplikace Microsoft Access. Další informace o tom, jak ODBC používá SQL najdete v tématu [ODBC](../../data/odbc/odbc-basics.md) a sady SDK rozhraní ODBC *referenční informace pro programátory* na disku CD knihovny MSDN.
 
 ##  <a name="_core_the_database_classes"></a> Databázové třídy
+
+> [!NOTE] 
+> Průvodce příjemcem ODBC knihovny MFC není k dispozici v aplikaci Visual Studio 2019 a novějším. Příjemce měli stále můžete vytvořit ručně.
 
 Databázové třídy jsou navržena tak, aby manipulaci a aktualizovat data v existujícím [zdroj dat](../../data/odbc/data-source-odbc.md). [Průvodce aplikací knihovny MFC](../../mfc/reference/database-support-mfc-application-wizard.md), [průvodce příjemcem MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) (přístupná prostřednictvím **přidat třídu**), a databázové třídy většinu příkazů SQL vytvořit za vás.
 
@@ -79,7 +82,7 @@ Další informace o použití databázových tříd SQL naleznete v následujíc
 
 - [SQL: Přizpůsobení příkazu SQL sady záznamů (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
 
-- [SQL: SQL a datové typy C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
+- [SQL: SQL a datové typy C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
 
 - [SQL: Přímá volání SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
 

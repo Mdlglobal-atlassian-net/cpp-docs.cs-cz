@@ -5,12 +5,12 @@ ms.technology: cpp-ide
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 8fdd48c026485e55db01f6f70b0dde3c1e68d847
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a897f3b6154368c7381f1cac8e51ed5acfac5d32
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352033"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708166"
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ – nápověda a komunita
 
@@ -26,7 +26,7 @@ Tady je způsob pro získání informací o tom, jak psát C++ kódu a použití
 
 |Název|Popis|
 |-----------|-----------------|
-|[Visual C++](visual-cpp-in-visual-studio.md)|Obsahuje odkaz a rámcové dokumentaci o jazyce Visual C++. Část knihovny MSDN.|
+|[C++ v sadě Visual Studio](visual-cpp-in-visual-studio.md)|Obsahuje odkaz a rámcové dokumentaci o jazyce Visual C++. Část knihovny MSDN.|
 |[Středisko pro vývojáře Windows](https://developer.microsoft.com/windows/)|Obsahuje informace o tom, jak pomocí jazyka C++ a další jazyky můžete vyvíjet aplikace pro Windows 10. Součást ve středisku pro vývojáře Windows; obsah jazyka C++ je pod dokumenty > referenční informace k jazyku uzlu.|
 
 ### <a name="online-and-offline-documentation"></a>Dokumentace ke službě online a Offline

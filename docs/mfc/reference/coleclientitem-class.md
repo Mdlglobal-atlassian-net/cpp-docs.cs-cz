@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: 2687dfc9941a512523a7cb771cb872c78b97ce2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd04b2aa6dd1d539e357a69666bafc80e3ea5eba
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152166"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708163"
 ---
 # <a name="coleclientitem-class"></a>Coleclientitem – třída
 
@@ -185,13 +185,13 @@ class COleClientItem : public CDocItem
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleClientItem::COleClientItem](#coleclientitem)|Vytvoří `COleClientItem` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleClientItem::Activate](#activate)|Otevře položku OLE pro operace a pak spustí zadaný příkaz.|
 |[COleClientItem::ActivateAs](#activateas)|Aktivuje položku jako jiného typu.|
@@ -265,7 +265,7 @@ class COleClientItem : public CDocItem
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleClientItem::CanActivate](#canactivate)|Volá se rozhraním, chcete-li zjistit, jestli je povolená místní aktivace.|
 |[COleClientItem::OnChangeItemPosition](#onchangeitemposition)|Volá se rozhraním, když se změní pozici položky.|
@@ -322,7 +322,7 @@ void Activate(
 *nVerb*<br/>
 Určuje příkaz pro spuštění. Může být jeden z následujících akcí:
 
-|Value|Význam|Symbol|
+|Hodnota|Význam|Symbol|
 |-----------|-------------|------------|
 |- 0|primární požadavek|OLEIVERB_PRIMARY|
 |- 1|Sekundární příkaz|(Žádné)|
@@ -1045,7 +1045,7 @@ virtual BOOL DoVerb(
 *nVerb*<br/>
 Určuje příkaz pro spuštění. Může obsahovat jednu z následujících akcí:
 
-|Hodnota|Význam|Symbol|
+|Value|Význam|Symbol|
 |-----------|-------------|------------|
 |- 0|primární požadavek|OLEIVERB_PRIMARY|
 |- 1|Sekundární příkaz|(Žádné)|
@@ -2151,7 +2151,7 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
 Ukazatel [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) datová struktura, která obsahuje informace o nové tiskové cílové zařízení. Může mít hodnotu NULL.
 
 *ppd*<br/>
-Ukazatel [PRINTDLG](https://msdn.microsoft.com/library/windows/desktop/ms646940) datová struktura, která obsahuje informace o nové tiskové cílové zařízení. Může mít hodnotu NULL.
+Ukazatel [PRINTDLG](/windows/desktop/ms646940) datová struktura, která obsahuje informace o nové tiskové cílové zařízení. Může mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 

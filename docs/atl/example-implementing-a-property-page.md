@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 1da7a2691465162e645ae9790eecdb08d9a2ce98
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 1f2c0387cd0a78ad0179e251654d2fa82b1eef13
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524565"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707102"
 ---
 # <a name="example-implementing-a-property-page"></a>Příklad: Implementace stránky vlastností
 
@@ -19,7 +19,7 @@ Průvodce stránkou vlastností ATL není k dispozici v aplikaci Visual Studio 2
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 Tento příklad ukazuje, jak vytvořit stránku vlastnost, která zobrazuje (a je možné změnit) vlastnosti [třídy dokumentů](../mfc/document-classes.md) rozhraní.
 
@@ -135,7 +135,7 @@ Chcete-li zobrazit tuto stránku, je potřeba vytvořit jednoduché pomocný obj
 
 Použít [dialogové okno Přidat třídu](../ide/add-class-dialog-box.md) a [Průvodce jednoduchý objekt knihovny ATL](../atl/reference/atl-simple-object-wizard.md) pro vygenerování nové třídy a použití `Helper` jako jeho krátký název. Po vytvoření, přidejte metodu, jak je znázorněno v následující tabulce.
 
-|Položka|Value|
+|Položka|Hodnota|
 |----------|-----------|
 |Název metody|`ShowPage`|
 |Parametry|`[in] BSTR bstrCaption, [in] BSTR bstrID, [in] IUnknown* pUnk`|

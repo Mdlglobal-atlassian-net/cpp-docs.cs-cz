@@ -13,12 +13,12 @@ helpviewer_keywords:
 - m_nParams data member
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
-ms.openlocfilehash: 5904a69f81dd1fbf22171a46040da5d4f5511588
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0edde640e0eebaf21216fc9ef37a8e31e2c1a210
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395635"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707981"
 ---
 # <a name="recordset-architecture-odbc"></a>Recordset: Architektura (ODBC)
 
@@ -36,6 +36,9 @@ Toto téma popisuje datové členy, které tvoří architektura objekt sady záz
 >  Toto téma se vztahuje na objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud je implementovaná hromadné načítání řádků, se podobá architektuře. Pokud chcete znát rozdíly, přečtěte si téma [sada záznamů: Načítání záznamů (ODBC) hromadné](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_a_sample_class"></a> Ukázkový – třída
+
+> [!NOTE] 
+> Průvodce příjemcem ODBC knihovny MFC není k dispozici v aplikaci Visual Studio 2019 a novějším. Příjemce měli stále můžete vytvořit ručně.
 
 Při použití [průvodce příjemcem MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) z **přidat třídu** průvodce, chcete-li deklarovat třídu sady záznamů odvozený od `CRecordset`, výsledné třídy obsahuje obecnou strukturu je znázorněno v následujícím jednoduché Třída:
 

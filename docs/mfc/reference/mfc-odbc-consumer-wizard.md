@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: 20357646bbb7aa4fe00db43d8e77f9bf0b95c9b5
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 2e8741677031ff9b12989d75243a13550d74b608
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525370"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707385"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>Průvodce příjemcem knihovny MFC ODBC
 
@@ -19,7 +19,7 @@ Tento průvodce není k dispozici v aplikaci Visual Studio 2019 a novějším.
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 Tento průvodce nastavuje třídu sady záznamů rozhraní ODBC a datové vazby potřebné pro přístup k danému zdroji dat.
 

@@ -1,6 +1,6 @@
 ---
 title: 'Výměna polí záznamu: Práce s kódem průvodce'
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
 - DoFieldExchange method, overriding
 - Unicode, with database classes
@@ -15,14 +15,17 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-ms.openlocfilehash: 82f0d946cac3429150250e2df5d1bfd674ec30ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81b26e61f64623d1e3da5ed207d0e8e43350229d
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395676"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708003"
 ---
 # <a name="record-field-exchange-working-with-the-wizard-code"></a>Výměna polí záznamu: Práce s kódem průvodce
+
+> [!NOTE] 
+> Průvodce příjemcem ODBC knihovny MFC není k dispozici v aplikaci Visual Studio 2019 a novějším. Příjemce měli stále můžete vytvořit ručně.
 
 Toto téma popisuje kód, který Průvodce aplikací knihovny MFC a **přidat třídu** (jak je popsáno v [přidání příjemce ODBC knihovny MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) zápisu pro podporu RFX a jak můžete chtít změnit kód.
 

@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, wizard-generated classes and methods
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-ms.openlocfilehash: 409d339acb37bd09ae10eabba16e19d5df0aae63
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 5d5c7aa680ca6b764e2ee9710e46cf6fa3af1c89
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525022"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707727"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Metody generované v průvodci příjemcem
 
@@ -19,7 +19,7 @@ Průvodce spotřebitele ATL OLE DB není k dispozici v aplikaci Visual Studio 20
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 **Průvodce příjemcem ATL OLE DB** a **Průvodce aplikací knihovny MFC** generovat určité funkce, které byste měli vědět. Některé metody jsou implementovány odlišně v projektech s atributy, takže máte několik upozornění; každý případ je popsané níže. Informace o zobrazení vloženého kódu najdete v tématu [ladění vloženého kódu](/visualstudio/debugger/how-to-debug-injected-code).
 

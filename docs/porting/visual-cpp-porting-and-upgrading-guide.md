@@ -2,12 +2,12 @@
 title: Průvodce přenosem a upgradováním Visual C++
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 52ba023b38c16fa276c3dabffe481aaae96215f1
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 058972ec4ad44fd4ec9fa2dad926916846d47adf
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448847"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708049"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Průvodce přenosem a upgradováním Visual C++
 
@@ -88,4 +88,4 @@ Případně třeba Teď máte nové požadavky nebo můžou předvídat potřebu
 
 ## <a name="see-also"></a>Viz také:
 
-[Visual C++](../overview/visual-cpp-in-visual-studio.md)
+[C++ v sadě Visual Studio](../overview/visual-cpp-in-visual-studio.md)

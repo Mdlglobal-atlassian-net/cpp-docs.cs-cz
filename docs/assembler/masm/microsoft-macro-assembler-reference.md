@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MASM (Microsoft Macro Assembler)
 - MASM (Microsoft Macro Assembler), documentation overview
 ms.assetid: 1446d55f-e2e7-4fd1-a9b8-b15cf7d4e47c
-ms.openlocfilehash: 5b74eef1799dd5f9fae8f2a6aceeb79a115ce837
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c24d3cfe1b5ef4ff9415840ee07a8f57cf22a90
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202221"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707267"
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler – referenční dokumentace
 
@@ -43,7 +43,7 @@ Informace o tom, jak vytvoření výstupních souborů pro x64.
 
 ## <a name="related-sections"></a>Související oddíly
 
-[Visual C++](../../overview/visual-cpp-in-visual-studio.md)<br/>
+[C++ v sadě Visual Studio](../../overview/visual-cpp-in-visual-studio.md)<br/>
 Obsahuje odkazy na různé oblasti dokumentace k sadě Visual Studio a Visual C++.
 
 ## <a name="see-also"></a>Viz také:

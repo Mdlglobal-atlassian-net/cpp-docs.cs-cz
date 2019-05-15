@@ -1,8 +1,7 @@
 ---
 title: Přidat třídu
-ms.date: 11/08/2018
+ms.date: 05/14/2019
 f1_keywords:
-- vc.codewiz.classes.adding
 - vc.addclass
 helpviewer_keywords:
 - ATL projects, adding classes
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - classes [C++], adding
 - Add Class dialog box
 ms.assetid: c34b5f70-4e72-4faa-ba21-e2b05361c4d9
-ms.openlocfilehash: 4cd4ed4d4ec5a7093ce674c7883a77fa4e91d5ef
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: fa53c2af5cd3e81c2d4877ef255430eac9525aad
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446948"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708137"
 ---
 # <a name="add-a-class"></a>Přidat třídu
 
@@ -81,13 +80,8 @@ Existují čtyři kategorie **přidat třídu** šablony: .NET, ATL, MFC a obecn
 |Šablona|Průvodce|
 |--------------|------------|
 |Přidat podporu ATL do MFC|Není k dispozici|
-|Komponenta knihovny ATL Active Server Page|[Průvodce komponentami ATL active server page](../atl/reference/atl-active-server-page-component-wizard.md)|
 |Ovládací prvek ATL|[Průvodce ovládacími prvky ATL](../atl/reference/atl-control-wizard.md)|
 |ATL Dialog|[Průvodce dialogem ATL](../atl/reference/atl-dialog-wizard.md)|
-|Komponenta knihovny ATL modelu COM + 1.0|[Průvodce komponentami ATL COM + 1.0](../atl/reference/atl-com-plus-1-0-component-wizard.md)|
-|Příjemce knihovny ATL OLEDB|[Průvodce příjemcem ATL OLE DB](../atl/reference/atl-ole-db-consumer-wizard.md)|
-|Připojit zprostředkovatele služeb OLEDB knihovny ATL|[Průvodce zprostředkovatelem ATL OLE DB](../atl/reference/atl-ole-db-provider-wizard.md)|
-|Stránka vlastností knihovny ATL|[Průvodce stránkou vlastností ATL](../atl/reference/atl-property-page-wizard.md)|
 |Jednoduchý objekt knihovny ATL|[Průvodce jednoduchým objektem ATL](../atl/reference/atl-simple-object-wizard.md)|
 |Zprostředkovatel události rozhraní WMI|Průvodce zprostředkovatele událostí WMI|
 |Zprostředkovatel instancí rozhraní WMI|Průvodce instance zprostředkovatele rozhraní WMI|
@@ -97,9 +91,6 @@ Existují čtyři kategorie **přidat třídu** šablony: .NET, ATL, MFC a obecn
 |Šablona|Průvodce|
 |--------------|------------|
 |Třída knihovny MFC|[Průvodce přidáním třídy MFC](../mfc/reference/mfc-add-class-wizard.md)|
-|Třída knihovny MFC z ovládacího prvku ActiveX|[Přidání třídy z Průvodce ovládacím prvkem ActiveX](../ide/add-class-from-activex-control-wizard.md)|
-|Třída knihovny MFC z TypeLib|[Přidání třídy z Průvodce knihovnou typů](../mfc/reference/add-class-from-typelib-wizard.md)|
-|Příjemce ODBC knihovny MFC|[Průvodce příjemcem MFC ODBC](../mfc/reference/mfc-odbc-consumer-wizard.md)|
 
 #### <a name="generic-classes"></a>Obecné třídy
 

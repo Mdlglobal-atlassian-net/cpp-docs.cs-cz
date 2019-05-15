@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-ms.openlocfilehash: f172da3aefb3f2440ddb4bba41dc549b0bf4a926
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 3442ff484876aec9b2cd3fa93e95c4d503649ee9
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525131"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707755"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Třídy generované v průvodci příjemcem
 
@@ -20,7 +20,7 @@ Průvodce spotřebitele ATL OLE DB není k dispozici v aplikaci Visual Studio 20
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 Při použití **průvodce příjemcem ATL OLE DB** generovat příjemce, máte na výběr mezi používáním atributů šablony technologie OLE DB nebo OLE DB. V obou případech průvodce vygeneruje třídu příkazu nebo třída záznamů uživatelů. Třídy příkazů obsahuje kód pro otevření zdroje dat a sady řádků, které jste zadali v průvodci. Třída záznamu uživatele obsahuje mapování sloupců pro tabulku databáze, kterou jste vybrali. Generovaný kód se však liší v každém případě:
 

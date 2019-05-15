@@ -9,12 +9,12 @@ helpviewer_keywords:
 - browsing database file, .sdf
 - file types [C++], project files
 ms.assetid: 5823b954-36cf-42d3-8fd5-25bab3ef63d9
-ms.openlocfilehash: 153480331d3300555c78a3489ca603d854893f5b
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 37bfd1a6db2087e97ab76d3d06ed6f56e59b96e3
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446587"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707413"
 ---
 # <a name="project-and-solution-files"></a>Soubory projektu a řešení
 
@@ -34,4 +34,4 @@ Následující soubory jsou vytvořeny při vytvoření projektu v sadě Visual 
 
 ## <a name="see-also"></a>Viz také:
 
-[Soubor typy vytvořené pro vizuál C++ projekty](file-types-created-for-visual-cpp-projects.md)
+[Soubor typy vytvořené pro sadu Visual Studio C++ projekty](file-types-created-for-visual-cpp-projects.md)

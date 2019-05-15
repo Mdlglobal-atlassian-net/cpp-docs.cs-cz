@@ -1,6 +1,6 @@
 ---
 title: 'Recordset: Dynamické vazby datových sloupců (ODBC)'
-ms.date: 11/19/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - ODBC recordsets [C++], binding columns dynamically
 - data binding [C++], recordset columns
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: c2f2a6a6696f46fb5b8f2777c6c911269c9e7a80
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bde61348bbfb33eef42e36bd75830c23e5b2a5f5
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397894"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707935"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Recordset: Dynamické vazby datových sloupců (ODBC)
 
@@ -29,6 +29,9 @@ Spravovat sady záznamů vazeb sloupců tabulky, které zadáte v době návrhu,
 >  Toto téma se vztahuje na objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Technik popsaných obecně se doporučuje, pokud používáte hromadné načítání řádků. Další informace o hromadném načítání řádků naleznete v tématu [sada záznamů: Načítání záznamů (ODBC) hromadné](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_when_you_might_bind_columns_dynamically"></a> Když může svázat sloupců dynamicky
+
+> [!NOTE] 
+> Průvodce příjemcem ODBC knihovny MFC není k dispozici v aplikaci Visual Studio 2019 a novějším. Příjemce měli stále můžete vytvořit ručně.
 
 V době návrhu, Průvodce aplikací knihovny MFC nebo [průvodce příjemcem MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) (z **přidat třídu**) vytváří na základě známých tabulek a sloupců ve zdroji dat. třídy sady záznamů. Databáze může změnit při návrhu a pokud vaše aplikace používá tyto tabulky a sloupce v době spuštění později. Vy nebo jiný uživatel může přidat nebo vyřadit tabulku nebo přidat nebo odebrat sloupce z tabulky záznamů vaší aplikace závislou na. To pravděpodobně není žádný problém pro všechny aplikace přístup k datům, ale pokud je pro vás, jak můžete vypořádat se změny ve schématu databáze, jiné než realizace a rekompilace? Účelem tohoto tématu je odpověď na tuto otázku.
 

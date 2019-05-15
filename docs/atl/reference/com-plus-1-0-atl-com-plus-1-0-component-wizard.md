@@ -1,17 +1,25 @@
 ---
 title: COM + 1.0, Průvodce komponentami ATL COM + 1.0
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 f1_keywords:
 - vc.codewiz.class.atl.mts.options
 ms.assetid: 2fbe259c-6be1-4d0e-9cfe-721c75c97cb1
-ms.openlocfilehash: 0fa649ba41a684be6ed18bd05d48954503c5db16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bff7f87fbdebbff9a1823ae8718c64be4f47a2ea
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278589"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707460"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM + 1.0, Průvodce komponentami ATL COM + 1.0
+
+::: moniker range="vs-2019"
+
+Tento průvodce není k dispozici v aplikaci Visual Studio 2019 a novějším.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
 
 Na této stránce průvodce komponenta knihovny ATL modelu COM + 1.0 zadat typ rozhraní a další rozhraní, a proto není podporován.
 
@@ -50,6 +58,8 @@ Další informace o projekty knihovny ATL a třídy knihovny ATL modelu COM, nal
    |**Požadováno**|Určuje, že objekt může nebo nemusí být kořenový datového proudu transakce přidáním custom(TLBATTR_TRANS_REQUIRED,0) komponenty atribut – makro do souboru .h (s atributy projekty) nebo do souboru IDL (bez atributové projekty).|
    |**Nepodporuje se**|Určuje, že objekt nezahrnuje transakce. Přidá custom(TLBATTR_TRANS_NOTSUPP,0) komponenty atribut – makro do souboru .h (s atributy projekty) nebo do souboru IDL (bez atributové projekty).|
    |**Požaduje novou**|Určuje, že objekt je vždy kořenový datového proudu transakce přidáním custom(TLBATTR_TRANS_REQNEW,0) komponenty atribut – makro do souboru .h (s atributy projekty) nebo do souboru IDL (bez atributové projekty).|
+
+::: moniker-end
 
 ## <a name="see-also"></a>Viz také:
 

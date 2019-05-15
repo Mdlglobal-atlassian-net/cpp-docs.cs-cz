@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - ATL OLE DB consumers
 ms.assetid: f940a513-4e42-4148-b521-dd0d7dc89fa2
-ms.openlocfilehash: 7925063e03522c96d251748b23b6b929733999a1
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 1e384a283a2a149faa5b8d6e0817eac3cacfeff9
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524641"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706906"
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>Přidání příjemce ATL OLE DB
 
@@ -19,7 +19,7 @@ Průvodce spotřebitele ATL OLE DB není k dispozici v aplikaci Visual Studio 20
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 Tohoto průvodce použijte k přidání příjemce technologie OLE DB knihovny ATL do projektu. Příjemce knihovny ATL technologie OLE DB se skládá ze OLE DB přístupový objekt třídy a datových vazeb nezbytná pro přístup ke zdroji dat. Projekt musí být vytvořen jako aplikace knihovny ATL modelu COM, nebo jako aplikace knihovny MFC nebo Win32, který obsahuje podpory knihovny ATL (který automaticky přidá průvodce příjemcem ATL OLE DB).
 

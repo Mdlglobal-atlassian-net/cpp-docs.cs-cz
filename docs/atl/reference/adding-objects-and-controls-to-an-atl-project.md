@@ -1,6 +1,6 @@
 ---
 title: Přidání objektů a ovládacích prvků do projektu ATL
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 f1_keywords:
 - vc.appwiz.ATL.controls
 helpviewer_keywords:
@@ -11,14 +11,17 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: d16e9a9e7b92d2a98f8994227c5641994677fdda
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: deaac8f2d6aac02d0cd751e6abebb3b67051200f
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221207"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706850"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Přidání objektů a ovládacích prvků do projektu ATL
+
+> [!NOTE] 
+> COM + 1.0 Průvodce komponentami ATL, průvodce příjemcem ATL OLE DB a knihovny ATL Active Server Page Component Průvodce nejsou k dispozici, v aplikaci Visual Studio 2019 nebo novější.
 
 Některého z průvodců kódu knihovny ATL slouží k přidání objektu nebo ovládacího prvku do vašich projektů na základě knihovny ATL nebo MFC. Pro každý objekt modelu COM nebo ovládacího prvku přidáte, průvodce se vygeneruje, .cpp a .h souborů, jakož i souboru .rgs pro podporu založených na skriptech registru. Následující průvodci kódem knihovny ATL jsou k dispozici v sadě Visual Studio:
 

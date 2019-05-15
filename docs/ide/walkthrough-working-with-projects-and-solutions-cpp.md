@@ -1,18 +1,18 @@
 ---
 title: 'Návod: Práce s projekty a řešeními (C++)'
-ms.date: 04/25/2019
+ms.date: 05/14/2019
 helpviewer_keywords:
 - solutions [C++]
 - projects [C++], about projects
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: 978899e6e73d78623e37222e3248dc299ec29c69
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: 6dfee695092a69252069dbfc73b6260bd65245e2
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877294"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708129"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>Návod: Práce s projekty a řešeními (C++)
 
@@ -22,7 +22,7 @@ V sadě Visual Studio je práce organizována do projektů a řešení. Řešen�
 
 ## <a name="before-you-start"></a>Než začnete
 
-K dokončení tohoto návodu, třeba Visual Studio 2017 nebo novější. Pokud potřebujete kopii, zde je krátké průvodce: [Instalace podpory jazyka C++ v sadě Visual Studio](../build/vscpp-step-0-installation.md). Pokud jste to ještě neudělali, postupujte podle dalších kroků po instalaci prostřednictvím kurz "Hello, World", abyste měli jistotu, že je správně nainstalovaný Visual C++ a všechny funguje.
+K dokončení tohoto návodu, třeba Visual Studio 2017 nebo novější. Pokud potřebujete kopii, zde je krátké průvodce: [Instalace podpory jazyka C++ v sadě Visual Studio](../build/vscpp-step-0-installation.md). Pokud jste to ještě neudělali, postupujte podle dalších kroků po instalaci prostřednictvím kurzu "Hello, World" a ujistěte se, C++ součásti jsou správně nainstalované, a to všechno funguje.
 
 To pomáhá porozumět základům jazyka C++ a vědět, co kompilátoru, linkeru a ladicí program se používají pro. Kurz předpokládá také, že jste obeznámeni s Windows a použití nabídek, dialogová okna,
 

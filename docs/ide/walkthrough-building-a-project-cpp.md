@@ -6,16 +6,16 @@ helpviewer_keywords:
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: 16f1f0bc66b9d1f1a6ece4856d213bb13b2b7dbf
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: ea477e7b2f5435e049b242e68d151cc1f2d20624
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64855942"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708136"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Návod: Sestavení projektu (C++)
 
-V tomto podrobném návodu se záměrně zavést chybu syntaxe jazyka Visual C++ ve vašem kódu a zjistěte, jak vypadá chyba kompilace a jak ho opravit. Při kompilaci projektu označuje chybová zpráva problém a kde k němu došlo.
+V tomto návodu jste záměrnou C++ Chyba syntaxe v kódu a zjistěte, jak vypadá chyba kompilace a jak ho opravit. Při kompilaci projektu označuje chybová zpráva problém a kde k němu došlo.
 
 ## <a name="prerequisites"></a>Požadavky
 

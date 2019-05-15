@@ -1,20 +1,24 @@
 ---
 title: Přidání komponenty ATL COM + 1.0
-ms.date: 11/04/2016
-helpviewer_keywords:
-- ATL COM+ 1.0
-- ATL projects, adding components
-- components [C++], adding ATL COM+ 1.0
-- objects [C++], supporting ATL COM+ 1.0
+ms.date: 05/09/2019
 ms.assetid: c6c95e64-9ee4-4a6e-8804-5930202ce1b9
-ms.openlocfilehash: 6add7e9d77272960125615f0aac076fdd547094a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b8ffd71dd7e743bcbb7ff6ccac333dfd235156f
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62249126"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706959"
 ---
 # <a name="adding-an-atl-com-10-component"></a>Přidání komponenty ATL COM + 1.0
+
+
+::: moniker range="vs-2019"
+
+Komponenta knihovny ATL modelu COM + 1.0 průvodce není k dispozici v aplikaci Visual Studio 2019 a novějším.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
 
 Tento průvodce přidá objekt do projektu, který podporuje služby COM + 1.0, včetně transakce.
 
@@ -30,3 +34,7 @@ Tento průvodce přidá objekt do projektu, který podporuje služby COM + 1.0, 
 
 [Přidání třídy](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Přidání metody](../../ide/adding-a-method-visual-cpp.md)
+
+::: moniker-end
+
+

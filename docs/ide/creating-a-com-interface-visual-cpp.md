@@ -1,25 +1,22 @@
 ---
 title: Vytváření rozhraní modelu COM
-ms.date: 11/12/2018
-f1_keywords:
-- vc.codewiz.com.creating.interfaces
-- vc.codewiz.com.editing.interfaces
+ms.date: 05/14/2019
 helpviewer_keywords:
 - COM interfaces, creating
 - methods [C++], adding to COM interfaces
 - COM interfaces, editing
 - properties [C++], adding to COM interfaces
 ms.assetid: 1be84d3c-6886-4d1e-8493-56c4d38a96d4
-ms.openlocfilehash: 6ed2784c781b474b57a3aef796a336a8911df8fc
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 09ddc113450fadb208e4f8471bc9aacf596a53f1
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448164"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708081"
 ---
 # <a name="create-a-com-interface"></a>Vytváření rozhraní modelu COM
 
-Průvodci a šablony, pokud chcete vytvářet projekty, které používají rozhraní COM a odesílající rozhraní pro objekty COM a automatizační třídy poskytuje jazyk Visual C++.
+Visual Studio poskytuje průvodci a šablony, pokud chcete vytvářet projekty, které používají rozhraní COM a odesílající rozhraní pro objekty COM a automatizační třídy.
 
 Použití těchto průvodců a proveďte následující tři běžné úlohy:
 
