@@ -1,25 +1,21 @@
 ---
 title: Cloudové a webové programování v jazyku Visual C++
-ms.date: 11/04/2016
+ms.date: 05/14/2019
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-ms.openlocfilehash: 3d71e36b6209c693940f2ebe6b5e9c73bc0c9d9d
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 677e9da18e8d171f523994d21bfbd0411270e3c8
+ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708046"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65790363"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Cloudové a webové programování v jazyku Visual C++
 
 V jazyce C++ máte několik možností pro připojení k webu a cloudu.
 
-## <a name="cloud-programming-options"></a>Programovací možnosti cloudu
+## <a name="microsoft-azure-sdks-and-rest-services"></a>Služby Microsoft Azure SDK a REST
 
-- [Windows Azure Mobile Services](http://www.windowsazure.com/develop/mobile/)
-
-  Poskytuje nativní rozhraní API, které můžete použít v aplikacích pro univerzální platformu Windows (UPW) nebo aplikací klasické pracovní plochy Windows k připojení k mobilním službám Windows Azure. I když většina příkladů na webu v jazyce C#, můžete použít také C++. Další informace najdete v tématu [rychlý start: Přidání mobilních služeb pomocí jazyka C++](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx).
-
-- [Klientská knihovna pro úložiště Microsoft Azure pro jazyk C++](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/)
+- [Klientská knihovna pro úložiště Microsoft Azure pro jazyk C++](https://azure.github.io/azure-storage-cpp/)
 
   Klientská knihovna pro úložiště Azure pro jazyk C++ poskytuje komplexní rozhraní API pro práci s Azure storage, včetně mimo jiné následující možnosti:
 
@@ -29,18 +25,22 @@ V jazyce C++ máte několik možností pro připojení k webu a cloudu.
   - Zařazení do fronty a odstranění z fronty zpráv ve frontě služby Azure.
   - Laxně seznamu kontejnerů, objektů BLOB, tabulky a fronty a laxně dotazování entit
 
-- [Rozhraní API OneDrive](https://dev.onedrive.com/README.htm)
+- ANSI C99 [sady SDK služby Azure IoT Hub](/azure/iot-hub/iot-hub-devguide-sdks) Internet of Things povolit IoT aplikace, které poběží v zařízení nebo na back-endu.
+
+- [OneDrive a SharePoint v Microsoft Graphu](https://dev.onedrive.com/README.htm)
 
   Rozhraní API OneDrive poskytuje sada služeb HTTP pro připojení aplikace k souborům a složkám v Office 365 a SharePoint serveru 2016.
 
-- [C++ REST SDK (kódový název "Casablanca")](https://github.com/Microsoft/cpprestsdk)
+## <a name="windows-and-cross-platform-networking-apis"></a>Windows a sítě multiplatformní rozhraní API
+
+- [C++REST SDK (kódový název "Casablanca")](https://github.com/Microsoft/cpprestsdk)
 
   Poskytuje moderní, napříč platformami, asynchronní rozhraní API pro komunikaci s služeb REST.
 
   - Provádění volání REST pro všechny HTTP server s integrovanou podporou pro parsování dokumentu JSON a serializace
   - Podporuje OAuth 1 a 2, včetně místních přesměrování naslouchací proces
   - Protokoly Websocket připojení pro vzdálené služby
-  - Plně asynchronní úloha rozhraní API založených na PPL, včetně integrovaných fondu vláken
+  - Plně asynchronní úloha rozhraní API založených na PPL, včetně integrovaných vlákna fondu
 
   Podporuje Windows Desktop (7 +), Windows Server (2012 +), univerzální platforma Windows, Linux, OSX, Android a iOS.
 
@@ -59,4 +59,5 @@ V jazyce C++ máte několik možností pro připojení k webu a cloudu.
 ## <a name="see-also"></a>Viz také:
 
 [C++ v sadě Visual Studio](../overview/visual-cpp-in-visual-studio.md) <br/>
-[Sítím a webovým službám](/windows/uwp/networking/)
+[Středisko pro vývojáře v C++ a C Microsoft Azure](https://azure.microsoft.com/develop/cpp/) <br/>
+[Sítím a webovým službám (UPW)](/windows/uwp/networking/)

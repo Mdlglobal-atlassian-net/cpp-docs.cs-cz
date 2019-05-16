@@ -4,12 +4,12 @@ title: Dokumentace k Visual C++
 description: Další informace o použití jazyka C++ pro vývoj aplikací, služeb a nástrojů pro vaše platformy a zařízení.
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: f402087b101487a444996e7e27b186382c4874fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5db891bd1ed7a51a623dadfd5cc4e40a081cf0e7
+ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264436"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65789017"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -252,7 +252,7 @@ ms.locfileid: "62264436"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Ladit</h3>
+                                                    <h3>Ladění</h3>
                                                     <p>Ladění kódu C++ v ladicím programu sady Visual Studio.</p>
                                                 </div>
                                             </div>
@@ -423,7 +423,7 @@ ms.locfileid: "62264436"
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/Microsoft/cpprestsdk">
+                                <a href="/cpp/cloud/cloud-and-web-programming-in-visual-cpp">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -433,8 +433,8 @@ ms.locfileid: "62264436"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Síťové knihovny</h3>
-                                                    <p>Open source knihovny C++ REST SDK (kódový název Casablanca) pro webové programování.</p>
+                                                    <h3>Cloud a síťové knihovny</h3>
+                                                    <p>Použití jazyka C společnosti Microsoft Azure /C++ sady SDK pro IoT, úložiště a další a C++ knihovny open-source REST SDK pro webové programování.</p>
                                                 </div>
                                             </div>
                                         </div>
