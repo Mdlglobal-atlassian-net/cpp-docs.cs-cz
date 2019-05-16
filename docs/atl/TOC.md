@@ -95,7 +95,7 @@
 ## [ATL – třídy kolekce](atl-collection-classes.md)
 ## [Komponenta knihovny ATL pro přístup k registru (Registrar)](atl-registry-component-registrar.md)
 ### [Vytváření skriptů registrátoru](creating-registrar-scripts.md)
-#### [Principy syntaxe BNF (Backus Nauer Form)](understanding-backus-nauer-form-bnf-syntax.md)
+#### [Vysvětlení syntaxe Backus-Naurovy formy (BNF)](understanding-backus-naur-form-bnf-syntax.md)
 #### [Principy stromů analýzy](understanding-parse-trees.md)
 #### [Příklady skriptování registru](registry-scripting-examples.md)
 #### [Použití nahraditelných parametrů (preprocesor registrátoru)](using-replaceable-parameters-the-registrar-s-preprocessor.md)
