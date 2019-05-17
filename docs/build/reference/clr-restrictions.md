@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-ms.openlocfilehash: 21b7ead553871854c73021756eb2086f9e6e7393
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0318ce2e23f92600d5a78d6472646ec91492152
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294457"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837379"
 ---
 # <a name="clr-restrictions"></a>/clr – omezení
 
@@ -70,7 +70,7 @@ Mějte na paměti následující omezení týkající se použití **/CLR**:
 
 - Jako nativní funkce se vygeneruje funkcí, které přijímají proměnný počet argumentů (vararg). Všechny spravované datové typy argumentů s proměnnou délkou pozici bude zařazeno do nativních typů. Všimněte si, že <xref:System.String?displayProperty=fullName> typy jsou ve skutečnosti širokoznaké řetězce, ale jsou zařazeny do jednobajtové znakové řetězce. Proto u printf specifikátor %S (wchar_t *) se ho budou zařazování na řetězec %s místo.
 
-- Když pomocí va_arg – makro, může se zobrazit neočekávané výsledky při kompilaci s **/CLR: pure**. Další informace najdete v tématu [va_arg va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017. Kód, který musí být "čistě" nebo "bezpečné" by měl být přenést do C#.
+- Když pomocí va_arg – makro, může se zobrazit neočekávané výsledky při kompilaci s **/CLR: pure**. Další informace najdete v tématu [va_arg va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a nepodporované v sadě Visual Studio 2017 a novější. Kód, který musí být "čistě" nebo "bezpečné" by měl být přenést do C#.
 
 - Neměli volat ze spravovaného kódu, všechny funkce, které procházení zásobníku, chcete-li získat informace o parametrech (argumenty funkce); P/Invoke vrstvy způsobí, že tyto informace se níže do zásobníku.  Například, nejde zkompilovat proxy nebo zástupné procedury s **/CLR**.
 

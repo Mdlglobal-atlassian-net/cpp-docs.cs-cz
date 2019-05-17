@@ -4,16 +4,16 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-ms.openlocfilehash: 610dc7341a35845b35d8ed80f52b421d1c2fb5d1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: f23c252604c5b69423b808b3b9f072889e38c816
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217718"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837438"
 ---
 # <a name="property-page-xml-rule-files"></a>Soubory pravidlo XML stránky vlastností
 
-Soubory XML ve složce VCTargets jsou nakonfigurované na stránkách vlastností projektu v integrovaném vývojovém prostředí. Přesnou cestu závisí na které edicím sady Visual Studio jsou nainstalované a jazyk produktu. Pro Visual Studio 2017 Enterprise Edition, v angličtině, že cesta je `%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033`. Soubory XML popisují názvy pravidel, kategorie a jednotlivé vlastnosti, jejich datový typ, výchozí hodnoty a jak mají být zobrazeny. Při nastavení vlastnosti v rozhraní IDE, nová hodnota je uložena v souboru projektu.
+Soubory XML ve složce VCTargets jsou nakonfigurované na stránkách vlastností projektu v integrovaném vývojovém prostředí. Přesnou cestu závisí na které edicím sady Visual Studio jsou nainstalované a jazyk produktu. Pro Visual Studio. 2019 Enterprise Edition, v angličtině, že cesta je `%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets\1033`. Soubory XML popisují názvy pravidel, kategorie a jednotlivé vlastnosti, jejich datový typ, výchozí hodnoty a jak mají být zobrazeny. Při nastavení vlastnosti v rozhraní IDE, nová hodnota je uložena v souboru projektu.
 
 Chcete vytvořit vlastní stránka vlastností pouze scénáře, ve kterých je potřeba pochopit, že jsou vnitřní fungování těchto souborů a integrovaném vývojovém prostředí sady Visual Studio (a), nebo (b) chcete upravit vlastnosti projektu tak, že některé prostředky jinak než pomocí integrovaného vývojového prostředí sady Visual Studio.
 
@@ -107,7 +107,7 @@ Následující část popisuje každé hlavní prvky a některé metadata, kter�
 
    - `ItemType="ClCompile"` říká, že vlastnosti se budou ukládat jako ItemDefinition metadaty nebo metadaty položky (druhá možnost pouze v případě, že byly stránky vlastností vytvořený z uzlu souboru v Průzkumníku řešení) tohoto typu položky. Pokud toto pole není nastavená, je vlastnost zapsán jako obecné vlastnosti v PropertyGroup.
 
-   - `Label=""` Označuje, že když vlastnosti se zapisují jako `ItemDefinition` metadat, bude popisek nadřazeného ItemDefinitionGroup – prázdný (každý prvek MSBuild může mít štítek). Visual Studio 2017 používá k procházení souboru .vcxproj projektu s popiskem skupiny. Všimněte si, že skupiny, které obsahují většinu vlastností pravidla prázdný řetězec jako popisek.
+   - `Label=""` Označuje, že když vlastnosti se zapisují jako `ItemDefinition` metadat, bude popisek nadřazeného ItemDefinitionGroup – prázdný (každý prvek MSBuild může mít štítek). Visual Studio 2017 a pozdější použití s popiskem skupiny pro navigaci souboru .vcxproj projektu. Všimněte si, že skupiny, které obsahují většinu vlastností pravidla prázdný řetězec jako popisek.
 
    - `HasConfigurationCondition="true"` informuje systém projektu tak, aby se projeví pouze pro aktuální konfiguraci projektu (podmínka může být připojeno do nadřazené skupiny nebo vlastní hodnota) připojovat podmínky konfigurace se hodnotou. Například otevření stránek vlastností mimo uzel projektu a nastavte hodnotu vlastnosti **zpracovávat upozornění jako chyby** pod **vlastnosti konfigurace > C/C++ General** na "Ano". Následující hodnota zapsána do souboru projektu. Všimněte si, že podmínka konfigurace připojena k nadřazené ItemDefinitionGroup –.
 
@@ -133,7 +133,7 @@ Následující část popisuje každé hlavní prvky a některé metadata, kter�
 
    Jednotlivých vlastností mohou přepsat její nadřazené pravidlo DataSource. V takovém případě umístění pro hodnota této vlastnosti bude liší od dalších vlastností v pravidle.
 
-   h. Existují jiné atributy pravidla, třeba popis SupportsFileBatching, atd., které se tady nezobrazují. Nejde získat úplnou sadu atributů příslušné pravidlo nebo na libovolný element tak, že přejdete v dokumentaci pro tyto typy. Alternativně můžete prozkoumat veřejné vlastnosti na typy v `Microsoft.Build.Framework.XamlTypes` obor názvů v `Microsoft.Build.Framework .dll` sestavení.
+   h. Existují jiné atributy pravidla, včetně popisu a SupportsFileBatching, které se tady nezobrazují. Nejde získat úplnou sadu atributů příslušné pravidlo nebo na libovolný element tak, že přejdete v dokumentaci pro tyto typy. Alternativně můžete prozkoumat veřejné vlastnosti na typy v `Microsoft.Build.Framework.XamlTypes` obor názvů v `Microsoft.Build.Framework .dll` sestavení.
 
    i. **DisplayName**, **PageTemplate**, a **pořadí** jinak se vlastnosti související s Uživatelským rozhraním, které jsou k dispozici v tomto uživatelském rozhraní nezávislé na datový model. Tyto vlastnosti jsou téměř jistý využívat všechny uživatelské rozhraní, které slouží k zobrazení stránky vlastností. **DisplayName** a **popis** jsou dvě vlastnosti, které se nacházejí na téměř všechny prvky v souboru xml. A jedná se o pouze dvě vlastnosti, které byly lokalizovány (lokalizace tyto řetězce se podrobně novější příspěvek).
 

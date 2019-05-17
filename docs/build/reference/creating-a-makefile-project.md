@@ -1,18 +1,18 @@
 ---
 title: Vytvoření projektu souboru pravidel C++ v sadě Visual Studio
-ms.date: 12/08/2018
+ms.date: 05/16/2019
 f1_keywords:
 - vc.appwiz.makefile.project
 helpviewer_keywords:
 - Makefile projects, creating
 - project files [C++], Makefile projects
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: 9c2edfe35233672e8117d336ba40cfea497b1a22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b460b16b3a64818501187b00e503ad0179d26443
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272344"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837395"
 ---
 # <a name="create-a-c-makefile-project"></a>Vytvoření projektu souboru pravidel C++
 
@@ -23,6 +23,7 @@ Pokud máte existujícího projektu souboru pravidel, pokud chcete kód a/nebo l
 - Vytvoření projektu souboru pravidel v sadě Visual Studio, který používá vaše existující soubor pravidel ke konfiguraci souboru, který bude používat Visual Studio pro technologii IntelliSense. (Není nutné všechny funkce integrovaného vývojového prostředí, které jste získali s nativní projektu nástroje MSBuild.) Zobrazit [vytvoření projektu souboru pravidel](#create_a_makefile_project) níže.
 - Použití **vytvořit nový projekt z existujících souborů kódu** průvodce vytvořit nativní projekt MSBuild ze zdrojového kódu. Potom se nepoužije původní soubor pravidel. Další informace najdete v tématu [jak: Vytvoření projektu jazyka C++ z existujícího kódu](../how-to-create-a-cpp-project-from-existing-code.md).
 - **Visual Studio 2017 a novější**: Použití **otevřít složku** funkci upravit a sestavit projekt makefile jako-je bez jakékoli zapojení systém MSBuild. Další informace najdete v tématu [projekty otevřít složku pro jazyk C++](../open-folder-projects-cpp.md).
+- **Visual Studio 2019 a novější**: Vytvoření projektu souboru pravidel UNIX pro Linux.
 
 ## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> Vytvoření projektu souboru pravidel se šablonou projektu souboru pravidel
 
@@ -34,11 +35,29 @@ Ve výchozím projektu makefile nezobrazí žádné soubory v Průzkumníku ře�
 
 Výstupní soubor zadaný v projektu nemá žádný vliv na název, který generuje skript sestavení; deklaruje pouze záměr. Váš soubor pravidel stále řídí proces sestavení a určuje cílů pro sestavení.
 
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-makefile-project-in-visual-studio-2019"></a>Vytvoření projektu souboru pravidel v aplikaci Visual Studio 2019
+
+1. V hlavní nabídce sady Visual Studio zvolte **souboru** > **nový** > **projektu** a do vyhledávacího pole zadejte "makefile". Nebo v **nový projekt** dialogového okna rozbalte **Visual C++**   >  **Obecné** (Visual Studio 2015) nebo **jiných** () Visual Studio 2017) a pak vybrat ze dvou možností v závislosti na tom, jestli je bude cílené na Windows nebo Linux.
+
+1. **Pouze Windows**: V **konfigurační nastavení ladění** zadejte výstupu příkazu vyčistit a informace o opětovné sestavení pro ladění a prodejní sestavení. Klikněte na tlačítko **Další** Pokud chcete zadat různá nastavení pro konfiguraci vydané verze.
+
+1. Klikněte na tlačítko **Dokončit** zavřete dialogové okno a otevřete nově vytvořený projekt v **Průzkumníka řešení**.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-create-a-makefile-project-in-visual-studio-2015-or-visual-studio-2017"></a>Vytvoření projektu souboru pravidel v sadě Visual Studio 2015 nebo Visual Studio 2017
+
 1. Na úvodní stránce sady Visual Studio, zadejte "makefile" **nový projekt** vyhledávacího pole. Nebo v **nový projekt** dialogového okna rozbalte **Visual C++** > **Obecné** (Visual Studio 2015) nebo **jiných** (Visual Studio 2017) a pak vyberte **projektu Makefile** v podokně šablon a spusťte Průvodce projektu.
 
 1. V **nastavení aplikace** zadejte výstupu příkazu vyčistit a informace o opětovné sestavení pro ladění a prodejní sestavení.
 
 1. Klikněte na tlačítko **Dokončit** zavřete průvodce a otevřete nově vytvořený projekt v **Průzkumníka řešení**.
+
+::: moniker-end
 
 Na stránce vlastností projektu můžete zobrazit a upravit jeho vlastnosti. Zobrazit [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md) informace o zobrazení stránky vlastností.
 

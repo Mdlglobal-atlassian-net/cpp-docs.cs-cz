@@ -1,14 +1,14 @@
 ---
 title: CppProperties.json schéma – referenční informace
-ms.date: 03/21/2019
+ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual Studio
-ms.openlocfilehash: 05bb92b0fe791ad8b0037665c2db32a08fa52d7c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: e80f4e8a189510a9a3e8860609d74121b7cbb0ef
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220851"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837039"
 ---
 # <a name="cpppropertiesjson-schema-reference"></a>CppProperties.json schéma – referenční informace
 
@@ -122,7 +122,7 @@ Poznámka: Hodnoty `msvc-x86` a `msvc-x64` podporují pouze starším verzím. P
 ## <a name="custom-configurations"></a>Vlastní konfigurace
 
 
-Můžete přizpůsobit kteroukoliv z výchozí configuations v `CppProperties.json`, nebo vytvořit nové konfigurace. Každý se zobrazí v rozevírací nabídce konfigurace:
+Můžete přizpůsobit kteroukoliv z výchozí konfigurace ve `CppProperties.json`, nebo vytvořit nové konfigurace. Každý se zobrazí v rozevírací nabídce konfigurace:
 
 ```json
 {
@@ -264,7 +264,7 @@ Máte přístup k následující předdefinované makra v `CppProperties.json`:
 |-|-|
 |`${workspaceRoot}`| Úplná cesta ke složce pracovního prostoru|
 |`${projectRoot}`| Úplná cesta ke složce kde `CppProperties.json` nachází|
-|`${vsInstallDir}`| Úplná cesta ke složce, kde je nainstalována spuštěné instance sady VS 2017|
+|`${vsInstallDir}`| Úplná cesta ke složce, kde je nainstalována spuštěné instance sady Visual Studio|
 
 Například pokud váš projekt má zahrnout složku a také zahrnuje windows.h a dalších běžných hlaviček ze sady Windows SDK, můžete k aktualizaci vašeho `CppProperties.json` konfigurační soubor s těmito zahrnuje:
 
@@ -289,7 +289,7 @@ Například pokud váš projekt má zahrnout složku a také zahrnuje windows.h 
 ```
 
 > [!Note]
-> `%WindowsSdkDir%` a `%VCToolsInstallDir%` nejsou nastaveny jako globálních proměnných prostředí proto ujistěte se, že začnete devenv.exe z "Příkazový řádek vývojáře pro VS 2017", který definuje tyto proměnné.
+> `%WindowsSdkDir%` a `%VCToolsInstallDir%` nejsou nastaveny jako globálních proměnných prostředí proto ujistěte se, že začnete devenv.exe z příkazový řádek vývojáře, který definuje tyto proměnné. (Zadejte "pro vývojáře" v nabídce Windows Start.)
 
 ## <a name="troubleshoot-intellisense-errors"></a>Řešení potíží technologie IntelliSense
 

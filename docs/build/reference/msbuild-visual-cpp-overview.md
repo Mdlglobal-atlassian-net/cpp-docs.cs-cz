@@ -1,15 +1,15 @@
 ---
 title: Projekty MSBuild interní informace pro jazyk C++ v sadě Visual Studio
-ms.date: 12/08/2018
+ms.date: 05/16/2019
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: 6c8e891f6bf6ed6b3bb3d1c84dbc13b64ab7b868
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3348320a1468fea03f39e43cc847f1085f3d319
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320887"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837231"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>Interní informace o MSBuild pro projekty v jazyce C++
 
@@ -25,7 +25,7 @@ Standardně primární podpůrné soubory Visual Studio jsou umístěny v násle
 |---------------|-----------------|
 |*drive*:\Program Files *(x86)* \Microsoft Visual Studio\\*year*\\*edition*\Common7\IDE\VC\VCTargets\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp (x86)\v4.0\\*version*\ |Obsahuje primární cílové soubory (TARGETS) a soubory vlastností (props), které jsou používány těmito cíly. Ve výchozím nastavení makro $(VCTargetsPath) odkazuje na tento adresář.|
 |*drive*:\Program Files *(x86)* \Microsoft Visual Studio\\*year*\\*edition*\Common7\IDE\VC\VCTargets\Platforms\\*platform*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*platform*\ |Obsahuje soubory cíle a vlastnosti specifické pro platformu, které přepíší cíle a vlastnosti svého nadřazeného adresáře. Tento adresář obsahuje taky knihovnu DLL, která definuje úlohy, které jsou používány cíli v tomto adresáři.<br /><br /> *Platformy* zastupuje ARM, Win32 nebo x64 podadresáře.|
-|*drive*:\Program Files *(x86)* \Microsoft Visual Studio\\*year*\\*edition*\Common7\IDE\VC\VCTargets\Platforms\\*platform*\PlatformToolsets\\*toolset*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*platform*\PlatformToolsets\\*toolset*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*platform*\PlatformToolsets\\*toolset*\ |Obsahuje adresáře, které umožňují sestavení generovat aplikace C++ s použitím zadaného *nástrojů*.<br /><br /> *Rok* a *edition* zástupné symboly používají Visual Studio 2017 a novější verze. *Verze* zástupný symbol je V110 pro sadu Visual Studio 2012, V120 pro Visual Studio 2013 nebo V140 pro Visual Studio 2015. *Platformy* zastupuje ARM, Win32 nebo x64 podadresáře. *Nástrojů* zástupný text představuje podadresář sady nástrojů, například v140 pro vytváření aplikací pro Windows pomocí nástrojů Visual Studio 2015, v120_xp k vývoji pro Windows XP pomocí sady nástrojů Visual Studio 2013 nebo v110_wp80 do vytváření aplikací Windows Phone 8.0 pomocí sady nástrojů Visual Studio 2012.<br /><br />Neobsahuje cestu, která obsahuje adresáře, které umožňují sestavení generovat aplikace Visual Studio 2008 nebo Visual Studio 2010 *verze*a *platformy* zástupného symbolu představuje Itanium, Win32 nebo x64 podadresáře. *Nástrojů* zástupný text představuje podadresář sady nástrojů v90 nebo v100.|
+|*drive*:\Program Files *(x86)* \Microsoft Visual Studio\\*year*\\*edition*\Common7\IDE\VC\VCTargets\Platforms\\*platform*\PlatformToolsets\\*toolset*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*platform*\PlatformToolsets\\*toolset*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*platform*\PlatformToolsets\\*toolset*\ |Obsahuje adresáře, které umožňují sestavení generovat aplikace C++ s použitím zadaného *nástrojů*.<br /><br /> *Rok* a *edition* zástupné symboly používají Visual Studio 2017 a novější verze. *Verze* zástupný symbol je V110 pro Visual Studio 2012, V120 pro Visual Studio 2013, V140 pro Visual Studio 2015, Visual Studio 2017 v141 a v142 pro Visual Studio 2019. *Platformy* zastupuje ARM, Win32 nebo x64 podadresáře. *Nástrojů* zástupný text představuje podadresář sady nástrojů, například v140 pro vytváření aplikací pro Windows pomocí nástrojů Visual Studio 2015, v120_xp k vývoji pro Windows XP pomocí sady nástrojů Visual Studio 2013.<br /><br />Neobsahuje cestu, která obsahuje adresáře, které umožňují sestavení generovat aplikace Visual Studio 2008 nebo Visual Studio 2010 *verze*a *platformy* zástupného symbolu představuje Itanium, Win32 nebo x64 podadresáře. *Nástrojů* zástupný text představuje podadresář sady nástrojů v90 nebo v100.|
 
 ## <a name="support-files"></a>Soubory podpory
 
@@ -86,7 +86,7 @@ V následující tabulce jsou uvedeny některé užitečné cíle zaměřených 
 |Xsd|Spustí nástroj definice schématu XML, xsd.exe. *Viz poznámka níže.*|
 
 > [!NOTE]
-> V sadě Visual Studio 2017, projekt C++ podpora **xsd** zastaralé soubory. Můžete dál používat **Microsoft.VisualC.CppCodeProvider** přidáním **CppCodeProvider.dll** ručně do mezipaměti GAC.
+> V sadě Visual Studio 2017 nebo novější C++ projektu podporu pro **xsd** zastaralé soubory. Můžete dál používat **Microsoft.VisualC.CppCodeProvider** přidáním **CppCodeProvider.dll** ručně do mezipaměti GAC.
 
 ## <a name="see-also"></a>Viz také:
 

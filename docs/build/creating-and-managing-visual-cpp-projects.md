@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Studio C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: 15adae6cb9908f74d62709622ca3302fd35faa46
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 30d3b13ba4d392cdc5d1c7c611b61066503647a2
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446362"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837050"
 ---
 # <a name="visual-studio-projects---c"></a>Projekty Visual Studio – C++
 
@@ -21,9 +21,21 @@ A *projektu sady Visual Studio* je projekt založený na systému sestavení ná
 
 ## <a name="create-a-project"></a>Vytvoření projektu
 
-Můžete vytvářet projekty C++ výběrem **souboru &#124; nový &#124; projektu**, pak v levém podokně vyberete Visual C++. V prostředním podokně se zobrazí seznam šablon projektů: 
+::: moniker range="vs-2019"
+
+Můžete vytvořit C++ projektů výběrem **souboru** > **nový** > **projektu**, pak nastavení **jazyk** k C++. V seznamu výsledků se zobrazí seznam šablon projektů, které můžete filtrovat tak, že nastavíte **platformy** nebo **typu projektu** a zadáním klíčových slov do pole Hledat. 
+
+   ![Šablony projektů Visual Studio. 2019](../build/media/vs2019-choose-console-app.png "Visual Studio 2019 nový projekt dialogového okna")
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Můžete vytvořit C++ projektů výběrem **souboru** > **nový** > **projektu**, výběrem Vizuálu C++ v levém podokně. V prostředním podokně se zobrazí seznam šablon projektů:
 
    ![Šablony projektů](../overview/media/vs2017-new-project.png "Visual Studio 2017 projektu nové dialogové okno")
+
+::: moniker-end
 
 Další informace o všechny výchozí šablony projektů, které jsou zahrnuty v sadě Visual Studio najdete v tématu [šablony projektů C++ v sadě Visual Studio](reference/visual-cpp-project-types.md). Můžete vytvořit vlastní šablony projektu. Další informace najdete v tématu [jak: Vytváření šablon projektu](/visualstudio/ide/how-to-create-project-templates).
 

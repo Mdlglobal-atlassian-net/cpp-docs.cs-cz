@@ -1,17 +1,19 @@
 ---
 title: Konfigurace programů pro Windows XP
-ms.date: 02/02/2018
+ms.date: 05/16/2019
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: f27921e062fd8abb7bc9b63bfbb9b050f25ee54b
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 6c94c6a66d0f22b8707012856a65df4b19965acb
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446370"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837128"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Konfigurace programů pro Windows XP
 
 Vzhledem k tomu, že Visual Studio podporuje více sad nástrojů platformy, můžete směrovat operačních systémů a knihovny runtime, které nejsou podporované výchozí sady nástrojů. Například přepnutím sada nástrojů platformy vám pomůže C ++ 11, C ++ 14 a C ++ 17 jazyka vylepšení a kompilátorem MSVC v sadě Visual Studio podporuje vytváření aplikací určených pro Windows XP a Windows Server 2003. Můžete také použít starší sad nástrojů platformy zachovat starší verze kódu binárně kompatibilní a stále využívat nejnovější funkce integrovaného vývojového prostředí sady Visual Studio.
+
+Visual Studio 2019 a novější nezahrnuje podporu pro vytváření kódu pro systém Windows XP s využitím sady nástrojů v142. Podpora Windows XP vývoj pomocí sady nástrojů verze 141, dodávané v sadě Visual Studio 2017 je dostupné jako volitelná součást v instalačním programu sady Visual Studio.
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Nainstalovat sadu nástrojů platformy Windows XP
 

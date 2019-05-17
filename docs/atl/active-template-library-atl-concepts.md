@@ -4,12 +4,12 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
-ms.openlocfilehash: 785b929e935962f6461ffbc3722f573a61cb8749
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: a7b6a40eaed05462f3aa5c877a1c4da3e19c0b03
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221296"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837001"
 ---
 # <a name="active-template-library-atl-concepts"></a>Koncepty knihovny ATL (Active Template Library)
 
@@ -18,9 +18,6 @@ Aktivní šablony knihovny (ATL) je sada šablonových tříd jazyka C++ a, kter
 Pokud provedete mnoho programování knihovny ATL, můžete získat další informace o modelu COM a .NET atributy, které je navržené pro zjednodušení programování v modelu COM. Další informace najdete v tématu [programování s přidělenými atributy](../windows/attributed-programming-concepts.md). (COM a .NET atributy jsou by se zaměňovat s \[ \[atribut]] funkci C++ standardní.)
 
 ## <a name="in-this-section"></a>V tomto oddílu
-
-[ATL – tutoriál](../atl/active-template-library-atl-tutorial.md)<br/>
-Vás provede vytvořením ovládacího prvku a ukazuje některé ATL – principy vytváření v procesu.
 
 [Úvod do modelu COM a knihovny ATL](../atl/introduction-to-com-and-atl.md)<br/>
 Představuje hlavní koncepty za modelu COM (Component Object). Tento článek také krátce vysvětluje, co je knihovny ATL a kdy byste měli použít.
@@ -86,6 +83,9 @@ Poskytuje funkce a makra, které podporují kódování v celou řadu běžných
 Poskytuje kód pro práci s cestami a adresy URL ve formě [cpatht –](../atl/reference/cpatht-class.md) a [CUrl](../atl/reference/curl-class.md). Fondu vláken, [cthreadpool –](../atl/reference/cthreadpool-class.md), lze použít ve svých vlastních aplikacích. Tento kód lze nalézt v atlpath.h a atlutil.h.
 
 ## <a name="related-sections"></a>Související oddíly
+
+[ATL – tutoriál](../atl/active-template-library-atl-tutorial.md)<br/>
+Vás provede vytvořením ovládacího prvku a ukazuje některé ATL – principy vytváření v procesu.
 
 [Ukázky knihovny ATL](../overview/visual-cpp-samples.md)<br/>
 Poskytuje popisy a odkazy na knihovny ATL ukázkové programy.

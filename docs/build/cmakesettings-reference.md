@@ -1,19 +1,19 @@
 ---
 title: Referenční dokumentace schématu souboru CMakeSettings.json
-ms.date: 04/25/2019
+ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 80392eedd5ef50ddd9c9bcb81c1605a534088133
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: 018a755aa4f3acde44fe1dbb33b07b49c8d1c223
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877106"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837258"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Referenční dokumentace schématu souboru CMakeSettings.json
 
-**Cmakesettings.json**' soubor obsahuje informace o tom, jak by měl Visual Studio pracovat s CMake pro sestavení projektu pro zadanou platformu. Soubor ukládá informace, jako jsou proměnné prostředí nebo argumenty pro cmake.exe prostředí. Můžete upravit přímo, nebo použít **editor nastavení CMake**. Zobrazit [nastavení v sadě Visual Studio sestavení přizpůsobit CMake](customize-cmake-settings.md) Další informace o editoru.
+**Cmakesettings.json**' soubor obsahuje informace o tom, jak by měl Visual Studio pracovat s CMake pro sestavení projektu pro zadanou platformu. Soubor ukládá informace, jako jsou proměnné prostředí nebo argumenty pro cmake.exe prostředí. Můžete upravit přímo, nebo použít **editor nastavení CMake** (Visual Studio 2019 a novější). Zobrazit [nastavení v sadě Visual Studio sestavení přizpůsobit CMake](customize-cmake-settings.md) Další informace o editoru.
 
 ## <a name="environments"></a>Prostředí
 
@@ -28,7 +28,7 @@ ms.locfileid: "64877106"
    "inheritEnvironments": [ "msvc_x64_x64" ]
    ```
 
-   Výše uvedený příklad je stejný jako spuštění **Developer Command Prompt for VS 2017** s **-arch = amd64 – host_arch = amd64** argumenty. Můžete použít libovolné vlastní prostředí nebo tato předdefinovaná prostředí:
+   Výše uvedený příklad je stejný jako spuštění **Developer Command Prompt for VS 2017** nebo **Developer Command Prompt for VS 2019** s **-arch = amd64 – host_arch = amd64** argumenty. Můžete použít libovolné vlastní prostředí nebo tato předdefinovaná prostředí:
  
   - linux_arm: Jako cíl ARM Linux vzdáleně.
   - linux_x64: Cíl x64 Linux vzdáleně.
@@ -50,7 +50,13 @@ A `configuration` má tyto vlastnosti:
 - `name`: název konfigurace.
 - `description`: popis této konfigurace, který se zobrazí v nabídkách.
 - `generator`: Určuje generátoru CMake pro tuto konfiguraci. Může být jedna z:
+  
+  **Visual Studio. 2019 pouze:**
+  - Visual Studio 16 2019
+  - Visual Studio 16 2019 Win64
+  - Visual Studio 16 2019 ARM
 
+  **Visual Studio 2017 a novější:**
   - Visual Studio 15 2017
   - Visual Studio 15 2017 Win64
   - Visual Studio 15 2017 ARM
@@ -62,7 +68,9 @@ A `configuration` má tyto vlastnosti:
 
 Protože Ninja je určená pro rychlé sestavení rychlosti místo flexibilitu a funkce, je nastavit jako výchozí. Některé projekty CMake, ale možná nebudete moct správně programujte Ninja. Pokud k tomu dojde, můžete dát pokyn CMake pro generování projektu sady Visual Studio místo.
 
-Chcete-li zadat generátoru Visual Studio, otevřete `CMakeSettings.json` v hlavní nabídce výběrem **CMake | Změnit nastavení CMake**. Odstraňte "Ninja" a zadejte "V". Tím se aktivuje technologii IntelliSense, která vám umožní vybrat generátor, který chcete.
+Chcete-li zadat generátoru Visual Studio v sadě Visual Studio 2017, otevřete `CMakeSettings.json` v hlavní nabídce výběrem **CMake | Změnit nastavení CMake**. Odstraňte "Ninja" a zadejte "V". Tím se aktivuje technologii IntelliSense, která vám umožní vybrat generátor, který chcete.
+
+Zadejte v aplikaci Visual Studio 2019 generátoru Visual Studio, klikněte pravým tlačítkem na soubor CMakeLists.txt v **Průzkumníka řešení** a zvolte **nastavení CMake pro projekt** > **zobrazit Upřesňující nastavení** > **generátoru CMake**.
 
 Pokud aktivní konfigurace určuje generátoru Visual Studio, ve výchozím nastavení je MSBuild.exe volána s `-m -v:minimal` argumenty. Přizpůsobení sestavení, uvnitř `CMakeSettings.json` souboru, můžete zadat další [argumenty příkazového řádku MSBuild](../build/reference/msbuild-visual-cpp-overview.md) mají být předány prostřednictvím systému sestavení `buildCommandArgs` vlastnost:
 
@@ -72,7 +80,7 @@ Pokud aktivní konfigurace určuje generátoru Visual Studio, ve výchozím nast
 
 - `configurationType`: Určuje konfiguraci typu sestavení pro vybraný generátor. Může být jedna z:
  
-  - Ladit
+  - Ladění
   - Vydaná verze
   - MinSizeRel
   - RelWithDebInfo

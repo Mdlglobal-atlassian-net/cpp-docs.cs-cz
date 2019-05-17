@@ -1,6 +1,6 @@
 ---
 title: / CLRUNMANAGEDCODECHECK (odeberte SuppressUnmanagedCodeSecurityAttribute)
-ms.date: 09/27/2018
+ms.date: 05/16/2019
 ms.topic: reference
 f1_keywords:
 - /CLRUNMANAGEDCODECHECK
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 73abc426-dab0-45e2-be85-0f9a14206cc2
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: cb23106648e3325755a857d0b962112e9bdcfac4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ecc560673a8e98752289ef0e0f89d3abfc1938e4
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294418"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837245"
 ---
 # <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/ CLRUNMANAGEDCODECHECK (odeberte SuppressUnmanagedCodeSecurityAttribute)
 
@@ -29,7 +29,7 @@ ms.locfileid: "62294418"
 
 Ve výchozím nastavení, linker použije **SuppressUnmanagedCodeSecurityAttribute** do vytvořeného v propojovacím programu `PInvoke` volání. Když **/CLRUNMANAGEDCODECHECK** je ve skutečnosti **SuppressUnmanagedCodeSecurityAttribute** se odebere. Chcete-li explicitně použít **SuppressUnmanagedCodeSecurityAttribute** do vytvořeného v propojovacím programu `PInvoke` volání, můžete použít **/CLRUNMANAGEDCODECHECK:NO**.
 
-Propojovací program přidá pouze atribut na objekty, které jsou kompilovány pomocí **/CLR** nebo **/CLR: pure**. Ale **/CLR: pure** – možnost kompilátoru je zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
+Propojovací program přidá pouze atribut na objekty, které jsou kompilovány pomocí **/CLR** nebo **/CLR: pure**. Ale **/CLR: pure** – možnost kompilátoru je zastaralé v sadě Visual Studio 2015 a nepodporované v sadě Visual Studio 2017 a novější.
 
 A `PInvoke` volání je vygenerován linkerem, když linker nelze najít spravovaných symbolů pro uspokojení odkazem ze spravovaného volající ale můžete najít symbol nativní ke splnění tohoto odkazu. Další informace o `PInvoke`, naleznete v tématu [volání nativních funkcí ze spravovaného kódu](../../dotnet/calling-native-functions-from-managed-code.md).
 

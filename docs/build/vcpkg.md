@@ -3,19 +3,19 @@ title: vcpkg – Správce balíčků jazyka C++ A součásti pro Windows, Linux 
 description: vcpkg je Správce balíčků příkazového řádku, který výrazně zjednodušuje pořízení a instalaci všech knihoven C++ open source na Windows.
 author: mikeblome
 ms.author: mblome
-ms.date: 03/18/2019
+ms.date: 05/16/2019
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 5dba6877c4489337625eed016c77b853f84af990
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 58f8a9b8223dc54bf083ebbac97528f88890777c
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217663"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837011"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Správce balíčků jazyka C++ pro Windows, Linux a MacOS
 
-vcpkg je Správce balíčků příkazového řádku, který výrazně zjednodušuje pořízení a instalaci knihovny třetích stran ve Windows, Linuxu a MacOS. Pokud váš projekt používá knihovny třetích stran, doporučujeme použít vcpkg jejich instalaci. vcpkg podporuje proprietární i open source knihoven. Všechny knihovny v katalogu Windows vcpkg byly testovány z hlediska kompatibility s Visual Studio 2015 a Visual Studio 2017. Od května 2018 se více než 900 knihovny v katalogu Windows a přes 350 v katalogu systému Linux nebo MacOS. Komunitou C++ přidává další knihovny se obě katalogů průběžně.
+vcpkg je Správce balíčků příkazového řádku, který výrazně zjednodušuje pořízení a instalaci knihovny třetích stran ve Windows, Linuxu a MacOS. Pokud váš projekt používá knihovny třetích stran, doporučujeme použít vcpkg jejich instalaci. vcpkg podporuje proprietární i open source knihoven. Všechny knihovny v katalogu Windows vcpkg byly testovány z hlediska kompatibility s Visual Studio 2015, Visual Studio 2017 a Visual Studio 2019. Od května 2018 se více než 900 knihovny v katalogu Windows a přes 350 v katalogu systému Linux nebo MacOS. Komunitou C++ přidává další knihovny se obě katalogů průběžně.
 
 ## <a name="simple-yet-flexible"></a>Jednoduché a přitom flexibilní
 
@@ -23,7 +23,7 @@ Pomocí jediného příkazu můžete stáhnout zdrojů a vytvoří knihovnu. vcp
 
 ## <a name="sources-not-binaries"></a>Zdroje není binární soubory
 
-Pro knihovny v katalogu Windows stáhne vcpkg zdroje místo binární soubory [1]. Kompiluje tyto zdroje pomocí sady Visual Studio 2017 nebo Visual Studio 2015, pokud není nainstalované 2017. V jazyce C++ je velmi důležité, všech knihoven, které používáte dodržování stejnému kompilátoru a verze kompilátoru, jak aplikace kód, který odkazuje na ni. Pomocí vcpkg eliminovat nebo alespoň výrazně snížit riziko neodpovídající binární soubory a může způsobit problémy. V týmech, které jsou standardizované pro konkrétní verzi kompilátoru můžete použít jeden člen seskupení vcpkg ke stažení zdrojů a zkompilujte sadu binární soubory a pak použijte příkaz export se komprimovat binární soubory a záhlaví pro ostatní členy týmu. Další informace najdete v tématu [Export kompilaci binárních souborů a záhlaví](#export_binaries_per_project) níže.
+Pro knihovny v katalogu Windows stáhne vcpkg zdroje místo binární soubory [1]. Kompiluje tyto zdroje pomocí nejnovější verze sady Visual Studio, můžete najít. V jazyce C++ je velmi důležité, všech knihoven, které používáte dodržování stejnému kompilátoru a verze kompilátoru, jak aplikace kód, který odkazuje na ni. Pomocí vcpkg eliminovat nebo alespoň výrazně snížit riziko neodpovídající binární soubory a může způsobit problémy. V týmech, které jsou standardizované pro konkrétní verzi kompilátoru můžete použít jeden člen seskupení vcpkg ke stažení zdrojů a zkompilujte sadu binární soubory a pak použijte příkaz export se komprimovat binární soubory a záhlaví pro ostatní členy týmu. Další informace najdete v tématu [Export kompilaci binárních souborů a záhlaví](#export_binaries_per_project) níže.
 
 Pokud jste vytvořili klon vcpkg privátní knihovny v kolekci porty, můžete přidat port, který stáhne předem připravených binární soubory a záhlaví a zápis do souboru portfile.cmake, který jednoduše zkopíruje soubory do požadovaného umístění.
 
@@ -178,7 +178,7 @@ Typ **odebrat vcpkg** odebrání knihovny nainstalované. Pokud jsou na ní záv
 
 ## <a name="customize-vcpkg"></a>Přizpůsobení vcpkg
 
-Váš klonovací vcpkg žádným způsobem, který rádi používáte, můžete upravit. Můžete vytvořit více klonech vcpkg a upravit portfiles v každém z nich k získání konkrétní verze knihovny nebo zadat parametry příkazového řádku. Například v podniku, jedna skupina vývojářů může fungovat na software, který má jednu sadu závislostí a jiná skupina může mít jinou sadu. Můžete nastavit dvěma klony vcpkg a upravit každé z nich do verze knihoven a kompilaci přepínače a další, si můžete stáhnout podle vašich potřeb.
+Váš klonovací vcpkg žádným způsobem, který rádi používáte, můžete upravit. Můžete vytvořit více klonech vcpkg a upravit portfiles v každém z nich k získání konkrétní verze knihovny nebo zadat parametry příkazového řádku. Například v podniku, jedna skupina vývojářů může fungovat na software, který má jednu sadu závislostí a jiná skupina může mít jinou sadu. Můžete nastavit dvěma klony vcpkg a upravit každé z nich do verze knihoven a kompilaci přepínače a tak dále, si můžete stáhnout podle vašich potřeb.
 
 ## <a name="uninstall-vcpkg"></a>Odinstalujte vcpkg
 

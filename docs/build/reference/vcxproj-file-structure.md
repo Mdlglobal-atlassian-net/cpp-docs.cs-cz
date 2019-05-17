@@ -1,15 +1,15 @@
 ---
 title: Struktura souborů .vcxproj a .props
-ms.date: 09/18/2018
+ms.date: 05/16/2019
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-ms.openlocfilehash: a1052d0a0eeeff177f0a22883fe06cd07d7b03f6
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 86c393796b1ce3efdb92d8aefd1f653390619ea4
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446501"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837519"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>Struktura souborů .vcxproj a .props
 
@@ -268,11 +268,11 @@ Integrované vývojové prostředí sady Visual Studio závisí na projektu soub
 
 Pokud soubor .vcxproj nedodržuje toto rozložení, nemusí být čekáte výsledků sestavení. Například Pokud omylem importovat seznam vlastností systému po seznamech vlastností, které jsou definované uživatelem, nastavení uživatele přepsat podle vlastností systému.
 
-Dokonce i prostředí čas IDE návrh některých míry závisí na správné pořadí prvků. Například, pokud váš soubor .vcxproj nemá `PropertySheets` skupiny import, integrovaném vývojovém prostředí nemusí být schopní určit, kam umístit nový seznam vlastností, které uživatel vytvořil v **Správce vlastností**. To může způsobit uživatel list přepisované seznamem systému. I když heuristiky používá integrované vývojové prostředí může tolerovat možnost, podverze nekonzistence v rozložení souboru .vcxproj, důrazně doporučujeme dodržet struktura uvedené dříve v tomto článku.
+Dokonce i prostředí čas IDE návrh některých míry závisí na správné pořadí prvků. Například, pokud váš soubor .vcxproj nemá `PropertySheets` skupiny import, integrovaném vývojovém prostředí nemusí být schopní určit, kam umístit nový seznam vlastností, které uživatel vytvořil v **Správce vlastností**. To může způsobit uživatel list přepsání seznam systému. I když heuristiky používá integrované vývojové prostředí může tolerovat možnost, podverze nekonzistence v rozložení souboru .vcxproj, důrazně doporučujeme dodržet struktura uvedené dříve v tomto článku.
 
 ## <a name="how-the-ide-uses-element-labels"></a>Použití popisků element integrovaného vývojového prostředí
 
-V prostředí IDE, při nastavení **UseOfAtl** vlastnosti na stránce Obecné vlastnosti, která jsou zapsána do skupiny vlastností konfigurace v souboru projektu, zatímco **TargetName** stejné stránce vlastností je zapsán do skupiny vlastností popiskem podle konfigurace. Visual Studio zjistí soubor xml stránky vlastností pro informace, ve kterém můžete napsat každou vlastnost. Pro **Obecné** stránka vlastností (za předpokladu, že máte anglickou verzi Visual Studio Enterprise Edition), je tento soubor `%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033\general.xml`. Pravidla souboru XML stránky vlastností definuje statické informace o pravidle a všechny její vlastnosti. Jeden takový část informací je upřednostňovaný pozice vlastnost pravidla v cílovém souboru (souboru, kam se budou zapisovat jeho hodnotu). Preferované umístění je určen atribut Label v elementech souborů projektu.
+V prostředí IDE, při nastavení **UseOfAtl** vlastnosti na stránce Obecné vlastnosti, která jsou zapsána do skupiny vlastností konfigurace v souboru projektu, zatímco **TargetName** stejné stránce vlastností je zapsán do skupiny vlastností popiskem podle konfigurace. Visual Studio zjistí soubor xml stránky vlastností pro informace, ve kterém můžete napsat každou vlastnost. Pro **Obecné** stránka vlastností (za předpokladu, že máte anglickou verzi Visual Studio. 2019 Enterprise Edition), je tento soubor `%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets\1033\general.xml`. Pravidla souboru XML stránky vlastností definuje statické informace o pravidle a všechny její vlastnosti. Jeden takový část informací je upřednostňovaný pozice vlastnost pravidla v cílovém souboru (souboru, kam se budou zapisovat jeho hodnotu). Preferované umístění je určen atribut Label v elementech souborů projektu.
 
 ## <a name="property-sheet-layout"></a>Vlastnosti rozložení tabulky
 
@@ -288,7 +288,7 @@ Následující fragment kódu XML je minimální rozložení vlastností (.props
 </Project>
 ```
 
-Chcete-li vlastní seznam vlastností, zkopírujte jeden z souborech .props ve složce VCTargets a upravovat pro účely. Pro Visual Studio 2017 Enterprise edition, je výchozí cestu VCTargets `%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets`.
+Chcete-li vlastní seznam vlastností, zkopírujte jeden z souborech .props ve složce VCTargets a upravovat pro účely. Pro Visual Studio. 2019 Enterprise edition, je výchozí cestu VCTargets `%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets`.
 
 ## <a name="see-also"></a>Viz také:
 

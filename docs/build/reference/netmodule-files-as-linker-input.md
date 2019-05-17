@@ -1,18 +1,18 @@
 ---
 title: Soubory .netmodule jako vstup linkeru
-ms.date: 11/04/2016
+ms.date: 05/16/2019
 helpviewer_keywords:
 - MSIL linking
 - linking [C++], modules
 - .netmodules
 - modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
-ms.openlocfilehash: fcba363cff567c69ac0fbd0a541953dfe2c8e910
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50a0f0a1ff5f65a7512e8372de2fe5296c866dca
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320666"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837429"
 ---
 # <a name="netmodule-files-as-linker-input"></a>Soubory .netmodule jako vstup linkeru
 
@@ -20,7 +20,7 @@ Link.exe přijímá jako vstup nyní .obj jazyka MSIL a modulů .NET. Výstupní
 
 modulů .NET vytvářejí a kompilátorem MSVC s [/LN (vytvoření modulu MSIL)](ln-create-msil-module.md) nebo pomocí linkeru spuštěného s [parametr/noassembly (vytvoření modulu MSIL)](noassembly-create-a-msil-module.md). .objs se vždy vytvářejí ve kompilace jazyka Visual C++. U dalších kompilátorů aplikace Visual Studio, použijte **/target: Module** – možnost kompilátoru.
 
-Je nutné předat do linkeru soubor .obj z kompilace jazyka Visual C++, který vytvořili .netmodule. Předávání .netmodule se už nepodporuje, protože **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
+Je nutné předat do linkeru soubor .obj z kompilace jazyka Visual C++, který vytvořili .netmodule. Předávání .netmodule se už nepodporuje, protože **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a nepodporované v sadě Visual Studio 2017 a novější.
 
 Informace o tom, jak vyvolání linkeru z příkazového řádku najdete v tématu [syntaxe příkazového řádku Linkeru](linking.md), [použít MSVC nástrojů z příkazového řádku](../building-on-the-command-line.md), a [nastavení cesty a proměnných prostředí pro sestavení příkazového řádku](../setting-the-path-and-environment-variables-for-command-line-builds.md).
 

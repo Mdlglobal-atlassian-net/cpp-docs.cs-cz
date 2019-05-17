@@ -2,7 +2,7 @@
 title: Použijte sadu nástrojů MSVC z příkazového řádku – Visual Studio
 description: Pomocí nástrojů Microsoft C++ kompilátor (MSVC) z příkazového řádku mimo rozhraní IDE sady Visual Studio.
 ms.custom: conceptual
-ms.date: 04/25/2019
+ms.date: 05/16/2019
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: 5f9ac1e4753fdba412af26bcc45022dee354cacf
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: 97626455ace0d3ad47b9011594e82c144d7ea27d
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877133"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837119"
 ---
 # <a name="use-the-msvc-toolset-from-the-command-line"></a>Použití nástrojů MSVC z příkazového řádku
 
@@ -43,7 +43,7 @@ Zástupce příkazového řádku se instalují do složky specifické pro verzi 
 - **x86_x64 Cross Tools Command Prompt** – nastaví prostředí tak, aby použití 32-bit x86 cloudově nativních nástrojů k vytvoření 64-bit, x64 nativní kód.
 - **x64_x86 Cross Tools Command Prompt** – nastaví prostředí tak, aby použít 64-bit, x64 cloudově nativních nástrojů k vytváření 32-bit, x86 nativní kód.
 
-Úvodní nabídky složky a místní názvy lišit v závislosti na verzi sady Visual Studio, které jste si nainstalovali a Přezdívka instalace, pokud nastavíte jednu. Například, pokud máte nainstalovanou sadu Visual Studio 2017 a jste jste vzhledem k jeho instalaci Přezdívka z *ve verzi Preview*, má název zástupce příkazového řádku pro vývojáře **Developer Command Prompt for VS 2019**v Složka s názvem **Visual Studio 2019**.
+Úvodní nabídky složky a místní názvy lišit v závislosti na verzi sady Visual Studio, které jste si nainstalovali a Přezdívka instalace, pokud nastavíte jednu. Pro příklad, pokud máte nainstalované Visual Studio 2019 a jste vzhledem k jeho instalaci Přezdívka z *ve verzi Preview*, má název zástupce příkazového řádku pro vývojáře **Developer Command Prompt for VS 2019**v Složka s názvem **Visual Studio 2019**.
 
 ## <a name="developer_command_prompt"></a> Chcete-li otevřít okno příkazového řádku pro vývojáře
 
@@ -55,7 +55,7 @@ Otevřete okno příkazového řádku pro vývojáře ještě rychleji je zaujmo
 
 ## <a name="developer_command_file_locations"></a> Umístění souborů příkaz pro vývojáře
 
-Pokud chcete nastavit prostředí pro sestavení architektury ve stávajícím okně příkazového řádku, můžete použít jeden z soubory příkazů (dávkové soubory) vytvořené pomocí Instalační služby nastavte požadované prostředí. Pouze doporučujeme to provést v novém okně příkazového řádku a nedoporučujeme je novější přepínače prostředí v příkazovém okně stejné. Umístění těchto souborů závisí na verzi sady Visual Studio, které jste nainstalovali a na umístění a pojmenování volby provedené během instalace. Pro Visual Studio 2019 umístění typické instalace na 64bitovém počítači je v \Program soubory (x86) \Microsoft Visual Studio\2019\\*edition*, kde *edition* může být komunity, Professional, Enterprise, BuildTools nebo jiný název, který jste zadali. Umístění sady Visual Studio 2017 je podobné jako. Pro sadu Visual Studio 2015 je umístění typické instalace v \Program Files (x86) \Microsoft Visual Studio 14.0.
+Pokud chcete nastavit prostředí pro sestavení architektury ve stávajícím okně příkazového řádku, můžete použít jeden z soubory příkazů (dávkové soubory) vytvořené pomocí Instalační služby nastavte požadované prostředí. Pouze doporučujeme to provést v novém okně příkazového řádku a nedoporučujeme je novější přepínače prostředí v příkazovém okně stejné. Umístění těchto souborů závisí na verzi sady Visual Studio, které jste nainstalovali a na umístění a pojmenování volby provedené během instalace. Pro Visual Studio 2019 umístění typické instalace na 64bitovém počítači je v \Program soubory (x86) \Microsoft Visual Studio\2019\*edition *, kde *edition* může být Community, Professional, Enterprise, BuildTools, nebo jiný název, který jste zadali. Umístění sady Visual Studio 2017 je podobné jako. Pro sadu Visual Studio 2015 je umístění typické instalace v \Program Files (x86) \Microsoft Visual Studio 14.0.
 
 Soubor příkazů hlavního vývojáře příkazového řádku, VsDevCmd.bat, se nachází v instalačním adresáři na Common7\Tools. Při nejsou zadány žádné parametry, tím se nastaví prostředí a hostitele a cílovém sestavení Architektura nástroje x86 nativní 32bitový použít k vytváření x86 32bitová verze kódu.
 
@@ -110,7 +110,7 @@ Volitelně určuje sada nástrojů kompilátoru Visual Studio používat. Ve vý
 <a name="vcvarsall"></a>
 #### <a name="to-set-up-the-build-environment-in-an-existing-command-prompt-window"></a>K nastavení prostředí pro sestavení v existující okno příkazového řádku
 
-1. Na příkazovém řádku pomocí příkazu CD přejděte do adresáře instalace sady Visual Studio. Potom použijte CD znovu změnit na podadresář, který obsahuje soubory příkazů určených pro konfigurace. Pro Visual Studio 2017 a 2019 jde VC\Auxiliary\Build podadresáře. Pro Visual Studio 2015 použijte podadresáři VC.
+1. Na příkazovém řádku pomocí příkazu CD přejděte do adresáře instalace sady Visual Studio. Potom použijte CD znovu změnit na podadresář, který obsahuje soubory příkazů určených pro konfigurace. Pro Visual Studio 2017 a Visual Studio 2019 jde VC\Auxiliary\Build podadresáře. Pro Visual Studio 2015 použijte podadresáři VC.
 
 1. Zadejte příkaz pro upřednostňovaných vývojářského prostředí. Například na 64bitové platformě s použitím nejnovější sadu Windows SDK a sady nástrojů kompilátoru Visual Studio 2019 sestavovat kód ARM pro UPW, použijte tento příkazový řádek:
 

@@ -1,6 +1,6 @@
 ---
 title: /clr (Common Language Runtime)
-ms.date: 09/18/2018
+ms.date: 05/16/2019
 f1_keywords:
 - /CLR
 - VC.Project.VCNMakeTool.CompileAsManaged
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: ea4a878afea4453796277486da88b85e7f74883c
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: fa2be3d3ce17df104cda121e4869c975ec6dd440
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446521"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837312"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Common Language Runtime)
 
@@ -39,11 +39,11 @@ Jeden nebo více z následujících parametrů oddělených čárkou.
 
 - **pure**
 
-   **/ CLR: pure zastaralé**. Možnost Odebereme v sadě Visual Studio 2017. Doporučujeme vám, že port kód, který musí být prázdné MSIL do jazyka C#.
+   **/ CLR: pure zastaralé**. V sadě Visual Studio 2017 nebo novější, odebere se možnost. Doporučujeme vám, že port kód, který musí být prázdné MSIL do jazyka C#.
 
 - **safe**
 
-   **zastaralé/CLR: safe**. Možnost Odebereme v sadě Visual Studio 2017. Doporučujeme vám, že port kód, který musí být bezpečné jazyka MSIL do jazyka C#.
+   **zastaralé/CLR: safe**. V sadě Visual Studio 2017 nebo novější, odebere se možnost. Doporučujeme vám, že port kód, který musí být bezpečné jazyka MSIL do jazyka C#.
 
 - **noAssembly**
 

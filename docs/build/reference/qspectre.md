@@ -5,12 +5,12 @@ f1_keywords:
 - /Qspectre
 helpviewer_keywords:
 - /Qspectre
-ms.openlocfilehash: 42adff6564dc1c2ef47abffe9f9e6e630279ea7d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e44416a44a9f772c17bc734d26c62ff87be775c8
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319184"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837420"
 ---
 # <a name="qspectre"></a>/ Qspectre
 
@@ -28,7 +28,7 @@ Určuje kompilátoru generování pokynů ke zmírnění chyby zabezpečení ur�
 
 V its vitial release **/qspectre** možnost pouze pracovali v optimalizovaném kódu. V sadě Visual Studio 2017 verze 15.7 nebo novější **/qspectre** možnost se podporuje na všech úrovních optimalizace.
 
-Knihovny Microsoft Visual C++ jsou také k dispozici ve verzích s zmírnění hrozby Spectre. V instalačním programu sady Visual Studio si můžete stáhnout zmírnit hrozby Spectre knihovny pro Visual Studio 2017. Se nenachází v **jednotlivé komponenty** kartu **sestavení kompilátory, nástroje a moduly runtime**, a mít "Knihovny pro Spectre" v názvu. K dispozici pro celou dílčí moduly runtime Visual C++ jsou knihovny DLL a statických runtime knihovny se zmírněními hrozeb povolená omezení rizik: Spouštěcí kód VC ++, vcruntime140, msvcp140, concrt140 a vcamp140. Knihovny DLL jsou podporovány pro nasazení místní aplikace. obsah Visual C++ 2017 modulu Runtime knihoven Redistributable nebyl změněn. Můžete také nainstalovat zmírnit hrozby Spectre knihovny MFC a ATL, součástí **jednotlivé komponenty** kartu **sad SDK, knihoven a architektur**.
+Knihovny Microsoft Visual C++ jsou také k dispozici ve verzích s zmírnění hrozby Spectre. V instalačním programu sady Visual Studio si můžete stáhnout zmírnit hrozby Spectre knihovny pro Visual Studio 2017 a novější. Se nenachází v **jednotlivé komponenty** kartu **sestavení kompilátory, nástroje a moduly runtime**, a mít "Knihovny pro Spectre" v názvu. K dispozici pro celou dílčí moduly runtime Visual C++ jsou knihovny DLL a statických runtime knihovny se zmírněními hrozeb povolená omezení rizik: Spouštěcí kód VC ++, vcruntime140, msvcp140, concrt140 a vcamp140. Knihovny DLL jsou podporovány pro nasazení místní aplikace. obsah Vizuálu C++ 2017 a novější modul Runtime knihovny distribuovatelné součásti nebyly upraveny. Můžete také nainstalovat zmírnit hrozby Spectre knihovny MFC a ATL, součástí **jednotlivé komponenty** kartu **sad SDK, knihoven a architektur**.
 
 ### <a name="applicability"></a>Použitelnost.
 
@@ -54,7 +54,7 @@ Dopad výkon **/qspectre** ukázala být nepatrné v několika velmi rozsáhlýc
 
 **/Qspectre** – možnost kompilátoru generuje kód, který se odkazuje implicitně verzí knihoven runtime, která byla vytvořená pro poskytování zmírnění hrozby Spectre. Tyto knihovny jsou volitelné součásti, které je třeba nainstalovat pomocí instalačního programu sady Visual Studio:
 
-- VC ++ 2017 verze *version_numbers* knihovny pro Spectre \[(x86 a x64) | (ARM) | (ARM64)]
+- Verze MSVC *version_numbers* knihovny pro Spectre \[(x86 a x64) | (ARM) | (ARM64)]
 - Vizuální C++ knihovny ATL pro \[(x86/x64) | ARM | ARM64] se zmírněními hrozeb Spectre
 - Vizuální C++ MFC pro \[x86/x64 | ARM | ARM64] se zmírněními hrozeb Spectre
 

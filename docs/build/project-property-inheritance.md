@@ -1,14 +1,14 @@
 ---
 title: Dědičnost vlastnosti v projektech Visual Studio – C++
-ms.date: 12/10/2018
+ms.date: 05/16/2019
 helpviewer_keywords:
 - C++ projects, property inheritance
-ms.openlocfilehash: 7e6e2ec4e4f1999639a1b0a0d7ce35873736e5e3
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 472700226ffc1f265f6fab84dbd44fca651b3c87
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220454"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837407"
 ---
 # <a name="property-inheritance-in-visual-studio-projects"></a>Dědičnost vlastnosti v projektech Visual Studio
 
@@ -16,7 +16,7 @@ Systém projektu sady Visual Studio je založen na MSBuild, který definuje form
 
 ## <a name="the-vcxproj-file-props-files-and-targets-files"></a>Soubor .vcxproj, souborech .props a souborech .targets
 
-Vlastnosti projektu jsou uloženy přímo v souboru projektu (*.vcxproj) nebo v jiných souborech .targets nebo .props importuje soubor projektu a který poskytnout výchozí hodnoty. Pro Visual Studio 2015, tyto soubory jsou umístěny v **\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140**. Pro Visual Studio 2017, tyto soubory jsou umístěny v  **\\Program Files (x86)\\sady Microsoft Visual Studio\\2017\\_edition_\\Common7\\ Integrované vývojové prostředí\\VC\\VCTargets**, kde _edition_ je nainstalované verze sady Visual Studio. Vlastnosti jsou také uloženy v jakékoli vlastní souborech, které můžete přidat na svůj projekt. Důrazně doporučujeme, že není upravíte tyto soubory ručně a místo toho použijte stránky vlastností v prostředí IDE k úpravě všech vlastností, zejména těch, které se účastní dědičnosti, pokud nemáte velmi dostatečné povědomí o MSBuild.
+Vlastnosti projektu jsou uloženy přímo v souboru projektu (*.vcxproj) nebo v jiných souborech .targets nebo .props importuje soubor projektu a který poskytnout výchozí hodnoty. Pro Visual Studio 2015, tyto soubory jsou umístěny v **\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140**. Pro Visual Studio 2017 nebo Visual Studio 2019 tyto soubory jsou umístěny v  **\\Program Files (x86)\\sady Microsoft Visual Studio\\&lt;2017 nebo 2019 >\\_edition_  \\Common7\\IDE\\VC\\VCTargets**, kde _edition_ je nainstalované verze sady Visual Studio. Vlastnosti jsou také uloženy v jakékoli vlastní souborech, které můžete přidat na svůj projekt. Důrazně doporučujeme, že není upravíte tyto soubory ručně a místo toho použijte stránky vlastností v prostředí IDE k úpravě všech vlastností, zejména těch, které se účastní dědičnosti, pokud nemáte velmi dostatečné povědomí o MSBuild.
 
 Jak je uvedeno výše, může být přiřazen jinou hodnotu v těchto různých souborech stejnou vlastnost pro stejnou konfiguraci. Při sestavování projektu stroji MSBuild engine vyhodnotí jako soubor projektu a všechny importované soubory v dobře definovaných pořadí (popsaných níže). Jak se vyhodnotí každého souboru, všechny hodnoty vlastností, které jsou definované v tomto souboru přepíše existující hodnoty. Všechny hodnoty, které nejsou zadané se dědí ze souborů, které byly dříve vyhodnoceny. Proto když nastavíte vlastnost s použitím stránek vlastností, je také důležité věnovat pozornost tomu, kde nastavujete. Pokud vlastnost nastavíte na "X" v souboru .props, ale vlastnost je nastavena na "Y" v souboru projektu, projekt bude sestaven s nastavenou na "Y". Pokud stejnou vlastnost nastavená na "Z" na položku projektu, jako je například soubor .cpp, stroji MSBuild engine použije hodnotu "Z". 
 
@@ -67,7 +67,7 @@ Chcete-li získat lepší představu o konfiguracích sestavení, otevřete **Sp
 
 Pokud přejděte do podokna obecné na stránkách vlastností a nastavte vlastnost znaková sada na "Nenastaveno" místo "Použití Unicode" a klikněte na tlačítko **OK**, se zobrazí Správce vlastností žádné **Podpora kódování Unicode** vlastností aktuální konfiguraci, ale bude stále existovat pro další konfigurace.
 
-Další informace o Správci vlastností a vlastností najdete v tématu [sdílené složky nebo resuse nastavení projektu Visual Studio C++](create-reusable-property-configurations.md).
+Další informace o Správci vlastností a vlastností najdete v tématu [sdílené složky nebo opakované použití sady Visual Studio C++ nastavení projektu](create-reusable-property-configurations.md).
 
 > [!TIP]
 > Soubor .user je starší verze funkce a doporučujeme odstranit aby bylo možné zachovat vlastnosti správně seskupeny podle konfigurace a platformy.

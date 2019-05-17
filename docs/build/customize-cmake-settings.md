@@ -1,14 +1,14 @@
 ---
 title: Vlastní nastavení sestavení CMake v sadě Visual Studio
-ms.date: 04/25/2019
+ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: 20ed066f71a5c8c3acb00ef5923fa5c9f16ac229
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: d8102250fa59dc787cc48fc293ac740b81b4446c
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877159"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837111"
 ---
 # <a name="customize-cmake-build-settings"></a>Vlastní nastavení sestavení CMake
 
@@ -128,7 +128,7 @@ Adresář ve vzdáleném počítači, ve kterém CMake nainstaluje cíle.
 
 ### <a name="remote-copy-sources"></a>Vzdálená kopie zdroje
 
-Určuje, jestli se má kopírovat zdrojové soubory do vzdáleného počítače a umožňuje určit, jestli se má příkaz rsync yse nebo sftp. 
+Určuje, jestli se má kopírovat zdrojové soubory na vzdálený počítač a umožní vám určit, zda se příkaz rsync nebo sftp. 
 
 ## <a name="directly-edit-cmakesettingsjson"></a>Directly edit CMakeSettings.json
 

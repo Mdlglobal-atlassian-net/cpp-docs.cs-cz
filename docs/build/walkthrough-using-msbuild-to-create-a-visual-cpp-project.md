@@ -1,15 +1,15 @@
 ---
 title: 'Návod: Vytvoření projektu jazyka Visual C++ pomocí nástroje MSBuild'
-ms.date: 05/06/2019
+ms.date: 05/16/2019
 helpviewer_keywords:
 - 'msbuild (c++), walkthrough: create a project'
 ms.assetid: 52350d1c-c373-4868-923c-5e8be6f67adb
-ms.openlocfilehash: 8fb985cbf4e471589946e730e8bb09b43f0a5d84
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: c93867f3be3b17f703c549aa5c05f3d327934c26
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446209"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837604"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>Návod: Vytvoření projektu jazyka Visual C++ pomocí nástroje MSBuild
 
@@ -79,7 +79,7 @@ Soubor projektu MSBuild je soubor XML, který obsahuje kořenový prvek projektu
 
 ### <a name="to-create-the-msbuild-project-file"></a>K vytvoření souboru projektu MSBuild
 
-1. Pomocí textového editoru vytvořte soubor projektu s názvem `myproject.vcxproj`a potom přidejte následující kořen `<Project>` elementu. Vložte prvky do následujících kroků postupu mezi kořenové `<Project>` značky. (Použít atribut ToolsVersion = "15,0", pokud používáte Visual Studio 2017.)
+1. Pomocí textového editoru vytvořte soubor projektu s názvem `myproject.vcxproj`a potom přidejte následující kořen `<Project>` elementu. Vložte prvky do následujících kroků postupu mezi kořenové `<Project>` značky. (Použít atribut ToolsVersion = "15,0", pokud používáte Visual Studio 2017 nebo ToolsVersion = "16,0", pokud používáte Visual Studio 2019.)
 
     ```xml
     <Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -107,7 +107,7 @@ Soubor projektu MSBuild je soubor XML, který obsahuje kořenový prvek projektu
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
     ```
 
-1. Přidejte následující element skupiny vlastností (`<PropertyGroup>`), který určuje dvě vlastnosti projektu. (Pokud používáte Visual Studio 2017, použití verze 141.)
+1. Přidejte následující element skupiny vlastností (`<PropertyGroup>`), který určuje dvě vlastnosti projektu. (Verze 141 použijte, pokud používáte Visual Studio 2017 nebo v142 Pokud používáte Visual Studio 2019.)
 
     ```xml
     <PropertyGroup>

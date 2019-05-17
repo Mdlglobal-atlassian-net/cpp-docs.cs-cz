@@ -1,6 +1,6 @@
 ---
 title: /DEBUG (Generovat ladicí informace)
-ms.date: 11/04/2016
+ms.date: 05/16/2019
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateDebugInformation
 - /debug
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - debugging [C++], linker option
 - program databases [C++]
 ms.assetid: 1af389ae-3f8b-4d76-a087-1cdf861e9103
-ms.openlocfilehash: ca7ef5d1935ddea0441f49e387e35184c6fd1fc6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ec466a6356ace437d32eb517bf2da291938f5db
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294015"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837148"
 ---
 # <a name="debug-generate-debug-info"></a>/DEBUG (Generovat ladicí informace)
 
@@ -61,7 +61,7 @@ Není možné vytvořit s příponou .exe nebo .dll, který obsahuje informace o
 
 1. Klikněte na tlačítko **ladění** stránku vlastností.
 
-1. Upravit **Generovat ladicí informace** vlastností pro povolení generování PDB. To umožňuje/Debug: fastlink ve výchozím nastavení v sadě Visual Studio 2017.
+1. Upravit **Generovat ladicí informace** vlastností pro povolení generování PDB. Ve výchozím nastavení v sadě Visual Studio 2017 nebo novější díky tomu/Debug: fastlink.
 
 1. Upravit **Generovat úplný soubor databáze programu** vlastností pro povolení/Debug: full pro úplné generování souborů PDB pro každé přírůstkové sestavení.
 

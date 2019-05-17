@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-ms.openlocfilehash: 7c4f7e6edb020f5c8d2abf80f14df33e18a915c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e3da750b174fa92e28c1d0d5a8cbc035738ee51
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270949"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837281"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (Konvence volání)
 
@@ -51,7 +51,7 @@ Tyto možnosti určují pořadí ve funkci, která argumenty jsou vloženy do z�
 
 Funkce vyžadující proměnný počet argumentů musí být označen `__cdecl`.
 
-**/GD –**, **GR**, **/Gv** a **/Gz** nejsou kompatibilní s [/CLR: safe](clr-common-language-runtime-compilation.md) nebo   **/CLR: pure**. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
+**/GD –**, **GR**, **/Gv** a **/Gz** nejsou kompatibilní s [/CLR: safe](clr-common-language-runtime-compilation.md) nebo   **/CLR: pure**. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a nepodporované v sadě Visual Studio 2017 a novější.
 
 > [!NOTE]
 > Ve výchozím nastavení pro x86 procesory, C++ členské funkce pomocí [klíčové slovo __thiscall](../../cpp/thiscall.md).

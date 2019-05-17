@@ -1,6 +1,6 @@
 ---
 title: 'Postupy: Povolení 64bitovým kompilátorem MSVC sady nástrojů příkazového řádku'
-ms.date: 03/29/2018
+ms.date: 05/16/2019
 helpviewer_keywords:
 - x64 [C++]
 - 64-bit compiler [C++], command line usage
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IPF, command-line compiler
 - x64 [C++], command-line compiler
 ms.assetid: 4da93a19-e20d-4778-902a-5eee9a6a90b5
-ms.openlocfilehash: 8436254a3d8c5c1dae018c2309ceaad7bd5b2408
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24dd6355578e8e9e00064ccfdf31bc51b7fd12ec
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188909"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65836978"
 ---
 # <a name="how-to-enable-a-64-bit-x64-hosted-msvc-toolset-on-the-command-line"></a>Postupy: Povolit 64-Bit, x64 hostované MSVC sady nástrojů v příkazovém řádku
 
@@ -32,7 +32,7 @@ Když nainstalujete sadu funkcí jazyka C++ v instalačním programu sady Visual
 
 ## <a name="use-a-64-bit-hosted-developer-command-prompt-shortcut"></a>Použít zástupce příkazového řádku prostředí pro vývojáře 64-bit
 
-Při instalaci systému Visual Studio v operačním systému Windows 64-bit, nejsou k dispozici další vývojářské příkazového řádku zkratky pro 64-bit, hostované x64 nativní a křížové kompilátory. Pro přístup k těmto příkazového řádku ve Windows 10 na **Start** nabídky, otevřete složku pro vaši verzi sady Visual Studio, třeba **Visual Studio 2017**a pak vyberte jednu z x64 nativních nebo křížových nástrojů příkazový řádek pro vývojáře. Pro přístup k těmto příkazové řádky v systému Windows 8 na **Start** obrazovce otevřete **všechny aplikace**. V části pro nainstalovanou verzi sady Visual Studio, otevřete **sady Visual Studio** složku (ve starších verzích sady Visual Studio, může mít název **Visual Studio Tools**). Ve starších verzích Windows, zvolte **Start**, rozbalte **všechny programy**, složku pro vaši verzi **sady Visual Studio** (a ke starším verzím sady Visual Studio,  **Nástroje sady Visual Studio**). Další informace najdete v tématu [zkratky příkazového řádku pro vývojáře](building-on-the-command-line.md#developer_command_prompt_shortcuts).
+Při instalaci systému Visual Studio v operačním systému Windows 64-bit, nejsou k dispozici další vývojářské příkazového řádku zkratky pro 64-bit, hostované x64 nativní a křížové kompilátory. Pro přístup k těmto příkazového řádku ve Windows 10 na **Start** nabídky, otevřete složku pro vaši verzi sady Visual Studio, třeba **Visual Studio 2019**a pak vyberte jednu z x64 nativních nebo křížových nástrojů příkazový řádek pro vývojáře. Pro přístup k těmto příkazové řádky v systému Windows 8 na **Start** obrazovce otevřete **všechny aplikace**. V části pro nainstalovanou verzi sady Visual Studio, otevřete **sady Visual Studio** složku (ve starších verzích sady Visual Studio, může mít název **Visual Studio Tools**). Ve starších verzích Windows, zvolte **Start**, rozbalte **všechny programy**, složku pro vaši verzi **sady Visual Studio** (a ke starším verzím sady Visual Studio,  **Nástroje sady Visual Studio**). Další informace najdete v tématu [zkratky příkazového řádku pro vývojáře](building-on-the-command-line.md#developer_command_prompt_shortcuts).
 
 ## <a name="use-vcvarsallbat-to-set-a-64-bit-hosted-build-architecture"></a>Nastavení architektury 64-bit hostovaného sestavení pomocí Vcvarsall.bat
 
