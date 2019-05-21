@@ -1,0 +1,966 @@
+- name: Knihovna ATL (Active Template Library)
+  href: atl-com-desktop-components.md
+- name: Koncepty knihovny ATL (Active Template Library)
+  expanded: false
+  items:
+    - name: Koncepty knihovny ATL (Active Template Library)
+      href: active-template-library-atl-concepts.md
+    - name: Úvod do modelu COM a knihovny ATL
+      expanded: false
+      items:
+        - name: Úvod do modelu COM a knihovny ATL
+          href: introduction-to-com-and-atl.md
+        - name: Úvod do modelu COM
+          expanded: false
+          items:
+            - name: Úvod do modelu COM
+              href: introduction-to-com.md
+            - name: Rozhraní (ATL)
+              href: interfaces-atl.md
+            - name: IUnknown
+              href: iunknown.md
+            - name: Počítání odkazů
+              href: reference-counting.md
+            - name: QueryInterface
+              href: queryinterface.md
+            - name: Zařazování
+              href: marshaling.md
+            - name: Agregace
+              href: aggregation.md
+        - name: Úvod do ATL
+          expanded: false
+          items:
+            - name: Úvod do ATL
+              href: introduction-to-atl.md
+            - name: Použití knihovny šablon
+              href: using-a-template-library.md
+            - name: Rozsah určení ATL
+              href: scope-of-atl.md
+            - name: Doporučení k výběru mezi ATL a MFC
+              href: recommendations-for-choosing-between-atl-and-mfc.md
+    - name: Základy objektů ATL COM
+      expanded: false
+      items:
+        - name: Základy objektů ATL COM
+          href: fundamentals-of-atl-com-objects.md
+        - name: Implementace CComObjectRootEx
+          href: implementing-ccomobjectrootex.md
+        - name: 'Implementace CComObject, CComAggObject a CComPolyObject'
+          href: implementing-ccomobject-ccomaggobject-and-ccompolyobject.md
+        - name: Podpora IDispatch a IErrorInfo
+          href: supporting-idispatch-and-ierrorinfo.md
+        - name: Podpora IDispEventImpl
+          href: supporting-idispeventimpl.md
+        - name: Změna výchozího objektu pro vytváření tříd a agregačního modelu
+          href: changing-the-default-class-factory-and-aggregation-model.md
+        - name: Vytvoření agregovaného objektu
+          href: creating-an-aggregated-object.md
+    - name: Duální rozhraní a ATL
+      expanded: false
+      items:
+        - name: Duální rozhraní a ATL
+          href: dual-interfaces-and-atl.md
+        - name: Implementace duálního rozhraní
+          href: implementing-a-dual-interface.md
+        - name: Více duálních rozhraní
+          href: multiple-dual-interfaces.md
+        - name: nonextensible – atribut
+          href: nonextensible-attribute.md
+        - name: Duální rozhraní a události
+          href: dual-interfaces-and-events.md
+    - name: "Kolekce a\_enumerátory ATL"
+      expanded: false
+      items:
+        - name: "Kolekce a\_enumerátory ATL"
+          href: atl-collections-and-enumerators.md
+        - name: Třídy kolekcí a enumerátorů ATL
+          href: atl-collection-and-enumerator-classes.md
+        - name: Principy návrhu rozhraní kolekcí a enumerátorů
+          href: design-principles-for-collection-and-enumerator-interfaces.md
+        - name: Implementace kolekce založené na standardní knihovně C++
+          expanded: false
+          items:
+            - name: Implementace kolekce založené na standardní knihovně C++
+              href: implementing-an-stl-based-collection.md
+            - name: Třídy zásad kopírování ATL
+              href: atl-copy-policy-classes.md
+    - name: Základy vytváření složených prvků ATL
+      expanded: false
+      items:
+        - name: Základy vytváření složených prvků ATL
+          href: atl-composite-control-fundamentals.md
+        - name: Vložení složeného ovládacího prvku
+          href: inserting-a-composite-control.md
+        - name: Úprava projektu ATL
+          href: modifying-the-atl-project.md
+        - name: Přidání funkcí do složeného ovládacího prvku
+          href: adding-functionality-to-the-composite-control.md
+        - name: Sestavení a testování projektu ATL
+          href: building-and-testing-the-atl-project.md
+    - name: "Nejčastější dotazy k\_používání kontejnerů ovládacích prvků v\_knihovně ATL"
+      href: atl-control-containment-faq.md
+    - name: Stránky vlastností ATL COM
+      expanded: false
+      items:
+        - name: Stránky vlastností ATL COM
+          href: atl-com-property-pages.md
+        - name: Zadání stránek vlastností
+          href: specifying-property-pages.md
+        - name: Implementace stránek vlastností
+          expanded: false
+          items:
+            - name: Implementace stránek vlastností
+              href: implementing-property-pages.md
+            - name: 'Příklad: Implementace stránky vlastností'
+              href: example-implementing-a-property-page.md
+    - name: Podpora ATL pro ovládací prvky DHTML
+      expanded: false
+      items:
+        - name: Podpora ATL pro ovládací prvky DHTML
+          href: atl-support-for-dhtml-controls.md
+        - name: Identifikace prvků projektu ovládacího prvku DHTML
+          href: identifying-the-elements-of-the-dhtml-control-project.md
+        - name: Volání kódu C++ z DHTML
+          href: calling-cpp-code-from-dhtml.md
+        - name: Vytváření ovládacího prvku ATL DHTML
+          href: creating-an-atl-dhtml-control.md
+        - name: Testování ovládacího prvku ATL DHTML
+          href: testing-the-atl-dhtml-control.md
+        - name: Změna ovládacího prvku ATL DHTML
+          href: modifying-the-atl-dhtml-control.md
+        - name: Testování změněného ovládacího prvku ATL DHTML
+          href: testing-the-modified-atl-dhtml-control.md
+    - name: Body připojení ATL
+      expanded: false
+      items:
+        - name: Body připojení ATL
+          href: atl-connection-points.md
+        - name: Třídy bodů připojení ATL
+          href: atl-connection-point-classes.md
+        - name: Přidání bodů připojení k objektu
+          href: adding-connection-points-to-an-object.md
+        - name: Příklad bodu připojení ATL
+          href: atl-connection-point-example.md
+    - name: Zpracování událostí a ATL
+      expanded: false
+      items:
+        - name: Zpracování událostí a ATL
+          href: event-handling-and-atl.md
+        - name: Principy zpracování událostí
+          href: event-handling-principles.md
+        - name: Implementace rozhraní zpracování událostí
+          href: implementing-the-event-handling-interface.md
+        - name: Použití IDispEventImpl
+          href: using-idispeventimpl.md
+        - name: Použití IDispEventSimpleImpl
+          href: using-idispeventsimpleimpl.md
+        - name: Shrnutí zpracování událostí ATL
+          href: atl-event-handling-summary.md
+    - name: ATL a volné zařazování vláken
+      href: atl-and-the-free-threaded-marshaler.md
+    - name: Určení modelu vláken pro projekt (ATL)
+      href: specifying-the-threading-model-for-a-project-atl.md
+    - name: Třídy modulů ATL
+      href: atl-module-classes.md
+    - name: Služby ATL
+      expanded: false
+      items:
+        - name: Služby ATL
+          href: atl-services.md
+        - name: 'CAtlServiceModuleT::Start – funkce'
+          href: catlservicemodulet-start-function.md
+        - name: 'CAtlServiceModuleT::ServiceMain – funkce'
+          href: catlservicemodulet-servicemain-function.md
+        - name: 'CAtlServiceModuleT::Run – funkce'
+          href: catlservicemodulet-run-function.md
+        - name: 'CAtlServiceModuleT::Handler – funkce'
+          href: catlservicemodulet-handler-function.md
+        - name: Položky registru
+          href: registry-entries.md
+        - name: DCOMCNFG
+          href: dcomcnfg.md
+        - name: Tipy pro ladění
+          expanded: false
+          items:
+            - name: Tipy pro ladění
+              href: debugging-tips.md
+            - name: Použití správce úloh
+              href: using-task-manager.md
+            - name: Zobrazení oken se zprávou
+              href: displaying-assertions.md
+            - name: Spuštění programu jako místního serveru
+              href: running-the-program-as-a-local-server.md
+    - name: Třídy oken ATL
+      expanded: false
+      items:
+        - name: Třídy oken ATL
+          href: atl-window-classes.md
+        - name: Úvod do tříd oken ATL
+          href: introduction-to-atl-window-classes.md
+        - name: Použití okna
+          href: using-a-window.md
+        - name: Implementace okna
+          expanded: false
+          items:
+            - name: Implementace okna
+              href: implementing-a-window.md
+            - name: Přidání obslužné rutiny zpráv knihovny ATL
+              href: adding-an-atl-message-handler.md
+            - name: Mapy zpráv (ATL)
+              href: message-maps-atl.md
+            - name: Funkce obslužných rutin zpráv
+              expanded: false
+              items:
+                - name: Funkce obslužných rutin zpráv
+                  href: message-handler-functions.md
+                - name: CommandHandler
+                  href: commandhandler.md
+                - name: MessageHandler
+                  href: messagehandler.md
+                - name: NotifyHandler
+                  href: notifyhandler.md
+            - name: Implementace okna pomocí CWindowImpl
+              href: implementing-a-window-with-cwindowimpl.md
+        - name: Implementace dialogového okna
+          href: implementing-a-dialog-box.md
+        - name: Použití oken obsažených v jiném objektu
+          href: using-contained-windows.md
+        - name: Principy vlastností okna
+          href: understanding-window-traits.md
+    - name: Třídy kolekcí ATL
+      href: atl-collection-classes.md
+    - name: Komponenta registru ATL (registrátor)
+      expanded: false
+      items:
+        - name: Komponenta registru ATL (registrátor)
+          href: atl-registry-component-registrar.md
+        - name: Vytváření skriptů registrátoru
+          expanded: false
+          items:
+            - name: Vytváření skriptů registrátoru
+              href: creating-registrar-scripts.md
+            - name: Principy syntaxe Backus-Naurovy formy (BNF)
+              href: understanding-backus-nauer-form-bnf-syntax.md
+            - name: Principy stromů analýzy
+              href: understanding-parse-trees.md
+            - name: Příklady skriptování registru
+              href: registry-scripting-examples.md
+            - name: Použití nahraditelných parametrů (preprocesor registrátoru)
+              href: using-replaceable-parameters-the-registrar-s-preprocessor.md
+            - name: Volání skriptů
+              href: invoking-scripts.md
+        - name: Nastavení statického odkazu na kód registrátoru (pouze C++)
+          href: setting-up-a-static-link-to-the-registrar-code-cpp-only.md
+    - name: "Programování s\_použitím knihovny ATL a\_běhového kódu jazyka C"
+      expanded: false
+      items:
+        - name: "Programování s\_použitím knihovny ATL a\_běhového kódu jazyka C"
+          href: programming-with-atl-and-c-run-time-code.md
+        - name: Výhody a nevýhody metody použité k připojení k CRT
+          href: benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md
+        - name: Propojení projektu ATL s knihovnami CRT
+          href: linking-to-the-crt-in-your-atl-project.md
+    - name: Programování pomocí třídy CComBSTR (ATL)
+      href: programming-with-ccombstr-atl.md
+    - name: Referenční informace ke kódování ATL
+      href: atl-encoding-reference.md
+    - name: Referenční informace k nástrojům ATL
+      href: atl-utilities-reference.md
+- name: Tutoriál knihovny ATL (Active Template Library)
+  expanded: false
+  items:
+    - name: Tutoriál knihovny ATL (Active Template Library)
+      href: active-template-library-atl-tutorial.md
+    - name: 'Vytvoření projektu (Tutoriál knihovny ATL, část 1)'
+      href: creating-the-project-atl-tutorial-part-1.md
+    - name: 'Přidání ovládacího prvku (Tutoriál knihovny ATL, část 2)'
+      href: adding-a-control-atl-tutorial-part-2.md
+    - name: 'Přidání vlastnosti do ovládacího prvku (Tutoriál knihovny ATL, část 3)'
+      href: adding-a-property-to-the-control-atl-tutorial-part-3.md
+    - name: 'Změna kódu kreslení (Tutoriál knihovny ATL, část 4)'
+      href: changing-the-drawing-code-atl-tutorial-part-4.md
+    - name: 'Přidání události (Tutoriál knihovny ATL, část 5)'
+      href: adding-an-event-atl-tutorial-part-5.md
+    - name: 'Přidání stránky vlastností (Tutoriál knihovny ATL, část 6)'
+      href: adding-a-property-page-atl-tutorial-part-6.md
+    - name: 'Vložení ovládacího prvku na webovou stránku (Tutoriál knihovny ATL, část 7)'
+      href: putting-the-control-on-a-web-page-atl-tutorial-part-7.md
+- name: Přehled tříd ATL podle kategorií
+  expanded: false
+  items:
+    - name: Přehled tříd ATL
+      href: atl-class-overview.md
+    - name: Třídy objektů pro vytváření tříd
+      href: class-factories-classes.md
+    - name: Třídy informací o třídách
+      href: class-information-classes.md
+    - name: Třídy kolekcí
+      href: collection-classes.md
+    - name: Třídy modulů COM
+      href: com-modules-classes.md
+    - name: Třídy složených ovládacích prvků
+      href: composite-controls-classes.md
+    - name: Třídy bodů připojení
+      href: connection-points-classes.md
+    - name: Třídy kontejnerů ovládacích prvků
+      href: control-containment-classes.md
+    - name: 'Ovládací prvky: třídy obecné podpory'
+      href: controls-general-support-classes.md
+    - name: Třídy přenosů dat
+      href: data-transfer-classes.md
+    - name: Třídy datových typů
+      href: data-types-classes.md
+    - name: Třídy ladění a výjimek
+      href: debugging-and-exceptions-classes.md
+    - name: Třídy duálních rozhraní
+      href: dual-interfaces-classes.md
+    - name: Třídy enumerátorů a kolekcí
+      href: enumerators-and-collections-classes.md
+    - name: Třídy informací o chybách
+      href: error-information-classes.md
+    - name: Třídy zpracování souborů
+      href: file-handling-classes.md
+    - name: Třídy ukazatelů rozhraní
+      href: interface-pointers-classes.md
+    - name: Třídy implementace metody IUnknown
+      href: iunknown-implementation-classes.md
+    - name: Třídy správy paměti
+      href: memory-management-classes.md
+    - name: Třídy modulu snap-in MMC
+      href: mmc-snap-in-classes.md
+    - name: Třídy zabezpečení objektů
+      href: object-safety-classes.md
+    - name: Třídy trvalosti
+      href: persistence-classes.md
+    - name: Třídy vlastností a stránek vlastností
+      href: properties-and-property-pages-classes.md
+    - name: Třídy podpory registru
+      href: registry-support-classes.md
+    - name: Třídy spouštění objektů
+      href: running-objects-classes.md
+    - name: Třídy zabezpečení
+      href: security-classes.md
+    - name: Třídy podpory poskytovatelů služeb
+      href: service-provider-support-classes.md
+    - name: Třídy informací o webu
+      href: site-information-classes.md
+    - name: Řetězcové a textové třídy
+      href: string-and-text-classes.md
+    - name: Třídy odtržených rozhraní
+      href: tear-off-interfaces-classes.md
+    - name: Třídy sdružování vláken
+      href: thread-pooling-classes.md
+    - name: Modely dělení na vlákna a třídy kritických oddílů
+      href: threading-models-and-critical-sections-classes.md
+    - name: Třídy podpory uživatelského rozhraní
+      href: ui-support-classes.md
+    - name: Třídy nástrojů
+      href: utility-classes.md
+    - name: Třídy podpory oken
+      href: windows-support-classes.md
+- name: Referenční informace ke knihovně ATL
+  expanded: false
+  items:
+    - name: Referenční informace k třídám a strukturám ATL
+      expanded: false
+      items:
+        - name: Třídy a struktury ATL
+          href: reference/atl-classes.md
+        - name: _ATL_BASE_MODULE70 – struktura
+          href: reference/atl-base-module70-structure.md
+        - name: _ATL_COM_MODULE70 – struktura
+          href: reference/atl-com-module70-structure.md
+        - name: _ATL_FUNC_INFO – struktura
+          href: reference/atl-func-info-structure.md
+        - name: _ATL_MODULE70 – struktura
+          href: reference/atl-module70-structure.md
+        - name: _ATL_WIN_MODULE70 – struktura
+          href: reference/atl-win-module70-structure.md
+        - name: _AtlCreateWndData – struktura
+          href: reference/atlcreatewnddata-structure.md
+        - name: ATL_DRAWINFO – struktura
+          href: reference/atl-drawinfo-structure.md
+        - name: _U_MENUorID – třída
+          href: reference/u-menuorid-class.md
+        - name: _U_RECT – třída
+          href: reference/u-rect-class.md
+        - name: _U_STRINGorID – třída
+          href: reference/u-stringorid-class.md
+        - name: CA2AEX – třída
+          href: reference/ca2aex-class.md
+        - name: CA2CAEX – třída
+          href: reference/ca2caex-class.md
+        - name: CA2WEX – třída
+          href: reference/ca2wex-class.md
+        - name: CAccessToken – třída
+          href: reference/caccesstoken-class.md
+        - name: CAcl – třída
+          href: reference/cacl-class.md
+        - name: CAdapt – třída
+          href: reference/cadapt-class.md
+        - name: CAtlArray – třída
+          href: reference/catlarray-class.md
+        - name: CAtlAutoThreadModule – třída
+          href: reference/catlautothreadmodule-class.md
+        - name: CAtlAutoThreadModuleT – třída
+          href: reference/catlautothreadmodulet-class.md
+        - name: CAtlBaseModule – třída
+          href: reference/catlbasemodule-class.md
+        - name: CAtlComModule – třída
+          href: reference/catlcommodule-class.md
+        - name: CAtlDebugInterfacesModule – třída
+          href: reference/catldebuginterfacesmodule-class.md
+        - name: CAtlDllModuleT – třída
+          href: reference/catldllmodulet-class.md
+        - name: CAtlException – třída
+          href: reference/catlexception-class.md
+        - name: CAtlExeModuleT – třída
+          href: reference/catlexemodulet-class.md
+        - name: CAtlFile – třída
+          href: reference/catlfile-class.md
+        - name: CAtlFileMapping – třída
+          href: reference/catlfilemapping-class.md
+        - name: CAtlFileMappingBase – třída
+          href: reference/catlfilemappingbase-class.md
+        - name: CAtlList – třída
+          href: reference/catllist-class.md
+        - name: CAtlMap – třída
+          href: reference/catlmap-class.md
+        - name: CAtlModule – třída
+          href: reference/catlmodule-class.md
+        - name: CAtlModuleT – třída
+          href: reference/catlmodulet-class.md
+        - name: CAtlPreviewCtrlImpl – třída
+          href: reference/catlpreviewctrlimpl-class.md
+        - name: CAtlServiceModuleT – třída
+          href: reference/catlservicemodulet-class.md
+        - name: CAtlTemporaryFile – třída
+          href: reference/catltemporaryfile-class.md
+        - name: CAtlTransactionManager – třída
+          href: reference/catltransactionmanager-class.md
+        - name: CAtlWinModule – třída
+          href: reference/catlwinmodule-class.md
+        - name: CAutoPtr – třída
+          href: reference/cautoptr-class.md
+        - name: CAutoPtrArray – třída
+          href: reference/cautoptrarray-class.md
+        - name: CAutoPtrElementTraits – třída
+          href: reference/cautoptrelementtraits-class.md
+        - name: CAutoPtrList – třída
+          href: reference/cautoptrlist-class.md
+        - name: CAutoRevertImpersonation – třída
+          href: reference/cautorevertimpersonation-class.md
+        - name: CAutoVectorPtr – třída
+          href: reference/cautovectorptr-class.md
+        - name: CAutoVectorPtrElementTraits – třída
+          href: reference/cautovectorptrelementtraits-class.md
+        - name: CAxDialogImpl – třída
+          href: reference/caxdialogimpl-class.md
+        - name: CAxWindow – třída
+          href: reference/caxwindow-class.md
+        - name: CAxWindow2T – třída
+          href: reference/caxwindow2t-class.md
+        - name: CBindStatusCallback – třída
+          href: reference/cbindstatuscallback-class.md
+        - name: CComAggObject – třída
+          href: reference/ccomaggobject-class.md
+        - name: CComAllocator – třída
+          href: reference/ccomallocator-class.md
+        - name: CComApartment – třída
+          href: reference/ccomapartment-class.md
+        - name: CComAutoCriticalSection – třída
+          href: reference/ccomautocriticalsection-class.md
+        - name: CComAutoDeleteCriticalSection – třída
+          href: reference/ccomautodeletecriticalsection-class.md
+        - name: CComAutoThreadModule – třída
+          href: reference/ccomautothreadmodule-class.md
+        - name: CComBSTR – třída
+          href: reference/ccombstr-class.md
+        - name: CComCachedTearOffObject – třída
+          href: reference/ccomcachedtearoffobject-class.md
+        - name: CComClassFactory – třída
+          href: reference/ccomclassfactory-class.md
+        - name: CComClassFactory2 – třída
+          href: reference/ccomclassfactory2-class.md
+        - name: CComClassFactoryAutoThread – třída
+          href: reference/ccomclassfactoryautothread-class.md
+        - name: CComClassFactorySingleton – třída
+          href: reference/ccomclassfactorysingleton-class.md
+        - name: CComCoClass – třída
+          href: reference/ccomcoclass-class.md
+        - name: CComCompositeControl – třída
+          href: reference/ccomcompositecontrol-class.md
+        - name: CComContainedObject – třída
+          href: reference/ccomcontainedobject-class.md
+        - name: CComControl – třída
+          href: reference/ccomcontrol-class.md
+        - name: CComControlBase – třída
+          href: reference/ccomcontrolbase-class.md
+        - name: CComAutoCriticalSection – třída
+          href: reference/ccomcriticalsection-class.md
+        - name: CComCritSecLock – třída
+          href: reference/ccomcritseclock-class.md
+        - name: CComCurrency – třída
+          href: reference/ccomcurrency-class.md
+        - name: CComDynamicUnkArray – třída
+          href: reference/ccomdynamicunkarray-class.md
+        - name: CComEnum – třída
+          href: reference/ccomenum-class.md
+        - name: CComEnumImpl – třída
+          href: reference/ccomenumimpl-class.md
+        - name: CComEnumOnSTL – třída
+          href: reference/ccomenumonstl-class.md
+        - name: CComFakeCriticalSection – třída
+          href: reference/ccomfakecriticalsection-class.md
+        - name: CComGITPtr – třída
+          href: reference/ccomgitptr-class.md
+        - name: CComHeap – třída
+          href: reference/ccomheap-class.md
+        - name: CComHeapPtr – třída
+          href: reference/ccomheapptr-class.md
+        - name: CComModule – třída
+          href: reference/ccommodule-class.md
+        - name: CComMultiThreadModel – třída
+          href: reference/ccommultithreadmodel-class.md
+        - name: CComMultiThreadModelNoCS – třída
+          href: reference/ccommultithreadmodelnocs-class.md
+        - name: CComObject – třída
+          href: reference/ccomobject-class.md
+        - name: CComObjectGlobal – třída
+          href: reference/ccomobjectglobal-class.md
+        - name: CComObjectNoLock – třída
+          href: reference/ccomobjectnolock-class.md
+        - name: CComObjectRoot – třída
+          href: reference/ccomobjectroot-class.md
+        - name: CComObjectRootEx – třída
+          href: reference/ccomobjectrootex-class.md
+        - name: CComObjectStack – třída
+          href: reference/ccomobjectstack-class.md
+        - name: CComPolyObject – třída
+          href: reference/ccompolyobject-class.md
+        - name: CComPtr – třída
+          href: reference/ccomptr-class.md
+        - name: CComPtrBase – třída
+          href: reference/ccomptrbase-class.md
+        - name: CComQIPtr – třída
+          href: reference/ccomqiptr-class.md
+        - name: CComQIPtrElementTraits – třída
+          href: reference/ccomqiptrelementtraits-class.md
+        - name: CComSafeArray – třída
+          href: reference/ccomsafearray-class.md
+        - name: CComSafeArrayBound – třída
+          href: reference/ccomsafearraybound-class.md
+        - name: CComSafeDeleteCriticalSection – třída
+          href: reference/ccomsafedeletecriticalsection-class.md
+        - name: CComSimpleThreadAllocator – třída
+          href: reference/ccomsimplethreadallocator-class.md
+        - name: CComSingleThreadModel – třída
+          href: reference/ccomsinglethreadmodel-class.md
+        - name: CComTearOffObject – třída
+          href: reference/ccomtearoffobject-class.md
+        - name: CComUnkArray – třída
+          href: reference/ccomunkarray-class.md
+        - name: CComVariant – třída
+          href: reference/ccomvariant-class.md
+        - name: CContainedWindowT – třída
+          href: reference/ccontainedwindowt-class.md
+        - name: CCRTAllocator – třída
+          href: reference/ccrtallocator-class.md
+        - name: CCRTHeap – třída
+          href: reference/ccrtheap-class.md
+        - name: CDacl – třída
+          href: reference/cdacl-class.md
+        - name: CDebugReportHook – třída
+          href: reference/cdebugreporthook-class.md
+        - name: CDefaultCharTraits – třída
+          href: reference/cdefaultchartraits-class.md
+        - name: CDefaultCompareTraits – třída
+          href: reference/cdefaultcomparetraits-class.md
+        - name: CDefaultElementTraits – třída
+          href: reference/cdefaultelementtraits-class.md
+        - name: CDefaultHashTraits – třída
+          href: reference/cdefaulthashtraits-class.md
+        - name: CDialogImpl – třída
+          href: reference/cdialogimpl-class.md
+        - name: CDynamicChain – třída
+          href: reference/cdynamicchain-class.md
+        - name: CElementTraits – třída
+          href: reference/celementtraits-class.md
+        - name: CElementTraitsBase – třída
+          href: reference/celementtraitsbase-class.md
+        - name: CFirePropNotifyEvent – třída
+          href: reference/cfirepropnotifyevent-class.md
+        - name: CGlobalHeap – třída
+          href: reference/cglobalheap-class.md
+        - name: CHandle – třída
+          href: reference/chandle-class.md
+        - name: CHeapPtr – třída
+          href: reference/cheapptr-class.md
+        - name: CHeapPtrBase – třída
+          href: reference/cheapptrbase-class.md
+        - name: CHeapPtrElementTraits – třída
+          href: reference/cheapptrelementtraits-class.md
+        - name: CHeapPtrList – třída
+          href: reference/cheapptrlist-class.md
+        - name: CInterfaceArray – třída
+          href: reference/cinterfacearray-class.md
+        - name: CInterfaceList – třída
+          href: reference/cinterfacelist-class.md
+        - name: CLocalHeap – třída
+          href: reference/clocalheap-class.md
+        - name: CMessageMap – třída
+          href: reference/cmessagemap-class.md
+        - name: CNonStatelessWorker – třída
+          href: reference/cnonstatelessworker-class.md
+        - name: CNoWorkerThread – třída
+          href: reference/cnoworkerthread-class.md
+        - name: CPathT – třída
+          href: reference/cpatht-class.md
+        - name: CPrimitiveElementTraits – třída
+          href: reference/cprimitiveelementtraits-class.md
+        - name: CPrivateObjectSecurityDesc – třída
+          href: reference/cprivateobjectsecuritydesc-class.md
+        - name: CRBMap – třída
+          href: reference/crbmap-class.md
+        - name: CRBMultiMap – třída
+          href: reference/crbmultimap-class.md
+        - name: CRBTree – třída
+          href: reference/crbtree-class.md
+        - name: CRegKey – třída
+          href: reference/cregkey-class.md
+        - name: CRTThreadTraits – třída
+          href: reference/crtthreadtraits-class.md
+        - name: CSacl – třída
+          href: reference/csacl-class.md
+        - name: CSecurityAttributes – třída
+          href: reference/csecurityattributes-class.md
+        - name: CSecurityDesc – třída
+          href: reference/csecuritydesc-class.md
+        - name: CSid – třída
+          href: reference/csid-class.md
+        - name: CSimpleArray – třída
+          href: reference/csimplearray-class.md
+        - name: CSimpleArrayEqualHelper – třída
+          href: reference/csimplearrayequalhelper-class.md
+        - name: CSimpleArrayEqualHelperFalse – třída
+          href: reference/csimplearrayequalhelperfalse-class.md
+        - name: CSimpleDialog – třída
+          href: reference/csimpledialog-class.md
+        - name: CSimpleMap – třída
+          href: reference/csimplemap-class.md
+        - name: CSimpleMapEqualHelper – třída
+          href: reference/csimplemapequalhelper-class.md
+        - name: CSimpleMapEqualHelperFalse – třída
+          href: reference/csimplemapequalhelperfalse-class.md
+        - name: CSnapInItemImpl – třída
+          href: reference/csnapinitemimpl-class.md
+        - name: CSnapInPropertyPageImpl – třída
+          href: reference/csnapinpropertypageimpl-class.md
+        - name: CSocketAddr – třída
+          href: reference/csocketaddr-class.md
+        - name: CStockPropImpl – třída
+          href: reference/cstockpropimpl-class.md
+        - name: CStringElementTraits – třída
+          href: reference/cstringelementtraits-class.md
+        - name: CStringElementTraitsI – třída
+          href: reference/cstringelementtraitsi-class.md
+        - name: CStringRefElementTraits – třída
+          href: reference/cstringrefelementtraits-class.md
+        - name: CThreadPool – třída
+          href: reference/cthreadpool-class.md
+        - name: CTokenGroups – třída
+          href: reference/ctokengroups-class.md
+        - name: CTokenPrivileges – třída
+          href: reference/ctokenprivileges-class.md
+        - name: CUrl – třída
+          href: reference/curl-class.md
+        - name: CW2AEX – třída
+          href: reference/cw2aex-class.md
+        - name: CW2CWEX – třída
+          href: reference/cw2cwex-class.md
+        - name: CW2WEX – třída
+          href: reference/cw2wex-class.md
+        - name: CWin32Heap – třída
+          href: reference/cwin32heap-class.md
+        - name: CWindow – třída
+          href: reference/cwindow-class.md
+        - name: CWindowImpl – třída
+          href: reference/cwindowimpl-class.md
+        - name: CWinTraits – třída
+          href: reference/cwintraits-class.md
+        - name: CWinTraitsOR – třída
+          href: reference/cwintraitsor-class.md
+        - name: CWndClassInfo – třída
+          href: reference/cwndclassinfo-class.md
+        - name: CWorkerThread – třída
+          href: reference/cworkerthread-class.md
+        - name: IAtlAutoThreadModule – třída
+          href: reference/iatlautothreadmodule-class.md
+        - name: IAtlMemMgr – třída
+          href: reference/iatlmemmgr-class.md
+        - name: IAxWinAmbientDispatch – rozhraní
+          href: reference/iaxwinambientdispatch-interface.md
+        - name: IAxWinAmbientDispatchEx – rozhraní
+          href: reference/iaxwinambientdispatchex-interface.md
+        - name: IAxWinHostWindow – rozhraní
+          href: reference/iaxwinhostwindow-interface.md
+        - name: IAxWinHostWindowLic – rozhraní
+          href: reference/iaxwinhostwindowlic-interface.md
+        - name: ICollectionOnSTLImpl – třída
+          href: reference/icollectiononstlimpl-class.md
+        - name: IConnectionPointContainerImpl – třída
+          href: reference/iconnectionpointcontainerimpl-class.md
+        - name: IConnectionPointImpl – třída
+          href: reference/iconnectionpointimpl-class.md
+        - name: IDataObjectImpl – třída
+          href: reference/idataobjectimpl-class.md
+        - name: IDispatchImpl – třída
+          href: reference/idispatchimpl-class.md
+        - name: IDispEventImpl – třída
+          href: reference/idispeventimpl-class.md
+        - name: IDispEventSimpleImpl – třída
+          href: reference/idispeventsimpleimpl-class.md
+        - name: IDocHostUIHandlerDispatch – rozhraní
+          href: reference/idochostuihandlerdispatch-interface.md
+        - name: IEnumOnSTLImpl – třída
+          href: reference/ienumonstlimpl-class.md
+        - name: IObjectSafetyImpl – třída
+          href: reference/iobjectsafetyimpl-class.md
+        - name: IObjectWithSiteImpl – třída
+          href: reference/iobjectwithsiteimpl-class.md
+        - name: IOleControlImpl – třída
+          href: reference/iolecontrolimpl-class.md
+        - name: IOleInPlaceActiveObjectImpl – třída
+          href: reference/ioleinplaceactiveobjectimpl-class.md
+        - name: IOleInPlaceObjectWindowlessImpl – třída
+          href: reference/ioleinplaceobjectwindowlessimpl-class.md
+        - name: IOleObjectImpl – třída
+          href: reference/ioleobjectimpl-class.md
+        - name: IPerPropertyBrowsingImpl – třída
+          href: reference/iperpropertybrowsingimpl-class.md
+        - name: IPersistPropertyBagImpl – třída
+          href: reference/ipersistpropertybagimpl-class.md
+        - name: IPersistStorageImpl – třída
+          href: reference/ipersiststorageimpl-class.md
+        - name: IPersistStreamInitImpl – třída
+          href: reference/ipersiststreaminitimpl-class.md
+        - name: IPointerInactiveImpl – třída
+          href: reference/ipointerinactiveimpl-class.md
+        - name: IPropertyNotifySinkCP – třída
+          href: reference/ipropertynotifysinkcp-class.md
+        - name: IPropertyPage2Impl – třída
+          href: reference/ipropertypage2impl-class.md
+        - name: IPropertyPageImpl – třída
+          href: reference/ipropertypageimpl-class.md
+        - name: IProvideClassInfo2Impl – třída
+          href: reference/iprovideclassinfo2impl-class.md
+        - name: IQuickActivateImpl – třída
+          href: reference/iquickactivateimpl-class.md
+        - name: IRegistrar – rozhraní
+          href: reference/iregistrar-class.md
+        - name: IRunnableObjectImpl – třída
+          href: reference/irunnableobjectimpl-class.md
+        - name: IServiceProviderImpl – třída
+          href: reference/iserviceproviderimpl-class.md
+        - name: ISpecifyPropertyPagesImpl – třída
+          href: reference/ispecifypropertypagesimpl-class.md
+        - name: ISupportErrorInfoImpl – třída
+          href: reference/isupporterrorinfoimpl-class.md
+        - name: IThreadPoolConfig – rozhraní
+          href: reference/ithreadpoolconfig-interface.md
+        - name: IViewObjectExImpl – třída
+          href: reference/iviewobjecteximpl-class.md
+        - name: IWorkerThreadClient – rozhraní
+          href: reference/iworkerthreadclient-interface.md
+        - name: Win32ThreadTraits – třída
+          href: reference/win32threadtraits-class.md
+        - name: Archetyp pracovního procesu
+          href: reference/worker-archetype.md
+    - name: ATL_URL_SCHEME – výčet
+      href: reference/atl-url-scheme-enum.md
+    - name: Referenční informace k funkcím ATL
+      expanded: false
+      items:
+        - name: Funkce ATL
+          href: reference/atl-functions.md
+        - name: Funkce nástrojů ATL HTTP
+          href: reference/atl-http-utility-functions.md
+        - name: Funkce kódování textu ATL
+          href: reference/atl-text-encoding-functions.md
+        - name: Funkce cest ATL
+          href: reference/atl-path-functions.md
+        - name: Globální funkce mapy modelu COM
+          href: reference/com-map-global-functions.md
+        - name: Globální funkce složených ovládacích prvků
+          href: reference/composite-control-global-functions.md
+        - name: Globální funkce bodů připojení
+          href: reference/connection-point-global-functions.md
+        - name: Globální funkce ladění a hlášení chyb
+          href: reference/debugging-and-error-reporting-global-functions.md
+        - name: Globální funkce kontextu zařízení
+          href: reference/device-context-global-functions.md
+        - name: Globální funkce zpracování událostí
+          href: reference/event-handling-global-functions.md
+        - name: Globální funkce zařazování
+          href: reference/marshaling-global-functions.md
+        - name: Globální funkce pro převod pixelů na HIMETRIC (a zpět)
+          href: reference/pixel-himetric-conversion-global-functions.md
+        - name: Globální funkce registru a knihovny typů
+          href: reference/registry-and-typelib-global-functions.md
+        - name: Globální funkce zabezpečení
+          href: reference/security-global-functions.md
+        - name: Globální funkce identifikátoru zabezpečení
+          href: reference/security-identifier-global-functions.md
+        - name: Globální funkce serverové registrace
+          href: reference/server-registration-global-functions.md
+        - name: Globální funkce WinModule
+          href: reference/winmodule-global-functions.md
+    - name: Referenční informace k makrům ATL
+      expanded: false
+      items:
+        - name: Makra ATL
+          href: reference/atl-macros.md
+        - name: Agregační makra a makra objektů pro vytváření tříd
+          href: reference/aggregation-and-class-factory-macros.md
+        - name: Makra kategorií
+          href: reference/category-macros.md
+        - name: Makra map COM
+          href: reference/com-map-macros.md
+        - name: Makra COM Interface Entry
+          href: reference/com-interface-entry-macros.md
+        - name: Makra možností kompilátoru
+          href: reference/compiler-options-macros.md
+        - name: Makra složených ovládacích prvků
+          href: reference/composite-control-macros.md
+        - name: Makra bodů připojení
+          href: reference/connection-point-macros.md
+        - name: Makra ladění a hlášení chyb
+          href: reference/debugging-and-error-reporting-macros.md
+        - name: Makra zpracování výjimek
+          href: reference/exception-handling-macros.md
+        - name: Makra map zpráv (ATL)
+          href: reference/message-map-macros-atl.md
+        - name: Makra map objektů
+          href: reference/object-map-macros.md
+        - name: Makra stavu objektů
+          href: reference/object-status-macros.md
+        - name: Makra map vlastností
+          href: reference/property-map-macros.md
+        - name: Makra výměny dat registru
+          href: reference/registry-data-exchange-macros.md
+        - name: Makra registru
+          href: reference/registry-macros.md
+        - name: Makra map služeb
+          href: reference/service-map-macros.md
+        - name: Makra objektů snap-in
+          href: reference/snap-in-object-macros.md
+        - name: Makra převodu řetězců
+          href: reference/string-conversion-macros.md
+        - name: Makra tříd oken
+          href: reference/window-class-macros.md
+        - name: Makra zpráv oken
+          href: reference/windows-messages-macros.md
+    - name: Referenční informace k operátorům ATL
+      href: reference/atl-operators.md
+    - name: Referenční informace ke globálním proměnným ATL
+      href: reference/atl-global-variables.md
+    - name: Referenční informace k definicím typedef ATL
+      href: reference/atl-typedefs.md
+- name: Projekty ATL ve Visual Studiu
+  expanded: false
+  items:
+    - name: Referenční informace k průvodcům a dialogovým oknům ATL
+      expanded: false
+      items:
+        - name: Průvodci a dialogová okna ATL
+          href: reference/atl-wizards-and-dialog-boxes.md
+        - name: Referenční informace k Průvodci komponentami ATL Active Server Pages
+          expanded: false
+          items:
+            - name: Průvodce komponentami ATL Active Server Pages
+              href: reference/atl-active-server-page-component-wizard.md
+            - name: 'Průvodce komponentami ATL Active Server Pages, ASP'
+              href: reference/asp-atl-active-server-page-component-wizard.md
+            - name: 'Průvodce komponentami ATL Active Server Pages, možnosti'
+              href: reference/options-atl-active-server-page-component-wizard.md
+        - name: Referenční informace k Průvodci komponentami ATL COM+ 1.0
+          expanded: false
+          items:
+            - name: Průvodce komponentami ATL COM+ 1.0
+              href: reference/atl-com-plus-1-0-component-wizard.md
+            - name: 'Průvodce komponentami COM+ 1.0, ATL COM+ 1.0'
+              href: reference/com-plus-1-0-atl-com-plus-1-0-component-wizard.md
+        - name: Referenční informace k Průvodci ovládacími prvky ATL
+          expanded: false
+          items:
+            - name: Průvodce ovládacími prvky ATL
+              href: reference/atl-control-wizard.md
+            - name: 'Průvodce ovládacími prvky ATL, vzhled'
+              href: reference/appearance-atl-control-wizard.md
+            - name: 'Průvodce ovládacími prvky ATL, rozhraní'
+              href: reference/interfaces-atl-control-wizard.md
+            - name: 'Průvodce ovládacími prvky ATL, možnosti'
+              href: reference/options-atl-control-wizard.md
+            - name: 'Průvodce ovládacími prvky ATL, základní vlastnosti'
+              href: reference/stock-properties-atl-control-wizard.md
+        - name: Referenční informace k Průvodci dialogem ATL
+          href: reference/atl-dialog-wizard.md
+        - name: Referenční informace k Průvodci příjemcem ATL OLE DB
+          href: reference/atl-ole-db-consumer-wizard.md
+        - name: Referenční informace k Průvodci zprostředkovatelem ATL OLE DB
+          href: reference/atl-ole-db-provider-wizard.md
+        - name: Referenční informace k Průvodci projektem ATL
+          expanded: false
+          items:
+            - name: Průvodce projektem ATL
+              href: reference/atl-project-wizard.md
+            - name: 'Nastavení aplikace, průvodce projektem ATL'
+              href: reference/application-settings-atl-project-wizard.md
+        - name: Referenční informace k Průvodci stránkou vlastností ATL
+          expanded: false
+          items:
+            - name: Průvodce stránkou vlastností ATL
+              href: reference/atl-property-page-wizard.md
+            - name: 'Průvodce stránkou vlastností ATL, možnosti'
+              href: reference/options-atl-property-page-wizard.md
+            - name: 'Průvodce stránkou vlastností ATL, řetězce'
+              href: reference/strings-atl-property-page-wizard.md
+        - name: Referenční informace k Průvodci jednoduchým objektem ATL
+          expanded: false
+          items:
+            - name: Průvodce jednoduchým objektem ATL
+              href: reference/atl-simple-object-wizard.md
+            - name: 'Průvodce jednoduchým objektem ATL, možnosti'
+              href: reference/options-atl-simple-object-wizard.md
+    - name: Přidání nového rozhraní v projektu ATL
+      href: reference/adding-a-new-interface-in-an-atl-project.md
+    - name: Přidání komponenty ATL Active Server Pages
+      href: reference/adding-an-atl-active-server-page-component.md
+    - name: Přidání komponenty ATL COM+ 1.0
+      href: reference/adding-an-atl-com-plus-1-0-component.md
+    - name: Přidání ovládacího prvku ATL
+      href: reference/adding-an-atl-control.md
+    - name: Přidání dialogového okna ATL
+      href: reference/adding-an-atl-dialog-box.md
+    - name: Přidání příjemce ATL OLE DB
+      href: reference/adding-an-atl-ole-db-consumer.md
+    - name: Přidání zprostředkovatele ATL OLE DB
+      href: reference/adding-an-atl-ole-db-provider.md
+    - name: Přidání stránky vlastností ATL
+      href: reference/adding-an-atl-property-page.md
+    - name: Přidání jednoduchého objektu ATL
+      href: reference/adding-an-atl-simple-object.md
+    - name: Přidání objektů a ovládacích prvků do projektu ATL
+      href: reference/adding-objects-and-controls-to-an-atl-project.md
+    - name: Vytvoření projektu ATL
+      href: reference/creating-an-atl-project.md
+    - name: Podpora COM+ 1.0 v projektech ATL
+      href: reference/com-plus-1-0-support-in-atl-projects.md
+    - name: Výchozí konfigurace projektů ATL
+      href: reference/default-atl-project-configurations.md
+    - name: Nastavení nevytvořitelného objektu ATL
+      href: reference/making-an-atl-object-noncreatable.md
+    - name: Podpora MFC v projektech ATL
+      href: reference/mfc-support-in-atl-projects.md
+    - name: Zadání optimalizace kompilátoru pro projekt ATL
+      href: reference/specifying-compiler-optimization-for-an-atl-project.md
