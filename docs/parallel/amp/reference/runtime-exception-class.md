@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-ms.openlocfilehash: 024ede0f05dfd646bcebe7acd2cfb86b5c54f6d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ed3fb5edd861eaecd0bf9a39687a2a63fdfe695
+ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352725"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65975184"
 ---
 # <a name="runtimeexception-class"></a>runtime_exception – třída
 
@@ -30,20 +30,20 @@ class runtime_exception : public std::exception;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[runtime_exception Constructor](#ctor)|Inicializuje novou instanci třídy `runtime_exception` třídy.|
 |[~runtime_exception Destructor](#dtor)|Odstraní `runtime_exception` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[get_error_code](#get_error_code)|Vrátí kód chyby, který způsobil výjimku.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[operátor =](#operator_eq)|Zkopíruje obsah zadaného `runtime_exception` do tohoto objektu.|
 
@@ -102,7 +102,7 @@ Odstraní objekt.
 virtual ~runtime_exception() throw();
 ```
 
-## <a name="geterrorcode"></a>get_error_code
+## <a name="get_error_code"></a> get_error_code
 
 Vrátí kód chyby, který způsobil výjimku.
 

@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: 5ea7900df8d71157a7ea77dd27a8ba83dfe259a1
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 2dccb1c2081996ce7336652b207f3a68b20a3f9e
+ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611737"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65975122"
 ---
 # <a name="run-time-object-model-services"></a>Služby modelu běhového objektu
 
@@ -165,7 +165,7 @@ Podívejte se na příklad pro [IMPLEMENT_DYNCREATE](#implement_dyncreate).
 
 **Záhlaví:** afx.h
 
-## <a name="declareolectltype"></a>DECLARE_OLECTLTYPE
+## <a name="declare_olectltype"></a> declare_olectltype
 
 Deklaruje `GetUserTypeNameID` a `GetMiscStatus` členské funkce třídy vašeho ovládacího prvku.
 
@@ -188,7 +188,7 @@ Název třídy ovládacího prvku.
 
 **Záhlaví:** afxctl.h
 
-## <a name="declareproppageids"></a>DECLARE_PROPPAGEIDS
+## <a name="a-namedeclareproppageids-declareproppageids"></a><a name="declare_proppageids"> declare_proppageids
 
 Deklaruje, že ovládací prvek OLE obsahuje seznam stránek vlastností zobrazíte jeho vlastnosti.
 
@@ -361,7 +361,7 @@ ID třídy OLE je jedinečný identifikátor 128 bitů pro objekt. Se skládá z
 
 **Header:** afxdisp.h
 
-## <a name="implementolectltype"></a>IMPLEMENT_OLECTLTYPE
+## <a name="a-nameimplementolectltype-implementolectltype"></a><a name="implement_olectltype"> implement_olectltype
 
 Implementuje `GetUserTypeNameID` a `GetMiscStatus` členské funkce třídy vašeho ovládacího prvku.
 

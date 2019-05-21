@@ -1,16 +1,16 @@
 ---
 title: Microsoft C++ tabulka přizpůsobení jazyka
-ms.date: 05/19/2019
+ms.date: 05/20/2019
 ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: c36256988e2698cb6f04e0ab71dbf6211b596033
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.openlocfilehash: 994878509c4fc1bf14390fad8ff4c112a4af8242
+ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934181"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65975168"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Microsoft C++ tabulka přizpůsobení jazyka
 
@@ -89,32 +89,33 @@ Podrobné informace o vylepšení a jiné změny ve Visual Studio 2017 nebo Visu
 |----|---|
 |__C ++ 17 základních funkcí jazyka (zprávy o chybách)__|__Podporuje se__|
 |&nbsp;&nbsp;[Oprava P0702R1 třídy odvození argumentu šablony pro konstruktory seznam inicializátorů](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[Zjednodušení P0588R1 zachycení lambdy implicitní](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0588r1.html)|Ne|
 |&nbsp;&nbsp;[P0961R1 uvolnit přizpůsobení strukturovaných vazeb bodu pravidla hledání](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0961r1.html)|VS 2019 16.0 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0962R2 uvolnit rozsahu-pro přizpůsobení bod smyčky hledání pravidla](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0962r1.html)|Ne|
 |&nbsp;&nbsp;[Povolení P0969R0 strukturované vazby přístupní členové](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0969r0.pdf)|VS 2019 16.0 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0859R0 CWG 1581: Když jsou definovány členské funkce constexpr.](https://wg21.link/P0859R0)|Ne|
+|&nbsp;&nbsp;[Zjednodušení P0588R1 zachycení lambdy implicitní](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0588r1.html)|Ne|
+|&nbsp;&nbsp;[P0962R2 uvolnit rozsahu-pro přizpůsobení bod smyčky hledání pravidla](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0962r1.html)|Ne|
 |&nbsp;&nbsp;[P0929R2 kontrolu typů abstraktní třídu](https://wg21.link/P0929R2)|Ne|
 |&nbsp;&nbsp;[Odvození velikost pole P1009R2 ve výrazu new](https://wg21.link/P1009R2)|Ne|
 |&nbsp;&nbsp;[P1286R2 Contra CWG DR1778](https://wg21.link/P1286R2)|Ne|
-
 |Oblast funkcí| |
 |----|---|
 |__20 základní funkce jazyka c ++__|__Podporuje se__|
 |&nbsp;&nbsp;[Oprava P0704R1 const l-hodnoty kvalifikaci ref ukazatelů na členy](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0704r1.html)|VS 2015 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[Noexcept: P0972R0 pro \<chrono > zero(), min(), funkce max()](https://wg21.link/P0972R0)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp;[Ujistěte se, P1041R4 char16_t/char32_t řetězcové literály se kódování UTF-16 a 32](https://wg21.link/P1041R4)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[Změna P1330R0 aktivním členem sjednocení uvnitř constexpr.](https://wg21.link/P1330R0)|VS 2017 15.0 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp;[Noexcept: P0972R0 pro \<chrono > zero(), min(), funkce max()](https://wg21.link/P0972R0)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp;[Operátor porovnání trojcestných (kosmické lodě) P0515R3 <> =](https://wg21.link/P0515R3)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[Zákaz P1008R1 agregace s uživatelem deklarované konstruktory](https://wg21.link/P1008R1)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[Určený P0329R4 inicializace](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[Povolení P0409R2 lambda-capture \[= to\]](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[Operátor porovnání trojcestných (kosmické lodě) P0515R3 <> =](https://wg21.link/P0515R3) a [P0905R1 symetrie pro kosmické lodě](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0905r1.html)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[Operátor porovnání trojcestných (kosmické lodě) P0515R3 <> =](https://wg21.link/P0515R3)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[Makra testu funkcí P0941R2](https://wg21.link/P0941R2)|VS 2019 16.0 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[Zákaz P1008R1 agregace s uživatelem deklarované konstruktory](https://wg21.link/P1008R1)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0846R0 ADL a funkce šablon, které nejsou viditelné](https://wg21.link/P0846R0)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[Konstantní neshoda P0641R2 s nastavený na výchozí hodnotu kopírovacího konstruktoru](https://wg21.link/P0641R2)|Částečné|
-|&nbsp;&nbsp;[Přidání P0306R4 \_ \_VA_OPT\_ \_ pro vynechání čárkami a odstranění čárkou](https://wg21.link/P0306R4) a [P1042R1 \_ \_VA_OPT\_ \_ vyjasnění znění](https://wg21.link/P1042R1)|Ne|
+|&nbsp;&nbsp;[Přidání P0306R4 \_ \_VA_OPT\_ \_ pro vynechání čárkami a odstranění čárkami](https://wg21.link/P0306R4)|Ne|
 |&nbsp;&nbsp;[Povolení P0315R4 výrazy lambda v nevyhodnoceném kontextu](https://wg21.link/P0315R4)|Ne|
 |&nbsp;&nbsp;[Povolení P0409R2 lambda-capture \[= to\]](https://wg21.link/P0409R2)|Ne|
-|&nbsp;&nbsp;[P0428R2 známou syntaxi šablony pro obecné výrazy lambda](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r2.pdf)|Ne|
+|&nbsp;&nbsp;[P0428R2 známou syntaxi šablony pro obecné výrazy lambda](http://www.open-std.org/jtc1/sc22/wg21/docs/pa pers/2017/p0428r2.pdf)|Ne|
 |&nbsp;&nbsp;[P0479R5 \[ \[pravděpodobně\] \] a \[ \[pravděpodobně\] \] atributy](https://wg21.link/P0479R5)|Ne|
 |&nbsp;&nbsp;[Kontrakty P0542R5](https://wg21.link/P0542R5)|Ne|
 |&nbsp;&nbsp;[P0614R1 Range-based smyčky s inicializátory](https://wg21.link/P0614R1)|Ne|
@@ -133,7 +134,6 @@ Podrobné informace o vylepšení a jiné změny ve Visual Studio 2017 nebo Visu
 |&nbsp;&nbsp;[P0912R5 Coroutines](https://wg21.link/P0912R5)|Ne|
 |&nbsp;&nbsp;[Povolit P0960R3 inicializace agregátů ze seznamu hodnot v závorkách.](https://wg21.link/P0960R3)|Ne|
 |&nbsp;&nbsp;[Bloky try-catch P1002R1 součástí funkcí constexpr.](https://wg21.link/P1002R1)|Ne|
-|&nbsp;&nbsp;[Ujistěte se, P1041R4 char16_t/char32_t řetězcové literály se kódování UTF-16 a 32](https://wg21.link/P1041R4)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[Povolení P1064R0 virtuální funkce se volá v konstantních výrazech](https://wg21.link/P1064R0)|Ne|
 |&nbsp;&nbsp;[Okamžité P1073R3 funkce](https://wg21.link/P1073R3)|Ne|
 |&nbsp;&nbsp;[Nestačí P1084R2 ještě dnes return typ požadavky](https://wg21.link/P1084R2)|Ne|
@@ -156,12 +156,21 @@ Podrobné informace o vylepšení a jiné změny ve Visual Studio 2017 nebo Visu
 |Oblast funkcí| |
 |---|---|
 |__Funkce c ++ 20 standardní knihovny__|__Podporuje se__|
+|&nbsp;&nbsp;[Porovnání P0809R0 neuspořádaná kontejnery](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0809r0.pdf)| VS 2010 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp;[Požadavky na Constexpr iterátor P0858R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0858r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0777R1, jak se vyhnout zbytečným Decay](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0777r1.pdf)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp;[P0550R2 remove_cvref](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0550r2.pdf)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0318R1 unwrap_reference, unwrap_ref_decay](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0318r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0457R2 starts_with()/ends_with() pro basic_string/basic_string_view](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0457r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[Metoda contains() P0458R2 pro seřazené a neseřazené asociativní kontejnery](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0458r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0646R1 list/forward_list remove()/remove_if()/unique() Return size_type](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0646r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0769R2 shift_left(), shift_right()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0769r2.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0887R1 type_identity](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0887r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0019R8 atomic_ref](https://wg21.link/P0019R8)|Ne|
 |&nbsp;&nbsp;[P0020R6 atomic\<float >, atomické\<double >, atomické\<long double >](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0020r6.html)|Ne|
 |&nbsp;&nbsp;[P0053R7 \<syncstream >](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0053r7.pdf)<br/>&nbsp;&nbsp;[P0753R2 osyncstream manipulátory](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0753r2.pdf)|Ne|
 |&nbsp;&nbsp;[P0122R7 \<span>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0122r7.pdf)|Ne|
 |&nbsp;&nbsp;[P0202R3 constexpr pro \<algoritmus > a Exchange():](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0202r3.html)|Ne|
-|&nbsp;&nbsp;[P0318R1 unwrap_reference, unwrap_ref_decay](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0318r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0339R6 polymorphic_allocator<>](https://wg21.link/P0339R6)|Ne|
 |&nbsp;&nbsp;[P0340R3 SFINAE-Friendly underlying_type](https://wg21.link/P0340R3)|Ne|
 |&nbsp;&nbsp;[P0355R7 \<chrono > kalendáře a časových pásem](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0355r7.html)|Ne|
@@ -169,22 +178,18 @@ Podrobné informace o vylepšení a jiné změny ve Visual Studio 2017 nebo Visu
 |&nbsp;&nbsp;[Reference_wrapper – P0357R3 podpora nekompletní typy v](https://wg21.link/P0357R3)|Ne|
 |&nbsp;&nbsp;[P0415R1 constexpr pro \<komplexní > (znovu)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0415r1.html)|Ne|
 |&nbsp;&nbsp;[Memory_order třídy výčtu P0439R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0439r0.html)|Ne|
-|&nbsp;&nbsp;[P0457R2 starts_with()/ends_with() pro basic_string/basic_string_view](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0457r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[Metoda contains() P0458R2 pro seřazené a neseřazené asociativní kontejnery](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0458r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0463R1 endian](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html)|Ne|
 |&nbsp;&nbsp;[P0475R1 garantovaná Elize kopírování pro rozdělení Piecewise konstrukce](https://wg21.link/P0475R1)|Ne|
 |&nbsp;&nbsp;[P0476R2 <bit> bit_cast](https://wg21.link/P0476R2)|Ne|
 |&nbsp;&nbsp;[P0482R6 char8_t: Typ kódování UTF-8 znaků a řetězce](https://wg21.link/P0482R6)|Ne|
 |&nbsp;&nbsp;[Oprava P0487R1 operátor >> (basic_istream &, graf *)](https://wg21.link/P0487R1)|Ne|
 |&nbsp;&nbsp;[P0528R3 atomické porovnání a Exchange s odsazení Bits](https://wg21.link/P0528R3)|Ne|
-|&nbsp;&nbsp;[P0550R2 remove_cvref](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0550r2.pdf)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0556R3 <bit> ispow2() ceil2(), floor2(), log2p1()](https://wg21.link/P0556R3)|Ne|
 |&nbsp;&nbsp;[Funkce P0591R4 nástrojů pro tvorbu používá přidělování](https://wg21.link/P0591R4)|Ne|
 |&nbsp;&nbsp;[P0600R1 \[ \[nodiscard\] \] pro STL, část 1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0600r1.pdf)|Ne|
 |&nbsp;&nbsp;[Konstruktor pro převod zlepšení P0608R3 variant/přiřazení](https://wg21.link/P0608R3)|Ne|
 |&nbsp;&nbsp;[Pomocí P0616R0 move() v \<číselné >](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0616r0.pdf)|Ne|
 |&nbsp;&nbsp;[P0619R4 odebírání funkcí C ++ 17 zastaralé v C ++ 20](https://wg21.link/P0619R4)|Ne|
-|&nbsp;&nbsp;[P0646R1 list/forward_list remove()/remove_if()/unique() Return size_type](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0646r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0653R2 to_address()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html)|Ne|
 |&nbsp;&nbsp;[P0655R1 visit<R>()](https://wg21.link/P0655R1)|Ne|
 |&nbsp;&nbsp;[P0674R1 make_shared() pro pole](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0674r1.html)|Ne|
@@ -194,14 +199,9 @@ Podrobné informace o vylepšení a jiné změny ve Visual Studio 2017 nebo Visu
 |&nbsp;&nbsp;[P0758R1 is_nothrow_convertible](https://wg21.link/P0758R1)|Ne|
 |&nbsp;&nbsp;[Is_pod – P0767R1 ukončení podpory](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0767r1.html)|Ne|
 |&nbsp;&nbsp;[Podpora knihovny P0768R1 pro operátor porovnání kosmické lodě \<=>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0768r1.pdf)|Ne|
-|&nbsp;&nbsp;[P0769R2 shift_left(), shift_right()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0769r2.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[Noexcept: P0771R1 std::function přesunout konstruktor](https://wg21.link/P0771R1)|Ne|
-|&nbsp;&nbsp;[P0777R1, jak se vyhnout zbytečným Decay](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0777r1.pdf)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[Porovnání P0809R0 neuspořádaná kontejnery](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0809r0.pdf)| VS 2010 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0811R3 midpoint(), lerp()](https://wg21.link/P0811R3)|Ne|
-|&nbsp;&nbsp;[Požadavky na Constexpr iterátor P0858R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0858r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0879R0 constexpr pro funkce prohození](https://wg21.link/P0879R0)|Ne|
-|&nbsp;&nbsp;[P0887R1 type_identity](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0887r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0896R4 \<rozsahy\>](https://wg21.link/P0896R4)|Ne|
 |&nbsp;&nbsp;[Koncepty P0898R3 standardní knihovny](https://wg21.link/P0898R3)|Ne|
 |&nbsp;&nbsp;[Podpora knihovny P0912R5 Korutinách](https://wg21.link/P0912R5)|Ne|
@@ -215,7 +215,6 @@ Podrobné informace o vylepšení a jiné změny ve Visual Studio 2017 nebo Visu
 |&nbsp;&nbsp;[Vytvoření inteligentního ukazatele P1020R1 s výchozí inicializace](https://wg21.link/P1020R1)|Ne|
 |&nbsp;&nbsp;[P1023R0 constexpr pro std::array porovnání](https://wg21.link/P1023R0)|Ne|
 |&nbsp;&nbsp;[Různé P1032R1 constexpr.](https://wg21.link/P1032R1)|Ne|
-|&nbsp;&nbsp;[Provádění P1164R1 create_directory() Intuitive (hlášení o defektu)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1164r1.pdf)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[Operator+() P1165R1 konzistentně šíření stavová Alokátorů v basic_string.](https://wg21.link/P1165R1)|Ne|
 |&nbsp;&nbsp;[P1209R0 erase_if(), erase()](https://wg21.link/P1209R0)|Ne|
 |&nbsp;&nbsp;[P1227R2 Signed std::ssize(), Unsigned span::size()](https://wg21.link/P1227R2)|Ne|
@@ -274,7 +273,7 @@ Podrobné informace o vylepšení a jiné změny ve Visual Studio 2017 nebo Visu
 |&nbsp;&nbsp;[P0185R1 is_swappable, is_nothrow_swappable](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0185r1.html)|VS 2015.3|
 |&nbsp;&nbsp;[P0209R2 make_from_tuple()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0209r2.pdf)|VS 2017 15.0|
 |&nbsp;&nbsp;[P0218R1 \<filesystem>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0218r1.html)<br/>&nbsp;&nbsp;[P0219R1 relativní cesty k systému souborů](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0219r1.html)<br/>&nbsp;&nbsp;[Položka adresáře P0317R1 ukládání do mezipaměti pro systém souborů](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0317r1.html)<br/>&nbsp;&nbsp;[Podpora P0392R0 string_view v systému souborů cesty](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0392r0.pdf)<br/>&nbsp;&nbsp;[P0430R2 podpůrné systémy – specifikace POSIX](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0430r2.pdf)<br/>&nbsp;&nbsp;[P0492R2 komentáře NB řešení pro systém souborů](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0492r2.html)|VS 2017 15.7 <sup>[E](#note_E)</sup>|
-|&nbsp;&nbsp;[P0220R1 Library Fundamentals V1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0220r1.html)|VS 2017 15.6 <sup>[F](#note_F)</sup>|
+|&nbsp;&nbsp;[P0220R1 Library Fundamentals V1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0220r1.html)|VS 2017 15.6|
 |&nbsp;&nbsp;[Matematické funkce speciální P0226R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0226r1.pdf)|VS 2017 15.7|
 |&nbsp;&nbsp;[Integrace P0254R2 string_view a std::string](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0254r2.pdf)|VS 2017 15.0|
 |&nbsp;&nbsp;[P0258R2 has_unique_object_representations](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0258r2.html)|VS 2017 15.3 <sup>[G](#note_G)</sup>|
@@ -362,15 +361,13 @@ Možnost kompilátoru [/Zc: noexcepttypes](../build/reference/zc-noexcepttypes.m
 
 <a name="note_E"></a>__Elektronické__ to je úplně nové implementaci, nekompatibilní s předchozí `std::experimental` verze vyžadovaných symlink podpory, opravy chyb a změny v chování vyžaduje standard. V současné době včetně \<systému souborů > poskytuje nové `std::filesystem` a předchozí `std::experimental::filesystem`, včetně \<experimentální/systému souborů > poskytuje pouze původní experimentální implementaci. ODEBERE experimentální implementace v další vydané verzi ABI ukončování knihoven.
 
-<a name="note_F"></a>__F__ funkce, které nebyly dokončeny v sadě Visual Studio 2015 jsou rozdělená jinde v této tabulce.
-
 <a name="note_G"></a>__G__ vnitřní kompilátor nepodporuje.
 
 <a name="note_14"></a>__14__ tyto 17/20 funkce C ++ jsou vždy povoleny, i v případě [/std: c ++ 14](../build/reference/std-specify-language-standard-version.md) (výchozí nastavení) je definováno. Je to způsobeno funkce byla implementována před zavedením **/std** možnosti, nebo protože podmíněné implementace bylo by složité.
 
 <a name="note_17"></a>__17__ tyto funkce jsou povolené [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md) (nebo [/std: c ++ nejnovější](../build/reference/std-specify-language-standard-version.md)) – možnost kompilátoru.
 
-<a name="note_20"></a>__20__ tyto funkce jsou povolené [/std: c ++ nejnovější](../build/reference/std-specify-language-standard-version.md) – možnost kompilátoru. Po dokončení implementace 20 C ++, nový **/std: c ++ 20** přidá – možnost kompilátoru.
+<a name="note_20"></a>__20__ tyto funkce jsou povolené [/std: c ++ nejnovější](../build/reference/std-specify-language-standard-version.md) – možnost kompilátoru. Po dokončení implementace 20 C ++, nový **/std: c ++ 20** – možnost kompilátoru se přidají, pod kterým tyto funkce bude také k dispozici.
 
 <a name="note_byte"></a>__bajtů__ `std::byte` zajišťuje [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md) (nebo [/std: c ++ nejnovější](../build/reference/std-specify-language-standard-version.md)), ale vzhledem k tomu, že ji může dojít ke konfliktu se záhlavím Windows SDK v některých případech, má podrobných – makro odhlásit. Je možné ho zakázat tak, že definujete `_HAS_STD_BYTE` jako `0`.
 
