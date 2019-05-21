@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: c3917fea0f13e54d5f8f73599a2d28482bb6d259
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c409bf10a2f863c380cda6b4822583ffb3787da6
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204094"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934098"
 ---
 # <a name="model"></a>.MODEL
 
@@ -50,7 +50,7 @@ Následující tabulka uvádí možné hodnoty pro každý parametr při cílen�
 
 ## <a name="code"></a>Kód
 
-MASM související ukázky, stáhněte si ukázky kompilátoru z [Visual C++ – ukázky MFC a související dokumentaci pro sadu Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=178749).
+MASM související ukázky, stáhněte si ukázky kompilátoru z [Visual C++ – ukázky MFC a související dokumentaci pro sadu Visual Studio 2010](https://go.microsoft.com/fwlink/p/?linkid=178749).
 
 Následující příklad ukazuje použití `.MODEL` směrnice.
 

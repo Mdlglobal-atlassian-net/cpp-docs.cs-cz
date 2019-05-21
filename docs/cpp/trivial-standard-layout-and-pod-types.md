@@ -2,16 +2,16 @@
 title: Triviální, standardního rozložení, POD a typy literálu
 ms.date: 04/05/2018
 ms.assetid: 2b23a7be-9bad-49fc-8298-31a9a7c556b0
-ms.openlocfilehash: c742f4c84a1b2ba558b790d7eea7760902da7818
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2745302b3ebd7927e9d839e4661e884a2bd91042
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266761"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934211"
 ---
 # <a name="trivial-standard-layout-pod-and-literal-types"></a>Triviální, standardního rozložení, POD a typy literálu
 
-Termín *rozložení* odkazuje na tom, jak členům v objektu typu třídy, struktury nebo sjednocení jsou uspořádáni v paměti. V některých případech je dobře definovaných ve specifikaci jazyka rozložení. Ale když třída nebo struktura obsahuje určitých funkcí jazyka C++, jako jsou virtuální základní třídy, virtuální funkce, členy s různá řízení přístupu, pak kompilátoru je umožněno vybrat rozložení. Toto rozložení se mohou lišit v závislosti na tom, jaké optimalizace provádění a v mnoha případech nemusí objekt i zabírat souvislých oblasti paměti. Například pokud třída má virtuální funkce, všechny instance této třídy může sdílet tabulku jedné virtuální funkce. Tyto typy jsou samozřejmě velmi užitečné, ale mají omezení. Vzhledem k tomu, že není definováno rozložení nejde jim předat programy napsané v jiných jazycích, jako je C, a protože ty můžou být nesouvislé, nelze zkopírovat spolehlivě pomocí funkce rychle nízké úrovně, jako `memcopy` nebo serializovali přes síť.
+Termín *rozložení* odkazuje na tom, jak členům v objektu typu třídy, struktury nebo sjednocení jsou uspořádáni v paměti. V některých případech je dobře definovaných ve specifikaci jazyka rozložení. Ale když třída nebo struktura obsahuje určitých funkcí jazyka C++, jako jsou virtuální základní třídy, virtuální funkce, členy s různá řízení přístupu, pak kompilátoru je umožněno vybrat rozložení. Toto rozložení se mohou lišit v závislosti na tom, jaké optimalizace provádění a v mnoha případech nemusí objekt i zabírat souvislých oblasti paměti. Například pokud třída má virtuální funkce, všechny instance této třídy může sdílet tabulku jedné virtuální funkce. Tyto typy jsou velmi užitečné, ale mají omezení. Vzhledem k tomu, že není definováno rozložení nejde jim předat programy napsané v jiných jazycích, jako je C, a protože ty můžou být nesouvislé, nelze zkopírovat spolehlivě pomocí funkce rychle nízké úrovně, jako `memcopy`, nebo serializovali přes síť.
 
 Umožňuje kompilátory stejně jako programy v jazyce C++ a metaprograms argumentovat o vhodnosti daného typu pro operace, které jsou závislé na rozložení konkrétní paměťové zavedené C ++ 14 tři kategorie jednoduché třídy a struktury: *triviální*, *standardního rozložení*, a *POD* nebo obyčejná stará Data. Standardní knihovna obsahuje šablony funkcí `is_trivial<T>`, `is_standard_layout<T>` a `is_pod<T>` určující, zda daného typu patří k dané kategorie.
 

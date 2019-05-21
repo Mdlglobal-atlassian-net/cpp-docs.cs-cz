@@ -1,28 +1,29 @@
 ---
 title: C++ v sadě Visual Studio
 description: Visual C++ je název pro kompilátor C++ společnosti Microsoft, editor kódu a související nástroje v integrovaném vývojovém prostředí sady Visual Studio. Použití jazyka Visual C++ pro vývoj aplikací pro Windows, Linux, Android a iOS.
-ms.date: 09/26/2018
+ms.date: 05/13/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: a01c6448174a35da900b7b50a1df5916a2983201
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 2706d232dba2a7971edd8d84da2b1d1399ed6e25
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222598"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934144"
 ---
 # <a name="c-in-visual-studio"></a>C++ v sadě Visual Studio
 
 > [!NOTE]
-> Tato dokumentace pro vývojáře se vztahuje na Visual Studio 2015 a Visual Studio 2017.
+> Tuto dokumentaci pro vývojáře se vztahuje k sadě Visual Studio 2015 a novější. Pomocí selektoru verze v levém horním rohu stránky tak, aby odpovídaly vaší verze sady Visual Studio.
 >
 > Pokud hledáte balíček distribuovatelných součástí Visual C++ tak, aby mohly běžet programu, pokračujte [Microsoft Download Center](http://www.microsoft.com/download/) a zadejte **Visual C++** do vyhledávacího pole.
 
-
 Microsoft Visual C++, obvykle zkrátila na Visual C++ nebo MSVC, je název pro C++, C a jazyk sestavení vývojářské nástroje a knihovny, které jsou k dispozici jako součást sady Visual Studio ve Windows. Tyto nástroje a knihovny umožňují vytvářet aplikace pro univerzální platformu Windows (UPW), nativních aplikací stolní počítače a servery Windows, multiplatformní knihovny a aplikace, které běží na Windows, Linux, Android a iOS, stejně jako spravovaných aplikací a knihoven, které používají rozhraní .NET Architektura. Visual C++ můžete použít k zápisu cokoli z jednoduché konzolové aplikace do nejvíce propracované a komplexní aplikace pro Windows desktop z ovladačů zařízení a součástí operačního systému pro mobilní zařízení a hry pro různé platformy z nejmenší zařízení IoT k více serverů vysokovýkonného výpočetního prostředí v cloudu Azure.
+
+Visual Studio 2015 a 2017 2019 může být nainstalovaná vedle sebe. Visual Studio 2019 (v142 sada nástrojů kompilátoru) můžete použít k úpravám a vytváření aplikací pomocí sady nástrojů ze sady Visual Studio 2015 (v140) a Visual Studio 2017 (verze 141).
 
 ## <a name="whats-new-and-conformance-history"></a>Co je nového a historie shody
 

@@ -1,34 +1,30 @@
 ---
 title: Co je nového v C++ ve Visual Studio 2019
-ms.date: 04/02/2019
+ms.date: 05/13/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 493b96a8ce3359cc18287adbae8cbd6c374671ec
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 19eaa9d4ed1cf12e721825f998fa674363eda488
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837626"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934136"
 ---
-<!--NOTE all https:// links to docs.microsoft.com need to be converted to site-relative links prior to publishing-->
-
 # <a name="whats-new-for-c-in-visual-studio-2019"></a>Co je nového v C++ ve Visual Studio 2019
 
-Visual Studio 2019 přináší řadu vylepšení a oprav prostředí Microsoft C++. Jsme opravy mnoha chyb a nahlášených problémů v kompilátoru a nástrojů, řadu z nich odeslali zákazníci přes [nahlásit problém](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) a [poslat návrh](https://developercommunity.visualstudio.com/spaces/62/index.html) možnosti v části **odeslat zpětnou vazbu**. Děkujeme vám, že hlásíte chyby! Další informace o tom, co je nového v celé sady Visual Studio, navštivte web [co je nového v sadě Visual Studio](/visualstudio/ide/whats-new-visual-studio-2019).
+Visual Studio 2019 přináší řadu vylepšení a oprav prostředí Microsoft C++. Vyřešili jsme mnoho chyb a problémů v kompilátoru a nástrojů, řadu z nich odeslali zákazníci přes [nahlásit problém](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) a [poslat návrh](https://developercommunity.visualstudio.com/spaces/62/index.html) možnosti v části **odeslat zpětnou vazbu**. Děkujeme vám, že hlásíte chyby! Další informace o tom, co je nového v celé sady Visual Studio, navštivte web [co je nového v sadě Visual Studio](/visualstudio/ide/whats-new-visual-studio-2019).
 
 ## <a name="c-compiler"></a>kompilátor C++
 
-- `/std:c++latest` Možnost nyní zahrnuje funkce C ++ 20, které nejsou nutně dokončeny, včetně počáteční podporu pro C ++ 20 operátor <> = ("kosmické lodě") pro třícestné porovnání.
+- Vylepšená podpora pro funkce C ++ 17 a řeší správnost, a navíc experimentální podporu pro C ++ 20 funkcí jako jsou moduly a korutin. Podrobné informace najdete v tématu [vylepšení shody C++ ve Visual Studio 2019](../cpp-conformance-improvements.md).
 
-- [P0941R2 – makra testu funkcí](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0941r2.html) je kompletní s podporou `__has_cpp_attribute`. Makra testu funkcí jsou podporovány ve všech režimech Standard.
-
-- [C ++ 20 P1008R1 – zákaz agregace s uživatelem deklarované konstruktory](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1008r1.pdf) je kompletní.
-
-- Vylepšená podpora pro funkce C ++ 17, plus experimentální podporu pro C ++ 20 funkcí jako jsou moduly a korutin. Podrobné informace najdete v tématu [vylepšení shody C++ ve Visual Studio 2019](../cpp-conformance-improvements.md).
+- `/std:c++latest` Možnost nyní zahrnuje funkce C ++ 20, které nejsou nutně dokončeny, včetně počáteční podporu pro C ++ 20 operátor \<= > ("kosmické lodě") pro třícestné porovnání.
 
 - Přepínač kompilátoru jazyka C++ `/Gm` je nyní zastaralá. Zvažte zakázání `/Gm` přepnout ve skriptech sestavení, pokud není výslovně uveden. Ale můžete taky ignorovat upozornění zastarání pro `/Gm`, protože není považováno za chybu při použití "Zpracovávat upozornění jako chyby" (`/WX`).
+
+- MSVC zahájení implementace funkce z C ++ 20 standardní návrhu v rámci `/std:c++latest` příznak `/std:c++latest` je teď kompatibilní s `/clr` (všechny typy), `/ZW`, a `/Gm`. V aplikaci Visual Studio 2019 pomocí `/std:c++17` nebo `/std:c++14` režimy při kompilaci s `/clr`, `/ZW` nebo `/Gm` (ale najdete v předchozím bodě).
 
 - U aplikací C++ pro konzoly a klasickou pracovní plochu se už negenerují předkompilované hlavičky.
 
@@ -38,25 +34,17 @@ Vylepšení analýzy s `/Qspectre` pro poskytování pomoci zmírnění chyby za
 
 ## <a name="c-standard-library-improvements"></a>Vylepšení standardní knihovny C++
 
-- [C++ 20 P0550R2 \(remove_cvref)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0550r2.pdf) je dokončena.
+- Implementace dalších C ++ 17 a C ++ 20 knihovna funkcí a správnost opravy. Podrobné informace najdete v tématu [vylepšení shody C++ ve Visual Studio 2019](../cpp-conformance-improvements.md).
 
-- C ++ 17 \<charconv > vylepšili jsme plovoucí desetinné čárky to_chars(): nejkratší chars_format::fixed je 60 80 % rychlejší a dokončení chars_format::hex nejkratší nebo přesnosti.
+- Byl použit clang-Format C++ hlavičky standardní knihovny vylepšenou čitelností.
 
-- Další algoritmy mají paralelizovaná implementace: is_sorted() is_sorted_until(), is_partitioned(), set_difference(), set_intersection(), is_heap(), is_heap_until().
+- Vzhledem k tomu, že Visual Studio teď podporuje pouze můj kód pro C++, standardní knihovna již nemusí poskytnout vlastní mechanismus pro `std::function` a `std::visit` k dosažení stejného výsledku. Odebrání tohoto strojů z velké části nemá žádné viditelné pro uživatele účinky, s tím rozdílem, že kompilátor vytvoří už diagnostiku, která signalizují potíže na řádku 15732480 nebo 16707566 z \<type_traits > nebo \<typ variant >.
 
-- Vylepšení `std::variant` provádět více optimalizace zařízení, což vede k lepší generovaného kódu. Vkládání kódu je teď mnohem lepší s `std::visit`.
-
-- Použili jsme clang-format u hlavičky standardní knihovny C++ pro lepší čitelnost.
-
-- Zlepšení propustnosti při několika funkce standardní knihovny jsou kompilovány pomocí `if constexpr`.
-
-- Optimalizované návrh fyzické standardní knihovny nechcete-li kompilaci není součástí standardní knihovny # include 'D, cutting za poloviční dobu sestavení prázdný soubor, který obsahuje pouze \<vektoru >.
-
-## <a name="performancethroughput-fixes"></a>Výkon/propustnost opravy
+## <a name="performancethroughput-improvements-in-the-compiler-and-standard-library"></a>Vylepšení výkonu a propustnost v kompilátoru a standardní knihovny
 
 - Zlepšení propustnosti, včetně tak, jak linker zpracovává vstup a výstup souborů, ale taky popustit doby v souboru PDB typu slučování a vytvoření propojení.
 
-- Přidání základní podpora pro OpenMP SIMD vektorizaci. Můžete povolit pomocí nového přepínače CL `-openmp:experimental`. Tato možnost umožňuje smyčky opatřen poznámkou `#pragma omp simd` k potenciálně vektorizována. Není zaručeno, vektorizace a smyčky s poznámkami, ale není vektorizována se zobrazí upozornění ohlásil. Bez klauzule SIMD podporují, se jednoduše ignoruje s upozorněním ohlásil.
+- Přidání základní podpora pro OpenMP SIMD vektorizaci. Můžete povolit pomocí nového přepínače kompilátoru `-openmp:experimental`. Tato možnost umožňuje smyčky opatřen poznámkou `#pragma omp simd` k potenciálně vektorizována. Není zaručeno, vektorizace a smyčky s poznámkami, ale není vektorizována se zobrazí upozornění ohlásil. Bez klauzule SIMD podporují, se jednoduše ignoruje s upozorněním ohlásil.
 
 - Přidat nový přepínač příkazového řádku vkládání `-Ob3`, což je mnohem vyššími verzi `-Ob2`. `-O2` (optimalizovat binární soubor pro rychlost) stále zahrnuje `-Ob2` ve výchozím nastavení. Pokud zjistíte, že kompilátor nebude vložené dostatečně agresivně, zvažte možnost předávání `-O2 -Ob3`.
 
@@ -74,6 +62,32 @@ Vylepšení analýzy s `/Qspectre` pro poskytování pomoci zmírnění chyby za
 
   - Vylepšená optimalizace kódu pomocí `memmove`, jako například `std::copy` nebo `std::vector` a `std::string` konstrukce.
 
+- Optimalizované návrh fyzické standardní knihovny nechcete-li kompilaci není součástí standardní knihovny # include 'D, cutting za poloviční dobu sestavení prázdný soubor, který obsahuje pouze \<vektoru >. V důsledku této změny je nutné přidat #include pro hlavičky, které byly dříve nepřímo zahrnuté. Například kód, který používá `std::out_of_range` teď muset #include \<stdexcept – >. Kód, který používá operátor vkládání datového proudu teď muset #include \<ostream >. Výhodou je, že pouze překlad jednotky jejího použití \<stdexcept – > nebo \<ostream > součásti platit propustnost náklady na jejich kompilace.
+
+- `if constexpr` bylo použito na více místech ve standardní knihovně pro vylepšenou propustnost a snížená kód velikost do operací kopírování, permutací jako reverzní a otočit a knihovna paralelních algoritmů. 
+
+- Standardní knihovna teď interně používá `if constexpr` snížit dobu potřebnou ke kompilaci i v režim C ++ 14.
+
+- Dynamické propojení zjišťování už paralelní algoritmy knihovny runtime používá k ukládání pole ukazatel funkce celou stránku. Označení tuto paměť jen pro čtení se považují za už relevantní z bezpečnostních důvodů.
+
+- `std::thread`pro konstruktor už čeká na spuštění vlákna a už vloží tolik vrstvy funkce volání mezi základní knihovny jazyka C `_beginthreadex` a zadaný volatelný objekt. Dříve `std::thread` 6 funkce mezi `_beginthreadex` a zadaný volatelný objekt, který bylo sníženo na pouze 3 (2, které jsou právě `std::invoke`). To také řeší chyby skrytého časování kde `std::thread`na konstruktor způsoboval, že pokud jsou systémové hodiny změnili přesně v okamžiku `std::thread` byla právě vytvořena.
+
+- Oprava regrese výkonu v `std::hash` , který jsme představili při implementaci `std::hash<std::filesystem::path>`.
+
+- Na několika místech, která standardní knihovna teď používá destruktory místo catch k dosažení správnosti. Výsledkem je lepší interakci ladicího programu; výjimky, které vyvolat prostřednictvím standardní knihovny v ovlivněných umístění se teď zobrazí jako vyvolávána z jejich původní vyvolání, spíše než naše přegenerování. Byly odstraněny všechny bloky catch standardní knihovny; Očekáváme, že počet bloků catch snížení v dalších verzích MSVC.
+
+- Neoptimální codegen v `std::bitset` způsobila pomocí podmíněného throw uvnitř noexcept funkce opravena ve které budou zohledňovat si aktivační cesta.
+
+- `std::list` a `std::unordered_*` – ladění iterátorů řady interně použít na více místech.
+
+- Několik `std::list` členy byly změněny opakovaně používat seznam uzlů, kde je to možné, namísto rušení přidělení a změna jejich přidělení. Mějme například `list<int>` , že už má velikost 3, volání `assign(4, 1729)` nyní přepíše celá čísla v první 3 seznam uzlů a přidělit jeden seznam nový uzel s hodnotou 1729, spíše než rušení přidělení všechny 3 seznamu uzlů a přidělením 4 nový seznam uzlu s hodnotou 1729.
+
+- Všechna volání standardní knihovny `erase(begin(), end())` byly změněny na `clear()`.
+
+- `std::vector` Nyní se inicializuje a vymaže prvky v některých případech efektivněji.
+
+- Vylepšení `std::variant` provádět více optimalizace zařízení, což vede k lepší generovaného kódu. Vkládání kódu je teď mnohem lepší s `std::visit`.
+
 ## <a name="c-ide"></a>C++ IDE
 
 ### <a name="live-share-c-support"></a>Živá podpora C++ sdílené složky
@@ -82,7 +96,7 @@ Vylepšení analýzy s `/Qspectre` pro poskytování pomoci zmírnění chyby za
 
 ### <a name="intellicode-for-c"></a>IntelliCode jazyka C++
 
-IntelliCode je volitelné rozšíření, které pokud chcete změnit to, co nejpravděpodobněji použijete v horní části seznamu pro doplňování používá vlastní rozsáhlé školení a kontext kódu. Často se může eliminovat potřebu procházejte seznam. Jazyka C++ nabízí IntelliCode většina nápovědy při používání oblíbených knihoven například standardní knihovny. Další informace najdete v tématu [AI-Assisted kódu dokončení návrhy přijdou do C++ prostřednictvím IntelliCode](https://devblogs.microsoft.com/cppblog/cppintellicode/).
+IntelliCode je volitelný a přípony (jako součást úlohy v 16.1), která používá vlastní rozsáhlé školicí a kontext kód Pokud chcete změnit to, co nejpravděpodobněji použijete v horní části seznamu dokončení. Často se může eliminovat potřebu procházejte seznam. Jazyka C++ nabízí IntelliCode většina nápovědy při používání oblíbených knihoven například standardní knihovny. Další informace najdete v tématu [AI-Assisted kódu dokončení návrhy přijdou do C++ prostřednictvím IntelliCode](https://devblogs.microsoft.com/cppblog/cppintellicode/).
 
 ### <a name="template-intellisense"></a>Šablona IntelliSense
 
@@ -112,7 +126,19 @@ Visual Studio 2019 zahrnuje následující funkce, které vám pomohou zajistit 
 
 Další informace najdete v tématu [vylepšení produktivity C++ v sadě Visual Studio. 2019 ve verzi Preview 2](https://devblogs.microsoft.com/cppblog/c-productivity-improvements-in-visual-studio-2019-preview-2/).
 
+**Visual Studio 2019 version 16.1**
+
+### <a name="quickinfo-improvements"></a>Vylepšení rychlé informace
+
+Popisek rychlé informace nyní respektuje sémantické zbarvení editoru. Je také nové **vyhledávání Online** odkaz, který bude hledat online dokumentace pro další informace o kterou se najelo myší kód konstrukce. Červená nakreslili kódu bude odkazu uvedeného rychlé informace vyhledejte chybu online. Tímto způsobem není nutné znovu zadat zprávu do prohlížeče. Další informace najdete v tématu [rychlé informace o vylepšení v aplikaci Visual Studio 2019: Barevné zvýrazňování a Online hledání](https://devblogs.microsoft.com/cppblog/quick-info-improvements-in-visual-studio-2019-colorization-and-search-online/).
+
+### <a name="intellicode-available-in-c-workload"></a>K dispozici v IntelliCode C++ pracovního vytížení
+
+IntelliCode je nyní dodávána jako volitelná součást v **Desktop Development with C++**  pracovního vytížení. Další informace najdete v tématu [vylepšené C++ IntelliCode se nyní dodává s Visual Studio 2019](https://devblogs.microsoft.com/cppblog/).
+
 ## <a name="cmake-support"></a>Podpora CMake
+
+- Podpora CMake 3.14
 
 - Visual Studio teď můžete otevřít stávající mezipaměti CMake generovaných externí nástroje, jako je například CMakeGUI, systémy meta sestavení nebo skripty sestavení, které vyvolají cmake.exe sami.
 
@@ -136,9 +162,27 @@ Další informace najdete v tématu [vylepšení produktivity C++ v sadě Visual
 
 - Nový **sestavení všechny** zástupce v nabídce **Ctrl + Shift + B**.
 
+**Visual Studio 2019 version 16.1**
+
+- Integrovaná podpora pro úpravy, sestavování a ladění projektů CMake, s Clang/LLVM. Další informace najdete v tématu [Clang/LLVM podpory v sadě Visual Studio](https://devblogs.microsoft.com/cppblog/clang-llvm-support-in-visual-studio/).
+
+## <a name="linux-and-wsl"></a>Systémy Linux a WSL
+
+**Visual Studio 2019 version 16.1**
+
+- Podpora pro [AddressSanitizer (ASan)](https://github.com/google/sanitizers/wiki/AddressSanitizer) v projektech pro různé platformy operačních systémů Linux a CMake. Další informace najdete v tématu [AddressSanitizer (ASan) pro Linux úlohy v aplikaci Visual Studio 2019](https://devblogs.microsoft.com/cppblog/addresssanitizer-asan-for-the-linux-workload-in-visual-studio-2019/).
+
+- Integrovaná podpora sady Visual Studio pomocí C++ s subsystém Windows pro Linux (WSL). Další informace najdete v tématu [ C++ s Visual Studio 2019 a subsystém Windows pro Linux (WSL)](https://devblogs.microsoft.com/cppblog/c-with-visual-studio-2019-and-windows-subsystem-for-linux-wsl/).
+
+## <a name="incredibuild-integration"></a>IncrediBuild integrace
+
+IncrediBuild je jako volitelná součást v **vývoj desktopových aplikací pomocí C++**  pracovního vytížení. Sestavení monitorování IncrediBuild je plně integrovaná v integrovaném vývojovém prostředí sady Visual Studio. Další informace najdete v tématu [vizualizovat vaše sestavení se vytváření monitorování a Visual Studio 2019 Nerušivá](https://devblogs.microsoft.com/cppblog/visualize-your-build-with-incredibuilds-build-monitor-and-visual-studio-2019/).
+ 
 ## <a name="debugging"></a>Ladění
 
 - Pro aplikace C++ běžící na Windows soubory PDB nyní načíst v samostatném procesu 64-bit. Tato změna řeší celou řadu chyb způsobených ladicí program spuštěn nedostatek paměti při ladění aplikace, které obsahují velký počet modulů a soubory PDB.
+
+- Vyhledávání se povolí, v **Watch**, **automatické hodnoty**, a **lokální** systému windows.
 
 ## <a name="windows-desktop-development-with-c"></a>Vývoj pro plochu Windows v C++
 
@@ -178,6 +222,10 @@ Odebrali jsme součástí experimentální Clang/C2. Použijte sadu nástrojů M
 - Aktualizované částečnou implementaci [požadovaných součástí profilu životnost](https://herbsutter.com/2018/09/20/lifetime-profile-v1-0-posted/), který zjistí nepropojená ukazatele a reference. Další informace najdete v tématu [životního cyklu aktualizace profilu v sadě Visual Studio. 2019 ve verzi Preview 2](https://devblogs.microsoft.com/cppblog/lifetime-profile-update-in-visual-studio-2019-preview-2/).
 
 - Další související korutina kontrol, včetně C26138, C26810, C26811 a experimentální pravidlo C26800. Další informace najdete v tématu [nový kód analýzy kontroluje v aplikaci Visual Studio 2019: použití po přesunutí a pomocné rutiny](https://devblogs.microsoft.com/cppblog/new-code-analysis-checks-in-visual-studio-2019-use-after-move-and-coroutine/).
+
+**Visual Studio 2019 version 16.1**
+
+Nové rychlé opravy pro neinicializované proměnné kontroly. Další informace najdete v tématu [nový kód analýzy rychlých oprav pro neinicializované paměti (C6001) a použití, než init (C26494) upozornění](https://devblogs.microsoft.com/cppblog/new-code-analysis-quick-fixes-for-uninitialized-memory-c6001-and-use-before-init-c26494-warnings/).
 
 ## <a name="unit-testing"></a>Testování jednotek
 

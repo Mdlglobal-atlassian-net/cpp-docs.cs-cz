@@ -5,18 +5,16 @@ ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: e74f8270d241b9725a24ee257fb846a7cc4e079e
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 0a32e4fcc959d7fcdc8e99bb77510d5f292c1986
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837610"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934119"
 ---
 # <a name="whats-new-for-c-in-visual-studio-2017"></a>Co je nového v C++ v sadě Visual Studio 2017
 
 Visual Studio 2017 přináší řadu vylepšení a oprav prostředí C++. Jsme opravili víc než 250 chyb a nahlášených problémů v kompilátoru a nástrojů, řadu z nich odeslali zákazníci přes [nahlásit problém a poslat návrh](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) možnosti v části **odeslat zpětnou vazbu**. Děkujeme vám, že hlásíte chyby! Další informace o tom, co je nového v celé sady Visual Studio, navštivte [co je nového v sadě Visual Studio 2017](/visualstudio/ide/whats-new-in-visual-studio).
-
-<!--The compiler and tools version number in Visual Studio 2017 is 14.10.24629. -->
 
 ## <a name="c-compiler"></a>kompilátor C++
 
