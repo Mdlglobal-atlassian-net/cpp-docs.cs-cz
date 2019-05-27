@@ -1,30 +1,34 @@
 ---
-title: .ERRIDN]
-ms.date: 08/30/2018
+title: '&period;ERRIDN, &period;ERRIDNI'
+ms.date: 05/23/2019
 f1_keywords:
 - .ERRIDN[[I]]
+- .ERRIDN
+- .ERRIDNI
 helpviewer_keywords:
 - .ERRIDN[[I]] directive
+- .ERRIDN directive
+- .ERRIDNI directive
 ms.assetid: 89507db3-7d40-4a5e-a378-24d30feda9d1
-ms.openlocfilehash: 91da9a4650bff66950abd9b4327033cca647aaa9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cbac548efd1a8b030100e26ddf966b93c15ed3f4
+ms.sourcegitcommit: 79e985d3c6e8ccaf94f6e641972887cae8c6eeb0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62205718"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66197704"
 ---
-# <a name="erridn"></a>.ERRIDN]
+# <a name="perioderridn-perioderridni"></a>&period;ERRIDN, &period;ERRIDNI
 
 Pokud tyto položky jsou identické, dojde k chybě.
 
 ## <a name="syntax"></a>Syntaxe
 
-> . ERRIDN [[I]] *textitem1*, *textitem2* [[, *zpráva*]]
+> **.ERRIDN**\[**I**] *textitem1* __,__ *textitem2* \[ __,__ *message*]
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud **můžu** je zadaný, porovnání velká a malá písmena.
+Pokud  **&period;ERRIDNI** je zadaný, porovnání velká a malá písmena.
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)

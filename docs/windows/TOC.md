@@ -3,7 +3,7 @@
 # [Návod: Vytváření desktopových aplikací Windows](walkthrough-creating-windows-desktop-applications-cpp.md)
 # [Desktopový průvodce pro Windows](win32-application-wizard.md)
 # [Knihovna ATL (Active Template Library)](../atl/atl-com-desktop-components.md)
-# [Knihovna MFC (Microsoft Foundation Classes)](../mfc/TOC.md)
+# [Knihovna MFC (Microsoft Foundation Classes)](../mfc/mfc-desktop-applications.md)
 # [Sdílené třídy knihoven ATL a MFC](../atl-mfc-shared/TOC.md)
 # [Přístup k datům](../data/data-access-in-cpp.md)
 # [Text a řetězce](../text/text-and-strings-in-visual-cpp.md)

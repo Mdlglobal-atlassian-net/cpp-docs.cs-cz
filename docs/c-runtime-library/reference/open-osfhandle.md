@@ -1,6 +1,6 @@
 ---
 title: _open_osfhandle
-ms.date: 05/29/2018
+ms.date: 05/21/2019
 apiname:
 - _open_osfhandle
 apilocation:
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: f45ca46cae459c8606f88a98d03b64c40e5d5f01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8527dade37f20b7341d5a26f5752ece668ab7fc9
+ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156098"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174799"
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
 
@@ -69,7 +69,7 @@ Tyto konstanty manifestu jsou definovány v \<fcntl.h >:
 | **\_O\_TEXT** | Otevře soubor v textovém (přeloženém) režimu. |
 | **\_O\_WTEXT** | Otevře soubor v režimu Unicode (přeloženého UTF-16). |
 
-**_Open_osfhandle –** volání převede vlastnictví popisovač souboru Win32 do popisovače souboru. Zavřete soubor otevřít s **_open_osfhandle –**, volání [ \_zavřete](close.md). Volání také uzavřel podkladové popisovač souboru operačního systému **_Zavřít**, takže není nutné volat funkci Win32 **CloseHandle** na původní popisovač. Pokud popisovač souboru je vlastněna **souboru &#42;**  datový proud a následným voláním [fclose –](fclose-fcloseall.md) zabývat **souboru &#42;**  stream také uzavře popisovač souboru a základní popisovač. V takovém případě Nevolejte **_Zavřít** na popisovač souboru.
+**_Open_osfhandle –** volání převede vlastnictví popisovač souboru Win32 do popisovače souboru. Zavřete soubor otevřít s použitím **_open_osfhandle –**, volání [ \_zavřete](close.md). Volání také uzavřel podkladové popisovač souboru operačního systému **_Zavřít**. Volat funkci Win32 **CloseHandle** na původní popisovač. Pokud popisovač souboru je vlastněna **souboru &#42;**  datového proudu a volání [fclose –](fclose-fcloseall.md) zabývat **souboru &#42;**  datový proud se zavře popisovače souborů a základní Obslužná rutina. V takovém případě Nevolejte **_Zavřít** na popisovač souboru nebo **CloseHandle** na původní popisovač.
 
 ## <a name="requirements"></a>Požadavky
 

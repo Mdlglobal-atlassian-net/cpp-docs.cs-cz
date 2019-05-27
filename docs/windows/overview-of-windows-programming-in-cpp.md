@@ -2,12 +2,12 @@
 title: Přehled programování v C++ v systému Windows
 ms.date: 05/06/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 036da87c24eef38f3c88bb5f73808a434b9da6a1
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 957e3565ad4caa12da5e7d10915ca159d00954b8
+ms.sourcegitcommit: 79e985d3c6e8ccaf94f6e641972887cae8c6eeb0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837542"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66197742"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Přehled programování v C++ v systému Windows
 
@@ -100,7 +100,7 @@ Systém Visual Studio obsahuje výkonný ladicí program pro nativní kód, nás
 |[Návod: Vytváření desktopových aplikací Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Vytvořte nativní aplikaci klasické pracovní plochy Windows.|
 |[Desktopový průvodce pro Windows](windows-desktop-wizard.md)|Chcete-li vytvořit nové projekty Windows pomocí průvodce.|
 |[Knihovna ATL (Active Template Library)](../atl/atl-com-desktop-components.md)|Použití knihovny ATL vytváření komponent modelu COM v jazyce C++.|
-|[Knihovna MFC (Microsoft Foundation Classes)](../mfc/TOC.md)|Použití knihovny MFC k vytvoření velké nebo malé aplikací Windows pomocí dialogových oken a ovládacích prvků|
+|[Knihovna MFC (Microsoft Foundation Classes)](../mfc/mfc-desktop-applications.md)|Použití knihovny MFC k vytvoření velké nebo malé aplikací Windows pomocí dialogových oken a ovládacích prvků|
 |[Sdílené třídy knihoven ATL a MFC](../atl-mfc-shared/TOC.md)|Pomocí třídy například CString, které jsou sdíleny v ATL a MFC.|
 |[Přístup k datům](../data/data-access-in-cpp.md)| OLE DB a rozhraní ODBC|
 |[Text a řetězce](../text/text-and-strings-in-visual-cpp.md)|Různými typy řetězců na Windows.|

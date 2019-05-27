@@ -1,18 +1,18 @@
 ---
 title: C++ v sadě Visual Studio
 description: Visual C++ je název pro kompilátor C++ společnosti Microsoft, editor kódu a související nástroje v integrovaném vývojovém prostředí sady Visual Studio. Použití jazyka Visual C++ pro vývoj aplikací pro Windows, Linux, Android a iOS.
-ms.date: 05/13/2019
+ms.date: 05/14/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 2706d232dba2a7971edd8d84da2b1d1399ed6e25
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.openlocfilehash: e9327f74f46590f4d4a71e56340dcadf6527fabb
+ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934144"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174779"
 ---
 # <a name="c-in-visual-studio"></a>C++ v sadě Visual Studio
 
@@ -45,10 +45,10 @@ Přečtěte si o nejnovějších změnách v předchozích verzích.
 ## <a name="install-visual-studio-and-upgrade-from-earlier-versions"></a>Instalace sady Visual Studio a upgradujete ze starší verze
 
 [Instalace podpory jazyka C++ v sadě Visual Studio](../build/vscpp-step-0-installation.md)<br/>
-Stáhněte si Visual Studio 2015 nebo Visual Studio 2017 a instalaci sadu nástrojů Visual C++.
+Stáhněte si Visual Studio 2017 nebo Visual Studio 2019 a nainstalujte vizuál C++ sady nástrojů.
 
 [Průvodce přenosem a upgradem Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)<br/>
-Pokyny pro přenesení kódu a upgrade projektů sady Visual Studio 2015 nebo Visual Studio 2017, včetně přenos kódu C++ pro Windows 10 a univerzální platformu Windows.
+Pokyny pro přenosy kódu a upgrade projektů na Visual Studio 2015 nebo novější využívat větší shoda s kompilátorem prostředí k C++ standardní a také dobu výrazně vylepšený kompilace a funkce zabezpečení, jako je zmírnění hrozby Spectre.
 
 [Nástroje a funkce Visual C++ v různých edicích sady Visual Studio](visual-cpp-tools-and-features-in-visual-studio-editions.md)<br/>
 Zjistěte informace o různých edicích sady Visual Studio.
@@ -59,7 +59,7 @@ Zjistěte, které platformy jsou podporovány.
 ## <a name="learn-c"></a>Informace o jazyku C++
 
 [C++ vás vítá zpět](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
-Další informace o moderním jazyce C++ programovací techniky na základě C ++ 11 a C ++ 14, která umožňují také napsat rychlé a bezpečné kód a vyhnout se mnoho nástrahy programování ve stylu C.
+Další informace o moderní C++ programovací techniky na základě v C ++ 11 a novějším, které umožňují napsat rychlé a bezpečné kód a vyhnout se mnoho nástrahy programování ve stylu C.
 
 [Standardní C++](http://isocpp.org/)<br/>
 Získejte informace o jazyce C++, přehled o moderním jazyce C++ a odkazy na knihy, články, rozhovory a události.
@@ -79,7 +79,7 @@ Tom, jak pomocí integrovaného vývojového prostředí sady Visual Studio mů�
 Jak vytvořit a nakonfigurovat možnosti kompilátoru a propojovacího programu MSVC projekty aplikace Visual Studio C++, projekty CMake a dalších typů projektů.
 
 [Psaní a refaktoring kódu jazyka C++](../ide/writing-and-refactoring-code-cpp.md)<br/>
-Jak používat si produktivitu funkcí v editoru C++ refaktorace, přejděte a psaní kódu.
+Jak používat si produktivitu funkcí v C++ editor Refaktorovat, navigaci, pochopit a psát kód.
 
 [Ladění nativního kódu](/visualstudio/debugger/debugging-native-code)<br/>
 Pomocí ladicího programu sady Visual Studio s projekty C++.
@@ -117,7 +117,7 @@ Zjistěte, jak chránit aplikace před nebezpečným kódem a neoprávněným p
 V jazyce C++ máte několik možností pro připojení k webu a cloudu.
 
 [Přístup k datům](../data/data-access-in-cpp.md)<br/>
-Připojení k databázím pomocí rozhraní ODBC a dalších technologií přístupu k databázi.
+Připojení k databázím pomocí rozhraní ODBC a OLE DB.
 
 [Text a řetězce](../text/text-and-strings-in-visual-cpp.md)<br/>
 Další informace o práci s jiným textovým a formáty řetězců a kódování pro místní i mezinárodní vývoje.

@@ -1,6 +1,6 @@
 ---
 title: _setmaxstdio
-ms.date: 11/04/2016
+ms.date: 05/21/2019
 apiname:
 - _setmaxstdio
 apilocation:
@@ -25,45 +25,45 @@ helpviewer_keywords:
 - setmaxstdio function
 - open files, maximum
 ms.assetid: 9e966875-9ff5-47c4-9b5f-e79e83b70249
-ms.openlocfilehash: 58cffedf673e23a69c2d8040071b2e3353ff4502
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94b768d920ffd86a5bd762f8994244dda67fb15f
+ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356339"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174821"
 ---
 # <a name="setmaxstdio"></a>_setmaxstdio
 
-Nastaví maximální počet souběžně otevřených souborů na **stdio** úroveň.
+Nastaví maximální počet souběžně otevřených souborů na vstupně-výstupní datový proud úroveň.
 
 ## <a name="syntax"></a>Syntaxe
 
 ```C
 int _setmaxstdio(
-   int newmax
+   int new_max
 );
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*newmax*<br/>
-Nové maximální počet souběžně otevřených souborů na **stdio** úroveň.
+*new_max*<br/>
+Nové maximální počet současně otevírat soubory na datový proud úroveň vstupně-výstupních operací.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí *newmax* v případě úspěchu; jinak -1.
+Vrátí *new_max* v případě úspěchu; jinak -1.
 
-Pokud *newmax* je menší než **_IOB_ENTRIES** nebo novější, je vyvolána maximální počet popisovačů, které jsou k dispozici v operačním systému, obslužná rutina neplatného parametru, jak je popsáno v [ Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce vrátí hodnotu -1 a nastaví **errno** k **EINVAL**.
+Pokud *new_max* je menší než **_IOB_ENTRIES**, nebo větší než maximální počet zpracovává v operačních systémech, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [ Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce vrátí hodnotu -1 a nastaví **errno** k **EINVAL**.
 
 Informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Setmaxstdio –** funkce změní hodnotu maximální počet souborů, které lze najednou otevřít v **stdio** úroveň.
+**_Setmaxstdio –** funkce změní hodnotu maximální počet souborů, které může být otevřeno současně úroveň vstupně-výstupních operací datového proudu.
 
-Vstupně-výstupních operací C Runtime nyní podporuje mnoho otevřenější souborů na platformách Win32 než v předchozích verzích. Až 2 048 soubory lze otevřít současně [lowio úroveň](../../c-runtime-library/low-level-i-o.md) (to znamená, otevřít a získat přístup prostřednictvím **_Otevřít**, **_read**, **_write**, a tak dále řady funkcí vstupně-výstupní operace). Až 512 soubory lze otevřít současně [stdio úroveň](../../c-runtime-library/stream-i-o.md) (to znamená, otevřít a získat přístup prostřednictvím **fopen**, **fgetc –**, **fputc** a tak dále řady funkcí). Limit 512 otevřených souborů na **stdio** úroveň je možné zvýšit na maximálně 2 048 prostřednictvím **_setmaxstdio –** funkce.
+C run-time vstupně-výstupní operace nyní podporuje až do 8 192 souborů současně otevřít v [s nízkou úrovní vstupně-výstupních operací](../../c-runtime-library/low-level-i-o.md). Tato úroveň zahrnuje soubory otevřít a získat přístup pomocí **_Otevřít**, **_read**, a **_write** řady funkcí vstupně-výstupních operací. Ve výchozím nastavení, může být až 512 soubory otevřené současně [úroveň vstupně-výstupní datový proud stream](../../c-runtime-library/stream-i-o.md). Tato úroveň zahrnuje soubory otevřít a získat přístup pomocí **fopen**, **fgetc –**, a **fputc** řady funkcí. Limit 512 otevřených souborů na úrovni datového proudu vstupně-výstupních operací je možné zvýšit na maximálně 8192 pomocí **_setmaxstdio –** funkce.
 
-Protože **stdio**– úroveň funkce, jako například **fopen**, jsou zabudovány nad **lowio** funkce, maximálně 2 048 je pevný horní mez počtu současně Otevřete soubory prostřednictvím knihovny run-time C.
+Vzhledem k tomu, že datový proud můžu/vstupně-úroveň funkce, jako **fopen –**, jsou postavené na nízkou můžu/vstupně-úroveň funkce, je maximálně 8192 pevná horní hranice pro počet souběžně otevřených souborů prostřednictvím knihovny run-time jazyka C.
 
 > [!NOTE]
 > Toto horní omezení může být rámec toho, co je podporováno konkrétní platformy Win32 a konfigurací.
