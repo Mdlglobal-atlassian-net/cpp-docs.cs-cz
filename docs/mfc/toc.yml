@@ -1,0 +1,2945 @@
+- name: Desktopové aplikace MFC
+  href: mfc-desktop-applications.md
+- name: MFC – koncepce
+  expanded: false
+  items:
+    - name: MFC – koncepce
+      href: mfc-concepts.md
+    - name: Obecná témata MFC
+      expanded: false
+      items:
+        - name: Obecná témata MFC
+          href: general-mfc-topics.md
+        - name: Použití zdrojových souborů MFC
+          expanded: false
+          items:
+            - name: Použití zdrojových souborů MFC
+              href: using-the-mfc-source-files.md
+            - name: Příklad komentářů
+              href: an-example-of-the-comments.md
+            - name: '-- Implementační komentář'
+              href: decrement-implementation-comment.md
+            - name: '-- Komentář ke konstruktorům'
+              href: decrement-constructors-comment.md
+            - name: "-- Komentář k\_atributům"
+              href: decrement-attributes-comment.md
+            - name: '-- Komentář k operacím'
+              href: decrement-operations-comment.md
+            - name: "-- Komentář k\_přepisovatelným"
+              href: decrement-overridables-comment.md
+        - name: MFC – verze knihovny
+          expanded: false
+          items:
+            - name: MFC – verze knihovny
+              href: mfc-library-versions.md
+            - name: MFC MBCS DLL – doplněk
+              href: mfc-mbcs-dll-add-on.md
+        - name: Použití tříd pro psaní aplikací pro Windows
+          expanded: false
+          items:
+            - name: Použití tříd pro psaní aplikací pro Windows
+              href: using-the-classes-to-write-applications-for-windows.md
+            - name: Framework (MFC)
+              href: framework-mfc.md
+            - name: Rozhraní SDI a knihovna MDI
+              href: sdi-and-mdi.md
+            - name: 'Dokumenty, zobrazení a framework'
+              href: documents-views-and-the-framework.md
+            - name: Průvodci a editory prostředků
+              href: wizards-and-the-resource-editors.md
+        - name: Sestavení na základě rozhraní .NET Framework
+          expanded: false
+          items:
+            - name: Sestavení na základě rozhraní .NET Framework
+              href: building-on-the-framework.md
+            - name: Posloupnost operací při sestavování aplikací MFC
+              href: sequence-of-operations-for-building-mfc-applications.md
+            - name: Posloupnost operací při vytváření aplikací OLE
+              href: sequence-of-operations-for-creating-ole-applications.md
+            - name: Posloupnost operací při vytváření ovládacích prvků ActiveX
+              href: sequence-of-operations-for-creating-activex-controls.md
+            - name: Posloupnost operací při vytváření databázových aplikací
+              href: sequence-of-operations-for-creating-database-applications.md
+            - name: Jakým způsobem volá framework váš kód
+              href: how-the-framework-calls-your-code.md
+        - name: 'CWinApp: Třída aplikace'
+          expanded: false
+          items:
+            - name: 'CWinApp: Třída aplikace'
+              href: cwinapp-the-application-class.md
+            - name: CWinApp a průvodce aplikací MFC
+              href: cwinapp-and-the-mfc-application-wizard.md
+            - name: Přepisovatelné členské funkce CWinApp
+              href: overridable-cwinapp-member-functions.md
+            - name: InitInstance – členská funkce
+              href: initinstance-member-function.md
+            - name: Run – členská funkce
+              href: run-member-function.md
+            - name: ExitInstance – členská funkce
+              href: exitinstance-member-function.md
+            - name: OnIdle – členská funkce
+              href: onidle-member-function.md
+            - name: Speciální služby CWinApp
+              href: special-cwinapp-services.md
+        - name: Šablony dokumentů a proces vytváření dokumentů a zobrazení
+          expanded: false
+          items:
+            - name: Šablony dokumentů a proces vytváření dokumentů a zobrazení
+              href: document-templates-and-the-document-view-creation-process.md
+            - name: Vytváření šablon dokumentů
+              href: document-template-creation.md
+            - name: Vytváření dokumentů a zobrazení
+              href: document-view-creation.md
+            - name: Vztahy mezi objekty MFC
+              href: relationships-among-mfc-objects.md
+            - name: 'Vytváření nových dokumentů, oken a zobrazení'
+              href: creating-new-documents-windows-and-views.md
+        - name: Správa údajů o stavu modulů MFC
+          expanded: false
+          items:
+            - name: Správa údajů o stavu modulů MFC
+              href: managing-the-state-data-of-mfc-modules.md
+            - name: Vstupní body exportované funkce DLL
+              href: exported-dll-function-entry-points.md
+            - name: COM – vstupní body rozhraní
+              href: com-interface-entry-points.md
+            - name: Vstupní body procedury okna
+              href: window-procedure-entry-points.md
+        - name: Zpracování smyčky nečinnosti
+          href: idle-loop-processing.md
+        - name: Podpora kontextů aktivace ve stavu modulu MFC
+          href: support-for-activation-contexts-in-the-mfc-module-state.md
+        - name: Izolace knihovny běžných ovládacích prvků MFC
+          href: isolation-of-the-mfc-common-controls-library.md
+        - name: Požadavky na sestavení pro běžné ovládací prvky systému Windows Vista
+          expanded: false
+          items:
+            - name: Požadavky na sestavení pro běžné ovládací prvky systému Windows Vista
+              href: build-requirements-for-windows-vista-common-controls.md
+            - name: Zastaralá rozhraní API standardu ANSI
+              href: deprecated-ansi-apis.md
+        - name: 'Postupy: Přidání podpory správce restartování'
+          href: how-to-add-restart-manager-support.md
+        - name: Dynamické rozložení
+          href: dynamic-layout.md
+    - name: Použití objektů CObject
+      expanded: false
+      items:
+        - name: Použití objektů CObject
+          href: using-cobject.md
+        - name: "Odvození třídy z\_objektu CObject"
+          expanded: false
+          items:
+            - name: "Odvození třídy z\_objektu CObject"
+              href: deriving-a-class-from-cobject.md
+            - name: Určení úrovní funkčnosti
+              href: specifying-levels-of-functionality.md
+        - name: "Přístup k\_běhovým informacím o třídě"
+          href: accessing-run-time-class-information.md
+        - name: Vytváření dynamických objektů
+          href: dynamic-object-creation.md
+        - name: 'CObject – třída: Nejčastější dotazy'
+          expanded: false
+          items:
+            - name: 'CObject – třída: Nejčastější dotazy'
+              href: cobject-class-frequently-asked-questions.md
+            - name: "Je nutné odvozovat nové třídy z\_objektu CObject?"
+              href: do-i-have-to-derive-new-classes-from-cobject-q.md
+            - name: "Jaké jsou náklady na odvození třídy z\_objektu CObject?"
+              href: what-does-it-cost-me-to-derive-a-class-from-cobject-q.md
+    - name: Kolekce
+      expanded: false
+      items:
+        - name: Kolekce
+          href: collections.md
+        - name: Doporučení pro výběr třídy kolekce
+          href: recommendations-for-choosing-a-collection-class.md
+        - name: Třídy založené na šablonách
+          href: template-based-classes.md
+        - name: 'Postupy: Příprava typově bezpečné kolekce'
+          href: how-to-make-a-type-safe-collection.md
+        - name: Přístup ke všem členům kolekce
+          expanded: false
+          items:
+            - name: Přístup ke všem členům kolekce
+              href: accessing-all-members-of-a-collection.md
+            - name: Odstranění všech objektů v kolekci CObject
+              href: deleting-all-objects-in-a-cobject-collection.md
+        - name: Vytváření kolekcí zásobníků a front
+          href: creating-stack-and-queue-collections.md
+    - name: "Zpracování výjimek v\_prostředí MFC"
+      expanded: false
+      items:
+        - name: "Zpracování výjimek v\_prostředí MFC"
+          href: exception-handling-in-mfc.md
+        - name: 'Výjimky: Změny maker pro výjimky ve verzi 3.0'
+          href: exceptions-changes-to-exception-macros-in-version-3-0.md
+        - name: 'Výjimky: Zachytávání a odstraňování výjimek'
+          href: exceptions-catching-and-deleting-exceptions.md
+        - name: "Výjimky: Převádění z\_maker výjimek prostředí MFC"
+          href: exceptions-converting-from-mfc-exception-macros.md
+        - name: "Výjimky: Použití výjimek v\_makrech MFC a jazyce C++"
+          href: exceptions-using-mfc-macros-and-cpp-exceptions.md
+        - name: 'Výjimky: Zkoumání obsahu výjimek'
+          href: exceptions-examining-exception-contents.md
+        - name: 'Výjimky: Uvolnění objektů ve výjimkách'
+          href: exceptions-freeing-objects-in-exceptions.md
+        - name: 'Výjimky: Generování výjimek ve vašich vlastních funkcích'
+          href: exceptions-throwing-exceptions-from-your-own-functions.md
+        - name: 'Výjimky: Výjimky v konstruktorech'
+          href: exceptions-exceptions-in-constructors.md
+        - name: 'Výjimky: Výjimky databáze'
+          href: exceptions-database-exceptions.md
+        - name: 'Výjimky: OLE – výjimky'
+          href: exceptions-ole-exceptions.md
+    - name: "Soubory v\_prostředí MFC"
+      expanded: false
+      items:
+        - name: "Soubory v\_prostředí MFC"
+          href: files-in-mfc.md
+        - name: Otevírání souborů
+          href: opening-files.md
+        - name: Čtení ze souborů a zápis do nich
+          href: reading-and-writing-files.md
+        - name: Zavírání souborů
+          href: closing-files.md
+        - name: Přístup ke stavu souboru
+          href: accessing-file-status.md
+    - name: Prvky rozhraní
+      href: interface-elements.md
+    - name: MAPI
+      expanded: false
+      items:
+        - name: MAPI
+          href: mapi.md
+        - name: "Podpora MAPI v\_MFC"
+          href: mapi-support-in-mfc.md
+        - name: Ukázky MAPI
+          href: mapi-samples.md
+    - name: Správa paměti
+      expanded: false
+      items:
+        - name: Správa paměti
+          href: memory-management.md
+        - name: 'Správa paměti: Přidělení rámce'
+          href: memory-management-frame-allocation.md
+        - name: 'Správa paměti: Přidělení haldy'
+          expanded: false
+          items:
+            - name: 'Správa paměti: Přidělení haldy'
+              href: memory-management-heap-allocation.md
+            - name: 'Správa paměti: Příklady'
+              href: memory-management-examples.md
+            - name: 'Správa paměti: Bloky paměti umožňující změnu velikosti'
+              href: memory-management-resizable-memory-blocks.md
+    - name: Zpracování a mapování zpráv
+      expanded: false
+      items:
+        - name: Zpracování a mapování zpráv
+          href: message-handling-and-mapping.md
+        - name: "Zprávy a příkazy v\_prostředí .NET Framework"
+          expanded: false
+          items:
+            - name: "Zprávy a příkazy v\_prostředí .NET Framework"
+              href: messages-and-commands-in-the-framework.md
+            - name: Zprávy
+              href: messages.md
+            - name: Obslužné rutiny zpráv
+              href: message-handlers.md
+            - name: Kategorie zpráv
+              href: message-categories.md
+            - name: Mapování zpráv
+              href: mapping-messages.md
+            - name: Identifikátory objektů uživatelského rozhraní a příkazů
+              expanded: false
+              items:
+                - name: Identifikátory objektů uživatelského rozhraní a příkazů
+                  href: user-interface-objects-and-command-ids.md
+                - name: Identifikátory příkazů
+                  href: command-ids.md
+                - name: Standardní příkazy
+                  href: standard-commands.md
+            - name: Cíle příkazů
+              href: command-targets.md
+        - name: Jakým způsobem volá framework obslužnou rutinu
+          expanded: false
+          items:
+            - name: Jakým způsobem volá framework obslužnou rutinu
+              href: how-the-framework-calls-a-handler.md
+            - name: Odesílání a příjem zpráv
+              href: message-sending-and-receiving.md
+            - name: "Jak se nepříkazové zprávy dostanou k\_svým obslužným rutinám"
+              href: how-noncommand-messages-reach-their-handlers.md
+            - name: Směrování příkazů
+              href: command-routing.md
+            - name: Znázornění směrování příkazů
+              href: command-routing-illustration.md
+            - name: OnCmdMsg – obslužná rutina
+              href: oncmdmsg-handler.md
+            - name: Přepsání standardního směrování příkazů
+              href: overriding-the-standard-command-routing.md
+        - name: Jak framework prohledává mapy zpráv
+          expanded: false
+          items:
+            - name: Jak framework prohledává mapy zpráv
+              href: how-the-framework-searches-message-maps.md
+            - name: Kde hledat mapy zpráv
+              href: where-to-find-message-maps.md
+            - name: Mapy odvozených zpráv
+              href: derived-message-maps.md
+        - name: Deklarace funkcí obslužných rutin zpráv
+          expanded: false
+          items:
+            - name: Deklarace funkcí obslužných rutin zpráv
+              href: declaring-message-handler-functions.md
+            - name: Obslužné rutiny pro standardní zprávy Windows
+              href: handlers-for-standard-windows-messages.md
+            - name: Obslužné rutiny pro příkazy a oznámení ovládacích prvků
+              href: handlers-for-commands-and-control-notifications.md
+            - name: Obslužné rutiny pro oblasti map zpráv
+              href: handlers-for-message-map-ranges.md
+            - name: Zpracování reflektovaných zpráv
+              href: handling-reflected-messages.md
+        - name: 'Postupy: Zobrazení informací o příkazu ve stavovém řádku'
+          href: how-to-display-command-information-in-the-status-bar.md
+        - name: 'Postupy: Vytvoření mapy zpráv pro třídu šablony'
+          href: how-to-create-a-message-map-for-a-template-class.md
+    - name: MFC COM
+      expanded: false
+      items:
+        - name: MFC COM
+          href: mfc-com.md
+        - name: Zahrnutí aktivního dokumentu
+          expanded: false
+          items:
+            - name: Zahrnutí aktivního dokumentu
+              href: active-document-containment.md
+            - name: 'Příklad zahrnutí aktivního dokumentu: Pořadač Office'
+              href: example-of-active-document-containment-office-binder.md
+            - name: Vytvoření aplikace kontejnerů pro aktivní dokument
+              href: creating-an-active-document-container-application.md
+            - name: Kontejnery pro aktivní dokument
+              expanded: false
+              items:
+                - name: Kontejnery pro aktivní dokument
+                  href: active-document-containers.md
+                - name: Slučování nabídek nápovědy
+                  href: help-menu-merging.md
+                - name: Tisk prostřednictvím kódu programu
+                  href: programmatic-printing.md
+                - name: Zpracování zpráv a cíle příkazů
+                  href: message-handling-and-command-targets.md
+            - name: Servery pro aktivní dokumenty
+              href: active-document-servers.md
+            - name: Aktivní dokumenty
+              href: active-documents.md
+        - name: Automatizace
+          expanded: false
+          items:
+            - name: Automatizace
+              href: automation.md
+            - name: Klienti automatizace
+              expanded: false
+              items:
+                - name: Klienti automatizace
+                  href: automation-clients.md
+                - name: 'Klienti automatizace: Použití knihoven typů'
+                  href: automation-clients-using-type-libraries.md
+            - name: Automatizační servery
+              expanded: false
+              items:
+                - name: Automatizační servery
+                  href: automation-servers.md
+                - name: 'Automatizační servery: Problémy životnosti objektů'
+                  href: automation-servers-object-lifetime-issues.md
+        - name: Body připojení
+          href: connection-points.md
+    - name: Základy internetového programování v prostředí MFC
+      expanded: false
+      items:
+        - name: Základy internetového programování v prostředí MFC
+          href: mfc-internet-programming-basics.md
+        - name: "Třídy MFC související s\_internetem"
+          href: internet-related-mfc-classes.md
+        - name: Internetové informace podle témat
+          href: internet-information-by-topic.md
+        - name: Internetové informace podle úloh
+          href: internet-information-by-task.md
+        - name: Technologie Active na internetu
+          href: active-technology-on-the-internet.md
+        - name: WinInet – základy
+          href: wininet-basics.md
+        - name: HTML – základy
+          href: html-basics.md
+    - name: Úlohy internetového programování MFC
+      expanded: false
+      items:
+        - name: Úlohy internetového programování MFC
+          href: mfc-internet-programming-tasks.md
+        - name: Volby při návrhu aplikací
+          href: application-design-choices.md
+        - name: Psaní aplikací MFC
+          href: writing-mfc-applications.md
+        - name: Ovládací prvky ActiveX na internetu
+          href: activex-controls-on-the-internet.md
+        - name: Upgrade existujícího ovládacího prvku ActiveX
+          href: upgrading-an-existing-activex-control.md
+        - name: Asynchronní monikery na internetu
+          href: asynchronous-monikers-on-the-internet.md
+        - name: Testování internetových aplikací
+          href: testing-internet-applications.md
+        - name: Internetové zabezpečení (C++)
+          href: internet-security-cpp.md
+    - name: OLE ve MFC
+      expanded: false
+      items:
+        - name: OLE ve MFC
+          href: ole-in-mfc.md
+        - name: OLE – pozadí
+          expanded: false
+          items:
+            - name: OLE – pozadí
+              href: ole-background.md
+            - name: 'OLE – pozadí: Propojování a vkládání'
+              href: ole-background-linking-and-embedding.md
+            - name: 'OLE – pozadí: Kontejnery a servery'
+              href: ole-background-containers-and-servers.md
+            - name: 'OLE – pozadí: Strategie implementace'
+              href: ole-background-implementation-strategies.md
+            - name: 'OLE – pozadí: Implementace v prostředí MFC'
+              href: ole-background-mfc-implementation.md
+        - name: Aktivace (C++)
+          expanded: false
+          items:
+            - name: Aktivace (C++)
+              href: activation-cpp.md
+            - name: 'Aktivace: Příkazy'
+              href: activation-verbs.md
+        - name: Kontejnery
+          expanded: false
+          items:
+            - name: Kontejnery
+              href: containers.md
+            - name: 'Kontejnery: Implementace kontejneru'
+              href: containers-implementing-a-container.md
+            - name: 'Kontejnery: Klientské položky'
+              href: containers-client-items.md
+            - name: 'Kontejnery: Oznámení klientských položek'
+              href: containers-client-item-notifications.md
+            - name: 'Kontejnery: Stavy klientských položek'
+              href: containers-client-item-states.md
+            - name: 'Kontejnery: Složené soubory'
+              href: containers-compound-files.md
+            - name: 'Kontejnery: Problémy uživatelského rozhraní'
+              href: containers-user-interface-issues.md
+            - name: 'Kontejnery: Pokročilé funkce'
+              href: containers-advanced-features.md
+        - name: Datové objekty a zdroje dat (OLE)
+          expanded: false
+          items:
+            - name: Datové objekty a zdroje dat (OLE)
+              href: data-objects-and-data-sources-ole.md
+            - name: 'Datové objekty a zdroje dat: Vytváření a likvidace'
+              href: data-objects-and-data-sources-creation-and-destruction.md
+            - name: 'Datové objekty a zdroje dat: Manipulace'
+              href: data-objects-and-data-sources-manipulation.md
+        - name: Přetažení (OLE)
+          expanded: false
+          items:
+            - name: Přetažení (OLE)
+              href: drag-and-drop-ole.md
+            - name: 'Přetažení: Implementace zdroje přetažení'
+              href: drag-and-drop-implementing-a-drop-source.md
+            - name: 'Přetažení: Implementace cíle přetažení'
+              href: drag-and-drop-implementing-a-drop-target.md
+            - name: 'Přetažení: Přizpůsobení'
+              href: drag-and-drop-customizing.md
+        - name: "Nabídky a\_prostředky (OLE)"
+          expanded: false
+          items:
+            - name: "Nabídky a\_prostředky (OLE)"
+              href: menus-and-resources-ole.md
+            - name: 'Nabídky a prostředky: Kontejnerové doplňky'
+              href: menus-and-resources-container-additions.md
+            - name: 'Nabídky a prostředky: Serverové doplňky'
+              href: menus-and-resources-server-additions.md
+            - name: 'Nabídky a prostředky: Slučování nabídek'
+              href: menus-and-resources-menu-merging.md
+        - name: Registrace
+          href: registration.md
+        - name: Servery
+          expanded: false
+          items:
+            - name: Servery
+              href: servers.md
+            - name: 'Servery: Implementace serveru'
+              href: servers-implementing-a-server.md
+            - name: 'Servery: Implementace dokumentů serveru'
+              href: servers-implementing-server-documents.md
+            - name: 'Servery: Implementace místních oken rámců'
+              href: servers-implementing-in-place-frame-windows.md
+            - name: 'Servery: Serverové položky'
+              href: servers-server-items.md
+            - name: 'Servery: Problémy uživatelského rozhraní'
+              href: servers-user-interface-issues.md
+        - name: Snímače
+          expanded: false
+          items:
+            - name: Snímače
+              href: trackers.md
+            - name: 'Snímače: Implementace snímačů ve vašich aplikacích OLE'
+              expanded: false
+              items:
+                - name: 'Snímače: Implementace snímačů ve vašich aplikacích OLE'
+                  href: trackers-implementing-trackers-in-your-ole-application.md
+                - name: 'Postupy: Implementace sledování v kódu'
+                  href: how-to-implement-tracking-in-your-code.md
+                - name: "Pružné čáry a\_snímače"
+                  href: rubber-banding-and-trackers.md
+    - name: "Serializace v\_prostředí MFC"
+      expanded: false
+      items:
+        - name: "Serializace v\_prostředí MFC"
+          href: serialization-in-mfc.md
+        - name: 'Serializace: Příprava serializovatelné třídy'
+          href: serialization-making-a-serializable-class.md
+        - name: 'Serializace: Serializace objektu'
+          expanded: false
+          items:
+            - name: 'Serializace: Serializace objektu'
+              href: serialization-serializing-an-object.md
+            - name: Co je objekt CArchive
+              href: what-is-a-carchive-object.md
+            - name: Dva způsoby vytvoření objektu CArchive
+              href: two-ways-to-create-a-carchive-object.md
+            - name: Použití operátorů CArchive << a >>
+              href: using-the-carchive-output-and-input-operators.md
+            - name: Ukládání a načítání objektů CObject prostřednictvím archivu
+              href: storing-and-loading-cobjects-via-an-archive.md
+        - name: 'Serializace: Serializace vs. databázový vstup a výstup'
+          expanded: false
+          items:
+            - name: 'Serializace: Serializace vs. databázový vstup a výstup'
+              href: serialization-serialization-vs-database-input-output.md
+            - name: Doporučení pro zpracování vstupu a výstupu
+              href: recommendations-for-handling-input-output.md
+            - name: "Nabídka Soubor v\_databázových aplikacích MFC"
+              href: file-menu-in-an-mfc-database-application.md
+    - name: Prvky uživatelského rozhraní (MFC)
+      expanded: false
+      items:
+        - name: Prvky uživatelského rozhraní (MFC)
+          href: user-interface-elements-mfc.md
+        - name: ActiveX – ovládací prvky
+          expanded: false
+          items:
+            - name: ActiveX – ovládací prvky
+              href: activex-controls.md
+            - name: MFC – ovládací prvky ActiveX
+              expanded: false
+              items:
+                - name: MFC – ovládací prvky ActiveX
+                  href: mfc-activex-controls.md
+                - name: 'MFC – ovládací prvky ActiveX: Optimalizace'
+                  expanded: false
+                  items:
+                    - name: 'MFC – ovládací prvky ActiveX: Optimalizace'
+                      href: mfc-activex-controls-optimization.md
+                    - name: Optimalizace trvalosti a inicializace
+                      href: optimizing-persistence-and-initialization.md
+                    - name: Zajišťování aktivace bez oken
+                      href: providing-windowless-activation.md
+                    - name: Vypnutí možnosti Activate When Visible
+                      href: turning-off-the-activate-when-visible-option.md
+                    - name: "Zajištění interakce s\_myší v\_neaktivním stavu"
+                      href: providing-mouse-interaction-while-inactive.md
+                    - name: Zajištění aktivace bez blikání
+                      href: providing-flicker-free-activation.md
+                    - name: Použití neoříznutého kontextu zařízení
+                      href: using-an-unclipped-device-context.md
+                    - name: Optimalizace vykreslování ovládacích prvků
+                      href: optimizing-control-drawing.md
+                - name: 'MFC – ovládací prvky ActiveX: Vykreslování ovládacího prvku ActiveX'
+                  href: mfc-activex-controls-painting-an-activex-control.md
+                - name: 'MFC – ovládací prvky ActiveX: Události'
+                  href: mfc-activex-controls-events.md
+                - name: 'MFC – ovládací prvky ActiveX: Přidání uložených událostí do ovládacího prvku ActiveX'
+                  href: mfc-activex-controls-adding-stock-events-to-an-activex-control.md
+                - name: 'MFC – ovládací prvky ActiveX: Přidání vlastních událostí'
+                  href: mfc-activex-controls-adding-custom-events.md
+                - name: 'MFC – ovládací prvky ActiveX: Metody'
+                  href: mfc-activex-controls-methods.md
+                - name: 'MFC – ovládací prvky ActiveX: Přidání uložených metod'
+                  href: mfc-activex-controls-adding-stock-methods.md
+                - name: 'MFC – ovládací prvky ActiveX: Přidání vlastních metod'
+                  href: mfc-activex-controls-adding-custom-methods.md
+                - name: 'MFC – ovládací prvky ActiveX: Vrácení chybových kódů z metody'
+                  href: mfc-activex-controls-returning-error-codes-from-a-method.md
+                - name: 'MFC – ovládací prvky ActiveX: Vlastnosti'
+                  href: mfc-activex-controls-properties.md
+                - name: 'MFC – ovládací prvky ActiveX: Přidání uložených vlastností'
+                  href: mfc-activex-controls-adding-stock-properties.md
+                - name: 'MFC – ovládací prvky ActiveX: Přidání vlastních vlastností'
+                  href: mfc-activex-controls-adding-custom-properties.md
+                - name: 'MFC – ovládací prvky ActiveX: Implementace rozšířených vlastností'
+                  href: mfc-activex-controls-advanced-property-implementation.md
+                - name: 'MFC – ovládací prvky ActiveX: Přístup k vedlejším vlastnostem'
+                  href: mfc-activex-controls-accessing-ambient-properties.md
+                - name: 'MFC – ovládací prvky ActiveX: Stránky vlastností'
+                  href: mfc-activex-controls-property-pages.md
+                - name: 'MFC – ovládací prvky ActiveX: Přidání další stránky přizpůsobených vlastností'
+                  href: mfc-activex-controls-adding-another-custom-property-page.md
+                - name: 'MFC – ovládací prvky ActiveX: Použití stránek uložených vlastností'
+                  href: mfc-activex-controls-using-stock-property-pages.md
+                - name: 'MFC – ovládací prvky ActiveX: Vytvoření serveru automatizace'
+                  href: mfc-activex-controls-creating-an-automation-server.md
+                - name: 'MFC – ovládací prvky ActiveX: Použití písem'
+                  href: mfc-activex-controls-using-fonts.md
+                - name: 'MFC – ovládací prvky ActiveX: Použití obrázků v ovládacím prvku ActiveX'
+                  href: mfc-activex-controls-using-pictures-in-an-activex-control.md
+                - name: 'MFC – ovládací prvky ActiveX: Pokročilá témata'
+                  href: mfc-activex-controls-advanced-topics.md
+                - name: 'MFC – ovládací prvky ActiveX: Distribuce ovládacích prvků ActiveX'
+                  href: mfc-activex-controls-distributing-activex-controls.md
+                - name: 'MFC – ovládací prvky ActiveX: Licencování ovládacího prvku ActiveX'
+                  href: mfc-activex-controls-licensing-an-activex-control.md
+                - name: 'MFC – ovládací prvky ActiveX: Lokalizace ovládacího prvku ActiveX'
+                  href: mfc-activex-controls-localizing-an-activex-control.md
+                - name: 'MFC – ovládací prvky ActiveX: Serializace'
+                  href: mfc-activex-controls-serializing.md
+                - name: 'MFC – ovládací prvky ActiveX: Vytvoření podtřídy ovládacího prvku Windows'
+                  expanded: false
+                  items:
+                    - name: 'MFC – ovládací prvky ActiveX: Vytvoření podtřídy ovládacího prvku Windows'
+                      href: mfc-activex-controls-subclassing-a-windows-control.md
+                    - name: Identifikátory reflektovaných zpráv oken
+                      href: reflected-window-message-ids.md
+                - name: 'MFC – ovládací prvky ActiveX: Použití datových vazeb v ovládacím prvku ActiveX'
+                  href: mfc-activex-controls-using-data-binding-in-an-activex-control.md
+            - name: Kontejnery ovládacích prvků ActiveX
+              expanded: false
+              items:
+                - name: Kontejnery ovládacích prvků ActiveX
+                  href: activex-control-containers.md
+                - name: Kontejnery pro ovládací prvky ActiveX
+                  href: containers-for-activex-controls.md
+                - name: 'Kontejnery ovládacích prvků ActiveX: Ruční povolení uzavření ovládacího prvku ActiveX'
+                  href: activex-control-containers-manually-enabling-activex-control-containment.md
+                - name: 'Kontejnery ovládacích prvků ActiveX: Vložení ovládacího prvku do kontejnerové aplikace ovládacího prvku'
+                  href: inserting-a-control-into-a-control-container-application.md
+                - name: 'Kontejnery ovládacích prvků ActiveX: Připojení ovládacího prvku ActiveX k členské proměnné'
+                  href: activex-control-containers-connecting-an-activex-control-to-a-member-variable.md
+                - name: 'Kontejnery ovládacích prvků ActiveX: Ošetření událostí ovládacího prvku ActiveX'
+                  href: activex-control-containers-handling-events-from-an-activex-control.md
+                - name: 'Kontejnery ovládacích prvků ActiveX: Zobrazení a úpravy vlastností ovládacích prvků'
+                  href: activex-control-containers-viewing-and-modifying-control-properties.md
+                - name: 'Kontejnery ovládacích prvků ActiveX: Programování ovládacích prvků ActiveX v kontejneru ovládacího prvku ActiveX'
+                  href: programming-activex-controls-in-a-activex-control-container.md
+                - name: 'Kontejnery ovládacích prvků ActiveX: Použití ovládacích prvků v kontejneru bez dialogových oken'
+                  href: activex-control-containers-using-controls-in-a-non-dialog-container.md
+            - name: Testování vlastností a událostí pomocí testovacího kontejneru
+              href: testing-properties-and-events-with-test-container.md
+        - name: Schránka
+          expanded: false
+          items:
+            - name: Schránka
+              href: clipboard.md
+            - name: 'Schránka: Kdy používat jednotlivé mechanismy schránky'
+              href: clipboard-when-to-use-each-clipboard-mechanism.md
+            - name: 'Schránka: Použití schránky Windows'
+              href: clipboard-using-the-windows-clipboard.md
+            - name: 'Schránka: Použití mechanismu schránky OLE'
+              expanded: false
+              items:
+                - name: 'Schránka: Použití mechanismu schránky OLE'
+                  href: clipboard-using-the-ole-clipboard-mechanism.md
+                - name: 'Schránka: Kopírování a vkládání dat'
+                  href: clipboard-copying-and-pasting-data.md
+                - name: 'Schránka: Přidání dalších formátů'
+                  href: clipboard-adding-other-formats.md
+        - name: Ovládací prvky (MFC)
+          expanded: false
+          items:
+            - name: Ovládací prvky (MFC)
+              href: controls-mfc.md
+            - name: Seznam ukázek běžných ovládacích prvků
+              href: common-control-sample-list.md
+            - name: Příprava a použití ovládacích prvků
+              expanded: false
+              items:
+                - name: Příprava a použití ovládacích prvků
+                  href: making-and-using-controls.md
+                - name: "Použití běžných ovládacích prvků v\_dialogovém okně"
+                  href: using-common-controls-in-a-dialog-box.md
+                - name: "Použití editoru dialogových oken k\_přidávání ovládacích prvků"
+                  href: using-the-dialog-editor-to-add-controls.md
+                - name: Ruční přidání ovládacích prvků
+                  href: adding-controls-by-hand.md
+                - name: Odvozování ovládacích prvků ze standardního ovládacího prvku
+                  href: deriving-controls-from-a-standard-control.md
+                - name: Použití běžného ovládacího prvku jako podřízeného okna
+                  href: using-a-common-control-as-a-child-window.md
+                - name: "Příjem oznámení z\_běžných ovládacích prvků"
+                  href: receiving-notification-from-common-controls.md
+            - name: Používání atributu CAnimateCtrl
+              expanded: false
+              items:
+                - name: Používání atributu CAnimateCtrl
+                  href: using-canimatectrl.md
+                - name: Použití ovládacího prvku animace
+                  href: using-an-animation-control.md
+                - name: "Oznámení zaslaná z\_ovládacích prvků animace"
+                  href: notifications-sent-by-animation-controls.md
+            - name: Používání atributu CDateTimeCtrl
+              expanded: false
+              items:
+                - name: Používání atributu CDateTimeCtrl
+                  href: using-cdatetimectrl.md
+                - name: Vytvoření ovládacího prvku pro výběr data a času
+                  href: creating-the-date-and-time-picker-control.md
+                - name: Příklady ovládacích prvků pro výběr data a času
+                  href: date-and-time-picker-control-examples.md
+                - name: "Přístup k\_vloženému ovládacímu prvku měsíční kalendář"
+                  href: accessing-the-embedded-month-calendar-control.md
+                - name: "Použití řetězců vlastního formátu v\_ovládacím prvku pro výběr data a času"
+                  href: using-custom-format-strings-in-a-date-and-time-picker-control.md
+                - name: "Použití polí zpětného volání v\_ovládacím prvku pro výběr data a času"
+                  href: using-callback-fields-in-a-date-and-time-picker-control.md
+                - name: "Zpracování oznamovacích zpráv v\_ovládacích prvcích pro výběr data a času"
+                  href: processing-notification-messages-in-date-and-time-picker-controls.md
+            - name: Používání atributu CComboBoxEx
+              expanded: false
+              items:
+                - name: Používání atributu CComboBoxEx
+                  href: using-ccomboboxex.md
+                - name: Vytvoření ovládacího prvku rozšířené pole se seznamem
+                  href: creating-an-extended-combo-box-control.md
+                - name: "Použití seznamů obrázků v\_ovládacím prvku rozšířené pole se seznamem"
+                  href: using-image-lists-in-an-extended-combo-box-control.md
+                - name: Nastavení obrázků pro jednotlivé položky
+                  href: setting-the-images-for-an-individual-item.md
+                - name: "Zpracování zpráv s\_oznámením v\_ovládacích prvcích rozšířeného pole se seznamem"
+                  href: processing-notification-messages-in-extended-combo-box-controls.md
+            - name: Používání atributu CHeaderCtrl
+              expanded: false
+              items:
+                - name: Používání atributu CHeaderCtrl
+                  href: using-cheaderctrl.md
+                - name: Ovládací prvky záhlaví a seznam
+                  href: header-control-and-list-control.md
+                - name: Příklady ovládacích prvků záhlaví
+                  href: header-control-examples.md
+                - name: "Položky záhlaví v\_ovládacím prvku záhlaví"
+                  href: header-items-in-a-header-control.md
+                - name: Přizpůsobení vzhledu položky záhlaví
+                  href: customizing-the-header-item-s-appearance.md
+                - name: "Zajištění podpory přetažení u\_položek záhlaví"
+                  href: providing-drag-and-drop-support-for-header-items.md
+                - name: "Použití seznamů obrázků s\_ovládacími prvky záhlaví"
+                  href: using-image-lists-with-header-controls.md
+                - name: Tvorba ovládacích prvků záhlaví vykreslovaných vlastníkem
+                  href: making-owner-drawn-header-controls.md
+                - name: Práce s ovládacím prvkem záhlaví
+                  href: working-with-a-header-control.md
+                - name: Vytvoření ovládacího prvku záhlaví
+                  href: creating-the-header-control.md
+                - name: Přidávání položek do ovládacího prvku záhlaví
+                  href: adding-items-to-the-header-control.md
+                - name: "Řazení položek v\_ovládacím prvku záhlaví"
+                  href: ordering-items-in-the-header-control.md
+                - name: Zpracování oznámení ovládacího prvku záhlaví
+                  href: processing-header-control-notifications.md
+            - name: Používání atributu CHotKeyCtrl
+              expanded: false
+              items:
+                - name: Používání atributu CHotKeyCtrl
+                  href: using-chotkeyctrl.md
+                - name: Použití ovládacího prvku klávesová zkratka
+                  href: using-a-hot-key-control.md
+                - name: Nastavení klávesové zkratky
+                  href: setting-a-hot-key.md
+                - name: Globální klávesové zkratky
+                  href: global-hot-keys.md
+                - name: Klávesové zkratky specifické pro vlákno
+                  href: thread-specific-hot-keys.md
+            - name: Používání atributu CImageList
+              expanded: false
+              items:
+                - name: Používání atributu CImageList
+                  href: using-cimagelist.md
+                - name: Typy seznamů obrázků
+                  href: types-of-image-lists.md
+                - name: Použití seznamu obrázků
+                  href: using-an-image-list.md
+                - name: Manipulace se seznamy obrázků
+                  href: manipulating-image-lists.md
+                - name: Vykreslování obrázků ze seznamu obrázků
+                  href: drawing-images-from-an-image-list.md
+                - name: "Překryvy obrázků v\_seznamech obrázků"
+                  href: image-overlays-in-image-lists.md
+                - name: Přetahování obrázků ze seznamu obrázků
+                  href: dragging-images-from-an-image-list.md
+                - name: "Informace o\_obrázku v\_seznamech obrázků"
+                  href: image-information-in-image-lists.md
+            - name: Používání atributu CListCtrl
+              expanded: false
+              items:
+                - name: Používání atributu CListCtrl
+                  href: using-clistctrl.md
+                - name: "Ovládací prvek seznam a\_zobrazení seznamu"
+                  href: list-control-and-list-view.md
+                - name: Položky seznamu a seznamy obrázků
+                  href: list-items-and-image-lists.md
+                - name: Položky zpětného volání a maska zpětného volání
+                  href: callback-items-and-the-callback-mask.md
+                - name: Vytvoření ovládacího prvku seznam
+                  href: creating-the-list-control.md
+                - name: Vytváření seznamů obrázků
+                  href: creating-the-image-lists.md
+                - name: Přidávání sloupců do ovládacího prvku (zobrazení sestavy)
+                  href: adding-columns-to-the-control-report-view.md
+                - name: Přidávání položek do ovládacího prvku
+                  href: adding-items-to-the-control.md
+                - name: "Posouvání, uspořádání, řazení a hledání v\_ovládacích prvcích seznam"
+                  href: scrolling-arranging-sorting-and-finding-in-list-controls.md
+                - name: "Implementace pracovních oblastí v\_ovládacích prvcích seznam"
+                  href: implementing-working-areas-in-list-controls.md
+                - name: "Zpracování zpráv s\_oznámením v\_ovládacích prvcích seznam"
+                  href: processing-notification-messages-in-list-controls.md
+                - name: Změna stylů ovládacího prvku seznam
+                  href: changing-list-control-styles.md
+                - name: Ovládací prvky typu virtuální seznam
+                  href: virtual-list-controls.md
+                - name: Likvidace ovládacího prvku seznam
+                  href: destroying-the-list-control.md
+            - name: Používání atributu CMonthCalCtrl
+              expanded: false
+              items:
+                - name: Používání atributu CMonthCalCtrl
+                  href: using-cmonthcalctrl.md
+                - name: Vytvoření ovládacího prvku měsíční kalendář
+                  href: creating-the-month-calendar-control.md
+                - name: Příklady pro ovládací prvek měsíční kalendář
+                  href: month-calendar-control-examples.md
+                - name: "Zpracování zpráv s\_oznámením v\_ovládacím prvku měsíční kalendář"
+                  href: processing-notification-messages-in-month-calendar-controls.md
+                - name: "Nastavení stavu dne v\_ovládacím prvku měsíční kalendář"
+                  href: setting-the-day-state-of-a-month-calendar-control.md
+            - name: Používání atributu CProgressCtrl
+              expanded: false
+              items:
+                - name: Používání atributu CProgressCtrl
+                  href: using-cprogressctrl.md
+                - name: Styly pro ovládací prvek průběh
+                  href: styles-for-the-progress-control.md
+                - name: Nastavení pro ovládací prvek průběh
+                  href: settings-for-the-progress-control.md
+                - name: "Manipulace s\_ovládacím prvkem průběh"
+                  href: manipulating-the-progress-control.md
+            - name: Používání atributu CReBarCtrl
+              expanded: false
+              items:
+                - name: Používání atributu CReBarCtrl
+                  href: using-crebarctrl.md
+                - name: Porovnání atributů CReBar a CReBarCtrl
+                  href: crebar-vs-crebarctrl.md
+                - name: Vytvoření ovládacího prvku matrice
+                  href: creating-a-rebar-control.md
+                - name: Matrice – ovládací prvky a pruhy
+                  href: rebar-controls-and-bands.md
+                - name: "Použití seznamu obrázků s\_ovládacím prvkem matrice"
+                  href: using-an-image-list-with-a-rebar-control.md
+                - name: "Použití dialogového pruhu s\_ovládacím prvkem matrice"
+                  href: using-a-dialog-bar-with-a-rebar-control.md
+                - name: "Zpracování zpráv s\_oznámením v\_ovládacím prvku matrice"
+                  href: processing-notification-messages-in-a-rebar-control.md
+            - name: Používání atributu CRichEditCtrl
+              expanded: false
+              items:
+                - name: Používání atributu CRichEditCtrl
+                  href: using-cricheditctrl.md
+                - name: "Přehled ovládacích prvků pro úpravy s\_formátováním"
+                  href: overview-of-the-rich-edit-control.md
+                - name: "Třídy související s\_ovládacími prvky pro úpravy s\_formátováním"
+                  href: classes-related-to-rich-edit-controls.md
+                - name: "Příklady ovládacích prvků pro úpravy s\_formátováním"
+                  href: rich-edit-control-examples.md
+                - name: "Formátování znaků v\_ovládacích prvcích pro úpravy s\_formátováním"
+                  href: character-formatting-in-rich-edit-controls.md
+                - name: "Formátování odstavců v\_ovládacích prvcích pro úpravy s\_formátováním"
+                  href: paragraph-formatting-in-rich-edit-controls.md
+                - name: "Aktuální výběr v\_ovládacích prvcích pro úpravy s\_formátováním"
+                  href: current-selection-in-a-rich-edit-control.md
+                - name: "Dělení textu v\_ovládacích prvcích pro úpravy s\_formátováním"
+                  href: word-breaks-in-rich-edit-controls.md
+                - name: "Operace se schránkou v\_ovládacích prvcích pro úpravy s\_formátováním"
+                  href: clipboard-operations-in-rich-edit-controls.md
+                - name: "Operace se streamy v\_ovládacích prvcích pro úpravy s\_formátováním"
+                  href: stream-operations-in-rich-edit-controls.md
+                - name: "Tisk v\_ovládacích prvcích pro úpravy s\_formátováním"
+                  href: printing-in-rich-edit-controls.md
+                - name: "Neomezené ovládací prvky pro úpravy s\_formátováním"
+                  href: bottomless-rich-edit-controls.md
+                - name: "Oznámení z\_ovládacích prvků pro úpravy s\_formátováním"
+                  href: notifications-from-a-rich-edit-control.md
+            - name: Používání atributu CSliderCtrl
+              expanded: false
+              items:
+                - name: Používání atributu CSliderCtrl
+                  href: using-csliderctrl.md
+                - name: Použití ovládacích prvků posuvník
+                  href: using-slider-controls.md
+                - name: Posuvník – styly ovládacího prvku
+                  href: slider-control-styles.md
+                - name: Členské funkce ovládacího prvku posuvník
+                  href: slider-control-member-functions.md
+                - name: "Zprávy s\_oznámením pro posuvník"
+                  href: slider-notification-messages.md
+            - name: Používání atributu CSpinButtonCtrl
+              expanded: false
+              items:
+                - name: Používání atributu CSpinButtonCtrl
+                  href: using-cspinbuttonctrl.md
+                - name: Styly číselníků
+                  href: spin-button-styles.md
+                - name: Členské funkce číselníku
+                  href: spin-button-member-functions.md
+            - name: Používání atributu CStatusBarCtrl
+              expanded: false
+              items:
+                - name: Používání atributu CStatusBarCtrl
+                  href: using-cstatusbarctrl.md
+                - name: Metody vytváření stavového řádku
+                  href: methods-of-creating-a-status-bar.md
+                - name: Nastavení pro třídu CStatusBarCtrl
+                  href: settings-for-the-cstatusbarctrl.md
+                - name: "Použití třídy CStatusBarCtrl k\_vytvoření objektu CStatusBarCtrl"
+                  href: using-cstatusbarctrl-to-create-a-cstatusbarctrl-object.md
+                - name: Nastavení režimu objektu CStatusBarCtrl
+                  href: setting-the-mode-of-a-cstatusbarctrl-object.md
+                - name: Inicializace částí objektu CStatusBarCtrl
+                  href: initializing-the-parts-of-a-cstatusbarctrl-object.md
+                - name: "Použití popisů tlačítek v\_objektu CStatusBarCtrl"
+                  href: using-tooltips-in-a-cstatusbarctrl-object.md
+            - name: Používání atributu CTabCtrl
+              expanded: false
+              items:
+                - name: Používání atributu CTabCtrl
+                  href: using-ctabctrl.md
+                - name: Ovládací prvky karta a seznamy vlastností
+                  href: tab-controls-and-property-sheets.md
+                - name: "Karty a\_atributy ovládacího prvku karta"
+                  href: tabs-and-tab-control-attributes.md
+                - name: Vytváření karet vykreslovaných vlastníkem
+                  href: making-owner-drawn-tabs.md
+                - name: Práce s ovládacím prvkem karta
+                  href: working-with-a-tab-control.md
+                - name: Vytvoření ovládacího prvku karta
+                  href: creating-the-tab-control.md
+                - name: Přidání karet do ovládacího prvku karta
+                  href: adding-tabs-to-a-tab-control.md
+                - name: "Zpracování zpráv s\_oznámením ovládacího prvku karta"
+                  href: processing-tab-control-notification-messages.md
+            - name: Používání atributu CToolBarCtrl
+              expanded: false
+              items:
+                - name: Používání atributu CToolBarCtrl
+                  href: using-ctoolbarctrl.md
+                - name: Metody vytváření panelů nástrojů
+                  href: methods-of-creating-a-toolbar.md
+                - name: Nastavení pro ovládací prvek panel nástrojů
+                  href: settings-for-the-toolbar-control.md
+                - name: Vytvoření objektu CToolBarCtrl
+                  href: creating-a-ctoolbarctrl-object.md
+                - name: "Použití seznamů obrázků v\_ovládacím prvku panel nástrojů"
+                  href: using-image-lists-in-a-toolbar-control.md
+                - name: "Použití rozevíracích tlačítek v\_ovládacím prvku panel nástrojů"
+                  href: using-drop-down-buttons-in-a-toolbar-control.md
+                - name: Přizpůsobení vzhledu ovládacího prvku panel nástrojů
+                  href: customizing-the-appearance-of-a-toolbar-control.md
+                - name: Zpracování oznámení popisů tlačítek
+                  href: handling-tool-tip-notifications.md
+                - name: Zpracování oznámení o přizpůsobení
+                  href: handling-customization-notifications.md
+            - name: Používání atributu CToolTipCtrl
+              expanded: false
+              items:
+                - name: Používání atributu CToolTipCtrl
+                  href: using-ctooltipctrl.md
+                - name: Metody vytváření popisů tlačítek
+                  href: methods-of-creating-tool-tips.md
+                - name: Nastavení pro ovládací prvek popis tlačítka
+                  href: settings-for-the-tool-tip-control.md
+                - name: "Použití objektu CToolTipCtrl k\_vytvoření objektu CToolTipCtrl a\_manipulaci s\_ním"
+                  href: using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object.md
+                - name: "Manipulace s\_ovládacím prvkem popis tlačítka"
+                  href: manipulating-the-tool-tip-control.md
+            - name: Používání atributu CTreeCtrl
+              expanded: false
+              items:
+                - name: Používání atributu CTreeCtrl
+                  href: using-ctreectrl.md
+                - name: Porovnání atributů CTreeCtrl a CTreeView
+                  href: ctreectrl-vs-ctreeview.md
+                - name: Použití ovládacích prvků strom
+                  href: using-tree-controls.md
+                - name: "Komunikace s\_ovládacím prvkem strom"
+                  href: communicating-with-a-tree-control.md
+                - name: Styly ovládacího prvku strom
+                  href: tree-control-styles.md
+                - name: Nadřízené a podřízené položky ovládacího prvku strom
+                  href: tree-control-parent-and-child-items.md
+                - name: "Umístění položky v\_ovládacím prvku strom"
+                  href: tree-control-item-position.md
+                - name: Popisky položek ovládacího prvku strom
+                  href: tree-control-item-labels.md
+                - name: Úpravy popisků ovládacích prvků strom
+                  href: tree-control-label-editing.md
+                - name: Přehled stavů položek ovládacího prvku strom
+                  href: tree-control-item-states-overview.md
+                - name: "Seznamy obrázků v\_ovládacím prvku strom"
+                  href: tree-control-image-lists.md
+                - name: Výběr položek ovládacího prvku strom
+                  href: tree-control-item-selection.md
+                - name: Operace přetažení u ovládacího prvku strom
+                  href: tree-control-drag-and-drop-operations.md
+                - name: Informace o položkách ovládacího prvku strom
+                  href: tree-control-item-information.md
+                - name: "Zprávy s\_oznámením ovládacího prvku strom"
+                  href: tree-control-notification-messages.md
+        - name: Ovládací pruhy
+          href: control-bars.md
+        - name: Dialogové pruhy
+          href: dialog-bars.md
+        - name: Dialogová okna
+          expanded: false
+          items:
+            - name: Dialogová okna
+              href: dialog-boxes.md
+            - name: 'Příklad: Zobrazení dialogového okna pomocí příkazu nabídky'
+              href: example-displaying-a-dialog-box-via-a-menu-command.md
+            - name: Seznam ukázek dialogových oken
+              href: dialog-sample-list.md
+            - name: "Komponenty dialogového okna v\_rozhraní .NET Framework"
+              href: dialog-box-components-in-the-framework.md
+            - name: Modální a nemodální dialogová okna
+              href: modal-and-modeless-dialog-boxes.md
+            - name: Seznamy vlastností a stránky vlastností (MFC)
+              href: property-sheets-and-property-pages-mfc.md
+            - name: Vytvoření prostředku dialogového okna
+              href: creating-the-dialog-resource.md
+            - name: "Vytvoření třídy dialogového okna s\_použitím průvodců kódem"
+              expanded: false
+              items:
+                - name: "Vytvoření třídy dialogového okna s\_použitím průvodců kódem"
+                  href: creating-a-dialog-class-with-code-wizards.md
+                - name: Vytvoření vlastní třídy dialogového okna
+                  href: creating-your-dialog-class.md
+            - name: Životní cyklus dialogového okna
+              expanded: false
+              items:
+                - name: Životní cyklus dialogového okna
+                  href: life-cycle-of-a-dialog-box.md
+                - name: Vytváření a zobrazování dialogových oken
+                  href: creating-and-displaying-dialog-boxes.md
+                - name: Vytváření modálních dialogových oken
+                  href: creating-modal-dialog-boxes.md
+                - name: Vytváření nemodálních dialogových oken
+                  href: creating-modeless-dialog-boxes.md
+                - name: "Použití šablony dialogového okna v\_paměti"
+                  href: using-a-dialog-template-in-memory.md
+                - name: "Nastavení barvy pozadí v\_dialogovém okně"
+                  href: setting-the-dialog-boxs-background-color.md
+                - name: Inicializace dialogového okna
+                  href: initializing-the-dialog-box.md
+                - name: Zpracování zpráv systému Windows v dialogovém okně
+                  href: handling-windows-messages-in-your-dialog-box.md
+                - name: "Načítání dat z\_objektu dialogového okna"
+                  href: retrieving-data-from-the-dialog-object.md
+                - name: Zavření dialogového okna
+                  href: closing-the-dialog-box.md
+                - name: Zničení dialogového okna
+                  href: destroying-the-dialog-box.md
+            - name: Výměna a ověření dat dialogových oken
+              expanded: false
+              items:
+                - name: Výměna a ověření dat dialogových oken
+                  href: dialog-data-exchange-and-validation.md
+                - name: Výměna dat dialogových oken
+                  href: dialog-data-exchange.md
+                - name: Ověřování dat dialogového okna
+                  href: dialog-data-validation.md
+            - name: "Typově bezpečný přístup k\_ovládacím prvkům v\_dialogovém okně"
+              expanded: false
+              items:
+                - name: "Typově bezpečný přístup k\_ovládacím prvkům v\_dialogovém okně"
+                  href: type-safe-access-to-controls-in-a-dialog-box.md
+                - name: "Typově bezpečný přístup k\_ovládacím prvkům bez průvodců kódem"
+                  href: type-safe-access-to-controls-without-code-wizards.md
+                - name: "Typově bezpečný přístup k\_ovládacím prvkům s\_průvodci kódem"
+                  href: type-safe-access-to-controls-with-code-wizards.md
+            - name: Mapování zpráv systému Windows na třídu
+              href: mapping-windows-messages-to-your-class.md
+            - name: Běžně přepisované členské funkce
+              href: commonly-overridden-member-functions.md
+            - name: Běžně přidávané členské funkce
+              href: commonly-added-member-functions.md
+            - name: Společné třídy dialogových oken
+              href: common-dialog-classes.md
+            - name: "Dialogová okna v\_prostředí OLE"
+              href: dialog-boxes-in-ole.md
+            - name: 'Návod: Přidání objektu CTaskDialog do aplikace'
+              href: walkthrough-adding-a-ctaskdialog-to-an-application.md
+        - name: Architektura dokumentů a zobrazení
+          expanded: false
+          items:
+            - name: Architektura dokumentů a zobrazení
+              href: document-view-architecture.md
+            - name: Seznam ukázkových dokumentů a zobrazení
+              href: document-view-sample-list.md
+            - name: Portrét architektury dokumentů a zobrazení
+              href: a-portrait-of-the-document-view-architecture.md
+            - name: Výhody architektury dokumentů a zobrazení
+              href: advantages-of-the-document-view-architecture.md
+            - name: Třídy dokumentů a zobrazení vytvořené průvodcem aplikací MFC
+              href: document-and-view-classes-created-by-the-mfc-application-wizard.md
+            - name: "Alternativy k\_architektuře dokumentů a zobrazení"
+              href: alternatives-to-the-document-view-architecture.md
+            - name: Použití dokumentů
+              expanded: false
+              items:
+                - name: Použití dokumentů
+                  href: using-documents.md
+                - name: "Odvození dokumentové třídy z\_objektu CDocument"
+                  href: deriving-a-document-class-from-cdocument.md
+                - name: "Správa dat s\_použitím datových proměnných dokumentu"
+                  href: managing-data-with-document-data-variables.md
+                - name: Serializace dat při vstupu i výstupu ze souborů
+                  href: serializing-data-to-and-from-files.md
+                - name: Obcházení mechanismu serializace
+                  href: bypassing-the-serialization-mechanism.md
+                - name: "Zpracování příkazů v\_dokumentu"
+                  href: handling-commands-in-the-document.md
+            - name: Použití zobrazení
+              expanded: false
+              items:
+                - name: Použití zobrazení
+                  href: using-views.md
+                - name: "Odvozené třídy zobrazení dostupné v\_prostředí MFC"
+                  href: derived-view-classes-available-in-mfc.md
+                - name: "Kreslení v\_zobrazení"
+                  href: drawing-in-a-view.md
+                - name: Interpretace vstupu uživatele prostřednictvím zobrazení
+                  href: interpreting-user-input-through-a-view.md
+                - name: "Role zobrazení v\_tisku"
+                  href: role-of-the-view-in-printing.md
+                - name: Posouvání a změna měřítka zobrazení
+                  href: scrolling-and-scaling-views.md
+            - name: "Více typů dokumentů, zobrazení a oken s\_rámečkem"
+              href: multiple-document-types-views-and-frame-windows.md
+            - name: "Inicializace a uklízení dokumentů a\_zobrazení"
+              expanded: false
+              items:
+                - name: "Inicializace a uklízení dokumentů a\_zobrazení"
+                  href: initializing-and-cleaning-up-documents-and-views.md
+                - name: "Inicializace dokumentů a\_zobrazení"
+                  href: initializing-documents-and-views.md
+                - name: "Uklízení dokumentů a\_zobrazení"
+                  href: cleaning-up-documents-and-views.md
+            - name: Přidání více zobrazení do jednoho dokumentu
+              href: adding-multiple-views-to-a-single-document.md
+        - name: Zobrazení formulářů (MFC)
+          expanded: false
+          items:
+            - name: Zobrazení formulářů (MFC)
+              href: form-views-mfc.md
+            - name: Vložení formuláře do projektu
+              href: inserting-a-form-into-a-project.md
+        - name: 'Nápověda HTML: Kontextová nápověda pro vaše programy'
+          href: html-help-context-sensitive-help-for-your-programs.md
+        - name: MDI – skupiny se záložkami
+          href: mdi-tabbed-groups.md
+        - name: Nabídky (MFC)
+          expanded: false
+          items:
+            - name: Nabídky (MFC)
+              href: menus-mfc.md
+            - name: Seznam ukázek nabídek
+              href: menu-sample-list.md
+            - name: "Manipulace s\_nabídkami během spuštění programu"
+              href: manipulating-menus-during-program-execution.md
+            - name: 'Postupy: Aktualizace objektů uživatelského rozhraní'
+              expanded: false
+              items:
+                - name: 'Postupy: Aktualizace objektů uživatelského rozhraní'
+                  href: how-to-update-user-interface-objects.md
+                - name: Kdy se volají obslužné rutiny aktualizace
+                  href: when-update-handlers-are-called.md
+                - name: ON_UPDATE_COMMAND_UI – makro
+                  href: on-update-command-ui-macro.md
+                - name: CCmdUI – třída
+                  href: the-ccmdui-class.md
+        - name: OLE (MFC)
+          href: ole-mfc.md
+        - name: Tisk a náhled tisku
+          expanded: false
+          items:
+            - name: Tisk a náhled tisku
+              href: printing-and-print-preview.md
+            - name: Tisk
+              expanded: false
+              items:
+                - name: Tisk
+                  href: printing.md
+                - name: Jak probíhá výchozí tisk
+                  href: how-default-printing-is-done.md
+                - name: Vícestránkové dokumenty
+                  href: multipage-documents.md
+                - name: Záhlaví a zápatí
+                  href: headers-and-footers.md
+                - name: Přidělování prostředků GDI
+                  href: allocating-gdi-resources.md
+            - name: Architektura náhledu tisku
+              href: print-preview-architecture.md
+        - name: Seznamy vlastností (MFC)
+          expanded: false
+          items:
+            - name: Seznamy vlastností (MFC)
+              href: property-sheets-mfc.md
+            - name: "Seznamy vlastností a stránky vlastností v\_prostředí MFC"
+              href: property-sheets-and-property-pages-in-mfc.md
+            - name: "Použití seznamů vlastností v\_aplikaci"
+              href: using-property-sheets-in-your-application.md
+            - name: Přidání ovládacích prvků do seznamu vlastností
+              href: adding-controls-to-a-property-sheet.md
+            - name: Výměna dat
+              href: exchanging-data.md
+            - name: Vytvoření nemodálního seznamu vlastností
+              href: creating-a-modeless-property-sheet.md
+            - name: Ošetření tlačítka Použít
+              href: handling-the-apply-button.md
+            - name: Seznamy vlastností jako průvodci
+              href: property-sheets-as-wizards.md
+        - name: Návrhář pásu karet (MFC)
+          expanded: false
+          items:
+            - name: Návrhář pásu karet (MFC)
+              href: ribbon-designer-mfc.md
+            - name: 'Postupy: Převod existujícího pásu karet MFC na prostředek pásu karet'
+              href: how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md
+            - name: 'Postupy: Přizpůsobení tlačítka aplikace'
+              href: how-to-customize-the-application-button.md
+            - name: 'Postupy: Přizpůsobení panelu nástrojů Rychlý přístup'
+              href: how-to-customize-the-quick-access-toolbar.md
+            - name: 'Postupy: Přidání ovládacích prvků pásu karet a obslužných rutin událostí'
+              href: how-to-add-ribbon-controls-and-event-handlers.md
+            - name: 'Postupy: Načtení prostředku pásu karet z aplikace MFC'
+              href: how-to-load-a-ribbon-resource-from-an-mfc-application.md
+            - name: 'Návod: Vytvoření jednoduché aplikace pásu karet pomocí knihovny MFC'
+              href: walkthrough-creating-a-ribbon-application-by-using-mfc.md
+            - name: 'Návod: Aktualizace aplikace MFC Scribble (část 1)'
+              href: walkthrough-updating-the-mfc-scribble-application-part-1.md
+            - name: 'Návod: Aktualizace aplikace MFC Scribble (část 2)'
+              href: walkthrough-updating-the-mfc-scribble-application-part-2.md
+        - name: Stavové řádky
+          expanded: false
+          items:
+            - name: Stavové řádky
+              href: status-bars.md
+            - name: "Implementace stavového řádku v\_prostředí MFC"
+              expanded: false
+              items:
+                - name: "Implementace stavového řádku v\_prostředí MFC"
+                  href: status-bar-implementation-in-mfc.md
+                - name: Aktualizace textu na panelu stavového řádku
+                  href: updating-the-text-of-a-status-bar-pane.md
+        - name: Popisy tlačítek
+          expanded: false
+          items:
+            - name: Popisy tlačítek
+              href: tool-tips.md
+            - name: "Popisy tlačítek v\_oknech neodvozených ze třídy CFrameWnd"
+              expanded: false
+              items:
+                - name: "Popisy tlačítek v\_oknech neodvozených ze třídy CFrameWnd"
+                  href: tool-tips-in-windows-not-derived-from-cframewnd.md
+                - name: Povolení popisů tlačítek
+                  href: enabling-tool-tips.md
+                - name: Zpracování oznámení TTN_NEEDTEXT u popisů tlačítek
+                  href: handling-ttn-needtext-notification-for-tool-tips.md
+                - name: TOOLTIPTEXT – struktura
+                  href: tooltiptext-structure.md
+        - name: Panely nástrojů
+          expanded: false
+          items:
+            - name: Panely nástrojů
+              href: toolbars.md
+            - name: Seznam ukázek panelů nástrojů
+              href: toolbar-sample-list.md
+            - name: "Implementace panelu nástrojů v\_prostředí MFC"
+              expanded: false
+              items:
+                - name: "Implementace panelu nástrojů v\_prostředí MFC"
+                  href: mfc-toolbar-implementation.md
+                - name: Principy panelů nástrojů
+                  href: toolbar-fundamentals.md
+                - name: Ukotvitelné a plovoucí panely nástrojů
+                  href: docking-and-floating-toolbars.md
+                - name: Popisy tlačítek na panelu nástrojů
+                  href: toolbar-tool-tips.md
+                - name: "Práce s\_ovládacím prvkem panel nástrojů"
+                  href: working-with-the-toolbar-control.md
+                - name: Použití starých panelů nástrojů
+                  href: using-your-old-toolbars.md
+        - name: Správce vizualizace
+          href: visualization-manager.md
+        - name: Windows
+          expanded: false
+          items:
+            - name: Windows
+              href: windows.md
+            - name: Objekty oken
+              expanded: false
+              items:
+                - name: Objekty oken
+                  href: window-objects.md
+                - name: "Vztah mezi objektem okna v\_jazyku C++ a popisovačem HWND"
+                  href: relationship-between-a-cpp-window-object-and-an-hwnd.md
+                - name: Odvozené třídy oken
+                  href: derived-window-classes.md
+                - name: Vytváření oken
+                  expanded: false
+                  items:
+                    - name: Vytváření oken
+                      href: creating-windows.md
+                    - name: Registrace tříd oken
+                      href: registering-window-classes.md
+                    - name: Obecná posloupnost vytvoření okna
+                      href: general-window-creation-sequence.md
+                - name: Likvidace objektů oken
+                  expanded: false
+                  items:
+                    - name: Likvidace objektů oken
+                      href: destroying-window-objects.md
+                    - name: Posloupnost likvidace okna
+                      href: window-destruction-sequence.md
+                    - name: Přidělování a rušení přidělení paměti okna
+                      href: allocating-and-deallocating-window-memory.md
+                - name: Odpojení třídy CWnd od jejího prvku HWND
+                  href: detaching-a-cwnd-from-its-hwnd.md
+                - name: "Práce s\_objekty oken"
+                  href: working-with-window-objects.md
+                - name: Kontexty zařízení
+                  href: device-contexts.md
+                - name: Grafické objekty
+                  expanded: false
+                  items:
+                    - name: Grafické objekty
+                      href: graphic-objects.md
+                    - name: Jednofázová a dvoufázová konstrukce objektů
+                      href: one-stage-and-two-stage-construction-of-objects.md
+                    - name: "Výběr grafického objektu v\_kontextu zařízení"
+                      href: selecting-a-graphic-object-into-a-device-context.md
+            - name: Okna s rámečkem
+              expanded: false
+              items:
+                - name: Okna s rámečkem
+                  href: frame-windows.md
+                - name: Třídy oken s rámečkem
+                  expanded: false
+                  items:
+                    - name: Třídy oken s rámečkem
+                      href: frame-window-classes.md
+                    - name: "Třídy oken s\_rámečkem vytvořené průvodcem aplikací"
+                      href: frame-window-classes-created-by-the-application-wizard.md
+                - name: "Styly oken s\_rámečkem (C++)"
+                  expanded: false
+                  items:
+                    - name: "Styly oken s\_rámečkem (C++)"
+                      href: frame-window-styles-cpp.md
+                    - name: Změna stylů okna vytvořeného rozhraním MFC
+                      href: changing-the-styles-of-a-window-created-by-mfc.md
+                - name: "Jak fungují okna s\_rámečkem"
+                  href: what-frame-windows-do.md
+                - name: "Použití oken s\_rámečkem"
+                  expanded: false
+                  items:
+                    - name: "Použití oken s\_rámečkem"
+                      href: using-frame-windows.md
+                    - name: "Vytváření oken s\_rámečkem v\_dokumentu"
+                      href: creating-document-frame-windows.md
+                    - name: Kdy je třeba inicializovat objekty CWnd
+                      href: when-to-initialize-cwnd-objects.md
+                    - name: "Likvidace oken s\_rámečkem"
+                      href: destroying-frame-windows.md
+                    - name: Správa podřízených oken MDI
+                      href: managing-mdi-child-windows.md
+                    - name: Správa aktuálního zobrazení
+                      href: managing-the-current-view.md
+                    - name: 'Správa nabídek, ovládacích pruhů a akcelerátorů'
+                      href: managing-menus-control-bars-and-accelerators.md
+                    - name: "Přetahování souborů v\_okně s\_rámečkem"
+                      href: dragging-and-dropping-files-in-a-frame-window.md
+                    - name: Odpověď na dynamickou výměnu dat (DDE)
+                      href: responding-to-dynamic-data-exchange-dde.md
+                    - name: Orchestrace dalších akcí okna
+                      href: orchestrating-other-window-actions.md
+    - name: Windows Sockets
+      expanded: false
+      items:
+        - name: Windows Sockets
+          href: windows-sockets.md
+        - name: "Windows sockets v\_prostředí MFC"
+          expanded: false
+          items:
+            - name: "Windows sockets v\_prostředí MFC"
+              href: windows-sockets-in-mfc.md
+            - name: 'Windows Sockets: Pozadí'
+              href: windows-sockets-background.md
+            - name: 'Windows Sockets: Sokety datového proudu'
+              href: windows-sockets-stream-sockets.md
+            - name: 'Windows Sockets: Sokety datagramu'
+              href: windows-sockets-datagram-sockets.md
+            - name: 'Windows Sockets: Použití soketů s archivy'
+              href: windows-sockets-using-sockets-with-archives.md
+            - name: 'Windows Sockets: Posloupnost operací'
+              href: windows-sockets-sequence-of-operations.md
+            - name: 'Windows Sockets: Příklady soketů využívajících archivy'
+              href: windows-sockets-example-of-sockets-using-archives.md
+            - name: 'Windows Sockets: Jak fungují sokety s archivy'
+              href: windows-sockets-how-sockets-with-archives-work.md
+            - name: 'Windows Sockets: Použití třídy CAsyncSocket'
+              href: windows-sockets-using-class-casyncsocket.md
+            - name: 'Windows Sockets: Odvozování z tříd soketů'
+              href: windows-sockets-deriving-from-socket-classes.md
+            - name: 'Windows Sockets: Oznámení soketů'
+              href: windows-sockets-socket-notifications.md
+            - name: 'Windows Sockets: Blokování'
+              href: windows-sockets-blocking.md
+            - name: 'Windows Sockets: Pořadí bajtů'
+              href: windows-sockets-byte-ordering.md
+            - name: 'Windows Sockets: Převádění řetězců'
+              href: windows-sockets-converting-strings.md
+            - name: 'Windows Sockets: Porty a adresy soketů'
+              href: windows-sockets-ports-and-socket-addresses.md
+    - name: Win32 – internetová rozšíření (WinInet)
+      expanded: false
+      items:
+        - name: Win32 – internetová rozšíření (WinInet)
+          href: win32-internet-extensions-wininet.md
+        - name: Jak rozhraní WinInet usnadňuje tvorbu internetových klientských aplikací
+          href: how-wininet-makes-it-easier-to-create-internet-client-applications.md
+        - name: Jak prostředí MFC usnadňuje tvorbu internetových klientských aplikací
+          href: how-mfc-makes-it-easier-to-create-internet-client-applications.md
+        - name: MFC – třídy pro tvorbu internetových klientských aplikací
+          href: mfc-classes-for-creating-internet-client-applications.md
+        - name: Požadavky na třídy internetových klientů
+          href: prerequisites-for-internet-client-classes.md
+        - name: Psaní internetových klientských aplikací pomocí tříd WinInet knihovny MFC
+          href: writing-an-internet-client-application-using-mfc-wininet-classes.md
+        - name: "Postup v\_typické internetové klientské aplikaci"
+          href: steps-in-a-typical-internet-client-application.md
+        - name: "Postup v\_typické aplikaci klienta FTP"
+          href: steps-in-a-typical-ftp-client-application.md
+        - name: "Postup odstranění souboru v\_typické aplikaci klienta FTP"
+          href: steps-in-a-typical-ftp-client-application-to-delete-a-file.md
+        - name: "Postup v\_typické aplikaci klienta Gopher"
+          href: steps-in-a-typical-gopher-client-application.md
+        - name: "Postup v\_typické aplikaci klienta HTTP"
+          href: steps-in-a-typical-http-client-application.md
+- name: Graf hierarchie
+  expanded: false
+  items:
+    - name: Graf hierarchie
+      href: hierarchy-chart.md
+    - name: Kategorie grafů hierarchie
+      href: hierarchy-chart-categories.md
+- name: Přizpůsobení pro prostředí MFC
+  expanded: false
+  items:
+    - name: Přizpůsobení pro prostředí MFC
+      href: customization-for-mfc.md
+    - name: Přizpůsobení klávesnice a myši
+      href: keyboard-and-mouse-customization.md
+    - name: Uživatelem definované nástroje
+      href: user-defined-tools.md
+    - name: Vliv přizpůsobení na zabezpečení
+      href: security-implications-of-customization.md
+- name: MFC – technické poznámky
+  expanded: false
+  items:
+    - name: MFC – technické poznámky
+      href: mfc-technical-notes.md
+    - name: Technické poznámky podle kategorií
+      href: technical-notes-by-category.md
+    - name: Technické poznámky podle čísel
+      href: technical-notes-by-number.md
+    - name: 'TN001: Registrace tříd oken'
+      href: tn001-window-class-registration.md
+    - name: 'TN002: Formát dat trvalých objektů'
+      href: tn002-persistent-object-data-format.md
+    - name: 'TN003: Mapování obslužných rutin Windows na objekty'
+      href: tn003-mapping-of-windows-handles-to-objects.md
+    - name: 'TN006: Mapy zpráv'
+      href: tn006-message-maps.md
+    - name: 'TN011: Použití prostředí MFC jako součásti knihovny DLL'
+      href: tn011-using-mfc-as-part-of-a-dll.md
+    - name: 'TN014: Vlastní ovládací prvky'
+      href: tn014-custom-controls.md
+    - name: "TN016: Použití vícenásobné dědičnosti jazyka C++ v\_prostředí MFC"
+      href: tn016-using-cpp-multiple-inheritance-with-mfc.md
+    - name: 'TN017: Likvidace objektů oken'
+      href: tn017-destroying-window-objects.md
+    - name: 'TN020: Konvence pojmenování a číslování pro identifikátory'
+      href: tn020-id-naming-and-numbering-conventions.md
+    - name: 'TN021: Směrování příkazů a zpráv'
+      href: tn021-command-and-message-routing.md
+    - name: 'TN022: Implementace standardních příkazů'
+      href: tn022-standard-commands-implementation.md
+    - name: 'TN023: Standardní prostředky MFC'
+      href: tn023-standard-mfc-resources.md
+    - name: 'TN024: Zprávy a prostředky definované knihovnou MFC'
+      href: tn024-mfc-defined-messages-and-resources.md
+    - name: "TN025: Vytvoření dokumentu, zobrazení a\_rámečku"
+      href: tn025-document-view-and-frame-creation.md
+    - name: 'TN026: Rutiny DDX a DDV'
+      href: tn026-ddx-and-ddv-routines.md
+    - name: 'TN028: Podpora kontextové nápovědy'
+      href: tn028-context-sensitive-help-support.md
+    - name: 'TN029: Okna s rozdělovačem'
+      href: tn029-splitter-windows.md
+    - name: 'TN030: Přizpůsobení tisku a náhledu před tiskem'
+      href: tn030-customizing-printing-and-print-preview.md
+    - name: 'TN031: Ovládací pruhy'
+      href: tn031-control-bars.md
+    - name: 'TN032: Mechanismus výjimek MFC'
+      href: tn032-mfc-exception-mechanism.md
+    - name: 'TN033: DLL verze knihovny MFC'
+      href: tn033-dll-version-of-mfc.md
+    - name: "TN035: Použití více zdrojových souborů a\_hlavičkových souborů v\_jazyce Visual C++"
+      href: tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md
+    - name: "TN036: Použití třídy CFormView s\_objekty AppWizard a ClassWizard"
+      href: tn036-using-cformview-with-appwizard-and-classwizard.md
+    - name: 'TN037: Vícevláknové aplikace MFC 2.1'
+      href: tn037-multithreaded-mfc-2-1-applications.md
+    - name: 'TN038: MFC-OLE – implementace třídy IUnknown'
+      href: tn038-mfc-ole-iunknown-implementation.md
+    - name: 'TN039: MFC-OLE – implementace automatizace'
+      href: tn039-mfc-ole-automation-implementation.md
+    - name: "TN040: Změny velikosti a měřítka na místě v\_prostředích MFC-OLE"
+      href: tn040-mfc-ole-in-place-resizing-and-zooming.md
+    - name: "TN041: Migrace z\_prostředí MFC-OLE1 do MFC-OLE 2"
+      href: tn041-mfc-ole1-migration-to-mfc-ole-2.md
+    - name: 'TN042: Doporučení pro vývojáře ovladačů ODBC'
+      href: tn042-odbc-driver-developer-recommendations.md
+    - name: 'TN043: Rutiny RFX'
+      href: tn043-rfx-routines.md
+    - name: 'TN044: Podpora MFC pro znaky DBCS'
+      href: tn044-mfc-support-for-dbcs.md
+    - name: 'TN045: Podpora prostředí MFC a databáze pro typy Long Varchar a Varbinary'
+      href: tn045-mfc-database-support-for-long-varchar-varbinary.md
+    - name: 'TN046: Konvence při psaní komentářů pro třídy MFC'
+      href: tn046-commenting-conventions-for-the-mfc-classes.md
+    - name: 'TN047: Uvolnění požadavků na databázové transakce'
+      href: tn047-relaxing-database-transaction-requirements.md
+    - name: 'TN048: Psaní programů pro nastavení a správu rozhraní ODBC pro databázové aplikace MFC'
+      href: tn048-writing-odbc-setup-and-administration-programs.md
+    - name: "TN049: Vrstva převodu z\_kódu MFC-OLE MBCS do kódu Unicode (MFCANS32)"
+      href: tn049-mfc-ole-mbcs-to-unicode-translation-layer-mfcans32.md
+    - name: 'TN050: Společná dialogová okna MFC-OLE (MFCUIx32)'
+      href: tn050-mfc-ole-common-dialogs-mfcuix32.md
+    - name: 'TN051: Současné a budoucí použití knihovny CTL3D'
+      href: tn051-using-ctl3d-now-and-in-the-future.md
+    - name: 'TN053: Vlastní rutiny DFX pro databázové třídy DAO'
+      href: tn053-custom-dfx-routines-for-dao-database-classes.md
+    - name: 'TN054: Přímé volání rozhraní DAO při používání tříd DAO knihovny MFC'
+      href: tn054-calling-dao-directly-while-using-mfc-dao-classes.md
+    - name: 'TN055: Migrace aplikací databázové třídy MFC rozhraní ODBC do tříd MFC rozhraní DAO'
+      href: tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes.md
+    - name: 'TN056: Instalace lokalizovaných komponent knihovny MFC'
+      href: tn056-installation-of-localized-mfc-components.md
+    - name: 'TN057: Lokalizace komponent MFC'
+      href: tn057-localization-of-mfc-components.md
+    - name: 'TN058: Implementace stavu modulu MFC'
+      href: tn058-mfc-module-state-implementation.md
+    - name: 'TN059: Použití převodních maker MBCS-Unicode prostředí MFC'
+      href: tn059-using-mfc-mbcs-unicode-conversion-macros.md
+    - name: 'TN060: Nové běžné ovládací prvky Windows'
+      href: tn060-the-new-windows-common-controls.md
+    - name: 'TN061: ON_NOTIFY a WM_NOTIFY – zprávy'
+      href: tn061-on-notify-and-wm-notify-messages.md
+    - name: 'TN062: Reflexe zprávy pro ovládací prvky Windows'
+      href: tn062-message-reflection-for-windows-controls.md
+    - name: 'TN063: Ladění knihoven DLL internetového rozšíření MFC'
+      href: tn063-debugging-internet-extension-dlls.md
+    - name: "TN064: Práce s\_vlákny podle modelu apartment v\_ovládacích prvcích ActiveX"
+      href: tn064-apartment-model-threading-in-activex-controls.md
+    - name: 'TN065: Podpora duálního rozhraní u automatizačních serverů OLE'
+      href: tn065-dual-interface-support-for-ole-automation-servers.md
+    - name: "TN066: Běžné problémy s\_portováním z\_prostředí MFC 3.x do verze 4.0"
+      href: tn066-common-mfc-3-x-to-4-0-porting-issues.md
+    - name: 'TN068: Provádění transakcí pomocí ovladače ODBC Microsoft Access 7'
+      href: tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md
+    - name: 'TN070: MFC – názvy tříd oken'
+      href: tn070-mfc-window-class-names.md
+    - name: 'TN071: MFC IOleCommandTarget – implementace'
+      href: tn071-mfc-iolecommandtarget-implementation.md
+- name: Přehled knihovny tříd
+  expanded: false
+  items:
+    - name: Přehled knihovny tříd
+      href: class-library-overview.md
+    - name: Obecná filosofie návrhu tříd
+      expanded: false
+      items:
+        - name: Obecná filosofie návrhu tříd
+          href: general-class-design-philosophy.md
+        - name: Aplikační framework
+          href: application-framework.md
+        - name: "Vztah k\_rozhraní API jazyka C"
+          href: relationship-to-the-c-language-api.md
+    - name: 'Kořenová třída: CObject'
+      href: root-class-cobject.md
+    - name: Třídy architektury aplikace MFC
+      expanded: false
+      items:
+        - name: Třídy architektury aplikace MFC
+          href: mfc-application-architecture-classes.md
+        - name: Třídy pro podporu aplikací a vláken
+          href: application-and-thread-support-classes.md
+        - name: Třídy směrování příkazů
+          href: command-routing-classes.md
+        - name: Třídy dokumentů
+          href: document-classes.md
+        - name: Třídy zobrazení (architektura)
+          href: view-classes-architecture.md
+        - name: "Třídy oken s\_rámečkem (architektura)"
+          href: frame-window-classes-architecture.md
+        - name: Třídy šablony dokumentu
+          href: document-template-classes.md
+    - name: 'Třídy oken, dialogových oken a ovládacích prvků'
+      expanded: false
+      items:
+        - name: 'Třídy oken, dialogových oken a ovládacích prvků'
+          href: window-dialog-and-control-classes.md
+        - name: "Třídy oken s\_rámečkem (Windows)"
+          href: frame-window-classes-windows.md
+        - name: Třídy zobrazení (Windows)
+          href: view-classes-windows.md
+        - name: Třídy dialogových oken
+          href: dialog-box-classes.md
+        - name: Třídy ovládacích prvků
+          href: control-classes.md
+        - name: Třídy ovládacích pruhů
+          href: control-bar-classes.md
+    - name: Třídy pro vykreslování a tisk
+      expanded: false
+      items:
+        - name: Třídy pro vykreslování a tisk
+          href: drawing-and-printing-classes.md
+        - name: Výstupní třídy (třídy kontextu zařízení)
+          href: output-device-context-classes.md
+        - name: Třídy nástrojů pro kreslení
+          href: drawing-tool-classes.md
+    - name: Třídy jednoduchého datového typu
+      href: simple-data-type-classes.md
+    - name: 'Třídy polí, seznamů a map'
+      expanded: false
+      items:
+        - name: 'Třídy polí, seznamů a map'
+          href: array-list-and-map-classes.md
+        - name: 'Třídy šablon pro pole, seznamy a mapy'
+          href: template-classes-for-arrays-lists-and-maps.md
+        - name: "Hotové třídy polí připravené k\_použití"
+          href: ready-to-use-array-classes.md
+        - name: "Hotové třídy seznamů připravené k\_použití"
+          href: ready-to-use-list-classes.md
+        - name: "Hotové třídy map připravené k\_použití"
+          href: ready-to-use-map-classes.md
+    - name: Souborové a databázové třídy
+      expanded: false
+      items:
+        - name: Souborové a databázové třídy
+          href: file-and-database-classes.md
+        - name: Třídy I-O souborů
+          href: file-i-o-classes.md
+        - name: Třídy OLE DB
+          href: ole-db-classes.md
+        - name: DAO – třídy
+          href: dao-classes.md
+        - name: ODBC – třídy
+          href: odbc-classes.md
+    - name: "Internetové a\_síťové třídy"
+      expanded: false
+      items:
+        - name: "Internetové a\_síťové třídy"
+          href: internet-and-networking-classes.md
+        - name: Windows Sockets – třídy
+          href: windows-sockets-classes.md
+        - name: Win32 – internetové třídy
+          href: win32-internet-classes.md
+    - name: OLE – třídy
+      expanded: false
+      items:
+        - name: OLE – třídy
+          href: ole-classes.md
+        - name: OLE – třídy kontejnerů
+          href: ole-container-classes.md
+        - name: OLE – třídy serveru
+          href: ole-server-classes.md
+        - name: "Přetahování v\_rozhraní OLE a třídy přenosu dat"
+          href: ole-drag-and-drop-and-data-transfer-classes.md
+        - name: Společné třídy dialogových oken OLE
+          href: ole-common-dialog-classes.md
+        - name: OLE – třídy automatizace
+          href: ole-automation-classes.md
+        - name: OLE – třídy ovládacích prvků
+          href: ole-control-classes.md
+        - name: aktivní třídy dokumentů
+          href: active-document-classes.md
+        - name: "Třídy související s\_rozhraním OLE"
+          href: ole-related-classes.md
+    - name: Třídy ladění a výjimek
+      expanded: false
+      items:
+        - name: Třídy ladění a výjimek
+          href: debugging-and-exception-classes.md
+        - name: Třídy podpory ladění
+          href: debugging-support-classes.md
+        - name: Třídy výjimek
+          href: exception-classes.md
+- name: Návody (MFC)
+  expanded: false
+  items:
+    - name: Návody (MFC)
+      href: walkthroughs-mfc.md
+    - name: 'Návod: Použití nových ovládacích prvků prostředí MFC'
+      href: walkthrough-using-the-new-mfc-shell-controls.md
+    - name: 'Návod: Umístění ovládacích prvků na panely nástrojů'
+      href: walkthrough-putting-controls-on-toolbars.md
+    - name: 'Návod: Přidání objektu D2D do projektu MFC'
+      href: walkthrough-adding-a-d2d-object-to-an-mfc-project.md
+    - name: 'Návod: Přidání animace do projektu MFC'
+      href: walkthrough-adding-animation-to-an-mfc-project.md
+- name: "MFC – referenční dokumentace k\_rozhraním API"
+  items:
+    - name: MFC – třídy
+      expanded: false
+      items:
+        - name: MFC – třídy
+          href: reference/mfc-classes.md
+        - name: CAccelerateDecelerateTransition – třída
+          href: reference/cacceleratedeceleratetransition-class.md
+        - name: CAnimateCtrl – třída
+          href: reference/canimatectrl-class.md
+        - name: CAnimationBaseObject – třída
+          href: reference/canimationbaseobject-class.md
+        - name: CAnimationColor – třída
+          href: reference/canimationcolor-class.md
+        - name: CAnimationController – třída
+          href: reference/canimationcontroller-class.md
+        - name: CAnimationGroup – třída
+          href: reference/canimationgroup-class.md
+        - name: CAnimationManagerEventHandler – třída
+          href: reference/canimationmanagereventhandler-class.md
+        - name: CAnimationPoint – třída
+          href: reference/canimationpoint-class.md
+        - name: CAnimationRect – třída
+          href: reference/canimationrect-class.md
+        - name: CAnimationSize – třída
+          href: reference/canimationsize-class.md
+        - name: CAnimationStoryboardEventHandler – třída
+          href: reference/canimationstoryboardeventhandler-class.md
+        - name: CAnimationTimerEventHandler – třída
+          href: reference/canimationtimereventhandler-class.md
+        - name: CAnimationValue – třída
+          href: reference/canimationvalue-class.md
+        - name: CAnimationVariable – třída
+          href: reference/canimationvariable-class.md
+        - name: CAnimationVariableChangeHandler – třída
+          href: reference/canimationvariablechangehandler-class.md
+        - name: CAnimationVariableIntegerChangeHandler – třída
+          href: reference/canimationvariableintegerchangehandler-class.md
+        - name: CArchive – třída
+          href: reference/carchive-class.md
+        - name: CArchiveException – třída
+          href: reference/carchiveexception-class.md
+        - name: CArray – třída
+          href: reference/carray-class.md
+        - name: CAsyncMonikerFile – třída
+          href: reference/casyncmonikerfile-class.md
+        - name: CAsyncSocket – třída
+          href: reference/casyncsocket-class.md
+        - name: CAutoHideDockSite – třída
+          href: reference/cautohidedocksite-class.md
+        - name: CBaseKeyFrame – třída
+          href: reference/cbasekeyframe-class.md
+        - name: CBasePane – třída
+          href: reference/cbasepane-class.md
+        - name: CBaseTabbedPane – třída
+          href: reference/cbasetabbedpane-class.md
+        - name: CBaseTransition – třída
+          href: reference/cbasetransition-class.md
+        - name: CBitmap – třída
+          href: reference/cbitmap-class.md
+        - name: CBitmapButton – třída
+          href: reference/cbitmapbutton-class.md
+        - name: CBitmapRenderTarget – třída
+          href: reference/cbitmaprendertarget-class.md
+        - name: CBrush – třída
+          href: reference/cbrush-class.md
+        - name: CButton – třída
+          href: reference/cbutton-class.md
+        - name: CByteArray – třída
+          href: reference/cbytearray-class.md
+        - name: CCachedDataPathProperty – třída
+          href: reference/ccacheddatapathproperty-class.md
+        - name: CCheckListBox – třída
+          href: reference/cchecklistbox-class.md
+        - name: CClientDC – třída
+          href: reference/cclientdc-class.md
+        - name: CCmdTarget – třída
+          href: reference/ccmdtarget-class.md
+        - name: CCmdUI – třída
+          href: reference/ccmdui-class.md
+        - name: CColorDialog – třída
+          href: reference/ccolordialog-class.md
+        - name: CComboBox – třída
+          href: reference/ccombobox-class.md
+        - name: CComboBoxEx – třída
+          href: reference/ccomboboxex-class.md
+        - name: CCommandLineInfo – třída
+          href: reference/ccommandlineinfo-class.md
+        - name: CCommonDialog – třída
+          href: reference/ccommondialog-class.md
+        - name: CConnectionPoint – třída
+          href: reference/cconnectionpoint-class.md
+        - name: CConstantTransition – třída
+          href: reference/cconstanttransition-class.md
+        - name: CContextMenuManager – třída
+          href: reference/ccontextmenumanager-class.md
+        - name: CControlBar – třída
+          href: reference/ccontrolbar-class.md
+        - name: CCreateContext – struktura
+          href: reference/ccreatecontext-structure.md
+        - name: CCriticalSection – třída
+          href: reference/ccriticalsection-class.md
+        - name: CCtrlView – třída
+          href: reference/cctrlview-class.md
+        - name: CCubicTransition – třída
+          href: reference/ccubictransition-class.md
+        - name: CCustomInterpolator – třída
+          href: reference/ccustominterpolator-class.md
+        - name: CCustomTransition – třída
+          href: reference/ccustomtransition-class.md
+        - name: CD2DBitmap – třída
+          href: reference/cd2dbitmap-class.md
+        - name: CD2DBitmapBrush – třída
+          href: reference/cd2dbitmapbrush-class.md
+        - name: CD2DBrush – třída
+          href: reference/cd2dbrush-class.md
+        - name: CD2DBrushProperties – třída
+          href: reference/cd2dbrushproperties-class.md
+        - name: CD2DEllipse – třída
+          href: reference/cd2dellipse-class.md
+        - name: CD2DGeometry – třída
+          href: reference/cd2dgeometry-class.md
+        - name: CD2DGeometrySink – třída
+          href: reference/cd2dgeometrysink-class.md
+        - name: CD2DGradientBrush – třída
+          href: reference/cd2dgradientbrush-class.md
+        - name: CD2DLayer – třída
+          href: reference/cd2dlayer-class.md
+        - name: CD2DLinearGradientBrush – třída
+          href: reference/cd2dlineargradientbrush-class.md
+        - name: CD2DMesh – třída
+          href: reference/cd2dmesh-class.md
+        - name: CD2DPathGeometry – třída
+          href: reference/cd2dpathgeometry-class.md
+        - name: CD2DPointF – třída
+          href: reference/cd2dpointf-class.md
+        - name: CD2DPointU – třída
+          href: reference/cd2dpointu-class.md
+        - name: CD2DRadialGradientBrush – třída
+          href: reference/cd2dradialgradientbrush-class.md
+        - name: CD2DRectF – třída
+          href: reference/cd2drectf-class.md
+        - name: CD2DRectU – třída
+          href: reference/cd2drectu-class.md
+        - name: CD2DResource – třída
+          href: reference/cd2dresource-class.md
+        - name: CD2DRoundedRect – třída
+          href: reference/cd2droundedrect-class.md
+        - name: CD2DSizeF – třída
+          href: reference/cd2dsizef-class.md
+        - name: CD2DSizeU – třída
+          href: reference/cd2dsizeu-class.md
+        - name: CD2DSolidColorBrush – třída
+          href: reference/cd2dsolidcolorbrush-class.md
+        - name: CD2DTextFormat – třída
+          href: reference/cd2dtextformat-class.md
+        - name: CD2DTextLayout – třída
+          href: reference/cd2dtextlayout-class.md
+        - name: CDaoDatabase – třída
+          href: reference/cdaodatabase-class.md
+        - name: CDaoException – třída
+          href: reference/cdaoexception-class.md
+        - name: CDaoFieldExchange – třída
+          href: reference/cdaofieldexchange-class.md
+        - name: CDaoQueryDef – třída
+          href: reference/cdaoquerydef-class.md
+        - name: CDaoRecordset – třída
+          href: reference/cdaorecordset-class.md
+        - name: CDaoRecordView – třída
+          href: reference/cdaorecordview-class.md
+        - name: CDaoTableDef – třída
+          href: reference/cdaotabledef-class.md
+        - name: CDaoWorkspace – třída
+          href: reference/cdaoworkspace-class.md
+        - name: CDatabase – třída
+          href: reference/cdatabase-class.md
+        - name: CDataExchange – třída
+          href: reference/cdataexchange-class.md
+        - name: CDataPathProperty – třída
+          href: reference/cdatapathproperty-class.md
+        - name: CDataRecoveryHandler – třída
+          href: reference/cdatarecoveryhandler-class.md
+        - name: CDateTimeCtrl – třída
+          href: reference/cdatetimectrl-class.md
+        - name: CDBException – třída
+          href: reference/cdbexception-class.md
+        - name: CDBVariant – třída
+          href: reference/cdbvariant-class.md
+        - name: CDC – třída
+          href: reference/cdc-class.md
+        - name: CDCRenderTarget – třída
+          href: reference/cdcrendertarget-class.md
+        - name: CDHtmlDialog – třída
+          expanded: false
+          items:
+            - name: CDHtmlDialog – třída
+              href: reference/cdhtmldialog-class.md
+            - name: Makra pomocné rutiny DDX_DHtml
+              href: reference/ddx-dhtml-helper-macros.md
+        - name: CDialog – třída
+          href: reference/cdialog-class.md
+        - name: CDialogBar – třída
+          href: reference/cdialogbar-class.md
+        - name: CDialogEx – třída
+          href: reference/cdialogex-class.md
+        - name: CDiscreteTransition – třída
+          href: reference/cdiscretetransition-class.md
+        - name: CDocItem – třída
+          href: reference/cdocitem-class.md
+        - name: CDockablePane – třída
+          href: reference/cdockablepane-class.md
+        - name: CDockablePaneAdapter – třída
+          href: reference/cdockablepaneadapter-class.md
+        - name: CDockingManager – třída
+          href: reference/cdockingmanager-class.md
+        - name: CDockingPanesRow – třída
+          href: reference/cdockingpanesrow-class.md
+        - name: CDockSite – třída
+          href: reference/cdocksite-class.md
+        - name: CDockState – třída
+          href: reference/cdockstate-class.md
+        - name: CDocObjectServer – třída
+          href: reference/cdocobjectserver-class.md
+        - name: CDocObjectServerItem – třída
+          href: reference/cdocobjectserveritem-class.md
+        - name: CDocTemplate – třída
+          href: reference/cdoctemplate-class.md
+        - name: CDocument – třída
+          href: reference/cdocument-class.md
+        - name: CDragListBox – třída
+          href: reference/cdraglistbox-class.md
+        - name: CDrawingManager – třída
+          href: reference/cdrawingmanager-class.md
+        - name: CDumpContext – třída
+          href: reference/cdumpcontext-class.md
+        - name: CDWordArray – třída
+          href: reference/cdwordarray-class.md
+        - name: CEdit – třída
+          href: reference/cedit-class.md
+        - name: CEditView – třída
+          href: reference/ceditview-class.md
+        - name: CEvent – třída
+          href: reference/cevent-class.md
+        - name: CException – třída
+          href: reference/cexception-class.md
+        - name: CFieldExchange – třída
+          href: reference/cfieldexchange-class.md
+        - name: CFile – třída
+          href: reference/cfile-class.md
+        - name: CFileDialog – třída
+          href: reference/cfiledialog-class.md
+        - name: CFileException – třída
+          href: reference/cfileexception-class.md
+        - name: CFileFind – třída
+          href: reference/cfilefind-class.md
+        - name: CFindReplaceDialog – třída
+          href: reference/cfindreplacedialog-class.md
+        - name: CFolderPickerDialog – třída
+          href: reference/cfolderpickerdialog-class.md
+        - name: CFont – třída
+          href: reference/cfont-class.md
+        - name: CFontDialog – třída
+          href: reference/cfontdialog-class.md
+        - name: CFontHolder – třída
+          href: reference/cfontholder-class.md
+        - name: CFormView – třída
+          href: reference/cformview-class.md
+        - name: CFrameWnd – třída
+          href: reference/cframewnd-class.md
+        - name: CFrameWndEx – třída
+          href: reference/cframewndex-class.md
+        - name: CFtpConnection – třída
+          href: reference/cftpconnection-class.md
+        - name: CFtpFileFind – třída
+          href: reference/cftpfilefind-class.md
+        - name: CGdiObject – třída
+          href: reference/cgdiobject-class.md
+        - name: CGlobalUtils – třída
+          href: reference/cglobalutils-class.md
+        - name: CGopherConnection – třída
+          href: reference/cgopherconnection-class.md
+        - name: CGopherFile – třída
+          href: reference/cgopherfile-class.md
+        - name: CGopherFileFind – třída
+          href: reference/cgopherfilefind-class.md
+        - name: CGopherLocator – třída
+          href: reference/cgopherlocator-class.md
+        - name: CHeaderCtrl – třída
+          href: reference/cheaderctrl-class.md
+        - name: CHotKeyCtrl – třída
+          href: reference/chotkeyctrl-class.md
+        - name: CHtmlEditCtrl – třída
+          href: reference/chtmleditctrl-class.md
+        - name: CHtmlEditCtrlBase – třída
+          href: reference/chtmleditctrlbase-class.md
+        - name: CHtmlEditDoc – třída
+          href: reference/chtmleditdoc-class.md
+        - name: CHtmlEditView – třída
+          href: reference/chtmleditview-class.md
+        - name: CHtmlView – třída
+          href: reference/chtmlview-class.md
+        - name: CHttpConnection – třída
+          href: reference/chttpconnection-class.md
+        - name: CHttpFile – třída
+          href: reference/chttpfile-class.md
+        - name: CHwndRenderTarget – třída
+          href: reference/chwndrendertarget-class.md
+        - name: CImageList – třída
+          href: reference/cimagelist-class.md
+        - name: CInstantaneousTransition – třída
+          href: reference/cinstantaneoustransition-class.md
+        - name: CInternetConnection – třída
+          href: reference/cinternetconnection-class.md
+        - name: CInternetException – třída
+          href: reference/cinternetexception-class.md
+        - name: CInternetFile – třída
+          href: reference/cinternetfile-class.md
+        - name: CInternetSession – třída
+          href: reference/cinternetsession-class.md
+        - name: CInterpolatorBase – třída
+          href: reference/cinterpolatorbase-class.md
+        - name: CInvalidArgException – třída
+          href: reference/cinvalidargexception-class.md
+        - name: CIPAddressCtrl – třída
+          href: reference/cipaddressctrl-class.md
+        - name: CJumpList – třída
+          href: reference/cjumplist-class.md
+        - name: CKeyboardManager – třída
+          href: reference/ckeyboardmanager-class.md
+        - name: CKeyFrame – třída
+          href: reference/ckeyframe-class.md
+        - name: CLinearTransition – třída
+          href: reference/clineartransition-class.md
+        - name: CLinearTransitionFromSpeed – třída
+          href: reference/clineartransitionfromspeed-class.md
+        - name: CLinkCtrl – třída
+          href: reference/clinkctrl-class.md
+        - name: CList – třída
+          href: reference/clist-class.md
+        - name: CListBox – třída
+          href: reference/clistbox-class.md
+        - name: CListCtrl – třída
+          href: reference/clistctrl-class.md
+        - name: CListView – třída
+          href: reference/clistview-class.md
+        - name: CLongBinary – třída
+          href: reference/clongbinary-class.md
+        - name: CMap – třída
+          href: reference/cmap-class.md
+        - name: CMapPtrToPtr – třída
+          href: reference/cmapptrtoptr-class.md
+        - name: CMapPtrToWord – třída
+          href: reference/cmapptrtoword-class.md
+        - name: CMapStringToOb – třída
+          href: reference/cmapstringtoob-class.md
+        - name: CMapStringToPtr – třída
+          href: reference/cmapstringtoptr-class.md
+        - name: CMapStringToString – třída
+          href: reference/cmapstringtostring-class.md
+        - name: CMapWordToOb – třída
+          href: reference/cmapwordtoob-class.md
+        - name: CMapWordToPtr – třída
+          href: reference/cmapwordtoptr-class.md
+        - name: CMDIChildWnd – třída
+          href: reference/cmdichildwnd-class.md
+        - name: CMDIChildWndEx – třída
+          href: reference/cmdichildwndex-class.md
+        - name: CMDIFrameWnd – třída
+          href: reference/cmdiframewnd-class.md
+        - name: CMDIFrameWndEx – třída
+          href: reference/cmdiframewndex-class.md
+        - name: CMDITabInfo – třída
+          href: reference/cmditabinfo-class.md
+        - name: CMemFile – třída
+          href: reference/cmemfile-class.md
+        - name: CMemoryException – třída
+          href: reference/cmemoryexception-class.md
+        - name: CMemoryState – struktura
+          href: reference/cmemorystate-structure.md
+        - name: CMenu – třída
+          href: reference/cmenu-class.md
+        - name: CMenuTearOffManager – třída
+          href: reference/cmenutearoffmanager-class.md
+        - name: CMetaFileDC – třída
+          href: reference/cmetafiledc-class.md
+        - name: CMFCAcceleratorKey – třída
+          href: reference/cmfcacceleratorkey-class.md
+        - name: CMFCAcceleratorKeyAssignCtrl – třída
+          href: reference/cmfcacceleratorkeyassignctrl-class.md
+        - name: CMFCAutoHideBar – třída
+          href: reference/cmfcautohidebar-class.md
+        - name: CMFCAutoHideButton – třída
+          href: reference/cmfcautohidebutton-class.md
+        - name: CMFCBaseTabCtrl – třída
+          href: reference/cmfcbasetabctrl-class.md
+        - name: CMFCBaseToolBar – třída
+          href: reference/cmfcbasetoolbar-class.md
+        - name: CMFCBaseVisualManager – třída
+          href: reference/cmfcbasevisualmanager-class.md
+        - name: CMFCButton – třída
+          href: reference/cmfcbutton-class.md
+        - name: CMFCCaptionBar – třída
+          href: reference/cmfccaptionbar-class.md
+        - name: CMFCCaptionButton – třída
+          href: reference/cmfccaptionbutton-class.md
+        - name: CMFCCmdUsageCount – třída
+          href: reference/cmfccmdusagecount-class.md
+        - name: CMFCColorBar – třída
+          href: reference/cmfccolorbar-class.md
+        - name: CMFCColorButton – třída
+          href: reference/cmfccolorbutton-class.md
+        - name: CMFCColorDialog – třída
+          href: reference/cmfccolordialog-class.md
+        - name: CMFCColorMenuButton – třída
+          href: reference/cmfccolormenubutton-class.md
+        - name: CMFCColorPickerCtrl – třída
+          href: reference/cmfccolorpickerctrl-class.md
+        - name: CMFCColorPopupMenu – třída
+          href: reference/cmfccolorpopupmenu-class.md
+        - name: CMFCCustomColorsPropertyPage – třída
+          href: reference/cmfccustomcolorspropertypage-class.md
+        - name: CMFCDesktopAlertDialog – třída
+          href: reference/cmfcdesktopalertdialog-class.md
+        - name: CMFCDesktopAlertWnd – třída
+          href: reference/cmfcdesktopalertwnd-class.md
+        - name: CMFCDesktopAlertWndButton – třída
+          href: reference/cmfcdesktopalertwndbutton-class.md
+        - name: CMFCDesktopAlertWndInfo – třída
+          href: reference/cmfcdesktopalertwndinfo-class.md
+        - name: CMFCDisableMenuAnimation – třída
+          href: reference/cmfcdisablemenuanimation-class.md
+        - name: CMFCDragFrameImpl – třída
+          href: reference/cmfcdragframeimpl-class.md
+        - name: CMFCDropDownFrame – třída
+          href: reference/cmfcdropdownframe-class.md
+        - name: CMFCDropDownToolBar – třída
+          href: reference/cmfcdropdowntoolbar-class.md
+        - name: CMFCDropDownToolbarButton – třída
+          href: reference/cmfcdropdowntoolbarbutton-class.md
+        - name: CMFCDynamicLayout – třída
+          href: reference/cmfcdynamiclayout-class.md
+        - name: CMFCEditBrowseCtrl – třída
+          href: reference/cmfceditbrowsectrl-class.md
+        - name: CMFCFilterChunkValueImpl – třída
+          href: reference/cmfcfilterchunkvalueimpl-class.md
+        - name: CMFCFontComboBox – třída
+          href: reference/cmfcfontcombobox-class.md
+        - name: CMFCFontInfo – třída
+          href: reference/cmfcfontinfo-class.md
+        - name: CMFCHeaderCtrl – třída
+          href: reference/cmfcheaderctrl-class.md
+        - name: CMFCImageEditorDialog – třída
+          href: reference/cmfcimageeditordialog-class.md
+        - name: CMFCImageEditorPaletteBar – třída
+          href: reference/cmfcimageeditorpalettebar-class.md
+        - name: CMFCImagePaintArea – třída
+          href: reference/cmfcimagepaintarea-class.md
+        - name: CMFCKeyMapDialog – třída
+          href: reference/cmfckeymapdialog-class.md
+        - name: CMFCLinkCtrl – třída
+          href: reference/cmfclinkctrl-class.md
+        - name: CMFCListCtrl – třída
+          href: reference/cmfclistctrl-class.md
+        - name: CMFCMaskedEdit – třída
+          href: reference/cmfcmaskededit-class.md
+        - name: CMFCMenuBar – třída
+          href: reference/cmfcmenubar-class.md
+        - name: CMFCMenuButton – třída
+          href: reference/cmfcmenubutton-class.md
+        - name: CMFCOutlookBar – třída
+          href: reference/cmfcoutlookbar-class.md
+        - name: CMFCOutlookBarPane – třída
+          href: reference/cmfcoutlookbarpane-class.md
+        - name: CMFCOutlookBarTabCtrl – třída
+          href: reference/cmfcoutlookbartabctrl-class.md
+        - name: CMFCPopupMenu – třída
+          href: reference/cmfcpopupmenu-class.md
+        - name: CMFCPopupMenuBar – třída
+          href: reference/cmfcpopupmenubar-class.md
+        - name: CMFCPreviewCtrlImpl – třída
+          href: reference/cmfcpreviewctrlimpl-class.md
+        - name: CMFCPrintPreviewToolBar – třída
+          href: reference/cmfcprintpreviewtoolbar-class.md
+        - name: CMFCPropertyGridColorProperty – třída
+          href: reference/cmfcpropertygridcolorproperty-class.md
+        - name: CMFCPropertyGridCtrl – třída
+          href: reference/cmfcpropertygridctrl-class.md
+        - name: CMFCPropertyGridFileProperty – třída
+          href: reference/cmfcpropertygridfileproperty-class.md
+        - name: CMFCPropertyGridFontProperty – třída
+          href: reference/cmfcpropertygridfontproperty-class.md
+        - name: CMFCPropertyGridProperty – třída
+          href: reference/cmfcpropertygridproperty-class.md
+        - name: CMFCPropertyGridToolTipCtrl – třída
+          href: reference/cmfcpropertygridtooltipctrl-class.md
+        - name: CMFCPropertyPage – třída
+          href: reference/cmfcpropertypage-class.md
+        - name: CMFCPropertySheet – třída
+          href: reference/cmfcpropertysheet-class.md
+        - name: CMFCReBar – třída
+          href: reference/cmfcrebar-class.md
+        - name: CMFCRibbonApplicationButton – třída
+          href: reference/cmfcribbonapplicationbutton-class.md
+        - name: CMFCRibbonBar – třída
+          href: reference/cmfcribbonbar-class.md
+        - name: CMFCRibbonBaseElement – třída
+          href: reference/cmfcribbonbaseelement-class.md
+        - name: CMFCRibbonButton – třída
+          href: reference/cmfcribbonbutton-class.md
+        - name: CMFCRibbonButtonsGroup – třída
+          href: reference/cmfcribbonbuttonsgroup-class.md
+        - name: CMFCRibbonCategory – třída
+          href: reference/cmfcribboncategory-class.md
+        - name: CMFCRibbonCheckBox – třída
+          href: reference/cmfcribboncheckbox-class.md
+        - name: CMFCRibbonColorButton – třída
+          href: reference/cmfcribboncolorbutton-class.md
+        - name: CMFCRibbonComboBox – třída
+          href: reference/cmfcribboncombobox-class.md
+        - name: CMFCRibbonContextCaption – třída
+          href: reference/cmfcribboncontextcaption-class.md
+        - name: CMFCRibbonCustomizeDialog – třída
+          href: reference/cmfcribboncustomizedialog-class.md
+        - name: CMFCRibbonCustomizePropertyPage – třída
+          href: reference/cmfcribboncustomizepropertypage-class.md
+        - name: CMFCRibbonEdit – třída
+          href: reference/cmfcribbonedit-class.md
+        - name: CMFCRibbonFontComboBox – třída
+          href: reference/cmfcribbonfontcombobox-class.md
+        - name: CMFCRibbonGallery – třída
+          href: reference/cmfcribbongallery-class.md
+        - name: CMFCRibbonGalleryMenuButton – třída
+          href: reference/cmfcribbongallerymenubutton-class.md
+        - name: CMFCRibbonLabel – třída
+          href: reference/cmfcribbonlabel-class.md
+        - name: CMFCRibbonLinkCtrl – třída
+          href: reference/cmfcribbonlinkctrl-class.md
+        - name: CMFCRibbonMainPanel – třída
+          href: reference/cmfcribbonmainpanel-class.md
+        - name: CMFCRibbonMiniToolBar – třída
+          href: reference/cmfcribbonminitoolbar-class.md
+        - name: CMFCRibbonPanel – třída
+          href: reference/cmfcribbonpanel-class.md
+        - name: CMFCRibbonProgressBar – třída
+          href: reference/cmfcribbonprogressbar-class.md
+        - name: CMFCRibbonQuickAccessToolBarDefaultState – třída
+          href: reference/cmfcribbonquickaccesstoolbardefaultstate-class.md
+        - name: CMFCRibbonSeparator – třída
+          href: reference/cmfcribbonseparator-class.md
+        - name: CMFCRibbonSlider – třída
+          href: reference/cmfcribbonslider-class.md
+        - name: CMFCRibbonStatusBar – třída
+          href: reference/cmfcribbonstatusbar-class.md
+        - name: CMFCRibbonStatusBarPane – třída
+          href: reference/cmfcribbonstatusbarpane-class.md
+        - name: CMFCRibbonUndoButton – třída
+          href: reference/cmfcribbonundobutton-class.md
+        - name: CMFCShellListCtrl – třída
+          href: reference/cmfcshelllistctrl-class.md
+        - name: CMFCShellTreeCtrl – třída
+          href: reference/cmfcshelltreectrl-class.md
+        - name: CMFCSpinButtonCtrl – třída
+          href: reference/cmfcspinbuttonctrl-class.md
+        - name: CMFCStandardColorsPropertyPage – třída
+          href: reference/cmfcstandardcolorspropertypage-class.md
+        - name: CMFCStatusBar – třída
+          href: reference/cmfcstatusbar-class.md
+        - name: CMFCTabCtrl – třída
+          href: reference/cmfctabctrl-class.md
+        - name: CMFCTabDropTarget – třída
+          href: reference/cmfctabdroptarget-class.md
+        - name: CMFCTabToolTipInfo – struktura
+          href: reference/cmfctabtooltipinfo-structure.md
+        - name: CMFCTasksPane – třída
+          href: reference/cmfctaskspane-class.md
+        - name: CMFCTasksPaneTask – třída
+          href: reference/cmfctaskspanetask-class.md
+        - name: CMFCTasksPaneTaskGroup – třída
+          href: reference/cmfctaskspanetaskgroup-class.md
+        - name: CMFCToolBar – třída
+          href: reference/cmfctoolbar-class.md
+        - name: CMFCToolBarButton – třída
+          href: reference/cmfctoolbarbutton-class.md
+        - name: CMFCToolBarComboBoxButton – třída
+          href: reference/cmfctoolbarcomboboxbutton-class.md
+        - name: CMFCToolBarComboBoxEdit – třída
+          href: reference/cmfctoolbarcomboboxedit-class.md
+        - name: CMFCToolBarDateTimeCtrl – třída
+          href: reference/cmfctoolbardatetimectrl-class.md
+        - name: CMFCToolBarEditBoxButton – třída
+          href: reference/cmfctoolbareditboxbutton-class.md
+        - name: CMFCToolBarFontComboBox – třída
+          href: reference/cmfctoolbarfontcombobox-class.md
+        - name: CMFCToolBarFontSizeComboBox – třída
+          href: reference/cmfctoolbarfontsizecombobox-class.md
+        - name: CMFCToolBarImages – třída
+          href: reference/cmfctoolbarimages-class.md
+        - name: CMFCToolBarMenuButton – třída
+          href: reference/cmfctoolbarmenubutton-class.md
+        - name: CMFCToolBarInfo – třída
+          href: reference/cmfctoolbarinfo-class.md
+        - name: CMFCToolBarsCustomizeDialog – třída
+          href: reference/cmfctoolbarscustomizedialog-class.md
+        - name: CMFCToolTipCtrl – třída
+          href: reference/cmfctooltipctrl-class.md
+        - name: CMFCToolTipInfo – třída
+          href: reference/cmfctooltipinfo-class.md
+        - name: CMFCVisualManager – třída
+          href: reference/cmfcvisualmanager-class.md
+        - name: CMFCVisualManagerOffice2003 – třída
+          href: reference/cmfcvisualmanageroffice2003-class.md
+        - name: CMFCVisualManagerOffice2007 – třída
+          href: reference/cmfcvisualmanageroffice2007-class.md
+        - name: CMFCVisualManagerOfficeXP – třída
+          href: reference/cmfcvisualmanagerofficexp-class.md
+        - name: CMFCVisualManagerVS2005 – třída
+          href: reference/cmfcvisualmanagervs2005-class.md
+        - name: CMFCVisualManagerWindows – třída
+          href: reference/cmfcvisualmanagerwindows-class.md
+        - name: CMFCVisualManagerWindows7 – třída
+          href: reference/cmfcvisualmanagerwindows7-class.md
+        - name: CMFCWindowsManagerDialog – třída
+          href: reference/cmfcwindowsmanagerdialog-class.md
+        - name: CMiniFrameWnd – třída
+          href: reference/cminiframewnd-class.md
+        - name: CMonikerFile – třída
+          href: reference/cmonikerfile-class.md
+        - name: CMonthCalCtrl – třída
+          href: reference/cmonthcalctrl-class.md
+        - name: CMouseManager – třída
+          href: reference/cmousemanager-class.md
+        - name: CMultiDocTemplate – třída
+          href: reference/cmultidoctemplate-class.md
+        - name: CMultiLock – třída
+          href: reference/cmultilock-class.md
+        - name: CMultiPageDHtmlDialog – třída
+          href: reference/cmultipagedhtmldialog-class.md
+        - name: CMultiPaneFrameWnd – třída
+          href: reference/cmultipaneframewnd-class.md
+        - name: CMutex – třída
+          href: reference/cmutex-class.md
+        - name: CNetAddressCtrl – třída
+          href: reference/cnetaddressctrl-class.md
+        - name: CNotSupportedException – třída
+          href: reference/cnotsupportedexception-class.md
+        - name: CObArray – třída
+          href: reference/cobarray-class.md
+        - name: CObject – třída
+          href: reference/cobject-class.md
+        - name: CObList – třída
+          href: reference/coblist-class.md
+        - name: COccManager – třída
+          href: reference/coccmanager-class.md
+        - name: COleBusyDialog – třída
+          href: reference/colebusydialog-class.md
+        - name: COleChangeIconDialog – třída
+          href: reference/colechangeicondialog-class.md
+        - name: COleChangeSourceDialog – třída
+          href: reference/colechangesourcedialog-class.md
+        - name: COleClientItem – třída
+          href: reference/coleclientitem-class.md
+        - name: COleCmdUI – třída
+          href: reference/colecmdui-class.md
+        - name: COleControl – třída
+          href: reference/colecontrol-class.md
+        - name: COleControlContainer – třída
+          href: reference/colecontrolcontainer-class.md
+        - name: COleControlModule – třída
+          href: reference/colecontrolmodule-class.md
+        - name: COleControlSite – třída
+          href: reference/colecontrolsite-class.md
+        - name: COleConvertDialog – třída
+          href: reference/coleconvertdialog-class.md
+        - name: COleCurrency – třída
+          href: reference/colecurrency-class.md
+        - name: COleDataObject – třída
+          href: reference/coledataobject-class.md
+        - name: COleDataSource – třída
+          href: reference/coledatasource-class.md
+        - name: COleDBRecordView – třída
+          href: reference/coledbrecordview-class.md
+        - name: COleDialog – třída
+          href: reference/coledialog-class.md
+        - name: COleDispatchDriver – třída
+          href: reference/coledispatchdriver-class.md
+        - name: COleDispatchException – třída
+          href: reference/coledispatchexception-class.md
+        - name: COleDocObjectItem – třída
+          href: reference/coledocobjectitem-class.md
+        - name: COleDocument – třída
+          href: reference/coledocument-class.md
+        - name: COleDropSource – třída
+          href: reference/coledropsource-class.md
+        - name: COleDropTarget – třída
+          href: reference/coledroptarget-class.md
+        - name: COleException – třída
+          href: reference/coleexception-class.md
+        - name: COleInsertDialog – třída
+          href: reference/coleinsertdialog-class.md
+        - name: COleIPFrameWnd – třída
+          href: reference/coleipframewnd-class.md
+        - name: COleIPFrameWndEx – třída
+          href: reference/coleipframewndex-class.md
+        - name: COleLinkingDoc – třída
+          href: reference/colelinkingdoc-class.md
+        - name: COleLinksDialog – třída
+          href: reference/colelinksdialog-class.md
+        - name: COleMessageFilter – třída
+          href: reference/colemessagefilter-class.md
+        - name: COleObjectFactory – třída
+          href: reference/coleobjectfactory-class.md
+        - name: COlePasteSpecialDialog – třída
+          href: reference/colepastespecialdialog-class.md
+        - name: COlePropertiesDialog – třída
+          href: reference/colepropertiesdialog-class.md
+        - name: COlePropertyPage – třída
+          href: reference/colepropertypage-class.md
+        - name: COleResizeBar – třída
+          href: reference/coleresizebar-class.md
+        - name: COleSafeArray – třída
+          href: reference/colesafearray-class.md
+        - name: COleServerDoc – třída
+          href: reference/coleserverdoc-class.md
+        - name: COleServerItem – třída
+          href: reference/coleserveritem-class.md
+        - name: COleStreamFile – třída
+          href: reference/colestreamfile-class.md
+        - name: COleTemplateServer – třída
+          href: reference/coletemplateserver-class.md
+        - name: COleUpdateDialog – třída
+          href: reference/coleupdatedialog-class.md
+        - name: COleVariant – třída
+          href: reference/colevariant-class.md
+        - name: CPagerCtrl – třída
+          href: reference/cpagerctrl-class.md
+        - name: CPageSetupDialog – třída
+          href: reference/cpagesetupdialog-class.md
+        - name: CPaintDC – třída
+          href: reference/cpaintdc-class.md
+        - name: CPalette – třída
+          href: reference/cpalette-class.md
+        - name: CPane – třída
+          href: reference/cpane-class.md
+        - name: CPaneContainer – třída
+          href: reference/cpanecontainer-class.md
+        - name: CPaneContainerManager – třída
+          href: reference/cpanecontainermanager-class.md
+        - name: CPaneDialog – třída
+          href: reference/cpanedialog-class.md
+        - name: CPaneDivider – třída
+          href: reference/cpanedivider-class.md
+        - name: CPaneFrameWnd – třída
+          href: reference/cpaneframewnd-class.md
+        - name: CParabolicTransitionFromAcceleration – třída
+          href: reference/cparabolictransitionfromacceleration-class.md
+        - name: CPen – třída
+          href: reference/cpen-class.md
+        - name: CPictureHolder – třída
+          href: reference/cpictureholder-class.md
+        - name: CPrintDialog – třída
+          href: reference/cprintdialog-class.md
+        - name: CPrintDialogEx – třída
+          href: reference/cprintdialogex-class.md
+        - name: CPrintInfo – struktura
+          href: reference/cprintinfo-structure.md
+        - name: CProgressCtrl – třída
+          href: reference/cprogressctrl-class.md
+        - name: CPropertyPage – třída
+          href: reference/cpropertypage-class.md
+        - name: CPropertySheet – třída
+          href: reference/cpropertysheet-class.md
+        - name: CPropExchange – třída
+          href: reference/cpropexchange-class.md
+        - name: CPtrArray – třída
+          href: reference/cptrarray-class.md
+        - name: CPtrList – třída
+          href: reference/cptrlist-class.md
+        - name: CReBar – třída
+          href: reference/crebar-class.md
+        - name: CReBarCtrl – třída
+          href: reference/crebarctrl-class.md
+        - name: CRecentDockSiteInfo – třída
+          href: reference/crecentdocksiteinfo-class.md
+        - name: CRecentFileList – třída
+          href: reference/crecentfilelist-class.md
+        - name: CRecordset – třída
+          href: reference/crecordset-class.md
+        - name: CRecordView – třída
+          href: reference/crecordview-class.md
+        - name: CRectTracker – třída
+          href: reference/crecttracker-class.md
+        - name: CRenderTarget – třída
+          href: reference/crendertarget-class.md
+        - name: CResourceException – třída
+          href: reference/cresourceexception-class.md
+        - name: CReversalTransition – třída
+          href: reference/creversaltransition-class.md
+        - name: CRgn – třída
+          href: reference/crgn-class.md
+        - name: CRichEditCntrItem – třída
+          href: reference/cricheditcntritem-class.md
+        - name: CRichEditCtrl – třída
+          href: reference/cricheditctrl-class.md
+        - name: CRichEditDoc – třída
+          href: reference/cricheditdoc-class.md
+        - name: CRichEditView – třída
+          href: reference/cricheditview-class.md
+        - name: CRuntimeClass – struktura
+          href: reference/cruntimeclass-structure.md
+        - name: CScrollBar – třída
+          href: reference/cscrollbar-class.md
+        - name: CScrollView – třída
+          href: reference/cscrollview-class.md
+        - name: CSemaphore – třída
+          href: reference/csemaphore-class.md
+        - name: CSettingsStore – třída
+          href: reference/csettingsstore-class.md
+        - name: CSettingsStoreSP – třída
+          href: reference/csettingsstoresp-class.md
+        - name: CSharedFile – třída
+          href: reference/csharedfile-class.md
+        - name: CShellManager – třída
+          href: reference/cshellmanager-class.md
+        - name: CSimpleException – třída
+          href: reference/csimpleexception-class.md
+        - name: CSingleDocTemplate – třída
+          href: reference/csingledoctemplate-class.md
+        - name: CSingleLock – třída
+          href: reference/csinglelock-class.md
+        - name: CSinusoidalTransitionFromRange – třída
+          href: reference/csinusoidaltransitionfromrange-class.md
+        - name: CSinusoidalTransitionFromVelocity – třída
+          href: reference/csinusoidaltransitionfromvelocity-class.md
+        - name: CSliderCtrl – třída
+          href: reference/csliderctrl-class.md
+        - name: CSmartDockingInfo – třída
+          href: reference/csmartdockinginfo-class.md
+        - name: CSmoothStopTransition – třída
+          href: reference/csmoothstoptransition-class.md
+        - name: CSocket – třída
+          href: reference/csocket-class.md
+        - name: CSocketFile – třída
+          href: reference/csocketfile-class.md
+        - name: CSpinButtonCtrl – třída
+          href: reference/cspinbuttonctrl-class.md
+        - name: CSplitButton – třída
+          href: reference/csplitbutton-class.md
+        - name: CSplitterWnd – třída
+          href: reference/csplitterwnd-class.md
+        - name: CSplitterWndEx – třída
+          href: reference/csplitterwndex-class.md
+        - name: CStatic – třída
+          href: reference/cstatic-class.md
+        - name: CStatusBar – třída
+          href: reference/cstatusbar-class.md
+        - name: CStatusBarCtrl – třída
+          href: reference/cstatusbarctrl-class.md
+        - name: CStdioFile – třída
+          href: reference/cstdiofile-class.md
+        - name: CStringArray – třída
+          href: reference/cstringarray-class.md
+        - name: CStringList – třída
+          href: reference/cstringlist-class.md
+        - name: CSyncObject – třída
+          href: reference/csyncobject-class.md
+        - name: CTabCtrl – třída
+          href: reference/ctabctrl-class.md
+        - name: CTabbedPane – třída
+          href: reference/ctabbedpane-class.md
+        - name: CTabView – třída
+          href: reference/ctabview-class.md
+        - name: CTaskDialog – třída
+          href: reference/ctaskdialog-class.md
+        - name: CToolBar – třída
+          href: reference/ctoolbar-class.md
+        - name: CToolBarCtrl – třída
+          href: reference/ctoolbarctrl-class.md
+        - name: CToolTipCtrl – třída
+          href: reference/ctooltipctrl-class.md
+        - name: CTooltipManager – třída
+          href: reference/ctooltipmanager-class.md
+        - name: CTreeCtrl – třída
+          href: reference/ctreectrl-class.md
+        - name: CTreeView – třída
+          href: reference/ctreeview-class.md
+        - name: CTypedPtrArray – třída
+          href: reference/ctypedptrarray-class.md
+        - name: CTypedPtrList – třída
+          href: reference/ctypedptrlist-class.md
+        - name: CTypedPtrMap – třída
+          href: reference/ctypedptrmap-class.md
+        - name: CUIntArray – třída
+          href: reference/cuintarray-class.md
+        - name: CUserException – třída
+          href: reference/cuserexception-class.md
+        - name: CUserTool – třída
+          href: reference/cusertool-class.md
+        - name: CUserToolsManager – třída
+          href: reference/cusertoolsmanager-class.md
+        - name: CView – třída
+          href: reference/cview-class.md
+        - name: CVSListBox – třída
+          href: reference/cvslistbox-class.md
+        - name: CWaitCursor – třída
+          href: reference/cwaitcursor-class.md
+        - name: CWinApp – třída
+          href: reference/cwinapp-class.md
+        - name: CWinAppEx – třída
+          href: reference/cwinappex-class.md
+        - name: CWindowDC – třída
+          href: reference/cwindowdc-class.md
+        - name: CWinFormsControl – třída
+          href: reference/cwinformscontrol-class.md
+        - name: CWinFormsDialog – třída
+          href: reference/cwinformsdialog-class.md
+        - name: CWinFormsView – třída
+          href: reference/cwinformsview-class.md
+        - name: CWinThread – třída
+          href: reference/cwinthread-class.md
+        - name: CWnd – třída
+          href: reference/cwnd-class.md
+        - name: CWordArray – třída
+          href: reference/cwordarray-class.md
+        - name: ICommandSource – rozhraní
+          href: reference/icommandsource-interface.md
+        - name: ICommandTarget – rozhraní
+          href: reference/icommandtarget-interface.md
+        - name: ICommandUI – rozhraní
+          href: reference/icommandui-interface.md
+        - name: IView – rozhraní
+          href: reference/iview-interface.md
+    - name: Interní třídy
+      href: reference/internal-classes.md
+    - name: "MFC – makra a\_globální prvky"
+      expanded: false
+      items:
+        - name: "MFC – makra a\_globální prvky"
+          href: reference/mfc-macros-and-globals.md
+        - name: Datové typy (MFC)
+          href: reference/data-types-mfc.md
+        - name: Přetypování objektů tříd MFC
+          href: reference/type-casting-of-mfc-class-objects.md
+        - name: Služby modelu běhového objektu
+          href: reference/run-time-object-model-services.md
+        - name: Diagnostické služby
+          href: reference/diagnostic-services.md
+        - name: Moduly a knihovny DLL
+          href: reference/extension-dll-macros.md
+        - name: Zpracování výjimek
+          href: reference/exception-processing.md
+        - name: Formátování dat CString a zobrazení oken zpráv
+          href: reference/cstring-formatting-and-message-box-display.md
+        - name: Informace o aplikacích a správa aplikací
+          href: reference/application-information-and-management.md
+        - name: Standardní identifikátory příkazů a oken
+          href: reference/standard-command-and-window-ids.md
+        - name: Pomocné rutiny třídy kolekce
+          href: reference/collection-class-helpers.md
+        - name: Funkce Gray a Dithered pro bitové mapy
+          href: reference/gray-and-dithered-bitmap-functions.md
+        - name: "Funkce výměny polí v\_záznamu"
+          href: reference/record-field-exchange-functions.md
+        - name: "Funkce výměny dat dialogových oken pro třídy CRecordView a\_CDaoRecordView"
+          href: reference/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md
+        - name: Funkce výměny dat dialogových oken pro ovládací prvky OLE
+          href: reference/dialog-data-exchange-functions-for-ole-controls.md
+        - name: "Databázová makra a\_globální prvky"
+          href: reference/database-macros-and-globals.md
+        - name: "Inicializace a ukončování databázového stroje v\_rozhraní DAO"
+          href: reference/dao-database-engine-initialization-and-termination.md
+        - name: Inicializace OLE
+          href: reference/ole-initialization.md
+        - name: Řízení aplikace
+          href: reference/application-control.md
+        - name: Expediční mapy
+          href: reference/dispatch-maps.md
+        - name: Konstanty variantních typů parametrů
+          href: reference/variant-parameter-type-constants.md
+        - name: Přístup ke knihovně typů
+          href: reference/type-library-access.md
+        - name: Stránky vlastností (MFC)
+          href: reference/property-pages-mfc.md
+        - name: Mapy událostí
+          href: reference/event-maps.md
+        - name: Mapy jímek událostí
+          href: reference/event-sink-maps.md
+        - name: Mapy připojení
+          href: reference/connection-maps.md
+        - name: Registrace ovládacích prvků OLE
+          href: reference/registering-ole-controls.md
+        - name: Objekty pro vytváření tříd a licencování
+          href: reference/class-factories-and-licensing.md
+        - name: Trvalost ovládacích prvků OLE
+          href: reference/persistence-of-ole-controls.md
+        - name: Globální funkce pro analýzu internetových adres URL
+          href: reference/internet-url-parsing-globals.md
+        - name: DHTML – mapy událostí
+          href: reference/dhtml-event-maps.md
+        - name: Mapy příkazů DHTML pro úpravy
+          href: reference/dhtml-editing-command-maps.md
+        - name: Rutiny výměny dat standardního dialogového okna
+          href: reference/standard-dialog-data-exchange-routines.md
+        - name: Rutiny ověřování dat standardního dialogového okna
+          href: reference/standard-dialog-data-validation-routines.md
+        - name: AFX – zprávy
+          href: reference/afx-messages.md
+        - name: ToolBar – styly ovládacích prvků
+          href: reference/toolbar-control-styles.md
+        - name: 'CMFCImagePaintArea::IMAGE_EDIT_MODE – výčet'
+          href: reference/cmfcimagepaintarea-image-edit-mode-enumeration.md
+        - name: UICheckState – výčet
+          href: reference/uicheckstate-enumeration.md
+    - name: "Struktury, styly, zpětná volání a\_mapy zpráv"
+      expanded: false
+      items:
+        - name: "Struktury, styly, zpětná volání a\_mapy zpráv"
+          href: reference/structures-styles-callbacks-and-message-maps.md
+        - name: Struktury využívané prostředím MFC
+          expanded: false
+          items:
+            - name: Struktury využívané prostředím MFC
+              href: reference/structures-used-by-mfc.md
+            - name: AFX_EXTENSION_MODULE – struktura
+              href: reference/afx-extension-module-structure.md
+            - name: AFX_GLOBAL_DATA – struktura
+              href: reference/afx-global-data-structure.md
+            - name: CDaoDatabaseInfo – struktura
+              href: reference/cdaodatabaseinfo-structure.md
+            - name: CDaoErrorInfo – struktura
+              href: reference/cdaoerrorinfo-structure.md
+            - name: CDaoFieldInfo – struktura
+              href: reference/cdaofieldinfo-structure.md
+            - name: CDaoIndexInfo – struktura
+              href: reference/cdaoindexinfo-structure.md
+            - name: CDaoIndexFieldInfo – struktura
+              href: reference/cdaoindexfieldinfo-structure.md
+            - name: CDaoParameterInfo – struktura
+              href: reference/cdaoparameterinfo-structure.md
+            - name: CDaoQueryDefInfo – struktura
+              href: reference/cdaoquerydefinfo-structure.md
+            - name: CDaoRelationInfo – struktura
+              href: reference/cdaorelationinfo-structure.md
+            - name: CDaoRelationFieldInfo – struktura
+              href: reference/cdaorelationfieldinfo-structure.md
+            - name: CDaoTableDefInfo – struktura
+              href: reference/cdaotabledefinfo-structure.md
+            - name: CDaoWorkspaceInfo – struktura
+              href: reference/cdaoworkspaceinfo-structure.md
+            - name: CODBCFieldInfo – struktura
+              href: reference/codbcfieldinfo-structure.md
+            - name: DHtmlUrlEventMapEntry – struktura
+              href: reference/dhtmlurleventmapentry-structure.md
+            - name: HSE_VERSION_INFO – struktura
+              href: reference/hse-version-info-structure.md
+        - name: Styly využívané prostředím MFC
+          href: reference/styles-used-by-mfc.md
+        - name: "Funkce zpětného volání používané v\_prostředí MFC"
+          href: reference/callback-functions-used-by-mfc.md
+        - name: Mapy zpráv (MFC)
+          expanded: false
+          items:
+            - name: Mapy zpráv (MFC)
+              href: reference/message-maps-mfc.md
+            - name: Makra map zpráv (MFC)
+              href: reference/message-map-macros-mfc.md
+            - name: Makra map delegátů a rozhraní
+              href: reference/delegate-and-interface-maps.md
+            - name: 'Postupy: Použití křížových odkazů mapování zpráv'
+              href: reference/how-to-use-the-message-map-cross-reference.md
+            - name: "Obslužné rutiny oznamovacích zpráv v\_podřízených oknech"
+              href: reference/child-window-notification-message-handlers.md
+            - name: Obecná obslužná rutina ovládacího prvku
+              href: reference/generic-control-handler.md
+            - name: Obslužné rutiny uživatelských tlačítek
+              href: reference/user-button-handlers.md
+            - name: Obslužné rutiny pole se seznamem
+              href: reference/combo-box-handlers.md
+            - name: Obslužné rutiny pro ovládací prvek úprav
+              href: reference/edit-control-handlers.md
+            - name: Obslužné rutiny seznamu
+              href: reference/list-box-handlers.md
+            - name: Obslužné rutiny pro zprávy WM_
+              href: reference/handlers-for-wm-messages.md
+            - name: 'WM_ – obslužné rutiny zpráv: A–C'
+              href: reference/wm-message-handlers-a-c.md
+            - name: 'WM_ – obslužné rutiny zpráv: D–E'
+              href: reference/wm-message-handlers-d-e.md
+            - name: 'WM_ – obslužné rutiny zpráv: F–K'
+              href: reference/wm-message-handlers-f-k.md
+            - name: 'WM_ – obslužné rutiny zpráv: L–M'
+              href: reference/wm-message-handlers-l-m.md
+            - name: 'WM_ – obslužné rutiny zpráv: N–O'
+              href: reference/wm-message-handlers-n-o.md
+            - name: 'WM_ – zprávy: P–R'
+              href: reference/wm-messages-p-r.md
+            - name: 'WM_ – zprávy: S'
+              href: reference/wm-messages-s.md
+            - name: 'WM_ – zprávy: T–Z'
+              href: reference/wm-messages-t-z.md
+            - name: Uživatelem definované obslužné rutiny
+              href: reference/user-defined-handlers.md
+- name: Průvodci a dialogová okna knihovny MFC
+  expanded: false
+  items:
+    - name: Průvodci a dialogová okna knihovny MFC
+      href: reference/mfc-wizards-and-dialog-boxes.md
+    - name: Vytvoření projektu knihovny MFC DLL
+      expanded: false
+      items:
+        - name: Vytvoření projektu knihovny MFC DLL
+          href: reference/creating-an-mfc-dll-project.md
+        - name: MFC DLL – průvodce knihovnou
+          expanded: false
+          items:
+            - name: MFC DLL – průvodce knihovnou
+              href: reference/mfc-dll-wizard.md
+            - name: 'Nastavení aplikace, průvodce MFC DLL'
+              href: reference/application-settings-mfc-dll-wizard.md
+        - name: Třídy a funkce generované průvodcem knihovnou MFC DLL
+          href: reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md
+    - name: Vytvoření aplikace MFC
+      expanded: false
+      items:
+        - name: Vytvoření aplikace MFC
+          href: reference/creating-an-mfc-application.md
+        - name: MFC – průvodce aplikací
+          expanded: false
+          items:
+            - name: MFC – průvodce aplikací
+              href: reference/mfc-application-wizard.md
+            - name: 'Typ aplikace, průvodce aplikací MFC'
+              href: reference/application-type-mfc-application-wizard.md
+            - name: 'Podpora složených dokumentů, průvodce aplikací MFC'
+              href: reference/compound-document-support-mfc-application-wizard.md
+            - name: 'Řetězce šablon dokumentů, průvodce aplikací MFC'
+              href: reference/document-template-strings-mfc-application-wizard.md
+            - name: 'Podpora databáze, průvodce aplikací MFC'
+              href: reference/database-support-mfc-application-wizard.md
+            - name: 'Funkce uživatelského rozhraní, průvodce aplikací MFC'
+              href: reference/user-interface-features-mfc-application-wizard.md
+            - name: 'Pokročilé funkce, průvodce aplikací MFC'
+              href: reference/advanced-features-mfc-application-wizard.md
+            - name: 'Generované třídy, průvodce aplikací MFC'
+              href: reference/generated-classes-mfc-application-wizard.md
+        - name: Vytváření aplikací MFC založených na formulářích
+          href: reference/creating-a-forms-based-mfc-application.md
+        - name: Vytvoření aplikace MFC ve stylu Průzkumníka souborů
+          href: reference/creating-a-file-explorer-style-mfc-application.md
+        - name: Vytvoření aplikace MFC ve stylu webového prohlížeče
+          href: reference/creating-a-web-browser-style-mfc-application.md
+    - name: Vytvoření kontejneru ovládacího prvku ActiveX prostředí MFC
+      href: reference/creating-an-mfc-activex-control-container.md
+    - name: Vytvoření ovládacího prvku ActiveX prostředí MFC
+      expanded: false
+      items:
+        - name: Vytvoření ovládacího prvku ActiveX prostředí MFC
+          href: reference/creating-an-mfc-activex-control.md
+        - name: "Průvodce ovládacím prvkem ActiveX v\_prostředí MFC"
+          expanded: false
+          items:
+            - name: "Průvodce ovládacím prvkem ActiveX v\_prostředí MFC"
+              href: reference/mfc-activex-control-wizard.md
+            - name: "Nastavení aplikace, průvodce ovládacím prvkem ActiveX v\_prostředí MFC"
+              href: reference/application-settings-mfc-activex-control-wizard.md
+            - name: "Názvy ovládacích prvků, průvodce ovládacím prvkem ActiveX v\_prostředí MFC"
+              href: reference/control-names-mfc-activex-control-wizard.md
+            - name: "Nastavení ovládacího prvku, průvodce ovládacím prvkem ActiveX v\_prostředí MFC"
+              href: reference/control-settings-mfc-activex-control-wizard.md
+    - name: Přidání třídy MFC
+      expanded: false
+      items:
+        - name: Přidání třídy MFC
+          href: reference/adding-an-mfc-class.md
+        - name: Průvodce přidáním třídy MFC
+          expanded: false
+          items:
+            - name: Průvodce přidáním třídy MFC
+              href: reference/mfc-add-class-wizard.md
+            - name: 'Řetězce šablony dokumentu, průvodce přidáním třídy MFC'
+              href: reference/document-template-strings-mfc-add-class-wizard.md
+    - name: Přidání třídy MFC z knihovny typů
+      expanded: false
+      items:
+        - name: Přidání třídy MFC z knihovny typů
+          href: reference/adding-an-mfc-class-from-a-type-library.md
+        - name: Průvodce přidáním tříd z knihovny typů
+          href: reference/add-class-from-typelib-wizard.md
+    - name: Přidání popisovače zpráv knihovny MFC
+      expanded: false
+      items:
+        - name: Přidání popisovače zpráv knihovny MFC
+          href: reference/adding-an-mfc-message-handler.md
+        - name: Mapování zpráv na funkce
+          expanded: false
+          items:
+            - name: Mapování zpráv na funkce
+              href: reference/mapping-messages-to-functions.md
+            - name: "Typy zpráv přidružených k\_objektům uživatelského rozhraní"
+              href: reference/message-types-associated-with-user-interface-objects.md
+            - name: Úpravy obslužné rutiny zpráv
+              href: reference/editing-a-message-handler.md
+            - name: Definování obslužné rutiny zpráv pro zrcadlené zprávy
+              href: reference/defining-a-message-handler-for-a-reflected-message.md
+            - name: Deklarace proměnné založené na nové třídě ovládacího prvku
+              href: reference/declaring-a-variable-based-on-your-new-control-class.md
+    - name: Přidání příjemce rozhraní ODBC knihovny MFC
+      expanded: false
+      items:
+        - name: Přidání příjemce rozhraní ODBC knihovny MFC
+          href: reference/adding-an-mfc-odbc-consumer.md
+        - name: Průvodce příjemcem ODBC knihovny MFC
+          href: reference/mfc-odbc-consumer-wizard.md
+    - name: Přidání podpory knihovny ATL do projektu knihovny MFC
+      expanded: false
+      items:
+        - name: Přidání podpory knihovny ATL do projektu knihovny MFC
+          href: reference/adding-atl-support-to-your-mfc-project.md
+        - name: Podrobnosti podpory knihovny ATL přidané průvodcem knihovnou ATL
+          href: reference/details-of-atl-support-added-by-the-atl-wizard.md
+    - name: Průvodce třídou MFC
+      href: reference/mfc-class-wizard.md
