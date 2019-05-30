@@ -2,12 +2,12 @@
 title: Přehled programování v C++ v systému Windows
 ms.date: 05/06/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 957e3565ad4caa12da5e7d10915ca159d00954b8
-ms.sourcegitcommit: 79e985d3c6e8ccaf94f6e641972887cae8c6eeb0
+ms.openlocfilehash: 585fda614acce85e286e25b807d0fda57d03758b
+ms.sourcegitcommit: af580f3a11b19d22288424eac7ceae1bc24ab312
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66197742"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66355556"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Přehled programování v C++ v systému Windows
 
@@ -101,7 +101,7 @@ Systém Visual Studio obsahuje výkonný ladicí program pro nativní kód, nás
 |[Desktopový průvodce pro Windows](windows-desktop-wizard.md)|Chcete-li vytvořit nové projekty Windows pomocí průvodce.|
 |[Knihovna ATL (Active Template Library)](../atl/atl-com-desktop-components.md)|Použití knihovny ATL vytváření komponent modelu COM v jazyce C++.|
 |[Knihovna MFC (Microsoft Foundation Classes)](../mfc/mfc-desktop-applications.md)|Použití knihovny MFC k vytvoření velké nebo malé aplikací Windows pomocí dialogových oken a ovládacích prvků|
-|[Sdílené třídy knihoven ATL a MFC](../atl-mfc-shared/TOC.md)|Pomocí třídy například CString, které jsou sdíleny v ATL a MFC.|
+|[Sdílené třídy knihoven ATL a MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)|Pomocí třídy například CString, které jsou sdíleny v ATL a MFC.|
 |[Přístup k datům](../data/data-access-in-cpp.md)| OLE DB a rozhraní ODBC|
 |[Text a řetězce](../text/text-and-strings-in-visual-cpp.md)|Různými typy řetězců na Windows.|
 |[Prostředky pro vytvoření hry s použitím rozhraní DirectX](resources-for-creating-a-game-using-directx.md)
